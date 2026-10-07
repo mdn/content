@@ -13,7 +13,7 @@ sidebar: cssref
 
 The **`row-rule-inset-junction-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the property can be used to offset the end of row rule segment [junction endpoints](#understanding_junction_end).
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: row-rule-inset-junction-end")}}
 
 ```css interactive-example-choice
 row-rule-inset-junction-end: 0;
@@ -125,7 +125,7 @@ row-rule-inset-junction-end: unset;
 This property is specified as a single value from the following list:
 
 - `overlap-join`
-  - : Specifies the junction segment should extend across the column-rule, resolving to half the {{cssxref("column-gap")}} value plus half the used {{cssxref("column-rule-width")}} value.
+  - : Specifies that the junction segment should extend across the column-rule, resolving to half the {{cssxref("column-gap")}} value plus half the used {{cssxref("column-rule-width")}} value.
 - {{cssxref("length-percentage")}}
   - : Specifies the size of the inset. Percentage values are relative to the junction endpoint, which is the `column-gap` value.
 
@@ -147,7 +147,7 @@ The `row-rule-inset-junction-end` property is a constituent property of several 
 
 - To inset all row segment endpoints, the `row-rule-inset-junction-end` property, along with the {{cssxref("row-rule-inset-cap-end")}} property, can be set using the {{cssxref("row-rule-inset-end")}} shorthand.
 
-- To inset top, bottom, left, and right segment junction endpoints the `row-rule-inset-junction` shorthand property, along with the {{cssxref("column-rule-inset-junction")}} shorthand property, can be set using the {{cssxref("rule-inset-junction")}} shorthand.
+- To inset the top, bottom, left, and right segment junction endpoints the `row-rule-inset-junction` shorthand property, along with the {{cssxref("column-rule-inset-junction")}} shorthand property, can be set using the {{cssxref("rule-inset-junction")}} shorthand.
 
 All segment endpoints, including this property's `-start`, `-cap`, and `column-` equivalents, can be set using the {{cssxref("rule-inset")}} shorthand.
 
@@ -327,7 +327,7 @@ The `around` value paints rules in gap segments if an item occupies at least one
 
 ### The `overlap-join` value
 
-The `overlap-join` value outsets the end of interior segments so they align with the far edge of the intersected column-rule. The value resolves to half the {{cssxref("column-gap")}} size (which would extend it to the middle of the gap) plus half the column rule width. When `row-rule-inset-junction-end` is set to the `overlap-join` keyword value, the ends of the junction end segments extend into the column gap to meet, or "join", the opposite edge of the column rule painted in that gap.
+The `overlap-join` value outsets the end of interior segments so they align with the far edge of the intersected column-rule. The value resolves to half the {{cssxref("column-gap")}} size (which would extend it to the middle of the gap) plus half the column rule width. When `row-rule-inset-junction-end` is set to the `overlap-join` keyword value, the junction end segments extend into the column gap to meet, or "join", the opposite edge of the column rule painted in that gap.
 
 In the following live example, `row-rule-inset-junction-end` is set to `overlap-join`:
 

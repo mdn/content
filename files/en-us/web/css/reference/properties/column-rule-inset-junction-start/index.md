@@ -13,7 +13,7 @@ sidebar: cssref
 
 The **`column-rule-inset-junction-start`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the top endpoints of column rule segments that are [junction endpoints](#understanding_junction_endpoints); that is, endpoints at gap junctions where rule segments intersect.
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: column-rule-inset-junction-start")}}
 
 ```css interactive-example-choice
 column-rule-inset-junction-start: 0;
@@ -69,6 +69,7 @@ column-rule-inset-junction-start: overlap-join;
 }
 #example-element i {
   background-color: #efefef;
+  color: #333333;
   padding: 1em;
 }
 ```
@@ -98,7 +99,7 @@ column-rule-inset-junction-start: unset;
 This property is specified as a single value from the following list:
 
 - `overlap-join`
-  - : Specifies the junction segment should extend across the row-rule, resolving to half the {{cssxref("row-gap")}} value plus half the used {{cssxref("row-rule-width")}} value.
+  - : Specifies that the junction segment should extend across the row-rule, resolving to half the {{cssxref("row-gap")}} value plus half the used {{cssxref("row-rule-width")}} value.
 - {{cssxref("length-percentage")}}
   - : Specifies the size of the inset. Percentage values are relative to the junction endpoint, which is the `row-gap` value.
 
@@ -116,11 +117,11 @@ Whether a column rule spans multiple rows or is broken into multiple segments is
 
 The `column-rule-inset-junction-start` property is a constituent property of several [shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties):
 
-- To inset top and bottom column segment junction endpoints, the `column-rule-inset-junction-start` property, along with the {{cssxref("column-rule-inset-junction-end")}} property, can be set using the {{cssxref("column-rule-inset-junction")}} shorthand.
+- To inset the top and bottom column segment junction endpoints, the `column-rule-inset-junction-start` property, along with the {{cssxref("column-rule-inset-junction-end")}} property, can be set using the {{cssxref("column-rule-inset-junction")}} shorthand.
 
 - To inset all top column segment endpoints, the `column-rule-inset-junction-start` property, along with the {{cssxref("column-rule-inset-cap-start")}} property, can be set using the {{cssxref("column-rule-inset-start")}} shorthand.
 
-- To inset top, bottom, left, and right segment junction endpoints the `column-rule-inset-junction` shorthand property, along with the {{cssxref("row-rule-inset-junction")}} shorthand property, can be set using the {{cssxref("rule-inset-junction")}} shorthand.
+- To inset the top, bottom, left, and right segment junction endpoints the `column-rule-inset-junction` shorthand property, along with the {{cssxref("row-rule-inset-junction")}} shorthand property, can be set using the {{cssxref("rule-inset-junction")}} shorthand.
 
 All segment endpoints, including this property's `-start`, `-cap`, and `row-` equivalents, can be set using the {{cssxref("rule-inset")}} shorthand.
 
@@ -130,7 +131,7 @@ A _junction segment endpoint_ is any segment endpoint at an interior gap that en
 
 Length `column-rule-inset-junction-start` values inset segments by the specified value. Negative length values create an outset, extending the top end of the junction segment. Percentage values are relative to the size of the {{cssxref("row-gap")}}. Setting `-50%` outsets the top of the junction segment half way through the row gap above the segment, no matter how wide the row gap is.
 
-In the following demonstration, the column rule segments in the top two rows end in junction endpoints. With `column-rule-inset-junction-start: 16px` set, the top, or start, of these segments are inset by `16px`. Change the inset `<length>` value to better visualize which segments start in junction segment endpoints.
+In the following demonstration, the column rule segments in the last two rows start in junction endpoints. With `column-rule-inset-junction-start: 16px` set, the top, or start, of these segments are inset by `16px`. Change the inset `<length>` value to better visualize which column segments start in junction segment endpoints.
 
 ```html hidden live-sample___junctions live-sample___percents
 <ul id="ul">
@@ -278,15 +279,15 @@ visibility.addEventListener("change", () => {
 
 {{EmbedLiveSample("junctions", "", "300")}}
 
-If you set `0px` as the value, the start of the column rules will align with the top of the row, abutting the row gap. This is the default. Note how only the top ends of the segments in the middle of the grid change when the property value changes. The segments in the top row do not change: these are _cap endpoints_, and are not affected by the `column-rule-inset-junction-start` property.
+If you set `0px` as the value, the start of the column rules will align with the start, or top, of the row, abutting the row gap. This is the default. Note how only the start ends of the segments in the middle of the grid change when the property value changes. The segments in the first row do not change: these are _cap endpoints_, and are not affected by the `column-rule-inset-junction-start` property.
 
-Select `around` and `between` as the `rule-visibility-items` value. This `around` value paints rules in a gap segment if an item occupies at least one of the two adjacent areas. The `between` value paints rules in gap segments only if items occupy both adjacent areas. When a rule segments ends at an interior intersection where no other rule segments are present, the segment is a _cap segment endpoints_ and isn't affected by the `column-rule-inset-junction-start` property.
+Select `around` and `between` as the `rule-visibility-items` value. This `around` value paints rules in a gap segment if an item occupies at least one of the two adjacent areas. The `between` value paints rules in gap segments only if items occupy both adjacent areas. When a rule segment ends at an interior intersection where no other rule segments are present, the segment is a _cap segment endpoint_, and isn't affected by the `column-rule-inset-junction-start` property.
 
 ### The `overlap-join` value
 
 The `overlap-join` value outsets the top end of interior segments so they align with the top of the intersected row-rule. The value resolves to half the {{cssxref("row-gap")}} size (which would extend it to the middle of the gap) plus half the row rule width.
 
-When `column-rule-inset-junction-start` is set to the `overlap-join` keyword value, the top ends of the junction end segments extend down into the row gap to meet, or "join", the top edge of the row rule painted in that gap.
+When `column-rule-inset-junction-start` is set to the `overlap-join` keyword value, the junction end segments extend up into the row gap to meet, or "join", the top edge of the row rule painted in that gap.
 
 In the following live example, `column-rule-inset-junction-start` is set to `overlap-join`:
 
