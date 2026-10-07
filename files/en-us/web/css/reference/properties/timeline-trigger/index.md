@@ -3,13 +3,9 @@ title: timeline-trigger CSS property
 short-title: timeline-trigger
 slug: Web/CSS/Reference/Properties/timeline-trigger
 page-type: css-shorthand-property
-status:
-  - experimental
 browser-compat: css.properties.timeline-trigger
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`timeline-trigger`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) defines a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger on an element.
 

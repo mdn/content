@@ -3,13 +3,9 @@ title: "`caret` CSS property"
 short-title: caret
 slug: Web/CSS/Reference/Properties/caret
 page-type: css-shorthand-property
-status:
-  - experimental
 browser-compat: css.properties.caret
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`caret`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the appearance and behavior of the **insertion caret** in a single declaration.
 

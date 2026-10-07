@@ -3,13 +3,9 @@ title: "`corner-shape` CSS property"
 short-title: corner-shape
 slug: Web/CSS/Reference/Properties/corner-shape
 page-type: css-shorthand-property
-status:
-  - experimental
 browser-compat: css.properties.corner-shape
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`corner-shape`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property specifies the shape of a box's corners, within the area specified by its {{cssxref("border-radius")}} property value.
 
