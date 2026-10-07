@@ -194,7 +194,7 @@ Some properties accept a dimension that could be either one of two types, for ex
 
 ### Color
 
-The {{cssxref("&lt;color&gt;")}} value specifies the color of an element feature (e.g., it's background color), and is defined in the [CSS Color Module](https://drafts.csswg.org/css-color-3/).
+The {{cssxref("&lt;color&gt;")}} value specifies the color of an element feature (e.g., its background color), and is defined in the [CSS Color Module](https://drafts.csswg.org/css-color-3/).
 
 ### Image
 
