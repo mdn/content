@@ -566,7 +566,7 @@ inset.addEventListener("input", () => {
 
 {{EmbedLiveSample("Basic usage", "", "330")}}
 
-Change the size of the inset. Note that in the right-hand example, where the row rule is a single segment that goes from left to right, the segment has two cap endpoints and no junction endpoints. Therefore, changing the `row-rule-inset-junction-start` value does not affect this example.
+Change the size of the inset. Note that this property affects only row rules split into multiple segments. When a row rule is a single segment that spans the width of the container, the segment has two cap endpoints and no junction endpoints, and remains unaffected by changes to the `row-rule-inset-junction-start` value.
 
 ## Specifications
 

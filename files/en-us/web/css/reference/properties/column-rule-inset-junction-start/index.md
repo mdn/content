@@ -522,8 +522,8 @@ const output = document.getElementById("o");
 
 inset.addEventListener("input", () => {
   const val = `${inset.value}px`;
-  containers[0].style.columnRuleInsetJunctionEnd = val;
-  containers[1].style.columnRuleInsetJunctionEnd = val;
+  containers[0].style.columnRuleInsetJunctionStart = val;
+  containers[1].style.columnRuleInsetJunctionStart = val;
   output.innerText = val;
 });
 ```
