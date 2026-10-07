@@ -670,6 +670,21 @@ This simplifies CSS property manipulation by exposing CSS values as typed JavaSc
 - `layout.css.typed-om.enabled`
   - : Set to `true` to enable.
 
+### On-device Speech Recognition
+
+[On-device speech recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) is now supported in Nightly, on desktop only. This allows you to perform speech recognition via the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) directly in-browser, rather than relying on a cloud service.
+([Firefox bug 2070927](https://bugzil.la/2069803)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 158           | Yes                 |
+| Developer Edition | 158           | No                  |
+| Beta              | 158           | No                  |
+| Release           | 158           | No                  |
+
+- `media.webspeech.recognition.enable`
+  - : Set to `true` to enable.
+
 ### Graphics: Canvas, WebGL, and WebGPU
 
 #### WebGL: Draft extensions
