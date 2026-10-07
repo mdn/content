@@ -55,7 +55,7 @@ This property is specified as a comma-separated list of the following values:
 - {{cssxref("dashed-ident")}}
   - : The element creates a scroll-triggered animation trigger as a [named view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline).
 - [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll)
-  - : The element creates a scroll-triggered animation trigger as a [anonymous scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_scroll_progress_timelines).
+  - : The element creates a scroll-triggered animation trigger as an [anonymous scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_scroll_progress_timelines).
 - [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view)
   - : The element creates a scroll-triggered animation trigger as an [anonymous view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function).
 
