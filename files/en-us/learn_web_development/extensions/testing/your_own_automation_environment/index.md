@@ -70,7 +70,7 @@ To set your `PATH` variable on a macOS system and on most Linux systems:
 
 1. Open your `.zprofile` (or `.bash_profile` if your system uses `bash` shell) file.
    > [!NOTE]
-   > If you can't see hidden files, you'll need to display them, see [Show/Hide hidden files in macOS](https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) or [Show hidden folders in Ubuntu](https://askubuntu.com/questions/470837/how-to-show-hidden-folders-in-file-manager-nautilus-on-ubuntu)).
+   > If you can't see hidden files, you'll need to display them; see [Show/Hide hidden files in macOS](https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) or [Show hidden folders in Ubuntu](https://askubuntu.com/questions/470837/how-to-show-hidden-folders-in-file-manager-nautilus-on-ubuntu).
 2. Paste the following into the bottom of your file (updating the path as it actually is on your machine):
 
    ```bash

@@ -13,7 +13,7 @@ sidebar: cssref
 
 The **`row-rule-break`** [CSS](/en-US/docs/Web/CSS) property sets the behavior for breaking row rules into segments where row rules intersect column gaps.
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: row-rule-break")}}
 
 ```css interactive-example-choice
 row-rule-break: none;
