@@ -3,13 +3,9 @@ title: timeline-trigger-activation-range-start CSS property
 short-title: timeline-trigger-activation-range-start
 slug: Web/CSS/Reference/Properties/timeline-trigger-activation-range-start
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.timeline-trigger-activation-range-start
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`timeline-trigger-activation-range-start`** [CSS](/en-US/docs/Web/CSS) property specifies the start of a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger's activation range.
 

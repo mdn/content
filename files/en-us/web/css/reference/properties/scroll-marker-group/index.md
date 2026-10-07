@@ -3,13 +3,9 @@ title: "`scroll-marker-group` CSS property"
 short-title: scroll-marker-group
 slug: Web/CSS/Reference/Properties/scroll-marker-group
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.scroll-marker-group
 sidebar: cssref
 ---
-
-{{seecompattable}}
 
 The **`scroll-marker-group`** [CSS](/en-US/docs/Web/CSS) property controls whether a {{glossary("scroll container")}} element has a {{cssxref("::scroll-marker-group")}} pseudo-element generated. If present, the property also specifies whether the scroll marker group should be placed `before` _or_ `after` the contents of the scroll group container in the default visual and tab order.
 

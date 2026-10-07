@@ -3,13 +3,9 @@ title: "`line-height-step` CSS property"
 short-title: line-height-step
 slug: Web/CSS/Reference/Properties/line-height-step
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.line-height-step
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`line-height-step`** [CSS](/en-US/docs/Web/CSS) property sets the step unit for line box heights. When the property is set, line box heights are rounded up to the closest multiple of the unit.
 

@@ -3,13 +3,9 @@ title: "`rule-visibility-items` CSS property"
 short-title: rule-visibility-items
 slug: Web/CSS/Reference/Properties/rule-visibility-items
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.rule-visibility-items
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`rule-visibility-items`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property defines whether rule segments are painted in both row and column gaps adjacent to empty areas.
 

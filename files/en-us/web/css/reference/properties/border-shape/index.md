@@ -3,13 +3,9 @@ title: "`border-shape` CSS property"
 short-title: border-shape
 slug: Web/CSS/Reference/Properties/border-shape
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.border-shape
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`border-shape`** [CSS](/en-US/docs/Web/CSS) property defines an element's border shape using {{cssxref("basic-shape")}} values.
 

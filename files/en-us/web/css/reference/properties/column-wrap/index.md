@@ -3,13 +3,9 @@ title: "`column-wrap` CSS property"
 short-title: column-wrap
 slug: Web/CSS/Reference/Properties/column-wrap
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.column-wrap
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`column-wrap`** [CSS](/en-US/docs/Web/CSS) property specifies the wrapping behavior of overflow columns in a [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout).
 

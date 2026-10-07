@@ -3,13 +3,9 @@ title: "`text-size-adjust` CSS property"
 short-title: text-size-adjust
 slug: Web/CSS/Reference/Properties/text-size-adjust
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.text-size-adjust
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`text-size-adjust`** [CSS](/en-US/docs/Web/API/CSS) property controls the text inflation algorithm used on some smartphones and tablets. Other browsers will ignore this property.
 

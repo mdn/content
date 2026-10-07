@@ -3,13 +3,9 @@ title: "`corner-bottom-right-shape` CSS property"
 short-title: corner-bottom-right-shape
 slug: Web/CSS/Reference/Properties/corner-bottom-right-shape
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.corner-bottom-right-shape
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`corner-bottom-right-shape`** [CSS](/en-US/docs/Web/CSS) property specifies the shape of a box's bottom-right corner, within its {{cssxref("border-radius")}} area.
 

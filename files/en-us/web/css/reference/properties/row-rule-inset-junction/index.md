@@ -3,13 +3,9 @@ title: "`row-rule-inset-junction` CSS property"
 short-title: row-rule-inset-junction
 slug: Web/CSS/Reference/Properties/row-rule-inset-junction
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.row-rule-inset-junction
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`row-rule-inset-junction`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property can be used to offset both the left and right endpoints of row rule segments that are [junction endpoints](#understanding_junction_endpoints); that is, endpoints at gap junctions where rule segments intersect.
 

@@ -3,13 +3,9 @@ title: timeline-trigger-name CSS property
 short-title: timeline-trigger-name
 slug: Web/CSS/Reference/Properties/timeline-trigger-name
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.timeline-trigger-name
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`timeline-trigger-name`** [CSS](/en-US/docs/Web/CSS) property specifies a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger's identifier(s).
 

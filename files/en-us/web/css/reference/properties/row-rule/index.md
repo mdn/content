@@ -3,13 +3,9 @@ title: "`row-rule` CSS property"
 short-title: row-rule
 slug: Web/CSS/Reference/Properties/row-rule
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.row-rule
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`row-rule`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the width, style, and color of the line drawn between rows in multi-row grid, flex, and multi-col layouts.
 

@@ -3,13 +3,9 @@ title: "`rule-inset-junction` CSS property"
 short-title: rule-inset-junction
 slug: Web/CSS/Reference/Properties/rule-inset-junction
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.rule-inset-junction
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`rule-inset-junction`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property can be used to offset the column and row rule segment [junction endpoints](#understanding_junction_endpoints) to the same value.
 

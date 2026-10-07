@@ -3,13 +3,9 @@ title: "`column-height` CSS property"
 short-title: column-height
 slug: Web/CSS/Reference/Properties/column-height
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.column-height
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`column-height`** [CSS](/en-US/docs/Web/CSS) property specifies the height of the columns in a [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout).
 

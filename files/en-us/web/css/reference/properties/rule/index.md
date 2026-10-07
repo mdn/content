@@ -3,13 +3,9 @@ title: "`rule` CSS property"
 short-title: rule
 slug: Web/CSS/Reference/Properties/rule
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.rule
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`rule`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the width, style, and color of the line drawn between rows and columns in multi-row grid, flex, and multi-col layouts, setting both the column and row rules to the same values.
 

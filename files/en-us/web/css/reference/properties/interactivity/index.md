@@ -3,13 +3,9 @@ title: "`interactivity` CSS property"
 short-title: interactivity
 slug: Web/CSS/Reference/Properties/interactivity
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.interactivity
 sidebar: cssref
 ---
-
-{{seecompattable}}
 
 The **`interactivity`** [CSS](/en-US/docs/Web/CSS) property specifies whether an element and its descendant nodes are set to be [inert](/en-US/docs/Web/HTML/Reference/Global_attributes/inert).
 

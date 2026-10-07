@@ -3,13 +3,9 @@ title: "`corner-top-right-shape` CSS property"
 short-title: corner-top-right-shape
 slug: Web/CSS/Reference/Properties/corner-top-right-shape
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.corner-top-right-shape
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`corner-top-right-shape`** [CSS](/en-US/docs/Web/CSS) property specifies the shape of a box's top-right corner, within its {{cssxref("border-radius")}} area.
 

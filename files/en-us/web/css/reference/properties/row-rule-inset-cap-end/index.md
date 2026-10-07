@@ -3,13 +3,9 @@ title: "`row-rule-inset-cap-end` CSS property"
 short-title: row-rule-inset-cap-end
 slug: Web/CSS/Reference/Properties/row-rule-inset-cap-end
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.row-rule-inset-cap-end
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`row-rule-inset-cap-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the end of row rule segment [cap endpoints](#understanding_cap_end).
 

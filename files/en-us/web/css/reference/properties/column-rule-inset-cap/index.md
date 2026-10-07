@@ -3,13 +3,9 @@ title: "`column-rule-inset-cap` CSS property"
 short-title: column-rule-inset-cap
 slug: Web/CSS/Reference/Properties/column-rule-inset-cap
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.column-rule-inset-cap
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`column-rule-inset-cap`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property can be used to offset the column rule segment [cap endpoints](#understanding_cap_endpoints) at the container's start and end edges, and endpoints where the segments don't intersect other row or column segments.
 

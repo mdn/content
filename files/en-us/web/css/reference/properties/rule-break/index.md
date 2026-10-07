@@ -3,13 +3,9 @@ title: "`rule-break` CSS property"
 short-title: rule-break
 slug: Web/CSS/Reference/Properties/rule-break
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.rule-break
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`rule-break`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the behavior for breaking column and row rules into segments where rows and column gaps intersect, setting {{cssxref("column-rule-break")}} and {{cssxref("row-rule-break")}} to the same value.
 

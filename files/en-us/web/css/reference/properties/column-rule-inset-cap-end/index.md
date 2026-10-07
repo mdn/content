@@ -3,13 +3,9 @@ title: "`column-rule-inset-cap-end` CSS property"
 short-title: column-rule-inset-cap-end
 slug: Web/CSS/Reference/Properties/column-rule-inset-cap-end
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.column-rule-inset-cap-end
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`column-rule-inset-cap-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the bottom of column rule segment [cap endpoints](#understanding_cap_end) at the container's end edge, and cap endpoints where no rule segments intersect.
 

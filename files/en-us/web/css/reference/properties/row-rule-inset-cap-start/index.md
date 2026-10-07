@@ -3,13 +3,9 @@ title: "`row-rule-inset-cap-start` CSS property"
 short-title: row-rule-inset-cap-start
 slug: Web/CSS/Reference/Properties/row-rule-inset-cap-start
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.row-rule-inset-cap-start
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`row-rule-inset-cap-start`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the start of row rule segment [cap endpoints](/en-US/docs/Web/CSS/Reference/Properties/column-rule-inset-cap#understanding_cap_endpoints).
 

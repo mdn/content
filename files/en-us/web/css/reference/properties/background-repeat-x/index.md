@@ -3,13 +3,9 @@ title: "`background-repeat-x` CSS property"
 short-title: background-repeat-x
 slug: Web/CSS/Reference/Properties/background-repeat-x
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.background-repeat-x
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`background-repeat-x`** [CSS](/en-US/docs/Web/CSS) property sets how background images are repeated, or not, along the horizontal axis.
 

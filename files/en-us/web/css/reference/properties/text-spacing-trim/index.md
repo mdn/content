@@ -3,13 +3,9 @@ title: "`text-spacing-trim` CSS property"
 short-title: text-spacing-trim
 slug: Web/CSS/Reference/Properties/text-spacing-trim
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.text-spacing-trim
 sidebar: cssref
 ---
-
-{{seecompattable}}
 
 The **`text-spacing-trim`** [CSS](/en-US/docs/Web/CSS) property controls the internal spacing set on Chinese/Japanese/Korean (CJK) punctuation characters between adjacent characters (kerning) and at the start or end of text lines.
 

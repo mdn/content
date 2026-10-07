@@ -3,13 +3,9 @@ title: "`interpolate-size` CSS property"
 short-title: interpolate-size
 slug: Web/CSS/Reference/Properties/interpolate-size
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.interpolate-size
 sidebar: cssref
 ---
-
-{{seecompattable}}
 
 The **`interpolate-size`** [CSS](/en-US/docs/Web/CSS) property allows you to enable [animations](/en-US/docs/Web/CSS/Guides/Animations) and [transitions](/en-US/docs/Web/CSS/Guides/Transitions) between a {{cssxref("&lt;length-percentage&gt;")}} value and an {{glossary("intrinsic size")}}, {{cssxref("fit-content")}}, or {{cssxref("max-content")}}.
 

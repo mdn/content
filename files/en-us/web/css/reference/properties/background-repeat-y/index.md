@@ -3,13 +3,9 @@ title: "`background-repeat-y` CSS property"
 short-title: background-repeat-y
 slug: Web/CSS/Reference/Properties/background-repeat-y
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.background-repeat-y
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`background-repeat-y`** [CSS](/en-US/docs/Web/CSS) property sets how background images are repeated, or not, along the vertical axis.
 

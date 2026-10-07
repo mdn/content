@@ -3,13 +3,9 @@ title: "`rule-overlap` CSS property"
 short-title: rule-overlap
 slug: Web/CSS/Reference/Properties/rule-overlap
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.rule-overlap
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`rule-overlap`** [CSS](/en-US/docs/Web/CSS) property specifies which rule is painted on top when column rules and row rules intersect.
 

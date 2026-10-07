@@ -3,13 +3,9 @@ title: "`row-rule-inset-cap` CSS property"
 short-title: row-rule-inset-cap
 slug: Web/CSS/Reference/Properties/row-rule-inset-cap
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.row-rule-inset-cap
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`row-rule-inset-cap`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property can be used to offset the row rule segment [cap endpoints](#understanding_cap_endpoints) at the container's left and right edges, and endpoints where the segments don't intersect other column or row segments.
 

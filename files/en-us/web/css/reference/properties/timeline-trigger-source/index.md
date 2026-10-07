@@ -3,13 +3,9 @@ title: timeline-trigger-source CSS property
 short-title: timeline-trigger-source
 slug: Web/CSS/Reference/Properties/timeline-trigger-source
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.timeline-trigger-source
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`timeline-trigger-source`** [CSS](/en-US/docs/Web/CSS) property specifies the timeline that will trigger a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations).
 

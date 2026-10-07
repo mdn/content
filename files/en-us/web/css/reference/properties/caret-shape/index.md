@@ -3,13 +3,9 @@ title: "`caret-shape` CSS property"
 short-title: caret-shape
 slug: Web/CSS/Reference/Properties/caret-shape
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.caret-shape
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`caret-shape`** [CSS](/en-US/docs/Web/CSS) property sets the shape of the **insertion caret**, the visible marker that appears in editable elements to indicate where the next character will be inserted or deleted.
 

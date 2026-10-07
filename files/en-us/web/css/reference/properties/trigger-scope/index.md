@@ -3,13 +3,9 @@ title: trigger-scope CSS property
 short-title: trigger-scope
 slug: Web/CSS/Reference/Properties/trigger-scope
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.trigger-scope
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`trigger-scope`** [CSS](/en-US/docs/Web/CSS) property can be used to limit the scope of a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger name to a document subtree.
 
