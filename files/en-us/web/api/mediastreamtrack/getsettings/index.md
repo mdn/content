@@ -29,7 +29,7 @@ An object describing the current configuration of the track's constrainable prop
 > [!NOTE]
 > The returned object identifies the current values of every constrainable property, including those which are platform defaults rather than having been expressly set by the site's code. To instead fetch the most-recently established constraints for the track's properties, as specified by the site's code, use {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}.
 
-These values will adhere as closely as possible to any constraints previously described using a {{domxref("MediaTrackConstraints")}} object and set using {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}, and will adhere to the default constraints for any properties whose constraints haven't been changed, or whose customized constraints couldn't be matched. This lets you determine what value was selected to comply with your specified constraints for each property's value you provided when calling either {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} or {{domxref("MediaStreamTrack.applyConstraints()")}}.
+These values will adhere as closely as possible to any constraints previously described using a {{domxref("MediaTrackConstraints")}} object and set using {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}, and will adhere to the default constraints for any properties whose constraints haven't been changed, or whose customized constraints couldn't be matched. This lets you determine what value was selected to comply with your specified constraints for each property value provided when calling either {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} or {{domxref("MediaStreamTrack.applyConstraints()")}}.
 
 Certain listed properties may not be included in the object, either because they're not supported by the browser or because they're not available due to context.
 
@@ -44,9 +44,9 @@ For example, because {{Glossary("RTP")}} doesn't provide some of these values du
 #### Properties of all media tracks
 
 - `deviceId`
-  - : A string uniquely identifying the source for the corresponding {{domxref("MediaStreamTrack")}} for the origin corresponding to the browsing session. This ID is valid across multiple browsing sessions for the same origin and is guaranteed to be different for all other origins, so you can safely use it to request the same source be used for multiple sessions, for example.
+  - : A string uniquely identifying the source of the corresponding {{domxref("MediaStreamTrack")}} for the origin corresponding to the browsing session. This ID is valid across multiple browsing sessions for the same origin and is guaranteed to be different for all other origins, so you can safely use it to request that the same source be used for multiple sessions, for example.
 
-    Since there is a one-to-one pairing of ID with each source, all tracks with the same source will share the same ID for any given origin, so {{domxref("MediaStreamTrack.getCapabilities()")}} will always return exactly one value for `deviceId`. That makes the device ID not useful for any changes to constraints when calling {{domxref("MediaStreamTrack.applyConstraints()")}}. It can, however, be used for initially selecting media when calling {{domxref("MediaDevices.getUserMedia()")}}.
+    All tracks with the same source will share the same ID for any given origin, so {{domxref("MediaStreamTrack.getCapabilities()")}} will always return exactly one value for `deviceId`. That makes the device ID not useful for any changes to constraints when calling {{domxref("MediaStreamTrack.applyConstraints()")}}. It can, however, be used for initially selecting media when calling {{domxref("MediaDevices.getUserMedia()")}}.
 
     > [!NOTE]
     > An exception to the rule that device IDs are the same across browsing sessions: private browsing mode will use a different ID, and will change it each browsing session.
@@ -63,28 +63,28 @@ For example, because {{Glossary("RTP")}} doesn't provide some of these values du
 #### Properties of audio tracks
 
 - `autoGainControl`
-  - : A boolean specifying if automatic gain control (AGC) is enabled. Automatic gain control is a feature in which a sound source automatically manages changes in the volume of its source media to maintain a steady overall volume level. This feature is typically used on microphones, although it can be provided by other input sources as well.
+  - : A boolean specifying whether automatic gain control (AGC) is enabled. Automatic gain control allows a sound source to manage source media volume changes automatically to maintain a steady overall volume level. This feature is typically used on microphones, although other input sources can also provide it.
 - `channelCount`
   - : An integer specifying the number of audio channels present on the track (therefore indicating how many audio samples exist in each audio frame). This is 1 for mono, 2 for stereo, and so forth.
 - `echoCancellation`
-  - : A boolean specifying if echo cancellation is enabled. Echo cancellation is a feature which attempts to prevent echo effects on a two-way audio connection by attempting to reduce or eliminate crosstalk between the user's output device and their input device. For example, it might apply a filter that negates the sound being produced on the speakers from being included in the input track generated from the microphone.
+  - : A boolean specifying whether echo cancellation is enabled. Echo cancellation attempts to prevent echo effects on a two-way audio connection by reducing or eliminating crosstalk between the user's input and output devices. For example, it might apply a filter that negates the sound produced by the speakers from being included in the microphone's generated input track.
 - `latency`
-  - : A floating point number specifying the audio latency, in seconds. Latency is the amount of time which elapses between the start of processing the audio and the data being available to the next step in the audio utilization process. This value is a target value; actual latency may vary to some extent for various reasons including CPU, transmission, and storage overhead.
+  - : A floating point number specifying the audio latency, in seconds. Latency is the amount of time that elapses between the start of processing the audio and the data being available to the next step in the audio utilization process. This value is a target value; actual latency may vary to some extent for various reasons, including CPU, transmission, and storage overhead.
 - `noiseSuppression`
-  - : A boolean specifying if noise suppression is enabled. Noise suppression automatically filters the audio to remove background noise, hum caused by equipment, and the like from the sound before delivering it to your code. This feature is typically used on microphones, although it is technically possible it could be provided by other input sources as well.
+  - : A boolean specifying whether noise suppression is enabled. Noise suppression automatically filters the audio to remove background noise, equipment hum, etc., from the sound before delivering it to your code. This feature is typically used on microphones, although other input sources can also provide it.
 - `restrictOwnAudio`
-  - : A boolean specifying if the browser will attempt to filter out system audio originating from the capturing tab during screen capture. For example, if the capturing web page itself is playing embedded audio or video, that audio would be included in the capture. Since this could lead to an undesirable echo or interfere with the intended audio sources from other tabs or applications, removing it from the capture is desirable. If removal of audio via processing fails, the user agent may exclude all audio originating from the capturing tab.
+  - : A boolean specifying whether the browser will attempt to filter out system audio originating from the capturing tab during screen capture. For example, if the capturing web page itself is playing embedded audio or video, that audio would be included in the capture. Since this could lead to an undesirable echo or interfere with the intended audio sources from other tabs or applications, removing it from the capture is desirable. If audio removal via processing fails, the user agent may exclude all audio originating from the capturing tab.
 
     > [!NOTE]
     > If the captured display surface doesn't include system audio, this setting will have no effect.
 - `sampleRate`
   - : An integer specifying the sample rate in samples per second of the audio data. Common values include 44,100 (standard CD audio), 48,000 (standard digital audio), 96,000 (commonly used in audio mastering and post-production), and 192,000 (used for high-resolution audio in professional recording and mastering sessions). However, lower values are often used to reduce bandwidth requirements; 8,000 samples per second is adequate for comprehensible albeit imperfect human speech, and both 11,025 and 22,050 are often used for low-bandwidth, reduced quality sound and music.
 - `sampleSize`
-  - : An integer specifying the linear size, in bits, of each audio sample. The most commonly used sample size for many years now is 16 bits per sample, which was used for CD audio among others. Other common sample sizes are 8 (for reduced bandwidth requirements) and 24 (for high-resolution professional audio).
+  - : An integer specifying the linear size, in bits, of each audio sample. The most commonly used sample size is 16 bits per sample, which is used for CD audio, etc. Other common sample sizes are 8 (for reduced bandwidth requirements) and 24 (for high-resolution professional audio).
 
     Each audio channel on the track requires `sampleSize` bits. That means that a given sample actually uses (`sampleSize` / 8) \* `channelCount` bytes of data. For example, 16-bit stereo audio requires (16/8)\*2 or 4 bytes per sample.
 - `suppressLocalAudioPlayback`
-  - : A boolean specifying if the audio playing in a tab will stop playing from a user's local speakers when the tab is captured. For example, in cases where you broadcast a video call to an external AV system in a conference room, you will want the audio to play out of the AV system, and not the local speakers. This way, the audio will be louder and clearer, and also in sync with the conference video.
+  - : A boolean specifying whether the audio playing in a tab will stop playing from a user's local speakers when the tab is captured. For example, when broadcasting a video call to an external AV system in a conference room, you will want the audio to play out of the AV system, not the local speakers. This way, the audio will be louder and clearer, and also in sync with the conference video.
 - `volume` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A floating point number specifying the volume level of the track. This value will be between 0.0 (silent) to 1.0 (maximum supported volume for the device).
 
@@ -120,7 +120,7 @@ For example, because {{Glossary("RTP")}} doesn't provide some of these values du
 
 #### Properties of shared screen tracks
 
-Tracks containing video shared from a user's screen (regardless of whether the screen data comes from the entire screen or a portion of a screen, like a window or tab) are generally treated like video tracks, with the exception that they also support the following added settings:
+Tracks containing video shared from a user's screen (regardless of whether the screen data comes from the entire screen or a portion of a screen, like a window or tab) are generally treated like video tracks, except that they also support the following settings:
 
 - `cursor`
   - : A string specifying whether or not the mouse cursor is being included in the generated stream and under what conditions. Possible values are:
@@ -134,16 +134,16 @@ Tracks containing video shared from a user's screen (regardless of whether the s
 - `displaySurface`
   - : A string specifying the type of source the track contains. The value will be one of:
     - `browser`
-      - : The stream's video track presents the entire contents of a single browser tab which the user selected during the {{domxref("MediaDevices.getDisplayMedia","getDisplayMedia()")}} call.
+      - : The stream's video track presents the entire contents of a single browser tab that the user selected during the {{domxref("MediaDevices.getDisplayMedia","getDisplayMedia()")}} call.
     - `monitor`
-      - : The video track in the stream presents the complete contents of one or more of the user's screens. Any empty space (if the displays are of different dimensions) is filled with a backdrop chosen by the user agent.
+      - : The stream's video track presents the complete contents of one or more of the user's screens. Any empty space (if the displays are of different dimensions) is filled with a backdrop chosen by the user agent.
     - `window`
       - : The stream's video track presents the contents of a single window selected by the user. The window may be from any application, not necessarily just from within the user agent.
 
     Not all user agents support all of these surface types.
 
 - `logicalSurface`
-  - : A boolean specifying if the display area being captured is a logical surface. Logical surfaces are those which are not necessarily entirely onscreen, or may even be off-screen, such as windows' backing buffers (where only part of the buffer is visible without scrolling the containing window) and offscreen rendering contexts. A visible display surface (that is, a surface for which `logicalSurface` returns `false`) is the portion of a logical display surface which is currently visible onscreen.
+  - : A boolean specifying whether the display area being captured is a logical surface. Logical surfaces are not necessarily entirely onscreen, or may even be off-screen, such as windows' backing buffers (where only part of the buffer is visible without scrolling the containing window) and offscreen rendering contexts. A visible display surface (that is, a surface for which `logicalSurface` returns `false`) is the portion of a logical display surface that is currently visible onscreen.
 
     The most common scenario in which a display surface may be a logical one is if the selected surface contains the entire content area of a window which is too large to display onscreen at once. Since the window that contains the surface has to be scrolled to show the rest of the contents, the surface is a logical one.
 
