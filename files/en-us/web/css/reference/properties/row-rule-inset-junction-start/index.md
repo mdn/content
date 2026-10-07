@@ -7,7 +7,7 @@ browser-compat: css.properties.row-rule-inset-junction-start
 sidebar: cssref
 ---
 
-The **`row-rule-inset-junction-start`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the starting-endpoints of row rule segments that are [junction endpoints](#understanding_junction_start); that is, endpoints at gap junctions where rule segments intersect.
+The **`row-rule-inset-junction-start`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the start edge of row rule segments that are [junction endpoints](#understanding_junction_start); that is, endpoints at gap junctions where rule segments intersect.
 
 {{InteractiveExample("CSS Demo: row-rule-inset-junction-start")}}
 
@@ -127,7 +127,7 @@ This property is specified as a single value from the following list:
 
 ## Description
 
-The `row-rule-inset-junction-start` property can be used to inset or outset [junction segment endpoints](#understanding_junction_start) occurring at the end of row rule segments. The default value is `0`. Positive values reduce the segment size, while negative values and the [`overlap-join` keyword](#the_overlap-join_value) increase it.
+The `row-rule-inset-junction-start` property can be used to inset or outset [junction segment endpoints](#understanding_junction_start) occurring at the start of row rule segments. The default value is `0`. Positive values reduce the segment size, while negative values and the [`overlap-join` keyword](#the_overlap-join_value) increase it.
 
 Row rules are painted within a row gap as one or more segments, with segments occurring between:
 
@@ -139,9 +139,9 @@ Whether a row rule spans multiple columns or is broken into multiple segments is
 
 The `row-rule-inset-junction-start` property is a constituent property of several [shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties):
 
-- To inset both left and right row segment junction endpoints, the `row-rule-inset-junction-start` property, along with the {{cssxref("row-rule-inset-junction-end")}} property, can be set using the {{cssxref("row-rule-inset-junction")}} shorthand.
+- To inset both the left and right row segment junction endpoints, the `row-rule-inset-junction-start` property, along with the {{cssxref("row-rule-inset-junction-end")}} property, can be set using the {{cssxref("row-rule-inset-junction")}} shorthand.
 
-- To inset all row segment endpoints, the `row-rule-inset-junction-start` property, along with the {{cssxref("row-rule-inset-cap-start")}} property, can be set using the {{cssxref("row-rule-inset-start")}} shorthand.
+- To inset all start row segment endpoints, the `row-rule-inset-junction-start` property, along with the {{cssxref("row-rule-inset-cap-start")}} property, can be set using the {{cssxref("row-rule-inset-start")}} shorthand.
 
 - To inset the top, bottom, left, and right segment junction endpoints the `row-rule-inset-junction` shorthand property, along with the {{cssxref("column-rule-inset-junction")}} shorthand property, can be set using the {{cssxref("rule-inset-junction")}} shorthand.
 
@@ -153,7 +153,7 @@ A _junction segment endpoint_ is any segment endpoint at an interior gap that st
 
 Length `row-rule-inset-junction-start` values inset junction segments by the specified value. Percentage values are relative to the size of the {{cssxref("column-gap")}}. Negative values create an outset, extending the start of the junction segment. Setting `-50%` outsets the start of the junction segment half way through the adjacent column gap, no matter how wide the column gap is.
 
-In the following demonstration, the row rule segments in the top two columns start in junction endpoints. With `row-rule-inset-junction-start: 16px` set, the right, or start, of these segments are inset by `16px`. Change the inset `<length>` value to better visualize which segments start in junction segment endpoints.
+In the following demonstration, the row rule segments in the in all but the first column start in junction endpoints. With `row-rule-inset-junction-start: 16px` set, the right, or start, of these segments are inset by `16px`. Change the inset `<length>` value to better visualize which row segments start in junction segment endpoints.
 
 ```html hidden live-sample___junctions live-sample___percents
 <ul id="ul">
@@ -173,9 +173,9 @@ In the following demonstration, the row rule segments in the top two columns sta
   <li>14</li>
   <li>15</li>
   <li>16</li>
-  <li>17</li>
+  <li class="a">18</li>
   <li class="b">21</li>
-  <li class="c">23</li>
+  <li class="c">24</li>
 </ul>
 
 <p>
@@ -245,12 +245,16 @@ li {
   width: 100%;
   box-sizing: border-box;
 }
+.a {
+  grid-column: 6 / 7;
+  grid-row: 3 / 4;
+}
 .b {
   grid-column: 3 / 4;
   grid-row: 4 / 5;
 }
 .c {
-  grid-column: 5 / 6;
+  grid-column: 6 / 7;
   grid-row: 4 / 5;
 }
 @layer no-support {
@@ -315,11 +319,11 @@ visibility.addEventListener("change", () => {
 
 The {{cssxref("rule-break")}} property is set to `intersection`, breaking all the row and column segments at every gap junction, with the start of each interior row segment abutting a column gap by default. The default value of the `row-rule-inset-junction-start` property is `0`.
 
-Change the inset value. Note how only the right starts of the row segments in the middle of the grid change when the property value changes. The segment endpoints at the containers do not change: these are _cap endpoints_, and are not affected by the `row-rule-inset-junction-start` property.
+Change the inset value. Note how only the starts of the row segments in the middle of the grid change when the property value changes. The segment endpoints at the containers do not change: these are _cap endpoints_, and are not affected by the `row-rule-inset-junction-start` property.
 
-Select `between` as the `rule-visibility-items` value. This value causes rules in gap segments to be painted only if items occupy both adjacent areas. The row rule segment between `17` and `24` now starts at an interior junction where no other rule segments are present: the start of this row segment is a _cap segment endpoint_ and isn't affected by the `row-rule-inset-junction-start` property. The `row-rule-inset-cap-start` property can be used to inset this segment endpoint.
+Select `between` as the `rule-visibility-items` value. This value causes rules in gap segments to be painted only if items occupy both adjacent areas. The row rule segment between `18` and `24` now starts at an interior junction where no other rule segment is present: the start of this row segment is a _cap segment endpoint_ and isn't affected by the `row-rule-inset-junction-start` property. The `row-rule-inset-cap-start` property can be used to inset this segment endpoint.
 
-The `around` value paints rules in gap segments if an item occupies at least one of the two adjacent areas. In this example, no junction segment endpoints became cap segment endpoints, but some cap segments were not drawn.
+The `around` value paints rules in gap segments if an item occupies at least one of the two adjacent areas. In this example, no junction segment endpoints became cap segment endpoints, but some segments were not drawn.
 
 ### The `overlap-join` value
 

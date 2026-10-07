@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`row-rule-inset-junction-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the property can be used to offset the end of row rule segment [junction endpoints](#understanding_junction_end).
+The **`row-rule-inset-junction-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the end edge of row rule segments that are [junction endpoints](#understanding_junction_end), that is, endpoints at gap junctions where rule segments intersect.
 
 {{InteractiveExample("CSS Demo: row-rule-inset-junction-end")}}
 
@@ -131,7 +131,7 @@ This property is specified as a single value from the following list:
 
 ## Description
 
-The `row-rule-inset-junction-end` property can be used to inset or outset [junction segment endpoints](#understanding_junction_end) occurring at the end o row rule segments. The default value is `0`. Positive values reduce the segment size, while negative values and the [`overlap-join` keyword](#the_overlap-join_value) increase it.
+The `row-rule-inset-junction-end` property can be used to inset or outset [junction segment endpoints](#understanding_junction_end) occurring at the end of row rule segments. The default value is `0`. Positive values reduce the segment size, while negative values and the [`overlap-join` keyword](#the_overlap-join_value) increase it.
 
 Row rules are painted within a row gap as one or more segments, with segments occurring between:
 
@@ -139,13 +139,13 @@ Row rules are painted within a row gap as one or more segments, with segments oc
 - Adjacent flex items or flex lines in flex layouts, depending on the `flex-direction`.
 - Adjacent rows in multi-col layouts, which may exist when {{cssxref("column-height")}} is set to a {{cssxref("&lt;length>")}}.
 
-Whether a row rule spans multiple columns or is broken into multiple segments is defined by the {{cssxref("row-rule-break")}} property. Interior breaks between row rule segments are the size of the {{cssxref("column-gap")}}. A junction end occurs at the end of every row segment where the segment ends at a gap junction with other row or rule segments present. If the `row-rule-break` isn't set to break,
+Whether a row rule spans multiple columns or is broken into multiple segments is defined by the {{cssxref("row-rule-break")}} property. Interior breaks between row rule segments are the size of the {{cssxref("column-gap")}}. A junction end occurs at the end of every row segment where the segment ends at a gap junction with other row or rule segments present.
 
 The `row-rule-inset-junction-end` property is a constituent property of several [shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties):
 
-- To inset both left and right row segment junction endpoints, the `row-rule-inset-junction-end` property, along with the {{cssxref("row-rule-inset-junction-start")}} property, can be set using the {{cssxref("row-rule-inset-junction")}} shorthand.
+- To inset both the left and right row segment junction endpoints, the `row-rule-inset-junction-end` property, along with the {{cssxref("row-rule-inset-junction-start")}} property, can be set using the {{cssxref("row-rule-inset-junction")}} shorthand.
 
-- To inset all row segment endpoints, the `row-rule-inset-junction-end` property, along with the {{cssxref("row-rule-inset-cap-end")}} property, can be set using the {{cssxref("row-rule-inset-end")}} shorthand.
+- To inset all end row segment endpoints, the `row-rule-inset-junction-end` property, along with the {{cssxref("row-rule-inset-cap-end")}} property, can be set using the {{cssxref("row-rule-inset-end")}} shorthand.
 
 - To inset the top, bottom, left, and right segment junction endpoints the `row-rule-inset-junction` shorthand property, along with the {{cssxref("column-rule-inset-junction")}} shorthand property, can be set using the {{cssxref("rule-inset-junction")}} shorthand.
 
@@ -157,7 +157,7 @@ A _junction segment endpoint_ is any segment endpoint at an interior gap that en
 
 Length `row-rule-inset-junction-end` values inset junction segments by the specified value. Percentage values are relative to the size of the {{cssxref("column-gap")}}. Negative values create an outset, extending the end of the junction segment. Setting `-50%` outsets the end of the junction segment half way through the adjacent column gap, no matter how wide the column gap is.
 
-In the following demonstration, the row rule segments in the top two columns end in junction endpoints. With `row-rule-inset-junction-end: 16px` set, the right, or end, of these segments are inset by `16px`. Change the inset `<length>` value to better visualize which segments end in junction segment endpoints.
+In the following demonstration, the row rule segments in the all but the last column end in junction endpoints. With `row-rule-inset-junction-end: 16px` set, the right, or end, of these segments are inset by `16px`. Change the inset `<length>` value to better visualize which row segments end in junction segment endpoints.
 
 ```html hidden live-sample___junctions live-sample___percents
 <ul id="ul">
@@ -321,7 +321,7 @@ The {{cssxref("rule-break")}} property is set to `intersection`, breaking all th
 
 Change the inset value. Note how only the right ends of the row segments in the middle of the grid change when the property value changes. The segment endpoints at the containers do not change: these are _cap endpoints_, and are not affected by the `row-rule-inset-junction-end` property.
 
-Select `between` as the `rule-visibility-items` value. This value causes rules in gap segments to be painted only if items occupy both adjacent areas. The row rule segment between `17` and `24` now ends at an interior junction where no other rule segments are present: the end of this row segment is a _cap segment endpoint_ and isn't affected by the `row-rule-inset-junction-end` property. The `row-rule-inset-cap-end` property can be used to inset this segment endpoint.
+Select `between` as the `rule-visibility-items` value. This value causes rules in gap segments to be painted only if items occupy both adjacent areas. The row rule segment between `17` and `23` now ends at an interior junction where no other rule segments are present: the end of this row segment is a _cap segment endpoint_ and isn't affected by the `row-rule-inset-junction-end` property. The `row-rule-inset-cap-end` property can be used to inset this segment endpoint.
 
 The `around` value paints rules in gap segments if an item occupies at least one of the two adjacent areas. In this example, no junction segment endpoints became cap segment endpoints, but some cap segments were not drawn.
 
