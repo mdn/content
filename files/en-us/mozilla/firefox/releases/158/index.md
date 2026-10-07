@@ -91,6 +91,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The {{cssxref("random")}} CSS function generates a random value within a specified range, optionally limiting the possible values to step size intervals between those limits and the ability to scope the random value to elements and properties.
   ([Firefox bug 2071165](https://bugzil.la/2071165)).
+
 - **`corner-shape` properties**: `layout.css.corner-shape.enabled`
 
   The {{cssxref("corner-shape")}} shorthand property and its constituent longhand properties are now supported in Nightly. These properties let you customize corner shapes using one of the {{cssxref("corner-shape-value")}} keyword values or the {{cssxref("superellipse")}} function.
