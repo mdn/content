@@ -76,7 +76,7 @@ jobs:
           echo "STDERR..................................................."
           cat /tmp/stderr.log
 
-  filecheck:
+  filecheck-help:
     runs-on: ubuntu-latest
 
     steps:
@@ -122,7 +122,7 @@ jobs:
 
       - run: npm run content validate-redirects en-US
 
-  build:
+  build-help:
     runs-on: ubuntu-latest
 
     steps:
