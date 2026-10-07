@@ -216,7 +216,7 @@ This is what asynchronous APIs enable us to do. The rest of this module explains
 
 ### Types of long-running tasks and how to approach them
 
-There are two types of long-running tasks: those that are capabilities provided by the browser API, and those that you implement yourself in JavaScript.
+There are two types of long-running tasks: capabilities provided by browser APIs and custom code that you implement in JavaScript.
 
 Almost all long-running task primitives provided by the browser are already asynchronous, such as making HTTP requests using `fetch()`, querying [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), or [encrypting data](/en-US/docs/Web/API/SubtleCrypto/encrypt). They never block the main thread; you interact with them using events, callbacks, or [promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises), as you will see coming up next.
 
