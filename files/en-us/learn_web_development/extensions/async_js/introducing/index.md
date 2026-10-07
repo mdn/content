@@ -61,7 +61,7 @@ This code:
 2. Declares another string called `greeting`, which uses `name`.
 3. Outputs the greeting to the JavaScript console.
 
-We should note here that the browser effectively steps through the program one line at a time, in the order we wrote it. At each point, the browser waits for the line to finish its work before going on to the next line. It has to do this because each line depends on the work done in the preceding lines.
+The browser effectively steps through the program one line at a time, in the order we wrote it. At each point, the browser waits for the line to finish its work before going on to the next line. It has to do this because each line depends on the work done in the preceding lines.
 
 That makes this a **synchronous program**. It would still be synchronous even if we called a separate function, like this:
 
@@ -212,7 +212,15 @@ What we need is a way for our program to:
 3. Have the function execute the operation in a way that does not block the main thread, for example by starting a new thread.
 4. Notify us with the result of the operation when it eventually completes.
 
-That's precisely what asynchronous functions enable us to do. The rest of this module explains how they are implemented in JavaScript.
+This is what asynchronous APIs enable us to do. The rest of this module explains how these approaches are implemented in JavaScript.
+
+### Types of long-running tasks and how to approach them
+
+There are two types of long-running tasks: capabilities provided by browser APIs and custom code that you implement in JavaScript.
+
+Almost all long-running task primitives provided by the browser are already asynchronous, such as making HTTP requests using `fetch()`, querying [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), or [encrypting data](/en-US/docs/Web/API/SubtleCrypto/encrypt). They never block the main thread; you interact with them using events, callbacks, or [promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises), as you will see coming up next.
+
+Our `generatePrimes()` function, however, is custom JavaScript. Wrapping the call in a promise does not move those calculations to another thread, so it still blocks the main thread while it runs. To make it async, we need to explicitly create a thread using a [web worker](/en-US/docs/Learn_web_development/Extensions/Async_JS/Introducing_workers). This will come later in the tutorial, and it is more involved in JavaScript than just calling existing asynchronous primitives.
 
 ## Event handlers
 

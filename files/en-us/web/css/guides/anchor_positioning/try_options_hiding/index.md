@@ -388,7 +388,7 @@ For example, let's say we have an anchor-positioned tooltip element that is posi
 ```css
 .tooltip {
   position: absolute;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top;
   position-try-fallbacks: flip-block;
   container-type: anchored;

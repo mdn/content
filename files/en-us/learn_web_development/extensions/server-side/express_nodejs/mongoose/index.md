@@ -222,7 +222,7 @@ async function main() {
 
 You can get the default `Connection` object with `mongoose.connection`.
 If you need to create additional connections you can use `mongoose.createConnection()`.
-This takes the same form of database URI (with host, database, port, options, etc.) as `connect()` and returns a `Connection` object).
+This takes the same form of database URI (with host, database, port, options, etc.) as `connect()` and returns a `Connection` object.
 Note that `createConnection()` returns immediately; if you need to wait on the connection to be established you can call it with `asPromise()` to return a promise (`mongoose.createConnection(mongoDB).asPromise()`).
 
 ### Defining and creating models

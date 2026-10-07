@@ -286,5 +286,5 @@ Try scrolling the content up. The animation starts playing when the tracked `.tr
 - {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-source")}}, and {{cssxref("timeline-trigger-active-range")}}
 - {{cssxref("timeline-trigger")}} shorthand property
 - [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
-- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers/) module
+- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

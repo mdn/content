@@ -409,5 +409,5 @@ Select different range values then scroll the tracked element up and down the sc
 - {{cssxref("trigger-scope")}}
 - {{cssxref("animation-action")}} type
 - [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
-- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers/) module
+- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

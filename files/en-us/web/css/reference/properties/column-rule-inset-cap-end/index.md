@@ -13,7 +13,7 @@ sidebar: cssref
 
 The **`column-rule-inset-cap-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the bottom of column rule segment [cap endpoints](#understanding_cap_end) at the container's end edge, and cap endpoints where no rule segments intersect.
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: column-rule-inset-cap-end")}}
 
 ```css interactive-example-choice
 column-rule-inset-cap-end: -20px;
@@ -343,6 +343,8 @@ Setting `100%` insets the end of the last two column rule segments by `20px`. Se
 This example demonstrates setting `column-rule-inset-cap-end` to inset the end edge of cap segments on flex containers.
 
 #### HTML
+
+The markup includes two {{htmlelement("div")}} elements, each containing seven children. The only difference between the two containers is that the second one has an added `column` class.
 
 ```html
 <h1>Insetting cap column rule endpoints</h1>

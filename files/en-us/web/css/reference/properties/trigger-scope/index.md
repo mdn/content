@@ -262,7 +262,7 @@ p {
 }
 
 section {
-  background: #eee;
+  background: #eeeeee;
   padding: 10px 20px;
   margin-top: 20px;
 }
@@ -380,5 +380,5 @@ Now check the checkbox to remove `trigger-scope: all` from the `<section>` eleme
 - {{cssxref("timeline-trigger")}} shorthand property
 - {{cssxref("animation-action")}} type
 - [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
-- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers/) module
+- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
