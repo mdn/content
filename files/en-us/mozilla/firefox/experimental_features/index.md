@@ -480,7 +480,7 @@ The `named-feature()` function in the {{cssxref("@supports")}} at-rule lets you 
 
 ### `corner-shape` properties
 
-The {{cssxref("corner-shape")}} shorthand property, and the longhand properties, now support the {{cssxref("corner-shape-value")}} values and {{cssxref("superellipse")}} function.
+The {{cssxref("corner-shape")}} shorthand property and its constituent longhand properties are now supported in Nightly. These properties let you customize corner shapes using one of the {{cssxref("corner-shape-value")}} keyword values or the {{cssxref("superellipse")}} function.
 ([Firefox bug 2070927](https://bugzil.la/2070927)).
 
 | Release channel   | Version added | Enabled by default? |
