@@ -35,7 +35,6 @@ Web/CSS/rule-overlap
 # CSS animation draft features.
 # Linked before standalone reference pages are available.
 Web/CSS/animation-delay-end
-Web/CSS/animation-trigger
 
 # CSS grammar productions.
 # These syntax terms may not need standalone reference pages.
@@ -101,23 +100,11 @@ Web/MathML/Reference/Global_attributes/nonce
 Web/MathML/Reference/Global_attributes/style
 Web/MathML/Reference/Global_attributes/tabindex
 
-# SVG attribute index entries.
-# Some are shared with other references or lack standalone SVG pages.
-Web/SVG/Reference/Attribute/hreflang
-Web/SVG/Reference/Attribute/offset
-Web/SVG/Reference/Attribute/ping
-Web/SVG/Reference/Attribute/referrerPolicy
-Web/SVG/Reference/Attribute/rel
-Web/SVG/Reference/Attribute/title
-Web/SVG/Reference/Attribute/xlink:actuate
-Web/SVG/Reference/Attribute/xlink:role
-
 # WebDriver route migration and reference gaps.
 # Likely links left by restructuring or pages not yet added.
 Web/WebDriver/Reference/BiDi/Modules/browser/setClientWindowState
 Web/WebDriver/Reference/BiDi/Modules/script/callFunction
 Web/WebDriver/Reference/BiDi/Modules/script/evaluate
-Web/WebDriver/Reference/BiDi/Modules/script/stackTrace
 Web/WebDriver/Reference/Capabilities/browserName
 Web/WebDriver/Reference/Capabilities/browserVersion
 Web/WebDriver/Reference/Capabilities/goog/chromeOptions
@@ -375,7 +362,6 @@ Web/API/RTCReceivedRtpStreamStats/framesDecoded
 Web/API/RTCSentRtpStreamStats/bytesSent
 Web/API/RTCSentRtpStreamStats/framesEncoded
 Web/API/RTCSentRtpStreamStats/packetsSent
-Web/API/SFrameTransform
 Web/API/ShadowRoot/getSelection
 Web/API/SourceBufferList/addsourcebuffer_event
 Web/API/SourceBufferList/removesourcebuffer_event
