@@ -400,6 +400,8 @@ This example demonstrates setting `column-rule-inset-junction-end` to inset the 
 
 #### HTML
 
+The markup includes two {{htmlelement("div")}} elements, each containing seven children. The only difference between the two containers is that the second one has an added `column` class.
+
 ```html
 <h1>Insetting junction column rule endpoints</h1>
 <article>

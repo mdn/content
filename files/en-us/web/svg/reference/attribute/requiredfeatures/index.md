@@ -221,7 +221,7 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#Hyperlinking`
   - : The browser supports the {{SVGElement("a")}} element
 - `http://www.w3.org/TR/SVG11/feature#XlinkAttribute`
-  - : The browser supports the {{SVGAttr("xlink:type")}}, {{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:role")}}, {{SVGAttr("xlink:arcrole")}}, {{SVGAttr("xlink:title")}}, {{SVGAttr("xlink:show")}} and {{SVGAttr("xlink:actuate")}} attributes
+  - : The browser supports the {{SVGAttr("xlink:type")}}, {{SVGAttr("xlink:href")}}, `xlink:role`, {{SVGAttr("xlink:arcrole")}}, {{SVGAttr("xlink:title")}}, {{SVGAttr("xlink:show")}} and {{SVGAttr("xlink:actuate")}} attributes
 - `http://www.w3.org/TR/SVG11/feature#View`
   - : The browser supports the {{SVGElement("view")}} element
 - `http://www.w3.org/TR/SVG11/feature#Script`
