@@ -57,7 +57,7 @@ The [restrictions and limitations](/en-US/docs/Mozilla/Add-ons/WebExtensions/Con
 
 The extension can only access the tab, or the data, that existed when the user interaction occurred. When the tab navigates away, the extension loses permission to access it. This means that the extension must complete its work with the tab, or capture the data it needs, during the granted period. If the extension needs access again, the user must repeat the user action.
 
-The point at which access ends varies by browser [browser_compatibility](#browser_compatibility).
+The point at which access ends varies by browser, see [When access is revoked](#when_access_is_revoked).
 
 ## Example
 
@@ -224,13 +224,13 @@ In all browsers, closing the tab revokes access. However, same-document navigati
 For navigations that load a new document, the behavior differs:
 
 - **Chrome**: access persists while the tab stays on the same origin, including across reloads. It's revoked when the tab navigates to a different origin.
-- **Safari**: access persists while the tab stays on the same host or one of its subdomains, including across reloads. It's revoked when the tab navigates to any other host.
+- **Safari**: access is tied to the document that was in the tab when the user action occurred. It's revoked when the tab navigates to a different URL.
 - **Firefox**: access is tied to the document that was in the tab when the user action occurred. Any navigation resulting in a new document ends the access, and the user must repeat the user action. If that document returns from the [back/forward cache](/en-US/docs/Glossary/bfcache), its access is restored.
 
 ### Other differences
 
 - **Permission prompts**: Firefox and Chrome grant an extension's requested host permissions on installation, so `activeTab` avoids an install-time warning. Safari, by contrast, defaults host permissions to "ask", and prompts the user the first time the extension tries to access a site, offering **Allow for One Day** or **Always Allow**. Using `activeTab` avoids this prompt, as Safari treats the user's interaction with the extension as the grant.
-- **Manifest V2 and V3**: `activeTab` works the same way in both manifest versions in all browsers except that in Firefox Manifest V3 `activeTab` doesn't enable {{WebExtAPIRef("scripting.executeScript")}} in an iframe with a different origin (see [Bug 1839200](https://bugzil.la/1839200#c3)). In Manifest V3, the {{WebExtAPIRef("scripting")}} API replaces {{WebExtAPIRef("tabs.executeScript()")}} and {{WebExtAPIRef("tabs.insertCSS()")}}, and the `"scripting"` permission is needed alongside `activeTab`.
+- **Manifest V2 and V3**: `activeTab` works the same way in browsers in Manifest V3. In Firefox Manifest V2 `activeTab` additionally enables {{WebExtAPIRef("scripting.executeScript()")}} to access an iframe with a different origin (see [Bug 1839200](https://bugzil.la/1839200#c3)), but this behavior was dropped in MV3.
 
 ## See also
 
