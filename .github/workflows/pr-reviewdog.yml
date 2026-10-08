@@ -7,6 +7,10 @@ on:
     types:
       - in_progress
 
+# `in_progress` can fire more than once per run.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.workflow_run.id }}-${{ github.event.workflow_run.run_attempt }}
+
 permissions:
   # Download artifact from lint workflow.
   actions: read
