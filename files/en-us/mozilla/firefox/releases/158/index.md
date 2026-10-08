@@ -102,6 +102,10 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   The {{cssxref("corner-shape")}} shorthand property and its constituent longhand properties are now supported in Nightly. These properties let you customize corner shapes using one of the {{cssxref("corner-shape-value")}} keyword values or the {{cssxref("superellipse")}} function.
   ([Firefox bug 2070927](https://bugzil.la/2070927)).
 
+- **Deferred module evaluation** (Nightly): `javascript.options.experimental.defer_import_eval`
+
+  The [`import defer`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer) declaration and the [`import.defer()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/defer) syntax are now supported in Nightly. They load a module and its dependencies up front, but run the module's code only when one of its exports is first accessed, so modules that aren't needed right away don't slow down startup. ([Firefox bug 1952263](https://bugzil.la/1952263)).
+
 - **On-device speech recognition**: `media.webspeech.recognition.enable`
 
   [On-device speech recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) is now supported in Nightly, on desktop only. This allows you to perform speech recognition via the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) directly in the browser, rather than relying on a cloud service.
