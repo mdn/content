@@ -31,7 +31,7 @@ sidebar: mdnsidebar
 > - **title**
 >   - : Title heading displayed at the top of the page. This is just the name of the interface. For example, the [Request](/en-US/docs/Web/API/Request) interface page has a _title_ of _Request_.
 > - **slug**
->   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/API/NameOfTheParentInterface`. For example, [Request](/en-US/docs/Web/API/Request) slug is "Web/API/Request".
+>   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`. This will be formatted like `Web/API/NameOfTheParentInterface`. For example, [Request](/en-US/docs/Web/API/Request) slug is "Web/API/Request".
 > - **page-type**
 >   - : The `page-type` key for Web/API interfaces is always `web-api-interface`.
 > - **status**
