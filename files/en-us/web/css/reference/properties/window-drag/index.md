@@ -43,7 +43,7 @@ When a PWA is installed, it is possible to remove most of the application window
 
 One remaining issue is that you will want to set the custom content so that you can drag appropriate sections to move the application window, which is expected behavior. This is achieved by setting the custom content's `window-drag` property to `move`, in which case a window move operation is performed and no events (for example pointer or mouse events) are fired during a dragging gesture on the content.
 
-The `window-drag` property is inherited by default. Therefore, if you want to make certain child elements behave normally and not initiate a window move operation on drag, you must turn this behavior off by setting `window-drag` to `none`.
+The `window-drag` property is inherited by default. To ensure child elements behave normally and don't initiate window move operations on drag, disable the drag behavior on nested elements by setting `window-drag` to `none`.
 
 The `window-drag` property is a standardized version of the legacy, non-standard `app-region`, `-webkit-app-region`, and `-moz-window-dragging` properties. Use the standard `window-drag` property for stability and browser interoperability.
 
