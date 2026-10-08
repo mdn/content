@@ -65,7 +65,8 @@ The `Origin` header value may be `null` in a number of cases, including (non-exh
 - Documents served with the {{HTTPHeader("Content-Security-Policy")}} `sandbox` directive whose value doesn't include `allow-same-origin`.
 - {{HTMLElement("iframe", "iframes")}} with a sandbox attribute whose value doesn't include `allow-same-origin`.
 - Responses that are network errors.
-- {{HTTPHeader("Referrer-Policy")}} set to `no-referrer` for non-`cors` request modes (e.g., basic form posts).
+- Certain {{HTTPHeader("Referrer-Policy")}} values, for requests that use neither `GET` nor `HEAD` and aren't made in `cors` mode (e.g., basic form posts).
+  See [Effect on the `Origin` header](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy#effect_on_the_origin_header) for the policy values that trigger this.
 
 > [!NOTE]
 > There is a more detailed listing of cases that may return `null` on Stack Overflow: [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802)

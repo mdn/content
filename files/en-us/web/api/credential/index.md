@@ -26,7 +26,7 @@ The **`Credential`** interface of the [Credential Management API](/en-US/docs/We
 
 ## Static methods
 
-- {{domxref("Credential.isConditionalMediationAvailable_static", "Credential.isConditionalMediationAvailable()")}} {{experimental_inline}}
+- {{domxref("Credential.isConditionalMediationAvailable_static", "Credential.isConditionalMediationAvailable()")}}
   - : Returns a {{jsxref("Promise")}} which always resolves to `false`. Subclasses may override this value.
 
 ## Examples

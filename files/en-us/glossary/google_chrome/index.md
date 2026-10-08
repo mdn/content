@@ -5,7 +5,7 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-**Chrome** is a free {{Glossary("Browser","web browser")}} developed by Google, based on the [Chromium](https://www.chromium.org/) open source project. Some key differences are described in BrowserStack's [Chrome vs Chromium: Core Differences](https://www.browserstack.com/guide/difference-between-chrome-and-chromium) guide.
+**Chrome** is a free {{Glossary("Browser","web browser")}} developed by Google, based on the [Chromium](https://www.chromium.org/) open-source project. Some key differences are described in BrowserStack's [Chrome vs Chromium: Core Differences](https://www.browserstack.com/guide/difference-between-chrome-and-chromium) guide.
 
 Chrome, like Chromium, uses a rendering engine called {{Glossary("Blink")}}. On iOS though, due to platform restrictions, Chrome uses Apple's WebKit-based WebView instead of Blink.
 

@@ -1,5 +1,6 @@
 ---
-title: inset-inline-start
+title: "`inset-inline-start` CSS property"
+short-title: inset-inline-start
 slug: Web/CSS/Reference/Properties/inset-inline-start
 page-type: css-property
 browser-compat: css.properties.inset-inline-start

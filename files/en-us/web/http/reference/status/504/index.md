@@ -2,7 +2,7 @@
 title: 504 Gateway Timeout
 slug: Web/HTTP/Reference/Status/504
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.504
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.504
 sidebar: http
 ---
 

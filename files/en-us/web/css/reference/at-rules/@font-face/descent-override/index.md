@@ -1,5 +1,6 @@
 ---
-title: descent-override
+title: "`descent-override` CSS at-rule descriptor"
+short-title: descent-override
 slug: Web/CSS/Reference/At-rules/@font-face/descent-override
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.descent-override

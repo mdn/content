@@ -1,5 +1,6 @@
 ---
-title: "<p>: The Paragraph element"
+title: "`<p>` HTML paragraph element"
+short-title: <p>
 slug: Web/HTML/Reference/Elements/p
 page-type: html-element
 browser-compat: html.elements.p

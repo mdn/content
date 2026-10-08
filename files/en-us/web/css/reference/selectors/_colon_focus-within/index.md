@@ -1,5 +1,6 @@
 ---
-title: :focus-within
+title: "`:focus-within` CSS pseudo-class"
+short-title: :focus-within
 slug: Web/CSS/Reference/Selectors/:focus-within
 page-type: css-pseudo-class
 browser-compat: css.selectors.focus-within
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`:focus-within`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches an element if the element or any of its descendants are focused. In other words, it represents an element that is itself matched by the {{CSSxRef(":focus")}} pseudo-class or has a descendant that is matched by `:focus`. (This includes descendants in [shadow trees](/en-US/docs/Web/API/Web_components/Using_shadow_DOM).)
+
+This selector is useful, to take a common example, for highlighting an entire {{HTMLElement("form")}} container when the user focuses on one of its {{HTMLElement("input")}} fields.
 
 {{InteractiveExample("CSS Demo: :focus-within", "tabbed-shorter")}}
 
@@ -36,8 +39,6 @@ label:focus-within {
   </label>
 </form>
 ```
-
-This selector is useful, to take a common example, for highlighting an entire {{HTMLElement("form")}} container when the user focuses on one of its {{HTMLElement("input")}} fields.
 
 ## Syntax
 

@@ -224,7 +224,7 @@ If only one keyword value is specified, that value specifies the mask origin edg
 
 If only one {{cssxref("&lt;length-percentage&gt;")}} value is specified, this specifies the X coordinate relative to the left edge of the mask origin, with the Y coordinate set to `50%`.
 
-If two keyword values are specified, the order of the value doesn't matter, but the value can not include two vertical or two horizontal axis values; `left right` and `top bottom` are both invalid.
+If two keyword values are specified, the order of the value doesn't matter, but the value cannot include two vertical or two horizontal axis values; `left right` and `top bottom` are both invalid.
 
 ### Two-value syntax
 

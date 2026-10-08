@@ -1,5 +1,6 @@
 ---
-title: <input type="tel">
+title: '`<input type="tel">` HTML attribute value'
+short-title: <input type="tel">
 slug: Web/HTML/Reference/Elements/input/tel
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_tel
@@ -37,11 +38,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-Despite the fact that inputs of type `tel` are functionally identical to standard `text` inputs, they do serve useful purposes; the most quickly apparent of these is that mobile browsers — especially on mobile phones — may opt to present a custom keypad optimized for entering phone numbers. Using a specific input type for telephone numbers also makes adding custom validation and handling of phone numbers more convenient.
-
-> [!NOTE]
-> Browsers that don't support type `tel` fall back to being a standard {{HTMLElement("input/text", "text")}} input.
 
 ## Value
 
@@ -101,6 +97,11 @@ The `size` attribute is a numeric value indicating how many characters wide the 
 This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the [`maxlength`](#maxlength) attribute.
 
 ## Using tel inputs
+
+Despite the fact that inputs of type `tel` are functionally identical to standard `text` inputs, they do serve useful purposes; the most quickly apparent of these is that mobile browsers — especially on mobile phones — may opt to present a custom keypad optimized for entering phone numbers. Using a specific input type for telephone numbers also makes adding custom validation and handling of phone numbers more convenient.
+
+> [!NOTE]
+> Browsers that don't support type `tel` fall back to being a standard {{HTMLElement("input/text", "text")}} input.
 
 Telephone numbers are a very commonly collected type of data on the web. When creating any kind of registration or e-commerce site, for example, you will likely need to ask the user for a telephone number, whether for business purposes or for emergency contact purposes. Given how commonly-entered phone numbers are, it's unfortunate that a "one size fits all" solution for validating phone numbers is not practical.
 
@@ -515,14 +516,6 @@ input:valid + span::after {
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

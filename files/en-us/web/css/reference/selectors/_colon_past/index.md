@@ -1,5 +1,6 @@
 ---
-title: :past
+title: "`:past` CSS pseudo-class"
+short-title: :past
 slug: Web/CSS/Reference/Selectors/:past
 page-type: css-pseudo-class
 browser-compat: css.selectors.past

@@ -1,5 +1,6 @@
 ---
-title: "<dashed-function>: CSS custom functions"
+title: "`<dashed-function>` CSS type"
+short-title: <dashed-function>
 slug: Web/CSS/Reference/Values/dashed-function
 page-type: css-type
 status:

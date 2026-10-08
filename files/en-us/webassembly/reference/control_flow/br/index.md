@@ -3,6 +3,7 @@ title: "br: Wasm text instruction"
 short-title: br
 slug: WebAssembly/Reference/Control_flow/br
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.br
 sidebar: webassemblysidebar
 ---
 
@@ -56,3 +57,11 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 | Instruction | Binary opcode |
 | ----------- | ------------- |
 | `br`        | `0x0c`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

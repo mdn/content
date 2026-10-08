@@ -1,12 +1,13 @@
 ---
-title: padding-inline
+title: "`padding-inline` CSS property"
+short-title: padding-inline
 slug: Web/CSS/Reference/Properties/padding-inline
 page-type: css-shorthand-property
 browser-compat: css.properties.padding-inline
 sidebar: cssref
 ---
 
-The **`padding-inline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) defines the logical inline start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.
+The **`padding-inline`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property defines the logical inline start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.
 
 {{InteractiveExample("CSS Demo: padding-inline")}}
 
@@ -81,9 +82,9 @@ The `padding-inline` property may be specified with one or two values. If one va
 ### Values
 
 - {{cssxref("&lt;length&gt;")}}
-  - : The size of the padding as a fixed value. Must be nonnegative.
+  - : The size of the padding as a fixed value. Must be non-negative.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block). Must be nonnegative.
+  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block). Must be non-negative.
 
 ## Description
 

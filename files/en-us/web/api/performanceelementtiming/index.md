@@ -70,7 +70,7 @@ It also extends the following {{domxref("PerformanceEntry")}} properties, qualif
 ## Instance methods
 
 - {{domxref("PerformanceElementTiming.toJSON()")}} {{Experimental_Inline}}
-  - : Returns a JSON representation of the `PerformanceElementTiming` object.
+  - : Returns a JSON-serializable plain object representing the `PerformanceElementTiming` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 

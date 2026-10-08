@@ -1,5 +1,6 @@
 ---
-title: hyphenate-character
+title: "`hyphenate-character` CSS property"
+short-title: hyphenate-character
 slug: Web/CSS/Reference/Properties/hyphenate-character
 page-type: css-property
 browser-compat: css.properties.hyphenate-character

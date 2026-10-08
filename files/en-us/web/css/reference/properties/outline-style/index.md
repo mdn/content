@@ -1,5 +1,6 @@
 ---
-title: outline-style
+title: "`outline-style` CSS property"
+short-title: outline-style
 slug: Web/CSS/Reference/Properties/outline-style
 page-type: css-property
 browser-compat: css.properties.outline-style
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`outline-style`** [CSS](/en-US/docs/Web/CSS) property sets the style of an element's outline. An outline is a line that is drawn around an element, outside the {{cssxref("border")}}.
+
+It is often more convenient to use the shorthand property {{cssxref("outline")}} when defining the appearance of an outline.
 
 {{InteractiveExample("CSS Demo: outline-style")}}
 
@@ -47,8 +50,6 @@ outline-style: inset;
 }
 ```
 
-It is often more convenient to use the shorthand property {{cssxref("outline")}} when defining the appearance of an outline.
-
 ## Syntax
 
 ```css
@@ -72,14 +73,14 @@ outline-style: revert-layer;
 outline-style: unset;
 ```
 
-The `outline-style` property is specified as any one of the values listed below.
-
 ### Values
+
+This property is specified as one of the following values:
 
 - `auto`
   - : Permits the user agent to render a custom outline style.
 - `none`
-  - : No outline is used. The {{cssxref("outline-width")}} is `0`.
+  - : No outline is used.
 - `dotted`
   - : The outline is a series of dots.
 - `dashed`

@@ -1,5 +1,6 @@
 ---
-title: scroll-padding-block-start
+title: "`scroll-padding-block-start` CSS property"
+short-title: scroll-padding-block-start
 slug: Web/CSS/Reference/Properties/scroll-padding-block-start
 page-type: css-property
 browser-compat: css.properties.scroll-padding-block-start
@@ -73,7 +74,7 @@ scroll-padding-block-start: 2em;
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 scroll-padding-block-start: auto;
 
 /* <length> values */

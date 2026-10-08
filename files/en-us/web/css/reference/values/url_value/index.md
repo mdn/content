@@ -1,5 +1,6 @@
 ---
-title: <url>
+title: "`<url>` CSS type"
+short-title: <url>
 slug: Web/CSS/Reference/Values/url_value
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-values/#url-value
@@ -35,7 +36,7 @@ url("assets/icon.svg")
 url("../assets/image.png")
 
 /* Absolute URL */
-url("http://example.com/fonts/myFont.ttf")
+url("http://example.com/fonts/myFont.woff2")
 url("https://example.com/images/background.jpg")
 
 /* Data URL */

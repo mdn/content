@@ -1,5 +1,6 @@
 ---
-title: "<body>: The Document Body element"
+title: "`<body>` HTML document body element"
+short-title: <body>
 slug: Web/HTML/Reference/Elements/body
 page-type: html-element
 browser-compat: html.elements.body

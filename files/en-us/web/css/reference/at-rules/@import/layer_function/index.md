@@ -1,5 +1,6 @@
 ---
-title: layer()
+title: "`layer()` CSS function"
+short-title: layer()
 slug: Web/CSS/Reference/At-rules/@import/layer_function
 page-type: css-function
 browser-compat: css.at-rules.import.layer

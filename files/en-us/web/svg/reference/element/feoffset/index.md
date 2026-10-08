@@ -30,7 +30,7 @@ This element implements the {{domxref("SVGFEOffsetElement")}} interface.
 ```html
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <filter id="offset" width="180" height="180">
+    <filter id="offset" width="180" height="180" filterUnits="userSpaceOnUse">
       <feOffset in="SourceGraphic" dx="60" dy="60" />
     </filter>
   </defs>

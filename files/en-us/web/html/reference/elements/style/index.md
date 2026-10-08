@@ -1,5 +1,6 @@
 ---
-title: "<style>: The Style Information element"
+title: "`<style>` HTML style information element"
+short-title: <style>
 slug: Web/HTML/Reference/Elements/style
 page-type: html-element
 browser-compat: html.elements.style
@@ -36,12 +37,6 @@ p {
 }
 ```
 
-The `<style>` element must be included inside the {{htmlelement("head")}} of the document. In general, it is better to put your styles in external stylesheets and apply them using {{htmlelement("link")}} elements.
-
-If you include multiple `<style>` and `<link>` elements in your document, they will be applied to the DOM in the order they are included in the document — make sure you include them in the correct order, to avoid unexpected cascade issues.
-
-In the same manner as `<link>` elements, `<style>` elements can include `media` attributes that contain [media queries](/en-US/docs/Web/CSS/Guides/Media_queries), allowing you to selectively apply internal stylesheets to your document depending on media features such as viewport width.
-
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
@@ -64,6 +59,14 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 - `type` {{deprecated_inline}}
   - : This attribute should not be provided: if it is, the only permitted values are the empty string or a case-insensitive match for `text/css`.
+
+## Usage notes
+
+The `<style>` element is typically included inside the {{htmlelement("head")}} of the document. It can also be used anywhere metadata content is permitted, such as inside a {{htmlelement("template")}} element.
+
+If you include multiple `<style>` and `<link>` elements in your document, they will be applied to the DOM in the order they are included in the document — make sure you include them in the correct order, to avoid unexpected cascade issues.
+
+In the same manner as `<link>` elements, `<style>` elements can include `media` attributes that contain [media queries](/en-US/docs/Web/CSS/Guides/Media_queries), allowing you to selectively apply internal stylesheets to your document depending on media features such as viewport width.
 
 ## Examples
 
@@ -92,6 +95,24 @@ In the following example, we apply a short stylesheet to a document:
 #### Result
 
 {{EmbedLiveSample('A_basic_stylesheet', '100%', '100')}}
+
+### Using `<style>` inside `<template>`
+
+A `<style>` element can also be placed inside a {{HTMLElement("template")}} element. The styles remain inactive until the template content is instantiated and inserted into the document.
+
+```html
+<template id="card-template">
+  <style>
+    .card {
+      border: 1px solid #cccccc;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+  </style>
+
+  <div class="card">Template content</div>
+</template>
+```
 
 ### Multiple style elements
 

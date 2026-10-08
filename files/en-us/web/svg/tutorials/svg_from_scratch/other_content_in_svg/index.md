@@ -16,12 +16,7 @@ Much like the img element in HTML SVG has an `image` element to serve the same p
 The embedded picture becomes a normal SVG element. This means, that you can use clips, masks, filters, rotations and all other tools of SVG on the content:
 
 ```html
-<svg
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  width="200"
-  height="200">
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
   <image
     x="90"
     y="-65"

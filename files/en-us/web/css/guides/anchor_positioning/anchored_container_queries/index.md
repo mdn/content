@@ -167,22 +167,10 @@ p {
 @supports not (container-type: anchored) {
   body::before {
     content: "Your browser does not support anchored container queries.";
-    color: black;
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
-  }
-
-  body {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
@@ -287,16 +275,10 @@ p {
 @supports not (container-type: anchored) {
   body::before {
     content: "Your browser does not support anchored container queries.";
-    color: black;
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```

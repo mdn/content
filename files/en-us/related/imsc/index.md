@@ -104,7 +104,7 @@ In contrast to IMSC, which uses markup, WebVTT uses a combination of CSS and pla
 - [Styling IMSC documents](/en-US/docs/Related/IMSC/Styling)
   - : IMSC offers many options for styling documents, and most of the IMSC styling properties have direct CSS equivalents, making them familiar to web developers. In this guide you'll learn a bit more about IMSC styling including the difference between inline and referential styling, and efficient styling using inheritance and region styling.
 - [Subtitle placement in IMSC](/en-US/docs/Related/IMSC/Subtitle_placement)
-  - : IMSC allows the author to precisely control the position of subtitles, such that the text is positioned next to the speaker or to avoid obscuring an important content in your video. Learn how to define a subtitle region and how to define its width and height.
+  - : IMSC allows the author to precisely control the position of subtitles, such that the text is positioned next to the speaker or to avoid obscuring important content in your video. Learn how to define a subtitle region and how to define its width and height.
 - [Namespaces in IMSC](/en-US/docs/Related/IMSC/Namespaces)
   - : This article covers the subject of XML namespaces, giving you enough information to recognize their usage in IMSC, and be able to use it effectively.
 - [Timing in IMSC](/en-US/docs/Related/IMSC/Timing_in_IMSC)
@@ -112,7 +112,7 @@ In contrast to IMSC, which uses markup, WebVTT uses a combination of CSS and pla
 - [Mapping video time codes to IMSC](/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC)
   - : Mapping the time or time code value that is seen within a video track or video editor timeline to an IMSC document can be a little tricky. There are a few different issues that you'll need to be aware of, which we'll cover in this article.
 - [IMSC and other standards](/en-US/docs/Related/IMSC/IMSC_and_other_standards)
-  - : IMSC is the result of an international effort to bring together popular profiles of [TTML](https://www.w3.org/TR/ttml/), like [EBU-TT-D](https://tech.ebu.ch/publications/tech3380) and [SMPTE-TT](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7291854). This article provides an overview how IMSC is related to these other subtitle standards, and explains the differences between the versions of IMSC.
+  - : IMSC is the result of an international effort to bring together popular profiles of [TTML](https://www.w3.org/TR/ttml/), like [EBU-TT-D](https://tech.ebu.ch/publications/tech3380) and [SMPTE-TT](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7291854). This article provides an overview of how IMSC is related to these other subtitle standards, and explains the differences between the versions of IMSC.
 
 ## Reference
 

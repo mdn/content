@@ -1,5 +1,6 @@
 ---
-title: contain-intrinsic-block-size
+title: "`contain-intrinsic-block-size` CSS property"
+short-title: contain-intrinsic-block-size
 slug: Web/CSS/Reference/Properties/contain-intrinsic-block-size
 page-type: css-property
 browser-compat: css.properties.contain-intrinsic-block-size
@@ -13,7 +14,7 @@ Block size is the size of an element in the dimension perpendicular to the flow 
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 contain-intrinsic-block-size: none;
 
 /* <length> values */

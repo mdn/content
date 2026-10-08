@@ -40,7 +40,7 @@ Possible values include:
 - `downloading`
   - : The browser supports the given configuration, but it has to finish an ongoing download before it can proceed.
 - `unavailable`
-  - : The browser does not support the given configuration. This value is also returned if the specified `sourceLanguage` and `targetLanguage` are the same.
+  - : The browser does not support the given configuration. This value is also returned if the specified `sourceLanguage` and `targetLanguage` are the same, or if the Translator API is blocked by a {{httpheader('Permissions-Policy/translator','translator')}} {{httpheader("Permissions-Policy")}}.
 
 ### Exceptions
 
@@ -50,8 +50,6 @@ Possible values include:
   - : Thrown if initialization of the AI model failed for any reason.
 - `UnknownError` {{domxref("DOMException")}}
   - : Thrown if the `availability()` call failed for any other reason, or a reason the user agent did not wish to disclose.
-
-If usage of the method is blocked by a {{httpheader('Permissions-Policy/translator','translator')}} {{httpheader("Permissions-Policy")}}, the promise rejects with a value of `unavailable`.
 
 ## Examples
 

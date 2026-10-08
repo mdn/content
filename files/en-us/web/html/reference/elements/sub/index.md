@@ -1,5 +1,6 @@
 ---
-title: "<sub>: The Subscript element"
+title: "`<sub>` HTML subscript element"
+short-title: <sub>
 slug: Web/HTML/Reference/Elements/sub
 page-type: html-element
 browser-compat: html.elements.sub

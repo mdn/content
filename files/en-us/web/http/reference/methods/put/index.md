@@ -3,7 +3,7 @@ title: PUT request method
 short-title: PUT
 slug: Web/HTTP/Reference/Methods/PUT
 page-type: http-method
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#PUT
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#PUT
 sidebar: http
 ---
 

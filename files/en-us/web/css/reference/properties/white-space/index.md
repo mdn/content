@@ -1,12 +1,13 @@
 ---
-title: white-space
+title: "`white-space` CSS property"
+short-title: white-space
 slug: Web/CSS/Reference/Properties/white-space
 page-type: css-property
 browser-compat: css.properties.white-space
 sidebar: cssref
 ---
 
-The **`white-space`** [CSS](/en-US/docs/Web/CSS) property sets how {{Glossary("whitespace", "white space")}} inside an element is handled.
+The **`white-space`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets how {{Glossary("whitespace", "white space")}} inside an element is handled.
 
 {{InteractiveExample("CSS Demo: white-space")}}
 

@@ -1,5 +1,6 @@
 ---
-title: Invalid argument
+title: "`invalid argument` error code"
+short-title: invalid argument
 slug: Web/WebDriver/Reference/Errors/InvalidArgument
 page-type: webdriver-error
 sidebar: webdriver

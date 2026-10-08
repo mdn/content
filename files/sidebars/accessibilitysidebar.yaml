@@ -50,6 +50,11 @@ l10n:
   en-US:
     ARIA: ARIA
     ARIA_guides: ARIA guides
+  fr:
+    ARIA: ARIA
+    ARIA_guides: Guides ARIA
+    ARIA reference: Références ARIA
+    Understanding WCAG: Comprendre les WCAG
   ja:
     ARIA: ARIA
     ARIA_guides: ARIA ガイド

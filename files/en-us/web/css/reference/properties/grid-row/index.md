@@ -1,12 +1,13 @@
 ---
-title: grid-row
+title: "`grid-row` CSS property"
+short-title: grid-row
 slug: Web/CSS/Reference/Properties/grid-row
 page-type: css-shorthand-property
 browser-compat: css.properties.grid-row
 sidebar: cssref
 ---
 
-The **`grid-row`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid row")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
+The **`grid-row`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property specifies a grid item's size and location within a {{glossary("grid row")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
 
 {{InteractiveExample("CSS Demo: grid-row")}}
 

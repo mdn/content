@@ -130,7 +130,7 @@ The following properties control how text is laid out.
   - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`, `geometricPrecision`.
 - {{domxref("CanvasRenderingContext2D.wordSpacing")}}
   - : Word spacing. Default value: `0px`
-- {{domxref("CanvasRenderingContext2D.lang")}} {{experimental_inline}}
+- {{domxref("CanvasRenderingContext2D.lang")}}
   - : Gets or sets the language of the canvas drawing context.
 
 ### Fill and stroke styles
@@ -263,8 +263,8 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
   - : Saves the current drawing style state using a stack so you can revert any change you make to it using `restore()`.
 - {{domxref("CanvasRenderingContext2D.restore()")}}
   - : Restores the drawing style state to the last element on the 'state stack' saved by `save()`.
-- {{domxref("CanvasRenderingContext2D.canvas")}}
-  - : A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if it is not associated with a {{HTMLElement("canvas")}} element.
+- {{domxref("CanvasRenderingContext2D.canvas")}} {{ReadOnlyInline}}
+  - : A back-reference to the {{domxref("HTMLCanvasElement")}}. Might be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if it is not associated with a {{HTMLElement("canvas")}} element.
 - {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
   - : Returns an object containing the context attributes used by the browser. Context attributes can be requested when using {{domxref("HTMLCanvasElement.getContext()")}} to create the 2D context.
 - {{domxref("CanvasRenderingContext2D.reset()")}}

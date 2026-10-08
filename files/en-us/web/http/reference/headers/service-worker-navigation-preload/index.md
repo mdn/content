@@ -38,7 +38,7 @@ Service-Worker-Navigation-Preload: <value>
 - `<value>`
   - : An arbitrary value that indicates what data should be sent in the response to the preload request.
     This defaults to `true`.
-    It maybe set to any other string value in the service worker, using {{domxref("NavigationPreloadManager.setHeaderValue()")}}.
+    It may be set to any other string value in the service worker, using {{domxref("NavigationPreloadManager.setHeaderValue()")}}.
 
 ## Examples
 

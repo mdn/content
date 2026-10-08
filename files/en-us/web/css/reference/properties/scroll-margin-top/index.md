@@ -1,5 +1,6 @@
 ---
-title: scroll-margin-top
+title: "`scroll-margin-top` CSS property"
+short-title: scroll-margin-top
 slug: Web/CSS/Reference/Properties/scroll-margin-top
 page-type: css-property
 browser-compat: css.properties.scroll-margin-top

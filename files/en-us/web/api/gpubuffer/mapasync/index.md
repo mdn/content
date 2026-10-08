@@ -43,7 +43,7 @@ mapAsync(mode, offset, size)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to {{jsxref("Undefined")}} when the `GPUBuffer`'s content is ready to be accessed.
+A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}} when the `GPUBuffer`'s content is ready to be accessed.
 
 ### Validation
 

@@ -28,15 +28,6 @@ A {{domxref("SyncEvent")}}. Inherits from {{domxref("ExtendableEvent")}} and {{d
 
 {{InheritanceDiagram("SyncEvent")}}
 
-## Event properties
-
-_Inherits properties from its ancestor, {{domxref("ExtendableEvent")}} and {{domxref("Event")}}_.
-
-- {{domxref("SyncEvent.tag")}} {{ReadOnlyInline}}
-  - : Returns the developer-defined identifier for this `SyncEvent`.
-- {{domxref("SyncEvent.lastChance")}} {{ReadOnlyInline}}
-  - : Returns `true` if the user agent will not make further synchronization attempts after the current attempt.
-
 ## Examples
 
 The following example shows how to respond to a sync event in the service worker.

@@ -1,5 +1,6 @@
 ---
-title: page-break-before
+title: "`page-break-before` CSS property"
+short-title: page-break-before
 slug: Web/CSS/Reference/Properties/page-break-before
 page-type: css-property
 status:
@@ -7,8 +8,6 @@ status:
 browser-compat: css.properties.page-break-before
 sidebar: cssref
 ---
-
-{{deprecated_header}}
 
 > [!WARNING]
 > This property has been replaced by the {{cssxref("break-before")}} property.
@@ -86,6 +85,8 @@ page-break-before: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : Initial value. Automatic page breaks (neither forced nor forbidden).

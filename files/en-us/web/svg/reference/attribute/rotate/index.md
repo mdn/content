@@ -2,17 +2,25 @@
 title: rotate
 slug: Web/SVG/Reference/Attribute/rotate
 page-type: svg-attribute
-browser-compat: svg.elements.animateMotion.rotate
+browser-compat:
+  - svg.elements.animateMotion.rotate
+  - svg.elements.text.rotate
+  - svg.elements.tspan.rotate
 sidebar: svgref
 ---
 
-The `rotate` attribute specifies how the animated element rotates as it travels along a path specified in an {{SVGElement("animateMotion")}} element.
+The `rotate` attribute has two different uses depending on the element it is applied to:
 
-You can use this attribute with the following SVG elements:
+- On {{SVGElement("animateMotion")}} elements it specifies how the animated element rotates as it travels along a motion path.
+- On {{SVGElement("text")}} and {{SVGElement("tspan")}} elements it specifies rotation for each glyph in the text element.
+
+The SVG `rotate` attribute can be used with the following SVG elements:
 
 - {{SVGElement("animateMotion")}}
+- {{SVGElement("text")}}
+- {{SVGElement("tspan")}}
 
-## Usage notes
+## animateMotion
 
 <table class="properties">
   <tbody>
@@ -34,13 +42,49 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-The `auto` and `auto-reverse` values allow the animated element's rotation to change dynamically as it travels along the path. If the value of `rotate` is `auto`, the element turns to align its right-hand side in the current direction of motion. If the value is `auto-reverse`, it turns its left-hand side in the current direction of motion.
+The `auto` and `auto-reverse` values allow the animated element's rotation to change dynamically as it travels along the path.
+If the value of `rotate` is `auto`, the element turns to align its right-hand side in the current direction of motion.
+If the value is `auto-reverse`, it turns its left-hand side in the current direction of motion.
 
-Setting `rotate`'s value to a number specifies a constant rotation, in degrees, that does not change with the animation. The default value of `0` keeps the animated element in its original orientation.
+Setting `rotate`'s value to a number specifies a constant rotation, in degrees, that does not change with the animation.
+The default value of `0` keeps the animated element in its original orientation.
+
+## text and tspan
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <a href="/en-US/docs/Web/SVG/Guides/Content_type#list-of-ts"
+          >&#x3C;list-of-number></a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+A list of numbers (separated by spaces or commas), each specifying the rotation in degrees to apply to the corresponding glyph.
+If there are fewer numbers than glyphs, the last number is applied to all remaining glyphs.
+If there are more numbers than glyphs, the extra numbers are ignored.
+
+Rotation values apply to single rendered visual characters, and therefore do not always map one-to-one to input characters or rendered glyphs.
+Where a single visual character is composed of multiple glyphs (such as a base letter with a separate accent glyph), or where multiple input characters collapse into a single glyph (such as a ligature), the parts that belong together are rotated as a group.
+This is needed because rotating them independently would distort the appearance or meaning of the character.
 
 ## Examples
 
-### SVG
+### Rotation along a motion path (animateMotion)
+
+#### SVG
 
 ```html
 <svg
@@ -99,9 +143,23 @@ Setting `rotate`'s value to a number specifies a constant rotation, in degrees, 
 </svg>
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('Rotation_along_a_motion_path_animateMotion', '100%', 120)}}
+
+### Per-glyph rotation (text)
+
+#### SVG
+
+```html
+<svg width="200" height="80" xmlns="http://www.w3.org/2000/svg">
+  <text x="20" y="50" font-size="28" rotate="0 15 30 45 60 75">Hello!</text>
+</svg>
+```
+
+#### Result
+
+{{EmbedLiveSample('Per-glyph_rotation_text', '100%', 80)}}
 
 ## Specifications
 

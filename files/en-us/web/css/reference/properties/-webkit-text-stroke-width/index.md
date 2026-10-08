@@ -1,5 +1,6 @@
 ---
-title: -webkit-text-stroke-width
+title: "`-webkit-text-stroke-width` CSS property"
+short-title: -webkit-text-stroke-width
 slug: Web/CSS/Reference/Properties/-webkit-text-stroke-width
 page-type: css-property
 browser-compat: css.properties.-webkit-text-stroke-width
@@ -31,6 +32,8 @@ The **`-webkit-text-stroke-width`** [CSS](/en-US/docs/Web/CSS) property specifie
 ```
 
 ### Values
+
+This property is specified as the following value:
 
 - `<line-width>`
   - : The width of the stroke.

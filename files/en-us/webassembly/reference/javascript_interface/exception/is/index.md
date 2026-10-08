@@ -6,13 +6,10 @@ browser-compat: webassembly.api.Exception.is
 sidebar: webassemblysidebar
 ---
 
-The **`is()`** prototype method of the [`Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) object can be used to test if the `Exception` matches a given tag.
+The **`is()`** method of the [`Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) object can be used to test if the `Exception` matches a given tag.
 
 The method might be used to test that a tag is correct before passing it to [`Exception.prototype.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg) to get the passed values.
-It can be used on tags created in JavaScript or created in WebAssembly code and exported to JavaScript.
-
-> [!NOTE]
-> It is not enough that the tag has an identical sequence of data types — it must have the same _identity_ (be the same tag) as was used to create the exception.
+It can be used on tags created in JavaScript and those created in WebAssembly code and exported to JavaScript.
 
 ## Syntax
 
@@ -27,7 +24,9 @@ is(tag)
 
 ### Return value
 
-A boolean `true` if the specified tag matches the exception, and `false` otherwise.
+A boolean value — `true` if the specified tag matches the exception, and `false` otherwise.
+
+To return `true`, it is not enough for the tag to have an identical sequence of data types — it must have the same _identity_ (be the same tag) as was used to create the exception.
 
 ## Examples
 
@@ -40,10 +39,9 @@ const exception1 = new WebAssembly.Exception(tag1, [42, 42.3]);
 
 // Verify that "tag1" matches this exception
 console.log(`Tag1: ${exception1.is(tag1)}`);
-
-// Log output:
-// Tag1: true
 ```
+
+This will log `Tag1: true` to the console.
 
 We can also demonstrate that this exception will not match another tag even if the tag is created with the same parameters.
 
@@ -51,10 +49,11 @@ We can also demonstrate that this exception will not match another tag even if t
 // Create a new tag (with same parameters) and verify it does not match the exception
 const tag2 = new WebAssembly.Tag({ parameters: ["i32", "f64"] });
 console.log(`Tag2: ${exception1.is(tag2)}`);
-
-// Log output:
-// Tag2: false
 ```
+
+This will log `Tag2: false` to the console.
+
+For a full working example, see the [`throw`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw) instruction reference page.
 
 ## Specifications
 

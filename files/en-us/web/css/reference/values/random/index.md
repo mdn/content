@@ -1,5 +1,6 @@
 ---
-title: random()
+title: "`random()` CSS function"
+short-title: random()
 slug: Web/CSS/Reference/Values/random
 page-type: css-function
 status:
@@ -108,7 +109,7 @@ All `random()` functions with the `element-shared` keyword share the same random
 
 #### Custom names
 
-When you specify a `<dashed-ident>` (e.g., `--custom-name`), each element in an element's styles with the same name shares the same random base value, and ones with different `<dashed-ident>` values will be assigned distinct random base values. When the following is declared, `.a`, `.b`, and `.c` will all be squares, because within each element, all properties that reference the same ident will share the same base value. Therefore, the width of each will be the same as it's height. Note that, in this case, `.a`, `.b`, and `.c` will have distinct sizes because the base value sharing is between properties of an element, not between elements.
+When you specify a `<dashed-ident>` (e.g., `--custom-name`), each element in an element's styles with the same name shares the same random base value, and ones with different `<dashed-ident>` values will be assigned distinct random base values. When the following is declared, `.a`, `.b`, and `.c` will all be squares, because within each element, all properties that reference the same ident will share the same base value. Therefore, the width of each will be the same as its height. Note that, in this case, `.a`, `.b`, and `.c` will have distinct sizes because the base value sharing is between properties of an element, not between elements.
 
 ```css
 .a,
@@ -127,7 +128,7 @@ Combining a `<dashed-ident>` with `element-shared` (e.g., `random(--custom-name 
 .a,
 .b,
 .c {
-  width: random(--custom-name element-shared, , 10px, 200px);
+  width: random(--custom-name element-shared, 10px, 200px);
   height: random(--custom-name element-shared, 10px, 200px);
 }
 ```
@@ -230,10 +231,16 @@ We render the five badges as circles. We use the `random()` function within an {
 .badge.unique {
   background: hsl(random(0, 360) 50% 50%);
 }
+```
 
+```css hidden
 @supports not (order: random(1, 2)) {
-  :root::after {
+  body::before {
     content: "Your browser doesn't support the random() function.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
   }
 }
 ```
@@ -282,8 +289,11 @@ body {
 ```css hidden
 @supports not (order: random(1, 2)) {
   body::before {
-    color: white;
     content: "Your browser doesn't support the random() function.";
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
   }
 }
 ```

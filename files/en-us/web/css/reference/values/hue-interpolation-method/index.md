@@ -1,5 +1,6 @@
 ---
-title: <hue-interpolation-method>
+title: "`<hue-interpolation-method>` CSS type"
+short-title: <hue-interpolation-method>
 slug: Web/CSS/Reference/Values/hue-interpolation-method
 page-type: css-type
 browser-compat: css.types.gradient.conic-gradient.hue_interpolation_method

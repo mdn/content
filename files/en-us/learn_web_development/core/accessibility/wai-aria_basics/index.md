@@ -94,7 +94,7 @@ Next, you need to worry about whether the browsers in question support ARIA feat
 In this article, we won't attempt to cover every WAI-ARIA feature, and its exact support details. Instead, we will cover the most critical WAI-ARIA features for you to know about; if we don't mention any support details, you can assume that the feature is well-supported. We will clearly mention any exceptions to this.
 
 > [!NOTE]
-> Some JavaScript libraries support WAI-ARIA, meaning that when they generate UI features like complex form controls, they add ARIA attributes to improve the accessibility of those features. If you are looking for a 3rd party JavaScript solution for rapid UI development, you should definitely consider the accessibility of its UI widgets as an important factor when making your choice. Good examples are jQuery UI (see [About jQuery UI: Deep accessibility support](https://jqueryui.com/about/#deep-accessibility-support)), [ExtJS](https://www.sencha.com/products/extjs/), and [Dojo/Dijit](https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html).
+> Some JavaScript libraries support WAI-ARIA, meaning that when they generate UI features like complex form controls, they add ARIA attributes to improve the accessibility of those features. If you are looking for a third-party JavaScript solution for rapid UI development, you should definitely consider the accessibility of its UI widgets as an important factor when making your choice. Good examples are jQuery UI (see [About jQuery UI: Deep accessibility support](https://jqueryui.com/about/#deep-accessibility-support)), [ExtJS](https://www.sencha.com/products/extjs/), and [Dojo/Dijit](https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html).
 
 ## When should you use WAI-ARIA?
 
@@ -139,12 +139,12 @@ WAI-ARIA adds the [`role` attribute](https://w3c.github.io/aria/#role_definition
       <li><a href="#">Contact</a></li>
     </ul>
 
-    <!-- A Search form is another common non-linear way to navigate through a website. -->
+    <!-- A search box is another common non-linear way to navigate through a website. -->
 
-    <form>
+    <div class="search-controls">
       <input type="search" name="q" placeholder="Search query" />
-      <input type="submit" value="Go!" />
-    </form>
+      <input type="button" value="Go!" />
+    </div>
   </nav>
 </header>
 
@@ -296,7 +296,8 @@ nav a {
   color: black;
 }
 
-nav form {
+nav .search-controls,
+nav search {
   flex: 1;
   display: flex;
   align-items: center;
@@ -312,7 +313,7 @@ input[type="search"] {
   flex: 3;
 }
 
-input[type="submit"] {
+input[type="button"] {
   flex: 1;
   margin-left: 1rem;
   background: #333333;
@@ -353,19 +354,19 @@ footer {
 If you try testing the example with a screen reader in a modern browser, you'll already get some useful information. For example, VoiceOver gives you the following:
 
 - On the `<header>` element — "banner, 2 items" (it contains a heading and the `<nav>`).
-- On the `<nav>` element — "navigation 2 items" (it contains a list and a form).
+- On the `<nav>` element — "navigation 2 items" (it contains a list and search controls).
 - On the `<main>` element — "main 2 items" (it contains an article and an aside).
 - On the `<aside>` element — "complementary 2 items" (it contains a heading and a list).
-- On the search form input — "Search query, insertion at beginning of text".
+- On the search input — "Search query, insertion at beginning of text".
 - On the `<footer>` element — "footer 1 item".
 
 If you go to VoiceOver's landmarks menu (accessed using VoiceOver key + U and then using the cursor keys to cycle through the menu choices), you'll see that most of the elements are nicely listed so they can be accessed quickly.
 
 ![Mac's VoiceOver menu for quick accessibility. Landmarks header and landmarks list including banner, navigation, main, and complementary.](landmarks-list.png)
 
-However, we could do better here. The search form is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark beyond the actual input being called out as a search input (`<input type="search">`).
+However, we could do better here. The search area is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark beyond the actual input being called out as a search input (`<input type="search">`).
 
-To mark the form as a landmark, you can either wrap it with the {{htmlelement("search")}} element or give it ARIA `role="search"`. As a general rule, use HTML semantics where possible and only use ARIA where there is no HTML equivalent.
+To mark the search area as a landmark, you can either wrap it with the {{htmlelement("search")}} element or give it ARIA `role="search"`. As a general rule, use HTML semantics where possible and only use ARIA where there is no HTML equivalent.
 
 ```html live-sample___aria-website-roles
 <header>
@@ -381,17 +382,15 @@ To mark the form as a landmark, you can either wrap it with the {{htmlelement("s
       <li><a href="#">Contact</a></li>
     </ul>
 
-    <!-- A Search form is another common non-linear way to navigate through a website. -->
+    <!-- A search box is another common non-linear way to navigate through a website. -->
 
     <search>
-      <form>
-        <input
-          type="search"
-          name="q"
-          placeholder="Search query"
-          aria-label="Search through site content" />
-        <input type="submit" value="Go!" />
-      </form>
+      <input
+        type="search"
+        name="q"
+        placeholder="Search query"
+        aria-label="Search through site content" />
+      <input type="button" value="Go!" />
     </search>
   </nav>
 </header>
@@ -549,7 +548,8 @@ nav a {
   color: black;
 }
 
-nav form {
+nav .search-controls,
+nav search {
   flex: 1;
   display: flex;
   align-items: center;
@@ -565,7 +565,7 @@ input[type="search"] {
   flex: 3;
 }
 
-input[type="submit"] {
+input[type="button"] {
   flex: 1;
   margin-left: 1rem;
   background: #333333;
@@ -613,9 +613,7 @@ Most importantly, we have used semantic HTML that gives meaning and roles to the
       …
     </ul>
     <search>
-      <form>
-        <!-- search form -->
-      </form>
+      <!-- search controls -->
     </search>
   </nav>
 </header>
@@ -640,7 +638,7 @@ We've also given you a bonus feature in this example — the {{htmlelement("inpu
 
 Now if we use VoiceOver to look at this example, we get some improvements:
 
-- The search form is called out as a separate item, both when browsing through the page, and in the Landmarks menu.
+- The search area is called out as a separate item, both when browsing through the page, and in the Landmarks menu.
 - The label text contained in the `aria-label` attribute is read out when the form input is highlighted.
 
 If you need to support older browsers such as IE8; it is worth including ARIA roles for that purpose. And if for some reason your site is built using just `<div>`s, you should definitely include the ARIA roles to provide these much needed semantics!
@@ -838,17 +836,17 @@ Always include a {{HTMLelement('label')}} for every input. While some screen rea
 > [!NOTE]
 > You can see the finished example live at [`form-validation-updated.html`](https://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html).
 
-WAI-ARIA also enables some advanced form labelling techniques, beyond the classic {{htmlelement("label")}} element. We already talked about using the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) property to provide a label where we don't want the label to be visible to sighted users (see the [Signposts/Landmarks](#signpostslandmarks) section, above). Some other labeling techniques use other properties such as [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) if you want to designate a non-`<label>` element as a label or label multiple form inputs with the same label, and [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby), if you want to associate other information with a form input and have it read out as well. See [WebAIM's Advanced Form Labeling article](https://webaim.org/techniques/forms/advanced) for more details.
+WAI-ARIA also enables some advanced form labeling techniques, beyond the classic {{htmlelement("label")}} element. We already talked about using the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) property to provide a label where we don't want the label to be visible to sighted users (see the [Signposts/Landmarks](#signpostslandmarks) section, above). Some other labeling techniques use other properties such as [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) if you want to designate a non-`<label>` element as a label or label multiple form inputs with the same label, and [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby), if you want to associate other information with a form input and have it read out as well. See [WebAIM's Advanced Form Labeling article](https://webaim.org/techniques/forms/advanced) for more details.
 
 There are many other useful properties and states too, for indicating the status of form elements. For example, `aria-disabled="true"` can be used to indicate that a form field is disabled. Many browsers will skip past disabled form fields which leads to them not being read out by screen readers. In some cases, a disabled element will be perceived, so it is a good idea to include this attribute to let the screen reader know that a disabled form control is in fact disabled.
 
-If the disabled state of an input is likely to change, then it is also a good idea to indicate when it happens, and what the result is. For example, in our [`form-validation-checkbox-disabled.html`](https://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html) demo, there is a checkbox that when checked, enables another form input to allow further information to be entered. We've set up a hidden live region:
+If the disabled state of an input is likely to change, then it is also a good idea to indicate when it happens, and what the result is. For example, in our [`form-validation-checkbox-disabled.html`](https://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html) demo, there is a checkbox that when checked, enables another form input to allow further information to be entered. We've also set up a hidden live region, hidden from view using absolute positioning:
 
 ```html
 <p class="hidden-alert" aria-live="assertive"></p>
 ```
 
-which is hidden from view using absolute positioning. When this is checked/unchecked, we update the text inside the hidden live region to tell screen reader users what the result of checking this checkbox is, as well as updating the `aria-disabled` state, and some visual indicators too:
+When the checkbox is checked/unchecked, we update the text inside the hidden live region to tell screen reader users what the result of checking this checkbox is, as well as updating the `aria-disabled` state, and some visual indicators too:
 
 ```js
 function toggleMusician(bool) {
@@ -906,6 +904,6 @@ In the next article, we'll give you some tests that you can use to check how wel
 - [WAI-ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles): Categories of ARIA roles and the roles covered on MDN
 - [ARIA in HTML](https://w3c.github.io/html-aria/) on W3C: A specification that defines, for each HTML feature, the accessibility (ARIA) semantics implicitly applied on it by the browser and the WAI-ARIA features you may set on it if extra semantics are required
 - [Deque university code library](https://dequeuniversity.com/library/): A library of really useful and practical examples showing complex UI controls made accessible using WAI-ARIA features
-- [WAI-ARIA authoring practices](https://www.w3.org/WAI/ARIA/apg/) on W3C: A very detailed design pattern from the W3C, explaining how to implement different types of complex UI control whilst making them accessible using WAI-ARIA features
+- [WAI-ARIA authoring practices](https://www.w3.org/WAI/ARIA/apg/) on W3C: A very detailed design pattern from the W3C, explaining how to implement different types of complex UI control while making them accessible using WAI-ARIA features
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA", "Learn_web_development/Core/Accessibility")}}

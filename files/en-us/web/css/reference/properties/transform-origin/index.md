@@ -1,5 +1,6 @@
 ---
-title: transform-origin
+title: "`transform-origin` CSS property"
+short-title: transform-origin
 slug: Web/CSS/Reference/Properties/transform-origin
 page-type: css-property
 browser-compat: css.properties.transform-origin

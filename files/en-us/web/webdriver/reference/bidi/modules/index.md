@@ -18,7 +18,7 @@ Both command and event names use the module name as a prefix: `module_name.comma
 
 ## Commands
 
-A command is an asynchronous operation sent from the client to the browser. Each command message you send to the browser has three fields:
+A command is an asynchronous operation sent from the client to the browser. Each command message _you send_ to the browser has three fields:
 
 - `id`: A number you assign to the command. Unlike HTTP where each request waits for a response, a WebSocket connection can have multiple commands in flight at the same time and responses may arrive out of order. The `id` lets you match each response to the command that triggered it.
 - `method`: The command to run, in the form `module_name.command_name`.
@@ -45,6 +45,12 @@ To receive events, the client must first subscribe to them using the `session.su
 
 The client can subscribe to a specific event or to all events in a module. For example, subscribing to `"browsingContext.contextCreated"` subscribes the client to that single event, while subscribing to `"browsingContext"` subscribes the client to every event in the `browsingContext` module.
 
+Every event notification _you receive_ from the browser has three fields:
+
+- `type`: Always `"event"`.
+- `method`: The event name, in the form `module_name.event_name`.
+- `params`: An object containing the event-specific data. The structure of `params` is specific to each event.
+
 The following is a sample event message sent by the browser when the client is subscribed to `log.entryAdded` and a console message is logged (some fields have been omitted for brevity):
 
 ```json
@@ -53,11 +59,10 @@ The following is a sample event message sent by the browser when the client is s
   "method": "log.entryAdded",
   "params": {
     "type": "console",
-    "method": "log",
-    "realm": null,
     "level": "info",
     "text": "Hello world",
-    "timestamp": 1657282076037
+    "timestamp": 1657282076037,
+    "method": "log"
   }
 }
 ```

@@ -9,7 +9,7 @@ status:
 browser-compat: api.MediaRecorderErrorEvent.error
 ---
 
-{{APIRef("MediaStream Recording")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("MediaStream Recording")}}{{Non-standard_Header}}
 
 The **`error`** read-only property of the
 {{domxref("MediaRecorderErrorEvent")}} interface is a

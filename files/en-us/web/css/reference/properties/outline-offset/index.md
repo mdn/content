@@ -1,5 +1,6 @@
 ---
-title: outline-offset
+title: "`outline-offset` CSS property"
+short-title: outline-offset
 slug: Web/CSS/Reference/Properties/outline-offset
 page-type: css-property
 browser-compat: css.properties.outline-offset

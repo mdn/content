@@ -1,5 +1,6 @@
 ---
-title: "@layer"
+title: "`@layer` CSS at-rule"
+short-title: "@layer"
 slug: Web/CSS/Reference/At-rules/@layer
 page-type: css-at-rule
 browser-compat: css.at-rules.layer

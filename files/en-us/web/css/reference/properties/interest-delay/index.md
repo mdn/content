@@ -1,5 +1,6 @@
 ---
-title: interest-delay
+title: "`interest-delay` CSS property"
+short-title: interest-delay
 slug: Web/CSS/Reference/Properties/interest-delay
 page-type: css-shorthand-property
 status:
@@ -14,7 +15,7 @@ The **`interest-delay`** [CSS](/en-US/docs/Web/CSS) property specifies the delay
 
 ## Constituent properties
 
-The `interest-delay` property is a shorthand for the following properties:
+This property is a shorthand for the following properties:
 
 - {{cssxref("interest-delay-start")}}
 - {{cssxref("interest-delay-end")}}

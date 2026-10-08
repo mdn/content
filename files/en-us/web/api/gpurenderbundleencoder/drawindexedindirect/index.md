@@ -45,7 +45,7 @@ drawIndexedIndirect(indirectBuffer, indirectOffset)
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ### Validation
 

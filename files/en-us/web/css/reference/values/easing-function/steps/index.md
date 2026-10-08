@@ -1,5 +1,6 @@
 ---
-title: steps()
+title: "`steps()` CSS function"
+short-title: steps()
 slug: Web/CSS/Reference/Values/easing-function/steps
 page-type: css-function
 browser-compat: css.types.easing-function.steps
@@ -51,7 +52,7 @@ For example, `steps(4, end)` divides the animation into four equal intervals, wi
 
 If an animation contains multiple segments, the specified number of steps applies to each segment. For example, if an animation has three segments and uses `steps(2)`, there will be six steps in total, with two steps per segment.
 
-The following image shows the affect of different `<step-position>` values when the jumps occur:
+The following image shows the effect of different `<step-position>` values when the jumps occur:
 
 ```css
 steps(2, jump-start)  /* Or steps(2, start) */

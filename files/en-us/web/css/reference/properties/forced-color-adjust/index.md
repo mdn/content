@@ -1,5 +1,6 @@
 ---
-title: forced-color-adjust
+title: "`forced-color-adjust` CSS property"
+short-title: forced-color-adjust
 slug: Web/CSS/Reference/Properties/forced-color-adjust
 page-type: css-property
 browser-compat: css.properties.forced-color-adjust
@@ -23,9 +24,9 @@ forced-color-adjust: revert-layer;
 forced-color-adjust: unset;
 ```
 
-The `forced-color-adjust` property's value must be one of the following keywords.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : The element's colors are adjusted by the {{Glossary("user agent")}} in forced colors mode. This is the default value.
@@ -90,7 +91,7 @@ By using the {{cssxref("@media/forced-colors", "forced-colors")}} media feature,
 
 The following screenshot shows the image above in Windows High Contrast Mode:
 
-![The example above in high contrast mode shows the first box with a black background the second with the grey background of the CSS.](windows-high-contrast.jpg)
+![The example above in high contrast mode shows the first box with a black background the second with the gray background of the CSS.](windows-high-contrast.jpg)
 
 ## Specifications
 

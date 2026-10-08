@@ -1,5 +1,6 @@
 ---
-title: scroll-snap-stop
+title: "`scroll-snap-stop` CSS property"
+short-title: scroll-snap-stop
 slug: Web/CSS/Reference/Properties/scroll-snap-stop
 page-type: css-property
 browser-compat: css.properties.scroll-snap-stop
@@ -99,6 +100,8 @@ scroll-snap-stop: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `normal`
   - : When the visual {{Glossary("viewport")}} of this element's scroll container is scrolled, it may "pass over" possible snap positions.

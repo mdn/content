@@ -54,10 +54,10 @@ An object property is either a data property or an accessor property, but it can
 
 ```js
 const obj = {
-  set prop() {
+  set prop(val) {
     // setter, the code executed when setting obj.prop
   },
-}
+};
 ```
 
 Properties defined using this syntax are own properties of the created object, and they are configurable and enumerable.
@@ -116,7 +116,7 @@ Static setters and private setters use similar syntaxes, which are described in 
 
 ### Removing a setter with the `delete` operator
 
-If you want to remove the setter, you can just {{jsxref("Operators/delete", "delete")}}
+If you want to remove the setter, you can just {{jsxref("delete")}}
 it:
 
 ```js

@@ -1,5 +1,6 @@
 ---
-title: ::-moz-list-bullet
+title: "`::-moz-list-bullet` CSS pseudo-element"
+short-title: ::-moz-list-bullet
 slug: Web/CSS/Reference/Selectors/::-moz-list-bullet
 page-type: css-pseudo-element
 status:

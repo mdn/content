@@ -1,5 +1,6 @@
 ---
-title: :modal
+title: "`:modal` CSS pseudo-class"
+short-title: :modal
 slug: Web/CSS/Reference/Selectors/:modal
 page-type: css-pseudo-class
 browser-compat: css.selectors.modal
@@ -71,17 +72,17 @@ Examples of elements that will prevent user interaction with the rest of the pag
 
 ### Styling a modal dialog
 
-This example styles a modal dialog that opens when the "Update details" button is activated. This example has been built on top of the {{HTMLElement("dialog")}} element [example](/en-US/docs/Web/HTML/Reference/Elements/dialog#handling_the_return_value_from_the_dialog).
+This example styles a modal dialog that opens when the "Show the dialog" button is activated. This example is adapted from the {{HTMLElement("dialog")}} element [example](/en-US/docs/Web/HTML/Reference/Elements/dialog#handling_the_return_value_from_the_dialog).
 
 ```html hidden
-<!-- Basic modal dialog containing a form -->
+<!-- A modal dialog containing a form -->
 <dialog id="favDialog">
   <form method="dialog">
     <p>
-      <label
-        >Favorite animal:
+      <label>
+        Favorite animal:
         <select>
-          <option value="default">Choose…</option>
+          <option>Choose…</option>
           <option>Brine shrimp</option>
           <option>Red panda</option>
           <option>Spider monkey</option>
@@ -89,18 +90,19 @@ This example styles a modal dialog that opens when the "Update details" button i
       </label>
     </p>
     <div>
-      <button value="cancel">Cancel</button>
-      <button id="confirmBtn" value="default">Confirm</button>
+      <button>Cancel</button>
+      <button>Confirm</button>
     </div>
   </form>
 </dialog>
 <p>
-  <button id="updateDetails">Update details</button>
+  <button id="showDialog">Show the dialog</button>
 </p>
-<output></output>
 ```
 
 #### CSS
+
+The `:modal` pseudo-class selects the dialog opened with `showModal()`, giving it a red border, a yellow background, and a box shadow.
 
 ```css
 :modal {
@@ -111,35 +113,11 @@ This example styles a modal dialog that opens when the "Update details" button i
 ```
 
 ```js hidden
-const updateButton = document.getElementById("updateDetails");
+const showButton = document.getElementById("showDialog");
 const favDialog = document.getElementById("favDialog");
-const outputBox = document.querySelector("output");
-const selectEl = favDialog.querySelector("select");
-const confirmBtn = favDialog.querySelector("#confirmBtn");
 
-// If a browser doesn't support the dialog, then hide the
-// dialog contents by default.
-if (typeof favDialog.showModal !== "function") {
-  favDialog.hidden = true;
-  // Your fallback script
-}
-// "Update details" button opens the <dialog> modally
-updateButton.addEventListener("click", () => {
-  if (typeof favDialog.showModal === "function") {
-    favDialog.showModal();
-  } else {
-    outputBox.value = "Sorry, the dialog API is not supported by this browser.";
-  }
-});
-// "Favorite animal" input sets the value of the submit button
-selectEl.addEventListener("change", (e) => {
-  confirmBtn.value = selectEl.value;
-});
-// "Confirm" button of form triggers "close" on dialog because of [method="dialog"]
-favDialog.addEventListener("close", () => {
-  outputBox.value = `${
-    favDialog.returnValue
-  } button clicked - ${new Date().toString()}`;
+showButton.addEventListener("click", () => {
+  favDialog.showModal();
 });
 ```
 

@@ -23,7 +23,7 @@ closest(selectors)
 
 ### Return value
 
-The closest ancestor {{domxref("Element")}} or itself, which matches the `selectors`. If there are no such element, `null`.
+The closest ancestor {{domxref("Element")}} or itself, which matches the `selectors`. If there is no such element, `null` is returned.
 
 ### Exceptions
 

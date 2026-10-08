@@ -1,5 +1,6 @@
 ---
-title: inset-inline-end
+title: "`inset-inline-end` CSS property"
+short-title: inset-inline-end
 slug: Web/CSS/Reference/Properties/inset-inline-end
 page-type: css-property
 browser-compat: css.properties.inset-inline-end

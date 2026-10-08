@@ -1,5 +1,6 @@
 ---
-title: font-synthesis-position
+title: "`font-synthesis-position` CSS property"
+short-title: font-synthesis-position
 slug: Web/CSS/Reference/Properties/font-synthesis-position
 page-type: css-property
 status:
@@ -32,6 +33,8 @@ font-synthesis-position: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : Indicates that a missing position typeface may be synthesized by the browser if needed.

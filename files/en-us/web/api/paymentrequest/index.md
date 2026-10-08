@@ -29,8 +29,10 @@ The [Payment Request API's](/en-US/docs/Web/API/Payment_Request_API) **`PaymentR
 
 ## Static methods
 
+- {{domxref('PaymentRequest.getSecurePaymentConfirmationCapabilities_static', 'PaymentRequest.getSecurePaymentConfirmationCapabilities()')}} {{experimental_inline}}
+  - : Returns an object indicating which capabilities of the [Secure payment confirmation](/en-US/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation) feature are supported by the current browser.
 - {{domxref('PaymentRequest.securePaymentConfirmationAvailability_static', 'PaymentRequest.securePaymentConfirmationAvailability()')}} {{experimental_inline}}
-  - : Indicates whether the [Secure payment confirmation](/en-US/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation) feature is available.
+  - : Indicates whether the Secure payment confirmation feature is available in the current browser.
 
 ## Instance methods
 
@@ -43,7 +45,7 @@ The [Payment Request API's](/en-US/docs/Web/API/Payment_Request_API) **`PaymentR
 
 ## Events
 
-- {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} {{Deprecated_Inline}}
+- {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : With some payment handlers (e.g., Apple Pay), this event handler is called to handle the {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} event, which is dispatched when the user agent requires that the merchant validate that the merchant or vendor requesting payment is legitimate.
 - {{domxref("PaymentRequest.paymentmethodchange_event", "paymentmethodchange")}}
   - : With some payment handlers (e.g., Apple Pay), dispatched whenever the user changes payment instrument, like switching from a credit card to a debit card.

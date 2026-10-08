@@ -1,5 +1,6 @@
 ---
-title: JavaScript error
+title: "`javascript` error code"
+short-title: javascript
 slug: Web/WebDriver/Reference/Errors/JavaScriptError
 page-type: webdriver-error
 sidebar: webdriver

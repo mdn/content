@@ -1,5 +1,6 @@
 ---
-title: acos()
+title: "`acos()` CSS function"
+short-title: acos()
 slug: Web/CSS/Reference/Values/acos
 page-type: css-function
 browser-compat: css.types.acos
@@ -42,7 +43,7 @@ The inverse cosine of a `number` will always return an {{cssxref("angle")}} betw
 
 ### Rotate elements
 
-The `acos()` function can be used to {{cssxref("transform-function/rotate", "rotate")}} elements as it return an {{cssxref("angle")}}.
+The `acos()` function can be used to {{cssxref("transform-function/rotate", "rotate")}} elements as it returns an {{cssxref("angle")}}.
 
 #### HTML
 

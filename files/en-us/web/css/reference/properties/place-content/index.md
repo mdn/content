@@ -1,12 +1,13 @@
 ---
-title: place-content
+title: "`place-content` CSS property"
+short-title: place-content
 slug: Web/CSS/Reference/Properties/place-content
 page-type: css-shorthand-property
 browser-compat: css.properties.place-content
 sidebar: cssref
 ---
 
-The **`place-content`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) allows you to align content along both the block and inline directions at once (i.e., the {{CSSxRef("align-content")}} and {{CSSxRef("justify-content")}} properties) in a relevant layout system such as [Grid](/en-US/docs/Web/CSS/Guides/Grid_layout) or [Flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout).
+The **`place-content`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property allows you to align content along both the block and inline directions at once (i.e., the {{CSSxRef("align-content")}} and {{CSSxRef("justify-content")}} properties) in a relevant layout system such as [Grid](/en-US/docs/Web/CSS/Guides/Grid_layout) or [Flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout).
 
 {{InteractiveExample("CSS Demo: place-content")}}
 

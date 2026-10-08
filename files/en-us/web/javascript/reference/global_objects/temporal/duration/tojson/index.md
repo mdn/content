@@ -25,7 +25,7 @@ A string representing the given duration in the [ISO 8601 format](/en-US/docs/We
 
 ## Description
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `Temporal.Duration` object is stringified. This method is generally intended to, by default, usefully serialize `Temporal.Duration` objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}} function as the reviver of {{jsxref("JSON.parse()")}}.
+The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `Temporal.Duration` object is stringified. This method is generally intended to, by default, usefully serialize `Temporal.Duration` objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}} function within the reviver of {{jsxref("JSON.parse()")}}.
 
 ## Examples
 

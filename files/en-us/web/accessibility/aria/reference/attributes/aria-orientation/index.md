@@ -17,7 +17,7 @@ Several widgets have default orientations:
 
 Horizontal by default:
 
-- [`slider`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role),
+- [`slider`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
 - [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)
 - [`toolbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role)
 - [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role)

@@ -1,5 +1,6 @@
 ---
-title: :read-only
+title: "`:read-only` CSS pseudo-class"
+short-title: :read-only
 slug: Web/CSS/Reference/Selectors/:read-only
 page-type: css-pseudo-class
 browser-compat: css.selectors.read-only
@@ -71,8 +72,7 @@ The `:read-only` pseudo-class is used to remove all the styling that makes the i
 Viscous,
 Bright Ridge,
 CA
-</textarea
-      >
+</textarea>
     </div>
     <div>
       <label for="postal-code">Zip/postal code: </label>

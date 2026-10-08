@@ -37,7 +37,7 @@ setViewport(x, y, width, height, minDepth, maxDepth)
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ### Validation
 

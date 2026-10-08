@@ -12,7 +12,7 @@ This article explains how to create a new reference page for an HTTP header.
 ## Step 1 – Determine the HTTP header to document
 
 - There are many HTTP headers defined in various IETF standards.
-- IANA maintains a [registry of HTTP header fields](https://www.iana.org/assignments/http-fields/http-fields.xhtml) and Wikipedia lists the [known header fields](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields), but not all are relevant to web developers or are part of an official standard.
+- IANA maintains a [registry of HTTP header fields](https://www.iana.org/assignments/http-fields) and Wikipedia lists the [known header fields](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields), but not all are relevant to web developers or are part of an official standard.
 - If there are any **red links** on the current [HTTP headers reference overview page](/en-US/docs/Web/HTTP/Reference/Headers), these headers are a good choice to document.
 - If in doubt, [ask the MDN Web Docs team](/en-US/docs/MDN/Community/Communication_channels) whether or not it makes sense to write about the header you have chosen.
 

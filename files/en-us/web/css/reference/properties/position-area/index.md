@@ -1,5 +1,6 @@
 ---
-title: position-area
+title: "`position-area` CSS property"
+short-title: position-area
 slug: Web/CSS/Reference/Properties/position-area
 page-type: css-property
 browser-compat: css.properties.position-area
@@ -44,7 +45,7 @@ position-area: self-x-start span-all;
 position-area: top; /* equiv: top span-all */
 position-area: inline-start; /* equiv: inline-start span-all */
 position-area: center; /* equiv: center center */
-position-area: span-all; /* equiv: center center */
+position-area: span-all; /* equiv: span-all span-all */
 position-area: end; /* equiv: end end */
 
 /* Global values */

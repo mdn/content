@@ -1,5 +1,6 @@
 ---
-title: perspective
+title: "`perspective` CSS property"
+short-title: perspective
 slug: Web/CSS/Reference/Properties/perspective
 page-type: css-property
 browser-compat: css.properties.perspective

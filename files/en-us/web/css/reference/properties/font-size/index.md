@@ -1,5 +1,6 @@
 ---
-title: font-size
+title: "`font-size` CSS property"
+short-title: font-size
 slug: Web/CSS/Reference/Properties/font-size
 page-type: css-property
 browser-compat: css.properties.font-size
@@ -78,6 +79,8 @@ font-size: unset;
 ```
 
 ### Values
+
+This property is specified as a single value from the following list:
 
 - `xx-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large`
   - : [Absolute-size](/en-US/docs/Web/CSS/Reference/Values/absolute-size) keywords, based on the user's default font size (which is `medium`).

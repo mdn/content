@@ -90,7 +90,7 @@ The `chrome_settings_overrides` key is an object that may have the following pro
       - : `array` of `string`. An array of alternative URLs that can be used instead of `search_url`.
 
     - `encoding` {{optional_inline}}
-      - : `string`. Encoding of the search term, specified as a [standard character encoding name](https://www.iana.org/assignments/character-sets/character-sets.xhtml), such as "UTF-8".
+      - : `string`. Encoding of the search term, specified as a [standard character encoding name](https://www.iana.org/assignments/character-sets), such as "UTF-8".
 
     - `favicon_url` {{optional_inline}}
       - : `string`. URL pointing to an icon for the search engine. In Manifest V2,

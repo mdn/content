@@ -1,5 +1,6 @@
 ---
-title: -webkit-text-security
+title: "`-webkit-text-security` CSS property"
+short-title: -webkit-text-security
 slug: Web/CSS/Reference/Properties/-webkit-text-security
 page-type: css-property
 status:

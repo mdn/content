@@ -18,10 +18,12 @@ grow(delta)
 
 - `delta`
   - : The number of WebAssembly pages you want to grow the memory by (each one is 64KiB in size).
+    For memories with an address type of `"i64"`, this must be a {{jsxref("BigInt")}} value.
 
 ### Return value
 
 The previous size of the memory, in units of WebAssembly pages.
+For memories with an address type of `"i64"`, this is a {{jsxref("BigInt")}} value.
 
 ### Exceptions
 
@@ -50,6 +52,20 @@ console.log(memory.buffer.byteLength / bytesPerPage); // "2"
 ```
 
 Note the return value of `grow()` here is the previous number of WebAssembly pages.
+
+### Growing a 64-bit memory
+
+For memories with an address type of `"i64"`, pass a {{jsxref("BigInt")}} value to `grow()`:
+
+```js
+const memory = new WebAssembly.Memory({
+  address: "i64",
+  initial: 1n,
+  maximum: 10n,
+});
+
+console.log(memory.grow(1n)); // 1n
+```
 
 ### Detachment upon growing
 

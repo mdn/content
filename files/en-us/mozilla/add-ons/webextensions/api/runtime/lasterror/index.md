@@ -64,7 +64,7 @@ setCookie.then(logCookie, logError);
 ```
 
 > [!NOTE]
-> `runtime.lastError` is an alias for {{WebExtAPIRef("extension.lastError")}}. They are set together, and checking either one will work.
+> {{WebExtAPIRef("extension.lastError")}} is an alias for `runtime.lastError`. They are set together, and checking either one works.
 
 {{WebExtExamples}}
 

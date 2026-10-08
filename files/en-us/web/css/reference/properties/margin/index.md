@@ -1,5 +1,6 @@
 ---
-title: margin
+title: "`margin` CSS property"
+short-title: margin
 slug: Web/CSS/Reference/Properties/margin
 page-type: css-shorthand-property
 browser-compat: css.properties.margin
@@ -94,7 +95,7 @@ margin: 5% anchor-size(width);
 margin: calc(anchor-size(width) / 4) 1em 0
   anchor-size(--my-anchor self-inline, 50px);
 
-/* Keyword values */
+/* Keyword value */
 margin: auto;
 
 /* Global values */

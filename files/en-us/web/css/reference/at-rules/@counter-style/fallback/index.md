@@ -1,5 +1,6 @@
 ---
-title: fallback
+title: "`fallback` CSS at-rule descriptor"
+short-title: fallback
 slug: Web/CSS/Reference/At-rules/@counter-style/fallback
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.fallback

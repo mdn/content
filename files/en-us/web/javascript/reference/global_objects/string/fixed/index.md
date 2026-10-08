@@ -9,8 +9,6 @@ browser-compat: javascript.builtins.String.fixed
 sidebar: jsref
 ---
 
-{{Deprecated_Header}}
-
 The **`fixed()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("tt")}} element (`<tt>str</tt>`), which causes this string to be displayed in a fixed-width font.
 
 > [!NOTE]

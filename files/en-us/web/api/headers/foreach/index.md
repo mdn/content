@@ -65,6 +65,10 @@ content-type ==> application/json
 cookie ==> This is a demo cookie
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

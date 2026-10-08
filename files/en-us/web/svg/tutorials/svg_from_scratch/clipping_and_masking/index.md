@@ -11,17 +11,14 @@ Erasing part of what you have created might seem contradictory at first. But whe
 
 - **Clipping**, which refers to removing parts of elements defined by other parts. In this case, any half-transparent effects are not possible; it's an all-or-nothing approach.
 
-- **Masking**, which, on the other hand, allows soft edges by taking transparency and grey values of the mask into account.
+- **Masking**, which, on the other hand, allows soft edges by taking transparency and gray values of the mask into account.
 
 ## Creating clips
 
 We create the above-mentioned semicircle based on a `circle` element:
 
 ```html
-<svg
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg xmlns="http://www.w3.org/2000/svg">
   <defs>
     <clipPath id="cut-off-bottom">
       <rect x="0" y="0" width="200" height="100" />
@@ -45,12 +42,7 @@ We now have a semicircle without having to deal with arcs in path elements. For 
 The effect of masking is most impressively presented with a gradient. If you want an element to fade out, you can achieve this effect quite quickly with masks.
 
 ```html
-<svg
-  width="200"
-  height="200"
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="Gradient">
       <stop offset="0" stop-color="black" />
@@ -81,12 +73,7 @@ The `opacity` attribute lets you set the transparency for a whole element:
 The above rectangle will be painted half-transparent. For the fill and stroke, there are two separate attributes, `fill-opacity` and `stroke-opacity`, that control each of those property opacities separately. Note, that the stroke will be painted on top of the filling. Hence, if you set a stroke opacity on an element, which also has a fill, the fill will shine through on half of the stroke while on the other half, the background will appear:
 
 ```html
-<svg
-  width="200"
-  height="200"
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <rect x="0" y="0" width="200" height="200" fill="blue" />
   <circle
     cx="100"

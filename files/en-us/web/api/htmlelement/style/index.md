@@ -195,10 +195,8 @@ Note that only the element's longhand CSS properties are enumerated values (the 
 ```html
 <div id="box"></div>
 
-<form name="FormName">
-  <button id="btn1">Make border 20px-wide</button>
-  <button id="btn2">Make border 5px-wide</button>
-</form>
+<button id="btn1">Make border 20px-wide</button>
+<button id="btn2">Make border 5px-wide</button>
 ```
 
 ```css
@@ -230,9 +228,7 @@ In this example, some basic style properties of an HTML paragraph element are ac
 
 ```html
 <p id="pid">Some text</p>
-<form>
-  <p><button type="button">Change text</button></p>
-</form>
+<p><button type="button">Change text</button></p>
 ```
 
 ```js

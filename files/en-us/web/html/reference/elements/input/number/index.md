@@ -1,5 +1,6 @@
 ---
-title: <input type="number">
+title: '`<input type="number">` HTML attribute value'
+short-title: <input type="number">
 slug: Web/HTML/Reference/Elements/input/number
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_number
@@ -9,6 +10,8 @@ sidebar: htmlsidebar
 {{HTMLElement("input")}} elements of type **`number`** are used to let the user enter a number. They include built-in validation to reject non-numerical entries.
 
 The browser may opt to provide stepper arrows to let the user increase and decrease the value using their mouse or by tapping with a fingertip.
+
+On browsers that don't support inputs of type `number`, a `number` input falls back to type `text`.
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
 
@@ -31,8 +34,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-On browsers that don't support inputs of type `number`, a `number` input falls back to type `text`.
 
 ## Value
 
@@ -462,14 +463,6 @@ After declaring a few variables, an event listener is added to the `button` to c
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

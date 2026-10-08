@@ -1,5 +1,6 @@
 ---
-title: <length-percentage>
+title: "`<length-percentage>` CSS type"
+short-title: <length-percentage>
 slug: Web/CSS/Reference/Values/length-percentage
 page-type: css-type
 browser-compat: css.types.length-percentage

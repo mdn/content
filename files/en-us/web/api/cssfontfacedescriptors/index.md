@@ -35,7 +35,7 @@ The following property names, in kebab-case (accessed using bracket notation) an
   - : A string representing the value of the {{cssxref("@font-face/font-style", "font-style")}} descriptor.
 - `font-weight` or `fontWeight`
   - : A string representing the value of the {{cssxref("@font-face/font-weight", "font-weight")}} descriptor.
-- `font-width` or `fontWidth` {{experimental_inline}}
+- `font-width` or `fontWidth`
   - : A string representing the value of the {{cssxref("@font-face/font-width", "font-width")}} descriptor.
 - `size-adjust` or `sizeAdjust`
   - : A string representing the value of the {{cssxref("@font-face/size-adjust", "size-adjust")}} descriptor.

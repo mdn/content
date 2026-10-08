@@ -1,5 +1,6 @@
 ---
-title: "<bdo>: The Bidirectional Text Override element"
+title: "`<bdo>` HTML bidirectional text override element"
+short-title: <bdo>
 slug: Web/HTML/Reference/Elements/bdo
 page-type: html-element
 browser-compat: html.elements.bdo
@@ -36,8 +37,6 @@ bdo {
 }
 ```
 
-The text's characters are drawn from the starting point in the given direction; the individual characters' orientation is not affected (so characters don't get drawn backward, for example).
-
 ## Attributes
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
@@ -46,6 +45,10 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
   - : The direction in which text should be rendered in this element's contents. Possible values are:
     - `ltr`: Indicates that the text should go in a left-to-right direction.
     - `rtl`: Indicates that the text should go in a right-to-left direction.
+
+## Usage notes
+
+The text's characters are drawn from the starting point in the given direction; the individual characters' orientation is not affected (so characters don't get drawn backward, for example).
 
 ## Examples
 
@@ -58,10 +61,6 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 ### Result
 
 {{EmbedLiveSample('Examples')}}
-
-## Notes
-
-The HTML 4 specification did not specify events for this element; they were added in XHTML. This is most likely an oversight.
 
 ## Technical summary
 

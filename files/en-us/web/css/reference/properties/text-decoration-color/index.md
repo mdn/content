@@ -1,5 +1,6 @@
 ---
-title: text-decoration-color
+title: "`text-decoration-color` CSS property"
+short-title: text-decoration-color
 slug: Web/CSS/Reference/Properties/text-decoration-color
 page-type: css-property
 browser-compat: css.properties.text-decoration-color
@@ -9,6 +10,8 @@ sidebar: cssref
 The **`text-decoration-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of decorations added to text by {{ cssxref("text-decoration-line") }}.
 
 The color applies to decorations, such as underlines, overlines, strikethroughs, and wavy lines like those used to mark misspellings, in the scope of the property's value.
+
+CSS does not provide a direct mechanism for specifying a unique color for each line type. This effect can nevertheless be achieved by nesting elements, applying a different line type to each element (with the {{cssxref("text-decoration-line")}} property), and specifying the line color (with `text-decoration-color`) on a per-element basis.
 
 {{InteractiveExample("CSS Demo: text-decoration-color")}}
 
@@ -52,8 +55,6 @@ p {
 }
 ```
 
-CSS does not provide a direct mechanism for specifying a unique color for each line type. This effect can nevertheless be achieved by nesting elements, applying a different line type to each element (with the {{cssxref("text-decoration-line")}} property), and specifying the line color (with `text-decoration-color`) on a per-element basis.
-
 ## Syntax
 
 ```css
@@ -73,6 +74,8 @@ text-decoration-color: unset;
 ```
 
 ### Values
+
+This property is specified as one `<color>` value:
 
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the line decoration.

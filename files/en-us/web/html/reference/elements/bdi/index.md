@@ -1,5 +1,6 @@
 ---
-title: "<bdi>: The Bidirectional Isolate element"
+title: "`<bdi>` HTML bidirectional isolate element"
+short-title: <bdi>
 slug: Web/HTML/Reference/Elements/bdi
 page-type: html-element
 browser-compat: html.elements.bdi
@@ -36,6 +37,14 @@ bdi {
 }
 ```
 
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
+
+If the [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) attribute is unspecified, the element still behaves as if `dir="auto"` is specified.
+
+## Usage notes
+
 Bidirectional text is text that may contain both sequences of characters that are arranged left-to-right (LTR) and sequences of characters that are arranged right-to-left (RTL), such as an Arabic quotation embedded in an English string. Browsers implement the [Unicode Bidirectional Algorithm](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics) to handle this. In this algorithm, characters are given an implicit directionality: for example, Latin characters are treated as LTR while Arabic characters are treated as RTL. Some other characters (such as spaces and some punctuation) are treated as neutral and are assigned directionality based on that of their surrounding characters.
 
 Usually, the bidirectional algorithm will do the right thing without the author having to provide any special markup but, occasionally, the algorithm needs help. That's where `<bdi>` comes in.
@@ -61,11 +70,7 @@ If you know the directionality of `EMBEDDED-TEXT` in advance, you can fix this p
 
 Though the same visual effect can be achieved using the CSS rule {{cssxref("unicode-bidi", "unicode-bidi: isolate")}} on a {{HTMLElement("span")}} or another text-formatting element, HTML authors should not use this approach because it is not semantic and browsers are allowed to ignore CSS styling.
 
-Embedding the characters in `<span dir="auto">` has the same effect as using `<bdi>`, but its semantics are less clear.
-
-## Attributes
-
-Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes), except that the [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) attribute behaves differently than normal: it defaults to `auto`, meaning its value is never inherited from the parent element. This means that unless you specify a value of either `rtl` or `ltr` for `dir`, the {{Glossary("user agent")}} will determine the correct directionality to use based on the contents of the `<bdi>`.
+If a semantic element such as {{HTMLElement("cite")}} is appropriate, prefer using `<cite dir="auto">` instead of `<bdi>`. If no semantic element is appropriate and the intended direction is `auto` (infer from content), `<bdi>` is shorter than `<span dir="auto">` and conveys the author intent better. When specifying explicit directionalities such as `ltr`, `<bdi dir="ltr">` and `<span dir="ltr">` are exactly equivalent.
 
 ## Examples
 

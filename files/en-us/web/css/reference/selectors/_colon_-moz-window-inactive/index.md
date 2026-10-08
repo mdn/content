@@ -1,5 +1,6 @@
 ---
-title: :-moz-window-inactive
+title: "`:-moz-window-inactive` CSS pseudo-class"
+short-title: :-moz-window-inactive
 slug: Web/CSS/Reference/Selectors/:-moz-window-inactive
 page-type: css-pseudo-class
 status:

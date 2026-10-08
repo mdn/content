@@ -75,7 +75,7 @@ The example shows a three-column track grid with new rows created at a minimum o
 
 {{EmbedLiveSample("Grid_layout_in_action", "100%", "460")}}
 
-This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}}, and {{cssxref("gap")}} to create the grid, and {{cssxref("grid-column")}} and {{cssxref("grid-row")}} to position items within in the grid. To view and edit the HTML and CSS used, click the 'Play' at the top right of the example.
+This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}}, and {{cssxref("gap")}} to create the grid, and {{cssxref("grid-column")}} and {{cssxref("grid-row")}} to position items within the grid. To view and edit the HTML and CSS used, click the 'Play' at the top right of the example.
 
 ## Reference
 
@@ -135,7 +135,7 @@ This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-colu
   - : Placing grid items using named template areas.
 
 - [Grid layout using named grid lines](/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
-  - : Combining names and track sizes; placing grid items by defining named grid lined and template areas.
+  - : Combining names and track sizes; placing grid items by defining named grid lines and template areas.
 
 - [Auto-placement in grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Auto-placement)
   - : How grid positions items that don't have any placement properties declared.
@@ -155,8 +155,8 @@ This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-colu
 - [Subgrid](/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid)
   - : What subgrid does with use cases and design patterns that subgrid solves.
 
-- [Masonry layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout)
-  - : Details what masonry layout is and it is used.
+- [Grid lanes layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes)
+  - : Details what grid lanes layout is and how to use it.
 
 - [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
   - : How box alignment works in the context of grid layout.
@@ -173,14 +173,17 @@ This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-colu
 - {{cssxref("align-content")}}
 - {{cssxref("align-items")}}
 - {{cssxref("align-self")}}
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
 - {{cssxref("justify-content")}}
 - {{cssxref("justify-items")}}
 - {{cssxref("justify-self")}}
 - {{cssxref("place-content")}}
 - {{cssxref("place-items")}}
 - {{cssxref("place-self")}}
+
+[CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
+
+- {{cssxref("column-gap")}}
+- {{cssxref("gap")}}
 - {{cssxref("row-gap")}}
 
 [CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module

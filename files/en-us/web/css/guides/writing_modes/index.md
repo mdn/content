@@ -30,7 +30,7 @@ The CSS writing modes module addresses the orientations of all writing modes. Ot
 
 ### Glossary and terms
 
-- {{glossary("/Baseline/Typography", "Baseline")}}
+- {{glossary("Baseline/Typography", "Baseline")}}
 - {{Glossary("Internationalization")}}
 - {{glossary("Localization")}}
 - {{glossary("Leading")}}

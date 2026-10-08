@@ -1,5 +1,6 @@
 ---
-title: <transform-function>
+title: "`<transform-function>` CSS type"
+short-title: <transform-function>
 slug: Web/CSS/Reference/Values/transform-function
 page-type: css-type
 browser-compat: css.types.transform-function
@@ -127,7 +128,7 @@ However, one major transformation is not linear, and therefore must be special-c
 
 The following example provides a 3D cube created from DOM elements and transforms, and a select menu allowing you to choose different transform functions to transform the cube with, so you can compare the effects of the different types.
 
-Choose one, and the transform is applied to the cube; after 2 seconds, the cube reverts back to its starting state. The cube's starting state is slightly rotated using `transform3d()`, to allow you to see the effect of all the transforms.
+Choose one, and the transform is applied to the cube; after 2 seconds, the cube reverts to its starting state. The cube's starting state is slightly rotated using `transform3d()`, to allow you to see the effect of all the transforms.
 
 #### HTML
 

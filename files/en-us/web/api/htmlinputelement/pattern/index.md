@@ -22,7 +22,7 @@ A string.
 
 ```js
 const inputElement = document.getElementById("year");
-console.log(input.pattern);
+console.log(inputElement.pattern);
 ```
 
 ## Specifications

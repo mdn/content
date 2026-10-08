@@ -1,14 +1,13 @@
 ---
-title: "<fencedframe>: The Fenced Frame element"
+title: "`<fencedframe>` HTML fenced frame element"
+short-title: <fencedframe>
 slug: Web/HTML/Reference/Elements/fencedframe
 page-type: html-element
 status:
-  - experimental
+  - deprecated
 browser-compat: html.elements.fencedframe
 sidebar: htmlsidebar
 ---
-
-{{SeeCompatTable}}
 
 The **`<fencedframe>`** [HTML](/en-US/docs/Web/HTML) element represents a nested {{Glossary("browsing context")}}, embedding another HTML page into the current one. `<fencedframe>`s are very similar to {{htmlelement("iframe")}} elements in form and function, except that:
 
@@ -23,13 +22,13 @@ The `<fencedframe>` element is a type of `<iframe>` with more native privacy fea
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
-- `allow` {{experimental_inline}}
+- `allow` {{deprecated_inline}}
   - : Specifies a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) for the `<fencedframe>`, which defines what features are available to the `<fencedframe>` based on the origin of the request. See [Permissions policies available to fenced frames](#permissions_policies_available_to_fenced_frames) for more details of which features can be controlled via a policy set on a fenced frame.
 
-- `height` {{experimental_inline}}
+- `height` {{deprecated_inline}}
   - : A unitless integer representing the height of the fenced frame in CSS pixels. The default is `150`.
 
-- `width` {{experimental_inline}}
+- `width` {{deprecated_inline}}
   - : A unitless integer representing the width of the fenced frame in CSS pixels. The default is `300`.
 
 ## Permissions policies available to fenced frames

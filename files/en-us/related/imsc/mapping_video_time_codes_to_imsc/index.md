@@ -33,7 +33,7 @@ In a single second this is not a big deal. As you extend to a few minutes, howev
 
 3600 (seconds in 1 hour) \* 1.001 (velocity) = 3603.6 real time seconds
 
-This is especially important to understand with IMSC files, since all of the timings in the document represent real time values. For example, if you want to describe an event that synchronizes with 23.976fps video that begins at 01:00:00:00 time code in the video, and ends 1 second later, it would look like this:
+This is especially important to understand with IMSC files, since all of the timings in the document represent real-time values. For example, if you want to describe an event that synchronizes with 23.976fps video that begins at 01:00:00:00 time code in the video, and ends 1 second later, it would look like this:
 
 `<p begin="3603.6s" end="3604.6s">Hello, I am Mork from Ork</p>`
 

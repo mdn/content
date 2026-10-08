@@ -1,5 +1,6 @@
 ---
-title: grid
+title: "`grid` CSS media feature"
+short-title: grid
 slug: Web/CSS/Reference/At-rules/@media/grid
 page-type: css-media-feature
 browser-compat: css.at-rules.media.grid
@@ -12,7 +13,7 @@ Most modern computers and smartphones have bitmap-based screens. Examples of gri
 
 ## Syntax
 
-The `grid` feature is specified as a {{cssxref("CSS_media_queries/Using_media_queries", "&lt;mq-boolean&gt;")}} value (`0` or `1`) representing whether or not the output device is grid-based.
+The `grid` feature is specified as a value representing whether the output device is grid-based — `1` if it is, and `0` if not.
 
 ## Examples
 

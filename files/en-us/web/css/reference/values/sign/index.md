@@ -1,5 +1,6 @@
 ---
-title: sign()
+title: "`sign()` CSS function"
+short-title: sign()
 slug: Web/CSS/Reference/Values/sign
 page-type: css-function
 browser-compat: css.types.sign
@@ -47,7 +48,7 @@ For example, in {{cssxref("background-position")}} positive percentages resolve 
 
 ```css
 div {
-  background-position: sign(10%);
+  background-position: calc(sign(10%) * 1px);
 }
 ```
 

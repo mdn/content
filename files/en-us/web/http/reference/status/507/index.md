@@ -2,7 +2,7 @@
 title: 507 Insufficient Storage
 slug: Web/HTTP/Reference/Status/507
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.5
+spec-urls: https://www.rfc-editor.org/info/rfc4918/#section-11.5
 sidebar: http
 ---
 

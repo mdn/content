@@ -1,5 +1,6 @@
 ---
-title: translate
+title: "`translate` CSS property"
+short-title: translate
 slug: Web/CSS/Reference/Properties/translate
 page-type: css-property
 browser-compat: css.properties.translate
@@ -103,7 +104,7 @@ translate: 20px 4rem 150px;
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 translate: none;
 
 /* Single values */

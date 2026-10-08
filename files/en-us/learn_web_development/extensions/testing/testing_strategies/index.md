@@ -191,7 +191,7 @@ An emulator might be as simple as testing a device condition. For example, if yo
 
 More often than not though, you'll have to install some kind of emulator. The most common devices/browsers you'll want to test are as follows:
 
-- The official [Android Studio IDE](https://developer.android.com/studio/) for developing Android apps is a bit heavy weight for just testing websites on Google Chrome or the old Stock Android browser, but it does come with a Robust [emulator](https://developer.android.com/studio/run/emulator.html). If you want something a bit more lightweight, [Andy](https://www.andyroid.net/) is a reasonable option that runs on both Windows and Mac.
+- The official [Android Studio IDE](https://developer.android.com/studio/) for developing Android apps is a bit heavy weight for just testing websites on Google Chrome or the old Stock Android browser, but it does come with a Robust [emulator](https://developer.android.com/studio/run/emulator.html).
 - Apple provides an app called [Simulator](https://help.apple.com/simulator/mac/current/) that runs on top of the [Xcode](https://developer.apple.com/xcode/) development environment, and emulates iPad/iPhone/Apple Watch/Apple TV. This includes the native iOS Safari browser. This unfortunately only runs on a Mac.
 
 You can often find simulators for other mobile device environments too, for example:
@@ -248,7 +248,7 @@ As mentioned in the last chapter, you can take a lot of the pain out of browser 
 
 There are also commercial tools available such as [Sauce Labs](https://saucelabs.com/) and [Browser Stack](https://www.browserstack.com/) that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing.
 
-Another alternative is to use no-code test automation tools such as [Endtest](https://www.endtest.io/).
+Another alternative is to use no-code test automation tools such as [Endtest](https://endtest.io/).
 
 We will look at how to use such tools later on in the module.
 

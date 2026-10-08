@@ -67,3 +67,4 @@ The {{domxref("Window/fetchLater", "fetchLater()")}} API enables a developer to 
 - [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
 - [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)
+- [Local network access](/en-US/docs/Web/Security/Defenses/Local_network_access)

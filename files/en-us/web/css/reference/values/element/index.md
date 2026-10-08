@@ -1,5 +1,6 @@
 ---
-title: element()
+title: "`element()` CSS function"
+short-title: element()
 slug: Web/CSS/Reference/Values/element
 page-type: css-function
 status:

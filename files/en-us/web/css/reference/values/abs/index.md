@@ -1,5 +1,6 @@
 ---
-title: abs()
+title: "`abs()` CSS function"
+short-title: abs()
 slug: Web/CSS/Reference/Values/abs
 page-type: css-function
 browser-compat: css.types.abs

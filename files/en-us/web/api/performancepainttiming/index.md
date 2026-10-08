@@ -12,7 +12,7 @@ The **`PerformancePaintTiming`** interface provides timing information about "pa
 There are two key paint moments this API provides:
 
 - {{Glossary("First Paint")}} (FP): Time when anything is rendered. Note that the marking of the first paint is optional, not all user agents report it.
-- {{Glossary("First Contentful Paint")}} (FCP): Time when the first bit of DOM text or image content is rendered.
+- {{Glossary("First Contentful Paint")}} (FCP): Time when the first {{Glossary("Contentful paint", "contentful paint")}} — the first bit of DOM text or image content is rendered.
 
 A third key paint moment is provided by the {{domxref("LargestContentfulPaint")}} API:
 
@@ -28,26 +28,26 @@ Like other Performance APIs, this API extends {{domxref("PerformanceEntry")}}.
 
 This interface directly defines the following properties:
 
-- {{domxref("PerformancePaintTiming.paintTime")}}
+- {{domxref("PerformancePaintTiming.paintTime")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the rendering phase ended and the paint phase started.
-- {{domxref("PerformancePaintTiming.presentationTime")}}
+- {{domxref("PerformancePaintTiming.presentationTime")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the painted pixels were actually drawn on the screen.
 
 It also extends the following {{domxref("PerformanceEntry")}} properties, qualifying and constraining them as described:
 
-- {{domxref("PerformanceEntry.entryType")}}
+- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
   - : Returns `"paint"`.
-- {{domxref("PerformanceEntry.name")}}
+- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : Returns either `"first-paint"` or `"first-contentful-paint"`.
-- {{domxref("PerformanceEntry.startTime")}}
+- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the paint occurred.
-- {{domxref("PerformanceEntry.duration")}}
+- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
   - : Returns 0.
 
 ## Instance methods
 
 - {{domxref("PerformancePaintTiming.toJSON()")}}
-  - : Returns a JSON representation of the `PerformancePaintTiming` object.
+  - : Returns a JSON-serializable plain object representing the `PerformancePaintTiming` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 

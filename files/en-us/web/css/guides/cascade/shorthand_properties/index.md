@@ -47,10 +47,6 @@ Shorthands handling properties related to the sides of the box, like {{cssxref("
 
 - **1-value syntax:** `border-width: 1em` — A single value represents all sides: ![Box edges with one-value syntax](border1.png)
 
-- **2-value syntax:** `border-width: 1em 2em` — The first value represents the top and bottom edges, and the second value represents the left and right edges: ![Box edges with two-value syntax](border2.png)
-
-- **3-value syntax:** `border-width: 1em 2em 3em` — The first value represents the top edge, the second value represents the left and right edges, and the third value represents the bottom edge: ![Box edges with three-value syntax](border3.png)
-
 - **2-value syntax:** `border-width: 1em 2em` — The first value represents the top and bottom sides, and the second value represents the left and right sides: ![Box edges with two-value syntax](border2.png)
 
 - **3-value syntax:** `border-width: 1em 2em 3em` — The first value represents the top side, the second value represents the left and right sides, and the third value represents the bottom side: ![Box edges with three-value syntax](border3.png)

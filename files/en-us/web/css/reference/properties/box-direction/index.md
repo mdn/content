@@ -1,5 +1,6 @@
 ---
-title: box-direction
+title: "`box-direction` CSS property"
+short-title: box-direction
 slug: Web/CSS/Reference/Properties/box-direction
 page-type: css-property
 status:
@@ -9,7 +10,7 @@ browser-compat: css.properties.box-direction
 sidebar: cssref
 ---
 
-{{Non-standard_header}}{{Deprecated_Header}}
+{{Non-standard_header}}
 
 > [!WARNING]
 > This is a property of the original CSS flexible box layout Module draft, and has been replaced by a newer standard. The `-moz-box-direction` will only be used for XUL while the previous standard `box-direction` has been replaced by `flex-direction`. See [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) for information about the current standard.
@@ -31,9 +32,9 @@ box-direction: revert-layer;
 box-direction: unset;
 ```
 
-The `box-direction` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `normal`
   - : The box lays out its contents from the start (the left or top edge).

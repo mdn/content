@@ -1,5 +1,6 @@
 ---
-title: float
+title: "`float` CSS property"
+short-title: float
 slug: Web/CSS/Reference/Properties/float
 page-type: css-property
 browser-compat: css.properties.float
@@ -101,9 +102,9 @@ float: revert-layer;
 float: unset;
 ```
 
-The `float` property is specified as a single keyword, chosen from the list of values below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `left`
   - : The element must float on the left side of its containing block.

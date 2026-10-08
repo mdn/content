@@ -1,5 +1,6 @@
 ---
-title: animation-duration
+title: "`animation-duration` CSS property"
+short-title: animation-duration
 slug: Web/CSS/Reference/Properties/animation-duration
 page-type: css-property
 browser-compat: css.properties.animation-duration
@@ -106,6 +107,8 @@ animation-duration: unset;
 ```
 
 ### Values
+
+This property is specified as a comma-separated list of the following values:
 
 - `auto`
   - : For time-based animations, `auto` is equivalent to a value of `0s` (see below). For [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), `auto` fills the entire timeline with the animation.

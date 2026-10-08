@@ -1,5 +1,6 @@
 ---
-title: :focus-visible
+title: "`:focus-visible` CSS pseudo-class"
+short-title: :focus-visible
 slug: Web/CSS/Reference/Selectors/:focus-visible
 page-type: css-pseudo-class
 browser-compat: css.selectors.focus-visible
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`:focus-visible`** pseudo-class applies while an element matches the {{CSSxRef(":focus")}} pseudo-class and the UA ({{glossary("User Agent")}}) determines via heuristics that the focus should be made evident on the element. (Many browsers show a "focus ring" by default in this case.)
+
+This selector is useful to provide a different focus indicator based on the user's input modality (mouse vs. keyboard).
 
 {{InteractiveExample("CSS Demo: :focus-visible", "tabbed-shorter")}}
 
@@ -43,8 +46,6 @@ select:focus-visible {
   </label>
 </form>
 ```
-
-This selector is useful to provide a different focus indicator based on the user's input modality (mouse vs. keyboard).
 
 ## Syntax
 

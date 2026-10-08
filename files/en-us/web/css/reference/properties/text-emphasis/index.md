@@ -1,12 +1,13 @@
 ---
-title: text-emphasis
+title: "`text-emphasis` CSS property"
+short-title: text-emphasis
 slug: Web/CSS/Reference/Properties/text-emphasis
 page-type: css-shorthand-property
 browser-compat: css.properties.text-emphasis
 sidebar: cssref
 ---
 
-The **`text-emphasis`** [CSS](/en-US/docs/Web/CSS) property applies emphasis marks to text (except spaces and control characters). It is a [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) for {{cssxref("text-emphasis-style")}} and {{cssxref("text-emphasis-color")}}.
+The **`text-emphasis`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property applies emphasis marks to text (except spaces and control characters).
 
 {{InteractiveExample("CSS Demo: text-emphasis")}}
 
@@ -152,4 +153,4 @@ h2 {
 ## See also
 
 - The longhand properties {{cssxref('text-emphasis-style')}}, {{cssxref('text-emphasis-color')}}.
-- The {{cssxref('text-emphasis-position')}} property allowing to define the position of the emphasis marks.
+- The {{cssxref('text-emphasis-position')}} property allowing you to define the position of the emphasis marks.

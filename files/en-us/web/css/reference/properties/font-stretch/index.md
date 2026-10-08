@@ -1,5 +1,6 @@
 ---
-title: font-stretch
+title: "`font-stretch` CSS property"
+short-title: font-stretch
 slug: Web/CSS/Reference/Properties/font-stretch
 page-type: css-property
 browser-compat: css.properties.font-stretch
@@ -90,9 +91,9 @@ font-stretch: revert-layer;
 font-stretch: unset;
 ```
 
-This property may be specified as a single keyword or {{cssxref("&lt;percentage&gt;")}} value.
-
 ### Values
+
+This property is specified as a single value from the following list:
 
 - `normal`
   - : Specifies a normally condensed font face.

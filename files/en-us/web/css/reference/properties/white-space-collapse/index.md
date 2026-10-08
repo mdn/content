@@ -1,5 +1,6 @@
 ---
-title: white-space-collapse
+title: "`white-space-collapse` CSS property"
+short-title: white-space-collapse
 slug: Web/CSS/Reference/Properties/white-space-collapse
 page-type: css-property
 browser-compat: css.properties.white-space-collapse

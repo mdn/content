@@ -1,5 +1,6 @@
 ---
-title: mask-repeat
+title: "`mask-repeat` CSS property"
+short-title: mask-repeat
 slug: Web/CSS/Reference/Properties/mask-repeat
 page-type: css-property
 browser-compat: css.properties.mask-repeat

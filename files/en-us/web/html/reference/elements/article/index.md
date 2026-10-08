@@ -1,5 +1,6 @@
 ---
-title: "<article>: The Article Contents element"
+title: "`<article>` HTML article contents element"
+short-title: <article>
 slug: Web/HTML/Reference/Elements/article
 page-type: html-element
 browser-compat: html.elements.article
@@ -54,13 +55,13 @@ The **`<article>`** [HTML](/en-US/docs/Web/HTML) element represents a self-conta
 }
 ```
 
-A given document can have multiple articles in it; for example, on a blog that shows the text of each article one after another as the reader scrolls, each post would be contained in an `<article>` element, possibly with one or more `<section>`s within.
-
 ## Attributes
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 ## Usage notes
+
+A given document can have multiple articles in it; for example, on a blog that shows the text of each article one after another as the reader scrolls, each post would be contained in an `<article>` element, possibly with one or more `<section>`s within.
 
 - Each `<article>` should be identified, typically by including a heading ([`<h1>` - `<h6>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) element) as a child of the `<article>` element.
 - When an `<article>` element is nested, the inner element represents an article related to the outer element. For example, the comments of a blog post can be `<article>` elements nested in the `<article>` representing the blog post.

@@ -1,5 +1,6 @@
 ---
-title: page-break-after
+title: "`page-break-after` CSS property"
+short-title: page-break-after
 slug: Web/CSS/Reference/Properties/page-break-after
 page-type: css-property
 status:
@@ -7,8 +8,6 @@ status:
 browser-compat: css.properties.page-break-after
 sidebar: cssref
 ---
-
-{{deprecated_header}}
 
 > [!WARNING]
 > This property has been replaced by the {{cssxref("break-after")}} property.

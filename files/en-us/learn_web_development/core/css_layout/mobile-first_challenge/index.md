@@ -9,6 +9,8 @@ sidebar: learnsidebar
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design", "Learn_web_development/Core/Scripting", "Learn_web_development/Core/CSS_layout")}}
 This challenge rounds off the [CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout) module by asking you to update an existing mobile layout so that it also works well on desktop browsers. Along the way, you'll also be tested on responsive layout features such as media queries, CSS grid, flexbox, and responsive images.
 
+After you're done with this challenge, you can move on to learning about implementing dynamic behavior with [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting).
+
 ## Starting point
 
 We are going to get you to solve this challenge in your local development environment; ideally, you'll want to view the example in a full browser window to make sure the layout features are working as expected.
@@ -356,7 +358,7 @@ The following screenshot shows what the finished widescreen layout should look l
 To cause the layouts to display properly in mobile browsers, you need to add a viewport `<meta>` tag inside the `<head>` of the HTML document:
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width" />
 ```
 
 The finished CSS should look something like this:

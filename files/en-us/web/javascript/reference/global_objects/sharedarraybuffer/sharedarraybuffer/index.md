@@ -52,7 +52,7 @@ console.log(buffer.byteLength); // 8
 
 ### Always use the new operator to create a SharedArrayBuffer
 
-`SharedArrayBuffer` constructors are required to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a `SharedArrayBuffer` constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
+`SharedArrayBuffer` constructors are required to be constructed with a {{jsxref("new")}} operator. Calling a `SharedArrayBuffer` constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
 
 ```js example-bad
 const sab = SharedArrayBuffer(1024);

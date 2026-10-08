@@ -14,7 +14,7 @@ The **`downloadTotal`** read-only property of the {{domxref("BackgroundFetchRegi
 
 ## Value
 
-A {{jsxref("number")}}.
+A {{jsxref("Number")}}.
 
 ## Examples
 

@@ -1,5 +1,6 @@
 ---
-title: math-style
+title: "`math-style` CSS property"
+short-title: math-style
 slug: Web/CSS/Reference/Properties/math-style
 page-type: css-property
 browser-compat: css.properties.math-style
@@ -24,6 +25,8 @@ math-style: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `normal`
   - : The initial value, indicates normal rendering.

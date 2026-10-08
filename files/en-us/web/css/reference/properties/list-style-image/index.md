@@ -1,5 +1,6 @@
 ---
-title: list-style-image
+title: "`list-style-image` CSS property"
+short-title: list-style-image
 slug: Web/CSS/Reference/Properties/list-style-image
 page-type: css-property
 browser-compat: css.properties.list-style-image
@@ -77,7 +78,7 @@ hr {
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 list-style-image: none;
 
 /* <url> values */
@@ -95,6 +96,8 @@ list-style-image: unset;
 ```
 
 ### Values
+
+This property is specified as a single value from the following list:
 
 - {{cssxref("image")}}
   - : A valid image to use as the marker.

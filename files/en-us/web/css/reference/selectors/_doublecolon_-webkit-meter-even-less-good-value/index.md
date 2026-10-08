@@ -1,5 +1,6 @@
 ---
-title: ::-webkit-meter-even-less-good-value
+title: "`::-webkit-meter-even-less-good-value` CSS pseudo-element"
+short-title: ::-webkit-meter-even-less-good-value
 slug: Web/CSS/Reference/Selectors/::-webkit-meter-even-less-good-value
 page-type: css-pseudo-element
 status:

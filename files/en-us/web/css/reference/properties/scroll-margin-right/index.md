@@ -1,5 +1,6 @@
 ---
-title: scroll-margin-right
+title: "`scroll-margin-right` CSS property"
+short-title: scroll-margin-right
 slug: Web/CSS/Reference/Properties/scroll-margin-right
 page-type: css-property
 browser-compat: css.properties.scroll-margin-right

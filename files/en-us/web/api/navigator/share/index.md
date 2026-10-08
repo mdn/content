@@ -32,7 +32,7 @@ share(data)
 
     Possible values are:
     - `url` {{optional_inline}}
-      - : A string representing a URL to be shared.
+      - : A string representing a URL to be shared. An empty string (`""`) refers to the current page URL.
     - `text` {{optional_inline}}
       - : A string representing text to be shared.
     - `title` {{optional_inline}}
@@ -221,7 +221,7 @@ document.getElementById("share").addEventListener("click", async () => {
 
 #### Result
 
-{{EmbedLiveSample('Sharing files')}}
+{{EmbedLiveSample('Sharing files','','','','','','web-share')}}
 
 ## Specifications
 

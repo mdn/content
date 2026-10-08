@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.all
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 The {{DOMxRef("Document")}} interface's read-only **`all`** property returns an {{DOMxRef("HTMLAllCollection")}} rooted at the document node.
 

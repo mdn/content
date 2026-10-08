@@ -1,5 +1,6 @@
 ---
-title: contain-intrinsic-width
+title: "`contain-intrinsic-width` CSS property"
+short-title: contain-intrinsic-width
 slug: Web/CSS/Reference/Properties/contain-intrinsic-width
 page-type: css-property
 browser-compat: css.properties.contain-intrinsic-width
@@ -11,7 +12,7 @@ The **`contain-intrinsic-width`** [CSS](/en-US/docs/Web/CSS) property sets the w
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 contain-intrinsic-width: none;
 
 /* <length> values */

@@ -1,5 +1,6 @@
 ---
-title: anchor()
+title: "`anchor()` CSS function"
+short-title: anchor()
 slug: Web/CSS/Reference/Values/anchor
 page-type: css-function
 browser-compat: css.types.anchor
@@ -81,9 +82,9 @@ Returns a {{cssxref("length")}} value.
 
 The `anchor()` function enables positioning an element relative to the edges of an anchor element. It is only valid within {{glossary("inset properties", "inset property")}} values set on absolute or fixed position elements.
 
-It returns a `<length>` value specifying the distance between the anchor-positioned element side specified by the inset value, and the side of the anchor element specified by the chosen `<anchor-side>` value. As it returns a `<length>`, it can be used within [other CSS functions](/en-US/docs/Web/CSS/Reference/Values/Functions) that accept length values, including {{cssxref("calc()")}}, {{cssxref("clamp()")}}, etc.
+It returns a `<length>` value specifying the distance from the edge of the containing block corresponding to the inset property to the edge of the anchor element specified by the `<anchor-side>` value. As it returns a `<length>`, it can be used within [other CSS functions](/en-US/docs/Web/CSS/Reference/Values/Functions) that accept length values, including {{cssxref("calc()")}}, {{cssxref("clamp()")}}, etc.
 
-If no anchor with the name specified by the `<anchor-name>` exists, or if the positioned element does not have an anchor associated with it (i.e., via the {{cssxref("position-anchor")}} property), the first parameter is considered invalid and the fallback `<length-percentage>` value is used if one is available. For example, if `top: anchor(bottom, 50px)` were specified on the positioned element but no anchor was associated with it, the fallback value would be used, so `top` would get a computed value of `50px`.
+If no anchor with the name specified by the `<anchor-name>` exists, or if the positioned element does not have an anchor associated with it (i.e., via the {{cssxref("position-anchor")}} property), the first parameter is considered invalid, and the fallback `<length-percentage>` value is used if one is available. For example, if `top: anchor(bottom, 50px)` were specified on the positioned element but no anchor was associated with it, the fallback value would be used, so `top` would get a computed value of `50px`.
 
 For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide.
 
@@ -113,8 +114,8 @@ You can use logical `<anchor-side>` values within both logical and physical inse
 
 The story gets more complicated when using physical `<anchor-side>` parameters within logical inset property values as the physical side has to match the axis the inset property is relevant to within the current writing mode. For example:
 
-- In a horizontal writing mode, the block direction is top-to-bottom, therefore `inset-block-end: anchor(bottom)` will work but `inset-block-end: anchor(left)` is incompatible. If `inset-block-end: anchor(left, 50px)` were set, the computed value would be `50px`, and the positioned element would be positioned `50px` from the block end (bottom) of its nearest positioned ancestor or the viewport, depending on the `position` value set.
-- In a vertical writing mode, the block direction is right-to-left or left-to-right, therefore `inset-block-end: anchor(left)` will work, but `inset-block-end: anchor(top)` is incompatible. If `inset-block-end: anchor(top, 50px)` were set, the computed value would be `50px`, and the positioned element would be positioned `50px` from the block end (left or right depending on the writing mode) of its nearest positioned ancestor or the viewport, depending on the `position` value set.
+- In a horizontal writing mode, the block direction is top-to-bottom; therefore `inset-block-end: anchor(bottom)` will work, but `inset-block-end: anchor(left)` is incompatible. If `inset-block-end: anchor(left, 50px)` were set, the computed value would be `50px`, and the positioned element would be positioned `50px` from the block end (bottom) of its nearest positioned ancestor or the viewport, depending on the `position` value set.
+- In a vertical writing mode, the block direction is right-to-left or left-to-right; therefore `inset-block-end: anchor(left)` will work, but `inset-block-end: anchor(top)` is incompatible. If `inset-block-end: anchor(top, 50px)` were set, the computed value would be `50px`, and the positioned element would be positioned `50px` from the block end (left or right depending on the writing mode) of its nearest positioned ancestor or the viewport, depending on the `position` value set.
 
 To mitigate the potential for confusion with these values, you are advised to use logical inset properties with logical `<anchor-side>` values, and physical inset properties with physical `<anchor-side>` values. You should favor the use of logical values whenever possible because they are better for [internationalization](/en-US/docs/Glossary/Internationalization).
 
@@ -146,14 +147,14 @@ The CSS working group is [looking at ways to avoid requiring this workaround](ht
 
 ### Using `anchor()` inside `calc()`
 
-When the `anchor()` function refers to a side of the default anchor, you can include a {{cssxref("margin")}} to create spacing between the edges of the anchor and positioned element as needed. Alternatively, you can include the `anchor()` function within a {{cssxref("calc")}} function to add spacing.
+When the `anchor()` function refers to a side of the default anchor, you can include a {{cssxref("margin")}} to create spacing between the edges of the anchor and the positioned element as needed. Alternatively, you can include the `anchor()` function within a {{cssxref("calc")}} function to add spacing.
 
-This example positions the right edge of the positioned element flush to the anchor element's left edge then adds margin to make some space between the edges:
+This example positions the right edge of the positioned element flush to the anchor element's left edge, then adds margin to make some space between the edges:
 
 ```css
 .positionedElement {
   right: anchor(left);
-  margin-left: 10px;
+  margin-right: 10px;
 }
 ```
 
@@ -437,7 +438,7 @@ body {
 }
 ```
 
-The anchors are each given a different {{cssxref("anchor-name")}} value, a {{cssxref("position")}} value of `absolute`, and different inset values to position the anchors in a rectangle formation.
+The anchors are each given a different {{cssxref("anchor-name")}} value, a {{cssxref("position")}} value of `absolute`, and different inset values to position the anchors in a rectangular formation.
 
 ```css
 .anchor {

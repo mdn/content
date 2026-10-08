@@ -1,5 +1,6 @@
 ---
-title: line-break
+title: "`line-break` CSS property"
+short-title: line-break
 slug: Web/CSS/Reference/Properties/line-break
 page-type: css-property
 browser-compat: css.properties.line-break
@@ -63,6 +64,8 @@ line-break: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : Break text using the default line break rule.

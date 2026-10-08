@@ -1,5 +1,6 @@
 ---
-title: <display-internal>
+title: "`<display-internal>` CSS type"
+short-title: <display-internal>
 slug: Web/CSS/Reference/Values/display-internal
 page-type: css-type
 browser-compat:

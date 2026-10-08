@@ -1,5 +1,6 @@
 ---
-title: animation-fill-mode
+title: "`animation-fill-mode` CSS property"
+short-title: animation-fill-mode
 slug: Web/CSS/Reference/Properties/animation-fill-mode
 page-type: css-property
 browser-compat: css.properties.animation-fill-mode
@@ -134,6 +135,8 @@ animation-fill-mode: unset;
 ```
 
 ### Values
+
+This property is specified as a comma-separated list of the following keyword values:
 
 - `none`
   - : The animation will not apply any styles to the target when it's not executing. The element will instead be displayed using any other CSS rules applied to it. This is the default value.

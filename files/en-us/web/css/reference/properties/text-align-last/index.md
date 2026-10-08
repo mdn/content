@@ -1,5 +1,6 @@
 ---
-title: text-align-last
+title: "`text-align-last` CSS property"
+short-title: text-align-last
 slug: Web/CSS/Reference/Properties/text-align-last
 page-type: css-property
 browser-compat: css.properties.text-align-last
@@ -68,6 +69,8 @@ text-align-last: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : The affected line is aligned per the value of {{cssxref("text-align")}}, unless {{cssxref("text-align")}} is `justify`, in which case the effect is the same as setting `text-align-last` to `start`.

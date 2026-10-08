@@ -1,16 +1,20 @@
 ---
-title: "<template>: The Content Template element"
+title: "`<template>` HTML content template element"
+short-title: <template>
 slug: Web/HTML/Reference/Elements/template
 page-type: html-element
 browser-compat: html.elements.template
 sidebar: htmlsidebar
 ---
 
-The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism for holding {{Glossary("HTML")}} fragments, which can either be used later via JavaScript or generated immediately into shadow DOM.
+The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism for holding {{Glossary("HTML")}} fragments, which can either be used later via JavaScript, generated immediately and inserted into a shadow DOM, or used as part of {{glossary("Out_of_order_patching", "out-of-order patching")}} with `<template for="...">`.
 
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
+
+- `for` {{experimental_inline}}
+  - : The `for` attribute is used for out-of-order patching with `<template for="...">`, matching an equivalent `<?start id="...">` or `<?marker "...">` marker. See the [out-of-order patching section](#out-of-order_patching) and [examples section](#examples).
 
 - `shadowrootmode`
   - : Creates a [shadow root](/en-US/docs/Glossary/Shadow_tree) for the parent element.
@@ -50,13 +54,29 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     If set, the shadow root may be serialized by calling the {{DOMxRef('Element.getHTML()')}} or {{DOMxRef('ShadowRoot.getHTML()')}} methods with the `options.serializableShadowRoots` parameter set `true`.
     The value defaults to `false`.
 
+- `shadowrootslotassignment` {{experimental_inline}}
+  - : Sets the [`slotAssignment`](/en-US/docs/Web/API/ShadowRoot/slotAssignment) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element.
+    This is the declarative equivalent of the [`slotAssignment`](/en-US/docs/Web/API/Element/attachShadow#slotassignment) option of the {{domxref("Element.attachShadow()")}} method.
+    - `named`
+      - : Elements are automatically assigned to {{HTMLElement("slot")}} elements within this shadow root.
+        This is the default value.
+
+        Elements with the [`slot` attribute](/en-US/docs/Web/API/Element/slot) are assigned to the first {{htmlelement("slot")}} in the template that has the corresponding `name` attribute.
+        If multiple elements specify the same slot name, they are all added to the first slot in the template that has that name, and rendered in the order they are declared.
+        All unnamed elements — elements that don't specify a `slot` attribute — are assigned to the default slot in the order they are declared.
+        This is the first unnamed `<slot>` in the template.
+
+    - `manual`
+      - : Elements are manually assigned to particular slot elements using {{domxref("HTMLSlotElement.assign()")}}.
+        No automatic assignment takes place.
+
 ## Usage notes
 
 This element has no permitted content, because everything nested inside it in the HTML source does not actually become the children of the `<template>` element. The {{domxref("Node.childNodes")}} property of the `<template>` element is always empty, and you can only access said nested content via the special {{domxref("HTMLTemplateElement.content", "content")}} property. However, if you call {{domxref("Node.appendChild()")}} or similar methods on the `<template>` element, then you would be inserting children into the `<template>` element itself, which is a violation of its content model and does not actually update the {{domxref("DocumentFragment")}} returned by the `content` property.
 
 Due to the way the `<template>` element is parsed, all `<html>`, `<head>`, and `<body>` opening and closing tags inside the template are syntax errors and are ignored by the parser, so `<template><head><title>Test</title></head></template>` is the same as `<template><title>Test</title></template>`.
 
-There are two main ways to use the `<template>` element.
+There are three main ways to use the `<template>` element.
 
 ### Template document fragment
 
@@ -74,6 +94,28 @@ This is the declarative equivalent of calling {{domxref("Element.attachShadow()"
 
 If the element has any other value for `shadowrootmode`, or does not have the `shadowrootmode` attribute, the parser generates a {{domxref("HTMLTemplateElement")}}.
 Similarly, if there are multiple declarative shadow roots, only the first one is replaced by a {{domxref("ShadowRoot")}} — subsequent instances are parsed as {{domxref("HTMLTemplateElement")}} objects.
+
+Other attributes prefixed with `shadowroot` allow declarative customization of the `ShadowRoot`, such as controlling how slots are assigned.
+
+### Out-of-order patching
+
+> [!NOTE]
+> This use case is still experimental and has limited browser support.
+> See the [browser compatibility](#browser_compatibility) table for browser support information.
+
+Traditionally, HTML is delivered in order and read, processed, and displayed from top to bottom. To change that order, you can either hide or rearrange elements with CSS or update the DOM produced by the HTML afterwards with JavaScript. However, many pages are composed of multiple parts that may be ready to render at different times, or that may be more important to deliver to the user earlier.
+
+The `<template>` element allows for delivering HTML {{glossary("Out_of_order_patching", "out-of-order")}}, which involves replacing [processing instruction](/en-US/docs/Web/API/ProcessingInstruction) markers with the contents of the `<template>` element (also referred to as **patching**).
+
+For example, a `<?marker name="my-identifier">` processing instruction marker can be patched with the contents of a `<template for="my-identifier">` element supplied much later in the HTML. See the [Using `<template for>` for patching](#using_template_for_for_patching) example.
+
+As well as the `<?marker>` processing instructions marker, a `<?start>` and `<?end>` pair can be used to contain temporary content (for example, `<?start name="my-identifier">Loading...<?end>`), which is temporarily shown until the `<template for="my-identifier">` is processed and the whole section is replaced. See the [Using `<template for>` for range patching](#using_template_for_for_range_patching) example.
+
+When written in HTML, processing instructions can be provided with or without the trailing `?`, and the browser will add it if not supplied when parsing the DOM. Both `<?start?>` and `<?start>` are therefore valid and parsed as `<?start?>`. XML is stricter and requires the trailing `?`.
+
+If the `for` attribute does not match any marker processing instruction `name`, the `<template>` content will remain hidden in the DOM and won't be used in any patch.
+
+To prevent components from updating unrelated parts of the DOM, `<template for="...">` elements can only patch markers inside the `<template>` parent's DOM tree. The only exception is `<template>` elements that are direct children of the `<body>` element — they can also patch `<head>` elements to allow updating `<title>` and other `<head>` elements.
 
 ## Examples
 
@@ -261,13 +303,191 @@ This also focuses the parent element as shown below.
 
 ![Screenshot of the code where the element has focus](template_with_focus.png)
 
-## Data on the DocumentFragment is not cloned
+### Declarative shadow DOM with named slot assignment
+
+This example shows how elements can be assigned to slots in a shadow DOM based on their [`slot` attribute](/en-US/docs/Web/API/Element/slot) (matched against the slot's `name` attribute).
+
+#### HTML
+
+First we define an {{HTMLElement("article")}} element that presents title, metadata, and article body information.
+
+The article contains a `<template>` element that will become a shadow root, because of the presence of the `shadowrootmode` attribute.
+We don't need to set its `shadowrootslotassignment` attribute because named slot assignment is the default.
+
+The template defines elements that have named slots for "header" and "meta" information, and an unnamed slot for "body" information.
+The elements are styled differently so it is easy to differentiate them.
+
+```html
+<article id="host">
+  <template shadowrootmode="open" shadowrootslotassignment="named">
+    <style>
+      .header {
+        background-color: plum;
+      }
+      .meta {
+        background-color: green;
+      }
+      .body {
+        background-color: lightblue;
+      }
+    </style>
+
+    <h2 class="header">
+      <slot name="title"></slot>
+    </h2>
+
+    <div class="meta">
+      <slot name="meta"></slot>
+    </div>
+
+    <div class="body">
+      <slot></slot>
+    </div>
+  </template>
+
+  <p>
+    Text 1 with no slot attribute. Goes into default (unnamed) slot inside the
+    "body" div.
+  </p>
+  <span slot="title">Text for the title slot</span>
+  <span slot="meta">Text for the meta slot</span>
+  <p>
+    Text 2 with no slot attribute. Also goes into default (unnamed) slot inside
+    the "body" div.
+  </p>
+</article>
+```
+
+Inside the same host, below the template, we have four elements for populating the slots.
+The {{htmlelement("span")}} elements have `slot` attributes that match the `name` attributes on slots in the template, and will populate the corresponding slots.
+The two {{htmlelement("p")}} elements are unnamed, so are both inserted into the unnamed `<slot>` in the "body" element.
+
+#### Results
+
+The example below should show the content of the slots displayed in the appropriate sections.
+
+{{EmbedLiveSample('Declarative shadow DOM with named slot assignment','100', '220px')}}
+
+### Declarative shadow DOM with manual slot assignment
+
+This example shows how elements can be assigned to slots in a shadow DOM using manual slot assignment.
+
+With this approach, each element must manually be assigned to a particular slot.
+There is no default assignment, so any slot that is not assigned will be empty.
+
+#### HTML
+
+First we have a hidden support warning.
+This warning is later set to be displayed via JavaScript if the browser doesn't support the `shadowrootslotassignment` attribute.
+
+```html
+<p id="support-warning" hidden>
+  ⛔ Your browser doesn't support the
+  <code>shadowrootslotassignment</code> attribute yet.
+</p>
+```
+
+Next, we define an {{HTMLElement("article")}} element that presents title, metadata, and article body information.
+This contains a `<template>` element that will become a shadow root, because of the presence of the `shadowrootmode` attribute, and will use manual slot assignment because `shadowrootslotassignment="manual"` is set.
+
+The template defines elements that have slots for "header", "meta", and "body" information, that can be separately referenced by their `id` attribute.
+The elements are styled differently so it is easy to differentiate them.
+
+```html
+<article id="host">
+  <template shadowrootmode="open" shadowrootslotassignment="manual">
+    <style>
+      .header {
+        background-color: plum;
+      }
+      .meta {
+        background-color: green;
+      }
+      .body {
+        background-color: lightblue;
+      }
+    </style>
+
+    <h2 class="header">
+      <slot id="titleSlot"></slot>
+    </h2>
+
+    <div class="meta">
+      <slot id="metaSlot"></slot>
+    </div>
+
+    <div class="body">
+      <slot id="bodySlot"></slot>
+    </div>
+  </template>
+
+  <span id="text_title">Text for the title slot</span>
+  <span id="text_meta">Text for the meta slot</span>
+  <p id="text_body_1">Text 1 for body slot.</p>
+  <p id="text_body_2">Text 2 for body slot.</p>
+</article>
+```
+
+Inside the same host, below the template, we have four elements for populating the slots.
+These are also identified by id.
+
+#### JavaScript
+
+The JavaScript for manual slot assignment is shown below.
+First the code gets the slots within the shadow root, then the text to be inserted, and finally assigns the text to the slot.
+Note that you can only assign a node once to any particular slot, and that if you assign multiple nodes to a single slot using {{domxref("HTMLSlotElement.assign()")}}, the order they are specified controls the order they are added.
+
+```js
+const host = document.querySelector("#host");
+const shadow = host.shadowRoot;
+
+// 1. Target your slots
+const titleSlot = shadow.querySelector("#titleSlot");
+const metaSlot = shadow.querySelector("#metaSlot");
+const bodySlot = shadow.querySelector("#bodySlot");
+
+// 2. Target the Elements to slot
+const body1Text = document.querySelector("#text_body_1");
+const body2Text = document.querySelector("#text_body_2");
+const titleText = document.querySelector("#text_title");
+const metaText = document.querySelector("#text_meta");
+
+// 3. Manually assign them
+titleSlot.assign(titleText);
+metaSlot.assign(metaText);
+bodySlot.assign(body2Text, body1Text);
+```
+
+The code displays the hidden support warning if slot assignment is not supported.
+
+```js
+const isShadowRootSlotAssignmentSupported = Object.hasOwn(
+  HTMLTemplateElement.prototype,
+  "shadowRootSlotAssignment",
+);
+
+document
+  .querySelector("p[hidden]")
+  .toggleAttribute("hidden", isShadowRootSlotAssignmentSupported);
+```
+
+#### Results
+
+The example below should show the content of the slots displayed in the appropriate sections.
+
+{{EmbedLiveSample('Declarative shadow DOM with manual slot assignment','100', '220px')}}
+
+> [!NOTE]
+> If the `shadowrootslotassignment` attribute is not supported, a warning note is displayed and the browser will use `named` assignment.
+> However, because none of the slots or elements to be inserted are named, all the elements will be inserted into the title slot (because this is the first unnamed slot, and hence is the "default" slot).
+
+### Data on the DocumentFragment is not cloned
 
 When a {{domxref("DocumentFragment")}} value is passed, {{domxref("Node.appendChild")}} and similar methods move only the _child nodes_ of that value into the target node. Therefore, it is usually preferable to attach event handlers to the children of a `DocumentFragment`, rather than to the `DocumentFragment` itself.
 
 Consider the following HTML and JavaScript:
 
-### HTML
+#### HTML
 
 ```html
 <div id="container"></div>
@@ -277,7 +497,7 @@ Consider the following HTML and JavaScript:
 </template>
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 const container = document.getElementById("container");
@@ -296,11 +516,130 @@ secondClone.children[0].addEventListener("click", clickHandler);
 container.appendChild(secondClone);
 ```
 
-### Result
+#### Result
 
 Since `firstClone` is a `DocumentFragment`, only its children are added to `container` when `appendChild` is called; the event handlers of `firstClone` are not copied. In contrast, because an event handler is added to the first _child node_ of `secondClone`, the event handler is copied when `appendChild` is called, and clicking on it works as one would expect.
 
 {{EmbedLiveSample(' Data on the DocumentFragment is not cloned')}}
+
+### Using `<template for>` for patching
+
+This example uses the `<?marker name="placeholder">` processing instruction as a placeholder and later on fills in the contents using `<template for="placeholder">`.
+
+```html-nolint
+<body>
+  <div>
+    <?marker name="placeholder">
+  </div>
+  ...
+  <template for="placeholder">Lorem Ipsum...</template>
+  ...
+</body>
+```
+
+Initially, this results in an empty `<div>` being rendered. It is then updated to the following after the `<template>` element is parsed and processed:
+
+```html-nolint
+  <div>
+    Lorem Ipsum...
+  </div>
+```
+
+### Using `<template for>` for range patching
+
+This example uses the `<?start>` and `<?end>` processing instructions to contain placeholder content, which is initially displayed then replaced by the `<template for>` content later on.
+
+```html-nolint
+<body>
+  <div>
+    <?start name="placeholder">
+    Loading...
+    <?end>
+  </div>
+  ...
+  <template for="placeholder">Lorem Ipsum...</template>
+  ...
+</body>
+```
+
+Initially the `<div>` is rendered with the `Loading...` placeholder content. This is then updated to the following after the `<template>` is parsed and processed:
+
+```html-nolint
+  <div>
+    Lorem Ipsum...
+  </div>
+```
+
+This example also demonstrates the lack of processing instruction children and nesting. The `<?start>` and `<?end>` processing instructions, although linked in terms of their relationship with `<template for>`, are separate [nodes](/en-US/docs/Web/API/Node) and not opening and closing tags. They therefore do not contain the `Loading...` content as a child (as demonstrated by the lack of indentation).
+
+### Using `<template for>` for patching `<head>` elements
+
+This example shows that `<template for>` elements that are direct children of the `<body>` element can patch `<head>` markers.
+
+```html-nolint
+<head>
+  ...
+  <?start name="title"><title>Loading...</title><?end>
+  <?start name="meta-description"><meta name="description" contents="Loading..."><?end>
+  ...
+</head>
+<body>
+  ...
+  <template for="title"><title>The actual title of the page</title></template>
+  <template for="meta-description"><meta name="description" contents="This is a meaningful description..."></template>
+  ...
+</body>
+```
+
+Results in the following once the `<template>` elements have been parsed:
+
+```html-nolint
+<head>
+  ...
+  <title>The actual title of the page</title>
+  <meta name="description" contents="This is a meaningful description...">
+  ...
+</head>
+<body>
+  ...
+</body>
+```
+
+### Including markers in `<template for>` to allow contents to be repatched later
+
+You can also insert markers inside `<template for>` elements, creating new placeholders to enable patching the same content multiple times. You can reuse existing `name` attributes.
+
+For example, if you are building a {{glossary("SPA", "Single Page Application (SPA)")}} with `<template for>`, you may wish to allow the `<title>` to be patched on each route update, which could be achieved like this:
+
+```html-nolint
+<head>
+  ...
+  <?start name="title">
+  <title>Loading...</title>
+  <?end>
+  ...
+</head>
+<body>
+  ...
+  <template for="title"><?start name="title"><title>The actual title of the page</title><?end></template>
+  ...
+</body>
+```
+
+This will result in the following once the `<template>` element is parsed:
+
+```html-nolint
+<head>
+  ...
+  <?start name="title"><title>The actual title of the page</title><?end>
+  ...
+</head>
+<body>
+  ...
+</body>
+```
+
+Later on, a new `<template for="title">` could be inserted into the DOM to replace the `<title>` again.
 
 ## Technical summary
 

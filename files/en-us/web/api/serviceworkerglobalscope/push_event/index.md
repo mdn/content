@@ -28,13 +28,6 @@ A {{domxref("PushEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PushEvent")}}
 
-## Event properties
-
-_Inherits properties from its parent, {{domxref("ExtendableEvent")}}. Additional properties:_
-
-- {{domxref("PushEvent.data")}} {{ReadOnlyInline}}
-  - : Returns a reference to a {{domxref("PushMessageData")}} object containing data sent to the {{domxref("PushSubscription")}}.
-
 ## Example
 
 This example sets up a handler for `push` events that takes {{Glossary("JSON")}} data, parses it, and dispatches the message for handling based on information contained within the message.

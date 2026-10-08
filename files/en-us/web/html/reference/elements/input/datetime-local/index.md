@@ -1,5 +1,6 @@
 ---
-title: <input type="datetime-local">
+title: '`<input type="datetime-local">` HTML attribute value'
+short-title: <input type="datetime-local">
 slug: Web/HTML/Reference/Elements/input/datetime-local
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_datetime-local
@@ -7,6 +8,8 @@ sidebar: htmlsidebar
 ---
 
 {{htmlelement("input")}} elements of type **`datetime-local`** create input controls that let the user easily enter both a date and a time, including the year, month, and day as well as the time in hours and minutes.
+
+The control's UI varies in general from browser to browser. The control is intended to represent _a local date and time_, not necessarily _the user's local date and time_. In other words, the input allows any valid combination of year, month, day, hour, and minute—even if such a combination is invalid in the user's local time zone (such as the one hour within a daylight saving time spring-forward transition gap).
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;datetime-local&quot;&gt;", "tabbed-shorter")}}
 
@@ -35,8 +38,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-The control's UI varies in general from browser to browser. The control is intended to represent _a local date and time_, not necessarily _the user's local date and time_. In other words, the input allows any valid combination of year, month, day, hour, and minute—even if such a combination is invalid in the user's local time zone (such as the one hour within a daylight saving time spring-forward transition gap).
 
 ## Value
 
@@ -272,14 +273,6 @@ The valid range included all times between the `min` and `max` values; the time 
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

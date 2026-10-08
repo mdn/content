@@ -101,7 +101,7 @@ myFunction(-1, ...args, 2, ...[3]);
 
 #### Apply for new operator
 
-When calling a constructor with {{jsxref("Operators/new", "new")}}, it's not possible to **directly** use an array and `apply()`, because `apply()` _calls_ the target function instead of _constructing_ it, which means, among other things, that [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) will be `undefined`. However, an array can be easily used with `new` thanks to spread syntax:
+When calling a constructor with {{jsxref("new")}}, it's not possible to **directly** use an array and `apply()`, because `apply()` _calls_ the target function instead of _constructing_ it, which means, among other things, that [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) will be `undefined`. However, an array can be easily used with `new` thanks to spread syntax:
 
 ```js
 const dateFields = [1970, 0, 1]; // 1 Jan 1970

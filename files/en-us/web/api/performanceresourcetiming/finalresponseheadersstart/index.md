@@ -8,7 +8,7 @@ browser-compat: api.PerformanceResourceTiming.finalResponseHeadersStart
 
 {{APIRef("Performance API")}}{{AvailableInWorkers}}
 
-The **`finalResponseHeadersStart`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser receives the first byte of the final document response (for example, 200 OK) from the server.
+The **`finalResponseHeadersStart`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser receives the first byte of the final document response (for example, {{httpstatus(200, "200 OK")}}) from the server.
 
 This differs from **{{domxref("PerformanceResourceTiming.requestStart", "requestStart")}}** (which may also be represented as **{{domxref("PerformanceResourceTiming.firstInterimResponseStart", "firstInterimResponseStart")}}**), as this starts from the first bytes of any response including interim responses (for example, 103 Early Hints) with the final response coming potentially much later.
 

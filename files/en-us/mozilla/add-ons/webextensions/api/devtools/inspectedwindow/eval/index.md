@@ -18,6 +18,8 @@ The script is evaluated by default in the main frame of the page. The script mus
 
 You can't call `eval()` on privileged browser windows such as "about:addons".
 
+In Firefox 153 and later, calling `eval()` on a `file://` URL requires the extension to be granted file scheme access by the user. Without this permission, the promise rejects with an error. Use {{WebExtAPIRef("extension.isAllowedFileSchemeAccess()")}} to check whether the user has granted the extension this permission.
+
 You can optionally provide an `options` parameter, which includes options to evaluate the script in a different frame or in the context of attached content scripts. Note that Firefox does not yet support the `options` parameter.
 
 The `eval()` function returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to the evaluated result of the script or to an error.

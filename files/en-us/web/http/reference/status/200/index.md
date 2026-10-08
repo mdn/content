@@ -2,7 +2,7 @@
 title: 200 OK
 slug: Web/HTTP/Reference/Status/200
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.200
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.200
 sidebar: http
 ---
 

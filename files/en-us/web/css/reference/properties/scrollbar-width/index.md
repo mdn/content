@@ -1,5 +1,6 @@
 ---
-title: scrollbar-width
+title: "`scrollbar-width` CSS property"
+short-title: scrollbar-width
 slug: Web/CSS/Reference/Properties/scrollbar-width
 page-type: css-property
 browser-compat: css.properties.scrollbar-width
@@ -12,6 +13,12 @@ The purpose of the `scrollbar-width` is to optimize the space occupied by the sc
 
 > [!NOTE]
 > For elements that are scrollable only via programmatic means and not by direct user interaction, use the {{cssxref("overflow")}} property with a value of `hidden` rather than `scrollbar-width: none`.
+
+> [!NOTE]
+> Browsers ignore the non-standard {{cssxref("::-webkit-scrollbar")}} family of pseudo-elements on any element whose _computed_ `scrollbar-width` value is anything other than `auto`.
+> Unlike {{cssxref("scrollbar-color")}}, `scrollbar-width` is not inherited, so an ancestor's value doesn't affect its descendants.
+> Setting `scrollbar-width: auto` on an element restores its `::-webkit-scrollbar-*` styling.
+> See [Adding a fallback for scrollbar styles](/en-US/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar#adding_a_fallback_for_scrollbar_styles).
 
 ## Syntax
 

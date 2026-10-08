@@ -1,5 +1,6 @@
 ---
-title: opacity()
+title: "`opacity()` CSS function"
+short-title: opacity()
 slug: Web/CSS/Reference/Values/filter-function/opacity
 page-type: css-function
 browser-compat: css.types.filter-function.opacity

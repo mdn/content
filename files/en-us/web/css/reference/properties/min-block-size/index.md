@@ -1,5 +1,6 @@
 ---
-title: min-block-size
+title: "`min-block-size` CSS property"
+short-title: min-block-size
 slug: Web/CSS/Reference/Properties/min-block-size
 page-type: css-property
 browser-compat: css.properties.min-block-size

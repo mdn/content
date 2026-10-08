@@ -1,5 +1,6 @@
 ---
-title: :not()
+title: "`:not()` CSS pseudo-class"
+short-title: :not()
 slug: Web/CSS/Reference/Selectors/:not
 page-type: css-pseudo-class
 browser-compat: css.selectors.not
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`:not()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the _negation pseudo-class_.
+
+The `:not()` pseudo-class has a number of [quirks, tricks, and unexpected results](#description) that you should be aware of before using it.
 
 {{InteractiveExample("CSS Demo: :not", "tabbed-shorter")}}
 
@@ -37,8 +40,6 @@ p > :not(strong, b.important) {
   and atmospheric pressure.
 </p>
 ```
-
-The `:not()` pseudo-class has a number of [quirks, tricks, and unexpected results](#description) that you should be aware of before using it.
 
 ## Syntax
 

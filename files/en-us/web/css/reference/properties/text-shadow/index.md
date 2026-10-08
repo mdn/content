@@ -1,5 +1,6 @@
 ---
-title: text-shadow
+title: "`text-shadow` CSS property"
+short-title: text-shadow
 slug: Web/CSS/Reference/Properties/text-shadow
 page-type: css-property
 browser-compat: css.properties.text-shadow

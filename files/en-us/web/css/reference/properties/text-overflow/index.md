@@ -1,12 +1,13 @@
 ---
-title: text-overflow
+title: "`text-overflow` CSS property"
+short-title: text-overflow
 slug: Web/CSS/Reference/Properties/text-overflow
 page-type: css-property
 browser-compat: css.properties.text-overflow
 sidebar: cssref
 ---
 
-The **`text-overflow`** [CSS](/en-US/docs/Web/CSS) property sets how hidden overflow content is signaled to users. It can be clipped, display an ellipsis (`…`), or display a custom string.
+The **`text-overflow`** [CSS](/en-US/docs/Web/CSS) property sets how hidden overflow content is signaled to users.
 
 {{InteractiveExample("CSS Demo: text-overflow")}}
 
@@ -51,15 +52,6 @@ text-overflow: "";
 }
 ```
 
-The `text-overflow` property doesn't force an overflow to occur. To make text overflow its container, you have to set other CSS properties: {{cssxref("overflow")}} and {{cssxref("white-space")}}. For example:
-
-```css
-overflow: hidden;
-white-space: nowrap;
-```
-
-The `text-overflow` property only affects content that is overflowing a block container element in its _inline_ progression direction (not text overflowing at the bottom of a box, for example).
-
 ## Syntax
 
 ```css
@@ -75,9 +67,9 @@ text-overflow: revert-layer;
 text-overflow: unset;
 ```
 
-The `text-overflow` property may be specified using one or two values. If one value is given, it specifies overflow behavior for the end of the line (the right end for left-to-right text, the left end for right-to-left text). If two values are given, the first specifies overflow behavior for the left end of the line, and the second specifies it for the right end of the line. The property accepts either a keyword value (`clip` or `ellipsis`) or a `<string>` value.
-
 ### Values
+
+This property is specified as one or two space-separated values, including:
 
 - `clip`
   - : The default for this property. This keyword value will truncate the text at the limit of the [content area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction), therefore the truncation can happen in the middle of a character. To clip at the transition between characters you can specify `text-overflow` as an empty string, if that is supported in your target browsers: `text-overflow: '';`.
@@ -85,6 +77,58 @@ The `text-overflow` property may be specified using one or two values. If one va
   - : This keyword value will display an ellipsis (`'…'`, `U+2026 HORIZONTAL ELLIPSIS`) to represent clipped text. The ellipsis is displayed inside the [content area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction), decreasing the amount of text displayed. If there is not enough space to display the ellipsis, it is clipped.
 - `<string>`
   - : The {{cssxref("&lt;string&gt;")}} to be used to represent clipped text. The string is displayed inside the [content area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction), shortening the size of the displayed text. If there is not enough space to display the string itself, it is clipped.
+
+## Description
+
+The `text-overflow` property sets how hidden overflow content is signaled to users. It can be clipped, display an ellipsis (`…`), or display a custom string.
+
+The `text-overflow` property doesn't force an overflow to occur. To make text overflow its container, you have to set other CSS properties: {{cssxref("overflow")}} and {{cssxref("white-space")}}. For example:
+
+```css
+overflow: hidden;
+white-space: nowrap;
+```
+
+The `text-overflow` property only affects content that is overflowing a block container element in its _inline_ progression direction (not text overflowing at the bottom of a box, for example).
+
+The `text-overflow` property may be specified using one or two values. If one value is given, it specifies overflow behavior for the end of the line (the right end for left-to-right text, the left end for right-to-left text). If two values are given, the first specifies overflow behavior for the left end of the line, and the second specifies it for the right end of the line.
+
+### `ellipsis` behaving as `clip` for editable elements
+
+When `text-overflow: ellipsis` is applied to editable elements such as textual {{htmlelement("input")}}, {{htmlelement("textarea")}}, and [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) elements, browsers generally treat it as `text-overflow: clip`, either all the time or when the element is focused. The exact behavior differs across browsers; see [Browser compatibility](#browser_compatibility).
+
+This behavior is to ensure that the text can be moved through and edited, even when overflowing. If the overflowing text remained covered by an ellipsis, it would not be visible or editable.
+
+You can see the behavior in the following live example, which has this CSS applied:
+
+```css live-sample___ellipsis-as-clip
+p[contenteditable],
+input,
+textarea {
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+```
+
+```html hidden live-sample___ellipsis-as-clip
+<p contenteditable="">
+  contenteditable paragraph. The text in here is overflowing.
+</p>
+
+<hr />
+
+<input type="text" value="Text input. The text in here is overflowing." />
+
+<hr />
+
+<textarea>Textarea. The text in here is overflowing.</textarea>
+```
+
+{{embedlivesample("ellipsis-as-clip", "100%", "200")}}
+
+Focus the different elements and try editing their text content.
 
 ## Formal definition
 

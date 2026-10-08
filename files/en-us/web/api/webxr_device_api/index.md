@@ -72,6 +72,7 @@ The equipment may also include an accelerometer, barometer, or other sensors whi
 
 - {{DOMxRef("XRView")}}
 - {{DOMxRef("XRViewport")}}
+- {{DOMxRef("XRVisibilityMaskChangeEvent")}}
 
 ### Geometric primitives
 

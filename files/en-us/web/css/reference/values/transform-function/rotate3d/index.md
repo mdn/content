@@ -1,5 +1,6 @@
 ---
-title: rotate3d()
+title: "`rotate3d()` CSS function"
+short-title: rotate3d()
 slug: Web/CSS/Reference/Values/transform-function/rotate3d
 page-type: css-function
 browser-compat: css.types.transform-function.rotate3d

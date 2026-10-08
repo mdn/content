@@ -55,9 +55,9 @@ The following properties are specified as part of the [Window Management API](/e
 
 _Also inherits methods from its parent {{domxref("EventTarget")}}_.
 
-- {{DOMxRef("Screen.lockOrientation")}} {{Deprecated_Inline}}
+- {{DOMxRef("Screen.lockOrientation")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : Lock the screen orientation (only works in fullscreen or for installed apps)
-- {{DOMxRef("Screen.unlockOrientation")}} {{Deprecated_Inline}}
+- {{DOMxRef("Screen.unlockOrientation")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : Unlock the screen orientation (only works in fullscreen or for installed apps)
 
 ## Events

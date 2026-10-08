@@ -1,5 +1,6 @@
 ---
-title: margin-trim
+title: "`margin-trim` CSS property"
+short-title: margin-trim
 slug: Web/CSS/Reference/Properties/margin-trim
 page-type: css-property
 status:
@@ -32,6 +33,8 @@ margin-trim: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `none`
   - : Margins are not trimmed by the container.

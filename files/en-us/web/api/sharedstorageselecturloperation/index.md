@@ -7,7 +7,7 @@ status:
 browser-compat: api.SharedStorageSelectURLOperation
 ---
 
-{{APIRef("Shared Storage API")}}{{deprecated_header}}
+{{APIRef("Shared Storage API")}}
 
 The **`SharedStorageSelectURLOperation`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents a [URL Selection output gate](/en-US/docs/Web/API/Shared_Storage_API#url_selection) operation.
 

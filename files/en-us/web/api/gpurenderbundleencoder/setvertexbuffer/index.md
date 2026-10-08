@@ -33,7 +33,7 @@ setVertexBuffer(slot, buffer, offset, size)
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ### Validation
 

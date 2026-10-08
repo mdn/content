@@ -1,5 +1,6 @@
 ---
-title: :-moz-first-node
+title: "`:-moz-first-node` CSS pseudo-class"
+short-title: :-moz-first-node
 slug: Web/CSS/Reference/Selectors/:-moz-first-node
 page-type: css-pseudo-class
 status:

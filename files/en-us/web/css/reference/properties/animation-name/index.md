@@ -1,5 +1,6 @@
 ---
-title: animation-name
+title: "`animation-name` CSS property"
+short-title: animation-name
 slug: Web/CSS/Reference/Properties/animation-name
 page-type: css-property
 browser-compat: css.properties.animation-name
@@ -100,6 +101,8 @@ animation-name: unset;
 ```
 
 ### Values
+
+This property is specified as one or more comma-separated values:
 
 - `none`
   - : A special keyword denoting no keyframes. It can be used to deactivate an animation without changing the ordering of the other identifiers, or to deactivate animations coming from the cascade.

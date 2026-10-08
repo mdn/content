@@ -1,5 +1,6 @@
 ---
-title: transform-box
+title: "`transform-box` CSS property"
+short-title: transform-box
 slug: Web/CSS/Reference/Properties/transform-box
 page-type: css-property
 browser-compat: css.properties.transform-box

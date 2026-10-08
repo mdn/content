@@ -1,5 +1,6 @@
 ---
-title: break-after
+title: "`break-after` CSS property"
+short-title: break-after
 slug: Web/CSS/Reference/Properties/break-after
 page-type: css-property
 browser-compat: css.properties.break-after

@@ -1,5 +1,6 @@
 ---
-title: :in-range
+title: "`:in-range` CSS pseudo-class"
+short-title: :in-range
 slug: Web/CSS/Reference/Selectors/:in-range
 page-type: css-pseudo-class
 browser-compat: css.selectors.in-range

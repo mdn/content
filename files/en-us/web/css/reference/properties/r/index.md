@@ -1,5 +1,6 @@
 ---
-title: r
+title: "`r` CSS property"
+short-title: r
 slug: Web/CSS/Reference/Properties/r
 page-type: css-property
 browser-compat: css.properties.r

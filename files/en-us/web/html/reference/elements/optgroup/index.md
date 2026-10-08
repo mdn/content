@@ -1,5 +1,6 @@
 ---
-title: "<optgroup>: The Option Group element"
+title: "`<optgroup>` HTML option group element"
+short-title: <optgroup>
 slug: Web/HTML/Reference/Elements/optgroup
 page-type: html-element
 browser-compat: html.elements.optgroup
@@ -7,8 +8,6 @@ sidebar: htmlsidebar
 ---
 
 The **`<optgroup>`** [HTML](/en-US/docs/Web/HTML) element creates a grouping of options within a {{HTMLElement("select")}} element.
-
-In [customizable `<select>` elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), the {{htmlelement("legend")}} element is allowed as a child of `<optgroup>`, to provide a label that is easy to target and style. This replaces any text set in the `<optgroup>` element's `label` attribute, and it has the same semantics.
 
 {{InteractiveExample("HTML Demo: &lt;optgroup&gt;", "tabbed-standard")}}
 
@@ -35,17 +34,20 @@ label {
 }
 ```
 
-> [!NOTE]
-> Optgroup elements may not be nested.
-
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled)
-  - : If this Boolean attribute is set, none of the items in this option group is selectable. Often browsers grey out such control and it won't receive any browsing events, like mouse clicks or focus-related ones.
+  - : If this Boolean attribute is set, none of the items in this option group is selectable. Often browsers gray out such control and it won't receive any browsing events, like mouse clicks or focus-related ones.
 - `label`
   - : The name of the group of options, which the browser can use when labeling the options in the user interface. This attribute is mandatory if this element is used.
+
+## Usage notes
+
+Optgroup elements may not be nested.
+
+In [customizable `<select>` elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), the {{htmlelement("legend")}} element is allowed as a child of `<optgroup>`, to provide a label that is easy to target and style. This replaces any text set in the `<optgroup>` element's `label` attribute, and it has the same semantics.
 
 ## Examples
 

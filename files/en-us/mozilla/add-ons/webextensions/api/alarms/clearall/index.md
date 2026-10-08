@@ -8,12 +8,10 @@ sidebar: addonsidebar
 
 Cancels all active alarms.
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-
 ## Syntax
 
 ```js-nolint
-let clearAlarms = browser.alarms.clearAll()
+browser.alarms.clearAll()
 ```
 
 ### Parameters
@@ -22,17 +20,22 @@ None.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a boolean. This will be `true` if any alarms were cleared, `false` otherwise. Note that Chrome always passes `true` here.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with `undefined`.
+
+> [!NOTE]
+> Before Firefox 157, the promise was fulfilled with a boolean: `true` if any alarms were cleared and `false` otherwise. Chrome fulfills the promise with `true` and Safari with `undefined`. Don't rely on the fulfillment value. See [w3c/webextensions#1055](https://github.com/w3c/webextensions/issues/1055) for details.
 
 ## Examples
 
+Clear all the alarms the extension has scheduled, then log that the alarms are cleared:
+
 ```js
-function onClearedAll(wasCleared) {
-  console.log(wasCleared); // true/false
+async function clearAllAlarms() {
+  await browser.alarms.clearAll();
+  console.log("All alarms cleared");
 }
 
-let clearAlarms = browser.alarms.clearAll();
-clearAlarms.then(onClearedAll);
+clearAllAlarms();
 ```
 
 {{WebExtExamples}}

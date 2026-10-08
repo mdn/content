@@ -3,6 +3,7 @@ title: "end: Wasm text instruction"
 short-title: end
 slug: WebAssembly/Reference/Control_flow/end
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.end
 sidebar: webassemblysidebar
 ---
 
@@ -44,3 +45,11 @@ end
 | Instruction | Binary opcode |
 | ----------- | ------------- |
 | `end`       | `0x0b`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

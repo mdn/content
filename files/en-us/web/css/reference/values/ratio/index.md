@@ -1,5 +1,6 @@
 ---
-title: <ratio>
+title: "`<ratio>` CSS type"
+short-title: <ratio>
 slug: Web/CSS/Reference/Values/ratio
 page-type: css-type
 browser-compat: css.types.ratio

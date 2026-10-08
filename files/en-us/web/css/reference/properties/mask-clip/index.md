@@ -1,5 +1,6 @@
 ---
-title: mask-clip
+title: "`mask-clip` CSS property"
+short-title: mask-clip
 slug: Web/CSS/Reference/Properties/mask-clip
 page-type: css-property
 browser-compat: css.properties.mask-clip
@@ -19,7 +20,7 @@ mask-clip: fill-box;
 mask-clip: stroke-box;
 mask-clip: view-box;
 
-/* Keyword values */
+/* Keyword value */
 mask-clip: no-clip;
 
 /* Multiple values */

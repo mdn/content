@@ -1,12 +1,13 @@
 ---
-title: text-box
+title: "`text-box` CSS property"
+short-title: text-box
 slug: Web/CSS/Reference/Properties/text-box
 page-type: css-shorthand-property
 browser-compat: css.properties.text-box
 sidebar: cssref
 ---
 
-The **`text-box`** [CSS](/en-US/docs/Web/CSS) property is a shorthand that corresponds to the {{cssxref("text-box-trim")}} and {{cssxref("text-box-edge")}} properties, which together specify the amount of space to trim from the block-start edge and block-end edge of a text element's block container.
+The **`text-box`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property corresponds to the {{cssxref("text-box-trim")}} and {{cssxref("text-box-edge")}} properties, which together specify the amount of space to trim from the block-start edge and block-end edge of a text element's block container.
 
 ## Constituent properties
 

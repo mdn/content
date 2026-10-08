@@ -1,5 +1,6 @@
 ---
-title: "<rtc>: The Ruby Text Container element"
+title: "`<rtc>` HTML ruby text container element"
+short-title: <rtc>
 slug: Web/HTML/Reference/Elements/rtc
 page-type: html-element
 status:
@@ -7,8 +8,6 @@ status:
 browser-compat: html.elements.rtc
 sidebar: htmlsidebar
 ---
-
-{{deprecated_header}}
 
 The **`<rtc>`** [HTML](/en-US/docs/Web/HTML) element embraces semantic annotations of characters presented in a ruby of {{HTMLElement("rb")}} elements used inside of {{ HTMLElement("ruby") }} element. {{HTMLElement("rb")}} elements can have both pronunciation ({{HTMLElement("rt")}}) and semantic (`<rtc>`) annotations.
 

@@ -200,7 +200,7 @@ Let's return to our example and use CSS to improve the appearance of the text. W
 
 Something you'll notice about CSS as you use it more is that a lot of it is about boxes. Most HTML elements on a page can be thought of as boxes that sit on top of (or alongside) other boxes. You can set values on these boxes for size, color, positioning, etc. This is referred to as [**the box model**](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model).
 
-![Three boxes sat inside one another. From outside to in they are labelled margin, border and padding](box-model.png)
+![Three boxes sat inside one another. From outside to in they are labeled margin, border and padding](box-model.png)
 
 Each box that takes up space on your page has properties like:
 

@@ -64,6 +64,7 @@ Several other interfaces are also extended by the CSSOM-related specifications: 
 
 - {{DOMxRef("CSSImageValue")}}
 - {{DOMxRef("CSSKeywordValue")}}
+- {{DOMxRef("CSSMathClamp")}}
 - {{DOMxRef("CSSMathInvert")}}
 - {{DOMxRef("CSSMathMax")}}
 - {{DOMxRef("CSSMathMin")}}
@@ -92,8 +93,6 @@ Several other interfaces are also extended by the CSSOM-related specifications: 
 - {{DOMxRef("StylePropertyMapReadOnly")}}
 
 ### Obsolete CSSOM interfaces {{deprecated_inline}}
-
-{{deprecated_header}}
 
 - {{DOMxRef("CSSPrimitiveValue")}} {{deprecated_inline}}
 - {{DOMxRef("CSSValue")}} {{deprecated_inline}}

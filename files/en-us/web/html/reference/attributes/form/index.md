@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: form"
+title: "`form` HTML attribute"
 short-title: form
 slug: Web/HTML/Reference/Attributes/form
 page-type: html-attribute
@@ -106,8 +106,7 @@ This example demonstrates how form-associated elements can be associated with a 
 <label
   >Description:
   <textarea form="loginForm" rows="4" name="description">
-Hello, World!</textarea
-  >
+Hello, World!</textarea>
 </label>
 <button form="loginForm" type="submit" name="submitLogin" value="Login">
   Submit

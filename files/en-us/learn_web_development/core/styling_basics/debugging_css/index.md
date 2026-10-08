@@ -178,7 +178,7 @@ As you become more experienced with CSS, you will find that you get faster at fi
 
 So there we have it: an introduction to debugging CSS, which should give you some useful skills to count on when you start to debug CSS and other types of code later on in your career.
 
-That's it for all the lessons in this module. To finish it off, we'll test your knowledge of the topics covered with a series of challenges.
+That's it for this module. Once you're ready, you can move on to our [CSS text styling](/en-US/docs/Learn_web_development/Core/Text_styling) module.
 
 ## See also
 

@@ -1,5 +1,6 @@
 ---
-title: <generic-family>
+title: "`<generic-family>` CSS type"
+short-title: <generic-family>
 slug: Web/CSS/Reference/Values/generic-family
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-fonts/#generic-font-families

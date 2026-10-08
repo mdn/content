@@ -1,5 +1,6 @@
 ---
-title: shape-margin
+title: "`shape-margin` CSS property"
+short-title: shape-margin
 slug: Web/CSS/Reference/Properties/shape-margin
 page-type: css-property
 browser-compat: css.properties.shape-margin
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`shape-margin`** [CSS](/en-US/docs/Web/CSS) property sets a margin for a CSS shape created using {{cssxref("shape-outside")}}.
+
+The margin lets you adjust the distance between the edges of the shape (the **float element**) and the surrounding content.
 
 {{InteractiveExample("CSS Demo: shape-margin")}}
 
@@ -58,8 +61,6 @@ shape-margin: 5%;
   shape-outside: circle(50%);
 }
 ```
-
-The margin lets you adjust the distance between the edges of the shape (the **float element**) and the surrounding content.
 
 ## Syntax
 

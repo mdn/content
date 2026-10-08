@@ -40,16 +40,16 @@ An object indicating the current configuration of the receiver.
       - : A positive integer specifying the codec's clock rate in Hertz (Hz).
         The clock rate is the rate at which the codec's RTP timestamp advances.
         Most codecs have specific values or ranges of values they permit.
-        The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1), including their clock rates.
+        The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters#rtp-parameters-1), including their clock rates.
 
     - `mimeType`
       - : A string indicating the codec's MIME media type and subtype, specified as a string of the form `"type/subtype"`.
         The MIME type strings used by RTP differ from those used elsewhere.
-        IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
+        IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters#rtp-parameters-2).
         Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
 
     - `payloadType`
-      - : The [RTP payload type](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1) used to identify this codec.
+      - : The [RTP payload type](https://www.iana.org/assignments/rtp-parameters#rtp-parameters-1) used to identify this codec.
 
     - `sdpFmtpLine` {{optional_inline}}
       - : A string giving the format specific parameters field from the `a=fmtp` line in the {{Glossary("SDP")}} which corresponds to the codec {{Glossary("SDP")}} from the remote peer, if the field is present.
@@ -60,8 +60,14 @@ An object indicating the current configuration of the receiver.
   - : An array of zero or more RTP header extensions, each identifying an extension supported by the sender or receiver.
     Header extensions are described in {{RFC(3550, "", "5.3.1")}}. This parameter cannot be changed once initially set.
 - `rtcp`
-  - : An {{domxref("RTCRtcpParameters")}} object providing the configuration parameters used for {{Glossary("RTCP")}} on the sender or receiver.
+  - : An object providing the configuration parameters used for {{Glossary("RTCP")}} on the sender or receiver.
     This parameter cannot be changed once initially set.
+
+    The object may have the following properties: <!-- RTCRtcpParameters -->
+    - `cname`
+      - : A string giving the canonical name (CNAME) used by RTCP (e.g., in SDES messages).
+    - `reducedSize`
+      - : A boolean that is `true` if reduced-size RTCP is configured ({{rfc("5506")}}), and `false` if compound RTCP is specified ({{rfc("3550")}}).
 
 ## Examples
 

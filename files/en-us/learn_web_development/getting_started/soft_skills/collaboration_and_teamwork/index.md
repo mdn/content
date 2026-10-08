@@ -28,7 +28,7 @@ This article looks at how to work together with others.
           <li>Practice collaboration with teammates, including sharing useful information.</li>
           <li>Learn to ask useful questions and help one another.</li>
           <li>Publish your work</li>
-          <li>Widen the net to meetup groups or open source projects to find people to help and collaborate with.</li>
+          <li>Widen the net to meetup groups or open-source projects to find people to help and collaborate with.</li>
           <li>Learn to not fear failure, and instead embrace it as an effective learning tool.</li>
         </ul>
       </td>
@@ -97,7 +97,7 @@ Even if you think your achievements are trivial, you probably know more than you
 
 ## Participate in open source
 
-Another way to make friends and influence people is to find open source projects and offer updates to fix issues in other people's work. Provided you are polite and respectful, and explain your changes and the reasoning behind them, the project owners will be very grateful for your contributions. Your updates will also give you valuable experience and practice.
+Another way to make friends and influence people is to find open-source projects and offer updates to fix issues in other people's work. Provided you are polite and respectful, and explain your changes and the reasoning behind them, the project owners will be very grateful for your contributions. Your updates will also give you valuable experience and practice.
 
 For example, [MDN's source code](https://github.com/mdn/content) is available on GitHub, and we have many [issues](https://github.com/mdn/content/issues) that you could work on.
 There are plenty of [Community resources](/en-US/docs/MDN/Community) on MDN that describe the project and what contributing to it looks like.
@@ -122,7 +122,7 @@ Even if you are not doing a real work project — you might be doing a college m
 It is also a good idea to start doing peer reviews — colleagues will review each other's work and provide feedback on how it could be improved. Areas looked at might include general code quality and adherence to code style guides, performance, sticking to best practices, usability, and quality of documentation. You can benefit greatly, whether you are the reviewer, or the person being reviewed:
 
 - If you are reviewing someone else's work, aim to provide a balance between encouragement and praise for good work, and critical feedback. Practice how to deliver that feedback constructively and respectfully. Even if they seem somewhat trivial, always come up with one or two questions to ask when discussing or reviewing peer work.
-- If you work is being reviewed, try not to take criticism personally, and focus on the positives and what you can learn. Assume the best of intentions from your reviewer — they are just trying to help.
+- If your work is being reviewed, try not to take criticism personally, and focus on the positives and what you can learn. Assume the best of intentions from your reviewer — they are just trying to help.
 
 ## Learn to embrace failure
 

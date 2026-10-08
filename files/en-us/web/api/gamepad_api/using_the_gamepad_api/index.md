@@ -55,8 +55,8 @@ const gamepads = {};
 
 function gamepadHandler(event, connected) {
   const gamepad = event.gamepad;
-  // Note:
-  // gamepad === navigator.getGamepads()[gamepad.index]
+  // Note: Use gamepad.index as the stable key, then read the latest
+  // state from navigator.getGamepads() inside your update loop.
 
   if (connected) {
     gamepads[gamepad.index] = gamepad;
@@ -73,11 +73,11 @@ window.addEventListener("gamepaddisconnected", (e) => {
 });
 ```
 
-This previous example also demonstrates how the `gamepad` property can be held after the event has completed — a technique we will use for device state querying later.
+This previous example shows how to keep track of which devices are connected by `index`. For current button and axis state, call {{domxref("Navigator.getGamepads()")}} each frame and read the latest object for that `index`.
 
 ## Querying the Gamepad object
 
-As you can see, the **gamepad** events discussed above include a `gamepad` property on the event object, which returns a {{ domxref("Gamepad") }} object. We can use this in order to determine which gamepad (i.e., its ID) had caused the event, since multiple gamepads might be connected at once. We can do much more with the {{ domxref("Gamepad") }} object, including holding a reference to it and querying it to find out which buttons and axes are being pressed at any one time. Doing so is often desirable for games or other interactive web pages that need to know the state of a gamepad now vs. the next time an event fires.
+As you can see, the **gamepad** events discussed above include a `gamepad` property on the event object, which returns a {{ domxref("Gamepad") }} object. We can use this to determine which gamepad (i.e., its ID) had caused the event, since multiple gamepads might be connected at once. To read the current button and axis state, use the gamepad's `index` and fetch the latest object from {{ domxref("Navigator.getGamepads()") }} in your animation loop.
 
 Performing such checks tends to involve using the {{ domxref("Gamepad") }} object in conjunction with an animation loop (e.g., {{ domxref("Window.requestAnimationFrame","requestAnimationFrame") }}), where developers want to make decisions for the current frame based on the state of the gamepad or gamepads.
 
@@ -110,7 +110,7 @@ The {{ domxref("Gamepad") }} object's properties are as follows:
 - `timestamp`: This returns a {{ domxref("DOMHighResTimeStamp") }} representing the last time the data for this gamepad was updated, allowing developers to determine if the `axes` and `button` data have been updated from the hardware. The value must be relative to the `navigationStart` attribute of the {{ domxref("PerformanceTiming") }} interface. Values are monotonically increasing, meaning that they can be compared to determine the ordering of updates, as newer values will always be greater than or equal to older values. Note that this property is not currently supported in Firefox.
 
 > [!NOTE]
-> The Gamepad object is available on the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event rather than the {{ domxref("Window") }} object itself, for security reasons. Once we have a reference to it, we can query its properties for information about the current state of the gamepad. Behind the scenes, this object will be updated every time the gamepad's state changes.
+> The Gamepad object is available on the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event rather than the {{ domxref("Window") }} object itself, for security reasons. You can also access gamepads through {{domxref("Navigator.getGamepads()")}}. In practice, you should poll {{domxref("Navigator.getGamepads()")}} and read the current object for a known `index` each frame, rather than relying on a long-lived reference from an earlier event.
 
 ### Using button information
 

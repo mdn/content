@@ -24,7 +24,7 @@ A {{domxref("NavigationDestination")}} object.
 
 ```js
 navigation.onnavigateerror = (e) => {
-  if (navigation.transition?.to?.url === login_page_url) {
+  if (navigation.transition?.to?.url === loginPageURL) {
     /* do something when failing to go to login page */
   }
 };

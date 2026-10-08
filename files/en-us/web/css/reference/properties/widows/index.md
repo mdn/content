@@ -1,5 +1,6 @@
 ---
-title: widows
+title: "`widows` CSS property"
+short-title: widows
 slug: Web/CSS/Reference/Properties/widows
 page-type: css-property
 browser-compat: css.properties.widows
@@ -27,6 +28,8 @@ widows: unset;
 
 ### Values
 
+This property is specified as one `<integer>`:
+
 - {{cssxref("&lt;integer&gt;")}}
   - : The minimum number of lines that can stay by themselves at the top of a new fragment after a fragmentation break. The value must be positive.
 
@@ -42,6 +45,8 @@ widows: unset;
 
 ### Controlling column widows
 
+This example uses a checkbox to switch `widows` between `2` and `1`. With `widows: 2`, at least two lines of a paragraph must appear at the top of a column. With `widows: 1`, the paragraph can be broken anywhere.
+
 #### HTML
 
 ```html
@@ -56,6 +61,10 @@ widows: unset;
     one.
   </p>
 </div>
+<form>
+  <input type="checkbox" id="widows" checked />
+  <label for="widows">Apply widows: 2</label>
+</form>
 ```
 
 #### CSS
@@ -63,7 +72,15 @@ widows: unset;
 ```css
 div {
   background-color: #8cffa0;
+  width: 400px;
+  height: 160px;
   columns: 3;
+  column-fill: auto;
+  orphans: 1;
+  widows: 1;
+}
+
+div:has(~ form input:checked) {
   widows: 2;
 }
 
@@ -78,7 +95,11 @@ p:first-child {
 
 #### Result
 
-{{EmbedLiveSample("Controlling_column_widows", 400, 160)}}
+{{EmbedLiveSample("Controlling_column_widows", "", 280)}}
+
+In Firefox, which does not support `widows`, the behavior in this example is essentially equivalent to `widows: 1`, regardless of the checkbox state. The following screenshot shows the result with `widows: 2` in a supporting browser:
+
+![Three paragraphs in three columns. The second paragraph spans the first and second columns. The third paragraph has two lines at the bottom of the second column and two lines at the top of the third column.](with-widows.png)
 
 ## Specifications
 

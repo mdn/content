@@ -8,7 +8,7 @@ browser-compat: api.CharacterData.data
 
 {{APIRef("DOM")}}
 
-The **`data`** property of the {{domxref("CharacterData")}} interface represent the value of the current object's data.
+The **`data`** property of the {{domxref("CharacterData")}} interface represents the value of the current object's data.
 
 ## Value
 

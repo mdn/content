@@ -1,5 +1,6 @@
 ---
-title: "<main>: The Main element"
+title: "`<main>` HTML main element"
+short-title: <main>
 slug: Web/HTML/Reference/Elements/main
 page-type: html-element
 browser-compat: html.elements.main
@@ -34,13 +35,13 @@ header {
 }
 ```
 
-A document mustn't have more than one `<main>` element that doesn't have the [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) attribute specified.
-
 ## Attributes
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 ## Usage notes
+
+A document mustn't have more than one `<main>` element that doesn't have the [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) attribute specified.
 
 The content of a `<main>` element should be unique to the document. Content that is repeated across a set of documents or document sections such as sidebars, navigation links, copyright information, site logos, and search forms shouldn't be included unless the search form is the main function of the page.
 

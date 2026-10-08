@@ -1,6 +1,6 @@
 ---
-title: session.subscribe command
-short-title: session.subscribe
+title: "`session.subscribe` command"
+short-title: subscribe
 slug: Web/WebDriver/Reference/BiDi/Modules/session/subscribe
 page-type: webdriver-command
 browser-compat: webdriver.bidi.session.subscribe
@@ -12,10 +12,20 @@ The `session.subscribe` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modul
 ## Syntax
 
 ```json-nolint
+/* With required parameters */
 {
   "method": "session.subscribe",
   "params": {
-    "events": ["<event name>"]
+    "events": ["log.entryAdded"]
+  }
+}
+
+/* With required and optional parameters */
+{
+  "method": "session.subscribe",
+  "params": {
+    "events": ["log.entryAdded"],
+    "contexts": ["93ee5bd6-d256-4608-a002-9a8995cc0e5f"]
   }
 }
 ```
@@ -24,17 +34,20 @@ The `session.subscribe` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modul
 
 The `params` field contains:
 
-- `events`
-  - : An array of one or more event name strings. Use a module name (for example, `"log"`) to subscribe to all events in that module or a specific event name (for example, `"log.entryAdded"`) to subscribe to only that event.
 - `contexts` {{optional_inline}}
-  - : An array of one or more context IDs ([UUIDs](/en-US/docs/Glossary/UUID)), each corresponding to a tab or frame.
+  - : An array of one or more context ID strings, each corresponding to a tab or frame.
+    Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
     If specified, events are received only for those contexts and their descendants.
     If the context ID corresponds to a frame, the subscription is created for the top-level context (tab) that owns the frame.
 
     This field cannot be used if `userContexts` is also specified.
 
+- `events`
+  - : An array of one or more event name strings.
+    Use a module name (for example, `"log"`) to subscribe to all events in that module or a specific event name (for example, `"log.entryAdded"`) to subscribe to only that event.
 - `userContexts` {{optional_inline}}
-  - : An array of one or more user context IDs, each corresponding to a browser context or container.
+  - : An array of one or more user context ID strings, each corresponding to a browser context or container.
+    User context IDs are returned by commands such as [`browser.createUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext) or [`browser.getUserContexts`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/getUserContexts).
     If specified, events are received only for those user contexts.
 
     This field cannot be used if `contexts` is also specified.

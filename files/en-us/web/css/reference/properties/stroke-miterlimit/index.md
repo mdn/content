@@ -1,5 +1,6 @@
 ---
-title: stroke-miterlimit
+title: "`stroke-miterlimit` CSS property"
+short-title: stroke-miterlimit
 slug: Web/CSS/Reference/Properties/stroke-miterlimit
 page-type: css-property
 browser-compat: css.properties.stroke-miterlimit

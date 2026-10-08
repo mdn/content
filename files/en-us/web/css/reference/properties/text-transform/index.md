@@ -1,5 +1,6 @@
 ---
-title: text-transform
+title: "`text-transform` CSS property"
+short-title: text-transform
 slug: Web/CSS/Reference/Properties/text-transform
 page-type: css-property
 browser-compat: css.properties.text-transform

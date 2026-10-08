@@ -1,12 +1,15 @@
 ---
-title: transition
+title: "`transition` CSS property"
+short-title: transition
 slug: Web/CSS/Reference/Properties/transition
 page-type: css-shorthand-property
 browser-compat: css.properties.transition
 sidebar: cssref
 ---
 
-The **`transition`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) for {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, {{ cssxref("transition-delay") }}, and {{ cssxref("transition-behavior") }}.
+The **`transition`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property for {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, {{ cssxref("transition-delay") }}, and {{ cssxref("transition-behavior") }}.
+
+Transitions enable you to define the transition between two states of an element. Different states may be defined using [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) like {{cssxref(":hover")}} or {{cssxref(":active")}} or dynamically set using JavaScript.
 
 {{InteractiveExample("CSS Demo: transition")}}
 
@@ -59,8 +62,6 @@ transition: all 1s ease-out;
   margin-right: 40%;
 }
 ```
-
-Transitions enable you to define the transition between two states of an element. Different states may be defined using [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) like {{cssxref(":hover")}} or {{cssxref(":active")}} or dynamically set using JavaScript.
 
 ## Constituent properties
 

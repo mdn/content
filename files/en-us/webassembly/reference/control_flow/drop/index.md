@@ -3,6 +3,7 @@ title: "drop: Wasm text instruction"
 short-title: drop
 slug: WebAssembly/Reference/Control_flow/drop
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.drop
 sidebar: webassemblysidebar
 ---
 
@@ -49,3 +50,11 @@ drop
 | Instruction | Binary opcode |
 | ----------- | ------------- |
 | `drop`      | `0x1a`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

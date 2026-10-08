@@ -33,7 +33,7 @@ setInterval(func, delay, param1, param2, /* …, */ paramN)
 ### Parameters
 
 - `func`
-  - : A {{jsxref("function")}} to be executed every `delay` milliseconds.
+  - : A {{jsxref("Function")}} to be executed every `delay` milliseconds.
     The first execution happens after `delay` milliseconds.
 - `code`
   - : A {{domxref("TrustedScript")}} or a string of arbitrary code that is compiled and executed every `delay` milliseconds.
@@ -210,7 +210,7 @@ For example, the required CSP for your site might look like this:
 Content-Security-Policy: require-trusted-types-for 'script'; script-src '<your_allowlist>' 'trusted-types-eval'
 ```
 
-The behavior of the transformation function will depend on the specific use case that requires a user provided script.
+The behavior of the transformation function will depend on the specific use case that requires a user-provided script.
 If possible you should lock the allowed scripts to exactly the code that you trust to run.
 If that is not possible, you might allow or block the use of certain functions within the provided string.
 

@@ -1,5 +1,6 @@
 ---
-title: <overflow>
+title: "`<overflow>` CSS type"
+short-title: <overflow>
 slug: Web/CSS/Reference/Values/overflow_value
 page-type: css-type
 browser-compat: css.types.overflow

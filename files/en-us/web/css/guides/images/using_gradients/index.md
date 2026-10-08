@@ -185,35 +185,6 @@ div {
 
 {{ EmbedLiveSample('Creating_hard_lines', 120, 120) }}
 
-### Gradient hints
-
-By default, the gradient transitions evenly from one color to the next. You can include a color-hint to move the midpoint of the transition value to a certain point along the gradient. In this example, we've moved the midpoint of the transition from the 50% mark to the 10% mark.
-
-```html hidden
-<div class="color-hint"></div>
-<div class="simple-linear"></div>
-```
-
-```css hidden
-div {
-  width: 120px;
-  height: 120px;
-  float: left;
-  margin-right: 10px;
-}
-```
-
-```css
-.color-hint {
-  background: linear-gradient(blue, 10%, pink);
-}
-.simple-linear {
-  background: linear-gradient(blue, pink);
-}
-```
-
-{{ EmbedLiveSample('Gradient_hints', 120, 120) }}
-
 ### Creating color bands & stripes
 
 To include a solid, non-transitioning color area within a gradient, include two positions for the color stop. Color stops can have two positions, which is equivalent to two consecutive color stops with the same color at different positions. The color will reach full saturation at the first color stop, maintain that saturation through to the second color stop, and transition to the adjacent color stop's color through the adjacent color stop's first position.
@@ -238,30 +209,12 @@ div {
   background: linear-gradient(
     to left,
     lime 20%,
-    red 30%,
-    red 45%,
-    cyan 55%,
-    cyan 70%,
-    yellow 80%
-  );
-  background: linear-gradient(
-    to left,
-    lime 20%,
     red 30% 45%,
     cyan 55% 70%,
     yellow 80%
   );
 }
 .multiposition-stop2 {
-  background: linear-gradient(
-    to left,
-    lime 25%,
-    red 25%,
-    red 50%,
-    cyan 50%,
-    cyan 75%,
-    yellow 75%
-  );
   background: linear-gradient(
     to left,
     lime 25%,
@@ -278,9 +231,7 @@ In the first example above, the lime goes from the 0% mark, which is implied, to
 
 In the second example, the second color stop for each color is at the same location as the first color stop for the adjacent color, creating a striped effect.
 
-In both examples, the gradient is written twice: the first is the CSS Images Level 3 method of repeating the color for each stop and the second example is the CSS Images Level 4 multiple color stop method of including two color-stop-lengths in a linear-color-stop declaration.
-
-### Controlling the progression of a gradient
+### Controlling the progression of a gradient using color hints
 
 By default, a gradient evenly progresses between the colors of two adjacent color stops, with the midpoint between those two color stops being the midpoint color value. You can control the {{Glossary("interpolation")}}, or progression, between two color stops by including a color hint location. In this example, the color reaches the midpoint between lime and cyan 20% of the way through the gradient rather than 50% of the way through. The second example does not contain the hint to highlight the difference the color hint can make:
 
@@ -308,7 +259,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Controlling_the_progression_of_a_gradient', 120, 120) }}
+{{ EmbedLiveSample('Controlling_the_progression_of_a_gradient_using_color_hints', 120, 120) }}
 
 ### Overlaying gradients
 
@@ -825,7 +776,7 @@ div {
 
 ### Plaid gradient
 
-To create plaid we include several overlapping gradients with transparency. In the first background declaration we listed every color stop separately. The second background property declaration using the multiple position color stop syntax:
+To create plaid we include several overlapping gradients with transparency. We use the multiple position color stop syntax:
 
 ```html hidden
 <div class="plaid-gradient"></div>
@@ -840,52 +791,6 @@ div {
 
 ```css
 .plaid-gradient {
-  background:
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 50px,
-      rgb(255 127 0 / 25%) 50px,
-      rgb(255 127 0 / 25%) 56px,
-      transparent 56px,
-      transparent 63px,
-      rgb(255 127 0 / 25%) 63px,
-      rgb(255 127 0 / 25%) 69px,
-      transparent 69px,
-      transparent 116px,
-      rgb(255 206 0 / 25%) 116px,
-      rgb(255 206 0 / 25%) 166px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 50px,
-      rgb(255 127 0 / 25%) 50px,
-      rgb(255 127 0 / 25%) 56px,
-      transparent 56px,
-      transparent 63px,
-      rgb(255 127 0 / 25%) 63px,
-      rgb(255 127 0 / 25%) 69px,
-      transparent 69px,
-      transparent 116px,
-      rgb(255 206 0 / 25%) 116px,
-      rgb(255 206 0 / 25%) 166px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 5px,
-      rgb(143 77 63 / 25%) 5px,
-      rgb(143 77 63 / 25%) 10px
-    ),
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 5px,
-      rgb(143 77 63 / 25%) 5px,
-      rgb(143 77 63 / 25%) 10px
-    );
-
   background:
     repeating-linear-gradient(
       90deg,

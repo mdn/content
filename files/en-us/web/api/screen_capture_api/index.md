@@ -91,13 +91,15 @@ The Screen Capture API adds properties to the following dictionaries defined by 
 - {{domxref("MediaTrackSettings.screenPixelRatio")}}
   - : A number representing the ratio of the physical size of a pixel on the captured display surface (displayed at its physical resolution) to the logical size of a CSS pixel on the capturing screen (displayed at its logical resolution). It cannot be used as a constraint or capability.
 
-### MediaTrackSupportedConstraints
+### MediaDevices.getSupportedConstraints()
 
-- {{domxref("MediaTrackSupportedConstraints.displaySurface")}}
+There are three additional properties in the object returned by {{domxref("MediaDevices.getSupportedConstraints()")}}.
+
+- `displaySurface`
   - : A boolean, which is `true` if the current environment supports the {{domxref("MediaTrackConstraints.displaySurface")}} constraint.
-- {{domxref("MediaTrackSupportedConstraints.logicalSurface")}}
+- `logicalSurface`
   - : A boolean, which is `true` if the current environment supports the constraint {{domxref("MediaTrackConstraints.logicalSurface")}}.
-- {{domxref("MediaTrackSupportedConstraints.suppressLocalAudioPlayback")}}
+- `suppressLocalAudioPlayback`
   - : A boolean, which is `true` if the current environment supports the constraint {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback")}}.
 
 ## Security considerations
@@ -112,7 +114,7 @@ A site can also specify a desire to use the [Captured Surface Control API](/en-U
 
 The default allowlist for both directives is `self`, which permits any content within the same origin use Screen Capture.
 
-These methods are considered [powerful features](/en-US/docs/Web/Security#secure_contexts_and_feature_permissions), which means that even if permission is allowed via a `Permissions-Policy`, the user will still be prompted for permission to use them. The [Permissions API](/en-US/docs/Web/API/Permissions_API) can be used to query the aggregate permission (from both the website and the user) for using the listed features.
+These methods are considered _powerful features_, which means that even if permission is allowed via a `Permissions-Policy`, the user will still be prompted for permission to use them. The [Permissions API](/en-US/docs/Web/API/Permissions_API) can be used to query the aggregate permission (from both the website and the user) for using the listed features.
 
 In addition, the specification requires that a user has recently interacted with the page to use these features — this means that [transient activation](/en-US/docs/Glossary/Transient_activation) is required. See the individual method pages for more details.
 

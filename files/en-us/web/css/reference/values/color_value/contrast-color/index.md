@@ -1,5 +1,6 @@
 ---
-title: contrast-color()
+title: "`contrast-color()` CSS function"
+short-title: contrast-color()
 slug: Web/CSS/Reference/Values/color_value/contrast-color
 page-type: css-function
 browser-compat: css.types.color.contrast-color
@@ -79,12 +80,8 @@ button {
     content: "Your browser doesn't support the contrast-color() function.";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
-  }
-
-  body > * {
-    display: none;
+    padding: 1rem 0;
   }
 }
 ```
@@ -149,16 +146,8 @@ pre {
     content: "Your browser doesn't support the contrast-color() function.";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
-  }
-
-  body {
-    background-color: white;
-  }
-
-  body > * {
-    display: none;
+    padding: 1rem 0;
   }
 }
 ```

@@ -117,7 +117,7 @@ async function handleCookieAccess() {
 
 ### Related website sets
 
-The Chrome-only [related website sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets) feature can be considered a progressive enhancement mechanism that works alongside the Storage Access API — supporting browsers grant default third-party cookie and unpartitioned state access between websites in the same set. This means not having to go through the usual user permission prompt workflow described above, meaning a more user-friendly experience for users of sites in the set.
+The Chrome-only [related website sets](https://privacysandbox.google.com/cookies/related-website-sets-integration) feature can be considered a progressive enhancement mechanism that works alongside the Storage Access API — supporting browsers grant default third-party cookie and unpartitioned state access between websites in the same set. This means not having to go through the usual user permission prompt workflow described above, meaning a more user-friendly experience for users of sites in the set.
 
 ## Requesting storage access from the top-level site on behalf of embedded resources
 
@@ -125,7 +125,7 @@ The Storage Access API features above allow an embedded document to request its 
 
 The `requestStorageAccessFor()` method addresses challenges in adopting the Storage Access API on top-level sites that use cross-site images or scripts requiring cookies. It can enable third-party cookie access for cross-site resources directly embedded into the top-level site that are unable to request their own storage access, for example via {{htmlelement("img")}} or {{htmlelement("script")}} elements.
 
-For `requestStorageAccessFor()` to work, both the calling top-level page and the embedded resource it is requesting storage access for need to be part of the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
+For `requestStorageAccessFor()` to work, both the calling top-level page and the embedded resource it is requesting storage access for need to be part of the same [related website set](#related_website_sets).
 
 Typical usage of `requestStorageAccessFor()` looks like this (this time written in regular promise-style rather than async/await):
 

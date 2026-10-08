@@ -1,5 +1,6 @@
 ---
-title: text-justify
+title: "`text-justify` CSS property"
+short-title: text-justify
 slug: Web/CSS/Reference/Properties/text-justify
 page-type: css-property
 browser-compat: css.properties.text-justify
@@ -26,6 +27,8 @@ text-justify: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `none`
   - : The text justification is turned off. This has the same effect as not setting {{cssxref("text-align")}} at all, although it is useful if you need to turn justification on and off for some reason.

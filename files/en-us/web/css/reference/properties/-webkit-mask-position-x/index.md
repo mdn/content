@@ -1,5 +1,6 @@
 ---
-title: -webkit-mask-position-x
+title: "`-webkit-mask-position-x` CSS property"
+short-title: -webkit-mask-position-x
 slug: Web/CSS/Reference/Properties/-webkit-mask-position-x
 page-type: css-property
 status:
@@ -44,6 +45,8 @@ The `-webkit-mask-position-x` CSS property sets the initial horizontal position 
 
 ### Values
 
+This property is specified as one or more comma-separated values:
+
 - `<length-percentage>`
   - : A length indicating the position of the left edge of the image relative to the box's left padding edge. Percentages are calculated against the horizontal dimension of the box padding area. That means, a value of `0%` means the left edge of the image is aligned with the box's left padding edge and a value of `100%` means the right edge of the image is aligned with the box's right padding edge.
 - `left`
@@ -87,4 +90,6 @@ Not part of any standard.
 
 ## See also
 
-{{cssxref("mask-position", "-webkit-mask-position")}}, {{cssxref("-webkit-mask-position-y")}}, {{cssxref("mask-origin", "-webkit-mask-origin")}}
+- {{cssxref("mask-position", "-webkit-mask-position")}}
+- {{cssxref("-webkit-mask-position-y")}}
+- {{cssxref("mask-origin", "-webkit-mask-origin")}}

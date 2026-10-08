@@ -1,5 +1,6 @@
 ---
-title: prefers-reduced-transparency
+title: "`prefers-reduced-transparency` CSS media feature"
+short-title: prefers-reduced-transparency
 slug: Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency
 page-type: css-media-feature
 status:

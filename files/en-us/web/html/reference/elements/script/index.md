@@ -1,5 +1,6 @@
 ---
-title: "<script>: The Script element"
+title: "`<script>` HTML script element"
+short-title: <script>
 slug: Web/HTML/Reference/Elements/script
 page-type: html-element
 browser-compat: html.elements.script
@@ -28,7 +29,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
     See [Browser compatibility](#browser_compatibility) for notes on browser support. See also [Async scripts for asm.js](/en-US/docs/Games/Techniques/Async_scripts).
 
-- `attributionsrc` {{deprecated_inline}}
+- `attributionsrc` {{deprecated_inline}} {{non-standard_inline}}
   - : Specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the script resource request. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to register a JavaScript-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers), respectively. Which response header should be sent back depends on the value of the `Attribution-Reporting-Eligible` header that triggered the registration.
 
     > [!NOTE]
@@ -86,8 +87,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
       - : Don't set a preference for the fetch priority.
         This is the default.
         It is used if no value or an invalid value is set.
-- `integrity`
-  - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered without unexpected manipulation. The attribute must not be specified when the `src` attribute is absent. See [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity).
+- [`integrity`](/en-US/docs/Web/HTML/Reference/Attributes/integrity)
+  - : This attribute contains one or more {{glossary("hash function", "hashes")}} of the script. It is used to ensure that the content of the script is what the developer expects it to be, and has not been replaced with a malicious script in a [supply chain attack](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks). The attribute must not be specified when the `src` attribute is absent. See also [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity).
 - `nomodule`
   - : This Boolean attribute is set to indicate that the script should not be executed in browsers that support [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.
 - `nonce`

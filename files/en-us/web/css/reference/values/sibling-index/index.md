@@ -1,5 +1,6 @@
 ---
-title: sibling-index()
+title: "`sibling-index()` CSS function"
+short-title: sibling-index()
 slug: Web/CSS/Reference/Values/sibling-index
 page-type: css-function
 browser-compat: css.types.sibling-index

@@ -1,5 +1,6 @@
 ---
-title: <input type="checkbox">
+title: '`<input type="checkbox">` HTML attribute value'
+short-title: <input type="checkbox">
 slug: Web/HTML/Reference/Elements/input/checkbox
 page-type: html-attribute-value
 browser-compat:
@@ -40,9 +41,6 @@ input {
   margin: 0.4rem;
 }
 ```
-
-> [!NOTE]
-> [Radio buttons](/en-US/docs/Web/HTML/Reference/Elements/input/radio) are similar to checkboxes, but with an important distinction — [same-named radio buttons](/en-US/docs/Web/HTML/Reference/Elements/input/radio#defining_a_radio_group) are grouped into a set in which only one radio button can be selected at a time, whereas checkboxes allow you to turn single values on and off. Where multiple same-named controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
 
 ## Value
 
@@ -95,7 +93,7 @@ In addition to the [common attributes](/en-US/docs/Web/HTML/Reference/Elements/i
 
 ## Using checkbox inputs
 
-We already covered the most basic use of checkboxes above. Let's now look at the other common checkbox-related features and techniques you'll need.
+Checkboxes are similar to [radio buttons](/en-US/docs/Web/HTML/Reference/Elements/input/radio), but with an important distinction — [same-named radio buttons](/en-US/docs/Web/HTML/Reference/Elements/input/radio#defining_a_radio_group) are grouped into a set in which only one radio button can be selected at a time, whereas checkboxes allow you to turn single values on and off. Where multiple same-named controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
 
 ### Handling multiple checkboxes
 
@@ -407,12 +405,6 @@ otherCheckbox.addEventListener("change", () => {
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

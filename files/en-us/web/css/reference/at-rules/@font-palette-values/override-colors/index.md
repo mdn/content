@@ -1,5 +1,6 @@
 ---
-title: override-colors
+title: "`override-colors` CSS at-rule descriptor"
+short-title: override-colors
 slug: Web/CSS/Reference/At-rules/@font-palette-values/override-colors
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-palette-values.override-colors

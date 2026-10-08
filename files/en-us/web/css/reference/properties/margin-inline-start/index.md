@@ -1,5 +1,6 @@
 ---
-title: margin-inline-start
+title: "`margin-inline-start` CSS property"
+short-title: margin-inline-start
 slug: Web/CSS/Reference/Properties/margin-inline-start
 page-type: css-property
 browser-compat: css.properties.margin-inline-start
@@ -70,7 +71,7 @@ margin-inline-start: 5%; /* relative to the nearest block container's width */
 margin-inline-start: anchor-size(block);
 margin-inline-start: calc(anchor-size(--my-anchor width, 30px) / 4);
 
-/* Keyword values */
+/* Keyword value */
 margin-inline-start: auto;
 
 /* Global values */

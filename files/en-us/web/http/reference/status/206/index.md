@@ -2,7 +2,7 @@
 title: 206 Partial Content
 slug: Web/HTTP/Reference/Status/206
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.206
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.206
 sidebar: http
 ---
 

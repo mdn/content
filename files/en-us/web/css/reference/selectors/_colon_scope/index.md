@@ -1,5 +1,6 @@
 ---
-title: :scope
+title: "`:scope` CSS pseudo-class"
+short-title: :scope
 slug: Web/CSS/Reference/Selectors/:scope
 page-type: css-pseudo-class
 browser-compat: css.selectors.scope
@@ -142,6 +143,22 @@ document.getElementById("results").textContent = [...selected]
 The scope of `context` is the element with the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of `context`. The selected elements are the `<div>` elements that are direct children of that context — `element-1` and `element-2` — but not their descendants.
 
 {{ EmbedLiveSample('Using :scope in JavaScript') }}
+
+### Sibling combinators to the right of `:scope` never match
+
+The relationship defined by `:scope` is always ancestor-to-descendant from the scope root. Because of that, putting a sibling combinator to the right of `:scope` creates a selector that can never match, because no element can both be within the selector scope and also be a sibling of `:scope`.
+
+```css example-bad
+:scope + p {
+  color: red;
+}
+
+:scope ~ * {
+  color: red;
+}
+```
+
+Selectors that never match may trigger a warning in browser DevTools.
 
 ## Specifications
 

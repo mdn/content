@@ -1,5 +1,6 @@
 ---
-title: animation-iteration-count
+title: "`animation-iteration-count` CSS property"
+short-title: animation-iteration-count
 slug: Web/CSS/Reference/Properties/animation-iteration-count
 page-type: css-property
 browser-compat: css.properties.animation-iteration-count
@@ -126,9 +127,9 @@ animation-iteration-count: revert-layer;
 animation-iteration-count: unset;
 ```
 
-The **`animation-iteration-count`** property is specified as one or more comma-separated values.
-
 ### Values
+
+This property is specified as one or more comma-separated values:
 
 - `infinite`
   - : The animation will repeat forever.

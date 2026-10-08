@@ -100,7 +100,7 @@ try {
 
 ### Handling a specific error type
 
-You can choose to handle only specific error types by testing the error type with the {{jsxref("Operators/instanceof", "instanceof")}} keyword:
+You can choose to handle only specific error types by testing the error type with the {{jsxref("instanceof")}} keyword:
 
 ```js
 try {

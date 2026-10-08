@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: pattern"
+title: "`pattern` HTML attribute"
 short-title: pattern
 slug: Web/HTML/Reference/Attributes/pattern
 page-type: html-attribute

@@ -1,5 +1,6 @@
 ---
-title: scaleY()
+title: "`scaleY()` CSS function"
+short-title: scaleY()
 slug: Web/CSS/Reference/Values/transform-function/scaleY
 page-type: css-function
 browser-compat: css.types.transform-function.scaleY

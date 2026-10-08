@@ -1,5 +1,6 @@
 ---
-title: "@view-transition"
+title: "`@view-transition` CSS at-rule"
+short-title: "@view-transition"
 slug: Web/CSS/Reference/At-rules/@view-transition
 page-type: css-at-rule
 browser-compat: css.at-rules.view-transition

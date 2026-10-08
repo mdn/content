@@ -348,7 +348,7 @@ frankie.introduceSelf();
 // "Hi! I'm Frankie."
 ```
 
-This works fine but is a bit long-winded: we have to create an empty object, initialize it, and return it. A better way is to use a **constructor**. A constructor is just a function called using the {{jsxref("operators/new", "new")}} keyword. When you call a constructor, it will:
+This works fine but is a bit long-winded: we have to create an empty object, initialize it, and return it. A better way is to use a **constructor**. A constructor is just a function called using the {{jsxref("new")}} keyword. When you call a constructor, it will:
 
 - create a new object
 - bind `this` to the new object, so you can refer to `this` in your constructor code
@@ -401,7 +401,7 @@ You were using methods available on a [`Document`](/en-US/docs/Web/API/Document)
 
 The same is true of pretty much any other built-in object or API you've been using — [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), [`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math), and so on.
 
-Note that built in objects and APIs don't always create object instances automatically. As an example, the [Notifications API](/en-US/docs/Web/API/Notifications_API) — which allows modern browsers to fire system notifications — requires you to instantiate a new object instance using the constructor for each notification you want to fire. Try entering the following into your JavaScript console:
+Note that built-in objects and APIs don't always create object instances automatically. As an example, the [Notifications API](/en-US/docs/Web/API/Notifications_API) — which allows modern browsers to fire system notifications — requires you to instantiate a new object instance using the constructor for each notification you want to fire. Try entering the following into your JavaScript console:
 
 ```js
 const myNotification = new Notification("Hello!");

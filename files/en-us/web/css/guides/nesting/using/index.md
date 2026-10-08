@@ -428,11 +428,12 @@ That's why the `color-black` is inside a nested declaration even though it is a 
 In CSS preprocessors such as [Sass](https://sass-lang.com/), it is possible to use nesting to join strings to create new classes. This is common in CSS methodologies such as [BEM](https://getbem.com/naming/).
 
 ```css example-bad
+/* the following Sass syntax... */
 .component {
   &__child-element {
   }
 }
-/* In Sass this becomes */
+/* ... would become the following CSS */
 .component__child-element {
 }
 ```

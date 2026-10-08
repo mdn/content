@@ -1,5 +1,6 @@
 ---
-title: page
+title: "`page` CSS property"
+short-title: page
 slug: Web/CSS/Reference/Properties/page
 page-type: css-property
 browser-compat: css.properties.page

@@ -279,7 +279,7 @@ Your finished HTML should look like this:
         Birdwatching
         <img
           src="https://mdn.github.io/shared-assets/images/examples/learn/birds/dove.png"
-          alt="a simple dove logo" />
+          alt="" />
       </h1>
 
       <nav>

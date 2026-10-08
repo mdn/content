@@ -8,13 +8,11 @@ browser-compat: api.Element.className
 
 {{APIRef("DOM")}}
 
-The **`className`** property of the
-{{domxref("Element")}} interface gets and sets the value of the [`class` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/class)
-of the specified element.
+The **`className`** property of the {{domxref("Element")}} interface reflects the element's [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) content attribute.
 
 ## Value
 
-A string variable representing the class or space-separated classes of the current element.
+A string representing the class or space-separated classes of the current element.
 
 ## Examples
 

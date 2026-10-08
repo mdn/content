@@ -29,13 +29,13 @@ The kinds available for video tracks are:
   - : A potential alternative to the main track, such as a different video take or a
     version of the soundtrack with only the music and no dialogue.
 - `"captions"`
-  - : A version of the main video track with captions burnt in.
+  - : A version of the main video track with captions burned in.
 - `"main"`
   - : The primary video track.
 - `"sign"`
   - : A sign-language interpretation of an audio track.
 - `"subtitles"`
-  - : A version of the main video track with subtitles burnt in.
+  - : A version of the main video track with subtitles burned in.
 - `"commentary"`
   - : A video track containing a commentary. This might be used to contain the director's
     commentary track on a movie, for example.

@@ -1,5 +1,6 @@
 ---
-title: device-height
+title: "`device-height` CSS media feature"
+short-title: device-height
 slug: Web/CSS/Reference/At-rules/@media/device-height
 page-type: css-media-feature
 status:
@@ -7,8 +8,6 @@ status:
 browser-compat: css.at-rules.media.device-height
 sidebar: cssref
 ---
-
-{{deprecated_header}}
 
 > [!NOTE]
 > To query for the height of the viewport, developers should use the [`height`](/en-US/docs/Web/CSS/Reference/At-rules/@media/height) media feature instead.

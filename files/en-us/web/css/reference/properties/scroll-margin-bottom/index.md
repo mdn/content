@@ -1,5 +1,6 @@
 ---
-title: scroll-margin-bottom
+title: "`scroll-margin-bottom` CSS property"
+short-title: scroll-margin-bottom
 slug: Web/CSS/Reference/Properties/scroll-margin-bottom
 page-type: css-property
 browser-compat: css.properties.scroll-margin-bottom

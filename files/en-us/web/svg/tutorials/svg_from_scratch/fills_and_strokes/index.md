@@ -16,8 +16,7 @@ There are several ways to color shapes (including specifying attributes on the o
 Basic coloring can be done by setting two attributes on the node: `fill` and `stroke`. Using `fill` sets the color inside the object and `stroke` sets the color of the line drawn around the object. You can use the same CSS color naming schemes that you use in HTML, whether that's color names (like `red`), rgb values (like `rgb(255 0 0)`), hex values, etc.
 
 ```html
-<?xml version="1.0" standalone="no"?>
-<svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="160" height="140" xmlns="http://www.w3.org/2000/svg">
   <rect
     x="10"
     y="10"
@@ -42,8 +41,7 @@ In addition to its color properties, there are a few other attributes available 
 ![The stroke-linecap attribute changes the look of these stroke's ends: square adds a square cap, round provides a rounded cap, and butt removes capping](svg_stroke_linecap_example.png)
 
 ```xml
-<?xml version="1.0" standalone="no"?>
-<svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="160" height="140" xmlns="http://www.w3.org/2000/svg">
   <line x1="40" x2="120" y1="20" y2="20" stroke="black" stroke-width="20" stroke-linecap="butt"/>
   <line x1="40" x2="120" y1="60" y2="60" stroke="black" stroke-width="20" stroke-linecap="square"/>
   <line x1="40" x2="120" y1="100" y2="100" stroke="black" stroke-width="20" stroke-linecap="round"/>
@@ -65,8 +63,7 @@ Use `stroke-linejoin` to control how the joint between two line segments is draw
 ![The stroke-linejoin attribute changes the look at the point where two lines join, with miter created an angled join, round rounding the corner, and bevel creating a beveled edge, flattening the corner.](svg_stroke_linejoin_example.png)
 
 ```xml
-<?xml version="1.0" standalone="no"?>
-<svg width="160" height="280" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="160" height="280" xmlns="http://www.w3.org/2000/svg">
   <polyline points="40 60 80 20 120 60" stroke="black" stroke-width="20"
       stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>
 
@@ -85,8 +82,7 @@ Finally, you can also use dashed line types on a stroke by specifying the `strok
 ![Two custom dashed lines, one with evenly spaced dashes and the other using a long-dash short dash using a stroke-dasharray attribute value.](svg_stroke_dasharray_example.png)
 
 ```xml
-<?xml version="1.0" standalone="no"?>
-<svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="200" height="150" xmlns="http://www.w3.org/2000/svg">
   <path d="M 10 75 Q 50 10 100 75 T 190 75" stroke="black"
     stroke-linecap="round" stroke-dasharray="5,10,5" fill="none"/>
   <path d="M 10 75 L 190 75" stroke="red"
@@ -105,8 +101,7 @@ There are additional `stroke` and `fill` properties available, including `fill-r
 The order in which fill and stroke are painted can be controlled using the [`paint-order`](/en-US/docs/Web/SVG/Reference/Attribute/paint-order) attribute.
 
 ```html
-<?xml version="1.0" standalone="no"?>
-<svg width="400" height="180" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="400" height="180" xmlns="http://www.w3.org/2000/svg">
   <polyline
     points="40 80 80 40 120 80"
     stroke-width="15"
@@ -146,8 +141,7 @@ Or it can be moved to a special style section that you include. Instead of shovi
 {{SVGElement("defs")}} stands for definitions, and it is here that you can create elements that don't appear in the SVG directly, but are used by other elements.
 
 ```xml
-<?xml version="1.0" standalone="no"?>
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style><![CDATA[
        #MyRect {
@@ -173,10 +167,9 @@ Moving styles to an area like this can make it easier to adjust properties on la
 You can also specify an external stylesheet for your CSS rules through [normal XML-stylesheet syntax](https://www.w3.org/TR/xml-stylesheet/):
 
 ```xml
-<?xml version="1.0" standalone="no"?>
 <?xml-stylesheet type="text/css" href="style.css"?>
 
-<svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="200" height="150" xmlns="http://www.w3.org/2000/svg">
   <rect height="10" width="10" id="MyRect"/>
 </svg>
 ```

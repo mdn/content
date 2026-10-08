@@ -8,7 +8,7 @@ sidebar: addonsidebar
 
 Fired when a command is executed using its associated keyboard shortcut.
 
-The listener is passed the command's name. This matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+The event passes the listener the command's name. This name matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
 ## Syntax
 
@@ -34,7 +34,7 @@ Events have three functions:
 - `listener`
   - : The function called when a user enters the command's shortcut. The function is passed these arguments:
     - `name`
-      - : `string`. Name of the command. This matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+      - : `string`. Name of the command. This name matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The tab that was active when the command shortcut was entered.
 
@@ -44,21 +44,21 @@ Given a manifest.json entry like this:
 
 ```json
 "commands": {
-  "toggle-feature": {
+  "duplicate-tab": {
     "suggested_key": {
-      "default": "Ctrl+Shift+Y"
+      "default": "Ctrl+Shift+D"
     },
-    "description": "Send a 'toggle-feature' event"
+    "description": "Duplicate the active tab"
   }
 }
 ```
 
-You could listen for this particular command like this:
+You can listen for this command and use the `tab` passed to the listener to duplicate the active tab, like this:
 
 ```js
-browser.commands.onCommand.addListener((command) => {
-  if (command === "toggle-feature") {
-    console.log("toggling the feature!");
+browser.commands.onCommand.addListener((command, tab) => {
+  if (command === "duplicate-tab") {
+    browser.tabs.duplicate(tab.id);
   }
 });
 ```

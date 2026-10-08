@@ -143,6 +143,7 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 ## Related concepts
 
 - {{CSSXref(":state","state()")}} pseudo-class
+- {{CSSXref(":xr-overlay")}} pseudo-class
 - [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting) module
   - [`&` nesting selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector)
 - [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module

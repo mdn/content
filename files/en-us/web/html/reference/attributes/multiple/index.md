@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: multiple"
+title: "`multiple` HTML attribute"
 short-title: multiple
 slug: Web/HTML/Reference/Attributes/multiple
 page-type: html-attribute

@@ -1,5 +1,6 @@
 ---
-title: :interest-target
+title: "`:interest-target` CSS pseudo-class"
+short-title: :interest-target
 slug: Web/CSS/Reference/Selectors/:interest-target
 page-type: css-pseudo-class
 status:

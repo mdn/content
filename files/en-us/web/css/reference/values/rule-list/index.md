@@ -1,5 +1,6 @@
 ---
-title: rule-list
+title: "`<rule-list>` CSS type"
+short-title: <rule-list>
 slug: Web/CSS/Reference/Values/rule-list
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-syntax-3/#typedef-rule-list
