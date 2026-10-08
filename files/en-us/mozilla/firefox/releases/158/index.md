@@ -53,7 +53,7 @@ Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-
 ### APIs
 
 - {{domxref("WebTransport.getStats()")}} is now supported, and returns statistics for the transport's underlying connection and its datagrams. ([Firefox bug 2007202](https://bugzil.la/2007202)).
-- The [WebGPU](/en-US/docs/Web/API/WebGPU_API) `float32-blendable` feature is now supported (see {{domxref("GPUSupportedFeatures")}}). This allows [blending](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#blend) of `r32float-`, `rg32float-`, and `rgba32float-`[`format`](/en-US/docs/Web/API/GPUDevice/createTexture#format) {{domxref("GPUTexture")}}s. ([Firefox bug 1931630](https://bugzil.la/1931630)).
+- The [WebGPU](/en-US/docs/Web/API/WebGPU_API) `float32-blendable` feature is now supported (see {{domxref("GPUSupportedFeatures")}}). This allows [blending](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#blend) of {{domxref("GPUTexture")}}s that use the `r32float`, `rg32float`, or `rgba32float` [`format`](/en-US/docs/Web/API/GPUDevice/createTexture#format). ([Firefox bug 1931630](https://bugzil.la/1931630)).
 
 <!-- #### DOM -->
 
