@@ -17,7 +17,7 @@ WebAssembly exception handling instructions.
 ## Try
 
 - [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table)
-  - : Enables you to test a block of code to see whether it throws an exception, handling the exception with a [catch clause](#catch_clauses) clause if so.
+  - : Enables you to test a block of code to see whether it throws an exception, handling the exception with a [catch clause](#catch_clauses) if so.
 
 ### Catch clauses
 
