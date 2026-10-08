@@ -37,12 +37,12 @@ The following is how you might request `"tabs"` permission in your extension's m
 ],
 ```
 
-This request gives you use of all Tabs API feature on all website your user visits. There is also an alternative approach for requesting permissions to use {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}} where you don't need host permission, in the form of [`"activeTab"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission). This permission provides the same rights as `"tabs"` with `<all_urls>`, but with two restrictions:
+This request gives you use of all Tabs API feature on all website your user visits. There is also an alternative approach for requesting permissions to use {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}} where you don't need host permission, in the form of the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission). This permission provides the same rights as `"tabs"` with `<all_urls>`, but with two restrictions:
 
 - the user must interact with the extension through its browser or page action, context menu, or shortcut key.
 - it only grants permission within the active tab.
 
-The benefit of this approach is the user won't get a permissions warning saying your extension can "Access your data for all websites". This is because `<all_urls>` permission gives an extension the ability to execute scripts in any tab, any time it likes, whereas [`"activeTab"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) is limited to allowing the extension to perform a user requested action in the current tab.
+The benefit of this approach is the user won't get a permissions warning saying your extension can "Access your data for all websites". This is because `<all_urls>` permission gives an extension the ability to execute scripts in any tab, any time it likes, whereas the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission) is limited to allowing the extension to perform a user requested action in the current tab.
 
 ## Discovering more about tabs and their properties
 

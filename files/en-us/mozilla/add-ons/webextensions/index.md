@@ -32,6 +32,7 @@ Get detailed information on the concepts that underpin extensions.
 - [Overview of the JavaScript API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API)
 - [Content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
 - [Background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts)
+- [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission)
 - [Match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 - [Working with files](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_files)
 - [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization)
