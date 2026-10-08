@@ -45,7 +45,7 @@ One remaining issue is that you will want to set the custom content so that you 
 
 The `window-drag` property is inherited by default. Therefore, if you want to make certain child elements behave normally and not initiate a window move operation on drag, you must turn this behavior off by setting `window-drag` to `none`.
 
-The `window-drag` property is a standardized version of the older, legacy `app-region` and `-webkit-app-region` properties. Sites still using the legacy properties are advised to switch usage to the standardized `window-drag` property for stability and interoperability between browsers.
+The `window-drag` property is a standardized version of the legacy, non-standard `app-region`, `-webkit-app-region`, and `-moz-window-dragging` properties. Use the standard `window-drag` property for stability and browser interoperability.
 
 > [!NOTE]
 > The `app-region` property uses `drag` in place of `move` and `no-drag` in place of `none`.
