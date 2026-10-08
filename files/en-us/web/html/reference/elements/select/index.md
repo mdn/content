@@ -63,7 +63,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     The placeholder label option is the text shown in the box before the user makes a choice, like the "--Please choose an option--" in the [Try it](#try_it) demo above. Semantically, it is considered equivalent to the [`placeholder`](/en-US/docs/Web/HTML/Reference/Attributes/placeholder) attribute and is not considered an actual option. It is defined as the first option in the options list which is a direct child of the `<select>` (not inside an `<optgroup>`) and has an empty string as its value. It is only relevant when the `size` is `1` and `multiple` is not specified; in all other cases, such an `<option>` is just a regular option due to the way the `<select>` is rendered.
 
 - [`size`](/en-US/docs/Web/HTML/Reference/Attributes/size)
-  - : This attribute represents the number of options to show at once, and must be a positive integer. If the value is `1`, browsers will render a drop-down list. If the value is greater than `1`, browsers will render a scrolling list box that has the specified number of rows visible. If the attribute is not specified, the default value is `1`. If the `multiple` attribute is specified, the default value is `4`. However, due to backwards compatibility, the {{domxref("HTMLSelectElement.size","size")}} property will always return `0` as the default value.
+  - : Specifies the number of options to display in the closed state as a positive integer. If the attribute is not specified, the default value is `1`, unless the `multiple` attribute is specified, in which case the default value is `4`. If the value is greater than `1` or the `multiple` attribute is present, browsers render a scrolling list box that has the specified number of rows visible; otherwise the options render as a drop-down list. For backwards compatibility, the {{domxref("HTMLSelectElement.size","size")}} property always returns `0` as the default value.
 
 ## Usage notes
 
@@ -93,12 +93,12 @@ To group options under a heading, use an {{HTMLElement("optgroup")}}; an {{HTMLE
 
 A `<select>` element with the [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple) attribute lets the user choose zero or more options. How the control is rendered depends on the [`size`](#size) attribute:
 
-- If `size` is greater than `1` (or `multiple` is set and `size` is omitted, which defaults to `4`), browsers show a scrolling list box.
-- If `size` is `1`, supporting browsers show a drop-down that still lets the user select more than one option. This is the opt-in for a multi-select drop-down. Browsers that don't support this rendering yet may show a single-line list box instead.
+- If the `multiple` attribute is set, browsers show a scrolling list box, unless the `size` is set to `1`. When `size` is omitted, the list box is four options tall, even if there are fewer options.
+- If `size` is `1`, supporting browsers display a drop-down that lets the user select more than one option when the control has focus. If exactly one option is selected, the selected option is displayed, otherwise, the control displays the count of its selected options as a single-line list box. Browsers that don't support these features display a multiple option menu list within a control that is the height of a single-line box.
 
-Whichever rendering is used, make sure to inform users that more than one option can be selected.
+When using the `multiple` attribute, always inform users that more than one option can be selected.
 
-The following example uses `<select multiple size="1">` to request a drop-down that allows multiple selection:
+The following example uses `<select multiple size="1">` to create a drop-down that allows multiple selections:
 
 ```html
 <label for="flavors">Choose one or more ice cream flavors:</label>
@@ -159,6 +159,8 @@ For more information on legacy `<select>` styling, see:
 ## Accessibility
 
 The `<hr>` within a `<select>` should be considered purely decorative, as they are currently not exposed within the accessibility tree and therefore not exposed to assistive technologies.
+
+Setting `size="1"` on a multiple select (i.e., `<select multiple size="1">`) renders a drop-down that lets users select multiple options. Some browsers don't expand the option list on focus, displaying multiple options in a menu list the height of a single-line box. This harms usability. When including a multiple-select, inform users they can select more than one option, even when multiple options are displayed.
 
 ## Examples
 
