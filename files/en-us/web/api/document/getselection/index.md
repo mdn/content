@@ -59,7 +59,7 @@ You can call {{domxref("Window.getSelection()")}}, which is identical to `window
 
 It is worth noting that currently `getSelection()` doesn't work on the
 content of {{htmlelement("input")}} elements in Firefox.
-{{domxref("HTMLInputElement.setSelectionRange()")}}) could be used to work around this.
+{{domxref("HTMLInputElement.setSelectionRange()")}} could be used to work around this.
 
 Notice also the difference between _selection_ and _focus_.
 {{domxref("Document.activeElement")}} returns the focused element.

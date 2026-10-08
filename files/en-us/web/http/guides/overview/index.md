@@ -231,7 +231,7 @@ HTTP is an extensible protocol that is easy to use.
 The client-server structure, combined with the ability to add headers, allows HTTP to advance along with the extended capabilities of the Web.
 
 Though HTTP/2 adds some complexity by embedding HTTP messages in frames to improve performance, the basic structure of messages has stayed the same since HTTP/1.0.
-Session flow remains basic, allowing it to be investigated and debugged with a [HTTP network monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).
+Session flow remains basic, allowing it to be investigated and debugged with an [HTTP network monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).
 
 ## See also
 

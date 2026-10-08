@@ -20,7 +20,7 @@ What's more, you don't even have to know how to create WebAssembly code to take 
 WebAssembly is an open standard developed inside the [W3C WebAssembly Community Group](https://www.w3.org/community/webassembly/) with the following goals:
 
 - Be fast, efficient, and portable — WebAssembly code can be executed at near-native speed across different platforms by taking advantage of [common hardware capabilities](https://webassembly.org/docs/portability/#assumptions-for-efficient-execution).
-- Be readable and debuggable — WebAssembly is a low-level assembly language, but it does have a human-readable text format (the specification for which is still being finalized) that allows code to be written, viewed, and debugged by hand.
+- Be readable and debuggable — WebAssembly is a low-level assembly language, but it does have a human-readable text format that allows code to be written, viewed, and debugged by hand.
 - Keep secure — WebAssembly is specified to be run in a safe, sandboxed execution environment. Like other web code, it will enforce the browser's same-origin and permissions policies.
 - Don't break the web — WebAssembly is designed so that it plays nicely with other web technologies and maintains backwards compatibility.
 
@@ -41,9 +41,9 @@ Additionally, the cost of downloading, parsing, and compiling very large JavaScr
 WebAssembly is a different language from JavaScript, but it is not intended as a replacement. Instead, it is designed to complement and work alongside JavaScript, allowing web developers to take advantage of both languages' strong points:
 
 - JavaScript is a high-level language, flexible and expressive enough to write web applications. It has many advantages — it is dynamically typed, requires no compile step, and has a huge ecosystem that provides powerful frameworks, libraries, and other tools.
-- WebAssembly is a low-level assembly-like language with a compact binary format that runs with near-native performance and provides languages with low-level memory models such as C++ and Rust with a compilation target so that they can run on the web. (Note that WebAssembly has the [high-level goal](https://webassembly.org/docs/high-level-goals/) of supporting languages with garbage-collected memory models in the future.)
+- WebAssembly is a low-level assembly-like language with a compact binary format that runs with near-native performance and provides languages with low-level memory models such as C++ and Rust with a compilation target so that they can run on the web. Languages with garbage-collected memory models are supported as well.
 
-With the advent of WebAssembly appearing in browsers, the virtual machine that we talked about earlier will now load and run two types of code — JavaScript AND WebAssembly.
+The virtual machine that we talked about earlier will now load and run two types of code — JavaScript AND WebAssembly.
 
 The different code types can call each other as required — the [WebAssembly JavaScript API](/en-US/docs/WebAssembly/Reference/JavaScript_interface) wraps exported WebAssembly code with JavaScript functions that can be called normally, and WebAssembly code can import and synchronously call normal JavaScript functions. In fact, the basic unit of WebAssembly code is called a module and WebAssembly modules are symmetric in many ways to ES modules.
 
@@ -52,50 +52,41 @@ The different code types can call each other as required — the [WebAssembly Ja
 There are several key concepts needed to understand how WebAssembly runs in the browser. All of these concepts are reflected 1:1 in the [WebAssembly JavaScript API](/en-US/docs/WebAssembly/Reference/JavaScript_interface).
 
 - **Module**: Represents a WebAssembly binary that has been compiled by the browser into executable machine code. A Module is stateless and thus, like a [`Blob`](/en-US/docs/Web/API/Blob), can be explicitly shared between windows and workers (via [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage)). A Module declares imports and exports just like an ES module.
-- **Memory**: A resizable ArrayBuffer that contains the linear array of bytes read and written by WebAssembly's low-level memory access instructions.
-- **Table**: A resizable typed array of references (e.g., to functions) that could not otherwise be stored as raw bytes in Memory (for safety and portability reasons).
-- **Instance**: A Module paired with all the state it uses at runtime including a Memory, Table, and set of imported values. An Instance is like an ES module that has been loaded into a particular global with a particular set of imports.
+- **Memory**: A growable buffer that contains the linear array of bytes read and written by WebAssembly's low-level memory access instructions.
+- **Table**: A growable array of references (e.g., to functions) that could not otherwise be stored as raw bytes in Memory (for safety and portability reasons).
+- **Instance**: A Module paired with all the state it uses at runtime including Memories, Tables, and imported values. An Instance is like an ES module that has been loaded into a particular global with a particular set of imports.
 
 The JavaScript API provides developers with the ability to create modules, memories, tables, and instances. Given a WebAssembly instance, JavaScript code can synchronously call its exports, which are exposed as normal JavaScript functions. Arbitrary JavaScript functions can also be synchronously called by WebAssembly code by passing in those JavaScript functions as the imports to a WebAssembly instance.
 
 Since JavaScript has complete control over how WebAssembly code is downloaded, compiled and run, JavaScript developers could even think of WebAssembly as just a JavaScript feature for efficiently generating high-performance functions.
 
-In the future, WebAssembly modules will be [loadable just like ES modules](https://github.com/WebAssembly/proposals/issues/12) (using `<script type='module'>`), meaning that JavaScript will be able to fetch, compile, and import a WebAssembly module as easily as an ES module.
+In the future, WebAssembly modules will be [loadable just like ES modules](https://github.com/WebAssembly/esm-integration) (using `<script type="module">` and regular `import` declarations), meaning that JavaScript will be able to fetch, compile, and import a WebAssembly module as easily as an ES module.
 
 ## How do I use WebAssembly in my app?
 
-Above we talked about the raw primitives that WebAssembly adds to the Web platform: a binary format for code and APIs for loading and running this binary code. Now let's talk about how we can use these primitives in practice.
+As we mentioned from the start, WebAssembly is not primarily intended to be written by hand. Usually, you write code in a high-level, statically typed language and use a compiler to output Wasm. For a C/C++ application, you can also port its whole execution environment using [Emscripten](https://emscripten.org/). In rare cases, you can also directly write the text format (WAT).
 
-The WebAssembly ecosystem is at a nascent stage; more tools will undoubtedly emerge going forward. Right now, there are four main entry points:
+Let's talk about these options.
 
-- Porting a C/C++ application with [Emscripten](https://emscripten.org/).
-- Writing or generating WebAssembly directly at the assembly level.
-- Writing a Rust application and targeting WebAssembly as its output.
-- Using [AssemblyScript](https://www.assemblyscript.org/) which looks similar to TypeScript and compiles to WebAssembly binary.
+### Using a compiler targeting WebAssembly
 
-Let's talk about these options:
+Many existing compilers now support Wasm as a compilation target. For example, [Clang/LLVM](https://clang.llvm.org/) supports Wasm output with `--target=wasm32`. You can test this out online in the [Compiler Explorer](https://godbolt.org/) by selecting the "WebAssembly Clang" compiler. Note that the explorer outputs LLVM's Wasm assembly syntax, which is different from actual WAT.
+
+It is also possible to write Rust code and compile over to WebAssembly, thanks to the tireless work of the Rust WebAssembly Working Group. You can get started with installing the necessary toolchain, compiling a sample Rust program to a WebAssembly npm package, and using that in a sample web app, over at our [Compiling from Rust to WebAssembly](/en-US/docs/WebAssembly/Guides/Rust_to_Wasm) article.
+
+For web developers who want to try WebAssembly without needing to learn the details of C or Rust, staying in the comfort of a familiar language like TypeScript, [AssemblyScript](https://www.assemblyscript.org/) will be the best option. AssemblyScript compiles a strict variant of TypeScript and allows you to keep using TypeScript-compatible tooling you are familiar with — such as Prettier, ESLint, VS Code IntelliSense, etc.
 
 ### Porting from C/C++
 
-Two of the many options for creating Wasm code are an online Wasm assembler or [Emscripten](https://emscripten.org/). There are a number of online Wasm assembler choices, such as:
+The Emscripten tool is more than a compiler—it is a full toolchain that emulates a collection of platform APIs the C/C++ code may call so that the application's behavior is also preserved when running in a browser. In addition to a Wasm module, it can also generate the necessary JavaScript "glue" code for loading and running the module, and an HTML document to display the results of the code.
 
-- [WasmFiddle++](https://anonyco.github.io/WasmFiddlePlusPlus/)
-- [WasmExplorer](https://mbebenita.github.io/WasmExplorer/)
-
-These are great resources for people who are trying to figure out where to start, but they lack some of the tooling and optimizations of Emscripten.
-
-The Emscripten tool is able to take just about any C/C++ source code and compile it into a Wasm module, plus the necessary JavaScript "glue" code for loading and running the module, and an HTML document to display the results of the code.
-
-![Diagram: Emscripten compiles C/C++ source code and into a Wasm module, an HTML document along with the JavaScript glue code.](emscripten-diagram.png)
+![Diagram: Emscripten compiles C/C++ source code into a Wasm module, an HTML document along with the JavaScript glue code.](emscripten-diagram.png)
 
 In a nutshell, the process works as follows:
 
 1. Emscripten first feeds the C/C++ into clang+LLVM — a mature open-source C/C++ compiler toolchain, shipped as part of Xcode on macOS for example.
 2. Emscripten transforms the compiled result of clang+LLVM into a Wasm binary.
-3. By itself, WebAssembly cannot currently directly access the DOM; it can only call JavaScript, passing in integer and floating point primitive data types. Thus, to access any Web API, WebAssembly needs to call out to JavaScript, which then makes the Web API call. Emscripten therefore creates the HTML and JavaScript glue code needed to achieve this.
-
-> [!NOTE]
-> There are future plans to [allow WebAssembly to call Web APIs directly](https://github.com/WebAssembly/gc/blob/master/README.md).
+3. By itself, WebAssembly cannot currently directly access the DOM; it can only call JavaScript, which then makes the Web API call. Emscripten therefore creates the HTML and JavaScript glue code needed to achieve this.
 
 The JavaScript glue code is not as simple as you might imagine. For a start, Emscripten implements popular C/C++ libraries like [SDL](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer), [OpenGL](https://en.wikipedia.org/wiki/OpenGL), [OpenAL](https://en.wikipedia.org/wiki/OpenAL), and parts of [POSIX](https://en.wikipedia.org/wiki/POSIX). These libraries are implemented in terms of Web APIs and thus each one requires some JavaScript glue code to connect WebAssembly to the underlying Web API.
 
@@ -112,14 +103,6 @@ Do you want to build your own compiler, or your own tools, or make a JavaScript 
 In the same fashion as physical assembly languages, the WebAssembly binary format has a text representation — the two have a 1:1 correspondence. You can write or generate this format by hand and then convert it into the binary format with any of several [WebAssembly text-to-binary tools](https://webassembly.org/getting-started/advanced-tools/).
 
 For a simple guide on how to do this, see our [Converting WebAssembly text format to Wasm](/en-US/docs/WebAssembly/Guides/Text_format_to_Wasm) article.
-
-### Writing Rust Targeting WebAssembly
-
-It is also possible to write Rust code and compile over to WebAssembly, thanks to the tireless work of the Rust WebAssembly Working Group. You can get started with installing the necessary toolchain, compiling a sample Rust program to a WebAssembly npm package, and using that in a sample web app, over at our [Compiling from Rust to WebAssembly](/en-US/docs/WebAssembly/Guides/Rust_to_Wasm) article.
-
-### Using AssemblyScript
-
-For web developers who want to try WebAssembly without needing to learn the details of C or Rust, staying in the comfort of a familiar language like TypeScript, AssemblyScript will be the best option. AssemblyScript compiles a strict variant of TypeScript to WebAssembly, allowing web developers to keep using TypeScript-compatible tooling they are familiar with — such as Prettier, ESLint, VS Code IntelliSense, etc. You can check its documentation on <https://www.assemblyscript.org/>.
 
 ## Summary
 

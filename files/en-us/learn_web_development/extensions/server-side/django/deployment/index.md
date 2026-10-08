@@ -953,7 +953,7 @@ Then call the following command, entering name, email, and password as required:
 railway run python manage.py createsuperuser
 ```
 
-You should now be able to open your website admin area (`https://[your-url].railway.app/admin/`) and populate the database, just as shown in [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site)).
+You should now be able to open your website admin area (`https://[your-url].railway.app/admin/`) and populate the database, just as shown in [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site).
 
 ### Setting configuration variables
 

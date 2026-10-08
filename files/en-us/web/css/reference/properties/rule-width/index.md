@@ -318,6 +318,8 @@ li {
 
 This example demonstrates how, when there are fewer values in the list of widths than column or row rules, the values are repeated.
 
+#### CSS
+
 Using the same HTML and CSS as in the previous example, we include three comma-separated widths as the `rule-width`.
 
 ```css live-sample___repeat
@@ -326,6 +328,8 @@ ul {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample("Repeat", "", "440")}}
 
 As the grid container has 8 rows and 10 columns, there are seven and nine gutters in each direction, respectively, so the sequence of three `<line-width>` values is repeated in both directions.
@@ -333,6 +337,8 @@ As the grid container has 8 rows and 10 columns, there are seven and nine gutter
 ### Using the `repeat()` function
 
 This example demonstrates using the `repeat()` function within the `rule-width` property value and how this function can help reduce the verbosity of value declarations.
+
+#### CSS
 
 We use the same HTML and CSS as in the previous examples. In addition, we declare two custom properties, which we use in a `repeat()` function inside our `rule-width` value. The `repeat()` function sets a list of two `<line-width>` values to repeat 3 times.
 
@@ -351,6 +357,8 @@ ul {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample("func", "", "440")}}
 
 The `repeat()` function repeats two width values four times, creating a list of ten width values. As there are fewer column and row gutters than total widths, the last values in the list are discarded.
@@ -359,6 +367,8 @@ The `repeat()` function repeats two width values four times, creating a list of 
 
 This example demonstrates using `auto` instead of an integer within the `repeat()` function.
 
+#### CSS
+
 Using `repeat(auto, <line-width>)`, we set all column and row rules to `1px`, except the first and last, which we set to `5px`.
 
 ```css live-sample___auto
@@ -366,6 +376,8 @@ ul {
   rule-width: 5px, repeat(auto, 1px), 5px;
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample("auto", "", "440")}}
 

@@ -14,7 +14,7 @@ browser-compat: api.MediaStreamTrack.applyConstraints.volume_constraint
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`volume`** property is a [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble)
 describing the requested or mandatory constraints placed upon the value of the
-{{domxref("MediaTrackSettings.volume", "volume")}} constrainable property.
+[`volume`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#volume) constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
 the value of [`volume`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#volume) as returned by a call

@@ -197,7 +197,7 @@ This function accepts a {{domxref("MediaStreamTrack")}} and a string indicating 
 
 ### Getting the current settings for a track
 
-Unless you only use exact constraints (which is pretty restrictive, so be sure you mean it!), there's no guarantee exactly what you're going to actually get after the constraints are applied. The values of the constrainable properties as they actually are in the resulting media are referred to as the settings. If you need to know the true format and other properties of the media, you can obtain those settings by calling {{domxref("MediaStreamTrack.getSettings()")}}. This returns an object based on the dictionary {{domxref("MediaTrackSettings")}}. For example:
+Unless you only use exact constraints (which is pretty restrictive, so be sure you mean it!), there's no guarantee exactly what you're going to actually get after the constraints are applied. The values of the constrainable properties as they actually are in the resulting media are referred to as the settings. If you need to know the true format and other properties of the media, you can obtain those settings by calling {{domxref("MediaStreamTrack.getSettings()")}}. For example:
 
 ```js
 function whichCamera(track) {
@@ -205,7 +205,7 @@ function whichCamera(track) {
 }
 ```
 
-This function uses `getSettings()` to obtain the track's currently in-use values for the constrainable properties and returns the value of {{domxref("MediaTrackSettings.facingMode", "facingMode")}}.
+This function uses `getSettings()` to obtain the track's currently in-use values for the constrainable properties and returns the value of [`facingMode`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#facingmode).
 
 ## Example: Constraint exerciser
 
@@ -606,7 +606,6 @@ Here you can see the complete example in action.
 
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaTrackConstraints")}}
-- {{domxref("MediaTrackSettings")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaStreamTrack.applyConstraints()")}}
 - {{domxref("MediaStreamTrack.getSettings()")}}
