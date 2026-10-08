@@ -166,6 +166,18 @@ h2 {
   background-color: lime;
   height: 30px;
 }
+
+@layer no-support {
+  @supports not (row-rule-break: intersection) {
+    body::before {
+      content: "Your browser doesn't support the row-rule-break property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
 ```
 
 {{EmbedLiveSample("grid containers", "", "240")}}
@@ -256,6 +268,18 @@ section {
   flex: 1 1 auto;
   height: 30px;
 }
+
+@layer no-support {
+  @supports not (row-rule-break: intersection) {
+    body::before {
+      content: "Your browser doesn't support the row-rule-break property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
 ```
 
 {{EmbedLiveSample("Flex containers", "", "300")}}
@@ -343,6 +367,17 @@ li {
 }
 label {
   margin-right: 20px;
+}
+@layer no-support {
+  @supports not (row-rule-break: intersection) {
+    body::before {
+      content: "Your browser doesn't support the row-rule-break property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
 }
 ```
 
@@ -468,6 +503,17 @@ li {
   text-align: center;
   font-family: sans-serif;
   line-height: 50px;
+}
+@layer no-support {
+  @supports not (row-rule-break: intersection) {
+    body::before {
+      content: "Your browser doesn't support the row-rule-break property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
 }
 ```
 
