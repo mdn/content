@@ -334,13 +334,13 @@ The following fields are available in the `result` object in the response, depen
       For example, when `type` is `"map"` or `"object"`, an item in its `value` array doesn't contain exactly two items.
 - `no such frame`
   - : Thrown in any of the following cases:
-    - No context with the given context ID is found.
-    - No realm with the given realm ID is found.
+    - No context with the specified context ID is found.
+    - No realm with the specified realm ID is found.
 - `no such handle`
-  - : A `handle` value in the [`arguments`](#arguments) or [`this`](#this) parameter is not found in the target realm.
+  - : Thrown if a `handle` value in the [`arguments`](#arguments) or [`this`](#this) parameter is not found in the target realm.
 - `no such node`
   - : Thrown when a `sharedId` is specified in the [`arguments`](#arguments) or [`this`](#this) parameter and any of the following applies:
-    - No node with the given `sharedId` is found.
+    - No node with the specified `sharedId` is found.
     - The realm specified by [`target`](#target) is not associated with a document.
     - The node's document and the target realm do not satisfy the same-origin-domain check.
 
