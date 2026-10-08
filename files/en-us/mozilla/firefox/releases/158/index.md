@@ -104,3 +104,8 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   [On-device speech recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) is now supported in Nightly, on desktop only. This allows you to perform speech recognition via the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) directly in the browser, rather than relying on a cloud service.
   ([Firefox bug 2069803](https://bugzil.la/2069803)).
+
+- **Streaming request bodies**: `dom.fetch.streaming_upload`
+
+  Enabled in Nightly only, you can now set a {{domxref("ReadableStream")}} as a request body (for example, via the {{domxref("Request.Request", "Request()")}} constructor or the {{domxref("Window.fetch()")}} method). This allows you to stream uploads incrementally rather than having to wait for the whole body to be available.
+  ([Firefox bug 1594633](https://bugzil.la/1594633)).

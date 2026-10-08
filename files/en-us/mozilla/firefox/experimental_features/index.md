@@ -685,6 +685,21 @@ This simplifies CSS property manipulation by exposing CSS values as typed JavaSc
 - `media.webspeech.recognition.enable`
   - : Set to `true` to enable.
 
+### Streaming request bodies
+
+You can now set a {{domxref("ReadableStream")}} as a request body (for example, via the {{domxref("Request.Request", "Request()")}} constructor or the {{domxref("Window.fetch()")}} method). This allows you to stream uploads incrementally rather than having to wait for the whole body to be available.
+([Firefox bug 1594633](https://bugzil.la/1594633)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 158           | Yes                 |
+| Developer Edition | 158           | No                  |
+| Beta              | 158           | No                  |
+| Release           | 158           | No                  |
+
+- `dom.fetch.streaming_upload`
+  - : Set to `true` to enable.
+
 ### Graphics: Canvas, WebGL, and WebGPU
 
 #### WebGL: Draft extensions
