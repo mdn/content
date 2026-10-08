@@ -8,11 +8,11 @@ browser-compat: api.PerformanceMeasure.detail
 
 {{APIRef("Performance API")}}{{AvailableInWorkers}}
 
-The read-only **`detail`** property returns arbitrary metadata that was included in the mark upon construction (when using {{domxref("Performance.measure","performance.measure()")}}).
+The read-only **`detail`** property returns arbitrary metadata that was included in the measure upon construction (when using {{domxref("Performance.measure","performance.measure()")}}).
 
 ## Value
 
-Returns the value it was set to (from `markOptions` of {{domxref("Performance.measure","performance.measure()")}}).
+Returns the value it was set to (from `measureOptions` of {{domxref("Performance.measure","performance.measure()")}}).
 
 ## Examples
 
