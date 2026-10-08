@@ -8,7 +8,7 @@ browser-compat: api.MediaStreamTrack.applyConstraints.logicalSurface_constraint
 
 {{APIRef("Media Capture and Streams")}}
 
-The {{domxref("MediaTrackConstraints")}} dictionary's **`logicalSurface`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) describing the requested or mandatory constraints placed upon the value of the {{domxref("MediaTrackSettings.logicalSurface","logicalSurface")}} constrainable property.
+The {{domxref("MediaTrackConstraints")}} dictionary's **`logicalSurface`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) describing the requested or mandatory constraints placed upon the value of the [`logicalSurface`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#logicalsurface) constrainable property.
 
 This is used to specify whether or
 not {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} should allow the
@@ -32,9 +32,8 @@ See [how constraints are defined](/en-US/docs/Web/API/Media_Capture_and_Streams_
 You can check the setting selected by the user agent after the display media has been
 created by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} by calling
 {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} on the display media's
-video {{domxref("MediaStreamTrack")}}, then checking the value of the returned
-{{domxref("MediaTrackSettings")}} object's
-{{domxref("MediaTrackSettings.logicalSurface", "logicalSurface")}} object.
+video {{domxref("MediaStreamTrack")}}, then checking the value of the
+[`logicalSurface`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#logicalsurface) property.
 
 For example, if your app needs to know if the selected display surface is a logical
 one:

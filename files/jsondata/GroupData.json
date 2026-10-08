@@ -1112,7 +1112,6 @@
         "MediaStreamTrack",
         "MediaStreamTrackEvent",
         "MediaTrackConstraints",
-        "MediaTrackSettings",
         "OverconstrainedError"
       ],
       "methods": [
@@ -1520,16 +1519,13 @@
       ],
       "methods": [
         "MediaDevices.getDisplayMedia()",
-        "MediaDevices.getSupportedConstraints()"
+        "MediaDevices.getSupportedConstraints()",
+        "MediaStreamTrack.getSettings()"
       ],
       "properties": [
         "MediaTrackConstraints.displaySurface",
         "MediaTrackConstraints.logicalSurface",
-        "MediaTrackConstraints.suppressLocalAudioPlayback",
-        "MediaTrackSettings.cursor",
-        "MediaTrackSettings.displaySurface",
-        "MediaTrackSettings.logicalSurface",
-        "MediaTrackSettings.suppressLocalAudioPlayback"
+        "MediaTrackConstraints.suppressLocalAudioPlayback"
       ],
       "events": []
     },
