@@ -2,9 +2,13 @@
 title: <animation-action>
 slug: Web/CSS/Reference/Values/animation-action
 page-type: css-type
+status:
+  - experimental
 browser-compat: css.properties.animation-trigger
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`<animation-action>`** {{glossary("enumerated")}} data type represents keyword values that specify how an animation should behave in certain circumstances — for example, how a [triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers) should behave when its trigger is activated and deactivated.
 
