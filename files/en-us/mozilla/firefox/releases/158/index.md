@@ -84,7 +84,7 @@ Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### Other
 
-- Support for the [JPEG XL](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_xl_image) image format (`image/jxl`) is now enabled by default. JPEG XL is a royalty-free raster image format that supports both lossy and lossless compression, and it can losslessly transcode existing JPEG images. ([Firefox bug 2065096](https://bugzil.la/2065096)).
+- Support for the [JPEG XL](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_xl_image) image format (`image/jxl`) is now enabled by default. JPEG XL is a royalty-free raster image format that supports lossy and lossless compression, transparency, animation, and HDR. It can also losslessly transcode existing JPEG images. ([Firefox bug 2065096](https://bugzil.la/2065096)).
 
 ## Changes for add-on developers
 
