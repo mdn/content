@@ -94,7 +94,7 @@ To group options under a heading, use an {{HTMLElement("optgroup")}}; an {{HTMLE
 A `<select>` element with the [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple) attribute lets the user choose zero or more options. How the control is rendered depends on the [`size`](#size) attribute:
 
 - If the `multiple` attribute is set, browsers show a scrolling list box, unless the `size` is set to `1`. When `size` is omitted, the list box is four options tall, even if there are fewer options.
-- If `size` is `1`, supporting browsers display a drop-down that lets the user select more than one option when the control has focus. If exactly one option is selected, the selected option is displayed, otherwise, the control displays the count of its selected options as a single-line list box. Browsers that don't support these features display a multiple option menu list within a control that is the height of a single-line box.
+- If `size` is `1`, supporting browsers display a drop-down that lets the user select more than one option when the control is active. If exactly one option is selected, the selected option is displayed, otherwise, the control displays the count of its selected options as a single-line list box. Browsers that don't support these features display a multiple option menu list within a control that is the height of a single-line box.
 
 When using the `multiple` attribute, always inform users that more than one option can be selected.
 
@@ -160,7 +160,7 @@ For more information on legacy `<select>` styling, see:
 
 The `<hr>` within a `<select>` should be considered purely decorative, as they are currently not exposed within the accessibility tree and therefore not exposed to assistive technologies.
 
-Setting `size="1"` on a multiple select (i.e., `<select multiple size="1">`) renders a drop-down that lets users select multiple options. Some browsers don't expand the option list on focus, displaying multiple options in a menu list the height of a single-line box. This harms usability. When including a multiple-select, inform users they can select more than one option, even when multiple options are displayed.
+Setting `size="1"` on a multiple select (i.e., `<select multiple size="1">`) renders a drop-down that lets users select multiple options. Some browsers don't expand the option list when the control is active, displaying multiple options in a menu list the height of a single-line box. This harms usability. When including a multiple-select, inform users they can select more than one option, even when multiple options are displayed.
 
 ## Examples
 
