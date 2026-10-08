@@ -7,7 +7,7 @@ browser-compat: css.properties.window-drag
 sidebar: cssref
 ---
 
-The **`window-drag`** [CSS](/en-US/docs/Web/CSS) property specifies elements that can be dragged to move the application window of an installed [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) with an active [window controls overlay](/en-US/docs/Web/API/Window_Controls_Overlay_API).
+The **`window-drag`** [CSS](/en-US/docs/Web/CSS) property specifies which containers displayed in the application window of an installed [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) can be dragged to move the window around the desktop. This property is only usable within installed PWAs with an active window controls overlay.
 
 ## Syntax
 
@@ -35,20 +35,20 @@ This property is specified as one of the following keyword values:
 
 ## Description
 
-When a PWA is installed, it is possible to remove most of the application window's titlebar, leaving the mandatory control buttons — such as maximize, minimize, and close — contained in an overlay. You can place additional Web content into the resulting additional space. This is done by:
+When a PWA is installed, it is possible to replace most of the application window's title bar with extra viewport space, leaving the mandatory control buttons — such as maximize, minimize, and close — contained in a [window controls overlay](/en-US/docs/Web/API/Window_Controls_Overlay_API). You can then place web content into the additional space.
 
-- Setting the [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display) member of your [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) to a suitable value such as `standalone`.
-- Including `window-controls-overlay` in the [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) manifest member to opt in to displaying a [window controls overlay](/en-US/docs/Web/API/Window_Controls_Overlay_API).
+These actions are achieved by:
+
+- Setting the [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display) member of your [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) to a value such as `standalone` that will cause the installed PWA to open in a standalone app window.
+- Including the [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) manifest member with a value of `["window-controls-overlay"]` to opt in to displaying a [window controls overlay](/en-US/docs/Web/API/Window_Controls_Overlay_API).
 - Using the [`titlebar-area-*`](/en-US/docs/Web/CSS/Reference/Values/env#titlebar-area-x) {{cssxref("env")}} variables to position and size the custom web content.
 
-One remaining issue is that you will want to set the custom content so that you can drag appropriate sections to move the application window, which is expected behavior. This is achieved by setting the custom content's `window-drag` property to `move`, in which case a window move operation is performed and no events (for example pointer or mouse events) are fired during a dragging gesture on the content.
+With an active window controls overlay, there is significantly less title bar space that can be dragged to move the app window around the desktop. To fix this problem, you can specify elements inside the app UI that can be dragged to move the app window. Set the elements' `window-drag` property to `move` to achieve this. The result is that, during a dragging gesture on this content, a window move operation is performed and no events (for example, pointer or mouse events) are fired.
 
 The `window-drag` property is inherited by default. To ensure child elements behave normally and don't initiate window move operations on drag, disable the drag behavior on nested elements by setting `window-drag` to `none`.
 
-The `window-drag` property is a standardized version of the legacy, non-standard `app-region`, `-webkit-app-region`, and `-moz-window-dragging` properties. Use the standard `window-drag` property for stability and browser interoperability.
-
 > [!NOTE]
-> The `app-region` property uses `drag` in place of `move` and `no-drag` in place of `none`.
+> The `window-drag` property is a standardized version of the legacy, non-standard `app-region`, `-webkit-app-region`, and `-moz-window-dragging` properties. Use the standard `window-drag` property for stability and browser interoperability.
 
 ## Formal definition
 
@@ -60,13 +60,13 @@ The `window-drag` property is a standardized version of the legacy, non-standard
 
 ## Examples
 
-### PWA custom draggable titlebar
+### PWA custom draggable title bar
 
-This example demonstrates how to create a draggable app titlebar that is displayed as normal content when viewed in a browser, but fills the titlebar when installed on the user's device. The live [custom titlebar demo](https://mdn.github.io/pwa-examples/custom-titlebar/) ([source code](https://github.com/mdn/pwa-examples/tree/main/custom-titlebar)) are both available on GitHub.
+This example demonstrates how to create a draggable app title bar that is displayed as normal content when viewed in a browser, but fills the title bar when installed on the user's device. The live [custom title bar demo](https://mdn.github.io/pwa-examples/custom-titlebar/) ([source code](https://github.com/mdn/pwa-examples/tree/main/custom-titlebar)) are both available on GitHub.
 
 #### HTML
 
-We have included a {{htmlelement("header")}} element containing some content for our titlebar. We've deliberately included some interactive content to give you an idea of what's possible.
+We have included a {{htmlelement("header")}} element containing some content for our title bar. We've deliberately included some interactive content to give you an idea of what's possible.
 
 ```html
 <header id="titlebar">
@@ -81,7 +81,7 @@ We have included a {{htmlelement("header")}} element containing some content for
 
 #### Manifest
 
-Inside the manifest, we've included the [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display) member with a value of `standalone`, required for displaying a windows control overlay, and the [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) member with a value of `["window-controls-overlay"]` to do the actual opt-in.
+Inside the manifest, we've included the [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display) member with a value of `standalone`, required for displaying a windows control overlay, and the [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) member with a value of `["window-controls-overlay"]` to opt-in to displaying the window controls overlay.
 
 ```json
 {
@@ -96,10 +96,10 @@ Inside the manifest, we've included the [`display`](/en-US/docs/Web/Progressive_
 
 #### CSS
 
-We set a {{cssxref("position")}} value of `fixed` on our titlebar `<div>` so that it will always stay fixed in position, even if there is enough content to scroll. We then position and size it using the [`titlebar-area-*`](/en-US/docs/Web/CSS/Reference/Values/env#titlebar-area-x) `env()` variables:
+We set a {{cssxref("position")}} value of `fixed` on our title bar `<div>` so that it will always stay fixed in position, even if there is enough content to scroll. We then position and size it using the [`titlebar-area-*`](/en-US/docs/Web/CSS/Reference/Values/env#titlebar-area-x) `env()` variables:
 
-- {{cssxref("left")}} and {{cssxref("top")}} values of `titlebar-area-x` and `titlebar-area-y` to position its top-left corner at the top left of the app window titlebar area.
-- {{cssxref("width")}} and {{cssxref("height")}} values of `titlebar-area-width` and `titlebar-area-height` to make it fill the window titlebar area.
+- {{cssxref("left")}} and {{cssxref("top")}} values of `titlebar-area-x` and `titlebar-area-y` to position its top-left corner at the top left of the app window title bar area.
+- {{cssxref("width")}} and {{cssxref("height")}} values of `titlebar-area-width` and `titlebar-area-height` to make it fill the window title bar area.
 
 ```css
 #titlebar {
@@ -113,9 +113,9 @@ We set a {{cssxref("position")}} value of `fixed` on our titlebar `<div>` so tha
 }
 ```
 
-We also include fallback values for the `env()` variables so the titlebar content displays across the top of the viewport in cases where the `titlebar-area-*` variables are not available, for example when the app is being viewed as a webpage.
+We also include fallback values for the `env()` variables so the title bar content displays across the top of the viewport in cases where the `titlebar-area-*` variables are not available, for example when the app is being viewed as a webpage.
 
-Finally, we set the titlebar `<div>` element's `window-drag` property to `move` so that when the app is installed, you can drag the titlebar to move the app window. We also set the `window-drag` property back to `none` on the `<div>` element's children so that you can still use the form controls normally — we don't want the same dragging behavior when you try to interact with them.
+Finally, we set the titlebar `<div>` element's `window-drag` property to `move` so that when the app is installed, you can drag the title bar to move the app window. We also set the `window-drag` property back to `none` on the `<div>` element's children so that you can still use the form controls normally — we don't want the same dragging behavior when you try to interact with them.
 
 ```css
 #titlebar {

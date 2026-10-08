@@ -55,9 +55,9 @@ PWAs can use the API to position content in this area, and avoid having content 
 
 ## Related CSS features
 
-- [`titlebar-area-*`](/en-US/docs/Web/CSS/Reference/Values/env#titlebar-area-x) `env()` variables
-  - : Enables positioning PWA content in the area that the title bar normally occupies. See [Using env() to ensure content is not obscured by window control buttons in desktop PWAs](/en-US/docs/Web/CSS/Reference/Values/env#using_env_to_ensure_content_is_not_obscured_by_window_control_buttons_in_desktop_pwas).
-- {{cssxref("window-drag")}}
+- [`titlebar-area-*`](/en-US/docs/Web/CSS/Reference/Values/env#titlebar-area-x) environment variables
+  - : These `env()` variables enable positioning PWA content in the area that the title bar normally occupies. See [Using env() to ensure content is not obscured by window control buttons in desktop PWAs](/en-US/docs/Web/CSS/Reference/Values/env#using_env_to_ensure_content_is_not_obscured_by_window_control_buttons_in_desktop_pwas).
+- {{cssxref("window-drag")}} property
   - : Specifies elements that can be dragged to move the application window of an installed PWA with an active window controls overlay.
 
 ## Specifications
