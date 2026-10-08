@@ -9,7 +9,7 @@ spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prot
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The **`delete()`** method of the {{domxref("HighlightRegistry")}} interface removes a the named {{domxref("Highlight")}} object from the `HighlightRegistry`.
+The **`delete()`** method of the {{domxref("HighlightRegistry")}} interface removes the named {{domxref("Highlight")}} object from the `HighlightRegistry`.
 
 `HighlightRegistry` is a {{jsxref("Map")}}-like object, so this is similar to using {{jsxref("Map.delete()")}}.
 

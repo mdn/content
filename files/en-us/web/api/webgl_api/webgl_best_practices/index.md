@@ -100,7 +100,7 @@ Certain WebGL entry points - including `getError` and `getParameter` - cause syn
 
 In production code, avoid such entry points, especially on the browser main thread where they can cause the entire page to jank (often including scrolling or even the whole browser).
 
-- `getError()`: causes a flush + round-trip to fetch errors from the GPU process).
+- `getError()`: causes a flush + round-trip to fetch errors from the GPU process.
 
   For example, within Firefox, the only time glGetError is checked is after allocations (`bufferData`, `*texImage*`, `texStorage*`) to pick up any GL_OUT_OF_MEMORY errors.
 
