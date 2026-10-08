@@ -91,6 +91,36 @@ The [`headingoffset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingof
 - `dom.headingoffset.enabled`
   - : Set to `true` to enable.
 
+### `<script type="speculationrules">`
+
+[Speculation rules](/en-US/docs/Web/API/Speculation_Rules_API#browser_compatibility) provides a mechanism to improve performance for future navigations by specifying which resources should be prefetched or prerendered based on factors such as user behavior towards links.
+
+Initial support included [`prefetch`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#prefetch) only, with resources identified by a [`urls`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#urls) list and [`immediate`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#immediate) eagerness. This also includes support for the {{domxref("PerformanceResourceTiming.deliveryType")}} property's `navigational-prefetch` value. ([Firefox bug 2041381](https://bugzil.la/2041381)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 155           | Yes                 |
+| Developer Edition | 155           | No                  |
+| Beta              | 155           | No                  |
+| Release           | 155           | No                  |
+
+- `dom.speculation_rules.enabled`
+  - : Set to `true` to enable.
+
+#### Moderate eagerness
+
+Firefox 158 added support for [`moderate`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#moderate) eagerness, which indicates that prefetch/prerender should start when there is a reasonable suggestion that the user will follow a link in the near future. For example, the user could scroll a link into the viewport and hover/focus it for some time. ([Firefox bug 2061013](https://bugzil.la/2061013)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 158           | Yes                 |
+| Developer Edition | 158           | No                  |
+| Beta              | 158           | No                  |
+| Release           | 158           | No                  |
+
+- `dom.speculation_rules.enabled`
+  - : Set to `true` to enable.
+
 ## CSS
 
 ### `circle()` and `ellipse()` allow `farthest-corner` and `closest-corner` keywords
