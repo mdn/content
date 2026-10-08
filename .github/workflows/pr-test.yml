@@ -129,12 +129,7 @@ jobs:
           # Read into array, one filename per line
           readarray -t files_to_build <<< "$GIT_DIFF_CONTENT"
 
-          ARGS=()
-          for file in "${files_to_build[@]}"; do
-            ARGS+=("$PWD/$file")
-          done
-
-          npx @mdn/rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
+          npx @mdn/rari build --no-basic --json-issues --data-issues "${files_to_build[@]/#/$PWD/}"
 
           # Workaround, as `fred ssr` doesn't copy assets.
           cp -vR node_modules/@mdn/fred/out/. "$BUILD_OUT_ROOT"
