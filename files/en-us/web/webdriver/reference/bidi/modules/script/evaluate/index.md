@@ -230,11 +230,11 @@ The following fields are available in the `result` object in the response, depen
 ### Errors
 
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
-  - : A required parameter is missing or has an invalid type.
+  - : Thrown if a required parameter is missing or has an invalid type.
 - `no such frame`
   - : Thrown in any of the following cases:
-    - No context with the given context ID is found.
-    - No realm with the given realm ID is found.
+    - No context with the specified context ID is found.
+    - No realm with the specified realm ID is found.
 
 ## Description
 
