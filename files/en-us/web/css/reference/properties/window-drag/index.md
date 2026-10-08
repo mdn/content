@@ -38,7 +38,7 @@ This property is specified as one of the following keyword values:
 When a PWA is installed, it is possible to remove most of the application window titlebar to only leave the mandatory items such as the minimize and close buttons, then put custom web content into the freed up space. This is done by:
 
 - Setting the [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display) member of your [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) to a suitable value such as `standalone`.
-- Opting in to displaying a [window controls overlay](/en-US/docs/Web/API/Window_Controls_Overlay_API) by including `window-controls-overlay` in the [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) manifest member.
+- Including `window-controls-overlay` in the [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) manifest member to opt in to displaying a [window controls overlay](/en-US/docs/Web/API/Window_Controls_Overlay_API).
 - Positioning and sizing the custom web content using the [`titlebar-area-*`](/en-US/docs/Web/CSS/Reference/Values/env#titlebar-area-x) {{cssxref("env")}} variables.
 
 One remaining issue is that you will want to set the custom content so that you can drag appropriate sections to move the application window, which is expected behavior. This is achieved by setting the custom content's `window-drag` property to `move`, in which case a window move operation is performed and no events (for example pointer or mouse events) are fired during a dragging gesture on the content.
