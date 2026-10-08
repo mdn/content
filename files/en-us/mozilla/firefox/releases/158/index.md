@@ -18,7 +18,7 @@ Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### Accessibility
 
-- The [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) attribute is now supported in Firefox for Android (desktop support has been available for a long time). This ARIA state indicates whether an element is currently being modified. It helps assistive technologies understand that changes to the content are not yet complete, and that they may want to wait before informing users of the update, for example in the case of a [live region](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions). ([Firefox bug 908042](https://bugzil.la/908042)).
+- The [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) attribute is now supported in Firefox for Android (desktop support has been available for a long time). This ARIA state indicates whether an element is currently being modified. It allows assistive technologies to wait until changes to the content are complete before informing users of the update. For example, a screen reader can wait until a [live region](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) has finished updating before announcing the changes. ([Firefox bug 908042](https://bugzil.la/908042)).
 
 <!-- ### Developer Tools -->
 
