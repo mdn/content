@@ -39,7 +39,7 @@ When a PWA is installed, it is possible to remove most of the application window
 
 - Setting the [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display) member of your [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) to a suitable value such as `standalone`.
 - Including `window-controls-overlay` in the [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) manifest member to opt in to displaying a [window controls overlay](/en-US/docs/Web/API/Window_Controls_Overlay_API).
-- Positioning and sizing the custom web content using the [`titlebar-area-*`](/en-US/docs/Web/CSS/Reference/Values/env#titlebar-area-x) {{cssxref("env")}} variables.
+- Using the [`titlebar-area-*`](/en-US/docs/Web/CSS/Reference/Values/env#titlebar-area-x) {{cssxref("env")}} variables to position and size the custom web content.
 
 One remaining issue is that you will want to set the custom content so that you can drag appropriate sections to move the application window, which is expected behavior. This is achieved by setting the custom content's `window-drag` property to `move`, in which case a window move operation is performed and no events (for example pointer or mouse events) are fired during a dragging gesture on the content.
 
