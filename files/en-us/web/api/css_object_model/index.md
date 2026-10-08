@@ -92,7 +92,10 @@ Several other interfaces are also extended by the CSSOM-related specifications: 
 - {{DOMxRef("StylePropertyMap")}}
 - {{DOMxRef("StylePropertyMapReadOnly")}}
 
-### Obsolete CSSOM interfaces {{deprecated_inline}}
+### Obsolete CSSOM interfaces
+
+> [!WARNING]
+> These interfaces are deprecated. Using them is no longer recommended.
 
 - {{DOMxRef("CSSPrimitiveValue")}} {{deprecated_inline}}
 - {{DOMxRef("CSSValue")}} {{deprecated_inline}}
