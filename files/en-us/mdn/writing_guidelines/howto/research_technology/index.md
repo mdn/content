@@ -77,7 +77,7 @@ Let's say you're documenting a new Web API, your initial list of sections to be 
 8. Code examples
 9. Sidebars
 
-You can then expand on it with more details, adding each interface and it's members. For example, if you were documenting the Web Audio API, your list might look more like this:
+You can then expand on it with more details, adding each interface and its members. For example, if you were documenting the Web Audio API, your list might look more like this:
 
 - Web_Audio_API
 - AudioContext
