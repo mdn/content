@@ -139,7 +139,8 @@ In grid containers, by default, column rule segments continue through row gap in
 ```
 
 ```css hidden
-h1, div {
+h1,
+div {
   font-family: sans-serif;
   text-align: center;
 }
@@ -227,7 +228,8 @@ In flexbox, whether the column rules break at every row gap by default depends o
 ```
 
 ```css hidden
-h1, article {
+h1,
+article {
   font-family: sans-serif;
   text-align: center;
 }
@@ -336,7 +338,9 @@ In multi-col containers, the default `normal` value behaves the same as `interse
 ```
 
 ```css hidden
-h1, ol, fieldset {
+h1,
+ol,
+fieldset {
   font-family: sans-serif;
   text-align: center;
 }
