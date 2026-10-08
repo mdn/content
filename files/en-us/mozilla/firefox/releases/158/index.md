@@ -81,7 +81,7 @@ Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### WebDriver BiDi
 
-- Added support for the `imageSize` argument to the `browsingContext.captureScreenshot` command, which allows clients to specify the size of the resulting screenshot image. ([Firefox bug 2069002](https://bugzil.la/2069002)).
+- Added support for the `imageSize` argument to the `browsingContext.captureScreenshot` command, which allows clients to specify the maximum size of the resulting screenshot image. ([Firefox bug 2069002](https://bugzil.la/2069002)).
 - Added support for the `destinationFolder` argument to the `browsingContext.startScreencast` command, which allows clients to choose the folder where the recorded video file is saved. ([Firefox bug 2072616](https://bugzil.la/2072616)).
 
 #### Marionette
