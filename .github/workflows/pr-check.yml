@@ -99,6 +99,7 @@ jobs:
     if: needs.changes.outputs.json == 'true'
     uses: ./.github/workflows/pr-check_json.yml
 
+  # `pr-reviewdog.yml` looks up this job by its name.
   content:
     needs: changes
     if: needs.changes.outputs.content == 'true'
