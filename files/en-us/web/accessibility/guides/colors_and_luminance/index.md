@@ -276,7 +276,7 @@ The same "color" proceeds from least saturated on the left-hand side to most sat
 
 _More than one "red" color may be considered a "saturated" red._ For example, the color `#990000` at `hsl(0 100% 30%)` is fully saturated but is less bright than the colors described above. Similarly, the color `#8b0000` also has a saturation of 100%.
 
-Not all saturated reds may be represented well in the RGB spectrum or other spectrums commonly used in web development. According to Wikipedia's page on "Shades of Red", the color "Carmine" is a saturated red which, in its pigment form, mostly contains red light with wavelengths longer than 600nm; the article makes the special note that "Carmine" is close to the extreme spectrum. This places it far beyond standard gamuts (RGB and CMYK), and its given RGB value is a poor approximation only.
+Not all saturated reds may be represented well in the RGB spectrum or other spectrums commonly used in web development. According to Wikipedia's page on "Shades of Red", the color "Carmine" is a saturated red which, in its pigment form, mostly contains red light with wavelengths longer than 600nm; the article makes the special note that Carmine "is close to the extreme spectrum. This places it far beyond standard gamuts (RGB and CMYK), and its given RGB value is a poor approximation only."
 
 ### Saturated red flashing
 
