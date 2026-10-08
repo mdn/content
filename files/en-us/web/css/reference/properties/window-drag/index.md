@@ -35,7 +35,7 @@ This property is specified as one of the following keyword values:
 
 ## Description
 
-When a PWA is installed, it is possible to remove most of the application window titlebar to only leave the mandatory items such as the minimize and close buttons, then put custom web content into the freed up space. This is done by:
+When a PWA is installed, it is possible to remove most of the application window's titlebar, leaving the mandatory control buttons — such as maximize, minimize, and close — contained in an overlay. You can place additional Web content into the resulting additional space. This is done by:
 
 - Setting the [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display) member of your [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) to a suitable value such as `standalone`.
 - Including `window-controls-overlay` in the [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) manifest member to opt in to displaying a [window controls overlay](/en-US/docs/Web/API/Window_Controls_Overlay_API).
