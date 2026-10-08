@@ -467,7 +467,7 @@ These automated messages have two drawbacks:
 Customizing these error messages is one of the most common use cases of the Constraint Validation API.
 Let's work through an example of how to do this.
 
-We'll start with some HTML. Feel free to put this in another copy of the [basic starter file](#basic_starter_file) file, if you like:
+We'll start with some HTML. Feel free to put this in another copy of the [basic starter file](#basic_starter_file), if you like:
 
 ```html
 <form>
