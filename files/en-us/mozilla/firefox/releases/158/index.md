@@ -48,7 +48,9 @@ Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### HTTP -->
+### HTTP
+
+- The default HTTP [`Accept`](/en-US/docs/Web/HTTP/Reference/Headers/Accept) header for image requests now includes `image/jxl`, following support for the [JPEG XL](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_xl_image) image format. The new value is `image/avif,image/jxl,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5` (see [List of default Accept values](/en-US/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values#values_for_an_image)). ([Firefox bug 2065096](https://bugzil.la/2065096)).
 
 <!-- #### Removals -->
 
@@ -79,6 +81,10 @@ Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-
 <!-- #### WebDriver BiDi -->
 
 <!-- #### Marionette -->
+
+### Other
+
+- Support for the [JPEG XL](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_xl_image) image format (`image/jxl`) is now enabled by default. JPEG XL is a royalty-free raster image format that supports both lossy and lossless compression, and it can losslessly transcode existing JPEG images. ([Firefox bug 2065096](https://bugzil.la/2065096)).
 
 ## Changes for add-on developers
 

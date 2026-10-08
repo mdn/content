@@ -42,16 +42,17 @@ This is typically used for requests initiated via the address bar of a browser, 
 
 When requesting an image, like through an HTML {{HTMLElement("img")}} element, user-agent often sets a specific list of media types to be welcomed.
 
-| User Agent                     | Value                                                                      |
-| ------------------------------ | -------------------------------------------------------------------------- |
-| Firefox 128 and later [1]      | `image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5`    |
-| Firefox 92 to 127 [1]          | `image/avif,image/webp,*/*`                                                |
-| Firefox 65 to 91 [1]           | `image/webp,*/*`                                                           |
-| Firefox 47 to 63 [1]           | `*/*`                                                                      |
-| Firefox prior to 47 [1]        | `image/png,image/*;q=0.8,*/*;q=0.5`                                        |
-| Safari (since Mac OS Big Sur)  | `image/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5` |
-| Safari (before Mac OS Big Sur) | `image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5`            |
-| Chrome and Edge 121 and later  | `image/avif,image/webp,image/apng,image/*,*/*;q=0.8`                       |
+| User Agent                     | Value                                                                             |
+| ------------------------------ | --------------------------------------------------------------------------------- |
+| Firefox 158 and later [1]      | `image/avif,image/jxl,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5` |
+| Firefox 128 to 157 [1]         | `image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5`           |
+| Firefox 92 to 127 [1]          | `image/avif,image/webp,*/*`                                                       |
+| Firefox 65 to 91 [1]           | `image/webp,*/*`                                                                  |
+| Firefox 47 to 63 [1]           | `*/*`                                                                             |
+| Firefox prior to 47 [1]        | `image/png,image/*;q=0.8,*/*;q=0.5`                                               |
+| Safari (since Mac OS Big Sur)  | `image/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5`        |
+| Safari (before Mac OS Big Sur) | `image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5`                   |
+| Chrome and Edge 121 and later  | `image/avif,image/webp,image/apng,image/*,*/*;q=0.8`                              |
 
 \[1] The value can be set to an arbitrary string using the `image.http.accept` parameter (_[source](https://searchfox.org/firefox-main/search?q=image.http.accept)_).
 
