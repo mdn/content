@@ -62,7 +62,7 @@ The `window-drag` property is a standardized version of the legacy, non-standard
 
 ### PWA custom draggable titlebar
 
-Our [Custom titlebar example](https://mdn.github.io/pwa-examples/custom-titlebar/) ([source code](https://github.com/mdn/pwa-examples/tree/main/custom-titlebar)) demonstrates how create a custom draggable app titlebar. This displays as normal content when the app is being viewed in the browser, but fills the titlebar of the app when installed.
+This example demonstrates how to create a draggable app titlebar that is displayed as normal content when viewed in a browser, but fills the titlebar when installed on the user's device. The live [custom titlebar demo](https://mdn.github.io/pwa-examples/custom-titlebar/) ([source code](https://github.com/mdn/pwa-examples/tree/main/custom-titlebar)) are both available on GitHub.
 
 #### HTML
 
