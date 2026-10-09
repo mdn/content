@@ -45,9 +45,9 @@ The parameters for the older form of `createAnswer()` are described below, to ai
 
 ### Exceptions
 
-- `NotReadableError`
+- `NotReadableError` {{domxref("DOMException")}}
   - : The identity provider wasn't able to provide an identity assertion.
-- `OperationError`
+- `OperationError` {{domxref("DOMException")}}
   - : Generation of the SDP failed for some reason; this is a general failure catch-all exception.
 
 ### Return value

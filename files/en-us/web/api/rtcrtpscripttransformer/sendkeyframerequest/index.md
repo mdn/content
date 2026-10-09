@@ -33,7 +33,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined` once the request is sent,
 
 ### Exceptions
 
-- `InvalidStateError`
+- `InvalidStateError` {{domxref("DOMException")}}
   - : The de-packetizer is not processing video packets, or is `undefined`.
 
 ## Examples
