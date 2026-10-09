@@ -77,13 +77,21 @@ Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### General -->
+#### General
 
-<!-- #### WebDriver BiDi -->
+- Added support for setting the `camera` and `microphone` permissions with the `permissions.setPermission` command in WebDriver BiDi and the `WebDriver:SetPermission` command in Marionette. This allows tests to grant or deny access to media devices without prompting the user. ([Firefox bug 2070577](https://bugzil.la/2070577)).
+- Changed the touch start and touch move tolerances to zero in automation, so that touch actions now scroll from exactly the position at which they are dispatched, without small initial movements being absorbed. ([Firefox bug 2055661](https://bugzil.la/2055661)).
 
-<!-- #### Marionette -->
+#### WebDriver BiDi
+
+- Added support for the `imageSize` argument to the `browsingContext.captureScreenshot` command, which allows clients to specify the maximum size of the resulting screenshot image. ([Firefox bug 2069002](https://bugzil.la/2069002)).
+- Added support for the `destinationFolder` argument to the `browsingContext.startScreencast` command, which allows clients to choose the folder where the recorded video file is saved. ([Firefox bug 2072616](https://bugzil.la/2072616)).
+
+#### Marionette
+
+- Fixed the `WebDriver:TakeScreenshot` command to return an `unable to capture screen` error when the width or height of the captured image is zero. ([Firefox bug 1492357](https://bugzil.la/1492357)).
 
 ### Other
 
