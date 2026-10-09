@@ -67,9 +67,27 @@ Realms differ in their access to the DOM, in their isolation from the page's scr
 | Sandbox realm                | Yes           | Yes                              | Realm ID, or context ID with a sandbox name |
 | Worker or worklet realm      | No            | Yes                              | Realm ID only                               |
 
+## Preload scripts
+
+In WebDriver BiDi, a preload script is a function that runs automatically before a new document's own scripts.
+Registering a preload script does not run it in existing documents.
+
+You can use a preload script to replace or monitor web platform APIs before the page uses them.
+For example, you can monitor calls to {{domxref("Window/fetch", "fetch()")}} to record the requests a page makes through it from its first script onward.
+
+By default, the function runs in the new document's realm.
+You can specify a sandbox name to run it in a [sandbox realm](#sandbox_realms) instead.
+
+## Channels
+
+Preload scripts and functions called with `script.callFunction` can send data to subscribed clients via channels. You configure channels through the `arguments` parameter of [`script.addPreloadScript`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/addPreloadScript) or [`script.callFunction`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/callFunction).
+
 ## Commands
 
+- [`script.addPreloadScript`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/addPreloadScript)
+- [`script.disown`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/disown)
 - [`script.getRealms`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/getRealms)
+- [`script.removePreloadScript`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/removePreloadScript)
 
 ## Events
 

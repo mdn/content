@@ -134,7 +134,13 @@ sidebar:
           - type: section
             link: /Web/WebDriver/Reference/BiDi/Modules/script#commands
             title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/addPreloadScript
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/disown
+            code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/script/getRealms
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/removePreloadScript
             code: true
           - type: section
             link: /Web/WebDriver/Reference/BiDi/Modules/script#events
