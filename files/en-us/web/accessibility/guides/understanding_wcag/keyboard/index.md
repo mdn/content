@@ -14,11 +14,14 @@ If an element can be focused using the keyboard, then it should be interactive; 
 > [!NOTE]
 > One important exception to this rule is if the element has `role="document"` applied to it, **inside** an interactive context (such as `role="application"`). In such a case, focusing the nested document is the only way of returning assistive technology to a non-interactive state (often called "browse mode").
 
-Most interactive elements are focusable by default; you can make an element focusable by adding a `tabindex=0` attribute value to it. However, you should only add `tabindex` if you have also made the element interactive, for example, by defining appropriate event handlers keyboard events.
+Most interactive elements are focusable by default; you can make an element focusable by adding a `tabindex=0` attribute value to it. However, you should only add `tabindex` if you have also made the element interactive, for example, by defining appropriate event handlers for keyboard events.
+
+Keyboard event handlers alone are not always enough. In browse mode, some screen readers intercept keys such as <kbd>Enter</kbd> and <kbd>Space</kbd> and activate the element with a [`click`](/en-US/docs/Web/API/Element/click_event) event instead, so the page never receives the `keydown` or `keyup` events. Touch screen readers activate an element with a double tap, which also fires `click` without any keyboard events. Handle the `click` event as well, or use a native {{HTMLElement("button")}}, which fires `click` when it is activated with <kbd>Enter</kbd> or <kbd>Space</kbd>.
 
 ### See also
 
 - [tabindex](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) global HTML attribute
+- Element: [click event](/en-US/docs/Web/API/Element/click_event)
 - Element: [keydown event](/en-US/docs/Web/API/Element/keydown_event)
 - Element: [keyup event](/en-US/docs/Web/API/Element/keyup_event)
 
