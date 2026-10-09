@@ -48,7 +48,9 @@ Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### HTTP -->
+### HTTP
+
+- The default HTTP [`Accept`](/en-US/docs/Web/HTTP/Reference/Headers/Accept) header for image requests now includes `image/jxl`, following support for the [JPEG XL](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_xl_image) image format. The new value is `image/avif,image/jxl,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5` (see [List of default Accept values](/en-US/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values#values_for_an_image)). ([Firefox bug 2065096](https://bugzil.la/2065096)).
 
 <!-- #### Removals -->
 
@@ -62,7 +64,9 @@ Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The `navigate` option of the {{domxref("Notification.Notification", "Notification()")}} constructor and the {{domxref("ServiceWorkerRegistration.showNotification()")}} method is now supported. This option specifies a URL to navigate to after the user clicks the generated system notification. Once a notification is created, you can retrieve the URL from the {{domxref("Notification.navigate")}} property. ([Firefox bug 2069920](https://bugzil.la/2069920)).
 - The [WebGPU](/en-US/docs/Web/API/WebGPU_API) `float32-blendable` feature is now supported (see {{domxref("GPUSupportedFeatures")}}). This allows [blending](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#blend) of {{domxref("GPUTexture")}}s that use the `r32float`, `rg32float`, or `rgba32float` [`format`](/en-US/docs/Web/API/GPUDevice/createTexture#format). ([Firefox bug 1931630](https://bugzil.la/1931630)).
 
-<!-- #### DOM -->
+#### DOM
+
+- The {{domxref("SVGGraphicsElement.getBBox()")}} method now honors the `fill` and `stroke` properties of its [`options`](/en-US/docs/Web/API/SVGGraphicsElement/getBBox#options) argument when called on {{SVGElement("tspan")}} and {{SVGElement("textPath")}} elements. This allows you to get a bounding box that includes the stroke of a text span, as you already could for a whole {{SVGElement("text")}} element. ([Firefox bug 2072680](https://bugzil.la/2072680)).
 
 <!-- #### Media, WebRTC, and Web Audio -->
 
@@ -79,6 +83,10 @@ Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-
 <!-- #### WebDriver BiDi -->
 
 <!-- #### Marionette -->
+
+### Other
+
+- Support for the [JPEG XL](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_xl_image) image format (`image/jxl`) is now enabled by default. JPEG XL is a royalty-free raster image format that supports lossy and lossless compression, transparency, animation, and HDR. It can also losslessly transcode existing JPEG images. ([Firefox bug 2065096](https://bugzil.la/2065096)).
 
 ## Changes for add-on developers
 
@@ -109,3 +117,8 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   [Speculation rules](/en-US/docs/Web/API/Speculation_Rules_API#browser_compatibility) provides a mechanism to improve performance for future navigations by specifying which resources should be prefetched or prerendered based on factors such as user behavior towards links. Firefox 158 Nightly enables support for [`moderate`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#moderate) eagerness, which indicates that prefetch/prerender should start when there is a reasonable suggestion that the user will follow a link in the near future. For example, the user could scroll a link into the viewport and hover/focus it for some time.
   ([Firefox bug 2061013](https://bugzil.la/2061013)).
+  
+- **Streaming request bodies**: `dom.fetch.streaming_upload`
+
+  Enabled in Nightly only, you can now set a {{domxref("ReadableStream")}} as a request body (for example, via the {{domxref("Request.Request", "Request()")}} constructor or the {{domxref("Window.fetch()")}} method). This allows you to stream uploads incrementally rather than having to wait for the whole body to be available.
+  ([Firefox bug 1594633](https://bugzil.la/1594633)).

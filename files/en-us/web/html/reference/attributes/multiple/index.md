@@ -89,7 +89,7 @@ Multiple selected options are submitted using the {{domxref("URLSearchParams")}}
 
 Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the `multiple` attribute, inform the user that multiple values are allowed and provide directions on how to provide multiple values, such as "separate email addresses with a comma."
 
-Setting `size="1"` on a multiple select can make it appear as a single select in some browsers, but then it doesn't expand on focus, harming usability. Don't do that. If you do change the appearance of a select, and even if you don't, make sure to inform the user that more than one option can be selected by another method.
+Setting `size="1"` on a multiple select (i.e., `<select multiple size="1">`) renders a drop-down that lets users select multiple options. Some browsers don't expand the option list when the control is active, displaying multiple options in a menu list the height of a single-line box. This harms usability. When including a multiple-select, inform users they can select more than one option, even when multiple options are displayed.
 
 ## Examples
 
