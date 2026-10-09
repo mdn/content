@@ -12,7 +12,9 @@ This document describes visual patterns that can induce physical symptoms in peo
 
 NASA conducted research on the perception of color, and found that luminance contrast mattered greatly as to how colors are perceived. The two images below are from NASA research, specifically, from the article, "[Designing With Blue](https://web.archive.org/web/20250216024807/https://colorusage.arc.nasa.gov/blue_2.php)"
 
-![Comparison of the stability of the spatial localization of yellow vs. red. Both are roughly isoluminant with their backgrounds. The misalignment and gap between the chromatic bars and black bars is physically the same for the yellow and red but much less visually obvious for the yellow.](yellow_edge_3.gif) ![Comparison of the stability of the spatial localization of yellow vs. red. Both are roughly isoluminant with their backgrounds. The misalignment and gap between the chromatic bars and black bars is physically the same for the yellow and red but much less visually obvious for the yellow.](yellow_edge_4.gif)
+![Yellow and black vertical bars on a white background.](yellow_edge_3.gif) ![Red and black vertical bars on a gray background.](yellow_edge_4.gif)
+
+Comparison of the stability of the spatial localization of yellow vs. red. Both are roughly isoluminant with their backgrounds. The misalignment and gap between the chromatic bars and black bars is physically the same for the yellow and red but much less visually obvious for the yellow.
 
 > **Spatial Localization.** Symbols which have the same luminance as their background are perceptually less securely located in space and time than are symbols with higher luminance contrast. They tend to "float" visually or be "captured" by adjacent symbols with high luminance-contrast. The phenomenon seems to be especially problematic for symbol/background combinations that differ only in the blue channel.
 
