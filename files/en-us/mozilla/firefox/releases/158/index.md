@@ -64,6 +64,7 @@ Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The `navigate` option of the {{domxref("Notification.Notification", "Notification()")}} constructor and the {{domxref("ServiceWorkerRegistration.showNotification()")}} method is now supported. This option specifies a URL to navigate to after the user clicks the generated system notification. Once a notification is created, you can retrieve the URL from the {{domxref("Notification.navigate")}} property. ([Firefox bug 2069920](https://bugzil.la/2069920)).
 - The [WebGPU](/en-US/docs/Web/API/WebGPU_API) `float32-blendable` feature is now supported (see {{domxref("GPUSupportedFeatures")}}). This allows [blending](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#blend) of {{domxref("GPUTexture")}}s that use the `r32float`, `rg32float`, or `rgba32float` [`format`](/en-US/docs/Web/API/GPUDevice/createTexture#format). ([Firefox bug 1931630](https://bugzil.la/1931630)).
 - The {{domxref("PerformanceResourceTiming.deliveryType")}} property is now supported, which indicates how a resource was delivered; for example, whether it came from the cache. ([Firefox bug 1914120](https://bugzil.la/1914120)).
+- The {{domxref("WebTransport.supportsReliableOnly_static", "WebTransport.supportsReliableOnly")}} static property is now supported. This property indicates whether the browser supports [WebTransport](/en-US/docs/Web/API/WebTransport_API) sessions over exclusively reliable transports. ([Firefox bug 1914120](https://bugzil.la/1914120)).
 
 #### DOM
 
