@@ -20,6 +20,8 @@ Server on a remote device.
     physically connected.
 - {{DOMxRef("BluetoothRemoteGATTServer.device")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A reference to the {{DOMxRef("BluetoothDevice")}} running the server.
+- {{DOMxRef("BluetoothRemoteGATTServer.maxWriteWithoutResponseSize")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : The largest payload a write without response can send in a single ATT packet for the current connection.
 
 ## Instance methods
 
@@ -33,6 +35,11 @@ Server on a remote device.
 - {{DOMxRef("BluetoothRemoteGATTServer.getPrimaryServices()")}} {{Experimental_Inline}}
   - : Returns a promise to a list of primary {{DOMxRef("BluetoothRemoteGATTService")}} objects
     offered by the Bluetooth device for a specified `BluetoothServiceUUID`.
+
+## Events
+
+- {{DOMxRef("BluetoothRemoteGATTServer.maxwritewithoutresponsesizechanged_event", "maxwritewithoutresponsesizechanged")}} {{Experimental_Inline}}
+  - : Fired when the known maximum write-without-response payload size changes.
 
 ## Specifications
 
