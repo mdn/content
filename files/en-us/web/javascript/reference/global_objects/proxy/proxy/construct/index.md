@@ -19,7 +19,7 @@ function Monster(disposition) {
 const handler = {
   construct(target, args) {
     console.log(`Creating a ${target.name}`);
-    // Expected output: "Creating a monster"
+    // Expected output: "Creating a Monster"
 
     return new target(...args);
   },
