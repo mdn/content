@@ -22,7 +22,7 @@ This dictionary extends the {{domxref("RequestInit")}} dictionary with the addit
 
 ### Exceptions
 
-- `RangeError` {{domxref("DOMException")}}
+- {{jsxref("RangeError")}}
   - : Raised when a negative `activateAfter` is provided.
 
 ## Examples

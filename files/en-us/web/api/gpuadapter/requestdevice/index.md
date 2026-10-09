@@ -47,7 +47,7 @@ If you make a duplicate call, i.e., call `requestDevice()` on a {{domxref("GPUAd
   - : The promise rejects with an `OperationError` if either:
     - The limits included in the `requiredLimits` property are not supported by the {{domxref("GPUAdapter")}}, either because they are not valid limits, or because their values are higher than the adapter's values for those limits.
     - The `GPUAdapter` has been consumed by having `requestDevice()` called on it previously.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : The promise rejects with a `TypeError` if the features included in the `requiredFeatures` property are not supported by the {{domxref("GPUAdapter")}}.
 
 ## Examples
