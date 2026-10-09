@@ -72,7 +72,7 @@ The `params` field contains:
     The browser converts each object into a JavaScript value before calling the function.
     If omitted, the function is called without arguments.
 
-    To describe a primitive or structured JavaScript value or configure a channel for sending messages to the client, the object uses a combination of `type` and the optional `value` fields.
+    To describe a primitive or structured JavaScript value or configure a [channel](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#channels) for sending messages to the client, the object uses a combination of `type` and the optional `value` fields.
     The `value` field's format depends on the `type` field.
     To refer to an existing JavaScript object or a DOM node, the object uses the `handle` or `sharedId` field instead.
 
