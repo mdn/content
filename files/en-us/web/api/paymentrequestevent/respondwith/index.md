@@ -31,6 +31,19 @@ respondWith(promise)
 
 None ({{jsxref("undefined")}}).
 
+### Exceptions
+
+The following exceptions can be returned when the {{jsxref("Promise")}} rejects.
+
+- `AbortError` {{domxref("DOMException")}}
+  - : Returned if the user cancels the payment request.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the same payment has
+    already been shown for this request (its state is `interactive` because it
+    is being shown already).
+- `OperationError` {{domxref("DOMException")}}
+  - : Returned to indicate an internal error in the underlying app that is handling the payment.
+
 ## Examples
 
 The example below is taken from [Open the payment handler window to display the web-based payment app frontend](https://web.dev/articles/orchestrating-payment-transactions#open-payment-handler-window). Read the article to understand the context of the code.
