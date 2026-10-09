@@ -42,12 +42,13 @@ The `params` field contains:
     - `true`: The context is created in the background. See [`browsingContext.activate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/activate) to bring it to the foreground and give it focus.
 - `referenceContext` {{optional_inline}}
   - : A string that contains the ID of an existing [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) that is used to position the new context.
-    Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 
     When `type` is `"tab"`, the new context opens in the same window as the context specified by `referenceContext`.
     If `type` is `"window"` or `referenceContext` is omitted, the browser determines where the new context appears.
 
     The new context inherits the [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) of the specified reference context, unless `userContext` is explicitly specified.
+
+    Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 
 - `type`
   - : A string that specifies the type of the context that is created.
@@ -57,9 +58,10 @@ The `params` field contains:
     - `"window"`: Creates the context in a new browser window.
 - `userContext` {{optional_inline}}
   - : A string that contains the ID of the [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) in which the context is created.
-    User context IDs are returned by [`browser.getUserContexts`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/getUserContexts) or [`browser.createUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext).
 
     If not specified, the new context uses the `"default"` user context or inherits the user context of `referenceContext` if provided.
+
+    User context IDs are returned by [`browser.getUserContexts`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/getUserContexts) or [`browser.createUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext).
 
 ### Return value
 
