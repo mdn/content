@@ -55,7 +55,7 @@ A {{jsxref("Promise")}} that fulfills with a {{domxref("Window")}} object instan
     - `requestWindow()` is not called from a top-level `window` object.
     - `requestWindow()` is called from the `window` object of the Picture-in-Picture window (i.e., {{domxref("DocumentPictureInPicture.window")}}).
     - `requestWindow()` is called without {{Glossary("Transient_activation", "transient activation")}}.
-- `RangeError` {{domxref("DOMException")}}
+- {{jsxref("RangeError")}}
   - : Thrown if only one of `height` and `width` are set, or if `height` and `width` are set with negative values.
 
 ## Examples
