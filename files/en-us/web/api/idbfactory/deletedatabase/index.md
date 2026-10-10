@@ -57,6 +57,8 @@ db.addEventListener("versionchange", () => {
 });
 ```
 
+While the deletion is blocked, connections that are still open keep working as normal: they can still run transactions until they are closed. Any later {{domxref("IDBFactory.open()", "open()")}} or `deleteDatabase()` request for the same database is queued behind the pending deletion, and only proceeds once the deletion has completed.
+
 ## Examples
 
 ### Basic usage
@@ -74,6 +76,26 @@ dbDeleteRequest.onsuccess = (event) => {
   console.log(dbDeleteRequest.result); // undefined
 };
 ```
+
+### Handling a blocked deletion
+
+If another connection to the database is still open, for example in another tab, the deletion waits and a `blocked` event fires. This example tells the user what is happening, then reports when the deletion has gone through.
+
+```js
+const dbDeleteRequest = indexedDB.deleteDatabase("toDoList");
+
+dbDeleteRequest.onblocked = (event) => {
+  console.warn(
+    "Deletion is blocked: close other tabs that have this app open to continue.",
+  );
+};
+
+dbDeleteRequest.onsuccess = (event) => {
+  console.log("Database deleted successfully");
+};
+```
+
+In the other tabs, closing the connection in a `versionchange` handler, as shown in the [Description](#description), lets the deletion proceed without the user having to do anything.
 
 ## Specifications
 
