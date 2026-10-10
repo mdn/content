@@ -21,7 +21,7 @@ You can define your own named counters, and you can also manipulate the `list-it
 
 ## Using counters
 
-To use a counter it must first be initialized to a value with the {{cssxref("counter-reset")}} property.
+To use a counter, it must first be initialized to a value with the {{cssxref("counter-reset")}} property.
 The counter's value can be increased or decreased using the {{cssxref("counter-increment")}} property and can be directly set to a specific value using the {{cssxref("counter-set")}} property.
 The current value of a counter is displayed using the {{cssxref("counter()")}} or {{cssxref("counters()")}} function, typically within a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) {{CSSxRef("content")}} property.
 
@@ -49,11 +49,11 @@ counter-reset: section page 3 topic;
 ```
 
 Once initialized, a counter's value can be increased or decreased using {{cssxref("counter-increment")}}.
-For example, the following declaration would increment the `section` counter by one on every `h3` tag.
+For example, the following declaration increments the value of the `section` counter by `1` on every `<h3>`:
 
 ```css
-h3::before {
-  counter-increment: section; /* Increment the value of section counter by 1 */
+h3 {
+  counter-increment: section;
 }
 ```
 
@@ -62,7 +62,7 @@ You can specify the increment or decrement amount after the counter name. It can
 Apart from being incremented or decremented, counters can also be explicitly set to a value using the {{cssxref("counter-set")}} property.
 
 ```css
-.done::before {
+.done {
   counter-set: section 20;
 }
 ```
@@ -75,14 +75,19 @@ The value of a counter can be displayed using either the {{cssxref("counter()")}
 
 For example, the following declaration uses `counter()` to prefix each `h3` heading with the text `Section <number>:`, where `<number>` is the value of the count in decimal (the default display style):
 
+This creates a counter on the {{htmlelement("body")}} named 'section', and sets its initial value is 0, increments the value of section counter by 1 on every `<h3>`, printing `Section <n>:` before the content of each `<h3>`, where `<n>` is the default decimal value of the `section` counter.
+
 ```css
 body {
-  counter-reset: section; /* Set a counter named 'section', and its initial value is 0. */
+  counter-reset: section;
+}
+
+h3 {
+  counter-increment: section;
 }
 
 h3::before {
-  counter-increment: section; /* Increment the value of section counter by 1 */
-  content: "Section " counter(section) ": "; /* Display counter value in default style (decimal) */
+  content: "Section " counter(section) ": ";
 }
 ```
 
@@ -123,7 +128,7 @@ The generated text is the value of all counters with the given name in scope at 
 The counter is rendered in the specified `<counter-style>` for both methods (`decimal` by default).
 You can use any of the {{cssxref("list-style-type")}} values or your own [custom styles](/en-US/docs/Web/CSS/Guides/Counter_styles).
 
-Examples showing the use of `counter()` and `counters()` are given below in the [basic example](#basic_example) and [Example of a nested counter](#example_of_a_nested_counter), respectively.
+Examples showing the use of `counter()` and `counters()` are given below in the [basic example](#basic_example) and [Example of a nested counter](#nested_counters), respectively.
 
 ### Reversed counters
 
@@ -139,7 +144,7 @@ For example, to create a reversed counter named `section` with a default initial
 counter-reset: reversed(section);
 ```
 
-You can of course specify any initial value that you like.
+You can, of course, specify any initial value that you like.
 
 The counter value is decreased by specifying a negative value for {{cssxref("counter-increment")}}.
 
@@ -151,11 +156,11 @@ The counter value is decreased by specifying a negative value for {{cssxref("cou
 
 Each element or pseudo-element has a set of counters in the scope of that element. Initial counters in the set are received from the element's parent and the preceding sibling. The counter values are received from the last descendant of the previous sibling, the last sibling, or the parent.
 
-When an element declares a counter, the counter is nested inside the counter with the same name received from the parent. If the parent doesn't have a counter with the same name then the counter is added to the element's counters set as it is. A counter with the same name received from the previous sibling is removed from the counters set.
+When an element declares a counter, the counter is nested inside the counter with the same name received from the parent. If the parent doesn't have a counter with the same name, then the counter is added to the element's counters set as it is. A counter with the same name received from the previous sibling is removed from the counters set.
 
-The {{cssxref("counter()")}} function retrieves the innermost counter with the provided name. And the {{cssxref("counters()")}} function retrieves the entire counter tree with the given name.
+The {{cssxref("counter()")}} function retrieves the innermost counter with the provided name. The {{cssxref("counters()")}} function retrieves the entire counter tree with the given name.
 
-In the following example, we are demoing an inherited counter named `primary` and a sibling counter named `secondary`. All the `<div>` elements display their counters using the `counters()` function. Note that all the counters have been created using `counter-reset` property, and none of the counters have been incremented.
+The following example demonstrates an inherited counter named `primary` and a sibling counter named `secondary`. All the `<div>` elements display their counters using the `counters()` function. Note that all the counters have been created using the `counter-reset` property, and none of the counters have been incremented.
 
 ```html
 <section>
@@ -191,8 +196,9 @@ In the following example, we are demoing an inherited counter named `primary` an
 }
 ```
 
+We create the `primary` counter on divs' parent, then create a new `primary` counter on `D`. We create the `secondary` counter on `F`, then override the sibling `secondary` counter on `I`.
+
 ```css
-/* create 'primary' counter on divs' parent */
 section {
   counter-reset: primary 3;
 }
@@ -203,17 +209,14 @@ div::after {
   color: blue;
 }
 
-/* create new 'primary' counter */
 .same-primary-name {
   counter-reset: primary 6;
 }
 
-/* create 'secondary' counter on div 'F' */
 .new-secondary-name {
   counter-reset: secondary 5;
 }
 
-/* override the sibling 'secondary' counter */
 .same-secondary-name {
   counter-reset: secondary 10;
 }
@@ -227,7 +230,7 @@ The element 'F' creates the `secondary` (value `5`) counter for the first time, 
 
 ### Difference between counter-set and counter-reset
 
-The {{cssxref("counter-set")}} property updates an existing counter and if no counter with the name exists then a new counter is instantiated. The {{cssxref("counter-reset")}} property _always_ creates a new counter.
+The {{cssxref("counter-set")}} property updates an existing counter and, if no counter with the name exists, then a new counter is instantiated. The {{cssxref("counter-reset")}} property _always_ creates a new counter.
 
 In the following example, we have two sub-lists inside a parent list. Each list item has been numbered using a counter named 'item'. The first sub-list uses {{cssxref("counter-set")}} property and the second sub-list uses {{cssxref("counter-reset")}} property to change the 'item' counter.
 
@@ -262,28 +265,25 @@ ul {
 }
 ```
 
+We create a new counter on `parent` and increment it on each list item, then show the numbers on the list items using generated content. We update the existing counter value with `counter-set`, then reset it with `counter-reset` on `.sub-list-one` and `.sub-list-two`, respectively.
+
 ```css
-/* create a new counter for the first time */
 .parent {
   counter-reset: item 0;
 }
 
-/* increment the counter on each list item */
 li {
   counter-increment: item;
 }
 
-/* show numbers on list items */
 li::before {
   content: counter(item) " ";
 }
 
-/* change the existing counter value */
 .sub-list-one {
   counter-set: item 10;
 }
 
-/* change the counter value */
 .sub-list-two {
   counter-reset: item 0;
 }
@@ -291,7 +291,7 @@ li::before {
 
 {{EmbedLiveSample("Difference between counter-set and counter-reset", "100%", 300)}}
 
-Notice how the first sub-list items start receiving numbers from `11`, and the numbering is continued in the parent list. This is because the `counter-set` property updates the same 'item' counter declared on the `.parent` element. Then notice how the second sub-list items receive new numbering starting from '1' and the parent list items after it don't carry forward the numbering. This is because the `counter-reset` property created a new counter with the same name so the parent list items kept using the old counter.
+Notice how the first sub-list items start at `11`, and the numbering continues in the parent list. This is because the `counter-set` property updates the same 'item' counter declared on the `.parent` element. Then notice how the second sub-list items receive new numbering starting from `1` and the parent list items after it don't carry forward the numbering. This is because the `counter-reset` property created a new counter with the same name, so the parent list items kept using the old counter.
 
 ### List item counters
 
@@ -300,7 +300,7 @@ Ordered lists, as created using {{HTMLElement("ol")}} elements, implicitly have 
 Like other counters, this has a default initial value of 0 for upward counters and "number of items" for reversed counters.
 Unlike author-created counters, `list-item` _automatically_ increments or decrements by one for each list element, depending on whether or not the counter is reversed.
 
-The `list-item` counter can be used to manipulate the default behavior of ordered lists using CSS.
+You can use the `list-item` counter to manipulate the default behavior of ordered lists with CSS.
 For example, you can change the default initial value, or use {{cssxref("counter-increment")}} to change the way in which the list items increment or decrement.
 
 ## Examples
@@ -309,75 +309,98 @@ For example, you can change the default initial value, or use {{cssxref("counter
 
 This example adds "Section \[the value of the counter]:" to the beginning of each heading.
 
-#### CSS
-
-```css
-body {
-  counter-reset: section; /* Set a counter named 'section', and its initial value is 0. */
-}
-
-h3::before {
-  counter-increment: section; /* Increment the value of section counter by 1 */
-  content: "Section " counter(section) ": "; /* Display the word 'Section ', the value of
-                                                section counter, and a colon before the content
-                                                of each h3 */
-}
-```
-
 #### HTML
+
+We include three `<h3>` elements.
 
 ```html
 <h3>Introduction</h3>
 <h3>Body</h3>
 <h3>Conclusion</h3>
+```
+
+#### CSS
+
+We create a counter named 'section', letting its initial value default to `0`. We increment the value of `section` counter by `1` at each `<h3>` and display the word "Section", the value of `section` counter, and a colon before the content of each `<h3>`.
+
+```css
+body {
+  counter-reset: section;
+}
+
+h3::before {
+  counter-increment: section;
+}
+h3::before {
+  content: "Section " counter(section) ": ";
+}
 ```
 
 #### Result
 
 {{EmbedLiveSample("Basic_example", "100%", 150)}}
 
-### Basic example: reversed counter
+### Reversed counter
 
-This example is the same as the one above but uses a reversed counter.
-If your browser supports the `reversed()` function notation, the result will look like this:
+This example uses the same HTML as the previous example but uses a reversed counter, numbering the elements from 3 to 1.
 
-![reversed counter](reversed_headings_basic.png)
-
-#### CSS
-
-```css
-body {
-  counter-reset: reversed(
-    section
-  ); /* Set a counter named 'section', and its initial value is 0. */
-}
-
-h3::before {
-  counter-increment: section -1; /* Decrement the value of section counter by 1 */
-  content: "Section " counter(section) ": "; /* Display the word 'Section ', the value of
-                                                section counter, and a colon before the content
-                                                of each h3 */
-}
-```
-
-#### HTML
-
-```html
+```html hidden
 <h3>Introduction</h3>
 <h3>Body</h3>
 <h3>Conclusion</h3>
 ```
 
+#### CSS
+
+We use the `reversed()` function to create a counter named 'section', letting the initial value default so that when we decrement the value of `section` counter by `1` on each `<h3>`, the last element in the set will have the counter set to `1`. We use [generated content](/en-US/docs/Web/CSS/Guides/Generated_content) to display the word 'Section ' and the value of the counter before the content of each `<h3>`.
+
+```css
+body {
+  counter-reset: reversed(section);
+}
+
+h3::before {
+  counter-increment: section -1;
+}
+h3::before {
+  content: "Section " counter(section) ": ";
+}
+```
+
+```css hidden
+@supports not (counter-reset: reversed(section)) {
+  body::before {
+    content: "Your browser doesn't support the reversed() function.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+```
+
 #### Result
 
-{{EmbedLiveSample("Basic example: reversed counter", "100%", 150)}}
+{{EmbedLiveSample("Reversed counter", "100%", 150)}}
 
 ### A more sophisticated example
 
 A counter need not necessarily be shown every time it is incremented.
-This example counts all links with the counter showing only when a link has no text, as a convenient replacement.
+This example counts all links but shows the counter as generated content only when a link has no text.
+
+#### HTML
+
+We included three paragraphs, each with a link, but the last link contains no text.
+
+```html
+<p>See <a href="https://www.mozilla.org/" aria-label="Mozilla"></a></p>
+<p>Do not forget to <a href="contact-me.html">leave a message</a>!</p>
+<p>See also <a href="https://developer.mozilla.org/" aria-label="MDN"></a></p>
+```
 
 #### CSS
+
+We create and initialize the counter on `:root`, increment it on every link, and generate content only when the link is {{cssxref(":empty")}}.
 
 ```css
 :root {
@@ -393,39 +416,31 @@ a[href]:empty::after {
 }
 ```
 
-#### HTML
-
-```html
-<p>See <a href="https://www.mozilla.org/" aria-label="Mozilla"></a></p>
-<p>Do not forget to <a href="contact-me.html">leave a message</a>!</p>
-<p>See also <a href="https://developer.mozilla.org/" aria-label="MDN"></a></p>
-```
-
 #### Result
 
 {{EmbedLiveSample("A_more_sophisticated_example", "100%", 150)}}
 
-### Example of a nested counter
+### Nested counters
 
 A CSS counter can be especially useful for making outlined lists, because a new instance of the counter is automatically created in child elements.
 Using the {{cssxref("counters()")}} function, separating text can be inserted between different levels of nested counters.
 
 #### CSS
 
+We create a new instance of the section counter with each `<ol>` element, incrementing only the current instance of the section counter on each `<li>`. Using the {{cssxref("counters()")}} function, we combine the values of all instances of the section counter, separated by a period.
+
 ```css
 ol {
-  counter-reset: section; /* Creates a new instance of the
-                             section counter with each ol
-                             element */
+  counter-reset: section;
   list-style-type: none;
 }
 
+li {
+  counter-increment: section;
+}
+
 li::before {
-  counter-increment: section; /* Increments only this instance
-                                            of the section counter */
-  content: counters(section, ".") " "; /* Combines the values of all instances
-                                          of the section counter, separated
-                                          by a period */
+  content: counters(section, ".") " ";
 }
 ```
 
