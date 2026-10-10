@@ -127,8 +127,8 @@ First we start with the HTML portion of the example.
 <table id="producttable">
   <thead>
     <tr>
-      <td>UPC_Code</td>
-      <td>Product_Name</td>
+      <th>UPC_Code</th>
+      <th>Product_Name</th>
     </tr>
   </thead>
   <tbody>
