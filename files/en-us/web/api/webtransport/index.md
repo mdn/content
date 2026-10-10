@@ -51,7 +51,7 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
 - {{domxref("WebTransport.exportKeyingMaterial", "exportKeyingMaterial()")}} {{experimental_inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with keying material derived from the TLS session underlying the connection.
 - {{domxref("WebTransport.getStats", "getStats()")}}
-  - : Returns a {{jsxref("Promise")}} that fulfills with an object containing HTTP/3 connection statistics.
+  - : Returns a {{jsxref("Promise")}} that fulfills with an object containing statistics for the transport's underlying connection.
 
 ## Examples
 
