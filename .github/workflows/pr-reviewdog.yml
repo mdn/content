@@ -3,9 +3,13 @@ name: PR Reviewdog
 on:
   workflow_run:
     workflows:
-      - "Lint content"
+      - "PR checks"
     types:
-      - completed
+      - in_progress
+
+# `in_progress` can fire more than once per run.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.workflow_run.id }}-${{ github.event.workflow_run.run_attempt }}
 
 permissions:
   # Download artifact from lint workflow.
@@ -46,23 +50,76 @@ jobs:
             --jq "[.[] | select(.base.repo.full_name == \"$BASE_REPO\" and .head.sha == \"$HEAD_SHA\") | .number] | first // empty")
           echo "number=$PR_NUMBER" >> $GITHUB_OUTPUT
 
-      - name: Download artifact
+      - name: Wait for lint results
+        id: wait
         if: steps.identify-pr.outputs.number
-        continue-on-error: true
+        shell: bash
+        timeout-minutes: 11
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN_PATH: repos/${{ github.repository }}/actions/runs/${{ github.event.workflow_run.id }}
+          RUN_ATTEMPT: ${{ github.event.workflow_run.run_attempt }}
+        run: |
+          deadline=$((SECONDS + 600))
+          # The lint job usually finishes within 30 seconds of the run starting.
+          sleep 30
+          while ((SECONDS < deadline)); do
+            workflow_run=$(gh api "$RUN_PATH")
+            if jq -e --argjson attempt "$RUN_ATTEMPT" \
+              '.run_attempt != $attempt or .conclusion == "cancelled"' <<< "$workflow_run" > /dev/null; then
+              echo "Workflow run was cancelled or re-run."
+              exit 0
+            fi
+
+            # A skipped reusable workflow is listed under the caller job id alone.
+            lint_job=$(gh api "$RUN_PATH/attempts/$RUN_ATTEMPT/jobs?per_page=100" --paginate | \
+              jq -scr '[.[].jobs[] | select(.name == "content / lint" or .name == "content")] | first // empty')
+            if [[ -n "$lint_job" ]]; then
+              lint_started_at=$(jq -r '.started_at // empty' <<< "$lint_job")
+              if [[ -n "$lint_started_at" ]] && ! jq -e '.conclusion == "skipped"' <<< "$lint_job" > /dev/null; then
+                # Earlier attempts can leave artifacts under the same run ID.
+                artifact_id=$(gh api "$RUN_PATH/artifacts?per_page=100" --paginate | \
+                  jq -sr --arg started_at "$lint_started_at" \
+                    '[.[].artifacts[] | select(.name == "lint-results" and .expired == false and .created_at >= $started_at)] | first.id // empty')
+                if [[ -n "$artifact_id" ]]; then
+                  echo "artifact_id=$artifact_id" >> "$GITHUB_OUTPUT"
+                  exit 0
+                fi
+              fi
+
+              if jq -e '.status == "completed"' <<< "$lint_job" > /dev/null; then
+                echo "Lint job finished without an artifact."
+                exit 0
+              fi
+            fi
+
+            if jq -e '.status == "completed"' <<< "$workflow_run" > /dev/null; then
+              echo "Workflow run finished without lint results."
+              exit 0
+            fi
+            sleep 15
+          done
+          echo "::warning::Timed out waiting for lint results."
+          exit 0
+
+      - name: Download artifact
+        if: steps.wait.outputs.artifact_id
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
-          name: lint-results
+          artifact-ids: ${{ steps.wait.outputs.artifact_id }}
+          # Without this, `artifact-ids` nests the files under `lint-results/lint-results/`.
+          merge-multiple: true
           path: lint-results
           github-token: ${{ secrets.GITHUB_TOKEN }}
           run-id: ${{ github.event.workflow_run.id }}
 
       - name: Check for artifact
         id: check
-        if: steps.identify-pr.outputs.number && hashFiles('lint-results/') != ''
+        if: steps.wait.outputs.artifact_id && hashFiles('lint-results/') != ''
         run: echo "HAS_ARTIFACT=true" >> "$GITHUB_OUTPUT"
 
       - name: Checkout
-        if: steps.identify-pr.outputs.number
+        if: steps.check.outputs.HAS_ARTIFACT == 'true'
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           path: mdn-content
