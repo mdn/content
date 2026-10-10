@@ -3,6 +3,7 @@ title: Performance APIs
 slug: Web/API/Performance_API
 page-type: web-api-overview
 spec-urls:
+  - https://wicg.github.io/container-timing/
   - https://wicg.github.io/element-timing/
   - https://w3c.github.io/event-timing/
   - https://w3c.github.io/hr-time/
@@ -62,7 +63,7 @@ The following interfaces are present in the Performance API:
   - : Provides report data containing reasons why the current document was blocked from using the back/forward cache ({{Glossary("bfcache")}}) on navigation. This is available through {{domxref("PerformanceNavigationTiming")}} entries.
 - {{domxref("Performance")}}
   - : Main interface to access performance measurements. Available to window and worker contexts using {{domxref("Window.performance")}} or {{domxref("WorkerGlobalScope.performance")}}.
-- `PerformanceContainerTiming` {{ experimental_inline }}
+- {{domxref("PerformanceContainerTiming")}} {{Experimental_Inline}}
   - : Measures rendering timestamps of specific containers of multiple elements.
 - {{domxref("PerformanceElementTiming")}} {{Experimental_Inline}}
   - : Measures rendering timestamps of specific elements.

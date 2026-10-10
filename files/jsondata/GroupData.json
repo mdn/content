@@ -1247,6 +1247,7 @@
         "NotRestoredReasons",
         "NotRestoredReasonDetails",
         "Performance",
+        "PerformanceContainerTiming",
         "PerformanceEntry",
         "PerformanceElementTiming",
         "PerformanceEventTiming",
