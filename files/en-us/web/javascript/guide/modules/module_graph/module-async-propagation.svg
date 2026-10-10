@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1110 515" role="img" aria-labelledby="title description">
+  <title id="title">Top-level await affects transitive importers</title>
+  <desc id="description">App imports Router, Dashboard, Editor, and Help. Router imports Auth and Routes; Dashboard imports Auth, Reports, and Charts; Editor imports Documents and Toolbar; Help imports Markdown. Auth imports Config and Tokens; Reports imports Database and Format; Documents imports Database and Markdown; Charts imports Format; Toolbar imports Icons; Markdown and Routes import Format. Config imports Parse; Database imports Parse and Codec; Tokens imports Codec. Config and Database contain top-level await, shown in dark teal. Their transitive importers App, Router, Dashboard, Editor, Auth, Reports, and Documents are light teal. The remaining modules have synchronous dependency subgraphs and are gray.</desc>
+  <style>
+    text { fill: #6b7280; font-family: Menlo, Consolas, monospace; font-size: 14px; }
+    .node { fill: #f5f5f5; stroke: #808080; }
+    .dependent { fill: #e0f2ef; stroke: #08827e; }
+    .async { fill: #08827e; stroke: #08827e; }
+    .edge { fill: none; stroke: #808080; marker-end: url(#arrow); }
+    .label { text-anchor: middle; dominant-baseline: middle; }
+    .async-label { fill: white; font-weight: bold; }
+    .legend { font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#808080"/>
+    </marker>
+  </defs>
+  <path class="edge" d="M 555 54 L 210 106"/>
+  <path class="edge" d="M 555 54 L 440 106"/>
+  <path class="edge" d="M 555 54 L 730 106"/>
+  <path class="edge" d="M 555 54 L 1000 106"/>
+  <path class="edge" d="M 210 144 L 230 206"/>
+  <path class="edge" d="M 210 144 L 80 206"/>
+  <path class="edge" d="M 440 144 L 230 206"/>
+  <path class="edge" d="M 440 144 L 380 206"/>
+  <path class="edge" d="M 440 144 L 530 206"/>
+  <path class="edge" d="M 730 144 L 680 206"/>
+  <path class="edge" d="M 730 144 L 830 206"/>
+  <path class="edge" d="M 1000 144 L 1000 206"/>
+  <path class="edge" d="M 230 244 L 160 306"/>
+  <path class="edge" d="M 230 244 L 310 306"/>
+  <path class="edge" d="M 380 244 L 580 306"/>
+  <path class="edge" d="M 380 244 V 290 H 975 V 306"/>
+  <path class="edge" d="M 680 244 L 580 306"/>
+  <path class="edge" d="M 710 206 V 184 H 970 V 206"/>
+  <path class="edge" d="M 530 244 V 302 H 987 V 306"/>
+  <path class="edge" d="M 830 244 L 830 306"/>
+  <path class="edge" d="M 1000 244 L 1000 306"/>
+  <path class="edge" d="M 80 244 V 275 H 1068 V 325 H 1056"/>
+  <path class="edge" d="M 160 344 L 300 406"/>
+  <path class="edge" d="M 580 344 L 300 406"/>
+  <path class="edge" d="M 580 344 L 520 406"/>
+  <path class="edge" d="M 310 344 L 520 406"/>
+  <rect class="dependent" x="499" y="16" width="112" height="38"/>
+  <text class="label" x="555" y="36">App</text>
+  <rect class="dependent" x="154" y="106" width="112" height="38"/>
+  <text class="label" x="210" y="126">Router</text>
+  <rect class="dependent" x="384" y="106" width="112" height="38"/>
+  <text class="label" x="440" y="126">Dashboard</text>
+  <rect class="dependent" x="674" y="106" width="112" height="38"/>
+  <text class="label" x="730" y="126">Editor</text>
+  <rect class="node" x="944" y="106" width="112" height="38"/>
+  <text class="label" x="1000" y="126">Help</text>
+  <rect class="node" x="24" y="206" width="112" height="38"/>
+  <text class="label" x="80" y="226">Routes</text>
+  <rect class="dependent" x="174" y="206" width="112" height="38"/>
+  <text class="label" x="230" y="226">Auth</text>
+  <rect class="dependent" x="324" y="206" width="112" height="38"/>
+  <text class="label" x="380" y="226">Reports</text>
+  <rect class="node" x="474" y="206" width="112" height="38"/>
+  <text class="label" x="530" y="226">Charts</text>
+  <rect class="dependent" x="624" y="206" width="112" height="38"/>
+  <text class="label" x="680" y="226">Documents</text>
+  <rect class="node" x="774" y="206" width="112" height="38"/>
+  <text class="label" x="830" y="226">Toolbar</text>
+  <rect class="node" x="944" y="206" width="112" height="38"/>
+  <text class="label" x="1000" y="226">Markdown</text>
+  <rect class="async" x="104" y="306" width="112" height="38"/>
+  <text class="label async-label" x="160" y="326">Config</text>
+  <rect class="node" x="254" y="306" width="112" height="38"/>
+  <text class="label" x="310" y="326">Tokens</text>
+  <rect class="async" x="524" y="306" width="112" height="38"/>
+  <text class="label async-label" x="580" y="326">Database</text>
+  <rect class="node" x="774" y="306" width="112" height="38"/>
+  <text class="label" x="830" y="326">Icons</text>
+  <rect class="node" x="944" y="306" width="112" height="38"/>
+  <text class="label" x="1000" y="326">Format</text>
+  <rect class="node" x="244" y="406" width="112" height="38"/>
+  <text class="label" x="300" y="426">Parse</text>
+  <rect class="node" x="464" y="406" width="112" height="38"/>
+  <text class="label" x="520" y="426">Codec</text>
+  <rect class="async" x="150" y="483" width="14" height="14"/>
+  <text class="legend" x="172" y="495">Contains top-level await</text>
+  <rect class="dependent" x="440" y="483" width="14" height="14"/>
+  <text class="legend" x="462" y="495">Depends on top-level await</text>
+  <rect class="node" x="750" y="483" width="14" height="14"/>
+  <text class="legend" x="772" y="495">Synchronous subgraph</text>
+</svg>

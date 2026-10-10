@@ -30,7 +30,7 @@ For more information, see the description of [Temporal Dead Zone](/en-US/docs/We
 
 This issue does not occur for variables declared using `var`, because they are initialized with a default value of `undefined` when they are [hoisted](/en-US/docs/Glossary/Hoisting).
 
-This error can also occur in [cyclic imports](/en-US/docs/Web/JavaScript/Guide/Modules#cyclic_imports) when a module uses a variable that depends on the module itself being evaluated.
+This error can also occur in [cyclic imports](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#cyclic_imports) when a module uses a variable that depends on the module itself being evaluated.
 
 ## Examples
 
