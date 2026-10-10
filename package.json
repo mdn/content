@@ -64,11 +64,6 @@
     "fdir": "^6.5.0",
     "file-type": "^22.1.1",
     "gray-matter": "^4.0.3",
-    "imagemin": "^9.0.1",
-    "imagemin-gifsicle": "^7.0.0",
-    "imagemin-mozjpeg": "^10.0.0",
-    "imagemin-pngquant": "^10.0.0",
-    "imagemin-svgo": "^12.0.0",
     "is-svg": "^6.1.0",
     "lefthook": "^2.1.17",
     "markdownlint-cli2": "0.23.3",
@@ -76,15 +71,13 @@
     "node-html-parser": "^9.0.4",
     "parse-diff": "^0.12.0",
     "prettier": "3.9.9",
-    "tempy": "^3.2.0",
+    "sharp": "^0.35.5",
+    "svgo": "^4.1.0",
     "yaml": "^2.9.1",
     "yargs": "^18.2.0"
   },
   "allowScripts": {
     "@mdn/rari": true,
-    "gifsicle": true,
-    "lefthook": true,
-    "mozjpeg": true,
-    "pngquant-bin": true
+    "lefthook": true
   }
 }
