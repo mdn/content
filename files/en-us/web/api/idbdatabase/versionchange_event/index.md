@@ -10,20 +10,18 @@ browser-compat: api.IDBDatabase.versionchange_event
 
 The `versionchange` event is fired when a database structure change ([`upgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event) event sent on an [`IDBOpenDBRequest`](/en-US/docs/Web/API/IDBOpenDBRequest)) or a deletion ([`IDBFactory.deleteDatabase`](/en-US/docs/Web/API/IDBFactory/deleteDatabase)) was requested from another connection — most probably another window or tab of the same page on the same computer.
 
-Because the browser cannot change the schema while other connections are open, the requested upgrade or deletion is **blocked** until every other open connection is closed. Your `versionchange` handler is therefore the only place where you can make that happen; if you do not close the connection from it, the page that requested the change is stuck until the user closes every tab that still has the database open.
+An upgrade or deletion cannot proceed while other connections to the database are open: it waits until every other connection has been closed. Handling `versionchange` by calling {{domxref("IDBDatabase.close()")}} is the usual way to let it proceed; if the connection stays open, the request in the other tab stays pending until the connection is closed, for example when the user closes the tab.
 
-An open connection whose code knows an older schema is also a correctness hazard: it can keep reading and writing using the structure it was written against, so a change made by another tab can silently be read back as corrupt or missing data. Handling `versionchange` by closing the connection promptly is what keeps the two tabs from stepping on each other.
-
-The `open` request in the other tab receives [`blocked`](/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event) for as long as your connection stays open. Once you have closed it, that tab's [`upgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event) runs and the new version is in effect. Because the schema can move on while your tab is still running the old code, it is also worth handling [`VersionError`](/en-US/docs/Web/API/IDBRequest/error_event) — it is raised when an attempt is made to [open the database](/en-US/docs/Web/API/IDBFactory/open) with a version number that is now outdated.
+If connections are still open after the `versionchange` events have been dispatched, the request that asked for the change receives a [`blocked`](/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event) event. Once the remaining connections are closed, an upgrade continues with that request's [`upgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event) event. Code that keeps running after closing its connection should also expect that reopening the database with its old version number now fails with a `VersionError`, because the requested version is lower than the database's current version.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js-nolint
-addEventListener("versionchange", (event) => { });
+addEventListener("versionchange", (event) => { })
 
-onversionchange = (event) => { };
+onversionchange = (event) => { }
 ```
 
 ## Event type
@@ -55,8 +53,8 @@ A tab that requests the change should show the state of the request to the user,
 ```js
 const dbOpenRequest = window.indexedDB.open("toDoList", 2);
 
-// Another tab still holds the database open and has not yet run its
-// versionchange handler, so the upgrade is deferred.
+// Another tab still has the database open (it did not close its connection
+// in response to versionchange), so the upgrade has to wait.
 dbOpenRequest.onblocked = () => {
   document.querySelector("p").textContent =
     "Still waiting for other tabs to close the database.";
@@ -73,7 +71,7 @@ dbOpenRequest.onsuccess = (event) => {
 };
 ```
 
-For the full account of how this fits into an app's lifecycle, including what happens to stale connections, see the [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) guide.
+See also [Version changes while a web app is open in another tab](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#version_changes_while_a_web_app_is_open_in_another_tab) in the Using IndexedDB guide.
 
 ## Specifications
 
