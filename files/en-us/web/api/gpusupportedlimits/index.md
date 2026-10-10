@@ -67,6 +67,14 @@ Given that different browsers will handle this differently and the tier values m
 
 Note that when calling {{domxref("GPUAdapter.requestDevice()")}} to request a {{domxref("GPUDevice")}} that meets some minimum requirements ("limits"), you pass an object that has the same property names as `GPUSupportedLimits`.
 
+### Maximum versus default values
+
+Generally, the default values listed in the [Instance properties](#instance_properties) table are also the maximum allowed values for those limits. In cases where this is not true, we will list differing maximum values in the [browser compatibility table](#browser_compatibility), but we will also list them here for ease of use:
+
+| Limit name            | Maximum requestable |
+| --------------------- | ------------------- |
+| `maxVertexAttributes` | 30 in Chrome        |
+
 ## Examples
 
 In the following code we query the `GPUAdapter.limits` value of `maxBindGroups` to see if it is equal to or greater than 6.
