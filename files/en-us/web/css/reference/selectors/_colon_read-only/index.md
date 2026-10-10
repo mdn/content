@@ -12,8 +12,7 @@ The **`:read-only`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/C
 {{InteractiveExample("CSS Demo: :read-only", "tabbed-shorter")}}
 
 ```css interactive-example
-label,
-input[type="submit"] {
+label {
   display: block;
   margin-top: 1em;
 }
@@ -27,18 +26,14 @@ input[type="submit"] {
 ```html interactive-example
 <p>Please fill your details:</p>
 
-<form>
-  <label for="email">Email Address:</label>
-  <input id="email" name="email" type="email" value="test@example.com" />
+<label for="email">Email Address:</label>
+<input id="email" name="email" type="email" value="test@example.com" />
 
-  <label for="note">Short note about yourself:</label>
-  <textarea id="note" name="note">Don't be shy</textarea>
+<label for="note">Short note about yourself:</label>
+<textarea id="note" name="note">Don't be shy</textarea>
 
-  <label for="pic">Your picture:</label>
-  <input id="pic" name="pic" type="file" />
-
-  <input type="submit" value="Submit form" />
-</form>
+<label for="pic">Your picture:</label>
+<input id="pic" name="pic" type="file" />
 ```
 
 ## Syntax
@@ -53,52 +48,48 @@ input[type="submit"] {
 
 ### Confirming form information using read-only or read-write controls
 
-One use of read-only form controls is to allow the user to check and verify information that they may have entered in an earlier form (for example, shipping details), while still being able to submit the information along with the rest of the form. We do just this in the example below.
+One use of read-only form controls is to allow the user to check and verify information that they may have entered in an earlier form (for example, shipping details), while still being able to submit the information along with the rest of the form. The example below shows how to style these controls.
 
 The `:read-only` pseudo-class is used to remove all the styling that makes the inputs look like clickable fields, making them look more like read-only paragraphs. The `:read-write` pseudo-class on the other hand is used to provide some nicer styling to the editable `<textarea>`.
 
 ```html hidden
-<form>
-  <fieldset>
-    <legend>Check shipping details</legend>
-    <div>
-      <label for="name">Name: </label>
-      <input id="name" name="name" type="text" value="Mr Soft" readonly />
-    </div>
-    <div>
-      <label for="address">Address: </label>
-      <textarea id="address" name="address" readonly>
+<fieldset>
+  <legend>Check shipping details</legend>
+  <div>
+    <label for="name">Name: </label>
+    <input id="name" name="name" type="text" value="Mr Soft" readonly />
+  </div>
+  <div>
+    <label for="address">Address: </label>
+    <textarea id="address" name="address" readonly>
 23 Elastic Way,
 Viscous,
 Bright Ridge,
 CA
 </textarea>
-    </div>
-    <div>
-      <label for="postal-code">Zip/postal code: </label>
-      <input
-        id="postal-code"
-        name="postal-code"
-        type="text"
-        value="94708"
-        readonly />
-    </div>
-  </fieldset>
+  </div>
+  <div>
+    <label for="postal-code">Zip/postal code: </label>
+    <input
+      id="postal-code"
+      name="postal-code"
+      type="text"
+      value="94708"
+      readonly />
+  </div>
+</fieldset>
 
-  <fieldset>
-    <legend>Final instructions</legend>
-    <div>
-      <label for="sms-confirm">Send confirmation by SMS?</label>
-      <input id="sms-confirm" name="sms-confirm" type="checkbox" />
-    </div>
-    <div>
-      <label for="instructions">Any special instructions?</label>
-      <textarea id="instructions" name="instructions"></textarea>
-    </div>
-  </fieldset>
-
-  <div><button type="submit">Amend details and submit</button></div>
-</form>
+<fieldset>
+  <legend>Final instructions</legend>
+  <div>
+    <label for="sms-confirm">Send confirmation by SMS?</label>
+    <input id="sms-confirm" name="sms-confirm" type="checkbox" />
+  </div>
+  <div>
+    <label for="instructions">Any special instructions?</label>
+    <textarea id="instructions" name="instructions"></textarea>
+  </div>
+</fieldset>
 ```
 
 ```css hidden
@@ -125,7 +116,6 @@ fieldset > div {
   justify-content: space-between;
 }
 
-button,
 label,
 input[type="text"],
 textarea {
@@ -157,11 +147,6 @@ input:focus,
 textarea:hover,
 textarea:focus {
   background-color: #eeeeee;
-}
-
-button {
-  width: 60%;
-  margin: 20px auto;
 }
 ```
 

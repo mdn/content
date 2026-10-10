@@ -25,21 +25,19 @@ input:placeholder-shown {
 ```
 
 ```html interactive-example
-<form>
-  <label for="name">Full Name:</label>
-  <input id="name" name="name" type="text" />
+<label for="name">Full Name:</label>
+<input id="name" name="name" type="text" />
 
-  <label for="email">Email Address:</label>
-  <input id="email" name="email" type="email" placeholder="name@example.com" />
+<label for="email">Email Address:</label>
+<input id="email" name="email" type="email" placeholder="name@example.com" />
 
-  <label for="age">Your age:</label>
-  <input
-    id="age"
-    name="age"
-    type="number"
-    value="18"
-    placeholder="You must be 18+" />
-</form>
+<label for="age">Your age:</label>
+<input
+  id="age"
+  name="age"
+  type="number"
+  value="18"
+  placeholder="You must be 18+" />
 ```
 
 ## Syntax
@@ -111,26 +109,23 @@ The following example highlights the Student ID field with a custom style.
 #### HTML
 
 ```html
-<form id="test">
-  <p>
-    <label for="name">Enter Student Name:</label>
-    <input id="name" placeholder="Student Name" />
-  </p>
-  <p>
-    <label for="branch">Enter Student Branch:</label>
-    <input id="branch" placeholder="Student Branch" />
-  </p>
-  <p>
-    <label for="sid">Enter Student ID:</label>
-    <input
-      pattern="[0-9]{8}"
-      title="8 digit ID"
-      id="sid"
-      class="student-id"
-      placeholder="8 digit id" />
-  </p>
-  <input type="submit" />
-</form>
+<p>
+  <label for="name">Enter Student Name:</label>
+  <input id="name" placeholder="Student Name" />
+</p>
+<p>
+  <label for="branch">Enter Student Branch:</label>
+  <input id="branch" placeholder="Student Branch" />
+</p>
+<p>
+  <label for="sid">Enter Student ID:</label>
+  <input
+    pattern="[0-9]{8}"
+    title="8 digit ID"
+    id="sid"
+    class="student-id"
+    placeholder="8 digit id" />
+</p>
 ```
 
 #### CSS
