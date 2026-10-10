@@ -315,6 +315,12 @@ As an example, we will add a script checking the constraint validation for a for
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 This displays the following form:
 
 {{EmbedLiveSample("Constraint_combining_several_fields_Postal_code_validation")}}

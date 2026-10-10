@@ -234,6 +234,12 @@ The following example shows the same button as before, but included in the conte
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 #### CSS
 
 And now some CSS to make the basic elements sit more neatly:
@@ -257,31 +263,29 @@ label {
 
 ### Adjusting the image position and scaling
 
-In this example, we adapt the previous example to set aside more space for the image and then adjust the actual image's size and positioning using {{cssxref("object-fit")}} and {{cssxref("object-position")}}.
+In this styling example, we use the controls from the previous example without the form wrapper to set aside more space for the image and then adjust the actual image's size and positioning using {{cssxref("object-fit")}} and {{cssxref("object-position")}}.
 
 #### HTML
 
 ```html
-<form>
-  <p>Login to your account</p>
-  <div>
-    <label for="userId">User ID</label>
-    <input type="text" id="userId" name="userId" />
-  </div>
-  <div>
-    <label for="pwd">Password</label>
-    <input type="password" id="pwd" name="pwd" />
-  </div>
-  <div>
-    <input
-      id="image"
-      type="image"
-      src="https://mdn.github.io/shared-assets/images/examples/login-button.png"
-      alt="Login"
-      width="200"
-      height="100" />
-  </div>
-</form>
+<p>Login to your account</p>
+<div>
+  <label for="userId">User ID</label>
+  <input type="text" id="userId" name="userId" />
+</div>
+<div>
+  <label for="pwd">Password</label>
+  <input type="password" id="pwd" name="pwd" />
+</div>
+<div>
+  <input
+    id="image"
+    type="image"
+    src="https://mdn.github.io/shared-assets/images/examples/login-button.png"
+    alt="Login"
+    width="200"
+    height="100" />
+</div>
 ```
 
 #### CSS

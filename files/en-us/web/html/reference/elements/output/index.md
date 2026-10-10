@@ -33,21 +33,18 @@ Live-region updates are generally announced as plain text, so links, buttons, an
 
 ## Examples
 
-In the following example, the form provides a slider whose value can range between `0` and `100`, and an {{HTMLElement("input")}} element into which you can enter a second number. The two numbers are added together, and the result is displayed in the `<output>` element each time the value of any of the controls changes.
+In the following example, we provide a slider whose value can range between `0` and `100`, and an {{HTMLElement("input")}} element into which you can enter a second number. The two numbers are added together, and the result is displayed in the `<output>` element each time the value of any of the controls changes.
 
 ```html
-<form id="example-form">
-  <input type="range" id="b" name="b" value="50" /> +
-  <input type="number" id="a" name="a" value="10" /> =
-  <output name="result" for="a b">60</output>
-</form>
+<input type="range" id="b" name="b" value="50" /> +
+<input type="number" id="a" name="a" value="10" /> =
+<output id="result" for="a b">60</output>
 ```
 
 ```js
-const form = document.getElementById("example-form");
-const a = form.elements["a"];
-const b = form.elements["b"];
-const result = form.elements["result"];
+const a = document.getElementById("a");
+const b = document.getElementById("b");
+const result = document.getElementById("result");
 
 function updateResult() {
   const aValue = a.valueAsNumber;
@@ -55,7 +52,8 @@ function updateResult() {
   result.value = aValue + bValue;
 }
 
-form.addEventListener("input", updateResult);
+a.addEventListener("input", updateResult);
+b.addEventListener("input", updateResult);
 
 updateResult();
 ```
