@@ -19,7 +19,7 @@ A `CSSFunctionDescriptors` object is accessed via the {{domxref("CSSFunctionDecl
 
 _This interface also inherits properties from {{domxref("CSSStyleDeclaration")}}._
 
-- {{domxref("CSSFunctionDescriptors.result")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("CSSFunctionDescriptors.result")}} {{experimental_inline}}
   - : Returns a string representing a `result` descriptor, if one exists in the associated set of declarations.
 
 ## Examples
