@@ -19,11 +19,23 @@ Only certain CSS properties can be used with `::highlight()`:
 
 - {{CSSxRef("color")}}
 - {{CSSxRef("background-color")}}
-- {{CSSxRef("text-decoration")}} and its associated properties
+- {{CSSxRef("text-decoration")}} and its associated properties, including {{CSSxRef("text-underline-position")}} and {{CSSxRef("text-underline-offset")}} (note: [the spec's list is deliberately non-exhaustive](https://github.com/w3c/csswg-drafts/issues/7101#issuecomment-1124007042). This includes all constituent properties, but may include other properties that control line decorations.)
 - {{CSSxRef("text-shadow")}}
-- {{CSSxRef("-webkit-text-stroke-color")}}, {{CSSxRef("-webkit-text-fill-color")}} and {{CSSxRef("-webkit-text-stroke-width")}}
+- {{CSSxRef("stroke-color")}}, {{CSSxRef("fill-color")}}, and {{CSSxRef("stroke-width")}}
+- Custom properties ({{cssxref("--*")}})
 
-In particular, {{CSSxRef("background-image")}} is ignored.
+In particular, {{CSSxRef("background-image")}} and vendor-prefixed properties are ignored.
+
+> [!NOTE]
+> The above is the specified behavior. In practice, `fill-color` and `stroke-color` have incomplete browser support as CSS properties in general and therefore do not work on `::highlight()` in browsers that do not support them.
+>
+> Support for other properties also varies among browsers. There are also two tiers of support: whether the property is included in the pseudo-element's computed styles, and whether they actually create a visible effect.
+>
+> - Chrome and Edge additionally accept {{CSSxRef("text-emphasis-color")}}. They accept `stroke-width`, {{CSSxRef("fill")}}, and {{CSSxRef("stroke")}} without effect. They ignore `text-underline-position`.
+> - Firefox accepts all CSS properties it implements into computed styles, but properties not listed above have no effect, and `stroke-width` has no effect, either.
+> - Safari accepts `text-underline-position` and {{CSSxRef("text-decoration-skip-ink")}} without effect. The visible effects of `stroke-width`, `text-shadow`, `text-underline-offset`, and `text-decoration-thickness` were only available by Technology Preview 251.
+>
+> Chrome and Edge version 135 and Safari 27 beta removed support for {{CSSxRef("-webkit-text-stroke-color")}}, {{CSSxRef("-webkit-text-fill-color")}}, and {{CSSxRef("-webkit-text-stroke-width")}}.
 
 ## Syntax
 
