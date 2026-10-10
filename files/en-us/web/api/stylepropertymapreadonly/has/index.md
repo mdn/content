@@ -25,6 +25,11 @@ has(property)
 
 A boolean value.
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if `property` is not a valid CSS property name.
+
 ## Examples
 
 ### Basic usage
@@ -48,3 +53,11 @@ console.log(hasPadTop); // logs true if padding-top is present in style attribut
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("StylePropertyMapReadOnly.entries()")}}
+- {{domxref("StylePropertyMapReadOnly.get()")}}
+- {{domxref("StylePropertyMapReadOnly.getAll()")}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
