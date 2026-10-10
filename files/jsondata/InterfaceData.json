@@ -2080,6 +2080,18 @@
       "inh": "",
       "impl": []
     },
+    "LanguageModelToolCall": {
+      "inh": "",
+      "impl": []
+    },
+    "LanguageModelToolError": {
+      "inh": "",
+      "impl": []
+    },
+    "LanguageModelToolSuccess": {
+      "inh": "",
+      "impl": []
+    },
     "LargestContentfulPaint": {
       "inh": "PerformanceEntry",
       "impl": []
