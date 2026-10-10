@@ -8,10 +8,7 @@ browser-compat: api.Touch.identifier
 
 {{ APIRef("Touch Events") }}
 
-The **`Touch.identifier`** returns a value uniquely identifying
-this point of contact with the touch surface. This value remains consistent for every
-event involving this finger's (or stylus's) movement on the surface until it is lifted
-off the surface.
+The **`identifier`** read-only property of the {{domxref("Touch")}} interface returns a value uniquely identifying this point of contact with the touch surface. This value remains consistent for every event involving this finger's (or stylus's) movement on the surface until it is lifted off the surface.
 
 ## Value
 

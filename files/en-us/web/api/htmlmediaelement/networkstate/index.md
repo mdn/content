@@ -8,9 +8,7 @@ browser-compat: api.HTMLMediaElement.networkState
 
 {{APIRef("HTML DOM")}}
 
-The
-**`HTMLMediaElement.networkState`** property indicates the
-current state of the fetching of media over the network.
+The **`networkState`** read-only property of the {{domxref("HTMLMediaElement")}} interface indicates the current state of the fetching of media over the network.
 
 ## Value
 

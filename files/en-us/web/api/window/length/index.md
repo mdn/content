@@ -8,8 +8,7 @@ browser-compat: api.Window.length
 
 {{APIRef("HTML DOM")}}
 
-Returns the number of frames (either {{HTMLElement("frame")}} or
-{{HTMLElement("iframe")}} elements) in the window.
+The **`length`** read-only property of the {{domxref("Window")}} interface returns the number of frames (either {{HTMLElement("frame")}} or {{HTMLElement("iframe")}} elements) in the window.
 
 ## Value
 

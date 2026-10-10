@@ -8,9 +8,7 @@ browser-compat: api.AudioTrack.id
 
 {{APIRef("HTML DOM")}}
 
-The **`id`** property contains a
-string which uniquely identifies the track represented by the
-**{{domxref("AudioTrack")}}**.
+The **`id`** read-only property of the {{domxref("AudioTrack")}} interface contains a string which uniquely identifies the track represented by the **{{domxref("AudioTrack")}}**.
 
 This ID can be used with the
 {{domxref("AudioTrackList.getTrackById()")}} method to locate a specific track within
