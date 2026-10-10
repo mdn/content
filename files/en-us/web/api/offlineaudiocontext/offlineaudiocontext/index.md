@@ -43,12 +43,7 @@ as either the same set of parameters as are inputs into the
     range than that. The most commonly-used rate is 44100Hz, which is the sample rate used
     by CD audio.
 
-It is important to note that, whereas you can create a new {{domxref("AudioContext")}}
-using the {{domxref("AudioContext.AudioContext()", "AudioContext()")}} constructor
-with no arguments, the `OfflineAudioContext()` constructor requires three
-arguments, since it needs to create an `AudioBuffer`. This works in exactly
-the same way as when you create a new {{domxref("AudioBuffer")}} with the
-{{domxref("BaseAudioContext.createBuffer")}} method. For more detail, read [Audio buffers: frames, samples and channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers_frames_samples_and_channels) from our [Basic concepts](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) guide.
+It is important to note that, whereas you can create a new {{domxref("AudioContext")}} using the {{domxref("AudioContext.AudioContext()", "AudioContext()")}} constructor with no arguments, the `OfflineAudioContext()` constructor requires either an options object or three arguments. The three-argument form works in exactly the same way as when you create a new {{domxref("AudioBuffer")}} with the {{domxref("BaseAudioContext.createBuffer")}} method. For more detail, read [Audio buffers: frames, samples and channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers_frames_samples_and_channels) from our [Basic concepts](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) guide.
 
 ### Return value
 
