@@ -71,6 +71,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     > [!NOTE]
     > Specifying multiple URLs means that multiple attribution sources can be registered on the same feature. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.
 
+- `controls`
+  - : Currently a partial implementation. it is possible in some browsers to add the controls attribute. [Safari](https://webkit.org/blog/18325/webkit-features-for-safari-27-0/) automatically provides a built-in user interface for interacting with spatial and panorama photos. Wider adoption is being considered.
+
 - [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
   - : Indicates if the fetching of the image must be done using a {{glossary("CORS")}} request. Image data from a [CORS-enabled image](/en-US/docs/Web/HTML/How_to/CORS_enabled_image) returned from a CORS request can be reused in the {{HTMLElement("canvas")}} element without being marked "[tainted](/en-US/docs/Web/HTML/How_to/CORS_enabled_image#security_and_tainted_canvases)".
 
