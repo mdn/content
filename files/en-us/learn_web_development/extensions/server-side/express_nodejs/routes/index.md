@@ -62,14 +62,14 @@ The rest of this section provides an overview of how the `Router` can be used to
 
 The code below provides a concrete example of how we can create a route module and then use it in an _Express_ application.
 
-First we create routes for a wiki in a module named **wiki.js**. The code first imports the Express application object, uses it to get a `Router` object and then adds a couple of routes to it using the `get()` method. Last of all the module exports the `Router` object.
+First we create routes for a wiki in a module named **wiki.js**. The code first imports the `Router` function from Express, uses it to create a router and then adds a couple of routes to it using the `get()` method. Last of all the module exports the `Router` object.
 
 ```js
 // wiki.js - Wiki route module.
 
-const express = require("express");
+import { Router } from "express";
 
-const router = express.Router();
+const router = Router();
 
 // Home page route.
 router.get("/", (req, res) => {
@@ -81,16 +81,16 @@ router.get("/about", (req, res) => {
   res.send("About this wiki");
 });
 
-module.exports = router;
+export default router;
 ```
 
 > [!NOTE]
 > Above we are defining our route handler callbacks directly in the router functions. In the LocalLibrary we'll define these callbacks in a separate controller module.
 
-To use the router module in our main app file we first `require()` the route module (**wiki.js**). We then call `use()` on the _Express_ application to add the Router to the middleware handling path, specifying a URL path of 'wiki'.
+To use the router module in our main app file we first `import` the route module (**wiki.js**). We then call `use()` on the _Express_ application to add the Router to the middleware handling path, specifying a URL path of 'wiki'.
 
 ```js
-const wiki = require("./wiki.js");
+import wiki from "./wiki.js";
 
 // …
 app.use("/wiki", wiki);
@@ -227,7 +227,7 @@ This leads to very compact code when working with asynchronous promise-based API
 For example, the following code uses the `find()` method to query a database and then renders the result.
 
 ```js
-exports.get("/about", async (req, res, next) => {
+router.get("/about", async (req, res, next) => {
   const successfulResult = await About.find({}).exec();
   res.render("about_view", { title: "About", list: successfulResult });
 });
@@ -237,7 +237,7 @@ The code below shows the same example using a promise chain.
 Note that if you wanted to, you could `catch()` the error and implement your own custom handling.
 
 ```js
-exports.get(
+router.get(
   "/about",
   // Removed 'async'
   (req, res, next) =>
@@ -322,66 +322,73 @@ Next we create our route handler callback functions and route code for all the a
 
 Before we define our routes, we'll first create all the dummy/skeleton callback functions that they will invoke. The callbacks will be stored in separate "controller" modules for `Book`, `BookInstance`, `Genre`, and `Author` (you can use any file/module structure, but this seems an appropriate granularity for this project).
 
-Start by creating a folder for our controllers in the project root (**/controllers**) and then create separate controller files/modules for handling each of the models:
+Start by creating a folder for our controllers in the project root (**controllers/**) and then create separate controller files/modules for handling each of the models:
 
 ```plain
-/express-locallibrary-tutorial  # the project root
-  /controllers
-    authorController.js
-    bookController.js
-    bookinstanceController.js
-    genreController.js
+express-locallibrary-tutorial
+├── controllers
+│   ├── authorController.js
+│   ├── bookController.js
+│   ├── bookinstanceController.js
+│   └── genreController.js
+...
+```
+
+If you are using Bash or a similar shell, you can create them all with this command:
+
+```bash
+mkdir controllers && touch controllers/{authorController,bookController,bookinstanceController,genreController}.js
 ```
 
 ### Author controller
 
-Open the **/controllers/authorController.js** file and type in the following code:
+Open the **controllers/authorController.js** file and paste in the following code:
 
 ```js
-const Author = require("../models/author");
+import Author from "../models/author.js";
 
 // Display list of all Authors.
-exports.author_list = async (req, res, next) => {
+export const authorList = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Author list");
 };
 
 // Display detail page for a specific Author.
-exports.author_detail = async (req, res, next) => {
+export const authorDetail = async (req, res, next) => {
   res.send(`NOT IMPLEMENTED: Author detail: ${req.params.id}`);
 };
 
 // Display Author create form on GET.
-exports.author_create_get = async (req, res, next) => {
+export const authorCreateGet = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Author create GET");
 };
 
 // Handle Author create on POST.
-exports.author_create_post = async (req, res, next) => {
+export const authorCreatePost = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Author create POST");
 };
 
 // Display Author delete form on GET.
-exports.author_delete_get = async (req, res, next) => {
+export const authorDeleteGet = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Author delete GET");
 };
 
 // Handle Author delete on POST.
-exports.author_delete_post = async (req, res, next) => {
+export const authorDeletePost = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Author delete POST");
 };
 
 // Display Author update form on GET.
-exports.author_update_get = async (req, res, next) => {
+export const authorUpdateGet = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Author update GET");
 };
 
 // Handle Author update on POST.
-exports.author_update_post = async (req, res, next) => {
+export const authorUpdatePost = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Author update POST");
 };
 ```
 
-The module first requires the `Author` model that we'll later be using to access and update our data.
+The module first imports the `Author` model that we'll later be using to access and update our data.
 It then exports functions for each of the URLs we wish to handle.
 Note that the create, update and delete operations use forms, and hence also have additional methods for handling form post requests — we'll discuss those methods in the "forms article" later on.
 
@@ -390,149 +397,149 @@ If a controller function is expected to receive path parameters, these are outpu
 
 #### BookInstance controller
 
-Open the **/controllers/bookinstanceController.js** file and copy in the following code (this follows an identical pattern to the `Author` controller module):
+Open the **controllers/bookinstanceController.js** file and paste in the following code (this follows an identical pattern to the `Author` controller module):
 
 ```js
-const BookInstance = require("../models/bookinstance");
+import BookInstance from "../models/bookinstance.js";
 
 // Display list of all BookInstances.
-exports.bookinstance_list = async (req, res, next) => {
+export const bookInstanceList = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: BookInstance list");
 };
 
 // Display detail page for a specific BookInstance.
-exports.bookinstance_detail = async (req, res, next) => {
+export const bookInstanceDetail = async (req, res, next) => {
   res.send(`NOT IMPLEMENTED: BookInstance detail: ${req.params.id}`);
 };
 
 // Display BookInstance create form on GET.
-exports.bookinstance_create_get = async (req, res, next) => {
+export const bookInstanceCreateGet = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: BookInstance create GET");
 };
 
 // Handle BookInstance create on POST.
-exports.bookinstance_create_post = async (req, res, next) => {
+export const bookInstanceCreatePost = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: BookInstance create POST");
 };
 
 // Display BookInstance delete form on GET.
-exports.bookinstance_delete_get = async (req, res, next) => {
+export const bookInstanceDeleteGet = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: BookInstance delete GET");
 };
 
 // Handle BookInstance delete on POST.
-exports.bookinstance_delete_post = async (req, res, next) => {
+export const bookInstanceDeletePost = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: BookInstance delete POST");
 };
 
 // Display BookInstance update form on GET.
-exports.bookinstance_update_get = async (req, res, next) => {
+export const bookInstanceUpdateGet = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: BookInstance update GET");
 };
 
 // Handle bookinstance update on POST.
-exports.bookinstance_update_post = async (req, res, next) => {
+export const bookInstanceUpdatePost = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: BookInstance update POST");
 };
 ```
 
 #### Genre controller
 
-Open the **/controllers/genreController.js** file and copy in the following text (this follows an identical pattern to the `Author` and `BookInstance` files):
+Open the **controllers/genreController.js** file and paste in the following text (this follows an identical pattern to the `Author` and `BookInstance` files):
 
 ```js
-const Genre = require("../models/genre");
+import Genre from "../models/genre.js";
 
 // Display list of all Genre.
-exports.genre_list = async (req, res, next) => {
+export const genreList = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Genre list");
 };
 
 // Display detail page for a specific Genre.
-exports.genre_detail = async (req, res, next) => {
+export const genreDetail = async (req, res, next) => {
   res.send(`NOT IMPLEMENTED: Genre detail: ${req.params.id}`);
 };
 
 // Display Genre create form on GET.
-exports.genre_create_get = async (req, res, next) => {
+export const genreCreateGet = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Genre create GET");
 };
 
 // Handle Genre create on POST.
-exports.genre_create_post = async (req, res, next) => {
+export const genreCreatePost = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Genre create POST");
 };
 
 // Display Genre delete form on GET.
-exports.genre_delete_get = async (req, res, next) => {
+export const genreDeleteGet = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Genre delete GET");
 };
 
 // Handle Genre delete on POST.
-exports.genre_delete_post = async (req, res, next) => {
+export const genreDeletePost = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Genre delete POST");
 };
 
 // Display Genre update form on GET.
-exports.genre_update_get = async (req, res, next) => {
+export const genreUpdateGet = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Genre update GET");
 };
 
 // Handle Genre update on POST.
-exports.genre_update_post = async (req, res, next) => {
+export const genreUpdatePost = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Genre update POST");
 };
 ```
 
 #### Book controller
 
-Open the **/controllers/bookController.js** file and copy in the following code.
+Open the **controllers/bookController.js** file and paste in the following code.
 This follows the same pattern as the other controller modules, but additionally has an `index()` function for displaying the site welcome page:
 
 ```js
-const Book = require("../models/book");
+import Book from "../models/book.js";
 
-exports.index = async (req, res, next) => {
+export const index = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Site Home Page");
 };
 
 // Display list of all books.
-exports.book_list = async (req, res, next) => {
+export const bookList = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Book list");
 };
 
 // Display detail page for a specific book.
-exports.book_detail = async (req, res, next) => {
+export const bookDetail = async (req, res, next) => {
   res.send(`NOT IMPLEMENTED: Book detail: ${req.params.id}`);
 };
 
 // Display book create form on GET.
-exports.book_create_get = async (req, res, next) => {
+export const bookCreateGet = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Book create GET");
 };
 
 // Handle book create on POST.
-exports.book_create_post = async (req, res, next) => {
+export const bookCreatePost = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Book create POST");
 };
 
 // Display book delete form on GET.
-exports.book_delete_get = async (req, res, next) => {
+export const bookDeleteGet = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Book delete GET");
 };
 
 // Handle book delete on POST.
-exports.book_delete_post = async (req, res, next) => {
+export const bookDeletePost = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Book delete POST");
 };
 
 // Display book update form on GET.
-exports.book_update_get = async (req, res, next) => {
+export const bookUpdateGet = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Book update GET");
 };
 
 // Handle book update on POST.
-exports.book_update_post = async (req, res, next) => {
+export const bookUpdatePost = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Book update POST");
 };
 ```
@@ -545,155 +552,156 @@ The skeleton already has a **./routes** folder containing routes for the _index_
 Create another route file — **catalog.js** — inside this folder, as shown.
 
 ```plain
-/express-locallibrary-tutorial # the project root
-  /routes
-    index.js
-    users.js
-    catalog.js
+express-locallibrary-tutorial
+├── routes
+│   ├── catalog.js
+│   ├── index.js
+│   └── users.js
+...
 ```
 
-Open **/routes/catalog.js** and copy in the code below:
+Open **routes/catalog.js** and paste in the code below:
 
 ```js
-const express = require("express");
+import { Router } from "express";
 
-// Require controller modules.
-const book_controller = require("../controllers/bookController");
-const author_controller = require("../controllers/authorController");
-const genre_controller = require("../controllers/genreController");
-const book_instance_controller = require("../controllers/bookinstanceController");
+// Import controller modules.
+import * as bookController from "../controllers/bookController.js";
+import * as authorController from "../controllers/authorController.js";
+import * as genreController from "../controllers/genreController.js";
+import * as bookInstanceController from "../controllers/bookinstanceController.js";
 
-const router = express.Router();
+const router = Router();
 
 /// BOOK ROUTES ///
 
 // GET catalog home page.
-router.get("/", book_controller.index);
+router.get("/", bookController.index);
 
 // GET request for creating a Book. NOTE This must come before routes that display Book (uses id).
-router.get("/book/create", book_controller.book_create_get);
+router.get("/book/create", bookController.bookCreateGet);
 
 // POST request for creating Book.
-router.post("/book/create", book_controller.book_create_post);
+router.post("/book/create", bookController.bookCreatePost);
 
 // GET request to delete Book.
-router.get("/book/:id/delete", book_controller.book_delete_get);
+router.get("/book/:id/delete", bookController.bookDeleteGet);
 
 // POST request to delete Book.
-router.post("/book/:id/delete", book_controller.book_delete_post);
+router.post("/book/:id/delete", bookController.bookDeletePost);
 
 // GET request to update Book.
-router.get("/book/:id/update", book_controller.book_update_get);
+router.get("/book/:id/update", bookController.bookUpdateGet);
 
 // POST request to update Book.
-router.post("/book/:id/update", book_controller.book_update_post);
+router.post("/book/:id/update", bookController.bookUpdatePost);
 
 // GET request for one Book.
-router.get("/book/:id", book_controller.book_detail);
+router.get("/book/:id", bookController.bookDetail);
 
 // GET request for list of all Book items.
-router.get("/books", book_controller.book_list);
+router.get("/books", bookController.bookList);
 
 /// AUTHOR ROUTES ///
 
 // GET request for creating Author. NOTE This must come before route for id (i.e. display author).
-router.get("/author/create", author_controller.author_create_get);
+router.get("/author/create", authorController.authorCreateGet);
 
 // POST request for creating Author.
-router.post("/author/create", author_controller.author_create_post);
+router.post("/author/create", authorController.authorCreatePost);
 
 // GET request to delete Author.
-router.get("/author/:id/delete", author_controller.author_delete_get);
+router.get("/author/:id/delete", authorController.authorDeleteGet);
 
 // POST request to delete Author.
-router.post("/author/:id/delete", author_controller.author_delete_post);
+router.post("/author/:id/delete", authorController.authorDeletePost);
 
 // GET request to update Author.
-router.get("/author/:id/update", author_controller.author_update_get);
+router.get("/author/:id/update", authorController.authorUpdateGet);
 
 // POST request to update Author.
-router.post("/author/:id/update", author_controller.author_update_post);
+router.post("/author/:id/update", authorController.authorUpdatePost);
 
 // GET request for one Author.
-router.get("/author/:id", author_controller.author_detail);
+router.get("/author/:id", authorController.authorDetail);
 
 // GET request for list of all Authors.
-router.get("/authors", author_controller.author_list);
+router.get("/authors", authorController.authorList);
 
 /// GENRE ROUTES ///
 
 // GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
-router.get("/genre/create", genre_controller.genre_create_get);
+router.get("/genre/create", genreController.genreCreateGet);
 
 // POST request for creating Genre.
-router.post("/genre/create", genre_controller.genre_create_post);
+router.post("/genre/create", genreController.genreCreatePost);
 
 // GET request to delete Genre.
-router.get("/genre/:id/delete", genre_controller.genre_delete_get);
+router.get("/genre/:id/delete", genreController.genreDeleteGet);
 
 // POST request to delete Genre.
-router.post("/genre/:id/delete", genre_controller.genre_delete_post);
+router.post("/genre/:id/delete", genreController.genreDeletePost);
 
 // GET request to update Genre.
-router.get("/genre/:id/update", genre_controller.genre_update_get);
+router.get("/genre/:id/update", genreController.genreUpdateGet);
 
 // POST request to update Genre.
-router.post("/genre/:id/update", genre_controller.genre_update_post);
+router.post("/genre/:id/update", genreController.genreUpdatePost);
 
 // GET request for one Genre.
-router.get("/genre/:id", genre_controller.genre_detail);
+router.get("/genre/:id", genreController.genreDetail);
 
 // GET request for list of all Genre.
-router.get("/genres", genre_controller.genre_list);
+router.get("/genres", genreController.genreList);
 
 /// BOOKINSTANCE ROUTES ///
 
 // GET request for creating a BookInstance. NOTE This must come before route that displays BookInstance (uses id).
 router.get(
   "/bookinstance/create",
-  book_instance_controller.bookinstance_create_get,
+  bookInstanceController.bookInstanceCreateGet,
 );
 
 // POST request for creating BookInstance.
 router.post(
   "/bookinstance/create",
-  book_instance_controller.bookinstance_create_post,
+  bookInstanceController.bookInstanceCreatePost,
 );
 
 // GET request to delete BookInstance.
 router.get(
   "/bookinstance/:id/delete",
-  book_instance_controller.bookinstance_delete_get,
+  bookInstanceController.bookInstanceDeleteGet,
 );
 
 // POST request to delete BookInstance.
 router.post(
   "/bookinstance/:id/delete",
-  book_instance_controller.bookinstance_delete_post,
+  bookInstanceController.bookInstanceDeletePost,
 );
 
 // GET request to update BookInstance.
 router.get(
   "/bookinstance/:id/update",
-  book_instance_controller.bookinstance_update_get,
+  bookInstanceController.bookInstanceUpdateGet,
 );
 
 // POST request to update BookInstance.
 router.post(
   "/bookinstance/:id/update",
-  book_instance_controller.bookinstance_update_post,
+  bookInstanceController.bookInstanceUpdatePost,
 );
 
 // GET request for one BookInstance.
-router.get("/bookinstance/:id", book_instance_controller.bookinstance_detail);
+router.get("/bookinstance/:id", bookInstanceController.bookInstanceDetail);
 
 // GET request for list of all BookInstance.
-router.get("/bookinstances", book_instance_controller.bookinstance_list);
+router.get("/bookinstances", bookInstanceController.bookInstanceList);
 
-module.exports = router;
+export default router;
 ```
 
-The module requires Express and then uses it to create a `Router` object. The routes are all set up on the router, which is then exported.
+The module imports the `Router` function from Express and uses it to create a router. The routes are all set up on the router, which is then exported.
 
 The routes are defined either using `.get()` or `.post()` methods on the router object.
 All the paths are defined using strings (we don't use string patterns or regular expressions).
@@ -705,7 +713,7 @@ The handler functions are all imported from the controller modules we created in
 
 We've set up all our new routes, but we still have a route to the original page. Let's instead redirect this to the new index page that we've created at the path `/catalog`.
 
-Open **/routes/index.js** and replace the existing route with the function below.
+Open **routes/index.js** and replace the existing route with the function below.
 
 ```js
 // GET home page.
@@ -715,19 +723,19 @@ router.get("/", (req, res) => {
 ```
 
 > [!NOTE]
-> This is our first use of the [redirect()](https://expressjs.com/en/5x/api/#res.redirect) response method. This redirects to the specified page, by default sending HTTP status code "302 Found". You can change the status code returned if needed, and supply either absolute or relative paths.
+> This is our first use of the [`redirect()`](https://expressjs.com/en/5x/api/#res.redirect) response method. This redirects to the specified page, by default sending HTTP status code "302 Found". You can change the status code returned if needed, and supply either absolute or relative paths.
 
 ### Update app.js
 
 The last step is to add the routes to the middleware chain.
 We do this in `app.js`.
 
-Open **app.js** and require the catalog route below the other routes (add the third line shown below, underneath the other two that should be already present in the file):
+Open **app.js** and import the catalog route below the other routes (add the third line shown below, underneath the other two that should be already present in the file):
 
 ```js
-const indexRouter = require("./routes/index");
-const usersRouter = require("./routes/users");
-const catalogRouter = require("./routes/catalog"); // Import routes for "catalog" area of site
+import indexRouter from "./routes/index.js";
+import usersRouter from "./routes/users.js";
+import catalogRouter from "./routes/catalog.js"; // Import routes for "catalog" area of site
 ```
 
 Next, add the catalog route to the middleware stack below the other routes (add the third line shown below, underneath the other two that should be already present in the file):
@@ -757,10 +765,10 @@ To test the routes, first start the website using your usual approach
   DEBUG=express-locallibrary-tutorial:* npm start
   ```
 
-- If you previously set up [nodemon](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website#enable_server_restart_on_file_changes), you can instead use:
+- To use [automatic server restarts](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website#running_the_skeleton_website), you can instead use:
 
   ```bash
-  npm run serverstart
+  npm run devstart
   ```
 
 Then navigate to a number of LocalLibrary URLs, and verify that you don't get an error page (HTTP 404). A small set of URLs are listed below for your convenience:
