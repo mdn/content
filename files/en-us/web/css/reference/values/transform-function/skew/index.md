@@ -38,13 +38,6 @@ transform: skew(0.312rad);
 </section>
 ```
 
-This transformation is a shear mapping ([transvection](https://en.wikipedia.org/wiki/Shear_mapping)) that distorts
-each point within an element by a certain angle in the horizontal and vertical directions. The effect is as if you
-grabbed each corner of the element and pulled them along a certain angle.
-
-The coordinates of each point are modified by a value proportionate to the specified angle and the distance to the
-origin. Thus, the farther from the origin a point is, the greater the value added to it.
-
 ## Syntax
 
 ```css
@@ -97,6 +90,15 @@ skew(ax, ay)
     </tr>
   </tbody>
 </table>
+
+## Description
+
+This transformation is a shear mapping ([transvection](https://en.wikipedia.org/wiki/Shear_mapping)) that distorts
+each point within an element by a certain angle in the horizontal and vertical directions. The effect is as if you
+grabbed each corner of the element and pulled them along a certain angle.
+
+The coordinates of each point are modified by a value proportionate to the specified angle and the distance to the
+origin. Thus, the farther from the origin a point is, the greater the value added to it.
 
 ## Formal syntax
 

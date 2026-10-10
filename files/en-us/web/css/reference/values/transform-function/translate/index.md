@@ -54,9 +54,6 @@ transform: translate(3ch, 3mm);
 }
 ```
 
-This transformation is characterized by a two-dimensional vector [tx, ty]. Its coordinates define how much the element moves
-in each direction.
-
 ## Syntax
 
 ```css
@@ -122,6 +119,11 @@ transform: translate(30%, 50%);
     </tr>
   </tbody>
 </table>
+
+## Description
+
+This transformation is characterized by a two-dimensional vector [tx, ty]. Its coordinates define how much the element moves
+in each direction.
 
 ## Formal syntax
 

@@ -41,11 +41,6 @@ input:out-of-range {
 </form>
 ```
 
-This pseudo-class is useful for giving the user a visual indication that a field's current value is outside the permitted limits.
-
-> [!NOTE]
-> This pseudo-class only applies to elements that have (and can take) a range limitation. In the absence of such a limitation, the element can neither be "in-range" nor "out-of-range."
-
 ## Syntax
 
 ```css
@@ -53,6 +48,13 @@ This pseudo-class is useful for giving the user a visual indication that a field
   /* ... */
 }
 ```
+
+## Description
+
+This pseudo-class is useful for giving the user a visual indication that a field's current value is outside the permitted limits.
+
+> [!NOTE]
+> This pseudo-class only applies to elements that have (and can take) a range limitation. In the absence of such a limitation, the element can neither be "in-range" nor "out-of-range."
 
 ## Examples
 

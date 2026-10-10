@@ -54,13 +54,6 @@ padding-top: 0;
 }
 ```
 
-An element's padding area is the space between its content and its border.
-
-![The effect of the CSS padding-top property on the element box](padding-top.svg)
-
-> [!NOTE]
-> The {{cssxref("padding")}} property can be used to set paddings on all four sides of an element with a single declaration.
-
 ## Syntax
 
 ```css
@@ -88,6 +81,14 @@ The `padding-top` property is specified as a single value chosen from the list b
   - : The size of the padding as a fixed value. Must be non-negative.
 - {{cssxref("&lt;percentage&gt;")}}
   - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block). Must be non-negative.
+
+## Description
+
+The `padding-top` property sets the padding area on the top of an element. An element's padding area is the space between its content and its border.
+
+![The effect of the CSS padding-top property on the element box](padding-top.svg)
+
+The {{cssxref("padding")}} property can be used to set paddings on all four sides of an element with a single declaration.
 
 ## Formal definition
 
