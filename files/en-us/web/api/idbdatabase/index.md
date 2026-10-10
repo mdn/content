@@ -44,7 +44,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : An event fired when the database connection is unexpectedly closed.
 
 - [`versionchange`](/en-US/docs/Web/API/IDBDatabase/versionchange_event)
-  - : An event fired when a database structure change was requested.
+  - : An event fired when another connection requested a structure change (an upgrade) or a deletion. Handler code should [close the database](/en-US/docs/Web/API/IDBDatabase/versionchange_event) so that the change is not blocked.
 
 The following events are available to `IDBDatabase` via event bubbling from {{domxref("IDBTransaction")}}:
 
