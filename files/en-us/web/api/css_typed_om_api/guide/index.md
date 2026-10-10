@@ -240,7 +240,7 @@ You can use a `CSSUnitValue` or `CSSKeywordValue` to create other objects.
 
 ## CSSStyleValue
 
-The `CSSStyleValue` interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) is the base class of all CSS values accessible through the Typed OM API, including {{domxref('CSSImageValue')}}, {{domxref('CSSKeywordValue')}}, {{domxref('CSSNumericValue')}}, {{domxref('CSSPositionValue')}}, {{domxref('CSSTransformValue')}}, and {{domxref('CSSUnparsedValue')}}.
+The `CSSStyleValue` interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) is the base class of all CSS values accessible through the Typed OM API, including {{domxref('CSSImageValue')}}, {{domxref('CSSKeywordValue')}}, {{domxref('CSSNumericValue')}}, {{domxref('CSSPositionValue')}}, {{domxref('CSSTransformValue')}}, and {{domxref('CSSUnparsedValue')}}.
 
 It has two methods:
 

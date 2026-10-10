@@ -7,7 +7,7 @@ browser-compat: api.CSSStyleRule
 
 {{ APIRef("CSSOM") }}
 
-The **`CSSStyleRule`** interface represents a single CSS style rule.
+The **`CSSStyleRule`** interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) represents a single CSS style rule.
 
 {{InheritanceDiagram}}
 
