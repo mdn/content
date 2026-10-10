@@ -44,12 +44,29 @@ Display override objects are display-mode strings, the possible values are:
 
 ## Examples
 
+### Setting a display-mode fallback chain
+
 In the example below, the browser will consider the following display-mode fallback chain in this order: `fullscreen` → `minimal-ui` → `standalone`.
 
 ```json
 {
   "display_override": ["fullscreen", "minimal-ui"],
   "display": "standalone"
+}
+```
+
+### Opting into a window controls overlay
+
+It is possible to opt in to having an active [window controls overlay](/en-US/docs/Web/API/Window_Controls_Overlay_API) when a PWA is installed by setting [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display) to `standalone`, required for displaying a windows control overlay, and [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) to `["window-controls-overlay"]` to do the actual opt-in.
+
+```json
+{
+  ...
+
+  "display": "standalone",
+  "display_override": ["window-controls-overlay"],
+
+  ...
 }
 ```
 
