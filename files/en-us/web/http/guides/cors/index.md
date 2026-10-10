@@ -18,13 +18,20 @@ The CORS mechanism supports secure cross-origin requests and data transfers betw
 
 ## What requests use CORS?
 
-This [cross-origin sharing standard](https://fetch.spec.whatwg.org/#http-cors-protocol) can enable cross-origin HTTP requests for:
+The [cross-origin sharing standard](https://fetch.spec.whatwg.org/#http-cors-protocol) can enable cross-origin HTTP requests for cases such as:
 
-- Invocations of `fetch()` or `XMLHttpRequest`, as discussed above.
-- Web Fonts (for cross-domain font usage in `@font-face` within CSS), as described in the [font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements), so that servers can deploy TrueType fonts that can only be loaded cross-origin and used by websites that are permitted to do so.
-- [WebGL textures](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
-- Images/video frames drawn to a canvas using {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}}.
-- [CSS Shapes from images.](/en-US/docs/Web/CSS/Guides/Shapes/From_images)
+- HTML:
+  - Resources fetched by HTML elements with the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute, such as `<img crossorigin="anonymous">`
+- CSS:
+  - Web Fonts via [`@font-face`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face)
+  - [CSS Shapes from images](/en-US/docs/Web/CSS/Guides/Shapes/From_images)
+- JavaScript:
+  - Invocations of `fetch()` or `XMLHttpRequest`, as discussed above
+  - [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) loaded using `<script type="module">` and their imports, even when the `crossorigin` attribute is omitted
+  - [WebGL textures](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)
+  - Images/video frames drawn to a canvas using {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} without [tainting the canvas](/en-US/docs/Web/HTML/How_to/CORS_enabled_image#security_and_tainted_canvases), allowing its pixel data to be read or exported
+
+If a site merely _embeds_ a resource with no way to read its data, or merely _writes_ to the external resource, then user data on the external origin is less likely to leak, and such features may not require CORS. However, browsers are increasingly cautious about cross-origin requests in general, so new web features that initiate requests generally require CORS regardless of their nature.
 
 This is a general article about Cross-Origin Resource Sharing and includes a discussion of the necessary HTTP headers.
 
