@@ -35,6 +35,6 @@ console.log(leftPosition.baseVal.value); // the `x` value
 ## See also
 
 - {{domxref("SVGFEFloodElement.y")}}
-- [SVG filter tutorial](/en-US/docs/Web/SVG/Guides/SVG_filters)
+- [Applying effects with SVG filters](/en-US/docs/Web/SVG/Guides/Filters)
 - CSS {{cssxref("blend-mode")}} data type
 - CSS {{cssxref("mix-blend-mode")}} property
