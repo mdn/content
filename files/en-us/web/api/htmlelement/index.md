@@ -42,6 +42,10 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
   - : Returns the {{DOMxRef("EditContext")}} associated with the element, or `null` if there isn't one.
 - {{DOMxRef("HTMLElement.enterKeyHint")}}
   - : A string defining what action label (or icon) to present for the enter key on virtual keyboards.
+- {{DOMxRef("HTMLElement.focusGroup")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMTokenList")}} reflecting the [`focusgroup`](/en-US/docs/Web/HTML/Reference/Global_attributes/focusgroup) attribute, which specifies the "roving tabindex" keyboard navigation behavior of the associated element.
+- {{DOMxRef("HTMLElement.focusGroupStart")}}
+  - : A boolean reflecting the [`focusgroupstart`](/en-US/docs/Web/HTML/Reference/Global_attributes/focusgroupstart) attribute, which marks the first item to receive focus on entering a `focusgroup`, when set on a focusable child of the group.
 - {{DOMxRef("HTMLElement.hidden")}}
   - : A string or boolean value reflecting the value of the element's [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) attribute.
 - {{DOMxRef("HTMLElement.inert")}}
