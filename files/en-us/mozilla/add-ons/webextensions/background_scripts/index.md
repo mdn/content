@@ -40,7 +40,7 @@ Background scripts can use any [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/W
 
 ### Cross-origin access
 
-Background scripts can make XHR requests to hosts they have [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) for.
+Background scripts can make `fetch()` or `XMLHttpRequest` requests to hosts they have [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) for. See [Cross-origin network requests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Cross-origin_network_requests) for details.
 
 ### Web content
 

@@ -8,6 +8,9 @@ sidebar: addonsidebar
 
 Add event listeners for the various stages of making an HTTP request, which includes websocket requests on `ws://` and `wss://`. The event listener receives detailed information about the request and can modify or cancel the request.
 
+> [!NOTE]
+> `webRequest` only lets you observe, block, or modify requests that are made elsewhere, such as by a web page or another part of the browser; it doesn't provide a way for an extension to make an HTTP request. To make a request from a background script or other extension page, use [`fetch()`](/en-US/docs/Web/API/Fetch_API) or [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest), as described in [Make cross-origin network requests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Cross-origin_network_requests).
+
 Each event is fired at a particular stage of the request. The sequence of events is like this:
 
 ![Order of requests is onBeforeRequest, onBeforeSendHeader, onSendHeaders, onHeadersReceived, onResponseStarted, and onCompleted. The onHeadersReceived can cause an onBeforeRedirect and an onAuthRequired. Events caused by onHeadersReceived start at the beginning onBeforeRequest. Events caused by onAuthRequired start at onBeforeSendHeader.](webrequest-flow.png)
