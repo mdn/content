@@ -89,7 +89,7 @@ The {{domxref('CSSKeywordValue')}} interface of the CSS Typed Object Model API c
     - {{domxref('CSSNumericValue.div')}} - Divides the `CSSNumericValue` by the supplied value, throwing an error if `0`.
     - {{domxref('CSSNumericValue.min')}} - Returns the minimum value passed
     - {{domxref('CSSNumericValue.max')}} - Returns the maximum value passed
-    - {{domxref('CSSNumericValue.equals')}} - Returns true if all the values are the exact same type and value, in the same order. Otherwise, false
+    - {{domxref('CSSNumericValue.equals')}} - Returns `true` if every value passed is the same as the `CSSNumericValue`, written with the same values and units, and `false` otherwise
     - {{domxref('CSSNumericValue.to')}} - Converts `value` into another one with the specified _unit._
     - {{domxref('CSSNumericValue.toSum')}}
     - {{domxref('CSSNumericValue.type')}}
