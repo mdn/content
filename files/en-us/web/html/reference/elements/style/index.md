@@ -62,11 +62,23 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 ## Usage notes
 
-The `<style>` element is typically included inside the {{htmlelement("head")}} of the document. It can also be used anywhere metadata content is permitted, such as inside a {{htmlelement("template")}} element.
+The `<style>` element is typically included inside the {{htmlelement("head")}} of the document. It can also be used anywhere metadata content is permitted, such as inside a {{htmlelement("template")}} element, or in the {{htmlelement("body")}} as the first child of its parent element (see [Using `<style>` in the body](#using_style_in_the_body)).
 
 If you include multiple `<style>` and `<link>` elements in your document, they will be applied to the DOM in the order they are included in the document — make sure you include them in the correct order, to avoid unexpected cascade issues.
 
 In the same manner as `<link>` elements, `<style>` elements can include `media` attributes that contain [media queries](/en-US/docs/Web/CSS/Guides/Media_queries), allowing you to selectively apply internal stylesheets to your document depending on media features such as viewport width.
+
+### Using `<style>` in the body
+
+A `<style>` element can be used where flow content is expected, such as in the {{htmlelement("body")}}, as long as it is the first child of its parent element and its stylesheet only styles that parent element and its descendants:
+
+- Every style rule must be inside an {{cssxref("@scope")}} rule without a scope root selector, such as `@scope { ... }` or `@scope to (.x) { ... }`. Such an `@scope` rule is scoped to the `<style>` element's parent. It can itself be nested inside rules such as {{cssxref("@media")}}, {{cssxref("@supports")}}, {{cssxref("@container")}}, {{cssxref("@starting-style")}}, or {{cssxref("@layer")}}.
+- An `@scope` rule with a scope root selector, such as `@scope (.card) { ... }`, must likewise be nested inside an `@scope` rule without a scope root selector.
+- The stylesheet must not contain {{cssxref("@import")}} rules.
+
+Browsers apply any `<style>` element in the body, but one that doesn't follow these rules is invalid HTML. The rules ensure that a `<style>` element in the body can't restyle content that the browser might already have rendered, other than its parent element.
+
+At-rules such as {{cssxref("@font-face")}}, {{cssxref("@keyframes")}}, and {{cssxref("@property")}} define names for the whole document. To avoid restyling content that might already have been rendered, only use such names within the `<style>` element's parent, and pick names that aren't used elsewhere in the document.
 
 ## Examples
 
@@ -184,6 +196,34 @@ In this example we build on the previous one, including a `media` attribute on t
 
 {{EmbedLiveSample('Including_a_media_query', '100%', '100')}}
 
+### Scoped styles in the body
+
+In this example, a `<style>` element is the first child of an {{htmlelement("aside")}} element. Its rules are inside an `@scope` rule without a scope root selector, so they only apply to the `<aside>` and its descendants.
+
+```html
+<aside>
+  <style>
+    @scope {
+      :scope {
+        background-color: lightyellow;
+        padding: 0 1rem;
+      }
+      p {
+        font-weight: bold;
+      }
+    }
+  </style>
+  <p>Did you know? Octopuses have three hearts.</p>
+</aside>
+<p>This paragraph isn't styled, because it's outside the aside.</p>
+```
+
+Adding a rule such as `p { margin: 0; }` outside the `@scope` rule would make the HTML invalid, because it isn't limited to the `<aside>`.
+
+#### Result
+
+{{EmbedLiveSample('Scoped_styles_in_the_body', '100%', '150')}}
+
 ## Technical summary
 
 <table class="properties">
@@ -197,6 +237,9 @@ In this example we build on the previous one, including a `media` attribute on t
       <td>
         <a href="/en-US/docs/Web/HTML/Guides/Content_categories#metadata_content"
           >Metadata content</a
+        >,
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
+          >flow content</a
         >.
       </td>
     </tr>
@@ -217,7 +260,10 @@ In this example we build on the previous one, including a `media` attribute on t
         Any element that accepts
         <a href="/en-US/docs/Web/HTML/Guides/Content_categories#metadata_content"
           >metadata content</a
-        >.
+        >. Any element that accepts
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
+          >flow content</a
+        >, as its first child.
       </td>
     </tr>
     <tr>
