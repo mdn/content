@@ -162,6 +162,7 @@ DBFS
 DCDM
 DCSP
 debiased
+decapsulation
 decodability
 Deinonychus
 demi
