@@ -122,6 +122,11 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   [On-device speech recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) is now supported in Nightly, on desktop only. This allows you to perform speech recognition via the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) directly in the browser, rather than relying on a cloud service.
   ([Firefox bug 2069803](https://bugzil.la/2069803)).
 
+- **Speculation rules: moderate eagerness**: `dom.speculation_rules.enabled`
+
+  [Speculation rules](/en-US/docs/Web/API/Speculation_Rules_API#browser_compatibility) provides a mechanism to improve performance for future navigations by specifying which resources should be prefetched or prerendered based on factors such as user behavior towards links. Firefox 158 Nightly enables support for [`moderate`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#moderate) eagerness, which indicates that prefetch/prerender should start when there is a reasonable suggestion that the user will follow a link in the near future. For example, the user could scroll a link into the viewport and hover/focus it for some time.
+  ([Firefox bug 2061013](https://bugzil.la/2061013)).
+
 - **Streaming request bodies**: `dom.fetch.streaming_upload`
 
   Enabled in Nightly only, you can now set a {{domxref("ReadableStream")}} as a request body (for example, via the {{domxref("Request.Request", "Request()")}} constructor or the {{domxref("Window.fetch()")}} method). This allows you to stream uploads incrementally rather than having to wait for the whole body to be available.
