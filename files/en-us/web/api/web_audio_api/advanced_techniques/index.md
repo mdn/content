@@ -209,7 +209,7 @@ Now we're going to create a {{domxref("GainNode")}}, as it's the `gain` value th
 
 ```js
 const amp = new GainNode(audioCtx, {
-  value: 1,
+  gain: 1,
 });
 ```
 
@@ -286,7 +286,7 @@ function playPulse(time) {
   });
 
   const amp = new GainNode(audioCtx, {
-    value: 1,
+    gain: 1,
   });
 
   const lfo = new OscillatorNode(audioCtx, {

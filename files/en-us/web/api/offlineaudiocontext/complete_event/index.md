@@ -33,7 +33,11 @@ An {{domxref("OfflineAudioCompletionEvent")}}. Inherits from {{domxref("Event")}
 When processing is complete, you might want to use the `complete` event handler to prompt the user that the audio can now be played, and enable the play button:
 
 ```js
-const offlineAudioCtx = new OfflineAudioContext();
+const offlineAudioCtx = new OfflineAudioContext({
+  numberOfChannels: 2,
+  length: 44100 * 40,
+  sampleRate: 44100,
+});
 
 offlineAudioCtx.addEventListener("complete", () => {
   console.log("Offline audio processing now complete");
@@ -45,7 +49,11 @@ offlineAudioCtx.addEventListener("complete", () => {
 You can also set up the event handler using the `oncomplete` property:
 
 ```js
-const offlineAudioCtx = new OfflineAudioContext();
+const offlineAudioCtx = new OfflineAudioContext({
+  numberOfChannels: 2,
+  length: 44100 * 40,
+  sampleRate: 44100,
+});
 
 offlineAudioCtx.oncomplete = () => {
   console.log("Offline audio processing now complete");
