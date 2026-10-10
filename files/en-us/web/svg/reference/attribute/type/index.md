@@ -2,6 +2,13 @@
 title: type
 slug: Web/SVG/Reference/Attribute/type
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.a.type
+  - svg.elements.animateTransform.type
+  - svg.elements.feColorMatrix.type
+  - svg.elements.feTurbulence.type
+  - svg.elements.script.type
+  - svg.elements.style.type
 sidebar: svgref
 ---
 
@@ -195,3 +202,7 @@ SVG elements: {{SVGElement("style")}}, {{SVGElement("script")}}
     </tr>
   </tbody>
 </table>
+
+## Browser compatibility
+
+{{Compat}}

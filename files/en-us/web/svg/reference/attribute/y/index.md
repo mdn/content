@@ -2,6 +2,19 @@
 title: y
 slug: Web/SVG/Reference/Attribute/y
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.fePointLight.y
+  - svg.elements.feSpotLight.y
+  - svg.elements.filter.y
+  - svg.elements.foreignObject.y
+  - svg.elements.image.y
+  - svg.elements.mask.y
+  - svg.elements.pattern.y
+  - svg.elements.rect.y
+  - svg.elements.svg.y
+  - svg.elements.text.y
+  - svg.elements.tspan.y
+  - svg.elements.use.y
 spec-urls:
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-y
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fespotlight-y
@@ -1254,6 +1267,10 @@ svg {
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

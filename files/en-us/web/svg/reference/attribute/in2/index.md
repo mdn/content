@@ -2,6 +2,10 @@
 title: in2
 slug: Web/SVG/Reference/Attribute/in2
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.feBlend.in2
+  - svg.elements.feComposite.in2
+  - svg.elements.feDisplacementMap.in2
 spec-urls:
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fedisplacementmap-in2
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fecomposite-in2
@@ -107,3 +111,7 @@ For {{SVGElement("feDisplacementMap")}}, `in2` defines the second input image, w
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

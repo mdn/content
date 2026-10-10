@@ -2,6 +2,9 @@
 title: specularExponent
 slug: Web/SVG/Reference/Attribute/specularExponent
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.feSpecularLighting.specularExponent
+  - svg.elements.feSpotLight.specularExponent
 spec-urls:
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fespecularlighting-specularexponent
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fespotlight-specularexponent
@@ -95,6 +98,10 @@ For {{SVGElement("feSpotLight")}}, `specularExponent` defines the exponent value
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

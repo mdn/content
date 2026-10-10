@@ -2,6 +2,21 @@
 title: in
 slug: Web/SVG/Reference/Attribute/in
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.feBlend.in
+  - svg.elements.feColorMatrix.in
+  - svg.elements.feComponentTransfer.in
+  - svg.elements.feComposite.in
+  - svg.elements.feConvolveMatrix.in
+  - svg.elements.feDiffuseLighting.in
+  - svg.elements.feDisplacementMap.in
+  - svg.elements.feDropShadow.in
+  - svg.elements.feGaussianBlur.in
+  - svg.elements.feMergeNode.in
+  - svg.elements.feMorphology.in
+  - svg.elements.feOffset.in
+  - svg.elements.feSpecularLighting.in
+  - svg.elements.feTile.in
 spec-urls: https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-primitive-in
 sidebar: svgref
 ---
@@ -143,3 +158,7 @@ svg {
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
