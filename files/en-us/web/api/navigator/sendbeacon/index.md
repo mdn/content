@@ -83,7 +83,7 @@ document.addEventListener("visibilitychange", () => {
 });
 ```
 
-#### Avoid unload and beforeunload
+#### Legacy events
 
 In the past, many websites have used the [`unload`](/en-US/docs/Web/API/Window/unload_event)
 or [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) events to send analytics at the end of a session.
@@ -100,10 +100,7 @@ thus hurting performance. Others, such as Safari and Chrome on Android, handle i
 
 Firefox will also exclude pages from the bfcache if they contain `beforeunload` handlers.
 
-#### Use pagehide as a fallback
-
-To support browsers which don't implement `visibilitychange`, use the [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) event.
-Like `beforeunload` and `unload`, this event is not reliably fired, especially on mobile. However, it is compatible with the bfcache.
+The `pagehide` event is not as problematic as `unload` or `beforeunload`, because it is compatible with the bfcache. However, it suffers from the same reliability problems as the other two events, so we recommend that developers should avoid it as well, and use only `visibilitychange`.
 
 ## Examples
 
