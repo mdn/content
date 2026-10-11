@@ -85,10 +85,8 @@ document.addEventListener("visibilitychange", () => {
 
 #### Legacy events
 
-In the past, many websites have used the [`unload`](/en-US/docs/Web/API/Window/unload_event)
-or [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) events to send analytics at the end of a session.
-However, this is extremely unreliable. In many situations, especially on mobile, the browser will not fire the
-`unload`, `beforeunload`, or `pagehide` events. For example, these events will not fire in the following situation:
+In the past, many websites have used the {{domxref("Window.unload_event", "unload")}}, {{domxref("Window.beforeunload_event", "beforeunload")}}, or {{domxref("Window.pagehide_event", "pagehide")}} events to send analytics at the end of a session.
+However, this is unreliable. In many situations, especially on mobile, the browser will not fire these events. For example, they will not fire in the following situation:
 
 1. The user loads the page and interacts with it.
 2. When they are finished, they switch to a different app, instead of closing the tab.
