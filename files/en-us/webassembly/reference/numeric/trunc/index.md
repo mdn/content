@@ -1,12 +1,13 @@
 ---
-title: "trunc: Wasm text instruction"
+title: "trunc: Wasm numeric instruction"
 short-title: trunc
 slug: WebAssembly/Reference/Numeric/trunc
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.trunc
 sidebar: webassemblysidebar
 ---
 
-The **`trunc`** instruction, short for _truncate_, is used for getting the value of a floating point number without its fractional part.
+The **`trunc`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _truncate_, is used for getting the value of a floating point number without its fractional part.
 
 `trunc` differs from [**`floor`**](/en-US/docs/WebAssembly/Reference/Numeric/floor) when used on negative numbers — `floor` will round down in those cases while `trunc` will round up.
 
@@ -48,7 +49,7 @@ value_type.trunc
   - : The type of value the instruction is being run on. The following types support `trunc`:
     - `f32`
     - `f64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `f32x4`
       - `f64x2`
 - `trunc`
@@ -67,7 +68,7 @@ value_type.trunc
 
 For a non-SIMD `trunc`, these will be basic numeric values such as `14.3` or `3.0`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `trunc`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 100.5 6.0 7.8 83.1`. Each lane of the output pushed to the stack is equal to the input value's corresponding lane with the fractional part removed.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `trunc`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `i32x4 100.5 6.0 7.8 83.1`. Each lane of the output pushed to the stack is equal to the input value's corresponding lane with the fractional part removed.
 
 ### Binary encoding
 
@@ -135,6 +136,14 @@ The output is as follows:
 {{embedlivesample("simd_trunc", "100%", 100)}}
 
 `2000` is output because this is the result of removing the fractional part from lane 1 of the input value (`2000.1`).
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

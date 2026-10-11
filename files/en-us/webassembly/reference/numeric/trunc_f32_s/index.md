@@ -1,12 +1,13 @@
 ---
-title: "trunc_f32_s: Wasm text instruction"
+title: "trunc_f32_s: Wasm numeric instruction"
 short-title: trunc_f32_s
 slug: WebAssembly/Reference/Numeric/trunc_f32_s
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.trunc_f32_s
 sidebar: webassemblysidebar
 ---
 
-The **`trunc_f32_s`** instruction removes the fractional part of an `f32` value and outputs it as a signed integer.
+The **`trunc_f32_s`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) removes the fractional part of an `f32` value and outputs it as a signed integer.
 
 This is a separate instruction, [`trunc`](/en-US/docs/WebAssembly/Reference/Numeric/trunc), which removes the fractional part of a float and outputs a float.
 
@@ -67,6 +68,14 @@ value_type.trunc_f32_s
 | ----------------- | ------------- | --------------------------- |
 | `i32.trunc_f32_s` | `0xa8`        | `i32.trunc_f32_s` => `0xa8` |
 | `i64.trunc_f32_s` | `0xae`        | `i64.trunc_f32_s` => `0xae` |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

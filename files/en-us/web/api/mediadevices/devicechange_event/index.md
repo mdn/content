@@ -177,7 +177,7 @@ function updateDeviceList() {
 {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} on the
 {{domxref("MediaDevices")}} object referenced in the
 {{domxref("navigator.mediaDevices")}} property, as well as the code that's run when the
-{{jsxref("promise")}} returned by `enumerateDevices()` is fulfilled. The
+{{jsxref("Promise")}} returned by `enumerateDevices()` is fulfilled. The
 fulfillment handler is called when the device list is ready. The list is passed into the
 fulfillment handler as an array of {{domxref("MediaDeviceInfo")}} objects, each
 describing one media input or output device.

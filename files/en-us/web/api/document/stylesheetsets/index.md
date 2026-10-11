@@ -9,7 +9,7 @@ status:
 browser-compat: api.Document.styleSheetSets
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_header}}
 
 The **`styleSheetSets`** read-only property returns a live list of all of the currently-available style sheet sets.
 

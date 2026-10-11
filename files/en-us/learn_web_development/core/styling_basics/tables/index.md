@@ -242,7 +242,7 @@ Load your HTML into a browser to see how it looks by default.
 
 ## Updating the font
 
-This is a minor point, and not strictly relevant to styling tables, but we thought the default font looked a bit too formal for a table about punk bands. Start your CSS off by adding the following rule:
+Start your CSS off by adding the following rule:
 
 ```css
 html {
@@ -352,7 +352,7 @@ We wanted to dedicate a separate section to showing you how to implement **zebra
 
 ```css
 tbody tr:nth-child(odd) {
-  background-color: #eeeeee;
+  background-color: #dddddd;
 }
 ```
 
@@ -424,7 +424,7 @@ tfoot {
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #eeeeee;
+  background-color: #dddddd;
 }
 
 caption {

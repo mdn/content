@@ -1,5 +1,6 @@
 ---
-title: mask-composite
+title: "`mask-composite` CSS property"
+short-title: mask-composite
 slug: Web/CSS/Reference/Properties/mask-composite
 page-type: css-property
 browser-compat: css.properties.mask-composite

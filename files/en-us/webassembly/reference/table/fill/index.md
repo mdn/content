@@ -3,12 +3,11 @@ title: "fill: Wasm table instruction"
 short-title: fill
 slug: WebAssembly/Reference/Table/fill
 page-type: webassembly-instruction
-browser-compat: webassembly.reference-types
-spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-table
+browser-compat: webassembly.instructions.table_fill
 sidebar: webassemblysidebar
 ---
 
-The **`table.fill`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) sets a range of table elements to the same value.
+The **`table.fill`** [table instruction](/en-US/docs/WebAssembly/Reference/Table) sets a range of table elements to the same value.
 
 {{InteractiveExample("Wat Demo: table.fill", "tabbed-taller")}}
 
@@ -126,7 +125,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), {
 
 #### Wasm
 
-In our Wasm module, we first import the JavaScript `output()` function, making sure to declare that it has two parameters, an [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref) and an `i32`.
+In our Wasm module, we first import the JavaScript `output()` function, making sure to declare that it has two parameters, an [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref) and an `i32`.
 
 Next, we define a function type called `$ret_i32` that returns an `i32`, and a `table` that stores function references (hence `funcref` being specified) and has three elements.
 

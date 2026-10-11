@@ -17,7 +17,7 @@ second.
 
 ## Value
 
-The `rotationRate` property is a read only object describing the rotation
+The `rotationRate` property is a read-only object describing the rotation
 rates of the device around each of its axes:
 
 - `alpha`

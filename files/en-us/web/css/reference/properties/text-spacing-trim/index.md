@@ -1,5 +1,6 @@
 ---
-title: text-spacing-trim
+title: "`text-spacing-trim` CSS property"
+short-title: text-spacing-trim
 slug: Web/CSS/Reference/Properties/text-spacing-trim
 page-type: css-property
 status:

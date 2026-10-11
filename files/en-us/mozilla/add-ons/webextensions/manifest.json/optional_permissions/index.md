@@ -54,7 +54,7 @@ These are the same as the host permissions you can specify in the [`permissions`
 
 The optional API permissions are:
 
-- `activeTab`
+- [`activeTab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission)
 - `background`
 - `bookmarks`
 - `browserSettings`
@@ -82,6 +82,7 @@ The optional API permissions are:
 - `pkcs11`
 - `privacy`
 - `proxy`
+- `publicSuffix`
 - `scripting`
 - `search`
 - `sessions`
@@ -103,6 +104,7 @@ These optional permissions are granted silently, without a user prompt:
 - `activeTab`
 - `cookies`
 - `idle`
+- `publicSuffix`
 - `tabGroups`
 - `webRequest`
 - `webRequestBlocking`

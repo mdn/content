@@ -40,10 +40,10 @@ HTML drag-and-drop uses the [DOM event model](/en-US/docs/Web/API/Event) and _[d
 | Event                                                   | Fires when...                                                                              |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | {{domxref('HTMLElement/dragstart_event', 'dragstart')}} | ...the [draggable item](#draggable_items) starts to be dragged.                            |
-| {{domxref('HTMLElement/drag_event', 'drag')}}           | ...the draggable item is being dragged, every few hundred milliseconds.                    |
+| {{domxref('HTMLElement/drag_event', 'drag')}}           | ...the draggable item is being dragged (fires repeatedly).                                 |
 | {{domxref('HTMLElement/dragenter_event', 'dragenter')}} | ...the element has a draggable item entering it.                                           |
 | {{domxref('HTMLElement/dragleave_event', 'dragleave')}} | ...the element has a draggable item leaving it.                                            |
-| {{domxref('HTMLElement/dragover_event', 'dragover')}}   | ...the element has a draggable item being dragged over it, every few hundred milliseconds. |
+| {{domxref('HTMLElement/dragover_event', 'dragover')}}   | ...the element has a draggable item being dragged over it (fires repeatedly).              |
 | {{domxref('HTMLElement/drop_event', 'drop')}}           | ...the element is a [drop target](#drop_target) and the draggable item is dropped over it. |
 | {{domxref('HTMLElement/dragend_event', 'dragend')}}     | ...the draggable item stops being dragged.                                                 |
 

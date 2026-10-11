@@ -3,14 +3,12 @@ title: "Serial: getPorts() method"
 short-title: getPorts()
 slug: Web/API/Serial/getPorts
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Serial.getPorts
 ---
 
-{{APIRef("Web Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Web Serial API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`getPorts()`** method of the {{domxref("Serial")}} interface returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}} objects representing serial ports connected to the host which the origin has permission to access.
+The **`getPorts()`** method of the {{domxref("Serial")}} interface returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}} objects representing serial ports connected to the host that the origin has permission to access.
 
 ## Syntax
 
@@ -34,6 +32,8 @@ A {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}}
     - A user permission prompt was denied.
 
 ## Examples
+
+### List available ports
 
 The following example uses `getPorts()` to initialize a list of available ports.
 

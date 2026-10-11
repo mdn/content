@@ -6,23 +6,24 @@ page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.equals
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`equals()`** method of the
-{{domxref("CSSNumericValue")}} interface returns a boolean indicating whether the passed
-value are strictly equal. To return a value of `true`, all passed values must
-be of the same type and value and must be in the same order. This allows structural
-equality to be tested quickly.
+The **`equals()`** method of the {{domxref("CSSNumericValue")}} interface returns a boolean indicating whether the passed values are strictly equal.
+To return a value of `true`, all passed values must be of the same type and value and must be in the same order.
+This allows structural equality to be tested quickly.
 
 ## Syntax
 
 ```js-nolint
-equals(number)
+equals()
+equals(number1)
+equals(number1, number2)
+equals(number1, number2, /* …, */ numberN)
 ```
 
 ### Parameters
 
-- `number`
+- `number1`, …, `numberN` {{optional_inline}}
   - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
@@ -35,9 +36,10 @@ None.
 
 ## Examples
 
-As stated earlier, all passed values must be of the same type and value and must be in
-the same order. Some of the following examples illustrate what happens when they are
-not.
+### Basic usage
+
+As stated earlier, all passed values must be of the same type and value and must be in the same order.
+Some of the following examples illustrate what happens when they are not.
 
 ```js
 let cssMathSum = new CSSMathSum(CSS.px(1), CSS.px(2));

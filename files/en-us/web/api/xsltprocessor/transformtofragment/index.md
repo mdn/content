@@ -3,6 +3,8 @@ title: "XSLTProcessor: transformToFragment() method"
 short-title: transformToFragment()
 slug: Web/API/XSLTProcessor/transformToFragment
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.XSLTProcessor.transformToFragment
 ---
 

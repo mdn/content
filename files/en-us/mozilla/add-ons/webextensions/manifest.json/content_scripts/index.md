@@ -57,7 +57,7 @@ This table details all the properties you can include.
   <tbody>
     <tr>
       <td>
-        <a id="all_frames"><code>all_frames</code></a>
+        <a id="all_frames" href="#all_frames"><code>all_frames</code></a>
       </td>
       <td><code>Boolean</code></td>
       <td>
@@ -93,7 +93,7 @@ This table details all the properties you can include.
     </tr>
     <tr>
       <td>
-        <a id="css"><code>css</code></a>
+        <a id="css" href="#css"><code>css</code></a>
       </td>
       <td><code>Array</code></td>
       <td>
@@ -114,7 +114,7 @@ This table details all the properties you can include.
     </tr>
     <tr>
       <td>
-        <a id="css_origin"><code>css_origin</code></a>
+        <a id="css_origin" href="#css_origin"><code>css_origin</code></a>
         <br />{{optional_inline}}
       </td>
       <td><code>String</code></td>
@@ -128,13 +128,13 @@ This table details all the properties you can include.
           Defaults to <code>"author"</code>.
         </p>
         <p>
-          This property is case incentive insensitive in Firefox and Safari.
+          This property is case insensitive in Firefox and Safari.
         </p>
       </td>
     </tr>
     <tr>
       <td>
-        <a id="exclude_globs"><code>exclude_globs</code></a>
+        <a id="exclude_globs" href="#exclude_globs"><code>exclude_globs</code></a>
       </td>
       <td><code>Array</code></td>
       <td>
@@ -144,7 +144,7 @@ This table details all the properties you can include.
     </tr>
     <tr>
       <td>
-        <a id="exclude_matches"><code>exclude_matches</code></a>
+        <a id="exclude_matches" href="#exclude_matches"><code>exclude_matches</code></a>
       </td>
       <td><code>Array</code></td>
       <td>
@@ -156,7 +156,7 @@ This table details all the properties you can include.
     </tr>
     <tr>
       <td>
-        <a id="include_globs"><code>include_globs</code></a>
+        <a id="include_globs" href="#include_globs"><code>include_globs</code></a>
       </td>
       <td><code>Array</code></td>
       <td>
@@ -166,7 +166,7 @@ This table details all the properties you can include.
     </tr>
     <tr>
       <td>
-        <a id="js"><code>js</code></a>
+        <a id="js" href="#js"><code>js</code></a>
       </td>
       <td><code>Array</code></td>
       <td>
@@ -179,7 +179,7 @@ This table details all the properties you can include.
     </tr>
     <tr>
       <td>
-        <code><a id="match_about_blank">match_about_blank</a></code>
+        <code><a id="match_about_blank" href="#match_about_blank">match_about_blank</a></code>
       </td>
       <td><code>Boolean</code></td>
       <td>
@@ -229,7 +229,7 @@ This table details all the properties you can include.
     </tr>
     <tr>
       <td>
-        <code><a id="match_origin_as_fallback">match_origin_as_fallback</a></code>
+        <code><a id="match_origin_as_fallback" href="#match_origin_as_fallback">match_origin_as_fallback</a></code>
       </td>
       <td><code>Boolean</code></td>
       <td>
@@ -238,7 +238,7 @@ This table details all the properties you can include.
     </tr>
     <tr>
       <td>
-        <a id="matches"><code>matches</code></a>
+        <a id="matches" href="#matches"><code>matches</code></a>
       </td>
       <td><code>Array</code></td>
       <td>
@@ -254,7 +254,7 @@ This table details all the properties you can include.
     </tr>
     <tr>
       <td>
-        <a id="run_at"><code>run_at</code></a>
+        <a id="run_at" href="#run_at"><code>run_at</code></a>
       </td>
       <td><code>String</code></td>
       <td>
@@ -293,7 +293,7 @@ This table details all the properties you can include.
     </tr>
     <tr>
       <td>
-        <a id="world"><code>world</code></a>
+        <a id="world" href="#world"><code>world</code></a>
       </td>
       <td><code>String</code></td>
       <td>

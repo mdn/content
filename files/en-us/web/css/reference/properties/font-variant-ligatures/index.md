@@ -1,12 +1,13 @@
 ---
-title: font-variant-ligatures
+title: "`font-variant-ligatures` CSS property"
+short-title: font-variant-ligatures
 slug: Web/CSS/Reference/Properties/font-variant-ligatures
 page-type: css-property
 browser-compat: css.properties.font-variant-ligatures
 sidebar: cssref
 ---
 
-The **`font-variant-ligatures`** [CSS](/en-US/docs/Web/CSS) property controls which {{Glossary("ligature", "ligatures")}} and {{Glossary("contextual forms")}} are used in the textual content of the elements it applies to. This leads to more harmonized forms in the resulting text.
+The **`font-variant-ligatures`** [CSS](/en-US/docs/Web/CSS) property controls which {{Glossary("ligature", "ligatures")}} and contextual forms are used in the textual content of the elements it applies to. This leads to more harmonized forms in the resulting text.
 
 {{InteractiveExample("CSS Demo: font-variant-ligatures")}}
 
@@ -77,9 +78,9 @@ font-variant-ligatures: revert-layer;
 font-variant-ligatures: unset;
 ```
 
-The `font-variant-ligatures` property is specified as `normal`, `none`, or one or more of the other value types listed below. Spaces separate multiple values.
-
 ### Values
+
+This property is specified as a single keyword or as a space-separated list of the following values:
 
 - `normal`
   - : This keyword activates the usual ligatures and contextual forms needed for correct rendering. The ligatures and forms activated depend on the font, language, and kind of script. This is the default value.

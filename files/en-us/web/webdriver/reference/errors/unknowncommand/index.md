@@ -1,5 +1,6 @@
 ---
-title: Unknown command
+title: "`unknown command` error code"
+short-title: unknown command
 slug: Web/WebDriver/Reference/Errors/UnknownCommand
 page-type: webdriver-error
 sidebar: webdriver

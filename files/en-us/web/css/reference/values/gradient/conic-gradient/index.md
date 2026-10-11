@@ -71,19 +71,6 @@ conic-gradient(from 90deg at 0 0, blue, red)
 /* Interpolation in polar color space
   with longer hue interpolation method */
 conic-gradient(in hsl longer hue, red, blue, green, red)
-
-/* Color wheel */
-conic-gradient(
-  hsl(360 100% 50%),
-  hsl(315 100% 50%),
-  hsl(270 100% 50%),
-  hsl(225 100% 50%),
-  hsl(180 100% 50%),
-  hsl(135 100% 50%),
-  hsl(90 100% 50%),
-  hsl(45 100% 50%),
-  hsl(0 100% 50%)
-)
 ```
 
 ### Values
@@ -310,6 +297,32 @@ In this example for interpolation [hsl](/en-US/docs/Web/CSS/Reference/Values/col
 The box on the left uses [shorter interpolation](/en-US/docs/Web/CSS/Reference/Values/hue-interpolation-method#shorter), meaning color goes straight from red to blue using the shorter arc on the [color wheel](/en-US/docs/Glossary/Color_wheel). The box on the right uses [longer interpolation](/en-US/docs/Web/CSS/Reference/Values/hue-interpolation-method#longer), meaning the color goes from red to blue using the longer arc, traversing through greens, yellows, and oranges.
 
 {{EmbedLiveSample("Interpolating with hue", 240, 200)}}
+
+### Color Wheel
+
+```html hidden
+<div></div>
+```
+
+```css hidden
+div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+```
+
+```css
+div {
+  background-image: conic-gradient(
+    in hsl longer hue,
+    hsl(360 100% 50%),
+    hsl(0 100% 50%)
+  );
+}
+```
+
+{{EmbedLiveSample("Color Wheel", 100, 100)}}
 
 ### More conic-gradient examples
 

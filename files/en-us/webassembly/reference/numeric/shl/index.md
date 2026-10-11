@@ -1,12 +1,13 @@
 ---
-title: "shl: Wasm text instruction"
+title: "shl: Wasm numeric instruction"
 short-title: shl
 slug: WebAssembly/Reference/Numeric/shl
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.shl
 sidebar: webassemblysidebar
 ---
 
-The **`shl`** instruction, short for _shift-left_, is used for performing a bitwise left-shift, similar to the **`<<`** operator in other languages.
+The **`shl`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _shift-left_, is used for performing a bitwise left-shift, similar to the **`<<`** operator in other languages.
 
 {{InteractiveExample("Wat Demo: shl", "tabbed-taller")}}
 
@@ -56,7 +57,7 @@ value_type.shl
   - : The type of value the instruction is being run on. The following types support `shl`:
     - `i32`
     - `i64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `i8x16`
       - `i16x8`
       - `i32x4`
@@ -79,7 +80,7 @@ value_type.shl
 
 For a non-SIMD `shl`, the `input` and `output` will be basic numeric values such as `3` or `10`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `shl`, the `input` and `output` will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 4 8 12 16`. Each lane of the output pushed to the stack contains the corresponding lane in the input value shifted to the left by the specified `shift_value`.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `shl`, the `input` and `output` will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `i32x4 4 8 12 16`. Each lane of the output pushed to the stack contains the corresponding lane in the input value shifted to the left by the specified `shift_value`.
 
 ### Binary encoding
 
@@ -164,6 +165,14 @@ The output is as follows:
 {{embedlivesample("simd_shl", "100%", 100)}}
 
 The result is `48`, because the value stored in lane `3` of the input value is `12`. Once shifted left by two positions, the output value's lane `3` will contain the value `48`.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

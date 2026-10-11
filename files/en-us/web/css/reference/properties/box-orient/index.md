@@ -1,5 +1,6 @@
 ---
-title: box-orient
+title: "`box-orient` CSS property"
+short-title: box-orient
 slug: Web/CSS/Reference/Properties/box-orient
 page-type: css-property
 status:
@@ -9,7 +10,7 @@ browser-compat: css.properties.box-orient
 sidebar: cssref
 ---
 
-{{Non-standard_header}}{{Deprecated_Header}}
+{{Non-standard_header}}
 
 > [!WARNING]
 > This is a property of the original CSS flexible box layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) for information about the current standard.
@@ -31,9 +32,9 @@ box-orient: initial;
 box-orient: unset;
 ```
 
-The `box-orient` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `horizontal`
   - : The box lays out its contents horizontally.

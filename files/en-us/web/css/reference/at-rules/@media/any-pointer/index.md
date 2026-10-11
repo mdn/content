@@ -1,5 +1,6 @@
 ---
-title: any-pointer
+title: "`any-pointer` CSS media feature"
+short-title: any-pointer
 slug: Web/CSS/Reference/At-rules/@media/any-pointer
 page-type: css-media-feature
 browser-compat: css.at-rules.media.any-pointer

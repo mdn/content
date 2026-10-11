@@ -1,5 +1,6 @@
 ---
-title: "<select>: The HTML Select element"
+title: "`<select>` HTML select element"
+short-title: <select>
 slug: Web/HTML/Reference/Elements/select
 page-type: html-element
 browser-compat: html.elements.select
@@ -37,18 +38,6 @@ select {
 }
 ```
 
-The above example shows typical `<select>` usage. It is given an `id` attribute to enable it to be associated with a {{htmlelement("label")}} for accessibility purposes, as well as a `name` attribute to represent the name of the associated data point submitted to the server. Each menu option is defined by an {{htmlelement("option")}} element nested inside the `<select>`.
-
-Each `<option>` element should have a [`value`](/en-US/docs/Web/HTML/Reference/Elements/option#value) attribute containing the data value to submit to the server when that option is selected. If no `value` attribute is included, the value defaults to the text contained inside the element. You can include a [`selected`](/en-US/docs/Web/HTML/Reference/Elements/option#selected) attribute on an `<option>` element to make it selected by default when the page first loads. If no `selected` attribute is specified, the first `<option>` element will be selected by default.
-
-A `<select>` element is represented in JavaScript by an {{domxref("HTMLSelectElement")}} object, and this object has a {{domxref("HTMLSelectElement.value", "value")}} property which contains the value of the selected `<option>`.
-
-The `<select>` element has some unique attributes you can use to control it, such as `multiple` to specify whether multiple options can be selected, and `size` to specify how many options should be shown at once. It also accepts most of the general form input attributes such as `required`, `disabled`, `autofocus`, etc.
-
-You can further nest {{HTMLElement("option")}} elements inside {{HTMLElement("optgroup")}} elements to create separate groups of options inside the dropdown. You can also include {{HTMLElement("hr")}} elements to create separators that add visual breaks between options.
-
-For further examples, see [The native form widgets: Drop-down content](/en-US/docs/Learn_web_development/Extensions/Forms/Other_form_controls#drop-down_controls).
-
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
@@ -65,29 +54,73 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     This attribute lets you associate `<select>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
 
 - [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple)
-  - : This Boolean attribute indicates that multiple options can be selected in the list. If it is not specified, then only one option can be selected at a time. When `multiple` is specified, most browsers will show a scrolling list box instead of a single line dropdown. Multiple selected options are submitted using the {{domxref("URLSearchParams")}} array convention, i.e., `name=value1&name=value2`.
+  - : This Boolean attribute indicates that zero or more options can be selected in the list. If it is not specified, then only one option can be selected at a time. Multiple selected options are submitted using the {{domxref("URLSearchParams")}} array convention, i.e., `name=value1&name=value2`. If `multiple` is specified, `size` defaults to `4` instead of `1`.
 - `name`
   - : This attribute is used to specify the name of the control.
 - [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required)
-  - : A Boolean attribute indicating that an option with a non-empty string value must be selected.
-- [`size`](/en-US/docs/Web/HTML/Reference/Attributes/size)
-  - : If the control is presented as a scrolling list box (e.g., when `multiple` is specified), this attribute represents the number of rows in the list that should be visible at one time. Browsers are not required to present a select element as a scrolled list box. The default value is `0`.
+  - : This Boolean attribute indicates that the user must select at least one option before the form can be submitted. The `<select>` has no selected options if it has no options, `multiple` is specified and the user deselects all options, the select's value is programmatically set to `""`, or only the _placeholder label option_ is selected. Any option other than the placeholder label option is considered valid, even if its value is also empty.
 
-    > [!NOTE]
-    > According to the HTML specification, the default value for size should be `1`; however, in practice, this has been found to break some websites, and no other browser currently does that, so Mozilla has opted to continue to return `0` for the time being with Firefox.
+    The placeholder label option is the text shown in the box before the user makes a choice, like the "--Please choose an option--" in the [Try it](#try_it) demo above. Semantically, it is considered equivalent to the [`placeholder`](/en-US/docs/Web/HTML/Reference/Attributes/placeholder) attribute and is not considered an actual option. It is defined as the first option in the options list which is a direct child of the `<select>` (not inside an `<optgroup>`) and has an empty string as its value. It is only relevant when the `size` is `1` and `multiple` is not specified; in all other cases, such an `<option>` is just a regular option due to the way the `<select>` is rendered.
+
+- [`size`](/en-US/docs/Web/HTML/Reference/Attributes/size)
+  - : Specifies the number of options to display in the closed state as a positive integer. If the attribute is not specified, the default value is `1`, unless the `multiple` attribute is specified, in which case the default value is `4`. If the value is greater than `1` or the `multiple` attribute is present, browsers render a scrolling list box that has the specified number of rows visible; otherwise the options render as a drop-down list. For backwards compatibility, the {{domxref("HTMLSelectElement.size","size")}} property always returns `0` as the default value.
 
 ## Usage notes
 
+Typically, like other form controls, a `<select>` element is associated with a {{htmlelement("label")}} for accessibility purposes, as well as a `name` attribute to represent the name of the associated data point submitted to the server. Each menu option is defined by an {{htmlelement("option")}} element nested inside the `<select>`.
+
+Each `<option>` element should have a [`value`](/en-US/docs/Web/HTML/Reference/Elements/option#value) attribute containing the data value to submit to the server when that option is selected. If no `value` attribute is included, the value defaults to the text contained inside the element. You can include a [`selected`](/en-US/docs/Web/HTML/Reference/Elements/option#selected) attribute on an `<option>` element to make it selected by default when the page first loads. If no `selected` attribute is specified, the first `<option>` element will be selected by default.
+
+A `<select>` element is represented in JavaScript by an {{domxref("HTMLSelectElement")}} object, and this object has a {{domxref("HTMLSelectElement.value", "value")}} property which contains the value of the selected `<option>`.
+
+You can further nest {{HTMLElement("option")}} elements inside {{HTMLElement("optgroup")}} elements to create separate groups of options inside the dropdown. You can also include {{HTMLElement("hr")}} elements to create separators that add visual breaks between options.
+
+For further examples, see [The native form widgets: Drop-down content](/en-US/docs/Learn_web_development/Extensions/Forms/Other_form_controls#drop-down_controls).
+
+### Options inside wrapper elements
+
+The `<select>` element builds its list of options from all `<option>` descendants, not just its direct children.
+This means that options can be wrapped in other elements, such as {{HTMLElement("div")}} elements, and they will still appear as selectable options in the dropdown and be included in form submission.
+Wrapper elements are useful for styling in [customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) but have no effect on the select's behavior: they don't create groups, labels, or separators.
+To group options under a heading, use an {{HTMLElement("optgroup")}}; an {{HTMLElement("option")}} counts as part of an `<optgroup>` if the group is an ancestor, so wrapper elements may also be used inside a group without breaking the association.
+
+> [!NOTE]
+> Browsers with modern parsing behavior preserve all elements written inside a `<select>` in the DOM — including wrapper elements, {{HTMLElement("button")}}, and {{HTMLElement("selectedcontent")}}.
+> Older browsers instead remove non-permitted elements while parsing, keeping only the `<option>`, `<optgroup>`, and `<hr>` structure.
+> As a result, styling, markup, or scripting that depends on the removed elements will not work on older browsers.
+
 ### Selecting multiple options
 
-On a desktop computer, there are a number of ways to select multiple options in a `<select>` element with a `multiple` attribute:
+A `<select>` element with the [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple) attribute lets the user choose zero or more options. How the control is rendered depends on the [`size`](#size) attribute:
 
-Mouse users can hold the <kbd>Ctrl</kbd>, <kbd>Command</kbd>, or <kbd>Shift</kbd> keys (depending on what makes sense for your operating system) and then click multiple options to select/deselect them.
+- If the `multiple` attribute is set, browsers show a scrolling list box, unless the `size` is set to `1`. When `size` is omitted, the list box is four options tall, even if there are fewer options.
+- If `size` is `1`, supporting browsers display a drop-down that lets the user select more than one option when the control is active. If exactly one option is selected, the selected option is displayed, otherwise, the control displays the count of its selected options as a single-line list box. Browsers that don't support these features display a multiple option menu list within a control that is the height of a single-line box.
 
-> [!WARNING]
-> The mechanism for selecting multiple non-contiguous items via the keyboard described below currently only seems to work in Firefox.
+When using the `multiple` attribute, always inform users that more than one option can be selected.
+
+The following example uses `<select multiple size="1">` to create a drop-down that allows multiple selections:
+
+```html
+<label for="flavors">Choose one or more ice cream flavors:</label>
+<select id="flavors" name="flavors" multiple size="1">
+  <option value="chocolate">Chocolate</option>
+  <option value="strawberry">Strawberry</option>
+  <option value="vanilla">Vanilla</option>
+</select>
+```
+
+{{EmbedLiveSample("Selecting_multiple_options", "", "100")}}
+
+#### Selecting options in a list box
+
+On a desktop computer, there are a number of ways to select multiple options in a `<select>` element with a `multiple` attribute and a `size` attribute greater than `1`.
+
+Mouse users can hold the <kbd>Ctrl</kbd> (<kbd>Command</kbd> on macOS) or <kbd>Shift</kbd> key (depending on what makes sense for your operating system) and then click multiple options to select/deselect them.
+
+> [!NOTE]
+> The keyboard mechanisms described below are not standardized and depend on the browser and operating system.
 >
-> On macOS, the <kbd>Ctrl</kbd> + <kbd>Up</kbd> and <kbd>Ctrl</kbd> + <kbd>Down</kbd> shortcuts conflict with the OS default shortcuts for _Mission Control_ and _Application windows_, so you'll have to turn these off before it will work.
+> For example, Firefox on macOS additionally supports using <kbd>Ctrl</kbd>, while Safari on macOS does not support using <kbd>Space</kbd> for non-contiguous selection.
 
 Keyboard users can select multiple contiguous items by:
 
@@ -98,7 +131,7 @@ Keyboard users can select multiple contiguous items by:
 Keyboard users can select multiple non-contiguous items by:
 
 - Focusing on the `<select>` element (e.g., using <kbd>Tab</kbd>).
-- Holding down the <kbd>Ctrl</kbd> key then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to change the "focused" select option, i.e., the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
+- Holding down the <kbd>Ctrl</kbd> key (<kbd>Command</kbd> on macOS) then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to change the "focused" select option, i.e., the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
 - Pressing <kbd>Space</kbd> to select/deselect "focused" select options.
 
 ## Styling with CSS
@@ -126,6 +159,8 @@ For more information on legacy `<select>` styling, see:
 ## Accessibility
 
 The `<hr>` within a `<select>` should be considered purely decorative, as they are currently not exposed within the accessibility tree and therefore not exposed to assistive technologies.
+
+Setting `size="1"` on a multiple select (i.e., `<select multiple size="1">`) renders a drop-down that lets users select multiple options. Some browsers don't expand the option list when the control is active, displaying multiple options in a menu list the height of a single-line box. This harms usability. When including a multiple-select, inform users they can select more than one option, even when multiple options are displayed.
 
 ## Examples
 
@@ -260,7 +295,7 @@ The following example is more complex, showing off more features you can use on 
       <th scope="row">Permitted content</th>
       <td>
         <ul>
-          <li>{{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, or {{HTMLElement("hr")}} elements, optionally preceded by a {{htmlelement("button")}} element with a nested {{htmlelement("selectedcontent")}} element if a drop down box.</li>
+          <li>{{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, or {{HTMLElement("hr")}} elements, optionally preceded by a {{htmlelement("button")}} element with a nested {{htmlelement("selectedcontent")}} element if a dropdown box.</li>
           <li>{{htmlelement("div")}}, {{htmlelement("script")}}, {{htmlelement("template")}}, and {{htmlelement("noscript")}} elements.</li>
         </ul>
       </td>

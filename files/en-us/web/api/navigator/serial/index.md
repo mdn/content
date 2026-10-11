@@ -3,22 +3,22 @@ title: "Navigator: serial property"
 short-title: serial
 slug: Web/API/Navigator/serial
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Navigator.serial
 ---
 
-{{APIRef("Web Serial API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("Web Serial API")}}{{SecureContext_Header}}
 
-The **`serial`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("Serial")}} object which represents the entry point into the [Web Serial API](/en-US/docs/Web/API/Web_Serial_API).
+The **`serial`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("Serial")}} object, which represents the entry point into the [Web Serial API](/en-US/docs/Web/API/Web_Serial_API).
 
-When getting, the same instance of the {{domxref("Serial")}} object will always be returned.
+The same instance of the {{domxref("Serial")}} object will always be returned.
 
 ## Value
 
 A {{domxref("Serial")}} object.
 
 ## Examples
+
+### List available ports
 
 The following example uses the `getPorts()` method to initialize a list of available ports.
 
@@ -39,4 +39,4 @@ navigator.serial.getPorts().then((ports) => {
 ## See also
 
 - [Read from and write to a serial port](https://developer.chrome.com/docs/capabilities/serial)
-- [Getting started with the web serial API](https://codelabs.developers.google.com/codelabs/web-serial#0)
+- [Getting started with the Web Serial API](https://codelabs.developers.google.com/codelabs/web-serial#0)

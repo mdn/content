@@ -1,6 +1,6 @@
 ---
-title: browser.createUserContext command
-short-title: browser.createUserContext
+title: "`browser.createUserContext` command"
+short-title: createUserContext
 slug: Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext
 page-type: webdriver-command
 browser-compat: webdriver.bidi.browser.createUserContext
@@ -12,9 +12,25 @@ The `browser.createUserContext` [command](/en-US/docs/Web/WebDriver/Reference/Bi
 ## Syntax
 
 ```json-nolint
+/* Without optional parameters */
 {
   "method": "browser.createUserContext",
   "params": {}
+}
+
+/* With optional parameters */
+{
+  "method": "browser.createUserContext",
+  "params": {
+    "acceptInsecureCerts": true,
+    "proxy": {
+      "proxyType": "manual",
+      "httpProxy": "127.0.0.1:80"
+    },
+    "unhandledPromptBehavior": {
+      "default": "accept"
+    }
+  }
 }
 ```
 
@@ -37,10 +53,12 @@ Set `params` to an empty object (`{}`) or include any of the following optional 
 The following field in the `result` object of the response describes the created user context:
 
 - `userContext`
-  - : A string that uniquely identifies the created user context.
+  - : A string that contains the ID that uniquely identifies the created user context.
 
 ### Errors
 
+- [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
+  - : A required parameter is missing or has an invalid type.
 - `unsupported operation`
   - : `acceptInsecureCerts` is `true` but the browser does not support accepting insecure TLS connections, or `proxy` is specified but the browser cannot configure proxy settings for this user context or cannot apply the given proxy configuration.
 

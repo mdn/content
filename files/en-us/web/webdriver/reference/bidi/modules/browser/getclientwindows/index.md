@@ -1,6 +1,6 @@
 ---
-title: browser.getClientWindows command
-short-title: browser.getClientWindows
+title: "`browser.getClientWindows` command"
+short-title: getClientWindows
 slug: Web/WebDriver/Reference/BiDi/Modules/browser/getClientWindows
 page-type: webdriver-command
 browser-compat: webdriver.bidi.browser.getClientWindows

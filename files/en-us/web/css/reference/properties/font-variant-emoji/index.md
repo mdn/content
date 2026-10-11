@@ -1,5 +1,6 @@
 ---
-title: font-variant-emoji
+title: "`font-variant-emoji` CSS property"
+short-title: font-variant-emoji
 slug: Web/CSS/Reference/Properties/font-variant-emoji
 page-type: css-property
 browser-compat: css.properties.font-variant-emoji
@@ -27,9 +28,9 @@ font-variant-emoji: revert-layer;
 font-variant-emoji: unset;
 ```
 
-The `font-variant-emoji` property is specified using a single keyword value from the list below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `normal`
   - : Allows a browser to choose how to display the emoji. This often follows the operating system setting.
@@ -101,6 +102,8 @@ This example shows how you can render an emoji in its `text` or `emoji` presenta
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    font-family:
+      "Noto Color Emoji", "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
   }
   .emoji > div {
     font-size: 2rem;

@@ -2,7 +2,7 @@
 title: 424 Failed Dependency
 slug: Web/HTTP/Reference/Status/424
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.4
+spec-urls: https://www.rfc-editor.org/info/rfc4918/#section-11.4
 sidebar: http
 ---
 

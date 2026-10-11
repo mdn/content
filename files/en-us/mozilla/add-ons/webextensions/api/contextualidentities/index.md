@@ -37,6 +37,10 @@ To use this API you need to include the "contextualIdentities" and "cookies" [pe
   - : Creates a new contextual identity.
 - {{WebExtAPIRef("contextualIdentities.get()")}}
   - : Retrieves a contextual identity, given its cookie store ID.
+- {{WebExtAPIRef("contextualIdentities.getSupportedColors()")}}
+  - : Returns the colors supported for contextual identities.
+- {{WebExtAPIRef("contextualIdentities.getSupportedIcons()")}}
+  - : Returns the icons supported for contextual identities.
 - {{WebExtAPIRef("contextualIdentities.move()")}}
   - : Moves one or more contextual identities within the list of contextual identities.
 - {{WebExtAPIRef("contextualIdentities.query()")}}

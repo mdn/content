@@ -48,8 +48,8 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
   - : Text written in new documents created with document.open("text/plain") is now treated as text rather than HTML, so line breaks will remain intact and tags will not be parsed.
 - XML Events
   - : "XML Events" is a W3C specification to provide XML languages with the ability to integrate declarative event listeners and event handlers.
-- Cancelling keydown
-  - : Cancelling the keydown event now properly cancels any corresponding keyup/keypress events, per the DOM specification.
+- Canceling keydown
+  - : Canceling the keydown event now properly cancels any corresponding keyup/keypress events, per the DOM specification.
 - Accessibility APIs for DHTML
   - : Mozilla now allows DHTML authors to add role and state semantics to custom elements, and exposes that information via MSAA and ATK.
 - DHTML Performance Fixes
@@ -69,7 +69,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 - URIs always sent as UTF8
   - : URIs are now always sent to the server as UTF8, regardless of the linking page's encoding. This fixes images and links on sites with non-ASCII filenames.
 - XForms support
-  - : The [W3C's XML Forms](https://www.w3.org/MarkUp/Forms/) language allows writing complex forms in XML, and includes features that regular HTML forms do not have, such as client side validation against [XML Schema](https://www.w3.org/XML/Schema) and XML submission/retrieval. Support for XForms comes as an extension, see [Mozilla XForms Project Page](https://www-archive.mozilla.org/projects/xforms/).
+  - : The [W3C's XML Forms](https://www.w3.org/MarkUp/Forms/) language allows writing complex forms in XML, and includes features that regular HTML forms do not have, such as client-side validation against [XML Schema](https://www.w3.org/XML/Schema) and XML submission/retrieval. Support for XForms comes as an extension, see [Mozilla XForms Project Page](https://www-archive.mozilla.org/projects/xforms/).
 
 ## New Extension Developer Features
 

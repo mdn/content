@@ -22,6 +22,7 @@ A block formatting context is created by at least one of the following:
 - Grid items (direct children of the element with {{cssxref("display", "display: grid")}} or `inline-grid`) if they are neither [flex](/en-US/docs/Glossary/Flex_Container) nor [grid](/en-US/docs/Glossary/Grid_Container) nor [table](/en-US/docs/Web/CSS/Guides/Table) containers themselves.
 - Block elements where {{ cssxref("overflow") }} has a value other than `visible` and `clip`.
 - Elements with {{cssxref("contain", "contain: layout")}}, `content`, or `paint`.
+- Query containers (elements where {{cssxref("container-type")}} isn't `normal`).
 - Multicol containers (elements where {{ cssxref("column-count") }} or {{ cssxref("column-width") }} isn't `auto`, including elements with `column-count: 1`).
 - {{cssxref("column-span", "column-span: all")}}, even when the `column-span: all` element isn't contained by a multicol container.
 
@@ -31,7 +32,7 @@ Formatting contexts affect layout because an element that establishes a new bloc
 - exclude external floats.
 - suppress [margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
 
-Flex and grid containers, defined by setting an element's ({{ cssxref("display") }} to `flex`, `grid`, `inline-flex`, or `inline-grid`, establishes a new flex or grid formatting context. These are similar to block formatting context except there are no floating children available inside a flex or grid container, but these formatting contexts do exclude external floats and suppress margin collapsing.
+Flex and grid containers, defined by setting an element's {{ cssxref("display") }} to `flex`, `grid`, `inline-flex`, or `inline-grid`, establishes a new flex or grid formatting context. These are similar to block formatting context except there are no floating children available inside a flex or grid container, but these formatting contexts do exclude external floats and suppress margin collapsing.
 
 ## Examples
 

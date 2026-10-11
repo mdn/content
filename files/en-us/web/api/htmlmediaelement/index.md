@@ -100,7 +100,7 @@ These properties are obsolete and should not be used, even if a browser still su
   - : A string that reflects the `mediagroup` HTML attribute, which indicates the name of the group of elements it belongs to. A group of media elements shares a common {{domxref('MediaController')}}.
 - `HTMLMediaElement.mozAudioCaptured` {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Returns a boolean. Related to audio stream capture.
-- `HTMLMediaElement.mozFragmentEnd` {{Non-standard_Inline}} {{Deprecated_Inline}}
+- `HTMLMediaElement.mozFragmentEnd` {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : A `double` that provides access to the fragment end time if the media element has a fragment URI for `currentSrc`, otherwise it is equal to the media duration.
 
 ## Instance methods

@@ -17,7 +17,7 @@ A minimalist manifest file for our menstrual cycle tracking app could look like 
 ```json
 {
   "short_name": "CT",
-  "start_url": "/",
+  "start_url": "./",
   "icons": [
     {
       "src": "icon-512.png",
@@ -83,7 +83,7 @@ Add presentation definitions to the manifest file you began creating in the prev
 
 ### Example solution
 
-As the example application is a single page, we can use `"/"` as the `start_url`, or omit the member altogether. For that same reason, we can display the app without the browser UI by setting the `display` to `standalone`.
+As the example application is a single page in a subdirectory, we can use `"./"` as the `start_url`, or omit the member altogether. For that same reason, we can display the app without the browser UI by setting the `display` to `standalone`.
 
 In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS#css_content), the `background-color: #eeffee;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
 
@@ -92,7 +92,7 @@ In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_an
   "name": "...",
   "short_name": "...",
   "description": "...",
-  "start_url": "/",
+  "start_url": "./",
   "theme_color": "#eeffee",
   "background_color": "#eeffee",
   "display": "standalone"
@@ -254,7 +254,7 @@ Chrome and Edge also provide errors and warnings, protocol handlers, and informa
 
 Our web app doesn't have any protocol handlers; a topic not covered in this tutorial. Had we included some, they would be found under "Protocol Handlers". As that section is empty, the developer tools link to more information on the topic.
 
-![The four icons included in the Manifest file, with the background removed as "show only the minimum safe area for maskable icons is checked.](manifest_icons.jpg)
+![The four icons included in the Manifest file, with the background removed as "show only the minimum safe area for maskable icons" is checked.](manifest_icons.jpg)
 
 The manifest panel also includes insight into the safe area for maskable icons and a link to a [PWA image generator](https://www.pwabuilder.com/imageGenerator). This tool creates over 100 square PNG images for Android, Apple OSs, and Windows, as well as a JSON object listing all the images and their sizes. The images produced may not serve your needs, but the list of image sizes produced for each OS demonstrates the diversity of where and how PWAs can be served.
 

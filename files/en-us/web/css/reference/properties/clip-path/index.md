@@ -1,5 +1,6 @@
 ---
-title: clip-path
+title: "`clip-path` CSS property"
+short-title: clip-path
 slug: Web/CSS/Reference/Properties/clip-path
 page-type: css-property
 browser-compat: css.properties.clip-path
@@ -74,7 +75,7 @@ section {
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 clip-path: none;
 
 /* <clip-source> values */

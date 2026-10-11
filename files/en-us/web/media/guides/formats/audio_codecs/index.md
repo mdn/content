@@ -414,7 +414,7 @@ As a patent-encumbered format, AAC support is somewhat less predictable. For exa
       <td>
         For streaming or distributing AAC-encoded content: no license required;
         developers of codecs are required to obtain a patent license through
-        <a href="https://via-la.com/licensing-programs/aac/">VIA Licensing</a>
+        <a href="https://www.via-la.com/licensing-programs/aac/">VIA Licensing</a>
       </td>
     </tr>
   </tbody>
@@ -1062,7 +1062,7 @@ For patent reasons, Firefox did not directly support MP3 prior to version 71; in
 
 ### Opus
 
-The [Opus](<https://en.wikipedia.org/wiki/Opus_(audio_format)>) audio format was created by the Xiph.org Foundation as a fully open audio format; it has been standardized by [IETF](https://www.ietf.org/) as {{RFC(6716)}}. It's a good general-purpose audio codec that can efficiently handle both low-complexity audio such as speech as well as music and other high-complexity sounds.
+The [Opus](<https://en.wikipedia.org/wiki/Opus_(audio_format)>) audio format was created by the Xiph.org Foundation as a fully open audio format; it has been standardized by [IETF](https://www.ietf.org/) as {{RFC(6716)}}. It's a good general-purpose audio codec that can efficiently handle low-complexity audio such as speech as well as music and other high-complexity sounds.
 
 Opus supports multiple compression algorithms, and can even use more than one algorithm in the same audio file, since the encoder can choose the bit rate, audio bandwidth, algorithm, and other details of the compression settings for each frame of audio.
 

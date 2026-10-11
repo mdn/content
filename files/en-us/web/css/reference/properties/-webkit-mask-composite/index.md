@@ -1,5 +1,6 @@
 ---
-title: -webkit-mask-composite
+title: "`-webkit-mask-composite` CSS property"
+short-title: -webkit-mask-composite
 slug: Web/CSS/Reference/Properties/-webkit-mask-composite
 page-type: css-property
 status:
@@ -40,6 +41,8 @@ The **`-webkit-mask-composite`** property specifies the manner in which multiple
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `clear`
   - : Overlapping pixels in the source mask image and the destination mask image are cleared.

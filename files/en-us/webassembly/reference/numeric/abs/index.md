@@ -1,12 +1,13 @@
 ---
-title: "abs: Wasm text instruction"
+title: "abs: Wasm numeric instruction"
 short-title: abs
 slug: WebAssembly/Reference/Numeric/abs
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.abs
 sidebar: webassemblysidebar
 ---
 
-The **`abs`** instruction, short for _absolute_, is used to get the absolute value of a number. That is, it returns x if x is positive, and the negation of x if x is negative.
+The **`abs`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _absolute_, is used to get the absolute value of a number. That is, it returns x if x is positive, and the negation of x if x is negative.
 
 {{InteractiveExample("Wat Demo: abs", "tabbed-standard")}}
 
@@ -39,7 +40,7 @@ value_type.abs
   - : The type of value the instruction is being run on. The following types support `abs`:
     - `f32`
     - `f64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `i8x16`
       - `i16x8`
       - `i32x4`
@@ -62,7 +63,7 @@ value_type.abs
 
 For a non-SIMD `abs`, the `input` and `output` will be basic numeric values such as `3.5` or `10`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `abs`, the `input` and `output` will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 4 8 12 16`. Each lane of the output pushed to the stack is the absolute value of the corresponding lane in the input.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `abs`, the `input` and `output` will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `i32x4 4 8 12 16`. Each lane of the output pushed to the stack is the absolute value of the corresponding lane in the input.
 
 ### Binary encoding
 
@@ -135,3 +136,11 @@ The output is as follows:
 {{embedlivesample("simd_abs", "100%", 100)}}
 
 The result is `12`, because the value stored in lane `3` of the input value is `-12`, as we are outputting the absolute equivalent.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

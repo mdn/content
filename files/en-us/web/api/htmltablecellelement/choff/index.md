@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLTableCellElement.chOff
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 The **`chOff`** property of the {{domxref("HTMLTableCellElement")}} interface does nothing. It reflects the `charoff` attribute of the cell element.
 

@@ -1,5 +1,6 @@
 ---
-title: left
+title: "`left` CSS property"
+short-title: left
 slug: Web/CSS/Reference/Properties/left
 page-type: css-property
 browser-compat: css.properties.left

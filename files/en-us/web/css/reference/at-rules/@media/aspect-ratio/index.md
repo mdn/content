@@ -1,5 +1,6 @@
 ---
-title: aspect-ratio
+title: "`aspect-ratio` CSS media feature"
+short-title: aspect-ratio
 slug: Web/CSS/Reference/At-rules/@media/aspect-ratio
 page-type: css-media-feature
 browser-compat: css.at-rules.media.aspect-ratio

@@ -262,6 +262,8 @@ p {
 
 {{EmbedLiveSample("filter-text")}}
 
+You can find a lot more examples than are available here in our [filters.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/filters.html) example page (see [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/filters.html)), and on the {{cssxref("filter")}} reference page.
+
 ## Blend modes
 
 CSS blend modes allow us to add blend modes to elements that specify a blending effect when two elements overlap — the final color shown for each pixel will be the result of a combination of the original pixel color, and that of the pixel in the layer underneath it. Blend modes are again very familiar to users of graphics applications like Photoshop.
@@ -294,7 +296,8 @@ div {
   padding: 10px;
   margin: 10px;
   display: inline-block;
-  background: url("colorful-heart.png") no-repeat center 20px;
+  background: url("https://mdn.github.io/shared-assets/images/examples/colorful-heart.png")
+    no-repeat center 20px;
   background-color: green;
 }
 
@@ -347,7 +350,8 @@ article div:first-child {
   position: absolute;
   top: 10px;
   left: 0;
-  background: url("colorful-heart.png") no-repeat center 20px;
+  background: url("https://mdn.github.io/shared-assets/images/examples/colorful-heart.png")
+    no-repeat center 20px;
   background-color: green;
 }
 
@@ -447,7 +451,8 @@ h2 {
 h2 {
   color: white;
   display: inline-block;
-  background: url("colorful-heart.png") no-repeat center;
+  background: url("https://mdn.github.io/shared-assets/images/examples/colorful-heart.png")
+    no-repeat center;
 }
 
 .text-clip {

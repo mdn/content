@@ -1,5 +1,6 @@
 ---
-title: <alpha-value>
+title: "`<alpha-value>` CSS type"
+short-title: <alpha-value>
 slug: Web/CSS/Reference/Values/alpha-value
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-color/#typedef-color-alpha-value

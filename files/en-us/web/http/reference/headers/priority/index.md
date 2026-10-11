@@ -9,7 +9,7 @@ sidebar: http
 
 The HTTP **`Priority`** header indicates a client's preference for the priority order at which the response containing the requested resource should be sent, relative to other resource requests on the same connection.
 If the header is not specified in the request, a default priority is assumed.
-The server may also include this header in responses in order to indicate it has an interest in changing the prioritization preferences the client advertized.
+The server may also include this header in responses in order to indicate it has an interest in changing the prioritization preferences the client advertised.
 In responses, this information can be used as an input to the prioritization process for caching servers and other servers that are forwarding the response.
 
 The server is not bound by client prioritization and might only use client priorities as hints for its own prioritization process.

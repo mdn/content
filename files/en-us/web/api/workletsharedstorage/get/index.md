@@ -8,7 +8,7 @@ status:
 browser-compat: api.WorkletSharedStorage.get
 ---
 
-{{APIRef("Shared Storage API")}}{{deprecated_header}}
+{{APIRef("Shared Storage API")}}
 
 The **`get()`** method of the
 {{domxref("WorkletSharedStorage")}} interface retrieves a value from shared storage.
@@ -34,7 +34,7 @@ A {{jsxref("Promise")}} that fulfills with either a string equal to the value of
   - : Thrown if:
     - The worklet module has not yet been added with {{domxref("Worklet.addModule", "addModule()")}}.
     - `key` exceeds the browser-defined maximum length.
-    - The calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment).
+    - The calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox#enrollment).
 
 ## Examples
 

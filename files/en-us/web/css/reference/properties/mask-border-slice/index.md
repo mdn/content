@@ -1,5 +1,6 @@
 ---
-title: mask-border-slice
+title: "`mask-border-slice` CSS property"
+short-title: mask-border-slice
 slug: Web/CSS/Reference/Properties/mask-border-slice
 page-type: css-property
 browser-compat: css.properties.mask-border-slice

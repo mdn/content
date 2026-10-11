@@ -7,7 +7,7 @@ status:
 browser-compat: api.WorkletSharedStorage
 ---
 
-{{APIRef("Shared Storage API")}}{{deprecated_header}}
+{{APIRef("Shared Storage API")}}
 
 The **`WorkletSharedStorage`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the shared storage for a particular origin within a worklet context.
 
@@ -17,7 +17,7 @@ The **`WorkletSharedStorage`** interface of the {{domxref("Shared Storage API", 
 
 ## Instance properties
 
-- {{domxref("WorkletSharedStorage.context", "context")}} {{Deprecated_Inline}} {{non-standard_inline}}
+- {{domxref("WorkletSharedStorage.context", "context")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : Contains contextual data passed into the shared storage worklet from the associated browsing context via the {{domxref("FencedFrameConfig.setSharedStorageContext()")}} method.
 
 ## Instance methods

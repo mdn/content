@@ -3,10 +3,11 @@ title: "min_s: Wasm SIMD arithmetic instruction"
 short-title: min_s
 slug: WebAssembly/Reference/SIMD/arithmetic/min_s
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.min_s
 sidebar: webassemblysidebar
 ---
 
-The **`min_s`** instruction compares two [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) signed integer value interpretations and returns a new interpretation with each lane set to the lower of that lane index's value on the two inputs.
+The **`min_s`** instruction compares two [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) signed integer value interpretations and returns a new interpretation with each lane set to the lower of that lane index's value on the two inputs.
 
 {{InteractiveExample("Wat Demo: min_s", "tabbed-taller")}}
 
@@ -66,6 +67,14 @@ value_type.min_s
 | `i8x16.min_s` | `0xfd 118:u32` | `i8x16.min_s` => `0xfd 0x76`      |
 | `i16x8.min_s` | `0xfd 150:u32` | `i16x8.min_s` => `0xfd 0x96 0x01` |
 | `i32x4.min_s` | `0xfd 182:u32` | `i32x4.min_s` => `0xfd 0xb6 0x01` |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

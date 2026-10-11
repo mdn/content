@@ -1,5 +1,6 @@
 ---
-title: text-indent
+title: "`text-indent` CSS property"
+short-title: text-indent
 slug: Web/CSS/Reference/Properties/text-indent
 page-type: css-property
 browser-compat: css.properties.text-indent

@@ -1,12 +1,13 @@
 ---
-title: "lt_u: Wasm text instruction"
+title: "lt_u: Wasm numeric instruction"
 short-title: lt_u
 slug: WebAssembly/Reference/Numeric/lt_u
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.lt_u
 sidebar: webassemblysidebar
 ---
 
-The **`lt_u`** instruction, short for _less than unsigned_, checks if an unsigned integer is less than another unsigned integer.
+The **`lt_u`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _less than unsigned_, checks if an unsigned integer is less than another unsigned integer.
 
 There are other `lt` instructions available:
 
@@ -53,7 +54,7 @@ value_type.lt_u
   - : The type of value the instruction is being run on. The following types support `lt_u`:
     - `i32`
     - `i64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `i8x16`
       - `i16x8`
       - `i32x4`
@@ -75,7 +76,7 @@ value_type.lt_u
 
 For a non-SIMD `lt_u`, the inputs will be basic numeric values such as `3` or `12`. If the first input is less than the second input, `1` will be pushed on to the stack as an output, otherwise `0` will be pushed on to the stack.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `lt_u`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 2 30 86 120`. Each lane of the output pushed to the stack is a `1` or `0` indicating whether the corresponding lane of the first input value is less than the corresponding lane of the second input value.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `lt_u`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `i32x4 2 30 86 120`. Each lane of the output pushed to the stack is a `1` or `0` indicating whether the corresponding lane of the first input value is less than the corresponding lane of the second input value.
 
 ### Binary encoding
 
@@ -147,6 +148,14 @@ The output is as follows:
 {{embedlivesample("simd_lt_u", "100%", 100)}}
 
 The result is `0` because the value stored in lane `3` of the first input value is not less than the value stored in lane `3` of the second input value.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

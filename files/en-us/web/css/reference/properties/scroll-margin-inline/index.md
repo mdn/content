@@ -1,12 +1,13 @@
 ---
-title: scroll-margin-inline
+title: "`scroll-margin-inline` CSS property"
+short-title: scroll-margin-inline
 slug: Web/CSS/Reference/Properties/scroll-margin-inline
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-margin-inline
 sidebar: cssref
 ---
 
-The `scroll-margin-inline` [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets the scroll margins of an element in the inline dimension.
+The **`scroll-margin-inline`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the scroll margins of an element in the inline dimension.
 
 {{InteractiveExample("CSS Demo: scroll-margin-inline")}}
 

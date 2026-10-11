@@ -3,6 +3,8 @@ title: "XSLTProcessor: setParameter() method"
 short-title: setParameter()
 slug: Web/API/XSLTProcessor/setParameter
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.XSLTProcessor.setParameter
 ---
 

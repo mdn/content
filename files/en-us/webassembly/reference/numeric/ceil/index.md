@@ -1,12 +1,13 @@
 ---
-title: "ceil: Wasm text instruction"
+title: "ceil: Wasm numeric instruction"
 short-title: ceil
 slug: WebAssembly/Reference/Numeric/ceil
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.ceil
 sidebar: webassemblysidebar
 ---
 
-The **`ceil`** instruction is used for getting the value of a number rounded up to the next integer.
+The **`ceil`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) is used for getting the value of a number rounded up to the next integer.
 
 {{InteractiveExample("Wat Demo: ceil", "tabbed-standard")}}
 
@@ -39,7 +40,7 @@ value_type.ceil
   - : The type of value the instruction is being run on. The following types support `ceil`:
     - `f32`
     - `f64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `f32x4`
       - `f64x2`
 - `ceil`
@@ -58,7 +59,7 @@ value_type.ceil
 
 For a non-SIMD `ceil`, these will be basic numeric values such as `14.3` or `3.0`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `ceil`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 1.9 2.5 0.5 12.1`. Each lane of the output pushed to the stack is the rounded up value of the corresponding lane in the input.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `ceil`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `f32x4 1.9 2.5 0.5 12.1`. Each lane of the output pushed to the stack is the rounded up value of the corresponding lane in the input.
 
 ### Binary encoding
 
@@ -126,3 +127,11 @@ The output is as follows:
 {{embedlivesample("simd_ceil", "100%", 100)}}
 
 `2001` is output because this is the result of rounding up lane 1 of the input value (`2000.1`) to the nearest integer.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

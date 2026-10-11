@@ -23,9 +23,9 @@ check(font, text)
 ### Parameters
 
 - `font`
-  - : a font specification using the syntax for the CSS {{cssxref("font")}} property, for example `"italic bold 16px Roboto"`
-- `text`
-  - : limit the font faces to those whose Unicode range contains at least one of the characters in text. This [does not check for individual glyph coverage](https://lists.w3.org/Archives/Public/www-style/2015Aug/0330.html).
+  - : A font specification using the syntax for the CSS {{cssxref("font")}} property, for example `"italic bold 16px Roboto"`
+- `text` {{optional_inline}}
+  - : Limit the font faces to those whose Unicode range contains at least one of the characters in text. This [does not check for individual glyph coverage](https://lists.w3.org/Archives/Public/www-style/2015Aug/0330.html). Defaults to a string containing a single space character (`" "`).
 
 ### Return value
 

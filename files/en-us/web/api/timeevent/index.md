@@ -21,7 +21,7 @@ The **`TimeEvent`** interface, a part of [SVG SMIL](/en-US/docs/Web/SVG/Guides/S
 ## Instance methods
 
 - {{domxref("TimeEvent.initTimeEvent()")}}
-  - : Initializes the value of a {{domxref("TimeEvent")}} created using {{domxref("Document.createEvent()")}}.
+  - : Initializes the value of a `TimeEvent` created using {{domxref("Document.createEvent()")}}.
 
 ## Specifications
 

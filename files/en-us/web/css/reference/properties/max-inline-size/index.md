@@ -1,5 +1,6 @@
 ---
-title: max-inline-size
+title: "`max-inline-size` CSS property"
+short-title: max-inline-size
 slug: Web/CSS/Reference/Properties/max-inline-size
 page-type: css-property
 browser-compat: css.properties.max-inline-size

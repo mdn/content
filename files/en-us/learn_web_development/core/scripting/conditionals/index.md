@@ -102,10 +102,48 @@ if (shoppingDone === true) {
 }
 ```
 
-This code as shown always results in the `shoppingDone` variable returning `false`, meaning disappointment for our poor child. It'd be up to us to provide a mechanism for the parent to set the `shoppingDone` variable to `true` if the child did the shopping.
+This code as shown always results in the `shoppingDone` variable returning `false`, meaning disappointment for our poor child. It is up to us to provide a mechanism for the parent to set the `shoppingDone` variable to `true` if the child did the shopping.
 
-> [!NOTE]
-> You can see a more [complete version of this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/allowance-updater.html) (also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html).)
+For example:
+
+```html hidden live-sample___allowance-updater
+<label for="shopping-check">Has the shopping been done? </label>
+<input type="checkbox" id="shopping-check" />
+
+<p></p>
+```
+
+```js hidden live-sample___allowance-updater
+const checkBox = document.querySelector("input");
+const para = document.querySelector("p");
+let shoppingDone = false;
+
+checkBox.addEventListener("change", () => {
+  if (shoppingDone === false) {
+    shoppingDone = true;
+  } else {
+    shoppingDone = false;
+  }
+  updateAllowance();
+});
+
+function updateAllowance() {
+  let childsAllowance;
+  if (shoppingDone === true) {
+    childsAllowance = 10;
+  } else {
+    childsAllowance = 5;
+  }
+
+  para.textContent = `Child has earned \$${childsAllowance} this week.`;
+}
+
+updateAllowance();
+```
+
+{{embedlivesample("allowance-updater", "100%", "100")}}
+
+To see the full source code for the previous example, click the Play button to open it in the MDN Playground.
 
 ### else if
 
@@ -159,9 +197,6 @@ function setWeather() {
 2. In the JavaScript, we are storing a reference to both the {{htmlelement("select")}} and {{htmlelement("p")}} elements, and adding an event listener to the `<select>` element so that when its value is changed, the `setWeather()` function is run.
 3. When this function is run, we first set a variable called `choice` to the current value selected in the `<select>` element. We then use a conditional statement to show different text inside the paragraph depending on what the value of `choice` is. Notice how all the conditions are tested in `else if () { }` blocks, except for the first one, which is tested in an `if () { }` block.
 4. The very last choice, inside the `else { }` block, is basically a "last resort" option — the code inside it will be run if none of the conditions are `true`. In this case, it serves to empty the text out of the paragraph if nothing is selected, for example, if a user decides to re-select the "--Make a choice--" placeholder option shown at the beginning.
-
-> [!NOTE]
-> You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-else-if.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) on there also.)
 
 ### A note on comparison operators
 
@@ -366,9 +401,6 @@ function setWeather() {
 
 {{ EmbedLiveSample('A_switch_example', '100%', 100, "", "") }}
 
-> [!NOTE]
-> You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-switch.html) (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html) on there also.)
-
 ## Ternary operator
 
 There is one final bit of syntax we want to introduce you to before we get you to play with some examples. The [ternary or conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator) is a small bit of syntax that tests a condition and returns one value/expression if it is `true`, and another if it is `false` — this can be useful in some situations, and can take up a lot less code than an `if...else` block if you have two choices that are chosen between via a `true`/`false` condition. The pseudocode looks like this:
@@ -423,9 +455,6 @@ select.addEventListener("change", () =>
 Here we've got a {{htmlelement('select')}} element to choose a theme (black or white), plus a simple {{htmlelement("Heading_Elements", "h1")}} to display a website title. We also have a function called `update()`, which takes two colors as parameters (inputs). The website's background color is set to the first provided color, and its text color is set to the second provided color.
 
 Finally, we've also got an [onchange](/en-US/docs/Web/API/HTMLElement/change_event) event listener that serves to run a function containing a ternary operator. It starts with a test condition — `select.value === 'black'`. If this returns `true`, we run the `update()` function with parameters of black and white, meaning that we end up with a background color of black and a text color of white. If it returns `false`, we run the `update()` function with parameters of white and black, meaning that the site colors are inverted.
-
-> [!NOTE]
-> You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-ternary.html) (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) on there also.)
 
 ## Implementing a basic calendar
 

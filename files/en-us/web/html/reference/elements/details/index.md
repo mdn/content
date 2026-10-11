@@ -1,5 +1,6 @@
 ---
-title: "<details>: The Details disclosure element"
+title: "`<details>` HTML details disclosure element"
+short-title: <details>
 slug: Web/HTML/Reference/Elements/details
 page-type: html-element
 browser-compat: html.elements.details
@@ -42,16 +43,6 @@ details[open] summary {
 }
 ```
 
-A `<details>` widget can be in one of two states. The default _closed_ state displays only the triangle and the label inside `<summary>` (or a {{Glossary("user agent")}}-defined default string if no `<summary>`).
-
-When the user clicks on the widget or focuses it then presses the space bar, it "twists" open, revealing its contents. The common use of a triangle which rotates or twists around to represent opening or closing the widget is why these are sometimes called "twisty".
-
-You can use CSS to style the disclosure widget, and you can programmatically open and close the widget by setting/removing its [`open`](#open) attribute. Unfortunately, at this time, there's no built-in way to animate the transition between open and closed.
-
-By default when closed, the widget is only tall enough to display the disclosure triangle and summary. When open, it expands to display the details contained within.
-
-Fully standards-compliant implementations automatically apply the CSS `{{cssxref("display")}}: list-item` to the {{HTMLElement("summary")}} element. You can use this or the {{cssxref("::marker")}} pseudo-element to [customize the disclosure widget](/en-US/docs/Web/HTML/Reference/Elements/summary#changing_the_summarys_icon).
-
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
@@ -70,7 +61,19 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     > [!NOTE]
     > `<details>` elements don't have to be adjacent to one another in the source to be part of the same group.
 
-## Events
+## Usage notes
+
+A `<details>` widget can be in one of two states. The default _closed_ state displays only the triangle and the label inside `<summary>` (or a {{Glossary("user agent")}}-defined default string if no `<summary>`).
+
+When the user clicks on the widget or focuses it then presses the space bar, it "twists" open, revealing its contents. The common use of a triangle which rotates or twists around to represent opening or closing the widget is why these are sometimes called "twisty".
+
+You can use CSS to style the disclosure widget, and you can programmatically open and close the widget by setting/removing its [`open`](#open) attribute. Unfortunately, at this time, there's no built-in way to animate the transition between open and closed.
+
+By default when closed, the widget is only tall enough to display the disclosure triangle and summary. When open, it expands to display the details contained within.
+
+Fully standards-compliant implementations automatically apply the CSS `{{cssxref("display")}}: list-item` to the {{HTMLElement("summary")}} element. You can use this or the {{cssxref("::marker")}} pseudo-element to [customize the disclosure widget](/en-US/docs/Web/HTML/Reference/Elements/summary#changing_the_summarys_icon).
+
+### Events
 
 In addition to the usual events supported by HTML elements, the `<details>` element supports the {{domxref("HTMLElement/toggle_event", "toggle")}} event, which is dispatched to the `<details>` element whenever its state changes between open and closed. It is sent _after_ the state is changed, although if the state changes multiple times before the browser can dispatch the event, the events are coalesced so that only one is sent.
 

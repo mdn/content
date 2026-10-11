@@ -127,25 +127,22 @@ So, our final support chart will end up looking like so:
 
 When you've got a new addition to your codebase that needs testing, before you start testing you should write out a list of testing requirements that need to pass to be accepted. These requirements can be visual or functional — both combine to make a usable website feature.
 
-Consider the following example (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html), and also the [example running live](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html)):
+Consider the following example:
 
-![How to prepare a testing scenario featuring the design and user requirements](sliding-box-demo.png)
+{{EmbedGHLiveSample("learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html", '100%', 400)}}
 
 Test criteria for this feature could be written like so:
 
 A and B grade:
 
-- Button should be activatable by the user's primary control mechanism, whatever it is — this should include mouse, keyboard, and touch.
-- Toggling the button should make the information box appear/disappear.
-- The text should be readable.
+- The question mark button should be activatable by the user's primary control mechanism, whatever it is — this should include mouse, keyboard, and touch.
+- Activating the button should make the information box appear/disappear.
+- The Information text in the sliding panel should be readable.
 - Visually impaired users using screen readers should be able to access the text.
 
 A-grade:
 
-- The information box should animate smoothly as it appears/disappears.
-- The gradient and text shadow should appear to enhance the look of the box.
-
-You might notice that the button isn't usable with only the keyboard. We could remedy this using JavaScript to implement a keyboard control for the toggle, or use some other approach.
+- The sliding panel should animate smoothly as it appears/disappears.
 
 These test criteria are useful, because:
 
@@ -248,7 +245,7 @@ As mentioned in the last chapter, you can take a lot of the pain out of browser 
 
 There are also commercial tools available such as [Sauce Labs](https://saucelabs.com/) and [Browser Stack](https://www.browserstack.com/) that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing.
 
-Another alternative is to use no-code test automation tools such as [Endtest](https://www.endtest.io/).
+Another alternative is to use no-code test automation tools such as [Endtest](https://endtest.io/).
 
 We will look at how to use such tools later on in the module.
 

@@ -1,5 +1,6 @@
 ---
-title: view-timeline-name
+title: "`view-timeline-name` CSS property"
+short-title: view-timeline-name
 slug: Web/CSS/Reference/Properties/view-timeline-name
 page-type: css-property
 browser-compat: css.properties.view-timeline-name
@@ -165,7 +166,7 @@ Last, an animation is specified on the element that animates its opacity and sca
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }

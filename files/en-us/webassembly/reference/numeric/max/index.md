@@ -1,12 +1,13 @@
 ---
-title: "max: Wasm text instruction"
+title: "max: Wasm numeric instruction"
 short-title: max
 slug: WebAssembly/Reference/Numeric/max
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.max
 sidebar: webassemblysidebar
 ---
 
-The **`max`** instruction is used for getting the higher of two floating point numbers.
+The **`max`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) is used for getting the higher of two floating point numbers.
 
 {{InteractiveExample("Wat Demo: max", "tabbed-taller")}}
 
@@ -40,7 +41,7 @@ value_type.max
   - : The type of value the instruction is being run on. The following types support `max`:
     - `f32`
     - `f64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `f32x4`
       - `f64x2`
 - `max`
@@ -61,7 +62,7 @@ value_type.max
 
 For a non-SIMD `max`, the inputs will be basic numeric values such as `3.0` or `3.5`, and the `output` will be the larger of `input1` and `input2`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `max`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 2.0 30 86.9 120`. Each lane of the output pushed to the stack is the larger of the corresponding lanes in the input values.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `max`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `f32x4 2.0 30 86.9 120`. Each lane of the output pushed to the stack is the larger of the corresponding lanes in the input values.
 
 ### Binary encoding
 
@@ -132,6 +133,14 @@ The output is as follows:
 {{embedlivesample("simd_max", "100%", 100)}}
 
 The result is `1000`. This is because the value stored in lane `3` of the first input value is `1000`, and the value stored in lane `3` of the second input value is `108`. Since `1000` is greater than `108`, the new `f32x4` value outputted by the `f32x4.max` instruction has `1000` set in lane `3`, which we then extract and output to the DOM.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

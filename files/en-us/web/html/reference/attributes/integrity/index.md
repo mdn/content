@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: integrity"
+title: "`integrity` HTML attribute"
 short-title: integrity
 slug: Web/HTML/Reference/Attributes/integrity
 page-type: html-attribute

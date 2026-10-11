@@ -1,5 +1,6 @@
 ---
-title: scale
+title: "`scale` CSS property"
+short-title: scale
 slug: Web/CSS/Reference/Properties/scale
 page-type: css-property
 browser-compat: css.properties.scale
@@ -103,7 +104,7 @@ scale: 1.2 1.2 2;
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 scale: none;
 
 /* Single values */

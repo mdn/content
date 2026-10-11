@@ -30,16 +30,19 @@ adlm
 advertisementreceived
 afrc
 afterscriptexecute
+aioquic
 alaw
 allowdirs
 allowevents
 alternatingbackground
 ALTGR
 amssymb
+andnot
 android-safetynet
 animalfound
 anims
 anonid
+anyref
 apacheconf
 apachectl
 appcache
@@ -54,6 +57,7 @@ armeabi
 armn
 armnlow
 armv81
+arrayref
 arrowpanel
 assetlinks
 associationlist
@@ -66,6 +70,7 @@ audiocontext
 authorid
 autolocate
 autospace
+avgr_u
 backdrag
 backgroundfetchabort
 backgroundfetchclick
@@ -83,6 +88,7 @@ BGRX
 bgtest
 bhks
 biske
+bitselect
 bmatrix
 BPPV1
 Brai
@@ -136,7 +142,9 @@ congres
 connectionavailable
 contentaccessible
 contentdelete
+contentoccluded
 contentvisibilityautostatechange
+contextoverflow
 controlslist
 cookiechange
 cpanel-dcv
@@ -162,12 +170,15 @@ ctrz
 Cubehelix
 currententrychange
 currentscreenchange
+customelementregistry
 cwrap
 daala
 dangi
+dataidx
 deviceproximity
 devtools.aboutdebugging
 devtools.errorconsole
+DfltDwnld
 diak
 dialogtext
 diffe
@@ -184,6 +195,7 @@ dom.abortablepromise
 dom.closewatcher
 dom.documentpip
 dom.element.customstateset
+dom.headingoffset
 dom.input.dirpicker
 dom.media.webcodecs
 dom.performance.event_timing.enable_interactionid
@@ -213,6 +225,7 @@ ehtml
 EISU
 elementname
 elementtiming
+elemidx
 elems
 emailtracking
 emcc
@@ -225,6 +238,7 @@ enable-tracejit
 enableiOES
 endstreaming
 enterpictureinpicture
+eqref
 equalsize
 EquationiOES
 ethi
@@ -232,9 +246,13 @@ ethioaa
 exitpictureinpicture
 exnref
 Exsel
+extadd
 externref
+extmul
 fangsong
 fencedframe
+ffdhe2048
+ffdhe3072
 fgets
 filecheck
 FILLMODE_FILL_WINDOW
@@ -254,6 +272,7 @@ funcref
 funcrefs
 fwdred
 fwid
+gapi
 gara
 gattserverdisconnected
 geometrychange
@@ -281,6 +300,8 @@ hanidays
 hanidec
 hansfin
 hantfin
+headingoffset
+headingreset
 hebr
 highp
 hiliteColor
@@ -303,6 +324,7 @@ iexact
 ifchanged
 ifequal
 ifnotequal
+ifrac
 imageset
 imghp
 imgur
@@ -333,6 +355,7 @@ jpanyear
 jsapi.h
 jscript
 jsdouble
+JSMSG_INCOMPATIBLE_PROTO
 jspubtd.h
 jsref
 jssidebar
@@ -377,6 +400,7 @@ Kore
 krai
 kwriteconfig
 lanatham
+laneidx
 laoo
 largeop
 latexmlc
@@ -437,6 +461,7 @@ mediasidebar
 mediastream
 mediummathspace
 mediump
+memidx
 menupanel
 merchantvalidation
 meterbar
@@ -497,6 +522,7 @@ noautohide
 nodownload
 nofullscreen
 noimageindex
+NOINLINE
 nolint
 noremoteplayback
 nosniff
@@ -519,6 +545,9 @@ nsIURL
 nsIXSLT
 nsPIDOMWindow
 nsresult
+nullexternref
+nullfuncref
+nullref
 nums
 OEM_CUSEL
 OEM_ENLW
@@ -535,6 +564,7 @@ oncanmakepayment
 oncharacterboundsupdate
 onclipboardchange
 oncontentvisibilityautostatechange
+oncontextoverflow
 oncurrententrychange
 oncurrentscreenchange
 ondequeue
@@ -543,6 +573,7 @@ ondownloadprogress
 onefive
 onendstreaming
 ongesturestart
+onInputCancelled
 oninterest
 onlocation
 onloseinterest
@@ -567,6 +598,7 @@ ontextformatupdate
 ontextupdate
 onuncapturederror
 onvalidationstatuschange
+onvisibilitymaskchange
 onwebkitmouseforcewillbegin
 onzoomlevelchange
 opendocument
@@ -613,6 +645,8 @@ pjpeg
 PlatformNaclArch
 platformversion
 pmatrix
+pmax
+pmin
 pnum
 pointerrawupdate
 popcnt
@@ -627,6 +661,7 @@ preg_replace
 premkproject
 prerenderingchange
 presentationml
+pressuresource
 prettyping
 previousslide
 previoustrack
@@ -650,6 +685,7 @@ pwasidebar
 pwid
 pythonanywhere
 pyxpidl
+q15mulr_sat_s
 queryset
 quicktime
 raddr
@@ -722,6 +758,7 @@ SHA-256-sess
 SHA-512-sess
 shadowrootcustomelementregistry
 shadowrootreferencetarget
+shadowrootslotassignment
 sharpyuv
 shrd
 shtm
@@ -754,6 +791,7 @@ streamfilter
 stripslashes
 stripsurroundingwhitespace
 strncpy
+structref
 SUBDOCUMENT
 sund
 sunu
@@ -764,8 +802,10 @@ svgref
 svgz
 tabbox
 tabbrowser
+tableidx
 tabs-closebutton
 tabular-nums
+tagidx
 takr
 talu
 taml
@@ -776,6 +816,7 @@ testingbot-api
 texlive
 texlive-fontsextra
 textformatupdate
+TEXTPATH_SIDETYPE
 textupdate
 TEXTUREI
 thickmathspace
@@ -823,6 +864,7 @@ urlsidebar
 urpmi
 usedtx
 useinbandfec
+useraction
 usercontext-content
 userhash
 userproximity
@@ -846,6 +888,7 @@ viewsource.css
 VIRTUALENVWRAPPER
 virtualkeyboardpolicy
 virtuals
+visibilitymaskchange
 VK_CRSEL
 VK_EREOF
 VK_EXSEL
@@ -910,6 +953,7 @@ workon
 WORKON_HOME
 writingsuggestions
 wtai
+wtransport
 x-abiword
 X-cept-Encoding
 x-ms-aria-flowfrom

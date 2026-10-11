@@ -1,5 +1,6 @@
 ---
-title: animation-direction
+title: "`animation-direction` CSS property"
+short-title: animation-direction
 slug: Web/CSS/Reference/Properties/animation-direction
 page-type: css-property
 browser-compat: css.properties.animation-direction
@@ -111,6 +112,8 @@ animation-direction: unset;
 ```
 
 ### Values
+
+This property is specified as a comma-separated list of the following keyword values:
 
 - `normal`
   - : The animation plays _forwards_ each cycle. In other words, each time the animation cycles, the animation will reset to the beginning state and start over again. This is the default value.

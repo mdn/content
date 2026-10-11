@@ -75,7 +75,7 @@ _Doesn't inherit any properties._
   - : Returns a reference to the {{domxref("Presentation")}} API.
 - {{domxref("Navigator.scheduling")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("Scheduling")}} object for the current document.
-- {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("Serial")}} object, which represents the entry point into the [Web Serial API](/en-US/docs/Web/API/Web_Serial_API) to enable the control of serial ports.
 - {{domxref("Navigator.serviceWorker")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
@@ -106,7 +106,7 @@ _Doesn't inherit any properties._
   - : Returns the build identifier of the browser. In modern browsers this property now returns a fixed timestamp as a privacy measure, e.g., `20181001000000` in Firefox 64 onwards.
 - {{domxref("Navigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean indicating a user's consent to their information being shared or sold.
-- {{domxref("Navigator.standalone")}} {{Non-standard_Inline}}
+- {{domxref("Navigator.standalone")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Returns a boolean indicating whether the browser is running in standalone mode. Available on Apple's iOS Safari only.
 
 ### Deprecated properties
@@ -153,7 +153,7 @@ _Doesn't inherit any method._
 - {{domxref("Navigator.getBattery()")}} {{SecureContext_Inline}}
   - : Returns a promise that resolves with a {{domxref("BatteryManager")}} object that returns information about the battery charging status.
 - {{domxref("Navigator.getGamepads()")}}
-  - : returns an array of {{domxref("Gamepad")}} objects, one for each gamepad connected to the device.
+  - : Returns an array of {{domxref("Gamepad")}} objects, one for each gamepad connected to the device.
 - {{domxref("Navigator.getInstalledRelatedApps()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a promise that resolves with an array of objects representing any related native or [Progressive Web Applications](/en-US/docs/Web/Progressive_web_apps) that the user has installed.
 - {{domxref("Navigator.registerProtocolHandler()")}} {{SecureContext_Inline}}

@@ -156,7 +156,7 @@ invoked. The callback uses it as its `this` value.
 > If passing the callback function used an
 > [arrow function expression](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
 > the `thisArg` parameter could be omitted,
-> since all arrow functions lexically bind the {{jsxref("Operators/this", "this")}}
+> since all arrow functions lexically bind the {{jsxref("this")}}
 > value.
 
 ### An object copy function

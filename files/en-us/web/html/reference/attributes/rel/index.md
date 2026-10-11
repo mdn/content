@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: rel"
+title: "`rel` HTML attribute"
 short-title: rel
 slug: Web/HTML/Reference/Attributes/rel
 page-type: html-attribute
@@ -13,7 +13,7 @@ sidebar: htmlsidebar
 
 The **`rel`** attribute defines the relationship between a linked resource and the current document. Valid on {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('form')}}, the supported values depend on the element on which the attribute is found.
 
-The type of relationships is given by the value of the `rel` attribute, which, if present, must have a value that is an unordered set of unique space-separated keywords. Differently from a `class` name, which does not express semantics, the `rel` attribute must express tokens that are semantically valid for both machines and humans. The current registries for the possible values of the `rel` attribute are the [IANA link relation registry](https://www.iana.org/assignments/link-relations/link-relations.xhtml), the [HTML Living Standard](https://html.spec.whatwg.org/multipage/links.html#linkTypes), and the freely-editable [existing-rel-values page](https://microformats.org/wiki/existing-rel-values) in the microformats wiki, [as suggested](https://html.spec.whatwg.org/multipage/links.html#other-link-types) by the Living Standard. If a `rel` attribute not present in one of the three sources above is used some HTML validators (such as the [W3C Markup Validation Service](https://validator.w3.org/)) will generate a warning.
+The type of relationships is given by the value of the `rel` attribute, which, if present, must have a value that is an unordered set of unique space-separated keywords. Differently from a `class` name, which does not express semantics, the `rel` attribute must express tokens that are semantically valid for both machines and humans. The current registries for the possible values of the `rel` attribute are the [IANA link relation registry](https://www.iana.org/assignments/link-relations), the [HTML Living Standard](https://html.spec.whatwg.org/multipage/links.html#linkTypes), and the freely-editable [existing-rel-values page](https://microformats.org/wiki/existing-rel-values) in the microformats wiki, [as suggested](https://html.spec.whatwg.org/multipage/links.html#other-link-types) by the Living Standard. If a `rel` attribute not present in one of the three sources above is used some HTML validators (such as the [W3C Markup Validation Service](https://validator.w3.org/)) will generate a warning.
 
 The following table lists some of the most important existing keywords. Every keyword within a space-separated value should be unique within that value.
 
@@ -52,7 +52,7 @@ The following table lists some of the most important existing keywords. Every ke
 
 The `rel` attribute is relevant to the {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('form')}} elements, but some values only relevant to a subset of those elements. Like all HTML keyword attribute values, these values are case-insensitive.
 
-The `rel` attribute has no default value. If the attribute is omitted or if none of the values in the attribute are supported, then the document has no particular relationship with the destination resource other than there being a hyperlink between the two. In this case, on {{htmlelement('link')}} and {{htmlelement('form')}}, if the `rel` attribute is absent, has no keywords, or if not one or more of the space-separated keywords above, then the element does not create any links. {{htmlelement('a')}} and {{htmlelement('area')}} will still created links, but without a defined relationship.
+The `rel` attribute has no default value. If the attribute is omitted or if none of the values in the attribute are supported, then the document has no particular relationship with the destination resource other than there being a hyperlink between the two. In this case, on {{htmlelement('link')}} and {{htmlelement('form')}}, if the `rel` attribute is absent, has no keywords, or if not one or more of the space-separated keywords above, then the element does not create any links. {{htmlelement('a')}} and {{htmlelement('area')}} will still create links, but without a defined relationship.
 
 ## Value
 
@@ -122,7 +122,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
   - : Relevant for the {{htmlelement('link')}} element both in the {{htmlelement('body')}} and {{htmlelement('head')}}, it tells the browser to preemptively perform DNS resolution for the target resource's origin. Useful for resources the user will likely need, it helps reduce latency and thereby improves performance when the user does access the resources as the browser preemptively performed DNS resolution for the origin of the specified resource. See [dns-prefetch](/en-US/docs/Web/Performance/Guides/dns-prefetch) described in [resource hints](https://w3c.github.io/resource-hints/).
 - `external`
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, it indicates the referenced document is not part of the current site. This can be used with attribute selectors to style external links in a way that indicates to the user that they will be leaving the current site.
-- `expect` {{experimental_inline}}
+- `expect`
   - : Allows the page to be [render-blocked](/en-US/docs/Glossary/Render_blocking) until the essential parts of the document are parsed so it will render consistently. Note that render-blocking occurs only when supplemented with the [`blocking="render"`](/en-US/docs/Web/HTML/Reference/Elements/link#blocking) attribute.
 
     > [!NOTE]

@@ -1,5 +1,6 @@
 ---
-title: <input type="password">
+title: '`<input type="password">` HTML attribute value'
+short-title: <input type="password">
 slug: Web/HTML/Reference/Elements/input/password
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_password
@@ -37,14 +38,6 @@ label {
   margin-top: 1rem;
 }
 ```
-
-The precise behavior of the entry process may vary from browser to browser.
-Some browsers display the typed character for a moment before obscuring it, while others allow the user to toggle the display of plain-text on and off.
-Both approaches help a user check that they entered the intended password, which can be particularly difficult on mobile devices.
-
-> [!NOTE]
-> Any forms involving sensitive information like passwords (such as login forms) should be served over HTTPS.
-> Many browsers now implement mechanisms to warn against insecure login forms.
 
 ## Value
 
@@ -110,6 +103,14 @@ This does _not_ set a limit on how many characters the user can enter into the f
 ## Using password inputs
 
 Password input boxes generally work just like other textual input boxes; the main difference is the obscuring of the content to prevent people near the user from reading the password.
+
+The precise behavior of the entry process may vary from browser to browser.
+Some browsers display the typed character for a moment before obscuring it, while others allow the user to toggle the display of plain-text on and off.
+Both approaches help a user check that they entered the intended password, which can be particularly difficult on mobile devices.
+
+> [!NOTE]
+> Any forms involving sensitive information like passwords (such as login forms) should be served over HTTPS.
+> Many browsers now implement mechanisms to warn against insecure login forms.
 
 ### A basic password input
 
@@ -312,15 +313,6 @@ ssn.oninput = (event) => {
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        and
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

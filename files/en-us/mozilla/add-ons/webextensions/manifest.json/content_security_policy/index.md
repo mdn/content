@@ -114,7 +114,7 @@ In Manifest V3, the `content_security_policy` key is an object that may have any
       <td><code>sandbox</code></td>
       <td><code>String</code></td>
       <td>
-        The content security policy used for sandboxed extension pages.
+        The content security policy used for the extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sandbox">sandboxed pages</a>.
       </td>
     </tr>
   </tbody>

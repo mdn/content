@@ -3,11 +3,11 @@ title: "swizzle: Wasm SIMD conversion instruction"
 short-title: swizzle
 slug: WebAssembly/Reference/SIMD/conversion/swizzle
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.swizzle
+browser-compat: webassembly.instructions.swizzle
 sidebar: webassemblysidebar
 ---
 
-The **`swizzle`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) returns a new [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value with its lane values selected from an input `v128` value, determined by indices provided in a second input `v128`.
+The **`swizzle`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) returns a new [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value with its lane values selected from an input `v128` value, determined by indices provided in a second input `v128`.
 
 {{InteractiveExample("Wat Demo: swizzle", "tabbed-taller")}}
 
@@ -39,7 +39,7 @@ value_type.swizzle
 ```
 
 - `value_type`
-  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations support `swizzle`:
+  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations support `swizzle`:
     - `i8x16`
 - `swizzle`
   - : The `swizzle` instruction. Must always be included after the `value_type` and a period (`.`).
@@ -73,7 +73,3 @@ value_type.swizzle
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD conversion instructions](/en-US/docs/WebAssembly/Reference/SIMD/conversion)

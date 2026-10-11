@@ -1,5 +1,6 @@
 ---
-title: print-color-adjust
+title: "`print-color-adjust` CSS property"
+short-title: print-color-adjust
 slug: Web/CSS/Reference/Properties/print-color-adjust
 page-type: css-property
 browser-compat: css.properties.print-color-adjust
@@ -23,9 +24,9 @@ print-color-adjust: revert-layer;
 print-color-adjust: unset;
 ```
 
-The `print-color-adjust` property's value must be one of the following keywords.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `economy`
   - : The user agent is allowed to make adjustments to the element as it deems appropriate and prudent in order to optimize the output for the device it's being rendered for.
@@ -34,7 +35,7 @@ The `print-color-adjust` property's value must be one of the following keywords.
 - `exact`
   - : The element's content has been specifically and carefully crafted to use colors, images, and styles in a thoughtful and/or important way, such that being altered by the browser might actually make things worse rather than better.
     The appearance of the content should not be changed except by the user's request.
-    For example, a page might include a list of information with rows whose background colors alternate between white and a light grey.
+    For example, a page might include a list of information with rows whose background colors alternate between white and a light gray.
     Removing the background color would decrease the legibility of the content.
 
 ## Usage notes

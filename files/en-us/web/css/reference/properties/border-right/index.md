@@ -1,12 +1,13 @@
 ---
-title: border-right
+title: "`border-right` CSS property"
+short-title: border-right
 slug: Web/CSS/Reference/Properties/border-right
 page-type: css-shorthand-property
 browser-compat: css.properties.border-right
 sidebar: cssref
 ---
 
-The **`border-right`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's right [border](/en-US/docs/Web/CSS/Reference/Properties/border).
+The **`border-right`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets all the properties of an element's right [border](/en-US/docs/Web/CSS/Reference/Properties/border).
 
 {{InteractiveExample("CSS Demo: border-right")}}
 

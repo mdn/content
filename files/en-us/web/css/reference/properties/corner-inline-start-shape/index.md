@@ -1,5 +1,6 @@
 ---
-title: corner-inline-start-shape
+title: "`corner-inline-start-shape` CSS property"
+short-title: corner-inline-start-shape
 slug: Web/CSS/Reference/Properties/corner-inline-start-shape
 page-type: css-property
 status:
@@ -16,7 +17,7 @@ For a full description of corner shape behavior and multiple examples, see the {
 
 ## Constituent properties
 
-The `corner-inline-start-shape` property is a shorthand for the following logical properties:
+This property is a shorthand for the following logical properties:
 
 - {{cssxref("corner-start-start-shape")}}
 - {{cssxref("corner-end-start-shape")}}

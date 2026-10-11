@@ -130,7 +130,7 @@ The following properties control how text is laid out.
   - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`, `geometricPrecision`.
 - {{domxref("CanvasRenderingContext2D.wordSpacing")}}
   - : Word spacing. Default value: `0px`
-- {{domxref("CanvasRenderingContext2D.lang")}} {{experimental_inline}}
+- {{domxref("CanvasRenderingContext2D.lang")}}
   - : Gets or sets the language of the canvas drawing context.
 
 ### Fill and stroke styles
@@ -261,8 +261,8 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
   - : Saves the current drawing style state using a stack so you can revert any change you make to it using `restore()`.
 - {{domxref("CanvasRenderingContext2D.restore()")}}
   - : Restores the drawing style state to the last element on the 'state stack' saved by `save()`.
-- {{domxref("CanvasRenderingContext2D.canvas")}}
-  - : A read-only reference to an `OffscreenCanvas` object.
+- {{domxref("CanvasRenderingContext2D.canvas")}} {{ReadOnlyInline}}
+  - : A reference to an `OffscreenCanvas` object.
 - {{domxref("CanvasRenderingContext2D.getContextAttributes()")}} {{experimental_inline}}
   - : Returns an object containing the actual context attributes. Context attributes can be requested with {{domxref("HTMLCanvasElement.getContext()")}}.
 - {{domxref("CanvasRenderingContext2D.reset()")}}

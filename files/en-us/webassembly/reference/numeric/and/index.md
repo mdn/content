@@ -1,12 +1,13 @@
 ---
-title: "and: Wasm text instruction"
+title: "and: Wasm numeric instruction"
 short-title: and
 slug: WebAssembly/Reference/Numeric/and
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.and
 sidebar: webassemblysidebar
 ---
 
-The **`and`** instruction is used for performing a bitwise AND, similar to the **`&`** operator in other languages.
+The **`and`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) is used for performing a bitwise AND, similar to the **`&`** operator in other languages.
 
 {{InteractiveExample("Wat Demo: and", "tabbed-taller")}}
 
@@ -52,7 +53,7 @@ value_type.and
   - : The type of value the instruction is being run on. The following types support `and`:
     - `i32`
     - `i64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128)
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128)
 - `and`
   - : The `and` instruction. Must always be included after the `value_type` and a period (`.`).
 
@@ -71,7 +72,7 @@ value_type.and
 
 For a non-SIMD `and`, these will be basic numeric values such as `14` or `3`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `and`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 9 4 -16 100`. Each lane of the output pushed to the stack is the bitwise AND of the corresponding lanes in the input values.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `and`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `i32x4 9 4 -16 100`. Each lane of the output pushed to the stack is the bitwise AND of the corresponding lanes in the input values.
 
 ### Binary encoding
 
@@ -146,3 +147,11 @@ The output is as follows:
       -------------------
 AND = 0000 0001 0000 0000 = 256
 ```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

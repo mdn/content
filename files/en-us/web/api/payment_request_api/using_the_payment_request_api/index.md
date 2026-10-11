@@ -126,7 +126,7 @@ if (window.PaymentRequest) {
         // Handle successful payment
       })
       .catch((error) => {
-        // Handle cancelled or failed payment. For example, redirect to
+        // Handle canceled or failed payment. For example, redirect to
         // the legacy web form checkout:
         window.location.href = "/legacy-web-form-checkout";
       });
@@ -190,9 +190,7 @@ If the checkout flow needs to know whether {{domxref("PaymentRequest.canMakePaym
 // The page has loaded. Should the page use PaymentRequest?
 // If PaymentRequest fails, should the page fallback to manual
 // web form checkout?
-const supportedPaymentMethods = [
-  /* supported methods */
-];
+const supportedPaymentMethods = [/* supported methods */];
 
 let shouldCallPaymentRequest = true;
 let fallbackToLegacyOnPaymentRequestFailure = false;
@@ -272,7 +270,7 @@ checkoutButton.addEventListener("click", () => {
       if (error.name === "NotSupportedError") {
         window.location.href = "https://bobbucks.dev/#download";
       } else {
-        // Other kinds of errors; cancelled or failed payment. For demo purposes:
+        // Other kinds of errors; canceled or failed payment. For demo purposes:
         introPanel.style.display = "none";
         legacyPanel.style.display = "block";
       }

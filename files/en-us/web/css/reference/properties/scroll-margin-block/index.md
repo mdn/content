@@ -1,12 +1,13 @@
 ---
-title: scroll-margin-block
+title: "`scroll-margin-block` CSS property"
+short-title: scroll-margin-block
 slug: Web/CSS/Reference/Properties/scroll-margin-block
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-margin-block
 sidebar: cssref
 ---
 
-The `scroll-margin-block` [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets the scroll margins of an element in the block dimension.
+The **`scroll-margin-block`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the scroll margins of an element in the block dimension.
 
 {{InteractiveExample("CSS Demo: scroll-margin-block")}}
 

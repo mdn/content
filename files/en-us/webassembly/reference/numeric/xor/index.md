@@ -1,12 +1,13 @@
 ---
-title: "xor: Wasm text instruction"
+title: "xor: Wasm numeric instruction"
 short-title: xor
 slug: WebAssembly/Reference/Numeric/xor
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.xor
 sidebar: webassemblysidebar
 ---
 
-The **`xor`** instruction is used for performing a bitwise XOR, similar to the **`^`** operator in other languages.
+The **`xor`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) is used for performing a bitwise XOR, similar to the **`^`** operator in other languages.
 
 {{InteractiveExample("Wat Demo: xor", "tabbed-taller")}}
 
@@ -52,7 +53,7 @@ value_type.xor
   - : The type of value the instruction is being run on. The following types support `xor`:
     - `i32`
     - `i64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128)
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128)
 - `xor`
   - : The `xor` instruction. Must always be included after the `value_type` and a period (`.`).
 
@@ -71,7 +72,7 @@ value_type.xor
 
 For a non-SIMD `xor`, these will be basic numeric values such as `14` or `3`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `xor`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 9 4 -16 100`. Each lane of the output pushed to the stack is the bitwise XOR of the corresponding lanes in the input values.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `xor`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `i32x4 9 4 -16 100`. Each lane of the output pushed to the stack is the bitwise XOR of the corresponding lanes in the input values.
 
 ### Binary encoding
 
@@ -146,3 +147,11 @@ The output is as follows:
       -------------------
 XOR = 0000 0010 1001 1110 = 670
 ```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

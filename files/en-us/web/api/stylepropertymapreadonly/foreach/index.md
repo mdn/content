@@ -6,10 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.StylePropertyMapReadOnly.forEach
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`StylePropertyMapReadOnly.forEach()`** method executes a
-provided function once for each element of {{domxref('StylePropertyMapReadOnly')}}.
+The **`StylePropertyMapReadOnly.forEach()`** method executes a provided function once for each element of {{domxref('StylePropertyMapReadOnly')}}.
 
 ## Syntax
 
@@ -39,8 +38,9 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-Here is an example of using `forEach()` on a retrieved
-{{domxref('Element.computedStyleMap()')}}.
+### Basic usage
+
+The following code is an example of using `forEach()` on a retrieved {{domxref('Element.computedStyleMap()')}}.
 
 ```js
 // get a button element

@@ -26,7 +26,7 @@ isHTML(value)
 
 ### Return value
 
-A {{jsxref("boolean")}} that is true if the object is a valid {{domxref("TrustedHTML")}} object.
+A {{jsxref("Boolean")}} that is true if the object is a valid {{domxref("TrustedHTML")}} object.
 
 ## Examples
 

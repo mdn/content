@@ -1,12 +1,13 @@
 ---
-title: "popcnt: Wasm text instruction"
+title: "popcnt: Wasm numeric instruction"
 short-title: popcnt
 slug: WebAssembly/Reference/Numeric/popcnt
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.popcnt
 sidebar: webassemblysidebar
 ---
 
-The **`popcnt`** instruction, short for _population count_, is used to count the amount of `1`s in a number's binary representation.
+The **`popcnt`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _population count_, is used to count the amount of `1`s in a number's binary representation.
 
 {{InteractiveExample("Wat Demo: popcnt", "tabbed-taller")}}
 
@@ -46,7 +47,7 @@ value_type.popcnt
   - : The type of value the instruction is being run on. The following types support `popcnt`:
     - `i32`
     - `i64`
-    - `i8x16` [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretation
+    - `i8x16` [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretation
 - `popcnt`
   - : The `popcnt` instruction. Must always be included after the `value_type` and a period (`.`).
 
@@ -63,7 +64,7 @@ value_type.popcnt
 
 For a non-SIMD `popcnt`, these will be basic numeric values such as `3`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `popcnt`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i8x16 0 1 34 12 2 2 2 8 19 20 3 -1 -45 0 0 30`. Each lane of the output pushed to the stack contains the number of `1`s in the binary equivalent of the corresponding lane in the input value.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `popcnt`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `i8x16 0 1 34 12 2 2 2 8 19 20 3 -1 -45 0 0 30`. Each lane of the output pushed to the stack contains the number of `1`s in the binary equivalent of the corresponding lane in the input value.
 
 ### Binary encoding
 
@@ -130,3 +131,11 @@ The output is as follows:
 {{embedlivesample("simd_popcnt", "100%", 100)}}
 
 `4` is output because the value in lane 15 of the input value is `30`. `30` in binary is `00011110`, which has 4 `1`s in it.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

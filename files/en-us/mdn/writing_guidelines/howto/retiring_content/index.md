@@ -1,0 +1,102 @@
+---
+title: How to retire a section of content
+short-title: Retiring content
+slug: MDN/Writing_guidelines/Howto/Retiring_content
+page-type: mdn-writing-guide
+sidebar: mdnsidebar
+---
+
+This article describes the process for retiring entire sections of MDN Web Docs content, known as _retirement_. Retirement is different from [deleting or moving individual pages](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting); it applies when a whole section is no longer actively maintained, relevant, or aligned with MDN's goals and needs to be retired in a planned and transparent way. Retired content is not permanently deleted — it is always archived in the [MDN Museum repository](https://github.com/mdn/museum).
+
+Retiring is a very rare occurrence, and the process will differ depending on the circumstances. This guide provides an overview of when and how to retire a section, and the steps to follow to do so responsibly. For a list of sections that have already been retired, see [Retired content](/en-US/docs/MDN/Writing_guidelines/Howto/Retiring_content/Retired_content).
+
+In this guide, a _section_ means a self-contained area of MDN Web Docs — typically a top-level folder (for example, `/Web/SECTION_NAME`) or a coherent sub-tree (for example, `/Learn_web_development/PATH/SECTION_NAME`), such as an entire technology reference or a complete learning track. This process does _not_ apply to:
+
+- Marking an individual web platform feature as deprecated within an otherwise active area, which follows the standard [deprecation process](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete).
+- Removing a single page or guide, which is covered by the [Deleting pages](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#deleting_pages) guide.
+
+If you're unsure whether a removal qualifies as retirement, raise it in a [GitHub discussion](https://github.com/orgs/mdn/discussions) before starting the process.
+
+## When to consider retiring content
+
+You may want to propose retiring a section of MDN Web Docs content if any of the following apply:
+
+- The technology is deprecated or no longer relevant to the web platform.
+- The section duplicates information better maintained elsewhere (such as an official documentation site for a framework).
+- The section does not align with [MDN's content strategy](/en-US/docs/MDN/Writing_guidelines/What_we_write#topics_that_belong_on_mdn_web_docs).
+- The maintenance cost outweighs the value to users, as indicated by usage data and user feedback.
+
+Retiring should always be a deliberate, visible process. Large-scale removals should never happen without discussion or notice. The final decision to retire a section lies with the MDN team.
+
+> [!NOTE]
+> If you want to remove individual pages rather than an entire section, consult our [Deleting pages](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#deleting_pages) guide. For guidance on labeling individual features as deprecated, see [How to label a technology](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete).
+
+## The retirement process
+
+Retiring a section of MDN Web Docs content involves two phases: reaching an agreement and then removing the content.
+
+### Phase 1: Decision process
+
+Retiring must be agreed upon by the MDN team and partners. Discussion may happen in our [communication channels](/en-US/docs/MDN/Community/Communication_channels), via a [GitHub discussion](https://github.com/orgs/mdn/discussions), and/or in our editorial calls (held every two weeks).
+
+If a section is seriously being considered for retirement, a GitHub discussion must be opened to capture the decision and process. The discussion should be clear about:
+
+- The reasoning for removal.
+- The impact of the removal.
+- Relevant stakeholders are aware and have been consulted.
+- Alternative approaches have been considered.
+
+In some cases, the decision may also involve **gathering feedback from MDN users**. This can include:
+
+- Running a user survey.
+- Asking for feedback via GitHub or other [MDN communication channels](/en-US/docs/MDN/Community/Communication_channels).
+
+The goal is to confirm that the section is no longer meeting user needs and that there is no clear path to its sustainable maintenance.
+
+If an agreement to retire a section is reached, a timeline should be set — typically between **3 and 6 months**. The reasons and timeline should be recorded in the GitHub discussion. It should be clear in the discussion that the content will be archived, not permanently deleted.
+
+If a decision is reached _not_ to retire, this should be communicated along with reasons via the original communication channel.
+
+### Phase 2: Removing content
+
+Once agreement has been reached, follow these steps to remove the content.
+
+#### Add a retirement notice banner
+
+Add a [note banner](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices) to the top of _every article_ in the section being retired. The banner should clearly state:
+
+- That the section is being removed from the website.
+- The expected removal timeframe and date.
+- That the content will be archived.
+- A link to the GitHub discussion for more details.
+
+Use the following template:
+
+```md
+> [!NOTE]
+> This section of MDN is no longer being maintained and will be removed from the website in 6 months (by MONTH YEAR). The content will be archived in the [MDN Museum](https://github.com/mdn/museum). See [this discussion](LINK) for further information.
+```
+
+This notice ensures transparency and gives users time to adjust.
+
+#### Archive and remove the content
+
+After the agreed-upon retirement period has passed, the content can be removed from MDN Web Docs as follows:
+
+1. **Archive the content.** Copy the section to the [MDN Museum repository](https://github.com/mdn/museum) for archival purposes. Keep the content in a directory that matches the original URL path. For example, content at `https://developer.mozilla.org/en-US/docs/Games` would go in a `/docs/games/` directory in the museum repository. This preserves MDN's content history while keeping deprecated material off the active site.
+
+2. **Remove the content and add redirects.** Use the [`delete` command](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#deleting_pages) to remove the pages and set up redirects. Redirects should point users to the most relevant alternative content if available. If there is no suitable alternative, redirect to the corresponding entry on the [Retired content](/en-US/docs/MDN/Writing_guidelines/Howto/Retiring_content/Retired_content) listing page (using the section-specific anchor, e.g., `#section_name`) so readers can find context about what was removed and follow the link to the archived version. Avoid redirecting to the MDN Web Docs homepage, as that leaves readers without an explanation.
+
+3. **Clean up references.** Remove or update any references to the retired section across MDN including sidebar definitions, landing pages, and cross-links from other articles. Adding redirects (see Step 2) will prevent broken links, but it is best practice to update the referring content directly.
+
+4. **File an issue for UI updates.** Some sections of the website UI — such as navigation menus and homepage sections — are not part of the `content` repo and are instead managed by the platform team. File an issue in the [mdn/fred](https://github.com/mdn/fred/) repository to check whether any UI changes are needed to remove references to the retired content. If they are, coordinate the content removal and the UI update so they are deployed at the same time.
+
+> [!WARNING]
+> Do not permanently delete content without archiving it first.
+
+## See also
+
+- [How to create, edit, move, or delete pages](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)
+- [What we write](/en-US/docs/MDN/Writing_guidelines/What_we_write)
+- [Experimental, deprecated, and obsolete](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)
+- [Banners and notices](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)

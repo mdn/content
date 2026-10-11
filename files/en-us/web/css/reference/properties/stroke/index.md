@@ -1,5 +1,6 @@
 ---
-title: stroke
+title: "`stroke` CSS property"
+short-title: stroke
 slug: Web/CSS/Reference/Properties/stroke
 page-type: css-property
 browser-compat: css.properties.stroke

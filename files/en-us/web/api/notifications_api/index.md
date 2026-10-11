@@ -12,12 +12,28 @@ spec-urls: https://notifications.spec.whatwg.org/
 {{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The Notifications API allows web pages to control the display of system notifications to the end user.
-These are outside the top-level browsing context viewport, so therefore can be displayed even when the user has switched tabs or moved to a different app.
-The API is designed to be compatible with existing notification systems, across different platforms.
 
 ## Concepts and usage
 
-Showing a system notification generally involves first requesting permission to use the feature, and then creating a notification.
+A web notification is a message box used to inform users when events occur on web apps. Web notifications are rendered by the operating system's native notification system, making them display identically to notifications from any other app on the platform.
+Because the underlying OS renders web notifications, they are outside the top-level browsing context viewport, and can be shown even when the user has switched tabs or moved to a different app.
+
+### Persistent and non-persistent notifications
+
+The Notifications API supports two types of notifications:
+
+- **Non-persistent notifications** are created in a browsing context, such as a web page or tab.
+  Their lifetime is tied to the lifetime of the page — if the page is closed, the notification can no longer be interacted with.
+
+  They are created using the {{domxref("Notification.Notification","Notification()")}} constructor and fire events such as {{domxref("Notification/click_event", "click")}} directly on the `Notification` instance.
+
+- **Persistent notifications** are created from a service worker, and can remain interactive beyond the lifetime of an individual page.
+
+  They are created by calling {{domxref("ServiceWorkerRegistration.showNotification()")}} from inside a service worker and fire {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}} and {{domxref("ServiceWorkerGlobalScope/notificationclose_event", "notificationclose")}} events on the {{domxref("ServiceWorkerGlobalScope")}}.
+
+> [!NOTE]
+> If your code needs to run on mobile devices then you **must** use persistent notifications!
+> The {{domxref("Notification.Notification","Notification()")}} constructor will throw a {{jsxref("TypeError")}} on most mobile browsers.
 
 ### Notifications require user permission
 
@@ -45,7 +61,7 @@ Once a choice has been made, the setting will generally persist for the current 
 Notifications are created using the {{domxref("Notification.Notification","Notification()")}} constructor.
 This must be passed a title argument, and can optionally be passed a parameter to specify options such as text direction, body text, icon to display, notification sound to play, and more.
 
-For example, the following code shows how you might create a notification that sets the [`navigate`](/en-US/docs/Web/API/Notification/Notification#navigate) option, specifying a URL that will be opened if the notification is accepted (you can also defined click handlers to process notification actions).
+For example, the following code shows how you might create a notification that sets the [`navigate`](/en-US/docs/Web/API/Notification/Notification#navigate) option, specifying a URL that will be opened if the notification is accepted (you can also define click handlers to process notification actions).
 
 ```js
 if (Notification.permission === "granted") {
@@ -57,19 +73,6 @@ if (Notification.permission === "granted") {
 ```
 
 For more usage examples see [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API).
-
-### Persistent and non-persistent notifications
-
-The Notifications API supports two types of notifications:
-
-- **Non-persistent notifications** are created in a browsing context, such as a web page or tab.
-  Their lifetime is tied to the lifetime of the page — if the page is closed, the notification can no longer be interacted with.
-
-  They are created using the {{domxref("Notification.Notification","Notification()")}} constructor and fire events such as {{domxref("Notification/click_event", "click")}} directly on the `Notification` instance
-
-- **Persistent notifications** are created from a service worker, and can remain interactive beyond the lifetime of an individual page.
-
-  They are created using {{domxref("ServiceWorkerRegistration.showNotification()")}} from a service worker and fire {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}} and {{domxref("ServiceWorkerGlobalScope/notificationclose_event", "notificationclose")}} events on the {{domxref("ServiceWorkerGlobalScope")}}.
 
 ## Interfaces
 

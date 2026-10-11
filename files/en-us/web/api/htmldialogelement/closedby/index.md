@@ -44,6 +44,7 @@ If the `closedby` attribute is absent or invalid, it falls back to the **Auto** 
 
 ```html hidden
 <pre id="log"></pre>
+<button id="open">Open modal</button>
 ```
 
 ```js hidden
@@ -52,11 +53,15 @@ function log(text) {
   logElement.innerText = `${logElement.innerText}${text}\n`;
   logElement.scrollTop = logElement.scrollHeight;
 }
+const button = document.getElementById("open");
+button.addEventListener("click", () => {
+  const dialog = document.querySelector("dialog");
+  dialog.showModal();
+});
 ```
 
 ```js
 const dialog = document.querySelector("dialog");
-dialog.showModal();
 log(`closedBy: ${dialog.closedBy}`);
 ```
 

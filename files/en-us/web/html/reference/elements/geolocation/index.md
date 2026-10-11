@@ -1,5 +1,6 @@
 ---
-title: "<geolocation>: The geolocation element"
+title: "`<geolocation>` HTML geolocation element"
+short-title: <geolocation>
 slug: Web/HTML/Reference/Elements/geolocation
 page-type: html-element
 status:

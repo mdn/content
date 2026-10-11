@@ -29,6 +29,14 @@ The document navigation timestamps (in addition to those from [Resource Timing](
 8. {{domxref("PerformanceNavigationTiming.loadEventStart","loadEventStart")}}: timestamp immediately before the current document's [`load`](/en-US/docs/Web/API/Window/load_event) event handler starts.
 9. {{domxref("PerformanceNavigationTiming.loadEventEnd","loadEventEnd")}}: timestamp immediately after the current document's [`load`](/en-US/docs/Web/API/Window/load_event) event handler completes.
 
+## Performance timing confidence
+
+The {{domxref("PerformanceNavigationTiming.confidence")}} property returns a {{domxref("PerformanceTimingConfidence")}} object containing information that indicates whether a performance record reflects typical application performance, or is likely affected by external factors.
+
+For example, if a website has loaded after a browser "cold start" or session restore, its pages may load more slowly as a result. In such cases, a `low` confidence {{domxref("PerformanceTimingConfidence.value", "value")}} would be returned for an associated performance record. On the other hand, if the browser determines a returned performance record to be representative of typical application performance, a `high` confidence value is returned.
+
+This confidence measure is useful for developers when trying to determine whether a performance issue is a legitimate concern, or an outlier being caused by external factors. See {{domxref("PerformanceTimingConfidence")}} for more information.
+
 ## Other properties
 
 The {{domxref("PerformanceNavigationTiming")}} interface provides additional properties such as {{domxref("PerformanceNavigationTiming.redirectCount","redirectCount")}} returning the number of redirects and {{domxref("PerformanceNavigationTiming.type","type")}} indicating the type of navigation.

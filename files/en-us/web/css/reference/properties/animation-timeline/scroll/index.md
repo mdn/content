@@ -143,7 +143,7 @@ These two together ensure that the container has a vertical scrollbar, which all
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }

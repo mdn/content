@@ -3,10 +3,11 @@ title: "max_u: Wasm SIMD arithmetic instruction"
 short-title: max_u
 slug: WebAssembly/Reference/SIMD/arithmetic/max_u
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.max_u
 sidebar: webassemblysidebar
 ---
 
-The **`max_u`** instruction compares two [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) unsigned integer value interpretations and returns a new interpretation with each lane set to the greater of that lane index's value on the two inputs.
+The **`max_u`** instruction compares two [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) unsigned integer value interpretations and returns a new interpretation with each lane set to the greater of that lane index's value on the two inputs.
 
 {{InteractiveExample("Wat Demo: max_u", "tabbed-taller")}}
 
@@ -66,6 +67,14 @@ value_type.max_u
 | `i8x16.max_u` | `0xfd 121:u32` | `i8x16.max_u` => `0xfd 0x79`      |
 | `i16x8.max_u` | `0xfd 153:u32` | `i16x8.max_u` => `0xfd 0x99 0x01` |
 | `i32x4.max_u` | `0xfd 185:u32` | `i32x4.max_u` => `0xfd 0xb9 0x01` |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

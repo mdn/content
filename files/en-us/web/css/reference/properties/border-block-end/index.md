@@ -1,12 +1,13 @@
 ---
-title: border-block-end
+title: "`border-block-end` CSS property"
+short-title: border-block-end
 slug: Web/CSS/Reference/Properties/border-block-end
 page-type: css-shorthand-property
 browser-compat: css.properties.border-block-end
 sidebar: cssref
 ---
 
-The **`border-block-end`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) for setting the individual logical block-end border property values in a single place in the style sheet.
+The **`border-block-end`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the individual logical block-end border property values in a single place in the style sheet.
 
 {{InteractiveExample("CSS Demo: border-block-end")}}
 
@@ -80,9 +81,9 @@ Related properties are {{cssxref("border-block-start")}}, {{cssxref("border-inli
 
 The `border-block-end` is specified with one or more of the following, in any order:
 
-- `<'border-width'>`
+- {{cssxref("&lt;line-width&gt;")}}
   - : The width of the border. See {{cssxref("border-width")}}.
-- `<'border-style'>`
+- {{cssxref("&lt;line-style&gt;")}}
   - : The line style of the border. See {{cssxref("border-style")}}.
 - {{CSSXref("&lt;color&gt;")}}
   - : The color of the border.

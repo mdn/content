@@ -1,12 +1,13 @@
 ---
-title: "ge_u: Wasm text instruction"
+title: "ge_u: Wasm numeric instruction"
 short-title: ge_u
 slug: WebAssembly/Reference/Numeric/ge_u
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.ge_u
 sidebar: webassemblysidebar
 ---
 
-The **`ge_u`** instruction, short for _greater or equal unsigned_, checks if an unsigned integer is greater than or equal to another unsigned integer.
+The **`ge_u`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _greater or equal unsigned_, checks if an unsigned integer is greater than or equal to another unsigned integer.
 
 There are other `ge` instructions available:
 
@@ -53,7 +54,7 @@ value_type.ge_u
   - : The type of value the instruction is being run on. The following types support `ge_u`:
     - `i32`
     - `i64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `i8x16`
       - `i16x8`
       - `i32x4`
@@ -75,7 +76,7 @@ value_type.ge_u
 
 For a non-SIMD `ge_u`, the inputs will be basic numeric values such as `3` or `12`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `ge_u`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 2 30 86 120`. Each lane of the output pushed to the stack is a `1` or `0` indicating whether the corresponding lane of the first input value is greater than or equal to the corresponding lane of the second input value.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `ge_u`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `i32x4 2 30 86 120`. Each lane of the output pushed to the stack is a `1` or `0` indicating whether the corresponding lane of the first input value is greater than or equal to the corresponding lane of the second input value.
 
 ### Binary encoding
 
@@ -147,6 +148,14 @@ The output is as follows:
 {{embedlivesample("simd_ge_u", "100%", 100)}}
 
 The result is `1` because the value stored in lane `3` of the first input value is greater than or equal to the value stored in lane `3` of the second input value.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

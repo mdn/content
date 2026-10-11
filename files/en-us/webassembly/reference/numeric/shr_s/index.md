@@ -1,12 +1,13 @@
 ---
-title: "shr_s: Wasm text instruction"
+title: "shr_s: Wasm numeric instruction"
 short-title: shr_s
 slug: WebAssembly/Reference/Numeric/shr_s
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.shr_s
 sidebar: webassemblysidebar
 ---
 
-The **`shr_s`** instructions, short for _shift-right signed_, are used for performing a bitwise right-shift on signed integers, similar to the **`>>>`** operator in other languages.
+The **`shr_s`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _shift-right signed_, is used for performing a bitwise right-shift on signed integers, similar to the **`>>>`** operator in other languages.
 
 {{InteractiveExample("Wat Demo: shr_s", "tabbed-taller")}}
 
@@ -56,7 +57,7 @@ value_type.shr_s
   - : The type of value the instruction is being run on. The following types support `shr_s`:
     - `i32`
     - `i64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `i8x16`
       - `i16x8`
       - `i32x4`
@@ -79,7 +80,7 @@ value_type.shr_s
 
 For a non-SIMD `shr_s`, the `input` and `output` will be basic numeric values such as `3` or `12`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `shr_s`, the `input` and `output` will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 2 30 86 120`. Each lane of the output pushed to the stack contains the corresponding lane in the input value shifted to the right by the specified `shift_value`.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `shr_s`, the `input` and `output` will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `i32x4 2 30 86 120`. Each lane of the output pushed to the stack contains the corresponding lane in the input value shifted to the right by the specified `shift_value`.
 
 ### Binary encoding
 
@@ -149,6 +150,14 @@ The output is as follows:
 {{embedlivesample("simd_shr_s", "100%", 100)}}
 
 The result is `22`, because the value stored in lane `6` of the input value is `91`. Once shifted right by two positions, the output value's lane `6` will contain the value `22`.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

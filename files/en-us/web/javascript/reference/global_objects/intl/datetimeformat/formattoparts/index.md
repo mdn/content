@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.formatToParts
 sidebar: jsref
 ---
 
-The **`formatToParts()`** method of {{jsxref("Intl.DateTimeFormat")}} instances returns an array of objects representing each part of the formatted string that would be returned by {{jsxref("Intl/DatetimeFormat/format", "format()")}}. It is useful for building custom strings from the locale-specific tokens.
+The **`formatToParts()`** method of {{jsxref("Intl.DateTimeFormat")}} instances returns an array of objects representing each part of the formatted string that would be returned by {{jsxref("Intl/DateTimeFormat/format", "format()")}}. It is useful for building custom strings from the locale-specific tokens.
 
 {{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.formatToParts()", "taller")}}
 

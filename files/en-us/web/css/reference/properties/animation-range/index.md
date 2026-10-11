@@ -1,12 +1,13 @@
 ---
-title: animation-range
+title: "`animation-range` CSS property"
+short-title: animation-range
 slug: Web/CSS/Reference/Properties/animation-range
 page-type: css-shorthand-property
 browser-compat: css.properties.animation-range
 sidebar: cssref
 ---
 
-The **`animation-range`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) is used to set the start and end of an animation's attachment range along its timeline, i.e., where along the timeline an animation will start and end.
+The **`animation-range`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property is used to set the start and end of an animation's attachment range along its timeline, i.e., where along the timeline an animation will start and end.
 
 ## Constituent properties
 
@@ -51,9 +52,9 @@ animation-range: revert-layer;
 animation-range: unset;
 ```
 
-The `animation-range` shorthand property is specified as one or more single animation ranges, separated by commas. Each animation range is specified as one to four space separated values composed of `<timeline-range-name>` values, `<length-percentage>` values, and/or the keyword `normal`.
-
 ### Values
+
+The `animation-range` shorthand property is specified as one or more single animation ranges, separated by commas. Each animation range is specified as one to four space separated values composed of `<timeline-range-name>` values, `<length-percentage>` values, and/or the keyword `normal`.
 
 - `<animation-range-start>`
   - : The keyword `normal`, a `<length-percentage>`, a {{cssxref("timeline-range-name")}}, or a `<timeline-range-name> <length-percentage>` pair, representing the {{cssxref("animation-range-start")}}. If a `<timeline-range-name>` is set without a `<length-percentage>`, the `<length-percentage>` defaults to `0%`.

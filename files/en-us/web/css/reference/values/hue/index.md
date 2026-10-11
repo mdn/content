@@ -1,5 +1,6 @@
 ---
-title: <hue>
+title: "`<hue>` CSS type"
+short-title: <hue>
 slug: Web/CSS/Reference/Values/hue
 page-type: css-type
 browser-compat:

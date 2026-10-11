@@ -2,7 +2,7 @@
 title: 302 Found
 slug: Web/HTTP/Reference/Status/302
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.302
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.302
 sidebar: http
 ---
 

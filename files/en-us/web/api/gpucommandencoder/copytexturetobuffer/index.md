@@ -60,7 +60,7 @@ copyTextureToBuffer(source, destination, copySize)
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ### Validation
 

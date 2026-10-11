@@ -12,11 +12,8 @@ The **`timeStamp`** read-only property of the {{domxref("Event")}} interface ret
 
 ## Value
 
-This value is the number of milliseconds elapsed from the beginning of the time origin until the event was created.
-If the global object is {{domxref("Window")}}, the time origin is the moment the user clicked on the link, or the script that initiated the loading of the document.
-In a worker, the time origin is the moment of creation of the worker.
-
-The value is a {{domxref("DOMHighResTimeStamp")}} accurate to 5 microseconds (0.005 ms), but the [precision is reduced](#reduced_time_precision) to prevent [fingerprinting](/en-US/docs/Glossary/Fingerprinting).
+The value is a {{domxref("DOMHighResTimeStamp")}} representing the number of milliseconds elapsed from the relevant global object's [time origin](/en-US/docs/Web/API/Performance/timeOrigin) until the event was created.
+Its [precision may be reduced](#reduced_time_precision) to mitigate timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting).
 
 ## Example
 
@@ -46,25 +43,31 @@ document.body.addEventListener("keypress", getTime);
 
 ## Reduced time precision
 
-To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `event.timeStamp` might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `event.timeStamp` may be reduced depending on browser settings.
 
-For example, with reduced time precision, the result of `event.timeStamp` will always be a multiple of 2, or a multiple of 100 (or `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`) with `privacy.resistFingerprinting` enabled.
+Fractional milliseconds do not necessarily mean that time precision has not been reduced.
+
+In Chrome, the rounding interval is 0.1 ms, or 0.005 ms in cross-origin-isolated contexts. In Safari, it is 1 ms, or 0.02 ms in cross-origin-isolated contexts.
+
+In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and uses a rounding interval of 1 ms, or 0.02 ms in cross-origin-isolated contexts. If `privacy.resistFingerprinting` is enabled, the rounding interval is 16.667 ms or the interval configured by `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
+
+For example, these are possible values in Firefox:
 
 ```js
-// reduced time precision (2ms) in Firefox 60
+// Reduced time precision (1 ms) in a non-isolated context
 event.timeStamp;
 // Might be:
 // 9934
-// 10362
-// 11670
+// 10363
+// 11671
 // …
 
-// reduced time precision with `privacy.resistFingerprinting` enabled
+// Reduced time precision with `privacy.resistFingerprinting` enabled
 event.timeStamp;
 // Might be:
-// 53500
-// 58900
-// 64400
+// 10000.2
+// 10016.867
+// 10033.534
 // …
 ```
 

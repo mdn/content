@@ -18,17 +18,17 @@ The **`VideoColorSpace`** interface of the {{domxref('WebCodecs API','','',' ')}
 
 - {{domxref("VideoColorSpace.primaries")}} {{ReadOnlyInline}}
   - : A string containing the color primary describing the color {{glossary("gamut")}} of a video sample.
-- {{domxref("VideoColorSpace.transfer")}}
+- {{domxref("VideoColorSpace.transfer")}} {{ReadOnlyInline}}
   - : A string containing the transfer characteristics of video samples.
-- {{domxref("VideoColorSpace.matrix")}}
+- {{domxref("VideoColorSpace.matrix")}} {{ReadOnlyInline}}
   - : A string containing the matrix coefficients describing the relationship between sample component values and color coordinates.
-- {{domxref("VideoColorSpace.fullRange")}}
+- {{domxref("VideoColorSpace.fullRange")}} {{ReadOnlyInline}}
   - : A {{jsxref("Boolean")}}. If `true` indicates that full-range color values are used.
 
 ## Instance methods
 
 - {{domxref("VideoColorSpace.toJSON()")}}
-  - : Returns a JSON representation of the `VideoColorSpace` object.
+  - : Returns a JSON-serializable plain object representing the `VideoColorSpace` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 

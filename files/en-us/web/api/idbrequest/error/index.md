@@ -38,9 +38,9 @@ Read errors occur when an IndexedDB stores values and then subsequently fails to
 
 Read errors can be one of two types — **transient** or **unrecoverable**:
 
-Transient read errors are signalled by an `UnknownError` type, and are usually caused by low memory. This shouldn't be a problem for small databases. To avoid low memory situations in large databases, try to split up database access to only load the records you need at any one time, for example using specific [key ranges](/en-US/docs/Web/API/IDBKeyRange) relating to a user's search query or a pagination mechanism. If a low memory error is hit, the user may be asked to close other applications to free up space at the OS-level.
+Transient read errors are signaled by an `UnknownError` type, and are usually caused by low memory. This shouldn't be a problem for small databases. To avoid low memory situations in large databases, try to split up database access to only load the records you need at any one time, for example using specific [key ranges](/en-US/docs/Web/API/IDBKeyRange) relating to a user's search query or a pagination mechanism. If a low memory error is hit, the user may be asked to close other applications to free up space at the OS-level.
 
-Unrecoverable read errors are signalled by a `NotReadableError` type, and are caused by source files being deleted.
+Unrecoverable read errors are signaled by a `NotReadableError` type, and are caused by source files being deleted.
 
 For example, some browsers store large values (for example, audio file blobs for an offline podcast app) as separate files that are accessed via a reference stored in the database. It has been observed that these separate files can end up being deleted because they show up as opaque files to users when they are using disk space recovery programs, resulting in unrecoverable read errors when the IndexedDB is next accessed.
 

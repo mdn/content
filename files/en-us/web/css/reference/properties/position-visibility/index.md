@@ -1,5 +1,6 @@
 ---
-title: position-visibility
+title: "`position-visibility` CSS property"
+short-title: position-visibility
 slug: Web/CSS/Reference/Properties/position-visibility
 page-type: css-property
 browser-compat: css.properties.position-visibility
@@ -26,6 +27,8 @@ position-visibility: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `always`
   - : The positioned element is always displayed.

@@ -8,7 +8,7 @@ status:
 browser-compat: api.WorkletSharedStorage.remainingBudget
 ---
 
-{{APIRef("Shared Storage API")}}{{deprecated_header}}
+{{APIRef("Shared Storage API")}}
 
 The **`remainingBudget()`** method of the
 {{domxref("WorkletSharedStorage")}} interface returns the remaining navigation budget for the current origin.
@@ -34,7 +34,7 @@ A {{jsxref("Promise")}} that fulfills with a number representing the remaining n
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the worklet module has not yet been added with {{domxref("Worklet.addModule", "addModule()")}} or if the calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment).
+  - : Thrown if the worklet module has not yet been added with {{domxref("Worklet.addModule", "addModule()")}} or if the calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox#enrollment).
 
 ## Examples
 

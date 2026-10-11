@@ -3,11 +3,11 @@ title: "convert_low_i32x4_u: Wasm SIMD conversion instruction"
 short-title: convert_low_i32x4_u
 slug: WebAssembly/Reference/SIMD/conversion/convert_low_i32x4_u
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.convert_low_i32x4_u
+browser-compat: webassembly.instructions.convert_low_i32x4_u
 sidebar: webassemblysidebar
 ---
 
-The **`convert_low_i32x4_u`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts the first two lanes of an unsigned [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i32x4` value interpretation into an `f64x2` value interpretation.
+The **`convert_low_i32x4_u`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts the first two lanes of an unsigned [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) `i32x4` value interpretation into an `f64x2` value interpretation.
 
 {{InteractiveExample("Wat Demo: convert_low_i32x4_u", "tabbed-taller")}}
 
@@ -36,7 +36,7 @@ value_type.convert_low_i32x4_u
 ```
 
 - `value_type`
-  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations support `convert_low_i32x4_u`:
+  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations support `convert_low_i32x4_u`:
     - `f64x2`
 - `convert_low_i32x4_u`
   - : The `convert_low_i32x4_u` instruction. Must always be included after the `value_type` and a period (`.`).
@@ -65,7 +65,3 @@ value_type.convert_low_i32x4_u
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD conversion instructions](/en-US/docs/WebAssembly/Reference/SIMD/conversion)

@@ -1,5 +1,6 @@
 ---
-title: anchor-name
+title: "`anchor-name` CSS property"
+short-title: anchor-name
 slug: Web/CSS/Reference/Properties/anchor-name
 page-type: css-property
 browser-compat: css.properties.anchor-name
@@ -27,6 +28,8 @@ anchor-name: unset;
 ```
 
 ### Values
+
+This property is specified as a single value from the following list:
 
 - `none`
   - : The default value. Setting `anchor-name: none` on an element means that it is not defined as an anchor element. If the element was previously defined as an anchor and associated with a positioned element, setting `anchor-name: none` disassociates the two.

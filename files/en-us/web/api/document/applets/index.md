@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.applets
 ---
 
-{{APIRef("DOM")}} {{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 The **`applets`** property of the {{domxref("Document")}} returns an empty {{domxref("HTMLCollection")}}. This property is kept only for compatibility reasons; in older versions of browsers, it returned a list of the applets within a document.
 

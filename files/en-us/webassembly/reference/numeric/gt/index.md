@@ -1,12 +1,13 @@
 ---
-title: "gt: Wasm text instruction"
+title: "gt: Wasm numeric instruction"
 short-title: gt
 slug: WebAssembly/Reference/Numeric/gt
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.gt
 sidebar: webassemblysidebar
 ---
 
-The **`gt`** instruction, short for _greater than_, checks if a floating point number is greater than another floating point number.
+The **`gt`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _greater than_, checks if a floating point number is greater than another floating point number.
 
 Integer types have separate greater than signed ([**`gt_s`**](/en-US/docs/WebAssembly/Reference/Numeric/gt_s)) and unsigned ([**`gt_u`**](/en-US/docs/WebAssembly/Reference/Numeric/gt_u)) instructions.
 
@@ -50,7 +51,7 @@ value_type.gt
   - : The type of value the instruction is being run on. The following types support `gt`:
     - `f32`
     - `f64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `f32x4`
       - `f64x2`
 - `gt`
@@ -71,7 +72,7 @@ value_type.gt
 
 For a non-SIMD `gt`, the inputs will be basic numeric values such as `3.0` or `3.5`. If the first input is greater than the second input, `1` will be pushed on to the stack as an output, otherwise `0` will be pushed on to the stack.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `gt`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 2.0 30 86.9 120`. Each lane of the output pushed to the stack is a `1` or `0` indicating whether the corresponding lane of the first input value is greater than the corresponding lane of the second input value.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `gt`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `f32x4 2.0 30 86.9 120`. Each lane of the output pushed to the stack is a `1` or `0` indicating whether the corresponding lane of the first input value is greater than the corresponding lane of the second input value.
 
 ### Binary encoding
 
@@ -142,6 +143,14 @@ The output is as follows:
 {{embedlivesample("simd_gt", "100%", 100)}}
 
 The result is `1` because the value stored in lane `3` of the first input value is greater than the value stored in lane `3` of the second input value.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

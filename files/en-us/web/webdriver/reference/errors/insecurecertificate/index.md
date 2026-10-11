@@ -1,5 +1,6 @@
 ---
-title: Insecure certificate
+title: "`insecure certificate` error code"
+short-title: insecure certificate
 slug: Web/WebDriver/Reference/Errors/InsecureCertificate
 page-type: webdriver-error
 sidebar: webdriver

@@ -35,7 +35,7 @@ A number representing the [timestamp](/en-US/docs/Web/JavaScript/Reference/Globa
 
 ## Description
 
-`Date` objects are fundamentally represented by a [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), and this method allows you to retrieve the timestamp. You can use this method to help assign a date and time to another {{jsxref("Date")}} object. This method is functionally equivalent to the {{jsxref("Date/valueof", "valueOf()")}} method.
+`Date` objects are fundamentally represented by a [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), and this method allows you to retrieve the timestamp. You can use this method to help assign a date and time to another {{jsxref("Date")}} object. This method is functionally equivalent to the {{jsxref("Date/valueOf", "valueOf()")}} method.
 
 ## Examples
 

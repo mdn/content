@@ -46,7 +46,7 @@ All of the Headers methods will throw a {{jsxref("TypeError")}} if you try to pa
 - {{domxref("Headers.delete()")}}
   - : Deletes a header from a `Headers` object.
 - {{domxref("Headers.entries()")}}
-  - : Returns an {{jsxref("Iteration_protocols","iterator")}} allowing to go through all key/value pairs contained in this object.
+  - : Returns an {{jsxref("Iteration_protocols","iterator")}} allowing you to go through all key/value pairs contained in this object.
 - {{domxref("Headers.forEach()")}}
   - : Executes a provided function once for each key/value pair in this `Headers` object.
 - {{domxref("Headers.get()")}}

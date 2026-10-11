@@ -9,8 +9,6 @@ browser-compat: http.headers.Content-Security-Policy.report-uri
 sidebar: http
 ---
 
-{{deprecated_header}}
-
 > [!WARNING]
 > The {{CSP("report-to")}} directive is intended to replace `report-uri`, and in browsers that support `report-to`, the `report-uri` directive is ignored.
 >
@@ -123,7 +121,7 @@ A browser capable of enforcing CSP would send the following violation report as 
 {
   "csp-report": {
     "blocked-uri": "http://example.com/css/style.css",
-    "disposition": "report",
+    "disposition": "enforce",
     "document-uri": "http://example.com/signup.html",
     "effective-directive": "style-src-elem",
     "original-policy": "default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports",

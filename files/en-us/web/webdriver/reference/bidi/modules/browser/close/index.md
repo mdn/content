@@ -1,6 +1,6 @@
 ---
-title: browser.close command
-short-title: browser.close
+title: "`browser.close` command"
+short-title: close
 slug: Web/WebDriver/Reference/BiDi/Modules/browser/close
 page-type: webdriver-command
 browser-compat: webdriver.bidi.browser.close
