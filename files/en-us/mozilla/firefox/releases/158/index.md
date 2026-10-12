@@ -1,18 +1,13 @@
 ---
-title: Firefox 158 release notes for developers (Beta)
-short-title: Firefox 158 (Beta)
+title: Firefox 158 release notes for developers (Stable)
+short-title: Firefox 158 (Stable)
 slug: Mozilla/Firefox/Releases/158
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 158 that affect developers.
-Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [October 13, 2026](https://whattrainisitnow.com/release/?version=158).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 158 was released on [October 13, 2026](https://whattrainisitnow.com/release/?version=158).
 
 ## Changes for web developers
 
@@ -20,43 +15,21 @@ Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) attribute is now supported in Firefox for Android (desktop support has been available for a long time). This ARIA state indicates whether an element is currently being modified. It allows assistive technologies to wait until changes to the content are complete before informing users of the update. For example, a screen reader can wait until a [live region](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) has finished updating before announcing the changes. ([Firefox bug 908042](https://bugzil.la/908042)).
 
-<!-- ### Developer Tools -->
+### HTML
 
-<!-- ### HTML -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### CSS
 
 - [CSS typed arithmetic](/en-US/docs/Web/CSS/Guides/Values_and_units/Using_typed_arithmetic) is now supported, which enables using functions such as {{cssxref("calc()")}} to divide two values of the same data type, even if they use different units. The resulting unitless quotients can then be converted to other data types, creating useful relationships between different values on a page. ([Firefox bug 2067411](https://bugzil.la/2067411)).
 
-<!-- #### Removals -->
+### JavaScript
 
-<!-- ### JavaScript -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### HTTP
 
 - The default HTTP [`Accept`](/en-US/docs/Web/HTTP/Reference/Headers/Accept) header for image requests now includes `image/jxl`, following support for the [JPEG XL](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_xl_image) image format. The new value is `image/avif,image/jxl,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5` (see [List of default Accept values](/en-US/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values#values_for_an_image)). ([Firefox bug 2065096](https://bugzil.la/2065096)).
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
 
 ### APIs
 
@@ -76,12 +49,6 @@ Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-
 #### Media, WebRTC, and Web Audio
 
 - When sending H.264 or AV1 video with [WebRTC](/en-US/docs/Web/API/WebRTC_API), Firefox now lowers the resolution and frame rate as needed to stay within the codec level negotiated with the remote peer, set by the `profile-level-id` parameter for [H.264](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs#avc_h.264) and `level-idx` for [AV1](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs#av1). As a result, {{domxref("MediaCapabilities.encodingInfo()")}} now reports a `webrtc` configuration as supported even if its resolution and frame rate exceed the level in its `contentType`. ([Firefox bug 2013936](https://bugzil.la/2013936)).
-
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -107,10 +74,6 @@ Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - {{WebExtAPIRef("publicSuffix.isKnownSuffix()")}} now throws an error when passed an invalid hostname, instead of returning `false`. ([Firefox bug 2066620](https://bugzil.la/2066620))
 - Adds [`runtime.getVersion()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getVersion) to return the extension's version as declared in the manifest. ([Firefox bug 1992418](https://bugzil.la/1992418))
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
 
 ## Experimental web features
 
