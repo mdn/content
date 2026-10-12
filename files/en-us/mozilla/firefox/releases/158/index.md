@@ -104,7 +104,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **Deferred module evaluation** (Nightly): `javascript.options.experimental.defer_import_eval`
 
-  The [`import defer`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer) declaration and the [`import.defer()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/defer) syntax are now supported in Nightly. They load a module and its dependencies up front, but run the module's code only when one of its exports is first accessed, so modules that aren't needed right away don't slow down startup. ([Firefox bug 1952263](https://bugzil.la/1952263)).
+  The [`import defer`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer) declaration and the [`import.defer()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/defer) syntax are now available in Nightly behind a preference. They load a module and its dependencies up front, but run the module's code only when one of its exports is first accessed, so modules that aren't needed right away don't slow down startup. Modules that use top-level `await` still run right away. ([Firefox bug 1952263](https://bugzil.la/1952263)).
 
 - **On-device speech recognition**: `media.webspeech.recognition.enable`
 
