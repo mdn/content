@@ -151,7 +151,7 @@ We'll start by defining {{cssxref("@keyframes")}} for the `fade-in` animation we
 body {
   width: 80%;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
   font-size: 1.3rem;
 }
 
@@ -676,7 +676,7 @@ We want the finished state of each animation to apply throughout, after it is re
 ```css hidden live-sample___multiple-triggers
 body {
   overflow-x: hidden;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
   font-size: 1.3rem;
   width: 80%;
   margin: 0 auto;
@@ -697,7 +697,7 @@ p {
 
 section {
   background: red;
-  color: #fff0;
+  color: #ffffff00;
   padding: 10px;
   width: 400px;
   height: 50px;
@@ -760,11 +760,11 @@ Finally, we define the animation {{cssxref("@keyframes")}} referenced in the `<s
 
 @keyframes reveal {
   from {
-    color: #fff0;
+    color: #ffffff00;
     transform: scaleY(0.2);
   }
   to {
-    color: #ffff;
+    color: white;
     transform: scaleY(1);
   }
 }

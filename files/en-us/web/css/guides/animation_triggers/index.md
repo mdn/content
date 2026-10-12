@@ -120,11 +120,11 @@ html {
     68%,
     72%,
     76%,
-    to {
+    100% {
       transform: translateY(0);
       animation-timing-function: ease-out;
     }
-    from,
+    0%,
     17%,
     30%,
     40%,
