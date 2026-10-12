@@ -89,7 +89,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **`random()` CSS function**: `layout.css.random.enabled`
 
-  The {{cssxref("random")}} CSS function generates a random value within a specified range, optionally limiting the possible values to step size intervals between those limits and the ability to scope the random value to elements and properties.
+  The {{cssxref("random")}} CSS function generates a random value within a specified range, optionally limiting the possible values to step size intervals between those limits. An optional `<random-key>` parameter controls which `random()` functions share a random value, for example across elements or properties.
   ([Firefox bug 2071165](https://bugzil.la/2071165)).
 
 - **`corner-shape` properties**: `layout.css.corner-shape.enabled`
