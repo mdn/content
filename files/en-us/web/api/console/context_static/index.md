@@ -22,7 +22,7 @@ console.context(label)
 ### Parameters
 
 - `label` {{Optional_Inline}}
-  - : A string used to name the context. Messages logged through the returned object are associated with this name. If omitted, the context is unnamed.
+  - : A string used to name the context. Messages logged through the returned object are associated with this name. Defaults to `"anonymous"`.
 
 ### Return value
 
@@ -30,11 +30,11 @@ A new object that has most of the methods of the `console` object, such as {{dom
 
 ## Description
 
-Every call to `console.context()` returns a new, independent console context. Messages logged through a context carry its label, which developer tools can use to identify where a message came from. For example, in the Chrome DevTools console you can type `context:myLogger` in the filter box to show only the messages logged through a context labeled `myLogger`.
+Every call to `console.context()` returns a new, independent console context. Messages logged through a context carry its label, which developer tools can use to identify where a message came from. For example, in the Chrome DevTools, you can type `context:myLogger` in the filter box to show only the messages logged through a context labeled `myLogger`.
 
-Each context keeps its own state for counters and timers. This means that {{domxref("console/count_static", "count()")}} and {{domxref("console/time_static", "time()")}} labels used on one context don't affect the same labels on the global `console` object or on another context. Calling {{domxref("console/clear_static", "clear()")}} on a context clears the whole console, not only the messages of that context.
+Each context keeps its own state for counters and timers. This means that {{domxref("console/count_static", "count()")}} and {{domxref("console/time_static", "time()")}} labels used on one context don't affect the same labels on the global `console` object or on another context. Calling {{domxref("console/clear_static", "clear()")}} on a context still clears the whole console.
 
-The methods of a console context don't need to be called on the context object, so you can pass them around as standalone functions, just like the methods of `console`.
+Just like the methods of `console`, methods of a console context don't use the value of `this`, so you can pass them around as unbound functions.
 
 ## Examples
 
