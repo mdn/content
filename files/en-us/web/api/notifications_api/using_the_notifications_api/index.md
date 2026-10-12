@@ -263,7 +263,7 @@ button.addEventListener("click", () => {
 
 {{ EmbedLiveSample('Tag_example', '100%', 200) }}
 
-To test the above example, change the [send notification setting](https://support.mozilla.org/en-US/kb/firefox-page-info-window#w_permissions) for the `https://live.mdnplay.dev` website.
+To test the above example, allow notifications for the live sample's per-sample origin under `mdnplay.dev`, not for `https://live.mdnplay.dev`. In Firefox, use the [page info window](https://support.mozilla.org/en-US/kb/firefox-page-info-window#w_permissions) to change the permission for that origin.
 
 ## See also
 
