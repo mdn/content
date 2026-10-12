@@ -7,6 +7,7 @@ on:
       - "data/**"
       - "package.json"
       - "package-lock.json"
+      - ".nvmrc"
       - ".github/workflows/build-content-and-diff.yml"
       - ".github/workflows/pr-diff-companion.yml"
 
@@ -17,12 +18,14 @@ concurrency:
 permissions: {}
 
 jobs:
-  build-base:
+  build-and-diff:
     if: github.repository == 'mdn/content'
     runs-on: ubuntu-latest
     env:
-      BUILD_OUT_ROOT: build
-      CONTENT_ROOT: files
+      BUILD_BASE: ${{ runner.temp }}/build-base
+      BUILD_PR: ${{ runner.temp }}/build-pr
+      CONTENT_ROOT: ${{ github.workspace }}/files
+      DEPS_DATA_DIR: ${{ runner.temp }}/deps-data
     steps:
       - name: Checkout content at base
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -30,13 +33,13 @@ jobs:
           ref: ${{ github.event.pull_request.base.sha }}
           persist-credentials: false
 
-      - name: Setup Node.js environment
+      - name: Setup Node.js environment for base
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: .nvmrc
           cache: npm
 
-      - name: Install
+      - name: Install base dependencies
         run: npm ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -44,37 +47,25 @@ jobs:
       - name: Build base content
         run: npx @mdn/rari build --json-issues --data-issues
         env:
+          BUILD_OUT_ROOT: ${{ env.BUILD_BASE }}
           BUILD_FLAW_LEVELS: "unsafe_html: error, *:warn"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload base build
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        with:
-          name: build-base
-          path: ${{ env.BUILD_OUT_ROOT }}
-          if-no-files-found: error
-
-  build-pr:
-    if: github.repository == 'mdn/content'
-    runs-on: ubuntu-latest
-    env:
-      BUILD_OUT_ROOT: build
-      CONTENT_ROOT: files
-    steps:
       - name: Checkout content at PR head
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.event.pull_request.head.sha }}
+          clean: false
           persist-credentials: false
 
-      - name: Setup Node.js environment
+      - name: Setup Node.js environment for PR
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: .nvmrc
           cache: npm
 
-      - name: Install
+      - name: Install PR dependencies
         run: npm ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -82,36 +73,15 @@ jobs:
       - name: Build PR content
         run: npx @mdn/rari build --json-issues --data-issues
         env:
+          BUILD_OUT_ROOT: ${{ env.BUILD_PR }}
           BUILD_FLAW_LEVELS: "unsafe_html: error, *:warn"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload PR build
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        with:
-          name: build-pr
-          path: ${{ env.BUILD_OUT_ROOT }}
-          if-no-files-found: error
-
-  diff:
-    needs: [build-base, build-pr]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download base build
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
-        with:
-          name: build-base
-          path: build-base
-
-      - name: Download PR build
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
-        with:
-          name: build-pr
-          path: build-pr
+          RARI_SKIP_UPDATES: "true"
 
       - name: Compare builds and flaw counts
         env:
-          BASE_BUILD: build-base
-          PR_BUILD: build-pr
+          BASE_BUILD: ${{ env.BUILD_BASE }}
+          PR_BUILD: ${{ env.BUILD_PR }}
         run: |
           node --input-type=module <<'NODE'
           import fs from "node:fs/promises";
@@ -187,52 +157,3 @@ jobs:
           name: build-diff-stats
           path: diff-stats.json
           if-no-files-found: error
-
-  # Temporary preview because the workflow_run companion is not on the default branch yet.
-  status-preview:
-    needs: diff
-    if: github.actor == 'caugner' && github.event.pull_request.head.repo.full_name == github.repository
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: read
-      statuses: write
-    steps:
-      - name: Download diff stats
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
-        with:
-          name: build-diff-stats
-
-      - name: Publish preview statuses
-        env:
-          GH_TOKEN: ${{ github.token }}
-          GH_REPO: ${{ github.repository }}
-          PR: ${{ github.event.pull_request.number }}
-          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
-          RUN_ID: ${{ github.run_id }}
-        run: |
-          [[ "$PR" =~ ^[0-9]+$ ]] || { echo "::error::Invalid PR number: $PR"; exit 1; }
-
-          read -r CHANGED TOTAL BASE_FLAWS PR_FLAWS <<<"$(jq -r '
-            [.changed_files, .total_files, .base_flaws, .pr_flaws]
-            | map(numbers | floor) | select(length == 4) | @tsv' diff-stats.json)"
-          [[ "$CHANGED" =~ ^[0-9]{1,9}$ && "$TOTAL" =~ ^[0-9]{1,9}$ && "$BASE_FLAWS" =~ ^[0-9]{1,9}$ && "$PR_FLAWS" =~ ^[0-9]{1,9}$ ]] || { echo "::error::Invalid diff-stats.json"; exit 1; }
-
-          CURRENT_HEAD=$(gh api "/repos/$GH_REPO/pulls/$PR" \
-            --jq 'select(.state == "open") | .head.sha')
-          if [[ "$CURRENT_HEAD" != "$HEAD_SHA" ]]; then
-            echo "::notice::PR #$PR is closed or has a newer head; nothing to do."
-            exit 0
-          fi
-
-          FLAW_DELTA=$((PR_FLAWS - BASE_FLAWS))
-          FLAW_CHANGE=$(printf '%+d' "$FLAW_DELTA")
-          gh api "/repos/$GH_REPO/statuses/$HEAD_SHA" \
-            -f state=success \
-            -f context=content-build-diff \
-            -f description="Pages changed: $CHANGED/$TOTAL" \
-            -f target_url="https://github.com/$GH_REPO/actions/runs/$RUN_ID" > /dev/null
-          gh api "/repos/$GH_REPO/statuses/$HEAD_SHA" \
-            -f state=success \
-            -f context=content-build-flaws \
-            -f description="Flaws: $PR_FLAWS ($FLAW_CHANGE)" \
-            -f target_url="https://github.com/$GH_REPO/actions/runs/$RUN_ID" > /dev/null
