@@ -109,7 +109,7 @@ Initial support included [`prefetch`](/en-US/docs/Web/HTML/Reference/Elements/sc
 
 #### Moderate eagerness
 
-Firefox 158 added support for [`moderate`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#moderate) eagerness, which indicates that prefetch/prerender should start when there is a reasonable suggestion that the user will follow a link in the near future. For example, the user could scroll a link into the viewport and hover/focus it for some time. ([Firefox bug 2061013](https://bugzil.la/2061013)).
+Firefox 158 added support for [`moderate`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#moderate) eagerness: a matching prefetch starts once the user hovers over a link for a short time (200 milliseconds by default). ([Firefox bug 2061013](https://bugzil.la/2061013)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
