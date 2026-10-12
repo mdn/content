@@ -28,15 +28,13 @@ async function connect() {
     return;
   }
 
-  // Can this browser fall back to a reliable-only (HTTP/2) session?
-  const canUseReliableOnly = WebTransport.supportsReliableOnly;
-  console.log(`Reliable-only sessions supported: ${canUseReliableOnly}`);
+  // Without reliable-only support, the session needs HTTP/3,
+  // so it fails on networks that block UDP
+  if (!WebTransport.supportsReliableOnly) {
+    console.log("This browser can't fall back to a reliable-only session.");
+  }
 
-  // If the app can tolerate reliable-only transport, don't demand unreliable
-  // delivery, so the browser is free to fall back when HTTP/3 isn't available.
-  const transport = new WebTransport(url, {
-    requireUnreliable: !canUseReliableOnly,
-  });
+  const transport = new WebTransport(url);
 
   try {
     await transport.ready;
