@@ -130,3 +130,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   Enabled in Nightly only, you can now set a {{domxref("ReadableStream")}} as a request body (for example, via the {{domxref("Request.Request", "Request()")}} constructor or the {{domxref("Window.fetch()")}} method). This allows you to stream uploads incrementally rather than having to wait for the whole body to be available.
   ([Firefox bug 1594633](https://bugzil.la/1594633)).
+
+- **`CSSNumericValue.equals()`**: `layout.css.typed-om.enabled`
+
+  The {{domxref("CSSNumericValue.equals()")}} method of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) is now supported in Nightly. It returns `true` if every value passed to it is the same as the numeric value it's called on, and `false` otherwise. Values are compared as written, without converting units. For example, `1in` and `2.54cm` are different, as are `calc(1px + 2px)` and `calc(2px + 1px)`. ([Firefox bug 2074503](https://bugzil.la/2074503)).
