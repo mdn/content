@@ -22,10 +22,7 @@ jobs:
     if: github.repository == 'mdn/content'
     runs-on: ubuntu-latest
     env:
-      BUILD_BASE: ${{ runner.temp }}/build-base
-      BUILD_PR: ${{ runner.temp }}/build-pr
       CONTENT_ROOT: ${{ github.workspace }}/files
-      DEPS_DATA_DIR: ${{ runner.temp }}/deps-data
     steps:
       - name: Checkout content at base
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -47,7 +44,7 @@ jobs:
       - name: Build base content
         run: npx @mdn/rari build --json-issues --data-issues
         env:
-          BUILD_OUT_ROOT: ${{ env.BUILD_BASE }}
+          BUILD_OUT_ROOT: ${{ runner.temp }}/build-base
           BUILD_FLAW_LEVELS: "unsafe_html: error, *:warn"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -73,15 +70,15 @@ jobs:
       - name: Build PR content
         run: npx @mdn/rari build --json-issues --data-issues
         env:
-          BUILD_OUT_ROOT: ${{ env.BUILD_PR }}
+          BUILD_OUT_ROOT: ${{ runner.temp }}/build-pr
           BUILD_FLAW_LEVELS: "unsafe_html: error, *:warn"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RARI_SKIP_UPDATES: "true"
 
       - name: Compare builds and flaw counts
         env:
-          BASE_BUILD: ${{ env.BUILD_BASE }}
-          PR_BUILD: ${{ env.BUILD_PR }}
+          BASE_BUILD: ${{ runner.temp }}/build-base
+          PR_BUILD: ${{ runner.temp }}/build-pr
         run: |
           node --input-type=module <<'NODE'
           import fs from "node:fs/promises";
