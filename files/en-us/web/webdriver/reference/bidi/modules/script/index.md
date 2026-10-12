@@ -70,6 +70,7 @@ Realms differ in their access to the DOM, in their isolation from the page's scr
 ## Commands
 
 - [`script.getRealms`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/getRealms)
+- [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate)
 
 ## Events
 

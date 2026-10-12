@@ -56,10 +56,10 @@ In CSS, properties are registered using the `@property` at-rule. In this example
 
 main:hover {
   color: var(--myColor);
-  animation: colorChange 2s linear forwards;
+  animation: color-change 2s linear forwards;
 }
 
-@keyframes colorChange {
+@keyframes color-change {
   to {
     color: red;
   }

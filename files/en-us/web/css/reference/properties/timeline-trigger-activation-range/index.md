@@ -220,7 +220,7 @@ The `.animated` element's {{cssxref("position")}} is set to `fixed`, positioning
 body {
   width: 80%;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
   font-size: 1.3rem;
 }
 
