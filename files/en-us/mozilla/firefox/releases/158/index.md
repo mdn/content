@@ -115,7 +115,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **Speculation rules: moderate eagerness**: `dom.speculation_rules.enabled`
 
-  [Speculation rules](/en-US/docs/Web/API/Speculation_Rules_API#browser_compatibility) provides a mechanism to improve performance for future navigations by specifying which resources should be prefetched or prerendered based on factors such as user behavior towards links. Firefox 158 Nightly enables support for [`moderate`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#moderate) eagerness, which indicates that prefetch/prerender should start when there is a reasonable suggestion that the user will follow a link in the near future. For example, the user could scroll a link into the viewport and hover/focus it for some time.
+  The [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) provides a mechanism to improve performance for future navigations by specifying which resources should be prefetched or prerendered based on factors such as user behavior towards links. Firefox 158 Nightly adds support for [`moderate`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#moderate) eagerness: a matching prefetch starts once the user hovers over a link for a short time (200 milliseconds by default).
   ([Firefox bug 2061013](https://bugzil.la/2061013)).
 
 - **Streaming request bodies**: `dom.fetch.streaming_upload`
