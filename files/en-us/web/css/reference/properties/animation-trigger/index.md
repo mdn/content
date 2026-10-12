@@ -148,7 +148,7 @@ Given the following CSS:
     fade-in linear 1s forwards,
     rotate infinite 5s both,
     shrink ease-in 3s forwards,
-    colorchange steps(5) 5s forwards;
+    color-change steps(5) 5s forwards;
 
   animation-trigger:
     --t1 play pause,
@@ -162,7 +162,7 @@ Given the following CSS:
 }
 ```
 
-With `animation-trigger: --t1 play pause, --t2 forwards backwards` set on the animated element, `--t1` triggers the `fade-in` and `shrink` animations while `--t2` triggers the `rotate` and `colorchange` animations.
+With `animation-trigger: --t1 play pause, --t2 forwards backwards` set on the animated element, `--t1` triggers the `fade-in` and `shrink` animations while `--t2` triggers the `rotate` and `color-change` animations.
 
 ## Formal definition
 

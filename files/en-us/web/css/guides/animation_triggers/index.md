@@ -39,8 +39,8 @@ This example demonstrates [scroll-triggered animations](/en-US/docs/Web/CSS/Guid
 #ball,
 #ball span {
   animation:
-    moveright 2s 1 ease-out both,
-    moveright 2s 1 ease-out forwards;
+    move-right 2s 1 ease-out both,
+    move-right 2s 1 ease-out forwards;
   animation-trigger:
     --t play-forwards play-backwards,
     --t2 play-forwards play-backwards;
@@ -100,12 +100,12 @@ html {
     aspect-ratio: 1/1;
   }
 
-  @keyframes moveright {
+  @keyframes move-right {
     from {
-      transform: translatex(0);
+      transform: translateX(0);
     }
     to {
-      transform: translatex(90vw);
+      transform: translateX(90vw);
     }
   }
 
@@ -121,7 +121,7 @@ html {
     72%,
     76%,
     to {
-      transform: translatey(0);
+      transform: translateY(0);
       animation-timing-function: ease-out;
     }
     from,
@@ -137,34 +137,34 @@ html {
       animation-timing-function: ease-in;
     }
     0% {
-      transform: translatey(-96vh);
+      transform: translateY(-96vh);
     }
     17% {
-      transform: translatey(-57.6vh);
+      transform: translateY(-57.6vh);
     }
     30% {
-      transform: translatey(-34.56vh);
+      transform: translateY(-34.56vh);
     }
     40% {
-      transform: translatey(-20.74vh);
+      transform: translateY(-20.74vh);
     }
     48% {
-      transform: translatey(-12.44vh);
+      transform: translateY(-12.44vh);
     }
     55% {
-      transform: translatey(-7.46vh);
+      transform: translateY(-7.46vh);
     }
     61% {
-      transform: translatey(-4.48vh);
+      transform: translateY(-4.48vh);
     }
     66% {
-      transform: translatey(-2.69vh);
+      transform: translateY(-2.69vh);
     }
     70% {
-      transform: translatey(-1.61vh);
+      transform: translateY(-1.61vh);
     }
     74% {
-      transform: translatey(-0.97vh);
+      transform: translateY(-0.97vh);
     }
   }
 }

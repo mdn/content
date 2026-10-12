@@ -79,7 +79,7 @@ The HTML features several paragraphs of content with a {{htmlelement("figure")}}
 </p>
 <p>
   Exploring the lush undergrowth, you may encounter unique wildlife such as
-  colourful birds, tree-dwelling mammals, and rare reptiles. The sounds of
+  colorful birds, tree-dwelling mammals, and rare reptiles. The sounds of
   chirping birds and rushing water add to the symphony of nature, providing an
   immersive experience in this captivating wilderness.
 </p>
@@ -335,7 +335,7 @@ Let's build on our previous examples to demonstrate the effect of the active ran
 </p>
 <p>
   Exploring the lush undergrowth, you may encounter unique wildlife such as
-  colourful birds, tree-dwelling mammals, and rare reptiles. The sounds of
+  colorful birds, tree-dwelling mammals, and rare reptiles. The sounds of
   chirping birds and rushing water add to the symphony of nature, providing an
   immersive experience in this captivating wilderness.
 </p>
@@ -591,7 +591,7 @@ The HTML is similar to previous examples except that we have included a {{htmlel
 </p>
 <p>
   Exploring the lush undergrowth, you may encounter unique wildlife such as
-  colourful birds, tree-dwelling mammals, and rare reptiles. The sounds of
+  colorful birds, tree-dwelling mammals, and rare reptiles. The sounds of
   chirping birds and rushing water add to the symphony of nature, providing an
   immersive experience in this captivating wilderness.
 </p>
@@ -661,7 +661,7 @@ The HTML is similar to previous examples except that we have included a {{htmlel
 <div id="three"></div>
 
 <p>
-  Walshs Pyramid is located within Wooroonooran National Park south of Cairns,
+  Walsh's Pyramid is located within Wooroonooran National Park south of Cairns,
   Queensland, Australia. An annual footrace to its summit is held on the third
   Saturday in August. For experienced hikers, the ascent and descent can take 4
   to 6 hours. The vegetation on the mountain is fairly dense with exposed rocks
