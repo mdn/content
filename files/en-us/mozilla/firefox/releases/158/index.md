@@ -68,6 +68,7 @@ Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-
 #### DOM
 
 - The {{domxref("SVGGraphicsElement.getBBox()")}} method now honors the `fill` and `stroke` properties of its [`options`](/en-US/docs/Web/API/SVGGraphicsElement/getBBox#options) argument when called on {{SVGElement("tspan")}} and {{SVGElement("textPath")}} elements. This allows you to get a bounding box that includes the stroke of a text span, as you already could for a whole {{SVGElement("text")}} element. ([Firefox bug 2072680](https://bugzil.la/2072680)).
+- The [`javascriptURLs`](/en-US/docs/Web/API/SanitizerConfig#javascripturls) option of the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) configuration and the {{domxref("Sanitizer.setJavascriptURLs()")}} method are now supported. They set whether a sanitizer removes attributes that contain [`javascript:` URLs](/en-US/docs/Web/URI/Reference/Schemes/javascript), such as `<a href="javascript:…">`, when it's used with an unsafe method like {{domxref("Element.setHTMLUnsafe()")}}. The safe methods, like {{domxref("Element.setHTML()")}}, still always remove them. As a result, the unsafe methods now remove `javascript:` URLs when used with the default sanitizer, or with a sanitizer after {{domxref("Sanitizer.removeUnsafe()")}} is called. ([Firefox bug 2068934](https://bugzil.la/2068934)).
 
 <!-- #### Media, WebRTC, and Web Audio -->
 
