@@ -77,13 +77,21 @@ Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### General -->
+#### General
 
-<!-- #### WebDriver BiDi -->
+- Added support for setting the `camera` and `microphone` permissions with the `permissions.setPermission` command in WebDriver BiDi and the `WebDriver:SetPermission` command in Marionette. This allows tests to grant or deny access to media devices without prompting the user. ([Firefox bug 2070577](https://bugzil.la/2070577)).
+- Changed the touch start and touch move tolerances to zero in automation, so that touch actions now scroll from exactly the position at which they are dispatched, without small initial movements being absorbed. ([Firefox bug 2055661](https://bugzil.la/2055661)).
 
-<!-- #### Marionette -->
+#### WebDriver BiDi
+
+- Added support for the `imageSize` argument to the `browsingContext.captureScreenshot` command, which allows clients to specify the maximum size of the resulting screenshot image. ([Firefox bug 2069002](https://bugzil.la/2069002)).
+- Added support for the `destinationFolder` argument to the `browsingContext.startScreencast` command, which allows clients to choose the folder where the recorded video file is saved. ([Firefox bug 2072616](https://bugzil.la/2072616)).
+
+#### Marionette
+
+- Fixed the `WebDriver:TakeScreenshot` command to return an `unable to capture screen` error when the width or height of the captured image is zero. ([Firefox bug 1492357](https://bugzil.la/1492357)).
 
 ### Other
 
@@ -109,6 +117,10 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   The {{cssxref("corner-shape")}} shorthand property and its constituent longhand properties are now supported in Nightly. These properties let you customize corner shapes using one of the {{cssxref("corner-shape-value")}} keyword values or the {{cssxref("superellipse")}} function.
   ([Firefox bug 2070927](https://bugzil.la/2070927)).
 
+- **Deferred module evaluation** (Nightly): `javascript.options.experimental.defer_import_eval`
+
+  The [`import defer`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer) declaration and the [`import.defer()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/defer) syntax are now available in Nightly behind a preference. They load a module and its dependencies up front, but run the module's code only when one of its exports is first accessed, so modules that aren't needed right away don't slow down startup. Modules that use top-level `await` still run right away. ([Firefox bug 1952263](https://bugzil.la/1952263)).
+
 - **On-device speech recognition**: `media.webspeech.recognition.enable`
 
   [On-device speech recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) is now supported in Nightly, on desktop only. This allows you to perform speech recognition via the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) directly in the browser, rather than relying on a cloud service.
@@ -118,3 +130,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   Enabled in Nightly only, you can now set a {{domxref("ReadableStream")}} as a request body (for example, via the {{domxref("Request.Request", "Request()")}} constructor or the {{domxref("Window.fetch()")}} method). This allows you to stream uploads incrementally rather than having to wait for the whole body to be available.
   ([Firefox bug 1594633](https://bugzil.la/1594633)).
+
+- **`CSSNumericValue.equals()`**: `layout.css.typed-om.enabled`
+
+  The {{domxref("CSSNumericValue.equals()")}} method of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) is now supported in Nightly. It returns `true` if every value passed to it is the same as the numeric value it's called on, and `false` otherwise. Values are compared as written, without converting units. For example, `1in` and `2.54cm` are different, as are `calc(1px + 2px)` and `calc(2px + 1px)`. ([Firefox bug 2074503](https://bugzil.la/2074503)).

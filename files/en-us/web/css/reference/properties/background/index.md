@@ -185,7 +185,6 @@ Browsers do not provide any special information on background images to assistiv
   Starry sky
 </p>
 <p class="warning">Here is a paragraph</p>
-<p></p>
 ```
 
 #### CSS

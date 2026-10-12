@@ -133,7 +133,7 @@ There are many different events that can be fired by a `<button>` element. Let's
 First, create a new HTML file on your local file system, and add the following code to it:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -419,7 +419,7 @@ form.addEventListener("submit", (e) => {
 
 Obviously, this is pretty weak form validation — it wouldn't stop the user from validating the form with spaces or numbers entered into the fields, for example — but it is OK for example purposes.
 
-You can see the full example [running live](https://mdn.github.io/learning-area/javascript/building-blocks/preventdefault/) — try it out there. See the [source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/preventdefault/) also.
+You can see the full example [running live](https://mdn.github.io/learning-area/javascript/building-blocks/preventdefault/) — try it out there. See the [source code](https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/preventdefault/) also.
 
 ## It's not just web pages
 
