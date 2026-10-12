@@ -24,7 +24,7 @@ This example defines a thin scrollbar with a teal thumb and lighter teal track. 
 ```css
 .poem {
   overflow: scroll;
-  scrollbar-color: #0B4F4A #5F9E98;
+  scrollbar-color: #0b4f4a #5f9e98;
   scrollbar-width: thin;
 }
 ```
