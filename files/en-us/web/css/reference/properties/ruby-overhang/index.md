@@ -64,9 +64,9 @@ This property is specified as one of the following keyword values:
 
 - `auto`
   - : The default value. When a ruby annotation container is longer than its corresponding base container, the annotation may partially overlap adjacent text.
-    Whether, and how much to overhang are determined by the user agent.
+    The browser determines whether to overhang, and by how much.
 - `spaces`
-  - : The ruby annotation text doesn't extend past adjacent base containers.
+  - : The ruby annotation text doesn't extend past any part of adjacent base containers, except for adjacent spaces.
 - `none`
   - : Behaves as `spaces`; a legacy alias kept for backwards compatibility.
 
@@ -74,9 +74,9 @@ This property is specified as one of the following keyword values:
 
 The `ruby-overhang` property controls whether ruby annotation text boxes ({{htmlelement("rt")}}) may overlap adjacent text outside their {{htmlelement("ruby")}} container boxes.
 
-When ruby annotation text is not allowed to overhang — due to a set `ruby-overhang` value of `spaces` or `none` — the `<ruby>` element behaves like an inline box, as if its {{cssxref("display")}} property were set to `inline` with only its own contents rendered within its boundaries and adjacent elements not crossing the boundary box.
+When ruby annotation text is not allowed to overhang — due to a set `ruby-overhang` value of `spaces` or `none` — the `<ruby>` element behaves like an inline box, as if its {{cssxref("display")}} property were set to `inline` with only its own contents rendered within its boundaries and adjacent container content not crossing the boundary box. The only exception is [space characters](https://drafts.csswg.org/css-ruby-1/#ruby-overhang:~:text=For%20this%20purpose%2C%20spaces%20are%20any%20of%20the%20following) at the edges of adjacent containers — the ruby text will still overlap those.
 
-When the default `auto` value is set, the content of `<rt>` elements is allowed to overhang, so they may overlap the `<ruby>` container box, partially rendering over or under surrounding inline-level content. Content will not overhang if doing so would overlap adjacent `<rt>` elements or elements with a `display` value resolving to `ruby-base` or `ruby-text`.
+When the default `auto` value is set, `<rt>` element content can overhang, so it may overlap the `<ruby>` container box, partially rendering over or under surrounding inline-level content. Content will not overhang if doing so would overlap adjacent `<rt>` elements or elements with a `display` value resolving to `ruby-base` or `ruby-text`.
 
 ## Formal definition
 
@@ -94,7 +94,7 @@ This example demonstrates the effect of the `ruby-overhang` value `spaces`.
 
 #### HTML
 
-We include two paragraphs with identical `<ruby>` content and structures, other than their class names.
+We include two paragraphs with identical `<ruby>` content and structures, but different class names.
 
 ```html
 <h2><code>ruby-overhang: auto</code></h2>
@@ -154,7 +154,7 @@ rt {
 
 {{EmbedLiveSample("ruby_overhanging_base_text", "100%", "350")}}
 
-In the second paragraph, where `ruby-overhang` is set to `spaces`, the annotation text is not allowed to overlap the adjacent boxes of base ruby text. If you look closely, you will notice that there is no overlap between ruby content and non-associated ruby text.
+In the second paragraph, where `ruby-overhang` is set to `spaces`, the annotation text does not overlap boxes adjacent to the base ruby text.
 
 By contrast, in the first paragraph, where `ruby-overhang` is set to the default `auto` value, the red box encasing the ruby text slightly overlaps parts of the non-`<ruby>` content.
 
