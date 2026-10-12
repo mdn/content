@@ -1111,7 +1111,6 @@
         "MediaStream",
         "MediaStreamTrack",
         "MediaStreamTrackEvent",
-        "MediaTrackConstraints",
         "OverconstrainedError"
       ],
       "methods": [
@@ -1521,13 +1520,10 @@
       "methods": [
         "MediaDevices.getDisplayMedia()",
         "MediaDevices.getSupportedConstraints()",
+        "MediaStreamTrack.getConstraints()",
         "MediaStreamTrack.getSettings()"
       ],
-      "properties": [
-        "MediaTrackConstraints.displaySurface",
-        "MediaTrackConstraints.logicalSurface",
-        "MediaTrackConstraints.suppressLocalAudioPlayback"
-      ],
+      "properties": [],
       "events": []
     },
     "Screen Orientation API": {

@@ -87,9 +87,9 @@ A user agent might allow the capture of the entire content of an obscured window
 
 The options object passed into {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is used to set options for the resulting stream.
 
-The `video` and `audio` objects passed into the options object can also hold additional constraints particular to those media tracks. See [Properties of shared screen tracks](/en-US/docs/Web/API/MediaTrackConstraints#instance_properties_of_shared_screen_tracks) for details about additional constraints for configuring a screen-capture stream that are added to {{domxref("MediaTrackConstraints")}}, supported constraints returned by {{domxref("MediaDevices.getSupportedConstraints()")}}, and current settings returned by {{domxref("MediaStreamTrack.getSettings()")}}.
+The `video` and `audio` objects passed into the options object can also hold additional constraints particular to those media tracks. See [Properties of shared screen tracks](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#instance_properties_of_shared_screen_tracks) for details about additional constraints for configuring a screen-capture stream returned by {{domxref("MediaStreamTrack.getConstraints()")}}, supported constraints returned by {{domxref("MediaDevices.getSupportedConstraints()")}}, and current settings returned by {{domxref("MediaStreamTrack.getSettings()")}}.
 
-None of the constraints are applied in any way until after the content to capture has been selected. The constraints alter what you see in the resulting stream. For example, if you specify a {{domxref("MediaTrackConstraints.width", "width")}} constraint for the video, it's applied by scaling the video after the user selects the area to share. It doesn't establish a restriction on the size of the source itself.
+None of the constraints are applied in any way until after the content to capture has been selected. The constraints alter what you see in the resulting stream. For example, if you specify a [`width`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#width) constraint for the video, it's applied by scaling the video after the user selects the area to share. It doesn't establish a restriction on the size of the source itself.
 
 > [!NOTE]
 > Constraints _never_ cause changes to the list of sources available for capture by the Screen Sharing API. This ensures that web applications can't force the user to share specific content by restricting the source list until only one item is left.
@@ -173,7 +173,7 @@ There isn't all that much code needed in order to make this work, and if you're 
 
 First, some constants are set up to reference the elements on the page to which we'll need access: the {{HTMLElement("video")}} into which the captured screen contents will be streamed, a box into which logged output will be drawn, and the start and stop buttons that will turn on and off capture of screen imagery.
 
-The object `displayMediaOptions` contains the options to pass into `getDisplayMedia()`; here, the {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} property is set to `window`, indicating that the whole window should be captured.
+The object `displayMediaOptions` contains the options to pass into `getDisplayMedia()`; here, the [`displaySurface`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#displaysurface) property is set to `window`, indicating that the whole window should be captured.
 
 Finally, event listeners are established to detect user clicks on the start and stop buttons.
 

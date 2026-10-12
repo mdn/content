@@ -9,8 +9,7 @@ browser-compat: api.MediaStreamTrack.getConstraints
 {{APIRef("Media Capture and Streams")}}
 
 The **`getConstraints()`** method of
-the {{domxref("MediaStreamTrack")}} interface returns a
-{{domxref('MediaTrackConstraints')}} object containing the set of constraints most
+the {{domxref("MediaStreamTrack")}} interface returns an object containing the set of constraints most
 recently established for the track using a prior call to
 {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}. These
 constraints indicate values and ranges of values that the website or application has
@@ -33,7 +32,7 @@ None.
 
 ### Return value
 
-A {{domxref('MediaTrackConstraints')}} object which indicates the constrainable
+An object which indicates the constrainable
 properties the website or app most recently set using
 {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}. The properties
 in the returned object are listed in the same order as when they were set, and only
@@ -48,8 +47,7 @@ properties specifically set by the site or app are included.
 
 ## Examples
 
-This example obtains the current constraints for a track, sets the
-{{domxref("MediaTrackConstraints.facingMode", "facingMode")}}, and applies the updated
+This example obtains the current constraints for a track, sets the `facingMode`, and applies the updated
 constraints.
 
 ```js
