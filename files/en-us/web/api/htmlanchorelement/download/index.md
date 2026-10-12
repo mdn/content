@@ -10,7 +10,7 @@ browser-compat: api.HTMLAnchorElement.download
 
 The **`download`** property of the {{domxref("HTMLAnchorElement")}} interface is a string indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value, if any, represents the proposed name of the file. It reflects the [`download`](/en-US/docs/Web/HTML/Reference/Elements/a#download) attribute of the {{HTMLElement("a")}} element.
 
-See HTML [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a#download) element reference for details about the attribute.
+See the HTML [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a#download) element reference for details about the attribute.
 
 ## Value
 

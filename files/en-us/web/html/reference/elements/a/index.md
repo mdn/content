@@ -61,11 +61,11 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
       - The final segment in the URL [path](/en-US/docs/Web/API/URL/pathname)
       - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/URI/Reference/Schemes/data), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/URI/Reference/Schemes/blob))
 
-    - `filename`: defining a value suggests it as the filename. `/` and `\` characters are converted to underscores (`_`). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary. This adjustment happens when download is triggered and is not observable via the {{domxref("HTMLAnchorElement.download")}} property.
+    - `filename`: defining a value suggests it as the filename. `/` and `\` characters are converted to underscores (`_`). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary. This adjustment happens when the download is triggered and is not observable via the {{domxref("HTMLAnchorElement.download")}} property.
 
     > [!NOTE]
     >
-    > - `download` only works for [same-origin HTTP(S) URLs](/en-US/docs/Web/Security/Defenses/Same-origin_policy), same origin [`blob:`](/en-US/docs/Web/URI/Reference/Schemes/blob), and [`data:`](/en-US/docs/Web/URI/Reference/Schemes/data) schemes. For other URLs, the `download` attribute is ignored and a normal navigation happens, although the target page may still use `Content-Disposition` to instruct a download.
+    > - `download` only works for [same-origin URLs](/en-US/docs/Web/Security/Defenses/Same-origin_policy), same-origin [`blob:`](/en-US/docs/Web/URI/Reference/Schemes/blob), and [`data:`](/en-US/docs/Web/URI/Reference/Schemes/data) schemes. For other URLs, the `download` attribute is ignored and a normal navigation happens, although the target page may still use `Content-Disposition` to instruct a download.
     > - How browsers treat downloads varies by browser, user settings, and other factors. The user may be prompted before a download starts, or the file may be saved automatically, or it may open automatically, either in an external application or in the browser itself.
     > - The `download` attribute, when honored, overrides the `Content-Disposition: inline` behavior, but the `filename` parameter of `Content-Disposition` overrides the name in the `download` attribute.
 
