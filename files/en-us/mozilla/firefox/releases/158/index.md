@@ -69,7 +69,9 @@ Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The {{domxref("SVGGraphicsElement.getBBox()")}} method now honors the `fill` and `stroke` properties of its [`options`](/en-US/docs/Web/API/SVGGraphicsElement/getBBox#options) argument when called on {{SVGElement("tspan")}} and {{SVGElement("textPath")}} elements. This allows you to get a bounding box that includes the stroke of a text span, as you already could for a whole {{SVGElement("text")}} element. ([Firefox bug 2072680](https://bugzil.la/2072680)).
 
-<!-- #### Media, WebRTC, and Web Audio -->
+#### Media, WebRTC, and Web Audio
+
+- When sending H.264 or AV1 video with [WebRTC](/en-US/docs/Web/API/WebRTC_API), Firefox now lowers the resolution and frame rate as needed to stay within the codec level negotiated with the remote peer, set by the `profile-level-id` parameter for [H.264](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs#avc_h.264) and `level-idx` for [AV1](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs#av1). As a result, {{domxref("MediaCapabilities.encodingInfo()")}} now reports a `webrtc` configuration as supported even if its resolution and frame rate exceed the level in its `contentType`. ([Firefox bug 2013936](https://bugzil.la/2013936)).
 
 <!-- #### Removals -->
 
