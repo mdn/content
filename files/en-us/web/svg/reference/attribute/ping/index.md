@@ -2,9 +2,13 @@
 title: ping
 slug: Web/SVG/Reference/Attribute/ping
 page-type: svg-attribute
+status:
+  - experimental
 browser-compat: svg.elements.a.ping
 sidebar: svgref
 ---
+
+{{SeeCompatTable}}
 
 The **`ping`** attribute specifies a space-separated list of URLs to which `POST` requests with the body `PING` will be sent by the browser when the link is followed. You can use this attribute with the following SVG elements:
 

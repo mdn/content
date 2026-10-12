@@ -236,7 +236,7 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
 
 1. First of all, create a new HTML file on your local file system and add the following content to it:
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />

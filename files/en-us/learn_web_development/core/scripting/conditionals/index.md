@@ -128,14 +128,14 @@ checkBox.addEventListener("change", () => {
 });
 
 function updateAllowance() {
-  let childsAllowance;
+  let childAllowance;
   if (shoppingDone === true) {
-    childsAllowance = 10;
+    childAllowance = 10;
   } else {
-    childsAllowance = 5;
+    childAllowance = 5;
   }
 
-  para.textContent = `Child has earned \$${childsAllowance} this week.`;
+  para.textContent = `Child has earned $${childAllowance} this week.`;
 }
 
 updateAllowance();

@@ -16,6 +16,11 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
 - {{domxref("WebTransport.WebTransport", "WebTransport()")}}
   - : Creates a new `WebTransport` object instance.
 
+## Static properties
+
+- {{domxref("WebTransport.supportsReliableOnly_static", "supportsReliableOnly")}} {{ReadOnlyInline}}
+  - : Returns a boolean value that indicates whether the browser supports WebTransport sessions over exclusively reliable transports.
+
 ## Instance properties
 
 - {{domxref("WebTransport.closed", "closed")}} {{ReadOnlyInline}}
