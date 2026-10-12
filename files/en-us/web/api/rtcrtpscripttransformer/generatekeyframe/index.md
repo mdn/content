@@ -37,7 +37,7 @@ A {{jsxref("Promise")}} that fulfills with the timestamp of the frame, or reject
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : The encoder is not processing video frames, or is `undefined`.
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : The provided `rid` but does not conform to the grammar requirements.
 - `NotFoundError` {{domxref("DOMException")}}
   - : There are no video encoders. This might be raised if the corresponding `RTCRtpSender` is not active or its track is ended.
