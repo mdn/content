@@ -118,7 +118,7 @@ In the left-to-right list items — those with `dir="ltr"` set on the element it
 
 ```css
 .box:hover {
-  cursor: image("sprite.png#xywh=32,64,16,16");
+  cursor: image("sprite.png#xywh=32,64,16,16"), auto;
 }
 ```
 
@@ -150,7 +150,7 @@ When the user hovers over the box, the cursor will change to display the 16x16 p
 </div>
 ```
 
-The above will put a semi-transparent black mask over the Firefox logo background image. Had we used the {{cssxref("background-color")}} property instead, the color would have appeared behind the logo image instead of on top of it. Additionally, the entire container would have had the same background color. Because we used `image()` along with the {{CSSxRef("background-size")}} property (and prevented the image from repeating with the {{CSSxRef("background-repeat")}} property, the color swatch will only cover a quarter of the container.
+The above will put a semi-transparent black mask over the Firefox logo background image. Had we used the {{cssxref("background-color")}} property instead, the color would have appeared behind the logo image instead of on top of it. Additionally, the entire container would have had the same background color. Because we used `image()` along with the {{CSSxRef("background-size")}} property (and prevented the image from repeating with the {{CSSxRef("background-repeat")}} property), the color swatch will only cover a quarter of the container.
 
 {{EmbedLiveSample("Putting_color_on_top_of_a_background_image", "100%", 220)}}
 

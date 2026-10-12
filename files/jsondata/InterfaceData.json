@@ -2080,6 +2080,18 @@
       "inh": "",
       "impl": []
     },
+    "LanguageModelToolCall": {
+      "inh": "",
+      "impl": []
+    },
+    "LanguageModelToolError": {
+      "inh": "",
+      "impl": []
+    },
+    "LanguageModelToolSuccess": {
+      "inh": "",
+      "impl": []
+    },
     "LargestContentfulPaint": {
       "inh": "PerformanceEntry",
       "impl": []
@@ -3813,6 +3825,14 @@
       "impl": []
     },
     "ToggleEvent": {
+      "inh": "Event",
+      "impl": []
+    },
+    "ToolActivatedEvent": {
+      "inh": "Event",
+      "impl": []
+    },
+    "ToolCancelEvent": {
       "inh": "Event",
       "impl": []
     },

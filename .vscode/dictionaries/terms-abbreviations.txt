@@ -297,6 +297,7 @@ HILN
 hindwings
 hissy
 hitbox
+hitboxes
 hitmap
 HOBA
 holodeck
@@ -524,6 +525,7 @@ platformer
 platformers
 playhead
 playout
+playthrough
 PLTE
 plumeria
 polyfilling
@@ -581,6 +583,7 @@ quickmenu
 qvalues
 QWERTZ
 RAII
+rainforests
 rari
 rasterizes
 raycaster

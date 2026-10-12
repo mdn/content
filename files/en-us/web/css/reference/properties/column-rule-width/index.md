@@ -312,7 +312,7 @@ ul {
 @layer no-support {
   @supports not (column-rule-width: thin, thick) {
     body::before {
-      content: "Your browser doesn't support the column-rule-width property";
+      content: "Your browser doesn't support multiple values for the column-rule-width property";
       background-color: wheat;
       display: block;
       text-align: center;
@@ -338,4 +338,5 @@ ul {
 - {{cssxref("row-rule-width")}}
 - {{cssxref("rule-width")}} shorthand
 - {{cssxref("rule")}} shorthand
+- [Defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module

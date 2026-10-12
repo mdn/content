@@ -47,13 +47,6 @@ input {
 }
 ```
 
-They are called radio buttons because they look and operate in a similar manner to the push buttons on old-fashioned radios, such as the one shown below.
-
-![Shows what radio buttons looked like in the olden days.](old-radio.jpg)
-
-> [!NOTE]
-> [Checkboxes](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) are similar to radio buttons, but with an important distinction: radio buttons are designed for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
-
 ## Value
 
 The `value` attribute is a string containing the radio button's value. The value is never shown to the user by their {{Glossary("user agent")}}. Instead, it's used to identify which radio button in a group is selected.
@@ -165,6 +158,12 @@ In addition to the common attributes shared by all {{HTMLElement("input")}} elem
   - : The `required` attribute is one which most {{HTMLElement("input")}}s share. If any radio button in a same-named group of radio buttons has the `required` attribute, a radio button in that group must be checked, although it doesn't have to be the one with the attribute applied.
 
 ## Using radio inputs
+
+Radio buttons look and operate in a similar manner to the push buttons on old-fashioned radios, such as the one shown below.
+
+![Shows what radio buttons looked like in the olden days.](old-radio.jpg)
+
+Radio buttons are similar to [checkboxes](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox), but with an important distinction: radio buttons are designed for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
 
 We already covered the fundamentals of radio buttons above. Let's now look at the other common radio-button-related features and techniques you may need to know about.
 

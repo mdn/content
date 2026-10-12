@@ -326,7 +326,7 @@ In addition to providing audio for specific speakers in a sound system, some cod
 
 The **audio frequency bandwidth** of a codec indicates the range of audio frequencies that can be represented using the codec. Some codecs operate specifically by eliminating audio that falls outside a given frequency range. There is a correlation between the sample rate and the maximum sound frequency that can be represented by a waveform represented by a codec. At a theoretical level, the maximum frequency a codec can represent is the sample rate divided by two; this frequency is called the [Nyquist frequency](https://en.wikipedia.org/wiki/Nyquist_frequency). In reality, the maximum is slightly lower, but it's close.
 
-The audio frequency bandwidth comes into play especially vividly when a codec is designed or configured to represent human speech rather than a broad range of sounds. Human speech generally resides within the audio frequency range of 300 Hz to 18 kHz. However, the vast majority of human vocalizations exist in the range 300 Hz to 8 kHz, and you can capture enough of human vocalizations in the frequency range 500 Hz to 3 kHz to still be understandable.
+The audio frequency bandwidth comes into play especially vividly when a codec is designed or configured to represent human speech rather than a broad range of sounds. Human speech generally resides within the audio frequency range of 90 Hz to 18 kHz. However, the vast majority of human vocalizations exist in the range 90 Hz to 8 kHz, and you can capture enough of human vocalizations in the frequency range 300 Hz to 3.4 kHz and the brain will still put things together.
 
 For that reason, speech-specific codecs often begin by dropping sound that falls outside a set range. That range is the audio frequency bandwidth. G.722, for example, strips away sounds outside the audio frequency bandwidth of 50 Hz to 7 kHz. This reduces the amount of data that needs to be encoded from the outset.
 
@@ -1378,7 +1378,7 @@ Generally, of course, MP3 is the most common format used for music; choose a bit
 
 ### Example: Voice recording and playback
 
-The specific characteristics of human speech allow speech-specific codecs to compress the audio far more than most general-purpose codecs can. That's because although humans hear frequencies ranging from around 20 Hz to 20,000 Hz, and human speech sounds range from about 300 Hz to 18,000 Hz, the majority of the speech sounds that we need in order to understand what's being said lie in the frequency range of 500 Hz to 3,000 Hz or so. That means voice-only codecs can throw away everything else.
+The specific characteristics of human speech allow speech-specific codecs to compress the audio far more than most general-purpose codecs can. That's because although humans hear frequencies ranging from around 20 Hz to 20,000 Hz, and human speech sounds range from about 90 Hz to 18,000 Hz, the majority of the speech sounds that we need in order to understand what's being said lie in the frequency range of 300 Hz to 3,400 Hz or so. That means voice-only codecs can throw away everything else.
 
 The voice-specific codecs are all inherently very lossy, however, and any sound with significant information in the frequency bands outside the vocal range captured will be entirely lost. This makes these codecs completely unsuitable for anything but spoken words. Even audio that contains only voices, but singing rather than speaking, will likely not be of acceptable quality in one of these formats.
 

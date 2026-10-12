@@ -9,7 +9,7 @@ browser-compat: api.MediaStreamTrack.applyConstraints.aspectRatio_constraint
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's **`aspectRatio`** property is a [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble) describing the requested or mandatory constraints placed upon the value of the
-{{domxref("MediaTrackSettings.aspectRatio", "aspectRatio")}} constrainable property.
+[`aspectRatio`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#aspectratio) constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
 the value of [`aspectRatio`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#aspectratio) as returned by a

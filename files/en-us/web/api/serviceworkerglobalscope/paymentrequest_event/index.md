@@ -34,7 +34,7 @@ When the {{domxref("PaymentRequest.show()")}} method is invoked, a `paymentreque
 
 ```js
 let paymentRequestEvent;
-let resolver;
+const resolver = Promise.withResolvers();
 let client;
 
 // `self` is the global object in service worker
