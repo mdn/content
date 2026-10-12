@@ -129,7 +129,7 @@ The HTML features several paragraphs of content with a {{htmlelement("figure")}}
   panoramic vistas of the surrounding rainforest-clad mountains and valleys.
   Further west, the towering peaks of the Great Dividing Range present
   opportunities for adventurous hiking and exploring scenic vistas, including
-  the iconic Walsh's Pyramid near Gordonvale.
+  the iconic Walshs Pyramid near Gordonvale.
 </p>
 ```
 
@@ -398,7 +398,7 @@ Let's build on our previous examples to demonstrate the effect of the active ran
   panoramic vistas of the surrounding rainforest-clad mountains and valleys.
   Further west, the towering peaks of the Great Dividing Range present
   opportunities for adventurous hiking and exploring scenic vistas, including
-  the iconic Walsh's Pyramid near Gordonvale.
+  the iconic Walshs Pyramid near Gordonvale.
 </p>
 ```
 
@@ -641,7 +641,7 @@ The HTML is similar to previous examples except that we have included a {{htmlel
   panoramic vistas of the surrounding rainforest-clad mountains and valleys.
   Further west, the towering peaks of the Great Dividing Range present
   opportunities for adventurous hiking and exploring scenic vistas, including
-  the iconic Walsh's Pyramid near Gordonvale.
+  the iconic Walshs Pyramid near Gordonvale.
 </p>
 
 <p>
@@ -655,13 +655,13 @@ The HTML is similar to previous examples except that we have included a {{htmlel
   panoramic vistas of the surrounding rainforest-clad mountains and valleys.
   Further west, the towering peaks of the Great Dividing Range present
   opportunities for adventurous hiking and exploring scenic vistas, including
-  the iconic Walsh's Pyramid near Gordonvale.
+  the iconic Walshs Pyramid near Gordonvale.
 </p>
 
 <div id="three"></div>
 
 <p>
-  Walsh's Pyramid is located within Wooroonooran National Park south of Cairns,
+  Walshs Pyramid is located within Wooroonooran National Park south of Cairns,
   Queensland, Australia. An annual footrace to its summit is held on the third
   Saturday in August. For experienced hikers, the ascent and descent can take 4
   to 6 hours. The vegetation on the mountain is fairly dense with exposed rocks
