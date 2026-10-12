@@ -69,13 +69,15 @@ See [Using the Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_
 
 The Screen Capture API adds properties to the following dictionaries defined by other specifications.
 
-### MediaTrackConstraints
+### MediaStreamTrack.getConstraints()
 
-- {{domxref("MediaTrackConstraints.displaySurface")}}
-  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) indicating what type of display surface is to be captured. The value is one of `browser`, `monitor`, or `window`.
-- {{domxref("MediaTrackConstraints.logicalSurface")}}
+This is added to the `MediaTrackConstraints` dictionary, so it also affects other methods that take such dictionaries, such as {{domxref("MediaStreamTrack.applyConstraints()")}}.
+
+- [`displaySurface`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#displaysurface)
+  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#constraindomstring) indicating what type of display surface is to be captured. The value is one of `browser`, `monitor`, or `window`.
+- [`logicalSurface`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#logicalsurface)
   - : Indicates whether or not the video in the stream represents a logical display surface (that is, one which may not be entirely visible onscreen, or may be completely offscreen). A value of `true` indicates a logical display surface is to be captured.
-- {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback")}}
+- [`suppressLocalAudioPlayback`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#suppresslocalaudioplayback)
   - : Controls whether the audio playing in a tab will continue to be played out of a user's local speakers when the tab is captured, or whether it will be suppressed. A value of `true` indicates that it will be suppressed.
 
 ### MediaStreamTrack.getSettings()
@@ -98,11 +100,11 @@ There are additional properties in the object returned by {{domxref("MediaStream
 There are three additional properties in the object returned by {{domxref("MediaDevices.getSupportedConstraints()")}}.
 
 - `displaySurface`
-  - : A boolean, which is `true` if the current environment supports the {{domxref("MediaTrackConstraints.displaySurface")}} constraint.
+  - : A boolean, which is `true` if the current environment supports the [`displaySurface`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#displaysurface) constraint.
 - `logicalSurface`
-  - : A boolean, which is `true` if the current environment supports the constraint {{domxref("MediaTrackConstraints.logicalSurface")}}.
+  - : A boolean, which is `true` if the current environment supports the [`logicalSurface`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#logicalsurface) constraint.
 - `suppressLocalAudioPlayback`
-  - : A boolean, which is `true` if the current environment supports the constraint {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback")}}.
+  - : A boolean, which is `true` if the current environment supports the [`suppressLocalAudioPlayback`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#suppresslocalaudioplayback) constraint.
 
 ## Security considerations
 

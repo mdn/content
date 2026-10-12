@@ -61,7 +61,7 @@ For video tracks only:
 - `aspectRatio`
   - : A range object, containing a `min` and a `max` property (both containing a number), describing the supported video aspect ratio range (width divided by height).
 - `facingMode`
-  - : An array of strings indicating the camera orientation. See {{domxref("MediaTrackConstraints.facingMode")}} for supported values. On some devices, more than one facing mode may be reported; for example, in a high-end telepresence solution with several cameras facing the user, a camera to the left of the user can report both `"left"` and `"user"`.
+  - : An array of strings indicating the camera orientation. See [`MediaStreamTrack.getConstraints()`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#facingmode) for supported values. On some devices, more than one facing mode may be reported; for example, in a high-end telepresence solution with several cameras facing the user, a camera to the left of the user can report both `"left"` and `"user"`.
 - `frameRate`
   - : A range object, containing a `min` and a `max` property (both containing a number), describing the supported frames per second range.
 - `height`
@@ -69,9 +69,9 @@ For video tracks only:
 - `width`
   - : A range object, containing a `min` and a `max` property (both containing a non-negative integer), describing the supported width range in pixels.
 - `resizeMode`
-  - : An array of strings that indicates how the user agent may derive the desired resolution from the camera resolution. See {{domxref("MediaTrackConstraints.resizeMode")}} for supported values. The value `"none"` is always included.
+  - : An array of strings that indicates how the user agent may derive the desired resolution from the camera resolution. See [`MediaStreamTrack.getConstraints()`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#resizemode) for supported values. The value `"none"` is always included.
 
-For more information about what each property means, see {{domxref("MediaTrackConstraints")}}.
+For more information about what each property means, see [`MediaStreamTrack.getConstraints()`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#return_value).
 
 ## Examples
 
