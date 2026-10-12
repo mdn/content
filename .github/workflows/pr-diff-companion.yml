@@ -1,0 +1,92 @@
+name: PR Diff Companion
+
+on:
+  workflow_run:
+    workflows: ["Build Content and Diff"]
+    types: [completed]
+
+permissions: {}
+
+jobs:
+  identify-pr:
+    if: |
+      github.repository_owner == 'mdn' &&
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+    outputs:
+      number: ${{ steps.identify-pr.outputs.number }}
+    steps:
+      - name: Identify PR
+        id: identify-pr
+        env:
+          BASE_REPO: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ github.token }}
+          HEAD_REPO: ${{ github.event.workflow_run.head_repository.full_name }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          # Fork PRs control the artifact, so trust only the event payload and the API.
+          # Query the head repo: for fork PRs, the base repo returns no PRs for the commit.
+          # Filter on head.sha: the endpoint also lists PRs that merely contain the commit.
+          PR_NUMBER=$(gh api "repos/$HEAD_REPO/commits/$HEAD_SHA/pulls" \
+            --jq 'first(.[] | select(.base.repo.full_name == env.BASE_REPO and .head.sha == env.HEAD_SHA and .state == "open") | .number)')
+          if [[ -z "$PR_NUMBER" ]]; then
+            echo "::notice::No open PR with head $HEAD_SHA; nothing to do."
+          fi
+          echo "number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+
+  status:
+    needs: identify-pr
+    if: needs.identify-pr.outputs.number != ''
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      pull-requests: read
+      statuses: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ needs.identify-pr.outputs.number }}
+      cancel-in-progress: false
+    steps:
+      - name: Download diff stats
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: build-diff-stats
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+
+      - name: Report flaw count difference
+        env:
+          PR: ${{ needs.identify-pr.outputs.number }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          GH_REPO: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          [[ "$PR" =~ ^[0-9]+$ ]] || { echo "::error::Invalid PR number: $PR"; exit 1; }
+
+          read -r CHANGED TOTAL BASE_FLAWS PR_FLAWS <<<"$(jq -r '
+            [.changed_files, .total_files, .base_flaws, .pr_flaws]
+            | map(numbers | floor) | select(length == 4) | @tsv' diff-stats.json)"
+          [[ "$CHANGED" =~ ^[0-9]{1,9}$ && "$TOTAL" =~ ^[0-9]{1,9}$ && "$BASE_FLAWS" =~ ^[0-9]{1,9}$ && "$PR_FLAWS" =~ ^[0-9]{1,9}$ ]] || { echo "::error::Invalid diff-stats.json"; exit 1; }
+
+          CURRENT_HEAD=$(gh api "/repos/$GH_REPO/pulls/$PR" \
+            --jq 'select(.state == "open") | .head.sha')
+          if [[ "$CURRENT_HEAD" != "$HEAD_SHA" ]]; then
+            echo "::notice::PR #$PR is closed or has a newer head; nothing to do."
+            exit 0
+          fi
+
+          FLAW_DELTA=$((PR_FLAWS - BASE_FLAWS))
+          FLAW_CHANGE=$(printf '%+d' "$FLAW_DELTA")
+          gh api "/repos/$GH_REPO/statuses/$HEAD_SHA" \
+            -f state=success \
+            -f context=content-build-diff \
+            -f description="Pages changed: $CHANGED/$TOTAL" \
+            -f target_url="https://github.com/$GH_REPO/actions/runs/$RUN_ID" > /dev/null
+          gh api "/repos/$GH_REPO/statuses/$HEAD_SHA" \
+            -f state=success \
+            -f context=content-build-flaws \
+            -f description="Flaws: $PR_FLAWS ($FLAW_CHANGE)" \
+            -f target_url="https://github.com/$GH_REPO/actions/runs/$RUN_ID" > /dev/null
