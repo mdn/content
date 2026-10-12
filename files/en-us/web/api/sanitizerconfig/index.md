@@ -86,6 +86,10 @@ Note that normally {{domxref("Sanitizer")}} instances are used instead of `Sanit
 - `dataAttributes`
   - : `true` if all `data-*` attributes will be allowed (in which case `data-*` attributes must not be listed in the `attributes` array).
     If `false`, any `data-*` attributes to be allowed must be listed in the `attributes` array.
+- `javascriptURLs` {{experimental_inline}}
+  - : `true` if attributes that contain [`javascript:` URLs](/en-US/docs/Web/URI/Reference/Schemes/javascript), such as `<a href="javascript:…">`, are allowed, and `false` if they are to be removed. See {{domxref("Sanitizer.setJavascriptURLs()")}} for the attributes this covers.
+
+    If omitted, it defaults to `true` when the configuration is passed to the {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} constructor or to an unsafe method, and `false` when it's passed to a safe method. The safe methods always remove `javascript:` URLs, whatever the value.
 
 ## Description
 
