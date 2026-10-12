@@ -8,7 +8,7 @@ browser-compat: api.WebTransport.supportsReliableOnly_static
 
 {{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-The **`supportsReliableOnly`** static read-only property of the {{domxref("WebTransport")}} interface returns a boolean value that indicates whether the browser supports {{domxref("WebTransport")}} sessions over exclusively reliable transports, such as HTTP/2, or whether it also supports unreliable connections (e.g., HTTP/3 over QUIC (UDP)).
+The **`supportsReliableOnly`** static read-only property of the {{domxref("WebTransport")}} interface returns a boolean value that indicates whether the browser supports {{domxref("WebTransport")}} sessions over exclusively reliable transports, such as HTTP/2. Such sessions can't send unreliable datagrams, which need HTTP/3 over QUIC.
 
 ## Value
 
