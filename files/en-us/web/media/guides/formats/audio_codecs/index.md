@@ -372,7 +372,7 @@ As a patent-encumbered format, AAC support is somewhat less predictable. For exa
     </tr>
     <tr>
       <th scope="row">Maximum audio channels</th>
-      <td>48 (plus 16 Low Frequency Enhancement channels)</td>
+      <td>48 (plus 16 Low Frequency Effects channels)</td>
     </tr>
     <tr>
       <th scope="row">Audio frequency bandwidth</th>
