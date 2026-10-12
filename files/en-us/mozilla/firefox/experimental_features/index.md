@@ -93,7 +93,7 @@ The [`headingoffset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingof
 
 ### `<script type="speculationrules">`
 
-[Speculation rules](/en-US/docs/Web/API/Speculation_Rules_API#browser_compatibility) provides a mechanism to improve performance for future navigations by specifying which resources should be prefetched or prerendered based on factors such as user behavior towards links.
+The [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) provides a mechanism to improve performance for future navigations by specifying which resources should be prefetched or prerendered based on factors such as user behavior towards links.
 
 Initial support included [`prefetch`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#prefetch) only, with resources identified by a [`urls`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#urls) list and [`immediate`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#immediate) eagerness. This also includes support for the {{domxref("PerformanceResourceTiming.deliveryType")}} property's `navigational-prefetch` value. ([Firefox bug 2041381](https://bugzil.la/2041381)).
 
