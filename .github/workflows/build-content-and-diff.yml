@@ -113,9 +113,9 @@ jobs:
           BASE_BUILD: build-base
           PR_BUILD: build-pr
         run: |
-          node <<'NODE'
-          const fs = require("node:fs/promises");
-          const path = require("node:path");
+          node --input-type=module <<'NODE'
+          import fs from "node:fs/promises";
+          import path from "node:path";
 
           async function getPages(root) {
             const pages = new Map();
