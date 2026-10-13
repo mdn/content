@@ -85,7 +85,7 @@ This is part of a series of APIs to set HTML:
 
 Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allows scripts to be run using the `runScripts` options.
 
-Similar elements, and more, exist on Element (for example {{domxref("Element.afterHTML")}})
+Similar methods, and more, exist on `Element` (for example {{domxref("Element.afterHTML")}}).
 
 ## Examples
 

@@ -15,8 +15,6 @@ The **`prependHTML()`** method of the {{domxref("Element")}} interface provides 
 The method removes any elements and attributes that are considered XSS-unsafe, even if allowed by a passed sanitizer.
 Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{SVGElement("use")}}, and event handler attributes.
 
-The method does nothing if the element is a {{HTMLElement("script")}} element (and similar for SVG {{SVGElement("script")}} elements).
-
 This is similar to {{domxref("Element.setHTML")}} but allows addition of new HTML as the first child of the element, rather than setting the whole child HTML only.
 
 ## Syntax
@@ -66,6 +64,8 @@ This configuration is suitable for the majority of use cases as it prevents XSS 
 
 A custom `Sanitizer` or `SanitizerConfig` can be specified to choose which elements, attributes, and comments are allowed or removed.
 Note that even if unsafe options are allowed by the sanitizer, they will still be removed when using this method (it removes the same elements as a sanitizer on which {{domxref('Sanitizer.removeUnsafe()')}} has been called).
+
+The method does nothing if the element is a {{HTMLElement("script")}} element (and similar for SVG {{SVGElement("script")}} elements).
 
 `prependHTML()` can be used instead of {{domxref("Element.setHTML")}} when the HTML needs to insert it into the DOM as the first child of the given element, rather than replacing the whole child HTML of the given element.
 

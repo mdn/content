@@ -10,7 +10,7 @@ browser-compat: api.ShadowRoot.appendHTML
 
 {{APIRef("DOM")}}
 
-The **`appendHTML()`** method of the {{domxref("ShadowRoot")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and inserts it into the DOM as the last child of the element or the shadow host, if the parent is a shadow root.
+The **`appendHTML()`** method of the {{domxref("ShadowRoot")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and inserts it into the DOM as the last child of the shadow root.
 
 The method removes any elements and attributes that are considered XSS-unsafe, even if allowed by a passed sanitizer.
 Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{SVGElement("use")}}, and event handler attributes.
@@ -62,7 +62,7 @@ This configuration is suitable for the majority of use cases as it prevents XSS 
 A custom `Sanitizer` or `SanitizerConfig` can be specified to choose which elements, attributes, and comments are allowed or removed.
 Note that even if unsafe options are allowed by the sanitizer, they will still be removed when using this method (it removes the same elements as a sanitizer on which {{domxref('Sanitizer.removeUnsafe()')}} has been called).
 
-`appendHTML()` can be used instead of {{domxref("ShadowRoot.setHTML")}} when the HTML needs to insert it into the DOM as the last child of the given element, rather than replacing the whole child HTML of the given element.
+`appendHTML()` can be used instead of {{domxref("ShadowRoot.setHTML")}} when the HTML needs to insert it into the DOM as the last child of the given shadow root, rather than replacing the whole child HTML of the given element.
 
 It should also be used instead of {{domxref("ShadowRoot.appendHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
 
@@ -72,11 +72,11 @@ Note that since this method always sanitizes input strings of XSS-unsafe entitie
 
 This is part of a series of APIs to set HTML:
 
-| Action                                         | API                                                  | Unsafe API                                                       |
-| ---------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------- |
-| Set the HTML contents of the element           | {{domxref("ShadowRoot.setHTML", "setHTML")}}         | {{domxref("ShadowRoot.setHTMLUnsafe", "setHTMLUnsafe")}}.        |
-| Add the HTML as the first child of the element | {{domxref("ShadowRoot.prependHTML", "prependHTML")}} | {{domxref("ShadowRoot.prependHTMLUnsafe", "prependHTMLUnsafe")}} |
-| Add the HTML as the last child of the element  | {{domxref("ShadowRoot.appendHTML", "appendHTML")}}   | {{domxref("ShadowRoot.appendHTMLUnsafe", "appendHTMLUnsafe")}}   |
+| Action                                             | API                                                  | Unsafe API                                                       |
+| -------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------- |
+| Set the HTML contents of the shadow root           | {{domxref("ShadowRoot.setHTML", "setHTML")}}         | {{domxref("ShadowRoot.setHTMLUnsafe", "setHTMLUnsafe")}}.        |
+| Add the HTML as the first child of the shadow root | {{domxref("ShadowRoot.prependHTML", "prependHTML")}} | {{domxref("ShadowRoot.prependHTMLUnsafe", "prependHTMLUnsafe")}} |
+| Add the HTML as the last child of the shadow root  | {{domxref("ShadowRoot.appendHTML", "appendHTML")}}   | {{domxref("ShadowRoot.appendHTMLUnsafe", "appendHTMLUnsafe")}}   |
 
 Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allows scripts to be run using the `runScripts` options.
 

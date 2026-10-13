@@ -233,9 +233,8 @@ const untrustedString =
 const target = document.getElementById("target");
 
 // Define custom SanitizerConfig within setHTMLUnsafe()
-// Allows the <script> element (since it's not excluded) and also executes it prepend insertion.
+// Allows the <script> element (since not sanitizer is passed which excludes it) and also executes it prepend insertion.
 target.prependHTMLUnsafe(untrustedString, {
-  sanitizer: {},
   runScripts: true,
 });
 ```

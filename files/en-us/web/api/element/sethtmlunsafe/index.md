@@ -58,6 +58,7 @@ None (`undefined`).
         For example, a configuration that includes both "allowed" and "removed" configuration settings.
       - string that does not have the value `"default"`.
       - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.
+    - `options.runScripts` is `true` or `options.sanitizer` is specified when Trusted Types are enforced and no default policy defines `createParserOptions` — even if input is a `TrustedHTML`. (Passing a `TrustedHTMLParserOptions` as options avoids this.)
 
 ## Description
 
@@ -349,9 +350,9 @@ const untrustedString =
 const target = document.getElementById("target");
 
 // Define custom SanitizerConfig within setHTMLUnsafe()
-// Allows the <script> element (since it's not excluded) and also executes it after insertion.
+// Allows the <script> element (since not sanitizer is passed which excludes it)
+// and also executes the script after insertion.
 target.setHTMLUnsafe(untrustedString, {
-  sanitizer: {},
   runScripts: true,
 });
 ```
