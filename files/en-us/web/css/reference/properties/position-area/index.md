@@ -118,7 +118,7 @@ If the positioned element is placed in any other single grid square (say with `p
 
 ### Using `position-area` to position popovers
 
-When using `position-area` to position [popovers](/en-US/docs/Web/HTML/Reference/Global_attributes/popover), be aware that the used value of `auto` [inset](/en-US/docs/Glossary/Inset_properties) and {{cssxref("margin")}} properties resolves to `0` on any element that has a `position-area` value set other than `none`. This means that the [the default styles for popovers](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B) will not conflict with the position you are trying to set via `position-area`.
+When using `position-area` to position [popovers](/en-US/docs/Web/HTML/Reference/Global_attributes/popover), be aware that the used value of `auto` [inset](/en-US/docs/Glossary/Inset_properties) and {{cssxref("margin")}} properties resolves to `0` on any element that has a `position-area` value set other than `none`. This means that [the default styles for popovers](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B) will not conflict with the position you are trying to set via `position-area`.
 
 This is not the case with the {{cssxref("anchor()")}} function — see [Using `anchor()` to position popovers](/en-US/docs/Web/CSS/Reference/Values/anchor#using_anchor_to_position_popovers).
 
