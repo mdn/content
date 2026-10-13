@@ -71,16 +71,13 @@ If no sanitizer is passed as a parameter, all HTML entities in the input will be
 
 This is part of a series of APIs to set HTML:
 
-| Action                                         | API                                                          | Unsafe API                                                               |
-| ---------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| Set the HTML contents of the element           | {{domxref("ShadowRoot.setHTML", "setHTML")}}                 | {{domxref("ShadowRoot.setHTMLUnsafe", "setHTMLUnsafe")}}.                |
-| Replace the entire element with this HTML      | {{domxref("ShadowRoot.replaceWithHTML", "replaceWithHTML")}} | {{domxref("ShadowRoot.replaceWithHTMLUnsafe", "replaceWithHTMLUnsafe")}} |
-| Add the HTML before the element                | {{domxref("ShadowRoot.beforeHTML", "beforeHTML")}}           | {{domxref("ShadowRoot.beforeHTMLUnsafe", "beforeHTMLUnsafe")}}           |
-| Add the HTML as the first child of the element | {{domxref("ShadowRoot.prependHTML", "prependHTML")}}         | {{domxref("ShadowRoot.prependHTMLUnsafe", "prependHTMLUnsafe")}}         |
-| Add the HTML as the last child of the element  | {{domxref("ShadowRoot.appendHTML", "appendHTML")}}           | {{domxref("ShadowRoot.appendHTMLUnsafe", "appendHTMLUnsafe")}}           |
-| Add the HTML after the element                 | {{domxref("ShadowRoot.afterHTML", "afterHTML")}}             | {{domxref("ShadowRoot.afterHTMLUnsafe", "afterHTMLUnsafe")}}             |
+| Action                                         | API                                                  | Unsafe API                                                       |
+| ---------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------- |
+| Set the HTML contents of the element           | {{domxref("ShadowRoot.setHTML", "setHTML")}}         | {{domxref("ShadowRoot.setHTMLUnsafe", "setHTMLUnsafe")}}.        |
+| Add the HTML as the first child of the element | {{domxref("ShadowRoot.prependHTML", "prependHTML")}} | {{domxref("ShadowRoot.prependHTMLUnsafe", "prependHTMLUnsafe")}} |
+| Add the HTML as the last child of the element  | {{domxref("ShadowRoot.appendHTML", "appendHTML")}}   | {{domxref("ShadowRoot.appendHTMLUnsafe", "appendHTMLUnsafe")}}   |
 
-Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allow allow scripts to be run using the `runScripts` options.
+Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allows scripts to be run using the `runScripts` options.
 
 ### Security considerations
 
@@ -135,7 +132,7 @@ shadow.setHTMLUnsafe(input, { sanitizer: configSafe });
 
 // Removes all XSS-unsafe entities except `onclick`
 const configLessSafe = new Sanitizer();
-config.allowAttribute("onclick");
+configLessSafe.allowAttribute("onclick");
 shadow.setHTMLUnsafe(input, { sanitizer: configLessSafe });
 ```
 
@@ -357,16 +354,17 @@ The code first creates an untrusted string and shows a number of ways a sanitize
 
 ```js
 // The potentially malicious string
-const untrustedString = "<script src="example.js"></script><p>Other content</p>";
+const untrustedString =
+  "<script src='example.js'></script><p>Other content</p>";
 
 // Get the shadow root element
 const shadow = document.querySelector("#host").shadowRoot;
 
 // Define custom SanitizerConfig within setHTMLUnsafe()
-// Allows the <script> element and also executes it after insertion.
+// Allows the <script> element (since it's not excluded) and also executes it after insertion.
 shadow.setHTMLUnsafe(untrustedString, {
   sanitizer: {},
-  runScript: true
+  runScripts: true,
 });
 ```
 

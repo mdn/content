@@ -10,7 +10,7 @@ browser-compat: api.ShadowRoot.appendHTML
 
 {{APIRef("DOM")}}
 
-The **`appendHTML()`** method of the {{domxref("Element")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and inserts it into the DOM as the last child of the element.
+The **`appendHTML()`** method of the {{domxref("ShadowRoot")}} interface scripts provides an XSS-safe method to parse and sanitize a string of HTML and inserts it into the DOM as the last child of the element.
 
 The method removes any elements and attributes that are considered XSS-unsafe, even if allowed by a passed sanitizer.
 Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{SVGElement("use")}}, and event handler attributes.
@@ -27,10 +27,10 @@ appendHTML(input, options)
 ### Parameters
 
 - `input` {{experimental_inline}}
-  - : A string defining HTML to be sanitized and replace the element.
+  - : A string defining HTML to be sanitized and inserted.
 - `options` {{optional_inline}} {{experimental_inline}}
   - : An options object with the following optional parameters:
-    - `sanitizer` {{experimental_inline}}
+    - `sanitizer` {{optional_inline}} {{experimental_inline}}
       - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed, or the string `"default"` for the default configuration.
         The method will remove any XSS-unsafe elements and attributes, even if allowed by the sanitizer.
         If not specified, the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) is used.
@@ -54,7 +54,7 @@ None (`undefined`).
 
 `appendHTML()` drops any elements in the HTML input string that are invalid in the context of the current element, such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
 
-It then removes any HTML entities that aren't allowed by the sanitizer configuration, and further removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer.
+It then removes any HTML elements and attributes that aren't allowed by the sanitizer configuration, and further removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer.
 
 If no sanitizer is specified in the `options.sanitizer` parameter, `appendHTML()` is used with the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
 This configuration is suitable for the majority of use cases as it prevents XSS attacks, as well as other attacks like clickjacking or spoofing.
@@ -72,16 +72,13 @@ Note that since this method always sanitizes input strings of XSS-unsafe entitie
 
 This is part of a series of APIs to set HTML:
 
-| Action                                         | API                                                          | Unsafe API                                                               |
-| ---------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| Set the HTML contents of the element           | {{domxref("ShadowRoot.setHTML", "setHTML")}}                 | {{domxref("ShadowRoot.setHTMLUnsafe", "setHTMLUnsafe")}}.                |
-| Replace the entire element with this HTML      | {{domxref("ShadowRoot.replaceWithHTML", "replaceWithHTML")}} | {{domxref("ShadowRoot.replaceWithHTMLUnsafe", "replaceWithHTMLUnsafe")}} |
-| Add the HTML before the element                | {{domxref("ShadowRoot.beforeHTML", "beforeHTML")}}           | {{domxref("ShadowRoot.beforeHTMLUnsafe", "beforeHTMLUnsafe")}}           |
-| Add the HTML as the first child of the element | {{domxref("ShadowRoot.prependHTML", "prependHTML")}}         | {{domxref("ShadowRoot.prependHTMLUnsafe", "prependHTMLUnsafe")}}         |
-| Add the HTML as the last child of the element  | {{domxref("ShadowRoot.appendHTML", "appendHTML")}}           | {{domxref("ShadowRoot.appendHTMLUnsafe", "appendHTMLUnsafe")}}           |
-| Add the HTML after the element                 | {{domxref("ShadowRoot.afterHTML", "afterHTML")}}             | {{domxref("ShadowRoot.afterHTMLUnsafe", "afterHTMLUnsafe")}}             |
+| Action                                         | API                                                  | Unsafe API                                                       |
+| ---------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------- |
+| Set the HTML contents of the element           | {{domxref("ShadowRoot.setHTML", "setHTML")}}         | {{domxref("ShadowRoot.setHTMLUnsafe", "setHTMLUnsafe")}}.        |
+| Add the HTML as the first child of the element | {{domxref("ShadowRoot.prependHTML", "prependHTML")}} | {{domxref("ShadowRoot.prependHTMLUnsafe", "prependHTMLUnsafe")}} |
+| Add the HTML as the last child of the element  | {{domxref("ShadowRoot.appendHTML", "appendHTML")}}   | {{domxref("ShadowRoot.appendHTMLUnsafe", "appendHTMLUnsafe")}}   |
 
-Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allow allow scripts to be run using the `runScripts` options.
+Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allows scripts to be run using the `runScripts` options.
 
 ## Examples
 
@@ -99,7 +96,7 @@ const unsanitizedString = "abc <script>alert(1)<" + "/script> def";
 const target = document.getElementById("target");
 
 // appendHTML() with default sanitizer
-target.replaceWithHTML(unsanitizedString);
+target.appendHTML(unsanitizedString);
 
 // Define custom Sanitizer and use in appendHTML()
 // This allows only elements: div, p, button (script is unsafe and will be removed)

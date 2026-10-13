@@ -24,7 +24,7 @@ The **`appendHTMLUnsafe()`** method of the {{domxref("Element")}} interface is u
 
 This is similar to {{domxref("Element.setHTMLUnsafe")}} but allows addition of the HTML as the last child of the element, rather than setting the whole child HTML only.
 
-Note that the safe variants of these methods (for example, {{domxref("Element.appendHTML")}}) always use the XSS-safe sanitizer, as well as any provided sanitizer parameter. The provided sanitizer is applied in addition to the default XSS-safe sanitizer, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
+Note that the safe variants of these methods (for example, {{domxref("Element.appendHTML")}}) always removes removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer. The provided sanitizer is applied in addition to the this default XSS-unsafe removal, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
 
 ## Syntax
 
@@ -46,7 +46,7 @@ appendHTMLUnsafe(input, options)
 
         Note that if you're using the same configuration multiple times, it's expected to be more efficient to use a `Sanitizer` and modify it when you need to.
     - `runScripts` {{optional_inline}} {{experimental_inline}}
-      - : A boolean value indicating whether any scripts included in the newly inserted HTML should run append inserting. The default is `false`.
+      - : A boolean value indicating whether any scripts included in the newly inserted HTML should run after inserting. The default is `false`.
 
 ### Return value
 
@@ -63,15 +63,18 @@ None (`undefined`).
       - string that does not have the value `"default"`.
       - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.
 
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+  - : Thrown when the element is an {{HTMLElement("html")}} element.
+
 ## Description
 
-The **`appendHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes, and discarding elements that the HTML specification doesn't allow in the target element (such as {{htmlelement("li")}} inside a {{htmlelement("div")}}).
+The **`appendHTMLUnsafe()`** The **`setHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes, and discarding elements that the HTML specification doesn't allow in the target element ({{htmlelement("col")}} element outside of a {{htmlelement("table")}}).
 The `DocumentFragment` is then used to insert it into the DOM as the last child of the given element, rather than replacing the whole child HTML of the given element.
 
 Unlike with {{domxref("Element.innerHTML")}}, [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in the input will be parsed into the DOM.
 If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as `<template>` elements within that shadow root.
 
-`appendHTMLUnsafe()` doesn't perform any sanitization by default, though also does not run scripts by default. If no sanitizer is passed as a parameter, all HTML entities in the input will be injected. It is therefore potentially even less safe that {{domxref("Element.innerHTML")}}, which does not allow {{htmlelement("script")}} execution when parsing.
+`appendHTMLUnsafe()` doesn't perform any sanitization by default, though also does not run scripts by default. If no sanitizer is passed as a parameter, all HTML entities in the input will be injected. It is therefore potentially even less safe than {{domxref("Element.innerHTML")}}, which does not allow {{htmlelement("script")}} execution when parsing.
 
 ### Related HTML setter APIs
 
@@ -79,14 +82,14 @@ This is part of a series of APIs to set HTML:
 
 | Action                                         | API                                                       | Unsafe API                                                            |
 | ---------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------- |
-| Set the HTML contents of the element           | {{domxref("Element.setHTML", "setHTML")}}                 | {{domxref("Element.setHTMLUnsafe", "setHTMLUnsafe")}}.                |
+| Set the HTML contents of the element           | {{domxref("Element.setHTML", "setHTML")}}                 | {{domxref("Element.setHTMLUnsafe", "setHTMLUnsafe")}}                 |
 | Replace the entire element with this HTML      | {{domxref("Element.replaceWithHTML", "replaceWithHTML")}} | {{domxref("Element.replaceWithHTMLUnsafe", "replaceWithHTMLUnsafe")}} |
 | Add the HTML before the element                | {{domxref("Element.beforeHTML", "beforeHTML")}}           | {{domxref("Element.beforeHTMLUnsafe", "beforeHTMLUnsafe")}}           |
 | Add the HTML as the first child of the element | {{domxref("Element.prependHTML", "prependHTML")}}         | {{domxref("Element.prependHTMLUnsafe", "prependHTMLUnsafe")}}         |
 | Add the HTML as the last child of the element  | {{domxref("Element.appendHTML", "appendHTML")}}           | {{domxref("Element.appendHTMLUnsafe", "appendHTMLUnsafe")}}           |
 | Add the HTML after the element                 | {{domxref("Element.afterHTML", "afterHTML")}}             | {{domxref("Element.afterHTMLUnsafe", "afterHTMLUnsafe")}}             |
 
-Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allow allow scripts to be run using the `runScripts` options.
+Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allows scripts to be run using the `runScripts` options.
 
 ### Security considerations
 
@@ -140,7 +143,7 @@ target.appendHTMLUnsafe(input, { sanitizer: configSafe });
 
 // Removes all XSS-unsafe entities except `onclick`
 const configLessSafe = new Sanitizer();
-config.allowAttribute("onclick");
+configLessSafe.allowAttribute("onclick");
 target.appendHTMLUnsafe(input, { sanitizer: configLessSafe });
 ```
 
@@ -216,7 +219,7 @@ target.appendHTMLUnsafe(untrustedString, {
 });
 ```
 
-### Using appendHTMLUnsafe() without `runScripts`
+### Using appendHTMLUnsafe() with `runScripts`
 
 This example demonstrates the case where we aren't using trusted types, so we'll be passing sanitizer arguments.
 
@@ -224,16 +227,17 @@ The code first creates an untrusted string and shows a number of ways a sanitize
 
 ```js
 // The potentially malicious string
-const untrustedString = "<script src="example.js"></script><p>Other content</p>";
+const untrustedString =
+  "<script src='example.js'></script><p>Other content</p>";
 
 // Get the target Element with id "target"
 const target = document.getElementById("target");
 
 // Define custom SanitizerConfig within setHTMLUnsafe()
-// Allows the <script> element and also executes it append insertion.
+// Allows the <script> element (since it's not excluded) and also executes it after insertion.
 target.appendHTMLUnsafe(untrustedString, {
   sanitizer: {},
-  runScript: true
+  runScripts: true,
 });
 ```
 

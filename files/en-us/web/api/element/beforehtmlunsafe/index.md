@@ -22,9 +22,11 @@ browser-compat: api.Element.beforeHTMLUnsafe
 
 The **`beforeHTMLUnsafe()`** method of the {{domxref("Element")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and then using it to replace the element in the DOM.
 
+The method does nothing if the node has no parent.
+
 This is similar to {{domxref("Element.setHTMLUnsafe")}} but allows replacement of the entire element, rather than setting child elements only.
 
-Note that the safe variants of these methods (for example, {{domxref("Element.beforeHTML")}}) always use the XSS-safe sanitizer, as well as any provided sanitizer parameter. The provided sanitizer is applied in addition to the default XSS-safe sanitizer, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
+Note that the safe variants of these methods (for example, {{domxref("Element.beforeHTML")}}) always removes removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer. The provided sanitizer is applied in addition to the this default XSS-unsafe removal, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
 
 ## Syntax
 
@@ -63,15 +65,19 @@ None (`undefined`).
       - string that does not have the value `"default"`.
       - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.
 
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+  - : Thrown when the parent element is a {{domxref("Document")}}, an {{HTMLElement("html")}} element, a {{HTMLElement("template")}} element, or a hostless {{domxref("DocumentFragment")}}.
+  - : Note this differs from {{domxref("Element.insertAdjacentHTML")}} which throws `NoModificationAllowedError` for a {{domxref("Document")}} parent.
+
 ## Description
 
-The **`beforeHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes, and discarding elements that the HTML specification doesn't allow in the target element (such as {{htmlelement("li")}} inside a {{htmlelement("div")}}).
-The `DocumentFragment` is then used to replace the element in the DOM.
+The **`beforeHTMLUnsafe()`** The **`setHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes, and discarding elements that the HTML specification doesn't allow in the target element ({{htmlelement("col")}} element outside of a {{htmlelement("table")}}).
+The `DocumentFragment` is then used to insert the element into the DOM.
 
 Unlike with {{domxref("Element.innerHTML")}}, [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in the input will be parsed into the DOM.
 If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as `<template>` elements within that shadow root.
 
-`beforeHTMLUnsafe()` doesn't perform any sanitization by default, though also does not run scripts by default. If no sanitizer is passed as a parameter, all HTML entities in the input will be injected. It is therefore potentially even less safe that {{domxref("Element.innerHTML")}}, which does not allow {{htmlelement("script")}} execution when parsing.
+`beforeHTMLUnsafe()` doesn't perform any sanitization by default, though also does not run scripts by default. If no sanitizer is passed as a parameter, all HTML entities in the input will be injected. It is therefore potentially even less safe than {{domxref("Element.innerHTML")}}, which does not allow {{htmlelement("script")}} execution when parsing.
 
 ### Related HTML setter APIs
 
@@ -79,14 +85,14 @@ This is part of a series of APIs to set HTML:
 
 | Action                                         | API                                                       | Unsafe API                                                            |
 | ---------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------- |
-| Set the HTML contents of the element           | {{domxref("Element.setHTML", "setHTML")}}                 | {{domxref("Element.setHTMLUnsafe", "setHTMLUnsafe")}}.                |
+| Set the HTML contents of the element           | {{domxref("Element.setHTML", "setHTML")}}                 | {{domxref("Element.setHTMLUnsafe", "setHTMLUnsafe")}}                 |
 | Replace the entire element with this HTML      | {{domxref("Element.replaceWithHTML", "replaceWithHTML")}} | {{domxref("Element.replaceWithHTMLUnsafe", "replaceWithHTMLUnsafe")}} |
 | Add the HTML before the element                | {{domxref("Element.beforeHTML", "beforeHTML")}}           | {{domxref("Element.beforeHTMLUnsafe", "beforeHTMLUnsafe")}}           |
 | Add the HTML as the first child of the element | {{domxref("Element.prependHTML", "prependHTML")}}         | {{domxref("Element.prependHTMLUnsafe", "prependHTMLUnsafe")}}         |
 | Add the HTML as the last child of the element  | {{domxref("Element.appendHTML", "appendHTML")}}           | {{domxref("Element.appendHTMLUnsafe", "appendHTMLUnsafe")}}           |
 | Add the HTML after the element                 | {{domxref("Element.afterHTML", "afterHTML")}}             | {{domxref("Element.afterHTMLUnsafe", "afterHTMLUnsafe")}}             |
 
-Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allow allow scripts to be run using the `runScripts` options.
+Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allows scripts to be run using the `runScripts` options.
 
 ### Security considerations
 
@@ -140,7 +146,7 @@ target.beforeHTMLUnsafe(input, { sanitizer: configSafe });
 
 // Removes all XSS-unsafe entities except `onclick`
 const configLessSafe = new Sanitizer();
-config.allowAttribute("onclick");
+configLessSafe.allowAttribute("onclick");
 target.beforeHTMLUnsafe(input, { sanitizer: configLessSafe });
 ```
 
@@ -216,7 +222,7 @@ target.beforeHTMLUnsafe(untrustedString, {
 });
 ```
 
-### Using beforeHTMLUnsafe() without `runScripts`
+### Using beforeHTMLUnsafe() with `runScripts`
 
 This example demonstrates the case where we aren't using trusted types, so we'll be passing sanitizer arguments.
 
@@ -224,16 +230,17 @@ The code first creates an untrusted string and shows a number of ways a sanitize
 
 ```js
 // The potentially malicious string
-const untrustedString = "<script src="example.js"></script><p>Other content</p>";
+const untrustedString =
+  "<script src='example.js'></script><p>Other content</p>";
 
 // Get the target Element with id "target"
 const target = document.getElementById("target");
 
 // Define custom SanitizerConfig within setHTMLUnsafe()
-// Allows the <script> element and also executes it before insertion.
+// Allows the <script> element (since it's not excluded) and also executes it before insertion.
 target.beforeHTMLUnsafe(untrustedString, {
   sanitizer: {},
-  runScript: true
+  runScripts: true,
 });
 ```
 
@@ -248,7 +255,6 @@ target.beforeHTMLUnsafe(untrustedString, {
 ## See also
 
 - {{domxref("Element.beforeHTML()")}}
-- {{domxref("ShadowRoot.beforeHTML()")}} and {{domxref("ShadowRoot.beforeHTMLUnsafe()")}}
 - {{domxref("CharacterData.beforeHTML()")}} and {{domxref("CharacterData.beforeHTMLUnsafe()")}}
 - {{domxref("Element.setHTMLUnsafe()")}}
 - {{domxref("Element.innerHTML")}}

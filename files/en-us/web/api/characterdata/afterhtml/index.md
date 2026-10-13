@@ -15,6 +15,8 @@ The **`afterHTML()`** method of the {{domxref("CharacterData")}} interface provi
 The method removes any elements and attributes that are considered XSS-unsafe, even if allowed by a passed sanitizer.
 Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{SVGElement("use")}}, and event handler attributes.
 
+The method does nothing if the node has no parent or the parent is a {{HTMLElement("script")}} element.
+
 This is similar to {{domxref("Element.setHTML")}} but allows addition to the entire character data, rather than setting child elements of an element.
 
 ## Syntax
@@ -27,10 +29,10 @@ afterHTML(input, options)
 ### Parameters
 
 - `input` {{experimental_inline}}
-  - : A string defining HTML to be sanitized and replace the element.
+  - : A string defining HTML to be sanitized and inserted.
 - `options` {{optional_inline}} {{experimental_inline}}
   - : An options object with the following optional parameters:
-    - `sanitizer` {{experimental_inline}}
+    - `sanitizer` {{optional_inline}} {{experimental_inline}}
       - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed, or the string `"default"` for the default configuration.
         The method will remove any XSS-unsafe elements and attributes, even if allowed by the sanitizer.
         If not specified, the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) is used.
@@ -50,11 +52,14 @@ None (`undefined`).
     - string that does not have the value `"default"`.
     - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.
 
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+  - : Thrown when the parent element is a {{domxref("Document")}}, an {{HTMLElement("html")}} element, a {{HTMLElement("template")}} element, or a hostless {{domxref("DocumentFragment")}}.
+
 ## Description
 
-`afterHTML()` drops any elements in the HTML input string that are invalid in the context of the current element, such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
+`afterHTML()` drops any elements in the HTML input string that are invalid in the context of the node's parent element (or the shadow host, if the parent is a shadow root), such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
 
-It then removes any HTML entities that aren't allowed by the sanitizer configuration, and further removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer.
+It then removes any HTML elements and attributes that aren't allowed by the sanitizer configuration, and further removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer.
 
 If no sanitizer is specified in the `options.sanitizer` parameter, `afterHTML()` is used with the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
 This configuration is suitable for the majority of use cases as it prevents XSS attacks, as well as other attacks like clickjacking or spoofing.
@@ -78,7 +83,7 @@ This is part of a series of APIs to set HTML:
 | Add the HTML before the element           | {{domxref("CharacterData.beforeHTML", "beforeHTML")}}           | {{domxref("CharacterData.beforeHTMLUnsafe", "beforeHTMLUnsafe")}}           |
 | Add the HTML after the element            | {{domxref("CharacterData.afterHTML", "afterHTML")}}             | {{domxref("CharacterData.afterHTMLUnsafe", "afterHTMLUnsafe")}}             |
 
-Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allow allow scripts to be run using the `runScripts` options.
+Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allows scripts to be run using the `runScripts` options.
 
 Similar elements, and more, exist on Element (for example {{domxref("Element.afterHTML")}})
 
@@ -126,6 +131,5 @@ myText.afterHTML(unsanitizedString, {
 
 - {{domxref("CharacterData.afterHTMLUnsafe()")}}
 - {{domxref("Element.afterHTML()")}} and {{domxref("Element.afterHTMLUnsafe()")}}
-- {{domxref("ShadowRoot.afterHTML()")}} and {{domxref("ShadowRoot.afterHTMLUnsafe()")}}
 - {{domxref("Document.parseHTML_static", "Document.parseHTML()")}} and {{domxref("Document.parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
 - [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API)

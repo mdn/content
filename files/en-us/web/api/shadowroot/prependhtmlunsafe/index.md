@@ -20,7 +20,7 @@ browser-compat: api.ShadowRoot.prependHTMLUnsafe
 > [!NOTE]
 > {{domxref("ShadowRoot.prependHTML()")}} should almost always be used instead of this method — on browsers where it is supported — as it always removes XSS-unsafe HTML entities.
 
-The **`prependHTMLUnsafe()`** method of the {{domxref("Element")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and then inserting it into the DOM as the first child of an element.
+The **`prependHTMLUnsafe()`** method of the {{domxref("ShadowRoot")}} interface scripts is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and then inserting it into the DOM as the first child of an element.
 
 This is similar to {{domxref("ShadowRoot.setHTMLUnsafe")}} but allows addition of the HTML as the first child of the element, rather than setting the whole child HTML only.
 
@@ -46,7 +46,7 @@ prependHTMLUnsafe(input, options)
 
         Note that if you're using the same configuration multiple times, it's expected to be more efficient to use a `Sanitizer` and modify it when you need to.
     - `runScripts` {{optional_inline}} {{experimental_inline}}
-      - : A boolean value indicating whether any scripts included in the newly inserted HTML should run prepend inserting. The default is `false`.
+      - : A boolean value indicating whether any scripts included in the newly inserted HTML should run after inserting. The default is `false`.
 
 ### Return value
 
@@ -65,28 +65,25 @@ None (`undefined`).
 
 ## Description
 
-The **`prependHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes, and discarding elements that the HTML specification doesn't allow in the target element (such as {{htmlelement("li")}} inside a {{htmlelement("div")}}).
+The **`prependHTMLUnsafe()`** The **`setHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes, and discarding elements that the HTML specification doesn't allow in the target element ({{htmlelement("col")}} element outside of a {{htmlelement("table")}}).
 The `DocumentFragment` is then used to insert it into the DOM as the first child of the given element, rather than replacing the whole child HTML of the given element.
 
 Unlike with {{domxref("ShadowRoot.innerHTML")}}, [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in the input will be parsed into the DOM.
 If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as `<template>` elements within that shadow root.
 
-`prependHTMLUnsafe()` doesn't perform any sanitization by default, though also does not run scripts by default. If no sanitizer is passed as a parameter, all HTML entities in the input will be injected. It is therefore potentially even less safe that {{domxref("ShadowRoot.innerHTML")}}, which does not allow {{htmlelement("script")}} execution when parsing.
+`prependHTMLUnsafe()` doesn't perform any sanitization by default, though also does not run scripts by default. If no sanitizer is passed as a parameter, all HTML entities in the input will be injected. It is therefore potentially even less safe than {{domxref("ShadowRoot.innerHTML")}}, which does not allow {{htmlelement("script")}} execution when parsing.
 
 ### Related HTML setter APIs
 
 This is part of a series of APIs to set HTML:
 
-| Action                                         | API                                                          | Unsafe API                                                               |
-| ---------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| Set the HTML contents of the element           | {{domxref("ShadowRoot.setHTML", "setHTML")}}                 | {{domxref("ShadowRoot.setHTMLUnsafe", "setHTMLUnsafe")}}.                |
-| Replace the entire element with this HTML      | {{domxref("ShadowRoot.replaceWithHTML", "replaceWithHTML")}} | {{domxref("ShadowRoot.replaceWithHTMLUnsafe", "replaceWithHTMLUnsafe")}} |
-| Add the HTML before the element                | {{domxref("ShadowRoot.beforeHTML", "beforeHTML")}}           | {{domxref("ShadowRoot.beforeHTMLUnsafe", "beforeHTMLUnsafe")}}           |
-| Add the HTML as the first child of the element | {{domxref("ShadowRoot.prependHTML", "prependHTML")}}         | {{domxref("ShadowRoot.prependHTMLUnsafe", "prependHTMLUnsafe")}}         |
-| Add the HTML as the last child of the element  | {{domxref("ShadowRoot.appendHTML", "appendHTML")}}           | {{domxref("ShadowRoot.appendHTMLUnsafe", "appendHTMLUnsafe")}}           |
-| Add the HTML after the element                 | {{domxref("ShadowRoot.afterHTML", "afterHTML")}}             | {{domxref("ShadowRoot.afterHTMLUnsafe", "afterHTMLUnsafe")}}             |
+| Action                                         | API                                                  | Unsafe API                                                       |
+| ---------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------- |
+| Set the HTML contents of the element           | {{domxref("ShadowRoot.setHTML", "setHTML")}}         | {{domxref("ShadowRoot.setHTMLUnsafe", "setHTMLUnsafe")}}.        |
+| Add the HTML as the first child of the element | {{domxref("ShadowRoot.prependHTML", "prependHTML")}} | {{domxref("ShadowRoot.prependHTMLUnsafe", "prependHTMLUnsafe")}} |
+| Add the HTML as the last child of the element  | {{domxref("ShadowRoot.appendHTML", "appendHTML")}}   | {{domxref("ShadowRoot.appendHTMLUnsafe", "appendHTMLUnsafe")}}   |
 
-Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allow allow scripts to be run using the `runScripts` options.
+Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allows scripts to be run using the `runScripts` options.
 
 ### Security considerations
 
@@ -140,7 +137,7 @@ target.prependHTMLUnsafe(input, { sanitizer: configSafe });
 
 // Removes all XSS-unsafe entities except `onclick`
 const configLessSafe = new Sanitizer();
-config.allowAttribute("onclick");
+configLessSafe.allowAttribute("onclick");
 target.prependHTMLUnsafe(input, { sanitizer: configLessSafe });
 ```
 
@@ -216,7 +213,7 @@ target.prependHTMLUnsafe(untrustedString, {
 });
 ```
 
-### Using prependHTMLUnsafe() without `runScripts`
+### Using prependHTMLUnsafe() with `runScripts`
 
 This example demonstrates the case where we aren't using trusted types, so we'll be passing sanitizer arguments.
 
@@ -224,16 +221,17 @@ The code first creates an untrusted string and shows a number of ways a sanitize
 
 ```js
 // The potentially malicious string
-const untrustedString = "<script src="example.js"></script><p>Other content</p>";
+const untrustedString =
+  "<script src='example.js'></script><p>Other content</p>";
 
 // Get the target Element with id "target"
 const target = document.getElementById("target");
 
 // Define custom SanitizerConfig within setHTMLUnsafe()
-// Allows the <script> element and also executes it prepend insertion.
+// Allows the <script> element (since it's not excluded) and also executes it prepend insertion.
 target.prependHTMLUnsafe(untrustedString, {
   sanitizer: {},
-  runScript: true
+  runScripts: true,
 });
 ```
 
