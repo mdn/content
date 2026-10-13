@@ -20,6 +20,8 @@ browser-compat: api.Element.setHTMLUnsafe
 
 The **`setHTMLUnsafe()`** method of the {{domxref("Element")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and then using it to replace the element's subtree in the DOM.
 
+Note that the safe variants of these methods (for example, {{domxref("Element.setHTML")}}) always use the XSS-safe sanitizer, as well as any provided sanitizer parameter. The provided sanitizer is applied in addition to the default XSS-safe sanitizer, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
+
 ## Syntax
 
 ```js-nolint
@@ -39,6 +41,8 @@ setHTMLUnsafe(input, options)
         If not specified, no sanitizer is used.
 
         Note that if you're using the same configuration multiple times, it's expected to be more efficient to use a `Sanitizer` and modify it when you need to.
+    - `runScripts` {{optional_inline}} {{experimental_inline}}
+      - : A boolean value indicating whether any scripts included in the newly inserted HTML should run after inserting. The default is `false`.
 
 ### Return value
 
@@ -56,9 +60,6 @@ None (`undefined`).
       - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.
 
 ## Description
-
-The **`setHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes, and discarding elements that the HTML specification doesn't allow in the target element (such as {{htmlelement("li")}} inside a {{htmlelement("div")}}).
-The `DocumentFragment` is then used to replace the element's subtree in the DOM.
 
 Unlike with {{domxref("Element.innerHTML")}}, [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in the input will be parsed into the DOM.
 If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as `<template>` elements within that shadow root.
@@ -316,6 +317,27 @@ When you click the "allowScript" button the `<script>` element is still present,
 With this approach you can create safe HTML, but you aren't forced to.
 
 {{EmbedLiveSample("setHTMLUnsafe() live example","100","450px")}}
+
+### Using setHTMLUnsafe() without `runScripts`
+
+This example demonstrates the case where we aren't using trusted types, so we'll be passing sanitizer arguments.
+
+The code first creates an untrusted string and shows a number of ways a sanitizer can be passed to the method.
+
+```js
+// The potentially malicious string
+const untrustedString = "<script src="example.js"></script><p>Other content</p>";
+
+// Get the target Element with id "target"
+const target = document.getElementById("target");
+
+// Define custom SanitizerConfig within setHTMLUnsafe()
+// Allows the <script> element and also executes it after insertion.
+target.setHTMLUnsafe(untrustedString, {
+  sanitizer: {},
+  runScript: true
+});
+```
 
 ## Specifications
 

@@ -39,6 +39,8 @@ setHTMLUnsafe(input, options)
         If not specified, no sanitizer is used.
 
         Note that if you're using the same configuration multiple times, it's expected to be more efficient to use a `Sanitizer` and modify it when you need to.
+    - `runScripts` {{optional_inline}} {{experimental_inline}}
+      - : A boolean value indicating whether any scripts included in the newly inserted HTML should run after inserting. The default is `false`.
 
 ### Return value
 
@@ -331,6 +333,27 @@ When you click the "allowScript" button the `<script>` element is still present,
 With this approach you can create safe HTML, but you aren't forced to.
 
 {{EmbedLiveSample("setHTMLUnsafe() live example","100","450px")}}
+
+### Using setHTMLUnsafe() without `runScripts`
+
+This example demonstrates the case where we aren't using trusted types, so we'll be passing sanitizer arguments.
+
+The code first creates an untrusted string and shows a number of ways a sanitizer can be passed to the method.
+
+```js
+// The potentially malicious string
+const untrustedString = "<script src="example.js"></script><p>Other content</p>";
+
+// Get the shadow root element
+const shadow = document.querySelector("#host").shadowRoot;
+
+// Define custom SanitizerConfig within setHTMLUnsafe()
+// Allows the <script> element and also executes it after insertion.
+shadow.setHTMLUnsafe(untrustedString, {
+  sanitizer: {},
+  runScript: true
+});
+```
 
 ## Specifications
 
