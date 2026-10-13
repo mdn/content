@@ -24,8 +24,6 @@ The **`afterHTMLUnsafe()`** method of the {{domxref("CharacterData")}} interface
 
 The method does nothing if the node has no parent.
 
-This is similar to {{domxref("Element.setHTMLUnsafe")}} but inserts the parsed HTML into the DOM immediately after the node, rather than setting child elements of an element.
-
 Note that the safe variants of these methods (for example, {{domxref("CharacterData.afterHTML")}}) always use the XSS-safe sanitizer, as well as any provided sanitizer parameter. The provided sanitizer is applied in addition to the default XSS-safe sanitizer, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
 
 ## Syntax

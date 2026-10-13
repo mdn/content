@@ -15,8 +15,6 @@ The **`appendHTML()`** method of the {{domxref("Element")}} interface provides a
 The method removes any elements and attributes that are considered XSS-unsafe, even if allowed by a passed sanitizer.
 Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{SVGElement("use")}}, and event handler attributes.
 
-This is similar to {{domxref("Element.setHTML")}} but allows addition of new HTML as the last child of the element, rather than setting the whole child HTML only.
-
 ## Syntax
 
 ```js-nolint

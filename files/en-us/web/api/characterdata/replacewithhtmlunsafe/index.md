@@ -24,8 +24,6 @@ The **`replaceWithHTMLUnsafe()`** method of the {{domxref("CharacterData")}} int
 
 The method does nothing if the node has no parent.
 
-This is similar to {{domxref("Element.setHTMLUnsafe")}} but allows replacement of the entire node, rather than setting child elements of an element.
-
 Note that the safe variants of these methods (for example, {{domxref("CharacterData.replaceWithHTML")}}) always use the XSS-safe sanitizer, as well as any provided sanitizer parameter. The provided sanitizer is applied in addition to the default XSS-safe sanitizer, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
 
 ## Syntax

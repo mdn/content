@@ -17,8 +17,6 @@ Notably, the following elements are always removed: {{HTMLElement("script")}}, {
 
 The method does nothing if the node has no parent or the parent is a {{HTMLElement("script")}} element (and similar for SVG {{SVGElement("script")}} elements).
 
-This is similar to {{domxref("Element.setHTML")}} but inserts the parsed HTML into the DOM immediately after the node, rather than setting child elements of an element.
-
 ## Syntax
 
 ```js-nolint

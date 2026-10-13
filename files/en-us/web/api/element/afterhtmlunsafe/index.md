@@ -24,8 +24,6 @@ The **`afterHTMLUnsafe()`** method of the {{domxref("Element")}} interface is us
 
 The method does nothing if the node has no parent.
 
-This is similar to {{domxref("Element.setHTMLUnsafe")}} but allows replacement of the entire element, rather than setting child elements only.
-
 Note that the safe variants of these methods (for example, {{domxref("Element.afterHTML")}}) always removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer. The provided sanitizer is applied in addition to the default XSS-unsafe removal, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
 
 ## Syntax

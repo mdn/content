@@ -22,8 +22,6 @@ browser-compat: api.Element.prependHTMLUnsafe
 
 The **`prependHTMLUnsafe()`** method of the {{domxref("Element")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and then inserting it into the DOM as the first child of an element.
 
-This is similar to {{domxref("Element.setHTMLUnsafe")}} but allows addition of the HTML as the first child of the element, rather than setting the whole child HTML only.
-
 Note that the safe variants of these methods (for example, {{domxref("Element.prependHTML")}}) always removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer. The provided sanitizer is applied in addition to the default XSS-unsafe removal, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
 
 ## Syntax
