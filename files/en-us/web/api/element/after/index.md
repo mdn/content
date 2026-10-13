@@ -8,19 +8,19 @@ browser-compat: api.Element.after
 
 {{APIRef("DOM")}}
 
-The **`after()`** method of the {{domxref("Element")}} interface inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just after the `Element`. Strings are inserted as equivalent {{domxref("Text")}} nodes. Nothing happens if {{domxref("Element.parentElement")}} is `null`.
+The **`after()`** method of the {{domxref("Element")}} interface inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just after the `Element`. Strings are inserted as equivalent {{domxref("Text")}} nodes. Nothing happens if {{domxref("Node.parentNode", "parentNode")}} is `null`.
 
 ## Syntax
 
 ```js-nolint
-after(node1)
-after(node1, node2)
-after(node1, node2, /* …, */ nodeN)
+after(param1)
+after(param1, param2)
+after(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
 
-- `node1`, …, `nodeN`
+- `param1`, …, `paramN`
   - : A set of {{domxref("Node")}} objects or strings to insert.
 
 ### Return value

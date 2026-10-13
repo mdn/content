@@ -8,7 +8,7 @@ browser-compat: api.Element.before
 
 {{APIRef("DOM")}}
 
-The **`before()`** method of the {{domxref("Element")}} interface inserts a set of {{domxref("Node")}} objects or strings in the children list of this `Element`'s parent, just before this `Element`. Strings are inserted as equivalent {{domxref("Text")}} nodes. Nothing happens if {{domxref("Element.parentElement")}} is `null`.
+The **`before()`** method of the {{domxref("Element")}} interface inserts a set of {{domxref("Node")}} objects or strings in the children list of this `Element`'s parent, just before this `Element`. Strings are inserted as equivalent {{domxref("Text")}} nodes. Nothing happens if {{domxref("Node.parentNode", "parentNode")}} is `null`.
 
 ## Syntax
 
