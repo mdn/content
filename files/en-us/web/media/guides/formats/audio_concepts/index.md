@@ -92,7 +92,7 @@ We already talked about sample rates in the context of ADCs, and the codecs them
 - 8000 Hz
   - : The international [G.711](https://en.wikipedia.org/wiki/G.711) standard for audio used in telephony uses a sample rate of 8000 Hz (8 kHz). This is enough for human speech to be comprehensible.
 - 44100 Hz
-  - : The 44.1 kHz sample rate is used for compact disc (CD) audio. CDs provide uncompressed 16-bit stereo sound at 44.1 kHz. Computer audio also frequently uses this frequency by default.
+  - : The 44.1 kHz sample rate is used for compact disc (CD) audio. CDs provide uncompressed 16-bit stereo sound at 44.1 kHz. Computer audio also often uses this frequency by default.
 - 48000 Hz
   - : The audio on DVD is recorded at 48 kHz. This is also often used for computer audio.
 - 96000 Hz
@@ -130,7 +130,7 @@ On the web, the most common configuration is stereo (2 channels: left and right)
 </math>
 <!-- prettier-ignore-end -->
 
-At 192 Kbps, lower-end networks will be strained when playing a single audio stream. If the network is also doing other things, even faster networks may run out of bandwidth. With so much competition for network capacity, especially on slower networks, this amount of data may be too much for real-time applications to viably transmit.
+At 192 kBps, lower-end networks will be strained when playing a single audio stream. If the network is also doing other things, even faster networks may run out of bandwidth. With so much competition for network capacity, especially on slower networks, this amount of data may be too much for real-time applications to viably transmit.
 
 > [!NOTE]
 > Network bandwidth (bytes per second) is obviously not the same thing as audio bandwidth (maximum recorded frequency), which is discussed in [Sampling audio](#sampling_audio), above.
@@ -207,11 +207,11 @@ Importantly, codecs do all the hard work for you. It's why so much engineering a
 
 ## Lossless encoder parameters
 
-Lossless encoders have a lot less room to manipulate the audio to improve the compression rate, given the need to be able to reproduce the original audio, which limits the number of options available to configure these encoders. The options tend to revolve around choosing the method by which the encoder performs the encoding and how much time and processor power it's allowed to consume in order to do so.
+Lossless encoders have less room to manipulate audio to improve compression rates, given the need to reproduce the original audio. This limits the number of options available to configure these encoders. The options tend to revolve around choosing a method to perform the encoding, and specifying how much time and processor power the encoder is allowed to consume in order to do so.
 
 These parameters vary depending on the codec, but can include:
 
-- Specifying specific algorithms to use during particular phases of the encoding process
+- Algorithms to use during particular phases of the encoding process
 - Parameters for those algorithms to use, such as how much predictive depth to use when trying to model the audio
 - The number of passes to make while analyzing the audio, or the number of times given algorithms should be run
 
@@ -219,7 +219,7 @@ These parameters vary depending on the codec, but can include:
 
 Most codecs have input values you can tune to optimize the compression in various ways, either for size or for quality. When using a lossy encoder, the higher the quality, the larger the encoded audio will be. Because of this, most options affect both quality and size in some manner.
 
-You will need to refer to the documentation for the encoding software you use to determine which options are available, which will depend on the codec and the encoding software itself. Some codecs have a number of values you can adjust (some of which may require a deep understanding of both psychoacoustics and of the codec's algorithms), and others offer a "quality" parameter you can set, which automatically adjusts various properties of the algorithm.
+Refer to the documentation for the encoding software you use to determine which options are available. Some codecs have several values you can adjust (some of which may require a deep understanding of psychoacoustics and the codec's algorithms), while others offer a "quality" parameter that automatically adjusts various algorithm properties.
 
 ### Bit rate
 
@@ -227,13 +227,13 @@ There are two mutually-exclusive ways to control the quality of the compressed a
 
 #### Average bit rate
 
-The first method for controlling the quality of the output file is to specify the **Average Bit Rate** (**ABR**) to target when encoding the audio. The encoder will attempt to produce an encoded sound file that, when playing it back, uses, on average, the specified number of bits for each second of audio. This controls quality from the perspective of the encoded audio size; the higher the bit rate, the higher the resulting audio quality will be. The quality of the audio will fluctuate over time as needed in order to meet the targeted bit rate.
+The first method for controlling output file quality is to specify the **Average Bit Rate** (**ABR**) to target when encoding the audio. The encoder will attempt to produce an encoded sound file that uses, on average, the specified number of bits for each second of audio playback. This controls quality from the perspective of the encoded audio size; the higher the bit rate, the higher the resulting audio quality will be. Audio quality will fluctuate over time as needed to meet the targeted bit rate.
 
 Somewhat similar to ABR is **CBR** (**Constant Bit Rate**). Where ABR attempts to keep the bit rate on average at a given level, while allowing some fluctuation, CBR uses an actually fixed bit rate for the duration of the audio. CBR is primarily used in codecs designed for voice-only purposes, where the frequency range and variation tends to be minimal, allowing CBR encoding to work without unworkable fluctuations in audio quality.
 
 #### Variable bit rate
 
-**Variable Bit Rate** (**VBR**) encoding works by accepting as an input into the encoder a **constant quality** setting. This indicates a quality level to maintain for the duration of the audio, allowing the bit rate to fluctuate as needed to achieve that quality level. In portions of the sound where compression is easily achieved with minimum impact to quality, the bit rate may be very low, while in areas where compression is more complex, the bit rate will be higher.
+**Variable Bit Rate** (**VBR**) encoding works by accepting as an input a **constant quality** setting. This indicates a quality level to maintain for the audio's entire duration, allowing the bit rate to fluctuate as needed to achieve that quality. In portions of the sound where compression is easily achieved with minimum impact to quality, the bit rate may be very low, while in areas where compression is more complex, the bit rate will be higher.
 
 ### Audio frequency bandwidth
 
@@ -253,7 +253,7 @@ There are two types of joint stereo: mid-side and intensity. Over the duration o
 
 #### Mid-side stereo coding
 
-**Mid-side stereo coding** (**MS**) works by recording frames that contain a fundamental **mid channel**, which is the average amplitude of the original left and right audio channels. This is essentially what you would calculate as the amplitude when converting a stereo signal into mono. Then you store the **side channel** value; this value is a number which can be added to the **mid channel** value to determine left channel's original amplitude, and subtracted from the mid channel value to compute the right channel's original value.
+**Mid-side stereo coding** (**MS**) works by recording frames that contain a fundamental **mid channel**, which is the average amplitude of the original left and right audio channels. This is essentially what you would calculate as the amplitude when converting a stereo signal into mono. Then you store the **side channel** value; this number is added to the **mid channel** value to determine the left channel's original amplitude, and subtracted from the mid channel value to compute the right channel's original value.
 
 In other words, given a left channel, L, and a right channel, R, you perform the following calculations when encoding a sample:
 
@@ -269,7 +269,7 @@ In other words, given a left channel, L, and a right channel, R, you perform the
 </math>
 <!-- prettier-ignore-end -->
 
-Then you store the values of `mid` and `side`. While `mid` is still the same size as your sample size (such as 16 bits), the value of `side` can probably be stored in a smaller number of bits, since the amplitude of the two channels is probably relatively similar. The encoder can then take this smaller number of total bits per frame and perform additional computations to further reduce the size.
+Then you store the values of `mid` and `side`. While `mid` is still the same size as your sample size (such as 16 bits), the value of `side` can probably be stored in a smaller number of bits, since the amplitude of the two channels is relatively similar. The encoder can then take this smaller number of total bits per frame and perform additional computations to further reduce the size.
 
 While decoding the audio, the absolute left and right channel values are calculated like this:
 
