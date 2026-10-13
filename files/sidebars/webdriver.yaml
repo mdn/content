@@ -124,7 +124,20 @@ sidebar:
           - link: /Web/WebDriver/Reference/BiDi/Modules/log/entryAdded
             code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/network
+        details: closed
         code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/network#events
+            title: Events
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/fetchError
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/responseStarted
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/permissions
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/script
