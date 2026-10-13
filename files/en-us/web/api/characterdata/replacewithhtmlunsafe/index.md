@@ -18,9 +18,9 @@ browser-compat: api.CharacterData.replaceWithHTMLUnsafe
 > [!NOTE]
 > {{domxref("Element.replaceWithHTML()")}} should almost always be used instead of this method — on browsers where it is supported — as it always removes XSS-unsafe HTML entities.
 
-The **`replaceWithHTMLUnsafe()`** method of the {{domxref("CharacterData")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and then using it to replace the element in the DOM.
+The **`replaceWithHTMLUnsafe()`** method of the {{domxref("CharacterData")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and then using it to replace the character data in the DOM.
 
-This is similar to {{domxref("Element.setHTMLUnsafe")}} but allows replacement of the entire element, rather than setting child elements only.
+This is similar to {{domxref("Element.setHTMLUnsafe")}} but allows replacement of the entire character data, rather than setting child elements of an element.
 
 Note that the safe variants of these methods (for example, {{domxref("CharacterData.replaceWithHTML")}}) always use the XSS-safe sanitizer, as well as any provided sanitizer parameter. The provided sanitizer is applied in addition to the default XSS-safe sanitizer, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
 
@@ -64,12 +64,26 @@ None (`undefined`).
 ## Description
 
 The **`replaceWithHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes, and discarding elements that the HTML specification doesn't allow in the target element (such as {{htmlelement("li")}} inside a {{htmlelement("div")}}).
-The `DocumentFragment` is then used to replace the element in the DOM.
+The `DocumentFragment` is then used to replace the character data in the DOM.
 
 Unlike with {{domxref("Element.innerHTML")}}, [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in the input will be parsed into the DOM.
 If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as `<template>` elements within that shadow root.
 
 `replaceWithHTMLUnsafe()` doesn't perform any sanitization by default, though also does not run scripts by default. If no sanitizer is passed as a parameter, all HTML entities in the input will be injected. It is therefore potentially even less safe that {{domxref("Element.innerHTML")}}, which does not allow {{htmlelement("script")}} execution when parsing.
+
+### Related HTML setter APIs
+
+This is part of a series of APIs to set HTML:
+
+| Action                                    | API                                                             | Unsafe API                                                                  |
+| ----------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Replace the entire element with this HTML | {{domxref("CharacterData.replaceWithHTML", "replaceWithHTML")}} | {{domxref("CharacterData.replaceWithHTMLUnsafe", "replaceWithHTMLUnsafe")}} |
+| Add the HTML before the element           | {{domxref("CharacterData.beforeHTML", "beforeHTML")}}           | {{domxref("CharacterData.beforeHTMLUnsafe", "beforeHTMLUnsafe")}}           |
+| Add the HTML after the element            | {{domxref("CharacterData.afterHTML", "afterHTML")}}             | {{domxref("CharacterData.afterHTMLUnsafe", "afterHTMLUnsafe")}}             |
+
+Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allow allow scripts to be run using the `runScripts` options.
+
+Similar elements, and more, exist on Element (for example {{domxref("Element.replaceWithHTMLUnsafe")}}).
 
 ### Security considerations
 
@@ -87,7 +101,7 @@ If for any reason you can't use `TrustedHTML` (or even better, `replaceWithHTML(
 
 ### When should `replaceWithHTMLUnsafe()` be used?
 
-`replaceWithHTMLUnsafe()` should almost never be used if {{domxref("Element.replaceWithHTML()")}} is available, because there are very few (if any) cases where user-provided HTML input should need to include XSS-unsafe elements.
+`replaceWithHTMLUnsafe()` should almost never be used if {{domxref("CharacterData.replaceWithHTML()")}} is available, because there are very few (if any) cases where user-provided HTML input should need to include XSS-unsafe elements.
 Not only is `replaceWithHTML()` safe, but it avoids having to consider trusted types.
 
 Using `replaceWithHTMLUnsafe()` might be appropriate if:
@@ -230,8 +244,9 @@ myText.replaceWithHTMLUnsafe(untrustedString, {
 
 ## See also
 
-- {{domxref("Element.replaceWithHTML()")}}
-- {{domxref("ShadowRoot.replaceWithHTMLUnsafe()")}}
+- {{domxref("CharacterData.replaceWithHTML()")}}
+- {{domxref("Element.replaceWithHTML()")}} and {{domxref("Element.replaceWithHTMLUnsafe()")}}
+- {{domxref("ShadowRoot.replaceWithHTML()")}} and {{domxref("ShadowRoot.replaceWithHTMLUnsafe()")}}
 - {{domxref("Element.setHTMLUnsafe()")}}
 - {{domxref("Element.innerHTML")}}
 - {{domxref("Document.parseHTML_static", "Document.parseHTML()")}} and {{domxref("Document.parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
