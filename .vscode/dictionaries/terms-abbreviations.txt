@@ -244,6 +244,7 @@ fontface
 fontfaces
 footguns
 forgeable
+formants
 FOUC
 Fourway
 FOUT
