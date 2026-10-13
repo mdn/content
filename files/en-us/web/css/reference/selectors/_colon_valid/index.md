@@ -65,7 +65,7 @@ In this example, we include extra `<span>` elements to generate content that ind
 
 ```html
 <fieldset>
-  <legend>Feedback form</legend>
+  <legend>Contact information</legend>
   <p>Required fields are labeled with "required".</p>
   <div>
     <label for="fname">First name: </label>

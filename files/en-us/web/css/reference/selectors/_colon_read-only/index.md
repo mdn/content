@@ -24,10 +24,10 @@ label {
 ```
 
 ```html interactive-example
-<p>Please fill your details:</p>
+<p>Please enter your details:</p>
 
 <label for="email">Email Address:</label>
-<input id="email" name="email" type="email" value="test@example.com" />
+<input id="email" name="email" type="email" value="test@example.com" readonly />
 
 <label for="note">Short note about yourself:</label>
 <textarea id="note" name="note">Don't be shy</textarea>
@@ -48,7 +48,7 @@ label {
 
 ### Confirming form information using read-only or read-write controls
 
-One use of read-only form controls is to allow the user to check and verify information that they may have entered in an earlier form (for example, shipping details), while still being able to submit the information along with the rest of the form. The example below shows how to style these controls.
+One use of read-only form controls is to allow the user to check and verify information that they may have entered in an earlier form (for example, shipping details), while still being able to submit the information along with the rest of the form. This example shows how to style these controls.
 
 The `:read-only` pseudo-class is used to remove all the styling that makes the inputs look like clickable fields, making them look more like read-only paragraphs. The `:read-write` pseudo-class on the other hand is used to provide some nicer styling to the editable `<textarea>`.
 

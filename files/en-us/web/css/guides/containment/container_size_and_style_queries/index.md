@@ -264,11 +264,7 @@ In this example, we have a {{htmlelement("fieldset")}} with four radio buttons. 
       <input type="radio" name="selection" value="currentColor" id="other" />
       <label for="other">Other</label>
       <label for="color">color:</label>
-      <input
-        text="checkbox"
-        name="selection-value"
-        value="currentColor"
-        id="color" />
+      <input name="selection-value" value="currentColor" id="color" />
     </li>
   </ol>
 </fieldset>

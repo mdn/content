@@ -57,31 +57,24 @@ This pseudo-class is useful for giving the user a visual indication that a field
 ### HTML
 
 ```html
-<ul>
-  Values between 1 and 10 are valid.
-  <li>
-    <input
-      id="value1"
-      name="value1"
-      type="number"
-      placeholder="1 to 10"
-      min="1"
-      max="10"
-      value="12"
-      required />
-    <label for="value1">Your value is </label>
-  </li>
-</ul>
+<p>
+  <label for="value1">How many toes? Values between 1 and 10 are valid.</label>
+  <input
+    id="value1"
+    name="value1"
+    type="number"
+    placeholder="1 to 10"
+    min="1"
+    max="10"
+    value="12"
+    required />
+  <span></span>
+</p>
 ```
 
 ### CSS
 
 ```css
-li {
-  list-style: none;
-  margin-bottom: 1em;
-}
-
 input {
   border: 1px solid black;
 }
@@ -95,12 +88,12 @@ input:out-of-range {
   border: 2px solid red;
 }
 
-input:in-range + label::after {
-  content: "okay.";
+input:in-range + span::after {
+  content: "Your value is okay.";
 }
 
-input:out-of-range + label::after {
-  content: "out of range!";
+input:out-of-range + span::after {
+  content: "Your value is out of range!";
 }
 ```
 

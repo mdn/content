@@ -41,10 +41,12 @@ We include a required number field and a button to check its validity.
 <p>
   <button type="button" id="check">checkValidity()</button>
 </p>
-<p id="log"></p>
+<pre id="log"></pre>
 ```
 
 ### JavaScript
+
+We log the return value of `checkValidity()` when the button is activated. We also listen for the `invalid` event and append a message to the output when it fires.
 
 ```js
 const output = document.querySelector("#log");
@@ -52,12 +54,12 @@ const checkButton = document.querySelector("#check");
 const ageInput = document.querySelector("#age");
 
 ageInput.addEventListener("invalid", () => {
-  console.log("Invalid event fired.");
+  output.textContent += "Invalid event fired.\n";
 });
 
 checkButton.addEventListener("click", () => {
   const checkVal = ageInput.checkValidity();
-  output.innerHTML = `checkValidity returned: ${checkVal}`;
+  output.textContent = `checkValidity returned: ${checkVal}`;
 });
 ```
 
@@ -65,7 +67,7 @@ checkButton.addEventListener("click", () => {
 
 {{EmbedLiveSample("Examples", "100%", 220)}}
 
-When `false`, if the value is missing, below 21, above 65, or otherwise invalid, the invalid event will be logged to the console. To report the error to the user, use {{domxref("HTMLInputElement.reportValidity()")}} instead.
+When `false`, if the value is missing, below 21, above 65, or otherwise invalid, the invalid event will be logged in the output. To report the error to the user, use {{domxref("HTMLInputElement.reportValidity()")}} instead.
 
 ## Specifications
 

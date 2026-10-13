@@ -53,21 +53,23 @@ In this example, the container will receive special coloring styles when either 
 ### HTML
 
 ```html
-<p>Try typing into these fields.</p>
-
-<div class="group">
-  <label for="given_name">Given Name:</label>
-  <input id="given_name" type="text" />
-  <br />
-  <label for="family_name">Family Name:</label>
-  <input id="family_name" type="text" />
-</div>
+<ul class="group">
+  <li>
+    <label for="given-name">Given Name:</label>
+    <input id="given-name" type="text" />
+  </li>
+  <li>
+    <label for="family-name">Family Name:</label>
+    <input id="family-name" type="text" />
+  </li>
+</ul>
 ```
 
 ### CSS
 
 ```css
 .group {
+  list-style: none;
   border: 1px solid;
   color: gray;
   padding: 4px;
@@ -86,6 +88,8 @@ input {
 ### Result
 
 {{EmbedLiveSample("Examples", 500, 150)}}
+
+Try typing in the text fields.
 
 ## Specifications
 

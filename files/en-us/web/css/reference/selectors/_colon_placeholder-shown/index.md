@@ -110,18 +110,17 @@ The following example highlights the Student ID field with a custom style.
 
 ```html
 <p>
-  <label for="name">Enter Student Name:</label>
+  <label for="name">Student Name:</label>
   <input id="name" placeholder="Student Name" />
 </p>
 <p>
-  <label for="branch">Enter Student Branch:</label>
+  <label for="branch">Student Branch:</label>
   <input id="branch" placeholder="Student Branch" />
 </p>
 <p>
-  <label for="sid">Enter Student ID:</label>
+  <label for="sid">8-Digit Student ID:</label>
   <input
     pattern="[0-9]{8}"
-    title="8 digit ID"
     id="sid"
     class="student-id"
     placeholder="8 digit id" />

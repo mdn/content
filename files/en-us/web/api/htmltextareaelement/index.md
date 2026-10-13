@@ -138,7 +138,7 @@ textarea.no-scrollbars {
 Insert some HTML tags in a textarea:
 
 ```js live-sample___insert-html
-const textArea = document.querySelector("#myTextArea");
+const textArea = document.querySelector("#my-text-area");
 
 function insert(startTag, endTag) {
   const start = textArea.selectionStart;
@@ -198,7 +198,7 @@ Decorate the span to behave like a link:
 </p>
 
 <p>
-  <textarea id="myTextArea" name="myTextArea" rows="10" cols="50">
+  <textarea id="my-text-area" name="myTextArea" rows="10" cols="50">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vitae adipiscing placerat, nisl lectus accumsan nisi, vitae iaculis sem neque vel lectus. Praesent tristique commodo lorem quis fringilla. Sed ac tellus eros. 
   </textarea>
 </p>
