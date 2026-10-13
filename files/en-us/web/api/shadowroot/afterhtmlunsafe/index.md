@@ -248,7 +248,7 @@ target.afterHTMLUnsafe(untrustedString, {
 ## See also
 
 - {{domxref("ShadowRoot.afterHTML()")}}
-- {{domxref("ShadowRoot.afterHTML()")}} and {{domxref("CharacterData.afterHTMLUnsafe()")}}
+- {{domxref("ShadowRoot.afterHTML()")}} and {{domxref("ShadowRoot.afterHTMLUnsafe()")}}
 - {{domxref("CharacterData.afterHTML()")}} and {{domxref("CharacterData.afterHTMLUnsafe()")}}
 - {{domxref("ShadowRoot.setHTMLUnsafe()")}}
 - {{domxref("ShadowRoot.innerHTML")}}

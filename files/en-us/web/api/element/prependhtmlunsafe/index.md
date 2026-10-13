@@ -248,7 +248,7 @@ target.prependHTMLUnsafe(untrustedString, {
 ## See also
 
 - {{domxref("Element.prependHTML()")}}
-- {{domxref("ShadowRoot.prependHTML()")}} and {{domxref("CharacterData.prependHTMLUnsafe()")}}
+- {{domxref("ShadowRoot.prependHTML()")}} and {{domxref("ShadowRoot.prependHTMLUnsafe()")}}
 - {{domxref("Element.setHTMLUnsafe()")}}
 - {{domxref("Element.innerHTML")}}
 - {{domxref("Document.parseHTML_static", "Document.parseHTML()")}} and {{domxref("Document.parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}

@@ -248,7 +248,7 @@ target.appendHTMLUnsafe(untrustedString, {
 ## See also
 
 - {{domxref("ShadowRoot.appendHTML()")}}
-- {{domxref("ShadowRoot.appendHTML()")}} and {{domxref("CharacterData.appendHTMLUnsafe()")}}
+- {{domxref("ShadowRoot.appendHTML()")}} and {{domxref("ShadowRoot.appendHTMLUnsafe()")}}
 - {{domxref("ShadowRoot.setHTMLUnsafe()")}}
 - {{domxref("ShadowRoot.innerHTML")}}
 - {{domxref("Document.parseHTML_static", "Document.parseHTML()")}} and {{domxref("Document.parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
