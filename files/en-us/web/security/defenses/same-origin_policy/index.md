@@ -19,6 +19,7 @@ The following table gives examples of origin comparisons with the URL `http://st
 | ------------------------------------------------- | ----------- | ------------------------------------------------ |
 | `http://store.company.com/dir2/other.html`        | Same origin | Only the path differs                            |
 | `http://store.company.com/dir/inner/another.html` | Same origin | Only the path differs                            |
+| `http://store.company.com:80/page.html`           | Sane origin | `http://` defaults to port 80                    |
 | `https://store.company.com/page.html`             | Failure     | Different protocol                               |
 | `http://store.company.com:81/dir/page.html`       | Failure     | Different port (`http://` is port 80 by default) |
 | `http://news.company.com/dir/page.html`           | Failure     | Different host                                   |
