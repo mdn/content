@@ -12,6 +12,7 @@ The **`Element.after()`** method inserts a set of
 {{domxref("Node")}} objects or strings in the children list of the
 `Element`'s parent, just after the `Element`.
 Strings are inserted as equivalent {{domxref("Text")}} nodes.
+No action is performed if {{domxref(Element.parentElement)}} is `null`.
 
 ## Syntax
 
