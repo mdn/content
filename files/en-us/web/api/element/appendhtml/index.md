@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Element.appendHTML
 ---
 
-{{APIRef("HTML Sanitizer API")}}
+{{APIRef("DOM")}}
 
 The **`appendHTML()`** method of the {{domxref("Element")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and inserts it into the DOM as the last child of the element.
 

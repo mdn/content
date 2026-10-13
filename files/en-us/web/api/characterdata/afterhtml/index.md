@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CharacterData.afterHTML
 ---
 
-{{APIRef("HTML Sanitizer API")}}
+{{APIRef("DOM")}}
 
 The **`afterHTML()`** method of the {{domxref("CharacterData")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and insert it into the DOM after the existing character data.
 

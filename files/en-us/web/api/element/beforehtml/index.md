@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Element.beforeHTML
 ---
 
-{{APIRef("HTML Sanitizer API")}}
+{{APIRef("DOM")}}
 
 The **`beforeHTML()`** method of the {{domxref("Element")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and insert it into the DOM before the element.
 

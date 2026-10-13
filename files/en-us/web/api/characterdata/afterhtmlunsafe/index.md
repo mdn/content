@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CharacterData.afterHTMLUnsafe
 ---
 
-{{APIRef("HTML Sanitizer API")}}
+{{APIRef("DOM")}}
 
 > [!WARNING]
 > This method parses its input as HTML, writing the result into the DOM.
