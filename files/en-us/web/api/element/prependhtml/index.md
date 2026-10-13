@@ -67,6 +67,8 @@ Note that even if unsafe options are allowed by the sanitizer, they will still b
 
 The method does nothing if the element is a {{HTMLElement("script")}} element (and similar for SVG {{SVGElement("script")}} elements).
 
+For {{HTMLElement("template")}} elements, the HTML is inserted into the template contents (the template `DocumentFragment`), rather than as direct children.
+
 `prependHTML()` can be used instead of {{domxref("Element.setHTML")}} when the HTML needs to insert it into the DOM as the first child of the given element, rather than replacing the whole child HTML of the given element.
 
 It should also be used instead of {{domxref("Element.prependHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.

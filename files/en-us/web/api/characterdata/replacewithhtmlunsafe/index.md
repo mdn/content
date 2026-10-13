@@ -232,12 +232,10 @@ const untrustedString = "<em>Other content</em>";
 // Get the myText Element with id "myText"
 const myText = document.getElementById("myText").firstChild;
 
-// Define custom SanitizerConfig within setHTMLUnsafe()
-// Allows the <script> element (since not sanitizer is passed which excludes it)
+// No sanitizer is passed, so the <script> element is kept
 // and also executes the script after insertion.
 myText.replaceWithHTMLUnsafe(untrustedString, {
-  sanitizer: {},
-  runScript: true,
+  runScripts: true,
 });
 ```
 

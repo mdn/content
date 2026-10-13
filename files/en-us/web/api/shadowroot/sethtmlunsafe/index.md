@@ -359,8 +359,7 @@ const untrustedString =
 // Get the shadow root element
 const shadow = document.querySelector("#host").shadowRoot;
 
-// Define custom SanitizerConfig within setHTMLUnsafe()
-// Allows the <script> element (since not sanitizer is passed which excludes it)
+// No sanitizer is passed, so the <script> element is kept
 // and also executes the script after insertion.
 shadow.setHTMLUnsafe(untrustedString, {
   runScripts: true,

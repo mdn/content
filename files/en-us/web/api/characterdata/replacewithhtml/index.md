@@ -10,14 +10,14 @@ browser-compat: api.CharacterData.replaceWithHTML
 
 {{APIRef("DOM")}}
 
-The **`replaceWithHTML()`** method of the {{domxref("CharacterData")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and insert it into the DOM as a replacement of the character data.
+The **`replaceWithHTML()`** method of the {{domxref("CharacterData")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and insert it into the DOM as a replacement of the node.
 
 The method removes any elements and attributes that are considered XSS-unsafe, even if allowed by a passed sanitizer.
 Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{SVGElement("use")}}, and event handler attributes.
 
 The method does nothing if the node has no parent or the parent is a {{HTMLElement("script")}} element (and similar for SVG {{SVGElement("script")}} elements).
 
-This is similar to {{domxref("Element.setHTML")}} but allows replacement of the entire character data, rather than setting child elements of an element.
+This is similar to {{domxref("Element.setHTML")}} but allows replacement of the entire node, rather than setting child elements of an element.
 
 ## Syntax
 

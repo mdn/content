@@ -15,7 +15,7 @@ The **`appendHTML()`** method of the {{domxref("ShadowRoot")}} interface provide
 The method removes any elements and attributes that are considered XSS-unsafe, even if allowed by a passed sanitizer.
 Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{SVGElement("use")}}, and event handler attributes.
 
-This is similar to {{domxref("ShadowRoot.setHTML")}} but allows addition of new HTML as the last child of the element, rather than setting the whole child HTML only.
+This is similar to {{domxref("ShadowRoot.setHTML")}} but allows addition of new HTML as the last child of the shadow root, rather than setting the whole child HTML only.
 
 ## Syntax
 

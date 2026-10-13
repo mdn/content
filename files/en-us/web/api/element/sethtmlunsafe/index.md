@@ -65,6 +65,8 @@ None (`undefined`).
 The **`setHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes, and discarding elements that the HTML specification doesn't allow in the target element ({{htmlelement("col")}} element outside of a {{htmlelement("table")}}).
 The `DocumentFragment` is then used to replace the element's subtree in the DOM.
 
+For {{HTMLElement("template")}} elements, the HTML is inserted into the template contents (the template `DocumentFragment`), rather than as direct children.
+
 Unlike with {{domxref("Element.innerHTML")}}, [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in the input will be parsed into the DOM.
 If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as `<template>` elements within that shadow root.
 
@@ -349,8 +351,7 @@ const untrustedString =
 // Get the target Element with id "target"
 const target = document.getElementById("target");
 
-// Define custom SanitizerConfig within setHTMLUnsafe()
-// Allows the <script> element (since not sanitizer is passed which excludes it)
+// No sanitizer is passed, so the <script> element is kept
 // and also executes the script after insertion.
 target.setHTMLUnsafe(untrustedString, {
   runScripts: true,
