@@ -165,9 +165,7 @@ At this point, let's look at some useful techniques you can apply to your search
 You can provide a useful placeholder inside your search input that could give a hint on what to do using the [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder) attribute. Look at the following example:
 
 ```html
-<div>
-  <input type="search" id="mySearch" name="q" placeholder="Search the site…" />
-</div>
+<input type="search" id="mySearch" name="q" placeholder="Search the site…" />
 ```
 
 You can see how the placeholder is rendered below:
@@ -187,14 +185,12 @@ Let's have a look at a minimal example:
 
 ```html
 <search>
-  <div>
-    <input
-      type="search"
-      id="mySearch"
-      name="q"
-      placeholder="Search the site…"
-      aria-label="Search through site content" />
-  </div>
+  <input
+    type="search"
+    id="mySearch"
+    name="q"
+    placeholder="Search the site…"
+    aria-label="Search through site content" />
 </search>
 ```
 
@@ -212,14 +208,12 @@ There is no visual difference from the previous example, but screen reader users
 The physical size of the input box can be controlled using the [`size`](/en-US/docs/Web/HTML/Reference/Elements/input#size) attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the search box is 30 characters wide:
 
 ```html
-<div>
-  <input
-    type="search"
-    id="mySearch"
-    name="q"
-    placeholder="Search the site…"
-    size="30" />
-</div>
+<input
+  type="search"
+  id="mySearch"
+  name="q"
+  placeholder="Search the site…"
+  size="30" />
 ```
 
 The result is this wider input box:
