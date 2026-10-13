@@ -195,7 +195,6 @@ downsampling
 DPIA
 dragonfish
 DSCP
-DTLSL
 dyscalculia
 EBNF
 ECSDA
