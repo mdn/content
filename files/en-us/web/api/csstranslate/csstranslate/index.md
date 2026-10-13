@@ -35,9 +35,7 @@ new CSSTranslate(x, y, z)
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Raised if the value of `CSSTranslate.x` or `CSSTranslate.y` is not a {{cssxref('length-percentage')}}.
-- {{jsxref("TypeError")}}
-  - : Raised if the value of `CSSTranslate.z` exists but is not a {{cssxref('length')}}.
+  - : Thrown if the value of `CSSTranslate.x` or `CSSTranslate.y` is not a {{cssxref('length-percentage')}}, or if the value of `CSSTranslate.z` exists but is not a {{cssxref('length')}}.
 
 ## Examples
 
