@@ -94,6 +94,8 @@ For more details, refer to the [Content negotiation article](/en-US/docs/Web/HTT
   - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/Guides/MIME_types) the server is able to understand in a {{HTTPMethod("PATCH")}} request.
 - {{HTTPHeader("Accept-Post")}}
   - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/Guides/MIME_types) the server is able to understand in a {{HTTPMethod("POST")}} request.
+- {{HTTPHeader("Accept-Query")}}
+  - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/Guides/MIME_types) the server is able to understand in a {{HTTPMethod("QUERY")}} request.
 
 ## Controls
 

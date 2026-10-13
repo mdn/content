@@ -57,7 +57,7 @@ _The `Performance` interface doesn't inherit any methods._
 - {{domxref("Performance.setResourceTimingBufferSize()")}}
   - : Sets the browser's resource timing buffer size to the specified number of `"resource"` {{domxref("PerformanceEntry.entryType","type")}} {{domxref("PerformanceEntry")}} objects.
 - {{domxref("Performance.toJSON()")}}
-  - : Returns a JSON representation of the `Performance` object.
+  - : Returns a JSON-serializable plain object representing the `Performance` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Events
 

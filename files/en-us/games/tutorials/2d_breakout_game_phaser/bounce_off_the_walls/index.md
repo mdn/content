@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Physics", "Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls")}}
 
-This is the **6th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Now that physics have been introduced, we can start implementing collision detection into the game—first we'll look at the walls.
+This is the **4th step** out of 12 of the [creating a Breakout game using Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Now that physics have been introduced, we can start implementing collision detection into the game—first we'll look at the walls.
 
 ## Bouncing off the world boundaries
 

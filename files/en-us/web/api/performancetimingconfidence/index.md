@@ -23,7 +23,7 @@ The `PerformanceTimingConfidence` object for each navigation timing entry is acc
 ## Instance methods
 
 - {{domxref("PerformanceTimingConfidence.toJSON()")}} {{experimental_inline}}
-  - : Returns a JSON representation of the `PerformanceTimingConfidence` object.
+  - : Returns a JSON-serializable plain object representing the `PerformanceTimingConfidence` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Description
 

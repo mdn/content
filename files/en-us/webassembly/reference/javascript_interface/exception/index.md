@@ -68,7 +68,7 @@ WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then(
 );
 ```
 
-You can check whether it has the same exception type we defined earlier (`myErrorTag`) using [`Exception.prototype.is()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/is), and then access the exception's payload using [`Exception.prototype.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg)).
+You can check whether it has the same exception type we defined earlier (`myErrorTag`) using [`Exception.prototype.is()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/is), and then access the exception's payload using [`Exception.prototype.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg).
 
 JavaScript and other client code can only access WebAssembly exception values, and vice versa, when the associated tag is shared (you can't just use another tag that happens to define the same data types).
 Without the matching tag, exceptions can be caught and re-thrown, but they can't be inspected.

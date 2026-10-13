@@ -30,7 +30,7 @@ _The `RTCSessionDescription` interface doesn't inherit any properties._
 _The `RTCSessionDescription` interface doesn't inherit any methods._
 
 - {{domxref("RTCSessionDescription.toJSON()")}}
-  - : Returns a {{Glossary("JSON")}} description of the object. The values of both properties, {{domxref("RTCSessionDescription.type", "type")}} and {{domxref("RTCSessionDescription.sdp", "sdp")}}, are contained in the generated JSON.
+  - : Returns a JSON-serializable plain object representing the `RTCSessionDescription` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Example
 

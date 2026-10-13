@@ -14,7 +14,7 @@ The value of a `TrustedScriptURL` object is set when the object is created and c
 ## Instance methods
 
 - {{domxref("TrustedScriptURL.toJSON()")}}
-  - : Returns a JSON representation of the stored data.
+  - : Returns a string representing the `TrustedScriptURL` object, which is the same value as {{domxref("TrustedScriptURL.toString()")}}. Automatically called by {{jsxref("JSON.stringify()")}}.
 - {{domxref("TrustedScriptURL.toString()")}}
   - : A string containing the sanitized URL.
 

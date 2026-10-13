@@ -86,7 +86,7 @@ The image file formats that are most commonly used on the web are listed below.
       <td>
         Supports lossy and lossless compression, progressive decoding, HDR, wide color gamuts, transparency, and animation.
         Because browser support is not yet universal, provide a fallback using the <code><a href="/en-US/docs/Web/HTML/Reference/Elements/picture">&lt;picture&gt;</a></code> element.<br />
-        <strong>Support:</strong> Safari; Chrome behind a flag; Firefox Nightly.
+        <strong>Support:</strong> Chrome, Edge, Firefox, Safari.
       </td>
     </tr>
     <tr>
@@ -873,7 +873,7 @@ When using JPEG XL, provide an alternative format such as AVIF, WebP, or JPEG [w
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        Safari 17 and later. Chrome 145 and later supports JPEG XL behind the <code>#enable-jxl-image-format</code> flag. Firefox supports it in preview releases. Safari does not support progressive download of JPEG XL files (it can render them after complete download).
+        Chrome 155, Edge 155, Firefox 158, and Safari 17. Safari does not support progressive download of JPEG XL files (it can render them after complete download).
       </td>
     </tr>
     <tr>
@@ -1360,7 +1360,7 @@ static unsigned char square8_bits[] = {
 Image formats are usually selected based on factors such as compression, quality, breadth and depth of browser support, and whether you need features such as transparency or animation.
 
 For raster images, prefer [WebP](#webp_image) or [AVIF](#avif_image), which generally provide better compression than PNG, JPEG, and GIF.
-You should also consider [JPEG XL](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_xl_image) for large, high-resolution raster images.
+You should also consider [JPEG XL](#jpeg_xl_image) for large, high-resolution raster images.
 Most browsers can progressively render them by displaying an initial version before the full image downloads.
 
 If you need to support browsers that don't allow WebP, AVIF, or JPEG XL, use the {{HTMLElement("picture")}} element to provide a PNG or JPEG fallback.
