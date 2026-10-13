@@ -92,7 +92,7 @@ You can try out this example here:
 
 ### Data representation of a radio group
 
-When a form containing the above controls is submitted with a radio button selected, the form's data includes an entry in the form `contact=value`. For example, if the user clicks on the "Phone" radio button then submits the form, the form's data will include the line `contact=phone`.
+When a form containing the above controls is submitted with a radio button selected, the form's data includes an entry in the form `contact=value`. For example, if the user clicks on the "Phone" radio button then submits the form, `contact=phone` will be included in the the form's submitted data.
 
 If you omit the `value` attribute in the HTML, the submitted form data assigns the value `on` to the group. In this scenario, if the user clicked on the "Phone" option and submitted the form, the resulting form data would be `contact=on`, which isn't helpful. So don't forget to set your `value` attributes!
 
