@@ -272,52 +272,50 @@ The following example is an extended version of the "multiple checkboxes" exampl
 ### HTML
 
 ```html
-<div class="interests">
-  <fieldset>
-    <legend>Choose your interests</legend>
-    <div>
-      <label>
-        <input type="checkbox" id="coding" name="interest" value="coding" />
-        Coding
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="music" name="interest" value="music" />
-        Music
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="art" name="interest" value="art" />
-        Art
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="sports" name="interest" value="sports" />
-        Sports
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="cooking" name="interest" value="cooking" />
-        Cooking
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="other" name="interest" value="other" />
-        Other
-      </label>
-      <input
-        type="text"
-        id="otherValue"
-        name="other"
-        aria-label="Other interest" />
-    </div>
-  </fieldset>
-</div>
+<fieldset>
+  <legend>Choose your interests</legend>
+  <div>
+    <label>
+      <input type="checkbox" id="coding" name="interest" value="coding" />
+      Coding
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="music" name="interest" value="music" />
+      Music
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="art" name="interest" value="art" />
+      Art
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="sports" name="interest" value="sports" />
+      Sports
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="cooking" name="interest" value="cooking" />
+      Cooking
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="other" name="interest" value="other" />
+      Other
+    </label>
+    <input
+      type="text"
+      id="otherValue"
+      name="other"
+      aria-label="Other interest" />
+  </div>
+</fieldset>
 ```
 
 ### CSS
@@ -327,16 +325,13 @@ html {
   font-family: sans-serif;
 }
 
-.interests {
-  width: 600px;
-  margin: 0 auto;
-}
-
 div {
   margin-bottom: 10px;
 }
 
 fieldset {
+  width: 600px;
+  margin: 0 auto;
   background: cyan;
   border: 5px solid blue;
 }
