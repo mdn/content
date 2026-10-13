@@ -114,7 +114,7 @@ The {{cssxref("column-rule-width")}} specifies the width of the line drawn betwe
 - `<auto-repeat-line-width>`
   - : A `repeat()` function, with `auto` as the first argument and one or more `<line-width>` values as subsequent arguments.
 
-Unlike the {{cssxref("gap-width")}} properties, `rule-width` properties don't affect layout.
+Unlike the {{cssxref("gap")}} properties, `rule-width` properties don't affect layout.
 These properties only define rule width. Rules appear in the middle of the gap, have no effect on the size of the gap, and have no impact on the box model. Rules that are wider than the gap are drawn behind the content.
 
 In this example, the {{cssxref("gap")}} is specified as `20px`. We define varying rule sizes using the `rule-width` property:
