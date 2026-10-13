@@ -67,7 +67,7 @@ This configuration is suitable for the majority of use cases as it prevents XSS 
 A custom `Sanitizer` or `SanitizerConfig` can be specified to choose which elements, attributes, and comments are allowed or removed.
 Note that even if unsafe options are allowed by the sanitizer, they will still be removed when using this method (it removes the same elements as a sanitizer on which {{domxref('Sanitizer.removeUnsafe()')}} has been called).
 
-`replaceWithHTML()` can be used instead of {{domxref("Element.setHTML")}} when the whole character data needs to be replaced.
+`replaceWithHTML()` can be used instead of {{domxref("Element.setHTML")}} when the whole node needs to be replaced.
 
 It should also be used instead of {{domxref("CharacterData.replaceWithHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
 
