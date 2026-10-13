@@ -200,7 +200,7 @@ The `.animated` elements' {{cssxref("position")}} is set to `fixed`, positioning
 body {
   width: 80%;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
   font-size: 1.3rem;
 }
 
@@ -248,7 +248,7 @@ Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation:
 }
 ```
 
-Using the {{cssxref("animation")}} shorthand, the `rotate` animation is applied to the `.animated` elements. Without an associated trigger, the elements would start animating when the page loads. The `animation-trigger` property makes it a triggered animation. The values reference a `timeline-trigger-name` of `--t` and `--longerT`, respectively, and define the same two `<animation-action>` values — `play` and `pause` — which specify that the animations will play on activation and pause on deactivation.
+Using the {{cssxref("animation")}} shorthand, the `rotate` animation is applied to the `.animated` elements. Without an associated trigger, the elements would start animating when the page loads. The `animation-trigger` property makes it a triggered animation. The values reference a `timeline-trigger-name` of `--t` and `--longer-t`, respectively, and define the same two `<animation-action>` values — `play` and `pause` — which specify that the animations will play on activation and pause on deactivation.
 
 ```css live-sample___basic-example
 .animated {
@@ -256,7 +256,7 @@ Using the {{cssxref("animation")}} shorthand, the `rotate` animation is applied 
   animation-trigger: --t play pause;
 }
 .animated.longer {
-  animation-trigger: --longerT play pause;
+  animation-trigger: --longer-t play pause;
 }
 ```
 
@@ -268,7 +268,7 @@ The `.trigger` element creates the `.animated` element's trigger via the followi
 
 The `.trigger.longer` element creates the `.animated.longer` element's trigger via the following properties:
 
-- A {{cssxref("timeline-trigger-name")}} with value `--longerT` (overriding the `--t`), which is equal to the identifier referenced in the `.animated.longer` element's `animation-trigger` property value, associating the two together.
+- A {{cssxref("timeline-trigger-name")}} with value `--longer-t` (overriding the `--t`), which is equal to the identifier referenced in the `.animated.longer` element's `animation-trigger` property value, associating the two together.
 
 - A `timeline-trigger-active-range-start` of `contain 0%`, which occurs when the trigger's bottom edge is at the bottom edge of the scrollport.
 
@@ -279,7 +279,7 @@ The `.trigger.longer` element creates the `.animated.longer` element's trigger v
   timeline-trigger-activation-range: contain 50% contain 100%;
 }
 .trigger.longer {
-  timeline-trigger-name: --longerT;
+  timeline-trigger-name: --longer-t;
   timeline-trigger-active-range-start: contain 0%;
 }
 ```

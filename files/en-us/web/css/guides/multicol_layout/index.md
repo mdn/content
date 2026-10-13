@@ -316,8 +316,8 @@ blockquote p::after {
   - : Introduction to the fragmentation specification and how to control where column content breaks.
 - [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels)
   - : Create pure-CSS carousel UI features using scroll buttons, scroll markers, and generated columns.
-  - [Defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
-    - : Understanding and defining gaps in grid, flexbox, and multi-column layouts, including how percentage values are resolved.
+- [Defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
+  - : Understanding and defining gaps in grid, flexbox, and multi-column layouts, including how percentage values are resolved.
 
 ## Related concepts
 

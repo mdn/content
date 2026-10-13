@@ -83,12 +83,10 @@ document.addEventListener("visibilitychange", () => {
 });
 ```
 
-#### Avoid unload and beforeunload
+#### Legacy events
 
-In the past, many websites have used the [`unload`](/en-US/docs/Web/API/Window/unload_event)
-or [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) events to send analytics at the end of a session.
-However, this is extremely unreliable. In many situations, especially on mobile, the browser will not fire the
-`unload`, `beforeunload`, or `pagehide` events. For example, these events will not fire in the following situation:
+In the past, many websites have used the {{domxref("Window.unload_event", "unload")}}, {{domxref("Window.beforeunload_event", "beforeunload")}}, or {{domxref("Window.pagehide_event", "pagehide")}} events to send analytics at the end of a session.
+However, this is unreliable. In many situations, especially on mobile, the browser will not fire these events. For example, they will not fire in the following situation:
 
 1. The user loads the page and interacts with it.
 2. When they are finished, they switch to a different app, instead of closing the tab.
@@ -100,10 +98,7 @@ thus hurting performance. Others, such as Safari and Chrome on Android, handle i
 
 Firefox will also exclude pages from the bfcache if they contain `beforeunload` handlers.
 
-#### Use pagehide as a fallback
-
-To support browsers which don't implement `visibilitychange`, use the [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) event.
-Like `beforeunload` and `unload`, this event is not reliably fired, especially on mobile. However, it is compatible with the bfcache.
+The `pagehide` event is not as problematic as `unload` or `beforeunload`, because it is compatible with the bfcache. However, it suffers from the same reliability problems as the other two events, so we recommend that developers should avoid it as well, and use only `visibilitychange`.
 
 ## Examples
 

@@ -83,7 +83,7 @@ A {{jsxref("Promise")}} that resolves with `undefined` when the content has been
     - A message's `prefix` property is set to `true` and:
       - The message's `role` is not `assistant`.
       - The message is not the last item in the messages array.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if a message's `role` is `system` but it was not the first message passed to the context.
 
 ## Examples

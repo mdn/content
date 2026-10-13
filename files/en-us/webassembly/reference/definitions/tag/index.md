@@ -158,7 +158,7 @@ WebAssembly.instantiateStreaming(fetch("module.wasm")).then((result) => {
 });
 ```
 
-You can see this in action along with a complete explanation in our [Full JavaScript exception handling example](#full_javascript_exception_handling_example) example later on.
+You can see this in action along with a complete explanation in our [Full JavaScript exception handling example](#full_javascript_exception_handling_example) later on.
 
 ### Creating tags in JavaScript
 
