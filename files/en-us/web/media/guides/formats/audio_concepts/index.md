@@ -72,7 +72,7 @@ The ADC outputs an array of numbers. If you just put them into a file, you get P
 
 ### Audio channels and frames
 
-Modern audio codecs are _multi-channel_, which means they are capable of storing multiple parallel audio signals that are time-aligned. For example, when you play music through your headphones, your left and right ears may hear different sounds—that's because they are stored as distinct channels. If a single signal is an array of numbers, then a multi-channel audio is essentially an array of **audio frames**, where each frame is an array of `n` numbers where `n` is the **channel count**.
+Modern audio codecs are _multi-channel_, which means they can store multiple time-aligned parallel audio signals. For example, when you play music through your headphones, your left and right ears may hear different sounds—that's because they are stored as distinct channels. If a single signal is an array of numbers, then multi-channel audio is essentially an array of **audio frames**, where each frame is an array of `n` numbers where `n` is the **channel count**.
 
 > [!NOTE]
 > Some codecs will actually separate the left and right channels, storing them in separate blocks within their data structure. However, an audio frame is always comprised of all of the data for all available channels. The samples may be assembled by software instead of physically stored adjacently in the codec.
