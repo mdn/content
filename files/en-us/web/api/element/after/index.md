@@ -8,11 +8,7 @@ browser-compat: api.Element.after
 
 {{APIRef("DOM")}}
 
-The **`Element.after()`** method inserts a set of
-{{domxref("Node")}} objects or strings in the children list of the
-`Element`'s parent, just after the `Element`.
-Strings are inserted as equivalent {{domxref("Text")}} nodes.
-No action is performed if {{domxref(Element.parentElement)}} is `null`.
+The **`after()`** method of the {{domxref("Element")}} interface inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just after the `Element`. Strings are inserted as equivalent {{domxref("Text")}} nodes. Nothing happens if {{domxref("Element.parentElement")}} is `null`.
 
 ## Syntax
 
@@ -55,8 +51,8 @@ console.log(container.outerHTML);
 ### Inserting text
 
 ```js
-let container = document.createElement("div");
-let p = document.createElement("p");
+const container = document.createElement("div");
+const p = document.createElement("p");
 container.appendChild(p);
 
 p.after("Text");
@@ -68,10 +64,10 @@ console.log(container.outerHTML);
 ### Inserting an element and text
 
 ```js
-let container = document.createElement("div");
-let p = document.createElement("p");
+const container = document.createElement("div");
+const p = document.createElement("p");
 container.appendChild(p);
-let span = document.createElement("span");
+const span = document.createElement("span");
 
 p.after(span, "Text");
 
