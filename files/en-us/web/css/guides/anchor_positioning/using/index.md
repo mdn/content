@@ -365,7 +365,7 @@ This gives us the following result:
 The positioned element is `5px` below and `5px` to the right of the anchor element. If you scroll the document up and down, the positioned element maintains its position relative to the anchor element — it is fixed to the anchor element, not the viewport.
 
 > [!NOTE]
-> When positioning elements relative to [implicit anchors](#implicit_anchor_association) using `anchor()`, some additional steps are required, such as resetting default positioning property values, and setting `position-anchor: auto` to opt-in to the implicit association. See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more information.
+> When positioning elements relative to [implicit anchors](#implicit_anchor_association) using `anchor()`, some additional steps are required, such as resetting default positioning property values, and setting `position-anchor: auto` to opt in to the implicit association. See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more information.
 
 ### Setting a `position-area`
 
