@@ -347,6 +347,8 @@ Expanding on the first example on this page, we've set the column rules to be pa
 
 ## See also
 
+- [Defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
+- [Defining CSS rules](/en-US/docs/Web/CSS/Guides/Gaps/Defining_rules)
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
 - [Box alignment in grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
