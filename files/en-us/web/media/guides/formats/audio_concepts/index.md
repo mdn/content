@@ -37,9 +37,7 @@ If you plot the amplitude of each component sine wave against its frequency, you
 
 ![The component sine waves plotted on a spectrum diagram](audio-spectrum.svg)
 
-When we talk about frequency components, frequency bands, etc., we are essentially talking about component sine waves with that particular frequency.
-
-Real sound signals are usually continuous in the spectrum as well, meaning that they contain energy spread across continuous ranges of frequencies, rather than concentrated at a few discrete frequencies. In the time domain, such a signal might look like this:
+We can say that this sound signal has two **frequency components**, one with frequency f0 and another with frequency 2f0. All energy is concentrated in these two particular frequencies, while all other frequencies have zero energy. Real sound signals usually have energy spread across continuous ranges of frequencies, so we can say, for example, that a sound has a **frequency band**. In the time domain, such a signal might look like this:
 
 ![A sound waveform](audio-waveform.svg)
 
