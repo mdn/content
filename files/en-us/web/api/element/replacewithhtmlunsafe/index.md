@@ -26,7 +26,7 @@ The method does nothing if the node has no parent.
 
 This is similar to {{domxref("Element.setHTMLUnsafe")}} but allows replacement of the entire element, rather than setting child elements only.
 
-Note that the safe variants of these methods (for example, {{domxref("Element.replaceWithHTML")}}) always removes removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer. The provided sanitizer is applied in addition to the this default XSS-unsafe removal, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
+Note that the safe variants of these methods (for example, {{domxref("Element.replaceWithHTML")}}) always removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer. The provided sanitizer is applied in addition to the default XSS-unsafe removal, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
 
 ## Syntax
 
@@ -64,14 +64,14 @@ None (`undefined`).
         For example, a configuration that includes both "allowed" and "removed" configuration settings.
       - string that does not have the value `"default"`.
       - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.
+    - `options.runScripts` is `true` or `options.sanitizer` is specified when Trusted Types are enforced and no default policy defines `createParserOptions` — even if input is a `TrustedHTML`. (Passing a `TrustedHTMLParserOptions` as options avoids this.)
 
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}
-  - : Thrown when the parent element is a {{domxref("Document")}}, an {{HTMLElement("html")}} element, a {{HTMLElement("template")}} element, or a hostless {{domxref("DocumentFragment")}}.
-  - : Note this differs from {{domxref("Element.insertAdjacentHTML")}} which throws `NoModificationAllowedError` for a {{domxref("Document")}} parent.
+  - : Thrown when the parent element is a {{domxref("Document")}}, an {{HTMLElement("html")}} element, a {{HTMLElement("template")}} element, or a hostless {{domxref("DocumentFragment")}}. Note this differs from {{domxref("Element.insertAdjacentHTML")}} which throws `NoModificationAllowedError` for a {{domxref("Document")}} parent.
 
 ## Description
 
-The **`replaceWithHTMLUnsafe()`** The **`setHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes, and discarding elements that the HTML specification doesn't allow in the target element ({{htmlelement("col")}} element outside of a {{htmlelement("table")}}).
+The **`replaceWithHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes, and discarding elements that the HTML specification doesn't allow in the target element ({{htmlelement("col")}} element outside of a {{htmlelement("table")}}).
 The `DocumentFragment` is then used to replace the element in the DOM.
 
 Unlike with {{domxref("Element.innerHTML")}}, [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in the input will be parsed into the DOM.
@@ -224,9 +224,7 @@ target.replaceWithHTMLUnsafe(untrustedString, {
 
 ### Using replaceWithHTMLUnsafe() with `runScripts`
 
-This example demonstrates the case where we aren't using trusted types, so we'll be passing sanitizer arguments.
-
-The code first creates an untrusted string and shows a number of ways a sanitizer can be passed to the method.
+This example demonstrates the case when we allow scripts to run using the `runScripts` option.
 
 ```js
 // The potentially malicious string

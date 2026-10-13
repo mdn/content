@@ -15,7 +15,7 @@ The **`replaceWithHTML()`** method of the {{domxref("CharacterData")}} interface
 The method removes any elements and attributes that are considered XSS-unsafe, even if allowed by a passed sanitizer.
 Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{SVGElement("use")}}, and event handler attributes.
 
-The method does nothing if the node has no parent or the parent is a {{HTMLElement("script")}} element.
+The method does nothing if the node has no parent or the parent is a {{HTMLElement("script")}} element (and similar for SVG {{SVGElement("script")}} elements).
 
 This is similar to {{domxref("Element.setHTML")}} but allows replacement of the entire character data, rather than setting child elements of an element.
 
@@ -77,20 +77,20 @@ Note that since this method always sanitizes input strings of XSS-unsafe entitie
 
 This is part of a series of APIs to set HTML:
 
-| Action                                    | API                                                             | Unsafe API                                                                  |
-| ----------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| Replace the entire element with this HTML | {{domxref("CharacterData.replaceWithHTML", "replaceWithHTML")}} | {{domxref("CharacterData.replaceWithHTMLUnsafe", "replaceWithHTMLUnsafe")}} |
-| Add the HTML before the element           | {{domxref("CharacterData.beforeHTML", "beforeHTML")}}           | {{domxref("CharacterData.beforeHTMLUnsafe", "beforeHTMLUnsafe")}}           |
-| Add the HTML after the element            | {{domxref("CharacterData.afterHTML", "afterHTML")}}             | {{domxref("CharacterData.afterHTMLUnsafe", "afterHTMLUnsafe")}}             |
+| Action                                 | API                                                             | Unsafe API                                                                  |
+| -------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Replace the entire node with this HTML | {{domxref("CharacterData.replaceWithHTML", "replaceWithHTML")}} | {{domxref("CharacterData.replaceWithHTMLUnsafe", "replaceWithHTMLUnsafe")}} |
+| Add the HTML before the element        | {{domxref("CharacterData.beforeHTML", "beforeHTML")}}           | {{domxref("CharacterData.beforeHTMLUnsafe", "beforeHTMLUnsafe")}}           |
+| Add the HTML after the element         | {{domxref("CharacterData.afterHTML", "afterHTML")}}             | {{domxref("CharacterData.afterHTMLUnsafe", "afterHTMLUnsafe")}}             |
 
 Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allows scripts to be run using the `runScripts` options.
 
-Similar elements, and more, exist on Element (for example {{domxref("Element.replaceWithHTML")}}).
+Similar methods, and more, exist on `Element`(for example {{domxref("Element.replaceWithHTML")}}).
 
 ## Examples
 
 > [!NOTE]
-> The [`setHTML()`](/docs/Web/API/Element/setHTML#examples) page includes additional examples, including a live example, which are similar to how `replaceWithHTMLUnsafe()` can be used.
+> The [`setHTML()`](/docs/Web/API/Element/setHTML#examples) page includes additional examples, including a live example, which are similar to how `replaceWithHTML()` can be used.
 
 ### Basic usage
 

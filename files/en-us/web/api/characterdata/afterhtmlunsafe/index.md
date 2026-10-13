@@ -24,7 +24,7 @@ The **`afterHTMLUnsafe()`** method of the {{domxref("CharacterData")}} interface
 
 The method does nothing if the node has no parent.
 
-This is similar to {{domxref("Element.setHTMLUnsafe")}} but allows addition to the entire character data, rather than setting child elements of an element.
+This is similar to {{domxref("Element.setHTMLUnsafe")}} but inserts the parsed HTML into the DOM immediately after the node, rather than setting child elements of an element.
 
 Note that the safe variants of these methods (for example, {{domxref("CharacterData.afterHTML")}}) always use the XSS-safe sanitizer, as well as any provided sanitizer parameter. The provided sanitizer is applied in addition to the default XSS-safe sanitizer, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
 
@@ -64,13 +64,14 @@ None (`undefined`).
         For example, a configuration that includes both "allowed" and "removed" configuration settings.
       - string that does not have the value `"default"`.
       - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.
+    - `options.runScripts` is `true` or `options.sanitizer` is specified when Trusted Types are enforced and no default policy defines `createParserOptions` — even if input is a `TrustedHTML`. (Passing a `TrustedHTMLParserOptions` as options avoids this.)
 
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}
   - : Thrown when the parent element is a {{domxref("Document")}}, an {{HTMLElement("html")}} element, a {{HTMLElement("template")}} element, or a hostless {{domxref("DocumentFragment")}}.
 
 ## Description
 
-The **`afterHTMLUnsafe()`** The **`setHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes, and discarding elements that the HTML specification doesn't allow in the target element ({{htmlelement("col")}} element outside of a {{htmlelement("table")}}).
+The **`afterHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes, and discarding elements that the HTML specification doesn't allow in the target element ({{htmlelement("col")}} element outside of a {{htmlelement("table")}}).
 The `DocumentFragment` is then used to add character data to the DOM after the current character data.
 
 Unlike with {{domxref("Element.innerHTML")}}, [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in the input will be parsed into the DOM.
@@ -82,15 +83,15 @@ If the string of HTML defines more than one [declarative shadow root](/en-US/doc
 
 This is part of a series of APIs to set HTML:
 
-| Action                                    | API                                                             | Unsafe API                                                                  |
-| ----------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| Replace the entire element with this HTML | {{domxref("CharacterData.replaceWithHTML", "replaceWithHTML")}} | {{domxref("CharacterData.replaceWithHTMLUnsafe", "replaceWithHTMLUnsafe")}} |
-| Add the HTML before the element           | {{domxref("CharacterData.beforeHTML", "beforeHTML")}}           | {{domxref("CharacterData.beforeHTMLUnsafe", "beforeHTMLUnsafe")}}           |
-| Add the HTML after the element            | {{domxref("CharacterData.afterHTML", "afterHTML")}}             | {{domxref("CharacterData.afterHTMLUnsafe", "afterHTMLUnsafe")}}             |
+| Action                                 | API                                                             | Unsafe API                                                                  |
+| -------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Replace the entire node with this HTML | {{domxref("CharacterData.replaceWithHTML", "replaceWithHTML")}} | {{domxref("CharacterData.replaceWithHTMLUnsafe", "replaceWithHTMLUnsafe")}} |
+| Add the HTML before the element        | {{domxref("CharacterData.beforeHTML", "beforeHTML")}}           | {{domxref("CharacterData.beforeHTMLUnsafe", "beforeHTMLUnsafe")}}           |
+| Add the HTML after the element         | {{domxref("CharacterData.afterHTML", "afterHTML")}}             | {{domxref("CharacterData.afterHTMLUnsafe", "afterHTMLUnsafe")}}             |
 
 Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allows scripts to be run using the `runScripts` options.
 
-Similar elements, and more, exist on Element (for example {{domxref("Element.afterHTMLUnsafe")}}).
+Similar methods, and more, exist on `Element`(for example {{domxref("Element.afterHTMLUnsafe")}}).
 
 ### Security considerations
 
@@ -222,9 +223,7 @@ myText.afterHTMLUnsafe(untrustedString, {
 
 ### Using afterHTMLUnsafe() with `runScripts`
 
-This example demonstrates the case where we aren't using trusted types, so we'll be passing sanitizer arguments.
-
-The code first creates an untrusted string and shows a number of ways a sanitizer can be passed to the method.
+This example demonstrates the case when we allow scripts to run using the `runScripts` option.
 
 ```js
 // The potentially malicious string

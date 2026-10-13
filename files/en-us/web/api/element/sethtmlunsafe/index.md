@@ -20,7 +20,7 @@ browser-compat: api.Element.setHTMLUnsafe
 
 The **`setHTMLUnsafe()`** method of the {{domxref("Element")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and then using it to replace the element's subtree in the DOM.
 
-Note that the safe variants of these methods (for example, {{domxref("Element.setHTML")}}) always removes removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer. The provided sanitizer is applied in addition to the this default XSS-unsafe removal, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
+Note that the safe variants of these methods (for example, {{domxref("Element.setHTML")}}) always removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer. The provided sanitizer is applied in addition to the default XSS-unsafe removal, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
 
 ## Syntax
 
@@ -62,7 +62,7 @@ None (`undefined`).
 ## Description
 
 The **`setHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes, and discarding elements that the HTML specification doesn't allow in the target element ({{htmlelement("col")}} element outside of a {{htmlelement("table")}}).
-The `DocumentFragment` is then used to add character data to the DOM after the current character data.
+The `DocumentFragment` is then used to replace the element's subtree in the DOM.
 
 Unlike with {{domxref("Element.innerHTML")}}, [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in the input will be parsed into the DOM.
 If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as `<template>` elements within that shadow root.
@@ -338,9 +338,7 @@ With this approach you can create safe HTML, but you aren't forced to.
 
 ### Using setHTMLUnsafe() with `runScripts`
 
-This example demonstrates the case where we aren't using trusted types, so we'll be passing sanitizer arguments.
-
-The code first creates an untrusted string and shows a number of ways a sanitizer can be passed to the method.
+This example demonstrates the case when we allow scripts to run using the `runScripts` option.
 
 ```js
 // The potentially malicious string

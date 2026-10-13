@@ -348,9 +348,7 @@ With this approach you can create safe HTML, but you aren't forced to.
 
 ### Using setHTMLUnsafe() with `runScripts`
 
-This example demonstrates the case where we aren't using trusted types, so we'll be passing sanitizer arguments.
-
-The code first creates an untrusted string and shows a number of ways a sanitizer can be passed to the method.
+This example demonstrates the case when we allow scripts to run using the `runScripts` option.
 
 ```js
 // The potentially malicious string

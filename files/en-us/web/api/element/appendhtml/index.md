@@ -15,7 +15,7 @@ The **`appendHTML()`** method of the {{domxref("Element")}} interface provides a
 The method removes any elements and attributes that are considered XSS-unsafe, even if allowed by a passed sanitizer.
 Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{SVGElement("use")}}, and event handler attributes.
 
-The method does nothing if the element is a {{HTMLElement("script")}} element.
+The method does nothing if the element is a {{HTMLElement("script")}} element (and similar for SVG {{SVGElement("script")}} elements).
 
 This is similar to {{domxref("Element.setHTML")}} but allows addition of new HTML as the last child of the element, rather than setting the whole child HTML only.
 
@@ -91,7 +91,7 @@ Each API type takes the same arguments but allows for ease of inserting the requ
 ## Examples
 
 > [!NOTE]
-> The [`setHTML()`](/docs/Web/API/Element/setHTML#examples) page includes additional examples, including a live example, which are similar to how `replaceWithHTMLUnsafe()` can be used.
+> The [`setHTML()`](/docs/Web/API/Element/setHTML#examples) page includes additional examples, including a live example, which are similar to how `appendHTML()` can be used.
 
 ### Basic usage
 

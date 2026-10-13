@@ -10,7 +10,7 @@ browser-compat: api.ShadowRoot.prependHTML
 
 {{APIRef("DOM")}}
 
-The **`prependHTML()`** method of the {{domxref("ShadowRoot")}} interface scripts provides an XSS-safe method to parse and sanitize a string of HTML and inserts it into the DOM as the first child of the element.
+The **`prependHTML()`** method of the {{domxref("ShadowRoot")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and inserts it into the DOM as the first child of the element or the shadow host, if the parent is a shadow root.
 
 The method removes any elements and attributes that are considered XSS-unsafe, even if allowed by a passed sanitizer.
 Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{SVGElement("use")}}, and event handler attributes.
@@ -52,7 +52,7 @@ None (`undefined`).
 
 ## Description
 
-`prependHTML()` drops any elements in the HTML input string that are invalid in the context of the current element, such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
+`prependHTML()` drops any elements in the HTML input string that are invalid in the context of the current shadow root, such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
 
 It then removes any HTML elements and attributes that aren't allowed by the sanitizer configuration, and further removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer.
 
@@ -83,7 +83,7 @@ Each API type takes the same arguments but allows for ease of inserting the requ
 ## Examples
 
 > [!NOTE]
-> The [`setHTML()`](/docs/Web/API/Element/setHTML#examples) page includes additional examples, including a live example, which are similar to how `replaceWithHTMLUnsafe()` can be used.
+> The [`setHTML()`](/docs/Web/API/Element/setHTML#examples) page includes additional examples, including a live example, which are similar to how `prependHTML()` can be used.
 
 ### Basic usage
 

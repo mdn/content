@@ -20,7 +20,7 @@ browser-compat: api.ShadowRoot.appendHTMLUnsafe
 > [!NOTE]
 > {{domxref("ShadowRoot.appendHTML()")}} should almost always be used instead of this method — on browsers where it is supported — as it always removes XSS-unsafe HTML entities.
 
-The **`appendHTMLUnsafe()`** method of the {{domxref("ShadowRoot")}} interface scripts is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and then inserting it into the DOM as the last child of an element.
+The **`appendHTMLUnsafe()`** method of the {{domxref("ShadowRoot")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and then inserting it into the DOM as the last child of an element.
 
 This is similar to {{domxref("ShadowRoot.setHTMLUnsafe")}} but allows addition of the HTML as the last child of the element, rather than setting the whole child HTML only.
 
@@ -62,10 +62,11 @@ None (`undefined`).
         For example, a configuration that includes both "allowed" and "removed" configuration settings.
       - string that does not have the value `"default"`.
       - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.
+    - `options.runScripts` is `true` or `options.sanitizer` is specified when Trusted Types are enforced and no default policy defines `createParserOptions` — even if input is a `TrustedHTML`. (Passing a `TrustedHTMLParserOptions` as options avoids this.)
 
 ## Description
 
-The **`appendHTMLUnsafe()`** The **`setHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes, and discarding elements that the HTML specification doesn't allow in the target element ({{htmlelement("col")}} element outside of a {{htmlelement("table")}}).
+The **`appendHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes, and discarding elements that the HTML specification doesn't allow in the target element ({{htmlelement("col")}} element outside of a {{htmlelement("table")}}).
 The `DocumentFragment` is then used to insert it into the DOM as the last child of the given element, rather than replacing the whole child HTML of the given element.
 
 Unlike with {{domxref("ShadowRoot.innerHTML")}}, [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in the input will be parsed into the DOM.
@@ -92,7 +93,7 @@ While it can do so if used with an appropriate sanitizer, it doesn't have to use
 The method is therefore a possible vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, where potentially unsafe strings provided by a user are injected into the DOM without first being sanitized.
 
 You should mitigate this risk by always passing {{domxref("TrustedHTML")}} objects instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
-This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup (such as {{htmlelement("script")}} elements and event handler attributes), append it is injected.
+This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup (such as {{htmlelement("script")}} elements and event handler attributes), before it is injected.
 
 Using `TrustedHTML` makes it possible to audit and check that sanitization code is effective in just a few places, rather than scattered across all your injection sinks.
 You should not have to pass a sanitizer to the method when using `TrustedHTML`.
@@ -215,9 +216,7 @@ target.appendHTMLUnsafe(untrustedString, {
 
 ### Using appendHTMLUnsafe() with `runScripts`
 
-This example demonstrates the case where we aren't using trusted types, so we'll be passing sanitizer arguments.
-
-The code first creates an untrusted string and shows a number of ways a sanitizer can be passed to the method.
+This example demonstrates the case when we allow scripts to run using the `runScripts` option.
 
 ```js
 // The potentially malicious string
