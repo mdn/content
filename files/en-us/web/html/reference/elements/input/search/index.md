@@ -136,9 +136,7 @@ The value must be a non-negative decimal number. If not provided, or an invalid 
 ### Basic example
 
 ```html
-<div>
-  <input type="search" id="mySearch" name="q" />
-</div>
+<input type="search" id="mySearch" name="q" />
 ```
 
 This renders like so:
