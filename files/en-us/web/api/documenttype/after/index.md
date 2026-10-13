@@ -8,10 +8,7 @@ browser-compat: api.DocumentType.after
 
 {{APIRef("DOM")}}
 
-The **`DocumentType.after()`** method inserts a set of
-{{domxref("Node")}} objects or strings in the children list of the
-`DocumentType`'s parent, just after the `DocumentType`.
-Strings are inserted as equivalent {{domxref("Text")}} nodes.
+The **`after()`** method of the {{domxref("DocumentType")}} interface inserts a set of {{domxref("Node")}} objects or strings in the children list of the `DocumentType`'s parent, just after the `DocumentType`. Strings are inserted as equivalent {{domxref("Text")}} nodes. Nothing happens if {{domxref("Node.parentNode", "parentNode")}} is `null`.
 
 ## Syntax
 
@@ -38,8 +35,8 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-let docType = document.implementation.createDocumentType("html", "", "");
-let myDoc = document.implementation.createDocument("", "", docType);
+const docType = document.implementation.createDocumentType("html", "", "");
+const myDoc = document.implementation.createDocument("", "", docType);
 
 docType.after(document.createElement("html"));
 
