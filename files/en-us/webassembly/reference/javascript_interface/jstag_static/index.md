@@ -41,10 +41,10 @@ async function run() {
       env: {
         js_tag: WebAssembly.JSTag,
         // This JS function throws, which Wasm will catch via JSTag
-        do_work: () => {
+        do_work() {
           throw new Error("An exception was thrown in JS");
         },
-        log: (error) => {
+        log(error) {
           // errRef is the JS Error object passed back as an externref
           console.log(error.message);
         },

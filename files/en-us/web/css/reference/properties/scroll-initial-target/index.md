@@ -30,6 +30,8 @@ scroll-initial-target: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `none`
   - : The element is not an initial scroll target.
 - `nearest`
@@ -124,7 +126,7 @@ div.none {
 /* scroll-snap alignment for children */
 div > div {
   scroll-snap-align: center;
-  scroll-initial-target: always;
+  scroll-snap-stop: always;
 }
 ```
 

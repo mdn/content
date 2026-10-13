@@ -8,7 +8,7 @@ sidebar: mdnsidebar
 
 The success and growth of the MDN Web Docs project is, in large part, due to our community of contributors. Some contributors have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. Changes to the site, including maintenance tasks, are performed by employees, contractors, and a network of partners who are all dedicated to the health, growth, and maintenance of MDN Web Docs. The project relies heavily on [roles](#roles) and [teams](#teams) in the [MDN organization on GitHub](https://github.com/mdn) to manage and incorporate changes from these different groups. A list of the organization's current members can be found at [github.com/orgs/mdn](https://github.com/orgs/mdn/people).
 
-Community contributions help this open source project immensely.
+Community contributions help this open-source project immensely.
 Contributors can use their work on MDN Web Docs to show their writing, technical, and collaboration skills, and the ability to work with people from diverse backgrounds. This section describes the roles you can take on while volunteering on the MDN Web Docs project.
 
 ## Roles
@@ -173,7 +173,7 @@ They are responsible for reviewing and approving pull requests in their topic or
 
 In addition to the responsibilities of an [organization member](#organization_member), invited experts are responsible for:
 
-- Following the [reviewing guide](https://github.com/mdn/content/blob/main/REVIEWING.md).
+- Following the [pull request review process](/en-US/docs/MDN/Community/Pull_requests#reviewing_a_pull_request).
 - Reviewing pull requests in their topic area.
 - Helping other contributors become reviewers.
 

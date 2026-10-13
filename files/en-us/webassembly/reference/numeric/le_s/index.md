@@ -1,12 +1,13 @@
 ---
-title: "le_s: Wasm text instruction"
+title: "le_s: Wasm numeric instruction"
 short-title: le_s
 slug: WebAssembly/Reference/Numeric/le_s
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.le_s
 sidebar: webassemblysidebar
 ---
 
-The **`le_s`** instruction, short for _less or equal signed_, checks if a signed integer is less than or equal to another signed integer.
+The **`le_s`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _less or equal signed_, checks if a signed integer is less than or equal to another signed integer.
 
 There are other `le` instructions available:
 
@@ -149,6 +150,14 @@ The output is as follows:
 {{embedlivesample("simd_le_s", "100%", 100)}}
 
 The result is `0` because the value stored in lane `3` of the first input value is not less than or equal to the value stored in lane `3` of the second input value.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

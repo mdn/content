@@ -98,6 +98,8 @@ align-content: unset;
 
 ### Values
 
+This property is specified as one or two of the following keyword values:
+
 - `normal`
   - : The items are packed in their default position as if no `align-content` value was set.
 - `start`

@@ -46,7 +46,7 @@ None (`undefined`).
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the current {{domxref("Document")}} is not yet active, or if the navigation has been cancelled.
+  - : Thrown if the current {{domxref("Document")}} is not yet active, or if the navigation has been canceled.
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if:
     - The event was dispatched by a {{domxref("EventTarget.dispatchEvent", "dispatchEvent()")}} call, rather than the user agent.
@@ -112,14 +112,14 @@ This pattern is simpler than the alternative of canceling the original navigatio
 
 The `precommitHandler()` callback takes a {{domxref("NavigationPrecommitController")}} object as an argument, which contains a {{domxref("NavigationPrecommitController.redirect", "redirect()")}} method. The `redirect()` method takes two parameters — a string representing the URL to redirect to, and an optional options object than can specify state and history behavior.
 
-`precommitHandler()` generally handles any modifications to the navigation behavior that are required before the destination URL is actually displayed in the browser, cancelling or redirecting it somewhere else as required.
+`precommitHandler()` generally handles any modifications to the navigation behavior that are required before the destination URL is actually displayed in the browser, canceling or redirecting it somewhere else as required.
 
 > [!NOTE]
 > Because `precommitHandler()` can be used to cancel navigations, it will only work as expected when the event's {{domxref("Event.cancelable")}} property is `true`. Calling `intercept()` with a `precommitHandler()` on a non-cancelable event results in a `SecurityError` being thrown.
 
 ### Scheduling post-commit actions in `precommitHandler()`
 
-As we saw above, you can specify a `handler()` callback in the object passed to the `intercept()` method in order to preform actions after a navigation is committed.
+As we saw above, you can specify a `handler()` callback in the object passed to the `intercept()` method in order to perform actions after a navigation is committed.
 This approach works well if the actions required after commit do not depend on any actions run in the pre-commit phase.
 If they do, then you can use {{domxref("NavigationPrecommitController.addHandler()")}} in `precommitHandler()` to dynamically add a handler that will run after the navigation commits.
 
@@ -161,7 +161,7 @@ Both `precommitHandler()` and `handler()` callbacks can be included inside the s
 
 1. First, the `precommitHandler()` handler runs.
    - When the `precommitHandler()` promise fulfills, the navigation commits.
-   - If the `precommitHandler()` rejects, the `navigateerror` event fires, the `committed` and `finished` promises reject, and the navigation is cancelled.
+   - If the `precommitHandler()` rejects, the `navigateerror` event fires, the `committed` and `finished` promises reject, and the navigation is canceled.
 
 2. When the navigation commits, a new {{domxref("NavigationHistoryEntry")}} is created for the navigation, and its `committed` promise fulfills.
 

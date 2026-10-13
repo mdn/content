@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.fullscreen
 ---
 
-{{APIRef("Fullscreen API")}}{{Deprecated_Header}}
+{{APIRef("Fullscreen API")}}
 
 The obsolete {{domxref("Document")}} interface's **`fullscreen`** read-only property reports whether or not the document is currently displaying content in fullscreen mode.
 

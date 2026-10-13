@@ -68,4 +68,4 @@ Early-Data: 1
 ## See also
 
 - {{HTTPStatus("425", "425 Too Early")}}
-- [Replay Attacks on 0-RTT](https://www.rfc-editor.org/rfc/rfc8446#appendix-E.5)
+- [Replay Attacks on 0-RTT](https://www.rfc-editor.org/info/rfc8446/#appendix-E.5)

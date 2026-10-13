@@ -26,6 +26,8 @@ math-shift: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `normal`
   - : The initial value, indicates normal rendering. Superscripts in MathML formulas use the [superscriptShiftUp](https://w3c.github.io/mathml-core/#dfn-superscriptshiftup) parameter from the OpenType MATH table.
 - `compact`

@@ -8,8 +8,6 @@ sidebar: addonsidebar
 
 Returns `true` if the extension can access the "file://" scheme, `false` otherwise.
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-
 ## Syntax
 
 ```js-nolint
@@ -22,9 +20,7 @@ None.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a boolean: `true` if the extension is allowed access to "file://" URLs, `false` otherwise.
-
-Firefox will always return `false`.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with a boolean: `true` if the extension is allowed access to "file://" URLs, `false` otherwise.
 
 ## Examples
 

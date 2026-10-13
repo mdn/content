@@ -6,6 +6,7 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-text/
   - https://drafts.csswg.org/css-text-4/
+  - https://drafts.csswg.org/css-text-5
 sidebar: cssref
 ---
 
@@ -25,6 +26,7 @@ The **CSS text** module defines how to perform text manipulation, like line brea
 - {{cssxref("tab-size")}}
 - {{cssxref("text-align")}}
 - {{cssxref("text-align-last")}}
+- {{cssxref("text-fit")}}
 - {{cssxref("text-indent")}}
 - {{cssxref("text-justify")}}
 - {{cssxref("text-autospace")}}

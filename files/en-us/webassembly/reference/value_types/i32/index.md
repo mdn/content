@@ -3,7 +3,7 @@ title: "i32: Wasm value type"
 short-title: i32
 slug: WebAssembly/Reference/Value_types/i32
 page-type: webassembly-instruction
-spec-urls: https://webassembly.github.io/spec/core/syntax/types.html#syntax-numtype
+browser-compat: webassembly.types.i32
 sidebar: webassemblysidebar
 ---
 
@@ -41,6 +41,10 @@ At the JavaScript boundary, `i32` values cross as JavaScript [`Number`](/en-US/d
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

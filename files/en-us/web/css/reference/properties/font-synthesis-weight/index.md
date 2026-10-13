@@ -28,6 +28,8 @@ font-synthesis-weight: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : Indicates that the missing bold typeface may be synthesized by the browser if needed.
 - `none`

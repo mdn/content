@@ -73,6 +73,8 @@ content-visibility: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `visible`
   - : No effect. The element's contents are laid out and rendered as normal. This is the default value.
 - `hidden`

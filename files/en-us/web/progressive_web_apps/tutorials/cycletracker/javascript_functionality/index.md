@@ -6,7 +6,7 @@ page-type: tutorial-chapter
 sidebar: pwasidebar
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
 In the previous section, we wrote the HTML and CSS for CycleTracker, creating a static version of our web app. In this section, we will write the JavaScript required to convert static HTML into a fully functional web application.
 
@@ -118,7 +118,7 @@ We are using the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API), specifi
 
 [LocalStorage](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage#storing_simple_data_—_web_storage) has several limitations, but suffices for our apps needs. We're using localStorage to make this simple and client-side only. This means the data will only be stored on one browser on a single device. Clearing the browser data will also lose all locally stored periods. What may seem like a limitation for many applications may be an asset in the case of this application, as menstrual cycle data is personal, and the user of such an app may very rightly be concerned about privacy.
 
-For a more robust application, other [client side storage](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage) options like [IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) (IDB) and, discussed later, service workers, have better performance.
+For a more robust application, other [client-side storage](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage) options like [IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) (IDB) and, discussed later, service workers, have better performance.
 
 Limitations of `localStorage` include:
 

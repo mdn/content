@@ -43,6 +43,9 @@ The fixed point that the element rotates around — mentioned above — is also 
 origin**. This defaults to the center of the element, but you can set your own custom transform origin using
 the {{ cssxref("transform-origin") }} property.
 
+> [!NOTE]
+> The SVG [`transform`](/en-US/docs/Web/SVG/Reference/Attribute/transform) attribute has its own grammar, in which `rotate()` accepts two optional extra values giving the center of rotation, as in `rotate(45, 50, 50)`. That form is only valid in the attribute, not in CSS: the CSS `rotate()` function takes an angle alone, and the center is set with {{cssxref("transform-origin")}}.
+
 ## Syntax
 
 ```css

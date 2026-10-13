@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.RTCError.sentAlert
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`sentAlert`** read-only property of the {{domxref("RTCError")}} interface specifies the {{Glossary("DTLS")}} alert number sent to the remote peer, if the error represents an outbound DTLS error.
 

@@ -9,8 +9,6 @@ browser-compat: css.properties.clip
 sidebar: cssref
 ---
 
-{{Deprecated_Header}}
-
 > [!WARNING]
 > Authors are encouraged to use the {{cssxref("clip-path")}} property instead.
 
@@ -34,6 +32,8 @@ clip: unset;
 ```
 
 ### Values
+
+This property is specified as a single value from the following list:
 
 - `rect()`
   - : A rectangle defined using a `rect()` function of the form `rect(<top>, <right>, <bottom>, <left>)`. The `<top>` and `<bottom>` values are offsets from the _inside top border edge_ of the box, while `<right>` and `<left>` are offsets from the _inside left border edge_ of the box — that is, the extent of the padding box.

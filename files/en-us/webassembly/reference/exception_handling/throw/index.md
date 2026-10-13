@@ -93,6 +93,14 @@ See the [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag) definition re
 | ----------- | --------------- | ------------------------------------------------------ |
 | `throw`     | `0x08 x:tagidx` | `(throw $tag (i32.const 42))` => `0x41 0x2a 0x08 0x00` |
 
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction

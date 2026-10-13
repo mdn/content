@@ -17,10 +17,40 @@ Since this command is used to create a new session, it runs without an already a
 ## Syntax
 
 ```json-nolint
+/* With required parameters */
 {
   "method": "session.new",
   "params": {
     "capabilities": {}
+  }
+}
+
+/* With required and optional parameters */
+{
+  "method": "session.new",
+  "params": {
+    "capabilities": {
+      "alwaysMatch": {
+        "acceptInsecureCerts": true,
+        "proxy": {
+          "proxyType": "manual",
+          "httpProxy": "127.0.0.1:80"
+        },
+        "unhandledPromptBehavior": {
+          "default": "accept"
+        }
+      },
+      "firstMatch": [
+        {
+          "browserName": "firefox",
+          "platformName": "mac"
+        },
+        {
+          "browserName": "chrome",
+          "platformName": "windows"
+        }
+      ]
+    }
   }
 }
 ```
@@ -31,17 +61,17 @@ The `params` field contains:
 
 - `capabilities`
   - : An object that specifies the requested features for the session. It can include the following fields:
-    - `alwaysMatch` {{optional_inline}}
+    - [`alwaysMatch`](/en-US/docs/Web/WebDriver/Reference/Capabilities#alwaysmatch) {{optional_inline}}
       - : An object that specifies the requested features that must all be satisfied by the browser for session creation.
         If the browser cannot satisfy all requested features in this object, the session is not created.
-    - `firstMatch` {{optional_inline}}
+    - [`firstMatch`](/en-US/docs/Web/WebDriver/Reference/Capabilities#firstmatch) {{optional_inline}}
       - : An array of objects, each specifying an alternative set of requested features for session creation.
         The browser tries each set in the order specified and creates a session using the first where all requested features can be satisfied.
         If the browser cannot satisfy all requested features in any of the sets, the session is not created.
 
 The `alwaysMatch` and `firstMatch` objects can include the following features:
 
-- `acceptInsecureCerts` {{optional_inline}}
+- [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts) {{optional_inline}}
   - : A boolean that controls whether untrusted TLS certificates (for example, self-signed or expired) are accepted for the duration of the session.
 - `browserName` {{optional_inline}}
   - : A string that specifies the name of the browser to use (for example, `"firefox"` or `"chrome"`).
@@ -58,8 +88,6 @@ The `alwaysMatch` and `firstMatch` objects can include the following features:
 
 The following fields in the `result` object of the response describe the characteristics of the created session:
 
-- `sessionId`
-  - : A string that contains the unique identifier for the newly created session.
 - `capabilities`
   - : An object that describes the capabilities that were negotiated and are active for the session. It includes the following fields:
     - [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts)
@@ -70,16 +98,19 @@ The following fields in the `result` object of the response describe the charact
       - : A string that contains the version of the browser.
     - `platformName`
       - : A string that contains the name of the operating system.
+    - `proxy` {{optional_inline}}
+      - : An object that describes the active proxy configuration.
+        An empty object (`{}`) indicates no proxy is configured.
     - `setWindowRect`
       - : A boolean that indicates whether the browser window can be resized and repositioned using the [Set Window Rect](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/SetWindowRect) command.
-    - `userAgent`
-      - : A string that contains the browser's user agent string (for example, `"Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0"`).
-    - `proxy` {{optional_inline}}
-      - : An object that describes the active proxy configuration. An empty object (`{}`) indicates no proxy is configured.
     - `unhandledPromptBehavior` {{optional_inline}}
       - : An object that describes the default behavior when a user prompt (such as an `alert`, `confirm`, or `prompt` dialog) is encountered during a command. This field is present only when specified in the `capabilities` parameter.
+    - `userAgent`
+      - : A string that contains the browser's user agent string (for example, `"Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0"`).
     - [`webSocketUrl`](/en-US/docs/Web/WebDriver/Reference/Capabilities/webSocketUrl) {{optional_inline}}
       - : A string that contains the WebSocket URL for the session.
+- `sessionId`
+  - : A string that contains the unique identifier for the newly created session.
 
 The browser may also return vendor-specific capabilities prefixed with a browser identifier (for example, `moz:buildID` for Firefox).
 
@@ -191,3 +222,4 @@ In browsers that don't support multiple sessions (e.g., Firefox), sending `sessi
 
 - [`session.status`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/status) command
 - [`session.end`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/end) command
+- [Combining `alwaysMatch` and `firstMatch`](/en-US/docs/Web/WebDriver/Reference/Capabilities#combining_alwaysmatch_and_firstmatch)

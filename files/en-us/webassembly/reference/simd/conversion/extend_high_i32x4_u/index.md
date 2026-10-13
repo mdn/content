@@ -3,7 +3,7 @@ title: "extend_high_i32x4_u: Wasm SIMD conversion instruction"
 short-title: extend_high_i32x4_u
 slug: WebAssembly/Reference/SIMD/conversion/extend_high_i32x4_u
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.extend_high_i32x4_u
+browser-compat: webassembly.instructions.extend_high_i32x4_u
 sidebar: webassemblysidebar
 ---
 
@@ -62,7 +62,3 @@ i64x2.extend_high_i32x4_u
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD conversion instructions](/en-US/docs/WebAssembly/Reference/SIMD/conversion)

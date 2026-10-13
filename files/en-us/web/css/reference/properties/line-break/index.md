@@ -65,6 +65,8 @@ line-break: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : Break text using the default line break rule.
 - `loose`

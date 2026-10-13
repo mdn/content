@@ -69,6 +69,8 @@ direction: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `ltr`
   - : Text and other elements go from left to right. This is the default value.
 - `rtl`
@@ -108,12 +110,10 @@ blockquote {
 ```html
 <blockquote>
   <p>This paragraph is in English but incorrectly goes right to left.</p>
-  <p></p>
 </blockquote>
 
 <blockquote>
   <p>هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار.</p>
-  <p></p>
 </blockquote>
 ```
 

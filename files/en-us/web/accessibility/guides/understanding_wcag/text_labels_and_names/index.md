@@ -46,7 +46,7 @@ A dialog box is generally denoted by an ARIA [`role="dialog"`](/en-US/docs/Web/A
 
 ### Examples
 
-The following example shows a dialog box, defined as such using `role="dialog"` and labelled using `aria-labelledby`.
+The following example shows a dialog box, defined as such using `role="dialog"` and labeled using `aria-labelledby`.
 
 ```html
 <div

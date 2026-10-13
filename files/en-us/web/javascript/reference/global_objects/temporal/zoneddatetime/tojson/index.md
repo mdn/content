@@ -25,7 +25,7 @@ A string representing the given date-time in the [RFC 9557 format](/en-US/docs/W
 
 ## Description
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `Temporal.ZonedDateTime` object is stringified. This method is generally intended to, by default, usefully serialize `Temporal.ZonedDateTime` objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}} function as the reviver of {{jsxref("JSON.parse()")}}.
+The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `Temporal.ZonedDateTime` object is stringified. This method is generally intended to, by default, usefully serialize `Temporal.ZonedDateTime` objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}} function within the reviver of {{jsxref("JSON.parse()")}}.
 
 ## Examples
 

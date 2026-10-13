@@ -39,7 +39,7 @@ const env = {
   my_error: myErrorTag,
 };
 
-WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then( ... )
+WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then(/* ... */);
 ```
 
 Inside the Wasm module, you'd import the error tag and throw an exception of that type somewhere in your code:
@@ -81,7 +81,7 @@ WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then(
 );
 ```
 
-You can check whether it has the same exception type we defined earlier (`myErrorTag`) using [`Exception.prototype.is()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/is), and then access the exception's payload using [`Exception.prototype.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg)).
+You can check whether it has the same exception type we defined earlier (`myErrorTag`) using [`Exception.prototype.is()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/is), and then access the exception's payload using [`Exception.prototype.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg).
 
 > [!NOTE]
 > You can't access the values of an exception with a new tag that just happens to have the same parameters; it's a different tag!
@@ -140,4 +140,4 @@ If the tag was used to throw an exception that propagated to JavaScript, we coul
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Guides/Concepts)
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Guides/Using_the_JavaScript_API)
 - [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag) definition
-- [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) type
+- [`exnref`](/en-US/docs/WebAssembly/Reference/Value_types/exnref) type

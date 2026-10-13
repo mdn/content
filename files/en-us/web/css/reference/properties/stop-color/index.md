@@ -49,7 +49,7 @@ This example demonstrates the basic use case of `stop-color`, and how the CSS `s
 
 #### HTML
 
-We have an SVG with three {{SVGElement("rect")}} squares and three {{SVGElement("linearGradient")}} elements. Each gradient has four {{SVGElement("stop")}} elements creating gradients that go from black to white and then white to grey; the only difference between them is the `id` value.
+We have an SVG with three {{SVGElement("rect")}} squares and three {{SVGElement("linearGradient")}} elements. Each gradient has four {{SVGElement("stop")}} elements creating gradients that go from black to white and then white to gray; the only difference between them is the `id` value.
 
 ```html
 <svg viewBox="0 0 264 100" xmlns="http://www.w3.org/2000/svg">

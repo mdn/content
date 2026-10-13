@@ -179,7 +179,7 @@ svg {
 
 ## See also
 
-- {{cssxref("shape-outside")}}
+- {{cssxref("border-shape")}}, {{cssxref("shape-outside")}}
 - [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) module
 - [Overview of CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes/Overview)
 - [The SVG `path` syntax: an illustrated guide](https://css-tricks.com/svg-path-syntax-illustrated-guide/) via CSS-tricks (2021)

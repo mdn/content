@@ -12,9 +12,25 @@ The `browser.createUserContext` [command](/en-US/docs/Web/WebDriver/Reference/Bi
 ## Syntax
 
 ```json-nolint
+/* Without optional parameters */
 {
   "method": "browser.createUserContext",
   "params": {}
+}
+
+/* With optional parameters */
+{
+  "method": "browser.createUserContext",
+  "params": {
+    "acceptInsecureCerts": true,
+    "proxy": {
+      "proxyType": "manual",
+      "httpProxy": "127.0.0.1:80"
+    },
+    "unhandledPromptBehavior": {
+      "default": "accept"
+    }
+  }
 }
 ```
 
@@ -37,7 +53,7 @@ Set `params` to an empty object (`{}`) or include any of the following optional 
 The following field in the `result` object of the response describes the created user context:
 
 - `userContext`
-  - : A string that contains the ID ([UUID](/en-US/docs/Glossary/UUID)) that uniquely identifies the created user context.
+  - : A string that contains the ID that uniquely identifies the created user context.
 
 ### Errors
 

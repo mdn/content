@@ -213,6 +213,53 @@ These pseudo-classes require some interaction by the user in order for them to a
 - {{CSSxRef(":target-current")}}
   - : Matches the {{cssxref("::scroll-marker")}} pseudo-element of a {{cssxref("scroll-marker-group")}} that is currently scrolled to, in other words, the **active** scroll marker.
 
+### Top-layer ancestor matching boundary
+
+When setting styles using a `:hover`, `:active`, or `:focus-within` pseudo-class selector, the selector matches a nested set of elements up the DOM tree. If the hierarchy includes an element in the {{glossary("top layer")}} (for example, a [popover](/en-US/docs/Web/API/Popover_API) or [customizable `<select>`](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) picker), the matching stops at that top-layer element.
+
+For example, the following code features a customizable `<select>` element and a popover. We've set every element in the page to have a thick blue dashed {{cssxref("border")}} on hover.
+
+```html live-sample___matching-boundary
+<main>
+  <select>
+    <option>One</option>
+    <option>Two</option>
+    <option>Three</option>
+  </select>
+
+  <div>
+    <button popovertarget="mypopover">Toggle popover</button>
+    <section id="mypopover" popover>
+      <p>I am a popover</p>
+      <button>I am a popover button</button>
+    </section>
+  </div>
+</main>
+```
+
+```css hidden live-sample___matching-boundary
+* {
+  padding: 5px;
+}
+```
+
+```css live-sample___matching-boundary
+select,
+::picker(select) {
+  appearance: base-select;
+}
+
+:hover {
+  border: 5px dashed blue;
+}
+```
+
+{{EmbedLiveSample("matching-boundary", "100%", 200)}}
+
+Note that when you hover over the `<select>` element or the popover toggle button, all ancestors of those elements get the border. However, once the select picker or the popover is open, hovering over one of its descendants applies the border only up to the top-layer element itself (the select picker or the popover), that is, the matching stops at this element.
+
+This behavior stops the pseudo-class matching from spilling out of a top-layer component into the surrounding page, which can otherwise cause a user interface to look broken.
+
 ## Functional pseudo-classes
 
 These pseudo-classes accept a [selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list) or [forgiving selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list#forgiving_selector_list) as a parameter.

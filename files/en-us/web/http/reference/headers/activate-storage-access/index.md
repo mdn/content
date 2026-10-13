@@ -44,7 +44,7 @@ Activate-Storage-Access: load
 ## Directives
 
 - `retry`
-  - : The server uses this token to indicate that it needs its third party cookies in order to properly respond to this request.
+  - : The server uses this token to indicate that it needs its third-party cookies in order to properly respond to this request.
 
     The server should check for `Sec-Fetch-Storage-Access: inactive` in the request before responding with this token to check that the permission has already been granted (but is inactive).
     The `allowed-origin` parameter must be specified to allow the specific origin (specify `*` to allow any origin).
@@ -69,7 +69,7 @@ The browser must then reload the resource, which it can now request with cookies
 
 The permission is granted for a particular embedder/embedded site, but only _activated_ for a particular origin, and for a particular context such as an `<iframe>` or browser tab.
 This means that if you load the same page in a new tab or `<iframe>`, the permission state of that context will be granted but `inactive`; it won't become `active` until the permission is activated.
-Similarly, if you load another origin in the same site, the permission will be granted but you'll need to activate the permission for third party cookies to be sent or loaded for that resource.
+Similarly, if you load another origin in the same site, the permission will be granted but you'll need to activate the permission for third-party cookies to be sent or loaded for that resource.
 
 The resource has to be loaded at least once to be granted the storage-access permission.
 However, once granted, a server can use `Activate-Storage-Access` to activate the permission for other origins and contexts.

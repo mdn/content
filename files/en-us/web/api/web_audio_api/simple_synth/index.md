@@ -364,7 +364,7 @@ setup();
 ```
 
 1. The table which maps note names and octaves to their frequencies is created by calling `createNoteTable()`.
-2. An event handler is established (by calling our old friend {{domxref("EventTarget.addEventListener", "addEventListener()")}} to handle {{domxref("HTMLElement/change_event", "change")}} events on the main gain control. This will update the main gain node's volume to the new value of the control.
+2. An event handler is established (by calling our old friend {{domxref("EventTarget.addEventListener", "addEventListener()")}}) to handle {{domxref("HTMLElement/change_event", "change")}} events on the main gain control. This will update the main gain node's volume to the new value of the control.
 3. Next, we iterate over each octave in the note frequencies table. For each octave, we use {{jsxref("Object.entries()")}} to get a list of the notes in that octave.
 4. Create a {{HTMLElement("div")}} to contain that octave's notes (so we can have a small bit of space drawn between octaves), and set its class name to "octave"
 5. For each key in the octave, we check to see if the note's name has more than one character. We skip these, because we're leaving out the sharp notes in this example. If the note's name is only one character, then we call `createKey()`, specifying the note string, octave, and frequency. The returned element is appended to the octave element created in step 4.

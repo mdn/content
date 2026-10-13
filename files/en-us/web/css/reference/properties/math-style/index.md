@@ -26,6 +26,8 @@ math-style: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `normal`
   - : The initial value, indicates normal rendering.
 - `compact`

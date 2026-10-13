@@ -3,7 +3,7 @@ title: "not: Wasm SIMD bitwise instruction"
 short-title: not
 slug: WebAssembly/Reference/SIMD/bitwise/not
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.not
+browser-compat: webassembly.instructions.not
 sidebar: webassemblysidebar
 ---
 
@@ -86,7 +86,3 @@ v128.not
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD bitwise instructions](/en-US/docs/WebAssembly/Reference/SIMD/bitwise)

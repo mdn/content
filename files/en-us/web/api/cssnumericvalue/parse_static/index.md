@@ -6,11 +6,13 @@ page-type: web-api-static-method
 browser-compat: api.CSSNumericValue.parse_static
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}}
 
-The **`parse()`** static method of the
-{{domxref("CSSNumericValue")}} interface converts a value string into an object whose
-members are value and the units.
+The **`parse()`** static method of the {{domxref("CSSNumericValue")}} interface converts a value string into an object whose members are value and the units.
+
+> [!NOTE]
+> This method cannot be called in {{domxref("Worker")}} or {{domxref("Worklet")}} contexts — parsing CSS text is restricted to the main thread.
+> All other methods in the `CSSNumericValue` interface are available in workers and worklets.
 
 ## Syntax
 
@@ -34,9 +36,9 @@ A {{domxref('CSSNumericValue')}}.
 
 ## Examples
 
-The following returns a {{domxref('CSSUnitValue')}} object with a `unit`
-property equal to `"px"` and a `value` property equal to
-`42`.
+### Basic usage
+
+The following code returns a {{domxref('CSSUnitValue')}} object with a `unit` property equal to `"px"` and a `value` property equal to `42`.
 
 ```js
 let numValue = CSSNumericValue.parse("42.0px");

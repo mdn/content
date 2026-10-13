@@ -43,7 +43,7 @@ word-spacing: -0.4ch;
 
 ```css interactive-example
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2");
   font-family: "Amstelvar";
   font-style: normal;
 }
@@ -75,6 +75,8 @@ word-spacing: unset;
 ```
 
 ### Values
+
+This property is specified as the keyword `normal` or a `<length-percentage>`:
 
 - `normal`
   - : The normal inter-word spacing, as defined by the current font and/or the browser.

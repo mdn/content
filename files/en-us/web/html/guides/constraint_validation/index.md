@@ -444,7 +444,7 @@ The following items can help with controlling the text of a constraint violation
   - {{HTMLElement("input")}}
   - {{HTMLElement("output")}}
   - {{HTMLElement("select")}}
-  - Submit buttons (created with either a {{HTMLElement("button")}} element with the `submit` type, or an `input` element with the {{HTMLElement("input/submit", "submit")}} type. Other types of buttons do not participate in constraint validation.
+  - Submit buttons (created with either a {{HTMLElement("button")}} element with the `submit` type, or an `input` element with the {{HTMLElement("input/submit", "submit")}} type). Other types of buttons do not participate in constraint validation.
   - {{HTMLElement("textarea")}}
 
 - The [`ValidityState`](/en-US/docs/Web/API/ValidityState) interface describes the object returned by the `validity` property of the element types listed above. It represents various ways that an entered value can be invalid. Together, they help explain why an element's value fails to validate, if it's not valid.

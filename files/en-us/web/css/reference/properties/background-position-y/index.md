@@ -79,9 +79,9 @@ background-position-y: revert-layer;
 background-position-y: unset;
 ```
 
-The `background-position-y` property is specified as one or more values, separated by commas.
-
 ### Values
+
+This property is specified as one or more comma-separated values:
 
 - `top`
   - : Aligns the top edge of the background image with the top edge of the background position layer.

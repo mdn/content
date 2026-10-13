@@ -3,11 +3,11 @@ title: "any_true: Wasm SIMD bitwise instruction"
 short-title: any_true
 slug: WebAssembly/Reference/SIMD/bitwise/any_true
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.any_true
+browser-compat: webassembly.instructions.any_true
 sidebar: webassemblysidebar
 ---
 
-The **`any_true`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) tests whether an `v128` input value contains any non-zero bits.
+The **`any_true`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) tests whether a `v128` input value contains any non-zero bits.
 
 {{InteractiveExample("Wat Demo: any_true", "tabbed-taller")}}
 
@@ -61,7 +61,3 @@ v128.any_true
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD bitwise instructions](/en-US/docs/WebAssembly/Reference/SIMD/bitwise)

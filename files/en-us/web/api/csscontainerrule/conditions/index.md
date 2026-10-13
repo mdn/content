@@ -3,12 +3,10 @@ title: "CSSContainerRule: conditions property"
 short-title: conditions
 slug: Web/API/CSSContainerRule/conditions
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSContainerRule.conditions
 ---
 
-{{ APIRef("CSSOM") }}{{SeeCompatTable}}
+{{ APIRef("CSSOM") }}
 
 The read-only **`conditions`** property of the {{domxref("CSSContainerRule")}} interface represents an associated CSS {{cssxref("@container")}} at-rule as an array of objects, where each object represents a single container condition.
 
@@ -119,8 +117,8 @@ Note that this condition is contrived to demonstrate how multiple conditions are
 
 #### JavaScript
 
-The code below gets the {{domxref("HTMLStyleElement")}} associated with the example using its `id`, and then uses its `sheet` property to get the {{domxref("StyleSheet")}}.
-From the `StyleSheet` we get the set of `cssRules` added to the sheet.
+The code below gets the {{domxref("HTMLStyleElement")}} associated with the example using its `id`, and then uses its `sheet` property to get the {{domxref("CSSStyleSheet")}}.
+From the `CSSStyleSheet` we get the set of `cssRules` added to the sheet.
 Since we added the `@container` as the third rule above, we can access the associated `CSSContainerRule` using the third entry (index "2") in the `cssRules`.
 
 ```js

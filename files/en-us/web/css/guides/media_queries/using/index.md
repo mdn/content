@@ -71,7 +71,7 @@ Queries involving unknown media types are always false.
 > [!NOTE]
 > A style sheet with a media query attached to its {{HTMLElement("link")}} tag [will still download](https://scottjehl.github.io/CSS-Download-Tests/) even if the query returns `false`, the download will happen but the priority of downloading will be much lower.
 > Nevertheless, its contents will not apply unless and until the result of the query changes to `true`.
-> You can read why this happens in Tomayac's blog [Why Browser Download Stylesheet with Non-Matching Media Queries](https://medium.com/@tomayac/why-browsers-download-stylesheets-with-non-matching-media-queries-eb61b91b85a2).
+> You can read why this happens in Tomayac's blog [Why Browsers Download Stylesheets With Non-Matching Media Queries](https://medium.com/@tomayac/why-browsers-download-stylesheets-with-non-matching-media-queries-eb61b91b85a2).
 
 ## Targeting media types
 

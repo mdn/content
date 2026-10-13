@@ -14,6 +14,7 @@ alphanumerals
 ambisonic
 amore
 analyzability
+animateable-feature
 ANMF
 anonymization
 antialiasing
@@ -60,7 +61,8 @@ barcodes
 barebones
 bfcache
 BGRA
-Bignums
+bignum
+bignums
 bikeshedding
 bilevel
 bioinformatics
@@ -100,10 +102,12 @@ CCPA
 CCPL
 CELP
 CGATS
+chatbots
 cheatsheet
 checkboard
 checkedness
 checkmarks
+cheesemakers
 childlist
 chipsets
 choosable
@@ -157,6 +161,7 @@ datestamped
 DBFS
 DCDM
 DCSP
+debiased
 decodability
 Deinonychus
 demi
@@ -187,6 +192,7 @@ doorhanger
 dotless
 downsampled
 downsampling
+DPIA
 dragonfish
 DSCP
 DTLSL
@@ -238,6 +244,7 @@ fontface
 fontfaces
 footguns
 forgeable
+formants
 FOUC
 Fourway
 FOUT
@@ -249,6 +256,7 @@ fragmentainers
 framebuffers
 framebusting
 frontmost
+fuhao
 Fullband
 fullscreened
 fullwidth
@@ -290,6 +298,7 @@ HILN
 hindwings
 hissy
 hitbox
+hitboxes
 hitmap
 HOBA
 holodeck
@@ -312,6 +321,7 @@ iconset
 idents
 IDOR
 IERS
+immediates
 IMSC
 Indo-Pacific
 inferencing
@@ -395,6 +405,7 @@ maplike
 MBASW
 Mbit
 Mbps
+mediacapabilities
 metalness
 metastring
 microcontrollers
@@ -515,6 +526,7 @@ platformer
 platformers
 playhead
 playout
+playthrough
 PLTE
 plumeria
 polyfilling
@@ -572,6 +584,7 @@ quickmenu
 qvalues
 QWERTZ
 RAII
+rainforests
 rari
 rasterizes
 raycaster
@@ -583,8 +596,10 @@ reauthenticated
 reauthentication
 redirections
 redisplaying
+refbox
 regionless
 reimplementation
+relatedly
 remarketing
 remotable
 renderable
@@ -612,6 +627,7 @@ RFCOMM
 RGTC
 romcoms
 roundoff
+RSAES-OAEP
 RSAOAEP
 RSASSA
 RTCWEB
@@ -659,6 +675,7 @@ side-scrollers
 sideload
 sideloaded
 SIDX
+signedness
 significand
 singlecast
 singlecasts
@@ -786,6 +803,7 @@ Tanuki
 targetable
 taskbars
 taskboard
+tealish
 teleporting
 telepresence
 texels
@@ -881,6 +899,7 @@ unlayered
 unlocalized
 unmaps
 unminified
+unmutes
 unmuting
 unobserves
 unpartitioned
@@ -888,6 +907,7 @@ unpinch
 unprefix
 unprefixing
 unprioritized
+unpunctuated
 unreadably
 unregisters
 unregistration

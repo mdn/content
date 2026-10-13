@@ -20,7 +20,7 @@ A number which is one of the three possible state constants defined on the {{dom
 - `FileReader.LOADING` (1)
   - : A read method has been called. A {{domxref("File")}} or {{domxref("Blob")}} is being read, and no error has occurred yet.
 - `FileReader.DONE` (2)
-  - : The read operation is complete. This could mean that: the entire {{domxref("File")}} or {{domxref("Blob")}} has been read into memory, a file read error occurred, or {{domxref("FileReader.abort()", "abort()")}} was called and the read was cancelled.
+  - : The read operation is complete. This could mean that: the entire {{domxref("File")}} or {{domxref("Blob")}} has been read into memory, a file read error occurred, or {{domxref("FileReader.abort()", "abort()")}} was called and the read was canceled.
 
 ## Examples
 

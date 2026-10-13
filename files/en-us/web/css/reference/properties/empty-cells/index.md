@@ -73,9 +73,9 @@ empty-cells: revert-layer;
 empty-cells: unset;
 ```
 
-The `empty-cells` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `show`
   - : Borders and backgrounds are drawn like in normal cells.

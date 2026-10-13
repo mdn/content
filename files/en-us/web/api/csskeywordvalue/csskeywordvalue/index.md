@@ -6,58 +6,94 @@ page-type: web-api-constructor
 browser-compat: api.CSSKeywordValue.CSSKeywordValue
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSKeywordValue()`** constructor
-creates a new {{domxref("CSSKeywordValue")}} object which represents CSS keywords and
-other identifiers.
+The **`CSSKeywordValue()`** constructor creates a new {{domxref("CSSKeywordValue")}} object which represents a CSS keyword or other identifier.
 
 ## Syntax
 
 ```js-nolint
-new CSSKeywordValue(val)
+new CSSKeywordValue(value)
 ```
 
 ### Parameters
 
 - `value`
-  - : Sets or returns the value of the new `CSSKeywordValue`.
+  - : A {{jsxref('String')}} that will be used to set {{domxref("CSSKeywordValue.value")}}.
 
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the `value` parameter is not specified or it is not of type {{jsxref('String')}}.
+  - : Thrown if the `value` parameter is not specified, or if it is an empty string.
 
 ## Examples
 
-The following example resets the CSS {{cssxref('display')}} property to its defaults,
-setting the inline
-[`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute
-to `style="display: initial"` if viewed in the [developer tools inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/select_an_element/index.html).
+### Basic usage
 
-```css hidden
+This example sets the CSS {{cssxref('display')}} property to `initial`, constructing a `CSSKeywordValue` for the keyword.
+
+#### HTML
+
+The HTML defines an element on which we'll set the value of the `display` keyword, an {{htmlelement("hr")}} element, a button that will be used to set the value of the `display` keyword, and a "Reset" button to reset the example.
+
+```html
+<div id="myElement">
+  Check the developer tools to see the log in the console and to inspect this
+  div's style attributes.
+</div>
+<hr />
+<button id="set-initial" type="button">Set initial</button>
+<button id="reset" type="button">Reset</button>
+```
+
+#### CSS
+
+The CSS initially sets the element to `flex`, which forces it to display full-width, and gives it a solid border with padding and margins.
+
+```css
 #myElement {
   display: flex;
+  border: solid;
+  padding: 10px;
+  margin: 5px;
 }
 ```
 
-```html hidden
-<div id="myElement">
-  Check the developer tools to see the log in the console and to inspect the
-  style attribute on this div.
-</div>
-```
+#### JavaScript
+
+The code first gets a handle to the "Set initial" button and adds a listener to handle the click event when it is pressed.
+
+The listener then gets the element's inline styles using {{domxref("HTMLElement.attributeStyleMap")}}, and sets the `display` attribute with a newly constructed `CSSKeywordValue`.
+It then logs the value of that keyword to the console.
 
 ```js
-const keyword = new CSSKeywordValue("initial");
-const myElement = document.getElementById("myElement").attributeStyleMap;
-myElement.set("display", keyword);
+const setInitialButton = document.querySelector("#set-initial");
 
-console.log(myElement.get("display").value); // 'initial'
-console.dir(keyword);
+setInitialButton.addEventListener("click", () => {
+  const myElementInlineStyles =
+    document.getElementById("myElement").attributeStyleMap;
+  myElementInlineStyles.set("display", new CSSKeywordValue("initial"));
+  console.log(`display: ${myElementInlineStyles.get("display").value}`);
+});
 ```
 
-{{EmbedLiveSample("Examples", 120, 120)}}
+Note that we can't log the value of the inline styles before pressing the button, because there aren't any.
+
+```js hidden
+const resetButton = document.querySelector("#reset");
+resetButton.addEventListener("click", () => {
+  window.location.reload(true);
+});
+```
+
+#### Result
+
+Right click on the element and open the [developer tools inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/select_an_element/index.html) to inspect its styles.
+You should see that `display: flex` is set on `#myElement`.
+Press "Set initial" to make set the inline style of `display` to `"initial"`.
+You should see the styles change in the inspector, and the element will also shrink slightly as the `flex` is disabled.
+
+{{EmbedLiveSample("Basic usage", 120, 150)}}
 
 ## Specifications
 

@@ -9,7 +9,7 @@ status:
 browser-compat: api.CSSPrimitiveValue.setFloatValue
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("CSSOM")}}{{non-standard_header}}
 
 The **`setFloatValue()`** method of the
 {{domxref("CSSPrimitiveValue")}} interface is used to set a float value. If the property

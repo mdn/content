@@ -10,7 +10,7 @@ browser-compat: css.properties.box-lines
 sidebar: cssref
 ---
 
-{{Non-standard_header}}{{Deprecated_Header}}
+{{Non-standard_header}}
 
 > [!WARNING]
 > This is a property of the original CSS flexible box layout Module draft. It has been replaced in the specification. See [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) for information about the current standard.
@@ -40,9 +40,9 @@ box-lines: initial;
 box-lines: unset;
 ```
 
-The `box-lines` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `single`
   - : Box elements lay out in a single row or column.

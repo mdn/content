@@ -1,12 +1,13 @@
 ---
-title: "lt_s: Wasm text instruction"
+title: "lt_s: Wasm numeric instruction"
 short-title: lt_s
 slug: WebAssembly/Reference/Numeric/lt_s
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.lt_s
 sidebar: webassemblysidebar
 ---
 
-The **`lt_s`** instruction, short for _less than signed_, checks if a signed integer is less than another signed integer.
+The **`lt_s`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _less than signed_, checks if a signed integer is less than another signed integer.
 
 There are other `lt` instructions available:
 
@@ -149,6 +150,14 @@ The output is as follows:
 {{embedlivesample("simd_lt_s", "100%", 100)}}
 
 The result is `0` because the value stored in lane `3` of the first input value is not less than the value stored in lane `3` of the second input value.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

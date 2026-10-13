@@ -97,6 +97,12 @@ The final step is to style the registered highlights. This is done by using the 
 }
 ```
 
+### Accessibility
+
+The custom highlights do not inherently provide semantic meaning in the document structure. The {{domxref("Highlight/type", "type")}} attribute exposes semantics (such as spelling or grammar errors) to assistive technologies, but support may vary across platforms and the type used.
+
+If compatibility with assistive technologies is a concern, consider using semantic HTML elements such as {{HTMLElement("mark")}} or providing additional accessible cues for highlights that communicate important information.
+
 ## Interfaces
 
 - {{domxref("Highlight")}}

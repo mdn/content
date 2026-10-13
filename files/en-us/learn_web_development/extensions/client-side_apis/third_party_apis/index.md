@@ -7,7 +7,7 @@ sidebar: learnsidebar
 
 {{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}
 
-The APIs we've covered so far are built into the browser, but not all APIs are. Many large websites and services such as Google Maps, Twitter, Facebook, PayPal, etc. provide APIs allowing developers to make use of their data (e.g., displaying your twitter stream on your blog) or services (e.g., using Facebook login to log in your users). This article looks at the difference between browser APIs and 3rd party APIs and shows some typical uses of the latter.
+The APIs we've covered so far are built into the browser, but not all APIs are. Many large websites and services such as Google, GitHub, YouTube, Spotify, etc. provide APIs allowing developers to make use of their data (e.g., displaying information about your repositories on your blog) or services (e.g., using Google login to log in your users). This article explains the difference between browser APIs and third-party APIs and shows some typical uses of the latter.
 
 <table>
   <tbody>
@@ -22,7 +22,6 @@ The APIs we've covered so far are built into the browser, but not all APIs are. 
       <td>
         <ul>
           <li>The concepts behind third-party APIs and associated patterns such as API keys.</li>
-          <li>Using a third-party map API.</li>
           <li>Using a RESTful API.</li>
           <li>Using Google's YouTube APIs.</li>
         </ul>
@@ -31,11 +30,11 @@ The APIs we've covered so far are built into the browser, but not all APIs are. 
   </tbody>
 </table>
 
-## What are third party APIs?
+## What are third-party APIs?
 
-Third party APIs are APIs provided by third parties — generally companies such as Facebook, Twitter, or Google — to allow you to access their functionality via JavaScript and use it on your site. One of the most obvious examples is using mapping APIs to display custom maps on your pages.
+Third-party APIs are APIs provided by third parties — generally companies such as Spotify or Google — to allow you to access their functionality via JavaScript and use it on your site. One example is YouTube's APIs, which can search for videos and display them on your pages.
 
-Let's look at a [Simple Mapquest API example](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/mapquest), and use it to illustrate how third-party APIs differ from browser APIs.
+Let's look at how third-party APIs differ from browser APIs.
 
 ### They are found on third-party servers
 
@@ -50,346 +49,371 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
 // etc.
 ```
 
-Third party APIs, on the other hand, are located on third party servers. To access them from JavaScript you first need to connect to the API functionality and make it available on your page. This typically involves first linking to a JavaScript library available on the server via a {{htmlelement("script")}} element, as seen in our Mapquest example:
+Third-party APIs, on the other hand, are located on third-party servers. To access them from JavaScript, you first need to connect to the API functionality and make it available on your page.
+
+All third-party APIs ultimately connect to their servers using HTTP. But manually making {{domxref("Window/fetch", "fetch()")}} calls is awkward and prone to breaking changes, so usually they provide functionality wrapped in functions, known as a Software Development Kit (SDK). The SDK constructs the HTTP payload, sends the request to the right endpoint, parses the response, etc., so you write as little code as possible and only supply the necessary data.
+
+Traditionally, the SDK is provided by embedding an external script in a {{htmlelement("script")}} element, which registers the library as a global variable. More modern APIs usually provide them as [modules](/en-US/docs/Web/JavaScript/Guide/Modules) that you can import, sometimes distributed through package managers like [npm](https://docs.npmjs.com/).
+
+For example, Google's JavaScript client library exposes a global `gapi` object when you load its script:
 
 ```html
-<script
-  src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"
-  defer></script>
-<link
-  rel="stylesheet"
-  href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
+<script src="https://apis.google.com/js/api.js"></script>
 ```
 
-You can then start using the objects available in that library. For example:
+After initializing the client for the Google Drive API and obtaining the user's authorization, you can list files with a method call:
 
 ```js
-const map = L.mapquest.map("map", {
-  center: [53.480759, -2.242631],
-  layers: L.mapquest.tileLayer("map"),
-  zoom: 12,
-});
-```
-
-Here we are creating a variable to store the map information in, then creating a new map using the `mapquest.map()` method, which takes as its parameters the ID of a {{htmlelement("div")}} element you want to display the map in ('map'), and an options object containing the details of the particular map we want to display. In this case we specify the coordinates of the center of the map, a map layer of type `map` to show (created using the `mapquest.tileLayer()` method), and the default zoom level.
-
-This is all the information the Mapquest API needs to plot a simple map. The server you are connecting to handles all the complicated stuff, like displaying the correct map tiles for the area being shown, etc.
-
-> [!NOTE]
-> Some APIs handle access to their functionality slightly differently, requiring the developer to make an HTTP request to a specific URL pattern to retrieve data. These are called [RESTful APIs — we'll show an example later on](#a_restful_api_%e2%80%94_nytimes).
-
-### They usually require API keys
-
-Security for browser APIs tends to be handled by permission prompts, as [discussed in our first article](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction#they_have_additional_security_mechanisms_where_appropriate). The purpose of these is so that the user knows what is going on in the websites they visit and is less likely to fall victim to someone using an API in a malicious way.
-
-Third party APIs have a slightly different permissions system — they tend to use developer keys to allow developers access to the API functionality, which is more to protect the API vendor than the user.
-
-You'll find a line similar to the following in the Mapquest API example:
-
-```js
-L.mapquest.key = "YOUR-API-KEY-HERE";
-```
-
-This line specifies an API or developer key to use in your application — the developer of the application must apply to get a key, and then include it in their code to be allowed access to the API's functionality. In our example we've just provided a placeholder.
-
-> [!NOTE]
-> When creating your own examples, you'll use your own API key in place of any placeholder.
-
-Other APIs may require that you include the key in a slightly different way, but the pattern is relatively similar for most of them.
-
-Requiring a key enables the API provider to hold users of the API accountable for their actions. When the developer has registered for a key, they are then known to the API provider, and action can be taken if they start to do anything malicious with the API (such as tracking people's location or trying to spam the API with loads of requests to stop it working, for example). The easiest action would be to just revoke their API privileges.
-
-## Extending the Mapquest example
-
-Let's add some more functionality to the Mapquest example to show how to use some other features of the API.
-
-1. To start this section, make yourself a copy of the [mapquest starter file](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/start/index.html), in a new directory. If you've already cloned the [examples repository](https://github.com/mdn/learning-area), you'll already have a copy of this file, which you can find in the _javascript/apis/third-party-apis/mapquest/start_ directory.
-2. Next, you need to go to the [Mapquest developer site](https://developer.mapquest.com/), create an account, and then create a developer key to use with your example. (At the time of writing, it was called a "consumer key" on the site, and the key creation process also asked for an optional "callback URL". You don't need to fill in a URL here: just leave it blank.)
-3. Open up your starting file, and replace the API key placeholder with your key.
-
-### Changing the type of map
-
-There are a number of different types of map that can be shown with the Mapquest API. To do this, find the following line:
-
-```js-nolint
-layers: L.mapquest.tileLayer("map"),
-```
-
-Try changing `'map'` to `'hybrid'` to show a hybrid-style map. Try some other values too. The [`tileLayer` reference page](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-tile-layer/) shows the different available options, plus a lot more information.
-
-### Adding different controls
-
-The map has a number of different controls available; by default it just shows a zoom control. You can expand the controls available using the `map.addControl()` method; add this to your code:
-
-```js
-map.addControl(L.mapquest.control());
-```
-
-The [`mapquest.control()` method](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-control/) just creates a simple full-featured control set, and it is placed in the top-right-hand corner by default. You can adjust the position by specifying an options object as a parameter for the control containing a `position` property, the value of which is a string specifying a position for the control. Try this, for example:
-
-```js
-map.addControl(L.mapquest.control({ position: "bottomright" }));
-```
-
-There are other types of control available, for example [`mapquest.searchControl()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-search-control/) and [`mapquest.satelliteControl()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-satellite-control/), and some are quite complex and powerful. Have a play around and see what you can come up with.
-
-### Adding a custom marker
-
-Adding a marker (icon) at a certain point on the map is easy — you just use the [`L.marker()`](https://leafletjs.com/reference.html#marker) method (which seems to be documented in the related Leaflet.js docs). Add the following code to your example, again inside `window.onload`:
-
-```js
-L.marker([53.480759, -2.242631], {
-  icon: L.mapquest.icons.marker({
-    primaryColor: "#22407F",
-    secondaryColor: "#3B5998",
-    shadow: true,
-    size: "md",
-    symbol: "A",
-  }),
-})
-  .bindPopup("This is Manchester!")
-  .addTo(map);
-```
-
-As you can see, this at its simplest takes two parameters, an array containing the coordinates at which to display the marker, and an options object containing an `icon` property that defines the icon to display at that point.
-
-The icon is defined using a [`mapquest.icons.marker()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-icons/) method, which as you can see contains information such as color and size of marker.
-
-Onto the end of the first method call we chain `.bindPopup('This is Manchester!')`, which defines content to display when the marker is clicked.
-
-Finally, we chain `.addTo(map)` to the end of the chain to actually add the marker to the map.
-
-Have a play with the other options shown in the documentation and see what you can come up with! Mapquest provides some pretty advanced functionality, such as directions, searching, etc.
-
-> [!NOTE]
-> If you have trouble getting the example to work, check your code against our [finished version](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/finished/script.js).
-
-## A RESTful API — NYTimes
-
-Now let's look at another API example — the [New York Times API](https://developer.nytimes.com/). This API allows you to retrieve New York Times news story information and display it on your site. This type of API is known as a **RESTful API** — instead of getting data using the features of a JavaScript library like we did with Mapquest, we get data by making HTTP requests to specific URLs, with data like search terms and other properties encoded in the URL (often as URL parameters). This is a common pattern you'll encounter with APIs.
-
-Below we'll take you through an exercise to show you how to use the NYTimes API, which also provides a more general set of steps to follow that you can use as an approach for working with new APIs.
-
-### Find the documentation
-
-When you want to use a third party API, it is essential to find out where the documentation is, so you can find out what features the API has, how you use them, etc. The New York Times API documentation is at <https://developer.nytimes.com/>.
-
-### Get a developer key
-
-Most APIs require you to use some kind of developer key, for reasons of security and accountability. To sign up for an NYTimes API key, following the instructions at <https://developer.nytimes.com/get-started>.
-
-1. Let's request a key for the Article Search API — create a new app, selecting this as the API you want to use (fill in a name and description, toggle the switch under the "Article Search API" to the on position, and then click "Create").
-2. Get the API key from the resulting page.
-3. Now, to start the example off, make a copy of all the files in the [nytimes/start](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/nytimes/start) directory. If you've already cloned the [examples repository](https://github.com/mdn/learning-area), you'll already have a copy of these files, which you can find in the _javascript/apis/third-party-apis/nytimes/start_ directory. Initially the `script.js` file contains a number of variables needed for the setup of the example; below we'll fill in the required functionality.
-
-The app will end up allowing you to type in a search term and optional start and end dates, which it will then use to query the Article Search API and display the search results.
-
-![A screenshot of a sample search query and search results as retrieved from the New York Article Search API.](nytimes-example.png)
-
-### Connect the API to your app
-
-First, you'll need to make a connection between the API and your app. In the case of this API, you need to include the API key as a [get](/en-US/docs/Web/HTTP/Reference/Methods/GET) parameter every time you request data from the service at the correct URL.
-
-1. Find the following line:
-
-   ```js
-   const key = "INSERT-YOUR-API-KEY-HERE";
-   ```
-
-   Replace the existing API key with the actual API key you got in the previous section.
-
-2. Add the following line to your JavaScript, below the `// Event listeners to control the functionality` comment. This runs a function called `submitSearch()` when the form is submitted (the button is pressed).
-
-   ```js
-   searchForm.addEventListener("submit", submitSearch);
-   ```
-
-3. Now add the `submitSearch()` and `fetchResults()` function definitions, below the previous line:
-
-   ```js
-   function submitSearch(e) {
-     pageNumber = 0;
-     fetchResults(e);
-   }
-
-   function fetchResults(e) {
-     // Use preventDefault() to stop the form submitting
-     e.preventDefault();
-
-     // Assemble the full URL
-     let url = `${baseURL}?api-key=${key}&page=${pageNumber}&q=${searchTerm.value}&fq=document_type:("article")`;
-
-     if (startDate.value !== "") {
-       url = `${url}&begin_date=${startDate.value}`;
-     }
-
-     if (endDate.value !== "") {
-       url = `${url}&end_date=${endDate.value}`;
-     }
-   }
-   ```
-
-`submitSearch()` sets the page number back to 0 to begin with, then calls `fetchResults()`. This first calls [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) on the event object, to stop the form actually submitting (which would break the example). Next, we use some string manipulation to assemble the full URL that we will make the request to. We start off by assembling the parts we deem as mandatory for this demo:
-
-- The base URL (taken from the `baseURL` variable).
-- The API key, which has to be specified in the `api-key` URL parameter (the value is taken from the `key` variable).
-- The page number, which has to be specified in the `page` URL parameter (the value is taken from the `pageNumber` variable).
-- The search term, which has to be specified in the `q` URL parameter (the value is taken from the value of the `searchTerm` text {{htmlelement("input")}}).
-- The document type to return results for, as specified in an expression passed in via the `fq` URL parameter. In this case, we want to return articles.
-
-Next, we use a couple of [`if ()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statements to check whether the `startDate` and `endDate` elements have had values filled in on them. If they do, we append their values to the URL, specified in `begin_date` and `end_date` URL parameters respectively.
-
-So, a complete URL would end up looking something like this:
-
-```url
-https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=YOUR-API-KEY-HERE&page=0&q=cats&fq=document_type:("article")&begin_date=20170301&end_date=20170312
-```
-
-> [!NOTE]
-> You can find more details of what URL parameters can be included at the [NYTimes developer docs](https://developer.nytimes.com/).
-
-> [!NOTE]
-> The example has rudimentary form data validation — the search term field has to be filled in before the form can be submitted (achieved using the `required` attribute), and the date fields have `pattern` attributes specified, which means they won't submit unless their values consist of 8 numbers (`pattern="[0-9]{8}"`). See [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation) for more details on how these work.
-
-### Requesting data from the API
-
-Now we've constructed our URL, let's make a request to it. We'll do this using the [Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch).
-
-Add the following code block inside the `fetchResults()` function, just above the closing curly brace:
-
-```js
-// Use fetch() to make the request to the API
-fetch(url)
-  .then((response) => response.json())
-  .then((json) => displayResults(json))
-  .catch((error) => console.error(`Error fetching data: ${error.message}`));
-```
-
-Here we run the request by passing our `url` variable to [`fetch()`](/en-US/docs/Web/API/Window/fetch), convert the response body to JSON using the [`json()`](/en-US/docs/Web/API/Response/json) function, then pass the resulting JSON to the `displayResults()` function so the data can be displayed in our UI. We also catch and log any errors that might be thrown.
-
-### Displaying the data
-
-OK, let's look at how we'll display the data. Add the following function below your `fetchResults()` function.
-
-```js
-function displayResults(json) {
-  while (section.firstChild) {
-    section.removeChild(section.firstChild);
-  }
-
-  const articles = json.response.docs;
-
-  nav.style.display = articles.length === 10 ? "block" : "none";
-
-  if (articles.length === 0) {
-    const para = document.createElement("p");
-    para.textContent = "No results returned.";
-    section.appendChild(para);
-  } else {
-    for (const current of articles) {
-      const article = document.createElement("article");
-      const heading = document.createElement("h2");
-      const link = document.createElement("a");
-      const img = document.createElement("img");
-      const para = document.createElement("p");
-      const keywordPara = document.createElement("p");
-      keywordPara.classList.add("keywords");
-
-      console.log(current);
-
-      link.href = current.web_url;
-      link.textContent = current.headline.main;
-      para.textContent = current.snippet;
-      keywordPara.textContent = "Keywords: ";
-      for (const keyword of current.keywords) {
-        const span = document.createElement("span");
-        span.textContent = `${keyword.value} `;
-        keywordPara.appendChild(span);
-      }
-
-      if (current.multimedia.length > 0) {
-        img.src = `http://www.nytimes.com/${current.multimedia[0].url}`;
-        img.alt = current.headline.main;
-      }
-
-      article.appendChild(heading);
-      heading.appendChild(link);
-      article.appendChild(img);
-      article.appendChild(para);
-      article.appendChild(keywordPara);
-      section.appendChild(article);
+async function listDriveFiles() {
+  try {
+    const response = await gapi.client.drive.files.list({
+      pageSize: 10,
+      fields: "files(id, name)",
+    });
+
+    for (const file of response.result.files) {
+      console.log(`${file.name} (${file.id})`);
     }
+  } catch (error) {
+    console.error("Could not list Drive files:", error);
   }
 }
 ```
 
-There's a lot of code here; let's explain it step by step:
+The library translates `gapi.client.drive.files.list()` into an HTTP request and makes the parsed response available through `response.result`. Of course, there's a lot of setup required to use Google APIs, as introduced by Google's [Drive API JavaScript quickstart](https://developers.google.com/workspace/drive/api/quickstart/js)—you need to register the app with its permissions, configure OAuth, etc.
 
-- The [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop is a common pattern used to delete all of the contents of a DOM element, in this case, the {{htmlelement("section")}} element. We keep checking to see if the `<section>` has a first child, and if it does, we remove the first child. The loop ends when `<section>` no longer has any children.
-- Next, we set the `articles` variable to equal `json.response.docs` — this is the array holding all the objects that represent the articles returned by the search. This is done purely to make the following code a bit simpler.
-- The first [`if ()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) block checks to see if 10 articles are returned (the API returns up to 10 articles at a time.) If so, we display the {{htmlelement("nav")}} that contains the _Previous 10_/_Next 10_ pagination buttons. If fewer than 10 articles are returned, they will all fit on one page, so we don't need to show the pagination buttons. We will wire up the pagination functionality in the next section.
-- The next `if ()` block checks to see if no articles are returned. If so, we don't try to display any — we create a {{htmlelement("p")}} containing the text "No results returned." and insert it into the `<section>`.
-- If some articles are returned, we, first of all, create all the elements that we want to use to display each news story, insert the right contents into each one, and then insert them into the DOM at the appropriate places. To work out which properties in the article objects contained the right data to show, we consulted the Article Search API reference (see [NYTimes APIs](https://developer.nytimes.com/apis)). Most of these operations are fairly obvious, but a few are worth calling out:
-  - We used a [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop to go through all the keywords associated with each article, and insert each one inside its own {{htmlelement("span")}}, inside a `<p>`. This was done to make it easy to style each one.
-  - We used an `if ()` block (`if (current.multimedia.length > 0) { }`) to check whether each article has any images associated with it, as some stories don't. We display the first image only if it exists; otherwise, an error would be thrown.
+### They usually require API keys
+
+Security for browser APIs tends to be handled by permission prompts, as [discussed in our first article](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction#they_have_additional_security_mechanisms_where_appropriate). The purpose of these is to let the user know what is happening on the websites they visit and to make them less likely to fall victim to someone maliciously using an API.
+
+Third-party APIs have a slightly different permissions system — they tend to use developer keys to allow developers access to the API functionality, which is more to protect the API vendor than the user.
+
+Requiring a key enables the API provider to hold developers using the API accountable for their actions. When the developer registers a key, the API provider can identify them and can take action if the developer starts to do anything malicious with the API (such as tracking people's location or spamming the API with loads of requests to stop it from working). The easiest action is to revoke the developer's API privileges.
+
+You'll find a line similar to the following in the YouTube API example:
+
+```js
+gapi.client.setApiKey("YOUR-API-KEY-HERE");
+```
+
+This line specifies an API or developer key to use in your application — the application developer must apply to get a key, and then include it in their code to be allowed access to the API's functionality. In our example, we've just provided a placeholder.
+
+Other APIs may require that you include the key in a slightly different way, but the pattern is relatively similar for most of them.
+
+> [!WARNING]
+> Protect API keys like you would protect your passwords. Unless explicitly permitted by the API vendor's documentation, never, ever, embed API keys in your frontend code. Otherwise, any visitor to your website can extract the API key and abuse it, possibly leaking sensitive information or getting you banned from using the API. Always set up your own backend and _proxy_ the request—that is, your server communicates with the third-party API using the API key, while your user communicates with your own server. The API key only lives on your server.
+>
+> It also goes without saying that you should never commit them to your public GitHub repositories. If you accidentally expose a key, immediately revoke it and get a new one.
+
+Not all APIs need API keys. Some APIs provide open-access, high-volume functionality, so granting API access doesn't really add much to the server load (although they may still be rate-limited). Examples include [GitHub REST API](https://docs.github.com/en/rest) (see next), [Wikipedia's APIs](https://www.mediawiki.org/wiki/API:Main_page) for article content, and the [Stack Exchange API](https://api.stackexchange.com/docs) for questions and answers.
+
+## A RESTful API — GitHub
+
+As already mentioned, all APIs ultimately become HTTP requests, but some APIs provide SDKs while others expect you to handle the request yourself.
+
+For the latter case, the APIs are usually designed in a [**RESTful**](https://en.wikipedia.org/wiki/REST) fashion. This is a paradigm where the client is _stateless_ (i.e., each request is made in isolation), sends requests to specific URLs using specific HTTP verbs (`GET`, `POST`, etc.) to carry out specific actions, and sends the input for each action via URL parameters or the request body.
+
+Let's look at the [GitHub REST API](https://docs.github.com/en/rest). This API allows you to retrieve information about GitHub repositories and display it on your site.
+
+### Find the documentation
+
+When you want to use a third-party API, find the documentation so you can review the API's features and how to use them. For this example, we'll use GitHub's [Search repositories endpoint](https://docs.github.com/en/rest/search/search#search-repositories).
+
+When reading documentation for REST APIs, focus on these five questions:
+
+1. What [HTTP method](/en-US/docs/Web/HTTP/Reference/Methods) to use for the task
+2. What URL endpoint to request for the task
+3. What payload the endpoint expects, and in which format (JSON body, XML body, query parameters, etc.)
+4. What [status codes](/en-US/docs/Web/HTTP/Reference/Status) it may return, and what each one means
+5. What's contained in the response body, and in which format
+
+### Get a personal access token
+
+For this exercise, create a **personal access token (PAT)** to authenticate your requests:
+
+1. Sign in to your GitHub account, or [sign up for one](https://github.com/signup) if you don't already have one.
+2. Follow GitHub's instructions for [creating a fine-grained personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token). Give it a descriptive name (such as "MDN 3rd party API lesson") and a short expiration (if you don't expect to continue using it after this lesson), and select your own account as the resource owner.
+3. Under **Repository access**, select **Public repositories**. Leave additional permissions unset: searching public repositories doesn't require any.
+4. Click **Generate token** and copy the token. You'll enter it in the form in the [live example](#try_the_example), rather than adding it to your source code.
+
+This example uses API keys differently from their typical usage: the website asks the user to submit their own key and perform the action on their behalf, so it doesn't need its own API key or a server to proxy requests.
+
+> [!WARNING]
+> Once again, treat this PAT like your password. Only share your PAT with websites you trust, and give it really narrowly-scoped permissions and a short expiration date so it won't get abused. Our example sends the token directly from your browser to GitHub and does not save it in browser storage or send it to other servers.
+
+GitHub also allows unauthenticated searches of public repositories, with a lower [search rate limit](https://docs.github.com/en/rest/search/search#rate-limit). We'll make the token field optional so you can try the example without one, then enter your token to see how authentication is added to a request.
+
+### Set up the example
+
+The app allows you to type in a search term and optional start and end dates for repository creation, then displays matching repositories.
+
+The HTML defines the search form, a status message, a results section, and pagination buttons:
+
+```html live-sample___github-search
+<form>
+  <fieldset>
+    <legend>Search public repositories</legend>
+    <p>
+      <label for="token">Personal access token (optional):</label>
+      <input id="token" type="password" autocomplete="off" />
+    </p>
+    <p>
+      <label for="search">Search term:</label>
+      <input id="search" type="search" required />
+    </p>
+    <p>
+      <label for="start-date">Created on or after:</label>
+      <input id="start-date" type="date" />
+    </p>
+    <p>
+      <label for="end-date">Created on or before:</label>
+      <input id="end-date" type="date" />
+    </p>
+    <button type="submit">Search</button>
+  </fieldset>
+</form>
+<p id="status" role="status"></p>
+<section aria-label="Search results"></section>
+<nav aria-label="Result pages">
+  <button id="previous" type="button" disabled>Previous page</button>
+  <button id="next" type="button" disabled>Next page</button>
+</nav>
+```
+
+The JavaScript starts by storing references to the HTML elements and setting up the pagination state:
+
+```js live-sample___github-search
+const baseURL = "https://api.github.com/search/repositories";
+const perPage = 10;
+const searchForm = document.querySelector("form");
+const searchFields = document.querySelector("fieldset");
+const tokenInput = document.querySelector("#token");
+const searchTerm = document.querySelector("#search");
+const startDate = document.querySelector("#start-date");
+const endDate = document.querySelector("#end-date");
+const section = document.querySelector("section");
+const status = document.querySelector("#status");
+const nextBtn = document.querySelector("#next");
+const previousBtn = document.querySelector("#previous");
+
+let pageNumber = 1;
+let query = "";
+let hasNextPage = false;
+```
+
+### Connect the API to your app
+
+When the form is submitted, we assemble the search query:
+
+```js live-sample___github-search
+searchForm.addEventListener("submit", submitSearch);
+
+function submitSearch(e) {
+  e.preventDefault();
+
+  query = `${searchTerm.value.trim()} is:public`;
+  if (startDate.value !== "") {
+    query = `${query} created:>=${startDate.value}`;
+  }
+  if (endDate.value !== "") {
+    query = `${query} created:<=${endDate.value}`;
+  }
+
+  pageNumber = 1;
+  hasNextPage = false;
+  section.textContent = "";
+  fetchResults(pageNumber);
+}
+```
+
+`submitSearch()` calls [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) to stop the form actually submitting and reloading the page. It then combines the search term with GitHub's [search qualifiers](https://docs.github.com/en/search-github/searching-on-github/searching-for-repositories): `is:public` limits results to public repositories, and the `created:` qualifiers filter by creation date. We save this query as a top-level variable, so flipping pages will reuse the same query even if the search form has been edited.
+
+### Requesting data from the API
+
+Now let's make a request using the [Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch). The `fetchResults()` function requests a page of search results:
+
+```js live-sample___github-search
+async function fetchResults(page) {
+  const url = new URL(baseURL);
+  url.searchParams.set("q", query);
+  url.searchParams.set("page", page);
+  url.searchParams.set("per_page", perPage);
+
+  const headers = {
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2026-03-10",
+  };
+  const token = tokenInput.value.trim();
+  if (token !== "") {
+    headers.Authorization = `Bearer ${token}`;
+  }
+
+  searchFields.disabled = true;
+  nextBtn.disabled = true;
+  previousBtn.disabled = true;
+  status.textContent = "Loading…";
+
+  try {
+    const response = await fetch(url, { headers });
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    const json = await response.json();
+    displayResults(json);
+    pageNumber = page;
+    hasNextPage = pageNumber * perPage < Math.min(json.total_count, 1000);
+    status.textContent = `Page ${pageNumber}.`;
+    if (json.incomplete_results) {
+      status.textContent +=
+        " The search returned incomplete results. Try a narrower search.";
+    }
+  } catch (error) {
+    status.textContent = `Could not fetch results: ${error.message}`;
+  } finally {
+    searchFields.disabled = false;
+    previousBtn.disabled = pageNumber === 1;
+    nextBtn.disabled = !hasNextPage;
+  }
+}
+```
+
+GitHub's REST API uses standard HTTP verbs to distinguish action types. Because this is a read operation, we perform a `GET` request (the default for `fetch()`). The `GET` request has no body, so input is provided via query parameters. We add them via the {{domxref("URL")}} object's `searchParams` property: the search query (`q`), page number (`page`), and number of results per page (`per_page`).
+
+For example, searching for `cats` without dates produces a URL like this:
+
+```url
+https://api.github.com/search/repositories?q=cats+is%3Apublic&page=1&per_page=10
+```
+
+The `headers` object specifies the response format and API version. The {{HTTPHeader("Authorization")}} header is worthy of your attention: this is the standard way to transfer API keys. Here we use the `Bearer` scheme.
+
+The REST API returns data in JSON format because we requested it with `Accept: "application/vnd.github+json"`; we then parse it using [`response.json()`](/en-US/docs/Web/API/Response/json). The JSON's shape can also be found in GitHub's [Search repositories endpoint documentation](https://docs.github.com/en/rest/search/search#search-repositories).
+
+> [!NOTE]
+> If you receive a `401` error, check for a mistyped, expired, or revoked token. A `403` or `429` error can indicate a rate limit, in which case you should wait before trying again rather than repeatedly clicking Search, which only worsens the situation. See GitHub's [troubleshooting guidance](https://docs.github.com/en/rest/using-the-rest-api/troubleshooting-the-rest-api).
+
+After a successful request, `fetchResults()` updates `pageNumber` and enables the appropriate buttons. The Previous page button is disabled on the first page. The search endpoint exposes at most 1,000 results, so `fetchResults()` uses this limit and `total_count` to decide when to disable the Next page button.
+
+### Displaying the data
+
+The `displayResults()` function displays the returned repositories:
+
+```js live-sample___github-search
+function displayResults(json) {
+  section.textContent = "";
+
+  const repositories = json.items;
+
+  if (repositories.length === 0) {
+    const para = document.createElement("p");
+    para.textContent = "No results returned.";
+    section.appendChild(para);
+    return;
+  }
+  for (const current of repositories) {
+    const article = document.createElement("article");
+    const heading = document.createElement("h2");
+    const link = document.createElement("a");
+    const para = document.createElement("p");
+    const details = document.createElement("p");
+
+    link.href = current.html_url;
+    link.textContent = current.full_name;
+    para.textContent = current.description ?? "No description provided.";
+    details.textContent = `Stars: ${current.stargazers_count}`;
+
+    heading.appendChild(link);
+    article.appendChild(heading);
+    article.appendChild(para);
+    article.appendChild(details);
+    section.appendChild(article);
+  }
+}
+```
+
+The code reads the JSON response body and converts the result to a DOM tree.
+
+- It first clears the section's content.
+- The repositories are in the response's `items` array. If it is empty, we display a message saying that no results were returned.
+- Otherwise, we create elements for each repository's name, link, description, and star count, then insert them into the DOM.
 
 ### Wiring up the pagination buttons
 
-To make the pagination buttons work, we will increment (or decrement) the value of the `pageNumber` variable, and then re-rerun the fetch request with the new value included in the page URL parameter. This works because the NYTimes API only returns 10 results at a time — if more than 10 results are available, it will return the first 10 (0-9) if the `page` URL parameter is set to 0 (or not included at all — 0 is the default value), the next 10 (10-19) if it is set to 1, and so on.
+We provide event listeners that listen for the "Previous page" and "Next page" buttons being clicked, and request the next or previous results page as appropriate:
 
-This allows us to write a simplistic pagination function.
+```js live-sample___github-search
+nextBtn.addEventListener("click", () => {
+  fetchResults(pageNumber + 1);
+});
 
-1. Below the existing [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) call, add these two new ones, which cause the `nextPage()` and `previousPage()` functions to be invoked when the relevant buttons are clicked:
+previousBtn.addEventListener("click", () => {
+  fetchResults(pageNumber - 1);
+});
+```
 
-   ```js
-   nextBtn.addEventListener("click", nextPage);
-   previousBtn.addEventListener("click", previousPage);
-   ```
+GitHub's page numbers start at 1. We've requested 10 results per page, so page 2 contains the next 10 results, and so on. The current page number is recorded in `pageNumber` and updated only after a successful request.
 
-2. Below your previous addition, let's define the two functions — add this code now:
+### Try the example
 
-   ```js
-   function nextPage(e) {
-     pageNumber++;
-     fetchResults(e);
-   }
+Enter a search term such as `javascript` and submit the form. Try searching with and without your token, adding dates, and navigating between pages.
 
-   function previousPage(e) {
-     if (pageNumber > 0) {
-       pageNumber--;
-     } else {
-       return;
-     }
-     fetchResults(e);
-   }
-   ```
+```css hidden live-sample___github-search
+body {
+  font-family: sans-serif;
+}
 
-   The first function increments the `pageNumber` variable, then run the `fetchResults()` function again to display the next page's results.
+label {
+  display: block;
+}
 
-   The second function works nearly exactly the same way in reverse, but we also have to take the extra step of checking that `pageNumber` is not already zero before decrementing it — if the fetch request runs with a minus `page` URL parameter, it could cause errors. If the `pageNumber` is already 0, we [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) out of the function — if we are already at the first page, we don't need to load the same results again.
+input {
+  box-sizing: border-box;
+  max-width: 100%;
+}
 
-> [!NOTE]
-> You can find our [finished NYTimes API example code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/finished/index.html) (also [see it running live here](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/finished/)).
+section {
+  max-height: 300px;
+  overflow: auto;
+  overflow-wrap: anywhere;
+}
+
+article {
+  border-bottom: 1px solid #cccccc;
+}
+
+nav {
+  margin-top: 1rem;
+}
+```
+
+{{EmbedLiveSample("github-search", "100%", 750)}}
 
 ## YouTube example
 
-We also built another example for you to study and learn from — see our [YouTube video search example](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/youtube/). This uses two related APIs:
+We also built another example for you to study and learn from — see our [YouTube video search example](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/youtube/).
+
+> [!NOTE]
+> The linked example doesn't work because it doesn't contain a valid API key; as we said, you should never share API keys in published frontend code. To run the demo, set up a local copy with your own API key as described below.
+
+This uses two related APIs:
 
 - The [YouTube Data API](https://developers.google.com/youtube/v3/docs/) to search for YouTube videos and return results.
-- The [YouTube IFrame Player API](https://developers.google.com/youtube/iframe_api_reference) to display the returned video examples inside IFrame video players so you can watch them.
+- The [YouTube IFrame Player API](https://developers.google.com/youtube/iframe_api_reference) to display the returned video examples inside iframe video players so you can watch them.
 
-This example is interesting because it shows two related third-party APIs being used together to build an app. The first one is a RESTful API, while the second one works more like Mapquest (with API-specific methods, etc.). It is worth noting however that both of the APIs require a JavaScript library to be applied to the page. The RESTful API has functions available to handle making the HTTP requests and returning the results.
+This example is interesting because it shows two related third-party APIs being used together to build an app. The first one is a RESTful API, while the second one provides JavaScript methods to control a video player. This example uses JavaScript libraries for both APIs: the client library for the Data API handles the HTTP requests and returns the results.
 
 ![A screenshot of a sample YouTube video search using two related APIs. The left side of the image has a sample search query using the YouTube Data API. The right side of the image displays the search results using the YouTube Iframe Player API.](youtube-example.png)
 
 We are not going to say too much more about this example in the article — [the source code](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/youtube) has detailed comments inserted inside it to explain how it works.
+
+The Data API provides a default daily [quota](https://developers.google.com/youtube/v3/getting-started#quota) for projects that enable it. Requests consume this quota, so you can perform a limited number of searches.
 
 To get it running, you'll need to:
 
 - Read the [YouTube Data API Overview](https://developers.google.com/youtube/v3/getting-started) documentation.
 - Make sure you visit the [Enabled APIs page](https://console.cloud.google.com/apis/enabled), and in the list of APIs, make sure the status is ON for the YouTube Data API v3.
 - Get an API key from [Google Cloud](https://cloud.google.com/).
-- Find the string `ENTER-API-KEY-HERE` in the source code, and replace it with your API key.
+- Find the string `YOUR-API-KEY-HERE` in the source code, and replace it with your API key.
 - Run the example through a web server. It won't work if you just run it directly in the browser (i.e., via a `file://` URL).
 
 ## Summary

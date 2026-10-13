@@ -16,6 +16,7 @@ See {{cssxref("overscroll-behavior")}} for a full explanation.
 ```css
 /* Keyword values */
 overscroll-behavior-x: auto; /* default */
+overscroll-behavior-x: chain;
 overscroll-behavior-x: contain;
 overscroll-behavior-x: none;
 
@@ -27,16 +28,18 @@ overscroll-behavior-x: revert-layer;
 overscroll-behavior-x: unset;
 ```
 
-The `overscroll-behavior-x` property is specified as a keyword chosen from the list of values below.
-
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
-  - : The default scroll overflow behavior occurs as normal.
+  - : Allows the default behavior at a scroll boundary. Scrolling may continue in another scroll container.
+- `chain`
+  - : Allows scrolling to continue outside the scroll container, but prevents overscroll "bounce" effects.
 - `contain`
-  - : Default scroll overflow behavior (e.g., "bounce" effects) is observed inside the element where this value is set. However, no {{Glossary("Scroll_chaining", "scroll chaining")}} occurs on neighboring scrolling areas; the underlying elements will not scroll. The `contain` value disables native browser navigation, including the vertical pull-to-refresh gesture and horizontal swipe navigation.
+  - : Prevents scrolling from continuing outside the scroll container. "Bounce" effects may still occur.
 - `none`
-  - : No scroll chaining occurs to neighboring scrolling areas, and default scroll overflow behavior is prevented.
+  - : Prevents scrolling from continuing outside the scroll container and also prevents overscroll "bounce" effects.
 
 ## Formal definition
 

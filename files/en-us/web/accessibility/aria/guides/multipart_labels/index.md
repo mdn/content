@@ -14,7 +14,7 @@ If you're using a screen reader, have you noticed that, when you go to this sett
 
 The solution is in an ARIA attribute called `aria-labelledby`. Its parameter is a string that consists of the IDs of the HTML elements you want to concatenate into a single accessible name.
 
-Both `aria-labelledby` and `aria-describedby` are specified on the form element that is to be labelled, for example an `<input>` In both cases, the label for/label control bindings that may also exist are overridden by `aria-labelledby`. If on an HTML page you provide `aria-labelledby`, you should also provide a label for construct to also support older browsers that do not have ARIA support yet. With Firefox 3, your visually impaired users will automatically get better accessibility from the new attribute, but the users of older browsers are not left in the dark this way.
+Both `aria-labelledby` and `aria-describedby` are specified on the form element that is to be labeled, for example an `<input>` In both cases, the label for/label control bindings that may also exist are overridden by `aria-labelledby`. If on an HTML page you provide `aria-labelledby`, you should also provide a label for construct to also support older browsers that do not have ARIA support yet. With Firefox 3, your visually impaired users will automatically get better accessibility from the new attribute, but the users of older browsers are not left in the dark this way.
 
 ### Example
 

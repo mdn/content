@@ -3,7 +3,7 @@ title: "load32_splat: Wasm SIMD load/store instruction"
 short-title: load32_splat
 slug: WebAssembly/Reference/SIMD/load_store/load32_splat
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.load32_splat
+browser-compat: webassembly.instructions.load32_splat
 sidebar: webassemblysidebar
 ---
 
@@ -76,7 +76,3 @@ v128.load32_splat mem_idx offset=int align=int
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD load/store instructions](/en-US/docs/WebAssembly/Reference/SIMD/load_store)

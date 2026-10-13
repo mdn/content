@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Window.languagechange_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`languagechange`** event is fired at the global scope object when the user's preferred language changes.
 

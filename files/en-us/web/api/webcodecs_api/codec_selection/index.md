@@ -170,7 +170,7 @@ AAC encoding is universally supported on Safari versions that support {{domxref(
 
 ### MP3 and PCM
 
-MP3 and PCM are not widely supported as encoding targets, with MP3 encoding not currently supported by any major browser. PCM (uncompressed audio) is available as a {{domxref("AudioData")}} format for raw audio processing, but support for encoding with `AudioEncoder` is limited.
+MP3 and PCM are not widely supported as encoding targets, with MP3 encoding not currently supported by any major browser. PCM (uncompressed audio) is available as an {{domxref("AudioData")}} format for raw audio processing, but support for encoding with `AudioEncoder` is limited.
 
 ### Audio codec string reference
 

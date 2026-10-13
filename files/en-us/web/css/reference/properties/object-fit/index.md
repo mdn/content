@@ -70,9 +70,9 @@ object-fit: revert-layer;
 object-fit: unset;
 ```
 
-The `object-fit` property is specified as a single keyword chosen from the list of values below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `contain`
   - : The replaced content is scaled to maintain its {{glossary("aspect ratio")}} while fitting within the element's content box. The entire object is made to fill the box, while preserving its aspect ratio, so the object will be ["letterboxed"](<https://en.wikipedia.org/wiki/Letterboxing_(filming)>) or ["pillarboxed"](https://en.wikipedia.org/wiki/Pillarbox) if its aspect ratio does not match the aspect ratio of the box.

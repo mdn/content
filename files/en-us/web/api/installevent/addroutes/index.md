@@ -3,12 +3,10 @@ title: "InstallEvent: addRoutes() method"
 short-title: addRoutes()
 slug: Web/API/InstallEvent/addRoutes
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.InstallEvent.addRoutes
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}
 
 The **`addRoutes()`** method of the {{domxref("InstallEvent")}} interface specifies one or more static routes, which define rules for fetching specified resources that will be used even before service worker startup. This allows you to, for example, bypass a service worker in cases where you always want to fetch a resource from the network or a browser {{domxref("Cache")}}, and avoids the performance overhead of unnecessary service worker cycles.
 
@@ -58,7 +56,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined`.
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if one or more of the rules objects inside `routerRules` is invalid, or has a `source` value of `"fetch-event"` when the associated service worker does not have a {{DOMxRef("ServiceWorkerGlobalScope.fetch_event", "fetch")}} event handler. Also thrown if you try to combine `or` with another condition type.
 
 ## Examples

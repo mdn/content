@@ -13,7 +13,7 @@ An `SVGLength` object can be designated as read only, which means that attempts 
 
 ## Instance properties
 
-- {{domxref("SVGLength.unitType", "unitType")}}
+- {{domxref("SVGLength.unitType", "unitType")}} {{ReadOnlyInline}}
   - : The type of the value as specified by one of the `SVG_LENGTHTYPE_*` constants defined on this interface.
 - {{domxref("SVGLength.value", "value")}}
   - : The value as a floating point value, in user units.

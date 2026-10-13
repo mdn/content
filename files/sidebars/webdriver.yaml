@@ -35,7 +35,65 @@ sidebar:
           - link: /Web/WebDriver/Reference/BiDi/Modules/browser/setDownloadBehavior
             code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext
+        details: closed
         code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext#commands
+            title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/activate
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/captureScreenshot
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/close
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/create
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/handleUserPrompt
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/locateNodes
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/print
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/setViewport
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/traverseHistory
+            code: true
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext#events
+            title: Events
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/contextCreated
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/contextDestroyed
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/domContentLoaded
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/downloadEnd
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/downloadWillBegin
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/fragmentNavigated
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/historyUpdated
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/load
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationCommitted
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationFailed
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/userPromptClosed
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/userPromptOpened
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/emulation
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/input
@@ -70,7 +128,23 @@ sidebar:
       - link: /Web/WebDriver/Reference/BiDi/Modules/permissions
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/script
+        details: closed
         code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/script#commands
+            title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/evaluate
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/getRealms
+            code: true
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/script#events
+            title: Events
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/realmCreated
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/realmDestroyed
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/session
         details: closed
         code: true
@@ -113,3 +187,8 @@ sidebar:
     link: /Web/WebDriver/Reference/Errors
     details: closed
     code: true
+l10n:
+  fr:
+    Commands: Commandes
+    Events: Évènements
+    Shared: Partagé

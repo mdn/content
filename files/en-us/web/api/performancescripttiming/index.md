@@ -64,7 +64,7 @@ This interface also supports the following properties:
 ## Instance methods
 
 - {{domxref("PerformanceScriptTiming.toJSON()")}} {{Experimental_Inline}}
-  - : Returns a JSON representation of the `PerformanceScriptTiming` object.
+  - : Returns a JSON-serializable plain object representing the `PerformanceScriptTiming` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 

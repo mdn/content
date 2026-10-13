@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Reflect.construct
 sidebar: jsref
 ---
 
-The **`Reflect.construct()`** static method is like the {{jsxref("new")}} operator, but as a function. It is equivalent to calling `new target(...args)`. It additionally allows to specify a different [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) value.
+The **`Reflect.construct()`** static method is like the {{jsxref("new")}} operator, but as a function. It is equivalent to calling `new target(...args)`. It additionally allows you to specify a different [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) value.
 
 {{InteractiveExample("JavaScript Demo: Reflect.construct()", "taller")}}
 

@@ -34,9 +34,9 @@ const sending = browser.tabs.sendMessage(
 - `options` {{optional_inline}}
   - : `object`.
     - `documentId` {{optional_inline}}
-      - : `string`. Send a message to a specific document identified by `documentId` instead of all frames in the tab.
+      - : `string`. Send a message to a specific document, instead of all frames in the tab. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
     - `frameId` {{optional_inline}}
-      - : `integer`. Sends the message to a specific frame identified by `frameId` instead of all frames in the tab. Whether the content script is executed in all frames depends on the `all_frames` setting in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) section of `manifest.json`.
+      - : `integer`. Sends the message to a specific frame, instead of all frames in the tab. Whether the content script is executed in all frames depends on the `all_frames` setting in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) section of `manifest.json`.
 
 ### Return value
 

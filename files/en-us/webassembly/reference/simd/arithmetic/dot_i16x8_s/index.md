@@ -3,7 +3,7 @@ title: "dot_i16x8_s: Wasm SIMD arithmetic instruction"
 short-title: dot_i16x8_s
 slug: WebAssembly/Reference/SIMD/arithmetic/dot_i16x8_s
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.dot_i16x8_s
+browser-compat: webassembly.instructions.dot_i16x8_s
 sidebar: webassemblysidebar
 ---
 
@@ -79,7 +79,3 @@ i32x4.dot_i16x8_s
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD arithmetic instructions](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic)

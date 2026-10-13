@@ -25,7 +25,7 @@ The **`WebAssembly.Exception`** object represents a runtime exception thrown in 
 
 ## Instance properties
 
-- [`Exception.prototype.stack`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack) {{non-standard_inline}}
+- [`Exception.prototype.stack`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack)
   - : Returns the stack trace for the exception.
 
 ## Description
@@ -45,10 +45,10 @@ const env = {
   my_error: myErrorTag,
 };
 
-WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then( ... )
+WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then(/* ... */);
 ```
 
-You could then try running an exported Wasm function in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement. If the function throws, the error propagated to the `catch` block will be a [`WebAssembly.Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) object instance.
+You could then try running an exported Wasm function in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement. If the function throws, the error propagated to the `catch` block will be a `WebAssembly.Exception` object instance.
 
 ```js
 WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then(
@@ -68,7 +68,7 @@ WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then(
 );
 ```
 
-You can check whether it has the same exception type we defined earlier (`myErrorTag`) using [`Exception.prototype.is()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/is), and then access the exception's payload using [`Exception.prototype.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg)).
+You can check whether it has the same exception type we defined earlier (`myErrorTag`) using [`Exception.prototype.is()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/is), and then access the exception's payload using [`Exception.prototype.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg).
 
 JavaScript and other client code can only access WebAssembly exception values, and vice versa, when the associated tag is shared (you can't just use another tag that happens to define the same data types).
 Without the matching tag, exceptions can be caught and re-thrown, but they can't be inspected.

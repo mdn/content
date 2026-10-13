@@ -9,8 +9,6 @@ browser-compat: html.elements.frameset
 sidebar: htmlsidebar
 ---
 
-{{Deprecated_header}}
-
 The **`<frameset>`** [HTML](/en-US/docs/Web/HTML) element is used to contain {{HTMLElement("frame")}} elements.
 
 > [!NOTE]

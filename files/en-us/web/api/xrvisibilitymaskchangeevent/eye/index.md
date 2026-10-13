@@ -3,16 +3,18 @@ title: "XRVisibilityMaskChangeEvent: eye property"
 short-title: eye
 slug: Web/API/XRVisibilityMaskChangeEvent/eye
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRVisibilityMaskChangeEvent.eye
 ---
 
-{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`eye`** read-only property of the {{domxref("XRVisibilityMaskChangeEvent")}} interface indicates the eye the mask applies to.
 
 ## Value
 
-An emumerated value indicating which eye the mask applies to from the viewer's perspective.
+An enumerated value indicating which eye the mask applies to from the viewer's perspective.
 This can be one of:
 
 - `left`

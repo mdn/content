@@ -59,11 +59,11 @@ red and green values. (The blue channel has a fixed value.) By modifying the cha
 you can generate all kinds of palettes.
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
-const canvas = document.getElementById("canvas");
+const canvas = document.getElementById("my-canvas");
 const ctx = canvas.getContext("2d");
 
 for (let i = 0; i < 6; i++) {

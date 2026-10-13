@@ -5,6 +5,8 @@ page-type: guide
 sidebar: addonsidebar
 ---
 
+<!-- cSpell:ignore colour -->
+
 The [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) API has a rather handy module available for internationalizing extensions — [i18n](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n). In this article we'll explore its features and provide a practical example of how it works.
 
 > [!NOTE]

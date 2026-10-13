@@ -25,7 +25,7 @@ Instances of `LayoutShiftAttribution` are returned in an array by calling {{domx
 ## Instance methods
 
 - {{domxref("LayoutShiftAttribution.toJSON()")}} {{Experimental_Inline}}
-  - : Returns a JSON representation of the `LayoutShiftAttribution` object.
+  - : Returns a JSON-serializable plain object representing the `LayoutShiftAttribution` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 

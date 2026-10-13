@@ -28,7 +28,7 @@ The list of devices obtained by calling {{domxref("MediaDevices.enumerateDevices
 ## Instance methods
 
 - {{domxref("MediaDeviceInfo.toJSON()")}}
-  - : Returns a JSON representation of the `MediaDeviceInfo` object.
+  - : Returns a JSON-serializable plain object representing the `MediaDeviceInfo` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Example
 

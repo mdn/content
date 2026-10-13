@@ -72,7 +72,7 @@ For form submissions, the CSRF token is usually included in a hidden form field,
 
 For a JavaScript API like `fetch()`, the token might be placed in a cookie or embedded in the page, and the JavaScript extracts the value and sends it as an extra header.
 
-Modern web frameworks usually have built-in support for CSRF tokens: for example, [Django](https://www.djangoproject.com/) enables you to protect forms using the [`csrf_token`](https://docs.djangoproject.com/en/5.1/ref/csrf/) tag. This generates an additional hidden form field containing the token, which the framework then checks on the server.
+Modern web frameworks usually have built-in support for CSRF tokens: for example, [Django](https://www.djangoproject.com/) enables you to protect forms using the [`csrf_token`](https://docs.djangoproject.com/en/stable/ref/csrf/) tag. This generates an additional hidden form field containing the token, which the framework then checks on the server.
 
 To take advantage of this protection you must understand all the places in your website where you are using state-changing HTTP requests, and ensure you're using the defense provided by your chosen framework.
 
@@ -185,4 +185,5 @@ See [Bypassing SameSite cookie restrictions](https://portswigger.net/web-securit
 
 ## See also
 
+- [Local network access](/en-US/docs/Web/Security/Defenses/Local_network_access)
 - [Cross-Site Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html) at [owasp.org](https://owasp.org/)

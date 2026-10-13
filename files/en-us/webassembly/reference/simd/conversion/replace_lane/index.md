@@ -3,7 +3,7 @@ title: "replace_lane: Wasm SIMD conversion instruction"
 short-title: replace_lane
 slug: WebAssembly/Reference/SIMD/conversion/replace_lane
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.replace_lane
+browser-compat: webassembly.instructions.replace_lane
 sidebar: webassemblysidebar
 ---
 

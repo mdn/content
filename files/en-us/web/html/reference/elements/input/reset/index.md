@@ -54,9 +54,6 @@ input[type="submit"] {
 }
 ```
 
-> [!NOTE]
-> You should usually avoid including reset buttons in your forms. They're rarely useful, and are instead more likely to frustrate users who click them by mistake (often while trying to click the [submit button](/en-US/docs/Web/HTML/Reference/Elements/input/submit)).
-
 ## Value
 
 An `<input type="reset">` element's [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute contains a string that is used as the button's label providing the button with an {{glossary("accessible description")}}. Buttons such as `reset` don't have a value otherwise.
@@ -82,6 +79,8 @@ If you don't specify a `value`, you get a button with the default label (typical
 ## Using reset buttons
 
 `<input type="reset">` buttons are used to reset forms. If you want to create a custom button and then customize the behavior using JavaScript, you need to use [`<input type="button">`](/en-US/docs/Web/HTML/Reference/Elements/input/button), or better still, a {{htmlelement("button")}} element.
+
+You should usually avoid including reset buttons in your forms. They're rarely useful, and are instead more likely to frustrate users who click them by mistake (often while trying to click the [submit button](/en-US/docs/Web/HTML/Reference/Elements/input/submit)).
 
 ### A basic reset button
 
@@ -174,10 +173,6 @@ We've included basic examples above. There isn't really anything more to say abo
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>None</td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

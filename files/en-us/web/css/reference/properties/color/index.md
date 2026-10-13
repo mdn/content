@@ -62,7 +62,7 @@ color: hwb(152deg 0% 58% / 70%);
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 color: currentColor;
 
 /* <named-color> values */
@@ -110,11 +110,9 @@ color: revert-layer;
 color: unset;
 ```
 
-The `color` property is specified as a single {{cssxref("&lt;color&gt;")}} value.
-
-Note that the value must be a uniform color. It can't be a {{cssxref("gradient")}}, which is actually a type of {{cssxref("image")}}.
-
 ### Values
+
+This property is specified as a single value from the following list:
 
 - {{cssxref("&lt;color&gt;")}}
   - : Sets the color of the textual and decorative parts of the element.

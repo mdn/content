@@ -43,7 +43,7 @@ The returned object has the following properties:
       - : A positive integer value indicating the maximum number of channels supported by the codec; for example, a codec that supports only mono sound would have a value of 1; stereo codecs would have a 2, etc.
     - `clockRate`
       - : A positive integer specifying the codec's clock rate in Hertz (Hz).
-        The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1), including their clock rates.
+        The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters#rtp-parameters-1), including their clock rates.
     - `mimeType`
       - : A string indicating the codec's MIME media type and subtype.
         The MIME type strings used by RTP differ from those used elsewhere.
@@ -131,14 +131,9 @@ The function below returns a Boolean indicating whether or not the device suppor
 
 ```js
 function canReceiveH264() {
-  let capabilities = RTCRtpReceiver.getCapabilities("video");
+  const capabilities = RTCRtpReceiver.getCapabilities("video");
 
-  capabilities.codecs.forEach((codec) => {
-    if (codec.mimeType === "video/H264") {
-      return true;
-    }
-  });
-  return false;
+  return capabilities.codecs.some((codec) => codec.mimeType === "video/H264");
 }
 ```
 

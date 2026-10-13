@@ -97,6 +97,14 @@ The [`WebAssembly.Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_inter
 > [!NOTE]
 > You cannot call a Wasm function from JavaScript that has an `exnref` value as a parameter or result. Trying to do so will result in an error.
 
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction

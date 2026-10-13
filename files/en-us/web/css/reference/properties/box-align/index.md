@@ -10,7 +10,7 @@ browser-compat: css.properties.box-align
 sidebar: cssref
 ---
 
-{{Non-standard_header}}{{Deprecated_Header}}
+{{Non-standard_header}}
 
 > [!WARNING]
 > This is a property of the original CSS flexible box layout Module draft, and has been replaced by a newer standard.
@@ -37,9 +37,9 @@ box-lines: initial;
 box-lines: unset;
 ```
 
-The `box-align` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `start`
   - : The box aligns contents at the start, leaving any extra space at the end.

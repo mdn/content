@@ -66,4 +66,4 @@ Every time the element inserted in the slot changes, we log a report to the cons
 
 ## See also
 
-{{domxref("HTMLSlotElement")}}
+- {{domxref("HTMLSlotElement")}}

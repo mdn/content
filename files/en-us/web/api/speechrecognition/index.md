@@ -35,6 +35,8 @@ _`SpeechRecognition` also inherits properties from its parent interface, {{domxr
   - : Sets an array of {{domxref("SpeechRecognitionPhrase")}} objects to be used for [contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#contextual_biasing_in_speech_recognition).
 - {{domxref("SpeechRecognition.processLocally")}} {{experimental_inline}}
   - : Specifies whether speech recognition must be performed locally on the user's device.
+- {{domxref("SpeechRecognition.unspokenPunctuation")}} {{experimental_inline}}
+  - : Specifies whether the speech recognition engine will infer and insert punctuation marks based on the user's natural speech patterns.
 
 ### Deprecated properties
 
@@ -46,9 +48,9 @@ The concept of grammar has been removed from the Web Speech API. Related feature
 ## Static methods
 
 - {{domxref("SpeechRecognition.available_static", "SpeechRecognition.available()")}} {{experimental_inline}}
-  - : Checks whether the specified languages are available for speech recognition at the given quality level.
+  - : Checks whether the specified languages are available for speech recognition.
 - {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} {{experimental_inline}}
-  - : Installs the required language packs for on-device speech recognition in the specified languages and quality level.
+  - : Installs the required language packs for on-device speech recognition in the specified languages.
 
 ## Instance methods
 

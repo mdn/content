@@ -31,7 +31,7 @@ Speculation rules take the form of a JSON structure that determine what resource
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : The speculation rules definition is not a valid JSON object.
 
 ## Description
@@ -480,7 +480,7 @@ Multiple params can be provided in a space-separated array:
 ```
 
 > [!NOTE]
-> As a [structured field](https://www.rfc-editor.org/rfc/rfc8941), the parameters should be space-separated, quoted strings — as shown above — and not comma-separated, which developers may be more used to.
+> As a [structured field](https://www.rfc-editor.org/info/rfc8941/), the parameters should be space-separated, quoted strings — as shown above — and not comma-separated, which developers may be more used to.
 
 ### `eagerness` example
 

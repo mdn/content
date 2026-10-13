@@ -9,7 +9,7 @@ browser-compat: api.NodeList.entries
 {{APIRef("DOM")}}
 
 The **`NodeList.entries()`** method returns an
-{{jsxref("Iteration_protocols",'iterator')}} allowing to go through all key/value pairs
+{{jsxref("Iteration_protocols",'iterator')}} allowing you to go through all key/value pairs
 contained in this object. The values are {{domxref("Node")}} objects.
 
 ## Syntax

@@ -72,9 +72,9 @@ column-span: revert-layer;
 column-span: unset;
 ```
 
-The `column-span` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `none`
   - : The element does not span multiple columns.

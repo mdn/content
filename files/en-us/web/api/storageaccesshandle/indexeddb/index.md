@@ -18,7 +18,7 @@ An {{domxref("IDBFactory")}} object.
 
 ```js
 document.requestStorageAccess({ indexedDB: true }).then(
-  (handle) => {
+  async (handle) => {
     console.log("indexedDB access granted");
     await handle.indexedDB.deleteDatabase("foo");
   },

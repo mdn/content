@@ -25,11 +25,11 @@ Getting the property returns a string containing the HTML serialization of the f
 This is `undefined` if the value is not set.
 
 Setting the property accepts either a {{domxref("TrustedHTML")}} object or a string.
-It parses this input as a HTML document and replaces the content of the frame with the result.
+It parses this input as an HTML document and replaces the content of the frame with the result.
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if the property is set to a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
 
 ## Description

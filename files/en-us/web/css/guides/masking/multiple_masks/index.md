@@ -165,7 +165,7 @@ Both accept [`<geometry-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#geo
 
 - If two `<geometry-box>` values are present, the first sets the `mask-origin` component and the second sets the `mask-clip` component. In this case, the order is very important.
 
-Setting the incorrect order for the `mask-origin` and `mask-clip` values may effect the appearance, but will not cause the declaration to fail.
+Setting the incorrect order for the `mask-origin` and `mask-clip` values may affect the appearance, but will not cause the declaration to fail.
 
 ### Ordering rules for `mask-size` and `mask-position`
 

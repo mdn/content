@@ -55,7 +55,7 @@ The `ElementInternals` interface also includes the following properties.
 - {{domxref("ElementInternals.ariaColIndex")}}
   - : A string reflecting the [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) attribute, which defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.
 - {{domxref("ElementInternals.ariaColIndexText")}}
-  - : A string reflecting the [`aria-colindextext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext) attribute, which defines a human readable text alternative of aria-colindex.
+  - : A string reflecting the [`aria-colindextext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext) attribute, which defines a human-readable text alternative of aria-colindex.
 - {{domxref("ElementInternals.ariaColSpan")}}
   - : A string reflecting the [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan) attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
 - {{domxref("ElementInternals.ariaCurrent")}}
@@ -82,7 +82,7 @@ The `ElementInternals` interface also includes the following properties.
   - : A string reflecting the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
 - {{domxref("ElementInternals.ariaModal")}}
   - : A string reflecting the [`aria-modal`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal) attribute, which indicates whether an element is modal when displayed.
-- {{domxref("ElementInternals.ariaMultiline")}}
+- {{domxref("ElementInternals.ariaMultiLine")}}
   - : A string reflecting the [`aria-multiline`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline) attribute, which indicates whether a text box accepts multiple lines of input or only a single line.
 - {{domxref("ElementInternals.ariaMultiSelectable")}}
   - : A string reflecting the [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable) attribute, which indicates that the user may select more than one item from the current selectable descendants.
@@ -109,7 +109,7 @@ The `ElementInternals` interface also includes the following properties.
 - {{domxref("ElementInternals.ariaRowIndex")}}
   - : A string reflecting the [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex) attribute, which defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.
 - {{domxref("ElementInternals.ariaRowIndexText")}}
-  - : A string reflecting the [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext) attribute, which defines a human readable text alternative of aria-rowindex.
+  - : A string reflecting the [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext) attribute, which defines a human-readable text alternative of aria-rowindex.
 - {{domxref("ElementInternals.ariaRowSpan")}}
   - : A string reflecting the [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan) attribute, which defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.
 - {{domxref("ElementInternals.ariaSelected")}}

@@ -1,12 +1,13 @@
 ---
-title: "const: Wasm text instruction"
+title: "const: Wasm numeric instruction"
 short-title: const
 slug: WebAssembly/Reference/Numeric/const
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.const
 sidebar: webassemblysidebar
 ---
 
-The **`const`** [WebAssembly numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) is used to declare numbers.
+The **`const`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) is used to declare numbers.
 
 {{InteractiveExample("Wat Demo: const", "tabbed-standard")}}
 
@@ -64,3 +65,11 @@ value_type.const
 | `f32.const`  | `0x43 f:float32`       | `f32.const 2.5` => `0x43 0x00 0x00 0x20 0x40`                                                                                     |
 | `f64.const`  | `0x44 f:float64`       | `f64.const 2.5` => `0x44 0x00 0x00 0x00 0x00 0x00 0x00 0x04 0x40`                                                                 |
 | `v128.const` | `0xfd 0x0c (b:byte)¹⁶` | `v128.const i32x4 0x9 0xa 0xb 0xc` => `0xfd 0x0c 0x09 0x00 0x00 0x00 0x0a 0x00 0x00 0x00 0x0b 0x00 0x00 0x00 0x0c 0x00 0x00 0x00` |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

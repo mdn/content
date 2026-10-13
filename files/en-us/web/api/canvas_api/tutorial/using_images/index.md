@@ -28,9 +28,9 @@ The canvas API is able to use any of the following data types as an image source
 - {{domxref("HTMLCanvasElement")}}
   - : You can use another {{HTMLElement("canvas")}} element as your image source.
 - {{domxref("ImageBitmap")}}
-  - : A bitmap image, eventually cropped. Such type are used to extract part of an image, a _sprite_, from a larger image
+  - : A bitmap image, eventually cropped. Used to extract part of an image, a _sprite_, from a larger image
 - {{domxref("OffscreenCanvas")}}
-  - : A special kind of `<canvas>` that is not displayed and is prepared without being displayed. Using such an image source allows to switch to it without the composition of the content to be visible to the user.
+  - : A special kind of `<canvas>` that is not displayed and is prepared without being displayed. Using such an image source allows you to switch to it without the composition of the content being visible to the user.
 - {{domxref("VideoFrame")}}
   - : An image representing one single frame of a video.
 
@@ -135,12 +135,12 @@ Once we have a reference to our source image object we can use the `drawImage()`
 In the following example, we will use an external image as the backdrop for a small line graph. Using backdrops can make your script considerably smaller because we can avoid the need for code to generate the background. In this example, we're only using one image, so I use the image object's `load` event handler to execute the drawing statements. The `drawImage()` method places the backdrop at the coordinate (0, 0), which is the top-left corner of the canvas.
 
 ```html hidden
-<canvas id="canvas" width="180" height="150"></canvas>
+<canvas id="my-canvas" width="180" height="150"></canvas>
 ```
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   const img = new Image();
   img.onload = () => {
     ctx.drawImage(img, 0, 0);
@@ -176,12 +176,12 @@ In this example, we'll use an image as a wallpaper and repeat it several times o
 > Images can become blurry when scaling up or grainy if they're scaled down too much. Scaling is probably best not done if you've got some text in it which needs to remain legible.
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   const img = new Image();
   img.onload = () => {
     for (let i = 0; i < 4; i++) {

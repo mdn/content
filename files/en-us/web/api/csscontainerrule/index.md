@@ -15,7 +15,7 @@ The **`CSSContainerRule`** interface represents a single CSS {{cssxref("@contain
 
 _Inherits properties from its ancestors {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, and {{domxref("CSSRule")}}._
 
-- {{domxref("CSSContainerRule.conditions")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("CSSContainerRule.conditions")}} {{ReadOnlyInline}}
   - : Returns an array of objects, each of which specifies a container condition in a {{cssxref("@container")}} rule.
     The objects have a `name` string property and a `query` string property, either of which may be the empty string if not defined.
     The `name` represents the name of a container, and the `query` represents the set of feature tests that must be true for the particular condition to apply.
@@ -181,8 +181,8 @@ The `@container` rule then applies a new `width`, `background-color`, and `font-
 
 #### JavaScript
 
-The code below gets the {{domxref("HTMLStyleElement")}} associated with the example using its `id`, and then uses its `sheet` property to get the {{domxref("StyleSheet")}}.
-From the `StyleSheet` we get the set of `cssRules` added to the sheet.
+The code below gets the {{domxref("HTMLStyleElement")}} associated with the example using its `id`, and then uses its `sheet` property to get the {{domxref("CSSStyleSheet")}}.
+From the `CSSStyleSheet` we get the set of `cssRules` added to the sheet.
 Since we added the `@container` as the second rule above, we can access the associated `CSSContainerRule` using the second entry, with index "1" in the `cssRules`.
 
 ```js

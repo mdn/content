@@ -3,7 +3,7 @@ title: "andnot: Wasm SIMD bitwise instruction"
 short-title: andnot
 slug: WebAssembly/Reference/SIMD/bitwise/andnot
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.andnot
+browser-compat: webassembly.instructions.andnot
 sidebar: webassemblysidebar
 ---
 
@@ -113,7 +113,3 @@ v128.andnot
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD bitwise instructions](/en-US/docs/WebAssembly/Reference/SIMD/bitwise)

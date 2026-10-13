@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Window.requestAnimationFrame
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`window.requestAnimationFrame()`** method tells the
 browser you wish to perform an animation. It requests the browser to call a

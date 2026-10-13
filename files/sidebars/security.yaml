@@ -27,3 +27,8 @@ sidebar:
     link: /Web/Security/Threat_modeling
     title: Threat modeling
     details: closed
+l10n:
+  fr:
+    Guides: Guides
+    Practical implementation guides: Guides pratiques de mise en œuvre
+    Threat modeling: Modélisation des menaces

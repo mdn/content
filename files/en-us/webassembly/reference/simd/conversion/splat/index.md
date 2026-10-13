@@ -3,7 +3,7 @@ title: "splat: Wasm SIMD conversion instruction"
 short-title: splat
 slug: WebAssembly/Reference/SIMD/conversion/splat
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.splat
+browser-compat: webassembly.instructions.splat
 sidebar: webassemblysidebar
 ---
 
@@ -92,7 +92,3 @@ value_type.splat
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD conversion instructions](/en-US/docs/WebAssembly/Reference/SIMD/conversion)

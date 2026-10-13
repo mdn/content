@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.RTCError.RTCError
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`RTCError()`** constructor creates and returns a new {{domxref("RTCError")}} object instance.
 

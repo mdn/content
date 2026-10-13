@@ -107,7 +107,7 @@ For example, we can use the name parameter to link to our home page from any oth
 ```
 
 > [!NOTE]
-> We can hard code the link as in `<a href="/catalog/">Home</a>`), but if we change the pattern for our home page, for example, to `/catalog/index`) the templates will no longer link correctly. Using a reversed URL mapping is more robust.
+> We can hard code the link (as in `<a href="/catalog/">Home</a>`), but if we change the pattern for our home page (for example, to `/catalog/index`) the templates will no longer link correctly. Using a reversed URL mapping is more robust.
 
 ### View (function-based)
 
@@ -239,7 +239,7 @@ Create a new file **base_generic.html** in **/django-locallibrary-tutorial/catal
       <title>Local Library</title>
     {% endblock %}
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"

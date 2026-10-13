@@ -52,7 +52,7 @@ That is:
 
 ### Rotate elements
 
-The `atan()` function can be used to {{cssxref("transform-function/rotate", "rotate")}} elements as it return an {{cssxref("angle")}}.
+The `atan()` function can be used to {{cssxref("transform-function/rotate", "rotate")}} elements as it returns an {{cssxref("angle")}}.
 
 #### HTML
 

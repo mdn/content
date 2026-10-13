@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Window.open
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`open()`** method of the [`Window`](/en-US/docs/Web/API/Window) interface loads a specified resource into a new or existing browsing context (that is, a tab, a window, or an [iframe](/en-US/docs/Web/HTML/Reference/Elements/iframe)) under a specified name.
 

@@ -22,7 +22,26 @@ define(name, constructor, options)
 - `name`
   - : Name for the new custom element. Must be a [valid custom element name](#valid_custom_element_names).
 - `constructor`
-  - : Constructor for the new custom element.
+  - : Constructor for the new custom element. It can have the following instance methods (defined on `constructor.prototype`):
+    - `connectedCallback`
+    - `disconnectedCallback`
+    - `connectedMoveCallback`
+    - `adoptedCallback`
+    - `attributeChangedCallback`
+
+    It can have the following static properties:
+    - `observedAttributes`: an array of strings. Only read if `attributeChangedCallback` is defined.
+    - `disabledFeatures`: an array containing the values `"internals"` and/or `"shadow"`.
+    - `formAssociated`: a boolean.
+
+    If `formAssociated` is `true`, it can additionally have the following instance methods:
+    - `formAssociatedCallback`
+    - `formResetCallback`
+    - `formDisabledCallback`
+    - `formStateRestoreCallback`
+
+    All of these methods and properties are only retrieved once when `define()` is called. For their behavior, see [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements).
+
 - `options` {{optional_inline}}
   - : Object that controls how the element is defined. One option is currently supported:
     - `extends`
@@ -57,6 +76,8 @@ There are two types of custom element you can create:
 To define an autonomous custom element, you should omit the `options` parameter.
 
 To define a customized built-in element, you must pass the `options` parameter with its `extends` property set to the name of the built-in element that you are extending, and this must correspond to the interface that your custom element class definition inherits from. For example, to customize the {{htmlelement("p")}} element, you must pass `{extends: "p"}` to `define()`, and the class definition for your element must inherit from {{domxref("HTMLParagraphElement")}}.
+
+When `define()` is called, existing HTML elements connected to an associated document, including those in shadow trees, are automatically [upgraded](/en-US/docs/Web/API/CustomElementRegistry/upgrade) if they use this registry and match the definition.
 
 ### Valid custom element names
 
@@ -149,3 +170,4 @@ We could then use it in an HTML page like this:
 ## See also
 
 - [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
+- {{domxref("CustomElementRegistry.upgrade()")}}

@@ -89,7 +89,7 @@ for (
 #### Results
 
 The results are shown below.
-As you can see there are a two sheets, corresponding to this main document and the example code frame, and each have a number of rules, only one of which is our `CSSPageRule`.
+As you can see there are two sheets, corresponding to this main document and the example code frame, and each has a number of rules, only one of which is our `CSSPageRule`.
 
 {{EmbedLiveSample("Filtering for page rules", "100%", "300px")}}
 

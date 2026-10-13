@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Window.resize_event
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 The **`resize`** event fires when the document view (window) has been resized.
 

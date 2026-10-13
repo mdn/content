@@ -32,7 +32,7 @@ navigation.addEventListener("navigate", (event) => {
   }
 
   event.intercept({
-    handler() {
+    async handler() {
       // Fetch the new content
       const newContent = await fetchNewContent(event.destination.url, {
         signal: event.signal,

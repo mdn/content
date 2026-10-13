@@ -28,12 +28,12 @@ See the [WebGL constants](/en-US/docs/Web/API/WebGL_API/Constants) page.
 
 The following properties and methods provide general information and functionality to deal with the WebGL context:
 
-- {{domxref("WebGLRenderingContext.canvas")}}
-  - : A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if it is not associated with a {{HTMLElement("canvas")}} element.
-- {{domxref("WebGLRenderingContext.drawingBufferWidth")}}
-  - : The read-only width of the current drawing buffer. Should match the width of the canvas element associated with this context.
-- {{domxref("WebGLRenderingContext.drawingBufferHeight")}}
-  - : The read-only height of the current drawing buffer. Should match the height of the canvas element associated with this context.
+- {{domxref("WebGLRenderingContext.canvas")}} {{ReadOnlyInline}}
+  - : A back-reference to the {{domxref("HTMLCanvasElement")}}. Might be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if it is not associated with a {{HTMLElement("canvas")}} element.
+- {{domxref("WebGLRenderingContext.drawingBufferWidth")}} {{ReadOnlyInline}}
+  - : The width of the current drawing buffer. Should match the width of the canvas element associated with this context.
+- {{domxref("WebGLRenderingContext.drawingBufferHeight")}} {{ReadOnlyInline}}
+  - : The height of the current drawing buffer. Should match the height of the canvas element associated with this context.
 - {{domxref("WebGLRenderingContext.getContextAttributes()")}}
   - : Returns a `WebGLContextAttributes` object that contains the actual context parameters. Might return [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), if the context is lost.
 - {{domxref("WebGLRenderingContext.isContextLost()")}}
@@ -101,7 +101,7 @@ The following properties and methods provide general information and functionali
 - {{domxref("WebGLRenderingContext.sampleCoverage()")}}
   - : Specifies multi-sample coverage parameters for anti-aliasing effects.
 - {{domxref("WebGLRenderingContext.stencilFunc()")}}
-  - : Sets the both front and back function and reference value for stencil testing.
+  - : Sets both the front and back function and reference value for stencil testing.
 - {{domxref("WebGLRenderingContext.stencilFuncSeparate()")}}
   - : Sets the front and/or back function and reference value for stencil testing.
 - {{domxref("WebGLRenderingContext.stencilMask()")}}
