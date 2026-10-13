@@ -349,7 +349,7 @@ With this approach you can create safe HTML, but you aren't forced to.
 
 {{EmbedLiveSample("setHTMLUnsafe() live example","100","450px")}}
 
-### Using setHTMLUnsafe() without `runScripts`
+### Using setHTMLUnsafe() with `runScripts`
 
 This example demonstrates the case where we aren't using trusted types, so we'll be passing sanitizer arguments.
 
