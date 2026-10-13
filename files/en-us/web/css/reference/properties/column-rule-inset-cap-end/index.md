@@ -181,14 +181,14 @@ In the following demonstration, the bottom of column rule segments end in cap en
 </ul>
 
 <p>
-  <label
-    ><code>rule-visibility-items</code> value <code>
+  <label>
+    <code>rule-visibility-items</code> value
     <select id="visibility">
       <option>all</option>
       <option>between</option>
       <option>around</option>
       <option selected>normal</option>
-  </select>
+    </select>
   </label>
 </p>
 ```

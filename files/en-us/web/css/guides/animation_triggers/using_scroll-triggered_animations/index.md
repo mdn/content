@@ -79,7 +79,7 @@ The HTML features several paragraphs of content with a {{htmlelement("figure")}}
 </p>
 <p>
   Exploring the lush undergrowth, you may encounter unique wildlife such as
-  colourful birds, tree-dwelling mammals, and rare reptiles. The sounds of
+  colorful birds, tree-dwelling mammals, and rare reptiles. The sounds of
   chirping birds and rushing water add to the symphony of nature, providing an
   immersive experience in this captivating wilderness.
 </p>
@@ -129,7 +129,7 @@ The HTML features several paragraphs of content with a {{htmlelement("figure")}}
   panoramic vistas of the surrounding rainforest-clad mountains and valleys.
   Further west, the towering peaks of the Great Dividing Range present
   opportunities for adventurous hiking and exploring scenic vistas, including
-  the iconic Walsh's Pyramid near Gordonvale.
+  the iconic Walshs Pyramid near Gordonvale.
 </p>
 ```
 
@@ -151,7 +151,7 @@ We'll start by defining {{cssxref("@keyframes")}} for the `fade-in` animation we
 body {
   width: 80%;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
   font-size: 1.3rem;
 }
 
@@ -335,7 +335,7 @@ Let's build on our previous examples to demonstrate the effect of the active ran
 </p>
 <p>
   Exploring the lush undergrowth, you may encounter unique wildlife such as
-  colourful birds, tree-dwelling mammals, and rare reptiles. The sounds of
+  colorful birds, tree-dwelling mammals, and rare reptiles. The sounds of
   chirping birds and rushing water add to the symphony of nature, providing an
   immersive experience in this captivating wilderness.
 </p>
@@ -398,7 +398,7 @@ Let's build on our previous examples to demonstrate the effect of the active ran
   panoramic vistas of the surrounding rainforest-clad mountains and valleys.
   Further west, the towering peaks of the Great Dividing Range present
   opportunities for adventurous hiking and exploring scenic vistas, including
-  the iconic Walsh's Pyramid near Gordonvale.
+  the iconic Walshs Pyramid near Gordonvale.
 </p>
 ```
 
@@ -591,7 +591,7 @@ The HTML is similar to previous examples except that we have included a {{htmlel
 </p>
 <p>
   Exploring the lush undergrowth, you may encounter unique wildlife such as
-  colourful birds, tree-dwelling mammals, and rare reptiles. The sounds of
+  colorful birds, tree-dwelling mammals, and rare reptiles. The sounds of
   chirping birds and rushing water add to the symphony of nature, providing an
   immersive experience in this captivating wilderness.
 </p>
@@ -641,7 +641,7 @@ The HTML is similar to previous examples except that we have included a {{htmlel
   panoramic vistas of the surrounding rainforest-clad mountains and valleys.
   Further west, the towering peaks of the Great Dividing Range present
   opportunities for adventurous hiking and exploring scenic vistas, including
-  the iconic Walsh's Pyramid near Gordonvale.
+  the iconic Walshs Pyramid near Gordonvale.
 </p>
 
 <p>
@@ -655,7 +655,7 @@ The HTML is similar to previous examples except that we have included a {{htmlel
   panoramic vistas of the surrounding rainforest-clad mountains and valleys.
   Further west, the towering peaks of the Great Dividing Range present
   opportunities for adventurous hiking and exploring scenic vistas, including
-  the iconic Walsh's Pyramid near Gordonvale.
+  the iconic Walshs Pyramid near Gordonvale.
 </p>
 
 <div id="three"></div>
@@ -676,7 +676,7 @@ We want the finished state of each animation to apply throughout, after it is re
 ```css hidden live-sample___multiple-triggers
 body {
   overflow-x: hidden;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
   font-size: 1.3rem;
   width: 80%;
   margin: 0 auto;
@@ -697,7 +697,7 @@ p {
 
 section {
   background: red;
-  color: #fff0;
+  color: #ffffff00;
   padding: 10px;
   width: 400px;
   height: 50px;
@@ -760,11 +760,11 @@ Finally, we define the animation {{cssxref("@keyframes")}} referenced in the `<s
 
 @keyframes reveal {
   from {
-    color: #fff0;
+    color: #ffffff00;
     transform: scaleY(0.2);
   }
   to {
-    color: #ffff;
+    color: white;
     transform: scaleY(1);
   }
 }

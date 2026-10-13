@@ -52,7 +52,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
   - : Thrown if:
     - `position` is not one of the four listed values.
     - The input is XML that is not well-formed.
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if the property is set to a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
 
 ## Description

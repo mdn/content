@@ -134,6 +134,8 @@ sidebar:
           - type: section
             link: /Web/WebDriver/Reference/BiDi/Modules/script#commands
             title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/evaluate
+            code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/script/getRealms
             code: true
           - type: section
