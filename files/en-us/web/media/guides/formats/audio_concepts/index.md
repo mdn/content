@@ -9,11 +9,11 @@ Representing audio in digital form involves a number of steps and processes, wit
 
 ## The sound wave
 
-Sound is an inherently analog feature of the natural world. As an object (e.g., your vocal folds or the diaphragm on a speaker) vibrates, it causes the molecules surrounding it to vibrate as well. These molecules affect the ones adjacent to them, and so forth, propagating the vibration in the form of a wave outward from the source.
+Sound is an inherently analog feature of the natural world. As a sound-producing object (e.g., your vocal folds or a speaker diaphragm) vibrates, it causes the surrounding molecules to vibrate. These molecules affect the ones adjacent to them, and so forth, propagating the vibration as a wave outward from the source.
 
-Said vibrating molecules form the _medium_, which can be gases, liquids, and solids. Everyday sounds almost always travel through some air before they reach your ear, but for example, [bone conduction headphones](https://en.wikipedia.org/wiki/Bone_conduction) essentially only use your bones, a solid, as the medium.
+These vibrating molecules form the _medium_ that the sound travels through, which can be a gas, liquid, or solid. Everyday sounds almost always travel through air before they reach your ear, but for example, [bone conduction headphones](https://en.wikipedia.org/wiki/Bone_conduction) essentially use only your bones, a solid, as the medium.
 
-The energy from the sound source has two fates. Imagine the sound wave as a ripple traveling through the water surface. As the ripple's perimeter expands, there are more molecules vibrating and therefore less kinetic energy distributed to each one of them. Each molecule also absorbs a fraction of the received energy into heat without passing it on. Eventually at some distance from the source, the remaining energy is so little that the sound is indistinguishable from background noise. However, a small fraction of the wave energy may reach the listener's ear while it is still detectable. The wave is picked up by the inner workings of the ear and eventually gets converted to electrical signals sent to the brain.
+The energy from the sound source has two fates. Imagine the sound wave as a ripple traveling through the surface of some water. As the ripple's perimeter expands, more molecules vibrate; therefore, each one receives less of the available kinetic energy. Each molecule also absorbs a fraction of the received energy as heat without passing it on. Eventually, at some distance from the source, the remaining energy is so little that the sound is indistinguishable from background noise. However, a small fraction of the wave energy may reach the listener's ear while it is still detectable. The ear's inner workings pick up the wave and convert it into electrical signals that get sent to the brain.
 
 The _sound wave_ itself is the back-and-forth displacement (vibration) pattern of each molecule in the medium, and this is the signal that gets processed by your brain. For example, here is the most basic sound wave:
 
@@ -33,7 +33,7 @@ This signal is still _periodic_: there are recurring patterns, but each pattern 
 
 Here, each blue curve is a sine wave. If you add up the displacements of the blue curves at each time point, you get the black curve.
 
-If you plot the amplitude of each component sine wave against its frequency, you get the _spectrum_ of the audio signal. The audio signal above is still simple enough in that it only has two components, so the spectrum has two point peaks:
+If you plot the amplitude of each component sine wave against its frequency, you get the _spectrum_ of the audio signal. For example, the two component sine waves above have frequencies f0 and 2f0, and the former has a slightly larger amplitude than the latter, so the spectrum looks like this:
 
 ![The component sine waves plotted on a spectrum diagram](audio-spectrum.svg)
 
@@ -45,30 +45,32 @@ Real sound signals are usually continuous in the spectrum as well, meaning that 
 
 ## Sampling audio
 
-Sound is an analog signal. In the sound wave above, every single data point on the curve can vary continuously along the time and displacement axes. Computers, however, are digital and must use discrete and few data points to represent this wave. This process is called **analog to digital conversion** (**A/D** for short).
+Sound is an analog signal. In the sound wave above, every single data point on the curve can vary continuously along the time and displacement axes. Computers, however, are digital and must use a few discrete data points to represent a wave. This process is called **analog to digital conversion** (**A/D** for short).
 
 Just like the human ear, the microphone itself is an analog device that converts the sound wave to electric signals using voltage levels to represent the amplitude. This analog signal is sent to a circuit (called an **A/D converter**, or ADC), which records the voltage level at regular time intervals (called the **sampling period**) and stores it as a fixed-bit-size number, thus turning the continuous wave into a discrete array of amplitude levels. Each of these captured moments is a **sample**. If you assume that the sound wave jumps abruptly from one sample to the next, you get a _staircase_ approximation, shown below.
 
 ![An audio waveform with samples taken periodically](audio-waveform-samples1.svg)
 
-In this example, the black curve is the original analog audio waveform, and the blue curve is the approximated digital wave. The midpoint of each horizontal segment of the blue curve is an actual sample (you can see that it's also an intersection with the black curve). We extend each sample to the left and right by half a sampling period each, and connect these horizontal segments together to form the staircase pattern.
+In this example, the black curve is the original analog audio waveform, and the blue curve is the approximated digital wave. The midpoint of each horizontal segment of the blue curve is an actual sample (this is also where each segment intersects the black curve). We extend each sample to the left and right by half a sampling period each, and connect these horizontal segments together to form the staircase pattern.
 
-When it comes time to play back that sound later, these amplitudes are used with a reconstruction filter to generate a continuous approximation of the original waveform. The staircase waves are generally not pleasant-sounding and modern devices use filters to restore the smoothness as much as possible.
+When playing that sound back later, these amplitudes are used with a reconstruction filter to generate a continuous approximation of the original waveform. The staircase waves generally sound unpleasant, and modern devices use filters to restore the smoothness as much as possible.
 
 The ADC itself has several parameters that are either fixed in hardware or tunable. The first is the **sample rate**, which is the number of samples taken per second. This is the inverse of the sampling period—the farther apart two samples are, the fewer samples you take per second. We'll talk more about sample rates in [audio codecs](#sample_rates) because this can also be adjusted by the codec.
 
 The second is the **audio bandwidth**, which defines the maximum frequency the ADC is able to capture. The codec is also capable of restricting the bandwidth. (We'll also talk more about this in [sample rates](#sample_rates).)
 
-The third is the **gain**, which is, roughly, how the input amplitude is scaled to voltage levels. Higher gain gives you audio that sounds louder, but may also create voltage levels outside the range supported by the hardware, which are clipped to the supported range, leading to incorrect waves.
+The third is the **gain**, which is roughly how the input amplitude is scaled to voltage levels. Higher gain gives you audio that sounds louder, but it may also create voltage levels outside the range supported by the hardware, and such voltage levels are clipped to the supported range, leading to incorrect waves.
 
-The fourth is the **resolution**, which is how many bits are used to encode each amplitude sample. For example, if the samples are 8-bit, that means there are 2<sup>8</sup> = 256 distinct amplitude levels the digital signal can distinguish. This produces a really small file but also really low-quality audio. Today, "8-bit" is rarely used as an actual audio resolution, but it describes a retro sound aesthetic (like pixel art). The resolution is the upper bound of your audio's quality—you can later use codecs with smaller sample sizes, but you cannot produce audio with 16-bit quality if your ADC only has an 8-bit resolution.
+The fourth is the **resolution**, which is how many bits encode each amplitude sample. For example, if the samples are 8-bit, that means there are 2<sup>8</sup> = 256 distinct amplitude levels that the digital signal can distinguish. This produces a small file but also really low-quality audio. Today, "8-bit" is rarely used as an actual audio resolution, but it describes a retro sound aesthetic (like pixel art).
+
+The resolution is the audio quality's upper bound. You can start with a higher sample size and reduce it later on, but you can't, for example, produce 16-bit quality audio if your ADC only has an 8-bit resolution.
 
 > [!NOTE]
 > Like most other pieces of modern technology, audio recording today is much more complex than this introduction. For example, modern ADCs may oversample and then algorithmically convert the signal to the given sampling rate using local averaging instead of instantaneous measurements. However, this section is still useful as the basic mental model.
 
 ## Audio data format and structure
 
-The ADC outputs an array of numbers. If you simply put them into a file, you get PCM (pulse-code modulation) audio. But real audio codecs are usually more complex. For example, you may want compression, multi-channel, or even data recovery if part of the data is lost. The software converting the raw ADC signal into more sophisticated formats for software purposes is called an audio **{{Glossary("codec")}}** (**CO**der/**DE**coder). Over the years, a large variety of codecs have been developed, several of which are commonly used on the web. For details about the most important and useful ones for web developers to be familiar with, see the article [Guide to audio codecs used on the web](/en-US/docs/Web/Media/Guides/Formats/Audio_codecs).
+The ADC outputs an array of numbers. If you just put them into a file, you get PCM (pulse-code modulation) audio. Most audio codecs, however, are more complex. For example, you may want compression, multi-channel, or even data recovery if part of the data is lost. The software for converting the raw ADC signal into more sophisticated formats for software purposes is called an audio **{{Glossary("codec")}}** (**CO**der/**DE**coder). Over the years, many codecs have been developed, some of which are commonly used on the web. For details about the most important and useful ones for web developers to be familiar with, see the article [Guide to audio codecs used on the web](/en-US/docs/Web/Media/Guides/Formats/Audio_codecs).
 
 ### Audio channels and frames
 
@@ -77,13 +79,13 @@ Modern audio codecs are _multi-channel_, which means they are capable of storing
 > [!NOTE]
 > Some codecs will actually separate the left and right channels, storing them in separate blocks within their data structure. However, an audio frame is always comprised of all of the data for all available channels. The samples may be assembled by software instead of physically stored adjacently in the codec.
 
-There are two types of audio channel. Standard audio channels are used to present the majority of the audible sound. The sound for the left and right main channels, as well as all of your surround sound speakers (center, left and right rear, left and right sides, ceiling channels, and so forth) are all standard audio channels. Special **Low Frequency Effects** (**LFE**) channels provide the signal for special speakers designed to produce the low frequency sounds and vibration to create a visceral sensation when listening to the audio. The LFE channels typically drive subwoofers and similar devices.
+There are two types of audio channels. Standard audio channels present the majority of the audible sound. The sound for the left and right main channels, as well as your surround sound speakers (center, left and right rear, left and right sides, ceiling channels, and so forth), are all standard audio channels. Special **Low Frequency Effects** (**LFE**) channels provide the signal for special speakers designed to produce low-frequency sounds and vibrations designed to create a visceral sensation when listening to the audio. The LFE channels typically drive subwoofers and similar devices.
 
 Monophonic audio has one channel, stereo sound has two channels, 5.1 surround sound has 6 channels (five standard and one LFE), and so forth. Each audio frame is a data record that contains the samples for all of the channels available in an audio signal.
 
 ### Samples
 
-The ADC outputs integers of the given resolution, and the codec further converts them to some data type of a **sample size**. Most audio files use 16-bit signed integers for each sample, but others use 32-bit floating-point values or 24-bit or 32-bit integers. The samples may be signed or unsigned.
+The ADC outputs integers with a given resolution; the codec then further converts them to a data type representing a specific **sample size**. Most audio files use 16-bit signed integers for each sample, but others use 32-bit floating-point values or 24-bit or 32-bit integers. The samples may be signed or unsigned.
 
 ### Sample rates
 
@@ -104,7 +106,7 @@ Low sample rate gives you smaller data, but it also means rapid oscillations bet
 
 ![The sine sound waveform, under-sampled to every 3/4 of a period.](audio-simple-undersampled.svg)
 
-Now, within one period in the blue staircase approximation, there are 3 periods of the original wave, so the blue wave only has 1/3 of the frequency of the original signal!
+Now, within one period in the blue staircase approximation, there are 3 periods of the original wave, so the blue wave only has 1/3 of the frequency of the original signal. When you play back the blue wave, you'll hear a much lower sound than the original black wave!
 
 The [Nyquist–Shannon sampling theorem](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem) tells us that in order to faithfully reconstruct signals whose components go up to frequency _f_, the sample rate must be more than twice that (_2f_). Conversely, for a given sampling frequency, half of it is called the _Nyquist frequency_, which is the upper bound of the frequency in the audio spectrum that can be faithfully captured. Therefore, the sample rate you choose for the codec must have a Nyquist frequency above the maximum frequency you expect to record.
 
@@ -117,7 +119,7 @@ For example, if you want a Nyquist frequency of 20 kHz (corresponding to a sampl
 This explains the common sample rates we see above:
 
 - Traditional telephone audio carries frequencies up to about 3,400 Hz, preserving enough information for speech to remain intelligible. (This is extremely lossy, which is why "telephone voice" often sounds thin and muffled.) The 8,000 Hz sampling rate has a 4,000 Hz Nyquist frequency, leaving 600 Hz for the transition band.
-- Humans can hear sounds up to 20,000 Hz. The 44.1 kHz and 48 kHz sampling rates both have Nyquist frequencies slightly above it, leaving 2.05 kHz and 4 kHz for the transition band, respectively. 48 kHz produces slightly more data, but allows a larger transition band which possibly preserves high-frequency sounds better.
+- Humans can hear sounds up to 20,000 Hz. The 44.1 kHz and 48 kHz sampling rates both have Nyquist frequencies slightly above it, leaving 2.05 kHz and 4 kHz for the transition band, respectively. 48 kHz produces slightly more data, but allows a larger transition band, which possibly preserves high-frequency sounds better.
 - 96 kHz and 192 kHz are technically unnecessary for reconstructing sounds that humans can meaningfully perceive. However, they allow even more room for filters and preserve components that may become audible when slowed down. They are generally used for audio mastering, where you need as much quality as possible while manipulating and editing the sound before downsampling to the sample rate you will use for the final product. This is similar to how photographers will use high resolution images for editing and compositing before presenting the customer with a JPEG suitable for use on a website.
 
 ### Audio file size and network bandwidth
@@ -130,7 +132,7 @@ On the web, the most common configuration is stereo (2 channels: left and right)
 </math>
 <!-- prettier-ignore-end -->
 
-At 192 kBps, lower-end networks are already going to be strained just by a single audio stream playing. If the network is also doing other things, the problem strikes even on higher bandwidth networks. With so much competition for network capacity, especially on slower networks, this amount of data may be too much to viably transmit during any kind of real-time applications.
+At 192 Kbps, lower-end networks will be strained when playing a single audio stream. If the network is also doing other things, even faster networks may run out of bandwidth. With so much competition for network capacity, especially on slower networks, this amount of data may be too much for real-time applications to viably transmit.
 
 > [!NOTE]
 > Network bandwidth (bytes per second) is obviously not the same thing as audio bandwidth (maximum recorded frequency), which is discussed in [Sampling audio](#sampling_audio), above.
@@ -143,11 +145,11 @@ To solve this problem, the audio must be made smaller using compression.
 
 Unlike text and many other kinds of data, audio data tends to be **noisy**, meaning the data rarely consists of a series of exactly repeated bytes or byte sequences. As a result, audio data is difficult to compress using traditional algorithms such as those used by general-purpose tools like `zip`, which usually work by replacing repeating sequences of data with a shorthand representation.
 
-If loss of detail and potentially fidelity is unacceptable or undesirable, a **lossless** codec is preferred. Conversely, if some degree of reduction of audio fidelity is okay, a **lossy** codec can be used. The majority of audio codecs use some form of lossy compression, because of the better compression ratio those algorithms offer. Whereas lossless compression algorithms usually manage no better than a 40-50% of the size of the original, uncompressed sound data, modern lossy compression algorithms can reduce the size of the audio to between 5-20% of the original size, depending on the complexity of the audio.
+If loss of detail and potentially fidelity is unacceptable or undesirable, a **lossless** codec is preferred. Conversely, if some degree of audio fidelity reduction is okay, a **lossy** codec can be used. Most audio codecs use lossy compression because it offers a better compression ratio. Whereas lossless compression algorithms usually output a file 40-50% of the original uncompressed size, modern lossy compression algorithms can output results between 5-20% of the original size, depending on the complexity of the audio.
 
-On the other hand, lossy codecs may lose quality and detail, but the loss is usually difficult or even impossible for the average listener to discern, and the compression ratio gain far outweighs the loss in quality. Nevertheless, certain people have exceptionally good hearing, or are particularly adept at noticing the kinds of changes introduced to music by lossy compression techniques.
+Lossy codecs may lose quality and detail, but the loss is usually difficult for the average listener to discern, and the compression ratio gain far outweighs the loss in quality. Nevertheless, certain people have exceptionally good hearing, or are particularly adept at noticing the kinds of changes introduced to music by lossy compression techniques.
 
-Researchers are continuing to devise better ways to analyze and compress audio, so new formats come out periodically that offer various improvements, either in compression ratio or audio fidelity (or both).
+Researchers continue to devise better ways to analyze and compress audio, so new formats come out periodically that offer various improvements, either in compression ratio or audio fidelity (or both).
 
 Use cases for lossless audio include scenarios such as:
 
@@ -165,11 +167,11 @@ If you are already familiar with [image format selection](/en-US/docs/Web/Media/
 
 ## Psychoacoustics 101
 
-While lossless compression is purely algorithmic (akin to zip), lossy compression needs to be very aware of how much information can be removed before it becomes obvious to the intended audience. By removing components of the sound that aren't really heard, the waveform becomes simpler, resulting in data which has more consistency and is therefore easier to compress.
+While lossless compression is purely algorithmic (akin to zip), lossy compression needs to be very aware of how much information can be removed before it becomes obvious to the intended audience. By removing components of the sound that aren't really heard, the waveform becomes simpler, resulting in more consistent data that is easier to compress.
 
-Because most audio is played to humans, the most commonly-used lossy compression methods for audio apply the science of **[psychoacoustics](https://en.wikipedia.org/wiki/Psychoacoustics)**. This is the science that studies how humans perceive sound, and what parts of the audio frequencies we hear are most important to how we respond to those sounds, given the context and content of the sound. Factors such as the ability to sense the change in frequency of a sound, the overall range of human hearing, amplitude contrast, and so forth, can all be considered by a codec.
+Because most audio is played to humans, the most commonly used lossy compression methods for audio apply the science of **[psychoacoustics](https://en.wikipedia.org/wiki/Psychoacoustics)**. This is the study of how humans perceive sound and which audio frequencies are most important to how we respond to sound, given the context and content of the sound. A codec can consider factors such as the ability to sense changes in sound frequency, the overall range of human hearing, amplitude contrast, etc.
 
-Diving into the details of psychoacoustics and how audio compression works is far beyond the scope of this article, but a general idea of how audio gets compressed by common algorithms can help understand and make better decisions about audio codec selection.
+Diving into the details of psychoacoustics and how audio compression works is far beyond the scope of this article, but a general idea of how audio gets compressed by common algorithms can help you understand and make better decisions about audio codec selection.
 
 Overall, lossy filtering techniques can have three consequences:
 
@@ -181,7 +183,7 @@ The type of content being encoded can affect the choice of codec. In particular,
 
 One common compression technique is reducing the audio bandwidth. When the frequency spectrum is narrower, there's less information, which lets the lossless compression algorithm do its work better. You can most effectively shrink the bandwidth by reducing the maximum frequency. A safe upper bound is to only preserve frequency bands below 20,000 Hz. Most codecs' Nyquist frequencies are already near this boundary, and this is about as far as you can go before you start losing perceivable information, but it is still a helpful start. Some people can hear outside this range to some extent. More often, people's ability to hear higher frequencies is rather lower than this; in particular, sensitivity to higher frequencies generally declines with age.
 
-Like previously said, conventional narrowband telephone systems, which were designed specifically to transmit human voices, carry audio in the frequency band from approximately 300 Hz to 3,400 Hz. This doesn't cover the entire range of human speech, but enough spectral and temporal information is available for speech to remain intelligible in many listening conditions. So this is a well-established compromise for resource-constrained speech transmission; narrowing the band further can make speech harder to understand.
+Conventional narrowband telephone systems, designed specifically to transmit human voices, carry audio from approximately 300 Hz to 3,400 Hz. This doesn't cover the entire range of human speech, but it provides enough spectral and temporal information for speech to remain intelligible in many listening conditions. So this is a well-established compromise for resource-constrained speech transmission; narrowing the band further can make speech harder to understand.
 
 The diagram below compares the approximate frequency range of human hearing (green) to the conventional narrowband telephone band (yellow). If you drop the sampling rate from 48 kHz to 8 kHz, you essentially achieve a 6:1 compression upfront.
 
@@ -191,9 +193,9 @@ You can also try to tune the frequency bandwidth between these two bounds to ach
 
 Different features of speech involve different frequency ranges, for example:
 
-- Some aperiodic consonants, such as sibilants like the hissing "s", concentrate their energy at high frequencies, going from 4 kHz to 10 kHz. They are usually the first to be filtered out in telephone range, and removing them may [impede speech recognition](https://pubmed.ncbi.nlm.nih.gov/11681394/).
-- Vowels are produced by the constriction of the vocal tract, which attenuates and enhances certain bands of the frequency spectrum, creating frequency bands of concentrated energy called _formants_. The first two formants are usually enough to distinguish most vowels, and they can go from 200 Hz to 3,000 Hz. They are affected by anatomical factors, such as the length of the vocal tract, which are in turn affected by the speaker's age, gender, etc.
-- The vibration frequency of the vocal folds forms the _pitch_, or _fundamental frequency_, of the voice, and it carries tone information. The fundamental frequency ranges from 80 Hz to 300 Hz, again depending on anatomical factors affected by age and gender—children can reach as high as 600 Hz. The pitch frequency may be too low for telephone range, but there are higher-order overtones (harmonics) which help the brain reconstruct the pitch.
+- Some aperiodic consonants, such as sibilants like the hissing "s", concentrate their energy at high frequencies: 4 kHz to 10 kHz. They are usually the first to be filtered out in the telephone range, and removing them may [impede speech recognition](https://pubmed.ncbi.nlm.nih.gov/11681394/).
+- Vowels are produced by the constriction of the vocal tract, which attenuates and enhances certain bands of the frequency spectrum, creating frequency bands of concentrated energy called _formants_. The first two formants are usually enough to distinguish most vowels, which can range from 200 Hz to 3,000 Hz. Anatomical factors, such as the vocal tract length, can have an effect. Such factors are, in turn, affected by the speaker's age, gender, etc.
+- The vibration frequency of the vocal folds forms the _pitch_, or _fundamental frequency_, of the voice, and it carries tone information. The fundamental frequency ranges from 80 Hz to 300 Hz, and again depends on anatomical factors affected by age and gender—children can reach as high as 600 Hz. The pitch frequency may be too low for telephone range, but higher-order overtones (harmonics) help the brain reconstruct the pitch.
 - Some speech features, such as creaky voice (also called vocal fry), can go as low as 20 Hz.
 
 Therefore, when you restrict the audio bandwidth, you must experiment with different speakers—male, female, children, elderly—on a variety of sounds to see if they remain recognizable.
@@ -291,7 +293,7 @@ On its own, mid-side stereo coding is lossless, and is commonly used by both los
 
 **Intensity stereo coding** reduces the encoded audio bit rate by taking advantage of the way humans determine the location of sounds in space; this is called [sound localization](https://en.wikipedia.org/wiki/Sound_localization).
 
-Our ears are separated by several inches, thanks to being on opposite sides of our heads. A sound coming from our right will arrive at our right ear before it arrives at our left ear, and the amplitudes heard in both ears are also different. Our brains use that phase and amplitude difference to help determine where the sound is coming from. At higher frequencies, differences in level remain important, while sensitivity to differences in the phase is reduced.
+Our ears are on opposite sides of our heads, and therefore separated by several inches. A sound coming from our right arrives at the right ear before the left; the amplitudes heard in each ear are also different. Our brains use these phase and amplitude differences to help determine where the sound is coming from. At higher frequencies, differences in audio level remain important, while sensitivity to differences in phase is reduced.
 
 Armed with this information, we can approximately represent a stereo audio signal by merging selected higher-frequency bands into a single channel, then including information about their amplitudes only in the original channels. This requires fewer bits to represent, but is inherently somewhat lossy.
 
