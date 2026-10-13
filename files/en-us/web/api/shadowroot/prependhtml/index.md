@@ -3,6 +3,8 @@ title: "ShadowRoot: prependHTML() method"
 short-title: prependHTML()
 slug: Web/API/ShadowRoot/prependHTML
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ShadowRoot.prependHTML
 ---
 

@@ -3,6 +3,8 @@ title: "Element: replaceWithHTMLUnsafe() method"
 short-title: replaceWithHTMLUnsafe()
 slug: Web/API/Element/replaceWithHTMLUnsafe
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Element.replaceWithHTMLUnsafe
 ---
 

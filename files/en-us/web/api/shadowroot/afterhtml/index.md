@@ -3,6 +3,8 @@ title: "ShadowRoot: afterHTML() method"
 short-title: afterHTML()
 slug: Web/API/ShadowRoot/afterHTML
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ShadowRoot.afterHTML
 ---
 

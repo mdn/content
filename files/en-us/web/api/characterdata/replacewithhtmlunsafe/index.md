@@ -3,6 +3,8 @@ title: "CharacterData: replaceWithHTMLUnsafe() method"
 short-title: replaceWithHTMLUnsafe()
 slug: Web/API/CharacterData/replaceWithHTMLUnsafe
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CharacterData.replaceWithHTMLUnsafe
 ---
 

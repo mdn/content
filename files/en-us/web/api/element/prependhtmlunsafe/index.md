@@ -3,6 +3,8 @@ title: "Element: prependHTMLUnsafe() method"
 short-title: prependHTMLUnsafe()
 slug: Web/API/Element/prependHTMLUnsafe
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Element.prependHTMLUnsafe
 ---
 

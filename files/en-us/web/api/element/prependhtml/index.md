@@ -3,6 +3,8 @@ title: "Element: prependHTML() method"
 short-title: prependHTML()
 slug: Web/API/Element/prependHTML
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Element.prependHTML
 ---
 

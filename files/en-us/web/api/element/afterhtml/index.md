@@ -3,6 +3,8 @@ title: "Element: afterHTML() method"
 short-title: afterHTML()
 slug: Web/API/Element/afterHTML
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Element.afterHTML
 ---
 

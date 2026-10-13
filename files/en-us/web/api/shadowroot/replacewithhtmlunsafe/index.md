@@ -3,6 +3,8 @@ title: "ShadowRoot: replaceWithHTMLUnsafe() method"
 short-title: replaceWithHTMLUnsafe()
 slug: Web/API/ShadowRoot/replaceWithHTMLUnsafe
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ShadowRoot.replaceWithHTMLUnsafe
 ---
 

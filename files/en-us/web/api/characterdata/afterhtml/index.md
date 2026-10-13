@@ -3,6 +3,8 @@ title: "CharacterData: afterHTML() method"
 short-title: afterHTML()
 slug: Web/API/CharacterData/afterHTML
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CharacterData.afterHTML
 ---
 

@@ -3,6 +3,8 @@ title: "ShadowRoot: afterHTMLUnsafe() method"
 short-title: afterHTMLUnsafe()
 slug: Web/API/ShadowRoot/afterHTMLUnsafe
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ShadowRoot.afterHTMLUnsafe
 ---
 

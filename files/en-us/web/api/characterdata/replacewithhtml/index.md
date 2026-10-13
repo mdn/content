@@ -3,6 +3,8 @@ title: "CharacterData: replaceWithHTML() method"
 short-title: replaceWithHTML()
 slug: Web/API/CharacterData/replaceWithHTML
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CharacterData.replaceWithHTML
 ---
 

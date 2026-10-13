@@ -3,6 +3,8 @@ title: "ShadowRoot: beforeHTMLUnsafe() method"
 short-title: beforeHTMLUnsafe()
 slug: Web/API/ShadowRoot/beforeHTMLUnsafe
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ShadowRoot.beforeHTMLUnsafe
 ---
 

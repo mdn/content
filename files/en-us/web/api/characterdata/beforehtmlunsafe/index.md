@@ -3,6 +3,8 @@ title: "CharacterData: beforeHTMLUnsafe() method"
 short-title: beforeHTMLUnsafe()
 slug: Web/API/CharacterData/beforeHTMLUnsafe
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CharacterData.beforeHTMLUnsafe
 ---
 

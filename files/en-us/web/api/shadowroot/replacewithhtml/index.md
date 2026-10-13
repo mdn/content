@@ -3,6 +3,8 @@ title: "ShadowRoot: replaceWithHTML() method"
 short-title: replaceWithHTML()
 slug: Web/API/ShadowRoot/replaceWithHTML
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ShadowRoot.replaceWithHTML
 ---
 

@@ -3,6 +3,8 @@ title: "Element: appendHTMLUnsafe() method"
 short-title: appendHTMLUnsafe()
 slug: Web/API/Element/appendHTMLUnsafe
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Element.appendHTMLUnsafe
 ---
 

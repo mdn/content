@@ -3,6 +3,8 @@ title: "ShadowRoot: prependHTMLUnsafe() method"
 short-title: prependHTMLUnsafe()
 slug: Web/API/ShadowRoot/prependHTMLUnsafe
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ShadowRoot.prependHTMLUnsafe
 ---
 

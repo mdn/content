@@ -3,6 +3,8 @@ title: "Element: afterHTMLUnsafe() method"
 short-title: afterHTMLUnsafe()
 slug: Web/API/Element/afterHTMLUnsafe
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Element.afterHTMLUnsafe
 ---
 

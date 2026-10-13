@@ -3,6 +3,8 @@ title: "CharacterData: beforeHTML() method"
 short-title: beforeHTML()
 slug: Web/API/CharacterData/beforeHTML
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CharacterData.beforeHTML
 ---
 

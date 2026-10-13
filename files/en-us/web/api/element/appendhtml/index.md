@@ -3,6 +3,8 @@ title: "Element: appendHTML() method"
 short-title: appendHTML()
 slug: Web/API/Element/appendHTML
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Element.appendHTML
 ---
 

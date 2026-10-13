@@ -3,6 +3,8 @@ title: "CharacterData: afterHTMLUnsafe() method"
 short-title: afterHTMLUnsafe()
 slug: Web/API/CharacterData/afterHTMLUnsafe
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CharacterData.afterHTMLUnsafe
 ---
 

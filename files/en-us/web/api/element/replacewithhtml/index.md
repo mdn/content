@@ -3,6 +3,8 @@ title: "Element: replaceWithHTML() method"
 short-title: replaceWithHTML()
 slug: Web/API/Element/replaceWithHTML
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Element.replaceWithHTML
 ---
 

@@ -3,6 +3,8 @@ title: "ShadowRoot: appendHTMLUnsafe() method"
 short-title: appendHTMLUnsafe()
 slug: Web/API/ShadowRoot/appendHTMLUnsafe
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ShadowRoot.appendHTMLUnsafe
 ---
 

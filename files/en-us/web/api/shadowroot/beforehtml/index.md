@@ -3,6 +3,8 @@ title: "ShadowRoot: beforeHTML() method"
 short-title: beforeHTML()
 slug: Web/API/ShadowRoot/beforeHTML
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ShadowRoot.beforeHTML
 ---
 

@@ -3,6 +3,8 @@ title: "ShadowRoot: appendHTML() method"
 short-title: appendHTML()
 slug: Web/API/ShadowRoot/appendHTML
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ShadowRoot.appendHTML
 ---
 

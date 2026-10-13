@@ -3,6 +3,8 @@ title: "Element: beforeHTML() method"
 short-title: beforeHTML()
 slug: Web/API/Element/beforeHTML
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Element.beforeHTML
 ---
 

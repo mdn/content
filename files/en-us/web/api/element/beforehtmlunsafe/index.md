@@ -3,6 +3,8 @@ title: "Element: beforeHTMLUnsafe() method"
 short-title: beforeHTMLUnsafe()
 slug: Web/API/Element/beforeHTMLUnsafe
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Element.beforeHTMLUnsafe
 ---
 
