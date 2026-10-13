@@ -50,7 +50,7 @@ To begin with, let's put together a basic function.
 1. Start by creating a new HTML file on your local file system, and adding the following code to it:
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />
@@ -64,7 +64,7 @@ To begin with, let's put together a basic function.
            transform: translate(-50%, -50%);
            width: 200px;
            border-radius: 10px;
-           background-color: #eee;
+           background-color: #eeeeee;
            background-image: linear-gradient(
              to bottom,
              rgb(0 0 0 / 0),
@@ -75,7 +75,7 @@ To begin with, let's put together a basic function.
          .msgBox p {
            line-height: 1.5;
            padding: 10px 20px;
-           color: #333;
+           color: #333333;
          }
 
          .msgBox button {
@@ -85,7 +85,7 @@ To begin with, let's put together a basic function.
            top: 0;
            right: 0;
            font-size: 1.1rem;
-           color: #aaa;
+           color: #aaaaaa;
          }
        </style>
      </head>
@@ -334,7 +334,7 @@ On to the next parameter. This one is going to involve slightly more work — we
 
    ```js
    btn.addEventListener("click", () =>
-     displayMessage("Woo, this is a different message!");
+     displayMessage("Woo, this is a different message!"),
    );
    ```
 
@@ -368,7 +368,7 @@ If you followed all the steps above, your example should render like so:
   transform: translate(-50%, -50%);
   width: 242px;
   border-radius: 10px;
-  background-color: #eee;
+  background-color: #eeeeee;
   background-image: linear-gradient(
     to bottom,
     rgb(0 0 0 / 0),
@@ -381,7 +381,7 @@ If you followed all the steps above, your example should render like so:
   padding: 10px 20px 10px 82px;
   background-position: 25px center;
   background-repeat: no-repeat;
-  color: #333;
+  color: #333333;
 }
 
 .msgBox button {
@@ -391,7 +391,7 @@ If you followed all the steps above, your example should render like so:
   top: 0;
   right: 0;
   font-size: 1.1rem;
-  color: #aaa;
+  color: #aaaaaa;
 }
 ```
 

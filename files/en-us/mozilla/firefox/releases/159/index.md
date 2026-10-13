@@ -1,13 +1,13 @@
 ---
-title: Firefox 159 release notes for developers (Nightly)
-short-title: Firefox 159 (Nightly)
+title: Firefox 159 release notes for developers (Beta)
+short-title: Firefox 159 (Beta)
 slug: Mozilla/Firefox/Releases/159
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 159 that affect developers.
-Firefox 159 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [October 27, 2026](https://whattrainisitnow.com/release/?version=159).
+Firefox 159 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [October 27, 2026](https://whattrainisitnow.com/release/?version=159).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.

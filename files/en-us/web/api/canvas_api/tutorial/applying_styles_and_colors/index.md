@@ -362,7 +362,7 @@ More exactly, the miter limit is the maximum allowed ratio of the extension leng
 - A miter limit equal to 1.0 is valid but will disable all miters.
 - Values below 1.0 are invalid for the miter limit.
 
-Here's a little demo in which you can set `miterLimit` dynamically and see how this effects the shapes on the canvas. The blue lines show where the start and endpoints for each of the lines in the zig-zag pattern are.
+Here's a little demo in which you can set `miterLimit` dynamically and see how this affects the shapes on the canvas. The blue lines show where the start and endpoints for each of the lines in the zig-zag pattern are.
 
 If you specify a `miterLimit` value below 4.2 in this demo, none of the visible corners will join with a miter extension, but only with a small bevel near the blue lines; with a `miterLimit` above 10, most corners in this demo should join with a miter far away from the blue lines, and whose height is decreasing between corners from left to right because they connect with growing angles; with intermediate values, the corners on the left side will only join with a bevel near the blue lines, and the corners on the right side with a miter extension (also with a decreasing height).
 

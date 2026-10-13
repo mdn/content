@@ -51,7 +51,7 @@ Repr-Digest: <digest-algorithm>=<digest-value>,…,<digest-algorithmN>=<digest-v
 
 ## Examples
 
-In all of the examples, endpoints are configured to send unsolicited digest headers. The {{HTTPHeader("Want-Content-Digest")}} and {{HTTPHeader("Want-Repr-Digest")}} fields could optionally be used by a sender to request a `Content-Digest` or `Repr-Digest` along with their hashing algorithm preferences."
+In all of the examples, endpoints are configured to send unsolicited digest headers. The {{HTTPHeader("Want-Content-Digest")}} and {{HTTPHeader("Want-Repr-Digest")}} fields could optionally be used by a sender to request a `Content-Digest` or `Repr-Digest` along with their hashing algorithm preferences.
 
 ### A SHA-256 Repr-Digest in a response
 
