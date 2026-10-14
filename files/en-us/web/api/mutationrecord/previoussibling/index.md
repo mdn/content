@@ -30,7 +30,7 @@ This adds a node every time you click the button. Then the observer logs the `te
 <button id="reset">Reset</button>
 
 <pre id="log" class="log">Previous sibling of added node:</pre>
-<div id="target"><p>Node #0</p><p>Node #1</p><p>Node #2</p><p>Node #3</p></div>
+<div id="target"><p>Node #0</p></div>
 ```
 
 ```css hidden
@@ -55,16 +55,18 @@ addNodes.addEventListener("click", () => {
 });
 
 removeNodes.addEventListener("click", () => {
-  const p = Array.from(target.children).at(-1);
-  if (p) p.remove();
-})
+  const oldPara = target.lastChild;
+  if (oldPara) {
+    target.removeChild(oldPara);
+  }
+});
 
 reset.addEventListener("click", () => self.location.reload());
 
 function logPreviousSibling(records) {
   for (const record of records) {
     if (record.type === "childList") {
-      log.textContent = `Previous sibling of added node: ${record.previousSibling?.textContent ?? "null"}`;
+      log.textContent = `Previous sibling of added node: ${record.previousSibling?.textContent ?? null}`;
     }
   }
 }
