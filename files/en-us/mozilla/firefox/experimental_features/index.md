@@ -959,9 +959,9 @@ Methods that sanitize HTML with the [HTML Sanitizer API](/en-US/docs/Web/API/HTM
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 157           | No                  |
-| Developer Edition | 157           | No                  |
-| Beta              | 157           | No                  |
+| Nightly           | 159           | Yes                 |
+| Developer Edition | 159           | Yes                 |
+| Beta              | 159           | Yes                 |
 | Release           | 157           | No                  |
 
 - `dom.security.sanitizer.while-parsing`
