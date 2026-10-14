@@ -181,11 +181,12 @@ The following fields are available in the `result` object in the response, depen
     - `value` {{optional_inline}}
       - : An array, boolean, number, object, or string that represents the evaluated value, depending on the `type` field in this `result` object.
 
-        For example, `"string"` values are represented as strings, `"boolean"` values as `true` or `false`, and `"bigint"` values as strings.
-        For `"array"`, `"set"`, `"nodelist"`, and `"htmlcollection"`, `value` is an array of objects representing the collection items.
+        For example, `"bigint"` values are represented as strings, `"boolean"` values as `true` or `false`, and `"string"` values as strings.
+        For `"array"`, `"htmlcollection"`, `"nodelist"`, and `"set"`, `value` is an array of objects representing the collection items.
+        For `"object"`, `value` is an array of key-value pairs.
 
         This field is not present for every type.
-        For objects, this field can be omitted when the `maxObjectDepth` limit is reached or when the same object has already been represented in the response.
+        For objects, this field may be omitted when the `maxObjectDepth` limit is reached or when the same object has already been represented in the response.
 
         - When `type` is `"node"`, `value` is an object that describes properties of the returned node and can contain the following fields:
           - `attributes` {{optional_inline}}
@@ -218,7 +219,7 @@ The following fields are available in the `result` object in the response, depen
               This field is `null` when the returned element has no shadow root.
         - When `type` is `"window"`, `value` is an object with the following field:
           - `context`
-            - : A string that contains the browsing context ID.
+            - : A string that contains the ID of the context associated with the window.
 - `type`
   - : A string that indicates how the expression evaluation completed.
     It has one of the following values:
