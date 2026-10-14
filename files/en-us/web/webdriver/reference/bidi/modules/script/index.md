@@ -96,6 +96,10 @@ You configure channels through the `arguments` parameter of [`script.addPreloadS
 - [`script.realmCreated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/realmCreated)
 - [`script.realmDestroyed`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/realmDestroyed)
 
+## Commands
+
+- [`script.callFunction`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/callFunction)
+
 ## Specifications
 
 {{Specifications}}
