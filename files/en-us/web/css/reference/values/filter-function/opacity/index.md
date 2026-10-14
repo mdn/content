@@ -42,7 +42,7 @@ filter: opacity(0);
 ```
 
 > [!NOTE]
-> This function is similar to the more established {{Cssxref("opacity")}} property. The difference is that with filters, some browsers provide hardware acceleration for better performance.
+> The `opacity()` filter function is similar to the {{cssxref("opacity")}} property. While the `opacity` property applies transparency to an entire element and its descendants (creating a new stacking context), the `opacity()` filter function applies transparency to the rendered graphical output as part of a filter chain. Both can take advantage of hardware acceleration in modern browser compositing engines depending on layout context.
 
 ## Syntax
 
@@ -53,7 +53,7 @@ opacity(amount)
 ### Parameters
 
 - `amount` {{Optional_Inline}}
-  - : The amount of the conversion, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value of `0%` is completely transparent, while a value of `100%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for {{Glossary("interpolation")}} is `1`. The default value is `1`.
+  - : The degree of opacity applied to the input image, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value of `0%` (or `0`) is completely transparent, while a value of `100%` (or `1`) leaves the input unchanged. Values between `0%` and `100%` (or `0` and `1`) are linear multipliers on the effect. Values greater than `100%` (or `1`) are allowed, but are clamped to `1` (`100%`). Negative values are not allowed; they are clamped to `0`. If omitted, the default value is `1`. The initial value for {{Glossary("interpolation")}} is `1`.
 
 ## Formal syntax
 
@@ -61,14 +61,19 @@ opacity(amount)
 
 ## Examples
 
-### Examples of correct values for opacity()
+### Basic examples of opacity()
 
 ```css
-opacity(0%)   /* Completely transparent */
-opacity(50%)  /* 50% transparent */
+opacity(0%)    /* Completely transparent */
+opacity(0)     /* Equivalent to 0% */
 
-opacity()     /* No effect */
-opacity(1)
+opacity(50%)   /* 50% opacity (half transparent) */
+opacity(0.5)   /* Equivalent to 50% */
+
+opacity(100%)  /* Completely opaque (no effect) */
+opacity(1)     /* Equivalent to 100% */
+
+opacity()      /* Default value of 1 when omitted */
 ```
 
 ## Specifications
