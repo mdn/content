@@ -8,7 +8,7 @@ browser-compat: api.Window.sessionStorage
 
 {{APIRef("Web Storage API")}}
 
-The read-only **`sessionStorage`** property accesses a session {{DOMxRef("Storage")}} object for the current {{glossary("origin")}}. `sessionStorage` is similar to {{DOMxRef("Window.localStorage", "localStorage")}}; the difference is that while `localStorage` is partitioned by origin only, `sessionStorage` is partitioned by both origin and browser tabs (top-level browsing contexts). The data in `sessionStorage` is only kept for the duration of the page session.
+The read-only **`sessionStorage`** property accesses a session {{DOMxRef("Storage")}} object for the current {{glossary("origin")}}. `sessionStorage` is similar to {{DOMxRef("Window.localStorage", "localStorage")}}; the difference is that `sessionStorage` is partitioned by origin and browser tab (top-level browsing context), and so its data is only kept for the duration of the page session shown in that tab.
 
 - Whenever a document is loaded in a particular tab in the browser, a unique page session gets created and assigned to that particular tab. That page session is accessible only in that particular tab. The main document, and all embedded {{glossary("browsing context", "browsing contexts")}} (iframes), are grouped by their origin and each origin has access to its own separate storage area.
 - If the page has an {{domxref("Window.opener", "opener")}}, the `sessionStorage` is initially a copy of the opener's `sessionStorage` object. However, they are still separate and changes to one do not affect the other. To prevent the `sessionStorage` from being copied, use one of the techniques that remove `opener` (see {{domxref("Window.opener")}}).
