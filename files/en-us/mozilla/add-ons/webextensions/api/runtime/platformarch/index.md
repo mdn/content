@@ -12,8 +12,6 @@ The machine's processor architecture.
 
 Values of this type are strings. Possible values are:
 
-- `"aarch64"`
-  - : The platform is based on the ARM 64-bit architecture.
 - `"arm"`
   - : The platform is based on the ARM 32-bit architecture. Safari returns this value for the 64-bit architecture.
 - `"arm64"`
