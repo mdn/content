@@ -278,8 +278,8 @@ The following fields are available in the `result` object in the response, depen
     - `value` {{optional_inline}}
       - : An array, boolean, number, object, or string that represents the returned value, depending on the `type` field in this `result` object.
 
-        For example, `"string"` values are represented as strings, `"boolean"` values as `true` or `false`, and `"bigint"` values as strings.
-        For `"array"`, `"set"`, `"nodelist"`, and `"htmlcollection"`, `value` is an array of objects representing the collection items.
+        For example, `"bigint"` values are represented as strings, `"boolean"` values as `true` or `false`, and `"string"` values as strings.
+        For `"array"`, `"htmlcollection"`, `"nodelist"`, and `"set"`, `value` is an array of objects representing the collection items.
 
         This field is not present for every type.
         For objects, this field can be omitted when the `maxObjectDepth` limit is reached or when the same object has already been represented in the response.
