@@ -11,7 +11,7 @@ browser-compat: api.Element.setHTML
 The **`setHTML()`** method of the {{domxref("Element")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and insert it into the DOM as a subtree of the element.
 
 The method removes any elements and attributes that are considered XSS-unsafe, even if allowed by a passed sanitizer.
-Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{SVGElement("use")}}, {{SVGElement("base")}}, as well event handler content attributes (for example, `onclick`, `onload`, `onerror` and so forth). See [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) for more information.
+Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{HTMLElement("base")}}, {{SVGElement("use")}}, as well event handler content attributes (for example, `onclick`, `onload`, `onerror` and so forth). See [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) for more information.
 
 It is recommended (if supported) as a drop-in replacement for {{domxref("Element.innerHTML")}} when setting a user-provided string of HTML.
 

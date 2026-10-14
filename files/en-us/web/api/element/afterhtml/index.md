@@ -13,7 +13,7 @@ browser-compat: api.Element.afterHTML
 The **`afterHTML()`** method of the {{domxref("Element")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and insert it in the children list of the `Element`'s parent, just after the `Element`. Nothing happens if the node has no parent or the parent is a {{HTMLElement("script")}} element (and similar for SVG {{SVGElement("script")}} elements).
 
 The method removes any elements and attributes that are considered XSS-unsafe, even if allowed by a passed sanitizer.
-Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{SVGElement("use")}}, {{SVGElement("base")}}, as well event handler content attributes (for example, `onclick`, `onload`, `onerror` and so forth). See [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) for more information.
+Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{HTMLElement("base")}}, {{SVGElement("use")}}, as well event handler content attributes (for example, `onclick`, `onload`, `onerror` and so forth). See [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) for more information.
 
 ## Syntax
 
