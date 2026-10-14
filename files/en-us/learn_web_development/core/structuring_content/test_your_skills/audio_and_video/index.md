@@ -93,7 +93,7 @@ To complete this task:
 5. Make the video muted by default.
 6. Display the text tracks contained in the `subtitles_en.vtt` file when the video is playing. You must explicitly set the type as subtitles, and the subtitle language to English. Also set the `default` attribute so that the track is displayed by default.
    > [!NOTE]
-   > The subtitles file is located in the same directory as this example to avoid [crossorigin](/en-US/docs/Web/HTTP/Guides/CORS) problems: its entire path relative to this page is just `subtitles_en.vtt`.
+   > A copy of the subtitles file is located in the same directory as this page to avoid [crossorigin](/en-US/docs/Web/HTTP/Guides/CORS) problems: if you are completing the task live on MDN via the MDN Playground, the path you need is just `subtitles_en.vtt`. If you decide to recreate the example on your local file system, you can find a copy at the path `https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/audio-video/subtitles_en.vtt`.
 7. Make sure the readers can identify the subtitle language when they use the default controls.
 
 The starting point of the task looks like this:
