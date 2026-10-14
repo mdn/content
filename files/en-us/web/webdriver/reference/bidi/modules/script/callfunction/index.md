@@ -280,9 +280,10 @@ The following fields are available in the `result` object in the response, depen
 
         For example, `"bigint"` values are represented as strings, `"boolean"` values as `true` or `false`, and `"string"` values as strings.
         For `"array"`, `"htmlcollection"`, `"nodelist"`, and `"set"`, `value` is an array of objects representing the collection items.
+        For `"object"`, `value` is an array of key-value pairs.
 
         This field is not present for every type.
-        For objects, this field can be omitted when the `maxObjectDepth` limit is reached or when the same object has already been represented in the response.
+        For objects, this field may be omitted when the `maxObjectDepth` limit is reached or when the same object has already been represented in the response.
 
         - When `type` is `"node"`, `value` is an object that describes properties of the returned node and can contain the following fields:
           - `attributes` {{optional_inline}}
@@ -308,14 +309,14 @@ The following fields are available in the `result` object in the response, depen
           - `nodeType`
             - : A non-negative integer that represents the type of node, such as `1` for an element or `3` for a text node.
           - `nodeValue` {{optional_inline}}
-            - : A string that contains the value of the node, such as the text of a text node or the data of a comment node.
-              This field is absent for element and document nodes.
+            - : A string that contains the [value of the node](/en-US/docs/Web/API/Node/nodeValue), such as the text of a text node or the data of a comment node.
+              This field is absent for nodes with a `nodeValue` of `null`, such as element, document, and shadow root nodes.
           - `shadowRoot` {{optional_inline}}
             - : An object that describes the shadow root attached to the node, with fields such as `sharedId`, `type`, and `value`.
               This field is `null` when the returned element has no shadow root.
         - When `type` is `"window"`, `value` is an object with the following field:
           - `context`
-            - : A string that contains the browsing context ID.
+            - : A string that contains the ID of the context associated with the window.
 - `type`
   - : A string that indicates how the function call completed.
     It has one of the following values:
