@@ -13,9 +13,9 @@ The **`RTCIceCandidatePair`** dictionary describes a pair of ICE candidates whic
 
 ## Instance properties
 
-- {{domxref("RTCIceCandidatePair.local", "local")}} {{experimental_inline}}
+- {{domxref("RTCIceCandidatePair.local", "local")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : An {{domxref("RTCIceCandidate")}} describing the configuration of the local end of the connection.
-- {{domxref("RTCIceCandidatePair.remote", "remote")}} {{experimental_inline}}
+- {{domxref("RTCIceCandidatePair.remote", "remote")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : The **`RTCIceCandidate`** describing the configuration of the remote end of the connection.
 
 ## Examples

@@ -151,7 +151,7 @@ This interface also supports the following properties:
 ## Instance methods
 
 - {{domxref("PerformanceEventTiming.toJSON()")}}
-  - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `PerformanceEventTiming` object.
+  - : Returns a JSON-serializable plain object representing the `PerformanceEventTiming` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 

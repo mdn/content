@@ -23,7 +23,7 @@ See [VoiceOver User Guide for Mac](https://support.apple.com/guide/voiceover/wel
 
 Narrator is a screen-reading application that's built into Windows 10 and Windows 11.
 
-See [Complete guide to Narrator](https://support.microsoft.com/en-US/accessibility/windows/narrator/complete-guide-to-narrator).
+See [Complete guide to Narrator](https://support.microsoft.com/en-us/accessibility/windows/narrator/complete-guide-to-narrator).
 
 ### ChromeVox
 

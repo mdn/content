@@ -16,7 +16,9 @@ If the `desiredSize` is `0` then the queue is full. Therefore you can use this i
 
 ## Value
 
-The desired size.
+A number, or `null`.
+
+The number can be negative if the queue is over-full. When a custom readable queuing strategy is used, its chunk sizes can cause the number to have a fractional component. The value is `null` if the readable side has errored and `0` if it is closed.
 
 ## Examples
 

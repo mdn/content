@@ -103,7 +103,7 @@ Browsers recognize the security implications of sending form data over an insecu
 
 ### Hidden content
 
-Another original text control is the [`hidden`](/en-US/docs/Web/HTML/Reference/Elements/input/hidden) input type. This is used to create a form control that is invisible to the user, but is still sent to the server along with the rest of the form data once submitted — for example you might want to submit a timestamp to the server stating when an order was placed. Because it is hidden, the user can not see nor intentionally edit the value, it will never receive focus, and a screen reader will not notice it either.
+Another original text control is the [`hidden`](/en-US/docs/Web/HTML/Reference/Elements/input/hidden) input type. This is used to create a form control that is invisible to the user, but is still sent to the server along with the rest of the form data once submitted — for example you might want to submit a timestamp to the server stating when an order was placed. Because it is hidden, the user cannot see nor intentionally edit the value, it will never receive focus, and a screen reader will not notice it either.
 
 ```html
 <input type="hidden" id="timestamp" name="timestamp" value="1286705410" />
@@ -119,7 +119,7 @@ Checkable items are controls whose state you can change by clicking on them or t
 
 It's worth noting that these widgets do not behave exactly like other form widgets. For most form widgets, once the form is submitted all widgets that have a [`name`](/en-US/docs/Web/HTML/Reference/Elements/input#name) attribute are sent, even if no value has been filled out. In the case of checkable items, their values are sent only if they are checked. If they are not checked, nothing is sent, not even their name. If they are checked but have no value, the name is sent with a value of _on._
 
-For maximum usability/accessibility, you are advised to surround each list of related items in a {{htmlelement("fieldset")}}, with a {{htmlelement("legend")}} providing an overall description of the list. Each individual pair of {{htmlelement("label")}}/{{htmlelement("input")}} elements should be contained in its own list item (or similar). The associated {{htmlelement('label')}} is generally placed immediately before or after the radio button or checkbox, with the instructions for the group of radio button or checkboxes generally being the content of the {{htmlelement("legend")}}.
+For maximum usability/accessibility, you are advised to surround each list of related items in a {{htmlelement("fieldset")}}, with a {{htmlelement("legend")}} providing an overall description of the list. Each individual pair of {{htmlelement("label")}}/{{htmlelement("input")}} elements should be contained in its own list item (or similar). The associated {{htmlelement('label')}} is generally placed immediately before or after the radio button or checkbox, with the instructions for the group of radio buttons or checkboxes generally being the content of the {{htmlelement("legend")}}.
 
 ### Checkbox
 

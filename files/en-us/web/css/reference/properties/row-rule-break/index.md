@@ -13,7 +13,7 @@ sidebar: cssref
 
 The **`row-rule-break`** [CSS](/en-US/docs/Web/CSS) property sets the behavior for breaking row rules into segments where row rules intersect column gaps.
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: row-rule-break")}}
 
 ```css interactive-example-choice
 row-rule-break: none;
@@ -76,7 +76,7 @@ row-rule-break: intersection;
 ## Syntax
 
 ```css
-/* Keywords */
+/* Keyword values */
 row-rule-break: none;
 row-rule-break: normal;
 row-rule-break: intersection;
@@ -96,7 +96,7 @@ This property is specified as a single keyword from the following list:
 - `none`
   - : There are no breaks in row rules when they intersect column gaps; rather, a continuous row rule is painted the whole width of the container, from edge to edge.
 - `normal`
-  - : In grid and flex containers, behaves as `none`. In multi-col, behaves as `none`. This is the default value.
+  - : In grid, flex containers, and multi-col layout, behaves as `none`. This is the default value.
 - `intersection`
   - : Row rules always break when they intersect column gaps, with row rule segments starting and ending at container and gap edges.
 
@@ -165,6 +165,18 @@ h2 {
   border: 1px solid green;
   background-color: lime;
   height: 30px;
+}
+
+@layer no-support {
+  @supports not (row-rule-break: intersection) {
+    body::before {
+      content: "Your browser doesn't support the row-rule-break property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
 }
 ```
 
@@ -256,6 +268,18 @@ section {
   flex: 1 1 auto;
   height: 30px;
 }
+
+@layer no-support {
+  @supports not (row-rule-break: intersection) {
+    body::before {
+      content: "Your browser doesn't support the row-rule-break property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
 ```
 
 {{EmbedLiveSample("Flex containers", "", "300")}}
@@ -343,6 +367,17 @@ li {
 }
 label {
   margin-right: 20px;
+}
+@layer no-support {
+  @supports not (row-rule-break: intersection) {
+    body::before {
+      content: "Your browser doesn't support the row-rule-break property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
 }
 ```
 
@@ -468,6 +503,17 @@ li {
   text-align: center;
   font-family: sans-serif;
   line-height: 50px;
+}
+@layer no-support {
+  @supports not (row-rule-break: intersection) {
+    body::before {
+      content: "Your browser doesn't support the row-rule-break property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
 }
 ```
 

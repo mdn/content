@@ -1696,6 +1696,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLInstallElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLLabelElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -2008,6 +2012,10 @@
       "inh": "ExtendableEvent",
       "impl": []
     },
+    "InstallResultEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "Instance": {
       "inh": "",
       "impl": []
@@ -2069,6 +2077,18 @@
       "impl": []
     },
     "LanguageModelParams": {
+      "inh": "",
+      "impl": []
+    },
+    "LanguageModelToolCall": {
+      "inh": "",
+      "impl": []
+    },
+    "LanguageModelToolError": {
+      "inh": "",
+      "impl": []
+    },
+    "LanguageModelToolSuccess": {
       "inh": "",
       "impl": []
     },
@@ -3805,6 +3825,14 @@
       "impl": []
     },
     "ToggleEvent": {
+      "inh": "Event",
+      "impl": []
+    },
+    "ToolActivatedEvent": {
+      "inh": "Event",
+      "impl": []
+    },
+    "ToolCancelEvent": {
       "inh": "Event",
       "impl": []
     },

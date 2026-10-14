@@ -372,7 +372,7 @@ This can make deployment and iterative development much easier.
 You should already be using GitHub to store the local library source code (this was set up in [Source code management with Git and GitHub](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#source_code_management_with_git_and_github) as part of setting up your development environment.
 
 This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any hosting service (or for development) others might not.
-Assuming you have already backed up all the changes made so far to the `main` branch on GitHub you can create a new branch to backup your changes as shown:
+Assuming you have already backed up all the changes made so far to the `main` branch on GitHub you can create a new branch to back up your changes as shown:
 
 ```bash
 # Fetch the latest main branch
@@ -518,7 +518,7 @@ We'll also configure the default database and collect static files so that they 
 
    Note the details, as you'll need them to test your site.
 
-### Setup the web app
+### Set up the web app
 
 After getting the local library sources and installing the dependencies in a virtual environment, we need to tell PythonAnywhere how to find them and use them as a web app.
 
@@ -953,7 +953,7 @@ Then call the following command, entering name, email, and password as required:
 railway run python manage.py createsuperuser
 ```
 
-You should now be able to open your website admin area (`https://[your-url].railway.app/admin/`) and populate the database, just as shown in [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site)).
+You should now be able to open your website admin area (`https://[your-url].railway.app/admin/`) and populate the database, just as shown in [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site).
 
 ### Setting configuration variables
 

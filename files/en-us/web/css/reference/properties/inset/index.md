@@ -11,6 +11,8 @@ The **`inset`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guide
 
 This {{glossary("inset properties")}}, including `inset`, have no effect on non-positioned elements.
 
+While part of the [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) module, it does not define _logical_ offsets. It defines _physical_ offsets, regardless of the element's writing mode, directionality, and text orientation.
+
 {{InteractiveExample("CSS Demo: inset")}}
 
 ```css interactive-example-choice
@@ -65,8 +67,6 @@ inset: 0;
   inset: 0;
 }
 ```
-
-While part of the [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) module, it does not define _logical_ offsets. It defines _physical_ offsets, regardless of the element's writing mode, directionality, and text orientation.
 
 ## Constituent properties
 

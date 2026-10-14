@@ -25,10 +25,10 @@ moveBy(deltaX, deltaY)
 ### Parameters
 
 - `deltaX`
-  - : The amount of pixels to move the window horizontally.
+  - : The number of pixels to move the window horizontally.
     Positive values are to the right, while negative values are to the left.
 - `deltaY`
-  - : The amount of pixels to move the window vertically. Positive
+  - : The number of pixels to move the window vertically. Positive
     values are down, while negative values are up.
 
 ### Return value

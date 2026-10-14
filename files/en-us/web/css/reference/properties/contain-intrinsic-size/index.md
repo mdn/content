@@ -19,7 +19,7 @@ This property is a shorthand for the following CSS properties:
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 contain-intrinsic-size: none;
 
 /* <length> values */

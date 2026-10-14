@@ -121,5 +121,5 @@ The `fetchpriority` directive should be used sparingly, and only in cases where 
 
 - {{HTTPStatus("103", "103 Early Hints")}}
 - {{HTMLElement("link")}}
-- [Link Relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml) IANA registry
+- [Link Relations](https://www.iana.org/assignments/link-relations) IANA registry
 - [Optimize resource loading with the Fetch Priority API](https://web.dev/articles/fetch-priority?hl=en#browser_priority_and_fetchpriority) for information about how this API affects priorities on Chrome.

@@ -20,7 +20,7 @@ A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before th
 
 The `loadEventStart` property can be used to measure how long it takes to process the [`load`](/en-US/docs/Web/API/Window/load_event) event handler.
 
-This is useful to measure the time of long running [`load`](/en-US/docs/Web/API/Window/load_event) event handlers.
+This is useful to measure the time of long-running [`load`](/en-US/docs/Web/API/Window/load_event) event handlers.
 
 ```js
 window.addEventListener("load", (event) => {

@@ -88,4 +88,4 @@ Thus, it's important to note that the {{Glossary("user agent")}} never sends a {
 - [Introducing the Payment Request API for Apple Pay](https://webkit.org/blog/8182/introducing-the-payment-request-api-for-apple-pay/)
 - [Google Pay API PaymentRequest Tutorial](https://developers.google.com/pay/api/web/guides/paymentrequest/tutorial)
 - [Android Payment Apps Developers Guide](https://web.dev/articles/android-payment-apps-developers-guide)
-- [Samsung Internet Web Payments Integration Guide](https://developer.samsung.com/internet/android/web-payments-integration-guide.html)
+- [Samsung Internet Web Payments Integration Guide](https://developer.samsung.com/browser/android/web-payments-integration-guide.html)

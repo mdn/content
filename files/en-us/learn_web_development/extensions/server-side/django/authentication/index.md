@@ -8,7 +8,7 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}
 
-In this tutorial, we'll show you how to allow users to log in to your site with their own accounts, and how to control what they can do and see based on whether or not they are logged in and their _permissions_. As part of this demonstration, we'll extend the [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website, adding login and logout pages, and user- and staff-specific pages for viewing books that have been borrowed.
+In this tutorial, we'll show you how to allow users to log into your site with their own accounts, and how to control what they can do and see based on whether or not they are logged in and their _permissions_. As part of this demonstration, we'll extend the [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website, adding login and logout pages, and user- and staff-specific pages for viewing books that have been borrowed.
 
 <table>
   <tbody>
@@ -106,7 +106,7 @@ Our superuser is already authenticated and has all permissions, so we'll need to
 
 Below we'll first create a group and then a user. Even though we don't have any permissions to add for our library members yet, if we need to later, it will be much easier to add them once to the group than individually to each member.
 
-Start the development server and navigate to the admin site in your local web browser (`http://127.0.0.1:8000/admin/`). Login to the site using the credentials for your superuser account. The top level of the Admin site displays all of your models, sorted by "Django application". From the **Authentication and Authorization** section, you can click the **Users** or **Groups** links to see their existing records.
+Start the development server and navigate to the admin site in your local web browser (`http://127.0.0.1:8000/admin/`). Log into the site using the credentials for your superuser account. The top level of the Admin site displays all of your models, sorted by "Django application". From the **Authentication and Authorization** section, you can click the **Users** or **Groups** links to see their existing records.
 
 ![Admin site - add groups or users](admin_authentication_add.png)
 
@@ -251,9 +251,9 @@ Create a new HTML file called /**django-locallibrary-tutorial/templates/registra
   {% if next %}
     {% if user.is_authenticated %}
       <p>Your account doesn't have access to this page. To proceed,
-      please login with an account that has access.</p>
+      please log in with an account that has access.</p>
     {% else %}
-      <p>Please login to see this page.</p>
+      <p>Please log in to see this page.</p>
     {% endif %}
   {% endif %}
 
@@ -306,7 +306,7 @@ Create and open **/django-locallibrary-tutorial/templates/registration/logged_ou
 
 {% block content %}
   <p>Logged out!</p>
-  <a href="{% url 'login'%}">Click here to login again.</a>
+  <a href="{% url 'login'%}">Click here to log in again.</a>
 {% endblock %}
 ```
 
@@ -413,7 +413,7 @@ This is the last password-reset template, which is displayed to notify you when 
 
 Now that you've added the URL configuration and created all these templates, the authentication pages (other than logout) should now just work!
 
-You can test the new authentication pages by first attempting to log in to your superuser account using the URL `http://127.0.0.1:8000/accounts/login/`.
+You can test the new authentication pages by first attempting to log into your superuser account using the URL `http://127.0.0.1:8000/accounts/login/`.
 You'll be able to test the password reset functionality from the link in the login page. **Be aware that Django will only send reset emails to addresses (users) that are already stored in its database!**
 
 Note that you won't be able to test account logout yet, because logout requests must be sent as a `POST` rather than a `GET` request.
@@ -481,7 +481,7 @@ You should be taken to the logout/login pages that you defined in the [Template 
 
 ### Testing in views
 
-If you're using function-based views, the easiest way to restrict access to your functions is to apply the `login_required` decorator to your view function, as shown below. If the user is logged in then your view code will execute as normal. If the user is not logged in, this will redirect to the login URL defined in the project settings (`settings.LOGIN_URL`), passing the current absolute path as the `next` URL parameter. If the user succeeds in logging in then they will be returned back to this page, but this time authenticated.
+If you're using function-based views, the easiest way to restrict access to your functions is to apply the `login_required` decorator to your view function, as shown below. If the user is logged in then your view code will execute as normal. If the user is not logged in, this will redirect to the login URL defined in the project settings (`settings.LOGIN_URL`), passing the current absolute path as the `next` URL parameter. If the user succeeds in logging in then they will be returned to this page, but this time authenticated.
 
 ```python
 from django.contrib.auth.decorators import login_required
@@ -521,7 +521,7 @@ Unfortunately, we don't yet have any way for users to borrow books! So before we
 
 ### Models
 
-First, we're going to have to make it possible for users to have a `BookInstance` on loan (we already have a `status` and a `due_back` date, but we don't yet have any association between this model and a particular user. We'll create one using a `ForeignKey` (one-to-many) field. We also need an easy mechanism to test whether a loaned book is overdue.
+First, we're going to have to make it possible for users to have a `BookInstance` on loan (we already have a `status` and a `due_back` date, but we don't yet have any association between this model and a particular user). We'll create one using a `ForeignKey` (one-to-many) field. We also need an easy mechanism to test whether a loaned book is overdue.
 
 Open **catalog/models.py**, and import the `settings` from `django.conf` (add this just below the previous import line at the top of the file, so the settings are available to subsequent code that makes use of them):
 
@@ -549,7 +549,7 @@ borrower = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL
 > ```
 
 While we're here, let's add a property that we can call from our templates to tell if a particular book instance is overdue.
-While we could calculate this in the template itself, using a [property](https://docs.python.org/3/library/functions.html#property) as shown below will be much more efficient.
+While we could calculate this in the template itself, using a [property](https://docs.python.org/3/builtins/functions.html#property) as shown below will be much more efficient.
 
 Add this somewhere near the top of the file:
 
@@ -670,7 +670,7 @@ Now, all we need to do for this page is add a template. First, create the templa
 ```
 
 This template is very similar to those we've created previously for the `Book` and `Author` objects.
-The only "new" thing here is that we check the method we added in the model `(bookinst.is_overdue`) and use it to change the color of overdue items.
+The only "new" thing here is that we check the method we added in the model (`bookinst.is_overdue`) and use it to change the color of overdue items.
 
 When the development server is running, you should now be able to view the list for a logged in user in your browser at `http://127.0.0.1:8000/catalog/mybooks/`. Try this out with your user logged in and logged out (in the second case, you should be redirected to the login page).
 

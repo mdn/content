@@ -29,7 +29,7 @@ From the HTML point of view, the app shell is everything outside the content sec
       content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps." />
     <meta name="author" content="end3r" />
     <meta name="theme-color" content="#B12A34" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width" />
     <meta
       property="og:image"
       content="https://js13kgames.com/img/js13kgames-banner.png" />
@@ -173,8 +173,6 @@ const appShellFiles = [
   "/pwa-examples/js13kpwa/index.html",
   "/pwa-examples/js13kpwa/app.js",
   "/pwa-examples/js13kpwa/style.css",
-  "/pwa-examples/js13kpwa/fonts/graduate.eot",
-  "/pwa-examples/js13kpwa/fonts/graduate.ttf",
   "/pwa-examples/js13kpwa/fonts/graduate.woff",
   "/pwa-examples/js13kpwa/favicon.ico",
   "/pwa-examples/js13kpwa/img/js13kgames.png",

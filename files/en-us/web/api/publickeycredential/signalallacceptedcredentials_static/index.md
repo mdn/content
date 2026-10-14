@@ -41,7 +41,7 @@ The promise rejects with the following exceptions:
 
 - `SecurityError` {{domxref("DOMException")}}
   - : The RP domain is not valid.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : The `userId` or any of the `allAcceptedCredentialIds` elements are not valid base64url-encoded strings.
 
 ## Description

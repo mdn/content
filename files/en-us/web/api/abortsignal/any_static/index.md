@@ -28,6 +28,14 @@ An {{domxref("AbortSignal")}} that is:
 - **Already aborted**, if any of the abort signals given is already aborted. The returned {{domxref("AbortSignal")}}'s reason will be already set to the {{domxref("AbortSignal.reason", "reason")}} of the first abort signal that was already aborted.
 - **Asynchronously aborted**, when any abort signal in `iterable` aborts. The {{domxref("AbortSignal.reason", "reason")}} will be set to the reason of the first abort signal that is aborted.
 
+## Description
+
+`AbortSignal.any()` does not provide a method to unsubscribe the returned signal from its input signals. Aborting the returned signal does not abort the other input signals or cancel their timeouts.
+
+Internally, the combined signal and its source signals are linked through weak references. The combined signals aren't inherently blocked from garbage collection while the input signals remain active. However, a non-aborted combined signal is kept alive while it still has source signals and either registered `abort` event listeners or internal abort steps registered by an API.
+
+If your code adds `abort` listeners to the combined signal, [remove them when the operation finishes](/en-US/docs/Web/API/AbortSignal#removing_the_abort_event_listener), just as you would for any other `AbortSignal`.
+
 ## Examples
 
 ### Using `AbortSignal.any()`

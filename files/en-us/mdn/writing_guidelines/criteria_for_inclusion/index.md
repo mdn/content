@@ -106,7 +106,7 @@ To ensure that your project for documenting the new technology on MDN Web Docs i
 
 ### Dedicated team
 
-Make sure you have a dedicated team in place that will be there to both write the initial documentation as well as maintain it in future with the required updates.
+Make sure you have a dedicated team in place that will be there to both write the initial documentation and maintain it in future with the required updates.
 
 Have a think about how much work there is and how many people you might need for that.
 

@@ -114,9 +114,9 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("Window.screen")}} {{ReadOnlyInline}}
   - : Returns a reference to the screen object associated with the window.
 - {{domxref("Window.screenX")}} and {{domxref("Window.screenLeft")}} {{ReadOnlyInline}}
-  - : Both properties return the horizontal distance from the left border of the user's browser viewport to the left side of the screen.
+  - : Both properties return the horizontal distance from the left border of the user's browser window to the left side of the screen.
 - {{domxref("Window.screenY")}} and {{domxref("Window.screenTop")}} {{ReadOnlyInline}}
-  - : Both properties return the vertical distance from the top border of the user's browser viewport to the top side of the screen.
+  - : Both properties return the vertical distance from the top border of the user's browser window to the top side of the screen.
 - {{domxref("Window.scrollbars")}} {{ReadOnlyInline}}
   - : Returns the scrollbars object.
 - {{domxref("Window.scrollMaxX")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
@@ -129,7 +129,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns the number of pixels that the document has already been scrolled vertically.
 - {{domxref("Window.self")}} {{ReadOnlyInline}}
   - : Returns an object reference to the window object itself.
-- {{domxref("Window.sessionStorage")}}
+- {{domxref("Window.sessionStorage")}} {{ReadOnlyInline}}
   - : Returns a reference to the session storage object used to store data that may only be accessed by the origin that created it.
 - {{domxref("Window.sharedStorage")}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{deprecated_inline}} {{non-standard_inline}}
   - : Returns the {{domxref("WindowSharedStorage")}} object for the current origin. This is the main entry point for writing data to shared storage using the [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API).
@@ -322,9 +322,9 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 ### Focus events
 
 - {{domxref("Window/blur_event", "blur")}}
-  - : Fired when an element has lost focus.
+  - : Fired when the window has lost focus.
 - {{domxref("Window/focus_event", "focus")}}
-  - : Fired when an element has gained focus.
+  - : Fired when the window has gained focus.
 
 ### Gamepad events
 

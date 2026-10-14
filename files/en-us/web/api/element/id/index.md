@@ -8,10 +8,7 @@ browser-compat: api.Element.id
 
 {{ ApiRef("DOM") }}
 
-The **`id`** property of the {{domxref("Element")}} interface
-represents the element's identifier, reflecting the
-[**`id`**](/en-US/docs/Web/HTML/Reference/Global_attributes/id)
-global attribute.
+The **`id`** property of the {{domxref("Element")}} interface reflects the element's [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) content attribute.
 
 If the `id` value is not the empty string, it must be unique in a document.
 

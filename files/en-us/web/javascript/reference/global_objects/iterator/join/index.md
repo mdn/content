@@ -3,13 +3,9 @@ title: Iterator.prototype.join()
 short-title: join()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/join
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Iterator.join
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`join()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.join()")}}: it returns a string that is the concatenation of all elements produced by the iterator, separated by commas or a specified separator string. If the iterator has only one item, that item's stringification is returned without using the separator.
 

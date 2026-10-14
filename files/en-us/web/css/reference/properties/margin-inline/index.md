@@ -79,7 +79,7 @@ margin-inline: 10px; /* sets both start and end values */
 margin-inline: anchor-size(width);
 margin-inline: calc(anchor-size(self-block) / 5) auto;
 
-/* Keyword values */
+/* Keyword value */
 margin-inline: auto;
 
 /* Global values */

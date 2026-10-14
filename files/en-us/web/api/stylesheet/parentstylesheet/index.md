@@ -8,9 +8,7 @@ browser-compat: api.StyleSheet.parentStyleSheet
 
 {{APIRef("CSSOM")}}
 
-The **`parentStyleSheet`** property of the
-{{domxref("StyleSheet")}} interface returns the style sheet, if any, that is including
-the given style sheet.
+The **`parentStyleSheet`** read-only property of the {{domxref("StyleSheet")}} interface returns the style sheet, if any, that is including the given style sheet.
 
 ## Value
 

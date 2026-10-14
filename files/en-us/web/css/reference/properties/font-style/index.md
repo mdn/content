@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`font-style`** [CSS](/en-US/docs/Web/CSS) property sets whether a font should be styled with a normal, italic, or oblique face from its {{cssxref("font-family")}}.
 
+**Italic** font faces are generally cursive in nature, usually using less horizontal space than their unstyled counterparts, while **oblique** faces are usually just sloped versions of the regular face. When the specified style is not available, both italic and oblique faces are simulated by artificially sloping the glyphs of the regular face (use {{cssxref("font-synthesis")}} to control this behavior).
+
 {{InteractiveExample("CSS Demo: font-style")}}
 
 ```css interactive-example-choice
@@ -41,7 +43,7 @@ font-style: oblique 40deg;
 
 ```css interactive-example
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2");
   font-family: "Amstelvar";
   font-style: normal;
 }
@@ -51,8 +53,6 @@ section {
   font-family: "Amstelvar", serif;
 }
 ```
-
-**Italic** font faces are generally cursive in nature, usually using less horizontal space than their unstyled counterparts, while **oblique** faces are usually just sloped versions of the regular face. When the specified style is not available, both italic and oblique faces are simulated by artificially sloping the glyphs of the regular face (use {{cssxref("font-synthesis")}} to control this behavior).
 
 ## Syntax
 
@@ -85,6 +85,8 @@ This property is specified as one of the following keyword values. The `oblique`
 
     In general, for a requested angle of 14 degrees or greater, larger angles are preferred; otherwise, smaller angles are preferred (see the spec's [font matching section](https://drafts.csswg.org/css-fonts-4/#font-matching-algorithm) for the precise algorithm).
 
+The [CSS fonts](/en-US/docs/Web/CSS/Guides/Fonts) module also defines `left` and `right` values to select an italic or oblique face with a specific slant direction; however, these values are not supported in any browsers.
+
 ### Variable fonts
 
 Variable fonts can offer a fine control over the degree to which an oblique face is slanted. You can select this using the `<angle>` modifier for the `oblique` keyword.
@@ -102,7 +104,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
 
 ```css live-sample___oblique-example
 @font-face {
-  src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2");
   font-family: "AmstelvarAlpha";
   font-style: normal;
 }
