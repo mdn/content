@@ -8,8 +8,7 @@ browser-compat: api.IDBTransaction.error
 
 {{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
-The **`IDBTransaction.error`** property of the {{domxref("IDBTransaction")}} interface
-returns the type of error when there is an unsuccessful transaction.
+The **`error`** read-only property of the {{domxref("IDBTransaction")}} interface returns the type of error when there is an unsuccessful transaction.
 
 ## Value
 

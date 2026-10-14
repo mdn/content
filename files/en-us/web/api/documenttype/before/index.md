@@ -8,10 +8,7 @@ browser-compat: api.DocumentType.before
 
 {{APIRef("DOM")}}
 
-The **`DocumentType.before()`** method inserts a set of
-{{domxref("Node")}} objects or strings in the children list of the
-`DocumentType`'s parent, just before the `DocumentType`.
-Strings are inserted as equivalent {{domxref("Text")}} nodes.
+The **`before()`** method of the {{domxref("DocumentType")}} interface inserts a set of {{domxref("Node")}} objects or strings in the children list of this `DocumentType`'s parent, just before this `DocumentType`. Strings are inserted as equivalent {{domxref("Text")}} nodes. Nothing happens if {{domxref("Node.parentNode", "parentNode")}} is `null`.
 
 ## Syntax
 
@@ -45,8 +42,8 @@ given they trigger quirks mode in IE. A
 works for IE as well, though:
 
 ```js
-let docType = document.implementation.createDocumentType("html", "", "");
-let myDoc = document.implementation.createDocument("", "", docType);
+const docType = document.implementation.createDocumentType("html", "", "");
+const myDoc = document.implementation.createDocument("", "", docType);
 
 docType.before(
   document.createComment("<!--[if !IE]> conditional comment <![endif]-->"),

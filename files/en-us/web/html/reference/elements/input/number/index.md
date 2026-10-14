@@ -11,6 +11,8 @@ sidebar: htmlsidebar
 
 The browser may opt to provide stepper arrows to let the user increase and decrease the value using their mouse or by tapping with a fingertip.
 
+On browsers that don't support inputs of type `number`, a `number` input falls back to type `text`.
+
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
@@ -32,8 +34,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-On browsers that don't support inputs of type `number`, a `number` input falls back to type `text`.
 
 ## Value
 

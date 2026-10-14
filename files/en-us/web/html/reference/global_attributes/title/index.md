@@ -33,6 +33,8 @@ iframe {
 }
 ```
 
+## Description
+
 The main use of the `title` attribute is to label {{HTMLElement("iframe")}} elements for assistive technology.
 
 The `title` attribute may also be used to label controls in [data tables](/en-US/docs/Web/HTML/Reference/Elements/table).

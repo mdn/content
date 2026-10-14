@@ -51,7 +51,7 @@ As an example, consider the garamond font family, in its normal form, we get the
 ```css
 @font-face {
   font-family: "garamond";
-  src: url("garamond.ttf");
+  src: url("garamond.woff2");
 }
 ```
 
@@ -66,7 +66,7 @@ On the other hand, if a true italicized version of the font family exists, we ca
 ```css
 @font-face {
   font-family: "garamond";
-  src: url("garamond-italic.ttf");
+  src: url("garamond-italic.woff2");
   font-style: italic;
 }
 ```

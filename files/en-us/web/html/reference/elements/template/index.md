@@ -127,8 +127,8 @@ First we start with the HTML portion of the example.
 <table id="producttable">
   <thead>
     <tr>
-      <td>UPC_Code</td>
-      <td>Product_Name</td>
+      <th>UPC_Code</th>
+      <th>Product_Name</th>
     </tr>
   </thead>
   <tbody>
@@ -149,33 +149,26 @@ First, we have a table into which we will later insert content using JavaScript 
 Now that the table has been created and the template defined, we use JavaScript to insert rows into the table, with each row being constructed using the template as its basis.
 
 ```js
-// Test to see if the browser supports the HTML template element by checking
-// for the presence of the template element's content attribute.
-if ("content" in document.createElement("template")) {
-  // Instantiate the table with the existing HTML tbody
-  // and the row with the template
-  const tbody = document.querySelector("tbody");
-  const template = document.querySelector("#productrow");
+// Instantiate the table with the existing HTML tbody
+// and the row with the template
+const tbody = document.querySelector("tbody");
+const template = document.querySelector("#productrow");
 
-  // Clone the new row and insert it into the table
-  const clone = document.importNode(template.content, true);
-  let td = clone.querySelectorAll("td");
-  td[0].textContent = "1235646565";
-  td[1].textContent = "Stuff";
+// Clone the new row and insert it into the table
+const clone = document.importNode(template.content, true);
+let td = clone.querySelectorAll("td");
+td[0].textContent = "1235646565";
+td[1].textContent = "Stuff";
 
-  tbody.appendChild(clone);
+tbody.appendChild(clone);
 
-  // Clone the new row and insert it into the table
-  const clone2 = document.importNode(template.content, true);
-  td = clone2.querySelectorAll("td");
-  td[0].textContent = "0384928528";
-  td[1].textContent = "Acme Kidney Beans 2";
+// Clone the new row and insert it into the table
+const clone2 = document.importNode(template.content, true);
+td = clone2.querySelectorAll("td");
+td[0].textContent = "0384928528";
+td[1].textContent = "Acme Kidney Beans 2";
 
-  tbody.appendChild(clone2);
-} else {
-  // Find another way to add the rows to the table because
-  // the HTML template element is not supported.
-}
+tbody.appendChild(clone2);
 ```
 
 The result is the original HTML table, with two new rows appended to it via JavaScript:
@@ -184,6 +177,8 @@ The result is the original HTML table, with two new rows appended to it via Java
 table {
   background: black;
 }
+
+table th,
 table td {
   background: white;
 }

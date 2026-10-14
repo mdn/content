@@ -66,13 +66,12 @@ The [`capture`](/en-US/docs/Web/HTML/Reference/Attributes/capture) attribute val
 
 When the [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple) Boolean attribute is specified, the file input allows the user to select more than one file.
 
-## Non-standard attributes
-
-In addition to the attributes listed above, the following non-standard attributes are available on some browsers. You should try to avoid using them when possible, since doing so will limit the ability of your code to function in browsers that don't implement them.
-
-### `webkitdirectory`
+### webkitdirectory
 
 The Boolean `webkitdirectory` attribute, if present, indicates that only directories should be available to be selected by the user in the file picker interface. See {{domxref("HTMLInputElement.webkitdirectory")}} for additional details and examples.
+
+> [!NOTE]
+> `webkitdirectory` is defined in the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API). It's named `webkitdirectory` because of its origins as a Chrome-specific API. It is now available in all browsers.
 
 ## Unique file type specifiers
 

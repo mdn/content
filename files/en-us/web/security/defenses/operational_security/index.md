@@ -157,7 +157,7 @@ The two most common standards for representing a software bill of materials are:
 - [CycloneDX](https://cyclonedx.org/), originally developed by [OWASP](https://owasp.org/).
 - [SPDX](https://spdx.dev/), maintained by the [Linux Foundation](https://www.linuxfoundation.org/).
 
-Both these standards have good support, and you can use either to represent the SBOM for your project. SPDX was initially focused on helping products ensure compliance with open source software licenses, but has added features to support security use cases. CycloneDX is a newer and more lightweight standard focused from the start on promoting supply chain security.
+Both these standards have good support, and you can use either to represent the SBOM for your project. SPDX was initially focused on helping products ensure compliance with open-source software licenses, but has added features to support security use cases. CycloneDX is a newer and more lightweight standard focused from the start on promoting supply chain security.
 
 #### Anatomy of an SBOM
 

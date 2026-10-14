@@ -3,10 +3,12 @@ title: "Blob: textStream() method"
 short-title: textStream()
 slug: Web/API/Blob/textStream
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Blob.textStream
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}
+{{APIRef("File API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`textStream()`** method of the {{domxref("Blob")}} interface returns a {{domxref("ReadableStream")}} that can be used to read the contents of the `Blob` in chunks of UTF-8.
 

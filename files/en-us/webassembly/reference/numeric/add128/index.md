@@ -3,9 +3,13 @@ title: "add128: Wasm numeric instruction"
 short-title: add128
 slug: WebAssembly/Reference/Numeric/add128
 page-type: webassembly-instruction
+status:
+  - experimental
 browser-compat: webassembly.instructions.add128
 sidebar: webassemblysidebar
 ---
+
+{{SeeCompatTable}}
 
 The **`add128`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) adds two 128-bit integers, represented by four 64-bit integers, to produce a 128-bit result represented by two 64-bit integers.
 

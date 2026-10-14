@@ -21,13 +21,13 @@ Moreover, it uses SVG as its native file format. To store Inkscape specific data
 
 URL: [www.adobe.com/products/illustrator/](https://www.adobe.com/products/illustrator.html)
 
-Before Adobe acquired Macromedia, it was the most prominent promoter of SVG. From this time stems the good support of SVG in Illustrator. However, the resulting SVG often shows some quirks, that make it necessary to post-process it for general applicability.
+Before Adobe acquired Macromedia, it was the most prominent promoter of SVG. From this time stems the good support of SVG in Illustrator. However, the resulting SVG often shows some quirks that make it necessary to post-process it for general applicability.
 
 ## Apache Batik
 
 URL: [xmlgraphics.apache.org/batik/](https://xmlgraphics.apache.org/batik/)
 
-Batik is a set of open source tools under the roof of the Apache Software Foundation. The toolkit is written in Java and offers almost complete SVG 1.1 support, as well as some features that were originally planned for SVG 1.2.
+Batik is a set of open-source tools under the roof of the Apache Software Foundation. The toolkit is written in Java and offers almost complete SVG 1.1 support, as well as some features that were originally planned for SVG 1.2.
 
 Batik offers a viewer (Squiggle), a rasterizer for PNG output, and an SVG pretty printer to format SVG files.
 

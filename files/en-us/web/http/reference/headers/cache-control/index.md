@@ -47,24 +47,24 @@ Cache directives follow these rules:
 
 The following table lists the standard `Cache-Control` directives:
 
-| Request                             | Response                                            |
-| ----------------------------------- | --------------------------------------------------- |
-| [`max-age`](#max-age)               | [`max-age`](#max-age)                               |
-| [`max-stale`](#max-stale)           | -                                                   |
-| [`min-fresh`](#min-fresh)           | -                                                   |
-| -                                   | [`s-maxage`](#s-maxage)                             |
-| [`no-cache`](#no-cache)             | [`no-cache`](#no-cache)                             |
-| [`no-store`](#no-store)             | [`no-store`](#no-store)                             |
-| [`no-transform`](#no-transform)     | [`no-transform`](#no-transform)                     |
-| [`only-if-cached`](#only-if-cached) | -                                                   |
-| -                                   | [`must-revalidate`](#must-revalidate)               |
-| -                                   | [`proxy-revalidate`](#proxy-revalidate)             |
-| -                                   | [`must-understand`](#must-understand)               |
-| -                                   | [`private`](#private)                               |
-| -                                   | [`public`](#public)                                 |
-| -                                   | [`immutable`](#immutable)                           |
-| -                                   | [`stale-while-revalidate`](#stale-while-revalidate) |
-| [`stale-if-error`](#stale-if-error) | [`stale-if-error`](#stale-if-error)                 |
+| Request                               | Response                                            |
+| ------------------------------------- | --------------------------------------------------- |
+| [`max-age`](#max-age_2)               | [`max-age`](#max-age)                               |
+| [`max-stale`](#max-stale)             | -                                                   |
+| [`min-fresh`](#min-fresh)             | -                                                   |
+| -                                     | [`s-maxage`](#s-maxage)                             |
+| [`no-cache`](#no-cache_2)             | [`no-cache`](#no-cache)                             |
+| [`no-store`](#no-store_2)             | [`no-store`](#no-store)                             |
+| [`no-transform`](#no-transform_2)     | [`no-transform`](#no-transform)                     |
+| [`only-if-cached`](#only-if-cached)   | -                                                   |
+| -                                     | [`must-revalidate`](#must-revalidate)               |
+| -                                     | [`proxy-revalidate`](#proxy-revalidate)             |
+| -                                     | [`must-understand`](#must-understand)               |
+| -                                     | [`private`](#private)                               |
+| -                                     | [`public`](#public)                                 |
+| -                                     | [`immutable`](#immutable)                           |
+| -                                     | [`stale-while-revalidate`](#stale-while-revalidate) |
+| [`stale-if-error`](#stale-if-error_2) | [`stale-if-error`](#stale-if-error)                 |
 
 Note: Check the [compatibility table](#browser_compatibility) for their support; user agents that don't recognize them should ignore them.
 

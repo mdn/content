@@ -518,7 +518,7 @@ We'll also configure the default database and collect static files so that they 
 
    Note the details, as you'll need them to test your site.
 
-### Setup the web app
+### Set up the web app
 
 After getting the local library sources and installing the dependencies in a virtual environment, we need to tell PythonAnywhere how to find them and use them as a web app.
 
@@ -953,7 +953,7 @@ Then call the following command, entering name, email, and password as required:
 railway run python manage.py createsuperuser
 ```
 
-You should now be able to open your website admin area (`https://[your-url].railway.app/admin/`) and populate the database, just as shown in [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site)).
+You should now be able to open your website admin area (`https://[your-url].railway.app/admin/`) and populate the database, just as shown in [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site).
 
 ### Setting configuration variables
 

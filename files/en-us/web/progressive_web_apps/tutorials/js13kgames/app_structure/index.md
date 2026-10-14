@@ -173,8 +173,6 @@ const appShellFiles = [
   "/pwa-examples/js13kpwa/index.html",
   "/pwa-examples/js13kpwa/app.js",
   "/pwa-examples/js13kpwa/style.css",
-  "/pwa-examples/js13kpwa/fonts/graduate.eot",
-  "/pwa-examples/js13kpwa/fonts/graduate.ttf",
   "/pwa-examples/js13kpwa/fonts/graduate.woff",
   "/pwa-examples/js13kpwa/favicon.ico",
   "/pwa-examples/js13kpwa/img/js13kgames.png",

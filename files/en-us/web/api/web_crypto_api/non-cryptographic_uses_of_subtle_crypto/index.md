@@ -12,7 +12,7 @@ This article does not discuss the cryptographic uses of the [SubtleCrypto interf
 
 You may not even need to use the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) at all. Many of the things you would want to use cryptography for are already solved and part of the Web platform. For example, if you are worried about [manipulator in the middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM) attacks, such as Wi-Fi hotspots reading the information between the client and the server, this is solved by ensuring correct use of [HTTPS](/en-US/docs/Glossary/HTTPS). Do you want to securely send information between users? Then you can set up a data connection between users using [WebRTC Data Channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels) which is encrypted as part of the standard.
 
-The [SubtleCrypto interface](/en-US/docs/Web/API/SubtleCrypto) provides low level primitives for working with cryptography, but implementing a system using these tools is a complicated task. Mistakes are hard to notice and the results can mean your user's data is not as secure as you think it is. Which could have catastrophic results if your users are sharing sensitive or valuable data.
+The [SubtleCrypto interface](/en-US/docs/Web/API/SubtleCrypto) provides low-level primitives for working with cryptography, but implementing a system using these tools is a complicated task. Mistakes are hard to notice and the results can mean your user's data is not as secure as you think it is. Which could have catastrophic results if your users are sharing sensitive or valuable data.
 
 If in doubt don't try doing it yourself, hire someone with experience and ensure your software is audited by a security expert.
 

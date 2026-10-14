@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`transition-property`** [CSS](/en-US/docs/Web/CSS) property sets the CSS properties to which a [transition effect](/en-US/docs/Web/CSS/Guides/Transitions/Using) should be applied.
 
+If you specify a shorthand property (e.g., {{cssxref("background")}}), all of its longhand sub-properties that can be animated will be.
+
 {{InteractiveExample("CSS Demo: transition-property")}}
 
 ```css interactive-example-choice
@@ -50,8 +52,6 @@ transition-property: none;
   margin-right: 40%;
 }
 ```
-
-If you specify a shorthand property (e.g., {{cssxref("background")}}), all of its longhand sub-properties that can be animated will be.
 
 ## Syntax
 

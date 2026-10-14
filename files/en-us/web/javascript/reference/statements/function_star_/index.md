@@ -266,7 +266,6 @@ for (const power of powers(2)) {
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
 - {{jsxref("Generator")}}
-- [Regenerator](https://github.com/facebook/regenerator) on GitHub
 - [Promises and Generators: control flow utopia](https://youtu.be/qbKWsbJ76-s) presentation by Forbes Lindesay at JSConf (2013)
 - [Task.js](https://github.com/mozilla/task.js) on GitHub
 - [You Don't Know JS: Async & Performance, Ch.4: Generators](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md) by Kyle Simpson

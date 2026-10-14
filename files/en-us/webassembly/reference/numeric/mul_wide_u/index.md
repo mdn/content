@@ -3,9 +3,13 @@ title: "mul_wide_u: Wasm numeric instruction"
 short-title: mul_wide_u
 slug: WebAssembly/Reference/Numeric/mul_wide_u
 page-type: webassembly-instruction
+status:
+  - experimental
 browser-compat: webassembly.instructions.mul_wide_u
 sidebar: webassemblysidebar
 ---
+
+{{SeeCompatTable}}
 
 The **`mul_wide_u`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) multiplies two unsigned 64-bit integers to produce an unsigned 128-bit result represented by two 64-bit integers.
 

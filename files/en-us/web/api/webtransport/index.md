@@ -16,14 +16,21 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
 - {{domxref("WebTransport.WebTransport", "WebTransport()")}}
   - : Creates a new `WebTransport` object instance.
 
+## Static properties
+
+- {{domxref("WebTransport.supportsReliableOnly_static", "supportsReliableOnly")}} {{ReadOnlyInline}}
+  - : Returns a boolean value that indicates whether the browser supports WebTransport sessions over exclusively reliable transports.
+
 ## Instance properties
 
 - {{domxref("WebTransport.closed", "closed")}} {{ReadOnlyInline}}
-  - : Returns a promise that resolves when the transport is closed.
+  - : Returns a {{jsxref("Promise")}} that resolves when the transport is closed.
 - {{domxref("WebTransport.datagrams", "datagrams")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("WebTransportDatagramDuplexStream")}} instance that can be used to send and receive datagrams.
 - {{domxref("WebTransport.congestionControl", "congestionControl")}} {{ReadOnlyInline}}
   - : Returns a string that indicates the application preference for either high throughput or low-latency when sending data.
+- {{domxref("WebTransport.draining", "draining")}} {{ReadOnlyInline}}
+  - : Returns a {{jsxref("Promise")}} that resolves when the transport session starts draining.
 - {{domxref("WebTransport.incomingBidirectionalStreams", "incomingBidirectionalStreams")}} {{ReadOnlyInline}}
   - : Represents one or more bidirectional streams opened by the server. Returns a {{domxref("ReadableStream")}} of {{domxref("WebTransportBidirectionalStream")}} objects. Each one can be used to read data from the server and write data back to it.
 - {{domxref("WebTransport.incomingUnidirectionalStreams", "incomingUnidirectionalStreams")}} {{ReadOnlyInline}}
@@ -32,7 +39,7 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
   - : Returns a string representing the application-specific protocol selected by the server, or `""` if none has been selected.
     Client preferences for the protocol are passed to the constructor in the [`protocols`](/en-US/docs/Web/API/WebTransport/WebTransport#protocols) constructor option.
 - {{domxref("WebTransport.ready", "ready")}} {{ReadOnlyInline}}
-  - : Returns a promise that resolves when the transport is ready to use.
+  - : Returns a {{jsxref("Promise")}} that resolves when the transport is ready to use.
 - {{domxref("WebTransport.reliability", "reliability")}} {{ReadOnlyInline}}
   - : Returns a string that indicates whether the connection supports reliable transports only, or whether it also supports unreliable transports (such as UDP).
 

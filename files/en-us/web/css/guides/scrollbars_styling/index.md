@@ -7,11 +7,11 @@ spec-urls: https://drafts.csswg.org/css-scrollbars/
 sidebar: cssref
 ---
 
-The **CSS scrollbars styling** module defines properties that you can use for visual styling of scrollbars. You can customize the width of the scrollbar as required. You can also customize the color of the scrollbar _track_, which is the background of the scrollbar, and the color of the scrollbar _thumb_, which is the draggable handle of the scrollbar.
+The **CSS scrollbars styling** module defines properties that you can use for visual styling of scrollbars. You can customize the scrollbar width as needed. You can also customize the scrollbar _track_ color (the background) and the scrollbar _thumb_ color (the draggable handle).
 
 ## Scrollbar styling in action
 
-This example defines a thin scrollbar with a red thumb and an orange track. To view the thumb, you will need to scroll the text. After the scrollbar is visible, hover over it to see the track.
+This example defines a thin scrollbar with a teal thumb and lighter teal track. To see the thumb, scroll the text. After the scrollbar is visible, hover over it to see the track.
 
 ```css hidden
 .poem {
@@ -24,7 +24,7 @@ This example defines a thin scrollbar with a red thumb and an orange track. To v
 ```css
 .poem {
   overflow: scroll;
-  scrollbar-color: red orange;
+  scrollbar-color: #0b4f4a #5f9e98;
   scrollbar-width: thin;
 }
 ```

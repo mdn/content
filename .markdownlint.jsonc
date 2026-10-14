@@ -29,7 +29,7 @@
   "ol-prefix": {
     "style": "ordered",
   },
-  // Duplicate with with Prettier
+  // Duplicate with Prettier
   "line-length": false,
   "blanks-around-fences": false,
   "table-column-style": false,

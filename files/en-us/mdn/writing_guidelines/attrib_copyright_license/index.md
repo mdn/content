@@ -79,4 +79,4 @@ If someone wants to donate an article to MDN that they previously published on t
 
 ## Linking to MDN Web Docs articles
 
-We regularly get users asking us questions about how to link to MDN Web Docs and whether or not it is even allowed. The short answer is: **yes, you can link to MDN Web Docs!** Not only is the hypertext link the essence of the web, it is both a way to point your users to valuable resources as well as a show of trust toward the work our community does.
+We regularly get users asking us questions about how to link to MDN Web Docs and whether or not it is even allowed. The short answer is: **yes, you can link to MDN Web Docs!** Not only is the hypertext link the essence of the web, it is both a way to point your users to valuable resources and a show of trust toward the work our community does.
