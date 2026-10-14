@@ -141,6 +141,8 @@ sidebar:
           - type: section
             link: /Web/WebDriver/Reference/BiDi/Modules/script#events
             title: Events
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/message
+            code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/script/realmCreated
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/script/realmDestroyed
