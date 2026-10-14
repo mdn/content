@@ -29,34 +29,34 @@ In this simplified map, each continent is a distinct object containing a shape a
 ```html
 <svg aria-label="World map showing major continents" viewBox="0 0 900 420">
   <title>Simplified world map</title>
-  <g role="graphics-object" aria-label="Asia region">
-    <circle cx="700" cy="130" r="120" fill="green" stroke="black" />
-    <text x="700" y="137" fill="white" text-anchor="middle">Asia</text>
+  <g role="graphics-object">
+    <circle cx="700" cy="130" r="120" fill="#3eca39" stroke="black" />
+    <text x="700" y="137" fill="black" text-anchor="middle">Asia</text>
   </g>
-  <g role="graphics-object" aria-label="Europe region">
-    <circle cx="400" cy="70" r="50" fill="#344E41" stroke="black" />
+  <g role="graphics-object">
+    <circle cx="400" cy="70" r="50" fill="#7d39ca" stroke="black" />
     <text x="400" y="77" fill="white" text-anchor="middle">Europe</text>
   </g>
-  <g role="graphics-object" aria-label="Africa region">
-    <circle cx="400" cy="260" r="100" fill="#C56F3B" stroke="black" />
+  <g role="graphics-object">
+    <circle cx="400" cy="260" r="100" fill="#ca7d39" stroke="black" />
     <text x="400" y="267" fill="black" text-anchor="middle">Africa</text>
   </g>
-  <g role="graphics-object" aria-label="North America region">
-    <circle cx="120" cy="70" r="65" fill="#8A4931" stroke="black" />
+  <g role="graphics-object">
+    <circle cx="120" cy="70" r="65" fill="#ca393e" stroke="black" />
     <text x="120" y="77" fill="white" text-anchor="middle">North America</text>
   </g>
-  <g role="graphics-object" aria-label="South America region">
-    <circle cx="120" cy="260" r="60" fill="#009698" stroke="black" />
+  <g role="graphics-object">
+    <circle cx="120" cy="260" r="60" fill="#39ca7d" stroke="black" />
     <text x="120" y="267" fill="black" text-anchor="middle">South America</text>
   </g>
-  <g role="graphics-object" aria-label="Australia region">
-    <circle cx="760" cy="350" r="50" fill="#e97451" stroke="black" />
+  <g role="graphics-object">
+    <circle cx="760" cy="350" r="50" fill="#cac539" stroke="black" />
     <text x="760" y="357" fill="black" text-anchor="middle">Australia</text>
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample('Examples', 600, 340)}}
+{{EmbedLiveSample('Examples', 600, 360)}}
 
 ## Best practices
 
@@ -73,5 +73,6 @@ Avoid assigning this role to grouping elements used purely for styling or layout
 - The {{SVGElement('svg')}} element
 - [ARIA in HTML](https://w3c.github.io/html-aria/)
 - [ARIA: `graphics-document` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-document_role)
+- [ARIA: `graphics-symbol` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-symbol_role)
 - [ARIA: `group` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)
 - [Notes on Using ARIA in HTML](https://w3c.github.io/using-aria/)

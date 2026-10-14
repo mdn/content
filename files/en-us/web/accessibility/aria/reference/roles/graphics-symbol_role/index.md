@@ -17,6 +17,8 @@ The `graphics-symbol` role identifies a graphical object that conveys a simple m
 
 The `graphics-symbol` role identifies an element as a meaningful, atomic symbol that functions as a single unit. It may be part of a larger graphical structure, such as a map, chart, or diagram.
 
+The `graphics-symbol` role is a subclass of [`img`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/img_role) for symbols with a simple meaning, whereas an `img` may require a detailed description.
+
 ### All descendants are presentational
 
 The children of a `graphics-symbol` are not exposed separately to assistive technologies. Include any meaningful text from its children in the symbol's accessible name.
@@ -41,17 +43,20 @@ Each parking-space symbol combines a rectangle and text into one {{SVGElement("g
       y="50"
       width="100"
       height="150"
-      fill="grey"
-      stroke="blue"
+      fill="#3986ca"
+      stroke="black"
       stroke-width="3" />
     <text
       x="140"
       y="135"
       text-anchor="middle"
-      fill="white"
+      fill="black"
       font-size="35"
       font-weight="bold">
       P
+    </text>
+    <text x="140" y="180" text-anchor="middle" fill="black" font-size="18">
+      Available
     </text>
   </g>
   <g role="graphics-symbol" aria-label="Reserved parking space">
@@ -60,17 +65,20 @@ Each parking-space symbol combines a rectangle and text into one {{SVGElement("g
       y="50"
       width="100"
       height="150"
-      fill="grey"
-      stroke="blue"
+      fill="#cac539"
+      stroke="black"
       stroke-width="3" />
     <text
       x="340"
       y="135"
       text-anchor="middle"
-      fill="white"
+      fill="black"
       font-size="35"
       font-weight="bold">
-      RP
+      P
+    </text>
+    <text x="340" y="180" text-anchor="middle" fill="black" font-size="18">
+      Reserved
     </text>
   </g>
   <g role="graphics-symbol" aria-label="Unavailable parking space">
@@ -79,23 +87,34 @@ Each parking-space symbol combines a rectangle and text into one {{SVGElement("g
       y="50"
       width="100"
       height="150"
-      fill="grey"
-      stroke="blue"
+      fill="#b3b3b3"
+      stroke="black"
       stroke-width="3" />
     <text
       x="540"
       y="135"
       text-anchor="middle"
-      fill="white"
+      fill="black"
       font-size="35"
       font-weight="bold">
-      UP
+      P
+    </text>
+    <circle
+      cx="540"
+      cy="123"
+      r="32"
+      fill="none"
+      stroke="black"
+      stroke-width="4" />
+    <line x1="517" y1="100" x2="563" y2="146" stroke="black" stroke-width="4" />
+    <text x="540" y="180" text-anchor="middle" fill="black" font-size="16">
+      Unavailable
     </text>
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample('Examples', 600, 340)}}
+{{EmbedLiveSample('Examples', 600, 250)}}
 
 ## Best practices
 
@@ -111,5 +130,8 @@ Avoid this role for complex graphics with internal structure. Use [`graphics-obj
 
 - The {{SVGElement('svg')}} element
 - [ARIA in HTML](https://w3c.github.io/html-aria/)
+- [ARIA: `graphics-document` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-document_role)
 - [ARIA: `graphics-object` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-object_role)
 - [ARIA: `figure` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/figure_role)
+- [ARIA: `img` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/img_role)
+- [Notes on Using ARIA in HTML](https://w3c.github.io/using-aria/)

@@ -36,107 +36,162 @@ When dealing with a single large graphic with discrete regions that can be rearr
 
 ## Examples
 
-This flowchart uses the native {{SVGElement("svg")}} element, for which [SVG-AAM defines `graphics-document` as the default role](https://w3c.github.io/svg-aam/). An explicit `role="graphics-document"` is therefore unnecessary here. The labeled nodes and connections convey the steps and branches of the flowchart.
+This flowchart uses HTML elements laid out with CSS. The `graphics-document` role identifies the diagram as a graphical document because the arrangement of its nodes and arrows conveys the authentication flow. The `aria-label` attribute supplies its accessible name. Each arrow has a `graphics-symbol` role and a label describing the connection, so the flow can also be understood without seeing the layout.
+
+If this graphic were implemented using {{SVGElement("svg")}} instead, then no `role` declaration would be necessary because [SVG-AAM defines `graphics-document` as the default role](https://w3c.github.io/svg-aam/).
 
 ```html
-<svg
-  aria-label="User authentication flowchart"
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 500 300">
-  <defs>
-    <marker
-      id="arrowhead"
-      markerWidth="10"
-      markerHeight="6"
-      refX="9"
-      refY="3"
-      orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="black" />
-    </marker>
-  </defs>
-  <title>User authentication flowchart</title>
-  <desc>
-    The user enters credentials, which are checked for validity. Valid
-    credentials lead to granted access; invalid credentials lead to denied
-    access.
-  </desc>
-  <g
-    id="node-start"
+<div
+  class="flowchart"
+  role="graphics-document"
+  aria-label="User authentication flowchart">
+  <div
+    class="node start"
     role="graphics-object"
-    aria-label="Start: User enters credentials">
-    <rect x="200" y="30" width="100" height="60" fill="green" stroke="black" />
-    <text x="250" y="65" fill="white" text-anchor="middle">User login</text>
-  </g>
-  <g
-    id="start-arrow"
+    aria-label="User login: Enter credentials">
+    User login
+  </div>
+  <div
+    class="arrow next"
     role="graphics-symbol"
-    aria-label="After entering credentials, check whether they are valid">
-    <line
-      id="arrow-line"
-      x1="250"
-      y1="90"
-      x2="250"
-      y2="130"
-      stroke="black"
-      stroke-width="1.6"
-      marker-end="url(#arrowhead)" />
-  </g>
-  <g
-    id="decision"
+    aria-label="After entering credentials, check whether they are valid"></div>
+  <div
+    class="node decision"
     role="graphics-object"
-    aria-label="Decision: Are the credentials valid?">
-    <polygon
-      points="250,130 300,160 250,190 200,160"
-      fill="yellow"
-      stroke="black" />
-    <text x="250" y="165" text-anchor="middle">Valid?</text>
-  </g>
-  <g
-    id="grant-arrow"
+    aria-label="Valid?: Are the credentials valid?">
+    <span>Valid?</span>
+  </div>
+  <div
+    class="arrow yes"
     role="graphics-symbol"
     aria-label="Yes: If credentials are valid, grant access">
-    <line
-      x1="280"
-      y1="172"
-      x2="340"
-      y2="220"
-      stroke="black"
-      stroke-width="1.6"
-      marker-end="url(#arrowhead)" />
-    <text x="315" y="195" text-anchor="middle">Yes</text>
-  </g>
-  <g id="node-grant" role="graphics-object" aria-label="Success: Grant access">
-    <rect
-      x="290"
-      y="220"
-      width="100"
-      height="60"
-      fill="lightgreen"
-      stroke="black" />
-    <text x="340" y="255" text-anchor="middle">Grant access</text>
-  </g>
-  <g
-    id="deny-arrow"
+    <span>Yes</span>
+  </div>
+  <div class="node grant" role="graphics-object">Grant access</div>
+  <div
+    class="arrow no"
     role="graphics-symbol"
     aria-label="No: If credentials are invalid, deny access">
-    <line
-      x1="220"
-      y1="172"
-      x2="170"
-      y2="220"
-      stroke="black"
-      stroke-width="1.6"
-      marker-end="url(#arrowhead)" />
-    <text x="185" y="195" text-anchor="middle">No</text>
-  </g>
-  <g id="node-deny" role="graphics-object" aria-label="Error: Deny access">
-    <rect x="120" y="220" width="100" height="60" fill="red" stroke="black" />
-    <text x="170" y="255" text-anchor="middle">Deny access</text>
-  </g>
-</svg>
+    <span>No</span>
+  </div>
+  <div class="node deny" role="graphics-object">Deny access</div>
+</div>
 ```
 
-{{EmbedLiveSample('Examples', 600, 450)}}
+```css
+.flowchart {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  color: black;
+  background: white;
+  font-size: large;
+}
+
+.node {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  width: 100px;
+  height: 60px;
+  border: 1px solid black;
+}
+
+.start {
+  left: 200px;
+  top: 30px;
+  background: #3eca39;
+}
+
+.decision {
+  left: 200px;
+  top: 130px;
+  border: none;
+  background: black;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+.decision::before {
+  content: "";
+  position: absolute;
+  inset: 1px 2px;
+  background: #cac539;
+  clip-path: inherit;
+}
+
+.decision span {
+  position: relative;
+}
+
+.grant {
+  left: 290px;
+  top: 220px;
+  background: #86ca39;
+}
+
+.deny {
+  left: 120px;
+  top: 220px;
+  color: white;
+  background: #ca393e;
+}
+
+.arrow {
+  position: absolute;
+  height: 1.6px;
+  background: black;
+  transform-origin: left center;
+}
+
+.arrow::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -2.2px;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-left: 10px solid black;
+}
+
+.next {
+  left: 250px;
+  top: 90px;
+  width: 40px;
+  transform: rotate(90deg);
+}
+
+.yes {
+  left: 280px;
+  top: 172px;
+  width: 77px;
+  transform: rotate(39deg);
+}
+
+.no {
+  left: 220px;
+  top: 172px;
+  width: 69px;
+  transform: rotate(136deg);
+}
+
+.arrow span {
+  position: absolute;
+  left: 25px;
+}
+
+.yes span {
+  top: -22px;
+  transform: rotate(-39deg);
+}
+
+.no span {
+  top: 8px;
+  transform: rotate(-136deg);
+}
+```
+
+{{EmbedLiveSample('Examples', 600, 350)}}
 
 ## Best practices
 
@@ -152,6 +207,7 @@ For decorative SVG graphics, use `aria-hidden="true"`. For graphics without mean
 
 - The {{SVGElement('svg')}} element
 - [ARIA in HTML](https://w3c.github.io/html-aria/)
+- [ARIA: `graphics-symbol` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-symbol_role)
 - [ARIA: `graphics-object` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-object_role)
 - [ARIA: `figure` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/figure_role)
 - [Notes on Using ARIA in HTML](https://w3c.github.io/using-aria/)
