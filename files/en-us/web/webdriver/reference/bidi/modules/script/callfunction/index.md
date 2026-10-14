@@ -82,8 +82,10 @@ The `params` field contains:
         - For a primitive JavaScript value: One of `"bigint"`, `"boolean"`, `"null"`, `"number"`, `"string"`, or `"undefined"`.
         - For a structured JavaScript value: One of `"array"`, `"date"`, `"map"`, `"object"`, `"regexp"`, or `"set"`.
         - For a browser-created function that sends messages to the client: `"channel"`.
-          The browser passes this messaging function as an argument to the called function.
-          Each call to the messaging function sends a [`script.message`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/message) event to the client if the client has subscribed to it.
+          The browser passes this function as an argument to the called function.
+          Each call to the browser-created function sends a [`script.message`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/message) event to a subscribed client.
+          The browser-created function accepts a single argument.
+          To send several values in one message, pass an object or an array.
     - `value` {{optional_inline}}
       - : An array, boolean, number, object, or string, depending on `type`, that specifies the value to pass.
         This field is not available when `type` is `"null"` or `"undefined"`.
