@@ -26,10 +26,11 @@ This adds a node every time you click the button. Then the observer logs the `te
 
 ```html
 <button id="add-nodes">Add a node</button>
+<button id="remove-nodes">Remove a node</button>
 <button id="reset">Reset</button>
 
 <pre id="log" class="log">Previous sibling of added node:</pre>
-<div id="target"><p>Node #0</p></div>
+<div id="target"><p>Node #0</p><p>Node #1</p><p>Node #2</p><p>Node #3</p></div>
 ```
 
 ```css hidden
@@ -43,25 +44,27 @@ This adds a node every time you click the button. Then the observer logs the `te
 
 ```js
 const addNodes = document.querySelector("#add-nodes");
+const removeNodes = document.querySelector("#remove-nodes");
 const reset = document.querySelector("#reset");
 const target = document.querySelector("#target");
-let nodeNumber = 1;
 
 addNodes.addEventListener("click", () => {
   const newPara = document.createElement("p");
-  newPara.textContent = `Node #${nodeNumber}`;
-  nodeNumber++;
+  newPara.textContent = `Node #${target.childElementCount}`;
   target.appendChild(newPara);
 });
+
+removeNodes.addEventListener("click", () => {
+  const p = Array.from(target.children).at(-1);
+  if (p) p.remove();
+})
 
 reset.addEventListener("click", () => self.location.reload());
 
 function logPreviousSibling(records) {
   for (const record of records) {
     if (record.type === "childList") {
-      for (const newNode of record.addedNodes) {
-        log.textContent = `Previous sibling of added node: ${newNode.previousSibling?.textContent}`;
-      }
+      log.textContent = `Previous sibling of added node: ${record.previousSibling?.textContent ?? "null"}`;
     }
   }
 }
