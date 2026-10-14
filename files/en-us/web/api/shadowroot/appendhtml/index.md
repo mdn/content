@@ -10,12 +10,10 @@ browser-compat: api.ShadowRoot.appendHTML
 
 {{APIRef("DOM")}}
 
-The **`appendHTML()`** method of the {{domxref("ShadowRoot")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and inserts it into the DOM as the last child of the shadow root.
+The **`appendHTML()`** method of the {{domxref("ShadowRoot")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and insert it into the `ShadowRoot` after the last child of the `ShadowRoot`.
 
 The method removes any elements and attributes that are considered XSS-unsafe, even if allowed by a passed sanitizer.
-Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{SVGElement("use")}}, and event handler attributes.
-
-This is similar to {{domxref("ShadowRoot.setHTML")}} but allows addition of new HTML as the last child of the shadow root, rather than setting the whole child HTML only.
+Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{SVGElement("use")}}, {{SVGElement("base")}}, as well event handler content attributes (for example, `onclick`, `onload`, `onerror` and so forth). See [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) for more information.
 
 ## Syntax
 

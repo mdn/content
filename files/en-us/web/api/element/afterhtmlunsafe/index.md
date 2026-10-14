@@ -20,7 +20,7 @@ browser-compat: api.Element.afterHTMLUnsafe
 > [!NOTE]
 > {{domxref("Element.afterHTML()")}} should almost always be used instead of this method — on browsers where it is supported — as it always removes XSS-unsafe HTML entities.
 
-The **`afterHTMLUnsafe()`** method of the {{domxref("Element")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and then using it to replace the element in the DOM.
+The **`afterHTMLUnsafe()`** method of the {{domxref("Element")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and then using it to insert the element in the DOM after the HTML element.
 
 The method does nothing if the node has no parent.
 
