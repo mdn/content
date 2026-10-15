@@ -93,7 +93,7 @@ filter: url("fileName.svg#invert90"); /* external SVG */
 
 ## Examples
 
-This example shows three images for comparison: an image with an `invert()` filter function applied, an image with the equivalent SVG function applied, and the original image:
+This example shows three images for comparison: an image with an `invert()` filter function applied, an image with the equivalent SVG filter applied, and the original image.
 
 ### SVG
 
@@ -101,7 +101,7 @@ We create an SVG filter that inverts the content on which it is applied by 70%:
 
 ```html
 <svg height="0">
-  <filter id="invert">
+  <filter id="svg-invert">
     <feComponentTransfer>
       <feFuncR type="table" tableValues="0.3 0" />
       <feFuncG type="table" tableValues="0.3 0" />
@@ -116,12 +116,12 @@ We create an SVG filter that inverts the content on which it is applied by 70%:
 We include CSS that will invert elements based on their `filter` or `svgFilter` class:
 
 ```css
-.filter {
+.css-filter {
   filter: invert(70%);
 }
 
-.svgFilter {
-  filter: url("#invert");
+.svg-filter {
+  filter: url("#svg-invert");
 }
 ```
 
@@ -145,24 +145,24 @@ td {
     <tr>
       <td>
         <img
-          class="filter"
+          class="css-filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="Pride flag" />
       </td>
       <td>
         <svg id="svg" height="220" width="220" overflow="visible">
-          <filter id="svgInvert">
+          <filter id="svg-invert">
             <feComponentTransfer>
               <feFuncR type="table" tableValues="0.3 0" />
               <feFuncG type="table" tableValues="0.3 0" />
               <feFuncB type="table" tableValues="0.3 0" />
             </feComponentTransfer>
           </filter>
-          <image
-            href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-            xlink:href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-            filter="url('#svgInvert')" />
         </svg>
+        <img
+          class="svg-filter"
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
       </td>
       <td>
         <img
