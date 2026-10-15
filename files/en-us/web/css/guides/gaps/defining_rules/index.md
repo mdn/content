@@ -155,7 +155,7 @@ These properties are all specified as a comma-separated list of values, which ca
 
 As with {{cssxref("border")}}, the default value is `none`, so a rule must have a `<line-style>` declared with a value other than `hidden` or `none` for it to be painted.
 
-In this example, we assign a list with seven values to the `column-rule-style` property, as the eight-column grid has seven column gaps. The `row-rule-style` declaration has only three values for four row rules, so the values cycle.
+In this example, we assign a list with seven values to the `column-rule-style` property, as the eight-column grid has seven column gaps. The `row-rule-style` declaration has three values for three row rules, so each value is used once.
 
 ```css live-sample___style
 div {
@@ -166,13 +166,13 @@ div {
 
 ```css hidden live-sample___style
 div {
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(8, 1fr);
 }
 ```
 
 {{EmbedLiveSample("style", "", "240")}}
 
-Only the `outset` rules are drawn in the row gutters as when the `<line-style>` is set to `none` or `hidden`, no line is painted.
+Only the `outset` rules are drawn in the row gutters, as when the `<line-style>` is set to `none` or `hidden`, no line is painted.
 
 ### Shorthand properties
 
