@@ -82,15 +82,15 @@ The `params` field contains:
 
     Each object contains the following fields:
     - `name`
-      - : A string that contains the header name, such as `"X-Test-Run"`.
+      - : A string that contains the header name, such as `X-Test-Run`.
         It must be a valid [HTTP header](/en-US/docs/Web/HTTP/Reference/Headers) name.
     - `value`
       - : An object that specifies the header value. It contains the following fields:
         - `type`
           - : A string that specifies how the `value` field of this object is encoded.
             It can take one of the following values:
-            - `"base64"`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes.
-            - `"string"`: The value is text, which the browser sends encoded as [UTF-8](/en-US/docs/Glossary/UTF-8).
+            - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes.
+            - `string`: The value is text, which the browser sends encoded as [UTF-8](/en-US/docs/Glossary/UTF-8).
         - `value`
           - : A string that contains the header value, encoded as specified by `type`.
             The decoded header value cannot contain line breaks or null characters, or start or end with a space or tab.
@@ -111,7 +111,7 @@ The `result` field in the response is an empty object (`{}`).
 
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
   - : Thrown in any of the following cases:
-    - A required parameter is missing or has an invalid type, or a header's `value.type` is not `"base64"` or `"string"`.
+    - A required parameter is missing or has an invalid type, or a header's `value.type` is not `base64` or `string`.
     - Both `contexts` and `userContexts` are specified.
     - `contexts` or `userContexts` is specified but empty.
     - A header name is not a valid header name.
@@ -145,6 +145,7 @@ The headers stay in effect until you replace them or the session ends.
 ### Adding a header to every request
 
 Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new).
+Assume also that you have two tabs showing the page you're testing: the first tab, whose context ID `93ee5bd6-d256-4608-a002-9a8995cc0e5f` was returned by [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree), and a second tab, opened with [`browsingContext.create`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/create) in a user context that you created with [`browser.createUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext), which returned the ID `4e4b1f6d-3f1a-4b2e-9f8c-1a2b3c4d5e6f`.
 
 Suppose your test server logs requests, and you want to tell which requests came from which test.
 Send the following message to add an `X-Test-Run` header to requests from all contexts:
@@ -182,10 +183,9 @@ If you're subscribed to `network.beforeRequestSent`, the header also appears in 
 
 ### Setting a different value for a user context
 
-Using the same connection and session, suppose you've set two headers for all contexts: `X-Test-Run: checkout-flow` and `X-Tenant: tenant-b`.
-You've also created a user context with [`browser.createUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext), which returned the ID `"4e4b1f6d-3f1a-4b2e-9f8c-1a2b3c4d5e6f"`, and opened a tab in it with [`browsingContext.create`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/create).
+Using the same connection, session, and tabs, suppose you've replaced the headers for all contexts with two headers, `X-Test-Run: checkout-flow` and `X-Tenant: tenant-b`, in a single `network.setExtraHeaders` command.
 
-Send the following message to send a different `X-Tenant` value from that user context:
+Send the following message to send a different `X-Tenant` value from the user context of the second tab:
 
 ```json
 {
@@ -216,15 +216,14 @@ The browser responds with an empty `result` object:
 }
 ```
 
-Requests from the tab in the new user context now carry `X-Test-Run: checkout-flow` and `X-Tenant: tenant-a`.
-Requests from other tabs still carry `X-Tenant: tenant-b`.
+Requests from the second tab now carry `X-Test-Run: checkout-flow` and `X-Tenant: tenant-a`.
+Requests from the first tab still carry `X-Tenant: tenant-b`.
 
 ### Replacing a browser header in one tab
 
-Using the same connection and session, suppose you want to check how a page responds to a visitor whose preferred language is Canadian French.
-The tab has the context ID `"93ee5bd6-d256-4608-a002-9a8995cc0e5f"`, returned by [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
+Using the same connection, session, and tabs, suppose you want to check how a page responds to a visitor whose preferred language is Canadian French.
 
-Send the following message to replace the `Accept-Language` header for that tab:
+Send the following message to replace the `Accept-Language` header for the first tab:
 
 ```json
 {
@@ -281,6 +280,7 @@ The browser responds with an empty `result` object:
 }
 ```
 
+From then on, requests no longer carry the `X-Test-Run` header.
 Headers set for specific user contexts or contexts are not affected.
 To remove them, send an empty `headers` array with the same `userContexts` or `contexts`.
 
