@@ -3,12 +3,10 @@ title: "NavigationPrecommitController: redirect() method"
 short-title: redirect()
 slug: Web/API/NavigationPrecommitController/redirect
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.NavigationPrecommitController.redirect
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`redirect()`** method of the
 {{domxref("NavigationPrecommitController")}} interface redirects the browser to a specified URL and specifies history behavior and any desired state information.
@@ -34,7 +32,7 @@ redirect(url, options)
             - If the original navigation occurred as a result of a {{domxref("Navigation.navigate()")}} call, the value will be whatever was specified in the `navigate()` call's [`history`](/en-US/docs/Web/API/Navigation/navigate#history) option.
             - Otherwise, the value used is usually `push`, but it will become `replace` if the redirect points to the same URL as the pre-navigation URL.
         - `push`
-          - : Adds a new {{domxref("NavigationHistoryEntry")}} to the navigation history, and clears any available forward navigation (that is, if the user previously navigated to other locations, then used the back button to return back through the history before initiating the navigation that caused the redirect).
+          - : Adds a new {{domxref("NavigationHistoryEntry")}} to the navigation history, and clears any available forward navigation (that is, if the user previously navigated to other locations, then used the back button to return through the history before initiating the navigation that caused the redirect).
         - `replace`
           - : Replaces the {{domxref("Navigation.currentEntry")}} with the resulting new `NavigationHistoryEntry`.
 

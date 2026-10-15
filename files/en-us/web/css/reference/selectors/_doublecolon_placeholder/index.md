@@ -1,5 +1,6 @@
 ---
-title: ::placeholder
+title: "`::placeholder` CSS pseudo-element"
+short-title: ::placeholder
 slug: Web/CSS/Reference/Selectors/::placeholder
 page-type: css-pseudo-element
 browser-compat: css.selectors.placeholder

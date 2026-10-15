@@ -19,16 +19,15 @@ A few notes about macro calls:
 
 - Macro names are case-sensitive, but some attempt is made to correct for common capitalization errors; you may use all lowercase even if the macro name uses caps within it, and you may capitalize a macro whose name normally starts with a lower-case letter.
 - Parameters are separated by commas.
-- If there are no parameters, you may leave out the parentheses entirely; `\{{macroname()}}` and `\{{macroname}}` are identical.
-- Numeric parameters can be in quotes or not. It's up to you (however, if you have a version number with multiple decimals in it, it needs to be in quotes).
+- If there are no parameters, you may leave out the parentheses entirely. For example, the macros `\{{APIRef()}}` and `\{{APIRef}}` are identical.
+- Numeric parameters can be written with or without quotes. However, version numbers with multiple decimals need to be in quotes.
 
 Macros can be as simple as just inserting a larger block of text or swapping in contents from another part of MDN, or as complex as building an entire index of content by searching through parts of the site, styling the output, and adding links.
 
-You can read up on our most commonly used macros on the [Commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros) page.
-Less common macros are described in the [Other macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Other) documentation.
-
 ## See also
 
-- [Sidebar macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
+- [Commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros)
 - [Link macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Links)
+- [Sidebar macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
 - [Feature status macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status)
+- [Other macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Other) (infrequently used or deprecated macros)

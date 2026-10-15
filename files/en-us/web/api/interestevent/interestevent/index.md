@@ -3,10 +3,13 @@ title: "InterestEvent: InterestEvent() constructor"
 short-title: InterestEvent()
 slug: Web/API/InterestEvent/InterestEvent
 page-type: web-api-constructor
+status:
+  - experimental
+  - non-standard
 browser-compat: api.InterestEvent.InterestEvent
 ---
 
-{{APIRef("Popover API")}}
+{{APIRef("Popover API")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`InterestEvent()`** constructor creates a new {{domxref("InterestEvent")}} object.
 

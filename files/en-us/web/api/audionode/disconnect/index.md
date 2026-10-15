@@ -14,6 +14,10 @@ The **`disconnect()`** method of the {{ domxref("AudioNode") }} interface lets y
 
 ```js-nolint
 disconnect()
+disconnect(output)
+disconnect(destination)
+disconnect(destination, output)
+disconnect(destination, output, input)
 ```
 
 ### Parameters
@@ -25,7 +29,7 @@ There are several versions of the `disconnect()` method, which accept different 
 - `output` {{optional_inline}}
   - : An index describing which output from the current `AudioNode` is to be disconnected. The index numbers are defined according to the number of output channels (see [Audio channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_channels)).
 - `input` {{optional_inline}}
-  - : An index describing which input into the specified destination `AudioNode` is to be disconnected. The index numbers are defined according to the number of input channels (see [Audio channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_channels)).
+  - : An index describing which input into the specified destination `AudioNode` is to be disconnected. The index numbers are defined according to the number of input channels (see [Audio channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_channels)). Not applicable if `destination` is an `AudioParam`.
 
 ### Return value
 

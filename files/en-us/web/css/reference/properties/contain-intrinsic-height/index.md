@@ -1,5 +1,6 @@
 ---
-title: contain-intrinsic-height
+title: "`contain-intrinsic-height` CSS property"
+short-title: contain-intrinsic-height
 slug: Web/CSS/Reference/Properties/contain-intrinsic-height
 page-type: css-property
 browser-compat: css.properties.contain-intrinsic-height
@@ -11,7 +12,7 @@ The **`contain-intrinsic-height`** [CSS](/en-US/docs/Web/CSS) property sets the 
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 contain-intrinsic-height: none;
 
 /* <length> values */

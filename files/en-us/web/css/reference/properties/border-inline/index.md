@@ -1,12 +1,13 @@
 ---
-title: border-inline
+title: "`border-inline` CSS property"
+short-title: border-inline
 slug: Web/CSS/Reference/Properties/border-inline
 page-type: css-shorthand-property
 browser-compat: css.properties.border-inline
 sidebar: cssref
 ---
 
-The **`border-inline`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) for setting the individual logical inline border property values in a single place in the style sheet.
+The **`border-inline`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the individual logical inline border property values in a single place in the style sheet.
 
 {{InteractiveExample("CSS Demo: border-inline")}}
 
@@ -72,9 +73,9 @@ border-inline: unset;
 
 The `border-inline` is specified with one or more of the following, in any order:
 
-- `<'border-width'>`
+- {{cssxref("&lt;line-width&gt;")}}
   - : The width of the border. See {{cssxref("border-width")}}.
-- `<'border-style'>`
+- {{cssxref("&lt;line-style&gt;")}}
   - : The line style of the border. See {{cssxref("border-style")}}.
 - {{CSSXref("&lt;color&gt;")}}
   - : The color of the border.

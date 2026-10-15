@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Symbol.hasInstance
 sidebar: jsref
 ---
 
-The **`Symbol.hasInstance`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.hasInstance`. The {{jsxref("Operators/instanceof", "instanceof")}} operator looks up this symbol on its right-hand operand for the method used to determine if the constructor object recognizes an object as its instance.
+The **`Symbol.hasInstance`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.hasInstance`. The {{jsxref("instanceof")}} operator looks up this symbol on its right-hand operand for the method used to determine if the constructor object recognizes an object as its instance.
 
 {{InteractiveExample("JavaScript Demo: Symbol.hasInstance")}}
 
@@ -86,5 +86,5 @@ console.log(Animal[Symbol.hasInstance](cat)); // true
 
 ## See also
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 - [`Function.prototype[Symbol.hasInstance]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance)

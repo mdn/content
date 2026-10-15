@@ -17,7 +17,7 @@ The **`RTCEncodedVideoFrame`** of the [WebRTC API](/en-US/docs/Web/API/WebRTC_AP
 ## Instance properties
 
 - {{domxref("RTCEncodedVideoFrame.type")}} {{ReadOnlyInline}}
-  - : Returns whether the current frame is a key frame, delta frame, or empty frame.
+  - : Returns whether the current frame is a key frame or a delta frame.
 - {{domxref("RTCEncodedVideoFrame.timestamp")}} {{ReadOnlyInline}} {{deprecated_inline}} {{non-standard_inline}}
   - : Returns the timestamp at which sampling of the frame started.
 - {{domxref("RTCEncodedVideoFrame.data")}}

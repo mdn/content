@@ -11,7 +11,7 @@ The **CSS Font Loading API** provides events and interfaces for dynamically load
 
 ## Concepts and usage
 
-CSS stylesheets allow authors to use custom fonts; specifying fonts to download using the [`@font-face`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face) rule, and applying them to elements with the [`font-family`](/en-US/docs/Web/CSS/Reference/Properties/font-family) property.
+CSS stylesheets allow authors to use custom fonts; specifying fonts to download using the {{cssxref("@font-face")}} rule, and applying them to elements with the {{cssxref("font-family")}} property.
 The point at which a font is downloaded is controlled by the user agent.
 Most agents only fetch and load fonts when they are first needed, which can result in a perceptible delay.
 
@@ -19,7 +19,7 @@ The CSS Font Loading API overcomes this problem by letting authors control and t
 Adding a font face to the document or worker font face set allows the user agent to fetch and load the associated font resource automatically if needed.
 A font face can be loaded either before or after it is added to a font face set, but it _must_ be added to the set before it can be used for drawing.
 
-Font faces are defined in {{domxref('FontFace')}} objects, which specify a binary or URL font source and other properties of font in much the same way as the CSS [`@font-face`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face) rule.
+Font faces are defined in {{domxref('FontFace')}} objects, which specify a binary or URL font source and other properties of font in much the same way as the CSS {{cssxref("@font-face")}} rule.
 `FontFace` objects are added to the document or worker {{domxref('FontFaceSet')}} using {{domxref("Document.fonts")}} and {{domxref("WorkerGlobalScope.fonts")}}, respectively.
 Authors can trigger download of fonts using either `FontFace` or `FontFaceSet`, and monitor loading completion.
 `FontFaceSet` can additionally be used to determine when all fonts required by a page have loaded and the document layout is complete.
@@ -32,7 +32,7 @@ The status is set to `loaded` when the font face data has been successfully fetc
 ### Defining a font face
 
 Font faces are created using the [`FontFace` constructor](/en-US/docs/Web/API/FontFace/FontFace), which takes as parameters: the font family, the font source, and optional descriptors.
-The format and grammar of these arguments is the same as the equivalent [`@font-face`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face) definition.
+The format and grammar of these arguments is the same as the equivalent {{cssxref("@font-face")}} definition.
 
 The font source can either be binary data in an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or a font resource at a URL.
 A typical font face definition using a URL source might be as shown below.

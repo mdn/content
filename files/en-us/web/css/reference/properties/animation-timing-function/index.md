@@ -1,5 +1,6 @@
 ---
-title: animation-timing-function
+title: "`animation-timing-function` CSS property"
+short-title: animation-timing-function
 slug: Web/CSS/Reference/Properties/animation-timing-function
 page-type: css-property
 browser-compat: css.properties.animation-timing-function
@@ -132,7 +133,7 @@ animation-timing-function: unset;
 
 ### Values
 
-- {{cssxref("&lt;easing-function&gt;")}}
+- {{cssxref("easing-function")}}
   - : The easing function that corresponds to a given animation, as determined by {{cssxref("animation-name")}}.
 
     The non-step keyword values (`ease`, `linear`, `ease-in-out`, etc.) each represent cubic Bézier curves with fixed four-point values, while the `cubic-bezier()` function value allows non-predefined values to be specified. The `steps()` easing function divides the input time into a specified number of equal-length intervals. Its parameters include a number of steps and a step position.

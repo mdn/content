@@ -2,6 +2,8 @@
 title: Registering attribution sources
 slug: Web/API/Attribution_Reporting_API/Registering_sources
 page-type: guide
+status:
+  - deprecated
 ---
 
 {{DefaultAPISidebar("Attribution Reporting API")}}

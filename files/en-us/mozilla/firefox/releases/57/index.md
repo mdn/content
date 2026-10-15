@@ -17,7 +17,7 @@ Firefox 57 has been given the release name **Quantum**, after the [Firefox Quant
 
 [Firefox's new parallel CSS engine](https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/) — also known as **Quantum CSS** or **Stylo** — is enabled by default in Firefox 57 for desktop, with Mobile versions of Firefox to follow later on. Developers shouldn't notice anything significantly different, aside from a whole host of performance improvements. There are however a number of minor functional differences in Stylo, implemented to fix non-standard Gecko behavior that should be eliminated. We will report on such differences on reference pages and in the release notes as appropriate (see [Quantum CSS notes](#quantum_css_notes)).
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -41,7 +41,7 @@ Following bugs have been fixed in Quantum:
 - When you animate an offscreen element onscreen but specify a delay, Gecko does not repaint on some platforms, e.g., Windows ([Firefox bug 1383239](https://bugzil.la/1383239)).
 - In Gecko, {{htmlelement("details")}} elements can't be made open by default using the `open` attribute if they have an {{CSSxRef("animation")}} active on them ([Firefox bug 1382124](https://bugzil.la/1382124)).
 - In Gecko, {{CSSxRef("transition", "transitions")}} will not work when transitioning from a {{CSSxRef("text-shadow")}} with a color specified to a `text-shadow` without a color specified ([Firefox bug 726550](https://bugzil.la/726550)).
-- In Gecko, cancelling a filling animation (e.g., with `animation-fill-mode: forwards` set) can trigger a transition set on the same element, although only once (see [Firefox bug 1192592](https://bugzil.la/1192592) and [these test cases](https://bug1192592.bmoattachments.org/attachment.cgi?id=8843824) for more information). In general declarative animations should not trigger transitions.
+- In Gecko, canceling a filling animation (e.g., with `animation-fill-mode: forwards` set) can trigger a transition set on the same element, although only once (see [Firefox bug 1192592](https://bugzil.la/1192592) and [these test cases](https://bug1192592.bmoattachments.org/attachment.cgi?id=8843824) for more information). In general declarative animations should not trigger transitions.
 - Animations using em units are not affected by changes to the {{CSSxRef("font-size")}} on the animated element's parent in Gecko, whereas they should be ([Firefox bug 1254424](https://bugzil.la/1254424)).
 - Gecko also deals with `font-size` inheritance differently from Quantum CSS, meaning that for some language settings inherited font sizes end up being smaller than expected (see [Firefox bug 1391341](https://bugzil.la/1391341)).
 - Gecko reuses the same mechanism used when parsing a url-token when parsing the `domain()` or `url-prefix()` URL matching functions for a {{CSSxRef("@document", "@-moz-document")}} rule. Quantum CSS does not use the same mechanism and it does not consider tokens invalid when they contain brackets or quotes ([Firefox bug 1362333](https://bugzil.la/1362333)).

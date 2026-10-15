@@ -43,15 +43,32 @@ It is the third layer of the layer cake of standard web technologies, two of whi
 
 The three layers build on top of one another nicely. Let's take a button as an example. We can mark it up using HTML to give it structure and purpose:
 
-```html live-sample___string-concat-name
-<button type="button">Player 1: Chris</button>
+```css hidden live-sample___string-concat-name-html live-sample___string-concat-name-css live-sample___string-concat-name-js
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  font-size: 1.4em;
+}
 ```
 
-![Button showing Player 1: Chris with no styling](just-html.png)
+```html live-sample___string-concat-name-html live-sample___string-concat-name-css live-sample___string-concat-name-js
+<button>Player 1: Chris</button>
+```
+
+{{EmbedLiveSample('string-concat-name-html', , '80')}}
 
 Then we can add some CSS into the mix to get it looking nice:
 
-```css live-sample___string-concat-name
+```css live-sample___string-concat-name-css live-sample___string-concat-name-js
 button {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
   letter-spacing: 1px;
@@ -66,11 +83,11 @@ button {
 }
 ```
 
-![Button showing Player 1: Chris with styling](html-and-css.png)
+{{EmbedLiveSample('string-concat-name-css', , '80')}}
 
 And finally, we can add some JavaScript to implement dynamic behavior:
 
-```js live-sample___string-concat-name
+```js live-sample___string-concat-name-js
 function updateName() {
   const name = prompt("Enter a new name");
   button.textContent = `Player 1: ${name}`;
@@ -81,10 +98,9 @@ const button = document.querySelector("button");
 button.addEventListener("click", updateName);
 ```
 
-You can click "Play" to see and edit the example in the MDN Playground.
-Try clicking on the text label to see what happens.
+Try clicking on the text label, entering a name into the dialog box that opens, and pressing the OK button.
 
-{{EmbedLiveSample('string-concat-name', , '80', , , , , 'allow-modals')}}
+{{EmbedLiveSample('string-concat-name-js', , '80', , , , , 'allow-modals')}}
 
 JavaScript can do a lot more than that — let's explore what in more detail.
 
@@ -97,7 +113,7 @@ The core client-side JavaScript language consists of some common programming fea
 
 - Store useful values inside variables. In the above example for instance, we ask for a new name to be entered then store that name in a variable called `name`.
 - Operations on pieces of text (known as "strings" in programming). In the above example we take the string "Player 1: " and join it to the `name` variable to create the complete text label, e.g., "Player 1: Chris".
-- Running code in response to certain events occurring on a web page. We used a {{domxref("Element/click_event", "click")}} event in our example above to detect when the label is clicked and then run the code that updates the text label.
+- Running code in response to certain events occurring on a web page. We used a {{domxref("Element/click_event", "click")}} event in our example above to detect when the button is clicked and then run the code that updates the text label.
 - And much more!
 
 What is even more exciting however is the functionality built on top of the client-side JavaScript language. So-called **Application Programming Interfaces** (**APIs**) provide you with extra superpowers to use in your JavaScript code.
@@ -119,9 +135,9 @@ They generally fall into two categories.
   People are doing some amazing things using these web technologies — see [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) and [webglsamples](https://webglsamples.org/).
 - [Audio and Video APIs](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery) like {{domxref("HTMLMediaElement")}} and [WebRTC](/en-US/docs/Web/API/WebRTC_API) allow you to do really interesting things with multimedia, such as play audio and video right in a web page, or grab video from your web camera and display it on someone else's computer (try our simple [Snapshot demo](https://chrisdavidmills.github.io/snapshot/) to get the idea).
 
-**Third party APIs** are not built into the browser by default, and you generally have to grab their code and information from somewhere on the Web. For example:
+**Third-party APIs** are not built into the browser by default, and you generally have to grab their code and information from somewhere on the Web. For example:
 
-- The [Bluesky API](https://docs.bsky.app/) allows you to do things like displaying your latest posts on your website.
+- The [Bluesky API](https://bsky.network/) allows you to do things like displaying your latest posts on your website.
 - The [Google Maps API](https://developers.google.com/maps/) and [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API) allows you to embed custom maps into your website, and other such functionality.
 
 > [!NOTE]
@@ -218,7 +234,20 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
 
 ### Internal JavaScript
 
-1. First of all, make a local copy of our example file [apply-javascript.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript.html). Save it in a directory somewhere sensible.
+1. First of all, create a new HTML file on your local file system and add the following content to it:
+   ```html
+   <!doctype html>
+   <html lang="en-US">
+     <head>
+       <meta charset="utf-8" />
+       <meta name="viewport" content="width=device-width" />
+       <title>Apply JavaScript example</title>
+     </head>
+     <body>
+       <button>Click me</button>
+     </body>
+   </html>
+   ```
 2. Open the file in your web browser and in your text editor. You'll see that the HTML creates a simple web page containing a clickable button.
 3. Next, go to your text editor and add the following at the bottom of your body — just before your closing `</body>` tag:
 
@@ -248,29 +277,48 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
 
 5. Save your file and refresh the browser — now you should see that when you click the button, a new paragraph is generated and placed below.
 
-> [!NOTE]
-> If your example doesn't seem to work, go through the steps again and check that you did everything right.
-> Did you save your local copy of the starting code as a `.html` file?
-> Did you add your {{htmlelement("script")}} element just before the `</body>` tag?
-> Did you enter the JavaScript exactly as shown? **JavaScript is case sensitive, and very fussy, so you need to enter the syntax exactly as shown, otherwise it may not work.**
+The example should render like so:
 
-> [!NOTE]
-> You can see this version on GitHub as [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html) ([see it live too](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)).
+```html hidden live-sample___apply-javascript-internal
+<button>Click me</button>
+
+<script>
+  function createParagraph() {
+    const para = document.createElement("p");
+    para.textContent = "You clicked the button!";
+    document.body.appendChild(para);
+  }
+
+  const buttons = document.querySelectorAll("button");
+
+  for (const button of buttons) {
+    button.addEventListener("click", createParagraph);
+  }
+</script>
+```
+
+{{embedlivesample("apply-javascript-internal", "100%", "200")}}
+
+If your example doesn't seem to work, go through the steps again and check that you did everything right.
+
+- Did you save your local file as a `.html` file?
+- Did you add your {{htmlelement("script")}} element just before the `</body>` tag?
+- Did you enter the JavaScript exactly as shown? **JavaScript is case sensitive, and very fussy, so you need to enter the syntax exactly as shown, otherwise it may not work.**
 
 ### External JavaScript
 
 This works great, but what if we wanted to put our JavaScript in an external file? Let's explore this now.
 
-1. First, create a new file in the same directory as your sample HTML file. Call it `script.js` — make sure it has that .js filename extension, as that's how it is recognized as JavaScript.
-2. Remove your current {{htmlelement("script")}} element at the bottom of the `</body>` and add the following just before the closing `</head>` tag (that way the browser can start loading the file sooner than when it's at the bottom):
+1. First, create a new file in the same directory as your HTML file. Call it `script.js` — make sure it has that `.js` filename extension, as that's how it is recognized as JavaScript.
+2. Remove your {{htmlelement("script")}} element from the HTML file, then add the following just before the closing `</head>` tag (that way the browser can start loading the file sooner than when it's at the bottom):
 
    ```html
    <script type="module" src="script.js"></script>
    ```
 
-3. Inside `script.js`, add the following script:
+3. Inside `script.js`, add the following JavaScript:
 
-   ```js
+   ```js live-sample___apply-javascript-external
    function createParagraph() {
      const para = document.createElement("p");
      para.textContent = "You clicked the button!";
@@ -287,12 +335,17 @@ This works great, but what if we wanted to put our JavaScript in an external fil
 4. Save and refresh your browser. You'll discover that clicking the button has no effect, and if you check your browser's console, you'll see an error along the lines of `Cross-origin request blocked`. That's because like many external resources, JavaScript modules need to be loaded from the [same origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy) as the HTML, and `file://` URLs don't qualify. There are two solutions to fix this problem:
    - Our recommended solution is to [set up a local testing server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server). With the server program running and serving the `apply-javascript-external.html` and `script.js` files on port `8000`, open your browser and go to `http://localhost:8000`.
    - If you cannot run a local server, you can also use `<script defer src="script.js"></script>` instead of `<script type="module" src="script.js"></script>`. See [Script loading strategies](#script_loading_strategies) below for more information. But note that features we use in other parts of the tutorial may require a local HTTP server anyway.
-5. Now the website works just the same as before, but now we've got our JavaScript in an external file.
-   This is generally a good thing in terms of organizing your code and making it reusable across multiple HTML files.
-   Plus, the HTML is easier to read without huge chunks of script dumped in it.
 
-> [!NOTE]
-> You can see this version on GitHub as [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) and [script.js](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/script.js) ([see it live too](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)).
+The webpage works just the same as before, but now we've got our JavaScript in an external file:
+
+```html hidden live-sample___apply-javascript-external
+<button>Click me</button>
+```
+
+{{embedlivesample("apply-javascript-external", "100%", "200")}}
+
+External JavaScript is generally a good thing in terms of organizing your code and making it reusable across multiple HTML files.
+Plus, the HTML is easier to read without huge chunks of script dumped in it.
 
 ### Inline JavaScript handlers
 
@@ -311,11 +364,7 @@ function createParagraph() {
 <button onclick="createParagraph()">Click me!</button>
 ```
 
-You can try this version of our demo below.
-
-{{ EmbedLiveSample('Inline_JavaScript_handlers', '100%', 150) }}
-
-This demo has exactly the same functionality as in the previous two sections, except that the {{htmlelement("button")}} element includes an inline `onclick` handler to make the function run when the button is pressed.
+This code has exactly the same functionality as the versions shown in the previous two sections, except that the {{htmlelement("button")}} element includes an inline `onclick` handler to make the function run when the button is pressed.
 
 **Please don't do this, however.** It is bad practice to pollute your HTML with JavaScript, and it is inefficient — you'd have to include the `onclick="createParagraph()"` attribute on every button you want the JavaScript to apply to.
 
@@ -410,7 +459,7 @@ for (const button of buttons) {
 
 So there you go, your first step into the world of JavaScript.
 We've begun with just theory, to start getting you used to why you'd use JavaScript and what kind of things you can do with it.
-Along the way, you saw a few code examples and learned how JavaScript fits in with the rest of the code on your website, amongst other things.
+Along the way, you saw a few code examples and learned how JavaScript fits in with the rest of the code on your website, among other things.
 
 JavaScript may seem a bit daunting right now, but don't worry — in this course, we will take you through it in simple steps that will make sense going forward.
 In the next article, we will plunge straight into the practical, getting you to jump straight in and build your own JavaScript examples.

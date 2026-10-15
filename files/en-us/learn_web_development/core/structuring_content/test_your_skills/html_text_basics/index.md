@@ -13,9 +13,15 @@ The aim of this skill test is to help you assess whether you understand how to m
 > [!NOTE]
 > To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## Text basics 1
 
 In this task, we want you to mark up the provided HTML using semantic heading and paragraph elements.
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample('text-basics-1', "100%", 130) }}
+
+Here's the underlying code for this starting point:
 
 ```html-nolint live-sample___text-basics-1
 Basic HTML Animals
@@ -75,9 +81,7 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('text-basics-1', "100%", 130) }}
-
-The finished example should look like this:
+The updated content should look like this:
 
 {{ EmbedLiveSample('text-basics-1-finished', "100%", 320) }}
 
@@ -108,9 +112,15 @@ Your finished HTML should look like this:
 
 </details>
 
-## Task 2
+## Text basics 2
 
 In this task, we want you to turn the first un-marked up list into an unordered list, and the second one into an ordered list.
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample('text-basics-2', "100%", 220) }}
+
+Here's the underlying code for this starting point:
 
 ```html-nolint live-sample___text-basics-2
 <h1>Looking at lists</h1>
@@ -150,9 +160,7 @@ ul {
 }
 ```
 
-{{ EmbedLiveSample('text-basics-2', "100%", 220) }}
-
-The finished example should look like this:
+The updated content should look like this:
 
 {{ EmbedLiveSample('text-basics-2-finished', "100%", 400) }}
 
@@ -185,9 +193,15 @@ Your finished HTML should look like this:
 
 </details>
 
-## Task 3
+## Text basics 3
 
 In this task, we want you to turn the provided animals and their definitions into a description list.
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample('text-basics-3', "100%", 160) }}
+
+Here's the underlying code for this starting point:
 
 ```html-nolint live-sample___text-basics-3
 <h1>Advanced HTML Animals</h1>
@@ -216,11 +230,9 @@ dt {
 }
 ```
 
-{{ EmbedLiveSample('text-basics-3', "100%", 160) }}
+The updated content should look like this:
 
-The finished example should look like this:
-
-{{ EmbedLiveSample('text-basics-3-finished', "100%", 250) }}
+{{ EmbedLiveSample('text-basics-3-finished', "100%", 260) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -248,9 +260,15 @@ Your finished HTML should look like this:
 
 </details>
 
-## Task 4
+## Text basics 4
 
 In this task, you are provided with a paragraph, and your aim is to use some inline elements to mark up a couple of appropriate words with strong importance, and a couple with emphasis.
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample('text-basics-4', "100%", 160) }}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___text-basics-4
 <h1>Emphasis and importance</h1>
@@ -277,9 +295,7 @@ em {
 }
 ```
 
-{{ EmbedLiveSample('text-basics-4', "100%", 160) }}
-
-The finished example should look something like this:
+The updated content should look something like this:
 
 {{ EmbedLiveSample('text-basics-4-finished', "100%", 140) }}
 

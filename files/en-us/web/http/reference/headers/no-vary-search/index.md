@@ -3,13 +3,9 @@ title: No-Vary-Search header
 short-title: No-Vary-Search
 slug: Web/HTTP/Reference/Headers/No-Vary-Search
 page-type: http-header
-status:
-  - experimental
 browser-compat: http.headers.No-Vary-Search
 sidebar: http
 ---
-
-{{SeeCompatTable}}
 
 The HTTP **`No-Vary-Search`** {{Glossary("response header")}} specifies a set of rules that define how a URL's query parameters will affect cache matching.
 These rules dictate whether the same URL with different URL parameters should be saved as separate browser cache entries.
@@ -32,27 +28,35 @@ No-Vary-Search: key-order
 No-Vary-Search: params
 No-Vary-Search: params=("param1" "param2")
 No-Vary-Search: params, except=("param1" "param2")
-No-Vary-Search: key-order, params, except=("param1")
+No-Vary-Search: key-order, params, except=("param1" "param2")
 ```
 
 ## Directives
 
 - `key-order` {{optional_inline}}
-  - : Indicates that URLs will not be cached as separate entries if _the order_ in which parameters appear in the URL is the only difference.
-    The presence of other parameters _will_ cause URLs to be cached separately.
+  - : Indicates that the browser should not create a separate cache entry for a response if the order in which parameters appear in the URL is the only difference.
 - `params` {{optional_inline}}
   - : Either a boolean or a list of strings:
-    - As a boolean (`params`), it indicates that URLs that differ only by their parameters will not be cached as separate entries.
-    - An inner list of space-separated strings (`params=("param1" "param2")`).
-      Indicates that URLs that differ only by the listed parameters will not be cached as separate entries.
-      The presence of other parameters _will_ cause them to be cached separately.
+    - As a boolean (`params`), it indicates that the browser should not create separate cache entries for responses that differ only by the presence, order, or value of any parameter.
+    - As an inner list of space-separated strings (`params=("param1" "param2")`), it indicates that the browser should not create separate cache entries for responses that differ only by the presence, order, or value of the listed parameters.
+      Other parameters may still cause the response to be cached separately.
 - `except` {{optional_inline}}
-  - : An inner list of space-separated strings (`except=("param1" "param2")`).
-    Indicates that URLs that differ only by the listed parameters _will_ be cached as separate entries.
+  - : An inner list of space-separated strings (`except=("param1" "param2")`) that indicates the parameters for which a different value should cause the browser to create a separate cache entry.
     A boolean `params` directive has to be included for it to take effect (`params, except=("param1" "param2")`).
-    The presence of other parameters that are not in the `except=` list _won't_ cause URLs to be cached as separate entries.
+    The presence of other parameters that are not in the `except=` list should not cause the browser to create a separate cache entry.
 
 ## Description
+
+By default, a response stored for one URL is only ever reused for a request to that exact same URL.
+Any difference in the query string makes it a different URL: a different parameter value, an extra parameter, or even the same parameters written in a different order.
+
+This is often stricter than necessary.
+Query parameters are frequently used for things that don't change the response the server sends, such as analytics tags and values that only client-side JavaScript acts on.
+A page may also build its query string in an inconsistent parameter order.
+The browser has no way to know what is relevant, so it fetches from the network and caches the result whenever it sees a query string it hasn't requested before.
+
+`No-Vary-Search` gives the server a way to tell the browser whether parameter order matters, and which parameters (if any) affect the returned response.
+Where the rules allow it, the browser can then serve a stored response for a URL it has not fetched before.
 
 ### Relationship with the Speculation Rules API
 
@@ -116,7 +120,7 @@ No-Vary-Search: params=("id" "order" "lang")
 ```
 
 > [!NOTE]
-> As a [structured field](https://www.rfc-editor.org/rfc/rfc8941), the parameters should be space-separated, quoted strings — as shown above — and not comma-separated, which developers may be more used to.
+> As a [structured field](https://www.rfc-editor.org/info/rfc8941/), the parameters should be space-separated, quoted strings — as shown above — and not comma-separated, which developers may be more used to.
 
 If you wanted the browser to ignore all of them _and_ any others that might be present when cache matching, you could use the boolean form of `params`:
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.navigator
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`Window.navigator`** read-only property returns a
 reference to the {{domxref("Navigator")}} object, which has methods and properties about

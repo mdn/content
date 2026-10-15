@@ -11,6 +11,11 @@ The **`IntersectionObserverEntry`** interface of the [Intersection Observer API]
 
 Instances of `IntersectionObserverEntry` are delivered to an {{domxref("IntersectionObserver")}} callback in its `entries` parameter; otherwise, these objects can only be obtained by calling {{domxref("IntersectionObserver.takeRecords()")}}.
 
+## Constructor
+
+- {{domxref("IntersectionObserverEntry.IntersectionObserverEntry", "IntersectionObserverEntry()")}} {{experimental_inline}}
+  - : Creates a new `IntersectionObserverEntry` object.
+
 ## Instance properties
 
 - {{domxref("IntersectionObserverEntry.boundingClientRect")}} {{ReadOnlyInline}}

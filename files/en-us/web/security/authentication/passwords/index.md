@@ -200,7 +200,7 @@ Websites should use standard algorithms to hash passwords. These algorithms supp
 
 #### Using web frameworks
 
-Password storage and verification functions are difficult to implement securely, so you should use functions provided by a reputable framework, rather than trying to implement your own. For example, [Django](https://docs.djangoproject.com/en/5.0/topics/auth/passwords/) uses PBKDF2 by default but enables you to use a different algorithm if you choose.
+Password storage and verification functions are difficult to implement securely, so you should use functions provided by a reputable framework, rather than trying to implement your own. For example, [Django](https://docs.djangoproject.com/en/stable/topics/auth/passwords/) uses PBKDF2 by default but enables you to use a different algorithm if you choose.
 
 ### Email verification
 
@@ -257,8 +257,8 @@ For more information, see:
 
 The practices described above help reduce the risks of a password-based authentication system, but passwords remain an inherently vulnerable authentication method:
 
-- Although password managers and good password policies can help users choose strong passwords and not reuse passwords, they can't guarantee either outcome, leaving users vulnerable to credential stuffing and guessing attacks.
+- Although password managers and good password policies can help users choose strong passwords and not reuse passwords, they can't guarantee either outcome, leaving users vulnerable to [credential stuffing](#credential_stuffing) and [guessing](#guessing) attacks.
 
-- Even if users have strong passwords and do not reuse them, users remain vulnerable to phishing attacks.
+- Even if users have strong passwords and do not reuse them, users remain vulnerable to [phishing](#phishing) attacks.
 
 To address these weaknesses, consider using alternative methods, either instead of passwords or as {{glossary("multi-factor authentication", "additional authentication factors")}}. For example, websites sometimes use passwords with a [one-time password](/en-US/docs/Web/Security/Authentication/OTP) as a second factor, and some websites support [passkeys](/en-US/docs/Web/Security/Authentication/Passkeys), which are resistant to phishing attacks.

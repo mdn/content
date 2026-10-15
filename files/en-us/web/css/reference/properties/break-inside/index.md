@@ -1,5 +1,6 @@
 ---
-title: break-inside
+title: "`break-inside` CSS property"
+short-title: break-inside
 slug: Web/CSS/Reference/Properties/break-inside
 page-type: css-property
 browser-compat: css.properties.break-inside

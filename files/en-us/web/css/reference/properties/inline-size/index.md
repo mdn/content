@@ -1,5 +1,6 @@
 ---
-title: inline-size
+title: "`inline-size` CSS property"
+short-title: inline-size
 slug: Web/CSS/Reference/Properties/inline-size
 page-type: css-property
 browser-compat: css.properties.inline-size

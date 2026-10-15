@@ -4,6 +4,9 @@ short-title: getParameters()
 slug: Web/API/RTCRtpSender/getParameters
 page-type: web-api-instance-method
 browser-compat: api.RTCRtpSender.getParameters
+spec-urls:
+  - https://w3c.github.io/webrtc-pc/#dom-rtcrtpsender-getparameters
+  - https://w3c.github.io/mst-content-hint/#dom-rtcdegradationpreference
 ---
 
 {{APIRef("WebRTC")}}
@@ -44,12 +47,12 @@ An object indicating the current configuration of the sender. <!-- RTCRtpSendPar
           - : A positive integer specifying the codec's clock rate in Hertz (Hz).
             The clock rate is the rate at which the codec's RTP timestamp advances.
             Most codecs have specific values or ranges of values they permit.
-            The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1), including their clock rates.
+            The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters#rtp-parameters-1), including their clock rates.
 
         - `mimeType`
           - : A string indicating the codec's MIME media type and subtype, specified as a string of the form `"type/subtype"`.
             The MIME type strings used by RTP differ from those used elsewhere.
-            IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
+            IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters#rtp-parameters-2).
             Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
 
         - `sdpFmtpLine` {{optional_inline}}
@@ -101,16 +104,16 @@ An object indicating the current configuration of the sender. <!-- RTCRtpSendPar
       - : A positive integer specifying the codec's clock rate in Hertz (Hz).
         The clock rate is the rate at which the codec's RTP timestamp advances.
         Most codecs have specific values or ranges of values they permit.
-        The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1), including their clock rates.
+        The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters#rtp-parameters-1), including their clock rates.
 
     - `mimeType`
       - : A string indicating the codec's MIME media type and subtype, specified as a string of the form `"type/subtype"`.
         The MIME type strings used by RTP differ from those used elsewhere.
-        IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
+        IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters#rtp-parameters-2).
         Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
 
     - `payloadType`
-      - : The [RTP payload type](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1) used to identify this codec.
+      - : The [RTP payload type](https://www.iana.org/assignments/rtp-parameters#rtp-parameters-1) used to identify this codec.
 
     - `sdpFmtpLine` {{optional_inline}}
       - : A string giving the format specific parameters provided by the local description.
@@ -128,10 +131,16 @@ An object indicating the current configuration of the sender. <!-- RTCRtpSendPar
     - `reducedSize`
       - : A read-only boolean that is `True` if reduced size RTCP is configured ({{rfc("5506")}}), and `False` if compound RTCP is specified ({{rfc("3550")}}).
 
-- `degradationPreference` {{deprecated_inline}} {{optional_inline}} <!-- removed from spec. May have been or be in chrome -->
-  - : Specifies the preferred way the WebRTC layer should handle optimizing bandwidth against quality in constrained-bandwidth situations.
-    The possible values are `maintain-framerate`, `maintain-resolution`, or `balanced`.
-    The default value is `balanced`.
+- `degradationPreference`
+  - : Specifies the preferred way in which the WebRTC layer should handle optimizing performance in constrained-bandwidth situations. The possible values are:
+    - `balanced`
+      - : The default value. The browser will balance degradation of framerate and resolution.
+    - `maintain-framerate`
+      - : The browser will degrade resolution to maintain framerate.
+    - `maintain-resolution`
+      - : The browser will degrade framerate to maintain resolution.
+    - `maintain-framerate-and-resolution`
+      - : The browser will maintain framerate and resolution regardless of video quality, which may cause frames to be dropped before encoding if necessary so as not to overuse network and encoder resources. This setting is useful for applications that implement their own video encoding quality and performance optimization mechanism, and don't want the browser's own internal mechanism to interfere with it.
 
 ## Examples
 

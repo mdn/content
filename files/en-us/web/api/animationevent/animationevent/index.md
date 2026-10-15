@@ -24,6 +24,9 @@ new AnimationEvent(type, options)
     It is case-sensitive and browsers set it to `animationstart`, `animationend`, or `animationiteration`.
 - `options` {{optional_inline}}
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
+    - `animation` {{optional_inline}}
+      - : A {{domxref("CSSAnimation")}} containing the animation associated with the event.
+        It defaults to `null`.
     - `animationName` {{optional_inline}}
       - : A string containing the value of the {{cssxref("animation-name")}} CSS property associated with the transition. It defaults to `""`.
     - `elapsedTime` {{optional_inline}}

@@ -1,5 +1,6 @@
 ---
-title: "@media"
+title: "`@media` CSS at-rule"
+short-title: "@media"
 slug: Web/CSS/Reference/At-rules/@media
 page-type: css-at-rule
 browser-compat: css.at-rules.media
@@ -204,7 +205,7 @@ You can also combine multiple media queries into a single rule by separating the
     If you use the `only` operator, you _must also_ specify a media type.
 - `,` (comma)
   - : Commas are used to combine multiple media queries into a single rule.
-    Each query in a comma-separated list is treated separately from the others
+    Each query in a comma-separated list is treated separately from the others.
     Thus, if any of the queries in a list is `true`, the entire media statement returns `true`.
     In other words, lists behave like a logical `or` operator.
 - `or`
@@ -227,7 +228,7 @@ To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs
 Both [`em`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types) and [`px`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types) are valid units, but [`em`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types) works better if the user changes the browser text size.
 
 Also consider media queries or [HTTP user agent client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) to improve the user's experience.
-For example, the media query [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) or the equivalent HTTP header {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}) can be used to minimize the amount of animation or motion used based on user preferences.
+For example, the media query [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) or the equivalent HTTP header {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} can be used to minimize the amount of animation or motion used based on user preferences.
 
 ## Security
 
@@ -290,6 +291,6 @@ For more examples, please see [Using media queries](/en-US/docs/Web/CSS/Guides/M
 - [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries) module
 - [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 - {{domxref("CSSMediaRule")}} interface
-- CSS [`@custom-media`](/en-US/docs/Web/CSS/Reference/At-rules/@custom-media) at-rule
+- CSS {{cssxref("@custom-media")}} at-rule
 - [Extended Mozilla media features](/en-US/docs/Web/CSS/Reference/Mozilla_extensions#media_features)
 - [Extended WebKit media features](/en-US/docs/Web/CSS/Reference/Webkit_extensions#media_features)

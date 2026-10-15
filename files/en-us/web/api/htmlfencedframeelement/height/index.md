@@ -4,11 +4,11 @@ short-title: height
 slug: Web/API/HTMLFencedFrameElement/height
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
 browser-compat: api.HTMLFencedFrameElement.height
 ---
 
-{{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
+{{APIRef("Fenced Frame API")}}
 
 The **`height`** property of the {{domxref("HTMLFencedFrameElement")}} gets and sets the value of the corresponding {{htmlelement("fencedframe")}} `height` attribute, which specifies the height of the element.
 

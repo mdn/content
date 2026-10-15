@@ -66,7 +66,22 @@ Before shadow DOM was made available to web developers, browsers were already us
 
 ### Attribute inheritance
 
-The shadow tree and {{ HTMLElement("slot") }} elements inherit the [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) and [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attributes from their shadow host.
+Language and text directionality, set using [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) and [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir), are generally inherited from an element's parent node. When that parent is a shadow root, they are inherited from the shadow host instead.
+
+Assigning an element to a {{HTMLElement("slot")}} does not change its parent node, so an assigned element inherits from its parent outside the shadow tree, not from the slot. The slot and its fallback content inherit within the shadow tree, like any other element there:
+
+```html
+<div dir="rtl" lang="ar">
+  <!-- my-element's shadow tree:
+    <div dir="ltr" lang="en"><slot></slot></div> -->
+  <my-element><span>Assigned content</span></my-element>
+</div>
+```
+
+The `<span>` matches `:dir(rtl)` and `:lang(ar)`, inherited from the `<div>` containing `<my-element>`. The `<slot>` matches `:dir(ltr)` and `:lang(en)`, inherited from its parent in the shadow tree.
+
+> [!NOTE]
+> CSS inherits the {{cssxref("direction")}} property through the flattened tree, so an assigned element with no `dir` attribute of its own is _rendered_ using the direction in effect at the slot, even though {{cssxref(":dir")}} reports the direction inherited from its parent node.
 
 ## Creating a shadow DOM
 
@@ -383,7 +398,7 @@ For more examples, illustrating different aspects of custom element implementati
 - {{HTMLelement("template")}}
 - [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module
 - {{CSSXref(":host")}}
-- {{CSSXref(":host_function", ":host()")}}
+- {{cssxref(":host()")}}
 - {{CSSXref(":host-context", ":host-context()")}}
 - {{CSSXref("::slotted", "::slotted()")}}
 - [CSS shadow parts](/en-US/docs/Web/CSS/Guides/Shadow_parts) module

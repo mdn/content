@@ -7,10 +7,10 @@ sidebar: games
 
 {{NextMenu("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms")}}
 
-The future of mobile gaming is definitely web, and many developers choose the [mobile first](/en-US/docs/Glossary/Mobile_First) approach in their game development process — in the modern world, this generally also involves implementing touch controls. In this tutorial, we will see how easy it is to implement mobile controls in an HTML game, and enjoy playing on a mobile touch-enabled device.
+The future of mobile gaming is definitely web, and many developers choose the [mobile first](/en-US/docs/Glossary/Mobile_First) approach in their game development process — in the modern world, this generally also involves implementing touch controls. In this tutorial, we will implement mobile controls in an HTML game, and enjoy playing on a mobile touch-enabled device.
 
 > [!NOTE]
-> The game [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for easier and faster development, but it's entirely up to you which approach you to choose.
+> The game [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for faster development, but it's entirely up to you which approach you to choose.
 
 ## Pure JavaScript approach
 
@@ -29,7 +29,7 @@ This way, touching the game's {{htmlelement("canvas")}} on the mobile screen wou
 - [touchstart](/en-US/docs/Web/API/Element/touchstart_event) is fired when the user puts a finger on the screen.
 - [touchmove](/en-US/docs/Web/API/Element/touchmove_event) is fired when they move the finger on the screen while touching it
 - [touchend](/en-US/docs/Web/API/Element/touchend_event) is fired when the user stops touching the screen
-- [touchcancel](/en-US/docs/Web/API/Element/touchcancel_event) is fired when a touch is cancelled, for example when the user moves their finger out of the screen.
+- [touchcancel](/en-US/docs/Web/API/Element/touchcancel_event) is fired when a touch is canceled, for example when the user moves their finger out of the screen.
 
 > [!NOTE]
 > The [touch events](/en-US/docs/Web/API/Touch_events) reference article provides more examples and information.

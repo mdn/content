@@ -8,11 +8,11 @@ browser-compat: api.CloseEvent.code
 
 {{APIRef("Websockets API")}}{{AvailableInWorkers}}
 
-The **`code`** read-only property of the {{domxref("CloseEvent")}} interface returns a [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5) indicating the reason the connection was closed.
+The **`code`** read-only property of the {{domxref("CloseEvent")}} interface returns a [WebSocket connection close code](https://www.rfc-editor.org/info/rfc6455/#section-7.1.5) indicating the reason the connection was closed.
 
 ## Value
 
-An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5) in the range `1000` - `4999`, indicating the reason the connection was closed.
+An integer [WebSocket connection close code](https://www.rfc-editor.org/info/rfc6455/#section-7.1.5) in the range `1000` - `4999`, indicating the reason the connection was closed.
 
 <table class="no-markdown">
   <thead>
@@ -202,5 +202,5 @@ WebSocket.onclose = (event) => {
 
 ## See also
 
-- [RFC 6455](https://www.rfc-editor.org/rfc/rfc6455.html) (the WebSocket Protocol specification)
+- [RFC 6455](https://www.rfc-editor.org/info/rfc6455/) (the WebSocket Protocol specification)
 - [WebSocket Close Code Number Registry](https://www.iana.org/assignments/websocket/websocket.xml#close-code-number) (IANA)

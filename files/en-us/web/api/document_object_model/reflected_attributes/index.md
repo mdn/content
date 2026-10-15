@@ -61,7 +61,7 @@ input.placeholder = "Modified placeholder";
 
 Note that the name of the reflected attribute and the property are the same: `placeholder`.
 This is not always the case: properties are usually named following the {{glossary("Camel case","camelCase")}} convention.
-This is particularly true for multi-word attribute names that contain a characters that are not allowed in a property name, such as the hyphen.
+This is particularly true for multi-word attribute names that contain characters that are not allowed in a property name, such as the hyphen.
 For example the [aria-checked](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) attribute is reflected by the [`ariaChecked`](/en-US/docs/Web/API/Element/ariaChecked) property.
 
 ### Boolean reflected attributes

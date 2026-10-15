@@ -65,9 +65,9 @@ Have you ever thought about controlling a game only with your hands? It's possib
 
 Leap Motion is becoming more and more popular due to very good integration with VR headsets — demoing [Rainbow Membrane](https://mozilla.github.io/rainbow/) on an Oculus Rift with Leap Motion attached to it was voted one of the best WebVR experiences by JavaScript developers visiting demo booths at conferences around the world.
 
-As well as being great for virtual interfaces, it can also be used for a casual 2D gaming experiences. It would be very difficult to do everything with only your hands, but it's totally doable for the simple Captain Roger's gameplay — steering the ship and shooting the bullets.
+As well as being great for virtual interfaces, it can also be used for casual 2D gaming experiences. It would be very difficult to do everything with only your hands, but it's totally doable for the simple Captain Roger's gameplay — steering the ship and shooting the bullets.
 
-To get the Leap Motion working on your computer you have to first install it by following the steps at [docs.ultraleap.com](https://docs.ultraleap.com/hand-tracking/getting-started.html#installation-guides). When everything is installed and the controller is connected to your computer we can proceed with implementing support in our [little demo](https://github.com/end3r/JavaScript-Game-Controls/). First, we add a `<script>` tag with the `url` pointing at `https://js.leapmotion.com/leap-0.6.4.min.js`, and add `<div id="output"></div>` just before the closing `</body>` tag for outputting diagnostic information.
+To get the Leap Motion working on your computer you have to first install it by following the steps at [docs.ultraleap.com](https://docs.ultraleap.com/hand-tracking/getting-started.html#installation-guides). When everything is installed and the controller is connected to your computer we can proceed with implementing support in our [little demo](https://github.com/end3r/JavaScript-Game-Controls/). First, we add a `<script>` tag with the `src` pointing at `https://js.leapmotion.com/leap-0.6.4.min.js`, and add `<div id="output"></div>` just before the closing `</body>` tag for outputting diagnostic information.
 
 We will need a few helper variables for our code to work — one for the purpose of calculating the degrees from radians, two for holding the horizontal and vertical amount of degrees our hand is leaning above the controller, one for the threshold of that lean, and one for the state of our hand's grab status. We next add these lines after all the event listeners for keyboard and mouse, but before the `draw` method:
 
@@ -157,7 +157,7 @@ If you want to go completely bananas you can use [Makey Makey](https://makeymake
 
 Check out the [banana piano video](https://www.youtube.com/watch?v=_DWQ6ce2Ags), and be sure to visit the [quick start guide](https://learn.sparkfun.com/tutorials/makey-makey-quickstart-guide) for all the needed info.
 
-There's even a [Cylon.js-supported Makey Button functionality](https://cylonjs.com/documentation/drivers/makey-button/) inspired by the Makey Makey board, so you can use the popular Cylon robotics framework for your experiments with Arduino or Raspberry Pi. Connecting the boards and using them may look like this:
+There's even a Cylon.js-supported Makey Button functionality inspired by the Makey Makey board, so you can use the popular Cylon robotics framework for your experiments with Arduino or Raspberry Pi. Connecting the boards and using them may look like this:
 
 ```js
 const Cylon = require("cylon");

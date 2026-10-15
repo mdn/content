@@ -1,5 +1,6 @@
 ---
-title: inset-inline-end
+title: "`inset-inline-end` CSS property"
+short-title: inset-inline-end
 slug: Web/CSS/Reference/Properties/inset-inline-end
 page-type: css-property
 browser-compat: css.properties.inset-inline-end
@@ -93,7 +94,7 @@ The shorthand for {{cssxref("inset-inline-start")}} and `inset-inline-end` is {{
 
 ### Values
 
-The `inset-inline-end` property takes the same values as the {{cssxref("left")}} property.
+The `inset-inline-end` property takes the same values as the {{cssxref("top")}} property.
 
 ## Formal definition
 

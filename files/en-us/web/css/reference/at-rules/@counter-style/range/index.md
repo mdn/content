@@ -1,5 +1,6 @@
 ---
-title: range
+title: "`range` CSS at-rule descriptor"
+short-title: range
 slug: Web/CSS/Reference/At-rules/@counter-style/range
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.range
@@ -126,6 +127,6 @@ The first range is the list of ranges includes 2, 3, and 4. The second includes 
 
 - Other {{cssxref("@counter-style")}} descriptors: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, and {{cssxref("@counter-style/fallback", "fallback")}}
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}: the functional notation for creating anonymous counter styles.
+- {{cssxref("symbols()")}}: the functional notation for creating anonymous counter styles.
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module
 - [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module

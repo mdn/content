@@ -32,7 +32,7 @@ If you need help or have any questions, feel free to get in touch with one of th
 ### French (`fr`)
 
 - Discussions: [Matrix (`#l10n-fr`)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
-- Current maintainers: [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
+- Current maintainers: [cw118](https://github.com/cw118), [tristantheb](https://github.com/tristantheb)
 
 ### Japanese (`ja`)
 

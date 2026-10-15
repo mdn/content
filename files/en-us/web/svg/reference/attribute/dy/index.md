@@ -3,9 +3,9 @@ title: dy
 slug: Web/SVG/Reference/Attribute/dy
 page-type: svg-attribute
 spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fedropshadow-dy
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-feoffset-dy
-  - https://svgwg.org/svg2-draft/text.html#TextElementDYAttribute
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fedropshadow-dy
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-feoffset-dy
+  - https://w3c.github.io/svgwg/svg2-draft/text.html#TextElementDYAttribute
 sidebar: svgref
 ---
 
@@ -107,7 +107,7 @@ For {{SVGElement('feOffset')}}, `dy` defines the y offset of the filter input gr
 
 For {{SVGElement('text')}}, if it contains a single value, `dy` defines a shift along the y-axis for all glyphs.
 
-If there are multiple values, `dy` defines a shift along the y-axis for each individual glyph relative to the preceding glyph. If there are less values than glyphs, the remaining glyphs use a value of `0`. If there are more values than glyphs, extra values are ignored.
+If there are multiple values, `dy` defines a shift along the y-axis for each individual glyph relative to the preceding glyph. If there are fewer values than glyphs, the remaining glyphs use a value of `0`. If there are more values than glyphs, extra values are ignored.
 
 <table class="properties">
   <tbody>
@@ -182,7 +182,7 @@ line {
 
 For {{SVGElement('tspan')}}, if it contains a single value, `dy` defines a shift along the y-axis for all alternate glyph.
 
-If there are multiple values, `dy` defines a shift along the y-axis for each individual glyph relative to the preceding glyph. If there are less values than glyphs, the remaining glyphs use a value of `0`. If there are more values than glyphs, extra values are ignored.
+If there are multiple values, `dy` defines a shift along the y-axis for each individual glyph relative to the preceding glyph. If there are fewer values than glyphs, the remaining glyphs use a value of `0`. If there are more values than glyphs, extra values are ignored.
 
 <table class="properties">
   <tbody>

@@ -1,5 +1,6 @@
 ---
-title: "@page"
+title: "`@page` CSS at-rule"
+short-title: "@page"
 slug: Web/CSS/Reference/At-rules/@page
 page-type: css-at-rule
 browser-compat: css.at-rules.page
@@ -140,7 +141,7 @@ The @page rule defines properties of the page box. The `@page` at-rule can be ac
 The `@page` at-rule, allows the user to assign a name to the rule, which is then called in a declaration using the `page` property.
 
 - {{Cssxref("page")}}
-  - : Allows a selector to use a user defined **named page**
+  - : Allows a selector to use a user-defined **named page**
 
 ## Formal syntax
 

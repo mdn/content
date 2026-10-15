@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.MouseEvent
 ---
 
-{{APIRef("UI Events")}}
+{{APIRef("Pointer Events")}}
 
 The **`MouseEvent`** interface represents events that occur due to the user interacting with a pointing device (such as a mouse).
 Common events using this interface include {{domxref("Element/click_event", "click")}}, {{domxref("Element/dblclick_event", "dblclick")}}, {{domxref("Element/mouseup_event", "mouseup")}}, {{domxref("Element/mousedown_event", "mousedown")}}.
@@ -45,16 +45,16 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
   - : The Y coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#viewport).
 - {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>control</kbd> key was down when the mouse event was fired.
-- {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+- {{domxref("MouseEvent.layerX")}} {{ReadOnlyInline}}
   - : Returns the horizontal coordinate of the event relative to the current layer.
-- {{domxref("MouseEvent.layerY")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+- {{domxref("MouseEvent.layerY")}} {{ReadOnlyInline}}
   - : Returns the vertical coordinate of the event relative to the current layer.
 - {{domxref("MouseEvent.metaKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>meta</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.movementX")}} {{ReadOnlyInline}}
-  - : The X coordinate of the mouse pointer relative to the position of the last {{domxref("Element/mousemove_event", "mousemove")}} event.
+  - : The X coordinate of the mouse pointer relative to the position of the last move event of the same type (a {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/pointermove_event", "pointermove")}}, or {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}}).
 - {{domxref("MouseEvent.movementY")}} {{ReadOnlyInline}}
-  - : The Y coordinate of the mouse pointer relative to the position of the last {{domxref("Element/mousemove_event", "mousemove")}} event.
+  - : The Y coordinate of the mouse pointer relative to the position of the last move event of the same type (a {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/pointermove_event", "pointermove")}}, or {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}}).
 - {{domxref("MouseEvent.offsetX")}} {{ReadOnlyInline}}
   - : The X coordinate of the mouse pointer relative to the position of the padding edge of the target node.
 - {{domxref("MouseEvent.offsetY")}} {{ReadOnlyInline}}

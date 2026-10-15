@@ -1,5 +1,6 @@
 ---
-title: alignment-baseline
+title: "`alignment-baseline` CSS property"
+short-title: alignment-baseline
 slug: Web/CSS/Reference/Properties/alignment-baseline
 page-type: css-property
 browser-compat: css.properties.alignment-baseline
@@ -47,6 +48,8 @@ alignment-baseline: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `baseline`
   - : Use the {{cssxref("dominant-baseline")}} value of the parent.

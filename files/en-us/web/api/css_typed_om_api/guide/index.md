@@ -33,7 +33,7 @@ We start with some HTML: a paragraph with a link, as well as a definition list t
 
 #### JavaScript
 
-We add JavaScript to grab our unstyled link and return back a definition list of all the default CSS property values impacting the link using `computedStyleMap()`.
+We add JavaScript to grab our unstyled link and return a definition list of all the default CSS property values impacting the link using `computedStyleMap()`.
 
 ```js
 // Get the element
@@ -67,7 +67,7 @@ In [browsers that support `computedStyleMap()`](/en-US/docs/Web/API/Element/comp
 
 {{EmbedLiveSample("Getting_all_the_properties_and_values", 120, 300)}}
 
-Did you realize how many default CSS properties a link had? Update the first `document.querySelector` call to select the {{htmlelement("p")}} rather than the {{htmlelement("a")}}. You'll notice a difference in the [`margin-top`](/en-US/docs/Web/CSS/Reference/Properties/margin-top) and [`margin-bottom`](/en-US/docs/Web/CSS/Reference/Properties/margin-bottom) default computed values.
+Did you realize how many default CSS properties a link had? Update the first `document.querySelector` call to select the {{htmlelement("p")}} rather than the {{htmlelement("a")}}. You'll notice a difference in the {{cssxref("margin-top")}} and {{cssxref("margin-bottom")}} default computed values.
 
 ### .get() method / custom properties
 
@@ -128,7 +128,7 @@ You'll note that custom properties retain the value as written in the stylesheet
 
 ### CSSUnitValue and CSSKeywordValue
 
-The power of the CSS Typed OM is that values are separate from units; parsing and concatenating string values may become be a thing of the past. Every CSS property in a style map has a value. If the value is a keyword, the object returned is a [`CSSKeywordValue`](/en-US/docs/Web/API/CSSKeywordValue). If the value is numeric, a [`CSSUnitValue`](/en-US/docs/Web/API/CSSUnitValue) is returned.
+The power of the CSS Typed OM is that values are separate from units; parsing and concatenating string values may become a thing of the past. Every CSS property in a style map has a value. If the value is a keyword, the object returned is a [`CSSKeywordValue`](/en-US/docs/Web/API/CSSKeywordValue). If the value is numeric, a [`CSSUnitValue`](/en-US/docs/Web/API/CSSUnitValue) is returned.
 
 `CSSKeywordValue` is a class that defines keywords like `inherit`, `initial`, `unset`, and other strings you don't quote, such as `auto` and `grid`. This subclass gives you a `value` property via {{domxref("cssKeywordValue.value")}}.
 
@@ -138,9 +138,9 @@ Let's write a plain paragraph, apply no styles, and inspect a few of its CSS pro
 
 ```html
 <p>
-  This is a paragraph with some content. Open up this example in CodePen or
-  JSFiddle, and change some features. Try adding some CSS, such as a width for
-  this paragraph, or adding a CSS property to the ofInterest array.
+  This is a paragraph with some content. Open up this example in the playground,
+  and change some features. Try adding some CSS, such as a width for this
+  paragraph, or adding a CSS property to the ofInterest array.
 </p>
 <table id="regurgitation">
   <thead>
@@ -171,7 +171,7 @@ const ofInterest = [
   "margin-bottom",
   "font-size",
   "font-stretch",
-  "animation-duration",
+  "transition-duration",
   "animation-iteration-count",
   "width",
   "height",
@@ -217,8 +217,8 @@ For those of you using a non-supporting browser, the above output should look so
 | {{cssxref("padding-top")}}               | 0     | `px`        |
 | {{cssxref("margin-bottom")}}             | 16    | `px`        |
 | {{cssxref("font-size")}}                 | 16    | `px`        |
-| {{cssxref("font-stretch")}}              | 100   | `%`         |
-| {{cssxref("animation-duration")}}        | 0     | `px`        |
+| {{cssxref("font-stretch")}}              | 100   | `percent`   |
+| {{cssxref("transition-duration")}}       | 0     | `s`         |
 | {{cssxref("animation-iteration-count")}} | 1     | _number_    |
 | {{cssxref("width")}}                     | auto  | _undefined_ |
 | {{cssxref("height")}}                    | auto  | _undefined_ |
@@ -231,8 +231,8 @@ Had the `width` or `height` been defined in a `<length>` or `<percent>`, the [`C
 
 There are other types available:
 
-- An [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image) will return a {{domxref('CSSImageValue')}}.
-- A [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) would return a {{domxref('CSSStyleValue')}}.
+- An {{cssxref("image")}} will return a {{domxref('CSSImageValue')}}.
+- A {{cssxref("&lt;color&gt;")}} would return a {{domxref('CSSStyleValue')}}.
 - A {{cssxref('transform')}} returns a `CSSTransformValue`.
 - A [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) returns a {{domxref('CSSUnparsedValue')}}.
 
@@ -318,7 +318,7 @@ console.log(parsedUnit.value); // 1.2
 
 ### CSSMathSum
 
-Although the [`<button>`](/en-US/docs/Web/HTML/Reference/Elements/button) element is an inline element by default, we've added [`display: inline-block;`](/en-US/docs/Web/CSS/Guides/Display) to enable sizing. In our CSS we have `width: calc(30% + 20px);`, which is a [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc) function to define the width.
+Although the [`<button>`](/en-US/docs/Web/HTML/Reference/Elements/button) element is an inline element by default, we've added [`display: inline-block;`](/en-US/docs/Web/CSS/Guides/Display) to enable sizing. In our CSS we have `width: calc(30% + 20px);`, which is a {{cssxref("calc()")}} function to define the width.
 
 When we `get()` the `width`, we get a [`CSSMathSum`](/en-US/docs/Web/API/CSSMathSum) returned. {{domxref('CSSMathSum.values')}} is a {{domxref('CSSNumericArray')}} with 2 `CSSUnitValues`.
 

@@ -7,9 +7,9 @@ status:
 browser-compat: api.PaymentRequestEvent
 ---
 
-{{SeeCompatTable}}{{APIRef("Payment Handler API")}}{{AvailableInWorkers("service")}}
+{{SeeCompatTable}}{{APIRef("Web-Based Payment Handler API")}}{{AvailableInWorkers("service")}}
 
-The **`PaymentRequestEvent`** interface of the {{domxref("Payment Handler API", "", "", "nocode")}} is the object passed to a payment handler when a {{domxref("PaymentRequest")}} is made.
+The **`PaymentRequestEvent`** interface of the {{domxref("Web-based Payment Handler API", "", "", "nocode")}} is the object passed to a payment handler when a {{domxref("PaymentRequest")}} is made.
 
 {{InheritanceDiagram}}
 
@@ -48,7 +48,7 @@ When the {{domxref("PaymentRequest.show()")}} method is invoked, a {{domxref("Se
 
 ```js
 let paymentRequestEvent;
-let resolver;
+const resolver = Promise.withResolvers();
 let client;
 
 // `self` is the global object in service worker

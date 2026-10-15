@@ -1,5 +1,6 @@
 ---
-title: max-height
+title: "`max-height` CSS property"
+short-title: max-height
 slug: Web/CSS/Reference/Properties/max-height
 page-type: css-property
 browser-compat: css.properties.max-height
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`max-height`** [CSS](/en-US/docs/Web/CSS) property sets the maximum height of an element. It prevents the [used value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value) of the {{cssxref("height")}} property from becoming larger than the value specified for `max-height`.
+
+`max-height` overrides {{cssxref("height")}}, but {{cssxref("min-height")}} overrides `max-height`.
 
 {{InteractiveExample("CSS Demo: max-height")}}
 
@@ -44,8 +47,6 @@ max-height: 10px;
   color: white;
 }
 ```
-
-`max-height` overrides {{cssxref("height")}}, but {{cssxref("min-height")}} overrides `max-height`.
 
 ## Syntax
 

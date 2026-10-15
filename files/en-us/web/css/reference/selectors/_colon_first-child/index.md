@@ -1,5 +1,6 @@
 ---
-title: :first-child
+title: "`:first-child` CSS pseudo-class"
+short-title: :first-child
 slug: Web/CSS/Reference/Selectors/:first-child
 page-type: css-pseudo-class
 browser-compat: css.selectors.first-child
@@ -133,4 +134,4 @@ ul li:first-child {
 - {{CSSxRef(":-moz-first-node")}}
 - {{CSSxRef(":first-of-type")}}
 - {{CSSxRef(":last-child")}}
-- {{CSSxRef(":nth-child", ":nth-child()")}}
+- {{cssxref(":nth-child()")}}

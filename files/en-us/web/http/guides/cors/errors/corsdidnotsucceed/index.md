@@ -17,6 +17,17 @@ The {{Glossary("HTTP")}} request which makes use of CORS failed because the HTTP
 
 In many cases, it is caused by a browser plugin (e.g., an ad blocker or privacy protector) blocking the request.
 
+## How to fix
+
+- Check DevTools > Network to see whether the request failed due to DNS resolution, a timeout, a connection being refused, or a TLS handshake error.
+- Disable browser extensions or try a private browsing window, as ad blockers, firewalls, and privacy tools can block network requests.
+- Fix certificate or {{Glossary("TLS")}} issues, such as expired or invalid certificates.
+- Avoid mixed content: if the page is loaded over HTTPS, requests to HTTP resources can fail.
+  Serve the API over HTTPS instead.
+- Confirm that the server is responding correctly and that the endpoint returns a response.
+
+If you are using a local dev server, ensure that the correct scheme and port are used and that the service is running.
+
 Other possible causes include:
 
 - Trying to access an `https` resource that has an invalid certificate will cause this error.

@@ -6,7 +6,7 @@ browser-compat: svg.global_attributes.overflow
 sidebar: svgref
 ---
 
-The **`overflow`** attribute sets what to do when an element's content is too big to fit in its block formatting context. **This feature is not widely implemented yet**.
+The **`overflow`** attribute sets what to do when an element's content is too big to fit in its block formatting context.
 
 This attribute has the same parameter values and meaning as the CSS {{cssxref("overflow")}} property, however, the following additional points apply:
 

@@ -3,10 +3,13 @@ title: "HTMLAreaElement: interestForElement property"
 short-title: interestForElement
 slug: Web/API/HTMLAreaElement/interestForElement
 page-type: web-api-instance-property
+status:
+  - experimental
+  - non-standard
 browser-compat: api.HTMLAreaElement.interestForElement
 ---
 
-{{ApiRef("HTML DOM")}}
+{{ApiRef("HTML DOM")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`interestForElement`** property of the {{domxref("HTMLAreaElement")}} interface gets or sets the target element of an interest invoker, in cases where the associated {{htmlelement("area")}} element is specified as an interest invoker.
 
@@ -27,8 +30,8 @@ In this example, we use an `<area>` element's `interestForElement` property to s
 We include an `<area>` element and a `<div>` element. We turn the `<div>` element into a popover by setting a `popover` attribute on it.
 
 ```html live-sample___basic-interest-invoker
-<map>
-  <area href="#" shape="default" />
+<map name="example-map" id="example-map">
+  <area href="#" shape="default" alt="Example area" />
 </map>
 <div id="mypopover" popover>I am a <code>&lt;div&gt;</code> element.</div>
 ```

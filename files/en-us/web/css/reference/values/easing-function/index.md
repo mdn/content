@@ -1,5 +1,6 @@
 ---
-title: <easing-function>
+title: "`<easing-function>` CSS type"
+short-title: <easing-function>
 slug: Web/CSS/Reference/Values/easing-function
 page-type: css-type
 browser-compat: css.types.easing-function
@@ -107,7 +108,7 @@ An `<easing-function>` can be one of the following types:
 
 ### Comparing the easing functions
 
-This example provides an easy comparison between the different easing functions using an animation. From the drop-down menu, you can select an easing function – there are a couple of keywords and some `cubic-bezier()` and `steps()` options. After selecting an option, you can start and stop the animation using the provided button.
+This example provides a comparison between the different easing functions using an animation. From the drop-down menu, you can select an easing function – there are a couple of keywords and some `cubic-bezier()` and `steps()` options. After selecting an option, you can start and stop the animation using the provided button.
 
 #### HTML
 

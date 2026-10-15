@@ -61,4 +61,4 @@ console.log(extent); // Output: 90
 
 ## See also
 
-- [`writing-mode`](/en-US/docs/Web/CSS/Reference/Properties/writing-mode)
+- {{cssxref("writing-mode")}}

@@ -25,6 +25,35 @@
     "zh-TW": "實驗性質"
   },
 
+  "baseline_discouraged_title": {
+    "de": "Veraltet. Nicht empfohlen für neue Webseiten.",
+    "en-US": "Deprecated. Not for use in new websites.",
+    "fr": "Obsolète. Ne pas utiliser sur de nouveaux sites web.",
+    "ko": "지원이 중단되었습니다. 새로운 웹사이트에서 사용하지 마세요.",
+    "zh-CN": "已弃用。请不要在新的网站中使用。",
+    "zh-TW": "已棄用。請不要在新的網站中使用。"
+  },
+
+  "baseline_discouraged_abbreviation": {
+    "de": "Veraltet",
+    "en-US": "Deprecated",
+    "es": "Obsoleto",
+    "fr": "Obsolète",
+    "ja": "非推奨",
+    "ko": "지원이 중단되었습니다",
+    "ru": "Устарело",
+    "zh-CN": "已弃用",
+    "zh-TW": "已棄用"
+  },
+
+  "baseline_removing_title": {
+    "en-US": "Deprecated. Pending removal from browsers."
+  },
+
+  "baseline_removing_abbreviation": {
+    "en-US": "Deprecated, pending removal"
+  },
+
   "deprecated_badge_title": {
     "de": "Veraltet. Nicht empfohlen für neue Webseiten.",
     "en-US": "Deprecated. Not for use in new websites.",
@@ -113,13 +142,13 @@
   },
 
   "secure_context_header_copy": {
-    "de": "Diese Funktion ist nur in <a href='/de/docs/Web/Security/Secure_Contexts'>sicheren Kontexten</a> (HTTPS) in einigen oder allen <a href='#browser-kompatibilität'>unterstützenden Browsern</a> verfügbar.",
-    "en-US": "This feature is available only in <a href='/en-US/docs/Web/Security/Secure_Contexts'>secure contexts</a> (HTTPS), in some or all <a href='#browser_compatibility'>supporting browsers</a>.",
-    "es": "Esta función está disponible solo en <a href='/es/docs/Web/Security/Secure_Contexts'>contextos seguros</a> (HTTPS), en algunos o todos los <a href='#browser_compatibility'>navegadores que lo soportan</a>.",
-    "fr": "Cette fonctionnalité est uniquement disponible dans des <a href='/fr/docs/Web/Security/Secure_Contexts'>contextes sécurisés</a> (HTTPS), pour certains <a href='#compatibilité_des_navigateurs'>navigateurs qui la prennent en charge</a>.",
-    "ja": "この機能は一部またはすべての<a href='#browser_compatibility'>対応しているブラウザー</a>において、<a href='/ja/docs/Web/Security/Secure_Contexts'>安全なコンテキスト</a> (HTTPS) でのみ利用できます。",
-    "ko": "이 기능은 일부 또는 모든 <a href='#브라우저_호환성'>지원 브라우저</a>의 <a href='/ko/docs/Web/Security/Secure_Contexts'>보안 컨텍스트</a> (HTTPS)에서만 사용할 수 있습니다.",
-    "zh-CN": "此特性仅在一些<a href='#浏览器兼容性'>支持的浏览器</a>的<a href='/zh-CN/docs/Web/Security/Secure_Contexts'>安全上下文</a>（HTTPS）中可用。"
+    "de": "Diese Funktion ist nur in <a href='/de/docs/Web/Security/Defenses/Secure_Contexts'>sicheren Kontexten</a> (HTTPS) in einigen oder allen <a href='#browser-kompatibilität'>unterstützenden Browsern</a> verfügbar.",
+    "en-US": "This feature is available only in <a href='/en-US/docs/Web/Security/Defenses/Secure_Contexts'>secure contexts</a> (HTTPS), in some or all <a href='#browser_compatibility'>supporting browsers</a>.",
+    "es": "Esta función está disponible solo en <a href='/es/docs/Web/Security/Defenses/Secure_Contexts'>contextos seguros</a> (HTTPS), en algunos o todos los <a href='#browser_compatibility'>navegadores que lo soportan</a>.",
+    "fr": "Cette fonctionnalité est uniquement disponible dans des <a href='/fr/docs/Web/Security/Defenses/Secure_Contexts'>contextes sécurisés</a> (HTTPS), pour certains <a href='#compatibilité_des_navigateurs'>navigateurs qui la prennent en charge</a>.",
+    "ja": "この機能は一部またはすべての<a href='#browser_compatibility'>対応しているブラウザー</a>において、<a href='/ja/docs/Web/Security/Defenses/Secure_Contexts'>安全なコンテキスト</a> (HTTPS) でのみ利用できます。",
+    "ko": "이 기능은 일부 또는 모든 <a href='#브라우저_호환성'>지원 브라우저</a>의 <a href='/ko/docs/Web/Security/Defenses/Secure_Contexts'>보안 컨텍스트</a> (HTTPS)에서만 사용할 수 있습니다.",
+    "zh-CN": "此特性仅在一些<a href='#浏览器兼容性'>支持的浏览器</a>的<a href='/zh-CN/docs/Web/Security/Defenses/Secure_Contexts'>安全上下文</a>（HTTPS）中可用。"
   },
 
   "interactive_example_cta": {
@@ -179,6 +208,42 @@
     "ru": "Начальное значение",
     "zh-CN": "初始值",
     "zh-TW": "預設值"
+  },
+
+  "xref_cssappliesto": {
+    "de": "Anwendbar auf",
+    "en-US": "Applies to",
+    "fr": "Applicabilité",
+    "ja": "適用対象",
+    "ko": "적용대상",
+    "pl": "Stosowana do",
+    "pt-BR": "Aplica-se a",
+    "ru": "Применяется к",
+    "zh-CN": "适用元素"
+  },
+
+  "xref_cssanimationtype": {
+    "de": "Animationstyp",
+    "en-US": "Animation type",
+    "fr": "Type d'animation",
+    "ja": "アニメーションの種類",
+    "zh-CN": "动画类型"
+  },
+
+  "xref_csspercentages": {
+    "de": "Prozentwerte",
+    "en-US": "Percentages",
+    "fr": "Pourcentages",
+    "ja": "パーセント値",
+    "ru": "Проценты"
+  },
+
+  "xref_cssrelated_at_rule": {
+    "de": "Zugehörige @-Regel",
+    "en-US": "Related at-rule",
+    "fr": "En lien avec les règles @",
+    "ja": "関連するアット規則",
+    "ru": "Связано с @-правила"
   },
 
   "readonly_badge_abbreviation": {
@@ -444,6 +509,18 @@
     "fr": "Sources : ",
     "zh-CN": "来源：",
     "zh-TW": "來源："
+  },
+  "external_link": {
+    "de": "Externer Link (öffnet in neuem Tab)",
+    "en-US": "External link (opens in new tab)",
+    "es": "Enlace externo (se abre en una nueva pestaña)",
+    "fr": "Lien externe (ouvre un nouvel onglet)",
+    "ja": "外部リンク（新しいタブで開きます）",
+    "ko": "외부 링크 (새 탭에서 열림)",
+    "pt-BR": "Link externo (abre em uma nova aba)",
+    "ru": "Внешняя ссылка (открывается в новой вкладке)",
+    "zh-CN": "外部链接（在新标签页中打开）",
+    "zh-TW": "外部連結（在新分頁開啟）"
   },
   "formal_syntax_footer": {
     "de": "Diese Syntax spiegelt den neuesten Standard gemäß { $specs } wider. Möglicherweise haben nicht alle Browser jeden Teil implementiert. Siehe <a href=\"#browser-kompatibilität\">Browserkompatibilität</a> für Informationen zur Unterstützung.",

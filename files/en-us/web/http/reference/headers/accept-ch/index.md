@@ -40,12 +40,12 @@ Accept-CH: <ch-header-one>, <ch-header-two>
 
 ### Client hint response headers
 
-The following response headers indicate that the server accepts `Viewport-Width` and `Width` [device client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#device_client_hints) in subsequent requests.
+The following response headers indicate that the server accepts `Sec-CH-Viewport-Width` and `Sec-CH-Width` [device client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#device_client_hints) in subsequent requests.
 The {{HTTPHeader("Vary")}} header indicates which values were used to [vary the response](/en-US/docs/Web/HTTP/Guides/Client_hints#caching_and_client_hints) based on the accepted client hints.
 
 ```http
-Accept-CH: Viewport-Width, Width
-Vary: Viewport-Width, Width
+Accept-CH: Sec-CH-Viewport-Width, Sec-CH-Width
+Vary: Sec-CH-Viewport-Width, Sec-CH-Width
 ```
 
 ## Specifications

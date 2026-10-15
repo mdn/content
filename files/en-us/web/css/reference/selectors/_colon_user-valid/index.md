@@ -1,5 +1,6 @@
 ---
-title: :user-valid
+title: "`:user-valid` CSS pseudo-class"
+short-title: :user-valid
 slug: Web/CSS/Reference/Selectors/:user-valid
 page-type: css-pseudo-class
 browser-compat: css.selectors.user-valid
@@ -36,16 +37,9 @@ In the following example, the green border and ✅ only display once the user ha
 Try changing the email address to another valid email to see it in action.
 
 ```html
-<form>
-  <label for="email">Email *: </label>
-  <input
-    id="email"
-    name="email"
-    type="email"
-    value="test@example.com"
-    required />
-  <span></span>
-</form>
+<label for="email">Email *: </label>
+<input id="email" name="email" type="email" value="test@example.com" required />
+<span></span>
 ```
 
 ```css

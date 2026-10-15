@@ -34,6 +34,7 @@ generateKey(algorithm, extractable, keyUsages)
 
 - `extractable`
   - : A boolean value indicating whether it will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or {{domxref("SubtleCrypto.wrapKey()")}}.
+    Note that when generating asymmetric key pairs (such as RSA or ECDSA), the `extractable` parameter determines whether the private key can be exported; the public key is always extractable.
 - `keyUsages`
   - : An {{jsxref("Array")}} of strings indicating what can be done with the newly generated key.
     Possible values for array elements are:

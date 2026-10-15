@@ -29,6 +29,19 @@ upgrade(root)
 
 None ({{jsxref("undefined")}}).
 
+## Description
+
+When an HTML element is parsed or created, it may use a tag name that corresponds to a [custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements) (e.g., `<my-element>`). If the custom element's class has not yet been registered with the appropriate {{domxref("CustomElementRegistry")}} at the time the element is created, the element exists as an undefined, plain {{domxref("HTMLElement")}}. It looks and behaves like any unknown element — it has no special behavior, lifecycle callbacks, or custom prototype methods.
+
+**Upgrading** is the process of retroactively promoting such an element to a full-fledged custom element once its definition becomes available. When an element is upgraded:
+
+1. Its constructor is called, in which the `super()` call swaps the prototype to the custom element class that was registered with {{domxref("CustomElementRegistry.define()", "define()")}}.
+2. If the class defines [`observedAttributes`](/en-US/docs/Web/API/Web_components/Using_custom_elements#responding_to_attribute_changes), the [`attributeChangedCallback()`](/en-US/docs/Web/API/Web_components/Using_custom_elements#responding_to_attribute_changes) is called for each attribute that already has a value.
+3. If the element is already connected, its [`connectedCallback()`](/en-US/docs/Web/API/Web_components/Using_custom_elements#custom_element_lifecycle_callbacks) is called.
+4. The `formAssociatedCallback()` and/or `formDisabledCallback()` callbacks get called if their conditions are satisfied.
+
+Normally, elements are upgraded automatically when their definition is registered via `define()`, but only if they are already connected to the document. The `upgrade()` method is useful when you need to upgrade elements that exist in a disconnected DOM subtree (for example, elements created via {{domxref("Document.createElement()")}} or parsed into a {{domxref("DocumentFragment")}}) before they are inserted into the document.
+
 ## Examples
 
 Taken from the [HTML spec](https://html.spec.whatwg.org/multipage/custom-elements.html#dom-customelementregistry-upgrade):

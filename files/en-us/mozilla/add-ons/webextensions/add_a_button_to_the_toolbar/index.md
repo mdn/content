@@ -54,7 +54,7 @@ Next, create the "icons" directory inside the "buttons" directory, and save the 
 !["32 pixel icon of a lined sheet of paper"](page-32.png)
 
 > [!NOTE]
-> These icons are from the [bitsies!](https://www.iconfinder.com/iconsets/bitsies) iconset created by Recep Kütük.
+> These icons are from the "bitsies!" iconset on iconfinder.com created by Recep Kütük.
 
 We have two icons so we can use the bigger one in high-density displays. The browser will take care of selecting the best icon for the current display.
 

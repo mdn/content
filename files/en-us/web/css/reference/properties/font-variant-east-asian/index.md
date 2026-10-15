@@ -1,5 +1,6 @@
 ---
-title: font-variant-east-asian
+title: "`font-variant-east-asian` CSS property"
+short-title: font-variant-east-asian
 slug: Web/CSS/Reference/Properties/font-variant-east-asian
 page-type: css-property
 browser-compat: css.properties.font-variant-east-asian
@@ -69,6 +70,8 @@ font-variant-east-asian: unset;
 ```
 
 ### Values
+
+This property is specified either as `normal` or `ruby` or as a space-separated list of the following values:
 
 - `normal`
   - : This keyword leads to the deactivation of the use of such alternate glyphs.

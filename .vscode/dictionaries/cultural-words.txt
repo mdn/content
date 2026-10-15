@@ -6,6 +6,7 @@ Akuru
 al-Qura
 Alem
 Amete
+Atherton
 Azeri
 Badeshi
 Bhaiksuki
@@ -23,6 +24,7 @@ furigana
 Gannen
 Garay
 geng-zi
+Gordonvale
 Gunjala
 Gurung
 Halloumi
@@ -32,6 +34,7 @@ Henkan
 Hijri
 Hinckley
 Hiroko
+Huangdi
 háček
 Jeonja
 Kayah
@@ -49,6 +52,7 @@ Masaram
 Mayek
 Meetei
 Mihret
+Millaa
 Minguo
 Minh
 Miramichi
@@ -80,9 +84,13 @@ Tangsa
 Thaana
 Tham
 Tirhuta
+Tishrei
 Tlayolotl
 Totnes
+Walshs
 Wancho
 Warang
+Wooroonooran
 Zenkaku
 zhuyin
+Śaka

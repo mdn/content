@@ -85,7 +85,7 @@ SVG element: {{SVGElement("feColorMatrix")}}
       <th scope="row">Normative document</th>
       <td>
         <a
-          href="https://drafts.fxtf.org/filter-effects/#element-attrdef-fecolormatrix-type"
+          href="https://drafts.csswg.org/filter-effects-1/#element-attrdef-fecolormatrix-type"
           rel="external"
           >Filter Effects Module Level 1</a
         >
@@ -119,7 +119,7 @@ SVG elements: {{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, {{SVGElement
       <th scope="row">Normative document</th>
       <td>
         <a
-          href="https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-type"
+          href="https://drafts.csswg.org/filter-effects-1/#element-attrdef-fecomponenttransfer-type"
           rel="external"
           >Filter Effects Module Level 1</a
         >
@@ -152,7 +152,7 @@ SVG element: {{SVGElement("feTurbulence")}}
       <th scope="row">Normative document</th>
       <td>
         <a
-          href="https://drafts.fxtf.org/filter-effects/#element-attrdef-feturbulence-type"
+          href="https://drafts.csswg.org/filter-effects-1/#element-attrdef-feturbulence-type"
           rel="external"
           >Filter Effects Module Level 1</a
         >
@@ -183,11 +183,11 @@ SVG elements: {{SVGElement("style")}}, {{SVGElement("script")}}
       <th scope="row">Normative document</th>
       <td>
         <a
-          href="https://svgwg.org/svg2-draft/interact.html#ScriptElementTypeAttribute"
+          href="https://w3c.github.io/svgwg/svg2-draft/interact.html#ScriptElementTypeAttribute"
           rel="external"
           >Scalable Vector Graphics (SVG) 2</a
         ><br /><a
-          href="https://svgwg.org/svg2-draft/styling.html#StyleElementTypeAttribute"
+          href="https://w3c.github.io/svgwg/svg2-draft/styling.html#StyleElementTypeAttribute"
           rel="external"
           >Scalable Vector Graphics (SVG) 2</a
         >

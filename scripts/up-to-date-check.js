@@ -1,7 +1,7 @@
 import fredPackageJson from "@mdn/fred/package.json" with { type: "json" };
 import thisPackageJson from "../package.json" with { type: "json" };
 
-const availableFredVersion = thisPackageJson.dependencies["@mdn/fred"];
+const availableFredVersion = thisPackageJson.devDependencies["@mdn/fred"];
 const installedFredVersion = fredPackageJson.version;
 
 if (installedFredVersion < availableFredVersion) {

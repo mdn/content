@@ -4,11 +4,11 @@ short-title: run()
 slug: Web/API/WindowSharedStorage/run
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
 browser-compat: api.WindowSharedStorage.run
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}
 
 The **`run()`** method of the
 {{domxref("WindowSharedStorage")}} interface executes a [run operation](/en-US/docs/Web/API/SharedStorageRunOperation) that is registered in a module added to the current origin's {{domxref("SharedStorageWorklet")}}.
@@ -44,7 +44,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined`.
   - : Thrown if:
     - The worklet module has not yet been added with {{domxref("Worklet.addModule", "addModule()")}}.
     - Shared storage is disabled (for example via a browser setting).
-    - The calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment).
+    - The calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox#enrollment).
 
 ## Examples
 

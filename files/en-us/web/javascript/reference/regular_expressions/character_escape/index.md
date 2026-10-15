@@ -20,7 +20,7 @@ A **character escape** represents a character that may not be able to be conveni
 
 \xHH
 \uHHHH
-\u{HHH}
+\u{H…H}
 ```
 
 > [!NOTE]
@@ -28,8 +28,8 @@ A **character escape** represents a character that may not be able to be conveni
 
 ### Parameters
 
-- `HHH`
-  - : A hexadecimal number representing the Unicode code point of the character. The `\xHH` form must have two hexadecimal digits; the `\uHHHH` form must have four; the `\u{HHH}` form may have 1 to 6 hexadecimal digits.
+- `H…H`
+  - : A hexadecimal number representing the Unicode code point of the character. The `\xHH` form must have two hexadecimal digits; the `\uHHHH` form must have four; the `\u{H…H}` form may have 1 to 6 hexadecimal digits.
 
 ## Description
 
@@ -41,13 +41,13 @@ The following character escapes are recognized in regular expressions:
   - : Represents the control character with value equal to the letter's character value modulo 32. For example, `\cJ` represents line break (`\n`), because the code point of `J` is 74, and 74 modulo 32 is 10, which is the code point of line break. Because an uppercase letter and its lowercase form differ by 32, `\cJ` and `\cj` are equivalent. You can represent control characters from 1 to 26 in this form.
 - `\0`
   - : Represents the U+0000 NUL character. Cannot be followed by a digit (which makes it a [legacy octal escape](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences) sequence).
-- `\^`, `\$`, `\\`, `\.` `\*`, `\+`, `\?`, `\(`, `\)`, `\[`, `\]`, `\\{`, `\\}`, `\|`, `\/`
+- `\^`, `\$`, `\\`, `\.`, `\*`, `\+`, `\?`, `\(`, `\)`, `\[`, `\]`, `\\{`, `\\}`, `\|`, `\/`
   - : Represents the character itself. For example, `\\` represents a backslash, and `\(` represents a left parenthesis. These are [syntax characters](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) in regexes (`/` is the delimiter of a regex literal), so they require escaping unless in a [character class](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class).
 - `\xHH`
   - : Represents the character with the given hexadecimal Unicode code point. The hexadecimal number must be exactly two digits long.
 - `\uHHHH`
   - : Represents the character with the given hexadecimal Unicode code point. The hexadecimal number must be exactly four digits long. Two such escape sequences can be used to represent a surrogate pair in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). (In Unicode-unaware mode, they are always two separate characters.)
-- `\u{HHH}`
+- `\u{H…H}`
   - : ([Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode) only) Represents the character with the given hexadecimal Unicode code point. The hexadecimal number can be from 1 to 6 digits long.
 
 In [Unicode-unaware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), escape sequences that are not one of the above become _identity escapes_: they represent the character that follows the backslash. For example, `\a` represents the character `a`. This behavior limits the ability to introduce new escape sequences without causing backward compatibility issues, and is therefore forbidden in Unicode-aware mode.

@@ -1,5 +1,6 @@
 ---
-title: position-area
+title: "`position-area` CSS property"
+short-title: position-area
 slug: Web/CSS/Reference/Properties/position-area
 page-type: css-property
 browser-compat: css.properties.position-area
@@ -44,7 +45,7 @@ position-area: self-x-start span-all;
 position-area: top; /* equiv: top span-all */
 position-area: inline-start; /* equiv: inline-start span-all */
 position-area: center; /* equiv: center center */
-position-area: span-all; /* equiv: center center */
+position-area: span-all; /* equiv: span-all span-all */
 position-area: end; /* equiv: end end */
 
 /* Global values */
@@ -88,7 +89,7 @@ For example:
   - `block-end span-inline-end` causes the positioned element to be placed in the center of the block end row, and span across the center and inline end tiles of that row.
   - `bottom span-all` and `y-end span-all` cause the positioned element to be placed in the center of the bottom row, and span across three cells, in this case the left, center, and right tiles of the bottom row.
 
-For detailed information on anchor features, usage, and the `position-area` property, see the [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide, specifically the section on [setting a `position-area`](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#setting_a_position-area).
+For detailed information on anchor features, usage, and the `position-area` property, see the [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide, specifically the section on [setting a `position-area`](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#setting_a_position-area).
 
 ### Adjusted default behavior
 

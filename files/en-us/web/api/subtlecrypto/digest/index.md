@@ -144,7 +144,7 @@ async function digestMessage(message) {
 digestMessage(text).then((digestHex) => console.log(digestHex));
 ```
 
-The above example uses {{jsxref("Uint8Array.fromHex()")}}, which became available in 2025.
+The above example uses {{jsxref("Uint8Array.toHex()")}}, which became available in 2025.
 To support older browsers, the following alternative can be used instead:
 
 ```js

@@ -10,7 +10,7 @@ browser-compat: http.headers.Report-To
 sidebar: http
 ---
 
-{{deprecated_header}}{{non-standard_header}}
+{{non-standard_header}}
 
 > [!WARNING]
 > This header has been replaced by the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.

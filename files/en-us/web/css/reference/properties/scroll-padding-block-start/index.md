@@ -1,5 +1,6 @@
 ---
-title: scroll-padding-block-start
+title: "`scroll-padding-block-start` CSS property"
+short-title: scroll-padding-block-start
 slug: Web/CSS/Reference/Properties/scroll-padding-block-start
 page-type: css-property
 browser-compat: css.properties.scroll-padding-block-start
@@ -73,7 +74,7 @@ scroll-padding-block-start: 2em;
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 scroll-padding-block-start: auto;
 
 /* <length> values */
@@ -114,5 +115,5 @@ scroll-padding-block-start: unset;
 
 ## See also
 
-- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) on web.dev (2018)

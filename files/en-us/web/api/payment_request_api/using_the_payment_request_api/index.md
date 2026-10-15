@@ -126,7 +126,7 @@ if (window.PaymentRequest) {
         // Handle successful payment
       })
       .catch((error) => {
-        // Handle cancelled or failed payment. For example, redirect to
+        // Handle canceled or failed payment. For example, redirect to
         // the legacy web form checkout:
         window.location.href = "/legacy-web-form-checkout";
       });
@@ -190,9 +190,7 @@ If the checkout flow needs to know whether {{domxref("PaymentRequest.canMakePaym
 // The page has loaded. Should the page use PaymentRequest?
 // If PaymentRequest fails, should the page fallback to manual
 // web form checkout?
-const supportedPaymentMethods = [
-  /* supported methods */
-];
+const supportedPaymentMethods = [/* supported methods */];
 
 let shouldCallPaymentRequest = true;
 let fallbackToLegacyOnPaymentRequestFailure = false;
@@ -272,7 +270,7 @@ checkoutButton.addEventListener("click", () => {
       if (error.name === "NotSupportedError") {
         window.location.href = "https://bobbucks.dev/#download";
       } else {
-        // Other kinds of errors; cancelled or failed payment. For demo purposes:
+        // Other kinds of errors; canceled or failed payment. For demo purposes:
         introPanel.style.display = "none";
         legacyPanel.style.display = "block";
       }
@@ -311,7 +309,7 @@ request
 
 ## Pre-authorizing transactions
 
-Some use cases (e.g., paying for fuel at a service station) involve pre-authorizing payment. One way to do this is through a Payment Handler (see the {{domxref("Payment Handler API", "", "", "nocode")}}). At the time of writing, that specification includes a `canmakepayment` event that a Payment Handler could make use of to return authorization status.
+Some use cases (e.g., paying for fuel at a service station) involve pre-authorizing payment. One way to do this is through a Web-based Payment Handler (see the {{domxref("Web-based Payment Handler API", "", "", "nocode")}}). At the time of writing, that specification includes a `canmakepayment` event that a Web-based Payment Handler could make use of to return authorization status.
 
 The merchant code would look like this:
 
@@ -337,7 +335,7 @@ paymentRequest
   });
 ```
 
-The payment handler would include the following code:
+The web-based payment handler would include the following code:
 
 ```js
 self.addEventListener("canmakepayment", (evt) => {

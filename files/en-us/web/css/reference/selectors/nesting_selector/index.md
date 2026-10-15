@@ -6,7 +6,7 @@ browser-compat: css.selectors.nesting
 sidebar: cssref
 ---
 
-The CSS **`&` nesting selector** explicitly states the relationship between parent and child rules when using [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting). It makes the nested child rule selectors _relative to the parent element_. Without the `&` nesting selector, the child rule selector selects child elements. The child rule selectors have the same [specificity](/en-US/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity) weight as if they were within {{cssxref(":is", ":is()")}}.
+The CSS **`&` nesting selector** explicitly states the relationship between parent and child rules when using [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting). It makes the nested child rule selectors _relative to the parent element_. Without the `&` nesting selector, the child rule selector selects child elements. The child rule selectors have the same [specificity](/en-US/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity) weight as if they were within {{cssxref(":is()")}}.
 
 > [!NOTE]
 > _Child rule_ does not mean _child element selector_. A child rule can target parent element or child elements depending on use of the `&` nesting selector.
@@ -15,14 +15,24 @@ If not used in nested style rule, the `&` nesting selector represents the [scopi
 
 ## Syntax
 
-```css
+```css-nolint
+/* Nested directly — adds whitespace (descendant) */
 parentRule {
-  /* parent rule style properties */
-  & childRule {
-    /* child rule style properties */
-  }
+  & childRule { }
+}
+
+/* Attached to parent — no whitespace (e.g., pseudo-class, compound selector) */
+parentRule {
+  &:pseudo-class { }
+}
+
+/* Reversed context — & placed after another selector */
+parentRule {
+  otherRule & { }
 }
 ```
+
+## Description
 
 ### `&` nesting selector and whitespace
 
@@ -137,7 +147,7 @@ The `&` nesting selector can be placed multiple times:
 
 ### Cannot represent pseudo-elements
 
-The `&` selector is equivalent to the {{cssxref(":is", ":is()")}} selector, and has the same limitation that it cannot represent pseudo-elements.
+The `&` selector is equivalent to the {{cssxref(":is()")}} selector, and has the same limitation that it cannot represent pseudo-elements.
 
 For example, with the following style rule, no generated content will be styled red, even when nested in `<div class="important">`, because `.important :is(.foo::before)` cannot match anything.
 
@@ -237,7 +247,7 @@ This example uses nested CSS styling.
 
 ### Using `&` outside nested rule
 
-If not used in nested style rule, the `&` nesting selector represents the [scoping root](/en-US/docs/Web/CSS/Reference/Selectors/:scope).
+If not used in a nested style rule, `&` represents the [scoping root](/en-US/docs/Web/CSS/Reference/Selectors/:scope). In this case, all styles apply to the [document](/en-US/docs/Web/API/Document).
 
 ```html
 <p>Hover over the output box to change document's background color.</p>
@@ -255,8 +265,6 @@ If not used in nested style rule, the `&` nesting selector represents the [scopi
 ```
 
 #### Result
-
-In this case, all the styles apply to [document](/en-US/docs/Web/API/Document).
 
 {{EmbedLiveSample('Usage_outside_nested_rule','100%','65')}}
 

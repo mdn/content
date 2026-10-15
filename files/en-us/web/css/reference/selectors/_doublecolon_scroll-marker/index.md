@@ -1,5 +1,6 @@
 ---
-title: ::scroll-marker
+title: "`::scroll-marker` CSS pseudo-element"
+short-title: ::scroll-marker
 slug: Web/CSS/Reference/Selectors/::scroll-marker
 page-type: css-pseudo-element
 status:
@@ -196,6 +197,8 @@ To improve user experience, we set a different color on the markers on {{cssxref
 - {{cssxref("::scroll-button()")}}
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref(":target-current")}}
+- {{cssxref(":target-before")}}
+- {{cssxref(":target-after")}}
 - [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels)
 - [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
 - [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module

@@ -96,9 +96,9 @@ These features are shipping in Firefox 144 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
-- **datetime-local time picker:** `dom.forms.datetime.timepicker`.
+- **Time picker in `datetime-local` and `time` input elements:** `dom.forms.datetime.timepicker`.
 
-  HTML datetime-local input elements ([`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local)) now includes a time picker. ([Firefox bug 1726108](https://bugzil.la/1726108)).
+  The HTML [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local) and [`<input type="time">`](/en-US/docs/Web/HTML/Reference/Elements/input/time) elements support a time picker. ([Firefox bug 1726108](https://bugzil.la/1726108)).
 
 - **:heading():** `layout.css.heading-selector.enabled`
 

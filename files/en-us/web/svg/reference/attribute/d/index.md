@@ -66,7 +66,7 @@ For {{SVGElement('path')}}, `d` is a string containing a series of path commands
 ## Using d as a CSS property
 
 `d` is a presentation attribute, and hence can be also be modified using CSS.
-The property takes either [`path()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/path) or `none`.
+The property takes either {{cssxref("basic-shape/path")}} or `none`.
 
 The example below shows how you might apply a new path on hover over an element.
 The new path is the same as the old one, but adds a line across the heart.
@@ -898,15 +898,15 @@ _Elliptical arc curves_ are curves defined as a portion of an ellipse. It is som
           </li>
           <li>
             <code><var>large-arc-flag</var></code> and
-            <code><var>sweep-flag</var></code> allows to choose which arc must be
-            drawn as 4 possible arcs can be drawn out of the other parameters.
+            <code><var>sweep-flag</var></code> allow you to choose which arc to
+            draw; 4 possible arcs can be drawn using the other parameters.
             <ul>
               <li>
-                <code><var>large-arc-flag</var></code> allows to choose one of
-                the large arc (<code>1</code>) or small arc (<code>0</code>),
+                <code><var>large-arc-flag</var></code> allows you to choose between
+                large arc (<code>1</code>) or small arc (<code>0</code>),
               </li>
               <li>
-                <code><var>sweep-flag</var></code> allows to choose one of the
+                <code><var>sweep-flag</var></code> allows you to choose between
                 clockwise turning arc (<code>1</code>) or counterclockwise
                 turning arc (<code>0</code>)
               </li>
@@ -948,8 +948,8 @@ _Elliptical arc curves_ are curves defined as a portion of an ellipse. It is som
           </li>
           <li>
             <code><var>large-arc-flag</var></code> and
-            <code><var>sweep-flag</var></code> allows to choose which arc must be
-            drawn as 4 possible arcs can be drawn out of the other parameters.
+            <code><var>sweep-flag</var></code> allow you to choose which arc to
+            draw; 4 possible arcs can be drawn using the other parameters.
             <ul>
               <li>
                 <code><var>large-arc-flag</var></code> allows a choice of large

@@ -29,7 +29,7 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
     If `attestation` is omitted, it will default to `"none"`.
 
 - `attestationFormats` {{optional_inline}}
-  - : An array of strings specifying the relying party's preference for the attestation statement format used by the authenticator. Values should be ordered from highest to lowest preference, and should be considered hints — the authenticator may choose to issue an attestation statement in a different format. For a list of valid formats, see [WebAuthn Attestation Statement Format Identifiers](https://www.iana.org/assignments/webauthn/webauthn.xhtml#webauthn-attestation-statement-format-ids).
+  - : An array of strings specifying the relying party's preference for the attestation statement format used by the authenticator. Values should be ordered from highest to lowest preference, and should be considered hints — the authenticator may choose to issue an attestation statement in a different format. For a list of valid formats, see [WebAuthn Attestation Statement Format Identifiers](https://www.iana.org/assignments/webauthn#webauthn-attestation-statement-format-ids).
 
     If omitted, `attestationFormats` defaults to an empty array.
 
@@ -45,19 +45,21 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
             If omitted, any type of authenticator, either platform or cross-platform, can be selected for the credential creation operation.
 
     - `requireResidentKey` {{optional_inline}}
-      - : A boolean. If set to `true`, it indicates that a resident key is required (see `residentKey`) This property is deprecated, but still available in some implementations for backwards compatibility with WebAuthn Level 1. The value should be set to `true` if `residentKey` is set to `"required"`.
+      - : A boolean. If set to `true`, it indicates that the relying party wants to create a [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_and_non-discoverable_credentials).
 
-        If omitted, `requireResidentKey` defaults to `false`.
+        This option is retained only for backwards compatibility: callers should use the [`residentKey`](#residentkey) option instead. If `residentKey` is given and is supported, then `requireResidentKey` is ignored. The `requireResidentKey` option should be set to `true` if and only if `residentKey` is set to `"required"`.
+
+        Defaults to `false`.
 
     - `residentKey` {{optional_inline}}
-      - : A string that specifies the extent to which the relying party desires to create a client-side [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credentials_and_conditional_mediation) (that is, one that is usable in authentication requests where the relying party does not provide credential IDs — {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} is called with an empty `allowCredentials` value). The alternative is a **server-side credential**, where the relying party must provide credential IDs in the `get()` `allowCredentials` value.
+      - : A string that specifies the extent to which the relying party wants to create a [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_and_non-discoverable_credentials).
         Possible values are:
         - `"discouraged"`
           - : The relying party prefers creation of a server-side credential, but will accept a client-side discoverable credential.
         - `"preferred"`
-          - : The relying party strongly prefers creation of a client-side discoverable credential, but will accept a server-side credential. The user agent should guide the user through setting up user verification, if needed, to create a discoverable credential. This takes precedence over the `userVerification` setting.
+          - : The relying party strongly prefers creation of a discoverable credential, but will accept a non-discoverable credential. The user agent should guide the user through setting up user verification, if needed, to create a discoverable credential. This takes precedence over the `userVerification` setting.
         - `"required"`
-          - : The relying party requires a client-side discoverable credential. If one cannot be created, a `NotAllowedError` {{domxref("DOMException")}} is thrown. See the [`create()` exceptions list](/en-US/docs/Web/API/CredentialsContainer/create#exceptions) for more details.
+          - : The relying party requires a discoverable credential. If one cannot be created, a `NotAllowedError` {{domxref("DOMException")}} is thrown. See the [`create()` exceptions list](/en-US/docs/Web/API/CredentialsContainer/create#exceptions) for more details.
 
         If omitted, `residentKey` defaults to `"required"` if `requireResidentKey` is `true`, otherwise the default value is `"discouraged"`.
 
@@ -119,7 +121,7 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
 - `pubKeyCredParams`
   - : An {{jsxref("Array")}} of objects which specify the key types and signature algorithms the Relying Party supports, ordered from most preferred to least preferred. The client and authenticator will make a best-effort to create a credential of the most preferred type possible. These objects will contain the following properties:
     - `alg`
-      - : A number that is equal to a [COSE Algorithm Identifier](https://www.iana.org/assignments/cose/cose.xhtml#algorithms), representing the cryptographic algorithm to use for this credential type. It is recommended that relying parties that wish to support a wide range of authenticators should include at least the following values in the provided choices:
+      - : A number that is equal to a [COSE Algorithm Identifier](https://www.iana.org/assignments/cose#algorithms), representing the cryptographic algorithm to use for this credential type. It is recommended that relying parties that wish to support a wide range of authenticators should include at least the following values in the provided choices:
         - `-8`: EdDSA
         - `-7`: ES256
         - `-257`: RS256

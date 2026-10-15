@@ -113,7 +113,7 @@ These methods return an enumerated value indicating whether support is, or will 
 
 If a download is required, it will be started automatically by the browser once a `LanguageDetector` or `Translator` instance is created using the relevant `create()` method. You can track download progress automatically using a [monitor](#monitoring_download_progress).
 
-## Cancelling operations and destroying instances
+## Canceling operations and destroying instances
 
 You can cancel a pending detection or translation operation using an {{domxref("AbortController")}}, with the associated {{domxref("AbortSignal")}} being included inside the method options object as a `signal` property value. For example, aborting a `Translator.create()` operation would look like this:
 

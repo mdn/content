@@ -3,13 +3,9 @@ title: Temporal.ZonedDateTime.prototype.nanosecond
 short-title: nanosecond
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/nanosecond
 page-type: javascript-instance-accessor-property
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.nanosecond
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`nanosecond`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns an integer from 0 to 999 representing the nanosecond (10<sup>-9</sup> second) component of this time.
 

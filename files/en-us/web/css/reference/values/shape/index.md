@@ -1,5 +1,6 @@
 ---
-title: <shape>
+title: "`<shape>` CSS type"
+short-title: <shape>
 slug: Web/CSS/Reference/Values/shape
 page-type: css-type
 status:
@@ -8,12 +9,10 @@ browser-compat: css.types.shape
 sidebar: cssref
 ---
 
-{{deprecated_header}}
-
 The **`<shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) defines the specific form (shape) of a region. The region represents the part of an element to which the {{cssxref("clip")}} property applies.
 
 > [!NOTE]
-> `<shape>` and `rect()` work in conjunction with {{cssxref("clip")}}, which has been deprecated in favor of {{cssxref("clip-path")}}. When possible, use `clip-path` and the {{cssxref("&lt;basic-shape&gt;")}} data type instead.
+> `<shape>` and `rect()` work in conjunction with {{cssxref("clip")}}, which has been deprecated in favor of {{cssxref("clip-path")}}. When possible, use `clip-path` and the {{cssxref("basic-shape")}} data type instead.
 
 ## Syntax
 

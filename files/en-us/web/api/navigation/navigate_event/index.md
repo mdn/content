@@ -3,12 +3,10 @@ title: "Navigation: navigate event"
 short-title: navigate
 slug: Web/API/Navigation/navigate_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.Navigation.navigate_event
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`navigate`** event of the {{domxref("Navigation")}} interface is fired when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated, allowing you to intercept as required.
 

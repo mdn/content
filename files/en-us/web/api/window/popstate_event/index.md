@@ -26,11 +26,6 @@ A {{domxref("PopStateEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PopStateEvent")}}
 
-## Event properties
-
-- {{domxref("PopStateEvent.state")}} {{ReadOnlyInline}}
-  - : Returns a copy of the information that was provided to `pushState()` or `replaceState()`.
-
 ## Event handler aliases
 
 In addition to the `Window` interface, the event handler property `onpopstate` is also available on the following elements:
@@ -46,8 +41,6 @@ If the history entry being activated was created by a call to [`history.pushStat
 These methods and their corresponding events can be used to add data to the history stack which can be used to reconstruct a dynamically generated page, or to otherwise alter the state of the content being presented while remaining on the same {{domxref("Document")}}.
 
 Note that just calling `history.pushState()` or `history.replaceState()` won't trigger a `popstate` event. The `popstate` event will be triggered by doing a browser action such as a click on the back or forward button (or calling `history.back()` or `history.forward()` in JavaScript).
-
-Browsers tend to handle the `popstate` event differently on page load. Chrome (prior to v34) and Safari always emit a `popstate` event on page load, but Firefox doesn't.
 
 > [!NOTE]
 > When writing functions that process `popstate` event it is important to take into account that properties like `window.location` will already reflect the state change (if it affected the current URL), but `document` might still not. If the goal is to catch the moment when the new document state is already fully in place, a zero-delay {{domxref("Window.setTimeout", "setTimeout()")}} method call should be used to effectively put its inner _callback_ function that does the processing at the end of the browser event loop: `window.onpopstate = () => setTimeout(doSomeThing, 0);`

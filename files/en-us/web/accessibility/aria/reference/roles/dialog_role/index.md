@@ -28,16 +28,16 @@ The `dialog` role is used to mark up an HTML based application dialog or window 
 
 A dialog is a descendant window of the primary window of a web application. For HTML pages, the primary application window is the entire web document, i.e., the body element.
 
-Marking up a dialog element with the `dialog` role helps assistive technology identify the dialog's content as being grouped and separated from the rest of the page content. However, adding `role="dialog"` alone is not sufficient to make a dialog accessible. Additionally, the following needs to be done:
+Marking up a dialog element with the `dialog` role helps assistive technology identify the dialog's content as being grouped and separated from the rest of the page content. However, adding `role="dialog"` alone is not sufficient to make a dialog accessible. Additionally, the following are important:
 
-- The dialog must be properly labeled
+- Labeling the dialog is strongly recommended
 - Keyboard focus must be managed correctly
 
-The sections below describe how these two requirements can be met.
+The sections below describe these two aspects of dialog accessibility.
 
 ### Labeling
 
-Even though it is not required for the dialog itself to be able to receive focus, it still needs to be labeled. The label given to the dialog will provide contextual information for the interactive controls inside the dialog. In other words, the dialog's label acts like a grouping label for the controls inside it (similar to how a `<legend>` element provides a grouping label for the controls inside a `<fieldset>` element).
+Even though it is not required for the dialog itself to be able to receive focus, labeling it is strongly recommended. An accessible name is not a requirement of the ARIA `dialog` role. The label given to the dialog will provide contextual information for the interactive controls inside the dialog. In other words, the dialog's label acts like a grouping label for the controls inside it (similar to how a `<legend>` element provides a grouping label for the controls inside a `<fieldset>` element).
 
 If a dialog already has a visible title bar, the text inside that bar can be used to label the dialog itself. The best way to achieve this is by using the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute to the `role="dialog"` element. Additionally, if the dialog contains additional descriptive text besides the dialog title, this text can be associated with the dialog using the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute. This approach is shown in the code snippet below:
 

@@ -1,5 +1,6 @@
 ---
-title: revert
+title: "`revert` CSS keyword"
+short-title: revert
 slug: Web/CSS/Reference/Values/revert
 page-type: css-keyword
 browser-compat: css.types.global_keywords.revert
@@ -14,7 +15,7 @@ This keyword removes from the cascade all of the styles that have been overridde
 - If used in a user's custom stylesheet, or if the style was applied by the user (the user origin), `revert` rolls back the cascaded value to the user agent's default style.
 - If used within the user agent's default styles, this keyword is functionally equivalent to {{cssxref("unset")}}.
 
-The `revert` keyword works exactly the same as [`unset`](/en-US/docs/Web/CSS/Reference/Values/unset) in many cases. The only difference is for properties that have values set by the browser or by custom stylesheets created by users (set on the browser side).
+The `revert` keyword works exactly the same as {{cssxref("unset")}} in many cases. The only difference is for properties that have values set by the browser or by custom stylesheets created by users (set on the browser side).
 
 Revert will not affect rules applied to children of an element you reset (but will remove effects of a parent rule on a child). So if you have a `color: green` for all sections and `all: revert` on a specific section, the color of the section will be black. But if you have a rule to make all paragraphs red, then all paragraphs will still be red in all sections.
 
@@ -157,5 +158,6 @@ Also, if neither the user agent nor the user override the `<h3>` or `<section>` 
 - Use the {{cssxref("initial")}} keyword to set a property to its initial value.
 - Use the {{cssxref("inherit")}} keyword to make an element's property the same as its parent.
 - Use the {{cssxref("revert-layer")}} keyword to reset a property to the value established in a previous cascade layer.
+- Use the {{cssxref("revert-rule")}} keyword to reset a property to the value of an earlier matching style rule.
 - Use the {{cssxref("unset")}} keyword to set a property to its inherited value if it inherits or to its initial value if not.
 - The {{cssxref("all")}} property lets you reset all properties to their initial, inherited, reverted, or unset state at once.

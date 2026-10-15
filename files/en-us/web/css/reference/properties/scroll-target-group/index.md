@@ -1,5 +1,6 @@
 ---
-title: scroll-target-group
+title: "`scroll-target-group` CSS property"
+short-title: scroll-target-group
 slug: Web/CSS/Reference/Properties/scroll-target-group
 page-type: css-property
 status:
@@ -450,6 +451,6 @@ Try navigating in each of these three ways: by activating the scroll marker link
 
 - {{cssxref("scroll-marker-group")}}
 - {{cssxref("::scroll-marker-group")}} and {{cssxref("::scroll-marker")}} pseudo-elements
-- {{cssxref(":target-current")}} pseudo-class
+- {{cssxref(":target-current")}}, {{cssxref(":target-before")}}, and {{cssxref(":target-after")}} pseudo-classes
 - [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels)
 - [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module

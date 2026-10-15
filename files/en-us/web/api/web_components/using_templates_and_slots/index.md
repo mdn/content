@@ -155,6 +155,65 @@ In this example:
 - Content with `slot="my-text"` goes into the named slot.
 - All other content automatically goes into the unnamed slot.
 
+## Named and manual slot assignment
+
+The previous example uses _named slot assignment_, which means the named {{htmlelement("slot")}} elements in a template are populated with the content of elements in the custom component (or more generally the host element) that have matching names in their [`slot`](/en-US/docs/Web/HTML/Reference/Global_attributes/slot) attributes.
+This is the original mechanism used for slot assignment and is the most suitable method for most use cases.
+
+_Manual slot assignment_ is an alternative approach in which elements are manually assigned to slots using {{domxref("HTMLSlotElement.assign()")}}.
+
+Manual assignment is useful when you want to dynamically select the content to be slotted, or if you want to assign slots based on some other element attribute such as their `id`, without having to add duplicate `slot` attributes.
+For example, a `<movie-picker>` custom element might use a `<select>` element to filter on genre, slotting only the elements that have a matching `data-genre` attribute value on change.
+
+```html
+<movie-picker>
+  <label
+    >Genre:
+    <select>
+      <option>Comedy</option>
+      <option>Drama</option>
+      <option>Action</option>
+      <option>Romance</option>
+    </select>
+  </label>
+  <div data-genre="comedy romance"><h2>Hungover on Valentine's Day</h2></div>
+  <div data-genre="drama romance"><h2>Us Two, plus Three</h2></div>
+  <div data-genre="action drama"><h2>The Hitman 2: Can't die twice</h2></div>
+  <div data-genre="action comedy">
+    <h2>Tinkerbell, the last action hero</h2>
+  </div>
+</movie-picker>
+```
+
+Named slot assignment is the default behavior.
+On user agents that support setting the shadow root slot assignment method, you can enable this feature when you attach the shadow root.
+This is done programmatically using the [`options.slotAssignment`](/en-US/docs/Web/API/Element/attachShadow#slotassignment) parameter passed to {{domxref("Element.attachShadow()")}}, or declaratively by setting the [`shadowrootslotassignment`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootslotassignment) attribute on the {{htmlelement("template")}} element.
+
+The following HTML shows a basic example of how you can set `shadowrootslotassignment` when declaratively creating a shadow root (using `shadowrootmode`).
+
+```html
+<article id="host">
+  <template shadowrootmode="open" shadowrootslotassignment="manual">
+    <h2 class="header">
+      <slot id="titleSlot"></slot>
+    </h2>
+  </template>
+
+  <span>Text for the title slot</span>
+</article>
+```
+
+The code to manually assign the text in the `<span>` to the `<slot>` might look like this:
+
+```js
+const host = document.querySelector("#host");
+const shadow = host.shadowRoot;
+const slot = shadow.querySelector("slot");
+const titleText = host.querySelector("span");
+
+slot.assign(titleText);
+```
+
 ## A more involved example
 
 To finish off the article, let's look at something a little less trivial.
@@ -232,7 +291,7 @@ First of all, we use the {{HTMLElement("slot")}} element within a {{HTMLElement(
 
 That {{HTMLElement("template")}} element has several features:
 
-- The {{HTMLElement("template")}} has a {{HTMLElement("style")}} element with a set of CSS styles that are scoped just to the document fragment the {{HTMLElement("template")}} creates.
+- The {{HTMLElement("template")}} has a {{HTMLElement("style")}} element with a set of CSS styles that are scoped just to the document fragment the {{HTMLElement("template")}} creates, These styles are scoped this way because that fragment will be inserted into a shadow root element.
 - The {{HTMLElement("template")}} uses {{HTMLElement("slot")}} and its [`name`](/en-US/docs/Web/HTML/Reference/Elements/slot#name) attribute to make three [named slots](/en-US/docs/Web/HTML/Reference/Elements/slot#name):
   - `<slot name="element-name">`
   - `<slot name="description">`

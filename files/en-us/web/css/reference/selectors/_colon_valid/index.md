@@ -1,12 +1,13 @@
 ---
-title: :valid
+title: "`:valid` CSS pseudo-class"
+short-title: :valid
 slug: Web/CSS/Reference/Selectors/:valid
 page-type: css-pseudo-class
 browser-compat: css.selectors.valid
 sidebar: cssref
 ---
 
-The **`:valid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents any {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents [validate](/en-US/docs/Web/HTML/Guides/Constraint_validation) successfully. This allows to easily make valid fields adopt an appearance that helps the user confirm that their data is formatted properly.
+The **`:valid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents any {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents [validate](/en-US/docs/Web/HTML/Guides/Constraint_validation) successfully. This allows you to easily make valid fields adopt an appearance that helps the user confirm that their data is formatted properly.
 
 {{InteractiveExample("CSS Demo: :valid", "tabbed-shorter")}}
 
@@ -26,24 +27,20 @@ input:valid {
 ```
 
 ```html interactive-example
-<form>
-  <label for="email">Email Address:</label>
-  <input id="email" name="email" type="email" value="na@me@example.com" />
+<label for="email">Email Address:</label>
+<input id="email" name="email" type="email" value="na@me@example.com" />
 
-  <label for="secret">Secret Code: (lower case letters)</label>
-  <input id="secret" name="secret" type="text" value="test" pattern="[a-z]+" />
+<label for="secret">Secret Code: (lower case letters)</label>
+<input id="secret" name="secret" type="text" value="test" pattern="[a-z]+" />
 
-  <label for="age">Your age: (18+)</label>
-  <input id="age" name="age" type="number" value="5" min="18" />
+<label for="age">Your age: (18+)</label>
+<input id="age" name="age" type="number" value="5" min="18" />
 
-  <label
-    ><input name="tos" type="checkbox" required checked /> - Do you agree to
-    ToS?</label
-  >
-</form>
+<label
+  ><input name="tos" type="checkbox" required checked /> - Do you agree to
+  ToS?</label
+>
 ```
-
-This pseudo-class is useful for highlighting correct fields for the user.
 
 ## Syntax
 
@@ -64,17 +61,87 @@ The color green is commonly used to indicate valid input. People who have certai
 
 ### Indicating valid and invalid form fields
 
-In this example, we use structures like this, which include extra `<span>`s to generate content on; we'll use these to provide indicators of valid/invalid data:
+In this example, we include extra `<span>` elements to generate content that indicates valid or invalid data:
 
 ```html
-<div>
-  <label for="fname">First name *: </label>
-  <input id="fname" name="fname" type="text" required />
-  <span></span>
-</div>
+<fieldset>
+  <legend>Contact information</legend>
+  <p>Required fields are labeled with "required".</p>
+  <div>
+    <label for="fname">First name: </label>
+    <input id="fname" name="fname" type="text" required />
+    <span></span>
+  </div>
+  <div>
+    <label for="lname">Last name: </label>
+    <input id="lname" name="lname" type="text" required />
+    <span></span>
+  </div>
+  <div>
+    <label for="email"> Email address (include if you want a response): </label>
+    <input id="email" name="email" type="email" />
+    <span></span>
+  </div>
+</fieldset>
 ```
 
 To provide these indicators, we use the following CSS:
+
+```css hidden
+body {
+  font-family: sans-serif;
+  margin: 20px auto;
+  max-width: 460px;
+}
+
+fieldset {
+  padding: 10px 30px 0;
+}
+
+legend {
+  color: white;
+  background: black;
+  padding: 5px 10px;
+}
+
+fieldset > div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+label,
+input {
+  display: block;
+  font-family: inherit;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
+
+input {
+  box-shadow: inset 1px 1px 3px #cccccc;
+  border-radius: 5px;
+}
+
+input:hover,
+input:focus {
+  background-color: #eeeeee;
+}
+
+input:required + span::after {
+  font-size: 0.7rem;
+  position: absolute;
+  content: "required";
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  top: -26px;
+  left: -70px;
+}
+```
 
 ```css
 input + span {
@@ -109,7 +176,7 @@ We set the `<span>`s to `position: relative` so that we can position the generat
 
 You can try it below:
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/valid-invalid.html", '100%', 430)}}
+{{EmbedLiveSample("indicating_valid_and_invalid_form_fields", "", 430)}}
 
 Notice how the required text inputs are invalid when empty, but valid when they have something filled in. The email input on the other hand is valid when empty, as it is not required, but invalid when it contains something that is not a proper email address.
 

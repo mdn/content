@@ -33,6 +33,8 @@ These types include keywords and identifiers as well as strings, and URLs.
       - : Rolls back the cascade to the value of the earlier origin.
     - {{CSSXref("revert-layer")}}
       - : Rolls back the cascade to the value of the earlier [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer).
+    - {{CSSXref("revert-rule")}}
+      - : Rolls back the cascade to the value of an earlier matching style rule.
     - {{CSSXref("unset")}}
       - : Acts as `inherit` or `initial` depending on whether the property is inherited or not.
 - {{cssxref("&lt;custom-ident&gt;")}}
@@ -53,7 +55,7 @@ These data types are used to indicate quantities, indexes, and positions. The ma
 - {{cssxref("&lt;number&gt;")}}
   - : Real numbers which may also have a fractional component, for example `1` or `1.34`.
 - {{cssxref("&lt;dimension&gt;")}}
-  - : A number with a unit attached to it, for example `90deg`, `50ms`, or `15em`. This type includes distances ({{cssxref("&lt;length&gt;")}}), durations ({{cssxref("&lt;time&gt;")}}), frequencies ({{cssxref("&lt;frequency&gt;")}}), resolutions ({{cssxref("&lt;resolution&gt;")}}), and other quantities.
+  - : A number with a unit attached to it, for example `90deg`, `50ms`, or `15em`. This type includes distances ({{cssxref("&lt;length&gt;")}}), durations ({{cssxref("&lt;time&gt;")}}), frequencies ({{cssxref("&lt;frequency&gt;")}}), resolutions ({{cssxref("resolution")}}), and other quantities.
 - {{cssxref("&lt;percentage&gt;")}}
   - : A number with a percentage sign attached to it, for example `10%`.
 - {{cssxref("&lt;ratio&gt;")}}
@@ -67,13 +69,13 @@ These {{cssxref("&lt;dimension&gt;")}} types are used to specify distance and ot
 
 - {{cssxref("&lt;length&gt;")}}
   - : Lengths are a `<dimension>` and refer to distances.
-- {{cssxref("&lt;angle&gt;")}}
+- {{cssxref("angle")}}
   - : Angles are used in properties such as {{cssxref("gradient/linear-gradient", "linear-gradient()")}} and are a `<dimension>` with one of `deg`, `grad`, `rad`, or `turn` units attached.
 - {{cssxref("&lt;time&gt;")}}
   - : Duration units are a `<dimension>` with an `s` or `ms` unit.
 - {{cssxref("&lt;frequency&gt;")}}
   - : Frequencies are a `<dimension>` with a `Hz` or `kHz` unit attached.
-- {{cssxref("&lt;resolution&gt;")}}
+- {{cssxref("resolution")}}
   - : Is a `<dimension>` with a unit identifier of `dpi`, `dpcm`, `dppx`, or `x`.
 
 ## Combinations of types
@@ -97,14 +99,14 @@ The [CSS color](/en-US/docs/Web/CSS/Guides/Colors) module defines the {{cssxref(
   - : Specified as a keyword or a numerical color value.
 - {{cssxref("&lt;alpha-value&gt;")}}
   - : Specifies the transparency of a color. May be a `<number>`, in which case 0 is fully transparent and 1 is fully opaque, or a `<percentage>`, in which case 0% is fully transparent and 100% fully opaque.
-- {{cssxref("&lt;hue&gt;")}}
+- {{cssxref("hue")}}
   - : Specifies the `<angle>`, with a unit identifier of `deg`, `grad`, `rad`, or `turn`, or unitless `<number>` interpreted as `deg`, of the {{glossary("color wheel")}} specific to the `<absolute-color-functions>` of which it is a component.
 
 ## Images
 
 The [CSS images](/en-US/docs/Web/CSS/Guides/Images) module defines the data types which deal with images, including gradients.
 
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("image")}}
   - : A URL reference to an image or a color gradient.
 - `<color-stop-list>`
   - : A list of two or more color stops with optional transition information using a color hint.
@@ -119,7 +121,7 @@ The [CSS images](/en-US/docs/Web/CSS/Guides/Images) module defines the data type
 
 ## 2D positioning
 
-The {{cssxref("&lt;position&gt;")}} data type is interpreted as defined for the {{cssxref("&lt;background-position&gt;")}} property.
+The {{cssxref("&lt;position&gt;")}} data type is interpreted as defined for the {{cssxref("background-position")}} property.
 
 - {{cssxref("&lt;position&gt;")}}
   - : Defines the position of an object area. Accepts a keyword value such as `top` or `left`, or a `<length-percentage>`.
@@ -190,6 +192,7 @@ The [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) and [CSS borders and box dec
 - {{cssxref("length")}}
 - {{cssxref("length-percentage")}}
 - {{cssxref("line-style")}}
+- {{cssxref("line-width")}}
 - {{cssxref("named-color")}}
 - {{cssxref("number")}}
 - {{cssxref("overflow_value", "&lt;overflow&gt;")}}
@@ -206,6 +209,7 @@ The [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) and [CSS borders and box dec
 - {{cssxref("system-color")}}
 - {{cssxref("text-edge")}}
 - {{cssxref("time")}}
+- {{cssxref("timeline-range-name")}}
 - {{cssxref("time-percentage")}}
 - {{cssxref("transform-function")}}
 - {{cssxref("url_value", "&lt;url&gt;")}}

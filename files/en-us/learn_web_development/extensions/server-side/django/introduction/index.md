@@ -64,7 +64,7 @@ Django has continued to grow and improve, from its first milestone release (1.0)
 > [!NOTE]
 > Check out the [release notes](https://docs.djangoproject.com/en/stable/releases/) on the Django website to see what has changed in recent versions, and how much work is going into making Django better.
 
-Django is now a thriving, collaborative open source project, with many thousands of users and contributors. While it does still have some features that reflect its origin, Django has evolved into a versatile framework that is capable of developing any type of website.
+Django is now a thriving, collaborative open-source project, with many thousands of users and contributors. While it does still have some features that reflect its origin, Django has evolved into a versatile framework that is capable of developing any type of website.
 
 ## How popular is Django?
 

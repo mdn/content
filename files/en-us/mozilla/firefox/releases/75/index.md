@@ -77,7 +77,7 @@ _No changes._
 
 ### Security
 
-- [CSP](/en-US/docs/Web/HTTP/Guides/CSP) nonces from non-script sources, such as CSS selectors, and `.getAttribute("nonce")` calls, are now hidden. Instead, check the [`.nonce`](/en-US/docs/Web/API/HTMLElement/nonce) property to access nonces from scripts ([Firefox bug 1374612](https://bugzil.la/1374612)).
+- [CSP](/en-US/docs/Web/HTTP/Guides/CSP) {{Glossary("Nonce", "nonces")}} from non-script sources, such as CSS selectors, and `.getAttribute("nonce")` calls, are now hidden. Instead, check the [`.nonce`](/en-US/docs/Web/API/HTMLElement/nonce) property to access nonces from scripts ([Firefox bug 1374612](https://bugzil.la/1374612)).
 
 ### Plugins
 
@@ -85,7 +85,7 @@ _No changes._
 
 ### WebDriver conformance (Marionette)
 
-- Fixed a bug that always caused Marionette to initialize when Firefox starts-up. It has been limited to the command line argument and environment variable now ([Firefox bug 1622012](https://bugzil.la/1622012)).
+- Fixed a bug that always caused Marionette to initialize when Firefox starts-up. It has been limited to the command-line argument and environment variable now ([Firefox bug 1622012](https://bugzil.la/1622012)).
 - Fixed `WebDriver:Print` to no longer add extra margins to the document ([Firefox bug 1616932](https://bugzil.la/1616932)).
 - Changed the preference value for `network.http.speculative-parallel-limit` to `0`, to no longer force-disable speculative connections ([Firefox bug 1617869](https://bugzil.la/1617869)).
 

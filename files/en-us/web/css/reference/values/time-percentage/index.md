@@ -1,5 +1,6 @@
 ---
-title: <time-percentage>
+title: "`<time-percentage>` CSS type"
+short-title: <time-percentage>
 slug: Web/CSS/Reference/Values/time-percentage
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-values/#typedef-time-percentage
@@ -20,7 +21,7 @@ Refer to the documentation for {{Cssxref("time")}} and {{Cssxref("percentage")}}
 
 ### Use in calc()
 
-Where a `<time-percentage>` is specified as an allowable type, this means that the percentage resolves to a time and therefore can be used in a {{Cssxref("calc", "calc()")}} expression.
+Where a `<time-percentage>` is specified as an allowable type, this means that the percentage resolves to a time and therefore can be used in a {{cssxref("calc()")}} expression.
 
 ### Valid percentages
 

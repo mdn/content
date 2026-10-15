@@ -1,5 +1,6 @@
 ---
-title: mask-image
+title: "`mask-image` CSS property"
+short-title: mask-image
 slug: Web/CSS/Reference/Properties/mask-image
 page-type: css-property
 browser-compat: css.properties.mask-image
@@ -40,7 +41,7 @@ mask-image: unset;
 - `<mask-source>`
   - : A {{cssxref("url_value", "&lt;url&gt;")}} reference to a {{SVGElement("mask")}} or to a CSS image.
 
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("image")}}
   - : An image value used as a mask image layer.
 
 ## Description

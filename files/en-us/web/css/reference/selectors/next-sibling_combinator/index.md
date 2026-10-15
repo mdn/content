@@ -55,7 +55,7 @@ li:first-of-type + li {
 
 ### Selecting a previous sibling
 
-The next-sibling combinator can be included within the {{cssxref(":has", ":has()")}} functional selector to select the previous sibling.
+The next-sibling combinator can be included within the {{cssxref(":has()")}} functional selector to select the previous sibling.
 
 #### CSS
 

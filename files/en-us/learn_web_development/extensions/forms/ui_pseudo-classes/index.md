@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Customizable_select", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Customizable_select_listboxes", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
 
 In the previous articles, we covered the styling of various form controls in a general manner. This included some usage of pseudo-classes, for example, using `:checked` to target a checkbox only when it is selected. In this article, we explore the different UI pseudo-classes available for styling forms in different states.
 
@@ -47,7 +47,7 @@ You may already be familiar with the following pseudo-classes:
 - {{cssxref(':required')}} and {{cssxref(':optional')}}: Target elements that can be required (e.g., elements that support the [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required) HTML attribute)), based on whether they are required or optional.
 - {{cssxref(":valid")}} and {{cssxref(":invalid")}}, and {{cssxref(":in-range")}} and {{cssxref(":out-of-range")}}: Target form controls that are valid/invalid according to form validation constraints set on them, or in-range/out-of-range.
 - {{cssxref(":enabled")}} and {{cssxref(":disabled")}}, and {{cssxref(":read-only")}} and {{cssxref(":read-write")}}: Target elements that can be disabled (e.g., elements that support the [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled) HTML attribute), based on whether they are currently enabled or disabled, and read-write or read-only form controls (e.g., elements with the [`readonly`](/en-US/docs/Web/HTML/Reference/Attributes/readonly) HTML attribute set).
-- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, and {{cssxref(":default")}}: Respectively target checkboxes and radio buttons that are checked, in an indeterminate state (neither checked or not checked), and the default selected option when the page loads (e.g., an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) with the [`checked`](/en-US/docs/Web/HTML/Reference/Elements/input#checked) attribute set, or an [`<option>`](/en-US/docs/Web/HTML/Reference/Elements/option) element with the [`selected`](/en-US/docs/Web/HTML/Reference/Elements/option#selected) attribute set).
+- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, and {{cssxref(":default")}}: Respectively target checkboxes and radio buttons that are checked, in an indeterminate state (neither checked nor unchecked), and the default selected option when the page loads (e.g., an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) with the [`checked`](/en-US/docs/Web/HTML/Reference/Elements/input#checked) attribute set, or an [`<option>`](/en-US/docs/Web/HTML/Reference/Elements/option) element with the [`selected`](/en-US/docs/Web/HTML/Reference/Elements/option#selected) attribute set).
 
 There are many others, but the ones listed above are the most obviously useful. Some of them are aimed at solving very specific niche problems. The UI pseudo-classes listed above have excellent browser support, but of course, you should test your form implementations carefully to ensure they work for your target audience.
 
@@ -173,7 +173,7 @@ In the next section, we'll look at a better example of indicating required field
 
 In previous articles, we've seen the usage of [generated content](/en-US/docs/Web/CSS/Guides/Generated_content), but we thought now would be a good time to talk about it in a bit more detail.
 
-The idea is that we can use the [`::before`](/en-US/docs/Web/CSS/Reference/Selectors/::before) and [`::after`](/en-US/docs/Web/CSS/Reference/Selectors/::after) pseudo-elements along with the [`content`](/en-US/docs/Web/CSS/Reference/Properties/content) property to make a chunk of content appear before or after the affected element. The chunk of content is not added to the DOM, so it may be invisible to some screen readers. Because it is a pseudo-element, it can be targeted with styles in the same way that any actual DOM node can.
+The idea is that we can use the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements along with the {{cssxref("content")}} property to make a chunk of content appear before or after the affected element. The chunk of content is not added to the DOM, so it may be invisible to some screen readers. Because it is a pseudo-element, it can be targeted with styles in the same way that any actual DOM node can.
 
 This is really useful when you want to add a visual indicator to an element, such as a label or icon, when alternative indicators are also available to ensure accessibility for all users. For example, we can use generated content to handle the placement and animation of the custom radio button's inner circle when a radio button is selected:
 
@@ -257,31 +257,26 @@ We set the `<span>` to `position: relative` so that we can set the generated con
 Then we give the generated content the content "required", which is what we wanted our label to say, and style and position it as we want. The result is seen below (press the **Play** button to run the example in MDN Playground and edit the source code).
 
 ```html hidden live-sample___required-optional-generated
-<form>
-  <fieldset>
-    <legend>Feedback form</legend>
+<fieldset>
+  <legend>Feedback form</legend>
 
-    <p>Required fields are labelled with "required".</p>
-    <div>
-      <label for="fname">First name: </label>
-      <input id="fname" name="fname" type="text" required />
-      <span></span>
-    </div>
-    <div>
-      <label for="lname">Last name: </label>
-      <input id="lname" name="lname" type="text" required />
-      <span></span>
-    </div>
-    <div>
-      <label for="email"
-        >Email address (include if you want a response):
-      </label>
-      <input id="email" name="email" type="email" />
-      <span></span>
-    </div>
-    <div><button>Submit</button></div>
-  </fieldset>
-</form>
+  <p>Required fields are labeled with "required".</p>
+  <div>
+    <label for="fname">First name: </label>
+    <input id="fname" name="fname" type="text" required />
+    <span></span>
+  </div>
+  <div>
+    <label for="lname">Last name: </label>
+    <input id="lname" name="lname" type="text" required />
+    <span></span>
+  </div>
+  <div>
+    <label for="email">Email address (include if you want a response): </label>
+    <input id="email" name="email" type="email" />
+    <span></span>
+  </div>
+</fieldset>
 ```
 
 ```css hidden live-sample___required-optional-generated
@@ -309,7 +304,6 @@ fieldset > div {
   flex-flow: row wrap;
 }
 
-button,
 label,
 input {
   display: block;
@@ -346,14 +340,9 @@ input:required + span::after {
   top: -26px;
   left: -70px;
 }
-
-button {
-  width: 60%;
-  margin: 0 auto;
-}
 ```
 
-```js hidden live-sample___required-optional-generated
+```js hidden live-sample___optional-required-styles
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -424,31 +413,26 @@ As before, we set the `<span>`s to `position: relative` so that we can position 
 You can try it below (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___valid-invalid
-<form>
-  <fieldset>
-    <legend>Feedback form</legend>
+<fieldset>
+  <legend>Feedback form</legend>
 
-    <p>Required fields are labelled with "required".</p>
-    <div>
-      <label for="fname">First name: </label>
-      <input id="fname" name="fname" type="text" required />
-      <span></span>
-    </div>
-    <div>
-      <label for="lname">Last name: </label>
-      <input id="lname" name="lname" type="text" required />
-      <span></span>
-    </div>
-    <div>
-      <label for="email"
-        >Email address (include if you want a response):
-      </label>
-      <input id="email" name="email" type="email" />
-      <span></span>
-    </div>
-    <div><button>Submit</button></div>
-  </fieldset>
-</form>
+  <p>Required fields are labeled with "required".</p>
+  <div>
+    <label for="fname">First name: </label>
+    <input id="fname" name="fname" type="text" required />
+    <span></span>
+  </div>
+  <div>
+    <label for="lname">Last name: </label>
+    <input id="lname" name="lname" type="text" required />
+    <span></span>
+  </div>
+  <div>
+    <label for="email">Email address (include if you want a response): </label>
+    <input id="email" name="email" type="email" />
+    <span></span>
+  </div>
+</fieldset>
 ```
 
 ```css hidden live-sample___valid-invalid
@@ -476,7 +460,6 @@ fieldset > div {
   flex-flow: row wrap;
 }
 
-button,
 label,
 input {
   display: block;
@@ -533,18 +516,6 @@ input:valid + span::before {
   content: "✓";
   color: green;
 }
-
-button {
-  width: 60%;
-  margin: 0 auto;
-}
-```
-
-```js hidden live-sample___valid-invalid
-const form = document.querySelector("form");
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-});
 ```
 
 {{EmbedLiveSample("valid-invalid", "100%", 430, , , , , "allow-forms")}}
@@ -605,31 +576,26 @@ input:out-of-range + span::after {
 This is a similar story to what we had before in the `:required` example, except that here we've split out the declarations that apply to any `::after` content into a separate rule, and given the separate `::after` content for `:required` and `:out-of-range` states their own content and styling. You can try it here (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___out-of-range
-<form>
-  <fieldset>
-    <legend>Feedback form</legend>
+<fieldset>
+  <legend>Feedback form</legend>
 
-    <p>Required fields are labelled with "required".</p>
-    <div>
-      <label for="name">Name: </label>
-      <input id="name" name="name" type="text" required />
-      <span></span>
-    </div>
-    <div>
-      <label for="age">Age (must be 12+): </label>
-      <input id="age" name="age" type="number" min="12" max="120" required />
-      <span></span>
-    </div>
-    <div>
-      <label for="email"
-        >Email address (include if you want a response):
-      </label>
-      <input id="email" name="email" type="email" />
-      <span></span>
-    </div>
-    <div><button>Submit</button></div>
-  </fieldset>
-</form>
+  <p>Required fields are labeled with "required".</p>
+  <div>
+    <label for="name">Name: </label>
+    <input id="name" name="name" type="text" required />
+    <span></span>
+  </div>
+  <div>
+    <label for="age">Age (must be 12+): </label>
+    <input id="age" name="age" type="number" min="12" max="120" required />
+    <span></span>
+  </div>
+  <div>
+    <label for="email">Email address (include if you want a response): </label>
+    <input id="email" name="email" type="email" />
+    <span></span>
+  </div>
+</fieldset>
 ```
 
 ```css hidden live-sample___out-of-range
@@ -657,7 +623,6 @@ fieldset > div {
   flex-flow: row wrap;
 }
 
-button,
 label,
 input {
   display: block;
@@ -725,18 +690,6 @@ input:valid + span::before {
   content: "✓";
   color: green;
 }
-
-button {
-  width: 60%;
-  margin: 0 auto;
-}
-```
-
-```js hidden live-sample___out-of-range
-const form = document.querySelector("form");
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-});
 ```
 
 {{EmbedLiveSample("out-of-range", "100%", 430, , , , , "allow-forms")}}
@@ -746,7 +699,7 @@ It is possible for the number input to be both required and out-of-range at the 
 This works quite nicely — when the page first loads, "Required" is shown, along with a red cross and border. When you've typed in a valid age (i.e., in the range of 12-120), the input turns valid. If however, you then change the age entry to one that is out of range, the "Outside allowable value range" message then pops up in place of "Required".
 
 > [!NOTE]
-> To enter an invalid/out-of-range value, you'll have to actually focus the form and type it in using the keyboard. The spinner buttons won't let you increment/decrement the value outside the allowable range.
+> To enter an invalid/out-of-range value, you'll have to actually focus the input and type it in using the keyboard. The spinner buttons won't let you increment/decrement the value outside the allowable range.
 
 ## Styling enabled and disabled inputs, and read-only and read-write
 
@@ -754,51 +707,47 @@ An enabled element is an element that can be activated; it can be selected, clic
 
 These two states can be targeted using {{cssxref(":enabled")}} and {{cssxref(":disabled")}}. Why are disabled inputs useful? Well, sometimes if some data does not apply to a certain user, you might not even want to submit that data when they submit the form. A classic example is a shipping form — commonly you'll get asked if you want to use the same address for billing and shipping; if so, you can just send a single address to the server, and might as well just disable the billing address fields.
 
-Let's have a look at an example that does just this. First of all, the HTML is a simple form containing text inputs, plus a checkbox to toggle disabling the billing address on and off. The billing address fields are disabled by default.
+Let's have a look at an example that does just this. First of all, the HTML contains text inputs, plus a checkbox to toggle disabling the billing address on and off. The billing address fields are disabled by default.
 
 ```html
-<form>
-  <fieldset id="shipping">
-    <legend>Shipping address</legend>
-    <div>
-      <label for="name1">Name: </label>
-      <input id="name1" name="name1" type="text" required />
-    </div>
-    <div>
-      <label for="address1">Address: </label>
-      <input id="address1" name="address1" type="text" required />
-    </div>
-    <div>
-      <label for="zip-code1">Zip/postal code: </label>
-      <input id="zip-code1" name="zip-code1" type="text" required />
-    </div>
-  </fieldset>
-  <fieldset id="billing">
-    <legend>Billing address</legend>
-    <div>
-      <label for="billing-checkbox">Same as shipping address:</label>
-      <input type="checkbox" id="billing-checkbox" checked />
-    </div>
-    <div>
-      <label for="name" class="billing-label disabled-label">Name: </label>
-      <input id="name" name="name" type="text" disabled required />
-    </div>
-    <div>
-      <label for="address2" class="billing-label disabled-label">
-        Address:
-      </label>
-      <input id="address2" name="address2" type="text" disabled required />
-    </div>
-    <div>
-      <label for="zip-code2" class="billing-label disabled-label">
-        Zip/postal code:
-      </label>
-      <input id="zip-code2" name="zip-code2" type="text" disabled required />
-    </div>
-  </fieldset>
-
-  <div><button>Submit</button></div>
-</form>
+<fieldset id="shipping">
+  <legend>Shipping address</legend>
+  <div>
+    <label for="name1">Name: </label>
+    <input id="name1" name="name1" type="text" required />
+  </div>
+  <div>
+    <label for="address1">Address: </label>
+    <input id="address1" name="address1" type="text" required />
+  </div>
+  <div>
+    <label for="zip-code1">Zip/postal code: </label>
+    <input id="zip-code1" name="zip-code1" type="text" required />
+  </div>
+</fieldset>
+<fieldset id="billing">
+  <legend>Billing address</legend>
+  <div>
+    <label for="billing-checkbox">Same as shipping address:</label>
+    <input type="checkbox" id="billing-checkbox" checked />
+  </div>
+  <div>
+    <label for="name" class="billing-label disabled-label">Name: </label>
+    <input id="name" name="name" type="text" disabled required />
+  </div>
+  <div>
+    <label for="address2" class="billing-label disabled-label">
+      Address:
+    </label>
+    <input id="address2" name="address2" type="text" disabled required />
+  </div>
+  <div>
+    <label for="zip-code2" class="billing-label disabled-label">
+      Zip/postal code:
+    </label>
+    <input id="zip-code2" name="zip-code2" type="text" disabled required />
+  </div>
+</fieldset>
 ```
 
 Now onto the CSS. The most relevant parts of this example are as follows:
@@ -814,7 +763,7 @@ label:has(+ :disabled) {
 }
 ```
 
-We've directly selected the inputs we want to disable using `input[type="text"]:disabled`, but we also wanted to gray out the corresponding text labels. As the labels are right before their inputs, we selected those using the pseudo-class [`:has`](/en-US/docs/Web/CSS/Reference/Selectors/:has).
+We've directly selected the inputs we want to disable using `input[type="text"]:disabled`, but we also wanted to gray out the corresponding text labels. As the labels are right before their inputs, we selected those using the pseudo-class {{cssxref(":has")}}.
 
 Now finally, we've used some JavaScript to toggle the disabling of the billing address fields:
 
@@ -840,44 +789,40 @@ It uses the [`change` event](/en-US/docs/Web/API/HTMLElement/change_event) to le
 You can see the example in action below (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___enabled-disabled-shipping
-<form>
-  <fieldset id="shipping">
-    <legend>Shipping address</legend>
-    <div>
-      <label for="name1">Name: </label>
-      <input id="name1" name="name1" type="text" required />
-    </div>
-    <div>
-      <label for="address1">Address: </label>
-      <input id="address1" name="address1" type="text" required />
-    </div>
-    <div>
-      <label for="zip-code1">Zip/postal code: </label>
-      <input id="zip-code1" name="zip-code1" type="text" required />
-    </div>
-  </fieldset>
-  <fieldset id="billing">
-    <legend>Billing address</legend>
-    <div>
-      <label for="billing-checkbox">Same as shipping address:</label>
-      <input type="checkbox" id="billing-checkbox" checked />
-    </div>
-    <div>
-      <label for="name" class="billing-label">Name: </label>
-      <input id="name" name="name" type="text" disabled required />
-    </div>
-    <div>
-      <label for="address2" class="billing-label">Address: </label>
-      <input id="address2" name="address2" type="text" disabled required />
-    </div>
-    <div>
-      <label for="zip-code2" class="billing-label">Zip/postal code: </label>
-      <input id="zip-code2" name="zip-code2" type="text" disabled required />
-    </div>
-  </fieldset>
-
-  <div><button>Submit</button></div>
-</form>
+<fieldset id="shipping">
+  <legend>Shipping address</legend>
+  <div>
+    <label for="name1">Name: </label>
+    <input id="name1" name="name1" type="text" required />
+  </div>
+  <div>
+    <label for="address1">Address: </label>
+    <input id="address1" name="address1" type="text" required />
+  </div>
+  <div>
+    <label for="zip-code1">Zip/postal code: </label>
+    <input id="zip-code1" name="zip-code1" type="text" required />
+  </div>
+</fieldset>
+<fieldset id="billing">
+  <legend>Billing address</legend>
+  <div>
+    <label for="billing-checkbox">Same as shipping address:</label>
+    <input type="checkbox" id="billing-checkbox" checked />
+  </div>
+  <div>
+    <label for="name" class="billing-label">Name: </label>
+    <input id="name" name="name" type="text" disabled required />
+  </div>
+  <div>
+    <label for="address2" class="billing-label">Address: </label>
+    <input id="address2" name="address2" type="text" disabled required />
+  </div>
+  <div>
+    <label for="zip-code2" class="billing-label">Zip/postal code: </label>
+    <input id="zip-code2" name="zip-code2" type="text" disabled required />
+  </div>
+</fieldset>
 ```
 
 ```css hidden live-sample___enabled-disabled-shipping
@@ -905,7 +850,6 @@ fieldset > div {
   display: flex;
 }
 
-button,
 label,
 input[type="text"] {
   display: block;
@@ -936,11 +880,6 @@ input[type="text"]:disabled {
 label:has(+ :disabled) {
   color: #aaaaaa;
 }
-
-button {
-  width: 60%;
-  margin: 0 auto;
-}
 ```
 
 ```js hidden live-sample___enabled-disabled-shipping
@@ -958,11 +897,6 @@ function toggleBilling() {
 document
   .getElementById("billing-checkbox")
   .addEventListener("change", toggleBilling);
-
-const form = document.querySelector("form");
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-});
 ```
 
 {{EmbedLiveSample("enabled-disabled-shipping", "100%", 580, , , , , "allow-forms")}}
@@ -984,7 +918,7 @@ A fragment of the HTML is as follows — note the readonly attribute:
 </div>
 ```
 
-If you try the live example, you'll see that the top set of form elements are not editable, however, the values are submitted when the form is submitted. We've styled the form controls using the `:read-only` and `:read-write` pseudo-classes, like so:
+If you try the live example, you'll see that the top set of form elements are not editable. In a submitted form, these read-only values would still be included. We've styled the form controls using the `:read-only` and `:read-write` pseudo-classes, like so:
 
 ```css
 input:read-only,
@@ -1003,44 +937,40 @@ textarea:read-write {
 The full example looks like this (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___readonly-confirmation
-<form>
-  <fieldset>
-    <legend>Check shipping details</legend>
-    <div>
-      <label for="name">Name: </label>
-      <input id="name" name="name" type="text" value="Mr Soft" readonly />
-    </div>
-    <div>
-      <label for="address">Address: </label>
-      <textarea id="address" name="address" readonly>
+<fieldset>
+  <legend>Check shipping details</legend>
+  <div>
+    <label for="name">Name: </label>
+    <input id="name" name="name" type="text" value="Mr Soft" readonly />
+  </div>
+  <div>
+    <label for="address">Address: </label>
+    <textarea id="address" name="address" readonly>
 23 Elastic Way,
 Viscous,
 Bright Ridge,
 CA
-</textarea
-      >
-    </div>
-    <div>
-      <label for="zip-code">Zip/postal code: </label>
-      <input id="zip-code" name="zip-code" type="text" value="94708" readonly />
-    </div>
-  </fieldset>
+</textarea>
+  </div>
+  <div>
+    <label for="zip-code">Zip/postal code: </label>
+    <input id="zip-code" name="zip-code" type="text" value="94708" readonly />
+  </div>
+</fieldset>
 
-  <fieldset>
-    <legend>Final instructions</legend>
-    <div>
-      <label for="sms-confirm">Send confirmation by SMS?</label>
-      <input id="sms-confirm" name="sms-confirm" type="checkbox" />
-    </div>
-    <div>
-      <label for="instructions">Any special instructions?</label>
-      <textarea id="instructions" name="instructions"></textarea>
-    </div>
-  </fieldset>
+<fieldset>
+  <legend>Final instructions</legend>
+  <div>
+    <label for="sms-confirm">Send confirmation by SMS?</label>
+    <input id="sms-confirm" name="sms-confirm" type="checkbox" />
+  </div>
+  <div>
+    <label for="instructions">Any special instructions?</label>
+    <textarea id="instructions" name="instructions"></textarea>
+  </div>
+</fieldset>
 
-  <div><button type="button">Amend details</button></div>
-  <div><button type="submit">Submit</button></div>
-</form>
+<div><button type="button">Amend details</button></div>
 ```
 
 ```css hidden live-sample___readonly-confirmation
@@ -1121,13 +1051,6 @@ textarea:read-write {
 }
 ```
 
-```js hidden live-sample___readonly-confirmation
-const form = document.querySelector("form");
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-});
-```
-
 {{EmbedLiveSample("readonly-confirmation", "100%", 660, , , , , "allow-forms")}}
 
 > [!NOTE]
@@ -1171,29 +1094,27 @@ input[type="radio"]:checked::before {
 You can try it out here (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___radios-styled
-<form>
-  <fieldset>
-    <legend>Choose your favorite fruit</legend>
-    <p>
-      <label>
-        <input type="radio" name="fruit" value="cherry" />
-        Cherry
-      </label>
-    </p>
-    <p>
-      <label>
-        <input type="radio" name="fruit" value="banana" />
-        Banana
-      </label>
-    </p>
-    <p>
-      <label>
-        <input type="radio" name="fruit" value="strawberry" />
-        Strawberry
-      </label>
-    </p>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>Choose your favorite fruit</legend>
+  <p>
+    <label>
+      <input type="radio" name="fruit" value="cherry" />
+      Cherry
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="radio" name="fruit" value="banana" />
+      Banana
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="radio" name="fruit" value="strawberry" />
+      Strawberry
+    </label>
+  </p>
+</fieldset>
 ```
 
 ```css hidden live-sample___radios-styled
@@ -1232,7 +1153,7 @@ input[type="radio"]:checked::before {
 
 {{EmbedLiveSample("radios-styled", "100%", 200, , , , , "allow-forms")}}
 
-Basically, we build the styling for a radio button's "inner circle" using the `::before` pseudo-element, but set a `scale(0)` [`transform`](/en-US/docs/Web/CSS/Reference/Properties/transform) on it. We then use a [`transition`](/en-US/docs/Web/CSS/Reference/Properties/transition) to make the generated content on the label nicely animate into view when the radio is selected/checked. The advantage of using a transform rather than transitioning [`width`](/en-US/docs/Web/CSS/Reference/Properties/width)/[`height`](/en-US/docs/Web/CSS/Reference/Properties/height) is that you can use [`transform-origin`](/en-US/docs/Web/CSS/Reference/Properties/transform-origin) to make it grow from the center of the circle, rather than having it appear to grow from the circle's corner, and there is no jumping behavior as no box model property values are updated.
+Basically, we build the styling for a radio button's "inner circle" using the `::before` pseudo-element, but set a `scale(0)` {{cssxref("transform")}} on it. We then use a {{cssxref("transition")}} to make the generated content on the input nicely animate into view when the radio is selected/checked. The advantage of using a transform rather than transitioning {{cssxref("width")}}/{{cssxref("height")}} is that you can use {{cssxref("transform-origin")}} to make it grow from the center of the circle, rather than having it appear to grow from the circle's corner, and there is no jumping behavior as no box model property values are updated.
 
 ### :default and :indeterminate
 
@@ -1280,26 +1201,24 @@ This provides a little "Default" label on the item that was originally selected 
 See the live result below (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___radios-checked-default
-<form>
-  <fieldset>
-    <legend>Choose your favorite fruit</legend>
-    <p>
-      <input type="radio" name="fruit" value="cherry" id="cherry" />
-      <label for="cherry">Cherry</label>
-      <span></span>
-    </p>
-    <p>
-      <input type="radio" name="fruit" value="banana" id="banana" checked />
-      <label for="banana">Banana</label>
-      <span></span>
-    </p>
-    <p>
-      <input type="radio" name="fruit" value="strawberry" id="strawberry" />
-      <label for="strawberry">Strawberry</label>
-      <span></span>
-    </p>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>Choose your favorite fruit</legend>
+  <p>
+    <input type="radio" name="fruit" value="cherry" id="cherry" />
+    <label for="cherry">Cherry</label>
+    <span></span>
+  </p>
+  <p>
+    <input type="radio" name="fruit" value="banana" id="banana" checked />
+    <label for="banana">Banana</label>
+    <span></span>
+  </p>
+  <p>
+    <input type="radio" name="fruit" value="strawberry" id="strawberry" />
+    <label for="strawberry">Strawberry</label>
+    <span></span>
+  </p>
+</fieldset>
 ```
 
 ```css hidden live-sample___radios-checked-default
@@ -1384,26 +1303,24 @@ This creates a fun little animated outline on the radio buttons, which hopefully
 See the live result below (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___radios-checked-indeterminate
-<form>
-  <fieldset>
-    <legend>Choose your favorite fruit</legend>
-    <p>
-      <input type="radio" name="fruit" value="cherry" id="cherry" />
-      <label for="cherry">Cherry</label>
-      <span></span>
-    </p>
-    <p>
-      <input type="radio" name="fruit" value="banana" id="banana" />
-      <label for="banana">Banana</label>
-      <span></span>
-    </p>
-    <p>
-      <input type="radio" name="fruit" value="strawberry" id="strawberry" />
-      <label for="strawberry">Strawberry</label>
-      <span></span>
-    </p>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>Choose your favorite fruit</legend>
+  <p>
+    <input type="radio" name="fruit" value="cherry" id="cherry" />
+    <label for="cherry">Cherry</label>
+    <span></span>
+  </p>
+  <p>
+    <input type="radio" name="fruit" value="banana" id="banana" />
+    <label for="banana">Banana</label>
+    <span></span>
+  </p>
+  <p>
+    <input type="radio" name="fruit" value="strawberry" id="strawberry" />
+    <label for="strawberry">Strawberry</label>
+    <span></span>
+  </p>
+</fieldset>
 ```
 
 ```css hidden live-sample___radios-checked-indeterminate
@@ -1478,10 +1395,10 @@ There are a number of other pseudo-classes of interest, and we don't have space 
 The following are also interesting, but as yet not well-supported in browsers:
 
 - The {{cssxref(":blank")}} pseudo-class selects empty form controls. {{cssxref(":empty")}} also matches elements that have no children, like {{HTMLElement("input")}}, but it is more general — it also matches other {{glossary("void element", "void elements")}} like {{HTMLElement("br")}} and {{HTMLElement("hr")}}. `:empty` has reasonable browser support; the `:blank` pseudo-class's specification is not yet finished, so it is not yet supported in any browser.
-- The [`:user-invalid`](/en-US/docs/Web/CSS/Reference/Selectors/:user-invalid) pseudo-class, when supported, will be similar to {{cssxref(":invalid")}}, but with better user experience. If the value is valid when the input receives focus, the element may match `:invalid` as the user enters data if the value is temporarily invalid, but will only match `:user-invalid` when the element loses focus. If the value was originally invalid, it will match both `:invalid` and `:user-invalid` for the whole duration of the focus. In a similar manner to `:invalid`, it will stop matching `:user-invalid` if the value does become valid.
+- The {{cssxref(":user-invalid")}} pseudo-class, when supported, will be similar to {{cssxref(":invalid")}}, but with better user experience. If the value is valid when the input receives focus, the element may match `:invalid` as the user enters data if the value is temporarily invalid, but will only match `:user-invalid` when the element loses focus. If the value was originally invalid, it will match both `:invalid` and `:user-invalid` for the whole duration of the focus. In a similar manner to `:invalid`, it will stop matching `:user-invalid` if the value does become valid.
 
 ## Summary
 
 This completes our look at UI pseudo-classes that relate to form inputs. Keep playing with them, and create some fun form styles! Next up, we'll move on to something different — [client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Customizable_select", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Customizable_select_listboxes", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}

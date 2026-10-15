@@ -24,7 +24,7 @@ At a fundamental level, the {{cssxref("color")}} property defines the foreground
 Whenever an element is rendered, these properties are used to determine the color of the text, its background, and any decorations on the text.
 
 - {{cssxref("color")}}
-  - : The color to use when drawing the text and any [text decorations](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#font_style_font_weight_text_transform_and_text_decoration) (such as the addition of under- or overlines, strike-through lines, and so forth.
+  - : The color to use when drawing the text and any [text decorations](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#font_style_font_weight_text_transform_and_text_decoration) (such as the addition of under- or overlines, strike-through lines, and so forth).
 
 - {{cssxref("background-color")}}
   - : The text's background color.
@@ -80,7 +80,7 @@ You can use the {{cssxref("border")}} shorthand property, which lets you configu
 
 ## Specifying colors as values in stylesheets
 
-Now that you know which [CSS properties let you apply color to elements](#properties_that_can_have_color), you can start adding colors to your websites. Let's look at some examples of using color within a {{Glossary("stylesheet")}}. In this example, we use several previously mentioned properties, with the concept of applying colors in CSS being the same no matter the property.
+Now that you know which [CSS properties let you apply color to elements](#properties_that_can_have_color), you can start adding colors to your websites. Let's look at some examples of using color within a {{Glossary("style sheet")}}. In this example, we use several previously mentioned properties, with the concept of applying colors in CSS being the same no matter the property.
 
 Let's look at the result first, before going on to look at the code we need to create it:
 
@@ -129,7 +129,7 @@ div {
 }
 ```
 
-The `.wrapper` class is used to assign styles to the {{HTMLElement("div")}} that encloses all of our other content. This establishes the height of the container using {{cssxref("height")}}, allowing the width of this block-level element to default to 100% of its parent. Setting the {{cssxref("display")}} to `flex` and adding a `10px` {{cssxref("gap")}} creates a flex container to lay out the children side by side with a gap between all the container's children. We use {{cssxref("flex")}} to let the flex children grow to fill the container; it doesn't effect the flex container itself.
+The `.wrapper` class is used to assign styles to the {{HTMLElement("div")}} that encloses all of our other content. This establishes the height of the container using {{cssxref("height")}}, allowing the width of this block-level element to default to 100% of its parent. Setting the {{cssxref("display")}} to `flex` and adding a `10px` {{cssxref("gap")}} creates a flex container to lay out the children side by side with a gap between all the container's children. We use {{cssxref("flex")}} to let the flex children grow to fill the container; it doesn't affect the flex container itself.
 
 Of more interest to our discussion here is the use of the {{cssxref("border")}} property to establish a border around the outside edge of the element. This border is a solid line, 6 pixels wide, in the [named color](/en-US/docs/Web/CSS/Reference/Values/named-color) `mediumturquoise`.
 
@@ -190,7 +190,7 @@ CSS isn't the only web technology that supports color. Other examples include:
 
 ## See also
 
-- [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) data type
+- {{cssxref("&lt;color&gt;")}} data type
 - [CSS color values](/en-US/docs/Web/CSS/Guides/Colors/Color_values) guide
 - [Using color wisely](/en-US/docs/Web/CSS/Guides/Colors/Using_color_wisely)
 - [CSS color module](/en-US/docs/Web/CSS/Guides/Colors)

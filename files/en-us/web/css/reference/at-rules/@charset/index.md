@@ -1,5 +1,6 @@
 ---
-title: "@charset"
+title: "`@charset` CSS at-rule"
+short-title: "@charset"
 slug: Web/CSS/Reference/At-rules/@charset
 page-type: css-at-rule
 browser-compat: css.at-rules.charset
@@ -28,7 +29,7 @@ As there are several ways to define the character encoding of a style sheet, the
 ### Parameters
 
 - _charset_
-  - : A {{cssxref("&lt;string&gt;")}} denoting the character encoding to be used. It must be the name of a web-safe character encoding defined in the [IANA-registry](https://www.iana.org/assignments/character-sets/character-sets.xhtml), and must be double-quoted, following exactly one space character (U+0020), and immediately terminated with a semicolon. If several names are associated with an encoding, only the one marked with _preferred_ must be used.
+  - : A {{cssxref("&lt;string&gt;")}} denoting the character encoding to be used. It must be the name of a web-safe character encoding defined in the [IANA-registry](https://www.iana.org/assignments/character-sets), and must be double-quoted, following exactly one space character (U+0020), and immediately terminated with a semicolon. If several names are associated with an encoding, only the one marked with _preferred_ must be used.
 
 ## Formal syntax
 

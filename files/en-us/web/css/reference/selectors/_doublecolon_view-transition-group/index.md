@@ -1,5 +1,6 @@
 ---
-title: ::view-transition-group()
+title: "`::view-transition-group()` CSS pseudo-element"
+short-title: ::view-transition-group()
 slug: Web/CSS/Reference/Selectors/::view-transition-group
 page-type: css-pseudo-element
 browser-compat: css.selectors.view-transition-group
@@ -51,7 +52,7 @@ In addition, the element's transform is animated from the "old" view state's scr
 - `<pt-class-selector>`
   - : The {{cssxref("custom-ident")}} set as the value of the {{cssxref("view-transition-class")}} property, preceded by a period (`.`).
 
-The {{cssxref("specificity")}} of the named view transition pseudo-element is equal to the [specificity of the type selector](/en-US/docs/Web/CSS/Guides/Cascade/Specificity#type_column), unless the parameter used is the universal selector is used, in which case the specificity is zero.
+The [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity) of the named view transition pseudo-element is equal to the [specificity of the type selector](/en-US/docs/Web/CSS/Guides/Cascade/Specificity#type_column), unless the parameter used is the universal selector is used, in which case the specificity is zero.
 
 ## Examples
 

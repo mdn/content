@@ -1,5 +1,6 @@
 ---
-title: width
+title: "`width` CSS media feature"
+short-title: width
 slug: Web/CSS/Reference/At-rules/@media/width
 page-type: css-media-feature
 browser-compat: css.at-rules.media.width

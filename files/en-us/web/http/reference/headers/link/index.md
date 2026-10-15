@@ -49,7 +49,7 @@ Link: <uri-reference>; param1=value1; param2="value2"
 ### Parameters
 
 The link header contains parameters, which are separated with `;` and are equivalent to attributes of the {{HTMLElement("link")}} element.
-Values can be both quoted or unquoted based on [field value component rules](https://www.rfc-editor.org/rfc/rfc7230.html#section-3.2.6), so `x=y` is equivalent to `x="y"`.
+Values can be both quoted or unquoted based on [field value component rules](https://www.rfc-editor.org/info/rfc7230/#section-3.2.6), so `x=y` is equivalent to `x="y"`.
 
 ## Examples
 
@@ -121,5 +121,5 @@ The `fetchpriority` directive should be used sparingly, and only in cases where 
 
 - {{HTTPStatus("103", "103 Early Hints")}}
 - {{HTMLElement("link")}}
-- [Link Relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml) IANA registry
+- [Link Relations](https://www.iana.org/assignments/link-relations) IANA registry
 - [Optimize resource loading with the Fetch Priority API](https://web.dev/articles/fetch-priority?hl=en#browser_priority_and_fetchpriority) for information about how this API affects priorities on Chrome.

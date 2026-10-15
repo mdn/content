@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 20 was released on April, 2nd 2013. This article provides information about the changes in this release that will affect developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### HTML
 
@@ -34,7 +34,7 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 
 - {{domxref("HTMLMediaElement")}} supports now `playbackRate` (both read and write), with pitch correction. Pitch correction can be controlled using the property `mozPreservesPitch` ([Firefox bug 495040](https://bugzil.la/495040)).
 - CSSOM: Support for the new {{domxref("CSSGroupingRule")}} and {{domxref("CSSConditionRule")}} has been added ([Firefox bug 814907](https://bugzil.la/814907)).
-- CSSOM: On {{domxref("CSSRule")}} the constant CSSRule.MOZ_KEYFRAME_RULE and CSSRule.MOZ_KEYFRAMES_RULE have been unprefixed to CSSRule.KEYFRAME_RULE and CSSRule.KEYFRAMES_RULE. The prefixed version is temporarily kept for helping Web author to transition their code [Firefox bug 816431](https://bugzil.la/816431)).
+- CSSOM: On {{domxref("CSSRule")}} the constant CSSRule.MOZ_KEYFRAME_RULE and CSSRule.MOZ_KEYFRAMES_RULE have been unprefixed to CSSRule.KEYFRAME_RULE and CSSRule.KEYFRAMES_RULE. The prefixed version is temporarily kept for helping Web author to transition their code ([Firefox bug 816431](https://bugzil.la/816431)).
 - CSSOM: It is now possible to set the value of `conditionText` for {{domxref("CSSMediaRule")}} ([Firefox bug 815021](https://bugzil.la/815021)).
 - The {{domxref("DOMParser")}} `parseFromStream` and `parseFromBuffer` methods are no longer available from web content ([Firefox bug 816410](https://bugzil.la/816410)).
 - The [`XMLSerializer`](/en-US/docs/Web/API/XMLSerializer) `serializeToStream` method is no longer available from web content ([Firefox bug 816410](https://bugzil.la/816410)).
@@ -44,7 +44,7 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 - The CSSOM {{domxref("Document.caretPositionFromPoint()")}} method, which returns a {{domxref("CaretPosition")}} has been implemented.
 - The index argument of the {{domxref("HTMLTableRowElement.insertCell()")}} and {{domxref("HTMLTableElement.insertRow()")}} methods has been made optional as per HTML specification.
 - {{domxref("Navigator.getUserMedia")}}, still prefixed as `Navigator.mozGetUserMedia` is now activated by default.
-- The third, optional, `transfer` argument of {{domxref("Window.postMessage")}} is now supported. It allows to transfer a sequence of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to the destination ([Firefox bug 822094](https://bugzil.la/822094)).
+- The third, optional, `transfer` argument of {{domxref("Window.postMessage")}} is now supported. It allows you to transfer a sequence of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to the destination ([Firefox bug 822094](https://bugzil.la/822094)).
 - The non-standard {{domxref("Window.sizeToContent()")}} method now clamps the minimal size: the window cannot be forced anymore to small sizes preventing the user from interacting with ([Firefox bug 764240](https://bugzil.la/764240)).
 - Blend modes, such as `overlay`, `color-burn`, `hue`, etc. have been added to the Canvas {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}} property ([Firefox bug 748433](https://bugzil.la/748433)).
 - The prefixed version of [`window.indexedDB`](/en-US/docs/Web/API/Window/indexedDB) — `window.mozIndexedDB` — was reintroduced to Gecko, so that bad cross-browser prefixing code (such as `var indexedDB = window.indexedDB || window.webkitIndexedDB …`) doesn't break in Firefox. A better approach is `window.indexedDB = window.indexedDB || window.webkitIndexedDB …` (see [Firefox bug 770844](https://bugzil.la/770844).)

@@ -3,12 +3,10 @@ title: "WebTransportSendStream: getStats() method"
 short-title: getStats()
 slug: Web/API/WebTransportSendStream/getStats
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.WebTransportSendStream.getStats
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{securecontext_header}} {{AvailableInWorkers}}
+{{APIRef("WebTransport API")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`getStats()`** method of the {{domxref("WebTransportSendStream")}} interface asynchronously returns an object containing statistics for the current stream.
 
@@ -50,8 +48,8 @@ When the promise fulfills, the result for the number of bytes that have been sen
 
 ```js
 const stats = await stream.getStats();
-const bytesNotReceived = stats.bytesWritten - stats.bytesAcknowledged;
-console.log(`Bytes still successfully sent: ${bytesNotReceived}`);
+const bytesNotReceived = stats.bytesSent - stats.bytesAcknowledged;
+console.log(`Bytes sent but not acknowledged: ${bytesNotReceived}`);
 ```
 
 ## Specifications

@@ -149,7 +149,7 @@ If you need to include external input in your site's pages, there are two main d
 
 _Output encoding_ is the process by which characters in the input string that potentially make it dangerous are escaped, so they are treated as text instead of being treated as part of a language like HTML.
 
-This is the appropriate choice when you want to treat input as text, for example, because your website uses templates that interpolate input into content, as in this [Django template](https://docs.djangoproject.com/en/5.1/ref/templates/language/) excerpt:
+This is the appropriate choice when you want to treat input as text, for example, because your website uses templates that interpolate input into content, as in this [Django template](https://docs.djangoproject.com/en/stable/ref/templates/language/) excerpt:
 
 ```django
 <p>You searched for \{{ search_term }}.</p>
@@ -229,7 +229,7 @@ What's safe in one context may be unsafe in another, and it's necessary to under
 
 ### Sanitization
 
-Templating engines typically allow developers to disable output encoding. This is necessary when developers want to insert untrusted content as HTML, not text. For example, in Django, the [`safe`](https://docs.djangoproject.com/en/5.0/ref/templates/language/#how-to-turn-it-off) filter disables output encoding, and in React, [`dangerouslySetInnerHTML`](https://react.dev/reference/react-dom/components/common#dangerously-setting-the-inner-html) has the same effect.
+Templating engines typically allow developers to disable output encoding. This is necessary when developers want to insert untrusted content as HTML, not text. For example, in Django, the [`safe`](https://docs.djangoproject.com/en/stable/ref/templates/language/#how-to-turn-it-off) filter disables output encoding, and in React, [`dangerouslySetInnerHTML`](https://react.dev/reference/react-dom/components/common#dangerously-setting-the-inner-html) has the same effect.
 
 In this case it's up to the developer to ensure that the content is safe, by sanitizing it.
 
@@ -308,7 +308,7 @@ The Trusted Types API does not yet have good cross-browser support, but when it 
 
 Output encoding and sanitization are all about preventing malicious scripts from getting into a site's pages. One of the main functions of a content security policy is to prevent malicious scripts from being executed even if they are in a site's pages. That is, it is a backup in case the other defenses fail.
 
-The recommended approach to mitigating XSS with a CSP is a [strict CSP](/en-US/docs/Web/HTTP/Guides/CSP#strict_csp), which uses a [nonce](/en-US/docs/Web/HTTP/Guides/CSP#nonces) or a [hash](/en-US/docs/Web/HTTP/Guides/CSP#hashes) to indicate to the browser which scripts it expects to see in the document. If an attacker manages to insert malicious `<script>` elements, then they won't have the correct nonce or hash, and the browser will not execute them. Additionally, various common XSS vectors are disallowed completely: inline event handlers, `javascript:` URLs, and APIs like `eval()` that execute their arguments as JavaScript.
+The recommended approach to mitigating XSS with a CSP is a [strict CSP](/en-US/docs/Web/HTTP/Guides/CSP#strict_csp), which uses a [nonce](/en-US/docs/Web/HTTP/Guides/CSP#nonces) or a [hash](/en-US/docs/Web/HTTP/Guides/CSP#hashes) to indicate to the browser which scripts it expects to see in the document. If an attacker manages to insert malicious `<script>` elements, then they won't have the correct {{Glossary("Nonce", "nonce")}} or hash, and the browser will not execute them. Additionally, various common XSS vectors are disallowed completely: inline event handlers, `javascript:` URLs, and APIs like `eval()` that execute their arguments as JavaScript.
 
 ## Defense summary checklist
 

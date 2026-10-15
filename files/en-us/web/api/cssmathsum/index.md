@@ -5,11 +5,9 @@ page-type: web-api-interface
 browser-compat: api.CSSMathSum
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}}{{AvailableInWorkers}}
 
-The **`CSSMathSum`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.
-
-A CSSMathSum is the object type returned when the [`StylePropertyMapReadOnly.get()`](/en-US/docs/Web/API/StylePropertyMapReadOnly/get) method is used on a CSS property whose value is created with a [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc) function.
+The **`CSSMathSum`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the sum of two or more {{domxref('CSSNumericValue')}} values — in cases where the result can't be represented as a single value.
 
 {{InheritanceDiagram}}
 
@@ -20,58 +18,123 @@ A CSSMathSum is the object type returned when the [`StylePropertyMapReadOnly.get
 
 ## Instance properties
 
-- {{domxref('CSSMathSum.values')}}
+_Also inherits properties from its parent interface, {{DOMxRef("CSSMathValue")}}._
+
+- {{domxref('CSSMathSum.values')}} {{ReadOnlyInline}}
   - : Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
 ## Static methods
 
-_The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
+_Also inherits methods from its parent interface, {{DOMxRef("CSSMathValue")}}._
 
 ## Instance methods
 
-_The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
+_Also inherits methods from its parent interface, {{DOMxRef("CSSMathValue")}}._
+
+## Description
+
+A `CSSMathSum` is produced whenever an addition or subtraction can't be resolved to a single value — for example, when the operands use different units, such as a length and a percentage.
+
+Calling {{domxref('CSSNumericValue.add','add()')}} or {{domxref('CSSNumericValue.sub','sub()')}} on operands that can't be combined returns a `CSSMathSum`; if every operand shares the same unit, they resolve immediately to a single {{domxref('CSSUnitValue')}} instead.
+{{domxref('CSSNumericValue.toSum','toSum()')}}, by contrast, always returns a `CSSMathSum`, even when its terms could be combined into a single value.
+
+[`StylePropertyMapReadOnly.get()`](/en-US/docs/Web/API/StylePropertyMapReadOnly/get) returns a `CSSMathSum` the same way — for a {{cssxref("calc()")}} value that resolves to an addition or subtraction it can't combine into one value.
+
+`CSSMathSum` represents the sum expression itself, not a resolved value.
+To get the resolved value, use {{domxref("Window.getComputedStyle", "getComputedStyle()")}}.
 
 ## Examples
 
-We create an element with a [`width`](/en-US/docs/Web/CSS/Reference/Properties/width) determined using a [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc) function, then {{domxref("console/log_static", "console.log()")}} the `operator` and `values`, and dig into the values a bit.
+### Basic usage
 
-```html
-<div>has width</div>
+The following code creates a `CSSMathSum` instance from three values, then reads back its `operator` and `values` properties.
+
+```js
+const sum = new CSSMathSum(CSS.px(10), CSS.em(5), CSS.percent(50));
+
+console.log(sum.constructor.name); // "CSSMathSum"
+console.log(sum.operator); // 'sum'
+
+console.log(sum.values); // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, 2: CSSUnitValue, length: 3}
+console.log(sum.values[0]); // CSSUnitValue {value: 10, unit: "px"}
 ```
 
-We assign a `width`
+### `calc()` representations
+
+This example shows how a {{cssxref("calc()")}} addition is represented by a {{domxref("CSSUnitValue")}} or a `CSSMathSum`, depending on whether its terms share a unit.
+
+#### HTML
+
+```html
+<div id="demoBox">Text</div>
+```
+
+```html hidden
+<pre id="log"></pre>
+```
+
+#### CSS
+
+`width` is set using a `calc()` sum whose terms are both `px` lengths, so the browser can resolve it to a single fixed value immediately.
+`font-size` is set using a `calc()` sum that mixes `rem` and `vw`, so the browser can't combine the terms until layout (this will be represented by a `CSSMathSum`).
 
 ```css
-div {
-  width: calc(30% - 20px);
+#demoBox {
+  width: calc(10px + 5px);
+  font-size: calc(1rem + 5vw);
 }
 ```
 
-We add the JavaScript
-
-```js
-const styleMap = document.querySelector("div").computedStyleMap();
-
-console.log(styleMap.get("width")); // CSSMathSum {values: CSSNumericArray, operator: "sum"}
-console.log(styleMap.get("width").operator); // 'sum'
-console.log(styleMap.get("width").values); // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
-console.log(styleMap.get("width").values[0]); // CSSUnitValue {value: 30, unit: "percent"}
-console.log(styleMap.get("width").values[0].value); // 30
-console.log(styleMap.get("width").values[0].unit); // 'percent'
-console.log(styleMap.get("width").values[1]); // CSSUnitValue {value: -20, unit: "px"}
-console.log(styleMap.get("width").values[1].value); //  -20
-console.log(styleMap.get("width").values[1].unit); // 'px'
+```css hidden
+#log {
+  height: 200px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
 ```
 
-{{EmbedLiveSample("Examples", 120, 300)}}
+#### JavaScript
 
-The specification is still evolving. In the future we may write the last three lines as:
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText += `${text}\n`;
+}
+```
+
+First we find the demo box's style rule and read its `width` and `font-size` values using {{domxref("CSSStyleRule.styleMap", "styleMap")}}.
 
 ```js
-console.log(styleMap.get("width").values[1]); // CSSMathNegate {value: CSSUnitValue, operator: "negate"}
-console.log(styleMap.get("width").values[1].value); // CSSUnitValue {value: 20, unit: "px"}
-console.log(styleMap.get("width").values[1].value.unit); // 'px'
+const demoBox = document.querySelector("#demoBox");
+
+const rules = document.getElementById("css-output").sheet.cssRules;
+const rule = [...rules].find((r) => r.selectorText === "#demoBox");
+const styleMap = rule.styleMap;
+const width = styleMap.get("width");
+const fontSize = styleMap.get("font-size");
 ```
+
+We then log the type and value of the CSS Typed OM representations, followed by the computed (resolved) values.
+
+```js
+log("width");
+log(` type: ${width.constructor.name}`);
+log(` value: ${width}`);
+log(` resolved: ${getComputedStyle(demoBox).width}`);
+
+log("\nfont-size");
+log(` type: ${fontSize.constructor.name}`);
+log(` values: [${[...fontSize.values].join(", ")}]`);
+log(` resolved: ${getComputedStyle(demoBox).fontSize}`);
+```
+
+#### Result
+
+`width` is represented by a `CSSUnitValue` object, which has a value that matches the resolved width.
+`font-size` is represented by a `CSSMathSum` object that exposes the `calc()` sum's original terms.
+
+{{EmbedLiveSample("`calc()` representations", 300, 300)}}
 
 ## Specifications
 
@@ -80,3 +143,12 @@ console.log(styleMap.get("width").values[1].value.unit); // 'px'
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("CSSNumericValue.add", "add()")}}
+- {{domxref("CSSNumericValue.sub", "sub()")}}
+- {{domxref("CSSNumericValue.toSum", "toSum()")}}
+- {{domxref("CSSMathValue.operator")}}
+- {{domxref("CSSMathNegate")}}
+- {{domxref("CSSMathProduct")}}

@@ -1,5 +1,6 @@
 ---
-title: "<div>: The Content Division element"
+title: "`<div>` HTML content division element"
+short-title: <div>
 slug: Web/HTML/Reference/Elements/div
 page-type: html-element
 browser-compat: html.elements.div
@@ -38,8 +39,6 @@ The **`<div>`** [HTML](/en-US/docs/Web/HTML) element is the generic container fo
 }
 ```
 
-As a "pure" container, the `<div>` element does not inherently represent anything. Instead, it's used to group content so it can be easily styled using the [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) or [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attributes, marking a section of a document as being written in a different language (using the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute), and so on.
-
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
@@ -49,7 +48,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 ## Usage notes
 
-- The `<div>` element should be used only when no other semantic element (such as {{HTMLElement("article")}} or {{HTMLElement("nav")}}) is appropriate.
+As a "pure" container, the `<div>` element does not inherently represent anything. Instead, it's used to group content so it can be easily styled using the [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) or [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attributes, marking a section of a document as being written in a different language (using the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute), and so on.
+
+The `<div>` element should be used only when no other semantic element (such as {{HTMLElement("article")}} or {{HTMLElement("nav")}}) is appropriate.
 
 ## Accessibility
 

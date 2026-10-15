@@ -17,6 +17,8 @@ The `Access-Control-Allow-Headers` header is sent by the server to let the clien
 
 This error occurs when attempting to preflight a header that is not expressly allowed (that is, it's not included in the list specified by the `Access-Control-Allow-Headers` header sent by the server). To fix this, the server needs to be updated so that it allows the indicated header, or you need to avoid using that header.
 
+If the server is not under your control, see [Client-side considerations](/en-US/docs/Web/HTTP/Guides/CORS/Errors#client-side_considerations) for alternative approaches.
+
 ## See also
 
 - [CORS errors](/en-US/docs/Web/HTTP/Guides/CORS/Errors)

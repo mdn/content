@@ -18,8 +18,8 @@ From Firefox 103, State Partitioning is turned on by default.
 
 Browsers traditionally key client-side state by the origin (or sometimes registrable domain) of the location a resource was loaded from.
 For example, the cookies, localStorage objects, and caches available to an iframe loaded from `https://example.com/hello.html` will be keyed by `example.com`.
-This is true regardless of whether the browser is currently loading resources from that domain as a _first-party_
-resources or as an embedded _third party_ resources.
+This is true regardless of whether the browser is currently loading resources from that domain as _first-party_
+resources or as embedded _third-party_ resources.
 Trackers have taken advantage of this cross-site state to store user identifiers and access them across websites.
 The example below shows how `example.com` can use its cross-site state (in this instance, cookies) to track a user across its own site as well as `A.example` and `B.example`.
 
@@ -36,7 +36,7 @@ Our current [default cookie policy](/en-US/docs/Web/Privacy/Guides/Storage_Acces
 State Partitioning is a different approach to preventing cross-site tracking.
 Rather than block access to certain stateful APIs in a third-party context, Firefox provides embedded resources with a separate storage bucket for every top-level website.
 More specifically, Firefox double-keys all client-side state by the [origin](https://html.spec.whatwg.org/multipage/browsers.html#origin) of the resource being loaded and by the top-level [site](https://html.spec.whatwg.org/multipage/browsers.html#site).
-In most instances, the top-level site is the scheme and {{Glossary("eTLD", "eTLD+1")}} of the top-level page being visited by the user.
+In most instances, the top-level site is the scheme and {{glossary("registrable domain")}} of the top-level page being visited by the user.
 
 In the example below `example.com` is embedded in `A.example` and `B.example`.
 However, since storage is partitioned, there are three distinct storage buckets (instead of one).
@@ -90,6 +90,7 @@ As such, the following network APIs and caches are **permanently** partitioned b
 - Image Cache
 - Favicon Cache
 - Connection Pooling
+- Script Cache
 - Stylesheet Cache
 - [DNS](/en-US/docs/Glossary/DNS)
 - HTTP Authentication
@@ -140,7 +141,7 @@ Let's say a site hosted at `a.example` navigates a user to `b.example` in the sa
 ## Storage Access API
 
 Third-party frames may use
-[document.requestStorageAccess](/en-US/docs/Web/API/Document/requestStorageAccess) to request unpartitioned access to cookie through the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+[document.requestStorageAccess](/en-US/docs/Web/API/Document/requestStorageAccess) to request unpartitioned access to cookies through the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 Once granted, the requesting party will gain access to its entire first-party cookies (i.e., the cookies it would have access to if visited as a first-party).
 
 > [!WARNING]

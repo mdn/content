@@ -1,5 +1,6 @@
 ---
-title: content-visibility
+title: "`content-visibility` CSS property"
+short-title: content-visibility
 slug: Web/CSS/Reference/Properties/content-visibility
 page-type: css-property
 browser-compat: css.properties.content-visibility
@@ -72,6 +73,8 @@ content-visibility: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `visible`
   - : No effect. The element's contents are laid out and rendered as normal. This is the default value.
 - `hidden`
@@ -95,7 +98,7 @@ This behavior is useful for creating entry/exit animations where you want to, fo
 When animating `content-visibility` with [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior) needs to be set on `content-visibility`. This effectively enables `content-visibility` transitions.
 
 > [!NOTE]
-> When transitioning an element's `content-visibility` value, you don't need to provide a set of starting values for transitioned properties using a [`@starting-style`](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style) block, like you do when [transitioning `display`](/en-US/docs/Web/CSS/Reference/Properties/display#animating_display). This is because `content-visibility` doesn't hide an element from the DOM like `display` does: it just skips rendering the element's content.
+> When transitioning an element's `content-visibility` value, you don't need to provide a set of starting values for transitioned properties using a {{cssxref("@starting-style")}} block, like you do when [transitioning `display`](/en-US/docs/Web/CSS/Reference/Properties/display#animating_display). This is because `content-visibility` doesn't hide an element from the DOM like `display` does: it just skips rendering the element's content.
 
 ## Formal definition
 

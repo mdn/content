@@ -68,11 +68,11 @@ Here are a few tips and tricks to help improve perceived performance:
 
 To improve perceived performance, minimize the original page load. In other words, download the content the user is going to interact with immediately first, and download the rest after "in the background". The total amount of content downloaded may actually increase, but the user only _waits_ on a very small amount, so the download feels faster.
 
-Separate interactive functionality from content, and load text, styles, and images visible at initial load. Delay, or lazy load, images or scripts that aren't used or visible on the initial page load. Additionally, you should optimize the assets you do load. Images and video should be served in the most optimal format, compressed, and in the correct size.
+Separate interactive functionality from content, and load text, styles, and images visible at initial load. Delay, or lazy load, images, iframes, media or scripts that aren't used or visible on the initial page load. Additionally, you should optimize the assets you do load. Images and video should be served in the most optimal format, compressed, and in the correct size.
 
 ### Prevent jumping content and other reflows
 
-Images or other assets causing content to be pushed down or jump to a different location, like the loading of third party advertisements, can make the page feel like it is still loading and is bad for perceived performance. Content reflowing is especially bad for user experience when not initiated by user interaction. If some assets are going to be slower to load than others, with elements loading after other content has already been painted to the screen, plan ahead and leave space in the layout for them so that content doesn't jump or resize, especially after the site has become interactive.
+Images or other assets causing content to be pushed down or jump to a different location, like the loading of third-party advertisements, can make the page feel like it is still loading and is bad for perceived performance. Content reflowing is especially bad for user experience when not initiated by user interaction. If some assets are going to be slower to load than others, with elements loading after other content has already been painted to the screen, plan ahead and leave space in the layout for them so that content doesn't jump or resize, especially after the site has become interactive.
 
 ### Avoid font file delays
 

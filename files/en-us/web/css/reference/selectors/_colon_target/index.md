@@ -1,5 +1,6 @@
 ---
-title: :target
+title: "`:target` CSS pseudo-class"
+short-title: :target
 slug: Web/CSS/Reference/Selectors/:target
 page-type: css-pseudo-class
 browser-compat: css.selectors.target
@@ -39,7 +40,7 @@ The following element would be selected by a `:target` selector when the current
 
 When an HTML document loads, the browser sets its target element. The element is identified using the URL fragment identifier. Without the URL fragment identifier, the document has no target element. The `:target` pseudo-class allows styling the document's target element. The element could be focused, highlighted, animated, etc.
 
-The target element is set at document load and [`history.back()`](/en-US/docs/Web/API/History/back), [`history.forward()`](/en-US/docs/Web/API/History/forward), and [`history.go()`](/en-US/docs/Web/API/History/forward) method calls. But it is _not_ changed when [`history.pushState()`](/en-US/docs/Web/API/History/pushState) and [`history.replaceState()`](/en-US/docs/Web/API/History/replaceState) methods are called.
+The target element is set at document load and [`history.back()`](/en-US/docs/Web/API/History/back), [`history.forward()`](/en-US/docs/Web/API/History/forward), and [`history.go()`](/en-US/docs/Web/API/History/go) method calls. But it is _not_ changed when [`history.pushState()`](/en-US/docs/Web/API/History/pushState) and [`history.replaceState()`](/en-US/docs/Web/API/History/replaceState) methods are called.
 
 > [!NOTE]
 > Due to [a possible bug in the CSS specification](https://discourse.wicg.io/t/target-css-does-not-work-because-shadowroot-does-not-set-a-target-element/2070/), `:target` doesn't work within a [web component](/en-US/docs/Web/API/Web_components) because the [shadow root](/en-US/docs/Web/API/ShadowRoot) doesn't pass the target element down to the shadow tree.

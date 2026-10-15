@@ -20,7 +20,7 @@ A string.
 
 ```js
 const inputElement = document.getElementById("imageButton");
-console.log(input.src);
+console.log(inputElement.src);
 ```
 
 ## Specifications

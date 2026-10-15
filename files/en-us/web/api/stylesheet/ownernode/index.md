@@ -8,9 +8,7 @@ browser-compat: api.StyleSheet.ownerNode
 
 {{APIRef("CSSOM")}}
 
-The **`ownerNode`** property of the
-{{domxref("StyleSheet")}} interface returns the node that associates this style sheet
-with the document.
+The **`ownerNode`** read-only property of the {{domxref("StyleSheet")}} interface returns the node that associates this style sheet with the document.
 
 This is usually an HTML
 [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) or
@@ -39,7 +37,7 @@ console.log(document.styleSheets[0].ownerNode);
 ## Notes
 
 For style sheets that are included by other style sheets, such as with
-[`@import`](/en-US/docs/Web/CSS/Reference/At-rules/@import), the value of this
+{{cssxref("@import")}}, the value of this
 property is `null`.
 
 ## Specifications

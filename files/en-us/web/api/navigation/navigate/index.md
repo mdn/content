@@ -3,12 +3,10 @@ title: "Navigation: navigate() method"
 short-title: navigate()
 slug: Web/API/Navigation/navigate
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Navigation.navigate
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`navigate()`** method of the
 {{domxref("Navigation")}} interface navigates to a specific URL, updating any provided state in the history entries list.

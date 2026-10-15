@@ -149,7 +149,7 @@ The following {{HTMLElement("script")}} element will be allowed by the policy:
 ```
 
 Allowing all inline scripts is considered a security risk, so it's recommended to use a nonce-source or a hash-source instead.
-To allow inline scripts and styles with a nonce-source, you need to generate a random nonce value (using a cryptographically secure random token generator) and include it in the policy.
+To allow inline scripts and styles with a nonce-source, you need to generate a random {{Glossary("Nonce", "nonce")}} value (using a cryptographically secure random token generator) and include it in the policy.
 It is important to note, this nonce value needs to be dynamically generated as it has to be unique for each HTTP request:
 
 ```http
@@ -195,7 +195,7 @@ Policies for inline resources with hashes like `script-src 'sha256-{HASHED_INLIN
 ```
 
 Instead of allowing `'unsafe-inline'`, you can use the `'unsafe-hashes'` source expression if code can't be updated to equivalent {{domxref("EventTarget.addEventListener", "addEventListener")}} calls.
-Given a HTML page that includes the following inline event handler:
+Given an HTML page that includes the following inline event handler:
 
 ```html
 <!-- I want to use addEventListener, but I can't :( -->

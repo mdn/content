@@ -1,5 +1,6 @@
 ---
-title: list-style-type
+title: "`list-style-type` CSS property"
+short-title: list-style-type
 slug: Web/CSS/Reference/Properties/list-style-type
 page-type: css-property
 browser-compat: css.properties.list-style-type
@@ -87,10 +88,6 @@ hr {
 }
 ```
 
-The marker will be [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword), the same as the computed [color](/en-US/docs/Web/CSS/Reference/Values/color_value) of the element it applies to.
-
-Only a few elements ({{HTMLElement("li")}} and {{HTMLElement("summary")}}) have a default value of `display: list-item`. However, the `list-style-type` property may be applied to any element whose {{cssxref("display")}} value is set to `list-item`. Moreover, because this property is inherited, it can be set on a parent element (commonly {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make it apply to all list items.
-
 ## Syntax
 
 ```css
@@ -136,7 +133,7 @@ Note that:
 
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
   - : An identifier matching the value of a {{cssxref("@counter-style")}} or one of the predefined styles:
-- {{cssxref("symbols", "symbols()")}}
+- {{cssxref("symbols()")}}
   - : Defines an anonymous style of the list.
 - {{cssxref("&lt;string&gt;")}}
   - : The specified string will be used as the item's marker.
@@ -251,7 +248,7 @@ Refer to the [All list style types](#all_list_style_types) example to see the ab
 
 ### Non-standard extensions
 
-A few predefined types are supported by Mozilla (Firefox) with a `-moz-` prefix.
+Mozilla (Firefox) supports a few predefined types with a `-moz-` prefix.
 
 - `ethiopic-halehame`: `-moz-ethiopic-halehame`
 - `ethiopic-halehame-am`: `-moz-ethiopic-halehame-am`
@@ -263,6 +260,51 @@ A few predefined types are supported by Mozilla (Firefox) with a `-moz-` prefix.
 - `urdu`: `-moz-urdu`
 
 See the [compatibility table](#browser_compatibility) to check which browsers support which extension.
+
+## Description
+
+The `list-style-type` property sets the marker (such as a disc, character, or custom counter style) of a list item element. The marker will be [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword), the same as the computed [color](/en-US/docs/Web/CSS/Reference/Values/color_value) of the element it applies to.
+
+Only a few elements ({{HTMLElement("li")}} and {{HTMLElement("summary")}}) have a default value of `display: list-item`. However, the `list-style-type` property may be applied to any element whose {{cssxref("display")}} value is set to `list-item`.
+
+### List style inheritance
+
+Because `list-style-type` is inherited, it can be set on a parent element (commonly {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make it apply to its list items. However, user-agent stylesheets set `list-style-type` on `<ul>`, `<ol>`, and {{HTMLElement("menu")}} elements, so nested lists use these default values instead of inheriting the ancestor list's value. To make nested lists inherit this value, set `list-style-type: inherit` on the nested list elements.
+
+For example, in cases like this:
+
+```html live-sample___list-style-inherit
+<ul>
+  <li>One</li>
+  <li>Two</li>
+  <li>
+    Three
+    <ul>
+      <li>Four</li>
+      <li>Five</li>
+      <li>Six</li>
+    </ul>
+  </li>
+</ul>
+```
+
+Where a custom style is set on the outer list:
+
+```css live-sample___list-style-inherit
+body > ul {
+  list-style-type: square;
+}
+```
+
+The inner list won't inherit the custom style unless you set it to inherit:
+
+```css live-sample___list-style-inherit
+ul ul {
+  list-style-type: inherit;
+}
+```
+
+{{embedlivesample("list-style-inherit", "100%", "200")}}
 
 ## Accessibility
 

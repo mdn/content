@@ -8,7 +8,7 @@ sidebar: jsref
 
 The **`SuppressedError`** object represents an error generated while handing another error. It is generated during resource disposal using {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}}.
 
-Compared to {{jsxref("AggregateError")}}, `SuppressedError` is used to represent a single error that is suppressed by another error, while `AggregateError` represents a list of unrelated errors. It is possible, though, for a `SuppressedError` to contain a chain of suppressed errors (`e.suppressed.suppressed.suppressed...`). It is also semantically different from {{jsxref("Error/cause", "cause")}} because the error is not _caused_ by another error, but _happens when_ handling another error.
+Compared to {{jsxref("AggregateError")}}, `SuppressedError` represents an error that happened during the handling of another error, while `AggregateError` represents a list of unrelated errors. It is possible, though, for a `SuppressedError` to contain a chain of suppressed errors (`e.suppressed.suppressed.suppressed...`). It is also semantically different from {{jsxref("Error/cause", "cause")}} because the error is not _caused_ by another error, but _happens when_ handling another error.
 
 `SuppressedError` is a subclass of {{jsxref("Error")}}.
 
@@ -52,35 +52,36 @@ A `SuppressedError` is thrown when an error occurs during [resource disposal](/e
 try {
   using resource1 = {
     [Symbol.dispose]() {
-      throw new Error("Error while disposing resource1");
+      throw new Error("resource1 disposal failed");
     },
   };
   using resource2 = {
     [Symbol.dispose]() {
-      throw new Error("Error while disposing resource2");
+      throw new Error("resource2 disposal failed");
     },
   };
-  throw new Error("Original error");
+  throw new TypeError("Original error");
 } catch (e) {
   console.log(e instanceof SuppressedError); // true
   console.log(e.message); // "An error was suppressed during disposal"
   console.log(e.name); // "SuppressedError"
-  console.log(e.error); // Error: Error while disposing resource1
+  console.log(e.error); // Error: resource1 disposal failed
   console.log(e.suppressed); // SuppressedError: An error was suppressed during disposal
-  console.log(e.suppressed.error); // Error: Error while disposing resource2
-  console.log(e.suppressed.suppressed); // Error: Original error
+  console.log(e.suppressed.error); // Error: resource2 disposal failed
+  console.log(e.suppressed.suppressed); // TypeError: Original error
 }
 ```
 
 The chain looks like this:
 
 ```plain
-       SuppressedError --suppressed--> SuppressedError --suppressed--> Original error
-              |                               |
-            error                           error
-              v                               v
-Error while disposing resource1   Error while disposing resource2
-    (Disposal happens later)        (Disposal happens earlier)
+     SuppressedError --suppressed--> SuppressedError --suppressed--> TypeError
+            |                               |
+          error                           error
+            |                               |
+            v                               v
+resource1 disposal failed       resource2 disposal failed
+ (Disposal happens later)       (Disposal happens earlier)
 ```
 
 ### Creating a SuppressedError

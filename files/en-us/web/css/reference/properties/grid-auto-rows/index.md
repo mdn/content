@@ -1,5 +1,6 @@
 ---
-title: grid-auto-rows
+title: "`grid-auto-rows` CSS property"
+short-title: grid-auto-rows
 slug: Web/CSS/Reference/Properties/grid-auto-rows
 page-type: css-property
 browser-compat: css.properties.grid-auto-rows
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`grid-auto-rows`** [CSS](/en-US/docs/Web/CSS) property specifies the size of an implicitly-created grid row {{glossary("grid tracks", "track")}} or pattern of tracks.
+
+If a grid item is positioned into a row that is not explicitly sized by {{cssxref("grid-template-rows")}}, implicit {{glossary("grid", "grid")}} tracks are created to hold it. This can happen either by explicitly positioning into a row that is out of range, or by the auto-placement algorithm creating additional rows.
 
 {{InteractiveExample("CSS Demo: grid-auto-rows")}}
 
@@ -60,8 +63,6 @@ grid-auto-rows: minmax(30px, auto);
   font-size: 13px;
 }
 ```
-
-If a grid item is positioned into a row that is not explicitly sized by {{cssxref("grid-template-rows")}}, implicit {{glossary("grid", "grid")}} tracks are created to hold it. This can happen either by explicitly positioning into a row that is out of range, or by the auto-placement algorithm creating additional rows.
 
 ## Syntax
 
@@ -134,7 +135,7 @@ grid-auto-rows: unset;
 
     As a minimum represents the largest minimum size of items in that track (specified by the {{cssxref("min-width")}}/{{cssxref("min-height")}} of the items). This is often, though not always, the {{cssxref("min-content")}} size.
 
-    If used outside of {{cssxref("minmax", "minmax()")}} notation, `auto` represents the range between the minimum and maximum described above. This behaves similarly to `minmax(min-content,max-content)` in most cases.
+    If used outside of {{cssxref("minmax()")}} notation, `auto` represents the range between the minimum and maximum described above. This behaves similarly to `minmax(min-content,max-content)` in most cases.
 
     > [!NOTE]
     > `auto` track sizes (and only `auto` track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties. Therefore by default, an `auto` sized track will take up any remaining space in the grid container.

@@ -3,13 +3,9 @@ title: Temporal.ZonedDateTime.prototype.minute
 short-title: minute
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/minute
 page-type: javascript-instance-accessor-property
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.minute
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`minute`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns an integer from 0 to 59 representing the minute component of this time.
 

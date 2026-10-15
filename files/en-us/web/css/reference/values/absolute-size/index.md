@@ -1,14 +1,15 @@
 ---
-title: <absolute-size>
+title: "`<absolute-size>` CSS type"
+short-title: <absolute-size>
 slug: Web/CSS/Reference/Values/absolute-size
 page-type: css-type
-spec-urls: https://drafts.csswg.org/css-fonts/#valdef-font-size-absolute-size
+spec-urls: https://drafts.csswg.org/css-fonts/#typedef-absolute-size
 sidebar: cssref
 ---
 
 The **`<absolute-size>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) describes the absolute size keywords. This data type is used in the {{cssxref("font")}} shorthand and {{cssxref("font-size")}} properties.
 
-The font size keywords are mapped to the deprecated HTML `size` attribute. See the [HTML size attribute](#html_size_attribute) section below).
+The font size keywords are mapped to the deprecated HTML `size` attribute. See the [HTML size attribute](#html_size_attribute) section below.
 
 ## Syntax
 

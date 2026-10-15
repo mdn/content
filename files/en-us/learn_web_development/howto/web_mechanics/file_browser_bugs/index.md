@@ -73,7 +73,7 @@ When filing a new bug, make sure to include your minimal test case and any other
 
 If the bug is related to non-browser software that may integrate with the browser, you need to file the bug with the relevant software vendor. The following table lists some assistive technologies and where to file bugs for them:
 
-| Software                                                                             | Where to file                                                                          |
-| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
-| [Freedom Scientific JAWS](https://www.freedomscientific.com/products/software/jaws/) | [JAWS technical support form](https://support.freedomscientific.com/Forms/TechSupport) |
-| [Non Visual Desktop Access (NVDA)](https://www.nvaccess.org/)                        | [File NVDA bugs](https://github.com/nvaccess/nvda)                                     |
+| Software                                                                    | Where to file                                                                          |
+| --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| [Freedom Scientific JAWS](https://vispero.com/jaws-screen-reader-software/) | [JAWS technical support form](https://support.freedomscientific.com/Forms/TechSupport) |
+| [Non Visual Desktop Access (NVDA)](https://www.nvaccess.org/)               | [File NVDA bugs](https://github.com/nvaccess/nvda)                                     |

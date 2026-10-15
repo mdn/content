@@ -10,6 +10,11 @@ Firefox 9 was released for Windows on December 20, 2011. Mac and Linux version 9
 
 ## Changes for web developers
 
+### Developer tools
+
+- The web console now supports basic [string substitutions](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#string-substitutions) in its logging methods.
+- You can now [create visually nested blocks of output](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#using-groups-in-the-console) in the web console, to help make it easier to read.
+
 ### HTML
 
 - The `value` attribute of {{ HTMLElement("li") }} now can be negative. Previously negative values were converted to 0.
@@ -76,11 +81,6 @@ _No change._
 - Content served with an empty {{ HTTPHeader("Content-Disposition") }} were previously treated as if the {{ HTTPHeader("Content-Disposition") }} were "attachment"; this didn't always work as expected. These are now handled as if the {{ HTTPHeader("Content-Disposition") }} were "inline".
 - The default maximum size of an item in the disk cache has been increased to 50 MB; previously, only items up to 5 MB were cached.
 
-### Developer tools
-
-- The web console now supports basic [string substitutions](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#string-substitutions) in its logging methods.
-- You can now [create visually nested blocks of output](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#using-groups-in-the-console) in the web console, to help make it easier to read.
-
 ## Changes for Mozilla and add-on developers
 
 See [Updating add-ons for Firefox 9](/en-US/docs/Mozilla/Firefox/Releases/9/Updating_add-ons) for an overview of the changes you may need to make to get your add-ons working in Firefox 9.
@@ -90,7 +90,7 @@ See [Updating add-ons for Firefox 9](/en-US/docs/Mozilla/Firefox/Releases/9/Upda
 - The `<xul:tab>` element now has a `pending` attribute, whose value is `true`, when the tab is in the process of being restored by the session store service. This can be used for styling the tab in themes. The attribute isn't present on tabs that aren't pending.
 - The `<xul:tab>` element now has an `unread` attribute, whose value is `true`, when the tab has changed since the last time it was the active tab or if it hasn't been selected since the current session began. The attribute isn't present on tabs that are not unread.
 - You can now use a `<xul:panel>` as a drag image for DOM drag and drop operations. This lets you use the [standard drag & drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) for drag and drop of XUL content.
-- The `<xul:notificationbox>` element's `appendNotification`) method now lets you specify a callback that gets called for interesting events related to the notification box. Currently, the only event is "removed", which tells you the box has been removed from its window.
+- The `<xul:notificationbox>` element's `appendNotification` method now lets you specify a callback that gets called for interesting events related to the notification box. Currently, the only event is "removed", which tells you the box has been removed from its window.
 
 ### JavaScript code module changes
 

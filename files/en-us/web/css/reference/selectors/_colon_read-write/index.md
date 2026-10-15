@@ -1,5 +1,6 @@
 ---
-title: :read-write
+title: "`:read-write` CSS pseudo-class"
+short-title: :read-write
 slug: Web/CSS/Reference/Selectors/:read-write
 page-type: css-pseudo-class
 browser-compat: css.selectors.read-write
@@ -11,8 +12,7 @@ The **`:read-write`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/
 {{InteractiveExample("CSS Demo: :read-write", "tabbed-shorter")}}
 
 ```css interactive-example
-label,
-input[type="submit"] {
+label {
   display: block;
   margin-top: 1em;
 }
@@ -27,18 +27,14 @@ input[type="submit"] {
 ```html interactive-example
 <p>Please fill in your details:</p>
 
-<form>
-  <label for="email">Email Address:</label>
-  <input id="email" name="email" type="email" value="test@example.com" />
+<label for="email">Email Address:</label>
+<input id="email" name="email" type="email" value="test@example.com" />
 
-  <label for="note">Short note about yourself:</label>
-  <textarea id="note" name="note">Don't be shy</textarea>
+<label for="note">Short note about yourself:</label>
+<textarea id="note" name="note">Don't be shy</textarea>
 
-  <label for="pic">Your picture:</label>
-  <input id="pic" name="pic" type="file" />
-
-  <input type="submit" value="Submit form" />
-</form>
+<label for="pic">Your picture:</label>
+<input id="pic" name="pic" type="file" />
 ```
 
 ## Syntax
@@ -74,7 +70,6 @@ fieldset > div {
   justify-content: space-between;
 }
 
-button,
 label,
 textarea {
   display: block;
@@ -112,24 +107,20 @@ textarea:read-write {
 ```
 
 ```html
-<form>
-  <fieldset>
-    <legend>Confirm details</legend>
-    <div>
-      <label for="address">Address:</label>
-      <textarea id="address" name="address" readonly>
+<fieldset>
+  <legend>Confirm details</legend>
+  <div>
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" readonly>
 123 Choco Mountain,
 Awesome Ridge,
-CA</textarea
-      >
-    </div>
-    <div>
-      <label for="instructions">Delivery instructions</label>
-      <textarea id="instructions" name="instructions"></textarea>
-    </div>
-  </fieldset>
-  <button type="submit">Confirm</button>
-</form>
+CA</textarea>
+  </div>
+  <div>
+    <label for="instructions">Delivery instructions</label>
+    <textarea id="instructions" name="instructions"></textarea>
+  </div>
+</fieldset>
 ```
 
 {{embedlivesample("confirming_form_details_using_read-only_controls", , "300")}}

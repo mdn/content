@@ -15,12 +15,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version-file: ".nvmrc"
           package-manager-cache: false
@@ -31,9 +31,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LEFTHOOK: 0
 
-      - name: Lint markdown files
+      - name: Apply fixes
         run: |
           npm run content fix-flaws
+          npm run content fmt-sidebars
           npm run fix:md
           npm run fix:fm
           node scripts/sort_and_unique_file_lines.js .vscode/dictionaries
@@ -44,7 +45,7 @@ jobs:
 
       - name: Create PR with only fixable issues
         if: success()
-        uses: peter-evans/create-pull-request@84ae59a2cdc2258d6fa0732dd66352dddae2a412 # v7.0.9
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
           commit-message: "chore: auto-fix Markdownlint, Prettier, and front-matter issues"
           branch: markdownlint-auto-cleanup
@@ -61,7 +62,7 @@ jobs:
 
       - name: Create PR with notice on unfixed issues
         if: failure()
-        uses: peter-evans/create-pull-request@84ae59a2cdc2258d6fa0732dd66352dddae2a412 # v7.0.9
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
           commit-message: "chore: auto-fix Markdownlint, Prettier, and front-matter issues"
           branch: markdownlint-auto-cleanup

@@ -145,11 +145,11 @@ const pattern2 = new URLPattern({ pathname: "(/path)" });
 console.log(pattern2.test("https://example.com/path")); // true
 
 // with `$` in hash
-const pattern3 = new URLPattern({ hash: "(/hash$)" });
+const pattern3 = new URLPattern({ hash: "(hash$)" });
 console.log(pattern3.test("https://example.com/#hash")); // true
 
 // without `$` in hash
-const pattern4 = new URLPattern({ hash: "(/hash)" });
+const pattern4 = new URLPattern({ hash: "(hash)" });
 console.log(pattern4.test("https://example.com/#hash")); // true
 ```
 

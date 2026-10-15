@@ -1,5 +1,6 @@
 ---
-title: ::marker
+title: "`::marker` CSS pseudo-element"
+short-title: ::marker
 slug: Web/CSS/Reference/Selectors/::marker
 page-type: css-pseudo-element
 browser-compat: css.selectors.marker
@@ -34,12 +35,14 @@ li::marker {
 
 The `::marker` pseudo-element supports a limited number of CSS properties, including:
 
-- All [font properties](/en-US/docs/Web/CSS/Guides/Fonts)
-- The {{CSSxRef("white-space")}} property
-- {{CSSxRef("color")}}
-- {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}}, and {{CSSxRef("direction")}} properties
-- The {{CSSxRef("content")}} property
 - All [animation](/en-US/docs/Web/CSS/Guides/Animations#properties) and [transition](/en-US/docs/Web/CSS/Guides/Transitions#properties) properties
+- All [font properties](/en-US/docs/Web/CSS/Guides/Fonts)
+- {{CSSxRef("color")}}
+- {{CSSxRef("content")}}
+- {{cssxref("counter-increment")}}, {{cssxref("counter-reset")}}, and {{cssxref("counter-set")}}
+- {{cssxref("quotes")}}
+- {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}}, and {{CSSxRef("direction")}}
+- {{CSSxRef("white-space")}}
 
 > [!NOTE]
 > The specification states that additional CSS properties may be supported in the future.

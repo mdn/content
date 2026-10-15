@@ -3,12 +3,10 @@ title: "ReadableStream: from() static method"
 short-title: from()
 slug: Web/API/ReadableStream/from_static
 page-type: web-api-static-method
-status:
-  - experimental
 browser-compat: api.ReadableStream.from_static
 ---
 
-{{APIRef("Streams")}}{{AvailableInWorkers}}{{SeeCompatTable}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`ReadableStream.from()`** static method returns a {{domxref("ReadableStream")}} from a provided iterable or async iterable object.
 
@@ -43,7 +41,7 @@ This live example demonstrates how you can convert an async iterable to a `Reada
 
 #### HTML
 
-The HTML is consists of single `<pre>` element, which is used for logging.
+The HTML consists of a single `<pre>` element, which is used for logging.
 
 ```html
 <pre id="log"></pre>
@@ -92,7 +90,7 @@ consumeStream(myReadableStream);
 
 // Iterate a ReadableStream asynchronously
 async function consumeStream(readableStream) {
-  for await (const chunk of myReadableStream) {
+  for await (const chunk of readableStream) {
     // Do something with each chunk
     // Here we just log the values
     log(`chunk: ${chunk}`);
@@ -142,7 +140,7 @@ consumeStream(myReadableStream);
 
 // Iterate a ReadableStream asynchronously
 async function consumeStream(readableStream) {
-  for await (const chunk of myReadableStream) {
+  for await (const chunk of readableStream) {
     // Do something with each chunk
     // Here we just log the values
     log(`chunk: ${chunk}`);

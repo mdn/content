@@ -1,12 +1,13 @@
 ---
-title: scroll-timeline-axis
+title: "`scroll-timeline-axis` CSS property"
+short-title: scroll-timeline-axis
 slug: Web/CSS/Reference/Properties/scroll-timeline-axis
 page-type: css-property
 browser-compat: css.properties.scroll-timeline-axis
 sidebar: cssref
 ---
 
-The **`scroll-timeline-axis`** [CSS](/en-US/docs/Web/CSS) property is used to specify the scrollbar direction that will be used to provide the [timeline for a scroll driven animation](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines) animation, which is progressed through by scrolling a scrollable element (_scroller_).
+The **`scroll-timeline-axis`** [CSS](/en-US/docs/Web/CSS) property is used to specify the scrollbar direction that will be used to provide the [timeline for a scroll driven animation](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines), which is progressed through by scrolling a scrollable element (_scroller_).
 
 ## Syntax
 
@@ -129,8 +130,8 @@ body {
       content: "Your browser doesn't support the `scroll-timeline-axis` property.";
       background-color: wheat;
       display: block;
-      width: 100%;
       text-align: center;
+      padding: 1rem 0;
     }
   }
 }

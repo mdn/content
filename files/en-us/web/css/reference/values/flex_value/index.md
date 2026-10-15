@@ -1,5 +1,6 @@
 ---
-title: <flex>
+title: "`<flex>` CSS type"
+short-title: <flex>
 slug: Web/CSS/Reference/Values/flex_value
 page-type: css-type
 browser-compat: css.types.flex

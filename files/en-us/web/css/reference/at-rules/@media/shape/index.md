@@ -1,5 +1,6 @@
 ---
-title: shape
+title: "`shape` CSS media feature"
+short-title: shape
 slug: Web/CSS/Reference/At-rules/@media/shape
 page-type: css-media-feature
 status:

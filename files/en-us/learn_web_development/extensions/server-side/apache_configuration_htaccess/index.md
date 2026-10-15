@@ -94,7 +94,7 @@ To mitigate the possibility of these attacks, you should use the `crossorigin` a
 </IfModule>
 ```
 
-Google Chrome's [Google Fonts troubleshooting guide](https://developers.google.com/fonts/docs/troubleshooting) tells us that, while Google Fonts may send the CORS header with every response, some proxy servers may strip it before the browser can use it to render the font.
+Google Chrome's [Google Fonts troubleshooting guide](https://fonts.google.com/faq#troubleshooting) tells us that, while Google Fonts may send the CORS header with every response, some proxy servers may strip it before the browser can use it to render the font.
 
 ```apacheconf
 <IfModule mod_headers.c>
@@ -174,7 +174,6 @@ Servers should use `text/javascript` for JavaScript resources as indicated in th
   # Manifest files
     AddType application/manifest+json     webmanifest
     AddType application/x-web-app-manifest+json         webapp
-    AddType text/cache-manifest           appcache
   # Media files
     AddType audio/mp4                     f4a f4b m4a
     AddType audio/ogg                     oga ogg opus
@@ -237,7 +236,7 @@ Serve the following file types with the `charset` parameter set to `UTF-8` using
 
 ```apacheconf
 <IfModule mod_mime.c>
-  AddCharset utf-8 .appcache \
+  AddCharset utf-8 \
     .bbaw \
     .css \
     .htc \
@@ -289,7 +288,7 @@ The required steps are:
 
 ### Forcing HTTPS
 
-These Rewrite rules will redirect from the `http://` insecure version to the `https://` secure version of the URL as described in the [Apache HTTPD wiki](https://cwiki.apache.org/confluence/display/httpd/RewriteHTTPToHTTPS).
+These Rewrite rules will redirect from the `http://` insecure version to the `https://` secure version of the URL as described in the [Apache HTTPD wiki](https://cwiki.apache.org/confluence/spaces/HTTPD/pages/115522478/RewriteHTTPToHTTPS).
 
 ```apacheconf
 <IfModule mod_rewrite.c>
@@ -386,13 +385,32 @@ Nonetheless, you should ensure that you send the `X-Frame-Options` header for al
 
 There is no policy that fits all websites, the example below is meant as guidelines for you to modify for your site.
 
-To make your CSP implementation easier, you can use an online [CSP header generator](https://report-uri.com/home/generate/). You should also use a [validator](https://csp-evaluator.withgoogle.com/) to make sure your header does what you want it to do.
+To make your CSP implementation easier, you can use an online [CSP header generator](https://report-uri.com/tools/csp-builder). You should also use a [validator](https://csp-evaluator.withgoogle.com/) to make sure your header does what you want it to do.
 
 ```apacheconf
 <IfModule mod_headers.c>
   Content-Security-Policy "default-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" "expr=%{CONTENT_TYPE} =~ m#text\/(html|javascript)|application\/pdf|xml#i"
 </IfModule>
 ```
+
+This CSP:
+
+1. Restricts all fetches by default to the origin of the current website by setting the `default-src` directive to `'self'` - which acts as a fallback to all [Fetch directives](/en-US/docs/Glossary/Fetch_directive).
+   - This is convenient as you do not have to specify all Fetch directives that apply to your site, for example: `connect-src 'self'; font-src 'self'; script-src 'self'; style-src 'self'`, etc.
+   - This restriction also means that you must explicitly define from which site(s) your website is allowed to load resources from. Otherwise, it will be restricted to the same origin as the page making the request
+
+2. Disallows the `<base>` element on the website. This is to prevent attackers from changing the locations of resources loaded from relative URLs
+   - If you want to use the `<base>` element, then use `base-uri 'self'` instead
+
+3. Only allows form submissions are from the current origin with: `form-action 'self'`
+4. Prevents all websites (including your own) from embedding your webpages within e.g., the `<iframe>` or `<object>` element by setting: `frame-ancestors 'none'`.
+   - The `frame-ancestors` directive helps avoid [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) attacks and is similar to the `X-Frame-Options` header
+   - Browsers that support the CSP header will ignore `X-Frame-Options` if `frame-ancestors` is also specified
+
+5. Forces the browser to treat all the resources that are served over HTTP as if they were loaded securely over HTTPS by setting the `upgrade-insecure-requests` directive
+   - **`upgrade-insecure-requests` does not ensure HTTPS for the top-level navigation. If you want to force the website itself to be loaded over HTTPS you must include the `Strict-Transport-Security` header**
+
+6. Includes the `Content-Security-Policy` header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although JavaScript files cannot execute scripts in a "browsing context", they are included to target [web workers](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#csp_in_workers)
 
 ## Directory access
 
@@ -454,23 +472,6 @@ Be aware that Strict Transport Security is not revokable, and you must ensure be
 
 ## Prevent some browsers from MIME-sniffing the response
 
-1. Restricts all fetches by default to the origin of the current website by setting the `default-src` directive to `'self'` - which acts as a fallback to all [Fetch directives](/en-US/docs/Glossary/Fetch_directive).
-   - This is convenient as you do not have to specify all Fetch directives that apply to your site, for example: `connect-src 'self'; font-src 'self'; script-src 'self'; style-src 'self'`, etc
-   - This restriction also means that you must explicitly define from which site(s) your website is allowed to load resources from. Otherwise, it will be restricted to the same origin as the page making the request
-
-2. Disallows the `<base>` element on the website. This is to prevent attackers from changing the locations of resources loaded from relative URLs
-   - If you want to use the `<base>` element, then use `base-uri 'self'` instead
-
-3. Only allows form submissions are from the current origin with: `form-action 'self'`
-4. Prevents all websites (including your own) from embedding your webpages within e.g., the `<iframe>` or `<object>` element by setting: `frame-ancestors 'none'`.
-   - The `frame-ancestors` directive helps avoid [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) attacks and is similar to the `X-Frame-Options` header
-   - Browsers that support the CSP header will ignore `X-Frame-Options` if `frame-ancestors` is also specified
-
-5. Forces the browser to treat all the resources that are served over HTTP as if they were loaded securely over HTTPS by setting the `upgrade-insecure-requests` directive
-   - **`upgrade-insecure-requests` does not ensure HTTPS for the top-level navigation. If you want to force the website itself to be loaded over HTTPS you must include the `Strict-Transport-Security` header**
-
-6. Includes the `Content-Security-Policy` header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although JavaScript files can not execute scripts in a "browsing context", they are included to target [web workers](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#csp_in_workers)
-
 Some older browsers would try and guess the content type of a resource, even when it isn't properly set up on the server configuration. This reduces exposure to drive-by download attacks and cross-origin data leaks.
 
 ```apacheconf
@@ -500,7 +501,7 @@ Use services like the ones below to check your `Referrer-Policy`:
 
 ## Disable `TRACE` HTTP Method
 
-The [TRACE](/en-US/docs/Web/HTTP/Reference/Methods/TRACE) method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See [A Cross-Site Tracing (XST) attack](https://owasp.org/www-community/attacks/Cross_Site_Tracing) and [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/06-Test_HTTP_Methods#test-xst-potential)
+The [TRACE](/en-US/docs/Web/HTTP/Reference/Methods/TRACE) method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See [A Cross-Site Tracing (XST) attack](https://community.owasp.org/attacks/Cross_Site_Tracing) and [OWASP Web Security Testing Guide](https://owasp.github.io/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/06-Test_HTTP_Methods#test-xst-potential)
 
 Modern browsers now prevent TRACE requests made via JavaScript, however, other ways of sending TRACE requests with browsers have been discovered, such as using Java.
 
@@ -527,7 +528,7 @@ This header doesn't provide any value, and in some cases, the information it pro
 </IfModule>
 ```
 
-If you can, you should disable the `X-Powered-By` header from the language/framework level (e.g.: for PHP, you can do that by setting the following in `php.ini`.
+If you can, you should disable the `X-Powered-By` header at the language/framework level. For example, in PHP, you can do that by setting the following in `php.ini`:
 
 ```ini
 expose_php = off;

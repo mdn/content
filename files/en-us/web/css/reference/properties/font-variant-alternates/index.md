@@ -1,5 +1,6 @@
 ---
-title: font-variant-alternates
+title: "`font-variant-alternates` CSS property"
+short-title: font-variant-alternates
 slug: Web/CSS/Reference/Properties/font-variant-alternates
 page-type: css-property
 browser-compat: css.properties.font-variant-alternates
@@ -36,12 +37,9 @@ font-variant-alternates: revert-layer;
 font-variant-alternates: unset;
 ```
 
-This property may take one of two forms:
-
-- either the keyword `normal`
-- or one or more of the other keywords and functions listed below, space-separated, in any order.
-
 ### Values
+
+This property is specified as `normal` or as a space-separated list of the following values:
 
 - `normal`
   - : This keyword deactivates alternate glyphs.
@@ -133,5 +131,5 @@ p {
 - {{cssxref("font-variant-ligatures")}}
 - {{cssxref("font-variant-numeric")}}
 - {{cssxref("font-variant-position")}}
-- [`@font-feature-values`](/en-US/docs/Web/CSS/Reference/At-rules/@font-feature-values)
+- {{cssxref("@font-feature-values")}}
 - {{cssxref("font-feature-settings")}}

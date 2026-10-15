@@ -1,10 +1,15 @@
 ---
-title: :interest-target
+title: "`:interest-target` CSS pseudo-class"
+short-title: :interest-target
 slug: Web/CSS/Reference/Selectors/:interest-target
 page-type: css-pseudo-class
+status:
+  - experimental
 browser-compat: css.selectors.interest-target
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`:interest-target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents the target element associated with an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) when interest is shown on that invoker.
 
@@ -33,7 +38,7 @@ The markup includes a {{htmlelement("button")}} and a {{htmlelement("p")}}. We s
 
 #### CSS
 
-In the CSS, we specify a rule with an `:interest-target` selector, which will apply a specific set of sttyles to the `<p>` element when interest is shown in the `<button>`. We also apply some other styles to the `<button>`, which we've hidden for brevity.
+In the CSS, we specify a rule with an `:interest-target` selector, which will apply a specific set of styles to the `<p>` element when interest is shown in the `<button>`. We also apply some other styles to the `<button>`, which we've hidden for brevity.
 
 ```css hidden live-sample___interest-target
 body {
@@ -42,9 +47,9 @@ body {
 
 button {
   padding: 5px 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   border-radius: 5px;
-  background-color: #eee;
+  background-color: #eeeeee;
 
   cursor: pointer;
 }

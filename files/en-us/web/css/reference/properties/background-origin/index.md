@@ -1,5 +1,6 @@
 ---
-title: background-origin
+title: "`background-origin` CSS property"
+short-title: background-origin
 slug: Web/CSS/Reference/Properties/background-origin
 page-type: css-property
 browser-compat: css.properties.background-origin
@@ -61,9 +62,9 @@ background-origin: revert-layer;
 background-origin: unset;
 ```
 
-The `background-origin` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `border-box`
   - : The background is positioned relative to the border box.

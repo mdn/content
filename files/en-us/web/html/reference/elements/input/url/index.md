@@ -1,5 +1,6 @@
 ---
-title: <input type="url">
+title: '`<input type="url">` HTML attribute value'
+short-title: <input type="url">
 slug: Web/HTML/Reference/Elements/input/url
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_url
@@ -8,20 +9,20 @@ sidebar: htmlsidebar
 
 {{HTMLElement("input")}} elements of type **`url`** are used to let the user enter and edit a URL.
 
+The input value is automatically validated to ensure that it's either empty or a properly-formatted URL before the form can be submitted. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are automatically applied as appropriate to visually denote whether the current value of the field is a valid URL or not.
+
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;url&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<form>
-  <label for="url">Enter an https:// URL:</label>
-  <input
-    type="url"
-    name="url"
-    id="url"
-    placeholder="https://example.com"
-    pattern="https://.*"
-    size="30"
-    required />
-</form>
+<label for="url">Enter an https:// URL:</label>
+<input
+  type="url"
+  name="url"
+  id="url"
+  placeholder="https://example.com"
+  pattern="https://.*"
+  size="30"
+  required />
 ```
 
 ```css interactive-example
@@ -37,8 +38,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-The input value is automatically validated to ensure that it's either empty or a properly-formatted URL before the form can be submitted. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are automatically applied as appropriate to visually denote whether the current value of the field is a valid URL or not.
 
 ## Value
 
@@ -296,9 +295,17 @@ The [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute 
 </form>
 ```
 
+```js hidden live-sample___url-validation
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+});
+```
+
 #### CSS
 
-The CSS gives visual clues to show the user if the content is {{cssxref(":valid")}} or {{cssxref(":invalid")}} by adding an appropriate {{cssxref("content")}} property and includes [alternative text](/en-US/docs/Web/CSS/Reference/Properties/content#alternative_text_string_counter) for users with assistive technologies.
+The CSS gives visual clues to show the user if the content is {{cssxref(":valid")}} or {{cssxref(":invalid")}} by adding an appropriate {{cssxref("content")}} property and includes [alternative text](/en-US/docs/Web/CSS/Reference/Properties/content#alternative_text_string_counter_attr) for users with assistive technologies.
 
 ```css live-sample___url-validation
 input:focus:invalid {
@@ -373,19 +380,12 @@ Check the [Pattern validation](#pattern_validation) and [Using URL inputs](#usin
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}
-        and
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.
-      </td>
-    </tr>
-    <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td>with no <code>list</code> attribute:
-                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code></td>
-      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code></td>
+      <td>
+        with no <code>list</code> attribute:
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code><br />
+        with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code>
+      </td>
     </tr>
   </tbody>
 </table>

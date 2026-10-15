@@ -65,7 +65,7 @@ If the user can interact with an element (for example, using touch or a pointing
 
 ## Focusable element must have focus styling
 
-Any element that can receive keyboard focus should have visible styling that indicates when the element is focused. You can do this with the [`:focus`](/en-US/docs/Web/CSS/Reference/Selectors/:focus) and [`:focus-visible`](/en-US/docs/Web/CSS/Reference/Selectors/:focus-visible) CSS pseudo-classes.
+Any element that can receive keyboard focus should have visible styling that indicates when the element is focused. You can do this with the {{cssxref(":focus")}} and {{cssxref(":focus-visible")}} CSS pseudo-classes.
 
 Standard focusable elements such as links and input fields are given special styling by the browser by default, so you might not need to specify focus styling for such elements, unless you want the focus styling to be more distinctive.
 

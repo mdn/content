@@ -1,5 +1,6 @@
 ---
-title: :heading()
+title: "`:heading()` CSS pseudo-class"
+short-title: :heading()
 slug: Web/CSS/Reference/Selectors/:heading_function
 page-type: css-pseudo-class
 status:
@@ -67,4 +68,4 @@ In this example, a comma-separated list of values is used to target headings at 
 
 ## See also
 
-- [`:heading`](/en-US/docs/Web/CSS/Reference/Selectors/:heading)
+- {{cssxref(":heading")}}

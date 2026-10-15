@@ -6,9 +6,9 @@ page-type: listing-page
 sidebar: cssref
 ---
 
-This page lists the guides you can use to learn about various CSS concepts and techniques.
+This page lists CSS modules, which reflect how CSS specifications are structured. Each module provides an overview of the specification, lists the features it provides (such as properties, at-rules, and data types), and shows how they relate to other parts of CSS and the web platform. You can use the module pages as a starting point to navigate through the related guides and dive deeper into reference documentation for specific features.
 
-Guides are organized by modules, which reflect how CSS specifications are structured. Each module landing page, such as for [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model), provides an overview of the specification, lists the features it provides (such as properties, at-rules, and data types), and shows how they relate to other parts of CSS and the web platform. You can use the module pages as a starting point to navigate through the related guides and dive deeper into reference documentation for specific features.
+To access the individual guides within each module, click on a module name from the following list to visit its landing page, or use the sidebar to navigate directly to a topic and discover all related guides.
 
 {{subpageswithsummaries}}
 

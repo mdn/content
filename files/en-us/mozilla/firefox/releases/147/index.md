@@ -1,83 +1,99 @@
 ---
-title: Firefox 147 release notes for developers (Nightly)
-short-title: Firefox 147 (Nightly)
+title: Firefox 147 release notes for developers
+short-title: Firefox 147
 slug: Mozilla/Firefox/Releases/147
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 147 that affect developers.
-Firefox 147 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [January 13, 2026](https://whattrainisitnow.com/release/?version=147).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 147 was released on [January 13, 2026](https://whattrainisitnow.com/release/?version=147).
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
+### Developer Tools
 
-<!-- ### HTML -->
+- When you select a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) (such as {{cssxref("::before")}} or {{cssxref("::after")}}) in the HTML pane of the Inspector, you can now edit the selector of the corresponding rule in the CSS pane.
+  ([Firefox bug 1998704](https://bugzil.la/1998704)).
+- During a view transition, {{cssxref("::view-transition")}} pseudo-elements now appear in the elements view. ([Firefox bug 1996608](https://bugzil.la/1996608)).
+- During a view transition, the associated animations now appear in the animations panel. ([Firefox bug 1995296](https://bugzil.la/1995296)).
+- Elements with a valid {{cssxref("anchor-name")}} get an 'anchor' badge in the elements view. ([Firefox bug 1895196](https://bugzil.la/1895196)).
+- A highlighted element's associated {{cssxref("@position-try")}} rules are now displayed in the CSS rules panel. ([Firefox bug 1895176](https://bugzil.la/1895176)).
+- JSON payloads can be imported into Firefox Profiler from the JSON viewer using a new button. This provides a breakdown of the size of the resource. ([Firefox bug 1997209](https://bugzil.la/1997209)).
 
-<!-- No notable changes. -->
+### HTML
 
-<!-- #### Removals -->
+No notable changes.
 
-<!-- ### MathML -->
+### SVG
 
-<!-- #### Removals -->
+- When an SVG file is used as an [image source](/en-US/docs/Web/SVG/Guides/SVG_as_an_image) (for example, embedded into a page via an {{htmlelement("img")}} element or as a CSS {{cssxref("background-image")}}), the SVG URL now supports [media fragments](/en-US/docs/Web/URI/Reference/Fragment/Media_fragments). ([Firefox bug 1999989](https://bugzil.la/1999989)). This means that:
+  - When the SVG includes a [SMIL animation](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL), you can use [temporal dimension](/en-US/docs/Web/URI/Reference/Fragment/Media_fragments#temporal_dimension_fragment_syntax) syntax to play a portion of the animation from a specific start time to a specific end time, after which the animation will pause.
+  - You can use [spatial dimension](/en-US/docs/Web/URI/Reference/Fragment/Media_fragments#spatial_dimension_fragment_syntax) syntax to display a specific area of the SVG document.
 
-<!-- ### SVG -->
+### CSS
 
-<!-- #### Removals -->
+- [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) is now enabled by default.
+  ([Firefox bug 1988225](https://bugzil.la/1988225)).
+  - The [`anchor-center`](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#centering_on_the_anchor_using_anchor-center) value, which provides a convenient way to center an anchor-positioned element on its anchor, was added in version 147. It is available on the {{cssxref("align-items")}}, {{cssxref("align-self")}}, {{cssxref("justify-items")}}, {{cssxref("justify-self")}}, {{cssxref("place-items")}}, and {{cssxref("place-self")}} properties.
+    ([Firefox bug 1909339](https://bugzil.la/1909339))
+  - The {{cssxref("position-anchor")}} value `none` was added in version 147, which enables an implicit or explicit association between a [CSS anchor](/en-US/docs/Web/CSS/Guides/Anchor_positioning) and an anchor-positioned element to be removed.
+    ([Firefox bug 1999972](https://bugzil.la/1999972)).
+- The `-webkit-` prefixed version of the {{cssxref("perspective")}} property is now supported with unitless values — for example `-webkit-perspective: 800` — for increased compatibility.
+  ([Firefox bug 1362499](https://bugzil.la/1362499)).
+- [View transition types](/en-US/docs/Web/API/View_Transition_API/Using_types) are now supported, which provide a mechanism by which different **types** can be specified for active view transitions. CSS can then be used to apply animations to DOM elements when their content updates, depending on the transition type specified. Firefox 147 adds support for single-page app (SPA) view transition types only, not cross-document view transition types.
+  ([Firefox bug 2001878](https://bugzil.la/2001878)).
+- The {{cssxref("counter-increment")}}, {{cssxref("counter-reset")}}, {{cssxref("counter-set")}}, and {{cssxref("quotes")}} properties are now supported on the {{cssxref("::marker")}} pseudo-element.
+  ([Firefox bug 2000404](https://bugzil.la/2000404)).
+- The following [relative length units based on root element's font](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_root_elements_font) are now supported: `rcap`, `rch`, `rex`, and `ric`. These units allow you to define `<length>` values based on the size of a particular character or font attribute of the [root](/en-US/docs/Web/CSS/Reference/Selectors/:root) element.
+  ([Firefox bug 1740584](https://bugzil.la/1740584)).
 
-<!-- ### CSS -->
+### JavaScript
 
-<!-- #### Removals -->
+- CSS module scripts are now supported, allowing a stylesheet to be loaded into a script as a {{domxref("CSSStyleSheet")}} instance using the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) keyword and the `type` [import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) set to [`type="css"`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#css_modules_type_css).
+  ([Firefox bug 1986681](https://bugzil.la/1986681)).
+- The {{jsxref("Iterator.concat()")}} method is now supported. This method enables you to create a new iterator that combines multiple input iterables into a single sequence.
+  ([Firefox bug 1986672](https://bugzil.la/1986672)).
 
-<!-- ### JavaScript -->
+### APIs
 
-<!-- No notable changes. -->
+- The {{domxref("Document.activeViewTransition")}} property is now supported, which returns a {{domxref("ViewTransition")}} instance representing the [view transition](/en-US/docs/Web/API/View_Transition_API) currently active on the document. This provides a consistent way to access an active view transition in any context without having to manually store a reference to it for later use. ([Firefox bug 2001836](https://bugzil.la/2001836)).
+- [WebGPU API](/en-US/docs/Web/API/WebGPU_API) support is now enabled for all macOS versions on devices with Apple Silicon processors (previously only macOS Tahoe support was enabled). ([Firefox bug 1993341](https://bugzil.la/1993341)).
+- The [Navigation API](/en-US/docs/Web/API/Navigation_API) is now supported.
+  This provides the ability to initiate, intercept, and manage browser navigation actions, and to examine an application's history entries. This is a successor to previous web platform features such as the {{domxref("History API", "", "", "nocode")}} and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
+  ([Firefox bug 1997962](https://bugzil.la/1997962)).
+- Brotli compression is now supported for both [`CompressionStream`](/en-US/docs/Web/API/CompressionStream/CompressionStream#brotli) and [`DecompressionStream`](/en-US/docs/Web/API/DecompressionStream/DecompressionStream#brotli).
+  ([Firefox bug 1921583](https://bugzil.la/1921583)).
+- Service workers can now be ECMAScript [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules).
+  To load a service worker module, specify a [`type`](/en-US/docs/Web/API/ServiceWorkerContainer/register#type) of `'module'` when calling {{domxref("ServiceWorkerContainer.register()")}}.
+  ([Firefox bug 1360870](https://bugzil.la/1360870)).
 
-<!-- #### Removals -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- ### HTTP -->
+#### General
 
-<!-- #### Removals -->
+- Fixed the new session response to include the required `setWindowRect` property. ([Firefox bug 1916522](https://bugzil.la/1916522)).
 
-<!-- ### Security -->
+#### WebDriver BiDi
 
-<!-- #### Removals -->
+- Implemented the `input.fileDialogOpened` event, which is emitted whenever a file picker is triggered by the content page, for instance after clicking on an input with `type="file"`. ([Firefox bug 1855045](https://bugzil.la/1855045)).
+- Implemented the `emulation.setScreenSettingsOverride` command to allow clients to emulate the screen dimensions for a list of browsing contexts or user contexts. ([Firefox bug 2000651](https://bugzil.la/2000651)).
+- Fixed an issue where `browsingContext.navigate` with `wait=none` didn't always contain the real target URL. ([Firefox bug 2004191](https://bugzil.la/2004191)).
+- Updated `script.evaluate` and `script.callFunction` to bypass Content Security Policy (CSP). ([Firefox bug 1941780](https://bugzil.la/1941780)).
+- Fixed missing `script.realmCreated` event for new browsing contexts created via `window.open`. ([Firefox bug 2002721](https://bugzil.la/2002721)).
+- Updated `emulation.setLocaleOverride` to override the `Accept-Language` header. ([Firefox bug 1995691](https://bugzil.la/1995691)).
+- Updated `emulation.setLocaleOverride` to throw an error when called with the `locale` argument equal to `undefined`. ([Firefox bug 2003992](https://bugzil.la/2003992)).
 
-<!-- ### APIs -->
+#### Marionette
 
-<!-- #### DOM -->
-
-<!-- #### Media, WebRTC, and Web Audio -->
-
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
-
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
-
-<!-- #### General -->
-
-<!-- #### WebDriver BiDi -->
-
-<!-- #### Marionette -->
+- Fixed JSON serialization of Chrome Windows. ([Firefox bug 2000801](https://bugzil.la/2000801)).
 
 ## Changes for add-on developers
 
-<!-- ### Removals -->
-
-<!-- ### Other -->
+- When using [navigator.clipboard.readText()](/en-US/docs/Web/API/Clipboard/readText) or [navigator.clipboard.read()](/en-US/docs/Web/API/Clipboard/read) without the `clipboardRead` permission, a clipboard paste button is displayed to obtain user confirmation. If the extension has `clipboardRead` permission, it continues to read the clipboard data without user confirmation, as before. For more information on working with the clipboard in extensions, see [Interact with the clipboard](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard). ([Firefox bug 1773681](https://bugzil.la/1773681))
+- Temporarily loaded Manifest Version 3 extensions can now load scripts from localhost, as explained in [Scripts from localhost](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#scripts_from_localhost) in the Content Security Policy article. ([Firefox bug 1864284](https://bugzil.la/1864284))
 
 ## Experimental web features
 
-These features are shipping in Firefox 147 but are disabled by default.
-To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
-You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+No experimental features were added in this release.
+Check the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page for features from other releases.

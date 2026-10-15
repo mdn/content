@@ -2,12 +2,10 @@
 title: NavigationHistoryEntry
 slug: Web/API/NavigationHistoryEntry
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.NavigationHistoryEntry
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`NavigationHistoryEntry`** interface of the {{domxref("Navigation API", "Navigation API", "", "nocode")}} represents a single navigation history entry.
 
@@ -21,27 +19,27 @@ The Navigation API only exposes history entries created in the current browsing 
 
 _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
-- {{domxref("NavigationHistoryEntry.id", "id")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("NavigationHistoryEntry.id", "id")}} {{ReadOnlyInline}}
   - : Returns the `id` of the history entry. This is a unique, UA-generated value that always represents a specific history entry, useful to correlate it with an external resource such as a storage cache.
-- {{domxref("NavigationHistoryEntry.index", "index")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("NavigationHistoryEntry.index", "index")}} {{ReadOnlyInline}}
   - : Returns the index of the history entry in the history entries list (that is, the list returned by {{domxref("Navigation.entries()")}}), or `-1` if the entry does not appear in the list.
-- {{domxref("NavigationHistoryEntry.key", "key")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("NavigationHistoryEntry.key", "key")}} {{ReadOnlyInline}}
   - : Returns the `key` of the history entry. This is a unique, UA-generated value that represents the history entry's slot in the entries list rather than the entry itself. It is used to navigate that particular slot via {{domxref("Navigation.traverseTo()")}}. The `key` will be reused by other entries that replace the entry in the list (that is, if the {{domxref("NavigateEvent.navigationType")}} is `replace`).
-- {{domxref("NavigationHistoryEntry.sameDocument", "sameDocument")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("NavigationHistoryEntry.sameDocument", "sameDocument")}} {{ReadOnlyInline}}
   - : Returns `true` if this history entry is for the same `document` as the current {{domxref("Document")}} value, or `false` otherwise.
-- {{domxref("NavigationHistoryEntry.url", "url")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("NavigationHistoryEntry.url", "url")}} {{ReadOnlyInline}}
   - : Returns the absolute URL of this history entry. If the entry corresponds to a different document than the current one (like `sameDocument` property is `false`), and that document was fetched with a {{httpheader("Referrer-Policy")}} header set to `no-referrer` or `origin`, the property returns `null`.
 
 ## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
-- {{domxref("NavigationHistoryEntry.getState", "getState()")}} {{Experimental_Inline}}
+- {{domxref("NavigationHistoryEntry.getState", "getState()")}}
   - : Returns a clone of the available state associated with this history entry.
 
 ## Events
 
-- {{domxref("NavigationHistoryEntry/dispose_event", "dispose")}} {{Experimental_Inline}}
+- {{domxref("NavigationHistoryEntry/dispose_event", "dispose")}}
   - : Fires when the entry is no longer part of the history entry list.
 
 ## Examples

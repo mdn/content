@@ -1,12 +1,15 @@
 ---
-title: <gradient>
+title: "`<gradient>` CSS type"
+short-title: <gradient>
 slug: Web/CSS/Reference/Values/gradient
 page-type: css-type
 browser-compat: css.types.gradient
 sidebar: cssref
 ---
 
-The **`<gradient>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) is a special type of {{cssxref("&lt;image&gt;")}} that consists of a progressive transition between two or more colors.
+The **`<gradient>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) is a special type of {{cssxref("image")}} that consists of a progressive transition between two or more colors.
+
+A CSS gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/Reference/Values/image#description); i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element to which it applies.
 
 {{InteractiveExample("CSS Demo: &lt;gradient&gt;")}}
 
@@ -41,8 +44,6 @@ background: conic-gradient(#f69d3c, #3f87a6);
   min-height: 100%;
 }
 ```
-
-A CSS gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/Reference/Values/image#description); i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element to which it applies.
 
 ## Syntax
 

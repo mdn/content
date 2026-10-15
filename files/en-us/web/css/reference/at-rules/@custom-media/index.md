@@ -1,15 +1,17 @@
 ---
-title: "@custom-media"
+title: "`@custom-media` CSS at-rule"
+short-title: "@custom-media"
 slug: Web/CSS/Reference/At-rules/@custom-media
 page-type: css-at-rule
 status:
   - experimental
 browser-compat: css.at-rules.custom-media
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
-The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/Reference/At-rules) defines aliases for long or complex [media queries](/en-US/docs/Web/CSS/Guides/Media_queries). Instead of repeating the same hardcoded `<media-query-list>` in multiple [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) at-rules, it can be defined once in a `@custom-media` at-rule and referenced throughout the stylesheet whenever needed.
+The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/Reference/At-rules) defines aliases for long or complex [media queries](/en-US/docs/Web/CSS/Guides/Media_queries). Instead of repeating the same hardcoded `<media-query-list>` in multiple {{cssxref("@media")}} at-rules, it can be defined once in a `@custom-media` at-rule and referenced throughout the stylesheet whenever needed.
 
 ## Syntax
 
@@ -23,7 +25,7 @@ The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/Reference/At-rules) de
 ### Values
 
 - `<extension-name>`
-  - : A [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident); the name identifying the custom media query.
+  - : A {{cssxref("dashed-ident")}}; the name identifying the custom media query.
 - Represented value
   - : The value aliased by the custom media query. Possible values are:
     - `<media-query-list>`
@@ -35,13 +37,16 @@ The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/Reference/At-rules) de
 
 ## Description
 
-When building responsive interfaces, the same media condition often needs to be repeated across multiple [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) at-rules, sometimes across different files and teams. Duplicating media queries increases the risk of mistakes, makes refactoring harder, and creates unnecessary maintenance overhead. Any time a media query changes, every instance must be found and updated manually — a process that can be both error-prone and difficult to track in large codebases.
+When building responsive interfaces, the same media condition often needs to be repeated across multiple {{cssxref("@media")}} at-rules, sometimes across different files and teams. Duplicating media queries increases the risk of mistakes, makes refactoring harder, and creates unnecessary maintenance overhead. Any time a media query changes, every instance must be found and updated manually — a process that can be both error-prone and difficult to track in large codebases.
 
 The `@custom-media` at-rule solves this problem by letting you define **named aliases** for media queries. Instead of repeating the full media query everywhere, you declare the media condition once as a custom media query and reference its alias throughout your stylesheets. With this in place, updating the underlying media query requires a single change in one location.
 
 Custom media queries can be composed from others by referencing their alias names inside the media query features. This enables building more expressive, layered conditions. However, a custom media query cannot refer to itself, nor can it form part of a circular chain of references. Any circular dependency — direct or indirect — invalidates all custom media queries involved in that loop.
 
-If multiple `@custom-media` rules define the same `<dashed-ident>` name, only the last declaration in the source order applies. All earlier declarations are ignored.
+If multiple `@custom-media` rules define the same `<dashed-ident>` name, the rule
+that is in scope at the time a `@media` rule is evaluated is used. Earlier
+references are not retroactively updated when a later `@custom-media` rule is
+declared.
 
 ### Evaluating media queries with logical operators
 
@@ -54,7 +59,7 @@ Because a `@custom-media` value is just a normal `<media-query-list>`, you can c
 The `not` operator negates an entire media condition. This is useful when you want a rule to apply only when a specific condition is `false`.
 
 ```css
-@custom-media --no-script not (script);
+@custom-media --no-script not (scripting);
 
 @media (--no-script) {
 }
@@ -75,20 +80,20 @@ This alias only matches when the viewport is within the specified width range.
 
 #### Using the `or` operator
 
-The logical `or` operator (or its comma alias) creates a media query that matches if any of the listed conditions are `true`.
+The logical `or` operator (or its comma alias, when combining media types) creates a media query that matches if any of the listed conditions are `true`.
 
 ```css
-@custom-media --screen-or-print-1 screen, print;
-@custom-media --screen-or-print-2 screen or print;
+@custom-media --screen-or-print screen, print;
+@custom-media --narrow-or-tall (width < 600px) or (height > 800px);
 
-@media (--screen-or-print-1) {
+@media (--screen-or-print) {
 }
 
-@media (--screen-or-print-2) {
+@media (--narrow-or-tall) {
 }
 ```
 
-The two aliases are identical. They are activated for both screen and print environments.
+The `--screen-or-print` alias uses a comma to match either the `screen` or `print` media type. The `--narrow-or-tall` alias uses the `or` keyword to combine two media features, matching when the viewport is narrower than 600px, taller than 800px, or both.
 
 ## Formal syntax
 
@@ -221,7 +226,20 @@ In this example, one `@custom-media` rule is overridden by another `@custom-medi
 @custom-media --mobile-breakpoint (width < 480px);
 ```
 
-The initial definition of `--mobile-breakpoint` is overridden and therefore ignored. The final declaration becomes the active value used by all references to that custom media query.
+When multiple `@custom-media` rules use the same name, the rule that is in scope
+at the time a `@media` rule is evaluated is used. Earlier references are not
+retroactively updated when a later `@custom-media` rule is declared.
+
+For example, in the code above, the `--mobile-breakpoint` reference inside the
+`@media` rule is evaluated as `(width < 320px)`, so the `.container` rule is only
+applied when the viewport is less than 320px wide, even though
+`--mobile-breakpoint` is redefined as `(width < 480px)` later in the stylesheet.
+
+> [!NOTE]
+> The overriding behavior of `@custom-media` is still under discussion in the CSS
+> specification and may change in the future. See the
+> [Browser compatibility](#browser_compatibility) section for current support
+> status.
 
 ## Specifications
 
@@ -233,7 +251,7 @@ The initial definition of `--mobile-breakpoint` is overridden and therefore igno
 
 ## See also
 
-- CSS [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) at-rule
-- CSS [`@import`](/en-US/docs/Web/CSS/Reference/At-rules/@import) at-rule
+- CSS {{cssxref("@media")}} at-rule
+- CSS {{cssxref("@import")}} at-rule
 - [Responsive design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
 - [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries) module

@@ -1,5 +1,6 @@
 ---
-title: ::scroll-marker-group
+title: "`::scroll-marker-group` CSS pseudo-element"
+short-title: ::scroll-marker-group
 slug: Web/CSS/Reference/Selectors/::scroll-marker-group
 page-type: css-pseudo-element
 status:
@@ -193,6 +194,8 @@ ul::scroll-marker-group {
 - {{cssxref("::scroll-marker")}}
 - {{cssxref("::column")}}
 - {{cssxref(":target-current")}}
+- {{cssxref(":target-before")}}
+- {{cssxref(":target-after")}}
 - [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels)
 - [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
 - [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module

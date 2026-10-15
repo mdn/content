@@ -70,7 +70,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCOutboundRtpStreamStats.totalEncodeTime", "totalEncodeTime")}}
   - : A number that represents the total number of seconds that have been spent encoding the frames encoded for this stream {{domxref("RTCRtpSender")}}.
     _Undefined for audio streams._
-- {{domxref("RTCOutboundRtpStreamStats.totalEncodedBytesTarget", "totalEncodedBytesTarget")}} {{experimental_inline}}
+- {{domxref("RTCOutboundRtpStreamStats.totalEncodedBytesTarget", "totalEncodedBytesTarget")}} {{deprecated_inline}}
   - : A cumulative sum of the _target_ frame sizes for all of the frames encoded so far.
     This will likely differ from the total of the _actual_ frame sizes.
     _Undefined for audio streams._

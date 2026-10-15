@@ -1,5 +1,6 @@
 ---
-title: direction
+title: "`direction` CSS property"
+short-title: direction
 slug: Web/CSS/Reference/Properties/direction
 page-type: css-property
 browser-compat: css.properties.direction
@@ -68,6 +69,8 @@ direction: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `ltr`
   - : Text and other elements go from left to right. This is the default value.
 - `rtl`
@@ -107,12 +110,10 @@ blockquote {
 ```html
 <blockquote>
   <p>This paragraph is in English but incorrectly goes right to left.</p>
-  <p></p>
 </blockquote>
 
 <blockquote>
   <p>هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار.</p>
-  <p></p>
 </blockquote>
 ```
 

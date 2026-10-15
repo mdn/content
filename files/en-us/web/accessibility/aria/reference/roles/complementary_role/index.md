@@ -25,7 +25,7 @@ This is a sidebar containing links to project sponsors.
 The `complementary` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles) role. Landmarks can be used by assistive technology to quickly identify and navigate to large sections of the document. Content listed within a container with the `complementary` landmark role should make sense if separated from the main content of the document.
 
 > [!NOTE]
-> Using the {{HTMLElement('aside')}} element will automatically communicate a section has a role of `complementary`. Developers should always prefer using the correct semantic HTML element over using ARIA.
+> The {{HTMLElement('aside')}} element has an implicit role of `complementary`, unless it has no {{glossary("accessible name")}} and is nested in [sectioning content](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content). Developers should always prefer using the correct semantic HTML element over using ARIA.
 
 ## Examples
 
@@ -54,7 +54,7 @@ The `complementary` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Guid
 
 ### Prefer HTML
 
-Using the {{HTMLElement('aside')}} element will automatically communicate that the element has a role of `complementary`. If possible, prefer using the semantic `<aside>` element instead of the `complementary` role.
+The {{HTMLElement('aside')}} element has an implicit role of `complementary`, unless it has no {{glossary("accessible name")}} and is nested in [sectioning content](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content). If possible, prefer using the semantic `<aside>` element instead of the `complementary` role.
 
 ### Labeling landmarks
 
@@ -76,7 +76,7 @@ If there is more than one `complementary` landmark role or {{HTMLElement('aside'
 
 #### Redundant descriptions
 
-Screen readers will announce the type of role the landmark is. Because of this, you do not need to describe what the landmark is in its label. For example, a declaration of `role="complementary"` with an of `aria-label="Sidebar"` may be announced redundantly as, "complementary sidebar".
+Screen readers will announce the type of role the landmark is. Because of this, you do not need to describe what the landmark is in its label. For example, a declaration of `role="complementary"` with an `aria-label="Sidebar"` may be announced redundantly as, "complementary sidebar".
 
 ### Added benefits
 
@@ -93,6 +93,5 @@ Certain technologies such as browser extensions can generate lists of all landma
 - [\<aside>: The Aside element](/en-US/docs/Web/HTML/Reference/Elements/aside)
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [Landmark roles: Using ARIA: Roles, States, and Properties](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)
-- [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [Aside Revisited | HTML5 Doctor](https://html5doctor.com/aside-revisited/)

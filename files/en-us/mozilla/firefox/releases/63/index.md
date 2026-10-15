@@ -65,7 +65,7 @@ _No changes._
 
 #### New APIs
 
-- The Shadow DOM ([Firefox bug 1471947](https://bugzil.la/1471947)) and Custom Elements ([Firefox bug 1471948](https://bugzil.la/1471948)) APIs have been enabled by default; See [Web components](/en-US/docs/Web/API/Web_components) for more details.
+- The Shadow DOM ([Firefox bug 1471947](https://bugzil.la/1471947)) and Custom Elements ([Firefox bug 1471948](https://bugzil.la/1471948)) APIs have been enabled by default; see [Web components](/en-US/docs/Web/API/Web_components) for more details.
 - The {{domxref("Media_Capabilities_API", "Media Capabilities API", "", "1")}} has been implemented ([Firefox bug 1409664](https://bugzil.la/1409664)).
 - The {{domxref("Clipboard", "Async Clipboard API", "", "1")}} has been implemented and enabled by default for all channels ([Firefox bug 1461465](https://bugzil.la/1461465)). As is the case with Chrome, Firefox currently implements only the {{domxref("Clipboard.writeText", "writeText()")}} and {{domxref("Clipboard.readText", "readText()")}} methods; however, unlike Chrome, `readText()` is only available in [browser extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).
 - The {{DOMxRef("SecurityPolicyViolationEvent")}} interface is now supported. It allows sending events when the {{HTTPHeader("Content-Security-Policy")}} is violated ([Firefox bug 1472661](https://bugzil.la/1472661)).
@@ -135,7 +135,7 @@ _No changes._
 #### New features
 
 - Marionette now returns a `setWindowRect` [capability](/en-US/docs/Web/WebDriver/Reference/Capabilities) in the `WebDriver:NewSession` response that is true if the browser window can be repositioned and resized, which e.g., is the case for Firefox but not any mobile applications ([Firefox bug 1470659](https://bugzil.la/1470659)).
-- Added support for the `unhandledPromptBehavior` capability, which allows to define a specific [prompt behavior](https://w3c.github.io/webdriver/#dfn-user-prompt-handler) of the WebDriver specification ([Firefox bug 1264259](https://bugzil.la/1264259)).
+- Added support for the `unhandledPromptBehavior` capability, which allows you to define a specific [prompt behavior](https://w3c.github.io/webdriver/#dfn-user-prompt-handler) of the WebDriver specification ([Firefox bug 1264259](https://bugzil.la/1264259)).
 - Handling of user prompts has been added to the `WebDriver:ExecuteScript` and `WebDriver:ExecuteAsyncScript` commands ([Firefox bug 1439995](https://bugzil.la/1439995)).
 
 #### API changes
@@ -200,7 +200,7 @@ _No changes._
 - {{WebExtAPIRef("menus.create()")}} now enables you to create invisible menu items, and {{WebExtAPIRef("menus.update()")}} enables you to toggle menu item visibility ([Firefox bug 1482529](https://bugzil.la/1482529)).
 - Items created using the {{WebExtAPIRef("menus")}} API now support access keys ([Firefox bug 1320462](https://bugzil.la/1320462)).
 - The `targetUrlPatterns` parameter of {{WebExtApiRef("menus.create()")}} and {{WebExtApiRef("menus.update()")}} now supports any URL scheme, even those that are usually not allowed in a match pattern ([Firefox bug 1280370](https://bugzil.la/1280370)).
-- When a tab context menu item is clicked, the ["activeTab" permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) is now granted for that tab, even if that's not the currently active tab ([Firefox bug 1446956](https://bugzil.la/1446956)).
+- When a tab context menu item is clicked, the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission) is now granted for that tab, even if that's not the currently active tab ([Firefox bug 1446956](https://bugzil.la/1446956)).
 
 #### Other
 

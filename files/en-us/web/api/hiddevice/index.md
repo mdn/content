@@ -18,7 +18,7 @@ The **`HIDDevice`** interface of the [WebHID API](/en-US/docs/Web/API/WebHID_API
 This interface also inherits properties from {{domxref("EventTarget")}}.
 
 - {{domxref("HIDDevice.opened")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("boolean")}}, true if the device has an open connection.
+  - : Returns a {{jsxref("Boolean")}}, true if the device has an open connection.
 - {{domxref("HIDDevice.vendorId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the vendorId of the HID device.
 - {{domxref("HIDDevice.productId")}} {{ReadOnlyInline}} {{Experimental_Inline}}

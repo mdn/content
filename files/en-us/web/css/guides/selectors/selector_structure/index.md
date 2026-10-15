@@ -73,13 +73,13 @@ If any selector in a [non-forgiving selector](/en-US/docs/Web/CSS/Reference/Sele
 }
 ```
 
-The {{cssxref(":is", ":is()")}} and {{cssxref(":where", ":where()")}} pseudo-classes can be used to construct [forgiving selector lists](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list#forgiving_selector_list).
+The {{cssxref(":is()")}} and {{cssxref(":where()")}} pseudo-classes can be used to construct [forgiving selector lists](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list#forgiving_selector_list).
 
 ## Relative selector
 
 A **relative selector** is a selector representing an element relative to one or more anchor elements preceded by a combinator. Relative selectors that don't begin with an explicit combinator have an implied [descendant combinator](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator).
 
-Relative selectors cannot be used in a selector list. Rather, it is accepted within certain contexts, such as the {{cssxref(":has", ":has()")}} pseudo-class.
+Relative selectors cannot be used in a selector list. Rather, it is accepted within certain contexts, such as the {{cssxref(":has()")}} pseudo-class.
 
 ```css
 :has(+ div#topic > #reference) {

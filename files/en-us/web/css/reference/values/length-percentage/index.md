@@ -1,5 +1,6 @@
 ---
-title: <length-percentage>
+title: "`<length-percentage>` CSS type"
+short-title: <length-percentage>
 slug: Web/CSS/Reference/Values/length-percentage
 page-type: css-type
 browser-compat: css.types.length-percentage
@@ -57,7 +58,7 @@ p {
 
 ### Use in calc()
 
-Where a `<length-percentage>` is specified as an allowable type, this means that the percentage resolves to a length and therefore can be used in a {{cssxref("calc", "calc()")}} expression. Therefore, all of the following values are acceptable for {{cssxref("width")}}:
+Where a `<length-percentage>` is specified as an allowable type, this means that the percentage resolves to a length and therefore can be used in a {{cssxref("calc()")}} expression. Therefore, all of the following values are acceptable for {{cssxref("width")}}:
 
 ```css example-good
 width: 200px;

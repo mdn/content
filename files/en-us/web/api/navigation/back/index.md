@@ -3,12 +3,10 @@ title: "Navigation: back() method"
 short-title: back()
 slug: Web/API/Navigation/back
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Navigation.back
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`back()`** method of the
 {{domxref("Navigation")}} interface navigates backwards by one entry in the navigation history.

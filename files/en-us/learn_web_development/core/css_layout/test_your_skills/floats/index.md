@@ -13,13 +13,17 @@ The aim of this skill test is to help you assess whether you understand [floats 
 > [!NOTE]
 > To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## Floats 1
 
-To complete this task, float the two elements with a class of `float1` and `float2` left and right, respectively. The text should then appear between the two boxes, as shown in the image below:
+To complete this task, float the two elements with classes of `float1` and `float2` to the left and right, respectively. The text should then appear between the two elements.
 
-![Two blocks displaying left and right of some text.](float-task1.png)
+The starting point of the task looks like this:
 
-```html live-sample___float1
+{{EmbedLiveSample("float1-start", "", "440px")}}
+
+Here's the underlying code for this starting point:
+
+```html live-sample___float1-start live-sample___float1-finish
 <div class="box">
   <div class="float float1">One</div>
   <div class="float float2">Two</div>
@@ -27,7 +31,7 @@ To complete this task, float the two elements with a class of `float1` and `floa
 </div>
 ```
 
-```css live-sample___float1
+```css live-sample___float1-start live-sample___float1-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -59,14 +63,16 @@ body {
 }
 ```
 
-{{EmbedLiveSample("float1", "", "210px")}}
+The layout should look like this once the task is complete:
+
+{{EmbedLiveSample("float1-finish", "", "210px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 You can use `float` for both boxes:
 
-```css
+```css live-sample___float1-finish
 .float1 {
   float: left;
 }
@@ -78,18 +84,20 @@ You can use `float` for both boxes:
 
 </details>
 
-## Task 2
+## Floats 2
 
 To complete this task:
 
 1. Float the element with a class of `float` to the left.
 2. Update the code so that the first line of text displays next to that element, but the following line of text (which has a class of `below`) displays underneath it.
 
-Your final result should look like the image below:
+The starting point of the task looks like this:
 
-![A box displayed to the left of a line of text, with some more text below.](float-task2.png)
+{{EmbedLiveSample("float2-start", "", "300px")}}
 
-```html live-sample___float2
+Here's the underlying code for this starting point:
+
+```html live-sample___float2-start live-sample___float2-finish
 <div class="box">
   <div class="float">Float</div>
   <p>This sentence appears next to the float.</p>
@@ -97,7 +105,7 @@ Your final result should look like the image below:
 </div>
 ```
 
-```css live-sample___float2
+```css live-sample___float2-start live-sample___float2-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -129,14 +137,16 @@ body {
 }
 ```
 
-{{EmbedLiveSample("float2", "", "300px")}}
+The finished layout should look like this:
+
+{{EmbedLiveSample("float2-finish", "", "300px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 You need to flow the item left, then add `clear: left` to the class for the second paragraph:
 
-```css
+```css live-sample___float2-finish
 .float {
   float: left;
 }
@@ -148,22 +158,26 @@ You need to flow the item left, then add `clear: left` to the class for the seco
 
 </details>
 
-## Task 3
+## Floats 3
 
-In this task, we have a floated element. The box wrapping the float and text is displaying behind the float.
+In this task, we have a floated element. The background box that wraps the float and the text does not currently extend underneath the floated element.
 
-To complete the task, use the most up-to-date method available to cause the box background to extend to below the float, as in the image below:
+To complete this task, use the most up-to-date method to ensure the background box contains the floated element and extends underneath it.
 
-![A block displayed to the right of some text both wrapped by a box with a background color.](float-task3.png)
+The starting point of the task looks like this:
 
-```html live-sample___float3
+{{EmbedLiveSample("float3-start", "", "220px")}}
+
+Here's the underlying code for this starting point:
+
+```html live-sample___float3-start live-sample___float3-finish
 <div class="box">
   <div class="float">Float</div>
   <p>This sentence appears next to the float.</p>
 </div>
 ```
 
-```css live-sample___float3
+```css live-sample___float3-start live-sample___float3-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -201,7 +215,9 @@ body {
 }
 ```
 
-{{EmbedLiveSample("float3", "", "300px")}}
+When you complete the task, the background box and floated element should look like this:
+
+{{EmbedLiveSample("float3-finish", "", "220px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -209,7 +225,7 @@ body {
 Clear the box underneath the floated item by adding `display: flow-root` to the class for `.box`.
 Other methods might be to use `overflow` or a clearfix hack, however the learning materials detail the `flow-root` method as the modern way to achieve this.
 
-```css
+```css live-sample___float3-finish
 .box {
   display: flow-root;
 }

@@ -1,7 +1,8 @@
 ---
-title: rule-list
+title: "`<rule-list>` CSS type"
+short-title: <rule-list>
 slug: Web/CSS/Reference/Values/rule-list
-page-type: css-keyword
+page-type: css-type
 spec-urls: https://drafts.csswg.org/css-syntax-3/#typedef-rule-list
 sidebar: cssref
 ---
@@ -95,6 +96,6 @@ body {
 
 ## See also
 
-- CSS [`@supports`](/en-US/docs/Web/CSS/Reference/At-rules/@supports) at-rule
-- CSS [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) at-rule
-- CSS [`@custom-media`](/en-US/docs/Web/CSS/Reference/At-rules/@custom-media) at-rule
+- CSS {{cssxref("@supports")}} at-rule
+- CSS {{cssxref("@media")}} at-rule
+- CSS {{cssxref("@custom-media")}} at-rule

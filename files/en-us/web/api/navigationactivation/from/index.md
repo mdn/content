@@ -3,12 +3,10 @@ title: "NavigationActivation: from property"
 short-title: from
 slug: Web/API/NavigationActivation/from
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigationActivation.from
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`from`** read-only property of the {{domxref("NavigationActivation")}} interface contains a {{domxref("NavigationHistoryEntry")}} object representing the history entry for the outgoing ("from") document in the navigation.
 

@@ -1,5 +1,6 @@
 ---
-title: linear()
+title: "`linear()` CSS function"
+short-title: linear()
 slug: Web/CSS/Reference/Values/easing-function/linear
 page-type: css-function
 browser-compat: css.types.easing-function.linear-function
@@ -7,7 +8,7 @@ sidebar: cssref
 ---
 
 The **`linear()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) creates a transition curve that progresses uniformly between points.
-As an [`<easing-function>`](/en-US/docs/Web/CSS/Reference/Values/easing-function), it creates transitions where the {{Glossary("interpolation")}} occurs at a constant rate from beginning to end.
+As an {{cssxref("easing-function")}}, it creates transitions where the {{Glossary("interpolation")}} occurs at a constant rate from beginning to end.
 
 ## Syntax
 

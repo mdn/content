@@ -21,7 +21,7 @@ A menu can be a permanently visible list of controls or a widget that can be mad
 
 When a user activates a choice in a menu that has been opened, the menu usually closes. If the menu choice action invokes a submenu, the menu will remain open and the submenu is displayed.
 
-When a menu opens, keyboard focus is placed on the first menu item. To be keyboard accessible, you need to [manage focus](https://usability.yale.edu/web-accessibility/articles/focus-keyboard-operability) for all descendants: all menu items within the `menu` are focusable. The menu button which opens the menu and the menu items, rather than the menu itself, are the focusable elements.
+When a menu opens, keyboard focus is placed on the first menu item. To be keyboard accessible, you need to [manage focus](https://primer.style/accessibility/design-guidance/focus-management/) for all descendants: all menu items within the `menu` are focusable. The menu button which opens the menu and the menu items, rather than the menu itself, are the focusable elements.
 
 Menu items include [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role), and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role). [Disabled](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) menu items are focusable but cannot be activated.
 
@@ -49,7 +49,7 @@ If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Acc
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation)
   - : indicates whether the menu orientation is horizontal or vertical; defaults to `vertical` if omitted.
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-  - : The `menu` is required to have an accessible name. Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`. Either include the `aria-labelledby` set to a the `id` to the `menuitem` or `button` that controls its display or use `aria-label` to define the label.
+  - : The `menu` is required to have an accessible name. Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`. Either include the `aria-labelledby` set to the `id` of the `menuitem` or `button` that controls its display or use `aria-label` to define the label.
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)
   - : Only set on the menu container to include elements that are not DOM children of the container. If set, those elements will appear in the reading order in the sequence they are referenced and after any items that are DOM children. When managing focus, ensure the visual focus order matches this assistive technology reading order.
 

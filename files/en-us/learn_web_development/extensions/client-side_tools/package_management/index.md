@@ -36,7 +36,7 @@ A **dependency** is a third-party bit of software that was probably written by s
 
 A simple example of a useful dependency that your project might need is some code to calculate relative dates as human-readable text. You could certainly code this yourself, but there's a strong chance that someone else has already solved this problem — why waste time reinventing the wheel? Moreover, a reliable third-party dependency will likely have been tested in a lot of different situations, making it more robust and cross-browser compatible than your own solution.
 
-A project dependency can be an entire JavaScript library or framework — such as React or Vue — or a very small utility like our human-readable date library, or it can be a command line tool such as Prettier or ESLint, which we talked about in previous articles.
+A project dependency can be an entire JavaScript library or framework — such as React or Vue — or a very small utility like our human-readable date library, or it can be a command-line tool such as Prettier or ESLint, which we talked about in previous articles.
 
 Without modern build tools, dependencies like this might be included in your project using a simple [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) element, but this might not work right out of the box and you will likely need some modern tooling to bundle your code and dependencies together when they are released on the web. A bundle is a term that's generally used to refer to a single file on your web server that contains all the JavaScript for your software — typically compressed as much as possible to help reduce the time it takes to get your software downloaded and displayed in your visitors' browser.
 
@@ -78,7 +78,7 @@ What is important is that you ensure you've chosen the best registry for you. Ma
 
 ## Using the package ecosystem
 
-Let's run through an example to get you started with using a package manager and registry to install a command line utility.
+Let's run through an example to get you started with using a package manager and registry to install a command-line utility.
 
 We will use [Vite](https://vite.dev/) to create a blank website. In the next article, we will expand on the toolchain to include more tools and show you how to deploy the site.
 
@@ -172,7 +172,7 @@ This is part of the npm magic — if in the future you move your codebase to ano
 
 One disadvantage is that Vite is only available inside our `npm-experiment` app; you won't be able to run it in a different directory. But the advantages outweigh the disadvantages.
 
-Note that we chose to install `vite` as a dev dependency. This difference rarely matters for an application, but for a library, it means when others install your package, they won't implicitly install Vite. Usually, for applications, any package imported in source code is a real dependency, while any package used for development (usually as command line tools) is a dev dependency. Install real dependencies by removing the `--save-dev` flag.
+Note that we chose to install `vite` as a dev dependency. This difference rarely matters for an application, but for a library, it means when others install your package, they won't implicitly install Vite. Usually, for applications, any package imported in source code is a real dependency, while any package used for development (usually as command-line tools) is a dev dependency. Install real dependencies by removing the `--save-dev` flag.
 
 You'll find a number of new files created too:
 
@@ -193,7 +193,7 @@ In Vite, the `index.html` file is front and central. It defines the starting poi
   <head>
     <meta charset="UTF-8" />
     <title>My test page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width" />
   </head>
   <body>
     <div id="root"></div>
@@ -202,7 +202,7 @@ In Vite, the `index.html` file is front and central. It defines the starting poi
 </html>
 ```
 
-Note that the `<script>` elements creates a dependency on a file called `src/main.jsx`, which declares the entry point of the JavaScript logic for the app. Create the `src` folder and create `main.jsx` in this folder, but leave it blank for now.
+Note that the `<script>` element creates a dependency on a file called `src/main.jsx`, which declares the entry point of the JavaScript logic for the app. Create the `src` folder and create `main.jsx` in this folder, but leave it blank for now.
 
 > [!NOTE]
 > The [`type="module"`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute is important. It tells the browser to treat the script as an ES module, which allows us to use `import` and `export` syntax in our JavaScript code. The file extension is `.jsx`, because in the next article, we will add React JSX syntax to it. Browsers don't understand JSX, but Vite will transform it to regular JavaScript for us, as if browsers do!
@@ -235,7 +235,7 @@ Now for some page content. As a demonstration, let's add a graph to the page. We
 npm install plotly.js-dist-min
 ```
 
-Note how we are installing without the `--save-dev` flag. As previously mentioned, this is because we will actually use this package in our source code, not just as a command line tool. This command will add a new `"dependencies"` object to your `package.json` file, with `plotly.js-dist-min` in it.
+Note how we are installing without the `--save-dev` flag. As previously mentioned, this is because we will actually use this package in our source code, not just as a command-line tool. This command will add a new `"dependencies"` object to your `package.json` file, with `plotly.js-dist-min` in it.
 
 > [!NOTE]
 > Here, we chose the package for you to complete our task. When you are writing your own code, think about the following questions when finding and installing a dependency:
@@ -403,7 +403,7 @@ npm run dev
 
 This should start Vite and start the same local development server, as we saw before.
 
-Note that the script we defined here no longer need the `npx` prefix. This is because npm (and yarn) commands are clever in that they will search for command line tools that are locally installed to the project before trying to find them through conventional methods (where your computer will normally store and allow software to be found). You can [learn more about the technical intricacies of the `run` command](https://docs.npmjs.com/cli/commands/npm-run/), although in most cases your own scripts will run just fine.
+Note that the script we defined here no longer need the `npx` prefix. This is because npm (and yarn) commands are clever in that they will search for command-line tools that are locally installed to the project before trying to find them through conventional methods (where your computer will normally store and allow software to be found). You can [learn more about the technical intricacies of the `run` command](https://docs.npmjs.com/cli/commands/npm-run/), although in most cases your own scripts will run just fine.
 
 This particular one may look unnecessary — `npm run dev` is more characters to type than `npx vite`, but it is a form of _abstraction_. It allows us to add more work to the `dev` command in the future, such as setting environment variables, generating temporary files, etc., without complicating the command.
 
@@ -421,11 +421,11 @@ You can add all kinds of things to the `scripts` property that help you do your 
 
 ## Summary
 
-This brings us to the end of our tour of package managers. Our next move is to build up a sample toolchain, putting all that we've learnt so far into practice.
+This brings us to the end of our tour of package managers. Our next move is to build up a sample toolchain, putting all that we've learned so far into practice.
 
 ## See also
 
-- [npm scripts reference](https://docs.npmjs.com/cli/v8/using-npm/scripts/)
-- [package.json reference](https://docs.npmjs.com/cli/v8/configuring-npm/package-json/)
+- [npm scripts reference](https://docs.npmjs.com/cli/using-npm/scripts/)
+- [package.json reference](https://docs.npmjs.com/cli/configuring-npm/package-json/)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Overview","Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain", "Learn_web_development/Extensions/Client-side_tools")}}

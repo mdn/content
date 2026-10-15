@@ -4,11 +4,12 @@ short-title: sharedStorage
 slug: Web/API/SharedStorageWorkletGlobalScope/sharedStorage
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: api.SharedStorageWorkletGlobalScope.sharedStorage
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{non-standard_header}}
 
 The **`context`** read-only property of the
 {{domxref("SharedStorageWorkletGlobalScope")}} interface contains a {{domxref("WorkletSharedStorage")}} object instance, which represents the shared storage for a particular origin as exposed to a worklet context.

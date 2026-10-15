@@ -4,11 +4,12 @@ short-title: register()
 slug: Web/API/SharedStorageWorkletGlobalScope/register
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: api.SharedStorageWorkletGlobalScope.register
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{non-standard_header}}
 
 The **`register()`** method of the
 {{domxref("SharedStorageWorkletGlobalScope")}} interface registers an {{domxref("SharedStorageOperation", "operation", "", "nocode")}} defined inside the current worklet module.

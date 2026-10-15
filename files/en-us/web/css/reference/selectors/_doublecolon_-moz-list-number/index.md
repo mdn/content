@@ -1,5 +1,6 @@
 ---
-title: ::-moz-list-number
+title: "`::-moz-list-number` CSS pseudo-element"
+short-title: ::-moz-list-number
 slug: Web/CSS/Reference/Selectors/::-moz-list-number
 page-type: css-pseudo-element
 status:

@@ -1,5 +1,6 @@
 ---
-title: font-smooth
+title: "`font-smooth` CSS property"
+short-title: font-smooth
 slug: Web/CSS/Reference/Properties/font-smooth
 page-type: css-property
 status:

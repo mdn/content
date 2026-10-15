@@ -1,5 +1,6 @@
 ---
-title: column-count
+title: "`column-count` CSS property"
+short-title: column-count
 slug: Web/CSS/Reference/Properties/column-count
 page-type: css-property
 browser-compat: css.properties.column-count
@@ -65,10 +66,18 @@ column-count: unset;
 
 ### Values
 
+This property is specified as a single value from the following list:
+
 - `auto`
   - : The number of columns is determined by other CSS properties, such as {{cssxref("column-width")}}.
 - {{cssxref("&lt;integer&gt;")}}
   - : Is a strictly positive {{cssxref("&lt;integer&gt;")}} describing the ideal number of columns into which the content of the element will be flowed. If the {{cssxref("column-width")}} is also set to a non-`auto` value, it merely indicates the maximum allowed number of columns.
+
+## Description
+
+Setting the `column-count` to a value greater than `1` creates a multi-column layout. The element's content will be evenly distributed between the specified number of columns.
+
+The `column-count` property, along with the {{cssxref("column-height")}} and {{cssxref("column-width")}} properties, can also be set by using the {{cssxref("columns")}} shorthand.
 
 ## Formal definition
 
@@ -114,7 +123,9 @@ column-count: unset;
 
 ## See also
 
-- {{CSSXref("column-width")}}, {{CSSXref("columns")}} shorthand
+- {{cssxref("column-height")}}
+- {{cssxref("column-width")}}
+- {{cssxref("columns")}} shorthand
 - {{CSSXref("column-rule-color")}}, {{CSSXref("column-rule-style")}}, {{CSSXref("column-rule-width")}}, {{CSSXref("column-rule")}} shorthand
 - [Learn: Multiple-column Layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout) (Learn Layout)
 - [Basic Concepts of Multicol](/en-US/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts)

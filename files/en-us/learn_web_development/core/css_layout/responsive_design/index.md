@@ -395,7 +395,7 @@ h1 {
 
 The problem with doing the above is that the user loses the ability to zoom any text set using the `vw` unit, as that text is always related to the size of the viewport. **Therefore you should never set text using viewport units alone**.
 
-There is a solution, and it involves using [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc). If you add the `vw` unit to a value set using a fixed size such as `em`s or `rem`s then the text will still be zoomable. Essentially, the `vw` unit adds on top of that zoomed value:
+There is a solution, and it involves using {{cssxref("calc()")}}. If you add the `vw` unit to a value set using a fixed size such as `em`s or `rem`s then the text will still be zoomable. Essentially, the `vw` unit adds on top of that zoomed value:
 
 ```css
 h1 {
@@ -468,10 +468,10 @@ Try resizing the browser window, as before, and note how this time the heading s
 If you look at the HTML source of a responsive page, you will usually see the following {{htmlelement("meta")}} tag in the `<head>` of the document.
 
 ```html
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="viewport" content="width=device-width" />
 ```
 
-This [`viewport`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport) meta tag tells mobile browsers that they should set the width of the viewport to the device's width, and scale the document to 100% of its intended size, which shows the document at the mobile-optimized size that you intended.
+This [`viewport`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport) meta tag tells mobile browsers that they should set the width of the viewport to the device's width which shows the document at the mobile-optimized size that you intended.
 
 Why is this needed? Because mobile browsers tend to lie about their viewport width.
 

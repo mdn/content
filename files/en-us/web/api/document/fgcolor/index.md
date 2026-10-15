@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.fgColor
 ---
 
-{{APIRef("DOM")}}{{Deprecated_header}}
+{{APIRef("DOM")}}
 
 **`fgColor`** gets/sets the foreground color, or text color, of
 the current document.

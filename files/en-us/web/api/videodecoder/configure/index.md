@@ -107,3 +107,8 @@ decoder.configure(config);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("VideoDecoder.isConfigSupported()")}}
+- [Codec String Support Table](https://webcodecsfundamentals.org/datasets/codec-support-table/)

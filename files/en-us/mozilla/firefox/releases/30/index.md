@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 30 was released on [June 10th, 2014](https://whattrainisitnow.com/release/?version=30). This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -47,7 +47,7 @@ _No change._
 - The non-standard, and deprecated since Firefox 15, `Blob.mozSlice` is no longer supported ([Firefox bug 961804](https://bugzil.la/961804)).
 - The non-standard `ArchiveReader` and `ArchiveRequest` are no longer exposed to the Web ([Firefox bug 968883](https://bugzil.la/968883)).
 - [WebIDL constructors](https://searchfox.org/firefox-main/source/dom/webidl/) cannot be called as functions anymore. They need to be preceded by the keyword `new`. ([Firefox bug 916644](https://bugzil.la/916644))
-- Added support for a new value (`alpha`) for the second, optional, parameter of the {{domxref("HTMLCanvasElement.getContext()")}} method allowing to define if alpha blending must be stored or not for this context. When not, the per-pixel alpha value in this store is always `1.0`. This allows the back-end to implement a fast-track. ([Firefox bug 982480](https://bugzil.la/982480))
+- Added support for a new value (`alpha`) for the second, optional, parameter of the {{domxref("HTMLCanvasElement.getContext()")}} method allowing you to define if alpha blending must be stored or not for this context. When not, the per-pixel alpha value in this store is always `1.0`. This allows the back-end to implement a fast-track. ([Firefox bug 982480](https://bugzil.la/982480))
 - `WorkerGlobalScope.console` now returns for the regular {{domxref("console")}}; `WorkerConsole` has been removed ([Firefox bug 965860](https://bugzil.la/965860)).
 - The {{domxref("WEBGL_debug_shaders")}} WebGL extension has been implemented ([Firefox bug 968374](https://bugzil.la/968374)).
 
@@ -69,4 +69,4 @@ _No change._
 
 ## Changes for add-on and Mozilla developers
 
-- The interface `nsIDOMWindowUtils` now supports the Boolean attribute `audioMuted` and `audioVolume`, a float in the range `[0.0 , 1.0]`, allowing to control the sound produced by a window (that is any tab or iframe). There is no UI for this, but is available to add-ons. ([Firefox bug 923247](https://bugzil.la/923247))
+- The interface `nsIDOMWindowUtils` now supports the Boolean attribute `audioMuted` and `audioVolume`, a float in the range `[0.0 , 1.0]`, allowing you to control the sound produced by a window (that is any tab or iframe). There is no UI for this, but is available to add-ons. ([Firefox bug 923247](https://bugzil.la/923247))

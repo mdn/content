@@ -1,5 +1,5 @@
 ---
-title: HTML hidden global attribute
+title: "`hidden` HTML global attribute"
 short-title: hidden
 slug: Web/HTML/Reference/Global_attributes/hidden
 page-type: html-attribute
@@ -149,7 +149,7 @@ The event handler changes the text content of the box to illustrate an action th
 
 <div>I'm not hidden</div>
 <div id="until-found-box" hidden="until-found">Hidden until found</div>
-<div>I'm hidden</div>
+<div>I'm not hidden, either</div>
 ```
 
 ```html hidden

@@ -1,5 +1,6 @@
 ---
-title: mask-border-repeat
+title: "`mask-border-repeat` CSS property"
+short-title: mask-border-repeat
 slug: Web/CSS/Reference/Properties/mask-border-repeat
 page-type: css-property
 browser-compat: css.properties.mask-border-repeat
@@ -11,7 +12,7 @@ The **`mask-border-repeat`** [CSS](/en-US/docs/Web/CSS) property specifies how t
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 mask-border-repeat: stretch;
 mask-border-repeat: repeat;
 mask-border-repeat: round;

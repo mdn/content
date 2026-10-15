@@ -18,7 +18,7 @@ The read-only **`clipPathUnits`** property of the {{domxref("SVGClipPathElement"
 An {{domxref("SVGAnimatedEnumeration")}} representing the coordinate system. The possible values are defined in the {{domxref("SVGUnitTypes")}} interface:
 
 - `0` (`SVG_UNIT_TYPE_UNKNOWN`)
-  - : The type is not one of the predefined type.
+  - : The type is not one of the predefined types.
 - `1` (`SVG_UNIT_TYPE_USERSPACEONUSE`)
   - : Corresponds to a value of `userSpaceOnUse` for the {{SVGAttr("clipPathUnits")}} attribute and means that all coordinates inside the element refer to the user coordinate system as defined when the clipping path was created. It is the default value.
 - `2` (`SVG_UNIT_TYPE_OBJECTBOUNDINGBOX`)

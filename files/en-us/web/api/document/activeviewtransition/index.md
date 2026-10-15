@@ -3,12 +3,10 @@ title: "Document: activeViewTransition property"
 short-title: activeViewTransition
 slug: Web/API/Document/activeViewTransition
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Document.activeViewTransition
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 The **`activeViewTransition`** read-only property of the {{domxref("Document")}} interface returns a {{domxref("ViewTransition")}} instance representing the [view transition](/en-US/docs/Web/API/View_Transition_API) currently active on the document.
 
@@ -17,7 +15,7 @@ The current {{domxref("ViewTransition")}} can be accessed in other ways:
 - The return value of {{domxref("Document.startViewTransition()")}} in the case of same-document view transitions.
 - The `viewTransition` property of the {{domxref("Window.pagereveal_event", "pagereveal")}} and {{domxref("Window.pageswap_event", "pageswap")}} event objects in the case of cross-document view transitions.
 
-However, the `activeViewTransition` property provides a consistent way to access the active view transition in any context, without having to worry about saving it for easy access later on.
+However, the `activeViewTransition` property provides a consistent way to access the active view transition in any context, without having to worry about saving a reference to it for later.
 
 ## Value
 
@@ -54,6 +52,7 @@ document.activeViewTransition.finished.then(() => {
 ## See also
 
 - {{domxref("Document.startViewTransition()")}}
+- {{domxref("Element.activeViewTransition")}}
 - {{domxref("Window.pagereveal_event", "pagereveal")}} event
 - {{domxref("Window.pageswap_event", "pageswap")}} event
 - [View Transition API](/en-US/docs/Web/API/View_Transition_API)

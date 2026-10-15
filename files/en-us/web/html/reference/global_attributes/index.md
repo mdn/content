@@ -54,6 +54,10 @@ In addition to the basic HTML global attributes, the following global attributes
   - : Hints what action label (or icon) to present for the enter key on virtual keyboards.
 - [`exportparts`](/en-US/docs/Web/HTML/Reference/Global_attributes/exportparts)
   - : Used to transitively export shadow parts from a nested shadow tree into a containing light tree.
+- [`headingoffset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingoffset) {{experimental_inline}}
+  - : Increases the computed heading level of the [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) inside the element, without changing the elements used to write them.
+- [`headingreset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingreset) {{experimental_inline}}
+  - : A boolean attribute that stops the `headingoffset` values of ancestor elements from applying to the headings inside the element.
 - [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden)
   - : An enumerated attribute indicating that the element is not yet, or is no longer, _relevant_. For example, it can be used to hide elements of the page that can't be used until the login process has been completed. The browser won't render such elements. This attribute must not be used to hide content that could legitimately be shown.
 - [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id)
@@ -81,7 +85,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang)
   - : Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute should contain a valid {{glossary("BCP 47 language tag")}}. `xml:lang` has priority over it.
 - [`nonce`](/en-US/docs/Web/HTML/Reference/Global_attributes/nonce)
-  - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) to determine whether or not a given fetch will be allowed to proceed.
+  - : A cryptographic {{Glossary("Nonce", "nonce")}} ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) to determine whether or not a given fetch will be allowed to proceed.
 - [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part)
   - : A space-separated list of the part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the {{CSSxRef("::part")}} pseudo-element.
 - [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover)

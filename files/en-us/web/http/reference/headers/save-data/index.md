@@ -115,7 +115,7 @@ Content-Type: image/jpeg
 
 ## See also
 
-- CSS `@media` feature [`prefers-reduced-data`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-data) {{experimental_inline}}
+- CSS `@media` feature {{cssxref("@media/prefers-reduced-data")}} {{experimental_inline}}
 - {{HTTPHeader("Vary")}} header which indicates that the content served varies depending on the value of `Save-Data` (see [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary))
 - {{domxref("NetworkInformation.saveData")}}
 - [Help Your Users `Save-Data`](https://css-tricks.com/help-users-save-data/) on css-tricks.com

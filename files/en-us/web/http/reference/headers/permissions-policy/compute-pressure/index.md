@@ -41,7 +41,7 @@ Third-party usage can be selectively enabled using the `allow` attribute on {{HT
 This HTTP response header disables compute pressure completely:
 
 ```http
-Permissions-Policy: {"compute-pressure": []}
+Permissions-Policy: compute-pressure=()
 ```
 
 ## Specifications

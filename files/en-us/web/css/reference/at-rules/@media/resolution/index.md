@@ -1,5 +1,6 @@
 ---
-title: resolution
+title: "`resolution` CSS media feature"
+short-title: resolution
 slug: Web/CSS/Reference/At-rules/@media/resolution
 page-type: css-media-feature
 browser-compat: css.at-rules.media.resolution
@@ -10,7 +11,7 @@ The **`resolution`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/
 
 ## Syntax
 
-The `resolution` feature is specified as a {{cssxref("&lt;resolution&gt;")}} value representing the pixel density of the output device. It is a range feature, meaning that you can also use the prefixed **`min-resolution`** and **`max-resolution`** variants to query minimum and maximum values, respectively.
+The `resolution` feature is specified as a {{cssxref("resolution")}} value representing the pixel density of the output device. It is a range feature, meaning that you can also use the prefixed **`min-resolution`** and **`max-resolution`** variants to query minimum and maximum values, respectively.
 
 ## Examples
 

@@ -4,8 +4,8 @@ short-title: Filter effects
 slug: Web/CSS/Guides/Filter_effects
 page-type: css-module
 spec-urls:
-  - https://drafts.fxtf.org/filter-effects-2/
-  - https://drafts.fxtf.org/filter-effects-1/
+  - https://drafts.csswg.org/filter-effects-2/
+  - https://drafts.csswg.org/filter-effects-1/
 sidebar: cssref
 ---
 
@@ -239,6 +239,8 @@ function sepia() {
 
 {{EmbedLiveSample("filters", "", "550px")}}
 
+## Reference
+
 ### Properties
 
 - {{cssxref("backdrop-filter")}}
@@ -264,8 +266,8 @@ function sepia() {
 
 ## Related concepts
 
-- {{CSSxRef("&lt;image&gt;")}} data type
-- {{cssxref("&lt;filter-function&gt;")}} data type
+- {{cssxref("image")}} data type
+- {{cssxref("filter-function")}} data type
 
 - {{cssxref("background-image")}} CSS property
 - {{cssxref("background-blend-mode")}} CSS property

@@ -1,5 +1,6 @@
 ---
-title: "<img>: The Image Embed element"
+title: "`<img>` HTML image embed element"
+short-title: <img>
 slug: Web/HTML/Reference/Elements/img
 page-type: html-element
 browser-compat: html.elements.img
@@ -23,49 +24,6 @@ The **`<img>`** [HTML](/en-US/docs/Web/HTML) element embeds an image into the do
 }
 ```
 
-The above example shows usage of the `<img>` element:
-
-- The `src` attribute holds the path to the image you want to embed. It is not mandatory if the [srcset](/en-US/docs/Web/API/HTMLImageElement/srcset) attribute is available. However, at least one of the `src` or `srcset` attributes must be provided.
-- The `alt` attribute holds a textual replacement for the image, which is mandatory and **incredibly useful** for accessibility — screen readers read the attribute value out to their users so they know what the image means. Alt text is also displayed on the page if the image can't be loaded for some reason: for example, network errors, content blocking, or link rot.
-
-There are many other attributes to achieve various purposes:
-
-- [Referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy)/{{glossary("CORS")}} control for security and privacy: see [`crossorigin`](#crossorigin) and [`referrerpolicy`](#referrerpolicy).
-- Use both [`width`](#width) and [`height`](#height) to set the intrinsic size of the image, allowing it to take up space before it loads, to mitigate content layout shifts.
-- Responsive image hints with [`sizes`](#sizes) and [`srcset`](#srcset) (see also the {{htmlelement("picture")}} element and our [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images) tutorial).
-
-## Supported image formats
-
-The HTML standard doesn't list what image formats to support, so {{glossary("user agent","user agents")}} may support different formats.
-
-> [!NOTE]
-> The [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types) provides comprehensive information about image formats and their web browser support.
-> This section is just a summary!
-
-The image file formats that are most commonly used on the web are:
-
-- [APNG (Animated Portable Network Graphics)](/en-US/docs/Web/Media/Guides/Formats/Image_types#apng_animated_portable_network_graphics) — Good choice for lossless animation sequences (GIF is less performant)
-- [AVIF (AV1 Image File Format)](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) — Good choice for both images and animated images due to high performance.
-- [GIF (Graphics Interchange Format)](/en-US/docs/Web/Media/Guides/Formats/Image_types#gif_graphics_interchange_format) — Good choice for _simple_ images and animations.
-- [JPEG (Joint Photographic Expert Group image)](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image) — Good choice for lossy compression of still images (currently the most popular).
-- [PNG (Portable Network Graphics)](/en-US/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics) — Good choice for lossless compression of still images (slightly better quality than JPEG).
-- [SVG (Scalable Vector Graphics)](/en-US/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics) — Vector image format. Use for images that must be drawn accurately at different sizes.
-- [WebP (Web Picture format)](/en-US/docs/Web/Media/Guides/Formats/Image_types#webp_image) — Excellent choice for both images and animated images
-
-Formats like [WebP](/en-US/docs/Web/Media/Guides/Formats/Image_types#webp_image) and [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) are recommended as they perform much better than PNG, JPEG, GIF for both still and animated images.
-
-SVG remains the recommended format for images that must be drawn accurately at different sizes.
-
-## Image loading errors
-
-If an error occurs while loading or rendering an image, and an `onerror` event handler has been set for the {{domxref("HTMLElement/error_event", "error")}} event, that event handler will get called. This can happen in several situations, including:
-
-- The `src` or `srcset` attributes are empty (`""`) or `null`.
-- The `src` {{glossary("URL")}} is the same as the URL of the page the user is currently on.
-- The image is corrupted in some way that prevents it from being loaded.
-- The image's metadata is corrupted in such a way that it's impossible to retrieve its dimensions, and no dimensions were specified in the `<img>` element's attributes.
-- The image is in a format not supported by the {{Glossary("user agent")}}.
-
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
@@ -78,7 +36,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     >
     > - Non-visual browsers (such as those used by people with visual impairments)
     > - The user chooses not to display images (saving bandwidth, privacy reasons)
-    > - The image is invalid or an [unsupported type](#supported_image_formats)
+    > - The image is invalid or an [unsupported type](/en-US/docs/Web/Media/Guides/Formats/Image_types)
     >
     > In these cases, the browser may replace the image with the text in the element's `alt` attribute. For these reasons and others, provide a useful value for `alt` whenever possible.
 
@@ -86,7 +44,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
     This attribute is also used when copying and pasting the image to text, or saving a linked image to a bookmark.
 
-- `attributionsrc` {{experimental_inline}}
+- `attributionsrc` {{deprecated_inline}} {{non-standard_inline}}
   - : Specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the image request.
 
     On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to register an image-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers), respectively. Which response header should be sent back depends on the value of the `Attribution-Reporting-Eligible` header that triggered the registration.
@@ -171,15 +129,17 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - `loading`
   - : Indicates how the browser should load the image:
     - `eager`
-      - : Loads the image immediately, regardless of whether or not the image is currently within the visible viewport (this is the default value).
+      - : Loads the image immediately, regardless of whether or not the image is currently within the {{glossary("visual viewport")}} (this is the default value).
     - `lazy`
-      - : Defers loading the image until it reaches a calculated distance from the viewport, as defined by the browser. The intent is to avoid the network and storage bandwidth needed to handle the image until it's reasonably certain that it will be needed. This generally improves the performance of the content in most typical use cases.
+      - : Defers loading the image until it reaches a calculated distance from the viewport, as defined by the browser.
 
-    While explicit [`width`](#width) and [`height`](#height) attributes are recommended for all images to avoid layout shift, they are especially important for lazy-loaded ones. Lazy-loaded images will never be loaded if they do not intersect a visible part of an element, even if loading them would change that, because unloaded images have a `width` and `height` of `0`. It creates an even more disruptive user experience when the content visible in the viewport reflows in the middle of reading it.
+        Lazy loading avoids the network and storage bandwidth required to handle the image until it's reasonably certain that it will be needed. This improves the performance in most typical use cases.
 
-    The {{domxref("Window.load_event", "load")}} event is fired after eager-loaded images have been fetched and processed, but before lazy-laded ones are, even if the lazy-loaded images are located within the visual viewport immediately upon initial page load. These images are still loaded as soon as layout completes; they just don't affect the timing of the `load` event. That means that when `load` fires, it's possible that any lazy-loaded images located in the visual viewport may not yet be visible.
+        While explicit [`width`](#width) and [`height`](#height) attributes are recommended for all images to avoid layout shift, they are especially important for lazy-loaded ones. Lazy-loaded images will never be loaded if they do not intersect a visible part of an element, even if loading them would change that, because unloaded images have a `width` and `height` of `0`. It creates an even more disruptive user experience when the content visible in the viewport reflows in the middle of reading it.
 
-    Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.
+        Lazy-loaded images located in the visual viewport may not yet be visible when the Window {{domxref("Window.load_event", "load")}} event is fired. This is because the event is fired based on eager-loaded images — lazy-loaded images are not considered even if they are located within the visual viewport upon initial page load.
+
+        Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.
 
 - `referrerpolicy`
   - : A string indicating which referrer to use when fetching the resource:
@@ -193,36 +153,58 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), or [username](/en-US/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
 
 - `sizes`
-  - : One or more values separated by commas, which can be source sizes or the `auto` keyword. The spec requires that the `sizes` attribute to only be present when `srcset` uses width descriptors.
+  - : One or more values separated by commas, which can be source sizes or the `auto` keyword.
+    The spec requires that the `sizes` attribute only be present when `srcset` uses width descriptors.
+    - **source size**
+      - : A **source size** consists of:
+        1. A [media condition](/en-US/docs/Web/CSS/Guides/Media_queries/Using#syntax), omitted for the last item in the list.
+        2. A source size value.
 
-    A **source size** consists of:
-    1. A [media condition](/en-US/docs/Web/CSS/Guides/Media_queries/Using#syntax), omitted for the last item in the list.
-    2. A source size value.
+        For example, the following source size proposes using a `1000px`-wide image source if the _viewport_ width is 500px or less.
 
-    Media conditions describe properties of the _viewport_, not the _image_. For example, `(height <= 500px) 1000px` proposes using an image source of 1000px width if the _viewport_ height is 500px or less. Because a source size descriptor specifies the width to use for the image during layout, the media condition is typically (but not necessarily) based on the [width](/en-US/docs/Web/CSS/Reference/At-rules/@media/width).
+        ```css
+        (width <= 500px) 1000px
+        ```
 
-    Source size values specify the intended display size of the image. {{glossary("User agent", "User agents")}} use the current source size to select one of the sources supplied by the `srcset` attribute, when those sources are described using width (`w`) descriptors. The selected source size affects the {{glossary("intrinsic size")}} of the image (the image's display size if no {{glossary("CSS")}} styling is applied).
+        Media conditions describe properties of the _{{glossary("viewport")}}_, not the _image_.
+        Because a source size descriptor specifies the width to use for the image during layout, the media condition is typically (but not necessarily) based on the {{cssxref("@media/width")}}.
 
-    A source size value can be any non-negative [length](/en-US/docs/Web/CSS/Reference/Values/length). It must not use CSS functions other than the [math functions](/en-US/docs/Web/CSS/Reference/Values/Functions#math_functions). Units are interpreted in the same way as [media queries](/en-US/docs/Web/CSS/Guides/Media_queries), meaning that all relative length units are relative to the document root rather than the `<img>` element. For example, an `em` value is relative to the root font size, not the font size of the image. [Percentage](/en-US/docs/Web/CSS/Reference/Values/percentage) values are not allowed. If the `sizes` attribute is not provided, it has a default value of `100vw` (the viewport width).
+        Source size values specify the intended display size of the image.
+        {{glossary("User agent", "User agents")}} use the current source size to select one of the sources supplied by the `srcset` attribute, when those sources are described using width (`w`) descriptors.
+        The `w` value defined in sizes determines the image's default layout width.
+        In the absence of {{glossary("CSS")}}, the browser will render the image at this size, regardless of the physical pixel dimensions of the downloaded file.
 
-    The `auto` keyword can replace the whole list of sizes or the first entry in the list. It is only valid when combined with `loading="lazy"`, and resolves to the [concrete size](/en-US/docs/Web/CSS/Reference/Values/image) of the image. Since the intrinsic size of the image is not yet known, `width` and `height` attributes (or CSS equivalents) should also be specified to prevent the browser from assuming the default image width of 300px.
-    For better backward compatibility with browsers that do not support `auto`, you can include fallback sizes after `auto` in the `sizes` attribute:
+        A source size value can be any non-negative [length](/en-US/docs/Web/CSS/Reference/Values/length).
+        It must not use CSS functions other than the [math functions](/en-US/docs/Web/CSS/Reference/Values/Functions#math_functions).
+        Units are interpreted in the same way as [media queries](/en-US/docs/Web/CSS/Guides/Media_queries), meaning that all relative length units are relative to the document root rather than the `<img>` element. For example, an `em` value is relative to the root font size, not the font size of the image. [Percentage](/en-US/docs/Web/CSS/Reference/Values/percentage) values are not allowed. If the `sizes` attribute is not provided, it has a default value of `100vw` (the viewport width).
 
-    ```html
-    <img
-      loading="lazy"
-      width="200"
-      height="200"
-      sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
-      srcset="
-        swing-200.jpg   200w,
-        swing-400.jpg   400w,
-        swing-800.jpg   800w,
-        swing-1600.jpg 1600w
-      "
-      src="swing-400.jpg"
-      alt="Kettlebell Swing" />
-    ```
+    - `auto`
+      - : The `auto` keyword indicates that the browser should use the expected layout width of the element to select the image to display.
+        That is, it should use the [concrete size](/en-US/docs/Web/CSS/Reference/Values/image#concrete_size) of the image, calculated after layout from HTML and CSS has been applied.
+        This is only valid when combined with `loading="lazy"`, as the page is expected to already have CSS and other layout information by the time the image loads.
+
+        Using `auto` saves you having to specify your layout media conditions twice: once for layout, and once for selection of an appropriate image to fetch and display.
+
+        If `auto` cannot resolve — either because the browser does not support it, or because the image has no layout size yet — the browser falls back to the _source sizes_ in the list to determine the width, then to `width`/`height` attributes defined on the element, and finally to the default intrinsic size for `<img>` elements defined in the user agent stylesheet (300px by 150px).
+
+        For better backward compatibility with browsers that do not support `auto`, you can include fallback sizes after `auto` in the `sizes` attribute.
+        You should also set the element's `width` and `height` attributes to the intrinsic dimensions of the largest image in your `srcset`, so the browser can reserve space using the correct aspect ratio:
+
+        ```html
+        <img
+          loading="lazy"
+          width="200"
+          height="200"
+          sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+          srcset="
+            swing-200.jpg   200w,
+            swing-400.jpg   400w,
+            swing-800.jpg   800w,
+            swing-1600.jpg 1600w
+          "
+          src="swing-400.jpg"
+          alt="Kettlebell Swing" />
+        ```
 
 - `src`
   - : The image {{glossary("URL")}}. At least one of `src` and [`srcset`](#srcset) is required for an `<img>` element. If [`srcset`](#srcset) is specified, `src` is used in one of two ways:
@@ -284,7 +266,32 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - `vspace` {{deprecated_inline}}
   - : The number of pixels of white space above and below the image. Use the {{cssxref('margin')}} CSS property instead.
 
-## Styling with CSS
+## Usage notes
+
+You need at least two attributes for each `<img>` element. Most commonly, they are `src` and `alt`.
+
+- The `src` attribute holds the path to the image you want to embed. It is not mandatory if the [srcset](/en-US/docs/Web/API/HTMLImageElement/srcset) attribute is available. However, at least one of the `src` or `srcset` attributes must be provided.
+- The `alt` attribute holds a textual replacement for the image, which is mandatory and **incredibly useful** for accessibility — screen readers read the attribute value out to their users so they know what the image means. Alt text is also displayed on the page if the image can't be loaded for some reason: for example, network errors, content blocking, or link rot.
+
+There are many other attributes to achieve various purposes:
+
+- [Referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy)/{{glossary("CORS")}} control for security and privacy: see [`crossorigin`](#crossorigin) and [`referrerpolicy`](#referrerpolicy).
+- Use both [`width`](#width) and [`height`](#height) to set the intrinsic size of the image, allowing it to take up space before it loads, to mitigate content layout shifts.
+- Responsive image hints with [`sizes`](#sizes) and [`srcset`](#srcset) (see also the {{htmlelement("picture")}} element and our [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images) tutorial).
+
+The [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types) provides information about the supported image formats and broad recommendations about where they should be used.
+
+### Image loading errors
+
+If an error occurs while loading or rendering an image, and an `onerror` event handler has been set for the {{domxref("HTMLElement/error_event", "error")}} event, that event handler will get called. This can happen in several situations, including:
+
+- The `src` or `srcset` attributes are empty (`""`) or `null`.
+- The `src` {{glossary("URL")}} is the same as the URL of the page the user is currently on.
+- The image is corrupted in some way that prevents it from being loaded.
+- The image's metadata is corrupted in such a way that it's impossible to retrieve its dimensions, and no dimensions were specified in the `<img>` element's attributes.
+- The image is in a format not supported by the {{Glossary("user agent")}}.
+
+### Styling with CSS
 
 `<img>` is a {{ glossary("replaced elements", "replaced element")}}; it has a {{cssxref("display")}} value of `inline` by default, but its default dimensions are defined by the embedded image's intrinsic values, like it were `inline-block`. You can set properties like {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}, {{cssxref("height")}}, etc. on an image.
 
@@ -340,7 +347,7 @@ The `title` attribute should also not be used as supplemental captioning informa
 
 The value of the `title` attribute is usually presented to the user as a tooltip, which appears shortly after the cursor stops moving over the image. While this _can_ provide additional information to the user, you should not assume that the user will ever see it: the user may only have keyboard or touchscreen. If you have information that's particularly important or valuable for the user, present it inline using one of the methods mentioned above instead of using `title`.
 
-- [Using the HTML title attribute – updated | The Paciello Group](https://www.tpgi.com/using-the-html-title-attribute-updated/)
+- [Using the HTML title attribute – updated | Vispero](https://vispero.com/resources/using-the-html-title-attribute-updated/)
 
 ## Examples
 

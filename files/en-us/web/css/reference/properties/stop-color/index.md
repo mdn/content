@@ -1,5 +1,6 @@
 ---
-title: stop-color
+title: "`stop-color` CSS property"
+short-title: stop-color
 slug: Web/CSS/Reference/Properties/stop-color
 page-type: css-property
 browser-compat: css.properties.stop-color
@@ -48,7 +49,7 @@ This example demonstrates the basic use case of `stop-color`, and how the CSS `s
 
 #### HTML
 
-We have an SVG with three {{SVGElement("rect")}} squares and three {{SVGElement("linearGradient")}} elements. Each gradient has four {{SVGElement("stop")}} elements creating gradients that go from black to white and then white to grey; the only difference between them is the `id` value.
+We have an SVG with three {{SVGElement("rect")}} squares and three {{SVGElement("linearGradient")}} elements. Each gradient has four {{SVGElement("stop")}} elements creating gradients that go from black to white and then white to gray; the only difference between them is the `id` value.
 
 ```html
 <svg viewBox="0 0 264 100" xmlns="http://www.w3.org/2000/svg">

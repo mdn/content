@@ -32,7 +32,7 @@ sidebar: mdnsidebar
 >     This is the name of the API followed by the text "API": _NameOfTheAPI_ **API**.
 >     For example, [WebXR Device](/en-US/docs/Web/API/WebXR_Device_API) has a title of _WebXR Device API_, [Fetch](/en-US/docs/Web/API/Fetch_API) has a title of _Fetch API_.
 > - **slug**
->   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
+>   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
 >     This will be formatted like `Web/API/NameOfTheAPI_API`.
 >     For example, the [WebXR Device API](/en-US/docs/Web/API/WebVR_API)'s slug is `Web/API/WebXR_Device_API`.
 > - **page-type**
@@ -50,7 +50,6 @@ sidebar: mdnsidebar
 >
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 > - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
 >
 > You should update or delete the following macros according to the advice below:
@@ -94,7 +93,7 @@ sidebar: mdnsidebar
 >
 > _Remember to remove this whole explanatory note before publishing_
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 Begin the content on the page with an introductory paragraph — start by naming the API and saying what it does. This should ideally be one or two short sentences.
 
@@ -118,7 +117,7 @@ Include a list of guide pages under this landing page. Each DT should link to th
 
 ## Interfaces
 
-_To use the [domxref macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references), remove the backticks and backslash in the markdown file._
+_To use the [domxref macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_reference_pages), remove the backticks and backslash in the markdown file._
 
 - `\{{domxref("NameOfTheInterface")}}`
   - : Include a brief description of the interface and what it does here.

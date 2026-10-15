@@ -50,11 +50,11 @@ To capture the <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, and <kbd>D</kbd> keys, 
 navigator.keyboard.lock(["KeyW", "KeyA", "KeyS", "KeyD"]);
 ```
 
-This captures these keys regardless of which modifiers are used with the key press. Assuming a standard United States QWERTY layout, registering `KeyW` ensures that <kbd>W</kbd>, <kbd>Shift+W</kbd>, <kbd>Control+W</kbd>, <kbd>Control+Shift+W</kbd>, and all other key modifier combinations with <kbd>W</kbd> are sent to the app. The same applies to for `KeyA`, `KeyS`, and `KeyD`.
+This captures these keys regardless of which modifiers are used with the key press. Assuming a standard United States QWERTY layout, registering `KeyW` ensures that <kbd>W</kbd>, <kbd>Shift+W</kbd>, <kbd>Control+W</kbd>, <kbd>Control+Shift+W</kbd>, and all other key modifier combinations with <kbd>W</kbd> are sent to the app. The same applies to `KeyA`, `KeyS`, and `KeyD`.
 
 ### Writing system keys
 
-The codes passed {{domxref('Keyboard.lock')}} and the various methods of the {{domxref('KeyboardLayoutMap')}} interface are called "writing system keys".
+The codes passed to {{domxref('Keyboard.lock')}} and the various methods of the {{domxref('KeyboardLayoutMap')}} interface are called "writing system keys".
 
 "Writing system keys" are defined in the [Writing System Keys](https://w3c.github.io/uievents-code/#key-alphanumeric-writing-system) section of the [UI Events KeyboardEvent code Values](https://w3c.github.io/uievents-code/) spec, since the physical keys change meaning based on the current locale and keyboard layout. These keys are shown below. Blue keys are present on all standard keyboards while green keys are only available on some keyboards.
 

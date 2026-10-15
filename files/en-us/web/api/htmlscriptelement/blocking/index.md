@@ -24,7 +24,7 @@ Although the `blocking` property itself is read-only in the sense that you can't
 
 ```js
 const el = document.getElementById("el");
-console.log(el.blocking); // Output: "render"
+console.log(el.blocking); // Output: DOMTokenList ["render"]
 ```
 
 ## Specifications

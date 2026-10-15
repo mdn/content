@@ -3,13 +3,9 @@ title: Temporal.Instant.prototype.toJSON()
 short-title: toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/toJSON
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.Instant.toJSON
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`toJSON()`** method of {{jsxref("Temporal.Instant")}} instances returns a string representing this instant in the same [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant#rfc_9557_format) as calling {{jsxref("Temporal/Instant/toString", "toString()")}}. It is intended to be implicitly called by {{jsxref("JSON.stringify()")}}.
 
@@ -29,7 +25,7 @@ A string representing the given instant in the [RFC 9557 format](/en-US/docs/Web
 
 ## Description
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `Temporal.Instant` object is stringified. This method is generally intended to, by default, usefully serialize `Temporal.Instant` objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}} function as the reviver of {{jsxref("JSON.parse()")}}.
+The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `Temporal.Instant` object is stringified. This method is generally intended to, by default, usefully serialize `Temporal.Instant` objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}} function within the reviver of {{jsxref("JSON.parse()")}}.
 
 ## Examples
 

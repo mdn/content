@@ -11,11 +11,11 @@ sidebar: http
 
 {{SeeCompatTable}}
 
-The **`deferred-fetch-minimal`** {{HTTPHeader("Permissions-Policy")}} directive is part of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API).
+The **`deferred-fetch-minimal`** {{HTTPHeader("Permissions-Policy")}} directive is part of the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 
 This directive, along with {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}}, determines how the overall 640KiB quota limit is distributed between the top-level origin and its cross-origin subframes. By default, the top-level origin is granted 512KiB, and each cross-origin subframe is granted 8KiB out of the remaining 128KiB. The `deferred-fetch-minimal` Permissions Policy can also block all origins; this will reallocate the 128KiB shared limit to the top-level quota, giving it access to the full 640KiB limit.
 
-See [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) guide for more details and examples.
+See [`fetchLater()` quotas](/en-US/docs/Web/API/Fetch_API/Using_Deferred_Fetch#quotas) for more details and examples.
 
 ## Syntax
 
@@ -37,7 +37,7 @@ The default allowlist for `deferred-fetch-minimal` is `*`.
 
 ## Examples
 
-See [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for more examples.
+See [`fetchLater()` quotas](/en-US/docs/Web/API/Fetch_API/Using_Deferred_Fetch#quotas) for more examples.
 
 ### Using up the minimal quota
 
@@ -93,7 +93,7 @@ Permissions-Policy: deferred-fetch-minimal=("https://c.com")
 
 ## See also
 
-- [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas)
-- [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API)
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+- {{domxref("window.fetchLater()")}}
 - {{HTTPHeader("Permissions-Policy")}} header
 - [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)

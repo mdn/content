@@ -1,5 +1,6 @@
 ---
-title: margin-inline-end
+title: "`margin-inline-end` CSS property"
+short-title: margin-inline-end
 slug: Web/CSS/Reference/Properties/margin-inline-end
 page-type: css-property
 browser-compat: css.properties.margin-inline-end
@@ -70,7 +71,7 @@ margin-inline-end: 5%; /* relative to the nearest block container's width */
 margin-inline-end: anchor-size(height);
 margin-inline-end: calc(anchor-size(--my-anchor self-inline, 25px) / 5);
 
-/* Keyword values */
+/* Keyword value */
 margin-inline-end: auto;
 
 /* Global values */
@@ -85,7 +86,7 @@ It relates to {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}
 
 ### Values
 
-The `margin-inline-end` property takes the same values as the {{cssxref("margin-left")}} property.
+The `margin-inline-end` property takes the same values as the {{cssxref("margin-top")}} property.
 
 ## Formal definition
 

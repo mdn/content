@@ -1,5 +1,5 @@
 ---
-title: declarativeNetRequest.getDisabledRuleIds
+title: declarativeNetRequest.getDisabledRuleIds()
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/getDisabledRuleIds
 page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.getDisabledRuleIds

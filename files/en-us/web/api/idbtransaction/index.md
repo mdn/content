@@ -41,7 +41,7 @@ Transactions can fail for a fixed number of reasons, all of which (except the us
 
 Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see [Firefox bug 1112702](https://bugzil.la/1112702).) Previously in a `readwrite` transaction, a {{domxref("IDBTransaction.complete_event","complete")}} event was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete` event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare, most consumers should not need to concern themselves further.
 
-If you must ensure durability for some reason (e.g., you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.
+If you must ensure durability for some reason (e.g., you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}).
 
 ## Instance properties
 
@@ -83,8 +83,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 ## Mode constants
 
-{{Deprecated_Header}}
-
 > [!WARNING]
 > These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ([Firefox bug 888598](https://bugzil.la/888598))
 
@@ -101,14 +99,14 @@ Transactions can have one of three modes:
   <tbody>
     <tr>
       <td>
-        <code><a>READ_ONLY</a></code>
+        <code>READ_ONLY</code>
       </td>
       <td>"readonly" (0 in Chrome)</td>
       <td><p>Allows data to be read but not changed.</p></td>
     </tr>
     <tr>
       <td>
-        <code><a>READ_WRITE</a></code>
+        <code>READ_WRITE</code>
       </td>
       <td>"readwrite" (1 in Chrome)</td>
       <td>
@@ -118,7 +116,7 @@ Transactions can have one of three modes:
     </tr>
     <tr>
       <td>
-        <code><a>VERSION_CHANGE</a></code>
+        <code>VERSION_CHANGE</code>
       </td>
       <td>"versionchange" (2 in Chrome)</td>
       <td>

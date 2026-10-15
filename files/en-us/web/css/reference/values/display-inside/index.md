@@ -1,5 +1,6 @@
 ---
-title: <display-inside>
+title: "`<display-inside>` CSS type"
+short-title: <display-inside>
 slug: Web/CSS/Reference/Values/display-inside
 page-type: css-type
 browser-compat:

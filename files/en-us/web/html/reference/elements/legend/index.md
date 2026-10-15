@@ -1,5 +1,6 @@
 ---
-title: "<legend>: The Field Set Legend element"
+title: "`<legend>` HTML field set legend element"
+short-title: <legend>
 slug: Web/HTML/Reference/Elements/legend
 page-type: html-element
 browser-compat: html.elements.legend

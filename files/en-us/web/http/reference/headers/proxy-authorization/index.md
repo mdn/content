@@ -33,7 +33,7 @@ Proxy-Authorization: <auth-scheme> <credentials>
 - `<auth-scheme>`
   - : A case-insensitive token indicating the [Authentication scheme](/en-US/docs/Web/HTTP/Guides/Authentication#authentication_schemes) used.
     Some of the more common types are [`Basic`](/en-US/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` and `AWS4-HMAC-SHA256`.
-    IANA maintains a [list of authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), but there are other schemes offered by host services.
+    IANA maintains a [list of authentication schemes](https://www.iana.org/assignments/http-authschemes), but there are other schemes offered by host services.
 - `<credentials>`
   - : Credentials use for the authentication scheme.
     Generally, you will need to check the relevant specifications for the format.

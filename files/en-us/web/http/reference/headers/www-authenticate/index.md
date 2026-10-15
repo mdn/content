@@ -78,7 +78,7 @@ WWW-Authenticate: <challengeN>
 - `<auth-scheme>`
   - : A case-insensitive token indicating the [Authentication scheme](/en-US/docs/Web/HTTP/Guides/Authentication#authentication_schemes) used.
     Some of the more common types are [`Basic`](/en-US/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` and `AWS4-HMAC-SHA256`.
-    IANA maintains a [list of authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), but there are other schemes offered by host services.
+    IANA maintains a [list of authentication schemes](https://www.iana.org/assignments/http-authschemes), but there are other schemes offered by host services.
 - `<auth-param>` {{optional_inline}}
   - : An authentication parameter whose format depends on the `<auth-scheme>`.
     `<realm>` is described below as it's a common authentication parameter among many auth schemes.
@@ -119,7 +119,7 @@ The following sections describe token and auth parameters for some common auth s
   - : A server-specified quoted string that the server can use to control the lifetime in which particular credentials will be considered valid.
     This must be uniquely generated each time a 401 response is made, and may be regenerated more often (for example, allowing a digest to be used only once).
     The specification contains advice on possible algorithms for generating this value.
-    The nonce value is opaque to the client.
+    The {{Glossary("Nonce", "nonce")}} value is opaque to the client.
 - `opaque`
   - : A server-specified quoted string that should be returned unchanged in the {{HTTPHeader("Authorization")}}.
     This is opaque to the client. The server is recommended to include Base64 or hexadecimal data.

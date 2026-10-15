@@ -29,17 +29,17 @@ Only one `menuitemradio` in a group can be checked at the same time. When one it
 
 If your want more than one item in a group to be checked, or if you want to enable checking and unchecking an item, consider using `menuitemcheckbox`.
 
-If a `menu` or `menubar` contains more than one group of `menuitemradio` elements, or if the `menu` contains a group of `menuitemradio` elements as well as other, unrelated `menuitem` elements and/or `menuitemcheckbox` elements, contain each set of related `menuitemradio` elements in a `group` element or delimit the group the `menuitemradio` elements from the other menu items with a `separator` element (or an HTML element with an equivalent role such as a {{HTMLElement('fieldset')}} grouping or a thematic break {{HTMLElement('hr')}} separator.
+If a `menu` or `menubar` contains more than one group of `menuitemradio` elements, or if the `menu` contains a group of `menuitemradio` elements as well as other, unrelated `menuitem` elements and/or `menuitemcheckbox` elements, contain each set of related `menuitemradio` elements in a `group` element or delimit the group the `menuitemradio` elements from the other menu items with a `separator` element (or an HTML element with an equivalent role such as a {{HTMLElement('fieldset')}} grouping or a thematic break {{HTMLElement('hr')}} separator).
 
 An accessible name is required. Ideally, the accessible name should come from an associated {{htmlelement('label')}} element if using `<input type="radio">` or visible, descendant content. Realize if the label or descendant content is not sufficient and, preferably, [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) is used referencing non-descendant content or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) is used, these two ARIA properties will hide other descendant content from assistive technologies.
 
 If all elements in the set are not present in the DOM include the [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) properties. When specifying `aria-setsize` and `aria-posinset` on a `menuitemradio`, set the value with respect to the total number of items in the menu, excluding any separators.
 
-The `menuitemradio` element can have phrasing content, but can not have interactive content as descendants and no descendants with a `tabindex` attribute specified.
+The `menuitemradio` element can have phrasing content, but cannot have interactive content as descendants and no descendants with a `tabindex` attribute specified.
 
 ### All descendants are presentational
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `menuitemradio`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `menuitemradio` element as it is a role that does not support semantic children.
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `menuitemradio`. To deal with this limitation, browsers automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `menuitemradio` element as it is a role that does not support semantic children.
 
 For example, consider the following `menuitemradio` element, which contains a heading.
 
@@ -116,7 +116,7 @@ If the `menuitemradio` is in a submenu in a `menubar` or a menu opened with a me
 
 The [`tabindex="-1"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) makes the `menuitemradio` focusable but not part of the page tab sequence. Had we included `aria-checked="true"` it would have indicated that the `menuitemradio` was checked, and we would have visually styled the selected state to look checked using the attribute selector `[role='menuitemradio'][aria-checked='true']`. Instead, the presence of `aria-checked="false"` indicates to assistive technologies that the `menuitemradio` is checkable but not currently checked. The accessible name "purple" comes from the contents.
 
-The visual appearance of the selected state is a checked radio button which we can create using [generated content](/en-US/docs/Web/CSS/Guides/Generated_content), making it visible and the same color as the content by synchronizing with the `aria-checked` value using CSS [attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) and changing the [`background-color`](/en-US/docs/Web/CSS/Reference/Properties/background-color).
+The visual appearance of the selected state is a checked radio button which we can create using [generated content](/en-US/docs/Web/CSS/Guides/Generated_content), making it visible and the same color as the content by synchronizing with the `aria-checked` value using CSS [attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) and changing the {{cssxref("background-color")}}.
 
 ```css
 [role="menuitemradio"]::before {
@@ -136,7 +136,7 @@ The visual appearance of the selected state is a checked radio button which we c
 }
 ```
 
-Don't use the [`background`](/en-US/docs/Web/CSS/Reference/Properties/background) shorthand property, as that will override the [`background-clip`](/en-US/docs/Web/CSS/Reference/Properties/background-clip) property we used to create the radio button effect.
+Don't use the {{cssxref("background")}} shorthand property, as that will override the {{cssxref("background-clip")}} property we used to create the radio button effect.
 
 ### Prefer HTML
 

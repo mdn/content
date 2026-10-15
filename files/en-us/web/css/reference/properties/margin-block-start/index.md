@@ -1,5 +1,6 @@
 ---
-title: margin-block-start
+title: "`margin-block-start` CSS property"
+short-title: margin-block-start
 slug: Web/CSS/Reference/Properties/margin-block-start
 page-type: css-property
 browser-compat: css.properties.margin-block-start
@@ -75,7 +76,7 @@ margin-block-start: 5%; /* relative to the nearest block container's width */
 margin-block-start: anchor-size(width);
 margin-block-start: calc(anchor-size(--my-anchor block, 20px) / 3);
 
-/* Keyword values */
+/* Keyword value */
 margin-block-start: auto;
 
 /* Global values */
@@ -92,7 +93,7 @@ It relates to {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}
 
 ### Values
 
-The `margin-block-start` property takes the same values as the {{cssxref("margin-left")}} property.
+The `margin-block-start` property takes the same values as the {{cssxref("margin-top")}} property.
 
 ## Formal definition
 

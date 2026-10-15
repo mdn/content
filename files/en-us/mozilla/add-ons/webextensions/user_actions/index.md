@@ -15,7 +15,7 @@ Some WebExtension APIs perform functions that usually occur as a result of a use
 
 The APIs enabled by a user action are:
 
-- The {{WebExtAPIRef("action.openPopup")}}, {{WebExtAPIRef("browserAction.openPopup")}}, and {{WebExtAPIRef("pageAction.openPopup")}} APIs that open an extension's browser or page action popup. Users do the same by clicking the browser or page action.
+- The {{WebExtAPIRef("pageAction.openPopup")}} APIs that opens an extension's page action popup. The user does this by clicking the page action.
 - The {{WebExtAPIRef("sidebarAction.open")}}, {{WebExtAPIRef("sidebarAction.close")}}, and {{WebExtAPIRef("sidebarAction.toggle")}} APIs open and close an extension's sidebar. The user does this from some part of the browser's built-in user interface, such as the **View** > **Sidebar** menu.
 - The {{WebExtAPIRef("downloads.open")}} API opens a downloaded file. The user does this from some part of the browser's built-in user interface, such as the **Tools** > **Downloads** menu.
 - The {{WebExtAPIRef("management.setEnabled")}} API. The user can turn off a theme extension from the extension's Add-on Manager page.
@@ -31,7 +31,7 @@ function handleClick() {
 browser.browserAction.onClicked.addListener(handleClick);
 ```
 
-In addition to enabling the APIs, these actions also enable the [`"activeTab"` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission). This permission grants extra privileges for the tab visible when the user action takes place.
+In addition to enabling the APIs, these actions also enable the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission). This permission grants extra privileges for the tab visible when the user action takes place.
 
 User interactions in normal web pages aren't treated as user actions. For example, consider a button on a normal web page that uses a content script. This content script added a click handler for the button that sends a message to the extension's background page. When a user clicks the button, the background page message handler is not considered to be handling a user action.
 

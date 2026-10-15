@@ -30,7 +30,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ### Attributes mapped to CSS
 
-The following example uses [global attributes](/en-US/docs/Web/MathML/Reference/Global_attributes) `displaystyle` and `mathcolor` to respectively override the [`math-style`](/en-US/docs/Web/CSS/Reference/Properties/math-style) and [`color`](/en-US/docs/Web/CSS/Reference/Properties/color) of the `<munder>` and `<munderover>` children:
+The following example uses [global attributes](/en-US/docs/Web/MathML/Reference/Global_attributes) `displaystyle` and `mathcolor` to respectively override the {{cssxref("math-style")}} and {{cssxref("color")}} of the `<munder>` and `<munderover>` children:
 
 ```html
 <math display="block">
@@ -56,7 +56,7 @@ The following example uses [global attributes](/en-US/docs/Web/MathML/Reference/
 
 ### Legacy script attributes
 
-The following example shows a formula with [`font-size`](/en-US/docs/Web/CSS/Reference/Properties/font-size) set to `128pt`. It contains numbers that are placed in nested superscripts as well as an `<mstyle>` element with legacy attributes `scriptsizemultiplier` and `scriptminsize`. The `font-size` is multiplied by `0.5` when entering each superscript as long as that does not make it smaller than `16pt`.
+The following example shows a formula with {{cssxref("font-size")}} set to `128pt`. It contains numbers that are placed in nested superscripts as well as an `<mstyle>` element with legacy attributes `scriptsizemultiplier` and `scriptminsize`. The `font-size` is multiplied by `0.5` when entering each superscript as long as that does not make it smaller than `16pt`.
 
 ```html
 <math display="block">

@@ -1,5 +1,6 @@
 ---
-title: "<noframes>: The Frame Fallback element"
+title: "`<noframes>` HTML frame fallback element"
+short-title: <noframes>
 slug: Web/HTML/Reference/Elements/noframes
 page-type: html-element
 status:
@@ -7,8 +8,6 @@ status:
 browser-compat: html.elements.noframes
 sidebar: htmlsidebar
 ---
-
-{{deprecated_header}}
 
 The **`<noframes>`** [HTML](/en-US/docs/Web/HTML) element provides content to be presented in browsers that don't support (or have disabled support for) the {{HTMLElement("frame")}} element. Although most commonly-used browsers support frames, there are exceptions, including certain special-use browsers including some mobile browsers, as well as text-mode browsers.
 

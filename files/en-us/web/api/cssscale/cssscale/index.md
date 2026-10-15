@@ -6,11 +6,9 @@ page-type: web-api-constructor
 browser-compat: api.CSSScale.CSSScale
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSScale()`** constructor creates a new
-{{domxref("CSSScale")}} object representing the [scale()](/en-US/docs/Web/CSS/Reference/Values/transform-function/scale) and [scale3d()](/en-US/docs/Web/CSS/Reference/Values/transform-function/scale3d) values of the
-individual {{CSSXref('transform')}} property in CSS.
+The **`CSSScale()`** constructor creates a new {{domxref("CSSScale")}} object representing the {{cssxref("transform-function/scale", "scale()")}} and {{cssxref("transform-function/scale3d", "scale3d()")}} values of the individual {{CSSXref('transform')}} property in CSS.
 
 ## Syntax
 
@@ -22,11 +20,14 @@ new CSSScale(x, y, z)
 ### Parameters
 
 - {{domxref('CSSScale.x','x')}}
-  - : A value for the x-axis of the {{domxref('CSSScale')}} object to be constructed. This must either be a number (which is wrapped into a {{domxref("CSSUnitValue")}} of `unit: "number"`) or a {{domxref("CSSNumericValue")}}.
+  - : A value for the x-axis of the {{domxref('CSSScale')}} object to be constructed.
+    This must either be a number (which is wrapped into a {{domxref("CSSUnitValue")}} of `unit: "number"`) or a {{domxref("CSSNumericValue")}}.
 - {{domxref('CSSScale.y','y')}}
-  - : A value for the y-axis of the {{domxref('CSSScale')}} object to be constructed. This must either be a number (which is wrapped into a {{domxref("CSSUnitValue")}} of `unit: "number"`) or a {{domxref("CSSNumericValue")}}.
+  - : A value for the y-axis of the {{domxref('CSSScale')}} object to be constructed.
+    This must either be a number (which is wrapped into a {{domxref("CSSUnitValue")}} of `unit: "number"`) or a {{domxref("CSSNumericValue")}}.
 - {{domxref('CSSScale.z','z')}} {{optional_inline}}
-  - : A value for the z-axis of the {{domxref('CSSScale')}} object to be constructed. This must either be a number (which is wrapped into a {{domxref("CSSUnitValue")}} of `unit: "number"`) or a {{domxref("CSSNumericValue")}}. If a value is passed, the value of `is2D` will be set to false.
+  - : A value for the z-axis of the {{domxref('CSSScale')}} object to be constructed.
+    This must either be a number (which is wrapped into a {{domxref("CSSUnitValue")}} of `unit: "number"`) or a {{domxref("CSSNumericValue")}}. If a value is passed, the value of `is2D` will be set to false.
 
 ## Examples
 

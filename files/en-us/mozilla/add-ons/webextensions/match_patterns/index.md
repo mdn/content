@@ -54,7 +54,7 @@ The _scheme_ component may take one of two forms:
 
 ### host
 
-The _host_ component may take one of three forms:
+The _host_ component may take one of these forms:
 
 <table class="fullwidth-table standard-table">
   <thead>
@@ -69,17 +69,18 @@ The _host_ component may take one of three forms:
       <td>Any host.</td>
     </tr>
     <tr>
-      <td><code>*.</code> followed by part of the hostname.</td>
-      <td>The given host and any of its subdomains.</td>
+      <td><code>*.</code> followed by part of the hostname, optionally, including a port.</td>
+      <td>The given host (and port) and any of its subdomains.</td>
     </tr>
     <tr>
-      <td>A complete hostname, without wildcards.</td>
-      <td>Only the given host.</td>
+      <td>A complete hostname, without wildcards, optionally, including a port.</td>
+      <td>Only the host (and port).</td>
     </tr>
   </tbody>
 </table>
 
-_host_ must not include a port number.
+> [!NOTE]
+> Firefox doesn't support the inclusion of a port number due to ([Firefox bug 1362809](https://bugzil.la/1362809)) and ([Firefox bug 1468162](https://bugzil.la/1468162)).
 
 _host_ is optional only if the _scheme_ is "file".
 
@@ -93,10 +94,7 @@ After that, it may subsequently contain any combination of the `*` wildcard and 
 
 The value for the _path_ matches against the string which is the URL path plus the [URL query string](https://en.wikipedia.org/wiki/Query_string). This includes the `?` between the two, if the query string is present in the URL. For example, if you want to match URLs on any domain where the URL path ends with `foo.bar`, then you need to use an array of Match Patterns like `["*://*/*foo.bar", "*://*/*foo.bar?*"]`. The `?*` is needed, rather than just `bar*`, in order to anchor the ending `*` as applying to the URL query string and not some portion of the URL path.
 
-Neither the [URL fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier), nor the `#` which precedes it, are considered as part of the _path_.
-
-> [!NOTE]
-> The path pattern string should not include a port number. Adding a port, as in: `http://localhost:1234/*` causes the match pattern to be ignored. However, `http://localhost:1234` will match with `http://localhost/*`.
+Neither the [URL fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) nor the `#` that precedes it are considered as part of the _path_ and are ignored during pattern matching. A match pattern containing `#` will fail to match with any URL.
 
 ### \<all_urls>
 
@@ -192,6 +190,22 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
       </td>
     </tr>
     <tr>
+    <tr>
+      <td>
+        <p><code>https://mozilla.org:8080/</code></p>
+        <p>
+          Match all HTTPS URLs that are hosted at "mozilla.org/" on port 8080.
+          Note: Ports are supported in Chrome, not in Firefox.
+        </p>
+      </td>
+      <td>
+        <p><code>https://mozilla.org:8080/</code></p>
+      </td>
+      <td>
+        <p><code>http://a.mozilla.org/</code><br />(unmatched host)</p>
+        <p><code>http://mozilla.org:8081</code><br />(unmatched host)</p>
+      </td>
+    </tr>
       <td>
         <p><code>ftp://mozilla.org/</code></p>
         <p>Match only "ftp://mozilla.org/".</p>
@@ -323,47 +337,56 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
   </tbody>
 </table>
 
-### Invalid match patterns
+### Invalid or unmatched patterns
 
 <table class="fullwidth-table standard-table">
   <thead>
     <tr>
-      <th scope="col">Invalid pattern</th>
+      <th scope="col">Pattern</th>
+      <th scope="col">Issue</th>
       <th scope="col">Reason</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code>resource://path/</code></td>
+      <td>Invalid</td>
       <td>Unsupported scheme.</td>
     </tr>
     <tr>
       <td><code>https://mozilla.org</code></td>
+      <td>Invalid</td>
       <td>No path.</td>
     </tr>
     <tr>
+      <td><code>https://www.mozilla.org/#section1</code></td>
+      <td>Unmatched</td>
+      <td>Contains a reference fragment: the URL that the pattern is matched against has any reference fragment removed before matching.</td>
+    </tr>
+    <tr>
       <td><code>https://mozilla.*.org/</code></td>
+      <td>Invalid</td>
       <td>"*" in host must be at the start.</td>
     </tr>
     <tr>
       <td><code>https://*zilla.org/</code></td>
+      <td>Invalid</td>
       <td>"*" in host must be the only character or be followed by ".".</td>
     </tr>
     <tr>
       <td><code>http*://mozilla.org/</code></td>
+      <td>Invalid</td>
       <td>"*" in scheme must be the only character.</td>
     </tr>
     <tr>
-      <td><code>https://mozilla.org:80/</code></td>
-      <td>Host must not include a port number.</td>
-    </tr>
-    <tr>
       <td><code>*://*</code></td>
+      <td>Invalid</td>
       <td>Empty path: this should be <code>*://*/*</code>.</td>
     </tr>
     <tr>
       <td><code>file://*</code></td>
-      <td>Empty path: this should be <code>file:///*</code>.</td>
+      <td>Invalid</td>
+      <td>Empty path: this should be <code>file:///*</code>. <code>file://*</code> is accepted when declared in <code>host_permissions</code> in Chrome, which auto-corrects the entry to <code>file:///*</code>.</td>
     </tr>
   </tbody>
 </table>

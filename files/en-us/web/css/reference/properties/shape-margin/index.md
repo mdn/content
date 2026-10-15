@@ -1,5 +1,6 @@
 ---
-title: shape-margin
+title: "`shape-margin` CSS property"
+short-title: shape-margin
 slug: Web/CSS/Reference/Properties/shape-margin
 page-type: css-property
 browser-compat: css.properties.shape-margin
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`shape-margin`** [CSS](/en-US/docs/Web/CSS) property sets a margin for a CSS shape created using {{cssxref("shape-outside")}}.
+
+The margin lets you adjust the distance between the edges of the shape (the **float element**) and the surrounding content.
 
 {{InteractiveExample("CSS Demo: shape-margin")}}
 
@@ -31,11 +34,11 @@ shape-margin: 5%;
   <div class="example-container">
     <div class="transition-all" id="example-element"></div>
     We had agreed, my companion and I, that I should call for him at his house,
-    after dinner, not later than eleven o’clock. This athletic young Frenchman
-    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
+    after dinner, not later than eleven o'clock. This athletic young Frenchman
+    belongs to a small set of Parisian sportsmen, who have taken up "ballooning"
     as a pastime. After having exhausted all the sensations that are to be found
-    in ordinary sports, even those of “automobiling” at a breakneck speed, the
-    members of the “Aéro Club” now seek in the air, where they indulge in all
+    in ordinary sports, even those of "automobiling" at a breakneck speed, the
+    members of the "Aéro Club" now seek in the air, where they indulge in all
     kinds of daring feats, the nerve-racking excitement that they have ceased to
     find on earth.
   </div>
@@ -58,8 +61,6 @@ shape-margin: 5%;
   shape-outside: circle(50%);
 }
 ```
-
-The margin lets you adjust the distance between the edges of the shape (the **float element**) and the surrounding content.
 
 ## Syntax
 
@@ -147,4 +148,4 @@ section {
 - [Overview of CSS Shapes](/en-US/docs/Web/CSS/Guides/Shapes/Overview)
 - {{cssxref("shape-outside")}}
 - {{cssxref("shape-image-threshold")}}
-- {{cssxref("&lt;basic-shape&gt;")}}
+- {{cssxref("basic-shape")}}

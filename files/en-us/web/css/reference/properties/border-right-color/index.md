@@ -1,5 +1,6 @@
 ---
-title: border-right-color
+title: "`border-right-color` CSS property"
+short-title: border-right-color
 slug: Web/CSS/Reference/Properties/border-right-color
 page-type: css-property
 browser-compat: css.properties.border-right-color
@@ -68,9 +69,9 @@ border-right-color: revert-layer;
 border-right-color: unset;
 ```
 
-The `border-right-color` property is specified as a single value.
-
 ### Values
+
+This property is specified as one value:
 
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the right border.

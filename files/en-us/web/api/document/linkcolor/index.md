@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.linkColor
 ---
 
-{{APIRef("DOM")}} {{Deprecated_header}}
+{{APIRef("DOM")}}
 
 The **`Document.linkColor`** property gets/sets the color of
 links within the document.

@@ -1,5 +1,6 @@
 ---
-title: ::grammar-error
+title: "`::grammar-error` CSS pseudo-element"
+short-title: ::grammar-error
 slug: Web/CSS/Reference/Selectors/::grammar-error
 page-type: css-pseudo-element
 browser-compat: css.selectors.grammar-error

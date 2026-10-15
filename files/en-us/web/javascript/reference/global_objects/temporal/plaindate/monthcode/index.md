@@ -3,22 +3,26 @@ title: Temporal.PlainDate.prototype.monthCode
 short-title: monthCode
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/monthCode
 page-type: javascript-instance-accessor-property
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.PlainDate.monthCode
 sidebar: jsref
 ---
 
-{{SeeCompatTable}}
-
 The **`monthCode`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a calendar-specific string representing the month of this date. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 
-Usually it is `M` plus a two-digit month number. For leap months, it is the previous month's code followed by `L` (even if it's conceptually a derivative of the following month; for example, in the Hebrew calendar, Adar I has code `M05L` but Adar II has code `M06`). If the leap month is the first month of the year, the code is `M00L`.
+## Value
+
+The basic format of `monthCode` is `M` plus a two-digit month number. For leap months, it is the previous month's code followed by `L` (even if it's conceptually a derivative of the following month; for example, in the Hebrew calendar, Adar I has code `M05L` but Adar II has code `M06`).
+
+All calendars have at least 12 months, with codes from `"M01"` to `"M12"`.
+
+All [specified calendars](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) have month codes fully defined by the spec. Most don't have month rules distinct from `iso8601`. The `coptic`, `ethioaa`, and `ethiopic` calendars have an additional `M13` month. The `chinese` and `dangi` calendars have 12 additional leap months possible, with codes from `"M01L"` to `"M12L"`. The `hebrew` calendar has one leap month, `"M05L"` (Adar I).
 
 > [!NOTE]
 > Don't assume that `monthCode` is a user-friendly string; use `toLocaleString()` to format your date instead. Generally, don't cache the name of months in an array or object. Even though `monthCode` usually maps to the month's name within one calendar, we recommend always computing the month's name using, for example, `date.toLocaleString("en-US", { calendar: date.calendarId, month: "long" })`.
 
 The set accessor of `monthCode` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/PlainDate/with", "with()")}} method to create a new `Temporal.PlainDate` object with the desired new value.
+
+When setting the date to a different year, the `monthCode` remains the same, but the `month` may change if the target year has a different leap month structure. If the current `monthCode` does not exist in the target year and the method is not configured to reject, then for the `chinese` and `dangi` calendars, the previous month is used instead (e.g., from `"M03L"` to `"M03"`, which is from 闰三月 to 三月). For `hebrew`, the _next_ month is used instead (from `"M05L"` to `"M06"`, which is from Adar I to Adar II).
 
 ## Examples
 
@@ -74,7 +78,7 @@ Don't do this:
 ```js example-bad
 const names = [
   "January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
+  "July", "August", "September", "October", "November", "December",
 ];
 
 const date = Temporal.PlainDate.from("2021-07-01");
@@ -88,7 +92,7 @@ Also don't do this:
 const names = {
   "M01": "January", "M02": "February", "M03": "March", "M04": "April",
   "M05": "May", "M06": "June", "M07": "July", "M08": "August",
-  "M09": "September", "M10": "October", "M11": "November", "M12": "December"
+  "M09": "September", "M10": "October", "M11": "November", "M12": "December",
 };
 
 const date = Temporal.PlainDate.from("2021-07-01");

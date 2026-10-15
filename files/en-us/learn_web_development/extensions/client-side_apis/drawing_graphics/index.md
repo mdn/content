@@ -223,7 +223,7 @@ Let's start by creating our own canvas template to create future experiments in.
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />
-       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <meta name="viewport" content="width=device-width" />
        <title>Canvas</title>
        <script src="script.js" defer></script>
        <link href="style.css" rel="stylesheet" />
@@ -447,7 +447,7 @@ Now let's look at how to draw a circle in canvas. This is accomplished using the
    ctx.fill();
    ```
 
-   `arc()` takes six parameters. The first two specify the position of the arc's center (X and Y, respectively). The third is the circle's radius, the fourth and fifth are the start and end angles at which to draw the circle (so specifying 0 and 360 degrees gives us a full circle), and the sixth parameter defines whether the circle should be drawn counterclockwise (anticlockwise) or clockwise (`false` is clockwise).
+   `arc()` takes six parameters. The first two specify the position of the arc's center (X and Y, respectively). The third is the circle's radius, the fourth and fifth are the start and end angles at which to draw the circle (so specifying 0 and 360 degrees gives us a full circle), and the sixth parameter defines whether the circle should be drawn counterclockwise or clockwise (`false` is clockwise).
 
    > [!NOTE]
    > 0 degrees is horizontally to the right.
@@ -625,7 +625,7 @@ Let's build an example.
    So on each iteration, we:
    - Set the `fillStyle` to be a shade of slightly transparent purple, which changes each time based on the value of `length`. As you'll see later the length gets smaller each time the loop runs, so the effect here is that the color gets brighter with each successive triangle drawn.
    - Begin the path.
-   - Move the pen to a coordinate of `(moveOffset, moveOffset)`; This variable defines how far we want to move each time we draw a new triangle.
+   - Move the pen to a coordinate of `(moveOffset, moveOffset)`. This variable defines how far we want to move each time we draw a new triangle.
    - Draw a line to a coordinate of `(moveOffset+length, moveOffset)`. This draws a line of length `length` parallel to the X axis.
    - Calculate the triangle's height, as before.
    - Draw a line to the downward-pointing corner of the triangle, then draw a line back to the start of the triangle.
@@ -904,7 +904,7 @@ const sizePicker = document.querySelector('input[type="range"]');
 const output = document.querySelector(".output");
 const clearBtn = document.querySelector("button");
 
-// covert degrees to radians
+// convert degrees to radians
 function degToRad(degrees) {
   return (degrees * Math.PI) / 180;
 }
@@ -978,13 +978,13 @@ All {{htmlelement("input")}} types are well supported. If a browser doesn't supp
 
 It's now time to leave 2D behind, and take a quick look at 3D canvas. 3D canvas content is specified using the [WebGL API](/en-US/docs/Web/API/WebGL_API), which is a completely separate API from the 2D canvas API, even though they both render onto {{htmlelement("canvas")}} elements.
 
-WebGL is based on [OpenGL](/en-US/docs/Glossary/OpenGL) (Open Graphics Library), and allows you to communicate directly with the computer's [GPU](/en-US/docs/Glossary/GPU). As such, writing raw WebGL is closer to low level languages such as C++ than regular JavaScript; it is quite complex but incredibly powerful.
+WebGL is based on [OpenGL](/en-US/docs/Glossary/OpenGL) (Open Graphics Library), and allows you to communicate directly with the computer's [GPU](/en-US/docs/Glossary/GPU). As such, writing raw WebGL is closer to low-level languages such as C++ than regular JavaScript; it is quite complex but incredibly powerful.
 
 ### Using a library
 
-Because of its complexity, most people write 3D graphics code using a third party JavaScript library such as [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), [PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas), or [Babylon.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js). Most of these work in a similar way, providing functionality to create primitive and custom shapes, position viewing cameras and lighting, covering surfaces with textures, and more. They handle the WebGL for you, letting you work on a higher level.
+Because of its complexity, most people write 3D graphics code using a third-party JavaScript library such as [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), [PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas), or [Babylon.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js). Most of these work in a similar way, providing functionality to create primitive and custom shapes, position viewing cameras and lighting, covering surfaces with textures, and more. They handle the WebGL for you, letting you work on a higher level.
 
-Yes, using one of these means learning another new API (a third party one, in this case), but they are a lot simpler than coding raw WebGL.
+Yes, using one of these means learning another new API (a third-party one, in this case), but they are a lot simpler than coding raw WebGL.
 
 ### A spinning cube
 
@@ -998,7 +998,7 @@ Let's look at an example of how to create something with a WebGL library. We'll 
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />
-       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <meta name="viewport" content="width=device-width" />
 
        <title>Three.js basic cube example</title>
 
@@ -1130,7 +1130,7 @@ The finished product should look like:
 {{EmbedLiveSample("9-webgl-cube", "100%", 500)}}
 
 > [!NOTE]
-> In our GitHub repo you can also find another interesting 3D cube example — [Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/)). This uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to take a video stream from a computer web cam and project it onto the side of the cube as a texture!
+> In our GitHub repo you can also find another interesting 3D cube example — [Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/threejs-video-cube) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/threejs-video-cube/)). This uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to take a video stream from a computer web cam and project it onto the side of the cube as a texture!
 
 ## Summary
 

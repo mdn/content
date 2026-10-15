@@ -27,11 +27,11 @@ To complete the task:
 
 <!-- Code shared across examples -->
 
-```html hidden live-sample___conditionals-1 live-sample___conditionals-2 live-sample___conditionals-3
+```html hidden live-sample___conditionals-1 live-sample___conditionals-2 live-sample___conditionals-3 live-sample___conditionals-1-finish live-sample___conditionals-2-finish live-sample___conditionals-3-finish
 <section></section>
 ```
 
-```css hidden live-sample___conditionals-1 live-sample___conditionals-2 live-sample___conditionals-3
+```css hidden live-sample___conditionals-1 live-sample___conditionals-2 live-sample___conditionals-3 live-sample___conditionals-1-finish live-sample___conditionals-2-finish live-sample___conditionals-3-finish
 * {
   box-sizing: border-box;
 }
@@ -43,6 +43,12 @@ p {
 ```
 
 <!-- Example-specific code -->
+
+The starting point of the task looks like this (nothing is shown yet):
+
+{{ EmbedLiveSample("conditionals-1", "100%", 60) }}
+
+Here's the underlying code for this starting point:
 
 ```js live-sample___conditionals-1
 let season = "summer";
@@ -58,7 +64,9 @@ para1.textContent = response;
 section.appendChild(para1);
 ```
 
-{{ EmbedLiveSample("conditionals-1", "100%", 60) }}
+The initial state of your updated output should look like this:
+
+{{ EmbedLiveSample("conditionals-1-finish", "100%", 60) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -80,6 +88,25 @@ if (season === "summer") {
 
 // Don't edit the code below here!
 // ...
+```
+
+```js hidden live-sample___conditionals-1-finish
+let season = "summer";
+let response;
+
+if (season === "summer") {
+  response = "It's probably nice and warm where you are; enjoy the sun!";
+} else if (season === "winter") {
+  response = "I hope you are not too cold. Put some warm clothes on!";
+} else {
+  response =
+    "I don't know what the season is where you are. Hope you are well.";
+}
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = response;
+section.appendChild(para1);
 ```
 
 </details>
@@ -106,6 +133,12 @@ To complete the task:
 After you've entered your code, try changing `machineActive` to `true`, and `score` to a few different values to see if it works.
 Please note that, for the scope of this exercise, the `Your score is __` string will remain on the screen regardless of the `machineActive` variable's value.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("conditionals-2", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___conditionals-2
 let response;
 let score = 75;
@@ -124,7 +157,9 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
-{{ EmbedLiveSample("conditionals-2", "100%", 60) }}
+The initial state of your updated output should look like this:
+
+{{ EmbedLiveSample("conditionals-2-finish", "100%", 80) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -159,6 +194,39 @@ if (machineActive) {
 // ...
 ```
 
+```js hidden live-sample___conditionals-2-finish
+let response;
+let score = 75;
+let machineActive = false;
+
+if (machineActive) {
+  if (score < 0 || score > 100) {
+    response = "This is not possible, an error has occurred.";
+  } else if (score >= 0 && score < 20) {
+    response = "That was a terrible score — total fail!";
+  } else if (score >= 20 && score < 40) {
+    response =
+      "You know some things, but it's a pretty bad score. Needs improvement.";
+  } else if (score >= 40 && score < 70) {
+    response = "You did a passable job, not bad!";
+  } else if (score >= 70 && score < 90) {
+    response = "That's a great score, you really know your stuff.";
+  } else if (score >= 90 && score <= 100) {
+    response = "What an amazing score! Did you cheat? Are you for real?";
+  }
+} else {
+  response = "The machine is turned off. Turn it on to process your score.";
+}
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+const para2 = document.createElement("p");
+para1.textContent = `Your score is ${score}`;
+para2.textContent = response;
+section.appendChild(para1);
+section.appendChild(para2);
+```
+
 </details>
 
 ## Conditionals 3
@@ -174,6 +242,12 @@ To complete the task:
 
 1. Create an `if...else` structure that checks whether the machine is switched on and puts a message into the `machineResult` variable telling the user whether it is on or off.
 2. If the machine is on, we also want a second conditional to run that checks whether the `pwd` is equal to `cheese`. If so, it should assign a string to `pwdResult` telling the user they logged in successfully. If not, it should assign a different string to `pwdResult` telling the user their login attempt was not successful. We'd like you to do this in a single line, using something that isn't an `if...else` structure.
+
+The starting point of the task looks like this (nothing is shown yet):
+
+{{ EmbedLiveSample("conditionals-3", "100%", 60) }}
+
+Here's the underlying code for this starting point:
 
 ```js live-sample___conditionals-3
 let machineActive = true;
@@ -195,7 +269,9 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
-{{ EmbedLiveSample("conditionals-3", "100%", 60) }}
+The updated output should look like this:
+
+{{ EmbedLiveSample("conditionals-3-finish", "100%", 80) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -221,6 +297,32 @@ if (machineActive) {
 
 // Don't edit the code below here!
 // ...
+```
+
+```js hidden live-sample___conditionals-3-finish
+let machineActive = true;
+let pwd = "cheese";
+
+let machineResult;
+let pwdResult;
+
+if (machineActive) {
+  machineResult = "Machine is active. Trying login.";
+  pwdResult =
+    pwd === "cheese"
+      ? "Login successful."
+      : "Password incorrect; login failed.";
+} else {
+  machineResult = "Machine is inactive. Activate and try logging in again.";
+}
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+const para2 = document.createElement("p");
+para1.textContent = machineResult;
+para2.textContent = pwdResult;
+section.appendChild(para1);
+section.appendChild(para2);
 ```
 
 </details>

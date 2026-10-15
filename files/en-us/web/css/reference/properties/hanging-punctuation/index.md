@@ -1,5 +1,6 @@
 ---
-title: hanging-punctuation
+title: "`hanging-punctuation` CSS property"
+short-title: hanging-punctuation
 slug: Web/CSS/Reference/Properties/hanging-punctuation
 page-type: css-property
 browser-compat: css.properties.hanging-punctuation

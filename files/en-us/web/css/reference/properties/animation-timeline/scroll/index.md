@@ -1,12 +1,13 @@
 ---
-title: scroll()
+title: "`scroll()` CSS function"
+short-title: scroll()
 slug: Web/CSS/Reference/Properties/animation-timeline/scroll
 page-type: css-function
 browser-compat: css.properties.animation-timeline.scroll
 sidebar: cssref
 ---
 
-The **`scroll()`** [CSS function](/en-US/docs/Web/CSS/Reference/Values/Functions) can be used to define the scroller and axis of an [anonymous scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_scroll_progress_timelines).
+The **`scroll()`** [CSS function](/en-US/docs/Web/CSS/Reference/Values/Functions) can be used with the {{cssxref("animation-timeline")}} property to create an [anonymous scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_scroll_progress_timelines), defining the scroller and axis of the timeline.
 
 ## Syntax
 
@@ -142,7 +143,7 @@ These two together ensure that the container has a vertical scrollbar, which all
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }

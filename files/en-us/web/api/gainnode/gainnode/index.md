@@ -39,7 +39,7 @@ new GainNode(context, options)
       - : Represents an enumerated value describing the meaning of the channels. This
         interpretation will define how audio [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
         The possible values are `"speakers"` or `"discrete"`. (See
-        {{domxref("AudioNode.channelCountMode")}} for more information including default
+        {{domxref("AudioNode.channelInterpretation")}} for more information including default
         values.)
 
 ### Return value

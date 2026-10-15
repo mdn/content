@@ -1,5 +1,6 @@
 ---
-title: r
+title: "`r` CSS property"
+short-title: r
 slug: Web/CSS/Reference/Properties/r
 page-type: css-property
 browser-compat: css.properties.r
@@ -57,7 +58,7 @@ In this example, we have two identical `<circle>` elements in an SVG, each with 
 </svg>
 ```
 
-With CSS, we style only the first circle, allowing the second circle to use default styles (with ({{cssxref("fill")}} defaulting to black). We use the `r` property to override the value of the SVG {{SVGAttr("r")}} attribute, giving it a `fill` and {{cssxref("stroke")}}. The default size of an SVG is `300px` wide and `150px` tall.
+With CSS, we style only the first circle, allowing the second circle to use default styles (with {{cssxref("fill")}} defaulting to black). We use the `r` property to override the value of the SVG {{SVGAttr("r")}} attribute, giving it a `fill` and {{cssxref("stroke")}}. The default size of an SVG is `300px` wide and `150px` tall.
 
 ```css
 svg {

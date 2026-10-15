@@ -25,11 +25,11 @@ To complete the task:
 
 <!-- Code shared across examples -->
 
-```html hidden live-sample___objects-1 live-sample___objects-2 live-sample___objects-3 live-sample___objects-4
+```html hidden live-sample___objects-1 live-sample___objects-2 live-sample___objects-3 live-sample___objects-4 live-sample___objects-1-finish live-sample___objects-2-finish live-sample___objects-4-finish
 <section></section>
 ```
 
-```css hidden live-sample___objects-1 live-sample___objects-2 live-sample___objects-3 live-sample___objects-4
+```css hidden live-sample___objects-1 live-sample___objects-2 live-sample___objects-3 live-sample___objects-4 live-sample___objects-1-finish live-sample___objects-2-finish live-sample___objects-4-finish
 * {
   box-sizing: border-box;
 }
@@ -41,6 +41,12 @@ p {
 ```
 
 <!-- Example-specific code -->
+
+The starting point of the task looks like this (nothing is shown yet):
+
+{{ EmbedLiveSample("objects-1", "100%", 60) }}
+
+Here's the underlying code for this starting point:
 
 ```js live-sample___objects-1
 const cat = {
@@ -67,7 +73,9 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
-{{ EmbedLiveSample("objects-1", "100%", 60) }}
+The updated output should look like this:
+
+{{ EmbedLiveSample("objects-1-finish", "100%", 80) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -84,6 +92,29 @@ cat.color = "black";
 
 // Don't edit the code below here!
 // ...
+```
+
+```js hidden live-sample___objects-1-finish
+const cat = {
+  name: "Bertie",
+  breed: "Cymric",
+  color: "white",
+  greeting: function () {
+    console.log("Meow!");
+  },
+};
+
+const catName = cat["name"];
+cat.greeting();
+cat.color = "black";
+
+const section = document.querySelector("section");
+let para1 = document.createElement("p");
+let para2 = document.createElement("p");
+para1.textContent = `The cat's name is ${catName}.`;
+para2.textContent = `The cat's color is ${cat.color}.`;
+section.appendChild(para1);
+section.appendChild(para2);
 ```
 
 </details>
@@ -108,6 +139,12 @@ To complete the task:
        > Include at least two albums in the `albums` array.
 2. Write a string to the variable `bandInfo`, which will contain a small biography detailing their name, nationality, years active, and style, and the title and release date of their first album.
 
+The starting point of the task looks like this (nothing is shown yet):
+
+{{ EmbedLiveSample("objects-2", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___objects-2
 let bandInfo;
 
@@ -123,7 +160,9 @@ para1.textContent = bandInfo;
 section.appendChild(para1);
 ```
 
-{{ EmbedLiveSample("objects-2", "100%", 60) }}
+The updated output should look something like this:
+
+{{ EmbedLiveSample("objects-2-finish", "100%", 60) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -167,6 +206,44 @@ bandInfo = `The ${band.nationality} ${band.genre} band ${band.name} were active 
 // ...
 ```
 
+```js hidden live-sample___objects-2-finish
+let bandInfo;
+
+const band = {
+  name: "Black Sabbath",
+  nationality: "British",
+  genre: "heavy metal",
+  members: 4,
+  formed: 1968,
+  split: 2025,
+  albums: [
+    {
+      name: "Black Sabbath",
+      released: 1970,
+    },
+    {
+      name: "Paranoid",
+      released: 1970,
+    },
+    {
+      name: "Master of Reality",
+      released: 1971,
+    },
+    {
+      name: "Vol. 4",
+      released: 1972,
+    },
+  ],
+};
+
+bandInfo = `The ${band.nationality} ${band.genre} band ${band.name} were active between ${band.formed} and ${band.split}. Their first album, ${band.albums[0].name}, was released in ${band.albums[0].released}.`;
+
+const section = document.querySelector("section");
+let para1 = document.createElement("p");
+para1.textContent = bandInfo;
+section.appendChild(para1);
+```
+
 </details>
 
 ## Object basics 3
@@ -178,6 +255,12 @@ To complete the task:
 1. Rewrite the `greeting()` method so that it logs `"Hello, said Bertie the Cymric."` to the browser's console, but in a way that will work across _any_ cat object of the same structure, regardless of its name or breed.
 2. Write your own object called `cat2`, which has the same structure and `greeting()` method, but a different `name`, `breed`, and `color`.
 3. Call both `greeting()` methods to check that they log appropriate greetings to the console.
+
+The starting point of the task looks like this (nothing is shown):
+
+{{ EmbedLiveSample("objects-3", "100%", 60) }}
+
+Here's the underlying code for this starting point:
 
 ```js live-sample___objects-3
 const cat = {
@@ -194,7 +277,7 @@ const cat = {
 // Add your code here
 ```
 
-{{ EmbedLiveSample("objects-3", "100%", 60) }}
+We've not provided finished content for this task, as it doesn't print anything to the DOM. The output is all logged to the console.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -204,6 +287,29 @@ Your finished JavaScript should look something like this:
 ```js
 // ...
 // Don't edit the code above here!
+
+const cat2 = {
+  name: "Elfie",
+  breed: "Aphrodite Giant",
+  color: "ginger",
+  greeting: function () {
+    console.log(`Hello, said ${this.name} the ${this.breed}.`);
+  },
+};
+
+cat.greeting();
+cat2.greeting();
+```
+
+```js hidden
+const cat = {
+  name: "Bertie",
+  breed: "Cymric",
+  color: "white",
+  greeting: function () {
+    console.log("Meow!");
+  },
+};
 
 const cat2 = {
   name: "Elfie",
@@ -228,6 +334,12 @@ To complete the task:
 
 1. Create a JavaScript class that defines cat instances
 2. Use your class along with the `new` keyword to create the `cat` and `cat2` instances.
+
+The starting point of the task looks like this (nothing is shown):
+
+{{ EmbedLiveSample("objects-4", "100%", 60) }}
+
+Here's the underlying code for this starting point:
 
 ```js live-sample___objects-4
 const cat = {
@@ -254,7 +366,7 @@ cat.greeting();
 cat2.greeting();
 ```
 
-{{ EmbedLiveSample("objects-4", "100%", 60) }}
+We've not provided finished content for this task, as it doesn't print anything to the DOM. The output is all logged to the console.
 
 <details>
 <summary>Click here to show the solution</summary>

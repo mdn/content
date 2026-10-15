@@ -11,6 +11,12 @@ The **Canvas API** provides a means for drawing graphics via [JavaScript](/en-US
 
 The Canvas API largely focuses on 2D graphics. The [WebGL API](/en-US/docs/Web/API/WebGL_API), which also uses the `<canvas>` element, draws hardware-accelerated 2D and 3D graphics.
 
+## Accessibility concerns
+
+The `<canvas>` element is just a bitmap and does not provide information about any drawn objects. Text written on canvas can cause legibility issues with users relying on screen magnification. The pixels within a canvas element do not scale and can become blurry with magnification. This is because they are not a vector but letter-shaped collection of pixels. When zooming in on it, the pixels become bigger.
+
+Canvas content is not exposed to accessibility tools like semantic HTML is. In general, you should use canvases like images and avoid using them to render significant content without accessible backing markup.
+
 ## Basic example
 
 This simple example draws a green rectangle onto a canvas.
@@ -76,7 +82,7 @@ ctx.fillRect(10, 10, 150, 100);
 The Canvas API is extremely powerful, but not always simple to use. The libraries listed below can make the creation of canvas-based projects faster and easier.
 
 - [EaselJS](https://createjs.com/easeljs) is an open-source canvas library that makes creating games, generative art, and other highly graphical experiences easy.
-- [Fabric.js](https://fabricjs.com/) is an open-source canvas library with SVG parsing capabilities.
+- [Fabric.js](https://www.fabricjs.com/) is an open-source canvas library with SVG parsing capabilities.
 - [heatmap.js](https://www.patrick-wied.at/static/heatmapjs/) is an open-source library for creating canvas-based data heat maps.
 - [JavaScript InfoVis Toolkit](https://philogb.github.io/jit/) creates interactive data visualizations.
 - [Konva.js](https://konvajs.org/) is a 2D canvas library for desktop and mobile applications.

@@ -1,12 +1,13 @@
 ---
-title: padding-block
+title: "`padding-block` CSS property"
+short-title: padding-block
 slug: Web/CSS/Reference/Properties/padding-block
 page-type: css-shorthand-property
 browser-compat: css.properties.padding-block
 sidebar: cssref
 ---
 
-The **`padding-block`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) defines the logical block start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.
+The **`padding-block`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property defines the logical block start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.
 
 {{InteractiveExample("CSS Demo: padding-block")}}
 
@@ -84,7 +85,7 @@ The `padding-block` property may be specified with one or two values. If one val
 
 ### Values
 
-The `padding-block` property takes the same values as the {{cssxref("padding-left")}} property.
+The `padding-block` property takes the same values as the {{cssxref("padding-top")}} property.
 
 ## Description
 

@@ -29,7 +29,7 @@ An object with the following properties:
 - `audioLevel`
   - : A number representing the audio level of this frame.
     The value is between 0 and 1 inclusive (linear), where 1.0 represents 0 dBov ([decibels relative to full scale (DBFS)](https://en.wikipedia.org/wiki/DBFS)), 0 represents silence, and 0.5 represents approximately 6 dB SPL change in the [sound pressure level](https://en.wikipedia.org/wiki/Sound_pressure#Sound_pressure_level) from 0 dBov.
-    The value is converted from the -127 to 0 range specified in [RFC6464](https://www.rfc-editor.org/rfc/rfc6464) via the equation `10^(-rfc_level/20)`.
+    The value is converted from the -127 to 0 range specified in [RFC6464](https://www.rfc-editor.org/info/rfc6464/) via the equation `10^(-rfc_level/20)`.
     If the RFC6464 header extension is not present in the received packets of the frame, `audioLevel` will be `undefined`.
 - `captureTime`
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the capture time of the frame relative to {{domxref("Performance.timeOrigin")}}.
@@ -41,7 +41,7 @@ An object with the following properties:
   - : A string containing the {{glossary("MIME type")}} of the codec used, such as "audio/opus".
 - `payloadType`
   - : A positive integer value in the range from 0 to 127 that describes the format of the RTP payload.
-    The mappings of values to formats is defined in {{rfc("3550")}}, and more specifically [Section 6: Payload Type Definitions](https://www.rfc-editor.org/rfc/rfc3551#section-6) of {{rfc("3551")}}.
+    The mappings of values to formats is defined in {{rfc("3550")}}, and more specifically [Section 6: Payload Type Definitions](https://www.rfc-editor.org/info/rfc3551/#section-6) of {{rfc("3551")}}.
 - `receiveTime`
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the timestamp of the last received packet of an incoming frame (from an {{domxref("RTCRtpReceiver")}}) used to produce this media frame, relative to {{domxref("Performance.timeOrigin")}}.
 - `rtpTimestamp`

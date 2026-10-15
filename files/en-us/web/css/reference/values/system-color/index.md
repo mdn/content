@@ -1,5 +1,6 @@
 ---
-title: <system-color>
+title: "`<system-color>` CSS type"
+short-title: <system-color>
 slug: Web/CSS/Reference/Values/system-color
 page-type: css-type
 browser-compat: css.types.color.system-color
@@ -14,7 +15,7 @@ In forced colors mode, authors should use colors from the `<system-color>` type 
 
 Authors can detect forced colors mode using the [`forced-colors`](/en-US/docs/Web/CSS/Reference/At-rules/@media/forced-colors) media feature.
 
-A `<system-color>` value can be used anywhere a [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) can be used.
+A `<system-color>` value can be used anywhere a {{cssxref("&lt;color&gt;")}} can be used.
 
 ## Syntax
 
@@ -128,6 +129,9 @@ Depending on your settings, the sample colors displayed in the table may change.
     </tr>
   </tbody>
 </table>
+
+> [!NOTE]
+> To reduce the risk of {{glossary("fingerprinting")}}, some browsers return a fixed value for `AccentColor` and `AccentColorText` unless they are used in certain restricted circumstances. See [browser compatibility](#browser_compatibility) for details.
 
 ### Deprecated system color keywords
 
@@ -330,4 +334,4 @@ In this example we have a button that normally gets its contrast using the {{css
 
 ## See also
 
-- [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value): the data type these keywords belong to
+- {{cssxref("&lt;color&gt;")}}: the data type these keywords belong to

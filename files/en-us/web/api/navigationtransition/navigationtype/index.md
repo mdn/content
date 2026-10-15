@@ -3,12 +3,10 @@ title: "NavigationTransition: navigationType property"
 short-title: navigationType
 slug: Web/API/NavigationTransition/navigationType
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigationTransition.navigationType
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`navigationType`** read-only property of the
 {{domxref("NavigationTransition")}} interface returns the type of the ongoing navigation.

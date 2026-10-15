@@ -20,7 +20,7 @@ You can use most of this API without any special permission. However:
 
 - To use {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}}, you must have the [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the tab
 
-Alternatively, you can get these permissions temporarily, only for the currently active tab and only in response to an explicit user action, by asking for the [`"activeTab"` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
+Alternatively, you can get these permissions temporarily for the active tab in response to an explicit user action by asking for the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission).
 
 Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a single tab only within a browser session. If the browser is restarted, then it can and will reuse tab `id`s. To associate information with a tab across browser restarts, use {{WebExtAPIRef("sessions.setTabValue()")}}.
 
@@ -49,6 +49,8 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 
 - {{WebExtAPIRef("tabs.TAB_ID_NONE")}}
   - : A special ID value given to tabs that are not browser tabs (for example, tabs in devtools windows).
+- {{WebExtAPIRef("tabs.SPLIT_VIEW_ID_NONE")}}
+  - : A special ID value given to tabs that aren't in a [split view](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#working_with_tab_split_views).
 
 ## Functions
 

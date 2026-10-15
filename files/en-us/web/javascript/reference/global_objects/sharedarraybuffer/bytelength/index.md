@@ -9,21 +9,13 @@ sidebar: jsref
 
 The **`byteLength`** accessor property of {{jsxref("SharedArrayBuffer")}} instances returns the length (in bytes) of this `SharedArrayBuffer`.
 
-{{InteractiveExample("JavaScript Demo: SharedArrayBuffer.prototype.byteLength", "shorter")}}
-
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(8);
-
-console.log(buffer.byteLength);
-// Expected output: 8
-```
-
 ## Description
 
 The `byteLength` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when the shared array is constructed and cannot be changed.
 
 ## Examples
+
+Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
 ### Using byteLength
 

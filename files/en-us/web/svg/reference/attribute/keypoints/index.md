@@ -6,7 +6,7 @@ browser-compat: svg.elements.animateMotion.keyPoints
 sidebar: svgref
 ---
 
-The **`keyPoints`** attribute indicates the simple duration of an animation.
+The **`keyPoints`** attribute indicates, in the range [0,1], how far the object is along the path for each associated value in {{SVGAttr("keyTimes")}}.
 
 You can use this attribute with the following SVG elements:
 

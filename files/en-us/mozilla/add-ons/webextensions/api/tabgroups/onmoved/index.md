@@ -10,7 +10,7 @@ Fires when a tab group is moved within a window or to another window. {{WebExtAP
 
 The event is passed a {{WebExtAPIRef("tabGroups.TabGroup")}} object. This includes the `windowId` but not the position of the tab group. To determine the position of the tab group, use {{WebExtAPIRef("tabs.query()")}} with the `groupId`, and read the `index` property of the returned tab.
 
-In Chrome, this event doesn't fire when a tab group is moved between windows; instead, the group is removed from one window and created in another (firing {{WebExtAPIRef("tabGroups.onRemoved")}} and {{WebExtAPIRef("tabGroups.onCreated")}}.
+In Chrome, this event doesn't fire when a tab group is moved between windows; instead, the group is removed from one window and created in another (firing {{WebExtAPIRef("tabGroups.onRemoved")}} and {{WebExtAPIRef("tabGroups.onCreated")}}).
 
 ## Syntax
 
@@ -55,11 +55,13 @@ browser.tabGroups.onMoved.addListener(tabGroupMoved);
 Locate a tab group moved to another window.
 
 ```js
-browser.tabGroups.onMoved.addListener(group => {
+browser.tabGroups.onMoved.addListener(async (group) => {
   let tabs = await browser.tabs.query({
     groupId: group.id,
   });
-  console.log(`Moved tab group to ${tabs[0].index} in window ${group.windowId}`);
+  console.log(
+    `Moved tab group to ${tabs[0].index} in window ${group.windowId}`,
+  );
 });
 ```
 

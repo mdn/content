@@ -159,14 +159,14 @@ You should already have an `index.html` file inside `test-site`. Create the `ima
 There are generally two parts to a file name — the **name** and the **extension**. Take the file we created above — `index.html`:
 
 - The name in this case is `index`. File names can generally contain whatever characters you like, although different computer systems will have various restrictions on the characters that can be used. It is better to stick to numbers and letters, at least to begin with. In addition, systems may give special meaning to certain names or parts of names — as we've already said, `index` files tend to be recognized as the main homepage file of a website.
-- The file extension identifies the type of file we are dealing with, and is used by computer systems to identify what kind of content it can expect in the file, which program it should use to open the file, etc. in this case, the extension is `.html`, which means the file should contain plain text, and more specifically, HTML code. Because of the extension, your computer knows that when you try to open the file it should open it using your default text editor, which should be VS Code if you followed all our instructions up to now.
+- The file extension identifies the type of file we are dealing with, and is used by computer systems to identify what kind of content it can expect in the file, which program it should use to open the file, etc. In this case, the extension is `.html`, which means the file should contain plain text, and more specifically, HTML code. Because of the extension, your computer knows that when you try to open the file it should open it using your default text editor, which should be VS Code if you followed all our instructions up to now.
 
 It is not true in all cases, but most files need an extension to be handled properly. Removing or changing the file extension is likely to cause errors, so you shouldn't alter it unless you really know what you are doing.
 
 > [!NOTE]
 > It is possible to put more than one dot in a file name, for example `my.cats.html`. In such cases, the last dot is assumed to be the start of the file extension.
 
-On Windows computers, you might have trouble seeing the extensions of some files, because Windows has an option called **Hide extensions for known file types** turned on by default. You can turn this off by going to File Explorer, selecting the **Folder options…** option, unchecking the **Hide extensions for known file types** check box, then clicking **OK**. For more specific information covering your version of Windows, you can search on the web.
+On Windows computers, you might have trouble seeing the extensions of some files, because Windows has an option called **Hide extensions for known file types** turned on by default. You can turn this off by going to File Explorer, selecting the **Folder options…** option, unchecking the **Hide extensions for known file types** checkbox, then clicking **OK**. For more specific information covering your version of Windows, you can search on the web.
 
 ### Best practices for naming files
 

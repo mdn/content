@@ -9,9 +9,9 @@ contact_links:
   - name: MDN GitHub Discussions
     url: https://github.com/orgs/mdn/discussions
     about: Does the issue involve a lot of pages, or are you not sure how it can be split into actionable tasks? Consider starting a discussion first.
-  - name: MDN Web Docs on Discourse
-    url: https://discourse.mozilla.org/c/mdn/learn/250
-    about: Need help with assessments on MDN Web Docs? We have a support community for this purpose on Discourse.
+  - name: MDN Web Docs Community Discord server
+    url: http://mdn.dev/discord
+    about: Want to chat about your work or how to contribute to MDN? Join us on Discord!
   - name: Help with code
     url: https://stackoverflow.com/
     about: If you are stuck and need help with code, StackOverflow is a great resource.

@@ -3,10 +3,13 @@ title: "SVGAElement: interestForElement property"
 short-title: interestForElement
 slug: Web/API/SVGAElement/interestForElement
 page-type: web-api-instance-property
+status:
+  - experimental
+  - non-standard
 browser-compat: api.SVGAElement.interestForElement
 ---
 
-{{ApiRef("HTML DOM")}}
+{{ApiRef("HTML DOM")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`interestForElement`** property of the {{domxref("SVGAElement")}} interface gets or sets the target element of an interest invoker, in cases where the associated {{svgelement("a")}} element is specified as an interest invoker.
 

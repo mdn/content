@@ -1,14 +1,17 @@
 ---
-title: inset
+title: "`inset` CSS property"
+short-title: inset
 slug: Web/CSS/Reference/Properties/inset
 page-type: css-shorthand-property
 browser-compat: css.properties.inset
 sidebar: cssref
 ---
 
-The **`inset`** [CSS](/en-US/docs/Web/CSS) property is a shorthand that corresponds to the {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and/or {{cssxref("left")}} properties. It has the same multi-value syntax of the {{cssxref("margin")}} shorthand.
+The **`inset`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property corresponds to the {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and/or {{cssxref("left")}} properties. It has the same multi-value syntax of the {{cssxref("margin")}} shorthand.
 
 This {{glossary("inset properties")}}, including `inset`, have no effect on non-positioned elements.
+
+While part of the [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) module, it does not define _logical_ offsets. It defines _physical_ offsets, regardless of the element's writing mode, directionality, and text orientation.
 
 {{InteractiveExample("CSS Demo: inset")}}
 
@@ -65,8 +68,6 @@ inset: 0;
 }
 ```
 
-While part of the [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) module, it does not define _logical_ offsets. It defines _physical_ offsets, regardless of the element's writing mode, directionality, and text orientation.
-
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
@@ -104,7 +105,7 @@ inset: unset;
 
 ### Values
 
-The `inset` property takes the same values as the {{cssxref("left")}} property.
+The `inset` property takes the same values as the {{cssxref("top")}} property.
 
 ## Formal definition
 

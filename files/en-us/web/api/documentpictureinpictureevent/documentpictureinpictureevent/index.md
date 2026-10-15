@@ -3,12 +3,10 @@ title: "DocumentPictureInPictureEvent: DocumentPictureInPictureEvent() construct
 short-title: DocumentPictureInPictureEvent()
 slug: Web/API/DocumentPictureInPictureEvent/DocumentPictureInPictureEvent
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.DocumentPictureInPictureEvent.DocumentPictureInPictureEvent
 ---
 
-{{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("Document Picture-in-Picture API")}}{{SecureContext_Header}}
 
 The **`DocumentPictureInPictureEvent()`** constructor creates a new
 {{domxref("DocumentPictureInPictureEvent")}} object instance.

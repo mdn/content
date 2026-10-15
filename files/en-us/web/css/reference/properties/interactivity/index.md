@@ -1,13 +1,15 @@
 ---
-title: interactivity
+title: "`interactivity` CSS property"
+short-title: interactivity
 slug: Web/CSS/Reference/Properties/interactivity
 page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.interactivity
+sidebar: cssref
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{seecompattable}}
 
 The **`interactivity`** [CSS](/en-US/docs/Web/CSS) property specifies whether an element and its descendant nodes are set to be [inert](/en-US/docs/Web/HTML/Reference/Global_attributes/inert).
 
@@ -27,6 +29,8 @@ interactivity: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : Selected elements are in their default state in terms of inertness. This usually means that they are interactive, but this is [not always the case](#default_inertness). This is the default value.

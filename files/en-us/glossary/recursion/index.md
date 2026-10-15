@@ -55,6 +55,8 @@ console.log(getMaxCallStackSize(0));
 
 ### Common usage examples
 
+#### Factorial
+
 ```js
 const factorial = (n) => {
   if (n === 0) {
@@ -66,11 +68,15 @@ console.log(factorial(10));
 // 3628800
 ```
 
+#### Fibonacci
+
 ```js
 const fibonacci = (n) => (n <= 2 ? 1 : fibonacci(n - 1) + fibonacci(n - 2));
 console.log(fibonacci(10));
 // 55
 ```
+
+#### Reduce
 
 ```js
 const reduce = (fn, acc, [cur, ...rest]) =>

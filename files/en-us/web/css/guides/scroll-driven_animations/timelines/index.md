@@ -35,7 +35,7 @@ Scroll-driven animations are CSS animations that are not run on the default [Doc
 
 The {{cssxref("animation-timeline")}} property, defined in the [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module, is used to set the timeline used for the animation.
 
-The [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module defines features for setting the `animation-timeline` as a scroll-progress or view-progress timeline. You can explicitly [name an element as a timeline controller](#named_scroll_progress_timelines) using the `scroll-timeline-*` and `view-timeline-*` properties, then set that name as the `animation-timeline` of a descendant element. You can also define _anonymous scroll progress timelines_ and _anonymous view progress timelines_ using the [`scroll()`](#scroll_progress_timelines) and [`view()`](#view_progress_timelines)) functions.
+The [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module defines features for setting the `animation-timeline` as a scroll-progress or view-progress timeline. You can explicitly [name an element as a timeline controller](#named_scroll_progress_timelines) using the `scroll-timeline-*` and `view-timeline-*` properties, then set that name as the `animation-timeline` of a descendant element. You can also define _anonymous scroll progress timelines_ and _anonymous view progress timelines_ using the [`scroll()`](#scroll_progress_timelines) and [`view()`](#view_progress_timelines) functions.
 
 Alternatively, the `animation-timeline` property can be used to explicitly state that the [default document timeline be used](#regular_css_animations_default_document_timeline) or to specify that the [animation doesn't have a timeline](#removing_an_animations_timeline), and therefore shouldn't occur at all.
 
@@ -320,7 +320,7 @@ The {{cssxref("view-timeline-inset")}} arguments specify insets (if positive) or
 
 Unlike the scroll timeline's `scroll()` function, there is no `<scroller>` argument in the `view()` function, as the view timeline always tracks the subject within its nearest ancestor scroll container.
 
-In this example, as we are using inset values, we can use the `from` and `to` keyframe selectors.
+In this example, as we are using inset values, we can use the `from` and `to` [keyframe selectors](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe_selectors).
 
 ```css live-sample___anon_view_args
 @keyframes action {
@@ -360,5 +360,7 @@ Because the `animation` shorthand sets the `animation-timeline` to `auto`, use a
 
 ## See also
 
-- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations)
+- [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
+- [Scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)

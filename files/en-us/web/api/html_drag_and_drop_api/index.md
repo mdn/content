@@ -40,10 +40,10 @@ HTML drag-and-drop uses the [DOM event model](/en-US/docs/Web/API/Event) and _[d
 | Event                                                   | Fires when...                                                                              |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | {{domxref('HTMLElement/dragstart_event', 'dragstart')}} | ...the [draggable item](#draggable_items) starts to be dragged.                            |
-| {{domxref('HTMLElement/drag_event', 'drag')}}           | ...the draggable item is being dragged, every few hundred milliseconds.                    |
+| {{domxref('HTMLElement/drag_event', 'drag')}}           | ...the draggable item is being dragged (fires repeatedly).                                 |
 | {{domxref('HTMLElement/dragenter_event', 'dragenter')}} | ...the element has a draggable item entering it.                                           |
 | {{domxref('HTMLElement/dragleave_event', 'dragleave')}} | ...the element has a draggable item leaving it.                                            |
-| {{domxref('HTMLElement/dragover_event', 'dragover')}}   | ...the element has a draggable item being dragged over it, every few hundred milliseconds. |
+| {{domxref('HTMLElement/dragover_event', 'dragover')}}   | ...the element has a draggable item being dragged over it (fires repeatedly).              |
 | {{domxref('HTMLElement/drop_event', 'drop')}}           | ...the element is a [drop target](#drop_target) and the draggable item is dropped over it. |
 | {{domxref('HTMLElement/dragend_event', 'dragend')}}     | ...the draggable item stops being dragged.                                                 |
 
@@ -106,7 +106,7 @@ For more information, read [Working with the drag data store](/en-US/docs/Web/AP
 
 ### Drop target
 
-A _drop target_ is an element on which a user can drop a dragged item. By default, most elements are not drop targets, and if you release the drag, a "fly-black" animation displays, indicating that the drag and drop failed. Any element can become a drop target by canceling the {{domxref("HTMLElement.dragover_event","dragover")}} event that fires on it with `preventDefault()`.
+A _drop target_ is an element on which a user can drop a dragged item. By default, most elements are not drop targets, and if you release the drag, a "fly-back" animation displays, indicating that the drag and drop failed. Any element can become a drop target by canceling the {{domxref("HTMLElement.dragover_event","dragover")}} event that fires on it with `preventDefault()`.
 
 The {{domxref("HTMLElement/drop_event", "drop")}} event only fires on drop targets, and it is the only time you can read the drag data store.
 

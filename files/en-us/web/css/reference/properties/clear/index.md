@@ -1,5 +1,6 @@
 ---
-title: clear
+title: "`clear` CSS property"
+short-title: clear
 slug: Web/CSS/Reference/Properties/clear
 page-type: css-property
 browser-compat: css.properties.clear
@@ -85,6 +86,8 @@ clear: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `none`
   - : Is a keyword indicating that the element is _not_ moved down to clear past floating elements.
