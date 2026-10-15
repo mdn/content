@@ -47,6 +47,7 @@ Exceptions are not thrown but returned when the {{jsxref("Promise")}} is rejecte
   - : Thrown if the user aborts the selection by pressing the <kbd>Esc</kbd> key or if the selection is aborted by an {{domxref("AbortController")}} being passed as an argument to `open()`.
 - `OperationError` {{domxref("DOMException")}}
   - : Thrown if the selection fails for other reasons.
+    In particular, some browsers expose the EyeDropper API even when the underlying operating system has no color picker support (for example, older Android versions). In that case, {{domxref("EyeDropper.open()")}} rejects with `OperationError`.
 
 ## Specifications
 
