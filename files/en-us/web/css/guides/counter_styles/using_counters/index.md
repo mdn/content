@@ -385,7 +385,7 @@ h3::before {
 
 {{EmbedLiveSample("Reversed counter", "100%", 150)}}
 
-### A more sophisticated example
+### A more elaborate example
 
 A counter need not necessarily be shown every time it is incremented.
 This example counts all links but shows the counter as generated content only when a link has no text.
@@ -420,7 +420,7 @@ a[href]:empty::after {
 
 #### Result
 
-{{EmbedLiveSample("A_more_sophisticated_example", "100%", 150)}}
+{{EmbedLiveSample("A_more_elaborate_example", "100%", 150)}}
 
 ### Nested counters
 
