@@ -11,7 +11,9 @@ browser-compat: api.GPUComputePassEncoder.setImmediates
 The **`setImmediates()`** method of the
 {{domxref("GPUComputePassEncoder")}} interface sets immediate data for subsequent compute commands, sending it straight to the program's shader and avoiding the need to create additional {{domxref("GPUBuffer")}}s and manage {{domxref("GPUBindGroup")}}s.
 
-Immediates are stored in a dedicated **immediate data address space**, which by default can hold up to 64 bytes.
+Immediates are for small, highly dynamic values like a per-draw object ID or a transform matrix. They are stored in a dedicated **immediate data address space**, which by default can hold up to 64 bytes. Large arrays and complex structures should stay in uniform or storage buffers.
+
+Immediates are analogous to push constants in Vulkan, root constants in D3D12, and `setBytes` in Metal.
 
 ## Syntax
 
@@ -81,13 +83,13 @@ const module = device.createShaderModule({
 
       @compute @workgroup_size(1)
       fn main() {
-        out = params; // copy the immediate data into the output buffer
+        out = params;
       }
     `,
 });
 ```
 
-Next, we create a {{domxref("GPUComputePipeline")}}, two {{domxref("GPUBuffer")}}s, and a {{domxref("GPUBindGroup")}}. We set one buffer as the bind group's resource entry, and the other will be used later on hold values copied out of the first buffer.
+Next, we create a {{domxref("GPUComputePipeline")}}, two {{domxref("GPUBuffer")}}s, and a {{domxref("GPUBindGroup")}}. We set one buffer as the bind group's resource entry, and the other will be used later on to hold values copied out of the first buffer.
 
 ```js
 const pipeline = device.createComputePipeline({
@@ -109,6 +111,9 @@ const bindGroup = device.createBindGroup({
 });
 ```
 
+> [!NOTE]
+> In this example, we've used an `auto` pipeline layout, in which case the browser calculates the size of the immediate data address space from the WGSL code. If you instead specify an explicit pipeline layout, you must set the address space size yourself via the `immediateSize` property of the {{domxref("GPUDevice.createPipelineLayout()")}} method.
+
 Next, we create a {{domxref("GPUCommandEncoder")}} and start a compute pass by setting the previously-defined pipeline and bind group into the created {{domxref("GPUComputePassEncoder")}}. Crucially for this demo, we then pass data into the shader module using `setImmediates()`. Recall how the `buffer` included in the bind group earlier was empty. The `setImmediates()` method can be used to pass data into the module without any additional buffers or bind groups. We then invoke {{domxref("GPUComputePassEncoder.dispatchWorkgroups()")}} and {{domxref("GPUComputePassEncoder.end()")}} to run the shader module.
 
 ```js
@@ -128,7 +133,7 @@ encoder.copyBufferToBuffer(buffer, 0, readback, 0, 8);
 device.queue.submit([encoder.finish()]);
 
 await readback.mapAsync(GPUMapMode.READ);
-document.body.textContent = new Float32Array(readback.getMappedRange()); // Float32Array [2, 10]
+document.body.textContent = new Float32Array(readback.getMappedRange());
 readback.unmap();
 ```
 
@@ -179,10 +184,6 @@ async function init() {
 
   const encoder = device.createCommandEncoder();
   const pass = encoder.beginComputePass();
-  if (!pass.setImmediates) {
-    document.body.textContent = "Your browser doesn't support immediates!";
-    return;
-  }
   pass.setPipeline(pipeline);
   pass.setBindGroup(0, bindGroup);
   pass.setImmediates(0, new Float32Array([2.0, 10.0]));
@@ -212,7 +213,7 @@ init();
 
 ## See also
 
-- {{domxref("GPUComputePassEncoder.setImmediates()")}}
 - {{domxref("GPURenderBundleEncoder.setImmediates()")}}
+- {{domxref("GPURenderPassEncoder.setImmediates()")}}
 - [Immediates](https://developer.chrome.com/blog/new-in-webgpu-149-150#immediates) on developer.chrome.com (2026)
 - [WebGPU Immediates](https://webgpufundamentals.org/webgpu/lessons/webgpu-immediates.html) on webgpufundamentals.org (2026)

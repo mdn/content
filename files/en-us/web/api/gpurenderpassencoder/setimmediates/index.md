@@ -11,7 +11,9 @@ browser-compat: api.GPURenderPassEncoder.setImmediates
 The **`setImmediates()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface sets immediate data for subsequent render commands, sending it straight to the program's shader and avoiding the need to create additional {{domxref("GPUBuffer")}}s and manage {{domxref("GPUBindGroup")}}s.
 
-Immediates are stored in a dedicated **immediate data address space**, which by default can hold up to 64 bytes.
+Immediates are for small, highly dynamic values like a per-draw object ID or a transform matrix. They are stored in a dedicated **immediate data address space**, which by default can hold up to 64 bytes. Large arrays and complex structures should stay in uniform or storage buffers.
+
+Immediates are analogous to push constants in Vulkan, root constants in D3D12, and `setBytes` in Metal.
 
 ## Syntax
 
@@ -68,10 +70,8 @@ if (!navigator.gpu.wgslLanguageFeatures.has("immediate_address_space")) {
 Moving on to the main program, we first define a `clearColor` — a background color to set for the `<canvas>` that we will draw on. Next, we define an array of {{jsxref("Float32Array")}}s, each of which defines the color, position, and size data for a triangle.
 
 ```js
-// Clear color for GPURenderPassDescriptor
 const clearColor = { r: 0.0, g: 0.5, b: 1.0, a: 1.0 };
 
-// Per-triangle data, sent via immediates: R G B A, offsetX offsetY, scale
 const triangles = [
   new Float32Array([1, 0, 0, 1, -0.6, 0.2, 0.4]),
   new Float32Array([0, 1, 0, 1, 0.0, -0.2, 0.4]),
@@ -103,8 +103,7 @@ struct VertexOut {
 @vertex
 fn vertex_main(@builtin(vertex_index) i : u32) -> VertexOut
 {
-  // The triangle's shape is hard-coded; no vertex buffer needed
-  var corners = array<vec2f, 3>(
+  const corners = array<vec2f, 3>(
     vec2f(0.0, 0.6),
     vec2f(-0.5, -0.6),
     vec2f(0.5, -0.6)
@@ -171,6 +170,9 @@ Next, we create a {{domxref("GPURenderPipeline")}} that references our `shaderMo
     layout: "auto",
   });
 ```
+
+> [!NOTE]
+> In this example, we've used an `auto` pipeline layout, in which case the browser calculates the size of the immediate data address space from the WGSL code. If you instead specify an explicit pipeline layout, you must set the address space size yourself via the `immediateSize` property of the {{domxref("GPUDevice.createPipelineLayout()")}} method.
 
 Next, we create a {{domxref("GPUCommandEncoder")}} and begin a render pass.
 
@@ -248,7 +250,7 @@ struct VertexOut {
 @vertex
 fn vertex_main(@builtin(vertex_index) i : u32) -> VertexOut
 {
-  var corners = array<vec2f, 3>(
+  const corners = array<vec2f, 3>(
     vec2f(0.0, 0.6),
     vec2f(-0.5, -0.6),
     vec2f(0.5, -0.6)
@@ -342,7 +344,7 @@ init();
 
 ## See also
 
-- {{domxref("GPURenderBundleEncoder.setImmediates()")}}
 - {{domxref("GPUComputePassEncoder.setImmediates()")}}
+- {{domxref("GPURenderBundleEncoder.setImmediates()")}}
 - [Immediates](https://developer.chrome.com/blog/new-in-webgpu-149-150#immediates) on developer.chrome.com (2026)
 - [WebGPU Immediates](https://webgpufundamentals.org/webgpu/lessons/webgpu-immediates.html) on webgpufundamentals.org (2026)
