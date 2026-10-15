@@ -26,7 +26,7 @@ The counter's value can be increased or decreased using the {{cssxref("counter-i
 The current value of a counter is displayed using the {{cssxref("counter()")}} or {{cssxref("counters()")}} function, typically within a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) {{CSSxRef("content")}} property.
 
 Counters can only be set, reset, or incremented in elements that generate boxes.
-For example, if an element is set to `display: none` then any counter operation on that element will be ignored.
+For example, if an element is set to `display: none`, then any counter operation on that element is ignored.
 
 The properties of counters can be scoped to specific elements using style containment which is described in more detail in the {{cssxref("contain")}} property.
 
