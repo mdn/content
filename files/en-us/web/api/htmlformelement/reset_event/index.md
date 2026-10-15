@@ -32,7 +32,7 @@ This example uses {{domxref("EventTarget.addEventListener()")}} to listen for fo
 
 ```html
 <form id="form">
-  <label>Test field: <input type="text" /></label>
+  <label>Test checkbox: <input type="checkbox" /></label>
   <br /><br />
   <button type="reset">Reset form</button>
 </form>

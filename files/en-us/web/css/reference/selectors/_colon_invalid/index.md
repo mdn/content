@@ -28,21 +28,19 @@ input:invalid {
 ```
 
 ```html interactive-example
-<form>
-  <label for="email">Email Address:</label>
-  <input id="email" name="email" type="email" value="na@me@example.com" />
+<label for="email">Email Address:</label>
+<input id="email" name="email" type="email" value="na@me@example.com" />
 
-  <label for="secret">Secret Code: (lower case letters)</label>
-  <input id="secret" name="secret" type="text" value="test" pattern="[a-z]+" />
+<label for="secret">Secret Code: (lower case letters)</label>
+<input id="secret" name="secret" type="text" value="test" pattern="[a-z]+" />
 
-  <label for="age">Your age: (18+)</label>
-  <input id="age" name="age" type="number" value="5" min="18" />
+<label for="age">Your age: (18+)</label>
+<input id="age" name="age" type="number" value="5" min="18" />
 
-  <label
-    ><input name="tos" type="checkbox" required checked /> - Do you agree to
-    ToS?</label
-  >
-</form>
+<label
+  ><input name="tos" type="checkbox" required checked /> - Do you agree to
+  ToS?</label
+>
 ```
 
 ## Syntax
@@ -152,6 +150,12 @@ In this example we use `:invalid` along with `~`, the [subsequent-sibling combin
 
   <button type="submit" name="send">Submit</button>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 #### CSS
