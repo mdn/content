@@ -40,7 +40,7 @@ It also extends the following {{domxref("PerformanceEntry")}} properties, qualif
 - {{domxref("PerformanceSoftNavigation.getLargestInteractionContentfulPaint()")}} {{Experimental_Inline}}
   - : Returns the current largest {{domxref("InteractionContentfulPaint")}} for this soft navigation.
 - {{domxref("PerformanceSoftNavigation.toJSON()")}} {{experimental_inline}}
-  - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `PerformanceSoftNavigation` object.
+  - : Returns a JSON-serializable plain object representing the `PerformanceSoftNavigation` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Description
 

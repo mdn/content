@@ -208,6 +208,8 @@ ul {
 
 This example demonstrates how, when there are fewer values in the list of widths than row rules, the values are repeated.
 
+#### CSS
+
 Using the same HTML and CSS as in the previous example, we include three comma-separated widths as the `row-rule-width` value:
 
 ```css live-sample___repeat
@@ -216,11 +218,15 @@ ul {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample("Repeat", "", "180")}}
 
 ### Using the `repeat()` function
 
 This example demonstrates using the `repeat()` function within the `row-rule-width` property value and how this function can help reduce the verbosity of value declarations.
+
+#### CSS
 
 We use the same HTML and CSS as in the previous examples. To demonstrate how values can become verbose and the utility of the `repeat()` function, we declare two custom properties, which we use in `repeat()` function declarations. The `repeat()` function sets a list of two `<line-width>` values to repeat 3 times.
 
@@ -239,6 +245,8 @@ ul {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample("func", "", "180")}}
 
 The flex container has six rows, so five gutters. The `repeat()` function repeats two width values three times, creating a list of eight width values. As there are fewer row gutters than total widths, the last three values in the list are discarded.
@@ -247,6 +255,8 @@ The flex container has six rows, so five gutters. The `repeat()` function repeat
 
 This example demonstrates using `auto` instead of an integer within the `repeat()` function.
 
+#### CSS
+
 Using `repeat(auto, <line-width>)` we set all row rules to `1px`, except the first and last, which we set to `5px`.
 
 ```css live-sample___auto
@@ -254,6 +264,8 @@ ul {
   row-rule-width: 5px, repeat(auto, 1px), 5px;
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample("auto", "", "180")}}
 
@@ -287,4 +299,5 @@ ul {
 - {{cssxref("row-rule")}} shorthand
 - {{cssxref("rule-width")}} shorthand
 - {{cssxref("rule")}} shorthand
+- [Defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module

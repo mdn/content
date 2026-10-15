@@ -5,9 +5,9 @@ page-type: guide
 sidebar: games
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Win_the_game", "Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens")}}
 
-This is the **13th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). In this article, we'll implement a lives system, so that the player can continue playing until they have lost three lives, not just one, which makes the game enjoyable for longer.
+This is the **9th step** out of 12 of the [creating a Breakout game using Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). In this article, we'll implement a lives system, so that the player can continue playing until they have lost three lives, not just one, which makes the game enjoyable for longer.
 
 ## New properties
 
@@ -27,7 +27,7 @@ These respectively will store the number of lives, the text label that displays 
 
 ## Defining the new text labels
 
-Defining the texts looks like something we already did in [the score](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score) lesson. Add the following lines below the existing `scoreText` definition inside your `create()` method:
+Defining the text labels looks like what we already did in the [Track the score and win](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win) lesson. Add the following lines below the existing `scoreText` definition inside your `create()` method:
 
 ```js
 this.livesText = this.add.text(
@@ -321,4 +321,4 @@ const game = new Phaser.Game(config);
 
 Lives made the game more forgiving—if you lose one life, you still have two more left and can continue to play. Now let's expand the look and feel of the game by adding [animations and tweens](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens).
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Win_the_game", "Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens")}}

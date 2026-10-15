@@ -4,7 +4,6 @@ short-title: ::-webkit-meter-bar
 slug: Web/CSS/Reference/Selectors/::-webkit-meter-bar
 page-type: css-pseudo-element
 status:
-  - deprecated
   - non-standard
 browser-compat: css.selectors.-webkit-meter-bar
 sidebar: cssref

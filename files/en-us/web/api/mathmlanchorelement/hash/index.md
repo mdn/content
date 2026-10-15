@@ -3,10 +3,12 @@ title: "MathMLAnchorElement: hash property"
 short-title: hash
 slug: Web/API/MathMLAnchorElement/hash
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.MathMLAnchorElement.hash
 ---
 
-{{APIRef("MathML")}}
+{{APIRef("MathML")}}{{SeeCompatTable}}
 
 The **`hash`** property of the {{domxref("MathMLAnchorElement")}} interface is a string containing a `"#"` followed by the fragment identifier of the [`<a>`](/en-US/docs/Web/MathML/Reference/Element/a) element's `href`. If the URL does not have a fragment identifier, this property contains an empty string, `""`.
 

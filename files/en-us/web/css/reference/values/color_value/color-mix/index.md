@@ -75,14 +75,20 @@ The `<polar-color-space>` category includes [`hsl`](/en-US/docs/Web/CSS/Referenc
 
 ### Default color space and interpolation method
 
-When mixing colors without a color space or hue interpolation method, the `oklab` color space is used, using `shorter` as the hue interpolation method.
+When mixing colors without specifying a color space, the `oklab` color space is used.
 
-The following three declarations are equivalent:
+The following two declarations are equivalent:
 
 ```css
 background-color: color-mix(red, blue);
 background-color: color-mix(in oklab, red, blue);
-background-color: color-mix(in oklab shorter hue, red, blue);
+```
+
+When using a polar color space such as `oklch`, the hue interpolation method defaults to `shorter hue`. The following two declarations are equivalent:
+
+```css
+background-color: color-mix(in oklch, red, blue);
+background-color: color-mix(in oklch shorter hue, red, blue);
 ```
 
 ### Color percentages

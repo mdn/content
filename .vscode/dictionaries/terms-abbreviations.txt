@@ -195,7 +195,6 @@ downsampling
 DPIA
 dragonfish
 DSCP
-DTLSL
 dyscalculia
 EBNF
 ECSDA
@@ -244,6 +243,7 @@ fontface
 fontfaces
 footguns
 forgeable
+formants
 FOUC
 Fourway
 FOUT
@@ -297,6 +297,7 @@ HILN
 hindwings
 hissy
 hitbox
+hitboxes
 hitmap
 HOBA
 holodeck
@@ -524,6 +525,7 @@ platformer
 platformers
 playhead
 playout
+playthrough
 PLTE
 plumeria
 polyfilling
@@ -581,6 +583,7 @@ quickmenu
 qvalues
 QWERTZ
 RAII
+rainforests
 rari
 rasterizes
 raycaster

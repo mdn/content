@@ -40,7 +40,7 @@ A {{jsxref("Promise")}} that fulfills with a {{jsxref("Uint8Array")}} containing
 
 ### Exceptions
 
-- `RangeError`
+- {{jsxref("RangeError")}}
   - : Thrown if `label` or `context` is longer than 255 bytes, or if `outputLength` is `0` or greater than the implementation-defined maximum.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the transport's state is `"closed"` or `"failed"` when the method is called, or if the connection transitions to one of these states before the returned promise settles.

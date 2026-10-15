@@ -32,7 +32,7 @@ Formatting contexts affect layout because an element that establishes a new bloc
 - exclude external floats.
 - suppress [margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
 
-Flex and grid containers, defined by setting an element's ({{ cssxref("display") }} to `flex`, `grid`, `inline-flex`, or `inline-grid`, establishes a new flex or grid formatting context. These are similar to block formatting context except there are no floating children available inside a flex or grid container, but these formatting contexts do exclude external floats and suppress margin collapsing.
+Flex and grid containers, defined by setting an element's {{ cssxref("display") }} to `flex`, `grid`, `inline-flex`, or `inline-grid`, establishes a new flex or grid formatting context. These are similar to block formatting context except there are no floating children available inside a flex or grid container, but these formatting contexts do exclude external floats and suppress margin collapsing.
 
 ## Examples
 

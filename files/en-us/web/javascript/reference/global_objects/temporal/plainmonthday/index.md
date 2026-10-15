@@ -35,7 +35,7 @@ When serializing, you can configure whether to display the calendar ID, and whet
 
 ## Constructor
 
-- {{jsxref("Temporal/PlainMonthDay/PlainMonthDay", "Temporal.PlainMonthDay()")}} {{experimental_inline}}
+- {{jsxref("Temporal/PlainMonthDay/PlainMonthDay", "Temporal.PlainMonthDay()")}}
   - : Creates a new `Temporal.PlainMonthDay` object by directly supplying the underlying data.
 
 ## Static methods
