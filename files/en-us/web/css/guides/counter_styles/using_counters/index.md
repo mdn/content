@@ -42,7 +42,7 @@ counter-reset: section;
 ```
 
 You can also initialize multiple counters, optionally specifying an initial value for each.
-Below we initialize the `section` and `topic` counters to the default value, and the `page` counter to 3.
+The following declaration initializes the `section` and `topic` counters to the default value, and the `page` counter to `3`:
 
 ```css
 counter-reset: section page 3 topic;
