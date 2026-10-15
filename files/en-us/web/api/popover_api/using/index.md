@@ -467,7 +467,6 @@ For example, you could use a combination of an `anchor()` function value set on 
 ```css
 .my-popover {
   margin: 0;
-  inset: auto;
   position-anchor: auto;
   bottom: calc(anchor(top) + 20px);
   justify-self: anchor-center;
@@ -482,9 +481,9 @@ Or you could use a {{cssxref("position-area")}} property:
 }
 ```
 
-When using {{cssxref("anchor()")}} to position popovers, be aware that [the default styles for popovers](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B) may conflict with the position you're trying to achieve. The usual culprits are the default styles for `margin` and `inset`, so it's advisable to reset those, as shown in the first example in this section.
+When using `anchor()` or `anchor()` and `anchor-center` to position popovers, be aware that [the default styles for popovers](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B) may conflict with the position you're trying to achieve. The usual culprit is the default style for {{cssxref("margin")}} (`auto`); it's advisable to set the popover's `margin` to `0`, or a positive `<length>` if you want to create some space between the positioned element and the anchor, so that your positioning works as expected. You can see an example in the first code snippet in this section.
 
-This is not an issue with popovers positioned with {{cssxref("position-area")}} because the used value of `auto` [inset](/en-US/docs/Glossary/Inset_properties) and {{cssxref("margin")}} properties resolves to `0` on any element that has a `position-area` value set other than `none`. This is also the case with boxes positioned with `anchor-center`, provided the box is absolutely positioned. However, because `anchor-center` values are often used along with `anchor()` values, you'll probably still need the resets in these situations.
+This is not an issue with popovers positioned with {{cssxref("position-area")}} because the used value of `auto` `margin` (and [inset](/en-US/docs/Glossary/Inset_properties)) properties resolves to `0` on any element that has a `position-area` value set other than `none`.
 
 See [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#positioning_elements_relative_to_their_anchor) for more details on associating anchor and positioned elements, and positioning elements relative to their anchor.
 
