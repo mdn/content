@@ -21,7 +21,7 @@ Chrome and Firefox both publish tables of their choices, Chrome in [Optimize res
 
 Chrome, for example, has five levels, which its developer tools show as Highest, High, Medium, Low, and Lowest. Its defaults include these:
 
-- Stylesheets in the `<head>` get Highest.
+- Render-blocking stylesheets discovered early, such as those in the `<head>`, get Highest.
 - Scripts with the `async` or `defer` attribute get Low.
 - Images start at Low, or Medium for the first five large images. Once layout shows that an image is inside the viewport, it's raised to High.
 - Requests at the same priority are fetched in the order the browser discovers them.
@@ -42,7 +42,7 @@ The value is relative, not absolute. In Chrome, `fetchpriority` raises or lowers
 
 It's also a hint, and the browser can ignore it when it conflicts with the browser's own rules. Firefox, for example, gives a stylesheet in the `<body>` the same priority with `fetchpriority="low"` as without it.
 
-From JavaScript, you can read or set the value with the {{domxref("HTMLImageElement.fetchPriority")}}, {{domxref("HTMLLinkElement.fetchPriority")}}, and {{domxref("HTMLScriptElement.fetchPriority")}} properties. Set it before the element starts fetching. Changing it later doesn't affect a request already in flight.
+From JavaScript, you can read or set the value with the {{domxref("HTMLImageElement.fetchPriority")}}, {{domxref("HTMLLinkElement.fetchPriority")}}, and {{domxref("HTMLScriptElement.fetchPriority")}} properties. Set it before the element starts fetching so the hint is available when the browser assigns the initial priority.
 
 ### Boosting the main image
 
@@ -62,7 +62,7 @@ On many pages, the {{glossary("Largest Contentful Paint")}} (LCP) element is a l
 
 Because the image is in the HTML, the preload scanner finds it early, and the attribute keeps that request from waiting behind less important ones. Keep `high` for the one image that matters most (see [When not to use priority hints](#when_not_to_use_priority_hints)).
 
-Don't add `loading="lazy"` to this image. A lazy image isn't requested until layout confirms it's in the viewport, which delays it however high its priority is.
+Don't add `loading="lazy"` to this image. Lazy loading can delay the request until the image is near the viewport, regardless of its priority hint.
 
 ### Lowering images the user can't see yet
 
@@ -115,8 +115,10 @@ async function loadArticlePage(id) {
     priority: "low",
   });
 
-  renderArticle(await getJSON(articlePromise));
-  renderComments(await getJSON(commentsPromise));
+  await Promise.all([
+    getJSON(articlePromise).then(renderArticle),
+    getJSON(commentsPromise).then(renderComments),
+  ]);
 }
 ```
 
@@ -162,7 +164,7 @@ If the server sends this header in a {{HTTPStatus("103", "103 Early Hints")}} re
 
 A classic {{htmlelement("script")}} element with a `src` and no `async` or `defer` attribute blocks the HTML parser. The browser stops building the page until the script has downloaded and run. Scripts that aren't needed for the first render should use [`defer`](/en-US/docs/Web/HTML/Reference/Elements/script#defer), or [`async`](/en-US/docs/Web/HTML/Reference/Elements/script#async) if they don't depend on running in order. [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) are deferred by default.
 
-Both attributes stop the script from blocking the parser, and Chrome and Firefox both give these scripts a lower priority than ones that do block it. That suits most scripts. When an async script matters to the page, such as the one that runs the site navigation, add `fetchpriority="high"`:
+Both attributes let parsing continue while the script downloads, and Chrome and Firefox both give these scripts a lower priority than ones that do block it. That suits most scripts. When an async script matters to the page, such as the one that runs the site navigation, add `fetchpriority="high"`:
 
 ```html
 <script src="/js/site-nav.js" async fetchpriority="high"></script>
