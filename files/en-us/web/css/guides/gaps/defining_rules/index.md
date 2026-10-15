@@ -1,20 +1,18 @@
 ---
-title: Defining CSS row and columns rules
-short-title: Defining rules
+title: Defining CSS row and column gap rules
+short-title: Defining gap rules
 slug: Web/CSS/Guides/Gaps/Defining_rules
 page-type: guide
 sidebar: cssref
 ---
 
-When creating [grid](/en-US/docs/Web/CSS/Guides/Grid_layout), [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), you can add decorative lines, or _rules_, in the center of the gutters between rows and columns. You can show rules in every gap or a subset of gaps, and fully animate rule widths, colors, and insets. This guide explains how to specify the width, color, and style of these rule lines.
+When creating [grid](/en-US/docs/Web/CSS/Guides/Grid_layout), [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), you can add decorative lines, or _rules_, in the center of the gutters between rows and columns. You can show rules in every gap or a subset of gaps, and fully animate rule widths, colors, and insets. This guide explains how to specify the width, color, and style of these rules.
 
 ## Overview
 
-The [CSS gap properties](/en-US/docs/Web/CSS/Guides/Gaps#properties) module defines several properties that enable specifying the width, color, or line-style of column and row rules drawn in the gutters between adjacent columns in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) containers with more than one column or row.
+The [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps#properties) module defines several properties that specify the appearance of lines painted behind content in a grid, flexbox, or multi-col container's gutters, or gaps. These lines don't affect the [box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction) or layout. The size of the gutter is defined by the {{cssxref("gap")}} property, with the default value being `1em` on multi-column containers and `0` in all other contexts.
 
-These properties define the appearance of lines painted behind content in a container's gutters, or gaps. These lines have no effect on the [box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction) or layout. The size of the gutter is defined by the {{cssxref("gap")}} property; with the default value being `1em` on multi-column containers and `0` in all other contexts.
-
-If a rule is wider than the {{cssxref("gap")}}, the lines are painted behind the content, so the content is not obscured. If this risks happening, though, ensure the [color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast) of the content and both the background and the rule are sufficient to ensure legibility.
+If a rule is wider than the {{cssxref("gap")}}, the lines are painted behind the content to avoid obscuring it. You should still ensure the [color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast) of the content and both the background and the rule are sufficient to ensure legibility.
 
 To learn more about specifying the spacing between adjacent boxes within a given layout context for layouts that have {{glossary("gutters")}} and gaps, see [Defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps).
 
@@ -26,10 +24,10 @@ rule-width: 10px, 20px;
 rule-style: solid, dashed, solid, dotted;
 ```
 
-You can use the {{cssxref("repeat()")}} function within the list to define a set number of repetitions, or to automatically add as many repetitions as needed to provide a value for every line drawn.
+You can use [the `repeat()` function](#the_repeat_function) within the list to define a set number of repetitions, or to automatically add as many repetitions as needed to provide a value for every line drawn.
 
 ```css
-rule-color: blue, repeat(3, green, red);
+rule-color: blue, repeat(3, gray, red);
 rule-width: 50px, repeat(10, 10px, 20px), 10px;
 rule-style: solid, repeat(auto, dashed, dotted), solid;
 ```
@@ -40,32 +38,43 @@ The rule color, line-width, and line-style shorthand properties set the same val
 
 Before introducing the column and row rule properties, it is important to understand the {{cssxref("repeat()")}} function.
 
-The `repeat()` function can be used to repeat a valid list of CSS values. The first argument specifies how many times to repeat the list of values passed as subsequent arguments. This lets color, line-width, or line-style values to be repeated as many times as needed without listing them individually.
+The `repeat()` function can be used to repeat a valid list of CSS values. The first argument specifies how many times to repeat the list of values passed as subsequent arguments. This allows color, line-width, or line-style values to repeat as many times as needed without listing them individually.
 
 The following declarations are equivalent, with both creating a list of eight colors:
 
 ```css
-rule-color: blue, yellow, red, yellow, red, yellow, red, green;
-rule-color: blue, repeat(3, yellow, red), green;
+rule-color: blue, yellow, red, yellow, red, yellow, red, gray;
+rule-color: blue, repeat(3, yellow, red), gray;
 ```
 
 If the number of values exceeds the number of gaps, the excess values are ignored. For example, in a 3x3 grid container, the first row and column rules will be blue and the second yellow. The other color values in the list are unused.
 
-If there are more values than gaps, the list is cycled. In a 10x10 grid container, there are nine gaps in each direction. In this case, the last rules are blue; the first eight row and column rules are each assigned the associated color, then the list cycles, so the ninth row and column rules get the first value in the list.
+If there are more gaps than values, the list is cycled. In a 10x10 grid container, there are nine gaps in each direction. In this case, the last rules are blue; the first eight row and column rules are each assigned the associated color, then the list cycles, so the ninth row and column rules get the first value in the list.
 
-The `repeat()` function accepts as it's first parameter either an {{cssxref("integer")}} of `1` or greater or the keyword `auto`. If the number is invalid (`0`, negative, missing, or a non-integer number), the entire declaration is invalid and ignored. The `auto` keyword within the `repeat()` function creates an _auto-repeater_ that fills in values that would otherwise not receive values from other parts of the list, preventing the list from cycling. A property value can include, at most, one `repeat(auto, <value-list>)` auto-repeater.
+Here, with only three rows, only two values are uses, while the list is cycled to provide `<color>` values to each of the twelve column rules.
 
-By setting the following, in a grid that is 3x3 or larger, the `blue` and `green` rules will each occur exactly once in each direction:
-
-```css
-rule-color: blue, repeat(auto, yellow, red), green;
+```css hidden live-sample___regular
+div {
+  rule-color: blue, repeat(3, yellow, red), gray;
+  grid-template-columns: repeat(12, 1fr);
+}
 ```
 
-In this case, `yellow` and `red` are repeated as many times as needed to fill in values for any rules that are not explicitly specified by other components of the property value. The first rule will always be blue. If there is more than one rule, the last will always be green. All other rules will cycle between `yellow` and `red`.
+{{EmbedLiveSample("regular", "", "190")}}
+
+The `repeat()` function's first parameter is either an {{cssxref("integer")}} of `1` or greater or the keyword `auto`. If the number is invalid (`0`, negative, missing, or a non-integer number), the entire declaration is invalid and ignored. The `auto` keyword within the `repeat()` function creates an _auto-repeater_ that fills in values that would otherwise not receive values from other parts of the list, preventing the list from cycling. A property value can include, at most, one `repeat(auto, <value-list>)` auto-repeater.
+
+By setting the following, in a grid that is 3x3 or larger, the `blue` and `gray` rules will each occur exactly once in each direction:
+
+```css
+rule-color: blue, repeat(auto, yellow, red), gray;
+```
+
+In this case, `yellow` and `red` are repeated as many times as needed to fill in values for any rules that are not explicitly specified by other components of the property value. The first rule will always be blue. If there is more than one rule, the last will always be gray. All other rules will cycle between `yellow` and `red`.
 
 ```css hidden live-sample___autorepeat
 div {
-  rule-color: blue, repeat(auto, yellow, red), green;
+  rule-color: blue, repeat(auto, yellow, red), gray;
   grid-template-columns: repeat(12, 1fr);
 }
 ```
@@ -84,12 +93,12 @@ The {{cssxref("column-rule-color")}} specifies the color of the line drawn betwe
   - : The color of the line as any valid `<color>` value. The default is `currentcolor`.
 
 - `<repeat-line-color>`
-  - : A {{cssxref("repeat()")}} function, with an {{cssxref("&lt;integer&gt;")}} of `1` or more as the first argument and one or more `<color>` values as subsequent arguments.
+  - : A {{cssxref("repeat()")}} function, with an {{cssxref("&lt;integer&gt;")}} as the first argument and one or more `<color>` values as subsequent arguments. The `<integer>`, with a value of `1` or more, specifies how many times the list of `<color>` values should be repeated.
 
 - `<auto-repeat-line-color>`
-  - : A {{cssxref("repeat()")}} function, with `auto` as the first argument and one or more `<color>` values as subsequent arguments.
+  - : A {{cssxref("repeat()")}} function, with `auto` as the first argument and one or more `<color>` values as subsequent arguments, creating an auto-repeater that fills in the `<color>` values that would otherwise not receive values from the other components of the property value, preventing the property's comma-separated list from cycling. At most, only one `<auto-repeat-line-color>` can be included in the comma-separated list of values.
 
-By using `auto` in the `repeat()` function as the value of the `rule-color` property, we can set the first and last rules to dark and all middle rules to light.
+By using `auto` inside the `repeat()` function as part of the `rule-color` property, we can set the first and last rules to dark and all middle rules to light.
 
 ```css live-sample___color
 div {
@@ -110,9 +119,9 @@ The {{cssxref("column-rule-width")}} specifies the width of the line drawn betwe
 - {{cssxref("&lt;line-width&gt;")}}
   - : Defines the width of the line, either as an explicit non-negative {{cssxref("&lt;length&gt;")}} or the keywords: `thin`, `medium`, or `thick`. The default is `medium`, which generally resolves to `3px`. Custom properties that resolve to a `<line-width>` are also valid.
 - `<repeat-line-width>`
-  - : A `repeat()` function, with an {{cssxref("&lt;integer&gt;")}} of `1` or more as the first argument and one or more `<line-width>` values as subsequent arguments.
+  - : A `repeat()` function, with an {{cssxref("&lt;integer&gt;")}} as the first argument and one or more `<line-width>` values as subsequent arguments. The `<integer>`, with a value of `1` or more, specifies how many times the list of `<line-width>` values should be repeated.
 - `<auto-repeat-line-width>`
-  - : A `repeat()` function, with `auto` as the first argument and one or more `<line-width>` values as subsequent arguments.
+  - : A `repeat()` function, with `auto` as the first argument and one or more `<line-width>` values as subsequent arguments, creating an auto-repeater that fills in the `<line-width>` values that would otherwise not receive values from the other components of the property value, preventing the property's comma-separated list from cycling. At most, only one `<auto-repeat-line-width>` can be included in the comma-separated list of values.
 
 Unlike the {{cssxref("gap")}} properties, `rule-width` properties don't affect layout.
 These properties only define rule width. Rules appear in the middle of the gap, have no effect on the size of the gap, and have no impact on the box model. Rules that are wider than the gap are drawn behind the content.
@@ -129,7 +138,7 @@ div {
 
 The black rules are centered in the gap. This is most noticeable in the first row and column gaps, where the `10px` line is drawn in the middle of the `20px` gap. Rules are drawn behind the content. This is most noticeable when `rule-width` is larger than the `gap`, and the lines show through the semi-opaque grid items.
 
-The grid items all have black text and a semi-transparent, almost white background. Including a {{cssxref("background-color")}} on your content helps ensure that overflowing rules don't create accessibility issues. For your content to be accessible, there must be [sufficient contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) between a background, be it the background color or the rule cole, and the text or other [important visual information](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)
+The grid items all have black text and a semi-transparent, almost white background. Including a {{cssxref("background-color")}} on your content helps ensure that overflowing rules don't create accessibility issues. For your content to be accessible, there must be [sufficient contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) between a background, be it the background color or the rule color, and the text or other [important visual information](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)
 
 ### Line-style properties
 
@@ -140,9 +149,9 @@ These properties are all specified as a comma-separated list of values, includin
 - {{cssxref("&lt;line-style&gt;")}}
   - : The keyword `solid`, `dashed`, `dotted`, `double`, `groove`, `ridge`, `inset`, `outset`, `none`, or `hidden` defining the line style of the drawn rule. The default is `none`.
 - `<repeat-line-style>`
-  - : A `repeat()` function, with an {{cssxref("&lt;integer&gt;")}} of `1` or more as the first argument and one or more `<line-style>` values as subsequent arguments.
+  - : A `repeat()` function, with an {{cssxref("&lt;integer&gt;")}} as the first argument and one or more `<line-style>` values as subsequent arguments. The `<integer>`, with a value of `1` or more, specifies how many times the list of `<line-style>` values should be repeated.
 - `<auto-repeat-line-style>`
-  - : A `repeat()` function, with `auto` as the first argument and one or more `<line-style>` values as subsequent arguments.
+  - : A `repeat()` function, with `auto` as the first argument and one or more `<line-style>` values as subsequent arguments, creating an auto-repeater that fills in the `<line-style>` values that would otherwise not receive values from the other components of the property value, preventing the property's comma-separated list from cycling. At most, only one `<auto-repeat-line-style>` can be included in the comma-separated list of values.
 
 As with {{cssxref("border")}}, the default value is `none`, so a rule must have a `<line-style>` declared with a value other than `hidden` or `none` for it to be painted.
 
@@ -161,7 +170,7 @@ Only the `outset` rules are drawn in the row gutters as when the `<line-style>` 
 
 ### Shorthand properties
 
-The {{cssxref("row-rule")}}, {{cssxref("column-rule")}}, and {{cssxref("rule")}} shorthands can be used to declare the colors, line-widths, and line-styles for one or multiple lines in a single declaration.
+The {{cssxref("row-rule")}}, {{cssxref("column-rule")}}, and {{cssxref("rule")}} shorthands can be used to declare the colors, line-widths, and line-styles for one or more lines in a single declaration.
 
 These shorthand properties are all specified as a comma-separated list of values, from the following list:
 
@@ -169,10 +178,10 @@ These shorthand properties are all specified as a comma-separated list of values
   - : Specified as one, two, or three of the values, consisting of a {{cssxref("&lt;line-width&gt;")}}, {{cssxref("&lt;line-style&gt;")}}, and {{cssxref("&lt;color&gt;")}}, in any order. Just like with the {{cssxref("border")}} shorthand values, the `<line-style>` must be included for a line to be painted, as it otherwise defaults to `none`. The default `<line-width>` is `medium` and the default `<color>` is `current-color`.
 
 - `<gap-repeat-rule>`
-  - : A `repeat()` function, with an {{cssxref("&lt;integer&gt;")}} of `1` or more as the first argument and one or more `<gap-rule>` values as subsequent arguments.
+  - : - : A `repeat()` function, with an {{cssxref("&lt;integer&gt;")}} as the first argument and one or more `<gap-rule>` values as subsequent arguments. The `<integer>`, with a value of `1` or more, specifies how many times the list of `<gap-rule>` values should be repeated.
 
-- `<gap-auto-repeat-rule>`
-  - : A `repeat()` function, with `auto` as the first argument and one or more `<gap-rule>` values as subsequent arguments.
+- `<auto-repeat-gap-rule>`
+  - : A `repeat()` function, with `auto` as the first argument and one or more `<gap-rule>` values as subsequent arguments, creating an auto-repeater that fills in the `<gap-rule>` values that would otherwise not receive values from the other components of the property value, preventing the property's comma-separated list from cycling. At most, only one `<auto-repeat-gap-rule>` can be included in the comma-separated list of values.
 
 The shorthand property declarations are similar to the constituent property values, but each value in the comma-separated list of values is a space-separated list of up to three component values. The `repeat()` function works the same way as with constituent properties, but again, each value is a space-separated list of components.
 
@@ -189,7 +198,7 @@ div {
 
 The `rule` shorthand sets both the `column-rule` and `row-rule` to the same value.
 
-```html hidden live-sample___autorepeat live-sample___color live-sample___width live-sample___style live-sample___shorthand
+```html hidden live-sample___autorepeat live-sample___regular live-sample___color live-sample___width live-sample___style live-sample___shorthand
 <section>
   <div>
     <i>A</i>
@@ -223,7 +232,7 @@ The `rule` shorthand sets both the `column-rule` and `row-rule` to the same valu
 </section>
 ```
 
-```css hidden live-sample___autorepeat live-sample___color live-sample___width live-sample___style live-sample___shorthand
+```css hidden live-sample___autorepeat live-sample___regular live-sample___color live-sample___width live-sample___style live-sample___shorthand
 @layer hidden {
   div {
     display: grid;
