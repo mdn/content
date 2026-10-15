@@ -478,7 +478,7 @@ li::before {
 
 #### Result
 
-{{EmbedLiveSample("Example_of_a_nested_counter", "100%", 350)}}
+{{EmbedLiveSample("Nested_counters", "100%", 350)}}
 
 ## Specifications
 
