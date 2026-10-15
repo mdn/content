@@ -91,6 +91,8 @@ h3::before {
 }
 ```
 
+### Comparing `counter()` and `counters()`
+
 The {{cssxref("counter()")}} function is used when the numbering of nesting levels does not include the context of parent levels.
 For example, here each nested level restarts from one:
 
