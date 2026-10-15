@@ -8,9 +8,17 @@ browser-compat: api.Element.pointermove_event
 
 {{APIRef("Pointer Events")}}
 
-The `pointermove` event is fired when a pointer changes coordinates, and the pointer has not been [canceled](/en-US/docs/Web/API/Element/pointercancel_event) by a browser [touch-action](/en-US/docs/Web/CSS/Reference/Properties/touch-action). It's very similar to the {{domxref("Element/mousemove_event", "mousemove")}} event, but with more features.
+The `pointermove` event is fired when a pointer changes coordinates, and the pointer has not been [canceled](/en-US/docs/Web/API/Element/pointercancel_event) by a browser [touch-action](/en-US/docs/Web/CSS/Reference/Properties/touch-action). The event is also fired when a pointer changes any of its other properties, provided the change doesn't produce some other pointer event. This includes any change to pressure, tangential pressure, tilt, twist, contact geometry (width and height), or [chorded buttons](https://w3c.github.io/pointerevents/#dfn-chorded-buttons).
 
-These events happen whether or not any pointer buttons are pressed. They can fire at a very high rate, depends on how fast the user moves the pointer, how fast the machine is, what other tasks and processes are happening, etc.
+The `pointermove` event may have coalesced events if there is already another `pointermove` event with the same pointer ID that hasn't been dispatched in the event loop.
+If events are coalesced, the `target` of the dispatched event is the same as the last coalesced one.
+For information on coalesced events, see the {{domxref("PointerEvent.getCoalescedEvents()")}} documentation.
+
+This event is very similar to the {{domxref("Element/mousemove_event", "mousemove")}} event, but with more features. These events happen whether or not any pointer buttons are pressed. They can fire at a very high rate, depends on how fast the user moves the pointer, how fast the machine is, what other tasks and processes are happening, etc.
+
+The difference between {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}} and `pointermove` is in their firing frequency.
+A browser may delay `pointermove` events to improve performance, while `pointerrawupdate` events are dispatched as soon and as frequently as the browser can produce them.
+For most use cases, you should prefer `pointermove` to avoid performance issues.
 
 ## Syntax
 
@@ -27,37 +35,6 @@ onpointermove = (event) => { }
 A {{domxref("PointerEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PointerEvent")}}
-
-## Event properties
-
-_This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref("Event")}}._
-
-- {{domxref('PointerEvent.altitudeAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : Represents the angle between a transducer (a pointer or stylus) axis and the X-Y plane of a device screen.
-- {{domxref('PointerEvent.azimuthAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : Represents the angle between the Y-Z plane and the plane containing both the transducer (a pointer or stylus) axis and the Y axis.
-- {{domxref('PointerEvent.persistentDeviceId')}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : A unique identifier for the pointing device generating the `PointerEvent`.
-- {{domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
-  - : A unique identifier for the pointer causing the event.
-- {{domxref('PointerEvent.width')}} {{ReadOnlyInline}}
-  - : The width (magnitude on the X axis), in CSS pixels, of the contact geometry of the pointer.
-- {{domxref('PointerEvent.height')}} {{ReadOnlyInline}}
-  - : The height (magnitude on the Y axis), in CSS pixels, of the contact geometry of the pointer.
-- {{domxref('PointerEvent.pressure')}} {{ReadOnlyInline}}
-  - : The normalized pressure of the pointer input in the range `0` to `1`, where `0` and `1` represent the minimum and maximum pressure the hardware is capable of detecting, respectively.
-- {{domxref('PointerEvent.tangentialPressure')}} {{ReadOnlyInline}}
-  - : The normalized tangential pressure of the pointer input (also known as barrel pressure or [cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)) in the range `-1` to `1`, where `0` is the neutral position of the control.
-- {{domxref('PointerEvent.tiltX')}} {{ReadOnlyInline}}
-  - : The plane angle (in degrees, in the range of `-90` to `90`) between the Y–Z plane and the plane containing both the pointer (e.g., pen stylus) axis and the Y axis.
-- {{domxref('PointerEvent.tiltY')}} {{ReadOnlyInline}}
-  - : The plane angle (in degrees, in the range of `-90` to `90`) between the X–Z plane and the plane containing both the pointer (e.g., pen stylus) axis and the X axis.
-- {{domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
-  - : The clockwise rotation of the pointer (e.g., pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
-- {{domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
-  - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
-- {{domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
-  - : Indicates if the pointer represents the primary pointer of this pointer type.
 
 ## Usage notes
 

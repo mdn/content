@@ -31,15 +31,11 @@ sendBeacon(url, data)
 - `url`
   - : The URL that will receive the _data_. Can be relative or absolute.
 - `data` {{Optional_inline}}
-  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("Blob")}},
-    a string literal or object, a {{domxref("FormData")}} or a {{domxref("URLSearchParams")}}
-    object containing the data to send.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("Blob")}}, a string literal or object, a {{domxref("FormData")}} or a {{domxref("URLSearchParams")}} object containing the data to send. The total size of queued data is limited to 64 KiB (65,536 bytes).
 
 ### Return value
 
-Returns `true` if the
-{{glossary("user agent")}} successfully queued the `data` for transfer.
-Otherwise, it returns `false`.
+Returns `true` if the {{glossary("user agent")}} successfully queued the `data` for transfer. Otherwise, it returns `false`.
 
 ## Description
 
@@ -72,8 +68,7 @@ This means:
 
 The data is sent as an [HTTP POST](/en-US/docs/Web/HTTP/Reference/Methods/POST) request.
 
-> [!NOTE]
-> The `navigator.sendBeacon()` method has a [spec-defined](https://fetch.spec.whatwg.org/#:~:text=length.-,If%20the%20sum%20of%20contentLength%20and%20inflightKeepaliveBytes%20is%20greater%20than%2064%20kibibytes%2C%20then%20return%20a%20network%20error.,-The) payload size limit of about 64 KiB. If this limit is exceeded, the request will fail. For larger data transfers, consider using `fetch()` instead.
+The limitation, however, is that the payload size is limited to about 64 KiB. For larger data transfers, consider using `fetch()` instead.
 
 ### Sending analytics at the end of a session
 
@@ -88,12 +83,10 @@ document.addEventListener("visibilitychange", () => {
 });
 ```
 
-#### Avoid unload and beforeunload
+#### Legacy events
 
-In the past, many websites have used the [`unload`](/en-US/docs/Web/API/Window/unload_event)
-or [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) events to send analytics at the end of a session.
-However, this is extremely unreliable. In many situations, especially on mobile, the browser will not fire the
-`unload`, `beforeunload`, or `pagehide` events. For example, these events will not fire in the following situation:
+In the past, many websites have used the {{domxref("Window.unload_event", "unload")}}, {{domxref("Window.beforeunload_event", "beforeunload")}}, or {{domxref("Window.pagehide_event", "pagehide")}} events to send analytics at the end of a session.
+However, this is unreliable. In many situations, especially on mobile, the browser will not fire these events. For example, they will not fire in the following situation:
 
 1. The user loads the page and interacts with it.
 2. When they are finished, they switch to a different app, instead of closing the tab.
@@ -105,10 +98,7 @@ thus hurting performance. Others, such as Safari and Chrome on Android, handle i
 
 Firefox will also exclude pages from the bfcache if they contain `beforeunload` handlers.
 
-#### Use pagehide as a fallback
-
-To support browsers which don't implement `visibilitychange`, use the [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) event.
-Like `beforeunload` and `unload`, this event is not reliably fired, especially on mobile. However, it is compatible with the bfcache.
+The `pagehide` event is not as problematic as `unload` or `beforeunload`, because it is compatible with the bfcache. However, it suffers from the same reliability problems as the other two events, so we recommend that developers should avoid it as well, and use only `visibilitychange`.
 
 ## Examples
 

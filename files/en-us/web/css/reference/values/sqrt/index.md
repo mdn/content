@@ -1,5 +1,6 @@
 ---
-title: sqrt()
+title: "`sqrt()` CSS function"
+short-title: sqrt()
 slug: Web/CSS/Reference/Values/sqrt
 page-type: css-function
 browser-compat: css.types.sqrt

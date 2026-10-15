@@ -48,7 +48,7 @@ Beginners are encouraged to start with the foundational guides before exploring 
     This adds the ability to store and exchange a small amount of data which effectively adds state to some client-server interactions.
 - [Redirections in HTTP](/en-US/docs/Web/HTTP/Guides/Redirections)
   - : URL redirection, also known as URL forwarding, is a technique to give more than one URL address to a page, a form, a whole website, or a web application.
-    HTTP has a special kind of response, called a HTTP redirect, for this operation.
+    HTTP has a special kind of response, called an HTTP redirect, for this operation.
 - [HTTP conditional requests](/en-US/docs/Web/HTTP/Guides/Conditional_requests)
   - : In conditional requests, the outcome of a request depends on the value of a validator in the request.
     This method is used heavily in [caching](/en-US/docs/Web/HTTP/Guides/Caching) and use cases such as resuming a download, preventing lost updates when modifying a document on the server, and more.
@@ -125,7 +125,7 @@ Helpful tools and resources for understanding and debugging HTTP.
 The [HTTP reference](/en-US/docs/Web/HTTP/Reference) documentation contains detailed information about headers, request methods, status responses, and lists relevant specifications and standards documents.
 
 - [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)
-  - : Message headers are used to send metadata about a resource or a HTTP message, and to describe the behavior of the client or the server.
+  - : Message headers are used to send metadata about a resource or an HTTP message, and to describe the behavior of the client or the server.
 - [HTTP request methods](/en-US/docs/Web/HTTP/Reference/Methods)
   - : Request methods indicate the purpose of the request and what is expected if the request is successful.
     The most common methods are {{HTTPMethod("GET")}} and {{HTTPMethod("POST")}} for retrieving and sending data to servers, respectively, but there are other methods which serve different purposes.

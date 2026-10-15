@@ -16,7 +16,7 @@ The **Content Index API** allows developers to register their offline enabled co
 
 ## Concepts and usage
 
-As it stands, offline web content is not easily discoverable by users. Content indexing allows developers to tell the browser about their specific offline content. This allows users to discover and view what is available, whilst giving developers the ability to add and manage this content. Examples could be a news website prefetching the latest articles in the background, or a content streaming app registering downloaded content.
+As it stands, offline web content is not easily discoverable by users. Content indexing allows developers to tell the browser about their specific offline content. This allows users to discover and view what is available, while giving developers the ability to add and manage this content. Examples could be a news website prefetching the latest articles in the background, or a content streaming app registering downloaded content.
 
 The Content Index API is an extension to [service workers](/en-US/docs/Web/API/Service_Worker_API), which allows developers to add URLs and metadata of already cached pages, under the scope of the current service worker. The browser can then use these entries to display offline reading to a user. As a developer you can also display these entries within your application.
 

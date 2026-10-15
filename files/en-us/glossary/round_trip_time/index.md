@@ -5,7 +5,7 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-**Round Trip Time** (**RTT**) is the length time it takes for a data packet to be sent to a destination plus the time it takes for an acknowledgment of that packet to be received back at the origin. The RTT between a network and server can be determined by using the `ping` command.
+**Round Trip Time** (**RTT**) is the length of time it takes for a data packet to be sent to a destination plus the time it takes for an acknowledgment of that packet to be received back at the origin. The RTT between a network and server can be determined by using the `ping` command.
 
 ```bash
 ping example.com
@@ -20,7 +20,7 @@ PING example.com (216.58.194.174): 56 data bytes
 64 bytes from 216.58.194.174: icmp_seq=2 ttl=55 time=24.287 ms
 64 bytes from 216.58.194.174: icmp_seq=3 ttl=55 time=34.904 ms
 64 bytes from 216.58.194.174: icmp_seq=4 ttl=55 time=26.119 ms
---- google.com ping statistics ---
+--- example.com ping statistics ---
 5 packets transmitted, 5 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 23.781/26.828/34.904/4.114 ms
 ```

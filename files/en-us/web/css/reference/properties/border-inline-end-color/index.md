@@ -1,5 +1,6 @@
 ---
-title: border-inline-end-color
+title: "`border-inline-end-color` CSS property"
+short-title: border-inline-end-color
 slug: Web/CSS/Reference/Properties/border-inline-end-color
 page-type: css-property
 browser-compat: css.properties.border-inline-end-color

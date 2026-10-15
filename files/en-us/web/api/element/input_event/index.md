@@ -12,12 +12,6 @@ The **`input`** event fires when the `value` of an {{HTMLElement("input")}}, {{H
 
 The event also applies to elements with {{domxref("HTMLElement.contentEditable", "contenteditable")}} enabled, and to any element when {{domxref("Document.designMode", "designMode")}} is turned on. In the case of `contenteditable` and `designMode`, the event target is the _editing host_. If these properties apply to multiple elements, the editing host is the nearest ancestor element whose parent isn't editable.
 
-For `<input>` elements with `type=checkbox` or `type=radio`, the `input` event should fire whenever a user toggles the control, per the [HTML Living Standard specification](https://html.spec.whatwg.org/multipage/input.html#the-input-element:event-input-2). However, historically this has not always been the case. Check compatibility, or use the {{domxref("HTMLElement/change_event", "change")}} event instead for elements of these types.
-
-For {{htmlelement("textarea")}} and {{htmlelement("input")}} elements that accept text input (`type=text`, `type=tel`, etc.), the interface is {{DOMxRef("InputEvent")}}; for others, the interface is {{DOMxRef("Event")}}.
-
-The `input` event is fired every time the `value` of the element changes. This is unlike the {{domxref("HTMLElement/change_event", "change")}} event, which only fires when the value is committed, such as by pressing the enter key or selecting a value from a list of options. Note that the `input` event is not fired when JavaScript changes an element's `value` programmatically.
-
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
@@ -34,18 +28,25 @@ An {{domxref("InputEvent")}}. Inherits from {{domxref("UIEvent")}}.
 
 {{InheritanceDiagram("InputEvent")}}
 
-## Event properties
+> [!NOTE]
+> For {{htmlelement("textarea")}} and {{htmlelement("input")}} elements that accept text input (`type=text`, `type=tel`, etc.), the interface is {{DOMxRef("InputEvent")}}; for others, the interface is {{DOMxRef("Event")}}.
 
-_This interface inherits properties from its parents, {{DOMxRef("UIEvent")}} and {{DOMxRef("Event")}}._
+## Description
 
-- {{DOMxRef("InputEvent.data")}} {{ReadOnlyInline}}
-  - : Returns a string with the inserted characters. This may be an empty string if the change doesn't insert text (for example, when deleting characters).
-- {{DOMxRef("InputEvent.dataTransfer")}} {{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DataTransfer")}} object containing information about richtext or plaintext data being added to or removed from editable content.
-- {{DOMxRef("InputEvent.inputType")}} {{ReadOnlyInline}}
-  - : Returns the type of change for editable content such as, for example, inserting, deleting, or formatting text.
-- {{DOMxRef("InputEvent.isComposing")}} {{ReadOnlyInline}}
-  - : Returns a {{JSxRef("Boolean")}} value indicating if the event is fired after {{domxref("Element/compositionstart_event", "compositionstart")}} and before {{domxref("Element/compositionend_event", "compositionend")}}.
+For `<input>` elements with `type=checkbox` or `type=radio`, the `input` event should fire whenever a user toggles the control. However, historically this has not always been the case. Check compatibility, or use the {{domxref("HTMLElement/change_event", "change")}} event instead for elements of these types.
+
+For text controls, the `input` event is fired as the user edits the value. This is unlike the {{domxref("HTMLElement/change_event", "change")}} event, which only fires when the value is committed, such as when the control loses focus.
+
+For `<select>` elements displayed as listboxes (for example, `<select size="3">`), selecting options with the mouse can change the `value` while the mouse button is still held down. The `input` and `change` events are deferred until the mouse button is released, rather than firing for each intermediate selection. If the user drags to another option and back to the original selection before releasing the button, the selection changes during the drag may or may not be reported; the behavior diverges between browsers.
+
+Generally, only user-initiated value changes, including autofill, are expected to fire `input`. Some changes to a control's value do not fire the `input` event at all, for example:
+
+- Setting the value programmatically, such as by assigning to an element's `value` or a `<select>` element's `selectedIndex`.
+- Changing a control's child elements in a way that changes its value, such as removing the selected `<option>` from a `<select>` element.
+- Changing a control's attributes in a way that causes the browser to adjust its value, such as changing a range input's `min` or `max` so that its current value falls outside the new bounds.
+- Resetting a form, which only fires a {{domxref("HTMLFormElement/reset_event", "reset")}} event.
+- The browser restoring saved form values during history navigation. Which controls have their values restored can differ between browsers.
+- Chrome clearing unedited, autofilled username and password if the credentials are no longer available, such as when the user signed out of Chrome after autofilling.
 
 ## Examples
 

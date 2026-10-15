@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: required"
+title: "`required` HTML attribute"
 short-title: required
 slug: Web/HTML/Reference/Attributes/required
 page-type: html-attribute
@@ -57,6 +57,12 @@ Provide an indication to users informing them the form control is required. Ensu
   </div>
   <input type="submit" />
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ### Result

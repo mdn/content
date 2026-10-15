@@ -1,12 +1,9 @@
 ---
-title: "load: Wasm text instruction"
+title: "load: Wasm memory instruction"
 short-title: load
 slug: WebAssembly/Reference/Memory/load
 page-type: webassembly-instruction
-browser-compat:
-  - webassembly.api.Memory
-  - webassembly.multiMemory
-spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
+browser-compat: webassembly.instructions.memory_load
 sidebar: webassemblysidebar
 ---
 
@@ -58,7 +55,7 @@ Load from default memory
 i32.const 0 ;; Stack variable containing memory offset (0) of number to be loaded.
 i32.load    ;; Load from specified offset in default memory
 
-;; Load from same location using an S-function
+;; Load from same location using an S-expression
 (i32.load (i32.const 0))
 ```
 
@@ -73,7 +70,7 @@ i32.load (memory 1) ;; load from memory index 1
 i32.const 1  ;; offset in memory to load from (1)
 i32.load (memory $memory1) ;; load from named memory $memory1
 
-;; Load from memory specified by name using an S-function
+;; Load from memory specified by name using an S-expression
 (i32.load (memory $memory1) (i32.const 0))
 ```
 
@@ -200,6 +197,3 @@ The WAT files could be loaded using the same JavaScript code as the first exampl
 ## Browser compatibility
 
 {{Compat}}
-
-> [!NOTE]
-> The `multiMemory` compatibility table indicates versions in which `load` can be used with a specified memory.

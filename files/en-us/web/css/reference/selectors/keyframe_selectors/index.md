@@ -198,7 +198,7 @@ Originally defined in the [CSS animation module](/en-US/docs/Web/CSS/Guides/Anim
 }
 ```
 
-If the element's animation timeline does not have a corresponding named view timeline range, then any keyframes attached to points on that named timeline range are ignored. These attachment points may be outside the active interval of the animation. When this occurs, the automatic `from` (`0%`) and `to` (`100%`) keyframes are only generated for properties that don't have keyframes at or earlier than `0%` or at or after `100%`, respectively.
+If the element's animation timeline does not have a corresponding named view timeline range, then any keyframes attached to points on that named timeline range are ignored. These attachment points may be outside the active interval of the animation. When this occurs, the automatic `from` (`0%`) and `to` (`100%`) keyframes are only generated for properties that don't have keyframes at or earlier than `0%` or at or after `100%`, respectively. See the [timeline range name guide](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names) for more information.
 
 ## Examples
 
@@ -375,6 +375,7 @@ The `background-color` and `outline-width` properties are set in `30%` and `40%`
 - {{cssxref("@keyframes")}}
 - {{cssxref("animation")}}
 - {{cssxref("animation-range")}}
+- [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
 - [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)

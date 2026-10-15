@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Window.beforeunload_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`beforeunload`** event is fired when the current window, contained document, and associated resources are about to be unloaded. The document is still visible and the event is still cancelable at this point.
 
@@ -68,9 +68,7 @@ In addition to the `Window` interface, the event handler property `onbeforeunloa
 In the following example we have an HTML text {{htmlelement("input")}} to represent some data that could be changed and require saving:
 
 ```html
-<form>
-  <input type="text" name="name" id="name" />
-</form>
+<input type="text" name="name" id="name" />
 ```
 
 Our JavaScript attaches an {{domxref("Element/input_event", "input")}} event listener to the `<input>` element that listens for changes in the inputted value. When the value is updated to a non-empty value, a `beforeunload` event listener is attached to the {{domxref("Window")}} object.

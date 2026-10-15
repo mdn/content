@@ -30,10 +30,6 @@ A {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PaymentRequestUpdateEvent")}}
 
-## Event properties
-
-Although this event type is {{domxref("PaymentRequestUpdateEvent")}}, it doesn't implement any property that is not already on {{domxref("Event")}}.
-
 ## Examples
 
 In the example below, `onpayerdetailchange` is used to set up a listener for the `payerdetailchange` event in order to validate the information entered by the user, requesting that any mistakes be corrected

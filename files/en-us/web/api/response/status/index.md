@@ -8,16 +8,16 @@ browser-compat: api.Response.status
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-The **`status`** read-only property of the {{domxref("Response")}} interface contains the [HTTP status codes](/en-US/docs/Web/HTTP/Reference/Status) of the response.
+The **`status`** read-only property of the {{domxref("Response")}} interface contains the [HTTP status code](/en-US/docs/Web/HTTP/Reference/Status) of the response.
 
-For example, `200` for success, `404` if the resource could not be found.
+For example, `200` for success or `404` if the resource could not be found.
 
 ## Value
 
 An unsigned short number.
 This is one of the [HTTP response status codes](/en-US/docs/Web/HTTP/Reference/Status).
 
-A value is `0` is returned for a response whose {{domxref("Response.type", "type")}} is `opaque`, `opaqueredirect`, or `error`.
+A value of `0` is returned for a response whose {{domxref("Response.type", "type")}} is `opaque`, `opaqueredirect`, or `error`.
 
 ## Examples
 

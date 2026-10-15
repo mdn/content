@@ -1,5 +1,6 @@
 ---
-title: clamp()
+title: "`clamp()` CSS function"
+short-title: clamp()
 slug: Web/CSS/Reference/Values/clamp
 page-type: css-function
 browser-compat: css.types.clamp
@@ -66,8 +67,8 @@ You can use different units for each value in your expressions and different uni
 Keep the following aspects in mind while working with the function:
 
 - Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables _may_ be treated as if `auto` had been specified.
-- It is permitted to nest `max()` and `min()` functions as expression values, in which case the inner ones are treated as basic parentheses. The expressions are full math expressions, so you can use direct addition, subtraction, multiplication and division without using the calc() function itself.
-- The expression can be values combining the addition ( `+` ), subtraction ( `-` ), multiplication ( `*` ) and division ( `/` ) operators, using standard operator precedence rules. Make sure to put a space on each side of the `+` and `-` operands. The operands in the expression may be any {{CSSxRef("&lt;length&gt;")}} syntax value. You can use different units for each value in your expression. You may also use parentheses to establish computation order when needed.
+- It is permitted to nest `max()` and `min()` functions as expression values, in which case the inner ones are treated as basic parentheses. The expressions are full math expressions, so you can use direct addition, subtraction, multiplication and division without using the `calc()` function itself.
+- The expression can be values combining the addition (`+`), subtraction (`-`), multiplication (`*`), and division (`/`) operators, using standard operator precedence rules. Make sure to put a space on each side of the `+` and `-` operands. You can use different units for each value in your expression. You may also use parentheses to establish computation order when needed.
 - Oftentimes you will want to use {{cssxref("min()")}} and {{cssxref("max()")}} within a `clamp()` function.
 
 ### Return value
@@ -157,6 +158,19 @@ p {
   font-size: max(1.2rem, 1.2vw);
 }
 ```
+
+## Accessibility
+
+When `clamp()` is used for controlling text size, make sure that the maximum allowed value is a [relative length unit](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units) that is no less than twice the minimum allowed value, for example:
+
+```css
+font-size: clamp(1rem, 2.5vw, 2rem);
+```
+
+This helps to ensure that text size can scale to at least 200% if the page is zoomed.
+
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.4: Resize Text | WAI | W3C](https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html)
 
 ## Specifications
 

@@ -26,15 +26,6 @@ A {{domxref("MediaQueryListEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaQueryListEvent")}}
 
-## Event properties
-
-_The `MediaQueryListEvent` interface inherits properties from its parent interface, {{DOMxRef("Event")}}._
-
-- {{DOMxRef("MediaQueryListEvent.matches")}} {{ReadOnlyInline}}
-  - : A boolean value that is `true` if the {{DOMxRef("document")}} currently matches the media query list, or `false` if not.
-- {{DOMxRef("MediaQueryListEvent.media")}} {{ReadOnlyInline}}
-  - : A string representing a serialized media query.
-
 ## Example
 
 ```js

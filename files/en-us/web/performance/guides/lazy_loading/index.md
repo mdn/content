@@ -57,13 +57,13 @@ It is possible to override the default behavior and preload web font resources u
 
 See also: [Element Link](/en-US/docs/Web/HTML/Reference/Elements/link).
 
-### Images and iframes
+### Images, iframes, videos and audio
 
-Very often, webpages contain many images that contribute to data-usage and how fast a page can load. Most of those images are off-screen ([non-critical](/en-US/docs/Web/Performance/Guides/Critical_rendering_path)), requiring a user interaction, like scrolling, in order to view them.
+Very often, webpages contain many images that contribute to data-usage and how fast a page can load. Most of those images are off-screen ([non-critical](/en-US/docs/Web/Performance/Guides/Critical_rendering_path)), requiring a user interaction, like scrolling, in order to view them. Similarly, many iframes, videos, and audio may be offscreen initially.
 
 #### Loading attribute
 
-The [`loading`](/en-US/docs/Web/HTML/Reference/Elements/img#loading) attribute on an {{HTMLElement("img")}} element, or the [`loading`](/en-US/docs/Web/HTML/Reference/Elements/iframe#loading) attribute on an {{HTMLElement("iframe")}}, can be used to instruct the browser to defer loading of images/iframes that are off-screen until the user scrolls near them.
+The [`loading`](/en-US/docs/Web/HTML/Reference/Elements/img#loading) attribute on an {{HTMLElement("img")}}, {{HTMLElement("iframe")}}, {{HTMLElement("video")}}, or {{HTMLElement("audio")}} element can be used to instruct the browser to defer loading of linked resources when elements are off-screen until the user scrolls near them.
 This allows non-critical resources to load only if needed, potentially speeding up initial page loads and reducing network usage.
 
 ```html
@@ -71,7 +71,7 @@ This allows non-critical resources to load only if needed, potentially speeding 
 <iframe loading="lazy" src="video-player.html" title="..."></iframe>
 ```
 
-The `load` event fires when the eagerly-loaded content has all been loaded. At that time, it's entirely possible (or even likely) that there may be lazily-loaded images or iframes within the {{Glossary("visual viewport")}} that haven't yet loaded.
+The `load` event fires when the eagerly-loaded content has all been loaded. At that time, it's entirely possible (or even likely) that there may be lazily-loaded images, iframes, videos, or audio within the {{Glossary("visual viewport")}} that haven't yet loaded.
 
 You can determine if a given image has finished loading by examining the value of its Boolean {{domxref("HTMLImageElement.complete", "complete")}} property.
 
@@ -94,3 +94,4 @@ When browser compatibility is crucial, there are a few options:
 
 - [Render blocking CSS](https://web.dev/articles/critical-rendering-path/render-blocking-css)
 - [Browser-level image lazy loading for the web](https://web.dev/articles/browser-level-image-lazy-loading)
+- [It's time to lazy-load offscreen iframes!](https://web.dev/articles/iframe-lazy-loading)

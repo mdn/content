@@ -1,5 +1,6 @@
 ---
-title: border-right-style
+title: "`border-right-style` CSS property"
+short-title: border-right-style
 slug: Web/CSS/Reference/Properties/border-right-style
 page-type: css-property
 browser-compat: css.properties.border-right-style

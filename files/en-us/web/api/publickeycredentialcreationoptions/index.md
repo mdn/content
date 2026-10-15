@@ -29,7 +29,7 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
     If `attestation` is omitted, it will default to `"none"`.
 
 - `attestationFormats` {{optional_inline}}
-  - : An array of strings specifying the relying party's preference for the attestation statement format used by the authenticator. Values should be ordered from highest to lowest preference, and should be considered hints — the authenticator may choose to issue an attestation statement in a different format. For a list of valid formats, see [WebAuthn Attestation Statement Format Identifiers](https://www.iana.org/assignments/webauthn/webauthn.xhtml#webauthn-attestation-statement-format-ids).
+  - : An array of strings specifying the relying party's preference for the attestation statement format used by the authenticator. Values should be ordered from highest to lowest preference, and should be considered hints — the authenticator may choose to issue an attestation statement in a different format. For a list of valid formats, see [WebAuthn Attestation Statement Format Identifiers](https://www.iana.org/assignments/webauthn#webauthn-attestation-statement-format-ids).
 
     If omitted, `attestationFormats` defaults to an empty array.
 
@@ -121,7 +121,7 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
 - `pubKeyCredParams`
   - : An {{jsxref("Array")}} of objects which specify the key types and signature algorithms the Relying Party supports, ordered from most preferred to least preferred. The client and authenticator will make a best-effort to create a credential of the most preferred type possible. These objects will contain the following properties:
     - `alg`
-      - : A number that is equal to a [COSE Algorithm Identifier](https://www.iana.org/assignments/cose/cose.xhtml#algorithms), representing the cryptographic algorithm to use for this credential type. It is recommended that relying parties that wish to support a wide range of authenticators should include at least the following values in the provided choices:
+      - : A number that is equal to a [COSE Algorithm Identifier](https://www.iana.org/assignments/cose#algorithms), representing the cryptographic algorithm to use for this credential type. It is recommended that relying parties that wish to support a wide range of authenticators should include at least the following values in the provided choices:
         - `-8`: EdDSA
         - `-7`: ES256
         - `-257`: RS256

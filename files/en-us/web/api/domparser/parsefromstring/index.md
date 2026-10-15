@@ -51,7 +51,7 @@ A {{domxref("Document")}} with {{domxref("Document/contentType","contentType")}}
 
 ### Exceptions
 
-- [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
+- {{jsxref("TypeError")}}
   - : This is thrown when:
     - `mimeType` is passed a value that is not one of the [allowed values](#mimetype).
     - `input` is passed a string value when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
@@ -103,7 +103,7 @@ if (typeof trustedTypes === "undefined")
 ```
 
 Next we create a {{domxref("TrustedTypePolicy")}} that defines a {{domxref("TrustedTypePolicy/createHTML", "createHTML()")}} for transforming an input string into {{domxref("TrustedHTML")}} instances.
-Commonly, implementations of `createHTML()` use a library such as [DOMPurify](https://github.com/cure53/DOMPurify) to sanitize the, input as shown below:
+Commonly, implementations of `createHTML()` use a library such as [DOMPurify](https://github.com/cure53/DOMPurify) to sanitize the input, as shown below:
 
 ```js
 const policy = trustedTypes.createPolicy("my-policy", {

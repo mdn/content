@@ -67,7 +67,7 @@ The new {{DOMxRef("Element")}}.
 ### Exceptions
 
 - `NamespaceError` {{domxref("DOMException")}}
-  - : Thrown if the [`namespaceURI`](#namespaceURI) value is:
+  - : Thrown if the [`namespaceURI`](#namespaceuri) value is:
     - not a valid namespace URI.
     - set to the empty string when `prefix` has a value.
     - not the value `http://www.w3.org/XML/1998/namespace` or `http://www.w3.org/2000/xmlns/` when [`prefix`](#prefix) is set to `xml` or `xmlns`, respectively.
@@ -82,7 +82,7 @@ The new {{DOMxRef("Element")}}.
     > Earlier versions of the specification were more restrictive, requiring that the `qualifiedName` be a valid [XML name](https://www.w3.org/TR/xml/#dt-name).
 
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if both the [`is`](#is) and [`customElementRegistry`](#customElementRegistry) options are specified.
+  - : Thrown if both the [`is`](#is) and [`customElementRegistry`](#customelementregistry) options are specified.
 
 ## Examples
 

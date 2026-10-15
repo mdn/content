@@ -147,7 +147,7 @@ function checkDeadlines() {
 }
 ```
 
-First we grab the current date and time by creating a blank `Date` object. The `Date` object has a number of methods to extract various parts of the date and time inside it. Here we fetch the current minutes (gives an easy numerical value), hours (gives an easy numerical value), day of the month (`getDate()` is needed for this, as `getDay()` returns the day of the week, 1-7), month (returns a number from 0-11, see below), and year (`getFullYear()` is needed; `getYear()` is deprecated, and returns a weird value that is not much use to anyone!)
+First we grab the current date and time by creating a blank `Date` object. The `Date` object has a number of methods to extract various parts of the date and time inside it. Here we fetch the current minutes (gives an easy numerical value), hours (gives an easy numerical value), day of the month (`getDate()` is needed for this, as `getDay()` returns the day of the week, 0-6), month (returns a number from 0-11, see below), and year (`getFullYear()` is needed; `getYear()` is deprecated, and returns a weird value that is not much use to anyone!)
 
 ```js
 function checkDeadlines() {

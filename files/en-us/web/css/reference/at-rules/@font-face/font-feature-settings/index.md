@@ -1,5 +1,6 @@
 ---
-title: font-feature-settings
+title: "`font-feature-settings` CSS at-rule descriptor"
+short-title: font-feature-settings
 slug: Web/CSS/Reference/At-rules/@font-face/font-feature-settings
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-feature-settings

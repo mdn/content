@@ -1,5 +1,6 @@
 ---
-title: :target-after
+title: "`:target-after` CSS pseudo-class"
+short-title: :target-after
 slug: Web/CSS/Reference/Selectors/:target-after
 page-type: css-pseudo-class
 status:

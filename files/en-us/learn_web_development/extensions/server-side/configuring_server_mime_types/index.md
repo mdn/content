@@ -67,7 +67,7 @@ While browsers may support any, some, or all of these alternative MIME types, yo
 There are several ways to determine the correct MIME type value to be used to serve your content.
 
 - If your content was created using commercial software, read the vendor's documentation to see what MIME types should be reported for the application.
-- Look in IANA's [MIME Media Types registry](https://www.iana.org/assignments/media-types/media-types.xhtml), which contains information on all registered MIME types.
+- Look in IANA's [MIME Media Types registry](https://www.iana.org/assignments/media-types), which contains information on all registered MIME types.
 - Search for the file extension in [FILExt](https://filext.com/) or the [File extensions reference](https://www.file-extensions.org/) to see what MIME types are associated with that extension. Pay close attention as the application may have multiple MIME types that differ by only one letter.
 
 ## How to check the MIME type of received content
@@ -82,7 +82,7 @@ There are several ways to determine the correct MIME type value to be used to se
 - Look for a `<meta>` element in the page source that gives the MIME type, for example `<meta http-equiv="Content-Type" content="text/html">`.
   - According to the standards, the `<meta>` element that specifies the MIME type should be ignored if there's a Content-Type header available.
 
-[IANA](https://www.iana.org/) keeps a list of registered [MIME Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml). The [HTTP specification](https://www.w3.org/Protocols/rfc2616/rfc2616.html) defines a superset of MIME types, which is used to describe the media types used on the web.
+[IANA](https://www.iana.org/) keeps a list of registered [MIME Media Types](https://www.iana.org/assignments/media-types). The [HTTP specification](https://www.w3.org/Protocols/rfc2616/rfc2616.html) defines a superset of MIME types, which is used to describe the media types used on the web.
 
 ## How to set up your server to send the correct MIME types
 
@@ -102,7 +102,7 @@ Trying to instead set it with just `header('application/pdf')` won't work.
 
 ## Related Links
 
-- [IANA | MIME Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml)
+- [IANA | MIME Media Types](https://www.iana.org/assignments/media-types)
 - [Hypertext Transfer Protocol — HTTP/1.1](https://www.w3.org/Protocols/rfc2616/rfc2616.html)
 - [MIME types (IANA media types)](/en-US/docs/Web/HTTP/Guides/MIME_types)
 - [Apache vs Nginx: Practical Considerations](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations)

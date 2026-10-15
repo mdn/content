@@ -1,5 +1,6 @@
 ---
-title: <input type="email">
+title: '`<input type="email">` HTML attribute value'
+short-title: <input type="email">
 slug: Web/HTML/Reference/Elements/input/email
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_email
@@ -7,6 +8,8 @@ sidebar: htmlsidebar
 ---
 
 {{HTMLElement("input")}} elements of type **`email`** are used to let the user enter and edit an email address, or, if the [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple) attribute is specified, a list of email addresses.
+
+The input value is automatically validated to ensure that it's either empty or a properly-formatted email address (or list of addresses) before the form can be submitted. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are automatically applied as appropriate to visually denote whether the current value of the field is a valid email address or not.
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
 
@@ -29,8 +32,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-The input value is automatically validated to ensure that it's either empty or a properly-formatted email address (or list of addresses) before the form can be submitted. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are automatically applied as appropriate to visually denote whether the current value of the field is a valid email address or not.
 
 ## Value
 
@@ -304,6 +305,12 @@ label::after {
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 {{EmbedLiveSample("Pattern_validation", 700, 300)}}
 
 Our {{HTMLElement("form")}} contains one {{HTMLElement("input")}} of type `email` for the user's email address, a {{HTMLElement("textarea")}} to enter their message for IT into, and an `<input>` of type [`"submit"`](/en-US/docs/Web/HTML/Reference/Elements/input/submit), which creates a button to submit the form. Each text entry box has a {{HTMLElement("label")}} associated with it to let the user know what's expected of them.
@@ -397,12 +404,6 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

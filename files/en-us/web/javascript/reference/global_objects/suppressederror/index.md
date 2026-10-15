@@ -52,35 +52,36 @@ A `SuppressedError` is thrown when an error occurs during [resource disposal](/e
 try {
   using resource1 = {
     [Symbol.dispose]() {
-      throw new Error("Error while disposing resource1");
+      throw new Error("resource1 disposal failed");
     },
   };
   using resource2 = {
     [Symbol.dispose]() {
-      throw new Error("Error while disposing resource2");
+      throw new Error("resource2 disposal failed");
     },
   };
-  throw new Error("Original error");
+  throw new TypeError("Original error");
 } catch (e) {
   console.log(e instanceof SuppressedError); // true
   console.log(e.message); // "An error was suppressed during disposal"
   console.log(e.name); // "SuppressedError"
-  console.log(e.error); // Error: Error while disposing resource1
+  console.log(e.error); // Error: resource1 disposal failed
   console.log(e.suppressed); // SuppressedError: An error was suppressed during disposal
-  console.log(e.suppressed.error); // Error: Error while disposing resource2
-  console.log(e.suppressed.suppressed); // Error: Original error
+  console.log(e.suppressed.error); // Error: resource2 disposal failed
+  console.log(e.suppressed.suppressed); // TypeError: Original error
 }
 ```
 
 The chain looks like this:
 
 ```plain
-       SuppressedError --suppressed--> SuppressedError --suppressed--> Original error
-              |                               |
-            error                           error
-              v                               v
-Error while disposing resource1   Error while disposing resource2
-    (Disposal happens later)        (Disposal happens earlier)
+     SuppressedError --suppressed--> SuppressedError --suppressed--> TypeError
+            |                               |
+          error                           error
+            |                               |
+            v                               v
+resource1 disposal failed       resource2 disposal failed
+ (Disposal happens later)       (Disposal happens earlier)
 ```
 
 ### Creating a SuppressedError

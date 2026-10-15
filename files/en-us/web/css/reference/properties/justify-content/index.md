@@ -1,5 +1,6 @@
 ---
-title: justify-content
+title: "`justify-content` CSS property"
+short-title: justify-content
 slug: Web/CSS/Reference/Properties/justify-content
 page-type: css-property
 browser-compat: css.properties.justify-content
@@ -94,6 +95,8 @@ justify-content: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `start`
   - : The items are packed flush to each other toward the start edge of the alignment container in the main axis.

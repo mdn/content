@@ -28,7 +28,7 @@ The following example tries to make a call to a payment API using a POST request
 POST /merchant/transfers/payment HTTP/1.1
 Host: payments.example.com
 Content-Type: application/json
-Content-Length: 402
+Content-Length: 529
 
 {
   "payment_transfer": {
@@ -58,7 +58,7 @@ The server responds to the request with a 402 if there is a problem with the tra
 HTTP/1.1 402 Payment Required
 Date: Tue, 02 Jul 2024 12:56:49 GMT
 Content-Type: application/json
-Content-Length: 175
+Content-Length: 194
 
 {
   "error": {

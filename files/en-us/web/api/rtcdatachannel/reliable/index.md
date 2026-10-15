@@ -9,7 +9,7 @@ status:
 browser-compat: api.RTCDataChannel.reliable
 ---
 
-{{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebRTC")}}{{Non-standard_Header}}
 
 The read-only `RTCDataChannel` property
 **`reliable`** indicates whether or not the data channel is

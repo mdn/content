@@ -37,13 +37,13 @@ The response payload is an object:
 
 ### Errors
 
-- [Invalid session ID](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
+- [`invalid session id`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
   - : Session does not exist.
-- [No such window](/en-US/docs/Web/WebDriver/Reference/Errors/NoSuchWindow)
+- [`no such window`](/en-US/docs/Web/WebDriver/Reference/Errors/NoSuchWindow)
   - : If the [`window`](/en-US/docs/Web/API/Window) has been closed.
-- [Unexpected alert open](/en-US/docs/Web/WebDriver/Reference/Errors/UnexpectedAlertOpen)
+- [`unexpected alert open`](/en-US/docs/Web/WebDriver/Reference/Errors/UnexpectedAlertOpen)
   - : A user prompt, such as [`window.alert`](/en-US/docs/Web/API/Window/alert), blocks execution of command until it is dealt with.
-- [Unsupported Operation](/en-US/docs/Web/WebDriver/Reference/Errors/UnsupportedOperation)
+- [`unsupported operation`](/en-US/docs/Web/WebDriver/Reference/Errors/UnsupportedOperation)
   - : The driver or browser doesn't support the command for some reason (e.g., when it is not possible to create a new tab or window).
 
 ## Specifications

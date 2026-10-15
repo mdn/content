@@ -1,5 +1,6 @@
 ---
-title: :last-child
+title: "`:last-child` CSS pseudo-class"
+short-title: :last-child
 slug: Web/CSS/Reference/Selectors/:last-child
 page-type: css-pseudo-class
 browser-compat: css.selectors.last-child

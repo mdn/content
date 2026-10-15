@@ -1,5 +1,6 @@
 ---
-title: counters()
+title: "`counters()` CSS function"
+short-title: counters()
 slug: Web/CSS/Reference/Values/counters
 page-type: css-function
 browser-compat: css.types.counters

@@ -1,5 +1,6 @@
 ---
-title: "<rt>: The Ruby Text element"
+title: "`<rt>` HTML ruby text element"
+short-title: <rt>
 slug: Web/HTML/Reference/Elements/rt
 page-type: html-element
 browser-compat: html.elements.rt
@@ -21,8 +22,6 @@ ruby {
   font-size: 2em;
 }
 ```
-
-See the article about the {{HTMLElement("ruby")}} element for more examples.
 
 ## Attributes
 
@@ -47,6 +46,8 @@ body {
 #### Result
 
 {{EmbedLiveSample("Using_ruby_annotations", 600, 60)}}
+
+See the {{HTMLElement("ruby")}} element for more examples.
 
 ## Technical summary
 

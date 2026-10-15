@@ -14,7 +14,7 @@ specified.
 
 ## Value
 
-A string.
+A string or `null`.
 
 ## Examples
 

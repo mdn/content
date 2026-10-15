@@ -1,5 +1,6 @@
 ---
-title: syntax
+title: "`syntax` CSS at-rule descriptor"
+short-title: syntax
 slug: Web/CSS/Reference/At-rules/@property/syntax
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.property.syntax

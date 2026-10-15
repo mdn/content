@@ -18,7 +18,7 @@ The **`DeviceOrientationEvent`** interface of the {{domxref("Device Orientation 
 
 ## Static methods
 
-- {{domxref("DeviceOrientationEvent.requestPermission_static", "DeviceOrientationEvent.requestPermission()")}} {{experimental_inline}}
+- {{domxref("DeviceOrientationEvent.requestPermission_static", "DeviceOrientationEvent.requestPermission()")}}
   - : Requests the user's permission to access device orientation data. Returns a {{jsxref("Promise")}} that resolves with a string of `"granted"` or `"denied"`.
 
 ## Instance properties

@@ -131,7 +131,6 @@ const options = {
 
 const observer = new ReportingObserver((reports, observer) => {
   reports.forEach((report) => {
-    //console.log(report);
     log(JSON.stringify(report, null, 2));
   });
 }, options);

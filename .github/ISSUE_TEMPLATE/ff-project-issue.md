@@ -6,6 +6,9 @@ assignees:
 title: ""
 ---
 
+> [!IMPORTANT]
+> This issue will be worked on by MDN's core team of writers. If you want to contribute, please see the [contributor board](https://github.com/orgs/mdn/projects/25) for issues where we're accepting pull requests.
+
 ## Acceptance criteria
 
 - [ ] The listed features are documented sufficiently on MDN

@@ -1,5 +1,6 @@
 ---
-title: margin-block-end
+title: "`margin-block-end` CSS property"
+short-title: margin-block-end
 slug: Web/CSS/Reference/Properties/margin-block-end
 page-type: css-property
 browser-compat: css.properties.margin-block-end
@@ -75,7 +76,7 @@ margin-block-end: 5%; /* relative to the nearest block container's width */
 margin-block-end: anchor-size(inline);
 margin-block-end: calc(anchor-size(--my-anchor block, 20px) / 4);
 
-/* Keyword values */
+/* Keyword value */
 margin-block-end: auto;
 
 /* Global values */

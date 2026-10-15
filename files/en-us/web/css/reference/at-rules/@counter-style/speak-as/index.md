@@ -1,5 +1,6 @@
 ---
-title: speak-as
+title: "`speak-as` CSS at-rule descriptor"
+short-title: speak-as
 slug: Web/CSS/Reference/At-rules/@counter-style/speak-as
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.speak-as

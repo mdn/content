@@ -45,7 +45,7 @@ The promise is rejected when the following exceptions are encountered:
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Raised when the requested operation is not valid for the provided key (e.g., invalid encryption algorithm, or invalid key for the specified encryption algorithm).
 - `OperationError` {{domxref("DOMException")}}
-  - : Raised when the operation failed for an operation-specific reason (e.g., algorithm parameters of invalid sizes, or AES-GCM plaintext longer than 2<sup>39</sup>−256 bytes).
+  - : Raised when the operation failed for an operation-specific reason (e.g., algorithm parameters of invalid sizes, or AES-GCM plaintext longer than 2<sup>39</sup>−256 bytes). See [Supported algorithms](#supported_algorithms) for length restrictions.
 
 ## Supported algorithms
 
@@ -67,9 +67,14 @@ secret key.
 While it's possible to add authentication to CTR and CBC modes, they do not provide it by default and when implementing it manually one can easily make minor, but serious mistakes.
 GCM does provide built-in authentication, and for this reason it's often recommended over the other two AES modes.
 
+> [!NOTE]
+> The plaintext length limits below are upper bounds, not guarantees that a browser can encrypt messages of those sizes. The Web Crypto API and the underlying cryptographic implementation can impose additional restrictions, and available memory can further limit the size of the input.
+
 ### RSA-OAEP
 
-The RSA-OAEP public-key encryption system is specified in [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447).
+The RSA-OAEP public-key encryption system is specified in [RFC 8017](https://datatracker.ietf.org/doc/html/rfc8017).
+
+The plaintext must be no longer than `k - 2 * hLen - 2` bytes, where `k` is the RSA modulus length in bytes and `hLen` is the output length in bytes of the hash function associated with the key. For example, a 2048-bit RSA key with SHA-256 can encrypt at most `256 - 2 * 32 - 2 = 190` bytes. Exceeding this limit causes the promise to reject with an `OperationError`. See [RSAES-OAEP encryption](https://datatracker.ietf.org/doc/html/rfc8017#section-7.1.1) for the full constraints.
 
 ### AES-CTR
 
@@ -90,6 +95,8 @@ Typically this is achieved by splitting the initial counter block value into two
 
 Essentially: the nonce should ensure that counter blocks are not reused from one message to the next, while the counter should ensure that counter blocks are not reused within a single message.
 
+To prevent the counter from repeating within a message, the caller must ensure that the number of 16-byte blocks, including a final partial block, does not exceed `2 ** length`, where `length` is the counter length in bits specified in {{domxref("AesCtrParams")}}. This is a requirement for secure use, regardless of whether an implementation rejects an oversized message.
+
 > [!NOTE]
 > See [Appendix B of the NIST SP800-38A standard](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf#%5B%7B%22num%22%3A70%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22Fit%22%7D%5D) for more information.
 
@@ -97,11 +104,18 @@ Essentially: the nonce should ensure that counter blocks are not reused from one
 
 This represents AES in Cipher Block Chaining Mode, as specified in [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final).
 
+The [Web Crypto API specification](https://w3c.github.io/webcrypto/#aes-cbc-operations-encrypt) does not define a maximum plaintext length for AES-CBC.
+
 ### AES-GCM
 
 This represents AES in Galois/Counter Mode, as specified in [NIST SP800-38D](https://csrc.nist.gov/pubs/sp/800/38/d/final).
 
 One major difference between this mode and the others is that GCM is an "authenticated" mode, which means that it includes checks that the ciphertext has not been modified by an attacker.
+
+The GCM specification limits the plaintext for a single encryption operation to `2 ** 39 - 256` bits (64 GiB minus 32 bytes). See section 5.2.1.1 of [NIST SP800-38D](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf).
+
+> [!NOTE]
+> The [Web Crypto API specification](https://w3c.github.io/webcrypto/#aes-gcm-operations-encrypt) states that plaintext longer than `2 ** 39 - 256` _bytes_ causes an `OperationError`. This threshold is larger than the GCM algorithm's limit above. The smaller GCM limit and any smaller implementation limits still apply.
 
 ## Examples
 

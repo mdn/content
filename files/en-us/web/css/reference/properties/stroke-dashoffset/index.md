@@ -1,5 +1,6 @@
 ---
-title: stroke-dashoffset
+title: "`stroke-dashoffset` CSS property"
+short-title: stroke-dashoffset
 slug: Web/CSS/Reference/Properties/stroke-dashoffset
 page-type: css-property
 browser-compat: css.properties.stroke-dashoffset
@@ -13,7 +14,7 @@ This property applies to any SVG shape or text-content element (see {{SVGAttr("s
 ## Syntax
 
 ```css
-/* Keyword */
+/* Keyword value */
 stroke-dashoffset: none;
 
 /* Length and percentage values */

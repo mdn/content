@@ -30,9 +30,9 @@ The `PreferenceManager` interface inherits from {{domxref("EventTarget")}}.
 ## Instance methods
 
 - {{domxref("PreferenceObject.clearOverride()")}} {{Experimental_Inline}}
-  - : Resets any previously set override to `null` and fires the {{domxref("PreferenceObject.change_event" "change")}} event.
+  - : Resets any previously set override to `null` and fires the {{domxref("PreferenceObject.change_event", "change")}} event.
 - {{domxref("PreferenceObject.requestOverride()")}} {{Experimental_Inline}}
-  - : Requests an override of the preference and fires the {{domxref("PreferenceObject.change_event" "change")}} event on success.
+  - : Requests an override of the preference and fires the {{domxref("PreferenceObject.change_event", "change")}} event on success.
 
 ## Events
 

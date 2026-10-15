@@ -1,5 +1,6 @@
 ---
-title: translate3d()
+title: "`translate3d()` CSS function"
+short-title: translate3d()
 slug: Web/CSS/Reference/Values/transform-function/translate3d
 page-type: css-function
 browser-compat: css.types.transform-function.translate3d

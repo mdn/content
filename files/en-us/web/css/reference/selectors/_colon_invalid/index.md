@@ -1,5 +1,6 @@
 ---
-title: :invalid
+title: "`:invalid` CSS pseudo-class"
+short-title: :invalid
 slug: Web/CSS/Reference/Selectors/:invalid
 page-type: css-pseudo-class
 browser-compat: css.selectors.invalid
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`:invalid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents any {{HTMLElement("form")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents fail to [validate](/en-US/docs/Web/HTML/Guides/Constraint_validation).
+
+This pseudo-class is useful for highlighting field errors for the user.
 
 {{InteractiveExample("CSS Demo: :invalid", "tabbed-shorter")}}
 
@@ -25,24 +28,20 @@ input:invalid {
 ```
 
 ```html interactive-example
-<form>
-  <label for="email">Email Address:</label>
-  <input id="email" name="email" type="email" value="na@me@example.com" />
+<label for="email">Email Address:</label>
+<input id="email" name="email" type="email" value="na@me@example.com" />
 
-  <label for="secret">Secret Code: (lower case letters)</label>
-  <input id="secret" name="secret" type="text" value="test" pattern="[a-z]+" />
+<label for="secret">Secret Code: (lower case letters)</label>
+<input id="secret" name="secret" type="text" value="test" pattern="[a-z]+" />
 
-  <label for="age">Your age: (18+)</label>
-  <input id="age" name="age" type="number" value="5" min="18" />
+<label for="age">Your age: (18+)</label>
+<input id="age" name="age" type="number" value="5" min="18" />
 
-  <label
-    ><input name="tos" type="checkbox" required checked /> - Do you agree to
-    ToS?</label
-  >
-</form>
+<label
+  ><input name="tos" type="checkbox" required checked /> - Do you agree to
+  ToS?</label
+>
 ```
-
-This pseudo-class is useful for highlighting field errors for the user.
 
 ## Syntax
 
@@ -151,6 +150,12 @@ In this example we use `:invalid` along with `~`, the [subsequent-sibling combin
 
   <button type="submit" name="send">Submit</button>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 #### CSS

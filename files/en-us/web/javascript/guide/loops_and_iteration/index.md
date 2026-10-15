@@ -110,7 +110,7 @@ btn.addEventListener("click", () => {
 
 ## do...while statement
 
-The {{jsxref("statements/do...while", "do...while")}} statement repeats until a
+The {{jsxref("Statements/do...while", "do...while")}} statement repeats until a
 specified condition evaluates to false.
 
 A `do...while` statement looks as follows:

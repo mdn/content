@@ -1,5 +1,6 @@
 ---
-title: "<dir>: The Directory element"
+title: "`<dir>` HTML directory element"
+short-title: <dir>
 slug: Web/HTML/Reference/Elements/dir
 page-type: html-element
 status:
@@ -7,8 +8,6 @@ status:
 browser-compat: html.elements.dir
 sidebar: htmlsidebar
 ---
-
-{{Deprecated_Header}}
 
 The **`<dir>`** [HTML](/en-US/docs/Web/HTML) element is used as a container for a directory of files and/or folders, potentially with styles and icons applied by the {{Glossary("user agent")}}. Do not use this obsolete element; instead, you should use the {{HTMLElement("ul")}} element for lists, including lists of files.
 
@@ -23,7 +22,7 @@ This element implements the {{domxref("HTMLDirectoryElement")}} interface.
 
 Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
-- `compact` {{Deprecated_Inline}}
+- `compact` {{Deprecated_Inline}} {{non-standard_inline}}
   - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the user agent and it doesn't work in all browsers.
 
 <!-- ## Technical summary -->

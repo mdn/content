@@ -1,5 +1,6 @@
 ---
-title: scale()
+title: "`scale()` CSS function"
+short-title: scale()
 slug: Web/CSS/Reference/Values/transform-function/scale
 page-type: css-function
 browser-compat: css.types.transform-function.scale

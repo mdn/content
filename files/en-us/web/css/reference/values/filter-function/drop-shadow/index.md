@@ -1,5 +1,6 @@
 ---
-title: drop-shadow()
+title: "`drop-shadow()` CSS function"
+short-title: drop-shadow()
 slug: Web/CSS/Reference/Values/filter-function/drop-shadow
 page-type: css-function
 browser-compat: css.types.filter-function.drop-shadow

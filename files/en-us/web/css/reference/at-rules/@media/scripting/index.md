@@ -1,5 +1,6 @@
 ---
-title: scripting
+title: "`scripting` CSS media feature"
+short-title: scripting
 slug: Web/CSS/Reference/At-rules/@media/scripting
 page-type: css-media-feature
 browser-compat: css.at-rules.media.scripting

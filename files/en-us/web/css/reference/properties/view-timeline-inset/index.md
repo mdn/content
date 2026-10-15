@@ -1,5 +1,6 @@
 ---
-title: view-timeline-inset
+title: "`view-timeline-inset` CSS property"
+short-title: view-timeline-inset
 slug: Web/CSS/Reference/Properties/view-timeline-inset
 page-type: css-property
 browser-compat: css.properties.view-timeline-inset

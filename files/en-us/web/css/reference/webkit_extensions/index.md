@@ -192,4 +192,3 @@ If a pseudo-element (but not pseudo-class) has a `-webkit-` prefix, Blink, WebKi
 
 - [Mozilla (-moz-) vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/Reference/Mozilla_extensions)
 - {{glossary("Vendor Prefix")}} glossary entry
-- [Styling Form Controls on the WebKit Trac](https://trac.webkit.org/wiki/Styling%20Form%20Controls)

@@ -1,5 +1,6 @@
 ---
-title: contain-intrinsic-inline-size
+title: "`contain-intrinsic-inline-size` CSS property"
+short-title: contain-intrinsic-inline-size
 slug: Web/CSS/Reference/Properties/contain-intrinsic-inline-size
 page-type: css-property
 browser-compat: css.properties.contain-intrinsic-inline-size
@@ -14,7 +15,7 @@ In a horizontal [writing mode](/en-US/docs/Web/CSS/Reference/Properties/writing-
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 contain-intrinsic-inline-size: none;
 
 /* <length> values */

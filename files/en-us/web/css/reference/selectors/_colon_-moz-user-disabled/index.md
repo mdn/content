@@ -1,5 +1,6 @@
 ---
-title: :-moz-user-disabled
+title: "`:-moz-user-disabled` CSS pseudo-class"
+short-title: :-moz-user-disabled
 slug: Web/CSS/Reference/Selectors/:-moz-user-disabled
 page-type: css-pseudo-class
 status:

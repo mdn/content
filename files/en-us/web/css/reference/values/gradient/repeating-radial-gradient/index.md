@@ -1,5 +1,6 @@
 ---
-title: repeating-radial-gradient()
+title: "`repeating-radial-gradient()` CSS function"
+short-title: repeating-radial-gradient()
 slug: Web/CSS/Reference/Values/gradient/repeating-radial-gradient
 page-type: css-function
 browser-compat: css.types.gradient.repeating-radial-gradient

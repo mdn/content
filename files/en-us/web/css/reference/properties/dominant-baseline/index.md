@@ -1,5 +1,6 @@
 ---
-title: dominant-baseline
+title: "`dominant-baseline` CSS property"
+short-title: dominant-baseline
 slug: Web/CSS/Reference/Properties/dominant-baseline
 page-type: css-property
 browser-compat: css.properties.dominant-baseline
@@ -46,6 +47,8 @@ dominant-baseline: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : If this property is applied to a {{SVGElement("text")}} element, then the computed value depends on the value of the {{SVGAttr("writing-mode")}} attribute.

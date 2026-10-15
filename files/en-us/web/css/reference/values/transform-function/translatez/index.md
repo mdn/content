@@ -1,5 +1,6 @@
 ---
-title: translateZ()
+title: "`translateZ()` CSS function"
+short-title: translateZ()
 slug: Web/CSS/Reference/Values/transform-function/translateZ
 page-type: css-function
 browser-compat: css.types.transform-function.translateZ

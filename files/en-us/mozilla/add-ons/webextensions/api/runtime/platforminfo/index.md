@@ -16,8 +16,8 @@ Values of this type are objects, which contain the following properties:
   - : {{WebExtAPIRef('runtime.PlatformOs')}}. The platform's operating system.
 - `arch`
   - : {{WebExtAPIRef('runtime.PlatformArch')}}. The platform's processor architecture.
-- `nacl_arch`
-  - : {{WebExtAPIRef('runtime.PlatformNaclArch')}}. The native client architecture. This may be different from `arch` on some platforms.
+- `nacl_arch` {{deprecated_inline}}
+  - : {{WebExtAPIRef('runtime.PlatformNaclArch')}}. The Google Native Client architecture. Only Chromium-based browsers support this attribute, and Chromium is removing it. Consider migrating to `arch`, which contains equivalent information and is more descriptive on some platforms (ARM and RISC-V).
 
 {{WebExtExamples}}
 

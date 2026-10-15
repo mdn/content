@@ -46,7 +46,7 @@ None (`undefined`).
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : This is thrown if:
     - `input` is passed a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
     - `options.sanitizer` is passed a:

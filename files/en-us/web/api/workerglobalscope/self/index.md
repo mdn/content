@@ -61,4 +61,4 @@ This provides a full list of the objects available to that worker scope, so it i
 
 ## See also
 
-{{domxref("WorkerGlobalScope")}}
+- {{domxref("WorkerGlobalScope")}}

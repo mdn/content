@@ -1,5 +1,6 @@
 ---
-title: scroll-padding-bottom
+title: "`scroll-padding-bottom` CSS property"
+short-title: scroll-padding-bottom
 slug: Web/CSS/Reference/Properties/scroll-padding-bottom
 page-type: css-property
 browser-compat: css.properties.scroll-padding-bottom
@@ -73,7 +74,7 @@ scroll-padding-bottom: 2em;
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 scroll-padding-bottom: auto;
 
 /* <length> values */

@@ -9,7 +9,7 @@ status:
 browser-compat: api.Window.setResizable
 ---
 
-{{APIRef("HTML DOM")}} {{deprecated_header}}{{non-standard_header}}
+{{APIRef("HTML DOM")}} {{non-standard_header}}
 
 This method does nothing; it is a no-op. It is solely kept for compatibility with Netscape 4.x.
 

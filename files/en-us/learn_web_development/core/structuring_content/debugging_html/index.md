@@ -95,7 +95,7 @@ You can open the devtools in a similar way in each browser — see [How to open 
 For this article, the only relevant devtools function is the **DOM inspector**, which shows the currently-rendered HTML DOM and allows you to edit it. Let's look at this now:
 
 1. Open the devtools in your browser.
-2. Open the DOM inspector. It is in the same place in each browser — the first tab in the devtools at the start of the row. In Firefox it is labelled _Inspector_, while in Safari, Edge, and Chrome it is labeled _Elements_. This should be the tab selected by default when you first open the devtools, but select it if it isn't.
+2. Open the DOM inspector. It is in the same place in each browser — the first tab in the devtools at the start of the row. In Firefox it is labeled _Inspector_, while in Safari, Edge, and Chrome it is labeled _Elements_. This should be the tab selected by default when you first open the devtools, but select it if it isn't.
 3. Examine the DOM tree structure shown in the tab, and note how you can click the little expansion arrows at the start of each DOM node to expand and collapse them and reveal their descendant nodes. You can also use the up and down cursor keys to move up and down the nodes, and the right and left cursor keys to expand and collapse the nodes.
 4. Also try hovering over the nodes (or selecting them with the cursor keys) and note how the currently-hovered (or selected) element is highlighted in the viewport.
 5. You can also edit the rendered DOM. We won't use the editing functionality in this article, but take some time to look up how to do this if you are curious.
@@ -191,11 +191,11 @@ To specify the HTML to validate, you can provide a web address, upload an HTML f
 
 ## Validating an HTML document
 
-In this task, we'll get you to try out the HTML validator. You will validate our [sample document](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html) and see what results are returned. This example contains the same HTML that you studied with the DOM inspector earlier.
+In this task, we'll get you to try out the HTML validator. You will validate the same HTML that you studied with the DOM inspector earlier.
 
 1. First, load the [Markup Validation Service](https://validator.w3.org/) in a new browser tab, if it isn't already open.
 2. Switch to the [Validate by Direct Input](https://validator.w3.org/#validate_by_input) tab.
-3. Copy all of the sample document's code (not just the body) and paste it into the large text area shown in the Markup Validation Service.
+3. Copy the [sample document](#your_turn_studying_html_using_the_dom_inspector) and paste it into the large text area shown in the Markup Validation Service. Paste the entire document structure, not just the `<body>` contents.
 4. Press the _Check_ button.
 
 This should give you a list of errors and other information.
@@ -228,5 +228,7 @@ You will know when all your errors are fixed when you see a nice little green ba
 ## Summary
 
 So there we have it, an introduction to debugging HTML, which should give you some useful skills to count on when debugging HTML, but also CSS and JavaScript code later on in the course. This also marks the end of the _Structuring content with HTML_ module.
+
+Your next step is to start learning about styling the web in our [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) module.
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Forms_challenge", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}

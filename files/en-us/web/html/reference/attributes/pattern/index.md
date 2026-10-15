@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: pattern"
+title: "`pattern` HTML attribute"
 short-title: pattern
 slug: Web/HTML/Reference/Attributes/pattern
 page-type: html-attribute
@@ -143,6 +143,12 @@ The example below restricts the value to 4-8 characters and requires that it con
     <button>Submit</button>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden

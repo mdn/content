@@ -1,5 +1,6 @@
 ---
-title: border-inline-width
+title: "`border-inline-width` CSS property"
+short-title: border-inline-width
 slug: Web/CSS/Reference/Properties/border-inline-width
 page-type: css-property
 browser-compat: css.properties.border-inline-width
@@ -51,7 +52,7 @@ direction: rtl;
 ## Syntax
 
 ```css
-/* <'border-width'> values */
+/* <'line-width'> values */
 border-inline-width: 5px 10px;
 border-inline-width: 5px;
 border-inline-width: thick;
@@ -66,8 +67,8 @@ border-inline-width: unset;
 
 ### Values
 
-- `<'border-width'>`
-  - : The width of the border. See {{ cssxref("border-width") }}.
+- {{cssxref("&lt;line-width&gt;")}}
+  - : Defines the width of the border, either as an explicit non-negative {{cssxref("&lt;length&gt;")}} or the keywords: `thin`, `medium`, or `thick`. The default is `medium`.
 
 ## Formal definition
 

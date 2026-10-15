@@ -34,7 +34,7 @@ postMessage(message, options)
     This may be any value or JavaScript object handled by the [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm, which includes cyclical references.
 
 - `transfer` {{optional_inline}}
-  - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. The ownership of these objects is given to the destination side and they are no longer usable on the sending side. These transferable objects should be attached to the message; otherwise they would be moved but not actually accessible on the receiving end.
+  - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. The ownership of these objects is given to the destination side and they are no longer usable on the sending side. These transferable objects are not automatically sent; they must either be contained in the message or be accessible to the recipient via other means, such as {{domxref("MessagePort")}} via {{domxref("MessageEvent.ports")}}.
 - `options` {{optional_inline}}
   - : An optional object containing the following properties:
     - `transfer` {{optional_inline}}

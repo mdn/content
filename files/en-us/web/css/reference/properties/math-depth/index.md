@@ -1,5 +1,6 @@
 ---
-title: math-depth
+title: "`math-depth` CSS property"
+short-title: math-depth
 slug: Web/CSS/Reference/Properties/math-depth
 page-type: css-property
 browser-compat: css.properties.math-depth
@@ -14,7 +15,7 @@ The **`math-depth`** property describes a notion of _depth_ for each element of 
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 math-depth: auto-add;
 
 /* Relative values */

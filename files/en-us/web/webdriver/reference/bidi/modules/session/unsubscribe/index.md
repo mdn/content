@@ -1,6 +1,6 @@
 ---
-title: session.unsubscribe command
-short-title: session.unsubscribe
+title: "`session.unsubscribe` command"
+short-title: unsubscribe
 slug: Web/WebDriver/Reference/BiDi/Modules/session/unsubscribe
 page-type: webdriver-command
 browser-compat: webdriver.bidi.session.unsubscribe
@@ -11,24 +11,20 @@ The `session.unsubscribe` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Mod
 
 ## Syntax
 
-To unsubscribe using subscription ID:
-
 ```json-nolint
+/* Using event name */
 {
   "method": "session.unsubscribe",
   "params": {
-    "subscriptions": ["<subscription ID>"]
+    "events": ["log.entryAdded"]
   }
 }
-```
 
-To unsubscribe using event name:
-
-```json-nolint
+/* Using subscription ID */
 {
   "method": "session.unsubscribe",
   "params": {
-    "events": ["<event name>"]
+    "subscriptions": ["a1b2c3d4-e5f6-7890-abcd-ef1234567890"]
   }
 }
 ```
@@ -37,12 +33,12 @@ To unsubscribe using event name:
 
 The `params` field contains one of the following fields:
 
-- `subscriptions`
-  - : An array of one or more subscription IDs that specifies the subscriptions to cancel, including both global and context-scoped subscriptions.
 - `events`
   - : An array of one or more strings that specifies event names for canceling subscriptions.
     Each string can be either a specific event name (for example, `"log.entryAdded"`) or a module name (for example, `"log"`) that unsubscribes the client from all events in that module.
     Only global subscriptions can be removed using event names; those created using [`contexts`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe#contexts) or [`userContexts`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe#usercontexts) cannot be.
+- `subscriptions`
+  - : An array of one or more subscription IDs that specifies the subscriptions to cancel, including both global and context-scoped subscriptions.
 
 ### Return value
 

@@ -83,16 +83,20 @@ l10n:
     Attributes: Attributes
     Attributes_element: Attributes by element
     Attribute_values: Attribute values
-    Input_types: <code>&lt;input&gt;</code> type
-    Script_types: <code>&lt;script&gt;</code> type
-    Rel_keywords: <code>rel</code> keywords
+    Input_types: <code>&lt;input type&gt;</code>
+    Script_types: <code>&lt;script type&gt;</code>
+    Rel_keywords: <code>&lt;link rel&gt;</code> keywords
     Guides: Guides
   fr:
     Reference: Références
     HTML_Elements: Éléments
     Global_attributes: Attributs universels
     Attributes: Attributs
+    Attributes_element: Attributs par élément
+    Attribute_values: Valeurs des attributs
     Input_types: Types <code>&lt;input&gt;</code>
+    Script_types: Types <code>&lt;script&gt;</code>
+    Rel_keywords: Mots-clés <code>&lt;link rel&gt;</code>
     Guides: Guides
   ja:
     Reference: リファレンス

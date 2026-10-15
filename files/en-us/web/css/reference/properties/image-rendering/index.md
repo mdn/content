@@ -1,5 +1,6 @@
 ---
-title: image-rendering
+title: "`image-rendering` CSS property"
+short-title: image-rendering
 slug: Web/CSS/Reference/Properties/image-rendering
 page-type: css-property
 browser-compat: css.properties.image-rendering
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`image-rendering`** [CSS](/en-US/docs/Web/CSS) property sets an image scaling algorithm. The property applies to an element itself, to any images set in its other properties, and to its descendants.
+
+The {{Glossary("user agent")}} will scale an image when the page author specifies dimensions other than its natural size. Scaling may also occur due to user interaction (zooming). For example, if the natural size of an image is `100×100px`_,_ but its actual dimensions are `200×200px` (or `50×50px`), then the image will be upscaled (or downscaled) using the algorithm specified by `image-rendering`. This property has no effect on non-scaled images.
 
 {{InteractiveExample("CSS Demo: image-rendering")}}
 
@@ -42,8 +45,6 @@ image-rendering: pixelated;
 }
 ```
 
-The {{Glossary("user agent")}} will scale an image when the page author specifies dimensions other than its natural size. Scaling may also occur due to user interaction (zooming). For example, if the natural size of an image is `100×100px`_,_ but its actual dimensions are `200×200px` (or `50×50px`), then the image will be upscaled (or downscaled) using the algorithm specified by `image-rendering`. This property has no effect on non-scaled images.
-
 ## Syntax
 
 ```css
@@ -62,6 +63,8 @@ image-rendering: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : The scaling algorithm is UA dependent. Since version 1.9 (Firefox 3.0), Gecko uses _bilinear_ resampling (high quality).
@@ -90,7 +93,7 @@ image-rendering: unset;
 
 ### Setting image scaling algorithms
 
-In this example, an image is repeated three times, with each having a different `image-rendering` value applied.
+In this example, an image is repeated four times, with each having a different `image-rendering` value applied.
 
 ```html hidden
 <div>

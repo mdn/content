@@ -1,5 +1,6 @@
 ---
-title: ::-moz-progress-bar
+title: "`::-moz-progress-bar` CSS pseudo-element"
+short-title: ::-moz-progress-bar
 slug: Web/CSS/Reference/Selectors/::-moz-progress-bar
 page-type: css-pseudo-element
 status:

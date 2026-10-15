@@ -6,8 +6,8 @@ spec-urls:
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-height
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-primitive-height
   - https://drafts.csswg.org/css-masking-1/#element-attrdef-mask-height
-  - https://svgwg.org/svg2-draft/geometry.html#Sizing
-  - https://svgwg.org/svg2-draft/pservers.html#PatternElementHeightAttribute
+  - https://w3c.github.io/svgwg/svg2-draft/geometry.html#Sizing
+  - https://w3c.github.io/svgwg/svg2-draft/pservers.html#PatternElementHeightAttribute
 sidebar: svgref
 ---
 

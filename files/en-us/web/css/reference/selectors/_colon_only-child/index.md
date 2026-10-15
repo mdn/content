@@ -1,5 +1,6 @@
 ---
-title: :only-child
+title: "`:only-child` CSS pseudo-class"
+short-title: :only-child
 slug: Web/CSS/Reference/Selectors/:only-child
 page-type: css-pseudo-class
 browser-compat: css.selectors.only-child

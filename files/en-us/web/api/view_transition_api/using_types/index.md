@@ -1,5 +1,6 @@
 ---
 title: Using view transition types
+short-title: View transition types
 slug: Web/API/View_Transition_API/Using_types
 page-type: guide
 ---
@@ -8,7 +9,7 @@ page-type: guide
 
 View transition types provide a mechanism by which different **types** can be specified for active view transitions. CSS can then be used to apply different animations to DOM elements when their content updates, depending on the transition type specified. For example, you might want to apply different animations to an {{htmlelement("img")}} element in an image gallery app as the displayed image changes depending on whether you are moving forward or backward in the sequence, deleting an image, or adding an image into the sequence.
 
-This article show how to use types along with same-document view transitions and cross-document view transitions.
+This article shows how to use types along with same-document view transitions and cross-document view transitions.
 
 ## Examples
 
@@ -233,7 +234,7 @@ window.addEventListener("pagereveal", async (e) => {
 ```
 
 > [!NOTE]
-> The `determineTransitionType()` function can return `undefined` if neither the `backwards` or `forwards` conditions are true. This can occur if the user reloads the page, in which case the current page and destination page are the same page, therefore the index values are the same.
+> The `determineTransitionType()` function can return `undefined` if neither the `backwards` nor `forwards` conditions are true. This can occur if the user reloads the page, in which case the current page and destination page are the same page, therefore the index values are the same.
 
 ### Applying custom animations in CSS
 

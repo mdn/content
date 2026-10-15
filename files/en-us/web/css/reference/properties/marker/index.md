@@ -1,5 +1,6 @@
 ---
-title: marker
+title: "`marker` CSS property"
+short-title: marker
 slug: Web/CSS/Reference/Properties/marker
 page-type: css-property
 browser-compat: css.properties.marker

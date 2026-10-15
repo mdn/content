@@ -1,5 +1,5 @@
 ---
-title: <script type="importmap">
+title: '`<script type="importmap">` HTML attribute value'
 short-title: importmap
 slug: Web/HTML/Reference/Elements/script/type/importmap
 page-type: html-attribute-value
@@ -30,7 +30,7 @@ The `src`, `async`, `nomodule`, `defer`, `crossorigin`, `integrity`, and `referr
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : The import map definition is not a JSON object, the `importmap` key is defined but its value is not a JSON object, or the `scopes` key is defined but its value is not a JSON object.
 
 Browsers generate console warnings for other cases where the import map JSON does not conform to the [import map](#import_map_json_representation) schema.
@@ -165,6 +165,8 @@ For example, the map below defines integrity metadata for the `square.js` module
 ```
 
 ### Merging multiple import maps
+
+Supporting browsers can declare one or more import maps anywhere in the document, provided they are defined before any module that depends on them is loaded (some [browser versions](#browser_compatibility) allow only a single import map declaration, which must appear before any module is loaded).
 
 Internally, browsers maintain a single global import map representation. When multiple import maps are included in a document, their contents are merged into the global import map when they are registered.
 

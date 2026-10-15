@@ -1,12 +1,13 @@
 ---
-title: border-top
+title: "`border-top` CSS property"
+short-title: border-top
 slug: Web/CSS/Reference/Properties/border-top
 page-type: css-shorthand-property
 browser-compat: css.properties.border-top
 sidebar: cssref
 ---
 
-The **`border-top`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's top [border](/en-US/docs/Web/CSS/Reference/Properties/border).
+The **`border-top`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets all the properties of an element's top [border](/en-US/docs/Web/CSS/Reference/Properties/border).
 
 {{InteractiveExample("CSS Demo: border-top")}}
 

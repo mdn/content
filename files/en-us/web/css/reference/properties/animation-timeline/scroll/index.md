@@ -1,5 +1,6 @@
 ---
-title: scroll()
+title: "`scroll()` CSS function"
+short-title: scroll()
 slug: Web/CSS/Reference/Properties/animation-timeline/scroll
 page-type: css-function
 browser-compat: css.properties.animation-timeline.scroll
@@ -142,7 +143,7 @@ These two together ensure that the container has a vertical scrollbar, which all
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }

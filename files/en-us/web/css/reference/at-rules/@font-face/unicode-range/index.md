@@ -1,5 +1,6 @@
 ---
-title: unicode-range
+title: "`unicode-range` CSS at-rule descriptor"
+short-title: unicode-range
 slug: Web/CSS/Reference/At-rules/@font-face/unicode-range
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.unicode-range

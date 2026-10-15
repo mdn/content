@@ -8,7 +8,7 @@ browser-compat: api.GPUQueue.label
 
 {{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-The **`label`** read-only property of the
+The **`label`** property of the
 {{domxref("GPUQueue")}} interface is a string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 You can get and set it directly on the `GPUQueue` object.

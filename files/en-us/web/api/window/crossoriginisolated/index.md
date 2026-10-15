@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.crossOriginIsolated
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
 The **`crossOriginIsolated`** read-only property of the {{domxref("Window")}} interface returns a boolean value that indicates whether the document is cross-origin isolated.
 

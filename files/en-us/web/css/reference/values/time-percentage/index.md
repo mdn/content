@@ -1,5 +1,6 @@
 ---
-title: <time-percentage>
+title: "`<time-percentage>` CSS type"
+short-title: <time-percentage>
 slug: Web/CSS/Reference/Values/time-percentage
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-values/#typedef-time-percentage

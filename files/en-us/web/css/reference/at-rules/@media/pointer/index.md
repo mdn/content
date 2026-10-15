@@ -1,5 +1,6 @@
 ---
-title: pointer
+title: "`pointer` CSS media feature"
+short-title: pointer
 slug: Web/CSS/Reference/At-rules/@media/pointer
 page-type: css-media-feature
 browser-compat: css.at-rules.media.pointer

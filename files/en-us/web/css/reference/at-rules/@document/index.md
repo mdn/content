@@ -1,5 +1,6 @@
 ---
-title: "@document"
+title: "`@document` CSS at-rule"
+short-title: "@document"
 slug: Web/CSS/Reference/At-rules/@document
 page-type: css-at-rule
 status:
@@ -9,7 +10,7 @@ browser-compat: css.at-rules.document
 sidebar: cssref
 ---
 
-{{Deprecated_header}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The **`@document`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) restricts the style rules contained within it based on the URL of the document. It is designed primarily for user-defined style sheets (see [userchrome.org](https://www.userchrome.org/) for more information), though it can be used on author-defined style sheets, too.
 

@@ -1,12 +1,13 @@
 ---
-title: "rotr: Wasm text instruction"
+title: "rotr: Wasm numeric instruction"
 short-title: rotr
 slug: WebAssembly/Reference/Numeric/rotr
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.rotr
 sidebar: webassemblysidebar
 ---
 
-The **`rotr`** instructions, short for _rotate-right_, are used for performing a bitwise right-rotate.
+The **`rotr`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _rotate-right_, is used for performing a bitwise right-rotate.
 
 {{InteractiveExample("Wat Demo: rotr", "tabbed-taller")}}
 
@@ -64,3 +65,11 @@ i32.rotr
 | ----------- | ------------- |
 | `i32.rotr`  | `0x78`        |
 | `i64.rotr`  | `0x8a`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

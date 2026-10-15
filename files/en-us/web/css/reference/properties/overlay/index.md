@@ -1,5 +1,6 @@
 ---
-title: overlay
+title: "`overlay` CSS property"
+short-title: overlay
 slug: Web/CSS/Reference/Properties/overlay
 page-type: css-property
 status:
@@ -33,6 +34,8 @@ overlay: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : The element is rendered in the top layer if it is promoted to the top layer.
@@ -128,7 +131,7 @@ html {
 }
 ```
 
-The two properties we want to animate are {{cssxref("opacity")}} and {{cssxref("transform")}}): we want the popover to fade in and out while growing and shrinking in the horizontal direction. We set a starting state for these properties on the default hidden state of the popover element (selected via `[popover]`), and an end state on the open state of the popover (selected via the {{cssxref(":popover-open")}} pseudo-class). We then set a {{cssxref("transition")}} property to animate between the two.
+The two properties we want to animate are {{cssxref("opacity")}} and {{cssxref("transform")}}: we want the popover to fade in and out while growing and shrinking in the horizontal direction. We set a starting state for these properties on the default hidden state of the popover element (selected via `[popover]`), and an end state on the open state of the popover (selected via the {{cssxref(":popover-open")}} pseudo-class). We then set a {{cssxref("transition")}} property to animate between the two.
 
 Because the animated element is being promoted to the [top layer](/en-US/docs/Glossary/Top_layer) when shown and removed from the top layer when hidden, `overlay` is added to the list of transitioned elements. This ensures that the removal of the element from the top layer is deferred until the animation has ended. This doesn't make a huge difference for basic animations such as this one, but in more complex cases not doing this can result in the element being removed from the overlay too quickly, meaning the animation is not smooth or effective. Note that the [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior) value is also set in the shorthand to enable discrete transitions.
 

@@ -58,7 +58,7 @@ new Worker(url, options)
   - : Thrown if the document is not allowed to start workers, e.g., if the URL has an invalid syntax or if the same-origin policy is violated.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if `url` cannot be parsed.
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if the `url` parameter is a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
 
 ## Description
@@ -70,7 +70,7 @@ If a cross-origin worker is required, users must load it from an intermediate sa
 
 ### Module and classic workers
 
-A classic worker is one that that is constructed from a classic script, while a module worker is constructed from an [ECMASCript module](/en-US/docs/Web/JavaScript/Guide/Modules).
+A classic worker is one that is constructed from a classic script, while a module worker is constructed from an [ECMAScript module](/en-US/docs/Web/JavaScript/Guide/Modules).
 The type of worker affects the worker constructor options, how the worker script is fetched, and how it is executed.
 
 The code below shows two ways you can construct a classic worker, and also how you specify the `type` of `"module"` to create a module worker.
@@ -104,7 +104,7 @@ Classic workers are fetched and executed as scripts:
 
 ### Importing scripts or modules
 
-Module workers can import [ECMASCript modules](/en-US/docs/Web/JavaScript/Guide/Modules) using [`import` statements](/en-US/docs/Web/JavaScript/Reference/Statements/import).
+Module workers can import [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) using [`import` statements](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 Modules are fetched using CORS, so cross-origin modules must be served with the {{httpheader("Access-Control-Allow-Origin")}} header in order to be loaded.
 Developers can specify whether or not credentials should be sent in cross-origin imports.
 

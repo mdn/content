@@ -62,7 +62,7 @@ Each button targets the same image using the `commandfor` attribute.
 ```
 
 An event listener is attached to the image using the [`command` event](/en-US/docs/Web/API/CommandEvent).
-When one of the buttons is clicked, the listener runs code based on the custom `command` value assigned to the button, rotating the image and also updating it's `alt` text to indicate the new angle of the image.
+When one of the buttons is clicked, the listener runs code based on the custom `command` value assigned to the button, rotating the image and also updating its `alt` text to indicate the new angle of the image.
 
 ```js
 const image = document.getElementById("the-image");

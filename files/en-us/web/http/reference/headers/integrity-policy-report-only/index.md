@@ -63,7 +63,7 @@ Note that the `integrity-endpoint` used in `Integrity-Policy-Report-Only` is def
 
 ```http
 Reporting-Endpoints: integrity-endpoint=https://example.com/integrity, backup-integrity-endpoint=https://report-provider.example/integrity
-Integrity-Policy-Report-Only: blocked-destinations=(script), endpoints=(integrity-endpoint, backup-integrity-endpoint)
+Integrity-Policy-Report-Only: blocked-destinations=(script), endpoints=(integrity-endpoint backup-integrity-endpoint)
 ```
 
 The [report payload](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) might look like this.

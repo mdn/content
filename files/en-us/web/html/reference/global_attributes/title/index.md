@@ -1,5 +1,5 @@
 ---
-title: HTML title global attribute
+title: "`title` HTML global attribute"
 short-title: title
 slug: Web/HTML/Reference/Global_attributes/title
 page-type: html-attribute
@@ -32,6 +32,8 @@ iframe {
   width: 100%;
 }
 ```
+
+## Description
 
 The main use of the `title` attribute is to label {{HTMLElement("iframe")}} elements for assistive technology.
 

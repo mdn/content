@@ -1,5 +1,6 @@
 ---
-title: :active-view-transition-type()
+title: "`:active-view-transition-type()` CSS pseudo-class"
+short-title: :active-view-transition-type()
 slug: Web/CSS/Reference/Selectors/:active-view-transition-type
 page-type: css-pseudo-class
 browser-compat: css.selectors.active-view-transition-type

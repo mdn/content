@@ -9,7 +9,7 @@ browser-compat: api.NavigateEvent.signal
 {{APIRef("Navigation API")}}
 
 The **`signal`** read-only property of the
-{{domxref("NavigateEvent")}} interface returns an {{domxref("AbortSignal")}}, which will become aborted if the navigation is cancelled (e.g., by the user pressing the browser's "Stop" button, or another navigation starting and thus cancelling the ongoing one).
+{{domxref("NavigateEvent")}} interface returns an {{domxref("AbortSignal")}}, which will become aborted if the navigation is canceled (e.g., by the user pressing the browser's "Stop" button, or another navigation starting and thus canceling the ongoing one).
 
 ## Value
 
@@ -17,7 +17,7 @@ An {{domxref("AbortSignal")}} object.
 
 ## Examples
 
-The general idea here is that the `signal` property can be passed to an associated {{domxref("Window/fetch", "fetch()")}} operation so that if the navigation is cancelled, the `fetch()` operation can be safely aborted, avoiding wasting bandwidth on fetches that are no longer needed.
+The general idea here is that the `signal` property can be passed to an associated {{domxref("Window/fetch", "fetch()")}} operation so that if the navigation is canceled, the `fetch()` operation can be safely aborted, avoiding wasting bandwidth on fetches that are no longer needed.
 
 ```js
 navigation.addEventListener("navigate", (event) => {

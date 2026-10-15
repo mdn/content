@@ -9,7 +9,7 @@ spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prot
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The **`delete()`** method of the {{domxref("Highlight")}} interface removes a specified {{domxref("Range")}} object from a `Highlight` object.
+The **`delete()`** method of the {{domxref("Highlight")}} interface removes a specified {{domxref("AbstractRange")}} object from a `Highlight` object.
 
 `Highlight` is a {{jsxref("Set")}}-like object, so this is similar to using {{jsxref("Set.delete()")}}.
 
@@ -22,7 +22,7 @@ delete(range)
 ### Parameters
 
 - `range`
-  - : The {{domxref("Range")}} object to remove from the `Highlight`.
+  - : The {{domxref("AbstractRange")}} object to remove from the `Highlight`.
 
 ### Return value
 

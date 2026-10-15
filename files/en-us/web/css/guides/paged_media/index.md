@@ -29,7 +29,7 @@ The process of paginating content into generated pages and controlling breaks in
 
 The CSS paged media module also introduces the `bleeds` and `marks` descriptors of the `@page` at-rule. Currently, no browsers support these features.
 
-### Pseudo-classes
+### Selectors
 
 - {{cssxref(":blank")}}
 - {{cssxref(":first")}}

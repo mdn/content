@@ -1,5 +1,6 @@
 ---
-title: backface-visibility
+title: "`backface-visibility` CSS property"
+short-title: backface-visibility
 slug: Web/CSS/Reference/Properties/backface-visibility
 page-type: css-property
 browser-compat: css.properties.backface-visibility
@@ -93,9 +94,9 @@ backface-visibility: revert-layer;
 backface-visibility: unset;
 ```
 
-The `backface-visibility` property is specified as one of the keywords listed below.
-
 ### Values
+
+This property is specified as one of the following keywords:
 
 - `visible`
   - : The back face is visible when turned towards the user.

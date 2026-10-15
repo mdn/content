@@ -1,5 +1,6 @@
 ---
-title: -webkit-transform-2d
+title: "`-webkit-transform-2d` CSS media feature"
+short-title: -webkit-transform-2d
 slug: Web/CSS/Reference/At-rules/@media/-webkit-transform-2d
 page-type: css-media-feature
 status:
@@ -63,7 +64,6 @@ Not part of any standard.
 - {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}
 - {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
 - {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
-- [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
 - {{cssxref("transform")}} and [using CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using)
 - {{cssxref("@media")}} and [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("@supports")}} and [using feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)

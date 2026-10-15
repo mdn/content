@@ -1,5 +1,6 @@
 ---
-title: lab()
+title: "`lab()` CSS function"
+short-title: lab()
 slug: Web/CSS/Reference/Values/color_value/lab
 page-type: css-function
 browser-compat: css.types.color.lab
@@ -292,7 +293,7 @@ div {
 
 {{EmbedLiveSample("Adjusting_color_axes", "", "200")}}
 
-The left column is at the yellow end (-125) of the b-axis and the right column is at the blue end (125). The top row displays colors at the red end of the a-axis (-125) and the bottom row is at the green end (125). The middle column and row are at the midpoints (0) of each axis, with the middle cell being grey; it contains no red, green, yellow, or blue, with a `0` value for both axes.
+The left column is at the yellow end (-125) of the b-axis and the right column is at the blue end (125). The top row displays colors at the red end of the a-axis (-125) and the bottom row is at the green end (125). The middle column and row are at the midpoints (0) of each axis, with the middle cell being gray; it contains no red, green, yellow, or blue, with a `0` value for both axes.
 
 ### Linear gradients along the a-axis and b-axis
 

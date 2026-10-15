@@ -1,5 +1,6 @@
 ---
-title: scroll-padding-block-end
+title: "`scroll-padding-block-end` CSS property"
+short-title: scroll-padding-block-end
 slug: Web/CSS/Reference/Properties/scroll-padding-block-end
 page-type: css-property
 browser-compat: css.properties.scroll-padding-block-end
@@ -73,7 +74,7 @@ scroll-padding-block-end: 2em;
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 scroll-padding-block-end: auto;
 
 /* <length> values */

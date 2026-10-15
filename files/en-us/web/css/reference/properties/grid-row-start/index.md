@@ -1,5 +1,6 @@
 ---
-title: grid-row-start
+title: "`grid-row-start` CSS property"
+short-title: grid-row-start
 slug: Web/CSS/Reference/Properties/grid-row-start
 page-type: css-property
 browser-compat: css.properties.grid-row-start

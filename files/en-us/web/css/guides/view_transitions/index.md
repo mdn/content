@@ -17,6 +17,7 @@ The **CSS view transitions** module defines the behavior of the [View Transition
 
 - {{cssxref("view-transition-class")}}
 - {{cssxref("view-transition-name")}}
+- {{cssxref("view-transition-scope")}}
 
 ### At-rules and descriptors
 
@@ -41,12 +42,20 @@ The **CSS view transitions** module defines the behavior of the [View Transition
   - {{domxref("ViewTransition.updateCallbackDone")}}
   - {{domxref("ViewTransition.ready")}}
   - {{domxref("ViewTransition.finished")}}
+  - {{domxref("ViewTransition.transitionRoot")}}
 - {{domxref("Document.startViewTransition()")}} method
+- {{domxref("Document.activeViewTransition")}}
+- {{domxref("Element.startViewTransition()")}} method
+- {{domxref("Element.activeViewTransition")}}
 
 ## Guides
 
 - [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Using)
   - : Explains how to create view transitions and customize transition animations, including manipulating active view transitions.
+- [Using view transition types](/en-US/docs/Web/API/View_Transition_API/Using_types)
+  - : Shows how to use types along with same-document view transitions and cross-document view transitions.
+- [Using element-scoped view transitions](/en-US/docs/Web/API/View_Transition_API/Using_element-scoped)
+  - : Covers how element-scoped view transitions work, and how to use them.
 
 ## Related concepts
 

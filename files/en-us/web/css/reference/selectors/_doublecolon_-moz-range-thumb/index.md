@@ -1,5 +1,6 @@
 ---
-title: ::-moz-range-thumb
+title: "`::-moz-range-thumb` CSS pseudo-element"
+short-title: ::-moz-range-thumb
 slug: Web/CSS/Reference/Selectors/::-moz-range-thumb
 page-type: css-pseudo-element
 status:

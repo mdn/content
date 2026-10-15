@@ -1,5 +1,6 @@
 ---
-title: transform-style
+title: "`transform-style` CSS property"
+short-title: transform-style
 slug: Web/CSS/Reference/Properties/transform-style
 page-type: css-property
 browser-compat: css.properties.transform-style
@@ -65,6 +66,8 @@ transform-style: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `flat`
   - : Indicates that the children of the element are lying in the plane of the element itself.

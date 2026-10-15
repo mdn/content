@@ -7,6 +7,7 @@ sidebar: addonsidebar
 ---
 
 `StorageChange` is an object representing a change to a storage area.
+Objects of this type are received by {{WebExtAPIRef("storage.onChanged")}} and {{WebExtAPIRef("storage.StorageArea.onChanged")}} event listeners.
 
 ## Type
 

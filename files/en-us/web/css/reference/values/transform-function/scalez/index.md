@@ -1,5 +1,6 @@
 ---
-title: scaleZ()
+title: "`scaleZ()` CSS function"
+short-title: scaleZ()
 slug: Web/CSS/Reference/Values/transform-function/scaleZ
 page-type: css-function
 browser-compat: css.types.transform-function.scaleZ

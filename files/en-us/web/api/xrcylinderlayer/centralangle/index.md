@@ -20,7 +20,7 @@ A number representing the angle in radians of the visible section of the cylinde
 
 ### Getting a layer's central angle
 
-The {{domxref("XRWebGLBinding.createCylinderLayer()")}} method creates a cylinder layer and allows to specify a `centralAngle`. The `XRCylinder.centralAngle` property can be used after layer creation to get the central angle used or to set it to a new one.
+The {{domxref("XRWebGLBinding.createCylinderLayer()")}} method creates a cylinder layer and allows you to specify a `centralAngle`. The `XRCylinder.centralAngle` property can be used after layer creation to get the central angle used or to set it to a new one.
 
 ```js
 const cylinderLayer = xrGlBinding.createCylinderLayer({

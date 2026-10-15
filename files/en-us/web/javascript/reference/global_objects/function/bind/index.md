@@ -40,7 +40,7 @@ bind(thisArg, arg1, arg2, /* …, */ argN)
 ### Parameters
 
 - `thisArg`
-  - : The value to be passed as the `this` parameter to the target function `func` when the bound function is called. If the function is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) will be replaced with the global object, and primitive values will be converted to objects. The value is ignored if the bound function is constructed using the {{jsxref("Operators/new", "new")}} operator.
+  - : The value to be passed as the `this` parameter to the target function `func` when the bound function is called. If the function is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) will be replaced with the global object, and primitive values will be converted to objects. The value is ignored if the bound function is constructed using the {{jsxref("new")}} operator.
 - `arg1`, …, `argN` {{optional_inline}}
   - : Arguments to prepend to arguments provided to the bound function when invoking `func`.
 
@@ -65,7 +65,7 @@ const boundLog2 = boundLog.bind("new this value", 3, 4);
 boundLog2(5, 6); // "this value", 1, 2, 3, 4, 5, 6
 ```
 
-A bound function may also be constructed using the {{jsxref("Operators/new", "new")}} operator if its target function is constructable. Doing so acts as though the target function had instead been constructed. The prepended arguments are provided to the target function as usual, while the provided `this` value is ignored (because construction prepares its own `this`, as seen by the parameters of {{jsxref("Reflect.construct")}}). If the bound function is directly constructed, [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) will be the target function instead. (That is, the bound function is transparent to `new.target`.)
+A bound function may also be constructed using the {{jsxref("new")}} operator if its target function is constructable. Doing so acts as though the target function had instead been constructed. The prepended arguments are provided to the target function as usual, while the provided `this` value is ignored (because construction prepares its own `this`, as seen by the parameters of {{jsxref("Reflect.construct")}}). If the bound function is directly constructed, [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) will be the target function instead. (That is, the bound function is transparent to `new.target`.)
 
 ```js
 class Base {
@@ -213,7 +213,7 @@ class LateBloomer {
 
 ### Bound functions used as constructors
 
-Bound functions are automatically suitable for use with the {{jsxref("Operators/new", "new")}} operator to construct new instances created by the target function. When a bound function is used to construct a value, the provided `this` is ignored. However, provided arguments are still prepended to the constructor call.
+Bound functions are automatically suitable for use with the {{jsxref("new")}} operator to construct new instances created by the target function. When a bound function is used to construct a value, the provided `this` is ignored. However, provided arguments are still prepended to the constructor call.
 
 ```js
 function Point(x, y) {
@@ -240,9 +240,9 @@ axisPoint instanceof YAxisPoint; // true
 new YAxisPoint(17, 42) instanceof Point; // true
 ```
 
-Note that you need not do anything special to create a bound function for use with {{jsxref("Operators/new", "new")}}. [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target), [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof), [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) etc. all work as expected, as if the constructor was never bound. The only difference is that it can no longer be used for [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends).
+Note that you need not do anything special to create a bound function for use with {{jsxref("new")}}. [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target), [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof), [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) etc. all work as expected, as if the constructor was never bound. The only difference is that it can no longer be used for [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends).
 
-The corollary is that you need not do anything special to create a bound function to be called plainly, even if you would rather require the bound function to only be called using {{jsxref("Operators/new", "new")}}. If you call it without `new`, the bound `this` is suddenly not ignored.
+The corollary is that you need not do anything special to create a bound function to be called plainly, even if you would rather require the bound function to only be called using {{jsxref("new")}}. If you call it without `new`, the bound `this` is suddenly not ignored.
 
 ```js
 const emptyObj = {};
@@ -256,7 +256,7 @@ YAxisPoint(13);
 console.log(emptyObj); // { x: 0, y: 13 }
 ```
 
-If you wish to restrict a bound function to only be callable with {{jsxref("Operators/new", "new")}}, or only be callable without `new`, the target function must enforce that restriction, such as by checking `new.target !== undefined` or using a [class](/en-US/docs/Web/JavaScript/Reference/Classes) instead.
+If you wish to restrict a bound function to only be callable with {{jsxref("new")}}, or only be callable without `new`, the target function must enforce that restriction, such as by checking `new.target !== undefined` or using a [class](/en-US/docs/Web/JavaScript/Reference/Classes) instead.
 
 ### Binding classes
 

@@ -3,6 +3,7 @@ title: "select: Wasm text instruction"
 short-title: select
 slug: WebAssembly/Reference/Control_flow/select
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.select
 sidebar: webassemblysidebar
 ---
 
@@ -73,3 +74,11 @@ select (result f32)
 | ----------- | ------------- |
 | `select`    | `0x1b`        |
 | `select t`  | `0x1c`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

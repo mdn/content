@@ -12,7 +12,7 @@ The **`selected`** property of the {{domxref("ImageTrack")}} interface returns `
 
 ## Value
 
-A {{jsxref("boolean")}}, if `true` the track is selected for decoding.
+A {{jsxref("Boolean")}}, if `true` the track is selected for decoding.
 
 ## Examples
 

@@ -8,7 +8,7 @@ browser-compat: api.CSSLayerStatementRule.nameList
 
 {{APIRef("CSSOM")}}
 
-The read-only **`nameList`** property of the {{DOMxRef("CSSLayerStatementRule")}} interface return the list of associated cascade layer names. The names can't be modified.
+The read-only **`nameList`** property of the {{DOMxRef("CSSLayerStatementRule")}} interface returns the list of associated cascade layer names. The names can't be modified.
 
 ## Value
 
@@ -43,7 +43,7 @@ const rules = document.getElementById("css-output").sheet.cssRules;
 const layerStatementRule = rules[0]; // A CSSLayerStatementRule
 const layerBlockRule = rules[1]; // A CSSLayerBlockRule; no nameList property.
 
-item.textContent = `@layer declares the following layers: ${layer.nameList.join(
+item.textContent = `@layer declares the following layers: ${layerStatementRule.nameList.join(
   ", ",
 )}.`;
 ```

@@ -1,16 +1,16 @@
 ---
-title: "SVGAElement: referrerpolicy property"
-short-title: referrerpolicy
-slug: Web/API/SVGAElement/referrerpolicy
+title: "SVGAElement: referrerPolicy property"
+short-title: referrerPolicy
+slug: Web/API/SVGAElement/referrerPolicy
 page-type: web-api-instance-property
-browser-compat: api.SVGAElement.referrerpolicy
+browser-compat: api.SVGAElement.referrerPolicy
 ---
 
 {{APIRef("SVG")}}
 
-The **`referrerpolicy`** property of the {{domxref("SVGAElement")}} interface returns a string specifying which [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referer) to send when fetching the [URL](/en-US/docs/Glossary/URL)..
+The **`referrerPolicy`** property of the {{domxref("SVGAElement")}} interface returns a string specifying which [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referer) to send when fetching the [URL](/en-US/docs/Glossary/URL).
 
-This property can be set, to change the URL's `referrerpolicy` value. It reflects the value of the [`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/a#referrerpolicy) attribute.
+This property can be set to change the referrer policy of the link. It reflects the value of the [`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/a#referrerpolicy) attribute.
 
 ## Value
 
@@ -27,3 +27,4 @@ A string.
 ## See also
 
 - [`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/a#referrerpolicy) attribute
+- {{domxref("HTMLAnchorElement.referrerPolicy")}}

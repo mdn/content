@@ -1,5 +1,6 @@
 ---
-title: :active-view-transition
+title: "`:active-view-transition` CSS pseudo-class"
+short-title: :active-view-transition
 slug: Web/CSS/Reference/Selectors/:active-view-transition
 page-type: css-pseudo-class
 browser-compat: css.selectors.active-view-transition
@@ -73,17 +74,17 @@ h2 {
 const colors = ["darkred", "darkslateblue", "darkgreen"];
 const colBlock = document.querySelector(".color");
 let count = 0;
-const updateColour = () => {
+const updateColor = () => {
   colBlock.style = `--bg: ${colors[count]}`;
   count = count !== colors.length - 1 ? ++count : 0;
 };
 const changeColor = () => {
   if (!document.startViewTransition) {
-    updateColour();
+    updateColor();
     return;
   }
   const transition = document.startViewTransition(() => {
-    updateColour();
+    updateColor();
   });
 };
 const changeColorButton = document.querySelector("#change-color");

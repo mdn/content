@@ -8,12 +8,12 @@ browser-compat: api.MediaCapabilities.decodingInfo
 
 {{APIRef("Media Capabilities API")}}{{AvailableInWorkers}}
 
-The **`decodingInfo()`** method of the {{domxref("MediaCapabilities")}} interface returns a promise that fulfils with information about how well the user agent can decode/display media with a given configuration.
+The **`decodingInfo()`** method of the {{domxref("MediaCapabilities")}} interface returns a promise that fulfills with information about how well the user agent can decode/display media with a given configuration.
 
 The resolved object contains three boolean properties `supported`, `smooth`, and `powerefficient`, which indicate whether decoding the media described would be supported, and if so, whether decoding would be smooth and power-efficient.
 
 The method can also be used to test the user agent capabilities for decoding media encoded with a key system, but only when called in the main thread and in a secure context.
-If the configuration passed in the `configuration.keySystemConfiguration` property is supported for decoding the data, the resolved promise also includes a {{domxref("MediaKeySystemAccess")}} object that can be used to create a {{domxref("MediaKeys")}} object to setup encrypted playback.
+If the configuration passed in the `configuration.keySystemConfiguration` property is supported for decoding the data, the resolved promise also includes a {{domxref("MediaKeySystemAccess")}} object that can be used to create a {{domxref("MediaKeys")}} object to set up encrypted playback.
 
 > [!NOTE]
 > Calling `decodingInfo()` with this property may result in user-visible effects, such as asking for permission to access one or more system resources.
@@ -145,7 +145,7 @@ A {{jsxref('Promise')}} fulfilling with an object containing the following attri
 - `powerEfficient`
   - : `true` if playback of the media will be power efficient. Otherwise, it is `false`.
 - `keySystemAccess`
-  - : A {{domxref("MediaKeySystemAccess")}} that can be used to create a {{domxref("MediaKeys")}} object to setup encrypted playback, or `null` if decoding is not supported using the supplied configuration.
+  - : A {{domxref("MediaKeySystemAccess")}} that can be used to create a {{domxref("MediaKeys")}} object to set up encrypted playback, or `null` if decoding is not supported using the supplied configuration.
 
 Browsers will report a supported media configuration as `smooth` and `powerEfficient` until stats on this device have been recorded.
 All supported audio codecs report `powerEfficient` as true.

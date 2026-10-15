@@ -1,5 +1,6 @@
 ---
-title: :playing
+title: "`:playing` CSS pseudo-class"
+short-title: :playing
 slug: Web/CSS/Reference/Selectors/:playing
 page-type: css-pseudo-class
 browser-compat: css.selectors.playing

@@ -2,7 +2,7 @@
 title: 403 Forbidden
 slug: Web/HTTP/Reference/Status/403
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.403
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.403
 sidebar: http
 ---
 

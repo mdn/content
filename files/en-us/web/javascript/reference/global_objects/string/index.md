@@ -116,7 +116,7 @@ Note that JavaScript distinguishes between `String` objects and
 
 String literals (denoted by double or single quotes) and strings returned from
 `String` calls in a non-constructor context (that is, called without using
-the {{jsxref("Operators/new", "new")}} keyword) are primitive strings. In contexts where a
+the {{jsxref("new")}} keyword) are primitive strings. In contexts where a
 method is to be invoked on a primitive string or a property lookup occurs, JavaScript
 will automatically wrap the string primitive and call the method or perform the property
 lookup on the wrapper object instead.

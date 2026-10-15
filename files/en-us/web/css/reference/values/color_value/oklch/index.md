@@ -1,5 +1,6 @@
 ---
-title: oklch()
+title: "`oklch()` CSS function"
+short-title: oklch()
 slug: Web/CSS/Reference/Values/color_value/oklch
 page-type: css-function
 browser-compat: css.types.color.oklch
@@ -231,7 +232,7 @@ div {
 
 ### Adjusting color intensity via chroma
 
-The following example shows the effect of varying the `C` (chroma) value of the `oklch()` functional notation, with colors decreasing in intensity as the `C` value decreases from fully saturated to almost grey.
+The following example shows the effect of varying the `C` (chroma) value of the `oklch()` functional notation, with colors decreasing in intensity as the `C` value decreases from fully saturated to almost gray.
 
 #### HTML
 
@@ -254,7 +255,7 @@ The following example shows the effect of varying the `C` (chroma) value of the 
 
 #### CSS
 
-With the initial starting colors blue, red, and green, we declare progressively smaller values for chroma on them: starting from full color saturation at the high value of `0.4` (equivalent to `100%`) down to `0.01` (equivalent to `2%`), which is almost grey for all the colors.
+With the initial starting colors blue, red, and green, we declare progressively smaller values for chroma on them: starting from full color saturation at the high value of `0.4` (equivalent to `100%`) down to `0.01` (equivalent to `2%`), which is almost gray for all the colors.
 
 ```css hidden
 body {
@@ -313,7 +314,7 @@ div {
 
 {{EmbedLiveSample("Adjusting color intensity via chroma", '', '200')}}
 
-If we had used `0` instead of `0.01` and `2%`, with the same lightness values, the colors would have all been the same shade of grey. In this example, they are almost grey.
+If we had used `0` instead of `0.01` and `2%`, with the same lightness values, the colors would have all been the same shade of gray. In this example, they are almost gray.
 
 ### Hues in OkLCh
 

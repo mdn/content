@@ -1,12 +1,13 @@
 ---
-title: <ident>
+title: "`<ident>` CSS type"
+short-title: <ident>
 slug: Web/CSS/Reference/Values/ident
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-values/#typedef-ident
 sidebar: cssref
 ---
 
-The **`<ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) denotes an arbitrary string used as an {{glossary("identifier")}}.
+The **`<ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) denotes an arbitrary unquoted string of characters used as an {{glossary("identifier")}}.
 
 ## Syntax
 

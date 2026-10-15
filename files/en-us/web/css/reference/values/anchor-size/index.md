@@ -1,5 +1,6 @@
 ---
-title: anchor-size()
+title: "`anchor-size()` CSS function"
+short-title: anchor-size()
 slug: Web/CSS/Reference/Values/anchor-size
 page-type: css-function
 browser-compat: css.types.anchor-size

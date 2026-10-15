@@ -6,8 +6,8 @@ spec-urls:
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-width
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-primitive-width
   - https://drafts.csswg.org/css-masking-1/#element-attrdef-mask-width
-  - https://svgwg.org/svg2-draft/geometry.html#Sizing
-  - https://svgwg.org/svg2-draft/pservers.html#PatternElementWidthAttribute
+  - https://w3c.github.io/svgwg/svg2-draft/geometry.html#Sizing
+  - https://w3c.github.io/svgwg/svg2-draft/pservers.html#PatternElementWidthAttribute
 sidebar: svgref
 ---
 

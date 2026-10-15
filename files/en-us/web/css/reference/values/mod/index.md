@@ -1,5 +1,6 @@
 ---
-title: mod()
+title: "`mod()` CSS function"
+short-title: mod()
 slug: Web/CSS/Reference/Values/mod
 page-type: css-function
 browser-compat: css.types.mod

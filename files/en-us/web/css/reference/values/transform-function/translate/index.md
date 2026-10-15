@@ -1,5 +1,6 @@
 ---
-title: translate()
+title: "`translate()` CSS function"
+short-title: translate()
 slug: Web/CSS/Reference/Values/transform-function/translate
 page-type: css-function
 browser-compat: css.types.transform-function.translate

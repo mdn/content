@@ -1,5 +1,6 @@
 ---
-title: grid-template-areas
+title: "`grid-template-areas` CSS property"
+short-title: grid-template-areas
 slug: Web/CSS/Reference/Properties/grid-template-areas
 page-type: css-property
 browser-compat: css.properties.grid-template-areas
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`grid-template-areas`** [CSS](/en-US/docs/Web/CSS) property specifies named {{glossary("grid areas")}}, establishing the cells in the grid and assigning them names.
+
+Those areas are not associated with any particular grid item, but can be referenced from the grid-placement properties {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, and their shorthands {{cssxref("grid-row")}}, {{cssxref("grid-column")}}, and {{cssxref("grid-area")}}.
 
 {{InteractiveExample("CSS Demo: grid-template-areas")}}
 
@@ -71,8 +74,6 @@ grid-template-areas:
   grid-area: c;
 }
 ```
-
-Those areas are not associated with any particular grid item, but can be referenced from the grid-placement properties {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, and their shorthands {{cssxref("grid-row")}}, {{cssxref("grid-column")}}, and {{cssxref("grid-area")}}.
 
 ## Syntax
 

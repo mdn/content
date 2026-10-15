@@ -1,5 +1,6 @@
 ---
-title: background-repeat-x
+title: "`background-repeat-x` CSS property"
+short-title: background-repeat-x
 slug: Web/CSS/Reference/Properties/background-repeat-x
 page-type: css-property
 status:
@@ -166,8 +167,8 @@ div {
       content: "Your browser doesn't support the `background-repeat-x` property.";
       background-color: wheat;
       display: block;
-      padding: 1em;
       text-align: center;
+      padding: 1rem 0;
     }
   }
 }
