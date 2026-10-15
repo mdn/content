@@ -94,8 +94,9 @@ The flow is as follows:
 
 8. The browser uses the information obtained by the previous two sets of requests to create the UI asking the user to choose an IdP (if more than one is signed-in) and an account to sign in to the RP with. The UI also asks the user for permission to sign in to the RP using their chosen federated IdP account.
 
-   > [!NOTE]
-   > At this stage, if the user has previously authenticated with a federated RP account in the current browser instance (that is, created a new account with the RP or signed into the RP's website using an existing account), they may be able to **auto-reauthenticate**, depending on what the [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option is set to in the `get()` call. If so, the user will be signed in automatically without entering their credentials, as soon as `get()` is invoked. See the [Auto-reauthentication](#auto-reauthentication) section for more details.
+   If the user is signed in to the IdP but doesn't have an account specifically with the current RP, the UI presented to them will include **disclosure text** if provided, which is additional information presented to first-time users such as terms of service and privacy policy links, if provided. In such a case, they'd need to choose "Continue as..." to continue with their IdP identity and then create a corresponding account on the RP.
+
+   If the user _has_ an account with the current RP and has logged in with it in the current browser instance, they may be able to **auto-reauthenticate**, depending on what the [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option is set to in the `get()` call and whether their RP is included in the IdP's [`approved_clients`](/en-US/docs/Web/API/FedCM_API/IDP_integration#approved_clients) array. If so, the user will be signed in automatically without entering their credentials, as soon as `get()` is invoked. See the [Auto-reauthentication](#auto-reauthentication) section for more details.
 
 9. If the user grants permission to do so, the browser makes a credentialed request to the [`id_assertion_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) to request a validation token from the chosen IdP for the selected account.
 
