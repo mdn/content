@@ -39,7 +39,7 @@ The `params` field in the event notification is an object with the following fie
             - `url`
               - : A string that contains the URL of the script.
     - `type` {{optional_inline}} {{deprecated_inline}}
-      - : A string that indicates the kind of code that made the request: `"other"`, `"parser"`, `"preflight"`, or `"script"`.
+      - : A string that indicates the kind of code that made the request: `other`, `parser`, `preflight`, or `script`.
         This field is kept for backwards compatibility and will be removed from the specification.
         Use the `destination` and `initiatorType` fields of the `request` object instead.
 - `intercepts` {{optional_inline}}
@@ -83,10 +83,10 @@ The `params` field in the event notification is an object with the following fie
         - `sameSite`
           - : A string that indicates the cookie's [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) setting.
             It has one of the following values:
-            - `"default"`: The cookie has no `SameSite` attribute, so the browser's default behavior applies.
-            - `"lax"`: The cookie has `SameSite=Lax`.
-            - `"none"`: The cookie has `SameSite=None`.
-            - `"strict"`: The cookie has `SameSite=Strict`.
+            - `default`: The cookie has no `SameSite` attribute, so the browser's default behavior applies.
+            - `lax`: The cookie has `SameSite=Lax`.
+            - `none`: The cookie has `SameSite=None`.
+            - `strict`: The cookie has `SameSite=Strict`.
         - `secure`
           - : A boolean that indicates whether the cookie has the [`Secure`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) attribute.
         - `size`
@@ -96,37 +96,37 @@ The `params` field in the event notification is an object with the following fie
             - `type`
               - : A string that indicates how the `value` field of this object is encoded.
                 It has one of the following values:
-                - `"base64"`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
-                - `"string"`: The value is text.
+                - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
+                - `string`: The value is text.
             - `value`
               - : A string that contains the cookie value, encoded as specified by `type`.
 
         Browsers can also include their own, browser-specific fields in these objects.
     - `destination`
-      - : A string that contains the [destination](/en-US/docs/Web/API/Request/destination) of the request, such as `"document"`, `"script"`, or `"style"`.
+      - : A string that contains the [destination](/en-US/docs/Web/API/Request/destination) of the request, such as `document`, `script`, or `style`.
         It is an empty string for a request made with `fetch()` or `XMLHttpRequest`.
     - `headers`
       - : An array of objects, each representing a header of the request, including headers added with the `network.setExtraHeaders` command.
         Each object contains the following fields:
         - `name`
-          - : A string that contains the header name, such as `"Accept"`.
+          - : A string that contains the header name, such as `Accept`.
         - `value`
           - : An object that contains the header value. It contains the following fields:
             - `type`
               - : A string that indicates how the `value` field of this object is encoded.
                 It has one of the following values:
-                - `"base64"`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
-                - `"string"`: The value is text.
+                - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
+                - `string`: The value is text.
             - `value`
               - : A string that contains the header value, encoded as specified by `type`.
     - `headersSize`
       - : A non-negative integer that contains the size of the request headers in bytes.
         For protocols that compress headers, such as HTTP/2, it is the compressed size.
     - `initiatorType`
-      - : A string that indicates what started the request, such as `"fetch"`, `"link"`, or `"script"`, or `null` for a request with no initiator type, such as the request for a page loaded into a tab.
+      - : A string that indicates what started the request, such as `fetch`, `link`, or `script`, or `null` for a request with no initiator type, such as the request for a page loaded into a tab.
         The values match those of {{domxref("PerformanceResourceTiming.initiatorType")}}.
     - `method`
-      - : A string that contains the [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods), such as `"GET"` or `"POST"`.
+      - : A string that contains the [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods), such as `GET` or `POST`.
     - `request`
       - : A string that contains the ID of the request.
         The ID stays the same when the request is redirected.
@@ -186,9 +186,9 @@ When `isBlocked` is `true`, the request waits until the client resumes it with t
 
 Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `network.beforeRequestSent`.
 
-Suppose you use [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) to load `https://example.com/` in a tab with the context ID `"93ee5bd6-d256-4608-a002-9a8995cc0e5f"`.
+Suppose you use [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) to load `https://example.com/` in a tab with the context ID `93ee5bd6-d256-4608-a002-9a8995cc0e5f`.
 The page loads a stylesheet and a script, and the browser already has a `theme=dark` cookie for the site from an earlier visit.
-The command's response contains the navigation ID `"a1b2c3d4-5678-90ab-cdef-1234567890ab"`.
+The command, sent with `wait` set to `complete`, returns the navigation ID `a1b2c3d4-5678-90ab-cdef-1234567890ab`, but its response arrives after the event for the page request.
 
 Before requesting the page, the browser sends the following event, with the same `navigation` ID (the `headers` array is shortened, and some of the `request` fields are left out):
 
@@ -286,6 +286,9 @@ These requests have no `navigation` ID (only some of the fields are shown):
 }
 ```
 
+To match the events to the navigation, keep them until the command's response arrives, then compare their `navigation` field with the ID in the response.
+Only the page request has that ID: the requests for its subresources have `null`.
+
 ### Receiving an event for a request made by a script
 
 Using the same connection, session, and subscription, suppose the page's script, `/app.js`, has a function that adds an item to a list with `fetch()`:
@@ -337,7 +340,7 @@ When the page calls `addItem("Pen")`, the browser sends the following event befo
 ```
 
 The `initiator` points to the `fetch()` call in `addItem()`, on line 1 and column 9 of `/app.js`, counting from zero.
-The `initiatorType` of `"fetch"` and the empty `destination` show that a script made the request, and `bodySize` is the length of the JSON body, `{"name":"Pen"}`.
+The `initiatorType` of `fetch` and the empty `destination` show that a script made the request, and `bodySize` is the length of the JSON body, `{"name":"Pen"}`.
 Keep the `request` ID to match this request with the events that follow, such as [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted).
 
 ## Specifications

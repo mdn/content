@@ -17,7 +17,7 @@ The `params` field in the event notification is an object with the following fie
   - : A string that contains the ID of the [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts) in which the request was made, or `null` if the request wasn't made by a document in a context, for example a request made by a worker.
 - `errorText`
   - : A string that describes the error.
-    The text is browser-specific, such as `"NS_ERROR_UNKNOWN_HOST"` or `"net::ERR_NAME_NOT_RESOLVED"` for a host name that can't be resolved, so don't rely on this value for assertions in tests.
+    The text is browser-specific, such as `NS_ERROR_UNKNOWN_HOST` or `net::ERR_NAME_NOT_RESOLVED` for a host name that can't be resolved, so don't rely on this value for assertions in tests.
 - `intercepts` {{optional_inline}}
   - : Never included, because `isBlocked` is always `false`.
 - `isBlocked`
@@ -55,10 +55,10 @@ The `params` field in the event notification is an object with the following fie
         - `sameSite`
           - : A string that indicates the cookie's [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) setting.
             It has one of the following values:
-            - `"default"`: The cookie has no `SameSite` attribute, so the browser's default behavior applies.
-            - `"lax"`: The cookie has `SameSite=Lax`.
-            - `"none"`: The cookie has `SameSite=None`.
-            - `"strict"`: The cookie has `SameSite=Strict`.
+            - `default`: The cookie has no `SameSite` attribute, so the browser's default behavior applies.
+            - `lax`: The cookie has `SameSite=Lax`.
+            - `none`: The cookie has `SameSite=None`.
+            - `strict`: The cookie has `SameSite=Strict`.
         - `secure`
           - : A boolean that indicates whether the cookie has the [`Secure`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) attribute.
         - `size`
@@ -68,37 +68,37 @@ The `params` field in the event notification is an object with the following fie
             - `type`
               - : A string that indicates how the `value` field of this object is encoded.
                 It has one of the following values:
-                - `"base64"`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
-                - `"string"`: The value is text.
+                - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
+                - `string`: The value is text.
             - `value`
               - : A string that contains the cookie value, encoded as specified by `type`.
 
         Browsers can also include their own, browser-specific fields in these objects.
     - `destination`
-      - : A string that contains the [destination](/en-US/docs/Web/API/Request/destination) of the request, such as `"document"`, `"script"`, or `"style"`.
+      - : A string that contains the [destination](/en-US/docs/Web/API/Request/destination) of the request, such as `document`, `script`, or `style`.
         It is an empty string for a request made with `fetch()` or `XMLHttpRequest`.
     - `headers`
       - : An array of objects, each representing a header of the request, including headers added with the `network.setExtraHeaders` command.
         Each object contains the following fields:
         - `name`
-          - : A string that contains the header name, such as `"Accept"`.
+          - : A string that contains the header name, such as `Accept`.
         - `value`
           - : An object that contains the header value. It contains the following fields:
             - `type`
               - : A string that indicates how the `value` field of this object is encoded.
                 It has one of the following values:
-                - `"base64"`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
-                - `"string"`: The value is text.
+                - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
+                - `string`: The value is text.
             - `value`
               - : A string that contains the header value, encoded as specified by `type`.
     - `headersSize`
       - : A non-negative integer that contains the size of the request headers in bytes.
         For protocols that compress headers, such as HTTP/2, it is the compressed size.
     - `initiatorType`
-      - : A string that indicates what started the request, such as `"fetch"`, `"link"`, or `"script"`, or `null` for a request with no initiator type, such as the request for a page loaded into a tab.
+      - : A string that indicates what started the request, such as `fetch`, `link`, or `script`, or `null` for a request with no initiator type, such as the request for a page loaded into a tab.
         The values match those of {{domxref("PerformanceResourceTiming.initiatorType")}}.
     - `method`
-      - : A string that contains the [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods), such as `"GET"` or `"POST"`.
+      - : A string that contains the [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods), such as `GET` or `POST`.
     - `request`
       - : A string that contains the ID of the request.
         The ID stays the same when the request is redirected.
@@ -151,9 +151,6 @@ It can fire at any point after [`network.beforeRequestSent`](/en-US/docs/Web/Web
 
 If you're also subscribed to `network.beforeRequestSent`, you always receive it for the request first, even when the request fails before it is sent.
 This event has no `response` field, even if `network.responseStarted` fired for the request.
-
-Browsers don't always agree on when to send this event.
-For a request that the page aborts while the body is arriving, some browsers send [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted) before this event, and for a cross-origin request that CORS blocks, some browsers send `network.responseCompleted` instead of this event.
 
 When a navigation fails, this event has the navigation's `navigation` ID, so you can match it with the [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted) event.
 
@@ -260,7 +257,7 @@ When the server refuses the connection, the browser sends the following `network
 }
 ```
 
-The `browsingContext.navigate` command returns an error for this navigation.
+The `browsingContext.navigate` command returns an `unknown error` with no navigation ID, so use the `navigation` ID from the `browsingContext.navigationStarted` event to match this event to the navigation.
 
 ## Specifications
 

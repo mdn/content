@@ -52,10 +52,10 @@ The `params` field in the event notification is an object with the following fie
         - `sameSite`
           - : A string that indicates the cookie's [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) setting.
             It has one of the following values:
-            - `"default"`: The cookie has no `SameSite` attribute, so the browser's default behavior applies.
-            - `"lax"`: The cookie has `SameSite=Lax`.
-            - `"none"`: The cookie has `SameSite=None`.
-            - `"strict"`: The cookie has `SameSite=Strict`.
+            - `default`: The cookie has no `SameSite` attribute, so the browser's default behavior applies.
+            - `lax`: The cookie has `SameSite=Lax`.
+            - `none`: The cookie has `SameSite=None`.
+            - `strict`: The cookie has `SameSite=Strict`.
         - `secure`
           - : A boolean that indicates whether the cookie has the [`Secure`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) attribute.
         - `size`
@@ -65,37 +65,37 @@ The `params` field in the event notification is an object with the following fie
             - `type`
               - : A string that indicates how the `value` field of this object is encoded.
                 It has one of the following values:
-                - `"base64"`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
-                - `"string"`: The value is text.
+                - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
+                - `string`: The value is text.
             - `value`
               - : A string that contains the cookie value, encoded as specified by `type`.
 
         Browsers can also include their own, browser-specific fields in these objects.
     - `destination`
-      - : A string that contains the [destination](/en-US/docs/Web/API/Request/destination) of the request, such as `"document"`, `"script"`, or `"style"`.
+      - : A string that contains the [destination](/en-US/docs/Web/API/Request/destination) of the request, such as `document`, `script`, or `style`.
         It is an empty string for a request made with `fetch()` or `XMLHttpRequest`.
     - `headers`
       - : An array of objects, each representing a header of the request, including headers added with the `network.setExtraHeaders` command.
         Each object contains the following fields:
         - `name`
-          - : A string that contains the header name, such as `"Accept"`.
+          - : A string that contains the header name, such as `Accept`.
         - `value`
           - : An object that contains the header value. It contains the following fields:
             - `type`
               - : A string that indicates how the `value` field of this object is encoded.
                 It has one of the following values:
-                - `"base64"`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
-                - `"string"`: The value is text.
+                - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
+                - `string`: The value is text.
             - `value`
               - : A string that contains the header value, encoded as specified by `type`.
     - `headersSize`
       - : A non-negative integer that contains the size of the request headers in bytes.
         For protocols that compress headers, such as HTTP/2, it is the compressed size.
     - `initiatorType`
-      - : A string that indicates what started the request, such as `"fetch"`, `"link"`, or `"script"`, or `null` for a request with no initiator type, such as the request for a page loaded into a tab.
+      - : A string that indicates what started the request, such as `fetch`, `link`, or `script`, or `null` for a request with no initiator type, such as the request for a page loaded into a tab.
         The values match those of {{domxref("PerformanceResourceTiming.initiatorType")}}.
     - `method`
-      - : A string that contains the [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods), such as `"GET"` or `"POST"`.
+      - : A string that contains the [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods), such as `GET` or `POST`.
     - `request`
       - : A string that contains the ID of the request.
         The ID stays the same when the request is redirected.
@@ -144,7 +144,7 @@ The `params` field in the event notification is an object with the following fie
         - `realm`
           - : A string that contains the realm of the challenge, or an empty string if the challenge has no realm.
         - `scheme`
-          - : A string that contains the authentication scheme, such as `"Basic"`.
+          - : A string that contains the authentication scheme, such as `Basic`.
     - `bodySize`
       - : A non-negative integer that contains the size of the response body in bytes as received, before the browser decodes it (for example, before decompression), or `null` if the browser doesn't report it.
     - `bytesReceived`
@@ -163,28 +163,28 @@ The `params` field in the event notification is an object with the following fie
       - : An array of objects, each representing a header of the response.
         Each object contains the following fields:
         - `name`
-          - : A string that contains the header name, such as `"Content-Type"`.
+          - : A string that contains the header name, such as `Content-Type`.
         - `value`
           - : An object that contains the header value. It contains the following fields:
             - `type`
               - : A string that indicates how the `value` field of this object is encoded.
                 It has one of the following values:
-                - `"base64"`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
-                - `"string"`: The value is text.
+                - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
+                - `string`: The value is text.
             - `value`
               - : A string that contains the header value, encoded as specified by `type`.
     - `headersSize`
       - : A non-negative integer that contains the size of the response headers in bytes as received, or `null` if the browser doesn't report it.
     - `mimeType`
-      - : A string that contains the [MIME type](/en-US/docs/Glossary/MIME_type) that the browser uses for the response, without parameters, such as `"text/html"` or `"application/json"`.
+      - : A string that contains the [MIME type](/en-US/docs/Glossary/MIME_type) that the browser uses for the response, without parameters, such as `text/html` or `application/json`.
         It can differ from the {{HTTPHeader("Content-Type")}} header, for example when the browser determines the type from the content, and it can be an empty string, for example for a redirect response.
     - `protocol`
-      - : A string that contains the protocol of the response, such as `"http/1.1"` or `"h2"`.
-        For a response that wasn't received over HTTP, it is the scheme of the response URL, such as `"data"`.
+      - : A string that contains the protocol of the response, such as `http/1.1` or `h2`.
+        For a response that wasn't received over HTTP, it is the scheme of the response URL, such as `data`.
     - `status`
       - : A non-negative integer that contains the [HTTP status code](/en-US/docs/Web/HTTP/Reference/Status) of the response, such as `200`.
     - `statusText`
-      - : A string that contains the status message of the response, such as `"OK"`.
+      - : A string that contains the status message of the response, such as `OK`.
     - `url`
       - : A string that contains the URL of the response.
 - `timestamp`
@@ -197,7 +197,6 @@ The `params` field in the event notification is an object with the following fie
 In the [lifecycle of a request](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#requests), this is the last event for a response that the browser received successfully.
 It fires after [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) and [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) for the same request.
 If the request fails, [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError) fires.
-Browsers don't always agree on which of the two events to send, for example for a request that the page aborts while the body is arriving or for a cross-origin request that CORS blocks, so don't rely on receiving only one of them.
 
 When the server responds with a redirect, this event fires for the redirect response too.
 The browser then sends `network.beforeRequestSent` for the new URL, with the same request ID and a `redirectCount` that is one higher, and the events for the new URL follow.
