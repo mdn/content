@@ -56,19 +56,20 @@ The `params` field contains:
     If omitted or empty, the preload script is called without arguments.
     Each object contains the following fields:
     - `type`
-      - : A string that has the value `"channel"`.
+      - : A string that has the value `channel`.
     - `value`
       - : An object that configures the [channel](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#channels).
         It contains the following fields:
         - `channel`
           - : A string that identifies the channel in the resulting [`script.message`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/message) events.
         - `ownership` {{optional_inline}}
-          - : A string that specifies whether the browser keeps a reference to the object sent in each message.
+          - : A string that specifies whether the browser keeps a reference to the object sent in each message so you can refer to it in subsequent commands.
             It can take one of the following values:
-            - `"none"`: The browser does not keep a reference to the object, so the message data contains no `handle` field.
+            - `none`: The browser does not keep a reference to the object, so the [`data`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/message#data) field of the `script.message` event contains no `handle` field.
               This is the default.
-            - `"root"`: The browser keeps the object alive and includes a `handle` field in the message data.
-              You can pass the `handle` to other `script` module commands and release it when you no longer need it by using [`script.disown`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/disown).
+            - `root`: The browser keeps the object alive and includes a `handle` field in the event's `data` field.
+              You can pass the handle in the [`arguments`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/callFunction#arguments) parameter of `script.callFunction` to work with the same object in another function.
+              Release the handle when you no longer need it by using [`script.disown`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/disown).
               The browser also releases handles when the realm is destroyed.
         - `serializationOptions` {{optional_inline}}
           - : An object that controls the amount of detail to include in the message data when the sent value is an object.
@@ -76,14 +77,14 @@ The `params` field contains:
             - `includeShadowTree` {{optional_inline}}
               - : A string that specifies whether descendants of shadow roots are included in the message data when the sent value is a DOM node.
                 It can take one of the following values:
-                - `"none"`: Descendants of shadow roots are not included.
+                - `none`: Descendants of shadow roots are not included.
                   This is the default.
-                - `"all"`: Descendants of both open shadow roots (accessible from JavaScript outside the root) and closed shadow roots (not accessible from JavaScript outside the root) are included.
-                - `"open"`: Descendants of only open shadow roots are included.
+                - `all`: Descendants of both open shadow roots (accessible from JavaScript outside the root) and closed shadow roots (not accessible from JavaScript outside the root) are included.
+                - `open`: Descendants of only open shadow roots are included.
             - `maxDomDepth` {{optional_inline}}
               - : A non-negative integer, or `null` for unlimited, that specifies the number of levels of descendant nodes included in the message data.
                 The default is `0`, which excludes descendants.
-                This limit also applies to descendants of shadow roots included by `includeShadowTree`.
+                This limit also applies to descendants of shadow roots included via `includeShadowTree`.
             - `maxObjectDepth` {{optional_inline}}
               - : A non-negative integer, or `null` for unlimited, that specifies the number of levels of nested objects included in the message data.
                 The default is `null`.

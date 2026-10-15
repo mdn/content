@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.script.disown
 sidebar: webdriver
 ---
 
-The `script.disown` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`script`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script) module releases the specified handles.
+The `script.disown` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`script`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script) module releases the specified handles returned by the [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate) and [`script.callFunction`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/callFunction) commands or received in [`script.message`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/message) events.
 
 ## Syntax
 
@@ -43,7 +43,7 @@ The `params` field contains:
 - `handles`
   - : An array of strings that specifies the handles to release.
     Any specified handle not found in the target realm is ignored.
-    Handles are returned in a `handle` field when a command such as [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate) is sent with [`resultOwnership`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate#resultownership) set to `"root"`.
+    Handles are returned in a `handle` field when a command such as [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate) is sent with [`resultOwnership`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate#resultownership) set to `root`.
 - `target`
   - : An object that specifies the [realm](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#realms) that owns the specified handles.
     The object must contain either a `context` field or a `realm` field:
@@ -74,6 +74,8 @@ The `result` field in the response is an empty object (`{}`).
 
 ## Description
 
+A handle is a string identifier you can use to refer to an object in subsequent `script` module commands, for example, to pass the object as an argument to [`script.callFunction`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/callFunction).
+You can use it only in the realm in which it was created.
 After a handle is released, you can no longer use it in other `script` commands.
 The object isn't necessarily garbage collected.
 Other handles or references from the page's own scripts can keep the object alive.
@@ -86,13 +88,14 @@ You can use `script.disown` to release handles you no longer need before the rea
 ### Releasing a handle using a context ID
 
 Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new).
+You get an open tab's context ID by using [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 
-Suppose you evaluate `({ count: 2 })` in a tab's default realm by using [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate).
-In that command, you set the [`resultOwnership`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate#resultownership) parameter to `"root"`.
+Suppose you evaluate `({ count: 2 })` in the tab by using [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate).
+In that command, you pass the context ID in the [`target`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate#target) parameter and set the [`resultOwnership`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate#resultownership) parameter to `root`.
 The browser returns a handle for the resulting object.
 
 When you no longer need the handle, send the following message to release it.
-Use the same context ID as in the earlier `script.evaluate` command, without navigating or reloading the page between the two commands:
+Use the tab's context ID and the returned handle, without navigating or reloading the page between the two commands:
 
 ```json
 {
