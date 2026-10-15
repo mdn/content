@@ -35,7 +35,7 @@ The properties of counters can be scoped to specific elements using style contai
 To use a CSS counter, it must first be initialized to a value with the {{cssxref("counter-reset")}} property.
 The property can also be used to change the counter value to any specific number.
 
-Below we initialize a counter named `section` to the default value (0).
+The following declaration initializes a counter named `section` to the default value (`0`):
 
 ```css
 counter-reset: section;
