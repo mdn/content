@@ -78,7 +78,7 @@ The `params` field contains:
     - `maxDomDepth` {{optional_inline}}
       - : A non-negative integer, or `null` for unlimited, that specifies the number of levels of descendant nodes included in the response.
         The default is `0`, which excludes descendants.
-        This limit also applies to descendants of shadow roots included via `includeShadowTree`.
+        This limit also applies to descendants of shadow roots included by `includeShadowTree`.
     - `maxObjectDepth` {{optional_inline}}
       - : A non-negative integer, or `null` for unlimited, that specifies the number of levels of nested objects included in the response.
         The default is `null`.
