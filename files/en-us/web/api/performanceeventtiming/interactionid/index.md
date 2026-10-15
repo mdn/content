@@ -34,7 +34,8 @@ The `interactionId` is also needed to calculate the {{glossary("Interaction to n
 
 ### Using interactionId
 
-The following example collects event duration for all events corresponding to an interaction.
+The following example groups the durations of observed events by interaction ID.
+By default, only events with a duration of at least 104 milliseconds are reported.
 The `eventLatencies` map can then be used to find events with maximum duration for a user interaction, for example.
 
 ```js
@@ -52,7 +53,7 @@ const observer = new PerformanceObserver((list) => {
     }
   });
 
-  // Log the maximum event duration for each user interaction.
+  // Log the maximum observed event duration for each interaction.
   eventLatencies.forEach((durations, interactionId) => {
     console.log(interactionId, Math.max(...durations));
   });
