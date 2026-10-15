@@ -24,7 +24,7 @@ When `scrollbar-color` value is set on the document's root element, the values a
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 scrollbar-color: auto;
 
 /* <color> values */

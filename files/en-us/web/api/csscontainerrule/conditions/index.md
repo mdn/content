@@ -117,8 +117,8 @@ Note that this condition is contrived to demonstrate how multiple conditions are
 
 #### JavaScript
 
-The code below gets the {{domxref("HTMLStyleElement")}} associated with the example using its `id`, and then uses its `sheet` property to get the {{domxref("StyleSheet")}}.
-From the `StyleSheet` we get the set of `cssRules` added to the sheet.
+The code below gets the {{domxref("HTMLStyleElement")}} associated with the example using its `id`, and then uses its `sheet` property to get the {{domxref("CSSStyleSheet")}}.
+From the `CSSStyleSheet` we get the set of `cssRules` added to the sheet.
 Since we added the `@container` as the third rule above, we can access the associated `CSSContainerRule` using the third entry (index "2") in the `cssRules`.
 
 ```js

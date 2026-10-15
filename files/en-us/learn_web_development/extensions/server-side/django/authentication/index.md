@@ -521,7 +521,7 @@ Unfortunately, we don't yet have any way for users to borrow books! So before we
 
 ### Models
 
-First, we're going to have to make it possible for users to have a `BookInstance` on loan (we already have a `status` and a `due_back` date, but we don't yet have any association between this model and a particular user. We'll create one using a `ForeignKey` (one-to-many) field. We also need an easy mechanism to test whether a loaned book is overdue.
+First, we're going to have to make it possible for users to have a `BookInstance` on loan (we already have a `status` and a `due_back` date, but we don't yet have any association between this model and a particular user). We'll create one using a `ForeignKey` (one-to-many) field. We also need an easy mechanism to test whether a loaned book is overdue.
 
 Open **catalog/models.py**, and import the `settings` from `django.conf` (add this just below the previous import line at the top of the file, so the settings are available to subsequent code that makes use of them):
 
@@ -549,7 +549,7 @@ borrower = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL
 > ```
 
 While we're here, let's add a property that we can call from our templates to tell if a particular book instance is overdue.
-While we could calculate this in the template itself, using a [property](https://docs.python.org/3/library/functions.html#property) as shown below will be much more efficient.
+While we could calculate this in the template itself, using a [property](https://docs.python.org/3/builtins/functions.html#property) as shown below will be much more efficient.
 
 Add this somewhere near the top of the file:
 
@@ -670,7 +670,7 @@ Now, all we need to do for this page is add a template. First, create the templa
 ```
 
 This template is very similar to those we've created previously for the `Book` and `Author` objects.
-The only "new" thing here is that we check the method we added in the model `(bookinst.is_overdue`) and use it to change the color of overdue items.
+The only "new" thing here is that we check the method we added in the model (`bookinst.is_overdue`) and use it to change the color of overdue items.
 
 When the development server is running, you should now be able to view the list for a logged in user in your browser at `http://127.0.0.1:8000/catalog/mybooks/`. Try this out with your user logged in and logged out (in the second case, you should be redirected to the login page).
 

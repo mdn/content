@@ -86,14 +86,14 @@ Below we'll review the parts of the code that do the heavy lifting.
 
 ### Starting up
 
-When the script is run, we set up a {{domxref("Window/load_event", "load")}} event listener, so that once the page is fully loaded, our `startup()` function is called.
+This is quite straightforward. We declare variables and grab references to all the page elements we'll need to access, then set [event listeners](/en-US/docs/Web/API/EventTarget/addEventListener) on the three buttons.
 
 ```js live-sample___simple-data-channel
-let connectButton = null;
-let disconnectButton = null;
-let sendButton = null;
-let messageInputBox = null;
-let receiveBox = null;
+const connectButton = document.getElementById("connectButton");
+const disconnectButton = document.getElementById("disconnectButton");
+const sendButton = document.getElementById("sendButton");
+const messageInputBox = document.getElementById("message");
+const receiveBox = document.getElementById("receive-box");
 
 let localConnection = null; // RTCPeerConnection for our "local" connection
 let remoteConnection = null; // RTCPeerConnection for the "remote"
@@ -102,24 +102,11 @@ let sendChannel = null; // RTCDataChannel for the local (sender)
 let receiveChannel = null; // RTCDataChannel for the remote (receiver)
 let disconnecting = false;
 
-window.addEventListener("load", startup);
-
-function startup() {
-  connectButton = document.getElementById("connectButton");
-  disconnectButton = document.getElementById("disconnectButton");
-  sendButton = document.getElementById("sendButton");
-  messageInputBox = document.getElementById("message");
-  receiveBox = document.getElementById("receive-box");
-
-  // Set event listeners for user interface widgets
-
-  connectButton.addEventListener("click", connectPeers);
-  disconnectButton.addEventListener("click", disconnectPeers);
-  sendButton.addEventListener("click", sendMessage);
-}
+// Set event listeners for user interface widgets
+connectButton.addEventListener("click", connectPeers);
+disconnectButton.addEventListener("click", disconnectPeers);
+sendButton.addEventListener("click", sendMessage);
 ```
-
-This is quite straightforward. We declare variables and grab references to all the page elements we'll need to access, then set [event listeners](/en-US/docs/Web/API/EventTarget/addEventListener) on the three buttons.
 
 ### Establishing a connection
 

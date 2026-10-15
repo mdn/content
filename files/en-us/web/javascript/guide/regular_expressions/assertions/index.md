@@ -321,7 +321,7 @@ See more examples in the [lookahead assertion](/en-US/docs/Web/JavaScript/Refere
 
 ### Basic negative lookahead assertion
 
-For example, `/\d+(?!\.)/` matches a number only if it is not followed by a decimal point. `/\d+(?!\.)/.exec('3.141')` matches "141" but not "3.
+For example, `/\d+(?!\.)/` matches a number only if it is not followed by a decimal point. `/\d+(?!\.)/.exec('3.141')` matches "141" but not "3".
 
 ```js
 console.log(/\d+(?!\.)/g.exec("3.141")); // [ '141', index: 2, input: '3.141' ]

@@ -2,9 +2,13 @@
 title: import source
 slug: Web/JavaScript/Reference/Statements/import/source
 page-type: javascript-language-feature
+status:
+  - experimental
 browser-compat: javascript.statements.import.import_source
 sidebar: jssidebar
 ---
+
+{{SeeCompatTable}}
 
 The **`import source`** declaration is similar to the regular [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declaration, except that it results in an object that represents the module's compiled source code. The module is fetched and compiled, but its dependencies are not loaded and it is not linked or evaluated. It can be imperatively evaluated later, such as by using [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) or [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static).
 

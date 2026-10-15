@@ -11,7 +11,7 @@ In HTTP/1.X, a header is a case-insensitive name followed by a colon, then optio
 In HTTP/2 and above, headers are displayed in lowercase when viewed in developer tools (`accept: */*`), and prefixed with a colon for a special group of [pseudo-headers](/en-US/docs/Web/HTTP/Guides/Messages#pseudo-headers) (`:status: 200`).
 You can find more information on the syntax in each protocol version in the [HTTP messages](/en-US/docs/Web/HTTP/Guides/Messages) page.
 
-Custom proprietary headers have historically been used with an `X-` prefix, but this convention was deprecated in 2012 because of the inconveniences it caused when nonstandard fields became standard in [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648); others are listed in the [IANA HTTP Field Name Registry](https://www.iana.org/assignments/http-fields/http-fields.xhtml), whose original content was defined in [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229).
+Custom proprietary headers have historically been used with an `X-` prefix, but this convention was deprecated in 2012 because of the inconveniences it caused when nonstandard fields became standard in [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648); others are listed in the [IANA HTTP Field Name Registry](https://www.iana.org/assignments/http-fields), whose original content was defined in [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229).
 The IANA registry lists headers, including [information about their status](https://github.com/protocol-registries/http-fields?tab=readme-ov-file#choosing-the-right-status).
 
 Headers can be grouped according to their contexts:
@@ -94,6 +94,8 @@ For more details, refer to the [Content negotiation article](/en-US/docs/Web/HTT
   - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/Guides/MIME_types) the server is able to understand in a {{HTTPMethod("PATCH")}} request.
 - {{HTTPHeader("Accept-Post")}}
   - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/Guides/MIME_types) the server is able to understand in a {{HTTPMethod("POST")}} request.
+- {{HTTPHeader("Accept-Query")}}
+  - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/Guides/MIME_types) the server is able to understand in a {{HTTPMethod("QUERY")}} request.
 
 ## Controls
 
@@ -550,5 +552,5 @@ See the [Topics API](/en-US/docs/Web/API/Topics_API) documentation for more info
 ## See also
 
 - [Wikipedia page on List of HTTP headers](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
-- [IANA registry](https://www.iana.org/assignments/http-fields/http-fields.xhtml)
+- [IANA registry](https://www.iana.org/assignments/http-fields)
 - [HTTP Working Group](https://httpwg.org/specs/)

@@ -235,6 +235,9 @@ You can specify:
 - {{httpheader("Permissions-Policy/summarizer", "summarizer")}} {{Experimental_Inline}}
   - : Controls access to the [Summarizer API](/en-US/docs/Web/API/Summarizer_API).
 
+- {{httpheader("Permissions-Policy/unload", "unload")}} {{Experimental_Inline}} {{non-standard_inline}}
+  - : Controls whether the current document is allowed to run [`unload`](/en-US/docs/Web/API/Window/unload_event) event handlers.
+
 - {{httpheader('Permissions-Policy/usb', 'usb')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to use the [WebUSB API](/en-US/docs/Web/API/WebUSB_API).
 

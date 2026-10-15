@@ -83,7 +83,7 @@ This property is a shorthand for the following CSS properties:
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 scroll-padding: auto;
 
 /* <length> values */

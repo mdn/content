@@ -3,10 +3,12 @@ title: "MathMLAnchorElement: pathname property"
 short-title: pathname
 slug: Web/API/MathMLAnchorElement/pathname
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.MathMLAnchorElement.pathname
 ---
 
-{{APIRef("MathML")}}
+{{APIRef("MathML")}}{{SeeCompatTable}}
 
 The **`pathname`** property of the {{domxref("MathMLAnchorElement")}} interface is a string containing an initial `'/'` followed by the path of the URL not including the query string or fragment (or the empty string if there is no path).
 

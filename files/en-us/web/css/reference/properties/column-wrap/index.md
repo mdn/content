@@ -16,7 +16,7 @@ The **`column-wrap`** [CSS](/en-US/docs/Web/CSS) property specifies the wrapping
 ## Syntax
 
 ```css
-/* Keywords */
+/* Keyword values */
 column-wrap: auto;
 column-wrap: nowrap;
 column-wrap: wrap;

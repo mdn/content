@@ -73,7 +73,7 @@ hr {
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 list-style-image: none;
 
 /* <url> values */

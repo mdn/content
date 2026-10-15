@@ -33,7 +33,7 @@ stop(when)
   - : The time, in seconds, at which the sound should stop playing. This value is
     specified in the same time coordinate system as the {{domxref("AudioContext")}} is
     using for its {{domxref("BaseAudioContext/currentTime", "currentTime")}} attribute.
-    Omitting this parameter, specifying a value of 0, or passing a negative value causes
+    Omitting this parameter or specifying a value of 0 causes
     the sound to stop playback immediately.
 
 ### Return value
@@ -42,7 +42,7 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `InvalidStateNode` {{domxref("DOMException")}}
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the node has not been started by calling {{domxref("AudioScheduledSourceNode.start", "start()")}}.
 - {{jsxref("RangeError")}}
   - : Thrown if the value specified for `when` is negative.

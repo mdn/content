@@ -93,8 +93,8 @@ const gl = outputCanvas.getContext("webgl");
 let xrSession = null;
 let usingXR = false;
 let currentScene = "scene1";
-let glStartButton;
-let xrStartButton;
+const glStartButton = document.querySelector(".green.button");
+const xrStartButton = document.querySelector(".use-webxr");
 
 loadSceneResources(currentScene);
 

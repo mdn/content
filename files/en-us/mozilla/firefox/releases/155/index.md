@@ -1,8 +1,8 @@
 ---
-title: Firefox 155 release notes for developers (Stable)
-short-title: Firefox 155 (Stable)
+title: Firefox 155 release notes for developers
+short-title: Firefox 155
 slug: Mozilla/Firefox/Releases/155
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
@@ -190,3 +190,13 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **The `MathMLAnchorElement` interface**: `mathml.a.element.enabled`
 
   The MathML [`<a>`](/en-US/docs/Web/MathML/Reference/Element/a) element is now correctly represented in the DOM by the [`MathMLAnchorElement`](/en-US/docs/Web/API/MathMLAnchorElement) interface rather than the generic [`MathMLElement`](/en-US/docs/Web/API/MathMLElement) interface. ([Firefox bug 2059312](https://bugzil.la/2059312)).
+
+- **`timeline-scope` names are now global by default**: `layout.css.scroll-driven-animations.enabled`
+
+  The default behavior of named timeline scoping has been updated to be global. This can be scoped to elements, and their subtree, using the {{cssxref("timeline-scope")}} CSS property and the value of either the {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}} ([Firefox bug 2024012](https://bugzil.la/2024012)).
+
+- **`<script type="speculationrules">`**: `dom.speculation_rules.enabled`
+
+  Enabled in Nightly only, the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) provides a mechanism to improve performance for future navigations by specifying which resources should be prefetched or prerendered based on factors such as user behavior towards links.
+
+  Initial support included [`prefetch`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#prefetch) only, with resources identified by a [`urls`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#urls) list and [`immediate`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#immediate) eagerness. This also includes support for the {{domxref("PerformanceResourceTiming.deliveryType")}} property's `navigational-prefetch` value. ([Firefox bug 2041381](https://bugzil.la/2041381)).

@@ -33,9 +33,9 @@ param(--color3, green);
 - `<declaration_value>` {{optional_inline}}
   - : A `<declaration_value>` is the value of the attribute being updated. If the `<declaration-value>` is omitted, it represents an empty value.
 
-## Formal definition
+## Formal syntax
 
-{{CSSInfo}}
+{{CSSSyntax}}
 
 ## Examples
 
@@ -131,7 +131,7 @@ In this example the SVG attributes are updated by passing the `param()` function
 .foo {
   background-image: url(
     "square.svg"
-    param(--color1, slategrey),
+    param(--color1, slategrey)
     param(--color2, lightgrey)
   );
 }

@@ -12,7 +12,7 @@ The **`initial-letter`** [CSS](/en-US/docs/Web/CSS) property sets the size and s
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 initial-letter: normal;
 
 /* One value */

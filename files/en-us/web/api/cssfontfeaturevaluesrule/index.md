@@ -19,19 +19,19 @@ This is convenient, because it allows the same name to be used of represent a se
 
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
-- {{domxref("CSSFontFeatureValuesRule.annotation")}} {{experimental_inline}}
+- {{domxref("CSSFontFeatureValuesRule.annotation")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A user-defined value definition and value that applies an alternate annotation of the font.
-- {{domxref("CSSFontFeatureValuesRule.characterVariant")}} {{experimental_inline}}
+- {{domxref("CSSFontFeatureValuesRule.characterVariant")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A user-defined value definition and value that applies stylistic alternatives for characters of the font.
 - {{domxref("CSSFontFeatureValuesRule.fontFamily")}}
   - : A string that identifies the font family this rule applies to.
-- {{domxref("CSSFontFeatureValuesRule.ornaments")}} {{experimental_inline}}
+- {{domxref("CSSFontFeatureValuesRule.ornaments")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A user-defined value definition and value that applies alternative ornaments of the font.
-- {{domxref("CSSFontFeatureValuesRule.styleset")}} {{experimental_inline}}
+- {{domxref("CSSFontFeatureValuesRule.styleset")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A user-defined value definition and value that applies alternate style sets of the font.
-- {{domxref("CSSFontFeatureValuesRule.stylistic")}} {{experimental_inline}}
+- {{domxref("CSSFontFeatureValuesRule.stylistic")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A user-defined value definition and value that applies alternative glyphs of the font.
-- {{domxref("CSSFontFeatureValuesRule.swash")}} {{experimental_inline}}
+- {{domxref("CSSFontFeatureValuesRule.swash")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A user-defined value definition and value that applies alternative swashes of the font.
 
 ## Instance methods
