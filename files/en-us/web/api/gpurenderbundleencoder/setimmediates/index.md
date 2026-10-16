@@ -215,7 +215,7 @@ Next, we create a {{domxref("GPUCommandEncoder")}} and begin a render pass. We i
 ```
 
 > [!NOTE]
-> Calling `executeBundles()` resets the pass's binding state, which includes clearing the set immediates. If you wish to use immediates again after executing bundles, you must set them again with `setImmediates()`. A render bundle starts with its own fresh immediates state.
+> Calling `executeBundles()` resets the pass's binding state, which includes clearing the set immediates. If you wish to use immediates again after executing bundles, you must set them again with `setImmediates()`. A render bundle starts with its own fresh immediates state. {{domxref("GPURenderBundleEncoder.setPipeline()")}}, on the other hand, doesn't reset immediates.
 
 Finally, we invoke {{domxref("GPURenderPassEncoder.end()")}} and {{domxref("GPUQueue.submit()")}} to end the render pass and submit the command buffer returned by {{domxref("GPUCommandEncoder.finish()")}}, close the `init()` function definition, and run it to start the program.
 

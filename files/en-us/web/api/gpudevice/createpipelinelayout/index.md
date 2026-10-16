@@ -26,7 +26,7 @@ createPipelineLayout(descriptor)
         - A {{domxref("GPUBindGroupLayout")}} object, created via a call to {{domxref("GPUDevice.createBindGroupLayout()")}}. Each object corresponds to a [`@group`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-binding) attribute in the shader code contained in the {{domxref("GPUShaderModule")}} used in a related pipeline.
         - `null`, which represents an empty bind group layout. `null` values are ignored when creating a pipeline layout.
     - `immediateSize` {{optional_inline}}
-      - : An integer representing the size of the address space, in bytes, used by the pipeline to store immediate data (see {{domxref("GPURenderPassEncoder.setImmediates()")}} for more information). The value must be a positive multiple of 4, and must be less than or equal to the `maxImmediateSize` limit of 64 bytes. Defaults to `0` if omitted.
+      - : An integer representing the size of the address space, in bytes, used by the pipeline to store immediate data (see {{domxref("GPURenderPassEncoder.setImmediates()")}} for more information). The value must be a positive multiple of 4, and must be less than or equal to the device's `maxImmediateSize` [limit](/en-US/docs/Web/API/GPUSupportedLimits). Defaults to `0` if omitted.
     - `label` {{optional_inline}}
       - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
@@ -40,7 +40,7 @@ The following criteria must be met when calling **`createPipelineLayout()`**, ot
 
 - The {{domxref("GPUBindGroupLayout")}} objects in `bindGroupLayouts` are valid.
 - The number of {{domxref("GPUBindGroupLayout")}} objects in `bindGroupLayouts` is less than the {{domxref("GPUDevice")}}'s `maxBindGroups` {{domxref("GPUSupportedLimits", "limit", "", "nocode")}}.
-- If specified, the `immediateSize` property must be a positive multiple of 4, and must be less than or equal to 64.
+- If specified, the `immediateSize` property is a positive multiple of 4, and is less than or equal to the device's `maxImmediateSize` [limit](/en-US/docs/Web/API/GPUSupportedLimits).
 
 ## Examples
 

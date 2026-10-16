@@ -15,6 +15,9 @@ Immediates are for small, highly dynamic values like a per-draw object ID or a t
 
 Immediates are analogous to push constants in Vulkan, root constants in D3D12, and `setBytes` in Metal.
 
+> [!NOTE]
+> Calling {{domxref("GPURenderPassEncoder.executeBundles()")}} resets the pass's binding state, which includes clearing the set immediates. If you wish to use immediates again after executing bundles, you must set them again with `setImmediates()`. A render bundle starts with its own fresh immediates state. {{domxref("GPURenderPassEncoder.setPipeline()")}}, on the other hand, doesn't reset immediates.
+
 ## Syntax
 
 ```js-nolint
