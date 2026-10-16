@@ -143,13 +143,21 @@ Let's look at a basic example that includes the above three items. This form cou
 </html>
 ```
 
+```js hidden live-sample___form-anatomy live-sample___form-other-controls
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+});
+```
+
 This is rendered as follows:
 
 {{EmbedLiveSample("form-anatomy", "100%", "200", , , , , "allow-forms")}}
 
-If you click "Sign me up!" immediately, you'll see a validation error because no data was entered. If you fill out the fields with a name and email address, then click "Sign me up!", you'll see a `404` error message.
+If you click "Sign me up!" right away, you'll see a validation error because you didn't enter any data. If you fill out the fields with a name and email address, and then click "Sign me up!", nothing happens—this is because we prevent the form from submitting, which would navigate you away from this page.
 
-We'll explain why later on. Before moving on, copy the previous HTML code listing into a new HTML file using your [code editor](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors) and open it in a new browser tab.
+Before moving on, copy the previous HTML code listing into a new HTML file using your [code editor](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors) and open it in a new browser tab.
 
 ### The `<form>` element
 

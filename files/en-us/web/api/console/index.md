@@ -23,6 +23,8 @@ console.log("Failed to open the specified link");
   - : Log an error message to console if the first argument is `false`.
 - {{domxref("console/clear_static", "console.clear()")}}
   - : Clear the console.
+- {{domxref("console/context_static", "console.context()")}} {{Non-standard_inline}}
+  - : Creates a new console context, an object with most of the `console` methods whose messages are associated with an optional label.
 - {{domxref("console/count_static", "console.count()")}}
   - : Log the number of times this line has been called with the given label.
 - {{domxref("console/countReset_static", "console.countReset()")}}

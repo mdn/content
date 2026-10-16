@@ -102,6 +102,7 @@ This menu could be constructed using {{HTMLElement('select')}} and {{HTMLElement
 ## See also
 
 - The {{HTMLElement('fieldset')}} Element
+- [ARIA: `graphics-object` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-object_role)
 - [ARIA: `section` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/section_role)
 - [ARIA: `row` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 - [ARIA: `select` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/select_role)

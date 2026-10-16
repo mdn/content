@@ -71,6 +71,12 @@ These are included for completeness, but in most cases are rarely, if ever, usef
 - [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`time`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 
+Graphics roles are defined in the [WAI-ARIA Graphics Module](https://w3c.github.io/graphics-aria/) and are used to define the structure and semantic meaning of graphical content. They are subclasses of the `document`, `group`, and `img` roles.
+
+- [`graphics-document`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-document_role)
+- [`graphics-object`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-object_role)
+- [`graphics-symbol`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-symbol_role)
+
 ### 2. Widget roles
 
 Widget roles are used to define common interactive patterns. Like document structure roles, some widget roles have the same semantics as well-supported native HTML elements, and therefore should be avoided. The key difference is that widget roles typically require JavaScript for interaction, while document structure roles often do not.

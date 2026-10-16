@@ -82,7 +82,7 @@ Promise.allSettled([
 You may also destructure the results to have one variable per settling outcome.
 
 ```js
-const [status1, status2] = Promise.allSettled([
+const [status1, status2] = await Promise.allSettled([
   Promise.resolve(33),
   new Promise((resolve) => setTimeout(() => resolve(66), 0)),
 ]);

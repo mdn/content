@@ -474,7 +474,7 @@ The rest of the CSS isn't important to the understanding of the overall example,
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
   height: 100%;
 }
 

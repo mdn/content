@@ -18,18 +18,18 @@ A {{domxref("DOMException")}} or `null` if there is no error. The exception obje
 
 These errors are asynchronous, meaning that they can't be handled via [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch). However, if an `IDBRequest` has an {{domxref("IDBRequest.error_event", "error")}} event handler assigned, you can still inspect such errors by querying the request's `error` property via the event object, for example [`event.target.error.name`](/en-US/docs/Web/API/DOMException/name) or [`event.target.error.message`](/en-US/docs/Web/API/DOMException/message).
 
-- `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : If you abort the transaction, then all requests still in progress receive this error.
-- `ConstraintError`
+- `ConstraintError` {{domxref("DOMException")}}
   - : Received if you insert data that doesn't conform to a constraint when populating stores.
     For example, you will get this error if you try to add a new key that already exists in the store.
-- `NotReadableError`
+- `NotReadableError` {{domxref("DOMException")}}
   - : Received for unrecoverable read failure errors. Specifically, this error signals that the record is present in the database, but the value could not be retrieved. See [Transient and unrecoverable read errors](#transient_and_unrecoverable_read_errors) below for more details.
 - {{domxref("QuotaExceededError")}}
   - : Received if the application runs out of disk quota. In some cases, browsers prompt the user for more space, and the error is received if they decline the request. In other cases, the browser uses heuristics to determine whether more space can be assigned.
-- `UnknownError`
+- `UnknownError` {{domxref("DOMException")}}
   - : Received for transient read failure errors, including general disk IO errors. See [Transient and unrecoverable read errors](#transient_and_unrecoverable_read_errors) below for more details.
-- `VersionError`
+- `VersionError` {{domxref("DOMException")}}
   - : Received if you try to open a database with a version lower than the one it already has.
 
 ### Transient and unrecoverable read errors

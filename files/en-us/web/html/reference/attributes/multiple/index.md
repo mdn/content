@@ -89,7 +89,7 @@ Multiple selected options are submitted using the {{domxref("URLSearchParams")}}
 
 Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the `multiple` attribute, inform the user that multiple values are allowed and provide directions on how to provide multiple values, such as "separate email addresses with a comma."
 
-Setting `size="1"` on a multiple select can make it appear as a single select in some browsers, but then it doesn't expand on focus, harming usability. Don't do that. If you do change the appearance of a select, and even if you don't, make sure to inform the user that more than one option can be selected by another method.
+Setting `size="1"` on a multiple select (i.e., `<select multiple size="1">`) renders a drop-down that lets users select multiple options. Some browsers don't expand the option list when the control is active, displaying multiple options in a menu list the height of a single-line box. This harms usability. When including a multiple-select, inform users they can select more than one option, even when multiple options are displayed.
 
 ## Examples
 
@@ -134,66 +134,56 @@ Some browsers support the appearance of the [`list`](/en-US/docs/Web/HTML/Refere
 When `multiple` is set on the {{HTMLElement("input/file", "file")}} input type, the user can select one or more files:
 
 ```html
-<form method="post" enctype="multipart/form-data">
-  <p>
-    <label for="uploads"> Choose the images you want to upload: </label>
-    <input
-      type="file"
-      id="uploads"
-      name="uploads"
-      accept=".jpg, .jpeg, .png, .svg, .gif"
-      multiple />
-  </p>
-  <p>
-    <label for="text">Pick a text file to upload: </label>
-    <input type="file" id="text" name="text" accept=".txt" />
-  </p>
-  <p>
-    <input type="submit" value="Submit" />
-  </p>
-</form>
+<p>
+  <label for="uploads"> Choose the images you want to upload: </label>
+  <input
+    type="file"
+    id="uploads"
+    name="uploads"
+    accept=".jpg, .jpeg, .png, .svg, .gif"
+    multiple />
+</p>
+<p>
+  <label for="text">Pick a text file to upload: </label>
+  <input type="file" id="text" name="text" accept=".txt" />
+</p>
 ```
 
 {{EmbedLiveSample("file_input", 600, 80) }}
 
 Note the difference in appearance between the example with `multiple` set and the other `file` input without.
 
-When the form is submitted, had we used [`method="get"`](/en-US/docs/Web/HTML/Reference/Elements/form) each selected file's name would have been added to URL parameters as `?uploads=img1.jpg&uploads=img2.svg`. However, since we are submitting multipart form data, we must use post. See the {{htmlelement('form')}} element and [sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#the_method_attribute) for more information.
+If these inputs are included in a form submitted using [`method="get"`](/en-US/docs/Web/HTML/Reference/Elements/form), each selected file's name is added to URL parameters as `?uploads=img1.jpg&uploads=img2.svg`. To submit the files as multipart form data, use `method="post"` and `enctype="multipart/form-data"`. See the {{htmlelement('form')}} element and [sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#the_method_attribute) for more information.
 
 ### select
 
 The `multiple` attribute on the {{HTMLElement("select")}} element represents a control for selecting zero or more options from the list of options. Otherwise, the {{HTMLElement("select")}} element represents a control for selecting a single {{HTMLElement("option")}} from the list of options. The control generally has a different appearance based on the presence of the multiple attribute, with most browsers displaying a scrolling list box instead of a single line dropdown when the attribute is present.
 
 ```html
-<form method="get" action="#">
-  <p>
-    <label for="dwarfs">Select the dwarf woodsman you like:</label>
-    <select multiple name="dwarfs" id="dwarfs">
-      <option>grumpy@woodworkers.com</option>
-      <option>happy@woodworkers.com</option>
-      <option>sleepy@woodworkers.com</option>
-      <option>bashful@woodworkers.com</option>
-      <option>sneezy@woodworkers.com</option>
-      <option>dopey@woodworkers.com</option>
-      <option>doc@woodworkers.com</option>
-    </select>
-  </p>
-  <p>
-    <label for="favoriteOnly">Select your favorite:</label>
-    <select name="favoriteOnly" id="favoriteOnly">
-      <option>grumpy@woodworkers.com</option>
-      <option>happy@woodworkers.com</option>
-      <option>sleepy@woodworkers.com</option>
-      <option>bashful@woodworkers.com</option>
-      <option>sneezy@woodworkers.com</option>
-      <option>dopey@woodworkers.com</option>
-      <option>doc@woodworkers.com</option>
-    </select>
-  </p>
-  <p>
-    <input type="submit" value="Submit" />
-  </p>
-</form>
+<p>
+  <label for="dwarfs">Select the dwarf woodsman you like:</label>
+  <select multiple name="dwarfs" id="dwarfs">
+    <option>grumpy@woodworkers.com</option>
+    <option>happy@woodworkers.com</option>
+    <option>sleepy@woodworkers.com</option>
+    <option>bashful@woodworkers.com</option>
+    <option>sneezy@woodworkers.com</option>
+    <option>dopey@woodworkers.com</option>
+    <option>doc@woodworkers.com</option>
+  </select>
+</p>
+<p>
+  <label for="favoriteOnly">Select your favorite:</label>
+  <select name="favoriteOnly" id="favoriteOnly">
+    <option>grumpy@woodworkers.com</option>
+    <option>happy@woodworkers.com</option>
+    <option>sleepy@woodworkers.com</option>
+    <option>bashful@woodworkers.com</option>
+    <option>sneezy@woodworkers.com</option>
+    <option>dopey@woodworkers.com</option>
+    <option>doc@woodworkers.com</option>
+  </select>
+</p>
 ```
 
 {{EmbedLiveSample("select", 600, 120) }}

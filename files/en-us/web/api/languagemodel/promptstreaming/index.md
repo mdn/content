@@ -89,7 +89,7 @@ Errors are surfaced as stream errors rather than as rejected promises. Consumers
     - A message's `prefix` property is set to `true` and:
       - The message's `role` is not `assistant`.
       - The message is not the last item in the messages array.
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if:
     - `omitResponseConstraintInput` is `true` but `responseConstraint` is not provided.
     - A message's `role` is `system` but it was not the first message passed to the context.
