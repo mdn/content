@@ -171,9 +171,9 @@ This includes the following information where `name`, `email`, `username`, and `
 - `picture` {{optional_inline}}
   - : The URL of the user's avatar image.
 - `approved_clients` {{optional_inline}}
-  - : An array of client IDs, each identifying an RP that the user has an account with (when a user [creates](/en-US/docs/Web/API/CredentialsContainer/create) a federated account, it is up to the IdP to add the RP's ID to this array). When a user tries to sign into an RP using federated identity, the browser checks the IdP's `approved_clients` array. If the RP's `clientId` is found in the array, no [disclosure text](/en-US/docs/Web/API/FedCM_API/RP_sign-in#fedcm_sign-in_flow:~:text=disclosure%20text) is displayed to the user, and they may also be able to take advantage of [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication).
+  - : An array of client IDs, each identifying an RP that the user has an account with. When a user tries to sign into an RP using federated identity, the browser checks the IdP's `approved_clients` array. If the RP's `clientId` is found in the array, no [disclosure text](/en-US/docs/Web/API/FedCM_API/RP_sign-in#fedcm_sign-in_flow:~:text=disclosure%20text) is displayed to the user, and they may also be able to take advantage of [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication).
 
-    An IdP will generally remove an RP client ID from `approved_clients` when a federated account is disconnected from the IdP used to obtain the credential. See [The disconnect endpoint](#the_disconnect_endpoint).
+    The IdP should add the RP ID to `approved_clients` when the user first registers on the RP using their federated credential, and should remove the RP ID from `approved_clients` when the RP account is [disconnected](#the_disconnect_endpoint) from the IdP.
 - `domain_hints` {{optional_inline}}
   - : An array of domains the account is associated with. The RP can make a `get()` call that includes a [`domainHint`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#domainhint) property to filter the returned accounts by domain.
 - `label_hints` {{optional_inline}}
