@@ -79,7 +79,7 @@ The properties are as follows:
 - `client_metadata_endpoint` {{optional_inline}}
   - : The URL for the client metadata endpoint, which provides URLs pointing to the RP's metadata and terms of service pages, to be used in the FedCM UI.
 - `disconnect_endpoint` {{optional_inline}}
-  - : The URL for the disconnect endpoint, which is used by the RP to disconnect from the IdP, via the {{domxref("IdentityCredential.disconnect_static", "IdentityCredential.disconnect()")}} method.
+  - : The URL for the [disconnect endpoint](#the_disconnect_endpoint), which is used by the RP to disconnect from the IdP, via the {{domxref("IdentityCredential.disconnect_static", "IdentityCredential.disconnect()")}} method.
 - `id_assertion_endpoint`
   - : The URL for the ID assertion endpoint, which when sent valid user credentials should respond with a validation token that the RP can use to validate the authentication.
 - `login_url`
@@ -171,7 +171,9 @@ This includes the following information where `name`, `email`, `username`, and `
 - `picture` {{optional_inline}}
   - : The URL of the user's avatar image.
 - `approved_clients` {{optional_inline}}
-  - : An array of RP clients that the user has registered with.
+  - : An array of client IDs, each identifying an RP that the user has an account with. When a user tries to sign into an RP using federated identity, the browser checks the IdP's `approved_clients` array. If the RP's `clientId` is found in the array, no [disclosure text](/en-US/docs/Web/API/FedCM_API/RP_sign-in#fedcm_sign-in_flow:~:text=disclosure%20text) is displayed to the user, and they may also be able to take advantage of [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication).
+
+    The IdP should add the RP ID to `approved_clients` when the user first registers on the RP using their federated credential, and should remove the RP ID from `approved_clients` when the RP account is [disconnected](#the_disconnect_endpoint) from the IdP.
 - `domain_hints` {{optional_inline}}
   - : An array of domains the account is associated with. The RP can make a `get()` call that includes a [`domainHint`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#domainhint) property to filter the returned accounts by domain.
 - `label_hints` {{optional_inline}}
@@ -233,7 +235,7 @@ Upon receiving the request, the IdP server should:
 2. Verify that the request contains a {{httpheader("Sec-Fetch-Dest")}} HTTP header with a directive of `webidentity`.
 3. Match the {{httpheader("Origin")}} header against the RP origin determined by the `client_id`. Reject the promise if they don't match.
 4. Find the account that matches the `account_hint`.
-5. Disconnect the user account from the list of RP's connected accounts.
+5. Disconnect the user account from the list of RP's connected accounts. This means removing its ID from the [`approved_clients`](#approved_clients) list.
 6. Respond with the identified user's `account_id` in JSON format:
 
    ```json
@@ -278,7 +280,9 @@ The request payload contains the following params:
 - `params` {{optional_inline}}
   - : The serialization of the `params` object from the original `get()` request.
 - `disclosure_text_shown`
-  - : A string of `"true"` or `"false"` indicating whether the disclosure text was shown or not. The disclosure text is the information shown to the user (which can include the terms of service and privacy policy links, if provided) if the user is signed in to the IdP but doesn't have an account specifically on the current RP (in which case they'd need to choose to "Continue as..." their IdP identity and then create a corresponding account on the RP).
+  - : A string of `"true"` or `"false"` indicating whether the [disclosure text](/en-US/docs/Web/API/FedCM_API/RP_sign-in#fedcm_sign-in_flow:~:text=disclosure%20text) was shown or not. The disclosure text is not shown if any of the following conditions are true:
+    - The RP's `clientId` was found inside the [`approved_clients`](#approved_clients) array contained in the JSON returned from the [accounts list endpoint](#the_accounts_list_endpoint).
+    - The browser has observed a sign-up by the same user in the recent past in the absence of `approved_clients`.
 - `is_auto_selected`
   - : A string of `"true"` or `"false"` indicating whether the authentication validation request has been issued as a result of [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication), i.e., without user mediation. This can occur when the {{domxref("CredentialsContainer.get", "get()")}} call is issued with a [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option value of `"optional"` or `"silent"`. It is useful for the IdP to know whether auto reauthentication occurred for performance evaluation and in case higher security is desired. For example, the IdP could return an error code telling the RP that it requires explicit user mediation (`mediation="required"`).
 
