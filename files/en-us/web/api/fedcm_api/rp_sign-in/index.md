@@ -12,9 +12,9 @@ This article describes the process by which a {{glossary("Relying party", "relyi
 
 RPs can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with an `identity` option to request that a user be given the option to sign in to the RP with a choice of existing IdP accounts. The IdPs identify the RP by its `clientId`, which was issued by each IdP to the RP in a separate IdP-specific process. The chosen IdP identifies the specific user who is attempting to sign-in with the credentials (cookies) provided to the browser during the [sign-in flow](#fedcm_sign-in_flow).
 
-If the user has never signed into an IdP or is logged out, `CredentialsContainer.get()` rejects with an error and the RP can direct the user to an IdP page to sign in or create an account.
+If the user is not signed into an IdP, the behavior depends on the request's [UI mode](#active_versus_passive_mode). In active mode, when [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) is not `"silent"`, the browser can give the user an opportunity to sign into the IdP before continuing the FedCM flow. In passive mode, the request may reject without offering an IdP login dialog. The RP should handle rejection, for example by directing the user to an IdP page to sign in or create an account.
 
-Otherwise, if the user identity is successfully validated by the chosen IdP, `CredentialsContainer.get()` returns a promise that fulfills with an {{domxref("IdentityCredential")}} object.
+If the user identity is successfully validated by the chosen IdP, the promise returned by `CredentialsContainer.get()` fulfills with an {{domxref("IdentityCredential")}} object.
 
 ### The `IdentityCredential.token` object
 
@@ -84,7 +84,7 @@ The flow is as follows:
 4. If the browser has an [IdP's login status](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) set to `"logged-in"`, it makes a credentialed request (i.e., with a cookie that identifies the user that is signed in) to the [`accounts_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint) inside the IdP config file for the user's account details. This is a `GET` request with cookies, but without a `client_id` parameter or the {{httpheader("Origin")}} header. This effectively prevents IdPs from learning which RP the user is trying to sign in to. As a result, the list of accounts returned is RP-agnostic.
 
    > [!NOTE]
-   > If the IdPs' login statuses are all `"logged-out"`, the `get()` call rejects with a `NetworkError` {{domxref("DOMException")}} and does not make a request to any IdP's `accounts_endpoint`. In this case it is up to the developer to handle the flow, for example by prompting the user to go and sign in to a suitable IdP. Note that there may be some delay in the rejection to avoid leaking IdP login status to the RP.
+   > A `"logged-out"` login status does not always cause the request to fail. In active mode with non-silent mediation, the browser can first show an IdP login dialog. If the user successfully signs in, the flow can continue with a request to the IdP's `accounts_endpoint`. If the request cannot proceed, the `get()` promise rejects and the RP must handle the failure. There may be a delay in rejection to avoid leaking IdP login status to the RP.
 
 5. The IdPs respond with the account information requested from their `accounts_endpoint`s. These are arrays of all accounts associated with the user's IdP cookies for any RPs associated with an IdP.
 
@@ -118,7 +118,7 @@ There are two different UI modes the browser can provide to an RP user when they
 async function signIn() {
   const identityCredential = await navigator.credentials.get({
     identity: {
-      mode: active,
+      mode: "active",
       providers: [
         {
           configURL: "https://accounts.idp.example/config.json",
@@ -130,9 +130,11 @@ async function signIn() {
 }
 ```
 
-The default value for `mode` is `passive`. If `mode` is not set, or is set explicitly to `passive`, the browser can initiate the sign-in flow via a `get()` call without direct user interaction. For example, you might want to initiate the sign-in flow as soon as the user navigates to the sign-in page, provided they have IdP accounts to sign in with. In this mode, browsers typically present the user with a sign-in dialog window containing all the different sign-in options specified in the `providers` object, and they can choose whichever one suits them best and then enter the appropriate credentials.
+The default value for `mode` is `passive`. If `mode` is not set, or is set explicitly to `passive`, the browser can initiate the sign-in flow via a `get()` call without direct user interaction. For example, you might want to initiate the sign-in flow as soon as the user navigates to the sign-in page, provided they have IdP accounts to sign in with. In this mode, browsers typically offer accounts the user is already signed into at the IdPs specified in the `providers` array. The browser may choose not to show any UI, so the RP should not rely on this mode to prompt a logged-out user to sign into an IdP.
 
-If `mode` is set to `active`, the browser requires the sign-in flow to be initiated via a user action such as clicking a button ({{glossary("transient activation")}} is required), and the `providers` object can only have a length of `1`, otherwise the `get()` promise will reject. This mode is typically used when the RP wishes to provide a separate button for each IdP choice. When the user clicks one of those buttons, a simplified dialog window appears that just requires them to enter the credentials for that account.
+If `mode` is set to `active`, the browser requires the sign-in flow to be initiated via a user action such as clicking a button ({{glossary("transient activation")}} is required), and the `providers` array can only have a length of `1`, otherwise the `get()` promise will reject. This mode is typically used when the RP wishes to provide a separate button for each IdP choice.
+
+Active mode also lets the user sign into the selected IdP as part of the FedCM flow. If the user is logged out and `mediation` is not `"silent"`, the browser can open the IdP's login page in a dialog before requesting the user's accounts. After a successful IdP login, the user can continue signing into the RP. Cancelling the login or failing to sign in can cause the `get()` promise to reject; active mode does not guarantee a successful sign-in. The dialog's appearance is browser-dependent.
 
 See [FedCM UI modes](https://developer.chrome.com/docs/identity/fedcm/overview#fedcm_ui_modes) on developer.chrome.com for an example of how the different UI modes are presented in Google Chrome.
 
