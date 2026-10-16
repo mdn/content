@@ -9,7 +9,7 @@ browser-compat: api.CSSFunctionDescriptors
 
 {{ APIRef("CSSOM") }}{{SeeCompatTable}}
 
-The **`CSSFunctionDescriptors`** interface of the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) represents the descriptors contained within a set of CSS declarations represented by a {{domxref("CSSFunctionDeclarations")}} object.
+The **`CSSFunctionDescriptors`** interface of the of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) represents the descriptors contained within a set of CSS declarations represented by a {{domxref("CSSFunctionDeclarations")}} object.
 
 A `CSSFunctionDescriptors` object is accessed via the {{domxref("CSSFunctionDeclarations.style")}} property.
 
