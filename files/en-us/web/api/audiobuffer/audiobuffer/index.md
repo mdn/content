@@ -30,10 +30,7 @@ new AudioBuffer(options)
       - : The number of channels for the buffer. The
         default is 1, and all user agents are required to support at least 32 channels.
     - `sampleRate`
-      - : The sample rate in Hz for the buffer. The default is
-        the sample rate of the `context` used in constructing this object. User
-        agents are required to support sample rates from 8,000 Hz to 96,000 Hz (but are
-        allowed to go farther outside this range).
+      - : The sample rate in Hz for the buffer. User agents are required to support sample rates from 8,000 Hz to 96,000 Hz (but are allowed to go farther outside this range).
 
 ### Exceptions
 
