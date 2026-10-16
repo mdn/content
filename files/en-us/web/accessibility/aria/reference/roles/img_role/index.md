@@ -134,3 +134,5 @@ From the assistive technology user's perspective, the heading does not exist sin
 - [ARIA: `presentation` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role)
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)
+- [ARIA: `graphics-document` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-document_role)
+- [ARIA: `graphics-symbol` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-symbol_role)

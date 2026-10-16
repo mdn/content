@@ -102,7 +102,7 @@ The same click also makes the privileged tab properties readable, so `tab.url` a
 
 ### Further examples
 
-These further examples showing the use of declare the `activeTab` permission are available in the repository of example extensions at <https://github.com/mdn/webextensions-examples>. :
+These further examples, available in the repository of example extensions at <https://github.com/mdn/webextensions-examples>, use the `activeTab` permission:
 
 <table>
   <thead>
@@ -176,6 +176,18 @@ These further examples showing the use of declare the `activeTab` permission are
       <td>
         A menu item click unlocks page access to inject a script that removes
         the element under the cursor.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/webextensions-examples/tree/main/script-on-click/"
+          >script-on-click</a
+        >
+      </td>
+      <td>
+        A toolbar button click grants access for
+        {{WebExtAPIRef("scripting.executeScript()")}} to run a script in the
+        active tab, without host permissions.
       </td>
     </tr>
   </tbody>
