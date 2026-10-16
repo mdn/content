@@ -10,7 +10,9 @@ browser-compat: api.TaskAttributionTiming.toJSON
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The **`toJSON()`** method of the {{domxref("TaskAttributionTiming")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("TaskAttributionTiming")}} object.
+The **`toJSON()`** method of the {{domxref("TaskAttributionTiming")}} interface returns a JSON-serializable plain object representing the `TaskAttributionTiming` object.
+
+The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `TaskAttributionTiming` object is stringified. This method is generally intended to, by default, usefully serialize `TaskAttributionTiming` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -24,25 +26,50 @@ None.
 
 ### Return value
 
-A {{jsxref("JSON")}} object that is the serialization of the {{domxref("TaskAttributionTiming")}} object.
+A JSON-serializable plain object, containing the following properties:
+
+- {{domxref("PerformanceEntry/name", "name")}}
+- {{domxref("PerformanceEntry/entryType", "entryType")}}
+- {{domxref("PerformanceEntry/startTime", "startTime")}}
+- {{domxref("PerformanceEntry/duration", "duration")}}
+- {{domxref("PerformanceEntry/navigationId", "navigationId")}}
+- {{domxref("TaskAttributionTiming/containerType", "containerType")}}
+- {{domxref("TaskAttributionTiming/containerSrc", "containerSrc")}}
+- {{domxref("TaskAttributionTiming/containerId", "containerId")}}
+- {{domxref("TaskAttributionTiming/containerName", "containerName")}}
+
+Each property's value is copied as-is.
 
 ## Examples
 
-### Using the toJSON method
+### Calling toJSON() directly
 
-In this example, calling `entry.toJSON()` returns a JSON representation of the `TaskAttributionTiming` object.
+This example obtains a `TaskAttributionTiming` object. Calling `toJSON()` directly returns a plain object. You can access its properties, which is the same as accessing them on the original object.
 
 ```js
 const observer = new PerformanceObserver((list) => {
   list.getEntries().forEach((entry) => {
-    console.log(entry.toJSON());
+    entry.attribution.forEach((attribution) => {
+      const json = attribution.toJSON();
+      console.log(json); // A plain object
+      console.log(typeof json); // "object"
+      console.log(json.containerType); // Same value as attribution.containerType
+    });
   });
 });
 
-observer.observe({ type: "taskattribution", buffered: true });
+observer.observe({ type: "longtask", buffered: true });
 ```
 
-This would log a JSON object like so:
+### Serializing to a JSON string
+
+Within the callback from the previous example, the same object can be serialized using {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method automatically.
+
+```js
+console.log(JSON.stringify(attribution));
+```
+
+This would log a JSON string like so (formatted for readability):
 
 ```json
 {
@@ -56,8 +83,6 @@ This would log a JSON object like so:
   "containerName": ""
 }
 ```
-
-To get a JSON string, you can use [`JSON.stringify(entry)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) directly; it will call `toJSON()` automatically.
 
 ## Specifications
 

@@ -10,7 +10,9 @@ browser-compat: api.PerformanceSoftNavigation.toJSON
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The **`toJSON()`** method of the {{domxref("PerformanceSoftNavigation")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PerformanceSoftNavigation")}} object.
+The **`toJSON()`** method of the {{domxref("PerformanceSoftNavigation")}} interface returns a JSON-serializable plain object representing the `PerformanceSoftNavigation` object.
+
+The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceSoftNavigation` object is stringified. This method is generally intended to, by default, usefully serialize `PerformanceSoftNavigation` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -24,41 +26,62 @@ None.
 
 ### Return value
 
-A {{jsxref("JSON")}} object that is the serialization of the {{domxref("PerformanceSoftNavigation")}} object.
+A JSON-serializable plain object, containing the following properties:
+
+- {{domxref("PerformanceEntry/name", "name")}}
+- {{domxref("PerformanceEntry/entryType", "entryType")}}
+- {{domxref("PerformanceEntry/startTime", "startTime")}}
+- {{domxref("PerformanceEntry/duration", "duration")}}
+- {{domxref("PerformanceEntry/navigationId", "navigationId")}}
+- {{domxref("PerformanceSoftNavigation/paintTime", "paintTime")}}
+- {{domxref("PerformanceSoftNavigation/presentationTime", "presentationTime")}}
+- {{domxref("PerformanceSoftNavigation/navigationType", "navigationType")}}
+- {{domxref("PerformanceSoftNavigation/interactionId", "interactionId")}}
+
+Each property's value is copied as-is.
 
 ## Examples
 
-### Using the toJSON method
+### Calling toJSON() directly
 
-In this example, calling `entry.toJSON()` returns a JSON representation of the `PerformanceSoftNavigation` object.
+This example obtains a `PerformanceSoftNavigation` object. Calling `toJSON()` directly returns a plain object. You can access its properties, which is the same as accessing them on the original object.
 
 ```js
 const observer = new PerformanceObserver((list) => {
   list.getEntries().forEach((entry) => {
-    console.log(entry.toJSON());
+    const json = entry.toJSON();
+    console.log(json); // A plain object
+    console.log(typeof json); // "object"
+    console.log(json.navigationType); // Same value as entry.navigationType
   });
 });
 
 observer.observe({ type: "soft-navigation", buffered: true });
 ```
 
-This would log a JSON object like so:
+### Serializing to a JSON string
+
+Within the callback from the previous example, the same object can be serialized using {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method automatically.
+
+```js
+console.log(JSON.stringify(entry));
+```
+
+This would log a JSON string like so (formatted for readability):
 
 ```json
 {
-  "duration": 41.4,
-  "entryType": "soft-navigation",
-  "interactionId": 1704,
   "name": "https://www.example.com/#2",
+  "entryType": "soft-navigation",
+  "startTime": 2226.6,
+  "duration": 41.4,
   "navigationId": 2463,
-  "navigationType": "push",
   "paintTime": 2232.4,
   "presentationTime": 2268,
-  "startTime": 2226.6
+  "navigationType": "push",
+  "interactionId": 1704
 }
 ```
-
-To get a JSON string, you can use [`JSON.stringify(entry)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) directly; it will call `toJSON()` automatically.
 
 ## Specifications
 

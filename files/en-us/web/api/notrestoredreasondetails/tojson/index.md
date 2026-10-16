@@ -11,7 +11,9 @@ spec-urls: https://html.spec.whatwg.org/multipage/nav-history-apis.html#notresto
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The **`toJSON()`** method of the {{domxref("NotRestoredReasonDetails")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("NotRestoredReasonDetails")}} object.
+The **`toJSON()`** method of the {{domxref("NotRestoredReasonDetails")}} interface returns a JSON-serializable plain object representing the `NotRestoredReasonDetails` object.
+
+The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `NotRestoredReasonDetails` object is stringified. This method is generally intended to, by default, usefully serialize `NotRestoredReasonDetails` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -25,17 +27,42 @@ None.
 
 ### Return value
 
-A {{jsxref("JSON")}} object that is the serialization of the {{domxref("NotRestoredReasonDetails")}} object.
+A JSON-serializable plain object, containing the following properties:
+
+- {{domxref("NotRestoredReasonDetails/reason", "reason")}}
+
+Each property's value is copied as-is.
 
 ## Examples
 
-The following function will return a JSON representation of the first `NotRestoredReasonDetails` object of the `NotRestoredReasons` object from the first `PerformanceNavigationTiming` object currently present in the performance timeline:
+### Calling toJSON() directly
+
+This example obtains a `NotRestoredReasonDetails` object from the first navigation entry. Calling `toJSON()` directly returns a plain object. You can access its properties, which is the same as accessing them on the original object.
 
 ```js
-function returnNRR() {
-  const navEntries = performance.getEntriesByType("navigation");
-  let navEntry = navEntries[0];
-  return navEntry.notRestoredReasons.reasons[0].toJSON();
+const navEntries = performance.getEntriesByType("navigation");
+const navEntry = navEntries[0];
+const reason = navEntry.notRestoredReasons.reasons[0];
+
+const json = reason.toJSON();
+console.log(json); // A plain object
+console.log(typeof json); // "object"
+console.log(json.reason); // Same value as reason.reason
+```
+
+### Serializing to a JSON string
+
+The object from the previous example is automatically serialized by {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method.
+
+```js
+console.log(JSON.stringify(reason));
+```
+
+This would log a JSON string like so (formatted for readability):
+
+```json
+{
+  "reason": "masked"
 }
 ```
 
