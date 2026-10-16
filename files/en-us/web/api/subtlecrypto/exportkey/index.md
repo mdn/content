@@ -35,6 +35,8 @@ exportKey(format, key)
 - `format`
   - : A string value describing the data format in which the key should be exported. It can be one of the following:
     - `raw`: [Raw](/en-US/docs/Web/API/SubtleCrypto/importKey#raw) format.
+    - `raw-public` {{experimental_inline}}: [Raw public](/en-US/docs/Web/API/SubtleCrypto/importKey#raw_public) format.
+    - `raw-seed` {{experimental_inline}}: [Raw seed](/en-US/docs/Web/API/SubtleCrypto/importKey#raw_seed) format.
     - `pkcs8`: [PKCS #8](/en-US/docs/Web/API/SubtleCrypto/importKey#pkcs_8) format.
     - `spki`: [SubjectPublicKeyInfo](/en-US/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo) format.
     - `jwk`: [JSON Web Key](/en-US/docs/Web/API/SubtleCrypto/importKey#json_web_key) format.

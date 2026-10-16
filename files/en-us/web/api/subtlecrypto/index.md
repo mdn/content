@@ -54,6 +54,14 @@ _This interface doesn't inherit any methods, as it has no parent interface._
   - : Returns a {{jsxref("Promise")}} that fulfills with a wrapped symmetric key for usage (transfer and storage) in insecure environments. The wrapped key matches the format specified in the given parameters, and wrapping is done by the given wrapping key, using the specified algorithm.
 - {{domxref("SubtleCrypto.unwrapKey()")}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("CryptoKey")}} corresponding to the wrapped key given in the parameter.
+- {{domxref("SubtleCrypto.encapsulateKey()")}} {{experimental_inline}}
+  - : Returns a {{jsxref("Promise")}} that fulfills with a new shared key, as a {{domxref("CryptoKey")}}, and a ciphertext from which the owner of the private key matching the given public key can recover it.
+- {{domxref("SubtleCrypto.encapsulateBits()")}} {{experimental_inline}}
+  - : Returns a {{jsxref("Promise")}} that fulfills with a new shared secret, as an {{jsxref("ArrayBuffer")}}, and a ciphertext from which the owner of the private key matching the given public key can recover it.
+- {{domxref("SubtleCrypto.decapsulateKey()")}} {{experimental_inline}}
+  - : Returns a {{jsxref("Promise")}} that fulfills with the shared key, as a {{domxref("CryptoKey")}}, recovered from the given ciphertext and private key.
+- {{domxref("SubtleCrypto.decapsulateBits()")}} {{experimental_inline}}
+  - : Returns a {{jsxref("Promise")}} that fulfills with the shared secret, as an {{jsxref("ArrayBuffer")}}, recovered from the given ciphertext and private key.
 
 ## Using SubtleCrypto
 
@@ -76,6 +84,10 @@ Except for {{DOMxRef("SubtleCrypto.digest","digest()")}}, all the cryptography f
 The {{DOMxRef("SubtleCrypto.generateKey","generateKey()")}} and {{DOMxRef("SubtleCrypto.deriveKey","deriveKey()")}} functions both create a new {{DOMxRef("CryptoKey")}} object.
 
 The difference is that `generateKey()` will generate a new distinct key value each time you call it, while `deriveKey()` derives a key from some initial keying material. If you provide the same keying material to two separate calls to `deriveKey()`, you will get two `CryptoKey` objects that have the same underlying value. This is useful if, for example, you want to derive an encryption key from a password and later derive the same key from the same password to decrypt the data.
+
+#### Encapsulating keys
+
+The {{DOMxRef("SubtleCrypto.encapsulateKey","encapsulateKey()")}} and {{DOMxRef("SubtleCrypto.decapsulateKey","decapsulateKey()")}} functions let two parties agree on a shared key. The sender passes the recipient's public key to `encapsulateKey()`, which returns a new shared key and a ciphertext. The sender sends the ciphertext to the recipient, who passes it to `decapsulateKey()` along with their private key, to get the same shared key. The {{DOMxRef("SubtleCrypto.encapsulateBits","encapsulateBits()")}} and {{DOMxRef("SubtleCrypto.decapsulateBits","decapsulateBits()")}} functions work the same way, but return the shared secret as bytes instead of a `CryptoKey`.
 
 #### Importing and exporting keys
 
@@ -120,6 +132,9 @@ The table below summarizes which algorithms are suitable for which cryptographic
         <a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey">wrapKey</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/unwrapKey">unwrapKey</a>
       </th>
       <th scope="col">
+        <a href="/en-US/docs/Web/API/SubtleCrypto/encapsulateKey">encapsulateKey</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/encapsulateBits">encapsulateBits</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/decapsulateKey">decapsulateKey</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/decapsulateBits">decapsulateBits</a>
+      </th>
+      <th scope="col">
         <a href="/en-US/docs/Web/API/SubtleCrypto/generateKey">generateKey</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/exportKey">exportKey</a>
       </th>
       <th scope="col">
@@ -135,12 +150,14 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td></td>
       <td></td>
+      <td></td>
       <td>✓</td>
       <td>✓</td>
     </tr>
     <tr>
       <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss">RSA-PSS</a></th>
       <td>✓</td>
+      <td></td>
       <td></td>
       <td></td>
       <td></td>
@@ -155,12 +172,14 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td></td>
       <td></td>
+      <td></td>
       <td>✓</td>
       <td>✓</td>
     </tr>
     <tr>
       <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/sign#ed25519">Ed25519</a></th>
       <td>✓</td>
+      <td></td>
       <td></td>
       <td></td>
       <td></td>
@@ -175,6 +194,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td></td>
       <td></td>
+      <td></td>
       <td>✓</td>
       <td>✓</td>
     </tr>
@@ -185,6 +205,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td></td>
       <td>✓</td>
+      <td></td>
       <td>✓</td>
       <td>✓</td>
     </tr>
@@ -195,6 +216,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td></td>
       <td>✓</td>
+      <td></td>
       <td>✓</td>
       <td>✓</td>
     </tr>
@@ -205,6 +227,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td></td>
       <td>✓</td>
+      <td></td>
       <td>✓</td>
       <td>✓</td>
     </tr>
@@ -215,6 +238,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td></td>
       <td>✓</td>
+      <td></td>
       <td>✓</td>
       <td>✓</td>
     </tr>
@@ -225,6 +249,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td></td>
       <td>✓</td>
+      <td></td>
       <td>✓</td>
       <td>✓</td>
     </tr>
@@ -233,6 +258,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td></td>
       <td>✓</td>
+      <td></td>
       <td></td>
       <td></td>
       <td></td>
@@ -247,12 +273,14 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td></td>
       <td></td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms">SHA-384</a></th>
       <td></td>
       <td></td>
       <td>✓</td>
+      <td></td>
       <td></td>
       <td></td>
       <td></td>
@@ -267,6 +295,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td></td>
       <td></td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh">ECDH</a></th>
@@ -274,6 +303,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td></td>
       <td>✓</td>
+      <td></td>
       <td></td>
       <td>✓</td>
       <td>✓</td>
@@ -284,6 +314,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td></td>
       <td>✓</td>
+      <td></td>
       <td></td>
       <td>✓</td>
       <td>✓</td>
@@ -296,6 +327,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td>✓</td>
       <td></td>
       <td></td>
+      <td></td>
       <td>✓</td>
     </tr>
     <tr>
@@ -306,6 +338,18 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td>✓</td>
       <td></td>
       <td></td>
+      <td></td>
+      <td>✓</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/encapsulateKey#ml-kem">ML-KEM</a></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>✓</td>
+      <td>✓</td>
       <td>✓</td>
     </tr>
   </tbody>

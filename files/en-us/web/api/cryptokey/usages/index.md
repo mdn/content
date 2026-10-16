@@ -22,6 +22,10 @@ An {{jsxref("Array")}} of strings from the following list:
 - `"deriveBits"`: The key may be used in [deriving bits](/en-US/docs/Web/API/SubtleCrypto/deriveBits).
 - `"wrapKey"`: The key may be used to [wrap a key](/en-US/docs/Web/API/SubtleCrypto/wrapKey).
 - `"unwrapKey"`: The key may be used to [unwrap a key](/en-US/docs/Web/API/SubtleCrypto/unwrapKey).
+- `"encapsulateKey"` {{experimental_inline}}: The key may be used to [encapsulate a key](/en-US/docs/Web/API/SubtleCrypto/encapsulateKey).
+- `"encapsulateBits"` {{experimental_inline}}: The key may be used to [encapsulate bits](/en-US/docs/Web/API/SubtleCrypto/encapsulateBits).
+- `"decapsulateKey"` {{experimental_inline}}: The key may be used to [decapsulate a key](/en-US/docs/Web/API/SubtleCrypto/decapsulateKey).
+- `"decapsulateBits"` {{experimental_inline}}: The key may be used to [decapsulate bits](/en-US/docs/Web/API/SubtleCrypto/decapsulateBits).
 
 ## Examples
 

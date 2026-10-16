@@ -23,6 +23,8 @@ importKey(format, keyData, algorithm, extractable, keyUsages)
 - `format`
   - : A string describing the data format of the key to import. It can be one of the following:
     - `raw`: [Raw](#raw) format.
+    - `raw-public` {{experimental_inline}}: [Raw public](#raw_public) format.
+    - `raw-seed` {{experimental_inline}}: [Raw seed](#raw_seed) format.
     - `pkcs8`: [PKCS #8](#pkcs_8) format.
     - `spki`: [SubjectPublicKeyInfo](#subjectpublickeyinfo) format.
     - `jwk`: [JSON Web Key](#json_web_key) format.
@@ -46,6 +48,7 @@ importKey(format, keyData, algorithm, extractable, keyUsages)
     - For [HKDF](/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf): pass the string `HKDF` or an object of the form `{ name: "HKDF" }`.
     - For [Ed25519](/en-US/docs/Web/API/SubtleCrypto/sign#ed25519): pass the string `Ed25519` or an object of the form `{ name: "Ed25519" }`.
     - For [X25519](/en-US/docs/Web/API/SubtleCrypto/deriveKey#x25519): pass the string `X25519` or an object of the form `{ name: "X25519" }`.
+    - For [ML-KEM](/en-US/docs/Web/API/SubtleCrypto/encapsulateKey#ml-kem): pass the string `ML-KEM-512`, `ML-KEM-768`, or `ML-KEM-1024`, or an object of the form `{ name: "ML-KEM-768" }`.
 - `extractable`
   - : A boolean value indicating whether it will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or {{domxref("SubtleCrypto.wrapKey()")}}.
 - `keyUsages`
@@ -58,6 +61,10 @@ importKey(format, keyData, algorithm, extractable, keyUsages)
     - `deriveBits`: The key may be used in [deriving bits](/en-US/docs/Web/API/SubtleCrypto/deriveBits).
     - `wrapKey`: The key may be used to [wrap a key](/en-US/docs/Web/API/SubtleCrypto/wrapKey).
     - `unwrapKey`: The key may be used to [unwrap a key](/en-US/docs/Web/API/SubtleCrypto/unwrapKey).
+    - `encapsulateKey` {{experimental_inline}}: The key may be used to [encapsulate a key](/en-US/docs/Web/API/SubtleCrypto/encapsulateKey).
+    - `encapsulateBits` {{experimental_inline}}: The key may be used to [encapsulate bits](/en-US/docs/Web/API/SubtleCrypto/encapsulateBits).
+    - `decapsulateKey` {{experimental_inline}}: The key may be used to [decapsulate a key](/en-US/docs/Web/API/SubtleCrypto/decapsulateKey).
+    - `decapsulateBits` {{experimental_inline}}: The key may be used to [decapsulate bits](/en-US/docs/Web/API/SubtleCrypto/decapsulateBits).
 
 ### Return value
 
@@ -74,7 +81,7 @@ The promise is rejected when one of the following exceptions is encountered:
 
 ## Supported formats
 
-This API supports four different key import/export formats: Raw, PKCS #8, SubjectPublicKeyInfo, and JSON Web Key.
+This API supports the following key import/export formats: Raw, Raw public, Raw seed, PKCS #8, SubjectPublicKeyInfo, and JSON Web Key.
 
 ### Raw
 
@@ -84,9 +91,21 @@ In this format the key is supplied as an [`ArrayBuffer`](/en-US/docs/Web/JavaScr
 
 Note that when importing Elliptic Curve public keys, the data may contain _compressed_ elliptic curve points.
 
+### Raw public
+
+You can use this format to import or export [ML-KEM](/en-US/docs/Web/API/SubtleCrypto/encapsulateKey#ml-kem) public keys.
+
+In this format the key is supplied as an {{jsxref("ArrayBuffer")}} containing the raw bytes of the public key. The length depends on the algorithm: 800 bytes for `ML-KEM-512`, 1184 bytes for `ML-KEM-768`, and 1568 bytes for `ML-KEM-1024`.
+
+### Raw seed
+
+You can use this format to import or export [ML-KEM](/en-US/docs/Web/API/SubtleCrypto/encapsulateKey#ml-kem) private keys.
+
+An ML-KEM key pair is generated from a 64-byte random _seed_, and the same seed always produces the same key pair. In this format the private key is supplied as an {{jsxref("ArrayBuffer")}} containing the 64 bytes of this seed, for all three ML-KEM algorithms. A seed of any other length is rejected with a `DataError`. The imported key is a private key: keep the seed as secret as the key itself.
+
 ### PKCS #8
 
-You can use this format to import or export RSA or Elliptic Curve private keys.
+You can use this format to import or export RSA, Elliptic Curve, or [ML-KEM](/en-US/docs/Web/API/SubtleCrypto/encapsulateKey#ml-kem) private keys.
 
 The PKCS #8 format is defined in [RFC 5208](https://datatracker.ietf.org/doc/html/rfc5208), using the [ASN.1 notation](https://en.wikipedia.org/wiki/ASN.1):
 
@@ -123,7 +142,7 @@ See the [Examples](#examples) section for more concrete guidance.
 
 ### SubjectPublicKeyInfo
 
-You can use this format to import or export RSA or Elliptic Curve public keys.
+You can use this format to import or export RSA, Elliptic Curve, or [ML-KEM](/en-US/docs/Web/API/SubtleCrypto/encapsulateKey#ml-kem) public keys.
 
 `SubjectPublicKey` is defined in [RFC 5280, Section 4.1](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1) using the [ASN.1 notation](https://en.wikipedia.org/wiki/ASN.1):
 
@@ -159,7 +178,7 @@ See the [Examples](#examples) section for more concrete guidance.
 
 ### JSON Web Key
 
-You can use JSON Web Key format to import or export RSA or Elliptic Curve public or private keys, as well as AES and HMAC secret keys.
+You can use JSON Web Key format to import or export RSA, Elliptic Curve, or [ML-KEM](/en-US/docs/Web/API/SubtleCrypto/encapsulateKey#ml-kem) public or private keys, as well as AES and HMAC secret keys. ML-KEM keys use the `AKP` key type, defined in {{rfc("9964")}}, with the algorithm name in the `alg` property, the public key in the `pub` property, and, for a private key, the seed in the `priv` property.
 
 JSON Web Key format is defined in [RFC 7517](https://datatracker.ietf.org/doc/html/rfc7517).
 It describes a way to represent public, private, and secret keys as JSON objects.
@@ -334,6 +353,40 @@ function importPrivateKey(jwk) {
     },
     true,
     ["sign"],
+  );
+}
+```
+
+### ML-KEM key import
+
+This code imports an ML-KEM-768 key pair from the bytes of the public key, in raw public format, and the 64-byte seed of the private key, in raw seed format. The bytes could come from an earlier call to {{domxref("SubtleCrypto.exportKey()")}} with the same formats.
+
+```js
+/*
+Import an ML-KEM-768 public key, to use for key encapsulation.
+Takes an ArrayBuffer containing the bytes of the public key.
+*/
+function importPublicKey(publicKeyBytes) {
+  return window.crypto.subtle.importKey(
+    "raw-public",
+    publicKeyBytes,
+    { name: "ML-KEM-768" },
+    true,
+    ["encapsulateKey"],
+  );
+}
+
+/*
+Import an ML-KEM-768 private key, to use for key decapsulation.
+Takes an ArrayBuffer containing the 64-byte seed of the private key.
+*/
+function importPrivateKey(seed) {
+  return window.crypto.subtle.importKey(
+    "raw-seed",
+    seed,
+    { name: "ML-KEM-768" },
+    false,
+    ["decapsulateKey"],
   );
 }
 ```
