@@ -76,11 +76,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 
 ## Examples
 
-In the following example you can see
-the {{domxref("IDBOpenDBRequest.upgradeneeded_event", "onupgradeneeded")}} handler being used to update the
-database structure if a database with a higher version number is loaded.
-`createIndex()` is used to create new indexes on the object store. For a
-full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+In the following example you can see the {{domxref("IDBOpenDBRequest.upgradeneeded_event", "onupgradeneeded")}} handler being used to update the database structure if a database with a higher version number is loaded. `createIndex()` is used to create new indexes on the object store. For a complete working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 let db;
@@ -151,4 +147,3 @@ DBOpenRequest.onupgradeneeded = (event) => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

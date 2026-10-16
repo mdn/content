@@ -27,7 +27,7 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
-This example opens a database and, on success, adds a listener to `versionchange`:
+This example opens a database and, on success, adds a listener to `versionchange`. For a complete working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // Open the database

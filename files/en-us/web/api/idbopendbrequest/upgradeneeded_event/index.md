@@ -30,7 +30,7 @@ An {{domxref("IDBVersionChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Examples
 
-This example opens a database and handles the `upgradeneeded` event by making any necessary updates to the object store.
+This example opens a database and handles the `upgradeneeded` event by making any necessary updates to the object store. For a complete working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // Open the database
