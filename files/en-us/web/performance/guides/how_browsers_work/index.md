@@ -94,7 +94,7 @@ A buffer is used to mitigate problems caused by a busy network. The server keeps
 
 In order to balance the number of transmitted segments, the {{glossary('TCP slow start')}} algorithm is used to gradually increase the amount of transmitted data until the maximum network bandwidth can be determined, and to reduce the amount of transmitted data in case of high network load.
 
-The number of segments to be transmitted is controlled by the value of the congestion window (CWND). For more details about TCP congestion control, see [RFC 5681](https://www.rfc-editor.org/rfc/rfc5681.html).
+Specifically, the number of segments to be transmitted is controlled by the value of the congestion window (CWND). For more details about TCP congestion control, see [RFC 5681](https://www.rfc-editor.org/rfc/rfc5681.html).
 
 ## Parsing
 
