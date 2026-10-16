@@ -34,6 +34,8 @@ The **`Sanitizer`** interface of the [HTML Sanitizer API](/en-US/docs/Web/API/HT
   - : Sets whether comments will be allowed or removed by the sanitizer.
 - {{domxref('Sanitizer.setDataAttributes()')}}
   - : Sets whether data attributes on elements will be allowed or removed by the sanitizer.
+- {{domxref('Sanitizer.setJavascriptURLs()')}} {{experimental_inline}}
+  - : Sets whether attributes that contain `javascript:` URLs will be allowed or removed by the sanitizer.
 
 ## Description
 
