@@ -3,6 +3,8 @@ title: XSLT elements reference
 short-title: Elements
 slug: Web/XML/XSLT/Reference/Element
 page-type: landing-page
+status:
+  - deprecated
 sidebar: xmlsidebar
 ---
 

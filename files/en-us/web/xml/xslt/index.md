@@ -3,8 +3,13 @@ title: "XSLT: Extensible Stylesheet Language Transformations"
 short-title: XSLT
 slug: Web/XML/XSLT
 page-type: landing-page
+status:
+  - deprecated
 sidebar: xmlsidebar
 ---
+
+> [!WARNING]
+> XSLT support in web browsers is deprecated across major browser engines (including Chromium, Gecko, and WebKit) and is planned for removal from the web platform. Avoid using XSLT in new projects, and migrate existing implementations to modern JavaScript or server-side alternatives. Note that [XPath](/en-US/docs/Web/XML/XPath) remains supported and is not being removed.
 
 **Extensible Stylesheet Language Transformations (XSLT)** is an [XML](/en-US/docs/Web/XML/Guides/XML_introduction)-based language used, in conjunction with specialized processing software, for the transformation of XML documents.
 

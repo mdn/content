@@ -3,6 +3,8 @@ title: XSLT reference
 short-title: Reference
 slug: Web/XML/XSLT/Reference
 page-type: listing-page
+status:
+  - deprecated
 sidebar: xmlsidebar
 ---
 

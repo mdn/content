@@ -3,6 +3,8 @@ title: XSLT guides
 short-title: Guides
 slug: Web/XML/XSLT/Guides
 page-type: listing-page
+status:
+  - deprecated
 sidebar: xmlsidebar
 ---
 
