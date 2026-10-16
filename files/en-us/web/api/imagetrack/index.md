@@ -19,7 +19,7 @@ The **`ImageTrack`** interface of the {{domxref('WebCodecs API','','','true')}} 
   - : Returns an integer indicating the number of frames in the track.
 - {{domxref("ImageTrack.repetitionCount")}} {{ReadOnlyInline}}
   - : Returns an integer indicating the number of times that the animation repeats.
-- {{domxref("ImageTrack.selected")}} {{ReadOnlyInline}}
+- {{domxref("ImageTrack.selected")}}
   - : Returns a {{jsxref("Boolean")}} indicating whether the track is selected for decoding.
 
 ## Specifications
