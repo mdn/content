@@ -51,7 +51,7 @@ If the number of values exceeds the number of gaps, the excess values are ignore
 
 If there are more gaps than values, the list is cycled. In a 10x10 grid container, there are nine gaps in each direction. In this case, the last rules are blue; the first eight row and column rules are each assigned the associated color, then the list cycles, so the ninth row and column rules get the first value in the list.
 
-Here, with only three rows, only two values are uses, while the list is cycled to provide `<color>` values to each of the twelve column rules.
+Here, with only three rows, only two values are used to color the row gaps, while the list is cycled to provide `<color>` values to each of the eleven column rules.
 
 ```css hidden live-sample___regular
 div {
@@ -155,7 +155,7 @@ These properties are all specified as a comma-separated list of values, which ca
 
 As with {{cssxref("border")}}, the default value is `none`, so a rule must have a `<line-style>` declared with a value other than `hidden` or `none` for it to be painted.
 
-In this example, we assign a list with seven values to the `column-rule-style` property, as the eight-column grid has seven column gaps. The `row-rule-style` declaration has three values for three row rules, so each value is used once.
+In this example, we assign a list with seven values to the `column-rule-style` property. As the eight-column grid has seven column gaps, each value is used only once. The `row-rule-style` declaration has three values for three row rules, so again, each value is used once.
 
 ```css live-sample___style
 div {
@@ -184,7 +184,7 @@ These shorthand properties are all specified as a comma-separated list of values
   - : Specified as one, two, or three of the values {{cssxref("&lt;line-width&gt;")}}, {{cssxref("&lt;line-style&gt;")}}, and {{cssxref("&lt;color&gt;")}}, in any order. Just like with {{cssxref("border")}} shorthand values, the `<line-style>` must be included for a line to be painted, as it otherwise defaults to `none`. The default `<line-width>` is `medium` and the default `<color>` is `current-color`.
 
 - `<gap-repeat-rule>`
-  - : - : A `repeat()` function, with an {{cssxref("&lt;integer&gt;")}} as the first argument and one or more `<gap-rule>` values as subsequent arguments. The `<integer>`, with a value of `1` or more, specifies how many times the list of `<gap-rule>` values should be repeated.
+  - : A `repeat()` function, with an {{cssxref("&lt;integer&gt;")}} as the first argument and one or more `<gap-rule>` values as subsequent arguments. The `<integer>`, with a value of `1` or more, specifies how many times the list of `<gap-rule>` values should be repeated.
 
 - `<auto-repeat-gap-rule>`
   - : A `repeat()` function, with `auto` as the first argument and one or more `<gap-rule>` values as subsequent arguments. This creates an auto-repeater that assigns `<gap-rule>` values to gap rules that would otherwise not receive values from the other components of the property value, preventing the property's comma-separated list from cycling. At most, you can include only one `<auto-repeat-gap-rule>` value in the list.
