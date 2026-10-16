@@ -45,9 +45,12 @@ Depending on the PWA, device, and features of the operating system and browser, 
 
 The UI for installing a PWA from the web varies from one browser to another, and from one platform to another.
 
-The user interface for installing PWAs differs by device and OS combination. The "Add to homes screen" user interface installs the PWA on Safari on iOS. Other browsers, including Chrome for Android, include the app installation command in the browser setting menu. In Chrome and Edge on desktop, when the user navigates to the page, if the page is a PWA and the PWA is not currently installed by the browser, an installation icon will be visible in the URL bar:
+The browser chrome user interface for installing PWAs differs by device and OS combination. The "Add to home screen" user interface installs the PWA on Safari on iOS. Other browsers, including Chrome for Android, include the app installation command in the browser setting menu. In Chrome and Edge on desktop, when the user navigates to the page, if the page is a PWA and the PWA is not currently installed by the browser, an installation icon will be visible in the URL bar:
 
 ![PWA install prompt in URL bar](pwa-install.png)
+
+> [!NOTE]
+> Developers can also include PWA install buttons inside web interfaces using the {{domxref("Navigator.install()")}} method and the {{htmlelement("install")}} element. These features aim to provide more flexibility over the PWA install process, and more consistency across browsers and platforms.
 
 When the user selects the icon, the browser displays a prompt asking if they want to install the PWA, and if they accept, the PWA is installed.
 
