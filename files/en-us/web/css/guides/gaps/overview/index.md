@@ -7,19 +7,19 @@ spec-urls: https://drafts.csswg.org/css-gaps/
 sidebar: cssref
 ---
 
-The [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module defines the properties that let you set spacing and draw line decorations within gaps in CSS [grid](/en-US/docs/Web/CSS/Guides/Grid_layout), [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout) layouts.
+The [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module defines the properties that let you control the space between rows and columns in CSS [grid](/en-US/docs/Web/CSS/Guides/Grid_layout), [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout) layouts. The module also defines properties for drawing line decorations within those gaps.
 
 This guide provides an overview of the features introduced in the specification, linking to reference pages and other guides providing more information and examples for the features discussed.
 
-## Overview
+## Introducing gap decorations
 
 The CSS gap properties enable drawing lines in the center of each gutter in multi-column, grid, and flexbox layouts. While {{cssxref("margin")}} and {{cssxref("padding")}} specify visual spacing around individual boxes, the properties in the CSS gaps module enable specifying the spacing between adjacent boxes within a given layout context for layouts that have {{glossary("gutters")}} and gaps. You can show rules in every gap or in a subset of gaps, defining fully animatable rule widths, colors, and insets.
 
-Gaps and their decorations have evolved. Originally, column gaps and their decorations were limited only to [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout). While we could define the width, color, and line style of column rules in multi-column containers, all rules had to match; the only option spanned the full block dimension, and it was limited to columns and only in multi-column layouts.
+Originally, column gaps and their decorations were limited to [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout). You could set the width, color, and style of column rules, but all rules shared the same appearance and spanned the full block dimension.
 
-Grid layout has always supported gaps between rows and columns, but it originally didn't support decorations in those gutters. Before rules expanded to all gap-aware layouts, painting lines in the gaps between rows and columns in grid and flexbox layouts required hacks such as background images, borders on all items, and even absolutely positioned overlays. Fortunately, CSS has evolved. CSS gap module properties let you define column and row gaps for all gap-aware layout containers and add visible separators, called _gap decorations_, painted in the middle of gaps in both horizontal and vertical gutters that don't affect the box model.
+Grid layout has always supported gaps between rows and columns, but it originally didn't support decorations in those gutters. Before rules expanded to all gap-aware layouts, painting lines in the gaps between rows and columns in grid and flexbox layouts required hacks such as background images, borders on all items, and even absolutely positioned overlays. CSS gap module properties let you define column and row gaps for all gap-aware layout containers and add visible separators, called _gap decorations_, painted in the middle of gaps in both horizontal and vertical gutters. These decorations don't affect the box model.
 
-This example demonstrates the basic gap decoration features, with a gap between the grid rows and columns containing a lime and darkviolet rule, respectively.
+This example demonstrates the basic gap decoration features, with lime and darkviolet rules in the gaps between grid rows and columns, respectively.
 
 ```css live-sample___basic live-sample___overlap live-sample___breaking live-sample___ends live-sample___visibility
 .grid {
@@ -85,20 +85,20 @@ The `gap` shorthand and its constituent properties let you specify the spacing b
 - {{cssxref("gap")}}
   - : Taking one or two values, sets both the `row-gap` and `column-gap` values at once, in that order.
 
-While these properties may seem intuitive at first, the default size and how [percentage values for gap values](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps#percentages) are handled differ by layout type and whether the container has a fixed size. Learn more about [defining gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps).
+While these properties may seem intuitive at first, the default size and how [percentage values for gap values](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps#specifying_gap_values_as_percentages) are handled differ by layout type and whether the container has a fixed size. Learn more about [defining gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps).
 
 ## Rule color, style, and width
 
 You can control the width, color, and style of rule lines by column or row, via the `rule` shorthand, which sets both directions to the same value(s), or via rule component properties that set a line feature for column rules, row rules, or both to the same value(s).
 
-All the properties in this section accept a comma-separated list of values, allowing for varying gap decorations within a container. You can use the {{cssxref("repeat()")}} function within the list to define a set number of repetitions, or to automatically add as many repetitions as needed to provide a value for every line drawn.
+All the properties in this section accept a comma-separated list of values, allowing for varying gap decorations within a container. You can use the {{cssxref("repeat()")}} function within the list to repeat values a specified number of times or as many times as needed to style all the rules.
 
 ### Column rule properties
 
-Each `column-rule-*` property accepts a comma-separated list, optionally including `repeat()` values, of the following types:
+Each `column-rule-*` property accepts a comma-separated list, optionally including `repeat()` values:
 
 - {{cssxref("column-rule")}}
-  - : Shorthand defining the {{cssxref("line-width")}} {{cssxref("line-style")}} and {{cssxref("&lt;color&gt;")}} of the column decorations.
+  - : Shorthand defining the {{cssxref("line-width")}}, {{cssxref("line-style")}}, and {{cssxref("&lt;color&gt;")}} of the column decorations.
 - {{cssxref("column-rule-color")}}
   - : A {{cssxref("&lt;color&gt;")}}: The color of the rule drawn in column gaps. The default is `currentcolor`.
 - {{cssxref("column-rule-style")}}
@@ -108,7 +108,7 @@ Each `column-rule-*` property accepts a comma-separated list, optionally includi
 
 ### Row rule properties
 
-The `row-rule-*` properties follow the same syntax as their `column-*` property counterparts, applying the list of values to the horizontal gap decorations.
+The `row-rule-*` properties follow the same syntax as their `column-rule-*` counterparts, applying the list of values to the horizontal gap decorations.
 
 - {{cssxref("row-rule")}}
   - : Shorthand defining the `<line-width>` `<line-style>` and `<color>` of the row decoration line
