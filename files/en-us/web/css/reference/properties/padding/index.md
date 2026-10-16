@@ -54,11 +54,6 @@ padding: 0;
 }
 ```
 
-An element's padding area is the space between its content and its border.
-
-> [!NOTE]
-> Padding creates extra space within an element. In contrast, {{cssxref("margin")}} creates extra space _around_ an element.
-
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
@@ -104,6 +99,12 @@ The `padding` property may be specified using one, two, three, or four values. E
   - : The size of the padding as a fixed value.
 - {{cssxref("&lt;percentage&gt;")}}
   - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block).
+
+## Description
+
+The `padding` property sets the padding area on all four sides of an element. An element's padding area is the space between its content and its border.
+
+Padding creates extra space within an element. In contrast, {{cssxref("margin")}} creates extra space _around_ an element.
 
 ## Formal definition
 

@@ -38,16 +38,6 @@ transform: scaleX(-0.5);
 </section>
 ```
 
-It modifies the abscissa (horizontal, x-coordinate) of each element point by a constant factor, except when the scale factor is 1, in which case
-the function is the identity transform. The scaling is not isotropic, and the angles of the element are generally not conserved, except for multiples of 90 degrees.
-`scaleX(-1)` defines an [axial symmetry](https://en.wikipedia.org/wiki/Axial_symmetry), with a vertical axis passing through the origin (as specified by the {{cssxref("transform-origin")}}
-property).
-
-> [!NOTE]
-> `scaleX(sx)` is equivalent to
-> `scale(sx, 1)` or
-> `scale3d(sx, 1, 1)`.
-
 ## Syntax
 
 ```css
@@ -97,6 +87,18 @@ scaleX(s)
     </tr>
   </tbody>
 </table>
+
+## Description
+
+It modifies the abscissa (horizontal, x-coordinate) of each element point by a constant factor, except when the scale factor is 1, in which case
+the function is the identity transform. The scaling is not isotropic, and the angles of the element are generally not conserved, except for multiples of 90 degrees.
+`scaleX(-1)` defines an [axial symmetry](https://en.wikipedia.org/wiki/Axial_symmetry), with a vertical axis passing through the origin (as specified by the {{cssxref("transform-origin")}}
+property).
+
+> [!NOTE]
+> `scaleX(sx)` is equivalent to
+> `scale(sx, 1)` or
+> `scale3d(sx, 1, 1)`.
 
 ## Formal syntax
 

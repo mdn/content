@@ -46,10 +46,6 @@ transform-style: preserve-3d;
 }
 ```
 
-If flattened, the element's children will not exist on their own in the 3D-space.
-
-As this property is not inherited, it must be set for all non-leaf descendants of the element.
-
 ## Syntax
 
 ```css
@@ -75,6 +71,10 @@ This property is specified as one of the following keyword values:
   - : Indicates that the children of the element should be positioned in the 3D-space.
 
 ## Description
+
+If flattened, the element's children will not exist on their own in the 3D-space.
+
+As this property is not inherited, it must be set for all non-leaf descendants of the element.
 
 The spec lists some [grouping property values](https://drafts.csswg.org/css-transforms-2/#grouping-property-values), which
 require the user agent to create a flattened representation of the descendant elements before they can be applied, and therefore force the element to have a [used value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value) of `transform-style: flat`, even when `preserve-3d` is specified. These property values include:
