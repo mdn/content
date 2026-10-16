@@ -156,17 +156,15 @@ Expect less from them when there isn't much competition. Priority hints matter m
 
 ## Preloading resource fetches
 
-Priority hints only affect a request once the browser knows about the resource. If the browser finds a resource late, you may need to change how it is discovered before adjusting its priority.
+The priority hints above change how requests compete for the network. If a resource is discovered late, first make it discoverable sooner through markup changes or preloading, then adjust its priority if needed.
 
 ### How browsers discover resources
 
-A browser can only prioritize a request it knows about. While the main parser builds the DOM, a [preload scanner](/en-US/docs/Web/Performance/Guides/How_browsers_work#preload_scanner) reads ahead through the raw HTML and starts fetching the resources it finds there. It only reads markup, though. It doesn't look inside stylesheets or scripts, so resources referenced from those files stay invisible until the browser has downloaded and processed the file that refers to them.
-
-That leaves you with two separate problems. A resource can be found late, or it can be found on time and still get a lower priority than it deserves. Preloading helps with the first. Priority hints help with the second, and they don't make a resource discoverable any sooner.
+While the main parser builds the DOM, a [preload scanner](/en-US/docs/Web/Performance/Guides/How_browsers_work#preload_scanner) reads ahead through the raw HTML and starts fetching the resources it finds there. It only reads markup, though. It doesn't look inside stylesheets or scripts, so resources referenced from those files stay invisible until the browser has downloaded and processed the file that refers to them.
 
 ### Using `rel="preload"`
 
-[`rel="preload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) tells the browser about a resource ahead of time, usually from the `<head>`, so it can start the request before it would otherwise find it. The `as` attribute says what kind of resource it is, and the browser picks a priority from that. A preload doesn't automatically get a high priority. In Chrome, a preloaded image starts at Low or Medium, even when it's your LCP image.
+[`rel="preload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) on a {{htmlelement("link")}} element tells the browser about a resource ahead of time, usually from the `<head>`, so it can start the request before it would otherwise find it. The [`as`](/en-US/docs/Web/HTML/Reference/Elements/link#as) attribute says what kind of resource it is, and the browser picks a priority from that. A preload doesn't automatically get a high priority. In Chrome, a preloaded image starts at Low or Medium, even when it's your LCP image.
 
 You can also preload a resource from the server with the {{HTTPHeader("Link", "", "#controlling_fetch_priority")}} header, which accepts a `fetchpriority` parameter:
 
@@ -194,7 +192,14 @@ In most cases you can reference each stylesheet with its own `<link>` element in
 <link rel="stylesheet" href="/css/main.css" />
 ```
 
-If you do need `@import`, for example to put a third-party stylesheet in a cascade layer, preload the imported file so its request starts early.
+If you do need `@import`, for example to put a third-party stylesheet in a [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@import#importing_css_rules_into_a_cascade_layer), preload the imported file from the `<head>` so its request starts early:
+
+```html
+<link rel="preload" href="/css/typography.css" as="style" />
+<link rel="stylesheet" href="/css/main.css" />
+```
+
+Keep the `@import` rule in `main.css`. The preload fetches `typography.css` early, while the `@import` still determines how its rules are applied.
 
 #### Background images in CSS
 
@@ -252,8 +257,6 @@ The font is still only requested once the browser knows some text uses it. If th
 ```
 
 In Chrome, preloading a font helps because the browser finds it sooner, not because of its priority. It gives a preloaded font High, which `fetchpriority="high"` doesn't raise, while a font found through CSS gets Highest. Pair the preload with the {{cssxref("@font-face/font-display", "font-display")}} descriptor to control how text is shown while the font is still loading.
-
-Inlining the font file itself as a base64 data URL is a different technique. Testing described in [Don't fight the browser preload scanner](https://web.dev/articles/preload-scanner) on web.dev found that it generally isn't worth it except for very small resources. Base64 is an inefficient format for binary files, and a large inline block delays the preload scanner from reaching the resources that come after it.
 
 ## Checking request priority
 
