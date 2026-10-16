@@ -5,36 +5,38 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_genre_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_book_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms")}}
+
 This subarticle shows how to define a page for creating `Author` objects.
 
 ## Import validation and sanitization methods
 
-As with the [genre form](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_genre_form), to use _express-validator_ we have to _require_ the functions we want to use.
+As with the [genre form](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_genre_form), to use _express-validator_ we have to _import_ the functions we want to use.
 
-Open **/controllers/authorController.js**, and add the following line at the top of the file (above the route functions):
+Open **controllers/authorController.js**, and add the following line at the top of the file (above the route functions):
 
 ```js
-const { body, validationResult } = require("express-validator");
+import { body, validationResult } from "express-validator";
 ```
 
 ## Controller—get route
 
-Find the exported `author_create_get()` controller method and replace it with the following code. This renders the **author_form.pug** view, passing a `title` variable.
+Find the exported `authorCreateGet()` controller method and replace it with the following code. This renders the **author_form.pug** view, passing a `title` variable.
 
 ```js
 // Display Author create form on GET.
-exports.author_create_get = (req, res, next) => {
+export const authorCreateGet = (req, res, next) => {
   res.render("author_form", { title: "Create Author" });
 };
 ```
 
 ## Controller—post route
 
-Find the exported `author_create_post()` controller method, and replace it with the following code.
+Find the exported `authorCreatePost()` controller method, and replace it with the following code.
 
 ```js
 // Handle Author create on POST.
-exports.author_create_post = [
+export const authorCreatePost = [
   // Validate and sanitize fields.
   body("first_name")
     .trim()
@@ -133,7 +135,7 @@ The validation code demonstrates several new features:
 
 ## View
 
-Create **/views/author_form.pug** and copy in the text below.
+Create **views/author_form.pug** and paste in the text below.
 
 ```pug
 extends layout
@@ -176,7 +178,4 @@ Run the application, open your browser to `http://localhost:3000/`, then select 
 > [!NOTE]
 > If you experiment with various input formats for the dates, you may find that the format `yyyy-mm-dd` misbehaves. This is because JavaScript treats date strings as including the time of 0 hours, but additionally treats date strings in that format (the ISO 8601 standard) as including the time 0 hours UTC, rather than the local time. If your time zone is west of UTC, the date display, being local, will be one day before the date you entered. This is one of several complexities (such as multi-word family names and multi-author books) that we are not addressing here.
 
-## Next steps
-
-- Return to [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms).
-- Proceed to the next subarticle of part 6: [Create Book form](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_book_form).
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_genre_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_book_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms")}}
