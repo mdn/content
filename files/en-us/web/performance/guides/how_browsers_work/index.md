@@ -86,15 +86,15 @@ In our example above, the request is definitely less than 14KB, but the linked r
 
 TCP packets are split into segments during transmission. Because TCP guarantees the sequence of packets, the server must receive an acknowledgment from the client in the form of an ACK packet after sending a certain number of segments.
 
-If the server waits for an ACK after each segment, that will result in frequent ACKs from the client and may increase transmission time, even in the case of a low-load network.
+This number must provide a balance — if the server waits for an ACK after each segment, the transfer will be slow because the server has to wait a full round trip for every segment it sends, even on a low-load network.
 
-On the other hand, sending too many segments at once can lead to the problem that in a busy network the client will not be able to receive the segments and will just keep responding with ACKs for a long time, and the server will have to keep re-sending the segments.
+On the other hand, sending too many segments at once results in a busy network where the client cannot receive all the segments. The client can't send an ACK for a segment it never received, so the server doesn't get an ACK in time and has to re-send the segments.
+
+A buffer is used to mitigate problems caused by a busy network. The server keeps a copy of currently unacknowledged data, so it can be resent if required. The client holds incoming data in a buffer until the application reads it. If that buffer nears full, the client can advertise a smaller receive window, which limits how much more data the server can send.
 
 In order to balance the number of transmitted segments, the {{glossary('TCP slow start')}} algorithm is used to gradually increase the amount of transmitted data until the maximum network bandwidth can be determined, and to reduce the amount of transmitted data in case of high network load.
 
-The number of segments to be transmitted is controlled by the value of the congestion window (CWND), which can be initialized to 1, 2, 4, or 10 MSS (MSS is 1500 bytes over the Ethernet protocol). That value is the number of bytes to send, upon receipt of which the client must send an ACK.
-
-If an ACK is received, then the CWND value will be doubled, and so the server will be able to send more segments the next time. If instead no ACK is received, then the CWND value will be halved. That mechanism thus achieves a balance between sending too many segments, and sending too few.
+Specifically, the number of segments to be transmitted is controlled by the value of the congestion window (CWND). For more details about TCP congestion control, see [RFC 5681](https://www.rfc-editor.org/rfc/rfc5681.html).
 
 ## Parsing
 
