@@ -102,7 +102,7 @@ Our superuser is already authenticated and has all permissions, so we'll need to
 > user.save()
 > ```
 >
-> For more information, see [Using a custom user model when starting a project](https://docs.djangoproject.com/en/5.0/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project) (Django docs).
+> For more information, see [Using a custom user model when starting a project](https://docs.djangoproject.com/en/6.1/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project) (Django docs).
 
 Below we'll first create a group and then a user. Even though we don't have any permissions to add for our library members yet, if we need to later, it will be much easier to add them once to the group than individually to each member.
 
@@ -212,22 +212,14 @@ For this site, we'll put our HTML pages in the **templates/registration/** direc
 > ```
 
 To make the **templates** directory visible to the template loader we need to add it in the template search path.
-Open the project settings (**/django-locallibrary-tutorial/locallibrary/settings.py**).
-
-Then import the `os` module (add the following line near the top of the file if it isn't already present).
-
-```python
-import os # needed by code below
-```
-
-Update the `TEMPLATES` section's `'DIRS'` line as shown:
+Open the project settings (**/django-locallibrary-tutorial/locallibrary/settings.py**) and update the `TEMPLATES` section's `'DIRS'` line as shown:
 
 ```python
     # …
     TEMPLATES = [
       {
        # …
-       'DIRS': [os.path.join(BASE_DIR, 'templates')],
+       'DIRS': [BASE_DIR / 'templates'],
        'APP_DIRS': True,
        # …
 ```
@@ -296,7 +288,7 @@ LOGIN_REDIRECT_URL = '/'
 
 ### Logout template
 
-If you navigate to the logout URL (`http://127.0.0.1:8000/accounts/logout/`) then you'll get an error because Django 5 does not allow logout using `GET`, only `POST`.
+If you navigate to the logout URL (`http://127.0.0.1:8000/accounts/logout/`) then you'll get an error because Django does not allow logout using `GET`, only `POST`.
 We'll add a form you can use to log out in a minute, but first we'll create the page that users are taken to after logging out.
 
 Create and open **/django-locallibrary-tutorial/templates/registration/logged_out.html**. Copy in the text below:
@@ -329,11 +321,8 @@ This is the form used to get the user's email address (for sending the password 
 
 {% block content %}
   <form action="" method="post">
-  {% csrf_token %}
-  {% if form.email.errors %}
-    \{{ form.email.errors }}
-  {% endif %}
-      <p>\{{ form.email }}</p>
+    {% csrf_token %}
+    \{{ form }}
     <input type="submit" class="btn btn-default btn-lg" value="Reset password">
   </form>
 {% endblock %}
@@ -371,23 +360,9 @@ This page is where you enter your new password after clicking the link in the pa
     {% if validlink %}
         <p>Please enter (and confirm) your new password.</p>
         <form action="" method="post">
-        {% csrf_token %}
-            <table>
-                <tr>
-                    <td>\{{ form.new_password1.errors }}
-                        <label for="id_new_password1">New password:</label></td>
-                    <td>\{{ form.new_password1 }}</td>
-                </tr>
-                <tr>
-                    <td>\{{ form.new_password2.errors }}
-                        <label for="id_new_password2">Confirm password:</label></td>
-                    <td>\{{ form.new_password2 }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" value="Change my password"></td>
-                </tr>
-            </table>
+            {% csrf_token %}
+            \{{ form }}
+            <input type="submit" value="Change my password">
         </form>
     {% else %}
         <h1>Password reset failed</h1>
@@ -419,13 +394,17 @@ You'll be able to test the password reset functionality from the link in the log
 Note that you won't be able to test account logout yet, because logout requests must be sent as a `POST` rather than a `GET` request.
 
 > [!NOTE]
-> The password reset system requires that your website supports email, which is beyond the scope of this article, so this part **won't work yet**. To allow testing, put the following line at the end of your settings.py file. This logs any emails sent to the console (so you can copy the password reset link from the console).
+> The password reset system requires that your website supports email, which is beyond the scope of this article, so this part **won't work yet**. To allow testing, put the following lines at the end of your settings.py file. This logs any emails sent to the console (so you can copy the password reset link from the console).
 >
 > ```python
-> EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+> MAILERS = {
+>     'default': {
+>         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
+>     },
+> }
 > ```
 >
-> For more information, see [Sending email](https://docs.djangoproject.com/en/5.0/topics/email/) (Django docs).
+> For more information, see [Sending email](https://docs.djangoproject.com/en/6.1/topics/email/) (Django docs).
 
 ## Testing against authenticated users
 
@@ -461,7 +440,7 @@ As you can see, we use `if` / `else` / `endif` template tags to conditionally di
 
 We create the login link URL using the `url` template tag and the name of the `login` URL configuration. Note also how we have appended `?next=\{{ request.path }}` to the end of the URL. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in, the view will use this `next` value to redirect the user back to the page where they first clicked the login link.
 
-The logout template code is different, because from Django 5 to log out you must `POST` to the `admin:logout` URL, using a form with a button.
+The logout template code is different, because in Django you must `POST` to the `logout` URL, using a form with a button.
 By default this would render as a button, but you can style the button to display as a link.
 For this example we're using _Bootstrap_, so we make the button look like a link by applying `class="btn btn-link"`.
 You also need to append the following styles to **/django-locallibrary-tutorial/catalog/static/css/styles.css** in order to correctly position the logout link next to all the other sidebar links:
@@ -511,7 +490,12 @@ class MyView(LoginRequiredMixin, View):
     redirect_field_name = 'redirect_to'
 ```
 
-For additional detail, check out the [Django docs here](https://docs.djangoproject.com/en/5.0/topics/auth/default/#limiting-access-to-logged-in-users).
+> [!NOTE]
+> If most of your site should only be available to logged-in users, you can instead add [`LoginRequiredMiddleware`](https://docs.djangoproject.com/en/6.1/ref/middleware/#django.contrib.auth.middleware.LoginRequiredMiddleware) to the `MIDDLEWARE` list in your settings (after `AuthenticationMiddleware`).
+> This requires users to log in for every view by default, and you then mark the public views with the [`login_not_required`](https://docs.djangoproject.com/en/6.1/topics/auth/default/#django.contrib.auth.decorators.login_not_required) decorator.
+> We don't use it for the _LocalLibrary_ because most of the library views should be open.
+
+For additional detail, check out the [Django docs here](https://docs.djangoproject.com/en/6.1/topics/auth/default/#limiting-access-to-logged-in-users).
 
 ## Example — listing the current user's books
 
@@ -530,7 +514,7 @@ from django.conf import settings
 ```
 
 Next, add the `borrower` field to the `BookInstance` model, setting the user model for the key as the value of the setting `AUTH_USER_MODEL`.
-Since we have not overridden the setting with a [custom user model](https://docs.djangoproject.com/en/5.0/topics/auth/customizing/) this maps to the default `User` model from `django.contrib.auth.models`.
+Since we have not overridden the setting with a [custom user model](https://docs.djangoproject.com/en/6.1/topics/auth/customizing/) this maps to the default `User` model from `django.contrib.auth.models`.
 
 ```python
 borrower = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)
@@ -626,12 +610,12 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
     def get_queryset(self):
         return (
             BookInstance.objects.filter(borrower=self.request.user)
-            .filter(status__exact='o')
+            .filter(status__exact=BookInstance.LoanStatus.ON_LOAN)
             .order_by('due_back')
         )
 ```
 
-In order to restrict our query to just the `BookInstance` objects for the current user, we re-implement `get_queryset()` as shown above. Note that "o" is the stored code for "on loan" and we order by the `due_back` date so that the oldest items are displayed first.
+In order to restrict our query to just the `BookInstance` objects for the current user, we re-implement `get_queryset()` as shown above. Note that `BookInstance.LoanStatus.ON_LOAN` is the stored code for "on loan" and we order by the `due_back` date so that the oldest items are displayed first.
 
 ### URL conf for on loan books
 
@@ -685,10 +669,10 @@ Open the base template (**/django-locallibrary-tutorial/catalog/templates/base_g
    {% if user.is_authenticated %}
    <li>User: \{{ user.get_username }}</li>
 
-   <li><a href="{% url 'my-borrowed' %}">My Borrowed</a></li>
+   <li><a href="{% url 'my-borrowed' %}">My borrowed</a></li>
 
    <li>
-     <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+     <form id="logout-form" method="post" action="{% url 'logout' %}">
        {% csrf_token %}
        <button type="submit" class="btn btn-link">Logout</button>
      </form>
@@ -811,8 +795,8 @@ In our next article, we'll look at how you can use Django forms to collect user 
 
 ## See also
 
-- [User authentication in Django](https://docs.djangoproject.com/en/5.0/topics/auth/) (Django docs)
-- [Using the (default) Django authentication system](https://docs.djangoproject.com/en/5.0/topics/auth/default/) (Django docs)
-- [Introduction to class-based views > Decorating class-based views](https://docs.djangoproject.com/en/5.0/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
+- [User authentication in Django](https://docs.djangoproject.com/en/6.1/topics/auth/) (Django docs)
+- [Using the (default) Django authentication system](https://docs.djangoproject.com/en/6.1/topics/auth/default/) (Django docs)
+- [Introduction to class-based views > Decorating class-based views](https://docs.djangoproject.com/en/6.1/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}

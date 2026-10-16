@@ -107,7 +107,7 @@ class BookListView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get the context
-        context = super(BookListView, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         # Create any data and add it to the context
         context['some_data'] = 'This is just some data'
         return context
@@ -120,7 +120,7 @@ When doing this it is important to follow the pattern used above:
 - Then return the new (updated) context.
 
 > [!NOTE]
-> Check out [Built-in class-based generic views](https://docs.djangoproject.com/en/5.0/topics/class-based-views/generic-display/) (Django docs) for many more examples of what you can do.
+> Check out [Built-in class-based generic views](https://docs.djangoproject.com/en/6.1/topics/class-based-views/generic-display/) (Django docs) for many more examples of what you can do.
 
 ### Creating the List View template
 
@@ -153,7 +153,7 @@ The view passes the context (list of books) by default as `object_list` and `boo
 
 #### Conditional execution
 
-We use the [`if`](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/#if), `else`, and `endif` template tags to check whether the `book_list` has been defined and is not empty.
+We use the [`if`](https://docs.djangoproject.com/en/6.1/ref/templates/builtins/#if), `else`, and `endif` template tags to check whether the `book_list` has been defined and is not empty.
 If `book_list` is empty, then the `else` clause displays text explaining that there are no books to list.
 If `book_list` is not empty, then we iterate through the list of books.
 
@@ -166,11 +166,11 @@ If `book_list` is not empty, then we iterate through the list of books.
 ```
 
 The condition above only checks for one case, but you can test on additional conditions using the `elif` template tag (e.g., `{% elif var2 %}`).
-For more information about conditional operators see: [if](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/#if), [ifequal/ifnotequal](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/#ifequal-and-ifnotequal), and [ifchanged](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/#ifchanged) in [Built-in template tags and filters](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/) (Django Docs).
+For more information about conditional operators see: [if](https://docs.djangoproject.com/en/6.1/ref/templates/builtins/#if) and [ifchanged](https://docs.djangoproject.com/en/6.1/ref/templates/builtins/#ifchanged) in [Built-in template tags and filters](https://docs.djangoproject.com/en/6.1/ref/templates/builtins/) (Django Docs).
 
 #### For loops
 
-The template uses the [for](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/#for) and `endfor` template tags to loop through the book list, as shown below.
+The template uses the [for](https://docs.djangoproject.com/en/6.1/ref/templates/builtins/#for) and `endfor` template tags to loop through the book list, as shown below.
 Each iteration populates the `book` template variable with information for the current list item.
 
 ```django
@@ -242,7 +242,7 @@ urlpatterns = [
 
 For the _book-detail_ path the URL pattern uses a special syntax to capture the specific id of the book that we want to see.
 The syntax is very simple: angle brackets define the part of the URL to be captured, enclosing the name of the variable that the view can use to access the captured data.
-For example, **\<something>**, will capture the marked pattern and pass the value to the view as a variable "something". You can optionally precede the variable name with a [converter specification](https://docs.djangoproject.com/en/5.0/topics/http/urls/#path-converters) that defines the type of data (int, str, slug, uuid, path).
+For example, **\<something>**, will capture the marked pattern and pass the value to the view as a variable "something". You can optionally precede the variable name with a [converter specification](https://docs.djangoproject.com/en/6.1/topics/http/urls/#path-converters) that defines the type of data (int, str, slug, uuid, path).
 
 In this case we use `'<int:pk>'` to capture the book id, which must be a specially formatted string and pass it to the view as a parameter named `pk` (short for primary key). This is the id that is being used to store the book uniquely in the database, as defined in the Book Model.
 
@@ -257,7 +257,7 @@ In this case we use `'<int:pk>'` to capture the book id, which must be a special
 > [!NOTE]
 > You won't need this section to complete the tutorial! We provide it because knowing this option is likely to be useful in your Django-centric future.
 
-The pattern matching provided by `path()` is simple and useful for the (very common) cases where you just want to capture _any_ string or integer. If you need more refined filtering (for example, to filter only strings that have a certain number of characters) then you can use the [re_path()](https://docs.djangoproject.com/en/5.0/ref/urls/#django.urls.re_path) method.
+The pattern matching provided by `path()` is simple and useful for the (very common) cases where you just want to capture _any_ string or integer. If you need more refined filtering (for example, to filter only strings that have a certain number of characters) then you can use the [re_path()](https://docs.djangoproject.com/en/6.1/ref/urls/#django.urls.re_path) method.
 
 This method is used just like `path()` except that it allows you to specify a pattern using a [Regular expression](https://docs.python.org/3/library/re.html). For example, the previous path could have been written as shown below:
 
@@ -410,7 +410,7 @@ You can capture multiple patterns in the one match, and hence encode lots of dif
 
 #### Passing additional options in your URL maps
 
-One feature that we haven't used here, but which you may find valuable, is that you can pass a [dictionary containing additional options](https://docs.djangoproject.com/en/5.0/topics/http/urls/#views-extra-options) to the view (using the third un-named argument to the `path()` function). This approach can be useful if you want to use the same view for multiple resources, and pass data to configure its behavior in each case.
+One feature that we haven't used here, but which you may find valuable, is that you can pass a [dictionary containing additional options](https://docs.djangoproject.com/en/6.1/topics/http/urls/#views-extra-options) to the view (using the third un-named argument to the `path()` function). This approach can be useful if you want to use the same view for multiple resources, and pass data to configure its behavior in each case.
 
 For example, given the path shown below, for a request to `/my-url/halibut/` Django will call `views.my_view(request, fish='halibut', my_template_name='some_path')`.
 
@@ -480,16 +480,16 @@ Create the HTML file **/django-locallibrary-tutorial/catalog/templates/catalog/b
   <p><strong>Language:</strong> \{{ book.language }}</p>
   <p><strong>Genre:</strong> \{{ book.genre.all|join:", " }}</p>
 
-  <div style="margin-left:20px;margin-top:20px">
+  <div class="ms-4 mt-4">
     <h4>Copies</h4>
 
     {% for copy in book.bookinstance_set.all %}
       <hr />
       <p
-        class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">
+        class="{% if copy.status == copy.LoanStatus.AVAILABLE %}text-success{% elif copy.status == copy.LoanStatus.MAINTENANCE %}text-danger{% else %}text-warning{% endif %}">
         \{{ copy.get_status_display }}
       </p>
-      {% if copy.status != 'a' %}
+      {% if copy.status != copy.LoanStatus.AVAILABLE %}
         <p><strong>Due to be returned:</strong> \{{ copy.due_back }}</p>
       {% endif %}
       <p><strong>Imprint:</strong> \{{ copy.imprint }}</p>
@@ -537,17 +537,17 @@ This method is needed because you declare a `ForeignKey` (one-to many) field onl
 > [!NOTE]
 > Here we use `all()` to get all records (the default). While you can use the `filter()` method to get a subset of records in code, you can't do this directly in templates because you can't specify arguments to functions.
 >
-> Beware also that if you don't define an order (on your class-based view or model), you will also see errors from the development server like this one:
+> Beware also that if you don't define an order (on your class-based view or model), you will also see warnings from the development server like this one:
 >
 > ```plain
-> [29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
-> /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<Author: Ortiz, David>, <Author: H. McRaven, William>, <Author: Leigh, Melinda>]>
->   allow_empty_first_page=allow_empty_first_page, **kwargs)
+> /foo/local_library/venv/lib/python3.12/site-packages/django/views/generic/list.py:91: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'catalog.models.Author'> QuerySet.
+>   return self.paginator_class(
+> [29/Sep/2026 18:37:53] "GET /catalog/authors/ HTTP/1.1" 200 1637
 > ```
 >
-> That happens because the [paginator object](https://docs.djangoproject.com/en/5.0/topics/pagination/#paginator-objects) expects to see some ORDER BY being executed on your underlying database. Without it, it can't be sure the records being returned are actually in the right order!
+> That happens because the [paginator object](https://docs.djangoproject.com/en/6.1/topics/pagination/#the-paginator-class) expects to see some ORDER BY being executed on your underlying database. Without it, it can't be sure the records being returned are actually in the right order!
 >
-> This tutorial hasn't covered **Pagination** (yet!), but since you can't use `sort_by()` and pass a parameter (the same with `filter()` described above) you will have to choose between three choices:
+> This tutorial hasn't covered **Pagination** (yet!), but since you can't use `order_by()` and pass a parameter (the same with `filter()` described above) you will have to choose between three choices:
 >
 > 1. Add an `ordering` inside a `class Meta` declaration on your model.
 > 2. Add a `queryset` attribute in your custom class-based view, specifying an `order_by()`.
@@ -580,12 +580,15 @@ The second interesting (and non-obvious) thing in the template is where we displ
 Astute readers will note that the method `BookInstance.get_status_display()` that we use to get the status text does not appear elsewhere in the code.
 
 ```django
- <p class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">
+ <p class="{% if copy.status == copy.LoanStatus.AVAILABLE %}text-success{% elif copy.status == copy.LoanStatus.MAINTENANCE %}text-danger{% else %}text-warning{% endif %}">
  \{{ copy.get_status_display }} </p>
 ```
 
-This function is automatically created because `BookInstance.status` is a [choices field](https://docs.djangoproject.com/en/5.0/ref/models/fields/#choices).
+This function is automatically created because `BookInstance.status` is a [choices field](https://docs.djangoproject.com/en/6.1/ref/models/fields/#choices).
 Django automatically creates a method `get_foo_display()` for every choices field `foo` in a model, which can be used to get the current value of the field.
+
+> [!NOTE]
+> `copy.LoanStatus` resolves to the `LoanStatus` class we defined on `BookInstance` (see [Django Tutorial Part 3: Using models](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Models)), so `copy.LoanStatus.AVAILABLE` is the same value as the stored code `'a'`. Comparing against the named member instead of the raw code makes the template easier to read, and Django's `TextChoices` classes are specifically designed to be safe to reference like this from templates.
 
 ## What does it look like?
 
@@ -639,13 +642,13 @@ Copy in the following pagination block immediately following the `{% endblock %}
         <div class="pagination">
             <span class="page-links">
                 {% if page_obj.has_previous %}
-                    <a href="\{{ request.path }}?page=\{{ page_obj.previous_page_number }}">previous</a>
+                    <a href="{% querystring page=page_obj.previous_page_number %}">previous</a>
                 {% endif %}
                 <span class="page-current">
                     Page \{{ page_obj.number }} of \{{ page_obj.paginator.num_pages }}.
                 </span>
                 {% if page_obj.has_next %}
-                    <a href="\{{ request.path }}?page=\{{ page_obj.next_page_number }}">next</a>
+                    <a href="{% querystring page=page_obj.next_page_number %}">next</a>
                 {% endif %}
             </span>
         </div>
@@ -653,9 +656,9 @@ Copy in the following pagination block immediately following the `{% endblock %}
   {% endblock %}
 ```
 
-The `page_obj` is a [Paginator](https://docs.djangoproject.com/en/5.0/topics/pagination/#paginator-objects) object that will exist if pagination is being used on the current page. It allows you to get all the information about the current page, previous pages, how many pages there are, etc.
+The `page_obj` is a [Page](https://docs.djangoproject.com/en/6.1/ref/paginator/#django.core.paginator.Page) object that will exist if pagination is being used on the current page. It allows you to get all the information about the current page, previous pages, how many pages there are, etc.
 
-We use `\{{ request.path }}` to get the current page URL for creating the pagination links. This is useful because it is independent of the object that we're paginating.
+We use the [`querystring`](https://docs.djangoproject.com/en/6.1/ref/templates/builtins/#querystring) template tag to create the pagination links. This takes the query parameters of the current URL, sets `page` to the value we pass in, and returns the result as a query string such as `?page=2`. A link that only contains a query string goes to the current page, so the same code works for any list we paginate. Any other query parameters in the current URL, such as search filters, are kept.
 
 That's it!
 
@@ -706,11 +709,11 @@ In our next articles, we'll extend this library to support user accounts, and th
 
 ## See also
 
-- [Built-in class-based generic views](https://docs.djangoproject.com/en/5.0/topics/class-based-views/generic-display/) (Django docs)
-- [Generic display views](https://docs.djangoproject.com/en/5.0/ref/class-based-views/generic-display/) (Django docs)
-- [Introduction to class-based views](https://docs.djangoproject.com/en/5.0/topics/class-based-views/intro/) (Django docs)
-- [Built-in template tags and filters](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/) (Django docs)
-- [Pagination](https://docs.djangoproject.com/en/5.0/topics/pagination/) (Django docs)
-- [Making queries > Related objects](https://docs.djangoproject.com/en/5.0/topics/db/queries/#related-objects) (Django docs)
+- [Built-in class-based generic views](https://docs.djangoproject.com/en/6.1/topics/class-based-views/generic-display/) (Django docs)
+- [Generic display views](https://docs.djangoproject.com/en/6.1/ref/class-based-views/generic-display/) (Django docs)
+- [Introduction to class-based views](https://docs.djangoproject.com/en/6.1/topics/class-based-views/intro/) (Django docs)
+- [Built-in template tags and filters](https://docs.djangoproject.com/en/6.1/ref/templates/builtins/) (Django docs)
+- [Pagination](https://docs.djangoproject.com/en/6.1/topics/pagination/) (Django docs)
+- [Making queries > Related objects](https://docs.djangoproject.com/en/6.1/topics/db/queries/#related-objects) (Django docs)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django")}}
