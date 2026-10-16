@@ -39,6 +39,8 @@ setHTMLUnsafe(input, options)
         If not specified, no sanitizer is used.
 
         Note that if you're using the same configuration multiple times, it's expected to be more efficient to use a `Sanitizer` and modify it when you need to.
+    - `runScripts` {{optional_inline}} {{experimental_inline}}
+      - : A boolean value indicating whether any scripts included in the newly inserted HTML should run after inserting. The default is `false`.
 
 ### Return value
 
@@ -54,6 +56,7 @@ None (`undefined`).
         For example, a configuration that includes both "allowed" and "removed" configuration settings.
       - string that does not have the value `"default"`.
       - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.
+    - `options.runScripts` is `true` or `options.sanitizer` is specified when Trusted Types are enforced and no default policy defines `createParserOptions` — even if input is a `TrustedHTML`. (Passing a `TrustedHTMLParserOptions` as options avoids this.)
 
 ## Description
 
@@ -64,6 +67,18 @@ If the string of HTML defines more than one [declarative shadow root](/en-US/doc
 
 `setHTMLUnsafe()` doesn't perform any sanitization by default.
 If no sanitizer is passed as a parameter, all HTML entities in the input will be injected.
+
+### Related HTML setter APIs
+
+This is part of a series of APIs to set HTML:
+
+| Action                                             | API                                                  | Unsafe API                                                       |
+| -------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------- |
+| Set the HTML contents of the shadow root           | {{domxref("ShadowRoot.setHTML", "setHTML")}}         | {{domxref("ShadowRoot.setHTMLUnsafe", "setHTMLUnsafe")}}.        |
+| Add the HTML as the first child of the shadow root | {{domxref("ShadowRoot.prependHTML", "prependHTML")}} | {{domxref("ShadowRoot.prependHTMLUnsafe", "prependHTMLUnsafe")}} |
+| Add the HTML as the last child of the shadow root  | {{domxref("ShadowRoot.appendHTML", "appendHTML")}}   | {{domxref("ShadowRoot.appendHTMLUnsafe", "appendHTMLUnsafe")}}   |
+
+Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allows scripts to be run using the `runScripts` options.
 
 ### Security considerations
 
@@ -118,7 +133,7 @@ shadow.setHTMLUnsafe(input, { sanitizer: configSafe });
 
 // Removes all XSS-unsafe entities except `onclick`
 const configLessSafe = new Sanitizer();
-config.allowAttribute("onclick");
+configLessSafe.allowAttribute("onclick");
 shadow.setHTMLUnsafe(input, { sanitizer: configLessSafe });
 ```
 
@@ -331,6 +346,25 @@ When you click the "allowScript" button the `<script>` element is still present,
 With this approach you can create safe HTML, but you aren't forced to.
 
 {{EmbedLiveSample("setHTMLUnsafe() live example","100","450px")}}
+
+### Using setHTMLUnsafe() with `runScripts`
+
+This example demonstrates the case when we allow scripts to run using the `runScripts` option.
+
+```js
+// The potentially malicious string
+const untrustedString =
+  "<script src='example.js'></script><p>Other content</p>";
+
+// Get the shadow root element
+const shadow = document.querySelector("#host").shadowRoot;
+
+// No sanitizer is passed, so the <script> element is kept
+// and also executes the script after insertion.
+shadow.setHTMLUnsafe(untrustedString, {
+  runScripts: true,
+});
+```
 
 ## Specifications
 
