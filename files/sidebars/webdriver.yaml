@@ -14,7 +14,18 @@ sidebar:
     details: closed
     children:
       - link: /Web/WebDriver/Reference/BiDi/Modules/bluetooth
+        details: closed
         code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/bluetooth#commands
+            title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/bluetooth/disableSimulation
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/bluetooth/handleRequestDevicePrompt
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/bluetooth/simulateAdapter
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/browser
         details: closed
         code: true
