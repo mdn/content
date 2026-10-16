@@ -24,7 +24,7 @@ Because not all user agents implement these methods, you should feature-detect t
 ```js
 function handleClick() {
   if (typeof DeviceMotionEvent.requestPermission === "function") {
-    // The API requires permission — request it
+    // The browser supports requesting permission — request it
     Promise.all([
       DeviceMotionEvent.requestPermission(),
       DeviceOrientationEvent.requestPermission(),
@@ -90,12 +90,16 @@ The value reported for each axis indicates the amount of rotation around a given
 
 This example will work on any browser supporting the {{domxref("Window.deviceorientation_event", "deviceorientation")}} event and running on a device able to detect its orientation.
 
+Select the button to start the example. If the browser requests permission, the result appears below the button.
+
 So let's imagine a ball in a garden:
 
 ```html
 <div class="garden">
   <div class="ball"></div>
 </div>
+<button type="button" class="start">Start the orientation example</button>
+<p class="permission-status" role="status"></p>
 Hold the device parallel to the ground. Rotate along its x and y axes to see the
 ball move up/down and left/right respectively.
 <pre class="output"></pre>
@@ -129,6 +133,8 @@ Now, if we move our device, the ball will move accordingly:
 const ball = document.querySelector(".ball");
 const garden = document.querySelector(".garden");
 const output = document.querySelector(".output");
+const startButton = document.querySelector(".start");
+const permissionStatus = document.querySelector(".permission-status");
 
 const maxX = garden.clientWidth - ball.clientWidth;
 const maxY = garden.clientHeight - ball.clientHeight;
@@ -160,12 +166,33 @@ function handleOrientation(event) {
   ball.style.top = `${(maxX * x) / 180 - 10}px`; // rotating device around the x axis moves the ball vertically
 }
 
-window.addEventListener("deviceorientation", handleOrientation);
+startButton.addEventListener("click", async () => {
+  if (typeof DeviceOrientationEvent.requestPermission === "function") {
+    try {
+      const permission = await DeviceOrientationEvent.requestPermission();
+      if (permission !== "granted") {
+        permissionStatus.textContent =
+          "Permission denied. Check your browser settings.";
+        return;
+      }
+      permissionStatus.textContent = "Permission granted. Move your device.";
+    } catch {
+      permissionStatus.textContent = "Unable to request permission.";
+      return;
+    }
+  } else {
+    permissionStatus.textContent =
+      "No permission request is needed. Move your device.";
+  }
+
+  window.addEventListener("deviceorientation", handleOrientation);
+  startButton.disabled = true;
+});
 ```
 
 {{LiveSampleLink("Orientation_example", "Click here")}} to open this example in a new window; because {{domxref("Window.deviceorientation_event", "deviceorientation")}} doesn't work in a cross-origin {{HTMLElement("iframe")}} in all browsers.
 
-{{EmbedLiveSample('Orientation_example', '230', '260')}}
+{{EmbedLiveSample('Orientation_example', '230', '360')}}
 
 ## Processing motion events
 
