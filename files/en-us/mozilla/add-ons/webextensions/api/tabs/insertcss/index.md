@@ -43,7 +43,7 @@ let inserting = browser.tabs.insertCSS(
       - : `string`. Code to inject, as a text string.
     - `cssOrigin` {{optional_inline}}
       - : `string`. This can take one of two values: "user", to add the CSS as a user stylesheet or "author" to add it as an author stylesheet. If this option is omitted, the CSS is added as an author stylesheet.
-        - "user" enables you to prevent websites from overriding the CSS you insert: see [Cascading order](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#cascading_order).
+        - "user" adds the CSS at the user origin. Normal user-origin declarations have lower priority than author-origin declarations from the website, but user-origin declarations marked `!important` override author-origin declarations: see [Cascading order](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#cascading_order).
         - "author" stylesheets behave as if they appear after all author rules specified by the web page. This behavior includes any author stylesheets added dynamically by the page's scripts, even if that addition happens after the `insertCSS` call completes.
 
     - `file` {{optional_inline}}
