@@ -158,7 +158,12 @@ This allows the extension with the ID `ping_pong@example.org` to connect by pass
 
 ## Managed storage manifests
 
-The managed storage manifest is a file with a name that matches the ID specified in the extension's [browser_specific_settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key with the `.json` extension. It contains a JSON object with these properties:
+The managed storage manifest is a file named with the ID specified in the extension's [browser_specific_settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key with the `.json` extension.
+
+> [!NOTE]
+> This is one of two ways to provision managed storage in Firefox. See [Enterprise policies and extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Enterprise_policies) for the alternative and how the provisioning options compare with Chrome and Safari.
+
+The file contains a JSON object with these properties.
 
 <table class="fullwidth-table standard-table">
   <thead>
