@@ -66,17 +66,23 @@ invert(60%)
 
 {{CSSSyntax}}
 
-## SVG filter
+## Examples
+
+### Using the SVG filter
+
+This example shows three images for comparison: an image with an `invert()` filter function applied, an image with the equivalent SVG filter applied, and the original image.
+
+#### SVG
 
 The SVG {{SVGElement("feComponentTransfer")}} filter element can also be used to invert content by creating equivalent inversion on nested {{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, and {{SVGElement("feFuncB")}} table elements. We set the same `tableValue` for the red, green, and blue filter primitives to the same value, then we can reference the SVG effect by the ID of the {{SVGElement("filter")}}:
 
-```html
-<svg role="none">
-  <filter id="invert90">
+```html live-sample___svg-filter
+<svg height="0" role="none">
+  <filter id="invert70" color-interpolation-filters="sRGB">
     <feComponentTransfer>
-      <feFuncR type="table" tableValues="0.1 0" />
-      <feFuncG type="table" tableValues="0.1 0" />
-      <feFuncB type="table" tableValues="0.1 0" />
+      <feFuncR type="table" tableValues="0.7 0.3" />
+      <feFuncG type="table" tableValues="0.7 0.3" />
+      <feFuncB type="table" tableValues="0.7 0.3" />
     </feComponentTransfer>
   </filter>
 </svg>
@@ -85,54 +91,34 @@ The SVG {{SVGElement("feComponentTransfer")}} filter element can also be used to
 The following declarations produce the same effect:
 
 ```css
-filter: invert(0.9);
-filter: invert(90%);
-filter: url("#invert90"); /* with embedded SVG */
-filter: url("fileName.svg#invert90"); /* external SVG */
+filter: invert(0.7);
+filter: invert(70%);
+filter: url("#invert70"); /* with embedded SVG */
+filter: url("fileName.svg#invert70"); /* external SVG */
 ```
 
-## Examples
+#### CSS
 
-This example shows three images for comparison: an image with an `invert()` filter function applied, an image with the equivalent SVG function applied, and the original image:
+We include CSS that will invert elements based on their `css-filter` or `svg-filter` class:
 
-### SVG
-
-We create an SVG filter that inverts the content on which it is applied by 70%:
-
-```html
-<svg height="0">
-  <filter id="invert">
-    <feComponentTransfer>
-      <feFuncR type="table" tableValues="0.3 0" />
-      <feFuncG type="table" tableValues="0.3 0" />
-      <feFuncB type="table" tableValues="0.3 0" />
-    </feComponentTransfer>
-  </filter>
-</svg>
-```
-
-### CSS
-
-We include CSS that will invert elements based on their `filter` or `svgFilter` class:
-
-```css
-.filter {
-  filter: invert(70%);
+```css live-sample___svg-filter
+.css-filter {
+  filter: invert(0.7);
 }
 
-.svgFilter {
-  filter: url("#invert");
+.svg-filter {
+  filter: url("#invert70");
 }
 ```
 
-```css hidden
+```css hidden live-sample___svg-filter
 th,
 td {
   padding: 5px;
 }
 ```
 
-```html hidden
+```html hidden live-sample___svg-filter
 <table>
   <thead>
     <tr>
@@ -145,24 +131,15 @@ td {
     <tr>
       <td>
         <img
-          class="svgFilter"
+          class="css-filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="Pride flag" />
       </td>
       <td>
-        <svg id="svg" height="220" width="220" overflow="visible">
-          <filter id="svgInvert">
-            <feComponentTransfer>
-              <feFuncR type="table" tableValues="0.3 0" />
-              <feFuncG type="table" tableValues="0.3 0" />
-              <feFuncB type="table" tableValues="0.3 0" />
-            </feComponentTransfer>
-          </filter>
-          <image
-            href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-            xlink:href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-            filter="url('#svgInvert')" />
-        </svg>
+        <img
+          class="svg-filter"
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
       </td>
       <td>
         <img
@@ -174,7 +151,7 @@ td {
 </table>
 ```
 
-{{EmbedLiveSample('examples','100%','280')}}
+{{EmbedLiveSample('svg-filter','100%','280')}}
 
 ## Specifications
 
@@ -186,14 +163,14 @@ td {
 
 ## See also
 
-The other {{cssxref("filter-function")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
-
-- {{cssxref("filter-function/blur", "blur()")}}
-- {{cssxref("filter-function/brightness", "brightness()")}}
-- {{cssxref("filter-function/contrast", "contrast()")}}
-- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- {{cssxref("filter-function/grayscale", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-- {{cssxref("filter-function/opacity", "opacity()")}}
-- {{cssxref("filter-function/saturate", "saturate()")}}
-- {{cssxref("filter-function/sepia", "sepia()")}}
+- [CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module
+- The other {{cssxref("filter-function")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
+  - {{cssxref("filter-function/blur", "blur()")}}
+  - {{cssxref("filter-function/brightness", "brightness()")}}
+  - {{cssxref("filter-function/contrast", "contrast()")}}
+  - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+  - {{cssxref("filter-function/grayscale", "grayscale()")}}
+  - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+  - {{cssxref("filter-function/opacity", "opacity()")}}
+  - {{cssxref("filter-function/saturate", "saturate()")}}
+  - {{cssxref("filter-function/sepia", "sepia()")}}

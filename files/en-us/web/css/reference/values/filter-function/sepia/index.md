@@ -40,13 +40,23 @@ filter: sepia(1);
 ## Syntax
 
 ```css
-sepia(amount)
+/* No sepia conversion */
+sepia(0)
+
+/* Complete sepia conversion */
+sepia()
+sepia(1)
+sepia(100%)
+
+/* 60% sepia conversion */
+sepia(.6)
+sepia(60%)
 ```
 
 ### Parameters
 
-- `amount` {{Optional_Inline}}
-  - : The amount of the conversion, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value of `100%` is completely sepia, while a value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for {{Glossary("interpolation")}} is `0`. The default value is `1`.
+- {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} {{Optional_Inline}}
+  - : Specifies the amount of the conversion. A value of `100%` is completely sepia, while a value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for {{Glossary("interpolation")}} is `0`. The default value is `1`.
 
 ## Formal syntax
 
@@ -54,15 +64,91 @@ sepia(amount)
 
 ## Examples
 
-### Examples of correct values for sepia()
+### Using the SVG filter
+
+This example shows three images for comparison: an image with a `sepia()` filter function applied, an image with the equivalent SVG filter applied, and the original image.
+
+#### SVG
+
+The SVG {{SVGElement("feColorMatrix")}} filter element can also be used to convert content to sepia. We set the `values` for the color matrix, then we can reference the SVG effect by the ID of the {{SVGElement("filter")}}:
+
+```html live-sample___svg-filter
+<svg height="0" role="none">
+  <filter id="sepia70" color-interpolation-filters="sRGB">
+    <feColorMatrix
+      type="matrix"
+      values="0.5751 0.5383 0.1323 0 0
+              0.2443 0.7802 0.1176 0 0
+              0.1904 0.3738 0.3917 0 0
+              0 0 0 1 0" />
+  </filter>
+</svg>
+```
+
+The following declarations produce the same effect:
 
 ```css
-sepia(0)     /* No effect */
-sepia(.65)   /* 65% sepia */
-
-sepia()      /* Completely sepia */
-sepia(100%)
+filter: sepia(0.7);
+filter: sepia(70%);
+filter: url("#sepia70"); /* with embedded SVG */
+filter: url("fileName.svg#sepia70"); /* external SVG */
 ```
+
+#### CSS
+
+We include CSS that will convert elements to sepia based on their `css-filter` or `svg-filter` class:
+
+```css live-sample___svg-filter
+.css-filter {
+  filter: sepia(0.7);
+}
+
+.svg-filter {
+  filter: url("#sepia70");
+}
+```
+
+```css hidden live-sample___svg-filter
+th,
+td {
+  padding: 5px;
+}
+```
+
+```html hidden live-sample___svg-filter
+<table>
+  <thead>
+    <tr>
+      <th><code>sepia()</code> filter</th>
+      <th>SVG filter equivalent</th>
+      <th>Original image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <img
+          class="css-filter"
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
+      </td>
+      <td>
+        <img
+          class="svg-filter"
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
+      </td>
+      <td>
+        <img
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+```
+
+{{EmbedLiveSample('svg-filter','100%','280')}}
 
 ## Specifications
 
@@ -74,14 +160,14 @@ sepia(100%)
 
 ## See also
 
-The other {{cssxref("filter-function")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
-
-- {{cssxref("filter-function/blur", "blur()")}}
-- {{cssxref("filter-function/brightness", "brightness()")}}
-- {{cssxref("filter-function/contrast", "contrast()")}}
-- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- {{cssxref("filter-function/grayscale", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-- {{cssxref("filter-function/invert", "invert()")}}
-- {{cssxref("filter-function/opacity", "opacity()")}}
-- {{cssxref("filter-function/saturate", "saturate()")}}
+- [CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module
+- The other {{cssxref("filter-function")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
+  - {{cssxref("filter-function/blur", "blur()")}}
+  - {{cssxref("filter-function/brightness", "brightness()")}}
+  - {{cssxref("filter-function/contrast", "contrast()")}}
+  - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+  - {{cssxref("filter-function/grayscale", "grayscale()")}}
+  - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+  - {{cssxref("filter-function/invert", "invert()")}}
+  - {{cssxref("filter-function/opacity", "opacity()")}}
+  - {{cssxref("filter-function/saturate", "saturate()")}}

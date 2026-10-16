@@ -7,7 +7,7 @@ browser-compat: css.types.filter-function.brightness
 sidebar: cssref
 ---
 
-The **`brightness()`** [CSS](/en-US/docs/Web/CSS) {{cssxref("filter-function")}} applies a linear multiplier value on an element or an input image, making the image appear brighter or darker.
+The **`brightness()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) applies a linear multiplier value on an element or an input image, making the image appear brighter or darker. Its result is a {{cssxref("filter-function")}}.
 
 {{InteractiveExample("CSS Demo: brightness()")}}
 
@@ -40,30 +40,27 @@ filter: brightness(0);
 ## Syntax
 
 ```css
-brightness(amount)
-```
+/* Completely black */
+brightness(0)
 
-### Values
-
-- `amount` {{Optional_Inline}}
-  - : Brightness specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value less than `100%` darkens the input image or element, while a value over `100%` brightens it. A value of `0%` creates a completely black image or element, while a value of `100%` leaves the input unchanged. Other values between `0%` to `100%` have a linear multiplier effect. Values greater than `100%` are allowed, providing brighter results. The initial value for {{Glossary("interpolation")}} is `1`. Negative values are not allowed. The default value is `1`.
-
-The following are pairs of equivalent values:
-
-```css
-brightness(0)   /* Brightness is reduced to zero, so input turns black */
-brightness(0%)
-
-brightness(0.4) /* Brightness of input is reduced to 40%, so input is 60% darker */
-brightness(40%)
-
-brightness()     /* Brightness of input is not changed */
+/* No change */
+brightness()
 brightness(1)
 brightness(100%)
 
-brightness(2)   /* Brightness of input is doubled */
+/* 60% brightness */
+brightness(.6)
+brightness(60%)
+
+/* Double brightness */
+brightness(2)
 brightness(200%)
 ```
+
+### Parameters
+
+- {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} {{Optional_Inline}}
+  - : Specifies the amount of the conversion. A value less than `100%` darkens the input image or element, while a value over `100%` brightens it. A value of `0%` creates a completely black image or element, while a value of `100%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. Values greater than `100%` are allowed, providing brighter results. The initial value for {{Glossary("interpolation")}} is `1`. Negative values are not allowed. The default value is `1`.
 
 ## Formal syntax
 
@@ -151,17 +148,17 @@ p {
 
 {{EmbedLiveSample('Applying_brightness_using_the_filter_property','100%','280')}}
 
-### Applying brightness using the url() SVG brightness filter
+### Using the SVG filter
 
-The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id). The `<filter>` element's {{SVGElement("feComponentTransfer")}} primitive enables pixel-level color remapping.
+This example shows three images for comparison: an image with a `brightness()` filter function applied, an image with the equivalent SVG filter applied, and the original image.
 
-In this example, to create a filter that darkens the content on which it is applied by 25% (i.e., 75% of the original brightness), the `slope` attribute is set to `0.75`. We can then reference the filter by `id`.
+#### SVG
 
-Given the following:
+The SVG {{SVGElement("feComponentTransfer")}} filter element can also be used to adjust the brightness of content by creating equivalent brightness adjustments on nested {{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, and {{SVGElement("feFuncB")}} linear elements. We set the same `slope` for the red, green, and blue filter primitives, then we can reference the SVG effect by the ID of the {{SVGElement("filter")}}:
 
-```html live-sample___svg_filter
-<svg role="none">
-  <filter id="darken25" color-interpolation-filters="sRGB">
+```html live-sample___svg-filter
+<svg height="0" role="none">
+  <filter id="brightness75" color-interpolation-filters="sRGB">
     <feComponentTransfer>
       <feFuncR type="linear" slope="0.75" />
       <feFuncG type="linear" slope="0.75" />
@@ -171,22 +168,42 @@ Given the following:
 </svg>
 ```
 
-The following declarations produce similar effects:
+The following declarations produce the same effect:
 
 ```css
+filter: brightness(0.75);
 filter: brightness(75%);
-filter: url("#darken25"); /* with embedded SVG */
-filter: url("folder/fileName.svg#darken25"); /* external svg filter definition */
+filter: url("#brightness75"); /* with embedded SVG */
+filter: url("fileName.svg#brightness75"); /* external SVG */
 ```
 
-In the images below, the first one has a `brightness()` filter function applied, the second one has a similar SVG brightness function applied, and the third is the original image for comparison.
+#### CSS
 
-```html hidden live-sample___svg_filter
+We include CSS that will adjust the brightness of elements based on their `css-filter` or `svg-filter` class:
+
+```css live-sample___svg-filter
+.css-filter {
+  filter: brightness(0.75);
+}
+
+.svg-filter {
+  filter: url("#brightness75");
+}
+```
+
+```css hidden live-sample___svg-filter
+th,
+td {
+  padding: 5px;
+}
+```
+
+```html hidden live-sample___svg-filter
 <table>
   <thead>
     <tr>
-      <th>Live example</th>
-      <th>SVG Equivalent</th>
+      <th><code>brightness()</code> filter</th>
+      <th>SVG filter equivalent</th>
       <th>Original image</th>
     </tr>
   </thead>
@@ -196,13 +213,13 @@ In the images below, the first one has a `brightness()` filter function applied,
         <img
           class="css-filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="darkened pride flag" />
+          alt="Pride flag" />
       </td>
       <td>
         <img
           class="svg-filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="darkened pride flag" />
+          alt="Pride flag" />
       </td>
       <td>
         <img
@@ -214,24 +231,7 @@ In the images below, the first one has a `brightness()` filter function applied,
 </table>
 ```
 
-```css hidden live-sample___svg_filter
-.css-filter {
-  filter: brightness(0.75);
-}
-.svg-filter {
-  filter: url("#darken25");
-}
-
-th,
-td {
-  padding: 5px;
-}
-svg:not(:root) {
-  display: none;
-}
-```
-
-{{EmbedLiveSample('svg_filter','100%','280')}}
+{{EmbedLiveSample('svg-filter','100%','280')}}
 
 ## Specifications
 
