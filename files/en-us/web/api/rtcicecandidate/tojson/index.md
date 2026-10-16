@@ -8,9 +8,9 @@ browser-compat: api.RTCIceCandidate.toJSON
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCIceCandidate")}} method **`toJSON()`** converts the `RTCIceCandidate` on which it's called into JSON.
+The **`toJSON()`** method of the {{domxref("RTCIceCandidate")}} interface returns a JSON-serializable plain object representing the `RTCIceCandidate` object.
 
-A stringified version of the object can then be obtained by calling {{jsxref("JSON.stringify", "stringify()")}} on the returned object.
+The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when an `RTCIceCandidate` object is stringified. This method is generally intended to, by default, usefully serialize `RTCIceCandidate` objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{domxref("RTCIceCandidate/RTCIceCandidate", "RTCIceCandidate()")}} constructor within the reviver of {{jsxref("JSON.parse()")}}.
 
 ## Syntax
 
@@ -24,35 +24,52 @@ None.
 
 ### Return value
 
-<!-- RTCIceCandidateInit in spec -->
+A JSON-serializable plain object, containing the following properties:
 
-A JSON object with the following properties, which have been set to the corresponding values in the `RTCIceCandidate` object:
+- {{domxref("RTCIceCandidate/candidate", "candidate")}}
+- {{domxref("RTCIceCandidate/sdpMid", "sdpMid")}}
+- {{domxref("RTCIceCandidate/sdpMLineIndex", "sdpMLineIndex")}}
+- {{domxref("RTCIceCandidate/usernameFragment", "usernameFragment")}}
 
-- `candidate` {{optional_inline}}
-  - : A string describing the network connectivity information for the candidate.
-    Additional information can be found in {{domxref("RTCIceCandidate.candidate")}}.
-- `sdpMid` {{optional_inline}}
-  - : A string containing the identification tag of the media stream with which the candidate is associated, or `null` if there is no associated media stream.
-    Additional information can be found in {{domxref("RTCIceCandidate.sdpMid")}}.
-
-- `sdpMLineIndex` {{optional_inline}}
-  - : A number property containing the zero-based index of the m-line with which the candidate is associated, within the [SDP](/en-US/docs/Web/API/WebRTC_API/Protocols#sdp) of the media description, or `null` if no such associated exists.
-    Additional information can be found in {{domxref("RTCIceCandidate.sdpMLineIndex")}}.
-
-- `usernameFragment` {{optional_inline}}
-  - : A string containing the username fragment (usually referred to in shorthand as "ufrag" or "ice-ufrag").
-    This fragment, along with the ICE password ("ice-pwd"), uniquely identifies a single ongoing ICE interaction (including for any communication with the {{Glossary("STUN")}} server).
-    Additional information can be found in {{domxref("RTCIceCandidate.usernameFragment")}}.
-
-> [!NOTE]
-> The returned JSON object has the same form/properties as the `candidateInfo` object that can optionally be passed to the {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}} constructor to configure the candidate.
+Each property's value is copied as-is.
 
 ## Examples
 
-This simple example obtains a JSON string representing an `RTCIceCandidate` found in the variable `candidate`.
+### Calling toJSON() directly
+
+This example creates an `RTCIceCandidate` object. Calling `toJSON()` directly returns a plain object. You can access its properties, which is the same as accessing them on the original object.
 
 ```js
-let jsonString = candidate.toJSON().stringify();
+const candidate = new RTCIceCandidate({
+  candidate: "",
+  sdpMid: "0",
+  sdpMLineIndex: 0,
+});
+
+const json = candidate.toJSON();
+console.log(json); // A plain object
+console.log(typeof json); // "object"
+console.log(json.candidate); // Same value as candidate.candidate
+```
+
+### Serializing to a JSON string
+
+In this example, the `RTCIceCandidate` object from the previous example is automatically serialized by {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method.
+
+```js
+const jsonString = JSON.stringify(candidate);
+console.log(jsonString);
+```
+
+This would log a JSON string like so (formatted for readability):
+
+```json
+{
+  "candidate": "",
+  "sdpMid": "0",
+  "sdpMLineIndex": 0,
+  "usernameFragment": null
+}
 ```
 
 ## Specifications

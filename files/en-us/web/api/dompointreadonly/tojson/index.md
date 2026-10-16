@@ -8,9 +8,9 @@ browser-compat: api.DOMPointReadOnly.toJSON
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The {{domxref("DOMPointReadOnly")}} method
-`toJSON()` returns an object giving the
-{{Glossary("JSON")}} form of the point object.
+The **`toJSON()`** method of the {{domxref("DOMPointReadOnly")}} interface returns a JSON-serializable plain object representing the `DOMPointReadOnly` object.
+
+The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `DOMPointReadOnly` object is stringified. This method is generally intended to, by default, usefully serialize `DOMPointReadOnly` objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{domxref("DOMPointReadOnly/fromPoint_static", "DOMPointReadOnly.fromPoint()")}} function within the reviver of {{jsxref("JSON.parse()")}}.
 
 ## Syntax
 
@@ -24,18 +24,48 @@ None.
 
 ### Return value
 
-A new object whose properties are set to the values in the
-`DOMPoint` or `DOMPointReadOnly` on which the method was called.
+A JSON-serializable plain object, containing the following properties:
+
+- {{domxref("DOMPointReadOnly/x", "x")}}
+- {{domxref("DOMPointReadOnly/y", "y")}}
+- {{domxref("DOMPointReadOnly/z", "z")}}
+- {{domxref("DOMPointReadOnly/w", "w")}}
+
+Each property's value is copied as-is.
 
 ## Examples
 
-This example creates a {{domxref("DOMPoint")}} object representing the top-left corner
-of the current window, in screen coordinates, then converts that to JSON.
+### Calling toJSON() directly
+
+Calling `toJSON()` directly returns a plain object containing the `DOMPointReadOnly` object's properties.
 
 ```js
-const topLeft = new DOMPoint(window.screenX, window.screenY);
+const point = new DOMPointReadOnly(10, 20);
 
-const pointJSON = topLeft.toJSON();
+const json = point.toJSON();
+console.log(json);
+// { x: 10, y: 20, z: 0, w: 1 }
+console.log(typeof json); // "object"
+```
+
+### Serializing to a JSON string
+
+The `DOMPointReadOnly` object from the previous example is automatically serialized by {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method.
+
+```js
+const pointJSON = JSON.stringify(point);
+console.log(pointJSON);
+```
+
+This would log a JSON string like so (formatted for readability):
+
+```json
+{
+  "x": 10,
+  "y": 20,
+  "z": 0,
+  "w": 1
+}
 ```
 
 ## Specifications
