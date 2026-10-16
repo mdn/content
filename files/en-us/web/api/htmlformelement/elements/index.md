@@ -8,7 +8,7 @@ browser-compat: api.HTMLFormElement.elements
 
 {{APIRef("HTML DOM")}}
 
-The **`elements`** property of the {{domxref("HTMLFormElement")}} interface returns an {{domxref("HTMLFormControlsCollection")}} listing all the listed form controls associated with the {{HTMLElement("form")}} element.
+The **`elements`** read-only property of the {{domxref("HTMLFormElement")}} interface returns an {{domxref("HTMLFormControlsCollection")}} listing all the listed form controls associated with the {{HTMLElement("form")}} element.
 
 You can access a particular form control in the returned collection by using either an index or the element's `name` or `id` attributes.
 

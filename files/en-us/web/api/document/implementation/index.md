@@ -8,8 +8,7 @@ browser-compat: api.Document.implementation
 
 {{ ApiRef("DOM") }}
 
-The **`Document.implementation`** property returns a
-{{domxref("DOMImplementation")}} object associated with the current document.
+The **`implementation`** read-only property of the {{domxref("Document")}} interface returns a {{domxref("DOMImplementation")}} object associated with the current document.
 
 ## Value
 

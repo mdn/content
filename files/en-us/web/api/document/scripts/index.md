@@ -8,10 +8,7 @@ browser-compat: api.Document.scripts
 
 {{APIRef("DOM")}}
 
-The **`scripts`** property of the {{domxref("Document")}}
-interface returns a list of the {{HTMLElement("script")}}
-elements in the document. The returned object is an
-{{domxref("HTMLCollection")}}.
+The **`scripts`** read-only property of the {{domxref("Document")}} interface returns a list of the {{HTMLElement("script")}} elements in the document. The returned object is an {{domxref("HTMLCollection")}}.
 
 ## Value
 
