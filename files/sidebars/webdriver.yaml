@@ -134,6 +134,14 @@ sidebar:
           - type: section
             link: /Web/WebDriver/Reference/BiDi/Modules/network#commands
             title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/addDataCollector
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/disownData
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/getData
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/removeDataCollector
+            code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/network/setCacheBehavior
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/network/setExtraHeaders
