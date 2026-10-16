@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-This is the last example that explain [how to build custom form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls).
+This is the last example that explains [how to build custom form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls).
 
 ## Change states
 
@@ -13,7 +13,7 @@ This is the last example that explain [how to build custom form widgets](/en-US/
 
 ```html
 <form class="no-widget">
-  <select name="myFruit">
+  <select name="myFruit" aria-label="Fruit">
     <option>Cherry</option>
     <option>Lemon</option>
     <option>Banana</option>
@@ -21,14 +21,19 @@ This is the last example that explain [how to build custom form widgets](/en-US/
     <option>Apple</option>
   </select>
 
-  <div class="select" role="listbox">
+  <div
+    class="select"
+    role="combobox"
+    aria-label="Fruit"
+    aria-haspopup="listbox"
+    aria-expanded="false">
     <span class="value">Cherry</span>
-    <ul class="optList hidden" role="presentation">
+    <ul class="optList hidden" role="listbox" aria-label="Fruit">
       <li class="option" role="option" aria-selected="true">Cherry</li>
-      <li class="option" role="option">Lemon</li>
-      <li class="option" role="option">Banana</li>
-      <li class="option" role="option">Strawberry</li>
-      <li class="option" role="option">Apple</li>
+      <li class="option" role="option" aria-selected="false">Lemon</li>
+      <li class="option" role="option" aria-selected="false">Banana</li>
+      <li class="option" role="option" aria-selected="false">Strawberry</li>
+      <li class="option" role="option" aria-selected="false">Apple</li>
     </ul>
   </div>
 </form>
@@ -39,10 +44,7 @@ This is the last example that explain [how to build custom form widgets](/en-US/
 ```css
 .widget select,
 .no-widget .select {
-  position: absolute;
-  left: -5000em;
-  height: 0;
-  overflow: hidden;
+  display: none;
 }
 
 /* --------------- */
@@ -154,6 +156,10 @@ This is the last example that explain [how to build custom form widgets](/en-US/
   background: black;
   color: white;
 }
+
+.select .option:not(.highlight):hover {
+  background-color: rgb(0 0 0 / 10%);
+}
 ```
 
 ### JavaScript
@@ -163,26 +169,84 @@ This is the last example that explain [how to build custom form widgets](/en-US/
 // Function definitions //
 // -------------------- //
 
-function deactivateSelect(select) {
-  if (!select.classList.contains("active")) return;
+function openOptList(select, activeIndex) {
+  const optionList = select.querySelectorAll(".option");
+
+  // Validate the requested active option BEFORE any popup state mutation.
+  // If the requested index is invalid, leave the popup closed so the
+  // POPUP_OPEN ⇒ valid active option invariant cannot be violated.
+  if (
+    !Number.isInteger(activeIndex) ||
+    activeIndex < 0 ||
+    activeIndex >= optionList.length
+  ) {
+    return;
+  }
+
+  const optList = select.querySelector(".optList");
+
+  optList.classList.remove("hidden");
+  select.classList.add("active");
+  select.setAttribute("aria-expanded", "true");
+
+  highlightOption(select, optionList[activeIndex]);
+}
+
+function commitActiveOption(select) {
+  if (select.getAttribute("aria-expanded") !== "true") {
+    return;
+  }
+
+  const optionList = select.querySelectorAll(".option");
+  const activeId = select.getAttribute("aria-activedescendant");
+  const activeIndex = [...optionList].findIndex(
+    (option) => option.id === activeId,
+  );
+
+  if (activeIndex === -1) {
+    return;
+  }
+
+  updateValue(select, activeIndex);
+}
+
+function closeOptList(select) {
+  // aria-expanded is the single canonical source of truth for popup state.
+  // The .active and .hidden classes are presentation mirrors maintained by
+  // openOptList()/closeOptList() and are not consulted to authorize a state
+  // transition.
+  if (select.getAttribute("aria-expanded") !== "true") {
+    return;
+  }
+
+  const optionList = select.querySelectorAll(".option");
+  const committedOption = optionList[getIndex(select)];
+  if (committedOption) {
+    highlightOption(select, committedOption);
+  }
 
   const optList = select.querySelector(".optList");
 
   optList.classList.add("hidden");
   select.classList.remove("active");
+  select.setAttribute("aria-expanded", "false");
+  select.removeAttribute("aria-activedescendant");
 }
 
-function activeSelect(select, selectList) {
-  if (select.classList.contains("active")) return;
+function cancelSelection(select) {
+  if (select.getAttribute("aria-expanded") !== "true") {
+    return;
+  }
 
-  selectList.forEach(deactivateSelect);
-  select.classList.add("active");
+  closeOptList(select);
 }
 
-function toggleOptList(select, show) {
-  const optList = select.querySelector(".optList");
-
-  optList.classList.toggle("hidden");
+function deactivateOtherSelects(select, selectList) {
+  selectList.forEach((other) => {
+    if (other !== select) {
+      closeOptList(other);
+    }
+  });
 }
 
 function highlightOption(select, option) {
@@ -193,6 +257,10 @@ function highlightOption(select, option) {
   });
 
   option.classList.add("highlight");
+
+  if (select.getAttribute("aria-expanded") === "true") {
+    select.setAttribute("aria-activedescendant", option.id);
+  }
 }
 
 function updateValue(select, index) {
@@ -200,15 +268,22 @@ function updateValue(select, index) {
   const value = select.querySelector(".value");
   const optionList = select.querySelectorAll(".option");
 
-  optionList.forEach((other) => {
-    other.setAttribute("aria-selected", "false");
-  });
-
-  optionList[index].setAttribute("aria-selected", "true");
-
   nativeWidget.selectedIndex = index;
   value.textContent = optionList[index].textContent;
-  highlightOption(select, optionList[index]);
+
+  optionList.forEach((option, optionIndex) => {
+    const isSelected = optionIndex === index;
+    option.classList.toggle("highlight", isSelected);
+    option.setAttribute("aria-selected", String(isSelected));
+
+    if (isSelected) {
+      if (select.getAttribute("aria-expanded") === "true") {
+        select.setAttribute("aria-activedescendant", option.id);
+      } else {
+        select.removeAttribute("aria-activedescendant");
+      }
+    }
+  });
 }
 
 function getIndex(select) {
@@ -217,70 +292,178 @@ function getIndex(select) {
   return nativeWidget.selectedIndex;
 }
 
+// This function returns the index of the currently active option in the listbox
+// when the custom select is expanded. While expanded, keyboard navigation can
+// move `aria-activedescendant` away from the committed selection, and
+// subsequent keyboard navigation continues from that logical active option
+// rather than from the committed selection. If the custom select is collapsed,
+// or if the active descendant is missing or no longer matches an option, we
+// fall back to the committed selection returned by `getIndex()`.
+// It takes two parameters:
+// select     : the DOM node with the class `select` related to the native control
+// optionList : the list of options for the given custom control
+function getActiveIndex(select, optionList) {
+  if (select.getAttribute("aria-expanded") === "true") {
+    const activeId = select.getAttribute("aria-activedescendant");
+    const index = [...optionList].findIndex((option) => option.id === activeId);
+
+    if (index !== -1) {
+      return index;
+    }
+  }
+
+  return getIndex(select);
+}
+
 // ------------- //
 // Event binding //
 // ------------- //
 
 const form = document.querySelector("form");
 
-form.classList.remove("no-widget");
-form.classList.add("widget");
+const selectList = form.querySelectorAll(".select");
 
-const selectList = document.querySelectorAll(".select");
-
-selectList.forEach((select) => {
+selectList.forEach((select, selectIndex) => {
   const optionList = select.querySelectorAll(".option");
   const selectedIndex = getIndex(select);
 
   select.tabIndex = 0;
-  select.previousElementSibling.tabIndex = -1;
+
+  const optList = select.querySelector(".optList");
+  const listboxId = `custom-select-${selectIndex}-listbox`;
+  optList.id = listboxId;
+  select.setAttribute("aria-controls", listboxId);
+
+  optionList.forEach((option, optionIndex) => {
+    option.id = `custom-select-${selectIndex}-option-${optionIndex}`;
+  });
 
   updateValue(select, selectedIndex);
 
   optionList.forEach((option, index) => {
-    option.addEventListener("mouseover", () => {
-      highlightOption(select, option);
+    option.addEventListener("mousedown", (event) => {
+      event.preventDefault();
     });
 
     option.addEventListener("click", (event) => {
-      updateValue(select, index);
+      event.stopPropagation();
+      highlightOption(select, optionList[index]);
+      commitActiveOption(select);
+      closeOptList(select);
+      select.focus();
     });
   });
 
-  select.addEventListener("click", (event) => {
-    toggleOptList(select);
+  select.addEventListener("click", () => {
+    if (select.getAttribute("aria-expanded") === "true") {
+      closeOptList(select);
+      return;
+    }
+    openOptList(select, getIndex(select));
   });
 
-  select.addEventListener("focus", (event) => {
-    activeSelect(select, selectList);
+  select.addEventListener("focus", () => {
+    deactivateOtherSelects(select, selectList);
   });
 
-  select.addEventListener("blur", (event) => {
-    deactivateSelect(select);
+  select.addEventListener("blur", () => {
+    if (select.getAttribute("aria-expanded") === "true") {
+      commitActiveOption(select);
+      closeOptList(select);
+    }
   });
 
-  select.addEventListener("keyup", (event) => {
-    let index = getIndex(select);
-
-    if (event.key === "Escape") {
-      deactivateSelect(select);
-    }
-    if (event.key === "ArrowDown" && index < optionList.length - 1) {
-      index++;
-      event.preventDefault();
-    }
-    if (event.key === "ArrowUp" && index > 0) {
-      index--;
-      event.preventDefault();
+  select.addEventListener("keydown", (event) => {
+    if (event.key === "Tab") {
+      if (select.getAttribute("aria-expanded") === "true") {
+        commitActiveOption(select);
+        closeOptList(select);
+      }
+      return;
     }
 
-    if (event.key === "Enter" || event.key === " ") {
-      toggleOptList(select);
-    }
+    let index = getActiveIndex(select, optionList);
+    const expanded = select.getAttribute("aria-expanded") === "true";
 
-    updateValue(select, index);
+    switch (event.key) {
+      case "ArrowDown":
+        event.preventDefault();
+
+        if (!expanded) {
+          openOptList(select, getIndex(select));
+          break;
+        }
+
+        if (index < optionList.length - 1) {
+          index++;
+          highlightOption(select, optionList[index]);
+        }
+        break;
+
+      case "ArrowUp":
+        event.preventDefault();
+
+        if (!expanded) {
+          openOptList(select, 0);
+          break;
+        }
+
+        if (index > 0) {
+          index--;
+          highlightOption(select, optionList[index]);
+        }
+        break;
+
+      case "Home":
+        event.preventDefault();
+
+        if (!expanded) {
+          openOptList(select, 0);
+          break;
+        }
+
+        highlightOption(select, optionList[0]);
+        break;
+
+      case "End":
+        event.preventDefault();
+
+        if (!expanded) {
+          openOptList(select, optionList.length - 1);
+          break;
+        }
+
+        highlightOption(select, optionList[optionList.length - 1]);
+        break;
+
+      case "Enter":
+      case " ":
+        event.preventDefault();
+
+        if (!expanded) {
+          openOptList(select, getIndex(select));
+          break;
+        }
+
+        commitActiveOption(select);
+        closeOptList(select);
+        break;
+
+      case "Escape":
+        event.preventDefault();
+        cancelSelection(select);
+        break;
+      default:
+        // Ignore all other keys
+        return;
+    }
   });
 });
+
+if (selectList.length > 0) {
+  form.classList.remove("no-widget");
+  form.classList.add("widget");
+}
 ```
 
 ### Result
