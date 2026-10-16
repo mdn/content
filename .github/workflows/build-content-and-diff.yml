@@ -1,0 +1,156 @@
+name: Build Content and Diff
+
+on:
+  pull_request:
+    paths:
+      - "files/**"
+      - "data/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".nvmrc"
+      - ".github/workflows/build-content-and-diff.yml"
+      - ".github/workflows/pr-diff-companion.yml"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions: {}
+
+jobs:
+  build-and-diff:
+    if: github.repository == 'mdn/content'
+    runs-on: ubuntu-latest
+    env:
+      CONTENT_ROOT: ${{ github.workspace }}/files
+    steps:
+      - name: Checkout content at base
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          persist-credentials: false
+
+      - name: Setup Node.js environment for base
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install base dependencies
+        run: npm ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build base content
+        run: npx @mdn/rari build --json-issues --data-issues
+        env:
+          BUILD_OUT_ROOT: ${{ runner.temp }}/build-base
+          BUILD_FLAW_LEVELS: "unsafe_html: error, *:warn"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout content at PR head
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.sha }}
+          clean: false
+          persist-credentials: false
+
+      - name: Setup Node.js environment for PR
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install PR dependencies
+        run: npm ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build PR content
+        run: npx @mdn/rari build --json-issues --data-issues
+        env:
+          BUILD_OUT_ROOT: ${{ runner.temp }}/build-pr
+          BUILD_FLAW_LEVELS: "unsafe_html: error, *:warn"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RARI_SKIP_UPDATES: "true"
+
+      - name: Compare builds and flaw counts
+        env:
+          BASE_BUILD: ${{ runner.temp }}/build-base
+          PR_BUILD: ${{ runner.temp }}/build-pr
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from "node:fs/promises";
+          import path from "node:path";
+
+          async function getPages(root) {
+            const pages = new Map();
+            let flaws = 0;
+
+            async function walk(directory) {
+              for (const entry of await fs.readdir(directory, { withFileTypes: true })) {
+                const fullPath = path.join(directory, entry.name);
+                if (entry.isDirectory()) {
+                  await walk(fullPath);
+                } else if (entry.name === "index.json") {
+                  const relativePath = path.relative(root, fullPath);
+                  const content = await fs.readFile(fullPath, "utf8");
+                  const page = JSON.parse(content);
+                  pages.set(relativePath, content);
+                  for (const items of Object.values(page.doc?.flaws ?? {})) {
+                    if (Array.isArray(items)) flaws += items.length;
+                  }
+                }
+              }
+            }
+
+            await walk(root);
+            return { pages, flaws };
+          }
+
+          const base = await getPages(process.env.BASE_BUILD);
+          const pr = await getPages(process.env.PR_BUILD);
+          const allPaths = [...new Set([...base.pages.keys(), ...pr.pages.keys()])];
+          const changed = allPaths
+            .filter((file) => base.pages.get(file) !== pr.pages.get(file))
+            .sort();
+          const stats = {
+            changed_files: changed.length,
+            total_files: allPaths.length,
+            base_flaws: base.flaws,
+            pr_flaws: pr.flaws,
+          };
+
+          await fs.writeFile("diff-stats.json", `${JSON.stringify(stats, null, 2)}\n`);
+          const escapeHtml = (value) => value.replace(/[&<>"']/g, (char) => ({
+            "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+          })[char]);
+          const rows = changed.map((file) => `<li><code>${escapeHtml(file)}</code></li>`).join("\n");
+          await fs.writeFile("diff.html", `<!doctype html>
+          <meta charset="utf-8">
+          <title>Build diff</title>
+          <h1>Build diff</h1>
+          <p>${stats.changed_files} of ${stats.total_files} pages across both builds changed.</p>
+          <p>Flaws: ${stats.base_flaws} → ${stats.pr_flaws} (${stats.pr_flaws - stats.base_flaws >= 0 ? "+" : ""}${stats.pr_flaws - stats.base_flaws}).</p>
+          <ul>${rows}</ul>
+          `);
+          NODE
+
+      - name: Summarize diff
+        run: |
+          jq -r '"## Build diff\n\n**\(.changed_files)** of \(.total_files) pages changed. Flaws: \(.base_flaws) -> \(.pr_flaws) (\(if .pr_flaws - .base_flaws > 0 then "+" else "" end)\(.pr_flaws - .base_flaws))."' diff-stats.json >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload diff report
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: build-diff-report
+          path: diff.html
+          if-no-files-found: error
+
+      - name: Upload diff stats
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: build-diff-stats
+          path: diff-stats.json
+          if-no-files-found: error
