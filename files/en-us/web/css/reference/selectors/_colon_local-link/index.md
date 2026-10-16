@@ -5,7 +5,7 @@ slug: Web/CSS/Reference/Selectors/:local-link
 page-type: css-pseudo-class
 status:
   - experimental
-spec-urls: https://drafts.csswg.org/selectors/#local-link-pseudo
+spec-urls: https://drafts.csswg.org/selectors-5/#local-link-pseudo
 sidebar: cssref
 ---
 
