@@ -171,7 +171,7 @@ This includes the following information where `name`, `email`, `username`, and `
 - `picture` {{optional_inline}}
   - : The URL of the user's avatar image.
 - `approved_clients` {{optional_inline}}
-  - : An array of client IDs, each identifying an RP that the user has an account with. When a user tries to sign into an RP using federated identity, the browser checks the IdP's `approved_clients` array. If the RP's `clientId` is found in the array, no [disclosure text](/en-US/docs/Web/API/FedCM_API/RP_sign-in#fedcm_sign-in_flow:~:text=disclosure%20text) is displayed to the user, and they may also be able to take advantage of [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication).
+  - : An array of client IDs, each identifying an RP that the user has an account with (when a user [creates](/en-US/docs/Web/API/CredentialsContainer/create) a federated account, it is up to the IdP to add the RP's ID to this array). When a user tries to sign into an RP using federated identity, the browser checks the IdP's `approved_clients` array. If the RP's `clientId` is found in the array, no [disclosure text](/en-US/docs/Web/API/FedCM_API/RP_sign-in#fedcm_sign-in_flow:~:text=disclosure%20text) is displayed to the user, and they may also be able to take advantage of [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication).
 
     An IdP will generally remove an RP client ID from `approved_clients` when a federated account is disconnected from the IdP used to obtain the credential. See [The disconnect endpoint](#the_disconnect_endpoint).
 - `domain_hints` {{optional_inline}}
@@ -280,7 +280,7 @@ The request payload contains the following params:
 - `params` {{optional_inline}}
   - : The serialization of the `params` object from the original `get()` request.
 - `disclosure_text_shown`
-  - : A string of `"true"` or `"false"` indicating whether the [disclosure text](/en-US/docs/Web/API/FedCM_API/RP_sign-in#fedcm_sign-in_flow:~:text=disclosure%20text) was shown or not. The disclosure text is not shown if:
+  - : A string of `"true"` or `"false"` indicating whether the [disclosure text](/en-US/docs/Web/API/FedCM_API/RP_sign-in#fedcm_sign-in_flow:~:text=disclosure%20text) was shown or not. The disclosure text is not shown if any of the following conditions are true:
     - The RP's `clientId` was found inside the [`approved_clients`](#approved_clients) array contained in the JSON returned from the [accounts list endpoint](#the_accounts_list_endpoint).
     - The browser has observed a sign-up by the same user in the recent past in the absence of `approved_clients`.
 - `is_auto_selected`

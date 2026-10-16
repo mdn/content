@@ -579,7 +579,10 @@
         "IdentityProvider",
         "NavigatorLogin"
       ],
-      "methods": ["CredentialsContainer.get()"],
+      "methods": [
+        "CredentialsContainer.create()",
+        "CredentialsContainer.get()"
+      ],
       "properties": ["Navigator.login"],
       "events": []
     },
