@@ -171,7 +171,7 @@ This includes the following information where `name`, `email`, `username`, and `
 - `picture` {{optional_inline}}
   - : The URL of the user's avatar image.
 - `approved_clients` {{optional_inline}}
-  - : An array of RP clients that the user has registered with. When an RP user tries to sign in with an IdP account, that IdP's `approved_clients` array is checked. If the RP's `clientId` is found in the array, no [disclosure text](/en-US/docs/Web/API/FedCM_API/RP_sign-in#fedcm_sign-in_flow:~:text=disclosure%20text) is displayed to them, and they may be able to take advantage of [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication).
+  - : An array of client IDs, each identifying an RP that the user has an account with. When a user tries to sign into an RP using federated identity, the browser checks the IdP's `approved_clients` array. If the RP's `clientId` is found in the array, no [disclosure text](/en-US/docs/Web/API/FedCM_API/RP_sign-in#fedcm_sign-in_flow:~:text=disclosure%20text) is displayed to the user, and they may also be able to take advantage of [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication).
 
     An IdP will generally remove an RP client ID from `approved_clients` when a federated account is disconnected from the IdP used to obtain the credential. See [The disconnect endpoint](#the_disconnect_endpoint).
 - `domain_hints` {{optional_inline}}
