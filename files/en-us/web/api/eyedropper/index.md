@@ -61,6 +61,13 @@ document.getElementById("start-button").addEventListener("click", () => {
 });
 ```
 
+> [!NOTE]
+> The {{jsxref("Promise/catch", "catch()")}} handler above also runs when the
+> platform cannot open an eyedropper even though the browser exposes
+> `EyeDropper` — for example Chrome on older Android versions that do not
+> support the system eyedropper. In that case the promise rejects instead of
+> resolving to a color.
+
 #### Result
 
 {{EmbedLiveSample("Opening the eyedropper tool and sampling a color")}}
