@@ -95,12 +95,16 @@ You could copy most of this from the property's summary on the corresponding API
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onNameOfTheEvent = (event) => { }
+```
+
+Or use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("NameOfTheEvent", (event) => { })
-
-onNameOfTheEvent = (event) => { }
 ```
 
 ## Event type
@@ -137,6 +141,8 @@ Note that we use the plural "Examples" even if the page only contains one exampl
 Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
+
+If you want to demonstrate both `addEventListener` and `onEvent`, avoid claiming or implying that the two examples are equivalent. Ideally, always explicitly add a parenthetical saying "but note that this replaces other event listeners added using `onEvent`, if any".
 
 > [!NOTE]
 > Sometimes you will want to link to examples given on another page.
