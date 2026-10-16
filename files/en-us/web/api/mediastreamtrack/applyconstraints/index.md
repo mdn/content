@@ -25,7 +25,7 @@ applyConstraints(constraints)
 ### Parameters
 
 - `constraints` {{optional_inline}}
-  - : A {{domxref("MediaTrackConstraints")}} object listing the constraints to apply to the track's constrainable properties; any existing constraints are replaced with the new values specified, and any constrainable properties not included are restored to their default constraints.
+  - : A [`MediaTrackConstraints`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#return_value) object listing the constraints to apply to the track's constrainable properties; any existing constraints are replaced with the new values specified, and any constrainable properties not included are restored to their default constraints.
     If this parameter is omitted, all currently set custom constraints are cleared.
     This object represents the basic set of constraints that must apply for the {{jsxref("Promise")}} to resolve.
     The object may contain an advanced property containing an array of additional `MediaTrackConstraints` objects, which are treated as exact requires.
