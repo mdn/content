@@ -8,14 +8,30 @@ browser-compat: api.PerformanceResourceTiming.decodedBodySize
 
 {{APIRef("Performance API")}}{{AvailableInWorkers}}
 
-The **`decodedBodySize`** read-only property returns the size (in octets) received from the fetch (HTTP or cache) of the message body after removing any applied content encoding (like gzip or Brotli). If the resource is retrieved from an application cache or local resources, it returns the size of the payload after removing any applied content encoding.
+The **`decodedBodySize`** read-only property returns the size (in octets) received from the fetch (HTTP or cache) of the message body after removing any applied content encoding (like gzip or Brotli).
 
 ## Value
 
 The `decodedBodySize` property can have the following values:
 
 - A number representing the size (in octets) received from the fetch (HTTP or cache) of the message body, after removing any applied content encoding.
-- `0` if the resource is a cross-origin request and no {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header is used.
+- `0` if the resource is a cross-origin request made in `no-cors` [mode](/en-US/docs/Web/API/Request/mode), or if the request failed, for example, because it didn't pass the [CORS](/en-US/docs/Web/HTTP/Guides/CORS) check.
+
+## Description
+
+Content size information for a cross-origin resource is restricted unless the resource passes the [CORS](/en-US/docs/Web/HTTP/Guides/CORS) check, so if the value of the `decodedBodySize` property is `0`, the resource might be a cross-origin request.
+
+To expose cross-origin content size information, the resource must be requested in `cors` [mode](/en-US/docs/Web/API/Request/mode), and the response must pass the CORS check, which requires it to include an appropriate {{HTTPHeader("Access-Control-Allow-Origin")}} header.
+Requests made with {{domxref("Window/fetch", "fetch()")}} use `cors` mode by default.
+Elements such as {{HTMLElement("img")}} use `no-cors` mode unless the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute is set, so a cross-origin image loaded without it has a content size of `0`.
+
+To allow `https://developer.mozilla.org` to see content sizes, the cross-origin resource should send:
+
+```http
+Access-Control-Allow-Origin: https://developer.mozilla.org
+```
+
+Browsers are allowed to apply stricter restrictions than CORS requires, and may return `0` even when the CORS check passes.
 
 ## Examples
 
@@ -52,16 +68,6 @@ resources.forEach((entry) => {
 });
 ```
 
-### Cross-origin content size information
-
-If the value of the `decodedBodySize` property is `0`, the resource might be a cross-origin request. To expose cross-origin content size information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
-
-For example, to allow `https://developer.mozilla.org` to see content sizes, the cross-origin resource should send:
-
-```http
-Timing-Allow-Origin: https://developer.mozilla.org
-```
-
 ## Specifications
 
 {{Specifications}}
@@ -72,4 +78,6 @@ Timing-Allow-Origin: https://developer.mozilla.org
 
 ## See also
 
+- {{HTTPHeader("Access-Control-Allow-Origin")}}
 - {{HTTPHeader("Timing-Allow-Origin")}}
+- [Cross-origin resource sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
