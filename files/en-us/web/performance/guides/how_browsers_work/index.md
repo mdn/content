@@ -88,7 +88,9 @@ TCP packets are split into segments during transmission. Because TCP guarantees 
 
 This number must provide a balance — if the server waits for an ACK after each segment, the transfer will be slow because the server has to wait a full round trip for every segment it sends, even on a low-load network.
 
-On the other hand, sending too many segments at once can lead to the problem that in a busy network the client will not be able to receive all the segments. The client can't send an ACK for a segment it never received, so the server doesn't get an ACK in time and has to re-send the segments. Buffers matter here too. The server keeps a copy of data that hasn't been acknowledged yet, so it can send it again if needed. The client holds incoming data in a buffer until the application reads it. If that buffer is nearly full, the client can advertise a smaller receive window, which limits how much more data the server can send.
+On the other hand, sending too many segments at once results in a busy network where the client cannot receive all the segments. The client can't send an ACK for a segment it never received, so the server doesn't get an ACK in time and has to re-send the segments.
+
+A buffer is used to mitigate problems caused by a busy network. The server keeps a copy of currently unacknowledged data, so it can be resent if required. The client holds incoming data in a buffer until the application reads it. If that buffer nears full, the client can advertise a smaller receive window, which limits how much more data the server can send.
 
 In order to balance the number of transmitted segments, the {{glossary('TCP slow start')}} algorithm is used to gradually increase the amount of transmitted data until the maximum network bandwidth can be determined, and to reduce the amount of transmitted data in case of high network load.
 
