@@ -46,7 +46,7 @@ Exceptions are not thrown but returned when the {{jsxref("Promise")}} is rejecte
 - `AbortError` {{domxref("DOMException")}}
   - : Thrown if the user aborts the selection by pressing the <kbd>Esc</kbd> key or if the selection is aborted by an {{domxref("AbortController")}} being passed as an argument to `open()`.
 - `OperationError` {{domxref("DOMException")}}
-  - : Thrown if the selection fails for other reasons.
+  - : Thrown if the selection fails for other reasons, such as when the eyedropper is not supported by the underlying operating system.
 
 ## Specifications
 
