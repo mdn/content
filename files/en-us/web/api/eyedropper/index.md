@@ -29,6 +29,9 @@ _The `EyeDropper` interface doesn't inherit any methods_.
 
 This example shows how to open an eyedropper tool and wait for the user to either select a pixel from the screen, or press <kbd>Escape</kbd> to cancel the eyedropper mode.
 
+> [!NOTE]
+> The `catch()` block is executed if the user dismisses the eyedropper (such as by pressing <kbd>Escape</kbd>) or if the underlying platform does not support eyedropper sampling (for example, on older Android versions where the browser supports the API interface but the platform capability is unavailable).
+
 #### HTML
 
 ```html
