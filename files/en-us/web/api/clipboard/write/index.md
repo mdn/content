@@ -8,11 +8,11 @@ browser-compat: api.Clipboard.write
 
 {{APIRef("Clipboard API")}} {{securecontext_header}}
 
-The **`write()`** method of the {{domxref("Clipboard")}} interface writes arbitrary {{domxref("ClipboardItem")}} data such as images and text to the clipboard, fulfilling the returned {{jsxref("Promise")}} on completion.
-This can be used to implement cut and copy functionality.
+The **`write()`** method of the {{domxref("Clipboard")}} interface is used to write data such as images, text, and custom types, to the system clipboard.
 
-The method can in theory write arbitrary data (unlike {{domxref("Clipboard.writeText", "writeText()")}}, which can only write text).
-Browsers commonly support writing text, HTML, and PNG image data.
+The method takes as an argument an array of {{domxref("ClipboardItem")}} instances, and returns a {{jsxref("Promise")}} that is fulfilled when the data is written.
+Each `ClipboardItem` can contain one or more representations of an object that has been copied, allowing apps that read the data to pick the format they prefer.
+This is more flexible than {{domxref("Clipboard.writeText", "writeText()")}}, which can only write text.
 
 ## Syntax
 
@@ -36,6 +36,13 @@ The promise is rejected if the clipboard is unable to write to the clipboard.
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if writing to the clipboard is not allowed.
+
+## Description
+
+Each item in the `data` array is a {{domxref("ClipboardItem")}} that can contain one or more representations of the data being written, keyed by {{Glossary("MIME type")}}.
+Providing multiple representations lets an app that later pastes the data pick the best format it understands.
+
+Browsers commonly support writing text, HTML, and PNG image data, and may support web custom formats (see the [Browser compatibility](/en-US/docs/Web/API/ClipboardItem#browser_compatibility) section of `ClipboardItem`).
 
 ## Security considerations
 
@@ -194,6 +201,309 @@ The result is shown below.
 First click on the blue square, and then select the text "Paste here" and use your OS-specific keyboard combinations to paste from the clipboard (such as `Ctrl+V` on Windows).
 
 {{embedlivesample("write_canvas_contents_to_the_clipboard", "", "420", "", "", "", "clipboard-write")}}
+
+### Writing a custom format to the clipboard
+
+This example uses the same code as [Reading and writing custom formats](/en-US/docs/Web/API/Clipboard_API#reading_and_writing_custom_formats) in the Clipboard API overview, but shows only the code that's specific to `write()`.
+For more detail see that example.
+
+#### HTML
+
+```html hidden
+<table id="source">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Quantity</th>
+      <th>SKU</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+<button id="copy_custom" type="button">
+  Copy (HTML + text + custom format)
+</button>
+<button id="reload_custom" type="button">Reload</button>
+<p id="status_custom"></p>
+```
+
+```html hidden
+<div class="targets">
+  <div>
+    <p>Your app</p>
+    <div id="target_app"></div>
+    <button id="paste_app" type="button">Paste</button>
+  </div>
+  <div>
+    <p>Arbitrary rich text target</p>
+    <div id="target_richtext"></div>
+    <button id="paste_richtext" type="button">Paste</button>
+  </div>
+  <div>
+    <p>Arbitrary plain text target</p>
+    <div id="target_plaintext"></div>
+    <button id="paste_plaintext" type="button">Paste</button>
+  </div>
+</div>
+```
+
+```css hidden
+body {
+  margin: 1rem;
+}
+
+#source {
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+#source th,
+#source td {
+  border: 1px solid black;
+  padding: 0.25rem 0.5rem;
+}
+
+#status_custom {
+  min-height: 1.2em;
+  font-style: italic;
+}
+
+.targets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.targets > div {
+  flex: 1;
+  min-width: 150px;
+}
+
+.targets p {
+  margin: 0 0 0.25rem;
+  font-weight: bold;
+}
+
+.targets button {
+  margin-top: 0.5rem;
+}
+
+#target_app,
+#target_richtext,
+#target_plaintext {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 80px;
+  border: 1px solid black;
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: inherit;
+  white-space: pre-wrap;
+}
+
+#target_app:empty::before,
+#target_richtext:empty::before,
+#target_plaintext:empty::before {
+  content: "Nothing pasted yet";
+  color: gray;
+}
+
+#target_app table {
+  border-collapse: collapse;
+}
+
+#target_app th,
+#target_app td {
+  border: 1px solid black;
+  padding: 0.25rem 0.5rem;
+}
+```
+
+#### JavaScript
+
+```js hidden
+const statusElement = document.querySelector("#status_custom");
+function log(text) {
+  statusElement.textContent = text;
+}
+```
+
+```js hidden
+const inventory = [
+  { item: "Apples", quantity: 12, sku: "A-104" },
+  { item: "Pears", quantity: 7, sku: "P-221" },
+];
+
+function buildRow(cells, cellTag) {
+  const tr = document.createElement("tr");
+  for (const value of cells) {
+    const cell = document.createElement(cellTag);
+    cell.textContent = value;
+    tr.appendChild(cell);
+  }
+  return tr;
+}
+const sourceBody = document.querySelector("#source tbody");
+for (const row of inventory) {
+  sourceBody.appendChild(buildRow([row.item, row.quantity, row.sku], "td"));
+}
+```
+
+```js hidden
+function buildTable(headers, rows) {
+  const table = document.createElement("table");
+  const thead = document.createElement("thead");
+  thead.appendChild(buildRow(headers, "th"));
+  const tbody = document.createElement("tbody");
+  for (const row of rows) {
+    tbody.appendChild(buildRow(row, "td"));
+  }
+  table.append(thead, tbody);
+  return table;
+}
+```
+
+```js hidden
+const reload = document.querySelector("#reload_custom");
+
+reload.addEventListener("click", () => {
+  window.location.reload(true);
+});
+```
+
+Here we define the custom media ("MIME") type that we will use in the following code.
+We also use {{domxref("ClipboardItem.supports_static", "ClipboardItem.supports()")}} to check whether that particular format is supported and log that to the output.
+Note that this example works either way, we just won't be able to read (or write) the custom type.
+
+```js
+const customType = "web text/x-mdn-inventory+json";
+
+log(
+  ClipboardItem.supports(customType)
+    ? `Custom format supported: ${customType}`
+    : `Custom format not supported by this browser: ${customType}`,
+);
+```
+
+The following code builds the `ClipboardItem` when the copy button is pressed.
+This creates representation for `text/html` and `text/plain` blobs, and adds the custom-format blob only when `ClipboardItem.supports()` confirms the browser accepts it.
+There is nothing special about the blob for the custom format: the only difference is the`web` prefix used for its key.
+The `text/html` blob omits the `SKU` column stored in the custom format, and acts as a fall back when the content is pasted in apps and browsers that don't allow the format.
+
+```js
+const sourceTable = document.querySelector("#source");
+const copyButton = document.querySelector("#copy_custom");
+
+async function copyInventory() {
+  const reducedTable = buildTable(
+    ["Item", "Quantity"],
+    inventory.map((row) => [row.item, row.quantity]),
+  );
+  const html = reducedTable.outerHTML;
+  const text = inventory
+    .map((row) => `${row.item}\t${row.quantity}`)
+    .join("\n");
+
+  const data = {
+    "text/html": new Blob([html], { type: "text/html" }),
+    "text/plain": new Blob([text], { type: "text/plain" }),
+  };
+  if (ClipboardItem.supports(customType)) {
+    const json = JSON.stringify(inventory);
+    data[customType] = new Blob([json], { type: customType });
+  }
+
+  try {
+    await navigator.clipboard.write([new ClipboardItem(data)]);
+    log(`Copied ${Object.keys(data).length} format(s) to the clipboard.`);
+  } catch (error) {
+    log(`Copy failed: ${error.message}`);
+  }
+}
+
+copyButton.addEventListener("click", copyInventory);
+
+document.addEventListener("copy", (event) => {
+  const selection = document.getSelection();
+  if (!sourceTable.contains(selection.anchorNode)) return;
+  event.preventDefault();
+  copyInventory();
+});
+```
+
+```js hidden
+const targetApp = document.querySelector("#target_app");
+const pasteAppButton = document.querySelector("#paste_app");
+
+pasteAppButton.addEventListener("click", async () => {
+  try {
+    const [clipboardItem] = await navigator.clipboard.read();
+    if (clipboardItem.types.includes(customType)) {
+      const blob = await clipboardItem.getType(customType);
+      const rows = JSON.parse(await blob.text());
+      const table = buildTable(
+        ["Item", "Quantity", "SKU"],
+        rows.map((row) => [row.item, row.quantity, row.sku]),
+      );
+      targetApp.replaceChildren(table);
+    } else {
+      targetApp.textContent = "Custom format not on the clipboard.";
+    }
+  } catch (error) {
+    targetApp.textContent = `Paste failed: ${error.message}`;
+  }
+});
+```
+
+```js hidden
+const targetRichtext = document.querySelector("#target_richtext");
+const pasteRichtextButton = document.querySelector("#paste_richtext");
+
+pasteRichtextButton.addEventListener("click", async () => {
+  try {
+    const [clipboardItem] = await navigator.clipboard.read();
+    if (clipboardItem.types.includes("text/html")) {
+      const blob = await clipboardItem.getType("text/html");
+      targetRichtext.innerHTML = await blob.text();
+    } else {
+      targetRichtext.textContent = "No text/html on the clipboard.";
+    }
+  } catch (error) {
+    targetRichtext.textContent = `Paste failed: ${error.message}`;
+  }
+});
+```
+
+```js hidden
+const targetPlaintext = document.querySelector("#target_plaintext");
+const pastePlaintextButton = document.querySelector("#paste_plaintext");
+
+pastePlaintextButton.addEventListener("click", async () => {
+  try {
+    const [clipboardItem] = await navigator.clipboard.read();
+    if (clipboardItem.types.includes("text/plain")) {
+      const blob = await clipboardItem.getType("text/plain");
+      targetPlaintext.textContent = await blob.text();
+    } else {
+      targetPlaintext.textContent = "No text/plain on the clipboard.";
+    }
+  } catch (error) {
+    targetPlaintext.textContent = `Paste failed: ${error.message}`;
+  }
+});
+```
+
+#### Result
+
+Click the "Copy" button, or select the table and copy it manually, to write the table to the clipboard as HTML, plain text, and (if supported) the custom format.
+Click each of the three "Paste" buttons to see what each representation was used for, or see [Reading and writing custom formats](/en-US/docs/Web/API/Clipboard_API#reading_and_writing_custom_formats) in the Clipboard API overview for the full walkthrough.
+Click "Reload" to reset the example.
+
+{{EmbedLiveSample("Writing a custom format to the clipboard", "100%", "450", "", "", "", "clipboard-read; clipboard-write")}}
+
+> [!NOTE]
+> If prompted, grant permission in order to copy and paste.
 
 ## Specifications
 
