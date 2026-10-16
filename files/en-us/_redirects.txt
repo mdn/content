@@ -14779,7 +14779,6 @@
 /en-US/docs/Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed	/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSExternalRedirectNotAllowed
 /en-US/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowHeader	/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowHeader
 /en-US/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod	/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowMethod
-/en-US/docs/Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials	/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSMIssingAllowCredentials
 /en-US/docs/Web/HTTP/CORS/Errors/CORSMethodNotFound	/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound
 /en-US/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight	/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowHeaderFromPreflight
 /en-US/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin	/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin

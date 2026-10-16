@@ -96696,7 +96696,7 @@
     "modified": "2019-03-18T21:30:23.468Z",
     "contributors": ["Sheppy"]
   },
-  "Web/HTTP/Guides/CORS/Errors/CORSMIssingAllowCredentials": {
+  "Web/HTTP/Guides/CORS/Errors/CORSMissingAllowCredentials": {
     "modified": "2019-03-18T21:30:24.552Z",
     "contributors": ["Sheppy"]
   },
