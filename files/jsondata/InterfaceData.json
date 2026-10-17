@@ -3876,6 +3876,10 @@
       "inh": "",
       "impl": []
     },
+    "TrustedHTMLParserOptions": {
+      "inh": "",
+      "impl": []
+    },
     "TrustedScript": {
       "inh": "",
       "impl": []
