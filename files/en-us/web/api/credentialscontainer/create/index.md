@@ -29,7 +29,7 @@ create(options)
 
 - `options` {{optional_inline}}
   - : An object that contains options for the requested new `Credentials` object. It can contain the following properties:
-        - `mediation` {{optional_inline}}
+    - `mediation` {{optional_inline}}
       - : A string indicating how the user is involved in creating the credential. The value can be one of the following:
         - `"conditional"`
           - : Only applicable when creating a public key credential. The browser creates the credential without showing the user a prominent dialog box, as long as the user agent has recently mediated a sign-in for the user and the user has previously consented to credential creation. In practice, this means that the user has just signed in using a password saved in their credentials manager. If these conditions are not met, the `create()` call rejects with a `NotAllowedError` {{domxref("DOMException")}}. See [Conditional create](/en-US/docs/Web/Security/Authentication/Passkeys#conditional_create) for more details of how this is used.
@@ -38,7 +38,8 @@ create(options)
           - : The user agent involves the user in creating the credential if necessary: for example, by asking them to confirm that they want to create a passkey.
 
         The default value is `"optional"`.
-- `signal` {{optional_inline}}
+
+    - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `create()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an `AbortError` {{domxref("DOMException")}}.
 
     Each of the following properties represents a _credential type_ being created. One and only one of them must be specified:
@@ -71,9 +72,9 @@ If no credential object can be created, the promise resolves with `null`.
     - Usage was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
     - The function is called cross-origin but the iframe's [`allow`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow) attribute does not set an appropriate {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} policy.
     - The function is called cross-origin and the `<iframe>` does not have {{glossary("transient activation")}}.
-        - The function is called cross-origin with `mediation` set to `"conditional"`.
+    - The function is called cross-origin with `mediation` set to `"conditional"`.
     - `mediation` is set to `"conditional"` and the conditions for creating the credential without user interaction were not met.
-- The function tried to create a [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_and_non-discoverable_credentials) ([`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey) is set to `required` in the `create()` call's {{domxref("PublicKeyCredentialCreationOptions")}} option), but the user does not have an authenticator that supports discoverable credentials.
+    - The function tried to create a [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_and_non-discoverable_credentials) ([`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey) is set to `required` in the `create()` call's {{domxref("PublicKeyCredentialCreationOptions")}} option), but the user does not have an authenticator that supports discoverable credentials.
 - `AbortError` {{domxref("DOMException")}}
   - : The operation was aborted.
 
