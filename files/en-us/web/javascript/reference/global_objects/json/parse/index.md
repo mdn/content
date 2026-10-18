@@ -41,7 +41,7 @@ JSON.parse(text, reviver)
       - : The value produced by parsing.
     - `context`
       - : A context object that holds state relevant to the current expression being revived. It is a new object for each invocation of the reviver function. It contains the following property only when reviving primitive values, but not when `value` is an object or array:
-        - `source`
+        - `source` {{optional_inline}}
           - : The original JSON string representing this value.
 
 ### Return value
