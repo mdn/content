@@ -27,7 +27,7 @@ None.
 A {{jsxref("Promise")}} that resolves to an object where the property names are the client capability strings, and the values are boolean values that indicate whether or not the corresponding capability or extension is supported.
 
 The WebAuthn client capability strings are:
-
+  - : The client is capable of [conditional create](/en-US/docs/Web/Security/Authentication/Passkeys#conditional_create): that is, of creating a passkey without a prominent dialog box, when {{domxref("CredentialsContainer.create()")}} is called with its [`mediation`](/en-US/docs/Web/API/CredentialsContainer/create#mediation) option set to `"conditional"`.
 - `"conditionalCreate"`
   - : The client is capable of creating [discoverable credentials](/en-US/docs/Web/API/Web_Authentication_API#discoverable_and_non-discoverable_credentials).
 - `"conditionalGet"`
