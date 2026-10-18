@@ -28,7 +28,6 @@ A {{jsxref("Promise")}} that resolves to an object where the property names are 
 
 The WebAuthn client capability strings are:
 
-
 - `"conditionalCreate"`
   - : The client is capable of [conditional create](/en-US/docs/Web/Security/Authentication/Passkeys#conditional_create): that is, of creating a passkey without a prominent dialog box, when {{domxref("CredentialsContainer.create()")}} is called with its [`mediation`](/en-US/docs/Web/API/CredentialsContainer/create#mediation) option set to `"conditional"`.
 - `"conditionalGet"`
