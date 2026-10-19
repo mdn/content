@@ -259,6 +259,7 @@ fuhao
 Fullband
 fullscreened
 fullwidth
+futex
 futexes
 Gamedev
 Gamedevs
