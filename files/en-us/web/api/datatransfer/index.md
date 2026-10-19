@@ -108,6 +108,12 @@ In the following example, we have a {{htmlelement("form")}} containing three dif
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 #### CSS
 
 ```css

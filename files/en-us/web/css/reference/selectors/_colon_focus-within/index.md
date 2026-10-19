@@ -25,19 +25,17 @@ label:focus-within {
 ```
 
 ```html interactive-example
-<form>
-  <p>Which flavor would you like to order?</p>
-  <label>Full Name: <input name="firstName" type="text" /></label>
-  <label
-    >Flavor:
-    <select name="flavor">
-      <option>Cherry</option>
-      <option>Green Tea</option>
-      <option>Moose Tracks</option>
-      <option>Mint Chip</option>
-    </select>
-  </label>
-</form>
+<p>Which flavor would you like to order?</p>
+<label>Full Name: <input name="firstName" type="text" /></label>
+<label
+  >Flavor:
+  <select name="flavor">
+    <option>Cherry</option>
+    <option>Green Tea</option>
+    <option>Moose Tracks</option>
+    <option>Mint Chip</option>
+  </select>
+</label>
 ```
 
 ## Syntax
@@ -50,32 +48,34 @@ label:focus-within {
 
 ## Examples
 
-In this example, the form will receive special coloring styles when either text input receives focus.
+In this example, the container will receive special coloring styles when either text input receives focus.
 
 ### HTML
 
 ```html
-<p>Try typing into this form.</p>
-
-<form>
-  <label for="given_name">Given Name:</label>
-  <input id="given_name" type="text" />
-  <br />
-  <label for="family_name">Family Name:</label>
-  <input id="family_name" type="text" />
-</form>
+<ul class="group">
+  <li>
+    <label for="given-name">Given Name:</label>
+    <input id="given-name" type="text" />
+  </li>
+  <li>
+    <label for="family-name">Family Name:</label>
+    <input id="family-name" type="text" />
+  </li>
+</ul>
 ```
 
 ### CSS
 
 ```css
-form {
+.group {
+  list-style: none;
   border: 1px solid;
   color: gray;
   padding: 4px;
 }
 
-form:focus-within {
+.group:focus-within {
   background: #ffff88;
   color: black;
 }
@@ -88,6 +88,8 @@ input {
 ### Result
 
 {{EmbedLiveSample("Examples", 500, 150)}}
+
+Try typing in the text fields.
 
 ## Specifications
 
