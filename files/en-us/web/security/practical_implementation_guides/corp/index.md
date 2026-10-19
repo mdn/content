@@ -10,11 +10,11 @@ Cross-Origin Resource Policy (CORP) is set by the {{httpheader("Cross-Origin-Res
 
 ## Problem
 
-By default, the {{Glossary("same-origin policy")}} prevents scripts from directly reading cross-origin responses, preventing user data on the resource site from being leaked. However, some side-channel hardware vulnerabilities, in particular [Spectre](<https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)>), exploit the speculative execution functionality of modern processors. This functionality is designed to improve performance but can be manipulated to disclose sensitive data, as long as the response bytes enter the embedder's memory. In addition, Cross-Site Script Inclusion (XSSI) attacks allow attackers to obtain data cross-origin using traditional `<script>` elements. Thus, even channels traditionally considered to be secure for cross-origin embedding (which therefore do not require cooperation from the resource provider) may be insecure.
+By default, the {{Glossary("same-origin policy")}} prevents scripts from directly reading cross-origin responses, preventing user data leaks on the resource site. However, some side-channel hardware vulnerabilities, in particular [Spectre](<https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)>), exploit modern processors' speculative execution functionality, a performance feature, to disclose sensitive data, as long as the response bytes enter the embedder's memory. In addition, Cross-Site Script Inclusion (XSSI) attacks enable obtaining cross-origin data using traditional `<script>` elements. Thus, even channels traditionally considered secure for cross-origin embedding, which therefore don't require resource provider cooperation, may be insecure.
 
 ## Solution
 
-Use `Cross-Origin-Resource-Policy` on the resource to block [`no-cors`](/en-US/docs/Web/API/RequestInit#mode) cross-origin requests (which are issued by default for certain APIs and elements, in particular `<script>` and `<img>` elements). As this policy is expressed via a response header, the actual request is not prevented. Instead, the browser prevents the result from being leaked by turning the response into a network error.
+Use `Cross-Origin-Resource-Policy` on the resource to block [`no-cors`](/en-US/docs/Web/API/RequestInit#mode) cross-origin requests, which are issued by default for certain APIs and elements, in particular `<script>` and `<img>` elements. As this policy is expressed via a response header, the actual request isn't prevented. Instead, the browser prevents the result from being leaked by turning the response into a network error.
 
 The possible values are:
 
