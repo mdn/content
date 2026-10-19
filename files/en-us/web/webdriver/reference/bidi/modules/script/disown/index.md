@@ -90,11 +90,12 @@ You can use `script.disown` to release handles you no longer need before the rea
 Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new).
 You get an open tab's context ID by using [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 
-Suppose you evaluate `({ count: 2 })` in the tab by using [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate).
+Suppose the tab's page contains a button, and you evaluate the expression `document.querySelector('button')` by using [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate).
 In that command, you pass the context ID in the [`target`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate#target) parameter and set the [`resultOwnership`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate#resultownership) parameter to `root`.
-The browser returns a handle for the resulting object.
+The expression returns the button element, a DOM node that supports a handle.
+With `resultOwnership` set to `root`, the browser includes a handle for that element in the response.
 
-When you no longer need the handle, send the following message to release it.
+When you no longer need the handle for this element, send the following message to release it.
 Use the tab's context ID and the returned handle, without navigating or reloading the page between the two commands:
 
 ```json
