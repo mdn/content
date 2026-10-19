@@ -32,8 +32,7 @@ equals(number1, number2, /* …, */ numberN)
 
 ### Exceptions
 
-- {{jsxref("TypeError")}}
-  - : Thrown if an invalid type was passed to the method.
+None.
 
 ## Examples
 
@@ -48,10 +47,11 @@ const sum = new CSSMathSum(CSS.px(1), CSS.px(2));
 console.log(sum.equals(new CSSMathSum(CSS.px(1), CSS.px(2)))); // true
 ```
 
-Changing the order of the values in a sum, or writing the same length in a different unit, makes the values different:
+Changing the order of the values in a sum, comparing a sum to its result, or writing the same length in a different unit, makes the values different:
 
 ```js
 console.log(sum.equals(new CSSMathSum(CSS.px(2), CSS.px(1)))); // false
+console.log(sum.equals(CSS.px(3))); // false
 console.log(CSS.in(1).equals(CSS.cm(2.54))); // false
 ```
 
