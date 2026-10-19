@@ -32,7 +32,10 @@ Firefox 159 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- [Scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) are now enabled by default, which allow you to animate property values along a scroll-based timeline (that is, by scrolling a scroll container) rather than the default time-based document timeline.
+  ([Firefox bug 1324602](https://bugzil.la/1324602)).
 
 <!-- #### Removals -->
 
