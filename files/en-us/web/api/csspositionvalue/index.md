@@ -10,7 +10,7 @@ browser-compat: api.CSSPositionValue
 
 {{APIRef("CSS Typed Object Model API")}}{{Non-standard_header}}
 
-The **`CSSPositionValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) represents values for properties that take a position, for example {{cssxref('object-position')}}.
+The **`CSSPositionValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) represents values for properties that take a position, for example {{cssxref('object-position')}}.
 
 ## Constructor
 

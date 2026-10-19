@@ -7,7 +7,7 @@ browser-compat: api.CSSFontFaceDescriptors
 
 {{APIRef("CSSOM")}}
 
-The **`CSSFontFaceDescriptors`** interface represents a CSS declaration block for an {{cssxref("@font-face")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
+The **`CSSFontFaceDescriptors`** interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) represents a CSS declaration block for an {{cssxref("@font-face")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 
 Each descriptor in the body of the corresponding {{cssxref("@font-face")}} at-rule can be accessed using either its kebab-case property name in [bracket notation](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#bracket_notation) or the camel-case version of the property name in [dot notation](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#dot_notation).
 For example, you can access the `font-family` CSS descriptor as `style["font-family"]` or `style.fontFamily`, where `style` is a `CSSFontFaceDescriptors` instance.

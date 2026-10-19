@@ -7,9 +7,11 @@ browser-compat: api.StyleSheetList
 
 {{APIRef("CSSOM")}}
 
-The `StyleSheetList` interface represents a list of {{domxref("CSSStyleSheet")}} objects. An instance of this object can be returned by {{domxref("Document.styleSheets")}}.
+The `StyleSheetList` interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) represents a list of {{domxref("CSSStyleSheet")}} objects.
 
-It is an array-like object but can't be iterated over using {{jsxref("Array")}} methods. However it can be iterated over in a standard {{jsxref("Statements/for", "for")}} loop over its indices, or converted to an {{jsxref("Array")}}.
+An instance of this object can be returned by {{domxref("Document.styleSheets")}}.
+It is an array-like object but can't be iterated over using {{jsxref("Array")}} methods.
+However it can be iterated over in a standard {{jsxref("Statements/for", "for")}} loop over its indices, or converted to an {{jsxref("Array")}}.
 
 > [!NOTE]
 > Typically list interfaces like `StyleSheetList` wrap around {{jsxref("Array")}} types, so you can use `Array` methods on them.
