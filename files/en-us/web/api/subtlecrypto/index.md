@@ -89,6 +89,8 @@ The difference is that `generateKey()` will generate a new distinct key value ea
 
 The {{DOMxRef("SubtleCrypto.encapsulateKey","encapsulateKey()")}} and {{DOMxRef("SubtleCrypto.decapsulateKey","decapsulateKey()")}} functions let two parties agree on a shared key. The sender passes the recipient's public key to `encapsulateKey()`, which returns a new shared key and a ciphertext. The sender sends the ciphertext to the recipient, who passes it to `decapsulateKey()` along with their private key, to get the same shared key. The {{DOMxRef("SubtleCrypto.encapsulateBits","encapsulateBits()")}} and {{DOMxRef("SubtleCrypto.decapsulateBits","decapsulateBits()")}} functions work the same way, but return the shared secret as bytes instead of a `CryptoKey`.
 
+Encapsulation fills the same role as encrypting a randomly generated key with the recipient's public key, for example using RSA-OAEP with {{DOMxRef("SubtleCrypto.wrapKey","wrapKey()")}}, or deriving a key with ECDH or X25519. The reason to choose it is the algorithm it offers: ML-KEM is designed to resist attacks by quantum computers, which could break the other public-key algorithms that `SubtleCrypto` provides for this purpose. This matters most for data that has to stay confidential for many years, because a recording of today's traffic could be decrypted later.
+
 #### Importing and exporting keys
 
 To make keys available outside your app, you need to export the key, and that's what {{DOMxRef("SubtleCrypto.exportKey","exportKey()")}} is for. You can choose one of a number of export formats.

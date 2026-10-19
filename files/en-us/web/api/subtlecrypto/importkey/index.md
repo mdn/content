@@ -23,8 +23,8 @@ importKey(format, keyData, algorithm, extractable, keyUsages)
 - `format`
   - : A string describing the data format of the key to import. It can be one of the following:
     - `raw`: [Raw](#raw) format.
-    - `raw-public` {{experimental_inline}}: [Raw public](#raw_public) format.
-    - `raw-seed` {{experimental_inline}}: [Raw seed](#raw_seed) format.
+    - `raw-public`: [Raw public](#raw_public) format.
+    - `raw-seed`: [Raw seed](#raw_seed) format.
     - `pkcs8`: [PKCS #8](#pkcs_8) format.
     - `spki`: [SubjectPublicKeyInfo](#subjectpublickeyinfo) format.
     - `jwk`: [JSON Web Key](#json_web_key) format.
@@ -61,10 +61,10 @@ importKey(format, keyData, algorithm, extractable, keyUsages)
     - `deriveBits`: The key may be used in [deriving bits](/en-US/docs/Web/API/SubtleCrypto/deriveBits).
     - `wrapKey`: The key may be used to [wrap a key](/en-US/docs/Web/API/SubtleCrypto/wrapKey).
     - `unwrapKey`: The key may be used to [unwrap a key](/en-US/docs/Web/API/SubtleCrypto/unwrapKey).
-    - `encapsulateKey` {{experimental_inline}}: The key may be used to [encapsulate a key](/en-US/docs/Web/API/SubtleCrypto/encapsulateKey).
-    - `encapsulateBits` {{experimental_inline}}: The key may be used to [encapsulate bits](/en-US/docs/Web/API/SubtleCrypto/encapsulateBits).
-    - `decapsulateKey` {{experimental_inline}}: The key may be used to [decapsulate a key](/en-US/docs/Web/API/SubtleCrypto/decapsulateKey).
-    - `decapsulateBits` {{experimental_inline}}: The key may be used to [decapsulate bits](/en-US/docs/Web/API/SubtleCrypto/decapsulateBits).
+    - `encapsulateKey`: The key may be used to [encapsulate a key](/en-US/docs/Web/API/SubtleCrypto/encapsulateKey).
+    - `encapsulateBits`: The key may be used to [encapsulate bits](/en-US/docs/Web/API/SubtleCrypto/encapsulateBits).
+    - `decapsulateKey`: The key may be used to [decapsulate a key](/en-US/docs/Web/API/SubtleCrypto/decapsulateKey).
+    - `decapsulateBits`: The key may be used to [decapsulate bits](/en-US/docs/Web/API/SubtleCrypto/decapsulateBits).
 
 ### Return value
 

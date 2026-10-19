@@ -55,13 +55,13 @@ generateKey(algorithm, extractable, keyUsages)
       - : The key may be used to {{domxref("SubtleCrypto.wrapKey()", "wrap a key", "", "nocode")}}.
     - `unwrapKey`
       - : The key may be used to {{domxref("SubtleCrypto.unwrapKey()", "unwrap a key", "", "nocode")}}.
-    - `encapsulateKey` {{experimental_inline}}
+    - `encapsulateKey`
       - : The key may be used to {{domxref("SubtleCrypto.encapsulateKey()", "encapsulate a key", "", "nocode")}}.
-    - `encapsulateBits` {{experimental_inline}}
+    - `encapsulateBits`
       - : The key may be used to {{domxref("SubtleCrypto.encapsulateBits()", "encapsulate bits", "", "nocode")}}.
-    - `decapsulateKey` {{experimental_inline}}
+    - `decapsulateKey`
       - : The key may be used to {{domxref("SubtleCrypto.decapsulateKey()", "decapsulate a key", "", "nocode")}}.
-    - `decapsulateBits` {{experimental_inline}}
+    - `decapsulateBits`
       - : The key may be used to {{domxref("SubtleCrypto.decapsulateBits()", "decapsulate bits", "", "nocode")}}.
 
 ### Return value
@@ -318,7 +318,7 @@ The information about the created keys is logged below (or an error string if th
 This code generates an ML-KEM key pair for key encapsulation. The public key gets the `encapsulateKey` usage, and the private key gets the `decapsulateKey` usage.
 
 ```js
-let keyPair = await window.crypto.subtle.generateKey(
+const keyPair = await window.crypto.subtle.generateKey(
   {
     name: "ML-KEM-768",
   },
