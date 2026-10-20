@@ -20,7 +20,7 @@ The value is `null` if there are no added or removed nodes, or if the node is th
 
 ### Log the next sibling of a mutation
 
-This adds a node every time you click the button, but it adds the node at the _start of the target_, not the end. Then the observer logs the `textContent` of the `nextSibling` of the added node.
+This adds/removes a node every time you click the button, but it performs the update at the _start of the target_, not the end. Then the observer logs the `textContent` of the `nextSibling` of the updated node.
 
 #### HTML
 
@@ -29,7 +29,7 @@ This adds a node every time you click the button, but it adds the node at the _s
 <button id="remove-nodes">Remove a node</button>
 <button id="reset">Reset</button>
 
-<pre id="log" class="log">Next sibling of added node:</pre>
+<pre id="log" class="log">Next sibling of updated node:</pre>
 <div id="target"><p>Node #0</p></div>
 ```
 
@@ -66,7 +66,7 @@ reset.addEventListener("click", () => self.location.reload());
 function logNextSibling(records) {
   for (const record of records) {
     if (record.type === "childList") {
-      log.textContent = `Next sibling of added node: ${record.nextSibling?.textContent ?? null}`;
+      log.textContent = `Next sibling of updated node: ${record.nextSibling?.textContent ?? null}`;
     }
   }
 }
