@@ -133,16 +133,11 @@ If the content is licensed, you must obey the license terms. For example, the co
 
 #### Use HTTPS
 
-{{Glossary("HTTPS")}} is the encrypted version of {{Glossary("HTTP")}}. You should serve your websites using HTTPS whenever possible:
+{{Glossary("HTTPS")}} is the encrypted version of {{Glossary("HTTP")}}, which reduces the chance that content has been read or tampered with in transit.
 
-1. HTTPS reduces the chance that remote content has been tampered with in transit.
-2. HTTPS prevents embedded content from accessing content in your parent document, and vice versa.
+These days, all content needs to be served over HTTPS — browsers increasingly provide warnings when content is served over HTTP, HTTP subresources won't load in HTTPS pages, and many web features require HTTPS to work. HTTPS-enabling your site requires a security certificate to be installed. Most hosting providers offer HTTPS by default, so you don't need to set up a certificate yourself.
 
-HTTPS-enabling your site requires a special security certificate to be installed. Many hosting providers offer HTTPS-enabled hosting without you needing to do any setup on your own to put a certificate in place. But if you _do_ need to set up HTTPS support for your site on your own, [Let's Encrypt](https://letsencrypt.org/) provides tools and instructions you can use for automatically creating and installing the necessary certificate — with built-in support for the most widely-used web servers, including the Apache web server, Nginx, and others. The Let's Encrypt tooling is designed to make the process as easy as possible, so there's really no good reason to avoid using it or other available means to HTTPS-enable your site.
-
-> [!NOTE]
-> [GitHub pages](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) allow content to be served via HTTPS by default.
-> If you are using a different hosting provider you should check what support they provide for serving content with HTTPS.
+If you _do_ need to set up HTTPS support for your site on your own, [Let's Encrypt](https://letsencrypt.org/) provides tools and instructions you can use for automatically creating and installing the necessary certificate — with support for many web servers, including Apache, Nginx, and others. The Let's Encrypt tooling is designed to make the process as easy as possible.
 
 #### Always use the `sandbox` attribute
 
