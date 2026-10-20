@@ -37,7 +37,7 @@ This example first defines a few at-rules, among them two {{cssxref("@font-palet
   font-family: "Noto Color Emoji";
   font-style: normal;
   font-weight: normal;
-  src: url("https://fonts.gstatic.com/l/font?kit=Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabts6diywYkdG3gjD0U&skey=a373f7129eaba270&v=v24")
+  src: url("https://mdn.github.io/shared-assets/fonts/noto-color-emoji/NotoColorEmoji-Regular.woff2")
     format("woff2");
 }
 
@@ -49,15 +49,15 @@ This example first defines a few at-rules, among them two {{cssxref("@font-palet
 @font-palette-values --blue {
   font-family: "Noto Color Emoji";
   override-colors:
-    3 rgb(1 28 193),
-    4 rgb(60 124 230);
+    3426 rgb(1 28 193),
+    4614 rgb(60 124 230);
 }
 
 @font-palette-values --green {
   font-family: "Noto Color Emoji";
   override-colors:
-    3 rgb(28 193 1),
-    4 rgb(34 230 1);
+    3426 rgb(28 193 1),
+    4614 rgb(34 230 1);
 }
 
 .colored-hat {
