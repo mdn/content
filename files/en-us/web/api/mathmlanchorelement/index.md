@@ -41,7 +41,7 @@ _Inherits properties from its parent, {{domxref("MathMLElement")}}._
   - : A string representing the port component, if any, of the referenced URL.
 - {{domxref("MathMLAnchorElement.protocol")}} {{experimental_inline}}
   - : A string representing the protocol component, including trailing colon (`:`), of the referenced URL.
-- {{domxref("MathMLAnchorElement.referrerpolicy")}} {{experimental_inline}}
+- {{domxref("MathMLAnchorElement.referrerPolicy")}} {{experimental_inline}}
   - : A string defining how much of the [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referer) to send when following the link, and under what circumstances.
 - {{domxref("MathMLAnchorElement.rel")}} {{experimental_inline}}
   - : A space-separated list of link types indicating the relationship between the resource represented by the link and the current document.
