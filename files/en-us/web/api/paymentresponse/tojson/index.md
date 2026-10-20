@@ -10,7 +10,7 @@ browser-compat: api.PaymentResponse.toJSON
 
 The **`toJSON()`** method of the {{domxref("PaymentResponse")}} interface returns a JSON-serializable plain object representing the `PaymentResponse` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `PaymentResponse` object is stringified. This method is generally intended to, by default, usefully serialize `PaymentResponse` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `PaymentResponse` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 

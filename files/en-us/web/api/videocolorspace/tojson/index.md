@@ -10,7 +10,7 @@ browser-compat: api.VideoColorSpace.toJSON
 
 The **`toJSON()`** method of the {{domxref("VideoColorSpace")}} interface returns a JSON-serializable plain object representing the `VideoColorSpace` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `VideoColorSpace` object is stringified. This method is generally intended to, by default, usefully serialize `VideoColorSpace` objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{domxref("VideoColorSpace/VideoColorSpace", "VideoColorSpace()")}} constructor within the reviver of {{jsxref("JSON.parse()")}}.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `VideoColorSpace` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization. The serialized value can then be deserialized using the {{domxref("VideoColorSpace/VideoColorSpace", "VideoColorSpace()")}} constructor within the reviver of {{jsxref("JSON.parse()")}}.
 
 ## Syntax
 

@@ -10,7 +10,7 @@ browser-compat: api.GeolocationCoordinates.toJSON
 
 The **`toJSON()`** method of the {{domxref("GeolocationCoordinates")}} interface returns a JSON-serializable plain object representing the `GeolocationCoordinates` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `GeolocationCoordinates` object is stringified. This method is generally intended to, by default, usefully serialize `GeolocationCoordinates` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `GeolocationCoordinates` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -65,9 +65,9 @@ This would log a JSON string like so (formatted for readability):
 
 ```json
 {
-  "accuracy": 12.0,
-  "latitude": 53.0,
-  "longitude": 8.0,
+  "accuracy": 12.5,
+  "latitude": 53.125,
+  "longitude": 8.75,
   "altitude": null,
   "altitudeAccuracy": null,
   "heading": null,

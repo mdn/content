@@ -10,7 +10,7 @@ browser-compat: api.PushSubscription.toJSON
 
 The **`toJSON()`** method of the {{domxref("PushSubscription")}} interface returns a JSON-serializable plain object representing the `PushSubscription` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `PushSubscription` object is stringified. This method is generally intended to, by default, usefully serialize `PushSubscription` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `PushSubscription` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 

@@ -12,7 +12,7 @@ browser-compat: api.NavigatorUAData.toJSON
 
 The **`toJSON()`** method of the {{domxref("NavigatorUAData")}} interface returns a JSON-serializable plain object representing the `NavigatorUAData` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `NavigatorUAData` object is stringified. This method is generally intended to, by default, usefully serialize `NavigatorUAData` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `NavigatorUAData` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 

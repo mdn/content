@@ -12,7 +12,7 @@ browser-compat: api.PressureRecord.toJSON
 
 The **`toJSON()`** method of the {{domxref("PressureRecord")}} interface returns a JSON-serializable plain object representing the `PressureRecord` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `PressureRecord` object is stringified. This method is generally intended to, by default, usefully serialize `PressureRecord` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `PressureRecord` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -75,7 +75,7 @@ This would log a JSON string like so (formatted for readability):
 {
   "source": "cpu",
   "state": "fair",
-  "time": 1712052746385.347
+  "time": 1000.5
 }
 ```
 

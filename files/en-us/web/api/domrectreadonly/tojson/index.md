@@ -10,7 +10,7 @@ browser-compat: api.DOMRectReadOnly.toJSON
 
 The **`toJSON()`** method of the {{domxref("DOMRectReadOnly")}} interface returns a JSON-serializable plain object representing the `DOMRectReadOnly` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `DOMRectReadOnly` object is stringified. This method is generally intended to, by default, usefully serialize `DOMRectReadOnly` objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{domxref("DOMRectReadOnly/fromRect_static", "DOMRectReadOnly.fromRect()")}} function within the reviver of {{jsxref("JSON.parse()")}}.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `DOMRectReadOnly` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization. The serialized value can then be deserialized using the {{domxref("DOMRectReadOnly/fromRect_static", "DOMRectReadOnly.fromRect()")}} function within the reviver of {{jsxref("JSON.parse()")}}.
 
 ## Syntax
 

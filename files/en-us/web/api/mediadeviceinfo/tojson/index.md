@@ -10,7 +10,7 @@ browser-compat: api.MediaDeviceInfo.toJSON
 
 The **`toJSON()`** method of the {{domxref("MediaDeviceInfo")}} interface returns a JSON-serializable plain object representing the `MediaDeviceInfo` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `MediaDeviceInfo` object is stringified. This method is generally intended to, by default, usefully serialize `MediaDeviceInfo` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `MediaDeviceInfo` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 

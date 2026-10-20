@@ -13,7 +13,7 @@ browser-compat: api.PaymentAddress.toJSON
 
 The **`toJSON()`** method of the {{domxref("PaymentAddress")}} interface returns a JSON-serializable plain object representing the `PaymentAddress` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `PaymentAddress` object is stringified. This method is generally intended to, by default, usefully serialize `PaymentAddress` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `PaymentAddress` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 

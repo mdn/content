@@ -12,7 +12,7 @@ browser-compat: api.AudioPlaybackStats.toJSON
 
 The **`toJSON()`** method of the {{domxref("AudioPlaybackStats")}} interface returns a JSON-serializable plain object representing the `AudioPlaybackStats` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when an `AudioPlaybackStats` object is stringified. This method is generally intended to, by default, usefully serialize `AudioPlaybackStats` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when an `AudioPlaybackStats` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -67,11 +67,11 @@ This would log a JSON string like so (formatted for readability):
 
 ```json
 {
-  "underrunDuration": 0,
-  "underrunEvents": 0,
+  "underrunDuration": 0.125,
+  "underrunEvents": 1,
   "totalDuration": 68.252138,
   "averageLatency": 0.01863,
-  "minimumLatency": 0,
+  "minimumLatency": 0.01,
   "maximumLatency": 0.018654
 }
 ```

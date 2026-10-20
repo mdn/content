@@ -10,7 +10,7 @@ browser-compat: api.URL.toJSON
 
 The **`toJSON()`** method of the {{domxref("URL")}} interface returns a string representing the `URL` object, which is the same value as {{domxref("URL.toString()")}}.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `URL` object is stringified. This method is generally intended to, by default, usefully serialize `URL` objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{domxref("URL/URL", "URL()")}} constructor within the reviver of {{jsxref("JSON.parse()")}}.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `URL` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization. The serialized value can then be deserialized using the {{domxref("URL/URL", "URL()")}} constructor within the reviver of {{jsxref("JSON.parse()")}}.
 
 ## Syntax
 

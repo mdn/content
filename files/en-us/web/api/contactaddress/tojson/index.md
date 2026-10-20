@@ -12,7 +12,7 @@ browser-compat: api.ContactAddress.toJSON
 
 The **`toJSON()`** method of the {{domxref("ContactAddress")}} interface returns a JSON-serializable plain object representing the `ContactAddress` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `ContactAddress` object is stringified. This method is generally intended to, by default, usefully serialize `ContactAddress` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `ContactAddress` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 

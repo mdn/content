@@ -10,7 +10,7 @@ browser-compat: api.PublicKeyCredential.toJSON
 
 The **`toJSON()`** method of the {{domxref("PublicKeyCredential")}} interface returns a JSON-serializable plain object representing the `PublicKeyCredential` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `PublicKeyCredential` object is stringified. This method is generally intended to, by default, usefully serialize `PublicKeyCredential` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `PublicKeyCredential` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 

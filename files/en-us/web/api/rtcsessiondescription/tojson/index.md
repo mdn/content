@@ -10,7 +10,7 @@ browser-compat: api.RTCSessionDescription.toJSON
 
 The **`toJSON()`** method of the {{domxref("RTCSessionDescription")}} interface returns a JSON-serializable plain object representing the `RTCSessionDescription` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when an `RTCSessionDescription` object is stringified. This method is generally intended to, by default, usefully serialize `RTCSessionDescription` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when an `RTCSessionDescription` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 

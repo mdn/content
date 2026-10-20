@@ -10,7 +10,7 @@ browser-compat: api.GeolocationPosition.toJSON
 
 The **`toJSON()`** method of the {{domxref("GeolocationPosition")}} interface returns a JSON-serializable plain object representing the `GeolocationPosition` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `GeolocationPosition` object is stringified. This method is generally intended to, by default, usefully serialize `GeolocationPosition` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `GeolocationPosition` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -60,9 +60,9 @@ This would log a JSON string like so (formatted for readability):
 {
   "timestamp": 1717509611840,
   "coords": {
-    "accuracy": 13.0,
-    "latitude": 53.0,
-    "longitude": 8.0,
+    "accuracy": 13.5,
+    "latitude": 53.125,
+    "longitude": 8.75,
     "altitude": null,
     "altitudeAccuracy": null,
     "heading": null,

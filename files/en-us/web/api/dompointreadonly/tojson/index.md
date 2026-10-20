@@ -10,7 +10,7 @@ browser-compat: api.DOMPointReadOnly.toJSON
 
 The **`toJSON()`** method of the {{domxref("DOMPointReadOnly")}} interface returns a JSON-serializable plain object representing the `DOMPointReadOnly` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `DOMPointReadOnly` object is stringified. This method is generally intended to, by default, usefully serialize `DOMPointReadOnly` objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{domxref("DOMPointReadOnly/fromPoint_static", "DOMPointReadOnly.fromPoint()")}} function within the reviver of {{jsxref("JSON.parse()")}}.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `DOMPointReadOnly` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization. The serialized value can then be deserialized using the {{domxref("DOMPointReadOnly/fromPoint_static", "DOMPointReadOnly.fromPoint()")}} function within the reviver of {{jsxref("JSON.parse()")}}.
 
 ## Syntax
 
