@@ -88,4 +88,4 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **CSS numeric factory functions exposed in workers and worklets**: `layout.css.namespace.exposed-in-workers-and-worklets`
 
-  Part of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), the [numeric factory functions](/en-US/docs/Web/API/CSS/factory_functions_static) available on the {{domxref("CSS")}} namespace have been exposed in workers and paint worklets behind a pref. ([Firefox bug 2079188](https://bugzil.la/2079188)).
+  The [numeric factory functions](/en-US/docs/Web/API/CSS/factory_functions_static) of the {{domxref("CSS")}} namespace, such as `CSS.px()`, are now exposed in workers and paint worklets, not only on `Window`. They're part of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), so outside Nightly they also need the `layout.css.typed-om.enabled` preference set to `true`. ([Firefox bug 2079188](https://bugzil.la/2079188)).
