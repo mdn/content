@@ -24,7 +24,7 @@ Given this MathML:
 
 ```html
 <math>
-  <a id="myAnchor" href="" download="booklet.pdf">...</a>
+  <a id="myAnchor" href="/download?file=67530dc" download="booklet.pdf">...</a>
 </math>
 ```
 
