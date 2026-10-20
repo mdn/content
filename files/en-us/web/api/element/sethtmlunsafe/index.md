@@ -62,7 +62,7 @@ If a sanitizer is specified, its configuration is applied during parsing, rather
 See [Sanitization during parsing](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_during_parsing).
 
 Unlike with {{domxref("Element.innerHTML")}}, [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in the input will be parsed into the DOM.
-A top-level `<template shadowrootmode>` does not attach a shadow root to the element whose content is being set.
+A `<template shadowrootmode>` at the top level of the input remains a regular template rather than attaching a shadow root to the element whose content is being set.
 When sanitizing, a shadow root is attached only if its host is kept and the sanitizer allows both the {{htmlelement("template")}} element and its `shadowrootmode` attribute.
 If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as `<template>` elements within that shadow root.
 

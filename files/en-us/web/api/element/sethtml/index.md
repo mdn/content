@@ -51,7 +51,7 @@ None (`undefined`).
 ## Description
 
 The **`setHTML()`** method parses a string of HTML, sanitizing it as it is parsed, and replaces the element's subtree with the result.
-The parser uses the current element as its context; for example, a {{htmlelement("col")}} element outside a {{htmlelement("table")}} is not included.
+The parser uses the target element as its context; for example, {{htmlelement("col")}} is dropped unless the target is a {{htmlelement("table")}} or {{htmlelement("colgroup")}} element.
 The sanitizer configuration determines which elements, attributes, and comments are allowed, but XSS-unsafe elements and attributes are always removed, even if allowed by the configuration.
 See [Sanitization during parsing](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_during_parsing).
 

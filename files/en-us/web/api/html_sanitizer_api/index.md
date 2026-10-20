@@ -15,41 +15,41 @@ Web applications often need to work with untrusted HTML on the client side, for 
 
 Injecting untrusted HTML can make a site vulnerable to various [types of attacks](/en-US/docs/Web/Security/Attacks).
 In particular, [cross-site scripting (XSS) attacks](/en-US/docs/Web/Security/Attacks/XSS) work by injecting untrusted HTML into the DOM that then executes JavaScript in the context of the current origin — allowing malicious code to run as though it was served from the site's origin.
-These attacks can be mitigated by removing unsafe HTML elements and attributes before they are injected into the DOM.
+These attacks can be mitigated by removing unsafe HTML elements and attributes before they are inserted into the DOM.
 
-The HTML Sanitizer API provides a number of methods for removing unwanted HTML entities from HTML input before it is injected into the DOM.
+The HTML Sanitizer API provides a number of methods for removing unwanted HTML entities from HTML input before it is inserted into the DOM.
 These come in XSS-safe versions that enforce removal of all unsafe elements and attributes, and potentially unsafe versions that give developers full control over the HTML entities that are allowed.
 
 ### Sanitization methods
 
-The HTML Sanitizer API provides XSS-safe and XSS-unsafe methods for injecting HTML strings into an {{domxref('Element')}} or a {{domxref('ShadowRoot')}}, and for parsing HTML into a {{domxref('Document')}}.
+The HTML Sanitizer API provides XSS-safe and XSS-unsafe methods for inserting HTML strings into an {{domxref('Element')}} or a {{domxref('ShadowRoot')}}, and for parsing HTML into a {{domxref('Document')}}.
 
 - Safe methods
   - : {{domxref('Element.setHTML()')}}, {{domxref('ShadowRoot.setHTML()')}}, and {{domxref('Document/parseHTML_static','Document.parseHTML()')}}.
 - Unsafe methods
   - : {{domxref('Element.setHTMLUnsafe()')}}, {{domxref('ShadowRoot.setHTMLUnsafe()')}}, and {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}.
 
-All the methods take the HTML to be injected and an optional {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} as arguments.
-The sanitizer object defines the HTML entities that will be filtered out of the input before it is injected.
+All the methods take the HTML to be inserted and an optional {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} as arguments.
+The sanitizer object defines the HTML entities that will be filtered out of the input before it is inserted.
 The {{domxref('Element')}} methods are context aware, and will additionally drop any elements that the HTML specification does not allow in the target element.
 
 The safe methods always remove XSS-unsafe elements and attributes.
 If no sanitizer is passed as a parameter they will use the [default sanitizer configuration](#default_sanitizer_configuration), which removes both XSS-unsafe elements and attributes, such as {{htmlelement("script")}} elements and `onclick` event handlers, along with others that might be used in other kinds of attacks if provided as user input.
 If a custom sanitizer is used with a safe method, it is implicitly updated to remove any elements and attributes that are not XSS-safe (note that the passed sanitizer is not modified, and might still allow unsafe entities if used with an unsafe method).
 
-The safe methods should be used instead of {{domxref("Element.innerHTML")}}, {{domxref("Element.outerHTML")}}, or {{domxref("ShadowRoot.innerHTML")}}, for injecting untrusted HTML content.
+The safe methods should be used instead of {{domxref("Element.innerHTML")}}, {{domxref("Element.outerHTML")}}, or {{domxref("ShadowRoot.innerHTML")}}, for inserting untrusted HTML content.
 For example, in most cases you can use {{domxref('Element.setHTML()')}} with the default sanitizer as a drop-in replacement for {{domxref("Element.innerHTML")}}.
-The same methods can also be used for injecting trusted HTML strings that do not need to contain any XSS-unsafe elements.
+The same methods can also be used for inserting trusted HTML strings that do not need to contain any XSS-unsafe elements.
 
 The XSS-unsafe methods will use whatever sanitizer configuration is passed as an argument.
-If no sanitizer is passed, then all HTML elements and attributes allowed by the context will be injected.
+If no sanitizer is passed, then all HTML elements and attributes allowed by the context will be inserted.
 Unlike {{domxref("Element.innerHTML")}}, the unsafe element methods support declarative shadow roots inside elements in the input and accept a sanitizer configuration.
 Like `innerHTML`, they work with the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
-A top-level `<template shadowrootmode>` in a fragment parse does not attach a shadow root to the element whose content is being set.
+A `<template shadowrootmode>` at the top level of the input remains a regular template rather than attaching a shadow root to the element whose content is being set.
 
 The unsafe methods should only be used with untrusted HTML that needs to contain some XSS-unsafe elements or attributes.
 This is still unsafe, but allows you to reduce the risk by restricting unsafe entities to the minimal set.
-For example, if you wanted to inject unsafe HTML but for some reason you needed the input to include the `onblur` handler, you could more safely do so by amending the default `Sanitizer` and using an unsafe method as shown:
+For example, if you wanted to insert unsafe HTML but for some reason you needed the input to include the `onblur` handler, you could more safely do so by amending the default `Sanitizer` and using an unsafe method as shown:
 
 ```js
 const sanitizer = new Sanitizer(); // Default sanitizer
@@ -68,9 +68,9 @@ This affects the resulting DOM and when code can run:
 
 - Text on either side of a removed element, or an element replaced with its children, can form a single {{domxref("Text")}} node. See [Replacing elements with their children](#replacing_elements_with_their_children).
 - Custom element constructors do not run for elements that are removed or replaced with their children, or for descendants of removed elements. A removed `is` attribute does not create a customized built-in element.
-- A declarative shadow root is attached only if the sanitizer allows both the {{htmlelement("template")}} element and its `shadowrootmode` attribute. If the host is replaced with its children, the template remains a regular template instead of attaching a shadow root to the host's parent.
+- A declarative shadow root is attached only if the sanitizer allows both the {{htmlelement("template")}} element and its `shadowrootmode` attribute. If the host is replaced with its children, the template is kept as a regular template where the host's children are inserted.
 
-Earlier implementations, including Chrome 146 and Firefox 148, parsed the complete input before sanitizing the resulting tree.
+Some browsers parse the complete input before sanitizing the resulting tree.
 These implementations can produce different DOM structures, such as multiple adjacent text nodes instead of one.
 
 ### Sanitizer configurations
@@ -128,7 +128,7 @@ If you specify an empty configuration object then an empty allow configuration i
 
 With "allow configurations" you specify the elements and attributes you wish to _allow_ (or replace with child elements) — all other elements/attributes in the input will be dropped.
 This makes it easy to understand what elements will be allowed in the DOM when the HTML is parsed.
-They are useful when you know exactly what HTML entities you want to be able to inject in a particular context.
+They are useful when you know exactly what HTML entities you want to be able to insert in a particular context.
 
 Allow configurations are created by defining a `Sanitizer` that wraps a {{domxref("SanitizerConfig")}} that includes the [`elements`](/en-US/docs/Web/API/SanitizerConfig#elements) and/or [`attributes`](/en-US/docs/Web/API/SanitizerConfig#attributes) arrays (and not the `removeElements` or `removeAttributes` arrays).
 
@@ -246,7 +246,7 @@ The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) provides mechanis
 This transformation function is most commonly used to sanitize the input but it doesn't have to: the purpose of the API is primarily to make it easy for developers to audit sanitization code, not to define how or if sanitization is done.
 
 The safe HTML sanitization methods don't use trusted types.
-Because they always filter all XSS-unsafe entities before input HTML is injected, there is no need to sanitize the input string, or audit the methods.
+Because they always filter all XSS-unsafe entities before input HTML is inserted, there is no need to sanitize the input string, or audit the methods.
 
 However the unsafe HTML sanitization methods may inject untrusted HTML, depending on the sanitizer, and so will work with trusted types.
 The methods can take either a string or a `TrustedType` as input.
@@ -298,7 +298,7 @@ The following examples show how to use the Sanitizer API with default and custom
 ### Using `Element.setHTML()` with the default sanitizer
 
 In most cases calling `Element.setHTML()` without passing a sanitizer can be used as a drop-in replacement for {{domxref("Element.innerHTML")}}.
-The code below demonstrates how the method is used to sanitize the HTML input before it is injected into an element with id of `target`.
+The code below demonstrates how the method is used to sanitize the HTML input before it is inserted into an element with id of `target`.
 
 ```js
 const untrustedString = "abc <script>alert(1)<" + "/script> def"; // Untrusted HTML (perhaps from user input)
@@ -335,7 +335,7 @@ console.log(target.childNodes.length); // 1
 console.log(target.firstChild.nodeType === Node.TEXT_NODE); // true
 ```
 
-Earlier implementations that sanitized after parsing produced three adjacent text nodes for this input, even though the serialized HTML was also `"abc"`.
+Browsers that sanitize after parsing produce three adjacent text nodes for this input, even though the serialized HTML is also `"abc"`.
 
 ### Using an allow sanitizer configuration
 
