@@ -34,7 +34,7 @@ you can get the `referrerpolicy` value of the anchor like this:
 
 ```js
 const mathAnchor = document.getElementById("myAnchor");
-mathAnchor.referrerpolicy; // "no-referrer"
+mathAnchor.referrerPolicy; // "no-referrer"
 ```
 
 ## Specifications
