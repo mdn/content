@@ -703,6 +703,22 @@ This simplifies CSS property manipulation by exposing CSS values as typed JavaSc
 - `layout.css.typed-om.enabled`
   - : Set to `true` to enable.
 
+#### CSS numeric factory functions exposed in workers and worklets
+
+The [numeric factory functions](/en-US/docs/Web/API/CSS/factory_functions_static) of the {{domxref("CSS")}} namespace, such as `CSS.px()`, are now exposed in workers and paint worklets, not only on `Window`. They're part of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), so outside Nightly they also need the `layout.css.typed-om.enabled` preference set to `true`. ([Firefox bug 2079188](https://bugzil.la/2079188)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 159           | No                  |
+| Developer Edition | 159           | No                  |
+| Beta              | 159           | No                  |
+| Release           | 159           | No                  |
+
+- `layout.css.namespace.exposed-in-workers-and-worklets`
+  - : Set to `true` to enable.
+- `layout.css.typed-om.enabled`
+  - : Set to `true` to enable (enabled by default in Nightly).
+
 ### On-device speech recognition
 
 [On-device speech recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) is now supported in Nightly, on desktop only. This allows you to perform speech recognition via the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) directly in the browser, rather than relying on a cloud service.
