@@ -18,6 +18,7 @@ It reflects the `ping` attribute of the [`<a>`](/en-US/docs/Web/MathML/Reference
 ## Value
 
 A string.
+
 ## Examples
 
 ### Basic usage
