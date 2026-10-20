@@ -13,7 +13,7 @@ Getting involved on the Web isn't as cheap as it looks. In this article we discu
       <th scope="row">Prerequisites:</th>
       <td>
         You should already understand
-        <a href="/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need"
+        <a href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >what software you need</a
         >, the difference between
         <a

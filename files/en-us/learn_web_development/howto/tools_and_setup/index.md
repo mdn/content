@@ -7,8 +7,6 @@ sidebar: learn-how-to
 
 This section lists questions related to the tools/software you can use to build websites.
 
-- [What software do I need to build a website?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
-  - : In this article we explain which software components you need to edit, upload, or view a website.
 - [How much does it cost to do something on the web?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
   - : When you're launching a website, you may spend nothing or your costs may go through the roof. In this article we
     discuss how much everything costs and what you get for what you pay (or don't pay).

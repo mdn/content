@@ -116,5 +116,4 @@ If you'd like to experiment with building a server, take a look through the reso
 Now that you are familiar with web servers, you could:
 
 - read up on [how much it costs to do something on the web](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
-- learn more about [various software you need to create a website](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
 - move on to something practical like [how to upload files on a web server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server).

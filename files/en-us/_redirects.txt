@@ -5322,7 +5322,7 @@
 /en-US/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
 /en-US/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages
 /en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
-/en-US/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need
+/en-US/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software
 /en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
 /en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
 /en-US/docs/Learn/Common_questions/Using_Github_pages	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages
@@ -5339,7 +5339,7 @@
 /en-US/docs/Learn/Common_questions/What_is_a_domain_name	/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name
 /en-US/docs/Learn/Common_questions/What_is_a_web_server	/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
 /en-US/docs/Learn/Common_questions/What_is_accessibility	/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
-/en-US/docs/Learn/Common_questions/What_software_do_I_need	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need
+/en-US/docs/Learn/Common_questions/What_software_do_I_need	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software
 /en-US/docs/Learn/Common_questions/set_up_a_local_testing_server	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
 /en-US/docs/Learn/Composing_for_the_web	/en-US/docs/Learn_web_development/Howto
 /en-US/docs/Learn/Design_and_Accessibility	/en-US/docs/Learn_web_development/Howto
@@ -5764,7 +5764,7 @@
 /en-US/docs/Learn/What_is_XML_and_how_it_works	/en-US/docs/Web/XML/Guides/XML_introduction
 /en-US/docs/Learn/What_is_a_web_server	/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
 /en-US/docs/Learn/What_is_accessibility	/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
-/en-US/docs/Learn/What_software_do_I_need	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need
+/en-US/docs/Learn/What_software_do_I_need	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software
 /en-US/docs/Learn/page_vs_site_vs_server_vs_search_engine	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 /en-US/docs/Learn/skills	/en-US/docs/Learn_web_development
 /en-US/docs/Learn/skills/Infrastructure/Undersanding_URLs	/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL
@@ -5902,6 +5902,7 @@
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage	/en-US/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes	/en-US/docs/Web/HTML/How_to/Use_data_attributes
 /en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine	https://cloud.google.com/appengine/docs/
+/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software
 /en-US/docs/Liberty!_Equality!_Validity!	/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML
 /en-US/docs/Link_prefetching_FAQ	/en-US/docs/Glossary/Prefetch
 /en-US/docs/Localization	/en-US/docs/Glossary/Localization

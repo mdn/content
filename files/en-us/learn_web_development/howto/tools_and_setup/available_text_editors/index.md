@@ -12,11 +12,7 @@ In this article we highlight some things to think about when installing a text e
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        You should already know about <a
-          href="/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need"
-        >
-          various software you need to build a website</a
-        >.
+        None.
       </td>
     </tr>
     <tr>
