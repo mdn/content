@@ -8,7 +8,9 @@ browser-compat: api.MathMLAnchorElement.download
 
 {{APIRef("HTML DOM")}}
 
-The **`download`** property of the {{domxref("MathMLAnchorElement")}} interface is a string indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value, if any, represents the proposed name of the file. It reflects the [`download`](/en-US/docs/Web/MathML/Reference/Element/a#download) attribute of the [`<a>`](/en-US/docs/Web/MathML/Reference/Element/a) element.
+The **`download`** property of the {{domxref("MathMLAnchorElement")}} interface is a string indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value, if any, represents the proposed name of the file.
+
+It reflects the `download` attribute of the [`<a>`](/en-US/docs/Web/MathML/Reference/Element/a) element.
 
 ## Value
 
