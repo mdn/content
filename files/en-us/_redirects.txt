@@ -5310,7 +5310,7 @@
 /en-US/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine	https://cloud.google.com/appengine/docs/
 /en-US/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine﻿	https://cloud.google.com/appengine/docs/
 /en-US/docs/Learn/Common_questions/How_does_the_Internet_work	/en-US/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
-/en-US/docs/Learn/Common_questions/How_much_does_it_cost	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
+/en-US/docs/Learn/Common_questions/How_much_does_it_cost	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
 /en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 /en-US/docs/Learn/Common_questions/Set_up_a_basic_working_environment	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
 /en-US/docs/Learn/Common_questions/Thinking_before_coding	/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding
@@ -5318,7 +5318,7 @@
 /en-US/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 /en-US/docs/Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 /en-US/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine	https://cloud.google.com/appengine/docs/
-/en-US/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
+/en-US/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
 /en-US/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
 /en-US/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages
 /en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
@@ -5494,7 +5494,7 @@
 /en-US/docs/Learn/HTML/Write_a_simple_page_in_HTML	/en-US/docs/Learn_web_development/Getting_started/Your_first_website
 /en-US/docs/Learn/HTML/XHTML	/en-US/docs/Glossary/XHTML
 /en-US/docs/Learn/How_TCP_IP_works	/en-US/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
-/en-US/docs/Learn/How_much_does_it_cost	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
+/en-US/docs/Learn/How_much_does_it_cost	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
 /en-US/docs/Learn/How_networks_talk_with_each_other	/en-US/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
 /en-US/docs/Learn/How_the_Internet_works	/en-US/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
 /en-US/docs/Learn/How_to_create_an_HTML_document	/en-US/docs/Learn_web_development/Getting_started/Your_first_website
@@ -5902,6 +5902,7 @@
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage	/en-US/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes	/en-US/docs/Web/HTML/How_to/Use_data_attributes
 /en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine	https://cloud.google.com/appengine/docs/
+/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
 /en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software
 /en-US/docs/Liberty!_Equality!_Validity!	/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML
 /en-US/docs/Link_prefetching_FAQ	/en-US/docs/Glossary/Prefetch

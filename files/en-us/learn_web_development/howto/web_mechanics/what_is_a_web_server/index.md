@@ -67,7 +67,7 @@ Technically, you could host all those files on your own computer, but it's far m
 - A dedicated web server can have the same IP address all the time. This is known as a _dedicated IP address_. (Not all {{Glossary("ISP", "ISPs")}} provide a fixed IP address for home lines.)
 - A dedicated web server is typically maintained by a third party.
 
-For all these reasons, finding a good hosting provider is a key part of building your website. Examine the various services companies offer. Choose one that fits your needs and budget. (Services range from free to thousands of dollars per month.) You can find more details [in this article](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#hosting).
+For all these reasons, finding a good hosting provider is a key part of building your website. Examine the various services companies offer. Choose one that fits your needs and budget. For more details, see [Getting hosting and a domain name](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#getting_hosting_and_a_domain_name).
 
 Once you have web hosting service, you must [upload your files to your web server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server).
 
@@ -110,10 +110,3 @@ Most website developers won't need to create an application server from scratch,
 But if you do need to create your own server, then you will probably want to use a server framework, leveraging its existing code and libraries, and extending just the parts that you need in order to meet your use case.
 Only a relatively small number of developers should need to develop a server completely from scratch: for example, in order to meet tight resource constraints on an embedded system.
 If you'd like to experiment with building a server, take a look through the resources in the [Server-side website programming](/en-US/docs/Learn_web_development/Extensions/Server-side) learning pathway.
-
-## Next steps
-
-Now that you are familiar with web servers, you could:
-
-- read up on [how much it costs to do something on the web](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
-- move on to something practical like [how to upload files on a web server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server).

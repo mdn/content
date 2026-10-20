@@ -7,9 +7,6 @@ sidebar: learn-how-to
 
 This section lists questions related to the tools/software you can use to build websites.
 
-- [How much does it cost to do something on the web?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
-  - : When you're launching a website, you may spend nothing or your costs may go through the roof. In this article we
-    discuss how much everything costs and what you get for what you pay (or don't pay).
 - [What text editors are available?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors)
   - : In this article we highlight some things to think about when choosing and installing a text editor for web
     development.

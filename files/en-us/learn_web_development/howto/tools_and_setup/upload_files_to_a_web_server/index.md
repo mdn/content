@@ -49,7 +49,7 @@ If you have built a simple web page (see [HTML basics](/en-US/docs/Learn_web_dev
 There are several SFTP clients out there. Our demo covers [FileZilla](https://filezilla-project.org/), since it's free and available for Windows, macOS and Linux. To install FileZilla go to the [FileZilla downloads page](https://filezilla-project.org/download.php?type=client), click the big Download button, then install from the installer file in the usual way.
 
 > [!NOTE]
-> Of course there are lots of other options. See [Publishing tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#publishing_tools) for more information.
+> Of course there are lots of other options for publishing your site. See [Publishing your website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website) for more information.
 
 Open the FileZilla application; you should see something like this:
 
