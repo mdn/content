@@ -285,7 +285,7 @@ The following fields are available in the `result` object in the response, depen
         For `"object"`, `value` is an array of key-value pairs.
 
         This field is not present for every type.
-        For objects, this field may be omitted when the `maxObjectDepth` limit is reached or when the same object has already been represented in the response.
+        For objects, this field can be omitted when the `maxObjectDepth` limit is reached or when the same object has already been represented in the response.
 
         - When `type` is `"node"`, `value` is an object that describes properties of the returned node and can contain the following fields:
           - `attributes` {{optional_inline}}
@@ -420,11 +420,9 @@ The browser responds as follows, where the response's outer `result` object has 
 Suppose you want to increase the value stored in an object's `count` property.
 In an earlier [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate) command, you evaluated the expression `({ count: 2 })` with `resultOwnership` set to `"root"`.
 You used the context ID of the tab from the previous example to evaluate the expression in the page's default realm.
-The browser kept the resulting object alive and returned its handle along with the realm ID.
+The browser kept the resulting object alive and returned its handle.
 
-To increase the value of `count` by three, you'll define a function that accepts a number.
-Let's name the function's parameter `increment`.
-The function adds `increment` to the `count` property, which is accessed as `this.count`, and returns the updated value.
+To increase `count` by three, you'll define a function that accepts an `increment` parameter, adds it to `this.count`, and returns the updated value.
 
 Using the same connection and session as in the previous example and without navigating or reloading the page after the earlier `script.evaluate` command, send the following message to call the function.
 In `target`, use the context ID from the earlier `script.evaluate` command.
