@@ -10,7 +10,7 @@ browser-compat: api.PerformancePaintTiming.toJSON
 
 The **`toJSON()`** method of the {{domxref("PerformancePaintTiming")}} interface returns a JSON-serializable plain object representing the `PerformancePaintTiming` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformancePaintTiming` object is stringified. This method is generally intended to, by default, usefully serialize `PerformancePaintTiming` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformancePaintTiming` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -69,8 +69,11 @@ This would log a JSON string like so (formatted for readability):
 {
   "name": "first-contentful-paint",
   "entryType": "paint",
-  "startTime": 234.5,
-  "duration": 0
+  "startTime": 236.5,
+  "duration": 0,
+  "navigationId": 2463,
+  "paintTime": 230.25,
+  "presentationTime": 236.5
 }
 ```
 

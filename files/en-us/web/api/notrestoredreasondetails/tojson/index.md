@@ -13,7 +13,7 @@ spec-urls: https://html.spec.whatwg.org/multipage/nav-history-apis.html#notresto
 
 The **`toJSON()`** method of the {{domxref("NotRestoredReasonDetails")}} interface returns a JSON-serializable plain object representing the `NotRestoredReasonDetails` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `NotRestoredReasonDetails` object is stringified. This method is generally intended to, by default, usefully serialize `NotRestoredReasonDetails` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `NotRestoredReasonDetails` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 

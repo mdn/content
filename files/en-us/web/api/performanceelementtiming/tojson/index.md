@@ -12,7 +12,7 @@ browser-compat: api.PerformanceElementTiming.toJSON
 
 The **`toJSON()`** method of the {{domxref("PerformanceElementTiming")}} interface returns a JSON-serializable plain object representing the `PerformanceElementTiming` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceElementTiming` object is stringified. This method is generally intended to, by default, usefully serialize `PerformanceElementTiming` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceElementTiming` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -90,19 +90,22 @@ This would log a JSON string like so (formatted for readability):
 {
   "name": "image-paint",
   "entryType": "element",
-  "startTime": 670894.1000000238,
+  "startTime": 670900.5,
   "duration": 0,
-  "renderTime": 0,
-  "loadTime": 670894.1000000238,
+  "navigationId": 2463,
+  "paintTime": 670898.25,
+  "presentationTime": 670900.5,
+  "renderTime": 670900.5,
+  "loadTime": 670894.25,
   "intersectionRect": {
-    "x": 299,
-    "y": 76,
-    "width": 135,
-    "height": 155,
-    "top": 76,
-    "right": 434,
-    "bottom": 231,
-    "left": 299
+    "x": 299.25,
+    "y": 76.25,
+    "width": 135.5,
+    "height": 155.5,
+    "top": 76.25,
+    "right": 434.75,
+    "bottom": 231.75,
+    "left": 299.25
   },
   "identifier": "big-image",
   "naturalWidth": 135,

@@ -12,7 +12,7 @@ browser-compat: api.PerformanceLongTaskTiming.toJSON
 
 The **`toJSON()`** method of the {{domxref("PerformanceLongTaskTiming")}} interface returns a JSON-serializable plain object representing the `PerformanceLongTaskTiming` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceLongTaskTiming` object is stringified. This method is generally intended to, by default, usefully serialize `PerformanceLongTaskTiming` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceLongTaskTiming` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -70,14 +70,16 @@ This would log a JSON string like so (formatted for readability):
 {
   "name": "self",
   "entryType": "longtask",
-  "startTime": 183,
+  "startTime": 183.5,
   "duration": 60,
+  "navigationId": 2463,
   "attribution": [
     {
       "name": "unknown",
       "entryType": "taskattribution",
       "startTime": 0,
       "duration": 0,
+      "navigationId": 2463,
       "containerType": "window",
       "containerSrc": "",
       "containerId": "",

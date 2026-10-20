@@ -12,7 +12,7 @@ browser-compat: api.InteractionContentfulPaint.toJSON
 
 The **`toJSON()`** method of the {{domxref("InteractionContentfulPaint")}} interface returns a JSON-serializable plain object representing the `InteractionContentfulPaint` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when an `InteractionContentfulPaint` object is stringified. This method is generally intended to, by default, usefully serialize `InteractionContentfulPaint` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when an `InteractionContentfulPaint` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -73,18 +73,22 @@ This would log a JSON string like so (formatted for readability):
 {
   "name": "",
   "entryType": "interaction-contentful-paint",
-  "startTime": 2226.6,
+  "startTime": 2226.25,
+  "duration": 390.25,
   "navigationId": 2463,
-  "paintTime": 2589.3,
-  "presentationTime": 2616,
+  "paintTime": 2589.5,
+  "presentationTime": 2616.5,
   "interactionId": 1704,
   "largestContentfulPaint": {
     "name": "",
     "entryType": "largest-contentful-paint",
-    "startTime": 2616,
+    "startTime": 2616.5,
     "duration": 0,
+    "navigationId": 2463,
+    "paintTime": 2589.5,
+    "presentationTime": 2616.5,
     "size": 19824,
-    "renderTime": 2616,
+    "renderTime": 2616.5,
     "loadTime": 0,
     "id": "",
     "url": ""

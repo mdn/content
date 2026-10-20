@@ -10,7 +10,7 @@ browser-compat: api.LargestContentfulPaint.toJSON
 
 The **`toJSON()`** method of the {{domxref("LargestContentfulPaint")}} interface returns a JSON-serializable plain object representing the `LargestContentfulPaint` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `LargestContentfulPaint` object is stringified. This method is generally intended to, by default, usefully serialize `LargestContentfulPaint` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `LargestContentfulPaint` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -76,10 +76,13 @@ This would log a JSON string like so (formatted for readability):
 {
   "name": "",
   "entryType": "largest-contentful-paint",
-  "startTime": 468.2,
+  "startTime": 468.5,
   "duration": 0,
+  "navigationId": 2463,
+  "paintTime": 460.25,
+  "presentationTime": 468.5,
   "size": 19824,
-  "renderTime": 468.2,
+  "renderTime": 468.5,
   "loadTime": 0,
   "id": "",
   "url": ""

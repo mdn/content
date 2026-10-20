@@ -10,7 +10,7 @@ browser-compat: api.PerformanceResourceTiming.toJSON
 
 The **`toJSON()`** method of the {{domxref("PerformanceResourceTiming")}} interface returns a JSON-serializable plain object representing the `PerformanceResourceTiming` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceResourceTiming` object is stringified. This method is generally intended to, by default, usefully serialize `PerformanceResourceTiming` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceResourceTiming` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -92,23 +92,29 @@ This would log a JSON string like so (formatted for readability):
 {
   "name": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/31px-Commons-logo.svg.png",
   "entryType": "resource",
-  "startTime": 110.80000001192093,
-  "duration": 11.599999994039536,
+  "startTime": 111.25,
+  "duration": 11.5,
+  "navigationId": 2463,
   "initiatorType": "img",
+  "deliveryType": "cache",
   "nextHopProtocol": "h2",
   "renderBlockingStatus": "non-blocking",
+  "contentType": "image/png",
+  "contentEncoding": "",
   "workerStart": 0,
   "redirectStart": 0,
   "redirectEnd": 0,
-  "fetchStart": 110.80000001192093,
-  "domainLookupStart": 110.80000001192093,
-  "domainLookupEnd": 110.80000001192093,
-  "connectStart": 110.80000001192093,
-  "secureConnectionStart": 110.80000001192093,
-  "connectEnd": 110.80000001192093,
-  "requestStart": 117.30000001192093,
-  "responseStart": 120.40000000596046,
-  "responseEnd": 122.40000000596046,
+  "fetchStart": 111.25,
+  "domainLookupStart": 111.25,
+  "domainLookupEnd": 111.25,
+  "connectStart": 111.25,
+  "secureConnectionStart": 111.25,
+  "connectEnd": 111.25,
+  "requestStart": 117.25,
+  "responseStart": 120.25,
+  "firstInterimResponseStart": 0,
+  "finalResponseHeadersStart": 120.25,
+  "responseEnd": 122.75,
   "transferSize": 0,
   "encodedBodySize": 880,
   "decodedBodySize": 880,
@@ -116,12 +122,12 @@ This would log a JSON string like so (formatted for readability):
   "serverTiming": [
     {
       "name": "cache",
-      "duration": 0,
+      "duration": 0.25,
       "description": "hit-front"
     },
     {
       "name": "host",
-      "duration": 0,
+      "duration": 0.5,
       "description": "cp3061"
     }
   ]

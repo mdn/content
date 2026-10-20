@@ -16,7 +16,7 @@ browser-compat: api.PerformanceNavigation.toJSON
 
 The **`toJSON()`** method of the {{domxref("PerformanceNavigation")}} interface returns a JSON-serializable plain object representing the `PerformanceNavigation` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceNavigation` object is stringified. This method is generally intended to, by default, usefully serialize `PerformanceNavigation` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceNavigation` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 

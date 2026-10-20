@@ -10,7 +10,7 @@ browser-compat: api.PerformanceEntry.toJSON
 
 The **`toJSON()`** method of the {{domxref("PerformanceEntry")}} interface returns a JSON-serializable plain object representing the `PerformanceEntry` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceEntry` object is stringified. This method is generally intended to, by default, usefully serialize `PerformanceEntry` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceEntry` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -71,8 +71,9 @@ This would log a JSON string like so (formatted for readability):
 {
   "name": "debug-marker",
   "entryType": "mark",
-  "startTime": 158361,
-  "duration": 0
+  "startTime": 158361.5,
+  "duration": 0,
+  "navigationId": 2463
 }
 ```
 

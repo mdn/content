@@ -12,7 +12,7 @@ browser-compat: api.LayoutShiftAttribution.toJSON
 
 The **`toJSON()`** method of the {{domxref("LayoutShiftAttribution")}} interface returns a JSON-serializable plain object representing the `LayoutShiftAttribution` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `LayoutShiftAttribution` object is stringified. This method is generally intended to, by default, usefully serialize `LayoutShiftAttribution` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `LayoutShiftAttribution` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -67,24 +67,24 @@ This would log a JSON string like so (formatted for readability):
 ```json
 {
   "previousRect": {
-    "x": 917,
-    "y": 708,
-    "width": 706,
-    "height": 248,
-    "top": 708,
-    "right": 1623,
-    "bottom": 956,
-    "left": 917
+    "x": 917.25,
+    "y": 708.25,
+    "width": 706.5,
+    "height": 248.5,
+    "top": 708.25,
+    "right": 1623.75,
+    "bottom": 956.75,
+    "left": 917.25
   },
   "currentRect": {
-    "x": 693,
-    "y": 708,
-    "width": 1154,
-    "height": 472,
-    "top": 708,
-    "right": 1847,
-    "bottom": 1180,
-    "left": 693
+    "x": 693.25,
+    "y": 708.25,
+    "width": 1154.5,
+    "height": 472.5,
+    "top": 708.25,
+    "right": 1847.75,
+    "bottom": 1180.75,
+    "left": 693.25
   }
 }
 ```

@@ -10,7 +10,7 @@ browser-compat: api.PerformanceEventTiming.toJSON
 
 The **`toJSON()`** method of the {{domxref("PerformanceEventTiming")}} interface returns a JSON-serializable plain object representing the `PerformanceEventTiming` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceEventTiming` object is stringified. This method is generally intended to, by default, usefully serialize `PerformanceEventTiming` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceEventTiming` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -73,10 +73,12 @@ This would log a JSON string like so (formatted for readability):
 {
   "name": "dragover",
   "entryType": "event",
-  "startTime": 67090751.599999905,
+  "startTime": 67090751.5,
   "duration": 128,
-  "processingStart": 67090751.70000005,
-  "processingEnd": 67090751.900000095,
+  "navigationId": 2463,
+  "interactionId": 0,
+  "processingStart": 67090751.75,
+  "processingEnd": 67090752.25,
   "cancelable": true
 }
 ```

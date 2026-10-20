@@ -12,7 +12,7 @@ browser-compat: api.PerformanceLongAnimationFrameTiming.toJSON
 
 The **`toJSON()`** method of the {{domxref("PerformanceLongAnimationFrameTiming")}} interface returns a JSON-serializable plain object representing the `PerformanceLongAnimationFrameTiming` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceLongAnimationFrameTiming` object is stringified. This method is generally intended to, by default, usefully serialize `PerformanceLongAnimationFrameTiming` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceLongAnimationFrameTiming` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -76,24 +76,28 @@ This would log a JSON string like so (formatted for readability):
 {
   "name": "long-animation-frame",
   "entryType": "long-animation-frame",
-  "startTime": 11802.400000000373,
-  "duration": 60,
-  "renderStart": 11858.800000000745,
-  "styleAndLayoutStart": 11858.800000000745,
-  "firstUIEventTimestamp": 11801.099999999627,
-  "blockingDuration": 0,
+  "startTime": 11802.25,
+  "duration": 60.5,
+  "navigationId": 2463,
+  "paintTime": 11862.75,
+  "presentationTime": 11868.5,
+  "renderStart": 11859.5,
+  "styleAndLayoutStart": 11859.5,
+  "firstUIEventTimestamp": 11801.25,
+  "blockingDuration": 2.5,
   "scripts": [
     {
       "name": "script",
       "entryType": "script",
-      "startTime": 11803.199999999255,
-      "duration": 45,
+      "startTime": 11803.25,
+      "duration": 49.25,
+      "navigationId": 2463,
       "invoker": "DOMWindow.onclick",
       "invokerType": "event-listener",
       "windowAttribution": "self",
-      "executionStart": 11803.199999999255,
-      "forcedStyleAndLayoutDuration": 0,
-      "pauseDuration": 0,
+      "executionStart": 11803.25,
+      "forcedStyleAndLayoutDuration": 0.5,
+      "pauseDuration": 0.25,
       "sourceURL": "https://web.dev/js/index-ffde4443.js",
       "sourceFunctionName": "myClickHandler",
       "sourceCharPosition": 17796

@@ -10,7 +10,7 @@ browser-compat: api.Performance.toJSON
 
 The **`toJSON()`** method of the {{domxref("Performance")}} interface returns a JSON-serializable plain object representing the `Performance` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `Performance` object is stringified. This method is generally intended to, by default, usefully serialize `Performance` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `Performance` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 

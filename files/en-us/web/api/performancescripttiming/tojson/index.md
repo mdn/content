@@ -12,7 +12,7 @@ browser-compat: api.PerformanceScriptTiming.toJSON
 
 The **`toJSON()`** method of the {{domxref("PerformanceScriptTiming")}} interface returns a JSON-serializable plain object representing the `PerformanceScriptTiming` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceScriptTiming` object is stringified. This method is generally intended to, by default, usefully serialize `PerformanceScriptTiming` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceScriptTiming` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -80,14 +80,15 @@ This would log a JSON string like so (formatted for readability):
 {
   "name": "script",
   "entryType": "script",
-  "startTime": 11803.199999999255,
-  "duration": 45,
+  "startTime": 11803.25,
+  "duration": 49.25,
+  "navigationId": 2463,
   "invoker": "DOMWindow.onclick",
   "invokerType": "event-listener",
   "windowAttribution": "self",
-  "executionStart": 11803.199999999255,
-  "forcedStyleAndLayoutDuration": 0,
-  "pauseDuration": 0,
+  "executionStart": 11803.25,
+  "forcedStyleAndLayoutDuration": 0.5,
+  "pauseDuration": 0.25,
   "sourceURL": "https://web.dev/js/index-ffde4443.js",
   "sourceFunctionName": "myClickHandler",
   "sourceCharPosition": 17796

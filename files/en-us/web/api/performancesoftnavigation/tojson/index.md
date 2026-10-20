@@ -12,7 +12,7 @@ browser-compat: api.PerformanceSoftNavigation.toJSON
 
 The **`toJSON()`** method of the {{domxref("PerformanceSoftNavigation")}} interface returns a JSON-serializable plain object representing the `PerformanceSoftNavigation` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceSoftNavigation` object is stringified. This method is generally intended to, by default, usefully serialize `PerformanceSoftNavigation` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceSoftNavigation` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -73,11 +73,11 @@ This would log a JSON string like so (formatted for readability):
 {
   "name": "https://www.example.com/#2",
   "entryType": "soft-navigation",
-  "startTime": 2226.6,
-  "duration": 41.4,
+  "startTime": 2226.25,
+  "duration": 42.25,
   "navigationId": 2463,
-  "paintTime": 2232.4,
-  "presentationTime": 2268,
+  "paintTime": 2232.5,
+  "presentationTime": 2268.5,
   "navigationType": "push",
   "interactionId": 1704
 }

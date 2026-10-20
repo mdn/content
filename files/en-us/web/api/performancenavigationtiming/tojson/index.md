@@ -10,7 +10,7 @@ browser-compat: api.PerformanceNavigationTiming.toJSON
 
 The **`toJSON()`** method of the {{domxref("PerformanceNavigationTiming")}} interface returns a JSON-serializable plain object representing the `PerformanceNavigationTiming` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceNavigationTiming` object is stringified. This method is generally intended to, by default, usefully serialize `PerformanceNavigationTiming` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceNavigationTiming` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -107,48 +107,57 @@ This would log a JSON string like so (formatted for readability):
   "name": "https://en.wikipedia.org/wiki/Main_Page",
   "entryType": "navigation",
   "startTime": 0,
-  "duration": 227.60000002384186,
+  "duration": 228.25,
+  "navigationId": 2463,
   "initiatorType": "navigation",
+  "deliveryType": "",
   "nextHopProtocol": "h2",
   "renderBlockingStatus": "blocking",
+  "contentType": "text/html",
+  "contentEncoding": "gzip",
   "workerStart": 0,
-  "redirectStart": 4,
-  "redirectEnd": 71.40000000596046,
-  "fetchStart": 71.40000000596046,
-  "domainLookupStart": 71.40000000596046,
-  "domainLookupEnd": 71.40000000596046,
-  "connectStart": 71.40000000596046,
-  "secureConnectionStart": 71.40000000596046,
-  "connectEnd": 71.40000000596046,
-  "requestStart": 73.7000000178814,
-  "responseStart": 102.90000000596046,
-  "responseEnd": 105.2000000178814,
+  "redirectStart": 4.25,
+  "redirectEnd": 71.25,
+  "fetchStart": 71.25,
+  "domainLookupStart": 71.25,
+  "domainLookupEnd": 71.25,
+  "connectStart": 71.25,
+  "secureConnectionStart": 71.25,
+  "connectEnd": 71.25,
+  "requestStart": 74.25,
+  "responseStart": 103.25,
+  "firstInterimResponseStart": 0,
+  "finalResponseHeadersStart": 103.25,
+  "responseEnd": 105.25,
   "transferSize": 19464,
   "encodedBodySize": 19164,
   "decodedBodySize": 83352,
+  "responseStatus": 200,
   "serverTiming": [
     {
       "name": "cache",
-      "duration": 0,
+      "duration": 0.25,
       "description": "hit-front"
     },
     {
       "name": "host",
-      "duration": 0,
+      "duration": 0.5,
       "description": "cp3062"
     }
   ],
   "unloadEventStart": 0,
   "unloadEventEnd": 0,
-  "domInteractive": 178.10000002384186,
-  "domContentLoadedEventStart": 178.2000000178814,
-  "domContentLoadedEventEnd": 178.2000000178814,
-  "domComplete": 227.60000002384186,
-  "loadEventStart": 227.60000002384186,
-  "loadEventEnd": 227.60000002384186,
+  "domInteractive": 178.25,
+  "domContentLoadedEventStart": 179.25,
+  "domContentLoadedEventEnd": 179.25,
+  "domComplete": 228.25,
+  "loadEventStart": 228.25,
+  "loadEventEnd": 228.25,
   "type": "navigate",
   "redirectCount": 1,
   "activationStart": 0,
+  "criticalCHRestart": 0,
+  "notRestoredReasons": null,
   "confidence": {
     "randomizedTriggerRate": 0.4994798,
     "value": "high"

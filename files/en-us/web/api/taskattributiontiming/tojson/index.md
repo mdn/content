@@ -12,7 +12,7 @@ browser-compat: api.TaskAttributionTiming.toJSON
 
 The **`toJSON()`** method of the {{domxref("TaskAttributionTiming")}} interface returns a JSON-serializable plain object representing the `TaskAttributionTiming` object.
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `TaskAttributionTiming` object is stringified. This method is generally intended to, by default, usefully serialize `TaskAttributionTiming` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `TaskAttributionTiming` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -77,6 +77,7 @@ This would log a JSON string like so (formatted for readability):
   "entryType": "taskattribution",
   "startTime": 0,
   "duration": 0,
+  "navigationId": 2463,
   "containerType": "window",
   "containerSrc": "",
   "containerId": "",
