@@ -86,6 +86,7 @@ You configure channels through the `arguments` parameter of [`script.addPreloadS
 ## Commands
 
 - [`script.addPreloadScript`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/addPreloadScript)
+- [`script.callFunction`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/callFunction)
 - [`script.disown`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/disown)
 - [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate)
 - [`script.getRealms`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/getRealms)
@@ -95,10 +96,6 @@ You configure channels through the `arguments` parameter of [`script.addPreloadS
 
 - [`script.realmCreated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/realmCreated)
 - [`script.realmDestroyed`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/realmDestroyed)
-
-## Commands
-
-- [`script.callFunction`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/callFunction)
 
 ## Specifications
 
