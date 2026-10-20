@@ -56,7 +56,9 @@ Firefox 159 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - Methods that sanitize HTML with the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API), such as {{domxref("Element.setHTML()")}}, now remove unwanted elements and attributes as the markup is parsed, instead of parsing all of the markup first and then cleaning up resulting DOM tree afterwards. The result is the same, except that neighboring text now lands in a single text node instead of being split across several. ([Firefox bug 2070498](https://bugzil.la/2070498)).
 
-<!-- #### DOM -->
+#### DOM
+
+- [Scoped custom element registries](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) are now supported, this allows a shadow tree to create an independent {{domxref("CustomElementRegistry")}} whose definitions only apply to that specific DOM subtree. This can be used to avoid collisions where multiple web components declare elements with the same name. The `customElementRegistry` property can be used on {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("ShadowRoot")}}. The [`CustomElementRegistry()` constructor](/en-US/docs/Web/API/CustomElementRegistry/CustomElementRegistry) creates a new `CustomElementRegistry` object for scoped usage. ([Firefox bug 2070506](https://bugzil.la/2070506))
 
 <!-- #### Media, WebRTC, and Web Audio -->
 
