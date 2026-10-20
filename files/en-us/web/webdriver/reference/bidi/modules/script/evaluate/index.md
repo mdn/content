@@ -165,9 +165,11 @@ The following fields are available in the `result` object in the response, depen
     - `handle` {{optional_inline}}
       - : A string that contains an ID for referencing the returned object in subsequent `script` module commands.
         This handle can be used only in the realm in which it is created.
-        The browser includes this field when the [`resultOwnership`](#resultownership) parameter is specified as `"root"` and the returned value supports a handle.
-        Objects, including arrays and DOM nodes, and symbols support handles.
-        This field is omitted when the [`type`](#type_2) field in this `result` object is `"bigint"`, `"boolean"`, `"null"`, `"number"`, `"string"`, or `"undefined"`.
+
+        The browser includes this field when the [`resultOwnership`](#resultownership) parameter is specified as `root` and the result is of a [`type`](#type_2) that supports a handle.
+        - Types that support handles: Objects (including arrays and DOM nodes) and symbols.
+        - Types that don't support handles: `bigint`, `boolean`, `null`, `number`, `string`, and `undefined`.
+          The browser omits this field for these types.
     - `internalId` {{optional_inline}}
       - : A string that uniquely identifies an object within the response.
         This field is present only when the same object appears more than once in the response.
