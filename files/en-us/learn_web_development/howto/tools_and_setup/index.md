@@ -7,9 +7,6 @@ sidebar: learn-how-to
 
 This section lists questions related to the tools/software you can use to build websites.
 
-- [What text editors are available?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors)
-  - : In this article we highlight some things to think about when choosing and installing a text editor for web
-    development.
 - [What are browser developer tools?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)
   - : Every browser features a set of devtools for debugging HTML, CSS, and other web code. This article explains how to
     use the basic functions of your browser's devtools.

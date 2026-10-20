@@ -5292,11 +5292,11 @@
 /en-US/docs/Learn/CSS/Styling_text/Web_fonts	/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts
 /en-US/docs/Learn/CSS/Using_CSS_in_a_web_page	/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /en-US/docs/Learn/Checking_that_your_web_site_is_working_properly	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
-/en-US/docs/Learn/Choose,_Install_and_set_up_a_text_editor	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors
+/en-US/docs/Learn/Choose,_Install_and_set_up_a_text_editor	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors
 /en-US/docs/Learn/Client-side_web_APIs	/en-US/docs/Learn_web_development/Extensions/Client-side_APIs
 /en-US/docs/Learn/Coding-Scripting	/en-US/docs/Learn_web_development
 /en-US/docs/Learn/Common_questions	/en-US/docs/Learn_web_development/Howto
-/en-US/docs/Learn/Common_questions/Available_text_editors	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors
+/en-US/docs/Learn/Common_questions/Available_text_editors	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors
 /en-US/docs/Learn/Common_questions/Checking_that_your_web_site_is_working_properly	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 /en-US/docs/Learn/Common_questions/Common_web_layouts	/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts
 /en-US/docs/Learn/Common_questions/Design_and_accessibility	/en-US/docs/Learn_web_development/Howto/Design_and_accessibility
@@ -5315,7 +5315,7 @@
 /en-US/docs/Learn/Common_questions/Set_up_a_basic_working_environment	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
 /en-US/docs/Learn/Common_questions/Thinking_before_coding	/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding
 /en-US/docs/Learn/Common_questions/Tools_and_setup	/en-US/docs/Learn_web_development/Howto/Tools_and_setup
-/en-US/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors
+/en-US/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors
 /en-US/docs/Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 /en-US/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine	https://cloud.google.com/appengine/docs/
 /en-US/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
@@ -5901,6 +5901,7 @@
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML	/en-US/docs/Web/HTML/How_to/Define_terms_with_HTML
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage	/en-US/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes	/en-US/docs/Web/HTML/How_to/Use_data_attributes
+/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors
 /en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine	https://cloud.google.com/appengine/docs/
 /en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
 /en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software
