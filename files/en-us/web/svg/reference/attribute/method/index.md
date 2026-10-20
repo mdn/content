@@ -36,7 +36,7 @@ For {{SVGElement("textPath")}}, `method` indicates the method by which text shou
 - align
   - : This value indicates that the characters should be rendered so that they are not stretched or warped. The characters are rotated, scaled and translated when they are rendered. As a result, for fonts with connected characters (e.g., cursive fonts), the connections may not align properly when text is rendered along the path.
 - stretch
-  - : This value is rendered the same as `align` in browsers. The SVG specification defines it to indicate that the character outlines will be converted into paths, and then stretched and possibly warped. With this approach, connected characters, such as in cursive fonts, would maintain their connections.
+  - : This value indicates that the character outlines will be converted into paths, and then stretched and possibly warped. With this approach, connected characters, such as in cursive fonts, will maintain their connections.
 
 ## Specifications
 
