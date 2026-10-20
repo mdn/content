@@ -81,3 +81,7 @@ Firefox 159 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 159 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **New `MathMLAnchorElement` properties**: `mathml.a.element.enabled`
+
+  This release adds support for the `download`, `ping`, `rel`, `relList`, and `referrerPolicy` IDL attributes of the {{domxref("MathMLAnchorElement")}} interface, enabled in Nightly only. ([Firefox bug 2064612](https://bugzil.la/2064612)).
