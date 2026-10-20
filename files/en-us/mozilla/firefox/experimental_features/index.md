@@ -573,7 +573,7 @@ When enabled, the MathML [`<a>`](/en-US/docs/Web/MathML/Reference/Element/a) ele
 
 ### Support for the `MathMLAnchorElement` interface `download`, `ping`, `rel`, `relList`, and `referrerPolicy` properties
 
-This release adds support for the `download`, `ping`, `rel`, `relList`, and `referrerPolicy` IDL attributes. ([Firefox bug 2064612](https://bugzil.la/2064612)).
+The {{domxref("MathMLAnchorElement")}} interface now supports the {{domxref("MathMLAnchorElement.download", "download")}}, {{domxref("MathMLAnchorElement.ping", "ping")}}, {{domxref("MathMLAnchorElement.rel", "rel")}}, {{domxref("MathMLAnchorElement.relList", "relList")}}, and {{domxref("MathMLAnchorElement.referrerPolicy", "referrerPolicy")}} properties. ([Firefox bug 2064612](https://bugzil.la/2064612)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
