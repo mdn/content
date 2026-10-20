@@ -30,7 +30,7 @@ The HTML Sanitizer API provides XSS-safe and XSS-unsafe methods for injecting HT
   - : {{domxref('Element.setHTMLUnsafe()')}}, {{domxref('ShadowRoot.setHTMLUnsafe()')}}, and {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}.
 
 All the methods take the HTML to be injected and an optional {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} as arguments.
-The sanitizer objects defines the HTML entities that will be filtered out of the input before it is injected.
+The sanitizer object defines the HTML entities that will be filtered out of the input before it is injected.
 The {{domxref('Element')}} methods are context aware, and will additionally drop any elements that the HTML specification does not allow in the target element.
 
 The safe methods always remove XSS-unsafe elements and attributes.
@@ -43,7 +43,9 @@ The same methods can also be used for injecting trusted HTML strings that do not
 
 The XSS-unsafe methods will use whatever sanitizer configuration is passed as an argument.
 If no sanitizer is passed, then all HTML elements and attributes allowed by the context will be injected.
-This is similar to using {{domxref("Element.innerHTML")}} except that the method will parse shadow roots, drop elements that aren't appropriate in the context, and allow some other input that is not allowed when using the property.
+Unlike {{domxref("Element.innerHTML")}}, the unsafe element methods support declarative shadow roots inside elements in the input and accept a sanitizer configuration.
+Like `innerHTML`, they work with the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
+A top-level `<template shadowrootmode>` in a fragment parse does not attach a shadow root to the element whose content is being set.
 
 The unsafe methods should only be used with untrusted HTML that needs to contain some XSS-unsafe elements or attributes.
 This is still unsafe, but allows you to reduce the risk by restricting unsafe entities to the minimal set.
@@ -55,6 +57,21 @@ sanitizer.allowAttribute("onblur"); // Allow onblur
 
 someElement.setHTMLUnsafe(untrustedString, { sanitizer });
 ```
+
+### Sanitization during parsing
+
+When a sanitizer is used, the HTML parser applies its configuration while building the DOM, rather than first building a complete tree and then sanitizing it.
+Disallowed elements, attributes, and comments are filtered during parsing, and elements in `replaceWithChildrenElements` are replaced by their children.
+For fragment parsing, the nodes are created in an inert document and then adopted into the target document, so removed elements cannot cause side effects such as fetching resources.
+
+This affects the resulting DOM and when code can run:
+
+- Text on either side of a removed element, or an element replaced with its children, can form a single {{domxref("Text")}} node. See [Replacing elements with their children](#replacing_elements_with_their_children).
+- Custom element constructors do not run for elements that are removed or replaced with their children, or for descendants of removed elements. A removed `is` attribute does not create a customized built-in element.
+- A declarative shadow root is attached only if the sanitizer allows both the {{htmlelement("template")}} element and its `shadowrootmode` attribute. If the host is replaced with its children, the template remains a regular template instead of attaching a shadow root to the host's parent.
+
+Earlier implementations, including Chrome 146 and Firefox 148, parsed the complete input before sanitizing the resulting tree.
+These implementations can produce different DOM structures, such as multiple adjacent text nodes instead of one.
 
 ### Sanitizer configurations
 
@@ -259,36 +276,24 @@ They may be useful with the unsafe HTML methods and trusted types, depending on 
 ### XSS-safe methods
 
 - {{domxref('Element.setHTML()')}}
-  - : Parse a string of HTML into a subtree of nodes, dropping any elements that are invalid in the context of the element.
-    Then drop any elements and attributes that are not allowed by the sanitizer configuration, and any that are considered XSS-unsafe (even if allowed by the configuration).
-    The subtree is then inserted into the DOM as a subtree of the element.
+  - : Parse a string of HTML, applying the sanitizer configuration and removing XSS-unsafe elements and attributes during parsing. Replace the element's subtree with the result.
 - {{domxref('ShadowRoot.setHTML()')}}
-  - : Parse a string of HTML into a subtree of nodes.
-    Then drop any elements and attributes that are not allowed by the sanitizer configuration, and any that are considered XSS-unsafe (even if allowed by the configuration).
-    The subtree is then inserted as a subtree of the `ShadowRoot`.
+  - : Parse a string of HTML, applying the sanitizer configuration and removing XSS-unsafe elements and attributes during parsing. Replace the `ShadowRoot` subtree with the result.
 - {{domxref('Document/parseHTML_static','Document.parseHTML()')}}
-  - : Parse a string of HTML into a subtree of nodes.
-    Then drop any elements and attributes that are not allowed by the sanitizer configuration, and any that are considered XSS-unsafe (even if allowed by the configuration).
-    The subtree is then set as the root of the {{domxref("Document")}}.
+  - : Parse a string of HTML, applying the sanitizer configuration and removing XSS-unsafe elements and attributes during parsing. Return the result as a new {{domxref("Document")}}.
 
 ### XSS-unsafe methods
 
 - {{domxref('Element.setHTMLUnsafe()')}}
-  - : Parse a string of HTML into a subtree of nodes, dropping any elements that are invalid in the context of the element.
-    Then drop any elements and attributes that are not allowed by the sanitizer: if no sanitizer is specified allow all elements.
-    The subtree is then inserted into the DOM as a subtree of the element.
+  - : Parse a string of HTML and replace the element's subtree with the result. If a sanitizer is specified, apply its configuration during parsing; otherwise, no sanitization is performed.
 - {{domxref('ShadowRoot.setHTMLUnsafe()')}}
-  - : Parse a string of HTML into a subtree of nodes.
-    Then drop any elements and attributes that are not allowed by the sanitizer: if no sanitizer is specified allow all elements.
-    The subtree is then inserted into as a subtree of the `ShadowRoot`.
+  - : Parse a string of HTML and replace the `ShadowRoot` subtree with the result. If a sanitizer is specified, apply its configuration during parsing; otherwise, no sanitization is performed.
 - {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}
-  - : Parse a string of HTML into a subtree of nodes.
-    Then drop any elements and attributes that are not allowed by the sanitizer: if no sanitizer is specified allow all elements.
-    The subtree is then set as the root of the {{domxref("Document")}}.
+  - : Parse a string of HTML into a new {{domxref("Document")}}. If a sanitizer is specified, apply its configuration during parsing; otherwise, no sanitization is performed.
 
 ## Examples
 
-The following examples show how to use the sanitizer API using the _default_ sanitizer.
+The following examples show how to use the Sanitizer API with default and custom configurations.
 
 ### Using `Element.setHTML()` with the default sanitizer
 
@@ -297,22 +302,40 @@ The code below demonstrates how the method is used to sanitize the HTML input be
 
 ```js
 const untrustedString = "abc <script>alert(1)<" + "/script> def"; // Untrusted HTML (perhaps from user input)
-const someTargetElement = document.getElementById("target");
+const target = document.getElementById("target");
 
-// someElement.innerHTML = untrustedString;
-someElement.setHTML(untrustedString);
+target.setHTML(untrustedString);
 
-console.log(target.innerHTML); // abc def
+console.log(target.innerHTML); // "abc  def"
 ```
 
 The `{{htmlelement("script")}}` element is not allowed by the default sanitizer, or by the `setHTML()` method, so the `alert()` is removed.
 
-Note that using `Element.setHTMLUnsafe()` with the default sanitizer will sanitize the same HTML entities.
-The main difference is that if you use this method with Trusted Types it may still be audited:
+To use the default sanitizer with `Element.setHTMLUnsafe()`, you must explicitly pass `{ sanitizer: "default" }`.
+Omitting the option performs no sanitization.
+The unsafe method also works with Trusted Types:
 
 ```js
-someElement.setHTMLUnsafe(untrustedString);
+target.setHTMLUnsafe(untrustedString, { sanitizer: "default" });
 ```
+
+### Replacing elements with their children
+
+This example replaces a {{htmlelement("b")}} element with its text content.
+Because sanitization happens during parsing, the text on either side and inside the element forms a single text node:
+
+```js
+const target = document.createElement("div");
+target.setHTML("a<b>b</b>c", {
+  sanitizer: { replaceWithChildrenElements: ["b"] },
+});
+
+console.log(target.textContent); // "abc"
+console.log(target.childNodes.length); // 1
+console.log(target.firstChild.nodeType === Node.TEXT_NODE); // true
+```
+
+Earlier implementations that sanitized after parsing produced three adjacent text nodes for this input, even though the serialized HTML was also `"abc"`.
 
 ### Using an allow sanitizer configuration
 
