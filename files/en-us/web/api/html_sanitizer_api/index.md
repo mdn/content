@@ -248,7 +248,7 @@ This transformation function is most commonly used to sanitize the input but it 
 The safe HTML sanitization methods don't use trusted types.
 Because they always filter all XSS-unsafe entities before input HTML is inserted, there is no need to sanitize the input string, or audit the methods.
 
-However the unsafe HTML sanitization methods may inject untrusted HTML, depending on the sanitizer, and so will work with trusted types.
+However the unsafe HTML sanitization methods may insert untrusted HTML, depending on the sanitizer, and so will work with trusted types.
 The methods can take either a string or a `TrustedType` as input.
 If a sanitizer is also supplied, the transformation function will be run first, and then the sanitizer.
 
