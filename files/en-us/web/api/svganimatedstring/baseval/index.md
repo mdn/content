@@ -35,7 +35,7 @@ However {{domxref("TrustedScriptURL")}} _must_ be used for {{domxref("SVGScriptE
 
 ## Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if the reflected attribute's element is {{domxref("SVGScriptElement")}}, and the property is set to a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types), and no default policy is defined.
 
 ## Specifications

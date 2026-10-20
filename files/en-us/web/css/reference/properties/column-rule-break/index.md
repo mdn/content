@@ -13,7 +13,7 @@ sidebar: cssref
 
 The **`column-rule-break`** [CSS](/en-US/docs/Web/CSS) property sets the behavior for breaking column rules into segments wherever column rules intersect row gaps.
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: column-rule-break")}}
 
 ```css interactive-example-choice
 column-rule-break: none;
@@ -113,7 +113,7 @@ If `column-rule-break` is set to `none`, there are no breaks. In this case, the 
 
 The `column-rule-break` property, along with the {{cssxref("row-rule-break")}} property, can be set using the {{cssxref("rule-break")}} shorthand.
 
-Whether a column rule is by default composed of a single continuous segment or segments that break when intersecting row gaps depends on the container type.
+Whether a column rule is by default a single continuous segment or segments that break at row gaps depends on the container type.
 
 ### Grid containers
 
@@ -139,7 +139,8 @@ In grid containers, by default, column rule segments continue through row gap in
 ```
 
 ```css hidden
-body {
+h1,
+div {
   font-family: sans-serif;
   text-align: center;
 }
@@ -167,6 +168,18 @@ h2 {
   border: 1px solid green;
   background-color: lime;
   height: 30px;
+}
+
+@layer no-support {
+  @supports not (column-rule-break: intersection) {
+    body::before {
+      content: "Your browser doesn't support the column-rule-break property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
 }
 ```
 
@@ -215,7 +228,8 @@ In flexbox, whether the column rules break at every row gap by default depends o
 ```
 
 ```css hidden
-body {
+h1,
+article {
   font-family: sans-serif;
   text-align: center;
 }
@@ -257,6 +271,18 @@ section {
   background-color: lime;
   flex: 1 1 auto;
   height: 30px;
+}
+
+@layer no-support {
+  @supports not (column-rule-break: intersection) {
+    body::before {
+      content: "Your browser doesn't support the column-rule-break property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
 }
 ```
 
@@ -312,15 +338,14 @@ In multi-col containers, the default `normal` value behaves the same as `interse
 ```
 
 ```css hidden
-body {
+h1,
+ol,
+fieldset {
   font-family: sans-serif;
   text-align: center;
 }
 h1 {
   font-size: 1.25em;
-}
-h2 {
-  font-size: 1em;
 }
 ol {
   columns: 3 / 4em;
@@ -347,6 +372,17 @@ li {
 label {
   margin-right: 20px;
 }
+@layer no-support {
+  @supports not (column-rule-break: intersection) {
+    body::before {
+      content: "Your browser doesn't support the column-rule-break property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
 ```
 
 {{EmbedLiveSample("multi-col containers", "", "540")}}
@@ -365,7 +401,7 @@ If you select `none`, the column rule will no longer break into segments; rather
 
 ### Basic usage
 
-In this example, we use the `column-rule-break` property to break each rule segment in a grid container so column rule segments are created between row gaps. Changing the `row-gap` property will change the size of the segments.
+In this example, we use the `column-rule-break` property to break each rule segment in a grid container, creating column rule segments between row gaps. Changing the `row-gap` property changes the segment size.
 
 #### HTML
 
@@ -444,7 +480,7 @@ We create a list of 50 items and a slider to select the row gap width. Most of t
 
 #### CSS
 
-We define the unordered list as a 8-column container, creating rows and columns with the {{cssxref("grid-template-columns")}} property and setting {{cssxref("list-style-type")}} to `none` to remove the bullets. We include a {{cssxref("gap")}} of `20px` to provide enough room between the rows and columns to fit our `20px` solid row and column rules. We include the {{cssxref("rule-overlap")}} property to paint the column decoration on top of any row decorations. Last, we set the column rules to break at every intersection.
+We define the unordered list as an 8-column container, creating rows and columns with the {{cssxref("grid-template-columns")}} property and setting {{cssxref("list-style-type")}} to `none` to remove the bullets. We include a {{cssxref("gap")}} of `20px` to provide enough room between the rows and columns to fit our `20px` solid row and column rules. We include the {{cssxref("rule-overlap")}} property to paint the column decoration on top of any row decorations. Last, we set the column rules to break at every intersection.
 
 ```css live-sample___basic
 ul {
@@ -473,6 +509,17 @@ li {
   font-family: sans-serif;
   line-height: 50px;
 }
+@layer no-support {
+  @supports not (column-rule-break: intersection) {
+    body::before {
+      content: "Your browser doesn't support the column-rule-break property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
 ```
 
 ```js hidden live-sample___basic
@@ -489,7 +536,7 @@ gap.addEventListener("input", () => {
 
 {{EmbedLiveSample("Basic", "", "600")}}
 
-Make the row gaps wider and note how the breaks between column segments grow. Bring the row gap width down to `0px`, and notice how the column decoration appears continuous. It isn't! The `0px` gap between segments may not be visible, but the segments still start and end at the gap, so any offsets set with `column-rule-inset` properties will still be applied.
+Make the row gaps wider and note how the breaks between column segments grow. Bring the row gap width down to `0px`, and notice how the column decoration appears continuous. It isn't! The `0px` gap between segments may not be visible, but the segments still start and end at the gap, so any offsets set with `column-rule-inset-*` properties still apply.
 
 ## Specifications
 

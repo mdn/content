@@ -83,4 +83,3 @@ fetch("https://www.example.org/").then((response) => {
 - [Streams API concepts](/en-US/docs/Web/API/Streams_API)
 - [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
 - {{domxref("ReadableStream")}}
-- [Web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill)
