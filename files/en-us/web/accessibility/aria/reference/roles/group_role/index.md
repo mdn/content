@@ -27,7 +27,7 @@ When the role is added to an element, the browser will send out an accessible gr
 
 ### Scrollable content areas
 
-A visually overflowing container may need `tabindex="0"` so that keyboard-only users can focus it and scroll. A focusable container should have a role and an accessible name. If its content is not important enough to be a page landmark, use the `group` role.
+A visually overflowing container may need `tabindex="0"` so that keyboard-only users can focus it and scroll. A focusable container should have a role and an accessible name. If there is no appropriate native role and the content does not warrant a page landmark, use the `group` role.
 
 ```html
 <div
