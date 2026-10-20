@@ -8,7 +8,7 @@ browser-compat: api.MathMLAnchorElement.relList
 
 {{APIRef("HTML DOM")}}
 
-The **`relList`** read-only property of the {{domxref("MathMLAnchorElement")}} returns a live {{domxref("DOMTokenList")}} object containing the set of link types indicating the relationship between the resource represented by the link and the current document.
+The **`relList`** read-only property of the {{domxref("MathMLAnchorElement")}} interface returns a live {{domxref("DOMTokenList")}} object containing the set of link types indicating the relationship between the resource represented by the link and the current document.
 
 ## Value
 
