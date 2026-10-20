@@ -89,10 +89,6 @@ TCP splits data into segments for transmission, and guarantees the reliable deli
 This number must provide a balance — if the server waits for an ACK after each segment, the transfer will be slow because the server has to wait a full round trip for every segment it sends, even on a low-load network.
 On the other hand, sending too many segments at once into a busy network may cause some of them to be dropped along the way. The client can't acknowledge segments it never received, so the server eventually re-sends them.
 
-A buffer is used to mitigate problems caused by a busy network. The server keeps a copy of currently unacknowledged data, so it can be resent if required. The client holds incoming data in a buffer until the application reads it. If that buffer nears full, the client can advertise a smaller receive window, which limits how much more data the server can send.
-
-In order to balance the number of transmitted segments, the {{glossary('TCP slow start')}} algorithm is used to gradually increase the amount of transmitted data until the maximum network bandwidth can be determined, and to reduce the amount of transmitted data in case of high network load.
-
 TCP uses two separate limits on how much unacknowledged data the server can have in flight. The _receive window_ protects the client: the client holds incoming data in a buffer until the application reads it, and tells the server how much more data it can currently accept. The _congestion window_ (CWND) protects the network: it is the server's estimate of how much data the path to the client can carry without segments being dropped. The server never has more unacknowledged data in flight than the smaller of these two windows.
 
 The congestion window starts small and is adjusted as the transfer proceeds. During {{glossary('TCP slow start')}} it grows rapidly, roughly doubling every round trip, until segments start being dropped or a threshold is reached. After that it grows more slowly, and is reduced whenever the network shows signs of congestion. For more details about TCP congestion control, see [RFC 5681](https://www.rfc-editor.org/rfc/rfc5681.html).
