@@ -204,6 +204,44 @@ Find out more about the JavaScript console in different browsers:
 - [Chrome JavaScript Console](https://developer.chrome.com/docs/devtools/console/) (Opera and Edge's console is the same)
 - [Safari Console Object API](https://webkit.org/web-inspector/console-object-api/) and [Console Command Line API](https://webkit.org/web-inspector/console-command-line-api/)
 
+## The Network inspector
+
+The Network inspector allows you to examine the network requests and responses involved in fetching all the HTML documents, images, CSS, JavaScript, and other resources that go together to render a website in your browser.
+
+To access it, open the developer tools and select the **Network** tab. This will give you a window like the following:
+
+![The Network tab of the browser developer tools, showing several network requests with a variety of status codes.](network_inspector.png)
+
+There's a lot of information available here, but at a basic level, it is useful for seeing what files your site is requesting, and whether they are being loaded successfully.
+
+As an example, if you see a {{httpstatus("200")}} status code, a resource has been delivered successfully, but if the code shows as {{httpstatus("404")}}, it means the resource couldn't be found and you might have an incorrect file path or filename to fix, or maybe you forgot to upload it to the server.
+
+### HTTP statuses
+
+Servers respond with a status message whenever they receive a request. Here are the most common statuses:
+
+- **200: OK**
+  - : The resource you asked for was delivered.
+- **301: Moved permanently**
+  - : The resource has moved to a new location. You won't see this much in your browser, but it's good to know about "301" since search engines use this information a lot to update their indexes.
+- **304: Not modified**
+  - : The file has not changed since the last time you asked for it, so your browser can display the version from its cache, resulting in faster response times and more efficient use of bandwidth.
+- **403: Forbidden**
+  - : You aren't allowed to display the resource. Usually it has to do with a configuration mistake (e.g., your hosting provider forgot to give you access rights to a directory).
+- **404: Not found**
+  - : Self-explanatory. We'll discuss how to solve this below.
+- **500: Internal server error**
+  - : Something went wrong on the server. For instance, maybe the server-side language ({{Glossary("PHP")}}, .Net, etc.) stopped working, or the web server itself has a configuration problem. Usually it's best to resort to your hosting provider's support team.
+- **503: Service unavailable**
+  - : Usually resulting from a short-term system overload. The server has some sort of problem. Try again in a little while.
+
+### Find out more
+
+Find out more about the Network inspector in different browsers:
+
+- [Firefox Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
+- [Chrome Network panel](https://developer.chrome.com/docs/devtools/network/overview) (Opera and Edge's console is the same)
+
 ## See also
 
 - [Debugging HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)
