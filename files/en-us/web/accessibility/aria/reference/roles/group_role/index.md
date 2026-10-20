@@ -25,9 +25,9 @@ The `group` role should not be used for major perceivable sections of a page. If
 
 When the role is added to an element, the browser will send out an accessible group event to assistive technology products, which can then notify the user about it.
 
-## Scrollable content areas
+### Scrollable content areas
 
-A visually overflowing container may need `tabindex="0"` so that keyboard-only users can focus it and scroll. If the content forms a meaningful group but is not important enough to be a page landmark, `role="group"` may be appropriate. Give the group an accessible name that identifies its contents; avoid generic labels repeated across several containers.
+A visually overflowing container may need `tabindex="0"` so that keyboard-only users can focus it and scroll. A focusable container should have a role and an accessible name. If its content is not important enough to be a page landmark, use the `group` role.
 
 ```html
 <div
@@ -39,8 +39,6 @@ A visually overflowing container may need `tabindex="0"` so that keyboard-only u
   <!-- Long transcript content -->
 </div>
 ```
-
-Do not add a group role automatically to every overflowing element: a native element with appropriate semantics may already be sufficient. Avoid creating many named [`region`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/region_role) landmarks solely because their content can scroll.
 
 ## Examples
 
