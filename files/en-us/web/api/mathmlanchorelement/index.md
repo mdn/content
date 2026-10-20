@@ -45,7 +45,7 @@ _Inherits properties from its parent, {{domxref("MathMLElement")}}._
   - : A string defining how much of the [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referer) to send when following the link, and under what circumstances.
 - {{domxref("MathMLAnchorElement.rel")}} {{experimental_inline}}
   - : A space-separated list of link types indicating the relationship between the resource represented by the link and the current document.
-- {{domxref("MathMLAnchorElement.relList")}} {{experimental_inline}}
+- {{domxref("MathMLAnchorElement.relList")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A live {{domxref("DOMTokenList")}} object containing the set of link types indicating the relationship between the resource represented by the link and the current document.
 - {{domxref("MathMLAnchorElement.search")}} {{experimental_inline}}
   - : A string representing the search element, including leading question mark (`?`), if any, of the referenced URL.
