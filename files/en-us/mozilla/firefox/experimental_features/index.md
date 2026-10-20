@@ -741,6 +741,8 @@ The [numeric factory functions](/en-US/docs/Web/API/CSS/factory_functions_static
 
 - `layout.css.namespace.exposed-in-workers-and-worklets`
   - : Set to `true` to enable.
+- `layout.css.typed-om.enabled`
+  - : Set to `true` to enable (enabled by default in Nightly).
 
 ### On-device speech recognition
 
