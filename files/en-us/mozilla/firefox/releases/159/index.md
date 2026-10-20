@@ -36,7 +36,7 @@ Firefox 159 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### Removals
 
-- The masonry layout syntax has been removed to allow for the new `grid-lanes` and `inline-grid-lanes` values of `display` to be worked upon. This syntax was only implemented in Firefox. ([Firefox bug 2077170](https://bugzil.la/2077170)).
+- The legacy masonry layout syntax has been removed: the `masonry` value of the {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} properties, and the `masonry-auto-flow` property. This syntax was only enabled by default in Nightly, behind the `layout.css.grid-template-masonry-value.enabled` preference. It's superseded by [grid lanes layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes), which uses the `grid-lanes` and `inline-grid-lanes` values of the {{cssxref("display")}} property. ([Firefox bug 2077170](https://bugzil.la/2077170)).
 
 <!-- ### JavaScript -->
 
