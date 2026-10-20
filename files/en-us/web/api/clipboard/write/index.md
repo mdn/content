@@ -388,8 +388,8 @@ log(
 
 The following code builds the `ClipboardItem` when the copy button is pressed.
 This creates representation for `text/html` and `text/plain` blobs, and adds the custom-format blob only when `ClipboardItem.supports()` confirms the browser accepts it.
-There is nothing special about the blob for the custom format: the only difference is the`web` prefix used for its key.
-The `text/html` blob omits the `SKU` column stored in the custom format, and acts as a fall back when the content is pasted in apps and browsers that don't allow the format.
+There is nothing special about the blob for the custom format: the only difference is the `web` prefix used for its key.
+The `text/html` blob omits the `SKU` column stored in the custom format, and acts as a fallback when the content is pasted in apps and browsers that don't support the format.
 
 ```js
 const sourceTable = document.querySelector("#source");

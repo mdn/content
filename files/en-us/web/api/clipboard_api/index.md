@@ -48,7 +48,7 @@ A `ClipboardItem` can also carry a custom format: a [Media type ("MIME type")](/
 This lets a web app define its own clipboard format for data that has no standard representation, without colliding with the OS's native clipboard formats or another site's custom formats.
 
 Custom formats are useful because they can preserve information a standard representation can't, for example structured metadata alongside a visual or text version of the same content.
-An app that recognizes its own custom format can paste it with data loss for users who copy from it, while other apps still receive whichever standard representations you also provide.
+An app that recognizes its own custom format can paste it without data loss for users who copy from it, while other apps still receive whichever standard representations you also provide.
 One important use case enabled by this feature is that you can copy and paste to your own application, either in the same page or running in different tabs or browsers.
 
 Support for custom formats currently varies by browser, so check [Browser compatibility](#browser_compatibility) and {{domxref("ClipboardItem.supports_static", "ClipboardItem.supports()")}} before relying on one.
@@ -130,7 +130,7 @@ This example copies a line of text with {{domxref("Clipboard.writeText", "writeT
 
 #### HTML
 
-The HTML defines a {{htmlelement("p")}} element for the source text to be copied, {{htmlelement("button")}} elements to copy and paste the text, and an element into which the the text will be copied .
+The HTML defines a {{htmlelement("p")}} element for the source text to be copied, {{htmlelement("button")}} elements to copy and paste the text, and an element into which the text will be copied.
 
 ```html
 <p id="source_text">The quick brown fox jumps over the lazy dog.</p>
@@ -167,7 +167,7 @@ document.querySelector("#copy_text").addEventListener("click", async () => {
 
 document.querySelector("#paste_text").addEventListener("click", async () => {
   try {
-    // Read the text from the clipboard write it to #target_text
+    // Read the text from the clipboard and write it to #target_text
     targetText.textContent = await navigator.clipboard.readText();
   } catch (error) {
     targetText.textContent = `Paste failed: ${error.message}`;
@@ -220,7 +220,7 @@ It then reads the clipboard and lists every representation found.
 As in the previous example, we create event handlers to copy the source element and paste to the target element.
 
 The code that is run to copy the data is shown below.
-Note how the code constructs the `ClipboardItem()` constructor with two representations of the same source data.
+Note how the code calls the `ClipboardItem()` constructor with two representations of the same source data.
 
 ```js
 const sourceMulti = document.querySelector("#source_multi");
@@ -273,7 +273,7 @@ Click "Copy (HTML + plain text)", then click "Paste" to list the representations
 
 ### Reading and writing custom formats
 
-This example demonstrates how applications can use custom formats to copy and paste a faithful representation of their data when the format is understood, and provide a graceful fall back where it is not.
+This example demonstrates how applications can use custom formats to copy and paste a faithful representation of their data when the format is understood, and provide a graceful fallback where it is not.
 
 The code provides a source table that represents all the data provided by the application: item, quantity, and SKU.
 When this is copied, a {{domxref("ClipboardItem")}} is created with a `"web "`-prefixed custom representation that fully describes that data, a `text/html` representation that omits the SKU data, and a `text/plain` version that reduces the data to text.
