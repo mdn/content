@@ -15,6 +15,9 @@ It reflects the `ping` attribute of the [`<a>`](/en-US/docs/Web/MathML/Reference
 > [!NOTE]
 > This property is not effective in Firefox and its usage may be limited due to privacy and security concerns.
 
+## Value
+
+A string.
 ## Examples
 
 ### Basic usage
