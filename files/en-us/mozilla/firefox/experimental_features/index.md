@@ -685,31 +685,6 @@ Note that Firefox does not support providing {{domxref("CrashReportContext")}} i
 - `dom.reporting.crash.enabled`
   - : Set to `true` to enable (enabled by default in Nightly).
 
-### Scoped custom element registries
-
-Support for [scoped custom element registries](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) is being implemented.
-Scoped registries allow a shadow tree to create an independent {{domxref("CustomElementRegistry")}} whose definitions only apply to that specific DOM subtree.
-This can be used to avoid collisions where multiple web components declare elements with the same name.
-
-The implementation includes:
-
-- `customElementRegistry` property on {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("ShadowRoot")}}.
-  The [`CustomElementRegistry()` constructor](/en-US/docs/Web/API/CustomElementRegistry/CustomElementRegistry) creates a new `CustomElementRegistry` object for scoped usage. ([Firefox bug 2018900](https://bugzil.la/2018900))
-
-From version 156:
-
-- [Scoped custom element registries](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) are now supported, so that a shadow root can define custom elements that do not clash with those defined in the global registry. ([Firefox bug 2064333](https://bugzil.la/2064333)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 156           | Yes                 |
-| Developer Edition | 150           | No                  |
-| Beta              | 150           | No                  |
-| Release           | 150           | No                  |
-
-- `dom.scoped-custom-element-registries.enabled`
-  - : Set to `true` to enable.
-
 ### CSS Typed Object Model Level 1
 
 The [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) is implemented in Nightly.
@@ -725,6 +700,22 @@ This simplifies CSS property manipulation by exposing CSS values as typed JavaSc
 
 - `layout.css.typed-om.enabled`
   - : Set to `true` to enable.
+
+#### CSS numeric factory functions exposed in workers and worklets
+
+The [numeric factory functions](/en-US/docs/Web/API/CSS/factory_functions_static) of the {{domxref("CSS")}} namespace, such as `CSS.px()`, are now exposed in workers and paint worklets, not only on `Window`. They're part of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), so outside Nightly they also need the `layout.css.typed-om.enabled` preference set to `true`. ([Firefox bug 2079188](https://bugzil.la/2079188)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 159           | No                  |
+| Developer Edition | 159           | No                  |
+| Beta              | 159           | No                  |
+| Release           | 159           | No                  |
+
+- `layout.css.namespace.exposed-in-workers-and-worklets`
+  - : Set to `true` to enable.
+- `layout.css.typed-om.enabled`
+  - : Set to `true` to enable (enabled by default in Nightly).
 
 ### On-device speech recognition
 
@@ -949,20 +940,6 @@ The `navigate` option of the {{domxref("Notification.Notification", "Notificatio
 | Release           | 157           | No                  |
 
 - `dom.webnotifications.navigate.enabled`
-  - : Set to `true` to enable.
-
-### Sanitizing HTML while parsing
-
-Methods that sanitize HTML with the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API), such as {{domxref("Element.setHTML()")}}, now drop unwanted elements and attributes as the markup is parsed, instead of parsing all of it first and then cleaning up afterwards. The result is the same, except that neighboring text now lands in a single text node instead of being split across several. ([Firefox bug 2062652](https://bugzil.la/2062652)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 157           | No                  |
-| Developer Edition | 157           | No                  |
-| Beta              | 157           | No                  |
-| Release           | 157           | No                  |
-
-- `dom.security.sanitizer.while-parsing`
   - : Set to `true` to enable.
 
 ### Container Timing API
