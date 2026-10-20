@@ -8,7 +8,7 @@ browser-compat: api.MathMLAnchorElement.referrerPolicy
 
 {{APIRef("HTML DOM")}}
 
-The **`referrerPolicy`** property property of the {{domxref("MathMLAnchorElement")}} interface is a string defining How much of the [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referer) to send when following the link, and under what circumstances.
+The **`referrerPolicy`** property of the {{domxref("MathMLAnchorElement")}} interface is a string defining how much of the [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referer) to send when following the link, and under what circumstances.
 
 It reflects the `referrerpolicy` attribute of the [`<a>`](/en-US/docs/Web/MathML/Reference/Element/a) element.
 
