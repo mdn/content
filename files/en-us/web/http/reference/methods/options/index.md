@@ -149,3 +149,4 @@ Connection: Keep-Alive
 - [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)
 - {{HTTPHeader("Allow")}} header
 - [CORS](/en-US/docs/Web/HTTP/Guides/CORS)
+- 
