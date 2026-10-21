@@ -11,5 +11,5 @@ For many years it was the defacto standard way of transferring files, but as it 
 
 ## See also
 
-- [Beginner's guide to uploading files via FTP](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
+- [Publishing your website > (SFTP)](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#sftp)
 - [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol) on Wikipedia

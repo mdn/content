@@ -18,7 +18,7 @@ However, you should understand something about the workings of websites and web 
 
 - [Installing basic software](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)
 - [How the web works](/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)
-- [How do you upload files to a web server?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
+- [Publishing your website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 
 With the basic understanding that you gain from this preparation, you'll be ready to work your way through the modules in this section.
 

@@ -8,7 +8,7 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}
 
-Once you finish writing the code and organizing the files that make up your website, you need to put it all online so people can find it. This article explains how to get [your sample website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like) online with little effort.
+Once you finish writing the code and organizing the files that make up your website, you need to put it all online so people can find it. This article explains how to get [your sample website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like) online.
 
 <table>
   <tbody>
@@ -23,7 +23,7 @@ Once you finish writing the code and organizing the files that make up your webs
       <td>
         <ul>
           <li>The basic tools and concepts involved in publishing a website — hosting, domains, FTP programs.</li>
-          <li>What alternative hosting options are available, for example Google App Engine, GitHub, and CodePen.</li>
+          <li>What alternative hosting options are available, for example GitHub and CodePen.</li>
           <li>Publishing a website using GitHub Pages.</li>
           <li>Hosting, how to purchase it, and how to put a website online.</li>
           <li>How to register a domain.</li>
@@ -60,20 +60,53 @@ Hosting providers charge you according to how much {{Glossary("Bandwidth", "band
 - Your home or office {{Glossary("ISP", "internet service provider")}} may provide some limited hosting for a small website. The available feature set will be limited, but it might be perfect for your first experiments.
 - There are also free services available like [Neocities](https://neocities.org/), [Google Sites](https://sites.google.com/), and [WordPress](https://wordpress.com/). Such services can be limited in scope, but they are good enough for initial experiments.
 
-### Publishing to your domain
+## Publishing to your domain
 
-Companies use various mechanisms to transfer files to their web servers. Many will have more than one option; typical options include using an SFTP client or RSync, or keeping your website source code in a GitHub repo and granting the hosting company access so they can fetch the source from GitHub, build it if necessary, and publish it.
+Companies use various mechanisms to transfer files to their web servers. Many will have more than one option; typical options include using an [(S)FTP client](/en-US/docs/Glossary/FTP) or [RSync](https://en.wikipedia.org/wiki/Rsync), or keeping your website source code in a [GitHub repo](https://github.com/) and granting the hosting company access so they can fetch the source, build it if necessary, and publish it.
 
-> [!NOTE]
-> It is possible to [Configure a custom domain for your GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
+In the following subsections we'll look at (S)FTP and RSync in a bit more detail.
 
-#### Dedicated publishing programs
+### (S)FTP
 
-You can use a dedicated publishing program such as an [SFTP client](/en-US/docs/Glossary/FTP) or [RSync](https://en.wikipedia.org/wiki/Rsync) to send your files to your hosting server.
+Each operating system includes an (S)FTP client as part of its file manager. Windows Explorer, Nautilus (a common Linux file manager), and the Mac Finder all include this functionality. However, people often choose dedicated (S)FTP clients to display local or remote directories side-by-side and store server passwords.
 
-Each operating system includes an SFTP client, as part of its file manager. Windows Explorer, Nautilus (a common Linux file manager), and the Mac Finder all include this functionality. However, people often choose dedicated SFTP clients to display local or remote directories side-by-side and store server passwords.
+If you want to install an (S)FTP client, there are several reliable and free options: for example, [FileZilla](https://filezilla-project.org/) for all platforms, [WinSCP](https://winscp.net/eng/index.php) for Windows, [Cyberduck](https://cyberduck.io/) for Mac or Windows.
 
-If you want to install an SFTP client, there are several reliable and free options: for example, [FileZilla](https://filezilla-project.org/) for all platforms, [WinSCP](https://winscp.net/eng/index.php) for Windows, [Cyberduck](https://cyberduck.io/) for Mac or Windows.
+In general, you'll get some instructions from your hosting provided like these for connecting via FTP:
+
+> - SFTP server: `sftp://demozilla.examplehostingprovider.net`
+> - Username: `demozilla`
+> - Password: `quickbrownfox`
+> - Port: `5548`
+> - To publish on the web, put your files into the `Public/htdocs` directory.
+
+To find out where to enter this information on your chosen client, see the client's documentation.
+
+Once connected, (S)FTP clients generally give you either a one-pane view that shows the remote FTP server filesystem, or a two-pane view that shows the remote FTP server filesystem on one side and the local file system on the other side. Whichever way the information is presented, you generally have to drag and drop your local site files onto the remote FTP view to put them in the right place. As hinted above, the default location (at least for static files) is usually `Public/htdocs`.
+
+### Rsync
+
+{{Glossary("Rsync")}} is a local-to-remote file synchronizing tool. It is seen as a more advanced tool than (S)FTP because it is typically used on the command line, although GUI clients do exist, such as [Acrosync](https://acrosync.com/mac.html) for Windows and macOS and [Grsync](https://www.opbyte.it/grsync/) for all platforms.
+
+A basic command looks like this:
+
+```bash
+rsync [-options] -e "ssh [SSH DETAILS GO HERE]" SOURCE user@x.x.x.x:DESTINATION
+```
+
+- `-options` is a dash followed by one or more letters, for example `-v` for verbose error messages, and `-b` to make backups. You can see the full list at the [rsync man page](https://linux.die.net/man/1/rsync) (search for "Options summary").
+- `-e "ssh [SSH DETAILS GO HERE]"` includes SSH details to provide a secure connection.
+- `SOURCE` is the path to the local file or directory that you want to copy files over from.
+- `user@` is the credentials of the user on the remote server you want to copy files over to.
+- `x.x.x.x` is the IP address of the remote server.
+- `DESTINATION` is the path to the location you want to copy your directory or files to on the remote server.
+
+Again, you would get such details from your hosting provider.
+
+For more information and further examples:
+
+- See [How to Use Rsync to Copy/Sync Files Between Servers](https://www.atlantic.net/vps-hosting/how-to-use-rsync-copy-sync-files-servers/).
+- You can find more details of what is needed at [How To Copy Files With Rsync Over SSH](https://www.digitalocean.com/community/tutorials/how-to-copy-files-with-rsync-over-ssh).
 
 ## Using a web-based IDE such as CodePen
 
@@ -105,6 +138,9 @@ If you are just getting started, we'd recommend GitHub pages for its ease of use
 3. Upload your site files to your new repository using the GitHub UI. You can find instructions on how to do so at [Adding a file to a repository on GitHub](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository#adding-a-file-to-a-repository-on-github).
 4. Set up your repository to publish its contents using GitHub pages. To do this, see the instructions at [Publishing from a branch](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch).
 5. After a short while, you should see a message saying "Your site is live at https://username.github.io/repositoryname/", for example, "Your site is live at https://bobsmith.github.io/myfirstwebsite/" if your name is bobsmith and your repository is called myfirstwebsite. There should be a "Visit site" button that you can click to view your site.
+
+> [!NOTE]
+> If you've got your own domain, and want it to point to a GitHub pages site, see [Configure a custom domain for your GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) for guidance.
 
 ## Further reading
 
