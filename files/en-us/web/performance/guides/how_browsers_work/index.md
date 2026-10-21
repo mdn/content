@@ -84,7 +84,7 @@ In our example above, the request is definitely less than 14KB, but the linked r
 
 ### Congestion control / TCP slow start
 
-TCP splits data into segments for transmission, and guarantees the reliable delivery of all segments. The client acknowledges the segments it receives by sending ACK packets, and the server must decide how many segments it can send before it has to wait for an ACK.
+TCP splits data into segments for transmission and guarantees the reliable delivery of all segments from server to client. The client acknowledges received segments by sending ACK packets, and the server decides what number of segments to send before waiting for an ACK.
 
 This number must provide a balance — if the server waits for an ACK after each segment, the transfer will be slow because the server has to wait a full round trip for every segment it sends, even on a low-load network.
 On the other hand, sending too many segments at once into a busy network may cause some of them to be dropped along the way. The client can't acknowledge segments it never received, so the server eventually re-sends them.
