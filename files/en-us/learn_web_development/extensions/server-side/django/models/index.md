@@ -292,6 +292,10 @@ from django.db import models
 # Create your models here.
 ```
 
+> [!NOTE]
+> Django [recommends using a custom user model](https://docs.djangoproject.com/en/stable/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project) for new projects, as switching later is hard.
+> This tutorial uses the default `User` model for simplicity; see [Part 8](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Authentication) for more.
+
 ### Genre model
 
 Copy the `Genre` model code shown below and paste it into the bottom of your `models.py` file. This model is used to store information about the book category — for example whether it is fiction or non-fiction, romance or military history, etc.
