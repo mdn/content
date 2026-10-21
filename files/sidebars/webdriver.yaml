@@ -136,6 +136,8 @@ sidebar:
             title: Commands
           - link: /Web/WebDriver/Reference/BiDi/Modules/script/addPreloadScript
             code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/callFunction
+            code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/script/disown
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/script/evaluate
