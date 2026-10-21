@@ -127,14 +127,16 @@ several cases:
 As an example of this last failure case, trying to set `document.domain` to
 `"example.org"` when on `https://example.com/` will throw.
 
-Additionally, as part of its deprecation, it will do nothing when combined with certain
-modern isolation features:
+Additionally, the setter does nothing when the document is in an origin-keyed agent cluster.
+This includes:
 
-- If used on a cross-origin isolated page, i.e., one that uses the appropriate values
-  for the {{httpheader("Cross-Origin-Opener-Policy")}} and
-  {{httpheader("Cross-Origin-Embedder-Policy")}} HTTP headers
-- If used on an origin-isolated page, i.e., one that uses the
-  {{httpheader("Origin-Agent-Cluster")}} {{experimental_inline}} HTTP header
+- A cross-origin isolated page, i.e., one that uses the appropriate values for the
+  {{httpheader("Cross-Origin-Opener-Policy")}} and
+  {{httpheader("Cross-Origin-Embedder-Policy")}} HTTP headers.
+- A page for which the browser honors the `Origin-Agent-Cluster: ?1` header.
+- In Chrome 115 and later, a document delivered in a secure context is origin-keyed by
+  default. In Chrome, `Origin-Agent-Cluster: ?0` opts out of this default for documents
+  that are not cross-origin isolated. Other browsers may behave differently.
 
 Finally, setting `document.domain` does not change the origin used for
 origin-checks by some Web APIs, preventing sub-domain access via this mechanism.
