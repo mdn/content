@@ -98,7 +98,13 @@ These options are generally free, with a limited feature-set.
 
 ## What approach would we recommend?
 
-If you are just getting started, we'd recommend GitHub pages for its ease of use. Follow the instructions at [Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) to get your first website online.
+If you are just getting started, we'd recommend GitHub pages for its ease of use.
+
+1. If you don't already have an account, [sign up for GitHub](https://github.com/).
+2. Create a repository to store your site, following the steps at [Creating a repository for your site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site).
+3. Upload your site files to your new repository using the GitHub UI. You can find instructions on how to do so at [Adding a file to a repository on GitHub](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository#adding-a-file-to-a-repository-on-github).
+4. Set up your repository to publish its contents using GitHub pages. To do this, see the instructions at [Publishing from a branch](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch).
+5. After a short while, you should see a message saying "Your site is live at https://username.github.io/repositoryname/", for example, "Your site is live at https://bobsmith.github.io/myfirstwebsite/" if your name is bobsmith and your repository is called myfirstwebsite. There should be a "Visit site" button that you can click to view your site.
 
 ## Further reading
 
