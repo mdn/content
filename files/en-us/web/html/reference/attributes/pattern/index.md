@@ -145,6 +145,12 @@ The example below restricts the value to 4-8 characters and requires that it con
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```css hidden
 div {
   margin-bottom: 10px;

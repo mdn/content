@@ -293,7 +293,7 @@ The {{domxref("EventSource")}} interface represents the source which sent or is 
 
 ## Examples
 
-In this example, an {{HTMLElement("input")}} element's {{domxref("Element/input_event", "input")}} event is monitored in order to update the state of a form's "submit" button based on whether or not a given field currently has a value.
+In this example, an {{HTMLElement("input")}} element's {{domxref("Element/input_event", "input")}} event is monitored in order to update the state of a "Send" button based on whether or not a given field currently has a value.
 
 ### JavaScript
 
@@ -327,21 +327,19 @@ With this in place, the "Send" button is always enabled whenever the user name i
 
 ### HTML
 
-The HTML for the form looks like this:
+The HTML looks like this:
 
 ```html
 <p>Please provide the information below. Items marked with "*" are required.</p>
-<form action="" method="get">
-  <p>
-    <label for="userName" required>Your name:</label>
-    <input type="text" id="userName" /> (*)
-  </p>
-  <p>
-    <label for="userEmail">Email:</label>
-    <input type="email" id="userEmail" />
-  </p>
-  <input type="submit" value="Send" id="sendButton" />
-</form>
+<p>
+  <label for="userName" required>Your name:</label>
+  <input type="text" id="userName" /> (*)
+</p>
+<p>
+  <label for="userEmail">Email:</label>
+  <input type="email" id="userEmail" />
+</p>
+<input type="button" value="Send" id="sendButton" />
 ```
 
 ### Result

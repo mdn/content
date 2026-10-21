@@ -31,11 +31,8 @@ Placeholders cannot be relied upon as a replacement for a label even for those n
 ### HTML
 
 ```html
-<form action="/en-US/docs/Web/HTML/Reference/Attributes/placeholder">
-  <label for="name">Enter your name:</label>
-  <input type="text" id="name" name="name" placeholder="e.g. Mike Shinoda" />
-  <button type="submit">Submit</button>
-</form>
+<label for="name">Enter your name:</label>
+<input type="text" id="name" name="name" placeholder="e.g. Mike Shinoda" />
 ```
 
 ### Result

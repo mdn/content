@@ -28,12 +28,10 @@ A {{domxref("Selection")}} object, or `null` if the document has no [browsing co
 
 You can call {{domxref("Window.getSelection()")}}, which is identical to `window.document.getSelection()`.
 
-It is worth noting that currently `getSelection()` doesn't work on the
-content of {{htmlelement("textarea")}} and {{htmlelement("input")}} elements in Firefox.
+It is worth noting that currently `getSelection()` doesn't work on the content of {{htmlelement("textarea")}} and {{htmlelement("input")}} elements in Firefox.
 {{domxref("HTMLInputElement.setSelectionRange()")}} or the `selectionStart` and `selectionEnd` properties could be used to work around this.
 
-Notice also the difference between _selection_ and _focus_.
-{{domxref("Document.activeElement")}} returns the focused element.
+Notice also the difference between _selection_ and _focus_. {{domxref("Document.activeElement")}} returns the focused element.
 
 ### String representation of the Selection object
 

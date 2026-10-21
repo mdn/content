@@ -24,7 +24,7 @@ At a fundamental level, the {{cssxref("color")}} property defines the foreground
 Whenever an element is rendered, these properties are used to determine the color of the text, its background, and any decorations on the text.
 
 - {{cssxref("color")}}
-  - : The color to use when drawing the text and any [text decorations](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#font_style_font_weight_text_transform_and_text_decoration) (such as the addition of under- or overlines, strike-through lines, and so forth.
+  - : The color to use when drawing the text and any [text decorations](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#font_style_font_weight_text_transform_and_text_decoration) (such as the addition of under- or overlines, strike-through lines, and so forth).
 
 - {{cssxref("background-color")}}
   - : The text's background color.

@@ -80,7 +80,7 @@ When using relative color syntax inside a `color()` function, the browser conver
     > Each of these values is usually between `0` and `1` but, as explained above, they may be outside these bounds.
 
     > [!NOTE]
-    > Referencing `r`, `g`, and `b` values inside a `color()` function with a XYZ-based colorspace, `x`, `y`, and `z` values inside a `color()` function with an RGB-based colorspace, or any other characters, is invalid. The origin color channel values available inside the function must match the specified type of colorspace.
+    > Referencing `r`, `g`, and `b` values inside a `color()` function with an XYZ-based colorspace, `x`, `y`, and `z` values inside a `color()` function with an RGB-based colorspace, or any other characters, is invalid. The origin color channel values available inside the function must match the specified type of colorspace.
 
 - `alpha`: The color's transparency value, resolved to a `<number>` between `0` and `1`, inclusive.
 

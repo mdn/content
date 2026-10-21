@@ -51,7 +51,7 @@ Rather than throwing true exceptions, `requestReferenceSpace()` rejects the
 returned promise with a {{domxref("DOMException")}} whose name is found in the list
 below:
 
-- `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : The requested reference space is not supported.
 
 ## Specifications

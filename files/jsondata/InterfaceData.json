@@ -2080,6 +2080,18 @@
       "inh": "",
       "impl": []
     },
+    "LanguageModelToolCall": {
+      "inh": "",
+      "impl": []
+    },
+    "LanguageModelToolError": {
+      "inh": "",
+      "impl": []
+    },
+    "LanguageModelToolSuccess": {
+      "inh": "",
+      "impl": []
+    },
     "LargestContentfulPaint": {
       "inh": "PerformanceEntry",
       "impl": []
@@ -3816,6 +3828,14 @@
       "inh": "Event",
       "impl": []
     },
+    "ToolActivatedEvent": {
+      "inh": "Event",
+      "impl": []
+    },
+    "ToolCancelEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "Touch": {
       "inh": "",
       "impl": []
@@ -3853,6 +3873,10 @@
       "impl": []
     },
     "TrustedHTML": {
+      "inh": "",
+      "impl": []
+    },
+    "TrustedHTMLParserOptions": {
       "inh": "",
       "impl": []
     },
