@@ -30,7 +30,7 @@ Given this MathML:
 </math>
 ```
 
-you can get the `referrerpolicy` value of the anchor like this:
+you can get the `referrerPolicy` value of the anchor like this:
 
 ```js
 const mathAnchor = document.getElementById("myAnchor");
