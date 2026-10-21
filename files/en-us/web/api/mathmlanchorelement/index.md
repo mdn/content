@@ -36,7 +36,7 @@ _Inherits properties from its parent, {{domxref("MathMLElement")}}._
 - {{domxref("MathMLAnchorElement.pathname")}} {{experimental_inline}}
   - : A string containing an initial `/` followed by the path of the URL, not including the query string or fragment.
 - {{domxref("MathMLAnchorElement.ping")}} {{experimental_inline}}
-  - : A space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body PING to the URLs.
+  - : A space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body `PING` to the URLs.
 - {{domxref("MathMLAnchorElement.port")}} {{experimental_inline}}
   - : A string representing the port component, if any, of the referenced URL.
 - {{domxref("MathMLAnchorElement.protocol")}} {{experimental_inline}}
