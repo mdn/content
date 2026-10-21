@@ -58,9 +58,13 @@ ref.cast ref_type
 ```
 
 - `input`
-  - : The reference to cast. Its type must be in the same type hierarchy as `ref_type`; for example, you can cast an `anyref` to a struct type.
+  - : The reference to cast. Its type must be in the same [type hierarchy](https://webassembly.github.io/spec/core/bikeshed/#heap-types%E2%91%A0) as `ref_type`. Wasm reference types form separate hierarchies: `anyref` (which covers structs, arrays and `i31ref`), `funcref`, `externref` and `exnref`. For example, you can cast an `anyref` to a struct type, but you can't cast a `funcref` to one.
 - `output`
   - : The same reference, typed as `ref_type`.
+
+### Traps
+
+If the operand's runtime type doesn't match the target reference type, the instruction traps. A null operand also traps unless the target type is nullable.
 
 ### Binary encoding
 

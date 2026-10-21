@@ -12,7 +12,7 @@ This set of pages details the reference instructions available in Wasm to create
 - [`ref.cast`](/en-US/docs/WebAssembly/Reference/Reference/cast)
   - : Casts a reference to a given reference type, trapping if the cast fails.
 - [`ref.eq`](/en-US/docs/WebAssembly/Reference/Reference/eq)
-  - : Checks whether two references point to the same object.
+  - : Checks whether two references are equal.
 - [`ref.func`](/en-US/docs/WebAssembly/Reference/Reference/func)
   - : Creates a reference to a given function.
 - [`ref.is_null`](/en-US/docs/WebAssembly/Reference/Reference/is_null)

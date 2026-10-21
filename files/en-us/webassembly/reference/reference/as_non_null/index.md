@@ -63,6 +63,10 @@ None.
 - `output`
   - : The same reference, typed as non-nullable.
 
+### Traps
+
+If the operand is a null reference, the instruction traps.
+
 ### Binary encoding
 
 | Instruction       | Binary format | Example text => binary      |
@@ -71,7 +75,7 @@ None.
 
 ## Description
 
-The `ref.as_non_null` instruction checks that a reference isn't null and gives it a non-nullable type, such as `(ref extern)` instead of `(ref null extern)`. Use it when you have a nullable reference, for example from a nullable global, local or table element, that you need to pass to a function, store in a local, or return from a function whose type only accepts non-null references.
+The `ref.as_non_null` instruction checks that a reference isn't null and gives it a non-nullable type, such as `(ref extern)` instead of `(ref null extern)`. Use it when you have a nullable reference that you need to pass to a function, store in a local, or return from a function whose type only accepts non-null references. Examples of such nullable references include references to nullable globals, locals, or table elements.
 
 If the reference is null, `ref.as_non_null` traps. When Wasm code is called from JavaScript, a trap is reported as a [`WebAssembly.RuntimeError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError) exception. In the example above, passing `null` as the `greeting` value would cause instantiation to fail with a `RuntimeError`, because the trap happens in the start function.
 

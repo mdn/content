@@ -56,7 +56,7 @@ ref.test ref_type
 ```
 
 - `input`
-  - : The reference to test. Its type must be in the same type hierarchy as `ref_type`; for example, you can test an `anyref` against a struct type.
+  - : The reference to test. Its type must be in the same [type hierarchy](https://webassembly.github.io/spec/core/bikeshed/#heap-types%E2%91%A0) as `ref_type`. Wasm reference types form separate hierarchies: `anyref` (which covers structs, arrays and `i31ref`), `funcref`, `externref` and `exnref`. For example, you can test an `anyref` against a struct type, but you can't test a `funcref` against one.
 - `output`
   - : An [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32) that is `1` if `input` matches `ref_type`, or `0` otherwise.
 

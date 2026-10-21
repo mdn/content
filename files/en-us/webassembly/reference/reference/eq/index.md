@@ -7,7 +7,7 @@ browser-compat: webassembly.instructions.ref_eq
 sidebar: webassemblysidebar
 ---
 
-The **`ref.eq`** [reference instruction](/en-US/docs/WebAssembly/Reference/Reference) checks whether two references point to the same object.
+The **`ref.eq`** [reference instruction](/en-US/docs/WebAssembly/Reference/Reference) checks whether two references are equal.
 
 {{InteractiveExample("Wat Demo: ref.eq", "tabbed-taller")}}
 
@@ -22,8 +22,8 @@ The **`ref.eq`** [reference instruction](/en-US/docs/WebAssembly/Reference/Refer
     (local.set $a (struct.new $point (i32.const 1) (i32.const 2)))
     (local.set $b (struct.new $point (i32.const 1) (i32.const 2)))
 
-    (call $log (ref.eq (local.get $a) (local.get $a))) ;; log 1: same object
-    (call $log (ref.eq (local.get $a) (local.get $b))) ;; log 0: different objects
+    (call $log (ref.eq (local.get $a) (local.get $a))) ;; log 1: same struct instance
+    (call $log (ref.eq (local.get $a) (local.get $b))) ;; log 0: different struct instances
   )
   (start $main)
 )
@@ -68,11 +68,11 @@ None.
 
 ## Description
 
-The `ref.eq` instruction compares two references for identity, not for structural equality. In the example above, `$a` and `$b` are separate struct instances with the same field values, so comparing them returns `0`, while comparing `$a` with itself returns `1`.
+Struct and array references are compared by identity, not by their field values. In the example above, `$a` and `$b` are separate struct instances with the same field values, so comparing them returns `0`, while comparing `$a` with itself returns `1`.
 
 Two null references are equal to each other. Two `i31ref` values are equal if they hold the same integer.
 
-`ref.eq` can only compare references that are subtypes of `eqref`. You can't use it to compare [`funcref`](/en-US/docs/WebAssembly/Reference/Value_types/funcref) or [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref) values; a module that does so fails to validate.
+`ref.eq` can only compare references that are [subtypes of `eqref`](https://webassembly.github.io/spec/core/bikeshed/#heap-types%E2%91%A0). `eqref` covers references that can be compared for equality: `i31ref`, `structref`, `arrayref`, references to struct and array types defined in the module, and null references of those types. You can't use it to compare [`funcref`](/en-US/docs/WebAssembly/Reference/Value_types/funcref) or [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref) values; a module that does so fails to validate.
 
 ## Specifications
 

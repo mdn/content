@@ -58,13 +58,11 @@ ref.null heap_type
 
 ## Description
 
-The `ref.null` instruction creates a reference that doesn't point to anything. Null references are commonly used to initialize nullable reference-typed locals, globals and table elements before a real reference is available, or to represent "no value" when calling functions that take a nullable reference.
+The `ref.null` instruction creates a reference that points to nothing. Null references are commonly used to initialize nullable reference-typed locals, globals, and table elements before a real reference is available, or to represent "no value" when calling functions that take a nullable reference.
 
 Because `ref.null` is a constant instruction, it can be used in constant expressions, such as the initializer of a [`global`](/en-US/docs/WebAssembly/Reference/Definitions/global) or an item in an [`elem`](/en-US/docs/WebAssembly/Reference/Definitions/elem) segment.
 
-Support for heap types other than `func` and `extern`, such as `any`, `exn` or a type defined in the module, depends on the browser supporting the proposal that introduced them: typed function references, garbage collection, or exception handling.
-
-When a null reference is passed to JavaScript, it is converted to `null`.
+When a null reference is passed to JavaScript, it is converted to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 To check whether a reference is null, use [`ref.is_null`](/en-US/docs/WebAssembly/Reference/Reference/is_null).
 
