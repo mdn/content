@@ -30,8 +30,10 @@ Origin-Agent-Cluster: <boolean>
 ### Directives
 
 - `<boolean>`
-  - : `?1` indicates that the associated {{domxref("Document")}} should be placed in an origin-keyed agent cluster.
-    Values other than `?1` are ignored (e.g., the `?0` structured field for false).
+  - : `?1` requests an origin-keyed agent cluster. The effect of `?0` depends on the
+    browser: Chrome 115 and later use it to opt out of origin-keying by default for
+    documents in secure contexts that are not cross-origin isolated, while browsers
+    that do not implement this behavior may ignore it.
 
 ## Description
 
@@ -46,6 +48,11 @@ https://oranges.example.org
 
 By setting the `Origin-Agent-Cluster` header, a page can request that the browser allocate dedicated resources to this origin that are not shared with any other origins.
 
+Since Chrome 115, documents in secure contexts are origin-keyed by default, even if this
+header is omitted. In Chrome, an explicit `Origin-Agent-Cluster: ?0` requests a site-keyed
+agent cluster instead, except for cross-origin isolated documents. The default behavior
+may differ in other browsers.
+
 The browser is not required to honor the request. If it does, the {{domxref("Window.originAgentCluster")}} property returns `true`, and the window is not able to do the following things, which all depend on same-site, cross-origin communication:
 
 - Use {{domxref("Document.domain")}}.
@@ -56,12 +63,19 @@ Origin-keyed agent clusters should not be viewed as a security feature: browsers
 
 For example, suppose your site includes a page from one origin that embeds a same-site, cross-origin iframe which runs a resource-intensive game. By setting `Origin-Agent-Cluster` on the document in the iframe, you can prevent the game from affecting the performance of the main page.
 
-The browser will ensure that all pages from a given origin are either origin-keyed or they are not. This means that:
+The browser will ensure that all pages from a given origin are either origin-keyed or they are not.
+Because the default behavior varies by browser, the result can depend on the first page from
+an origin loaded in a browsing context group. For example:
 
-- If the first page from an origin does not set the header, then no other pages from that origin will be origin-keyed, even if those other pages do set the header.
-- If the first page from an origin sets the header and is made origin-keyed, then all other pages from that origin will be origin-keyed whether they ask for it or not.
+- In browsers where an absent header does not request origin-keying, if the first page from an
+  origin omits the header, then no other pages from that origin will be origin-keyed, even if
+  they set `?1`.
+- If the first page from an origin is origin-keyed, because the browser defaults to origin-keying
+  or because the page sets `?1` and the browser honors it, then other pages from that origin
+  will also be origin-keyed, whether or not they set the header.
 
-To avoid this kind of unpredictable situation, you should set this header for all pages from a given origin, or none of them.
+To avoid unpredictable behavior across browsers, configure all pages from an origin consistently
+and test the behavior in each browser you support.
 
 ## Examples
 
