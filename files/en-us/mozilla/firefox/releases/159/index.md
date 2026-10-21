@@ -91,3 +91,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **CSS numeric factory functions exposed in workers and worklets**: `layout.css.namespace.exposed-in-workers-and-worklets`
 
   The [numeric factory functions](/en-US/docs/Web/API/CSS/factory_functions_static) of the {{domxref("CSS")}} namespace, such as `CSS.px()`, are now exposed in workers and paint worklets, not only on `Window`. They're part of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), so outside Nightly they also need the `layout.css.typed-om.enabled` preference set to `true`. ([Firefox bug 2079188](https://bugzil.la/2079188)).
+
+- **New `MathMLAnchorElement` properties**: `mathml.a.element.enabled`
+
+  The {{domxref("MathMLAnchorElement")}} interface now supports the {{domxref("MathMLAnchorElement.download", "download")}}, {{domxref("MathMLAnchorElement.ping", "ping")}}, {{domxref("MathMLAnchorElement.rel", "rel")}}, {{domxref("MathMLAnchorElement.relList", "relList")}}, and {{domxref("MathMLAnchorElement.referrerPolicy", "referrerPolicy")}} properties. ([Firefox bug 2064612](https://bugzil.la/2064612)).
