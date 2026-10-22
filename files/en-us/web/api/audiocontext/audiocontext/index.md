@@ -35,6 +35,14 @@ new AudioContext(options)
           The browser selects the lowest possible latency that doesn't cause glitches in the audio. This is likely to require increased power consumption.
         - `"playback"`: The browser selects a latency that will maximize playback time by minimizing power consumption at the expense of latency.
           Useful for non-interactive playback, such as playing music.
+    - `renderSizeHint` {{optional_inline}}
+      - : Specifies a render quantum size for your audio context as a number of audio frames (see {{domxref("BaseAudioContext.renderQuantumSize")}} for more information). Possible values are:
+        - `default`
+          - : Uses the default value of `128`.
+        - `hardware`
+          - : Asks the browser to choose a suitable size for the underlying hardware.
+        - An integer
+          - : A specific number of frames between `1` and 6 times the context's `sampleRate`.
     - `sampleRate` {{optional_inline}}
       - : Indicates the sample rate to use for the new context. The value must be a floating-point value indicating the sample rate,
         in samples per second, for which to configure the new context;
@@ -54,7 +62,9 @@ A new {{domxref("AudioContext")}} instance.
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if the specified `sampleRate` isn't supported by the context.
+  - : Thrown if:
+    - The specified [`sampleRate`](#samplerate) isn't supported by the context.
+    - The specified [`renderSizeHint`](#rendersizehint) is an integer outside the range of `1` and 6 times the context's `sampleRate`.
 
 ## Usage notes
 
