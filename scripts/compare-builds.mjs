@@ -46,12 +46,19 @@ export function countIssues(issues) {
 /**
  * @param {Map<string, string>} base - Page hashes of the base build.
  * @param {Map<string, string>} pr - Page hashes of the PR build.
- * @returns {{ changed: string[], total: number }}
+ * @returns {{ added: string[], removed: string[], modified: string[], total: number }}
  */
 export function comparePages(base, pr) {
   const all = new Set([...base.keys(), ...pr.keys()]);
-  const changed = [...all].filter((file) => base.get(file) !== pr.get(file));
-  return { changed: changed.sort(), total: all.size };
+  const added = [];
+  const removed = [];
+  const modified = [];
+  for (const file of [...all].sort()) {
+    if (!base.has(file)) added.push(file);
+    else if (!pr.has(file)) removed.push(file);
+    else if (base.get(file) !== pr.get(file)) modified.push(file);
+  }
+  return { added, removed, modified, total: all.size };
 }
 
 const escapeHtml = (value) =>
@@ -69,22 +76,24 @@ const escapeHtml = (value) =>
 
 /**
  * @param {Record<string, number>} stats
- * @param {string[]} changed
+ * @param {{ added: string[], removed: string[], modified: string[] }} pages
  * @returns {string}
  */
-export function renderReport(stats, changed) {
+export function renderReport(stats, pages) {
   const delta = stats.pr_flaws - stats.base_flaws;
-  const rows = changed
-    .map((file) => `<li><code>${escapeHtml(file)}</code></li>`)
-    .join("\n");
+  const section = (title, files) =>
+    files.length
+      ? `<h2>${title} (${files.length})</h2>\n<ul>\n${files
+          .map((file) => `<li><code>${escapeHtml(file)}</code></li>`)
+          .join("\n")}\n</ul>\n`
+      : "";
   return `<!doctype html>
 <meta charset="utf-8">
 <title>Build diff</title>
 <h1>Build diff</h1>
-<p>${stats.changed_files} of ${stats.total_files} pages across both builds changed.</p>
+<p>Pages: ${stats.added_pages} added, ${stats.removed_pages} removed, ${stats.modified_pages} modified (${stats.total_pages} total).</p>
 <p>Flaws: ${stats.base_flaws} → ${stats.pr_flaws} (${delta >= 0 ? "+" : ""}${delta}).</p>
-<ul>${rows}</ul>
-`;
+${section("Added", pages.added)}${section("Removed", pages.removed)}${section("Modified", pages.modified)}`;
 }
 
 async function main(baseRoot, prRoot) {
@@ -92,15 +101,17 @@ async function main(baseRoot, prRoot) {
     collectPages(baseRoot),
     collectPages(prRoot),
   ]);
-  const { changed, total } = comparePages(base.pages, pr.pages);
+  const pages = comparePages(base.pages, pr.pages);
   const stats = {
-    changed_files: changed.length,
-    total_files: total,
+    added_pages: pages.added.length,
+    removed_pages: pages.removed.length,
+    modified_pages: pages.modified.length,
+    total_pages: pages.total,
     base_flaws: base.flaws,
     pr_flaws: pr.flaws,
   };
   await fs.writeFile("diff-stats.json", `${JSON.stringify(stats, null, 2)}\n`);
-  await fs.writeFile("diff.html", renderReport(stats, changed));
+  await fs.writeFile("diff.html", renderReport(stats, pages));
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1]).href) {

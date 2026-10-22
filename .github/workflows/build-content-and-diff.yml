@@ -80,7 +80,7 @@ jobs:
 
       - name: Summarize diff
         run: |
-          jq -r '"## Build diff\n\n**\(.changed_files)** of \(.total_files) pages changed. Flaws: \(.base_flaws) -> \(.pr_flaws) (\(if .pr_flaws - .base_flaws > 0 then "+" else "" end)\(.pr_flaws - .base_flaws))."' diff-stats.json >> "$GITHUB_STEP_SUMMARY"
+          jq -r '"## Build diff\n\nPages: **+\(.added_pages) -\(.removed_pages) ~\(.modified_pages)** of \(.total_pages). Flaws: \(.base_flaws) -> \(.pr_flaws) (\(if .pr_flaws - .base_flaws > 0 then "+" else "" end)\(.pr_flaws - .base_flaws))."' diff-stats.json >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload diff report
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1

@@ -9,13 +9,13 @@ describe("comparePages", () => {
       name: "identical builds",
       base: { a: "1", b: "2" },
       pr: { a: "1", b: "2" },
-      expected: { changed: [], total: 2 },
+      expected: { added: [], removed: [], modified: [], total: 2 },
     },
     {
       name: "modified, added and removed pages",
       base: { a: "1", b: "2", c: "3" },
       pr: { a: "1", b: "x", d: "4" },
-      expected: { changed: ["b", "c", "d"], total: 4 },
+      expected: { added: ["d"], removed: ["c"], modified: ["b"], total: 4 },
     },
   ];
 

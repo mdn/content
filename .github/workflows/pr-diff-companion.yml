@@ -66,10 +66,12 @@ jobs:
         run: |
           [[ "$PR" =~ ^[0-9]+$ ]] || { echo "::error::Invalid PR number: $PR"; exit 1; }
 
-          read -r CHANGED TOTAL BASE_FLAWS PR_FLAWS <<<"$(jq -r '
-            [.changed_files, .total_files, .base_flaws, .pr_flaws]
-            | map(numbers | floor) | select(length == 4) | @tsv' diff-stats.json)"
-          [[ "$CHANGED" =~ ^[0-9]{1,9}$ && "$TOTAL" =~ ^[0-9]{1,9}$ && "$BASE_FLAWS" =~ ^[0-9]{1,9}$ && "$PR_FLAWS" =~ ^[0-9]{1,9}$ ]] || { echo "::error::Invalid diff-stats.json"; exit 1; }
+          read -r ADDED REMOVED MODIFIED TOTAL BASE_FLAWS PR_FLAWS <<<"$(jq -r '
+            [.added_pages, .removed_pages, .modified_pages, .total_pages, .base_flaws, .pr_flaws]
+            | map(numbers | floor) | select(length == 6) | @tsv' diff-stats.json)"
+          for n in "$ADDED" "$REMOVED" "$MODIFIED" "$TOTAL" "$BASE_FLAWS" "$PR_FLAWS"; do
+            [[ "$n" =~ ^[0-9]{1,9}$ ]] || { echo "::error::Invalid diff-stats.json"; exit 1; }
+          done
 
           CURRENT_HEAD=$(gh api "/repos/$GH_REPO/pulls/$PR" \
             --jq 'select(.state == "open") | .head.sha')
@@ -83,7 +85,7 @@ jobs:
           gh api "/repos/$GH_REPO/statuses/$HEAD_SHA" \
             -f state=success \
             -f context=content-build-diff \
-            -f description="Pages changed: $CHANGED/$TOTAL" \
+            -f description="Pages: +$ADDED -$REMOVED ~$MODIFIED of $TOTAL" \
             -f target_url="https://github.com/$GH_REPO/actions/runs/$RUN_ID" > /dev/null
           gh api "/repos/$GH_REPO/statuses/$HEAD_SHA" \
             -f state=success \
