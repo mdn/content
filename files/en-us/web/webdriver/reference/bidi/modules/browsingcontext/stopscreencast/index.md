@@ -33,7 +33,7 @@ The `params` field contains:
 The `result` object in the response contains the following fields:
 
 - `error` {{optional_inline}}
-  - : A string that describes a failure to write the recording data to a file.
+  - : A string that describes the error when writing the recorded data to a file.
     The wording of the error message is browser-dependent.
     This field is included only when a write failure occurs.
 - `path`
