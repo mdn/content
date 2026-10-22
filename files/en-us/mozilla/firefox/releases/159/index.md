@@ -34,6 +34,9 @@ Firefox 159 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### CSS
 
+- [Scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) are now enabled by default. They allow you to animate property values along a scroll-based timeline (that is, by scrolling a scroll container) rather than along the default time-based document timeline.
+  ([Firefox bug 1324602](https://bugzil.la/1324602)).
+
 #### Removals
 
 - The legacy masonry layout syntax has been removed: the `masonry` value of the {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} properties, and the `masonry-auto-flow` property. This syntax was only enabled by default in Nightly, behind the `layout.css.grid-template-masonry-value.enabled` preference. It's superseded by [grid lanes layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes), which uses the `grid-lanes` and `inline-grid-lanes` values of the {{cssxref("display")}} property. ([Firefox bug 2077170](https://bugzil.la/2077170)).
