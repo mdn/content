@@ -30,7 +30,7 @@ new WritableStream(underlyingSink, queuingStrategy)
       - : This method, also defined by the developer, will be called when a new chunk of data (specified in the `chunk` parameter) is ready to be written to the underlying sink.
         It can return a promise to signal success or failure of the write operation.
         This method will be called only after previous writes have succeeded, and never after the stream is closed or aborted (see below).
-    - `close(controller)` {{optional_inline}}
+    - `close()` {{optional_inline}}
       - : This method, also defined by the developer, will be called if the app signals that it has finished writing chunks to the stream.
         The contents should do whatever is necessary to finalize writes to the underlying sink, and release access to it.
         If this process is asynchronous, it can return a promise to signal success or failure.
