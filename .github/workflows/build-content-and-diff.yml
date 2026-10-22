@@ -7,6 +7,7 @@ on:
       - "package.json"
       - "package-lock.json"
       - ".nvmrc"
+      - "scripts/compare-builds.mjs"
       - ".github/workflows/build-content-and-diff.yml"
       - ".github/workflows/pr-diff-companion.yml"
 
@@ -75,63 +76,7 @@ jobs:
         env:
           BASE_BUILD: ${{ runner.temp }}/build-base
           PR_BUILD: ${{ runner.temp }}/build-pr
-        run: |
-          node --input-type=module <<'NODE'
-          import fs from "node:fs/promises";
-          import path from "node:path";
-
-          async function getPages(root) {
-            const pages = new Map();
-            let flaws = 0;
-
-            async function walk(directory) {
-              for (const entry of await fs.readdir(directory, { withFileTypes: true })) {
-                const fullPath = path.join(directory, entry.name);
-                if (entry.isDirectory()) {
-                  await walk(fullPath);
-                } else if (entry.name === "index.json") {
-                  const relativePath = path.relative(root, fullPath);
-                  const content = await fs.readFile(fullPath, "utf8");
-                  const page = JSON.parse(content);
-                  pages.set(relativePath, content);
-                  for (const items of Object.values(page.doc?.flaws ?? {})) {
-                    if (Array.isArray(items)) flaws += items.length;
-                  }
-                }
-              }
-            }
-
-            await walk(root);
-            return { pages, flaws };
-          }
-
-          const base = await getPages(process.env.BASE_BUILD);
-          const pr = await getPages(process.env.PR_BUILD);
-          const allPaths = [...new Set([...base.pages.keys(), ...pr.pages.keys()])];
-          const changed = allPaths
-            .filter((file) => base.pages.get(file) !== pr.pages.get(file))
-            .sort();
-          const stats = {
-            changed_files: changed.length,
-            total_files: allPaths.length,
-            base_flaws: base.flaws,
-            pr_flaws: pr.flaws,
-          };
-
-          await fs.writeFile("diff-stats.json", `${JSON.stringify(stats, null, 2)}\n`);
-          const escapeHtml = (value) => value.replace(/[&<>"']/g, (char) => ({
-            "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
-          })[char]);
-          const rows = changed.map((file) => `<li><code>${escapeHtml(file)}</code></li>`).join("\n");
-          await fs.writeFile("diff.html", `<!doctype html>
-          <meta charset="utf-8">
-          <title>Build diff</title>
-          <h1>Build diff</h1>
-          <p>${stats.changed_files} of ${stats.total_files} pages across both builds changed.</p>
-          <p>Flaws: ${stats.base_flaws} → ${stats.pr_flaws} (${stats.pr_flaws - stats.base_flaws >= 0 ? "+" : ""}${stats.pr_flaws - stats.base_flaws}).</p>
-          <ul>${rows}</ul>
-          `);
-          NODE
+        run: node scripts/compare-builds.mjs "$BASE_BUILD" "$PR_BUILD"
 
       - name: Summarize diff
         run: |
