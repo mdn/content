@@ -6,15 +6,7 @@ page-type: guide
 sidebar: svgref
 ---
 
-SVG filters take the pixels an element would have painted and process them before they reach the screen: blurring, offsetting, recoloring, compositing, or generating new imagery altogether. They can be chained into multi-step pipelines, and they apply to both SVG and HTML content. This guide covers:
-
-- Defining a filter and applying it to an element.
-- Chaining filter primitives into a pipeline, and the inputs they can draw on.
-- The filter region, and why an effect gets clipped.
-- The color space filter operations happen in.
-- The filter primitives, with recipes for the effects they're most used for.
-- Applying a filter to HTML content.
-- Choosing between an SVG filter and a CSS filter function.
+SVG filters take the pixels an element would have painted and process them before they reach the screen: blurring, offsetting, recoloring, compositing, or generating new imagery altogether. They can be chained into multi-step pipelines, and they apply to both SVG and HTML content.
 
 A filter is defined by the {{SVGElement("filter")}} element, which is never rendered itself. It must have an `id` for other elements to reference it, and it can be placed anywhere in the document, although it is usually defined inside a {{SVGElement("defs")}} element. SVG elements apply a filter with the {{SVGAttr("filter")}} attribute, and both SVG and HTML elements can apply one with the {{cssxref("filter")}} CSS property:
 
@@ -28,12 +20,9 @@ A filter is defined by the {{SVGElement("filter")}} element, which is never rend
 }
 ```
 
-> [!NOTE]
-> A `url()` reference works on SVG and HTML elements alike, but CSS [filter functions](/en-US/docs/Web/CSS/Reference/Values/filter-function) such as `blur()` are not applied to elements inside an SVG in every browser: on a shape, a {{SVGElement("g")}} group, or an {{SVGElement("image")}}, the declaration can compute but paint nothing, and writing it as a `filter` presentation attribute doesn't help either. Filter functions do work on HTML elements, and on the root `<svg>` element itself. See the [browser compatibility table](/en-US/docs/Web/CSS/Reference/Properties/filter#browser_compatibility) for the `filter` property.
-
 ## A first filter
 
-Inside the `<filter>` element you list _filter primitives_: the `fe*` elements, where `fe` stands for "filter effect". Each primitive performs one operation. The simplest useful filter contains a single primitive, {{SVGElement("feGaussianBlur")}}, whose {{SVGAttr("stdDeviation")}} attribute controls how much blur is applied:
+Inside the `<filter>` element you list _filter primitives_: the `fe*` elements, where `fe` stands for "filter effect". Each primitive performs one operation. The following simple filter contains a single primitive, {{SVGElement("feGaussianBlur")}}, whose {{SVGAttr("stdDeviation")}} attribute controls how much blur is applied. Of the two identical circles, only the second references the filter:
 
 ```html
 <svg
@@ -52,34 +41,34 @@ Inside the `<filter>` element you list _filter primitives_: the `fe*` elements, 
 </svg>
 ```
 
-Only the second circle references the filter:
-
 {{EmbedLiveSample("A_first_filter", "100%", 130)}}
 
-The two circles are identical, and the filtered one is painted, blurred, and then composited back into the graphic. Raising `stdDeviation` spreads the blur further, until it is clipped by the filter region.
+The filtered circle is painted, blurred, and then composited back into the graphic. Raising `stdDeviation` spreads the blur further, until it is clipped by the filter region.
 
 ## How a filter pipeline works
 
 A filter with more than one primitive is a pipeline. Each primitive takes zero, one, or two images as input, and produces one image as output:
 
 - {{SVGAttr("in")}} names the input. {{SVGAttr("in2")}} names the second input of the primitives that combine two images, such as {{SVGElement("feBlend")}} and {{SVGElement("feComposite")}}.
-- {{SVGAttr("result")}} names the output so that a later primitive can refer to it. `result` is not an `id`: the name is only visible inside the same `<filter>` element.
+- {{SVGAttr("result")}} names the output so that a later primitive can refer to it. This name is scoped to the `<filter>` element.
 - If a primitive has no `in`, it uses `SourceGraphic` when it is the first primitive in the filter, and the result of the preceding primitive otherwise. So a chain of primitives that all omit `in` and `result` runs in document order, each one processing the output of the last.
+
+Besides an earlier `result`, `in` and `in2` accept keywords naming the filter's own input. Two of them matter in practice: `SourceGraphic`, the element as it would have been painted, and `SourceAlpha`, the same thing reduced to its alpha channel. That silhouette is where a shadow starts, since a shadow needs the element's shape but not its colors. The {{SVGAttr("in")}} reference lists the remaining keywords, which refer to the element's fill and stroke paint and to the backdrop behind it.
 
 A few primitives take no input at all: {{SVGElement("feFlood")}}, {{SVGElement("feTurbulence")}}, and {{SVGElement("feImage")}} generate an image from their own attributes rather than from anything earlier in the pipeline, so `in` has no meaning on them. They are the only way to introduce imagery a filter didn't receive as its input.
 
 The primitives are always applied in document order, and a `result` can only be referenced by primitives that come after it.
 
-Both filters below blur the source graphic, shift the blurred copy to the right, and multiply that copy with the unfiltered source. The first names every input and output; the second leaves out everything the defaults already cover, keeping only the `in2`, which has no default equivalent. Both widen the filter region so the shifted copy isn't cut off, which the [next section](#the_filter_region) explains:
+The following filter blurs the source graphic, shifts the blurred copy to the right, and multiplies that copy with the unfiltered source. It also widens the filter region so the shifted copy isn't cut off, which the [next section](#the_filter_region) explains:
 
 ```html
 <svg
-  viewBox="0 0 260 120"
-  width="260"
+  viewBox="0 0 140 120"
+  width="140"
   height="120"
   xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <filter id="echo-named" x="-20%" y="-20%" width="180%" height="140%">
+    <filter id="echo" x="-20%" y="-20%" width="180%" height="140%">
       <!-- Blur the source graphic, and call the output "blurred" -->
       <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blurred" />
       <!-- Shift "blurred" to the right, and call the output "shifted" -->
@@ -87,43 +76,25 @@ Both filters below blur the source graphic, shift the blurred copy to the right,
       <!-- Multiply "shifted" with the source graphic -->
       <feBlend in="shifted" in2="SourceGraphic" mode="multiply" />
     </filter>
-
-    <filter id="echo-default" x="-20%" y="-20%" width="180%" height="140%">
-      <feGaussianBlur stdDeviation="3" />
-      <feOffset dx="14" />
-      <feBlend in2="SourceGraphic" mode="multiply" />
-    </filter>
   </defs>
 
-  <circle cx="70" cy="60" r="32" fill="steelblue" filter="url(#echo-named)" />
-  <circle
-    cx="190"
-    cy="60"
-    r="32"
-    fill="steelblue"
-    filter="url(#echo-default)" />
+  <circle cx="70" cy="60" r="32" fill="steelblue" filter="url(#echo)" />
 </svg>
 ```
 
-The two circles render identically, because naming a `result` does not change what a primitive does:
-
 {{EmbedLiveSample("How_a_filter_pipeline_works", "100%", 150)}}
 
-A `result` name is only necessary when a later primitive needs an output other than the one produced immediately before it, either by referencing an earlier result or by using the same result twice. In every other case the name documents the chain rather than changing it, which is more useful the longer the chain is.
+This pipeline is linear: each primitive takes the output of the one before it. So every `in` and `result` attribute except `in2="SourceGraphic"` could be removed without changing the rendered result. Try removing them to see for yourself.
 
-## Filter inputs
-
-Besides an earlier `result`, `in` and `in2` accept keywords naming the filter's own input. Two of them matter in practice: `SourceGraphic`, the element as it would have been painted, and `SourceAlpha`, the same thing reduced to its alpha channel. That silhouette is where a shadow starts, since a shadow needs the element's shape but not its colors.
-
-The {{SVGAttr("in")}} reference lists the remaining keywords, which name the element's paint and the backdrop behind it. None of them is usable: they are either unimplemented or implemented in a single engine. To composite an element against other imagery, bring that imagery into the filter explicitly with {{SVGElement("feImage")}}.
+Explicitly naming the `result` is only necessary in a non-linear pipeline, when a later primitive needs an output other than the one produced immediately before it. This usually happens when merging results from two chains or inputting the same result to multiple chains. When the pipeline is linear, explicit names may make your code more readable but may also introduce bugs if you make a typo.
 
 ## The filter region
 
-A filter is only evaluated inside its _filter region_. Anything the filter would paint outside that region is clipped, which is the most common reason a filter appears to work only partly: a blur or an offset shadow gets cut off at a hard edge.
+A filter is only evaluated inside its _filter region_. Anything the filter would paint outside that region is clipped, so if you see a blur or an offset shadow getting cut off at a hard edge, check if a bigger filter region helps.
 
-The region is set by the `x`, `y`, `width`, and `height` attributes on `<filter>`. They default to `-10%`, `-10%`, `120%`, and `120%`, giving a 10% margin around the element's bounding box on every side, because so many effects spread beyond the element itself. Effects that reach further than that need a bigger region.
+The region is set by the `x`, `y`, `width`, and `height` attributes on `<filter>`. They default to `-10%`, `-10%`, `120%`, and `120%`, giving a 10% margin around the element's bounding box on every side, because so many effects spread beyond the element itself.
 
-Both squares below get the same shadow, and the first filter leaves the region at its default:
+Both squares below get the same shadow. The first filter leaves the region at its default, so its shadow ends in a straight line 7 units from the square (10% of its 70-unit bounding box), while the second filter's bigger region gives the shadow room to fade out:
 
 ```html
 <svg
@@ -158,26 +129,21 @@ Both squares below get the same shadow, and the first filter leaves the region a
 </svg>
 ```
 
-The left shadow ends in a straight line 7 units from the square (10% of its 70-unit bounding box), while the right one has the room to fade out:
-
 {{EmbedLiveSample("The_filter_region", "100%", 150)}}
 
 Clipping is sometimes the intended effect. A region of `x="0" y="0" width="100%" height="100%"` trims the effect flush with the element's bounding box, which is how an inner glow is kept inside the shape, and how a blur is stopped from spreading past the edge it softens.
 
-Two attributes control how the numbers are interpreted:
+The {{SVGAttr("filterUnits")}} attribute sets whether the region's `x`, `y`, `width`, and `height` are fractions of the element's bounding box (`objectBoundingBox`, the default, which is what makes percentages meaningful) or lengths in the current user coordinate system (`userSpaceOnUse`). Under `objectBoundingBox` the values are fractions of the bounding box whether or not they are written as percentages, so `width="180%"` and `width="1.8"` describe the same region.
 
-- {{SVGAttr("filterUnits")}}: whether the region's `x`, `y`, `width`, and `height` are fractions of the element's bounding box (`objectBoundingBox`, the default, which is what makes percentages meaningful) or lengths in the current user coordinate system (`userSpaceOnUse`).
-- {{SVGAttr("primitiveUnits")}}: the same choice for the values used _inside_ the primitives, such as `stdDeviation` and `dx`. The default is `userSpaceOnUse`.
-
-Under `objectBoundingBox` the values are fractions of the bounding box whether or not they are written as percentages, so `width="180%"` and `width="1.8"` describe the same region.
-
-Individual primitives also accept `x`, `y`, `width`, and `height`, which restrict that one operation to a _primitive subregion_, which is useful for applying an effect to part of an element and for limiting the extent of primitives such as {{SVGElement("feFlood")}} and {{SVGElement("feTile")}} that would otherwise fill the whole region.
+Individual primitives also accept `x`, `y`, `width`, and `height`, which restrict that one operation to a _primitive subregion_. This is useful for applying an effect to part of an element, and for limiting the extent of primitives such as {{SVGElement("feFlood")}} and {{SVGElement("feTile")}} that would otherwise fill the whole region. The {{SVGAttr("primitiveUnits")}} attribute on `<filter>` makes the same choice as `filterUnits` for these subregions and for the values used inside the primitives, such as `stdDeviation` and `dx`. Its default is `userSpaceOnUse`.
 
 ## Color interpolation
 
-Filter operations are performed in a color space chosen by the {{SVGAttr("color-interpolation-filters")}} property, whose initial value is `linearRGB`. Linearized color is more physically accurate, because a blur or a composite in `linearRGB` behaves the way light behaves. It does not, however, match what CSS filter functions, image editors, or most people's expectations produce, and the difference is very visible in blurs, gradients, and color mixes. Unless a primitive's definition says otherwise, the operations run on premultiplied color values; {{SVGElement("feColorMatrix")}} and {{SVGElement("feComponentTransfer")}} are the two that do not.
+Filter operations are performed in a color space chosen by the {{SVGAttr("color-interpolation-filters")}} property, whose initial value is `linearRGB`. Linearized color is more physically accurate, because a blur or a composite in `linearRGB` behaves the way light behaves. It does not, however, match what CSS filter functions, image editors, or most people's expectations produce, and the difference is very visible in blurs, gradients, and color mixes.
 
-Set the property to `sRGB` on the `<filter>` element, or on an individual primitive, whenever a filter mixes color channels and you want a result that matches CSS. Setting it explicitly is worth doing on every such filter rather than relying on the initial value, because the consequence of the default is easy to mistake for a browser bug. Both sets of stripes below are blurred by the same amount, and only the color space differs:
+Set the property to `sRGB` on the `<filter>` element, or on an individual primitive, whenever a filter mixes color channels and you want a result that matches CSS. It's worth doing this for every filter, because the default `linearRGB` is easy to mistake for a visual bug.
+
+Both sets of stripes below are blurred by the same amount, and only the color space differs. Blurring in the initial `linearRGB`, on the left, mixes the black and white stripes into a much lighter gray than blurring the same stripes in `sRGB`, on the right, which is also what the CSS {{cssxref("filter-function/blur", "blur()")}} function produces:
 
 ```html
 <svg
@@ -214,8 +180,6 @@ Set the property to `sRGB` on the `<filter>` element, or on an individual primit
 </svg>
 ```
 
-Blurring in the initial `linearRGB` mixes the black and white stripes into a much lighter gray, on the left, than blurring the same stripes in `sRGB`, on the right, which is also what the CSS {{cssxref("filter-function/blur", "blur()")}} function produces:
-
 {{EmbedLiveSample("Color_interpolation", "100%", 150)}}
 
 ## Filter primitives
@@ -229,7 +193,7 @@ There are around twenty `fe*` elements. Grouping them by what they do makes it e
 - **Lighting** primitives shade the input as a surface, using its alpha channel as a bump map: {{SVGElement("feDiffuseLighting")}} and {{SVGElement("feSpecularLighting")}}. Each takes a light-source child: {{SVGElement("feDistantLight")}}, {{SVGElement("fePointLight")}}, or {{SVGElement("feSpotLight")}}.
 - {{SVGElement("feDropShadow")}} is a shorthand for a chain of the above, covered in the [recipes](#drop_shadows) below.
 
-`feImage` is widely supported for external images, but referencing an element of the same document is not supported everywhere; check the [browser compatibility table](/en-US/docs/Web/SVG/Reference/Element/feImage#browser_compatibility) for `feImage` before relying on it, and otherwise export the element as a standalone image file.
+`feImage` can reference an external image or an element of the same document, but the second form is not supported everywhere. See the [browser compatibility table](/en-US/docs/Web/SVG/Reference/Element/feImage#browser_compatibility) for `feImage`.
 
 Each element's own page documents the attributes that control it, and the [filter primitive elements](/en-US/docs/Web/SVG/Reference/Element#filter_primitive_elements) section of the element reference has the full list.
 
@@ -239,7 +203,7 @@ Each element's own page documents the attributes that control it, and the [filte
 
 {{SVGElement("feDropShadow")}} does the whole job in one primitive, with `dx`, `dy`, and `stdDeviation` for the geometry and the `flood-color` and `flood-opacity` properties for the color. Build a shadow by hand only when you need something the shorthand can't express, such as reusing the blurred silhouette for another effect.
 
-The following example builds the same half-transparent shadow twice. The first filter uses `feDropShadow`; the second assembles the same effect from separate primitives, blurring the alpha channel, offsetting it, fading it to 50% with {{SVGElement("feComponentTransfer")}}, and merging the source graphic back on top. Both widen the filter region so the shadow isn't clipped.
+The following example builds the same half-transparent shadow twice. The filter on the left uses `feDropShadow`. The one on the right assembles the same effect from four separate primitives, blurring the alpha channel, offsetting it, fading it to 50% with {{SVGElement("feComponentTransfer")}}, and merging the source graphic back on top. Both widen the filter region so the shadow isn't clipped:
 
 ```html
 <svg
@@ -287,15 +251,13 @@ The following example builds the same half-transparent shadow twice. The first f
 </svg>
 ```
 
-The one-primitive shadow is on the left, the four-primitive one on the right:
-
 {{EmbedLiveSample("Drop_shadows", "100%", 150)}}
 
-The two squares look the same because `feDropShadow` bundles the same steps into one primitive: blur the alpha channel, offset it, color it, and draw the source graphic on top. It tints the shadow by compositing `flood-color` into the blurred alpha rather than by fading the alpha, which comes to the same thing for a solid shadow. Building the chain by hand is only worth it when one of the intermediate results, such as `fadedBlur`, is needed for something else as well.
+The two squares look the same because `feDropShadow` bundles the same steps into one primitive: blur the alpha channel, offset it, color it, and draw the source graphic on top. It tints the shadow by compositing `flood-color` into the blurred alpha rather than by fading the alpha, which comes to the same thing for a solid shadow.
 
 ### Recoloring with feColorMatrix
 
-{{SVGElement("feColorMatrix")}} multiplies every pixel's RGBA values by a matrix of 20 numbers: four rows, one per output channel, of five columns (`R`, `G`, `B`, `A`, and a constant). The shorthand `type` values cover the common cases (`saturate`, `hueRotate`, `luminanceToAlpha`), while `type="matrix"` gives full control. This filter converts to grayscale using the luminance coefficients, in `sRGB` so the result matches the CSS {{cssxref("filter-function/grayscale", "grayscale()")}} function:
+{{SVGElement("feColorMatrix")}} multiplies every pixel's RGBA values by a matrix of 20 numbers: four rows, one per output channel, of five columns (`R`, `G`, `B`, `A`, and a constant). The shorthand `type` values cover the common cases (`saturate`, `hueRotate`, `luminanceToAlpha`), while `type="matrix"` gives full control. This filter converts to grayscale using the luminance coefficients, in `sRGB` so the result matches the CSS {{cssxref("filter-function/grayscale", "grayscale()")}} function. The same three circles are drawn twice, and only the copy on the right is filtered:
 
 ```html
 <svg
@@ -326,15 +288,15 @@ The two squares look the same because `feDropShadow` bundles the same steps into
 </svg>
 ```
 
-The same three circles are drawn twice, and only the copy on the right is filtered:
-
 {{EmbedLiveSample("Recoloring_with_feColorMatrix", "100%", 150)}}
 
 Each row of the matrix sets one output channel from a weighted sum of the input channels. The three color rows are identical, so red, green, and blue all end up at the same luminance value, while the alpha row (`0 0 0 1 0`) passes transparency through untouched.
 
 ## Filters on HTML content
 
-The CSS {{cssxref("filter")}} property applies an SVG filter to any HTML element, but the filter itself still has to be defined inside an `<svg>` element. That SVG has nothing to draw, so it only needs to hold the `<filter>` without affecting the layout around it:
+The CSS {{cssxref("filter")}} property applies an SVG filter to any HTML element, but the filter itself still has to be defined inside an `<svg>` element. That SVG has nothing to draw, so it only needs to hold the `<filter>` without affecting the layout around it. Collapsing it to zero width and height is not sufficient on its own, because it still generates a box. Positioning it out of flow removes it from layout entirely, and `aria-hidden` keeps an empty graphic out of the accessibility tree.
+
+In the following example, the text is displaced by the noise the filter generates for itself, which no CSS filter function can do:
 
 ```html
 <svg class="filter-host" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -356,8 +318,6 @@ The CSS {{cssxref("filter")}} property applies an SVG filter to any HTML element
 <p class="wobble">Filtered HTML text</p>
 ```
 
-Collapsing the SVG to zero width and height is not sufficient on its own: it still generates a box, which can affect the layout around it. Positioning it out of flow removes it from layout entirely, and `aria-hidden` keeps an empty graphic out of the accessibility tree:
-
 ```css
 .filter-host {
   position: fixed;
@@ -371,8 +331,6 @@ Collapsing the SVG to zero width and height is not sufficient on its own: it sti
 }
 ```
 
-The text is displaced by the noise the filter generates for itself, which no CSS filter function can do:
-
 {{EmbedLiveSample("Filters_on_HTML_content", "100%", 140)}}
 
 Referencing a filter from a different file (`filter: url("filters.svg#wobble")`) is supported unevenly, so keep the `<filter>` in the document that uses it. See [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content) for more on combining the two languages.
@@ -381,12 +339,10 @@ Referencing a filter from a different file (`filter: url("filters.svg#wobble")`)
 
 The CSS {{cssxref("filter")}} property accepts both a {{cssxref("url_function", "url()")}} reference to an SVG filter and a list of [filter functions](/en-US/docs/Web/CSS/Reference/Values/filter-function) such as {{cssxref("filter-function/blur", "blur()")}}, {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}, and {{cssxref("filter-function/grayscale", "grayscale()")}}. The filter functions are shorthands for exactly these primitives, so:
 
-- Use a filter function where one exists for the effect you need. It is shorter, it can be animated and interpolated by CSS, and it operates in `sRGB` with no surprises. On content inside an SVG, reference a `<filter>` instead, since filter functions are not applied to shapes, groups, or images inside an SVG in every browser.
-- Use an SVG filter for anything that needs a pipeline: several operations chained together, two inputs composited, generated noise or lighting, or fine control over the color space and filter region.
+- Use a filter function where one exists for the effect you need. It is shorter, it can be animated and interpolated by CSS, and it operates in `sRGB` with no surprises. However, note that filter functions [may not apply to SVG elements](/en-US/docs/Web/CSS/Reference/Properties/filter#browser_compatibility), in which case you must use an SVG filter.
+- Use an SVG filter for more complex effects without an existing filter function: several operations chained together, two inputs composited, generated noise or lighting, or fine control over the color space and filter region.
 
 The choice isn't exclusive: the property takes a space-separated list, so `filter: url("#wobble") grayscale(1)` runs the SVG filter and then the function, in that order. Listing two `<filter>` references is also the way to combine steps that need different `primitiveUnits`, since that attribute applies to a whole filter rather than to one primitive.
-
-Filtering is expensive: the element is rendered to an offscreen buffer, processed, and composited back, and blurs cost more the larger their `stdDeviation`. Applying a filter to large or frequently repainted areas (anything scrolling, animating, or hovering across a big surface) is a common cause of dropped frames. Keep filter regions no bigger than necessary, and animate less expensive properties in preference to filter parameters.
 
 ## See also
 
