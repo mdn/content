@@ -122,7 +122,7 @@ By default only 250 resource timing entries are buffered. For more information s
 ### Cross-origin restrictions
 
 Timing information for a cross-origin resource is restricted unless the resource passes the {{HTTPHeader("Timing-Allow-Origin")}} check.
-This applies to the following properties, which return `0` or an empty string by default when loading a resource from an origin other than the one of the web page itself: `redirectStart`, `redirectEnd`, `workerStart`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, `firstInterimResponseStart`, `responseStart`, `finalResponseHeadersStart`, `nextHopProtocol`, `transferSize`, and `deliveryType`.
+This applies to the following properties, which return `0`, an empty string, or an empty array by default when loading a resource from an origin other than the one of the web page itself: `redirectStart`, `redirectEnd`, `workerStart`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, `firstInterimResponseStart`, `responseStart`, `finalResponseHeadersStart`, `nextHopProtocol`, `transferSize`, `deliveryType`, and `serverTiming`.
 Even a resource that passes the [CORS](/en-US/docs/Web/HTTP/Guides/CORS) check still needs `Timing-Allow-Origin` to expose them.
 
 For example, to allow `https://developer.mozilla.org` to see resource timing information, the cross-origin resource should send:
