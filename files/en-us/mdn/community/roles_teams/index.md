@@ -44,10 +44,11 @@ As a contributor, you can get involved with the project by engaging in the follo
 
 **Requirements:**
 
-To be a contributor, you must follow:
+To be a contributor, you must:
 
-- [Mozilla's code of conduct](https://www.mozilla.org/en-US/about/governance/policies/participation/)
-- The specific guidelines for each repository. If there are any project-specific hints or guidelines, you will find them in a `CONTRIBUTING.md` file in the project repository root.
+- Follow [Mozilla's code of conduct](https://www.mozilla.org/en-US/about/governance/policies/participation/).
+- Follow the specific guidelines for each repository. If there are any project-specific hints or guidelines, you will find them in a `CONTRIBUTING.md` file in the project repository root.
+- Take responsibility for your contributions. Review and test everything you submit, whatever tools you use to create it.
 
 **Privileges:**
 

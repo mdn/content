@@ -21,6 +21,9 @@ For technology-specific guidelines, see the following articles:
 There is one overarching consideration that you need to keep in mind: **Readers will copy and paste examples into their own code and may put it into production.**
 Therefore, you should make sure that code examples are usable, follow generally accepted best practices, and do not do anything that will cause an application to be insecure, inefficient, bloated, or inaccessible.
 
+Run and test every code example before you submit it, whatever tools you used to write it.
+Don't paste in code that you haven't verified.
+
 If the code example is not runnable or production-worthy, include a warning in a code comment and in the explanatory text; for example, if it is only a snippet and not a full example, make this clear. This also means that you should provide all of the information necessary to run the example including any dependencies and setup information.
 
 Code examples should be straightforward enough to be understandable, but complex enough to do something interesting, and (preferably) useful.
