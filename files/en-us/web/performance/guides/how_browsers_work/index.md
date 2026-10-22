@@ -91,7 +91,7 @@ On the other hand, sending too many segments at once into a busy network may cau
 
 TCP uses two separate limits on how much unacknowledged data the server can have in flight:
 
-- The _receive window_ protects the client: the client holds incoming data in a buffer until the application reads it, and tells the server how much more data it can currently accept.
+- The _receive window_ (RWND) protects the client: it specifies how much additional data the client can accept, based on the available space in its receive buffer. The client advertises this limit to the server, providing TCP flow control.
 - The _congestion window_ (CWND) protects the network: it is the server's estimate of how much data the path to the client can carry without segments being dropped.
 
 The server never has more unacknowledged data in flight than the smaller of these two windows.
