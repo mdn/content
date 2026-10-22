@@ -33,6 +33,9 @@ Access-Control-Allow-Origin: https://developer.mozilla.org
 
 Browsers are allowed to apply stricter restrictions than CORS requires, and may return `0` even when the CORS check passes.
 
+Frame navigations, such as an {{HTMLElement("iframe")}} loading its document, don't use CORS.
+Their content sizes are exposed only for same-origin frames that were loaded without cross-origin redirects, even if the frame's document passes the {{HTTPHeader("Timing-Allow-Origin")}} check.
+
 ## Examples
 
 ### Checking if content was compressed
