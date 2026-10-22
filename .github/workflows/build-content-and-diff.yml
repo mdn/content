@@ -47,11 +47,9 @@ jobs:
           BUILD_FLAW_LEVELS: "unsafe_html: error, *:warn"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Checkout content at PR head
+      - name: Checkout content at PR merge commit
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.event.pull_request.head.sha }}
           persist-credentials: false
 
       - name: Setup Node.js environment for PR
