@@ -4,13 +4,12 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 
 /**
- * Collects a content hash per built page and the total flaw count of a build.
+ * Collects a content hash per built page and the flaw count of a build.
  * @param {string} root - Build output directory.
  * @returns {Promise<{ pages: Map<string, string>, flaws: number }>}
  */
 export async function collectPages(root) {
   const pages = new Map();
-  let flaws = 0;
   const entries = await fs.readdir(root, {
     recursive: true,
     withFileTypes: true,
@@ -18,24 +17,28 @@ export async function collectPages(root) {
   for (const entry of entries) {
     if (!entry.isFile() || entry.name !== "index.json") continue;
     const fullPath = path.join(entry.parentPath, entry.name);
-    const content = await fs.readFile(fullPath);
     pages.set(
       path.relative(root, fullPath),
-      createHash("sha256").update(content).digest("hex"),
+      createHash("sha256")
+        .update(await fs.readFile(fullPath))
+        .digest("hex"),
     );
-    flaws += countFlaws(JSON.parse(content.toString("utf8")));
   }
-  return { pages, flaws };
+  const issues = JSON.parse(
+    await fs.readFile(path.join(root, "issues.json"), "utf8"),
+  );
+  return { pages, flaws: countIssues(issues) };
 }
 
 /**
- * @param {{ doc?: { flaws?: Record<string, unknown> } }} page
+ * Counts the issues written by `rari build --issues`, ignoring suppressed ones.
+ * @param {Record<string, { ignore?: boolean }[]>} issues - Issues keyed by source file.
  * @returns {number}
  */
-export function countFlaws(page) {
+export function countIssues(issues) {
   let count = 0;
-  for (const items of Object.values(page.doc?.flaws ?? {})) {
-    if (Array.isArray(items)) count += items.length;
+  for (const items of Object.values(issues)) {
+    count += items.filter((issue) => !issue.ignore).length;
   }
   return count;
 }

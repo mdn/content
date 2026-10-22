@@ -42,7 +42,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build base content
-        run: npx @mdn/rari build --json-issues --data-issues
+        run: npx @mdn/rari build --issues "$BUILD_OUT_ROOT/issues.json"
         env:
           BUILD_OUT_ROOT: ${{ runner.temp }}/build-base
           BUILD_FLAW_LEVELS: "unsafe_html: error, *:warn"
@@ -65,7 +65,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build PR content
-        run: npx @mdn/rari build --json-issues --data-issues
+        run: npx @mdn/rari build --issues "$BUILD_OUT_ROOT/issues.json"
         env:
           BUILD_OUT_ROOT: ${{ runner.temp }}/build-pr
           BUILD_FLAW_LEVELS: "unsafe_html: error, *:warn"

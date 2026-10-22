@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 
-import { comparePages, countFlaws } from "./compare-builds.mjs";
+import { comparePages, countIssues } from "./compare-builds.mjs";
 
 describe("comparePages", () => {
   const cases = [
@@ -30,18 +30,22 @@ describe("comparePages", () => {
   }
 });
 
-describe("countFlaws", () => {
+describe("countIssues", () => {
   const cases = [
-    { name: "no doc", page: {}, expected: 0 },
-    { name: "no flaws", page: { doc: {} }, expected: 0 },
+    { name: "no issues", issues: {}, expected: 0 },
     {
-      name: "flaws of several types",
-      page: { doc: { flaws: { macros: [{}, {}], broken_links: [{}] } } },
+      name: "issues in several files",
+      issues: { "a/index.md": [{}, {}], "b/index.md": [{}] },
       expected: 3,
+    },
+    {
+      name: "ignored issues are not counted",
+      issues: { "a/index.md": [{ ignore: true }, { ignore: false }, {}] },
+      expected: 2,
     },
   ];
 
-  for (const { name, page, expected } of cases) {
-    it(name, () => assert.equal(countFlaws(page), expected));
+  for (const { name, issues, expected } of cases) {
+    it(name, () => assert.equal(countIssues(issues), expected));
   }
 });
