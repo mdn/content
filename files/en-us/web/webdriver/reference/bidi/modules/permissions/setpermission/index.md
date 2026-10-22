@@ -3,7 +3,7 @@ title: "`permissions.setPermission` command"
 short-title: setPermission
 slug: Web/WebDriver/Reference/BiDi/Modules/permissions/setPermission
 page-type: webdriver-command
-browser-compat: webdriver.bidi.permission.setPermission
+browser-compat: webdriver.bidi.permissions.setPermission
 sidebar: webdriver
 ---
 
