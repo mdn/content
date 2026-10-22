@@ -4,7 +4,6 @@ on:
   pull_request:
     paths:
       - "files/**"
-      - "data/**"
       - "package.json"
       - "package-lock.json"
       - ".nvmrc"
@@ -53,7 +52,6 @@ jobs:
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.event.pull_request.head.sha }}
-          clean: false
           persist-credentials: false
 
       - name: Setup Node.js environment for PR
