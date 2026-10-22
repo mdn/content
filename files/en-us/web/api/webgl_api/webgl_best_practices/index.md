@@ -120,9 +120,11 @@ WebGL doesn't offer APIs to query the maximum amount of video memory on the syst
 
 One technique pioneered by the Google Maps team is the notion of a _per-pixel VRAM budget_:
 
-1\) For one system (e.g., a particular desktop / laptop), decide the maximum amount of VRAM your application should use. 2) Compute the number of pixels covered by a maximized browser window. E.g. `(window.innerWidth * devicePixelRatio) * (window.innerHeight * window.devicePixelRatio)` 3) The per-pixel VRAM budget is (1) divided by (2), and is a constant.
+1. For one system (e.g., a particular desktop / laptop), decide the maximum amount of VRAM your application should use.
+2. Compute the number of pixels covered by a maximized browser window. E.g., `(window.innerWidth * window.devicePixelRatio) * (window.innerHeight * window.devicePixelRatio)`.
+3. The per-pixel VRAM budget is (1) divided by (2), and is a constant.
 
-This constant should _generally_ be portable among systems. Mobile devices typically have smaller screens than powerful desktop machines with large monitors. Re-compute this constant on a few target systems to get a reliable estimate.
+This constant should _generally_ be portable among systems. Don't assume that mobile devices have fewer pixels to fill, though: many phones have high-density screens with as many device pixels as a typical laptop or desktop display, or more. Re-compute this constant on a few target systems to get a reliable estimate.
 
 Now adjust all internal caching in the application (WebGLBuffers, WebGLTextures, etc.) to obey a maximum size, computed by this constant multiplied by the number of pixels covered by the _current_ browser window. This requires estimating the number of bytes consumed by each texture, for example. The cap also must typically be updated as the browser window resizes, and older resources above the limit must be purged.
 
@@ -426,6 +428,8 @@ Basis Universal solves several of the issues mentioned above. It offers a way to
 
 Depth and stencil attachments and formats are actually inseparable on many devices. You may ask for DEPTH_COMPONENT24 or STENCIL_INDEX8, but you're often getting D24X8 and X24S8 32bpp formats behind the scenes. Assume that the memory usage of depth and stencil formats is rounded up to the nearest four bytes.
 
+Keep this in mind when you [estimate your VRAM usage](#estimate_a_per-pixel_vram_budget). It also means that if you need a stencil buffer, a combined depth-stencil attachment (`DEPTH24_STENCIL8` in WebGL 2, or `DEPTH_STENCIL` in WebGL 1) usually costs no more memory than a 24-bit depth-only one.
+
 ## texImage/texSubImage uploads (esp. videos) can cause pipeline flushes
 
 Most texture uploads from DOM elements will incur a processing pass that will temporarily switch GL Programs internally, causing a pipeline flush. (Pipelines are formalized explicitly in [Vulkan](https://docs.vulkan.org/spec/latest/chapters/pipelines.html) et al, but are implicit behind-the-scenes in OpenGL and WebGL. Pipelines are more or less the tuple of shader program, depth/stencil/multisample/blend/rasterization state)
@@ -581,35 +585,45 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
 
 Handling `devicePixelRatio !== 1.0` is tricky. While the common approach is to set `canvas.width = width * devicePixelRatio`, this will cause moire artifacts with non-integer values of `devicePixelRatio`, as is common with UI scaling on Windows, as well as zooming on all platforms.
 
-Instead, we can use non-integer values for CSS's `top`/`bottom`/`left`/`right` to fairly reliably 'pre-snap' our canvas to whole integer device coordinates.
+The best way to avoid this is to ask the browser for the exact size of the canvas in device pixels, using `ResizeObserver` with `'device-pixel-content-box'`, as described in the [next section](#resizeobserver_and_device-pixel-content-box). This works with normal CSS layout, so the canvas can keep filling whatever container it's in.
+
+As a fallback, you can use non-integer values for CSS's `top`/`bottom`/`left`/`right` to fairly reliably 'pre-snap' your canvas to whole integer device coordinates. This only works if you position the canvas yourself, so it doesn't fit layouts where the canvas is sized by its container.
 
 Demo: [Device pixel presnap](https://kdashg.github.io/misc/webgl/device-pixel-presnap.html)
 
 ## ResizeObserver and 'device-pixel-content-box'
 
-On [supporting browsers](/en-US/docs/Web/API/ResizeObserverEntry/devicePixelContentBoxSize#browser_compatibility), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true {{glossary("device pixel")}} size of an element. This can be used to build an async-but-accurate function:
+On [supporting browsers](/en-US/docs/Web/API/ResizeObserverEntry/devicePixelContentBoxSize#browser_compatibility), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true {{glossary("device pixel")}} size of an element. Set the canvas size inside that callback, so the drawing buffer always matches the number of device pixels the canvas covers:
 
 ```js
-function getDevicePixelSize(elem) {
-  return new Promise((resolve) => {
-    const observer = new ResizeObserver(([cur]) => {
-      if (!cur) {
-        throw new Error(
-          `device-pixel-content-box not observed for elem ${elem}`,
-        );
-      }
-      const devSize = cur.devicePixelContentBoxSize;
-      const ret = {
-        width: devSize[0].inlineSize,
-        height: devSize[0].blockSize,
-      };
-      resolve(ret);
-      observer.disconnect();
-    });
-    observer.observe(elem, { box: "device-pixel-content-box" });
-  });
+function onResize(entries) {
+  for (const entry of entries) {
+    let width;
+    let height;
+    if (entry.devicePixelContentBoxSize) {
+      width = entry.devicePixelContentBoxSize[0].inlineSize;
+      height = entry.devicePixelContentBoxSize[0].blockSize;
+    } else {
+      // Fallback for browsers without device-pixel-content-box support
+      const dpr = window.devicePixelRatio;
+      width = Math.round(entry.contentBoxSize[0].inlineSize * dpr);
+      height = Math.round(entry.contentBoxSize[0].blockSize * dpr);
+    }
+    entry.target.width = width;
+    entry.target.height = height;
+  }
+}
+
+const observer = new ResizeObserver(onResize);
+try {
+  observer.observe(canvas, { box: "device-pixel-content-box" });
+} catch {
+  // Browsers that don't support this box option throw an error
+  observer.observe(canvas, { box: "content-box" });
 }
 ```
+
+If you render in a {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame()")}} loop, nothing else is needed: each frame can read `canvas.width` and `canvas.height` and pass them to `gl.viewport()`. If you only render on demand, call your render function at the end of the callback, because changing the size of a canvas clears it.
 
 ## Use `WEBGL_provoking_vertex` when it's available
 
