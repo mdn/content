@@ -8,7 +8,7 @@ sidebar: http
 ---
 
 The HTTP **`Timing-Allow-Origin`** {{Glossary("response header")}} specifies origins that are allowed to see values of attributes retrieved via features of the [Resource Timing API](/en-US/docs/Web/API/Performance_API/Resource_timing) that are otherwise restricted for cross-origin resources.
-Without it, the browser reports these values as zero or as an empty string.
+Without it, the browser reports these values as zero, an empty string, or an empty array.
 For the list of affected properties, see [Cross-origin restrictions](/en-US/docs/Web/API/PerformanceResourceTiming#cross-origin_restrictions) in the {{domxref("PerformanceResourceTiming")}} reference.
 
 The browser checks this header on cross-origin responses: same-origin resources expose full timing information without it.
@@ -66,6 +66,7 @@ Timing-Allow-Origin: https://developer.mozilla.org
 
 ## See also
 
+- {{domxref("PerformanceResourceTiming")}}
 - [Resource Timing API](/en-US/docs/Web/API/Performance_API/Resource_timing)
 - {{HTTPHeader("Server-Timing")}} header
 - {{HTTPHeader("Vary")}} header
