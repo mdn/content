@@ -66,15 +66,19 @@ You could also contribute by opening [pull requests](/en-US/docs/MDN/Community/P
 
 A lot of the work on MDN revolves around writing documentation and code examples, but there are other ways to contribute too.
 This could be helping to triage issues that come in, fixing typos, fixing grammar to make pages more understandable, or mentoring people that are trying to make fixes.
-Every fix is useful, no matter how small, and we won't turn any away.
+Every fix is useful, no matter how small.
 Nevertheless, try to make sure your fixes are productive. We'd like to advise against these kinds of contributions:
 
 - Updating code style, language in prose, or testing framework because you like it better.
 - Changing pages from US English to British English.
 - Adding or removing punctuation when the original is correct.
+- Submitting changes that you haven't reviewed, tested, and understood.
+- Making lots of similar changes across many pages without discussing them first.
 
 In many cases, things are like they are on OSPs for a reason.
 You should read style guides if they have one, and if in doubt about whether something is productive, always ask first!
+
+Remember that you own your contributions. If you can't explain why you made a change, don't submit it.
 
 ## Read the manual
 
@@ -98,6 +102,7 @@ As a rule, do:
 - Discuss one topic per issue — it is easy to keep issues focused and productive.
 - Fix one issue per PR — it may be slightly more work for you, but it is much easier to review a single clear fix.
 - Contribute to other threads if you have a useful point to make or can answer someone else's question.
+- Write issues, pull request descriptions, and comments in your own words. Short and specific is better than long and polished.
 - Ask questions using other mechanisms like chat rooms or forums if you are not sure whether something is useful or have a simple question.
 - Read the manual first to try to answer the question yourself before asking it.
 
@@ -105,6 +110,7 @@ Don't:
 
 - Complicate issues by trying to discuss multiple topics at once, or making off-topic comments.
 - Try to cram multiple fixes into a single pull request. It makes it a lot harder to review, and raises suspicions (some people might think you are trying to hide some malicious code in between the valid changes).
+- Open pull requests you haven't reviewed yourself.
 - Open lots of issues asking vague questions.
 - Ask questions without trying to solve the problem yourself first.
 
@@ -125,6 +131,8 @@ It is reasonable to wait a few days and then ping someone politely to ask if the
 It is **not** reasonable or polite to demand things like a quick reply.
 
 If someone is waiting for you to do something for them, you should be extended the same courtesy, but at the same time, try to respond as promptly as you can. If you really can't find the time, let them know, and ask the maintainers to help you find someone else to do the task.
+
+You are responsible for following up on your contributions. Respond to reviewers' comments yourself, and only open as many pull requests as you can keep up with.
 
 ## See also
 
