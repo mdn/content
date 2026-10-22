@@ -48,7 +48,7 @@ To be a contributor, you must:
 
 - Follow [Mozilla's code of conduct](https://www.mozilla.org/en-US/about/governance/policies/participation/).
 - Follow the specific guidelines for each repository. If there are any project-specific hints or guidelines, you will find them in a `CONTRIBUTING.md` file in the project repository root.
-- Take responsibility for your contributions. Review and test everything you submit, whatever tools you use to create it.
+- Take responsibility for your contributions. Before submitting, review everything and test any code, regardless of the tools you use to create it.
 
 **Privileges:**
 
