@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("PerformanceServerTiming/name", "name")}}
 - {{domxref("PerformanceServerTiming/duration", "duration")}}
@@ -36,7 +36,7 @@ Each property's value is copied as-is.
 
 ### Calling toJSON() directly
 
-This example obtains a `PerformanceServerTiming` object. Calling `toJSON()` directly returns a plain object. You can access its properties, which is the same as accessing them on the original object.
+This example obtains a `PerformanceServerTiming` object. Calling `toJSON()` directly returns a plain object. Its properties have the same values as the corresponding properties of the original object.
 
 Server timing metrics require the server to send the {{HTTPHeader("Server-Timing")}} header. For example:
 

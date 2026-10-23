@@ -26,7 +26,7 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("PerformanceEntry/name", "name")}}
 - {{domxref("PerformanceEntry/entryType", "entryType")}}
@@ -38,13 +38,13 @@ A JSON-serializable plain object, containing the following properties:
 - {{domxref("InteractionContentfulPaint/interactionId", "interactionId")}}
 - {{domxref("InteractionContentfulPaint/largestContentfulPaint", "largestContentfulPaint")}}
 
-When passed to {{jsxref("JSON.stringify()")}}, the `largestContentfulPaint` property represents a paint entry serialized using {{domxref("LargestContentfulPaint/toJSON", "LargestContentfulPaint.toJSON()")}}. Other property values are copied as-is.
+When the returned object is passed to {{jsxref("JSON.stringify()")}}, the `largestContentfulPaint` value is serialized using {{domxref("LargestContentfulPaint/toJSON", "LargestContentfulPaint.toJSON()")}}. Other property values are copied as-is.
 
 ## Examples
 
 ### Calling toJSON() directly
 
-This example obtains an `InteractionContentfulPaint` object. Calling `toJSON()` directly returns a plain object. You can access its properties, which is the same as accessing them on the original object.
+This example obtains an `InteractionContentfulPaint` object. Calling `toJSON()` directly returns a plain object. Its properties have the same values as the corresponding properties of the original object.
 
 ```js
 const observer = new PerformanceObserver((list) => {

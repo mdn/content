@@ -26,18 +26,18 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("LayoutShiftAttribution/previousRect", "previousRect")}}
 - {{domxref("LayoutShiftAttribution/currentRect", "currentRect")}}
 
-When passed to {{jsxref("JSON.stringify()")}}, the `previousRect` and `currentRect` properties represent rectangles serialized using {{domxref("DOMRectReadOnly/toJSON", "DOMRectReadOnly.toJSON()")}}. The {{domxref("LayoutShiftAttribution/node", "node")}} property is not included.
+When the returned object is passed to {{jsxref("JSON.stringify()")}}, the `previousRect` and `currentRect` values are serialized using {{domxref("DOMRectReadOnly/toJSON", "DOMRectReadOnly.toJSON()")}}. The returned object doesn't contain the {{domxref("LayoutShiftAttribution/node", "node")}} property.
 
 ## Examples
 
 ### Calling toJSON() directly
 
-This example obtains a `LayoutShiftAttribution` object. Calling `toJSON()` directly returns a plain object. You can access its properties, which is the same as accessing them on the original object.
+This example obtains a `LayoutShiftAttribution` object. Calling `toJSON()` directly returns a plain object. Its properties have the same values as the corresponding properties of the original object.
 
 ```js
 new PerformanceObserver((list) => {

@@ -24,24 +24,24 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("Performance/timeOrigin", "timeOrigin")}}
 - {{domxref("Performance/timing", "timing")}}
 - {{domxref("Performance/navigation", "navigation")}}
 
-When passed to {{jsxref("JSON.stringify()")}}, the `timing` and `navigation` properties are serialized using {{domxref("PerformanceTiming/toJSON", "PerformanceTiming.toJSON()")}} and {{domxref("PerformanceNavigation/toJSON", "PerformanceNavigation.toJSON()")}}, respectively. The `timeOrigin` value is copied as-is.
+When the returned object is passed to {{jsxref("JSON.stringify()")}}, the `timing` and `navigation` properties are serialized using {{domxref("PerformanceTiming/toJSON", "PerformanceTiming.toJSON()")}} and {{domxref("PerformanceNavigation/toJSON", "PerformanceNavigation.toJSON()")}}, respectively. The `timeOrigin` value is copied as-is.
 
-The returned object doesn't contain the {{domxref("Performance.eventCounts", "eventCounts")}} property because it is of type {{domxref("EventCounts")}}, which doesn't provide a `toJSON()` operation.
+The returned object doesn't contain the {{domxref("Performance.eventCounts", "eventCounts")}} property because {{domxref("EventCounts")}} doesn't provide a `toJSON()` operation.
 
 > [!NOTE]
-> In a window context, the returned object includes the deprecated {{domxref("performance.timing")}} and {{domxref("performance.navigation")}} properties. These properties are not available in workers. To get a JSON representation of the newer {{domxref("PerformanceNavigationTiming")}} interface, call {{domxref("PerformanceNavigationTiming.toJSON()")}} instead.
+> In a window context, the returned object includes the deprecated {{domxref("performance.timing")}} and {{domxref("performance.navigation")}} properties. These properties are not available in workers. To get a JSON-serializable plain object representing a {{domxref("PerformanceNavigationTiming")}} entry, call {{domxref("PerformanceNavigationTiming.toJSON()")}} instead.
 
 ## Examples
 
 ### Calling toJSON() directly
 
-Calling `toJSON()` directly on `performance` returns a plain object. You can access its properties, which is the same as accessing them on the original object.
+Calling `toJSON()` directly on `performance` returns a plain object. Its properties have the same values as the corresponding properties of the original object.
 
 ```js
 const json = performance.toJSON();
@@ -52,7 +52,7 @@ console.log(json.timeOrigin); // Same value as performance.timeOrigin
 
 ### Serializing to a JSON string
 
-In this example, the `Performance` object is automatically serialized by {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method.
+In this example, the `Performance` object is serialized using {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method automatically.
 
 ```js
 console.log(JSON.stringify(performance));

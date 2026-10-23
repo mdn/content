@@ -30,7 +30,7 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("PerformanceTiming/connectStart", "connectStart")}}
 - {{domxref("PerformanceTiming/navigationStart", "navigationStart")}}
@@ -60,7 +60,7 @@ Each property's value is copied as-is.
 
 ### Calling toJSON() directly
 
-Calling `toJSON()` directly on `performance.timing` returns a plain object. You can access its properties, which is the same as accessing them on the original object.
+Calling `toJSON()` directly on `performance.timing` returns a plain object. Its properties have the same values as the corresponding properties of the original object.
 
 ```js
 const json = performance.timing.toJSON();
@@ -71,7 +71,7 @@ console.log(json.navigationStart); // Same value as performance.timing.navigatio
 
 ### Serializing to a JSON string
 
-In this example, the `PerformanceTiming` object is automatically serialized by {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method.
+In this example, the `PerformanceTiming` object is serialized using {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method automatically.
 
 ```js
 console.log(JSON.stringify(performance.timing));

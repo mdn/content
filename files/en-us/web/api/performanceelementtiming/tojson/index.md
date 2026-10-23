@@ -26,7 +26,7 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("PerformanceEntry/name", "name")}}
 - {{domxref("PerformanceEntry/entryType", "entryType")}}
@@ -44,15 +44,15 @@ A JSON-serializable plain object, containing the following properties:
 - {{domxref("PerformanceElementTiming/id", "id")}}
 - {{domxref("PerformanceElementTiming/url", "url")}}
 
-When passed to {{jsxref("JSON.stringify()")}}, the `intersectionRect` property represents a rectangle serialized using {{domxref("DOMRectReadOnly/toJSON", "DOMRectReadOnly.toJSON()")}}. Other property values are copied as-is.
+When the returned object is passed to {{jsxref("JSON.stringify()")}}, the `intersectionRect` value is serialized using {{domxref("DOMRectReadOnly/toJSON", "DOMRectReadOnly.toJSON()")}}. Other property values are copied as-is.
 
-The returned object doesn't contain the {{domxref("PerformanceElementTiming.element", "element")}} property because it is of type {{domxref("Element")}}, which doesn't provide a `toJSON()` operation. The {{domxref("PerformanceElementTiming.id", "id")}} of the element is provided, though.
+The returned object doesn't contain the {{domxref("PerformanceElementTiming.element", "element")}} property because {{domxref("Element")}} doesn't provide a `toJSON()` operation. The {{domxref("PerformanceElementTiming.id", "id")}} of the element is provided, though.
 
 ## Examples
 
 ### Calling toJSON() directly
 
-This example obtains a `PerformanceElementTiming` object. Calling `toJSON()` directly returns a plain object. You can access its properties, which is the same as accessing them on the original object.
+This example obtains a `PerformanceElementTiming` object. Calling `toJSON()` directly returns a plain object. Its properties have the same values as the corresponding properties of the original object.
 
 ```html
 <img

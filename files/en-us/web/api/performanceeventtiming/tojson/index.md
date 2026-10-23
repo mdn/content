@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("PerformanceEntry/name", "name")}}
 - {{domxref("PerformanceEntry/entryType", "entryType")}}
@@ -38,13 +38,13 @@ A JSON-serializable plain object, containing the following properties:
 
 Each property's value is copied as-is.
 
-The returned object doesn't contain the {{domxref("PerformanceEventTiming.target", "target")}} property because it is of type {{domxref("Node")}}, which doesn't provide a `toJSON()` operation.
+The returned object doesn't contain the {{domxref("PerformanceEventTiming.target", "target")}} property because {{domxref("Node")}} doesn't provide a `toJSON()` operation.
 
 ## Examples
 
 ### Calling toJSON() directly
 
-This example obtains a `PerformanceEventTiming` object. Calling `toJSON()` directly returns a plain object. You can access its properties, which is the same as accessing them on the original object.
+This example obtains a `PerformanceEventTiming` object. Calling `toJSON()` directly returns a plain object. Its properties have the same values as the corresponding properties of the original object.
 
 ```js
 const observer = new PerformanceObserver((list) => {

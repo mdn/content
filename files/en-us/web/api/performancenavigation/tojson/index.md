@@ -30,7 +30,7 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("PerformanceNavigation/type", "type")}}
 - {{domxref("PerformanceNavigation/redirectCount", "redirectCount")}}
@@ -41,7 +41,7 @@ Each property's value is copied as-is.
 
 ### Calling toJSON() directly
 
-Calling `toJSON()` directly on `performance.navigation` returns a plain object. You can access its properties, which is the same as accessing them on the original object.
+Calling `toJSON()` directly on `performance.navigation` returns a plain object. Its properties have the same values as the corresponding properties of the original object.
 
 ```js
 const json = performance.navigation.toJSON();
@@ -52,7 +52,7 @@ console.log(json.type); // Same value as performance.navigation.type
 
 ### Serializing to a JSON string
 
-In this example, the `PerformanceNavigation` object is automatically serialized by {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method.
+In this example, the `PerformanceNavigation` object is serialized using {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method automatically.
 
 ```js
 console.log(JSON.stringify(performance.navigation));
