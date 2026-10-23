@@ -113,12 +113,12 @@ Allowlist examples:
 
 ### Default allowlists
 
-`Permissions-Policy` HTTP header directives have a default allowlist, which is always one of `*` or `self`. The specific default for each directive is given on its [directive reference page](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy#directives).
+`Permissions-Policy` HTTP header directives have a default allowlist, which is either `*` or `self`. The specific default for each directive is given on its [directive reference page](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy#directives).
 
 For the top-level document, a default of `self` or `*` enables the feature, because the document's own origin always matches both.
-No standard directive defaults to `()` (which would disable the feature entirely); the only exception is Chrome's non-standard `unload` directive, which currently defaults to `()`.
+The only exception is Chrome's non-standard [`unload`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/unload) directive, which defaults to `()`, so the feature is disabled unless a policy enables it.
 
-The same default allowlist applies for an `<iframe>` whose `allow` attribute also doesn't name the feature: `self` grants to a same-origin `<iframe>`, `*` grants it regardless of origin, and `()` disables it.
+The default allowlist also applies to an `<iframe>` whose `allow` attribute doesn't name the feature, whether or not the parent's header does: `self` grants the feature to a same-origin `<iframe>`, `*` grants it regardless of origin, and `()` doesn't grant it.
 See [Inheritance of policies for embedded content](#inheritance_of_policies_for_embedded_content) for how the header, the `allow` attribute, and the default allowlist combine to determine whether an `<iframe>` gets a feature.
 
 ## Permissions-Policy header syntax
@@ -213,11 +213,11 @@ An `<iframe>`'s inherited policy is determined by combining its parent page's po
 
 If the parent page's {{HTTPHeader("Permissions-Policy")}} header names a feature, its allowlist defines the superset of origins that are potentially permitted to inherit the feature.
 For an `<iframe>` to actually inherit the feature, its origin must be covered by that allowlist, and the origin must also be granted the feature.
-The feature can be granted explicitly, by listing the origin in the `allow` attribute, or automatically if the `allow` attribute is not specified and the origin is covered by the [default allowlist](#default_allowlists).
+The feature can be granted explicitly, by listing it in the `allow` attribute with an allowlist that matches the origin, or automatically if the `allow` attribute doesn't list the feature and the origin is covered by the [default allowlist](#default_allowlists).
 
 If no `Permissions-Policy` is provided for a feature, _no restrictions are placed on the origins to which the feature can be delegated_.
-Therefore, the `allow` attribute can be used to explicitly delegate the feature to any origin; if the `allow` attribute is not specified, the feature can instead be delegated to the default allowlist's origins (typically `self` or `*`).
-Note that the parent document can still only delegate the features that it has, as specified in its default allowlist.
+Therefore, the `allow` attribute can be used to explicitly delegate the feature to any origin; if the `allow` attribute doesn't list the feature, it's delegated to the origins in the feature's default allowlist.
+Note that the parent document can still only delegate features that are enabled in it.
 
 Disabling a feature in a policy is a one-way toggle. If a feature has been disabled for a child frame by its parent frame, the child cannot re-enable it, and neither can any of the child's descendants.
 
