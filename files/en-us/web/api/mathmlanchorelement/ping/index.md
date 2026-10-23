@@ -3,10 +3,13 @@ title: "MathMLAnchorElement: ping property"
 short-title: ping
 slug: Web/API/MathMLAnchorElement/ping
 page-type: web-api-instance-property
+status:
+  - experimental
+  - non-standard
 browser-compat: api.MathMLAnchorElement.ping
 ---
 
-{{ApiRef("HTML DOM")}}
+{{ApiRef("HTML DOM")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`ping`** property of the {{domxref("MathMLAnchorElement")}} interface is a space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body `PING` to the URLs.
 
