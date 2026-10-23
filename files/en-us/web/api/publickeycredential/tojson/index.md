@@ -33,11 +33,14 @@ A JSON-serializable plain object containing the following properties:
 - {{domxref("PublicKeyCredential/response", "response")}}
 - {{domxref("Credential/type", "type")}}
 
-The `id` and `type` values are copied as-is. The `authenticatorAttachment` value is copied as-is if it is not `null`; otherwise, the property is omitted. The `rawId` value is encoded as a [base64url](/en-US/docs/Glossary/Base64) string.
+The `id` and `type` values are copied as-is.
+The `authenticatorAttachment` value is copied as-is if it is not `null`; otherwise, the property is omitted.
+The `rawId` value is encoded as a [base64url](/en-US/docs/Glossary/Base64) string.
 
 The `clientExtensionResults` property contains a JSON-serializable object representing the values returned by {{domxref("PublicKeyCredential/getClientExtensionResults", "getClientExtensionResults()")}}, with buffer values encoded as base64url strings.
 
-The `response` property contains a JSON-serializable object representing {{domxref("AuthenticatorAttestationResponse")}} when the credential was returned by {{domxref("CredentialsContainer/create", "navigator.credentials.create()")}}, or {{domxref("AuthenticatorAssertionResponse")}} when it was returned by {{domxref("CredentialsContainer/get", "navigator.credentials.get()")}}. Buffer values are encoded as base64url strings.
+The `response` property contains a JSON-serializable object representing {{domxref("AuthenticatorAttestationResponse")}} when the credential was returned by {{domxref("CredentialsContainer/create", "navigator.credentials.create()")}}, or {{domxref("AuthenticatorAssertionResponse")}} when it was returned by {{domxref("CredentialsContainer/get", "navigator.credentials.get()")}}.
+Buffer values are encoded as base64url strings.
 
 ### Exceptions
 
@@ -67,7 +70,8 @@ console.log(json.id); // Same value as credential.id
 
 ### Serializing to a JSON string
 
-The returned credential is automatically serialized by {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method. The web app posts the serialized credential back to the server.
+The returned credential is automatically serialized by {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method.
+The web app posts the serialized credential back to the server.
 
 ```js
 const jsonString = JSON.stringify(credential);

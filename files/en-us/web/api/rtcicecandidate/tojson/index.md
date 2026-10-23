@@ -10,7 +10,8 @@ browser-compat: api.RTCIceCandidate.toJSON
 
 The **`toJSON()`** method of the {{domxref("RTCIceCandidate")}} interface returns a JSON-serializable plain object representing the `RTCIceCandidate` object.
 
-The method is automatically called by {{jsxref("JSON.stringify()")}} when an `RTCIceCandidate` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization. The serialized value can then be deserialized using the {{domxref("RTCIceCandidate/RTCIceCandidate", "RTCIceCandidate()")}} constructor within the reviver of {{jsxref("JSON.parse()")}}.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when an `RTCIceCandidate` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
+The serialized value can then be deserialized using the {{domxref("RTCIceCandidate/RTCIceCandidate", "RTCIceCandidate()")}} constructor within the reviver of {{jsxref("JSON.parse()")}}.
 
 ## Syntax
 
