@@ -323,7 +323,7 @@ This is the form used to get the user's email address (for sending the password 
   <form action="" method="post">
     {% csrf_token %}
     \{{ form }}
-    <input type="submit" class="btn btn-default btn-lg" value="Reset password">
+    <input type="submit" class="btn btn-primary btn-lg" value="Reset password">
   </form>
 {% endblock %}
 ```
