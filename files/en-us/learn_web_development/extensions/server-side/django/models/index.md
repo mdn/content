@@ -319,6 +319,7 @@ class Genre(models.Model):
         return reverse('genre-detail', args=[str(self.id)])
 
     class Meta:
+        ordering = ['name']
         constraints = [
             UniqueConstraint(
                 Lower('name'),
@@ -336,6 +337,7 @@ Then we declare the `get_absolute_url()` method, which returns a URL that can be
 
 Setting `unique=True` on the field above prevents genres being created with _exactly_ the same name, but not variations such as "fantasy", "Fantasy", or even "FaNtAsY".
 The last part of the model definition uses a [`constraints`](https://docs.djangoproject.com/en/6.1/ref/models/options/#constraints) option on the model's [metadata](#metadata) to specify that the lower case of the value in the `name` field must be unique in the database, and display the `violation_error_message` string if it isn't.
+We also set the default `ordering` so that genres are listed alphabetically by name.
 Here we don't need to do anything else, but you can define multiple constraints against a field or fields.
 For more information see the [Constraints reference](https://docs.djangoproject.com/en/6.1/ref/models/constraints/), including [`UniqueConstraint()`](https://docs.djangoproject.com/en/6.1/ref/models/constraints/#uniqueconstraint) (and [`Lower()`](https://docs.djangoproject.com/en/6.1/ref/models/database-functions/#lower)).
 
@@ -368,6 +370,9 @@ class Book(models.Model):
     genre = models.ManyToManyField(
         Genre, help_text="Select a genre for this book")
 
+    class Meta:
+        ordering = ['title', 'author']
+
     def __str__(self):
         """String for representing the Model object."""
         return self.title
@@ -378,6 +383,9 @@ class Book(models.Model):
 ```
 
 The genre is a `ManyToManyField`, so that a book can have multiple genres and a genre can have many books. The author is declared as `ForeignKey`, so each book will only have one author, but an author may have many books (in practice a book might have multiple authors, but not in this implementation!)
+
+The `class Meta` sets the default ordering of books by title, and then by author.
+Ordering by a `ForeignKey` field like `author` uses the default ordering of the related model (which we'll set to last name then first name when we define `Author` below).
 
 In both field types the related model class is declared as the first unnamed parameter using either the model class or a string containing the name of the related model. You must use the name of the model as a string if the associated class has not yet been defined in this file before it is referenced! The other parameters of interest in the `author` field are `null=True`, which allows the database to store a `Null` value if no author is selected, and `on_delete=models.RESTRICT`, which will prevent the book's associated author being deleted if it is referenced by any book.
 

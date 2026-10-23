@@ -537,43 +537,6 @@ This method is needed because you declare a `ForeignKey` (one-to many) field onl
 > [!NOTE]
 > Here we use `all()` to get all records (the default). While you can use the `filter()` method to get a subset of records in code, you can't do this directly in templates because you can't specify arguments to functions.
 >
-> Beware also that if you don't define an order (on your class-based view or model), you will also see warnings from the development server like this one:
->
-> ```plain
-> /foo/local_library/venv/lib/python3.12/site-packages/django/views/generic/list.py:91: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'catalog.models.Author'> QuerySet.
->   return self.paginator_class(
-> [29/Sep/2026 18:37:53] "GET /catalog/authors/ HTTP/1.1" 200 1637
-> ```
->
-> That happens because the [paginator object](https://docs.djangoproject.com/en/6.1/topics/pagination/#the-paginator-class) expects to see some ORDER BY being executed on your underlying database. Without it, it can't be sure the records being returned are actually in the right order!
->
-> This tutorial hasn't covered **Pagination** (yet!), but since you can't use `order_by()` and pass a parameter (the same with `filter()` described above) you will have to choose between three choices:
->
-> 1. Add an `ordering` inside a `class Meta` declaration on your model.
-> 2. Add a `queryset` attribute in your custom class-based view, specifying an `order_by()`.
-> 3. Adding a `get_queryset` method to your custom class-based view and also specify the `order_by()`.
->
-> If you decide to go with a `class Meta` for the `Author` model (probably not as flexible as customizing the class-based view, but easy enough), you will end up with something like this:
->
-> ```python
-> class Author(models.Model):
->     first_name = models.CharField(max_length=100)
->     last_name = models.CharField(max_length=100)
->     date_of_birth = models.DateField(null=True, blank=True)
->     date_of_death = models.DateField('Died', null=True, blank=True)
->
->     def get_absolute_url(self):
->         return reverse('author-detail', args=[str(self.id)])
->
->     def __str__(self):
->         return f'{self.last_name}, {self.first_name}'
->
->     class Meta:
->         ordering = ['last_name']
-> ```
->
-> Of course, the field doesn't need to be `last_name`: it could be any other.
->
 > Last but not least, you should sort by an attribute/column that actually has an index (unique or not) on your database to avoid performance issues. Of course, this will not be necessary here (we are probably getting ahead of ourselves with so few books and users), but it is something worth keeping in mind for future projects.
 
 The second interesting (and non-obvious) thing in the template is where we display the status text for each book instance ("available", "maintenance", etc.).
@@ -623,6 +586,18 @@ class BookListView(generic.ListView):
 
 With this addition, as soon as you have more than 10 records the view will start paginating the data it sends to the template.
 The different pages are accessed using GET parameters — to access page 2 you would use the URL `/catalog/books/?page=2`.
+
+> [!NOTE]
+> Pagination only works reliably if records are returned in a consistent order.
+> If you paginate a list view for a model that has no default ordering, the development server will display a warning like this one:
+>
+> ```plain
+> /foo/local_library/venv/lib/python3.12/site-packages/django/views/generic/list.py:91: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'catalog.models.Book'> QuerySet.
+>   return self.paginator_class(
+> ```
+>
+> You won't see this for books or authors, because we set an `ordering` in the `class Meta` of both models when we [defined them](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Models).
+> For a model without a default ordering, you can either add `ordering` to its `class Meta`, or set an `ordering` attribute on the list view itself (for example, `ordering = ['title']`).
 
 ### Templates
 
