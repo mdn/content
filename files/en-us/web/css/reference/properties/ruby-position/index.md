@@ -145,6 +145,33 @@ ruby {
 
 {{EmbedLiveSample("Ruby_alternate", 100, 40)}}
 
+### Ruby positioned between characters
+
+This example uses `inter-character` to place bopomofo (zhuyin fuhao) annotations to the right of each base character.
+
+> [!NOTE]
+> Browser support for `inter-character` is limited. See [Browser compatibility](#browser_compatibility).
+
+#### HTML
+
+```html
+<ruby>
+  注<rp>(</rp><rt>ㄓㄨˋ</rt><rp>)</rp>音<rp>(</rp><rt>ㄧㄣ</rt><rp>)</rp>
+</ruby>
+```
+
+#### CSS
+
+```css
+ruby {
+  ruby-position: inter-character;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Ruby_positioned_between_characters", 100, 60)}}
+
 ## Specifications
 
 {{Specifications}}
@@ -158,3 +185,4 @@ ruby {
 - {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}}, and {{HTMLElement("rtc")}} HTML elements
 - {{cssxref("ruby-align")}}
 - [CSS ruby layout](/en-US/docs/Web/CSS/Guides/Ruby_layout) module
+- [Positioning of zhuyin](https://www.w3.org/TR/clreq/#positioning_of_zhuyin) in Requirements for Chinese Text Layout
