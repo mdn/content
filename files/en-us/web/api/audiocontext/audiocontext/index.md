@@ -25,24 +25,32 @@ new AudioContext(options)
 - `options` {{optional_inline}}
   - : An object used to configure the context. The available properties are:
     - `latencyHint` {{optional_inline}}
-      - : The type of playback that the context will be used for, as a predefined string (`"balanced"`, `"interactive"` or `"playback"`)
-        or a double-precision floating-point value indicating the preferred maximum latency of the context in seconds.
-        The user agent may or may not choose to meet this request;
-        check the value of {{domxref("AudioContext.baseLatency")}} to determine the true latency after creating the context.
-        - `"balanced"`: The browser balances audio output latency and power consumption when selecting a latency value.
-        - `"interactive"` (default value): The audio is involved in interactive elements,
-          such as responding to user actions or needing to coincide with visual cues such as a video or game action.
-          The browser selects the lowest possible latency that doesn't cause glitches in the audio. This is likely to require increased power consumption.
-        - `"playback"`: The browser selects a latency that will maximize playback time by minimizing power consumption at the expense of latency.
-          Useful for non-interactive playback, such as playing music.
+      - : Hints at the latency the browser should adopt for the type of playback the context will be used for. The user agent may or may not choose to meet this request;
+        check the value of {{domxref("AudioContext.baseLatency")}} to determine the true latency after creating the context. Possible values are:
+        - `balanced`
+          - : The browser balances audio output latency and power consumption when selecting a latency value.
+        - `interactive`
+          - : The audio is involved in interactive elements,
+            such as responding to user actions or needing to coincide with visual cues such as a video or game action.
+            The browser selects the lowest possible latency that doesn't cause glitches in the audio. This is likely to require increased power consumption.
+        - `playback`
+          - : The browser selects a latency that will maximize playback time by minimizing power consumption at the expense of latency.
+            Useful for non-interactive playback, such as playing music.
+        - A float
+          - : A double-precision floating-point value indicating the preferred maximum latency of the context in seconds.
+
+        If omitted, `latencyHint` defaults to `interactive`.
+
     - `renderSizeHint` {{optional_inline}}
-      - : Specifies a render quantum size for your audio context as a number of audio frames (see {{domxref("BaseAudioContext.renderQuantumSize")}} for more information). Possible values are:
+      - : Requests a render quantum size for your audio context as a number of audio frames (see {{domxref("BaseAudioContext.renderQuantumSize", "renderQuantumSize")}} for more information). Possible values are:
         - `default`
           - : Uses the default value of `128`.
         - `hardware`
-          - : Asks the browser to choose a suitable size for the underlying hardware.
+          - : Asks the browser to choose a suitable size for the underlying hardware. When `hardware` is specified, the resulting `AudioContext` instance's `renderQuantumSize` will return `0` until its {{domxref("BaseAudioContext.state", "state")}} is `running`, to protect against fingerprinting.
         - An integer
-          - : A specific number of frames between `1` and 6 times the context's `sampleRate`.
+          - : A specific number of frames between `1` and 6 times the context's `sampleRate` (rounded down if this is not an integer), inclusive. The requested value may not be honored exactly, and you can query the context's `renderQuantumSize` to check the actual selected value.
+
+        If omitted, `renderSizeHint` defaults to `128`.
     - `sampleRate` {{optional_inline}}
       - : Indicates the sample rate to use for the new context. The value must be a floating-point value indicating the sample rate,
         in samples per second, for which to configure the new context;
@@ -61,6 +69,8 @@ A new {{domxref("AudioContext")}} instance.
 
 ### Exceptions
 
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the document is not fully active.
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if:
     - The specified [`sampleRate`](#samplerate) isn't supported by the context.
