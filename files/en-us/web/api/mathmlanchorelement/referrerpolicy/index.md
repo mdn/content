@@ -3,10 +3,13 @@ title: "MathMLAnchorElement: referrerPolicy property"
 short-title: referrerPolicy
 slug: Web/API/MathMLAnchorElement/referrerPolicy
 page-type: web-api-instance-property
+status:
+  - experimental
+  - non-standard
 browser-compat: api.MathMLAnchorElement.referrerPolicy
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`referrerPolicy`** property of the {{domxref("MathMLAnchorElement")}} interface is a string defining how much of the [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referer) to send when following the link, and under what circumstances.
 
