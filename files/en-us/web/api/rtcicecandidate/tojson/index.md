@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("RTCIceCandidate/candidate", "candidate")}}
 - {{domxref("RTCIceCandidate/sdpMid", "sdpMid")}}
@@ -37,7 +37,9 @@ Each property's value is copied as-is.
 
 ### Calling toJSON() directly
 
-This example creates an `RTCIceCandidate` object. Calling `toJSON()` directly returns a plain object. You can access its properties, which is the same as accessing them on the original object.
+This example creates an `RTCIceCandidate` object.
+Calling `toJSON()` directly returns a plain object.
+Its properties have the same values as the corresponding properties of the original object.
 
 ```js
 const candidate = new RTCIceCandidate({

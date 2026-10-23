@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("PublicKeyCredential/authenticatorAttachment", "authenticatorAttachment")}} {{optional_inline}}
 - `clientExtensionResults`
@@ -51,7 +51,8 @@ The `response` property contains a JSON-serializable object representing {{domxr
 When registering a new user, a relying party server will supply information about the expected credentials to the web app.
 The web app calls [`navigator.credentials.create()`](/en-US/docs/Web/API/CredentialsContainer/create) with the received information (`createCredentialOptions` below), which returns a promise that fulfills with the new credential (a {{domxref("PublicKeyCredential")}}).
 
-Calling `toJSON()` directly returns a plain object. You can access its properties, which is the same as accessing them on the original object.
+Calling `toJSON()` directly returns a plain object.
+Its properties have the same values as the corresponding properties of the original object.
 
 ```js
 const credential = await navigator.credentials.create({

@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("DOMRectReadOnly/x", "x")}}
 - {{domxref("DOMRectReadOnly/y", "y")}}

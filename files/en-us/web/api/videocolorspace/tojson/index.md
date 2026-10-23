@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("VideoColorSpace/fullRange", "fullRange")}}
 - {{domxref("VideoColorSpace/matrix", "matrix")}}

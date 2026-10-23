@@ -24,20 +24,23 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("DOMQuad/p1", "p1")}}
 - {{domxref("DOMQuad/p2", "p2")}}
 - {{domxref("DOMQuad/p3", "p3")}}
 - {{domxref("DOMQuad/p4", "p4")}}
 
-The `p1`, `p2`, `p3`, and `p4` properties represent the four points of the quadrilateral. When passed to {{jsxref("JSON.stringify()")}}, each point is serialized using its {{domxref("DOMPointReadOnly/toJSON", "toJSON()")}} method.
+The `p1`, `p2`, `p3`, and `p4` properties represent the four points of the quadrilateral.
+When the returned object is passed to {{jsxref("JSON.stringify()")}}, each point is serialized using its {{domxref("DOMPointReadOnly/toJSON", "toJSON()")}} method.
 
 ## Examples
 
 ### Calling toJSON() directly
 
-This example creates a `DOMQuad` object. Calling `toJSON()` directly returns a plain object. You can access its properties, which is the same as accessing them on the original object.
+This example creates a `DOMQuad` object.
+Calling `toJSON()` directly returns a plain object.
+Its properties have the same values as the corresponding properties of the original object.
 
 ```js
 const topLeft = new DOMPoint(window.screenX, window.screenY);

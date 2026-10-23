@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("PushSubscription/endpoint", "endpoint")}}
 - {{domxref("PushSubscription/expirationTime", "expirationTime")}}
@@ -36,7 +36,9 @@ The `endpoint` and `expirationTime` values are copied as-is. The `keys` property
 
 ### Calling toJSON() directly
 
-This example obtains a `PushSubscription` object. Calling `toJSON()` directly returns a plain object. You can access its properties, which is the same as accessing them on the original object.
+This example obtains a `PushSubscription` object.
+Calling `toJSON()` directly returns a plain object.
+Its properties have the same values as the corresponding properties of the original object.
 
 ```js
 navigator.serviceWorker.ready.then((reg) => {
