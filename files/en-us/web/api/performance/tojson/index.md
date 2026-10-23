@@ -24,13 +24,14 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("Performance/timeOrigin", "timeOrigin")}}
 - {{domxref("Performance/timing", "timing")}}
 - {{domxref("Performance/navigation", "navigation")}}
 
-When passed to {{jsxref("JSON.stringify()")}}, the `timing` and `navigation` properties are serialized using {{domxref("PerformanceTiming/toJSON", "PerformanceTiming.toJSON()")}} and {{domxref("PerformanceNavigation/toJSON", "PerformanceNavigation.toJSON()")}}, respectively. The `timeOrigin` value is copied as-is.
+When the returned object is passed to {{jsxref("JSON.stringify()")}}, the `timing` and `navigation` properties are serialized using {{domxref("PerformanceTiming/toJSON", "PerformanceTiming.toJSON()")}} and {{domxref("PerformanceNavigation/toJSON", "PerformanceNavigation.toJSON()")}}, respectively.
+The `timeOrigin` value is copied as-is.
 
 The returned object doesn't contain the {{domxref("Performance.eventCounts", "eventCounts")}} property because it is of type {{domxref("EventCounts")}}, which doesn't provide a `toJSON()` operation.
 
@@ -41,7 +42,8 @@ The returned object doesn't contain the {{domxref("Performance.eventCounts", "ev
 
 ### Calling toJSON() directly
 
-Calling `toJSON()` directly on `performance` returns a plain object. You can access its properties, which is the same as accessing them on the original object.
+Calling `toJSON()` directly on `performance` returns a plain object.
+Its properties have the same values as the corresponding properties of the original object.
 
 ```js
 const json = performance.toJSON();
