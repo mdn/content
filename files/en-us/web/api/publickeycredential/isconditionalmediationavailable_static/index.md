@@ -10,6 +10,9 @@ browser-compat: api.PublicKeyCredential.isConditionalMediationAvailable_static
 
 The **`isConditionalMediationAvailable()`** static method of the {{domxref("PublicKeyCredential")}} interface returns a {{jsxref("Promise")}} which resolves to `true` if [conditional mediation](/en-US/docs/Web/API/Web_Authentication_API#autofill_ui) is available.
 
+> [!NOTE]
+> This API does **not** indicate whether [conditional create](/en-US/docs/Web/API/Web_Authentication_API#conditional_create) is supported. Use {{domxref("PublicKeyCredential.getClientCapabilities()")}} for this.
+
 ## Syntax
 
 ```js-nolint

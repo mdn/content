@@ -29,6 +29,11 @@ create(options)
 
 - `options` {{optional_inline}}
   - : An object that contains options for the requested new `Credentials` object. It can contain the following properties:
+    - `mediation` {{optional_inline}}
+      - : A string indicating how the user is involved in creating the credential.
+
+        This option only has an effect for [public key credentials](#publickey), and the only value that has an effect is `"conditional"`. This value means that if certain conditions are met, then the browser will attempt to create the new credential without requiring any user interaction. If the conditions are not met, creation will fail. See [Conditional create](/en-US/docs/Web/API/Web_Authentication_API#conditional_create) for more details.
+
     - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `create()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an `AbortError` {{domxref("DOMException")}}.
 
