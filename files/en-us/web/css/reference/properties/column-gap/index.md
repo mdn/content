@@ -285,7 +285,9 @@ This example demonstrates using the `column-gap` property with a `<line-width>` 
 - {{CSSxRef("gap")}}
 - {{CSSxRef("column-rule")}}
 - {{CSSxRef("rule")}}
+- [Overview of CSS gap decoration properties](/en-US/docs/Web/CSS/Guides/Gaps/Overview)
 - [Defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
+- [Defining CSS rules](/en-US/docs/Web/CSS/Guides/Gaps/Defining_rules)
 - [Basic concepts of grid layout: gutters](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#gutters)
 - [Styling Columns](/en-US/docs/Web/CSS/Guides/Multicol_layout/Styling_columns)
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
