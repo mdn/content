@@ -91,6 +91,7 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{CSSxRef("caret-color")}}
 - {{CSSxRef("caret-shape")}}
 - {{CSSxRef("cursor")}}
+- {{CSSxRef("interactivity")}}
 - {{CSSxRef("interest-delay")}}, shorthand for:
   - {{CSSxRef("interest-delay-start")}}
   - {{CSSxRef("interest-delay-end")}}
@@ -102,6 +103,7 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{CSSxRef("pointer-events")}}
 - {{CSSxRef("resize")}}
 - {{CSSxRef("user-select")}}
+- {{CSSxRef("window-drag")}}
 
 The CSS basic user interface module also defines the {{CSSxRef("caret")}}, `nav-down`, `nav-left`, `nav-right`, and `nav-up` properties. Currently, no browsers support these features.
 
