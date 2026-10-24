@@ -59,7 +59,7 @@ Django helps you write software that is:
 
 Django was initially developed between 2003 and 2005 by a web team who were responsible for creating and maintaining newspaper websites. After creating a number of sites, the team began to factor out and reuse lots of common code and design patterns. This common code evolved into a generic web development framework, which was open-sourced as the "Django" project in July 2005.
 
-Django has continued to grow and improve, from its first milestone release (1.0) in September 2008 through to the version 5.0 in late 2023. Each release has added new functionality and bug fixes, ranging from support for new types of databases, template engines, and caching, through to the addition of "generic" view functions and classes (which reduce the amount of code that developers have to write for a number of programming tasks).
+Django has continued to grow and improve, from its first milestone release (1.0) in September 2008 through to version 6.1 in August 2026. Each release has added new functionality and bug fixes, ranging from support for new types of databases, template engines, and caching, through to the addition of "generic" view functions and classes (which reduce the amount of code that developers have to write for a number of programming tasks).
 
 > [!NOTE]
 > Check out the [release notes](https://docs.djangoproject.com/en/stable/releases/) on the Django website to see what has changed in recent versions, and how much work is going into making Django better.
@@ -153,7 +153,7 @@ Views are usually stored in a file called **views.py**.
 
 Django web applications manage and query data through Python objects referred to as models. Models define the structure of stored data, including the field _types_ and possibly also their maximum size, default values, selection list options, help text for documentation, label text for forms, etc. The definition of the model is independent of the underlying database — you can choose one of several as part of your project settings. Once you've chosen what database you want to use, you don't need to talk to it directly at all — you just write your model structure and other code, and Django handles all the "dirty work" of communicating with the database for you.
 
-The code snippet below shows a very simple Django model for a `Team` object. The `Team` class is derived from the Django class `models.Model`. It defines the team name and team level as character fields and specifies a maximum number of characters to be stored for each record. The `team_level` can be one of several values, so we define it as a choice field and provide a mapping between choices to be displayed and data to be stored, along with a default value.
+The code snippet below shows a very simple Django model for a `Team` object. The `Team` class is derived from the Django class `models.Model`. It defines the team name and team level as character fields and specifies a maximum number of characters to be stored for each record. The `team_level` can be one of several values, so we define these in a `TeamLevel` class that maps the data to be stored to the choice to be displayed, and use this for the field's `choices`, along with a default value.
 
 ```python
 # filename: models.py
@@ -163,14 +163,14 @@ from django.db import models
 class Team(models.Model):
     team_name = models.CharField(max_length=40)
 
-    TEAM_LEVELS = (
-        ('U09', 'Under 09s'),
-        ('U10', 'Under 10s'),
-        ('U11', 'Under 11s'),
+    class TeamLevel(models.TextChoices):
+        U09 = 'U09', 'Under 09s'
+        U10 = 'U10', 'Under 10s'
+        U11 = 'U11', 'Under 11s'
         # …
         # list other team levels
-    )
-    team_level = models.CharField(max_length=3, choices=TEAM_LEVELS, default='U11')
+
+    team_level = models.CharField(max_length=3, choices=TeamLevel, default=TeamLevel.U11)
 ```
 
 > [!NOTE]
@@ -195,7 +195,7 @@ from .models import Team
 def index(request):
     list_teams = Team.objects.filter(team_level__exact="U09")
     context = {'youngest_teams': list_teams}
-    return render(request, '/best/index.html', context)
+    return render(request, 'best/index.html', context)
 ```
 
 This function uses the `render()` function to create the `HttpResponse` that is sent back to the browser. This function is a _shortcut_; it creates an HTML file by combining a specified HTML template and some data to insert in the template (provided in the variable named `context`). In the next section we show how the template has the data inserted in it to create the HTML.
