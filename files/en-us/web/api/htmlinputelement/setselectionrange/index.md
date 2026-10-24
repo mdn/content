@@ -10,6 +10,8 @@ browser-compat: api.HTMLInputElement.setSelectionRange
 
 The **`HTMLInputElement.setSelectionRange()`** method sets the start and end positions of the current text selection in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element. This updates the selection state immediately, though the visual highlight only appears when the element is focused.
 
+If `selectionStart` and `selectionEnd` are equal, no text is selected, and the method instead places the caret (text cursor) at that position. This is how you move the caret to a specific position in a text field.
+
 Optionally, you can specify the direction in which selection should be considered to have occurred. This lets you indicate, for example, that the selection was set by the user clicking and dragging from the end of the selected text toward the beginning.
 
 This method updates the {{domxref("HTMLInputElement.selectionStart")}}, {{domxref("HTMLInputElement.selectionEnd")}}, and {{domxref("HTMLInputElement.selectionDirection")}} properties in one call, regardless of whether the element is focused. The visual selection highlight will only appear when the element has focus.
@@ -53,17 +55,19 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
+### Selecting text
+
 Click the button in this example to select the third, fourth, and fifth characters in
 the text box ("zil" in the word "Mozilla").
 
-### HTML
+#### HTML
 
 ```html
 <input type="text" id="text-box" size="20" value="Mozilla" />
 <button>Select text</button>
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 function selectText() {
@@ -75,9 +79,41 @@ function selectText() {
 document.querySelector("button").addEventListener("click", selectText);
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("Selecting text")}}
+
+### Moving the caret
+
+Passing the same value for `selectionStart` and `selectionEnd` moves the caret without selecting any text. Choose a position and click the button to move the caret there. Position `0` is before the first character, and position `7` is after the last one.
+
+#### HTML
+
+```html
+<input type="text" id="caret-box" size="20" value="Mozilla" />
+<label>
+  Position
+  <input type="number" id="caret-position" min="0" max="7" value="2" />
+</label>
+<button>Move caret</button>
+```
+
+#### JavaScript
+
+```js
+const input = document.getElementById("caret-box");
+const position = document.getElementById("caret-position");
+
+document.querySelector("button").addEventListener("click", () => {
+  const index = position.valueAsNumber;
+  input.focus();
+  input.setSelectionRange(index, index);
+});
+```
+
+#### Result
+
+{{EmbedLiveSample("Moving the caret")}}
 
 ## Specifications
 
