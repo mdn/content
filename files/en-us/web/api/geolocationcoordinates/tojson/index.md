@@ -8,7 +8,9 @@ browser-compat: api.GeolocationCoordinates.toJSON
 
 {{APIRef("Geolocation API")}}
 
-The **`toJSON()`** method of the {{domxref("GeolocationCoordinates")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("GeolocationCoordinates")}} object.
+The **`toJSON()`** method of the {{domxref("GeolocationCoordinates")}} interface returns a JSON-serializable plain object representing the `GeolocationCoordinates` object.
+
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `GeolocationCoordinates` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -22,35 +24,58 @@ None.
 
 ### Return value
 
-A {{jsxref("JSON")}} object that is the serialization of the {{domxref("GeolocationCoordinates")}} object.
+A JSON-serializable plain object containing the following properties:
+
+- {{domxref("GeolocationCoordinates/accuracy", "accuracy")}}
+- {{domxref("GeolocationCoordinates/latitude", "latitude")}}
+- {{domxref("GeolocationCoordinates/longitude", "longitude")}}
+- {{domxref("GeolocationCoordinates/altitude", "altitude")}}
+- {{domxref("GeolocationCoordinates/altitudeAccuracy", "altitudeAccuracy")}}
+- {{domxref("GeolocationCoordinates/heading", "heading")}}
+- {{domxref("GeolocationCoordinates/speed", "speed")}}
+
+Each property's value is copied as-is.
 
 ## Examples
 
-### Using the `toJSON()` method
+### Calling toJSON() directly
 
-In this example, calling `position.coords.toJSON()` returns a JSON representation of the `GeolocationCoordinates` object.
+This example obtains a `GeolocationCoordinates` object.
+Calling `toJSON()` directly returns a plain object.
+Its properties have the same values as the corresponding properties of the original object.
 
 ```js
 navigator.geolocation.getCurrentPosition((position) => {
-  console.log(position.coords.toJSON());
+  const coords = position.coords;
+
+  const json = coords.toJSON();
+  console.log(json); // A plain object
+  console.log(typeof json); // "object"
+  console.log(json.latitude); // Same value as coords.latitude
 });
 ```
 
-This would log a JSON object like so:
+### Serializing to a JSON string
+
+Within the callback from the previous example, the same object can be serialized using {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method automatically.
+
+```js
+console.log(JSON.stringify(coords));
+```
+
+This would log a JSON string like so (formatted for readability):
 
 ```json
 {
-  "accuracy": 12.0,
-  "latitude": 53.0,
-  "longitude": 8.0,
+  "accuracy": 12.5,
+  "latitude": 53.125,
+  "longitude": 8.75,
   "altitude": null,
   "altitudeAccuracy": null,
   "heading": null,
   "speed": null
 }
 ```
-
-To get a JSON string, you can use [`JSON.stringify(position.coords)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) directly; it will call `toJSON()` automatically.
 
 ## Specifications
 
