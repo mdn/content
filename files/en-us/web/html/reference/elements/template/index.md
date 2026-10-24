@@ -72,7 +72,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 ## Usage notes
 
-This element has no permitted content, because everything nested inside it in the HTML source does not actually become the children of the `<template>` element. The {{domxref("Node.childNodes")}} property of the `<template>` element is always empty, and you can only access said nested content via the special {{domxref("HTMLTemplateElement.content", "content")}} property. However, if you call {{domxref("Node.appendChild()")}} or similar methods on the `<template>` element, then you would be inserting children into the `<template>` element itself, which is a violation of its content model and does not actually update the {{domxref("DocumentFragment")}} returned by the `content` property.
+This element has no permitted content, because everything nested inside it in the HTML source does not actually become the children of the `<template>` element. The {{domxref("Node.childNodes")}} property of the `<template>` element is always empty, and you can only access said nested content via the special {{domxref("HTMLTemplateElement.content", "content")}} property.
+
+If you call {{domxref("Node.appendChild()")}} or similar methods on the `<template>` element, then you would be inserting children into the `<template>` element itself, which is a violation of its content model and does not actually update the {{domxref("DocumentFragment")}} returned by the `content` property. However if you use the HTML methods (for example, {{domxref("Element.appendHTML()")}}), then these will be correctly applied to the `content`.
 
 Due to the way the `<template>` element is parsed, all `<html>`, `<head>`, and `<body>` opening and closing tags inside the template are syntax errors and are ignored by the parser, so `<template><head><title>Test</title></head></template>` is the same as `<template><title>Test</title></template>`.
 
