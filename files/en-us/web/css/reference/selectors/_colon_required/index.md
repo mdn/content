@@ -59,11 +59,6 @@ fieldset {
 </label>
 ```
 
-This pseudo-class is useful for highlighting fields that must have valid data before a form can be submitted.
-
-> [!NOTE]
-> The {{cssxref(":optional")}} pseudo-class selects _optional_ form fields.
-
 ## Syntax
 
 ```css
@@ -71,6 +66,13 @@ This pseudo-class is useful for highlighting fields that must have valid data be
   /* ... */
 }
 ```
+
+## Description
+
+This pseudo-class is useful for highlighting fields that must have valid data before a form can be submitted.
+
+> [!NOTE]
+> The {{cssxref(":optional")}} pseudo-class selects _optional_ form fields.
 
 ## Accessibility
 

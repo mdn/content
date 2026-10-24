@@ -29,9 +29,6 @@ div:empty {
 <div><p></p></div>
 ```
 
-> [!NOTE]
-> In [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo), the `:empty` pseudo-class was changed to act like {{CSSxRef(":-moz-only-whitespace")}}, but no browser currently supports this yet.
-
 ## Syntax
 
 ```css
@@ -39,6 +36,11 @@ div:empty {
   /* ... */
 }
 ```
+
+## Description
+
+> [!NOTE]
+> In [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo), the `:empty` pseudo-class was changed to act like {{CSSxRef(":-moz-only-whitespace")}}, but no browser currently supports this yet.
 
 ## Accessibility
 

@@ -50,9 +50,6 @@ li:nth-child(even) {
 </ul>
 ```
 
-> [!NOTE]
-> In the `element:nth-child()` syntax, the child count includes sibling children of any element type; but it is considered a match only if the element _at that child position_ matches the other components of the selector.
-
 ## Syntax
 
 ```css-nolint
@@ -99,6 +96,11 @@ li.important:nth-child(-n + 3) {
 ```
 
 This selector selects list items if they are among the first three children and match the selector `li.important`.
+
+## Description
+
+> [!NOTE]
+> In the `element:nth-child()` syntax, the child count includes sibling children of any element type; but it is considered a match only if the element _at that child position_ matches the other components of the selector.
 
 ## Examples
 

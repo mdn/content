@@ -29,9 +29,6 @@ The **`:lang()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 </p>
 ```
 
-> [!NOTE]
-> In HTML, the language is determined by a combination of the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute, the {{HTMLElement("meta")}} element, and possibly by information from the protocol (such as HTTP headers). For other document types there may be other document methods for determining the language.
-
 ## Syntax
 
 ```plain
@@ -47,6 +44,9 @@ The **`:lang()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
     Matching by language range is case-insensitive.
 
 ## Description
+
+> [!NOTE]
+> In HTML, the language is determined by a combination of the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute, the {{HTMLElement("meta")}} element, and possibly by information from the protocol (such as HTTP headers). For other document types there may be other document methods for determining the language.
 
 When selecting languages, there is implicit wildcard matching, so `:lang(de-DE)` will match `de-DE`, `de-DE-1996`, `de-Latn-DE`, `de-Latf-DE`, and `de-Latn-DE-1996`.
 Explicitly using wildcards must include a full match of a language subtag, so `:lang("*-F*")` is invalid but `:lang("*-Fr")` is valid.
