@@ -60,6 +60,7 @@ A non-exhaustive list of permission-aware APIs includes:
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API): `microphone`, `camera`
 - [Notifications API](/en-US/docs/Web/API/Notifications_API): `notifications`
 - [Web-based Payment Handler API](/en-US/docs/Web/API/Web-Based_Payment_Handler_API): `payment-handler`
+- [Progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps) installation API ({{domxref("Navigator.install()")}}): `web-app-installation`
 - [Push API](/en-US/docs/Web/API/Push_API): `push`
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API): `captured-surface-control`, `display-capture`
 - [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API): `screen-wake-lock`
