@@ -54,6 +54,10 @@ In addition to the basic HTML global attributes, the following global attributes
   - : Hints what action label (or icon) to present for the enter key on virtual keyboards.
 - [`exportparts`](/en-US/docs/Web/HTML/Reference/Global_attributes/exportparts)
   - : Used to transitively export shadow parts from a nested shadow tree into a containing light tree.
+- [`focusgroup`](/en-US/docs/Web/HTML/Reference/Global_attributes/focusgroup)
+  - : Declaratively implements an accessible "roving tabindex" keyboard navigation pattern on an element and its focusable children, which includes creating a tab stop on the parent, arrow key navigation on the children, and remembering the last focused element in the group.
+- [`focusgroupstart`](/en-US/docs/Web/HTML/Reference/Global_attributes/focusgroup)
+  - : When set on a focusable child of a `focusgroup` element, marks the first item to receive focus on entering the group.
 - [`headingoffset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingoffset) {{experimental_inline}}
   - : Increases the computed heading level of the [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) inside the element, without changing the elements used to write them.
 - [`headingreset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingreset) {{experimental_inline}}
