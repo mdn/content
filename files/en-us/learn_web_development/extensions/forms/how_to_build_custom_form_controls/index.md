@@ -58,11 +58,14 @@ Finally, let's define how the control's options will behave:
 - When the control is opened, the selected option is highlighted
 - When the mouse is over an option, the option is highlighted and the previously highlighted option is returned to its normal state
 
+> [!NOTE]
+> This specification is provisional. It describes the early stages of the lesson, where the goal is to recreate a familiar native-like interaction in plain JavaScript. When accessibility semantics and explicit keyboard behavior are added later — in the [Making it accessible](#making_it_accessible) section and the [Keyboard interaction](#keyboard_interaction) subsection — this model is refined: a separate _active option_ can move through the list without committing, and the committed value changes only on defined commit paths, rather than during navigation. The later code therefore replaces the bidirectional toggle with explicit open, commit, close, and cancel operations.
+
 For the purposes of our example, we'll stop with that; however, if you're a careful reader, you'll notice that some behaviors are missing. For example, what do you think will happen if the user hits the tab key while the control is in its open state? The answer is _nothing_. OK, the right behavior seems obvious but the fact is, because it's not defined in our specs, it is very easy to overlook this behavior. This is especially true in a team environment when the people who design the control's behavior are different from the ones who implement it.
 
 Another fun example: what will happen if the user hits the up or down arrow keys while the control is in the open state? This one is a little bit trickier. If you consider that the active state and the open state are completely different, the answer is again "nothing will happen" because we did not define any keyboard interactions for the opened state. On the other hand, if you consider that the active state and the open state overlap a bit, the value may change but the option will definitely not be highlighted accordingly, once again because we did not define any keyboard interactions over options when the control is in its opened state (we have only defined what should happen when the control is opened, but nothing after that).
 
-We have to think a little further: what about the escape key? Pressing <kbd>Esc</kbd> key closes an open select. Remember, if you want to provide the same functionality as the existing native {{htmlelement('select')}}, it should behave the exact same way as the select for all users, from keyboard to mouse to touch to screen reader, and any other input device.
+We have to think a little further: what about the escape key? Pressing <kbd>Esc</kbd> key closes an open select. Remember, if you want to provide the same general functionality as the existing native {{htmlelement('select')}}, the visible and committed behaviors should be familiar across keyboard, mouse, touch, and screen reader. The final accessible stage of this lesson deliberately aligns the demonstrated navigation and value-commit interactions with the [WAI-ARIA APG Select-Only Combobox Example](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-select-only/) rather than every native implementation detail — extended interactions such as type-ahead, <kbd>PageUp</kbd>/<kbd>PageDown</kbd>, and <kbd>Alt</kbd>+<kbd>Arrow</kbd> are outside the scope of what this lesson demonstrates.
 
 In our example, the missing specifications are obvious so we will handle them, but it can be a real problem for exotic new controls. When it comes to standardized elements, of which the {{htmlelement('select')}} is one, the specification authors spent an inordinate amount of time specifying all interactions for every use case for every input device. Creating new controls is not that easy, especially if you are creating something that has not been done before, and therefore
 nobody has the slightest idea of what the expected behaviors and interactions are. At least select has been done before, so we know how it should behave!
@@ -711,6 +714,14 @@ Second, we need two new classes to let us hide the unneeded element: we visually
 
 This CSS visually hides one of the elements, but it is still available to screen readers.
 
+> [!NOTE]
+> This tutorial retains the earlier visual-hiding technique. Before
+> JavaScript runs, the native select is the intended fallback, but the
+> visually hidden custom control may also remain exposed to assistive
+> technologies. The final accessible example below keeps the inactive
+> control out of the accessibility tree in both the fallback and enhanced
+> states.
+
 Now we need a JavaScript switch to determine if the script is running or not. This switch is a couple of lines: if at page load time our script is running, it will remove the `no-widget` class and add the `widget` class, thereby swapping the visibility of the {{HTMLElement("select")}} element and the custom control.
 
 ```js
@@ -1049,6 +1060,9 @@ selectList.forEach((select) => {
 
 At that point, our control will change state according to our design, but its value doesn't get updated yet. We'll handle that next.
 
+> [!NOTE]
+> The helpers introduced above — `toggleOptList()`, `deactivateSelect()`, and `activeSelect()` — belong to the early teaching stage of this article. The progressive [Example 3](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_3) and [Example 4](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_4) intentionally keep these names and behaviors so each example builds on the previous one. In the final accessible stage, the bidirectional `toggleOptList()` is replaced with explicit `openOptList()`, `commitActiveOption()`, `closeOptList()`, and `cancelSelection()` operations, and `activeSelect()` is renamed to `deactivateOtherSelects()` because it now only needs to close any other open custom controls on focus.
+
 #### Live example
 
 Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_3).
@@ -1363,7 +1377,7 @@ selectList.forEach((select) => {
 });
 ```
 
-In the code above, it's worth noting the use of the [`tabIndex`](/en-US/docs/Web/API/HTMLElement/tabIndex) property. Using this property is necessary to ensure that the native control will never gain focus, and to make sure that our custom control gains focus when the user uses their keyboard or mouse.
+In the code above, it's worth noting the use of the [`tabIndex`](/en-US/docs/Web/API/HTMLElement/tabIndex) property. Setting `select.previousElementSibling.tabIndex = -1` removes the native control from sequential keyboard navigation, and setting `select.tabIndex = 0` makes the custom control focusable so that it gains focus when the user uses their keyboard or mouse. A negative tabindex removes an element from sequential keyboard navigation, but it does not prevent the element from being focused programmatically.
 
 With that, we're done!
 
@@ -1625,66 +1639,397 @@ But wait a second, are we really done?
 
 ## Making it accessible
 
-We have built something that works and though we're far from a fully-featured select box, it works nicely. But what we've done is nothing more than fiddle with the DOM. It has no real semantics, and even though it looks like a select box, from the browser's point of view it isn't one, so assistive technologies won't be able to understand it's a select box. In short, this pretty new select box isn't accessible!
+We have built something that works, and though we're far from a fully-featured select box, it works nicely. But what we've done is nothing more than fiddle with the DOM. It has no real semantics, and even though it looks like a select box, from the browser's point of view it isn't one, so assistive technologies won't be able to understand that it is a select box. In short, this pretty new select box isn't accessible!
 
-Fortunately, there is a solution and it's called [ARIA](/en-US/docs/Web/Accessibility/ARIA). ARIA stands for "Accessible Rich Internet Application", and it's [a W3C specification](https://w3c.github.io/aria/) specifically designed for what we are doing here: making web applications and custom controls accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states, and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes can be done by editing the HTML markup. We also update the ARIA attributes via JavaScript as the user updates their selected value.
+Fortunately, there is a solution and it's called [ARIA](/en-US/docs/Web/Accessibility/ARIA). ARIA stands for "Accessible Rich Internet Applications", and it's [a W3C specification](https://w3c.github.io/aria/) specifically designed for what we are doing here: making web applications and custom controls accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states, and properties as though the element we've just devised was the native element it tries to pass for. Some of these are added in the HTML, while others are kept up to date with JavaScript.
 
 ### The `role` attribute
 
-The key attribute used by [ARIA](/en-US/docs/Web/Accessibility/ARIA) is the [`role`](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques) attribute. The [`role`](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques) attribute accepts a value that defines what an element is used for. Each role defines its own requirements and behaviors. In our example, we will use the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role) role. It's a "composite role", which means elements with that role expect to have children, each with a specific role (in this case, at least one child with the `option` role).
+The key attribute used by [ARIA](/en-US/docs/Web/Accessibility/ARIA) is the [`role`](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques) attribute. The [`role`](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques) attribute accepts a value that defines what an element is used for. Each role defines its own requirements and behaviors.
 
-It's also worth noting that ARIA defines roles that are applied by default to standard HTML markup. For example, the {{HTMLElement("table")}} element matches the role `grid`, and the {{HTMLElement("ul")}} element matches the role `list`. Because we use a {{HTMLElement("ul")}} element, we want to make sure the `listbox` role of our control will supersede the `list` role of the {{HTMLElement("ul")}} element. To that end, we will use the role `presentation`. This role is designed to let us indicate that an element has no special meaning, and is used solely to present information. We will apply it to our {{HTMLElement("ul")}} element.
+In our example, the outer `<div>` container uses [`role="combobox"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role), which indicates that the element presents a list of options that can be expanded or collapsed. We also add [`aria-haspopup="listbox"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) to declare the type of popup, and [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) to point to the option list's `id`.
+Because the initialized form can contain more than one custom control, we don't hardcode these IDs in the HTML — duplicate IDs would break the ARIA references. Instead, the JavaScript generates a unique `id` for each control's listbox and each of its options during initialization, and sets `aria-controls` to point to the generated listbox `id`.
 
-To support the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role) role, we just have to update our HTML like this:
+The `<ul>` element uses [`role="listbox"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role), which tells assistive technologies that the element presents a list of selectable items. Each `<li>` element uses [`role="option"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role).
+
+Both the native `<select>` and the custom `<div>` receive an [`aria-label="Fruit"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute so that assistive technologies can announce a meaningful name for the control. The popup listbox also uses `aria-label="Fruit"` to provide the accessible name required by the `listbox` role.
+
+The native `<select>` keeps its accessible name as a no-JavaScript fallback. When JavaScript enables the custom widget, the final CSS shown below removes the native control from rendering, focus navigation, and the accessibility tree, leaving the custom combobox as the exposed accessible control.
+
+To support these roles, we update our HTML like this:
 
 ```html
-<!-- We add the role="listbox" attribute to our top element -->
-<div class="select" role="listbox">
-  <span class="value">Cherry</span>
-  <!-- We also add the role="presentation" to the ul element -->
-  <ul class="optList" role="presentation">
-    <!-- And we add the role="option" attribute to all the li elements -->
-    <li role="option" class="option">Cherry</li>
-    <li role="option" class="option">Lemon</li>
-    <li role="option" class="option">Banana</li>
-    <li role="option" class="option">Strawberry</li>
-    <li role="option" class="option">Apple</li>
-  </ul>
-</div>
+<form class="no-widget">
+  <select name="myFruit" aria-label="Fruit">
+    <option>Cherry</option>
+    <!-- ... -->
+  </select>
+
+  <div
+    class="select"
+    role="combobox"
+    aria-label="Fruit"
+    aria-haspopup="listbox"
+    aria-expanded="false">
+    <span class="value">Cherry</span>
+    <ul class="optList hidden" role="listbox" aria-label="Fruit">
+      <li class="option" role="option" aria-selected="true">Cherry</li>
+      <li class="option" role="option" aria-selected="false">Lemon</li>
+      <!-- ... -->
+    </ul>
+  </div>
+</form>
 ```
 
 > [!NOTE]
-> Including both the `role` attribute and a `class` attribute is not necessary. Instead of using `.option` use the `[role="option"]` [attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) in your CSS.
+> In this tutorial, we keep both the `role` attribute and the `class`
+> attribute: the role provides semantics for assistive technologies, while
+> the class names are used by the CSS and JavaScript. In a more generic
+> implementation, you could instead use selectors such as
+> `[role="option"]`, provided that you update the CSS and JavaScript
+> consistently.
 
-### The `aria-selected` attribute
+In the earlier stages, the inactive custom control is moved off-screen. At
+those stages, it has not yet acquired the final ARIA widget semantics, so
+exposing it does not create a second named form control. In this final
+accessible version, the custom control has combobox semantics and an
+accessible name. Leaving it in the accessibility tree before JavaScript
+runs would therefore expose both the native `<select>` and an inactive
+custom combobox. To avoid that duplication, the final example hides
+whichever control is inactive with `display: none`:
 
-Using the [`role`](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques) attribute is not enough. [ARIA](/en-US/docs/Web/Accessibility/ARIA) also provides many states and property attributes. The more and better you use them, the better your control will be understood by assistive technologies. In our case, we will limit our usage to one attribute: `aria-selected`.
+```css
+.widget select,
+.no-widget .select {
+  display: none;
+}
+```
 
-The `aria-selected` attribute is used to mark which option is currently selected; this lets assistive technologies inform the user what the current selection is. We will use it dynamically with JavaScript to mark the selected option each time the user chooses one. To that end, we need to revise our `updateValue()` function:
+The native `<select>` remains associated with the form, and `updateValue()`
+keeps its selected value synchronized for form submission.
+
+### The `aria-selected` and `aria-activedescendant` attributes
+
+Using the [`role`](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques) attribute is not enough. [ARIA](/en-US/docs/Web/Accessibility/ARIA) also provides many states and property attributes. The more and better you use them, the better your control will be understood by assistive technologies.
+
+The `aria-selected` attribute identifies the option the user has committed to as the current selection; this lets assistive technologies inform the user what the current selection is. The [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute on the combobox container identifies the option that is currently active and visually highlighted, but only while the listbox is expanded. Because both attributes refer to a specific option, each option has a unique `id`.
+
+The following functions cooperate to keep these states in sync:
+
+- `openOptList(select, activeIndex)` opens the listbox and establishes the active option as part of opening: it sets `aria-expanded` to `"true"`, removes the `hidden` class, adds the `active` class, and uses `highlightOption()` to align the visual highlight and `aria-activedescendant` with the option at `activeIndex`.
+- `commitActiveOption(select)` commits the currently active option by calling `updateValue()`. It is a no-op when the listbox is closed and falls back to a defensive no-op if the active option cannot be resolved; it does not close the listbox itself.
+- `closeOptList(select)` performs the shared presentational close: it restores the committed selected option's visual highlight via `highlightOption()`, sets `aria-expanded` to `"false"`, and removes `aria-activedescendant`.
+- `cancelSelection(select)` is the Escape path: it leaves the committed value unchanged and closes via `closeOptList()`, which restores the committed option as the active visual highlight before collapsing the listbox.
+- `highlightOption(select, option)` updates the visual active highlight on the chosen option, and — while the listbox is expanded — also updates `aria-activedescendant`. It does not by itself change `aria-selected` or the native `<select>`'s `selectedIndex`; those are only changed through `updateValue()`.
+- `updateValue()` is the only place where the committed selection changes: it updates `aria-selected`, the native `selectedIndex`, the visible value, the visual highlight, and (while expanded) `aria-activedescendant`.
+
+Open-state keyboard navigation moves the logical active highlight and `aria-activedescendant` through `highlightOption()`; it never calls `updateValue()` and therefore never changes `aria-selected` or the native `<select>`'s value. Pointer hover is a CSS-only presentation feedback that does not change `aria-activedescendant`, `aria-selected`, native `selectedIndex`, or the committed visible value. The hover feedback lives in one CSS rule, on options that are not currently the logical active option:
+
+```css
+.select .option:not(.highlight):hover {
+  background-color: rgb(0 0 0 / 10%);
+}
+```
+
+See [Updating the expanded state](#updating_the_expanded_state) below for the code.
+
+`updateValue()` is the only place where the committed selection changes:
 
 ```js
 function updateValue(select, index) {
   const nativeWidget = select.previousElementSibling;
   const value = select.querySelector(".value");
-  const optionList = select.querySelectorAll('[role="option"]');
-
-  // We make sure that all the options are not selected
-  optionList.forEach((other) => {
-    other.setAttribute("aria-selected", "false");
-  });
-
-  // We make sure the chosen option is selected
-  optionList[index].setAttribute("aria-selected", "true");
+  const optionList = select.querySelectorAll(".option");
 
   nativeWidget.selectedIndex = index;
   value.textContent = optionList[index].textContent;
-  highlightOption(select, optionList[index]);
+
+  optionList.forEach((option, optionIndex) => {
+    const isSelected = optionIndex === index;
+    option.classList.toggle("highlight", isSelected);
+    option.setAttribute("aria-selected", String(isSelected));
+
+    if (isSelected) {
+      if (select.getAttribute("aria-expanded") === "true") {
+        select.setAttribute("aria-activedescendant", option.id);
+      } else {
+        select.removeAttribute("aria-activedescendant");
+      }
+    }
+  });
 }
 ```
 
-It might have seemed simpler to let a screen reader focus on the off-screen select and ignore our stylized one, but this is not an accessible solution. Screen readers are not limited to blind people; people with low vision and even perfect vision use them as well. For this reason, you cannot have the screen reader focus on an off-screen element.
+`highlightOption()` keeps `aria-activedescendant` synchronized with the visual highlight while the listbox is open:
+
+```js
+function highlightOption(select, option) {
+  const optionList = select.querySelectorAll(".option");
+
+  optionList.forEach((other) => {
+    other.classList.remove("highlight");
+  });
+
+  option.classList.add("highlight");
+
+  if (select.getAttribute("aria-expanded") === "true") {
+    select.setAttribute("aria-activedescendant", option.id);
+  }
+}
+```
+
+It might have seemed simpler to let a screen reader focus on the off-screen select and ignore our stylized one, but you should not rely on an off-screen native select as the only accessible control. Screen readers are not limited to blind people; people with low vision and even perfect vision use them as well. For this reason, keeping the ARIA attributes in sync with the visual state is important.
+
+### Updating the expanded state
+
+The [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) attribute indicates whether the option list is currently open or closed. Popup state is changed through two explicit helpers, `openOptList()` and `closeOptList()`, instead of a single bidirectional toggle. `openOptList()` opens the list directly, sets `aria-expanded` to `"true"`, and uses `highlightOption()` to align the visual highlight and `aria-activedescendant` with the option at the `activeIndex` it was given. `closeOptList()` sets `aria-expanded` to `"false"` and removes `aria-activedescendant`. Because `openOptList()` always establishes the active option as part of opening, the invariant `POPUP_OPEN ⇒ active option exists` holds at the moment the popup becomes open:
+
+```js
+function openOptList(select, activeIndex) {
+  const optionList = select.querySelectorAll(".option");
+
+  // Validate the requested active option BEFORE any popup state mutation.
+  // If the requested index is invalid, leave the popup closed so the
+  // POPUP_OPEN ⇒ valid active option invariant cannot be violated.
+  if (
+    !Number.isInteger(activeIndex) ||
+    activeIndex < 0 ||
+    activeIndex >= optionList.length
+  ) {
+    return;
+  }
+
+  const optList = select.querySelector(".optList");
+
+  optList.classList.remove("hidden");
+  select.classList.add("active");
+  select.setAttribute("aria-expanded", "true");
+
+  highlightOption(select, optionList[activeIndex]);
+}
+
+function commitActiveOption(select) {
+  if (select.getAttribute("aria-expanded") !== "true") {
+    return;
+  }
+
+  const optionList = select.querySelectorAll(".option");
+  const activeId = select.getAttribute("aria-activedescendant");
+  const activeIndex = [...optionList].findIndex(
+    (option) => option.id === activeId,
+  );
+
+  if (activeIndex === -1) {
+    return;
+  }
+
+  updateValue(select, activeIndex);
+}
+
+function closeOptList(select) {
+  // aria-expanded is the single canonical source of truth for popup state.
+  // The .active and .hidden classes are presentation mirrors maintained by
+  // openOptList()/closeOptList() and are not consulted to authorize a state
+  // transition.
+  if (select.getAttribute("aria-expanded") !== "true") {
+    return;
+  }
+
+  const optionList = select.querySelectorAll(".option");
+  const committedOption = optionList[getIndex(select)];
+  if (committedOption) {
+    highlightOption(select, committedOption);
+  }
+
+  const optList = select.querySelector(".optList");
+
+  optList.classList.add("hidden");
+  select.classList.remove("active");
+  select.setAttribute("aria-expanded", "false");
+  select.removeAttribute("aria-activedescendant");
+}
+
+function cancelSelection(select) {
+  if (select.getAttribute("aria-expanded") !== "true") {
+    return;
+  }
+
+  closeOptList(select);
+}
+```
+
+Close paths are no longer all semantically identical. Accept paths — pressing <kbd>Enter</kbd> or <kbd>Space</kbd>, pressing <kbd>Tab</kbd>, the control losing focus, or clicking an option — first commit the active option via `commitActiveOption()` and then close via `closeOptList()`. <kbd>Escape</kbd> is a cancel path: it routes through `cancelSelection()`, which leaves the committed value unchanged and closes via `closeOptList()`. Clicking the body of an already-open combobox is a common presentational close that only calls `closeOptList()`. In every close path, `closeOptList()` restores the committed selected option as the logical active highlight, collapses the popup by adding the `hidden` class, sets `aria-expanded` to `"false"`, and removes `aria-activedescendant`, so that the collapsed combobox does not reference an option inside a hidden listbox.
+
+The `active` class follows the expanded state: `openOptList()` sets it on open and `closeOptList()` removes it on close. The companion helper `deactivateOtherSelects()` — the renamed successor of the earlier `activeSelect()` helper — still serves the same purpose it did in the early teaching stage: when one control receives focus, it closes any other open custom controls on the page by calling `closeOptList()` on each of them:
+
+```js
+function deactivateOtherSelects(select, selectList) {
+  selectList.forEach((other) => {
+    if (other !== select) {
+      closeOptList(other);
+    }
+  });
+}
+```
+
+### Keyboard interaction
+
+To support keyboard accessibility, the control must be operable via keyboard. We listen for `keydown` events and use a `switch` statement to handle the following keys:
+
+- <kbd>ArrowDown</kbd> — when collapsed, open the listbox with the currently committed option as the active option; when expanded, move the active option to the next option without changing the committed value
+- <kbd>ArrowUp</kbd> — when collapsed, open the listbox with the first option as the active option; when expanded, move the active option to the previous option without changing the committed value
+- <kbd>Home</kbd> — when collapsed, open the listbox with the first option as the active option; when expanded, move the active option to the first option without changing the committed value
+- <kbd>End</kbd> — when collapsed, open the listbox with the last option as the active option; when expanded, move the active option to the last option without changing the committed value
+- <kbd>Enter</kbd> / <kbd>Space</kbd> — when collapsed, open the listbox with the currently committed option as the active option; when expanded, commit the active option and close
+- <kbd>Tab</kbd> — when expanded, commit the active option and close; otherwise, allow normal focus movement
+- <kbd>Escape</kbd> — retain the previously committed value, restore the active/highlight state to the committed option, and close
+
+Navigation keys (<kbd>ArrowDown</kbd>, <kbd>ArrowUp</kbd>, <kbd>Home</kbd>, <kbd>End</kbd>) and the navigation accept keys (<kbd>Enter</kbd>, <kbd>Space</kbd>) call `event.preventDefault()` to prevent the browser's default scrolling or form submission behavior. When the custom select is collapsed, these keys open the listbox through `openOptList()` without changing the committed value. Once the listbox is open, <kbd>ArrowDown</kbd> and <kbd>ArrowUp</kbd> start from the currently highlighted active option rather than from the committed selection, so keyboard navigation continues from the currently active option established by opening or previous keyboard navigation. The starting index is derived by a small helper, `getActiveIndex()`, which falls back to the committed selection returned by `getIndex()` while the listbox is collapsed or when the active descendant is missing or no longer matches an option:
+
+```js
+function getActiveIndex(select, optionList) {
+  if (select.getAttribute("aria-expanded") === "true") {
+    const activeId = select.getAttribute("aria-activedescendant");
+    const index = [...optionList].findIndex((option) => option.id === activeId);
+
+    if (index !== -1) {
+      return index;
+    }
+  }
+
+  return getIndex(select);
+}
+```
+
+The supported navigation and value-commit semantics above are aligned with the [WAI-ARIA APG Select-Only Combobox Example](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-select-only/): a popup that opens with a chosen starting option, navigation keys that move the active option without committing, and accept keys that commit and close. This lesson focuses on those core interactions; extended interactions such as type-ahead, <kbd>PageUp</kbd>/<kbd>PageDown</kbd>, and <kbd>Alt</kbd>+<kbd>Arrow</kbd> are outside the demonstrated implementation.
+
+The `keydown` handler uses the helper above to derive its starting index. Open-state navigation only moves the active option through `highlightOption()`; it never calls `updateValue()` and therefore never changes the committed value:
+
+```js
+select.addEventListener("keydown", (event) => {
+  if (event.key === "Tab") {
+    if (select.getAttribute("aria-expanded") === "true") {
+      commitActiveOption(select);
+      closeOptList(select);
+    }
+    return;
+  }
+
+  let index = getActiveIndex(select, optionList);
+  const expanded = select.getAttribute("aria-expanded") === "true";
+
+  switch (event.key) {
+    case "ArrowDown":
+      event.preventDefault();
+
+      if (!expanded) {
+        openOptList(select, getIndex(select));
+        break;
+      }
+
+      if (index < optionList.length - 1) {
+        index++;
+        highlightOption(select, optionList[index]);
+      }
+      break;
+
+    case "ArrowUp":
+      event.preventDefault();
+
+      if (!expanded) {
+        openOptList(select, 0);
+        break;
+      }
+
+      if (index > 0) {
+        index--;
+        highlightOption(select, optionList[index]);
+      }
+      break;
+
+    case "Home":
+      event.preventDefault();
+
+      if (!expanded) {
+        openOptList(select, 0);
+        break;
+      }
+
+      highlightOption(select, optionList[0]);
+      break;
+
+    case "End":
+      event.preventDefault();
+
+      if (!expanded) {
+        openOptList(select, optionList.length - 1);
+        break;
+      }
+
+      highlightOption(select, optionList[optionList.length - 1]);
+      break;
+
+    case "Enter":
+    case " ":
+      event.preventDefault();
+
+      if (!expanded) {
+        openOptList(select, getIndex(select));
+        break;
+      }
+
+      commitActiveOption(select);
+      closeOptList(select);
+      break;
+
+    case "Escape":
+      event.preventDefault();
+      cancelSelection(select);
+      break;
+    default:
+      // Ignore all other keys
+      return;
+  }
+});
+```
+
+### Focus and click handling
+
+Proper focus management ensures that the option list opens and closes predictably. When the custom control receives focus, we deactivate any other open selects. On blur, if the listbox is open, we commit the active option and close it; if the listbox is already closed, we leave the value alone.
+
+For mouse interaction, pointer hover is presentational CSS only (`.select .option:not(.highlight):hover`); it does not change the logical active state or the committed value. We attach a `mousedown` handler on each option that calls `event.preventDefault()` to prevent the click from triggering a `blur` event on the container. The `click` handler on each option calls `event.stopPropagation()` to prevent the container's own click handler from running, explicitly calls `highlightOption()` on the clicked option to make it the logical active option, then calls `commitActiveOption()` and `closeOptList()`, and returns focus to the control. Because leaving the control commits the current logical active option, moving focus away after a mere pointer hover commits the previously active option (the one established by opening or keyboard navigation), not the option that was hovered:
+
+```js
+optionList.forEach((option, index) => {
+  option.addEventListener("mousedown", (event) => {
+    event.preventDefault();
+  });
+
+  option.addEventListener("click", (event) => {
+    event.stopPropagation();
+    highlightOption(select, optionList[index]);
+    commitActiveOption(select);
+    closeOptList(select);
+    select.focus();
+  });
+});
+
+select.addEventListener("click", () => {
+  if (select.getAttribute("aria-expanded") === "true") {
+    closeOptList(select);
+    return;
+  }
+  openOptList(select, getIndex(select));
+});
+```
+
+Opening with a pointer follows the same starting-point principle as <kbd>ArrowDown</kbd> because neither interaction expresses a navigation direction: both open the listbox with the currently committed option as the active option.
+
+The native `<select>` element is kept in sync via `nativeWidget.selectedIndex = index` inside `updateValue()`, ensuring that the form data remains accurate even when the custom control is used.
 
 Below is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](https://www.nvaccess.org/) or [VoiceOver](https://www.apple.com/accessibility/features/?vision)).
+
+The form switches to the `widget` state only after every custom select has been initialized. If synchronous initialization stops before that point, the original `no-widget` state keeps the native controls available.
 
 #### Live example
 
@@ -1692,7 +2037,7 @@ Check out the [full source code here](/en-US/docs/Learn_web_development/Extensio
 
 ```html hidden
 <form class="no-widget">
-  <select name="myFruit">
+  <select name="myFruit" aria-label="Fruit">
     <option>Cherry</option>
     <option>Lemon</option>
     <option>Banana</option>
@@ -1700,14 +2045,19 @@ Check out the [full source code here](/en-US/docs/Learn_web_development/Extensio
     <option>Apple</option>
   </select>
 
-  <div class="select" role="listbox">
+  <div
+    class="select"
+    role="combobox"
+    aria-label="Fruit"
+    aria-haspopup="listbox"
+    aria-expanded="false">
     <span class="value">Cherry</span>
-    <ul class="optList hidden" role="presentation">
+    <ul class="optList hidden" role="listbox" aria-label="Fruit">
       <li class="option" role="option" aria-selected="true">Cherry</li>
-      <li class="option" role="option">Lemon</li>
-      <li class="option" role="option">Banana</li>
-      <li class="option" role="option">Strawberry</li>
-      <li class="option" role="option">Apple</li>
+      <li class="option" role="option" aria-selected="false">Lemon</li>
+      <li class="option" role="option" aria-selected="false">Banana</li>
+      <li class="option" role="option" aria-selected="false">Strawberry</li>
+      <li class="option" role="option" aria-selected="false">Apple</li>
     </ul>
   </div>
 </form>
@@ -1716,10 +2066,7 @@ Check out the [full source code here](/en-US/docs/Learn_web_development/Extensio
 ```css hidden
 .widget select,
 .no-widget .select {
-  position: absolute;
-  left: -5000em;
-  height: 0;
-  overflow: hidden;
+  display: none;
 }
 
 .select {
@@ -1823,29 +2170,95 @@ Check out the [full source code here](/en-US/docs/Learn_web_development/Extensio
   background: black;
   color: white;
 }
+
+.select .option:not(.highlight):hover {
+  background-color: rgb(0 0 0 / 10%);
+}
 ```
 
 ```js hidden
-function deactivateSelect(select) {
-  if (!select.classList.contains("active")) return;
+// -------------------- //
+// Function definitions //
+// -------------------- //
+
+function openOptList(select, activeIndex) {
+  const optionList = select.querySelectorAll(".option");
+
+  // Validate the requested active option BEFORE any popup state mutation.
+  // If the requested index is invalid, leave the popup closed so the
+  // POPUP_OPEN ⇒ valid active option invariant cannot be violated.
+  if (
+    !Number.isInteger(activeIndex) ||
+    activeIndex < 0 ||
+    activeIndex >= optionList.length
+  ) {
+    return;
+  }
+
+  const optList = select.querySelector(".optList");
+
+  optList.classList.remove("hidden");
+  select.classList.add("active");
+  select.setAttribute("aria-expanded", "true");
+
+  highlightOption(select, optionList[activeIndex]);
+}
+
+function commitActiveOption(select) {
+  if (select.getAttribute("aria-expanded") !== "true") {
+    return;
+  }
+
+  const optionList = select.querySelectorAll(".option");
+  const activeId = select.getAttribute("aria-activedescendant");
+  const activeIndex = [...optionList].findIndex(
+    (option) => option.id === activeId,
+  );
+
+  if (activeIndex === -1) {
+    return;
+  }
+
+  updateValue(select, activeIndex);
+}
+
+function closeOptList(select) {
+  // aria-expanded is the single canonical source of truth for popup state.
+  // The .active and .hidden classes are presentation mirrors maintained by
+  // openOptList()/closeOptList() and are not consulted to authorize a state
+  // transition.
+  if (select.getAttribute("aria-expanded") !== "true") {
+    return;
+  }
+
+  const optionList = select.querySelectorAll(".option");
+  const committedOption = optionList[getIndex(select)];
+  if (committedOption) {
+    highlightOption(select, committedOption);
+  }
 
   const optList = select.querySelector(".optList");
 
   optList.classList.add("hidden");
   select.classList.remove("active");
+  select.setAttribute("aria-expanded", "false");
+  select.removeAttribute("aria-activedescendant");
 }
 
-function activeSelect(select, selectList) {
-  if (select.classList.contains("active")) return;
+function cancelSelection(select) {
+  if (select.getAttribute("aria-expanded") !== "true") {
+    return;
+  }
 
-  selectList.forEach(deactivateSelect);
-  select.classList.add("active");
+  closeOptList(select);
 }
 
-function toggleOptList(select, show) {
-  const optList = select.querySelector(".optList");
-
-  optList.classList.toggle("hidden");
+function deactivateOtherSelects(select, selectList) {
+  selectList.forEach((other) => {
+    if (other !== select) {
+      closeOptList(other);
+    }
+  });
 }
 
 function highlightOption(select, option) {
@@ -1856,6 +2269,10 @@ function highlightOption(select, option) {
   });
 
   option.classList.add("highlight");
+
+  if (select.getAttribute("aria-expanded") === "true") {
+    select.setAttribute("aria-activedescendant", option.id);
+  }
 }
 
 function updateValue(select, index) {
@@ -1863,15 +2280,22 @@ function updateValue(select, index) {
   const value = select.querySelector(".value");
   const optionList = select.querySelectorAll(".option");
 
-  optionList.forEach((other) => {
-    other.setAttribute("aria-selected", "false");
-  });
-
-  optionList[index].setAttribute("aria-selected", "true");
-
   nativeWidget.selectedIndex = index;
   value.textContent = optionList[index].textContent;
-  highlightOption(select, optionList[index]);
+
+  optionList.forEach((option, optionIndex) => {
+    const isSelected = optionIndex === index;
+    option.classList.toggle("highlight", isSelected);
+    option.setAttribute("aria-selected", String(isSelected));
+
+    if (isSelected) {
+      if (select.getAttribute("aria-expanded") === "true") {
+        select.setAttribute("aria-activedescendant", option.id);
+      } else {
+        select.removeAttribute("aria-activedescendant");
+      }
+    }
+  });
 }
 
 function getIndex(select) {
@@ -1880,60 +2304,178 @@ function getIndex(select) {
   return nativeWidget.selectedIndex;
 }
 
+// This function returns the index of the currently active option in the listbox
+// when the custom select is expanded. While expanded, keyboard navigation can
+// move `aria-activedescendant` away from the committed selection, and
+// subsequent keyboard navigation continues from that logical active option
+// rather than from the committed selection. If the custom select is collapsed,
+// or if the active descendant is missing or no longer matches an option, we
+// fall back to the committed selection returned by `getIndex()`.
+// It takes two parameters:
+// select     : the DOM node with the class `select` related to the native control
+// optionList : the list of options for the given custom control
+function getActiveIndex(select, optionList) {
+  if (select.getAttribute("aria-expanded") === "true") {
+    const activeId = select.getAttribute("aria-activedescendant");
+    const index = [...optionList].findIndex((option) => option.id === activeId);
+
+    if (index !== -1) {
+      return index;
+    }
+  }
+
+  return getIndex(select);
+}
+
+// ------------- //
+// Event binding //
+// ------------- //
+
 const form = document.querySelector("form");
 
-form.classList.remove("no-widget");
-form.classList.add("widget");
+const selectList = form.querySelectorAll(".select");
 
-const selectList = document.querySelectorAll(".select");
-
-selectList.forEach((select) => {
+selectList.forEach((select, selectIndex) => {
   const optionList = select.querySelectorAll(".option");
   const selectedIndex = getIndex(select);
 
   select.tabIndex = 0;
-  select.previousElementSibling.tabIndex = -1;
+
+  const optList = select.querySelector(".optList");
+  const listboxId = `custom-select-${selectIndex}-listbox`;
+  optList.id = listboxId;
+  select.setAttribute("aria-controls", listboxId);
+
+  optionList.forEach((option, optionIndex) => {
+    option.id = `custom-select-${selectIndex}-option-${optionIndex}`;
+  });
 
   updateValue(select, selectedIndex);
 
   optionList.forEach((option, index) => {
-    option.addEventListener("mouseover", () => {
-      highlightOption(select, option);
+    option.addEventListener("mousedown", (event) => {
+      event.preventDefault();
     });
 
     option.addEventListener("click", (event) => {
-      updateValue(select, index);
+      event.stopPropagation();
+      highlightOption(select, optionList[index]);
+      commitActiveOption(select);
+      closeOptList(select);
+      select.focus();
     });
   });
 
-  select.addEventListener("click", (event) => {
-    toggleOptList(select);
+  select.addEventListener("click", () => {
+    if (select.getAttribute("aria-expanded") === "true") {
+      closeOptList(select);
+      return;
+    }
+    openOptList(select, getIndex(select));
   });
 
-  select.addEventListener("focus", (event) => {
-    activeSelect(select, selectList);
+  select.addEventListener("focus", () => {
+    deactivateOtherSelects(select, selectList);
   });
 
-  select.addEventListener("blur", (event) => {
-    deactivateSelect(select);
+  select.addEventListener("blur", () => {
+    if (select.getAttribute("aria-expanded") === "true") {
+      commitActiveOption(select);
+      closeOptList(select);
+    }
   });
 
-  select.addEventListener("keyup", (event) => {
-    let index = getIndex(select);
-
-    if (event.key === "Escape") {
-      deactivateSelect(select);
-    }
-    if (event.key === "ArrowDown" && index < optionList.length - 1) {
-      index++;
-    }
-    if (event.key === "ArrowUp" && index > 0) {
-      index--;
+  select.addEventListener("keydown", (event) => {
+    if (event.key === "Tab") {
+      if (select.getAttribute("aria-expanded") === "true") {
+        commitActiveOption(select);
+        closeOptList(select);
+      }
+      return;
     }
 
-    updateValue(select, index);
+    let index = getActiveIndex(select, optionList);
+    const expanded = select.getAttribute("aria-expanded") === "true";
+
+    switch (event.key) {
+      case "ArrowDown":
+        event.preventDefault();
+
+        if (!expanded) {
+          openOptList(select, getIndex(select));
+          break;
+        }
+
+        if (index < optionList.length - 1) {
+          index++;
+          highlightOption(select, optionList[index]);
+        }
+        break;
+
+      case "ArrowUp":
+        event.preventDefault();
+
+        if (!expanded) {
+          openOptList(select, 0);
+          break;
+        }
+
+        if (index > 0) {
+          index--;
+          highlightOption(select, optionList[index]);
+        }
+        break;
+
+      case "Home":
+        event.preventDefault();
+
+        if (!expanded) {
+          openOptList(select, 0);
+          break;
+        }
+
+        highlightOption(select, optionList[0]);
+        break;
+
+      case "End":
+        event.preventDefault();
+
+        if (!expanded) {
+          openOptList(select, optionList.length - 1);
+          break;
+        }
+
+        highlightOption(select, optionList[optionList.length - 1]);
+        break;
+
+      case "Enter":
+      case " ":
+        event.preventDefault();
+
+        if (!expanded) {
+          openOptList(select, getIndex(select));
+          break;
+        }
+
+        commitActiveOption(select);
+        closeOptList(select);
+        break;
+
+      case "Escape":
+        event.preventDefault();
+        cancelSelection(select);
+        break;
+      default:
+        // Ignore all other keys
+        return;
+    }
   });
 });
+
+if (selectList.length > 0) {
+  form.classList.remove("no-widget");
+  form.classList.add("widget");
+}
 ```
 
 {{EmbedLiveSample("live_example_3",120,130)}}
