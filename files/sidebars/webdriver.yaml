@@ -124,7 +124,20 @@ sidebar:
           - link: /Web/WebDriver/Reference/BiDi/Modules/log/entryAdded
             code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/network
+        details: closed
         code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/network#commands
+            title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/addIntercept
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/continueRequest
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/failRequest
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/removeIntercept
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/permissions
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/script
