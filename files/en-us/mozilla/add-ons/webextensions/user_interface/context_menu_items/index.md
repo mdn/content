@@ -21,16 +21,23 @@ You can also override the context menus displayed in extension pages, such as cu
 
 ## Specifying context menu items
 
-You manage context menu items programmatically, using the {{WebExtAPIRef("contextMenus")}} API. However, you need to request the `contextMenus` permission in your manifest.json to be able to take advantage of the API.
+You manage context menu items programmatically using the `menus` or `contextMenus` namespace. The namespace and permission to use depend on the browser:
+
+- Use the `menus` namespace with the `menus` permission in Firefox and Safari.
+- Use the `contextMenus` namespace with the `contextMenus` permission in browsers that support it.
+
+In Firefox, `contextMenus` is an alias for `menus`. The examples in this guide use the `menus` namespace.
+
+To use the API with the `menus` namespace, request the `menus` permission in your `manifest.json` file:
 
 ```json
-"permissions": ["contextMenus"]
+"permissions": ["menus"]
 ```
 
-You can then add (and update or delete) the context menu items in your extension's background script. To create a menu item you specify an id, its title, and the context menus it should appear on:
+You can then add, update, or delete context menu items in your extension's background script. To create a menu item, specify an ID, a title, and the contexts in which it should appear:
 
 ```js
-browser.contextMenus.create(
+browser.menus.create(
   {
     id: "log-selection",
     title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
@@ -40,10 +47,10 @@ browser.contextMenus.create(
 );
 ```
 
-Your extension then listens for clicks on the menu items. The passed information about the item clicked, the context where the click happened, and details of the tab where the click took place can then be used to invoke the appropriate extension functionality.
+Your extension can listen for clicks on menu items. The event provides information about the clicked item, the context in which the click occurred, and the tab where it took place. You can use this information to invoke the appropriate extension functionality.
 
 ```js
-browser.contextMenus.onClicked.addListener((info, tab) => {
+browser.menus.onClicked.addListener((info, tab) => {
   switch (info.menuItemId) {
     case "log-selection":
       console.log(info.selectionText);
