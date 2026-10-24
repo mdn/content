@@ -2,6 +2,7 @@
 title: refX
 slug: Web/SVG/Reference/Attribute/refX
 page-type: svg-attribute
+browser-compat: svg.elements.marker.refX
 spec-urls:
   - https://w3c.github.io/svgwg/svg2-draft/painting.html#MarkerElementRefXAttribute
   - https://w3c.github.io/svgwg/svg2-draft/struct.html#SymbolElementRefXAttribute
@@ -100,6 +101,10 @@ Unlike other positioning attributes, `refX` is interpreted as being in the coord
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

@@ -2,6 +2,9 @@
 title: rx
 slug: Web/SVG/Reference/Attribute/rx
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.ellipse.rx
+  - svg.elements.rect.rx
 spec-urls: https://w3c.github.io/svgwg/svg2-draft/geometry.html#RX
 sidebar: svgref
 ---
@@ -120,6 +123,10 @@ The way the value of the `rx` attribute is interpreted depend on both the {{SVGA
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
