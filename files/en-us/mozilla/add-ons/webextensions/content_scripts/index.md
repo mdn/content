@@ -68,7 +68,7 @@ Other browsers have similar restrictions over the websites extensions can be ins
 > [!NOTE]
 > Because these restrictions include addons.mozilla.org, users who try to use your extension immediately after installation may find that it doesn't work. To avoid this, you should add an appropriate warning or an [onboarding page](https://extensionworkshop.com/documentation/develop/onboard-upboard-offboard-users/) to move users away from `addons.mozilla.org`.
 
-The set of domains can be restricted further through enterprise policies: Firefox recognizes the `restricted_domains` policy as documented at [ExtensionSettings in mozilla/policy-templates](https://github.com/mozilla/policy-templates/blob/master/README.md#extensionsettings). Chrome's `runtime_blocked_hosts` policy is documented at [Configure ExtensionSettings policy](https://support.google.com/chrome/a/answer/9867568).
+The set of domains can be restricted further through [enterprise policies](/en-US/docs/Mozilla/Add-ons/WebExtensions/Enterprise_policies): Firefox recognizes the `restricted_domains` policy as documented in [ExtensionSettings](https://firefox-admin-docs.mozilla.org/reference/policies/extensionsettings/) in the Firefox administrator reference. Chrome's `runtime_blocked_hosts` policy is documented at [Configure ExtensionSettings policy](https://support.google.com/chrome/a/answer/9867568).
 
 ### Limitations
 
