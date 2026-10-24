@@ -1,13 +1,13 @@
 name: Check Redirects
 
 on:
-  pull_request:
+  workflow_call:
 
 # No GITHUB_TOKEN permissions, as we only use it to increase API limit.
 permissions: {}
 
 jobs:
-  check-redirects:
+  check:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,27 +21,12 @@ jobs:
           node-version-file: ".nvmrc"
           cache: npm
 
-      # This is a "required" workflow so path filtering can not be used:
-      # https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/troubleshooting-required-status-checks#handling-skipped-but-required-checks
-      # We have to rely on a custom filtering mechanism to run the checks only if required files are modified.
-      - uses: dorny/paths-filter@ceb8a2b8f2d89434be7ff52d3de7ec3738c5cc9d # v4.0.3
-        name: See if any file needs checking
-        id: filter
-        with:
-          filters: |
-            required_files:
-              - ".nvmrc"
-              - "files/**"
-              - ".github/workflows/pr-check_redirects.yml"
-
       - name: Install
-        if: steps.filter.outputs.required_files == 'true'
         run: npm ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check redirects file(s)
-        if: steps.filter.outputs.required_files == 'true'
         run: npm run content validate-redirects en-US
         env:
           # Used by the `rari` cli to avoid rate limiting issues
