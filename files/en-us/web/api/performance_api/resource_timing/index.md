@@ -53,7 +53,7 @@ For more information, see also [Managing buffer sizes](/en-US/docs/Web/API/Perfo
 
 Many of the resource timing properties are restricted to return `0` or an empty string when the resource is a cross-origin request. To expose cross-origin timing information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
 
-For more information on the fields affected, see [Cross-origin timing information](/en-US/docs/Web/API/PerformanceResourceTiming#cross-origin_timing_information) in the reference page for the {{domxref("PerformanceResourceTiming")}} interface.
+For more information on the fields affected, see [Cross-origin restrictions](/en-US/docs/Web/API/PerformanceResourceTiming#cross-origin_restrictions) in the reference page for the {{domxref("PerformanceResourceTiming")}} interface.
 
 ## See also
 
