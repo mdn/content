@@ -8,7 +8,7 @@ browser-compat: api.SVGPreserveAspectRatio.meetOrSlice
 
 {{APIRef("SVG")}}
 
-The **`meetOrSlice`** read-only property of the {{domxref("SVGPreserveAspectRatio")}} interface reflects the type of the meet-or-slice value as specified by one of the `SVG_MEETORSLICE_*` constants defined on this interface.
+The **`meetOrSlice`** property of the {{domxref("SVGPreserveAspectRatio")}} interface reflects the type of the meet-or-slice value as specified by one of the `SVG_MEETORSLICE_*` constants defined on this interface.
 
 ## Value
 
