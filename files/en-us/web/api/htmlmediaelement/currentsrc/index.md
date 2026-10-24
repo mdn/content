@@ -8,10 +8,7 @@ browser-compat: api.HTMLMediaElement.currentSrc
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMediaElement.currentSrc`** property contains the
-absolute URL of the chosen media resource. This could happen, for example, if the web
-server selects a media file based on the resolution of the user's display. The value
-is an empty string if the `networkState` property is `EMPTY`.
+The **`currentSrc`** read-only property of the {{domxref("HTMLMediaElement")}} interface contains the absolute URL of the chosen media resource. This could happen, for example, if the web server selects a media file based on the resolution of the user's display. The value is an empty string if the `networkState` property is `EMPTY`.
 
 ## Value
 

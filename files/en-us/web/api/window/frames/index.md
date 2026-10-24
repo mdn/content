@@ -8,8 +8,7 @@ browser-compat: api.Window.frames
 
 {{APIRef("HTML DOM")}}
 
-Returns the window itself, which is an array-like object, listing the direct sub-frames
-of the current window.
+The **`frames`** read-only property of the {{domxref("Window")}} interface returns the window itself, which is an array-like object, listing the direct sub-frames of the current window.
 
 ## Value
 

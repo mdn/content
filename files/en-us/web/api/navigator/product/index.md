@@ -8,9 +8,7 @@ browser-compat: api.Navigator.product
 
 {{APIRef("HTML DOM")}}
 
-The value of the **`Navigator.product`** property is always
-`"Gecko"`, in any browser. This property is kept only for compatibility
-purposes.
+The **`product`** read-only property of the {{domxref("Navigator")}} interface is always `"Gecko"`, in any browser. This property is kept only for compatibility purposes.
 
 > [!NOTE]
 > Do not rely on this property to return a real product name. All browsers return `"Gecko"` as the value of this property.

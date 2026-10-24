@@ -8,8 +8,7 @@ browser-compat: api.HTMLMediaElement.readyState
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMediaElement.readyState`** property indicates the
-readiness state of the media.
+The **`readyState`** read-only property of the {{domxref("HTMLMediaElement")}} interface indicates the readiness state of the media.
 
 ## Value
 
