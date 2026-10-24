@@ -44,6 +44,8 @@ new FontFace(family, source, descriptors)
       - : With an allowable value for {{cssxref("font-feature-settings")}}.
     - `lineGapOverride`
       - : With an allowable value for {{cssxref("@font-face/line-gap-override")}}.
+    - `sizeAdjust`
+      - : With an allowable value for {{cssxref("@font-face/size-adjust")}}. Defaults to `"100%"`.
     - `stretch`
       - : With an allowable value for {{cssxref("@font-face/font-stretch")}}.
     - `style`
