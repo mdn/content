@@ -41,19 +41,16 @@ To trigger the dialog being shown when the user closes or navigates the tab, a `
 - Require [sticky activation](/en-US/docs/Glossary/Sticky_activation) for the dialog to be displayed. In other words, the browser will only show the dialog box if the frame or any embedded frame receives a user gesture or user interaction. If the user has never interacted with the page, then there is no user data to save, so no legitimate use case for the dialog.
 - Only show a generic browser-specified string in the displayed dialog. This cannot be controlled by the webpage code.
 
-The `beforeunload` event suffers from some problems:
+The `beforeunload` event is not reliably fired, especially on mobile platforms. For example, the `beforeunload` event is not fired at all in the following scenario:
 
-- It is not reliably fired, especially on mobile platforms. For example, the `beforeunload` event is not fired at all in the following scenario:
-  1. A mobile user visits your page.
-  2. The user then switches to a different app.
-  3. Later, the user closes the browser from the app manager.
+1. A mobile user visits your page.
+2. The user then switches to a different app.
+3. Later, the user closes the browser from the app manager.
 
-  > [!NOTE]
-  > It is recommended to use the {{domxref("Document.visibilitychange_event", "visibilitychange")}} event as a more reliable signal for automatic app state saving that gets around problems like the above. See [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) for more details.
+> [!NOTE]
+> It is recommended to use the {{domxref("Document.visibilitychange_event", "visibilitychange")}} event as a more reliable signal for automatic app state saving that gets around problems like the above. See [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) for more details.
 
-- In Firefox, `beforeunload` is not compatible with the [back/forward cache](https://web.dev/articles/bfcache) (bfcache): that is, Firefox will not place pages in the bfcache if they have `beforeunload` listeners, and this is bad for performance.
-
-It is therefore recommended that developers listen for `beforeunload` only when users have unsaved changes so that the dialog mentioned above can be used to warn them about impending data loss, and remove the listener again when it is not needed. Listening for `beforeunload` sparingly can minimize the effect on performance.
+It is therefore recommended that developers listen for `beforeunload` only when users have unsaved changes so that the dialog mentioned above can be used to warn them about impending data loss, and remove the listener again when it is not needed.
 
 ## Event handler aliases
 
