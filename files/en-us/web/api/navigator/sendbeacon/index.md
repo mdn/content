@@ -96,7 +96,7 @@ Additionally, the `unload` event is incompatible with the back/forward cache ([b
 implemented in modern browsers. Some browsers, such as Firefox, handle this incompatibility by excluding pages from the bfcache if they contain unload handlers,
 thus hurting performance. Others, such as Safari and Chrome on Android, handle it by not firing the `unload` event when the user navigates to another page in the same tab.
 
-The `pagehide` event is not as problematic as `unload`, because it is compatible with the bfcache. However, it suffers from the same reliability problems as the other two events, so we recommend that developers should avoid it as well, and use only `visibilitychange`.
+The `pagehide` event is not as problematic as `unload`, because it is compatible with the bfcache. However, it suffers from the same reliability problems. Developers should use `visibilitychange` instead.
 
 ## Examples
 
