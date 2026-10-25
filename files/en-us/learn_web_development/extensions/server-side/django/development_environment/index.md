@@ -360,7 +360,7 @@ The steps are:
 
 4. Press **Create repository**.
 
-   The repository will be created, containing just the files `README.txt` and `.gitignore`.
+   The repository will be created, containing just the files `.gitignore`, `LICENSE`, and `README.md`.
 
 ### Clone the repo to your local computer
 
