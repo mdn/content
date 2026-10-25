@@ -416,7 +416,7 @@ You can get information about the currently logged in user in templates with the
 
 Typically you will first test against the `\{{ user.is_authenticated }}` template variable to determine whether the user is eligible to see specific content. To demonstrate this, next we'll update our sidebar to display a "Login" link if the user is logged out, and a "Logout" link if they are logged in.
 
-Open the base template (**/catalog/templates/base_generic.html**) and copy the following text into the `sidebar` block, immediately before the `endblock` template tag.
+Open the base template (**/catalog/templates/base_generic.html**) and copy the following `{% if user.is_authenticated %} ... {% endif %}` block into the `sidebar` block, immediately before the closing `</ul>` tag.
 
 ```django
   <ul class="sidebar-nav">

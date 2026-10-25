@@ -148,9 +148,9 @@ You can easily install Python 3 (along with the _pip3_ tool) from [python.org](h
    2. Download the stable release of the most recent [supported version](https://docs.djangoproject.com/en/6.1/faq/install/#what-python-version-can-i-use-with-django) that works with Django 6.1.
       (at time of writing this is Python 3.14.7).
 
-2. Locate the file using _Finder_, and double-click the package file. Following the installation prompts.
+2. Locate the file using _Finder_, and double-click the package file. Follow the installation prompts.
 
-You can now confirm successful installation by running `python3 -V` again and checking for the Python version number.
+Confirm successful installation by opening a new terminal window and then running `python3 -V` again and checking for the Python version number.
 
 You can similarly check that _pip3_ is installed by listing the available packages:
 
@@ -170,7 +170,7 @@ Windows doesn't include Python by default, but you can easily install it (along 
 2. Install Python by double-clicking on the downloaded file and following the installation prompts
 3. Be sure to check the box labeled "Add Python to PATH"
 
-You can then verify that Python 3 was installed by entering the following text into the command prompt:
+You can then open a new command prompt and verify that Python 3 was installed by entering the following text:
 
 ```bash
 py -3 -V
@@ -318,7 +318,7 @@ For this tutorial we'll host our code on [GitHub](https://github.com/), one of t
 > [!NOTE]
 > Using SCM tools is good software development practice!
 > These instructions provide a basic introduction to git and GitHub.
-> To learn more, see [Learning Git](https://docs.github.com/en/get-started/start-your-journey/git-and-github-learning-resources).
+> To learn more, see [Version control](/en-US/docs/Learn_web_development/Core/Version_control) and [Git and GitHub learning resources](https://docs.github.com/en/get-started/start-your-journey/git-and-github-learning-resources) (GitHub docs).
 
 ### Key concepts
 
@@ -353,10 +353,10 @@ The steps are:
      > This will make _all_ source code visible.
      > Remember not to store credentials or other sensitive material in your repo unless it is private.
 
+   - Set the **Add README** toggle to **On**.
    - Choose **Python** in the _Add .gitignore_ selection list.
    - Choose your preferred license in the _Add license_ selection list.
      MDN uses "Creative Commons Zero v1.0 Universal" for this example.
-   - Check **Initialize this repository with a README**.
 
 4. Press **Create repository**.
 
@@ -519,9 +519,8 @@ py -3 manage.py runserver
 > [!NOTE]
 > You can ignore the warnings about "unapplied migration(s)" at this point!
 
-Once the server is running you can view the site by navigating to the following URL on your local web browser: `http://127.0.0.1:8000/`. You should see a site that looks like this:
-
-![The home page of the skeleton Django app](django_skeleton_app_homepage_django_4_0.png)
+Once the server is running you can view the site by navigating to the following URL on your local web browser: `http://127.0.0.1:8000/`.
+You should see Django's default welcome page, which displays a rocket and the message "The install worked successfully! Congratulations!".
 
 ## Summary
 
