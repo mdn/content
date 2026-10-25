@@ -41,9 +41,9 @@ When an `identity` option is provided in a `get()` call made on a {{glossary("Re
 - `mode` {{optional_inline}}
   - : A string specifying the UI mode to use for the sign-in flow. Possible values are:
     - `active`
-      - : The sign-in flow must be initiated via a user action such as clicking a button. If `mode` is set to `active`, `providers` can only have a length of `1`, otherwise the `get()` promise will reject.
+      - : The sign-in flow must be initiated via a user action such as clicking a button. If `mode` is set to `active`, `providers` can only have a length of `1`, otherwise the `get()` promise will reject. If the user is not signed in to the IdP, the browser can show the IdP's sign-in page in a dialog so that the user can sign in.
     - `passive`
-      - : The sign-in flow can be initiated without direct user interaction. This is the default value.
+      - : The sign-in flow can be initiated without direct user interaction. If the user is not signed in to any of the IdPs, the `get()` promise will reject. This is the default value.
 
     See [Active versus passive mode](/en-US/docs/Web/API/FedCM_API/RP_sign-in#active_versus_passive_mode) for more details of the difference between the two modes.
 
