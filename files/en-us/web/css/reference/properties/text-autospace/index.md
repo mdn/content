@@ -9,7 +9,7 @@ sidebar: cssref
 
 The **`text-autospace`** [CSS](/en-US/docs/Web/CSS) property allows you to specify the space applied between Chinese/Japanese/Korean (CJK) and non-CJK characters.
 
-The spacing between CJK and Western characters can improve readability in mixed-script text. Chinese and Japanese typography use different character-spacing conventions from Western typography, so adding space between these scripts can help distinguish their boundaries. For more information, see the [Chinese Layout Requirements (CLReq): Japanese and Western mixed text composition](https://www.w3.org/TR/clreq/#mixed_text_composition_in_horizontal_writing_mode) and the [Japanese Layout Requirements (JLReq): Composition of Japanese and Western mixed texts](https://www.w3.org/TR/jlreq/#composition_of_japanese_and_western_mixed_texts).
+The spacing between CJK and Western characters improves readability in mixed-script text. Chinese and Japanese typography traditional conventions often incorporate spacing between CJK ideographs and Latin letters or numbers to visually distinguish character boundaries. For more details on these typographic conventions, see the [Requirements for Chinese Text Layout (CLReq): Mixed text composition in horizontal writing mode](https://www.w3.org/TR/clreq/#mixed_text_composition_in_horizontal_writing_mode) and the [Requirements for Japanese Text Layout (JLReq): Composition of Japanese and Western mixed texts](https://www.w3.org/TR/jlreq/#composition_of_japanese_and_western_mixed_texts).
 
 ## Syntax
 
