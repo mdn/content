@@ -313,7 +313,7 @@ py -3 -m django --version
 Source Code Management (SCM) and versioning tools allow you to reliably store and recover versions of your source code, try out changes, and share code between your experiments and "known good code" when you need to.
 
 There are many different SCM tools, including git, Mercurial, Perforce, SVN (Subversion), CVS (Concurrent Versions System), etc., and cloud SCM hosting sources such as Bitbucket, GitHub, and GitLab.
-For this tutorial we'll hosting our code on [GitHub](https://github.com/), one of the most popular cloud based source code hosting services, and using the **git** tool to manage our source code locally and send it to GitHub when needed.
+For this tutorial we'll host our code on [GitHub](https://github.com/), one of the most popular cloud based source code hosting services, and use the **git** tool to manage our source code locally and send it to GitHub when needed.
 
 > [!NOTE]
 > Using SCM tools is good software development practice!
