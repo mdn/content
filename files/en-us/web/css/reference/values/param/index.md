@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`param()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is used to set link parameters. This can be done using the {{cssxref("link-parameters")}} CSS function, in the fragment URL of an external resource, or in the [`<url-modifier>`](/en-US/docs/Web/CSS/Reference/Values/url_function#url-modifier) of the `url()` CSS function.
+The **`param()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is used to set link parameters. This can be done using the {{cssxref("link-parameters")}} CSS property, in the fragment URL of an external resource, or in the [`<url-modifier>`](/en-US/docs/Web/CSS/Reference/Values/url_function#url-modifier) of the `url()` CSS function.
 
 ## Syntax
 
