@@ -41,14 +41,14 @@ To trigger the dialog being shown when the user closes or navigates the tab, a `
 - Require [sticky activation](/en-US/docs/Glossary/Sticky_activation) for the dialog to be displayed. In other words, the browser will only show the dialog box if the frame or any embedded frame receives a user gesture or user interaction. If the user has never interacted with the page, then there is no user data to save, so no legitimate use case for the dialog.
 - Only show a generic browser-specified string in the displayed dialog. This cannot be controlled by the webpage code.
 
-The `beforeunload` event is not reliably fired, especially on mobile platforms. For example, the `beforeunload` event is not fired at all in the following scenario:
+The `beforeunload` event is not reliably fired, especially on mobile platforms. For example, the event is not fired  in the following scenario:
 
 1. A mobile user visits your page.
 2. The user then switches to a different app.
 3. Later, the user closes the browser from the app manager.
 
 > [!NOTE]
-> It is recommended to use the {{domxref("Document.visibilitychange_event", "visibilitychange")}} event as a more reliable signal for automatic app state saving that gets around problems like the above. See [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) for more details.
+> The {{domxref("Document.visibilitychange_event", "visibilitychange")}} event provides a more reliable signal for when to save the application state. See [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) for more details.
 
 It is therefore recommended that developers listen for `beforeunload` only when users have unsaved changes so that the dialog mentioned above can be used to warn them about impending data loss, and remove the listener again when it is not needed.
 
