@@ -371,7 +371,18 @@ Now that the repository ("repo") is created on GitHub we are going to want to cl
    If you used the repository name "django_local_library", the URL should be something like: `https://github.com/<your_git_user_id>/django_local_library.git`.
 
 2. Install _git_ for your local computer ([official Git download guide](https://git-scm.com/downloads/)).
-3. Open a command prompt/terminal and clone your repo using the URL you copied above:
+3. Set up authentication so that git can push changes to GitHub.
+   The easiest way is to install the [GitHub CLI](https://cli.github.com/) and then run the following command, selecting **GitHub.com**, **HTTPS**, **Yes** (to authenticate git with your GitHub credentials), and **Login with a web browser** when prompted:
+
+   ```bash
+   gh auth login
+   ```
+
+   > [!NOTE]
+   > GitHub doesn't accept your account password for git operations.
+   > For other options, including SSH keys, see [Caching your GitHub credentials in Git](https://docs.github.com/en/get-started/git-basics/caching-your-github-credentials-in-git) (GitHub docs).
+
+4. Open a command prompt/terminal and clone your repo using the URL you copied above:
 
    ```bash
    git clone https://github.com/<your_git_user_id>/django_local_library.git
@@ -379,7 +390,7 @@ Now that the repository ("repo") is created on GitHub we are going to want to cl
 
    This will create the repository inside the current directory.
 
-4. Navigate into the repo folder.
+5. Navigate into the repo folder.
 
    ```bash
    cd django_local_library
