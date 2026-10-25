@@ -98,7 +98,7 @@ Most providers also offer a "basic" tier that is intended for small production s
 
 ## Getting your website ready to publish
 
-The [Django skeleton website](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) created using the _django-admin_ and _manage.py_ tools are configured to make development easier. Many of the Django project settings (specified in **settings.py**) should be different for production, either for security or performance reasons.
+The [Django skeleton website](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) created using the _django-admin_ and _manage.py_ tools is configured to make development easier. Many of the Django project settings (specified in **settings.py**) should be different for production, either for security or performance reasons.
 
 > [!NOTE]
 > It is common to have a separate **settings.py** file for production, and/or to conditionally import sensitive settings from a separate file or an environment variable. This file should then be protected, even if the rest of the source code is available on a public repository.
@@ -465,7 +465,7 @@ We'll also configure the default database and collect static files so that they 
    ![Image of PythonAnywhere Console management screen](python_anywhere_start_bash_console.png)
 
    Note that any console that you create is saved for your later re-use, along with all its history.
-   The green arrow above shows that this account has a console we could have opened instead.
+   The green arrow above shows that this account has an existing console we could have opened instead.
 
 3. PythonAnywhere consoles come with _virtualenvwrapper_ preinstalled, and its `mkvirtualenv`/`workon` commands are what its Web tab's "Virtualenv" field (used below) expects, so we'll use them here instead of the `venv` module covered in [Setting up a Django development environment](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/development_environment).
 
