@@ -81,7 +81,7 @@ A CSP is an HTTP header that tells the browser which sources of content, such as
 If an attacker manages to inject a script into a page, the browser will refuse to run it unless it comes from an allowed source.
 
 From Django 6.0 you can set a CSP using Django's built-in [`ContentSecurityPolicyMiddleware`](https://docs.djangoproject.com/en/6.1/ref/middleware/#django.middleware.csp.ContentSecurityPolicyMiddleware).
-To enable it for the LocalLibrary, open **/django-locallibrary-tutorial/locallibrary/settings.py** and add the middleware to the end of the `MIDDLEWARE` list:
+To enable it for the LocalLibrary, open **/locallibrary/settings.py** and add the middleware to the end of the `MIDDLEWARE` list:
 
 ```python
 MIDDLEWARE = [

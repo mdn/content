@@ -491,7 +491,7 @@ We'll also configure the default database and collect static files so that they 
    Enter the following command to clone your library sources into an appropriately named folder (you will need to replace the username values with your own name):
 
    ```bash
-   git clone https://github.com/<github_username>/django-locallibrary-tutorial.git <your_pythonanywhere_username>.pythonanywhere.com
+   git clone https://github.com/<github_username>/django_local_library.git <your_pythonanywhere_username>.pythonanywhere.com
 
    # Navigate into the new folder
    cd <your_pythonanywhere_username>.pythonanywhere.com
@@ -823,7 +823,7 @@ Select **Deploy from GitHub repo**.
 ![Railway website screen - deploy](railway_new_project_button_deploy_github_repo.png)
 
 All projects in the GitHub repos you shared with Railway during setup are displayed.
-Select your GitHub repository for the local library: `<user-name>/django-locallibrary-tutorial`.
+Select your GitHub repository for the local library: `<user-name>/django_local_library`.
 
 ![Railway website screen showing a dialog to choose an existing GitHub repository or choose a new one](railway_new_project_button_deploy_github_selectrepo.png)
 

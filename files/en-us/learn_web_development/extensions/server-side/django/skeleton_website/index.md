@@ -92,6 +92,9 @@ The _locallibrary_ project sub-folder is the entry point for the website:
 
 The **manage.py** script is used to create applications, work with databases, and start the development web server.
 
+> [!NOTE]
+> In the rest of this tutorial, file paths such as **/locallibrary/settings.py** are relative to the top-level project folder that contains **manage.py**.
+
 ## Creating the catalog application
 
 Next, run the following command to create the _catalog_ application that will live inside our _locallibrary_ project. Make sure to run this command from the same folder as your project's **manage.py**:
@@ -139,7 +142,7 @@ In addition we now have:
 
 Now that the application has been created, we have to register it with the project so that it will be included when any tools are run (like adding models to the database for example). Applications are registered by adding them to the `INSTALLED_APPS` list in the project settings.
 
-Open the project settings file, **django-locallibrary-tutorial/locallibrary/settings.py**, and find the definition for the `INSTALLED_APPS` list. Then add a new line at the end of the list, as shown below:
+Open the project settings file, **/locallibrary/settings.py**, and find the definition for the `INSTALLED_APPS` list. Then add a new line at the end of the list, as shown below:
 
 ```bash
 INSTALLED_APPS = [
@@ -154,7 +157,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-The new line specifies the application configuration object (`CatalogConfig`) that was generated for you in **/django-locallibrary-tutorial/catalog/apps.py** when you created the application.
+The new line specifies the application configuration object (`CatalogConfig`) that was generated for you in **/catalog/apps.py** when you created the application.
 
 > [!NOTE]
 > You'll notice that there are already a lot of other `INSTALLED_APPS` (and `MIDDLEWARE`, further down in the settings file). These enable support for the [Django administration site](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site) and the functionality it uses (including sessions, authentication, etc.).
@@ -193,7 +196,7 @@ There are two other settings you won't change now, but that you should be aware 
 
 The website is created with a URL mapper file (**urls.py**) in the project folder. While you can use this file to manage all your URL mappings, it is more usual to defer mappings to the associated application.
 
-Open **django-locallibrary-tutorial/locallibrary/urls.py** and note the instructional text which explains some of the ways to use the URL mapper.
+Open **/locallibrary/urls.py** and note the instructional text which explains some of the ways to use the URL mapper.
 
 ```python
 """
@@ -304,7 +307,7 @@ Before we do that, we should first run a _database migration_. This updates our 
 
 ### Running database migrations
 
-Django uses an Object-Relational-Mapper (ORM) to map model definitions in the Django code to the data structure used by the underlying database. As we change our model definitions, Django tracks the changes and can create database migration scripts (in **/django-locallibrary-tutorial/catalog/migrations/**) to automatically migrate the underlying data structure in the database to match the model.
+Django uses an Object-Relational-Mapper (ORM) to map model definitions in the Django code to the data structure used by the underlying database. As we change our model definitions, Django tracks the changes and can create database migration scripts (in **/catalog/migrations/**) to automatically migrate the underlying data structure in the database to match the model.
 
 When we created the website, Django automatically added a number of models for use by the admin section of the site (which we'll look at later). Run the following commands to define tables for those models in the database (make sure you are in the directory that contains **manage.py**):
 

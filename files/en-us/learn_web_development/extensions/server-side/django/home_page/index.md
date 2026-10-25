@@ -166,7 +166,7 @@ We'll talk more about templates and the `context` variable in the next section. 
 
 A template is a text file that defines the structure or layout of a file (such as an HTML page), it uses placeholders to represent actual content.
 
-A Django application created using **startapp** (like the skeleton of this example) will look for templates in a subdirectory named '**templates**' of your applications. For example, in the index view that we just added, the `render()` function will expect to find the file **_index.html_** in **/django-locallibrary-tutorial/catalog/templates/** and will raise an error if the file is not present.
+A Django application created using **startapp** (like the skeleton of this example) will look for templates in a subdirectory named '**templates**' of your applications. For example, in the index view that we just added, the `render()` function will expect to find the file **_index.html_** in **/catalog/templates/** and will raise an error if the file is not present.
 
 You can check this by saving the previous changes and accessing `127.0.0.1:8000` in your browser - it will display a fairly intuitive error message: "TemplateDoesNotExist at /catalog/", and other details.
 
@@ -229,7 +229,7 @@ We will use the following code snippet as the base template for the _LocalLibrar
 > [!NOTE]
 > We also introduce two additional template tags: `url` and `load static`. These tags will be explained in following sections.
 
-Create a new file **base_generic.html** in **/django-locallibrary-tutorial/catalog/templates/** and paste the following code to the file:
+Create a new file **base_generic.html** in **/catalog/templates/** and paste the following code to the file:
 
 ```django
 <!doctype html>
@@ -269,7 +269,7 @@ Create a new file **base_generic.html** in **/django-locallibrary-tutorial/catal
 
 The template includes CSS from [Bootstrap](https://getbootstrap.com/) to improve the layout and presentation of the HTML page. Using Bootstrap (or another client-side web framework) is a quick way to create an attractive page that displays well on different screen sizes.
 
-The base template also references a local CSS file (**styles.css**) that provides additional styling. Create a **styles.css** file in **/django-locallibrary-tutorial/catalog/static/css/** and paste the following code in the file:
+The base template also references a local CSS file (**styles.css**) that provides additional styling. Create a **styles.css** file in **/catalog/static/css/** and paste the following code in the file:
 
 ```css
 .sidebar-nav {
@@ -281,7 +281,7 @@ The base template also references a local CSS file (**styles.css**) that provide
 
 #### The index template
 
-Create a new HTML file **index.html** in **/django-locallibrary-tutorial/catalog/templates/** and paste the following code in the file.
+Create a new HTML file **index.html** in **/catalog/templates/** and paste the following code in the file.
 This code extends our base template on the first line, and then replaces the default `content` block for the template.
 
 ```django
@@ -348,7 +348,7 @@ You can add an image into the page in a similar way, for example:
 ```
 
 > [!NOTE]
-> The samples above specify where the files are located, but Django does not serve them by default. We configured the development web server to serve files by modifying the global URL mapper (**/django-locallibrary-tutorial/locallibrary/urls.py**) when we [created the website skeleton](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website), but still need to enable file serving in production. We'll look at this later.
+> The samples above specify where the files are located, but Django does not serve them by default. We configured the development web server to serve files by modifying the global URL mapper (**/locallibrary/urls.py**) when we [created the website skeleton](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website), but still need to enable file serving in production. We'll look at this later.
 
 For more information on working with static files see [Managing static files](https://docs.djangoproject.com/en/6.1/howto/static-files/) in the Django documentation.
 

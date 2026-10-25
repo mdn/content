@@ -39,7 +39,7 @@ After registering the models we'll show how to create a new "superuser", log int
 
 ## Registering models
 
-First, open **admin.py** in the catalog application (**/django-locallibrary-tutorial/catalog/admin.py**). It currently looks like this — note that it already imports `django.contrib.admin`:
+First, open **admin.py** in the catalog application (**/catalog/admin.py**). It currently looks like this — note that it already imports `django.contrib.admin`:
 
 ```python
 from django.contrib import admin
@@ -147,7 +147,7 @@ You can find a complete reference of all the admin site customization choices in
 
 To change how a model is displayed in the admin interface you define a [ModelAdmin](https://docs.djangoproject.com/en/6.1/ref/contrib/admin/#modeladmin-objects) class (which describes the layout) and register it with the model.
 
-Let's start with the `Author` model. Open **admin.py** in the catalog application (**/django-locallibrary-tutorial/catalog/admin.py**). Comment out your original registration (prefix it with a #) for the `Author` model:
+Let's start with the `Author` model. Open **admin.py** in the catalog application (**/catalog/admin.py**). Comment out your original registration (prefix it with a #) for the `Author` model:
 
 ```python
 # admin.site.register(Author)

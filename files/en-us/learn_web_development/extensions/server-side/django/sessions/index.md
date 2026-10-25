@@ -47,7 +47,7 @@ Django uses a cookie containing a special _session id_ to identify each browser 
 
 Sessions were enabled automatically when we [created the skeleton website](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) (in tutorial 2).
 
-The configuration is set up in the `INSTALLED_APPS` and `MIDDLEWARE` sections of the project file (**django-locallibrary-tutorial/locallibrary/settings.py**), as shown below:
+The configuration is set up in the `INSTALLED_APPS` and `MIDDLEWARE` sections of the project file (**/locallibrary/settings.py**), as shown below:
 
 ```python
 INSTALLED_APPS = [
@@ -109,13 +109,13 @@ request.session.modified = True
 ```
 
 > [!NOTE]
-> You can change the behavior so the site will update the database/send cookie on every request by adding `SESSION_SAVE_EVERY_REQUEST = True` into your project settings (**django-locallibrary-tutorial/locallibrary/settings.py**).
+> You can change the behavior so the site will update the database/send cookie on every request by adding `SESSION_SAVE_EVERY_REQUEST = True` into your project settings (**/locallibrary/settings.py**).
 
 ## Simple example — getting visit counts
 
 As a simple real-world example we'll update our library to tell the current user how many times they have visited the _LocalLibrary_ home page.
 
-Open **/django-locallibrary-tutorial/catalog/views.py**, and add the lines that contain `num_visits` into `index()` (as shown below).
+Open **/catalog/views.py**, and add the lines that contain `num_visits` into `index()` (as shown below).
 
 ```python
 def index(request):
@@ -145,7 +145,7 @@ Here we first get the value of the `'num_visits'` session key, setting the value
 > [!NOTE]
 > We might also test whether cookies are even supported in the browser here (see [How to use sessions](https://docs.djangoproject.com/en/6.1/topics/http/sessions/) for examples) or design our UI so that it doesn't matter whether or not cookies are supported.
 
-Add the line shown at the bottom of the following block to your main HTML template (**/django-locallibrary-tutorial/catalog/templates/index.html**) at the bottom of the "Dynamic content" section to display the `num_visits` context variable.
+Add the line shown at the bottom of the following block to your main HTML template (**/catalog/templates/index.html**) at the bottom of the "Dynamic content" section to display the `num_visits` context variable.
 
 ```django
 <h2>Dynamic content</h2>
