@@ -38,15 +38,13 @@ In addition to the `Window` interface, the event handler property `onpagehide` i
 
 ## Usage notes
 
-Like the [`unload`](/en-US/docs/Web/API/Window/unload_event)
 Like the [`unload`](/en-US/docs/Web/API/Window/unload_event) and [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) events, this event is not reliably fired by browsers, especially on mobile. For example, the `pagehide` event is not fired at all in the following scenario:
 
 1. A mobile user visits your page.
 2. The user then switches to a different app.
 3. Later, the user closes the browser from the app manager.
 
-However, unlike the `unload` event, this event is compatible with the [back/forward cache](https://web.dev/articles/bfcache) (bfcache), so adding a listener to this event will not prevent the page
-from being included in the bfcache.
+However, this event is compatible with the [back/forward cache](https://web.dev/articles/bfcache) (bfcache), so adding a listener to it doesn't prevent the page from being included in the bfcache.
 
 The best event to use to signal the end of a user's session is the [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) event. In browsers that don't support `visibilitychange` the `pagehide` event is the next-best alternative.
 
