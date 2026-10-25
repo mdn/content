@@ -91,7 +91,7 @@ console.log(uint8.findLast(isPrime)); // 11
 
 ## See also
 
-- [Polyfill of `TypedArray.prototype.findLast` in `core-js`](https://github.com/zloirock/core-js#array-find-from-last)
+- [Polyfill of `TypedArray.prototype.findLast` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.find()")}}

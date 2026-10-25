@@ -90,7 +90,7 @@ const value2 = computeWithCache(options); // No log
 
 ## See also
 
-- [Polyfill of `WeakMap.prototype.getOrInsertComputed` in `core-js`](https://github.com/zloirock/core-js#map-upsert)
+- [Polyfill of `WeakMap.prototype.getOrInsertComputed` in `core-js`](https://core-js.io/docs/features/ecmascript/collections#h-weakmap)
 - [es-shims polyfill of `WeakMap.prototype.getOrInsertComputed`](https://www.npmjs.com/package/weakmap.prototype.getorinsertcomputed)
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakMap.prototype.get()")}}

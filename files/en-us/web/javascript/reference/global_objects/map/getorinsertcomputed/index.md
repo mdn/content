@@ -75,7 +75,7 @@ map.getOrInsertComputed("bar", defaultCreator); // No log
 
 ## See also
 
-- [Polyfill of `Map.prototype.getOrInsertComputed` in `core-js`](https://github.com/zloirock/core-js#map-upsert)
+- [Polyfill of `Map.prototype.getOrInsertComputed` in `core-js`](https://core-js.io/docs/features/ecmascript/collections#h-map)
 - [es-shims polyfill of `Map.prototype.getOrInsertComputed`](https://www.npmjs.com/package/map.prototype.getorinsertcomputed)
 - {{jsxref("Map")}}
 - {{jsxref("Map.prototype.get()")}}
