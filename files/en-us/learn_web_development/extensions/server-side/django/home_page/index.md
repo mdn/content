@@ -86,7 +86,7 @@ urlpatterns += [
 > Whenever Django encounters the import function [`django.urls.include()`](https://docs.djangoproject.com/en/6.1/ref/urls/#django.urls.include), it splits the URL string at the designated end character and sends the remaining substring to the included _URLConf_ module for further processing.
 
 We also created a placeholder file for the _URLConf_ module, named **/catalog/urls.py**.
-Add the following lines to that file:
+Update the `urlpatterns` list to the following:
 
 ```python
 urlpatterns = [
