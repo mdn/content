@@ -200,7 +200,7 @@ In this case we'll use a Postgres database that is also hosted on Railway, but y
 
 The database connection information will be supplied to Django using an environment variable named `DATABASE_URL`.
 Rather than hard-coding this information into Django, we'll use the [dj-database-url](https://pypi.org/project/dj-database-url/) package to parse the `DATABASE_URL` environment variable and automatically convert it to Django's desired configuration format.
-In addition to installing the _dj-database-url_ package we'll also need to install [psycopg](https://www.psycopg.org/psycopg3/), as Django needs this to interact with Postgres databases.
+In addition to installing the _dj-database-url_ package we'll also need to install [psycopg3](https://www.psycopg.org/psycopg3/), as Django needs this to interact with Postgres databases.
 
 #### dj-database-url
 
