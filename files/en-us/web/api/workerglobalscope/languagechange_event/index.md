@@ -14,11 +14,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("languagechange", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onlanguagechange = (event) => { }
 ```
 
@@ -31,15 +35,15 @@ A generic {{domxref("Event")}}.
 You can use the `languagechange` event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:
 
 ```js
-worker.addEventListener("languagechange", () => {
+self.addEventListener("languagechange", () => {
   console.log("languagechange event detected!");
 });
 ```
 
-Or use the `onlanguagechange` event handler property:
+Or use the `onlanguagechange` event handler property (but note that this replaces other event listeners added using `onlanguagechange`, if any):
 
 ```js
-worker.onlanguagechange = (event) => {
+self.onlanguagechange = (event) => {
   console.log("languagechange event detected!");
 };
 ```
