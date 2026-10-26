@@ -72,6 +72,8 @@ Firefox 160 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 ## Changes for add-on developers
 
+- {{WebExtAPIRef("runtime.PlatformInfo")}} now returns `arch` as `arm64` for ARM64 platforms. Previously, it returned `aarch64`. This aligns the value returned by Firefox for ARM64 platforms with Chrome. ([Firefox bug 2080310](https://bugzil.la/2080310))
+
 <!-- ### Removals -->
 
 <!-- ### Other -->

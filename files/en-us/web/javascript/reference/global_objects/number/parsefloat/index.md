@@ -67,7 +67,7 @@ See {{jsxref("parseFloat()")}} for more detail and examples.
 
 ## See also
 
-- [Polyfill of `Number.parseFloat` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [Polyfill of `Number.parseFloat` in `core-js`](https://core-js.io/docs/features/ecmascript/number)
 - [es-shims polyfill of `Number.parseFloat`](https://www.npmjs.com/package/number.parsefloat)
 - {{jsxref("Number")}}
 - {{jsxref("parseFloat()")}}

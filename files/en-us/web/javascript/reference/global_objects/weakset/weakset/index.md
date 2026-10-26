@@ -57,5 +57,5 @@ Note that `foo !== bar`. While they are similar objects, _they are not
 
 ## See also
 
-- [Polyfill of `WeakSet` in `core-js`](https://github.com/zloirock/core-js#weakset)
+- [Polyfill of `WeakSet` in `core-js`](https://core-js.io/docs/features/ecmascript/collections#h-weakset)
 - {{jsxref("WeakSet")}}

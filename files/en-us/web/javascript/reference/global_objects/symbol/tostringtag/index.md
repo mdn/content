@@ -99,5 +99,5 @@ test[Symbol.toStringTag]; // "HTMLButtonElement"
 
 ## See also
 
-- [Polyfill of `Symbol.toStringTag` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [Polyfill of `Symbol.toStringTag` in `core-js`](https://core-js.io/docs/features/ecmascript/symbol)
 - {{jsxref("Object.prototype.toString()")}}

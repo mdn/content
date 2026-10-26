@@ -86,6 +86,6 @@ Number.isInteger(4500000000000000.1); // true, because of loss of precision
 
 ## See also
 
-- [Polyfill of `Number.isInteger` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [Polyfill of `Number.isInteger` in `core-js`](https://core-js.io/docs/features/ecmascript/number)
 - [es-shims polyfill of `Number.isInteger`](https://www.npmjs.com/package/number.isinteger)
 - {{jsxref("Number")}}
