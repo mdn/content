@@ -299,7 +299,7 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 
 ## See also
 
-- [Polyfill of `setInterval` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
+- [Polyfill of `setInterval` which allows passing arguments to the callback in `core-js`](https://core-js.io/docs/features/web-standards/settimeout-setinterval)
 - {{domxref("Window.clearInterval()")}}
 - {{domxref("WorkerGlobalScope.setInterval()")}}
 - {{domxref("Window.setTimeout()")}}

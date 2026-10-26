@@ -204,5 +204,5 @@ JSON.parse("{\"foo\": 1}"); // OK
 
 ## See also
 
-- [Polyfill of modern `JSON.parse` behavior (reviver's `context` parameter) in `core-js`](https://github.com/zloirock/core-js#jsonparse-source-text-access)
+- [Polyfill of modern `JSON.parse` behavior (reviver's `context` parameter) in `core-js`](https://core-js.io/docs/features/ecmascript/json)
 - {{jsxref("JSON.stringify()")}}

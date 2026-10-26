@@ -44,4 +44,5 @@ const w4 = window.self;
 
 ## See also
 
+- [Polyfill of `self` in `core-js`](https://core-js.io/docs/features/web-standards/self)
 - Its `Worker` equivalent, {{domxref("WorkerGlobalScope.self")}}.
