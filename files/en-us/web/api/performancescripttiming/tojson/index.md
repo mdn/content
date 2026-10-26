@@ -43,7 +43,7 @@ A JSON-serializable plain object containing the following properties:
 - {{domxref("PerformanceScriptTiming/sourceFunctionName", "sourceFunctionName")}}
 - {{domxref("PerformanceScriptTiming/sourceCharPosition", "sourceCharPosition")}}
 
-Each property's value is copied as-is.
+Each property's value is copied as-is. The returned object doesn't contain the {{domxref("PerformanceScriptTiming/window", "window")}} property because {{domxref("Window")}} doesn't provide a `toJSON()` operation.
 
 ## Examples
 
