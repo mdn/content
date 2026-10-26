@@ -39,7 +39,7 @@ A JSON-serializable plain object containing the following properties:
 - {{domxref("ContactAddress/recipient", "recipient")}}
 - {{domxref("ContactAddress/phone", "phone")}}
 
-The `addressLine` property contains an array of strings. Other property values are copied as-is.
+Each property's value is copied as-is.
 
 ## Examples
 

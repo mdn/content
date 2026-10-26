@@ -29,7 +29,7 @@ A JSON-serializable plain object containing the following properties:
 - {{domxref("GeolocationPosition/timestamp", "timestamp")}}
 - {{domxref("GeolocationPosition/coords", "coords")}}
 
-The `coords` property is serialized using {{domxref("GeolocationCoordinates/toJSON", "GeolocationCoordinates.toJSON()")}}. The `timestamp` value is copied as-is.
+Each property's value is copied as-is. When the returned object is passed to {{jsxref("JSON.stringify()")}}, the `coords` property is further serialized using {{domxref("GeolocationCoordinates/toJSON", "GeolocationCoordinates.toJSON()")}}.
 
 ## Examples
 

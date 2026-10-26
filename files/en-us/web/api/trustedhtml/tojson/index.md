@@ -10,7 +10,7 @@ browser-compat: api.TrustedHTML.toJSON
 
 The **`toJSON()`** method of the {{domxref("TrustedHTML")}} interface returns a string representing the `TrustedHTML` object. This is the same string that {{domxref("TrustedHTML.toString()")}} returns.
 
-The method is automatically called by {{jsxref("JSON.stringify()")}} when a `TrustedHTML` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization. The serialized value can then be deserialized using the {{domxref("TrustedTypePolicy.createHTML()")}} method within the reviver of {{jsxref("JSON.parse()")}}.
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `TrustedHTML` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization. The serialized value can then be converted back using the {{domxref("TrustedTypePolicy.createHTML()")}} method within the reviver of {{jsxref("JSON.parse()")}}, which runs the policy's transformation on it again.
 
 ## Syntax
 

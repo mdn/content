@@ -35,7 +35,7 @@ A JSON-serializable plain object containing the following properties:
 - {{domxref("PaymentResponse/payerEmail", "payerEmail")}}
 - {{domxref("PaymentResponse/payerPhone", "payerPhone")}}
 
-The `shippingAddress` property is serialized using {{domxref("PaymentAddress/toJSON", "PaymentAddress.toJSON()")}} when it is not `null`. Other property values are copied as-is.
+Each property's value is copied as-is. When the returned object is passed to {{jsxref("JSON.stringify()")}}, the `shippingAddress` property is further serialized using {{domxref("PaymentAddress/toJSON", "PaymentAddress.toJSON()")}} when it is not `null`.
 
 ## Examples
 

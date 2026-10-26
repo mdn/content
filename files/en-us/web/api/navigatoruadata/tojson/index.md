@@ -32,7 +32,7 @@ A JSON-serializable plain object containing the following properties:
 - {{domxref("NavigatorUAData/mobile", "mobile")}}
 - {{domxref("NavigatorUAData/platform", "platform")}}
 
-The `brands` property contains an array of objects with `brand` and `version` properties. The `mobile` and `platform` values are copied as-is.
+The `brands` array and its objects with `brand` and `version` properties are copied into a new array and new objects. Other property values are copied as-is.
 
 ## Examples
 

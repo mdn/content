@@ -31,7 +31,7 @@ A JSON-serializable plain object containing the following properties:
 - {{domxref("DOMQuad/p3", "p3")}}
 - {{domxref("DOMQuad/p4", "p4")}}
 
-The `p1`, `p2`, `p3`, and `p4` properties represent the four points of the quadrilateral. When the returned object is passed to {{jsxref("JSON.stringify()")}}, each point is serialized using its {{domxref("DOMPointReadOnly/toJSON", "toJSON()")}} method.
+Each property's value is copied as-is. When the returned object is passed to {{jsxref("JSON.stringify()")}}, the `p1`, `p2`, `p3`, and `p4` properties are further serialized using {{domxref("DOMPointReadOnly/toJSON", "DOMPointReadOnly.toJSON()")}}.
 
 ## Examples
 
