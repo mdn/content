@@ -108,7 +108,7 @@ Most use cases of `Iterator.zipKeyed()` are identical to those of {{jsxref("Iter
 
 ## See also
 
-- [Polyfill of `Iterator.zipKeyed` in `core-js`](https://core-js.io/docs/features/proposals/joint-iteration)
+- [Polyfill of `Iterator.zipKeyed` in `core-js`](https://core-js.io/docs/features/ecmascript/iterator)
 - [es-shims polyfill of `Iterator.zipKeyed`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.zip()")}}

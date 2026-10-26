@@ -129,7 +129,7 @@ const response = await fetch(
 
 ## See also
 
-- [Polyfill of `URL` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [Polyfill of `URL` in `core-js`](https://core-js.io/docs/features/web-standards/url)
 - [URL API](/en-US/docs/Web/API/URL_API)
 - [What is a URL?](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - {{domxref("URLSearchParams")}}.

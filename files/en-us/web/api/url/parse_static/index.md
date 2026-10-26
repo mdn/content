@@ -134,4 +134,4 @@ The results of each of the checks are shown below.
 ## See also
 
 - [`URL()` constructor](/en-US/docs/Web/API/URL/URL), which throws if the passed parameters define an invalid URL
-- [A polyfill of `URL.parse()`](https://github.com/zloirock/core-js#url-and-urlsearchparams) is available in [`core-js`](https://github.com/zloirock/core-js)
+- [A polyfill of `URL.parse()`](https://core-js.io/docs/features/web-standards/url) is available in [`core-js`](https://core-js.io/)

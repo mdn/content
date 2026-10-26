@@ -58,6 +58,9 @@ Firefox 159 is the current [Beta version of Firefox](https://www.firefox.com/en-
 ### APIs
 
 - Methods that sanitize HTML with the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API), such as {{domxref("Element.setHTML()")}}, now remove unwanted elements and attributes as the markup is parsed, instead of parsing all of the markup first and then cleaning up resulting DOM tree afterwards. The result is the same, except that neighboring text now lands in a single text node instead of being split across several. ([Firefox bug 2070498](https://bugzil.la/2070498)).
+- The [WebGL](/en-US/docs/Web/API/WebGL_API) {{domxref("EXT_clip_control")}} extension is now available on devices whose graphics driver supports it. Its {{domxref("EXT_clip_control.clipControlEXT()", "clipControlEXT()")}} method changes how clip-space coordinates map to window coordinates: it can move the clip origin to the upper-left corner, and set the depth range in normalized device coordinates to 0 to 1 instead of the default -1 to 1, matching the conventions of Direct3D and WebGPU. The 0 to 1 depth range also makes the reversed-Z technique effective, which improves depth precision with a floating-point depth buffer. ([Firefox bug 1885031](https://bugzil.la/1885031)).
+- The [WebGL](/en-US/docs/Web/API/WebGL_API) {{domxref("EXT_texture_mirror_clamp_to_edge")}} extension is now available on devices whose graphics driver supports it. It adds the `MIRROR_CLAMP_TO_EDGE_EXT` texture wrapping mode: texture coordinates from -1 to 0 sample a mirror image of the texture, and coordinates below -1 or above 1 clamp to its edge. This allows a symmetric image, such as a glow, to be stored as a texture containing only half of it. ([Firefox bug 1908749](https://bugzil.la/1908749)).
+- The [WebGL 2](/en-US/docs/Web/API/WebGL2RenderingContext) {{domxref("EXT_texture_norm16")}} extension is now enabled by default on devices whose graphics driver supports 16-bit normalized formats. It adds 16-bit normalized texture and renderbuffer formats, which store data such as elevation maps and medical images with more precision than 8-bit formats. ([Firefox bug 1735401](https://bugzil.la/1735401)).
 
 #### DOM
 
@@ -71,11 +74,18 @@ Firefox 159 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### General -->
+#### General
 
-<!-- #### WebDriver BiDi -->
+- Recommended preferences are now set as default values instead of user values, so they no longer remain in `prefs.js` after an unclean shutdown. ([Firefox bug 2074275](https://bugzil.la/2074275)).
+- Removed the `--remote-allow-system-access` command line argument. To enable system access, set the `MOZ_REMOTE_ALLOW_SYSTEM_ACCESS` environment variable to `1` instead. ([Firefox bug 2054896](https://bugzil.la/2054896)).
+- Fixed a memory leak where internal polling operations kept running until shutdown after timing out with an error. This could affect a variety of commands (e.g., WebDriver BiDi's `browsingContext.traverseHistory`). ([Firefox bug 2079758](https://bugzil.la/2079758)).
+
+#### WebDriver BiDi
+
+- Implemented the `emulation.setMediaFeaturesOverride` command, which allows clients to override the values of CSS media features. Currently only [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) is supported. ([Firefox bug 2064354](https://bugzil.la/2064354)).
+- Added a [machine-readable CDDL (Concise Data Definition Language) file](https://searchfox.org/firefox-main/rev/2d5c2a4eb5d99a92249ec13370b1de9c1a77c0f8/remote/webdriver-bidi/cddl/Fields.cddl) for the Firefox-specific extensions to WebDriver BiDi. ([Firefox bug 2057588](https://bugzil.la/2057588)).
 
 <!-- #### Marionette -->
 
