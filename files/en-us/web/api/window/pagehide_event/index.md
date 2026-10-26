@@ -14,11 +14,15 @@ For example, when the user clicks the browser's Back button, the current page re
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("pagehide", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onpagehide = (event) => { }
 ```
 
@@ -64,7 +68,7 @@ window.addEventListener("pagehide", (event) => {
 });
 ```
 
-This can also be written using the `onpagehide` event handler property on the {{domxref("Window")}}:
+This can also be written using the `onpagehide` event handler property on the {{domxref("Window")}} (but note that this replaces other event listeners added using `onpagehide`, if any):
 
 ```js
 window.onpagehide = (event) => {
