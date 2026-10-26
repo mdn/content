@@ -36,7 +36,7 @@ A JSON-serializable plain object containing the following properties:
 - {{domxref("NotRestoredReasons/reasons", "reasons")}}
 - {{domxref("NotRestoredReasons/children", "children")}}
 
-The `reasons` property is an array of objects serialized using {{domxref("NotRestoredReasonDetails/toJSON", "NotRestoredReasonDetails.toJSON()")}}, or `null`. The `children` property is an array of objects recursively serialized using `NotRestoredReasons.toJSON()`, or `null`. Other property values are copied as-is.
+The `reasons` and `children` properties contain arrays of reason details and child frame reasons, respectively, or `null`. When the returned object is passed to {{jsxref("JSON.stringify()")}}, these objects are serialized using {{domxref("NotRestoredReasonDetails/toJSON", "NotRestoredReasonDetails.toJSON()")}} and `NotRestoredReasons.toJSON()`, respectively. Other property values are copied as-is.
 
 ## Examples
 
