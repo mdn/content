@@ -66,7 +66,7 @@ To test it:
 In the Developer Tools console, you see the URLs for any resources the browser requests.
 For example, this screenshot shows the URLs from loading a Wikipedia page:
 
-![The Developer Tools console showing logged call URLs.](browser_console_url_from_extension.png)
+![The extension's Developer Tools console showing the URLs logged while loading a Wikipedia page.](browser_console_url_from_extension.png)
 
 ### Redirecting requests
 
@@ -130,7 +130,7 @@ See the {{WebExtAPIRef("webRequest.onBeforeRequest")}} documentation for more on
 
 To test it out, open a page on MDN that contains images (for example, [the page listing extension user interface components](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface)), [reload the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on), and then reload the MDN page. You see something like this:
 
-![Images on a page replaced with a frog image](beastify_by_redirect.png)
+![An MDN page with its images replaced by a frog image](beastify_by_redirect.png)
 
 ### Modifying request headers
 

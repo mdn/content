@@ -50,9 +50,9 @@ Not all browsers support all the APIs: for the details, see [Browser support for
 
 Throughout the JavaScript API listings, short code examples illustrate how the API is used. You can experiment with most of these examples using the console in the [Toolbox](https://extensionworkshop.com/documentation/develop/debugging/#developer-tools-toolbox). However, you need Toolbox running in the context of a web extension. To do this, open `about:debugging` then **This Firefox**, click **Inspect** against any installed or temporary extension, and open **Console**. You can then paste and run the example code in the console.
 
-For example, here is the first code example on this page running in the Toolbox console in Firefox Developer Edition:
+For example, here is the [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs) extension running in the Toolbox console in Firefox Developer Edition:
 
-![Illustration of a snippet of web extension code run from the console in the Toolbox](javascript_exercised_in_console.jpg)
+![The tabs-tabs-tabs example extension in the Toolbox console, in Firefox Developer Edition](javascript_exercised_in_console.jpg)
 
 ## JavaScript API listing
 

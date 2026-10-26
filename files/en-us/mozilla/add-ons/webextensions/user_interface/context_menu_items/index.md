@@ -7,7 +7,7 @@ sidebar: addonsidebar
 
 This user interface option adds one or more items to a browser context menu. This is the menu available when a user right-clicks on a web page. Tabs and bookmarks can also have context menus, available through the {{WebExtAPIRef("menus")}} API.
 
-![Example of content menu items added by a WebExtension, from the context-menu-demo example](context_menu_example.png)
+![Example of context menu items added by the menu-demo example](context_menu_example.png)
 
 You use this option to expose features relevant to specific browser or web page contexts. For example, you can show features to open a graphic editor when the user clicks on an image or offer a feature to save page content when part of a page is selected. You can add plain menu items, checkbox items, radio button groups, and separators to menus. Once a context menu item has been added using {{WebExtAPIRef("menus.create")}} it's displayed in all browser tabs, but you can hide it by removing it with {{WebExtAPIRef("menus.remove")}}.
 
