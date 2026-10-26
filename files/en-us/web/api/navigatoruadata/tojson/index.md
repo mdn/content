@@ -28,11 +28,11 @@ None.
 
 A JSON-serializable plain object containing the following properties:
 
-- {{domxref("NavigatorUAData/brands", "brands")}}
+- {{domxref("NavigatorUAData/brands", "brands")}}: the array and its objects with `brand` and `version` properties are copied into a new array and new objects
 - {{domxref("NavigatorUAData/mobile", "mobile")}}
 - {{domxref("NavigatorUAData/platform", "platform")}}
 
-The `brands` array and its objects with `brand` and `version` properties are copied into a new array and new objects. Other property values are copied as-is.
+Unless stated otherwise, each property's value is copied as-is.
 
 ## Examples
 

@@ -28,9 +28,9 @@ A JSON-serializable plain object containing the following properties:
 
 - {{domxref("PushSubscription/endpoint", "endpoint")}}
 - {{domxref("PushSubscription/expirationTime", "expirationTime")}}
-- `keys`
+- `keys`: the `p256dh` and `auth` values returned by {{domxref("PushSubscription/getKey", "getKey()")}}, encoded as [base64url](/en-US/docs/Glossary/Base64) strings without padding
 
-The `endpoint` and `expirationTime` values are copied as-is. The `keys` property contains the `p256dh` and `auth` values returned by {{domxref("PushSubscription/getKey", "getKey()")}}, encoded as [base64url](/en-US/docs/Glossary/Base64) strings without padding.
+Unless stated otherwise, each property's value is copied as-is.
 
 ## Examples
 

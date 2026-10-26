@@ -26,18 +26,26 @@ None.
 
 A JSON-serializable plain object containing the following properties:
 
-- {{domxref("PublicKeyCredential/authenticatorAttachment", "authenticatorAttachment")}} {{optional_inline}}
-- `clientExtensionResults`
+- {{domxref("PublicKeyCredential/authenticatorAttachment", "authenticatorAttachment")}} {{optional_inline}}: not present if its value is `null`
+- `clientExtensionResults`: a JSON-serializable object representing the values returned by {{domxref("PublicKeyCredential/getClientExtensionResults", "getClientExtensionResults()")}}, with buffer values encoded as base64url strings
 - {{domxref("PublicKeyCredential/id", "id")}}
-- {{domxref("PublicKeyCredential/rawId", "rawId")}}
-- {{domxref("PublicKeyCredential/response", "response")}}
+- {{domxref("PublicKeyCredential/rawId", "rawId")}}: encoded as a [base64url](/en-US/docs/Glossary/Base64) string
+- {{domxref("PublicKeyCredential/response", "response")}}: a JSON-serializable object representing the {{domxref("AuthenticatorResponse")}} value, with buffer values encoded as base64url strings. Namely:
+  - When it's a {{domxref("AuthenticatorAssertionResponse")}}, contains the following properties:
+    - {{domxref("AuthenticatorAssertionResponse/authenticatorData", "authenticatorData")}}
+    - {{domxref("AuthenticatorResponse/clientDataJSON", "clientDataJSON")}}
+    - {{domxref("AuthenticatorAssertionResponse/signature", "signature")}}
+    - {{domxref("AuthenticatorAssertionResponse/userHandle", "userHandle")}} {{optional_inline}}: not present if its value is `null`
+  - When it's a {{domxref("AuthenticatorAttestationResponse")}}, contains the following properties:
+    - {{domxref("AuthenticatorAttestationResponse/attestationObject", "attestationObject")}}
+    - `authenticatorData`: the value returned by {{domxref("AuthenticatorAttestationResponse.getAuthenticatorData()", "getAuthenticatorData()")}}
+    - {{domxref("AuthenticatorResponse/clientDataJSON", "clientDataJSON")}}
+    - `publicKey` {{optional_inline}}: the value returned by {{domxref("AuthenticatorAttestationResponse.getPublicKey()", "getPublicKey()")}}, omitted if it is `null`
+    - `publicKeyAlgorithm`: the value returned by {{domxref("AuthenticatorAttestationResponse.getPublicKeyAlgorithm()", "getPublicKeyAlgorithm()")}}
+    - `transports`: the value returned by {{domxref("AuthenticatorAttestationResponse.getTransports()", "getTransports()")}}
 - {{domxref("Credential/type", "type")}}
 
-The `id` and `type` values are copied as-is. The `authenticatorAttachment` value is copied as-is if it is not `null`; otherwise, the property is omitted. The `rawId` value is encoded as a [base64url](/en-US/docs/Glossary/Base64) string.
-
-The `clientExtensionResults` property contains a JSON-serializable object representing the values returned by {{domxref("PublicKeyCredential/getClientExtensionResults", "getClientExtensionResults()")}}, with buffer values encoded as base64url strings.
-
-The `response` property contains a JSON-serializable object representing {{domxref("AuthenticatorAttestationResponse")}} when the credential was returned by {{domxref("CredentialsContainer/create", "navigator.credentials.create()")}}, or {{domxref("AuthenticatorAssertionResponse")}} when it was returned by {{domxref("CredentialsContainer/get", "navigator.credentials.get()")}}. Buffer values are encoded as base64url strings.
+Unless stated otherwise, each property's value is copied as-is.
 
 ### Exceptions
 
