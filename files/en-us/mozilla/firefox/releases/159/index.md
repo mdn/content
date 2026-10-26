@@ -52,8 +52,6 @@ No notable changes.
 - Implemented the `emulation.setMediaFeaturesOverride` command, which allows clients to override the values of CSS media features. Currently only [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) is supported. ([Firefox bug 2064354](https://bugzil.la/2064354)).
 - Added a [machine-readable CDDL (Concise Data Definition Language) file](https://searchfox.org/firefox-main/rev/2d5c2a4eb5d99a92249ec13370b1de9c1a77c0f8/remote/webdriver-bidi/cddl/Fields.cddl) for the Firefox-specific extensions to WebDriver BiDi. ([Firefox bug 2057588](https://bugzil.la/2057588)).
 
-## Changes for add-on developers
-
 ## Experimental web features
 
 These features are shipping in Firefox 159 but are disabled by default.
