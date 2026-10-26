@@ -14,11 +14,15 @@ This event is not cancellable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("message", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onmessage = (event) => { }
 ```
 
@@ -44,6 +48,8 @@ first.onchange = () => {
 
 // worker.js
 
+// Assign an onmessage handler (but note that this replaces other event listeners
+// added using onmessage, if any)
 self.onmessage = (e) => {
   console.log("Message received from main script");
   const workerResult = `Result: ${e.data[0] * e.data[1]}`;
@@ -52,7 +58,7 @@ self.onmessage = (e) => {
 };
 ```
 
-In the `main.js` script, an `onmessage` handler is used to handle messages from the worker script:
+In the `main.js` script, an `onmessage` handler is used to handle messages from the worker script (but note that this replaces other event listeners added using `onmessage`, if any):
 
 ```js
 // main.js
@@ -66,9 +72,9 @@ myWorker.onmessage = (e) => {
 Alternatively, the script can listen for the message using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener):
 
 ```js
-// worker.js
+// main.js
 
-self.addEventListener("message", (e) => {
+myWorker.addEventListener("message", (e) => {
   result.textContent = e.data;
   console.log("Message received from worker");
 });
