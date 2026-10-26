@@ -169,7 +169,7 @@ A typical authentication flow is as follows:
 
 #### Autofill UI
 
-Autofill UI, also sometimes called _conditional mediation_, is a feature that makes it easier for users to use public key credentials to sign in, especially when they also have passwords for the site.
+Autofill UI, also sometimes called _conditional get_, is a feature that makes it easier for users to use public key credentials to sign in, especially when they also have passwords for the site.
 
 It's expected that websites that adopt passkeys will typically add them alongside existing support for password-based authentication, so a user might, for a given site, have a password, one or more passkeys, or both. In this situation, a UI that asks them which method they want to sign in with can be confusing: they might not remember which method they have for which account. Autofill UI helps with this problem, by inviting users to sign in with a passkey if and only if a suitable passkey is currently available.
 
@@ -179,13 +179,15 @@ To enable autofill UI, the website's sign-in page contains a form, which invites
 <input type="text" name="username" autocomplete="username webauthn" />
 ```
 
-When the page loads, the website first checks that conditional mediation is supported, and if it is, makes a call to {{domxref("CredentialsContainer.get()")}}. The call:
+When the page loads, the website first checks that conditional get is supported, and if it is, makes a call to {{domxref("CredentialsContainer.get()")}}. The call:
 
 - Passes `"conditional"` as the value of the [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option.
 - Omits the [`allowCredentials`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#allowcredentials) option, to indicate that any applicable credentials are acceptable.
 
 ```js
-const supported = await PublicKeyCredential.isConditionalMediationAvailable();
+const support = await PublicKeyCredential.getClientCapabilities();
+const supported = support.conditionalGet;
+
 if (supported) {
   const options = {
     challenge: challengeFromServer,
@@ -208,7 +210,7 @@ If and when the user does interact with the field, the browser will ask any avai
 This essentially enables a website to provide a unified autofill, including both passwords and public key credentials for a single account.
 
 > [!NOTE]
-> Note that only [discoverable credentials](#discoverable_and_non-discoverable_credentials) are included in calls that use conditional mediation, because the browser needs to request applicable credentials without knowing the credential ID values for them.
+> Note that only [discoverable credentials](#discoverable_and_non-discoverable_credentials) are included in calls that use conditional get, because the browser needs to request applicable credentials without knowing the credential ID values for them.
 
 ### Discoverable and non-discoverable credentials
 
