@@ -31,7 +31,7 @@ A JSON-serializable plain object containing the following properties:
 - {{domxref("Performance/navigation", "navigation")}}
 - {{domxref("Performance/interactionCount", "interactionCount")}}
 
-When the returned object is passed to {{jsxref("JSON.stringify()")}}, the `timing` and `navigation` properties are serialized using {{domxref("PerformanceTiming/toJSON", "PerformanceTiming.toJSON()")}} and {{domxref("PerformanceNavigation/toJSON", "PerformanceNavigation.toJSON()")}}, respectively. Other property values are copied as-is.
+Each property's value is copied as-is. When the returned object is passed to {{jsxref("JSON.stringify()")}}, the `timing` and `navigation` properties are further serialized using {{domxref("PerformanceTiming/toJSON", "PerformanceTiming.toJSON()")}} and {{domxref("PerformanceNavigation/toJSON", "PerformanceNavigation.toJSON()")}}, respectively.
 
 The returned object doesn't contain the {{domxref("Performance.eventCounts", "eventCounts")}} property because {{domxref("EventCounts")}} doesn't provide a `toJSON()` operation.
 

@@ -61,7 +61,7 @@ A JSON-serializable plain object containing the following properties:
 - {{domxref("PerformanceResourceTiming/responseStatus", "responseStatus")}}
 - {{domxref("PerformanceResourceTiming/serverTiming", "serverTiming")}}
 
-The `serverTiming` property contains an array of server timings. When the returned object is passed to {{jsxref("JSON.stringify()")}}, these timings are serialized using {{domxref("PerformanceServerTiming/toJSON", "PerformanceServerTiming.toJSON()")}}. Other property values are copied as-is.
+Each property's value is copied as-is. When the returned object is passed to {{jsxref("JSON.stringify()")}}, the objects in the `serverTiming` array are further serialized using {{domxref("PerformanceServerTiming/toJSON", "PerformanceServerTiming.toJSON()")}}.
 
 ## Examples
 

@@ -41,7 +41,7 @@ A JSON-serializable plain object containing the following properties:
 - {{domxref("PerformanceLongAnimationFrameTiming/blockingDuration", "blockingDuration")}}
 - {{domxref("PerformanceLongAnimationFrameTiming/scripts", "scripts")}}
 
-The `scripts` property contains an array of script timings. When the returned object is passed to {{jsxref("JSON.stringify()")}}, these timings are serialized using {{domxref("PerformanceScriptTiming/toJSON", "PerformanceScriptTiming.toJSON()")}}. Other property values are copied as-is.
+Each property's value is copied as-is. When the returned object is passed to {{jsxref("JSON.stringify()")}}, the objects in the `scripts` array are further serialized using {{domxref("PerformanceScriptTiming/toJSON", "PerformanceScriptTiming.toJSON()")}}.
 
 ## Examples
 

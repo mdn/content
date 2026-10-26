@@ -31,7 +31,9 @@ A JSON-serializable plain object containing the following properties:
 - {{domxref("LayoutShiftAttribution/previousRect", "previousRect")}}
 - {{domxref("LayoutShiftAttribution/currentRect", "currentRect")}}
 
-When the returned object is passed to {{jsxref("JSON.stringify()")}}, the `previousRect` and `currentRect` values are serialized using {{domxref("DOMRectReadOnly/toJSON", "DOMRectReadOnly.toJSON()")}}. The returned object doesn't contain the {{domxref("LayoutShiftAttribution/node", "node")}} property because {{domxref("Node")}} doesn't provide a `toJSON()` operation.
+Each property's value is copied as-is. When the returned object is passed to {{jsxref("JSON.stringify()")}}, the `previousRect` and `currentRect` properties are further serialized using {{domxref("DOMRectReadOnly/toJSON", "DOMRectReadOnly.toJSON()")}}.
+
+The returned object doesn't contain the {{domxref("LayoutShiftAttribution/node", "node")}} property because {{domxref("Node")}} doesn't provide a `toJSON()` operation.
 
 ## Examples
 

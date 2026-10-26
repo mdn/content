@@ -75,7 +75,7 @@ A JSON-serializable plain object containing the following properties:
 - {{domxref("PerformanceNavigationTiming/notRestoredReasons", "notRestoredReasons")}}
 - {{domxref("PerformanceNavigationTiming/confidence", "confidence")}}
 
-The `serverTiming` property contains an array of server timings. When the returned object is passed to {{jsxref("JSON.stringify()")}}, these timings are serialized using {{domxref("PerformanceServerTiming/toJSON", "PerformanceServerTiming.toJSON()")}}. Similarly, the `notRestoredReasons` and `confidence` properties are serialized using {{domxref("NotRestoredReasons/toJSON", "NotRestoredReasons.toJSON()")}} and {{domxref("PerformanceTimingConfidence/toJSON", "PerformanceTimingConfidence.toJSON()")}}, respectively, when they are not `null`. Other property values are copied as-is.
+Each property's value is copied as-is. When the returned object is passed to {{jsxref("JSON.stringify()")}}, the objects in the `serverTiming` array and the `notRestoredReasons` and `confidence` properties are further serialized using {{domxref("PerformanceServerTiming/toJSON", "PerformanceServerTiming.toJSON()")}}, {{domxref("NotRestoredReasons/toJSON", "NotRestoredReasons.toJSON()")}}, and {{domxref("PerformanceTimingConfidence/toJSON", "PerformanceTimingConfidence.toJSON()")}}, respectively, when they are not `null`.
 
 ## Examples
 

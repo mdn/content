@@ -35,7 +35,7 @@ A JSON-serializable plain object containing the following properties:
 - {{domxref("PerformanceEntry/navigationId", "navigationId")}}
 - {{domxref("PerformanceLongTaskTiming/attribution", "attribution")}}
 
-The `attribution` property contains an array of task attributions. When the returned object is passed to {{jsxref("JSON.stringify()")}}, these attributions are serialized using {{domxref("TaskAttributionTiming/toJSON", "TaskAttributionTiming.toJSON()")}}. Other property values are copied as-is.
+Each property's value is copied as-is. When the returned object is passed to {{jsxref("JSON.stringify()")}}, the objects in the `attribution` array are further serialized using {{domxref("TaskAttributionTiming/toJSON", "TaskAttributionTiming.toJSON()")}}.
 
 ## Examples
 

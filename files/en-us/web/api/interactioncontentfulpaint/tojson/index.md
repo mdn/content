@@ -38,7 +38,7 @@ A JSON-serializable plain object containing the following properties:
 - {{domxref("InteractionContentfulPaint/interactionId", "interactionId")}}
 - {{domxref("InteractionContentfulPaint/largestContentfulPaint", "largestContentfulPaint")}}
 
-When the returned object is passed to {{jsxref("JSON.stringify()")}}, the `largestContentfulPaint` value is serialized using {{domxref("LargestContentfulPaint/toJSON", "LargestContentfulPaint.toJSON()")}}. Other property values are copied as-is.
+Each property's value is copied as-is. When the returned object is passed to {{jsxref("JSON.stringify()")}}, the `largestContentfulPaint` property is further serialized using {{domxref("LargestContentfulPaint/toJSON", "LargestContentfulPaint.toJSON()")}}.
 
 ## Examples
 

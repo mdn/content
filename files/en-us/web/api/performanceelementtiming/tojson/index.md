@@ -44,7 +44,7 @@ A JSON-serializable plain object containing the following properties:
 - {{domxref("PerformanceElementTiming/id", "id")}}
 - {{domxref("PerformanceElementTiming/url", "url")}}
 
-When the returned object is passed to {{jsxref("JSON.stringify()")}}, the `intersectionRect` value is serialized using {{domxref("DOMRectReadOnly/toJSON", "DOMRectReadOnly.toJSON()")}}. Other property values are copied as-is.
+Each property's value is copied as-is. When the returned object is passed to {{jsxref("JSON.stringify()")}}, the `intersectionRect` property is further serialized using {{domxref("DOMRectReadOnly/toJSON", "DOMRectReadOnly.toJSON()")}}.
 
 The returned object doesn't contain the {{domxref("PerformanceElementTiming.element", "element")}} property because {{domxref("Element")}} doesn't provide a `toJSON()` operation. The {{domxref("PerformanceElementTiming.id", "id")}} of the element is provided, though.
 

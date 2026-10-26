@@ -38,7 +38,7 @@ A JSON-serializable plain object containing the following properties:
 - {{domxref("LayoutShift/lastInputTime", "lastInputTime")}}
 - {{domxref("LayoutShift/sources", "sources")}}
 
-The `sources` property contains an array of layout shift attributions. When the returned object is passed to {{jsxref("JSON.stringify()")}}, these attributions are serialized using {{domxref("LayoutShiftAttribution/toJSON", "LayoutShiftAttribution.toJSON()")}}. Other property values are copied as-is.
+Each property's value is copied as-is. When the returned object is passed to {{jsxref("JSON.stringify()")}}, the objects in the `sources` array are further serialized using {{domxref("LayoutShiftAttribution/toJSON", "LayoutShiftAttribution.toJSON()")}}.
 
 ## Examples
 
