@@ -77,12 +77,12 @@ Firefox 159 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - Recommended preferences are now set as default values instead of user values, so they no longer remain in `prefs.js` after an unclean shutdown. ([Firefox bug 2074275](https://bugzil.la/2074275)).
 - Removed the `--remote-allow-system-access` command line argument. To enable system access, set the `MOZ_REMOTE_ALLOW_SYSTEM_ACCESS` environment variable to `1` instead. ([Firefox bug 2054896](https://bugzil.la/2054896)).
-- Fixed a memory leak where internal polling operations kept running until shutdown after erroring. This could affect a variety of commands (e.g., WebDriver BiDi's `browsingContext.traverseHistory`). ([Firefox bug 2079758](https://bugzil.la/2079758)).
+- Fixed a memory leak where internal polling operations kept running until shutdown after timing out with an error. This could affect a variety of commands (e.g., WebDriver BiDi's `browsingContext.traverseHistory`). ([Firefox bug 2079758](https://bugzil.la/2079758)).
 
 #### WebDriver BiDi
 
-- Implemented the `emulation.setMediaFeaturesOverride` command, with support for `prefers-color-scheme`. ([Firefox bug 2064354](https://bugzil.la/2064354)).
-- Added a [machine-readable CDDL file](https://searchfox.org/firefox-main/rev/2d5c2a4eb5d99a92249ec13370b1de9c1a77c0f8/remote/webdriver-bidi/cddl/Fields.cddl) for the Firefox-specific extensions to WebDriver BiDi. ([Firefox bug 2057588](https://bugzil.la/2057588)).
+- Implemented the `emulation.setMediaFeaturesOverride` command, which allows clients to override the values of CSS media features. Currently only [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) is supported. ([Firefox bug 2064354](https://bugzil.la/2064354)).
+- Added a [machine-readable CDDL (Concise Data Definition Language) file](https://searchfox.org/firefox-main/rev/2d5c2a4eb5d99a92249ec13370b1de9c1a77c0f8/remote/webdriver-bidi/cddl/Fields.cddl) for the Firefox-specific extensions to WebDriver BiDi. ([Firefox bug 2057588](https://bugzil.la/2057588)).
 
 <!-- #### Marionette -->
 
