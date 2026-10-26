@@ -3,7 +3,6 @@ title: Defining CSS gaps
 short-title: Defining gaps
 slug: Web/CSS/Guides/Gaps/Defining_gaps
 page-type: guide
-spec-urls: https://drafts.csswg.org/css-gaps/
 sidebar: cssref
 ---
 
@@ -44,13 +43,13 @@ Multi-col containers are block-level elements with more than one column created 
 
 ## Using the `gap` shorthand
 
-The {{cssxref("row-gap")}} property sets the size of the gap ({{glossary("gutters","gutter")}}) between a adjacent rows within a container. The {{cssxref("column-gap")}} property sets the size between a container's columns. Each property value can be specified as a `<length>`, a `<percentage>`, or the keyword `normal`. Percentage values are calculated against the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element for that dimension.
+The {{cssxref("row-gap")}} property sets the size of the gap ({{glossary("gutters","gutter")}}) between adjacent rows within a container. The {{cssxref("column-gap")}} property sets the size between a container's columns. Each property value can be specified as a `<length>`, a `<percentage>`, or the keyword `normal`. Percentage values are calculated against the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element for that dimension.
 
 The {{cssxref("gap")}} shorthand defines gaps between both rows and columns and accepts one or two values. The default value is `normal` for both sub-properties. If only one value is declared, it applies to both row and column gaps. If two values are declared, the first sets the `row-gap` value and the second sets the `column-gap`.
 
 The effect of the definition depends on whether the container uses grid, flexbox, or multi-column layout.
 
-You can add visible separators to gaps; these are called gap decorations. If you add decorative rules for gaps between columns, rows, or both, they appear in the middle of their gap but have no effect on the size of the gap, nor do they effect the size of the container. These gap decorations are added to the otherwise "empty space" by using the {{cssxref("rule")}} shorthand or its constituent properties.
+You can add visible separators to gaps; these are called gap decorations. If you add decorative rules for gaps between columns, rows, or both, they appear in the middle of their gap but have no effect on the size of the gap, nor do they affect the size of the container. These gap decorations are added to the otherwise "empty space" by using the {{cssxref("rule")}} shorthand or its constituent properties.
 
 ### Gaps in grid layouts
 
@@ -196,7 +195,7 @@ In this example, we create a multi-col container using the `columns` shorthand p
 .container {
   columns: 7 1em / 2.35em;
   width: 450px;
-  rule: 1px solid #ccc;
+  rule: 1px solid #cccccc;
 }
 @supports not (column-height: 1em) {
   body::before {
@@ -300,7 +299,7 @@ The gutters may appear larger than the specified gap size because the letters do
   font-weight: bold;
 }
 i {
-  background-color: #ccc;
+  background-color: #cccccc;
   text-align: center;
 }
 label {
@@ -320,8 +319,8 @@ In this example, the size of the container is set. Select different gap sizes as
 .container {
   width: 300px;
   height: 600px;
-  background-color: #eee;
-  rule: 1px dotted #666;
+  background-color: #eeeeee;
+  rule: 1px dotted #666666;
 }
 ```
 
@@ -374,8 +373,8 @@ If the container is auto‑sized, percentage gaps could create a circular depend
 
 ```css live-sample___percent_gap2
 .container {
-  background-color: #eee;
-  rule: 1px dotted #666;
+  background-color: #eeeeee;
+  rule: 1px dotted #666666;
   height: auto;
   width: auto;
 }

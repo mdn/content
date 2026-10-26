@@ -24,9 +24,9 @@ _This interface doesn't inherit any properties._
   - : A Boolean flag whose value is `true` if the matrix was initialized as a 2D matrix. If `false`, the matrix is 3D.
 - {{domxref("DOMMatrixReadOnly.isIdentity")}} {{ReadOnlyInline}}
   - : A Boolean whose value is `true` if the matrix is an [identity matrix](https://en.wikipedia.org/wiki/Identity_matrix).
-- `m11`, `m12`, `m13`, `m14`, `m21`, `m22`, `m23`, `m24`, `m31`, `m32`, `m33`, `m34`, `m41`, `m42`, `m43`, `m44`
+- `m11`, `m12`, `m13`, `m14`, `m21`, `m22`, `m23`, `m24`, `m31`, `m32`, `m33`, `m34`, `m41`, `m42`, `m43`, `m44` {{ReadOnlyInline}}
   - : Double-precision floating-point values representing each component of a 4×4 matrix, where `m11` through `m14` are the first column, `m21` through `m24` are the second column, and so forth.
-- `a`, `b`, `c`, `d`, `e`, `f`
+- `a`, `b`, `c`, `d`, `e`, `f` {{ReadOnlyInline}}
   - : Double-precision floating-point values representing the components of a 4×4 matrix which are required in order to perform 2D rotations and translations. These are aliases for specific components of a 4×4 matrix, as shown below.
 
     | 2D  | 3D equivalent |

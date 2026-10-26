@@ -108,4 +108,4 @@ The results of each of the checks are shown below.
 ## See also
 
 - {{domxref("URL.URL", "URL()")}}
-- [A polyfill of `URL.canParse()`](https://github.com/zloirock/core-js#url-and-urlsearchparams) is available in [`core-js`](https://github.com/zloirock/core-js)
+- [A polyfill of `URL.canParse()`](https://core-js.io/docs/features/web-standards/url) is available in [`core-js`](https://core-js.io/)

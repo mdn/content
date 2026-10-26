@@ -43,7 +43,7 @@ The `style` property has the same priority in the CSS cascade as an inline style
 ### Basic usage
 
 This code example shows how you can read the inline styles of an element.
-In each case it reads the dash-named style properties using {{DOMxRef("CSSStyleDeclaration/getPropertyPriority", "getPropertyValue()")}} and gets the camel case properties using the dot operator.
+In each case it reads the dash-named style properties using {{DOMxRef("CSSStyleDeclaration/getPropertyValue", "getPropertyValue()")}} and gets the camel case properties using the dot operator.
 
 #### HTML
 

@@ -147,7 +147,7 @@ Subclassing without `extends` is mentioned in [ES-6 subclassing](https://hacks.m
 
 ## See also
 
-- [Polyfill of `Object.setPrototypeOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.setPrototypeOf` in `core-js`](https://core-js.io/docs/features/ecmascript/object)
 - {{jsxref("Reflect.setPrototypeOf()")}}
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.getPrototypeOf()")}}

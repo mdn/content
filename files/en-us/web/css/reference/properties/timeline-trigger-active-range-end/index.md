@@ -73,7 +73,7 @@ The value of `normal` sets the end of the active range to the end of the default
 Other values of the `timeline-trigger-active-range-end` property can be used to set:
 
 - An offset from the `normal` range
-  - : A `<length>` or `<percentage>` value specifies an offset from the beginning of the `normal` timeline, which again defaults to either `cover`or `scroll`. Negative values outset the end, resulting in a longer active range. Positive values inset the end of the active range, making it shorter.
+  - : A `<length>` or `<percentage>` value specifies an offset from the beginning of the `normal` timeline, which again defaults to either `cover` or `scroll`. Negative values outset the end, resulting in a longer active range. Positive values inset the end of the active range, making it shorter.
 - The end of a specific named range
   - : A `<timeline-range-name>` value specifies a `100%` offset from the start of the named timeline range, which is either `cover`, `contain`, `entry`, `exit`, `entry-crossing`, `exit-crossing`, or `scroll`. See [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names).
 - An offset from a specific named range
@@ -202,7 +202,7 @@ The `.animated` elements' {{cssxref("position")}} is set to `fixed`, positioning
 body {
   width: 80%;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
   font-size: 1.3rem;
 }
 
@@ -250,7 +250,7 @@ Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation:
 }
 ```
 
-Using the {{cssxref("animation")}} shorthand, the `rotate` animation is applied to the `.animated` elements. Without an associated trigger, the elements would start animating when the page loads. The `animation-trigger` property makes it a triggered animation. The values reference a `timeline-trigger-name` of `--t` and `--longerT`, respectively, and define two `<animation-action>` values — `play` and `pause` — which specify that the animation will play on activation and pause on deactivation.
+Using the {{cssxref("animation")}} shorthand, the `rotate` animation is applied to the `.animated` elements. Without an associated trigger, the elements would start animating when the page loads. The `animation-trigger` property makes it a triggered animation. The values reference a `timeline-trigger-name` of `--t` and `--longer-t`, respectively, and define two `<animation-action>` values — `play` and `pause` — which specify that the animation will play on activation and pause on deactivation.
 
 ```css live-sample___basic-example
 .animated {
@@ -258,7 +258,7 @@ Using the {{cssxref("animation")}} shorthand, the `rotate` animation is applied 
   animation-trigger: --t play pause;
 }
 .animated.longer {
-  animation-trigger: --longerT play pause;
+  animation-trigger: --longer-t play pause;
 }
 ```
 
@@ -270,7 +270,7 @@ The `.trigger` element creates the `.animated` element's trigger via the followi
 
 The `.trigger.longer` element creates the `.animated.longer` element's trigger via the following properties:
 
-- A {{cssxref("timeline-trigger-name")}} with value `--longerT` (overriding the `--t`), which is equal to the identifier referenced in the `.animated.longer` element's `animation-trigger` property value, associating the two together.
+- A {{cssxref("timeline-trigger-name")}} with value `--longer-t` (overriding the `--t`), which is equal to the identifier referenced in the `.animated.longer` element's `animation-trigger` property value, associating the two together.
 
 - A `timeline-trigger-active-range-end` of `cover 100%`. The `cover` range spans from when the trigger element first starts to enter the scrollport to when it has completely left it.
 
@@ -281,7 +281,7 @@ The `.trigger.longer` element creates the `.animated.longer` element's trigger v
   timeline-trigger-activation-range-end: contain 50%;
 }
 .trigger.longer {
-  timeline-trigger-name: --longerT;
+  timeline-trigger-name: --longer-t;
   timeline-trigger-active-range-end: cover 100%;
 }
 ```
@@ -325,5 +325,5 @@ When you scroll downward again, after both animations have paused, both animatio
 - {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-source")}}, and {{cssxref("timeline-trigger-activation-range")}}
 - {{cssxref("timeline-trigger")}} shorthand property
 - [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
-- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers/) module
+- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

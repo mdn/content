@@ -200,7 +200,7 @@ When implementing your own iterators, consider making them iterable by or [subcl
 
 ## See also
 
-- [Polyfill of `Iterator.concat` in `core-js`](https://github.com/zloirock/core-js#iterator-sequencing)
+- [Polyfill of `Iterator.concat` in `core-js`](https://core-js.io/docs/features/ecmascript/iterator)
 - [es-shims polyfill of `Iterator.concat`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.from()")}}

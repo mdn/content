@@ -11,7 +11,7 @@ browser-compat: api.MediaStreamTrack.applyConstraints.sampleSize_constraint
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`sampleSize`** property is a [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#constrainulong)
 describing the requested or mandatory constraints placed upon the value of the
-{{domxref("MediaTrackSettings.sampleSize", "sampleSize")}} constrainable property.
+[`sampleSize`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#samplesize) constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
 the value of [`sampleSize`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#samplesize) as returned by a

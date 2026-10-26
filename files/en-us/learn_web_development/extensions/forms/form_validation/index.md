@@ -272,7 +272,7 @@ For numeric fields, including [`<input type="number">`](/en-US/docs/Web/HTML/Ref
 If the field contains a value outside this range, it will be invalid.
 
 Let's look at another example.
-Create a new copy of the [basic starter file](#basic_starter_file) and save it in the same directory as `index2.html`.
+Create another copy of the [basic starter file](#basic_starter_file) in the same directory as your previous file; save it as `index2.html`.
 
 Now delete the contents of the `<body>` element, and replace it with the following:
 
@@ -467,7 +467,7 @@ These automated messages have two drawbacks:
 Customizing these error messages is one of the most common use cases of the Constraint Validation API.
 Let's work through an example of how to do this.
 
-We'll start with some HTML. Feel free to put this in another copy of the [basic starter file](#basic_starter_file) file, if you like:
+We'll start with some HTML. Feel free to put this in another copy of the [basic starter file](#basic_starter_file), if you like:
 
 ```html
 <form>
