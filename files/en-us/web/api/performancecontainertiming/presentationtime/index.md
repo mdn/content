@@ -10,8 +10,8 @@ browser-compat: api.PerformanceContainerTiming.presentationTime
 
 The **`presentationTime`** read-only property of the {{domxref("PerformanceContainerTiming")}} interface returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the container's newly painted content was actually drawn on the screen.
 
-The algorithm for getting the `presentationTime` timestamp is implementation-defined, and the property may be `null`.
-Note that {{domxref("PerformanceContainerTiming.paintTime")}} is a more reliable property to use for metrics that need to be comparable across browsers.
+The `presentationTime` value is nullable: the underlying timestamp is implementation-defined, so browsers that don't populate it return `null` instead.
+Because {{domxref("PerformanceContainerTiming.paintTime")}} is always populated the same way across implementations, it's the more reliable value to use for metrics that need to be comparable across browsers.
 
 ## Value
 
