@@ -17,11 +17,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("shippingaddresschange", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onshippingaddresschange = (event) => { }
 ```
 
@@ -56,7 +60,7 @@ function checkAddress(theAddress) {
 }
 ```
 
-You can also establish a handler for `shippingaddresschange` using the `onshippingaddresschange` event handler property:
+You can also establish a handler for `shippingaddresschange` using the `onshippingaddresschange` event handler property (but note that this replaces other event listeners added using `onshippingaddresschange`, if any):
 
 ```js
 paymentRequest.onshippingaddresschange = (event) => {
