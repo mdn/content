@@ -2256,6 +2256,7 @@
         "EXT_float_blend",
         "EXT_texture_compression_bptc",
         "EXT_texture_compression_rgtc",
+        "EXT_texture_mirror_clamp_to_edge",
         "EXT_texture_norm16",
         "KHR_parallel_shader_compile",
         "OES_fbo_render_mipmap",

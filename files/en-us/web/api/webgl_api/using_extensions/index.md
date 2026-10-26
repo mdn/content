@@ -68,6 +68,7 @@ The current extensions are:
 - {{domxref("EXT_texture_compression_bptc")}}
 - {{domxref("EXT_texture_compression_rgtc")}}
 - {{domxref("EXT_texture_filter_anisotropic")}}
+- {{domxref("EXT_texture_mirror_clamp_to_edge")}}
 - {{domxref("EXT_texture_norm16")}}
 - {{domxref("KHR_parallel_shader_compile")}}
 - {{domxref("OES_draw_buffers_indexed")}}
