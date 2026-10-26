@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("RTCSessionDescription/type", "type")}}
 - {{domxref("RTCSessionDescription/sdp", "sdp")}}
@@ -35,7 +35,7 @@ Each property's value is copied as-is.
 
 ### Calling toJSON() directly
 
-This example creates an `RTCSessionDescription` object. Calling `toJSON()` directly returns a plain object. You can access its properties, which is the same as accessing them on the original object.
+This example creates an `RTCSessionDescription` object. Calling `toJSON()` directly returns a plain object. Its properties have the same values as the corresponding properties of the original object.
 
 ```js
 const description = new RTCSessionDescription({ type: "rollback", sdp: "" });
@@ -48,7 +48,7 @@ console.log(json.type); // Same value as description.type
 
 ### Serializing to a JSON string
 
-In this example, the `RTCSessionDescription` object from the previous example is automatically serialized by {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method.
+The `RTCSessionDescription` object from the previous example is serialized using {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method automatically.
 
 ```js
 console.log(JSON.stringify(description));

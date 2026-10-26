@@ -27,7 +27,7 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("PaymentAddress/country", "country")}}
 - {{domxref("PaymentAddress/addressLine", "addressLine")}}
@@ -46,7 +46,7 @@ The `addressLine` property contains an array of strings. Other property values a
 
 ### Calling toJSON() directly
 
-Given a `PaymentAddress` object named `address`, calling `toJSON()` directly returns a plain object. You can access its properties, which is the same as accessing them on the original object.
+Given a `PaymentAddress` object named `address`, calling `toJSON()` directly returns a plain object. Its properties have the same values as the corresponding properties of the original object.
 
 ```js
 const json = address.toJSON();
@@ -57,7 +57,7 @@ console.log(json.country); // Same value as address.country
 
 ### Serializing to a JSON string
 
-In this example, the `PaymentAddress` object is automatically serialized by {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method.
+The `PaymentAddress` object is serialized using {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method automatically.
 
 ```js
 console.log(JSON.stringify(address));

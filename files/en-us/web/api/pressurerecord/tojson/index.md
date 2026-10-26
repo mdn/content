@@ -26,7 +26,7 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("PressureRecord/source", "source")}}
 - {{domxref("PressureRecord/state", "state")}}
@@ -38,7 +38,7 @@ Each property's value is copied as-is.
 
 ### Calling toJSON() directly
 
-This example obtains a `PressureRecord` object. Calling `toJSON()` directly returns a plain object. You can access its properties, which is the same as accessing them on the original object.
+This example obtains a `PressureRecord` object. Calling `toJSON()` directly returns a plain object. Its properties have the same values as the corresponding properties of the original object.
 
 ```js
 function callback(records) {

@@ -46,7 +46,7 @@ console.log(typeof json); // "string"
 
 ### Serializing to a JSON string
 
-In this example, the `TrustedHTML` object from the previous example is automatically serialized by {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method.
+The `TrustedHTML` object from the previous example is serialized using {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method automatically.
 
 ```js
 console.log(JSON.stringify(escaped));

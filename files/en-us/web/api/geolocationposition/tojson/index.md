@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("GeolocationPosition/timestamp", "timestamp")}}
 - {{domxref("GeolocationPosition/coords", "coords")}}
@@ -35,7 +35,7 @@ The `coords` property is serialized using {{domxref("GeolocationCoordinates/toJS
 
 ### Calling toJSON() directly
 
-This example obtains a `GeolocationPosition` object. Calling `toJSON()` directly returns a plain object. You can access its properties, which is the same as accessing them on the original object.
+This example obtains a `GeolocationPosition` object. Calling `toJSON()` directly returns a plain object. Its properties have the same values as the corresponding properties of the original object.
 
 ```js
 navigator.geolocation.getCurrentPosition((position) => {

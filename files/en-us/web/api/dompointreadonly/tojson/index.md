@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("DOMPointReadOnly/x", "x")}}
 - {{domxref("DOMPointReadOnly/y", "y")}}
@@ -50,7 +50,7 @@ console.log(typeof json); // "object"
 
 ### Serializing to a JSON string
 
-The `DOMPointReadOnly` object from the previous example is automatically serialized by {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method.
+The `DOMPointReadOnly` object from the previous example is serialized using {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method automatically.
 
 ```js
 const pointJSON = JSON.stringify(point);

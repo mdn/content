@@ -26,7 +26,7 @@ None.
 
 ### Return value
 
-A JSON-serializable plain object, containing the following properties:
+A JSON-serializable plain object containing the following properties:
 
 - {{domxref("NavigatorUAData/brands", "brands")}}
 - {{domxref("NavigatorUAData/mobile", "mobile")}}
@@ -38,7 +38,7 @@ The `brands` property contains an array of objects with `brand` and `version` pr
 
 ### Calling toJSON() directly
 
-Calling `toJSON()` directly on `navigator.userAgentData` returns a plain object. You can access its properties, which is the same as accessing them on the original object.
+Calling `toJSON()` directly on `navigator.userAgentData` returns a plain object. Its properties have the same values as the corresponding properties of the original object.
 
 ```js
 const json = navigator.userAgentData.toJSON();
@@ -49,7 +49,7 @@ console.log(json.mobile); // Same value as navigator.userAgentData.mobile
 
 ### Serializing to a JSON string
 
-In this example, the `NavigatorUAData` object is automatically serialized by {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method.
+The `NavigatorUAData` object is serialized using {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method automatically.
 
 ```js
 console.log(JSON.stringify(navigator.userAgentData));
