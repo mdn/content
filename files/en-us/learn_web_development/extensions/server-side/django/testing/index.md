@@ -734,7 +734,8 @@ You could also add pagination tests, should you so wish!
 
 Testing views with forms is a little more complicated than in the cases above, because you need to test more code paths: initial display, display after data validation has failed, and display after validation has succeeded. The good news is that we use the client for testing in almost exactly the same way as we did for display-only views.
 
-To demonstrate, let's write some tests for the view used to renew books (`renew_book_librarian()`):
+To demonstrate, let's write some tests for the view used to renew books (`renew_book_librarian()`).
+As a reminder, this is the view code from **/catalog/views.py** (you don't need to copy it into your tests):
 
 ```python
 from catalog.forms import RenewBookForm
