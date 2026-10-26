@@ -44,6 +44,7 @@ The {{HTMLElement("canvas")}} element is also used by the [Canvas API](/en-US/do
 
 - {{domxref("ANGLE_instanced_arrays")}}
 - {{domxref("EXT_blend_minmax")}}
+- {{domxref("EXT_clip_control")}}
 - {{domxref("EXT_color_buffer_float")}}
 - {{domxref("EXT_color_buffer_half_float")}}
 - {{domxref("EXT_disjoint_timer_query")}}
