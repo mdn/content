@@ -79,7 +79,9 @@ The first four steps are repeated for every IdP listed in the [`providers`](/en-
 
 2. If the user is not currently [logged into the IdP](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api), and the request was made in [active mode](#active_versus_passive_mode), and only one IdP was listed in the `get()` parameters, then the browser will ask the user to log into the IdP.
 
-3. If the user is logged into the IdP, the browser makes a GET request to the [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint), using the value of the [`accounts_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint) property in the IdP config file. This request includes a cookie identifying the user that is signed in, but does not enable the IdP to learn which RP the user is trying to sign into. The response contains a list of all the IdP accounts that the user is currently signed in with.
+3. If the user is logged into the IdP, the browser makes a GET request to the [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint), using the value of the [`accounts_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint) property in the IdP config file. This request includes a cookie identifying the user that is signed in, but does not enable the IdP to learn which RP the user is trying to sign into.
+
+   The response contains an array of objects. Each object represents an account that the user with this IdP, and includes an ID for this account and information such as the username and email address associated with the account. It also may include `approved_clients`, which is an array of client IDs, each of which identifies an RP account that the user has signed up with using this IdP account.
 
    > [!NOTE]
    > If the user is logged out of all the given IdPs, the `get()` call rejects with a `NetworkError` {{domxref("DOMException")}} and does not make a request to any IdP's accounts list endpoint. Note that there may be some delay in the rejection to avoid leaking IdP login status to the RP.
@@ -88,13 +90,13 @@ The first four steps are repeated for every IdP listed in the [`providers`](/en-
 
 5. The browser uses the information obtained by the previous two sets of requests to create the UI asking the user to choose an IdP (if the user is logged into more than one) and an account to sign into the RP with. The UI also asks the user for permission to sign in to the RP using their chosen federated IdP account.
 
-   If the user is signed into the IdP but does not already have an account with the RP, the UI presented to them will include **disclosure text**. This is additional information provided by the browser to explain to the user that they will be asked to create a new account on the RP, using the identity they have registered with the IdP. The disclosure text typically takes the form of a dialog including an option labeled "Continue as... " followed by the name under which the user is registered with the IdP. The disclosure text may also include links to the RP's terms of service and privacy policy, if these were given in the [client metadata endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_client_metadata_endpoint) for this RP. If the user agrees to continue, they will then be asked to create an account on the RP using their IdP identity.
+   If the user is signed into the IdP but does not already have an account with the RP — that is, the `approved_clients` array is empty — then the UI presented to the user will include **disclosure text**. This is additional information provided by the browser to explain to the user that they will be asked to create a new account on the RP, using the identity they have registered with the IdP. The disclosure text typically takes the form of a dialog including an option labeled "Continue as..." followed by the name under which the user is registered with the IdP. The disclosure text may also include links to the RP's terms of service and privacy policy, if these were given in the [client metadata endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_client_metadata_endpoint) for this RP. If the user agrees to continue, they will then be asked to create an account on the RP using their IdP identity.
 
    If the user is signed into the IdP, does have an account with the current RP, and has logged in with it in the current browser instance, they may be able to [auto-reauthenticate](#auto-reauthentication). In this case the user will be signed in automatically without requiring any interaction.
 
-6. If the user grants permission to do so, the browser makes a POST request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) of the selected IdP to request a token for the selected account. The request includes cookies.
+6. Finally, if the user granted permission to do so, the browser makes a POST request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) of the selected IdP to request a token for the selected RP account. The request includes cookies.
 
-   The IdP checks that the account ID sent by the RP matches the ID for the account that is already signed in, and that the `Origin` header matches the origin of the RP, which will have been registered in advance with the IdP. If everything looks good, it responds with the requested token.
+   The IdP checks that the ID for the IdP account that the user selected matches the ID for the account that is already signed in, and that the `Origin` header matches the origin of the RP, which will have been registered in advance with the IdP. If everything looks good, it responds with the requested token.
 
    The `get()` promise resolves with an {{domxref("IdentityCredential")}} object, which contains the token, and the RP can use the token to sign the user in.
 
@@ -102,7 +104,7 @@ The first four steps are repeated for every IdP listed in the [`providers`](/en-
 
 ## Active versus passive mode
 
-There are two different UI modes the browser can provide to an RP user when they sign in using the FedCM API, **`active`** and **`passive`** mode. Which mode is used for sign-in is controlled by the [`mode`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#mode) option of the `identity` object:
+There are two different UI modes the browser can provide to an RP user when they sign in using the FedCM API: _active_ and _passive_ mode. Which mode is used for sign-in is controlled by the [`mode`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#mode) option of the `identity` object:
 
 ```js
 async function signIn() {
@@ -120,13 +122,15 @@ async function signIn() {
 }
 ```
 
-Active mode is appropriate when the user has performed some action to start the sign-in process: for example they've clicked a "Sign in" button. Passive mode is appropriate when the sign-in process has started without any explicit user action: for example, on page load. Passive mode is the default.
+Active mode can only be used if the request has {{glossary("transient activation")}}: that is, it must be made in response to a user action (such as clicking a "Sign in" button). Active mode can also only be used with a single item in the `providers` array: that is, it only works if the RP specifies a single IdP to sign in with.
 
-The default value for `mode` is `passive`. If `mode` is not set, or is set explicitly to `passive`, the browser can initiate the sign-in flow via a `get()` call without direct user interaction. For example, you might want to initiate the sign-in flow as soon as the user navigates to the sign-in page, provided they have IdP accounts to sign in with. In this mode, browsers typically present the user with a sign-in dialog window containing all the different sign-in options specified in the `providers` object, and they can choose whichever one suits them best and then enter the appropriate credentials.
+In active mode, if the user is not already signed into the IdP, then the browser will ask the user if they want to sign into the IdP: if they do, then the flow continues with this IdP.
 
-If `mode` is set to `active`, the browser requires the sign-in flow to be initiated via a user action such as clicking a button ({{glossary("transient activation")}} is required), and the `providers` object can only have a length of `1`, otherwise the `get()` promise will reject. This mode is typically used when the RP wishes to provide a separate button for each IdP choice. When the user clicks one of those buttons, a simplified dialog window appears that just requires them to enter the credentials for that account.
+Because the RP can only specify a single IdP in active mode, then if the RP wants to support multiple IdPs in active mode, they must present separate sign-in buttons for each IdP (the [NASCAR problem](https://indieweb.org/NASCAR_problem)).
 
-See [FedCM UI modes](https://developer.chrome.com/docs/identity/fedcm/overview#fedcm_ui_modes) on developer.chrome.com for an example of how the different UI modes are presented in Google Chrome.
+In passive mode, the RP can list multiple IdPs in `providers`. The browser will exclude any IdPs that the user is not signed into, and will present the user with a dialog asking them which of these IdPs they want to use. If the user is not signed into any IdPs, then the request will fail. Passive mode is appropriate when the sign-in process may be started without any explicit user action: for example, on page load.
+
+Passive mode is the default.
 
 ## Auto-reauthentication
 
