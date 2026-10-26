@@ -69,7 +69,7 @@ if (PerformanceObserver.supportedEntryTypes.includes("container")) {
   const observer = new PerformanceObserver((list) => {
     for (const entry of list.getEntries()) {
       log(
-        `lstPntdElmnt: ${entry.lastPaintedElement?.outerHTML ?? "null"}` +
+        `lastPaintedElement: ${entry.lastPaintedElement?.outerHTML ?? "null"}` +
           ` firstRenderTime: ${entry.firstRenderTime.toFixed(1)}` +
           ` startTime: ${entry.startTime.toFixed(1)}` +
           ` paintTime: ${entry.paintTime.toFixed(1)}`,
