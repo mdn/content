@@ -24,11 +24,15 @@ The `wheel` event is cancelable. In some browsers, only the first `wheel` event 
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("wheel", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onwheel = (event) => { }
 ```
 
@@ -42,7 +46,7 @@ A {{domxref("WheelEvent")}}. Inherits from {{domxref("MouseEvent")}}, {{domxref(
 
 ### Scaling an element via the wheel
 
-This example shows how to scale an element using the mouse (or other pointing device) wheel.
+This example shows how to scale an element using the mouse (or other pointing device) wheel. It uses the `onwheel` event handler property (but note that this replaces other event listeners added using `onwheel`, if any).
 
 ```html
 <div>Scale me with your mouse wheel.</div>
@@ -86,7 +90,7 @@ el.onwheel = zoom;
 
 {{EmbedLiveSample("Scaling_an_element_via_the_wheel", 700, 300)}}
 
-### addEventListener equivalent
+### Using addEventListener()
 
 The event handler can also be set up using the {{domxref("EventTarget/addEventListener", "addEventListener()")}} method:
 

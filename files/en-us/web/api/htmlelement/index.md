@@ -30,6 +30,12 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
 - {{domxref("HTMLElement.autocorrect")}}
   - : A boolean that represents whether or not text input by a user should be automatically corrected.
     This reflects the [`autocorrect`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocorrect) HTML global attribute.
+- {{domxref("HTMLElement.containerTiming")}} {{Experimental_Inline}}
+  - : A string that marks the element as a container root for observation in the {{domxref("PerformanceContainerTiming")}} API.
+    This reflects the [`containertiming`](/en-US/docs/Web/HTML/Reference/Global_attributes/containertiming) HTML global attribute.
+- {{domxref("HTMLElement.containerTimingIgnore")}} {{Experimental_Inline}}
+  - : A boolean value that excludes the element and its descendants from contributing to the timing of any ancestor container root.
+    This reflects the [`containertimingignore`](/en-US/docs/Web/HTML/Reference/Global_attributes/containertimingignore) HTML global attribute.
 - {{DOMxRef("HTMLElement.contentEditable")}}
   - : A string, where a value of `true` means the element is editable and a value of `false` means it isn't.
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}

@@ -16,11 +16,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("payerdetailchange", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onpayerdetailchange = (event) => { }
 ```
 
@@ -32,7 +36,7 @@ A {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Examples
 
-In the example below, `onpayerdetailchange` is used to set up a listener for the `payerdetailchange` event in order to validate the information entered by the user, requesting that any mistakes be corrected
+In the example below, `onpayerdetailchange` is used to set up a listener for the `payerdetailchange` event (but note that this replaces other event listeners added using `onpayerdetailchange`, if any) in order to validate the information entered by the user, requesting that any mistakes be corrected.
 
 ```js
 // Options for PaymentRequest(), indicating that shipping address,
@@ -105,7 +109,7 @@ await response.retry({
 });
 ```
 
-### addEventListener equivalent
+### Using addEventListener()
 
 You could also set up the event handler using the `addEventListener()` method:
 

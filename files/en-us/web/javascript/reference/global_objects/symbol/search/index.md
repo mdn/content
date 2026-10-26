@@ -60,7 +60,7 @@ console.log("foobar".search(new CaseInsensitiveSearch("BaR"))); // 3
 
 ## See also
 
-- [Polyfill of `Symbol.search` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [Polyfill of `Symbol.search` in `core-js`](https://core-js.io/docs/features/ecmascript/symbol)
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.matchAll")}}
 - {{jsxref("Symbol.replace")}}

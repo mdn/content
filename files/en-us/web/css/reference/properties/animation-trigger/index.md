@@ -48,7 +48,7 @@ Specified as a comma-separated list of values. Each value is either the keyword 
 - {{cssxref("dashed-ident")}}
   - : A custom identifier defining the name of the trigger that will trigger the animation.
 - {{cssxref("animation-action")}}
-  - : An `<animation-action>`: The keywords `none`, `play`, `play-forwards`, `play-backwards`, `play-once`,`pause`, `replay`, or `reset`.
+  - : An `<animation-action>`: The keywords `none`, `play`, `play-forwards`, `play-backwards`, `play-once`, `pause`, `replay`, or `reset`.
 
 ## Description
 
@@ -135,7 +135,7 @@ The `animation-trigger` property is a reset-only sub-property of the {{cssxref("
 
 ### Multiple `animation-trigger` values
 
-Setting multiple {{cssxref("animation-trigger")}} values works in the same way as setting [multiple values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values) for the {{cssxref("animation")}} shorthand property and the other animation longhand properties:
+Setting multiple `animation-trigger` values works in the same way as setting [multiple values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values) for the {{cssxref("animation")}} shorthand property and the other animation longhand properties:
 
 - If multiple `animation-name` values are set, but only a single `animation-trigger` value is set, the `animation-trigger` will apply to all the animations.
 - If two or more comma-separated `animation-trigger` values are set, they will cycle between the animations until all of them have an `animation-trigger` value set. See an example of [declaring multiple scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations#multiple_scroll-triggered_animations).
@@ -148,7 +148,7 @@ Given the following CSS:
     fade-in linear 1s forwards,
     rotate infinite 5s both,
     shrink ease-in 3s forwards,
-    colorchange steps(5) 5s forwards;
+    color-change steps(5) 5s forwards;
 
   animation-trigger:
     --t1 play pause,
@@ -162,7 +162,7 @@ Given the following CSS:
 }
 ```
 
-With `animation-trigger: --t1 play pause, --t2 forwards backwards` set on the animated element, `--t1` triggers the `fade-in` and `shrink` animations while `--t2` triggers the `rotate` and `colorchange` animations.
+With `animation-trigger: --t1 play pause, --t2 forwards backwards` set on the animated element, `--t1` triggers the `fade-in` and `shrink` animations while `--t2` triggers the `rotate` and `color-change` animations.
 
 ## Formal definition
 
@@ -262,7 +262,7 @@ The `.animated` element's {{cssxref("position")}} is set to `fixed`, positioning
 body {
   width: 80%;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
   font-size: 1.3rem;
 }
 
@@ -407,7 +407,7 @@ We create an `@keyframes` block that inverts the background and foreground color
 body {
   width: 80%;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
   font-size: 1.3rem;
 }
 
@@ -552,7 +552,7 @@ We include three `<div>` elements as triggers. The text content is hidden for br
 body {
   width: 80%;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
   font-size: 1.3rem;
 }
 

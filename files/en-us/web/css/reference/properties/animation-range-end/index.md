@@ -73,11 +73,11 @@ The `animation-range-end` property, along with the {{cssxref("animation-range-st
 
 ### Creating a view progress timeline with a range end
 
-In this example, the `animation-range-end` is applied to an element animated via a view progress timeline. This makes the animation reach its last keyframe well before the element reaches the end of it's containing viewport.
+In this example, the `animation-range-end` is applied to an element animated via a view progress timeline. This makes the animation reach its last keyframe well before the element reaches the end of its containing viewport.
 
 #### HTML
 
-```html hidden
+```html-nolint hidden
 <div class="content">
   <h1>Content</h1>
 
@@ -96,13 +96,12 @@ In this example, the `animation-range-end` is applied to an element animated via
     Sagittis aliquam malesuada bibendum arcu vitae elementum. Malesuada bibendum
     arcu vitae elementum curabitur vitae nunc sed velit.
   </p>
-</div>
 ```
 
 In the middle of a long block of text, we've included an element that we'll animate. We've added a lot of text to ensure that the content overflows its container; the extra text is hidden here for brevity.
 
 ```html-nolint
-<div class="animatedElement">
+<div class="animatedElement"></div>
 ```
 
 ```html-nolint hidden
@@ -127,7 +126,7 @@ We've also included a checkbox that will toggle the {{cssxref("animation-fill-mo
 </label>
 ```
 
-```html hidden
+```html-nolint hidden
   </p>
 </div>
 ```
@@ -164,12 +163,12 @@ We've also set `animation-range-end` to make the animation end earlier than expe
 When the checkbox is checked, the `animation-fill-mode` property gets applied to the animated element:
 
 ```css
-:has(:checked) .animatedElement {
+:has(:checked) ~ .animatedElement {
   animation-fill-mode: forwards;
 }
 ```
 
-The other styles applied in this example has been hidden here for brevity.
+The other styles applied in this example have been hidden for brevity.
 
 ```css hidden
 .animatedElement {
