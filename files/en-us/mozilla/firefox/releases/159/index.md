@@ -58,6 +58,9 @@ Firefox 159 is the current [Beta version of Firefox](https://www.firefox.com/en-
 ### APIs
 
 - Methods that sanitize HTML with the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API), such as {{domxref("Element.setHTML()")}}, now remove unwanted elements and attributes as the markup is parsed, instead of parsing all of the markup first and then cleaning up resulting DOM tree afterwards. The result is the same, except that neighboring text now lands in a single text node instead of being split across several. ([Firefox bug 2070498](https://bugzil.la/2070498)).
+- The [WebGL](/en-US/docs/Web/API/WebGL_API) {{domxref("EXT_clip_control")}} extension is now available on compatible devices. Its {{domxref("EXT_clip_control.clipControlEXT()", "clipControlEXT()")}} method sets how clip-space coordinates map to the window: the vertical origin can be flipped to match the top-left conventions of Direct3D and WebGPU, and depth values can use a range of 0 to 1, which improves depth precision (for example, with reversed-Z depth buffers). ([Firefox bug 1885031](https://bugzil.la/1885031)).
+- The [WebGL](/en-US/docs/Web/API/WebGL_API) {{domxref("EXT_texture_mirror_clamp_to_edge")}} extension is now available on compatible devices. It adds the `MIRROR_CLAMP_TO_EDGE_EXT` texture wrapping mode, which samples a mirror image of the texture for texture coordinates from -1 to 0, and clamps to the edge of the texture beyond that. This allows a symmetric image, such as a glow or vignette, to be stored as a texture that is half its size. ([Firefox bug 1908749](https://bugzil.la/1908749)).
+- The [WebGL](/en-US/docs/Web/API/WebGL_API) {{domxref("EXT_texture_norm16")}} extension is now available by default on compatible devices. It adds 16-bit normalized texture and renderbuffer formats, which store data such as elevation maps and medical images with more precision than 8-bit formats. ([Firefox bug 1735401](https://bugzil.la/1735401)).
 
 #### DOM
 
