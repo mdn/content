@@ -12,11 +12,15 @@ The `removetrack` event is fired when a track is removed from an [`AudioTrackLis
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("removetrack", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onremovetrack = (event) => { }
 ```
 
@@ -51,7 +55,7 @@ videoElement.audioTracks.addEventListener("removetrack", (event) => {
 });
 ```
 
-Using the `onremovetrack` event handler property:
+Using the `onremovetrack` event handler property (but note that this replaces other event listeners added using `onremovetrack`, if any):
 
 ```js
 const videoElement = document.querySelector("video");
