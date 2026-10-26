@@ -50,7 +50,7 @@ The `TrustedScriptURL` object from the previous example is serialized using {{js
 console.log(JSON.stringify(sanitized));
 ```
 
-This would log a JSON string like so (quotes are part of the string content):
+This would log the following JSON string, including the surrounding double quotes, which are part of the string's content:
 
 ```json
 "https://example.com/my-script.js"

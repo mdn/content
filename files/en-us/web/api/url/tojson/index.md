@@ -50,7 +50,7 @@ The `URL` object from the previous example is serialized using {{jsxref("JSON.st
 console.log(JSON.stringify(url));
 ```
 
-This would log a JSON string like so (quotes are part of the string content):
+This would log the following JSON string, including the surrounding double quotes, which are part of the string's content:
 
 ```json
 "https://developer.mozilla.org/en-US/docs/Web/API/URL/toString"

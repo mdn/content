@@ -52,7 +52,7 @@ The `TrustedHTML` object from the previous example is serialized using {{jsxref(
 console.log(JSON.stringify(escaped));
 ```
 
-This would log a JSON string like so (quotes are part of the string content):
+This would log the following JSON string, including the surrounding double quotes, which are part of the string's content:
 
 ```json
 "&lt;img src=x onerror=alert(1)>"
