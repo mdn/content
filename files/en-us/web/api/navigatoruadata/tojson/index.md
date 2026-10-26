@@ -10,7 +10,7 @@ browser-compat: api.NavigatorUAData.toJSON
 
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
-The **`toJSON()`** method of the {{domxref("NavigatorUAData")}} interface returns a JSON-serializable plain object representing the `NavigatorUAData` object.
+The **`toJSON()`** method of the {{domxref("NavigatorUAData")}} interface returns a JSON-serializable plain object representing the `NavigatorUAData` object. Only the low-entropy values are included. To get high-entropy values, use {{domxref("NavigatorUAData.getHighEntropyValues()")}}.
 
 The method is automatically called by {{jsxref("JSON.stringify()")}} when a `NavigatorUAData` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 

@@ -71,9 +71,7 @@ const quadJSON = JSON.stringify(quad);
 console.log(quadJSON);
 ```
 
-For a window at screen coordinates `(0, 0)` with an inner width of `800` and an inner height of `600`, the output contains the following corner coordinates.
-
-This would log a JSON string like so (formatted for readability):
+For a window at screen coordinates `(0, 0)` with an inner width of `800` and an inner height of `600`, this would log a JSON string like so (formatted for readability):
 
 ```json
 {

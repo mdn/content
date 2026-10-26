@@ -57,11 +57,11 @@ Each property's value is copied as-is.
 
 ### Calling toJSON() directly
 
-This example creates a `DOMMatrixReadOnly` object. Calling `toJSON()` directly returns a plain object. Its properties have the same values as the corresponding properties of the original object.
+This example creates two `DOMMatrixReadOnly` objects: a 2D matrix and a 3D matrix. Calling `toJSON()` directly returns a plain object. Its properties have the same values as the corresponding properties of the original object.
 
 ```js
-const matrix = new DOMMatrixReadOnly().translate(20, 30);
-const matrix3D = new DOMMatrixReadOnly().translate(22, 55, 66);
+const matrix = new DOMMatrixReadOnly("translate(20px, 30px)");
+const matrix3D = new DOMMatrixReadOnly("translate3d(22px, 55px, 66px)");
 
 const json = matrix.toJSON();
 console.log(json); // A plain object
@@ -108,7 +108,7 @@ This would log a JSON string like so (formatted for readability):
 }
 ```
 
-The three-dimensional matrix from the previous example has `is2D` set to `false`:
+The `matrix3D` object is three-dimensional, so it has `is2D` set to `false`:
 
 ```js
 console.log(JSON.stringify(matrix3D));

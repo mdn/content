@@ -42,8 +42,7 @@ This example obtains a `PressureRecord` object. Calling `toJSON()` directly retu
 
 ```js
 function callback(records) {
-  const lastRecord = records[records.length - 1];
-  const record = lastRecord;
+  const record = records[records.length - 1];
 
   const json = record.toJSON();
   console.log(json); // A plain object

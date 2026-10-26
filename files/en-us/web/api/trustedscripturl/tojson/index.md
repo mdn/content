@@ -8,7 +8,7 @@ browser-compat: api.TrustedScriptURL.toJSON
 
 {{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
-The **`toJSON()`** method of the {{domxref("TrustedScriptURL")}} interface returns a string representing the `TrustedScriptURL` object, which is the same value as {{domxref("TrustedScriptURL.toString()")}}.
+The **`toJSON()`** method of the {{domxref("TrustedScriptURL")}} interface returns a string representing the `TrustedScriptURL` object. This is the same string that {{domxref("TrustedScriptURL.toString()")}} returns.
 
 The method is automatically called by {{jsxref("JSON.stringify()")}} when a `TrustedScriptURL` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization. The serialized value can then be deserialized using the {{domxref("TrustedTypePolicy.createScriptURL()")}} method within the reviver of {{jsxref("JSON.parse()")}}.
 

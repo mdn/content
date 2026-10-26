@@ -62,7 +62,7 @@ if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
 
 ### Serializing to a JSON string
 
-Within the callback from the previous example, the same object can be serialized using {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method automatically.
+Within the `forEach()` callback from the previous example, the same object can be serialized using {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method automatically.
 
 ```js
 console.log(JSON.stringify(device));
