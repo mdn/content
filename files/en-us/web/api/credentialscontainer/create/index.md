@@ -64,10 +64,11 @@ If no credential object can be created, the promise resolves with `null`.
   - : In the case of a {{domxref("PasswordCredential")}} creation request, `id`, `origin`, or `password` were not provided (empty).
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Possible causes include:
-    - Usage was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
+    - Usage is blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
     - The function is called cross-origin but the iframe's [`allow`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow) attribute does not set an appropriate {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} policy.
     - The function is called cross-origin and the `<iframe>` does not have {{glossary("transient activation")}}.
-    - The function tried to create a [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_and_non-discoverable_credentials) ([`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey) is set to `required` in the `create()` call's {{domxref("PublicKeyCredentialCreationOptions")}} option), but the user does not have an authenticator that supports discoverable credentials.
+    - The function tries to create a [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_and_non-discoverable_credentials) ([`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey) is set to `required` in the `create()` call's {{domxref("PublicKeyCredentialCreationOptions")}} option), but the user does not have an authenticator that supports discoverable credentials.
+    - The `mediation` option is set to `"conditional"`, but the conditions were not met. See [Conditional create](/en-US/docs/Web/API/Web_Authentication_API#conditional_create) for more details.
 - `AbortError` {{domxref("DOMException")}}
   - : The operation was aborted.
 

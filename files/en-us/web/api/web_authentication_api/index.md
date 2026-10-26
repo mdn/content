@@ -81,13 +81,13 @@ Many websites that want to adopt passkeys will have an existing userbase that us
 
 With _conditional create_, a website can create a new passkey for a user's account without requiring any user interaction at all, when certain conditions are met.
 
-To request conditional create, a website calls {{domxref("CredentialsContainer.create()")}} to create a new public key credential, setting the `mediation` option to `"conditional"`.
+To request conditional create, a website calls {{domxref("CredentialsContainer.create()")}} to create a new public key credential, setting the [`mediation`](/en-US/docs/Web/API/CredentialsContainer/create#mediation) option to `"conditional"`.
 
-- If the conditions are met, then the browser will create a new public key credential without asking the user: if this is successful, then the browser will notify the user that the credential was created, using a non-modal UI element.
+- If the conditions are met, then the browser creates a new public key credential without asking the user. If this is successful, then the browser may use a non-modal UI element to tell the user that the credential was created.
 
 - If the conditions are not met, then the `create()` call rejects with an error, which the website can catch and discard.
 
-The specification allows some leeway for browsers in determining whether the conditions are met, but as a rule, conditional create is allowed if the user has already created a credential (such as a password) in the credential manager, and has recently used that credential to sign into the site.
+The specification allows some leeway for browsers in determining whether the conditions are met. However, as a rule, conditional create is allowed if the user has already created a credential (such as a password) in the credential manager, and has recently used that credential to sign into the site.
 
 The rationale for this is that if the user already trusts the credential manager to manage their account security, then they can trust the credential manager to create a new passkey for them.
 
@@ -97,9 +97,10 @@ The following code sample shows how a website might use conditional create:
 
 ```js
 async function signInAndCreatePasskey() {
-  const capabilities = await PublicKeyCredential.getClientCapabilities();
   const accountDetails = await signIn();
 
+  const capabilities =
+    (await PublicKeyCredential.getClientCapabilities?.()) ?? {};
   if (capabilities.conditionalCreate === true && !accountDetails.hasPasskey) {
     try {
       const pkOptions = await getNewPasskeyOptions();
@@ -107,7 +108,7 @@ async function signInAndCreatePasskey() {
         publicKey: pkOptions,
         mediation: "conditional",
       });
-      // conditional create succeeded, send it to the server
+      // conditional create succeeded: send the new credential to the server
       // for validation and storage
       await processNewPasskey(credential);
     } catch (e) {
@@ -121,9 +122,9 @@ Note that the code:
 
 - Checks whether the browser supports conditional create, by examining the object returned by {{domxref("PublicKeyCredential.getClientCapabilities()")}}.
 - Signs the user in, and checks whether the user already has a passkey.
-- Attempts conditional create, then processes the new passkeys if it is successful, or ignores the error if it isn't.
+- Attempts conditional create, then processes the new passkey if it is successful, or ignores the error if it isn't.
 
-When using conditional create, the [authenticator data](/en-US/docs/Web/API/AuthenticatorAttestationResponse/attestationObject#authdata) contained in the {{domxref("AuthenticatorAttestationResponse.attestationObject")}} returned from the `create()` call will always set the User Presence (UP) and User Verification (UV) flags to `false`. This means that the server should not expect them to be `true` when it validates the object.
+When you use conditional create, the [authenticator data](/en-US/docs/Web/API/AuthenticatorAttestationResponse/attestationObject#authdata) contained in the {{domxref("AuthenticatorAttestationResponse.attestationObject")}} returned from the `create()` call will always set the User Presence (UP) and User Verification (UV) flags to `false`. This means that the server should not expect them to be `true` when it validates the object.
 
 ### Authenticating a user
 
@@ -169,7 +170,7 @@ A typical authentication flow is as follows:
 
 #### Autofill UI
 
-Autofill UI, also sometimes called _conditional get_, is a feature that makes it easier for users to use public key credentials to sign in, especially when they also have passwords for the site.
+Autofill UI, also sometimes called _conditional get_, is a feature that makes it easier for users to sign in using public key credentials, especially when they also have passwords for the site.
 
 It's expected that websites that adopt passkeys will typically add them alongside existing support for password-based authentication, so a user might, for a given site, have a password, one or more passkeys, or both. In this situation, a UI that asks them which method they want to sign in with can be confusing: they might not remember which method they have for which account. Autofill UI helps with this problem, by inviting users to sign in with a passkey if and only if a suitable passkey is currently available.
 

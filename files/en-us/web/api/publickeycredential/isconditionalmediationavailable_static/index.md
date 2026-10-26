@@ -10,10 +10,10 @@ browser-compat: api.PublicKeyCredential.isConditionalMediationAvailable_static
 
 The **`isConditionalMediationAvailable()`** static method of the {{domxref("PublicKeyCredential")}} interface returns a {{jsxref("Promise")}} which resolves to `true` if the device supports [conditional get](/en-US/docs/Web/API/Web_Authentication_API#autofill_ui).
 
-This API is equivalent to the object returned by {{domxref("PublicKeyCredential.getClientCapabilities()")}} containing a `true` value for its [`conditionalGet`](/en-US/docs/Web/API/PublicKeyCredential/getClientCapabilities_static#conditionalget) property, and developers are encouraged to prefer this API.
+This method is equivalent to the object returned by {{domxref("PublicKeyCredential.getClientCapabilities()")}} containing a `true` value for its [`conditionalGet`](/en-US/docs/Web/API/PublicKeyCredential/getClientCapabilities_static#conditionalget) property, and developers are encouraged to prefer this API.
 
 > [!NOTE]
-> This API does **not** indicate whether [conditional create](/en-US/docs/Web/API/Web_Authentication_API#conditional_create) is supported. For this, check the value of [`conditionalCreate`](/en-US/docs/Web/API/PublicKeyCredential/getClientCapabilities_static#conditionalcreate) in the object returned by {{domxref("PublicKeyCredential.getClientCapabilities()")}}.
+> This method does **not** indicate whether [conditional create](/en-US/docs/Web/API/Web_Authentication_API#conditional_create) is supported. For this, check the value of [`conditionalCreate`](/en-US/docs/Web/API/PublicKeyCredential/getClientCapabilities_static#conditionalcreate) in the object returned by {{domxref("PublicKeyCredential.getClientCapabilities()")}}.
 
 ## Syntax
 
