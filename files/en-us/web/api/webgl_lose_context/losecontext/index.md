@@ -6,7 +6,7 @@ page-type: webgl-extension-method
 browser-compat: api.WEBGL_lose_context.loseContext
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`loseContext()`** method of the `WEBGL_lose_context` extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and allows you to simulate losing the context of a {{domxref("WebGLRenderingContext")}}.
 

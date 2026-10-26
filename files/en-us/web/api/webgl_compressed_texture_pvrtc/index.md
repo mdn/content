@@ -6,7 +6,7 @@ page-type: webgl-extension
 browser-compat: api.WEBGL_compressed_texture_pvrtc
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WEBGL_compressed_texture_pvrtc`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes four [PVRTC compressed texture formats](https://en.wikipedia.org/wiki/PVRTC).
 

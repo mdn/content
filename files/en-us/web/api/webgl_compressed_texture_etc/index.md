@@ -6,7 +6,7 @@ page-type: webgl-extension
 browser-compat: api.WEBGL_compressed_texture_etc
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WEBGL_compressed_texture_etc`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes 10 [ETC/EAC compressed texture formats](https://en.wikipedia.org/wiki/Ericsson_Texture_Compression).
 

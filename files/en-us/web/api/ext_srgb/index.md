@@ -6,7 +6,7 @@ page-type: webgl-extension
 browser-compat: api.EXT_sRGB
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`EXT_sRGB`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and adds sRGB support to textures and framebuffer objects.
 

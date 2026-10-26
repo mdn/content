@@ -6,7 +6,7 @@ page-type: webgl-extension
 browser-compat: api.EXT_texture_filter_anisotropic
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`EXT_texture_filter_anisotropic`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes two constants for [anisotropic filtering (AF)](https://en.wikipedia.org/wiki/Anisotropic_filtering).
 

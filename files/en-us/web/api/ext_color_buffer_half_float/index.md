@@ -6,7 +6,7 @@ page-type: webgl-extension
 browser-compat: api.EXT_color_buffer_half_float
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`EXT_color_buffer_half_float`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and adds the ability to render to 16-bit floating-point color buffers.
 

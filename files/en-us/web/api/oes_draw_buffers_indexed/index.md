@@ -1,11 +1,11 @@
 ---
 title: OES_draw_buffers_indexed
 slug: Web/API/OES_draw_buffers_indexed
-page-type: web-api-interface
+page-type: webgl-extension
 browser-compat: api.OES_draw_buffers_indexed
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`OES_draw_buffers_indexed`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and enables the use of different blend options when writing to multiple color buffers simultaneously.
 

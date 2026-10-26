@@ -6,7 +6,7 @@ page-type: webgl-extension
 browser-compat: api.EXT_blend_minmax
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`EXT_blend_minmax`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and extends blending capabilities by adding two new blend equations: the minimum or maximum color components of the source and destination colors.
 

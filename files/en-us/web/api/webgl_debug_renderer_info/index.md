@@ -6,7 +6,7 @@ page-type: webgl-extension
 browser-compat: api.WEBGL_debug_renderer_info
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WEBGL_debug_renderer_info`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes two constants with information about the graphics driver for debugging purposes.
 
