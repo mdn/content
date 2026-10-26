@@ -20,11 +20,15 @@ This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubb
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("securitypolicyviolation", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onsecuritypolicyviolation = (event) => { }
 ```
 
@@ -38,7 +42,7 @@ A {{domxref("SecurityPolicyViolationEvent")}}. Inherits from {{domxref("Event")}
 
 ### Listening for securitypolicyviolation on Window
 
-The code below shows how you might add an event handler function using the `onsecuritypolicyviolation` global event handler property or `addEventListener()` on the top level `Window` (you could use exactly the same approach on `Document`).
+The code below shows how you might add an event handler function using the `onsecuritypolicyviolation` global event handler property (but note that this replaces other event listeners added using `onsecuritypolicyviolation`, if any) or `addEventListener()` on the top level `Window` (you could use exactly the same approach on `Document`).
 
 ```js
 window.onsecuritypolicyviolation = (e) => {
