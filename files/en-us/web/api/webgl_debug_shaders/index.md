@@ -12,7 +12,8 @@ The **`WEBGL_debug_shaders`** extension is part of the [WebGL API](/en-US/docs/W
 
 This extension is not directly available to websites as the way of how the shader is translated may uncover personally-identifiable information to the web page about the kind of graphics card in the user's computer.
 
-WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method.
+For more information, see [Using WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions).
 
 > [!NOTE]
 > Depending on the privacy settings of the browser, this extension might only be available to privileged contexts.

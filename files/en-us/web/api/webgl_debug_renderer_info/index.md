@@ -12,7 +12,8 @@ The **`WEBGL_debug_renderer_info`** extension is part of the [WebGL API](/en-US/
 
 Depending on the privacy settings of the browser, this extension might only be available to privileged contexts. Generally, the graphics driver information should only be used in edge cases to optimize your WebGL content or to debug GPU problems. The {{domxref("WebGLRenderingContext.getParameter()")}} method can help you to detect which features are supported and the [`failIfMajorPerformanceCaveat`](/en-US/docs/Web/API/HTMLCanvasElement/getContext) context attribute lets you control if a context should be returned at all, if the performance would be dramatically slow.
 
-WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method.
+For more information, see [Using WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions).
 
 > [!NOTE]
 > Depending on the privacy settings of the browser, this extension might only be available to privileged contexts or not work at all. In Firefox, if `privacy.resistFingerprinting` is set to `true`, this extensions is disabled.

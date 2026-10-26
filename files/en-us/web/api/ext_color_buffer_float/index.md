@@ -10,7 +10,8 @@ browser-compat: api.EXT_color_buffer_float
 
 The **`EXT_color_buffer_float`** extension is part of [WebGL](/en-US/docs/Web/API/WebGL_API) and adds the ability to render a variety of floating point formats.
 
-WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method.
+For more information, see [Using WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions).
 
 > [!NOTE]
 > This extension is available to {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts only.
