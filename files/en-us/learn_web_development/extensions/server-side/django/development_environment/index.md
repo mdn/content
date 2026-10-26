@@ -119,7 +119,7 @@ python3 -V
 # Output: Python 3.14.4
 ```
 
-However, neither the Python Package Index tool (_pip3_) nor the _venv_ module (which you'll use later to create virtual environments) are available by default.
+However, neither the Python Package Index tool (_pip3_) nor the _venv_ module (which you'll use later to create virtual environments) is available by default.
 You can install both in the bash terminal using:
 
 ```bash
@@ -127,7 +127,8 @@ sudo apt install python3-pip python3-venv
 ```
 
 > [!NOTE]
-> If you're using **Ubuntu 24.04 LTS** instead, `python3 -V` will report Python 3.12, which is still within the [range supported by Django 6.1](https://docs.djangoproject.com/en/6.1/faq/install/#what-python-version-can-i-use-with-django), so you don't need to install a newer Python version to follow along.
+> If you're using **Ubuntu 24.04 LTS** instead, `python3 -V` will report Python 3.12.
+> This is within the [range supported by Django 6.1](https://docs.djangoproject.com/en/6.1/faq/install/#what-python-version-can-i-use-with-django), so you don't need to install a newer Python version to follow along.
 > You'll still need to run `sudo apt install python3-pip python3-venv` — pip and venv aren't installed by default on 24.04 either.
 
 ### macOS
@@ -216,14 +217,14 @@ The instructions below show the platform specific commands as they work on more 
 
 ## Using Django inside a Python virtual environment
 
-We'll create our virtual environments using [venv](https://docs.python.org/3/library/venv.html), the virtual environment tool built into Python itself (Python has included _venv_ since version 3.3, so there's nothing extra to install beyond what you set up above). This is also what the [Django project itself recommends](https://docs.djangoproject.com/en/6.1/intro/contributing/#getting-a-copy-of-django-s-development-version).
+We'll create our virtual environments using [venv](https://docs.python.org/3/library/venv.html), the virtual environment tool built into Python itself (Python has included _venv_ since version 3.3, so there's nothing extra to install beyond what you set up in [Installing Python 3](#installing_python_3)). This is also what the [Django project itself recommends](https://docs.djangoproject.com/en/6.1/intro/contributing/#getting-a-copy-of-django-s-development-version).
 
 > [!NOTE]
-> On Ubuntu you must have already installed the `python3-venv` package for this to work (see the Ubuntu Python installation instructions above). On macOS and Windows, _venv_ is included automatically when you install Python from python.org, so there's no separate setup step for those platforms.
+> On Ubuntu you must have already installed the `python3-venv` package for this to work (see [Ubuntu 26.04](#ubuntu_26.04)). On macOS and Windows, _venv_ is included automatically when you install Python from python.org, so there's no separate setup step for those platforms.
 
 ### Creating a virtual environment
 
-Navigate to the folder where you want to keep your Django projects, then create a new virtual environment using the `venv` module. The command below creates a folder named `my_django_environment` containing a self-contained copy of Python and its tools:
+Navigate to the folder where you want to keep your Django projects, then create a new virtual environment using the `venv` module. The following command creates a folder named `my_django_environment` containing a self-contained copy of Python and its tools:
 
 ```bash
 # Linux/macOS
@@ -246,7 +247,14 @@ my_django_environment\Scripts\activate.bat
 my_django_environment\Scripts\Activate.ps1
 ```
 
-Once the environment is active, the start of your prompt will show the name of the environment in parentheses, as shown below (this example is from Ubuntu, but the effect is the same on Windows/macOS):
+> [!NOTE]
+> If PowerShell refuses to run `Activate.ps1` with a message about running scripts being disabled, you'll need to allow script execution for the current session first:
+>
+> ```bash
+> Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+> ```
+
+Once the environment is active, the start of your prompt will show the name of the environment in parentheses, as shown in the following example from Ubuntu (the effect is the same on Windows/macOS):
 
 ```plain
 (my_django_environment) ubuntu@ubuntu:~$
@@ -257,19 +265,13 @@ Now you're inside the virtual environment you can install Django and start devel
 > [!NOTE]
 > From now on in this article (and indeed the module) please assume that any commands are run within a Python virtual environment like the one we set up above.
 
-> [!NOTE]
-> If PowerShell refuses to run `Activate.ps1` with a message about running scripts being disabled, you'll need to allow script execution for the current session first:
->
-> ```bash
-> Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-> ```
-
 ### Using a virtual environment
 
 There are just a few other things you should know about working with virtual environments:
 
-- `deactivate` — Exit out of the current Python virtual environment.
-- To use the environment again in a new terminal session, re-run the activate command shown above (e.g., `source my_django_environment/bin/activate`) — there's no separate "list environments" or "switch environment" command, since each environment is just a folder.
+- To leave the current environment, run `deactivate`.
+- To use the environment again in a new terminal session, run its activate command again (for example, `source my_django_environment/bin/activate`).
+  Each environment is just a folder, so there's no separate command to list or switch environments.
 - To remove an environment entirely, first `deactivate` it, then delete its folder (e.g., `rm -rf my_django_environment` on Linux/macOS, or delete the folder in File Explorer on Windows).
 
 ## Installing Django
@@ -278,10 +280,10 @@ Once you've created a virtual environment and activated it, you can use _pip3_ t
 
 ```bash
 # Linux/macOS
-python3 -m pip install django~=6.1
+python3 -m pip install django~=6.1.0
 
 # Windows
-py -3 -m pip install django~=6.1
+py -3 -m pip install django~=6.1.0
 ```
 
 You can test that Django is installed by running the following command (this just tests that Python can find the Django module):
@@ -313,7 +315,7 @@ py -3 -m django --version
 Source Code Management (SCM) and versioning tools allow you to reliably store and recover versions of your source code, try out changes, and share code between your experiments and "known good code" when you need to.
 
 There are many different SCM tools, including git, Mercurial, Perforce, SVN (Subversion), CVS (Concurrent Versions System), etc., and cloud SCM hosting sources such as Bitbucket, GitHub, and GitLab.
-For this tutorial we'll host our code on [GitHub](https://github.com/), one of the most popular cloud based source code hosting services, and use the **git** tool to manage our source code locally and send it to GitHub when needed.
+For this tutorial we'll host our code on [GitHub](https://github.com/), one of the most popular cloud-based source code hosting services, and use the **git** tool to manage our source code locally and send it to GitHub when needed.
 
 > [!NOTE]
 > Using SCM tools is good software development practice!
@@ -372,7 +374,8 @@ Now that the repository ("repo") is created on GitHub we are going to want to cl
 
 2. Install _git_ for your local computer ([official Git download guide](https://git-scm.com/downloads/)).
 3. Set up authentication so that git can push changes to GitHub.
-   The easiest way is to install the [GitHub CLI](https://cli.github.com/) and then run the following command, selecting **GitHub.com**, **HTTPS**, **Yes** (to authenticate git with your GitHub credentials), and **Login with a web browser** when prompted:
+   The easiest way is to install the [GitHub CLI](https://cli.github.com/) and then run the following command.
+   When prompted, select **GitHub.com**, **HTTPS**, **Yes** (to authenticate git with your GitHub credentials), and **Login with a web browser**:
 
    ```bash
    gh auth login

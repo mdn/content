@@ -211,7 +211,7 @@ We can also call _functions_ in the model from within our template — in this c
 
 #### Update the base template
 
-Open the base template (**/catalog/templates/_base_generic.html_**) and insert **{% url 'books' %}** into the URL link for **All books**, as shown below. This will enable the link in all pages (we can successfully put this in place now that we've created the "books" URL mapper).
+Open the base template (**/catalog/templates/base_generic.html**) and insert **{% url 'books' %}** into the URL link for **All books**, as shown below. This will enable the link in all pages (we can successfully put this in place now that we've created the "books" URL mapper).
 
 ```django
 <li><a href="{% url 'index' %}">Home</a></li>
@@ -536,8 +536,6 @@ This method is needed because you declare a `ForeignKey` (one-to many) field onl
 
 > [!NOTE]
 > Here we use `all()` to get all records (the default). While you can use the `filter()` method to get a subset of records in code, you can't do this directly in templates because you can't specify arguments to functions.
->
-> Last but not least, you should sort by an attribute/column that actually has an index (unique or not) on your database to avoid performance issues. Of course, this will not be necessary here (we are probably getting ahead of ourselves with so few books and users), but it is something worth keeping in mind for future projects.
 
 The second interesting (and non-obvious) thing in the template is where we display the status text for each book instance ("available", "maintenance", etc.).
 Astute readers will note that the method `BookInstance.get_status_display()` that we use to get the status text does not appear elsewhere in the code.
@@ -551,7 +549,9 @@ This function is automatically created because `BookInstance.status` is a [choic
 Django automatically creates a method `get_foo_display()` for every choices field `foo` in a model, which can be used to get the current value of the field.
 
 > [!NOTE]
-> `copy.LoanStatus` resolves to the `LoanStatus` class we defined on `BookInstance` (see [Django Tutorial Part 3: Using models](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Models)), so `copy.LoanStatus.AVAILABLE` is the same value as the stored code `'a'`. Comparing against the named member instead of the raw code makes the template easier to read, and Django's `TextChoices` classes are specifically designed to be safe to reference like this from templates.
+> `copy.LoanStatus` resolves to the `LoanStatus` class we defined on `BookInstance` (see [Django Tutorial Part 3: Using models](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Models)), so `copy.LoanStatus.AVAILABLE` equals the stored code `'a'`.
+> Comparing against the named member instead of the raw code makes the template easier to read.
+> Django's `TextChoices` classes are designed to be referenced from templates in this way.
 
 ## What does it look like?
 
@@ -598,12 +598,14 @@ The different pages are accessed using GET parameters — to access page 2 you w
 >
 > You won't see this for books or authors, because we set an `ordering` in the `class Meta` of both models when we [defined them](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Models).
 > For a model without a default ordering, you can either add `ordering` to its `class Meta`, or set an `ordering` attribute on the list view itself (for example, `ordering = ['title']`).
+> Whichever you choose, order by a field that has a database index (unique or not) to avoid performance issues.
+> This won't matter with so few books, but it's worth keeping in mind for future projects.
 
 ### Templates
 
 Now that the data is paginated, we need to add support to the template to scroll through the results set. Because we might want paginate all list views, we'll add this to the base template.
 
-Open **/catalog/templates/_base_generic.html_** and find the "content block" (as shown below).
+Open **/catalog/templates/base_generic.html** and find the "content block" (as shown below).
 
 ```django
 {% block content %}{% endblock %}
@@ -633,7 +635,9 @@ Copy in the following pagination block immediately following the `{% endblock %}
 
 The `page_obj` is a [Page](https://docs.djangoproject.com/en/6.1/ref/paginator/#django.core.paginator.Page) object that will exist if pagination is being used on the current page. It allows you to get all the information about the current page, previous pages, how many pages there are, etc.
 
-We use the [`querystring`](https://docs.djangoproject.com/en/6.1/ref/templates/builtins/#querystring) template tag to create the pagination links. This takes the query parameters of the current URL, sets `page` to the value we pass in, and returns the result as a query string such as `?page=2`. A link that only contains a query string goes to the current page, so the same code works for any list we paginate. Any other query parameters in the current URL, such as search filters, are kept.
+We use the [`querystring`](https://docs.djangoproject.com/en/6.1/ref/templates/builtins/#querystring) template tag to create the pagination links.
+This takes the query parameters of the current URL, sets `page` to the value we pass in, keeps any other parameters (such as search filters), and returns the result as a query string such as `?page=2`.
+A link that contains only a query string goes to the current page, so the same code works for any list we paginate.
 
 That's it!
 

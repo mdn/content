@@ -156,7 +156,7 @@ In this section, we show how to integrate the default system into the _LocalLibr
 
 ### Project URLs
 
-Add the following to the bottom of the project urls.py file (**/locallibrary/urls.py**) file:
+Add the following to the bottom of the project URL file (**/locallibrary/urls.py**):
 
 ```python
 # Add Django site authentication urls (for login, logout, password management)
@@ -229,7 +229,7 @@ Open the project settings (**/locallibrary/settings.py**) and update the `TEMPLA
 > [!WARNING]
 > The authentication templates provided in this article are a very basic/slightly modified version of the Django demonstration login templates. You may need to customize them for your own use!
 
-Create a new HTML file called /**/templates/registration/login.html** and give it the following contents:
+Create a new HTML file called **/templates/registration/login.html** and give it the following contents:
 
 ```django
 {% extends "base_generic.html" %}
@@ -394,7 +394,8 @@ You'll be able to test the password reset functionality from the link in the log
 Note that you won't be able to test account logout yet, because logout requests must be sent as a `POST` rather than a `GET` request.
 
 > [!NOTE]
-> The password reset system requires that your website supports email, which is beyond the scope of this article, so this part **won't work yet**. To allow testing, put the following lines at the end of your settings.py file. This logs any emails sent to the console (so you can copy the password reset link from the console).
+> The password reset system requires that your website supports email, which is beyond the scope of this article.
+> For testing, the settings file created by `startproject` already includes the following configuration, which logs any emails sent to the console (so you can copy the password reset link from the console):
 >
 > ```python
 > MAILERS = {
@@ -416,11 +417,14 @@ You can get information about the currently logged in user in templates with the
 
 Typically you will first test against the `\{{ user.is_authenticated }}` template variable to determine whether the user is eligible to see specific content. To demonstrate this, next we'll update our sidebar to display a "Login" link if the user is logged out, and a "Logout" link if they are logged in.
 
-Open the base template (**/catalog/templates/base_generic.html**) and copy the following `{% if user.is_authenticated %} ... {% endif %}` block into the `sidebar` block, immediately before the closing `</ul>` tag.
+Open the base template (**/catalog/templates/base_generic.html**) and add the following new list to the `sidebar` block, immediately after the existing `<ul class="sidebar-nav">` list:
 
 ```django
   <ul class="sidebar-nav">
     …
+  </ul>
+
+  <ul class="sidebar-nav">
    {% if user.is_authenticated %}
      <li>User: \{{ user.get_username }}</li>
      <li>
@@ -432,7 +436,6 @@ Open the base template (**/catalog/templates/base_generic.html**) and copy the f
    {% else %}
      <li><a href="{% url 'login' %}?next=\{{ request.path }}">Login</a></li>
    {% endif %}
-    …
   </ul>
 ```
 
@@ -491,11 +494,11 @@ class MyView(LoginRequiredMixin, View):
 ```
 
 > [!NOTE]
-> If most of your site should only be available to logged-in users, you can instead add [`LoginRequiredMiddleware`](https://docs.djangoproject.com/en/6.1/ref/middleware/#django.contrib.auth.middleware.LoginRequiredMiddleware) to the `MIDDLEWARE` list in your settings (after `AuthenticationMiddleware`).
+> If most of your site should be available only to logged-in users, you can instead add [`LoginRequiredMiddleware`](https://docs.djangoproject.com/en/6.1/ref/middleware/#django.contrib.auth.middleware.LoginRequiredMiddleware) to the `MIDDLEWARE` list in your settings (after `AuthenticationMiddleware`).
 > This requires users to log in for every view by default, and you then mark the public views with the [`login_not_required`](https://docs.djangoproject.com/en/6.1/topics/auth/default/#django.contrib.auth.decorators.login_not_required) decorator.
 > We don't use it for the _LocalLibrary_ because most of the library views should be open.
 
-For additional detail, check out the [Django docs here](https://docs.djangoproject.com/en/6.1/topics/auth/default/#limiting-access-to-logged-in-users).
+For additional detail, see [Limiting access to logged-in users](https://docs.djangoproject.com/en/6.1/topics/auth/default/#limiting-access-to-logged-in-users) (Django docs).
 
 ## Example — listing the current user's books
 
@@ -587,7 +590,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 ### Loan a few books
 
-Now that it's possible to loan books to a specific user, go and loan out a number of `BookInstance` records. Set their `borrowed` field to your test user, make the `status` "On loan", and set due dates both in the future and the past.
+Now that it's possible to loan books to a specific user, go and loan out a number of `BookInstance` records. Set their `borrower` field to your test user, make the `status` "On loan", and set due dates both in the future and the past.
 
 > [!NOTE]
 > We won't spell the process out, as you already know how to use the Admin site!
@@ -662,7 +665,7 @@ When the development server is running, you should now be able to view the list 
 
 The very last step is to add a link for this new page into the sidebar. We'll put this in the same section where we display other information for the logged in user.
 
-Open the base template (**/catalog/templates/base_generic.html**) and add the "My Borrowed" line to the sidebar in the position shown below.
+Open the base template (**/catalog/templates/base_generic.html**) and add the "My borrowed" line to the sidebar in the position shown below.
 
 ```django
  <ul class="sidebar-nav">
@@ -685,7 +688,7 @@ Open the base template (**/catalog/templates/base_generic.html**) and add the "M
 
 ### What does it look like?
 
-When any user is logged in, they'll see the _My Borrowed_ link in the sidebar, and the list of books displayed as below (the first book has no due date, which is a bug we hope to fix in a later tutorial!).
+When any user is logged in, they'll see the _My borrowed_ link in the sidebar, and the list of books displayed as below (the first book has no due date, which is a bug we hope to fix in a later tutorial!).
 
 ![Library - borrowed books by user](library_borrowed_by_user.png)
 

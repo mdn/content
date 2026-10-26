@@ -132,7 +132,8 @@ The following common arguments can be used when declaring many/most of the diffe
   The type of auto-created primary key fields can be specified for each app in [`AppConfig.default_auto_field`](https://docs.djangoproject.com/en/6.1/ref/applications/#django.apps.AppConfig.default_auto_field) or globally in the [`DEFAULT_AUTO_FIELD`](https://docs.djangoproject.com/en/6.1/ref/settings/#std-setting-DEFAULT_AUTO_FIELD) setting.
 
   > [!NOTE]
-  > The type of the primary key defaults to [BigAutoField](https://docs.djangoproject.com/en/6.1/ref/models/fields/#bigautofield) — this has been the default value of the `DEFAULT_AUTO_FIELD` setting since Django 6.0, so you won't see it set explicitly in the local library's **catalog/apps.py** file:
+  > The primary key type is [BigAutoField](https://docs.djangoproject.com/en/6.1/ref/models/fields/#bigautofield), which has been the default value of the `DEFAULT_AUTO_FIELD` setting since Django 6.0.
+  > That's why you won't see it set explicitly in the local library's **/catalog/apps.py** file:
   >
   > ```python
   > class CatalogConfig(AppConfig):
@@ -385,7 +386,7 @@ class Book(models.Model):
 The genre is a `ManyToManyField`, so that a book can have multiple genres and a genre can have many books. The author is declared as `ForeignKey`, so each book will only have one author, but an author may have many books (in practice a book might have multiple authors, but not in this implementation!)
 
 The `class Meta` sets the default ordering of books by title, and then by author.
-Ordering by a `ForeignKey` field like `author` uses the default ordering of the related model (which we'll set to last name then first name when we define `Author` below).
+Ordering by a `ForeignKey` field like `author` uses the default ordering of the related model (which we'll set to last name then first name when we define the [Author model](#author_model)).
 
 In both field types the related model class is declared as the first unnamed parameter using either the model class or a string containing the name of the related model. You must use the name of the model as a string if the associated class has not yet been defined in this file before it is referenced! The other parameters of interest in the `author` field are `null=True`, which allows the database to store a `Null` value if no author is selected, and `on_delete=models.RESTRICT`, which will prevent the book's associated author being deleted if it is referenced by any book.
 
@@ -444,7 +445,7 @@ We additionally declare a few new types of field:
 - `DateField` is used for the `due_back` date (at which the book is expected to become available after being borrowed or in maintenance). This value can be `blank` or `null` (needed for when the book is available). The model metadata (`Class Meta`) uses this field to order records when they are returned in a query.
 - `status` is a `CharField` that defines a choice/selection list.
   We define the choices using a [`TextChoices`](https://docs.djangoproject.com/en/6.1/ref/models/fields/#enumeration-types) class (`LoanStatus`), where each named member (e.g., `MAINTENANCE`) pairs the value that is actually saved (`'m'`) with the human-readable label a user sees (`'Maintenance'`).
-  This lets the rest of our code refer to `BookInstance.LoanStatus.MAINTENANCE` by name instead of the raw string `'m'`, which is both easier to read and harder to get wrong.
+  This lets the rest of our code refer to `BookInstance.LoanStatus.MAINTENANCE` by name instead of the raw string `'m'`, making the code easier to read and harder to get wrong.
   We've also set the default status to `LoanStatus.MAINTENANCE`, as books will initially be created as unavailable before they are stocked on the shelves.
 
 The method `__str__()` represents the `BookInstance` object using a combination of its unique id and the associated `Book`'s title.

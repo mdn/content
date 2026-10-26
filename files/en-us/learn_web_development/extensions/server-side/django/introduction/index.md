@@ -153,7 +153,8 @@ Views are usually stored in a file called **views.py**.
 
 Django web applications manage and query data through Python objects referred to as models. Models define the structure of stored data, including the field _types_ and possibly also their maximum size, default values, selection list options, help text for documentation, label text for forms, etc. The definition of the model is independent of the underlying database — you can choose one of several as part of your project settings. Once you've chosen what database you want to use, you don't need to talk to it directly at all — you just write your model structure and other code, and Django handles all the "dirty work" of communicating with the database for you.
 
-The code snippet below shows a very simple Django model for a `Team` object. The `Team` class is derived from the Django class `models.Model`. It defines the team name and team level as character fields and specifies a maximum number of characters to be stored for each record. The `team_level` can be one of several values, so we define these in a `TeamLevel` class that maps the data to be stored to the choice to be displayed, and use this for the field's `choices`, along with a default value.
+The code snippet below shows a very simple Django model for a `Team` object. The `Team` class is derived from the Django class `models.Model`. It defines the team name and team level as character fields and specifies a maximum number of characters to be stored for each record. The `team_level` can be one of several values, so we define them in a `TeamLevel` class that maps each stored value to its display label.
+We pass this class as the field's `choices`, and also set a default value.
 
 ```python
 # filename: models.py

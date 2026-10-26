@@ -93,7 +93,7 @@ The _locallibrary_ project sub-folder is the entry point for the website:
 The **manage.py** script is used to create applications, work with databases, and start the development web server.
 
 > [!NOTE]
-> In the rest of this tutorial, file paths such as **/locallibrary/settings.py** are relative to the top-level project folder that contains **manage.py**.
+> In the rest of this tutorial, file paths such as **/locallibrary/settings.py** are relative to the top-level project folder that contains **manage.py** (the leading `/` stands for that folder).
 
 ## Creating the catalog application
 

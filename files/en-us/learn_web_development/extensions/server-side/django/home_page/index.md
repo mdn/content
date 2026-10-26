@@ -152,7 +152,7 @@ def index(request):
 
 The first line imports the model classes that we'll use to access data in all our views.
 
-The first part of the view function fetches the number of records using the `objects.all()` attribute on the model classes. It also gets a list of `BookInstance` objects that have a status of `BookInstance.LoanStatus.AVAILABLE` (Available). You can find more information about how to access model data in our previous tutorial [Django Tutorial Part 3: Using models > Searching for records](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Models#searching_for_records).
+The first part of the view function fetches the number of records using the `objects.all()` attribute on the model classes. It also gets a list of `BookInstance` objects that have a status of `BookInstance.LoanStatus.AVAILABLE`. You can find more information about how to access model data in our previous tutorial [Django Tutorial Part 3: Using models > Searching for records](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Models#searching_for_records).
 
 At the end of the view function we call the `render()` function to create an HTML page and return the page as a response. This shortcut function wraps a number of other functions to simplify a very common use case. The `render()` function accepts the following parameters:
 
@@ -239,7 +239,7 @@ Create a new file **base_generic.html** in **/catalog/templates/** and paste the
       <title>Local Library</title>
     {% endblock %}
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"

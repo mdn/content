@@ -120,7 +120,7 @@ The `Form` class is the heart of Django's form handling system. It specifies the
 
 The declaration syntax for a `Form` is very similar to that for declaring a `Model`, and shares the same field types (and some similar parameters). This makes sense because in both cases we need to ensure that each field handles the right types of data, is constrained to valid data, and has a description for display/documentation.
 
-Form data is stored in an application's forms.py file, inside the application directory. Create and open the file **/catalog/forms.py**. To create a `Form`, we import the `forms` library, derive from the `Form` class, and declare the form's fields. A very basic form class for our library book renewal form is shown below — add this to your new file:
+Forms are declared in an application's **forms.py** file, inside the application directory. Create and open the file **/catalog/forms.py**. To create a `Form`, we import the `forms` library, derive from the `Form` class, and declare the form's fields. A very basic form class for our library book renewal form is shown below — add this to your new file:
 
 ```python
 from django import forms
@@ -131,7 +131,7 @@ class RenewBookForm(forms.Form):
 
 #### Form fields
 
-In this case, we have a single [`DateField`](https://docs.djangoproject.com/en/6.1/ref/forms/fields/#datefield) for entering the renewal date that will render in HTML with a blank value, the default label "_Renewal date:_", and some helpful usage text: "_Enter a date between now and 4 weeks (default 3 weeks)._" As none of the other optional arguments are specified the field will accept dates using the [input_formats](https://docs.djangoproject.com/en/6.1/ref/forms/fields/#django.forms.DateField.input_formats): YYYY-MM-DD (2024-11-06), MM/DD/YYYY (02/26/2024), MM/DD/YY (10/25/24), and will be rendered using the default [widget](https://docs.djangoproject.com/en/6.1/ref/forms/fields/#widget): [DateInput](https://docs.djangoproject.com/en/6.1/ref/forms/widgets/#django.forms.DateInput).
+In this case, we have a single [`DateField`](https://docs.djangoproject.com/en/6.1/ref/forms/fields/#datefield) for entering the renewal date that will render in HTML with a blank value, the default label "_Renewal date:_", and some helpful usage text: "_Enter a date between now and 4 weeks (default 3)._" As none of the other optional arguments are specified the field will accept dates using the [input_formats](https://docs.djangoproject.com/en/6.1/ref/forms/fields/#django.forms.DateField.input_formats): YYYY-MM-DD (2024-11-06), MM/DD/YYYY (02/26/2024), MM/DD/YY (10/25/24), and will be rendered using the default [widget](https://docs.djangoproject.com/en/6.1/ref/forms/fields/#widget): [DateInput](https://docs.djangoproject.com/en/6.1/ref/forms/widgets/#django.forms.DateInput).
 
 There are many other types of form fields, which you will largely recognize from their similarity to the equivalent model field classes:
 
@@ -210,7 +210,7 @@ class RenewBookForm(forms.Form):
 ```
 
 There are two important things to note. The first is that we get our data using `self.cleaned_data['renewal_date']` and that we return this data whether or not we change it at the end of the function.
-This step gets us the data "cleaned" and sanitized of potentially unsafe input using the default validators, and converted into the correct standard type for the data (in this case a Python `datetime.datetime` object).
+This step gets us the data "cleaned" and sanitized of potentially unsafe input using the default validators, and converted into the correct standard type for the data (in this case a Python `datetime.date` object).
 
 The second point is that if a value falls outside our range we raise a `ValidationError`, specifying the error text that we want to display in the form if an invalid value is entered.
 The example above also wraps this text in one of Django's [translation functions](https://docs.djangoproject.com/en/6.1/topics/i18n/translation/), `gettext_lazy()` (imported as `_()`), which is good practice if you want to translate your site later.
@@ -475,9 +475,9 @@ Note how the `aria-describedby` attribute links the input to both the help text 
 
 #### Other ways of using form template variable
 
-Using `\{{ form }}` as shown above, each field is rendered inside a `<div>` element. You can also render each field as a table row (using `\{{ form.as_table }}`, inside your own `<table>` element), as a list item (using `\{{ form.as_ul }}`), or as a paragraph (using `\{{ form.as_p }}`).
+When you use `\{{ form }}`, Django renders each field inside a `<div>` element. You can also render each field as a table row (using `\{{ form.as_table }}`, inside your own `<table>` element), as a list item (using `\{{ form.as_ul }}`), or as a paragraph (using `\{{ form.as_p }}`).
 
-You can also render the fields individually. For example, [`\{{ form.renewal_date.as_field_group }}`](https://docs.djangoproject.com/en/6.1/ref/forms/api/#django.forms.BoundField.as_field_group) renders the label, help text, errors, and widget for just the `renewal_date` field, using the same layout as `\{{ form }}`.
+To render a single field, use its `as_field_group` method. For example, [`\{{ form.renewal_date.as_field_group }}`](https://docs.djangoproject.com/en/6.1/ref/forms/api/#django.forms.BoundField.as_field_group) renders the label, help text, errors, and widget for just the `renewal_date` field, using the same layout as `\{{ form }}`.
 
 It is also possible to have complete control over the rendering of each part of the form, by indexing its properties using dot notation. So, for example, we can access a number of separate items for our `renewal_date` field:
 
@@ -535,7 +535,7 @@ If you are successful, the default form will look like this:
 
 The form with an invalid value entered will look like this:
 
-![Same form as above with an error message: invalid date - renewal more than 4 weeks ahead](forms_example_renew_invalid.png)
+![Book renewal form with an error message: invalid date - renewal more than 4 weeks ahead](forms_example_renew_invalid.png)
 
 The list of all books with renew links will look like this:
 

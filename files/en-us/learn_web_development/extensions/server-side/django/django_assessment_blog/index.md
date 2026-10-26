@@ -77,7 +77,7 @@ The pages that need to be displayed, their URLs, and other requirements, are lis
             Contains some biographical information about the blogger/author.
           </li>
           <li>List sorted by post date (newest to oldest).</li>
-          <li>Not paginated.</li>
+          <li>List paginated in groups of 5 articles.</li>
           <li>List items display just the blog post name and post date.</li>
           <li>Blog post names are linked to blog detail pages.</li>
         </ul>
@@ -86,7 +86,7 @@ The pages that need to be displayed, their URLs, and other requirements, are lis
     <tr>
       <td>Blog post detail page</td>
       <td>
-        <code>/blog/<em>&#x3C;blog-id></em></code>
+        <code>/blog/blog/<em>&#x3C;blog-id></em></code>
       </td>
       <td>
         <p>Blog post details.</p>
@@ -120,7 +120,7 @@ The pages that need to be displayed, their URLs, and other requirements, are lis
     </tr>
     <tr>
       <td>Comment form page</td>
-      <td><code>/blog/<em>&#x3C;blog-id></em>/create</code></td>
+      <td><code>/blog/blog/<em>&#x3C;blog-id></em>/comment/</code></td>
       <td>
         <p>Create comment for blog post:</p>
         <ul>
@@ -273,7 +273,7 @@ Some general hints:
 
 4. The _add comment_ form can be created using a function-based view (and associated model and form) or using a generic `CreateView`. If you use a `CreateView` (recommended) then:
    - You will also need to pass the name of the blog post to the comment page in the context (implement `get_context_data()` as discussed below).
-   - The form should only display the comment "description" for user entry (date and associated blog post should not be editable). Since they won't be in the form itself, your code will need to set the comment's author in the `form_valid()` function so it can be saved into the model ([as described here](https://docs.djangoproject.com/en/6.1/topics/class-based-views/generic-editing/#models-and-request-user) — Django docs). In that same function we set the associated blog. A possible implementation is shown below (`pk` is a blog id passed in from the URL/URL configuration).
+   - The form should only display the comment "description" for user entry (date and associated blog post should not be editable). Since they won't be in the form itself, your code will need to set the comment's author in the `form_valid()` function so it can be saved into the model (see [Models and request.user](https://docs.djangoproject.com/en/6.1/topics/class-based-views/generic-editing/#models-and-request-user) in the Django docs). In that same function we set the associated blog. A possible implementation is shown below (`pk` is a blog id passed in from the URL/URL configuration).
 
      ```python
          def form_valid(self, form):
@@ -306,8 +306,9 @@ class SomeView(generic.ListView):
 
 ## Assessment
 
-The assessment for this challenge is [available on GitHub here](https://github.com/mdn/django-diy-blog/blob/main/MarkingGuide.md). This assessment is primarily based on how well your application meets the requirements we listed above, though there are some parts that check your code uses appropriate models, and that you have written at least some test code.
-When you're done, you can check out [the finished example](https://github.com/mdn/django-diy-blog) which reflects a "full marks" project.
+There is no formal marking guide for this challenge.
+If your application works and meets the requirements listed in this article, well done!
+When you're done, you can compare your code with [the finished example](https://github.com/mdn/django-diy-blog).
 
 Once you've completed this module you've also finished all the MDN content for learning basic Django server-side website programming! We hope you enjoyed this module and feel you have a good grasp of the basics!
 

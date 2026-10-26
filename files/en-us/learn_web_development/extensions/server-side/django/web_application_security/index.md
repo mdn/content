@@ -103,12 +103,14 @@ SECURE_CSP = {
 }
 ```
 
-The `default-src` directive only allows the browser to load resources from our own site (`CSP.SELF` is the `'self'` source).
+The `default-src` directive allows the browser to load resources only from our own site (`CSP.SELF` is the `'self'` source).
 The `style-src` directive also allows stylesheets from the CDN that serves the Bootstrap CSS used by our base template.
 
-Because this policy doesn't allow inline scripts or styles, the browser also blocks `<script>` elements, `style` attributes, and similar code embedded in the page, which is exactly the kind of code that an XSS attack injects.
-This is why the LocalLibrary templates use CSS classes rather than `style` attributes.
-If you do need an inline script, Django can generate a [nonce](/en-US/docs/Web/HTTP/Guides/CSP#nonces) that you add to the script using its [`nonce`](/en-US/docs/Web/HTML/Reference/Global_attributes/nonce) attribute to allow it to run, as described in [How to use Django's Content Security Policy](https://docs.djangoproject.com/en/6.1/howto/csp/#nonce-config).
+Because this policy doesn't allow inline scripts or styles, the browser also blocks inline `<script>` elements, `style` attributes, and similar code embedded in the page.
+This is exactly the kind of code that an XSS attack injects.
+For this reason, the LocalLibrary templates use CSS classes rather than `style` attributes.
+If you do need an inline script, Django can generate a [nonce](/en-US/docs/Web/HTTP/Guides/CSP#nonces) for it.
+Add the nonce to the script's [`nonce`](/en-US/docs/Web/HTML/Reference/Global_attributes/nonce) attribute to allow it to run, as described in [How to use Django's Content Security Policy](https://docs.djangoproject.com/en/6.1/howto/csp/#nonce-config).
 
 Run the development server and open your browser developer tools on any page.
 You should see the `Content-Security-Policy` header in the response, and no CSP errors in the console.
@@ -202,7 +204,7 @@ There are many other protections, and caveats to the usage of the above mechanis
 
 ## Summary
 
-Django has effective protections against a number of common threats, including XSS and CSRF attacks. In this article we've demonstrated how those particular threats are handled by Django in our _LocalLibrary_ website. We've also provided a brief overview of some of the other protections.
+Django has effective protections against a number of common threats, including XSS and CSRF attacks. In this article we've demonstrated how those particular threats are handled by Django in our _LocalLibrary_ website, and added a Content Security Policy as a further defense against XSS. We've also provided a brief overview of some of the other protections.
 
 This has been a very brief foray into web security. We strongly recommend that you read [Security in Django](https://docs.djangoproject.com/en/6.1/topics/security/) to gain a deeper understanding.
 

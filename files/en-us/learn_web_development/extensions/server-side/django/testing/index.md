@@ -236,7 +236,7 @@ Here we see that we had one test failure, and we can see exactly what function f
 > The most important thing to learn from the test output above is that it is much more valuable if you use descriptive/informative names for your objects and methods.
 
 The output of the `print()` functions shows how the `setUpTestData()` method is called once for the class and `setUp()` is called before each method.
-The `.` and `F` characters show that a test passed or failed, and appear at the start of the next line of `print()` output.
+A `.` shows that a test passed and an `F` that it failed; each appears at the start of the next line of `print()` output.
 Again, remember that normally you would not add this kind of `print()` to your tests.
 
 The next sections show how you can run specific tests, and how to control how much information the tests display.
@@ -393,11 +393,11 @@ Run the tests now. If you created the Author model as we described in the models
 
 ```bash
 ======================================================================
-FAIL: test_date_of_death_label (catalog.tests.test_models.AuthorModelTest)
+FAIL: test_date_of_death_label (catalog.tests.test_models.AuthorModelTest.test_date_of_death_label)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "D:\...\locallibrary\catalog\tests\test_models.py", line 32, in test_date_of_death_label
-    self.assertEqual(field_label,'died')
+  File "/home/user/django-locallibrary-tutorial/catalog/tests/test_models.py", line 19, in test_date_of_death_label
+    self.assertEqual(field_label, 'died')
 AssertionError: 'Died' != 'died'
 - Died
 ? ^
@@ -720,12 +720,12 @@ The rest of the tests verify that our view only returns books that are on loan t
         self.assertEqual(len(response.context['bookinstance_list']), 10)
 
         last_date = 0
-        for book in response.context['bookinstance_list']:
+        for copy in response.context['bookinstance_list']:
             if last_date == 0:
-                last_date = book.due_back
+                last_date = copy.due_back
             else:
-                self.assertTrue(last_date <= book.due_back)
-                last_date = book.due_back
+                self.assertTrue(last_date <= copy.due_back)
+                last_date = copy.due_back
 ```
 
 You could also add pagination tests, should you so wish!

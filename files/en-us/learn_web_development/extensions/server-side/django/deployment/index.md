@@ -172,8 +172,8 @@ python3 manage.py check --deploy
 ```
 
 > [!NOTE]
-> This command reports an error (`mail.E001`) because the `MAILERS` setting uses the console email backend that we added for [testing password reset](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Authentication#testing_the_new_authentication_pages).
-> This backend writes emails to the server log instead of sending them.
+> This command reports an error (`mail.E001`) because the `MAILERS` setting that `startproject` created uses the console email backend, which we used for [testing password reset](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Authentication#testing_the_new_authentication_pages).
+> This backend writes emails to standard output (the terminal during development, or the server log when deployed) instead of sending them.
 > For a real site you would replace it with a production email backend, such as SMTP, which is beyond the scope of this tutorial.
 
 ### Gunicorn
@@ -242,7 +242,7 @@ pip3 install "psycopg[binary]"
 The `[binary]` option installs a version of _psycopg_ that includes the Postgres client libraries, so you don't need to install them separately.
 
 > [!NOTE]
-> Django also supports the older _psycopg2_ library, but recommends _psycopg_ (version 3), and says that support for _psycopg2_ is likely to be removed in future.
+> Django also supports the older _psycopg2_ library, but recommends _psycopg_ (version 3), and says that support for _psycopg2_ is likely to be removed in the future.
 
 Note that Django will use the SQLite database during development by default, unless `DATABASE_URL` is set.
 You can switch to Postgres completely and use the same hosted database for development and production by setting the same environment variable in your development environment (Railway makes it easy to use the same environment for production and development).
@@ -464,9 +464,10 @@ We'll also configure the default database and collect static files so that they 
    ![Image of PythonAnywhere Console management screen](python_anywhere_start_bash_console.png)
 
    Note that any console that you create is saved for your later re-use, along with all its history.
-   The green arrow above shows that this account has an existing console we could have opened instead.
+   The green arrow in the screenshot shows that this account has an existing console we could have opened instead.
 
-3. PythonAnywhere consoles come with _virtualenvwrapper_ preinstalled, and its `mkvirtualenv`/`workon` commands are what its Web tab's "Virtualenv" field (used below) expects, so we'll use them here instead of the `venv` module covered in [Setting up a Django development environment](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/development_environment).
+3. PythonAnywhere consoles come with _virtualenvwrapper_ preinstalled.
+   The "Virtualenv" field on the PythonAnywhere _Web_ tab (which we configure in [Set up the web app](#set_up_the_web_app)) expects an environment created with its `mkvirtualenv` command, so we'll use that instead of the `venv` module covered in [Setting up a Django development environment](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/development_environment).
 
    Enter the following command to create a Python 3.13 virtual environment named "env_local_library" for installing the local library dependencies.
 
@@ -598,8 +599,10 @@ After getting the local library sources and installing the dependencies in a vir
 
    ![PythonAnywhere Static files section of Web tab](python_anywhere_web_static_files.png)
 
-   Select the **Enter URL** link and enter `\static_files\`.
-   This is the `STATIC_URL` in the [application settings](#settings.py_2), and reflects the location where files were copied when we ran `collectstatic` in the previous section.
+   Select the **Enter URL** link and enter `/static/`.
+   This is the `STATIC_URL` in the [application settings](#settings.py_2).
+   Then select the **Enter path** link and enter `/home/<your_pythonanywhere_username>/<your_pythonanywhere_username>.pythonanywhere.com/staticfiles`.
+   This is the `STATIC_ROOT` folder where the files were copied when we ran `collectstatic` in the previous section.
 
 9. Near the top of the _Web_ tab select the **Reload** button to restart the site.
    Then select the site URL link to launch the live site:
@@ -629,11 +632,11 @@ ALLOWED_HOSTS = ['hamishwillee.pythonanywhere.com', '127.0.0.1']
 # ALLOWED_HOSTS = ['.pythonanywhere.com','127.0.0.1']
 ```
 
-Since the applications uses CSRF protection, you will also need to set the [CSRF_TRUSTED_ORIGINS](https://docs.djangoproject.com/en/6.1/ref/settings/#csrf-trusted-origins) key.
+Since the application uses CSRF protection, you will also need to set the [CSRF_TRUSTED_ORIGINS](https://docs.djangoproject.com/en/6.1/ref/settings/#csrf-trusted-origins) key.
 Open **/locallibrary/settings.py** and add a line like the one below:
 
 ```python
-## For example, for a site URL is at 'web-production-3640.up.railway.app'
+## For example, for a site URL at 'hamishwillee.pythonanywhere.com'
 ## (replace the string below with your own site URL):
 CSRF_TRUSTED_ORIGINS = ['https://hamishwillee.pythonanywhere.com']
 
@@ -857,14 +860,14 @@ ALLOWED_HOSTS = ['web-production-3640.up.railway.app', '127.0.0.1']
 
 # During development, you can instead set just the base URL
 # (you might decide to change the site a few times).
-# ALLOWED_HOSTS = ['.railway.com','127.0.0.1']
+# ALLOWED_HOSTS = ['.railway.app','127.0.0.1']
 ```
 
-Since the applications uses CSRF protection, you will also need to set the [CSRF_TRUSTED_ORIGINS](https://docs.djangoproject.com/en/6.1/ref/settings/#csrf-trusted-origins) key.
+Since the application uses CSRF protection, you will also need to set the [CSRF_TRUSTED_ORIGINS](https://docs.djangoproject.com/en/6.1/ref/settings/#csrf-trusted-origins) key.
 Open **/locallibrary/settings.py** and add a line like the one below:
 
 ```python
-## For example, for a site URL is at 'web-production-3640.up.railway.app'
+## For example, for a site URL at 'web-production-3640.up.railway.app'
 ## (replace the string below with your own site URL):
 CSRF_TRUSTED_ORIGINS = ['https://web-production-3640.up.railway.app']
 
