@@ -32,11 +32,11 @@ clipControlEXT(origin, depth)
     Possible values:
     - `ext.NEGATIVE_ONE_TO_ONE_EXT`
       - : Visible clip-space z values range from -w to w.
-        The resulting normalized device coordinate z values, from -1 to 1, are mapped to the depth range `n` to `f` set by {{domxref("WebGLRenderingContext.depthRange()")}} as `z * (f - n) / 2 + (n + f) / 2`.
+        The resulting z values in normalized device coordinates, from -1 to 1, are mapped to the depth range `n` to `f` set by {{domxref("WebGLRenderingContext.depthRange()")}} as `z * (f - n) / 2 + (n + f) / 2`.
         This is the initial value.
     - `ext.ZERO_TO_ONE_EXT`
       - : Visible clip-space z values range from 0 to w.
-        The resulting normalized device coordinate z values, from 0 to 1, are mapped to the depth range as `z * (f - n) + n`.
+        The resulting z values in normalized device coordinates, from 0 to 1, are mapped to the depth range as `z * (f - n) + n`.
 
 ### Return value
 
@@ -61,7 +61,7 @@ gl.getParameter(ext.CLIP_ORIGIN_EXT) === ext.UPPER_LEFT_EXT; // true
 gl.getParameter(ext.CLIP_DEPTH_MODE_EXT) === ext.ZERO_TO_ONE_EXT; // true
 ```
 
-See {{domxref("EXT_clip_control")}} for an example that uses the zero-to-one depth mode for reversed-Z depth.
+See [Using reversed-Z depth](/en-US/docs/Web/API/EXT_clip_control#using_reversed-z_depth) on the {{domxref("EXT_clip_control")}} page for an example that uses the zero-to-one depth mode.
 
 ## Specifications
 
