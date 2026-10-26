@@ -91,40 +91,53 @@ The specification allows some leeway for browsers in determining whether the con
 
 The rationale for this is that if the user already trusts the credential manager to manage their account security, then they can trust the credential manager to create a new passkey for them.
 
-This means that the best time for a website to attempt conditional create is immediately after the user has successfully signed in.
+This means that the best time for a website to attempt conditional create is immediately after the user has successfully signed in, using a password that was stored in the credential manager.
+
+Note that:
+
+- Before attempting conditional create, a website must abort any existing WebAuthn `create()` or `get()` calls. This applies especially to [conditional get](#autofill_ui), because these calls will wait until their conditions are met.
+- Conditional create is not allowed from a cross-origin iframe: the call will reject with an `NotAllowedError` exception.
+- The {{domxref("AuthenticatorAttestationResponse.attestationObject")}} object returned from the `create()` call will always have the User Presence (UP) [authenticator data](/en-US/docs/Web/API/AuthenticatorAttestationResponse/attestationObject#authdata) flag set to `false`. This means that in the case of conditional creation, the server should not require this flag to be set.
 
 The following code sample shows how a website might use conditional create:
 
 ```js
-async function signInAndCreatePasskey() {
+async function signInWithConditionalCreate() {
   const accountDetails = await signIn();
+  try {
+    conditionalCreate(accountDetails);
+  } catch (e) {
+    // Conditional create failed: ignore the error
+  }
+}
 
-  const capabilities =
-    (await PublicKeyCredential.getClientCapabilities?.()) ?? {};
-  if (capabilities.conditionalCreate === true && !accountDetails.hasPasskey) {
-    try {
-      const pkOptions = await getNewPasskeyOptions();
-      const credential = await navigator.credentials.create({
-        publicKey: pkOptions,
-        mediation: "conditional",
-      });
-      // conditional create succeeded: send the new credential to the server
-      // for validation and storage
-      await processNewPasskey(credential);
-    } catch (e) {
-      // conditional create failed, ignore
-    }
+async function conditionalCreate(account) {
+  const capabilities = await PublicKeyCredential.getClientCapabilities();
+  // Only attempt conditional create if it is supported,
+  // and if the user doesn't already have a passkey
+  if (capabilities.conditionalCreate && !account.hasPasskey) {
+    // Abort any existing WebAuthn calls
+    webAuthnController.abort();
+
+    // Get creation options, including the challenge value from the server
+    const pkOptions = await getNewPasskeyOptions();
+    const credential = await navigator.credentials.create({
+      publicKey: pkOptions,
+      mediation: "conditional",
+    });
+    // Conditional create succeeded: send the new credential to the server
+    // for validation and storage
+    await processNewPasskey(credential);
   }
 }
 ```
 
 Note that the code:
 
-- Checks whether the browser supports conditional create, by examining the object returned by {{domxref("PublicKeyCredential.getClientCapabilities()")}}.
-- Signs the user in, and checks whether the user already has a passkey.
+- Attempts conditional create after a successful sign in.
+- Only attempts conditional create if conditional create is supported and the user does not already have a passkey.
+- Aborts any outstanding WebAuthn operations, by calling {{domxref("AbortController.abort", "abort()")}} on the `AbortController` associated with the [`signal`](/en-US/docs/Web/API/CredentialsContainer/get#signal) that was passed into the operation.
 - Attempts conditional create, then processes the new passkey if it is successful, or ignores the error if it isn't.
-
-When you use conditional create, the [authenticator data](/en-US/docs/Web/API/AuthenticatorAttestationResponse/attestationObject#authdata) contained in the {{domxref("AuthenticatorAttestationResponse.attestationObject")}} returned from the `create()` call will always set the User Presence (UP) and User Verification (UV) flags to `false`. This means that the server should not expect them to be `true` when it validates the object.
 
 ### Authenticating a user
 
