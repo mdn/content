@@ -51,6 +51,10 @@ A JSON-serializable plain object containing the following properties:
 - {{domxref("PerformanceResourceTiming/firstInterimResponseStart", "firstInterimResponseStart")}}
 - {{domxref("PerformanceResourceTiming/finalResponseHeadersStart", "finalResponseHeadersStart")}}
 - {{domxref("PerformanceResourceTiming/responseEnd", "responseEnd")}}
+- {{domxref("PerformanceResourceTiming/workerRouterEvaluationStart", "workerRouterEvaluationStart")}}
+- {{domxref("PerformanceResourceTiming/workerCacheLookupStart", "workerCacheLookupStart")}}
+- {{domxref("PerformanceResourceTiming/workerMatchedRouterSource", "workerMatchedRouterSource")}}
+- {{domxref("PerformanceResourceTiming/workerFinalRouterSource", "workerFinalRouterSource")}}
 - {{domxref("PerformanceResourceTiming/transferSize", "transferSize")}}
 - {{domxref("PerformanceResourceTiming/encodedBodySize", "encodedBodySize")}}
 - {{domxref("PerformanceResourceTiming/decodedBodySize", "decodedBodySize")}}

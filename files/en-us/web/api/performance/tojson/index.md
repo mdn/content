@@ -29,13 +29,14 @@ A JSON-serializable plain object containing the following properties:
 - {{domxref("Performance/timeOrigin", "timeOrigin")}}
 - {{domxref("Performance/timing", "timing")}}
 - {{domxref("Performance/navigation", "navigation")}}
+- {{domxref("Performance/interactionCount", "interactionCount")}}
 
-When the returned object is passed to {{jsxref("JSON.stringify()")}}, the `timing` and `navigation` properties are serialized using {{domxref("PerformanceTiming/toJSON", "PerformanceTiming.toJSON()")}} and {{domxref("PerformanceNavigation/toJSON", "PerformanceNavigation.toJSON()")}}, respectively. The `timeOrigin` value is copied as-is.
+When the returned object is passed to {{jsxref("JSON.stringify()")}}, the `timing` and `navigation` properties are serialized using {{domxref("PerformanceTiming/toJSON", "PerformanceTiming.toJSON()")}} and {{domxref("PerformanceNavigation/toJSON", "PerformanceNavigation.toJSON()")}}, respectively. Other property values are copied as-is.
 
 The returned object doesn't contain the {{domxref("Performance.eventCounts", "eventCounts")}} property because {{domxref("EventCounts")}} doesn't provide a `toJSON()` operation.
 
 > [!NOTE]
-> In a window context, the returned object includes the deprecated {{domxref("performance.timing")}} and {{domxref("performance.navigation")}} properties. These properties are not available in workers. To get a JSON-serializable plain object representing a {{domxref("PerformanceNavigationTiming")}} entry, call {{domxref("PerformanceNavigationTiming.toJSON()")}} instead.
+> In a window context, the returned object includes {{domxref("Performance.interactionCount", "interactionCount")}} and the deprecated {{domxref("performance.timing")}} and {{domxref("performance.navigation")}} properties. These properties are not available in workers. To get a JSON-serializable plain object representing a {{domxref("PerformanceNavigationTiming")}} entry, call {{domxref("PerformanceNavigationTiming.toJSON()")}} instead.
 
 ## Examples
 
@@ -89,7 +90,8 @@ This would log a JSON string like so (formatted for readability):
   "navigation": {
     "type": 0,
     "redirectCount": 0
-  }
+  },
+  "interactionCount": 0
 }
 ```
 
