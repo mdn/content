@@ -36,7 +36,7 @@ The **`EXT_texture_norm16`** extension is part of the [WebGL API](/en-US/docs/We
 
 The formats provided by this extension store each color component as a 16-bit integer, which shaders read as a floating-point value.
 Components in the unsigned normalized formats represent values from 0.0 to 1.0, and components in the signed normalized (`SNORM`) formats represent values from -1.0 to 1.0.
-All of these formats are texture-filterable, so textures in these formats can be sampled with linear filtering.
+All of these formats are texture-filterable, so they support linear filtering.
 
 When this extension is enabled:
 
@@ -45,7 +45,7 @@ When this extension is enabled:
 - The `ext.R16_EXT`, `ext.RG16_EXT`, and `ext.RGBA16_EXT` formats are color-renderable, so textures in these formats can be attached to framebuffers and rendered to.
   The {{domxref("WebGLRenderingContext.renderbufferStorage()")}} and {{domxref("WebGL2RenderingContext.renderbufferStorageMultisample()")}} methods also accept these three formats, so that renderbuffers can be created in them.
 
-Texture data in these formats can be uploaded from typed arrays: a {{jsxref("Uint16Array")}} with the type `gl.UNSIGNED_SHORT` for the unsigned normalized formats, and an {{jsxref("Int16Array")}} with the type `gl.SHORT` for the signed normalized formats.
+Texture data in these formats can be uploaded from typed arrays: a {{jsxref("Uint16Array")}} with the type `gl.UNSIGNED_SHORT` for the unsigned normalized formats and an {{jsxref("Int16Array")}} with the type `gl.SHORT` for the signed normalized formats.
 Uploading data from an image, a canvas, a video, an {{domxref("ImageBitmap")}}, or a similar source generates an error.
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method.

@@ -16,22 +16,25 @@ The **`EXT_texture_mirror_clamp_to_edge`** extension is part of the [WebGL API](
 ## Constants
 
 - `ext.MIRROR_CLAMP_TO_EDGE_EXT`
-  - : Texture wrapping mode that uses a mirror image of the texture for texture coordinates from -1 to 0, and the texels at the edge of the texture for texture coordinates beyond -1 and 1.
+  - : Texture wrapping mode that mirrors the texture for coordinates from -1 to 0, and uses the texels at the edge where the coordinate is 1 for coordinates less than -1 or greater than 1.
 
 ## Description
 
 When this extension is enabled, the {{domxref("WebGLRenderingContext.texParameter()")}} method accepts `ext.MIRROR_CLAMP_TO_EDGE_EXT` as the value of the `gl.TEXTURE_WRAP_S` and `gl.TEXTURE_WRAP_T` parameters, and of the `gl.TEXTURE_WRAP_R` parameter in {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts.
 In WebGL 2 contexts, the {{domxref("WebGL2RenderingContext.samplerParameter()")}} method accepts it for the same parameters.
 
-With this wrapping mode, a texture is sampled as if it were twice its size, with the additional half being a mirror image of the original texture:
+With this wrapping mode, a texture is sampled as if it were twice its size, and the additional half is a mirror image of the original texture:
 
 - For texture coordinates from 0 to 1, the texture is sampled as usual.
 - For texture coordinates from -1 to 0, the texture is sampled as if it were mirrored at coordinate 0.
-- For texture coordinates less than -1 or greater than 1, the texels at the edge of the texture are used, in the same way as with `gl.CLAMP_TO_EDGE`.
+- For texture coordinates less than -1 or greater than 1, the texels at the edge of the texture where the coordinate is 1 are used.
+  Coordinates less than -1 are mirrored first, and then clamped in the same way as with `gl.CLAMP_TO_EDGE`.
 
-This allows an image that is symmetric, such as a glow, a vignette, or a lens flare, to be stored as a texture that contains only half of it, or only a quarter of it when the mode is used for both texture coordinates.
+You can use this wrapping mode to store a symmetric image, such as a glow, a vignette, or a lens flare, as a texture that contains only half of the image.
+If you set the mode for both texture coordinates, the texture needs to contain only a quarter of the image.
 
-WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method.
+For more information, see [Using WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions).
 
 ## Examples
 
@@ -63,7 +66,7 @@ gl.getTexParameter(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S) ===
   ext.MIRROR_CLAMP_TO_EDGE_EXT; // true
 ```
 
-The fragment shader then samples the texture with coordinates from -1 to 1 across the quad that it draws, so that the full glow is drawn:
+The fragment shader then converts the texture coordinates across the quad from the range 0 to 1 to the range -1 to 1, so that the full glow is drawn:
 
 ```glsl
 precision mediump float;
@@ -84,6 +87,8 @@ In WebGL 2 contexts, you can also set the wrapping mode on a {{domxref("WebGLSam
 const sampler = gl.createSampler();
 gl.samplerParameteri(sampler, gl.TEXTURE_WRAP_S, ext.MIRROR_CLAMP_TO_EDGE_EXT);
 gl.samplerParameteri(sampler, gl.TEXTURE_WRAP_T, ext.MIRROR_CLAMP_TO_EDGE_EXT);
+// A sampler replaces all of the texture's sampling parameters, so set the filter too
+gl.samplerParameteri(sampler, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 gl.bindSampler(0, sampler);
 ```
 
