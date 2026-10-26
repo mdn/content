@@ -367,7 +367,6 @@ dj-database-url==3.1.2
 gunicorn==26.2.0
 psycopg==3.3.6
 psycopg-binary==3.3.6
-wheel==0.48.0
 whitenoise==6.12.0
 python-dotenv==1.2.3
 ```
