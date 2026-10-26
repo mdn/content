@@ -55,7 +55,7 @@ async function signIn() {
 }
 ```
 
-## Sign-in flow details
+## FedCM sign-in flow
 
 The FedCM sign-in flow starts with a call from the RP's front-end code to {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} and, if the call is successful, ends by returning a token which the RP can use to sign the user in.
 
