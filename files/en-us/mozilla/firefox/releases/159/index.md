@@ -1,36 +1,19 @@
 ---
-title: Firefox 159 release notes for developers (Beta)
-short-title: Firefox 159 (Beta)
+title: Firefox 159 release notes for developers (Stable)
+short-title: Firefox 159 (Stable)
 slug: Mozilla/Firefox/Releases/159
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 159 that affect developers.
-Firefox 159 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [October 27, 2026](https://whattrainisitnow.com/release/?version=159).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 159 was released on [October 27, 2026](https://whattrainisitnow.com/release/?version=159).
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
+### HTML
 
-<!-- ### HTML -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### CSS
 
@@ -41,19 +24,9 @@ Firefox 159 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The legacy masonry layout syntax has been removed: the `masonry` value of the {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} properties, and the `masonry-auto-flow` property. This syntax was only enabled by default in Nightly, behind the `layout.css.grid-template-masonry-value.enabled` preference. It's superseded by [grid lanes layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes), which uses the `grid-lanes` and `inline-grid-lanes` values of the {{cssxref("display")}} property. ([Firefox bug 2077170](https://bugzil.la/2077170)).
 
-<!-- ### JavaScript -->
+### JavaScript
 
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### APIs
 
@@ -65,14 +38,6 @@ Firefox 159 is the current [Beta version of Firefox](https://www.firefox.com/en-
 #### DOM
 
 - [Scoped custom element registries](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) are now supported, this allows a shadow tree to create an independent {{domxref("CustomElementRegistry")}} whose definitions only apply to that specific DOM subtree. This can be used to avoid collisions where multiple web components declare elements with the same name. The `customElementRegistry` property can be used on {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("ShadowRoot")}}. The [`CustomElementRegistry()` constructor](/en-US/docs/Web/API/CustomElementRegistry/CustomElementRegistry) creates a new `CustomElementRegistry` object for scoped usage. ([Firefox bug 2070506](https://bugzil.la/2070506))
-
-<!-- #### Media, WebRTC, and Web Audio -->
-
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -86,14 +51,6 @@ Firefox 159 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - Implemented the `emulation.setMediaFeaturesOverride` command, which allows clients to override the values of CSS media features. Currently only [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) is supported. ([Firefox bug 2064354](https://bugzil.la/2064354)).
 - Added a [machine-readable CDDL (Concise Data Definition Language) file](https://searchfox.org/firefox-main/rev/2d5c2a4eb5d99a92249ec13370b1de9c1a77c0f8/remote/webdriver-bidi/cddl/Fields.cddl) for the Firefox-specific extensions to WebDriver BiDi. ([Firefox bug 2057588](https://bugzil.la/2057588)).
-
-<!-- #### Marionette -->
-
-## Changes for add-on developers
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
 
 ## Experimental web features
 
