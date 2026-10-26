@@ -77,7 +77,7 @@ Firefox 159 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - Recommended preferences are now set as default values instead of user values, so they no longer remain in `prefs.js` after an unclean shutdown. ([Firefox bug 2074275](https://bugzil.la/2074275)).
 - Removed the `--remote-allow-system-access` command line argument. To enable system access, set the `MOZ_REMOTE_ALLOW_SYSTEM_ACCESS` environment variable to `1` instead. ([Firefox bug 2054896](https://bugzil.la/2054896)).
-- Fixed a memory leak where internal polling operations kept running until shutdown after erroring. This could affect a variety of commands (e.g. WebDriver BiDi's `browsingContext.traverseHistory`). ([Firefox bug 2079758](https://bugzil.la/2079758)).
+- Fixed a memory leak where internal polling operations kept running until shutdown after erroring. This could affect a variety of commands (e.g., WebDriver BiDi's `browsingContext.traverseHistory`). ([Firefox bug 2079758](https://bugzil.la/2079758)).
 
 #### WebDriver BiDi
 
