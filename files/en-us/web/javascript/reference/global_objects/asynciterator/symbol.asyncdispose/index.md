@@ -61,7 +61,7 @@ doSomething();
 
 ## See also
 
-- [Polyfill of `AsyncIterator.prototype[Symbol.asyncDispose]` in `core-js`](https://github.com/zloirock/core-js#explicit-resource-management)
+- [Polyfill of `AsyncIterator.prototype[Symbol.asyncDispose]` in `core-js`](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
 - {{jsxref("Symbol.asyncDispose")}}
 - {{jsxref("Statements/await_using", "await using")}}

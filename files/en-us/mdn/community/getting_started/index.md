@@ -70,4 +70,8 @@ Here's a list of ways you can contribute to MDN Web Docs:
 When contributing, you agree to make your contributions available under the [Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/4.0/) (or an alternative license already specified by the page you are editing).
 In addition, code samples are available under [Creative Commons CC-0](https://wiki.creativecommons.org/wiki/CC0) (a Public Domain dedication).
 
+You are responsible for your contributions. Review your work before submitting it, and make sure you can explain every change.
+
+Make sure that any content is technically accurate and that you have the right to license it under these terms.
+
 If you have any questions or concerns about anything discussed here, please [contact us](/en-US/docs/MDN/Community/Communication_channels).

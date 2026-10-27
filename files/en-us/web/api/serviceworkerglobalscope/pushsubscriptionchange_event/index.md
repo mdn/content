@@ -16,11 +16,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("pushsubscriptionchange", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onpushsubscriptionchange = (event) => { }
 ```
 
@@ -71,7 +75,7 @@ self.addEventListener("pushsubscriptionchange", (event) => {
 
 When a `pushsubscriptionchange` event arrives, indicating that the subscription has expired, we resubscribe by calling the push manager's {{domxref("PushManager.subscribe", "subscribe()")}} method. When the returned promise is resolved, we receive the new subscription. This is delivered to the app server using a {{domxref("WorkerGlobalScope/fetch", "fetch()")}} call to post a {{Glossary("JSON")}} formatted rendition of the subscription's {{domxref("PushSubscription.endpoint", "endpoint")}} to the app server.
 
-You can also use the `onpushsubscriptionchange` event handler property to set up the event handler:
+You can also use the `onpushsubscriptionchange` event handler property to set up the event handler (but note that this replaces other event listeners added using `onpushsubscriptionchange`, if any):
 
 ```js
 self.onpushsubscriptionchange = (event) => {

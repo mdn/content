@@ -119,5 +119,6 @@ function makeRSA(p, q) {
 
 ## See also
 
+- [Polyfill of `Error` with `cause` support in `core-js`](https://core-js.io/docs/features/ecmascript/error)
 - {{jsxref("Error.prototype.message")}}
 - {{jsxref("Error.prototype.toString()")}}
