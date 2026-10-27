@@ -8,6 +8,7 @@ sidebar: http
 ---
 
 The **`CONNECT`** HTTP method requests that a {{Glossary("Proxy server", "proxy")}} establish an HTTP tunnel to a destination server, and if successful, blindly forward data in both directions until the tunnel is closed.
+In HTTP/2 and HTTP/3, an [extended `CONNECT`](#extended_connect) request is also used to run protocols such as WebSockets and WebTransport over an HTTP stream.
 
 <table class="properties">
   <tbody>
@@ -74,9 +75,9 @@ Aside from enabling secure access to websites behind proxies, an HTTP tunnel pro
 ### Extended CONNECT
 
 HTTP/2 and HTTP/3 also define an _extended_ `CONNECT` request, which is used to run another protocol over a single HTTP stream ({{rfc("8441")}} and {{rfc("9220")}}).
-The request includes a `:protocol` pseudo-header that names the protocol, along with the `:scheme`, `:authority`, and `:path` pseudo-headers that identify the target resource.
-It is sent to the origin server, which must first advertise support using the `SETTINGS_ENABLE_CONNECT_PROTOCOL` setting.
-If the server responds with a [2XX successful response status code](/en-US/docs/Web/HTTP/Reference/Status#successful_responses), the stream is then used by the named protocol.
+The request includes a `:protocol` pseudo-header naming the protocol, along with the `:scheme`, `:authority`, and `:path` pseudo-headers that identify the target resource.
+The request is sent to the origin server, which must first advertise support using the `SETTINGS_ENABLE_CONNECT_PROTOCOL` setting.
+If the server responds with a [2XX successful response status code](/en-US/docs/Web/HTTP/Reference/Status#successful_responses), the named protocol takes over the stream.
 
 Extended `CONNECT` is used to open [WebSocket](/en-US/docs/Web/API/WebSockets_API) connections over HTTP/2 and HTTP/3 (with `:protocol` set to `websocket`), and to establish [WebTransport](/en-US/docs/Web/API/WebTransport_API) sessions (with `:protocol` set to `webtransport`).
 
@@ -108,3 +109,5 @@ Proxy-Authorization: basic aGVsbG86d29ybGQ=
 - [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)
 - {{Glossary("Proxy server")}} glossary entry
 - {{HTTPHeader("Proxy-Authorization")}} header
+- [WebSockets API](/en-US/docs/Web/API/WebSockets_API)
+- [WebTransport API](/en-US/docs/Web/API/WebTransport_API)
