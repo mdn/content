@@ -218,10 +218,10 @@ Firefox, Safari, and Chromium-based browsers, including Chrome and Edge, support
 
 Also, the access browsers grant with `activeTab` differs:
 
-- Firefox and Safari grant access to the active tab only.
-- Chrome grants the host permissions derived from the tab's URL.
+- Firefox grants access to the active tab only.
+- Chrome and Safari grant the host permissions derived from the tab's URL.
 
-Chrome's logic can provide more access than Firefox's, for example:
+Chrome and Safari can provide more access than Firefox, for example:
 
 - Another tab with the same origin can be scripted in Chrome, but not in Firefox.
 - An extension script (such as a background script or a popup's script) can make a cross-origin request to the tab's URL in Chrome, but not in Firefox.
