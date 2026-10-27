@@ -111,7 +111,7 @@ xhrButtonSuccess.addEventListener("click", () => {
 });
 
 xhrButtonError.addEventListener("click", () => {
-  runXHR("https://example.com/notfound.jpg");
+  runXHR("https://example.com/");
 });
 
 xhrButtonAbort.addEventListener("click", () => {
