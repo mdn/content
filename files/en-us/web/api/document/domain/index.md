@@ -127,14 +127,12 @@ several cases:
 As an example of this last failure case, trying to set `document.domain` to
 `"example.org"` when on `https://example.com/` will throw.
 
-Additionally, as part of its deprecation, it will do nothing when combined with certain
-modern isolation features:
+Additionally, as part of its deprecation, setting `document.domain` is ignored or forbidden when combined with modern isolation features:
 
 - If used on a cross-origin isolated page, i.e., one that uses the appropriate values
   for the {{httpheader("Cross-Origin-Opener-Policy")}} and
   {{httpheader("Cross-Origin-Embedder-Policy")}} HTTP headers
-- If used on an origin-isolated page, i.e., one that uses the
-  {{httpheader("Origin-Agent-Cluster")}} {{experimental_inline}} HTTP header
+- In modern browsers adhering to the latest HTML specification where documents are placed in origin-keyed agent clusters by default. In these environments, setting `document.domain` is ignored unless the document explicitly opts out of origin isolation by delivering the {{httpheader("Origin-Agent-Cluster")}} header with `?0` (e.g., `Origin-Agent-Cluster: ?0`).
 
 Finally, setting `document.domain` does not change the origin used for
 origin-checks by some Web APIs, preventing sub-domain access via this mechanism.
