@@ -202,7 +202,7 @@ This example shows how to read incoming datagrams into a buffer that you supply,
 First, we construct the `WebTransport` with the `datagramsReadableType` option set to `bytes`, so that the transport's {{domxref("WebTransportDatagramDuplexStream.readable", "datagrams.readable")}} property returns a readable byte stream.
 We then get a BYOB ("bring your own buffer") reader by passing `mode: "byob"` to {{domxref("ReadableStream.getReader()", "getReader()")}}.
 
-We allocate a 64 KiB buffer, the minimum size recommended in the [`datagramsReadableType`](#datagramsreadabletype) option.
+We allocate a 64 KiB buffer, which is large enough to hold any datagram (see the [`datagramsReadableType`](#datagramsreadabletype) option).
 Each call to {{domxref("ReadableStreamBYOBReader.read()", "read()")}} fills a view of this buffer with one datagram.
 The returned `value` is a new `Uint8Array` over the same memory, sized to fit the datagram.
 Passing a view to `read()` transfers its buffer, so the original can no longer be used.
