@@ -67,6 +67,10 @@ Given that different browsers will handle this differently and the tier values m
 
 Note that when calling {{domxref("GPUAdapter.requestDevice()")}} to request a {{domxref("GPUDevice")}} that meets some minimum requirements ("limits"), you pass an object that has the same property names as `GPUSupportedLimits`.
 
+### Maximum storage buffer limit adjustments outside compatibility mode
+
+When creating a device, requested `maxStorageBuffersInFragmentStage`, `maxStorageBuffersInVertexStage`, `maxStorageTexturesInFragmentStage`, and `maxStorageTexturesInVertexStage` limits are ignored when [WebGPU compatibility mode](/en-US/docs/Web/API/WebGPU_API#webgpu_compatibility_mode) isn't being used. Instead, they are adjusted to equal the values of the `maxStorageBuffersPerShaderStage` and `maxStorageTexturesPerShaderStage` limits.
+
 ## Examples
 
 In the following code we query the `GPUAdapter.limits` value of `maxBindGroups` to see if it is equal to or greater than 6.
