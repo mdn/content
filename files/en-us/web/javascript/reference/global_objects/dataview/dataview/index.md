@@ -78,5 +78,5 @@ view.getInt16(1); // 42
 
 ## See also
 
-- [Polyfill of `DataView` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `DataView` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - {{jsxref("DataView")}}

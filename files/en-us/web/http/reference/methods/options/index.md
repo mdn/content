@@ -67,26 +67,25 @@ The request target may be either in 'asterisk form' `*` indicating the whole ser
 To find out which request methods a server supports, one can use the `curl` command-line program to issue an `OPTIONS` request:
 
 ```bash
-curl -X OPTIONS https://example.org -i
+curl -X OPTIONS https://httpbin.org/ -i
 ```
 
 This creates the following HTTP request:
 
 ```http
 OPTIONS / HTTP/2
-Host: example.org
+Host: httpbin.org
 User-Agent: curl/8.7.1
 Accept: */*
 ```
 
-The response contains an {{HTTPHeader("Allow")}} header that holds the allowed methods:
+An example response contains an {{HTTPHeader("Allow")}} header that lists the allowed methods (the exact response headers may vary):
 
 ```http
-HTTP/1.1 204 No Content
-Allow: OPTIONS, GET, HEAD, POST
-Cache-Control: max-age=604800
-Date: Thu, 13 Oct 2016 11:45:00 GMT
-Server: EOS (lax004/2813)
+HTTP/2 200
+content-type: text/html; charset=utf-8
+content-length: 0
+allow: HEAD, OPTIONS, GET
 ```
 
 ### Preflighted requests in CORS

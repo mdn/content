@@ -49,10 +49,12 @@ If you have any questions or concerns about anything discussed here, please cont
 
 The rights in the logos, trademarks, and service marks of the Mozilla Foundation, as well as the look and feel of this website, are not licensed under the Creative Commons license, and to the extent they are works of authorship (like logos and graphic design), they are not included in the work that is licensed under those terms. If you use the text of documents and wish to also use any of these rights, or if you have any other questions about complying with our licensing terms for this collection, you should contact the Mozilla Foundation here: [licensing@mozilla.org](mailto:licensing@mozilla.org).
 
-## Using content from elsewhere on MDN Web Docs
+## Using content from elsewhere
 
-In general, we do not approve of copying content from other sources and putting it on MDN.
-MDN should be made up of original content wherever possible.
+We do not approve of copying content from other sources and putting it on MDN.
+MDN should be made up of original content, except in the cases described in [Reusing or republishing your content on MDN](#reusing_or_republishing_your_content_on_mdn).
+Take care with tools that can reproduce material from other sources without attribution.
+You must have the right to license everything you contribute under the terms described on this page.
 If we receive a pull request and discover that it contains plagiarized content, we will close it and request that the submitter resubmit the change with the content rewritten into their own words.
 
 ### Reusing or republishing your content on MDN

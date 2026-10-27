@@ -68,7 +68,7 @@ console.log(wm.getOrInsert(obj, "another default")); // "default"
 
 ## See also
 
-- [Polyfill of `WeakMap.prototype.getOrInsert` in `core-js`](https://github.com/zloirock/core-js#map-upsert)
+- [Polyfill of `WeakMap.prototype.getOrInsert` in `core-js`](https://core-js.io/docs/features/ecmascript/collections#h-weakmap)
 - [es-shims polyfill of `WeakMap.prototype.getOrInsert`](https://www.npmjs.com/package/weakmap.prototype.getorinsert)
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakMap.prototype.get()")}}

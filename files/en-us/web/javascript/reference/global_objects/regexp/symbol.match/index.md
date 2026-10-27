@@ -133,7 +133,7 @@ console.log(result.group(3)); // 02
 
 ## See also
 
-- [Polyfill of `RegExp.prototype[Symbol.match]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `RegExp.prototype[Symbol.match]` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - {{jsxref("String.prototype.match()")}}
 - [`RegExp.prototype[Symbol.matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
 - [`RegExp.prototype[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)

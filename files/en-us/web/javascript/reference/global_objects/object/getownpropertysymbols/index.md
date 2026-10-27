@@ -75,6 +75,6 @@ console.log(objectSymbols[0]); // Symbol(a)
 
 ## See also
 
-- [Polyfill of `Object.getOwnPropertySymbols` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [Polyfill of `Object.getOwnPropertySymbols` in `core-js`](https://core-js.io/docs/features/ecmascript/symbol)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Symbol")}}

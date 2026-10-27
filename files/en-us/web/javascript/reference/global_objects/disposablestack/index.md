@@ -72,7 +72,7 @@ These properties are defined on `DisposableStack.prototype` and shared by all `D
 
 ## See also
 
-- [Polyfill of `DisposableStack` in `core-js`](https://github.com/zloirock/core-js#explicit-resource-management)
+- [Polyfill of `DisposableStack` in `core-js`](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
 - {{jsxref("Symbol.dispose")}}
 - {{jsxref("Statements/using", "using")}}

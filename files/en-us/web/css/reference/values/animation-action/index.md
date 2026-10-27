@@ -2,9 +2,13 @@
 title: <animation-action>
 slug: Web/CSS/Reference/Values/animation-action
 page-type: css-type
+status:
+  - experimental
 browser-compat: css.properties.animation-trigger
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`<animation-action>`** {{glossary("enumerated")}} data type represents keyword values that specify how an animation should behave in certain circumstances — for example, how a [triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers) should behave when its trigger is activated and deactivated.
 
@@ -285,7 +289,7 @@ We give the `.animated` element a {{cssxref("position")}} of `fixed`, positionin
 body {
   width: 80%;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
   font-size: 1.3rem;
 }
 
@@ -354,7 +358,7 @@ Try scrolling the content up. When the tracked `<div>` fully appears in the scro
 
 ### Comparing the `<animation-action>` values
 
-This example provides a comparison of the various`<animation-action>` values. By applying the same rotation animation to identical side-by-side elements and varying the `animation-trigger` values, you can compare and contrast the effects of the different actions.
+This example provides a comparison of the various `<animation-action>` values. By applying the same rotation animation to identical side-by-side elements and varying the `animation-trigger` values, you can compare and contrast the effects of the different actions.
 
 #### HTML
 
@@ -444,7 +448,7 @@ We apply the same {{cssxref("animation")}} to each `<div>` element—we play the
 body {
   width: 80%;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
   font-size: 1.3rem;
 }
 

@@ -13,7 +13,7 @@ The **`mapping`** read-only property of the {{domxref("Gamepad")}} interface ret
 The currently supported known layouts are:
 
 - "standard" for the [standard gamepad](https://w3c.github.io/gamepad/#remapping).
-- "xr-standard for the [standard XR gamepad](https://immersive-web.github.io/webxr-gamepads-module/#xr-standard-heading). See also {{domxref("XRInputSource.gamepad")}}.
+- "xr-standard" for the [standard XR gamepad](https://immersive-web.github.io/webxr-gamepads-module/#xr-standard-heading). See also {{domxref("XRInputSource.gamepad")}}.
 
 ## Examples
 

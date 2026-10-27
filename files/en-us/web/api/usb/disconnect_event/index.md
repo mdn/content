@@ -14,11 +14,15 @@ The **`disconnect`** event of the {{DOMxRef("USB")}} interface is fired whenever
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("disconnect", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 ondisconnect = (event) => { }
 ```
 
@@ -38,7 +42,7 @@ navigator.usb.addEventListener("disconnect", (event) => {
 });
 ```
 
-Alternatively, you can use the `USB.ondiscconnect` event handler property to establish a handler for the `disconnect` event:
+Alternatively, you can use the `USB.ondisconnect` event handler property to establish a handler for the `disconnect` event (but note that this replaces other event listeners added using `ondisconnect`, if any):
 
 ```js
 navigator.usb.ondisconnect = (event) => {

@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`rule-inset-junction`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property can be used to offset the column and row rule segment [junction endpoints](#understanding_junction_endpoints) to the same value.
+The **`rule-inset-junction`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property can be used to offset the column and row rule segment [junction endpoints](/en-US/docs/Web/CSS/Reference/Properties/column-rule-inset-junction-end#understanding_junction_endpoints) to the same value.
 
 {{InteractiveExample("CSS Demo: rule-inset-junction")}}
 
@@ -118,7 +118,7 @@ This property is specified as one or two values from the following list:
 
 The `rule-inset-junction` shorthand property can be used to set the {{cssxref("row-rule-inset-junction")}} and {{cssxref("column-rule-inset-junction")}} properties to the same value in a single declaration, insetting row and column junction segment endpoints by the specified values.
 
-If one value is specified, both properties are set to that value. If two values are specified, `-start` is set to the first value and `-end` is set to the second. Positive values reduce (or inset) the segment size, while negative values and the [`overlap-join` keyword](/en-US/docs/Web/CSS/Reference/Properties/column-rule-inset-junction-start#understanding_junction_endpoints) increase (or outset) it. The default value is `0`.
+If one value is specified, both properties are set to that value. If two values are specified, `-start` is set to the first value and `-end` is set to the second. Positive values reduce (or inset) the segment size, while negative values and the [`overlap-join` keyword](/en-US/docs/Web/CSS/Reference/Properties/column-rule-inset-junction-end#understanding_junction_endpoints) increase (or outset) it. The default value is `0`.
 
 To inset both cap and junction segment endpoints, the `rule-inset-junction` shorthand property, along with the {{cssxref("rule-inset-cap")}} shorthand property, can be set using the {{cssxref("rule-inset")}} shorthand.
 

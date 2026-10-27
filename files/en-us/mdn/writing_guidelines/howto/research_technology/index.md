@@ -28,6 +28,11 @@ Useful resources for writing any documentation include:
 3. The latest modern web browsers: These should be experimental/alpha builds such as [Firefox Nightly](https://www.firefox.com/en-US/channel/desktop/#nightly), [Chrome Canary](https://www.google.com/intl/en/chrome/canary/), or [Safari Technology Preview](https://webkit.org/downloads/) that are more likely to support the features you are documenting. This is especially pertinent if you are documenting a feature that is "upcoming".
 4. Demos/blog posts/other info: Find as much info as you can. If you are updating a technology because it has changed, ensure that the resources you are using to learn are not out of date. This is why the first two points above are important.
 
+> [!WARNING]
+> Don't rely on responses from AI tools when you research a technology.
+> They can present invented or out-of-date details, such as properties, methods, or browser support that don't exist, as if they were fact.
+> Always check details against the specification and test them in browsers.
+
 It can also be wise to try and find someone to help answer questions. This can be the specification authors or the engineers who implement browser features.
 
 ### Reading specifications
@@ -77,7 +82,7 @@ Let's say you're documenting a new Web API, your initial list of sections to be 
 8. Code examples
 9. Sidebars
 
-You can then expand on it with more details, adding each interface and it's members. For example, if you were documenting the Web Audio API, your list might look more like this:
+You can then expand on it with more details, adding each interface and its members. For example, if you were documenting the Web Audio API, your list might look more like this:
 
 - Web_Audio_API
 - AudioContext

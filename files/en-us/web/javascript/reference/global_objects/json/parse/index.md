@@ -39,10 +39,10 @@ JSON.parse(text, reviver)
       - : The key associated with the value.
     - `value`
       - : The value produced by parsing.
-    - `context` {{optional_inline}}
-      - : A context object that holds state relevant to the current expression being revived. It is a new object for each invocation of the reviver function. It is only passed when reviving primitive values, but not when `value` is an object or array. It contains the following property:
-        - `source`
-          - : The original JSON string representing this value.
+    - `context`
+      - : A context object that holds state relevant to the current expression being revived. It is a new object for each invocation of the reviver function.
+        - `source` {{optional_inline}}
+          - : The original JSON string representing this value. This property is only present when reviving primitive values, but not when `value` is an object or array.
 
 ### Return value
 
@@ -61,7 +61,7 @@ The {{jsxref("Object")}}, {{jsxref("Array")}}, string, number, boolean, or `null
 
 If a `reviver` is specified, the value computed by parsing is _transformed_ before being returned. Specifically, the computed value and all its properties (in a [depth-first](https://en.wikipedia.org/wiki/Depth-first_search) fashion, beginning with the most nested properties and proceeding to the original value itself) are individually run through the `reviver`.
 
-The `reviver` is called with the object containing the property being processed as `this` (unless you define the `reviver` as an arrow function, in which case there's no separate `this` binding) and two arguments: `key` and `value`, representing the property name as a string (even for arrays) and the property value. For primitive values, an additional `context` parameter is passed, which contains the source text of this value. If the `reviver` function returns {{jsxref("undefined")}} (or returns no value — for example, if execution falls off the end of the function), the property is deleted from the object. Otherwise, the property is redefined to be the return value. If the `reviver` only transforms some values and not others, be certain to return all untransformed values as-is — otherwise, they will be deleted from the resulting object.
+The `reviver` is called with the object containing the property being processed as `this` (unless you define the `reviver` as an arrow function, in which case there's no separate `this` binding) and three arguments: `key`, `value`, and `context`. The key is a string even for arrays. For primitive values, the `context` argument has a field called `source` containing the source text of this value. If the `reviver` function returns {{jsxref("undefined")}} (or returns no value — for example, if execution falls off the end of the function), the property is deleted from the object. Otherwise, the property is redefined to be the return value. If the `reviver` only transforms some values and not others, be certain to return all untransformed values as-is — otherwise, they will be deleted from the resulting object.
 
 Similar to the `replacer` parameter of {{jsxref("JSON.stringify()")}}, for arrays and objects, `reviver` will be last called on the root value with an empty string as the `key` and the root object as the `value`. For other valid JSON values, `reviver` works similarly and is called once with an empty string as the `key` and the value itself as the `value`.
 
@@ -204,5 +204,5 @@ JSON.parse("{\"foo\": 1}"); // OK
 
 ## See also
 
-- [Polyfill of modern `JSON.parse` behavior (reviver's `context` parameter) in `core-js`](https://github.com/zloirock/core-js#jsonparse-source-text-access)
+- [Polyfill of modern `JSON.parse` behavior (reviver's `context` parameter) in `core-js`](https://core-js.io/docs/features/ecmascript/json)
 - {{jsxref("JSON.stringify()")}}

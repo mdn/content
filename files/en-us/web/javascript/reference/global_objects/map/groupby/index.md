@@ -121,7 +121,7 @@ console.log(result.get(restock2)); // undefined
 
 ## See also
 
-- [Polyfill of `Map.groupBy` in `core-js`](https://github.com/zloirock/core-js#array-grouping)
+- [Polyfill of `Map.groupBy` in `core-js`](https://core-js.io/docs/features/ecmascript/collections#h-map)
 - [es-shims polyfill of `Map.groupBy`](https://www.npmjs.com/package/map.groupby)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array.prototype.reduce()")}}

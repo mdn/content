@@ -8,20 +8,20 @@ browser-compat: api.DocumentType.replaceWith
 
 {{APIRef("DOM")}}
 
-The **`DocumentType.replaceWith()`** method replaces the document type with a set of given nodes.
+The **`replaceWith()`** method of the {{domxref("DocumentType")}} interface replaces this `DocumentType` in the children list of its parent with a set of {{domxref("Node")}} objects or strings. Strings are inserted as equivalent {{domxref("Text")}} nodes. Nothing happens if {{domxref("Node.parentNode", "parentNode")}} is `null`.
 
 ## Syntax
 
 ```js-nolint
-replaceWith(node1)
-replaceWith(node1, node2)
-replaceWith(node1, node2, /* …, */ nodeN)
+replaceWith(param1)
+replaceWith(param1, param2)
+replaceWith(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
 
-- `node1`, …, `nodeN`
-  - : A set of nodes to replace the {{domxref("DocumentType")}} with.
+- `param1`, …, `paramN`
+  - : A set of {{domxref("Node")}} objects or strings to insert.
 
 ### Return value
 
@@ -37,7 +37,7 @@ None ({{jsxref("undefined")}}).
 ### Using `replaceWith()`
 
 ```js
-let svgDt = document.implementation.createDocumentType(
+const svgDt = document.implementation.createDocumentType(
   "svg:svg",
   "-//W3C//DTD SVG 1.1//EN",
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd",
