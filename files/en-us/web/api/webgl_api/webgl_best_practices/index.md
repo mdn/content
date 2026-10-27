@@ -114,22 +114,6 @@ In production code, avoid such entry points, especially on the browser main thre
 
 If you draw without vertex attrib 0 enabled as an array, you will force the browser to do complicated emulation when running on desktop OpenGL (such as on macOS). This is because in desktop OpenGL, nothing gets drawn if vertex attrib 0 is not array-enabled. You can use `bindAttribLocation` to force a vertex attribute to use location 0, and use `enableVertexAttribArray(0)` to make it array-enabled.
 
-## Estimate a per-pixel VRAM Budget
-
-WebGL doesn't offer APIs to query the maximum amount of video memory on the system because such queries are not portable. Still, applications must be conscious of VRAM usage and not just allocate as much as possible.
-
-One technique pioneered by the Google Maps team is the notion of a _per-pixel VRAM budget_:
-
-1. For one system (e.g., a particular desktop / laptop), decide the maximum amount of VRAM your application should use.
-2. Compute the number of pixels covered by a maximized browser window. E.g., `(window.innerWidth * window.devicePixelRatio) * (window.innerHeight * window.devicePixelRatio)`.
-3. The per-pixel VRAM budget is (1) divided by (2), and is a constant.
-
-This constant should _generally_ be portable among systems. Don't assume that mobile devices have fewer pixels to fill, though: many phones have high-density screens with as many device pixels as a typical laptop or desktop display, or more. Re-compute this constant on a few target systems to get a reliable estimate.
-
-Now adjust all internal caching in the application (WebGLBuffers, WebGLTextures, etc.) to obey a maximum size, computed by this constant multiplied by the number of pixels covered by the _current_ browser window. This requires estimating the number of bytes consumed by each texture, for example. The cap also must typically be updated as the browser window resizes, and older resources above the limit must be purged.
-
-Keeping the application's VRAM usage under this cap will help to avoid out-of-memory errors and associated instability.
-
 ## Consider rendering to a smaller back buffer
 
 A common (and easy) way to trade off quality for speed is rendering into a smaller back buffer, and upscaling the result. Consider reducing canvas.width and height and keeping canvas.style.width and height at a constant size.
@@ -428,7 +412,7 @@ Basis Universal solves several of the issues mentioned above. It offers a way to
 
 Depth and stencil attachments and formats are actually inseparable on many devices. You may ask for DEPTH_COMPONENT24 or STENCIL_INDEX8, but you're often getting D24X8 and X24S8 32bpp formats behind the scenes. Assume that the memory usage of depth and stencil formats is rounded up to the nearest four bytes.
 
-Keep this in mind when you [estimate your VRAM usage](#estimate_a_per-pixel_vram_budget). It also means that if you need a stencil buffer, a combined depth-stencil attachment (`DEPTH24_STENCIL8` in WebGL 2, or `DEPTH_STENCIL` in WebGL 1) usually costs no more memory than a 24-bit depth-only one.
+This also means that if you need a stencil buffer, a combined depth-stencil attachment (`DEPTH24_STENCIL8` in WebGL 2, or `DEPTH_STENCIL` in WebGL 1) usually costs no more memory than a 24-bit depth-only one.
 
 ## texImage/texSubImage uploads (esp. videos) can cause pipeline flushes
 
@@ -585,7 +569,7 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
 
 Handling `devicePixelRatio !== 1.0` is tricky. While the common approach is to set `canvas.width = width * devicePixelRatio`, this will cause moire artifacts with non-integer values of `devicePixelRatio`, as is common with UI scaling on Windows, as well as zooming on all platforms.
 
-The best way to avoid this is to ask the browser for the exact size of the canvas in device pixels, using `ResizeObserver` with `'device-pixel-content-box'`, as described in the [next section](#resizeobserver_and_device-pixel-content-box). This works with normal CSS layout, so the canvas can keep filling whatever container it's in.
+The most reliable way to avoid this is to ask the browser for the exact size of the canvas in device pixels, using `ResizeObserver` with `'device-pixel-content-box'`, as described in the [next section](#resizeobserver_and_device-pixel-content-box). This works with normal CSS layout, so the canvas can keep filling whatever container it's in.
 
 As a fallback, you can use non-integer values for CSS's `top`/`bottom`/`left`/`right` to fairly reliably 'pre-snap' your canvas to whole integer device coordinates. This only works if you position the canvas yourself, so it doesn't fit layouts where the canvas is sized by its container.
 
