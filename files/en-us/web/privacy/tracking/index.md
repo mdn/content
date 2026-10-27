@@ -7,7 +7,7 @@ sidebar: privacy
 
 **Tracking** is the practice of collecting and correlating information about a user's activities across multiple websites. This enables the tracker to build a profile of the user, which may include, or enable the tracker to deduce, a great deal of personal information about them.
 
-The motivation for tracking is that the record of a user's browsing history is valuable, especially to the advertising industry, as it enables them to serve ads that are highly targeted to a person's interests. However, tracking is one of the most significant web privacy problems, and as a result, browsers and browser extensions have attempted to prevent websites from tracking users.
+The motivation for tracking is that the record of a user's browsing history is valuable, especially to the advertising industry, as it enables them to serve ads that are highly targeted to a person's interests. This can result in a significant violation of users’ privacy, as browsing histories can reveal sensitive details about a person’s health, beliefs, and relationships, and are often collected and shared with third parties without the user’s knowledge or consent. For this reason, browsers and browser extensions have attempted to prevent websites from tracking users.
 
 In this guide we'll describe the main techniques that are used to track users, and the mechanisms that browsers have adopted to protect users from trackers.
 
@@ -15,7 +15,7 @@ In this guide we'll describe the main techniques that are used to track users, a
 
 The tracker's goal is to assemble a record of sites that the user has visited, and potentially other information about their browsing activities.
 
-Typically (but [not always](#navigational_tracking)), a tracker's architecture consists of a server, which maintains the information about tracked users, and a client component, which is embedded in a large number of web pages belonging to sites that the user might visit.
+The most common tracking architecture consists of a server, which maintains the information about tracked users, and a client component, which is embedded in a large number of web pages belonging to sites that the user might visit.
 
 The tracker generally has a good reason to encourage other sites to embed its client: for example, the tracker might operate a social media site, and might provide small client-side components that other sites can embed, that enable users to share the embedding page on their social media profile.
 
@@ -23,7 +23,7 @@ When the user loads a page that embeds the client, the client is able to communi
 
 The embedded client has a way to identify the browser in which it's loaded: most often, it does this by storing an identifier in the browser's client-side storage. Whenever the user loads a page that embeds the client, the client communicates with the server, which adds the page to the list of pages associated with this user.
 
-![Diagram showing tracker architecture.](tracker-architecture.svg)
+![Two pages, cat-videos.example and yak-videos.example, each embed a tracker client. Each client reads user ID 123456 from the browser's tracker storage and reports the visit to the tracker server, which records both pages against that ID.](tracker-architecture.svg)
 
 This architecture has a couple of properties that are worth exploring in a little more detail:
 
@@ -40,7 +40,7 @@ Common examples of third party resources are:
 
 - A separate document, along with its own subresources, which is served from a different site and embedded in the first party's document inside an {{htmlelement("iframe")}}. In this case, the third-party document is loaded into its own context, which is isolated from the first party according to the rules of the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy).
 
-![Diagram showing first- and third-party resources.](first-and-third-party.svg)
+![A page at cat-videos.example loads first-party resources (script.js and img.png) from its own site, and third-party resources (an iframe, a script, and an image) from tracker.example.](first-and-third-party.svg)
 
 This makes tracking especially problematic for privacy, because it violates the principle of _transparency_: that the user should be aware of how their personal data is shared, and with whom. Because the user is directly interacting with the first party, it's more reasonable to assume that they intend to share any data that they share with that party. But typically the involvement of a third party is not apparent to the user, and so the fact that it may be collecting data about them is also not apparent.
 
@@ -58,7 +58,8 @@ We can distinguish two sorts of stateful tracking:
 
 Trackers can use various different client-side storage APIs to store identifiers, such as [local storage](/en-US/docs/Web/API/Web_Storage_API) or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API). Most often, though, trackers use [cookies](/en-US/docs/Web/HTTP/Guides/Cookies).
 
-For trackers, a major advantage of cookies is that the identifier can be set by the server in the response to an HTTP request, and any stored identifiers are always sent to the server in the request. This means that the client side of a tracker can be implemented only using HTML elements, with no active scripting needed.
+For trackers, a major advantage of cookies is that the server can set the identifier in its response to an HTTP request, and the browser then sends it automatically in later requests to that server, as long as the cookie was set with `SameSite=None` and `Secure`.
+This means that the client side of a tracker can be implemented using only HTML elements, with no active scripting needed.
 
 To use cookies, a tracker implements something like the following process:
 
@@ -81,7 +82,7 @@ For example: in {{glossary("HSTS", "HTTP Strict Transport Security (HSTS)")}}, a
 
 These stored identifiers are sometimes called "supercookies", because they will not be cleared when the browser clears cookies: that is the attraction of them for trackers.
 
-### Fingerprinting
+## Fingerprinting
 
 Fingerprinting is like covert stateful tracking, except that the identifier — the fingerprint — is not stored by the tracker, but is derived by collecting and combining distinguishing features of the user's environment. Elements of a fingerprint might include, for example:
 
@@ -107,7 +108,7 @@ Navigational tracking is a little different from the other methods we've looked 
 
 Bounce tracking, also known as redirect tracking, is a variant of navigational tracking in which the link goes to the tracker, instead of the expected destination. The tracker can then set and receive its cookies, before immediately redirecting the browser to the destination that the user expected. This may happen so quickly that the user doesn't even notice.
 
-![Diagram showing redirect tracking.](redirect-tracking.svg)
+![A link on cat-videos.example points to tracker.example, with more-cat-videos.example as a redirect parameter. The browser navigates to tracker.example, which sets and reads first-party cookies and then redirects the browser to more-cat-videos.example.](redirect-tracking.svg)
 
 For trackers, the advantage of bounce tracking is that it works even if the browser has blocked or restricted third-party cookies. Because the browser has navigated to the tracker, the tracker is (temporarily) considered to be a first party, so is allowed to set and receive cookies even if third-party cookies are blocked.
 
