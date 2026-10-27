@@ -37,13 +37,15 @@ new WebTransport(url, options)
         You access this stream as `transport.datagrams.readable` (see {{domxref("WebTransport.datagrams")}} and {{domxref("WebTransportDatagramDuplexStream.readable")}}).
         The only allowed value is `bytes`, which creates a [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams).
         This stream can be read with a {{domxref("ReadableStreamBYOBReader")}}, which reads each datagram into a buffer that you supply.
-        If omitted, a default readable stream is created, in which each chunk is a new {{jsxref("Uint8Array")}} containing one datagram.
+        If this option is omitted, the transport creates a default readable stream, in which each chunk is a new {{jsxref("Uint8Array")}} containing one datagram.
 
-        Reading into your own buffer lets you reuse the same memory for every datagram, so the browser doesn't have to allocate a new `Uint8Array` for each one.
-        This reduces allocations when an application receives datagrams at a high rate, such as frequent game state or sensor updates.
-        Each read returns one datagram.
+        Reading into your own buffer lets you reuse the same memory for every datagram, instead of the browser allocating new memory for each one.
+        This is most useful when an application receives datagrams at a high rate, for example to deliver frequent game state or sensor updates.
+
+        Unless you use the `min` option, each read returns one datagram.
         If the supplied buffer is smaller than the datagram, the stream is errored, and the pending {{domxref("ReadableStreamBYOBReader.read()", "read()")}} rejects with a {{jsxref("RangeError")}}.
-        To avoid this, use a buffer of at least 64 KiB (65536 bytes), which is the recommended maximum size of the QUIC frames that carry datagrams.
+        To avoid this, use a buffer of at least 64 KiB (65536 bytes), which is the recommended maximum size of the {{Glossary("QUIC")}} frames that carry datagrams.
+        Use a {{jsxref("Uint8Array")}} as the view passed to `read()`: a {{jsxref("DataView")}} or a typed array with multi-byte elements errors the stream, and `read()` rejects with a {{jsxref("TypeError")}}.
 
         > [!NOTE]
         > A byte stream doesn't fully preserve datagram boundaries: empty datagrams are not delivered, and reading with the [`min`](/en-US/docs/Web/API/ReadableStreamBYOBReader/read#min) option can combine several datagrams into one read.
@@ -197,13 +199,14 @@ const transport = new WebTransport(url, {
 
 This example shows how to read incoming datagrams into a buffer that you supply, using a {{domxref("ReadableStreamBYOBReader")}}.
 
-First we construct the `WebTransport` with the `datagramsReadableType` option set to `bytes`, so that {{domxref("WebTransportDatagramDuplexStream.readable", "datagrams.readable")}} is a readable byte stream.
-We then get a BYOB reader by passing `mode: "byob"` to {{domxref("ReadableStream.getReader()", "getReader()")}}.
+First, we construct the `WebTransport` with the `datagramsReadableType` option set to `bytes`, so that the transport's {{domxref("WebTransportDatagramDuplexStream.readable", "datagrams.readable")}} property returns a readable byte stream.
+We then get a BYOB ("bring your own buffer") reader by passing `mode: "byob"` to {{domxref("ReadableStream.getReader()", "getReader()")}}.
 
-We allocate a 64 KiB buffer, which is the recommended size for reading datagrams (see the [`datagramsReadableType`](#datagramsreadabletype) option).
+We allocate a 64 KiB buffer, the minimum size recommended in the [`datagramsReadableType`](#datagramsreadabletype) option.
 Each call to {{domxref("ReadableStreamBYOBReader.read()", "read()")}} fills a view of this buffer with one datagram.
 The returned `value` is a new `Uint8Array` over the same memory, sized to fit the datagram.
-The buffer of the view passed to `read()` is transferred and can no longer be used, so we take the buffer from `value` and reuse it for the next read.
+Passing a view to `read()` transfers its buffer, so the original can no longer be used.
+Instead, we take the buffer from `value` and reuse it for the next read.
 
 ```js
 const transport = new WebTransport(url, { datagramsReadableType: "bytes" });

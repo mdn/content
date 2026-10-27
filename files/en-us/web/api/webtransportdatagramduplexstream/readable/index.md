@@ -18,9 +18,10 @@ For example, you might want to transmit regular game state updates where each me
 
 A {{domxref("ReadableStream")}}.
 
-By default this is a readable stream in which each chunk is a {{jsxref("Uint8Array")}} containing one datagram.
-If the {{domxref("WebTransport")}} that provides this stream through its {{domxref("WebTransport.datagrams", "datagrams")}} property was constructed with the [`datagramsReadableType`](/en-US/docs/Web/API/WebTransport/WebTransport#datagramsreadabletype) option set to `bytes`, this is a [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams).
+By default, this is a readable stream in which each chunk is a {{jsxref("Uint8Array")}} containing one datagram.
+If the {{domxref("WebTransport")}} was constructed with the [`datagramsReadableType`](/en-US/docs/Web/API/WebTransport/WebTransport#datagramsreadabletype) option set to `bytes`, this is a [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams).
 A readable byte stream can also be read using a {{domxref("ReadableStreamBYOBReader")}}, which reads each datagram into a buffer that you supply.
+See the [Reading datagrams with a BYOB reader](/en-US/docs/Web/API/WebTransport/WebTransport#reading_datagrams_with_a_byob_reader) example on the `WebTransport()` constructor page.
 
 ## Examples
 
