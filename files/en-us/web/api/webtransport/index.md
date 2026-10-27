@@ -42,6 +42,8 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
   - : Returns a {{jsxref("Promise")}} that resolves when the transport is ready to use.
 - {{domxref("WebTransport.reliability", "reliability")}} {{ReadOnlyInline}}
   - : Returns a string that indicates whether the connection supports reliable transports only, or whether it also supports unreliable transports (such as UDP).
+- {{domxref("WebTransport.responseHeaders", "responseHeaders")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("Headers")}} object containing the HTTP headers that the server sent in its response to the request that set up the session, or `null` if the session has not yet been established.
 
 ## Instance methods
 
