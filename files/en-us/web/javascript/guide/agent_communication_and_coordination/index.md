@@ -5,7 +5,11 @@ page-type: guide
 sidebar: jssidebar
 ---
 
-**Agents** are the JavaScript formalism for describing an autonomous JavaScript executor. Most JavaScript you write gets executed in a single thread, but you may create more threads with specific platform APIs such as [web workers](/en-US/docs/Web/API/Web_Workers_API). This guide looks at some general computer science concepts related to thread coordination and how they are embodied in JavaScript, and introduces the APIs for enabling cross-thread communication: {{domxref("Worker/postMessage", "postMessage()")}}, {{jsxref("SharedArrayBuffer")}}, and {{jsxref("Atomics")}}. You may find the [Typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide useful before reading this.
+**Agents** is the JavaScript formal terminology for describing autonomous JavaScript executors. Most JavaScript you write gets executed in a single thread, but you may create more threads with specific platform APIs such as [web workers](/en-US/docs/Web/API/Web_Workers_API).
+
+This guide explains general computer science concepts related to thread coordination and how JavaScript implements them. It also introduces the APIs for enabling cross-thread communication: {{domxref("Worker/postMessage", "postMessage()")}}, {{jsxref("SharedArrayBuffer")}}, and {{jsxref("Atomics")}}.
+
+It is recommended to understand [Typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) before reading this.
 
 This is a guide article; to dive into the technical details of JavaScript agents, read the [Execution model](/en-US/docs/Web/JavaScript/Reference/Execution_model) reference.
 
@@ -78,7 +82,7 @@ port.start();
 ```
 
 > [!NOTE]
-> In all examples to follow, we'll assume that these lines exist at the top of `main.js` and `worker.js`. We won't repeat them.
+> In all subsequent examples, we'll assume that these lines exist at the top of `main.js` and `worker.js`. We won't repeat them.
 
 Now, each agent can call {{domxref("MessagePort/postMessage", "postMessage()")}} and listen for {{domxref("MessagePort/message_event", "message")}} events on the `MessagePort` object.
 
@@ -93,7 +97,7 @@ worker1.postMessage({ hereIsYourPort: port1 }, [port1]);
 worker2.postMessage({ hereIsYourPort: port2 }, [port2]);
 ```
 
-As a practical example, we implement a number-guessing game. `main.js` comes up with a secret number, and `worker.js` tries to guess it. Each time, `main.js` tells `worker.js` whether the guess is correct, too low, or too high, and the worker adjusts its guess. Here's how `main.js` can receive guesses from the worker using {{domxref("MessageEvent.data")}}, and provide feedback using `port1.postMessage()`:
+As a practical example, we implement a number-guessing game. `main.js` defines a secret number, and `worker.js` tries to guess it. Each time, `main.js` tells `worker.js` whether the guess is correct, too low, or too high, and the worker adjusts its guess. Here's how `main.js` can receive guesses from the worker using {{domxref("MessageEvent.data")}}, and provide feedback using `port1.postMessage()`:
 
 ```js
 // -- main.js --
@@ -161,7 +165,7 @@ Yay                                             worker.js
 
 ### Sending messages by copying or transferring
 
-You can pass many kinds of JavaScript values to `postMessage`. In the number-guessing example, we pass numbers for guesses, strings for feedback, and objects for the `MessagePort`. By default, each agent has its own [memory space](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_execution_model), so when an object is sent from one heap to another, a copy of it is created in the target heap. The copy uses the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm), which only supports a fixed set of data types. When unsupported objects are attempted to be copied, a {{domxref("DOMException")}} is thrown.
+You can pass many kinds of JavaScript values to `postMessage`. In the number-guessing example, we pass numbers for guesses, strings for feedback, and objects for the `MessagePort`. By default, each agent has its own [memory space](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_execution_model), so when an object is sent from one heap to another, a copy of it is created in the target heap. The copy uses the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm), which only supports a fixed set of data types. When you attempt to copy an unsupported object, a {{domxref("DOMException")}} is thrown.
 
 ![Two agents, an HTML page and a worker, each contain a heap with one object. An arrow labeled postMessage() points from the object in the page's heap to the object in the worker's heap.](message-copy-diagram.svg)
 
@@ -180,14 +184,14 @@ To transfer an object, you still pass it (or other objects containing it) to `po
 worker.postMessage({ hereIsYourPort: port2 }, [port2]);
 ```
 
-The whole object `{ hereIsYourPort: port2 }` is copied as usual and can be used in both agents (however, it's not assigned to a variable in the sender, so it will be immediately dropped). The `port2` resource is taken over by the new object in the worker agent, while the source instance is marked as detached. The effects of detachment depend on the object type, but generally operations either throw an error or do nothing. For a `MessagePort`, the original object loses its connection to the other port.
+The whole object `{ hereIsYourPort: port2 }` is copied as usual and can be used in both agents, though it isn't assigned to a variable in the sender, so it will be immediately dropped over there. The `port2` resource is taken over by the new object in the worker agent, while the source instance is marked as detached. The effects of detachment depend on the object type, but generally operations either throw an error or do nothing. For a `MessagePort`, the original object loses its connection to the other port.
 
 Other than `MessagePort`, another widely-used transferable object is {{jsxref("ArrayBuffer")}}, which happens to be both copyable and transferable. When an `ArrayBuffer` is copied, the source and recipient each hold an independent copy, and mutations on one side do not affect the other. When an `ArrayBuffer` is transferred, it is again marked as _detached_. A detached array buffer still exists as an object, but no longer provides access to the underlying memory. This means that:
 
 - {{jsxref("ArrayBuffer/byteLength", "byteLength")}} becomes 0 (in both the buffer and the associated typed array views).
 - Methods, such as {{jsxref("ArrayBuffer/resize", "resize()")}} and {{jsxref("ArrayBuffer/slice", "slice()")}}, throw a {{jsxref("TypeError")}} when invoked. The associated typed array views' methods also throw a `TypeError`.
 
-You can check whether an `ArrayBuffer` is detached by its {{jsxref("ArrayBuffer/detached", "detached")}} property.
+You can check whether an `ArrayBuffer` is detached via its {{jsxref("ArrayBuffer/detached", "detached")}} property.
 
 In pure JavaScript, you can also transfer the ownership of memory from one `ArrayBuffer` to another using its {{jsxref("ArrayBuffer/transfer", "transfer()")}} or {{jsxref("ArrayBuffer/transferToFixedLength", "transferToFixedLength()")}} method.
 
@@ -222,18 +226,18 @@ Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
 ```
 
-After you do this, you can do the following checks to confirm that shared memory is enabled:
+After you do this, you can perform the following checks to confirm that shared memory is enabled:
 
 ```js
 console.log(window.crossOriginIsolated); // true
 console.log("SharedArrayBuffer" in window); // true
 ```
 
-Now you can share memory, but only within an [agent cluster](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing)—you can't share memory with agents outside of its cluster even when they have a message channel. A window and its dedicated worker are in the same cluster, so our examples will work as normal.
+Now you can share memory, but only within an [agent cluster](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing)—you can't share memory with agents outside of its cluster, even when they have a message channel. A window and its dedicated worker are in the same cluster, so our examples will work fine.
 
 ### Using a shared buffer
 
-The `SharedArrayBuffer` interface is mostly identical to `ArrayBuffer`. You can construct a `SharedArrayBuffer`, which allocates the specified number of bytes.
+The `SharedArrayBuffer` (SAB) interface is mostly identical to `ArrayBuffer`. You can construct a `SharedArrayBuffer`, which allocates the specified number of bytes.
 
 ```js
 const sab = new SharedArrayBuffer(1024);
@@ -274,7 +278,7 @@ console.log(sabResizable.byteLength); // 2000
 
 `SharedArrayBuffer` objects are always shared when passed to `postMessage()` (as long as the security requirements are met); no extra options are necessary. Both sides can mutate this memory span and observe the other side's mutations. You can also pass a view of a `SharedArrayBuffer` directly—the view and the `buffer` object are both copied, but the underlying memory span is still shared.
 
-In the examples to follow, we'll share a buffer between `main.js` and `worker.js`, which is established together with the message port. Replace the line in `main.js`:
+In the following examples, we'll share a buffer between `main.js` and `worker.js` together with the message port. Replace the line in `main.js`:
 
 ```js
 worker.postMessage({ hereIsYourPort: port2 }, [port2]);
@@ -338,9 +342,9 @@ In the example above, we use a message to force the following order:
 3. Main agent receives message and runs event listener
 4. Main agent reads memory
 
-The problem with using event-based coordinations is that events are asynchronous: the time between steps 2 and 3 is up to the discretion of the browser's event loop. In this case, you might as well just pass values back and forth without going through a shared memory. The advantage of shared memory is exactly that you can (mostly) communicate synchronously, without yielding the job queue to other async tasks.
+The problem with event-based coordination is that events are asynchronous: the time between steps 2 and 3 is dependent on the browser's event loop. In this case, you might as well pass values back and forth without relying on shared memory. The advantage of shared memory is exactly that you can (mostly) communicate synchronously, without yielding the job queue to other async tasks.
 
-In a single agent, the [run-to-completion](/en-US/docs/Web/JavaScript/Reference/Execution_model#run-to-completion) semantics ensures well-behaving effect ordering with respect to multiple synchronous jobs:
+In a single agent, the [run-to-completion](/en-US/docs/Web/JavaScript/Reference/Execution_model#run-to-completion) semantics ensure well-behaved effect ordering with respect to multiple synchronous jobs:
 
 ```js
 const promise = Promise.resolve();
@@ -357,7 +361,7 @@ promise.then(() => {
 
 Here, the overall order is always `i += 1; console.log(i); i += 1; console.log(i);` and never `i += 1; i += 1; console.log(i); console.log(i);`.
 
-Such things cannot be said when the synchronous jobs belong to different agents. In the example below, the worker sends the main agent a `started` message and immediately starts incrementing the shared integer in a loop. Upon receipt of the message, the main agent runs the same loop at the same time. When the worker finishes, it sends a `finished` message, and the main agent logs the final value.
+There aren't such guarantees when the synchronous jobs belong to different agents. In the example below, the worker sends the main agent a `started` message and immediately starts incrementing the shared integer in a loop. Upon receipt of the message, the main agent runs the same loop at the same time. When the worker finishes, it sends a `finished` message, and the main agent logs the final value.
 
 ```js
 // -- main.js --
@@ -385,7 +389,7 @@ for (let n = 0; n < 10_000_000; n++) {
 port.postMessage("finished");
 ```
 
-Because messages on a port are delivered in order, the `finished` handler always runs after the main agent's own loop has completed, so both agents have finished counting by the time the value is logged. Still, the logged value is probably less than `20000000`, and it differs between runs. This is because `i[0] += 1` is not a single step: it reads `i[0]`, adds 1, and writes the result back. There are at least two orders possible; the first one, which doesn't lose an increment, is:
+Because messages to a port are delivered in order, the `finished` handler always runs after the main agent's own loop has completed, so both agents have finished counting by the time the value is logged. Still, the logged value is probably less than `20000000`, and it differs between runs. This is because `i[0] += 1` is not a single step: it reads `i[0]`, adds 1, and writes the result back. There are at least two orders possible; the first one, which doesn't lose an increment, is:
 
 1. Agent 1 reads `i[0]` as `currentI`
 2. Agent 1 writes `i[0] = currentI + 1`
@@ -399,7 +403,7 @@ The second one, which loses an increment, is:
 3. Agent 1 writes `i[0] = currentI + 1`
 4. Agent 2 writes `i[0] = currentI + 1`
 
-To solve this problem, we must have a mechanism for ensuring execution order across agents, such that a statement in agent 2 is not allowed to execute until a statement in agent 1 finishes and its effect becomes observable. Methods from the {{jsxref("Atomics")}} namespace provide this capability.
+To solve this problem, we must use a mechanism to ensure execution order across agents, so a statement in agent 2 cannot execute until a statement in agent 1 finishes and its effect becomes observable. Methods from the {{jsxref("Atomics")}} namespace provide this capability.
 
 ### Reading and writing
 
@@ -595,7 +599,7 @@ while (Atomics.load(a, 1) !== 1) {
 Alternatively, you can change it to an explicit notification-based system while still keeping it sync. The {{jsxref("Atomics.wait()")}} and {{jsxref("Atomics.notify()")}} methods allow you to do so—the waiting thread doesn't have to keep checking the value; the writing thread notifies it whenever the writing is done.
 
 > [!NOTE]
-> Unlike the previously-introduced methods, `wait()`, `waitAsync()`, and `notify()` can only operate on `Int32Array` and `BigInt64Array`.
+> Unlike the previously-introduced methods, `wait()`, `waitAsync()`, and `notify()` can only operate on `Int32Array` and `BigInt64Array` views.
 
 Here, the `worker.js` thread is halted if `a[1] === 0`.
 
@@ -616,7 +620,7 @@ Atomics.notify(a, 1);
 
 Some important notes to call out:
 
-- `Atomics.wait()` also blocks the thread from executing other jobs. On the web, the main thread is not allowed to be blocked, so calling `Atomics.wait` throws an error there.
+- `Atomics.wait()` also blocks the thread from executing other jobs. On the web, the main thread cannot be blocked, so calling `Atomics.wait()` throws an error there.
 - `Atomics.wait()` returns whenever it has been notified, regardless of whether `a[1]` has actually changed.
 - Other than checking the initial value, the memory index that `store` and `wait` operate on is entirely arbitrary: they do not care what that value actually represents. The index serves as an "ID" of the waiter list. The initial flag check ensures that if the worker `wait` happens after `notify` is already called, the `wait` continues immediately instead of sleeping forever, so you should set and only set `a[1]` to `1` (representing "Ready" in our case) immediately before calling `notify`.
 
@@ -635,7 +639,7 @@ if (result === "timed-out") {
 }
 ```
 
-The main thread in browsers is not allowed to be blocked. The {{jsxref("Atomics.waitAsync()")}} method provides the same functionality, but in the form of a promise, thus allowing other asynchronous jobs to proceed in the meantime.
+The {{jsxref("Atomics.waitAsync()")}} method provides the same functionality as `wait()`, but in the form of a promise, thus allowing other asynchronous jobs to proceed in the meantime.
 
 ```js
 // -- main.js --
@@ -656,9 +660,9 @@ if (!result.async) {
 
 You must carefully weigh the impacts of the three waiting mechanisms:
 
-- Busy waiting blocks the thread without yielding the CPU. When it finishes, the CPU can immediately resume without [context switching](https://en.wikipedia.org/wiki/Context_switch), but while it's spinning, this core is occupied and cannot take other jobs (although the operating system may decide to schedule in some other thread if the current thread has used the CPU for too long). This is the fastest when you expect the wait to be very short, even shorter than the time of two context switches.
-- Synchronous `Atomics.wait()` blocks the thread but yields the CPU. The CPU core can take other threads and may need to context switch when this thread continues. This is the most efficient when you expect the wait to be longer than two context switches and it might be better to let other threads use the CPU in the meantime, but you prefer to keep the code synchronous.
-- Asynchronous `Atomics.waitAsync()` uses normal promise semantics: the code that waits for its completion comes back as another job in the agent, but other code in the same thread keeps executing. This is useful when the current thread has other jobs that are equally important and must proceed in the meantime, such as the main thread which needs to render the page and respond to user interactions.
+- Busy waiting blocks the thread without yielding the CPU. When it finishes, the CPU can immediately resume without [context switching](https://en.wikipedia.org/wiki/Context_switch), but while it's spinning, this core is occupied and cannot take other jobs (although the operating system may decide to schedule in some other thread if the current thread has used the CPU for too long). This is the fastest mechanism when you expect the wait to be very short, even shorter than the time taken by two context switches.
+- Synchronous `Atomics.wait()` blocks the thread but yields the CPU. The CPU core can take other threads and may need to context switch when this thread continues. This is the most efficient mechanism when you expect the wait to be longer than two context switches and it might be better to let other threads use the CPU in the meantime, but you prefer to keep the code synchronous.
+- Asynchronous `Atomics.waitAsync()` uses normal promise semantics: the code that waits for its completion comes back as another job in the agent, but other code in the same thread keeps executing. This is useful when the current thread has other jobs that are equally important and must proceed in the meantime, such as the main thread, which needs to render the page and respond to user interactions.
 
 ## Useful shared memory patterns
 
@@ -666,21 +670,21 @@ Let's look at a few common techniques and concepts for ensuring the performance 
 
 A shared memory protocol needs to answer these questions:
 
-- Who may access each part of the memory
-- Which operations must happen together without interleaving operations from other threads
-- How an agent knows that data is ready to read or safe to overwrite
-- How much work the protocol requires when an agent is working alone, and what happens when many agents compete for access
+- Who may access each part of the memory?
+- Which operations must happen together without interleaving operations from other threads?
+- How does an agent know that data is ready to read or safe to overwrite?
+- How much work does the protocol require when an agent is working alone, and what happens when many agents compete for access?
 
 ### Locks and mutexes
 
-A [_lock_](<https://en.wikipedia.org/wiki/Lock_(computer_science)>), also called a _mutex_ (for "mutual exclusion"), is a mechanism where while a thread holds the lock, no other thread can operate on the same memory. Each thread acquires the lock before accessing protected data and releases it afterwards. The code between acquisition and release is called a _critical section_.
+A [_lock_](<https://en.wikipedia.org/wiki/Lock_(computer_science)>), also called a _mutex_ (for "mutual exclusion"), is a mechanism that ensures that while a thread has access to a particular resource, no other thread can have access to the same resource. Each thread acquires the lock before accessing protected data and releases it afterwards. The code between acquisition and release is called a _critical section_.
 
 > [!NOTE]
 > A [_futex_](https://en.wikipedia.org/wiki/Futex) is short for a "fast user-space mutex", but somewhat confusingly, it is not a mutex—it is a waiting mechanism that can be used to implement a mutex. In JavaScript, futexes are the only built-in waiting mechanism, provided by `Atomics.wait()`/`Atomics.waitAsync()` and `Atomics.notify()`; our mutex examples build upon this mechanism.
 
 A mutex is merely a protocol and does not physically prevent another thread from accessing the memory. As long as the protocol is upheld, different threads will never have overlapping critical sections, thus protecting a whole sequence of operations without making each individual read and write atomic.
 
-For example, create a buffer with space for a lock and a value. In our protocol, each participating agent will create an `Int32Array` view, where the first element represents the lock (`0` means unlocked, `1` means locked), while the second element holds the protected data.
+For example, create a buffer with space for a lock and a value. In our protocol, each participating agent will create an `Int32Array` view where the first element represents the lock (`0` means unlocked, `1` means locked) and the second holds the protected data.
 
 ```js
 const sab = new SharedArrayBuffer(8);
@@ -856,7 +860,7 @@ Preventing deadlocks requires very high discipline within each agent. For exampl
 
 ### Lock-free algorithms
 
-Locks are powerful and convenient (when implemented correctly), but they are also a bit heavyweight especially when there's no contender. For every critical section—which may be as short as a single read/write operation—the mutex above incurs the overhead of an `Atomics.compareExchange`, an `Atomics.store`, and—except when using spinlocks—an `Atomics.notify`.
+Locks are powerful and convenient (when implemented correctly), but they are also a bit heavyweight, especially when there's no contention. For every critical section—which may be as short as a single read/write operation—the mutex above incurs the overhead of an `Atomics.compareExchange()`, an `Atomics.store()`, and—except when using spinlocks—an `Atomics.notify()`.
 
 In fact, even something as simple as `Atomics.load(uint16, 0)` might need an internal lock! If you think about it, an element in a `Uint16Array` is comprised of two bytes. If an extremely simple CPU only allows reading memory byte-by-byte, it would look like the following (assuming little-endian byte order):
 
@@ -1027,7 +1031,7 @@ while (true) {
 }
 ```
 
-This implements the same functionality, and note how, save for the `Atomics.waitAsync` call (because the main thread cannot be blocked in browsers), both loops are synchronous—this should be much more efficient than passing messages back and forth!
+This implements the same functionality, and note how, save for the `Atomics.waitAsync()` call (because the main thread cannot be blocked in browsers), both loops are synchronous—this should be much more efficient than passing messages back and forth!
 
 ## See also
 
