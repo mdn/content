@@ -9,12 +9,12 @@ sidebar: jssidebar
 
 This guide explains general computer science concepts related to thread coordination and how JavaScript implements them. It also introduces the APIs for enabling cross-thread communication: {{domxref("Worker/postMessage", "postMessage()")}}, {{jsxref("SharedArrayBuffer")}}, and {{jsxref("Atomics")}}.
 
-It is recommended to understand [Typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) before reading this.
-
-This is a guide article; to dive into the technical details of JavaScript agents, read the [Execution model](/en-US/docs/Web/JavaScript/Reference/Execution_model) reference.
+It is recommended to understand [Typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) before reading this. Afterwards, you can continue with the [Execution model](/en-US/docs/Web/JavaScript/Reference/Execution_model) reference to dive into the technical details.
 
 > [!NOTE]
-> In this article, we will use "thread" and "agent" interchangeably. An "agent" may or may not have its own operating system thread. Because JavaScript is a highly-abstracted VM language, we will ignore the implementation details.
+> In this article, we will use "thread" and "agent" interchangeably. An agent is a JavaScript engine abstraction, while a thread is an implementation detail; an agent may or may not run in a separate operating system thread. Technically, we should have used "agents" everywhere because you can only interact with agents in JavaScript, but when talking about general computer science concepts like locks, it's much more natural to use "threads".
+>
+> Also, this guide has nothing to do with [AI agents](https://en.wikipedia.org/wiki/AI_agent).
 
 ## Communication between two agents
 
@@ -34,8 +34,6 @@ The parent agent can be a window or another worker. For example, to run this exa
 ```html
 <script src="main.js" type="module"></script>
 ```
-
-And serve it using a local HTTP server.
 
 ### Communication via messages
 
@@ -391,19 +389,19 @@ port.postMessage("finished");
 
 Because messages to a port are delivered in order, the `finished` handler always runs after the main agent's own loop has completed, so both agents have finished counting by the time the value is logged. Still, the logged value is probably less than `20000000`, and it differs between runs. This is because `i[0] += 1` is not a single step: it reads `i[0]`, adds 1, and writes the result back. There are at least two orders possible; the first one, which doesn't lose an increment, is:
 
-1. Agent 1 reads `i[0]` as `currentI`
-2. Agent 1 writes `i[0] = currentI + 1`
-3. Agent 2 reads `i[0]` as `currentI + 1`
-4. Agent 2 writes `i[0] = currentI + 2`
+1. `main.js` reads `i[0]` as `currentI`
+2. `main.js` writes `i[0] = currentI + 1`
+3. `worker.js` reads `i[0]` as `currentI + 1`
+4. `worker.js` writes `i[0] = currentI + 2`
 
 The second one, which loses an increment, is:
 
-1. Agent 1 reads `i[0]` as `currentI`
-2. Agent 2 reads `i[0]` as `currentI`
-3. Agent 1 writes `i[0] = currentI + 1`
-4. Agent 2 writes `i[0] = currentI + 1`
+1. `main.js` reads `i[0]` as `currentI`
+2. `worker.js` reads `i[0]` as `currentI`
+3. `main.js` writes `i[0] = currentI + 1`
+4. `worker.js` writes `i[0] = currentI + 1`
 
-To solve this problem, we must use a mechanism to ensure execution order across agents, so a statement in agent 2 cannot execute until a statement in agent 1 finishes and its effect becomes observable. Methods from the {{jsxref("Atomics")}} namespace provide this capability.
+To solve this problem, we must use a mechanism to ensure execution order across agents, so a statement in `worker.js` cannot execute until a statement in `main.js` finishes and its effect becomes observable, and vice versa. Methods from the {{jsxref("Atomics")}} namespace provide this capability.
 
 ### Reading and writing
 
@@ -425,7 +423,7 @@ a[1] = 15;
 console.log("Worker:", a[0]);
 ```
 
-Theoretically, no matter how these operations are ordered, as long as each agent executes its code in order, at least one log entry must be non-0. However, in reality, both logs may print 0. It may arise from the following seemingly-impossible ordering:
+Theoretically, no matter how these operations are ordered, as long as each agent executes its code in order, at least one log entry must be non-`0` (try listing all possible orderings of the four statements, with the constraint that `a[0] = 63` is before `console.log(a[1])`, and `a[1] = 15` is before `console.log(a[0])`!). However, in reality, both logs may print 0. The following ordering is possible:
 
 1. `main.js` reads `a[1]` as `0`.
 2. `worker.js` reads `a[0]` as `0`.
@@ -433,7 +431,7 @@ Theoretically, no matter how these operations are ordered, as long as each agent
 4. `worker.js` writes `a[1] = 15`.
 5. `main.js` and `worker.js` execute their `console.log` using already-retrieved `a[1]` and `a[0]` values, respectively.
 
-Note that, within each single agent, this ordering perfectly preserves the sequential-execution guarantees you would expect. For example, for `main.js`, the `a[0] = 63` write is never read back, so it's perfectly fine to reorder it after the `a[1]` read, even if a line-by-line JavaScript interpreter would not do that. This kind of instruction reordering can happen in both the JavaScript compiler and the CPU in order to optimize consecutive memory operations, but may cause problems with multiple agents.
+Note how the expressions that read `a[1]` and `a[0]`, which come towards the end of the source code, are reordered to be executed before the `a[0] = 63` and `a[1] = 15` statements. This kind of instruction reordering can happen in both the JavaScript compiler and the CPU in order to optimize consecutive memory operations. Within each single agent, this ordering perfectly preserves the sequential-execution guarantees you would expect. For example, for `main.js`, the `a[0] = 63` write is never read back, so it's perfectly fine to reorder it after the `a[1]` read. However, this causes problems with multiple agents.
 
 With `Atomics.load()` and `Atomics.store()`, you explicitly tell the compiler and the CPU that such reordering is not permitted, and the order of memory read/write must be consistent with the order of JavaScript code execution.
 
@@ -453,7 +451,15 @@ console.log("Worker:", Atomics.load(a, 0));
 
 Here, although you may still see 0 in one of the logs (because, for example, the main `load` happens before the worker `store`), it's guaranteed that they can never be both 0.
 
-`Atomics.load` and `Atomics.store` essentially create a "synchronization point" between two threads, much like a `message` event. This can help establish ordering between other non-atomic operations. For example:
+> [!NOTE]
+> If you want to go further and guarantee that both new values are observed, you need to make both agents [wait](#waiting_and_notifying) before the `Atomics.load()` call, like a `while (Atomics.load(a, 1) !== 0);` loop similar to the one below.
+
+Furthermore, atomic load/store operations establish a partial ordering for other _non-atomic_ read/write operations. Specifically:
+
+- When an `Atomics.store()` call executes, all non-atomic writes before it must become observable (although writes after it also might)
+- when an `Atomics.load()` call executes, all non-atomic reads after it must observe the new values (although reads before it also might)
+
+`Atomics.load` and `Atomics.store` essentially create a "synchronization point" between two threads, much like a `message` event. For example:
 
 ```js
 // -- main.js --
@@ -474,7 +480,14 @@ console.log(a[0]); // 63
 >
 > In [Waiting and notifying](#waiting_and_notifying), we'll see how to make this code slightly more performant and less like a bug.
 
-Within `main.js`, writing `63` happens before storing the ready flag. Within `worker.js`, the load that observes the ready flag happens before reading `a[0]`. Because that load observes the value written by the atomic store, they synchronize with each other. Together, these relationships establish a happens-before chain from writing `63` to reading `a[0]`. Therefore, assuming no other writes to `a[0]`, the read is guaranteed to return `63`, even though the accesses to `a[0]` are non-atomic.
+The only possible order is the following:
+
+1. `main.js` writes `a[0] = 63`. `worker.js` keeps spinning in the `while` loop because `a[1]` isn't the right value.
+2. `main.js` stores `a[1]` as `1`.
+3. `worker.js` loads the new `a[1]` value and exits the `while` loop.
+4. `worker.js` reads `a[0]` as `63`.
+
+Therefore, with the help with the store/load pair, we have successfully established an ordering from 1 to 4, so `worker.js` can observe the new value of `a[0]` written by `main.js`, despite not using atomic operations.
 
 ### Atomic updates
 
@@ -509,11 +522,11 @@ port.postMessage("finished");
 The only difference from the previous data-race example is that we've replaced both `i[0] += 1` statements with `Atomics.add(i, 0, 1)`. But now, not only does it have the same "sequentially consistent" guarantee of `load`/`store`, but each block of read-modify-write sequence is also guaranteed to be atomic, so there are two atomic blocks that can be freely ordered but never interleaved:
 
 1. Atomic block:
-   1. Agent 1 reads `i[0]` as `currentI`
-   2. Agent 1 writes `i[0] = currentI + 1`
+   1. `main.js` reads `i[0]` as `currentI`
+   2. `main.js` writes `i[0] = currentI + 1`
 2. Atomic block:
-   1. Agent 2 reads `i[0]` as `currentI + 1`
-   2. Agent 2 writes `i[0] = currentI + 2`
+   1. `worker.js` reads `i[0]` as `currentI + 1`
+   2. `worker.js` writes `i[0] = currentI + 2`
 
 A few other compound assignment operators have their respective `Atomics` methods:
 
@@ -622,7 +635,7 @@ Some important notes to call out:
 
 - `Atomics.wait()` also blocks the thread from executing other jobs. On the web, the main thread cannot be blocked, so calling `Atomics.wait()` throws an error there.
 - `Atomics.wait()` returns whenever it has been notified, regardless of whether `a[1]` has actually changed.
-- Other than checking the initial value, the memory index that `store` and `wait` operate on is entirely arbitrary: they do not care what that value actually represents. The index serves as an "ID" of the waiter list. The initial flag check ensures that if the worker `wait` happens after `notify` is already called, the `wait` continues immediately instead of sleeping forever, so you should set and only set `a[1]` to `1` (representing "Ready" in our case) immediately before calling `notify`.
+- Other than checking the initial value, the memory index that `store` and `wait` operate on is entirely arbitrary: they do not care what that value actually represents. The index serves as the ID of the list of waiting agents. The initial flag check ensures that if the worker `wait` happens after `notify` is already called, the `wait` continues immediately instead of sleeping forever, so you should set and only set `a[1]` to `1` (representing "Ready" in our case) immediately before calling `notify`.
 
 You can also specify a `timeout`, after which the thread resumes despite not receiving a notification:
 
@@ -731,14 +744,18 @@ One mutex around all shared data is a straightforward starting point, but it ser
 
 This simple mutex has multiple opportunities for improvement:
 
-- What if an agent accidentally calls `unlock()` when the lock wasn't actually held by it? —We can solve this by replacing the boolean flag with a unique ID for each agent, so `unlock()` only proceeds if the ID in the lock matches the agent ID.
-- What if an agent accidentally calls `lock()` when it's already holding the lock (this is called _re-entry_)? This would cause it to wait on itself indefinitely, and all other agents waiting for the lock will also never get it. —We can solve this by making `lock()` only wait if the owner ID in the lock doesn't match the current ID.
+- What if an agent accidentally calls `unlock()` when the lock wasn't actually held by it?
+  - : We can solve this by replacing the boolean flag with a unique ID for each agent, so `unlock()` only proceeds if the ID in the lock matches the agent ID.
+- What if an agent accidentally calls `lock()` when it's already holding the lock (this is called _re-entry_)? This would cause it to wait on itself indefinitely, and all other agents waiting for the lock will also never get it.
+  - : We can solve this by making `lock()` only wait if the owner ID in the lock doesn't match the current ID.
 
-  > [!NOTE]
-  > Re-entry is commonly seen in nested function calls; for example if a critical section calls another function that also tries to establish a critical section using the same lock. If the lock is non-reentrant (it doesn't implement this mechanism), then each agent must ensure that the critical section is never re-entered.
+    > [!NOTE]
+    > Re-entry is commonly seen in nested function calls; for example if a critical section calls another function that also tries to establish a critical section using the same lock. If the lock is non-reentrant (it doesn't implement this mechanism), then each agent must ensure that the critical section is never re-entered.
 
-- What if the agent that re-enters the lock calls `unlock()`? This would cause the lock to be released early, despite there being another `lock()` call that expects the lock to still be held. —We need to add a counter which increments on each `lock()` and decrements on each `unlock()`, and only actually release the lock when the counter reaches zero.
-- What if the waiting agent always loses to a newcomer and never gets the lock? —We need some scheduling mechanism to ensure that the newcomer doesn't jump the queue.
+- What if the agent that re-enters the lock calls `unlock()`? This would cause the lock to be released early, despite there being another `lock()` call that expects the lock to still be held.
+  - : We need to add a counter that increments on each `lock()` and decrements on each `unlock()`, and only actually release the lock when the counter reaches zero.
+- What if the waiting agent always loses to a newcomer and never gets the lock?
+  - : We need some scheduling mechanism to ensure that the newcomer doesn't jump the queue.
 
 ### Spinlocks
 
@@ -955,6 +972,8 @@ console.log(consume()); // 64
 
 This protocol depends on having exactly one producer and one consumer. With multiple producers, two agents could both see an empty slot and overwrite each other's data, so you would still need a mutex among the producers. The same goes for consumers. This is still an improvement over a shared lock among all producers and consumers though: it lets control alternate between the _groups_ of producers and consumers without competition.
 
+## Number-guessing game using shared memory
+
 To close off this guide, let's re-implement our [number-guessing game](#communication_via_messages) with this handoff pattern. Both agents alternate between producing and consuming: the worker produces a guess, and the main thread consumes it and produces feedback. They share two integers:
 
 - `shared[0]` indicates whose turn it is: `0` for the worker and `1` for the main thread.
@@ -973,7 +992,11 @@ worker.postMessage(sab);
 while (true) {
   // Wait until the worker finishes its turn
   while (Atomics.load(shared, 0) !== 1) {
-    await Atomics.waitAsync(shared, 0, 0).value;
+    // We use busy waiting here because we expect the worker to come
+    // back very quickly and the main thread can't use Atomics.wait().
+    // In more complex scenarios, you probably want to use Atomics.waitAsync()
+    // to avoid blocking the main thread.
+    Atomics.pause();
   }
 
   const workerGuess = shared[1];
@@ -1031,7 +1054,7 @@ while (true) {
 }
 ```
 
-This implements the same functionality, and note how, save for the `Atomics.waitAsync()` call (because the main thread cannot be blocked in browsers), both loops are synchronous—this should be much more efficient than passing messages back and forth!
+This implements the same functionality, and note how both loops are synchronous—this should be much more efficient than passing messages back and forth!
 
 ## See also
 
