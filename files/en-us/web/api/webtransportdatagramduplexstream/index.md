@@ -77,6 +77,9 @@ async function readData() {
 }
 ```
 
+To read datagrams into a buffer that you supply, construct the transport with the [`datagramsReadableType`](/en-US/docs/Web/API/WebTransport/WebTransport#datagramsreadabletype) option set to `bytes`, and read the stream using a {{domxref("ReadableStreamBYOBReader")}}.
+See [Reading datagrams with a BYOB reader](/en-US/docs/Web/API/WebTransport/WebTransport#reading_datagrams_with_a_byob_reader) for an example.
+
 ## Specifications
 
 {{Specifications}}
