@@ -38,7 +38,7 @@ isNaN(value)
 
 ### Return value
 
-`true` if the given value is {{jsxref("NaN")}} after being [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion); otherwise, `false`.
+`true` if the given value is {{jsxref("NaN")}} after being [coerced to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion).
 
 ## Description
 

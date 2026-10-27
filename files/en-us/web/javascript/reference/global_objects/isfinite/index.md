@@ -38,7 +38,7 @@ isFinite(value)
 
 ### Return value
 
-`true`, except when the given value is either `-`{{jsxref("Infinity")}}, {{jsxref("Infinity")}}, or {{jsxref("NaN")}} after being [coerced to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion).
+`true`, except when the given value is either {{jsxref("Infinity")}}, `-Infinity`, or {{jsxref("NaN")}} after being [coerced to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion).
 
 ## Description
 
