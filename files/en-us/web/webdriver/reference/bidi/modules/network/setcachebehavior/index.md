@@ -73,7 +73,7 @@ See [Request modifiers](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network
 A cache behavior set for all contexts also applies to contexts created after the command, and one set for a top-level context also applies to child contexts created in it later.
 The cache behavior is shared by all sessions, and stays in effect until you change it or until the last active session ends.
 
-To check whether a response came from the cache, [subscribe](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `network.responseCompleted` events and look at the `fromCache` field of the response.
+To check whether a response came from the cache, [subscribe](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to any event that reports the response (`network.responseStarted`, `network.responseCompleted`, or `network.authRequired`) and look at the `fromCache` field of the response.
 
 ## Examples
 

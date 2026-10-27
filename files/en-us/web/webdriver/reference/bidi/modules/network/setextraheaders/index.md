@@ -217,7 +217,7 @@ The browser responds with an empty `result` object:
 ```
 
 Requests from the second tab now carry `X-Test-Run: checkout-flow` and `X-Tenant: tenant-a`.
-Requests from the first tab still carry `X-Tenant: tenant-b`.
+Requests from the first tab still carry `X-Test-Run: checkout-flow` and `X-Tenant: tenant-b`.
 
 ### Replacing a browser header in one tab
 
