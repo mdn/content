@@ -32,6 +32,18 @@ new WebTransport(url, options)
       - : A string indicating the application's preference that the congestion control algorithm used when sending data over this connection be tuned for either throughput or low-latency.
         This is a hint to the user agent.
         The allowed values are: `default` (default), `throughput`, and `low-latency`.
+
+    - `headers` {{optional_inline}}
+      - : An object literal, array, or {{domxref("Headers")}} object that can be used to add custom HTTP request headers to the [extended `CONNECT`](/en-US/docs/Web/HTTP/Reference/Methods/CONNECT#extended_connect) request that sets up the session.
+        This allows information such as authentication tokens to be sent to the server when the session is established, rather than in the URL.
+        By default, the value is `{}`, and no custom headers are added.
+
+        The value has the same form as the `init` parameter of the {{domxref("Headers.Headers", "Headers()")}} constructor: an object literal with string values, an array of two-item `[name, value]` arrays, or an existing `Headers` object.
+        Headers that are [forbidden request headers](/en-US/docs/Glossary/Forbidden_request_header), such as {{httpheader("Cookie")}}, are silently ignored.
+        The `WT-Available-Protocols` header can't be set using this option, and is instead set from the values in `protocols`.
+
+        Any headers that the server sends in its response can be read from {{domxref("WebTransport.responseHeaders")}} once the session is established.
+
     - `protocols` {{optional_inline}}
       - : An array of strings, each indicating an application-specific protocol name, listed in order of preference.
         By default, the value is an empty array.
@@ -84,6 +96,7 @@ new WebTransport(url, options)
     Also thrown if `protocols` contains a duplicate value, a value with characters not allowed in a protocol token, or a value whose encoded length is `0` or greater than `512` bytes.
 - {{jsxref("TypeError")}}
   - : Thrown if a `serverCertificateHashes` is set for a non-dedicated connection (in other words, if `allowPooling` is `true`).
+    Also thrown if `headers` contains an invalid header name or value, or a header named `WT-Available-Protocols` (case-insensitive).
 
 ## Examples
 
@@ -175,6 +188,43 @@ const transport = new WebTransport(url, {
     },
   ],
 });
+```
+
+### Setting custom request headers
+
+This example shows the three ways that you can use the `headers` option to add custom headers to the request that sets up the session.
+
+First we pass an object literal, where each property name is a header name and its value is the header value:
+
+```js
+const transport = new WebTransport(url, {
+  headers: {
+    Authorization: "Bearer abc123",
+    "X-Client-Version": "2.4.1",
+  },
+});
+```
+
+You can also pass an array of two-item `[name, value]` arrays.
+This form allows you to include more than one header with the same name.
+
+```js
+const transport = new WebTransport(url, {
+  headers: [
+    ["Authorization", "Bearer abc123"],
+    ["X-Client-Version", "2.4.1"],
+  ],
+});
+```
+
+You can also pass a {{domxref("Headers")}} object:
+
+```js
+const headers = new Headers();
+headers.append("Authorization", "Bearer abc123");
+headers.append("X-Client-Version", "2.4.1");
+
+const transport = new WebTransport(url, { headers });
 ```
 
 ## Specifications
