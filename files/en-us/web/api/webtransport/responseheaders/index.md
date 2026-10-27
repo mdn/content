@@ -8,7 +8,7 @@ browser-compat: api.WebTransport.responseHeaders
 
 {{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-The **`responseHeaders`** read-only property of the {{domxref("WebTransport")}} interface returns the HTTP headers that the server sent in its response to the request that set up the session.
+The **`responseHeaders`** read-only property of the {{domxref("WebTransport")}} interface returns the HTTP headers from the server's response to the request that set up the session.
 
 ## Value
 
@@ -18,17 +18,20 @@ The returned object is immutable: calling methods that modify it, such as {{domx
 
 ## Description
 
-The session is set up using an [extended `CONNECT`](/en-US/docs/Web/HTTP/Reference/Methods/CONNECT#extended_connect) request, to which the client can add custom headers using the [`headers`](/en-US/docs/Web/API/WebTransport/WebTransport#headers) constructor option.
-The server can use the headers in its response to return application-specific information to the client, such as a session identifier.
+The session is set up using an [extended `CONNECT`](/en-US/docs/Web/HTTP/Reference/Methods/CONNECT#extended_connect) request.
+The client can add custom headers to this request using the [`headers`](/en-US/docs/Web/API/WebTransport/WebTransport#headers) constructor option.
+The server can include headers in its response to return application-specific information to the client, such as a session identifier.
 
-The value is `null` until the session is established, and is set before the {{domxref("WebTransport.ready", "ready")}} promise fulfills.
-The `WT-Protocol` response header, which the server uses to indicate the selected application protocol, is not included: read the selected protocol from {{domxref("WebTransport.protocol")}} instead.
+The value is set before the {{domxref("WebTransport.ready", "ready")}} promise fulfills.
+
+The returned headers don't include `WT-Protocol`, which the server uses to indicate the application protocol it chose.
+Use {{domxref("WebTransport.protocol")}} to get the selected protocol instead.
 
 ## Examples
 
 ### Reading response headers
 
-This example shows how you might send a custom header when setting up a session, and then read a header that the server returns in its response.
+This example shows how you might send a custom header when setting up a session and then read a header that the server returns in its response.
 
 ```js
 const url = "https://example.com:4999/wt";
@@ -69,5 +72,5 @@ initTransport(url);
 
 ## See also
 
-- {{domxref("WebTransport.WebTransport", "WebTransport()")}} constructor [`headers`](/en-US/docs/Web/API/WebTransport/WebTransport#headers) option
+- [`WebTransport()` constructor `headers` option](/en-US/docs/Web/API/WebTransport/WebTransport#headers)
 - {{domxref("WebTransport.protocol")}}
