@@ -42,7 +42,7 @@ deriveKey(algorithm, baseKey, derivedKeyType, extractable, keyUsages)
   - : A boolean value indicating whether it will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or {{domxref("SubtleCrypto.wrapKey()")}}.
 - `keyUsages`
   - : An {{jsxref("Array")}} indicating what can be done with the derived key.
-    Note that the key usages must be allowed by the algorithm set in `derivedKeyAlgorithm`.
+    Note that the key usages must be allowed by the algorithm set in `derivedKeyType`.
     Possible values of the array are:
     - `encrypt`: The key may be used to [encrypt](/en-US/docs/Web/API/SubtleCrypto/encrypt) messages.
     - `decrypt`: The key may be used to [decrypt](/en-US/docs/Web/API/SubtleCrypto/decrypt) messages.
