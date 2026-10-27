@@ -13,10 +13,8 @@ The **`create()`** method of the {{domxref("CredentialsContainer")}} interface c
 This method supports three different types of credential:
 
 - A password credential, which enables a user to sign in using a password.
-- A federated credential, which enables a user to sign in using a federated identity provider.
-- A public key credential, which enables a user to sign in with an authenticator such as a biometric reader built into the platform or a removable hardware token.
-
-Note that the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) supersedes the federated credential type.
+- A federated credential, which enables a user to sign in using a federated identity provider. Note that the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) supersedes the federated credential type.
+- A public key credential, which enables a user to sign in with an authenticator such as a biometric reader built into the platform or a removable hardware token. [Passkeys](/en-US/docs/Web/Security/Authentication/Passkeys) are a type of public key credential.
 
 ## Syntax
 
@@ -174,6 +172,42 @@ Some of this data will need to be stored on the server for future authentication
 
 > [!NOTE]
 > See [Creating a key pair and registering a user](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user) for more information about how the overall flow works.
+
+### Creating a public key credential using conditional create
+
+This example uses [conditional create](/en-US/docs/Web/API/Web_Authentication_API#conditional_create), which is specified by setting the `mediation` option to `conditional`. It attempts to create a new passkey without requiring any user interaction, when the conditions defined for conditional create are met.
+
+```js
+async function conditionalCreate(account) {
+  try {
+    const capabilities = await PublicKeyCredential.getClientCapabilities();
+    // Only attempt conditional create if it is supported,
+    // and if the user doesn't already have a passkey
+    if (capabilities.conditionalCreate && !account.hasPasskey) {
+      // Abort any existing WebAuthn calls
+      webAuthnController.abort();
+
+      // Get creation options, including the challenge value from the server
+      const pkOptions = await getNewPasskeyOptions();
+      const credential = await navigator.credentials.create({
+        publicKey: pkOptions,
+        mediation: "conditional",
+      });
+      // Conditional create succeeded: send the new credential to the server
+      // for validation and storage
+      await processNewPasskey(credential);
+    }
+  } catch (e) {
+    // Ignore errors from conditional create
+  }
+}
+```
+
+Note that this example:
+
+- Only attempts conditional create if the user does not already have a passkey
+- Aborts any outstanding attempts to get or create a public key credential before attempting conditional create.
+- Catches and ignores any errors that are thrown if, for example, the conditions were not met.
 
 ## Specifications
 
