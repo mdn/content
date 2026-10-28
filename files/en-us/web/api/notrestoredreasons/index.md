@@ -31,7 +31,7 @@ These objects are accessed via the {{domxref("PerformanceNavigationTiming.notRes
 ## Instance methods
 
 - {{domxref("NotRestoredReasons.toJSON", "toJSON()")}} {{Experimental_Inline}}
-  - : A {{Glossary("Serialization","serializer")}}; returns a JSON representation of the `NotRestoredReasons` object.
+  - : Returns a JSON-serializable plain object representing the `NotRestoredReasons` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 

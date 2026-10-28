@@ -61,7 +61,7 @@ The `result` field in the response is an empty object (`{}`).
 
 The following example shows how to close a tab and allow its [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) event handlers to run before closing.
 
-With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), suppose a session is created via [`session.new`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new) with `unhandledPromptBehavior` set to `"accept"`.
+With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), suppose a session is created via [`session.new`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new) with the `default` field of the `unhandledPromptBehavior` capability set to `"accept"` so that the browser accepts any confirmation prompt automatically.
 First get the context ID using [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree), then send the following message:
 
 ```json

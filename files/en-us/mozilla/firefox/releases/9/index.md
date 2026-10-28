@@ -90,7 +90,7 @@ See [Updating add-ons for Firefox 9](/en-US/docs/Mozilla/Firefox/Releases/9/Upda
 - The `<xul:tab>` element now has a `pending` attribute, whose value is `true`, when the tab is in the process of being restored by the session store service. This can be used for styling the tab in themes. The attribute isn't present on tabs that aren't pending.
 - The `<xul:tab>` element now has an `unread` attribute, whose value is `true`, when the tab has changed since the last time it was the active tab or if it hasn't been selected since the current session began. The attribute isn't present on tabs that are not unread.
 - You can now use a `<xul:panel>` as a drag image for DOM drag and drop operations. This lets you use the [standard drag & drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) for drag and drop of XUL content.
-- The `<xul:notificationbox>` element's `appendNotification`) method now lets you specify a callback that gets called for interesting events related to the notification box. Currently, the only event is "removed", which tells you the box has been removed from its window.
+- The `<xul:notificationbox>` element's `appendNotification` method now lets you specify a callback that gets called for interesting events related to the notification box. Currently, the only event is "removed", which tells you the box has been removed from its window.
 
 ### JavaScript code module changes
 

@@ -86,7 +86,7 @@ This example shows how to override colors in the [Noto Color Emoji](https://font
   font-family: "Noto Color Emoji";
   font-style: normal;
   font-weight: normal;
-  src: url("https://fonts.gstatic.com/l/font?kit=Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabts6diywYkdG3gjD0U&skey=a373f7129eaba270&v=v24")
+  src: url("https://mdn.github.io/shared-assets/fonts/noto-color-emoji/NotoColorEmoji-Regular.woff2")
     format("woff2");
 }
 
@@ -97,11 +97,11 @@ This example shows how to override colors in the [Noto Color Emoji](https://font
 @font-palette-values --red {
   font-family: "Noto Color Emoji";
   override-colors:
-    0 rgb(74 11 0),
-    1 rgb(149 22 1),
-    2 rgb(183 27 1),
-    3 rgb(193 28 1),
-    4 rgb(230 34 1);
+    720 rgb(74 11 0),
+    1192 rgb(149 22 1),
+    2052 rgb(183 27 1),
+    3426 rgb(193 28 1),
+    4614 rgb(230 34 1);
 }
 .red-hat {
   font-palette: --red;

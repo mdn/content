@@ -223,7 +223,7 @@ try {
 
 ## See also
 
-- [Polyfill of `Error` with `cause` support in `core-js`](https://github.com/zloirock/core-js#ecmascript-error)
+- [Polyfill of `Error` with `cause` support in `core-js`](https://core-js.io/docs/features/ecmascript/error)
 - [es-shims polyfill of Error `cause`](https://www.npmjs.com/package/error-cause)
 - {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try...catch")}}

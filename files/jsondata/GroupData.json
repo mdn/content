@@ -1112,8 +1112,6 @@
         "MediaStreamTrack",
         "MediaStreamTrackEvent",
         "MediaTrackConstraints",
-        "MediaTrackSettings",
-        "MediaTrackSupportedConstraints",
         "OverconstrainedError"
       ],
       "methods": [
@@ -1190,6 +1188,17 @@
       "properties": ["Navigator.connection", "WorkerNavigator.connection"],
       "events": []
     },
+    "Observable API": {
+      "overview": ["Observable API"],
+      "guides": [
+        "/docs/Web/API/Observable_API/Using_observables",
+        "/docs/Web/API/Observable_API/Creating_observables"
+      ],
+      "interfaces": ["Observable", "Subscriber"],
+      "methods": ["EventTarget.when()"],
+      "properties": [],
+      "events": []
+    },
     "Page Visibility API": {
       "overview": ["Page Visibility API"],
       "interfaces": [],
@@ -1238,6 +1247,7 @@
         "NotRestoredReasons",
         "NotRestoredReasonDetails",
         "Performance",
+        "PerformanceContainerTiming",
         "PerformanceEntry",
         "PerformanceElementTiming",
         "PerformanceEventTiming",
@@ -1508,18 +1518,15 @@
         "CropTarget",
         "RestrictionTarget"
       ],
-      "methods": ["MediaDevices.getDisplayMedia()"],
+      "methods": [
+        "MediaDevices.getDisplayMedia()",
+        "MediaDevices.getSupportedConstraints()",
+        "MediaStreamTrack.getSettings()"
+      ],
       "properties": [
         "MediaTrackConstraints.displaySurface",
         "MediaTrackConstraints.logicalSurface",
-        "MediaTrackConstraints.suppressLocalAudioPlayback",
-        "MediaTrackSettings.cursor",
-        "MediaTrackSettings.displaySurface",
-        "MediaTrackSettings.logicalSurface",
-        "MediaTrackSettings.suppressLocalAudioPlayback",
-        "MediaTrackSupportedConstraints.displaySurface",
-        "MediaTrackSupportedConstraints.logicalSurface",
-        "MediaTrackSupportedConstraints.suppressLocalAudioPlayback"
+        "MediaTrackConstraints.suppressLocalAudioPlayback"
       ],
       "events": []
     },

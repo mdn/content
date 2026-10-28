@@ -8,9 +8,7 @@ browser-compat: api.Gamepad.timestamp
 
 {{APIRef("Gamepad API")}}
 
-The **`Gamepad.timestamp`** property of the
-{{domxref("Gamepad")}} interface returns a {{domxref("DOMHighResTimeStamp")}}
-representing the last time the data for this gamepad was updated.
+The **`timestamp`** read-only property of the {{domxref("Gamepad")}} interface returns a {{domxref("DOMHighResTimeStamp")}} representing the last time the data for this gamepad was updated.
 
 The idea behind this is to allow developers to determine if the `axes` and
 `button` data have been updated from the hardware. The value must be

@@ -322,6 +322,12 @@ Congratulations, you've built your first web form. It looks like this live:
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```css hidden
 form {
   /* Just to center the form on the page */

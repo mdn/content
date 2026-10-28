@@ -25,7 +25,7 @@ A string representing the given time in the [RFC 9557 format](/en-US/docs/Web/Ja
 
 ## Description
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `Temporal.PlainTime` object is stringified. This method is generally intended to, by default, usefully serialize `Temporal.PlainTime` objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}} function as the reviver of {{jsxref("JSON.parse()")}}.
+The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `Temporal.PlainTime` object is stringified. This method is generally intended to, by default, usefully serialize `Temporal.PlainTime` objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}} function within the reviver of {{jsxref("JSON.parse()")}}.
 
 ## Examples
 

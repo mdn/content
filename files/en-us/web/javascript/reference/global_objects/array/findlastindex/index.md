@@ -139,7 +139,7 @@ console.log(
 
 ## See also
 
-- [Polyfill of `Array.prototype.findLastIndex` in `core-js`](https://github.com/zloirock/core-js#array-find-from-last)
+- [Polyfill of `Array.prototype.findLastIndex` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.findLastIndex`](https://www.npmjs.com/package/array.prototype.findlastindex)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

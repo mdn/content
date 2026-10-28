@@ -14,11 +14,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("bufferedamountlow", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onbufferedamountlow = (event) => { }
 ```
 
@@ -37,20 +41,20 @@ let dc = pc.createDataChannel("SendFile");
 let source = null;
 dc.bufferedAmountLowThreshold = 65536;
 
-pc.addEventListener("bufferedamountlow", (ev) => {
-  if (source.position <= source.length) {
+dc.addEventListener("bufferedamountlow", (ev) => {
+  if (source.position < source.length) {
     dc.send(source.readFile(65536));
   }
 });
 ```
 
-After creating the `RTCPeerConnection`, this calls {{domxref("RTCPeerConnection.createDataChannel()")}} to create the data channel. Then a listener is created for `bufferedamountlow` to refill the incoming data buffer any time its contents fall below 65536 bytes.
+After creating the `RTCPeerConnection`, this calls {{domxref("RTCPeerConnection.createDataChannel()")}} to create the data channel. Then a listener is created for `bufferedamountlow` to refill the outgoing data buffer any time its contents fall below 65536 bytes.
 
-You can also set up a listener for `bufferedamountlow` using its event handler property, `onbufferedamountlow`:
+You can also set up a listener for `bufferedamountlow` using its event handler property, `onbufferedamountlow` (but note that this replaces other event listeners added using `onbufferedamountlow`, if any):
 
 ```js
-pc.onbufferedamountlow = (ev) => {
-  if (source.position <= source.length) {
+dc.onbufferedamountlow = (ev) => {
+  if (source.position < source.length) {
     dc.send(source.readFile(65536));
   }
 };

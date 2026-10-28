@@ -365,9 +365,6 @@ The output is as follows (try clicking around on it):
 > [!NOTE]
 > In this example, we're using `event.target` to get the element that was the target of the event (that is, the innermost element). If we wanted to access the element that handled this event (in this case the container) we could use `event.currentTarget`.
 
-> [!NOTE]
-> See [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/useful-eventtarget.html) for the full source code; also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) here.
-
 ## `target` and `currentTarget`
 
 If you look closely at the examples we've introduced in this page, you'll see that we're using two different properties of the event object to access the element that was clicked. In [Setting a listener on a parent element](#setting_a_listener_on_a_parent_element) we're using {{domxref("Event.currentTarget", "event.currentTarget")}}. However, in [Event delegation](#event_delegation), we're using {{domxref("Event.target", "event.target")}}.

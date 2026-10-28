@@ -1,5 +1,5 @@
 ---
-title: tabGroups.update
+title: tabGroups.update()
 slug: Mozilla/Add-ons/WebExtensions/API/tabGroups/update
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabGroups.update

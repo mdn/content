@@ -27,11 +27,9 @@ In the following example, the red border and ❌ only display once the user has 
 Try typing something other than an email address to see it in action.
 
 ```html
-<form>
-  <label for="email">Email *: </label>
-  <input id="email" name="email" type="email" required />
-  <span></span>
-</form>
+<label for="email">Email *: </label>
+<input id="email" name="email" type="email" required />
+<span></span>
 ```
 
 ```css

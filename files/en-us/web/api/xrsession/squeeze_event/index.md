@@ -16,11 +16,15 @@ For details on how the {{domxref("XRSession.squeezestart_event", "squeezestart")
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("squeeze", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onsqueeze = (event) => { }
 ```
 
@@ -64,7 +68,7 @@ xrSession.addEventListener("squeeze", (event) => {
 });
 ```
 
-You can also set up a handler for `squeeze` events by setting the {{domxref("XRSession")}} object's `onsqueeze` event handler property to a function that handles the event:
+You can also set up a handler for `squeeze` events by setting the {{domxref("XRSession")}} object's `onsqueeze` event handler property to a function that handles the event (but note that this replaces other event listeners added using `onsqueeze`, if any):
 
 ```js
 xrSession.onsqueeze = (event) => {

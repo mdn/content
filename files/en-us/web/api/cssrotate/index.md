@@ -88,7 +88,7 @@ Note that the box is initially rotated by 15 degrees.
   width: 100px;
   height: 100px;
   margin-bottom: 1rem;
-  background-color: #66d;
+  background-color: #6666dd;
   transform: rotate(15deg);
   transition: transform 0.3s ease;
 }

@@ -277,7 +277,7 @@ This only works if your function's input is an object. Moreover, even if the inp
 
 ## See also
 
-- [Polyfill of `WeakMap` in `core-js`](https://github.com/zloirock/core-js#weakmap)
+- [Polyfill of `WeakMap` in `core-js`](https://core-js.io/docs/features/ecmascript/collections#h-weakmap)
 - [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}

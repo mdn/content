@@ -14,11 +14,15 @@ This event is not cancellable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("message", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onmessage = (event) => { }
 ```
 
@@ -42,6 +46,15 @@ first.onchange = () => {
   console.log("Message posted to worker");
 };
 
+myWorker.onmessage = (e) => {
+  result.textContent = e.data;
+  console.log("Message received from worker");
+};
+```
+
+The worker assigns an `onmessage` handler to its global scope (but note that this replaces other event listeners added using `onmessage`, if any):
+
+```js
 // worker.js
 
 self.onmessage = (e) => {
@@ -52,29 +65,20 @@ self.onmessage = (e) => {
 };
 ```
 
-In the `main.js` script, an `onmessage` handler is used to handle messages from the worker script:
-
-```js
-// main.js
-
-myWorker.onmessage = (e) => {
-  result.textContent = e.data;
-  console.log("Message received from worker");
-};
-```
-
-Alternatively, the script can listen for the message using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener):
+Alternatively, the worker script can listen for the message using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener):
 
 ```js
 // worker.js
 
 self.addEventListener("message", (e) => {
-  result.textContent = e.data;
-  console.log("Message received from worker");
+  console.log("Message received from main script");
+  const workerResult = `Result: ${e.data[0] * e.data[1]}`;
+  console.log("Posting message back to main script");
+  postMessage(workerResult);
 });
 ```
 
-Notice how in the main script, `onmessage` has to be called on `myWorker`, whereas inside the worker script you just need `onmessage` because the worker is effectively the global scope ({{domxref("DedicatedWorkerGlobalScope")}}).
+Notice how in the main script, `onmessage` has to be defined on `myWorker`, whereas inside the worker script you just need `onmessage` because the worker is effectively the global scope ({{domxref("DedicatedWorkerGlobalScope")}}).
 
 For a full example, see our [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
 

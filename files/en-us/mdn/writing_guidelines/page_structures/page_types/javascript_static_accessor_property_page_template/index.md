@@ -121,7 +121,7 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 
 Include links to reference pages and guides related to the current property. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
 
-- [Polyfill of `Constructor.nameOfTheProperty` in `core-js`](https://github.com/zloirock/core-js#anchor)
+- [Polyfill of `Constructor.nameOfTheProperty` in `core-js`](https://core-js.io/docs/)
 - [es-shims polyfill of `Constructor.nameOfTheProperty`](https://www.npmjs.com/package/es-aggregate-error)
 - link1
 - link2
