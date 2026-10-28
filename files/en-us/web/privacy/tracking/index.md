@@ -84,15 +84,25 @@ These stored identifiers are sometimes called "supercookies", because they will 
 
 ## Fingerprinting
 
-Fingerprinting is like covert stateful tracking, except that the identifier — the fingerprint — is not stored by the tracker, but is derived by collecting and combining distinguishing features of the user's environment. Elements of a fingerprint might include, for example:
+Fingerprinting is like covert stateful tracking, except that the identifier — the fingerprint — is not stored by the tracker, but is derived by collecting and combining distinguishing features of the user's environment.
 
-- The browser version
-- The user's timezone and preferred language
+It can then combine the elements to create a fingerprint, which is often enough to uniquely identify a single browser.
+
+We can distinguish two main types of fingerprinting: _passive_ and _active_ fingerprinting.
+
+Passive fingerprinting uses features that are observable without the site having to run any code on the user's device. It includes:
+
+- The device's IP address
+- HTTP request headers, in particular the {{httpheader("User-Agent")}} header.
+- Details of the TLS connection, including, for example, the available cipher suites.
+
+Active fingerprinting involves the website running code on the device to probe for additional features, including, for example:
+
 - The set of video or audio codecs that are available on the system
 - The fonts installed on the system
 - The computer's display size and resolution
 
-The tracker can retrieve these elements by executing JavaScript and CSS on the device. It can then combine the elements to create a fingerprint, which is often enough to uniquely identify a single browser.
+Active fingerprinting can give trackers a much more fine-grained fingerprint, which is more likely to be enough to identify a user. However, it's easier for a browser to detect and therefore combat.
 
 ## Navigational tracking
 
@@ -221,6 +231,8 @@ To defend against fingerprinting, browsers try to minimize the amount of disting
 To reduce the fingerprinting surface, browser APIs that can be used for fingerprinting are intentionally implemented so as to return less precise information. For example, the {{domxref("Navigator/hardwareConcurrency", "navigator.hardwareConcurrency")}} property returns the number of logical processors available to the browser. Rather than report the actual number, browsers may always report the same value, or always report one of two possible values.
 
 Coarsening the results in this way makes the APIs less useful, so combating fingerprinting is often a tradeoff between utility and privacy. Partly for this reason, browsers often offer different levels of fingerprinting protection, enabling users to make their own tradeoff here. For example, in more privacy-conscious configurations a browser might always return the same value for the current time zone or locale, and modifications like this can have a significant impact on the reliability of websites.
+
+Browsers may also resist fingerprinting by not implementing APIs that offer distinguishing information, if the risk is seen as greater than the utility of providing the API.
 
 Defending against fingerprinting takes place both within individual browser vendors and in the web standards process. Standards developers are expected to consider the privacy implications of new Web APIs and factor defenses into their design. See [Mitigating Browser Fingerprinting in Web Specifications](https://www.w3.org/TR/fingerprinting-guidance/) to learn much more about this.
 
