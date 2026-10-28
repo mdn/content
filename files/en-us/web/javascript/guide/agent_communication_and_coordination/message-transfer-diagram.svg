@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 410">
+  <title>Transferring an object between agents</title>
+  <desc>An HTML page and a worker each contain a heap. The page's original object is gray with a dashed border and labeled Detached. An arrow labeled Transfer points to a green object in the worker's heap.</desc>
+  <defs>
+    <style>
+      text {
+        fill: #231f20;
+        font-family: ArialMT, Arial, sans-serif;
+        font-size: 12px;
+      }
+
+      .agent-label {
+        font-size: 14px;
+      }
+
+      .box {
+        fill: #fff;
+        stroke: #231f20;
+      }
+
+      .object {
+        fill: #3eca39;
+        stroke: #231f20;
+      }
+
+      .detached {
+        fill: #ccc;
+        stroke-dasharray: 3 3;
+      }
+
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path fill="#231f20" d="M 0 0 L 10 5 L 0 10 L 3 5 Z"/>
+    </marker>
+  </defs>
+  <text class="agent-label" x="22" y="22">HTML page</text>
+  <rect class="box" x="14" y="30" width="332" height="144"/>
+  <rect class="box" x="30" y="46" width="300" height="112"/>
+  <text x="40" y="64">Heap</text>
+  <circle class="object detached" cx="130" cy="110" r="17.88"/>
+  <text x="158" y="114">Detached</text>
+
+  <text class="agent-label" x="22" y="242">Worker</text>
+  <rect class="box" x="14" y="250" width="332" height="144"/>
+  <rect class="box" x="30" y="266" width="300" height="112"/>
+  <text x="40" y="284">Heap</text>
+  <circle class="object" cx="130" cy="330" r="17.88"/>
+
+  <line x1="130" y1="128" x2="130" y2="312" stroke="#231f20" marker-end="url(#arrow)"/>
+  <text x="142" y="208">Transfer</text>
+</svg>

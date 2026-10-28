@@ -237,5 +237,6 @@ The agent cluster ensures some level of integrity over the activeness of its age
 
 ## See also
 
+- [Agent communication and coordination](/en-US/docs/Web/JavaScript/Guide/Agent_communication_and_coordination)
 - [Event loops](https://html.spec.whatwg.org/multipage/webappapis.html#event-loops) in the HTML standard
 - [What is the Event Loop?](https://nodejs.org/learn/asynchronous-work/event-loop-timers-and-nexttick#what-is-the-event-loop) in the Node.js docs

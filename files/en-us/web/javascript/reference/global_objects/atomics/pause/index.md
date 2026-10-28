@@ -33,7 +33,7 @@ Note that these examples cannot be run directly from the console or an arbitrary
 
 Calling {{jsxref("Atomics.wait()")}} or {{jsxref("Atomics.waitAsync()")}} in order to wait for access to shared memory causes the thread to be scheduled out of the core and then back in again after the wait. This is efficient during times of high contention, where access to the shared memory could take some time. When contention is low, then it is often more efficient to poll on the lock without yielding the thread: this approach is known as [busy waiting](https://en.wikipedia.org/wiki/Busy_waiting) or [spinlocking](https://en.wikipedia.org/wiki/Spinlock). The `pause()` method allows you to spinlock more efficiently while waiting, by providing a hint to the CPU about what the thread is doing, and hence its low need for resources.
 
-To cater for both conditions, a common approach is to first spinlock in the hope that contention is low, and then wait if the lock is not gained after a short time. If we acquired the lock via spinlocking already, then the `wait()` call will be a no-op.
+To cater for both conditions, a common approach is to first spinlock in the hope that contention is low, and then wait if the lock is not gained after a short time. If we acquired the lock via spinlocking already, then the `wait()` call is skipped.
 
 The example below shows how this approach can be used with `Atomics.pause()` and `Atomics.wait()`.
 
@@ -45,20 +45,24 @@ The example below shows how this approach can be used with `Atomics.pause()` and
 const sab = new SharedArrayBuffer(1024);
 const i32 = new Int32Array(sab);
 
-// Fast path: spin the CPU for a short while
-let spin = 0;
-do {
-  if (Atomics.compareExchange(i32, 0, 0, 1) === 0) {
-    break;
-  }
-  Atomics.pause();
-  spin++;
-} while (spin < 10);
+function lock() {
+  while (true) {
+    // Fast path: spin the CPU for a short while
+    let spin = 0;
+    do {
+      if (Atomics.compareExchange(i32, 0, 0, 1) === 0) {
+        return;
+      }
+      Atomics.pause();
+      spin++;
+    } while (spin < 10);
 
-// Slow path: wait for the lock
-// This can only be called in a worker thread,
-// because the main thread cannot be blocked
-Atomics.wait(i32, 0, 1);
+    // Slow path: wait for the lock
+    // This can only be called in a worker thread,
+    // because the main thread cannot be blocked
+    Atomics.wait(i32, 0, 1);
+  }
+}
 ```
 
 ## Specifications
