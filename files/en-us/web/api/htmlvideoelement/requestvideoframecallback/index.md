@@ -79,6 +79,10 @@ You can compare the `now` callback parameter and the `expectedDisplayTime` metad
 
 This example shows how to use `requestVideoFrameCallback()` to draw the frames of a video onto a {{htmlelement("canvas")}} element at exactly the same frame rate as the video. It also logs the frame metadata to the screen for debugging purposes.
 
+The technique given in the section Description that helps determine whether your callback is a v-sync late can be used for fine analysis of your application but, en masse, this trick is prone to produce a garbled output when used to compute a frame-per-second parameter on the fly. In the example below we hide the video controls for the first time playback and compute fps on each frame played using the parameters of metadata: fps = ((metadata.presentedFrames - 1) / metadata.mediaTime). Video controls become enabled after the 'ended' event is triggered.
+
+In later playback runs you can pause playback and seek in the timeline to observe the metadata evolution.
+
 ```js
 const button = document.querySelector("button");
 const video = document.querySelector("video");
@@ -86,6 +90,9 @@ const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 const fpsInfo = document.querySelector("#fps-info");
 const metadataInfo = document.querySelector("#metadata-info");
+
+let firstRun = true;
+let requestVideoFrameCallbackId = null;
 
 button.addEventListener("click", () =>
   video.paused ? video.play() : video.pause(),
@@ -96,38 +103,50 @@ video.addEventListener("play", () => {
     console.error(
       "Your browser does not support the `Video.requestVideoFrameCallback()` API.",
     );
-  }
+  };
+  video.requestVideoFrameCallback(updateCanvas);
+});
+
+video.addEventListener("ended", () => {
+  video.cancelVideoFrameCallback(requestVideoFrameCallbackId);
+  video.controls = 'true';
+  firstRun = false;
 });
 
 let width = canvas.width;
 let height = canvas.height;
 
-let paintCount = 0;
-let startTime = 0.0;
-
 const updateCanvas = (now, metadata) => {
-  if (startTime === 0.0) {
-    startTime = now;
-  }
 
   ctx.drawImage(video, 0, 0, width, height);
 
-  const elapsed = (now - startTime) / 1000.0;
-  const fps = (++paintCount / elapsed).toFixed(3);
-  fpsInfo.innerText = !isFinite(fps) ? 0 : fps;
+  if (firstRun) {
+    const fps = ((metadata.presentedFrames - 1) / metadata.mediaTime).toFixed(3);
+    fpsInfo.innerText += "{" + (metadata.presentedFrames - 1) + ", " + metadata.mediaTime + ", " + fps + "}";
+  }
+            
   metadataInfo.innerText = JSON.stringify(metadata, null, 2);
 
-  video.requestVideoFrameCallback(updateCanvas);
+  if (video.paused || video.ended) {
+    return;
+  }
+
+  requestVideoFrameCallbackId = video.requestVideoFrameCallback(updateCanvas);
 };
 
 video.src = "https://mdn.github.io/shared-assets/videos/flower.mp4";
-video.requestVideoFrameCallback(updateCanvas);
+
+requestVideoFrameCallbackId = video.requestVideoFrameCallback(updateCanvas);
 ```
 
 ```css
 video,
 canvas {
   max-width: 49%;
+}
+div {
+  max-height: 9em;
+  overflow-y: auto;
 }
 ```
 
@@ -137,10 +156,17 @@ canvas {
   read the metadata. Drawing video frames on the canvas is synced with the
   actual video framerate.
 </p>
-<video controls playsinline></video>
+<video playsinline></video>
 <canvas width="960" height="540"></canvas>
-<p><span id="fps-info">0</span>fps</p>
 <pre id="metadata-info"></pre>
+<p>
+  Only in the first time playback, fps is calculated for each frame played  
+  (fps = metadata.presentedFrames / metadata.mediaTime) and typed in the div 
+  below as {&lt;frame#&gt;, &lt;mediaTime&gt;, &lt;fps&gt;}.
+  Video controls are hidden in the first run and become displayed after the 
+  'ended' event is triggered.
+</p>
+<div id="fps-info"></div>
 ```
 
 {{embedlivesample("drawing_video_frames_on_a_canvas", , "540")}}
