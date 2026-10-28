@@ -60,7 +60,7 @@ An object with the following properties:
     Note two frames with the same value refer to the same source (for more information see [`RTCInboundRtpStreamStats.ssrc`](/en-US/docs/Web/API/RTCInboundRtpStreamStats/ssrc)).
 - `temporalIndex`
   - : A positive integer indicating the temporal index of the frame.
-    Some codecs group frames in layers, based on whether dropping the a frame will prevent others from being decoded.
+    Some codecs group frames in layers, based on whether dropping a frame will prevent others from being decoded.
     Frames in higher layers can be selectively dropped in order to reduce bit rate when needed, while maintaining acceptable video quality.
 - `width`
   - : A positive integer indicating the width of the frame.

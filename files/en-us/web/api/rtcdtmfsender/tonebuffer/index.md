@@ -8,10 +8,7 @@ browser-compat: api.RTCDTMFSender.toneBuffer
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCDTMFSender")}} interface's toneBuffer property returns a string
-containing a list of the {{Glossary("DTMF")}} tones currently queued for sending to the
-remote peer over the {{domxref("RTCPeerConnection")}}. To place tones into the buffer,
-call {{domxref("RTCDTMFSender.insertDTMF", "insertDTMF()")}}.
+The **`toneBuffer`** read-only property of the {{domxref("RTCDTMFSender")}} interface returns a string containing a list of the {{Glossary("DTMF")}} tones currently queued for sending to the remote peer over the {{domxref("RTCPeerConnection")}}. To place tones into the buffer, call {{domxref("RTCDTMFSender.insertDTMF", "insertDTMF()")}}.
 
 Tones are removed from the string as they're played, so only upcoming tones are listed.
 

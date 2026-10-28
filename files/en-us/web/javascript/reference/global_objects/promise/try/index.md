@@ -64,9 +64,6 @@ For the built-in `Promise()` constructor, errors thrown from the executor are au
 Promise.try(func);
 ```
 
-> [!NOTE]
-> `Promise.try()` was originally specified and implemented to work like the `new Promise()` version, unconditionally creating a new promise, but this is no longer the case. See [browser compatibility](#browser_compatibility).
-
 Note that `Promise.try()` is _not_ equivalent to this, despite being highly similar:
 
 ```js
@@ -192,7 +189,7 @@ const p2 = NotPromise.try(() => {
 
 ## See also
 
-- [Polyfill of `Promise.try` in `core-js`](https://github.com/zloirock/core-js#promisetry)
+- [Polyfill of `Promise.try` in `core-js`](https://core-js.io/docs/features/ecmascript/promise)
 - [es-shims polyfill of `Promise.try`](https://www.npmjs.com/package/promise.try)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
 - {{jsxref("Promise")}}

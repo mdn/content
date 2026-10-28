@@ -35,7 +35,7 @@ console.log(newBuffer.detached); // false
 
 ## See also
 
-- [Polyfill of `ArrayBuffer.prototype.detached` in `core-js`](https://github.com/zloirock/core-js#arraybufferprototypetransfer-and-friends)
+- [Polyfill of `ArrayBuffer.prototype.detached` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [es-shims polyfill of `ArrayBuffer.prototype.detached`](https://www.npmjs.com/package/arraybuffer.prototype.detached)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("ArrayBuffer.prototype.transfer()")}}

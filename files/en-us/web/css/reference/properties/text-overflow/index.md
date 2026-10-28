@@ -113,7 +113,7 @@ textarea {
 ```
 
 ```html hidden live-sample___ellipsis-as-clip
-<p contenteditable="">
+<p contenteditable>
   contenteditable paragraph. The text in here is overflowing.
 </p>
 

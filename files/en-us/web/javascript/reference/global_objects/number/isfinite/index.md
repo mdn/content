@@ -71,7 +71,7 @@ Number.isFinite(null); // false
 
 ## See also
 
-- [Polyfill of `Number.isFinite` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [Polyfill of `Number.isFinite` in `core-js`](https://core-js.io/docs/features/ecmascript/number)
 - [es-shims polyfill of `Number.isFinite`](https://www.npmjs.com/package/number.isfinite)
 - {{jsxref("Number")}}
 - {{jsxref("isFinite()")}}

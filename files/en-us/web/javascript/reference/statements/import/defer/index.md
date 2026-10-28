@@ -2,11 +2,15 @@
 title: import defer
 slug: Web/JavaScript/Reference/Statements/import/defer
 page-type: javascript-language-feature
+status:
+  - experimental
 browser-compat: javascript.statements.import.defer
 sidebar: jssidebar
 ---
 
-The **`import defer`** declaration behaves like regular [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations, except that it results in a [deferred module namespace object](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer#deferred_module_namespace_object). The module and its dependencies are fetched and linked up front, but their synchronous evaluation is deferred until the namespace's properties are accessed. Modules that use [top-level `await`](#top-level_await) are evaluated eagerly.
+{{SeeCompatTable}}
+
+The **`import defer`** declaration behaves like regular [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations, except that it results in a [deferred module namespace object](#deferred_module_namespace_object). The module and its dependencies are fetched and linked up front, but their synchronous evaluation is deferred until the namespace's properties are accessed. Modules that use [top-level `await`](#top-level_await) are evaluated eagerly.
 
 ## Syntax
 

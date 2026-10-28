@@ -58,7 +58,7 @@ new Worker(url, options)
   - : Thrown if the document is not allowed to start workers, e.g., if the URL has an invalid syntax or if the same-origin policy is violated.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if `url` cannot be parsed.
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if the `url` parameter is a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
 
 ## Description

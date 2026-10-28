@@ -3,10 +3,12 @@ title: "MathMLAnchorElement: type property"
 short-title: type
 slug: Web/API/MathMLAnchorElement/type
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.MathMLAnchorElement.type
 ---
 
-{{APIRef("MathML")}}
+{{APIRef("MathML")}}{{SeeCompatTable}}
 
 The **`type`** property of the {{domxref("MathMLAnchorElement")}} interface is a string that indicates the MIME type of the linked resource.
 

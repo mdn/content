@@ -77,4 +77,5 @@ classes.forEach(function (value, key, listObj) {
 
 ## See also
 
+- [Polyfill of `DOMTokenList.prototype.forEach` in `core-js`](https://core-js.io/docs/features/web-standards/iterable-dom-collections)
 - {{domxref("DOMTokenList.entries()")}}, {{domxref("DOMTokenList.keys")}} and {{domxref("DOMTokenList.values")}}.

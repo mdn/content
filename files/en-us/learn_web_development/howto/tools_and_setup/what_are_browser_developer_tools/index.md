@@ -144,7 +144,7 @@ The final section, **Scopes**, shows what values are visible from various points
 
 Find out more about the JavaScript debugger in different browsers:
 
-- [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html))
+- [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
 - [Chrome Debugger](https://developer.chrome.com/docs/devtools/javascript/) (Opera and Edge's debugger is the same)
 - [Safari Sources tab](https://webkit.org/web-inspector/sources-tab/)
 

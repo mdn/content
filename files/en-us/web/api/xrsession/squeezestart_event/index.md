@@ -16,11 +16,15 @@ Primary squeeze actions are actions which are meant to represent gripping or squ
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("squeezestart", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onsqueezestart = (event) => { }
 ```
 
@@ -90,7 +94,7 @@ function onSqueezeEvent(event) {
 }
 ```
 
-You can also set up a handler for these events by setting the {{domxref("XRSession")}} object's event handler properties to a function that handles the event:
+You can also set up a handler for these events by setting the {{domxref("XRSession")}} object's event handler properties to a function that handles the event (but note that this replaces other event listeners added using `onsqueezestart`, `onsqueeze`, and `onsqueezeend`, if any):
 
 ```js
 xrSession.onsqueezestart = onSqueezeEvent;

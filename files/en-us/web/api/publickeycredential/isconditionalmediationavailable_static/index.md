@@ -8,7 +8,12 @@ browser-compat: api.PublicKeyCredential.isConditionalMediationAvailable_static
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-The **`isConditionalMediationAvailable()`** static method of the {{domxref("PublicKeyCredential")}} interface returns a {{jsxref("Promise")}} which resolves to `true` if [conditional mediation](/en-US/docs/Web/API/Web_Authentication_API#autofill_ui) is available.
+The **`isConditionalMediationAvailable()`** static method of the {{domxref("PublicKeyCredential")}} interface returns a {{jsxref("Promise")}} which resolves to `true` if the device supports [conditional get](/en-US/docs/Web/API/Web_Authentication_API#autofill_ui).
+
+This method is equivalent to the object returned by {{domxref("PublicKeyCredential.getClientCapabilities()")}} containing a `true` value for its [`conditionalGet`](/en-US/docs/Web/API/PublicKeyCredential/getClientCapabilities_static#conditionalget) property, and developers are encouraged to prefer this API.
+
+> [!NOTE]
+> This method does **not** indicate whether [conditional create](/en-US/docs/Web/API/Web_Authentication_API#conditional_create) is supported. For this, check the value of [`conditionalCreate`](/en-US/docs/Web/API/PublicKeyCredential/getClientCapabilities_static#conditionalcreate) in the object returned by {{domxref("PublicKeyCredential.getClientCapabilities()")}}.
 
 ## Syntax
 
@@ -22,7 +27,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} which resolves to a boolean value indicating whether or not conditional mediation is available.
+A {{jsxref("Promise")}} which resolves to a boolean value indicating whether or not conditional get is available.
 
 ### Exceptions
 
@@ -36,7 +41,7 @@ The returned {{jsxref("Promise")}} may be rejected with the following values:
 Before invoking a conditional WebAuthn API call, check if:
 
 - The browser supports the Web Authentication API.
-- The browser supports conditional mediation.
+- The browser supports conditional get.
 
 ```js
 // Availability of `window.PublicKeyCredential` means WebAuthn is usable.
@@ -44,7 +49,7 @@ if (
   window.PublicKeyCredential &&
   PublicKeyCredential.isConditionalMediationAvailable
 ) {
-  // Check if conditional mediation is available.
+  // Check if conditional get is available.
   const isCMA = await PublicKeyCredential.isConditionalMediationAvailable();
   if (isCMA) {
     // Call WebAuthn authentication

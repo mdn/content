@@ -51,7 +51,7 @@ _Also inherits properties from its parent interface, {{domxref("EventTarget")}}_
   - : The URL of an image to be displayed as part of the notification, as specified in the constructor's `options` parameter.
 - {{domxref("Notification.lang")}} {{ReadOnlyInline}}
   - : The language code of the notification as specified in the constructor's `options` parameter.
-- {{domxref("Notification.navigate")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Notification.navigate")}} {{ReadOnlyInline}}
   - : The navigation URL of the notification. When set, activating the notification navigates to this URL instead of firing the {{domxref("Notification.click_event", "click")}} or {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
 - {{domxref("Notification.renotify")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Specifies whether the user should be notified after a new notification replaces an old one.
@@ -65,7 +65,7 @@ _Also inherits properties from its parent interface, {{domxref("EventTarget")}}_
   - : Specifies the time at which a notification is created or applicable (past, present, or future).
 - {{domxref("Notification.title")}} {{ReadOnlyInline}}
   - : The title of the notification as specified in the first parameter of the constructor.
-- {{domxref("Notification.vibrate")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Notification.vibrate")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Specifies a vibration pattern for devices with vibration hardware to emit.
 
 ## Static methods

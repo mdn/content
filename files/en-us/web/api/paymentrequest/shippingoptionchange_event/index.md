@@ -19,11 +19,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("shippingoptionchange", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onshippingoptionchange = (event) => { }
 ```
 
@@ -41,9 +45,8 @@ This code snippet sets up a handler for the `shippingoptionchange` event. The co
 paymentRequest.addEventListener("shippingoptionchange", (event) => {
   const value = calculateNewTotal(paymentRequest.shippingOption);
   const total = {
-    currency: "EUR",
     label: "Total due",
-    value,
+    amount: { currency: "EUR", value },
   };
   event.updateWith({ total });
 });
@@ -51,15 +54,14 @@ paymentRequest.addEventListener("shippingoptionchange", (event) => {
 
 After calling a custom function, `calculateNewTotal()`, to compute the updated total based on the newly-selected shipping option as specified by the {{domxref("PaymentRequest.shippingOption", "shippingOption")}}. The revised total is submitted back to the payment request by calling the event's {{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}} method.
 
-You can also create an event handler for `shippingoptionchange` using its corresponding event handler property, `onshippingoptionchange`:
+You can also create an event handler for `shippingoptionchange` using its corresponding event handler property, `onshippingoptionchange` (but note that this replaces other event listeners added using `onshippingoptionchange`, if any):
 
 ```js
 paymentRequest.onshippingoptionchange = (event) => {
   const value = calculateNewTotal(paymentRequest.shippingOption);
   const total = {
-    currency: "EUR",
     label: "Total due",
-    value,
+    amount: { currency: "EUR", value },
   };
   event.updateWith({ total });
 };

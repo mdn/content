@@ -16,7 +16,7 @@ The `PerformanceSoftNavigation` interface provides timing information about {{gl
 This interface directly defines the following properties:
 
 - {{domxref("PerformanceSoftNavigation.interactionId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : The id of the navigation, unique to this page load.
+  - : The id of the interaction that resulted in the soft navigation.
 - {{domxref("PerformanceSoftNavigation.navigationType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The type of the navigation.
 - {{domxref("PerformanceSoftNavigation.paintTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -40,7 +40,7 @@ It also extends the following {{domxref("PerformanceEntry")}} properties, qualif
 - {{domxref("PerformanceSoftNavigation.getLargestInteractionContentfulPaint()")}} {{Experimental_Inline}}
   - : Returns the current largest {{domxref("InteractionContentfulPaint")}} for this soft navigation.
 - {{domxref("PerformanceSoftNavigation.toJSON()")}} {{experimental_inline}}
-  - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `PerformanceSoftNavigation` object.
+  - : Returns a JSON-serializable plain object representing the `PerformanceSoftNavigation` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Description
 

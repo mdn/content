@@ -12,11 +12,15 @@ The `pointerenter` event fires when a pointing device is moved into the hit test
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("pointerenter", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onpointerenter = (event) => { }
 ```
 
@@ -38,7 +42,7 @@ para.addEventListener("pointerenter", (event) => {
 });
 ```
 
-Using the `onpointerenter` event handler property:
+Using the `onpointerenter` event handler property (but note that this replaces other event listeners added using `onpointerenter`, if any):
 
 ```js
 const para = document.querySelector("p");

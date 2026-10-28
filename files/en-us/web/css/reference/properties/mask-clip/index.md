@@ -68,7 +68,7 @@ The `mask-clip` property defines the area of the element that is affected by the
 
 For mask layer images that do not reference an SVG {{svgelement("mask")}} element, the `mask-clip` property defines the mask painting area, or the area affected by the mask. The painted content of the element will be restricted to this area.
 
-The `mask-clip` property has no affect on a mask layer image that references a `<mask>` element. The `<mask>` element's {{svgAttr("x")}}, {{svgAttr("y")}}, {{svgAttr("width")}}, {{svgAttr("height")}}, and {{svgAttr("maskUnits")}} attributes determine the mask painting area when the source of the {{cssxref("mask-image")}} is a `<mask>`.
+The `mask-clip` property has no effect on a mask layer image that references a `<mask>` element. The `<mask>` element's {{svgAttr("x")}}, {{svgAttr("y")}}, {{svgAttr("width")}}, {{svgAttr("height")}}, and {{svgAttr("maskUnits")}} attributes determine the mask painting area when the source of the {{cssxref("mask-image")}} is a `<mask>`.
 
 An element can have multiple mask layers applied. The number of layers is determined by the number of comma-separated values in the `mask-image` property value (even if a value is `none`). Each `mask-clip` value in the comma-separated list of values is matched up with the `mask-image` values, in order. If the number of values in the two properties differs, any excess values of `mask-clip` are not used, or, if `mask-clip` has fewer values than `mask-image`, the `mask-clip` values are repeated.
 

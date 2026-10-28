@@ -16,9 +16,9 @@ The **`CompressionStream`** interface of the {{domxref('Compression Streams API'
 
 ## Instance properties
 
-- {{domxref("CompressionStream.readable")}}
+- {{domxref("CompressionStream.readable")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("ReadableStream")}} instance controlled by this object.
-- {{domxref("CompressionStream.writable")}}
+- {{domxref("CompressionStream.writable")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WritableStream")}} instance controlled by this object.
 
 ## Examples

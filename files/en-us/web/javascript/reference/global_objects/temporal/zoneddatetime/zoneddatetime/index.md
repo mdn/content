@@ -2,13 +2,9 @@
 title: Temporal.ZonedDateTime() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/ZonedDateTime
 page-type: javascript-constructor
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.ZonedDateTime
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`Temporal.ZonedDateTime()`** constructor creates {{jsxref("Temporal.ZonedDateTime")}} objects.
 
