@@ -5,7 +5,7 @@ page-type: learn-faq
 sidebar: learn-how-to
 ---
 
-This article explains how to set up a simple local testing server on your machine, and the basics of how to use it.
+This article explains how to set up a simple local testing server on your machine and the basics of how to use it.
 
 <table>
   <tbody>
@@ -32,11 +32,11 @@ This article explains how to set up a simple local testing server on your machin
 
 In many of the MDN _Learn_ articles, we tell you to just open your examples directly in a browser. This can be done in several ways — double-clicking the HTML file, dragging and dropping it into the browser window, or choosing _File_ > _Open…_ and navigating to the HTML file.
 
-If the web address path starts with `file://` followed by the path to the file on your local hard drive (or `localhost:` or `http://127.0.0.1`; see [Running a simple local HTTP server](#running_a_local_http_server)), a local file is being used. In contrast, if you view one of our examples hosted on GitHub (or an example on some other remote server), the web address will start with `https://`, which indicates that the file is remote, and has been received via HTTPS.
+If the web address path starts with `file://` followed by the path to the file on your local hard drive (or `localhost:` or `http://127.0.0.1`; see [Running a simple local HTTP server](#running_a_local_http_server)), the loaded file is on your local hard drive. In contrast, if you view one of our examples hosted on GitHub (or another remote server), the web address will start with `https://`; this indicates that the file is remote and has been received via HTTPS.
 
 ## The problem with testing local files
 
-Some examples won't run if you open them as local files. This can be due to a variety of reasons, the most likely being:
+Some examples won't run if you open them directly in the browser using a `file://` URL. This can be due to a variety of reasons, the most likely being:
 
 - **They feature asynchronous requests**. Some browsers (including Chrome) will not run async requests (see [Making network requests with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests)) if you just run the example from a local file. This is because of security restrictions (for more on web security, read [Website security](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)).
 - **They feature a server-side language**. Server-side languages (such as PHP or Python) require a special server to interpret the code and deliver the results.
