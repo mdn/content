@@ -89,7 +89,7 @@ Another way to run local examples in an HTTP server is to use Python's `http.ser
 
 To do this:
 
-1. Run the following command in your [command line](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line) to check if Python is already installed:
+1. Run a command in your [command line](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line) to check if Python is already installed:
 
    ```bash
    # On macOS or Linux, run
@@ -101,7 +101,7 @@ To do this:
    py -3 -V
    ```
 
-2. If Python is not installed, you need to install it. Follow the [download instructions](https://www.python.org/downloads/) in the Python docs (we also have more detailed explanations in our [Django tutorial](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#installing_python_3)), then run the above command again to check if the installation is successful.
+2. If Python is not installed, you need to install it. Follow the [download instructions](https://www.python.org/downloads/) in the Python docs (we also have more detailed explanations in our [Django tutorial](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#installing_python_3)), then run the command again to check if the installation is successful.
 
 3. If Python is set up, navigate to the directory that contains the website code you want to test, using the `cd` command.
 
