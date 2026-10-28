@@ -20,7 +20,7 @@ Use these links to download Firefox for different platforms, devices, or deploym
 - [Desktop](https://www.firefox.com/en-US/)
 - [Android](https://www.firefox.com/en-US/mobile/)
 - [iOS](https://www.firefox.com/en-US/mobile/)
-- [Firefox for Enterprise](https://www.firefox.com/en-US/browsers/enterprise/)
+- [Firefox for Enterprise](https://www.firefox.com/en-US/enterprise/)
 
 ### Web developers
 

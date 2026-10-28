@@ -590,7 +590,6 @@ retargeted
 retargetings
 RFCOMM
 RGTC
-riscv
 romcoms
 roundoff
 RSAES-OAEP
@@ -603,8 +602,8 @@ RTMPS
 RTMPT
 RTSP
 run-throughs
-résumé
 RWND
+résumé
 safelisted
 Saltasaurus
 SAOC
