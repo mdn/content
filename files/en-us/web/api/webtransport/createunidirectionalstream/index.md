@@ -50,7 +50,7 @@ A {{jsxref("Promise")}} that resolves to a `WebTransportSendStream` object (this
 
 Use the `createUnidirectionalStream()` method to get a reference to a {{domxref("WritableStream")}}. From this you can {{domxref("WritableStream.getWriter", "get a writer", "", "nocode")}} to allow data to be written to the stream and sent to the server.
 
-Use the {{domxref("WritableStreamDefaultWriter.close", "close()")}} method of the resulting {{domxref("WritableStreamDefaultWriter")}} to close the associated HTTP/3 connection. The browser tries to send all pending data before actually closing the associated connection.
+Use the {{domxref("WritableStreamDefaultWriter.close", "close()")}} method of the resulting {{domxref("WritableStreamDefaultWriter")}} to close the stream. The browser tries to send all pending data before actually closing the stream.
 
 ```js
 async function writeData() {

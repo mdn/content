@@ -84,7 +84,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
   - : Thrown if key or key range provided contains an invalid key or is null.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("IDBObjectStore")}} has been deleted or removed.
-- {{jsxref("TypeError")}} {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the [`count`](#count) parameter is not between `0` and `2^32 - 1`, inclusive.
 
 ## Specifications

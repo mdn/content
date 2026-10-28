@@ -29,7 +29,7 @@ Returns `true` if the associated controls' values have no validity problems; oth
 
 ## Examples
 
-In the following example, calling `checkValidity()` would return `true` if or `false`.
+In the following example, calling `checkValidity()` would return `true` or `false`.
 
 ```js
 const element = document.getElementById("myForm");

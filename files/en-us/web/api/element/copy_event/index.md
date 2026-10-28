@@ -12,7 +12,7 @@ The **`copy`** event of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) f
 
 The event's default action is to copy the selection (if any) to the clipboard.
 
-A handler for this event can _modify_ the clipboard contents by calling {{domxref("DataTransfer.setData", "setData(format, data)")}} on the event's {{domxref("ClipboardEvent.clipboardData")}} property, and cancelling the event's default action using {{domxref("Event/preventDefault", "event.preventDefault()")}}.
+A handler for this event can _modify_ the clipboard contents by calling {{domxref("DataTransfer.setData", "setData(format, data)")}} on the event's {{domxref("ClipboardEvent.clipboardData")}} property, and canceling the event's default action using {{domxref("Event/preventDefault", "event.preventDefault()")}}.
 
 However, the handler cannot _read_ the clipboard data.
 
@@ -22,11 +22,15 @@ This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubb
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("copy", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 oncopy = (event) => { }
 ```
 

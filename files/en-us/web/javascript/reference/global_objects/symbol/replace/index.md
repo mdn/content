@@ -62,7 +62,7 @@ console.log("football".replace(new CustomReplacer("foo"))); // "#!@?tball"
 
 ## See also
 
-- [Polyfill of `Symbol.replace` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [Polyfill of `Symbol.replace` in `core-js`](https://core-js.io/docs/features/ecmascript/symbol)
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.matchAll")}}
 - {{jsxref("Symbol.search")}}

@@ -70,7 +70,7 @@ A {{jsxref("Promise")}} that resolves with a {{jsxref("Number")}} representing t
 ### Exceptions
 
 - `AbortError` {{domxref("DOMException")}}
-  - : Thrown if the operation was cancelled via the `signal` option.
+  - : Thrown if the operation was canceled via the `signal` option.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if usage of the method is blocked by a {{httpheader("Permissions-Policy/language-model", "language-model")}} {{httpheader("Permissions-Policy")}}.
 - `NotSupportedError` {{domxref("DOMException")}}
@@ -85,7 +85,7 @@ A {{jsxref("Promise")}} that resolves with a {{jsxref("Number")}} representing t
     - A message's `prefix` property is set to `true` and:
       - The message's `role` is not `assistant`.
       - The message is not the last item in the messages array.
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if:
     - `omitResponseConstraintInput` is `true` but `responseConstraint` is not provided.
     - A message's `role` is `system` but it was not the first message passed to the context.

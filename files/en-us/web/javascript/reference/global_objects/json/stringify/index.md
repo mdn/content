@@ -74,7 +74,7 @@ A JSON string representing the given value, or undefined.
 - For other objects:
   - All {{jsxref("Symbol")}}-keyed properties will be completely ignored, even when using the [`replacer`](#the_replacer_parameter) parameter.
 
-  - If the value has a `toJSON()` method, it's responsible to define what data will be serialized. Instead of the object being serialized, the value returned by the `toJSON()` method when called will be serialized. `JSON.stringify()` calls `toJSON` with one parameter, the `key`, which has the same semantic as the `key` parameter of the [`replacer`](#the_replacer_parameter) function:
+  - If the value has a `toJSON()` method, it's responsible for defining what data will be serialized. Instead of the object being serialized, the value returned by the `toJSON()` method when called will be serialized. `JSON.stringify()` calls `toJSON` with one parameter, the `key`, which has the same semantic as the `key` parameter of the [`replacer`](#the_replacer_parameter) function:
     - if this object is a property value, the property name
     - if it is in an array, the index in the array, as a string
     - if `JSON.stringify()` was directly called on this object, an empty string
@@ -386,6 +386,6 @@ This change should be backwards-compatible as long as you pass the result of `JS
 
 ## See also
 
-- [Polyfill of modern `JSON.stringify` behavior (symbol, well-formed unicode, raw JSON) in `core-js`](https://github.com/zloirock/core-js#ecmascript-json)
+- [Polyfill of modern `JSON.stringify` behavior (symbol, well-formed unicode, raw JSON) in `core-js`](https://core-js.io/docs/features/ecmascript/json)
 - {{jsxref("JSON.parse()")}}
 - {{jsxref("JSON.rawJSON()")}}

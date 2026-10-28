@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`max-width`** [CSS](/en-US/docs/Web/CSS) property sets the maximum width of an element. It prevents the [used value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value) of the {{cssxref("width")}} property from becoming larger than the value specified by `max-width`.
 
+`max-width` overrides {{cssxref("width")}}, but {{cssxref("min-width")}} overrides `max-width`.
+
 {{InteractiveExample("CSS Demo: max-width")}}
 
 ```css interactive-example-choice
@@ -45,8 +47,6 @@ max-width: 20ch;
   color: white;
 }
 ```
-
-`max-width` overrides {{cssxref("width")}}, but {{cssxref("min-width")}} overrides `max-width`.
 
 ## Syntax
 

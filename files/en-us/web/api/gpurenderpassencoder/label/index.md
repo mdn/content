@@ -8,7 +8,7 @@ browser-compat: api.GPURenderPassEncoder.label
 
 {{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-The **`label`** read-only property of the
+The **`label`** property of the
 {{domxref("GPURenderPassEncoder")}} interface is a string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 This can be set by providing a `label` property in the descriptor object passed into the originating {{domxref("GPUCommandEncoder.beginRenderPass()")}} call, or you can get and set it directly on the `GPURenderPassEncoder` object.

@@ -84,7 +84,7 @@ x.concat(fakeArray); // [1, 2, 3, "hello", "world"]
 ```
 
 > [!NOTE]
-> The `length` property is used to control the number of object properties to be added. In the above example, `length:2` indicates two properties has to be added.
+> The `length` property is used to control the number of object properties to be added. In the above example, `length:2` indicates that two properties have to be added.
 
 ## Specifications
 
@@ -96,5 +96,5 @@ x.concat(fakeArray); // [1, 2, 3, "hello", "world"]
 
 ## See also
 
-- [Polyfill of `Symbol.isConcatSpreadable` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [Polyfill of `Symbol.isConcatSpreadable` in `core-js`](https://core-js.io/docs/features/ecmascript/symbol)
 - {{jsxref("Array.prototype.concat()")}}

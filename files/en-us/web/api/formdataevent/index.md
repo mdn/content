@@ -22,7 +22,7 @@ This allows a {{domxref("FormData")}} object to be quickly obtained in response 
 
 _Inherits properties from its parent interface, {{domxref("Event")}}._
 
-- {{domxref("FormDataEvent.formData")}}
+- {{domxref("FormDataEvent.formData")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("FormData")}} object representing the data contained in the form when the event was fired.
 
 ## Instance methods

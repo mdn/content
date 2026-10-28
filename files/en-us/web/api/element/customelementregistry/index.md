@@ -58,4 +58,4 @@ console.log(el.customElementRegistry === myRegistry); // true
 - {{domxref("Document.customElementRegistry")}}
 - {{domxref("ShadowRoot.customElementRegistry")}}
 - {{domxref("CustomElementRegistry")}}
-- [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
+- [Scoped custom element registries](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) in [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)

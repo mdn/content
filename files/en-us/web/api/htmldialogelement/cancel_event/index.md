@@ -23,11 +23,15 @@ This event is cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("cancel", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 oncancel = (event) => { }
 ```
 
@@ -107,7 +111,7 @@ requestCloseButton.addEventListener("click", () => {
 dialog.addEventListener("cancel", (event) => {
   log("dialog cancel event fired");
   // Uncomment the next two lines to prevent the dialog from closing
-  // log("dialog close cancelled");
+  // log("dialog close canceled");
   // event.preventDefault();
 });
 

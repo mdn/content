@@ -71,7 +71,7 @@ Backpressure support is not demonstrated.
 > An underlying byte source can also be used with a default reader.
 > If automatic buffer allocation is enabled the controller will supply fixed-size buffers for zero-copy transfers when there is an outstanding request from a reader and the stream's internal queues are empty.
 > If automatic buffer allocation is not enabled then all data from the byte stream will always be enqueued.
-> This is similar to the behavior shown in the "pull: underlying byte source examples.
+> This is similar to the behavior shown in the [Underlying pull source with default reader](#underlying_pull_source_with_default_reader) and [Underlying pull source with default reader and no allocation](#underlying_pull_source_with_default_reader_and_no_allocation) examples.
 
 #### Mocked underlying socket source
 
@@ -368,7 +368,7 @@ function readStream(reader) {
 }
 ```
 
-#### Cancelling the stream using the reader
+#### Canceling the stream using the reader
 
 We can use {{domxref("ReadableStreamBYOBReader.cancel()")}} to cancel the stream.
 For this example we call the method if a button is clicked with a reason "user choice" (other HTML and code for the button not shown).
@@ -382,7 +382,7 @@ button.addEventListener("click", () => {
 });
 ```
 
-{{domxref("ReadableStreamBYOBReader.releaseLock()")}} can be used to release the reader without cancelling the stream.
+{{domxref("ReadableStreamBYOBReader.releaseLock()")}} can be used to release the reader without canceling the stream.
 Note however that any outstanding read requests will immediately be rejected.
 A new reader can be acquired later on to read the remaining chunks.
 
@@ -602,7 +602,7 @@ function makeReadableByteFileStream(filename) {
       }
     },
     cancel(reason) {
-      // This is called if the stream is cancelled (via reader or controller).
+      // This is called if the stream is canceled (via reader or controller).
       // Clean up any resources
       fileHandle.close();
       logSource(`cancel() with reason: ${reason}`);
@@ -851,7 +851,7 @@ function makeReadableByteFileStream(filename) {
       }
     },
     cancel(reason) {
-      // This is called if the stream is cancelled (via reader or controller).
+      // This is called if the stream is canceled (via reader or controller).
       // Clean up any resources
       fileHandle.close();
       logSource(`cancel() with reason: ${reason}`);
@@ -1113,7 +1113,7 @@ function makeReadableByteFileStream(filename) {
       }
     },
     cancel(reason) {
-      // This is called if the stream is cancelled (via reader or controller).
+      // This is called if the stream is canceled (via reader or controller).
       // Clean up any resources
       fileHandle.close();
       logSource(`cancel() with reason: ${reason}`);

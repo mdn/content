@@ -20,7 +20,7 @@ A `CaptureController` object is associated with a captured display surface by pa
 
 ## Instance properties
 
-- {{ domxref("CaptureController.zoomLevel", "zoomLevel") }} {{Experimental_Inline}}
+- {{ domxref("CaptureController.zoomLevel", "zoomLevel") }} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The captured display surface's current zoom level.
 
 ## Instance methods

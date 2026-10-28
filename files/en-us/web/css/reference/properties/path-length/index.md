@@ -22,13 +22,13 @@ The `path-length` property only applies to {{SVGElement("circle")}}, {{SVGElemen
 ## Syntax
 
 ```css
-/* Keywords */
+/* Keyword value */
 path-length: none;
 
 /* <length> values */
 path-length: 0;
-path-length: 70;
-path-length: 500;
+path-length: 70px;
+path-length: 500px;
 
 /* Global values */
 path-length: inherit;
@@ -44,7 +44,7 @@ path-length: unset;
   - : No author path length is specified and the user agent's own computed path length is used for all path-related calculations.
 
 - `<length>`
-  - : A non-negative unitless value representing an author-defined total path length, in user units.
+  - : A non-negative {{cssxref("&lt;length&gt;")}} representing an author-defined total path length.
 
 ## Formal definition
 
@@ -81,7 +81,7 @@ We set a `path-length` value on the `<path>`:
 
 ```css live-sample___basic-path-length
 path {
-  path-length: 500;
+  path-length: 500px;
 }
 ```
 
@@ -109,11 +109,11 @@ This example includes the same SVG `<path>` as the previous one. In addition, it
 
 #### CSS
 
-On the {{cssxref(":root")}} element, we define a [CSS custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) called `--path-length` and give it an initial value of `200`. We then set the `<path>` element's `path-length` value to the `--path-length` property, and set an {{cssxref("animation")}} on it that runs an infinite number of times and alternates between forwards and backwards.
+On the {{cssxref(":root")}} element, we define a [CSS custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) called `--path-length` and give it an initial value of `200px`. We then set the `<path>` element's `path-length` value to the `--path-length` property, and set an {{cssxref("animation")}} on it that runs an infinite number of times and alternates between forwards and backwards.
 
 ```css live-sample___path-length-animation
 :root {
-  --path-length: 200;
+  --path-length: 200px;
 }
 
 path {
@@ -160,8 +160,8 @@ Next, we add an `input` event handler to the range slider so that, when its valu
 
 ```js live-sample___path-length-animation
 slider.addEventListener("input", () => {
-  output.textContent = slider.value;
-  rootElem.style.setProperty("--path-length", slider.value);
+  output.textContent = `${slider.value}px`;
+  rootElem.style.setProperty("--path-length", `${slider.value}px`);
 });
 ```
 

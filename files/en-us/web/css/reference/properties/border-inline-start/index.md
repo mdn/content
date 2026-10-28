@@ -7,7 +7,7 @@ browser-compat: css.properties.border-inline-start
 sidebar: cssref
 ---
 
-The **`border-inline-start`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) for setting the individual logical inline-start border property values in a single place in the style sheet.
+The **`border-inline-start`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the individual logical inline-start border property values in a single place in the style sheet.
 
 {{InteractiveExample("CSS Demo: border-inline-start")}}
 

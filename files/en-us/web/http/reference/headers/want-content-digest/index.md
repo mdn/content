@@ -41,7 +41,7 @@ Want-Content-Digest: <algorithm>=<preference>, …, <algorithmN>=<preferenceN>
     Only two registered digest algorithms are considered secure: `sha-512` and `sha-256`.
     The insecure (legacy) registered digest algorithms are: `md5`, `sha` (SHA-1), `unixsum`, `unixcksum`, `adler` (ADLER32) and `crc32c`.
 - `<preference>`
-  - : An integer from 0 to 9 where `0` means "not acceptable", and the values `1` to `9` convey ascending, relative, weighted preference.
+  - : An integer from 0 to 10 where `0` means "not acceptable", and the values `1` to `10` convey ascending, relative, weighted preference.
     In contrast to earlier drafts of the specifications, the weighting is _not_ declared via `q` [quality values](/en-US/docs/Glossary/Quality_values).
 
 ## Examples
@@ -51,7 +51,7 @@ Want-Content-Digest: <algorithm>=<preference>, …, <algorithmN>=<preferenceN>
 The following message asks the recipient to send a `Content-Digest` header using SHA-512 algorithm:
 
 ```http
-Want-Content-Digest: sha-512=9
+Want-Content-Digest: sha-512=10
 ```
 
 ### Want-Content-Digest with multiple values
@@ -74,4 +74,4 @@ Developers can set and get HTTP headers using `fetch()` in order to provide appl
 ## See also
 
 - {{HTTPHeader("Content-Digest")}}, {{HTTPHeader("Repr-Digest")}}, {{HTTPHeader("Want-Repr-Digest")}} digest headers
-- [Digital Signatures for APIs](https://developer.ebay.com/develop/guides/digital-signatures-for-apis) SDK guide uses `Content-Digest`s for digital signatures in HTTP calls (developer.ebay.com)
+- [Digital Signatures for APIs](https://developer.ebay.com/develop/guides/sell/digital-signatures-for-apis) SDK guide uses `Content-Digest`s for digital signatures in HTTP calls (developer.ebay.com)

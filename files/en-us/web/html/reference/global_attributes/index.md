@@ -31,6 +31,10 @@ In addition to the basic HTML global attributes, the following global attributes
   - : Indicates that an element is to be focused on page load, or as soon as the {{HTMLElement("dialog")}} it is part of is displayed. This attribute is a boolean, initially false.
 - [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class)
   - : A space-separated list of the classes of the element. Classes allow CSS and JavaScript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors) or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.
+- [`containertiming`](/en-US/docs/Web/HTML/Reference/Global_attributes/containertiming) {{Experimental_Inline}}
+  - : A string that marks the element as a container root for observation by {{domxref("PerformanceObserver")}} objects using the `"container"` type; its value identifies the container.
+- [`containertimingignore`](/en-US/docs/Web/HTML/Reference/Global_attributes/containertimingignore) {{Experimental_Inline}}
+  - : A boolean attribute that excludes the element and its descendants from contributing to the timing of any ancestor element marked with `containertiming`.
 - [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable)
   - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicating if the element should be editable by the user. If so, the browser modifies its widget to allow editing. The attribute must take one of the following values:
     - `true` or the _empty string_, which indicates that the element must be editable;
@@ -54,6 +58,10 @@ In addition to the basic HTML global attributes, the following global attributes
   - : Hints what action label (or icon) to present for the enter key on virtual keyboards.
 - [`exportparts`](/en-US/docs/Web/HTML/Reference/Global_attributes/exportparts)
   - : Used to transitively export shadow parts from a nested shadow tree into a containing light tree.
+- [`headingoffset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingoffset) {{experimental_inline}}
+  - : Increases the computed heading level of the [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) inside the element, without changing the elements used to write them.
+- [`headingreset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingreset) {{experimental_inline}}
+  - : A boolean attribute that stops the `headingoffset` values of ancestor elements from applying to the headings inside the element.
 - [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden)
   - : An enumerated attribute indicating that the element is not yet, or is no longer, _relevant_. For example, it can be used to hide elements of the page that can't be used until the login process has been completed. The browser won't render such elements. This attribute must not be used to hide content that could legitimately be shown.
 - [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id)

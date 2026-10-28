@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.RTCError.receivedAlert
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`receivedAlert`** read-only property of the {{domxref("RTCError")}} interface specifies the fatal {{Glossary("DTLS")}} error which resulted in an alert being received from the remote peer.
 

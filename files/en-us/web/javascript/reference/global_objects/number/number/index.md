@@ -75,7 +75,7 @@ BigInt(Number(2n ** 54n + 1n)) === 2n ** 54n + 1n; // false
 
 ## See also
 
-- [Polyfill of modern `Number` behavior (with support binary and octal literals) in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [Polyfill of modern `Number` behavior (with support binary and octal literals) in `core-js`](https://core-js.io/docs/features/ecmascript/number)
 - {{jsxref("NaN")}}
 - {{jsxref("Math")}}
 - {{jsxref("BigInt")}}

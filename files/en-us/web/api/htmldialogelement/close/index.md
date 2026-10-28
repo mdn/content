@@ -12,7 +12,7 @@ The **`close()`** method of the {{domxref("HTMLDialogElement")}} interface close
 An optional string may be passed as an argument, updating the {{domxref("HTMLDialogElement.returnValue", "returnValue")}} of the dialog.
 
 The {{domxref("HTMLDialogElement.close_event", "close")}} event is fired after the dialog has closed.
-Unlike when calling {{domxref("HTMLDialogElement.requestClose()")}}, the close operation cannot be cancelled.
+Unlike when calling {{domxref("HTMLDialogElement.requestClose()")}}, the close operation cannot be canceled.
 
 ## Syntax
 

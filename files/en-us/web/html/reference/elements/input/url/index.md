@@ -9,20 +9,20 @@ sidebar: htmlsidebar
 
 {{HTMLElement("input")}} elements of type **`url`** are used to let the user enter and edit a URL.
 
+The input value is automatically validated to ensure that it's either empty or a properly-formatted URL before the form can be submitted. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are automatically applied as appropriate to visually denote whether the current value of the field is a valid URL or not.
+
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;url&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<form>
-  <label for="url">Enter an https:// URL:</label>
-  <input
-    type="url"
-    name="url"
-    id="url"
-    placeholder="https://example.com"
-    pattern="https://.*"
-    size="30"
-    required />
-</form>
+<label for="url">Enter an https:// URL:</label>
+<input
+  type="url"
+  name="url"
+  id="url"
+  placeholder="https://example.com"
+  pattern="https://.*"
+  size="30"
+  required />
 ```
 
 ```css interactive-example
@@ -38,8 +38,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-The input value is automatically validated to ensure that it's either empty or a properly-formatted URL before the form can be submitted. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are automatically applied as appropriate to visually denote whether the current value of the field is a valid URL or not.
 
 ## Value
 
@@ -295,6 +293,14 @@ The [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute 
   </label>
   <button>Submit</button>
 </form>
+```
+
+```js hidden live-sample___url-validation
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+});
 ```
 
 #### CSS

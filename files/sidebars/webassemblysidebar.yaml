@@ -160,6 +160,8 @@ sidebar:
         title: <code>elem</code>
       - link: /WebAssembly/Reference/Definitions/global
         title: <code>global</code>
+      - link: /WebAssembly/Reference/Definitions/import
+        title: <code>import</code>
       - link: /WebAssembly/Reference/Definitions/memory
         title: <code>memory</code>
       - link: /WebAssembly/Reference/Definitions/table
@@ -206,6 +208,11 @@ sidebar:
         path: /WebAssembly/Reference/Numeric
         link: /WebAssembly/Reference/Numeric
         title: Numeric
+        details: closed
+      - type: listSubPages
+        path: /WebAssembly/Reference/Reference
+        link: /WebAssembly/Reference/Reference
+        title: Reference
         details: closed
       - link: /WebAssembly/Reference/SIMD
         title: SIMD

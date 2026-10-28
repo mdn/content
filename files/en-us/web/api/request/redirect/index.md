@@ -12,7 +12,7 @@ The **`redirect`** read-only property of the {{domxref("Request")}} interface co
 
 ## Value
 
-A `RequestRedirect` enum value, which can be one the following strings:
+A `RequestRedirect` enum value, which can be one of the following strings:
 
 - `follow`
 - `error`

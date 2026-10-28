@@ -14,11 +14,15 @@ The `pointerout` event is fired for several reasons including: pointing device i
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("pointerout", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onpointerout = (event) => { }
 ```
 
@@ -40,7 +44,7 @@ para.addEventListener("pointerout", (event) => {
 });
 ```
 
-Using the `onpointerout` event handler property:
+Using the `onpointerout` event handler property (but note that this replaces other event listeners added using `onpointerout`, if any):
 
 ```js
 const para = document.querySelector("p");

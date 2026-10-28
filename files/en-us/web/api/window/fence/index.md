@@ -4,11 +4,11 @@ short-title: fence
 slug: Web/API/Window/fence
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
 browser-compat: api.Window.fence
 ---
 
-{{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
+{{APIRef("Fenced Frame API")}}
 
 The `fence` read-only property of the {{domxref("Window")}} interface returns a {{domxref("Fence")}} object instance for the current document context.
 

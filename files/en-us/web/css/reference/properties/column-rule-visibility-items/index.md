@@ -60,7 +60,7 @@ cite {
 ## Syntax
 
 ```css
-/* Keywords */
+/* Keyword values */
 column-rule-visibility-items: all;
 column-rule-visibility-items: around;
 column-rule-visibility-items: between;

@@ -3,10 +3,12 @@ title: "ProcessingInstruction: toggleAttribute() method"
 short-title: toggleAttribute()
 slug: Web/API/ProcessingInstruction/toggleAttribute
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ProcessingInstruction.toggleAttribute
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`toggleAttribute()`** method of the {{domxref("ProcessingInstruction")}} interface toggles a boolean attribute on the given processing instruction, removing it if present and adding it if not present.
 

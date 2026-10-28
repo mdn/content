@@ -12,11 +12,15 @@ The **`popstate`** event of the {{domxref("Window")}} interface is fired when th
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("popstate", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onpopstate = (event) => { }
 ```
 
@@ -90,7 +94,7 @@ history.back(); // Logs "location: http://example.com/example.html, state: null"
 history.go(2); // Logs "location: http://example.com/example.html?page=3, state: {"page":3}"
 ```
 
-The same example using the `onpopstate` event handler property:
+The same example using the `onpopstate` event handler property (but note that this replaces other event listeners added using `onpopstate`, if any):
 
 ```js
 window.onpopstate = (event) => {

@@ -116,7 +116,7 @@ Each browser's JavaScript debugger is divided into three panes. The layout of th
 
 The first pane on the left contains the list of files associated with the page you are debugging. Select the file you want to work with from this list. Click a file to select it and view its contents in the Debugger's center pane.
 
-![Snippet of the sources pane of the debugger tab in the browser developer tools. The files related to the current page that you are debugging are visible under the folder whose name is same as the url of the site that is open in the current browser tab.](file_list.png)
+![Snippet of the sources pane of the debugger tab in the browser developer tools. The files related to the current page that you are debugging are visible under the folder whose name is the same as the URL of the site that is open in the current browser tab.](file_list.png)
 
 #### Source code
 
@@ -144,7 +144,7 @@ The final section, **Scopes**, shows what values are visible from various points
 
 Find out more about the JavaScript debugger in different browsers:
 
-- [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html))
+- [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
 - [Chrome Debugger](https://developer.chrome.com/docs/devtools/javascript/) (Opera and Edge's debugger is the same)
 - [Safari Sources tab](https://webkit.org/web-inspector/sources-tab/)
 
@@ -170,7 +170,7 @@ document.querySelector("html").style.backgroundColor = "purple";
 const loginImage = document.createElement("img");
 loginImage.setAttribute(
   "src",
-  "https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png",
+  "https://mdn.github.io/shared-assets/images/examples/login-button.png",
 );
 document.querySelector("h1").appendChild(loginImage);
 ```
@@ -189,7 +189,7 @@ document.cheeseSelector("html").style.backgroundColor = "purple";
 const loginImage = document.createElement("img");
 banana.setAttribute(
   "src",
-  "https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png",
+  "https://mdn.github.io/shared-assets/images/examples/login-button.png",
 );
 document.querySelector("h1").appendChild(loginImage);
 ```

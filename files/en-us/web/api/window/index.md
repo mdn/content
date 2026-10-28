@@ -49,7 +49,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the document that the window contains.
 - {{domxref("Window.documentPictureInPicture")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a reference to the [document Picture-in-Picture](/en-US/docs/Web/API/Document_Picture-in-Picture_API) window for the current document context.
-- {{domxref("Window.fence")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("Window.fence")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns a {{domxref("Fence")}} object instance for the current document context. Available only to documents embedded inside a {{htmlelement("fencedframe")}}.
 - {{domxref("Window.frameElement")}} {{ReadOnlyInline}}
   - : Returns the element in which the window is embedded, or null if the window is not embedded.
@@ -114,9 +114,9 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("Window.screen")}} {{ReadOnlyInline}}
   - : Returns a reference to the screen object associated with the window.
 - {{domxref("Window.screenX")}} and {{domxref("Window.screenLeft")}} {{ReadOnlyInline}}
-  - : Both properties return the horizontal distance from the left border of the user's browser viewport to the left side of the screen.
+  - : Both properties return the horizontal distance from the left border of the user's browser window to the left side of the screen.
 - {{domxref("Window.screenY")}} and {{domxref("Window.screenTop")}} {{ReadOnlyInline}}
-  - : Both properties return the vertical distance from the top border of the user's browser viewport to the top side of the screen.
+  - : Both properties return the vertical distance from the top border of the user's browser window to the top side of the screen.
 - {{domxref("Window.scrollbars")}} {{ReadOnlyInline}}
   - : Returns the scrollbars object.
 - {{domxref("Window.scrollMaxX")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
@@ -129,7 +129,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns the number of pixels that the document has already been scrolled vertically.
 - {{domxref("Window.self")}} {{ReadOnlyInline}}
   - : Returns an object reference to the window object itself.
-- {{domxref("Window.sessionStorage")}}
+- {{domxref("Window.sessionStorage")}} {{ReadOnlyInline}}
   - : Returns a reference to the session storage object used to store data that may only be accessed by the origin that created it.
 - {{domxref("Window.sharedStorage")}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{deprecated_inline}} {{non-standard_inline}}
   - : Returns the {{domxref("WindowSharedStorage")}} object for the current origin. This is the main entry point for writing data to shared storage using the [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API).
@@ -283,7 +283,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Lets a website or app gain access to a sandboxed file system for its own use.
 - {{domxref("Window.setImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Executes a function after the browser has finished other heavy tasks.
-- {{domxref("Window.setResizable()")}} {{Non-standard_Inline}} {{deprecated_inline}}
+- {{domxref("Window.setResizable()")}}
   - : Does nothing (no-op). Kept for backward compatibility with Netscape 4.x.
 - {{domxref("Window.webkitConvertPointFromNodeToPage()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Transforms a {{domxref("WebKitPoint")}} from the node's coordinate system to the page's coordinate system.
@@ -322,9 +322,9 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 ### Focus events
 
 - {{domxref("Window/blur_event", "blur")}}
-  - : Fired when an element has lost focus.
+  - : Fired when the window has lost focus.
 - {{domxref("Window/focus_event", "focus")}}
-  - : Fired when an element has gained focus.
+  - : Fired when the window has gained focus.
 
 ### Gamepad events
 

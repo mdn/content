@@ -23,6 +23,11 @@ animation-range-end: contain;
 animation-range-end: cover 80%;
 animation-range-end: contain 700px;
 
+/* Multiple values */
+animation-range-end:
+  cover 80%,
+  contain 700px;
+
 /* Global values */
 animation-range-end: inherit;
 animation-range-end: initial;
@@ -32,6 +37,8 @@ animation-range-end: unset;
 ```
 
 ### Values
+
+This property is specified as a comma-separated list of values. Each value can be one of the following:
 
 - `normal`
   - : Represents the end of the timeline. This is the default value.
@@ -47,6 +54,8 @@ animation-range-end: unset;
 The `animation-range-end` property specifies the end of the animation's attachment range. Changing the end of the attachment range can potentially shift the end of the animation, that is, the point where keyframes mapped to `100%` progress land when the iteration count is `1`, and can also reduce the effective duration of the animation.
 
 The property value can be `normal`, a `<length-percentage>`, or a {{cssxref("timeline-range-name")}} with an optional `<length-percentage>`. If the `<timeline-range-name>` value does not include a `<length-percentage>`, the percentage defaults to `100%`.
+
+When specifying multiple comma-separated values, they apply to the animations in the order in which the {{cssxref("animation-name")}} values appear. See [Setting multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
 
 The `animation-range-end` property is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that using the `animation` shorthand resets any previously declared `animation-range-end` value to `normal`; the shorthand cannot be used to set a new `animation-range-end` value. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you should declare `animation-range-end` _after_ declaring any `animation` shorthand to avoid resetting the value to `normal`.
 
@@ -64,11 +73,11 @@ The `animation-range-end` property, along with the {{cssxref("animation-range-st
 
 ### Creating a view progress timeline with a range end
 
-In this example, the `animation-range-end` is applied to an element animated via a view progress timeline. This makes the animation reach its last keyframe well before the element reaches the end of it's containing viewport.
+In this example, the `animation-range-end` is applied to an element animated via a view progress timeline. This makes the animation reach its last keyframe well before the element reaches the end of its containing viewport.
 
 #### HTML
 
-```html hidden
+```html-nolint hidden
 <div class="content">
   <h1>Content</h1>
 
@@ -87,13 +96,12 @@ In this example, the `animation-range-end` is applied to an element animated via
     Sagittis aliquam malesuada bibendum arcu vitae elementum. Malesuada bibendum
     arcu vitae elementum curabitur vitae nunc sed velit.
   </p>
-</div>
 ```
 
 In the middle of a long block of text, we've included an element that we'll animate. We've added a lot of text to ensure that the content overflows its container; the extra text is hidden here for brevity.
 
 ```html-nolint
-<div class="animatedElement">
+<div class="animatedElement"></div>
 ```
 
 ```html-nolint hidden
@@ -118,7 +126,7 @@ We've also included a checkbox that will toggle the {{cssxref("animation-fill-mo
 </label>
 ```
 
-```html hidden
+```html-nolint hidden
   </p>
 </div>
 ```
@@ -155,12 +163,12 @@ We've also set `animation-range-end` to make the animation end earlier than expe
 When the checkbox is checked, the `animation-fill-mode` property gets applied to the animated element:
 
 ```css
-:has(:checked) .animatedElement {
+:has(:checked) ~ .animatedElement {
   animation-fill-mode: forwards;
 }
 ```
 
-The other styles applied in this example has been hidden here for brevity.
+The other styles applied in this example have been hidden for brevity.
 
 ```css hidden
 .animatedElement {

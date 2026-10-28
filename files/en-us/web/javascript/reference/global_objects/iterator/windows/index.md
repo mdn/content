@@ -3,9 +3,13 @@ title: Iterator.prototype.windows()
 short-title: windows()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/windows
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Iterator.windows
 sidebar: jsref
 ---
+
+{{SeeCompatTable}}
 
 The **`windows()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that yields a sliding window of elements. Each time the helper is iterated, it yields an array removing the first element from the previous iteration and adding the next element from the original iterator.
 
@@ -103,7 +107,7 @@ for (const substring of substrings) {
 
 ## See also
 
-- [Polyfill of `Iterator.prototype.windows` in `core-js`](https://github.com/zloirock/core-js#iterator-chunking)
+- [Polyfill of `Iterator.prototype.windows` in `core-js`](https://core-js.io/docs/features/ecmascript/iterator)
 - [es-shims polyfill of `Iterator.prototype.windows`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.chunks()")}}

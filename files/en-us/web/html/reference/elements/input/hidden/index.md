@@ -56,9 +56,13 @@ Hidden inputs don't participate in constraint validation; they have no real valu
 
 ## Examples
 
+### Using a hidden record ID
+
 Let's look at how we might implement a version of the edit form we described earlier (see [Tracking edited content](#tracking_edited_content)), using a hidden input to remember the ID of the record being edited.
 
-The edit form's HTML might look a bit like this:
+#### HTML
+
+The edit form's HTML looks like this:
 
 ```html
 <form>
@@ -79,9 +83,7 @@ This is the content of my excellent blog post. I hope you enjoy it!
 </form>
 ```
 
-Let's also add some CSS:
-
-```css
+```css hidden
 html {
   font-family: sans-serif;
 }
@@ -115,20 +117,24 @@ textarea {
 }
 ```
 
+```js hidden
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+```
+
 The server would set the value of the hidden input with the ID `postID` to the ID of the post in its database before sending the form to the user's browser and would use that information when the form is returned to know which database record to update with modified information. No scripting is needed in the content to handle this.
 
-The output looks like this:
+#### Result
 
 {{ EmbedLiveSample('Examples', '100%', 200) }}
 
-> [!NOTE]
-> You can also find the example on GitHub (see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/hidden-input-example/index.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)).
-
-When submitted, the form data sent to the server will look something like this:
+When submitted, the form data sent to the server would look something like this:
 
 `title=My+excellent+blog+post&content=This+is+the+content+of+my+excellent+blog+post.+I+hope+you+enjoy+it!&postId=34657`
 
-Even though the hidden input cannot be seen at all, its data is still submitted.
+Even though the hidden input is not visible in the form, its data is still submitted.
 
 ## Technical summary
 

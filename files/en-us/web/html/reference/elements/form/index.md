@@ -9,6 +9,8 @@ sidebar: htmlsidebar
 
 The **`<form>`** [HTML](/en-US/docs/Web/HTML) element represents a document section containing interactive controls for submitting information.
 
+It is possible to use the {{cssxref(':valid')}} and {{cssxref(':invalid')}} CSS [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) to style a `<form>` element based on whether the {{domxref("HTMLFormElement.elements", "elements")}} inside the form are valid.
+
 {{InteractiveExample("HTML Demo: &lt;form&gt;", "tabbed-standard")}}
 
 ```html interactive-example
@@ -25,6 +27,12 @@ The **`<form>`** [HTML](/en-US/docs/Web/HTML) element represents a document sect
     <input type="submit" value="Subscribe!" />
   </div>
 </form>
+```
+
+```js interactive-example
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css interactive-example
@@ -46,8 +54,6 @@ label {
   padding-right: 10px;
 }
 ```
-
-It is possible to use the {{cssxref(':valid')}} and {{cssxref(':invalid')}} CSS [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) to style a `<form>` element based on whether the {{domxref("HTMLFormElement.elements", "elements")}} inside the form are valid.
 
 ## Attributes
 
@@ -141,6 +147,14 @@ The following attributes control behavior during form submission.
     <label><input type="radio" name="radio" value="no" /> No</label>
   </fieldset>
 </form>
+```
+
+```js hidden
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+});
 ```
 
 ### Result

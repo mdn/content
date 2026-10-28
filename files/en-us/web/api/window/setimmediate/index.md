@@ -11,7 +11,7 @@ browser-compat: api.Window.setImmediate
 
 {{APIRef("HTML DOM")}} {{non-standard_header}}
 
-This method is used to break up long running operations and run a callback function immediately after the browser has completed other operations such as events and display updates.
+This method is used to break up long-running operations and run a callback function immediately after the browser has completed other operations such as events and display updates.
 
 ## Syntax
 
@@ -60,7 +60,7 @@ The [Efficient Script Yielding](https://w3c.github.io/setImmediate/#si-setImmedi
 
 ## See also
 
-- [Polyfill of `setImmediate` in `core-js`](https://github.com/zloirock/core-js#setimmediate)
+- [Polyfill of `setImmediate` in `core-js`](https://core-js.io/docs/features/web-standards/set-immediate)
 - [Microsoft `setImmediate` API Demo](https://jphpsf.github.io/setImmediate-shim-demo/)
 - {{DOMxRef("Window.clearImmediate()")}}
 - {{DOMxRef("Window.requestIdleCallback()")}}

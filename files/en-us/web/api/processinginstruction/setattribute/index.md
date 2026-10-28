@@ -3,10 +3,12 @@ title: "ProcessingInstruction: setAttribute() method"
 short-title: setAttribute()
 slug: Web/API/ProcessingInstruction/setAttribute
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ProcessingInstruction.setAttribute
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`setAttribute()`** method of the {{domxref("ProcessingInstruction")}} interface sets the value of an attribute on the processing instruction.
 If the attribute already exists, the value is updated; otherwise, a new attribute is added with the specified name and value.

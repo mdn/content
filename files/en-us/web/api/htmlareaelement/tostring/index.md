@@ -8,9 +8,7 @@ browser-compat: api.HTMLAreaElement.toString
 
 {{ApiRef("URL API")}}
 
-The **`HTMLAreaElement.toString()`** {{Glossary("stringifier")}}
-method returns a string containing the whole URL. It is a read-only
-version of {{domxref("HTMLAreaElement.href")}}.
+The **`HTMLAreaElement.toString()`** {{Glossary("stringifier")}} method returns a string containing the whole URL, which is the same value as {{domxref("HTMLAreaElement.href")}}.
 
 ## Syntax
 

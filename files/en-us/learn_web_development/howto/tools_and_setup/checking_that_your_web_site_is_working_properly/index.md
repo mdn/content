@@ -70,7 +70,7 @@ Servers respond with a status message whenever they receive a request. Here are 
 - **500: Internal server error**
   - : Something went wrong on the server. For instance, maybe the server-side language ({{Glossary("PHP")}}, .Net, etc.) stopped working, or the web server itself has a configuration problem. Usually it's best to resort to your hosting provider's support team.
 - **503: Service unavailable**
-  - : Usually resulting from a short term system overload. The server has some sort of problem. Try again in a little while.
+  - : Usually resulting from a short-term system overload. The server has some sort of problem. Try again in a little while.
 
 As beginners checking our (simple) website, we'll deal most often with 200, 304, 403, and 404.
 

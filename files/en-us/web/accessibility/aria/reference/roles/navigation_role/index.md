@@ -106,7 +106,7 @@ If a `navigation` landmark role or {{HTMLElement('nav')}} element in a document 
 
 #### Redundant descriptions
 
-Screen readers will announce the type of role the landmark is. Because of this, you do not need to describe what the landmark is in its label. For example, a declaration of `role="navigation"` with an of `aria-label="Primary navigation"` may be announced redundantly as, "primary navigation navigation".
+Screen readers will announce the type of role the landmark is. Because of this, you do not need to describe what the landmark is in its label. For example, a declaration of `role="navigation"` with an `aria-label="Primary navigation"` may be announced redundantly as, "primary navigation navigation".
 
 ## Specifications
 

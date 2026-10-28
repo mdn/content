@@ -105,7 +105,7 @@ This is an example showing how to manipulate video frames using a canvas. For ef
 You can achieve the same result by applying the {{cssxref("filter-function/grayscale", "grayscale()")}} CSS function to the source `<video>` element.
 
 > [!NOTE]
-> Due to potential security issues if your video is on a different domain than your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](/en-US/docs/Web/HTTP/Guides/CORS) on your video server.
+> Due to potential security issues if your video is on a different domain than your code, you'll need to enable [CORS (Cross-Origin Resource Sharing)](/en-US/docs/Web/HTTP/Guides/CORS) on your video server.
 
 ### Video and WebGL
 

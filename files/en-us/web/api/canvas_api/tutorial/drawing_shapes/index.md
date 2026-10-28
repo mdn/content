@@ -135,7 +135,7 @@ function draw() {
 
 {{EmbedLiveSample("Seeing blurry edges 3", "", "350")}}
 
-For even-width lines, each half ends up being an integer amount of pixels, so you want a path that is between pixels (that is, (3,1) to (3,5)), instead of down the middle of pixels.
+For even-width lines, each half ends up being an integer number of pixels, so you want a path that is between pixels (that is, (3,1) to (3,5)), instead of down the middle of pixels.
 
 While slightly painful when initially working with scalable 2D graphics, paying attention to the pixel grid and the position of paths ensures that your drawings will look correct regardless of scaling or any other transformations involved. A 1.0-width vertical line drawn at the correct position will become a crisp 2-pixel line when scaled up by 2, and will appear at the correct position.
 
@@ -624,7 +624,7 @@ We'll take another look at `fillStyle`, in more detail, later in this tutorial. 
 
 ### Shapes with holes
 
-To draw a shape with a hole in it, we need to draw the hole in different clock directions as we draw the outer shape. We either draw the outer shape clockwise and the inner shape anticlockwise or the outer shape anticlockwise and the inner shape clockwise.
+To draw a shape with a hole in it, we need to draw the hole in different clock directions as we draw the outer shape. We either draw the outer shape clockwise and the inner shape counterclockwise or the outer shape counterclockwise and the inner shape clockwise.
 
 ```html hidden
 <canvas id="my-canvas" width="150" height="150"></canvas>
@@ -642,7 +642,7 @@ function draw() {
   ctx.lineTo(150, 0);
   ctx.lineTo(75, 129.9);
 
-  // Inner shape anticlockwise ↺
+  // Inner shape counterclockwise ↺
   ctx.moveTo(75, 20);
   ctx.lineTo(50, 60);
   ctx.lineTo(100, 60);
@@ -657,7 +657,7 @@ draw();
 
 {{EmbedLiveSample("Shapes_with_holes", "", "160")}}
 
-In the example above, the outer triangle goes clockwise (move to the top-left corner, then draw a line to the top-right corner, and finish at the bottom) and the inner triangle goes anticlockwise (move to the top, then line to the bottom-left corner, and finish at the bottom-right).
+In the example above, the outer triangle goes clockwise (move to the top-left corner, then draw a line to the top-right corner, and finish at the bottom) and the inner triangle goes counterclockwise (move to the top, then line to the bottom-left corner, and finish at the bottom-right).
 
 ## Path2D objects
 

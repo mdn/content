@@ -120,7 +120,7 @@ console.log([4, 5, 8, 12].find(isPrime)); // 5
 ```
 
 > [!NOTE]
-> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily memoized algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
+> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily {{Glossary("Memoization", "memoized")}} algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
 
 ### Using the third argument of callbackFn
 
@@ -208,7 +208,7 @@ console.log(Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)));
 
 ## See also
 
-- [Polyfill of `Array.prototype.find` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.find` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.find`](https://www.npmjs.com/package/array.prototype.find)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

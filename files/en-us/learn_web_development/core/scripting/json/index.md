@@ -49,6 +49,8 @@ As described above, JSON is a string whose format very much resembles JavaScript
 The following is a valid JSON string representing an object.
 Note that it is also a valid JavaScript object literal — just with some more [syntax restrictions](#json_syntax_restrictions).
 
+<!-- cSpell:ignore tonne -->
+
 ```json
 {
   "squadName": "Super hero squad",

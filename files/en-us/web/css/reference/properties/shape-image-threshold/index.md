@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`shape-image-threshold`** [CSS](/en-US/docs/Web/CSS) property sets the alpha channel threshold used to extract the shape using an image as the value for {{cssxref("shape-outside")}}.
 
+Any pixels whose alpha component's value is greater than the threshold are considered to be part of the shape for the purposes of determining its boundaries. For example, a value of `0.5` means that the shape will enclose all the pixels that are more than 50% opaque.
+
 {{InteractiveExample("CSS Demo: shape-image-threshold")}}
 
 ```css interactive-example-choice
@@ -76,8 +78,6 @@ shape-image-threshold: 0.6;
   );
 }
 ```
-
-Any pixels whose alpha component's value is greater than the threshold are considered to be part of the shape for the purposes of determining its boundaries. For example, a value of `0.5` means that the shape will enclose all the pixels that are more than 50% opaque.
 
 ## Syntax
 

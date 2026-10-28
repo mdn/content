@@ -49,7 +49,7 @@ In Unicode-unaware mode, this syntax causes the `-` to become a literal characte
 // Remove the hyphen so the two bounds represent two alternatives
 /[\p{L}\p{N}]/u;
 // Use -- in unicodeSets mode, which represents set subtraction
-/[[A-z]--_]]/v;
+/[[A-z]--_]/v;
 ```
 
 ## See also

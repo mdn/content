@@ -41,7 +41,7 @@ A {{domxref("GPUBuffer")}} object instance.
 
 ### Exceptions
 
-- `RangeError` {{domxref("DOMException")}}
+- {{jsxref("RangeError")}}
   - : Thrown if `mappedAtCreation` is set to `true`, and the specified `size` is not a multiple of `4`.
 
 ### Validation
