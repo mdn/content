@@ -55,7 +55,7 @@ console.log(selection); // Selection object
 
 ## See also
 
-- [Selection API](/en-US/docs/Web/API/Selection)
+- [Selection API](/en-US/docs/Web/API/Selection_API)
 - {{domxref("Selection")}}
 - {{domxref("Range")}}
 - {{domxref("Window.getSelection()")}}

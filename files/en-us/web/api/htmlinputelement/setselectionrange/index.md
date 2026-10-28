@@ -10,7 +10,7 @@ browser-compat: api.HTMLInputElement.setSelectionRange
 
 The **`setSelectionRange()`** method of the {{domxref("HTMLInputElement")}} interface sets the start and end positions of the current text selection in an {{HTMLElement("input")}} element. This updates the selection state immediately, though the visual highlight only appears when the element is focused.
 
-This method updates the {{domxref("HTMLInputElement.selectionStart")}}, {{domxref("HTMLInputElement.selectionEnd")}}, and {{domxref("HTMLInputElement.selectionDirection")}} properties in one call, regardless of whether the element is focused. The visual selection highlight will only appear when the element has focus. If you wish to select **all** text of an input element, you can use the [`select()`](/en-US/docs/Web/API/HTMLInputElement/select) method instead.
+This method updates the {{domxref("HTMLInputElement.selectionStart")}}, {{domxref("HTMLInputElement.selectionEnd")}}, and {{domxref("HTMLInputElement.selectionDirection")}} properties in one call. If you wish to select **all** text of an input element, you can use the [`select()`](/en-US/docs/Web/API/HTMLInputElement/select) method instead.
 
 The selection of an input element can either be a range of characters or a caret (if nothing is selected). Therefore, by setting `selectionStart` and `selectionEnd` to the same value, you can effectively move the caret to a specific position in the text field.
 
@@ -24,11 +24,11 @@ setSelectionRange(selectionStart, selectionEnd, selectionDirection)
 ### Parameters
 
 - `selectionStart`
-  - : The 0-based index of the first selected character. An index greater than the length of the element's value is treated as pointing to the end of the value. Equivalent to setting the {{domxref("HTMLInputElement/selectionStart", "selectionStart")}} property.
+  - : The 0-based index of the first selected character. An index greater than the length of the element's value is treated as pointing to the end of the value. See the {{domxref("HTMLInputElement/selectionStart", "selectionStart")}} property.
 - `selectionEnd`
-  - : The 0-based index of the character _after_ the last selected character. An index greater than the length of the element's value is treated as pointing to the end of the value. If `selectionEnd` is less than `selectionStart`, then both are treated as the value of `selectionEnd`. Equivalent to setting the {{domxref("HTMLInputElement/selectionEnd", "selectionEnd")}} property.
+  - : The 0-based index of the character _after_ the last selected character. An index greater than the length of the element's value is treated as pointing to the end of the value. If `selectionEnd` is less than `selectionStart`, then both are treated as the value of `selectionEnd`. See the {{domxref("HTMLInputElement/selectionEnd", "selectionEnd")}} property.
 - `selectionDirection` {{optional_inline}}
-  - : A string indicating the direction in which the selection is considered to have been performed. Equivalent to setting the {{domxref("HTMLInputElement/selectionDirection", "selectionDirection")}} property. Possible values:
+  - : A string indicating the direction in which the selection is considered to have been performed. See the {{domxref("HTMLInputElement/selectionDirection", "selectionDirection")}} property. Possible values:
     - `"forward"`
     - `"backward"`
     - `"none"` if the direction is unknown or irrelevant. Default value.

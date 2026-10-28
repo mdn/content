@@ -41,7 +41,8 @@ In JavaScript, when an object is passed to a function expecting a string (like {
 This can make the object appear to be a string when used with other functions when it is really an object with properties and methods.
 
 ```js
-alert(window.getSelection()); // Logs a string
+const selection = window.getSelection();
+alert(selection); // Shows a string
 ```
 
 However, not all functions call `toString()` automatically.
