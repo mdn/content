@@ -75,10 +75,10 @@ To use the module:
 4. Run the following command to start the server:
 
    ```bash
-   npx http-server -o -p 9999
+   npx http-server -o -p 9999 -c-1
    ```
 
-   This hosts all files in the current directory on `localhost:9999`, loading `index.html` automatically. The option `-o` causes it to open in a web browser immediately. If `index.html` doesn't exist, the directory contents are displayed instead, allowing you to choose a file to load.
+   This hosts all files in the current directory on `localhost:9999`, loading `index.html` automatically. The option `-o` causes it to open in a web browser immediately. If `index.html` doesn't exist, the directory contents are displayed instead, allowing you to choose a file to load. The `-c-1` option tells the server not to cache any files, so you get fresh ones loaded each time. 
 
 ### Using Python
 
