@@ -96,5 +96,5 @@ x.concat(fakeArray); // [1, 2, 3, "hello", "world"]
 
 ## See also
 
-- [Polyfill of `Symbol.isConcatSpreadable` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [Polyfill of `Symbol.isConcatSpreadable` in `core-js`](https://core-js.io/docs/features/ecmascript/symbol)
 - {{jsxref("Array.prototype.concat()")}}

@@ -17,11 +17,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("iceconnectionstatechange", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 oniceconnectionstatechange = (event) => { }
 ```
 
@@ -43,7 +47,7 @@ When the negotiation process runs out of candidates to check, the ICE connection
 
 ## Examples
 
-An event handler for this event can be added using the `oniceconnectionstatechange` property or by using {{domxref("EventTarget.addEventListener", "addEventListener()")}} on the `RTCPeerConnection`.
+An event handler for this event can be added using the `oniceconnectionstatechange` property (but note that this replaces other event listeners added using `oniceconnectionstatechange`, if any) or by using {{domxref("EventTarget.addEventListener", "addEventListener()")}} on the `RTCPeerConnection`.
 
 In this example, a handler for `iceconnectionstatechange` is set up to update a call state indicator by using the value of {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} to create a string which corresponds to the name of a CSS class that we can assign to the status indicator to cause it to reflect the current state of the connection.
 
@@ -54,7 +58,7 @@ pc.addEventListener("iceconnectionstatechange", (ev) => {
 });
 ```
 
-This can also be written as:
+This can also be written using the `oniceconnectionstatechange` event handler property (but note that this replaces other event listeners added using `oniceconnectionstatechange`, if any):
 
 ```js
 pc.oniceconnectionstatechange = (ev) => {

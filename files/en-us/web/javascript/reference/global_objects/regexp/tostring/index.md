@@ -82,4 +82,5 @@ new RegExp("\n").toString() === "/\\n/"; // true
 
 ## See also
 
+- [Polyfill of modern `RegExp.prototype.toString` behavior in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - {{jsxref("Object.prototype.toString()")}}
