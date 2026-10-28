@@ -12,7 +12,7 @@ Every modern web browser includes a powerful suite of developer tools (devtools)
 
 ## What are devtools?
 
-Your browser's devtools allow you to view the current state of the code that is running to create the webpage rendered in your browser. This differs from the source code — the browser will interpret the source code, correct malformed HTML, run JavaScript that may alter the markup or CSS, etc.
+Your browser's devtools show you the current state of the code rendered in your browser to create the webpage you can see. This may differ from the source code you wrote; the browser will correct malformed HTML, run JavaScript that may alter the markup or CSS, etc.
 
 The devtools' functionality goes beyond viewing code, however — you can edit HTML and CSS to see how the UI is changed, run JavaScript against the live page to see the result, debug JavaScript (including viewing error messages), inspect network requests, emulate different viewport sizes, view accessibility information, and much more.
 
