@@ -45,13 +45,13 @@ Some examples won't run if you open them directly in the browser using a `file:/
 
 ## Running a local HTTP server
 
-To get around the problems associated with running local files, we need to test such examples by running them through a local web server. This section describes several options for doing so.
+To avoid the problems associated with running local files, we need to test such examples by running them through a local web server. This section describes several options for doing so.
 
 ### Using an extension in your code editor
 
-If you only need HTML, CSS and JavaScript, and no server-side language, an easy way to run local examples is to use a code editor extension. As well as automating server installation and set-up, they also integrate nicely with your code editor.
+If you only need HTML, CSS, and JavaScript, and no server-side language, an easy way to run local examples is to use a code editor extension. As well as automating server installation and setup, they also integrate nicely with your code editor.
 
-In VSCode, for example, search for the [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) extension in the Extensions panel. This adds a "Show Preview" button in the top right of the UI when you are viewing an HTML file, which when pressed shows the HTML and associated files rendered in a separate side panel.
+In VS Code, for example, search for the [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) extension in the Extensions panel. This adds a "Show Preview" button in the top right of the UI when you are viewing an HTML file, which when pressed shows the HTML and associated files rendered in a separate side panel.
 
 Live Preview uses a local server at `http://127.0.0.1:3000` to serve the files.
 
