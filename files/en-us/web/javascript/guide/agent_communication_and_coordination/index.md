@@ -186,7 +186,7 @@ The whole object `{ hereIsYourPort: port2 }` is copied as usual and can be used 
 
 Other than `MessagePort`, another widely-used transferable object is {{jsxref("ArrayBuffer")}}, which happens to be both copyable and transferable. When an `ArrayBuffer` is copied, the source and recipient each hold an independent copy, and mutations on one side do not affect the other. When an `ArrayBuffer` is transferred, it is again marked as _detached_. A detached array buffer still exists as an object, but no longer provides access to the underlying memory. This means that:
 
-- {{jsxref("ArrayBuffer/byteLength", "byteLength")}} becomes 0 (in both the buffer and the associated typed array views).
+- {{jsxref("ArrayBuffer/byteLength", "byteLength")}} becomes `0` (in both the buffer and the associated typed array views).
 - Methods, such as {{jsxref("ArrayBuffer/resize", "resize()")}} and {{jsxref("ArrayBuffer/slice", "slice()")}}, throw a {{jsxref("TypeError")}} when invoked. The associated typed array views' methods also throw a `TypeError`.
 
 You can check whether an `ArrayBuffer` is detached via its {{jsxref("ArrayBuffer/detached", "detached")}} property.
@@ -449,10 +449,10 @@ Atomics.store(a, 1, 15);
 console.log("Worker:", Atomics.load(a, 0));
 ```
 
-Here, although you may still see 0 in one of the logs (because, for example, the main `load` happens before the worker `store`), it's guaranteed that they can never be both 0.
+Here, although you may still see `0` in one of the logs (for example, because the main `load` happens before the worker `store`), they are guaranteed to never both be `0`.
 
 > [!NOTE]
-> If you want to go further and guarantee that both new values are observed, you need to make both agents [wait](#waiting_and_notifying) before the `Atomics.load()` call, like a `while (Atomics.load(a, 1) === 0);` loop similar to the one below.
+> If you want to go further and guarantee that both new values are observed, you need to make both agents [wait](#waiting_and_notifying) before the `Atomics.load()` call, such as using a `while (Atomics.load(a, 1) === 0);` loop.
 
 Furthermore, atomic load/store operations establish a partial ordering for other _non-atomic_ read/write operations. Specifically:
 
@@ -487,7 +487,7 @@ The only possible order is the following:
 3. `worker.js` loads the new `a[1]` value and exits the `while` loop.
 4. `worker.js` reads `a[0]` as `63`.
 
-Therefore, with the help with the store/load pair, we have successfully established an ordering from 1 to 4, so `worker.js` can observe the new value of `a[0]` written by `main.js`, despite not using atomic operations.
+We have successfully established an ordering from 1 to 4 with the help of the store/load pair, so `worker.js` can observe the new value of `a[0]` written by `main.js`, despite not using atomic operations.
 
 ### Atomic updates
 
@@ -830,7 +830,7 @@ You might notice that if we set the maximum number of permits to `1`, we arrive 
 
 A semaphore with multiple permits (called a _counting semaphore_) still runs into problems when the concurrent agents try to access the same resource. The goal of a semaphore is to moderate access to a limited resource pool (for example, if there are only 4 available buffers). You still need a separate mechanism to assign these resources to the agents to avoid simultaneous access.
 
-### Deadlocks
+### Avoiding deadlocks
 
 A _deadlock_ occurs when agents wait on each other in a cycle, so none can make progress. For example:
 
