@@ -230,6 +230,8 @@ ul {
 
 This example demonstrates how the values are repeated when there are fewer values in the list of styles than row rules. It also demonstrates the default values for the width, color, and style of `medium`, `currentcolor` and `none`, respectively.
 
+#### CSS
+
 Using the same HTML and CSS as in the previous example, we include four comma-separated `<gap-rule>` values as the `row-rule` value, omitting the width in the first `<gap-rule>`, the color in the second, and the style from the third, with the fourth including all three components:
 
 ```css live-sample___repeat
@@ -242,13 +244,19 @@ ul {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample("Repeat", "", "180")}}
 
 The red line is `3px` wide, the dotted line is the same color as the text, and there is no `5px`-wide blue line, as the style of the third `<gap-rule>` defaults to `none`, so no line is painted.
 
 ### Using the `repeat()` function
 
-This example demonstrates using the `repeat()` function within the `row-rule` property value. We use the same HTML and CSS as in the previous examples. We include a `repeat()` function, setting the list of two `<gap-rule>` values to repeat 3 times.
+This example demonstrates using the `repeat()` function within the `row-rule` property value.
+
+#### CSS
+
+We use the same HTML and CSS as in the previous examples. We include a `repeat()` function, setting the list of two `<gap-rule>` values to repeat 3 times.
 
 ```css live-sample___func live-sample___auto
 ul {
@@ -259,6 +267,8 @@ ul {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample("func", "", "180")}}
 
 The flex container has six rows, so five gutters. The `repeat()` function repeats two style values three times, creating a list of eight style values. As there are fewer row gutters than total gap-rules, the last three values in the list are discarded.
@@ -266,6 +276,8 @@ The flex container has six rows, so five gutters. The `repeat()` function repeat
 ### Using `auto` within `repeat()`
 
 This example demonstrates using the `auto` argument instead of an integer in the `repeat()` function.
+
+#### CSS
 
 Using `repeat(auto, <gap-rule>)`, we set all row rules to `1px dotted` and default to the current color, except the first and last, which we set to `3px solid red`.
 
@@ -277,6 +289,8 @@ ul {
     3px red solid;
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample("auto", "", "180")}}
 

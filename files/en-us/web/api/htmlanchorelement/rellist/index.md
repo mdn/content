@@ -8,7 +8,9 @@ browser-compat: api.HTMLAnchorElement.relList
 
 {{APIRef("HTML DOM")}}
 
-The read-only **`relList`** property of the {{domxref("HTMLAnchorElement")}} returns a live {{domxref("DOMTokenList")}} object containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("a")}} element and the current document. It reflects the {{HTMLElement("a")}} element's [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) content attribute.
+The read-only **`relList`** property of the {{domxref("HTMLAnchorElement")}} returns a live {{domxref("DOMTokenList")}} object containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("a")}} element and the current document.
+
+It reflects the {{HTMLElement("a")}} element's [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) content attribute.
 
 ## Value
 

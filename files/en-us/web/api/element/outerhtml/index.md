@@ -33,7 +33,7 @@ When set to the `null` value, that `null` value is converted to the empty string
   - : Thrown if an attempt was made to set `outerHTML` on an element which is a direct child of a {{domxref("Document")}}, such as {{domxref("Document.documentElement")}}.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if an attempt was made to set `outerHTML` using an XML input which is not well-formed.
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if the property is set to a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
 
 ## Description

@@ -37,12 +37,16 @@ The first parameter in the HTTP context is either `inline` (default value, indic
 
 ```http
 Content-Disposition: inline
+Content-Disposition: inline; filename="file name.jpg"
+Content-Disposition: inline; filename*=UTF-8''file%20name.jpg
 Content-Disposition: attachment
 Content-Disposition: attachment; filename="file name.jpg"
 Content-Disposition: attachment; filename*=UTF-8''file%20name.jpg
 ```
 
 The quotes around the file name are optional, but are necessary if you use special characters in the file name, such as spaces.
+
+A `filename` can also be provided with `Content-Disposition: inline`. Browsers may use it as the default name when the user saves the resource, for example with the "Save as" command.
 
 The parameters `filename` and `filename*` differ only in that `filename*` uses the encoding defined in {{rfc("5987", "", "3.2")}}.
 When both `filename` and `filename*` are present in a single header field value, `filename*` is preferred over `filename` when both are understood. It's recommended to include both for maximum compatibility, and you can convert `filename*` to `filename` by substituting non-ASCII characters with ASCII equivalents (such as converting `é` to `e`).
@@ -51,7 +55,7 @@ You may want to avoid percent escape sequences in `filename`, because they are h
 Browsers may apply transformations to conform to the file system requirements, such as converting path separators (`/` and `\`) to underscores (`_`).
 
 > [!NOTE]
-> Chrome, and Firefox 82 and later, prioritize the HTML [`<a>` element's](/en-US/docs/Web/HTML/Reference/Elements/a) `download` attribute over the `Content-Disposition: inline` parameter (for [same-origin URLs](/en-US/docs/Web/Security/Defenses/Same-origin_policy)). Earlier Firefox versions prioritize the header and will display the content inline.
+> The HTML `<a>` element's [`download`](/en-US/docs/Web/HTML/Reference/Elements/a#download) attribute, when honored, overrides the `Content-Disposition: inline` behavior, but the `filename` parameter of `Content-Disposition` overrides the name in the `download` attribute.
 
 ### As a header for a multipart body
 

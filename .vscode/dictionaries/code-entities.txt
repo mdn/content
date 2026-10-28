@@ -25,7 +25,6 @@ activetitlebarcolor
 addonsidebar
 addonsidebarmain
 addstream
-adduser
 adlm
 advertisementreceived
 afrc
@@ -45,9 +44,7 @@ anonid
 anyref
 apacheconf
 apachectl
-appcache
 APPCOMMAND
-APPCOMMAND_MEDIA_PREVIOUSTRACK
 appinstalled
 appshell
 appversion
@@ -56,7 +53,6 @@ arabext
 armeabi
 armn
 armnlow
-armv81
 arrayref
 arrowpanel
 assetlinks
@@ -69,7 +65,6 @@ attributionsrc
 audiocontext
 authorid
 autolocate
-autospace
 avgr_u
 backdrag
 backgroundfetchabort
@@ -125,8 +120,6 @@ chromeos
 chws
 clipboardchange
 clon
-closedby
-closerequest
 cnonce
 colindextext
 collectstatic
@@ -137,8 +130,6 @@ color-sbix
 colorMaskiOES
 com.apple.quicktime.mdta
 com.apple.quicktime.udta
-commandfor
-congres
 connectionavailable
 contentaccessible
 contentdelete
@@ -159,7 +150,6 @@ cryptomining
 csiso
 csrfmiddlewaretoken
 css.selectors.headingfunction
-css.selectors.hostfunction
 CSS_RGBCOLOR
 csslint
 cssref
@@ -195,18 +185,15 @@ dom.abortablepromise
 dom.closewatcher
 dom.documentpip
 dom.element.customstateset
-dom.headingoffset
 dom.input.dirpicker
 dom.media.webcodecs
 dom.performance.event_timing.enable_interactionid
-dom.screenorientation
 dom.shadowdom
 dom.webcomponents
 dom.webcomponents.customelements
 dom.webcomponents.shadowdom
 dom.webnotifications.requireinteraction
 dom.webnotifications.requireuserinteraction
-dom.webshare
 domxref
 downdiagonalstrike
 downloadprogress
@@ -224,7 +211,6 @@ EdgiOS
 ehtml
 EISU
 elementname
-elementtiming
 elemidx
 elems
 emailtracking
@@ -243,7 +229,6 @@ equalsize
 EquationiOES
 ethi
 ethioaa
-exitpictureinpicture
 exnref
 Exsel
 extadd
@@ -253,7 +238,6 @@ fangsong
 fencedframe
 ffdhe2048
 ffdhe3072
-fgets
 filecheck
 FILLMODE_FILL_WINDOW
 finishedtransferringdata
@@ -272,6 +256,7 @@ funcref
 funcrefs
 fwdred
 fwid
+gapi
 gara
 gattserverdisconnected
 geometrychange
@@ -310,6 +295,7 @@ hmnp
 horizontalstrike
 hsides
 htdocs
+htmlcollection
 htmlsidebar
 htmlspecialchars
 HTMLWBRElement
@@ -326,7 +312,6 @@ ifnotequal
 ifrac
 imageset
 imghp
-imgur
 implicit_jscontext
 importmap
 inactivetitlebarcolor
@@ -337,7 +322,6 @@ inputsourceschange
 interestfor
 intitle
 intl.uidirection.locale
-intrinsicsize
 ipados
 ipns
 ircs
@@ -416,7 +400,6 @@ libvpx
 libwebp
 libwww
 lineboundary
-lining-nums
 livescript
 loadingdone
 loadingerror
@@ -521,6 +504,7 @@ noautohide
 nodownload
 nofullscreen
 noimageindex
+NOINLINE
 nolint
 noremoteplayback
 nosniff
@@ -532,7 +516,6 @@ NPNVDOM
 NPNVprivateModeBool
 NPNVserviceManager
 NS_ERROR_SOCIALTRACKING_URI
-NS_NOINTERFACE
 nsIDNS
 nsIINI
 nsIJRI
@@ -546,7 +529,6 @@ nsresult
 nullexternref
 nullfuncref
 nullref
-nums
 OEM_CUSEL
 OEM_ENLW
 oggz
@@ -554,7 +536,6 @@ Okhsl
 Okhsv
 olck
 oldstyle
-oldstyle-nums
 onao
 onbeforematch
 onbufferedchange
@@ -611,7 +592,6 @@ org.w3.clearkey
 ornm
 orya
 oscpu
-osfile.jsm
 osma
 otpauth
 otpcredential
@@ -648,8 +628,6 @@ pmin
 pnum
 pointerrawupdate
 popcnt
-popovertarget
-popovertargetaction
 postactivate
 postmkproject
 powerefficient
@@ -673,7 +651,6 @@ promptaction
 promptdismiss
 propfind
 prophoto-rgb
-proportional-nums
 PROPPATCH
 propstat
 PUNCHTHROUGH
@@ -695,7 +672,6 @@ removestream
 replacewithcommas
 replacewithspaces
 RGBX
-RGUI
 richlistbox
 rmvirtualenv
 rohg
@@ -727,7 +703,6 @@ saur
 scalethumbend
 scalethumbstart
 scalethumbtick
-scanf
 screenschange
 scrimtitle
 scrollsnapchange
@@ -744,7 +719,6 @@ seekbackward
 seekforward
 seekto
 seeother
-selectedcontent
 selectend
 seltype
 sentenceboundary
@@ -777,7 +751,6 @@ sprop-parameter-sets
 squeezeend
 squeezestart
 srgba8
-sscanf
 stackoverflow_url
 startapp
 startproject
@@ -788,7 +761,6 @@ strcmp
 streamfilter
 stripslashes
 stripsurroundingwhitespace
-strncpy
 structref
 SUBDOCUMENT
 sund
@@ -802,7 +774,6 @@ tabbox
 tabbrowser
 tableidx
 tabs-closebutton
-tabular-nums
 tagidx
 takr
 talu
@@ -840,7 +811,6 @@ touchleave
 traditio
 transferringdata
 treecol
-TYPE_IMAGESET
 UBORed
 ufloat
 uidb64
@@ -879,7 +849,6 @@ verythickmathspace
 verythinmathspace
 veryverythickmathspace
 veryverythinmathspace
-vfprintf
 videooutput
 viewbox
 viewsource.css
@@ -887,10 +856,7 @@ VIRTUALENVWRAPPER
 virtualkeyboardpolicy
 virtuals
 visibilitymaskchange
-VK_CRSEL
 VK_EREOF
-VK_EXSEL
-VK_JUNJA
 VK_LCONTROL
 VK_LMENU
 VK_LWIN
@@ -912,11 +878,9 @@ vmatrix
 Vplugin
 vrml
 vsides
-vsprintf
 wara
 wcho
 wdth
-weba
 webappmanifest
 webassemblysidebar
 webauthn
@@ -948,8 +912,6 @@ wimax
 WM_MOUSEHWHEEL
 wordprocessingml
 workon
-WORKON_HOME
-writingsuggestions
 wtai
 wtransport
 x-abiword

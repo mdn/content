@@ -30,7 +30,7 @@ An instance of this object is returned by calling {{domxref("Navigator.userAgent
 - {{domxref("NavigatorUAData.getHighEntropyValues()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with a dictionary object containing low entropy information and requested high entropy information about the browser.
 - {{domxref("NavigatorUAData.toJSON()")}} {{Experimental_Inline}}
-  - : A _serializer_ that returns a JSON representation of the _low entropy_ properties of the `NavigatorUAData` object.
+  - : Returns a JSON-serializable plain object representing the `NavigatorUAData` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 

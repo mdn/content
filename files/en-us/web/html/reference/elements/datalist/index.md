@@ -31,6 +31,12 @@ label {
 }
 ```
 
+## Attributes
+
+This element has no other attributes than the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes), common to all elements.
+
+## Usage notes
+
 To bind the `<datalist>` element to the control, we give it a unique identifier in the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute, and then add the [`list`](/en-US/docs/Web/HTML/Reference/Elements/input#list) attribute to the {{HTMLElement("input")}} element with the same identifier as value.
 Only certain types of {{HTMLElement("input")}} support this behavior, and it can also vary from browser to browser.
 
@@ -38,10 +44,6 @@ Each `<option>` element should have a `value` attribute, which represents a sugg
 
 > [!NOTE]
 > `<datalist>` is not a replacement for {{HTMLElement("select")}}. A `<datalist>` does not represent an input itself; it is a list of suggested values for an associated control. The control can still accept any value that passes validation, even if it is not in this suggestion list.
-
-## Attributes
-
-This element has no other attributes than the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes), common to all elements.
 
 ## Accessibility
 

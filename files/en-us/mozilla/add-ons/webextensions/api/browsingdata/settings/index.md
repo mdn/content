@@ -1,7 +1,7 @@
 ---
 title: browsingData.settings()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/settings
-page-type: webextension-api-property
+page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.settings
 sidebar: addonsidebar
 ---

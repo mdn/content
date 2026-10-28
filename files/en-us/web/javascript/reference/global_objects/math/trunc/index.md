@@ -98,7 +98,7 @@ Only use `~~` as a substitution for `Math.trunc()` when you are confident that t
 
 ## See also
 
-- [Polyfill of `Math.trunc` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.trunc` in `core-js`](https://core-js.io/docs/features/ecmascript/math)
 - {{jsxref("Math.abs()")}}
 - {{jsxref("Math.ceil()")}}
 - {{jsxref("Math.floor()")}}

@@ -75,7 +75,7 @@ Math.sign(); // NaN
 
 ## See also
 
-- [Polyfill of `Math.sign` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.sign` in `core-js`](https://core-js.io/docs/features/ecmascript/math)
 - [es-shims polyfill of `Math.sign`](https://www.npmjs.com/package/math.sign)
 - {{jsxref("Math.abs()")}}
 - {{jsxref("Math.ceil()")}}

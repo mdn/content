@@ -28,7 +28,7 @@ sidebar: mdnsidebar
 >   - : Title heading displayed at top of page.
 >     Format as: `Term being defined`.
 > - **slug**
->   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
+>   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
 >     This will be formatted as snake case of the title: `Glossary/Term_being_defined`.
 > - **page-type**
 >   - : `glossary-definition` for a definition page or `glossary-disambiguation` for a disambiguation page.

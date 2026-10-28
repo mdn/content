@@ -135,13 +135,13 @@ The table below demonstrates the effect of setting different percentage values o
 ```css hidden
 @font-face {
   font-family: "Inconsolata";
-  src: url("https://fonts.gstatic.com/s/inconsolata/v31/QlddNThLqRwH-OJ1UHjlKENVzlm-WkL3GZQmAwPyya15.woff2")
+  src: url("https://mdn.github.io/shared-assets/fonts/inconsolata/Inconsolata-VF.woff2")
     format("woff2");
 }
 
 @font-face {
   font-family: "Anek Malayalam";
-  src: url("https://fonts.gstatic.com/s/anekmalayalam/v4/6qLUKZActRTs_mZAJUZWWkhke0nYa-f6__Azq3-gP1W7db9_.woff2")
+  src: url("https://mdn.github.io/shared-assets/fonts/anek-malayalam/AnekMalayalam-VF.woff2")
     format("woff2");
 }
 

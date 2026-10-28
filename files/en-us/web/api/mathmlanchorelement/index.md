@@ -17,6 +17,8 @@ The **`MathMLAnchorElement`** interface represents MathML [`<a>`](/en-US/docs/We
 
 _Inherits properties from its parent, {{domxref("MathMLElement")}}._
 
+- {{domxref("MathMLAnchorElement.download")}} {{experimental_inline}} {{non-standard_inline}}
+  - : A string indicating that the linked resource is intended to be downloaded rather than displayed in the browser.
 - {{domxref("MathMLAnchorElement.hash")}} {{experimental_inline}}
   - : A string representing the fragment identifier, including the leading hash mark (`#`), if any, in the referenced URL.
 - {{domxref("MathMLAnchorElement.host")}} {{experimental_inline}}
@@ -33,10 +35,18 @@ _Inherits properties from its parent, {{domxref("MathMLElement")}}._
   - : A string containing the password specified before the domain name.
 - {{domxref("MathMLAnchorElement.pathname")}} {{experimental_inline}}
   - : A string containing an initial `/` followed by the path of the URL, not including the query string or fragment.
+- {{domxref("MathMLAnchorElement.ping")}} {{experimental_inline}} {{non-standard_inline}}
+  - : A space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body `PING` to the URLs.
 - {{domxref("MathMLAnchorElement.port")}} {{experimental_inline}}
   - : A string representing the port component, if any, of the referenced URL.
 - {{domxref("MathMLAnchorElement.protocol")}} {{experimental_inline}}
   - : A string representing the protocol component, including trailing colon (`:`), of the referenced URL.
+- {{domxref("MathMLAnchorElement.referrerPolicy")}} {{experimental_inline}} {{non-standard_inline}}
+  - : A string defining how much of the [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referer) to send when following the link, and under what circumstances.
+- {{domxref("MathMLAnchorElement.rel")}} {{experimental_inline}} {{non-standard_inline}}
+  - : A space-separated list of link types indicating the relationship between the resource represented by the link and the current document.
+- {{domxref("MathMLAnchorElement.relList")}} {{ReadOnlyInline}} {{experimental_inline}} {{non-standard_inline}}
+  - : A live {{domxref("DOMTokenList")}} object containing the set of link types indicating the relationship between the resource represented by the link and the current document.
 - {{domxref("MathMLAnchorElement.search")}} {{experimental_inline}}
   - : A string representing the search element, including leading question mark (`?`), if any, of the referenced URL.
 - {{domxref("MathMLAnchorElement.target")}} {{experimental_inline}}
