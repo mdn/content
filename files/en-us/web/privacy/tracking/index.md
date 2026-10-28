@@ -173,16 +173,17 @@ In cases like this, browsers sometimes have to decide whether the harm caused by
 
 In this section we'll give an overview of the main defenses that browsers deploy against tracking. Browsers typically use some combination of these techniques, and will apply different techniques in different situations and configurations (for example, if the user has private browsing enabled).
 
-#### Lists of known trackers
+#### Identifying trackers
 
-Browsers sometimes identify trackers using a list of domains that are known to host trackers. Trackers may be classified according to the purpose of the tracking and/or the techniques they use. When processing requests for resources, browsers consult the list and decide whether to block the resource load entirely or to limit its capabilities.
+Some anti-tracking techniques may target any resource that uses a given feature: for example a website might restrict all third-party cookies. However, for a more targeted approach, browsers sometimes prefer to identify resources that are likely to be trackers.
 
-The advantages of using tracker lists are that:
+This enables a browser to discriminate between trackers and websites that use tracking techniques for legitimate purposes, which in turn allows the browser to use more aggressive measures against the tracker.
 
-- They enable a browser to discriminate between trackers and websites that use tracking techniques for legitimate purposes. This allows the browser to use more aggressive measures against the tracker.
-- They enable a browser to restrict trackers without needing to identify specific techniques.
+There are two main methods browsers employ to identify trackers:
 
-The main disadvantage is that they need constant maintenance.
+- **Lists of known trackers**: Browsers sometimes identify trackers using a list of domains that are known to host trackers. Trackers may be classified according to the purpose of the tracking and/or the techniques they use. When processing requests for resources, browsers consult the list and decide whether to block the resource load entirely or to limit its capabilities. The main disadvantage of a list is that it requires constant maintenance.
+
+- **Behavioral analysis**: Browsers sometimes identify likely trackers by analysing their behavior: for example, how often a domain appears as a third-party, appears in iframes, or triggers redirects.
 
 #### Blocking known trackers
 
