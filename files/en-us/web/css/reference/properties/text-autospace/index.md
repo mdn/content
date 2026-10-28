@@ -9,7 +9,7 @@ sidebar: cssref
 
 The **`text-autospace`** [CSS](/en-US/docs/Web/CSS) property allows you to specify the space applied between Chinese/Japanese/Korean (CJK) and non-CJK characters.
 
-In mixed-script text, typographic conventions may call for a small amount of space between CJK characters and Latin letters or numbers. This separation helps distinguish adjacent scripts without requiring authors to insert whitespace characters into the content.
+Many CJK typographic conventions require a small amount of space between CJK characters and Western letters or numbers (see W3C's descriptions for [Chinese](https://www.w3.org/International/clreq/#mixed_text_composition_in_horizontal_writing_mode) and [Japanese](https://www.w3.org/TR/jlreq/#composition_of_japanese_and_western_mixed_texts) text layout conventions). Some authors would manually insert a space character for this purpose, but `text-autospace` adds this spacing at the layout engine level, without requiring extra characters in the textual content.
 
 ## Syntax
 
@@ -178,5 +178,5 @@ chose.addEventListener("change", (e) => {
 - {{cssxref('text-spacing-trim')}}
 - [`ic`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#local_font-relative_lengths) and [`ric`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#root_font-relative_lengths) units
 - [CSS Text](/en-US/docs/Web/CSS/Guides/Text) module
-- [Mixed text composition in horizontal writing mode](https://www.w3.org/International/clreq/#mixed_text_composition_in_horizontal_writing_mode) in Requirements for Chinese Text Layout
-- [Composition of Japanese and Western Mixed Texts](https://www.w3.org/TR/jlreq/#composition_of_japanese_and_western_mixed_texts) in Requirements for Japanese Text Layout
+- [Mixed text composition in horizontal writing mode](https://www.w3.org/International/clreq/#mixed_text_composition_in_horizontal_writing_mode) in Requirements for Chinese Text Layout on w3.org
+- [Japanese and Western mixed text composition](https://www.w3.org/International/jlreq/#japanese_and_western_mixed_text_composition) in Requirements for Japanese Text Layout on w3.org
