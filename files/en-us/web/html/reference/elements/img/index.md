@@ -73,7 +73,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 - `controls`
   - : A boolean attribute that enables user-agent-defined control widgets on the image (e.g., a button for viewing in fullscreen). User-interaction events are suppressed when interacting with user agent controls. What forms of control are provided is implementation-defined. Supporting implementations are:
- 
     - [Safari](https://webkit.org/blog/18325/webkit-features-for-safari-27-0/): provides a built-in user interface for interacting with spatial and panorama photos.
 
 - [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
