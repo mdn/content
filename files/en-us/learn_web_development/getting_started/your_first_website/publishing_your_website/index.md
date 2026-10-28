@@ -45,7 +45,7 @@ Publishing a website is a complex topic because there are many ways to go about 
 
 To have more control over content and website appearance, most professionals/businesses choose to buy web hosting and a domain name:
 
-- Web hosting is rented file space on a hosting company's [web server](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server). You put website files on the web server. The web server provides website content to website visitors. The cost of web hosting can vary greatly, but can be as cheap as $5-10 per month.
+- Web hosting is rented file space on a hosting company's [web server](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server). You put website files on the web server. The web server provides website content to website visitors. Some web hosting services are free for basic static file hosting, while others cost a small amount per month (say $5-10).
 - A [domain name](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name) is the unique web address where people find your website, such as `https://www.mozilla.org` or `https://www.bbc.co.uk`. You can rent your domain name for as many years as you want from a **domain registrar**. The domain name usually costs $5-15 per year. This cost varies depending on:
   - Local obligations: some country top-level domain names are more costly, as different countries set different prices.
   - Services associated with the domain name: some registrars provide spam protection by hiding your postal address and email address behind their own addresses: the postal address can be provided in care of the registrar, and your email address can be obscured via your registrar's alias.
