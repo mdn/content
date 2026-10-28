@@ -48,11 +48,10 @@ To have more control over content and website appearance, most professionals/bus
 - Web hosting is rented file space on a hosting company's [web server](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server). You put website files on the web server. The web server provides website content to website visitors. Some web hosting services are free for basic static file hosting, while others cost a small amount per month (say $5-10).
 - A [domain name](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name) is the unique web address where people find your website, such as `https://www.mozilla.org` or `https://www.bbc.co.uk`. You can rent your domain name for as many years as you want from a **domain registrar**. The domain name usually costs $5-15 per year. This cost varies depending on:
   - Top-level domain registry: top-level domain names (TLDs) like `.com`, `.org`, and `.io` are managed by different registries that set fees for registrars. Some countries use registry fees as a revenue stream and set high prices; popular TLDs like `.io` and `.ai` can also be much more expensive than standard `.com`.
-  - Services associated with the domain name: some registrars provide spam protection by hiding your postal address and email address behind their own addresses: the postal address can be provided in care of the registrar, and your email address can be obscured via your registrar's alias.
+  - Registrar markup: Some registrars may charge more for certain domain names. For example, the same TLD may be more expensive depending on supply and demand, and some "premium" domain names may be more expensive, especially short names like `ai.com`.
+  - Services associated with the domain name: Some registrars provide additional options such as a promotional price in the first year that goes up after renewal or registrar-provided email services.
 
-If you get your web hosting _and_ domain name from the same company, they tend to be configured automatically to talk to one another. However, if you get them from separate companies, or want to change your hosting to a different company, you need to do a bit of setup to point the domain name to the correct server. This is so that people will see your website when they navigate to that web address. This is usually done by logging into your domain registrar's website, and setting your domain's [nameservers](https://kinsta.com/blog/what-is-a-nameserver/) to the ones provided by your hosting company.
-
-Hosting providers charge you according to how much {{Glossary("Bandwidth", "bandwidth")}} your website consumes. This depends on how many people, and Web crawling robots, access your content during a given time, and how much server space your content takes up. This is why people usually store their videos on dedicated services such as YouTube, Dailymotion, and Vimeo. For example, your provider may have a plan that includes up to several thousand visitors per day, for "reasonable" bandwidth usage. Be careful, however as this is defined differently from one hosting provider to another. Keep in mind that reliable, paid, personal hosting can cost around ten to fifteen dollars per month.
+If you get your web hosting _and_ domain name from the same company, they are configured to talk to one another automatically. However, if you get them from separate companies, or want to change your hosting, you need to point the domain name to the correct server so people see your website when they navigate to that web address. Your hosting provider either gives you a public IP address — or one under their domain like my-app.pages.dev or my-app.github.io — and you configure your DNS records to add an A record or a CNAME record.
 
 ### Tips for finding hosting and domains
 
@@ -60,11 +59,11 @@ Hosting providers charge you according to how much {{Glossary("Bandwidth", "band
 - Your home or office {{Glossary("ISP", "internet service provider")}} may provide some limited hosting for a small website. The available feature set will be limited, but it might be perfect for your first experiments.
 - There are also free services available like [Neocities](https://neocities.org/), [Google Sites](https://sites.google.com/), and [WordPress](https://wordpress.com/). Such services can be limited in scope, but they are good enough for initial experiments.
 
-## Publishing to your domain
+## Publishing to your server
 
-Companies use various mechanisms to transfer files to their web servers. Many will have more than one option; typical options include using an [(S)FTP client](/en-US/docs/Glossary/FTP) or [RSync](https://en.wikipedia.org/wiki/Rsync), or keeping your website source code in a [GitHub repo](https://github.com/) and granting the hosting company access so they can fetch the source, build it if necessary, and publish it.
+Companies use various mechanisms to transfer static files to their web servers. Many will have more than one option; typical options include using an [(S)FTP client](/en-US/docs/Glossary/FTP) or [RSync](https://en.wikipedia.org/wiki/Rsync), or keeping your website source code in a [GitHub repo](https://github.com/) and granting the hosting company access so they can fetch the source, build it if necessary, and publish it.
 
-In the following subsections we'll look at (S)FTP and RSync in a bit more detail.
+In the following subsections we'll look at (S)FTP and RSync in more detail.
 
 ### (S)FTP
 
@@ -94,14 +93,14 @@ A basic command looks like this:
 rsync [-options] -e "ssh [SSH DETAILS GO HERE]" SOURCE user@x.x.x.x:DESTINATION
 ```
 
-- `-options` is a dash followed by one or more letters, for example `-v` for verbose error messages, and `-b` to make backups. You can see the full list at the [rsync man page](https://linux.die.net/man/1/rsync) (search for "Options summary").
+- `-options` is a dash followed by one or more letters, for example, `-v` for verbose error messages, and `-b` to make backups. You can see the full list at the [rsync man page](https://linux.die.net/man/1/rsync) (search for "Options summary").
 - `-e "ssh [SSH DETAILS GO HERE]"` includes SSH details to provide a secure connection.
 - `SOURCE` is the path to the local file or directory that you want to copy files over from.
 - `user@` is the credentials of the user on the remote server you want to copy files over to.
 - `x.x.x.x` is the IP address of the remote server.
 - `DESTINATION` is the path to the location you want to copy your directory or files to on the remote server.
 
-Again, you would get such details from your hosting provider.
+Your hosting provider provides such details.
 
 For more information and further examples:
 
@@ -124,23 +123,22 @@ Try playing with some of these examples to find out which one works best for you
 Some tools let you publish your website online:
 
 - [GitHub](https://github.com/) is a "social coding" site. It allows you to upload code repositories for storage in the [Git](https://git-scm.com/) **version control system.** You can then collaborate on code projects, and the system is open-source by default, meaning that anyone in the world can find your GitHub code, use it, learn from it, and improve on it. GitHub has a very useful feature called [GitHub Pages](https://pages.github.com/), which allows you to expose website code live on the web.
-- [Netlify](https://www.netlify.com/) is a web hosting platform that provides hosting for static websites directly from your GitHub repository. It also provides a number of additional features, such as deployment preview, serverless functions, and form handling.
-- [Fly.io](https://fly.io/) is a platform that allows you to deploy applications and databases close to your users. This is more suitable if you have a web application that requires backend services.
+- [Netlify](https://www.netlify.com/) is a web hosting platform that provides hosting for static websites directly from your GitHub repository. It also provides several additional features such as deployment preview, serverless functions, and form handling.
 
-These options are generally free, with a limited feature-set.
+These options are generally free with a limited feature set.
 
 ## What approach would we recommend?
 
-If you are just getting started, we'd recommend GitHub pages for its ease of use.
+If you are just getting started, we'd recommend GitHub Pages for its ease of use.
 
 1. If you don't already have an account, [sign up for GitHub](https://github.com/).
 2. Create a repository to store your site, following the steps at [Creating a repository for your site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site).
 3. Upload your site files to your new repository using the GitHub UI. You can find instructions on how to do so at [Adding a file to a repository on GitHub](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository#adding-a-file-to-a-repository-on-github).
-4. Set up your repository to publish its contents using GitHub pages. To do this, see the instructions at [Publishing from a branch](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch).
-5. After a short while, you should see a message saying "Your site is live at https://username.github.io/repositoryname/", for example, "Your site is live at https://bobsmith.github.io/myfirstwebsite/" if your name is bobsmith and your repository is called myfirstwebsite. There should be a "Visit site" button that you can click to view your site.
+4. Set up your repository to publish its contents using GitHub Pages. To do this, see the instructions at [Publishing from a branch](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch).
+5. After a short while, you should see a message saying "Your site is live at https://username.github.io/repositoryname/", for example, "Your site is live at https://bobsmith.github.io/my-first-website/" if your name is bobsmith and your repository is called my-first-website. A "Visit site" button should appear that you can click to view your site.
 
 > [!NOTE]
-> If you've got your own domain, and want it to point to a GitHub pages site, see [Configure a custom domain for your GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) for guidance.
+> If you've got your own domain, and want it to point to a GitHub Pages site, see [Configure a custom domain for your GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) for guidance.
 
 ## Further reading
 
