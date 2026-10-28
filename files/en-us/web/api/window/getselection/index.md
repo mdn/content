@@ -8,7 +8,9 @@ browser-compat: api.Window.getSelection
 
 {{APIRef("Selection API")}}
 
-The **`getSelection()`** method of the {{domxref("Window")}} interface returns the {{domxref("Selection")}} object associated with the window's {{domxref("document")}}, representing the range of text selected by the user or the current position of the caret.
+The **`getSelection()`** method of the {{domxref("Window")}} interface returns the {{domxref("Selection")}} object associated with the window's {{domxref("document")}}, representing the range of text selected by the user, or the current position of the caret.
+
+`window.getSelection()` is a shorthand for `window.document.getSelection()`. Read {{domxref("Document.getSelection()")}} for more information.
 
 ## Syntax
 
@@ -28,53 +30,15 @@ When called on an {{htmlelement("iframe")}} that is not displayed (e.g., where `
 
 ## Examples
 
-```js
-function foo() {
-  const selObj = window.getSelection();
-  alert(selObj);
-  const selRange = selObj.getRangeAt(0);
-  // do stuff with the range
-}
-```
-
-## Notes
-
-### String representation of the Selection object
-
-In JavaScript, when an object is passed to a function expecting a string (like {{Domxref("window.alert()")}} or {{Domxref("document.write()")}}), the object's {{jsxref("Object.toString", "toString()")}} method is called and the returned value is passed to the function.
-This can make the object appear to be a string when used with other functions when it is really an object with properties and methods.
-
-In the above example, `selObj.toString()` is automatically called when it is
-passed to {{domxref("window.alert()")}}. However, attempting to use a JavaScript [String](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) property
-or method such as
-[`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length)
-or
-[`substr`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr)
-directly on a {{domxref("Selection")}} object will result in an error if it does not
-have that property or method and may return unexpected results if it does. To use a
-`Selection` object as a string, call its `toString()` method
-directly:
+### Getting a Selection object
 
 ```js
-const selectedText = selObj.toString();
+const selection = window.getSelection();
+const selRange = selection.getRangeAt(0);
+// do stuff with the range
+
+console.log(selection); // Selection object
 ```
-
-- `selObj` is a `Selection` object.
-- `selectedText` is a string (Selected text).
-
-### Related objects
-
-You can call {{domxref("Document.getSelection()")}}, which works identically to
-`Window.getSelection()`.
-
-It is worth noting that currently `getSelection()` doesn't work on the
-content of {{htmlelement("textarea")}} and {{htmlelement("input")}} elements in Firefox
-and Edge (Legacy). {{domxref("HTMLInputElement.setSelectionRange()")}}
-or the `selectionStart` and `selectionEnd` properties could be
-used to work around this.
-
-Notice also the difference between _selection_ and _focus_.
-{{domxref("Document.activeElement")}} returns the focused element.
 
 ## Specifications
 

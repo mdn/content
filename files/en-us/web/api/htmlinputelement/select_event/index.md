@@ -8,7 +8,9 @@ browser-compat: api.HTMLInputElement.select_event
 
 {{APIRef("HTML DOM")}}
 
-The **`select`** event fires when some text has been selected.
+The **`select`** event of the {{domxref("HTMLInputElement")}} interface fires when the selection's extent or direction is changed programmatically, or when the user selects text.
+
+This event is not fired when nothing is selected and the caret is moved by the user. Only the {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} event fires in this case.
 
 ## Syntax
 
