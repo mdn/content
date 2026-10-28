@@ -61,10 +61,11 @@ The Node.js [`http-server`](https://www.npmjs.com/package/http-server) module pr
 
 To use the module:
 
-1. Run the following command in your [command line](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line) to check if Node.js is already installed:
+1. Run the following commands in your [command line](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line) to check if Node.js (and npm, its package manager, which often comes bundled with it) is already installed:
 
    ```bash
    node -v
+   npm -v
    ```
 
 2. If Node.js is not installed, you need to install it. Follow the [download instructions](https://nodejs.org/en/download) in the Node.js docs, then run the above command again to check if the installation is successful.
@@ -77,7 +78,7 @@ To use the module:
    npx http-server -o -p 9999
    ```
 
-   This hosts all files in the current directory on `localhost:9999`, loading `index.html` automatically. The option `-o` causes it to open in a web browser immediately. If `index.html` doesn't exist, then the directory contents are displayed instead, allowing you to choose a file to load.
+   This hosts all files in the current directory on `localhost:9999`, loading `index.html` automatically. The option `-o` causes it to open in a web browser immediately. If `index.html` doesn't exist, the directory contents are displayed instead, allowing you to choose a file to load.
 
 ### Using Python
 
