@@ -423,7 +423,7 @@ a[1] = 15;
 console.log("Worker:", a[0]);
 ```
 
-Theoretically, no matter how these operations are ordered, as long as each agent executes its code in order, at least one log entry must be non-`0` (try listing all possible orderings of the four statements, with the constraint that `a[0] = 63` is before `console.log(a[1])`, and `a[1] = 15` is before `console.log(a[0])`!). However, in reality, both logs may print 0. The following ordering is possible:
+Theoretically, no matter how these operations are ordered, as long as each agent executes its code in order, at least one log entry must be non-`0` (try listing all possible orderings of the four statements, with the constraint that `a[0] = 63` is before `console.log(a[1])`, and `a[1] = 15` is before `console.log(a[0])`!). However, in reality, both logs may print 0. This may arise from the following order:
 
 1. `main.js` reads `a[1]` as `0`.
 2. `worker.js` reads `a[0]` as `0`.
@@ -452,12 +452,12 @@ console.log("Worker:", Atomics.load(a, 0));
 Here, although you may still see 0 in one of the logs (because, for example, the main `load` happens before the worker `store`), it's guaranteed that they can never be both 0.
 
 > [!NOTE]
-> If you want to go further and guarantee that both new values are observed, you need to make both agents [wait](#waiting_and_notifying) before the `Atomics.load()` call, like a `while (Atomics.load(a, 1) !== 0);` loop similar to the one below.
+> If you want to go further and guarantee that both new values are observed, you need to make both agents [wait](#waiting_and_notifying) before the `Atomics.load()` call, like a `while (Atomics.load(a, 1) === 0);` loop similar to the one below.
 
 Furthermore, atomic load/store operations establish a partial ordering for other _non-atomic_ read/write operations. Specifically:
 
 - When an `Atomics.store()` call executes, all non-atomic writes before it must become observable (although writes after it also might)
-- when an `Atomics.load()` call executes, all non-atomic reads after it must observe the new values (although reads before it also might)
+- When an `Atomics.load()` call executes, all non-atomic reads after it must observe the new values (although reads before it also might)
 
 `Atomics.load` and `Atomics.store` essentially create a "synchronization point" between two threads, much like a `message` event. For example:
 
@@ -697,7 +697,7 @@ A [_lock_](<https://en.wikipedia.org/wiki/Lock_(computer_science)>), also called
 
 A mutex is merely a protocol and does not physically prevent another thread from accessing the memory. As long as the protocol is upheld, different threads will never have overlapping critical sections, thus protecting a whole sequence of operations without making each individual read and write atomic.
 
-For example, create a buffer with space for a lock and a value. In our protocol, each participating agent will create an `Int32Array` view where the first element represents the lock (`0` means unlocked, `1` means locked) and the second holds the protected data.
+For example, create a buffer with space for a lock and a value. In our protocol, each participating agent will create an `Int32Array` view where the first element represents the lock (`1` means unlocked, `0` means locked) and the second holds the protected data.
 
 ```js
 const sab = new SharedArrayBuffer(8);
@@ -705,9 +705,9 @@ const sab = new SharedArrayBuffer(8);
 
 Here's how one participating agent may implement that protocol. When an agent calls `lock()` to try to acquire the lock:
 
-- `Atomics.compareExchange()` is called, attempting to set the first element to `1` (locked), but only if it's currently `0` (available).
-- If that fails—i.e., when it's already `1` because another agent is holding the lock—`Atomics.wait()` puts the caller to sleep, provided the lock still contains `1` (the lock may have been released between `compareExchange()` and `wait()`).
-- The agent will only wake up when the agent currently holding the lock calls `unlock()`, which both resets the lock element to `0` and wakes the earliest waiting agent in the queue with `Atomics.notify()`.
+- `Atomics.compareExchange()` is called, attempting to set the first element to `0` (locked), but only if it's currently `1` (available).
+- If that fails—i.e., when it's already `0` because another agent is holding the lock—`Atomics.wait()` puts the caller to sleep, provided the lock still contains `0` (the lock may have been released between `compareExchange()` and `wait()`).
+- The agent will only wake up when the agent currently holding the lock calls `unlock()`, which both resets the lock element to `1` and wakes the earliest waiting agent in the queue with `Atomics.notify()`.
 - After waking, the agent tries to acquire the lock again, but it may still fail if there's a newcomer (for example, if the releasing agent immediately calls `lock()` again) who got the lock first, in which case this agent goes back to sleep again due to the `while()` loop.
 - The loop only exits when lock acquisition succeeds.
 
@@ -715,13 +715,13 @@ Here's how one participating agent may implement that protocol. When an agent ca
 const shared = new Int32Array(sab);
 
 function lock() {
-  while (Atomics.compareExchange(shared, 0, 0, 1) !== 0) {
-    Atomics.wait(shared, 0, 1);
+  while (Atomics.compareExchange(shared, 0, 1, 0) !== 1) {
+    Atomics.wait(shared, 0, 0);
   }
 }
 
 function unlock() {
-  Atomics.store(shared, 0, 0);
+  Atomics.store(shared, 0, 1);
   Atomics.notify(shared, 0, 1);
 }
 ```
@@ -765,13 +765,13 @@ A _spinlock_ uses busy waiting instead of putting contenders to sleep. To turn t
 
 ```js
 function lock() {
-  while (Atomics.compareExchange(shared, 0, 0, 1) !== 0) {
+  while (Atomics.compareExchange(shared, 0, 1, 0) !== 1) {
     Atomics.pause();
   }
 }
 
 function unlock() {
-  Atomics.store(shared, 0, 0);
+  Atomics.store(shared, 0, 1);
 }
 ```
 
@@ -826,9 +826,9 @@ try {
 }
 ```
 
-You might notice that if we set the maximum number of permits to `1`, we arrive at essentially the same code as the mutex example (but with the roles of `0` and `1` flipped, with `1` meaning "available" and `0` meaning "unavailable")—indeed, our simple mutex is just a _binary semaphore_ (at most 1 permit).
+You might notice that if we set the maximum number of permits to `1`, we arrive at essentially the same code as the mutex example—indeed, our simple mutex is just a _binary semaphore_ (at most 1 permit).
 
-A semaphore with multiple permits (called a _counting semaphore_) still runs into problems when the concurrent agents try to access the same resource. The goal of a semaphore is to moderate access to a limited resource pool (for example, if there are only 4 available buffers). You still need a separate mechanism to assign these resources to the agents.
+A semaphore with multiple permits (called a _counting semaphore_) still runs into problems when the concurrent agents try to access the same resource. The goal of a semaphore is to moderate access to a limited resource pool (for example, if there are only 4 available buffers). You still need a separate mechanism to assign these resources to the agents to avoid simultaneous access.
 
 ### Deadlocks
 
