@@ -22,12 +22,12 @@ The [cross-origin sharing standard](https://fetch.spec.whatwg.org/#http-cors-pro
 
 - HTML:
   - Resources fetched by HTML elements with the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute, such as `<img crossorigin="anonymous">`
+  - [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) loaded using `<script type="module">` and their imports, even when the `crossorigin` attribute is omitted
 - CSS:
   - Web Fonts via [`@font-face`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face)
   - [CSS Shapes from images](/en-US/docs/Web/CSS/Guides/Shapes/From_images)
 - JavaScript:
   - Invocations of `fetch()` or `XMLHttpRequest`, as discussed above
-  - [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) loaded using `<script type="module">` and their imports, even when the `crossorigin` attribute is omitted
   - [WebGL textures](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)
   - Images/video frames drawn to a canvas using {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} without [tainting the canvas](/en-US/docs/Web/HTML/How_to/CORS_enabled_image#security_and_tainted_canvases), allowing its pixel data to be read or exported
 
