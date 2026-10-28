@@ -69,7 +69,7 @@ Note that when calling {{domxref("GPUAdapter.requestDevice()")}} to request a {{
 
 ### Storage buffer and texture limits outside compatibility mode
 
-When creating a device, requested `maxStorageBuffersInFragmentStage`, `maxStorageBuffersInVertexStage`, `maxStorageTexturesInFragmentStage`, and `maxStorageTexturesInVertexStage` limits are ignored when [WebGPU compatibility mode](/en-US/docs/Web/API/WebGPU_API#webgpu_compatibility_mode) isn't being used. Instead, they are adjusted to equal the values of the `maxStorageBuffersPerShaderStage` and `maxStorageTexturesPerShaderStage` limits.
+When creating a device, requested `maxStorageBuffersInFragmentStage`, `maxStorageBuffersInVertexStage`, `maxStorageTexturesInFragmentStage`, and `maxStorageTexturesInVertexStage` limits aren't kept as separate values when [WebGPU compatibility mode](/en-US/docs/Web/API/WebGPU_API#webgpu_compatibility_mode) isn't being used. Instead, they raise the `maxStorageBuffersPerShaderStage` and `maxStorageTexturesPerShaderStage` limits if they're higher, and are then adjusted to equal them.
 
 ## Examples
 
