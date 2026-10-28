@@ -81,62 +81,78 @@ This example shows how to use `requestVideoFrameCallback()` to draw the frames o
 
 The technique given in the section Description that helps determine whether your callback is a v-sync late can be used for fine analysis of your application but, en masse, this trick is prone to produce a garbled output when used to compute a frame-per-second parameter on the fly. In the example below we hide the video controls for the first time playback and compute fps on each frame played using the parameters of metadata: fps = ((metadata.presentedFrames - 1) / metadata.mediaTime). Video controls become enabled after the 'ended' event is triggered.
 
-In later playback runs you can pause playback and seek in the timeline to observe the metadata evolution.
+In later playback runs you can pause playback and seek in the timeline to observe the metadata evolution. You can also reconnect the video to another source with the button 'Re-connect'. After re-connect, the fps data list is re-calculated.
 
 ```js
-const button = document.querySelector("button");
-const video = document.querySelector("video");
-const canvas = document.querySelector("canvas");
-const ctx = canvas.getContext("2d");
-const fpsInfo = document.querySelector("#fps-info");
-const metadataInfo = document.querySelector("#metadata-info");
+        const button = document.querySelector("button[type='button']");
+        const video = document.querySelector("video");
+        const canvas = document.querySelector("canvas");
+        const ctx = canvas.getContext("2d");
+        const fpsInfo = document.querySelector("#fps-info");
+        const metadataInfo = document.querySelector("#metadata-info");
 
-let firstRun = true;
-let requestVideoFrameCallbackId = null;
+        let firstRun = true;
+        let requestVideoFrameCallbackId = null;
 
-button.addEventListener("click", () =>
-  video.paused ? video.play() : video.pause(),
-);
+        button.addEventListener("click", () =>
+            video.paused ? video.play() : video.pause(),
+        );
 
-video.addEventListener("play", () => {
-  if (!("requestVideoFrameCallback" in HTMLVideoElement.prototype)) {
-    console.error(
-      "Your browser does not support the `Video.requestVideoFrameCallback()` API.",
-    );
-  };
-  video.requestVideoFrameCallback(updateCanvas);
-});
+        video.addEventListener("play", () => {
+            if (!("requestVideoFrameCallback" in HTMLVideoElement.prototype)) {
+                console.error(
+                    "Your browser does not support the `Video.requestVideoFrameCallback()` API.",
+                );
+            };
+            video.requestVideoFrameCallback(updateCanvas);
+        });
 
-video.addEventListener("ended", () => {
-  video.cancelVideoFrameCallback(requestVideoFrameCallbackId);
-  video.controls = 'true';
-  firstRun = false;
-});
+        video.addEventListener("ended", () => {
+            video.cancelVideoFrameCallback(requestVideoFrameCallbackId);
+            video.controls = true;
+            firstRun = false;
+        });
 
-let width = canvas.width;
-let height = canvas.height;
+        const updateCanvas = (now, metadata) => {
 
-const updateCanvas = (now, metadata) => {
+            canvas.width = metadata.width;
+            canvas.height = metadata.height;
 
-  ctx.drawImage(video, 0, 0, width, height);
+            ctx.drawImage(video, 0, 0, metadata.width, metadata.height);
 
-  if (firstRun) {
-    const fps = ((metadata.presentedFrames - 1) / metadata.mediaTime).toFixed(3);
-    fpsInfo.innerText += "{" + (metadata.presentedFrames - 1) + ", " + metadata.mediaTime + ", " + fps + "}";
-  }
-            
-  metadataInfo.innerText = JSON.stringify(metadata, null, 2);
+            if (firstRun) {
+                const fps = ((metadata.presentedFrames - 1) / metadata.mediaTime).toFixed(3);
+                fpsInfo.innerText += "{" + (metadata.presentedFrames - 1) + ", " + metadata.mediaTime + ", " + fps + "}";
+            }
 
-  if (video.paused || video.ended) {
-    return;
-  }
+            metadataInfo.innerText = JSON.stringify(metadata, null, 2);
 
-  requestVideoFrameCallbackId = video.requestVideoFrameCallback(updateCanvas);
-};
+            if (video.paused || video.ended) {
+                return;
+            }
 
-video.src = "https://mdn.github.io/shared-assets/videos/flower.mp4";
+            requestVideoFrameCallbackId = video.requestVideoFrameCallback(updateCanvas);
+        };
 
-requestVideoFrameCallbackId = video.requestVideoFrameCallback(updateCanvas);
+        video.src = "https://mdn.github.io/shared-assets/videos/flower.mp4";
+
+        requestVideoFrameCallbackId = video.requestVideoFrameCallback(updateCanvas);
+
+        function reconnect(){
+            //video.src = "https://mdn.github.io/shared-assets/videos/sintel-short.mp4";
+            video.src = "https://mdn.github.io/shared-assets/videos/learn/bug_video_640.mp4";
+        }
+        function reconnect(){
+            if (video.src == "https://mdn.github.io/shared-assets/videos/flower.mp4") {
+                video.src = "https://mdn.github.io/shared-assets/videos/learn/bug_video_640.mp4";
+            }
+            else if (video.src == "https://mdn.github.io/shared-assets/videos/learn/bug_video_640.mp4") {
+                video.src = "https://mdn.github.io/shared-assets/videos/flower.mp4";
+            }
+            video.controls = false;
+            firstRun = true;
+            fpsInfo.innerText = "";
+        }
 ```
 
 ```css
@@ -151,22 +167,26 @@ div {
 ```
 
 ```html
-<p>
-  Start <button type="button">⏯</button> playing the video. Pause the video to
-  read the metadata. Drawing video frames on the canvas is synced with the
-  actual video framerate.
-</p>
-<video playsinline></video>
-<canvas width="960" height="540"></canvas>
-<pre id="metadata-info"></pre>
-<p>
-  Only in the first time playback, fps is calculated for each frame played  
-  (fps = metadata.presentedFrames / metadata.mediaTime) and typed in the div 
-  below as {&lt;frame#&gt;, &lt;mediaTime&gt;, &lt;fps&gt;}.
-  Video controls are hidden in the first run and become displayed after the 
-  'ended' event is triggered.
-</p>
-<div id="fps-info"></div>
+    <button onclick="reconnect()">Re-connect</button>
+    <p>
+        Start <button type="button">⏯</button> playing the video. Pause the video to
+        read the metadata. Drawing video frames on the canvas is synced with the
+        actual video framerate.
+    </p>
+    <video playsinline></video>
+    <canvas></canvas>
+    <pre id="metadata-info"></pre>
+    <p>
+        During the first time playback, fps is calculated for each frame played
+        (fps = metadata.presentedFrames / metadata.mediaTime) and typed in the div
+        below with frame# and mediaTime values 
+        {&lt;frame#&gt;, &lt;mediaTime&gt;, &lt;fps&gt;}.
+        Video controls are hidden in the first run and become displayed after the
+        'ended' event is triggered. When video source is reconnected (click
+        'Re-connect', another source is connected), the fps data list is
+        calculated anew.
+    </p>
+    <div id="fps-info"></div>
 ```
 
 {{embedlivesample("drawing_video_frames_on_a_canvas", , "540")}}
