@@ -20,15 +20,13 @@ The `crossorigin` content attribute on media elements is a CORS settings attribu
 These attributes are [enumerated](/en-US/docs/Glossary/Enumerated), and have the following possible values:
 
 - `anonymous`
-  - : Request uses CORS headers and credentials flag is set to `'same-origin'`. There is no exchange of **user credentials** via cookies, client-side TLS certificates or HTTP authentication, unless destination is the same origin.
+  - : Request uses CORS headers ([`mode`](/en-US/docs/Web/API/RequestInit#mode) is set to `cors`) and [credentials flag](/en-US/docs/Web/API/RequestInit#credentials) is set to `'same-origin'`. There is no exchange of **user credentials** via cookies, client-side TLS certificates or HTTP authentication, unless destination is the same origin.
 - `use-credentials`
-  - : Request uses CORS headers, credentials flag is set to `'include'` and **user credentials** are always included.
+  - : Request uses CORS headers ([`mode`](/en-US/docs/Web/API/RequestInit#mode) is set to `cors`), [credentials flag](/en-US/docs/Web/API/RequestInit#credentials) is set to `'include'` and **user credentials** are always included.
 - `""`
-  - : Setting the attribute name to an empty value, like `crossorigin` or `crossorigin=""`, is the same as `anonymous`.
+  - : Setting the attribute name to an empty value, like `crossorigin` or `crossorigin=""`, is the same as `anonymous`. Invalid values are also treated as the empty string.
 
-An invalid keyword and an empty string will be handled as the `anonymous` keyword.
-
-By default (that is, when the attribute is not specified), resources are generally fetched without CORS, except [module scripts](/en-US/docs/Web/HTML/Reference/Elements/script/type#module) which always use CORS (with `same-origin` credentials mode). The user agent will not ask for permission for full access to the resource and in the case of a cross-origin request, certain limitations will be applied based on the type of element concerned:
+By default (that is, when the attribute is not specified), resources are generally fetched without CORS, except [module scripts](/en-US/docs/Web/HTML/Reference/Elements/script/type#module) which always use CORS so only `crossorigin="use-credentials"` has an effect. The user agent will not ask for permission for full access to the resource and in the case of a cross-origin request, certain limitations will be applied based on the type of element concerned:
 
 <table class="no-markdown">
   <tbody>
