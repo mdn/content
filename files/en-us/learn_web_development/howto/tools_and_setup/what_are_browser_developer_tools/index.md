@@ -5,10 +5,10 @@ page-type: learn-faq
 sidebar: learn-how-to
 ---
 
-Every modern web browser includes a powerful suite of developer tools (devtools). These tools do a range of things, from inspecting currently-loaded HTML, CSS, and JavaScript to showing which assets the page has requested and how long they took to load. This article explains what devtools are, and how to use the basic functions of your browser's devtools.
+Every modern web browser includes a powerful suite of developer tools (devtools). These tools do a range of things, from inspecting currently loaded HTML, CSS, and JavaScript to showing which assets the page has requested and how long they took to load. This article explains what devtools are and how to use their basic functions.
 
 > [!NOTE]
-> Before you run through the examples below, open the [Beginner's example site](https://mdn.github.io/beginner-html-site-scripted/) that we built during the [Getting started with the Web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) article series. You should have this open as you follow the steps below.
+> Before you run through the examples below, open the [Beginner's example site](https://mdn.github.io/beginner-html-site-scripted/) that we built during the [Getting started with the Web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) article series. Open this before following the steps below.
 
 ## What are devtools?
 
@@ -16,7 +16,7 @@ Your browser's devtools show you the current state of the code rendered in your 
 
 The devtools' functionality goes beyond viewing code, however — you can edit HTML and CSS to see how the UI is changed, run JavaScript against the live page to see the result, debug JavaScript (including viewing error messages), inspect network requests, emulate different viewport sizes, view accessibility information, and much more.
 
-This article provides basic information on the most commonly-used devtools functionality. For more information, consult the browser's dedicated resources:
+This article provides basic information on the most commonly used devtools functionality. For more information, consult the browser's dedicated resources:
 
 - [Firefox DevTools User Docs](https://firefox-source-docs.mozilla.org/devtools-user/)
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools) (Opera and Edge's inspector is the same)
@@ -24,7 +24,7 @@ This article provides basic information on the most commonly-used devtools funct
 
 ## How to open the devtools in your browser
 
-The devtools live inside your browser in a subwindow that looks the following. It will differ depending on what browser you are using:
+The devtools live inside your browser in a subwindow that looks like the following. It will differ depending on what browser you are using:
 
 ![Screenshot of a browser with developer tools open. The web page is displayed in the top half of the browser, the developer tools occupy the bottom half. There are three panels open in the developer tools: HTML, with the body element selected, a CSS panel showing styles blocks targeting the highlighted body, and a computed styles panel showing all the author styles; the browser styles checkbox is not checked.](devtools_63_inspector.png)
 
@@ -44,9 +44,9 @@ You can access the devtools in three main ways:
     > The Safari developer tools are not enabled by default.
     > To enable them, go to _Safari ➤ Settings ➤ Advanced_, and check the _Show features for web developers_ checkbox.
 
-- **_Context menu:_** right-click an item on a webpage (Ctrl-click on the Mac), and choose _Inspect Element_/_Inspect_ from the context menu that appears. (_An added bonus:_ this method immediately highlights the code of the element you choose to inspect.)
+- **_Context menu:_** right-click an item on a webpage (Ctrl-click on the Mac), and choose _Inspect Element_/_Inspect_ from the context menu that appears. (_A bonus:_ this method immediately highlights the code of the element you choose to inspect.)
 
-![The firefox logo as a DOM element in an example website with a context menu showing. A context menu appears when any item on the web page is right-clicked. The last menu items is 'Inspect element'.](inspector_context.png)
+![The Firefox logo as a DOM element in an example website with a context menu showing. A context menu appears when any item on the web page is right-clicked. The last menu items is 'Inspect element'.](inspector_context.png)
 
 ## The Inspector: DOM explorer and CSS editor
 
@@ -89,7 +89,7 @@ Note the following features:
 - Click the checkboxes next to each declaration to see what would happen if you removed the declaration.
 - Click the little arrow next to each shorthand property to show the property's longhand equivalents.
 - Click a property name or value to bring up a text box, where you can key in a new value to get a live preview of a style change.
-- Next to each rule is the file name and line number the rule is defined in. Clicking that rule causes the dev tools to show it in its own view, where it can generally be edited and saved.
+- Next to each rule is the file name and line number the rule is defined in. Clicking that rule causes the devtools to show it in its own view, where it can generally be edited and saved.
 - Click the closing curly brace of any rule to bring up a new line where you can add a new declaration to the rule, which will be applied to the page.
 
 You'll notice several other clickable tabs in the CSS editor, such as:
@@ -98,7 +98,7 @@ You'll notice several other clickable tabs in the CSS editor, such as:
 - _Layout_: This shows the details of layout modes such as CSS [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) and [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) applied to the inspected element, if any.
 - _Fonts_: In Firefox and Safari, the _Fonts_ tab shows the fonts applied to the current element.
 
-The _box model_ view visually represents the current element's box model, so you can see at a glance what padding, border and margin is applied to it, and how big its content is. In Firefox, this is located in the _Layout_ tab; in other browsers, it is in the _Computed_ tab.
+The _box model_ view visually represents the current element's box model, so you can see at a glance what padding, border, and margin are applied to it, and how big its content is. In Firefox, this is located in the _Layout_ tab; in other browsers, it is in the _Computed_ tab.
 
 In some browsers, the JavaScript details of the selected element can also be viewed in this panel. In Safari, these are unified under the _Node_ tab; they are in separate tabs in Chrome, Opera, and Edge.
 
@@ -109,15 +109,15 @@ In some browsers, the JavaScript details of the selected element can also be vie
 
 Find out more about the Inspector in different browsers:
 
-- [Firefox Page inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
+- [Firefox Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
 - [Chrome DOM inspector](https://developer.chrome.com/docs/devtools/dom/) (Opera and Edge's inspector is the same)
 - [Safari Elements tab](https://webkit.org/web-inspector/elements-tab/)
 
 ## The JavaScript debugger
 
-The JavaScript debugger allows you to watch the value of variables and set breakpoints: places in your code where you want to pause execution and identify any problems preventing your code from executing properly.
+The JavaScript debugger allows you to watch variable values and set breakpoints: places in your code where you want to pause execution and identify any problems preventing your code from executing properly.
 
-![A test website that is served locally in port 8080. The developer tools sub-window is open. The JavaScript debugger tab is selected. It allows you to watch the value of variables and set breakpoints. A file with name 'example.js' is selected from the sources pane. A breakpoint is set at line number 18 of the file.](firefox_debugger.png)
+![A test website that is served locally on port 8080. The developer tools sub-window is open. The JavaScript debugger tab is selected. It allows you to watch the value of variables and set breakpoints. A file named 'example.js' is selected from the Sources pane. A breakpoint is set at line number 18 of the file.](firefox_debugger.png)
 
 To get to the debugger:
 
@@ -136,7 +136,7 @@ The first pane on the left contains the list of files associated with the page y
 
 #### Source code
 
-Set breakpoints where you want to pause execution. In the following image, the highlight on the number 18 shows that the line has a breakpoint set.
+Set breakpoints where you want to pause execution. In the following image, the highlight on line 18 shows that it has a breakpoint set.
 
 ![Snippet of developer tools debugger panel with the breakpoint at line 18 highlighted.](source_code.png)
 
@@ -144,12 +144,12 @@ Set breakpoints where you want to pause execution. In the following image, the h
 
 The right-hand pane shows a list of the watch expressions you have added and breakpoints you have set.
 
-![Snippet of the sources pane of the debugger tab of the browser developer tools. In the call stack it shows the function that is called at Line 18, highlighting that a breakpoint is set at this line and showing the scope.](watch_items.png)
+![Snippet of the sources pane of the debugger tab of the browser developer tools. The call stack shows the function called at Line 18, highlighting that a breakpoint is set there and showing the scope.](watch_items.png)
 
-- The first section, **Watch expressions**, shows that the `listItems` variable has been added. You can expand the list to view the values in the array.
+- The first section, **Watch expressions**, shows that the `listItems` variable has been added. You can expand the list to view the array values.
 - The next section, **Breakpoints**, lists the breakpoints set on the page. In example.js, a breakpoint has been set on the statement `listItems.push(inputNewItem.value);`.
 - The final two sections only appear when the code is running.
-  - The **Call stack** section shows you what code was executed to get to the current line. You can see that the code is in the function that handles a mouse click, and that the code is currently paused on the breakpoint.
+  - The **Call stack** section shows you what code was executed to get to the current line. You can see that the code is in the function that handles a mouse click and that it is currently paused at the breakpoint.
   - The final section, **Scopes**, shows what values are visible from various points within your code. For example, in the image below, you can see the objects available to the code in the addItemClick function.
 
 ### Find out more
@@ -158,10 +158,11 @@ Find out more about the JavaScript debugger in different browsers:
 
 - [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
 - [Chrome Debug JavaScript](https://developer.chrome.com/docs/devtools/javascript/) (Opera and Edge's debugger is the same)
+- [Safari Sources tab](https://webkit.org/web-inspector/sources-tab/)
 
 ## The JavaScript console
 
-The JavaScript console allows you to run lines of JavaScript against the page currently loaded in the browser, and reports the errors encountered as the browser tries to execute your code.
+The JavaScript console allows you to run lines of JavaScript against the page currently loaded in the browser and reports errors encountered as the browser tries to execute your code.
 
 To access the console in any browser, open the developer tools and select the **Console** tab. This will give you a window like the following:
 
@@ -213,6 +214,7 @@ Find out more about the JavaScript console in different browsers:
 
 - [Firefox Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
 - [Chrome Console](https://developer.chrome.com/docs/devtools/console/) (Opera and Edge's console is the same)
+- [Safari Console Object API](https://webkit.org/web-inspector/console-object-api/) and [Console Command Line API](https://webkit.org/web-inspector/console-command-line-api/)
 
 ## The Network inspector
 
@@ -222,9 +224,9 @@ To access it, open the developer tools and select the **Network** tab. This will
 
 ![The Network tab of the browser developer tools, showing several network requests with a variety of status codes.](network_inspector.png)
 
-There's a lot of information available here, but at a basic level, it is useful for seeing what files your site is requesting, and whether they are being loaded successfully.
+There's a lot of information available here, but at a basic level, it is useful for seeing what files your site is requesting and whether they are being loaded successfully.
 
-As an example, if you see a {{httpstatus("200")}} status code, a resource has been delivered successfully, but if the code shows as {{httpstatus("404")}}, it means the resource couldn't be found and you might have an incorrect file path or filename to fix, or maybe you forgot to upload it to the server.
+As an example, if you see a {{httpstatus("200")}} status code, a resource has been delivered successfully, but if the code shows as {{httpstatus("404")}}, it means the resource couldn't be found, and you might have an incorrect file path or filename to fix, or maybe you forgot to upload it to the server.
 
 ### HTTP statuses
 
@@ -237,20 +239,21 @@ Servers respond with a status message whenever they receive a request. Here are 
 - **304: Not modified**
   - : The file has not changed since the last time you asked for it, so your browser can display the version from its cache, resulting in faster response times and more efficient use of bandwidth.
 - **403: Forbidden**
-  - : You aren't allowed to display the resource. Usually it has to do with a configuration mistake (e.g., your hosting provider forgot to give you access rights to a directory).
+  - : You aren't allowed to display the resource. Usually this indicates a configuration mistake (e.g., your hosting provider forgot to give you access rights to a directory).
 - **404: Not found**
   - : Self-explanatory. We'll discuss how to solve this below.
 - **500: Internal server error**
-  - : Something went wrong on the server. For instance, maybe the server-side language ({{Glossary("PHP")}}, .Net, etc.) stopped working, or the web server itself has a configuration problem. Usually it's best to resort to your hosting provider's support team.
+  - : Something went wrong on the server. For instance, the server-side language ({{Glossary("PHP")}}, .Net, etc.) stopped working, or the web server itself has a configuration problem. Report such problems to your hosting provider's support team.
 - **503: Service unavailable**
-  - : Usually resulting from a short-term system overload. The server has some sort of problem. Try again in a little while.
+  - : Usually resulting from a short-term server overload. Try again in a little while.
 
 ### Find out more
 
-Find out more about the Network inspector in different browsers:
+Find out more about the Network Inspector in different browsers:
 
 - [Firefox Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
 - [Chrome Network panel](https://developer.chrome.com/docs/devtools/network/overview) (Opera and Edge's console is the same)
+- [Safari Network Tab](https://webkit.org/web-inspector/network-tab/)
 
 ## See also
 
