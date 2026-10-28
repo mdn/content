@@ -10,7 +10,7 @@ sidebar: http
 The HTTP **`Origin-Agent-Cluster`** {{Glossary("response header")}} is used to request that the associated {{domxref("Document")}} should be placed in an origin-keyed or site-keyed [agent cluster](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing).
 This determines whether operating system resources (such as operating system processes or threads) used to evaluate the document should be isolated to only other documents from the same {{glossary("origin")}}, or shared with same-site, cross-origin documents.
 
-In modern browsers adhering to the latest HTML specification, agent clusters are **origin-keyed by default**. The `Origin-Agent-Cluster` header is primarily used with `?0` to opt out of origin-keying, or explicitly with `?1` to request origin-keying.
+Agent clusters are **origin-keyed by default**. The `Origin-Agent-Cluster` header is primarily used with `?0` to opt out of origin-keying, or explicitly with `?1` to request origin-keying.
 
 <table class="properties">
   <tbody>
@@ -32,7 +32,7 @@ Origin-Agent-Cluster: <boolean>
 - `<boolean>`
   - : A structured boolean value indicating the requested agent cluster scoping:
     - `?1`
-      - : Requests that the associated {{domxref("Document")}} should be placed in an origin-keyed agent cluster. In modern browsers adhering to the latest HTML specification, this is the default behavior.
+      - : Requests that the associated {{domxref("Document")}} should be placed in an origin-keyed agent cluster (the default behavior).
     - `?0`
       - : Requests an opt-out from origin-keying, relaxing the document's execution environment to a site-keyed agent cluster. This re-enables cross-origin same-site communication, such as setting {{domxref("Document.domain")}} and sharing [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) or {{jsxref("SharedArrayBuffer")}} objects across same-site pages.
 
@@ -47,7 +47,7 @@ https://apples.example.org
 https://oranges.example.org
 ```
 
-Under the current HTML specification, browsers place documents in origin-keyed agent clusters by default. This isolates same-site cross-origin documents from each other and prevents:
+Browsers place documents in origin-keyed agent clusters by default. This isolates same-site cross-origin documents from each other and prevents:
 
 - Using the {{domxref("Document.domain")}} setter.
 - Sending [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) objects to other same-site cross-origin pages using {{domxref("Window.postMessage()", "postMessage()")}}.

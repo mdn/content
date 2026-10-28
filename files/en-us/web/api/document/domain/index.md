@@ -132,7 +132,7 @@ Additionally, as part of its deprecation, setting `document.domain` is ignored o
 - If used on a cross-origin isolated page, i.e., one that uses the appropriate values
   for the {{httpheader("Cross-Origin-Opener-Policy")}} and
   {{httpheader("Cross-Origin-Embedder-Policy")}} HTTP headers
-- In modern browsers adhering to the latest HTML specification where documents are placed in origin-keyed agent clusters by default. In these environments, setting `document.domain` is ignored unless the document explicitly opts out of origin isolation by delivering the {{httpheader("Origin-Agent-Cluster")}} header with `?0` (e.g., `Origin-Agent-Cluster: ?0`).
+- If used on a document in an origin-keyed agent cluster (which is the default). In these environments, setting `document.domain` is ignored unless the document explicitly opts out of origin isolation by delivering the {{httpheader("Origin-Agent-Cluster")}} header with `?0` (e.g., `Origin-Agent-Cluster: ?0`).
 
 Finally, setting `document.domain` does not change the origin used for
 origin-checks by some Web APIs, preventing sub-domain access via this mechanism.
