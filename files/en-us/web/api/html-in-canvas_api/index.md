@@ -15,7 +15,7 @@ Drawing UI features inside a {{htmlelement("canvas")}} element is a common path 
 
 HTML-in-Canvas provides a solution, allowing DOM subtrees to be drawn into a canvas context. The content's state is retained in the background, meaning that it remains accessible, while its visual rendering can be manipulated using your chosen canvas API ([2D Canvas API](/en-US/docs/Web/API/Canvas_API), [WebGL](/en-US/docs/Web/API/WebGL_API), or [WebGPU](/en-US/docs/Web/API/WebGPU_API)) in whatever way you like.
 
-To prepare DOM content to be rendered in a canvas, you first need to place it between your `<canvas>` tags. You then opt your `<canvas>` into rendering its descendants rather than treating them as fallback content by setting its [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) atribute to `drawable`. Finally, each DOM subtree that you want to render on the canvas independantly is given a [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) attribute.
+To prepare DOM content to be rendered in a canvas, you first need to place it between your `<canvas>` tags. You then opt your `<canvas>` into rendering its descendants rather than treating them as fallback content by setting its [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute to `drawable`. Finally, each DOM subtree that you want to render on the canvas independently is given a [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) attribute.
 
 ```html
 <canvas width="640" height="480" content="drawable">
@@ -108,7 +108,7 @@ For more information, read our guides, starting with [Using the HTML-in-Canvas A
 - `<canvas>` [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute
   - : Enables opting a `<canvas>` element into rendering its descendants rather than treating them as fallback content.
 - Global [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) attribute
-  - : Marks an element as a **paint root**, meaning that it (along with its descendants) can be rendered independantly on a parent `<canvas content="drawable">` element.
+  - : Marks an element as a **paint root**, meaning that it (along with its descendants) can be rendered independently on a parent `<canvas content="drawable">` element.
 
 ## Examples
 

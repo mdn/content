@@ -15,7 +15,10 @@ Support for WebGL is present in all modern browsers (see the [compatibility tabl
 
 The [WebGL 2](#webgl_2) API introduces support for much of the OpenGL ES 3.0 feature set; it's provided through the {{domxref("WebGL2RenderingContext")}} interface.
 
-The {{HTMLElement("canvas")}} element is also used by the [Canvas API](/en-US/docs/Web/API/Canvas_API) to do 2D graphics on web pages.
+Other APIs that also use the `<canvas>` element to render graphics:
+
+- [Canvas](/en-US/docs/Web/API/Canvas_API): Renders interactive 2D graphics.
+- [WebGPU](/en-US/docs/Web/API/WebGPU_API): The successor to WebGL, which can render high-performance interactive 3D and 2D graphics and also do pure computation. It provides better compatibility with modern GPUs, faster operations, and access to more advanced GPU features.
 
 ## Reference
 
@@ -185,4 +188,6 @@ Firefox provides two preferences available which let you control the capabilitie
 ## See also
 
 - [Canvas API](/en-US/docs/Web/API/Canvas_API)
+- [WebGPU API](/en-US/docs/Web/API/WebGPU_API)
+- [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API)
 - [Compatibility info about WebGL extensions](/en-US/docs/Web/API/WebGLRenderingContext/getSupportedExtensions#browser_compatibility)
