@@ -56,7 +56,6 @@ sidebar: mdnsidebar
 >
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 > - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
 >
 > You should update or delete the following macros according to the advice below:
@@ -88,7 +87,7 @@ sidebar: mdnsidebar
 >
 > _Remember to remove this whole explanatory note before publishing._
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 Begin the content on the page with an introductory paragraph — start by naming the event, saying what interface it is part of, and saying what it does.
 This should ideally be one or two short sentences.
@@ -96,11 +95,15 @@ You could copy most of this from the property's summary on the corresponding API
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("NameOfTheEvent", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onNameOfTheEvent = (event) => { }
 ```
 
@@ -138,6 +141,8 @@ Note that we use the plural "Examples" even if the page only contains one exampl
 Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
+
+If you want to demonstrate both `addEventListener` and `onEvent`, avoid claiming or implying that the two examples are equivalent. Ideally, always explicitly add a parenthetical saying "but note that this replaces other event listeners added using `onEvent`, if any".
 
 > [!NOTE]
 > Sometimes you will want to link to examples given on another page.

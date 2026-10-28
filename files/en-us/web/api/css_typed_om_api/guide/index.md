@@ -33,7 +33,7 @@ We start with some HTML: a paragraph with a link, as well as a definition list t
 
 #### JavaScript
 
-We add JavaScript to grab our unstyled link and return back a definition list of all the default CSS property values impacting the link using `computedStyleMap()`.
+We add JavaScript to grab our unstyled link and return a definition list of all the default CSS property values impacting the link using `computedStyleMap()`.
 
 ```js
 // Get the element
@@ -138,9 +138,9 @@ Let's write a plain paragraph, apply no styles, and inspect a few of its CSS pro
 
 ```html
 <p>
-  This is a paragraph with some content. Open up this example in CodePen or
-  JSFiddle, and change some features. Try adding some CSS, such as a width for
-  this paragraph, or adding a CSS property to the ofInterest array.
+  This is a paragraph with some content. Open up this example in the playground,
+  and change some features. Try adding some CSS, such as a width for this
+  paragraph, or adding a CSS property to the ofInterest array.
 </p>
 <table id="regurgitation">
   <thead>
@@ -171,7 +171,7 @@ const ofInterest = [
   "margin-bottom",
   "font-size",
   "font-stretch",
-  "animation-duration",
+  "transition-duration",
   "animation-iteration-count",
   "width",
   "height",
@@ -217,8 +217,8 @@ For those of you using a non-supporting browser, the above output should look so
 | {{cssxref("padding-top")}}               | 0     | `px`        |
 | {{cssxref("margin-bottom")}}             | 16    | `px`        |
 | {{cssxref("font-size")}}                 | 16    | `px`        |
-| {{cssxref("font-stretch")}}              | 100   | `%`         |
-| {{cssxref("animation-duration")}}        | 0     | `px`        |
+| {{cssxref("font-stretch")}}              | 100   | `percent`   |
+| {{cssxref("transition-duration")}}       | 0     | `s`         |
 | {{cssxref("animation-iteration-count")}} | 1     | _number_    |
 | {{cssxref("width")}}                     | auto  | _undefined_ |
 | {{cssxref("height")}}                    | auto  | _undefined_ |

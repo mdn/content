@@ -7,7 +7,7 @@ browser-compat: webassembly.instructions.clz
 sidebar: webassemblysidebar
 ---
 
-The **`clz`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric)s, short for _count leading zeros_, are used to count the amount of zeros at the start of the numbers binary representation.
+The **`clz`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric)s, short for _count leading zeros_, are used to count the number of zeros at the start of the numbers binary representation.
 
 {{InteractiveExample("Wat Demo: clz", "tabbed-taller")}}
 

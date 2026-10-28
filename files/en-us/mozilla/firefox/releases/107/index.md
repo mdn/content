@@ -44,7 +44,7 @@ No notable changes
 
 - Added Realm support to `target` argument for `script.evaluate`, `script.callFunction`, and `script.disown` commands ([Firefox bug 1779231](https://bugzil.la/1779231)).
 
-- Added support for JSON serialization of complex objects with container value fields, eg. `WeakMap` and `Uint8Array` ([Firefox bug 1770754](https://bugzil.la/1770754)).
+- Added support for JSON serialization of complex objects with container value fields, e.g., `WeakMap` and `Uint8Array` ([Firefox bug 1770754](https://bugzil.la/1770754)).
 
 - Added support for the `context` parameter of the `browsingContext.create` command, which allows opening a new tab related to an existing one ([Firefox bug 1765619](https://bugzil.la/1765619)).
 

@@ -15,7 +15,7 @@ The **`BigInt.asIntN()`** static method truncates a `BigInt` value to the given 
 const I64_CEIL = 2n ** 63n;
 
 console.log(BigInt.asIntN(64, I64_CEIL - 1n));
-// 9223372036854775807n (2n ** 64n - 1n, the maximum non-wrapping value)
+// 9223372036854775807n (2n ** 63n - 1n, the maximum non-wrapping value)
 console.log(BigInt.asIntN(64, I64_CEIL));
 // -9223372036854775808n (wraps to min value)
 console.log(BigInt.asIntN(64, I64_CEIL + 1n));
@@ -35,7 +35,7 @@ BigInt.asIntN(bits, bigint)
 ### Parameters
 
 - `bits`
-  - : The amount of bits available for the returned BigInt. Should be an integer between 0 and 2<sup>53</sup> - 1, inclusive.
+  - : The number of bits available for the returned BigInt. Should be an integer between 0 and 2<sup>53</sup> - 1, inclusive.
 - `bigint`
   - : The BigInt value to truncate to fit into the supplied bits.
 

@@ -218,7 +218,7 @@ Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature
 - {{jsxref("Promise.resolve()")}}
   - : Returns a `Promise` object that is resolved with the given value. If the value is a thenable (i.e., has a `then` method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise, the returned promise will be fulfilled with the value.
 - {{jsxref("Promise.try()")}}
-  - : Takes a callback of any kind (returns or throws, synchronously or asynchronously) and wraps its result in a `Promise`.
+  - : Takes a callback of any kind (returns or throws, synchronously or asynchronously) and resolves its result to a `Promise`.
 - {{jsxref("Promise.withResolvers()")}}
   - : Returns an object containing a new `Promise` object and two functions to resolve or reject it, corresponding to the two parameters passed to the executor of the {{jsxref("Promise/Promise", "Promise()")}} constructor.
 
@@ -540,7 +540,7 @@ In the above example, the inner text of the `<iframe>` will be updated only if t
 
 ## See also
 
-- [Polyfill of `Promise` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [Polyfill of `Promise` in `core-js`](https://core-js.io/docs/features/ecmascript/promise)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
 - [Promises/A+ specification](https://promisesaplus.com/)
 - [JavaScript Promises: an introduction](https://web.dev/articles/promises) on web.dev (2013)

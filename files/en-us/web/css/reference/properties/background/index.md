@@ -62,6 +62,12 @@ This property is a shorthand for the following CSS properties:
 - {{cssxref("background-repeat")}}
 - {{cssxref("background-size")}}
 
+### Reset-only sub-properties
+
+This property resets the following CSS properties to their initial values:
+
+- {{cssxref("background-blend-mode")}}
+
 ## Syntax
 
 ```css
@@ -179,7 +185,6 @@ Browsers do not provide any special information on background images to assistiv
   Starry sky
 </p>
 <p class="warning">Here is a paragraph</p>
-<p></p>
 ```
 
 #### CSS

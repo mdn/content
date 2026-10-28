@@ -14,11 +14,10 @@ sidebar: htmlsidebar
 ```html interactive-example
 <form>
   <div class="controls">
-    <label for="id">User ID:</label>
-    <input type="text" id="id" name="id" />
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments"></textarea>
 
     <input type="reset" value="Reset" />
-    <input type="submit" value="Submit" />
   </div>
 </form>
 ```
@@ -27,7 +26,7 @@ sidebar: htmlsidebar
 .controls {
   padding-top: 1rem;
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
   grid-template-columns: 1fr 2fr;
   gap: 0.7rem;
 }
@@ -37,8 +36,7 @@ label {
   justify-self: end;
 }
 
-input[type="reset"],
-input[type="submit"] {
+input[type="reset"] {
   width: 5rem;
   justify-self: end;
 }
@@ -47,15 +45,7 @@ input[type="reset"] {
   grid-column: 2;
   grid-row: 2;
 }
-
-input[type="submit"] {
-  grid-column: 2;
-  grid-row: 3;
-}
 ```
-
-> [!NOTE]
-> You should usually avoid including reset buttons in your forms. They're rarely useful, and are instead more likely to frustrate users who click them by mistake (often while trying to click the [submit button](/en-US/docs/Web/HTML/Reference/Elements/input/submit)).
 
 ## Value
 
@@ -83,6 +73,8 @@ If you don't specify a `value`, you get a button with the default label (typical
 
 `<input type="reset">` buttons are used to reset forms. If you want to create a custom button and then customize the behavior using JavaScript, you need to use [`<input type="button">`](/en-US/docs/Web/HTML/Reference/Elements/input/button), or better still, a {{htmlelement("button")}} element.
 
+You should usually avoid including reset buttons in your forms. They're rarely useful, and are instead more likely to frustrate users who click them by mistake (often while trying to click the [submit button](/en-US/docs/Web/HTML/Reference/Elements/input/submit)).
+
 ### A basic reset button
 
 We'll begin by creating a basic reset button:
@@ -91,7 +83,7 @@ We'll begin by creating a basic reset button:
 <form>
   <div>
     <label for="example">Type in some sample text</label>
-    <input id="example" type="text" />
+    <textarea id="example"></textarea>
   </div>
   <div>
     <input type="reset" value="Reset the form" />
@@ -115,7 +107,7 @@ In this example, <kbd>r</kbd> is specified as the access key (you'll need to pre
 <form>
   <div>
     <label for="example">Type in some sample text</label>
-    <input id="example" type="text" />
+    <textarea id="example"></textarea>
   </div>
   <div>
     <input type="reset" value="Reset the form" accesskey="r" />

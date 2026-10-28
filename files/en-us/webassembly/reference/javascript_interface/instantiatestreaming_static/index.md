@@ -55,8 +55,8 @@ fields:
 
 ### Exceptions
 
-- If either of the parameters are not of the correct type or structure, a
-  {{jsxref("TypeError")}} is thrown.
+- If any of the parameters are not of the correct type or structure, the promise rejects with a {{jsxref("TypeError")}}.
+- If the response has an incorrect MIME type (instead of `application/wasm`), the promise rejects with a {{jsxref("TypeError")}}.
 - If the operation fails, the promise rejects with a
   [`WebAssembly.CompileError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/CompileError), [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/LinkError), or
   [`WebAssembly.RuntimeError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError), depending on the cause of the failure.

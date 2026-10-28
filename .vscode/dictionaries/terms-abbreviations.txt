@@ -1,5 +1,4 @@
 AABB
-ABNF
 abspos
 accname
 achromatopsia
@@ -14,11 +13,8 @@ alphanumerals
 ambisonic
 amore
 analyzability
-animateable-feature
 ANMF
 anonymization
-antialiasing
-antitracking
 APNG
 appcontent
 arcosh
@@ -30,7 +26,6 @@ ASACP
 ASCAP
 ascendingly
 ASCIIID
-ASGI
 asynchrony
 ATAG
 atlasing
@@ -43,7 +38,6 @@ autodetection
 autofilled
 autofilling
 autofills
-autofocusing
 autogrow
 autogrowing
 autohide
@@ -52,7 +46,6 @@ automaticity
 autoplace
 autoplaying
 autoplays
-AVPF
 AZERTY
 backbuffer
 backpressures
@@ -87,7 +80,6 @@ bluify
 BMFF
 bootup
 botmaster
-BPPmaxKb
 BPTC
 browserless
 BSAC
@@ -107,7 +99,6 @@ cheatsheet
 checkboard
 checkedness
 checkmarks
-cheesemakers
 childlist
 chipsets
 choosable
@@ -141,16 +132,12 @@ containerless
 convolutional
 cookieless
 coprime
-CORB
-credentialled
 credentialless
 cryptids
 cryptosystem
 cryptosystems
 CSSWG
 CSWH
-cubemap
-cubemaps
 CWND
 Dangit
 DARPA
@@ -160,7 +147,6 @@ datalists
 datestamped
 DBFS
 DCDM
-DCSP
 debiased
 decodability
 Deinonychus
@@ -186,23 +172,17 @@ DLRR
 DLSR
 DMARC
 docshell
-docshells
 doctypes
 doorhanger
 dotless
-downsampled
-downsampling
 DPIA
 dragonfish
-DSCP
-DTLSL
 dyscalculia
 EBNF
 ECSDA
 editability
 effectful
 elytra
-Emscripting
 encrypter
 engageable
 EOTF
@@ -214,7 +194,6 @@ ETSI
 exfiltrates
 exfiltrating
 EXIF
-expando
 EXSL
 EXSLT
 extractability
@@ -231,11 +210,8 @@ fangled
 fastload
 favoriting
 fieldsets
-findability
 findbar
-Finito
 Firefoxen
-FLAC
 fleurons
 flexboxes
 FOAF
@@ -244,6 +220,7 @@ fontface
 fontfaces
 footguns
 forgeable
+formants
 FOUC
 Fourway
 FOUT
@@ -259,6 +236,7 @@ fuhao
 Fullband
 fullscreened
 fullwidth
+futex
 futexes
 Gamedev
 Gamedevs
@@ -297,6 +275,7 @@ HILN
 hindwings
 hissy
 hitbox
+hitboxes
 hitmap
 HOBA
 holodeck
@@ -314,7 +293,6 @@ HTCPCP
 HVXC
 IACVT
 ICANN
-ICNS
 iconset
 idents
 IDOR
@@ -365,7 +343,6 @@ keyterms
 kibibytes
 Kickstarter
 Kona
-labelable
 laggy
 lazify
 leetspeak
@@ -373,7 +350,6 @@ letterboxed
 letterboxing
 letterform
 letterforms
-letterheaded
 lifecycles
 lightshow
 linecaps
@@ -394,7 +370,6 @@ LPCM
 LSTM
 luma
 LVHA
-macaron
 macarons
 macroblock
 macroblocks
@@ -418,7 +393,6 @@ microsyntaxes
 middlebox
 minifiers
 mirrorable
-misissuance
 misissued
 misparsed
 MJPEG
@@ -426,13 +400,11 @@ MMORPG
 modeless
 modelessly
 Mojibake
-monkeypatch
 monoscopic
 Mozillians
 MSAA
 MSISDN
 multicore
-multifactor
 multihomed
 multimessaging
 multipage
@@ -524,6 +496,7 @@ platformer
 platformers
 playhead
 playout
+playthrough
 PLTE
 plumeria
 polyfilling
@@ -531,7 +504,6 @@ polymarker
 polymarkers
 pomaceous
 popout
-postback
 posterization
 posterizing
 powerups
@@ -551,8 +523,6 @@ preflights
 preloaders
 premultiplication
 preorder
-prepopulate
-prepopulating
 prerendered
 prerenders
 preresolved
@@ -581,11 +551,11 @@ quickmenu
 qvalues
 QWERTZ
 RAII
+rainforests
 rari
 rasterizes
 raycaster
 RDBMS
-RDBMSes
 readback
 rearrangeable
 reauthenticated
@@ -623,6 +593,7 @@ RFCOMM
 RGTC
 romcoms
 roundoff
+RSAES-OAEP
 RSAOAEP
 RSASSA
 RTCWEB
@@ -635,7 +606,6 @@ run-throughs
 résumé
 safelisted
 Saltasaurus
-sandboxing
 SAOC
 scanability
 scancode
@@ -666,7 +636,6 @@ shortlinks
 showable
 shrinkwrapping
 SHTTP
-side-scrollers
 sideload
 sideloaded
 SIDX
@@ -676,7 +645,6 @@ singlecast
 singlecasts
 Sino
 SISD
-SISR
 sitelinks
 sitewide
 skipnav
@@ -706,9 +674,7 @@ spinlocks
 spoofable
 spritesheet
 spritesheets
-squircle
 SSML
-ssthresh
 STIX
 strawman
 streamable
@@ -727,8 +693,6 @@ subarticles
 subcarrier
 subclassing
 subcollections
-subcomponent
-subcomponents
 subexpression
 subfeature
 subformula
@@ -752,8 +716,6 @@ subpanels
 subpattern
 subpatterns
 subpopover
-subproject
-subprojects
 subproperty
 subrectangle
 subrectangles
@@ -819,7 +781,6 @@ timecode
 timecodes
 timeslice
 timeslices
-timestep
 tinyfill
 TIPC
 toggletips
@@ -829,19 +790,15 @@ TOTP
 touchpads
 touchpoint
 touchpoints
-Trac
 trackpad
 trackpads
 trailhead
 transactionally
 transcender
-transpiles
 transvection
 TRBL
 treegrids
 treeitems
-triager
-triagers
 triaging
 tripler
 trippy
@@ -857,9 +814,7 @@ UMTS
 unblinded
 unblinds
 unbookmark
-unbundling
 uncacheable
-uncategorized
 unclickable
 unclipped
 uncollapse
@@ -875,7 +830,6 @@ underlyingly
 underover
 underscript
 underscripts
-undescribed
 unergonomic
 unergonomically
 unfiled
@@ -904,7 +858,6 @@ unprefixing
 unprioritized
 unpunctuated
 unreadably
-unregisters
 unregistration
 unretrievable
 unrotated
@@ -913,8 +866,6 @@ unscopable
 unsemantic
 unsets
 unsponsored
-unstylable
-unstyling
 unsupporting
 unsyntactic
 untaint
@@ -925,7 +876,6 @@ unzoomed
 uppercasing
 userbase
 Uyghur
-VDOM
 Velociraptor
 versor
 Videobridge
@@ -955,7 +905,6 @@ websafe
 WECG
 well-formedness
 WGSL
-WHATWG
 whitepoint
 whizzy
 WHOIS
@@ -967,7 +916,6 @@ wordmark
 wordmarks
 workgroups
 worklets
-workstreams
 writability
 writemasks
 WSGI
@@ -977,7 +925,6 @@ Xrays
 XRCPU
 xsleaks
 XSSI
-yari
 yearless
 Zalgo
 zoomable

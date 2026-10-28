@@ -58,7 +58,7 @@ When we talk about third-party cookies in the context of the Storage Access API,
 
 ### How it works
 
-Third party content embedded in an {{htmlelement("iframe")}} that needs to access cookie or other unpartitioned state can request access using the Storage Access API as follows:
+Third-party content embedded in an {{htmlelement("iframe")}} that needs to access cookie or other unpartitioned state can request access using the Storage Access API as follows:
 
 1. {{domxref("Document.hasStorageAccess()")}} can be called to check if the embedded content already has access to unpartitioned cookies.
 2. If not, {{domxref("Document.requestStorageAccess()")}} can be called with {{Glossary("transient activation")}} to request the `storage-access` permission.

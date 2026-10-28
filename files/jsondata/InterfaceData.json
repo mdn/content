@@ -1100,11 +1100,23 @@
       "inh": "",
       "impl": []
     },
+    "EXT_clip_control": {
+      "inh": "",
+      "impl": []
+    },
     "EXT_color_buffer_float": {
       "inh": "",
       "impl": []
     },
     "EXT_color_buffer_half_float": {
+      "inh": "",
+      "impl": []
+    },
+    "EXT_conservative_depth": {
+      "inh": "",
+      "impl": []
+    },
+    "EXT_depth_clamp": {
       "inh": "",
       "impl": []
     },
@@ -1121,6 +1133,14 @@
       "impl": []
     },
     "EXT_frag_depth": {
+      "inh": "",
+      "impl": []
+    },
+    "EXT_polygon_offset_clamp": {
+      "inh": "",
+      "impl": []
+    },
+    "EXT_render_snorm": {
       "inh": "",
       "impl": []
     },
@@ -1141,6 +1161,10 @@
       "impl": []
     },
     "EXT_texture_filter_anisotropic": {
+      "inh": "",
+      "impl": []
+    },
+    "EXT_texture_mirror_clamp_to_edge": {
       "inh": "",
       "impl": []
     },
@@ -1696,6 +1720,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLInstallElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLLabelElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -2008,6 +2036,10 @@
       "inh": "ExtendableEvent",
       "impl": []
     },
+    "InstallResultEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "Instance": {
       "inh": "",
       "impl": []
@@ -2069,6 +2101,18 @@
       "impl": []
     },
     "LanguageModelParams": {
+      "inh": "",
+      "impl": []
+    },
+    "LanguageModelToolCall": {
+      "inh": "",
+      "impl": []
+    },
+    "LanguageModelToolError": {
+      "inh": "",
+      "impl": []
+    },
+    "LanguageModelToolSuccess": {
       "inh": "",
       "impl": []
     },
@@ -2480,6 +2524,10 @@
       "inh": "",
       "impl": []
     },
+    "NV_shader_noperspective_interpolation": {
+      "inh": "",
+      "impl": []
+    },
     "Observable": {
       "inh": "",
       "impl": []
@@ -2493,6 +2541,14 @@
       "impl": []
     },
     "OES_fbo_render_mipmap": {
+      "inh": "",
+      "impl": []
+    },
+    "OES_sample_variables": {
+      "inh": "",
+      "impl": []
+    },
+    "OES_shader_multisample_interpolation": {
       "inh": "",
       "impl": []
     },
@@ -2641,10 +2697,6 @@
       "impl": []
     },
     "PerformanceLongAnimationFrameTiming": {
-      "inh": "PerformanceEntry",
-      "impl": []
-    },
-    "PerformanceLongTaskTiming": {
       "inh": "PerformanceEntry",
       "impl": []
     },
@@ -3696,10 +3748,6 @@
       "inh": "SVGGraphicsElement",
       "impl": []
     },
-    "SVGUseElementShadowRoot": {
-      "inh": "ShadowRoot",
-      "impl": []
-    },
     "SVGViewElement": {
       "inh": "SVGElement",
       "impl": []
@@ -3718,10 +3766,6 @@
     },
     "Tag": {
       "inh": "",
-      "impl": []
-    },
-    "TaskAttributionTiming": {
-      "inh": "PerformanceEntry",
       "impl": []
     },
     "TaskController": {
@@ -3808,6 +3852,14 @@
       "inh": "Event",
       "impl": []
     },
+    "ToolActivatedEvent": {
+      "inh": "Event",
+      "impl": []
+    },
+    "ToolCancelEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "Touch": {
       "inh": "",
       "impl": []
@@ -3845,6 +3897,10 @@
       "impl": []
     },
     "TrustedHTML": {
+      "inh": "",
+      "impl": []
+    },
+    "TrustedHTMLParserOptions": {
       "inh": "",
       "impl": []
     },
@@ -4036,6 +4092,10 @@
       "inh": "",
       "impl": []
     },
+    "WEBGL_blend_func_extended": {
+      "inh": "",
+      "impl": []
+    },
     "WEBGL_clip_cull_distance": {
       "inh": "",
       "impl": []
@@ -4100,7 +4160,23 @@
       "inh": "",
       "impl": []
     },
+    "WEBGL_polygon_mode": {
+      "inh": "",
+      "impl": []
+    },
     "WEBGL_provoking_vertex": {
+      "inh": "",
+      "impl": []
+    },
+    "WEBGL_render_shared_exponent": {
+      "inh": "",
+      "impl": []
+    },
+    "WEBGL_shader_pixel_local_storage": {
+      "inh": "",
+      "impl": []
+    },
+    "WEBGL_stencil_texturing": {
       "inh": "",
       "impl": []
     },

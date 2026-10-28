@@ -8,7 +8,7 @@ status:
 browser-compat: api.InteractionContentfulPaint.toJSON
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("InteractionContentfulPaint")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("InteractionContentfulPaint")}} object.
 
@@ -48,12 +48,12 @@ This would log a JSON object like so:
 {
   "entryType": "interaction-contentful-paint",
   "interactionId": 1704,
-  "largestContentfulPaint": <not shown>,
+  "largestContentfulPaint": { "...": "..." },
   "name": "",
   "navigationId": 2463,
   "paintTime": 2589.3,
   "presentationTime": 2616,
-  "startTime": 2226.6,
+  "startTime": 2226.6
 }
 ```
 

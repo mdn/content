@@ -3,13 +3,9 @@ title: Iterator.prototype.join()
 short-title: join()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/join
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Iterator.join
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`join()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.join()")}}: it returns a string that is the concatenation of all elements produced by the iterator, separated by commas or a specified separator string. If the iterator has only one item, that item's stringification is returned without using the separator.
 
@@ -61,7 +57,7 @@ console.log(fibonacci().take(5).join(" - ")); // "1 - 1 - 2 - 3 - 5"
 
 ## See also
 
-- [Polyfill of `Iterator.prototype.join` in `core-js`](https://github.com/zloirock/core-js#iterator-join)
+- [Polyfill of `Iterator.prototype.join` in `core-js`](https://core-js.io/docs/features/ecmascript/iterator)
 - [es-shims polyfill of `Iterator.prototype.join`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.reduce()")}}

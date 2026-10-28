@@ -8,8 +8,7 @@ browser-compat: api.Gamepad.id
 
 {{APIRef("Gamepad API")}}
 
-The **`Gamepad.id`** property of the {{domxref("Gamepad") }}
-interface returns a string containing some information about the controller.
+The **`id`** read-only property of the {{domxref("Gamepad")}} interface returns a string containing some information about the controller.
 
 The exact syntax is not strictly specified, but in Firefox it will contain three pieces
 of information separated by dashes (`-`):

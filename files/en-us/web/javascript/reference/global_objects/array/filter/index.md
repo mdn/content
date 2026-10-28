@@ -93,7 +93,7 @@ console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
 ```
 
 > [!NOTE]
-> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily memoized algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
+> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily {{Glossary("Memoization", "memoized")}} algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
 
 ### Filtering invalid objects from an array of objects
 
@@ -205,7 +205,7 @@ console.log(Array.prototype.filter.call(arrayLike, (x) => x <= "b"));
 
 ## See also
 
-- [Polyfill of `Array.prototype.filter` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.filter` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.filter`](https://www.npmjs.com/package/array.prototype.filter)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

@@ -40,7 +40,7 @@ None ({{jsxref("undefined")}}).
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : The method was called on an XML document, or called when the parser is currently executing a custom element constructor.
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : A string is passed as one of the parameters when [Trusted Types are enforced](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and [no default policy has been defined](/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy#creating_a_default_policy) for creating {{domxref("TrustedHTML")}} objects.
 
 ## Description

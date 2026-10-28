@@ -10,15 +10,31 @@ browser-compat: api.CSSTransformValue.is2D
 
 The **`is2D`** read-only property of the {{domxref("CSSTransformValue")}} interface returns whether the transform is 2D or 3D.
 
-In the case of the `CSSTransformValue`, this property returns true unless any of the individual functions return false for `Is2D`, in which case, it returns false.
+`is2D` is `true` only if every {{domxref("CSSTransformComponent")}} in the `CSSTransformValue` is itself 2D (see {{domxref("CSSTransformComponent.is2D")}}), otherwise it is `false`.
 
 ## Value
 
-A boolean. True indicates that the transform is a 2D transform, false that it is a 3D transform.
+A boolean. `true` if every object in the value is 2D, otherwise `false`.
 
 ## Examples
 
-To Do
+### Comparing 2D and 3D transforms
+
+```js
+const transform2D = new CSSTransformValue([
+  new CSSTranslate(CSS.px(10), CSS.px(20)),
+  new CSSScale(2, 3),
+]);
+
+console.log(transform2D.is2D); // true
+
+const transform3D = new CSSTransformValue([
+  new CSSTranslate(CSS.px(10), CSS.px(20), CSS.px(30)),
+  new CSSScale(2, 3),
+]);
+
+console.log(transform3D.is2D); // false
+```
 
 ## Specifications
 
@@ -27,3 +43,11 @@ To Do
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("CSSTransformValue.CSSTransformValue", "CSSTransformValue()")}}
+- {{domxref("CSSTransformComponent.is2D")}}
+- {{domxref("CSSTransformValue.toMatrix()")}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

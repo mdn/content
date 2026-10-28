@@ -142,6 +142,7 @@ gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
 
 ## See also
 
+- [Agent communication and coordination](/en-US/docs/Web/JavaScript/Guide/Agent_communication_and_coordination) guide
 - {{jsxref("Atomics")}}
 - {{jsxref("ArrayBuffer")}}
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide

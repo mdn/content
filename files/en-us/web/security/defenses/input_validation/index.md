@@ -56,7 +56,7 @@ Applications typically implement syntactic validation using the type-checking fe
 
 To implement semantic validation, they can use various methods including range checking, checking a value against a set of allowed values, or, for more complex cases, regular expressions.
 
-Note that regular expressions can be hard to get right, and some expressions may make an application vulnerable to [denial of service attacks](https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS). For this reason, it's usually better to use well-regarded third party validation libraries. One popular choice is [validator.js](https://github.com/validatorjs/validator.js).
+Note that regular expressions can be hard to get right, and some expressions may make an application vulnerable to [denial of service attacks](https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS). For this reason, it's usually better to use well-regarded third party validation libraries. One popular choice is [validator.js](https://github.com/validatorjs/validator.js).
 
 ### When to validate
 
@@ -86,7 +86,7 @@ See [Using HTML form validation](/en-US/docs/Web/HTML/Guides/Constraint_validati
 
 ## Server-side validation
 
-On the server side, applications should, if possible, use the validation functions provided by their framework of choice, such as Django's [validators](https://docs.djangoproject.com/en/6.0/ref/validators/).
+On the server side, applications should, if possible, use the validation functions provided by their framework of choice, such as Django's [validators](https://docs.djangoproject.com/en/stable/ref/validators/).
 
 It's especially important to pay attention to validation failures which could not have been made by a user interacting with the site's front end: for example, a {{htmlelement("select")}} element containing an option that was not provided in the form's HTML. Failures like this are strong indicators that an attacker is deliberately crafting invalid input.
 

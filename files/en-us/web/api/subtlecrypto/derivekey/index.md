@@ -42,7 +42,7 @@ deriveKey(algorithm, baseKey, derivedKeyType, extractable, keyUsages)
   - : A boolean value indicating whether it will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or {{domxref("SubtleCrypto.wrapKey()")}}.
 - `keyUsages`
   - : An {{jsxref("Array")}} indicating what can be done with the derived key.
-    Note that the key usages must be allowed by the algorithm set in `derivedKeyAlgorithm`.
+    Note that the key usages must be allowed by the algorithm set in `derivedKeyType`.
     Possible values of the array are:
     - `encrypt`: The key may be used to [encrypt](/en-US/docs/Web/API/SubtleCrypto/encrypt) messages.
     - `decrypt`: The key may be used to [decrypt](/en-US/docs/Web/API/SubtleCrypto/decrypt) messages.
@@ -63,7 +63,7 @@ The promise is rejected when one of the following exceptions are encountered:
 
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Raised when the master key is not a key for the requested derivation algorithm or if the `keyUsages` value of that key doesn't contain `deriveKey`.
-- `NotSupported` {{domxref("DOMException")}}
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Raised when trying to use an algorithm that is either unknown or isn't suitable for derivation, or if the algorithm requested for the derived key doesn't define a key length.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Raised when `keyUsages` is empty but the unwrapped key is of type `secret` or `private`.

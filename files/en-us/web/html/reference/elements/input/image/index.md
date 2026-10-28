@@ -234,6 +234,12 @@ The following example shows the same button as before, but included in the conte
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 #### CSS
 
 And now some CSS to make the basic elements sit more neatly:
@@ -278,10 +284,15 @@ In this example, we adapt the previous example to set aside more space for the i
       type="image"
       src="https://mdn.github.io/shared-assets/images/examples/login-button.png"
       alt="Login"
-      width="200"
-      height="100" />
+      width="100" />
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 #### CSS

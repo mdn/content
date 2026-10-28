@@ -38,13 +38,13 @@ The **`import`** [definition](/en-US/docs/WebAssembly/Reference/Definitions) dec
 
 ```js interactive-example
 const importNums = {
-  num1: () => {
+  num1() {
     return 1;
   },
-  num3: () => {
+  num3() {
     return 3;
   },
-  num5: () => {
+  num5() {
     return 5;
   },
 };
@@ -108,21 +108,24 @@ For example, the following snippet shows how we might define a function and a [`
 
 ```js
 const importObj = {
-  myFunc: () => {
+  myFunc() {
     return 42;
   },
   myGlobal: new WebAssembly.Global({ value: "i32", mutable: true }, 0),
 };
 
-WebAssembly.instantiateStreaming(fetch("module.wasm"), importObj)
-  .then((obj) => { ... });
+WebAssembly.instantiateStreaming(fetch("module.wasm"), importObj).then(
+  (obj) => {
+    // ...
+  },
+);
 ```
 
 In the Wasm module, we would define the imports like this:
 
 ```wat
 (import "importObj" "myFunc" (func (result i32)))
-(import "importObj" "myGlobal" (global $myglobal (mut i32)))
+(import "importObj" "myGlobal" (global $my_global (mut i32)))
 ```
 
 You can include as many `import` statements in a module as required. The imported values can then be used in the same way as values defined directly in the module. For example:
@@ -130,7 +133,7 @@ You can include as many `import` statements in a module as required. The importe
 ```wat
 ...
 
-global.get $myglobal
+global.get $my_global
 call 0
 
 ...
@@ -156,14 +159,14 @@ You can import the following external types into a Wasm module.
 When importing a function, the `type` field is a [`func`](/en-US/docs/WebAssembly/Reference/Definitions/types/func):
 
 ```wat
-(import "importObj" "myFunc" (func $myfunc (param i32) (result i32)))
+(import "importObj" "myFunc" (func $my_func (param i32) (result i32)))
 ```
 
 or
 
 ```wat
-(type $myfuncType (func (param i32) (result i32)))
-(import "importObj" "myFunc" (func $myfunc (type $myfuncType)))
+(type $my_func_type (func (param i32) (result i32)))
+(import "importObj" "myFunc" (func $my_func (type $my_func_type)))
 ```
 
 This includes:
@@ -177,13 +180,13 @@ This includes:
 When importing a global, the `type` field is a [`global`](/en-US/docs/WebAssembly/Reference/Definitions/global):
 
 ```wat
-(import "importObj" "myGlobal" (global $myglobal i32))
+(import "importObj" "myGlobal" (global $my_global i32))
 ```
 
 or
 
 ```wat
-(import "importObj" "myGlobal" (global $myglobal (mut i32)))
+(import "importObj" "myGlobal" (global $my_global (mut i32)))
 ```
 
 This includes:
@@ -196,7 +199,7 @@ This includes:
 When importing a memory, the `type` field is a [`memory`](/en-US/docs/WebAssembly/Reference/Definitions/memory):
 
 ```wat
-(import "importObj" "mem" (memory $mymem 1 10 shared))
+(import "importObj" "mem" (memory $my_mem 1 10 shared))
 ```
 
 This includes:
@@ -211,7 +214,7 @@ This includes:
 When importing a table, the `type` field is a [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table):
 
 ```wat
-(import "importObj" "myTable" (table $mytable 1 10 funcref))
+(import "importObj" "myTable" (table $my_table 1 10 funcref))
 ```
 
 This includes:
@@ -226,7 +229,7 @@ This includes:
 When importing a tag, the `type` field is a [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag):
 
 ```wat
-(import "importObj" "tag" (tag $mytag (param i32)))
+(import "importObj" "tag" (tag $my_tag (param i32)))
 ```
 
 This includes:

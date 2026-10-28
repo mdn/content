@@ -54,7 +54,7 @@ The import declaration syntax (`import something from "somewhere"`) is static an
 - When the module being imported has side effects, and you do not want those side effects unless some condition is true. (It is recommended not to have any side effects in a module, but you sometimes cannot control this in your module dependencies.)
 - When you are in a non-module environment (for example, `eval` or a script file).
 
-Use dynamic import only when necessary. The static form is preferable for loading initial dependencies, and can benefit more readily from static analysis tools and [tree shaking](/en-US/docs/Glossary/Tree_shaking).
+Use dynamic import only when necessary. The static form is preferable for loading initial dependencies, and can benefit more readily from static analysis tools and [tree shaking](/en-US/docs/Glossary/Tree_shaking). If your only goal is to defer the execution of the loaded code until when it's used, consider using [`import defer`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer).
 
 If your file is not run as a module (if it's referenced in an HTML file, the script tag must have `type="module"`), you will not be able to use static import declarations. On the other hand, the asynchronous dynamic import syntax is always available, allowing you to import modules into non-module environments.
 
@@ -66,6 +66,13 @@ import("./data.json", { with: { type: "json" } });
 
 Dynamic module import is not permitted in all execution contexts.
 For example, `import()` can be used in the main thread, a shared worker, or a dedicated worker, but will throw if called within a [service worker](/en-US/docs/Web/API/Service_Worker_API) or a [worklet](/en-US/docs/Web/API/Worklet).
+
+"Phase modifiers" for `import` statements can also be used with dynamic imports:
+
+- [`import.defer()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/defer)
+- [`import.source()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/source)
+
+Each of these syntaxes is considered a distinct type of expression.
 
 ### Module namespace object
 

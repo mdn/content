@@ -114,6 +114,12 @@ We'll begin by creating a form with a basic submit button:
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 This renders like so:
 
 {{EmbedLiveSample("A_basic_submit_button", 650, 100)}}
@@ -140,6 +146,12 @@ Here's the previous example with the <kbd>s</kbd> access key added:
     <input type="submit" value="Send" accesskey="s" />
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 For example, in Firefox for Mac, pressing <kbd>Control</kbd>-<kbd>Option</kbd>-<kbd>S</kbd> triggers the Send button, while Chrome on Windows uses <kbd>Alt</kbd>+<kbd>S</kbd>.

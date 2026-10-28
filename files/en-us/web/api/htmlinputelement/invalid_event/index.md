@@ -16,11 +16,15 @@ It is not checked on {{domxref("Element/blur_event", "blur")}}.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("invalid", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 oninvalid = (event) => { }
 ```
 
@@ -47,6 +51,12 @@ If a form is submitted with an invalid value, the submittable elements are check
 <hr />
 Invalid values:
 <ul id="log"></ul>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ### JavaScript

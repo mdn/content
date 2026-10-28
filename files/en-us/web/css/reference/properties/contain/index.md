@@ -231,6 +231,7 @@ div {
 
 .float {
   float: left;
+  height: 40px;
   margin: 10px;
   background: aquamarine;
 }

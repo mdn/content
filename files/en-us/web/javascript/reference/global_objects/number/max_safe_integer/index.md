@@ -67,7 +67,7 @@ Number.MAX_SAFE_INTEGER * Number.EPSILON; // 1.9999999999999998
 
 ## See also
 
-- [Polyfill of `Number.MAX_SAFE_INTEGER` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [Polyfill of `Number.MAX_SAFE_INTEGER` in `core-js`](https://core-js.io/docs/features/ecmascript/number)
 - [es-shims polyfill of `Number.MAX_SAFE_INTEGER`](https://www.npmjs.com/package/es-constants)
 - {{jsxref("Number.MIN_SAFE_INTEGER")}}
 - {{jsxref("Number.MAX_VALUE")}}

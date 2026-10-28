@@ -68,8 +68,8 @@ So let's get started by setting up the basis for our WebRTC-powered phone app.
       <section class="call-container" hidden>
         <div class="audio-container">
           <p>You're automatically muted, unmute yourself!</p>
-          <audio controls id="remoteAudio" muted="true"></audio>
-          <audio controls id="localAudio" muted="true"></audio>
+          <audio controls id="remoteAudio" muted></audio>
+          <audio controls id="localAudio" muted></audio>
         </div>
         <button class="hangup-btn">Hang up</button>
       </section>

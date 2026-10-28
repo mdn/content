@@ -64,3 +64,7 @@ The output looks like this:
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Polyfill of `DOMTokenList.prototype.values` in `core-js`](https://core-js.io/docs/features/web-standards/iterable-dom-collections)
