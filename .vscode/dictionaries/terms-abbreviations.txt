@@ -590,6 +590,7 @@ retargeted
 retargetings
 RFCOMM
 RGTC
+riscv
 romcoms
 roundoff
 RSAES-OAEP
@@ -603,6 +604,7 @@ RTMPT
 RTSP
 run-throughs
 résumé
+RWND
 safelisted
 Saltasaurus
 SAOC
@@ -674,6 +676,7 @@ spoofable
 spritesheet
 spritesheets
 SSML
+ssthresh
 STIX
 strawman
 streamable
