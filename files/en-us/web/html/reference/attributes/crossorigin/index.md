@@ -20,9 +20,9 @@ The `crossorigin` content attribute on media elements is a CORS settings attribu
 These attributes are [enumerated](/en-US/docs/Glossary/Enumerated), and have the following possible values:
 
 - `anonymous`
-  - : Request uses CORS headers ([`mode`](/en-US/docs/Web/API/RequestInit#mode) is set to `cors`) and [credentials flag](/en-US/docs/Web/API/RequestInit#credentials) is set to `'same-origin'`. There is no exchange of **user credentials** via cookies, client-side TLS certificates or HTTP authentication, unless destination is the same origin.
+  - : Request uses CORS headers ([`mode`](/en-US/docs/Web/API/RequestInit#mode) is set to `cors`) and [`credentials`](/en-US/docs/Web/API/RequestInit#credentials) is set to `'same-origin'`, meaning that credentials such as cookies, client-side TLS certificates, and HTTP authentication headers are only included if the destination has the same origin.
 - `use-credentials`
-  - : Request uses CORS headers ([`mode`](/en-US/docs/Web/API/RequestInit#mode) is set to `cors`), [credentials flag](/en-US/docs/Web/API/RequestInit#credentials) is set to `'include'` and **user credentials** are always included.
+  - : Request uses CORS headers ([`mode`](/en-US/docs/Web/API/RequestInit#mode) is set to `cors`) and [`credentials`](/en-US/docs/Web/API/RequestInit#credentials) is set to `'include'`, so credentials are always included, even for cross-origin requests.
 - `""`
   - : Setting the attribute name to an empty value, like `crossorigin` or `crossorigin=""`, is the same as `anonymous`. Invalid values are also treated as the empty string.
 
