@@ -454,12 +454,7 @@ Here, although you may still see `0` in one of the logs (for example, because th
 > [!NOTE]
 > If you want to go further and guarantee that both new values are observed, you need to make both agents [wait](#waiting_and_notifying) before the `Atomics.load()` call, such as using a `while (Atomics.load(a, 1) === 0);` loop.
 
-Furthermore, atomic load/store operations establish a partial ordering for other _non-atomic_ read/write operations. Specifically:
-
-- When an `Atomics.store()` call executes, all non-atomic writes before it must become observable (although writes after it also might)
-- When an `Atomics.load()` call executes, all non-atomic reads after it must observe the new values (although reads before it also might)
-
-`Atomics.load` and `Atomics.store` essentially create a "synchronization point" between two threads, much like a `message` event. For example:
+Furthermore, atomic load/store operations establish a partial ordering for other _non-atomic_ read/write operations. Specifically, if agent A runs `Atomics.store()`, and then agent B reads the same value with `Atomics.load()`, then all non-atomic writes executed by A before the atomic store must also become observable to all non-atomic reads executed by B after the atomic load. This essentially create a "synchronization point" between two threads, much like a `message` event. For example:
 
 ```js
 // -- main.js --
@@ -701,6 +696,8 @@ For example, create a buffer with space for a lock and a value. In our protocol,
 
 ```js
 const sab = new SharedArrayBuffer(8);
+const shared = new Int32Array(sab);
+shared[0] = 1;
 ```
 
 Here's how one participating agent may implement that protocol. When an agent calls `lock()` to try to acquire the lock:
@@ -712,8 +709,6 @@ Here's how one participating agent may implement that protocol. When an agent ca
 - The loop only exits when lock acquisition succeeds.
 
 ```js
-const shared = new Int32Array(sab);
-
 function lock() {
   while (Atomics.compareExchange(shared, 0, 1, 0) !== 1) {
     Atomics.wait(shared, 0, 0);
@@ -989,6 +984,12 @@ const secretNumber = 63;
 // The turn flag is initially 0, so the worker takes the first turn
 worker.postMessage(sab);
 
+// Wait until the worker has started. The browser may not start the
+// worker until the main thread returns to the event loop.
+await new Promise((resolve) => {
+  worker.addEventListener("message", resolve, { once: true });
+});
+
 while (true) {
   // Wait until the worker finishes its turn
   while (Atomics.load(shared, 0) !== 1) {
@@ -1023,6 +1024,9 @@ const sab = await new Promise((resolve) => {
 const shared = new Int32Array(sab);
 let low = 0;
 let high = 100;
+
+// Tell the main thread that the worker has started
+self.postMessage("ready");
 
 while (true) {
   const lastGuess = Math.floor((low + high) / 2);
