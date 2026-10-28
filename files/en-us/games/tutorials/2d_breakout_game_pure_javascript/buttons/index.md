@@ -64,7 +64,7 @@ Create the button below the ball, paddle, and brick definitions:
 const startButton = new Button("img/button.png", ctx);
 ```
 
-You also need to [grab the button spritesheet](https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_pure_JavaScript/button.png), and save it in your `/img` directory.
+You also need to [grab the button spritesheet](https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/button.png), and save it in your `/img` directory.
 
 In `update()`, add the following after `drawStatus()` to show the button until the game starts:
 

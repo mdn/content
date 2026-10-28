@@ -159,7 +159,7 @@ Scrolling includes scrolling any scrollable element in the page, as well as scro
 After that, no further entries are generated.
 
 This is because the API is designed to measure how long it takes for content to appear as it loads.
-Once the user has interacted with the page, times measured from the {{domxref("Performance.timeOrigin", "time origin")}} include time spent by the user, so they are no longer a useful measure of rendering performance.
+Once the user has interacted with the page, times measured from the [time origin](/en-US/docs/Web/API/Performance/timeOrigin) include time spent by the user, so they are no longer a useful measure of rendering performance.
 
 This also means that the accumulated painted region only ever includes content that was painted inside the viewport before the user scrolled.
 Content that is outside the viewport when it is painted, such as content below the fold, is never reported, even if the user later scrolls it into view.

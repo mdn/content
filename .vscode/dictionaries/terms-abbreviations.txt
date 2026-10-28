@@ -603,6 +603,7 @@ RTMPS
 RTMPT
 RTSP
 run-throughs
+RWND
 résumé
 safelisted
 Saltasaurus
@@ -675,6 +676,7 @@ spoofable
 spritesheet
 spritesheets
 SSML
+ssthresh
 STIX
 strawman
 streamable
