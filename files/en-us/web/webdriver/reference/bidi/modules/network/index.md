@@ -15,8 +15,9 @@ An intercept makes the browser block requests at a chosen point, so that the cli
 Add one with [`network.addIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addIntercept), which returns an intercept ID, and remove it with [`network.removeIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/removeIntercept).
 
 An intercept matches requests by the phases it covers, and optionally by URL patterns and by the [top-level contexts](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) the requests come from.
-It blocks a request only if the session is [subscribed](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to the event for the phase, for the context the request comes from.
-When it does, that event has `isBlocked` set to `true` and lists the matching intercepts in its `intercepts` field, and the browser waits until the client sends one of the commands for that phase:
+It blocks a request only if the session is [subscribed](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to the event for the phase in the request's context.
+When it does, that event has `isBlocked` set to `true` and lists the matching intercepts in its `intercepts` field.
+The browser then waits until the client sends one of the commands for that phase:
 
 | Phase               | When the request is blocked                     | Event                                                                                                     | Commands that resume or end the request                                                                                                                                                                                                                                                                     |
 | ------------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -28,7 +29,8 @@ A command for another phase returns an `invalid argument` error, and the request
 A request can be blocked again in a later phase, by the same intercept or by another one.
 
 Intercepts belong to the session that adds them.
-Removing an intercept doesn't release the requests it has already blocked, but when the session ends, the browser resumes every request the session blocked.
+Removing an intercept doesn't release the requests it has already blocked.
+When the session ends, the browser resumes every request the session blocked.
 
 ## Commands
 

@@ -26,7 +26,7 @@ The `params` field contains:
 
 - `request`
   - : A string that contains the ID of the blocked request.
-    Request IDs are in the `request.request` field of `network` events, such as [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent).
+    Request IDs are in the `request` field of the `request` object in `network` events, such as [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent).
 
 ### Return value
 
@@ -36,7 +36,7 @@ The `result` field in the response is an empty object (`{}`).
 
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
   - : Thrown in any of the following cases:
-    - `request` is missing or is not a string.
+    - A required parameter is missing or has an invalid type.
     - The request is blocked in the `authRequired` phase.
 - `no such request`
   - : The session has no blocked request with the specified `request` ID, for example because the request was already resumed.
@@ -47,7 +47,8 @@ The `result` field in the response is an empty object (`{}`).
 A request blocked in the `authRequired` phase can't be failed: the command returns an `invalid argument` error, and the request stays blocked.
 To go on without providing credentials, use [`network.continueWithAuth`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueWithAuth) with the `cancel` action, which gives the page the server's response, such as a `401` status.
 
-The browser treats the request as failed with a network error: whatever made the request gets a network error, for example, a {{domxref("Window/fetch", "fetch()")}} call rejects with a {{jsxref("TypeError")}}.
+The browser treats the request as failed with a network error.
+Whatever made the request gets a network error: for example, a {{domxref("Window/fetch", "fetch()")}} call rejects with a {{jsxref("TypeError")}}.
 If you're subscribed to [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError), you also receive the event for the request.
 A request failed in the `beforeRequestSent` phase never reaches the server.
 In the `responseStarted` phase, the server has already responded, and the browser discards the response.
@@ -56,8 +57,11 @@ In the `responseStarted` phase, the server has already responded, and the browse
 
 ### Failing a request before it's sent
 
-Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `network.beforeRequestSent`, `network.fetchError`, and [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted).
-Assume also that you've added an intercept for `https://example.com/api/items` in the `beforeRequestSent` phase with [`network.addIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addIntercept), which returned the intercept ID `7a721ad7-7a58-4b0c-b4c0-d7d80051cd25`.
+Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent), [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError), and [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted).
+
+Assume also that you added two intercepts using [`network.addIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addIntercept), which returned their intercept IDs.
+The first intercept blocks requests for `https://example.com/api/items` in the `beforeRequestSent` phase.
+The second one blocks requests for `https://example.com/api/cart` in the `responseStarted` phase.
 
 Suppose you want to check how the page handles a list of items that fails to load.
 When the page requests the list with `fetch()`, the browser blocks the request and sends the following event (only some of the fields are shown):
@@ -131,8 +135,8 @@ In the page, the `fetch()` call rejects with a `TypeError`.
 
 ### Failing a request after the response started
 
-Using the same connection and session, suppose another intercept, with the ID `ecc57375-44cc-46f8-abfd-f3f1c5489f71`, blocks requests for `https://example.com/api/cart` in the `responseStarted` phase.
-When the page requests the cart with `fetch()`, the server responds, and when the response headers arrive, the browser blocks the request and sends the following event (only some of the fields are shown):
+Using the same connection, session, subscriptions, and second intercept as in the first example, suppose the page requests the cart with `fetch()`, and the server responds.
+When the response headers arrive, the browser blocks the request and sends the following event (only some of the fields are shown):
 
 ```json
 {
@@ -171,7 +175,7 @@ Send the following message to fail the request, even though the server has respo
 }
 ```
 
-The browser responds with an empty `result` object, discards the response, and sends a `network.fetchError` event for the request.
+The browser responds with an empty `result` object, discards the response, and sends a [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError) event for the request.
 The page's `fetch()` call rejects with a `TypeError`, as in the first example.
 
 ## Specifications

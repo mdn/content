@@ -7,7 +7,8 @@ browser-compat: webdriver.bidi.network.addIntercept
 sidebar: webdriver
 ---
 
-The `network.addIntercept` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`network`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network) module adds an intercept, which makes the browser block matching requests until the client lets them continue, changes them, or fails them.
+The `network.addIntercept` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`network`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network) module adds an [intercept](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#intercepts).
+An intercept makes the browser block matching requests until the client lets them continue, changes them, or fails them.
 
 ## Syntax
 
@@ -41,8 +42,8 @@ The `network.addIntercept` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Mo
 The `params` field contains:
 
 - `contexts` {{optional_inline}}
-  - : An array of one or more context ID strings, each identifying a [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) whose requests the intercept applies to.
-    Requests from the child contexts of each top-level context, such as iframes, match too.
+  - : An array of one or more context ID strings, each identifying a [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) whose requests the intercept matches.
+    Requests from their child contexts, such as iframes, also match.
     Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 
     If not specified, the intercept doesn't filter requests by context.
@@ -54,7 +55,7 @@ The `params` field contains:
     - `beforeRequestSent`: The request is blocked before the browser sends it, when the browser sends the [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) event.
     - `responseStarted`: The request is blocked after the browser receives the response headers, when the browser sends the [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) event.
 - `urlPatterns` {{optional_inline}}
-  - : An array of objects, each specifying a pattern that request URLs are compared with.
+  - : An array of objects, each specifying a pattern against which request URLs are compared.
     The intercept matches a request whose URL matches any of the patterns.
     If not specified, or if the array is empty, the intercept matches every URL.
 
@@ -62,35 +63,35 @@ The `params` field contains:
     - `hostname` {{optional_inline}}
       - : A string that contains the host name to match, such as `example.com`.
         It can't be empty, contain `/`, `?`, or `#`, or contain `:` outside square brackets, so it can't include a port.
-        It can't be specified when `protocol` is `file`.
-        Specify this when the `type` field value is `pattern`.
+        It can't be specified when [`protocol`](#protocol) is `file`.
+        Specify this when the [`type`](#type) field is `pattern`.
     - `pathname` {{optional_inline}}
       - : A string that contains the path to match, such as `/api/items`.
         It can't contain `?` or `#`.
-        Specify this when the `type` field value is `pattern`.
+        Specify this when the [`type`](#type) field is `pattern`.
     - `pattern`
       - : A string that contains the URL to match, such as `https://example.com/api/items`.
         It must be an absolute URL.
         A request matches only if its URL has the same protocol, host, port, path, and query.
-        Specify this when the `type` field value is `string`.
+        Specify this when the [`type`](#type) field is `string`.
     - `port` {{optional_inline}}
       - : A string that contains the port to match, such as `8080`.
         It can contain only digits and can't be empty.
-        Specify this when the `type` field value is `pattern`.
+        Specify this when the [`type`](#type) field is `pattern`.
     - `protocol` {{optional_inline}}
       - : A string that contains the URL scheme to match, without the colon, such as `https`.
         It can contain only ASCII letters, digits, `+`, `-`, and `.`, and can't be empty.
-        Specify this when the `type` field value is `pattern`.
+        Specify this when the [`type`](#type) field is `pattern`.
     - `search` {{optional_inline}}
       - : A string that contains the query to match, with or without the leading `?`, such as `page=2`.
         It can't contain `#`.
-        Specify this when the `type` field value is `pattern`.
+        Specify this when the [`type`](#type) field is `pattern`.
     - `type`
       - : A string that specifies how the pattern is written.
         It can take one of the following values:
-        - `pattern`: The pattern is split into the `hostname`, `pathname`, `port`, `protocol`, and `search` fields.
+        - `pattern`: The pattern is split into the [`hostname`](#hostname), [`pathname`](#pathname), [`port`](#port), [`protocol`](#protocol), and [`search`](#search) fields.
           A request matches if its URL matches every field that is specified: a field that isn't specified matches any value.
-        - `string`: The pattern is a URL in the `pattern` field.
+        - `string`: The pattern is a URL in the [`pattern`](#pattern) field.
 
     In every field, the characters `(`, `)`, `*`, `{`, and `}` must be escaped with a backslash (`\`), written as `\\` in JSON.
     There are no wildcards.
@@ -101,18 +102,21 @@ The `result` object in the response contains the following field:
 
 - `intercept`
   - : A string that contains the ID of the intercept.
-    Network events list this ID in their `intercepts` field when the intercept blocks a request, and [`network.removeIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/removeIntercept) takes it to remove the intercept.
+    Network events list this ID in their `intercepts` field when the intercept blocks a request.
+    [`network.removeIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/removeIntercept) takes this ID to remove the intercept.
 
 ### Errors
 
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
   - : Thrown in any of the following cases:
-    - `phases` is missing or empty, or a parameter has an invalid type, such as a `phases` value that is not `authRequired`, `beforeRequestSent`, or `responseStarted`.
+    - A required parameter is missing, or a parameter has an invalid type.
+    - `phases` is empty.
+    - A value in `phases` is not `authRequired`, `beforeRequestSent`, or `responseStarted`.
     - `contexts` is specified but empty.
     - A context specified in `contexts` is not a top-level context.
-    - A URL pattern is not valid, for example a `pattern` that is not an absolute URL, a field that contains an unescaped `(`, `)`, `*`, `{`, or `}`, a `hostname` that includes a port, or a `hostname` with the `file` protocol.
+    - A URL pattern is invalid, for example a `pattern` that is not an absolute URL, a field that contains an unescaped `(`, `)`, `*`, `{`, or `}`, a `hostname` that includes a port, or a `hostname` with the `file` protocol.
 - `no such frame`
-  - : No context is found for an ID specified in `contexts`.
+  - : No context with an ID specified in `contexts` is found.
 
 ## Description
 
@@ -124,30 +128,36 @@ An intercept blocks a request when all of the following are true:
 - The request URL matches one of the `urlPatterns`, or the intercept has none.
 - The request comes from one of the `contexts` or from one of their child contexts, or the intercept has no `contexts`.
 
-An intercept blocks a request only if the session is [subscribed](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to the event for the phase, such as `network.beforeRequestSent` for the `beforeRequestSent` phase, for the context the request comes from.
-Adding an intercept doesn't subscribe the session to any event, and without the subscription, the browser doesn't block the request.
+An intercept blocks a request only if the session is [subscribed](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to the event for the phase in the request's context, such as `network.beforeRequestSent` for the `beforeRequestSent` phase.
+Adding an intercept doesn't subscribe the session to any event.
+Without the subscription, the browser doesn't block the request.
 
 A `string` pattern matches only URLs with the same protocol, host, port, path, and query: `https://example.com/api/items` doesn't match `https://example.com/api/items?page=2`.
-To match a path whatever the query, use a `pattern` object without `search`.
+To match a path with any query, use a URL pattern of type `pattern` without `search`.
 With only `pathname`, as in the second [example](#blocking_requests_for_a_path_in_one_tab), it matches that path on any host.
 
 ### Blocked requests
 
 When an intercept blocks a request, the event for the phase has `isBlocked` set to `true` and lists the IDs of the intercepts that match in its `intercepts` field.
-The browser doesn't continue the request until the client sends one of the commands for its phase, such as [`network.continueRequest`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueRequest) or [`network.failRequest`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/failRequest) in the `beforeRequestSent` phase, or the session ends.
+The browser doesn't continue the request until the client sends one of the commands for its phase or the session ends.
+In the `beforeRequestSent` phase, these commands include [`network.continueRequest`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueRequest) and [`network.failRequest`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/failRequest).
 See [Intercepts](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#intercepts) for the commands that can resume a request in each phase.
 If more than one intercept matches, one command resumes the request.
 
-An intercept belongs to the session that adds it, and stays until it's removed with `network.removeIntercept` or the session ends.
+An intercept belongs to the session that adds it.
+It stays in effect until it's removed by a `network.removeIntercept` command or until the session ends.
 When the session ends, the browser resumes every request that the session blocked.
 
 ## Examples
 
 ### Blocking requests for a URL
 
-Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `network.beforeRequestSent`.
+Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent).
 
-Suppose the page you're testing, in a tab with the context ID `93ee5bd6-d256-4608-a002-9a8995cc0e5f`, loads a list of items from `https://example.com/api/items` with {{domxref("Window/fetch", "fetch()")}}, and you want to hold the request while you check how the page looks before the list arrives.
+Assume also that a tab is open, showing the page you're testing.
+You got its context ID using [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
+
+Suppose the page loads a list of items from `https://example.com/api/items` with {{domxref("Window/fetch", "fetch()")}}, and you want to hold the request while you check how the page looks before the list arrives.
 Send the following message to block requests for that URL before the browser sends them:
 
 ```json
@@ -213,7 +223,7 @@ When you're ready, send the following message to let the request continue unchan
 }
 ```
 
-The browser responds with an empty `result` object, sends the request, and the `fetch()` call receives the response:
+The browser responds with an empty `result` object and sends the request:
 
 ```json
 {
@@ -223,9 +233,11 @@ The browser responds with an empty `result` object, sends the request, and the `
 }
 ```
 
+The `fetch()` call then receives the response.
+
 ### Blocking requests for a path in one tab
 
-Using the same connection, session, and subscription, suppose you want to block requests for `/api/items` from the tab of the first example, whatever their query, such as `https://example.com/api/items?page=2`, which the first example's pattern doesn't match.
+Using the same connection, session, subscription, and tab as in the first example, suppose you want to block requests for `/api/items` from that tab with any query, such as `https://example.com/api/items?page=2`, which the first example's pattern doesn't match.
 Send the following message to block those requests in that tab only:
 
 ```json
@@ -280,7 +292,7 @@ When the page requests `https://example.com/api/items?page=2`, the browser block
 ```
 
 Requests for other paths, such as `https://example.com/api/v2/items`, aren't blocked: their events have `isBlocked` set to `false`.
-To let the blocked request continue, send `network.continueRequest` with its request ID, as in the first example.
+To let the blocked request continue, send [`network.continueRequest`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueRequest) with its request ID, as in the first example.
 
 ## Specifications
 

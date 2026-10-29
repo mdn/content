@@ -35,17 +35,18 @@ The `result` field in the response is an empty object (`{}`).
 ### Errors
 
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
-  - : `intercept` is missing or is not a string.
+  - : A required parameter is missing or has an invalid type.
 - `no such intercept`
   - : The session has no intercept with the specified `intercept` ID, for example because it was already removed.
 
 ## Description
 
-Removing an intercept doesn't affect requests that it has already blocked: they stay blocked until the client resumes or ends them with one of the commands for the phase they're blocked in, such as [`network.continueRequest`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueRequest) or [`network.failRequest`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/failRequest), or until the session ends.
+Removing an intercept doesn't affect requests that it has already blocked.
+They stay blocked until the client resumes or ends them with one of the commands for their phase, such as [`network.continueRequest`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueRequest) or [`network.failRequest`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/failRequest), or until the session ends.
 The removed intercept doesn't block new requests, or the later phases of requests that are already in progress.
 
 Intercepts belong to the session that adds them, so only that session can remove them.
-When the session ends, its intercepts are removed, and the browser resumes every request that's still blocked in the session.
+When the session ends, the browser removes its intercepts and resumes every request that's still blocked in the session.
 
 ## Examples
 
@@ -53,7 +54,8 @@ When the session ends, its intercepts are removed, and the browser resumes every
 
 Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) and [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted).
 
-Suppose you added an intercept for `https://example.com/api/items` with `network.addIntercept`, which returned the intercept ID `7a721ad7-7a58-4b0c-b4c0-d7d80051cd25`, and you no longer need to block those requests.
+Suppose you added an intercept for `https://example.com/api/items` using [`network.addIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addIntercept), which returned its intercept ID.
+You no longer need to block those requests.
 Send the following message to remove the intercept:
 
 ```json
@@ -99,7 +101,9 @@ From then on, requests for `https://example.com/api/items` aren't blocked, and t
 
 ### Removing an intercept while a request is blocked
 
-Using the same connection and session, suppose another intercept, with the ID `ecc57375-44cc-46f8-abfd-f3f1c5489f71`, covers both the `beforeRequestSent` and `responseStarted` phases, and it has blocked a request with the request ID `37cf22b4-f399-4450-828d-d54fce56004e`.
+Using the same connection, session, and subscriptions as in the first example, suppose you added another intercept using [`network.addIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addIntercept), which returned its intercept ID.
+The intercept covers both the `beforeRequestSent` and `responseStarted` phases.
+It has blocked a request, and the [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) event for that request contains its request ID.
 
 After you remove the intercept with `network.removeIntercept`, the request is still blocked, and the page is still waiting for the response.
 Send the following message to let the request continue:
@@ -125,7 +129,7 @@ The browser responds with an empty `result` object:
 ```
 
 The browser then sends the request.
-When the response headers arrive, the `network.responseStarted` event has `isBlocked` set to `false`, because the removed intercept no longer blocks the request in that phase (only some of the fields are shown):
+When the response headers arrive, the [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) event has `isBlocked` set to `false`, because the removed intercept no longer blocks the request in that phase (only some of the fields are shown):
 
 ```json
 {
@@ -153,7 +157,8 @@ When the response headers arrive, the `network.responseStarted` event has `isBlo
 
 ### Removing an intercept that doesn't exist
 
-Using the same connection and session, if you send `network.removeIntercept` again with the ID `ecc57375-44cc-46f8-abfd-f3f1c5489f71`, which you've already removed, the browser responds with an error:
+Using the same connection and session as in the first example, suppose you send `network.removeIntercept` again with the ID of the intercept that you removed in the second example.
+The browser responds with an error:
 
 ```json
 {
