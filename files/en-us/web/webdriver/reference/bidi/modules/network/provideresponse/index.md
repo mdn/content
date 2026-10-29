@@ -62,12 +62,12 @@ The `params` field contains:
   - : An object that specifies the body of the response.
     It contains the following fields:
     - `type`
-      - : A string that specifies how the `value` field of this object is encoded.
+      - : A string that specifies how the body is encoded.
         It can take one of the following values:
         - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes.
-        - `string`: The value is text, which the browser encodes as [UTF-8](/en-US/docs/Glossary/UTF-8).
+        - `string`: The value is text, which the browser encodes as [UTF-8](/en-US/docs/Glossary/UTF-8) bytes.
     - `value`
-      - : A string that contains the body, encoded as specified by `type`.
+      - : A string that contains the body in the encoding specified by the [`type`](#type) field.
 - `cookies` {{optional_inline}}
   - : An array of objects, each specifying a cookie that the response sets, in a {{HTTPHeader("Set-Cookie")}} header.
     If `headers` isn't specified, the browser first removes the response's `Set-Cookie` headers.
@@ -91,14 +91,15 @@ The `params` field contains:
     - `secure` {{optional_inline}}
       - : A boolean that indicates whether the cookie has the [`Secure`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) attribute.
     - `value`
-      - : An object that specifies the value of the cookie. It contains the following fields:
+      - : An object that specifies the value of the cookie.
+        It contains the following fields:
         - `type`
-          - : A string that specifies how the `value` field of this object is encoded.
+          - : A string that specifies how the cookie value is encoded.
             It can take one of the following values:
             - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes.
-            - `string`: The value is text, which the browser encodes as [UTF-8](/en-US/docs/Glossary/UTF-8).
+            - `string`: The value is text, which the browser encodes as [UTF-8](/en-US/docs/Glossary/UTF-8) bytes.
         - `value`
-          - : A string that contains the cookie value, encoded as specified by `type`.
+          - : A string that contains the cookie value in the encoding specified by the [`type`](#type_2) field.
 - `headers` {{optional_inline}}
   - : An array of objects, each specifying a header of the response.
     If the server has already sent a response, the array replaces its headers.
@@ -108,20 +109,21 @@ The `params` field contains:
       - : A string that contains the header name, such as `Content-Type`.
         It must be a valid [HTTP header](/en-US/docs/Web/HTTP/Reference/Headers) name.
     - `value`
-      - : An object that specifies the header value. It contains the following fields:
+      - : An object that specifies the header value.
+        It contains the following fields:
         - `type`
-          - : A string that specifies how the `value` field of this object is encoded.
+          - : A string that specifies how the header value is encoded.
             It can take one of the following values:
             - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes.
-            - `string`: The value is text, which the browser encodes as [UTF-8](/en-US/docs/Glossary/UTF-8).
+            - `string`: The value is text, which the browser encodes as [UTF-8](/en-US/docs/Glossary/UTF-8) bytes.
         - `value`
-          - : A string that contains the header value, encoded as specified by `type`.
+          - : A string that contains the header value in the encoding specified by the [`type`](#type_3) field.
             The decoded header value cannot contain line breaks or null characters, or start or end with a space or tab.
 - `reasonPhrase` {{optional_inline}}
   - : A string that contains the status message of the response, such as `OK`.
 - `request`
   - : A string that contains the ID of the blocked request.
-    Request IDs are in the `request.request` field of `network` events, such as `network.beforeRequestSent`.
+    Request IDs are in the `request` field of the `request` object in `network` events, such as `network.beforeRequestSent`.
 - `statusCode` {{optional_inline}}
   - : A non-negative integer that contains the [HTTP status code](/en-US/docs/Web/HTTP/Reference/Status) of the response, such as `200`.
 
@@ -133,9 +135,12 @@ The `result` field in the response is an empty object (`{}`).
 
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
   - : Thrown in any of the following cases:
-    - `request` is missing or is not a string, another parameter has an invalid type, such as a negative `statusCode`, a `type` field in `body`, `cookies`, or `headers` is not `base64` or `string`, or a `sameSite` field in `cookies` is not `default`, `lax`, `none`, or `strict`.
-    - A header name in `headers` is not a valid header name.
-    - A header value in `headers` is not a valid header value.
+    - A required parameter is missing, or a parameter has an invalid type.
+    - `statusCode` is negative.
+    - The `type` field in the `body` object, or in a cookie's or header's `value` object, is not `base64` or `string`.
+    - The `sameSite` field of a cookie is not `default`, `lax`, `none`, or `strict`.
+    - A header name in `headers` is invalid.
+    - A header value in `headers` is invalid.
 - `no such request`
   - : The session has no blocked request with the specified `request` ID, for example because the request was already resumed.
 
@@ -144,25 +149,32 @@ The `result` field in the response is an empty object (`{}`).
 ### Which requests can be completed
 
 Use `network.provideResponse` for a request blocked in any phase: `beforeRequestSent`, `responseStarted`, or `authRequired`.
-If the command returns an error other than `no such request`, the request stays blocked, but the parameters processed before the error might already have changed the response.
+If the command returns an error other than `no such request`, the request stays blocked.
+The parameters processed before the error might already have changed the response.
 
 ### Providing the response
 
-For a request blocked in the `beforeRequestSent` phase, the browser doesn't send the request: the page receives the response that you provide.
+For a request blocked in the `beforeRequestSent` phase, the browser doesn't send the request.
+The page receives the response that you provide.
 In the other phases, the status, headers, cookies, and body that you specify replace those of the response that the server sent.
 For how this compares with `network.continueResponse`, see [Changing responses](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#changing_responses).
 
-The request goes on through its lifecycle, so you still receive the later events that you're subscribed to for it, with the status and headers that you provided: [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted), and [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) if the request was blocked before the response started.
+The request goes on through its lifecycle, so you still receive the later events for it that you're subscribed to.
+These events have the status and headers that you provided.
+They include [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted), and [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) if the request was blocked before the response started.
 
 ## Examples
 
 ### Mocking an API response
 
-Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `network.beforeRequestSent`.
-Assume also that you've added an intercept for the `beforeRequestSent` phase that matches requests for `https://example.com/api/items`, with [`network.addIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addIntercept).
+Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent).
+
+Assume also that you added an intercept for the `beforeRequestSent` phase using [`network.addIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addIntercept).
+The intercept matches requests for `https://example.com/api/items`.
 
 Suppose you want to test how a page shows a list of three items, without changing the data on the server.
-The page calls `fetch("/api/items")`, and the browser blocks the request and sends a `network.beforeRequestSent` event with the request ID `b9e201af-6475-4bea-a174-51a8290f8087`.
+The page calls `fetch("/api/items")`.
+The browser blocks the request and sends a `network.beforeRequestSent` event with the request's ID.
 Send the following message to answer the request with a list of items:
 
 ```json
@@ -200,13 +212,17 @@ The browser responds with an empty `result` object:
 }
 ```
 
-The page's `fetch()` call receives a response with the `200` status and the three items, and the server never receives the request.
+The page's `fetch()` call receives a response with the `200` status and the three items.
+The server never receives the request.
 
 ### Replacing a script
 
-Using the same connection and session, and a subscription to [`log.entryAdded`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/log/entryAdded) as well, suppose you want to try a changed version of the page's script, `https://example.com/app.js`, without deploying it.
-You add an intercept for the script's URL in the `beforeRequestSent` phase with `network.addIntercept`, which returns the intercept ID `ecc57375-44cc-46f8-abfd-f3f1c5489f71`, and then load `https://example.com/` in the tab with [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate), whose response arrives only after the request for the script continues.
-When the browser blocks the request for the script, with the ID `37cf22b4-f399-4450-828d-d54fce56004e`, send the following message to provide your version:
+Using the same connection, session, and subscription as in the first example, assume you also have a subscription to [`log.entryAdded`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/log/entryAdded).
+
+Suppose you want to try a changed version of the page's script, `https://example.com/app.js`, without deploying it.
+You add an intercept for the script's URL in the `beforeRequestSent` phase using [`network.addIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addIntercept), which returns its intercept ID.
+You then load `https://example.com/` in the tab using [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate), whose response arrives only after the request for the script continues.
+When the browser blocks the request for the script and sends a [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) event with its request ID, send the following message to provide your version:
 
 ```json
 {
