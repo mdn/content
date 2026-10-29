@@ -13,11 +13,11 @@ You use this option to expose features relevant to specific browser or web page 
 
 The full list of supported contexts is available at {{WebExtAPIRef("menus.ContextType")}} and includes contexts outside of a web page, such as bookmark items in the browser UI. For example, the "[Open bookmark in Container Tab](https://github.com/Rob--W/bookmark-container-tab)" extension adds a menu item that allows the user to open a bookmark URL in a new container tab.
 
-![A context menu with "open in new container tab" submenu highlighted. The submenu shows personal, work, banking, shopping, and Facebook contextual identities. There is an option at the top of the submenu to select no container.](extension_context_menu.png)
+![A bookmark context menu in the Firefox bookmarks sidebar with the extension's "Open in a New Container Tab" submenu highlighted. The submenu shows personal, work, banking, and shopping contextual identities, with an option at the top to select no container.](extension_context_menu.png)
 
 You can also override the context menus displayed in extension pages, such as custom sidebars and popups, to use either the tab or bookmark context menus instead of the default context menu, with {{WebExtAPIRef("menus.overrideContext")}}. This is a helpful method when your extension provides a custom presentation of tabs or bookmarks. The menu automatically includes menu items for any other extensions that have defined tab or bookmark context menu items. You can choose whether to include the default context menu items. Hiding the default items gives the extension complete control over the items displayed in the rendered native context menu, as shown in the image below for the Tree Style Tab extension.
 
-![A tab context menu displayed for a tab item in the sidebar of the Tree Style Tab extension. The menu shows custom tab actions, a menu item for the extension, and a menu item for the Simple Tab Group extension.](custom_sidebar_tab_menu.png)
+![A tab context menu displayed for a tab item in the sidebar of the Tree Style Tab extension. The menu shows tab actions, a "Tree of tabs" menu item for the extension, and a "Move tab to group" menu item for the Simple Tab Groups extension.](custom_sidebar_tab_menu.png)
 
 ## Specifying context menu items
 
