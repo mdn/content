@@ -83,3 +83,7 @@ Firefox 160 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 160 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Render blocking**: `dom.element.blocking.enabled`
+
+  The `blocking="render` attribute and value is now supported for the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} HTML elements. This allows for rendering to be blocked, when an element is dynamically added via a script, until the recourse has been fetched. ([Firefox bug 1751383](https://bugzil.la/1751383)).
