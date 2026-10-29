@@ -65,14 +65,15 @@ The `params` field in the event notification is an object with the following fie
         - `size`
           - : A non-negative integer that contains the size of the cookie in bytes.
         - `value`
-          - : An object that contains the value of the cookie. It contains the following fields:
+          - : An object that contains the value of the cookie.
+            It contains the following fields:
             - `type`
-              - : A string that indicates how the `value` field of this object is encoded.
+              - : A string that indicates how the cookie value is encoded.
                 It has one of the following values:
                 - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
                 - `string`: The value is text.
             - `value`
-              - : A string that contains the cookie value, encoded as specified by `type`.
+              - : A string that contains the cookie value in the encoding specified by the [`type`](#type) field.
 
         Browsers can also include their own, browser-specific fields in these objects.
     - `destination`
@@ -84,14 +85,15 @@ The `params` field in the event notification is an object with the following fie
         - `name`
           - : A string that contains the header name, such as `Accept`.
         - `value`
-          - : An object that contains the header value. It contains the following fields:
+          - : An object that contains the header value.
+            It contains the following fields:
             - `type`
-              - : A string that indicates how the `value` field of this object is encoded.
+              - : A string that indicates how the header value is encoded.
                 It has one of the following values:
                 - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
                 - `string`: The value is text.
             - `value`
-              - : A string that contains the header value, encoded as specified by `type`.
+              - : A string that contains the header value in the encoding specified by the [`type`](#type_2) field.
     - `headersSize`
       - : A non-negative integer that contains the size of the request headers in bytes.
         For protocols that compress headers, such as HTTP/2, it is the compressed size.
@@ -171,19 +173,21 @@ The `params` field in the event notification is an object with the following fie
         - `name`
           - : A string that contains the header name, such as `Content-Type`.
         - `value`
-          - : An object that contains the header value. It contains the following fields:
+          - : An object that contains the header value.
+            It contains the following fields:
             - `type`
-              - : A string that indicates how the `value` field of this object is encoded.
+              - : A string that indicates how the header value is encoded.
                 It has one of the following values:
                 - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
                 - `string`: The value is text.
             - `value`
-              - : A string that contains the header value, encoded as specified by `type`.
+              - : A string that contains the header value in the encoding specified by the [`type`](#type_3) field.
     - `headersSize`
       - : A non-negative integer that contains the size of the response headers in bytes as received, or `null` if the browser doesn't report it.
     - `mimeType`
       - : A string that contains the [MIME type](/en-US/docs/Glossary/MIME_type) that the browser uses for the response, without parameters, such as `text/html` or `application/json`.
-        It can differ from the {{HTTPHeader("Content-Type")}} header, for example when the browser determines the type from the content, and it can be an empty string, for example for a redirect response.
+        It can differ from the {{HTTPHeader("Content-Type")}} header, for example when the browser determines the type from the content.
+        It can also be an empty string, for example for a redirect response.
     - `protocol`
       - : A string that contains the protocol of the response, such as `http/1.1` or `h2`.
         For a response that wasn't received over HTTP, it is the scheme of the response URL, such as `data`.
@@ -217,7 +221,9 @@ A response can be blocked here even if its request wasn't blocked in the `networ
 
 Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `network.responseStarted`.
 
-Suppose a tab has loaded `https://example.com/`, the browser has a `theme=dark` cookie for the site, and the page calls `fetch("/api/items")` to load a list of items as JSON.
+Suppose a tab has loaded `https://example.com/`.
+The browser has a `theme=dark` cookie for the site.
+The page calls `fetch("/api/items")` to load a list of items as JSON.
 When the response headers arrive, the browser sends the following event (the request's `headers` array is shortened, and some of the `request` fields are left out):
 
 ```json
@@ -333,11 +339,12 @@ When the response headers arrive, the browser sends the following event (the req
 ```
 
 At this point, the browser has received the response headers, but not necessarily the body.
-The final `bytesReceived` and body sizes are in the [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted) event with the same `request` ID.
+The final `bytesReceived` and body sizes are in the `response` object of the [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted) event with the same `request` ID.
 
 ### Receiving an event for a response from the cache
 
-Using the same connection, session, and subscription, suppose the page fetches the same URL twice, and the server allows the browser to cache the response for an hour (`Cache-Control: max-age=3600`).
+Using the same connection, session, and subscription as in the first example, suppose the page fetches the same URL twice.
+The server allows the browser to cache the response for an hour (`Cache-Control: max-age=3600`).
 For the second request, the browser serves the response from its cache and sends the following event (only some of the fields are shown):
 
 ```json
@@ -364,7 +371,7 @@ For the second request, the browser serves the response from its cache and sends
 }
 ```
 
-The `fromCache` field is `true`, and `bytesReceived` is `0` because nothing was received from the server.
+In the `response` object, `fromCache` is `true`, and `bytesReceived` is `0` because nothing was received from the server.
 
 ## Specifications
 

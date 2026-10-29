@@ -61,14 +61,15 @@ The `params` field in the event notification is an object with the following fie
         - `size`
           - : A non-negative integer that contains the size of the cookie in bytes.
         - `value`
-          - : An object that contains the value of the cookie. It contains the following fields:
+          - : An object that contains the value of the cookie.
+            It contains the following fields:
             - `type`
-              - : A string that indicates how the `value` field of this object is encoded.
+              - : A string that indicates how the cookie value is encoded.
                 It has one of the following values:
                 - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
                 - `string`: The value is text.
             - `value`
-              - : A string that contains the cookie value, encoded as specified by `type`.
+              - : A string that contains the cookie value in the encoding specified by the [`type`](#type) field.
 
         Browsers can also include their own, browser-specific fields in these objects.
     - `destination`
@@ -80,14 +81,15 @@ The `params` field in the event notification is an object with the following fie
         - `name`
           - : A string that contains the header name, such as `Accept`.
         - `value`
-          - : An object that contains the header value. It contains the following fields:
+          - : An object that contains the header value.
+            It contains the following fields:
             - `type`
-              - : A string that indicates how the `value` field of this object is encoded.
+              - : A string that indicates how the header value is encoded.
                 It has one of the following values:
                 - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
                 - `string`: The value is text.
             - `value`
-              - : A string that contains the header value, encoded as specified by `type`.
+              - : A string that contains the header value in the encoding specified by the [`type`](#type_2) field.
     - `headersSize`
       - : A non-negative integer that contains the size of the request headers in bytes.
         For protocols that compress headers, such as HTTP/2, it is the compressed size.
@@ -166,19 +168,21 @@ The `params` field in the event notification is an object with the following fie
         - `name`
           - : A string that contains the header name, such as `Content-Type`.
         - `value`
-          - : An object that contains the header value. It contains the following fields:
+          - : An object that contains the header value.
+            It contains the following fields:
             - `type`
-              - : A string that indicates how the `value` field of this object is encoded.
+              - : A string that indicates how the header value is encoded.
                 It has one of the following values:
                 - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
                 - `string`: The value is text.
             - `value`
-              - : A string that contains the header value, encoded as specified by `type`.
+              - : A string that contains the header value in the encoding specified by the [`type`](#type_3) field.
     - `headersSize`
       - : A non-negative integer that contains the size of the response headers in bytes as received, or `null` if the browser doesn't report it.
     - `mimeType`
       - : A string that contains the [MIME type](/en-US/docs/Glossary/MIME_type) that the browser uses for the response, without parameters, such as `text/html` or `application/json`.
-        It can differ from the {{HTTPHeader("Content-Type")}} header, for example when the browser determines the type from the content, and it can be an empty string, for example for a redirect response.
+        It can differ from the {{HTTPHeader("Content-Type")}} header, for example when the browser determines the type from the content.
+        It can also be an empty string, for example for a redirect response.
     - `protocol`
       - : A string that contains the protocol of the response, such as `http/1.1` or `h2`.
         For a response that wasn't received over HTTP, it is the scheme of the response URL, such as `data`.
@@ -200,7 +204,8 @@ It fires after [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference
 If the request fails at any point, [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError) fires, and it is the last event for the request.
 
 When the server responds with a redirect, this event fires for the redirect response too.
-The browser then sends `network.beforeRequestSent` for the new URL, with the same request ID and a `redirectCount` that is one higher, and the events for the new URL follow.
+The browser then sends `network.beforeRequestSent` for the new URL, with the same request ID and a `redirectCount` that is one higher.
+The other events for the new URL follow.
 
 The browser doesn't wait for the client after sending this event: a response can't be blocked at this point.
 
@@ -208,9 +213,10 @@ The browser doesn't wait for the client after sending this event: a response can
 
 ### Following a request through a redirect
 
-Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to the `network.beforeRequestSent`, `network.responseStarted`, and `network.responseCompleted` events.
+Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to the [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent), [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted), and `network.responseCompleted` events.
 
-Suppose a tab has loaded `https://example.com/`, and the page calls `fetch("/old-items")`.
+Suppose a tab has loaded `https://example.com/`.
+The page calls `fetch("/old-items")`.
 The server responds with a `302` redirect to `/api/items`.
 
 The browser sends `network.beforeRequestSent` and `network.responseStarted` for `/old-items`, and then the following `network.responseCompleted` event for the redirect response (only some of the fields are shown):
@@ -275,7 +281,7 @@ It then sends `network.beforeRequestSent` and `network.responseStarted` for `/ap
 }
 ```
 
-Both `network.responseCompleted` events have the same `request` ID, so you can tell that they belong to the same request.
+The `request` objects in both `network.responseCompleted` events have the same `request` ID, so you can tell that they belong to the same request.
 The `redirectCount` of `1` shows that the second response is the result of one redirect.
 
 ## Specifications

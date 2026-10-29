@@ -64,14 +64,15 @@ The `params` field in the event notification is an object with the following fie
         - `size`
           - : A non-negative integer that contains the size of the cookie in bytes.
         - `value`
-          - : An object that contains the value of the cookie. It contains the following fields:
+          - : An object that contains the value of the cookie.
+            It contains the following fields:
             - `type`
-              - : A string that indicates how the `value` field of this object is encoded.
+              - : A string that indicates how the cookie value is encoded.
                 It has one of the following values:
                 - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
                 - `string`: The value is text.
             - `value`
-              - : A string that contains the cookie value, encoded as specified by `type`.
+              - : A string that contains the cookie value in the encoding specified by the [`type`](#type) field.
 
         Browsers can also include their own, browser-specific fields in these objects.
     - `destination`
@@ -83,14 +84,15 @@ The `params` field in the event notification is an object with the following fie
         - `name`
           - : A string that contains the header name, such as `Accept`.
         - `value`
-          - : An object that contains the header value. It contains the following fields:
+          - : An object that contains the header value.
+            It contains the following fields:
             - `type`
-              - : A string that indicates how the `value` field of this object is encoded.
+              - : A string that indicates how the header value is encoded.
                 It has one of the following values:
                 - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
                 - `string`: The value is text.
             - `value`
-              - : A string that contains the header value, encoded as specified by `type`.
+              - : A string that contains the header value in the encoding specified by the [`type`](#type_2) field.
     - `headersSize`
       - : A non-negative integer that contains the size of the request headers in bytes.
         For protocols that compress headers, such as HTTP/2, it is the compressed size.
@@ -161,7 +163,8 @@ When a navigation fails, this event has the navigation's `navigation` ID, so you
 
 Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `network.fetchError`.
 
-Suppose a tab has loaded `https://example.com/`, and the page calls `fetch("https://unknown.invalid/items")`.
+Suppose a tab has loaded `https://example.com/`.
+The page calls `fetch("https://unknown.invalid/items")`.
 The `.invalid` domain never resolves, so the request fails.
 The browser sends the following event (the `headers` array is shortened, and some of the `request` fields are left out):
 
@@ -213,11 +216,13 @@ The browser sends the following event (the `headers` array is shortened, and som
 }
 ```
 
-The `errorText` describes the failed domain name lookup, and in the page, the `fetch()` call rejects with a {{jsxref("TypeError")}}.
+The `errorText` describes the failed domain name lookup.
+In the page, the `fetch()` call rejects with a {{jsxref("TypeError")}}.
 
 ### Receiving an event when a navigation fails
 
-Using the same connection and session, with a subscription to `browsingContext.navigationStarted` as well as `network.fetchError`, suppose you use [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) to load `https://example.com:59999/`, a port where no server is listening.
+Using the same connection, session, and subscription as in the first example, assume you also have a subscription to [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted).
+Suppose you use [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) to load `https://example.com:59999/`, a port where no server is listening.
 
 The browser sends a `browsingContext.navigationStarted` event with the navigation ID:
 
@@ -258,7 +263,8 @@ When the server refuses the connection, the browser sends the following `network
 }
 ```
 
-The `browsingContext.navigate` command returns an `unknown error` with no navigation ID, so use the `navigation` ID from the `browsingContext.navigationStarted` event to match this event to the navigation.
+The `browsingContext.navigate` command returns an `unknown error` with no navigation ID.
+To match this event to the navigation, use the `navigation` ID from the `browsingContext.navigationStarted` event.
 
 ## Specifications
 

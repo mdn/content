@@ -87,14 +87,15 @@ The `params` field in the event notification is an object with the following fie
         - `size`
           - : A non-negative integer that contains the size of the cookie in bytes.
         - `value`
-          - : An object that contains the value of the cookie. It contains the following fields:
+          - : An object that contains the value of the cookie.
+            It contains the following fields:
             - `type`
-              - : A string that indicates how the `value` field of this object is encoded.
+              - : A string that indicates how the cookie value is encoded.
                 It has one of the following values:
                 - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
                 - `string`: The value is text.
             - `value`
-              - : A string that contains the cookie value, encoded as specified by `type`.
+              - : A string that contains the cookie value in the encoding specified by the [`type`](#type) field.
 
         Browsers can also include their own, browser-specific fields in these objects.
     - `destination`
@@ -106,14 +107,15 @@ The `params` field in the event notification is an object with the following fie
         - `name`
           - : A string that contains the header name, such as `Accept`.
         - `value`
-          - : An object that contains the header value. It contains the following fields:
+          - : An object that contains the header value.
+            It contains the following fields:
             - `type`
-              - : A string that indicates how the `value` field of this object is encoded.
+              - : A string that indicates how the header value is encoded.
                 It has one of the following values:
                 - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
                 - `string`: The value is text.
             - `value`
-              - : A string that contains the header value, encoded as specified by `type`.
+              - : A string that contains the header value in the encoding specified by the [`type`](#type_2) field.
     - `headersSize`
       - : A non-negative integer that contains the size of the request headers in bytes.
         For protocols that compress headers, such as HTTP/2, it is the compressed size.
@@ -182,9 +184,10 @@ When `isBlocked` is `true`, the request waits until the client resumes it with t
 
 Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `network.beforeRequestSent`.
 
-Suppose you use [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) to load `https://example.com/` in a tab with the context ID `93ee5bd6-d256-4608-a002-9a8995cc0e5f`.
-The page loads a stylesheet and a script, and the browser already has a `theme=dark` cookie for the site from an earlier visit.
-The command, sent with `wait` set to `complete`, returns the navigation ID `a1b2c3d4-5678-90ab-cdef-1234567890ab`, but its response arrives after the event for the page request.
+Suppose you use [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) to load `https://example.com/` in a tab.
+The page loads a stylesheet and a script.
+The browser already has a `theme=dark` cookie for the site from an earlier visit.
+The command, sent with `wait` set to `complete`, returns the navigation ID, but its response arrives after the event for the page request.
 
 Before requesting the page, the browser sends the following event, with the same `navigation` ID (the `headers` array is shortened, and some of the `request` fields are left out):
 
@@ -284,7 +287,7 @@ Only the page request has that ID: the requests for its subresources have `null`
 
 ### Receiving an event for a request made by a script
 
-Using the same connection, session, and subscription, suppose the page's script, `/app.js`, has a function that adds an item to a list with `fetch()`:
+Using the same connection, session, and subscription as in the first example, suppose the page's script, `/app.js`, has a function that adds an item to a list with `fetch()`:
 
 ```js
 function addItem(name) {
@@ -333,7 +336,8 @@ When the page calls `addItem("Pen")`, the browser sends the following event befo
 ```
 
 The `initiator` points to the `fetch()` call in `addItem()`, on line 1 and column 9 of `/app.js`, counting from zero.
-The `initiatorType` of `fetch` and the empty `destination` show that a script made the request, and `bodySize` is the length of the JSON body, `{"name":"Pen"}`.
+In the `request` object, the `initiatorType` of `fetch` and the empty `destination` show that a script made the request.
+Its `bodySize` is the length of the JSON body, `{"name":"Pen"}`.
 Keep the `request` ID to match this request with the events that follow, such as [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted).
 
 ## Specifications
