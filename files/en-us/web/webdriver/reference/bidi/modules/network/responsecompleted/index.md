@@ -92,7 +92,8 @@ The `params` field in the event notification is an object with the following fie
       - : A non-negative integer that contains the size of the request headers in bytes.
         For protocols that compress headers, such as HTTP/2, it is the compressed size.
     - `initiatorType`
-      - : A string that indicates what started the request, such as `fetch`, `link`, or `script`, or `null` for a request with no initiator type, such as the request for a page loaded into a tab.
+      - : A string that indicates what started the request, such as `fetch`, `link`, or `script`.
+        For a request with no initiator type, such as the request for a page loaded into a tab, the value is `null` instead of a string.
         The values match those of {{domxref("PerformanceResourceTiming.initiatorType")}}.
     - `method`
       - : A string that contains the [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods), such as `GET` or `POST`.
@@ -196,7 +197,7 @@ The `params` field in the event notification is an object with the following fie
 
 In the [lifecycle of a request](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#requests), this is the last event for a response that the browser received successfully.
 It fires after [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) and [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) for the same request.
-If the request fails, [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError) fires.
+If the request fails at any point, [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError) fires, and it is the last event for the request.
 
 When the server responds with a redirect, this event fires for the redirect response too.
 The browser then sends `network.beforeRequestSent` for the new URL, with the same request ID and a `redirectCount` that is one higher, and the events for the new URL follow.
@@ -287,6 +288,7 @@ The `redirectCount` of `1` shows that the second response is the result of one r
 
 ## See also
 
+- [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) event
 - [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) event
 - [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError) event
 - [`session.subscribe`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) command

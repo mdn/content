@@ -96,7 +96,8 @@ The `params` field in the event notification is an object with the following fie
       - : A non-negative integer that contains the size of the request headers in bytes.
         For protocols that compress headers, such as HTTP/2, it is the compressed size.
     - `initiatorType`
-      - : A string that indicates what started the request, such as `fetch`, `link`, or `script`, or `null` for a request with no initiator type, such as the request for a page loaded into a tab.
+      - : A string that indicates what started the request, such as `fetch`, `link`, or `script`.
+        For a request with no initiator type, such as the request for a page loaded into a tab, the value is `null` instead of a string.
         The values match those of {{domxref("PerformanceResourceTiming.initiatorType")}}.
     - `method`
       - : A string that contains the [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods), such as `GET` or `POST`.
@@ -206,7 +207,6 @@ If the request fails after this event, for example because the page aborts it, [
 For a response that asks for authentication, the `network.authRequired` event can follow.
 
 At this point, the `response` object contains the status and the headers, but the fields that describe the body, such as `bodySize`, `bytesReceived`, and `content`, might not have their final values yet.
-The browser can also wait until it has received some or all of the body before sending this event, for example while it determines the MIME type of the response.
 
 When `isBlocked` is `true`, the response waits until the client resumes it with the `network.continueResponse`, `network.failRequest`, or `network.provideResponse` command.
 A response can be blocked here even if its request wasn't blocked in the `network.beforeRequestSent` event, and the other way round, depending on the phases of each intercept.
@@ -378,5 +378,6 @@ The `fromCache` field is `true`, and `bytesReceived` is `0` because nothing was 
 
 - [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) event
 - [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted) event
+- [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError) event
 - [`session.subscribe`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) command
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Reference/Status) reference

@@ -18,7 +18,6 @@ The `params` field in the event notification is an object with the following fie
 - `initiator` {{optional_inline}}
   - : An object that describes the JavaScript code that made the request.
     The browser includes it for a request made with {{domxref("Window/fetch", "fetch()")}} or {{domxref("XMLHttpRequest")}}.
-    Browsers can also include it for other requests, with only the deprecated `type` field.
     It can contain the following fields:
     - `columnNumber` {{optional_inline}}
       - : A non-negative integer that contains the zero-based column number of the code that made the request, or `0` if the stack trace is empty.
@@ -38,10 +37,6 @@ The `params` field in the event notification is an object with the following fie
               - : A non-negative integer that contains the zero-based line number of the executed code.
             - `url`
               - : A string that contains the URL of the script.
-    - `type` {{optional_inline}} {{deprecated_inline}}
-      - : A string that indicates the kind of code that made the request: `other`, `parser`, `preflight`, or `script`.
-        This field is kept for backwards compatibility and will be removed from the specification.
-        Use the `destination` and `initiatorType` fields of the `request` object instead.
 - `intercepts` {{optional_inline}}
   - : An array of one or more strings, each containing the ID of an intercept that blocks the request.
     This field is included only when `isBlocked` is `true`.
@@ -123,7 +118,8 @@ The `params` field in the event notification is an object with the following fie
       - : A non-negative integer that contains the size of the request headers in bytes.
         For protocols that compress headers, such as HTTP/2, it is the compressed size.
     - `initiatorType`
-      - : A string that indicates what started the request, such as `fetch`, `link`, or `script`, or `null` for a request with no initiator type, such as the request for a page loaded into a tab.
+      - : A string that indicates what started the request, such as `fetch`, `link`, or `script`.
+        For a request with no initiator type, such as the request for a page loaded into a tab, the value is `null` instead of a string.
         The values match those of {{domxref("PerformanceResourceTiming.initiatorType")}}.
     - `method`
       - : A string that contains the [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods), such as `GET` or `POST`.
@@ -172,8 +168,8 @@ The `params` field in the event notification is an object with the following fie
 ## Description
 
 In the [lifecycle of a request](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#requests), this is the first event.
-If the request succeeds, [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) fires when the browser has received the response headers, and [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted) fires when it has received the whole response.
-If the request fails, [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError) fires.
+When the browser has received the response headers, [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) fires, and when it has received the whole response, [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted) fires.
+If the request fails at any point, [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError) fires, and it is the last event for the request.
 If you're subscribed to this event, you always receive it before any other event for the same request, even when the request fails before it is sent.
 
 The event fires again for each redirect, with the same request ID and a `redirectCount` that is one higher.
@@ -198,9 +194,6 @@ Before requesting the page, the browser sends the following event, with the same
   "method": "network.beforeRequestSent",
   "params": {
     "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f",
-    "initiator": {
-      "type": "other"
-    },
     "isBlocked": false,
     "navigation": "a1b2c3d4-5678-90ab-cdef-1234567890ab",
     "redirectCount": 0,
@@ -354,6 +347,7 @@ Keep the `request` ID to match this request with the events that follow, such as
 ## See also
 
 - [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) event
+- [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted) event
 - [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError) event
 - [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted) event
 - [`session.subscribe`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) command

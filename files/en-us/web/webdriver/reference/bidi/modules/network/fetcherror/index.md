@@ -95,7 +95,8 @@ The `params` field in the event notification is an object with the following fie
       - : A non-negative integer that contains the size of the request headers in bytes.
         For protocols that compress headers, such as HTTP/2, it is the compressed size.
     - `initiatorType`
-      - : A string that indicates what started the request, such as `fetch`, `link`, or `script`, or `null` for a request with no initiator type, such as the request for a page loaded into a tab.
+      - : A string that indicates what started the request, such as `fetch`, `link`, or `script`.
+        For a request with no initiator type, such as the request for a page loaded into a tab, the value is `null` instead of a string.
         The values match those of {{domxref("PerformanceResourceTiming.initiatorType")}}.
     - `method`
       - : A string that contains the [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods), such as `GET` or `POST`.
@@ -270,6 +271,7 @@ The `browsingContext.navigate` command returns an `unknown error` with no naviga
 ## See also
 
 - [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) event
+- [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) event
 - [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted) event
 - [`browsingContext.navigationFailed`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationFailed) event
 - [`session.subscribe`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) command
