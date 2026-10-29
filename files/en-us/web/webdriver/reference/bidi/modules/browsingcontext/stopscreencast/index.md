@@ -51,7 +51,6 @@ The `result` object in the response contains the following fields:
 ## Description
 
 When the client sends `browsingContext.stopScreencast` for an active recording, the browser stops capturing and writes any remaining encoded data to the file identified by [`path`](#path) before sending the command response.
-After `browsingContext.stopScreencast` succeeds, using the same recording ID again throws the [`no such screencast`](#no_such_screencast) error.
 
 If the browser fails to write data to the file while the recording is in progress, it stops recording automatically.
 When the client subsequently sends `browsingContext.stopScreencast`, the browser returns a success response containing both the file `path` and an `error` description in the [`result`](#return_value) object.

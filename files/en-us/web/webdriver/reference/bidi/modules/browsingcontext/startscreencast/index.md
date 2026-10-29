@@ -26,7 +26,7 @@ The `browsingContext.startScreencast` [command](/en-US/docs/Web/WebDriver/Refere
   "params": {
     "context": "0b594fd2-e8de-4fd1-bad5-9b3d791bdb3d",
     "destinationFolder": "/home/example/recordings",
-    "mimeType": "video/mp4",
+    "mimeType": "video/webm",
     "video": {
       "frameRate": 15,
       "height": 720,
@@ -44,8 +44,8 @@ The `params` field contains:
   - : A string that contains the ID of the top-level context to record.
     Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 - `destinationFolder` {{optional_inline}}
-  - : A string that specifies the path to save the recording.
-    The path must identify an existing directory and is resolved from the root of the browser's filesystem.
+  - : A string that contains the path to the directory in which to save the recording.
+    The directory must already exist, and the path is resolved from the root of the browser's filesystem.
     If omitted, the file location is browser-dependent.
 - `mimeType` {{optional_inline}}
   - : A string that specifies the {{Glossary("MIME type")}} of the recording format.
@@ -88,7 +88,7 @@ The `result` object in the response contains the following fields:
 ## Description
 
 The `browsingContext.startScreencast` command records the viewport of the top-level context over time.
-Recording continues after the command responds, and the browser writes data to the file as the recording progresses.
+Recording continues after the browser sends the response, and the browser writes the recording to the file as it progresses.
 The response supplies a recording ID and a file path.
 Use this ID with [`browsingContext.stopScreencast`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/stopScreencast) to stop the recording.
 
