@@ -61,12 +61,12 @@ The `params` field contains:
   - : An object that specifies the body to send instead of the request's body.
     It contains the following fields:
     - `type`
-      - : A string that specifies how the `value` field of this object is encoded.
+      - : A string that specifies how the body is encoded.
         It can take one of the following values:
         - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes.
-        - `string`: The value is text, which the browser sends encoded as [UTF-8](/en-US/docs/Glossary/UTF-8).
+        - `string`: The value is text, which the browser sends encoded as [UTF-8](/en-US/docs/Glossary/UTF-8) bytes.
     - `value`
-      - : A string that contains the body, encoded as specified by `type`.
+      - : A string that contains the body in the encoding specified by the [`type`](#type) field.
 - `cookies` {{optional_inline}}
   - : An array of objects, each specifying a cookie to send with the request.
     The cookies replace the value of the request's {{HTTPHeader("Cookie")}} header, or are sent in a new `Cookie` header if the request has none.
@@ -76,38 +76,42 @@ The `params` field contains:
     - `name`
       - : A string that contains the name of the cookie.
     - `value`
-      - : An object that specifies the value of the cookie. It contains the following fields:
+      - : An object that specifies the value of the cookie.
+        It contains the following fields:
         - `type`
-          - : A string that specifies how the `value` field of this object is encoded.
+          - : A string that specifies how the cookie value is encoded.
             It can take one of the following values:
             - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes.
-            - `string`: The value is text, which the browser sends encoded as [UTF-8](/en-US/docs/Glossary/UTF-8).
+            - `string`: The value is text, which the browser sends encoded as [UTF-8](/en-US/docs/Glossary/UTF-8) bytes.
         - `value`
-          - : A string that contains the cookie value, encoded as specified by `type`.
+          - : A string that contains the cookie value in the encoding specified by the [`type`](#type_2) field.
 - `headers` {{optional_inline}}
   - : An array of objects, each specifying a header to send with the request.
-    The array replaces the request's headers, and a header left out of it might not be sent, so to add or change a header, send the headers from the `request.headers` field of the [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) event with your changes.
+    The array replaces the request's headers.
+    A header left out of it might not be sent.
+    To add or change a header, send the headers from the `headers` array in the `request` object of the [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) event, with your changes.
 
     Each object contains the following fields:
     - `name`
       - : A string that contains the header name, such as `X-Test-Run`.
         It must be a valid [HTTP header](/en-US/docs/Web/HTTP/Reference/Headers) name.
     - `value`
-      - : An object that specifies the header value. It contains the following fields:
+      - : An object that specifies the header value.
+        It contains the following fields:
         - `type`
-          - : A string that specifies how the `value` field of this object is encoded.
+          - : A string that specifies how the header value is encoded.
             It can take one of the following values:
             - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes.
-            - `string`: The value is text, which the browser sends encoded as [UTF-8](/en-US/docs/Glossary/UTF-8).
+            - `string`: The value is text, which the browser sends encoded as [UTF-8](/en-US/docs/Glossary/UTF-8) bytes.
         - `value`
-          - : A string that contains the header value, encoded as specified by `type`.
+          - : A string that contains the header value in the encoding specified by the [`type`](#type_3) field.
             The decoded header value cannot contain line breaks or null characters, or start or end with a space or tab.
 - `method` {{optional_inline}}
   - : A string that contains the [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods) to use instead of the request's method, such as `POST`.
     It must be a valid HTTP method name.
 - `request`
   - : A string that contains the ID of the blocked request.
-    Request IDs are in the `request.request` field of `network` events, such as `network.beforeRequestSent`.
+    Request IDs are in the `request` field of the `request` object in `network` events, such as `network.beforeRequestSent`.
 - `url` {{optional_inline}}
   - : A string that contains the absolute URL to request instead of the request's URL.
 
@@ -119,12 +123,13 @@ The `result` field in the response is an empty object (`{}`).
 
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
   - : Thrown in any of the following cases:
-    - `request` is missing or is not a string, another parameter has an invalid type, or a `type` field in `body`, `cookies`, or `headers` is not `base64` or `string`.
+    - A required parameter is missing, or a parameter has an invalid type.
+    - The `type` field in the `body` object, or in a cookie's or header's `value` object, is not `base64` or `string`.
     - The request is blocked in a phase other than `beforeRequestSent`.
     - `url` is not a valid absolute URL.
-    - `method` is not a valid HTTP method name.
-    - A header name in `headers` is not a valid header name.
-    - A header value in `headers` is not a valid header value.
+    - `method` is invalid.
+    - A header name in `headers` is invalid.
+    - A header value in `headers` is invalid.
 - `no such request`
   - : The session has no blocked request with the specified `request` ID, for example because the request was already resumed.
 
@@ -133,9 +138,10 @@ The `result` field in the response is an empty object (`{}`).
 ### Which requests can continue
 
 Use `network.continueRequest` for a request blocked in the `beforeRequestSent` phase, which is when its `network.beforeRequestSent` event has `isBlocked` set to `true`.
-A request blocked after the response started, or when the server asks for authentication, is resumed with other commands: see [Intercepts](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#intercepts).
+For a request blocked after the response started or when the server asks for authentication, use the other commands listed in [Intercepts](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#intercepts).
 
-If the command returns an error other than `no such request`, the request stays blocked, but the parameters processed before the error might already have changed it.
+If the command returns an error other than `no such request`, the request stays blocked.
+The parameters processed before the error might already have changed it.
 Send `network.continueRequest` again, or end the request with [`network.failRequest`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/failRequest) or [`network.provideResponse`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/provideResponse).
 
 ### Changing the request
@@ -143,17 +149,21 @@ Send `network.continueRequest` again, or end the request with [`network.failRequ
 The browser applies the changes before it sends the request, so the server receives the changed request.
 
 A changed `url` isn't a redirect: the browser sends no new `network.beforeRequestSent` event, the `redirectCount` field of the request's later events doesn't change, and a document loaded this way keeps the original URL as its location.
-The `request.url` field of the later events, such as [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted), contains the new URL.
+The `url` field in the `request` object of the later events, such as [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted), contains the new URL.
 
 ## Examples
 
 ### Adding a header to a request
 
-Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `network.beforeRequestSent`.
-Assume also that you've added an intercept for the `beforeRequestSent` phase that matches requests for `https://example.com/echo` and `https://example.com/api/items`, with [`network.addIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addIntercept).
+Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent).
 
-Suppose the browser has a `theme=dark` cookie for the site, and the page calls `fetch("/echo", { headers: { "X-Debug": "1" } })`. The browser blocks the request and sends a `network.beforeRequestSent` event with the request ID `b9e201af-6475-4bea-a174-51a8290f8087` and the request's headers in `request.headers`.
-Send the following message to send the request with those headers and an `X-Test-Run` header added at the end:
+Assume also that you added an intercept for the `beforeRequestSent` phase using [`network.addIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addIntercept).
+The intercept matches requests for `https://example.com/echo` and `https://example.com/api/items`.
+
+Suppose the browser has a `theme=dark` cookie for the site, and the page calls `fetch("/echo", { headers: { "X-Debug": "1" } })`.
+The browser blocks the request and sends a `network.beforeRequestSent` event.
+The event's `request` object contains the request ID and, in its `headers` array, the request's headers.
+Send the following message to continue the request with those headers and an `X-Test-Run` header added at the end:
 
 ```json
 {
@@ -228,8 +238,8 @@ If `headers` had contained only the `X-Test-Run` header, the request would have 
 
 ### Changing the cookies sent with a request
 
-Using the same connection, session, and intercept, suppose the page has a `theme=dark` cookie, and you want to check how the server responds to a request with other cookies, without changing the cookies the browser stores.
-When the browser blocks the page's next request, with the ID `37cf22b4-f399-4450-828d-d54fce56004e`, send the following message:
+Using the same connection, session, and intercept as in the first example, suppose the page has a `theme=dark` cookie, and you want to check how the server responds to a request with other cookies, without changing the cookies the browser stores.
+When the browser blocks the page's next request and sends a [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) event with its request ID, send the following message to replace the request's cookies:
 
 ```json
 {
@@ -272,8 +282,8 @@ The page's {{domxref("Document.cookie", "document.cookie")}} is still `theme=dar
 
 ### Changing the body of a request
 
-Using the same connection, session, and intercept, suppose the page adds an item to a list by sending `{"name":"Pen"}` in a `POST` request to `https://example.com/api/items`, and you want to test the server with another item name.
-When the browser blocks the request with the ID `ef49027d-aa97-44e4-bbe6-6ff8dbaa0c97`, send the following message to replace its body:
+Using the same connection, session, and intercept as in the first example, suppose the page adds an item to a list by sending `{"name":"Pen"}` in a `POST` request to `https://example.com/api/items`, and you want to test the server with another item name.
+When the browser blocks the request and sends a [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) event with its request ID, send the following message to replace its body:
 
 ```json
 {
@@ -303,8 +313,11 @@ The server receives `{"name":"Mug"}`, and the page's `fetch()` call receives the
 
 ### Loading a different URL for a navigation
 
-Using the same connection and session, and a subscription to `network.responseStarted` as well, suppose you want to try a new version of a checkout page, served from `https://example.com/new-checkout`, without changing the links that point to `https://example.com/checkout`.
-You add an intercept for `https://example.com/checkout` in the `beforeRequestSent` phase with `network.addIntercept`, which returns the intercept ID `ecc57375-44cc-46f8-abfd-f3f1c5489f71`, and then navigate the tab to that URL with [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate).
+Using the same connection, session, and subscription as in the first example, assume you also have a subscription to [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted).
+
+Suppose you want to try a new version of a checkout page, served from `https://example.com/new-checkout`, without changing the links that point to `https://example.com/checkout`.
+You add an intercept for `https://example.com/checkout` in the `beforeRequestSent` phase using [`network.addIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addIntercept), which returns its intercept ID.
+You then navigate the tab to that URL using [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate).
 
 The browser blocks the request and sends the following event (only some of the fields are shown):
 
