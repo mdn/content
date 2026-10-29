@@ -79,7 +79,7 @@ The `params` field in the event notification is an object with the following fie
       - : A string that contains the [destination](/en-US/docs/Web/API/Request/destination) of the request, such as `document`, `script`, or `style`.
         It is an empty string for a request made with `fetch()` or `XMLHttpRequest`.
     - `headers`
-      - : An array of objects, each representing a header of the request, including headers added with the `network.setExtraHeaders` command.
+      - : An array of objects, each representing a header of the request, including headers added with the [`network.setExtraHeaders`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/setExtraHeaders) command.
         Each object contains the following fields:
         - `name`
           - : A string that contains the header name, such as `Accept`.
@@ -96,7 +96,8 @@ The `params` field in the event notification is an object with the following fie
       - : A non-negative integer that contains the size of the request headers in bytes.
         For protocols that compress headers, such as HTTP/2, it is the compressed size.
     - `initiatorType`
-      - : A string that indicates what started the request, such as `fetch`, `link`, or `script`, or `null` for a request with no initiator type, such as the request for a page loaded into a tab.
+      - : A string that indicates what started the request, such as `fetch`, `link`, or `script`.
+        For a request with no initiator type, such as the request for a page loaded into a tab, the value is `null` instead of a string.
         The values match those of {{domxref("PerformanceResourceTiming.initiatorType")}}.
     - `method`
       - : A string that contains the [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods), such as `GET` or `POST`.
@@ -341,7 +342,10 @@ The browser sends the request again with the credentials, and the tab loads the 
 
 ## See also
 
+- [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) event
+- [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) event
+- [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted) event
+- [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError) event
 - [`network.continueWithAuth`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueWithAuth) command
 - [`network.addIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addIntercept) command
-- [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) event
 - [HTTP authentication](/en-US/docs/Web/HTTP/Guides/Authentication) guide
