@@ -54,7 +54,7 @@ When the session ends, its collectors release their data in the same way.
 
 ### Removing a collector
 
-Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `network.responseCompleted`.
+Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted).
 Suppose you added a collector for response bodies with `network.addDataCollector`, which returned the collector ID `a3f1662f-de73-4424-a0be-03a22bd22243`.
 The page in the tab with the context ID `93ee5bd6-d256-4608-a002-9a8995cc0e5f` fetched `https://example.com/api/items`, the collector collected the body of the response, and the request's `network.responseCompleted` event had the request ID `b9e201af-6475-4bea-a174-51a8290f8087`.
 
