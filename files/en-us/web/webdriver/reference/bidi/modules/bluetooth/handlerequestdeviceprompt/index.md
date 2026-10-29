@@ -48,7 +48,7 @@ The `params` field contains:
     - `false`: The prompt closes without a device, and `requestDevice()` rejects with a `NotFoundError` {{domxref("DOMException")}}.
 - `context`
   - : A string that contains the ID of the context that has the device prompt to close.
-    This is the `context` value of the `bluetooth.requestDevicePromptUpdated` event for the prompt.
+    This is the `context` value of the [`bluetooth.requestDevicePromptUpdated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth/requestDevicePromptUpdated) event for the prompt.
 - `device`
   - : A string that contains the ID of the device to choose: the `id` of one of the devices in the `devices` list of the `bluetooth.requestDevicePromptUpdated` event.
     Specify this only when the `accept` field value is `true`.
@@ -88,7 +88,7 @@ Once the prompt is closed, its ID can't be used again: a later `bluetooth.handle
 
 Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `bluetooth.requestDevicePromptUpdated`.
 Suppose you used [`bluetooth.simulateAdapter`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth/simulateAdapter) to simulate a powered-on adapter for the tab with the context ID `93ee5bd6-d256-4608-a002-9a8995cc0e5f`, which has a page from `https://example.com`.
-You then used `bluetooth.simulatePreconnectedPeripheral` to add a device named `Heart Rate Monitor` with the address `09:09:09:09:09:09` and the heart rate service (`0000180d-0000-1000-8000-00805f9b34fb`).
+You then used [`bluetooth.simulatePreconnectedPeripheral`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth/simulatePreconnectedPeripheral) to add a device named `Heart Rate Monitor` with the address `09:09:09:09:09:09` and the heart rate service (`0000180d-0000-1000-8000-00805f9b34fb`).
 
 The page asks for a heart rate monitor, which it can do only in response to a user's action, such as a click, or to a `script.callFunction` command with `userActivation` set to `true`:
 

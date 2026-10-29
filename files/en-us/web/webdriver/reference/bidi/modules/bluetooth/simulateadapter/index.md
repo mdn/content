@@ -112,7 +112,7 @@ The browser responds with an empty `result` object:
 ```
 
 The page now uses the simulated adapter: {{domxref("Bluetooth.getAvailability()", "navigator.bluetooth.getAvailability()")}} resolves with `true`.
-The adapter has no devices yet: add them with `bluetooth.simulatePreconnectedPeripheral`, so that the ones that match the page's filters appear in the [device prompt](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth#the_device_prompt) when the page calls {{domxref("Bluetooth.requestDevice()", "navigator.bluetooth.requestDevice()")}}.
+The adapter has no devices yet: add them with [`bluetooth.simulatePreconnectedPeripheral`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth/simulatePreconnectedPeripheral), so that the ones that match the page's filters appear in the [device prompt](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth#the_device_prompt) when the page calls {{domxref("Bluetooth.requestDevice()", "navigator.bluetooth.requestDevice()")}}.
 
 ### Changing the state of the adapter
 

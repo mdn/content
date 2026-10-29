@@ -18,7 +18,7 @@ It lets you test a website that uses the [Web Bluetooth API](/en-US/docs/Web/API
 ## Simulated adapter
 
 Each [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) can have a simulated Bluetooth adapter.
-While it has one, the pages in the context and in its child contexts use the simulated adapter: {{domxref("Bluetooth.getAvailability()", "navigator.bluetooth.getAvailability()")}} reports on it, and {{domxref("Bluetooth.requestDevice()", "navigator.bluetooth.requestDevice()")}} can find the simulated devices that you add to it with `bluetooth.simulatePreconnectedPeripheral`.
+While it has one, the pages in the context and in its child contexts use the simulated adapter: {{domxref("Bluetooth.getAvailability()", "navigator.bluetooth.getAvailability()")}} reports on it, and {{domxref("Bluetooth.requestDevice()", "navigator.bluetooth.requestDevice()")}} can find the simulated devices that you add to it with [`bluetooth.simulatePreconnectedPeripheral`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth/simulatePreconnectedPeripheral).
 
 A simulated adapter has the following properties:
 
@@ -41,7 +41,7 @@ When a page calls `requestDevice()` in response to a user's action, the browser 
 The prompt lists the nearby devices that match the options the page passed, so that the user can choose one.
 With a simulated adapter, the list includes the simulated devices that match.
 
-When the prompt opens, the browser sends a `bluetooth.requestDevicePromptUpdated` event to the sessions that are [subscribed](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to it.
+When the prompt opens, the browser sends a [`bluetooth.requestDevicePromptUpdated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth/requestDevicePromptUpdated) event to the sessions that are [subscribed](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to it.
 While the prompt is open, the browser can send the event again with the same prompt ID, as the list of devices changes.
 The event contains the ID of the context that called `requestDevice()`, the ID of the prompt, and the devices that the prompt lists, each with an ID and a name (`null` if the device has none).
 
