@@ -65,14 +65,15 @@ The `params` field in the event notification is an object with the following fie
         - `size`
           - : A non-negative integer that contains the size of the cookie in bytes.
         - `value`
-          - : An object that contains the value of the cookie. It contains the following fields:
+          - : An object that contains the value of the cookie.
+            It contains the following fields:
             - `type`
-              - : A string that indicates how the `value` field of this object is encoded.
+              - : A string that indicates how the cookie value is encoded.
                 It has one of the following values:
                 - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
                 - `string`: The value is text.
             - `value`
-              - : A string that contains the cookie value, encoded as specified by `type`.
+              - : A string that contains the cookie value in the encoding specified by the [`type`](#type) field.
 
         Browsers can also include their own, browser-specific fields in these objects.
     - `destination`
@@ -84,14 +85,15 @@ The `params` field in the event notification is an object with the following fie
         - `name`
           - : A string that contains the header name, such as `Accept`.
         - `value`
-          - : An object that contains the header value. It contains the following fields:
+          - : An object that contains the header value.
+            It contains the following fields:
             - `type`
-              - : A string that indicates how the `value` field of this object is encoded.
+              - : A string that indicates how the header value is encoded.
                 It has one of the following values:
                 - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
                 - `string`: The value is text.
             - `value`
-              - : A string that contains the header value, encoded as specified by `type`.
+              - : A string that contains the header value in the encoding specified by the [`type`](#type_2) field.
     - `headersSize`
       - : A non-negative integer that contains the size of the request headers in bytes.
         For protocols that compress headers, such as HTTP/2, it is the compressed size.
@@ -169,14 +171,15 @@ The `params` field in the event notification is an object with the following fie
         - `name`
           - : A string that contains the header name, such as `Content-Type`.
         - `value`
-          - : An object that contains the header value. It contains the following fields:
+          - : An object that contains the header value.
+            It contains the following fields:
             - `type`
-              - : A string that indicates how the `value` field of this object is encoded.
+              - : A string that indicates how the header value is encoded.
                 It has one of the following values:
                 - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
                 - `string`: The value is text.
             - `value`
-              - : A string that contains the header value, encoded as specified by `type`.
+              - : A string that contains the header value in the encoding specified by the [`type`](#type_3) field.
     - `headersSize`
       - : A non-negative integer that contains the size of the response headers in bytes as received, or `null` if the browser doesn't report it.
     - `mimeType`
@@ -197,7 +200,8 @@ The `params` field in the event notification is an object with the following fie
 
 ## Description
 
-In the [lifecycle of a request](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#requests), this event fires after [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent), when the server asks for credentials with a challenge in the {{HTTPHeader("WWW-Authenticate")}} header of a `401` response, or a proxy asks with a challenge in the {{HTTPHeader("Proxy-Authenticate")}} header of a `407` response.
+In the [lifecycle of a request](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#requests), this event fires after [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent).
+It fires when the server asks for credentials with a challenge in the {{HTTPHeader("WWW-Authenticate")}} header of a `401` response, or when a proxy asks with a challenge in the {{HTTPHeader("Proxy-Authenticate")}} header of a `407` response.
 It doesn't fire when the browser already has credentials for the realm, for example credentials provided earlier, and sends them with the request.
 For how a client answers the challenge, see [Authentication](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#authentication).
 
@@ -218,12 +222,14 @@ The request keeps its ID until it completes.
 
 Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `network.authRequired`.
 
-Suppose a tab shows `https://example.com/`, which has set a `theme=dark` cookie, and the site's admin page at `https://example.com/admin/` needs a username and password.
-You add an intercept for that URL in the `authRequired` phase with [`network.addIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addIntercept), which returns the intercept ID `7a721ad7-7a58-4b0c-b4c0-d7d80051cd25`.
-Then you navigate the tab, whose context ID is `93ee5bd6-d256-4608-a002-9a8995cc0e5f`, to the admin page with [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate).
-The navigation gets the ID `a1b2c3d4-5678-90ab-cdef-1234567890ab`, which the command's response contains once the request continues.
+Assume also that a tab shows `https://example.com/`, which has set a `theme=dark` cookie.
+The site's admin page at `https://example.com/admin/` needs a username and password.
+You added an intercept for that URL in the `authRequired` phase using [`network.addIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addIntercept), which returned its ID.
+You then navigated the tab to the admin page using [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate).
+The command's response, which contains the navigation ID, arrives only once the request continues.
 
-The server responds with a `401` status and the header `WWW-Authenticate: Basic realm="Shop admin"`, and the browser sends the following event (the request and response headers are shortened, and some fields are left out):
+The server responds with a `401` status and the header `WWW-Authenticate: Basic realm="Shop admin"`.
+The browser then sends the following event (the request and response headers are shortened, and some fields are left out):
 
 ```json
 {
@@ -302,7 +308,7 @@ The server responds with a `401` status and the header `WWW-Authenticate: Basic 
 ```
 
 The request waits until you resume it.
-To sign in, send the following message with the username and password:
+Send the following message to continue the request with a username and password using [`network.continueWithAuth`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueWithAuth):
 
 ```json
 {
