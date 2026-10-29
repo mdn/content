@@ -136,7 +136,7 @@ Use `network.continueRequest` for a request blocked in the `beforeRequestSent` p
 A request blocked after the response started, or when the server asks for authentication, is resumed with other commands: see [Intercepts](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#intercepts).
 
 If the command returns an error other than `no such request`, the request stays blocked, but the parameters processed before the error might already have changed it.
-Send `network.continueRequest` again, or end the request with [`network.failRequest`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/failRequest) or `network.provideResponse`.
+Send `network.continueRequest` again, or end the request with [`network.failRequest`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/failRequest) or [`network.provideResponse`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/provideResponse).
 
 ### Changing the request
 

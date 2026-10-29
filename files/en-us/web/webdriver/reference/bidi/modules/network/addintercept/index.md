@@ -50,7 +50,7 @@ The `params` field contains:
 - `phases`
   - : An array of one or more strings, each specifying a phase of a request in which the intercept blocks it.
     Each value can be one of the following:
-    - `authRequired`: The request is blocked when the server asks for authentication, when the browser sends the `network.authRequired` event.
+    - `authRequired`: The request is blocked when the server asks for authentication, when the browser sends the [`network.authRequired`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/authRequired) event.
     - `beforeRequestSent`: The request is blocked before the browser sends it, when the browser sends the [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) event.
     - `responseStarted`: The request is blocked after the browser receives the response headers, when the browser sends the [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) event.
 - `urlPatterns` {{optional_inline}}

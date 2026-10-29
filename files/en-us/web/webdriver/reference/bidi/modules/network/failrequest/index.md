@@ -45,7 +45,7 @@ The `result` field in the response is an empty object (`{}`).
 
 `network.failRequest` ends a request blocked in the `beforeRequestSent` or `responseStarted` phase.
 A request blocked in the `authRequired` phase can't be failed: the command returns an `invalid argument` error, and the request stays blocked.
-To go on without providing credentials, use `network.continueWithAuth` with the `cancel` action, which gives the page the server's response, such as a `401` status.
+To go on without providing credentials, use [`network.continueWithAuth`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueWithAuth) with the `cancel` action, which gives the page the server's response, such as a `401` status.
 
 The browser treats the request as failed with a network error: whatever made the request gets a network error, for example, a {{domxref("Window/fetch", "fetch()")}} call rejects with a {{jsxref("TypeError")}}.
 If you're subscribed to [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError), you also receive the event for the request.
@@ -56,7 +56,7 @@ In the `responseStarted` phase, the server has already responded, and the browse
 
 ### Failing a request before it's sent
 
-Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `network.beforeRequestSent`, `network.fetchError`, and `network.responseStarted`.
+Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `network.beforeRequestSent`, `network.fetchError`, and [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted).
 Assume also that you've added an intercept for `https://example.com/api/items` in the `beforeRequestSent` phase with [`network.addIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addIntercept), which returned the intercept ID `7a721ad7-7a58-4b0c-b4c0-d7d80051cd25`.
 
 Suppose you want to check how the page handles a list of items that fails to load.
