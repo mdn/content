@@ -7,7 +7,8 @@ browser-compat: webdriver.bidi.network.removeDataCollector
 sidebar: webdriver
 ---
 
-The `network.removeDataCollector` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`network`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network) module removes a [data collector](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#data_collectors) that was added with [`network.addDataCollector`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addDataCollector), so that it stops collecting data and releases the data that it has collected.
+The `network.removeDataCollector` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`network`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network) module removes a [data collector](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#data_collectors) that was added with [`network.addDataCollector`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addDataCollector).
+The collector stops collecting data and releases the data that it has collected.
 
 ## Syntax
 
@@ -35,13 +36,13 @@ The `result` field in the response is an empty object (`{}`).
 ### Errors
 
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
-  - : `collector` is missing or is not a string.
+  - : A required parameter is missing or has an invalid type.
 - `no such network collector`
-  - : The session has no collector with the specified `collector` ID, for example because it was already removed or another session added it.
+  - : No collector with the given `collector` ID is found in the session, for example because it was already removed or another session added it.
 
 ## Description
 
-Once the collector is removed, it doesn't collect the bodies of new requests, and it releases every body that it has collected.
+Once the collector is removed, it doesn't collect the bodies of new requests and releases every body that it has collected.
 A body that no other collector keeps is deleted, so [`network.getData`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/getData) returns a `no such network data` error for it.
 A body that another collector also keeps stays available.
 
@@ -55,10 +56,12 @@ When the session ends, its collectors release their data in the same way.
 ### Removing a collector
 
 Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted).
-Suppose you added a collector for response bodies with `network.addDataCollector`, which returned the collector ID `a3f1662f-de73-4424-a0be-03a22bd22243`.
-The page in the tab with the context ID `93ee5bd6-d256-4608-a002-9a8995cc0e5f` fetched `https://example.com/api/items`, the collector collected the body of the response, and the request's `network.responseCompleted` event had the request ID `b9e201af-6475-4bea-a174-51a8290f8087`.
 
-When you no longer need the collected bodies, send the following message to remove the collector:
+Assume also that you added a collector for response bodies using [`network.addDataCollector`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addDataCollector), which returned its ID.
+The page in a tab then fetched `https://example.com/api/items`, and the collector collected the body of the response.
+You received the request ID in the `network.responseCompleted` event for that request.
+
+Send the following message to remove the collector when you no longer need the collected bodies:
 
 ```json
 {
@@ -81,7 +84,7 @@ The browser responds with an empty `result` object:
 ```
 
 No other collector kept the response body, so the browser deleted it.
-If you then send `network.getData` for the request, the browser responds with an error:
+If you then send [`network.getData`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/getData) for the request, the browser responds with an error:
 
 ```json
 {
@@ -95,10 +98,13 @@ If you then send `network.getData` for the request, the browser responds with an
 
 ### Removing one of two collectors
 
-Using the same connection, session, and subscription, suppose you added two collectors for response bodies: one for the tab, with the collector ID `3b0a4aff-5b99-46e7-ba56-32fc3f380481`, and one for all contexts, with the collector ID `95e01386-aeaf-48b2-ab87-7a5f4fa61b8f`.
-Both collected the body of the response to another request for `https://example.com/api/items` in the tab, whose `network.responseCompleted` event had the request ID `37cf22b4-f399-4450-828d-d54fce56004e`.
+Using the same connection, session, and subscription as in the first example, suppose you added two collectors for response bodies using `network.addDataCollector`, which returned their IDs.
+The first collector is for the tab, and the second one is for all contexts.
+Both collected the body of the response to another request for `https://example.com/api/items` in the tab.
+You received the request ID in the `network.responseCompleted` event for that request.
+You then removed the collector for the tab using `network.removeDataCollector`.
 
-After you remove the first collector with `network.removeDataCollector`, send the following message to retrieve the body:
+Send the following message to retrieve the body:
 
 ```json
 {
@@ -128,7 +134,8 @@ The second collector still keeps the body, so the browser responds with it:
 
 ### Removing a collector that doesn't exist
 
-Using the same connection and session, if you send `network.removeDataCollector` again with the ID `3b0a4aff-5b99-46e7-ba56-32fc3f380481`, which you've already removed, the browser responds with an error:
+Using the same connection and session as in the first example, suppose you send `network.removeDataCollector` again with the ID of the collector for the tab from the second example, which you've already removed.
+The browser responds with an error:
 
 ```json
 {

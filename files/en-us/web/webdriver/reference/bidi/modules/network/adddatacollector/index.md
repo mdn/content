@@ -7,7 +7,8 @@ browser-compat: webdriver.bidi.network.addDataCollector
 sidebar: webdriver
 ---
 
-The `network.addDataCollector` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`network`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network) module adds a [data collector](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#data_collectors), which makes the browser keep the bodies of requests or responses, so that the client can retrieve them with [`network.getData`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/getData).
+The `network.addDataCollector` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`network`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network) module adds a [data collector](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#data_collectors), which makes the browser keep the bodies of requests or responses.
+You can then retrieve these bodies using [`network.getData`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/getData).
 
 ## Syntax
 
@@ -50,8 +51,8 @@ The `params` field contains:
   - : A string that specifies the type of the collector.
     The only value is `blob`, which is the default.
 - `contexts` {{optional_inline}}
-  - : An array of one or more context ID strings, each identifying a [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) whose requests the collector collects data for.
-    Data from the child contexts of each top-level context, such as iframes, is collected too.
+  - : An array of one or more context ID strings, each identifying a [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) in which the collector collects data.
+    The collector also collects data from their child contexts, such as iframes.
     Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 
     This field cannot be used if `userContexts` is also specified.
@@ -70,7 +71,7 @@ The `params` field contains:
     It must not be greater than the browser's limit for all the data it collects, which depends on the browser.
 
 - `userContexts` {{optional_inline}}
-  - : An array of one or more [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) ID strings, each identifying a user context whose requests the collector collects data for.
+  - : An array of one or more strings, each identifying a [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) in which the collector collects data.
     User context IDs are returned by commands such as [`browser.createUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext) or [`browser.getUserContexts`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/getUserContexts).
 
     This field cannot be used if `contexts` is also specified.
@@ -89,16 +90,19 @@ The `result` object in the response contains the following field:
 
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
   - : Thrown in any of the following cases:
-    - `dataTypes` or `maxEncodedDataSize` is missing, or a parameter has an invalid type, such as a `dataTypes` value that is not `request` or `response`, or a `collectorType` that is not `blob`.
+    - A required parameter is missing, or a parameter has an invalid type.
+    - A value in `dataTypes` is not `request` or `response`.
+    - `collectorType` is not `blob`.
     - `dataTypes` is empty.
     - Both `contexts` and `userContexts` are specified.
     - `contexts` or `userContexts` is specified but empty.
-    - `maxEncodedDataSize` is not a positive integer, or is greater than the browser's limit for all the data it collects.
+    - `maxEncodedDataSize` is not a positive integer.
+    - `maxEncodedDataSize` is greater than the browser's limit for all the data it collects.
     - A context specified in `contexts` is not a top-level context.
 - `no such frame`
-  - : No context is found for an ID specified in `contexts`.
+  - : No context with an ID specified in `contexts` is found.
 - `no such user context`
-  - : No user context is found for an ID specified in `userContexts`.
+  - : No user context with an ID specified in `userContexts` is found.
 
 ## Description
 
@@ -110,9 +114,12 @@ A collector collects the body of a request or response only when all of the foll
 
 A collector keeps a response body only once the browser has received all of it.
 For a redirect, it keeps only the body of the final response.
-It doesn't collect the bodies of requests that completed before the collector was added, and might not collect those of requests already in progress, so add it before the requests start.
+It doesn't collect the bodies of requests that completed before the collector was added.
+It might not collect the bodies of requests already in progress, so add the collector before the requests start.
 
-A response body is kept as the page receives it, after the browser decompresses it, though `maxEncodedDataSize` applies to its compressed size: a gzip-compressed JSON response of 2,110 bytes that decompresses to 14,057 bytes is collected with a `maxEncodedDataSize` of `10000`, and [`network.getData`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/getData) returns the decompressed JSON.
+The collector keeps a response body as the page receives it, after the browser decompresses it.
+However, `maxEncodedDataSize` applies to the body's compressed size.
+For example, a gzip-compressed JSON response of 2,110 bytes that decompresses to 14,057 bytes is collected with a `maxEncodedDataSize` of `10000`, and [`network.getData`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/getData) returns the decompressed JSON.
 
 Collectors belong to the session that adds them.
 A collected body stays available until every collector that collected it releases it, or until the browser discards it to make room for newer bodies, as described in [Data collectors](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#data_collectors).
@@ -121,10 +128,12 @@ A collected body stays available until every collector that collected it release
 
 ### Collecting response bodies in all contexts
 
-Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `network.responseCompleted`.
-The tab with the context ID `93ee5bd6-d256-4608-a002-9a8995cc0e5f` shows `https://example.com/`, whose script loads a list of items from `https://example.com/api/items` when a visitor asks for it.
+Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted).
 
-To keep the bodies of the responses that the browser receives, send the following message:
+Assume also that a tab shows `https://example.com/`, whose script loads a list of items from `https://example.com/api/items` when a user asks for it.
+You got the tab's context ID using [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
+
+Send the following message to collect the bodies of responses from all contexts:
 
 ```json
 {
@@ -205,9 +214,11 @@ The browser responds with the JSON that the page received:
 
 ### Collecting response bodies in one tab
 
-Using the same connection, session, and tab, suppose you removed the first collector with [`network.removeDataCollector`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/removeDataCollector), created a second tab with [`browsingContext.create`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/create), which returned the context ID `5e5e96e8-5247-4f22-9b35-a4a2d841cbaa`, and navigated it to `https://example.com/` with [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate).
+Using the same connection, session, and tab as in the first example, suppose you removed the first collector using [`network.removeDataCollector`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/removeDataCollector).
+You then opened a second tab using [`browsingContext.create`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/create), which returned its context ID.
+You then loaded `https://example.com/` in the second tab using [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate).
 
-Send the following message to collect only the response bodies of the first tab:
+Send the following message to collect response bodies only from the first tab:
 
 ```json
 {
@@ -233,8 +244,8 @@ The browser responds with the ID of the new collector:
 }
 ```
 
-When the page in the second tab then loads the list of items, after the collector was added, the `network.responseCompleted` event has the request ID `37cf22b4-f399-4450-828d-d54fce56004e`.
-The collector didn't collect the response, so if you ask for it with `network.getData`, the browser responds with an error:
+When the page in the second tab then loads the list of items, after the collector was added, the [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted) event has the request ID `37cf22b4-f399-4450-828d-d54fce56004e`.
+The collector didn't collect the response body, so if you request it using [`network.getData`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/getData), the browser responds with an error:
 
 ```json
 {
@@ -248,7 +259,7 @@ The collector didn't collect the response, so if you ask for it with `network.ge
 
 ### Specifying both `contexts` and `userContexts`
 
-Using the same connection and session, suppose you send `network.addDataCollector` with both `contexts` and `userContexts`:
+Using the same connection and session as in the first example, suppose you send `network.addDataCollector` with both `contexts` and `userContexts`:
 
 ```json
 {
