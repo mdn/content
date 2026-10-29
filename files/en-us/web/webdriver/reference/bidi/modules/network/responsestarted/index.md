@@ -18,11 +18,11 @@ The `params` field in the event notification is an object with the following fie
 - `intercepts` {{optional_inline}}
   - : An array of one or more strings, each containing the ID of an intercept that blocks the response.
     This field is included only when `isBlocked` is `true`.
-    Intercept IDs are returned by the `network.addIntercept` command.
+    Intercept IDs are returned by the [`network.addIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addIntercept) command.
 - `isBlocked`
   - : A boolean that indicates whether the response is blocked by an intercept.
     - `true`: The response matches one or more intercepts listed in the `intercepts` field.
-      The browser doesn't process the response further until the client resumes it, for example with the `network.continueResponse` command.
+      The browser doesn't process the response further until the client resumes it, for example with the [`network.continueResponse`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueResponse) command.
     - `false`: The response doesn't match any of the session's intercepts.
 - `navigation`
   - : A string that contains the [UUID](/en-US/docs/Glossary/UUID) that uniquely identifies the navigation that the request is part of, or `null` if the request isn't a navigation request.
@@ -79,7 +79,7 @@ The `params` field in the event notification is an object with the following fie
       - : A string that contains the [destination](/en-US/docs/Web/API/Request/destination) of the request, such as `document`, `script`, or `style`.
         It is an empty string for a request made with `fetch()` or `XMLHttpRequest`.
     - `headers`
-      - : An array of objects, each representing a header of the request, including headers added with the `network.setExtraHeaders` command.
+      - : An array of objects, each representing a header of the request, including headers added with the [`network.setExtraHeaders`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/setExtraHeaders) command.
         Each object contains the following fields:
         - `name`
           - : A string that contains the header name, such as `Accept`.
@@ -204,11 +204,11 @@ In the [lifecycle of a request](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules
 
 It also fires for redirect responses and for responses served from the browser's cache.
 If the request fails after this event, for example because the page aborts it, [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError) fires.
-For a response that asks for authentication, the `network.authRequired` event can follow.
+For a response that asks for authentication, the [`network.authRequired`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/authRequired) event can follow.
 
 At this point, the `response` object contains the status and the headers, but the fields that describe the body, such as `bodySize`, `bytesReceived`, and `content`, might not have their final values yet.
 
-When `isBlocked` is `true`, the response waits until the client resumes it with the `network.continueResponse`, `network.failRequest`, or `network.provideResponse` command.
+When `isBlocked` is `true`, the response waits until the client resumes it with the `network.continueResponse`, [`network.failRequest`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/failRequest), or [`network.provideResponse`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/provideResponse) command.
 A response can be blocked here even if its request wasn't blocked in the `network.beforeRequestSent` event, and the other way round, depending on the phases of each intercept.
 
 ## Examples
@@ -379,5 +379,6 @@ The `fromCache` field is `true`, and `bytesReceived` is `0` because nothing was 
 - [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) event
 - [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted) event
 - [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError) event
+- [`network.authRequired`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/authRequired) event
 - [`session.subscribe`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) command
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Reference/Status) reference

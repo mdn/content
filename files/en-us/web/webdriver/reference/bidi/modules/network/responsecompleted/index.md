@@ -75,7 +75,7 @@ The `params` field in the event notification is an object with the following fie
       - : A string that contains the [destination](/en-US/docs/Web/API/Request/destination) of the request, such as `document`, `script`, or `style`.
         It is an empty string for a request made with `fetch()` or `XMLHttpRequest`.
     - `headers`
-      - : An array of objects, each representing a header of the request, including headers added with the `network.setExtraHeaders` command.
+      - : An array of objects, each representing a header of the request, including headers added with the [`network.setExtraHeaders`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/setExtraHeaders) command.
         Each object contains the following fields:
         - `name`
           - : A string that contains the header name, such as `Accept`.
@@ -291,5 +291,6 @@ The `redirectCount` of `1` shows that the second response is the result of one r
 - [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) event
 - [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) event
 - [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError) event
+- [`network.authRequired`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/authRequired) event
 - [`session.subscribe`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) command
 - [Redirections in HTTP](/en-US/docs/Web/HTTP/Guides/Redirections) guide

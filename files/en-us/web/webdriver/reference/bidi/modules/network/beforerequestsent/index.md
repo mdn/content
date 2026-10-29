@@ -40,11 +40,11 @@ The `params` field in the event notification is an object with the following fie
 - `intercepts` {{optional_inline}}
   - : An array of one or more strings, each containing the ID of an intercept that blocks the request.
     This field is included only when `isBlocked` is `true`.
-    Intercept IDs are returned by the `network.addIntercept` command.
+    Intercept IDs are returned by the [`network.addIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addIntercept) command.
 - `isBlocked`
   - : A boolean that indicates whether the request is blocked by an intercept.
     - `true`: The request matches one or more intercepts listed in the `intercepts` field.
-      The browser doesn't send the request until the client resumes it, for example with the `network.continueRequest` command.
+      The browser doesn't send the request until the client resumes it, for example with the [`network.continueRequest`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueRequest) command.
     - `false`: The request doesn't match any of the session's intercepts.
 - `navigation`
   - : A string that contains the [UUID](/en-US/docs/Glossary/UUID) that uniquely identifies the navigation that the request is part of, or `null` if the request isn't a navigation request.
@@ -101,7 +101,7 @@ The `params` field in the event notification is an object with the following fie
       - : A string that contains the [destination](/en-US/docs/Web/API/Request/destination) of the request, such as `document`, `script`, or `style`.
         It is an empty string for a request made with `fetch()` or `XMLHttpRequest`.
     - `headers`
-      - : An array of objects, each representing a header of the request, including headers added with the `network.setExtraHeaders` command.
+      - : An array of objects, each representing a header of the request, including headers added with the [`network.setExtraHeaders`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/setExtraHeaders) command.
         Each object contains the following fields:
         - `name`
           - : A string that contains the header name, such as `Accept`.
@@ -174,7 +174,7 @@ If you're subscribed to this event, you always receive it before any other event
 
 The event fires again for each redirect, with the same request ID and a `redirectCount` that is one higher.
 
-When `isBlocked` is `true`, the request waits until the client resumes it with the `network.continueRequest`, `network.failRequest`, or `network.provideResponse` command.
+When `isBlocked` is `true`, the request waits until the client resumes it with the `network.continueRequest`, [`network.failRequest`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/failRequest), or [`network.provideResponse`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/provideResponse) command.
 
 ## Examples
 
@@ -349,5 +349,6 @@ Keep the `request` ID to match this request with the events that follow, such as
 - [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) event
 - [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted) event
 - [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError) event
+- [`network.authRequired`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/authRequired) event
 - [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted) event
 - [`session.subscribe`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) command
