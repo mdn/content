@@ -40,27 +40,35 @@ The `result` field in the response is an empty object (`{}`).
 
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
   - : Thrown in any of the following cases:
-    - `context` is missing or is not a string.
+    - A required parameter is missing or has an invalid type.
     - `context` is not a top-level context.
 - `no such frame`
-  - : No context with the specified `context` ID is found.
+  - : No context with the given `context` ID is found.
 
 ## Description
 
-Once the simulated adapter is removed, the pages in the context and its child contexts no longer see its state or its simulated devices, and {{domxref("Bluetooth.getAvailability()", "navigator.bluetooth.getAvailability()")}} again reports whether the system has a Bluetooth adapter.
+Once the simulated adapter is removed, the pages in the context and its child contexts no longer see its state or its simulated devices.
+In a page that is allowed to use Bluetooth, {{domxref("Bluetooth.getAvailability()", "navigator.bluetooth.getAvailability()")}} again reports whether the system has a Bluetooth adapter.
 The command succeeds whether or not the context has a simulated adapter.
 
-The simulated adapter belongs to the top-level context, not to the session: it stays until you remove it with this command or the context is closed.
+The simulated adapter belongs to the top-level context, not to the session.
+It stays until you remove it with this command or until the context is closed.
 
 To simulate an adapter again, use [`bluetooth.simulateAdapter`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth/simulateAdapter).
-It creates a new adapter with no simulated devices, so you can specify `leSupported` again, which `bluetooth.simulateAdapter` rejects while the context has an adapter.
+That command then creates a new adapter with no simulated devices.
+Since the context no longer has an adapter, you can specify `leSupported` in that command again.
 
 ## Examples
 
 ### Ending the simulation
 
 Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new).
-Suppose you used [`bluetooth.simulateAdapter`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth/simulateAdapter) to simulate an `absent` adapter for the tab with the context ID `93ee5bd6-d256-4608-a002-9a8995cc0e5f`, which has a page from `https://example.com`, so that {{domxref("Bluetooth.getAvailability()", "navigator.bluetooth.getAvailability()")}} resolves with `false` in that page.
+
+Assume also that a tab is open, showing a page from `https://example.com`.
+You opened the tab using [`browsingContext.create`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/create), which returned its context ID.
+You then loaded the page in the tab using [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate).
+After that, you simulated an `absent` adapter for the tab using [`bluetooth.simulateAdapter`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth/simulateAdapter).
+As a result, {{domxref("Bluetooth.getAvailability()", "navigator.bluetooth.getAvailability()")}} resolves with `false` in the page.
 
 When you've finished testing, send the following message to remove the simulated adapter:
 
@@ -84,7 +92,8 @@ The browser responds with an empty `result` object:
 }
 ```
 
-With the simulated adapter removed, `navigator.bluetooth.getAvailability()` in the page resolves with `true` again, because the computer has a Bluetooth adapter.
+The page no longer uses the simulated adapter.
+If the computer has a Bluetooth adapter, `navigator.bluetooth.getAvailability()` in the page resolves with `true` again.
 
 ## Specifications
 

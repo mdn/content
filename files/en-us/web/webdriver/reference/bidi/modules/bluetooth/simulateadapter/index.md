@@ -41,7 +41,7 @@ The `bluetooth.simulateAdapter` [command](/en-US/docs/Web/WebDriver/Reference/Bi
 The `params` field contains:
 
 - `context`
-  - : A string that contains the ID of the [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) to simulate the adapter for.
+  - : A string that contains the ID of the [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) for which to simulate the adapter.
     Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 - `leSupported` {{optional_inline}}
   - : A boolean that indicates whether the simulated adapter supports Bluetooth Low Energy (LE).
@@ -65,11 +65,12 @@ The `result` field in the response is an empty object (`{}`).
 
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
   - : Thrown in any of the following cases:
-    - `context` or `state` is missing, `context` is not a string, `state` is not `absent`, `powered-off`, or `powered-on`, or `leSupported` is not a boolean.
+    - A required parameter is missing, or a parameter has an invalid type.
+    - `state` is not `absent`, `powered-off`, or `powered-on`.
     - `context` is not a top-level context.
     - `leSupported` is specified and the context already has a simulated adapter.
 - `no such frame`
-  - : No context with the specified `context` ID is found.
+  - : No context with the given `context` ID is found.
 
 ## Description
 
@@ -78,17 +79,21 @@ The adapter supports Bluetooth LE unless `leSupported` is `false`.
 If the context already has a simulated adapter, the command changes only its state: the adapter keeps its LE support and the simulated devices that you added to it.
 
 The simulated adapter applies to the pages in the top-level context and its child contexts, and not to other top-level contexts.
-It belongs to the context, not to the session: it stays when the context navigates to another page, until you remove it or the context is closed.
-To remove it, use [`bluetooth.disableSimulation`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth/disableSimulation).
+It belongs to the context, not to the session.
+It stays when the context navigates to another page, until you remove it with a [`bluetooth.disableSimulation`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth/disableSimulation) command or until the context is closed.
 
 ## Examples
 
 ### Simulating a powered-on adapter
 
 Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new).
-Suppose the tab with the context ID `93ee5bd6-d256-4608-a002-9a8995cc0e5f` has a page from `https://example.com` that uses the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API).
 
-To test the page without Bluetooth hardware, send the following message to simulate an adapter that is powered on:
+Assume also that a tab is open, showing a page from `https://example.com` that uses the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API).
+You opened the tab using [`browsingContext.create`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/create), which returned its context ID.
+You then loaded the page in the tab using [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate).
+
+Suppose you want to test the page without Bluetooth hardware.
+Send the following message to simulate a powered-on adapter for the tab:
 
 ```json
 {
@@ -111,12 +116,16 @@ The browser responds with an empty `result` object:
 }
 ```
 
-The page now uses the simulated adapter: {{domxref("Bluetooth.getAvailability()", "navigator.bluetooth.getAvailability()")}} resolves with `true`.
-The adapter has no devices yet: add them with [`bluetooth.simulatePreconnectedPeripheral`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth/simulatePreconnectedPeripheral), so that the ones that match the page's filters appear in the [device prompt](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth#the_device_prompt) when the page calls {{domxref("Bluetooth.requestDevice()", "navigator.bluetooth.requestDevice()")}}.
+The page now uses the simulated adapter.
+In a page that is allowed to use Bluetooth, {{domxref("Bluetooth.getAvailability()", "navigator.bluetooth.getAvailability()")}} resolves with `true`.
+
+The adapter has no devices yet.
+To add them, use [`bluetooth.simulatePreconnectedPeripheral`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth/simulatePreconnectedPeripheral).
+When the page then calls {{domxref("Bluetooth.requestDevice()", "navigator.bluetooth.requestDevice()")}} in response to a user's action, the [device prompt](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth#the_device_prompt) includes the simulated devices that match the page's filters.
 
 ### Changing the state of the adapter
 
-Using the same connection and session, send the following message to simulate a system with no Bluetooth adapter in the same tab:
+Using the same connection, session, and tab as in the first example, send the following message to simulate a system with no Bluetooth adapter in the tab:
 
 ```json
 {
