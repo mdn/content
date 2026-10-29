@@ -54,55 +54,62 @@ The `params` field contains:
       This value requires `collector`.
 - `request`
   - : A string that contains the ID of the request.
-    Request IDs are in the `request.request` field of `network` events, such as [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted).
+    Request IDs are in the `request` field of the `request` object in `network` events, such as [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted).
 
 ### Return value
 
 The `result` object in the response contains the following field:
 
 - `bytes`
-  - : An object that contains the body. It contains the following fields:
+  - : An object that contains the body.
+    It contains the following fields:
     - `type`
-      - : A string that specifies how the `value` field of this object is encoded.
+      - : A string that specifies how the body is encoded.
         It can take one of the following values:
         - `base64`: The body isn't valid [UTF-8](/en-US/docs/Glossary/UTF-8) text (a PNG image, for example), and the value is its [Base64](/en-US/docs/Glossary/Base64)-encoded bytes.
         - `string`: The body is valid UTF-8 text, and the value is that text.
     - `value`
-      - : A string that contains the body, encoded as specified by `type`.
+      - : A string that contains the body in the encoding specified by the [`type`](#type) field.
         For a response, this is the body as the page receives it, after the browser decodes it.
 
 ### Errors
 
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
   - : Thrown in any of the following cases:
-    - `dataType` or `request` is missing, or a parameter has an invalid type or value, such as a `dataType` that is not `request` or `response`.
+    - A required parameter is missing, or a parameter has an invalid type.
+    - `dataType` is not `request` or `response`.
     - `disown` is `true`, but `collector` is not specified.
 - `no such network collector`
-  - : The session has no collector with the specified `collector` ID.
+  - : No collector with the given `collector` ID is found in the session.
 - `no such network data`
   - : Thrown in any of the following cases:
     - The browser keeps no data of the specified `dataType` for the request, for example because no collector collected it, or because every collector that collected it has released it.
     - `collector` is specified, and that collector doesn't keep the data.
 - `unavailable network data`
-  - : The browser doesn't have the body, although it started to collect it: for example, it discarded the body to stay within its limit for all the data it collects, or the request failed before the whole body arrived.
+  - : The browser started to collect the body but doesn't have it.
+    For example, the browser discarded the body to stay within its limit for all the data it collects, or the request failed before the whole body arrived.
 
 ## Description
 
 A collector keeps a response body only once the browser has received all of it.
-If you send `network.getData` while a response body is still arriving, for example after the [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) event and before [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted), the browser responds once the whole body has arrived or the request has failed.
+If you send `network.getData` while a response body is still arriving, the browser responds once the whole body has arrived or the request has failed.
+For example, a response body can still be arriving after the [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) event and before [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted).
 
 After a redirect, the request keeps its request ID, and the browser keeps only the body of the final response.
 
 The data stays available until every collector that collected it releases it, or until the browser discards it to stay within its limit for all the data it collects, as described in [Data collectors](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#data_collectors).
-Once no collector keeps a body, the browser deletes it, so releasing the bodies that you no longer need from every collector that keeps them, with `disown` or with [`network.disownData`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/disownData), leaves more room within that limit.
+Once no collector keeps a body, the browser deletes it.
+To leave more room within that limit, release the bodies that you no longer need from every collector that keeps them, using `disown` or [`network.disownData`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/disownData).
 
 ## Examples
 
 ### Retrieving a response body
 
-Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `network.responseCompleted`.
-Suppose you loaded `https://example.com/` in the tab with the context ID `93ee5bd6-d256-4608-a002-9a8995cc0e5f`, then added a collector for request and response bodies with [`network.addDataCollector`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addDataCollector), which returned the collector ID `a3f1662f-de73-4424-a0be-03a22bd22243`.
-Then the page's script fetched a list of items from `https://example.com/api/items`.
+Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted).
+
+Assume also that you loaded `https://example.com/` in a tab.
+You then added a collector for request and response bodies using [`network.addDataCollector`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addDataCollector), which returned its ID.
+After that, the page's script fetched a list of items from `https://example.com/api/items`.
 
 The browser sent a `network.responseCompleted` event for the list (only some of the fields are shown):
 
@@ -161,7 +168,9 @@ The browser responds with the JSON that the page received, as text:
 
 ### Retrieving a binary response body
 
-Using the same connection, session, and collector, suppose the page also loaded the image `https://example.com/logo.png`, and its `network.responseCompleted` event had the request ID `37cf22b4-f399-4450-828d-d54fce56004e`.
+Using the same connection, session, and collector as in the first example, suppose the page also loaded the image `https://example.com/logo.png`.
+You received the image's request ID in a `network.responseCompleted` event.
+
 Send the following message to retrieve the image:
 
 ```json
@@ -192,8 +201,11 @@ The image isn't valid UTF-8 text, so the browser responds with its bytes Base64-
 
 ### Retrieving a request body
 
-Using the same connection, session, and collector, suppose the page's script added an item by sending a `POST` request with a JSON body to `https://example.com/api/items`, and its `network.responseCompleted` event had the request ID `ef49027d-aa97-44e4-bbe6-6ff8dbaa0c97`.
-The collector collects request bodies too, so send the following message to retrieve the body that the page sent:
+Using the same connection, session, and collector as in the first example, suppose the page's script added an item by sending a `POST` request with a JSON body to `https://example.com/api/items`.
+You received the request ID in a `network.responseCompleted` event.
+
+The collector also collects request bodies.
+Send the following message to retrieve the body that the page sent:
 
 ```json
 {
@@ -223,7 +235,8 @@ The browser responds with the body of the request:
 
 ### Retrieving data and releasing it
 
-Using the same connection, session, and collector, if you no longer need the body of the response to the first request once you have it, send the following message to retrieve it and release it from the collector:
+Using the same connection, session, and collector as in the first example, suppose you no longer need the response body of the first request once you have it.
+Send the following message to retrieve the body and release it from the collector:
 
 ```json
 {
