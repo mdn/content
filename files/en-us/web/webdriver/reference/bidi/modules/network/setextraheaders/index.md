@@ -125,7 +125,7 @@ The `result` field in the response is an empty object (`{}`).
 ## Description
 
 The browser adds the headers to every request from the contexts they apply to, including navigation requests and requests made by scripts, such as with {{domxref("Window/fetch", "fetch()")}}.
-The headers are added before the browser emits the `network.beforeRequestSent` event, so the `request.headers` field of the event already includes them.
+The headers are added before the browser emits the [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) event, so the `request.headers` field of the event already includes them.
 
 An extra header replaces any header with the same name that the browser would otherwise send, such as {{HTTPHeader("Accept-Language")}}.
 It doesn't add to the existing value.
