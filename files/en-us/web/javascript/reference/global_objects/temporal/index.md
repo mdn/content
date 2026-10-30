@@ -12,7 +12,7 @@ The **`Temporal`** object enables date and time management in various scenarios,
 
 Unlike most global objects, `Temporal` is not a constructor. You cannot use it with the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `Temporal` object as a function. All properties and methods of `Temporal` are static (just like the {{jsxref("Math")}} object).
 
-`Temporal` has an intricate and powerful API. It exposes over 200 utility methods via several classes, so it could appear very complex. We will provide a high-level overview of how these APIs are related to each other.
+`Temporal` has an intricate and powerful API. It exposes over 200 utility methods via several classes, so it could appear very complex. We will provide a high-level overview of how these APIs are related to each other. You can read the [Representing dates & times](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times) for the `Temporal` object, and the [Temporal cookbook](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times/Cookbook) for snippets for common use cases (including how to migrate from `Date` to `Temporal`).
 
 ### Background and concepts
 
