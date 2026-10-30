@@ -9,6 +9,9 @@ sidebar: cssref
 
 The **`offset-rotate`** [CSS](/en-US/docs/Web/CSS) property defines the orientation/direction of the element as it is positioned along the {{cssxref("offset-path")}}.
 
+> [!NOTE]
+> Early versions of the spec called this property `motion-rotation`.
+
 {{InteractiveExample("CSS Demo: offset-rotate")}}
 
 ```css interactive-example-choice
@@ -88,9 +91,6 @@ button.addEventListener("click", () => {
   }
 });
 ```
-
-> [!NOTE]
-> Early versions of the spec called this property `motion-rotation`.
 
 ## Syntax
 

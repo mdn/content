@@ -103,10 +103,6 @@ transform: perspective(6.5cm);
 }
 ```
 
-The `perspective()` transform function is part of the {{cssxref('transform')}} value applied on the
-element being transformed. This differs from the {{cssxref('perspective')}} and {{cssxref('perspective-origin')}}
-properties which are attached to the parent of a child transformed in 3-dimensional space.
-
 ## Syntax
 
 ```css
@@ -147,6 +143,12 @@ perspective(d)
     </tr>
   </tbody>
 </table>
+
+## Description
+
+The `perspective()` transform function is part of the {{cssxref('transform')}} value applied on the
+element being transformed. This differs from the {{cssxref('perspective')}} and {{cssxref('perspective-origin')}}
+properties which are attached to the parent of a child transformed in 3-dimensional space.
 
 ## Formal syntax
 
