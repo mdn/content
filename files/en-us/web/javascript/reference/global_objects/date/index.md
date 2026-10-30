@@ -9,7 +9,7 @@ sidebar: jsref
 JavaScript **`Date`** objects represent a single moment in time in a platform-independent format. `Date` objects encapsulate an integral number that represents milliseconds since the midnight at the beginning of January 1, 1970, UTC (the _epoch_).
 
 > [!NOTE]
-> With the introduction of the {{jsxref("Temporal")}} API, the `Date` object is considered a legacy feature. Consider using `Temporal` for new code and migrate existing code over to it if possible (check the [browser compatibility](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#browser_compatibility). We will be writing a usage guide soon!
+> With the introduction of the {{jsxref("Temporal")}} API, the `Date` object is considered a legacy feature. Consider using `Temporal` for new code and migrate existing code over to it if possible (check the [browser compatibility](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#browser_compatibility). Read the [Representing dates & times](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times) for the `Temporal` object, and the [Temporal cookbook](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times/Cookbook) for snippets for common use cases (including how to migrate from `Date` to `Temporal`).
 
 ## Description
 

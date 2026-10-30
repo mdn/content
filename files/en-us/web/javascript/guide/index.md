@@ -86,7 +86,11 @@ Overview: [Numbers and strings](/en-US/docs/Web/JavaScript/Guide/Numbers_and_str
 
 Overview: [Representing dates & times](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times)
 
-- [`Date` object](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times#date_object)
+- [Instants](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times#instants)
+- [Zoned date-times](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times#zoned_date-times)
+- [Plain date-times, dates, and times](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times#plain_date-times_dates_and_times)
+- [Plain year-months and month-days](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times#plain_year-months_and_month-days)
+- [Cookbook](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times/Cookbook)
 
 ## Regular expressions
 

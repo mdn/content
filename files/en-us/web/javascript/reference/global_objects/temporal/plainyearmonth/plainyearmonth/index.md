@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainYearMonth() constructor
+short-title: Temporal.PlainYearMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/PlainYearMonth
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Temporal.PlainYearMonth.PlainYearMonth
