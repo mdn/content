@@ -977,8 +977,8 @@
       ],
       "properties": ["HTMLCanvasElement.content", "HTMLElement.drawable"],
       "events": [
-        "GlobalEventHandlers: elementgeometryupdate",
-        "GlobalEventHandlers: paint"
+        "HTMLCanvasElement: elementgeometryupdate",
+        "HTMLCanvasElement: paint"
       ]
     },
     "HTML Sanitizer API": {

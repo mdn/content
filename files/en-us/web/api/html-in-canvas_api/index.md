@@ -38,7 +38,7 @@ In 3D contexts, the elements are uploaded/drawn into textures to be used inside 
 
 Other features include:
 
-- The {{domxref("GlobalEventHandlers.paint_event", "paint")}} event, which fires on the `<canvas>` whenever `drawable` descendants are repainted, enabling you to only repaint the ones that have changed.
+- The {{domxref("HTMLCanvasElement.paint_event", "paint")}} event, which fires on the `<canvas>` whenever `drawable` descendants are repainted, enabling you to only repaint the ones that have changed.
 - The {{domxref("HTMLCanvasElement.requestPaint()")}} method, which schedules a single `paint` event even if no repaints occurred, useful for example if you want to move elements around the canvas.
 - The {{domxref("HTMLCanvasElement.updateElementGeometry()")}} method, which updates the size, shape, and position of a rendered element's underlying DOM presence, for example so you can still click a rendered {{htmlelement("button")}} after the canvas rendering has moved.
 
@@ -47,9 +47,9 @@ For more information, read our guides, starting with [Using the HTML-in-Canvas A
 ## Interfaces
 
 - {{domxref("CanvasPaintEvent")}}
-  - : Event object for the {{domxref("GlobalEventHandlers.paint_event", "paint")}} event, which fires when `drawable` elements have been repainted.
+  - : Event object for the {{domxref("HTMLCanvasElement.paint_event", "paint")}} event, which fires when `drawable` elements have been repainted.
 - {{domxref("ElementGeometryUpdateEvent")}}
-  - : Event object for the {{domxref("GlobalEventHandlers.elementgeometryupdate_event", "elementgeometryupdate")}} event, which fires when `drawable` element geometry has been updated via an {{domxref("OffscreenCanvas")}}.
+  - : Event object for the {{domxref("HTMLCanvasElement.elementgeometryupdate_event", "elementgeometryupdate")}} event, which fires when `drawable` element geometry has been updated via an {{domxref("OffscreenCanvas")}}.
 - {{domxref("ElementImage")}}
   - : Represents a precaptured snapshot of a `drawable` element (captured using {{domxref("HTMLCanvasElement.captureElementImage()")}}), which can be rendered later on.
 
@@ -68,7 +68,14 @@ For more information, read our guides, starting with [Using the HTML-in-Canvas A
 - {{domxref("HTMLCanvasElement.getElementTransform()")}}
   - : Returns the `DOMMatrix` representing the transform currently applied to a `drawable` element's underlying DOM presence.
 - {{domxref("HTMLCanvasElement.requestPaint()")}}
-  - : schedules a single {{domxref("GlobalEventHandlers.paint_event", "paint")}} event even if no repaints occurred.
+  - : schedules a single {{domxref("HTMLCanvasElement.paint_event", "paint")}} event even if no repaints occurred.
+
+#### Events
+
+- {{domxref("HTMLCanvasElement.paint_event", "paint")}}
+  - : Fired when `drawable` elements have been repainted.
+- {{domxref("HTMLCanvasElement.elementgeometryupdate_event", "elementgeometryupdate")}}
+  - : Fired when `drawable` element geometry has been updated via an {{domxref("OffscreenCanvas")}}.
 
 ### `OffscreenCanvas`
 
@@ -95,13 +102,6 @@ For more information, read our guides, starting with [Using the HTML-in-Canvas A
 
 - {{domxref("GPUQueue.drawElementImageToTexture()")}}
   - : Draws the current state of a `drawable` element (or an {{domxref("ElementImage")}}) into a texture that can be used in a WebGPU canvas content.
-
-### Events
-
-- {{domxref("GlobalEventHandlers.paint_event", "paint")}}
-  - : Fired when `drawable` elements have been repainted.
-- {{domxref("GlobalEventHandlers.elementgeometryupdate_event", "elementgeometryupdate")}}
-  - : Fired when `drawable` element geometry has been updated via an {{domxref("OffscreenCanvas")}}.
 
 ## HTML additions
 
