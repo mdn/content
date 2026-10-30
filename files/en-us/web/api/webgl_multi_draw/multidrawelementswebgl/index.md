@@ -6,7 +6,7 @@ page-type: webgl-extension-method
 browser-compat: api.WEBGL_multi_draw.multiDrawElementsWEBGL
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WEBGL_multi_draw.multiDrawElementsWEBGL()`** method of
 the
