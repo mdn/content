@@ -11,7 +11,7 @@ This article demonstrates how to use the [Fullscreen API](/en-US/docs/Web/API/Fu
 ## Activating fullscreen mode
 
 Given an element that you'd like to present in fullscreen mode (such as a {{HTMLElement("video")}}, for example), you can present it in fullscreen mode by calling its {{DOMxRef("Element.requestFullscreen", "requestFullscreen()")}} method.
-The user has to interact with the page or a UI element in order for this feature to work (it requires [Transient user activation](/en-US/docs/Web/Security/Defenses/User_activation))
+The user has to interact with the page or a UI element in order for this feature to work (it requires [Transient user activation](/en-US/docs/Web/Security/Defenses/User_activation)).
 
 Let's consider this {{HTMLElement("video")}} element:
 
@@ -50,11 +50,16 @@ It's not guaranteed that you'll be able to switch into fullscreen mode. For exam
 
 ## Browser keyboard locking
 
-Some applications want to use use keys or key-combinations that the are normally handled by the browser or the underlying OS.
-For example, a game might want to use the <kbd>Esc</kbd> key to invoke a menu instead of exiting fullscreen mode.
+Keyboard locking allows a web app to receive and handle keys or key-combinations that are normally handled by the browser or the underlying OS.
 
-Keyboard locking mode allows you exit fullscreen mode using a long-press of the normal exit key (usually <kbd>Esc</kbd>), and intercept and handle other keys you might not otherwise be able to, including the normal exit key!
+Some of these keys might normally be used by the browser to exit fullscreen mode.
+In this case the browser is expected to give the user an alternative way to exit: typically a long-press of the same key.
 
+For example, browsers typically use the <kbd>Esc</kbd> key to exit fullscreen mode, but a web app might want to use it to show a menu.
+With keyboard lock, the app can intercept <kbd>Esc</kbd> and call `preventDefault()` to stop it from exiting fullscreen.
+The user can still exit with a long-press of <kbd>Esc</kbd>.
+
+To enable keyboard locking, set the [`keyboardlock`](/en-US/docs/Web/API/Element/requestFullscreen#keyboardlock) option to `browser` in your call to {{domxref("Element.requestFullscreen", requestFullscreen())}}.
 The HTML below shows a video element we might want to display full screen.
 
 ```html
@@ -94,9 +99,8 @@ kbd {
 }
 ```
 
-The following code adds an `click` event handler for the video element that calls `requestFullscreen({ keyboardLock: "browser" }))` if <kbd>Enter</kbd> or <kbd>Shift+F</kbd> are pressed when not in fullscreen mode.
-Setting the [`options.keyboardLock`](#keyboardlock) to `"browser"` is what activates keyboard lock.
-When we're in fullscreen mode we check if the <kbd>Escape</kbd> key was pressed and call `event.preventDefault()` to disable the default action (which would be to exit fullscreen mode).
+The following code adds an `click` event handler for the video element. The click handler calls `requestFullscreen({ keyboardLock: "browser" }))` if <kbd>Enter</kbd> or <kbd>Shift+F</kbd> are pressed when not in fullscreen mode.
+When we're in fullscreen mode we check if the <kbd>Esc</kbd> key was pressed and call `event.preventDefault()` to disable the default action (which would be to exit fullscreen mode).
 
 ```js
 const video = document.querySelector("video");
@@ -119,11 +123,8 @@ document.addEventListener("keydown", (event) => {
 ```
 
 You can see this in operation below.
-Select the frame and press <kbd>Shift+F</kbd>.
-When the page displays full frame, note the temporary notification at the top of the page that explains how to exit full screen mode.
-
-On [browsers that support the `keyboardLock` option](/en-US/docs/Web/API/Element/requestFullscreen#browser_compatibility) you will need a long-press to exit full screen mode.
-On other browsers you will be able to exit with the normal key.
+Select the frame and press <kbd>Shift+F</kbd> to enter fullscreen mode.
+Note the temporary notification that appears at the top of the fullscreen page explaining how to exit full screen mode.
 
 {{embedlivesample("Browser keyboard locking", , "400", "", "", "", "fullscreen")}}
 
@@ -137,7 +138,7 @@ It can also exit fullscreen mode for any other reason it chooses, such as when n
 
 You can programmatically exit fullscreen mode by calling the {{DOMxRef("Document.exitFullscreen()")}} method.
 If there are multiple elements in fullscreen mode, calling `exitFullscreen()` only exits the topmost element, revealing the next element below it.
-Pressing the browser-specific exit key that was shown in the notifiction when entering fullscreen mode (usually <kbd>Esc</kbd>) exits all fullscreen elements.
+Pressing the browser-specific exit key that was shown in the notification when entering fullscreen mode (usually <kbd>Esc</kbd>) exits all fullscreen elements.
 
 ## Other information
 
