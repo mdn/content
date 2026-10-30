@@ -42,7 +42,10 @@ sidebar: addonsidebar
         "none"
       ]
     },
-    "strict_min_version": "58.0"
+    "strict_min_version": "140.0"
+  },
+  "gecko_android": {
+    "strict_min_version": "142.0"
   }
 }
 </pre
