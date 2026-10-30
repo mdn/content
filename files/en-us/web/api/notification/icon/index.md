@@ -18,9 +18,7 @@ A string.
 
 ## Examples
 
-In our [To-do list app](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view the app running live](https://mdn.github.io/dom-examples/to-do-notifications/)), we use the {{domxref("Notification.Notification","Notification()")}}
-constructor to fire a notification, passing it arguments to specify the body, icon and
-title we want.
+In our To-do Notifications app, we use the {{domxref("Notification.Notification","Notification()")}} constructor to fire a notification, passing it arguments to specify the body, icon and title we want. For a complete working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 const notification = new Notification("To do list", {

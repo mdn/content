@@ -34,6 +34,8 @@ An {{domxref("IDBVersionChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Examples
 
+For a complete working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+
 Using `addEventListener()`:
 
 ```js
