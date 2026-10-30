@@ -60,7 +60,7 @@ You can declare a regular image first so browsers that do not support `filter()`
 
 ## Formal syntax
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## Specifications
 
