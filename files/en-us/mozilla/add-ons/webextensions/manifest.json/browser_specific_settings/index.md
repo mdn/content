@@ -42,7 +42,7 @@ sidebar: addonsidebar
         "none"
       ]
     },
-    "strict_min_version": "58.0"
+    "strict_min_version": "140.0"
   }
 }
 </pre
@@ -155,13 +155,17 @@ Example with all possible keys. Note that most extensions omit `strict_max_versi
 "browser_specific_settings": {
   "gecko": {
     "id": "@addon-example",
-    "strict_min_version": "42.0",
-    "strict_max_version": "50.*",
+    "strict_min_version": "128.0",
+    "strict_max_version": "159.*",
     "update_url": "https://example.com/updates.json"
+  },
+  "gecko_android": {
+    "strict_min_version": "128.0",
+    "strict_max_version": "159.*"
   },
   "safari": {
     "strict_min_version": "14",
-    "strict_max_version": "20"
+    "strict_max_version": "26"
   }
 }
 ```
