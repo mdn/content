@@ -23,6 +23,10 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
 
 ## Instance properties
 
+- {{domxref("WebTransport.anticipatedConcurrentIncomingBidirectionalStreams", "anticipatedConcurrentIncomingBidirectionalStreams")}} {{experimental_inline}}
+  - : Represents the number of incoming bidirectional streams that the application expects the server to have open at the same time.
+- {{domxref("WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams", "anticipatedConcurrentIncomingUnidirectionalStreams")}} {{experimental_inline}}
+  - : Represents the number of incoming unidirectional streams that the application expects the server to have open at the same time.
 - {{domxref("WebTransport.closed", "closed")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} that resolves when the transport is closed.
 - {{domxref("WebTransport.datagrams", "datagrams")}} {{ReadOnlyInline}}
