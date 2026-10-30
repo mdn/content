@@ -129,7 +129,7 @@ Alternatively, you can run the extension from the command line using the [web-ex
 
 Now, visit a page under `https://www.mozilla.org/en-US/`, and you see a red border around the page.
 
-![Border displayed on mozilla.org](border_on_mozilla_org.png)
+![Red border displayed around mozilla.org in Firefox](border_on_mozilla_org.png)
 
 > [!NOTE]
 > However, it doesn't work on `addons.mozilla.org` because this domain blocks content scripts.

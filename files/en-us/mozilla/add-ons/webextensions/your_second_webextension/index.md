@@ -482,13 +482,17 @@ beastify/
     manifest.json
 ```
 
-Now load the extension as a temporary add-on. Open `about:debugging` in Firefox, click **This Firefox** and then **Load Temporary Add-on**, and select your manifest.json file. You see the extension's icon appear in the Firefox toolbar:
+Now load the extension as a temporary add-on. Open `about:debugging` in Firefox, click **This Firefox** and then **Load Temporary Add-on**, and select your manifest.json file.
 
-![The beastify icon in the Firefox toolbar](beastify_icon.png)
+Firefox adds the extension's button to the extensions panel, so you need to pin it to the toolbar. In the toolbar, click the extensions button (jigsaw puzzle icon) and locate the extension. Click the extension's 3-dot menu, or right-click the extension, and select **Pin to Toolbar**:
+
+![The extensions panel with the Beastify extension's menu open and the Pin to Toolbar option highlighted](beastify_icon.png)
+
+The extension's icon now appears in the Firefox toolbar.
 
 Open a web page, click the icon, select a beast, and see the web page change:
 
-![A page replaced with the image of a turtle](beastify_page.png)
+![The beastify popup with Turtle highlighted, and the page replaced with an image of a turtle](beastify_page.png)
 
 ## Developing from the command line
 

@@ -8,7 +8,7 @@ sidebar: addonsidebar
 
 The `ExtensionSidebarPane` object represents a pane that an extension has added to the sidebar in the browser's HTML/CSS inspector.
 
-![new pane titled "My pane" that displays a JSON object](inspector-sidebar.png)
+![New pane titled "My pane" that displays a JSON object, in the Firefox inspector](inspector-sidebar.png)
 
 To create an `ExtensionSidebarPane`, call the [`browser.devtools.panels.elements.createSidebarPane()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane) function.
 

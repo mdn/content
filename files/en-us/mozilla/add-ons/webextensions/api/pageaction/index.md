@@ -10,7 +10,7 @@ Read and modify attributes of and listen to clicks on the address bar button def
 
 An [address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) is a button added to the browser address bar.
 
-![Paw print icon representing a page action](page-action.png)
+![Paw print icon representing a page action, highlighted, in the Firefox address bar](page-action.png)
 
 You can listen for clicks on the icon in a background script, or specify a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) that opens when the icon is clicked.
 
