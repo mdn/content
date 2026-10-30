@@ -106,7 +106,7 @@ Active fingerprinting can give trackers a much more fine-grained fingerprint, wh
 
 ## Navigational tracking
 
-Navigational tracking is the practice of using a navigation to transmit an identifier for a user from the linking site to the destination, typically by "decorating" the link with the identifier:
+Navigational tracking is the practice of using a navigation to transmit an identifier for a user from the linking site to the destination, typically by adding the identifier to the link, a technique known as _link decoration_:
 
 ```html
 <a href="https://cat-videos.example/resource?userId=123456">More cats!</a>
@@ -212,6 +212,10 @@ This is also referred to as _double-keying_: the storage for the embedded conten
 Partitioned storage can be applied not only to [web platform storage APIs](#tracking_using_client-side_storage_apis) such as cookies, {{domxref("Window.localStorage", "local storage")}} or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), but also to other methods that a tracker could use to persist state, including those that we classified as [covert stateful tracking](#covert_stateful_tracking) the HTTP cache. This would mean that, for example, a tracker embedded in one page would not see the same set of cached HTTP resources as the same tracker embedded in another page.
 
 See [Client-Side Storage Partitioning](https://privacycg.github.io/storage-partitioning/) for more details, including a list of all the known browser state that could be affected by storage partitioning.
+
+#### Link decoration defenses
+
+To combat link decoration, browsers can remove link parameters that appear to be used for tracking.
 
 #### Bounce tracking defenses
 
