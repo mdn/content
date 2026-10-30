@@ -54,6 +54,7 @@ The following criteria must be met when calling **`drawIndirect()`**, otherwise 
 - `indirectBuffer`'s {{domxref("GPUBuffer.usage")}} contains the `GPUBufferUsage.INDIRECT` flag.
 - `indirectOffset` + the total size specified by the value parameters in the `indirectBuffer` is less than or equal to the `indirectBuffer`'s {{domxref("GPUBuffer.size")}}.
 - `indirectOffset` is a multiple of 4.
+- When using immediates, every 4-byte slot of immediate data the pipeline statically uses has been set using {{domxref("GPURenderBundleEncoder.setImmediates()")}}.
 
 ## Examples
 
