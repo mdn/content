@@ -27,6 +27,15 @@ respondWith(promise)
     - `details`
       - : A JSON-serializable object that provides a payment method-specific message used by the merchant to process the transaction and determine a successful fund transfer. See [8.1.2 `details` attribute](https://w3c.github.io/web-based-payment-handler/#details-attribute) for more details.
 
+    The `promise` can be rejected with the following values to indicate a failure of the payment app:
+
+    - `AbortError` {{domxref("DOMException")}}
+      - : Indicates that the user canceled the payment request.
+    - `OperationError` {{domxref("DOMException")}}
+      - : Indicates an internal error in the underlying app that is handling the payment.
+
+    If the `promise` is rejected with any other value, it is mapped to `AbortError`.
+
 ### Return value
 
 None ({{jsxref("undefined")}}).
