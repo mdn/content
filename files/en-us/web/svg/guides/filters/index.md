@@ -47,7 +47,7 @@ The filtered circle is painted, blurred, and then composited back into the graph
 
 ## How a filter pipeline works
 
-A filter with more than one primitive is a pipeline. Each primitive takes zero, one, or two images as input, and produces one image as output:
+A filter with more than one primitive is a pipeline. Each primitive takes zero or more images as input, and produces one image as output:
 
 - {{SVGAttr("in")}} names the input. {{SVGAttr("in2")}} names the second input of the primitives that combine two images, such as {{SVGElement("feBlend")}} and {{SVGElement("feComposite")}}.
 - {{SVGAttr("result")}} names the output so that a later primitive can refer to it. This name is scoped to the `<filter>` element.
@@ -131,7 +131,7 @@ Both squares below get the same shadow. The first filter leaves the region at it
 
 {{EmbedLiveSample("The_filter_region", "100%", 150)}}
 
-Clipping is sometimes the intended effect. A region of `x="0" y="0" width="100%" height="100%"` trims the effect flush with the element's bounding box, which is how an inner glow is kept inside the shape, and how a blur is stopped from spreading past the edge it softens.
+Clipping is sometimes the intended effect. A region of `x="0" y="0" width="100%" height="100%"` trims the effect flush with the element's bounding box, which is how an inner glow is kept inside a rectangle, and how a blur is stopped from spreading past the edge it softens.
 
 The {{SVGAttr("filterUnits")}} attribute sets whether the region's `x`, `y`, `width`, and `height` are fractions of the element's bounding box (`objectBoundingBox`, the default, which is what makes percentages meaningful) or lengths in the current user coordinate system (`userSpaceOnUse`). Under `objectBoundingBox` the values are fractions of the bounding box whether or not they are written as percentages, so `width="180%"` and `width="1.8"` describe the same region.
 
@@ -294,7 +294,7 @@ Each row of the matrix sets one output channel from a weighted sum of the input 
 
 ## Filters on HTML content
 
-The CSS {{cssxref("filter")}} property applies an SVG filter to any HTML element, but the filter itself still has to be defined inside an `<svg>` element. That SVG has nothing to draw, so it only needs to hold the `<filter>` without affecting the layout around it. Collapsing it to zero width and height is not sufficient on its own, because it still generates a box. Positioning it out of flow removes it from layout entirely, and `aria-hidden` keeps an empty graphic out of the accessibility tree.
+The CSS {{cssxref("filter")}} property can also apply an SVG filter to any HTML element. For this purpose, you can define an `<svg>` element in the document which only holds the `<filter>` and is completely transparent to the layout. You need to set its `width` and `height` to `0` to make it invisible, its `position` to `fixed` to remove it from the flow, and `aria-hidden` to keep it out of the accessibility tree.
 
 In the following example, the text is displaced by the noise the filter generates for itself, which no CSS filter function can do:
 
@@ -333,7 +333,7 @@ In the following example, the text is displaced by the noise the filter generate
 
 {{EmbedLiveSample("Filters_on_HTML_content", "100%", 140)}}
 
-Referencing a filter from a different file (`filter: url("filters.svg#wobble")`) is supported unevenly, so keep the `<filter>` in the document that uses it. See [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content) for more on combining the two languages.
+See [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content) for more on combining the two languages.
 
 ## SVG filters and CSS filter functions
 
