@@ -66,3 +66,4 @@ gl.getParameter(gl.POLYGON_OFFSET_UNITS); // 3
 ## See also
 
 - {{domxref("WebGLRenderingContext.depthFunc()")}}
+- {{domxref("EXT_polygon_offset_clamp.polygonOffsetClampEXT()")}}
