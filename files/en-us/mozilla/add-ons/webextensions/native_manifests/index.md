@@ -150,11 +150,11 @@ For example, here's the content of the `ping_pong.json` manifest file for the `p
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
   "type": "stdio",
-  "allowed_extensions": ["ping_pong@example.org"]
+  "allowed_extensions": ["native-messaging@mozilla.org"]
 }
 ```
 
-This allows the extension with the ID `ping_pong@example.org` to connect by passing the name `ping_pong` into the relevant {{WebExtAPIRef("runtime")}} API function. The native application is at `/path/to/native-messaging/app/ping_pong.py`.
+This allows the extension with the ID `native-messaging@mozilla.org` to connect by passing the name `ping_pong` into the relevant {{WebExtAPIRef("runtime")}} API function. The native application is at `/path/to/native-messaging/app/ping_pong.py`.
 
 ## Managed storage manifests
 
