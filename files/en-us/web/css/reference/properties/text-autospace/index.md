@@ -9,6 +9,49 @@ sidebar: cssref
 
 The **`text-autospace`** [CSS](/en-US/docs/Web/CSS) property allows you to specify the space applied between Chinese/Japanese/Korean (CJK) and non-CJK characters.
 
+Many CJK typographic conventions require a small amount of space between CJK characters and Western letters or numbers (see W3C's descriptions for [Chinese](https://www.w3.org/International/clreq/#mixed_text_composition_in_horizontal_writing_mode) and [Japanese](https://www.w3.org/TR/jlreq/#composition_of_japanese_and_western_mixed_texts) text layout conventions). Some authors would manually insert a space character for this purpose, but `text-autospace` adds this spacing at the layout engine level, without requiring extra characters in the textual content.
+
+{{InteractiveExample("CSS Demo: text-autospace")}}
+
+```css interactive-example-choice
+text-autospace: no-autospace;
+```
+
+```css interactive-example-choice
+text-autospace: normal;
+```
+
+```css interactive-example-choice
+text-autospace: ideograph-alpha;
+```
+
+```css interactive-example-choice
+text-autospace: ideograph-numeric;
+```
+
+```css interactive-example-choice
+text-autospace: auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element" lang="zh">
+    <p>HTML超文本标记语言</p>
+    <p>42四十二</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font: 2rem sans-serif;
+}
+
+p {
+  margin: 0;
+}
+```
+
 ## Syntax
 
 ```css
@@ -67,102 +110,6 @@ text-autospace: unset;
 
 {{csssyntax}}
 
-## Examples
-
-This example shows the difference between various values of `text-autospace`. Try selecting a value from the drop-down box to see how it affects the spacing in the text.
-
-```html hidden
-<form>
-  <label for="autospace">Choose value for <code>text-autospace:</code></label>
-  <select name="autospace" id="autospace">
-    <option selected value="no-autospace">no-autospace</option>
-    <option value="normal">normal</option>
-    <option value="ideograph-alpha">ideograph-alpha</option>
-    <option value="ideograph-numeric">ideograph-numeric</option>
-  </select>
-</form>
-<div class="unsupported">
-  <code>text-autospace</code> is not supported in your browser.
-</div>
-```
-
-```html
-<main>
-  <figure class="no-autospace">
-    <figcaption>
-      <code>
-        text-autospace: <span id="autospace-value">no-autospace</span>;
-      </code>
-    </figcaption>
-    <div>
-      <p>HTML超文本标记语言</p>
-      <p>42四十二</p>
-    </div>
-  </figure>
-</main>
-```
-
-```css
-.no-autospace {
-  text-autospace: no-autospace;
-}
-.auto {
-  text-autospace: auto;
-}
-.normal {
-  text-autospace: normal;
-}
-.ideograph-alpha {
-  text-autospace: ideograph-alpha;
-}
-.ideograph-numeric {
-  text-autospace: ideograph-numeric;
-}
-```
-
-```css hidden
-figure {
-  margin: 1rem;
-  div {
-    font-size: 2rem;
-    padding: 1rem;
-    font-family: sans-serif;
-    border: tomato solid 1px;
-  }
-  p {
-    margin: 0;
-  }
-}
-main {
-  max-width: max-content;
-}
-@supports not (text-autospace: normal) {
-  form {
-    display: none;
-  }
-  .unsupported {
-    color: red;
-  }
-}
-@supports (text-autospace: normal) {
-  .unsupported {
-    display: none;
-  }
-}
-```
-
-```js hidden
-const chose = document.querySelector("#autospace");
-const fig = document.querySelector("figure");
-const codeValue = document.querySelector("#autospace-value");
-chose.addEventListener("change", (e) => {
-  fig.className = e.target.value;
-  codeValue.innerText = e.target.value;
-});
-```
-
-{{EmbedLiveSample("Example", 200, 200)}}
-
 ## Specifications
 
 {{Specifications}}
@@ -176,3 +123,5 @@ chose.addEventListener("change", (e) => {
 - {{cssxref('text-spacing-trim')}}
 - [`ic`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#local_font-relative_lengths) and [`ric`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#root_font-relative_lengths) units
 - [CSS Text](/en-US/docs/Web/CSS/Guides/Text) module
+- [Mixed text composition in horizontal writing mode](https://www.w3.org/International/clreq/#mixed_text_composition_in_horizontal_writing_mode) in Requirements for Chinese Text Layout on w3.org
+- [Japanese and Western mixed text composition](https://www.w3.org/International/jlreq/#japanese_and_western_mixed_text_composition) in Requirements for Japanese Text Layout on w3.org

@@ -9,7 +9,7 @@ browser-compat:
 sidebar: htmlsidebar
 ---
 
-The **`noreferrer`** keyword for the [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) attribute of the {{HTMLElement("a")}}, {{HTMLElement("area")}}, and {{HTMLElement("form")}} elements instructs the browser, when navigating to the target resource, to omit the {{HTTPHeader("Referer")}} header and otherwise leak no referrer information — and additionally to behave as if the [`noopener`](/en-US/docs/Web/HTML/Reference/Attributes/rel/noopener) keyword were also specified.
+The **`noreferrer`** keyword for the [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) attribute of the {{HTMLElement("a")}}, {{HTMLElement("area")}}, and {{HTMLElement("form")}} elements instructs the browser, when fetching the target resource, to omit the {{HTTPHeader("Referer")}} header and otherwise leak no referrer information — and additionally to behave as if the [`noopener`](/en-US/docs/Web/HTML/Reference/Attributes/rel/noopener) keyword were also specified.
 
 ## Specifications
 

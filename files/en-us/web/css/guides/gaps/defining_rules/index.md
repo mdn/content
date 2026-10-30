@@ -254,7 +254,7 @@ The `rule` shorthand sets both the `column-rule` and `row-rule` to the same valu
     padding: 8px;
     border: 1px dashed;
     color: black;
-    background-color: #ddfc;
+    background-color: #ddddffcc;
   }
 }
 @supports not (row-rule-style: solid) {

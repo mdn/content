@@ -22,7 +22,7 @@ The enumerated value representing the CPU instruction set architecture of Google
 - `MIPS`
   - : The string literal `"mips"`. Represents the 32-bit variant of the MIPS ISA, which was never supported by official releases. Equivalent to [`PlatformArch.mips`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch#mips).
 - `MIPS64`
-  - : The string literal `"mips64"`. Represents the 64-bit variant of the MIPS ISA, which was never supported by official releases. Equivalent to [`PlatformArch.mips64`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch#xmips64).
+  - : The string literal `"mips64"`. Represents the 64-bit variant of the MIPS ISA, which was never supported by official releases. Equivalent to [`PlatformArch.mips64`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch#mips64).
 
 {{WebExtExamples}}
 

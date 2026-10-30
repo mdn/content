@@ -2,11 +2,11 @@
 title: "OES_draw_buffers_indexed: blendFunciOES() method"
 short-title: blendFunciOES()
 slug: Web/API/OES_draw_buffers_indexed/blendFunciOES
-page-type: web-api-instance-method
+page-type: webgl-extension-method
 browser-compat: api.OES_draw_buffers_indexed.blendFunciOES
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The `blendFunciOES()` method of the {{DOMxRef("OES_draw_buffers_indexed")}} WebGL extension defines which function is used when blending pixels for a particular draw buffer.
 

@@ -92,6 +92,9 @@ The _locallibrary_ project sub-folder is the entry point for the website:
 
 The **manage.py** script is used to create applications, work with databases, and start the development web server.
 
+> [!NOTE]
+> In the rest of this tutorial, file paths such as **/locallibrary/settings.py** are relative to the top-level project folder that contains **manage.py** (the leading `/` stands for that folder).
+
 ## Creating the catalog application
 
 Next, run the following command to create the _catalog_ application that will live inside our _locallibrary_ project. Make sure to run this command from the same folder as your project's **manage.py**:
@@ -139,7 +142,7 @@ In addition we now have:
 
 Now that the application has been created, we have to register it with the project so that it will be included when any tools are run (like adding models to the database for example). Applications are registered by adding them to the `INSTALLED_APPS` list in the project settings.
 
-Open the project settings file, **django-locallibrary-tutorial/locallibrary/settings.py**, and find the definition for the `INSTALLED_APPS` list. Then add a new line at the end of the list, as shown below:
+Open the project settings file, **/locallibrary/settings.py**, and find the definition for the `INSTALLED_APPS` list. Then add a new line at the end of the list, as shown below:
 
 ```bash
 INSTALLED_APPS = [
@@ -154,14 +157,14 @@ INSTALLED_APPS = [
 ]
 ```
 
-The new line specifies the application configuration object (`CatalogConfig`) that was generated for you in **/django-locallibrary-tutorial/catalog/apps.py** when you created the application.
+The new line specifies the application configuration object (`CatalogConfig`) that was generated for you in **/catalog/apps.py** when you created the application.
 
 > [!NOTE]
 > You'll notice that there are already a lot of other `INSTALLED_APPS` (and `MIDDLEWARE`, further down in the settings file). These enable support for the [Django administration site](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site) and the functionality it uses (including sessions, authentication, etc.).
 
 ## Specifying the database
 
-This is also the point where you would normally specify the database to be used for the project. It makes sense to use the same database for development and production where possible, in order to avoid minor differences in behavior. You can find out about the different options in [Databases](https://docs.djangoproject.com/en/5.0/ref/settings/#databases) (Django docs).
+This is also the point where you would normally specify the database to be used for the project. It makes sense to use the same database for development and production where possible, in order to avoid minor differences in behavior. You can find out about the different options in [Databases](https://docs.djangoproject.com/en/6.1/ref/settings/#databases) (Django docs).
 
 We'll use the default SQLite database for most of this example, because we don't expect to require a lot of concurrent access on a demonstration database, and it requires no additional work to set up! You can see how this database is configured in **settings.py**:
 
@@ -178,7 +181,7 @@ Later on in the [Deploying Django to production](/en-US/docs/Learn_web_developme
 
 ## Other project settings
 
-The **settings.py** file is also used for configuring a number of other settings, but at this point, you probably only want to change the [TIME_ZONE](https://docs.djangoproject.com/en/5.0/ref/settings/#std:setting-TIME_ZONE) — this should be made equal to a string from the standard [List of tz database time zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (the TZ column in the table contains the values you want). Change your `TIME_ZONE` value to one of these strings appropriate for your time zone, for example:
+The **settings.py** file is also used for configuring a number of other settings, but at this point, you probably only want to change the [TIME_ZONE](https://docs.djangoproject.com/en/6.1/ref/settings/#std-setting-TIME_ZONE) — this should be made equal to a string from the standard [List of tz database time zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (the TZ column in the table contains the values you want). Change your `TIME_ZONE` value to one of these strings appropriate for your time zone, for example:
 
 ```python
 TIME_ZONE = 'Europe/London'
@@ -193,14 +196,14 @@ There are two other settings you won't change now, but that you should be aware 
 
 The website is created with a URL mapper file (**urls.py**) in the project folder. While you can use this file to manage all your URL mappings, it is more usual to defer mappings to the associated application.
 
-Open **django-locallibrary-tutorial/locallibrary/urls.py** and note the instructional text which explains some of the ways to use the URL mapper.
+Open **/locallibrary/urls.py** and note the instructional text which explains some of the ways to use the URL mapper.
 
 ```python
 """
 URL configuration for locallibrary project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.0/topics/http/urls/
+    https://docs.djangoproject.com/en/6.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -247,7 +250,7 @@ Add the following lines to the bottom of the file:
 # Add URL maps to redirect the base URL to our application
 from django.views.generic import RedirectView
 urlpatterns += [
-    path('', RedirectView.as_view(url='catalog/', permanent=True)),
+    path('', RedirectView.as_view(url='/catalog/', permanent=True)),
 ]
 ```
 
@@ -304,7 +307,7 @@ Before we do that, we should first run a _database migration_. This updates our 
 
 ### Running database migrations
 
-Django uses an Object-Relational-Mapper (ORM) to map model definitions in the Django code to the data structure used by the underlying database. As we change our model definitions, Django tracks the changes and can create database migration scripts (in **/django-locallibrary-tutorial/catalog/migrations/**) to automatically migrate the underlying data structure in the database to match the model.
+Django uses an Object-Relational-Mapper (ORM) to map model definitions in the Django code to the data structure used by the underlying database. As we change our model definitions, Django tracks the changes and can create database migration scripts (in **/catalog/migrations/**) to automatically migrate the underlying data structure in the database to match the model.
 
 When we created the website, Django automatically added a number of models for use by the admin section of the site (which we'll look at later). Run the following commands to define tables for those models in the database (make sure you are in the directory that contains **manage.py**):
 
@@ -323,14 +326,14 @@ The `migrate` command is what applies the migrations to your database. Django tr
 > [!NOTE]
 > You should re-run migrations and re-test the site whenever you make significant changes. It doesn't take very long!
 >
-> See [Migrations](https://docs.djangoproject.com/en/5.0/topics/migrations/) (Django docs) for additional information about the lesser-used migration commands.
+> See [Migrations](https://docs.djangoproject.com/en/6.1/topics/migrations/) (Django docs) for additional information about the lesser-used migration commands.
 
 ### Running the website
 
 During development, you can serve the website first using the _development web server_, and then viewing it on your local web browser.
 
 > [!NOTE]
-> The development web server is not robust or performant enough for production use, but it is a very easy way to get your Django website up and running during development to give it a convenient quick test. By default it will serve the site to your local computer (`http://127.0.0.1:8000/)`, but you can also specify other computers on your network to serve to. For more information see [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/5.0/ref/django-admin/#runserver) (Django docs).
+> The development web server is not robust or performant enough for production use, but it is a very easy way to get your Django website up and running during development to give it a convenient quick test. By default it will serve the site to your local computer (`http://127.0.0.1:8000/)`, but you can also specify other computers on your network to serve to. For more information see [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/6.1/ref/django-admin/#runserver) (Django docs).
 
 Run the _development web server_ by calling the `runserver` command (in the same directory as **manage.py**):
 
@@ -340,7 +343,7 @@ python3 manage.py runserver
 
 Once the server is running, you can view the site by navigating to `http://127.0.0.1:8000/` in your local web browser. You should see a site error page that looks like this:
 
-![Django Debug page (Django 4.2)](django_404_debug_page.png)
+![Django Debug page](django_404_debug_page.png)
 
 Don't worry! This error page is expected because we don't have any pages/urls defined in the `catalog.urls` module (which we're redirected to when we get a URL to the root of the site).
 
@@ -400,8 +403,8 @@ Now that the skeleton for the [Local Library website](/en-US/docs/Learn_web_deve
 
 ## See also
 
-- [Writing your first Django app - part 1](https://docs.djangoproject.com/en/5.0/intro/tutorial01/) (Django docs)
-- [Applications](https://docs.djangoproject.com/en/5.0/ref/applications/#configuring-applications) (Django Docs).
+- [Writing your first Django app - part 1](https://docs.djangoproject.com/en/6.1/intro/tutorial01/) (Django docs)
+- [Applications](https://docs.djangoproject.com/en/6.1/ref/applications/#configuring-applications) (Django Docs).
   Contains information on configuring applications.
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}

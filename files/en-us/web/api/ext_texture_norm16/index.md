@@ -6,7 +6,7 @@ page-type: webgl-extension
 browser-compat: api.EXT_texture_norm16
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`EXT_texture_norm16`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and provides a set of new 16-bit signed normalized and unsigned normalized formats (fixed-point texture, renderbuffer and texture buffer).
 
@@ -15,7 +15,8 @@ When this extension is enabled:
 - The {{domxref("WebGLRenderingContext.texImage2D()")}} and {{domxref("WebGLRenderingContext.texSubImage2D()")}} methods accept new formats provided by this extension.
 - The 16-bit normalized fixed-point types `ext.R16_EXT`, `ext.RG16_EXT` and `ext.RGBA16_EXT` become available as color-renderable formats and renderbuffers and be created in these formats.
 
-WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method.
+For more information, see [Using WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions).
 
 > [!NOTE]
 > This extension is only available to {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts.

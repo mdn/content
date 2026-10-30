@@ -397,7 +397,7 @@ We also built another example for you to study and learn from — see our [YouTu
 
 This uses two related APIs:
 
-- The [YouTube Data API](https://developers.google.com/youtube/v3/docs/) to search for YouTube videos and return results.
+- The [YouTube Data API](https://developers.google.com/youtube/data/reference/rest) to search for YouTube videos and return results.
 - The [YouTube IFrame Player API](https://developers.google.com/youtube/iframe_api_reference) to display the returned video examples inside iframe video players so you can watch them.
 
 This example is interesting because it shows two related third-party APIs being used together to build an app. The first one is a RESTful API, while the second one provides JavaScript methods to control a video player. This example uses JavaScript libraries for both APIs: the client library for the Data API handles the HTTP requests and returns the results.
@@ -406,11 +406,11 @@ This example is interesting because it shows two related third-party APIs being 
 
 We are not going to say too much more about this example in the article — [the source code](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/youtube) has detailed comments inserted inside it to explain how it works.
 
-The Data API provides a default daily [quota](https://developers.google.com/youtube/v3/getting-started#quota) for projects that enable it. Requests consume this quota, so you can perform a limited number of searches.
+The Data API provides a default daily [quota](https://developers.google.com/youtube/data/getting-started#quota) for projects that enable it. Requests consume this quota, so you can perform a limited number of searches.
 
 To get it running, you'll need to:
 
-- Read the [YouTube Data API Overview](https://developers.google.com/youtube/v3/getting-started) documentation.
+- Read the [YouTube Data API Overview](https://developers.google.com/youtube/data/getting-started) documentation.
 - Make sure you visit the [Enabled APIs page](https://console.cloud.google.com/apis/enabled), and in the list of APIs, make sure the status is ON for the YouTube Data API v3.
 - Get an API key from [Google Cloud](https://cloud.google.com/).
 - Find the string `YOUR-API-KEY-HERE` in the source code, and replace it with your API key.
