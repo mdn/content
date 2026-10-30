@@ -10,11 +10,14 @@ browser-compat: api.Window.localStorage
 
 The **`localStorage`** read-only property of the {{domxref("window")}} interface allows you to access a {{DOMxRef("Storage")}} object for the {{DOMxRef("Document")}}'s {{glossary("origin")}}; the stored data is saved across browser sessions.
 
+> [!NOTE]
+> Storage access is not always keyed by origin alone. To limit cross-site tracking, browsers may additionally partition storage by the top-level site (see [State partitioning](/en-US/docs/Web/Privacy/Guides/State_Partitioning)), so storage written by embedded third-party content can be isolated from the same origin elsewhere on the web.
+
 `localStorage` is similar to {{DOMxRef("Window.sessionStorage", "sessionStorage")}}, except that while `localStorage` data has no expiration time, `sessionStorage` data gets cleared when the page session ends — that is, when the page is closed. (`localStorage` data for a document loaded in a "private browsing" or "incognito" session is cleared when the last "private" tab is closed.)
 
 ## Value
 
-A {{DOMxRef("Storage")}} object which can be used to access the current origin's local storage space.
+A {{DOMxRef("Storage")}} object which can be used to access the current origin's local storage space, subject to browser-driven storage partitioning (see [State partitioning](/en-US/docs/Web/Privacy/Guides/State_Partitioning)).
 
 ### Exceptions
 
