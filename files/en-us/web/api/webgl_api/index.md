@@ -44,6 +44,7 @@ The {{HTMLElement("canvas")}} element is also used by the [Canvas API](/en-US/do
 
 - {{domxref("ANGLE_instanced_arrays")}}
 - {{domxref("EXT_blend_minmax")}}
+- {{domxref("EXT_clip_control")}}
 - {{domxref("EXT_color_buffer_float")}}
 - {{domxref("EXT_color_buffer_half_float")}}
 - {{domxref("EXT_disjoint_timer_query")}}
@@ -54,6 +55,7 @@ The {{HTMLElement("canvas")}} element is also used by the [Canvas API](/en-US/do
 - {{domxref("EXT_texture_compression_bptc")}}
 - {{domxref("EXT_texture_compression_rgtc")}}
 - {{domxref("EXT_texture_filter_anisotropic")}}
+- {{domxref("EXT_texture_mirror_clamp_to_edge")}}
 - {{domxref("EXT_texture_norm16")}}
 - {{domxref("KHR_parallel_shader_compile")}}
 - {{domxref("OES_draw_buffers_indexed")}}

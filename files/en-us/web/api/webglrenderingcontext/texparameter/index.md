@@ -72,7 +72,9 @@ texParameteri(target, pname, param)
       <td>Wrapping function for texture coordinate <code>s</code></td>
       <td>
         <code>gl.REPEAT</code> (default value), <code>gl.CLAMP_TO_EDGE</code>,
-        <code>gl.MIRRORED_REPEAT</code>.
+        <code>gl.MIRRORED_REPEAT</code>,
+        <code>ext.MIRROR_CLAMP_TO_EDGE_EXT</code> (when using the
+        {{domxref("EXT_texture_mirror_clamp_to_edge")}} extension).
       </td>
     </tr>
     <tr>
@@ -80,7 +82,9 @@ texParameteri(target, pname, param)
       <td>Wrapping function for texture coordinate <code>t</code></td>
       <td>
         <code>gl.REPEAT</code> (default value), <code>gl.CLAMP_TO_EDGE</code>,
-        <code>gl.MIRRORED_REPEAT</code>.
+        <code>gl.MIRRORED_REPEAT</code>,
+        <code>ext.MIRROR_CLAMP_TO_EDGE_EXT</code> (when using the
+        {{domxref("EXT_texture_mirror_clamp_to_edge")}} extension).
       </td>
     </tr>
     <tr>
@@ -139,7 +143,9 @@ texParameteri(target, pname, param)
       <td>Wrapping function for texture coordinate <code>r</code></td>
       <td>
         <code>gl.REPEAT</code> (default value), <code>gl.CLAMP_TO_EDGE</code>,
-        <code>gl.MIRRORED_REPEAT</code>.
+        <code>gl.MIRRORED_REPEAT</code>,
+        <code>ext.MIRROR_CLAMP_TO_EDGE_EXT</code> (when using the
+        {{domxref("EXT_texture_mirror_clamp_to_edge")}} extension).
       </td>
     </tr>
   </tbody>
@@ -172,3 +178,4 @@ gl.texParameteri(
 
 - {{domxref("WebGLRenderingContext.getTexParameter()")}}
 - {{domxref("EXT_texture_filter_anisotropic")}}
+- {{domxref("EXT_texture_mirror_clamp_to_edge")}}
