@@ -53,7 +53,7 @@ It's not guaranteed that you'll be able to switch into fullscreen mode. For exam
 Keyboard locking allows a web app to receive and handle keys or key-combinations that are normally handled by the browser or the underlying OS.
 
 Some of these keys might normally be used by the browser to exit fullscreen mode.
-In this case the browser is expected to give the user an alternative way to exit: typically a long-press of the same key.
+In this case the browser is expected to give the user an alternative way to exit: commonly a long-press of the same key.
 
 For example, browsers typically use the <kbd>Esc</kbd> key to exit fullscreen mode, but a web app might want to use it to show a menu.
 With keyboard lock, the app can intercept <kbd>Esc</kbd> and call `preventDefault()` to stop it from exiting fullscreen.
