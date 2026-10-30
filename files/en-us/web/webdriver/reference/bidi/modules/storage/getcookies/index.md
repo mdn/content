@@ -183,7 +183,8 @@ The `result` object in the response contains the following fields:
 ## Description
 
 The `storage.getCookies` command retrieves cookies from the cookie store of a selected [storage partition](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/storage#storage_partitions).
-The [`partition`](#partition) parameter selects the storage partition, and the [`filter`](#filter) parameter specifies the cookies to retrieve.
+You can use the [`filter`](#filter) parameter to retrieve only cookies matching specific criteria, such as name, domain, or size.
+The [`partition`](#partition) parameter selects the storage partition from which to retrieve cookies.
 Using the `partition` parameter, you can select a storage partition in one of two ways: either by specifying a context to use its associated storage partition or by specifying storage partition attributes, such as `userContext` or `sourceOrigin`.
 
 If `filter` is omitted or is an empty object (`{}`), the command retrieves all cookies in the selected cookie store.
@@ -279,3 +280,4 @@ The returned [`cookies`](#cookies) array contains two objects: one for the `them
 - [`browser.createUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext) command
 - [HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies) guide
 - [Controlling third-party cookies with SameSite](/en-US/docs/Web/HTTP/Guides/Cookies#controlling_third-party_cookies_with_samesite)
+- [State partitioning](/en-US/docs/Web/Privacy/Guides/State_Partitioning) guide

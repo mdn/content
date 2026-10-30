@@ -149,7 +149,7 @@ The `result` object in the response contains the following fields:
 ## Description
 
 The `storage.deleteCookies` command removes cookies from the cookie store of a specified [storage partition](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/storage#storage_partitions).
-This command accepts the same [`filter`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/storage/getCookies#filter) and [`partition`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/storage/getCookies#partition) parameters as `storage.getCookies`, but deletes the matching cookies.
+This command accepts the same `filter` and `partition` parameters as [`storage.getCookies`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/storage/getCookies), except that it deletes the matching cookies.
 Using the `partition` parameter, you can select a storage partition in one of two ways: either by specifying a context to use its associated storage partition or by specifying storage partition attributes, such as `userContext` or `sourceOrigin`.
 
 If `filter` is omitted or is an empty object (`{}`), the command deletes all cookies in the selected cookie store.
@@ -222,3 +222,4 @@ The returned [`cookies`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/storag
 - [`browser.createUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext) command
 - [HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies) guide
 - [Controlling third-party cookies with SameSite](/en-US/docs/Web/HTTP/Guides/Cookies#controlling_third-party_cookies_with_samesite)
+- [State partitioning](/en-US/docs/Web/Privacy/Guides/State_Partitioning) guide

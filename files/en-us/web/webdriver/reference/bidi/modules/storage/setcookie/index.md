@@ -162,7 +162,8 @@ The `result` object in the response contains the following fields:
 ## Description
 
 The `storage.setCookie` command creates or replaces a cookie in the cookie store of a selected [storage partition](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/storage#storage_partitions).
-The [`cookie`](#cookie) parameter defines the cookie, and the [`partition`](#partition) parameter selects the storage partition.
+The [`cookie`](#cookie) parameter specifies its properties, such as name, value, and domain.
+The [`partition`](#partition) parameter selects the storage partition in which to store the cookie.
 Using the `partition` parameter, you can select a storage partition in one of two ways: either by specifying a context to use its associated storage partition or by specifying storage partition attributes, such as `userContext` or `sourceOrigin`.
 
 If the selected cookie store already contains a cookie with the same name, domain, and path, this command replaces it.
@@ -290,3 +291,4 @@ The returned `cookies` array will contain two objects: one for the cookie at `/`
 - [`browser.createUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext) command
 - [HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies) guide
 - [Controlling third-party cookies with SameSite](/en-US/docs/Web/HTTP/Guides/Cookies#controlling_third-party_cookies_with_samesite)
+- [State partitioning](/en-US/docs/Web/Privacy/Guides/State_Partitioning) guide
