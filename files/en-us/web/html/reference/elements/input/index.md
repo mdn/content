@@ -483,7 +483,7 @@ A few additional non-standard attributes are listed following the descriptions o
 - `height`
   - : Valid for the `image` input button only, the `height` is the height of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.
 - `id`
-  - : Global attribute valid for all elements, including all the input types, it defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking. The value is used as the value of the {{htmlelement('label')}}'s `for` attribute to link the label with the form control. See {{htmlelement('label')}}.
+  - : [`Global attribute`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) valid for all elements, including all the input types, it defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking. The value is used as the value of the {{htmlelement('label')}}'s [`for`](/en-US/docs/Web/HTML/Reference/Attributes/for) attribute to link the label with the form control. See {{htmlelement('label')}}.
 - `inputmode`
   - : Global value valid for all elements, it provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents. Values include `none`, `text`, `tel`, `url`, `email`, `numeric`, `decimal`, and `search`.
 - `list`
