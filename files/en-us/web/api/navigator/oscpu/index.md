@@ -8,7 +8,7 @@ browser-compat: api.Navigator.oscpu
 
 {{ ApiRef("HTML DOM") }}
 
-The **`Navigator.oscpu`** property returns a string that identifies the current operating system.
+The **`oscpu`** read-only property of the {{domxref("Navigator")}} interface returns a string that identifies the current operating system.
 
 ## Value
 

@@ -10,11 +10,7 @@ browser-compat: api.Document.rootElement
 
 {{ApiRef("DOM")}}
 
-**`Document.rootElement`** returns the {{domxref("Element")}}
-that is the root element of the {{domxref("document")}} if it is an
-{{SVGElement("svg")}} element, otherwise `null`. It is deprecated in favor of
-{{domxref("Document.documentElement")}}, which returns the root element for all
-documents.
+The **`rootElement`** read-only property of the {{domxref("Document")}} interface returns the {{domxref("Element")}} that is the root element of the {{domxref("document")}} if it is an {{SVGElement("svg")}} element, otherwise `null`. It is deprecated in favor of {{domxref("Document.documentElement")}}, which returns the root element for all documents.
 
 ## Value
 

@@ -10,7 +10,7 @@ browser-compat: api.Window.orientation
 
 {{APIRef}}
 
-Returns the orientation in degrees (in 90-degree increments) of the viewport relative to the device's natural orientation.
+The **`orientation`** read-only property of the {{domxref("Window")}} interface returns the orientation in degrees (in 90-degree increments) of the viewport relative to the device's natural orientation.
 
 Its only possible values are `-90`, `0`, `90`, and `180`. Positive values are counterclockwise; negative values are clockwise.
 

@@ -8,8 +8,7 @@ browser-compat: api.WorkerNavigator.appVersion
 
 {{APIRef("HTML DOM")}}{{AvailableInWorkers("worker")}}
 
-Returns either `"4.0"` or a string representing version information about
-the browser.
+The **`appVersion`** read-only property of the {{domxref("WorkerNavigator")}} interface returns either `"4.0"` or a string representing version information about the browser.
 
 > [!NOTE]
 > Do not rely on this property to return the correct browser version.
