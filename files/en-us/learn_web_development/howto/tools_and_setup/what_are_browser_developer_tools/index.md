@@ -5,42 +5,56 @@ page-type: learn-faq
 sidebar: learn-how-to
 ---
 
-Every modern web browser includes a powerful suite of developer tools. These tools do a range of things, from inspecting currently-loaded HTML, CSS, and JavaScript to showing which assets the page has requested and how long they took to load. This article explains how to use the basic functions of your browser's devtools.
+Every modern web browser includes a powerful suite of developer tools (devtools). These tools do a range of things, from inspecting currently loaded HTML, CSS, and JavaScript to showing which assets the page has requested and how long they took to load. This article explains what devtools are and how to use their basic functions.
 
 > [!NOTE]
-> Before you run through the examples below, open the [Beginner's example site](https://mdn.github.io/beginner-html-site-scripted/) that we built during the [Getting started with the Web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) article series. You should have this open as you follow the steps below.
+> Before you run through the examples below, open the [Beginner's example site](https://mdn.github.io/beginner-html-site-scripted/) that we built during the [Getting started with the Web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) article series. Open this before following the steps below.
+
+## What are devtools?
+
+Your browser's devtools show you the current state of the code rendered in your browser to create the webpage you can see. This may differ from the source code you wrote; the browser will correct malformed HTML, run JavaScript that may alter the markup or CSS, etc.
+
+The devtools' functionality goes beyond viewing code, however — you can edit HTML and CSS to see how the UI is changed, run JavaScript against the live page to see the result, debug JavaScript (including viewing error messages), inspect network requests, emulate different viewport sizes, view accessibility information, and much more.
+
+This article provides basic information on the most commonly used devtools functionality. For more information, consult the browser's dedicated resources:
+
+- [Firefox DevTools User Docs](https://firefox-source-docs.mozilla.org/devtools-user/)
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools) (Opera and Edge's inspector is the same)
+- [Safari Web Inspector](https://developer.apple.com/documentation/safari-developer-tools/web-inspector)
 
 ## How to open the devtools in your browser
 
-The devtools live inside your browser in a subwindow that looks roughly like this, depending on what browser you are using:
+The devtools live inside your browser in a subwindow that looks like the following. It will differ depending on what browser you are using:
 
 ![Screenshot of a browser with developer tools open. The web page is displayed in the top half of the browser, the developer tools occupy the bottom half. There are three panels open in the developer tools: HTML, with the body element selected, a CSS panel showing styles blocks targeting the highlighted body, and a computed styles panel showing all the author styles; the browser styles checkbox is not checked.](devtools_63_inspector.png)
 
-How do you pull it up? Three ways:
+You can access the devtools in three main ways:
 
 - **_Keyboard:_**
-  - **Windows:** <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> or <kbd>F12</kbd>
+  - **Windows and Linux:** <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> or <kbd>F12</kbd>
   - **macOS:** <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>I</kbd>
 
 - **_Menu bar:_**
   - **Firefox:** _Menu (☰) ➤ More tools ➤ Web Developer Tools_
-  - **Chrome:** _More tools ➤ Developer tools_
+  - **Chrome and Edge:** _More tools ➤ Developer tools_
   - **Opera**: _Developer ➤ Developer tools_
-  - **Safari:** _Develop ➤ Show Web Inspector._
+  - **Safari:** _Develop ➤ Show Web Inspector_
 
     > [!NOTE]
     > The Safari developer tools are not enabled by default.
-    > To enable them, go to _Safari ➤ Preferences ➤ Advanced_, and check the _Show Develop menu in menu bar_ or _Enable features for web developers_ checkbox.
+    > To enable them, go to _Safari ➤ Settings ➤ Advanced_, and check the _Show features for web developers_ checkbox.
 
-- **_Context menu:_** Press-and-hold/right-click an item on a webpage (Ctrl-click on the Mac), and choose _Inspect Element_ from the context menu that appears. (_An added bonus:_ this method straight-away highlights the code of the element you right-clicked.)
+- **_Context menu:_** right-click an item on a webpage (Ctrl-click on the Mac), and choose _Inspect Element_/_Inspect_ from the context menu that appears. (_A bonus:_ this method immediately highlights the code of the element you choose to inspect.)
 
-![The firefox logo as a DOM element in an example website with a context menu showing. A context menu appears when any item on the web page is right-clicked. The last menu items is 'Inspect element'.](inspector_context.png)
+![The Firefox logo as a DOM element in an example website with a context menu showing. A context menu appears when any item on the web page is right-clicked. The last menu items is 'Inspect element'.](inspector_context.png)
 
 ## The Inspector: DOM explorer and CSS editor
 
-The developer tools usually open by default to the inspector, which looks something like the following screenshot. This tool shows what the HTML on your page looks like at runtime, as well as what CSS is applied to each element on the page. It also allows you to instantly modify the HTML and CSS and see the results of your changes reflected live in the browser viewport.
+The developer tools usually open by default to the inspector, which looks like so:
 
 ![A test website is opened in a tab in the browser. The browser developer tools sub-window is open. The developer tools has several tabs. Inspector is one of those tabs. Inspector tab displays the HTML code of the website. An image tag is selected from the HTML code. This results in highlighting of the image corresponding to the selected tag in the website.](inspector_highlighted.png)
+
+This tool shows what the HTML on your page looks like at runtime, as well as what CSS is applied to each element on the page. It also allows you to instantly modify the HTML and CSS and see the results of your changes reflected live in the browser.
 
 If you _don't_ see the inspector:
 
@@ -49,42 +63,44 @@ If you _don't_ see the inspector:
 
 ### Exploring the DOM inspector
 
-For a start, right-click (Ctrl-click) an HTML element in the DOM inspector and look at the context menu. The available menu options vary among browsers, but the important ones are mostly the same:
+For a start, right-click (Ctrl-click) an HTML element in the DOM inspector and look at the context menu.
 
 ![The browser developer tools sub-window is open. The inspector tab is selected. A link element is right-clicked from the HTML code available in the inspector tab. A context menu appears. The available menu options vary among browsers, but the important ones are mostly the same.](dom_inspector.png)
 
-- **Delete Node** (sometimes _Delete Element_). Deletes the current element.
-- **Edit as HTML** (sometimes _Add attribute_/_Edit text_). Lets you change the HTML and see the results on the fly. Very useful for debugging and testing.
-- **:hover/:active/:focus**. Forces element states to be toggled on, so you can see what their styling would look like.
-- **Copy/Copy as HTML**. Copy the currently selected HTML.
+The available menu options vary among browsers, but the important ones are mostly the same:
+
+- **Delete Node** (sometimes _Delete Element_): Deletes the current element.
+- **Edit as HTML** (sometimes _Add attribute_/_Edit text_): Lets you change the HTML and see the results on the fly. Very useful for debugging and testing.
+- **:hover/:active/:focus**: Forces element states to be toggled on, so you can see what their styling would look like.
+- **Copy/Copy as HTML**: Copy the currently selected HTML.
 - Some browsers also have _Copy CSS Path_ and _Copy XPath_ available, to allow you to copy the CSS selector or XPath expression that would select the current HTML element.
 
-Try editing some of your DOM now. Double-click an element, or right-click it and choose _Edit as HTML_ from the context menu. You can make any changes you'd like, but you cannot save your changes.
+Try editing some of your DOM now. Double-click an element, or right-click it and choose _Edit as HTML_ from the context menu. You can make any changes you want, but you cannot save your changes.
 
 ### Exploring the CSS editor
 
-By default, the CSS editor displays the CSS rules applied to the currently selected element:
+By default, the CSS editor displays the CSS rules applied to the inspected element. This is in its own panel in some browsers, and inside a _Styles_ tab in others.
 
 ![Snippet of the CSS panel and the layout panel that can be seen adjacent to the HTML editor in the browser developer tools. By default, the CSS editor displays the CSS rules applied to the currently selected element in the HTML editor. The layout panel shows the box model properties of the selected element.](css_inspector.png)
 
-These features are especially handy:
+Note the following features:
 
 - The rules applied to the current element are shown in order of most-to-least-specific.
 - Click the checkboxes next to each declaration to see what would happen if you removed the declaration.
 - Click the little arrow next to each shorthand property to show the property's longhand equivalents.
 - Click a property name or value to bring up a text box, where you can key in a new value to get a live preview of a style change.
-- Next to each rule is the file name and line number the rule is defined in. Clicking that rule causes the dev tools to show it in its own view, where it can generally be edited and saved.
-- You can also click the closing curly brace of any rule to bring up a text box on a new line, where you can write a completely new declaration for your page.
+- Next to each rule is the file name and line number the rule is defined in. Clicking that rule causes the devtools to show it in its own view, where it can generally be edited and saved.
+- Click the closing curly brace of any rule to bring up a new line where you can add a new declaration to the rule, which will be applied to the page.
 
-You'll notice several clickable tabs at the top of the CSS Viewer:
+You'll notice several other clickable tabs in the CSS editor, such as:
 
 - _Computed_: This shows the computed styles for the currently selected element (the final, normalized values that the browser applies).
-- _Layout_: This shows the details for CSS [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) and [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) layout modes if the element you are inspecting uses them.
+- _Layout_: This shows the details of layout modes such as CSS [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) and [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) applied to the inspected element, if any.
 - _Fonts_: In Firefox and Safari, the _Fonts_ tab shows the fonts applied to the current element.
 
-The _box model_ view visually represents the current element's box model, so you can see at a glance what padding, border and margin is applied to it, and how big its content is. In Firefox, this is located in the _Layout_ tab; in other browsers, it is in the _Computed_ tab.
+The _box model_ view visually represents the current element's box model, so you can see at a glance what padding, border, and margin are applied to it, and how big its content is. In Firefox, this is located in the _Layout_ tab; in other browsers, it is in the _Computed_ tab.
 
-In some browsers, the JavaScript details of the selected element can also be viewed in this panel. In Safari, these are unified under the _Node_ tab, but are in separate tabs in Chrome, Opera, and Edge.
+In some browsers, the JavaScript details of the selected element can also be viewed in this panel. In Safari, these are unified under the _Node_ tab; they are in separate tabs in Chrome, Opera, and Edge.
 
 - _Properties_: The {{Glossary("Property/JavaScript", "properties")}} of the element object.
 - _Event Listeners_: The [events](/en-US/docs/Web/API/Event) associated with the element.
@@ -93,15 +109,15 @@ In some browsers, the JavaScript details of the selected element can also be vie
 
 Find out more about the Inspector in different browsers:
 
-- [Firefox Page inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
+- [Firefox Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
 - [Chrome DOM inspector](https://developer.chrome.com/docs/devtools/dom/) (Opera and Edge's inspector is the same)
 - [Safari Elements tab](https://webkit.org/web-inspector/elements-tab/)
 
 ## The JavaScript debugger
 
-The JavaScript debugger allows you to watch the value of variables and set breakpoints, places in your code that you want to pause execution and identify the problems that prevent your code from executing properly.
+The JavaScript debugger allows you to watch variable values and set breakpoints: places in your code where you want to pause execution and identify any problems preventing your code from executing properly.
 
-![A test website that is served locally in port 8080. The developer tools sub-window is open. The JavaScript debugger tab is selected. It allows you to watch the value of variables and set breakpoints. A file with name 'example.js' is selected from the sources pane. A breakpoint is set at line number 18 of the file.](firefox_debugger.png)
+![A test website that is served locally on port 8080. The developer tools sub-window is open. The JavaScript debugger tab is selected. It allows you to watch the value of variables and set breakpoints. A file named 'example.js' is selected from the Sources pane. A breakpoint is set at line number 18 of the file.](firefox_debugger.png)
 
 To get to the debugger:
 
@@ -120,7 +136,7 @@ The first pane on the left contains the list of files associated with the page y
 
 #### Source code
 
-Set breakpoints where you want to pause execution. In the following image, the highlight on the number 18 shows that the line has a breakpoint set.
+Set breakpoints where you want to pause execution. In the following image, the highlight on line 18 shows that it has a breakpoint set.
 
 ![Snippet of developer tools debugger panel with the breakpoint at line 18 highlighted.](source_code.png)
 
@@ -128,29 +144,25 @@ Set breakpoints where you want to pause execution. In the following image, the h
 
 The right-hand pane shows a list of the watch expressions you have added and breakpoints you have set.
 
-In the image, the first section, **Watch expressions**, shows that the `listItems` variable has been added. You can expand the list to view the values in the array.
+![Snippet of the sources pane of the debugger tab of the browser developer tools. The call stack shows the function called at Line 18, highlighting that a breakpoint is set there and showing the scope.](watch_items.png)
 
-The next section, **Breakpoints**, lists the breakpoints set on the page. In example.js, a breakpoint has been set on the statement `listItems.push(inputNewItem.value);`
-
-The final two sections only appear when the code is running.
-
-The **Call stack** section shows you what code was executed to get to the current line. You can see that the code is in the function that handles a mouse click, and that the code is currently paused on the breakpoint.
-
-The final section, **Scopes**, shows what values are visible from various points within your code. For example, in the image below, you can see the objects available to the code in the addItemClick function.
-
-![Snippet of the sources pane of the debugger tab of the browser developer tools. In the call stack it shows the function that is called at Line 18, highlighting that a breakpoint is set at this line and showing the scope.](watch_items.png)
+- The first section, **Watch expressions**, shows that the `listItems` variable has been added. You can expand the list to view the array values.
+- The next section, **Breakpoints**, lists the breakpoints set on the page. In example.js, a breakpoint has been set on the statement `listItems.push(inputNewItem.value);`.
+- The final two sections only appear when the code is running.
+  - The **Call stack** section shows you what code was executed to get to the current line. You can see that the code is in the function that handles a mouse click and that it is currently paused at the breakpoint.
+  - The final section, **Scopes**, shows what values are visible from various points within your code. For example, in the image below, you can see the objects available to the code in the addItemClick function.
 
 ### Find out more
 
 Find out more about the JavaScript debugger in different browsers:
 
 - [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
-- [Chrome Debugger](https://developer.chrome.com/docs/devtools/javascript/) (Opera and Edge's debugger is the same)
+- [Chrome Debug JavaScript](https://developer.chrome.com/docs/devtools/javascript/) (Opera and Edge's debugger is the same)
 - [Safari Sources tab](https://webkit.org/web-inspector/sources-tab/)
 
 ## The JavaScript console
 
-The JavaScript console is an incredibly useful tool for debugging JavaScript that isn't working as expected. It allows you to run lines of JavaScript against the page currently loaded in the browser, and reports the errors encountered as the browser tries to execute your code.
+The JavaScript console allows you to run lines of JavaScript against the page currently loaded in the browser and reports errors encountered as the browser tries to execute your code.
 
 To access the console in any browser, open the developer tools and select the **Console** tab. This will give you a window like the following:
 
@@ -175,7 +187,7 @@ loginImage.setAttribute(
 document.querySelector("h1").appendChild(loginImage);
 ```
 
-Now try entering the following incorrect versions of the code and see what you get.
+Now try entering the following incorrect code snippets and see what you get.
 
 ```js-nolint example-bad
 alert("hello!);
@@ -194,15 +206,54 @@ banana.setAttribute(
 document.querySelector("h1").appendChild(loginImage);
 ```
 
-You'll start to see the kind of errors that the browser returns. Often, these errors are fairly cryptic, but it should be pretty simple to figure these problems out!
+You'll start to see the kind of errors that the browser returns. Sometimes, these errors are fairly cryptic, but they will start to become more familiar as you get more experience.
 
 ### Find out more
 
 Find out more about the JavaScript console in different browsers:
 
 - [Firefox Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
-- [Chrome JavaScript Console](https://developer.chrome.com/docs/devtools/console/) (Opera and Edge's console is the same)
+- [Chrome Console](https://developer.chrome.com/docs/devtools/console/) (Opera and Edge's console is the same)
 - [Safari Console Object API](https://webkit.org/web-inspector/console-object-api/) and [Console Command Line API](https://webkit.org/web-inspector/console-command-line-api/)
+
+## The Network inspector
+
+The Network inspector allows you to examine the network requests and responses involved in fetching all the HTML documents, images, CSS, JavaScript, and other resources that go together to render a website in your browser.
+
+To access it, open the developer tools and select the **Network** tab. This will give you a window like the following:
+
+![The Network tab of the browser developer tools, showing several network requests with a variety of status codes.](network_inspector.png)
+
+There's a lot of information available here, but at a basic level, it is useful for seeing what files your site is requesting and whether they are being loaded successfully.
+
+As an example, if you see a {{httpstatus("200")}} status code, a resource has been delivered successfully, but if the code shows as {{httpstatus("404")}}, it means the resource couldn't be found, and you might have an incorrect file path or filename to fix, or maybe you forgot to upload it to the server.
+
+### HTTP statuses
+
+Servers respond with a status message whenever they receive a request. Here are the most common statuses:
+
+- **200: OK**
+  - : The resource you asked for was delivered.
+- **301: Moved permanently**
+  - : The resource has moved to a new location. You won't see this much in your browser, but it's good to know about "301" since search engines use this information a lot to update their indexes.
+- **304: Not modified**
+  - : The file has not changed since the last time you asked for it, so your browser can display the version from its cache, resulting in faster response times and more efficient use of bandwidth.
+- **403: Forbidden**
+  - : You aren't allowed to display the resource. Usually this indicates a configuration mistake (e.g., your hosting provider forgot to give you access rights to a directory).
+- **404: Not found**
+  - : Self-explanatory. We'll discuss how to solve this below.
+- **500: Internal server error**
+  - : Something went wrong on the server. For instance, the server-side language ({{Glossary("PHP")}}, .Net, etc.) stopped working, or the web server itself has a configuration problem. Report such problems to your hosting provider's support team.
+- **503: Service unavailable**
+  - : Usually resulting from a short-term server overload. Try again in a little while.
+
+### Find out more
+
+Find out more about the Network Inspector in different browsers:
+
+- [Firefox Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
+- [Chrome Network panel](https://developer.chrome.com/docs/devtools/network/overview) (Opera and Edge's console is the same)
+- [Safari Network Tab](https://webkit.org/web-inspector/network-tab/)
 
 ## See also
 

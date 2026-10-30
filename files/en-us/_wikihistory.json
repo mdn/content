@@ -10550,76 +10550,6 @@
       "adekoyejo"
     ]
   },
-  "Learn_web_development/Howto/Tools_and_setup/Available_text_editors": {
-    "modified": "2020-09-11T09:55:13.639Z",
-    "contributors": [
-      "callpri",
-      "GCCSheep",
-      "blueblots",
-      "iigmir",
-      "rashmimalpande",
-      "chrisdavidmills",
-      "funnyChinese",
-      "SphinxKnight",
-      "Jeremie",
-      "Andrew_Pfeiffer",
-      "fmarier"
-    ]
-  },
-  "Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly": {
-    "modified": "2020-07-16T22:35:49.891Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Andrew_Pfeiffer",
-      "Jeremie",
-      "hbloomer",
-      "notabene"
-    ]
-  },
-  "Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost": {
-    "modified": "2020-07-16T22:35:45.160Z",
-    "contributors": [
-      "A.Faturechi",
-      "chrisdavidmills",
-      "zzhhbyt1",
-      "jdblischak",
-      "Gordon-Bleu",
-      "1pankajmehra1",
-      "surigangula",
-      "kamleshrao",
-      "jswisher",
-      "david_ross",
-      "ggarrickk",
-      "AdityaPareek",
-      "martinmcbride",
-      "Jeremie",
-      "Andrew_Pfeiffer",
-      "notabene"
-    ]
-  },
-  "Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server": {
-    "modified": "2020-10-02T01:23:10.799Z",
-    "contributors": [
-      "hamishwillee",
-      "GCCSheep",
-      "Sturmtiger",
-      "amitananddotxyz",
-      "chrisdavidmills",
-      "SphinxKnight",
-      "MandyuTOJ",
-      "xfq",
-      "Jett",
-      "Jeremie",
-      "Andrew_Pfeiffer",
-      "notabene",
-      "RufusCSharma",
-      "rhyne24"
-    ]
-  },
-  "Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages": {
-    "modified": "2020-07-16T22:35:51.402Z",
-    "contributors": ["chrisdavidmills", "junBryl", "Mori"]
-  },
   "Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools": {
     "modified": "2020-07-16T22:35:47.122Z",
     "contributors": [
@@ -10635,34 +10565,6 @@
       "Jeremie",
       "Andrew_Pfeiffer",
       "chrisdavidmills-github"
-    ]
-  },
-  "Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need": {
-    "modified": "2020-11-24T08:00:20.552Z",
-    "contributors": [
-      "mmaimma",
-      "hamishwillee",
-      "chrisdavidmills",
-      "ikabia078",
-      "Rafasu",
-      "ptrpl4",
-      "himanshuxd",
-      "riceh3",
-      "ashwingadhave",
-      "amitananddotxyz",
-      "mfuji09",
-      "maishakins",
-      "fac42",
-      "adamjimenez",
-      "christianbueno1",
-      "DerAppelt",
-      "bhanubais",
-      "MaiDoan",
-      "SphinxKnight",
-      "thalapaneni",
-      "Jeremie",
-      "Andrew_Pfeiffer",
-      "kklein"
     ]
   },
   "Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server": {
@@ -96696,12 +96598,12 @@
     "modified": "2019-03-18T21:30:23.468Z",
     "contributors": ["Sheppy"]
   },
-  "Web/HTTP/Guides/CORS/Errors/CORSMissingAllowCredentials": {
-    "modified": "2019-03-18T21:30:24.552Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound": {
     "modified": "2019-03-18T21:30:20.526Z",
+    "contributors": ["Sheppy"]
+  },
+  "Web/HTTP/Guides/CORS/Errors/CORSMissingAllowCredentials": {
+    "modified": "2019-03-18T21:30:24.552Z",
     "contributors": ["Sheppy"]
   },
   "Web/HTTP/Guides/CORS/Errors/CORSMissingAllowHeaderFromPreflight": {
