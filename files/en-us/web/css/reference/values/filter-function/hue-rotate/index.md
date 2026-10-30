@@ -43,23 +43,22 @@ filter: hue-rotate(3.142rad);
 ## Syntax
 
 ```css
-hue-rotate(angle)
-```
+/* No rotation */
+hue-rotate()
+hue-rotate(0deg)
 
-### Values
-
-- `angle` {{Optional_Inline}}
-  - : The relative change in hue of the input sample, specified as an {{cssxref("angle")}}. A value of `0deg` leaves the input unchanged. A positive hue rotation increases the hue value, while a negative rotation decreases the hue value. The initial value for {{Glossary("interpolation")}} is `0`. There is no minimum or maximum value. The effect of values above `360deg` are, given `hue-rotate(Ndeg)`, evaluates to `N` modulo 360. The default value is `0deg`.
-
-The `<angle>` CSS data type represents an angle value expressed in degrees, gradians, radians, or turns. The following are equivalent:
-
-```css
+/* Half-turn rotation */
 hue-rotate(-180deg)
 hue-rotate(540deg)
 hue-rotate(200grad)
 hue-rotate(3.14159rad)
 hue-rotate(0.5turn)
 ```
+
+### Parameters
+
+- {{cssxref("angle")}} {{Optional_Inline}}
+  - : Specifies the relative change in hue of the input sample. A value of `0deg` leaves the input unchanged. A positive hue rotation increases the hue value, while a negative rotation decreases the hue value. The initial value for {{Glossary("interpolation")}} is `0`. There is no minimum or maximum value. Given `hue-rotate(Ndeg)`, the effect evaluates to `N` modulo 360. The default value is `0deg`.
 
 ## Formal syntax
 
@@ -137,39 +136,57 @@ p {
 
 {{EmbedLiveSample('With_the_filter_property','100%','220')}}
 
-### With url() and the SVG hue-rotate filter
+### Using the SVG filter
 
-The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id). The `<filter>`'s {{SVGElement("feColorMatrix")}} primitive `hueRotate` type provides the same effect. Given the following:
+This example shows three images for comparison: an image with a `hue-rotate()` filter function applied, an image with the equivalent SVG filter applied, and the original image.
 
-```html live-sample___svg_filter
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 220 220"
-  color-interpolation-filters="sRGB"
-  height="220"
-  width="220">
-  <filter id="hue-rotate">
+#### SVG
+
+The SVG {{SVGElement("feColorMatrix")}} filter element can also be used to rotate the hue of content. We set the `type` to `hueRotate` and the `values` to the angle in degrees, then we can reference the SVG effect by the ID of the {{SVGElement("filter")}}:
+
+```html live-sample___svg-filter
+<svg height="0" role="none">
+  <filter id="hue-rotate90" color-interpolation-filters="sRGB">
     <feColorMatrix type="hueRotate" values="90" />
   </filter>
 </svg>
 ```
 
-These values produce the same results:
+The following declarations produce the same effect:
 
 ```css
-filter: hue-rotate(90deg); /* 90deg rotation */
-filter: url("#hue-rotate"); /* with embedded SVG */
-filter: url("folder/fileName.svg#hue-rotate"); /* external svg filter definition */
+filter: hue-rotate(90deg);
+filter: url("#hue-rotate90"); /* with embedded SVG */
+filter: url("fileName.svg#hue-rotate90"); /* external SVG */
 ```
 
-This example shows three images: the image with a `hue-rotate()` filter function applied, the image with an equivalent `url()` filter applied, and the original images for comparison:
+#### CSS
 
-```html hidden live-sample___svg_filter
+We include CSS that will rotate the hue of elements based on their `css-filter` or `svg-filter` class:
+
+```css live-sample___svg-filter
+.css-filter {
+  filter: hue-rotate(90deg);
+}
+
+.svg-filter {
+  filter: url("#hue-rotate90");
+}
+```
+
+```css hidden live-sample___svg-filter
+th,
+td {
+  padding: 5px;
+}
+```
+
+```html hidden live-sample___svg-filter
 <table>
   <thead>
     <tr>
-      <th><code>hue-rotate()</code></th>
-      <th><code>url()</code></th>
+      <th><code>hue-rotate()</code> filter</th>
+      <th>SVG filter equivalent</th>
       <th>Original image</th>
     </tr>
   </thead>
@@ -179,13 +196,13 @@ This example shows three images: the image with a `hue-rotate()` filter function
         <img
           class="css-filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="Pride flag with rotated colors" />
+          alt="Pride flag" />
       </td>
       <td>
         <img
           class="svg-filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="Pride flag with rotated colors" />
+          alt="Pride flag" />
       </td>
       <td>
         <img
@@ -197,24 +214,7 @@ This example shows three images: the image with a `hue-rotate()` filter function
 </table>
 ```
 
-```css hidden live-sample___svg_filter
-.css-filter {
-  filter: hue-rotate(90deg);
-}
-.svg-filter {
-  filter: url("#hue-rotate");
-}
-
-th,
-td {
-  padding: 5px;
-}
-svg:not(:root) {
-  display: none;
-}
-```
-
-{{EmbedLiveSample('svg_filter','100%','280')}}
+{{EmbedLiveSample('svg-filter','100%','280')}}
 
 ### hue-rotate() does not preserve saturation or lightness
 
