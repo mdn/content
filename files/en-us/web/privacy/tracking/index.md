@@ -32,7 +32,7 @@ This architecture has a couple of properties that are worth exploring in a littl
 
 ## First and third parties
 
-When a user visits a website, the browser's address bar displays the name of the {{glossary("site")}}, and the site's content itself confirms to the user who they are interacting with. Any resources served by this site, including documents, scripts, stylesheets, images, and so on, are _first-party resources_. Any other resources are _third-party resources_: they come from a different site, that the user might not have the intention of interacting with, and of whose existence the user might well be unaware.
+When a user visits a website, the browser's address bar displays the name of the {{glossary("site")}}, and the site's content itself confirms to the user who they are interacting with. Any resources served by this site, including documents, scripts, stylesheets, images, and so on, are _first-party resources_. Any resources served by a different site are _third-party resources_.
 
 Common examples of third party resources are:
 
@@ -42,7 +42,7 @@ Common examples of third party resources are:
 
 ![A page at cat-videos.example loads first-party resources (script.js and img.png) from its own site, and third-party resources (an iframe, a script, and an image) from tracker.example.](first-and-third-party.svg)
 
-This makes tracking especially problematic for privacy, because it violates the principle of _transparency_: that the user should be aware of how their personal data is shared, and with whom. Because the user is directly interacting with the first party, it's more reasonable to assume that they intend to share any data that they share with that party. But typically the involvement of a third party is not apparent to the user, and so the fact that it may be collecting data about them is also not apparent.
+It's generally obvious to the user who the first-party site is, but they may not have any intention of interacting with a site serving embedded third-party resources, or even be aware of its existence. This makes tracking especially problematic for privacy, because it violates the principle of _transparency_: that the user should be aware of how their personal data is shared, and with whom. Because the user is directly interacting with the first party, it's more reasonable to assume that they intend to share any data that they share with that party. But typically the involvement of a third party is not apparent to the user, and so the fact that it may be collecting data about them is also not apparent.
 
 ## Client-side storage
 
