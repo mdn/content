@@ -8,7 +8,7 @@ browser-compat: api.StylePropertyMapReadOnly.entries
 
 {{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`StylePropertyMapReadOnly.entries()`** method returns an array of a given object's own enumerable property `[key, value]` pairs, in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
+The **`entries()`** method of the {{domxref("StylePropertyMapReadOnly")}} interface returns a new iterator that yields `[property, values]` pairs for each declaration in the object.
 
 ## Syntax
 
@@ -22,13 +22,14 @@ None.
 
 ### Return value
 
-An array of the given `StylePropertyMapReadOnly` object's own enumerable property `[key, value]` pairs.
+A new [iterable iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
+Each item yielded is a two-element array of `[property, values]`, where `property` is a CSS property name and `values` is an array of {{domxref("CSSStyleValue")}} objects, as returned by {{domxref("StylePropertyMapReadOnly.getAll", "getAll()")}} for that property.
 
 ## Examples
 
 ### Basic usage
 
-The following code shows an example of using `StylePropertyMapReadOnly.entries()` method on an elements computed styles.
+The following code shows an example of using the `entries()` method on an element's computed styles.
 
 ```js
 // grab a DOM element
@@ -37,10 +38,10 @@ const buttonEl = document.querySelector("button");
 // we can retrieve all computed styles with `computedStyleMap`
 const allComputedStyles = buttonEl.computedStyleMap();
 
-// entries returns an iterable of the items
+// entries returns an iterator of [property, values] pairs
 const iterableStyles = allComputedStyles.entries();
 
-// returns a two item array with align-content as the first item and CSSStyleValue as the second
+// returns a two item array: "align-content" as the property, and an array of CSSStyleValue objects as the values
 console.log(iterableStyles.next().value);
 ```
 
@@ -51,3 +52,15 @@ console.log(iterableStyles.next().value);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("StylePropertyMapReadOnly.forEach()")}}
+- {{domxref("StylePropertyMapReadOnly.get()")}}
+- {{domxref("StylePropertyMapReadOnly.getAll()")}}
+- {{domxref("StylePropertyMapReadOnly.has()")}}
+- {{domxref("StylePropertyMapReadOnly.keys()")}}
+- {{domxref("StylePropertyMapReadOnly.size")}}
+- {{domxref("StylePropertyMapReadOnly.values()")}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
