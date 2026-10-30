@@ -59,7 +59,8 @@ For example, browsers typically use the <kbd>Esc</kbd> key to exit fullscreen mo
 With keyboard lock, the app can intercept <kbd>Esc</kbd> and call `preventDefault()` to stop it from exiting fullscreen.
 The user can still exit with a long-press of <kbd>Esc</kbd>.
 
-To enable keyboard locking, set the [`keyboardlock`](/en-US/docs/Web/API/Element/requestFullscreen#keyboardlock) option to `browser` in your call to {{domxref("Element.requestFullscreen", requestFullscreen())}}.
+To enable keyboard locking, set the [`keyboardLock`](/en-US/docs/Web/API/Element/requestFullscreen#keyboardlock) option to `"browser"` in your call to {{domxref("Element.requestFullscreen", "requestFullscreen()")}}.
+
 The HTML below shows a video element we might want to display full screen.
 
 ```html
@@ -99,7 +100,8 @@ kbd {
 }
 ```
 
-The following code adds an `click` event handler for the video element. The click handler calls `requestFullscreen({ keyboardLock: "browser" }))` if <kbd>Enter</kbd> or <kbd>Shift+F</kbd> are pressed when not in fullscreen mode.
+The following code adds a `keydown` event handler to the document.
+The handler calls `requestFullscreen({ keyboardLock: "browser" })` on the video element if <kbd>Enter</kbd> or <kbd>Shift+F</kbd> are pressed when not in fullscreen mode.
 When we're in fullscreen mode we check if the <kbd>Esc</kbd> key was pressed and call `event.preventDefault()` to disable the default action (which would be to exit fullscreen mode).
 
 ```js
