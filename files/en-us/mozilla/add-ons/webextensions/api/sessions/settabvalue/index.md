@@ -40,22 +40,15 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 Set a value on the active tab when the user selects a menu item. Note that you'll need the "menus" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to run this example:
 
 ```js
-async function setOnActiveTab() {
-  let tabArray = await browser.tabs.query({
-    currentWindow: true,
-    active: true,
-  });
-  let tabId = tabArray[0].id;
-  await browser.sessions.setTabValue(tabId, "my-key", "my-value");
-}
-
 browser.menus.create({
   id: "my-item",
   title: "my item",
   contexts: ["all"],
 });
 
-browser.menus.onClicked.addListener(setOnActiveTab);
+browser.menus.onClicked.addListener((info, tab) => {
+  browser.sessions.setTabValue(tab.id, "my-key", "my-value");
+});
 ```
 
 {{WebExtExamples}}
