@@ -175,7 +175,18 @@ sidebar:
           - link: /Web/WebDriver/Reference/BiDi/Modules/session/unsubscribe
             code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/storage
+        details: closed
         code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/storage#commands
+            title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/storage/deleteCookies
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/storage/getCookies
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/storage/setCookie
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/userAgentClientHints
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/webExtension
