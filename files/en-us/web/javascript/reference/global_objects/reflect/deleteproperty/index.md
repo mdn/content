@@ -92,7 +92,7 @@ Reflect.deleteProperty(Object.freeze({ foo: 1 }), "foo"); // false
 
 ## See also
 
-- [Polyfill of `Reflect.deleteProperty` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.deleteProperty` in `core-js`](https://core-js.io/docs/features/ecmascript/reflect)
 - {{jsxref("Reflect")}}
 - [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
 - [`handler.deleteProperty()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty)

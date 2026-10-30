@@ -1,13 +1,13 @@
 ---
-title: Firefox 160 release notes for developers (Nightly)
-short-title: Firefox 160 (Nightly)
+title: Firefox 160 release notes for developers (Beta)
+short-title: Firefox 160 (Beta)
 slug: Mozilla/Firefox/Releases/160
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 160 that affect developers.
-Firefox 160 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [November 10, 2026](https://whattrainisitnow.com/release/?version=160).
+Firefox 160 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [November 10, 2026](https://whattrainisitnow.com/release/?version=160).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
@@ -71,6 +71,8 @@ Firefox 160 is the current [Nightly version of Firefox](https://www.firefox.com/
 <!-- #### Marionette -->
 
 ## Changes for add-on developers
+
+- {{WebExtAPIRef("runtime.PlatformInfo")}} now returns `arch` as `arm64` for ARM64 platforms. Previously, it returned `aarch64`. This aligns the value returned by Firefox for ARM64 platforms with Chrome. ([Firefox bug 2080310](https://bugzil.la/2080310))
 
 <!-- ### Removals -->
 

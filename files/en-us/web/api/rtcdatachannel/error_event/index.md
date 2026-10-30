@@ -16,11 +16,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("error", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onerror = (event) => { }
 ```
 
@@ -83,7 +87,7 @@ dc.addEventListener("error", (ev) => {
         console.error("    Received DTLS failure alert: ", err.receivedAlert);
       }
       if (err.sentAlert) {
-        console.error("    Sent DTLS failure alert: ", err.receivedAlert);
+        console.error("    Sent DTLS failure alert: ", err.sentAlert);
       }
       break;
   }
@@ -107,7 +111,7 @@ Error information is output to the console using {{domxref("console/error_static
 
 In addition, however, depending on the value of {{domxref("RTCError.errorDetail", "errorDetail")}}, additional information may be output. Each error type has a different set of information output. For example, an SDP syntax error displays the line number of the error within the SDP, and an SCTP error displays a message corresponding to the SCTP cause code. Other error types similarly output appropriate information.
 
-You can also set up an event handler for `error` events using the `RTCDataChannel` interface's `onerror` event handler property:
+You can also set up an event handler for `error` events using the `RTCDataChannel` interface's `onerror` event handler property (but note that this replaces other event listeners added using `onerror`, if any):
 
 ```js
 dc.onerror = (ev) => {

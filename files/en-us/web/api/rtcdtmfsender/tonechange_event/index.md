@@ -16,11 +16,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("tonechange", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 ontonechange = (event) => { }
 ```
 
@@ -40,20 +44,20 @@ This can be done using {{domxref("EventTarget.addEventListener", "addEventListen
 dtmfSender.addEventListener("tonechange", (ev) => {
   let tone = ev.tone;
   if (tone === "") {
-    tone = "&lt;none&gt;";
+    tone = "<none>";
   }
 
   document.getElementById("playingTone").innerText = tone;
 });
 ```
 
-You can also just set the `ontonechange` event handler property directly:
+You can also just set the `ontonechange` event handler property directly (but note that this replaces other event listeners added using `ontonechange`, if any):
 
 ```js
 dtmfSender.ontonechange = (ev) => {
   let tone = ev.tone;
   if (tone === "") {
-    tone = "&lt;none&gt;";
+    tone = "<none>";
   }
 
   document.getElementById("playingTone").innerText = tone;

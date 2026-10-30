@@ -271,9 +271,9 @@ const getImage = cached((url) => fetch(url).then((res) => res.blob()));
 function cached(getter) {
   // A Map from string URLs to WeakRefs of results
   const cache = new Map();
-  // Every time after a value is garbage collected, the callback is
-  // called with the key in the cache as argument, allowing us to remove
-  // the cache entry
+  // After each value is garbage collected, the callback might
+  // eventually be called with the key in the cache as argument,
+  // allowing us to remove the cache entry
   const registry = new FinalizationRegistry((key) => {
     // Note: it's important to test that the WeakRef is indeed empty.
     // Otherwise, the callback may be called after a new object has been
@@ -284,7 +284,13 @@ function cached(getter) {
   });
   return async (key) => {
     if (cache.has(key)) {
-      return cache.get(key).deref();
+      // Note: there are no guarantees when (or even if) the registry's
+      // callback will fire, so it is still possible to see a WeakRef in
+      // the cache even if it is empty
+      const dereferencedValue = cache.get(key).deref();
+      if (dereferencedValue !== undefined) {
+        return dereferencedValue;
+      }
     }
     const value = await getter(key);
     cache.set(key, new WeakRef(value));

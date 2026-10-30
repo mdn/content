@@ -113,7 +113,7 @@ console.log(result); // ["(2016)", "(01)", "(02)"]
 
 ## See also
 
-- [Polyfill of `RegExp.prototype[Symbol.split]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `RegExp.prototype[Symbol.split]` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - {{jsxref("String.prototype.split()")}}
 - [`RegExp.prototype[Symbol.match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)
 - [`RegExp.prototype[Symbol.matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
