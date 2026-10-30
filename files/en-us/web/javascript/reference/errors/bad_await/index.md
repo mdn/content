@@ -21,7 +21,7 @@ SyntaxError: Unexpected identifier (Safari)
 
 ## What went wrong?
 
-JavaScript execution is never blocking: an `await` can never block the execution of the program. Instead, it pauses the execution of the surrounding async task, while allowing other tasks to continue running. Therefore, `await` cannot be used in sync tasks, such as functions, generator functions, or top level of scripts. It is not always apparent whether the current file is a script or a module — see the [Modules guide](/en-US/docs/Web/JavaScript/Guide/Modules#top_level_await) for more information.
+JavaScript execution is never blocking: an `await` can never block the execution of the program. Instead, it pauses the execution of the surrounding async task, while allowing other tasks to continue running. Therefore, `await` cannot be used in sync tasks, such as functions, generator functions, or top level of scripts. It is not always apparent whether the current file is a script or a module — see the [Modules guide](/en-US/docs/Web/JavaScript/Guide/Modules#top-level_await) for more information.
 
 ## Examples
 

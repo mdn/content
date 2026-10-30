@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 222" role="img" aria-labelledby="title description">
+  <title id="title">An evaluation error is recorded for both modules in a cycle</title>
+  <desc id="description">b.js finishes executing its body but remains evaluating because a.js in the same strongly connected component is still evaluating. When a.js throws, both modules are marked evaluated with the same error recorded. The status of b.js changes from Evaluating to Evaluated (error). Solid arrows show dependencies; dashed arrows show bindings.</desc>
+  <style>
+    text { fill: #6b7280; font-family: Menlo, Consolas, monospace; font-size: 12px; }
+    .specifier, .identifier { fill: #08827e; font-weight: bold; }
+    .failed { fill: #b32930; }
+    .outline.failed { fill: none; stroke: #c23b40; }
+    .status { text-anchor: end; paint-order: stroke; stroke: white; stroke-width: 4; }
+    .outline { fill: none; stroke: #808080; stroke-width: 1; }
+    .dependency { fill: none; stroke: #808080; stroke-width: 1; marker-end: url(#arrow); }
+    .binding { fill: none; stroke: #808080; stroke-width: 1; stroke-dasharray: 4 3; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#808080"/>
+    </marker>
+  </defs>
+
+  <rect x="20" y="66" width="330" height="98" fill="#fff0f0"/>
+  <rect x="400" y="66" width="230" height="70" fill="#fff0f0"/>
+
+  <path class="dependency" d="M 193 76 V 50 H 500 V 66"/>
+  <path class="dependency" d="M 573 94 V 178 H 150 V 164"/>
+
+  <path class="binding" d="M 102 94 V 108 H 512 V 114"/>
+  <path class="binding" d="M 482 94 V 100 H 132 V 114"/>
+
+  <path class="outline failed" d="M 70 66 H 350 V 164 H 20 V 66 H 28"/>
+  <text x="34" y="70">a.js</text>
+  <text x="34" y="88">import { <tspan class="identifier">b</tspan> } from <tspan class="specifier">"./b.js"</tspan>;</text>
+  <text x="34" y="124">export const <tspan class="identifier">a</tspan> = 2;</text>
+
+  <path class="outline failed" d="M 450 66 H 630 V 136 H 400 V 66 H 408"/>
+  <text x="414" y="70">b.js</text>
+  <text x="414" y="88">import { <tspan class="identifier">a</tspan> } from <tspan class="specifier">"./a.js"</tspan>;</text>
+  <text x="414" y="124">export const <tspan class="identifier">b</tspan> = 1;</text>
+
+  <text class="failed" x="34" y="152">throw new Error("Evaluation failed");</text>
+  <text class="status failed" x="350" y="58">Evaluated (error)</text>
+  <text class="status failed" x="630" y="58">Evaluating → Evaluated (error)</text>
+
+  <path class="dependency" d="M 20 204 H 56"/>
+  <text x="66" y="208">Module dependency</text>
+  <path class="binding" d="M 370 204 H 406"/>
+  <text x="416" y="208">Binding connection</text>
+</svg>
