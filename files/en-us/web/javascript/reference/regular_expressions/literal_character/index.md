@@ -33,12 +33,13 @@ The following characters are syntax characters in regular expressions, and they 
 
 - [`^`, `$`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
 - [`\`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
+- [`.`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Wildcard)
 - [`*`, `+`, `?`, `{`, `}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)
 - [`(`, `)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
 - [`[`, `]`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
 - [`|`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
 
-Within character classes, more characters can appear literally. For more information, see the [Character class](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class) page. For example `\.` and `[.]` both match a literal `.`. In [`v`-mode character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class), however, there are a different set of characters reserved as syntax characters. To be most comprehensive, below is a table of ASCII characters and whether they may appear escaped or unescaped in different contexts, where "✅" means the character represents itself, "❌" means it throws a syntax error, and "⚠️" means the character is valid but means something other than itself.
+Within character classes, more characters can appear literally. For more information, see the [Character class](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class) page. For example `\.` and `[.]` both match a literal `.`. In [`v`-mode character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class), however, there is a different set of characters reserved as syntax characters. To be most comprehensive, below is a table of ASCII characters and whether they may appear escaped or unescaped in different contexts, where "✅" means the character represents itself, "❌" means it throws a syntax error, and "⚠️" means the character is valid but means something other than itself.
 
 <table class="fullwidth-table">
   <thead>
@@ -59,7 +60,7 @@ Within character classes, more characters can appear literally. For more informa
   </thead>
   <tbody>
     <tr>
-      <td><code>123456789&nbsp;"'<br>ACEFGHIJKLMN<br>OPQRTUVXYZ_<br>aceghijklmop<br>quxyz</code></td>
+      <td><code>123456789&nbsp;"'<br>CEFGHIJKLMN<br>OPQRTUVXY_<br>aceghijklmop<br>quxy</code></td>
       <td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td>
     </tr>
     <tr>
@@ -87,7 +88,7 @@ Within character classes, more characters can appear literally. For more informa
       <td>✅</td><td>⚠️</td><td>✅</td><td>⚠️</td><td>✅</td><td>⚠️</td>
     </tr>
     <tr>
-      <td><code>B</code></td>
+      <td><code>ABZz</code></td>
       <td>✅</td><td>⚠️</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td>
     </tr>
     <tr>
@@ -177,13 +178,13 @@ console.log(
 
 Whenever you want to match a syntax character literally, you need to [escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) it with a backslash (`\`). For example, to match a literal `*` in a pattern, you need to write `\*` in the pattern. Using syntax characters as literal characters either leads to unexpected results or causes syntax errors — for example, `/*/` is not a valid regular expression because the quantifier is not preceded by a pattern. In [Unicode-unaware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), `]`, `{`, and `}` may appear literally if it's not possible to parse them as the end of a character class or quantifier delimiters. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
 
-Regular expression literals cannot be specified with certain non-syntax literal characters. `/` cannot appear as a literal character in a regular expression literal, because `/` is used as the delimiter of the literal itself. You need to escape it as `\/` if you want to match a literal `/`. Line terminators cannot appear as literal characters in a regular expression literal either, because a literal cannot span multiple lines. You need to use a [character escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) like `\n` instead. There are no such restrictions when using the {{jsxref("RegExp/RegExp", "RegExp()")}} constructor, although string literals have their own escaping rules (for example, `"\\"` actually denotes a single backslash character, so `new RegExp("\\*")` and `/\*/` are equivalent).
+Regular expression literals cannot be specified with certain non-syntax literal characters. `/` cannot appear as a literal character outside character classes in a regular expression literal, because `/` is used as the delimiter of the literal itself. You need to escape it as `\/` there if you want to match a literal `/`. Inside a character class, `/` can appear unescaped, as in `/[/]/` (unless the `v` flag is set). Line terminators cannot appear as literal characters in a regular expression literal either, because a literal cannot span multiple lines. You need to use a [character escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) like `\n` instead. These delimiter and line-terminator restrictions do not apply when using the {{jsxref("RegExp/RegExp", "RegExp()")}} constructor, although string literals have their own escaping rules (for example, `"\\"` actually denotes a single backslash character, so `new RegExp("\\*")` and `/\*/` are equivalent).
 
 In [Unicode-unaware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), the pattern is interpreted as a sequence of [UTF-16 code units](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters). This means surrogate pairs actually represent two literal characters. This causes unexpected behaviors when paired with other features:
 
 ```js
-/^[😄]$/.test("😄"); // false, because the pattern is interpreted as /^[\ud83d\udc04]$/
-/^😄+$/.test("😄😄"); // false, because the pattern is interpreted as /^\ud83d\udc04+$/
+/^[😄]$/.test("😄"); // false, because the pattern is interpreted as /^[\ud83d\ude04]$/
+/^😄+$/.test("😄😄"); // false, because the pattern is interpreted as /^\ud83d\ude04+$/
 ```
 
 In Unicode-aware mode, the pattern is interpreted as a sequence of Unicode code points, and surrogate pairs do not get split. Therefore, you should always prefer to use the `u` flag.

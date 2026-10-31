@@ -25,7 +25,8 @@ A **named capturing group** is a particular kind of [capturing group](/en-US/doc
 
 Named capturing groups can be used just like capturing groups — they also have their match index in the result array, and they can be referenced through `\1`, `\2`, etc. The only difference is that they can be _additionally_ referenced by their name. The information of the capturing group's match can be accessed through:
 
-- The `groups` property of the return value of {{jsxref("RegExp.prototype.exec()")}}, {{jsxref("String.prototype.match()")}}, and {{jsxref("String.prototype.matchAll()")}}
+- The `groups` property of the return value of {{jsxref("RegExp.prototype.exec()")}}, or {{jsxref("String.prototype.match()")}} when the regex does not have the `g` flag
+- The `groups` property of each match array yielded by the iterator returned by {{jsxref("String.prototype.matchAll()")}}
 - The `groups` parameter of the {{jsxref("String.prototype.replace()")}} and {{jsxref("String.prototype.replaceAll()")}} methods' `replacement` callback function
 - [Named backreferences](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference) within the same pattern
 

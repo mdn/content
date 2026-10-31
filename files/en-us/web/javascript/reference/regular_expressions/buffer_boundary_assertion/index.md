@@ -28,7 +28,7 @@ More precisely, `\A` asserts that the character to the left is out of bounds of 
 
 These assertions only make sense when no characters are expected to the left or right of them. For example, `f\Ao` never matches because it's not possible for `\A` to both be at the start of the string and have a character to its left.
 
-The `\A` and `\z` assertions are only useful when the `m` flag is used. Without `m`, they behave just like `^` and `$`. If your pattern only needs to match the start or end of the entire string or a line (and never a mix of both), the recommended approach is to still use the `^` and `$` assertions, and set the `m` flag as needed, because they are more widely supported than the buffer boundary assertions. If you need to match both types of boundaries in the same pattern, you can technically use [modifiers](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier) to enable or disable the `m` flag in different parts of the pattern, but using these escape sequences make the code much more readable.
+The `\A` and `\z` assertions are only useful when the `m` flag is used. Without `m`, they behave just like `^` and `$`. If your pattern only needs to match the start or end of the entire string or a line (and never a mix of both), the recommended approach is to still use the `^` and `$` assertions, and set the `m` flag as needed, because they are more widely supported than the buffer boundary assertions. If you need to match both types of boundaries in the same pattern, you can technically use [modifiers](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier) to enable or disable the `m` flag in different parts of the pattern, but using these escape sequences makes the code much more readable.
 
 ## Examples
 

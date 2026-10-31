@@ -31,7 +31,7 @@ A **modifier** overrides [flag](/en-US/docs/Web/JavaScript/Reference/Regular_exp
 
 Some flags change the meanings of regex syntax elements:
 
-- The [`i`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) flag makes the regex case-insensitive by making all [literal characters](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) and [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class) implicitly be lowercase.
+- The [`i`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) flag makes the regex case-insensitive by normalizing the case of [literal characters](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) and [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class).
 - The [`m`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline) flag changes the behavior of [input boundary assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion) `^` and `$` to match the start and end of each line, in addition to the start and end of the input string.
 - The [`s`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll) flag changes the behavior of the [wildcard](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Wildcard) `.` character to match any character, including line terminators.
 
