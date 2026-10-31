@@ -121,6 +121,20 @@ Firefox 158 added support for [`moderate`](/en-US/docs/Web/HTML/Reference/Elemen
 - `dom.speculation_rules.enabled`
   - : Set to `true` to enable.
 
+#### Render blocking
+
+The `blocking="render` attribute and value is now supported for the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} HTML elements. This allows for rendering to be blocked, when an element is dynamically added via a script, until the recourse has been fetched. ([Firefox bug 1751383](https://bugzil.la/1751383)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 159           | No                  |
+| Beta              | 159           | No                  |
+| Release           | 159           | No                  |
+
+- `dom.element.blocking.enabled`
+  - : Set to `true` to enable.
+
 ## CSS
 
 ### `circle()` and `ellipse()` allow `farthest-corner` and `closest-corner` keywords
