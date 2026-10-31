@@ -528,6 +528,9 @@ Container queries can also evaluate the computed style of the container element.
 
 The parameter of each `style()` is a single `<style-feature>`. A **`<style-feature>`** can be a valid CSS [declaration](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations) (the **plain** form), a CSS property or [`<custom-property-name>`](/en-US/docs/Web/CSS/Reference/Values/var#values) on its own (the **boolean** form), or a [range comparison](#range_syntax) (the **range** form).
 
+> [!NOTE]
+> Browsers currently only support `style()` queries on [custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties). Style queries on standard CSS properties and declarations are not yet supported. See [Style queries for custom properties](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#style_queries_for_custom_properties) for more information.
+
 ```css
 @container style(--themeBackground),
     not style(background-color: red),
