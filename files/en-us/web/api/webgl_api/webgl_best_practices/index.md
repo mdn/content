@@ -12,7 +12,7 @@ WebGL is a complicated API, and it's often not obvious what the recommended ways
 
 Your application should run without generating any WebGL errors (as returned by `getError`). Every WebGL error is reported in the Web Console as a JavaScript warning with a descriptive message. After too many errors (32 in Firefox), WebGL stops generating descriptive messages, which really hinders debugging.
 
-The _only_ errors a well-formed page generates are `OUT_OF_MEMORY` and `CONTEXT_LOST`.
+The _only_ errors a well-formed page generates are `OUT_OF_MEMORY` and `CONTEXT_LOST_WEBGL`.
 
 ## Optimize memory
 
@@ -23,7 +23,7 @@ WebGL doesn't offer APIs to query the maximum amount of video memory on the syst
 Some common practices:
 
 - Estimate the current VRAM usage, such as how many buffers are allocated.
-- Handle [`webglcontextlost`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event) events, emitted when the GPU is out of memory.
+- Handle [`webglcontextlost`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event) events, which can be emitted when the GPU runs out of memory, among other reasons.
 - Offer different graphics quality settings, so the user can opt into lower quality when resources are constrained.
 
 ### Delete objects eagerly
@@ -36,7 +36,7 @@ Consider also eagerly losing WebGL contexts via the `WEBGL_lose_context` extensi
 
 ### Consider compressed texture formats
 
-While JPG and PNG are generally smaller over-the-wire, GPU compressed texture formats are smaller on in GPU memory, and are faster to sample from. (This reduces texture memory bandwidth, which is precious on mobile) However, compressed texture formats have worse quality than JPG, and are generally only acceptable for colors (not e.g., normals or coordinates).
+While JPG and PNG are generally smaller over-the-wire, GPU compressed texture formats are smaller in GPU memory, and are faster to sample from. (This reduces texture memory bandwidth, which is precious on mobile.) However, compressed texture formats have worse quality than JPG, and are generally only acceptable for colors (not e.g., normals or coordinates).
 
 Unfortunately, there's no single universally supported format. Every system has at least one of the following though:
 
@@ -49,7 +49,7 @@ WebGL 2 has universal support by combining:
 - `WEBGL_compressed_texture_s3tc` (desktop)
 - `WEBGL_compressed_texture_etc` (mobile)
 
-`WEBGL_compressed_texture_astc` has both higher quality and/or higher compression, but is only supported on newer hardware.
+The newer `WEBGL_compressed_texture_astc` has both higher quality and/or higher compression.
 
 #### Basis Universal texture compression format/library
 
@@ -59,15 +59,15 @@ WebGL 2 has universal support by combining:
 
 Depth and stencil attachments and formats are actually inseparable on many devices. You may ask for `DEPTH_COMPONENT24` or `STENCIL_INDEX8`, but you're often getting D24X8 and X24S8 32bpp formats behind the scenes. Assume that the memory usage of depth and stencil formats is rounded up to the nearest four bytes.
 
-This also means that if you need a stencil buffer, a combined depth-stencil attachment (`DEPTH24_STENCIL8` in WebGL 2, or `DEPTH_STENCIL` in WebGL 1) usually costs no more memory than a 24-bit depth-only one.
+This means that a smaller format doesn't necessarily save memory: for example, `DEPTH_COMPONENT16` may be stored as a 32-bit format, so it may use no less memory than `DEPTH_COMPONENT24`. Conversely, adding a stencil buffer may increase memory usage on some platforms, such as Apple GPUs, where a 24-bit depth format can be stored as 32-bit float depth and a depth-stencil format as 32-bit float depth plus 8-bit stencil. Only request a stencil buffer (with the `stencil: true` context attribute, or a depth-stencil attachment) if you use it.
 
 ### Use texStorage to create textures
 
-The WebGL 2.0 `texImage*` API lets you define each mip level independently and at any size, even the mis-matching mips sizes are not an error until draw time which means there is no way the driver can actually prepare the texture in GPU memory until the first time the texture is drawn.
+The WebGL 2.0 `texImage*` API lets you define each mip level independently and at any size, even mismatching mip sizes that make the texture incomplete for sampling. The driver can allocate storage before the texture is drawn, but may defer some work until then.
 
-Further, some drivers might unconditionally allocate the whole mip-chain (+30% memory!) even if you only want a single level.
+Further, some drivers might unconditionally allocate the whole mip-chain (+33% memory for square textures!) even if you only want a single level.
 
-Use `texStorage` to allocate a fixed format, size, and number of mip levels in WebGL 2, then update the contents with `texSubImage`. This makes storage requirements explicit; it does not guarantee that every upload is faster. Image and video upload paths depend on the browser, driver, source format, and required conversions. Benchmark representative uploads before replacing an existing `texImage` path solely for performance.
+Prefer `texStorage` in WebGL 2 to allocate the texture's format, dimensions, and mip levels up front, then upload its contents with `texSubImage`. This avoids redefining texture storage on subsequent uploads and lets you allocate only the mip levels you need. However, image and video uploads through `texSubImage` can be slower than `texImage`, so benchmark those uploads before switching.
 
 ## Optimize runtime
 
@@ -87,11 +87,16 @@ Call `flush()` when expecting results such as queries, or at completion of a ren
 
 Flush tells the implementation to push all pending commands out for execution, flushing them out of the queue, instead of waiting for more commands to enqueue before sending for execution.
 
-For example, it is possible for the following to never complete without context loss:
+For example, in WebGL 2, flush after inserting a fence before polling for completion in a later task:
 
 ```js
-sync = glFenceSync(GL_SYNC_GPU_COMMANDS_COMPLETE, 0);
-glClientWaitSync(sync, 0, GL_TIMEOUT_IGNORED);
+const sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
+gl.flush();
+
+// clientWaitAsync is defined in the async data readback example below.
+clientWaitAsync(gl, sync, 0, 10)
+  .finally(() => gl.deleteSync(sync))
+  .catch(console.error);
 ```
 
 WebGL doesn't have a SwapBuffers call by default, so a flush can help fill the gap, as well.
@@ -116,7 +121,7 @@ In production code, avoid such entry points, especially on the browser main thre
 - `get*Parameter()` in general: possible flush + round-trip. In some cases, these will be cached to avoid the round-trip, but try to avoid relying on this.
 - `checkFramebufferStatus()`: possible flush + round-trip.
 - `getBufferSubData()`: usual finish + round-trip. (This is okay for READ buffers in conjunction with fences - see [async data readback](#use_non-blocking_async_data_readback) below.)
-- `readPixels()` to the CPU (i.e., without an UNPACK buffer bound): finish + round-trip. Instead, use GPU-GPU `readPixels` in conjunction with async data readback.
+- `readPixels()` to the CPU (i.e., without a PIXEL_PACK buffer bound): finish + round-trip. Instead, use GPU-GPU `readPixels` in conjunction with async data readback.
 
 ### Always enable vertex attrib 0 as an array
 
@@ -140,7 +145,7 @@ Do as much work as you can in the vertex shader, rather than in the fragment sha
 
 For example, a simple animation of a textured surface can be achieved through a time-dependent transformation of texture coordinates. (The simplest case being adding a uniform vector to the texture coordinates attribute vector) If visually acceptable, one can transform the texture coordinates in the vertex shader rather than in the fragment shader, to get better performance.
 
-One common trade-off is to some lighting calculations per-vertex instead of per-fragment (pixel). In some cases, especially with simple models or dense vertices, this looks good enough.
+One common trade-off is to do some lighting calculations per-vertex instead of per-fragment (pixel). In some cases, especially with simple models or dense vertices, this looks good enough.
 
 The inversion of this is if a model has more vertices than pixels in the rendered output. However, LOD meshes is usually the answer to this problem, rarely moving work from the vertex _to_ the fragment shader.
 
@@ -199,9 +204,9 @@ While we've described a pattern to allow browsers to compile and link in paralle
 Example usage:
 
 ```js
-ext = gl.getExtension("KHR_parallel_shader_compile");
-gl.compileProgram(vs);
-gl.compileProgram(fs);
+const ext = gl.getExtension("KHR_parallel_shader_compile");
+gl.compileShader(vs);
+gl.compileShader(fs);
 gl.attachShader(prog, vs);
 gl.attachShader(prog, fs);
 gl.linkProgram(prog);
@@ -214,7 +219,7 @@ if (ext) {
     // Check program link status; if OK, use and draw with it.
   }
 } else {
-  // Program linking is synchronous.
+  // Checking link status may block until linking completes.
   // Check program link status; if OK, use and draw with it.
 }
 ```
@@ -477,7 +482,7 @@ MAX_FRAGMENT_UNIFORM_VECTORS: 64
 ALIASED_POINT_SIZE_RANGE: [1,100]
 ```
 
-Your desktop may support 16k textures, or maybe 16 texture units in the vertex shader, but most other systems don't, and content that works for you will not work for them.
+Your desktop may support 16k textures but lower-end systems may not and the same content will not work there.
 
 ### Avoid "#ifdef GL_ES"
 
@@ -485,7 +490,7 @@ You should never use `#ifdef GL_ES` in your WebGL shaders; this condition is alw
 
 ### Don't assume you can render into float textures
 
-There are many, many systems that support RGBA32F textures, but if you attach one to a framebuffer you'll get `FRAMEBUFFER_INCOMPLETE_ATTACHMENT` from `checkFramebufferStatus()`. It may work on your system, but _most_ mobile systems will not support it!
+There are many, many systems that support RGBA32F textures, but if you attach one to a framebuffer you'll get `FRAMEBUFFER_INCOMPLETE_ATTACHMENT` from `checkFramebufferStatus()`.
 
 On WebGL 1, use the `EXT_color_buffer_half_float` and `WEBGL_color_buffer_float` extensions to check for render-to-float-texture support for float16 and float32 respectively.
 
@@ -528,7 +533,7 @@ precision lowp samplerCube;
 
 Using `highp` precision unconditionally in fragment shaders will prevent your content from working on some older mobile hardware.
 
-While you can use `mediump float` instead, but be aware that this often results in corrupted rendering due to lack of precision (particularly mobile systems) though the corruption is not going to be visible on a typical desktop computer.
+You can use `mediump float` instead, but be aware that this often results in corrupted rendering due to lack of precision (particularly mobile systems) though the corruption is not going to be visible on a typical desktop computer.
 
 If you know your precision requirements, `getShaderPrecisionFormat()` will tell you what the system supports.
 
@@ -568,29 +573,29 @@ _\*float24: sign bit, 7-bit for exponent, 16-bit for mantissa._
 | `mediump` | IEEE float16        | (-2^14, 2^14)   | 2^-14          | 2^-10 relative |
 | `lowp`    | 10-bit signed fixed | (-2, 2)         | 2^-8           | 2^-8 absolute  |
 
-| `(u)int`  | think    | `int` range   | `unsigned int` range |
-| --------- | -------- | ------------- | -------------------- |
-| `highp`   | (u)int32 | [-2^31, 2^31] | [0, 2^32]            |
-| `mediump` | (u)int16 | [-2^15, 2^15] | [0, 2^16]            |
-| `lowp`    | (u)int9  | [-2^8, 2^8]   | [0, 2^9]             |
+| `(u)int`  | think    | `int` range       | `unsigned int` range |
+| --------- | -------- | ----------------- | -------------------- |
+| `highp`   | (u)int32 | [-2^31, 2^31 - 1] | [0, 2^32 - 1]        |
+| `mediump` | (u)int16 | [-2^15, 2^15 - 1] | [0, 2^16 - 1]        |
+| `lowp`    | (u)int9  | [-2^8, 2^8 - 1]   | [0, 2^9 - 1]         |
 
 ### Use mipmaps for any texture you'll see in 3d
 
-When in doubt, call `generateMipmaps()` after texture uploads. Mipmaps are cheap on memory (only 30% overhead) while providing often-large performance advantages when textures are "zoomed out" or generally downscaled in the distance in 3d, or even for cube-maps!
+When in doubt, call `generateMipmap()` after texture uploads. Mipmaps are cheap on memory (about 33% overhead for square textures) while providing often-large performance advantages when textures are "zoomed out" or generally downscaled in the distance in 3d, or even for cube-maps!
 
 It's quicker to sample from smaller texture images due to better inherent texture fetch cache locality: Zooming out on a non-mipmapped texture ruins texture fetch cache locality, because neighboring pixels no longer sample from neighboring texels!
 
-However, for 2d resources that are never "zoomed out", don't pay the 30% memory surcharge for mipmaps:
+However, for 2d resources that are never "zoomed out", don't pay the extra memory surcharge for mipmaps:
 
 ```js
 const tex = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, tex);
-gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); // Defaults to NEAREST_MIPMAP_LINEAR, for mipmapping!
+gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); // Defaults to NEAREST_MIPMAP_LINEAR, for mipmapping!
 ```
 
 (In WebGL 2, you should just use `texStorage` with `levels=1`)
 
-One caveat: `generateMipmaps` only works if you would be able to render into the texture if you attached it to a framebuffer. (The spec calls this "color-renderable formats") For example, if a system supports float-textures but not render-to-float, `generateMipmaps` will fail for float formats.
+One caveat: for sized internal formats, `generateMipmap` only works if you would be able to render into the texture if you attached it to a framebuffer and the format supports texture filtering. (The spec calls these "color-renderable" and "texture-filterable" formats.) Unsized formats such as WebGL 1's `ALPHA`, `LUMINANCE`, and `LUMINANCE_ALPHA` can support mipmap generation without being color-renderable. Compressed and depth/stencil formats do not support `generateMipmap`. In WebGL 1, texture dimensions must also be powers of two.
 
 ### `devicePixelRatio` and high-dpi rendering
 
@@ -600,11 +605,16 @@ The most reliable way to avoid this is to ask the browser for the exact size of 
 
 As a fallback, you can use non-integer values for CSS's `top`/`bottom`/`left`/`right` to fairly reliably 'pre-snap' your canvas to whole integer device coordinates. This only works if you position the canvas yourself, so it doesn't fit layouts where the canvas is sized by its container.
 
+Demo: [Device pixel presnap](https://kdashg.github.io/misc/webgl/device-pixel-presnap.html)
+
 ### ResizeObserver and 'device-pixel-content-box'
 
 On [supporting browsers](/en-US/docs/Web/API/ResizeObserverEntry/devicePixelContentBoxSize#browser_compatibility), {{domxref("ResizeObserverEntry.devicePixelContentBoxSize", "devicePixelContentBoxSize")}} reports the content box in device pixels. Observe with `box: "device-pixel-content-box"` to receive callbacks when this size changes. The example below falls back to observing the content box in CSS pixels when device-pixel sizes are unavailable. It assumes horizontal writing mode and a canvas whose CSS width and height are set independently of its `width` and `height` attributes, to avoid a resize feedback loop.
 
 ```js
+let pendingWidth = canvas.width;
+let pendingHeight = canvas.height;
+
 function onResize(entries) {
   for (const entry of entries) {
     let width;
@@ -618,8 +628,8 @@ function onResize(entries) {
       width = Math.round(entry.contentBoxSize[0].inlineSize * dpr);
       height = Math.round(entry.contentBoxSize[0].blockSize * dpr);
     }
-    entry.target.width = width;
-    entry.target.height = height;
+    pendingWidth = width;
+    pendingHeight = height;
   }
 }
 
@@ -630,6 +640,15 @@ try {
   // Browsers that don't support this box option throw an error
   observer.observe(canvas, { box: "content-box" });
 }
+
+function resizeCanvas() {
+  if (canvas.width !== pendingWidth || canvas.height !== pendingHeight) {
+    canvas.width = pendingWidth;
+    canvas.height = pendingHeight;
+  }
+}
 ```
 
-If you render in a {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame()")}} loop, nothing else is needed: each frame can read `canvas.width` and `canvas.height` and pass them to `gl.viewport()`. If you only render on demand, call your render function at the end of the callback, because changing the size of a canvas clears it.
+If you render in a {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame()")}} loop, call `resizeCanvas()` before drawing: each frame can then read `canvas.width` and `canvas.height` and pass them to `gl.viewport()`. Resizing directly in the observer could clear a frame that has already been drawn, because observer callbacks run after animation-frame callbacks. If you only render on demand, call your render function at the end of the callback, and have it call `resizeCanvas()` before drawing, because changing the size of a canvas clears it.
+
+The content-box fallback is approximate: the rounded size may not exactly match the device pixels the canvas covers, and the callback doesn't run when only `devicePixelRatio` changes, for example when the window moves to a display with a different pixel density. To handle that case, you can also listen for changes to a resolution media query with {{domxref("Window.matchMedia()")}}.
