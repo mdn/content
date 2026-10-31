@@ -39,6 +39,9 @@ Like all other HTML elements, this element supports the [global attributes](/en-
     > [!NOTE]
     > Modern browsers block audio (or videos with an unmuted audio track) from autoplaying, as sites that automatically play audio can be an unpleasant experience for users. See our [autoplay guide](/en-US/docs/Web/Media/Guides/Autoplay) for additional information about how to properly use autoplay.
 
+    > [!NOTE]
+    > Safari on iOS only autoplays a video if the element also has the [`playsinline`](#playsinline) attribute. See [Delivering Video Content for Safari](https://developer.apple.com/documentation/webkit/delivering-video-content-for-safari#Enable-Video-Autoplay) on the Apple Developer website for details.
+
     To disable video autoplay, `autoplay="false"` will not work; the video will autoplay if the attribute is there in the `<video>` tag at all. To remove autoplay, the attribute needs to be removed altogether.
 
     > [!NOTE]
