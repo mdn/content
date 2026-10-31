@@ -6,7 +6,7 @@ browser-compat: javascript.regular_expressions.unicode_character_class_escape
 sidebar: jssidebar
 ---
 
-A **unicode character class escape** is a kind of [character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape) that matches a set of characters specified by a Unicode property. It's only supported in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). When the [`v`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) flag is enabled, it can also be used to match finite-length strings.
+A **Unicode character class escape** is a kind of [character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape) that matches a set of characters specified by a Unicode property. It's only supported in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). When the [`v`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) flag is enabled, it can also be used to match finite-length strings.
 
 {{InteractiveExample("JavaScript Demo: Regex Unicode character class escape", "taller")}}
 
@@ -68,9 +68,9 @@ In `v` mode, `\p` may match a sequence of code points, defined in Unicode as "pr
 
 ### General categories
 
-General categories are used to classify Unicode characters and subcategories are available to define a more precise categorization. It is possible to use both short or long forms in Unicode property escapes.
+General categories are used to classify Unicode characters and subcategories are available to define a more precise categorization. It is possible to use both short and long forms in Unicode property escapes.
 
-They can be used to match letters, numbers, symbols, punctuations, spaces, etc. For a more exhaustive list of general categories, please refer to [the Unicode specification](https://unicode.org/reports/tr18/#General_Category_Property).
+They can be used to match letters, numbers, symbols, punctuation, spaces, etc. For a more exhaustive list of general categories, please refer to [the Unicode specification](https://unicode.org/reports/tr18/#General_Category_Property).
 
 ```js
 // finding all the letters of a text
@@ -85,13 +85,13 @@ story.match(/\p{Letter}/gu);
 // This is equivalent (short alias):
 story.match(/\p{L}/gu);
 
-// This is also equivalent (conjunction of all the subcategories using short aliases)
+// This is also equivalent (disjunction of all the subcategories using short aliases)
 story.match(/\p{Lu}|\p{Ll}|\p{Lt}|\p{Lm}|\p{Lo}/gu);
 ```
 
 ### Scripts and script extensions
 
-Some languages use different scripts for their writing system. For instance, English and Spanish are written using the Latin script while Arabic and Russian are written with other scripts (respectively Arabic and Cyrillic). The `Script` and `Script_Extensions` Unicode properties allow regular expression to match characters according to the script they are mainly used with (`Script`) or according to the set of scripts they belong to (`Script_Extensions`).
+Some languages use different scripts for their writing system. For instance, English and Spanish are written using the Latin script while Arabic and Russian are written with other scripts (respectively Arabic and Cyrillic). The `Script` and `Script_Extensions` Unicode properties allow regular expressions to match characters according to the script they are mainly used with (`Script`) or according to the set of scripts they belong to (`Script_Extensions`).
 
 For example, `A` belongs to the `Latin` script and `ε` to the `Greek` script.
 
@@ -126,15 +126,15 @@ If a character is used in a limited set of scripts, the `Script` property will o
 
 ### Unicode property escapes vs. character classes
 
-With JavaScript regular expressions, it is also possible to use [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) and especially `\w` or `\d` to match letters or digits. However, such forms only match characters from the _Latin_ script (in other words, `a` to `z` and `A` to `Z` for `\w` and `0` to `9` for `\d`). As shown in [this example](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes#looking_for_a_word_from_unicode_characters), it might be a bit clumsy to work with non Latin texts.
+With JavaScript regular expressions, it is also possible to use [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) and especially `\w` or `\d` to match letters or digits. However, such forms only match characters from the _Latin_ script (in other words, ASCII letters, numbers, and underscore for `\w` and ASCII numbers for `\d`). As shown in [this example](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes#looking_for_a_word_from_unicode_characters), it might be a bit clumsy to work with non Latin texts.
 
-Unicode property escapes categories encompass much more characters and `\p{Letter}` or `\p{Number}` will work for any script.
+Unicode property escapes categories encompass many more characters and `\p{Letter}` or `\p{Number}` will work for any script.
 
 ```js
 // Trying to use ranges to avoid \w limitations:
 
 const nonEnglishText = "Приключения Алисы в Стране чудес";
-const regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
+const regexpBMPWord = /([\u0000-\u001F\u0021-\uFFFF])+/gu;
 // BMP goes through U+0000 to U+FFFF but space is U+0020
 
 console.table(nonEnglishText.match(regexpBMPWord));
