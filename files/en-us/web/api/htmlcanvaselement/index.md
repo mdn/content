@@ -39,6 +39,21 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}
   - : Transfers control to an {{domxref("OffscreenCanvas")}} object, either on the main thread or on a worker.
 
+### HTML-in-Canvas instance methods
+
+- {{domxref("HTMLCanvasElement.captureElementImage()")}}
+  - : Captures a snapshot of a [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) element, which can be rendered later on.
+- {{domxref("HTMLCanvasElement.updateElementGeometry()")}}
+  - : Supplies a {{domxref("DOMMatrix")}} that updates the size, shape, and position of a `drawable` element's underlying DOM presence so that it can be kept in sync with the canvas rendering as it updates for hit testing purposes.
+- {{domxref("HTMLCanvasElement.clearElementGeometry()")}}
+  - : Clears any previous `DOMMatrix` applied to a `drawable` element's underlying DOM presence, returning it to its original size, shape, and position.
+- {{domxref("HTMLCanvasElement.getElementImageDefaultSize()")}}
+  - : Returns an object containing a `drawable` element's original size as it would be rendered in the DOM.
+- {{domxref("HTMLCanvasElement.getElementTransform()")}}
+  - : Returns the `DOMMatrix` representing the transform currently applied to a `drawable` element's underlying DOM presence.
+- {{domxref("HTMLCanvasElement.requestPaint()")}}
+  - : schedules a single {{domxref("HTMLCanvasElement.paint_event", "paint")}} event even if no repaints occurred.
+
 ## Events
 
 _Inherits events from its parent, {{domxref("HTMLElement")}}._
@@ -56,6 +71,13 @@ Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEvent
 - [`webglcontextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event)
   - : Fired if the user agent restores the drawing buffer for a `WebGLRenderingContext` or `WebGL2RenderingContext` object.
 
+### HTML-in-Canvas events
+
+- {{domxref("HTMLCanvasElement.paint_event", "paint")}}
+  - : Fired when `drawable` elements have been repainted.
+- {{domxref("HTMLCanvasElement.elementgeometryupdate_event", "elementgeometryupdate")}}
+  - : Fired when `drawable` element geometry has been updated via an {{domxref("OffscreenCanvas")}}.
+
 ## Specifications
 
 {{Specifications}}
@@ -67,3 +89,4 @@ Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEvent
 ## See also
 
 - HTML element implementing this interface: {{HTMLElement("canvas")}}
+- [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API)
