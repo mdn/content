@@ -130,11 +130,10 @@ As an example of this last failure case, trying to set `document.domain` to
 Additionally, as part of its deprecation, it will do nothing when combined with certain
 modern isolation features:
 
-- If used on a cross-origin isolated page, i.e., one that uses the appropriate values
+- If used on a [cross-origin isolated page](/en-US/docs/Web/API/Window/crossOriginIsolated), i.e., one that uses the appropriate values
   for the {{httpheader("Cross-Origin-Opener-Policy")}} and
   {{httpheader("Cross-Origin-Embedder-Policy")}} HTTP headers
-- If used on an origin-isolated page, i.e., one that uses the
-  {{httpheader("Origin-Agent-Cluster")}} {{experimental_inline}} HTTP header
+- If used on an [origin-keyed agent cluster page](/en-US/docs/Web/API/Window/originAgentCluster), i.e., one with the {{httpheader("Origin-Agent-Cluster")}} HTTP header set to `?1`
 
 Finally, setting `document.domain` does not change the origin used for
 origin-checks by some Web APIs, preventing sub-domain access via this mechanism.
