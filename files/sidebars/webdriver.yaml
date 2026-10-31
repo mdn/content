@@ -128,7 +128,16 @@ sidebar:
           - link: /Web/WebDriver/Reference/BiDi/Modules/log/entryAdded
             code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/network
+        details: closed
         code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/network#commands
+            title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/continueResponse
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/provideResponse
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/permissions
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/script
