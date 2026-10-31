@@ -343,7 +343,7 @@ console.assert(fun.bind(true)() === true);
 
 #### Removal of stack-walking properties
 
-In strict mode it's no longer possible to "walk" the JavaScript stack. Many implementations used to implement some extension features that make it possible to detect the upstream caller of a function. When a function `fun` is in the middle of being called, [`fun.caller`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/caller) is the function that most recently called `fun`, and [`fun.arguments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/arguments) is the `arguments` for that invocation of `fun`. Both extensions are problematic for "secure" JavaScript because they allow "secured" code to access "privileged" functions and their (potentially unsecured) arguments. If `fun` is in strict mode, both `fun.caller` and `fun.arguments` are non-deletable properties which throw when set or retrieved:
+In strict mode it's no longer possible to "walk" the JavaScript stack. Many implementations used to implement some extension features that make it possible to detect the upstream caller of a function. When a function `fun` is in the middle of being called, [`fun.caller`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/caller) is the function that most recently called `fun`, and [`fun.arguments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/arguments) is the `arguments` for that invocation of `fun`. Both extensions are problematic for "secure" JavaScript because they allow "secured" code to access "privileged" functions and their (potentially unsecured) arguments. If `fun` is in strict mode, both `fun.caller` and `fun.arguments` are properties which throw when set or retrieved:
 
 ```js
 function restricted() {
@@ -391,13 +391,13 @@ You can migrate a codebase to strict mode by first adding `"use strict"` to a pi
 
 ### Syntax errors
 
-When adding `'use strict';`, the following cases will throw a {{jsxref("SyntaxError")}} before the script is executing:
+When adding `'use strict';`, the following cases will throw a {{jsxref("SyntaxError")}} before the script executes:
 
 - Octal syntax `const n = 023;`
 - [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement
 - Using [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) on a variable name `delete myVariable`;
 - Using [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) or [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) as variable or function argument name
-- Using one of the newly [reserved keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words) (in prevision for future language features): `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`, and `yield`
+- Using one of the newly [reserved keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words) (in anticipation of future language features): `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`, and `yield`
 - Declaring two function parameters with the same name `function f(a, b, b) {}`
 - Declaring the same property name twice in an object literal `{a: 1, b: 3, a: 7}`. This constraint was later removed ([bug 1041128](https://bugzil.la/1041128)).
 
@@ -419,7 +419,7 @@ These differences are very subtle differences. It's possible that a test suite d
 - `this`
   - : In sloppy mode, function calls like `f()` would pass the global object as the `this` value. In strict mode, it is now `undefined`. When a function was called with [`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) or [`apply`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), if the value was a primitive value, this one was boxed into an object (or the global object for `undefined` and `null`). In strict mode, the value is passed directly without conversion or replacement.
 - `arguments`
-  - : In sloppy mode, modifying a value in the `arguments` object modifies the corresponding named argument. This made optimizations complicated for JavaScript engine and made code harder to read/understand. In strict mode, the `arguments` object is created and initialized with the same values than the named arguments, but changes to either the `arguments` object or the named arguments aren't reflected in one another.
+  - : In sloppy mode, modifying a value in the `arguments` object modifies the corresponding named argument. This made optimizations complicated for JavaScript engines and made code harder to read/understand. In strict mode, the `arguments` object is created and initialized with the same values as the named arguments, but changes to either the `arguments` object or the named arguments aren't reflected in one another.
 - `eval`
   - : In strict mode code, `eval` doesn't create a new variable in the scope from which it was called. Also, of course, in strict mode, the string is evaluated with strict mode rules. Thorough testing will need to be performed to make sure nothing breaks. Not using eval if you don't really need it may be another pragmatic solution.
 - Block-scoped function declarations

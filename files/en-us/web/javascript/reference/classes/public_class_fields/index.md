@@ -126,7 +126,7 @@ const instance = new Derived();
 console.log(instance.field); // 2
 ```
 
-Fields are added one-by-one. Field initializers can refer to field values above it, but not below it. All instance and static methods are added beforehand and can be accessed, although calling them may not behave as expected if they refer to fields below the one being initialized.
+Fields are added one-by-one. Field initializers can refer to field values above them, but not below them. All instance and static methods are added beforehand and can be accessed, although calling them may not behave as expected if they refer to fields below the one being initialized.
 
 ```js
 class C {

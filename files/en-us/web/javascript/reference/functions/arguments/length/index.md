@@ -17,7 +17,7 @@ A non-negative integer.
 
 ## Description
 
-The `arguments.length` property provides the number of arguments actually passed to a function. This can be more or less than the defined parameter's count (see {{jsxref("Function.prototype.length")}}). For example, for the function below:
+The `arguments.length` property provides the number of arguments actually passed to a function. This can be more or less than the number of defined parameters (see {{jsxref("Function.prototype.length")}}). For example, for the function below:
 
 ```js
 function func1(a, b, c) {
