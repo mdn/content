@@ -85,7 +85,7 @@ language.current = "FA";
 console.log(language.log); // ['EN', 'FA']
 ```
 
-Note that `current` is not defined, and any attempts to access it will
+Note that `current` has no getter, and any attempts to access it will
 result in `undefined`.
 
 ### Using setters in classes

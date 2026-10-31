@@ -141,7 +141,7 @@ const classes = `header ${
 
 ### Tagged templates
 
-A more advanced form of template literals are _tagged_ templates.
+_Tagged_ templates are a more advanced form of template literals.
 
 Tags allow you to parse template literals with a function. The first argument of a tag function contains an array of string values. The remaining arguments are related to the expressions.
 
@@ -274,7 +274,7 @@ tag`string text line 1 \n string text line 2`;
 ```
 
 > [!NOTE]
-> The template literal syntax is still processed in the same way, which means unescaped backticks and `${` have special syntactic meaning, but escaping these characters create extra backslashes in the raw string. See [raw strings containing template literal syntax](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/raw#raw_strings_containing_template_literal_syntax) for more information.
+> The template literal syntax is still processed in the same way, which means unescaped backticks and `${` have special syntactic meaning, but escaping these characters creates extra backslashes in the raw string. See [raw strings containing template literal syntax](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/raw#raw_strings_containing_template_literal_syntax) for more information.
 
 In addition, the {{jsxref("String.raw()")}} method exists to create raw strings just like the default template function and string concatenation would create.
 
@@ -329,7 +329,7 @@ In normal template literals, [the escape sequences in string literals](/en-US/do
 
 However, this is problematic for tagged templates, which, in addition to the "cooked" literal, also have access to the raw literals (escape sequences are preserved as-is).
 
-Tagged templates enable the embedding of arbitrary string content, where escape sequences may follow a different syntax. Consider for an example where we embed [LaTeX](https://en.wikipedia.org/wiki/LaTeX) source text in JavaScript via `String.raw`. We want to still be able to use LaTeX macros that start with `u` or `x` without following JavaScript syntax restrictions. Therefore, the syntax restriction of well-formed escape sequences is removed from tagged templates. The example below uses [MathJax](https://www.mathjax.org/) to render LaTeX in one element:
+Tagged templates enable the embedding of arbitrary string content, where escape sequences may follow a different syntax. Consider an example where we embed [LaTeX](https://en.wikipedia.org/wiki/LaTeX) source text in JavaScript via `String.raw`. We want to still be able to use LaTeX macros that start with `u` or `x` without following JavaScript syntax restrictions. Therefore, the syntax restriction of well-formed escape sequences is removed from tagged templates. The example below uses [MathJax](https://www.mathjax.org/) to render LaTeX in one element:
 
 ```js
 const node = document.getElementById("formula");
@@ -340,7 +340,7 @@ node.textContent = String.raw`$\underline{u}$`;
 MathJax.typesetPromise([node]);
 ```
 
-However, illegal escape sequences must still be represented in the "cooked" representation. They will show up as {{jsxref("undefined")}} element in the "cooked" array:
+However, illegal escape sequences must still be represented in the "cooked" representation. They will show up as an {{jsxref("undefined")}} element in the "cooked" array:
 
 ```js
 function log(str) {

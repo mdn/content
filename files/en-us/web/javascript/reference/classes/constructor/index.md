@@ -37,7 +37,7 @@ constructor(argument0, argument1, /* …, */ argumentN) { /* … */ }
 
 There are some additional syntax restrictions:
 
-- A class method called `constructor` cannot be a [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get), [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set), [async](/en-US/docs/Web/JavaScript/Reference/Statements/async_function), or [generator](/en-US/docs/Web/JavaScript/Reference/Statements/function*).
+- A non-static class method with the non-computed name `constructor` cannot be a [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get), [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set), [async](/en-US/docs/Web/JavaScript/Reference/Statements/async_function), or [generator](/en-US/docs/Web/JavaScript/Reference/Statements/function*).
 - A class cannot have more than one `constructor` method.
 
 ## Description
@@ -214,7 +214,7 @@ foo.constructor(); // Logs "called"
 console.log(foo); // Foo { a: 1 }
 ```
 
-Async methods, generator methods, accessors, and class fields are forbidden from being called `constructor`. Private names cannot be called `#constructor`. Any member named `constructor` must be a plain method.
+Non-static async methods, generator methods, and accessors are forbidden from having the non-computed name `constructor`. Static and instance class fields also cannot have the non-computed name `constructor`. Private names cannot be called `#constructor`. Any non-static member with the non-computed name `constructor` must be a plain method.
 
 ## Examples
 

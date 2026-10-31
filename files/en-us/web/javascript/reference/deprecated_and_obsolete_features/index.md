@@ -5,7 +5,7 @@ page-type: guide
 sidebar: jssidebar
 ---
 
-This page lists features of JavaScript that are deprecated (that is, still available but planned for removal) and obsolete (that is, no longer usable).
+This page lists features of JavaScript that are deprecated (that is, still available but should not be used) and obsolete (that is, no longer usable).
 
 ## Deprecated features
 
@@ -61,7 +61,7 @@ The following regex syntaxes are deprecated and only available in [Unicode-unawa
 
 - [Lookahead assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) can have [quantifiers](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier).
 - [Backreferences](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference) that do not refer to an existing capturing group become [legacy octal escapes](#escape_sequences).
-- In [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class), character ranges where one boundary is a character class makes the `-` become a literal character.
+- In [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class), character ranges where one boundary is a character class make the `-` become a literal character.
 - An escape sequence that's not recognized becomes an ["identity escape"](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape).
 - Escape sequences within [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class) of the form `\cX` where `X` is a number or `_` are decoded in the same way as those with {{Glossary("ASCII")}} letters: `\c0` is the same as `\cP` when taken modulo 32. In addition, if the form `\cX` is encountered anywhere where `X` is not one of the recognized characters, then the backslash is treated as a literal character.
 - The sequence `\k` within a regex that doesn't have any [named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) is treated as an identity escape.
@@ -97,7 +97,7 @@ The following regex syntaxes are deprecated and only available in [Unicode-unawa
 
 The [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement is deprecated and unavailable in strict mode.
 
-Initializers in `var` declarations of [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops headers are deprecated and produce [syntax errors](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer) in strict mode. The initializer expression is evaluated and assigned to the variable, but the value would be immediately reassigned on the first iteration of the loop.
+Initializers in `var` declarations of [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop headers are deprecated and produce [syntax errors](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer) in strict mode. The initializer expression is evaluated and assigned to the variable, but the value would be immediately reassigned on the first iteration of the loop.
 
 Normally, the `catch` block of a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement cannot contain any variable declaration with the same name as the variables bound in the `catch()`. An extension grammar allows the `catch` block to contain a [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) declared variable with the same name as the `catch`-bound identifier, but only if the `catch` binding is a simple identifier, not a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring). However, this variable's initialization and assignment would only act on the `catch`-bound identifier, instead of the upper scope variable, and the behavior could be confusing.
 
@@ -151,7 +151,7 @@ The `valueOf()` method is no longer specialized for `RegExp`. It uses {{jsxref("
 | `__count__`                  | Returns the number of enumerable properties directly available on a user-defined object.                       | [`Object.keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)                                                                                                   |
 | `__parent__`                 | Points to an object's context.                                                                                 | No direct replacement                                                                                                                                                                |
 | `__iterator__`               | Used with [legacy iterators](#legacy_generator_and_iterator).                                                  | [`Symbol.iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) and the new [iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) |
-| `__noSuchMethod__`           | A method called when a non-existent property is called as method.                                              | {{jsxref("Proxy")}}                                                                                                                                                                  |
+| `__noSuchMethod__`           | A method called when a non-existent property is called as a method.                                            | {{jsxref("Proxy")}}                                                                                                                                                                  |
 | `Object.prototype.eval()`    | Evaluates a string of JavaScript code in the context of the specified object.                                  | No direct replacement                                                                                                                                                                |
 | `Object.observe()`           | Asynchronously observing the changes to an object.                                                             | {{jsxref("Proxy")}}                                                                                                                                                                  |
 | `Object.unobserve()`         | Remove observers.                                                                                              | {{jsxref("Proxy")}}                                                                                                                                                                  |
@@ -161,9 +161,9 @@ The `valueOf()` method is no longer specialized for `RegExp`. It uses {{jsxref("
 
 ### String
 
-- Non-standard String generic methods like `String.slice(myStr, 0, 12)`, `String.replace(myStr, /\./g, "!")`, etc. have been introduced in Firefox 1.5 (JavaScript 1.6), deprecated in Firefox 53, and removed in Firefox 68. You can use methods on {{jsxref("String", "String.prototype", "instance_methods")}} together with {{jsxref("Function.call")}} instead.
-- `String.prototype.quote` is removed from Firefox 37.
-- Non-standard `flags` parameter in {{jsxref("String.prototype.search")}}, {{jsxref("String.prototype.match")}}, and {{jsxref("String.prototype.replace")}} are obsolete.
+- Non-standard String generic methods like `String.slice(myStr, 0, 12)`, `String.replace(myStr, /\./g, "!")`, etc. were introduced in Firefox 1.5 (JavaScript 1.6), deprecated in Firefox 53, and removed in Firefox 68. You can use methods on {{jsxref("String", "String.prototype", "instance_methods")}} together with {{jsxref("Function.call")}} instead.
+- `String.prototype.quote` was removed in Firefox 37.
+- The bon-standard `flags` parameter in {{jsxref("String.prototype.search")}}, {{jsxref("String.prototype.match")}}, and {{jsxref("String.prototype.replace")}} is obsolete.
 
 ### WeakMap
 
