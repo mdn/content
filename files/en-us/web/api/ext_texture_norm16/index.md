@@ -35,17 +35,21 @@ The **`EXT_texture_norm16`** extension is part of the [WebGL API](/en-US/docs/We
 ## Description
 
 The formats provided by this extension store each color component as a 16-bit integer, which shaders read as a floating-point value.
+The values are _normalized_, meaning they're scaled to fit a fixed range.
 Components in the unsigned normalized formats represent values from 0.0 to 1.0, and components in the signed normalized (`SNORM`) formats represent values from -1.0 to 1.0.
+For example, in the unsigned formats, the integer 0 is read as 0.0, 65535 (the largest 16-bit value) is read as 1.0, and 32768 is read as about 0.5.
+
 All of these formats are texture-filterable, so they support linear filtering.
+With linear filtering, reading a texture at a point between texels (texture pixels) gives a blend of the nearest texels' values, rather than the value of the single nearest one.
 
 When this extension is enabled:
 
-- The {{domxref("WebGLRenderingContext.texImage2D()")}}, {{domxref("WebGL2RenderingContext.texImage3D()")}}, {{domxref("WebGL2RenderingContext.texStorage2D()")}}, and {{domxref("WebGL2RenderingContext.texStorage3D()")}} methods accept the formats provided by this extension as internal formats.
+- The {{domxref("WebGLRenderingContext.texImage2D()")}}, {{domxref("WebGL2RenderingContext.texImage3D()")}}, {{domxref("WebGL2RenderingContext.texStorage2D()")}}, and {{domxref("WebGL2RenderingContext.texStorage3D()")}} methods accept the formats provided by this extension as internal formats, which set how a texture is stored on the GPU.
   The {{domxref("WebGLRenderingContext.texSubImage2D()")}} and {{domxref("WebGL2RenderingContext.texSubImage3D()")}} methods can update textures in these formats.
 - The `ext.R16_EXT`, `ext.RG16_EXT`, and `ext.RGBA16_EXT` formats are color-renderable, so textures in these formats can be attached to framebuffers and rendered to.
   The {{domxref("WebGLRenderingContext.renderbufferStorage()")}} and {{domxref("WebGL2RenderingContext.renderbufferStorageMultisample()")}} methods also accept these three formats, so that renderbuffers can be created in them.
 
-Texture data in these formats can be uploaded from typed arrays: a {{jsxref("Uint16Array")}} with the type `gl.UNSIGNED_SHORT` for the unsigned normalized formats and an {{jsxref("Int16Array")}} with the type `gl.SHORT` for the signed normalized formats.
+Texture data in these formats can be uploaded from typed arrays, with the `type` argument describing the data you pass in: a {{jsxref("Uint16Array")}} with the type `gl.UNSIGNED_SHORT` for the unsigned normalized formats and an {{jsxref("Int16Array")}} with the type `gl.SHORT` for the signed normalized formats.
 Uploading data from an image, a canvas, a video, an {{domxref("ImageBitmap")}}, or a similar source generates an error.
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method.
