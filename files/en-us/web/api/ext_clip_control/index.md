@@ -21,10 +21,10 @@ The **`EXT_clip_control`** extension is part of the [WebGL API](/en-US/docs/Web/
 - `ext.UPPER_LEFT_EXT`
   - : Clip origin where the clip-space point (-1, -1) maps to the upper-left corner of the viewport.
 - `ext.NEGATIVE_ONE_TO_ONE_EXT`
-  - : Clip depth mode where visible clip-space z values range from -w to w, which is -1 to 1 in normalized device coordinates.
+  - : Clip depth mode where visible depth (z) values range from -1 to 1 in clip space.
     This is the default.
 - `ext.ZERO_TO_ONE_EXT`
-  - : Clip depth mode where visible clip-space z values range from 0 to w, which is 0 to 1 in normalized device coordinates.
+  - : Clip depth mode where visible depth (z) values range from 0 to 1 in clip space.
 - `ext.CLIP_ORIGIN_EXT`
   - : Parameter name for {{domxref("WebGLRenderingContext.getParameter()")}} that returns the current clip origin.
 - `ext.CLIP_DEPTH_MODE_EXT`
