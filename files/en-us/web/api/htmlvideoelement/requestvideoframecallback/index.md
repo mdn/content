@@ -79,6 +79,8 @@ You can compare the `now` callback parameter and the `expectedDisplayTime` metad
 
 This example shows how to use `requestVideoFrameCallback()` to draw the frames of a video onto a {{htmlelement("canvas")}} element at exactly the same frame rate as the video. It also logs the frame metadata to the screen for debugging purposes.
 
+The frame rate is calculated from the `presentedFrames` and `mediaTime` metadata properties, rather than by counting callbacks against the `now` timestamp. Because `mediaTime` doesn't advance while the video is paused, pausing doesn't affect the result. `presentedFrames` also counts any frames that were presented without the callback running. The measurement restarts whenever the video seeks, which includes replaying it after it has ended.
+
 ```js
 const button = document.querySelector("button");
 const video = document.querySelector("video");
@@ -102,19 +104,27 @@ video.addEventListener("play", () => {
 let width = canvas.width;
 let height = canvas.height;
 
-let paintCount = 0;
-let startTime = 0.0;
+let startFrames = null;
+let startMediaTime = 0;
+
+// Seeking jumps to a different point in the video, so start measuring again
+video.addEventListener("seeking", () => {
+  startFrames = null;
+});
 
 const updateCanvas = (now, metadata) => {
-  if (startTime === 0.0) {
-    startTime = now;
+  if (startFrames === null) {
+    startFrames = metadata.presentedFrames;
+    startMediaTime = metadata.mediaTime;
   }
 
   ctx.drawImage(video, 0, 0, width, height);
 
-  const elapsed = (now - startTime) / 1000.0;
-  const fps = (++paintCount / elapsed).toFixed(3);
-  fpsInfo.innerText = !isFinite(fps) ? 0 : fps;
+  const frames = metadata.presentedFrames - startFrames;
+  const elapsed = metadata.mediaTime - startMediaTime;
+  if (elapsed > 0) {
+    fpsInfo.innerText = (frames / elapsed).toFixed(3);
+  }
   metadataInfo.innerText = JSON.stringify(metadata, null, 2);
 
   video.requestVideoFrameCallback(updateCanvas);
