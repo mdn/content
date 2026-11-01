@@ -26,7 +26,8 @@ clipControlEXT(origin, depth)
         This is the initial value.
     - `ext.UPPER_LEFT_EXT`
       - : The clip-space point (-1, -1) maps to the upper-left corner of the viewport, so y values increase towards the bottom of the window.
-        This doesn't change which faces of a polygon are considered front-facing: the winding order is determined as if the y axis weren't inverted.
+        Flipping the y axis would normally reverse the winding order of every triangle (counter-clockwise corners would appear clockwise), and so swap which face of each triangle is front-facing.
+        WebGL compensates for this, so triangles that are front-facing with the default origin are still front-facing, and you don't need to change {{domxref("WebGLRenderingContext.frontFace()", "frontFace()")}} or {{domxref("WebGLRenderingContext.cullFace()", "cullFace()")}} settings.
 - `depth`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the clip depth mode.
     Possible values:
