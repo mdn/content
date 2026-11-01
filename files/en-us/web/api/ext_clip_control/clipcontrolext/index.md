@@ -8,7 +8,11 @@ browser-compat: api.EXT_clip_control.clipControlEXT
 
 {{APIRef("WebGL")}}{{AvailableInWorkers}}
 
-The **`clipControlEXT()`** method of the {{domxref("EXT_clip_control")}} WebGL extension sets the clip origin and the clip depth mode, which control how clip-space coordinates are mapped to window coordinates.
+The **`clipControlEXT()`** method of the {{domxref("EXT_clip_control")}} WebGL extension sets the clip origin and the clip depth mode, which control how [clip-space](/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#clip_space) coordinates are mapped to window coordinates.
+
+The clip origin and depth determine whether the image is drawn right way up or upside down, and how depth values are calculated.
+You can use them to match the conventions of graphics APIs such as Direct3D and WebGPU, or to improve depth precision.
+See {{domxref("EXT_clip_control")}} for details.
 
 ## Syntax
 
@@ -22,22 +26,25 @@ clipControlEXT(origin, depth)
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the clip origin.
     Possible values:
     - `ext.LOWER_LEFT_EXT`
-      - : The clip-space point (-1, -1) maps to the lower-left corner of the viewport, so y values increase towards the top of the window.
+      - : The clip-space point (-1, -1), where x and y are at their minimum values, maps to the lower-left corner of the viewport, so y values increase towards the top of the window.
         This is the initial value.
     - `ext.UPPER_LEFT_EXT`
-      - : The clip-space point (-1, -1) maps to the upper-left corner of the viewport, so y values increase towards the bottom of the window.
+      - : The clip-space point (-1, -1), where x and y are at their minimum values, maps to the upper-left corner of the viewport, so y values increase towards the bottom of the window.
+        Content drawn to the canvas with this origin therefore appears upside down compared to the default.
+
         Flipping the y axis would normally reverse the winding order of every triangle (counter-clockwise corners would appear clockwise), and so swap which face of each triangle is front-facing.
         WebGL compensates for this, so triangles that are front-facing with the default origin are still front-facing, and you don't need to change {{domxref("WebGLRenderingContext.frontFace()", "frontFace()")}} or {{domxref("WebGLRenderingContext.cullFace()", "cullFace()")}} settings.
 - `depth`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the clip depth mode.
     Possible values:
     - `ext.NEGATIVE_ONE_TO_ONE_EXT`
-      - : Visible clip-space z values range from -w to w.
-        The resulting z values in normalized device coordinates, from -1 to 1, are mapped to the depth range `n` to `f` set by {{domxref("WebGLRenderingContext.depthRange()")}} as `z * (f - n) / 2 + (n + f) / 2`.
+      - : Visible depth (z) values range from -1 to 1 in clip space (or from -w to w, before they're [divided by `w`](/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#homogeneous_coordinates)).
+        These are mapped to the near (`n`) and far (`f`) values set by {{domxref("WebGLRenderingContext.depthRange()")}}, so that -1 maps to `n`, 1 maps to `f`, and values in between are spaced evenly: `z * (f - n) / 2 + (n + f) / 2`.
         This is the initial value.
     - `ext.ZERO_TO_ONE_EXT`
-      - : Visible clip-space z values range from 0 to w.
-        The resulting z values in normalized device coordinates, from 0 to 1, are mapped to the depth range as `z * (f - n) + n`.
+      - : Visible depth (z) values range from 0 to 1 in clip space (or from 0 to w, before they're divided by `w`).
+        These are mapped to the near (`n`) and far (`f`) values set by {{domxref("WebGLRenderingContext.depthRange()")}}, so that 0 maps to `n` and 1 maps to `f`: `z * (f - n) + n`.
+        With the default depth range of 0 to 1, z values are used unchanged.
 
 ### Return value
 
