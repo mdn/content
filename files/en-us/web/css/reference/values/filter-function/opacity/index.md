@@ -7,7 +7,7 @@ browser-compat: css.types.filter-function.opacity
 sidebar: cssref
 ---
 
-The **`opacity()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) applies transparency to the samples in the input image. Its result is a {{cssxref("filter-function")}}.
+The **`opacity()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) applies transparency to the input image. It is used as a value for the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
 
 {{InteractiveExample("CSS Demo: opacity()")}}
 
@@ -63,7 +63,11 @@ opacity(60%)
 ### Parameters
 
 - {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} {{Optional_Inline}}
-  - : Specifies the amount of the conversion. A value of `0%` is completely transparent, while a value of `100%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. Values above `100%` are allowed, but the effect is clamped to `100%`. The initial value for {{Glossary("interpolation")}} is `1`. The default value is `1`.
+  - : Specifies the amount of the conversion. A value of `0%` applies complete transparency, while a value of `100%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. Values above `100%` are allowed, but the effect is clamped to `100%`. The initial value for {{Glossary("interpolation")}} is `1`. The default value is `1`.
+
+### Return value
+
+A {{cssxref("filter-function")}} value.
 
 ## Formal syntax
 

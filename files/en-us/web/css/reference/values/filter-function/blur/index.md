@@ -7,7 +7,7 @@ browser-compat: css.types.filter-function.blur
 sidebar: cssref
 ---
 
-The **`blur()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) applies a [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) to the input image. Its result is a {{cssxref("filter-function")}}.
+The **`blur()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) applies a [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) to the input image. It is used as a value for the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
 
 {{InteractiveExample("CSS Demo: blur()")}}
 
@@ -51,6 +51,10 @@ blur(1.17rem)
 
 - {{cssxref("length")}} {{Optional_Inline}}
   - : Specifies the radius of the blur. It defines the value of the standard deviation to the Gaussian function, that is, how many pixels on the screen blend into each other. Therefore, a larger value will create more blur. A value of `0` leaves the input unchanged. The initial value for {{Glossary("interpolation")}} is `0`. Percentage values and negative values are invalid. The default value is `0`.
+
+### Return value
+
+A {{cssxref("filter-function")}} value.
 
 ## Formal syntax
 

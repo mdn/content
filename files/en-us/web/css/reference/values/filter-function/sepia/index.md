@@ -7,7 +7,7 @@ browser-compat: css.types.filter-function.sepia
 sidebar: cssref
 ---
 
-The **`sepia()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) converts the input image to sepia, giving it a warmer, more yellow/brown appearance. Its result is a {{cssxref("filter-function")}}.
+The **`sepia()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) converts the input image to sepia, giving it a warmer, more yellow/brown appearance. It is used as a value for the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
 
 {{InteractiveExample("CSS Demo: sepia()")}}
 
@@ -56,7 +56,11 @@ sepia(60%)
 ### Parameters
 
 - {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} {{Optional_Inline}}
-  - : Specifies the amount of the conversion. A value of `100%` is completely sepia, while a value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. Values above `100%` are allowed, but the effect is clamped to `100%`. Negative values are not allowed. The initial value for {{Glossary("interpolation")}} is `0`. The default value is `1`.
+  - : Specifies the amount of the conversion. A value of `100%` applies a complete sepia conversion, while a value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. Values above `100%` are allowed, but the effect is clamped to `100%`. Negative values are not allowed. The initial value for {{Glossary("interpolation")}} is `0`. The default value is `1`.
+
+### Return value
+
+A {{cssxref("filter-function")}} value.
 
 ## Formal syntax
 

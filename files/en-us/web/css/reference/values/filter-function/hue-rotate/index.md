@@ -7,7 +7,7 @@ browser-compat: css.types.filter-function.hue-rotate
 sidebar: cssref
 ---
 
-The **`hue-rotate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) rotates the [hue](https://en.wikipedia.org/wiki/Hue) of an element and its contents. Its result is a {{cssxref("filter-function")}}.
+The **`hue-rotate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) rotates the [hue](https://en.wikipedia.org/wiki/Hue) of an element and its contents. It is used as a value for the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
 
 > [!NOTE]
 > `hue-rotate()` is specified as a matrix operation on the RGB color. It does not actually convert the color to the HSL model, which is a non-linear operation. Therefore, it may not preserve the saturation or lightness of the original color, especially for saturated colors.
@@ -59,6 +59,10 @@ hue-rotate(0.5turn)
 
 - {{cssxref("angle")}} {{Optional_Inline}}
   - : Specifies the relative change in hue of the input sample. A value of `0deg` leaves the input unchanged. A positive hue rotation increases the hue value, while a negative rotation decreases the hue value. The initial value for {{Glossary("interpolation")}} is `0`. There is no minimum or maximum value. Given `hue-rotate(Ndeg)`, the effect evaluates to `N` modulo 360. The default value is `0deg`.
+
+### Return value
+
+A {{cssxref("filter-function")}} value.
 
 ## Formal syntax
 

@@ -7,7 +7,7 @@ browser-compat: css.types.filter-function.saturate
 sidebar: cssref
 ---
 
-The **`saturate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) super-saturates or desaturates the input image. Its result is a {{cssxref("filter-function")}}.
+The **`saturate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) super-saturates or desaturates the input image. It is used as a value for the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
 
 > [!NOTE]
 > `saturate()` is specified as a matrix operation on the RGB color. It does not actually convert the color to the HSL model, which is a non-linear operation. Therefore, it may not preserve the hue or lightness of the original color.
@@ -64,6 +64,10 @@ saturate(200%)
 
 - {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} {{Optional_Inline}}
   - : Specifies the amount of the conversion. A value under `100%` desaturates the image, while a value over `100%` super-saturates it. A value of `0%` is completely unsaturated, while a value of `100%` leaves the input unchanged. Negative values are not allowed. The initial value for {{Glossary("interpolation")}} is `1`. The default value is `1`.
+
+### Return value
+
+A {{cssxref("filter-function")}} value.
 
 ## Formal syntax
 
@@ -128,8 +132,8 @@ The SVG {{SVGElement("feColorMatrix")}} filter element can also be used to adjus
 
 ```html live-sample___svg-filter
 <svg height="0" role="none">
-  <filter id="saturate70" color-interpolation-filters="sRGB">
-    <feColorMatrix type="saturate" values="0.7" />
+  <filter id="saturate20" color-interpolation-filters="sRGB">
+    <feColorMatrix type="saturate" values="0.2" />
   </filter>
 </svg>
 ```
@@ -137,10 +141,10 @@ The SVG {{SVGElement("feColorMatrix")}} filter element can also be used to adjus
 The following declarations produce the same effect:
 
 ```css
-filter: saturate(0.7);
-filter: saturate(70%);
-filter: url("#saturate70"); /* with embedded SVG */
-filter: url("fileName.svg#saturate70"); /* external SVG */
+filter: saturate(0.2);
+filter: saturate(20%);
+filter: url("#saturate20"); /* with embedded SVG */
+filter: url("fileName.svg#saturate20"); /* external SVG */
 ```
 
 #### CSS
@@ -149,11 +153,11 @@ We include CSS that will adjust the saturation of elements based on their `css-f
 
 ```css live-sample___svg-filter
 .css-filter {
-  filter: saturate(0.7);
+  filter: saturate(0.2);
 }
 
 .svg-filter {
-  filter: url("#saturate70");
+  filter: url("#saturate20");
 }
 ```
 

@@ -7,7 +7,7 @@ browser-compat: css.types.filter-function.grayscale
 sidebar: cssref
 ---
 
-The **`grayscale()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) converts the input image to grayscale. Its result is a {{cssxref("filter-function")}}.
+The **`grayscale()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) converts the input image to grayscale. It is used as a value for the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
 
 {{InteractiveExample("CSS Demo: grayscale()")}}
 
@@ -57,6 +57,10 @@ grayscale(60%)
 
 - {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} {{Optional_Inline}}
   - : Specifies the amount of the conversion. A value of `100%` is completely grayscale, while a value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. Values above `100%` are allowed, but the effect is clamped to `100%`. The initial value for {{Glossary("interpolation")}} is `0`. The default value is `1`.
+
+### Return value
+
+A {{cssxref("filter-function")}} value.
 
 ## Formal syntax
 

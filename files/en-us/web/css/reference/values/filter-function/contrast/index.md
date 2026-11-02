@@ -7,7 +7,7 @@ browser-compat: css.types.filter-function.contrast
 sidebar: cssref
 ---
 
-The **`contrast()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) adjusts the contrast of the input image. Its result is a {{cssxref("filter-function")}}.
+The **`contrast()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) adjusts the contrast of the input image. It is used as a value for the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
 
 {{InteractiveExample("CSS Demo: contrast()")}}
 
@@ -62,6 +62,10 @@ contrast(200%)
 - {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} {{Optional_Inline}}
   - : Specifies the amount of the conversion. A value under `100%` decreases the contrast, while a value over `100%` increases it. A value of `0` or `0%` will create an image that is completely gray, while a value of `1` or `100%` leaves the input unchanged. Negative values are not allowed. The initial value for {{Glossary("interpolation")}} is `1`. The default value is `1`.
 
+### Return value
+
+A {{cssxref("filter-function")}} value.
+
 ## Formal syntax
 
 {{CSSSyntax}}
@@ -70,17 +74,14 @@ contrast(200%)
 
 ### With the backdrop-filter property
 
-This example applies a `contrast()` filter via the {{cssxref("backdrop-filter")}} CSS property to the paragraph and monospaced text, color shifting to the area behind the `<p>` and `<code>`.
+This example applies a `contrast()` filter via the {{cssxref("backdrop-filter")}} CSS property to the paragraph, shifting the color of the area behind the `<p>`.
 
 ```css
 .container {
   background: url("unity_for_the_people.jpg") no-repeat center / contain #333399;
 }
 p {
-  backdrop-filter: contrast(0.5);
-}
-code {
-  backdrop-filter: contrast(0.15);
+  backdrop-filter: contrast(0.2);
 }
 ```
 

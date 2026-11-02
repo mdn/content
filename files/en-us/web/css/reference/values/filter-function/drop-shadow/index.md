@@ -7,7 +7,7 @@ browser-compat: css.types.filter-function.drop-shadow
 sidebar: cssref
 ---
 
-The **`drop-shadow()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) applies a drop shadow effect to the input image. Its result is a {{cssxref("filter-function")}}.
+The **`drop-shadow()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) applies a drop shadow effect to the input image. It is used as a value for the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
 
 {{InteractiveExample("CSS Demo: drop-shadow()")}}
 
@@ -67,13 +67,17 @@ drop-shadow(10px 10px red) drop-shadow(-5px -5px yellow)
 
 ### Parameters
 
-The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in the {{cssxref("box-shadow")}} property), with the exception that the `inset` keyword and `spread` parameters are not allowed.
+The `drop-shadow()` function accepts two or three {{cssxref("length")}} values and an optional {{cssxref("color_value", "&lt;color&gt;")}} value, separated by spaces.
 
 - `<color>` {{optional_inline}}
   - : Specifies the color for the shadow. If not specified, the value of the {{cssxref("color")}} property defined on the element is used.
 
 - `<length>`
   - : Specifies the offset length of the shadow. This parameter accepts two or three values. If two values are specified, they are interpreted as `<offset-x>` (horizontal offset) and `<offset-y>` (vertical offset) values. Negative `<offset-x>` value places the shadow to the left of the element. Negative `<offset-y>` value places the shadow above the element. If a third value is specified, it is interpreted as `<standard-deviation>`, which is the value of the standard deviation to the [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) function. A larger `<standard-deviation>` value creates a larger and more blurred shadow. Negative values for `<standard-deviation>` are not allowed.
+
+### Return value
+
+A {{cssxref("filter-function")}} value.
 
 ## Formal syntax
 
