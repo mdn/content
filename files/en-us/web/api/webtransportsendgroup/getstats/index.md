@@ -9,7 +9,7 @@ browser-compat: api.WebTransportSendGroup.getStats
 {{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`getStats()`** method of the {{domxref("WebTransportSendGroup")}} interface returns a {{jsxref("Promise")}} that resolves to an object containing statistics aggregated across all of the {{domxref("WebTransportSendStream")}} objects currently associated with this group.
-That is, every stream whose `sendGroup` is set to this `WebTransportSendGroup`.
+These are the streams whose {{domxref("WebTransportSendStream.sendGroup", "sendGroup")}} property is set to this `WebTransportSendGroup`.
 
 Note that datagram writables in the group aren't counted, and that because only the streams in the group at the time of the call are counted, the totals can go down if a stream is moved to a different group.
 
@@ -30,7 +30,7 @@ The returned object has the following properties:
 
 - `bytesAcknowledged`
   - : A non-negative integer indicating the number of bytes written to the group's streams that have been sent and acknowledged as received by the server, using QUIC's ACK mechanism.
-    Only sequential bytes up to, but not including, the first unacknowledged byte of each stream, are counted.
+    Only sequential bytes up to, but not including, the first unacknowledged byte of each stream are counted.
     This number is always less than or equal to `bytesSent`.
 - `bytesSent`
   - : A non-negative integer indicating the number of bytes written to the group's streams that have been sent at least once (but not necessarily acknowledged).
