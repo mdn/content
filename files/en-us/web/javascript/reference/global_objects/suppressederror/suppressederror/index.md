@@ -61,4 +61,4 @@ try {
 
 ## See also
 
-- [Polyfill of `SuppressedError` in `core-js`](https://github.com/zloirock/core-js#explicit-resource-management)
+- [Polyfill of `SuppressedError` in `core-js`](https://core-js.io/docs/features/ecmascript/explicit-resource-management)

@@ -8,7 +8,7 @@ browser-compat: api.Window.originAgentCluster
 
 {{APIRef("HTML DOM")}}
 
-The **`originAgentCluster`** read-only property of the {{domxref("Window")}} interface returns `true` if this window belongs to an _origin-keyed [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters)_: this means that the operating system has provided dedicated resources (for example an operating system process) to this window's origin that are not shared with windows from other origins.
+The **`originAgentCluster`** read-only property of the {{domxref("Window")}} interface returns `true` if this window belongs to an _origin-keyed [agent cluster](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing)_: this means that the operating system has provided dedicated resources (for example an operating system process) to this window's origin that are not shared with windows from other origins.
 
 Otherwise this property returns `false`.
 
@@ -18,7 +18,7 @@ Windows that are part of an origin-keyed agent cluster are subjects to some addi
 - Send [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) objects to other same-site cross-origin pages via {{domxref("Window.postMessage()")}}.
 - Send {{jsxref("SharedArrayBuffer")}} or [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) objects to other same-site cross-origin pages.
 
-To request that the browser assign this window to an origin-keyed agent cluster, the server must send the {{httpheader("Origin-Agent-Cluster")}} response header.
+To request that the browser assign this window to an origin-keyed agent cluster, use the {{httpheader("Origin-Agent-Cluster")}} response header.
 
 Note that the origin-keyed agent cluster feature is only supported in {{glossary("Secure Context", "secure contexts")}}. If a site is not a secure context, the `window.originAgentCluster` will always return `false`.
 

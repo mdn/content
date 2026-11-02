@@ -41,6 +41,7 @@ try {
 
 ## See also
 
+- [Polyfill of `SuppressedError` in `core-js`](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling) guide
 - {{jsxref("SuppressedError")}}
 - [`Error`: `cause`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause)

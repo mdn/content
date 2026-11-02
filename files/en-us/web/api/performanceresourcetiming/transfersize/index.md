@@ -8,23 +8,42 @@ browser-compat: api.PerformanceResourceTiming.transferSize
 
 {{APIRef("Performance API")}}{{AvailableInWorkers}}
 
-The **`transferSize`** read-only property represents the size (in octets) of the fetched resource. The size includes the response header fields plus the response payload body (as defined by [RFC7230](https://httpwg.org/specs/rfc7230.html#message.body)).
-
-If the resource is fetched from a local cache, or if it is a cross-origin resource, this property returns zero.
+The **`transferSize`** read-only property represents the size (in octets) of the fetched resource.
+This is the size of the response body plus a fixed value that stands in for the size of the response headers.
 
 ## Value
 
 The `transferSize` property can have the following values:
 
-- A number representing the size (in octets) of the fetched resource. The size includes the response header fields plus the [response payload body](https://httpwg.org/specs/rfc7230.html#message.body) (RFC7230).
-- `0` if the resource was instantaneously retrieved from a cache.
-- `0` if the resource is a cross-origin request and no {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header is used.
+- A number representing the size (in octets) of the fetched resource.
+  This is the size of the encoded response body (see {{domxref("PerformanceResourceTiming.encodedBodySize", "encodedBodySize")}}) plus 300.
+  The fixed value of 300 stands in for the size of the response headers, because their real size could reveal information such as the presence of cookies.
+- `300` if the resource was revalidated with the server, rather than downloaded again.
+- `0` if the resource was retrieved from a local cache without contacting the server.
+- `0` if the resource is a cross-origin request and doesn't pass the {{HTTPHeader("Timing-Allow-Origin")}} check.
+
+## Description
+
+For a cross-origin resource, `transferSize` is reported only if the resource is served with a {{HTTPHeader("Timing-Allow-Origin")}} header that allows the requesting origin.
+Without this header, `transferSize` is `0`, whether or not the resource was retrieved from a cache.
+
+For example, to allow `https://developer.mozilla.org` to see transfer sizes, the cross-origin resource should send:
+
+```http
+Timing-Allow-Origin: https://developer.mozilla.org
+```
+
+The part of `transferSize` that represents the size of the response body is subject to the same [CORS](/en-US/docs/Web/HTTP/Guides/CORS) restriction as `encodedBodySize`.
+If a cross-origin resource passes the `Timing-Allow-Origin` check but not the CORS check, `transferSize` doesn't include the body size.
 
 ## Examples
 
 ### Checking if a cache was hit
 
-For environments not supporting the {{domxref("PerformanceResourceTiming.responseStatus", "responseStatus")}} property, the `transferSize` property can be used to determine cache hits. If `transferSize` is zero and the resource has a non-zero decoded body size (meaning the resource is same-origin or has {{HTTPHeader("Timing-Allow-Origin")}}), the resource was fetched from a local cache.
+For environments not supporting the {{domxref("PerformanceResourceTiming.responseStatus", "responseStatus")}} property, the `transferSize` property can be used to determine cache hits.
+If `transferSize` is zero and the resource has a non-zero decoded body size, the resource was fetched from a local cache.
+This check works only for same-origin resources and for cross-origin resources that pass both the `Timing-Allow-Origin` check and the CORS check.
+Without `Timing-Allow-Origin`, `transferSize` is always `0`.
 
 Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
@@ -51,16 +70,6 @@ resources.forEach((entry) => {
 });
 ```
 
-### Cross-origin content size information
-
-If the value of the `transferSize` property is `0` and wasn't loaded from a local cache, the resource might be a cross-origin request. To expose cross-origin content size information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
-
-For example, to allow `https://developer.mozilla.org` to see content sizes, the cross-origin resource should send:
-
-```http
-Timing-Allow-Origin: https://developer.mozilla.org
-```
-
 ## Specifications
 
 {{Specifications}}
@@ -72,3 +81,5 @@ Timing-Allow-Origin: https://developer.mozilla.org
 ## See also
 
 - {{HTTPHeader("Timing-Allow-Origin")}}
+- {{HTTPHeader("Access-Control-Allow-Origin")}}
+- [Cross-origin resource sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)

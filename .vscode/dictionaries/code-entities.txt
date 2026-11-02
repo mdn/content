@@ -131,6 +131,8 @@ colorMaskiOES
 com.apple.quicktime.mdta
 com.apple.quicktime.udta
 connectionavailable
+containertiming
+containertimingignore
 contentaccessible
 contentdelete
 contentoccluded
@@ -673,6 +675,7 @@ replacewithcommas
 replacewithspaces
 RGBX
 richlistbox
+riscv64
 rmvirtualenv
 rohg
 roletype

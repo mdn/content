@@ -180,30 +180,6 @@ The [`fit-content()`](/en-US/docs/Web/CSS/Reference/Values/fit-content_function)
 - `layout.css.fit-content-function.enabled`
   - : Set to `true` to enable.
 
-### Scroll-driven animations
-
-Previously called "scroll-linked animations", a [scroll-driven animation](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) depends on the scroll position of a scrollbar instead of time or some other dimension.
-The {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties (and the {{cssxref('scroll-timeline')}} shorthand property) allow you to specify that a particular scrollbar in a particular named container can be used as the source for a scroll-driven animation.
-The scroll timeline can then be associated with an [animation](/en-US/docs/Web/CSS/Guides/Animations) by setting the {{cssxref('animation-timeline')}} property to the name value defined using `scroll-timeline-name`.
-
-When using the {{cssxref('scroll-timeline')}} shorthand property, the order of the property values must be {{cssxref('scroll-timeline-name')}} followed by {{cssxref('scroll-timeline-axis')}}.
-The longhand and shorthand properties are both available behind the preference.
-You can alternatively use the {{cssxref("animation-timeline/scroll")}} functional notation with {{cssxref('animation-timeline')}} to indicate that a scrollbar axis in an ancestor element will be used for the timeline.
-
-For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Firefox bug 1804573](https://bugzil.la/1804573), [Firefox bug 1809005](https://bugzil.la/1809005), [Firefox bug 1676791](https://bugzil.la/1676791), [Firefox bug 1754897](https://bugzil.la/1754897), [Firefox bug 1817303](https://bugzil.la/1817303), and [Firefox bug 1737918](https://bugzil.la/1737918).
-
-The {{cssxref('animation-range-start')}} and {{cssxref('animation-range-end')}} properties (and the {{cssxref('animation-range')}} shorthand property) are not yet supported. For more information, see [Firefox bug 1676779](https://bugzil.la/1676779).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 136           | Yes                 |
-| Developer Edition | 110           | No                  |
-| Beta              | 110           | No                  |
-| Release           | 110           | No                  |
-
-- `layout.css.scroll-driven-animations.enabled`
-  - : Set to `true` to enable.
-
 ### prefers-reduced-transparency media feature
 
 The CSS {{cssxref("@media/prefers-reduced-transparency")}} media feature lets you detect if a user has enabled the setting to minimize the amount of transparent or translucent layer effects on their device.
@@ -232,38 +208,6 @@ See ([Firefox bug 1794628](https://bugzil.la/1794628)) for more details.
 | Release           | 114           | No                  |
 
 - `layout.css.inverted-colors.enabled`
-  - : Set to `true` to enable.
-
-### Named view progress timelines property
-
-The CSS {{cssxref("view-timeline-name")}} property lets you give a name to particular element, identifying that its ancestor scroller element is the source of a view progress timeline.
-The name can then be assigned to the `animation-timeline`, which then animates the associated element as it moves through the visible area of its ancestor scroller.
-See ([Firefox bug 1737920](https://bugzil.la/1737920)) for more details.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 136           | Yes                 |
-| Developer Edition | 114           | No                  |
-| Beta              | 114           | No                  |
-| Release           | 114           | No                  |
-
-- `layout.css.scroll-driven-animations.enabled`
-  - : Set to `true` to enable.
-
-### Anonymous view progress timelines function
-
-The CSS {{cssxref("animation-timeline/view")}} function lets you specify that the `animation-timeline` for an element is a view progress timeline, which will animate the element as it moves through the visible area of its ancestor scroller.
-The function defines the axis of the parent element that supplies the timeline, along with the inset within the visible area at which the animation starts and begins.
-See ([Firefox bug 1808410](https://bugzil.la/1808410)) for more details.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 136           | Yes                 |
-| Developer Edition | 114           | No                  |
-| Beta              | 114           | No                  |
-| Release           | 114           | No                  |
-
-- `layout.css.scroll-driven-animations.enabled`
   - : Set to `true` to enable.
 
 ### Vendor-prefixed transform properties
@@ -395,34 +339,6 @@ The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rul
 - `layout.css.attr.enabled`
   - : Set to `true` to enable.
 
-### `<timeline-range-name>` values
-
-The {{cssxref("animation-range-start")}}, {{cssxref("animation-range-end")}} CSS properties and {{cssxref("animation-range")}} shorthand property now support [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) values. These [`<timeline-range-name>`](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names) values allow you to precisely state which segment that a scroll driven animation will take place within. ([Firefox bug 1804775](https://bugzil.la/1804775)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 151           | Yes                 |
-| Developer Edition | 151           | No                  |
-| Beta              | 151           | No                  |
-| Release           | 151           | No                  |
-
-- `layout.css.scroll-driven-animations.enabled`
-  - : Set to `true` to enable.
-
-### `<timeline-range-name>` values in `@keyframes` selectors
-
-The {{cssxref("@keyframes")}} at-rule now supports [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) values. These [values](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names) let you specify the segment within which a scroll-driven animation takes place. ([Firefox bug 1824875](https://bugzil.la/1824875)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 152           | Yes                 |
-| Developer Edition | 152           | No                  |
-| Beta              | 152           | No                  |
-| Release           | 152           | No                  |
-
-- `layout.css.scroll-driven-animations.enabled`
-  - : Set to `true` to enable.
-
 ### Updating attributes of external resources
 
 The {{cssxref("link-parameters")}} CSS property and {{cssxref("param")}} CSS function are now supported. This allows the user to update attributes of external resources, such as SVGs, that have their attributes set with the {{cssxref("env")}} CSS function. This means that a single external resource can be used rather than creating multiple variations that only have different colors or other values. ([Firefox bug 2046153](https://bugzil.la/2046153)).
@@ -463,34 +379,6 @@ The {{cssxref("text-decoration-inset")}} CSS property now supports percentages a
 | Release           | 154           | No                  |
 
 - `layout.css.text-decoration-inset-percentage.enabled`
-  - : Set to `true` to enable.
-
-### `view-timeline` includes `view-timeline-inset`
-
-The {{cssxref("view-timeline")}} shorthand property now supports the {{cssxref("view-timeline-inset")}} property. The shorthand lets you specify start and/or end inset (or outset) values to adjust the position of the view progress timeline. ([Firefox bug 2046602](https://bugzil.la/2046602)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 155           | Yes                 |
-| Developer Edition | 155           | No                  |
-| Beta              | 155           | No                  |
-| Release           | 155           | No                  |
-
-- `layout.css.scroll-driven-animations.enabled`
-  - : Set to `true` to enable.
-
-### `timeline-scope` names are now global by default
-
-The default behavior of named timeline scoping has been updated to be global. This can be scoped to elements, and their subtree, using the {{cssxref("timeline-scope")}} CSS property and the value of either the {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}} ([Firefox bug 2024012](https://bugzil.la/2024012)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 155           | Yes                 |
-| Developer Edition | 155           | No                  |
-| Beta              | 155           | No                  |
-| Release           | 155           | No                  |
-
-- `layout.css.scroll-driven-animations.enabled`
   - : Set to `true` to enable.
 
 ### `named-feature()` support queries
@@ -944,7 +832,7 @@ The `navigate` option of the {{domxref("Notification.Notification", "Notificatio
 
 ### Container Timing API
 
-The Container Timing API reports when the contents of a container element are painted, letting you measure the render time of a region of the page rather than of the whole viewport.
+The [Container Timing API](/en-US/docs/Web/API/PerformanceContainerTiming) reports when the contents of a container element are painted, letting you measure the render time of a region of the page rather than of the whole viewport.
 ([Firefox bug 1940240](https://bugzil.la/1940240)).
 
 | Release channel   | Version changed | Enabled by default? |

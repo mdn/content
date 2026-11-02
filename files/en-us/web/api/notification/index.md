@@ -65,7 +65,7 @@ _Also inherits properties from its parent interface, {{domxref("EventTarget")}}_
   - : Specifies the time at which a notification is created or applicable (past, present, or future).
 - {{domxref("Notification.title")}} {{ReadOnlyInline}}
   - : The title of the notification as specified in the first parameter of the constructor.
-- {{domxref("Notification.vibrate")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Notification.vibrate")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Specifies a vibration pattern for devices with vibration hardware to emit.
 
 ## Static methods

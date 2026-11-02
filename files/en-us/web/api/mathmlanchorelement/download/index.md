@@ -3,10 +3,13 @@ title: "MathMLAnchorElement: download property"
 short-title: download
 slug: Web/API/MathMLAnchorElement/download
 page-type: web-api-instance-property
+status:
+  - experimental
+  - non-standard
 browser-compat: api.MathMLAnchorElement.download
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`download`** property of the {{domxref("MathMLAnchorElement")}} interface is a string indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value, if any, represents the proposed name of the file.
 

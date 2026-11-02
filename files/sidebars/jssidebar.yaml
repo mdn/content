@@ -70,6 +70,8 @@ sidebar:
         title: Guide_Meta
       - link: /Web/JavaScript/Guide/Memory_management
         title: Memory_management
+      - link: /Web/JavaScript/Guide/Agent_communication_and_coordination
+        title: Agent_communication_and_coordination
   - type: section
     link: /Web/JavaScript/Reference
     title: Reference
@@ -218,6 +220,7 @@ l10n:
     Inheritance: Inheritance and the prototype chain
     Strict_mode: Strict mode
     Memory_management: Memory Management
+    Agent_communication_and_coordination: Agent communication and coordination
     Reference: References
     Global_Objects: Built-in objects
     Operators: Expressions & operators

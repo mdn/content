@@ -3,10 +3,13 @@ title: "MathMLAnchorElement: rel property"
 short-title: rel
 slug: Web/API/MathMLAnchorElement/rel
 page-type: web-api-instance-property
+status:
+  - experimental
+  - non-standard
 browser-compat: api.MathMLAnchorElement.rel
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`rel`** property of the {{domxref("MathMLAnchorElement")}} interface is a string containing a space-separated list of link types indicating the relationship between the resource represented by the link and the current document.
 

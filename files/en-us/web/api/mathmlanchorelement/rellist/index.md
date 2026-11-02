@@ -3,10 +3,13 @@ title: "MathMLAnchorElement: relList property"
 short-title: relList
 slug: Web/API/MathMLAnchorElement/relList
 page-type: web-api-instance-property
+status:
+  - experimental
+  - non-standard
 browser-compat: api.MathMLAnchorElement.relList
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`relList`** read-only property of the {{domxref("MathMLAnchorElement")}} interface returns a live {{domxref("DOMTokenList")}} object containing the set of link types indicating the relationship between the resource represented by the link and the current document.
 

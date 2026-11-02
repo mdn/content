@@ -14,11 +14,15 @@ For example, when the user clicks the browser's Back button, the current page re
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("pagehide", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onpagehide = (event) => { }
 ```
 
@@ -38,15 +42,13 @@ In addition to the `Window` interface, the event handler property `onpagehide` i
 
 ## Usage notes
 
-Like the [`unload`](/en-US/docs/Web/API/Window/unload_event)
-and [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) events, this event is not reliably fired by browsers, especially on mobile. For example, the `pagehide` event is not fired at all in the following scenario:
+Like the [`unload`](/en-US/docs/Web/API/Window/unload_event) and [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) events, this event is not reliably fired by browsers, especially on mobile. For example, the `pagehide` event is not fired at all in the following scenario:
 
 1. A mobile user visits your page.
 2. The user then switches to a different app.
 3. Later, the user closes the browser from the app manager.
 
-However, unlike the `unload` and `beforeunload` events, this event is compatible with the [back/forward cache](https://web.dev/articles/bfcache) (bfcache), so adding a listener to this event will not prevent the page
-from being included in the bfcache.
+However, this event is compatible with the [back/forward cache](https://web.dev/articles/bfcache) (bfcache), so adding a listener to it doesn't prevent the page from being included in the bfcache.
 
 The best event to use to signal the end of a user's session is the [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) event. In browsers that don't support `visibilitychange` the `pagehide` event is the next-best alternative.
 
@@ -66,7 +68,7 @@ window.addEventListener("pagehide", (event) => {
 });
 ```
 
-This can also be written using the `onpagehide` event handler property on the {{domxref("Window")}}:
+This can also be written using the `onpagehide` event handler property on the {{domxref("Window")}} (but note that this replaces other event listeners added using `onpagehide`, if any):
 
 ```js
 window.onpagehide = (event) => {

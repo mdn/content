@@ -466,7 +466,7 @@ for await (const data of stream.readable) {
 
 For complete examples, see:
 
-- [WebTransport over HTTP/3 client](https://webtransport.day/)
+- [WebTransport over HTTP/3 client](https://googlechrome.github.io/samples/webtransport/client.html)
 
 ## Specifications
 

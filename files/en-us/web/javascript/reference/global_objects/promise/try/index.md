@@ -189,7 +189,7 @@ const p2 = NotPromise.try(() => {
 
 ## See also
 
-- [Polyfill of `Promise.try` in `core-js`](https://github.com/zloirock/core-js#promisetry)
+- [Polyfill of `Promise.try` in `core-js`](https://core-js.io/docs/features/ecmascript/promise)
 - [es-shims polyfill of `Promise.try`](https://www.npmjs.com/package/promise.try)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
 - {{jsxref("Promise")}}
