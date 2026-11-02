@@ -87,5 +87,5 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`CSSNumericValue` arithmetic methods**: `layout.css.typed-om.enabled`
 
   The {{domxref("CSSNumericValue.add()", "add()")}}, {{domxref("CSSNumericValue.sub()", "sub()")}}, {{domxref("CSSNumericValue.mul()", "mul()")}}, and {{domxref("CSSNumericValue.div()", "div()")}} methods of the {{domxref("CSSNumericValue")}} interface in the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) are now supported in Nightly.
-  They add, subtract, multiply, or divide numeric values, such as `CSS.px(10).add(CSS.px(5))`.
-  The result is a {{domxref("CSSUnitValue")}} when it can be simplified to a single unit (`15px` in this case), or a math expression such as a {{domxref("CSSMathSum")}} when it can't (for example, when adding `px` to `%`). ([Firefox bug 2081689](https://bugzil.la/2081689)).
+  They add, subtract, multiply, or divide numeric values, respectively; for example, `CSS.px(10).add(CSS.px(5))` adds two pixel values.
+  The result is a {{domxref("CSSUnitValue")}} (`15px` in this example) when it can be simplified to a single unit, or a math expression such as a {{domxref("CSSMathSum")}} when it can't be simplified (for example, when adding `px` to `%`). ([Firefox bug 2081689](https://bugzil.la/2081689)).
