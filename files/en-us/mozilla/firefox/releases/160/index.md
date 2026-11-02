@@ -83,3 +83,8 @@ Firefox 160 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 160 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **`named-feature()` support queries**: `layout.css.anchor-positioning.follows-transforms.enabled`
+
+  The `named-feature()` function in the {{cssxref("@supports")}} at-rule lets you test whether the browser supports a feature that has no other detectable syntax, for example `@supports named-feature(anchor-position-follows-transforms)`.
+  This feature is enabled by default in Nightly builds. ([Firefox bug 2059840](https://bugzil.la/2059840)).

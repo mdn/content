@@ -388,7 +388,7 @@ The `named-feature()` function in the {{cssxref("@supports")}} at-rule lets you 
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 156           | No                  |
+| Nightly           | 160           | Yes                 |
 | Developer Edition | 156           | No                  |
 | Beta              | 156           | No                  |
 | Release           | 156           | No                  |
