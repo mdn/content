@@ -252,7 +252,7 @@ Servers respond with a status message whenever they receive a request. Here are 
 Find out more about the Network Inspector in different browsers:
 
 - [Firefox Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
-- [Chrome Network panel](https://developer.chrome.com/docs/devtools/network/overview) (Opera and Edge's console is the same)
+- [Chrome Network panel](https://developer.chrome.com/docs/devtools/network/overview) (Opera and Edge's network panel is the same)
 - [Safari Network Tab](https://webkit.org/web-inspector/network-tab/)
 
 ## See also
