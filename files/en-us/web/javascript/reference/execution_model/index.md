@@ -183,7 +183,7 @@ Of course, the guarantee of "never-blocking" requires the platform API to be inh
 
 ## Agent clusters and memory sharing
 
-Multiple agents can communicate via memory sharing, forming an **agent cluster**. Agents are within the same cluster if and only if they can share memory. There is no built-in mechanism for two agent clusters to exchange any information, so they can be regarded as completely isolated execution models.
+Multiple agents can communicate via memory sharing, forming an **agent cluster**. Agents are within the same cluster if and only if they can share memory. Agents not in the same cluster can still exchange information with other protocols, such as `postMessage()`.
 
 When creating an agent (such as by spawning a worker), there are some criteria for whether it's in the same cluster as the current agent, or a new cluster is created. For example, the following pairs of global objects are each within the same agent cluster, and thus can share memory with each other:
 
@@ -198,7 +198,7 @@ The following pairs of global objects are not within the same agent cluster, and
 - A `Window` object and a shared worker it created.
 - A worker (of any type) and a shared worker it created.
 - A `Window` object and a service worker it created.
-- A `Window` object A and the `Window` object of an `iframe` element that A created that cannot be same origin-domain with A.
+- A `Window` object A and the `Window` object of an `iframe` element that A created and is cross-origin with A when A's agent cluster is origin-keyed.
 - Any two `Window` objects with no opener or ancestor relationship. This holds even if the two `Window` objects are same origin.
 
 For the exact algorithm, check the [HTML specification](https://html.spec.whatwg.org/multipage/webappapis.html#integration-with-the-javascript-agent-cluster-formalism).
