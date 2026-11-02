@@ -32,7 +32,7 @@ This article explains how to set up a simple local testing server on your machin
 
 In many of the MDN _Learn_ articles, we tell you to just open your examples directly in a browser. This can be done in several ways — double-clicking the HTML file, dragging and dropping it into the browser window, or choosing _File_ > _Open…_ and navigating to the HTML file.
 
-If the web address path starts with `file://` followed by the path to the file on your local hard drive (or `localhost:` or `http://127.0.0.1`; see [Running a simple local HTTP server](#running_a_local_http_server)), the loaded file is on your local hard drive. In contrast, if you view one of our examples hosted on GitHub (or another remote server), the web address will start with `https://`; this indicates that the file is remote and has been received via HTTPS.
+If the web address path starts with `file://` followed by the path to the file on your local hard drive (or `localhost:` or `http://127.0.0.1`; see [Running a local HTTP server](#running_a_local_http_server)), the loaded file is on your local hard drive. In contrast, if you view one of our examples hosted on GitHub (or another remote server), the web address will start with `https://`; this indicates that the file is remote and has been received via HTTPS.
 
 ## The problem with using file URLs
 
