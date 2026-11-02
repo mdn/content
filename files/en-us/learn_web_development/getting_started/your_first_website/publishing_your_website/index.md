@@ -71,7 +71,7 @@ Each operating system includes an (S)FTP client as part of its file manager. Win
 
 If you want to install an (S)FTP client, there are several reliable and free options: for example, [FileZilla](https://filezilla-project.org/) for all platforms, [WinSCP](https://winscp.net/eng/index.php) for Windows, [Cyberduck](https://cyberduck.io/) for Mac or Windows.
 
-In general, you'll get some instructions from your hosting provided like these for connecting via FTP:
+In general, you'll get some instructions from your hosting provider like these for connecting via FTP:
 
 > - SFTP server: `sftp://demozilla.examplehostingprovider.net`
 > - Username: `demozilla`
