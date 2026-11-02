@@ -51,7 +51,7 @@ To have more control over content and website appearance, most professionals/bus
   - Registrar markup: Some registrars may charge more for certain domain names. For example, the same TLD may be more expensive across different registrars depending on supply and demand, and some "premium" domain names may be more expensive, especially short names like `ai.com`.
   - Services associated with the domain name: Some registrars provide additional options such as a promotional price in the first year that goes up after renewal or registrar-provided email services.
 
-If you get your web hosting _and_ domain name from the same company, they are configured to talk to one another automatically. However, if you get them from separate companies, or want to change your hosting, you need to point the domain name to the correct server so people see your website when they navigate to that web address. Your hosting provider either gives you a public IP address — or one under their domain like my-app.pages.dev or my-app.github.io — and you configure your DNS records to add an A record or a CNAME record.
+If you get your web hosting _and_ domain name from the same company, they may be automatically linked together. However, if you get them from separate companies, or want to change your hosting, you need to point the domain name to the correct server so people see your website when they navigate to that web address. Your hosting provider gives you a web address, in the form of either a public IP address or a subdomain of their domain like `my-app.pages.dev` or `my-app.github.io`, and you configure your DNS records to add an A record or a CNAME record.
 
 ### Tips for finding hosting and domains
 
