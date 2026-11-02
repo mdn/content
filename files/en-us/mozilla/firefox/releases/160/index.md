@@ -65,8 +65,8 @@ Firefox 160 is the current [Beta version of Firefox](https://www.firefox.com/en-
   These properties represent the maximum number of incoming datagrams that can be queued while waiting to be read, and the maximum number of outgoing datagrams that can be queued for sending before backpressure is applied.
   ([Firefox bug 2023587](https://bugzil.la/2023587)).
 - The {{domxref("WebTransport.WebTransport", "WebTransport()")}} constructor now supports the [`datagramsReadableType`](/en-US/docs/Web/API/WebTransport/WebTransport#datagramsreadabletype) option.
-  Setting it to `bytes` makes the transport's stream of incoming datagrams, {{domxref("WebTransportDatagramDuplexStream.readable", "transport.datagrams.readable")}}, a readable byte stream.
-  You can then use a {{domxref("ReadableStreamBYOBReader")}} to read each datagram into a buffer that you supply and reuse, instead of receiving a newly allocated array for every datagram.
+  Setting it to `bytes` makes the transport's stream of incoming datagrams, {{domxref("WebTransportDatagramDuplexStream.readable", "transport.datagrams.readable")}}, a [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams).
+  You can then use a {{domxref("ReadableStreamBYOBReader")}} to read each datagram into a buffer that you supply and reuse, instead of receiving a new {{jsxref("Uint8Array")}} for every datagram.
   ([Firefox bug 2007755](https://bugzil.la/2007755)).
 
 <!-- #### DOM -->
