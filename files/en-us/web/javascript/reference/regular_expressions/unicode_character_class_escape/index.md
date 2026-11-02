@@ -126,9 +126,9 @@ If a character is used in a limited set of scripts, the `Script` property will o
 
 ### Unicode property escapes vs. character classes
 
-With JavaScript regular expressions, it is also possible to use [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) and especially `\w` or `\d` to match letters or digits. However, such forms only match characters from the _Latin_ script (in other words, ASCII letters, numbers, and underscore for `\w` and ASCII numbers for `\d`). As shown in [this example](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes#looking_for_a_word_from_unicode_characters), it might be a bit clumsy to work with non Latin texts.
+With JavaScript regular expressions, it is also possible to use [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) and especially `\w` or `\d` to match letters or digits. However, such forms only match characters from the _Latin_ script (in other words, ASCII letters, numbers, and the underscore character for `\w`, and ASCII numbers for `\d`). As shown in [this example](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes#looking_for_a_word_from_unicode_characters), character classes may be clumsy when used with non-Latin text.
 
-Unicode property escapes categories encompass many more characters and `\p{Letter}` or `\p{Number}` will work for any script.
+Unicode property escape categories cover many more characters, and `\p{Letter}` and `\p{Number}` work for any script.
 
 ```js
 // Trying to use ranges to avoid \w limitations:
