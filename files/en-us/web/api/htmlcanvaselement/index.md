@@ -24,6 +24,11 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLCanvasElement.mozPrintCallback")}} {{non-standard_inline}}
   - : A `function` that is Initially null. Web content can set this to a JavaScript function that will be called when the canvas is to be redrawn while the page is being printed. When called, the callback is passed a "printState" object that implements the [MozCanvasPrintState](https://searchfox.org/firefox-main/search?q=interface%20MozCanvasPrintState&path=HTMLCanvasElement.webidl) interface. The callback can get the context to draw to from the printState object and must then call done() on it when finished. The purpose of `mozPrintCallback` is to obtain a higher resolution rendering of the canvas at the resolution of the printer being used. [See this blog post.](https://blog.mozilla.org/labs/2012/09/a-new-way-to-control-printing-output/)
 
+### HTML-in-Canvas instance properties
+
+- {{domxref("HTMLCanvasElement.content")}}
+  - : Indicates whether the `<canvas>` element is opted into rendering its descendants rather than treating them as [fallback content](/en-US/docs/Web/HTML/Reference/Elements/canvas#fallback_content). Reflects the value of the HTML [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute.
+
 ## Instance methods
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}._

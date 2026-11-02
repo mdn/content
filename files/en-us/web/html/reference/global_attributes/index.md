@@ -53,7 +53,8 @@ In addition to the basic HTML global attributes, the following global attributes
   - : An enumerated attribute indicating whether the element can be dragged, using the [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API). It can have the following values:
     - `true`, which indicates that the element may be dragged
     - `false`, which indicates that the element may not be dragged.
-
+- [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable)
+  - : A boolean attribute that marks an element as a **paint root**, meaning that it can be rendered independently on a parent {{htmlelement("canvas")}} element with its [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute set to `drawable`, using the [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API).
 - [`enterkeyhint`](/en-US/docs/Web/HTML/Reference/Global_attributes/enterkeyhint)
   - : Hints what action label (or icon) to present for the enter key on virtual keyboards.
 - [`exportparts`](/en-US/docs/Web/HTML/Reference/Global_attributes/exportparts)

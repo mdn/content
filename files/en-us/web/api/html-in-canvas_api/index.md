@@ -57,6 +57,8 @@ For more information, read our guides, starting with [Using the HTML-in-Canvas A
 
 ### `HTMLCanvasElement`
 
+- {{domxref("HTMLCanvasElement.content")}}
+  - : Indicates whether the `<canvas>` element is opted into rendering its descendants rather than treating them as [fallback content](/en-US/docs/Web/HTML/Reference/Elements/canvas#fallback_content). Reflects the value of the HTML [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute.
 - {{domxref("HTMLCanvasElement.captureElementImage()")}}
   - : Captures a snapshot of a `drawable` element, which can be rendered later on.
 - {{domxref("HTMLCanvasElement.updateElementGeometry()")}}
@@ -76,6 +78,11 @@ For more information, read our guides, starting with [Using the HTML-in-Canvas A
   - : Fired when `drawable` elements have been repainted.
 - {{domxref("HTMLCanvasElement.elementgeometryupdate_event", "elementgeometryupdate")}}
   - : Fired when `drawable` element geometry has been updated via an {{domxref("OffscreenCanvas")}}.
+
+### `HTMLElement`
+
+- {{DOMxRef("HTMLElement.drawable")}}
+  - : Marks an element as a **paint root**, meaning that it can be rendered independently on a parent {{htmlelement("canvas")}} element with its [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute set to `drawable`, using the [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API). Reflects the value of the HTML [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) attribute.
 
 ### `OffscreenCanvas`
 
