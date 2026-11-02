@@ -6,13 +6,14 @@ page-type: webgl-extension
 browser-compat: api.WEBGL_compressed_texture_s3tc_srgb
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WEBGL_compressed_texture_s3tc_srgb`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes four [S3TC compressed texture formats](https://en.wikipedia.org/wiki/S3_Texture_Compression) for the sRGB colorspace.
 
 Compressed textures reduce the amount of memory needed to store a texture on the GPU, allowing for higher resolution textures or more of the same resolution textures.
 
-WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method.
+For more information, see [Using WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions).
 
 > [!NOTE]
 > This extension is available to both {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.

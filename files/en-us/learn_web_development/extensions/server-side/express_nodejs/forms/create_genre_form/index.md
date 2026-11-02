@@ -86,7 +86,7 @@ The array is passed to the router function and each method is called in order.
 > [!NOTE]
 > This approach is needed, because the validators are middleware functions.
 
-The first method in the array defines a body validator (`body()`) that validates and sanitizes the field. This uses `trim()` to remove any trailing/leading whitespace, checks that the _name_ field is not empty, and then uses `escape()` to remove any dangerous HTML characters).
+The first method in the array defines a body validator (`body()`) that validates and sanitizes the field. This uses `trim()` to remove any trailing/leading whitespace, checks that the _name_ field is not empty, and then uses `escape()` to remove any dangerous HTML characters.
 
 ```js
 [

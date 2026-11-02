@@ -47,7 +47,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-pa
     - The embedding {{htmlelement("iframe")}} is sandboxed, and the `allow-storage-access-by-user-activation` token is not set.
     - Usage is blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
     - Usage is denied by the user agent's permission request to use the API.
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if `requestedOrigin` is not a valid URL.
 
 ## Description

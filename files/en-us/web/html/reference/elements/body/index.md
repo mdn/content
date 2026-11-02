@@ -145,11 +145,14 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     <tr>
       <th scope="row">Tag omission</th>
       <td>
-        The start tag may be omitted if the first thing inside it is not a space
-        character, comment, {{HTMLElement("script")}} element or
-        {{HTMLElement("style")}} element. The end tag may be omitted if
-        the <code>&#x3C;body></code> element has contents or has a start tag,
-        and is not immediately followed by a comment.
+        The start tag may be omitted if the element is empty, or if the first
+        thing inside it is not ASCII whitespace or a comment, except if the
+        first thing inside it is a {{HTMLElement("meta")}},
+        {{HTMLElement("noscript")}}, {{HTMLElement("link")}},
+        {{HTMLElement("script")}}, {{HTMLElement("style")}}, or
+        {{HTMLElement("template")}} element. The end tag may be omitted if the
+        <code>&#x3C;body></code> element is not immediately followed by a
+        comment.
       </td>
     </tr>
     <tr>

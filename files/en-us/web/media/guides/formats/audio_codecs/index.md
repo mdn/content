@@ -224,7 +224,7 @@ Audio codecs typically employ cleverly-designed and highly-complex mathematical 
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/Web/Media/Guides/Formats/Audio_concepts#lossy_vs._lossless_compression"
+          href="/en-US/docs/Web/Media/Guides/Formats/Audio_concepts#audio_compression_basics"
           >Lossless compression</a
         >
       </th>
@@ -234,7 +234,7 @@ Audio codecs typically employ cleverly-designed and highly-complex mathematical 
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/Web/Media/Guides/Formats/Audio_concepts#lossy_vs._lossless_compression"
+          href="/en-US/docs/Web/Media/Guides/Formats/Audio_concepts#audio_compression_basics"
           >Lossy compression</a
         >
       </th>
@@ -316,7 +316,7 @@ Generally speaking, the most common reasons to choose lossless audio are because
 
 ### Maximum number of channels
 
-The audio delivered to each speaker in a sound system is provided by one audio channel in a stream. Monaural sound is a single channel. Stereo sound is two. 5.1 surround sound has five audio channels, plus one **Low Frequency Enhancement** (**LFE**) channel.
+The audio delivered to each speaker in a sound system is provided by one audio channel in a stream. Monaural sound is a single channel. Stereo sound is two. 5.1 surround sound has five audio channels, plus one **Low Frequency Effects** (**LFE**) channel.
 
 LFE channels are specifically designed to store low-frequency audio data, and are commonly used to provide audio data for subwoofers, for example. When you see the number of audio channels written in the form X.Y (such as 2.1 or 5.1), the number after the decimal point, Y, is the number of LFE channels. For example, MP3 supports one LFE channel, while AAC supports up to 16.
 
@@ -326,9 +326,11 @@ In addition to providing audio for specific speakers in a sound system, some cod
 
 The **audio frequency bandwidth** of a codec indicates the range of audio frequencies that can be represented using the codec. Some codecs operate specifically by eliminating audio that falls outside a given frequency range. There is a correlation between the sample rate and the maximum sound frequency that can be represented by a waveform represented by a codec. At a theoretical level, the maximum frequency a codec can represent is the sample rate divided by two; this frequency is called the [Nyquist frequency](https://en.wikipedia.org/wiki/Nyquist_frequency). In reality, the maximum is slightly lower, but it's close.
 
-The audio frequency bandwidth comes into play especially vividly when a codec is designed or configured to represent human speech rather than a broad range of sounds. Human speech generally resides within the audio frequency range of 300 Hz to 18 kHz. However, the vast majority of human vocalizations exist in the range 300 Hz to 8 kHz, and you can capture enough of human vocalizations in the frequency range 500 Hz to 3 kHz to still be understandable.
+The audio frequency bandwidth is most significant when a codec is designed or configured to represent human speech rather than a broad range of sounds. Human speech contains information across a broad range of audio frequencies, ranging from below 80 Hz to above 10 kHz (this range may sound unhelpful because it doesn't provide concrete bounds, but remember that humans are complex creatures, and you cannot assign precise numbers to human behavior). However, you can capture enough of this information in the conventional narrowband telephone range of approximately 300 Hz to 3.4 kHz for speech to remain intelligible in many listening conditions. Wider bandwidth can improve intelligibility and perceived quality.
 
 For that reason, speech-specific codecs often begin by dropping sound that falls outside a set range. That range is the audio frequency bandwidth. G.722, for example, strips away sounds outside the audio frequency bandwidth of 50 Hz to 7 kHz. This reduces the amount of data that needs to be encoded from the outset.
+
+See [Psychoacoustics 101](/en-US/docs/Web/Media/Guides/Formats/Audio_concepts#psychoacoustics_101) for a detailed discussion about how you should weigh the bandwidth against the desired quality.
 
 ## Codec details
 
@@ -370,7 +372,7 @@ As a patent-encumbered format, AAC support is somewhat less predictable. For exa
     </tr>
     <tr>
       <th scope="row">Maximum audio channels</th>
-      <td>48 (plus 16 Low Frequency Enhancement channels)</td>
+      <td>48 (plus 16 Low Frequency Effects channels)</td>
     </tr>
     <tr>
       <th scope="row">Audio frequency bandwidth</th>
@@ -1378,9 +1380,9 @@ Generally, of course, MP3 is the most common format used for music; choose a bit
 
 ### Example: Voice recording and playback
 
-The specific characteristics of human speech allow speech-specific codecs to compress the audio far more than most general-purpose codecs can. That's because although humans hear frequencies ranging from around 20 Hz to 20,000 Hz, and human speech sounds range from about 300 Hz to 18,000 Hz, the majority of the speech sounds that we need in order to understand what's being said lie in the frequency range of 500 Hz to 3,000 Hz or so. That means voice-only codecs can throw away everything else.
+The specific characteristics of human speech allow speech-specific codecs to compress audio efficiently. These codecs can exploit speech structure and limit its audio bandwidth. Although humans hear frequencies from around 20 Hz to 20,000 Hz, much of the information we need to understand speech lies in a frequency range of around 300 Hz to 3,400 Hz. Narrowband speech codecs discard frequencies outside their supported band, at the cost of some intelligibility and perceived quality. See [Psychoacoustics 101](/en-US/docs/Web/Media/Guides/Formats/Audio_concepts#psychoacoustics_101) for more details.
 
-The voice-specific codecs are all inherently very lossy, however, and any sound with significant information in the frequency bands outside the vocal range captured will be entirely lost. This makes these codecs completely unsuitable for anything but spoken words. Even audio that contains only voices, but singing rather than speaking, will likely not be of acceptable quality in one of these formats.
+The speech codecs discussed here are lossy, however, and any information in the frequency bands outside the audio bandwidth captured will be lost. This can make these codecs unsuitable for applications requiring high-fidelity music reproduction. Even audio that contains only voices, but singing rather than speaking, will likely not be of acceptable quality in one of these formats.
 
 Voice recording and playback usually needs to be low-latency in order to synchronize with video tracks, or in order to avoid cross-talk or other problems. Fortunately, the characteristics that lead to speech codecs being so efficient storage space-wise also make them tend to be very low latency. If you're working with WebRTC, [G.722](#g.722_64_kbps_7_khz_audio_coding), for example, has 4 ms latency (compared with over 100 ms for MP3), and [AMR](#amr_adaptive_multi-rate)'s latency is around 25 ms.
 

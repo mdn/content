@@ -126,7 +126,7 @@ console.log(plainObj);
 
 ## See also
 
-- [Polyfill of `Array.prototype.unshift` in `core-js` with fixes of this method](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.unshift` in `core-js` with fixes of this method](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.unshift`](https://www.npmjs.com/package/array.prototype.unshift)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

@@ -13,7 +13,7 @@ sidebar: cssref
 
 The **`rule-break`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the behavior for breaking column and row rules into segments where rows and column gaps intersect, setting {{cssxref("column-rule-break")}} and {{cssxref("row-rule-break")}} to the same value.
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: rule-break")}}
 
 ```css interactive-example-choice
 rule-break: none;
@@ -167,6 +167,18 @@ h2 {
   background-color: lime;
   height: 30px;
 }
+
+@layer no-support {
+  @supports not (rule-break: intersection) {
+    body::before {
+      content: "Your browser doesn't support the rule-break property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
 ```
 
 {{EmbedLiveSample("grid containers", "", "240")}}
@@ -255,6 +267,17 @@ section {
   flex: 1 1 auto;
   height: 30px;
 }
+@layer no-support {
+  @supports not (rule-break: intersection) {
+    body::before {
+      content: "Your browser doesn't support the rule-break property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
 ```
 
 {{EmbedLiveSample("Flex containers", "", "300")}}
@@ -341,6 +364,17 @@ li {
 }
 label {
   margin-right: 20px;
+}
+@layer no-support {
+  @supports not (rule-break: intersection) {
+    body::before {
+      content: "Your browser doesn't support the rule-break property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
 }
 ```
 
@@ -459,6 +493,17 @@ li {
   aspect-ratio: 1;
   font-family: sans-serif;
   line-height: 50px;
+}
+@layer no-support {
+  @supports not (rule-break: intersection) {
+    body::before {
+      content: "Your browser doesn't support the rule-break property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
 }
 ```
 

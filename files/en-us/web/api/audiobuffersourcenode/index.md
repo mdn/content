@@ -49,7 +49,7 @@ _Inherits properties from its parent, {{domxref("AudioScheduledSourceNode")}}_.
 
 - {{domxref("AudioBufferSourceNode.buffer")}}
   - : An {{domxref("AudioBuffer")}} that defines the audio asset to be played, or when set to the value `null`, defines a single channel of silence (in which every sample is 0.0).
-- {{domxref("AudioBufferSourceNode.detune")}}
+- {{domxref("AudioBufferSourceNode.detune")}} {{ReadOnlyInline}}
   - : A [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} representing detuning of playback in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29). This value is compounded with `playbackRate` to determine the speed at which the sound is played. Its default value is `0` (meaning no detuning), and its nominal range is -∞ to ∞.
 - {{domxref("AudioBufferSourceNode.loop")}}
   - : A Boolean attribute indicating if the audio asset must be replayed when the end of the {{domxref("AudioBuffer")}} is reached. Its default value is `false`.
@@ -57,7 +57,7 @@ _Inherits properties from its parent, {{domxref("AudioScheduledSourceNode")}}_.
   - : A floating-point value indicating the time, in seconds, at which playback of the {{domxref("AudioBuffer")}} must begin when `loop` is `true`. Its default value is `0` (meaning that at the beginning of each loop, playback begins at the start of the audio buffer).
 - {{domxref("AudioBufferSourceNode.loopEnd")}} {{optional_inline}}
   - : A floating-point number indicating the time, in seconds, at which playback of the {{domxref("AudioBuffer")}} stops and loops back to the time indicated by `loopStart`, if `loop` is `true`. The default value is `0`.
-- {{domxref("AudioBufferSourceNode.playbackRate")}}
+- {{domxref("AudioBufferSourceNode.playbackRate")}} {{ReadOnlyInline}}
   - : A [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} that defines the speed factor at which the audio asset will be played, where a value of 1.0 is the sound's natural sampling rate. Since no pitch correction is applied on the output, this can be used to change the pitch of the sample. This value is compounded with `detune` to determine the final playback rate.
 
 ## Instance methods

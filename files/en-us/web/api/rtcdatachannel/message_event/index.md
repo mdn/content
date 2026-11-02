@@ -17,11 +17,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("message", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onmessage = (event) => { }
 ```
 
@@ -47,7 +51,7 @@ dc.addEventListener("message", (event) => {
 
 We first create the new paragraph element and add the message data to it as a new text node. Then we append the new paragraph to the end of the document's body.
 
-You can also use an `RTCDataChannel` object's `onmessage` event handler property to set the event handler:
+You can also use an `RTCDataChannel` object's `onmessage` event handler property to set the event handler (but note that this replaces other event listeners added using `onmessage`, if any):
 
 ```js
 dc.onmessage = (event) => {

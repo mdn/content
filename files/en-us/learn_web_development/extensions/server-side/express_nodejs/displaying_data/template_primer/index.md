@@ -127,7 +127,7 @@ else
   p A variable named "title" does not exist
 ```
 
-You can also perform loop/iteration operations using `each-in` or `while` syntax. In the code fragment below we've looped through an array to display a list of variables (note the use of the 'li=' to evaluate the "val" as a variable below. The value you iterate across can also be passed into the template as a variable!
+You can also perform loop/iteration operations using `each-in` or `while` syntax. In the code fragment below we've looped through an array to display a list of variables (note the use of the 'li=' to evaluate the "val" as a variable below). The value you iterate across can also be passed into the template as a variable!
 
 ```pug
 ul

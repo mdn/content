@@ -14,11 +14,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("signalingstatechange", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onsignalingstatechange = (event) => { }
 ```
 
@@ -40,7 +44,7 @@ pc.addEventListener("signalingstatechange", (ev) => {
 });
 ```
 
-Using `onsignalingstatechange`, it looks like this:
+Using `onsignalingstatechange`, it looks like this (but note that this replaces other event listeners added using `onsignalingstatechange`, if any):
 
 ```js
 pc.onsignalingstatechange = (ev) => {

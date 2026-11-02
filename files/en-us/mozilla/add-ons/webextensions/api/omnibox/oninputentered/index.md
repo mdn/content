@@ -13,6 +13,8 @@ Use this event to handle the user's selection, generally by opening the correspo
 - the user's selection
 - an {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}: use this to determine whether to open the new page in the current tab, in a new foreground tab, or in a new background tab.
 
+If the extension has the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission), selecting a suggestion is a user action that grants it temporary access to the active tab (in Firefox, from Firefox 142).
+
 ## Syntax
 
 ```js-nolint

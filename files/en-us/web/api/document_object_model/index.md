@@ -58,7 +58,7 @@ A **DOM tree** is a [tree structure](https://en.wikipedia.org/wiki/Tree_structur
 
 It has a DOM tree that looks like this:
 
-![The DOM as a tree-like representation of a document that has a root and node elements containing content](using_the_w3c_dom_level_1_core-doctree.jpg)
+![The DOM as a tree-like representation of a document that has a root and node elements containing content](example-dom-tree.svg)
 
 Although the above tree is similar to the above document's DOM tree, they're not identical, as the actual DOM tree preserves [whitespace](/en-US/docs/Web/CSS/Guides/Text/Whitespace).
 

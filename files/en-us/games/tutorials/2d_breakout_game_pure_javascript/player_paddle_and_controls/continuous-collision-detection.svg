@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="340" viewBox="0 0 500 340" role="img" aria-labelledby="title description">
+  <title id="title">Continuous collision detection</title>
+  <desc id="description">Seven overlapping, increasingly opaque rectangles move diagonally down and right. Dots mark their top-left corners along a dashed trajectory. At first contact, the mover's bottom edge touches the obstacle's top edge, and its top-left corner reaches the blue dashed region. This region extends left of the obstacle by the mover's width and above it by the mover's height.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 1 1 L 9 5 L 1 9" fill="none" stroke="#334155" stroke-width="1.5"/>
+    </marker>
+  </defs>
+  <rect width="500" height="340" fill="#ffffff"/>
+  <rect x="224" y="204" width="236" height="106" fill="#76ABDA" fill-opacity="0.2" stroke="#76ABDA" stroke-width="2" stroke-dasharray="6 4"/>
+  <rect x="280" y="240" width="180" height="70" fill="#334155"/>
+  <g fill="#39CAC4" stroke="#39CAC4" stroke-width="2">
+    <rect x="40.0000" y="65.0000" width="56" height="36" opacity="0.12"/>
+    <rect x="73.0952" y="88.1667" width="56" height="36" opacity="0.22"/>
+    <rect x="106.1905" y="111.3333" width="56" height="36" opacity="0.32"/>
+    <rect x="139.2857" y="134.5000" width="56" height="36" opacity="0.44"/>
+    <rect x="172.3809" y="157.6667" width="56" height="36" opacity="0.57"/>
+    <rect x="205.4762" y="180.8333" width="56" height="36" opacity="0.7"/>
+    <rect x="238.5714" y="204.0000" width="56" height="36" opacity="0.85"/>
+  </g>
+  <path d="M 40 65 L 238.5714 204" fill="none" stroke="#334155" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#arrow)"/>
+  <g fill="#39CAC4">
+    <circle cx="40.0000" cy="65.0000" r="4"/>
+    <circle cx="73.0952" cy="88.1667" r="4"/>
+    <circle cx="106.1905" cy="111.3333" r="4"/>
+    <circle cx="139.2857" cy="134.5000" r="4"/>
+    <circle cx="172.3809" cy="157.6667" r="4"/>
+    <circle cx="205.4762" cy="180.8333" r="4"/>
+  </g>
+  <circle cx="238.5714" cy="204" r="5" fill="#ffffff" stroke="#CA393E" stroke-width="3"/>
+  <path d="M 280 240 H 294.5714" stroke="#CA393E" stroke-width="5"/>
+  <path d="M 164 276 H 190 L 238.5714 211" fill="none" stroke="#CA393E" stroke-width="1.5"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="40" y="45" font-size="14" fill="#475569">Frame start</text>
+    <text x="60" y="281" font-size="16" font-weight="700" fill="#CA393E">First contact</text>
+    <text x="370" y="280" text-anchor="middle" font-size="16" fill="#ffffff">Obstacle</text>
+  </g>
+</svg>

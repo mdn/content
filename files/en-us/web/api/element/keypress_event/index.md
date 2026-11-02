@@ -19,11 +19,15 @@ The event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbl
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("keypress", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onkeypress = (event) => { }
 ```
 
@@ -69,7 +73,9 @@ function logKey(e) {
 
 {{EmbedLiveSample("addEventListener_keypress_example")}}
 
-### onkeypress equivalent
+### Using the `onkeypress` event handler property
+
+You can also use the `onkeypress` event handler property (but note that this replaces other event listeners added using `onkeypress`, if any):
 
 ```js
 input.onkeypress = logKey;

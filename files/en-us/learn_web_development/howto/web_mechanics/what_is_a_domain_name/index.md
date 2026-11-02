@@ -166,6 +166,5 @@ As we already saw, when you want to display a webpage in your browser it's easie
 Okay, we talked a lot about processes and architecture. Time to move on.
 
 - If you want to get hands-on, it's a good time to start digging into design and explore [the anatomy of a web page](/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts).
-- It's also worth noting that some aspects of building a website cost money. Please refer to [how much it costs to build a website](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost).
 - Or read more about [Domain Names](https://en.wikipedia.org/wiki/Domain_name) on Wikipedia.
 - The [How DNS works](https://howdns.works/) tutorial has a fun and colorful explanation.

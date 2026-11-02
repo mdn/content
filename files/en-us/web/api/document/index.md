@@ -59,7 +59,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns the {{DOMxRef("FeaturePolicy")}} interface with the feature policies applied to the document.
 - {{domxref("Document.firstElementChild")}} {{ReadOnlyInline}}
   - : Returns the first child element of the current document.
-- {{DOMxRef("Document.fonts")}}
+- {{DOMxRef("Document.fonts")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef("FontFaceSet")}} interface of the current document.
 - {{DOMxRef("Document.forms")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the {{HTMLElement("form")}} elements in the document.
@@ -139,7 +139,7 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
 
 - {{DOMxRef("Document.alinkColor")}} {{Deprecated_Inline}}
   - : Returns or sets the color of active links in the document body.
-- {{DOMxRef("Document.all")}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.all")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Provides access to all elements in the document — it returns an {{DOMxRef('HTMLAllCollection')}} rooted at the document node. This is a legacy, non-standard property and should not be used.
 - {{DOMxRef("Document.anchors")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns a list of all of the anchors in the document.
@@ -153,7 +153,7 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Gets/sets the domain of the current document.
 - {{DOMxRef("Document.fgColor")}} {{Deprecated_Inline}}
   - : Gets/sets the foreground color, or text color, of the current document.
-- {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.fullscreen")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Returns `true` when the document is in [fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
 - {{DOMxRef("Document.characterSet", "Document.inputEncoding")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Alias of {{DOMxRef("Document.characterSet")}}. Use this property instead.
@@ -163,7 +163,7 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Gets/sets the color of hyperlinks in the document.
 - {{DOMxRef("Document.preferredStyleSheetSet")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Returns the preferred style sheet set as specified by the page author.
-- {{DOMxRef("Document.rootElement")}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.rootElement")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Like {{DOMxRef("Document.documentElement")}}, but only for {{SVGElement("svg")}} root elements. Use this property instead.
 - {{DOMxRef("Document.selectedStyleSheetSet")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns which style sheet set is currently in use.
@@ -171,7 +171,7 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Returns a list of the style sheet sets available on the document.
 - {{DOMxRef("Document.vlinkColor")}} {{Deprecated_Inline}}
   - : Gets/sets the color of visited hyperlinks.
-- {{DOMxRef("Document.xmlEncoding")}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.xmlEncoding")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Returns the encoding as determined by the XML declaration.
 - `Document.xmlStandalone` {{Deprecated_Inline}}
   - : Returns `true` if the XML declaration specifies the document to be standalone (_e.g.,_ An external part of the DTD affects the document's content), else `false`.

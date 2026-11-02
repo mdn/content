@@ -1,5 +1,5 @@
 ---
-title: tabGroups.move
+title: tabGroups.move()
 slug: Mozilla/Add-ons/WebExtensions/API/tabGroups/move
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabGroups.move

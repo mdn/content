@@ -8,11 +8,11 @@ browser-compat: api.MediaStreamTrack.applyConstraints.displaySurface_constraint
 
 {{APIRef("Media Capture and Streams")}}
 
-The {{domxref("MediaTrackConstraints")}} dictionary's **`displaySurface`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) describing the preferred value for the {{domxref("MediaTrackSettings.displaySurface","displaySurface")}} constrainable property.
+The {{domxref("MediaTrackConstraints")}} dictionary's **`displaySurface`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) describing the preferred value for the [`displaySurface`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#displaysurface) constrainable property.
 
 This is set by the application to identify to the user agent the type of display surface (`window`, `browser`, or `monitor`) preferred by the application. It has no effect on what the user can choose to share, but may be used to present the options in a different order.
 
-If needed, you can determine whether or not this constraint is supported by checking the value of {{domxref("MediaTrackSupportedConstraints.displaySurface")}} as returned by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is unnecessary since browsers will ignore any constraints they're unfamiliar with.
+If needed, you can determine whether or not this constraint is supported by checking the value of [`displaySurface`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#displaysurface) as returned by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
 ## Value
 
@@ -29,9 +29,8 @@ See [how constraints are defined](/en-US/docs/Web/API/Media_Capture_and_Streams_
 You can check the setting selected by the user agent after the display media has been
 created by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} by calling
 {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} on the display media's
-video {{domxref("MediaStreamTrack")}}, then checking the value of the returned
-{{domxref("MediaTrackSettings")}} object's
-{{domxref("MediaTrackSettings.displaySurface", "displaySurface")}} object.
+video {{domxref("MediaStreamTrack")}}, then checking the value of the
+[`displaySurface`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#displaysurface) property.
 
 For example, if your app prefers not to share a monitor — meaning that there's possibly a non-content backdrop being captured — it can use code similar
 to this:
@@ -84,4 +83,3 @@ that demonstrates how constraints are used.
 - [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
-- {{domxref("MediaTrackSupportedConstraints")}}

@@ -63,6 +63,10 @@ sidebar:
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/setViewport
             code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/startScreencast
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/stopScreencast
+            code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/traverseHistory
             code: true
           - type: section
@@ -73,6 +77,10 @@ sidebar:
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/contextDestroyed
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/domContentLoaded
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/downloadEnd
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/downloadWillBegin
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/fragmentNavigated
             code: true
@@ -85,6 +93,10 @@ sidebar:
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationFailed
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/userPromptClosed
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/userPromptOpened
             code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/emulation
         code: true
@@ -120,7 +132,31 @@ sidebar:
       - link: /Web/WebDriver/Reference/BiDi/Modules/permissions
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/script
+        details: closed
         code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/script#commands
+            title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/addPreloadScript
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/callFunction
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/disown
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/evaluate
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/getRealms
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/removePreloadScript
+            code: true
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/script#events
+            title: Events
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/realmCreated
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/realmDestroyed
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/session
         details: closed
         code: true
