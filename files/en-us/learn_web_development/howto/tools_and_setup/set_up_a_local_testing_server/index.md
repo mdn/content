@@ -34,7 +34,7 @@ In many of the MDN _Learn_ articles, we tell you to just open your examples dire
 
 If the web address path starts with `file://` followed by the path to the file on your local hard drive (or `localhost:` or `http://127.0.0.1`; see [Running a simple local HTTP server](#running_a_local_http_server)), the loaded file is on your local hard drive. In contrast, if you view one of our examples hosted on GitHub (or another remote server), the web address will start with `https://`; this indicates that the file is remote and has been received via HTTPS.
 
-## The problem with testing local files
+## The problem with using file URLs
 
 Some examples won't run if you open them directly in the browser using a `file://` URL. This can be due to a variety of reasons, the most likely being:
 
