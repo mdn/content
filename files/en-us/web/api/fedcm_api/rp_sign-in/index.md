@@ -14,7 +14,7 @@ Before an RP can use an IdP to sign in users, the RP must first select one or mo
 
 The RP must then register with each of the IdPs it wants to use. The registration process is specific to an individual IdP and is outside the scope of the FedCM API. After registration, the IdP will issue a _client ID_ value to the RP, and the RP will be able to use this value to identify itself to the IdP.
 
-The FedCM API manages the interactions between the user, the RP, and the IdP. However, it is agnostic about the specific protocol used, and so it doesn't determine the format or contents of all the objects that are exchanged between the RP and the IdP. A given IdP will implement a specific protocol, so as part of the registration process, the IdP will also explain to the RP exactly which arguments it expects to be given in a sign-in request, how the RP should use the objects that the IdP returns, and any other behavior it expects the RP to implement.
+The FedCM API manages the interactions between the user, the RP, and the IdP, but it doesn't define the protocol, or the format of every object the RP and IdP exchange. Each IdP implements a specific protocol. During registration, the IdP tells the RP which parameters to send in a sign-in request, how to use the objects the IdP returns, and anything other behavior it expects the RP to implement.
 
 For example, the result of a successful call to {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} includes a `token` object. The FedCM API does not define the structure of the `token` object or what the RP should do with it: this depends entirely on the federated identity protocol that the IdP implements.
 
