@@ -45,7 +45,7 @@ async function signIn() {
       providers: [
         {
           configURL: "https://accounts.idp.example/config.json",
-          clientId: "123456"
+          clientId: "123456",
           params: {/* IdP-specific parameters */},
           loginHint: "user1@example.com",
         },
