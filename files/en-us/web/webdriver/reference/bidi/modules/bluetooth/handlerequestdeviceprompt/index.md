@@ -50,10 +50,12 @@ The `params` field contains:
 - `context`
   - : A string that contains the ID of the context that has the device prompt to close.
     This is the `context` value of the [`bluetooth.requestDevicePromptUpdated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth/requestDevicePromptUpdated) event for the prompt.
+    It can be a child context, if the page that called `requestDevice()` is in one.
 - `device`
   - : A string that contains the ID of the device to choose.
     This is the `id` value of one of the devices in the `devices` array of the `bluetooth.requestDevicePromptUpdated` event.
-    Specify this only when the [`accept`](#accept) field is `true`.
+    This field is required when the [`accept`](#accept) field is `true`.
+    Don't specify it when `accept` is `false`.
 - `prompt`
   - : A string that contains the ID of the device prompt to close.
     This is the `prompt` value of the `bluetooth.requestDevicePromptUpdated` event for the prompt.
