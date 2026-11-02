@@ -60,7 +60,8 @@ Firefox 160 is the current [Beta version of Firefox](https://www.firefox.com/en-
   Previously, the method always returned 32 bytes.
   Code that omits either argument will need to be updated.
   ([Firefox bug 2079306](https://bugzil.la/2079306)).
-- The {{domxref("WebTransportDatagramDuplexStream.incomingMaxBufferedDatagrams", "incomingMaxBufferedDatagrams")}} and {{domxref("WebTransportDatagramDuplexStream.outgoingMaxBufferedDatagrams", "outgoingMaxBufferedDatagrams")}} properties of the {{domxref("WebTransportDatagramDuplexStream")}} interface are now supported, replacing the non-standard {{domxref("WebTransportDatagramDuplexStream.incomingHighWaterMark", "incomingHighWaterMark")}} and {{domxref("WebTransportDatagramDuplexStream.outgoingHighWaterMark", "outgoingHighWaterMark")}} properties.
+- The {{domxref("WebTransportDatagramDuplexStream.incomingMaxBufferedDatagrams", "incomingMaxBufferedDatagrams")}} and {{domxref("WebTransportDatagramDuplexStream.outgoingMaxBufferedDatagrams", "outgoingMaxBufferedDatagrams")}} properties of the {{domxref("WebTransportDatagramDuplexStream")}} interface are now supported.
+  They replace the non-standard {{domxref("WebTransportDatagramDuplexStream.incomingHighWaterMark", "incomingHighWaterMark")}} and {{domxref("WebTransportDatagramDuplexStream.outgoingHighWaterMark", "outgoingHighWaterMark")}} properties, which have been removed.
   These properties represent the maximum number of incoming datagrams that can be queued while waiting to be read, and the maximum number of outgoing datagrams that can be queued for sending before backpressure is applied.
   ([Firefox bug 2023587](https://bugzil.la/2023587)).
 
