@@ -212,7 +212,7 @@ setUp: Run once for every test method to set up clean data.
 Method: test_false_is_false.
 .setUp: Run once for every test method to set up clean data.
 Method: test_false_is_true.
-FsetUp: Run once for every test method to set up clean data.
+setUp: Run once for every test method to set up clean data.
 Method: test_one_plus_one_equals_two.
 .
 ======================================================================
