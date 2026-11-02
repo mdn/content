@@ -30,7 +30,7 @@ The FedCM API extends the [Credential Management API](/en-US/docs/Web/API/Creden
 
 - [`mode`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#mode): a string specifying whether the sign-in attempt must be triggered by a user action, such as a click on a "sign in" button, or whether it can be made automatically without a user action, for example on page load. A value of `"active"` indicates the first case, and `"passive"` indicates the second case. See [Active versus passive mode](#active_versus_passive_mode) for more details.
 
-- [`providers`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#mode): an array of objects, each containing information about an IdP that the RP can use for this sign-in attempt. Among other properties, this contains:
+- [`providers`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#providers): an array of objects, each containing information about an IdP that the RP can use for this sign-in attempt. Among other properties, this contains:
   - `configURL`: this tells the browser where it can find the configuration file for this IdP.
   - `clientId`: the value that identifies this RP to the IdP
   - `params`: any additional parameters that this IdP needs.
