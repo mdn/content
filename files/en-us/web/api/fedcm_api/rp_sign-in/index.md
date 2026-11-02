@@ -81,7 +81,7 @@ The first four steps are repeated for every IdP listed in the [`providers`](/en-
 
 3. If the user is logged into the IdP, the browser makes a GET request to the [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint), using the value of the [`accounts_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint) property in the IdP config file. This request includes a cookie identifying the user that is signed in, but does not enable the IdP to learn which RP the user is trying to sign into.
 
-   The response contains an array of objects. Each object represents an account that the user with this IdP, and includes an ID for this account and information such as the username and email address associated with the account. It also may include `approved_clients`, which is an array of client IDs, each of which identifies an RP account that the user has signed up with using this IdP account.
+   The response contains an array of objects. Each object represents an account that the user has with this IdP, and includes an ID for this account and information such as the username and email address associated with the account. It also may include `approved_clients`, which is an array of client IDs, each of which identifies an RP that the user has signed up with using this IdP account.
 
    > [!NOTE]
    > If the user is logged out of all the given IdPs, the `get()` call rejects with a `NetworkError` {{domxref("DOMException")}} and does not make a request to any IdP's accounts list endpoint. Note that there may be some delay in the rejection to avoid leaking IdP login status to the RP.
