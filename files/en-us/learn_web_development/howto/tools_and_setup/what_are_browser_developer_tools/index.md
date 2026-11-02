@@ -224,9 +224,9 @@ To access it, open the developer tools and select the **Network** tab. This will
 
 ![The Network tab of the browser developer tools, showing several network requests with a variety of status codes.](network_inspector.png)
 
-There's a lot of information available here, but at a basic level, it is useful for seeing what files your site is requesting and whether they are being loaded successfully.
+There's a lot of information here, but at a basic level, it is useful to see what files your site requests and whether they load successfully.
 
-As an example, if you see a {{httpstatus("200")}} status code, a resource has been delivered successfully, but if the code shows as {{httpstatus("404")}}, it means the resource couldn't be found, and you might have an incorrect file path or filename to fix, or maybe you forgot to upload it to the server.
+As an example, if you see a {{httpstatus("200")}} status code, a resource has been delivered successfully, but if the code shows as {{httpstatus("404")}}, it means the resource couldn't be found; you might have an incorrect file path or filename to fix, or maybe you forgot to upload it to the server.
 
 ### HTTP statuses
 
@@ -241,7 +241,7 @@ Servers respond with a status message whenever they receive a request. Here are 
 - **403: Forbidden**
   - : You aren't allowed to display the resource. Usually this indicates a configuration mistake (e.g., your hosting provider forgot to give you access rights to a directory).
 - **404: Not found**
-  - : Self-explanatory. We'll discuss how to solve this below.
+  - : Self-explanatory: The requested resource could not be found at the specified location.
 - **500: Internal server error**
   - : Something went wrong on the server. For instance, the server-side language ({{Glossary("PHP")}}, .Net, etc.) stopped working, or the web server itself has a configuration problem. Report such problems to your hosting provider's support team.
 - **503: Service unavailable**
