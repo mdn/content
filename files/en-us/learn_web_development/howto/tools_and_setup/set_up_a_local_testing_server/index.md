@@ -68,7 +68,7 @@ To use the module:
    npm -v
    ```
 
-2. If Node.js is not installed, you need to install it. Follow the [download instructions](https://nodejs.org/en/download) in the Node.js docs, then run the above command again to check if the installation is successful.
+2. If Node.js is not installed, you need to install it. Follow the [download instructions](https://nodejs.org/en/download) in the Node.js docs, then run the above commands again to check if the installation is successful.
 
 3. In your command prompt, navigate to the folder your example is located in using the `cd` command.
 
