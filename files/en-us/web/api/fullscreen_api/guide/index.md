@@ -132,7 +132,7 @@ Note the temporary notification that appears at the top of the fullscreen page e
 
 ## Getting out of full screen mode
 
-Browers provide a mechanism for users to manually exit fullscreen mode, and the method is displayed in a transient notification when fullscreen mode is entered.
+Browsers provide a mechanism for users to manually exit fullscreen mode, and the method is displayed in a transient notification when fullscreen mode is entered.
 This method is commonly the <kbd>Esc</kbd> key (or a long-press of the <kbd>Esc</kbd> when in [browser keyboard lock mode](/en-US/docs/Web/API/Element/requestFullscreen#keyboard_locking)).
 
 A browser may support other keys or key-combinations for exiting fullscreen mode, such as <kbd>F11</kbd> or <kbd>Alt+Tab</kbd>.
