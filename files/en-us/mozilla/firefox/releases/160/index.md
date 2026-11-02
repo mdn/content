@@ -50,7 +50,11 @@ Firefox 160 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
+
+- The {{domxref("WebTransport.WebTransport", "WebTransport()")}} constructor now accepts the [`headers`](/en-US/docs/Web/API/WebTransport/WebTransport#headers) option, which adds custom HTTP headers to the [extended `CONNECT`](/en-US/docs/Web/HTTP/Reference/Methods/CONNECT#extended_connect) request that sets up the session.
+  The headers that the server sends in its response are available in the {{domxref("WebTransport.responseHeaders")}} property once the session is established.
+  ([Firefox bug 2081470](https://bugzil.la/2081470), [Firefox bug 2033220](https://bugzil.la/2033220)).
 
 <!-- #### DOM -->
 
