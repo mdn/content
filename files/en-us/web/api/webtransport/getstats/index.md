@@ -59,7 +59,7 @@ The returned object may have the following properties/statistics:
       - : A non-negative integer indicating the number of datagrams that were dropped from the queue for sending because they expired.
         Note that the maximum age before a datagram in the send-queue expires can be found in [`outgoingMaxAge`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream/outgoingMaxAge).
     - `droppedIncoming`
-      - : A non-negative integer indicating the number incoming datagrams that were dropped.
+      - : A non-negative integer indicating the number of incoming datagrams that were dropped.
         Incoming datagrams are dropped if the application does not read them before new datagrams overflow the [`readable` stream](/en-US/docs/Web/API/WebTransportDatagramDuplexStream/readable) receive queue.
     - `lostOutgoing`
       - : A non-negative integer indicating the number of sent datagrams that were declared lost.
