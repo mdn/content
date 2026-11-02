@@ -7,24 +7,24 @@ sidebar: jssidebar
 
 {{PreviousNext("Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Regular_expressions")}}
 
-Dates and times are everywhere in web applications. Want to calculate how long since the last scheduled payment? Want to set a reminder for "next Tuesday, 1pm" or "My friend's birthday"? Want to display the times when each file was created? This guide helps you uncover the details of dates and times that you may not be aware of, and gives you a gentle introduction to the gigantic {{jsxref("Temporal")}} API.
+Dates and times are everywhere in web applications. Want to calculate how long since the last scheduled payment? Want to set a reminder for "next Tuesday, 1 pm" or "My friend's birthday"? Want to display the time when each file was created? This guide explains the details behind handling dates and times in JavaScript, and gives you a gentle introduction to the gigantic {{jsxref("Temporal")}} API.
 
-Introduction of the API methods and properties is mixed with explanations of date mechanisms, especially calendars and time zones. If you are only interested in snippets for some common use cases, see our [Temporal cookbook](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times/Cookbook).
+This guide mixes introduction to the API methods and properties with explanations of date mechanisms, especially calendars and time zones. If you are only interested in snippets for common use cases, see our [Temporal cookbook](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times/Cookbook).
 
 ## Instants
 
-Most date-times are used to identify a unique time in history, whether in the past, present, or future. Consider these examples:
+Most date-times identify a unique moment in time in the past, present, or future. Consider these examples:
 
 - The [first commit to mdn/content](https://github.com/mdn/content/commit/13e249a7051d637deb3c8fd3a25c397c401edf13) was made on **September 15, 2020 at 11:43:01 EDT** (the commit author was in the US Eastern time zone)
 - The [Fall of the Bastille](https://en.wikipedia.org/wiki/Storming_of_the_Bastille) happened in Paris on **July 14, 1789**
 - You may need to perform some maintenance to your app, so you tell your user that the app will be unavailable on **November 13, 2026 from 05:00 UTC to 07:00 UTC** (this is a "future date" at the time this doc was written; it may no longer be in the future when you are reading it!)
 
-There's immediately one problem: we rarely known the _precise time_ of anything! Git commit timestamps only store the seconds, so we don't know the milliseconds, or even nanoseconds, of when this event occurred. Similarly, historic dates like July 14, 1789 rarely have specific times at all (and eventually we need to ask nonsensical questions like "Did the Bastille fall when the first defender walked out or the last?"). We can address this with some sensible defaults. For example, we can just set all milliseconds and nanoseconds to 0, and we can assume that the Bastille fell at 17:00:00 UTC.
+There's immediately one problem: we rarely know the _precise time_ of anything! Git commit timestamps only store the seconds, so we don't know the nanoseconds, or even milliseconds, of when this event occurred. Similarly, historic dates like July 14, 1789 rarely have specific times at all (and eventually we need to ask nonsensical questions like "Did the Bastille fall when the first defender walked out or the last?"). We can address this with some sensible defaults. For example, we can set all milliseconds and nanoseconds to 0, and assume that the Bastille fell at 17:00:00 UTC.
 
 > [!NOTE]
-> These approximations are akin to how you approximate a country's population to the nearest million, a person's age to a whole number of years, etc.—as long as it preserves the behavior that your users care about (for example, "Sort by date" can work correctly, or "x days ago" displays the correct number), it won't be a problem.
+> These approximations are akin to how you approximate a country's population to the nearest million, a person's age to a whole number of years, etc.—as long as they preserve the behavior and meaning that your users care about (for example, "Sort by date" can work correctly, or "x days ago" displays the correct number), it won't be a problem.
 
-Anyway, we now have a precise **instant** in history, accurate to the nanosecond level (clocks can rarely measure more precisely than that). The most unambiguous way to represent it is to use an offset from an agreed-upon instant, called the _epoch_. JavaScript—which follows the same Unix convention as many other pieces of software—uses the epoch **January 1, 1970, 00:00:00 UTC**. For example, we can construct an instant as a {{jsxref("Temporal.Instant")}} object that's `1600184581000000000` nanoseconds (note: this is equivalent to 18520 days, 15 hours, 43 minutes, and 1 second) after the epoch, and then display that time in the US Eastern time zone (see [Internationalization](/en-US/docs/Web/JavaScript/Guide/Internationalization#date_and_time_formatting) to understand more about date-time formatting):
+Anyway, such defaults enable us to define a precise **instant** in history, accurate to the nanosecond level (clocks can rarely measure more precisely than that). We can represent it as a single number: an offset from an agreed-upon instant, called the _epoch_. JavaScript—which follows the same Unix convention as many other pieces of software—uses the epoch **January 1, 1970, 00:00:00 UTC**. For example, we can construct an instant using a {{jsxref("Temporal.Instant")}} object that's `1600184581000000000` nanoseconds (note: this is equivalent to 18520 days, 15 hours, 43 minutes, and 1 second) after the epoch, and then display that time in the US Eastern time zone (see [Internationalization](/en-US/docs/Web/JavaScript/Guide/Internationalization#date_and_time_formatting) to understand more about date-time formatting):
 
 ```js
 const specialInstant = new Temporal.Instant(1600184581000000000n);
@@ -37,7 +37,7 @@ console.log(
 
 As you can see, the `specialInstant` now represents the aforementioned **September 15, 2020 at 11:43:01 EDT** instant.
 
-Similarly, we can construct an instant that's `5694908400000000000` nanoseconds (note: this is equivalent to 65913 days and 7 hours) _before_ the epoch by using a negative number. When displayed in the Paris time zone, this happens to be **July 14, 1789**, at some odd time (we'll talk about this odd time later).
+Similarly, we can construct an instant that's `5694908400000000000` nanoseconds (note: this is equivalent to 65913 days and 7 hours) _before_ the epoch by using a negative number. When displayed in the Paris time zone, this happens to be **July 14, 1789**, at some odd time (see [Understanding the time zone](#understanding_the_time_zone) for why the time is `09:21`).
 
 ```js
 const specialInstant = new Temporal.Instant(-5694908400000000000n);
@@ -50,13 +50,13 @@ console.log(
 
 The {{jsxref("Temporal.Instant")}} object stores the nanosecond offset, which you can retrieve with {{jsxref("Temporal/Instant/epochNanoseconds", "epochNanoseconds")}}. You can also use {{jsxref("Temporal/Instant/epochMilliseconds", "epochMilliseconds")}} to get the same offset in milliseconds (which is nanoseconds divided by a million and floored to an integer). Representing instants as single numbers is very convenient for the computer—storing, computing differences, and comparing instants are all straightforward. Git, databases, JavaScript's {{jsxref("Date")}} object, and most software use similar approaches.
 
-Instants can be added/subtracted, compared, serialized, and displayed (see [Deriving new times](#deriving_new_times)), but importantly, they do not give you information like "what time of the day it is" or "what date it is", because that require additional metadata, which we'll look at next.
+Instants can be added/subtracted, compared, serialized, and displayed (see [Deriving new times](#deriving_new_times)), but importantly, they do not give you information like "what time of day it is" or "what date it is". Calculating such nuances requires additional metadata, which we'll look at next.
 
 ## Zoned date-times
 
-If we are designing the date-time notation system from scratch, we can represent "18520 days, 15 hours, 43 minutes, and 1 second from the epoch" as `18520 15:43:01`. But this format is not convenient for us mortal humans, for two reasons: (1) we are not very good at processing large numbers like `18520`; (2) the time `15:43:01` does not correspond to the sun's position in the sky at a particular location (such as New York)—we are used to 00:00 being midnight, 12:00 being noon, etc. Two systems come to fix these two problems: the _calendar system_ and the _time zone_.
+If we were designing the date-time notation system from scratch, we could represent "18520 days, 15 hours, 43 minutes, and 1 second from the epoch" as `18520 15:43:01`. But this format is not convenient for humans, for two reasons: we are not very good at processing large numbers like `18520`, and the time `15:43:01` does not correspond to the sun's position in the sky at a particular location (such as New York)—we are used to 00:00 being midnight, 12:00 being noon, etc. We have created two systems to fix these problems: the _calendar_ and the _time zone_.
 
-For subsequent demonstration, let's convert the two instants to {{jsxref("Temporal.ZonedDateTime")}} (ZDT) objects with the {{jsxref("Temporal/Instant/toZonedDateTimeISO", "toZonedDateTimeISO()")}} method, which takes a time zone name. Now you can use the {{jsxref("Temporal/ZonedDateTime/toLocaleString", "toLocaleString()")}} method to directly print out a user-friendly string, without providing a time zone like we previously did with `Instant`.
+For subsequent demonstrations, let's convert our two instant examples to {{jsxref("Temporal.ZonedDateTime")}} (ZDT) objects with the {{jsxref("Temporal/Instant/toZonedDateTimeISO", "toZonedDateTimeISO()")}} method, which takes a time zone name. Now you can use the {{jsxref("Temporal/ZonedDateTime/toLocaleString", "toLocaleString()")}} method to directly print out a user-friendly string, without providing a time zone like we previously did with `Instant`.
 
 ```js
 const mdnCreationInst = new Temporal.Instant(1600184581000000000n);
@@ -75,11 +75,11 @@ console.log(bastilleFall.toLocaleString("en-US")); // 7/14/1789, 5:09:21 PM GMT+
 Because a ZDT is a wrapper around the `Instant` object, everything you can do with an `Instant`, you can do so with a ZDT too: {{jsxref("Temporal/ZonedDateTime/epochMilliseconds", "epochMilliseconds")}}, {{jsxref("Temporal/ZonedDateTime/epochNanoseconds", "epochNanoseconds")}}, {{jsxref("Temporal/ZonedDateTime/compare", "compare()")}}, {{jsxref("Temporal/ZonedDateTime/add", "add()")}}/{{jsxref("Temporal/ZonedDateTime/subtract", "subtract()")}}, {{jsxref("Temporal/ZonedDateTime/since", "since()")}}/{{jsxref("Temporal/ZonedDateTime/until", "until()")}}. You can also get the `Instant` back from the `ZonedDateTime` using {{jsxref("Temporal/ZonedDateTime/toInstant", "toInstant()")}}.
 
 > [!NOTE]
-> Because the ZDT is aware of dates, arithmetics work slightly differently (for example, they can give you answers in years and months, whereas `Instant` can only give you seconds). We'll ignore these differences for now.
+> Because the ZDT is aware of calendars, arithmetic works slightly differently (for example, it can give you answers in years and months, whereas `Instant` can only give you seconds). We'll ignore these differences for now.
 
 ### Understanding the calendar
 
-To break down the large number of days, we invent _calendar units_ like weeks, months, years, and sometimes eras. A _calendar system_ answers questions like how many days are in a particular month and how many months are in a particular year. You probably already have a good understanding about how the Gregorian calendar works (12 months per year; 28–31 days per month; a leap year roughly every 4 years; leap years have an extra day in February; etc.), but it's important to remember that none of these assumptions may hold in other calendars, so you must be cautious when interpreting months and years. Today, the Gregorian calendar is ubiquitous and is widely used for cross-cultural communication. However, different cultures often have their traditional calendars, usually for cultural, religious, or political purposes. The [`Temporal` reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars) goes into great detail about how different calendars work.
+To break down large numbers of days, we invent _calendar units_ like weeks, months, years, and sometimes eras. A _calendar system_ answers questions like how many days are in a particular month and how many months are in a particular year. You probably already have a good understanding of how the Gregorian calendar works (12 months per year; 28–31 days per month; a leap year roughly every 4 years; leap years have an extra day in February; etc.), but it's important to remember that none of these assumptions may hold in other calendars, so you must be cautious when interpreting months and years. Today, the Gregorian calendar is ubiquitous and is widely used for cross-cultural communication. However, different cultures often use traditional calendars, for example for cultural, religious, or political purposes. The [`Temporal` reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars) details how different calendars work.
 
 The ISO 8601 calendar is based on the Gregorian calendar. They have identical month and year counting rules, but ISO 8601 does not use eras and has week numbering rules. The `toZonedDateTimeISO()` method produces `ZonedDateTime` objects in this calendar; you can tell from the {{jsxref("Temporal/ZonedDateTime/calendarId", "calendarId")}}:
 
@@ -87,7 +87,7 @@ The ISO 8601 calendar is based on the Gregorian calendar. They have identical mo
 console.log(mdnCreation.calendarId); // "iso8601"
 ```
 
-In ISO 8601, the {{jsxref("Temporal/ZonedDateTime/year", "year")}}, {{jsxref("Temporal/ZonedDateTime/month", "month")}}, and {{jsxref("Temporal/ZonedDateTime/day", "day")}} properties are identical with Gregorian and give you what you expect.
+In ISO 8601, the {{jsxref("Temporal/ZonedDateTime/year", "year")}}, {{jsxref("Temporal/ZonedDateTime/month", "month")}}, and {{jsxref("Temporal/ZonedDateTime/day", "day")}} properties are identical to their Gregorian representations and give you what you'd expect.
 
 ```js
 console.log(mdnCreation.year, mdnCreation.month, mdnCreation.day);
@@ -117,14 +117,14 @@ The third mode is year-day. For this you use `year` and {{jsxref("Temporal/Zoned
 console.log(mdnCreation.year, mdnCreation.dayOfYear); // 2020 259
 ```
 
-Instead of a single monotonic year counter, many calendars divide years into eras. ISO 8601 doesn't use this, but Gregorian does. It has two eras: CE and BCE, where years are numbered in the order of 3 BCE, 2 BCE, 1 BCE, 1 CE, 2 CE, ... So year numbers are always positive. You use {{jsxref("Temporal/ZonedDateTime/era", "era")}} and {{jsxref("Temporal/ZonedDateTime/eraYear", "eraYear")}} to retrieve this information, and you can use them as a pair for every purpose that you use `year` for.
+Instead of a single monotonic year counter, many calendars group years into eras. ISO 8601 doesn't use this, but the Gregorian calendar does. It has two eras: CE and BCE, where years are numbered in the order of 3 BCE, 2 BCE, 1 BCE, 1 CE, 2 CE, ... So year numbers are always positive. You use {{jsxref("Temporal/ZonedDateTime/era", "era")}} and {{jsxref("Temporal/ZonedDateTime/eraYear", "eraYear")}} to retrieve this information, and you can use them as a pair for every purpose that you use `year` for.
 
 ```js
 const mdnCreationGreg = mdnCreation.withCalendar("gregory");
 console.log(mdnCreationGreg.era, mdnCreationGreg.eraYear); // ce 2020
 ```
 
-Instead of identifying months by numbers, many languages/calendars give them names like "January", "February", etc. But there's one problem: some calendars use leap _months_ (which adds an extra month) instead of leap _days_ (which adds an extra day). Furthermore, this month can be added in the middle of the year. Take the `chinese` calendar as an example. It normally names each month a number, so the first month is literally called "month 1" (一月), and so on. But when a leap month is needed, it just repeats a certain month. For example, year 2020 happens to be a leap year (check with {{jsxref("Temporal/ZonedDateTime/inLeapYear", "inLeapYear")}}). In this year, "month 4" is repeated as "leap month 4" (闰四月), so the months in that year are named "month 3" (index 3), "month 4" (index 4), "leap month 4" (index 5), "month 5" (index 6), and so on. The mdn/content creation time happens to fall on "month 7", so its index is 8. But if a month with the same name has index 7 in some years and index 8 in other years, this can be problematic for many use cases. Therefore, the {{jsxref("Temporal/ZonedDateTime/monthCode", "monthCode")}} property allows you to identify months using the calendar convention—two months in different years with the same code are identical months, even if they have different index numbers in their respective years. You can use `monthCode` for every purpose that you use `month` for.
+Instead of identifying months by numbers, many languages/calendars give them names like "January", "February", etc. But there's one problem: some calendars use leap _months_ (which adds an extra month) instead of leap _days_ (which adds an extra day). Furthermore, this month can be added in the middle of the year. Take the `chinese` calendar as an example. It normally names each month using a number, so the first month is literally called "month 1" (一月), and so on. But when a leap month is needed, it just repeats a certain month. For example, year 2020 happens to be a leap year in the Chinese calendar (check with {{jsxref("Temporal/ZonedDateTime/inLeapYear", "inLeapYear")}}). In this year, "month 4" is repeated as "leap month 4" (闰四月), so the months in that year are named "month 3" (index 3), "month 4" (index 4), "leap month 4" (index 5), "month 5" (index 6), and so on. The mdn/content creation time falls on "month 7", so its index is 8. But a month with the same name having index 7 in some years and index 8 in others causes problems for many use cases. Therefore, the {{jsxref("Temporal/ZonedDateTime/monthCode", "monthCode")}} property allows you to identify months using the calendar convention—two months in different years with the same code are identical months, even if they have different index numbers in their respective years. You can use `monthCode` for every purpose that you use `month` for.
 
 ```js
 const mdnCreationChi = mdnCreation.withCalendar("chinese");
@@ -136,11 +136,11 @@ console.log(mdnCreationChi.monthCode); // "M07"
 > [!NOTE]
 > As you can see, this `monthCode` is not intended to be human-readable (and its format is standardized across calendars). You should use {{jsxref("Intl.DateTimeFormat")}} to provide a readable name in the target language. This property is purely for computation purposes.
 
-A group of properties: {{jsxref("Temporal/ZonedDateTime/daysInMonth", "daysInMonth")}}, {{jsxref("Temporal/ZonedDateTime/daysInWeek", "daysInWeek")}}, {{jsxref("Temporal/ZonedDateTime/daysInYear", "daysInYear")}}, {{jsxref("Temporal/ZonedDateTime/monthsInYear", "monthsInYear")}} help you retrieve the counting rules for this calendar for the specific date.
+A group of properties—{{jsxref("Temporal/ZonedDateTime/daysInMonth", "daysInMonth")}}, {{jsxref("Temporal/ZonedDateTime/daysInWeek", "daysInWeek")}}, {{jsxref("Temporal/ZonedDateTime/daysInYear", "daysInYear")}}, and {{jsxref("Temporal/ZonedDateTime/monthsInYear", "monthsInYear")}}—help you retrieve the counting rules for this calendar for the specific date.
 
 ### Understanding the time zone
 
-The time `15:43:01` is based on an epoch representing midnight in UTC, whose time of day approximately follows the mean solar time at Greenwich, London. At each longitude, there's a different local time. The sun's motion is not uniform, but it revolves 360° around the earth in 24 hours, so on average, two clocks that are 1° apart in longitude will have a 4-minute difference. A clock that synchronizes with the local sun position, assuming uniform motion, is called the _local mean time_. Usually, an entire region uses the local time of a clock at some important location (it would be very inconvenient if two nearby towns have clocks that are a few minutes apart); this region is called a _time zone_. The difference between the time of that time zone and the Greenwich Mean Time (which was later standardized to UTC) is called the _time zone offset_.
+The time `15:43:01` is based on an epoch representing midnight in UTC, whose time of day approximately follows the mean solar time at Greenwich, London. Each longitude has a different local time. The sun's motion is not uniform, but it revolves 360° around the earth in 24 hours, so on average, two clocks 1° apart in longitude will have a 4-minute difference. A clock that synchronizes with the local sun position, assuming uniform motion, is called the _local mean time_. Usually, an entire region uses the local time of a clock at some important location (it would be very inconvenient if two nearby towns had clocks that are a few minutes apart); this region is called a _time zone_. The difference between the time in that time zone and UTC is called the _time zone offset_.
 
 Each ZDT is associated with a time zone, identified by the {{jsxref("Temporal/ZonedDateTime/timeZoneId", "timeZoneId")}} (which uses the name of a city in that time zone). You can get its offset using the {{jsxref("Temporal/ZonedDateTime/offsetNanoseconds", "offsetNanoseconds")}} property (which returns a number) or the {{jsxref("Temporal/ZonedDateTime/offset", "offset")}} property (which returns a string).
 
@@ -152,7 +152,7 @@ console.log(bastilleFall.offset); // "+00:09:21"
 
 The sun reaches its highest position in Paris roughly **9 minutes** before it does in London. Therefore, a clock keeping Paris mean time will be about 9 minutes ahead of a clock keeping Greenwich mean time so that they synchronize in tracking the sun's position. This is why our "fall of the Bastille" instant, which is `17:00:00` in UTC, becomes `17:09:21` in the local mean time used for Paris by the time zone database—that's 9 minutes 21 seconds ahead!
 
-Time zone offsets are not constant; for a given time zone, they can change multiple times, or even alternate, throughout history, which is why two ZDTs representing different instants may report different offsets despite being in the same time zone. Paris is a great example to illustrate this.
+Time zone offsets are not constant; for a given time zone, they can change multiple times, or even alternate throughout history. This is why two ZDTs representing different instants may report different offsets, despite being in the same time zone. Paris is a great example to illustrate this:
 
 - The `+00:09:21` offset above, as explained, is the Paris mean time, used by Paris and the Metropolitan France in older times (like when the Bastille fell).
 - During the late nineteenth and early twentieth centuries, as international travel became more common, having these irregular offsets turned out to be a great nuisance, especially when reading train time tables or adjusting watches. Countries increasingly adopted **standardized time zones**, often with offsets in whole hours from Greenwich Mean Time (GMT). For example, [Metropolitan France switched to GMT in 1911](https://en.wikipedia.org/wiki/Time_in_France#history). At what would have been midnight on March 11 under the old offset, clocks were set backward by 9 minutes 21 seconds to 23:50:39 on March 10:
@@ -167,9 +167,9 @@ Time zone offsets are not constant; for a given time zone, they can change multi
 
   Similarly, the New York mean time is 4 hours 56 minutes behind GMT, so when [the five-time-zone system was standardized in 1883](https://en.wikipedia.org/wiki/History_of_time_in_the_United_States#Railway_time), the US Eastern time zone used the `-05:00` offset.
 
-  This standardized time zone is sometimes called the "natural" time zone, because it more or less still reflects the local sun position at the anchor city. (The error may be greater as the region extends.)
+  This standardized time zone is sometimes called the "natural" time zone because it still more or less reflects the local sun position in the anchor city. (The error may become greater as the region extends.)
 
-- Two regions with frequent communications may wish to align their time zone offsets. For example, during WWII, Germany-occupied France adopted the Berlin offset `+01:00`, which persisted to this day. Similarly, the Pacific island country of Samoa changed its offset from `-11:00` to `+13:00`, effectively skipping the calendar day of December 30, 2011, in order to stay on the same day as Australia.
+- Two regions with frequent communications may wish to align their time zone offsets. For example, during WWII, German-occupied France adopted the Berlin offset `+01:00`, which persists to this day. Similarly, the Pacific island country of Samoa changed its offset from `-11:00` to `+13:00`, effectively skipping the calendar day of December 30, 2011, to stay on the same day as Australia.
 - [Daylight saving time](https://en.wikipedia.org/wiki/Daylight_saving_time) is recorded as part of the time zone offset, so the offset can also alternate each year. For example, Paris changes its offset from `+01:00` to `+02:00` during each summer. Our mdn/content creation example uses the US Eastern time zone, which is `-05:00`, but is adjusted to `-04:00` during daylight saving:
 
   ```js
@@ -191,7 +191,8 @@ The [`Temporal.ZonedDateTime` reference](/en-US/docs/Web/JavaScript/Reference/Gl
 Once a time zone is defined, retrieve the local time using `hour`, `minute`, `second`, `millisecond`, `microsecond`, and `nanosecond`.
 
 ```js
-console.log(mdnCreation.hour, mdnCreation.minute, mdnCreation.second); // 11 43 1
+console.log(mdnCreation.hour, mdnCreation.minute, mdnCreation.second);
+// 11 43 1
 ```
 
 ### Putting the three pieces together
@@ -208,7 +209,7 @@ const mdnCreation = new Temporal.ZonedDateTime(
 
 ### Constructing a ZonedDateTime from a local date-time
 
-You rarely have an existing timestamp in the form of a nanosecond offset from the epoch. Above, we did the math ourselves to get numbers like `-5694908400000000000n`, but it would be better if we can directly construct ZDTs from the local time. To do so, use {{jsxref("Temporal.ZonedDateTime.from()")}}:
+You rarely have an existing timestamp in the form of a nanosecond offset from the epoch. Above, we did the math ourselves to get numbers like `-5694908400000000000n`, but you are more likely to construct ZDTs directly from the local time. To do so, use {{jsxref("Temporal.ZonedDateTime.from()")}}:
 
 ```js
 const mdnCreation = Temporal.ZonedDateTime.from({
@@ -226,7 +227,7 @@ const mdnCreation = Temporal.ZonedDateTime.from({
 console.log(mdnCreation.epochNanoseconds); // 1600184581000000000n
 ```
 
-Other calendar date representations can be used too, if the calendar supports it. For example, you can pass `era` and `eraYear` in lieu of `year`, or `monthCode` in lieu of `month`.
+Other calendar date representations can be used too, if the calendar supports them. For example, you can pass `era` and `eraYear` instead of `year`, or `monthCode` instead of `month`.
 
 ## Plain date-times, dates, and times
 
@@ -245,11 +246,13 @@ To represent these information-restricted situations, you use:
 If you already have a `ZonedDateTime` object, you can convert it to these three forms using the {{jsxref("Temporal/ZonedDateTime/toPlainDateTime", "toPlainDateTime()")}}, {{jsxref("Temporal/ZonedDateTime/toPlainDate", "toPlainDate()")}}, and {{jsxref("Temporal/ZonedDateTime/toPlainTime", "toPlainTime()")}} methods:
 
 ```js
+const mdnCreationDateTime = mdnCreation.toPlainDateTime();
 const mdnCreationDate = mdnCreation.toPlainDate();
 const mdnCreationTime = mdnCreation.toPlainTime();
 
-console.log(mdnCreationDate.toLocaleString()); // "9/15/2020"
-console.log(mdnCreationTime.toLocaleString()); // "11:43:01 AM"
+console.log(mdnCreationDateTime.toLocaleString("en-US")); // "9/15/2020, 11:43:01 AM"
+console.log(mdnCreationDate.toLocaleString("en-US")); // "9/15/2020"
+console.log(mdnCreationTime.toLocaleString("en-US")); // "11:43:01 AM"
 ```
 
 Or, you can use the methods {{jsxref("Temporal.PlainDateTime.from()")}}, {{jsxref("Temporal.PlainDate.from()")}}, {{jsxref("Temporal.PlainTime.from()")}}, passing properties for each component:
@@ -262,7 +265,7 @@ const mdnCreationDate = Temporal.PlainDate.from({
 });
 ```
 
-"Why do I need a whole interface just to restrict myself," you might ask, "I should just use `ZonedDateTime` and remind myself to not use the properties I don't need." There are a few good reasons.
+"Why do I need a whole interface just to restrict myself," you might ask, "I should just use `ZonedDateTime` and remind myself to not use the properties I don't need." There are a few good reasons why you should rely on the dedicated interface.
 
 First, there are minor differences about time calculations when using a `ZonedDateTime` versus a `PlainDateTime`, even when their date-times are the same. Consider a daylight saving transition. In the US, the day of November 3, 2024 was prolonged by 1 hour due to the clock being set back. That means if you have a time representing 00:00, November 3, 2024, and you ask "what's the time 12 hours from now?", you'll be surprised that it's not 12:00:
 
@@ -277,7 +280,7 @@ const time2 = time1.add({ hours: 12 });
 console.log(time2.toLocaleString("en-US")); // 11/3/2024, 11:00:00 AM EST
 ```
 
-But, if you perform the calculation on the _plain_ date-time instead, you'll get a different answer:
+If, however, you perform the calculation on the _plain_ date-time instead, you'll get a different answer:
 
 ```js
 const time1 = Temporal.ZonedDateTime.from({
@@ -292,9 +295,9 @@ const time2 = plainTime2.toZonedDateTime("America/New_York");
 console.log(time2.toLocaleString("en-US")); // 11/3/2024, 12:00:00 PM EST
 ```
 
-Which of these answers make sense depends on your use case—whether the resulting time is more important or the duration is more important. For example, if you have some broth that should cook for 12 hours, then the timer should go off exactly 12 hours from now, regardless of what the wall clock says; on the other hand, if you serve 12-hour work shifts, then you should probably sit for another hour before signing off! Splitting these use cases into different classes makes the decision explicit.
+Which answer makes sense depends on what is more important for your use case—the resulting time or the duration. For example, if you need to cook a broth for 12 hours, the timer should go off exactly 12 hours from now, regardless of what the wall clock says. On the other hand, if you work a 12-hour shift, you should probably sit for another hour before signing off! Splitting these use cases into different classes makes the decision explicit.
 
-The next problem is that the extra date/time fields that you don't use are, after all, arbitrary, and may interact badly with arithmetics. Suppose you have a ZDT that you promise to yourself represents a whole day. What should the result be when you subtract a second or add a second? That would cause this time interval to cross two dates, and it's not clear which date should be preferred. For example, if you use midnight as the underlying time, then subtracting one second would shift the date but adding one would not—a leak of abstraction.
+The next problem is that the unused date/time fields are arbitrary and may interact badly with arithmetic. Suppose you use a ZDT to represent a whole day. What should the result be when you subtract a second or add a second? That would cause the time interval to cross two dates, and it's unclear which date to use. For example, if you use midnight as the underlying time, then subtracting one second would shift the date but adding one would not—a leak of abstraction.
 
 ```js
 const fakeDate = Temporal.ZonedDateTime.from({
@@ -308,7 +311,7 @@ console.log(fakeDate.subtract({ seconds: 1 }).day); // 14
 console.log(fakeDate.add({ seconds: 1 }).day); // 15
 ```
 
-Therefore, by curtailing the irrelevant information, you avoid accidentally leaking the abstraction.
+By omitting the irrelevant information, you avoid accidentally leaking the abstraction.
 
 ```js
 const realDate = Temporal.PlainDate.from({
@@ -379,7 +382,7 @@ The remaining information is exposed through the same interface:
 </tbody>
 </table>
 
-Eventually, you may still want to convert the plain time back to your local time when you do have the extra information you need. For example, the New Year celebration reminder needs to know at which instant to fire. You can convert `PlainDateTime` and `PlainDate` objects back to `ZonedDateTime` using {{jsxref("Temporal/PlainDateTime/toZonedDateTime", "toZonedDateTime()")}} and supplying the missing information (`timeZoneId` and, in the case of `PlainDate`, a `PlainTime`).
+You may want to convert the plain time back to your local time when you have the extra information you need. For example, the New Year celebration reminder needs to know which instant to fire at. You can convert `PlainDateTime` and `PlainDate` objects back to `ZonedDateTime` by calling {{jsxref("Temporal/PlainDateTime/toZonedDateTime", "toZonedDateTime()")}} and supplying the missing information (`timeZoneId` and, in the case of `PlainDate`, a `PlainTime`).
 
 ```js
 const newYear = Temporal.PlainDate.from({
@@ -395,7 +398,7 @@ const reminder = newYear.toZonedDateTime({
 
 ## Plain year-months and month-days
 
-You can remove information in plain dates further. Sometimes you don't even care about the whole year-month-day triple and instead just need a whole month in a year, or a recurring date in every year. The {{jsxref("Temporal.PlainYearMonth")}} and {{jsxref("Temporal.PlainMonthDay")}} objects provide such functionalities.
+You can remove further information from plain dates. Sometimes you don't even care about the whole year-month-day triple; you might only need a whole month in a year, or a recurring date in every year. The {{jsxref("Temporal.PlainYearMonth")}} and {{jsxref("Temporal.PlainMonthDay")}} objects provide such functionalities.
 
 ```js
 // A special whole month
@@ -404,7 +407,7 @@ const prideMonth2026 = Temporal.PlainYearMonth.from({ year: 2026, month: 2 });
 const remembranceDay = Temporal.PlainMonthDay.from({ month: 11, day: 11 });
 ```
 
-Year-months and month-days still secretly store a full plain date, which is mostly used to deal with non-ISO calendars. You can read the two classes' references, especially {{jsxref("Temporal.PlainYearMonth.from()")}} and {{jsxref("Temporal.PlainMonthDay.from()")}}, to understand more about what the reference day is and does.
+Year-months and month-days still store a full plain date internally, which is mostly used to deal with non-ISO calendars. Read the two classes' references, especially {{jsxref("Temporal.PlainYearMonth.from()")}} and {{jsxref("Temporal.PlainMonthDay.from()")}}, for more details about the reference day and what it does.
 
 You can also convert back-and-forth between year-months/month-days and dates.
 
@@ -424,14 +427,14 @@ const bastilleFallStr = bastilleFall.toString();
 console.log(bastilleFallStr); // 1789-07-14T17:09:21+00:09[Europe/Paris]
 ```
 
-Most of the times, dates are probably serialized when you use {{jsxref("JSON.stringify()")}} to serialize a bigger object. All `Temporal` objects also have a `toJSON()` method so they are also automatically JSON-serialized to the same format.
+Times and dates are most commonly data fields of bigger objects. All `Temporal` objects include a `toJSON()` method, so they are automatically JSON-serialized to the same format when the bigger object is serialized using {{jsxref("JSON.stringify()")}}.
 
 ```js
 const mdnRepoHistory = JSON.stringify({ creation: mdnCreation });
 console.log(mdnRepoHistory); // {"creation":"2020-09-15T11:43:01-04:00[America/New_York]"}
 ```
 
-When you have an RFC 9557 string, you can convert it back to the respective object by passing it to the `from()` method:
+RFC 9557 strings can be converted back to their respective objects by passing them to the `from()` method:
 
 ```js
 const bastilleFall2 = Temporal.ZonedDateTime.from(bastilleFallStr); // Another ZDT object
@@ -447,11 +450,11 @@ const mdnRepoHistoryParsed = JSON.parse(mdnRepoHistory, (key, value) => {
 // { creation: ZonedDateTime {...} }
 ```
 
-Each class supports a different subset of the RFC 9557 format (for example, plain date-times won't output the offset or time zone ID), and its reference page has a "RFC 9557 format" section detailing the format used by that class.
+Each class supports a different subset of the RFC 9557 format (for example, plain date-times won't output the offset or time zone ID); each class reference page has an "RFC 9557 format" section that details the format it uses.
 
 ## Deriving new times
 
-Up to this point, our usage of dates has been to create an instant or a plain date-time (to various degrees of precision), store it in a variable, and display it to the user. The other thing that `Temporal` does especially well is deriving new instants or plain date-times using arithmetics. We've already shown `compare()`, `add()`/`subtract()`, `since()`/`until()`, etc.; let us properly introduce the suite of methods on each `Temporal` object for arithmetics.
+So far, we've used dates to create an instant or a plain date-time (to various degrees of precision), store it in a variable, and display it to the user. The `Temporal` API can also derive new instants or plain date-times using arithmetic. We've already shown `compare()`, `add()`/`subtract()`, `since()`/`until()`, etc.; let's properly introduce the arithmetic methods on each `Temporal` object.
 
 <table>
 <thead>
@@ -500,16 +503,16 @@ Up to this point, our usage of dates has been to create an instant or a plain da
 </tbody>
 </table>
 
-Adding and subtraction involve another object, {{jsxref("Temporal.Duration")}}, representing the difference between two times. Its interface is relatively straightforward: it stores the number of {{jsxref("Temporal/Duration/years", "years")}}, {{jsxref("Temporal/Duration/months", "months")}}, {{jsxref("Temporal/Duration/days", "days")}}, all the way to {{jsxref("Temporal/Duration/nanoseconds", "nanoseconds")}}. It can be either positive or negative. You can then combine it with other times or durations:
+Addition and subtraction involve another object, {{jsxref("Temporal.Duration")}}, representing the difference between two times. Its interface is relatively straightforward: it stores the number of {{jsxref("Temporal/Duration/years", "years")}}, {{jsxref("Temporal/Duration/months", "months")}}, {{jsxref("Temporal/Duration/days", "days")}}, etc., all the way to {{jsxref("Temporal/Duration/nanoseconds", "nanoseconds")}}. It can be either positive or negative. You can combine it with other times or durations:
 
-- <code>duration1.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/add">add</a>(duration2)</code>, <code>duration1.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/subtract">subtract</a>(duration2)</code>: give you new durations
-- <code>time.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/add">add</a>(duration)</code>, <code>time.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/subtract">subtract</a>(duration)</code>: give you new times (using `ZonedDateTime` as examples, but other time classes like `PlainDateTime` work similarly)
-- <code>time1.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/since">since</a>(time2)</code>, <code>time1.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/until">until</a>(time2)</code>: give you new durations (using `ZonedDateTime` as examples, but other time classes like `PlainDateTime` work similarly)
+- <code>duration1.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/add">add</a>(duration2)</code>, <code>duration1.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/subtract">subtract</a>(duration2)</code>: Calculate new durations
+- <code>time.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/add">add</a>(duration)</code>, <code>time.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/subtract">subtract</a>(duration)</code>: Calculate new times (we show `ZonedDateTime` examples, but other time classes like `PlainDateTime` work similarly)
+- <code>time1.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/since">since</a>(time2)</code>, <code>time1.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/until">until</a>(time2)</code>: Calculate new durations (we show `ZonedDateTime` examples, but other time classes like `PlainDateTime` work similarly)
 
 > [!NOTE]
-> You can't do arithmetics with `PlainMonthDay` because they represent recurring dates, not a unique date/time.
+> You can't do arithmetic with `PlainMonthDay` objects because they represent recurring dates, not a unique date/time.
 
-For example, you can calculate the difference between two zoned date-times using {{jsxref("Temporal/ZonedDateTime/since", "since()")}} and {{jsxref("Temporal/ZonedDateTime/until", "until()")}}, which both give you {{jsxref("Temporal.Duration")}} objects. By default, the duration only uses units of hours and less:
+For example, you can calculate the difference between two zoned date-times using {{jsxref("Temporal/ZonedDateTime/since", "since()")}} and {{jsxref("Temporal/ZonedDateTime/until", "until()")}}, which both give you {{jsxref("Temporal.Duration")}} objects. By default, the duration only uses units of hours or smaller:
 
 ```js
 const mdnCreation = Temporal.ZonedDateTime.from(
@@ -529,9 +532,9 @@ const timeDiff2 = bastilleFall.until(mdnCreation);
 console.log(Temporal.Duration.compare(timeDiff, timeDiff2)); // 0 (equal)
 ```
 
-One thing to be aware of: different `Temporal` classes have different restrictions about what kinds of durations they are able to process. For example, `Instant` has no calendar, so it cannot process calendar duration units like months; it also has no time zone, so it cannot process day units (because they may not be 24 hours long during offset transitions). `PlainYearMonth` is only accurate to a month, so durations less than a month are rounded off.
+Be aware that different `Temporal` classes have different restrictions on the durations they can process. For example, `Instant` has no calendar, so it cannot process calendar duration units like months; it also has no time zone, so it cannot process day units (because they may not be 24 hours long during offset transitions). `PlainYearMonth` is only accurate to whole months; durations less than a month are rounded off.
 
-You can compare two times using the static `compare()` method, such as {{jsxref("Temporal/ZonedDateTime/compare", "Temporal.ZonedDateTime.compare(a, b)")}}, which returns a number with the same sign as `a.epochNanoseconds - b.epochNanoseconds`:
+You can compare two times using the static `compare()` method, for example {{jsxref("Temporal/ZonedDateTime/compare", "Temporal.ZonedDateTime.compare(a, b)")}}. This method returns a number with the same sign as `a.epochNanoseconds - b.epochNanoseconds`:
 
 ```js
 if (Temporal.ZonedDateTime.compare(mdnCreation, bastilleFall) > 0) {
@@ -546,10 +549,12 @@ if (Temporal.ZonedDateTime.compare(mdnCreation, bastilleFall) > 0) {
 > [!NOTE]
 > `PlainMonthDay` objects are also not orderable.
 
-Alternatively, you can use the `equals()` method to test if two objects store the same data underlyingly (this is stricter than just testing they represent the same date/time). For `ZonedDateTime`, this requires their time zones and calendars to match; to compare only their instants, use `Temporal.ZonedDateTime.compare(a, b) === 0`.
+Alternatively, you can use the `equals()` method to test if two objects store the same underlying data (this is stricter than just testing that they represent the same date/time). For `ZonedDateTime`, this requires their time zones and calendars to match; to compare only their instants, use `Temporal.ZonedDateTime.compare(a, b) === 0`.
 
 ```js
 if (mdnCreation.equals(bastilleFall)) {
+  // This won't execute, because the ZDTs both represent different instants
+  // and have different time zone IDs
   console.log(
     "mdn/content was created at the exact same instant as the fall of the Bastille!",
   );
@@ -598,7 +603,7 @@ const parisNow = Temporal.Now.zonedDateTimeISO().withTimeZone("Europe/Paris");
 ## The legacy Date object
 
 > [!NOTE]
-> The `Date` object is now considered legacy and should be avoided in new code. This section is purely for working with legacy code.
+> The `Date` object is now considered legacy and should be avoided in new code. This section is purely for those working with legacy code.
 
 To create a `Date` object:
 
@@ -613,7 +618,7 @@ You can pass parameters of various types:
 - A set of integer values for year, month, and day. For example, `xmas95 = new Date(1995, 11, 25)`.
 - A set of integer values for year, month, day, hour, minute, and seconds. For example, `xmas95 = new Date(1995, 11, 25, 9, 30, 0);`.
 
-The `Date` object is fundamentally a `Temporal.ZonedDateTime` object, storing a millisecond epoch offset, with the ISO 8601 calendar assumed, and simultaneously represents the same instant in the UTC and local time zone. Methods for handling dates and times fall into these broad categories:
+The `Date` object is similar to a `Temporal.ZonedDateTime` object, storing a millisecond epoch offset with the ISO 8601 calendar assumed. It represents the same instant in UTC and the local time zone. Methods for handling dates and times fall into these broad categories:
 
 - "set" methods, for setting date and time values in `Date` objects.
 - "get" methods, for getting date and time values from `Date` objects.
@@ -634,14 +639,13 @@ For example, the following code displays the number of days left in the current 
 
 ```js
 const today = new Date();
-const endYear = new Date(1995, 11, 31, 23, 59, 59, 999); // Set day and month
-endYear.setFullYear(today.getFullYear()); // Set year to this year
+const endYear = new Date(today.getFullYear(), 11, 31, 23, 59, 59, 999);
 const msPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds per day
 let daysLeft = (endYear.getTime() - today.getTime()) / msPerDay;
 daysLeft = Math.round(daysLeft); // Returns days left in the year
 ```
 
-This example creates a `Date` object named `today` that contains today's date. It then creates a `Date` object named `endYear` and sets the year to the current year. Then, using the number of milliseconds per day, it computes the number of days between `today` and `endYear`, using `getTime` and rounding to a whole number of days.
+This example creates a `Date` object named `today` that contains today's date. It then creates a `Date` object named `endYear` representing the end of the current year. Then, using the number of milliseconds per day, it computes the number of days between `today` and `endYear`, using `getTime` and rounding to a whole number of days.
 
 The `parse` method is useful for assigning values from date strings to existing `Date` objects. For example, the following code uses `parse` and `setTime` to assign a date value to the `ipoDate` object:
 
@@ -650,10 +654,10 @@ const ipoDate = new Date();
 ipoDate.setTime(Date.parse("Aug 9, 1995"));
 ```
 
-There are many undesirable designs of `Date` that led to its abandonment. For example, `Date` objects are mutable; the string format you pass to the constructor and `Date.parse()` is impossible to be standardized; it does not take any other fixed time zone, etc. The `Temporal` object is built from ground up and represents the standard industry practices of how you should deal with dates; use `Temporal`, and install a polyfill if your environment doesn't support it.
+There are many undesirable aspects of `Date` that led to it being abandoned. For example, `Date` objects are mutable; the string format accepted by the constructor and `Date.parse()` can't be standardized; it doesn't accept other fixed time zones, etc. The `Temporal` object is built from the ground up and represents standard industry practices for handling dates. Use `Temporal`, and install a polyfill if your environment doesn't support it.
 
 ## Cookbook
 
-You can find snippets for some common use cases in our [Temporal cookbook](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times/Cookbook).
+You can find snippets for handling common use cases in our [Temporal cookbook](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times/Cookbook).
 
 {{PreviousNext("Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Regular_expressions")}}

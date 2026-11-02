@@ -8,7 +8,7 @@ sidebar: jssidebar
 > [!NOTE]
 > This document is based on the [Cookbook](https://tc39.es/proposal-temporal/docs/cookbook.html) in the original TC39 proposal docs.
 
-This guide provides snippets for some common use cases of {{jsxref("Temporal")}}. You should probably first read the [Representing dates & times](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times) guide to understand the fundamental concepts and the API surface of `Temporal`.
+This guide provides snippets for common use cases of {{jsxref("Temporal")}}. Read the [Representing dates & times](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times) guide first to understand the fundamental concepts and API surface of `Temporal`, if needed.
 
 ## Current date and time
 
@@ -22,7 +22,7 @@ date.toString(); // returns the date in ISO 8601 date format
 Temporal.Now.plainDateTimeISO().toString(); // date and time in ISO 8601 format
 ```
 
-Note that if you just want the date and not the time, you should use `Temporal.PlainDate`. If you want both, use `Temporal.PlainDateTime`.
+Note that if you just want the date and not the time, you should use {{jsxref("Temporal.PlainDate")}}. If you want both, use {{jsxref("Temporal.PlainDateTime")}}.
 
 ## Unix timestamp
 
@@ -42,13 +42,13 @@ Math.floor(timeStamp.epochMilliseconds / 1000);
 
 ### Legacy `Date` to `Temporal.Instant` and/or `Temporal.ZonedDateTime`
 
-Here's how to convert legacy ECMAScript `Date` into a `Temporal.Instant` or `Temporal.ZonedDateTime` instance corresponding to the same instant in exact time.
+Here's how to convert legacy ECMAScript {{jsxref("Date")}} into a {{jsxref("Temporal.Instant")}} or {{jsxref("Temporal.ZonedDateTime")}} instance corresponding to the same instant in exact time.
 
-If you need a `ZonedDateTime`, use the `toZonedDateTimeISO()` method of the resulting `Instant`. You will need to specify a time zone, because legacy `Date` only stores an exact time, and does not store a time zone.
+If you need a `ZonedDateTime`, use the {{jsxref("Temporal/Instant/toZonedDateTimeISO", "toZonedDateTimeISO()")}} method of the resulting `Instant`. You will need to specify a time zone, because legacy `Date` only stores an exact time, and does not store a time zone.
 
 When calling methods on a legacy `Date` instance, you must decide whether you want that exact time interpreted as a UTC value (using methods containing "UTC" in their names) or in the current system time zone (using other methods). This is confusing, so `Temporal` has a more explicit way to do this.
 
-To use the system's local time zone, which corresponds to using legacy `Date`'s `getFullYear()`, `getMonth()`, etc. methods, pass `Temporal.Now.timeZoneId()` as the time zone. In a browser, this will be the user's time zone, but on a server the value may not be what you expect, so avoid doing this in a server context.
+To use the system's local time zone, which corresponds to using legacy `Date`'s {{jsxref("Date/getFullYear", "getFullYear()")}}, {{jsxref("Date/getMonth", "getMonth()")}}, etc. methods, pass {{jsxref("Temporal.Now.timeZoneId()")}} as the time zone. In a browser, this will be the user's time zone, but on a server the value may not be what you expect, so avoid doing this in a server context.
 
 ```js
 const legacyDate = new Date("1970-01-01T00:00:01Z");
@@ -62,7 +62,7 @@ const zoned = instant.toZonedDateTimeISO(Temporal.Now.timeZoneId());
 console.log(zoned.epochMilliseconds === legacyDate.getTime()); // true
 ```
 
-Here's an example of using a particular time zone. Especially in a server context, you would be getting this time zone from elsewhere in the data that you are processing. If the legacy `Date` instance was accessed using the `getUTCFullYear()`, `getUTCMonth()`, etc. methods, consider just using `Instant`. If you have to use `ZonedDateTime`, the specific time zone may need to be `"UTC"`.
+Here's an example of using a particular time zone. Especially in a server context, you would be getting this time zone from elsewhere in the data that you are processing. If the legacy `Date` instance was accessed using the {{jsxref("Date/getUTCFullYear", "getUTCFullYear()")}}, {{jsxref("Date/getUTCMonth", "getUTCMonth()")}}, etc. methods, consider just using `Instant`. If you have to use `ZonedDateTime`, the specific time zone may need to be `"UTC"`.
 
 ```js
 const zoned2 = instant.toZonedDateTimeISO("Asia/Shanghai");
@@ -107,7 +107,7 @@ console.log(plainDate.toString()); // '2000-01-01'
 
 ### `Temporal` types to legacy `Date`
 
-Legacy `Date` represents an exact time, so it's straightforward to convert a `Temporal.Instant` or `Temporal.ZonedDateTime` instance into a legacy `Date` instance that corresponds to it. To convert `Instant` to legacy `Date`, use the `epochMilliseconds` property.
+Legacy `Date` represents an exact time, so it's straightforward to convert a `Temporal.Instant` or `Temporal.ZonedDateTime` instance into a legacy `Date` instance that corresponds to it. To convert `Instant` to legacy `Date`, use the {{jsxref("Temporal/Instant/epochMilliseconds", "epochMilliseconds")}} property.
 
 ```js
 const instant = Temporal.Instant.from("2020-01-01T00:00:01.000999Z");
@@ -129,7 +129,7 @@ console.log(result2.getTime()); // 1577804401001 // note, different time
 console.log(result2.toISOString()); // '2019-12-31T15:00:01.001Z'
 ```
 
-For most use cases, `new Date(x.epochMilliseconds)` is fine. You may need to add an extra `round()` step if you want other rounding behavior than truncation. For example, here the 999 microseconds is rounded to 1 millisecond.
+For most use cases, `new Date(x.epochMilliseconds)` is fine. You may need to add an extra {{jsxref("Temporal/Instant/round", "round()")}} step if you want other rounding behavior than truncation. For example, here the 999 microseconds is rounded to 1 millisecond.
 
 ```js
 const result3 = new Date(
@@ -165,7 +165,7 @@ datePicker.value = today;
 
 ### Noon on a particular date
 
-An example of combining a calendar date (`Temporal.PlainDate`) and a wall-clock time (`Temporal.PlainTime`) into a `Temporal.PlainDateTime`.
+An example of combining a calendar date (`Temporal.PlainDate`) and a wall-clock time ({{jsxref("Temporal.PlainTime")}}) into a `Temporal.PlainDateTime`.
 
 ```js
 const date = Temporal.PlainDate.from("2020-05-14");
@@ -177,7 +177,7 @@ console.log(noonOnDate.toString()); // '2020-05-14T12:00:00'
 
 ### Birthday in 2030
 
-An example of combining a day on the calendar (`Temporal.PlainMonthDay`) and a year into a `Temporal.PlainDate`.
+An example of combining a day on the calendar ({{jsxref("Temporal.PlainMonthDay")}}) and a year into a `Temporal.PlainDate`.
 
 ```js
 const birthday = Temporal.PlainMonthDay.from("12-15");
@@ -192,7 +192,7 @@ console.log(birthdayIn2030.toString()); // '2030-12-15'
 
 ### Zoned instant from instant and time zone
 
-To serialize an exact-time `Temporal.Instant` into a string, use `toString()`. Without any arguments, this gives you a string in UTC time.
+To serialize an exact-time `Temporal.Instant` into a string, use {{jsxref("Temporal/Instant/toString", "toString()")}}. Without any arguments, this gives you a string in UTC time.
 
 ```js
 const instant = Temporal.Instant.from("2020-01-03T10:41:51Z");
@@ -225,7 +225,7 @@ console.log(zoned.equals(Temporal.ZonedDateTime.from(result3))); // true
 
 ## Sorting
 
-Each `Temporal` type except `Temporal.PlainMonthDay` has a `compare()` static method, which can be passed to `Array.prototype.sort()` as the compare function in order to sort an array of `Temporal` types.
+Each `Temporal` type except `Temporal.PlainMonthDay` has a {{jsxref("Temporal/PlainDateTime/compare", "compare()")}} static method, which can be passed to {{jsxref("Array.prototype.sort()")}} as the compare function in order to sort an array of `Temporal` types.
 
 ### Sort PlainDateTime values
 
@@ -303,7 +303,7 @@ console.log(results);
 
 ### Round a time down to whole hours
 
-Use the `round()` method of each `Temporal` type if you want to round the time fields. Here's an example of rounding a time _down_ to the previously occurring whole hour:
+Use the {{jsxref("Temporal/PlainTime/round", "round()")}} method of each `Temporal` type if you want to round the time fields. Here's an example of rounding a time _down_ to the previously occurring whole hour:
 
 ```js
 const time = Temporal.PlainTime.from("12:38:28.138818731");
@@ -341,7 +341,7 @@ See also [Push back a launch date](#push_back_a_launch_date) for an easier way t
 
 ### Preserving local time
 
-Map a zoneless date and time of day into a `Temporal.Instant` instance at which the local date and time of day in a specified time zone matches it. This is easily done with `dateTime.toZonedDateTime(timeZone).toInstant()`, but here is an example of implementing different disambiguation behaviors than the `"compatible"`, `"earlier"`, `"later"`, and `"reject"` ones built in to `Temporal`. The following function takes a `Temporal.PlainDateTime`, a time zone identifier, and a disambiguation mode (defaulting to `"earlier"`). It returns a `Temporal.Instant` and supports two additional modes:
+Map a zoneless date and time of day into a `Temporal.Instant` instance at which the local date and time of day in a specified time zone matches it. This is easily done with <code>dateTime.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/toZonedDateTime">toZonedDateTime</a>(timeZone).<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/toInstant">toInstant</a>()</code>, but here is an example of implementing different disambiguation behaviors than the `"compatible"`, `"earlier"`, `"later"`, and `"reject"` ones built in to `Temporal`. The following function takes a `Temporal.PlainDateTime`, a time zone identifier, and a disambiguation mode (defaulting to `"earlier"`). It returns a `Temporal.Instant` and supports two additional modes:
 
 - `"clipEarlier"`: Uses the earlier instant when the clock moves backward, or the instant just before the transition when the clock moves forward.
 - `"clipLater"`: Uses the later instant when the clock moves backward, or the instant of the transition when the clock moves forward.
@@ -524,7 +524,7 @@ console.log(iter.next().value.toString()); // '2017-03-13T15:00:00Z'
 
 ### UTC offset for a zoned event, as a string
 
-Use `Temporal.Instant.prototype.toZonedDateTimeISO()` and `Temporal.ZonedDateTime.offset` to map a `Temporal.Instant` instance and a time zone into the UTC offset at that exact time in that time zone, as a string.
+Use `Temporal.Instant.prototype.toZonedDateTimeISO()` and {{jsxref("Temporal/ZonedDateTime/offset", "offset")}} to map a `Temporal.Instant` instance and a time zone into the UTC offset at that exact time in that time zone, as a string.
 
 ```js
 const instant = Temporal.Instant.from("2020-01-09T00:00Z");
@@ -535,7 +535,7 @@ source.offset; // '-05:00'
 
 ### UTC offset for a zoned event, as a number of seconds
 
-Similarly, use `Temporal.Instant.prototype.toZonedDateTimeISO()` and `Temporal.ZonedDateTime.offsetNanoseconds` to do the same thing for the offset as a number of seconds. (Remember to divide by 10<sup>9</sup> to convert nanoseconds to seconds.)
+Similarly, use `Temporal.Instant.prototype.toZonedDateTimeISO()` and {{jsxref("Temporal/ZonedDateTime/offsetNanoseconds", "offsetNanoseconds")}} to do the same thing for the offset as a number of seconds. (Remember to divide by 10<sup>9</sup> to convert nanoseconds to seconds.)
 
 ```js
 const instant = Temporal.Instant.from("2020-01-09T00:00Z");
@@ -831,7 +831,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
 
 ### Unit-constrained duration between now and a past/future zoned event
 
-Take the difference between two `Temporal.Instant` instances as a `Temporal.Duration` instance (positive or negative), representing the duration between the two instants without using units coarser than specified (e.g., for presenting a meaningful countdown with vs. without using months or days).
+Take the difference between two `Temporal.Instant` instances as a {{jsxref("Temporal.Duration")}} instance (positive or negative), representing the duration between the two instants without using units coarser than specified (e.g., for presenting a meaningful countdown with vs. without using months or days).
 
 ```js
 const result = Temporal.Instant.from("2020-01-09T04:00Z").since(
@@ -1079,7 +1079,7 @@ console.log(reminderAt.toString()); // '2016-08-14T00:52:17.53Z'
 
 ### Nth weekday of the month
 
-The following function takes a `Temporal.PlainYearMonth` and returns a `Temporal.PlainDate` representing its first Tuesday, adaptable to other weekdays.
+The following function takes a {{jsxref("Temporal.PlainYearMonth")}} and returns a `Temporal.PlainDate` representing its first Tuesday, adaptable to other weekdays.
 
 ```js
 function getFirstTuesday(queriedMonth) {
