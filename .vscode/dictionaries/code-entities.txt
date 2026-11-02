@@ -229,7 +229,6 @@ enterpictureinpicture
 eqref
 equalsize
 EquationiOES
-errorlist
 ethi
 ethioaa
 exnref

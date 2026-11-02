@@ -144,7 +144,7 @@ Foopy
 FOVL
 FOVR
 fringille
-Fset
+FsetUp
 fullpagezoom.xpi
 futurelibrary.no
 gesetz
