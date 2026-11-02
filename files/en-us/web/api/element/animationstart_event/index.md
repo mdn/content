@@ -12,11 +12,15 @@ The **`animationstart`** event is fired when a [CSS Animation](/en-US/docs/Web/C
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("animationstart", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onanimationstart = (event) => { }
 ```
 
@@ -38,7 +42,7 @@ animated.addEventListener("animationstart", () => {
 });
 ```
 
-The same, but using `onanimationstart`:
+The same, but using `onanimationstart` (but note that this replaces other event listeners added using `onanimationstart`, if any):
 
 ```js
 const animated = document.querySelector(".animated");

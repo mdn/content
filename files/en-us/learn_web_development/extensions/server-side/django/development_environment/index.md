@@ -21,7 +21,7 @@ Now that you know what Django is for, we'll show you how to set up and test a Dj
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To have a development environment for Django (4.*) running on your computer.
+        To have a development environment for Django (6.1.*) running on your computer.
       </td>
     </tr>
   </tbody>
@@ -63,7 +63,7 @@ In this article, we'll provide instructions for Windows, macOS, and Linux/Unix.
 #### What version of Python should be used?
 
 You can use any Python version supported by your target Django release.
-For Django 5.0 the allowed versions are Python 3.10 to 3.12 (see [FAQ:Installation](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django)).
+For Django 6.1 the allowed versions are Python 3.12 to 3.14 (see [FAQ:Installation](https://docs.djangoproject.com/en/6.1/faq/install/#what-python-version-can-i-use-with-django)).
 
 The Django project _recommends_ (and "officially supports") using the newest available version of the supported Python release.
 
@@ -79,7 +79,7 @@ This article shows how to install Django from PyPi, in order to get the latest s
 
 #### Which database?
 
-Django officially supports the PostgreSQL, MariaDB, MySQL, Oracle, and SQLite databases, and there are community libraries that provide varying levels of support for other popular SQL and NoSQL databases. We recommend that you select the same database for both production and development (although Django abstracts many of the database differences using its Object-Relational Mapper (ORM), there are still [potential issues](https://docs.djangoproject.com/en/5.0/ref/databases/) that are better to avoid).
+Django officially supports the PostgreSQL, MariaDB, MySQL, Oracle, and SQLite databases, and there are community libraries that provide varying levels of support for other popular SQL and NoSQL databases. We recommend that you select the same database for both production and development (although Django abstracts many of the database differences using its Object-Relational Mapper (ORM), there are still [potential issues](https://docs.djangoproject.com/en/6.1/ref/databases/) that are better to avoid).
 
 For this article (and most of this module) we will be using the _SQLite_ database, which stores its data in a file. SQLite is intended for use as a lightweight database and can't support a high level of concurrency. It is, however, an excellent choice for applications that are primarily read-only.
 
@@ -104,31 +104,32 @@ This module assumes that you've installed Django into a virtual environment, and
 In order to use Django you must have Python 3 on your operating system.
 You will also need the [Python Package Index](https://pypi.org/) tool — _pip3_ — which is used to manage (install, update, and remove) Python packages/libraries used by Django and your other Python apps.
 
-This section briefly explains how you can check what versions of Python are present, and install new versions as needed, for Ubuntu Linux 20.04, macOS, and Windows 10.
+This section briefly explains how you can check what versions of Python are present, and install new versions as needed, for Ubuntu Linux 26.04 (and 24.04), macOS, and Windows 11.
 
 > [!NOTE]
 > Depending on your platform, you may also be able to install Python/pip from the operating system's own package manager or via other mechanisms. For most platforms, you can download the required installation files from <https://www.python.org/downloads/> and install them using the appropriate platform-specific method.
 
-### Ubuntu 22.04
+### Ubuntu 26.04
 
-Ubuntu Linux 22.04 LTS includes Python 3.10.12 by default.
+Ubuntu Linux 26.04 LTS includes Python 3.14 by default.
 You can confirm this by running the following command in the bash terminal:
 
 ```bash
 python3 -V
-# Output: Python 3.10.12
+# Output: Python 3.14.4
 ```
 
-However, the Python Package Index tool (_pip3_) you'll need to install packages for Python 3 (including Django) is **not** available by default.
-You can install _pip3_ in the bash terminal using:
+However, neither the Python Package Index tool (_pip3_) nor the _venv_ module (which you'll use later to create virtual environments) is available by default.
+You can install both in the bash terminal using:
 
 ```bash
-sudo apt install python3-pip
+sudo apt install python3-pip python3-venv
 ```
 
 > [!NOTE]
-> Python 3.10 is the oldest version [supported by Django 5.0](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django).
-> You don't _need_ to use the latest version of Python for this tutorial, but if you want to there are instructions on the internet.
+> If you're using **Ubuntu 24.04 LTS** instead, `python3 -V` will report Python 3.12.
+> This is within the [range supported by Django 6.1](https://docs.djangoproject.com/en/6.1/faq/install/#what-python-version-can-i-use-with-django), so you don't need to install a newer Python version to follow along.
+> You'll still need to run `sudo apt install python3-pip python3-venv` — pip and venv aren't installed by default on 24.04 either.
 
 ### macOS
 
@@ -145,12 +146,12 @@ You can easily install Python 3 (along with the _pip3_ tool) from [python.org](h
 
 1. Download the required installer:
    1. Go to <https://www.python.org/downloads/macos/>
-   2. Download the stable release of the most recent [supported version](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 5.0.
-      (at time of writing this is Python 3.11.8).
+   2. Download the stable release of the most recent [supported version](https://docs.djangoproject.com/en/6.1/faq/install/#what-python-version-can-i-use-with-django) that works with Django 6.1.
+      (at time of writing this is Python 3.14.7).
 
-2. Locate the file using _Finder_, and double-click the package file. Following the installation prompts.
+2. Locate the file using _Finder_, and double-click the package file. Follow the installation prompts.
 
-You can now confirm successful installation by running `python3 -V` again and checking for the Python version number.
+Confirm successful installation by opening a new terminal window and then running `python3 -V` again and checking for the Python version number.
 
 You can similarly check that _pip3_ is installed by listing the available packages:
 
@@ -158,19 +159,19 @@ You can similarly check that _pip3_ is installed by listing the available packag
 pip3 list
 ```
 
-### Windows 10 or 11
+### Windows 11
 
 Windows doesn't include Python by default, but you can easily install it (along with the _pip3_ tool) from [python.org](https://www.python.org/):
 
 1. Download the required installer:
    1. Go to <https://www.python.org/downloads/windows/>
-   2. Download the stable release of the most recent [supported version](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 5.0.
-      (at time of writing this is Python 3.11.8).
+   2. Download the stable release of the most recent [supported version](https://docs.djangoproject.com/en/6.1/faq/install/#what-python-version-can-i-use-with-django) that works with Django 6.1.
+      (at time of writing this is Python 3.14.7).
 
 2. Install Python by double-clicking on the downloaded file and following the installation prompts
 3. Be sure to check the box labeled "Add Python to PATH"
 
-You can then verify that Python 3 was installed by entering the following text into the command prompt:
+You can then open a new command prompt and verify that Python 3 was installed by entering the following text:
 
 ```bash
 py -3 -V
@@ -216,135 +217,46 @@ The instructions below show the platform specific commands as they work on more 
 
 ## Using Django inside a Python virtual environment
 
-The libraries we'll use for creating our virtual environments are [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux and macOS) and [virtualenvwrapper-win](https://pypi.org/project/virtualenvwrapper-win/) (Windows), which in turn both use the [virtualenv](https://virtualenv.pypa.io/en/latest/) tool. The wrapper tools creates a consistent interface for managing interfaces on all platforms.
-
-### Installing the virtual environment software
-
-#### Ubuntu virtual environment setup
-
-After installing Python and pip you can install _virtualenvwrapper_ (which includes _virtualenv_). You can check [the official installation guide](https://virtualenvwrapper.readthedocs.io/en/latest/install.html), or follow the instructions below.
-
-Install the tool using _pip3_:
-
-```bash
-sudo pip3 install virtualenvwrapper
-```
-
-Then add the following lines to the end of your shell startup file (this is a hidden file name **.bashrc** in your home directory). These set the location where the virtual environments should live, the location of your development project directories, and the location of the script installed with this package:
-
-```bash
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=' -p /usr/bin/python3 '
-export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
-```
+We'll create our virtual environments using [venv](https://docs.python.org/3/library/venv.html), the virtual environment tool built into Python itself (Python has included _venv_ since version 3.3, so there's nothing extra to install beyond what you set up in [Installing Python 3](#installing_python_3)). This is also what the [Django project itself recommends](https://docs.djangoproject.com/en/6.1/intro/contributing/#getting-a-copy-of-django-s-development-version).
 
 > [!NOTE]
-> The `VIRTUALENVWRAPPER_PYTHON` and `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` variables point to the normal installation location for Python 3, and `source /usr/local/bin/virtualenvwrapper.sh` points to the normal location of the `virtualenvwrapper.sh` script. If the _virtualenv_ doesn't work when you test it, one thing to check is that Python and the script are in the expected location (and then change the startup file appropriately).
->
-> You can find the correct locations for your system using the commands `which virtualenvwrapper.sh` and `which python3`.
-
-Then reload the startup file by running the following command in the terminal:
-
-```bash
-source ~/.bashrc
-```
-
-At this point you should see a bunch of scripts being run as shown below:
-
-```bash
-virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/premkproject
-virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postmkproject
-# …
-virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/preactivate
-virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postactivate
-virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/get_env_details
-```
-
-Now you can create a new virtual environment with the `mkvirtualenv` command.
-
-#### macOS virtual environment setup
-
-Setting up _virtualenvwrapper_ on macOS is almost exactly the same as on Ubuntu (again, you can follow the instructions from either the [official installation guide](https://virtualenvwrapper.readthedocs.io/en/latest/install.html) or below).
-
-Install _virtualenvwrapper_ (and bundling _virtualenv_) using _pip_ as shown.
-
-```bash
-sudo pip3 install virtualenvwrapper
-```
-
-Then add the following lines to the end of your shell startup file (these are the same lines as for Ubuntu).
-If you're using the _zsh shell_ then the startup file will be a hidden file named **.zshrc** in your home directory. If you're using the _bash shell_ then it will be a hidden file named **.bash_profile**. You may need to create the file if it does not yet exist.
-
-```bash
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
-```
-
-> [!NOTE]
-> The `VIRTUALENVWRAPPER_PYTHON` variable points to the normal installation location for Python 3, and `source /usr/local/bin/virtualenvwrapper.sh` points to the normal location of the `virtualenvwrapper.sh` script. If the _virtualenv_ doesn't work when you test it, one thing to check is that Python and the script are in the expected location (and then change the startup file appropriately).
->
-> For example, one installation test on macOS ended up with the following lines being necessary in the startup file:
->
-> ```bash
-> export WORKON_HOME=$HOME/.virtualenvs
-> export VIRTUALENVWRAPPER_PYTHON=/Library/Frameworks/Python.framework/Versions/3.7/bin/python3
-> export PROJECT_HOME=$HOME/Devel
-> source /Library/Frameworks/Python.framework/Versions/3.7/bin/virtualenvwrapper.sh
-> ```
->
-> You can find the correct locations for your system using the commands `which virtualenvwrapper.sh` and `which python3`.
-
-Then reload the startup file by making the following call in the terminal:
-
-```bash
-source ~/.bash_profile
-```
-
-At this point, you may see a bunch of scripts being run (the same scripts as for the Ubuntu installation). You should now be able to create a new virtual environment with the `mkvirtualenv` command.
-
-> [!NOTE]
-> If you can't find the startup file to edit in the finder, you can also open this in the terminal using nano.
->
-> Assuming you're using bash, the commands look something like this:
->
-> ```bash
-> cd ~  # Navigate to my home directory
-> ls -la #List the content of the directory. You should see .bash_profile
-> nano .bash_profile # Open the file in the nano text editor, within the terminal
-> # Scroll to the end of the file, and copy in the lines above
-> # Use Ctrl+X to exit nano, choose Y to save the file.
-> ```
-
-#### Windows virtual environment setup
-
-Installing [virtualenvwrapper-win](https://pypi.org/project/virtualenvwrapper-win/) is even simpler than setting up _virtualenvwrapper_ because you don't need to configure where the tool stores virtual environment information (there is a default value). All you need to do is run the following command in the command prompt:
-
-```bash
-py -3 -m pip install virtualenvwrapper-win
-```
-
-Now you can create a new virtual environment with the `mkvirtualenv` command
+> On Ubuntu you must have already installed the `python3-venv` package for this to work (see [Ubuntu 26.04](#ubuntu_26.04)). On macOS and Windows, _venv_ is included automatically when you install Python from python.org, so there's no separate setup step for those platforms.
 
 ### Creating a virtual environment
 
-Once you've installed _virtualenvwrapper_ or _virtualenvwrapper-win_ then working with virtual environments is very similar on all platforms.
-
-Now you can create a new virtual environment with the `mkvirtualenv` command. As this command runs you'll see the environment being set up (what you see is slightly platform-specific). When the command completes the new virtual environment will be active — you can see this because the start of the prompt will be the name of the environment in parentheses (below we show this for Ubuntu, but the final line is similar for Windows/macOS).
+Navigate to the folder where you want to keep your Django projects, then create a new virtual environment using the `venv` module. The following command creates a folder named `my_django_environment` containing a self-contained copy of Python and its tools:
 
 ```bash
-mkvirtualenv my_django_environment
+# Linux/macOS
+python3 -m venv my_django_environment
+
+# Windows
+py -3 -m venv my_django_environment
 ```
 
-You should see output similar to the following:
+The environment isn't active yet — you have to activate it explicitly, and you'll need to do this again in any new terminal session:
+
+```bash
+# Linux/macOS
+source my_django_environment/bin/activate
+
+# Windows (Command Prompt)
+my_django_environment\Scripts\activate.bat
+
+# Windows (PowerShell)
+my_django_environment\Scripts\Activate.ps1
+```
+
+> [!NOTE]
+> If PowerShell refuses to run `Activate.ps1` with a message about running scripts being disabled, you'll need to allow script execution for the current session first:
+>
+> ```bash
+> Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+> ```
+
+Once the environment is active, the start of your prompt will show the name of the environment in parentheses, as shown in the following example from Ubuntu (the effect is the same on Windows/macOS):
 
 ```plain
-Running virtualenv with interpreter /usr/bin/python3
-# …
-virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get_env_details
 (my_django_environment) ubuntu@ubuntu:~$
 ```
 
@@ -355,23 +267,23 @@ Now you're inside the virtual environment you can install Django and start devel
 
 ### Using a virtual environment
 
-There are just a few other useful commands that you should know (there are more in the tool documentation, but these are the ones you'll use regularly):
+There are just a few other things you should know about working with virtual environments:
 
-- `deactivate` — Exit out of the current Python virtual environment
-- `workon` — List available virtual environments
-- `workon name_of_environment` — Activate the specified Python virtual environment
-- `rmvirtualenv name_of_environment` — Remove the specified environment.
+- To leave the current environment, run `deactivate`.
+- To use the environment again in a new terminal session, run its activate command again (for example, `source my_django_environment/bin/activate`).
+  Each environment is just a folder, so there's no separate command to list or switch environments.
+- To remove an environment entirely, first `deactivate` it, then delete its folder (e.g., `rm -rf my_django_environment` on Linux/macOS, or delete the folder in File Explorer on Windows).
 
 ## Installing Django
 
-Once you've created a virtual environment, and called `workon` to enter it, you can use _pip3_ to install Django.
+Once you've created a virtual environment and activated it, you can use _pip3_ to install Django.
 
 ```bash
 # Linux/macOS
-python3 -m pip install django~=4.2
+python3 -m pip install django~=6.1.0
 
 # Windows
-py -3 -m pip install django~=4.2
+py -3 -m pip install django~=6.1.0
 ```
 
 You can test that Django is installed by running the following command (this just tests that Python can find the Django module):
@@ -403,12 +315,12 @@ py -3 -m django --version
 Source Code Management (SCM) and versioning tools allow you to reliably store and recover versions of your source code, try out changes, and share code between your experiments and "known good code" when you need to.
 
 There are many different SCM tools, including git, Mercurial, Perforce, SVN (Subversion), CVS (Concurrent Versions System), etc., and cloud SCM hosting sources such as Bitbucket, GitHub, and GitLab.
-For this tutorial we'll hosting our code on [GitHub](https://github.com/), one of the most popular cloud based source code hosting services, and using the **git** tool to manage our source code locally and send it to GitHub when needed.
+For this tutorial we'll host our code on [GitHub](https://github.com/), one of the most popular cloud-based source code hosting services, and use the **git** tool to manage our source code locally and send it to GitHub when needed.
 
 > [!NOTE]
 > Using SCM tools is good software development practice!
 > These instructions provide a basic introduction to git and GitHub.
-> To learn more, see [Learning Git](https://docs.github.com/en/get-started/start-your-journey/git-and-github-learning-resources).
+> To learn more, see [Version control](/en-US/docs/Learn_web_development/Core/Version_control) and [Git and GitHub learning resources](https://docs.github.com/en/get-started/start-your-journey/git-and-github-learning-resources) (GitHub docs).
 
 ### Key concepts
 
@@ -427,7 +339,7 @@ In addition to branches, it is possible to create `tags` on any branch and later
 ### Create an account and repository on GitHub
 
 First we will create an account on GitHub (this is free).
-Then we create and configure a repository named "django_local_library" for storing the [Local library website](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) as we evolve it in the rest of this tutorial.
+Then we will create and configure a repository named "django_local_library" for storing the [Local library website](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) as we evolve it in the rest of this tutorial.
 
 The steps are:
 
@@ -443,14 +355,14 @@ The steps are:
      > This will make _all_ source code visible.
      > Remember not to store credentials or other sensitive material in your repo unless it is private.
 
+   - Set the **Add README** toggle to **On**.
    - Choose **Python** in the _Add .gitignore_ selection list.
    - Choose your preferred license in the _Add license_ selection list.
      MDN uses "Creative Commons Zero v1.0 Universal" for this example.
-   - Check **Initialize this repository with a README**.
 
 4. Press **Create repository**.
 
-   The repository will be created, containing just the files `README.txt` and `.gitignore`.
+   The repository will be created, containing just the files `.gitignore`, `LICENSE`, and `README.md`.
 
 ### Clone the repo to your local computer
 
@@ -461,7 +373,19 @@ Now that the repository ("repo") is created on GitHub we are going to want to cl
    If you used the repository name "django_local_library", the URL should be something like: `https://github.com/<your_git_user_id>/django_local_library.git`.
 
 2. Install _git_ for your local computer ([official Git download guide](https://git-scm.com/downloads/)).
-3. Open a command prompt/terminal and clone your repo using the URL you copied above:
+3. Set up authentication so that git can push changes to GitHub.
+   The easiest way is to install the [GitHub CLI](https://cli.github.com/) and then run the following command.
+   When prompted, select **GitHub.com**, **HTTPS**, **Yes** (to authenticate git with your GitHub credentials), and **Login with a web browser**:
+
+   ```bash
+   gh auth login
+   ```
+
+   > [!NOTE]
+   > GitHub doesn't accept your account password for git operations.
+   > For other options, including SSH keys, see [Caching your GitHub credentials in Git](https://docs.github.com/en/get-started/git-basics/caching-your-github-credentials-in-git) (GitHub docs).
+
+4. Open a command prompt/terminal and clone your repo using the URL you copied above:
 
    ```bash
    git clone https://github.com/<your_git_user_id>/django_local_library.git
@@ -469,7 +393,7 @@ Now that the repository ("repo") is created on GitHub we are going to want to cl
 
    This will create the repository inside the current directory.
 
-4. Navigate into the repo folder.
+5. Navigate into the repo folder.
 
    ```bash
    cd django_local_library
@@ -598,9 +522,8 @@ py -3 manage.py runserver
 > [!NOTE]
 > You can ignore the warnings about "unapplied migration(s)" at this point!
 
-Once the server is running you can view the site by navigating to the following URL on your local web browser: `http://127.0.0.1:8000/`. You should see a site that looks like this:
-
-![The home page of the skeleton Django app](django_skeleton_app_homepage_django_4_0.png)
+Once the server is running you can view the site by navigating to the following URL on your local web browser: `http://127.0.0.1:8000/`.
+You should see Django's default welcome page, which displays a rocket and the message "The install worked successfully! Congratulations!".
 
 ## Summary
 
@@ -610,8 +533,8 @@ In the testing section you also briefly saw how we can create a new Django websi
 
 ## See also
 
-- [Quick Install Guide](https://docs.djangoproject.com/en/5.0/intro/install/) (Django docs)
-- [How to install Django — Complete guide](https://docs.djangoproject.com/en/5.0/topics/install/) (Django docs) — also covers how to remove Django
-- [How to install Django on Windows](https://docs.djangoproject.com/en/5.0/howto/windows/) (Django docs)
+- [Quick Install Guide](https://docs.djangoproject.com/en/6.1/intro/install/) (Django docs)
+- [How to install Django — Complete guide](https://docs.djangoproject.com/en/6.1/topics/install/) (Django docs) — also covers how to remove Django
+- [How to install Django on Windows](https://docs.djangoproject.com/en/6.1/howto/windows/) (Django docs)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}

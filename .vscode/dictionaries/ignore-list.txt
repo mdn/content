@@ -10,8 +10,6 @@ aacbbbcac
 abaac
 abbbbbc
 abbbbc
-abbbcd
-abbcd
 abbcdefabh
 abcabc
 abcabcabc
@@ -42,7 +40,6 @@ bbbc
 Beastify
 bfalse
 bgpicker
-bigcorp
 blaa
 blaaa
 blabla
@@ -69,8 +66,6 @@ caaaaaaandy
 caaandy
 caandy
 califragilisticexpialidocious
-catfishhead
-catflap
 cbbabbbbcdebc
 cdbBdbsbz
 CHANGEME
@@ -98,7 +93,6 @@ dbar
 dbbd
 Decem
 demozilla
-Devel
 devstart
 dgimsuvy
 dinosooooor
@@ -152,12 +146,9 @@ FOVR
 fringille
 fullpagezoom.xpi
 futurelibrary.no
-gaesamplesite
 gesetz
 gims
-globalprivacycontrol.org
 Gloobles
-glossarysidebar.yaml
 GNF576746573fhdg4737dh4
 gogerychwyrndrobwllllantysiliogogogoch
 Graece
@@ -194,14 +185,11 @@ jsondata
 Junja
 jícama
 kasd
-kCMAMBAAAAAAAoK
 Khiresh
 kitchensink
-kYGzzhZRbK
 Latine
 latinmodern-math
 learntocodewith.me
-leopardskin
 letmein
 libpkcs11testmodule
 librero
@@ -218,7 +206,6 @@ magis
 Mand
 manis
 Markmarkimark
-mdnsidebar.yaml
 megastore
 meinheld
 morethanwarm
@@ -243,11 +230,9 @@ nori
 notanaudio
 notavideo
 notebox
-nytimes
 Odtsetseg
 Oggi
 Oozin
-opensas
 opensesame
 OPQRTUVXYZ
 Owww
@@ -286,7 +271,6 @@ seakale
 serverstart
 shhhh
 skjfndskjfnbdskjfb
-snapsvg.io
 soclis
 soko
 someelement
@@ -302,11 +286,9 @@ theguardian
 thinkin
 thisisareallylongvariablenameman
 threejs
-todomvc
 tomatillo
 topsecretpassword
 traa
-truemark.dev
 TURO
 TUROPC
 Tweety
@@ -340,7 +322,6 @@ xyzzy
 Y3JlZGVudGlhbElk
 Yarrrr
 YOUREXT
-YsAIAAAA
 YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 YSDEgCDwkICAIOaWhyDwn6aE
 Yuckymeat

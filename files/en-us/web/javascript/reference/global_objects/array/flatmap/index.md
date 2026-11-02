@@ -199,7 +199,7 @@ console.log(
 
 ## See also
 
-- [Polyfill of `Array.prototype.flatMap` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.flatMap` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.flatMap`](https://www.npmjs.com/package/array.prototype.flatmap)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

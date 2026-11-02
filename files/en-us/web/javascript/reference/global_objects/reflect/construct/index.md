@@ -229,7 +229,7 @@ OneClass.apply(obj3, args);
 
 ## See also
 
-- [Polyfill of `Reflect.construct` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.construct` in `core-js`](https://core-js.io/docs/features/ecmascript/reflect)
 - {{jsxref("Reflect")}}
 - {{jsxref("new")}}
 - [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target)

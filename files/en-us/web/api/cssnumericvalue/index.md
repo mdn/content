@@ -35,7 +35,7 @@ None.
 - {{domxref('CSSNumericValue.max')}}
   - : Returns the maximum value passed
 - {{domxref('CSSNumericValue.equals')}}
-  - : _True_ if all the values are the exact same type and value, in the same order. Otherwise, _false._
+  - : Returns `true` if every value passed is the same as the `CSSNumericValue`, written with the same values and units, and `false` otherwise.
 - {{domxref('CSSNumericValue.to')}}
   - : Converts `value` into another one with the specified _unit._
 - {{domxref('CSSNumericValue.toSum')}}

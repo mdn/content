@@ -191,5 +191,6 @@ After you have learned all fundamental features of JavaScript, you can explore s
 - [Closures](/en-US/docs/Web/JavaScript/Guide/Closures)
 - [Meta programming](/en-US/docs/Web/JavaScript/Guide/Meta_programming)
 - [Memory management](/en-US/docs/Web/JavaScript/Guide/Memory_management)
+- [Agent communication and coordination](/en-US/docs/Web/JavaScript/Guide/Agent_communication_and_coordination)
 
 {{Next("Web/JavaScript/Guide/Introduction")}}
