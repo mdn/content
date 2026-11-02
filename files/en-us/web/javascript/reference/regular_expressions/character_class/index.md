@@ -77,6 +77,7 @@ Non-`v`-mode character classes interpret most characters [literally](/en-US/docs
 - In character classes, most escape sequences are supported, except `\b`, `\B`, and [backreferences](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference). `\b` indicates a backspace character instead of a [word boundary](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion), while the other two cause syntax errors in Unicode-aware mode.
 
   In Unicode-unaware mode, `\B` is an identity escape for `B`, and numeric escapes are interpreted as legacy octal escapes or identity escapes instead of backreferences. For example, `\1` matches U+0001 and `\8` matches `8`. To use `\` literally, escape it as `\\`.
+
 - The `]` character indicates the end of the character class. To use it literally, escape it as `\]`.
 - The dash (`-`) character, when used between two characters, indicates a range. When it appears at the start or end of a character class, it is a literal character. It's also a literal character when it's used in the boundary of a range. For example, `[a-]` matches the characters `a` and `-`, `[!--]` matches the characters `!` to `-`, and `[--9]` matches the characters `-` to `9`. You can also escape it as `\-` if you want to use it literally anywhere.
 
