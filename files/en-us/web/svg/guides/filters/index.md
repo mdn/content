@@ -294,7 +294,7 @@ Each row of the matrix sets one output channel from a weighted sum of the input 
 
 ## Filters on HTML content
 
-The CSS {{cssxref("filter")}} property can also apply an SVG filter to any HTML element. For this purpose, you can define an `<svg>` element in the document which only holds the `<filter>` and is completely transparent to the layout. You need to set its `width` and `height` to `0` so it doesn’t cover the page content, its `position` to `fixed` to remove it from the flow, and `aria-hidden` to keep it out of the accessibility tree.
+The CSS {{cssxref("filter")}} property can also apply an SVG filter to any HTML element. For this purpose, you can define an `<svg>` element in the document which only holds the `<filter>` and is completely transparent to the layout. You need to set its `width` and `height` to `0` so it doesn't cover the page content, its `position` to `fixed` to remove it from the flow, and `aria-hidden` to keep it out of the accessibility tree.
 
 In the following example, the text is displaced by the noise the filter generates for itself, which no CSS filter function can do:
 
