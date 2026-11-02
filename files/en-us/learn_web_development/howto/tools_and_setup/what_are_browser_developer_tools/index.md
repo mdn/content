@@ -150,7 +150,7 @@ The right-hand pane shows a list of the watch expressions you have added and bre
 - The next section, **Breakpoints**, lists the breakpoints set on the page. In example.js, a breakpoint has been set on the statement `listItems.push(inputNewItem.value);`.
 - The final two sections only appear when the code is running.
   - The **Call stack** section shows you what code was executed to get to the current line. You can see that the code is in the function that handles a mouse click and that it is currently paused at the breakpoint.
-  - The final section, **Scopes**, shows what values are visible from various points within your code. For example, in the image below, you can see the objects available to the code in the addItemClick function.
+  - The final section, **Scopes**, shows what values are visible from various points within your code. For example, in the image, you can see the objects available to the code in the addItemClick function.
 
 ### Find out more
 
