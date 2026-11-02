@@ -11,7 +11,7 @@ browser-compat: api.WebTransportReceiveStream.getStats
 The **`getStats()`** method of the {{domxref("WebTransportReceiveStream")}} interface asynchronously returns an object containing statistics for the current stream.
 
 The statistics include the total number of ordered bytes that have arrived on this stream (ignoring network overhead, up until the first missing byte) and the total number that have been read by the application.
-It therefore provides a measure of how quickly the application is consuming bytes from the server on this particular stream.
+They therefore provide a measure of how quickly the application is consuming bytes from the server on this particular stream.
 
 ## Syntax
 
@@ -30,10 +30,10 @@ The returned object has the following properties:
 
 - `bytesReceived`
   - : A non-negative integer indicating the number of bytes received by this stream, up to the first missing byte.
-    The number does not include any network overhead, and can only increase.
+    The number does not include any network overhead and can only increase.
 - `bytesRead`
   - : A non-negative integer indicating the number of bytes the application has read from this `WebTransportReceiveStream` stream.
-    This number can only increase, and is always less than or equal to `bytesReceived`.
+    This number can only increase and is always less than or equal to `bytesReceived`.
 
 ## Examples
 

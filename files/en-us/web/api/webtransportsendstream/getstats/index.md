@@ -11,7 +11,7 @@ browser-compat: api.WebTransportSendStream.getStats
 The **`getStats()`** method of the {{domxref("WebTransportSendStream")}} interface asynchronously returns an object containing statistics for the current stream.
 
 The statistics include the total number of bytes written to the stream, the number that have been sent at least once (ignoring packet overhead), and the number that the server has acknowledged (up to the first unacknowledged byte).
-It therefore provides a measure of how quickly the application is sending bytes to the server on this particular stream.
+They therefore provide a measure of how quickly the application is sending bytes to the server on this particular stream.
 
 ## Syntax
 
@@ -30,12 +30,12 @@ The returned object has the following properties:
 
 - `bytesAcknowledged`
   - : A non-negative integer indicating the number of bytes written to this stream that have been sent and acknowledged as received by the server, using QUIC's ACK mechanism.
-    Only sequential bytes up to, but not including, the first non-acknowledged byte, are counted.
+    Only sequential bytes up to, but not including, the first unacknowledged byte are counted.
     This number can only increase and is always less than or equal to `bytesSent`.
-    When the connection is over HTTP/2, the value will match `bytesSent`.
+    When the connection is over HTTP/2, the value matches `bytesSent`.
 - `bytesSent`
   - : A non-negative integer indicating the number of bytes written to this stream that have been sent at least once (but not necessarily acknowledged).
-    This number can only increase, and is always less than or equal to `bytesWritten`.
+    This number can only increase and is always less than or equal to `bytesWritten`.
     Note that this count does not include bytes sent as network overhead (such as packet headers).
 - `bytesWritten`
   - : A non-negative integer indicating the number of bytes successfully written to this stream.
