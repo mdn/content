@@ -4,7 +4,6 @@ short-title: setExtraHeaders
 slug: Web/WebDriver/Reference/BiDi/Modules/network/setExtraHeaders
 page-type: webdriver-command
 browser-compat: webdriver.bidi.network.setExtraHeaders
-spec-urls: https://w3c.github.io/webdriver-bidi/#command-network-setExtraHeaders
 sidebar: webdriver
 ---
 
