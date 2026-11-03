@@ -18,7 +18,7 @@ method of the Canvas 2D API adds a rotation to the transformation matrix.
 rotate(angle)
 ```
 
-![Rectangular coordinate system with the rotation of the abscissa axis by the alpha angle](canvas_grid_rotate.svg)
+![Rectangular coordinate system with the rotation of the abscissa axis by the angle](canvas_grid_rotate.svg)
 
 ### Parameters
 

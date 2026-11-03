@@ -11,7 +11,7 @@
     <path d="M0 130V0H136" fill="none" stroke="#000" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
     <text x="-7" y="-3">(0,0)</text>
     <text x="29" y="18" fill="#00f">(2,1)</text><text x="93" y="113" fill="#00f">(5,5)</text>
-    
+
   </g>
   <g transform="translate(166 13)" font-family="sans-serif" font-size="10">
     <path d="M40 20H80V100H40Z" fill="#bde2fe"/><path d="M50 20H60V100H50Z" fill="#4167fe"/><path d="M60 20H70V100H60Z" fill="#5870fe"/>

@@ -133,7 +133,7 @@ The second transformation method is `rotate()`. We use it to rotate the canvas a
 - {{domxref("CanvasRenderingContext2D.rotate", "rotate(angle)")}}
   - : Rotates the canvas clockwise around the current origin by the `angle` number of radians.
 
-![The default origin point is at the top left, 0 degrees is horizontal and to the right. The rotation point starts from the origin point and goes clockwise.](/en-US/docs/Web/API/CanvasRenderingContext2D/rotate/canvas_grid_rotate.svg)
+![The default origin point is at the top left, 0 degrees is horizontal and to the right. The x axis starts from the origin point and rotates clockwise.](/en-US/docs/Web/API/CanvasRenderingContext2D/rotate/canvas_grid_rotate.svg)
 
 The rotation center point is always the canvas origin. To change the center point, we will need to move the canvas by using the `translate()` method.
 

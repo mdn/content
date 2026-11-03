@@ -15,7 +15,8 @@
     <text x="21" y="34">0</text>
     <text x="191" y="34">X</text>
     <text x="26" y="199">Y</text>
-  </g>  <path d="M80 30V80M30 80H186" fill="none" stroke="#e63500" marker-end="url(#arrow)"/>
+  </g>
+  <path d="M80 30V80M30 80H186" fill="none" stroke="#e63500" marker-end="url(#arrow)"/>
   <path d="M80 80V186" fill="none" stroke="#e63500" marker-end="url(#arrow)"/>
   <g fill="none" stroke="#000" marker-end="url(#arrow)">
     <path d="M31 120H79"/>

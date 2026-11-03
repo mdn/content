@@ -15,7 +15,8 @@
     <text x="21" y="34">0</text>
     <text x="191" y="34">X</text>
     <text x="26" y="199">Y</text>
-  </g>  <rect x="80" y="80" width="60" height="60" fill="#315ea0"/>
+  </g>
+  <rect x="80" y="80" width="60" height="60" fill="#315ea0"/>
   <g fill="none" stroke="#000" marker-end="url(#arrow)">
     <path d="M31 80H79"/>
     <path d="M80 31V79"/>
