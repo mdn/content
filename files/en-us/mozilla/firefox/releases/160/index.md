@@ -60,6 +60,14 @@ Firefox 160 is the current [Beta version of Firefox](https://www.firefox.com/en-
   Previously, the method always returned 32 bytes.
   Code that omits either argument will need to be updated.
   ([Firefox bug 2079306](https://bugzil.la/2079306)).
+- The {{domxref("WebTransportDatagramDuplexStream.incomingMaxBufferedDatagrams", "incomingMaxBufferedDatagrams")}} and {{domxref("WebTransportDatagramDuplexStream.outgoingMaxBufferedDatagrams", "outgoingMaxBufferedDatagrams")}} properties of the {{domxref("WebTransportDatagramDuplexStream")}} interface are now supported.
+  They replace the non-standard {{domxref("WebTransportDatagramDuplexStream.incomingHighWaterMark", "incomingHighWaterMark")}} and {{domxref("WebTransportDatagramDuplexStream.outgoingHighWaterMark", "outgoingHighWaterMark")}} properties, which have been removed.
+  These properties represent the maximum number of incoming datagrams that can be queued while waiting to be read, and the maximum number of outgoing datagrams that can be queued for sending before backpressure is applied.
+  ([Firefox bug 2023587](https://bugzil.la/2023587)).
+- The {{domxref("WebTransport.WebTransport", "WebTransport()")}} constructor now supports the [`datagramsReadableType`](/en-US/docs/Web/API/WebTransport/WebTransport#datagramsreadabletype) option.
+  Setting it to `bytes` makes the transport's stream of incoming datagrams, {{domxref("WebTransportDatagramDuplexStream.readable", "transport.datagrams.readable")}}, a [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams).
+  You can then use a {{domxref("ReadableStreamBYOBReader")}} to read each datagram into a buffer that you supply and reuse, instead of receiving a new {{jsxref("Uint8Array")}} for every datagram.
+  ([Firefox bug 2007755](https://bugzil.la/2007755)).
 
 <!-- #### DOM -->
 
@@ -92,3 +100,9 @@ Firefox 160 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 160 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **`CSSNumericValue` arithmetic methods**: `layout.css.typed-om.enabled`
+
+  The {{domxref("CSSNumericValue.add()", "add()")}}, {{domxref("CSSNumericValue.sub()", "sub()")}}, {{domxref("CSSNumericValue.mul()", "mul()")}}, and {{domxref("CSSNumericValue.div()", "div()")}} methods of the {{domxref("CSSNumericValue")}} interface in the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) are now supported in Nightly.
+  They add, subtract, multiply, or divide numeric values, respectively; for example, `CSS.px(10).add(CSS.px(5))` adds two pixel values.
+  The result is a {{domxref("CSSUnitValue")}} (`15px` in this example) when it can be simplified to a single unit, or a math expression such as a {{domxref("CSSMathSum")}} when it can't be simplified (for example, when adding `px` to `%`). ([Firefox bug 2081689](https://bugzil.la/2081689)).
