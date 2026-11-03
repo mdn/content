@@ -59,6 +59,8 @@ You typically work with `PerformanceEventTiming` objects by creating a {{domxref
 By default, `PerformanceEventTiming` entries are exposed when their `duration` is 104ms or greater. Research suggests that user input that is not handled within 100ms is considered slow and 104ms is the first multiple of 8 greater than 100ms (for security reasons, this API is rounded to the nearest multiple of 8ms).
 However, you can set the {{domxref("PerformanceObserver")}} to a different threshold using the `durationThreshold` option in the [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method.
 
+The `"first-input"` entry is an exception: it is reported even if its `duration` is below the threshold, and it is buffered even if its `duration` is below 104ms.
+
 ### Events exposed
 
 The following event types are exposed by the Event Timing API:
@@ -182,6 +184,7 @@ observer.observe({ type: "event", buffered: true });
 ```
 
 You can also set a different [`durationThreshold`](/en-US/docs/Web/API/PerformanceObserver/observe#durationthreshold). The default is 104ms and the minimum possible duration threshold is 16ms.
+The threshold only applies to entries observed from now on. The browser buffers `"event"` entries using the default 104ms threshold, so with `buffered: true` you still only get past entries with a `duration` of 104ms or more.
 
 ```js
 observer.observe({ type: "event", durationThreshold: 16, buffered: true });
