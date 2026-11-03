@@ -18,7 +18,7 @@ The FedCM API manages the interactions between the user, the RP, and the IdP, bu
 
 For example, the result of a successful call to {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} includes a `token` object. The FedCM API does not define the structure of the `token` object or what the RP should do with it: this depends entirely on the federated identity protocol that the IdP implements.
 
-In the [FedCM for OAuth](https://github.com/aaronpk/oauth-fedcm-profile) profile, which describes how the [OpenID Connect (OIDC)](/en-US/docs/Web/Security/Authentication/Federated_identity#openid_connect) protocol could be implemented using FedCM, the token returned by `CredentialsContainer.get()` is an OAuth authorization code. The RP uses this code to retrieve the identity token from the IdP's token endpoint.
+In the [FedCM for OAuth](https://github.com/aaronpk/oauth-fedcm-profile) profile, which describes how the [OpenID Connect (OIDC)](/en-US/docs/Web/Security/Authentication/Federated_identity#openid_connect) protocol could be implemented using FedCM, the token returned by `get()` is an OAuth authorization code. The RP uses this code to retrieve the identity token from the IdP's token endpoint.
 
 When an RP chooses to work with a particular IdP, the IdP will provide instructions for how to use the returned `token` value.
 
@@ -97,7 +97,7 @@ The first three steps are repeated for every IdP listed in the [`providers`](/en
 
    If the user is signed into the IdP but does not already have an account with the RP — that is, the IdP's [`approved_clients`](/en-US/docs/Web/API/FedCM_API/IDP_integration#approved_clients) array does not contain the RP's client ID — then the UI presented to the user will include _disclosure text_. This is additional information provided by the browser to explain to the user that they will be asked to create a new account on the RP, using the identity they have registered with the IdP. The disclosure text typically takes the form of a dialog including an option labeled "Continue as..." followed by the name under which the user is registered with the IdP. The disclosure text may also include links to the RP's terms of service and privacy policy, if these were retrieved in step 4. If the user agrees to continue, they will then be asked to create an account on the RP using their IdP identity.
 
-6. Finally, if the user granted permission to do so, the browser makes a POST request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) of the selected IdP to request a token for the selected RP account. The request includes cookies.
+6. Finally, if the user granted permission to do so, the browser makes a POST request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) of the selected IdP to request a token for the selected account. The request includes cookies.
 
    The IdP checks that the ID for the IdP account that the user selected matches the ID for the account that is already signed in, and that the `Origin` header matches the origin of the RP, which will have been registered in advance with the IdP. If everything looks good, it responds with the requested token.
 
