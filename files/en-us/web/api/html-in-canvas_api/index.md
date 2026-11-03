@@ -5,7 +5,7 @@ page-type: web-api-overview
 browser-compat: html.elements.canvas.content
 ---
 
-{{DefaultAPISidebar("HTML-in-Canvas API")}}{{securecontext_header}}
+{{DefaultAPISidebar("HTML-in-Canvas API")}}
 
 The **HTML-in-Canvas API** allows you to draw DOM subtrees directly into a 2D or 3D canvas context. This enables taking advantage of the high-performance, graphically rich nature of canvas, while the content's DOM representation is retained in the background, meaning that it remains interactive, accessible, and integrated with key browser features such as autocomplete, text selection, find-in-page, and keyboard navigation.
 
@@ -13,7 +13,7 @@ The **HTML-in-Canvas API** allows you to draw DOM subtrees directly into a 2D or
 
 Drawing UI features inside a {{htmlelement("canvas")}} element is a common path for developers that want to create graphically rich websites that offer different experiences than might be possible using DOM elements. However, this comes with its own set of problems. Traditionally, anything drawn into a canvas context is just a set of pixels, and therefore isn't accessible, and doesn't benefit from the same level of interactivity or browser integration as the DOM.
 
-HTML-in-Canvas provides a solution, allowing DOM subtrees to be drawn into a canvas context. The content's state is retained in the background, meaning that it remains accessible, while its visual rendering can be manipulated using your chosen canvas API ([2D Canvas API](/en-US/docs/Web/API/Canvas_API), [WebGL](/en-US/docs/Web/API/WebGL_API), or [WebGPU](/en-US/docs/Web/API/WebGPU_API)) in whatever way you like.
+HTML-in-Canvas provides a solution, allowing DOM subtrees to be drawn into a canvas context. The content's state is retained in the background, meaning that it remains [accessible](#accessibility), while its visual rendering can be manipulated using your chosen canvas API ([2D Canvas API](/en-US/docs/Web/API/Canvas_API), [WebGL](/en-US/docs/Web/API/WebGL_API), or [WebGPU](/en-US/docs/Web/API/WebGPU_API)) in whatever way you like.
 
 To prepare DOM content to be rendered in a canvas, you first need to place it between your `<canvas>` tags. You then opt your `<canvas>` into rendering its descendants rather than treating them as fallback content by setting its [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute to `drawable`. Finally, each DOM subtree that you want to render on the canvas independently is given a [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) attribute.
 
@@ -29,7 +29,7 @@ Each context type comes with a feature to draw `drawable` DOM trees onto the con
 ```js
 const canvas = document.querySelector("canvas");
 const div1 = document.querySelector("#subtree1");
-const ctx = canvas.getContext("2d", { willReadFrequently: true });
+const ctx = canvas.getContext("2d");
 // ...
 ctx.drawElementImage(div1, 100, 100);
 ```
@@ -43,6 +43,43 @@ Other features include:
 - The {{domxref("HTMLCanvasElement.updateElementGeometry()")}} method, which updates the size, shape, and position of a rendered element's underlying DOM presence, for example so you can still click a rendered {{htmlelement("button")}} after the canvas rendering has moved.
 
 For more information, read our guides, starting with [Using the HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API/Using).
+
+### Accessibility
+
+`drawable` DOM elements are exposed to the accessibility tree in the same way as regular DOM elements; this includes hiding them using features such as [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden), [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert), etc.
+
+There is one exception: if a `drawable` element's geometry is not updated (either automatically via `drawElementImage()` or explicitly with `updateElementGeometry()`), the `drawable` element and its subtree are reported to the accessibility tree without geometry information. This allows assistive technologies to filter out content without geometry information. It is important that the accessibility implications of unused canvas descendants, such as hidden views or no-longer-drawn content, are considered. In many cases, these should be removed from the DOM or hidden.
+
+> [!NOTE]
+> When elements are rendered to a canvas using `drawElementImage()`, `texElementSubImage2D()`, or `drawElementImageToTexture()`, accessibility indicators such as focus rings or carets are rendered as expected.
+
+Consider the following example, where a {{htmlelement("figure")}}, {{htmlelement("img")}}, and {{htmlelement("caption")}} are included inside a `<canvas content="drawable">`. The `<img>` and `<figcaption>` elements include the `drawable` attribute.
+
+```html
+<canvas id="canvas" content="drawable">
+  <figure id="figure">
+    <img drawable id="image" src="..." alt="image alt text" />
+    <figcaption drawable id="caption">A caption</figcaption>
+  </figure>
+</canvas>
+```
+
+The semantic structure of the `<canvas>` content is preserved, while the `<img>` and `<figcaption>` can be rendered separately:
+
+```js
+const canvas = document.querySelector("canvas");
+const image = document.querySelector("img");
+const caption = document.querySelector("figcaption");
+const ctx = canvas.getContext("2d");
+
+canvas.addEventListener("paint", () => {
+  ctx.reset();
+  // By default, drawElementImage() automatically updates element geometry,
+  // so that the image and caption have geometry information for accessibility.
+  ctx.drawElementImage(image, 0, 0);
+  ctx.drawElementImage(caption, 0, 200);
+});
+```
 
 ## Interfaces
 
@@ -66,7 +103,7 @@ For more information, read our guides, starting with [Using the HTML-in-Canvas A
 - {{domxref("HTMLCanvasElement.clearElementGeometry()")}}
   - : Clears any previous `DOMMatrix` applied to a `drawable` element's underlying DOM presence, returning it to its original size, shape, and position.
 - {{domxref("HTMLCanvasElement.getElementImageDefaultSize()")}}
-  - : Returns an object containing a `drawable` element's original size as it would be rendered in the DOM.
+  - : Returns an object containing a `drawable` element's original size as it would be rendered in the DOM. The returned size is in canvas grid coordinates.
 - {{domxref("HTMLCanvasElement.getElementTransform()")}}
   - : Returns the `DOMMatrix` representing the transform currently applied to a `drawable` element's underlying DOM presence.
 - {{domxref("HTMLCanvasElement.requestPaint()")}}
@@ -96,19 +133,19 @@ For more information, read our guides, starting with [Using the HTML-in-Canvas A
 ### 2D canvas context
 
 - {{domxref("CanvasRenderingContext2D.drawElementImage()")}}
-  - : Draws the current state of a `drawable` element (or an {{domxref("ElementImage")}}) to a 2D canvas content.
+  - : Draws a `drawable` element's state recorded during the current rendering update (or an {{domxref("ElementImage")}}) to a 2D canvas context.
 - {{domxref("OffscreenCanvasRenderingContext2D.drawElementImage()")}}
-  - : Draws the current state of a `drawable` element (or an {{domxref("ElementImage")}}) to an offscreen 2D canvas content.
+  - : Draws a `drawable` element's state recorded during the current rendering update (or an {{domxref("ElementImage")}}) to an offscreen 2D canvas context.
 
 ### WebGL context
 
 - {{domxref("WebGLRenderingContext.texElementSubImage2D()")}}
-  - : Uploads the current state of a `drawable` element (or an {{domxref("ElementImage")}}) into a texture that can be used in a WebGL canvas content.
+  - : Uploads a `drawable` element's state recorded during the current rendering update (or an {{domxref("ElementImage")}}) into a texture that can be used in a WebGL canvas context.
 
 ### WebGPU context
 
 - {{domxref("GPUQueue.drawElementImageToTexture()")}}
-  - : Draws the current state of a `drawable` element (or an {{domxref("ElementImage")}}) into a texture that can be used in a WebGPU canvas content.
+  - : Draws a `drawable` element's state recorded during the current rendering update (or an {{domxref("ElementImage")}}) into a texture that can be used in a WebGPU canvas context.
 
 ## HTML additions
 

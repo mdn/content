@@ -30,7 +30,17 @@ When using the [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API) to r
 
 To re-render the element on each repaint, you can put your rendering code inside a `paint` event handler.
 
-If you want to re-render the element continuously even if it isn't repainted, for example if it is being moved around the `<canvas>`, you can request a `paint` event to be fired using the {{domxref("HTMLCanvasElement.requestPaint", "requestPaint()")}} method, or you could use {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}
+If you want to re-render the element continuously even if it isn't repainted, for example if it is being moved around the `<canvas>`, you can request a `paint` event to be fired using the {{domxref("HTMLCanvasElement.requestPaint", "requestPaint()")}} method, or you could use {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}. You can see an example in our [HTML-in-Canvas 2D context example](https://mdn.github.io/dom-examples/html-in-canvas/2d-context-example/):
+
+```js
+canvas.addEventListener("paint", () => {
+  ctx.fillStyle = "#7D82B8";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.drawElementImage(form, 100, 100);
+  fx.apply(performance.now());
+  canvas.requestPaint();
+});
+```
 
 The `paint` event object includes a {{domxref("CanvasPaintEvent.changedElements", "changedElements")}} property containing an array of references to `drawable` elements that were repainted. This can be used to detect which elements changed, when multiple `drawable` elements are rendered.
 
@@ -48,11 +58,19 @@ canvas.addEventListener("paint", () => {
 });
 ```
 
-Depending on what visual updates you are making and when, this may result in out of sync rendering updates. To avoid this, make such updates inside a `requestAnimationFrame()` callback instead, which will run before the `paint` event handler for each rendering update.
+Depending on what visual updates you are making and when, this may result in out of sync rendering updates. To avoid this, you could make such updates inside a `requestAnimationFrame()` callback instead, which will run before the `paint` event handler for each rendering update. You could for example combine the following with a `paint` event handler:
+
+```js
+function update() {
+  // Make DOM updates
+  requestAnimationFrame(update);
+}
+requestAnimationFrame(update);
+```
 
 ### Nested canvas paint event order
 
-With HTML-in-Canvas, it is possible to nest one `<canvas>` element inside another, set `content="drawable"` on both of them, and render `drawable` elements inside either or both of them. When a `drawable` element inside the child `<canvas>` is repainted, a `paint` event is fired on on both the parent and child canvases. It is fired on the child canvas first, so its `drawable` element's visual representation is updated. It is fired on the parent canvas second, so its `drawable` element's visual representation can include the latest visual state of the nested `<canvas>`'s `drawable` element.
+With HTML-in-Canvas, it is possible to nest one `<canvas>` element inside another, set `content="drawable"` on both of them, and render `drawable` elements inside either or both of them. When a `drawable` element inside the child `<canvas>` is repainted, a `paint` event is fired on both the parent and child canvases. It is fired on the child canvas first, so its `drawable` element's visual representation is updated. It is fired on the parent canvas second, so its `drawable` element's visual representation can include the latest visual state of the nested `<canvas>`'s `drawable` element.
 
 For example:
 
@@ -144,7 +162,7 @@ html {
 
 In our script, we define a `main()` function before running it to start the example. Inside, we first grab references to the `<canvas>` and both `<div>` elements, then we get a 2D canvas context using the {{domxref("HTMLCanvasElement.getContext", "getContext()")}} method. Next, we check if the {{domxref("CanvasRenderingContext2D.drawElementImage", "drawElementImage()")}} method exists on the context; if not, we add a `no-html-in-canvas` class to the {{htmlelement("body")}} element that is used to display a "no support" banner.
 
-Next, we color the entire canvas using a solid color using the {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle()")}} and {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} methods. We then use `drawElementImage()` to draw both of the `drawable` elements onto the canvas, placing each one at different coordinates. We do this inside a {{domxref("GlobalEventHandlers.paint_event", "paint")}} event so that the `drawable` elements are redrawn on the canvas each time they are repainted. This includes the initial paint, and the repaint each time a text selection is made or a button is focused or hovered, for example.
+Next, we fill the entire canvas with a solid color using the {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} property and {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} method. We then use `drawElementImage()` to draw both of the `drawable` elements onto the canvas, placing each one at different coordinates. We do this inside a {{domxref("GlobalEventHandlers.paint_event", "paint")}} event so that the `drawable` elements are redrawn on the canvas each time they are repainted. This includes the initial paint, and the repaint each time a text selection is made or a button is focused or hovered, for example.
 
 ```js live-sample___basic-usage
 function main() {

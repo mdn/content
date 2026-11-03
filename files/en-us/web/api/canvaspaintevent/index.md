@@ -148,7 +148,7 @@ const oneBtn = document.querySelector("#one button");
 const twoBtn = document.querySelector("#two button");
 ```
 
-Next, we store the `<div>` element's current background colors in a {{jsxref("Map")}}.
+Next, we store the `<div>` elements' current background colors in a {{jsxref("Map")}}.
 
 ```js live-sample___paint-reporting
 const currBgs = new Map([
@@ -169,7 +169,7 @@ function updateBgColor(e) {
 }
 ```
 
-Nest, we define a `reportPaint()` function. This takes an eement reference as an argument, retrieves its `background-color`, and defines a variable called `elemColorStatement`. If the current `background-color` is different to the element's old `background-color` stored in the `currBgs` map, we set `elemColorStatement` to say what the background color was changed to, and update the color entry stored in `currBgs`. If they are the same, we set `elemColorStatement` to say that background was unchanged.
+Next, we define a `reportPaint()` function. This takes an element reference as an argument, retrieves its `background-color`, and defines a variable called `elemColorStatement`. If the current `background-color` is different from the element's old `background-color` stored in the `currBgs` map, we set `elemColorStatement` to say what the background color was changed to, and update the color entry stored in `currBgs`. If they are the same, we set `elemColorStatement` to say that background was unchanged.
 
 We then create an {{htmlelement("li")}} element, set its text content to a report statement that includes `elemColorStatement` and says what element was changed, and append it to the output list. Last, we use {{domxref("Element.scrollIntoView", "scrollIntoView()")}} to scroll the list to the bottom so you can always see the latest entry.
 
@@ -194,7 +194,7 @@ function reportPaint(elem) {
 
 Finally, we define a `main()` function before running it to start the example. Inside, we first get a 2D canvas context using the {{domxref("HTMLCanvasElement.getContext", "getContext()")}} method. Next, we check if the {{domxref("CanvasRenderingContext2D.drawElementImage", "drawElementImage()")}} method exists on the context; if not, we add a `no-html-in-canvas` class to the {{htmlelement("body")}} element that is used to display a "no support" banner.
 
-Next, we color the entire canvas using a solid color using the {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle()")}} and {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} methods. We then use `drawElementImage()` to draw both of the `drawable` elements onto the canvas, placing each one at different coordinates. We do this inside a {{domxref("HTMLCanvasElement.paint_event", "paint")}} event so that the `drawable` elements are redrawn on the canvas each time they are repainted. We check which element(s) were repainted each time the event handler runs using the `changedElements` property, and run the `reportPaint()` function for each one.
+Next, we fill the entire canvas with a solid color using the {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} property and {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} method. We then use `drawElementImage()` to draw both of the `drawable` elements onto the canvas, placing each one at different coordinates. We do this inside a {{domxref("HTMLCanvasElement.paint_event", "paint")}} event so that the `drawable` elements are redrawn on the canvas each time they are repainted. We check which element(s) were repainted each time the event handler runs using the `changedElements` property, and run the `reportPaint()` function for each one.
 
 ```js live-sample___paint-reporting
 function main() {
@@ -226,7 +226,7 @@ main();
 
 {{EmbedLiveSample("paint-reporting", "100%", 360)}}
 
-Try clicking the buttons and observe the reported paints in the list as the background colors are updated. Note however that all the repaints are reported: This also includes the initial paint, and the repaint each time a text selection is made or a button is focused or hovered.
+Try clicking the buttons and observe the reported paints in the list as the background colors are updated. Note however that all the repaints are reported. This also includes the initial paint, and the repaint each time a text selection is made or a button is focused or hovered.
 
 ## Specifications
 
