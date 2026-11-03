@@ -44,7 +44,7 @@ You may find that the `quota` varies from origin to origin. This variance is bas
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if obtaining a local storage shelf failed. For example, if the current origin is an opaque origin or if the user has disabled storage.
 
 ## Examples

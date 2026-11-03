@@ -80,7 +80,7 @@ console.log(Array.prototype.toReversed.call(arrayLike));
 
 ## See also
 
-- [Polyfill of `Array.prototype.toReversed` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
+- [Polyfill of `Array.prototype.toReversed` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.toReversed`](https://www.npmjs.com/package/array.prototype.toreversed)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array.prototype.reverse()")}}

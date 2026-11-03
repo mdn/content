@@ -94,8 +94,9 @@ The flow is as follows:
 
 8. The browser uses the information obtained by the previous two sets of requests to create the UI asking the user to choose an IdP (if more than one is signed-in) and an account to sign in to the RP with. The UI also asks the user for permission to sign in to the RP using their chosen federated IdP account.
 
-   > [!NOTE]
-   > At this stage, if the user has previously authenticated with a federated RP account in the current browser instance (that is, created a new account with the RP or signed into the RP's website using an existing account), they may be able to **auto-reauthenticate**, depending on what the [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option is set to in the `get()` call. If so, the user will be signed in automatically without entering their credentials, as soon as `get()` is invoked. See the [Auto-reauthentication](#auto-reauthentication) section for more details.
+   If the user is signed into the IdP but _does not_ have an account with the current RP, the UI presented to them will include **disclosure text**. This is additional information provided by the browser to explain to the user that they will be asked to create a new account on the RP, using the identity they have registered with the IdP. The disclosure text typically takes the form of a dialog including an option labeled "Continue as... " followed by the name under which the user is registered with the IdP. The disclosure text may also include links to the RP's terms of service and privacy policy, if these were given in the [client metadata endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_client_metadata_endpoint) for this RP. If the user agrees to continue, they will then be asked to create an account on the RP using their IdP identity.
+
+   If the user is signed into the IdP, _does_ have an account with the current RP, and has logged in with it in the current browser instance, they may be able to [auto-reauthenticate](#auto-reauthentication). If so, the user will be signed in automatically without entering their credentials.
 
 9. If the user grants permission to do so, the browser makes a credentialed request to the [`id_assertion_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) to request a validation token from the chosen IdP for the selected account.
 
@@ -170,6 +171,7 @@ With these `mediation` options, auto-reauthentication will occur under the follo
 - FedCM is available to use. For example, the user has not disabled FedCM either globally or in the RP's settings.
 - The user has only used one account to sign into the RP website on this browser via FedCM. If accounts exist for multiple IdPs, the user won't be automatically re-authenticated.
 - The user is signed into the IdP with that account.
+- The user already has an account with the RP, which uses their IdP-managed identity. This condition is indicated using the [`approved_clients`](/en-US/docs/Web/API/FedCM_API/IDP_integration#approved_clients) array contained in the JSON returned from the [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint).
 - Auto-reauthentication didn't happen within the last 10 minutes. This restriction is put into place to stop users being auto-reauthenticated immediately after they sign out — which would make for a pretty confusing user experience.
 - The RP hasn't called {{domxref("CredentialsContainer.preventSilentAccess", "preventSilentAccess()")}} after the previous sign in. This can be used by an RP to explicitly disable auto-reauthentication if desired.
 - The UI mode is [passive](#active_versus_passive_mode).

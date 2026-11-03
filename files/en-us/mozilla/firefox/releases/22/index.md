@@ -19,7 +19,7 @@ Firefox 22 was released on June 25, 2013. This article lists key changes that ar
 
 ### JavaScript
 
-- [Asm.js](http://asmjs.org/spec/latest/) optimizations are enabled, making it possible to compile C/C++ applications to a subset of JavaScript for better performance.
+- [Asm.js](https://en.wikipedia.org/wiki/Asm.js) optimizations are enabled, making it possible to compile C/C++ applications to a subset of JavaScript for better performance.
 - ES2015 [Arrow Function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) syntax has been implemented ([Firefox bug 846406](https://bugzil.la/846406)).
 - The new [Object.is](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is) function has been added ([Firefox bug 839979](https://bugzil.la/839979)).
 - [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) in generator expressions is now inherited from enclosing lexical scope ([Firefox bug 848051](https://bugzil.la/848051)).

@@ -468,14 +468,14 @@ We also include a {{htmlelement("select")}} element with an {{htmlelement("optio
 </ul>
 
 <p>
-  <label
-    ><code>rule-visibility-items</code> value <code>
+  <label>
+    <code>rule-visibility-items</code> value
     <select id="visibility">
       <option>all</option>
       <option>between</option>
       <option>around</option>
       <option selected>normal</option>
-  </select>
+    </select>
   </label>
 </p>
 

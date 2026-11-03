@@ -135,7 +135,7 @@ console.log(newStr); // ###34567
 
 ## See also
 
-- [Polyfill of `RegExp.prototype[Symbol.replace]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `RegExp.prototype[Symbol.replace]` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - {{jsxref("String.prototype.replace()")}}
 - {{jsxref("String.prototype.replaceAll()")}}
 - [`RegExp.prototype[Symbol.match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)

@@ -216,5 +216,4 @@ async function startCapture() {
 - {{domxref("MediaDevices.getDisplayMedia()")}}
 - {{domxref("MediaStreamTrack.getConstraints()")}}
 - {{domxref("MediaStreamTrack.applyConstraints()")}}
-- {{domxref("MediaStreamTrack.getSettings()")}}
 - {{domxref("MediaDevices.getUserMedia()")}}

@@ -40,7 +40,7 @@ Let's work through an example to understand what they look like.
 To begin with, create a new HTML file on your local file system and add the following code to it:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

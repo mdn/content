@@ -60,7 +60,7 @@ The [Efficient Script Yielding](https://w3c.github.io/setImmediate/#si-setImmedi
 
 ## See also
 
-- [Polyfill of `setImmediate` in `core-js`](https://github.com/zloirock/core-js#setimmediate)
+- [Polyfill of `setImmediate` in `core-js`](https://core-js.io/docs/features/web-standards/set-immediate)
 - [Microsoft `setImmediate` API Demo](https://jphpsf.github.io/setImmediate-shim-demo/)
 - {{DOMxRef("Window.clearImmediate()")}}
 - {{DOMxRef("Window.requestIdleCallback()")}}

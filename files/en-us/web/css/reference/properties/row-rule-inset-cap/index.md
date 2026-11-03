@@ -191,14 +191,14 @@ In the following demonstration, the rows end in cap endpoints at the container's
 </ul>
 
 <p>
-  <label
-    ><code>rule-visibility-items</code> value <code>
+  <label>
+    <code>rule-visibility-items</code> value
     <select id="visibility">
       <option>all</option>
       <option>between</option>
       <option>around</option>
       <option selected>normal</option>
-  </select>
+    </select>
   </label>
 </p>
 ```

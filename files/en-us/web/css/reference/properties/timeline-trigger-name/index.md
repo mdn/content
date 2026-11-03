@@ -200,7 +200,7 @@ The animated `<div>` element's {{cssxref("position")}} is set to `fixed`, positi
 body {
   width: 80%;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
   font-size: 1.3rem;
 }
 
@@ -350,7 +350,7 @@ We define an `invert-colors` keyframe animation that inverts the foreground and 
 body {
   width: 80%;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
   font-size: 1.3rem;
 }
 

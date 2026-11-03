@@ -10,7 +10,7 @@ Creates a menu item using an options object defining properties for the item.
 
 Unlike other asynchronous functions, this one does not return a promise, but uses an optional callback to communicate success or failure. This is because its return value is the ID of the new item.
 
-For compatibility with other browsers, Firefox makes this method available in the `contextMenus` namespace and `menus` namespace. However, it's not possible to create tools menu items (`contexts: ["tools_menu"]`) using the `contextMenus` namespace.
+For compatibility with other browsers, Firefox makes this method available in the `contextMenus` namespace and `menus` namespace.
 
 > **Creating menus in persistent and non-persistent extensions**
 >

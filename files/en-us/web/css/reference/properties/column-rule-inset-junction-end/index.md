@@ -152,14 +152,14 @@ In the following demonstration, the column rule segments in the top two rows end
 </ul>
 
 <p>
-  <label
-    ><code>rule-visibility-items</code> value <code>
+  <label>
+    <code>rule-visibility-items</code> value
     <select id="visibility">
       <option>all</option>
       <option>between</option>
       <option>around</option>
       <option selected>normal</option>
-  </select>
+    </select>
   </label>
 </p>
 ```

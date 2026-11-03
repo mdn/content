@@ -119,7 +119,7 @@ To create a triggered animation, set the `timeline-trigger-source` property to o
   ```
 
   > [!NOTE]
-  > See the [`timeline-trigger-source` `scroll()` example](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-source#basic_scroll_progress_timeline_source_usage).
+  > See the [`scroll()` example](#basic_scroll_progress_timeline_source_usage).
 
 - A {{cssxref("dashed-ident")}} referencing a [named view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline) or [named scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_scroll_progress_timelines). This involves setting a {{cssxref("view-timeline-name")}} or {{cssxref("scroll-timeline-name")}} on the element that creates the trigger, and then referring to that name in the value of the `timeline-trigger-source` property, for example:
 
@@ -250,7 +250,7 @@ The animated `<div>` element's {{cssxref("position")}} is set to `fixed`, positi
 body {
   width: 80%;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
   font-size: 1.3rem;
 }
 

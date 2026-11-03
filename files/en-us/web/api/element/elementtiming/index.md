@@ -10,7 +10,9 @@ browser-compat: api.Element.elementTiming
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-The **`elementTiming`** property of the {{domxref("Element")}} interface identifies elements for observation in the {{domxref("PerformanceElementTiming")}} API. The `elementTiming` property reflects the value of the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute.
+The **`elementTiming`** property of the {{domxref("Element")}} interface identifies elements for observation in the {{domxref("PerformanceElementTiming")}} API.
+
+The `elementTiming` property reflects the value of the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute.
 
 ## Value
 

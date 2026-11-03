@@ -14,11 +14,15 @@ The `error` event is fired when the request encountered an error.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("error", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onerror = (event) => { }
 ```
 
@@ -107,7 +111,7 @@ xhrButtonSuccess.addEventListener("click", () => {
 });
 
 xhrButtonError.addEventListener("click", () => {
-  runXHR("https://example.com/notfound.jpg");
+  runXHR("https://example.com/");
 });
 
 xhrButtonAbort.addEventListener("click", () => {

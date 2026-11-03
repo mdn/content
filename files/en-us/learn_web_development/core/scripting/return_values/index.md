@@ -100,7 +100,7 @@ Let's have a go at writing some functions featuring return values. This function
 1. Create a new HTML on your local file system and add the following content to it:
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />

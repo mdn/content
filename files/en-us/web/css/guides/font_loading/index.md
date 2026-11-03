@@ -27,6 +27,7 @@ The **CSS font loading** module describes events and interfaces used for dynamic
   - {{domxref("fontFace.ascentOverride")}} property
   - {{domxref("fontFace.descentOverride")}} property
   - {{domxref("fontFace.lineGapOverride")}} property
+  - {{domxref("fontFace.sizeAdjust")}} property
   - {{domxref("fontFace.load()")}} method (returns a promise)
 - {{domxref("fontFaceSet")}} interface
 - {{domxref("fontFaceSetLoadEvent")}} event
