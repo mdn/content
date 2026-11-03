@@ -6,7 +6,7 @@ browser-compat: webextensions.api.action.setIcon
 sidebar: addonsidebar
 ---
 
-Sets the icon for the browser action.
+Sets the icon for the extension action.
 
 > [!NOTE]
 > This API is available in Manifest V3 or higher.
@@ -15,7 +15,7 @@ You can specify a single icon as either the path to an image file or an {{WebExt
 
 You can specify multiple icons in different sizes by supplying a dictionary containing multiple paths or `ImageData` objects. This means the icon doesn't have to be scaled for a device with a different pixel density.
 
-Tabs without a specific icon will inherit the global icon, which defaults to the [`default_icon`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) specified in the manifest.
+Tabs without a specific icon will inherit the global icon, which defaults to the [`default_icon`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) specified in the manifest.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -30,7 +30,7 @@ let settingIcon = browser.action.setIcon(
 ### Parameters
 
 - `details`
-  - : `object`. An object containing the `imageData` or `path` property and, optionally, either or both of the `tabId` and `windowId` properties.
+  - : `object`. An object containing the `imageData`, `path`, or `variants` property and, optionally, either or both of the `tabId` and `windowId` properties.
     - `imageData` {{optional_inline}}
       - : {{WebExtAPIRef('action.ImageDataType')}} or `object`. This is either a single `ImageData` object or a dictionary object.
 
@@ -45,7 +45,7 @@ let settingIcon = browser.action.setIcon(
         });
         ```
 
-        The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
+        The browser will choose the image to use depending on the display's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action#choosing_icon_sizes) for more information on this.
 
     - `path` {{optional_inline}}
       - : `string` or `object`. This is either a relative path to an icon file or it is a dictionary object.
@@ -61,7 +61,38 @@ let settingIcon = browser.action.setIcon(
         });
         ```
 
-        The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
+        The browser will choose the image to use depending on the display's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action#choosing_icon_sizes) for more information on this.
+
+    - `variants` {{optional_inline}}
+      - : `Array` of `Object`. Icons with a separate set for each color scheme. Each object is an icon group, with these properties:
+        - Sizes {{optional_inline}}
+          - : Properties named for an icon size in pixels, such as `16` or `32`. The value is a relative path to an icon file or an `ImageData` object.
+        - `any` {{optional_inline}}
+          - : A relative path or `ImageData` object for an icon that scales to any size, typically an SVG file.
+        - `colorSchemes` {{optional_inline}}
+          - : `Array` of `String`. The color schemes this group is for: `"light"` for icons that work on light backgrounds, `"dark"` for icons that work on dark backgrounds, or both. A group without `colorSchemes` is for both color schemes.
+
+        The browser uses the first group that matches the current color scheme, then picks the icon that best fits the size it needs. If `variants` is present, the browser ignores `path` and `imageData`.
+
+        ```js
+        let settingIcon = browser.action.setIcon({
+          variants: [
+            {
+              16: "icons/dark-16.png",
+              32: "icons/dark-32.png",
+              colorSchemes: ["dark"],
+            },
+            {
+              16: "icons/light-16.png",
+              32: "icons/light-32.png",
+              colorSchemes: ["light"],
+            },
+          ],
+        });
+        ```
+
+        > [!NOTE]
+        > Safari 18.2 to 26.1 reads `color_schemes` instead of `colorSchemes`. That name is deprecated. Use `colorSchemes`.
 
     - `tabId` {{optional_inline}}
       - : `integer`. Sets the icon only for the given tab. The icon is reset when the user navigates this tab to a new page.
