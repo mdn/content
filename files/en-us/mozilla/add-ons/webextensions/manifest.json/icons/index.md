@@ -27,6 +27,8 @@ The `icons` key specifies icons for your extension. Those icons represent the ex
 
 The key consists of key-value pairs specifying the image size in pixels and the image path relative to the extension's root directory.
 
+To provide different icons for light and dark color schemes, use [`icon_variants`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icon_variants). When both keys are present, `icon_variants` takes precedence.
+
 If `icons` is not supplied, a standard extension icon is used.
 
 You should supply an extension icon, ideally 32x32 px in size. This is the default icon that is used in the add-ons manager. You can supply icons of any size, and Firefox uses the one that fits a component best.

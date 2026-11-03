@@ -83,6 +83,29 @@ browser.menus.create(
         > [!NOTE]
         > The top-level menu item uses the [icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.
 
+    - `iconVariants` {{optional_inline}}
+      - : `Array` of `Object`. One or more custom icons to display next to the item, with a separate set for each color scheme. Like `icons`, custom icons can only be set for items appearing in submenus. Each object is an icon group, in the same format as the `variants` property of {{WebExtAPIRef("action.setIcon()")}}. If `iconVariants` is present, the browser ignores `icons`.
+
+        ```js
+        browser.menus.create({
+          iconVariants: [
+            {
+              16: "path/to/geo-dark-16.png",
+              32: "path/to/geo-dark-32.png",
+              colorSchemes: ["dark"],
+            },
+            {
+              16: "path/to/geo-light-16.png",
+              32: "path/to/geo-light-32.png",
+              colorSchemes: ["light"],
+            },
+          ],
+        });
+        ```
+
+        > [!NOTE]
+        > Safari 18.2 to 26.1 reads this property as `icon_variants`, with `color_schemes` in place of `colorSchemes`. Those names are deprecated. Use `iconVariants` and `colorSchemes`.
+
     - `id` {{optional_inline}}
       - : `string`. The unique ID to assign to this item. Is mandatory for non-persistent [background (event) pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) in Manifest V2 and in Manifest V3. Cannot be the same as another ID for this extension.
     - `onclick` {{optional_inline}}
