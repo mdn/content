@@ -15,7 +15,6 @@ If the element has the type `hidden`, the property returns `null`.
 
 A {{domxref("NodeList")}}, or `null` if the element's type is `hidden`.
 
-
 ## Examples
 
 ### HTML
