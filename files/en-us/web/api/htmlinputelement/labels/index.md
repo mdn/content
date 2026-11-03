@@ -16,7 +16,8 @@ type `hidden`, the property returns `null`.
 ## Value
 
 A {{domxref("NodeList")}} containing the `<label>` elements associated
-with the `<input>` element.
+A {{domxref("NodeList")}}, or `null` if the element's type is `hidden`.
+
 
 ## Examples
 
