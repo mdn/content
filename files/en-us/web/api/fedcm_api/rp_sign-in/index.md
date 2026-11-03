@@ -84,12 +84,12 @@ The first three steps are repeated for every IdP listed in the [`providers`](/en
 
    The response contains an array of objects. Each object represents an account that the user has with this IdP, and includes an ID for this account and information such as the username and email address associated with the account. It also may include `approved_clients`, which is an array of client IDs, each of which identifies an RP that the user has signed up with using this IdP account.
 
-> [!NOTE]
-> After these three steps, the browser has an array of objects representing IdP accounts that the user is logged into.
->
-> If the array is empty, the `get()` call rejects with a `NetworkError` {{domxref("DOMException")}}. Note that there may be some delay in the rejection to avoid leaking IdP login status to the RP.
->
-> Otherwise, if the array contains exactly one IdP account that the user has previously used to sign into this RP, and the other criteria for [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication) are met, then the browser will skip to step 6, optionally asking the user to confirm that they wish to sign in using this IdP account.
+   > [!NOTE]
+   > After these three steps, the browser has an array of objects representing IdP accounts that the user is logged into.
+   >
+   > If the array is empty, the `get()` call rejects with a `NetworkError` {{domxref("DOMException")}}. Note that there may be some delay in the rejection to avoid leaking IdP login status to the RP.
+   >
+   > Otherwise, if the array contains exactly one IdP account that the user has previously used to sign into this RP, and the other criteria for [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication) are met, then the browser will skip to step 6, optionally asking the user to confirm that they wish to sign in using this IdP account.
 
 4. For each IdP account in the array, if the IdP config file contains a `client_metadata_endpoint` property, the browser makes a request to the [client metadata endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_client_metadata_endpoint) to fetch URLs for the RP's terms of service and privacy policy pages. This is a `GET` request sent without cookies but with the `clientId` passed into the `get()` call as a parameter.
 
