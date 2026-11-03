@@ -32,7 +32,7 @@ You can request a render quantum size for your audio graph using the `renderSize
 - `hardware`, which asks the browser to choose a suitable size for the underlying hardware.
 - A specific integer value, which can be between `1` and 6 times the context's {{domxref("BaseAudioContext.sampleRate", "sampleRate")}}. Since `renderSizeHint` is a hint, the requested value may not be honored exactly.
 
-The resulting context's render quantum size can be retrieved using the `renderQuantumSize` property.
+The resulting context's render quantum size can be retrieved using this property.
 
 In the case of `AudioContext()`, when `hardware` is specified, the resulting `AudioContext` instance's `renderQuantumSize` will return `0` until its {{domxref("BaseAudioContext.state", "state")}} is `running`, to protect against fingerprinting. This is not the case with `OfflineAudioContext()`, where there is no concept of hardware, and specifying `hardware` is equivalent to `default`.
 
