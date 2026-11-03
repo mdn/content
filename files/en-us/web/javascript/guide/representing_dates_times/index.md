@@ -9,7 +9,7 @@ sidebar: jssidebar
 
 Dates and times are everywhere in web applications. Want to calculate how long since the last scheduled payment? Want to set a reminder for "next Tuesday, 1 pm" or "My friend's birthday"? Want to display the time when each file was created? This guide explains the details behind handling dates and times in JavaScript, and gives you a gentle introduction to the gigantic {{jsxref("Temporal")}} API.
 
-This guide mixes introduction to the API methods and properties with explanations of date mechanisms, especially calendars and time zones. If you are only interested in snippets for common use cases, see our [Temporal cookbook](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times/Cookbook).
+This guide introduces the API methods and properties and explains date mechanisms, especially calendars and time zones. If you are only interested in snippets for common use cases, see our [Temporal cookbook](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times/Cookbook).
 
 ## Instants
 
@@ -152,9 +152,9 @@ console.log(bastilleFall.offset); // "+00:09:21"
 
 The sun reaches its highest position in Paris roughly **9 minutes** before it does in London. Therefore, a clock keeping Paris mean time will be about 9 minutes ahead of a clock keeping Greenwich mean time so that they synchronize in tracking the sun's position. This is why our "fall of the Bastille" instant, which is `17:00:00` in UTC, becomes `17:09:21` in the local mean time used for Paris by the time zone database—that's 9 minutes 21 seconds ahead!
 
-Time zone offsets are not constant; for a given time zone, they can change multiple times, or even alternate throughout history. This is why two ZDTs representing different instants may report different offsets, despite being in the same time zone. Paris is a great example to illustrate this:
+Time zone offsets are not constant; for a given time zone, they can change multiple times, or even alternate throughout history. This is why two ZDTs representing different instants may report different offsets, despite being in the same time zone. There are many factors that affect the offset:
 
-- The `+00:09:21` offset above, as explained, is the Paris mean time, used by Paris and the Metropolitan France in older times (like when the Bastille fell).
+- The `+00:09:21` offset explained above is the Paris mean time, used by Paris and the Metropolitan France in older times (like when the Bastille fell). Similarly, New York originally used the offset `-4:56:02`.
 - During the late nineteenth and early twentieth centuries, as international travel became more common, having these irregular offsets turned out to be a great nuisance, especially when reading train time tables or adjusting watches. Countries increasingly adopted **standardized time zones**, often with offsets in whole hours from Greenwich Mean Time (GMT). For example, [Metropolitan France switched to GMT in 1911](https://en.wikipedia.org/wiki/Time_in_France#history). At what would have been midnight on March 11 under the old offset, clocks were set backward by 9 minutes 21 seconds to 23:50:39 on March 10:
 
   | UTC time            | Local time          | Offset    |
