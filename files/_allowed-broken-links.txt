@@ -102,23 +102,12 @@ Web/MathML/Reference/Global_attributes/tabindex
 
 # SVG attribute index entries.
 # Some are shared with other references or lack standalone SVG pages.
-Web/SVG/Reference/Attribute/hreflang
-Web/SVG/Reference/Attribute/offset
-Web/SVG/Reference/Attribute/ping
-Web/SVG/Reference/Attribute/referrerPolicy
-Web/SVG/Reference/Attribute/rel
-Web/SVG/Reference/Attribute/title
-Web/SVG/Reference/Attribute/xlink:actuate
 Web/SVG/Reference/Attribute/xlink:role
 
 # WebDriver route migration and reference gaps.
 # Likely links left by restructuring or pages not yet added.
-Web/WebDriver/Reference/BiDi/Modules/browsingContext/userPromptClosed
-Web/WebDriver/Reference/BiDi/Modules/browsingContext/userPromptOpened
 Web/WebDriver/Reference/BiDi/Modules/browser/setClientWindowState
 Web/WebDriver/Reference/BiDi/Modules/script/callFunction
-Web/WebDriver/Reference/BiDi/Modules/script/evaluate
-Web/WebDriver/Reference/BiDi/Modules/script/getRealms
 Web/WebDriver/Reference/BiDi/Modules/script/stackTrace
 Web/WebDriver/Reference/Capabilities/browserName
 Web/WebDriver/Reference/Capabilities/browserVersion
