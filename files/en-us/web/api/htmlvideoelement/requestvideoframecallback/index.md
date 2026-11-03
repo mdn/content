@@ -79,74 +79,80 @@ You can compare the `now` callback parameter and the `expectedDisplayTime` metad
 
 This example shows how to use `requestVideoFrameCallback()` to draw the frames of a video onto a {{htmlelement("canvas")}} element at exactly the same frame rate as the video. It also logs the frame metadata to the screen for debugging purposes.
 
-The technique given in the section Description that helps determine whether your callback is a v-sync late can be used for fine analysis of your application but, en masse, this trick is prone to produce a garbled output when used to compute a frame-per-second parameter on the fly. In the example below we hide the video controls for the first time playback and record increments of 'now' and 'metadata.mediaTime', on each frame played. The parameter fps can be calculated manually from these increments, i.e. fps = ((metadata.presentedFrames - 1) / metadata.mediaTime). Video controls are made enabled after the 'ended' event is triggered and processed.
+The technique given in the section Description that helps determine whether your callback is a v-sync late can be used for fine analysis of your application but, en masse, this trick is prone to produce a garbled output when used to compute a frame-per-second parameter on the fly. In the example below we hide the video controls for the first time playback and record increments of 'now' and 'metadata.mediaTime', on each frame played. The parameter fps can be calculated manually from these increments, i.e., fps = ((metadata.presentedFrames - 1) / metadata.mediaTime). Video controls are made enabled after the 'ended' event is triggered and processed.
 
 In later playback runs you can pause playback and seek in the timeline to observe the metadata evolution. You can also select the video source from three options on the page. After re-connect, the timing data list is recorded in the first-time playback with this source.
 
 ```js
-        const button = document.querySelector("button");
-        const video = document.querySelector("video");
-        const canvas = document.querySelector("canvas");
-        const ctx = canvas.getContext("2d");
-        const fpsInfo = document.querySelector("#fps-info");
-        const metadataInfo = document.querySelector("#metadata-info");
+const button = document.querySelector("button");
+const video = document.querySelector("video");
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+const fpsInfo = document.querySelector("#fps-info");
+const metadataInfo = document.querySelector("#metadata-info");
 
-        let firstRun = true;
-        let requestVideoFrameCallbackId = null;
+let firstRun = true;
+let requestVideoFrameCallbackId = null;
 
-        button.addEventListener("click", () =>
-            video.paused ? video.play() : video.pause(),
-        );
+button.addEventListener("click", () =>
+  video.paused ? video.play() : video.pause(),
+);
 
-        video.addEventListener("play", () => {
-            if (!("requestVideoFrameCallback" in HTMLVideoElement.prototype)) {
-                console.error(
-                    "Your browser does not support the `Video.requestVideoFrameCallback()` API.",
-                );
-            };
-            video.requestVideoFrameCallback(updateCanvas);
-        });
+video.addEventListener("play", () => {
+  if (!("requestVideoFrameCallback" in HTMLVideoElement.prototype)) {
+    console.error(
+      "Your browser does not support the `Video.requestVideoFrameCallback()` API.",
+    );
+  }
+  video.requestVideoFrameCallback(updateCanvas);
+});
 
-        video.addEventListener("ended", () => {
-            video.cancelVideoFrameCallback(requestVideoFrameCallbackId);
-            video.controls = true;
-            firstRun = false;
-        });
+video.addEventListener("ended", () => {
+  video.cancelVideoFrameCallback(requestVideoFrameCallbackId);
+  video.controls = true;
+  firstRun = false;
+});
 
-        let prevNow = 0;
-        let prevMediaTime = 0;
-        const updateCanvas = (now, metadata) => {
+let prevNow = 0;
+let prevMediaTime = 0;
+const updateCanvas = (now, metadata) => {
+  canvas.width = metadata.width;
+  canvas.height = metadata.height;
 
-            canvas.width = metadata.width;
-            canvas.height = metadata.height;
+  ctx.drawImage(video, 0, 0, metadata.width, metadata.height);
 
-            ctx.drawImage(video, 0, 0, metadata.width, metadata.height);
+  if (firstRun && metadata.presentedFrames > 2) {
+    //const fps = ((metadata.presentedFrames - 1) / metadata.mediaTime).toFixed(3);
+    fpsInfo.innerText +=
+      "{ " +
+      ((now - prevNow) / 1000).toFixed(5) +
+      ", " +
+      (metadata.presentedFrames - 1) +
+      ", " +
+      (metadata.mediaTime - prevMediaTime).toFixed(5) +
+      "}";
+  }
+  prevNow = now;
+  prevMediaTime = metadata.mediaTime;
+  metadataInfo.innerText = JSON.stringify(metadata, null, 2);
 
-            if (firstRun && (metadata.presentedFrames > 2)) {
-                //const fps = ((metadata.presentedFrames - 1) / metadata.mediaTime).toFixed(3);
-                fpsInfo.innerText += "{ " + ((now - prevNow)/1000).toFixed(5) + ", " + (metadata.presentedFrames - 1) + ", " + (metadata.mediaTime - prevMediaTime).toFixed(5) + "}";
-            }
-            prevNow = now;
-            prevMediaTime = metadata.mediaTime;
-            metadataInfo.innerText = JSON.stringify(metadata, null, 2);
+  if (video.paused || video.ended) {
+    return;
+  }
 
-            if (video.paused || video.ended) {
-                return;
-            }
+  requestVideoFrameCallbackId = video.requestVideoFrameCallback(updateCanvas);
+};
 
-            requestVideoFrameCallbackId = video.requestVideoFrameCallback(updateCanvas);
-        };
+video.src = "https://mdn.github.io/shared-assets/videos/flower.mp4";
 
-        video.src = "https://mdn.github.io/shared-assets/videos/flower.mp4";
+requestVideoFrameCallbackId = video.requestVideoFrameCallback(updateCanvas);
 
-        requestVideoFrameCallbackId = video.requestVideoFrameCallback(updateCanvas);
-
-        function reconnect(ref){
-            video.src = ref;
-            video.controls = false;
-            firstRun = true;
-            fpsInfo.innerText = "";
-        }
+function reconnect(ref) {
+  video.src = ref;
+  video.controls = false;
+  firstRun = true;
+  fpsInfo.innerText = "";
+}
 ```
 
 ```css
@@ -161,30 +167,38 @@ div {
 ```
 
 ```html
-    Select video source: <select title="videoSource" onchange="reconnect(this.value)">
-        <option value="https://mdn.github.io/shared-assets/videos/flower.mp4">Flower</option>
-        <option value="https://mdn.github.io/shared-assets/videos/learn/bug_video_640.mp4">Bug</option>
-        <option value="https://mdn.github.io/shared-assets/videos/sintel-short.mp4">Sintel</option>
-    </select>
-    <p>
-        Start <button type="button">⏯</button> playing the video. Pause the video to
-        read the metadata. Drawing video frames on the canvas is synced with the
-        actual video framerate.
-    </p>
-    <video playsinline></video>
-    <canvas></canvas>
-    <pre id="metadata-info"></pre>
-    <p>
-        During the first time playback, increments of 'now' and 'metadata.mediaTime'
-        of requestVideoFrame callback in each frame played are recorded and typed
-        in the div below with &Delta;now, frame# and &Delta;mediaTime values
-        {&lt;&Delta;now&gt; &lt;frame#&gt;, &lt;&Delta;mediaTime&gt;}. 
-        Parameter fps can be calculated manually from this data: fps = 1/&Delta;mediaTime.
-        Video controls are hidden in the first run and become displayed after the
-        'ended' event is triggered and processed. When video source is selected, 
-        the fps data list is calculated anew in the first playback with this source.
-    </p>
-    <div id="fps-info"></div>
+Select video source:
+<select title="videoSource" onchange="reconnect(this.value)">
+  <option value="https://mdn.github.io/shared-assets/videos/flower.mp4">
+    Flower
+  </option>
+  <option
+    value="https://mdn.github.io/shared-assets/videos/learn/bug_video_640.mp4">
+    Bug
+  </option>
+  <option value="https://mdn.github.io/shared-assets/videos/sintel-short.mp4">
+    Sintel
+  </option>
+</select>
+<p>
+  Start <button type="button">⏯</button> playing the video. Pause the video to
+  read the metadata. Drawing video frames on the canvas is synced with the
+  actual video framerate.
+</p>
+<video playsinline></video>
+<canvas></canvas>
+<pre id="metadata-info"></pre>
+<p>
+  During the first time playback, increments of 'now' and 'metadata.mediaTime'
+  of requestVideoFrame callback in each frame played are recorded and typed in
+  the div below with &Delta;now, frame# and &Delta;mediaTime values
+  {&lt;&Delta;now&gt; &lt;frame#&gt;, &lt;&Delta;mediaTime&gt;}. Parameter fps
+  can be calculated manually from this data: fps = 1/&Delta;mediaTime. Video
+  controls are hidden in the first run and become displayed after the 'ended'
+  event is triggered and processed. When video source is selected, the fps data
+  list is calculated anew in the first playback with this source.
+</p>
+<div id="fps-info"></div>
 ```
 
 {{embedlivesample("drawing_video_frames_on_a_canvas", , "540")}}
