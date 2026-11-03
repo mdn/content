@@ -152,7 +152,7 @@ The `browser_action` key is an object that may have any of the following propert
 The browser action's icon may need to be displayed in different sizes in different contexts:
 
 - The icon is displayed in the browser toolbar. Older versions of Firefox supported the option of placing the icon in the browser's menu panel (the panel that opens when the user clicks the "hamburger" icon). In those versions of Firefox the icon in the menu panel was larger than the icon in the toolbar.
-- On a high-density display like a Retina screen, icons needs to be twice as big.
+- On a high-density display, icons need more pixels: twice as many on a 2x display, such as a Retina display, and three times as many on a 3x display, such as an iPhone.
 
 If the browser can't find an icon of the right size in a given situation, it will pick the best match and scale it. Scaling may make the icon appear blurry, so it's important to choose icon sizes carefully.
 
@@ -164,22 +164,35 @@ There are two main approaches to this. You can supply a single icon as an SVG fi
 
 Alternatively, you can supply several icons in different sizes, and the browser will pick the best match.
 
-In Firefox:
+The size the browser wants is the size at which it displays the icon, multiplied by the display's device pixel ratio. If the browser can't find an exact match for that size, it picks the smallest icon specified that's bigger than the ideal size. If all icons are smaller than the ideal size, it picks the biggest icon specified.
 
-- The default height and width for icons in the toolbar is 16 \* [`window.devicePixelRatio`](/en-US/docs/Web/API/Window/devicePixelRatio).
-- The default height and width for icons in the menu panel is 32 \* [`window.devicePixelRatio`](/en-US/docs/Web/API/Window/devicePixelRatio).
-
-So you can specify icons that match exactly, on both normal and Retina displays, by supplying three icon files, and specifying them like this:
+For example, if the browser displays the icon at 16 px, you can match exactly on 1x, 2x and 3x displays by supplying three icon files, and specifying them like this:
 
 ```json
 "default_icon": {
   "16": "path/to/geo-16.png",
   "32": "path/to/geo-32.png",
-  "64": "path/to/geo-64.png"
+  "48": "path/to/geo-48.png"
 }
 ```
 
-If Firefox can't find an exact match for the size it wants, then it will pick the smallest icon specified that's bigger than the ideal size. If all icons are smaller than the ideal size, it will pick the biggest icon specified.
+Browsers display the icon at different sizes, so no set of sizes matches exactly in every browser:
+
+| Browser | Displayed size (pt) | Sizes to supply (px) |
+| ------- | ------------------- | -------------------- |
+| Chrome  | 16                  | 16, 32               |
+| Firefox | 16                  | 16, 32               |
+| Safari  | 19                  | 19, 38, 57           |
+
+To avoid supplying a set of sizes for each browser, use an SVG icon, which scales to any size.
+
+### How Safari displays the action icon
+
+Safari shows whether the user has granted an extension access to the current page by changing how it draws the action icon. It also adjusts the image before drawing it:
+
+- When the extension has access, Safari shows a color icon unchanged and tints a grayscale icon with a system color.
+- When the extension doesn't have access, Safari draws any icon in grayscale, following light and dark appearance.
+- Fully transparent borders are removed, and the icon is scaled to a consistent size.
 
 ## Example
 

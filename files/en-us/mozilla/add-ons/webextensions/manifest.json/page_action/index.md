@@ -26,8 +26,8 @@ sidebar: addonsidebar
         <pre class="brush: json">
 "page_action": {
   "default_icon": {
-    "19": "button/geo-19.png",
-    "38": "button/geo-38.png"
+    "16": "button/geo-16.png",
+    "32": "button/geo-32.png"
   },
   "default_title": "Whereami?",
   "default_popup": "popup/geo.html"
@@ -65,12 +65,12 @@ The `page_action` key is an object that may have any of three properties, all op
 - `default_icon` {{optional_inline}}
   - : `Object` or `String`. Use this to specify an icon for the action.
 
-    It's recommended that you supply two icons here (19×19 pixels and 38×38 pixels), and specify them in an object with properties named `"19"` and `"38"`, like this:
+    It's recommended that you supply icons in more than one size, and specify them in an object with properties named for the size in pixels, like this:
 
     ```json
     "default_icon": {
-      "19": "geo-19.png",
-      "38": "geo-38.png"
+      "16": "geo-16.png",
+      "32": "geo-32.png"
     }
     ```
 
@@ -145,8 +145,8 @@ The `page_action` key is an object that may have any of three properties, all op
 ```json
 "page_action": {
   "default_icon": {
-    "19": "button/geo-19.png",
-    "38": "button/geo-38.png"
+    "16": "button/geo-16.png",
+    "32": "button/geo-32.png"
   }
 }
 ```
@@ -160,8 +160,8 @@ browser.pageAction.onClicked.addListener(handleClick);
 ```json
 "page_action": {
   "default_icon": {
-    "19": "button/geo-19.png",
-    "38": "button/geo-38.png"
+    "16": "button/geo-16.png",
+    "32": "button/geo-32.png"
   },
   "default_title": "Whereami?",
   "default_popup": "popup/geo.html"
