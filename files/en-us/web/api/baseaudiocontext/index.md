@@ -24,7 +24,7 @@ A `BaseAudioContext` can be a target of events, therefore it implements the {{do
 - {{domxref("BaseAudioContext.listener")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("AudioListener")}} object, used for 3D spatialization.
 - {{domxref("BaseAudioContext.renderQuantumSize")}} {{ReadOnlyInline}}
-  - : Returns an integer representing the render quantum size of the audio graph, which is the number of audio sample frames per processing block.
+  - : Returns an integer representing the render quantum size of the audio graph, which is the number of audio sample frames processed in each processing iteration.
 - {{domxref("BaseAudioContext.sampleRate")}} {{ReadOnlyInline}}
   - : Returns a float representing the sample rate (in samples per second) used by all nodes in this context. The sample-rate of an {{domxref("AudioContext")}} cannot be changed.
 - {{domxref("BaseAudioContext.state")}} {{ReadOnlyInline}}

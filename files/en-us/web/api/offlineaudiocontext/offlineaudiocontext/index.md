@@ -8,10 +8,7 @@ browser-compat: api.OfflineAudioContext.OfflineAudioContext
 
 {{APIRef("Web Audio API")}}
 
-The
-**`OfflineAudioContext()`** constructor creates and returns a new
-{{domxref("OfflineAudioContext")}} object instance, which can then be used to render
-audio to an {{domxref("AudioBuffer")}} rather than to an audio output device.
+The **`OfflineAudioContext()`** constructor creates and returns a new {{domxref("OfflineAudioContext")}} object instance, which can then be used to render audio to an {{domxref("AudioBuffer")}} rather than to an audio output device.
 
 ## Syntax
 
@@ -27,14 +24,14 @@ new OfflineAudioContext(numberOfChannels, length, sampleRate)
 - `length`
   - : An integer specifying the size of the buffer to create for the audio context, in sample frames, where one sample frame is a unit that can contain a single sample of
     audio data for every channel in the audio data. For example, a 5-second buffer with a `sampleRate` of 48000Hz would have a length of `5 * 48000 = 240000` sample frames. The `length` must be greater than `0`, and the upper limit is bounded only by the system's available memory.
-- `renderSizeHint` {{optional_inline}}
-  - : Requests a render quantum size for your audio context as a number of audio frames (see {{domxref("BaseAudioContext.renderQuantumSize")}} for more information). Possible values are:
+- `renderSizeHint` {{optional_inline}} {{experimental_inline}}
+  - : Requests a render quantum size for your audio context as a number of audio [sample frames](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_graphs:~:text=sample%20frame) (see {{domxref("BaseAudioContext.renderQuantumSize")}} for more information). Possible values are:
     - `default`
       - : Uses the default value of `128`.
     - `hardware`
-      - : Asks the browser to choose a suitable size for the underlying hardware. There is no concept of hardware for an `OfflineAudioContext`, so specifying `hardware` in this case is equivalent to `default`.
+      - : Asks the browser to choose a suitable size for the underlying hardware. An `OfflineAudioContext` renders audio to an audio buffer, so hardware timing and latency don't apply, therefore specifying `hardware` in this case is equivalent to `default`.
     - An integer
-      - : A specific number of frames between `1` and 6 times the context's `sampleRate` (rounded down if this is not an integer), inclusive. The requested value may not be honored exactly; you can query the context's `renderQuantumSize` to check the actual selected value.
+      - : A specific number of frames between `1`, and 6 times the context's `sampleRate` (rounded down if this is not an integer), inclusive. The requested value may not be honored exactly; you can query the context's `renderQuantumSize` to check the actual selected value.
 
     If omitted, `renderSizeHint` defaults to `128`.
 - `sampleRate`
@@ -69,8 +66,7 @@ const source = offlineCtx.createBufferSource();
 // …
 ```
 
-For a full working example, see our [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/)
-GitHub repo (see the [source code](https://github.com/mdn/webaudio-examples/blob/main/offline-audio-context-promise/index.html) too.)
+For a full working example, see our [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) GitHub repo (see the [source code](https://github.com/mdn/webaudio-examples/blob/main/offline-audio-context-promise/index.html) too.)
 
 ## Specifications
 
