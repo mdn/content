@@ -47,7 +47,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 ### HTML-in-Canvas instance methods
 
 - {{domxref("HTMLCanvasElement.captureElementImage()")}}
-  - : Captures a snapshot of a [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) element, which can be rendered later on.
+  - : Captures a snapshot of a [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) element's current rendered state, which can be rendered later on.
 - {{domxref("HTMLCanvasElement.updateElementGeometry()")}}
   - : Supplies a {{domxref("DOMMatrix")}} that updates the size, shape, and position of a `drawable` element's underlying DOM presence so that it can be kept in sync with the canvas rendering as it updates for hit testing purposes.
 - {{domxref("HTMLCanvasElement.clearElementGeometry()")}}

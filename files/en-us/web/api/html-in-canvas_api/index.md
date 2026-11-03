@@ -60,7 +60,7 @@ For more information, read our guides, starting with [Using the HTML-in-Canvas A
 - {{domxref("HTMLCanvasElement.content")}}
   - : Indicates whether the `<canvas>` element is opted into rendering its descendants rather than treating them as [fallback content](/en-US/docs/Web/HTML/Reference/Elements/canvas#fallback_content). Reflects the value of the HTML [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute.
 - {{domxref("HTMLCanvasElement.captureElementImage()")}}
-  - : Captures a snapshot of a `drawable` element, which can be rendered later on.
+  - : Captures a snapshot of a `drawable` element's current rendered state, which can be rendered later on.
 - {{domxref("HTMLCanvasElement.updateElementGeometry()")}}
   - : Supplies a {{domxref("DOMMatrix")}} that updates the size, shape, and position of a `drawable` element's underlying DOM presence so that it can be kept in sync with the canvas rendering as it updates for hit testing purposes.
 - {{domxref("HTMLCanvasElement.clearElementGeometry()")}}
