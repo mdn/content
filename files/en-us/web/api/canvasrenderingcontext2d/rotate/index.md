@@ -18,7 +18,7 @@ method of the Canvas 2D API adds a rotation to the transformation matrix.
 rotate(angle)
 ```
 
-![Default canvas coordinate axes with x pointing right and y pointing down. A single-headed arrow shows a positive angle rotating the axes clockwise to x prime and y prime.](canvas_grid_rotate.svg)
+![Rectangular coordinate system with the rotation of the abscissa axis by the alpha angle](canvas_grid_rotate.svg)
 
 ### Parameters
 
