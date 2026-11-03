@@ -10,7 +10,7 @@ browser-compat: api.CSSMathNegate.value
 
 The **`value`** read-only property of the {{domxref("CSSMathNegate")}} interface returns the {{domxref("CSSNumericValue")}} that is being negated.
 
-This is the value passed to the constructor, rectified to a {{domxref("CSSNumericValue")}} (if it isn't one already).
+This is the value passed to the constructor, converted to a {{domxref("CSSNumericValue")}} if it isn't one already.
 If a plain number was passed to the constructor the value returned by this property is the passed value wrapped in a {{domxref("CSSUnitValue")}} with `unit: "number"`.
 
 ## Value
