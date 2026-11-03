@@ -12,7 +12,7 @@ The **`renderQuantumSize`** read-only property of the {{domxref("BaseAudioContex
 
 ## Value
 
-An integer.
+A non-negative integer.
 
 ## Description
 
