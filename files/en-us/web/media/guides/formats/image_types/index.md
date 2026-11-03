@@ -86,7 +86,7 @@ The image file formats that are most commonly used on the web are listed below.
       <td>
         Supports lossy and lossless compression, progressive decoding, HDR, wide color gamuts, transparency, and animation.
         Because browser support is not yet universal, provide a fallback using the <code><a href="/en-US/docs/Web/HTML/Reference/Elements/picture">&lt;picture&gt;</a></code> element.<br />
-        <strong>Support:</strong> Safari; Chrome behind a flag; Firefox Nightly.
+        <strong>Support:</strong> Chrome, Edge, Firefox, Safari.
       </td>
     </tr>
     <tr>
@@ -873,7 +873,7 @@ When using JPEG XL, provide an alternative format such as AVIF, WebP, or JPEG [w
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        Safari 17 and later. Chrome 145 and later supports JPEG XL behind the <code>#enable-jxl-image-format</code> flag. Firefox supports it in preview releases. Safari does not support progressive download of JPEG XL files (it can render them after complete download).
+        Chrome 155, Edge 155, Firefox 158, and Safari 17. Safari does not support progressive download of JPEG XL files (it can render them after complete download).
       </td>
     </tr>
     <tr>

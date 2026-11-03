@@ -104,6 +104,6 @@ Object.is(NaN, Number.NaN); // true
 
 ## See also
 
-- [Polyfill of `Object.is` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.is` in `core-js`](https://core-js.io/docs/features/ecmascript/object)
 - [es-shims polyfill of `Object.is`](https://www.npmjs.com/package/object.is)
 - [Equality comparisons and sameness](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)

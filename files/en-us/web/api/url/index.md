@@ -60,7 +60,7 @@ You normally create a new `URL` object by specifying the URL as a string when ca
 - {{domxref("URL.toString", "toString()")}}
   - : Returns a string containing the whole URL. It is a synonym for {{domxref("URL.href")}}, though it can't be used to modify the value.
 - {{domxref("URL.toJSON", "toJSON()")}}
-  - : Returns a string containing the whole URL. It returns the same string as the `href` property.
+  - : Returns a string representing the `URL` object, which is the same value as {{domxref("URL.toString()")}}. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Usage notes
 
@@ -129,7 +129,7 @@ const response = await fetch(
 
 ## See also
 
-- [Polyfill of `URL` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [Polyfill of `URL` in `core-js`](https://core-js.io/docs/features/web-standards/url)
 - [URL API](/en-US/docs/Web/API/URL_API)
 - [What is a URL?](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - {{domxref("URLSearchParams")}}.

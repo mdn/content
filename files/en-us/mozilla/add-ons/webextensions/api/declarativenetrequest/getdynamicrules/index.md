@@ -1,5 +1,5 @@
 ---
-title: declarativeNetRequest.getDynamicRules
+title: declarativeNetRequest.getDynamicRules()
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/getDynamicRules
 page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.getDynamicRules

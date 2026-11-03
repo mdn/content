@@ -9,10 +9,10 @@ browser-compat: api.MediaStreamTrack.applyConstraints.autoGainControl_constraint
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's **`autoGainControl`** property is a [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) describing the requested or mandatory constraints placed
-upon the value of the {{domxref("MediaTrackSettings.autoGainControl", "autoGainControl")}} constrainable property.
+upon the value of the [`autoGainControl`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#autogaincontrol) constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
-the value of {{domxref("MediaTrackSupportedConstraints.autoGainControl")}} as returned
+the value of [`autoGainControl`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#autogaincontrol) as returned
 by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically
 this is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
@@ -46,5 +46,4 @@ See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API
 - [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
-- {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("MediaStreamTrack")}}

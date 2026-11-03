@@ -47,9 +47,6 @@ new ReportingObserver(callback, options)
         - `coep`
           - : Violations of the site's {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP).
             Reports are {{domxref("COEPViolationReport")}} instances.
-        - `coop`
-          - : Violations of the site's {{httpheader("Cross-Origin-Opener-Policy")}} (COOP).
-            Reports are {{domxref("COOPViolationReport")}} instances.
         - `crash`
           - : Browser crash reports.
             Reports are {{domxref("CrashReport")}} instances. Note that crash reports aren't retrievable via a `ReportingObserver` but can be sent to a server.

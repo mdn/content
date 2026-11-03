@@ -1160,6 +1160,12 @@ If you want to present a custom error message when a field fails to validate, yo
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 The basic HTML form validation features will cause this to produce a default error message if you try to submit the form with either no valid filled in, or a value that does not match the `pattern`.
 
 If you wanted to instead display custom error messages, you could use JavaScript like the following:

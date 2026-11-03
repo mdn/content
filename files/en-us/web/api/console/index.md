@@ -23,6 +23,8 @@ console.log("Failed to open the specified link");
   - : Log an error message to console if the first argument is `false`.
 - {{domxref("console/clear_static", "console.clear()")}}
   - : Clear the console.
+- {{domxref("console/context_static", "console.context()")}} {{Non-standard_inline}}
+  - : Creates a new console context, an object with most of the `console` methods whose messages are associated with an optional label.
 - {{domxref("console/count_static", "console.count()")}}
   - : Log the number of times this line has been called with the given label.
 - {{domxref("console/countReset_static", "console.countReset()")}}
@@ -60,7 +62,7 @@ console.log("Failed to open the specified link");
 - {{domxref("console/timeLog_static", "console.timeLog()")}}
   - : Logs the value of the specified [timer](#timers) to the console.
 - {{domxref("console/timeStamp_static", "console.timeStamp()")}} {{Non-standard_inline}}
-  - : Adds a marker to the browser performance tool's timeline ([Chrome](https://developer.chrome.com/docs/devtools/performance/reference) or [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline)).
+  - : Adds a marker to a performance recording in developer tools that support it. Recording and display depend on the browser and profiling tool.
 - {{domxref("console/trace_static", "console.trace()")}}
   - : Outputs a [stack trace](#stack_traces).
 - {{domxref("console/warn_static", "console.warn()")}}

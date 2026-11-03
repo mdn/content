@@ -24,6 +24,12 @@ The browser will consider each child `<source>` element and choose the best matc
 </picture>
 ```
 
+## Attributes
+
+This element includes only [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
+
+## Usage notes
+
 To decide which URL to load, the {{Glossary("user agent")}} examines each `<source>`'s [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/source#srcset), [`media`](/en-US/docs/Web/HTML/Reference/Elements/source#media), and [`type`](/en-US/docs/Web/HTML/Reference/Elements/source#type) attributes to select a compatible image that best matches the current layout and capabilities of the display device.
 
 The `<img>` element serves two purposes:
@@ -42,12 +48,6 @@ Common use cases for `<picture>`:
 - **Saving bandwidth and speeding page load times** by loading the most appropriate image for the viewer's display.
 
 If providing higher-density versions of an image for high-DPI (Retina) display, use [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) on the `<img>` element instead. This lets browsers opt for lower-density versions in data-saving modes, and you don't have to write explicit `media` conditions.
-
-## Attributes
-
-This element includes only [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
-
-## Usage notes
 
 You can use the {{cssxref("object-position")}} property to adjust the positioning of the image within the element's frame, and the {{cssxref("object-fit")}} property to control how the image is resized to fit within the frame.
 

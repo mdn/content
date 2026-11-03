@@ -82,7 +82,7 @@ new WebTransport(url, options)
 - `SyntaxError`
   - : Thrown if the specified `url` is invalid, if the scheme is not HTTPS, or if the URL includes a fragment.
     Also thrown if `protocols` contains a duplicate value, a value with characters not allowed in a protocol token, or a value whose encoded length is `0` or greater than `512` bytes.
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if a `serverCertificateHashes` is set for a non-dedicated connection (in other words, if `allowPooling` is `true`).
 
 ## Examples

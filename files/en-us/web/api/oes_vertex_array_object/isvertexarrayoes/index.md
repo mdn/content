@@ -6,7 +6,7 @@ page-type: webgl-extension-method
 browser-compat: api.OES_vertex_array_object.isVertexArrayOES
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`OES_vertex_array_object.isVertexArrayOES()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns `true` if

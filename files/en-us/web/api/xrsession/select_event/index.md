@@ -16,11 +16,15 @@ The {{domxref("Element.beforexrselect_event", "beforexrselect")}} is fired befor
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("select", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onselect = (event) => { }
 ```
 
@@ -62,7 +66,7 @@ xrSession.addEventListener("select", (event) => {
 });
 ```
 
-You can also set up a handler for `select` events by setting the {{domxref("XRSession")}} object's `onselect` event handler property to a function that handles the event:
+You can also set up a handler for `select` events by setting the {{domxref("XRSession")}} object's `onselect` event handler property to a function that handles the event (but note that this replaces other event listeners added using `onselect`, if any):
 
 ```js
 xrSession.onselect = (event) => {

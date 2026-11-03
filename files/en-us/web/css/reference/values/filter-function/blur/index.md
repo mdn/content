@@ -46,7 +46,7 @@ blur(1.17rem)  /* Blur with 1.17rem radius */
 ### Parameters
 
 - {{cssxref("length")}} {{Optional_Inline}}
-  - : Specifies the radius of the blur. It defines the value of the standard deviation to the Gaussian function, that is, how many pixels on the screen blend into each other. Therefore, a larger value will create more blur. A value of `0` leaves the input unchanged. The initial value for {{Glossary("interpolation")}} is `0`. Percentage values are invalid. The default value is `0`.
+  - : Specifies the radius of the blur. It defines the value of the standard deviation to the Gaussian function, that is, how many pixels on the screen blend into each other. Therefore, a larger value will create more blur. A value of `0` leaves the input unchanged. The initial value for {{Glossary("interpolation")}} is `0`. Percentage values and negative values are invalid. The default value is `0`.
 
 ## SVG filter
 

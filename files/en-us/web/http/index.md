@@ -89,7 +89,7 @@ Beginners are encouraged to start with the foundational guides before exploring 
 - [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP)
   - : CSP allows website administrators to use the {{HTTPHeader("Content-Security-Policy")}} response header to control which resources the client is allowed to load for a given page.
     The CSP guide describes the overall Content Security Policy mechanism which helps detect and mitigate certain types of attacks, including Cross-Site Scripting (XSS) and data injection attacks.
-- [Cross-Origin Resource Policy (CORP)](/en-US/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy)
+- [Cross-Origin Resource Policy (CORP)](/en-US/docs/Web/Security/Practical_implementation_guides/CORP)
   - : CORP lets websites and applications opt in to protection against specific requests from other origins (such as those issued with elements like `<script>` and `<img>`), to mitigate speculative side-channel attacks.
 - [Mozilla web security guidelines](https://infosec.mozilla.org/guidelines/web_security)
   - : A collection of tips to help operational teams with creating secure web applications.

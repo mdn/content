@@ -85,7 +85,7 @@ parseLog("1560979912,Caroline"); // "Caroline committed on 6/19/2019, 5:31:52 PM
 
 ## See also
 
-- [Polyfill of named capturing groups in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of named capturing groups in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) guide
 - [Regular expressions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Capturing group: `(...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)

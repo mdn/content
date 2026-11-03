@@ -127,7 +127,7 @@ A {{jsxref("Promise")}} that resolves with a new {{domxref("LanguageModel")}} in
     - A message's `prefix` property is set to `true` and:
       - The message's `role` is not `assistant`.
       - The message is not the last item in the messages array.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if:
     - A message's `role` is `system` but it was not the first message passed to the context.
 

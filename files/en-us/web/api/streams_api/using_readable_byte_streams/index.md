@@ -71,7 +71,7 @@ Backpressure support is not demonstrated.
 > An underlying byte source can also be used with a default reader.
 > If automatic buffer allocation is enabled the controller will supply fixed-size buffers for zero-copy transfers when there is an outstanding request from a reader and the stream's internal queues are empty.
 > If automatic buffer allocation is not enabled then all data from the byte stream will always be enqueued.
-> This is similar to the behavior shown in the "pull: underlying byte source examples.
+> This is similar to the behavior shown in the [Underlying pull source with default reader](#underlying_pull_source_with_default_reader) and [Underlying pull source with default reader and no allocation](#underlying_pull_source_with_default_reader_and_no_allocation) examples.
 
 #### Mocked underlying socket source
 

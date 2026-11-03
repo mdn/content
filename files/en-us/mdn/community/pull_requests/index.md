@@ -57,9 +57,11 @@ If you're not sure where to start, reach out to us on [the Discord server](/disc
 
 When you're ready to open a pull request, follow these guidelines:
 
+- **Review your changes before you open a pull request:** A human must review every pull request before it is opened, including pull requests created by automated tools on your behalf.
+  Make sure that you understand each change and have tested any code.
 - **Pull requests should be short and focused to one issue:** If possible, group related set of changes into multiple, small pull requests.
   If a pull request becomes too large, the reviewer may close it and ask that you to submit pull requests for each logical set of changes that belong together.
-- **Add a description of the changes:** Provide as much context and rationale for the pull request as possible.
+- **Add a description of the changes:** Explain what you changed and why, in your own words.
 - **Add the link to the issue you are closing:** In the pull request description, add 'Fixes' if it fully resolves the issue or 'Relates to' if it is a related issue.
   More information about linking to issues in pull requests can be found in [GitHub docs](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
 - **Add 'depends on'** with a link to a dependency if there are pull requests that must be merged first (e.g., code examples in other repositories).
@@ -69,6 +71,8 @@ When you're ready to open a pull request, follow these guidelines:
 - **Don't make grammar-only changes:**
   MDN Web Docs contains technical documentation; you should not suggest prose style changes except where grammar is incorrect.
 - **Don't unnecessarily add or remove line breaks** on pages that follow a certain formatting style.
+
+We reserve the right to close pull requests that don't follow these guidelines.
 
 ### After you open a pull request
 

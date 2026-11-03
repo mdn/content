@@ -119,6 +119,6 @@ if (typeof globalThis.Intl === "undefined") {
 
 ## See also
 
-- [Polyfill of `globalThis` in `core-js`](https://github.com/zloirock/core-js#ecmascript-globalthis)
+- [Polyfill of `globalThis` in `core-js`](https://core-js.io/docs/features/ecmascript/global-this)
 - [es-shims polyfill of `globalThis`](https://www.npmjs.com/package/globalthis)
 - {{jsxref("this")}}

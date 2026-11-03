@@ -121,5 +121,4 @@ document.getElementById("hiddenAlertContainer").textContent =
 - [ARIA: `timer` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/timer_role)
 - [ARIA: `alertdialog` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role)
 - [ARIA: live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions)
-- [ARIA alert support - Vispero](https://vispero.com/resources/aria-alert-support/)
 - [ARIA Practices alert example](https://www.w3.org/WAI/ARIA/apg/patterns/alert/examples/alert/)

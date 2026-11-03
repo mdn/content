@@ -447,7 +447,7 @@ body {
 p {
   padding: 10px;
   color: white;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgb(0 0 0 / 0.3);
 }
 
 section {
@@ -458,8 +458,8 @@ section {
 article {
   flex: 1;
   height: 300px;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/grapefruit-slice.jpg);
+  background-color: rgb(0 0 0 / 0.5);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/grapefruit-slice.jpg");
   background-size: 400px 400px;
   background-repeat: no-repeat;
   background-position: top center;

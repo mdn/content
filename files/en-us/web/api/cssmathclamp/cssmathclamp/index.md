@@ -27,7 +27,7 @@ new CSSMathClamp(lower, value, upper)
 
 ### Exceptions
 
-- [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
+- {{jsxref("TypeError")}}
   - : Thrown if the parameters have conflicting unit types.
     For example, mixing a length value with a time value.
 
