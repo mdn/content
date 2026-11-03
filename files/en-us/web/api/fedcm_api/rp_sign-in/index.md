@@ -66,7 +66,7 @@ The following diagram shows the sequence of requests:
 
 ![a visual representation of the flow described in detail below](fedcm-sign-in.svg)
 
-The first four steps are repeated for every IdP listed in the [`providers`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#providers) option.
+The first three steps are repeated for every IdP listed in the [`providers`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#providers) option.
 
 1. The first step is to fetch the IdP's configuration file. From the `configURL` provided for each IdP, the browser requests two files:
    - The [well-known file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_well-known_file)
@@ -80,20 +80,22 @@ The first four steps are repeated for every IdP listed in the [`providers`](/en-
 
 2. If the user is not currently [logged into the IdP](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api), and the request was made in [active mode](#active_versus_passive_mode), and only one IdP was listed in the `get()` parameters, then the browser will ask the user to log into the IdP.
 
-3. If the user is logged into the IdP, the browser makes a GET request to the [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint), using the value of the [`accounts_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint) property in the IdP config file. This request includes a cookie identifying the user that is signed in, but does not enable the IdP to learn which RP the user is trying to sign into.
+3. If the user is logged into the IdP (either because they were already logged in, or because they logged in at step 2), then the browser makes a GET request to the [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint), using the value of the [`accounts_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint) property in the IdP config file. This request includes a cookie identifying the user that is signed in, but does not enable the IdP to learn which RP the user is trying to sign into.
 
    The response contains an array of objects. Each object represents an account that the user has with this IdP, and includes an ID for this account and information such as the username and email address associated with the account. It also may include `approved_clients`, which is an array of client IDs, each of which identifies an RP that the user has signed up with using this IdP account.
 
-   > [!NOTE]
-   > If the user is logged out of all the given IdPs, the `get()` call rejects with a `NetworkError` {{domxref("DOMException")}} and does not make a request to any IdP's accounts list endpoint. Note that there may be some delay in the rejection to avoid leaking IdP login status to the RP.
+> [!NOTE]
+> After these three steps, the browser has an array of objects representing IdP accounts that the user is logged into.
+>
+> If the array is empty, the `get()` call rejects with a `NetworkError` {{domxref("DOMException")}}. Note that there may be some delay in the rejection to avoid leaking IdP login status to the RP.
+>
+> Otherwise, if the array contains exactly one IdP account that the user has previously used to sign into this RP, and the other criteria for [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication) are met, then the browser will skip to step 6, optionally asking the user to confirm that they wish to sign in using this IdP account.
 
-4. If the IdP config file contains a `client_metadata_endpoint` property, the browser makes a request to the [client metadata endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_client_metadata_endpoint) to fetch URLs for the RP's terms of service and privacy policy pages. This is a `GET` request sent without cookies but with the `clientId` passed into the `get()` call as a parameter.
+4. For each IdP account in the array, if the IdP config file contains a `client_metadata_endpoint` property, the browser makes a request to the [client metadata endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_client_metadata_endpoint) to fetch URLs for the RP's terms of service and privacy policy pages. This is a `GET` request sent without cookies but with the `clientId` passed into the `get()` call as a parameter.
 
-5. The browser uses the information obtained by the previous two sets of requests to create the UI asking the user to choose an IdP (if the user is logged into more than one) and an account to sign into the RP with. The UI also asks the user for permission to sign in to the RP using their chosen federated IdP account.
+5. The browser asks the user to choose an IdP account to sign into the RP with. The UI also asks the user for permission to sign in to the RP using their chosen IdP account.
 
-   If the user is signed into the IdP but does not already have an account with the RP — that is, the `approved_clients` array is empty — then the UI presented to the user will include **disclosure text**. This is additional information provided by the browser to explain to the user that they will be asked to create a new account on the RP, using the identity they have registered with the IdP. The disclosure text typically takes the form of a dialog including an option labeled "Continue as..." followed by the name under which the user is registered with the IdP. The disclosure text may also include links to the RP's terms of service and privacy policy, if these were given in the [client metadata endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_client_metadata_endpoint) for this RP. If the user agrees to continue, they will then be asked to create an account on the RP using their IdP identity.
-
-   If the user is signed into the IdP, does have an account with the current RP, and has logged in with it in the current browser instance, they may be able to [auto-reauthenticate](#auto-reauthentication). In this case the user will be signed in automatically without requiring any interaction.
+   If the user is signed into the IdP but does not already have an account with the RP — that is, the IdP's [`approved_clients`](/en-US/docs/Web/API/FedCM_API/IDP_integration#approved_clients) array does not contain the RP's client ID — then the UI presented to the user will include _disclosure text_. This is additional information provided by the browser to explain to the user that they will be asked to create a new account on the RP, using the identity they have registered with the IdP. The disclosure text typically takes the form of a dialog including an option labeled "Continue as..." followed by the name under which the user is registered with the IdP. The disclosure text may also include links to the RP's terms of service and privacy policy, if these were retrieved in step 4. If the user agrees to continue, they will then be asked to create an account on the RP using their IdP identity.
 
 6. Finally, if the user granted permission to do so, the browser makes a POST request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) of the selected IdP to request a token for the selected RP account. The request includes cookies.
 
