@@ -42,6 +42,7 @@ async function signIn() {
   const identityCredential = await navigator.credentials.get({
     identity: {
       context: "signup",
+      mode: "active",
       providers: [
         {
           configURL: "https://accounts.idp.example/config.json",
