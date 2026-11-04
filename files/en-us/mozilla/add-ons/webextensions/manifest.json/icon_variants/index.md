@@ -44,7 +44,7 @@ sidebar: addonsidebar
 
 The `icon_variants` key specifies icons for your extension, with a separate set of icons for each color scheme. The browser uses these icons wherever it represents the extension, for example in the extension management page. It replaces [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons), which can't describe light and dark icons.
 
-When both keys are present, the browser uses `icon_variants` instead of `icons`. Declare `icons` as well so the extension has icons in browsers that don't support `icon_variants`. The sizes browsers display are the same as for [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons).
+When both keys are present, the browser uses `icon_variants` instead of `icons`. Declare `icons` as well so the extension has icons in browsers that don't support `icon_variants`. For the formats and sizes to provide for each browser, see [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons).
 
 To set icons for the extension's toolbar button, use `icon_variants` in the [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) key. To change the icon at runtime, use the `variants` property of {{WebExtAPIRef("action.setIcon()")}}.
 

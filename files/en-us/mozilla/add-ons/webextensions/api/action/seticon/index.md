@@ -45,7 +45,7 @@ let settingIcon = browser.action.setIcon(
         });
         ```
 
-        The browser will choose the image to use depending on the display's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action#choosing_icon_sizes) for more information on this.
+        The browser will choose the image to use depending on the display's pixel density. See [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons) for more information on this.
 
     - `path` {{optional_inline}}
       - : `string` or `object`. This is either a relative path to an icon file or it is a dictionary object.
@@ -61,7 +61,7 @@ let settingIcon = browser.action.setIcon(
         });
         ```
 
-        The browser will choose the image to use depending on the display's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action#choosing_icon_sizes) for more information on this.
+        The browser will choose the image to use depending on the display's pixel density. See [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons) for more information on this.
 
     - `variants` {{optional_inline}}
       - : `Array` of `Object`. Icons with a separate set for each color scheme. Each object is an icon group, with these properties:
