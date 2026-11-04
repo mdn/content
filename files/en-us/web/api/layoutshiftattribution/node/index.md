@@ -23,7 +23,7 @@ The following example prints the `node` of the first item in {{domxref("LayoutSh
 ```js
 new PerformanceObserver((list) => {
   for (const { sources } of list.getEntries()) {
-    if (sources.length > 0) {
+    if (sources && sources.length > 0) {
       console.log(sources[0].node);
     }
   }
