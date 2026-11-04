@@ -27,6 +27,8 @@ The [SVG tutorials](/en-US/docs/Web/SVG/Tutorials) are designed to walk you thro
 
 The [SVG guides](/en-US/docs/Web/SVG/Guides) help you work with SVG on the web, covering topics such as embedding, MIME (media) types, handling scripts, animations, filters, and more.
 
+- [Applying effects with SVG filters](/en-US/docs/Web/SVG/Guides/Filters)
+  - : Filters blur, offset, recolor, and combine the pixels an element paints, in SVG and in HTML content.
 - [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
   - : Modern browsers support using SVG within CSS styles to apply graphical effects to HTML content.
 - [Content type](/en-US/docs/Web/SVG/Guides/Content_type)
@@ -43,8 +45,6 @@ The [SVG guides](/en-US/docs/Web/SVG/Guides) help you work with SVG on the web, 
 - [SVG as an image](/en-US/docs/Web/SVG/Guides/SVG_as_an_image)
   - : SVG can be used as an image format in HTML, CSS, certain SVG elements, and via the Canvas API.
     This page lists the features where you can provide SVG as an image source.
-- [SVG filters](/en-US/docs/Web/SVG/Guides/SVG_filters)
-  - : SVG supports filters so authors can apply effects such as a shadow or blur, or even merge the results of different filters.
 - [SVG in HTML introduction](/en-US/docs/Web/SVG/Guides/SVG_in_HTML)
   - : This article shows how to use inline SVG and includes examples for illustration.
 

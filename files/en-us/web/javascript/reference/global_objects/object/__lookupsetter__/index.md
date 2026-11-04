@@ -99,7 +99,7 @@ console.log(findSetter(obj2, "foo")); // [Function: set foo]
 
 ## See also
 
-- [Polyfill of `Object.prototype.__lookupSetter__` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.prototype.__lookupSetter__` in `core-js`](https://core-js.io/docs/features/ecmascript/object)
 - [`Object.prototype.__lookupGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
 - {{jsxref("Functions/set", "set")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
