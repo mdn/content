@@ -285,7 +285,7 @@ Select `around` and `between` as the `rule-visibility-items` value. This `around
 
 ### The `overlap-join` value
 
-The `overlap-join` value outsets the top end of interior segments so they align with the top of the intersected row-rule. The value resolves to half the {{cssxref("row-gap")}} size (which would extend it to the middle of the gap) plus half the row rule width.
+The `overlap-join` value outsets the top end of interior segments so they align with the top of the intersected row-rule. The value resolves to half the {{cssxref("row-gap")}} size (extending it to the middle of the gap) plus half the row rule width.
 
 When `column-rule-inset-junction-start` is set to the `overlap-join` keyword value, the junction end segments extend up into the row gap to meet, or "join", the top edge of the row rule painted in that gap.
 

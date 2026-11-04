@@ -157,7 +157,7 @@ A _junction segment endpoint_ is any segment endpoint at an interior gap that en
 
 Length `row-rule-inset-junction-end` values inset junction segments by the specified value. Percentage values are relative to the size of the {{cssxref("column-gap")}}. Negative values create an outset, extending the end of the junction segment. Setting `-50%` outsets the end of the junction segment half way through the adjacent column gap, no matter how wide the column gap is.
 
-In the following demonstration, the row rule segments in the all but the last column end in junction endpoints. With `row-rule-inset-junction-end: 16px` set, the right, or end, of these segments are inset by `16px`. Change the inset `<length>` value to better visualize which row segments end in junction segment endpoints.
+In the following demonstration, the row rule segments in all but the last column end in junction endpoints. With `row-rule-inset-junction-end: 16px` set, the right, or end, of these segments is inset by `16px`. Change the inset `<length>` value to better visualize which row segments end in junction segment endpoints.
 
 ```html hidden live-sample___junctions live-sample___percents
 <ul id="ul">
@@ -327,7 +327,7 @@ The `around` value paints rules in gap segments if an item occupies at least one
 
 ### The `overlap-join` value
 
-The `overlap-join` value outsets the end of interior segments so they align with the far edge of the intersected column-rule. The value resolves to half the {{cssxref("column-gap")}} size (which would extend it to the middle of the gap) plus half the column rule width. When `row-rule-inset-junction-end` is set to the `overlap-join` keyword value, the junction end segments extend into the column gap to meet, or "join", the opposite edge of the column rule painted in that gap.
+The `overlap-join` value outsets the end of interior segments so they align with the far edge of the intersected column-rule. The value resolves to half the {{cssxref("column-gap")}} size (extending it to the middle of the gap) plus half the column rule width. When `row-rule-inset-junction-end` is set to the `overlap-join` keyword value, the junction end segments extend into the column gap to meet, or "join", the opposite edge of the column rule painted in that gap.
 
 In the following live example, `row-rule-inset-junction-end` is set to `overlap-join`:
 

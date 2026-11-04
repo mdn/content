@@ -287,7 +287,7 @@ Select `between` as the `rule-visibility-items` value, which paints rules in gap
 
 ### The `overlap-join` value
 
-The `overlap-join` value outsets the bottom end of interior segments so they align with the bottom of the intersected row-rule. The value resolves to half the {{cssxref("row-gap")}} size (which would extend it to the middle of the gap) plus half the row rule width.
+The `overlap-join` value outsets the bottom end of interior segments so they align with the bottom of the intersected row-rule. The value resolves to half the {{cssxref("row-gap")}} size (extending it to the middle of the gap) plus half the row rule width.
 
 When `column-rule-inset-junction-end` is set to the `overlap-join` keyword value, the junction end segments extend down into the row gap to meet, or "join", the bottom edge of the row rule painted in that gap.
 
