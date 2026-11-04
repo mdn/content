@@ -161,6 +161,89 @@ div.rotated-scaled-diamond {
 
 {{EmbedLiveSample('Keep the size of a rotated box', '100%', '200px')}}
 
+### Arranging items around a circle
+
+The `cos()` and {{cssxref("sin")}} functions together turn an angle into a position on a circle. For an item at a given angle, `cos(angle) * radius` gives its horizontal offset from the center and `sin(angle) * radius` gives its vertical offset. This is useful for layouts such as radial menus, where the items are spread evenly around a center point, because each position is calculated from the radius and the number of items instead of being hard-coded.
+
+In this example, each item's angle is the full circle (`360deg`) divided by the number of items, multiplied by its position in the list. The item is then placed from the center of the container using that angle, and {{cssxref("translate")}} moves the item so its own center, rather than its top-left corner, sits on that point.
+
+#### HTML
+
+```html
+<ul class="menu">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+</ul>
+```
+
+#### CSS
+
+```css hidden
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+```css
+.menu {
+  --count: 6;
+  --radius: 80px;
+  position: relative;
+  width: calc(var(--radius) * 2);
+  height: calc(var(--radius) * 2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 2px dashed gray;
+  border-radius: 50%;
+}
+
+.menu li {
+  --angle: calc(360deg / var(--count) * var(--index));
+  position: absolute;
+  top: calc(50% + sin(var(--angle)) * var(--radius));
+  left: calc(50% + cos(var(--angle)) * var(--radius));
+  translate: -50% -50%;
+  display: grid;
+  place-content: center;
+  width: 36px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: royalblue;
+  color: white;
+}
+
+.menu li:nth-child(1) {
+  --index: 0;
+}
+.menu li:nth-child(2) {
+  --index: 1;
+}
+.menu li:nth-child(3) {
+  --index: 2;
+}
+.menu li:nth-child(4) {
+  --index: 3;
+}
+.menu li:nth-child(5) {
+  --index: 4;
+}
+.menu li:nth-child(6) {
+  --index: 5;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Arranging items around a circle', '100%', '240px')}}
+
 ## Specifications
 
 {{Specifications}}
