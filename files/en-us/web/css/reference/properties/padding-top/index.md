@@ -84,11 +84,11 @@ The `padding-top` property is specified as a single value chosen from the list b
 
 ## Description
 
-The `padding-top` property sets the padding area on the top of an element. An element's padding area is the space between its content and its border.
+The `padding-top` property sets the padding area on the top of an element. An element's _padding area_ is the space between its content and its border.
 
 ![The effect of the CSS padding-top property on the element box](padding-top.svg)
 
-The {{cssxref("padding")}} property can be used to set paddings on all four sides of an element with a single declaration.
+The `padding-top` property, along with the {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}} properties, can also be set using the {{cssxref("padding")}} shorthand.
 
 ## Formal definition
 

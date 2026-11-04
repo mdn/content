@@ -80,6 +80,8 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%)
 
 ## Description
 
+The `repeating-radial-gradient()` function enables creating images made up of a radial gradient whose color stops repeat infinitely.
+
 With each repetition, the positions of the color stops are shifted by a multiple of the dimensions of the basic radial gradient (the distance between the last color stop and the first). Thus, the position of each ending color stop coincides with a starting color stop; if the color values are different, this will result in a sharp visual transition, which can be mitigated by repeating the first color as the last color.
 
 As with any gradient, a repeating radial gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/Reference/Values/image#description); i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to.

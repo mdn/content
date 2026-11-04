@@ -186,7 +186,7 @@ The `margin-left` property is specified as the keyword `auto`, or a `<length>`, 
 
 ## Description
 
-The `margin-bottom` property sets the [margin area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#margin_area) on the left of an element.
+The `margin-left` property sets the [margin area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#margin_area) on the left of an element.
 
 The vertical margins of two adjacent boxes may fuse. This is called [_margin collapsing_](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
 

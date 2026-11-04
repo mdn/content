@@ -49,10 +49,9 @@ input:out-of-range {
 
 ## Description
 
-This pseudo-class is useful for giving the user a visual indication that a field's current value is outside the permitted limits.
+The `:out-of-range` pseudo-class represents an {{htmlelement("input")}} element whose value is outside the range of valid values as defined by the [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) and [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max) attributes. This pseudo-class is useful for giving the user a visual indication that a field's current value is outside the permitted limits.
 
-> [!NOTE]
-> This pseudo-class only applies to elements that have (and can take) a range limitation. In the absence of such a limitation, the element can neither be "in-range" nor "out-of-range."
+This pseudo-class only applies to elements that have (and can take) a range limitation. In the absence of such a limitation, the element can neither be "in-range" nor "out-of-range."
 
 ## Examples
 

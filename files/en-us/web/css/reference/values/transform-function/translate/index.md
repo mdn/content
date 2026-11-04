@@ -122,6 +122,8 @@ transform: translate(30%, 50%);
 
 ## Description
 
+The `translate()` function repositions an element in the horizontal direction, vertical direction, or both. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
+
 This transformation is characterized by a two-dimensional vector [tx, ty]. Its coordinates define how much the element moves
 in each direction.
 

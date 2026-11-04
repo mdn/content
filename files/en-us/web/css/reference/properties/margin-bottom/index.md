@@ -101,7 +101,7 @@ The `margin-bottom` property sets the [margin area](/en-US/docs/Web/CSS/Guides/B
 
 ![The effect of the CSS margin-bottom property on the element box](margin-bottom.svg)
 
-It has no effect on _non-[replaced](/en-US/docs/Glossary/Replaced_elements)_ inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
+This property has no effect on _non-[replaced](/en-US/docs/Glossary/Replaced_elements)_ inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
 
 ## Formal definition
 

@@ -86,9 +86,11 @@ text-decoration-style: unset;
 
 ## Description
 
-If the specified decoration has a specific semantic meaning, like a line-through line meaning that some text has been deleted, authors are encouraged to denote this meaning using an HTML tag, like {{ HTMLElement("del") }} or {{ HTMLElement("s") }}. As browsers can disable styling in some cases, the semantic meaning won't disappear in such a situation.
+The `text-decoration-style` property specifies the style of line applied as text decoration on an element. The line itself is specified by the {{ cssxref("text-decoration-line") }} property.
 
-When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.
+If the specified decoration has a specific semantic meaning, like a line-through line meaning that some text has been deleted, authors are encouraged to denote this meaning using the semantic HTML element, like {{ HTMLElement("del") }} or {{ HTMLElement("s") }}. As browsers can disable styling in some cases, the semantic meaning won't disappear in such a situation.
+
+The `text-decoration-style` property, along with the {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, and {{cssxref("text-decoration-thickness")}} properties, can also be set by using the {{cssxref("text-decoration")}} shorthand.
 
 ## Formal definition
 

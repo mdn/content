@@ -78,6 +78,8 @@ fit-content(40%)
 
 ## Description
 
+The `fit-content()` function clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
+
 It is distinct from the {{cssxref("fit-content")}} keyword, which takes no argument and sizes a box based on its content within the available space.
 Only `fit-content()` is valid in grid track sizing properties such as {{cssxref("grid-template-columns")}}.
 

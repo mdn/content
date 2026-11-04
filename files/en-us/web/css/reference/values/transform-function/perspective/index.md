@@ -146,9 +146,7 @@ perspective(d)
 
 ## Description
 
-The `perspective()` transform function is part of the {{cssxref('transform')}} value applied on the
-element being transformed. This differs from the {{cssxref('perspective')}} and {{cssxref('perspective-origin')}}
-properties which are attached to the parent of a child transformed in 3-dimensional space.
+The `perspective()` [transform function](/en-US/docs/Web/CSS/Reference/Values/Functions#transform_functions) sets the distance between the user and the z=0 plane. It is part of the {{cssxref('transform')}} value applied on the element being transformed. This differs from the {{cssxref('perspective')}} and {{cssxref('perspective-origin')}} properties which are attached to the parent of a child transformed in 3-dimensional space.
 
 ## Formal syntax
 

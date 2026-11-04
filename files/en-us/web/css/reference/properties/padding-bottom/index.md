@@ -84,11 +84,11 @@ The `padding-bottom` property is specified as a single value chosen from the lis
 
 ## Description
 
-The `padding-bottom` property sets the padding area on the bottom of an element. An element's padding area is the space between its content and its border.
+The `padding-bottom` property sets the padding area on the bottom of an element. An element's _padding area_ is the space between its content and its border.
 
 ![The effect of the CSS padding-bottom property on the element box](padding-bottom.svg)
 
-The {{cssxref("padding")}} property can be used to set paddings on all four sides of an element with a single declaration.
+The `padding-bottom` property, along with the {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, and {{cssxref("padding-left")}} properties, can also be set using the {{cssxref("padding")}} shorthand.
 
 ## Formal definition
 

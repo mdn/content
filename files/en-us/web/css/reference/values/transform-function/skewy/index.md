@@ -89,6 +89,8 @@ skewY(a)
 
 ## Description
 
+The `skewY()` function defines a transformation that skews an element in the vertical direction on the 2D plane. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
+
 This transformation is a shear mapping ([transvection](https://en.wikipedia.org/wiki/Shear_mapping)) that distorts
 each point within an element by a certain angle in the vertical direction. The ordinate (vertical, y-coordinate) of each point is
 modified by a value proportionate to the specified angle and the distance to the origin; thus, the farther from the

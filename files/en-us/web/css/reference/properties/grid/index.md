@@ -123,7 +123,7 @@ grid: unset;
 
 ## Description
 
-The `grid` shorthand property is used on the grid container to specify the layout. You specify one axis using {{cssxref("grid-template-rows")}} or {{cssxref("grid-template-columns")}}, then specify how content should auto-repeat in the other axis using the implicit grid properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, and {{cssxref("grid-auto-flow")}}.
+The `grid` shorthand property is used on the grid container to specify the features of the grid layout in a single declaration. You specify one axis using {{cssxref("grid-template-rows")}} or {{cssxref("grid-template-columns")}}, then specify how content should auto-repeat in the other axis using the implicit grid properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, and {{cssxref("grid-auto-flow")}}.
 
 > [!NOTE]
 > The sub-properties you don't specify are set to their initial value, as normal for shorthands. Also, the gutter properties are NOT reset by this shorthand.

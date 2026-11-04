@@ -109,10 +109,15 @@ transform: translateX(50%);
 
 ## Description
 
-> [!NOTE]
-> `translateX(tx)` is equivalent to
-> `translate(tx, 0)` or
-> `translate3d(tx, 0, 0)`.
+The `translateX()` function repositions an element horizontally on the 2D plane. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
+
+The following three function declarations are equivalent:
+
+```css-nolint
+translateX(tx)
+translate(tx, 0)
+translate3d(tx, 0, 0)
+```
 
 ## Formal syntax
 

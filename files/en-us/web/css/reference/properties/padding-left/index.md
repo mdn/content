@@ -84,9 +84,9 @@ The `padding-left` property is specified as a single value chosen from the list 
 
 ## Description
 
-The `padding-left` property sets the padding area on the left of an element. An element's padding area is the space between its content and its border.
+The `padding-left` property sets the padding area on the left of an element. An element's _padding area_ is the space between its content and its border.
 
-The {{cssxref("padding")}} property can be used to set paddings on all four sides of an element with a single declaration.
+The `padding-left` property, along with the {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, and {{cssxref("padding-bottom")}} properties, can also be set using the {{cssxref("padding")}} shorthand.
 
 ## Formal definition
 

@@ -45,10 +45,11 @@ input::placeholder {
 
 ## Description
 
-Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} pseudo-element can be used in a rule using `::placeholder` in its selector.
+The `::placeholder` [form-related pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#form-related_pseudo-elements) represents only the [placeholder text](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder) in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element.
 
-> [!NOTE]
-> In most browsers, the appearance of placeholder text is a translucent or light gray color by default.
+In most browsers, the appearance of placeholder text is a translucent or light gray color by default. Only a subset of CSS properties that apply to the {{cssxref("::first-line")}} pseudo-element are applicable to the `::placeholder` pseudo-element.
+
+See the {{cssxref(":placeholder-shown")}} pseudo-class, which applies to the element containing the placeholder text while shown, including being able to style the text represented by the `::placeholder` element.
 
 ## Accessibility
 

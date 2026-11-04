@@ -39,6 +39,8 @@ div:empty {
 
 ## Description
 
+The `:empty` pseudo-class represents any element that has no children. Children can be either element nodes or text (including whitespace). Comments, processing instructions, and CSS {{cssxref("content")}} do not affect whether an element is considered empty.
+
 > [!NOTE]
 > In [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo), the `:empty` pseudo-class was changed to act like {{CSSxRef(":-moz-only-whitespace")}}, but no browser currently supports this yet.
 

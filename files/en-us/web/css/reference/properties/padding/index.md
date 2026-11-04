@@ -102,7 +102,7 @@ The `padding` property may be specified using one, two, three, or four values. E
 
 ## Description
 
-The `padding` property sets the padding area on all four sides of an element. An element's padding area is the space between its content and its border.
+The `padding` property sets the padding area on all four sides of an element. An element's _padding area_ is the space between its content and its border.
 
 Padding creates extra space within an element. In contrast, {{cssxref("margin")}} creates extra space _around_ an element.
 

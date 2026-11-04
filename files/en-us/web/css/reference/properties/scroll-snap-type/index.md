@@ -123,7 +123,7 @@ This property is specified as one or two of the following keyword values:
 
 ## Description
 
-The `scroll-snap-type` property customizes where and how the scroll container can snap.
+The `scroll-snap-type` property customizes where and how the scroll container can snap when defining [scroll snapping](/en-US/docs/Web/CSS/Guides/Scroll_snap/Basic_concepts), defining whether snapping is enabled, whether snapping is required or optional, and the axis on which the snapping should occur.
 
 If the content in the scroll port changes — for example, if content is added, moved, deleted, or resized — the scroll container will re-snap to the previously snapped content if that content is still present.
 

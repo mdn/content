@@ -80,15 +80,16 @@ rotateX(a)
 
 ## Description
 
-The axis of rotation passes through an origin, defined by the {{ cssxref("transform-origin") }} CSS property.
+The `rotateX()` function defines a transformation that rotates an element around the x-axis. The axis of rotation passes through an origin, defined by the {{ cssxref("transform-origin") }} CSS property. Its result is a {{cssxref("transform-function")}} data type.
 
-> [!NOTE]
-> `rotateX(a)` is equivalent to
-> `rotate3d(1, 0, 0, a)`.
+The following are equivalent:
 
-> [!NOTE]
-> Unlike rotations in the 2D plane, the composition of 3D rotations is usually
-> not commutative. In other words, the order in which the rotations are applied impacts the result.
+```css-nolint
+rotateX(a)
+rotate3d(1, 0, 0, a)
+```
+
+Unlike rotations in the 2D plane, the composition of 3D rotations is usually not commutative. In other words, the order in which the rotations are applied impacts the result.
 
 ## Formal syntax
 

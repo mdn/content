@@ -105,12 +105,14 @@ text-emphasis: unset;
 
 ## Description
 
+The `text-emphasis` shorthand specifies the color and style of emphasis marks applied to text.
+
 The `text-emphasis` property is quite different from {{cssxref("text-decoration")}}. The `text-decoration` property does not inherit, and the decoration specified is applied across the whole element. However, text-emphasis does inherit, which means it is possible to change emphasis marks for descendants.
 
 The size of the emphasis symbol, like ruby symbols, is about 50% of the size of the font, and `text-emphasis` may affect line height when the current leading is not enough for the marks.
 
 > [!NOTE]
-> `text-emphasis` doesn't reset the value of {{cssxref("text-emphasis-position")}}. This is because if the style and the color of emphasis marks may vary in a text, it is extremely unlikely that their position will. In the very rare cases when this is needed, use the property {{cssxref("text-emphasis-position")}}.
+> The `text-emphasis` shorthand doesn't reset the value of {{cssxref("text-emphasis-position")}}. This is because if the style and the color of emphasis marks may vary in a text, it is extremely unlikely that their position will. In the very rare cases when this is needed, use the {{cssxref("text-emphasis-position")}} property.
 
 ## Formal definition
 

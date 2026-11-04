@@ -76,10 +76,9 @@ A {{cssxref("filter-function")}} value.
 
 ## Description
 
-A drop shadow is effectively a blurred, offset version of the input image's alpha mask, drawn in a specific color and composited below the image.
+The `drop-shadow()` [filter function](/en-US/docs/Web/CSS/Guides/Filter_effects/Using#filter_functions) applies a drop shadow effect to the input image. A _drop shadow_ is effectively a blurred, offset version of the input image's alpha mask, drawn in a specific color and composited below the image.
 
-> [!NOTE]
-> This function is somewhat similar to the {{Cssxref("box-shadow")}} property. The `box-shadow` property creates a rectangular shadow behind an element's _entire box_, while the `drop-shadow()` filter function creates a shadow that conforms to the shape (alpha channel) of the _image itself_.
+This function is somewhat similar to the {{Cssxref("box-shadow")}} property. The `box-shadow` property creates a rectangular shadow behind an element's _entire box_, while the `drop-shadow()` filter function creates a shadow that conforms to the shape (alpha channel) of the _image itself_.
 
 ## Formal syntax
 
