@@ -15,7 +15,7 @@ This differs from {{domxref("PerformanceContainerTiming.paintTime", "paintTime")
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp")}} measured relative to the {{domxref("Performance.timeOrigin", "time origin")}}.
+A {{domxref("DOMHighResTimeStamp")}} measured relative to the [time origin](/en-US/docs/Web/API/Performance/timeOrigin).
 
 ## Examples
 

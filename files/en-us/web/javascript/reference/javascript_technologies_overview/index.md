@@ -32,11 +32,11 @@ Among other things, ECMAScript defines:
 
 ECMAScript editions are approved and published as a standard by the ECMA General Assembly on a yearly basis. All development is public on the [Ecma TC39 GitHub organization](https://github.com/tc39), which hosts proposals, the official specification text, and meeting notes.
 
-Before the 6th edition of ECMAScript (known as ES6), specifications were published once every several years, and are commonly referred by their major version numbers — ES3, ES5, etc. After ES6, the specification is named by the publishing year — ES2017, ES2018, etc. ES6 is synonymous with ES2015. _ESNext_ is a dynamic name that refers to whatever the next version is at the time of writing. ESNext features are more correctly called proposals, because, by definition, the specification has not been finalized yet.
+Before the 6th edition of ECMAScript (known as ES6), specifications were published once every several years, and are commonly referred to by their major version numbers — ES3, ES5, etc. After ES6, the specification is named by the publishing year — ES2017, ES2018, etc. ES6 is synonymous with ES2015. _ESNext_ is a dynamic name that refers to whatever the next version is at the time of writing. ESNext features are more correctly called proposals, because, by definition, the specification has not been finalized yet.
 
 The current committee-approved snapshot of ECMA-262 is available in PDF and HTML format on Ecma International's [ECMA-262 language specification page](https://ecma-international.org/publications-and-standards/standards/ecma-262/). ECMA-262 and ECMA-402 are continuously maintained and kept up to date by the specification editors; the TC39 website hosts the latest, up-to-date [ECMA-262](https://tc39.es/ecma262/) and [ECMA-402](https://tc39.es/ecma402/) versions.
 
-New language features, including introduction of new syntaxes and APIs and revision of existing behaviors, are discussed in the form of proposals. Each proposal goes through a [4-stage process](https://tc39.es/process-document/), and is typically implemented by JavaScript engines at stage 3 or stage 4 and thus available for public consumption.
+New language features, including introduction of new syntaxes and APIs and revision of existing behaviors, are discussed in the form of proposals. Each proposal goes through a [staged process](https://tc39.es/process-document/), and is typically implemented by JavaScript engines at stage 3 or stage 4 and thus available for public consumption.
 
 See [Wikipedia ECMAScript entry](https://en.wikipedia.org/wiki/ECMAScript) for more information on ECMAScript history.
 
@@ -70,7 +70,7 @@ From the ECMAScript point of view, objects defined in the DOM specification are 
 
 ### HTML DOM
 
-[HTML](https://html.spec.whatwg.org/multipage/), the Web's markup language, is specified in terms of the DOM. Layered above the abstract concepts defined in DOM Core, HTML also defines the _meaning_ of elements. The HTML DOM includes such things as the `className` property on HTML elements, or APIs such as {{domxref("Document.body")}}.
+[HTML](https://html.spec.whatwg.org/multipage/), the Web's markup language, is specified in terms of the DOM. Layered above the abstract concepts defined in DOM Core, HTML also defines the _meaning_ of elements. The HTML DOM includes APIs such as {{domxref("Document.body")}} and HTML element interfaces.
 
 The HTML specification also defines restrictions on documents; for example, it requires all children of a {{htmlelement("ul")}} element, which represents an unordered list, to be {{htmlelement("li")}} elements, as those represent list items. In general, it also forbids using elements and attributes that aren't defined in a standard.
 
@@ -81,9 +81,9 @@ Looking for the {{domxref("Document")}} object, {{domxref("Window")}} object, an
 - The {{domxref("Window.setTimeout", "setTimeout()")}} and {{domxref("Window.setInterval", "setInterval()")}} functions were first specified on the {{domxref("Window")}} interface in HTML Standard.
 - [XMLHttpRequest](https://xhr.spec.whatwg.org/) makes it possible to send asynchronous HTTP requests.
 - The [Fetch API](https://fetch.spec.whatwg.org/) provides a more ergonomic abstraction for network requests.
-- The [CSS Object Model](https://drafts.csswg.org/cssom/) abstract CSS rules as objects.
-- [WebWorkers](https://html.spec.whatwg.org/multipage/workers.html) allows parallel computation.
-- [WebSockets](https://html.spec.whatwg.org/multipage/#network) allows low-level bidirectional communication.
+- The [CSS Object Model](https://drafts.csswg.org/cssom/) abstracts CSS rules as objects.
+- [WebWorkers](https://html.spec.whatwg.org/multipage/workers.html) allow parallel computation.
+- [WebSockets](https://html.spec.whatwg.org/multipage/#network) allow low-level bidirectional communication.
 - [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext) is a drawing API for [`<canvas>`](/en-US/docs/Web/HTML/Reference/Elements/canvas).
 - The [WebAssembly interface](https://webassembly.github.io/spec/js-api/) provides utilities for communication between JavaScript code and [WebAssembly](/en-US/docs/WebAssembly) modules.
 
@@ -124,16 +124,16 @@ A JavaScript shell allows you to quickly test snippets of JavaScript code withou
 
 The following JavaScript shells are stand-alone environments, like Perl or Python.
 
-- [Node.js](https://nodejs.org/) - Node.js is a platform for easily building fast, scalable network applications.
-- [ShellJS](https://github.com/shelljs/shelljs) - Portable Unix shell commands for Node.js.
+- [Node.js](https://nodejs.org/) - A V8-based JavaScript runtime.
+- [Bun](https://bun.com/) - A JavaScriptCore-based JavaScript runtime.
 
 ### Browser-based JavaScript shells
 
 The following JavaScript shells run code through the browser's JavaScript engine.
 
-- Firefox has a [built-in JavaScript console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html), which support multi-line editing.
+- Firefox has a [built-in JavaScript console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html), which supports multi-line editing.
 - [Babel REPL](https://babeljs.io/repl) - A browser-based [REPL](https://en.wikipedia.org/wiki/REPL) for experimenting with future JavaScript.
-- [TypeScript playground](https://www.typescriptlang.org/play/) — A browser-based playground for experimenting both new JavaScript features (via the tsc compiler) and TypeScript syntax.
+- [TypeScript playground](https://www.typescriptlang.org/play/) — A browser-based playground for experimenting with both new JavaScript features (via the tsc compiler) and TypeScript syntax.
 
 ## Tools & resources
 

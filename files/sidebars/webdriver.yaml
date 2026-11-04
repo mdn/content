@@ -63,6 +63,10 @@ sidebar:
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/setViewport
             code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/startScreencast
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/stopScreencast
+            code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/traverseHistory
             code: true
           - type: section

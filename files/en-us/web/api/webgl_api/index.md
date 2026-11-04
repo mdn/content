@@ -27,6 +27,7 @@ The {{HTMLElement("canvas")}} element is also used by the [Canvas API](/en-US/do
 - {{domxref("WebGLBuffer")}}
 - {{domxref("WebGLContextEvent")}}
 - {{domxref("WebGLFramebuffer")}}
+- {{domxref("WebGLObject")}} {{experimental_inline}}
 - {{domxref("WebGLProgram")}}
 - {{domxref("WebGLQuery")}}
 - {{domxref("WebGLRenderbuffer")}}
@@ -46,7 +47,7 @@ The {{HTMLElement("canvas")}} element is also used by the [Canvas API](/en-US/do
 - {{domxref("EXT_color_buffer_float")}}
 - {{domxref("EXT_color_buffer_half_float")}}
 - {{domxref("EXT_disjoint_timer_query")}}
-- {{domxref("EXT_float_blend")}} {{experimental_inline}}
+- {{domxref("EXT_float_blend")}}
 - {{domxref("EXT_frag_depth")}}
 - {{domxref("EXT_shader_texture_lod")}}
 - {{domxref("EXT_sRGB")}}

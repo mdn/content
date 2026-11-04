@@ -96,7 +96,7 @@ TCP uses two separate limits on how much unacknowledged data the server can have
 
 The server never has more unacknowledged data in flight than the smaller of these two windows.
 
-The congestion window starts small and is adjusted as the transfer proceeds. During {{glossary('TCP slow start')}}, it grows rapidly, roughly doubling every round trip, until segments start being dropped or the TCP slow-start threshold (`ssthresh`) is reached. After that, it grows more slowly and is reduced whenever the network shows signs of congestion. For more details about TCP congestion control, see [RFC 5681](https://www.rfc-editor.org/rfc/rfc5681.html).
+The congestion window starts small and is adjusted as the transfer proceeds. During {{glossary('TCP slow start')}}, it grows rapidly, roughly doubling every round trip, until segments start being dropped or the TCP slow-start threshold (ssthresh) is reached. After that, it grows more slowly and is reduced whenever the network shows signs of congestion. For more details about TCP congestion control, see [RFC 5681](https://www.rfc-editor.org/rfc/rfc5681.html).
 
 ## Parsing
 
