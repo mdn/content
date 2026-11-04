@@ -32,7 +32,7 @@ A string. The value depends on the subclass of the `PerformanceEntry` object as 
     </tr>
     <tr>
       <td>{{domxref('LayoutShift')}}</td>
-      <td>Always returns <code>"layout-shift"</code>.</td>
+      <td>Always returns an empty string.</td>
     </tr>
     <tr>
       <td>{{domxref('PerformanceContainerTiming')}}</td>
