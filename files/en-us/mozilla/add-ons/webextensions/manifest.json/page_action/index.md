@@ -26,8 +26,8 @@ sidebar: addonsidebar
         <pre class="brush: json">
 "page_action": {
   "default_icon": {
-    "19": "button/geo-19.png",
-    "38": "button/geo-38.png"
+    "16": "button/geo-16.png",
+    "32": "button/geo-32.png"
   },
   "default_title": "Whereami?",
   "default_popup": "popup/geo.html"
@@ -65,24 +65,7 @@ The `page_action` key is an object that may have any of three properties, all op
 - `default_icon` {{optional_inline}}
   - : `Object` or `String`. Use this to specify an icon for the action.
 
-    It's recommended that you supply two icons here (19×19 pixels and 38×38 pixels), and specify them in an object with properties named `"19"` and `"38"`, like this:
-
-    ```json
-    "default_icon": {
-      "19": "geo-19.png",
-      "38": "geo-38.png"
-    }
-    ```
-
-    If you do this, then the browser will pick the right size icon for the screen's pixel density.
-
-    You can just supply a string here:
-
-    ```json
-    "default_icon": "geo.png"
-    ```
-
-    If you do this, then the icon will be scaled to fit the toolbar, and may appear blurry.
+    Specify a string for a single icon, or an object with the icon sizes as property names. For the formats and sizes to provide for each browser, see [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons).
 
     You can use an SVG icon. You can also have the icon adapt to light and dark themes using a media query on `prefers-color-scheme`. For example:
 
@@ -145,8 +128,8 @@ The `page_action` key is an object that may have any of three properties, all op
 ```json
 "page_action": {
   "default_icon": {
-    "19": "button/geo-19.png",
-    "38": "button/geo-38.png"
+    "16": "button/geo-16.png",
+    "32": "button/geo-32.png"
   }
 }
 ```
@@ -160,8 +143,8 @@ browser.pageAction.onClicked.addListener(handleClick);
 ```json
 "page_action": {
   "default_icon": {
-    "19": "button/geo-19.png",
-    "38": "button/geo-38.png"
+    "16": "button/geo-16.png",
+    "32": "button/geo-32.png"
   },
   "default_title": "Whereami?",
   "default_popup": "popup/geo.html"

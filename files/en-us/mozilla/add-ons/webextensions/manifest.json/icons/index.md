@@ -23,15 +23,15 @@ sidebar: addonsidebar
   </tbody>
 </table>
 
-The `icons` key specifies icons for your extension. Those icons represent the extension in components such as the add-ons manager (`about:addons`).
+The `icons` key specifies icons for your extension. Those icons represent the extension in components such as the browser's extension manager (`about:addons` in Firefox).
 
 The key consists of key-value pairs specifying the image size in pixels and the image path relative to the extension's root directory.
 
 If `icons` is not supplied, a standard extension icon is used.
 
-You should supply an extension icon, ideally 32x32 px in size. This is the default icon that is used in the add-ons manager. You can supply icons of any size, and Firefox uses the one that fits a component best.
+You should supply an extension icon. The browser uses it in its extension manager. You can supply icons of any size, and the browser uses the one that fits a component best.
 
-Firefox considers the screen resolution when choosing an icon. To deliver the best visual experience to users with high-resolution displays, such as Retina displays, provide double-sized versions of your icons.
+The browser considers the display's pixel density when choosing an icon. For the formats and sizes to provide for each browser, see [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons).
 
 ## Example
 
@@ -94,7 +94,7 @@ For more information, see the [themed-icons](https://github.com/mdn/webextension
 > Chromium-based browsers don't support this feature. See [Chromium bug 29683](https://crbug.com/29683).
 
 > [!NOTE]
-> Remember to include the `xmlns` attribute when creating the SVG. Otherwise, Firefox won't display the icon.
+> Remember to include the `xmlns` attribute when creating the SVG. Otherwise, the browser won't display the icon.
 
 > [!NOTE]
 > When using a program such as Inkscape to create SVG, save your file as a "plain SVG". Firefox isn't guaranteed to handle special namespaces and may not display an icon containing them.
