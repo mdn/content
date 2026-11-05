@@ -873,7 +873,7 @@ When using JPEG XL, provide an alternative format such as AVIF, WebP, or JPEG [w
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        Chrome 155, Firefox 158, and Safari 17. Safari does not support progressive download of JPEG XL files (it can render them after complete download), while Edge has not shipped support of the format as of version 156.
+        Chrome 155, Firefox 158, and Safari 17. Safari does not support progressive download of JPEG XL files (it can render them after complete download).
       </td>
     </tr>
     <tr>
