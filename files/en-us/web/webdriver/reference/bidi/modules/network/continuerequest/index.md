@@ -147,6 +147,12 @@ Send `network.continueRequest` again, or end the request with [`network.failRequ
 ### Changing the request
 
 The browser applies the changes before it sends the request, so the server receives the changed request.
+Specify only the parameters that you want to change, and the browser keeps the rest of the request as it is.
+For example, to change only the URL, send `url` without `headers`.
+
+> [!NOTE]
+> The `headers` array doesn't merge with the request's headers: it replaces all of them.
+> To add or change one header, send every header that the request should keep, as in [Adding a header to a request](#adding_a_header_to_a_request).
 
 A changed `url` isn't a redirect: the browser sends no new `network.beforeRequestSent` event, the `redirectCount` field of the request's later events doesn't change, and a document loaded this way keeps the original URL as its location.
 The `url` field in the `request` object of the later events, such as [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted), contains the new URL.
