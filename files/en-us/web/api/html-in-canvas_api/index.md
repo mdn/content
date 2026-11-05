@@ -88,7 +88,7 @@ canvas.addEventListener("paint", () => {
 - {{domxref("ElementGeometryUpdateEvent")}}
   - : Event object for the {{domxref("HTMLCanvasElement.elementgeometryupdate_event", "elementgeometryupdate")}} event, which fires when `drawable` element geometry has been updated via an {{domxref("OffscreenCanvas")}}.
 - {{domxref("ElementImage")}}
-  - : Represents a precaptured snapshot of a `drawable` element (captured using {{domxref("HTMLCanvasElement.captureElementImage()")}}), which can be rendered later on.
+  - : Represents a snapshot of a `drawable` element's rendered state (captured using {{domxref("HTMLCanvasElement.captureElementImage()")}}), which can be rerendered later on.
 
 ## Extensions to other interfaces
 

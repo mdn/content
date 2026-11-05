@@ -84,7 +84,7 @@ button {
 
 #### JavaScript
 
-First, we grab references to the `<canvas>`, `<div>`, and two `<button>` elements. We also set the restore `<button>` to be initially disabled, as it won't do anything at first.
+First, we grab references to the `<canvas>`, `<div>`, and two `<button>` elements.
 
 ```js hidden live-sample___restore-initial-view
 function randomColor() {
@@ -100,16 +100,14 @@ const canvas = document.querySelector("canvas");
 const divElem = document.querySelector("div");
 const updateBtn = document.getElementById("update");
 const restoreBtn = document.getElementById("restore");
-restoreBtn.disabled = true;
 ```
 
-Next, we set a `click` event handler on the update `<button>` so that when clicked, its {{cssxref("background-color")}} is updated and its `textContent` is changed to "Background updated". We also enable the restore `<button>` in this handler, as after the first paint update, the initial rendering will be captured and restorable (see next explanation).
+Next, we set a `click` event handler on the update `<button>` so that when clicked, its {{cssxref("background-color")}} is updated and its `textContent` is changed to "Background updated".
 
 ```js live-sample___restore-initial-view
 updateBtn.addEventListener("click", () => {
   divElem.style.backgroundColor = randomColor();
   divElem.textContent = "Background updated";
-  restoreBtn.disabled = false;
 });
 ```
 
