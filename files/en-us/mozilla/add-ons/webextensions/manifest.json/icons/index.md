@@ -27,7 +27,10 @@ The `icons` key specifies icons for your extension. Those icons represent the ex
 
 The key consists of key-value pairs specifying the image size in pixels and the image path relative to the extension's root directory.
 
-To provide different icons for light and dark color schemes, use [`icon_variants`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icon_variants). When both keys are present, `icon_variants` takes precedence.
+To provide icons for light and dark color schemes:
+
+- In Safari, use [`icon_variants`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icon_variants). When both keys are present, `icon_variants` takes precedence.
+- In Firefox, specify an [SVG](#svg) file using `prefers-color-scheme`.
 
 If `icons` is not supplied, a standard extension icon is used.
 
