@@ -42,11 +42,11 @@ class Disposable {
 
   async [Symbol.asyncDispose]() {
     await this.#fileHandle.close();
-    this.disposed = true;
+    this.#disposed = true;
   }
 
   get isDisposed() {
-    return this.disposed;
+    return this.#disposed;
   }
 }
 
