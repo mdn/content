@@ -42,7 +42,7 @@ sidebar: addonsidebar
   </tbody>
 </table>
 
-The `icon_variants` key specifies icons for your extension, with a separate set of icons for each color scheme. The browser uses these icons wherever it represents the extension, for example in the extension management page. It replaces [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons), which can't describe light and dark icons.
+The `icon_variants` key specifies icons for your extension, with a set of icons for each color scheme. The browser uses these icons wherever it represents the extension, for example, on the extension management page. It replaces [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons), which can't describe light and dark icons.
 
 When both keys are present, the browser uses `icon_variants` instead of `icons`. Declare `icons` as well so the extension has icons in browsers that don't support `icon_variants`. For the formats and sizes to provide for each browser, see [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons).
 
@@ -63,15 +63,15 @@ The `icon_variants` key is an array of icon groups. Each icon group is an object
 
     A group without `color_schemes` is for both color schemes.
 
-The browser checks the groups in order and uses the first one that matches the current color scheme. The browser decides which color scheme to match. It can differ from the operating system preference, for example to keep icons legible against a theme. Within the group, the browser picks the icon that best fits the size it needs. It considers the display's pixel density, so provide larger versions of your icons for high-density displays.
+The browser checks the groups in order and uses the first one that matches the current color scheme. The browser decides which color scheme to match. It can differ from the operating system preference, for example, to keep icons legible against a theme. Within the group, the browser picks the icon that best fits the required size. It considers the display's pixel density, so provide larger icon versions for high-density displays.
 
-Browsers differ in what they do when no group matches the current color scheme, in how they treat a group that contains properties not listed here, and in how they choose between `any` and a numeric size when a group has both. List a group for each color scheme to avoid depending on the first difference.
+Browsers differ in what they do when no group matches the active color scheme, how they handle a group with properties not listed here, and how they choose between `any` and a numeric size when a group has both. List a group for each color scheme to avoid unexpected color matches.
 
 ## Examples
 
 ### Light and dark icons
 
-This example provides a separate set of icons for dark and light backgrounds, each in two sizes:
+This example provides icons for dark and light backgrounds, each in two sizes:
 
 ```json
 "icon_variants": [
@@ -90,7 +90,7 @@ This example provides a separate set of icons for dark and light backgrounds, ea
 
 ### Scalable icons
 
-This example uses a single SVG file for each color scheme:
+This example uses an SVG file for each color scheme:
 
 ```json
 "icon_variants": [

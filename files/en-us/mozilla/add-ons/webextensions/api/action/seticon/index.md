@@ -6,7 +6,7 @@ browser-compat: webextensions.api.action.setIcon
 sidebar: addonsidebar
 ---
 
-Sets the icon for the extension action.
+Sets the icon for the browser action.
 
 > [!NOTE]
 > This API is available in Manifest V3 or higher.
@@ -15,7 +15,7 @@ You can specify a single icon as either the path to an image file or an {{WebExt
 
 You can specify multiple icons in different sizes by supplying a dictionary containing multiple paths or `ImageData` objects. This means the icon doesn't have to be scaled for a device with a different pixel density.
 
-Tabs without a specific icon will inherit the global icon, which defaults to the [`default_icon`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) specified in the manifest.
+Tabs without a specific icon will inherit the global icon, which defaults to the [`default_icon`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action#default_icon) specified in the manifest.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -64,7 +64,7 @@ let settingIcon = browser.action.setIcon(
         The browser will choose the image to use depending on the display's pixel density. See [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons) for more information on this.
 
     - `variants` {{optional_inline}}
-      - : `Array` of `Object`. Icons with a separate set for each color scheme. Each object is an icon group, with these properties:
+      - : `Array` of `Object`. Each object is an icon group, a set of icons for a color scheme, with these properties:
         - Sizes {{optional_inline}}
           - : Properties named for an icon size in pixels, such as `16` or `32`. The value is a relative path to an icon file or an `ImageData` object.
         - `any` {{optional_inline}}
@@ -72,7 +72,7 @@ let settingIcon = browser.action.setIcon(
         - `colorSchemes` {{optional_inline}}
           - : `Array` of `String`. The color schemes this group is for: `"light"` for icons that work on light backgrounds, `"dark"` for icons that work on dark backgrounds, or both. A group without `colorSchemes` is for both color schemes.
 
-        The browser uses the first group that matches the current color scheme, then picks the icon that best fits the size it needs. If `variants` is present, the browser ignores `path` and `imageData`.
+        The browser uses the first group that matches its active color scheme, then picks the icon that best fits the required size. The active color scheme can differ from the device's color scheme, for example when the browser toolbar is dark. If `variants` is present, the browser ignores `path` and `imageData`.
 
         ```js
         let settingIcon = browser.action.setIcon({
