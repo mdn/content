@@ -308,6 +308,8 @@ When the page calls `addItem("Pen")`, the browser sends the following event befo
   "params": {
     "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f",
     "initiator": {
+      "columnNumber": 9,
+      "lineNumber": 1,
       "stackTrace": {
         "callFrames": [
           {
