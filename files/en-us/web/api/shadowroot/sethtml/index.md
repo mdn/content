@@ -10,7 +10,7 @@ browser-compat: api.ShadowRoot.setHTML
 
 The **`setHTML()`** method of the {{domxref("ShadowRoot")}} interface provides an XSS-safe method to parse and sanitize a string of HTML, which then replaces the existing tree in the Shadow DOM.
 
-The method removes any elements and attributes that are considered XSS-unsafe, even if allowed by a passed sanitizer.
+The method removes any elements and attributes that are considered XSS-unsafe, even if the caller passes a [sanitizer](#sanitizer) option which allows them.
 Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{HTMLElement("base")}}, {{SVGElement("use")}}, as well event handler content attributes (for example, `onclick`, `onload`, `onerror` and so forth). See [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) for more information.
 
 It is recommended (if supported) as a drop-in replacement for {{domxref("ShadowRoot.innerHTML")}} when setting a user-provided string of HTML.
@@ -79,6 +79,8 @@ Each API type takes the same arguments but allows for ease of inserting the requ
 
 ## Examples
 
+These examples shows some of the ways you can use `setHTML()` to sanitize and inject a string of HTML.
+
 ### Basic usage
 
 This example shows some of the ways you can use `setHTML()` to sanitize and inject a string of HTML.
@@ -104,7 +106,7 @@ The code below shows how we can call `setHTML()` with a string and different san
 
 ```js
 // Define unsanitized string of HTML
-const unsanitizedString = "abc <script>alert(1)<" + "/script> def";
+const unsanitizedString = "<p><i>abc</i><script>alert(1)<" + "/script> def</p>";
 
 // setHTML() with default sanitizer
 shadow.setHTML(unsanitizedString);

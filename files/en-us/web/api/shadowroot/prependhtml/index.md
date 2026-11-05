@@ -12,7 +12,7 @@ browser-compat: api.ShadowRoot.prependHTML
 
 The **`prependHTML()`** method of the {{domxref("ShadowRoot")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and insert it into the `ShadowRoot` before the first child of the `ShadowRoot`.
 
-The method removes any elements and attributes that are considered XSS-unsafe, even if allowed by a passed sanitizer.
+The method removes any elements and attributes that are considered XSS-unsafe, even if the caller passes a [sanitizer](#sanitizer) option which allows them.
 Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{HTMLElement("base")}}, {{SVGElement("use")}}, as well event handler content attributes (for example, `onclick`, `onload`, `onerror` and so forth). See [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) for more information.
 
 This is similar to {{domxref("ShadowRoot.setHTML")}} but allows addition of new HTML as the first child of the shadow root, rather than setting the whole child HTML only.
@@ -85,31 +85,50 @@ Each API type takes the same arguments but allows for ease of inserting the requ
 > [!NOTE]
 > The [`setHTML()`](/docs/Web/API/Element/setHTML#examples) page includes additional examples, including a live example, which are similar to how `prependHTML()` can be used.
 
-### Basic usage
+These examples shows some of the ways you can use `prependHTML()` to sanitize and inject a string of HTML.
 
-This example shows some of the ways you can use `prependHTML()` to sanitize and inject a string of HTML.
+### Basic usage with default sanitizer
+
+Using the default sanitizer:
 
 ```js
-// Define unsanitized string of HTML
-const unsanitizedString = "abc <script>alert(1)<" + "/script> def";
-// Get the target Element with id "target"
+const unsanitizedString = "<p><i>abc</i><script>alert(1)<" + "/script> def</p>";
 const target = document.getElementById("target");
 
-// prependHTML() with default sanitizer
 target.prependHTML(unsanitizedString);
+// Result is that the following is prepended to the current shadowroot:
+// <p><i>abc</i> def</p>
+```
 
-// Define custom Sanitizer and use in prependHTML()
-// This allows only elements: div, p, button (script is unsafe and will be removed)
-const sanitizer1 = new Sanitizer({
+### Using a custom sanitizer
+
+Using a custom `Sanitizer`, that allows only the {{htmlelement("div")}}, {{htmlelement("p")}}, {{htmlelement("button")}}, and {{htmlelement("script")}} elements. Note that {{htmlelement("script")}} is XSS-unsafe, so it will be removed anyway:
+
+```js
+const unsanitizedString = "<p><i>abc</i><script>alert(1)<" + "/script> def</p>";
+const target = document.getElementById("target");
+
+const mySanitizer = new Sanitizer({
   elements: ["div", "p", "button", "script"],
 });
-target.prependHTML(unsanitizedString, { sanitizer: sanitizer1 });
+target.prependHTML(unsanitizedString, { sanitizer: mySanitizer });
+// Result is that the following is prepended to the current shadowroot:
+// <p> def</p>
+```
 
-// Define custom SanitizerConfig within prependHTML()
-// This removes elements div, p, button, script, and any other unsafe elements/attributes
+### Using a custom sanitizer with `removeElements`
+
+Using a custom `SanitizerConfig`, that removes only the {{htmlelement("div")}}, {{htmlelement("p")}}, {{htmlelement("button")}}, and {{htmlelement("script")}} elements, as well as other XSS-unsafe elements and attributes that are always removed by this method.
+
+```js
+const unsanitizedString = "<p><i>abc</i><script>alert(1)<" + "/script> def</p>";
+const target = document.getElementById("target");
+
 target.prependHTML(unsanitizedString, {
-  sanitizer: { removeElements: ["div", "p", "button", "script"] },
+  sanitizer: { removeElements: ["i", "script"] },
 });
+// Result is that the following is prepended to the current shadowroot:
+// <p> def</p>
 ```
 
 ## Specifications
