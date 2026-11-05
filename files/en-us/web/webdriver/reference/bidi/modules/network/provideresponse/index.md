@@ -150,12 +150,14 @@ The `result` field in the response is an empty object (`{}`).
 
 Use `network.provideResponse` for a request blocked in any phase: `beforeRequestSent`, `responseStarted`, or `authRequired`.
 If the command returns an error other than `no such request`, the request stays blocked.
-The parameters processed before the error might already have changed the response.
+In the `responseStarted` and `authRequired` phases, the parameters processed before the error might already have changed the response.
 
 ### Providing the response
 
 For a request blocked in the `beforeRequestSent` phase, the browser doesn't send the request.
 The page receives the response that you provide.
+Each `network.provideResponse` command starts from a new response.
+The fields that you don't specify keep their defaults: the status `200`, an empty status message, no headers, and an empty body.
 In the other phases, the status, headers, cookies, and body that you specify replace those of the response that the server sent.
 For how this compares with `network.continueResponse`, see [Changing responses](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#changing_responses).
 
