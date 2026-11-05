@@ -70,7 +70,7 @@ If no sanitizer is passed as a parameter, all HTML entities in the input will be
 
 ### Related HTML setter APIs
 
-This is part of a series of APIs to set HTML:
+This is part of a series of APIs to set HTML in {{domxref("ShadowRoot")}}:
 
 | Action                                             | API                                                  | Unsafe API                                                       |
 | -------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------- |

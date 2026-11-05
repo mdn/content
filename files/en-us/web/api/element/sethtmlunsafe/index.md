@@ -76,7 +76,7 @@ It is therefore potentially even less safe than {{domxref("Element.innerHTML")}}
 
 ### Related HTML setter APIs
 
-This is part of a series of APIs to set HTML:
+This is part of a series of APIs to set HTML in {{domxref("Element")}}:
 
 | Action                                         | API                                                       | Unsafe API                                                            |
 | ---------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------- |

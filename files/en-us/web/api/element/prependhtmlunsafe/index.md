@@ -79,7 +79,7 @@ If the string of HTML defines more than one [declarative shadow root](/en-US/doc
 
 ### Related HTML setter APIs
 
-This is part of a series of APIs to set HTML:
+This is part of a series of APIs to set HTML in {{domxref("Element")}}:
 
 | Action                                         | API                                                       | Unsafe API                                                            |
 | ---------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------- |

@@ -18,31 +18,31 @@ In particular, [cross-site scripting (XSS) attacks](/en-US/docs/Web/Security/Att
 These attacks can be mitigated by removing unsafe HTML elements and attributes before they are injected into the DOM.
 
 The HTML Sanitizer API provides a number of methods for removing unwanted HTML entities from HTML input before it is injected into the DOM.
-These come in XSS-safe versions that enforce removal of all unsafe elements and attributes, and potentially unsafe versions that give developers full control over the HTML entities that are allowed.
+These come in XSS-safe versions (for example, {{domxref("Element.setHTML()")}}) that enforce removal of all unsafe elements and attributes, and potentially unsafe versions (for example, {{domxref("Element.setHTMLUnsafe()")}}) that give developers full control over the HTML entities that are allowed.
 
 ### Sanitization methods
 
-The HTML Sanitizer API provides XSS-safe and XSS-unsafe methods for injecting HTML strings into an {{domxref('Element')}} or a {{domxref('ShadowRoot')}}, and for parsing HTML into a {{domxref('Document')}}.
+The HTML Sanitizer API provides XSS-safe and XSS-unsafe methods for injecting HTML strings into an {{domxref('Element')}}, a {{domxref('ShadowRoot')}} or {{domxref('CharacterData')}}, and for parsing HTML into a {{domxref('Document')}}.
 
 #### Safe methods
 
-{{domxref('Document/parseHTML_static','Document.parseHTML()')}}
-{{domxref('Element.setHTML()')}} and {{domxref('ShadowRoot.setHTML()')}}
-{{domxref('Element.appendHTML()')}} and {{domxref('ShadowRoot.appendHTML()')}}
-{{domxref('Element.prependHTML()')}} and {{domxref('ShadowRoot.prependHTML()')}}
-{{domxref('Element.afterHTML()')}} and {{domxref('CharacterData.afterHTML()')}}
-{{domxref('Element.beforeHTML()')}} and {{domxref('CharacterData.beforeHTML()')}}
-{{domxref('Element.replaceWithHTML()')}} and {{domxref('CharacterData.replaceWithHTML()')}}
+- {{domxref('Document/parseHTML_static','Document.parseHTML()')}}
+- {{domxref('Element.setHTML()')}} and {{domxref('ShadowRoot.setHTML()')}}
+- {{domxref('Element.appendHTML()')}} and {{domxref('ShadowRoot.appendHTML()')}}
+- {{domxref('Element.prependHTML()')}} and {{domxref('ShadowRoot.prependHTML()')}}
+- {{domxref('Element.afterHTML()')}} and {{domxref('CharacterData.afterHTML()')}}
+- {{domxref('Element.beforeHTML()')}} and {{domxref('CharacterData.beforeHTML()')}}
+- {{domxref('Element.replaceWithHTML()')}} and {{domxref('CharacterData.replaceWithHTML()')}}
 
 #### Unsafe methods
 
-{{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}.
-{{domxref('Element.setHTMLUnsafe()')}}, {{domxref('ShadowRoot.setHTMLUnsafe()')}}
-{{domxref('Element.appendHTMLUnsafe()')}} and {{domxref('ShadowRoot.appendHTML()')}}
-{{domxref('Element.prependHTMLUnsafe()')}} and {{domxref('ShadowRoot.prependHTML()')}}
-{{domxref('Element.afterHTMLUnsafe()')}} and {{domxref('CharacterData.afterHTMLUnsafe()')}}
-{{domxref('Element.beforeHTMLUnsafe()')}} and {{domxref('CharacterData.beforeHTMLUnsafe()')}}
-{{domxref('Element.replaceWithHTMLUnsafe()')}} and {{domxref('CharacterData.replaceWithHTMLUnsafe()')}}
+- {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}.
+- {{domxref('Element.setHTMLUnsafe()')}}, {{domxref('ShadowRoot.setHTMLUnsafe()')}}
+- {{domxref('Element.appendHTMLUnsafe()')}} and {{domxref('ShadowRoot.appendHTML()')}}
+- {{domxref('Element.prependHTMLUnsafe()')}} and {{domxref('ShadowRoot.prependHTML()')}}
+- {{domxref('Element.afterHTMLUnsafe()')}} and {{domxref('CharacterData.afterHTMLUnsafe()')}}
+- {{domxref('Element.beforeHTMLUnsafe()')}} and {{domxref('CharacterData.beforeHTMLUnsafe()')}}
+- {{domxref('Element.replaceWithHTMLUnsafe()')}} and {{domxref('CharacterData.replaceWithHTMLUnsafe()')}}
 
 #### Difference between Safe and Unsafe methods
 

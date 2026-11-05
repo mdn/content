@@ -79,7 +79,7 @@ If the string of HTML defines more than one [declarative shadow root](/en-US/doc
 
 ### Related HTML setter APIs
 
-This is part of a series of APIs to set HTML:
+This is part of a series of APIs to set HTML in {{domxref("CharacterData")}}:
 
 | Action                                 | API                                                             | Unsafe API                                                                  |
 | -------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------- |
@@ -89,7 +89,7 @@ This is part of a series of APIs to set HTML:
 
 Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allows scripts to be run using the `runScripts` options.
 
-Similar methods, and more, exist on `Element`(for example {{domxref("Element.beforeHTMLUnsafe")}}).
+Similar methods, and more, exist on {{domxref("Element")}} (for example {{domxref("Element.beforeHTMLUnsafe")}}).
 
 ### Security considerations
 
