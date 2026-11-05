@@ -31,6 +31,8 @@ This page lists references for [WebAssembly](/en-US/docs/WebAssembly).
   - : WebAssembly memory instructions.
 - [WebAssembly numeric instructions](/en-US/docs/WebAssembly/Reference/Numeric)
   - : WebAssembly numeric instructions.
+- [WebAssembly reference instructions](/en-US/docs/WebAssembly/Reference/Reference)
+  - : The instructions available in Wasm to create, test and convert references.
 - [WebAssembly SIMD instructions](/en-US/docs/WebAssembly/Reference/SIMD)
   - : The SIMD (single instruction, multiple data) instructions available in Wasm.
 - [WebAssembly table instructions](/en-US/docs/WebAssembly/Reference/Table)

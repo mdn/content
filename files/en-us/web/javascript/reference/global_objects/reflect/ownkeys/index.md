@@ -93,7 +93,7 @@ Reflect.ownKeys(obj);
 
 ## See also
 
-- [Polyfill of `Reflect.ownKeys` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.ownKeys` in `core-js`](https://core-js.io/docs/features/ecmascript/reflect)
 - [es-shims polyfill of `Reflect.ownKeys`](https://www.npmjs.com/package/reflect.ownkeys)
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}

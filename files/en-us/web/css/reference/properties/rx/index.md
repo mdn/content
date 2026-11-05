@@ -59,7 +59,7 @@ This example demonstrates creating rectangles with rounded corners by applying t
 
 #### HTML
 
-We include an SVG image with four `<rect>` elements; all the rectangles are the same except for their {{SVGAttr("x")}} attribute value, which positions them along the x-axis.
+We include an SVG image with five `<rect>` elements; all the rectangles are the same except for their {{SVGAttr("x")}} attribute value, which positions them along the x-axis.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">

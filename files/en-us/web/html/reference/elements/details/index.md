@@ -67,11 +67,15 @@ A `<details>` widget can be in one of two states. The default _closed_ state dis
 
 When the user clicks on the widget or focuses it then presses the space bar, it "twists" open, revealing its contents. The common use of a triangle which rotates or twists around to represent opening or closing the widget is why these are sometimes called "twisty".
 
-You can use CSS to style the disclosure widget, and you can programmatically open and close the widget by setting/removing its [`open`](#open) attribute. Unfortunately, at this time, there's no built-in way to animate the transition between open and closed.
+You can programmatically open and close the widget by setting/removing its [`open`](#open) attribute.
 
-By default when closed, the widget is only tall enough to display the disclosure triangle and summary. When open, it expands to display the details contained within.
+### Styling the `<details>` element
 
-Fully standards-compliant implementations automatically apply the CSS `{{cssxref("display")}}: list-item` to the {{HTMLElement("summary")}} element. You can use this or the {{cssxref("::marker")}} pseudo-element to [customize the disclosure widget](/en-US/docs/Web/HTML/Reference/Elements/summary#changing_the_summarys_icon).
+The `<details>` element can be thought of as a container of two elements: the `<summary>` element, which is visible both when expanded and collapsed; and the {{cssxref("::details-content")}} pseudo-element, whose contents are hidden when collapsed.
+
+The `<summary>` element is automatically given a {{cssxref("display")}} value of `list-item`. You can style the marker just like a list marker, using {{cssxref("list-style-type")}}, {{cssxref("list-style-position")}}, {{cssxref("::marker")}}, etc. See also [Changing the summary's icon](/en-US/docs/Web/HTML/Reference/Elements/summary#changing_the_summarys_icon).
+
+The {{cssxref("::details-content")}} pseudo-element enables you to animate the transition between open and closed. See the [`::details-content` reference page](/en-US/docs/Web/CSS/Reference/Selectors/::details-content#transition_example) for an example.
 
 ### Events
 

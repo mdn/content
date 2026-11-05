@@ -68,7 +68,7 @@ console.log(odds.intersection(squares)); // Set(2) { 1, 9 }
 
 ## See also
 
-- [Polyfill of `Set.prototype.intersection` in `core-js`](https://github.com/zloirock/core-js#new-set-methods)
+- [Polyfill of `Set.prototype.intersection` in `core-js`](https://core-js.io/docs/features/ecmascript/collections#h-set)
 - [es-shims polyfill of `Set.prototype.intersection`](https://www.npmjs.com/package/set.prototype.intersection)
 - {{jsxref("Set.prototype.difference()")}}
 - {{jsxref("Set.prototype.isDisjointFrom()")}}

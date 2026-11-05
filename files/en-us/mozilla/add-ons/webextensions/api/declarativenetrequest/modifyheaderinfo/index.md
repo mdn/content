@@ -53,6 +53,7 @@ In Chrome, `"append"` is supported for the following request headers:
 - `Trailer`
 - `Transfer-Encoding`
 - `Upgrade`
+- `User-Agent`
 - `Via`
 - `Want-Digest`
 - `X-Forwarded-For`

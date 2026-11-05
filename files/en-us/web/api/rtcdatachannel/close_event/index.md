@@ -14,11 +14,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("close", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onclose = (event) => { }
 ```
 
@@ -41,7 +45,7 @@ dc.addEventListener("close", (ev) => {
 
 All this code does in response to receiving the `close` event is to disable an input box and its "Send" button, and to enable the button used to start a call (while disabling the one that ends a call).
 
-You can also use the `onclose` event handler property to set a handler for `close` events:
+You can also use the `onclose` event handler property to set a handler for `close` events (but note that this replaces other event listeners added using `onclose`, if any):
 
 ```js
 dc.onclose = (ev) => {

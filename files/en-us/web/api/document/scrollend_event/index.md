@@ -19,11 +19,15 @@ For detecting when scrolling inside an element is complete, see the {{domxref("E
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("scrollend", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onscrollend = (event) => { }
 ```
 
@@ -93,7 +97,7 @@ document.addEventListener("scrollend", (event) => {
 
 The following example shows how to use the `scrollend` event handler property to detect when the user has stopped scrolling the document.
 In the example, there is content in the embedded iframe that is taller and wider than the iframe itself, so scrolling within the iframe in both directions is possible.
-This builds on the first example, but uses `document.onscrollend` instead of an event listener:
+This builds on the first example, but uses `document.onscrollend` instead of an event listener (but note that this replaces other event listeners added using `onscroll` and `onscrollend`, if any):
 
 ```css hidden
 * {

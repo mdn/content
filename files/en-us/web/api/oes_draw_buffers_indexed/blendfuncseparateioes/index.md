@@ -2,11 +2,11 @@
 title: "OES_draw_buffers_indexed: blendFuncSeparateiOES() method"
 short-title: blendFuncSeparateiOES()
 slug: Web/API/OES_draw_buffers_indexed/blendFuncSeparateiOES
-page-type: web-api-instance-method
+page-type: webgl-extension-method
 browser-compat: api.OES_draw_buffers_indexed.blendFuncSeparateiOES
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The `blendFuncSeparateiOES()` method of the {{DOMxRef("OES_draw_buffers_indexed")}} WebGL extension defines which function is used when blending pixels for RGB and alpha components separately for a particular draw buffer.
 

@@ -283,7 +283,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Lets a website or app gain access to a sandboxed file system for its own use.
 - {{domxref("Window.setImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Executes a function after the browser has finished other heavy tasks.
-- {{domxref("Window.setResizable()")}} {{Non-standard_Inline}} {{deprecated_inline}}
+- {{domxref("Window.setResizable()")}}
   - : Does nothing (no-op). Kept for backward compatibility with Netscape 4.x.
 - {{domxref("Window.webkitConvertPointFromNodeToPage()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Transforms a {{domxref("WebKitPoint")}} from the node's coordinate system to the page's coordinate system.

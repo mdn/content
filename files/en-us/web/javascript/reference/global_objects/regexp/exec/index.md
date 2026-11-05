@@ -148,5 +148,6 @@ This will log a message containing `'hello world!'`.
 
 ## See also
 
+- [Polyfill of `RegExp.prototype.exec` with support for named capturing groups, `dotAll`, and `sticky` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("RegExp")}}

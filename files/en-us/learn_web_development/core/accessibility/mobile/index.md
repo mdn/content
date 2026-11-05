@@ -446,7 +446,7 @@ Because the screen is so much narrower on mobile devices, it is very common to u
 
 When implementing such a menu, you need to make sure that the control to reveal it is accessible by appropriate control mechanisms (normally touch for mobile), as discussed in [Control mechanisms](#control_mechanisms) above, and that the rest of the page is moved out of the way or hidden in some way while the menu is being accessed, to avoid confusion with navigating it.
 
-Click here for a [good hamburger menu example](https://fritz-weisshart.de/meg_men/).
+For an example of an accessible, responsive navigation menu, see the [W3C Design System navigation component](https://design-system.w3.org/components/navigation.html) and its [working header navigation example](https://design-system.w3.org/code/header-nav.html).
 
 ## User input
 

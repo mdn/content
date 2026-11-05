@@ -99,7 +99,7 @@ console.log(findGetter(obj2, "foo")); // [Function: get foo]
 
 ## See also
 
-- [Polyfill of `Object.prototype.__lookupGetter__` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.prototype.__lookupGetter__` in `core-js`](https://core-js.io/docs/features/ecmascript/object)
 - [`Object.prototype.__lookupSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
 - {{jsxref("Functions/get", "get")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
