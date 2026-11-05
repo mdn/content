@@ -106,7 +106,7 @@ Some JavaScript engines used in earlier browsers include:
 Some JavaScript engines specifically tailored for non-browser purposes include:
 
 - [Engine262](https://engine262.js.org/), written in JavaScript and intended essentially as a reference implementation of the language.
-- Meta's [Hermes](https://github.com/facebook/hermes), optimized for [React Native](https://reactnative.dev/docs/hermes).
+- Meta's [Hermes](https://github.com/meta/hermes), optimized for [React Native](https://reactnative.dev/docs/hermes).
 - Mozilla's [Rhino](<https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)>), written in Java.
 - Oracle's [GraalJS](https://www.graalvm.org/), written in Java and built on top of GraalVM.
 - [Moddable XS](https://www.moddable.com/), intended for IoT/embedded systems.
