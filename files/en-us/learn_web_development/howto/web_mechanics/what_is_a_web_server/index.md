@@ -69,7 +69,7 @@ Technically, you could host all those files on your own computer, but it's far m
 
 For all these reasons, finding a good hosting provider is a key part of building your website. Examine the various services companies offer. Choose one that fits your needs and budget. For more details, see [Getting hosting and a domain name](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#getting_hosting_and_a_domain_name).
 
-Once you have web hosting service, you must upload your files to your web server; see [Publishing your website > Publishing to your server](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#publishing_to_your_server).
+Once you have a web hosting service, you must upload your files to your web server; see [Publishing your website > Publishing to your server](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#publishing_to_your_server).
 
 ### Communicating through HTTP
 
