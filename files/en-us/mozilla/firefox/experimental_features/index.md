@@ -128,9 +128,9 @@ The `blocking="render"` attribute and value is now supported for the {{HTMLEleme
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
 | Nightly           | 161           | Yes                 |
-| Developer Edition | 159           | No                  |
-| Beta              | 159           | No                  |
-| Release           | 159           | No                  |
+| Developer Edition | 160           | No                  |
+| Beta              | 160           | No                  |
+| Release           | 160           | No                  |
 
 - `dom.element.blocking.enabled`
   - : Set to `true` to enable.
