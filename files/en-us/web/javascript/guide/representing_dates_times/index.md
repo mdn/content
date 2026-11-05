@@ -154,7 +154,7 @@ The sun reaches its highest position in Paris roughly **9 minutes** before it do
 
 Time zone offsets are not constant; for a given time zone, they can change multiple times, or even alternate throughout history. This is why two ZDTs representing different instants may report different offsets, despite being in the same time zone. There are many factors that affect the offset:
 
-- The `+00:09:21` offset explained above is the Paris mean time, used by Paris and the Metropolitan France in older times (like when the Bastille fell). Similarly, New York originally used the offset `-4:56:02`.
+- The `+00:09:21` offset explained above is the Paris mean time, used by Paris and the Metropolitan France in older times (like when the Bastille fell). Similarly, New York originally used the offset `-04:56:02`.
 - During the late nineteenth and early twentieth centuries, as international travel became more common, having these irregular offsets turned out to be a great nuisance, especially when reading train time tables or adjusting watches. Countries increasingly adopted **standardized time zones**, often with offsets in whole hours from Greenwich Mean Time (GMT). For example, [Metropolitan France switched to GMT in 1911](https://en.wikipedia.org/wiki/Time_in_France#history). At what would have been midnight on March 11 under the old offset, clocks were set backward by 9 minutes 21 seconds to 23:50:39 on March 10:
 
   | UTC time            | Local time          | Offset    |
@@ -165,12 +165,12 @@ Time zone offsets are not constant; for a given time zone, they can change multi
   | 1911-03-10 23:50:39 | 1911-03-10 23:50:39 | +00:00:00 |
   | 1911-03-10 23:50:40 | 1911-03-10 23:50:40 | +00:00:00 |
 
-  Similarly, the New York mean time is 4 hours 56 minutes behind GMT, so when [the five-time-zone system was standardized in 1883](https://en.wikipedia.org/wiki/History_of_time_in_the_United_States#Railway_time), the US Eastern time zone used the `-05:00` offset.
+  Similarly, when [the five-time-zone system of the US was standardized in 1883](https://en.wikipedia.org/wiki/History_of_time_in_the_United_States#Railway_time), the Eastern time zone used the `-05:00` offset, which was the closest to `-04:56:02`.
 
   This standardized time zone is sometimes called the "natural" time zone because it still more or less reflects the local sun position in the anchor city. (The error may become greater as the region extends.)
 
 - Two regions with frequent communications may wish to align their time zone offsets. For example, during WWII, German-occupied France adopted the Berlin offset `+01:00`, which persists to this day. Similarly, the Pacific island country of Samoa changed its offset from `-11:00` to `+13:00`, effectively skipping the calendar day of December 30, 2011, to stay on the same day as Australia.
-- [Daylight saving time](https://en.wikipedia.org/wiki/Daylight_saving_time) is recorded as part of the time zone offset, so the offset can also alternate each year. For example, Paris changes its offset from `+01:00` to `+02:00` during each summer. Our mdn/content creation example uses the US Eastern time zone, which is `-05:00`, but is adjusted to `-04:00` during daylight saving:
+- [Daylight saving time](https://en.wikipedia.org/wiki/Daylight_saving_time) is recorded as part of the time zone offset, so the offset can also alternate each year. For example, Paris changes its offset from `+01:00` to `+02:00` during each summer. Our mdn/content creation example also falls in the DST period in the Eastern time zone, so it reports an offset of `-04:00` instead of `-05:00`:
 
   ```js
   console.log(mdnCreation.offsetNanoseconds); // -14400000000000
