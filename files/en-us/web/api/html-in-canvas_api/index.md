@@ -103,7 +103,7 @@ canvas.addEventListener("paint", () => {
 - {{domxref("HTMLCanvasElement.clearElementGeometry()")}}
   - : Clears any previous `DOMMatrix` applied to a `drawable` element's underlying DOM presence, returning it to its original size, shape, and position.
 - {{domxref("HTMLCanvasElement.getElementImageDefaultSize()")}}
-  - : Returns an object containing a `drawable` element's original size as it would be rendered in the DOM. The returned size is in canvas grid coordinates.
+  - : Returns an object containing an element's original size as it would be rendered in the DOM. The returned size is in canvas grid coordinates.
 - {{domxref("HTMLCanvasElement.getElementTransform()")}}
   - : Returns the `DOMMatrix` representing the transform currently applied to a `drawable` element's underlying DOM presence.
 - {{domxref("HTMLCanvasElement.requestPaint()")}}
