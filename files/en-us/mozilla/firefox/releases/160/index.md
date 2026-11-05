@@ -50,7 +50,24 @@ Firefox 160 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
+
+- The {{domxref("WebTransport.WebTransport", "WebTransport()")}} constructor now accepts the [`headers`](/en-US/docs/Web/API/WebTransport/WebTransport#headers) option, which adds custom HTTP headers to the [extended `CONNECT`](/en-US/docs/Web/HTTP/Reference/Methods/CONNECT#extended_connect) request that sets up the session.
+  The headers that the server sends in its response are available in the {{domxref("WebTransport.responseHeaders")}} property once the session is established.
+  ([Firefox bug 2081470](https://bugzil.la/2081470), [Firefox bug 2033220](https://bugzil.la/2033220)).
+- The {{domxref("WebTransport.exportKeyingMaterial()")}} method has been updated to match the current specification.
+  The `context` argument is now required, and a new [`outputLength`](/en-US/docs/Web/API/WebTransport/exportKeyingMaterial#outputlength) argument specifies the number of bytes of keying material to derive.
+  Previously, the method always returned 32 bytes.
+  Code that omits either argument will need to be updated.
+  ([Firefox bug 2079306](https://bugzil.la/2079306)).
+- The {{domxref("WebTransportDatagramDuplexStream.incomingMaxBufferedDatagrams", "incomingMaxBufferedDatagrams")}} and {{domxref("WebTransportDatagramDuplexStream.outgoingMaxBufferedDatagrams", "outgoingMaxBufferedDatagrams")}} properties of the {{domxref("WebTransportDatagramDuplexStream")}} interface are now supported.
+  They replace the non-standard {{domxref("WebTransportDatagramDuplexStream.incomingHighWaterMark", "incomingHighWaterMark")}} and {{domxref("WebTransportDatagramDuplexStream.outgoingHighWaterMark", "outgoingHighWaterMark")}} properties, which have been removed.
+  These properties represent the maximum number of incoming datagrams that can be queued while waiting to be read, and the maximum number of outgoing datagrams that can be queued for sending before backpressure is applied.
+  ([Firefox bug 2023587](https://bugzil.la/2023587)).
+- The {{domxref("WebTransport.WebTransport", "WebTransport()")}} constructor now supports the [`datagramsReadableType`](/en-US/docs/Web/API/WebTransport/WebTransport#datagramsreadabletype) option.
+  Setting it to `bytes` makes the transport's stream of incoming datagrams, {{domxref("WebTransportDatagramDuplexStream.readable", "transport.datagrams.readable")}}, a [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams).
+  You can then use a {{domxref("ReadableStreamBYOBReader")}} to read each datagram into a buffer that you supply and reuse, instead of receiving a new {{jsxref("Uint8Array")}} for every datagram.
+  ([Firefox bug 2007755](https://bugzil.la/2007755)).
 
 <!-- #### DOM -->
 
@@ -87,3 +104,8 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **Render blocking**: `dom.element.blocking.enabled`
 
   The `blocking="render` attribute and value is now supported for the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} HTML elements. This allows for rendering to be blocked, when an element is dynamically added via a script, until the recourse has been fetched. ([Firefox bug 1751383](https://bugzil.la/1751383)).
+- **`CSSNumericValue` arithmetic methods**: `layout.css.typed-om.enabled`
+
+  The {{domxref("CSSNumericValue.add()", "add()")}}, {{domxref("CSSNumericValue.sub()", "sub()")}}, {{domxref("CSSNumericValue.mul()", "mul()")}}, and {{domxref("CSSNumericValue.div()", "div()")}} methods of the {{domxref("CSSNumericValue")}} interface in the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) are now supported in Nightly.
+  They add, subtract, multiply, or divide numeric values, respectively; for example, `CSS.px(10).add(CSS.px(5))` adds two pixel values.
+  The result is a {{domxref("CSSUnitValue")}} (`15px` in this example) when it can be simplified to a single unit, or a math expression such as a {{domxref("CSSMathSum")}} when it can't be simplified (for example, when adding `px` to `%`). ([Firefox bug 2081689](https://bugzil.la/2081689)).

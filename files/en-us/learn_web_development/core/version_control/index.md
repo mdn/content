@@ -35,6 +35,8 @@ This module takes you through the essentials of version control using Git and Gi
   - : A useful guide to managing pull requests. These requests are how you propose code changes to someone else's repository so they can review and potentially merge them into the main codebase.
 - [About issues (from GitHub)](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues)
   - : Issues are like a forum for your GitHub project, where people can ask questions and report problems, and you can manage updates (for example assigning people to fix issues, clarifying the issue, letting people know things are fixed). This article tells you what you need to know about issues.
+- [Publishing your website > What approach would we recommend?](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#what_approach_would_we_recommend)
+  - : Provides a step by step guide to publishing a basic site with GitHub pages, with links to appropriate GitHub docs.
 
 > [!NOTE]
 > As you get deeper into Git, you'll start to realize that it is easy to go wrong when you start using more complicated commands. Don't worry, even professional web developers find Git confusing sometimes, and often solve problems by searching for solutions on the web, or consulting sites like [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) and [Dangit, git!](https://dangitgit.com/).
@@ -50,7 +52,6 @@ This module takes you through the essentials of version control using Git and Gi
   - [Ignoring files with .gitignore](https://docs.github.com/en/get-started/git-basics/ignoring-files)
   - [Authentication to GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github)
   - [Mastering markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) (the text format you write in on PR, issue comments, and `.md` files).
-  - [Getting Started with GitHub Pages](https://docs.github.com/en/pages/quickstart) (how to publish demos and websites on GitHub).
 - [Git command list](https://git-scm.com/docs)
 - [Learn Git branching](https://learngitbranching.js.org/)
 - [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) (a very useful compendium of ways to achieve specific things in Git, including how to correct things when you went wrong).
