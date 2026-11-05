@@ -132,11 +132,11 @@ The `rule-*` properties take the same values as their `column-*` property compon
 - {{cssxref("rule-width")}}
   - : The same vocabulary as `column-rule-width`. Sets both the `column-rule-width` and `row-rule-width` to the same value.
 
-## Breaking at intersections
+## Splitting rules into segments
 
 You can set the behavior for breaking decorations at every column-row intersection.
 
-Expanding on the first example, we set the row rules to break when they intersect a column rule, but don't break the column rules at all.
+Expanding on the first example, we split the row rules into separate segments at column gaps while keeping the column rules continuous.
 
 ```css live-sample___breaking
 .grid {
@@ -166,9 +166,9 @@ Expanding on the first example, we set the row rules to break when they intersec
 
 Every rule has a beginning and an end, or start and end _cap_. When you have gap decorations in both columns and rows, column rules intersect row rules at interior _junctions_. We can control the intersections and segment end points, defining whether the lines are painted to the end of the container or inset, whether the row rules are painted on top of the column rules when they intersect, or if the column rules are on top of the row rules, or even if one direction should have a continuous line, with the other dimension breaking at every junction while being offset from that junction.
 
-The properties in this section can offset the start and end points of rule segments relative to the segment endpoints that would normally determine where rules start and end. A `*-junction` segment endpoint is a segment endpoint at a gap junction where it would otherwise meet another gap decoration segment. A `*-cap` segment endpoint is a segment endpoint that is not a junction segment endpoint. This generally includes, but is not limited to, the container's inline and block edges. A cap endpoint may also occur when a segment is not painted, such as because of a `rule-visibility-items` declaration.
+The properties in this section can offset the start and end points of rule segments relative to the segment endpoints that would normally determine where rules start and end. A `*-junction` endpoint is a segment endpoint at a gap junction where it would otherwise meet another gap decoration segment. A `*-cap` endpoint is a segment endpoint that is not a junction endpoint. This generally includes, but is not limited to, the container's inline and block edges. A cap endpoint may also occur when a segment is not painted, such as because of a `rule-visibility-items` declaration.
 
-In this example, the vertical decorations are continuous but inset on the ends. The horizontal decorations break at the column gap edges and are inset from the container's edges.
+In this example, the column rules are continuous but are shortened on both ends. The row rules are split into segments at the column gap edges and their outer ends are shortened from the container's edges.
 
 ```css live-sample___ends
 .grid {
@@ -209,21 +209,21 @@ In this example, the vertical decorations are continuous but inset on the ends. 
 ### Column inset properties
 
 - {{cssxref("column-rule-inset")}}
-  - : Shorthand for {{cssxref("column-rule-inset-cap")}} and {{cssxref("column-rule-inset-junction")}}; one to four `<inset-value>` values offsetting the starts and ends of column rule segments. Sets the cap start and end offsets and junction start and end offsets, defining where decoration segments start and end. If you set the cap insets to different values from the junction insets, separate them with a slash (`/`).
+  - : Shorthand for {{cssxref("column-rule-inset-cap")}} and {{cssxref("column-rule-inset-junction")}}; one to four `<inset-value>` values offsetting the start and end points of column rule segments. Sets the cap start and end offsets and junction start and end offsets, defining where decoration segments start and end. If you set the cap insets to different values from the junction insets, separate them with a slash (`/`).
 
 - {{cssxref("column-rule-inset-cap")}}
-  - : One or two `<inset-value>` values setting the `column-rule-inset-cap-start` and the `column-rule-inset-cap-end` values. If you specify only one value, both properties are set to that value. If two values are specified, `column-rule-inset-cap-start` is set to the first value and `column-rule-inset-cap-end` is set to the second value.
+  - : One or two `<inset-value>` values that set `column-rule-inset-cap-start` and `column-rule-inset-cap-end`. If you specify only one value, both properties are set to that value. If you specify two values, the first sets `column-rule-inset-cap-start` and the second sets `column-rule-inset-cap-end`.
 
 - {{cssxref("column-rule-inset-cap-end")}}
-  - : An `<inset-value>`, which is a `<length-percentage>` or the keyword `overlap-join`, specifying the space between the end of the segment and the edge of the container or a gap junction where no other gap decoration segments exist. Positive values inset toward the start and negative values outset. Percentages are relative to the size of the row gap the segment end abuts, plus any additional spacing added due to {{cssxref("justify-content")}} or {{cssxref("align-content")}}. If the end of the segment is the edge of the container, percentage values resolve to `0`.
+  - : An `<inset-value>`, which is a `<length-percentage>` or the keyword `overlap-join`, specifying the space between the end of the segment and the edge of the container or a gap junction where no other gap decoration segments exist. Positive values inset toward the start and negative values outset. Percentages are relative to the size of the row gap the segment end abuts, plus any additional spacing added due to {{cssxref("justify-content")}} or {{cssxref("align-content")}}. If the segment ends at the container's edge, percentage values resolve to `0`.
 
 - {{cssxref("column-rule-inset-cap-start")}}
-  - : The same vocabulary as `column-rule-inset-cap-end`, defining the space between the start of the segment and the start edge of the container or a gap junction where no other gap decoration segment exists.
+  - : Accepts the same values as `column-rule-inset-cap-end`, defining the space between the start of the segment and the start edge of the container or a gap junction where no other gap decoration segment exists.
 - {{cssxref("column-rule-inset-end")}}
-  - : An `<inset-value>`. Sets the `column-rule-inset-cap-end` and `column-rule-inset-junction-end` to the same value.
+  - : An `<inset-value>`. Sets `column-rule-inset-cap-end` and `column-rule-inset-junction-end` to the same value.
 
 - {{cssxref("column-rule-inset-junction")}}
-  - : One or two `<inset-value>` values setting the `column-rule-inset-junction-start` and the `column-rule-inset-junction-end` values. If you specify only one value, both properties are set to that value. If two values are specified, `column-rule-inset-junction-start` is set to the first value and `column-rule-inset-junction-end` is set to the second value.
+  - : One or two `<inset-value>` values that set `column-rule-inset-junction-start` and `column-rule-inset-junction-end`. If you specify only one value, both properties are set to that value. If you specify two values, the first sets `column-rule-inset-junction-start` and the second sets `column-rule-inset-junction-end`.
 
 - {{cssxref("column-rule-inset-junction-end")}}
   - : An `<inset-value>`, defining the offset from the edge of the gap at the end edge of the segment. Positive values grow the segment into the gap; negative values offset the end from the gap. Percentages are relative to the width of the column gap the segment end abuts, plus any additional spacing added due to {{cssxref("justify-content")}} or {{cssxref("align-content")}}.
@@ -232,7 +232,7 @@ In this example, the vertical decorations are continuous but inset on the ends. 
   - : The same vocabulary as `column-rule-inset-junction-end`, defining the interior segment offset from the end edge of the row gap at the start edge of the column rule segment.
 
 - {{cssxref("column-rule-inset-start")}}
-  - : An `<inset-value>`. Sets the `column-rule-inset-cap-start` and `column-rule-inset-junction-start` to the same value.
+  - : An `<inset-value>`. Sets `column-rule-inset-cap-start` and `column-rule-inset-junction-start` to the same value.
 
 ### Row inset properties
 
@@ -279,11 +279,11 @@ In this example, the vertical decorations are continuous but inset on the ends. 
 - {{cssxref("rule-inset-start")}}
   - : A `column-rule-inset-start` value. Sets `column-rule-inset-start` and `row-rule-inset-start` to the same value.
 
-## Decoration visibility
+## Controlling rule visibility
 
-We can also define whether a gap decoration segment is painted in portions of gaps adjacent to empty areas.
+You can define whether rule segments are painted in portions of gaps adjacent to empty areas.
 
-In this example, note how the segments around the sections without grid items have no rules painted.
+In this example, note how no rule segments are painted alongside the empty grid areas.
 
 ```css live-sample___visibility
 .grid {
@@ -320,7 +320,7 @@ In this example, note how the segments around the sections without grid items ha
 - {{cssxref("rule-visibility-items")}}
   - : The same vocabulary as `column-rule-visibility-items`. Sets `column-rule-visibility-items` and `row-rule-visibility-items` to the same value.
 
-## Overlapping
+## Controlling rule overlap
 
 If row and column rules don't break, they overlap at junction intersections. We can control whether row rules are painted on top of column rules, or vice versa.
 
@@ -343,7 +343,7 @@ Expanding on the first example on this page, we've set the column rules to be pa
 {{EmbedLiveSample("overlap", "", "210")}}
 
 - {{cssxref("rule-overlap")}}
-  - : The keyword `row-over-column` or `column-over-row`. Sets the paint order for overlapping gap decorations when column rules and row rules intersect.
+  - : The keyword `row-over-column` or `column-over-row`. Sets the paint order where row rules and column rules overlap.
 
 ## See also
 
