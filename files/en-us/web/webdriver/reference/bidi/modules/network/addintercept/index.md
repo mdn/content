@@ -51,9 +51,9 @@ The `params` field contains:
 - `phases`
   - : An array of one or more strings, each specifying a phase of a request in which the intercept blocks it.
     Each value can be one of the following:
-    - `authRequired`: The request is blocked when the server asks for authentication, when the browser sends the [`network.authRequired`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/authRequired) event.
-    - `beforeRequestSent`: The request is blocked before the browser sends it, when the browser sends the [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) event.
-    - `responseStarted`: The request is blocked after the browser receives the response headers, when the browser sends the [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) event.
+    - `authRequired`: The request is blocked when the server asks for authentication, when the browser emits the [`network.authRequired`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/authRequired) event.
+    - `beforeRequestSent`: The request is blocked before the browser sends it, when the browser emits the [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) event.
+    - `responseStarted`: The request is blocked after the browser receives the response headers, when the browser emits the [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) event.
 - `urlPatterns` {{optional_inline}}
   - : An array of objects, each specifying a pattern against which request URLs are compared.
     The intercept matches a request whose URL matches any of the patterns.
