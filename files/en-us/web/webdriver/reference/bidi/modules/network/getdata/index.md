@@ -40,6 +40,7 @@ The `params` field contains:
 - `collector` {{optional_inline}}
   - : A string that contains the ID of a collector that keeps the data.
     If specified, the browser returns the data only if this collector keeps it.
+    Specifying it also lets you release the data from this collector in the same command using [`disown`](#disown), so the browser doesn't keep data that you no longer need.
     Collector IDs are returned by the [`network.addDataCollector`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addDataCollector) command.
 - `dataType`
   - : A string that specifies which body to retrieve.
@@ -91,9 +92,9 @@ The `result` object in the response contains the following field:
 
 ## Description
 
-A collector keeps a response body only once the browser has received all of it.
-If you send `network.getData` while a response body is still arriving, the browser responds once the whole body has arrived or the request has failed.
-For example, a response body can still be arriving after the [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) event and before [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted).
+You don't have to wait for a body to arrive before sending `network.getData`.
+You can send it for a request body as soon as the [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) event for the request fires, and for a response body as soon as the [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) event fires.
+If the body is still arriving, the browser responds once the whole body has arrived or the request has failed.
 
 After a redirect, the request keeps its request ID, and the browser keeps only the body of the final response.
 
