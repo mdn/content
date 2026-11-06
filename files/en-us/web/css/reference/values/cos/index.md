@@ -163,9 +163,7 @@ div.rotated-scaled-diamond {
 
 ### Arranging items around a circle
 
-The `cos()` and {{cssxref("sin")}} functions together turn an angle into a position on a circle. For an item at a given angle, `cos(angle) * radius` gives its horizontal offset from the center and `sin(angle) * radius` gives its vertical offset. This is useful for layouts such as radial menus, where the items are spread evenly around a center point, because each position is calculated from the radius and the number of items instead of being hard-coded.
-
-In this example, each item's angle is the full circle (`360deg`) divided by the number of items, multiplied by its position in the list. The item is then placed from the center of the container using that angle, and {{cssxref("translate")}} moves the item so its own center, rather than its top-left corner, sits on that point.
+This example demonstrates using the `cos()` and {{cssxref("sin")}} functions together to turn an angle into a position on a circle. For an item at a given angle, `cos(angle) * radius` gives its horizontal offset from the center and `sin(angle) * radius` gives its vertical offset. This is useful for layouts such as radial menus, where the items are spread evenly around a center point, because each position is calculated from the radius and the number of items instead of being hard-coded.
 
 #### HTML
 
@@ -181,6 +179,8 @@ In this example, each item's angle is the full circle (`360deg`) divided by the 
 ```
 
 #### CSS
+
+Each item's `--angle` is set to the full circle (`360deg`) divided by the number of items, multiplied by its position in the list. That angle is used with the {{cssxref("top")}} and {{cssxref("left")}} values to place the items from the container center. The {{cssxref("translate")}} property moves the item so its own center, rather than its top-left corner, sits on that point.
 
 ```css hidden
 body {
