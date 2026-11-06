@@ -10,8 +10,8 @@ browser-compat: api.WebTransportSendStream.getStats
 
 The **`getStats()`** method of the {{domxref("WebTransportSendStream")}} interface asynchronously returns an object containing statistics for the current stream.
 
-The statistics include the total number of bytes written to the stream, the number that have been sent (ignoring packet overhead), and the number of bytes that have been set at least once, and the number that have been acknowledged (up until the first sequentially-ordered non-acknowledged byte).
-It therefore provides a measure of how quickly the application is sending bytes to the server on this particular stream.
+The statistics include the total number of bytes written to the stream, the number that have been sent at least once (ignoring packet overhead), and the number that the server has acknowledged (up to the first unacknowledged byte).
+They therefore provide a measure of how quickly the application is sending bytes to the server on this particular stream.
 
 ## Syntax
 
@@ -28,28 +28,31 @@ None.
 A {{jsxref("Promise")}} that resolves to an object containing statistics about the current stream.
 The returned object has the following properties:
 
-- `bytesAcknowledged`
-  - : A positive integer indicating the number of bytes written to this stream that have been sent and acknowledged as received by the server, using QUIC's ACK mechanism.
-    Only sequential bytes up to, but not including, the first non-acknowledged byte, are counted.
+- `bytesAcknowledged` {{optional_inline}}
+  - : A non-negative integer indicating the number of bytes written to this stream that have been sent and acknowledged as received by the server, using {{Glossary("QUIC")}}'s ACK mechanism.
+    Bytes are counted from the start of the stream up to the first byte that hasn't been acknowledged.
+    Any bytes after that gap aren't counted, even if they have been acknowledged.
     This number can only increase and is always less than or equal to `bytesSent`.
-    When the connection is over HTTP/2, the value will match `bytesSent`.
-- `bytesSent`
-  - : A positive integer indicating the number of bytes written to this stream that have been sent at least once (but not necessarily acknowledged).
-    This number can only increase, and is always less than or equal to `bytesWritten`.
-    Note that this count does not include bytes sent as network overhead (such as packet headers).
-- `bytesWritten`
-  - : A positive integer indicating the number of bytes successfully written to this stream.
+    When the connection is over HTTP/2, the value matches `bytesSent`.
+- `bytesSent` {{optional_inline}}
+  - : A non-negative integer indicating the number of bytes written to this stream that have been sent at least once (but not necessarily acknowledged).
+    This number can only increase and is always less than or equal to `bytesWritten`.
+    The count does not include bytes sent as network overhead (such as packet headers).
+- `bytesWritten` {{optional_inline}}
+  - : A non-negative integer indicating the number of bytes successfully written to this stream.
     This number can only increase.
 
 ## Examples
 
-The code snippet below uses `await` to wait on the {{jsxref("Promise")}} returned by `getStats()`.
-When the promise fulfills, the result for the number of bytes that have been sent but not acknowledged is logged to the console.
+### Logging bytes sent but not yet acknowledged
+
+The following code snippet uses `await` to wait on the {{jsxref("Promise")}} returned by `getStats()`.
+When the promise fulfills, the code logs the number of bytes that have been sent but not yet acknowledged.
 
 ```js
 const stats = await stream.getStats();
-const bytesNotReceived = stats.bytesSent - stats.bytesAcknowledged;
-console.log(`Bytes sent but not acknowledged: ${bytesNotReceived}`);
+const bytesNotAcknowledged = stats.bytesSent - stats.bytesAcknowledged;
+console.log(`Bytes sent but not yet acknowledged: ${bytesNotAcknowledged}`);
 ```
 
 ## Specifications
@@ -59,3 +62,9 @@ console.log(`Bytes sent but not acknowledged: ${bytesNotReceived}`);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("WebTransportReceiveStream.getStats()")}}
+- {{domxref("WebTransportSendGroup.getStats()")}}
+- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
