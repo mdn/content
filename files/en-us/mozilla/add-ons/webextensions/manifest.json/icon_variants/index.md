@@ -63,7 +63,7 @@ The `icon_variants` key is an array of icon groups. Each icon group is an object
 
     A group without `color_schemes` is for both color schemes.
 
-The browser checks the groups in order and uses the first one that matches the current color scheme. The browser decides which color scheme to match. It can differ from the operating system preference, for example, to keep icons legible against a theme. Within the group, the browser picks the icon that best fits the required size. It considers the display's pixel density, so provide larger icon versions for high-density displays.
+The browser checks the groups in order and uses the first one that matches the active color scheme. The browser decides which color scheme to match. It can differ from the operating system preference, for example, to keep icons legible against a theme. Within the group, the browser picks the icon that best fits the required size. It considers the display's pixel density, so provide larger icon versions for high-density displays.
 
 Browsers differ in what they do when no group matches the active color scheme, how they handle a group with properties not listed here, and how they choose between `any` and a numeric size when a group has both. List a group for each color scheme to avoid unexpected color matches.
 
