@@ -450,7 +450,7 @@ Perhaps unsurprisingly, when used as shown this provides the default rendering o
 > [!NOTE]
 > It is perhaps not obvious because we only have one field, but, by default, every field is defined in its own `<div>` element. This same rendering is provided if you reference the template variable `\{{ form.as_div }}`.
 
-If you were to enter an invalid date, you'd additionally get a list of the errors rendered on the page (see `errorlist` below).
+If you were to enter an invalid date, you'd additionally get a list of the errors rendered on the page (see `error-list` below).
 Note how the `aria-describedby` attribute links the input to both the help text and the error message, so that they are announced by screen readers.
 
 ```html
@@ -459,7 +459,7 @@ Note how the `aria-describedby` attribute links the input to both the help text 
   <div class="helptext" id="id_renewal_date_helptext">
     Enter a date between now and 4 weeks (default 3).
   </div>
-  <ul class="errorlist" id="id_renewal_date_error">
+  <ul class="error-list" id="id_renewal_date_error">
     <li>Invalid date - renewal in past</li>
   </ul>
   <input
