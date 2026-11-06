@@ -37,7 +37,7 @@ console.log(
 
 As you can see, the `specialInstant` now represents the aforementioned **September 15, 2020 at 11:43:01 EDT** instant.
 
-Similarly, we can construct an instant that's `5694908400000000000` nanoseconds (note: this is equivalent to 65913 days and 7 hours) _before_ the epoch by using a negative number. When displayed in the Paris time zone, this happens to be **July 14, 1789**, at some odd time (see [Understanding the time zone](#understanding_the_time_zone) for why the time is `09:21`).
+Similarly, we can construct an instant that's `5694908400000000000` nanoseconds (note: this is equivalent to 65913 days and 7 hours) _before_ the epoch by using a negative number. When displayed in the Paris time zone, this happens to be **July 14, 1789**, at some odd time (see [Understanding the time zone](#understanding_the_time_zone) for why it's 9 minutes and 21 seconds past the hour).
 
 ```js
 const specialInstant = new Temporal.Instant(-5694908400000000000n);
@@ -140,7 +140,7 @@ A group of properties—{{jsxref("Temporal/ZonedDateTime/daysInMonth", "daysInMo
 
 ### Understanding the time zone
 
-The time `15:43:01` is based on an epoch representing midnight in UTC, whose time of day approximately follows the mean solar time at Greenwich, London. Each longitude has a different local time. The sun's motion is not uniform, but it revolves 360° around the earth in 24 hours, so on average, two clocks 1° apart in longitude will have a 4-minute difference. A clock that synchronizes with the local sun position, assuming uniform motion, is called the _local mean time_. Usually, an entire region uses the local time of a clock at some important location (it would be very inconvenient if two nearby towns had clocks that are a few minutes apart); this region is called a _time zone_. The difference between the time in that time zone and UTC is called the _time zone offset_.
+The time `15:43:01` is based on an epoch representing midnight in UTC, whose time of day approximately follows the mean solar time at Greenwich, London. Each longitude has a different local time. The sun's apparent motion is not uniform, but it moves 360° around the Earth in 24 hours, so on average, two clocks 1° apart in longitude will have a 4-minute difference. The time kept by a clock that synchronizes with the local sun position, assuming uniform motion, is called the _local mean time_. Usually, an entire region uses the local time of a clock at some important location (it would be very inconvenient if two nearby towns had clocks that are a few minutes apart); this region is called a _time zone_. The difference between the time in that time zone and UTC is called the _time zone offset_.
 
 Each ZDT is associated with a time zone, identified by the {{jsxref("Temporal/ZonedDateTime/timeZoneId", "timeZoneId")}} (which uses the name of a city in that time zone). You can get its offset using the {{jsxref("Temporal/ZonedDateTime/offsetNanoseconds", "offsetNanoseconds")}} property (which returns a number) or the {{jsxref("Temporal/ZonedDateTime/offset", "offset")}} property (which returns a string).
 
@@ -186,7 +186,7 @@ A **time zone database** takes an instant and a region (identified by a city lik
 console.log(Temporal.Now.timeZoneId()); // e.g.: "Europe/Paris"
 ```
 
-The [`Temporal.ZonedDateTime` reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets) also has a detailed explanation of the IANA time zone database used by JavaScript, including some caveats about corner cases involving time zone transitions. You are _highly recommended_ to always keep these cases in mind. The `ZonedDateTime` object provides methods and properties including {{jsxref("Temporal/ZonedDateTime/hoursInDay", "hoursInDay")}} (not always 24!), {{jsxref("Temporal/ZonedDateTime/startOfDay", "startOfDay()")}} (not always 00:00!), and {{jsxref("Temporal/ZonedDateTime/getTimeZoneTransition", "getTimeZoneTransition()")}} to help you deal with such irregularities.
+The [`Temporal.ZonedDateTime` reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets) also has a detailed explanation of the IANA time zone database used by JavaScript, including some caveats about corner cases involving time zone transitions. We _highly recommend_ that you always keep these cases in mind. The `ZonedDateTime` object provides methods and properties including {{jsxref("Temporal/ZonedDateTime/hoursInDay", "hoursInDay")}} (not always 24!), {{jsxref("Temporal/ZonedDateTime/startOfDay", "startOfDay()")}} (not always 00:00!), and {{jsxref("Temporal/ZonedDateTime/getTimeZoneTransition", "getTimeZoneTransition()")}} to help you deal with such irregularities.
 
 Once a time zone is defined, retrieve the local time using `hour`, `minute`, `second`, `millisecond`, `microsecond`, and `nanosecond`.
 
@@ -402,7 +402,7 @@ You can remove further information from plain dates. Sometimes you don't even ca
 
 ```js
 // A special whole month
-const prideMonth2026 = Temporal.PlainYearMonth.from({ year: 2026, month: 2 });
+const prideMonth2026 = Temporal.PlainYearMonth.from({ year: 2026, month: 6 });
 // A special calendar date for every year
 const remembranceDay = Temporal.PlainMonthDay.from({ month: 11, day: 11 });
 ```
@@ -412,10 +412,10 @@ Year-months and month-days still store a full plain date internally, which is mo
 You can also convert back-and-forth between year-months/month-days and dates.
 
 ```js
-const valentines2026 = prideMonth2026.toPlainDate({ day: 14 }); // 2026-02-14
+const juneteenth2026 = prideMonth2026.toPlainDate({ day: 19 }); // 2026-06-19
 const remembranceDay2026 = remembranceDay.toPlainDate({ year: 2026 }); // 2026-11-11
 const mdnCreationMonth = mdnCreationDate.toPlainYearMonth(); // 2020-09
-const bastilleDay = bastilleFallDate.toPlainMonthDay(); // July 14th
+const bastilleDay = bastilleFall.toPlainDate().toPlainMonthDay(); // 07-14
 ```
 
 ## The RFC 9557 format
@@ -597,7 +597,7 @@ We've already shown {{jsxref("Temporal.Now.timeZoneId()")}}, which gives you the
 For example, you can get the current time in Paris, regardless of what time zone your system is in:
 
 ```js
-const parisNow = Temporal.Now.zonedDateTimeISO().withTimeZone("Europe/Paris");
+const parisNow = Temporal.Now.zonedDateTimeISO("Europe/Paris");
 ```
 
 ## The legacy Date object

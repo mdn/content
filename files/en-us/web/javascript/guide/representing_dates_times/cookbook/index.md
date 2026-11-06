@@ -12,8 +12,6 @@ This guide provides snippets for common use cases of {{jsxref("Temporal")}}. Rea
 
 ## Current date and time
 
-[How to get the current date and time in the local time zone?](https://stackoverflow.com/questions/1531093/how-do-i-get-the-current-date-in-javascript)
-
 ```js
 const date = Temporal.Now.plainDateISO(); // Gets the current date
 date.toString(); // returns the date in ISO 8601 date format
@@ -26,8 +24,6 @@ Note that if you just want the date and not the time, you should use {{jsxref("T
 
 ## Unix timestamp
 
-[How to get a Unix timestamp?](https://stackoverflow.com/questions/221294/how-do-you-get-a-timestamp-in-javascript)
-
 ```js
 const timeStamp = Temporal.Now.instant();
 
@@ -38,11 +34,11 @@ timeStamp.epochMilliseconds;
 Math.floor(timeStamp.epochMilliseconds / 1000);
 ```
 
-## Converting between `Temporal` types and legacy `Date`
+## Converting between Temporal types and legacy Date
 
-### Legacy `Date` to `Temporal.Instant` and/or `Temporal.ZonedDateTime`
+### Legacy Date to Temporal.Instant and/or Temporal.ZonedDateTime
 
-Here's how to convert legacy ECMAScript {{jsxref("Date")}} into a {{jsxref("Temporal.Instant")}} or {{jsxref("Temporal.ZonedDateTime")}} instance corresponding to the same instant in exact time.
+Here's how to convert legacy {{jsxref("Date")}} into a {{jsxref("Temporal.Instant")}} or {{jsxref("Temporal.ZonedDateTime")}} instance corresponding to the same instant in exact time.
 
 If you need a `ZonedDateTime`, use the {{jsxref("Temporal/Instant/toZonedDateTimeISO", "toZonedDateTimeISO()")}} method of the resulting `Instant`. You will need to specify a time zone, because legacy `Date` only stores an exact time, and does not store a time zone.
 
@@ -71,7 +67,7 @@ console.log(zoned2.epochMilliseconds === legacyDate.getTime()); // true
 console.log(zoned2.timeZoneId); // 'Asia/Shanghai'
 ```
 
-### Date-only values: legacy `Date` to `Temporal.PlainDate`
+### Date-only values: legacy Date to Temporal.PlainDate
 
 A common bug arises from a simple question: what date (year, month, and day) is represented by this `Date`? The problem: the answer depends on the time zone. The same `Date` can be December 31 in San Francisco but January 1 in London or Tokyo.
 
@@ -105,7 +101,7 @@ plainDate = date
 console.log(plainDate.toString()); // '2000-01-01'
 ```
 
-### `Temporal` types to legacy `Date`
+### Temporal types to legacy Date
 
 Legacy `Date` represents an exact time, so it's straightforward to convert a `Temporal.Instant` or `Temporal.ZonedDateTime` instance into a legacy `Date` instance that corresponds to it. To convert `Instant` to legacy `Date`, use the {{jsxref("Temporal/Instant/epochMilliseconds", "epochMilliseconds")}} property.
 
@@ -615,7 +611,7 @@ const atOrAfterMidnight = (x) => Temporal.Instant.compare(x, tankMidnight) >= 0;
 const dataStartIndex = tankDataX.findIndex(atOrAfterMidnight);
 const graphLabels = tankDataX
   .slice(dataStartIndex)
-  .map((x) => labelFormatter.format(new Date(x.epochMilliseconds)));
+  .map((x) => labelFormatter.format(x));
 const graphPoints = tankDataY.slice(dataStartIndex);
 
 const ctx = document.getElementById("storage-tank").getContext("2d");
