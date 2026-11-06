@@ -21,16 +21,13 @@ The tracker generally has a good reason to encourage other sites to embed its cl
 
 When the user loads a page that embeds the client, the client is able to communicate with the server, and the server can record the fact that the user has visited this page.
 
-The embedded client has a way to identify the browser in which it's loaded: most often, it does this by storing an identifier in the browser's client-side storage. Whenever the user loads a page that embeds the client, the client communicates with the server, which adds the page to the list of pages associated with this user.
+The embedded client has a way to identify the browser in which it's loaded: most often (but [not always](#fingerprinting)), it does this by storing an identifier in the browser's client-side storage. Whenever the user loads a page that embeds the client, the client sends the identifier to the server, which adds the page to the list of pages associated with this user.
 
 ![Two pages, cat-videos.example and yak-videos.example, each embed a tracker client. Each client reads user ID 123456 from the browser's tracker storage and reports the visit to the tracker server, which records both pages against that ID.](tracker-architecture.svg)
 
-This architecture has a couple of properties that are worth exploring in a little more detail:
+In this architecture, the embedded client component is a _third-party resource_. In the next section we'll expore the difference between first and third parties in a little more detail.
 
-- The tracker client is a [_third-party resource_](#first_and_third_parties) that's embedded in pages that the user visits.
-- The tracker client is able to access its own [storage location](#client-side_storage) on the user's device.
-
-## First and third parties
+### First and third parties
 
 When a user visits a website, the browser's address bar displays the name of the {{glossary("site")}}, and the site's content itself confirms to the user who they are interacting with. Any resources served by this site, including documents, scripts, stylesheets, images, and so on, are _first-party resources_. Any resources served by a different site are _third-party resources_.
 
@@ -72,7 +69,7 @@ To use cookies, a tracker implements something like the following process:
 In this situation, the cookies that are exchanged are associated with a different site from the main page. The main page, whose URL is shown in the address bar, is the site that the user intends to visit, but the cookies are associated with the tracker's site. Cookies with this property are called _third-party cookies_, and much of the effort browsers put into preventing tracking involves blocking or restricting the use of third-party cookies.
 
 > [!NOTE]
-> Third-party cookies are sometimes called _cross-site cookies_, and this term is often preferred, since it is more descriptive.
+> Third-party cookies are sometimes called _cross-site cookies_.
 
 ### Covert stateful tracking
 
