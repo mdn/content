@@ -23,7 +23,7 @@ The following example prints the `currentRect` of the first item in {{domxref("L
 ```js
 new PerformanceObserver((list) => {
   for (const { sources } of list.getEntries()) {
-    if (sources) {
+    if (sources && sources.length > 0) {
       console.log(sources[0].currentRect);
     }
   }

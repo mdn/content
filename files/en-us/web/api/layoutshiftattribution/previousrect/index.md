@@ -23,7 +23,7 @@ The following example prints the `previousRect` of the first item in {{domxref("
 ```js
 new PerformanceObserver((list) => {
   for (const { sources } of list.getEntries()) {
-    if (sources) {
+    if (sources && sources.length > 0) {
       console.log(sources[0].previousRect);
     }
   }
