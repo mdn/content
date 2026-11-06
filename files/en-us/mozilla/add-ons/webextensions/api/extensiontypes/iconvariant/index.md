@@ -21,9 +21,6 @@ Values of this type are objects. They contain the following properties:
 
 The [`icon_variants`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icon_variants) manifest key uses the same structure, with `color_schemes` in place of `colorSchemes`. For the formats and sizes to provide, see [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons).
 
-> [!NOTE]
-> Browsers don't expose this type through the `extensionTypes` object. Safari 18.2 to 26.1 reads `color_schemes` instead of `colorSchemes`. That name is deprecated. Use `colorSchemes`.
-
 ## Browser compatibility
 
 {{Compat}}
