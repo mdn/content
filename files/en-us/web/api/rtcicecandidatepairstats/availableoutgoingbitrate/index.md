@@ -11,8 +11,6 @@ browser-compat: api.RTCStatsReport.type_candidate-pair.availableOutgoingBitrate
 The **`availableOutgoingBitrate`** property of the {{domxref("RTCIceCandidatePairStats")}} dictionary indicates the available outbound capacity of the network connection represented by the candidate pair.
 The higher the value, the more bandwidth you can assume is available for outgoing data.
 
-You can get the incoming available bitrate from {{domxref("RTCIceCandidatePairStats.availableIncomingBitrate", "availableIncomingBitrate")}}.
-
 ## Value
 
 A number which approximates the amount of available bandwidth for outgoing data on the network connection described by the

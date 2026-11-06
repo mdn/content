@@ -52665,10 +52665,6 @@
     "modified": "2020-10-15T22:15:55.774Z",
     "contributors": ["Sheppy"]
   },
-  "Web/API/RTCIceCandidatePairStats/availableIncomingBitrate": {
-    "modified": "2020-10-15T22:15:55.963Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/API/RTCIceCandidatePairStats/availableOutgoingBitrate": {
     "modified": "2020-10-15T22:15:57.191Z",
     "contributors": ["sideshowbarker", "Sheppy"]
@@ -52705,10 +52701,6 @@
     "modified": "2020-10-15T22:15:54.148Z",
     "contributors": ["Sheppy"]
   },
-  "Web/API/RTCIceCandidatePairStats/readable": {
-    "modified": "2020-10-15T22:15:55.663Z",
-    "contributors": ["sideshowbarker", "Sheppy"]
-  },
   "Web/API/RTCIceCandidatePairStats/remoteCandidateId": {
     "modified": "2020-10-15T22:17:00.342Z",
     "contributors": ["Sheppy"]
@@ -52729,10 +52721,6 @@
     "modified": "2020-10-15T22:17:01.253Z",
     "contributors": ["Sheppy"]
   },
-  "Web/API/RTCIceCandidatePairStats/selected": {
-    "modified": "2020-10-15T22:15:55.040Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/API/RTCIceCandidatePairStats/state": {
     "modified": "2020-10-15T22:17:01.766Z",
     "contributors": ["Sheppy"]
@@ -52744,10 +52732,6 @@
   "Web/API/RTCIceCandidatePairStats/transportId": {
     "modified": "2020-10-15T22:17:01.728Z",
     "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCIceCandidatePairStats/writable": {
-    "modified": "2020-10-15T22:15:56.759Z",
-    "contributors": ["sideshowbarker", "Sheppy"]
   },
   "Web/API/RTCIceCandidateStats": {
     "modified": "2020-10-15T22:12:43.270Z",
@@ -52792,10 +52776,6 @@
   "Web/API/RTCIceTransport": {
     "modified": "2020-10-15T22:06:43.484Z",
     "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCIceTransport/component": {
-    "modified": "2020-10-15T22:06:42.380Z",
-    "contributors": ["sideshowbarker", "Sheppy"]
   },
   "Web/API/RTCIceTransport/gatheringState": {
     "modified": "2020-10-15T22:06:40.353Z",

@@ -13,10 +13,6 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 
 ## Instance properties
 
-- {{domxref("RTCIceCandidatePairStats.availableIncomingBitrate", "availableIncomingBitrate")}} {{optional_inline}} <!-- Not in BCD but is in spec IDL. -->
-  - : A number representing the available inbound capacity of the network.
-    This reports the total number of bits per second available for all of the candidate pair's incoming {{Glossary("RTP")}} streams.
-    It does not take into account the size of the Internet Protocol (IP) overhead, nor any other transport layers such as {{Glossary("TCP")}} or {{Glossary("UDP")}}.
 - {{domxref("RTCIceCandidatePairStats.availableOutgoingBitrate", "availableOutgoingBitrate")}} {{optional_inline}}
   - : A number representing the approximate available outbound capacity of the network.
     This reports the total number of bits per second available for all of the candidate pair's outgoing {{Glossary("RTP")}} streams.
@@ -85,19 +81,6 @@ Check the [compatibility table](#browser_compatibility) for details on which bro
 
 - {{domxref("RTCIceCandidatePairStats.priority", "priority")}} {{Deprecated_Inline}} {{optional_inline}} {{non-standard_inline}}
   - : An integer value indicating the candidate pair's priority.
-- {{domxref("RTCIceCandidatePairStats.readable", "readable")}} {{Deprecated_Inline}} {{optional_inline}} {{Non-standard_Inline}}
-  - : A Boolean value indicating whether or not data can be sent over the connection described by the candidate pair.
-- {{domxref("RTCIceCandidatePairStats.writable", "writable")}} {{Deprecated_Inline}} {{optional_inline}} {{Non-standard_Inline}}
-  - : A Boolean value indicating whether or not data can be received on the connection described by the candidate pair.
-
-### Non-standard properties
-
-- {{domxref("RTCIceCandidatePairStats.selected", "selected")}} {{Non-standard_Inline}} {{optional_inline}}
-  - : A Firefox-specific Boolean value which is `true` if the candidate pair described by this object is the one currently in use.
-    The spec-compliant way to determine the selected candidate pair is to look for a stats object of type `transport`, which is an {{domxref("RTCTransportStats")}} object.
-    That object's {{domxref("RTCTransportStats.selectedCandidatePairId", "selectedCandidatePairId")}} property indicates whether or not the specified transport is the one being used.
-
-## Usage notes
 
 The currently-active ICE candidate pair—if any—can be obtained by calling the {{domxref("RTCIceTransport")}} method {{domxref("RTCIceTransport.getSelectedCandidatePair", "getSelectedCandidatePair()")}}, which returns an {{domxref("RTCIceCandidatePair")}} object, or `null` if there isn't a pair selected.
 The active candidate pair describes the current configuration of the two ends of the {{domxref("RTCPeerConnection")}}.
