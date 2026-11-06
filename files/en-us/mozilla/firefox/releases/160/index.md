@@ -101,6 +101,10 @@ These features are shipping in Firefox 160 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
+- **Render blocking**: `dom.element.blocking.enabled`
+
+  The `blocking="render"` attribute and value is now supported for the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} HTML elements. This allows for rendering to be blocked until the element's stylesheet has loaded or its script has run, including for elements that don't block rendering by default, such as scripts and stylesheets added with JavaScript. ([Firefox bug 1751383](https://bugzil.la/1751383)).
+
 - **`CSSNumericValue` arithmetic methods**: `layout.css.typed-om.enabled`
 
   The {{domxref("CSSNumericValue.add()", "add()")}}, {{domxref("CSSNumericValue.sub()", "sub()")}}, {{domxref("CSSNumericValue.mul()", "mul()")}}, and {{domxref("CSSNumericValue.div()", "div()")}} methods of the {{domxref("CSSNumericValue")}} interface in the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) are now supported in Nightly.
