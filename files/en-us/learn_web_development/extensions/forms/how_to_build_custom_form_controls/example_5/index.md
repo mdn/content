@@ -21,13 +21,16 @@ This is the last example that explains [how to build custom form widgets](/en-US
     <option>Apple</option>
   </select>
 
-  <div
-    class="select"
-    role="combobox"
-    aria-label="Fruit"
-    aria-haspopup="listbox"
-    aria-expanded="false">
-    <span class="value">Cherry</span>
+  <div class="select-wrapper">
+    <div
+      class="select"
+      role="combobox"
+      aria-label="Fruit"
+      aria-haspopup="listbox"
+      aria-expanded="false">
+      <span class="value">Cherry</span>
+    </div>
+
     <ul class="optList hidden" role="listbox" aria-label="Fruit">
       <li class="option" role="option" aria-selected="true">Cherry</li>
       <li class="option" role="option" aria-selected="false">Lemon</li>
@@ -43,13 +46,18 @@ This is the last example that explains [how to build custom form widgets](/en-US
 
 ```css
 .widget select,
-.no-widget .select {
+.no-widget .select-wrapper {
   display: none;
 }
 
 /* --------------- */
 /* Required Styles */
 /* --------------- */
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+}
 
 .select {
   position: relative;
@@ -62,13 +70,13 @@ This is the last example that explains [how to build custom form widgets](/en-US
   outline-color: transparent;
 }
 
-.select .optList {
+.select-wrapper .optList {
   position: absolute;
   top: 100%;
   left: 0;
 }
 
-.select .optList.hidden {
+.select-wrapper .optList.hidden {
   max-height: 0;
   visibility: hidden;
 }
@@ -126,7 +134,7 @@ This is the last example that explains [how to build custom form widgets](/en-US
   color: white;
 }
 
-.select .optList {
+.select-wrapper .optList {
   z-index: 2;
 
   list-style: none;
@@ -148,16 +156,16 @@ This is the last example that explains [how to build custom form widgets](/en-US
   overflow-x: hidden;
 }
 
-.select .option {
+.select-wrapper .option {
   padding: 0.2em 0.3em;
 }
 
-.select .highlight {
+.select-wrapper .highlight {
   background: black;
   color: white;
 }
 
-.select .option:not(.highlight):hover {
+.select-wrapper .option:not(.highlight):hover {
   background-color: rgb(0 0 0 / 10%);
 }
 ```
@@ -170,11 +178,12 @@ This is the last example that explains [how to build custom form widgets](/en-US
 // -------------------- //
 
 function openOptList(select, activeIndex) {
-  const optionList = select.querySelectorAll(".option");
+  const wrapper = select.parentElement;
+  const optList = wrapper.querySelector(".optList");
+  const optionList = optList.querySelectorAll(".option");
 
-  // Validate the requested active option BEFORE any popup state mutation.
-  // If the requested index is invalid, leave the popup closed so the
-  // POPUP_OPEN ⇒ valid active option invariant cannot be violated.
+  // Check the requested active option before opening the listbox.
+  // If the index is invalid, leave the listbox closed.
   if (
     !Number.isInteger(activeIndex) ||
     activeIndex < 0 ||
@@ -183,13 +192,12 @@ function openOptList(select, activeIndex) {
     return;
   }
 
-  const optList = select.querySelector(".optList");
-
   optList.classList.remove("hidden");
   select.classList.add("active");
   select.setAttribute("aria-expanded", "true");
 
   highlightOption(select, optionList[activeIndex]);
+  scrollOptionIntoListbox(select, optionList[activeIndex]);
 }
 
 function commitActiveOption(select) {
@@ -197,7 +205,8 @@ function commitActiveOption(select) {
     return;
   }
 
-  const optionList = select.querySelectorAll(".option");
+  const wrapper = select.parentElement;
+  const optionList = wrapper.querySelectorAll(".option");
   const activeId = select.getAttribute("aria-activedescendant");
   const activeIndex = [...optionList].findIndex(
     (option) => option.id === activeId,
@@ -211,21 +220,21 @@ function commitActiveOption(select) {
 }
 
 function closeOptList(select) {
-  // aria-expanded is the single canonical source of truth for popup state.
-  // The .active and .hidden classes are presentation mirrors maintained by
-  // openOptList()/closeOptList() and are not consulted to authorize a state
-  // transition.
+  // Use aria-expanded to check whether the listbox is open.
+  // openOptList() and closeOptList() keep the .active and .hidden classes
+  // in sync with that state.
   if (select.getAttribute("aria-expanded") !== "true") {
     return;
   }
 
-  const optionList = select.querySelectorAll(".option");
+  const wrapper = select.parentElement;
+  const optionList = wrapper.querySelectorAll(".option");
   const committedOption = optionList[getIndex(select)];
   if (committedOption) {
     highlightOption(select, committedOption);
   }
 
-  const optList = select.querySelector(".optList");
+  const optList = wrapper.querySelector(".optList");
 
   optList.classList.add("hidden");
   select.classList.remove("active");
@@ -250,7 +259,8 @@ function deactivateOtherSelects(select, selectList) {
 }
 
 function highlightOption(select, option) {
-  const optionList = select.querySelectorAll(".option");
+  const wrapper = select.parentElement;
+  const optionList = wrapper.querySelectorAll(".option");
 
   optionList.forEach((other) => {
     other.classList.remove("highlight");
@@ -263,10 +273,39 @@ function highlightOption(select, option) {
   }
 }
 
+// This function scrolls the listbox itself, so that the given option is
+// visible inside the listbox's own scroll area.
+// It takes two parameters:
+// select : the DOM node with the class `select` related to the native control
+// option : the option that should be visible inside the listbox
+function scrollOptionIntoListbox(select, option) {
+  const optList = select.parentElement.querySelector(".optList");
+  const optionRect = option.getBoundingClientRect();
+  const listRect = optList.getBoundingClientRect();
+
+  if (optionRect.top < listRect.top) {
+    optList.scrollTop -= listRect.top - optionRect.top;
+  } else if (optionRect.bottom > listRect.bottom) {
+    optList.scrollTop += optionRect.bottom - listRect.bottom;
+  }
+}
+
+// This function keeps the given option visible while the listbox is open.
+// It scrolls the listbox as described above, and then scrolls the page
+// as well, but only if the option is not already visible in the viewport.
+// It takes two parameters:
+// select : the DOM node with the class `select` related to the native control
+// option : the option that should stay visible
+function keepOptionVisible(select, option) {
+  scrollOptionIntoListbox(select, option);
+  option.scrollIntoView({ block: "nearest" });
+}
+
 function updateValue(select, index) {
-  const nativeWidget = select.previousElementSibling;
+  const wrapper = select.parentElement;
+  const nativeWidget = wrapper.previousElementSibling;
   const value = select.querySelector(".value");
-  const optionList = select.querySelectorAll(".option");
+  const optionList = wrapper.querySelectorAll(".option");
 
   nativeWidget.selectedIndex = index;
   value.textContent = optionList[index].textContent;
@@ -287,18 +326,17 @@ function updateValue(select, index) {
 }
 
 function getIndex(select) {
-  const nativeWidget = select.previousElementSibling;
+  const nativeWidget = select.parentElement.previousElementSibling;
 
   return nativeWidget.selectedIndex;
 }
 
 // This function returns the index of the currently active option in the listbox
-// when the custom select is expanded. While expanded, keyboard navigation can
-// move `aria-activedescendant` away from the committed selection, and
-// subsequent keyboard navigation continues from that logical active option
-// rather than from the committed selection. If the custom select is collapsed,
-// or if the active descendant is missing or no longer matches an option, we
-// fall back to the committed selection returned by `getIndex()`.
+// when the custom select is expanded. While the listbox is open,
+// `aria-activedescendant` identifies the active option, and keyboard navigation
+// continues from that option. If the listbox is closed, or if no matching active
+// option can be found, we use the currently chosen option returned by
+// `getIndex()`.
 // It takes two parameters:
 // select     : the DOM node with the class `select` related to the native control
 // optionList : the list of options for the given custom control
@@ -324,12 +362,13 @@ const form = document.querySelector("form");
 const selectList = form.querySelectorAll(".select");
 
 selectList.forEach((select, selectIndex) => {
-  const optionList = select.querySelectorAll(".option");
+  const wrapper = select.parentElement;
+  const optList = wrapper.querySelector(".optList");
+  const optionList = optList.querySelectorAll(".option");
   const selectedIndex = getIndex(select);
 
   select.tabIndex = 0;
 
-  const optList = select.querySelector(".optList");
   const listboxId = `custom-select-${selectIndex}-listbox`;
   optList.id = listboxId;
   select.setAttribute("aria-controls", listboxId);
@@ -346,7 +385,6 @@ selectList.forEach((select, selectIndex) => {
     });
 
     option.addEventListener("click", (event) => {
-      event.stopPropagation();
       highlightOption(select, optionList[index]);
       commitActiveOption(select);
       closeOptList(select);
@@ -397,6 +435,7 @@ selectList.forEach((select, selectIndex) => {
         if (index < optionList.length - 1) {
           index++;
           highlightOption(select, optionList[index]);
+          keepOptionVisible(select, optionList[index]);
         }
         break;
 
@@ -404,13 +443,14 @@ selectList.forEach((select, selectIndex) => {
         event.preventDefault();
 
         if (!expanded) {
-          openOptList(select, 0);
+          openOptList(select, getIndex(select));
           break;
         }
 
         if (index > 0) {
           index--;
           highlightOption(select, optionList[index]);
+          keepOptionVisible(select, optionList[index]);
         }
         break;
 
@@ -423,6 +463,7 @@ selectList.forEach((select, selectIndex) => {
         }
 
         highlightOption(select, optionList[0]);
+        keepOptionVisible(select, optionList[0]);
         break;
 
       case "End":
@@ -434,6 +475,7 @@ selectList.forEach((select, selectIndex) => {
         }
 
         highlightOption(select, optionList[optionList.length - 1]);
+        keepOptionVisible(select, optionList[optionList.length - 1]);
         break;
 
       case "Enter":
@@ -450,8 +492,10 @@ selectList.forEach((select, selectIndex) => {
         break;
 
       case "Escape":
-        event.preventDefault();
-        cancelSelection(select);
+        if (expanded) {
+          event.preventDefault();
+          cancelSelection(select);
+        }
         break;
       default:
         // Ignore all other keys
