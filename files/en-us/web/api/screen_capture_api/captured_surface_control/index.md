@@ -142,7 +142,7 @@ startBtn.addEventListener("click", startCapture);
 stopBtn.addEventListener("click", stopCapture);
 ```
 
-The `startCapture()` function, which starts screen capture, looks like so. We first create a new `CaptureController`, and pass it into our [`MediaDisplayOptions`](/en-US/docs/Web/API/MediaDevices/getDisplayMedia#options) object, along with a [`displaySurface`](/en-US/docs/Web/API/MediaTrackConstraints/displaySurface) constraint that causes the app to recommend sharing browser tabs.
+The `startCapture()` function, which starts screen capture, looks like so. We first create a new `CaptureController`, and pass it into our [`MediaDisplayOptions`](/en-US/docs/Web/API/MediaDevices/getDisplayMedia#options) object, along with a [`displaySurface`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#displaysurface) constraint that causes the app to recommend sharing browser tabs.
 
 Now it's time to capture our media; we do so using a {{domxref("MediaDevices.getDisplayMedia()")}} call, to which we pass our options, and set the resulting promise as the value of the `<video>` element's {{domxref("HTMLMediaElement.srcObject", "srcObject")}} property. When it resolves, we continue the function by calling {{domxref("CaptureController.resetZoomLevel()")}} and setting the `<output>` element's contents to `100%`. This is not strictly necessary, but it can be a bit confusing when you capture a tab to find it is already zoomed out or in. Setting the zoom level to `100%` on capture feels a bit more logical. These lines of code deal with the case where the app is refreshed without pressing "Stop Capture", then capture is started again.
 
