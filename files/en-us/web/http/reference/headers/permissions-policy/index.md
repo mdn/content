@@ -126,6 +126,12 @@ You can specify:
   - : Controls whether or not the document is permitted to use the {{domxref("NavigatorUAData.getHighEntropyValues()")}} method to retrieve high-entropy user-agent data.
     If the permission is not allowed, the method will only return the `brands`, `mobile`, and `platform` low-entropy data.
 
+- {{httpheader("Permissions-Policy/clipboard-read", "clipboard-read")}} {{non-standard_inline}}
+  - : Controls whether the current document is allowed to read data from the system clipboard using the {{domxref("Clipboard.read", "read()")}} and {{domxref("Clipboard.readText", "readText()")}} methods of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) without further user permission.
+
+- {{httpheader("Permissions-Policy/clipboard-write", "clipboard-write")}} {{non-standard_inline}}
+  - : Controls whether the current document is allowed to write data to the system clipboard using the {{domxref("Clipboard.write", "write()")}} and {{domxref("Clipboard.writeText", "writeText()")}} methods of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) without further user permission.
+
 - {{httpheader('Permissions-Policy/compute-pressure','compute-pressure')}} {{Experimental_Inline}}
   - : Controls access to the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API).
 

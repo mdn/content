@@ -517,6 +517,7 @@ Click "Reload" to reset the example.
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)
+- {{httpheader("Permissions-Policy/clipboard-write")}}
 - {{domxref("Clipboard.writeText()")}}
 - {{domxref("Clipboard.read()")}}
 - {{domxref("Clipboard.readText()")}}
