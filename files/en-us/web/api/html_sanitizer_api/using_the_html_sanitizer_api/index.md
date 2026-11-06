@@ -321,6 +321,20 @@ sanitizer.setComments(true);
 sanitizer.setDataAttributes(true);
 ```
 
+## JavaScript URLs
+
+Attributes that contain [`javascript:` URLs](/en-US/docs/Web/URI/Reference/Schemes/javascript), such as `<a href="javascript:…">`, run code when the link or form that uses them is followed. The safe methods always remove them. With the unsafe methods, the [`javascriptURLs`](/en-US/docs/Web/API/SanitizerConfig#javascripturls) property decides: the default sanitizer removes them, while a sanitizer created from a configuration that doesn't set the property keeps them. {{domxref("Sanitizer.removeUnsafe()")}} also turns the property off.
+
+To remove `javascript:` URLs when you inject HTML with an unsafe method, set the property to `false` in the configuration, or call {{domxref("Sanitizer.setJavascriptURLs()")}} on an existing sanitizer:
+
+```js
+// Create a sanitizer that removes javascript: URLs
+const sanitizer = new Sanitizer({ javascriptURLs: false });
+
+// Change an existing sanitizer to remove javascript: URLs
+otherSanitizer.setJavascriptURLs(false);
+```
+
 ## Sanitizer vs SanitizerConfig
 
 All the sanitization methods can be passed a sanitizer configuration that is either a {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} instance.
