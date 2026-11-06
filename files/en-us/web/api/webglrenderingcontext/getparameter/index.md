@@ -1052,6 +1052,24 @@ You can query the following `pname` parameters when using [WebGL extensions](/en
       </td>
     </tr>
     <tr>
+      <td><code>ext.CLIP_ORIGIN_EXT</code></td>
+      <td>{{domxref("WebGL_API/Types", "GLenum")}}</td>
+      <td>{{domxref("EXT_clip_control")}}</td>
+      <td>
+        Clip origin: <code>ext.LOWER_LEFT_EXT</code> or
+        <code>ext.UPPER_LEFT_EXT</code>.
+      </td>
+    </tr>
+    <tr>
+      <td><code>ext.CLIP_DEPTH_MODE_EXT</code></td>
+      <td>{{domxref("WebGL_API/Types", "GLenum")}}</td>
+      <td>{{domxref("EXT_clip_control")}}</td>
+      <td>
+        Clip depth mode: <code>ext.NEGATIVE_ONE_TO_ONE_EXT</code> or
+        <code>ext.ZERO_TO_ONE_EXT</code>.
+      </td>
+    </tr>
+    <tr>
       <td><code>ext.MAX_VIEWS_OVR</code></td>
       <td>{{domxref("WebGL_API/Types", "GLint")}}</td>
       <td>{{domxref("OVR_multiview2")}}</td>
@@ -1084,3 +1102,4 @@ gl.getParameter(gl.VIEWPORT);
 - {{domxref("OES_standard_derivatives")}}
 - {{domxref("WEBGL_draw_buffers")}}
 - {{domxref("EXT_disjoint_timer_query")}}
+- {{domxref("EXT_clip_control")}}
