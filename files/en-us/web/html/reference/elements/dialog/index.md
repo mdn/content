@@ -690,6 +690,12 @@ The CSS defines keyframes to animate between the closed and shown states of the 
 ```css
 dialog {
   animation: fade-out 0.7s ease-out;
+  /**
+    * It holds 'display' and 'overlay' active for the required time so the exit keyframe can finish!
+    */
+  transition:
+    display 0.7s allow-discrete,
+    overlay 0.7s allow-discrete;
 }
 
 dialog:open {
