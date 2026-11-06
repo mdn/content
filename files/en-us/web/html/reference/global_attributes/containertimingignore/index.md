@@ -3,9 +3,13 @@ title: "`containertimingignore` HTML global attribute"
 short-title: containertimingignore
 slug: Web/HTML/Reference/Global_attributes/containertimingignore
 page-type: html-attribute
+status:
+  - experimental
 browser-compat: html.global_attributes.containertimingignore
 sidebar: htmlsidebar
 ---
+
+{{SeeCompatTable}}
 
 The **`containertimingignore`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is a boolean attribute that excludes an element and its descendants from contributing to the timing of any ancestor element marked with [`containertiming`](/en-US/docs/Web/HTML/Reference/Global_attributes/containertiming).
 For more details, see the {{domxref("PerformanceContainerTiming")}} interface.

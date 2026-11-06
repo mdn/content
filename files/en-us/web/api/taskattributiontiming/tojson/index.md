@@ -5,10 +5,11 @@ slug: Web/API/TaskAttributionTiming/toJSON
 page-type: web-api-instance-method
 status:
   - experimental
+  - non-standard
 browser-compat: api.TaskAttributionTiming.toJSON
 ---
 
-{{APIRef("Performance API")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`toJSON()`** method of the {{domxref("TaskAttributionTiming")}} interface returns a JSON-serializable plain object representing the `TaskAttributionTiming` object.
 
