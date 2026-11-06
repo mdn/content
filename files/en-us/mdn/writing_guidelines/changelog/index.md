@@ -7,6 +7,28 @@ sidebar: mdnsidebar
 
 This document provides a record of MDN content processes, constructs, and best practices that have changed, and when they changed. It is useful to allow regular contributors to check in and see what has changed about the process of creating content for MDN.
 
+## September 2026
+
+### Removal of `{{Deprecated_Header}}` macro
+
+The `{{Deprecated_Header}}` macro is no longer required on page headers.
+The platform now automatically generates the deprecated banner from the `status: deprecated` [front matter property](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status) or from [web-features](https://github.com/web-platform-dx/web-features) data.
+
+The following guideline pages and templates were updated:
+
+- [Feature status](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status): Added a warning that `{{Deprecated_Header}}` is no longer required.
+- [Banners and notices](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices): `{{Deprecated_Header}}` removed from the list of automatically added macros.
+- [Commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros): `{{Deprecated_Header}}` entry removed.
+- All [page templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types): `{{Deprecated_Header}}` removed from template instructions and macro rows.
+
+### Additional details
+
+These changes align MDN with the Baseline ["not recommended"](https://web.dev/baseline) status for deprecated features.
+
+- All writing guideline pages and 13 page type templates were updated in [mdn/content#45345](https://github.com/mdn/content/pull/45345).
+- Deprecated section headings within content pages should now use a `> [!WARNING]` callout block instead of `{{deprecated_inline}}` on the heading. See [MathML Values](/en-US/docs/Web/MathML/Reference/Values#legacy_mathml_lengths) as a reference example.
+- The `status: deprecated` front matter value continues to drive sidebar icons and is synced automatically from [@mdn/browser-compat-data](https://github.com/mdn/browser-compat-data). Do not update it manually.
+
 ## October 2022
 
 The [MDN project documentation](/en-US/docs/MDN) is refreshed and organized under two main categories:
