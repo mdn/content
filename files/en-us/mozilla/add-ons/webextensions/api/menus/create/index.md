@@ -84,7 +84,7 @@ browser.menus.create(
         > The top-level menu item uses the [icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.
 
     - `iconVariants` {{optional_inline}}
-      - : `Array` of `Object`. One or more icons to display next to the menu item for a color scheme. Like `icons`, variant icons can only be set for items appearing in submenus. Each object is an icon group, in the same format as the `variants` property of {{WebExtAPIRef("action.setIcon()")}}. If `iconVariants` is present, the browser ignores `icons`.
+      - : `Array` of {{WebExtAPIRef("extensionTypes.IconVariant")}}. One or more icons to display next to the menu item for a color scheme. Like `icons`, variant icons can only be set for items appearing in submenus. If `iconVariants` is present, the browser ignores `icons`. For the formats and sizes to provide, see [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons).
 
         ```js
         browser.menus.create({

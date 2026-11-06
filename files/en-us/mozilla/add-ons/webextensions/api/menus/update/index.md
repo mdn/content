@@ -75,10 +75,10 @@ let updating = browser.menus.update(
         > The top-level menu item uses the [icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.
 
     - `iconVariants` {{optional_inline}}
-      - : `Array` of `Object`. One or more icons to display next to the menu item for a color scheme. Like `icons`, variant icons can only be set for items appearing in submenus. Each object is an icon group, in the same format as the `variants` property of {{WebExtAPIRef("action.setIcon()")}}. If `iconVariants` is present, the browser ignores `icons`.
+      - : `Array` of {{WebExtAPIRef("extensionTypes.IconVariant")}}. One or more icons to display next to the menu item for a color scheme. This is the same as the `iconVariants` property of {{WebExtAPIRef("menus.create()")}}.
 
         ```js
-        browser.menus.create({
+        browser.menus.update(menuId, {
           iconVariants: [
             {
               16: "path/to/geo-dark-16.png",
@@ -93,9 +93,6 @@ let updating = browser.menus.update(
           ],
         });
         ```
-
-        > [!NOTE]
-        > Safari 18.2 to 26.1 reads this property as `icon_variants`, with `color_schemes` in place of `colorSchemes`. Those names are deprecated. Use `iconVariants` and `colorSchemes`.
 
     - `id` {{optional_inline}}
       - : `string`. The unique ID to assign to this item. Mandatory for event pages. Cannot be the same as another ID for this extension.

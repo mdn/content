@@ -46,14 +46,14 @@ The `icon_variants` key specifies icons for your extension, with a set of icons 
 
 When both keys are present, the browser uses `icon_variants` instead of `icons`. Declare `icons` as well so the extension has icons in browsers that don't support `icon_variants`. For the formats and sizes to provide for each browser, see [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons).
 
-To set icons for the extension's toolbar button, use `icon_variants` in the [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) key. To change the icon at runtime, use the `variants` property of {{WebExtAPIRef("action.setIcon()")}}.
+To set icons for the extension's toolbar button, use `icon_variants` in the [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) key. To change the icon at runtime, use the `variants` property of {{WebExtAPIRef("action.setIcon()")}}, which takes an array of {{WebExtAPIRef("extensionTypes.IconVariant")}}.
 
 ## Syntax
 
 The `icon_variants` key is an array of icon groups. Each icon group is an object with these properties:
 
-- Sizes {{optional_inline}}
-  - : Properties named for an icon size in pixels, such as `"16"` or `"32"`. The value is the path of the image relative to the extension's root directory, as in [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons).
+- `<size>` {{optional_inline}}
+  - : One or more properties named for an icon size in pixels, such as `"16"` or `"32"`. The value is the path of the image relative to the extension's root directory, as in [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons).
 - `any` {{optional_inline}}
   - : The path of an image that scales to any size, typically an SVG file.
 - `color_schemes` {{optional_inline}}
