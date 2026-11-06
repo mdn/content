@@ -35,24 +35,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This code adds two context menu items: one stores a value associated with the current tab, the other one removes it:
 
 ```js
-async function setOnActiveTab() {
-  let tabArray = await browser.tabs.query({
-    currentWindow: true,
-    active: true,
-  });
-  let tabId = tabArray[0].id;
-  await browser.sessions.setTabValue(tabId, "my-key", "my-value");
-}
-
-async function removeFromActiveTab() {
-  let tabArray = await browser.tabs.query({
-    currentWindow: true,
-    active: true,
-  });
-  let tabId = tabArray[0].id;
-  await browser.sessions.removeTabValue(tabId, "my-key");
-}
-
 browser.menus.create({
   id: "add-my-item",
   title: "add item",
@@ -65,11 +47,11 @@ browser.menus.create({
   contexts: ["all"],
 });
 
-browser.menus.onClicked.addListener((info) => {
+browser.menus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "add-my-item") {
-    setOnActiveTab();
+    browser.sessions.setTabValue(tab.id, "my-key", "my-value");
   } else {
-    removeFromActiveTab();
+    browser.sessions.removeTabValue(tab.id, "my-key");
   }
 });
 ```
