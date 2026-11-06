@@ -8,7 +8,7 @@ browser-compat: api.StylePropertyMapReadOnly.forEach
 
 {{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`StylePropertyMapReadOnly.forEach()`** method executes a provided function once for each element of {{domxref('StylePropertyMapReadOnly')}}.
+The **`forEach()`** method of the {{domxref("StylePropertyMapReadOnly")}} interface executes a provided function once for each declaration in the object.
 
 ## Syntax
 
@@ -20,17 +20,15 @@ forEach(callbackFn, thisArg)
 ### Parameters
 
 - `callbackFn`
-  - : The function to execute for each element, taking three arguments:
+  - : The function to execute for each declaration, taking three arguments:
     - `currentValue`
-      - : The value of the current element being processed.
-    - `index` {{optional_inline}}
-      - : The index of the current element being processed.
-    - `array` {{optional_inline}}
-      - : The StylePropertyMapReadOnly that `forEach()` is being called on.
-
-- `thisArg` {{Optional_inline}}
-  - : Value to use as **`this`** (i.e., the reference
-    `Object`) when executing `callback`.
+      - : The value of the current declaration being processed — an array of {{domxref("CSSStyleValue")}} objects, as returned by {{domxref("StylePropertyMapReadOnly.getAll", "getAll()")}} for that property.
+    - `key` {{optional_inline}}
+      - : The CSS property name of the current declaration being processed.
+    - `map` {{optional_inline}}
+      - : The `StylePropertyMapReadOnly` that `forEach()` is being called on.
+- `thisArg` {{optional_inline}}
+  - : Value to use as **`this`** when executing `callbackFn`.
 
 ### Return value
 
@@ -49,9 +47,9 @@ const buttonEl = document.querySelector(".example");
 // we can retrieve all computed styles with `computedStyleMap`
 const allComputedStyles = buttonEl.computedStyleMap();
 
-// forEach will allow us to run code over each prop/val pair
-allComputedStyles.forEach((elem, index, arr) => {
-  // code to run for each pair
+// forEach will allow us to run code over each property/values pair
+allComputedStyles.forEach((values, property, map) => {
+  // code to run for each declaration
 });
 ```
 
@@ -62,3 +60,15 @@ allComputedStyles.forEach((elem, index, arr) => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("StylePropertyMapReadOnly.entries()")}}
+- {{domxref("StylePropertyMapReadOnly.get()")}}
+- {{domxref("StylePropertyMapReadOnly.getAll()")}}
+- {{domxref("StylePropertyMapReadOnly.has()")}}
+- {{domxref("StylePropertyMapReadOnly.keys()")}}
+- {{domxref("StylePropertyMapReadOnly.size")}}
+- {{domxref("StylePropertyMapReadOnly.values()")}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
