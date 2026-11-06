@@ -38,18 +38,6 @@ transform: scaleY(-0.5);
 </section>
 ```
 
-It modifies the ordinate (vertical, y-coordinate) of each element point by a constant factor, except when the scale factor is 1, in which case
-the function is the identity transform. The scaling is not isotropic, and the angles of the element are not conserved.
-`scaleY(-1)` defines an [axial symmetry](https://en.wikipedia.org/wiki/Axial_symmetry), with a horizontal axis passing through the origin (as specified by the {{cssxref("transform-origin")}}
-property).
-
-> [!NOTE]
-> `scaleY(sy)` is equivalent to
-> `scale(1, sy)` or
-> `scale3d(1, sy, 1)`.
->
-> `transform: rotateX(180deg);` === `transform: scaleY(-1);`
-
 ## Syntax
 
 ```css
@@ -99,6 +87,25 @@ scaleY(s)
     </tr>
   </tbody>
 </table>
+
+## Description
+
+The `scaleY()` function defines a transformation that vertically resizes an element. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
+
+It modifies the ordinate (vertical, y-coordinate) of each element point by a constant factor, except when the scale factor is 1, in which case
+the function is the identity transform. The scaling is not isotropic, and the angles of the element are not conserved.
+`scaleY(-1)` defines an [axial symmetry](https://en.wikipedia.org/wiki/Axial_symmetry), with a horizontal axis passing through the origin (as specified by the {{cssxref("transform-origin")}}
+property).
+
+The following function declarations are equivalent:
+
+```css-nolint
+scaleY(sy)
+scale(1, sy)
+scale3d(1, sy, 1)
+```
+
+Negative values reflect the element across the horizontal axis.
 
 ## Formal syntax
 
