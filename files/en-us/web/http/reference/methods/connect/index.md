@@ -8,24 +8,7 @@ sidebar: http
 ---
 
 The **`CONNECT`** HTTP method requests that a {{Glossary("Proxy server", "proxy")}} establish an HTTP tunnel to a destination server, and if successful, blindly forward data in both directions until the tunnel is closed.
-
-The request target is unique to this method in that it consists of only the host and port number of the tunnel destination, separated by a colon (see [Syntax](#syntax) for details).
-Any [2XX successful response status code](/en-US/docs/Web/HTTP/Reference/Status#successful_responses) means that the proxy will switch to 'tunnel mode' and any data in the success response body is from the server identified by the request target.
-
-If a website is behind a proxy and it's enforced via network rules that all external traffic must pass through the proxy, the `CONNECT` method allows you to establish a {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) connection with that website:
-
-- The client asks the proxy to tunnel the {{Glossary("TCP")}} connection to the desired destination.
-- The proxy server makes a secure connection to the server on behalf of the client.
-- Once the connection is established, the proxy server continues to relay the TCP stream to and from the client.
-
-Aside from enabling secure access to websites behind proxies, an HTTP tunnel provides a way to allow traffic that would otherwise be restricted (SSH or FTP) over the HTTP(S) protocol.
-
-`CONNECT` is a hop-by-hop method, meaning proxies will only forward the `CONNECT` request if there is another inbound proxy in front of the origin server since most origin servers do not implement `CONNECT`.
-
-> [!WARNING]
-> If you are running a proxy that supports `CONNECT`, restrict its use to a set of known ports or a configurable list of safe request targets.
-> There are significant risks in establishing a tunnel to arbitrary servers, particularly when the destination is a well-known or reserved TCP port that is not intended for Web traffic.
-> A loosely-configured proxy may be abused to forward traffic such as SMTP to relay spam email, for example.
+In HTTP/2 and HTTP/3, an [extended `CONNECT`](#extended_connect) request is also used to run protocols such as WebSockets and WebTransport over an HTTP stream.
 
 <table class="properties">
   <tbody>
@@ -69,6 +52,35 @@ CONNECT <host>:<port> HTTP/1.1
 - `<port>`
   - : A port number in decimal (e.g., `80`, `443`). There is no default port, so a client **must** send one.
 
+## Description
+
+The request target is unique to this method in that it consists of only the host and port number of the tunnel destination, separated by a colon (see [Syntax](#syntax) for details).
+Any [2XX successful response status code](/en-US/docs/Web/HTTP/Reference/Status#successful_responses) means that the proxy will switch to 'tunnel mode' and any data in the success response body is from the server identified by the request target.
+
+If a website is behind a proxy and it's enforced via network rules that all external traffic must pass through the proxy, the `CONNECT` method allows you to establish a {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) connection with that website:
+
+- The client asks the proxy to tunnel the {{Glossary("TCP")}} connection to the desired destination.
+- The proxy server makes a secure connection to the server on behalf of the client.
+- Once the connection is established, the proxy server continues to relay the TCP stream to and from the client.
+
+Aside from enabling secure access to websites behind proxies, an HTTP tunnel provides a way to allow traffic that would otherwise be restricted (SSH or FTP) over the HTTP(S) protocol.
+
+`CONNECT` is a hop-by-hop method, meaning proxies will only forward the `CONNECT` request if there is another inbound proxy in front of the origin server since most origin servers do not implement `CONNECT`.
+
+> [!WARNING]
+> If you are running a proxy that supports `CONNECT`, restrict its use to a set of known ports or a configurable list of safe request targets.
+> There are significant risks in establishing a tunnel to arbitrary servers, particularly when the destination is a well-known or reserved TCP port that is not intended for Web traffic.
+> A loosely-configured proxy may be abused to forward traffic such as SMTP to relay spam email, for example.
+
+### Extended CONNECT
+
+HTTP/2 and HTTP/3 also define an _extended_ `CONNECT` request, which is used to run another protocol over a single HTTP stream ({{rfc("8441")}} and {{rfc("9220")}}).
+The request includes a `:protocol` pseudo-header naming the protocol, along with the `:scheme`, `:authority`, and `:path` pseudo-headers that identify the target resource.
+The request is sent to the origin server, which must first advertise support using the `SETTINGS_ENABLE_CONNECT_PROTOCOL` setting.
+If the server responds with a [2XX successful response status code](/en-US/docs/Web/HTTP/Reference/Status#successful_responses), the named protocol takes over the stream.
+
+Extended `CONNECT` is used to open [WebSocket](/en-US/docs/Web/API/WebSockets_API) connections over HTTP/2 and HTTP/3 (with `:protocol` set to `websocket`), and to establish [WebTransport](/en-US/docs/Web/API/WebTransport_API) sessions (with `:protocol` set to `webtransport`).
+
 ## Examples
 
 ### Proxy authorization
@@ -97,3 +109,5 @@ Proxy-Authorization: basic aGVsbG86d29ybGQ=
 - [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)
 - {{Glossary("Proxy server")}} glossary entry
 - {{HTTPHeader("Proxy-Authorization")}} header
+- [WebSockets API](/en-US/docs/Web/API/WebSockets_API)
+- [WebTransport API](/en-US/docs/Web/API/WebTransport_API)
