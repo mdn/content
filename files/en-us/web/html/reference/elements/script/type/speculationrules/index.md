@@ -128,6 +128,13 @@ Each object can contain the following properties:
 - `"expects_no_vary_search"` {{experimental_inline}}
   - : A string providing a hint to the browser as to what {{httpheader("No-Vary-Search")}} header value will be set on responses for documents that it is receiving prefetch/prerender requests for. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/prerender to finish, or start a new fetch request when the speculation rule is matched. See the [`"expects_no_vary_search"` example](#expects_no_vary_search_example) for more explanation of how this can be used.
 
+- `"form_submission"` {{experimental_inline}}
+  - : A boolean value; when set to `true`, it indicates that a matching URL should be prerendered as a form submission, so that it can be activated by real form submission navigations.
+
+    The `form_submission` field is only relevant to `"prerender"` actions. If included inside a `"prefetch"` action object, rules parsed from that object will be ignored. `"prerender"` rules will also be ignored if the [`requires`](#requires) field includes `"anonymous-client-ip-when-cross-origin"`.
+
+    See the [`"form_submission"` example](#form_submission_example) for more explanation of how this can be used.
+
 - `"referrer_policy"` {{experimental_inline}}
   - : A string representing a specific referrer policy string to use when requesting the URLs specified in the rule — see [`Referrer-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy) for possible values. The purpose of this is to allow the referring page to set a stricter policy specifically for the speculative request than the policy the page already has set (either by default, or by using `Referrer-Policy`).
 
@@ -547,6 +554,45 @@ Or to identify individual rules:
 ```
 
 See {{HTTPHeader("Sec-Speculation-Tags")}} for more examples.
+
+### `"form_submission"` example
+
+The `form_submission` field can be set to `true` to indicate that matching URLs should be prerendered as form submissions. Without this field set, form submissions cannot activate prerendered pages due to internal browser state and checks particular to form submission navigations.
+
+Consider a typical search form:
+
+```html
+<form action="/action.html">
+  <label for="site-search">Search the site:</label>
+  <input type="search" id="site-search" name="q" />
+  <button>Search</button>
+</form>
+```
+
+You can prerender submissions of this form for popular search terms by setting `form_submission` to `true` and listing a separate URL with each term specified in the query string, like this:
+
+```html
+<script type="speculationrules">
+  {
+    "tag": "my-rules",
+    "prerender": [
+      {
+        "urls": [
+          "/action.html?q=cats",
+          "/action.html?q=dogs",
+          "/action.html?q=badgers"
+        ],
+        "form_submission": true
+      }
+    ]
+  }
+</script>
+```
+
+> [!NOTE]
+> The `form_submission` field is only relevant to `"prerender"` actions. If included inside a `"prefetch"` action object, rules parsed from that object will be ignored.
+>
+> `"prerender"` rules will also be ignored if the [`requires`](#requires) field includes `"anonymous-client-ip-when-cross-origin"`.
 
 ### `target_hint` example
 
