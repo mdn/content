@@ -36,7 +36,6 @@ A `GPURenderPassEncoder` object instance is created via the {{domxref("GPUComman
   - : Draw primitives using parameters read from a {{domxref("GPUBuffer")}}.
 - {{domxref("GPURenderPassEncoder.drawIndexedIndirect", "drawIndexedIndirect()")}}
   - : Draw indexed primitives using parameters read from a {{domxref("GPUBuffer")}}.
-
 - {{domxref("GPURenderPassEncoder.end", "end()")}}
   - : Completes recording of the current render pass command sequence.
 - {{domxref("GPURenderPassEncoder.endOcclusionQuery", "endOcclusionQuery()")}}
@@ -53,10 +52,10 @@ A `GPURenderPassEncoder` object instance is created via the {{domxref("GPUComman
   - : Sets the {{domxref("GPUBindGroup")}} to use for subsequent render commands, for a given index.
 - {{domxref("GPURenderPassEncoder.setBlendConstant", "setBlendConstant()")}}
   - : Sets the constant blend color and alpha values used with `"constant"` and `"one-minus-constant"` blend factors (as set in the descriptor of the {{domxref("GPUDevice.createRenderPipeline()")}} method, in the `blend` property).
-
+- {{domxref("GPURenderPassEncoder.setImmediates", "setImmediates()")}}
+  - : Sets immediate data for subsequent render commands.
 - {{domxref("GPURenderPassEncoder.setIndexBuffer", "setIndexBuffer()")}}
   - : Sets the current {{domxref("GPUBuffer")}} that will provide index data for subsequent drawing commands.
-
 - {{domxref("GPURenderPassEncoder.setPipeline", "setPipeline()")}}
   - : Sets the {{domxref("GPURenderPipeline")}} to use for this render pass.
 - {{domxref("GPURenderPassEncoder.setScissorRect", "setScissorRect()")}}
