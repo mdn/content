@@ -2,6 +2,11 @@
 title: viewBox
 slug: Web/SVG/Reference/Attribute/viewBox
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.marker.viewBox
+  - svg.elements.svg.viewBox
+  - svg.elements.symbol.viewBox
+  - svg.elements.view.viewBox
 spec-urls: https://w3c.github.io/svgwg/svg2-draft/coords.html#ViewBoxAttribute
 sidebar: svgref
 ---
@@ -268,3 +273,7 @@ The user units of `r="4"` are resolved against the `viewBox` sizes, creating dra
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

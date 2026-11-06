@@ -2,6 +2,9 @@
 title: operator
 slug: Web/SVG/Reference/Attribute/operator
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.feComposite.operator
+  - svg.elements.feMorphology.operator
 spec-urls:
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-femorphology-operator
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fecomposite-operator
@@ -120,3 +123,7 @@ For {{SVGElement("feMorphology")}}, `operator` defines whether to erode (i.e., t
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

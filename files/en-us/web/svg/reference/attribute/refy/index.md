@@ -2,6 +2,7 @@
 title: refY
 slug: Web/SVG/Reference/Attribute/refY
 page-type: svg-attribute
+browser-compat: svg.elements.marker.refY
 spec-urls:
   - https://w3c.github.io/svgwg/svg2-draft/painting.html#MarkerElementRefYAttribute
   - https://w3c.github.io/svgwg/svg2-draft/struct.html#SymbolElementRefYAttribute
@@ -100,6 +101,10 @@ Unlike other positioning attributes, `refY` is interpreted as being in the coord
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

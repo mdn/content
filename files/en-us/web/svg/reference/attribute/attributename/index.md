@@ -2,6 +2,7 @@
 title: attributeName
 slug: Web/SVG/Reference/Attribute/attributeName
 page-type: svg-attribute
+browser-compat: svg.elements.animate.attributeName
 spec-urls: https://svgwg.org/specs/animations/#AttributeNameAttribute
 sidebar: svgref
 ---
@@ -65,6 +66,10 @@ svg {
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

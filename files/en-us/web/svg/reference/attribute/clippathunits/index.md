@@ -2,6 +2,7 @@
 title: clipPathUnits
 slug: Web/SVG/Reference/Attribute/clipPathUnits
 page-type: svg-attribute
+browser-compat: svg.elements.clipPath.clipPathUnits
 spec-urls: https://drafts.csswg.org/css-masking-1/#element-attrdef-clippath-clippathunits
 sidebar: svgref
 ---
@@ -79,3 +80,7 @@ For {{SVGElement('clipPath')}}, `clipPathUnits` define the coordinate system in 
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
