@@ -115,7 +115,7 @@ npm install express-validator
 To use the validator in our controllers, we specify the particular functions we want to import from the [express-validator](https://www.npmjs.com/package/express-validator) module, as shown below:
 
 ```js
-const { body, validationResult } = require("express-validator");
+import { body, validationResult } from "express-validator";
 ```
 
 There are many functions available, allowing you to check and sanitize data from request parameters, body, headers, cookies, etc., or all of them at once. For this tutorial, we'll primarily be using `body` and `validationResult` (as "required" above).
@@ -203,14 +203,14 @@ For this project we will simplify the implementation by stating that a form can 
 
 In order to implement our form handling code, we will need two routes that have the same URL pattern. The first (`GET`) route is used to display a new empty form for creating the object. The second route (`POST`) is used for validating data entered by the user, and then saving the information and redirecting to the detail page (if the data is valid) or redisplaying the form with errors (if the data is invalid).
 
-We have already created the routes for all our model's create pages in **/routes/catalog.js** (in a [previous tutorial](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes)). For example, the genre routes are shown below:
+We have already created the routes for all our model's create pages in **routes/catalog.js** (in a [previous tutorial](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes)). For example, the genre routes are shown below:
 
 ```js
 // GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
-router.get("/genre/create", genre_controller.genre_create_get);
+router.get("/genre/create", genreController.genreCreateGet);
 
 // POST request for creating Genre.
-router.post("/genre/create", genre_controller.genre_create_post);
+router.post("/genre/create", genreController.genreCreatePost);
 ```
 
 ## Express forms subarticles

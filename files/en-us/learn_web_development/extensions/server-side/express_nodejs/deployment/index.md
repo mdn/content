@@ -107,7 +107,7 @@ In the following subsections, we outline the most important changes that you sho
 
 ### Database configuration
 
-So far in this tutorial, we've used a single development database, for which the address and credentials were [hard-coded into **bin/www**](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose#connect_to_mongodb).
+So far in this tutorial, we've used a single development database, for which the address and credentials were [hard-coded into **server.js**](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose#connect_to_mongodb).
 Since the development database doesn't contain any information that we mind being exposed or corrupted, there is no particular risk in leaking these details.
 However if you're working with real data, in particular personal user information, then it is very important to protect your database credentials.
 
@@ -116,7 +116,7 @@ For this reason we want to use a different database for production than we use f
 If your hosting provider supports setting environment variables through a web interface (as many do), one way to do this is to have the server get the database URL from an environment variable.
 Below we modify the LocalLibrary website to get the database URI from an OS environment variable, if it has been defined, and otherwise use the development database URL.
 
-Open **bin.www** and find the line that sets the MongoDB connection variable.
+Open **server.js** and find the line that sets the MongoDB connection variable.
 It will look something like this:
 
 ```js
@@ -127,9 +127,9 @@ const mongoDB =
 Replace the line with the following code that uses `process.env.MONGODB_URI` to get the connection string from an environment variable named `MONGODB_URI` if has been set (use your own database URL instead of the placeholder below).
 
 ```js
-const dev_db_url =
+const devDbUrl =
   "mongodb+srv://your_user_name:your_password@cluster0.cojoign.mongodb.net/local_library?retryWrites=true&w=majority";
-const mongoDB = process.env.MONGODB_URI || dev_db_url;
+const mongoDB = process.env.MONGODB_URI || devDbUrl;
 ```
 
 > [!NOTE]
@@ -153,10 +153,12 @@ For example, the code fragment below shows how you might set up "author" logging
 The debug variable is declared with the name 'author', and the prefix "author" will be automatically displayed for all logs from this object.
 
 ```js
-const debug = require("debug")("author");
+import createDebug from "debug";
+
+const debug = createDebug("author");
 
 // Display Author update form on GET.
-exports.author_update_get = async (req, res, next) => {
+export const authorUpdateGet = async (req, res, next) => {
   const author = await Author.findById(req.params.id).exec();
   if (author === null) {
     // No results.
@@ -196,11 +198,12 @@ Add this to your site using [compression](https://www.npmjs.com/package/compress
 npm install compression
 ```
 
-Open **./app.js** and require the compression library as shown. Add the compression library to the middleware chain with the `use()` method (this should appear before any routes you want compressed — in this case, all of them!)
+Open **./app.js** and import the compression library as shown. Add the compression library to the middleware chain with the `use()` method (this should appear before any routes you want compressed — in this case, all of them!)
 
 ```js
-const catalogRouter = require("./routes/catalog"); // Import routes for "catalog" area of site
-const compression = require("compression");
+import compression from "compression";
+
+import catalogRouter from "./routes/catalog.js"; // Import routes for "catalog" area of site
 
 // Create the Express application object
 const app = express();
@@ -209,7 +212,7 @@ const app = express();
 
 app.use(compression()); // Compress all routes
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(import.meta.dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
@@ -231,12 +234,12 @@ Install this at the root of your project by running the following command:
 npm install helmet
 ```
 
-Open **./app.js** and require the _helmet_ library as shown.
+Open **./app.js** and import the _helmet_ library as shown.
 Then add the module to the middleware chain with the `use()` method.
 
 ```js
-const compression = require("compression");
-const helmet = require("helmet");
+import compression from "compression";
+import helmet from "helmet";
 
 // Create the Express application object
 const app = express();
@@ -273,13 +276,13 @@ Install this at the root of your project by running the following command:
 npm install express-rate-limit
 ```
 
-Open **./app.js** and require the _express-rate-limit_ library as shown.
+Open **./app.js** and import the _express-rate-limit_ library as shown.
 Then add the module to the middleware chain with the `use()` method.
 
 ```js
-const compression = require("compression");
-const helmet = require("helmet");
-const RateLimit = require("express-rate-limit");
+import compression from "compression";
+import helmet from "helmet";
+import RateLimit from "express-rate-limit";
 
 const app = express();
 
@@ -303,27 +306,17 @@ The command above limits all requests to 20 per minute (you can change this as n
 
 For node applications, including Express, the **package.json** file contains everything a hosting provider should need to work out the application dependencies and entry point file.
 
-The only important information missing from our current **package.json** is the version of node required by the library.
-You can find the version of node that was used for development by entering the command:
-
-```bash
->node --version
-v16.17.1
-```
-
-Open **package.json**, and add this information as an **engines > node** as shown (using the version number for your system).
+The starter already specifies the minimum Node.js version in **package.json**:
 
 ```json
 {
   "engines": {
-    "node": ">=22.0.0"
+    "node": ">=24.0.0"
   }
 }
 ```
 
-The hosting service might not support the specific indicated version of node, but this change should ensure that it attempts to use a version with the same major version number, or a more recent version.
-
-Note that there may be other ways to specify the node version on different hosting services, but the **package.json** approach is widely supported.
+Check your hosting provider's instructions to make sure it uses a supported Node.js version that satisfies this requirement. You can check the version installed in an environment with `node --version`.
 
 #### Get dependencies and re-test
 
@@ -388,7 +381,7 @@ Now that the repository ("repo") is created on GitHub we are going to want to cl
 
 Then copy your application source files into the repo folder, make them part of the repo using _git_, and upload them to GitHub:
 
-1. Copy your Express application into this folder (excluding **/node_modules**, which contains dependency files that you should fetch from npm as needed).
+1. Copy your Express application into this folder (excluding **node_modules/**, which contains dependency files that you should fetch from npm as needed).
 2. Open a command prompt/terminal and use the `add` command to add all files to git.
 
    ```bash
