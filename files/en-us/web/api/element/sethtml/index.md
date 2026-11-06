@@ -10,8 +10,8 @@ browser-compat: api.Element.setHTML
 
 The **`setHTML()`** method of the {{domxref("Element")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and insert it into the DOM as a subtree of the element.
 
-The method removes any elements and attributes that are considered XSS-unsafe, even if allowed by a passed sanitizer.
-Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{SVGElement("use")}}, and event handler attributes.
+The method removes any elements and attributes that are considered XSS-unsafe, even if the caller passes a [sanitizer](#sanitizer) option which allows them. For more information see the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API).
+Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{HTMLElement("base")}}, {{SVGElement("use")}}, as well event handler content attributes (for example, `onclick`, `onload`, `onerror` and so forth). See [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) for more information.
 
 It is recommended (if supported) as a drop-in replacement for {{domxref("Element.innerHTML")}} when setting a user-provided string of HTML.
 
@@ -53,18 +53,35 @@ None (`undefined`).
 The **`setHTML()`** method provides an XSS-safe method to parse and sanitize a string of HTML into a {{domxref("DocumentFragment")}}, and then insert it into the DOM as a subtree of the element.
 
 `setHTML()` drops any elements in the HTML input string that are invalid in the context of the current element, such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
-It then removes any HTML entities that aren't allowed by the sanitizer configuration, and further removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer.
+It then removes any HTML elements and attributes that aren't allowed by the sanitizer configuration, and further removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer. For more information see the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API).
 
 If no sanitizer is specified in the `options.sanitizer` parameter, `setHTML()` is used with the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
 This configuration is suitable for the majority of use cases as it prevents XSS attacks, as well as other attacks like clickjacking or spoofing.
 
-A custom `Sanitizer` or `SanitizerConfig` can be specified to choose which elements, attributes, and comments are allowed or removed.
+For {{HTMLElement("template")}} elements, the HTML is inserted into the template contents (the template `DocumentFragment`), rather than as direct children.
+
+A custom {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} can be specified to choose which elements, attributes, and comments are allowed or removed.
 Note that even if unsafe options are allowed by the sanitizer, they will still be removed when using this method (it removes the same elements as a sanitizer on which {{domxref('Sanitizer.removeUnsafe()')}} has been called).
 
 `setHTML()` should be used instead of {{domxref("Element.innerHTML")}} for inserting untrusted strings of HTML into an element.
 It should also be used instead of {{domxref("Element.setHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
 
 Note that since this method always sanitizes input strings of XSS-unsafe entities, it is not secured or validated using the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
+
+### Related HTML setter APIs
+
+This is part of a series of APIs to set HTML in {{domxref("Element")}}:
+
+| Action                                         | API                                                       | Unsafe API                                                            |
+| ---------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------- |
+| Set the HTML contents of the element           | {{domxref("Element.setHTML", "setHTML")}}                 | {{domxref("Element.setHTMLUnsafe", "setHTMLUnsafe")}}                 |
+| Replace the entire element with this HTML      | {{domxref("Element.replaceWithHTML", "replaceWithHTML")}} | {{domxref("Element.replaceWithHTMLUnsafe", "replaceWithHTMLUnsafe")}} |
+| Add the HTML before the element                | {{domxref("Element.beforeHTML", "beforeHTML")}}           | {{domxref("Element.beforeHTMLUnsafe", "beforeHTMLUnsafe")}}           |
+| Add the HTML as the first child of the element | {{domxref("Element.prependHTML", "prependHTML")}}         | {{domxref("Element.prependHTMLUnsafe", "prependHTMLUnsafe")}}         |
+| Add the HTML as the last child of the element  | {{domxref("Element.appendHTML", "appendHTML")}}           | {{domxref("Element.appendHTMLUnsafe", "appendHTMLUnsafe")}}           |
+| Add the HTML after the element                 | {{domxref("Element.afterHTML", "afterHTML")}}             | {{domxref("Element.afterHTMLUnsafe", "afterHTMLUnsafe")}}             |
+
+Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allows scripts to be run using the `runScripts` options.
 
 ### Re-parsing and mutated XSS (mXSS)
 
@@ -94,31 +111,50 @@ The simple rule to avoid this problem is to only ever inject HTML strings using 
 
 ## Examples
 
-### Basic usage
+These examples shows some of the ways you can use `setHTML()` to sanitize and inject a string of HTML.
 
-This example shows some of the ways you can use `setHTML()` to sanitize and inject a string of HTML.
+### Basic usage with default sanitizer
+
+Using the default sanitizer:
 
 ```js
-// Define unsanitized string of HTML
-const unsanitizedString = "abc <script>alert(1)<" + "/script> def";
-// Get the target Element with id "target"
+const unsanitizedString = "<p><i>abc</i><script>alert(1)<" + "/script> def</p>";
 const target = document.getElementById("target");
 
-// setHTML() with default sanitizer
 target.setHTML(unsanitizedString);
+// Result is that the element is set to the current contents:
+// <p><i>abc</i> def</p>
+```
 
-// Define custom Sanitizer and use in setHTML()
-// This allows only elements: div, p, button (script is unsafe and will be removed)
-const sanitizer1 = new Sanitizer({
+### Using a custom sanitizer
+
+Using a custom `Sanitizer`, that allows only the {{htmlelement("div")}}, {{htmlelement("p")}}, {{htmlelement("button")}}, and {{htmlelement("script")}} elements. Note that {{htmlelement("script")}} is XSS-unsafe, so it will be removed anyway:
+
+```js
+const unsanitizedString = "<p><i>abc</i><script>alert(1)<" + "/script> def</p>";
+const target = document.getElementById("target");
+
+const mySanitizer = new Sanitizer({
   elements: ["div", "p", "button", "script"],
 });
-target.setHTML(unsanitizedString, { sanitizer: sanitizer1 });
+target.setHTML(unsanitizedString, { sanitizer: mySanitizer });
+// Result is that the element is set to the current contents:
+// <p> def</p>
+```
 
-// Define custom SanitizerConfig within setHTML()
-// This removes elements div, p, button, script, and any other unsafe elements/attributes
+### Using a custom sanitizer with `removeElements`
+
+Using a custom `SanitizerConfig`, that removes only the {{htmlelement("div")}}, {{htmlelement("p")}}, {{htmlelement("button")}}, and {{htmlelement("script")}} elements, as well as other XSS-unsafe elements and attributes that are always removed by this method.
+
+```js
+const unsanitizedString = "<p><i>abc</i><script>alert(1)<" + "/script> def</p>";
+const target = document.getElementById("target");
+
 target.setHTML(unsanitizedString, {
-  sanitizer: { removeElements: ["div", "p", "button", "script"] },
+  sanitizer: { removeElements: ["i", "script"] },
 });
+// Result is that the element is set to the current contents:
+// <p> def</p>
 ```
 
 ### `setHTML()` live example

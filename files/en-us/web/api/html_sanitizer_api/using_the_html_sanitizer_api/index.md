@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("HTML Sanitizer API")}}
 
-The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) provides methods that allow developers to safely inject untrusted HTML into an {{domxref("Element")}}, a {{domxref("ShadowRoot")}}, or a {{domxref("Document")}}.
+The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) provides methods that allow developers to safely inject untrusted HTML into an {{domxref("Element")}}, a {{domxref("ShadowRoot")}}, a {{domxref("CharacterData")}}, or a {{domxref("Document")}}.
 The API also gives developers the flexibility to further restrict or expand what HTML entities are allowed if needed.
 
 ## Safe sanitization by default
@@ -26,7 +26,7 @@ someElement.setHTML(untrustedString);
 console.log(someElement.innerHTML); // abc def
 ```
 
-The other XSS-safe methods, {{domxref('ShadowRoot.setHTML()')}} and {{domxref('Document/parseHTML_static','Document.parseHTML()')}}, are used in the same way.
+The other XSS-safe methods, for example {{domxref('ShadowRoot.setHTML()')}} and {{domxref('Document/parseHTML_static','Document.parseHTML()')}}, are used in the same way.
 
 ## Using a sanitizer configuration
 
@@ -50,7 +50,7 @@ someElement.setHTML(untrustedString, { sanitizer: sanitizerOne });
 ### Allowing unsafe sanitization
 
 Sometimes you might want to inject input that needs to contain potentially unsafe elements or attributes.
-In this case you could use one of the API XSS-unsafe methods: {{domxref('Element.setHTMLUnsafe()')}}, {{domxref('ShadowRoot.setHTMLUnsafe()')}}, and {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}.
+In this case you could use one of the API XSS-unsafe methods such as {{domxref('Element.setHTMLUnsafe()')}}, {{domxref('ShadowRoot.setHTMLUnsafe()')}}, and {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}.
 
 To somewhat reduce the risk, you might first construct the default sanitizer, which only allows XSS-safe elements, and then allow just those unsafe entities that are expected in the input.
 
