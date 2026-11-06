@@ -65,7 +65,7 @@ The `page_action` key is an object that may have any of three properties, all op
 - `default_icon` {{optional_inline}}
   - : `Object` or `String`. Use this to specify an icon for the action.
 
-    Specify a string for a single icon, or an object with the icon sizes as property names. For the formats and sizes to provide for each browser, see [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons).
+    Specify a string for one icon, or an object with the icon sizes as property names. For the formats and sizes to provide for each browser, see [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons).
 
     You can use an SVG icon. You can also have the icon adapt to light and dark themes using a media query on `prefers-color-scheme`. For example:
 

@@ -131,7 +131,7 @@ The `action` key is an object that may have any of these properties, all optiona
 
 ## Choosing icon sizes
 
-The browser picks the icon of the action from the icons you provide, and browsers display the icon at different sizes. For the formats and sizes to provide for each browser, see [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons).
+The browser picks the action icon from the icons you provide, and browsers display the icon at different sizes. For the formats and sizes to provide for each browser, see [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons).
 
 ## Example
 

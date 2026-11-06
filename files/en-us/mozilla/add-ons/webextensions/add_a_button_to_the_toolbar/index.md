@@ -56,7 +56,7 @@ Next, create the "icons" directory inside the "buttons" directory, and save the 
 > [!NOTE]
 > These icons are from the "bitsies!" iconset on iconfinder.com created by Recep Kütük.
 
-We have two icons so we can use the bigger one in high-density displays. The browser will take care of selecting the best icon for the current display. Displays with a higher pixel density need larger icons still, so for a complete set of sizes, see [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons).
+We have two icons so we can use the bigger one in high-density displays. The browser will take care of selecting the best icon for the current display. Displays with a higher pixel density need larger icons. For information on the complete set of sizes, see [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons).
 
 Next, create "background.js" in the extension's root directory, and give it the following contents:
 
