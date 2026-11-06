@@ -226,6 +226,7 @@ A link is included in the content box above to demonstrate the effects of keyboa
 - {{CSSxRef("overflow-inline")}}
 - {{CSSxRef("overflow-x")}}
 - {{CSSxRef("overflow-y")}}
+- {{CSSxRef("scroll-axis-lock")}}
 - {{CSSxRef("scroll-behavior")}}
 - {{cssxref("scroll-marker-group")}}
 - {{cssxref("scroll-target-group")}}
