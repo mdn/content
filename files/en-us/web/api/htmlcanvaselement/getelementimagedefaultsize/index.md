@@ -43,7 +43,7 @@ This example shows how to extract the default size of an element and then render
 
 #### HTML
 
-We include a {{htmlelement("canvas")}} element with its `content` attribute set to `drawable`. We also include a {{htmlelement("div")}} element with the [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) attribute set, so it can be rendered onto the `<canvas>`. We also include a range {{htmlelement("input")}} with a {{htmlelement("label")}} and an {{htmlelement("output")}}, which we will use to control the rendered size of the `<div>`. Finally, we include a {{htmlelement("p")}} to output the rendered element size into.
+We include a {{htmlelement("canvas")}} element with its `content` attribute set to `drawable`. We also include a {{htmlelement("div")}} element with the [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) attribute set, so it can be rendered onto the `<canvas>`. We also include a range {{htmlelement("input")}} with a {{htmlelement("label")}} and an {{htmlelement("output")}}, which we will use to control the rendered size of the `<div>` (varying it between 50% and 150% of its default size). Finally, we include a {{htmlelement("p")}} to output the rendered element size into.
 
 ```html live-sample___default-size
 <div>

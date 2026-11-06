@@ -107,7 +107,7 @@ canvas.addEventListener("paint", () => {
 - {{domxref("HTMLCanvasElement.getElementTransform()")}}
   - : Returns the `DOMMatrix` representing the transform currently applied to a `drawable` element's underlying DOM presence.
 - {{domxref("HTMLCanvasElement.requestPaint()")}}
-  - : schedules a single {{domxref("HTMLCanvasElement.paint_event", "paint")}} event even if no repaints occurred.
+  - : Schedules a single {{domxref("HTMLCanvasElement.paint_event", "paint")}} event even if no repaints occurred.
 
 #### Events
 
