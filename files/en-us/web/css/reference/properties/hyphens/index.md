@@ -99,53 +99,6 @@ There are two Unicode characters used to manually specify potential line break p
 
 {{csssyntax}}
 
-## Examples
-
-### Basic example
-
-This example demonstrates the three values of the `hyphens` property.
-
-#### HTML
-
-We include three {{htmlelement("dd")}} elements containing the same text but with three different classes.
-
-```html
-<dl>
-  <dt><code>none</code>: no hyphen; overflow if needed</dt>
-  <dd lang="en" class="none">An extreme&shy;ly long English word</dd>
-  <dt>
-    <code>manual</code>: hyphen only at &amp;hyphen; or &amp;shy; (if needed)
-  </dt>
-  <dd lang="en" class="manual">An extreme&shy;ly long English word</dd>
-  <dt><code>auto</code>: hyphens where the algorithm decides (if needed)</dt>
-  <dd lang="en" class="auto">An extreme&shy;ly long English word</dd>
-</dl>
-```
-
-#### CSS
-
-Each of the three classes is set to a different `hyphens` value.
-
-```css
-dd {
-  width: 55px;
-  border: 1px solid black;
-}
-dd.none {
-  hyphens: none;
-}
-dd.manual {
-  hyphens: manual;
-}
-dd.auto {
-  hyphens: auto;
-}
-```
-
-#### Result
-
-{{EmbedLiveSample("Basic example", "100%", 490)}}
-
 ## Specifications
 
 {{Specifications}}
