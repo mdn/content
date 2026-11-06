@@ -64,7 +64,7 @@ The `DocumentType` node is always a leaf node. The `Element` node is where most 
 
 All nodes that can have children ({{domxref("Document")}}, {{domxref("DocumentFragment")}}, and {{domxref("Element")}}) allow two types of children: {{domxref("Comment")}} and {{domxref("ProcessingInstruction")}} nodes. These nodes are always leaf nodes.
 
-Each element, in addition to having child nodes, can also have attributes, represented as {{domxref("Attr")}} nodes. `Attr` extend the `Node` interface, but they are not part of the main tree structure, because they are not the child of any node and their parent node is `null`. Instead, they are stored in a separate named node map, accessible via the {{domxref("Element/attributes", "attributes")}} property of the `Element` node.
+Each element, in addition to having child nodes, can also have attributes, represented as {{domxref("Attr")}} nodes. `Attr` extend the `Node` interface, but they are not part of the main tree structure, because they are not the child of any node and their parent node is `null`. Instead, they are stored in a separate map keyed by their names ([namespace plus local name](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces), to be exact), accessible via the {{domxref("Element/attributes", "attributes")}} property of the `Element` node.
 
 The `Node` interface defines a {{domxref("Node/nodeType", "nodeType")}} property that indicates the type of the node. To summarize, we introduced the following node types:
 
@@ -126,7 +126,7 @@ An `Element` in the document looks like this:
 <p class="note" id="intro">This is a paragraph.</p>
 ```
 
-In addition to the contents, there are two parts you can specify: the tag name and the attributes. The tag name corresponds to the {{domxref("Element/tagName", "tagName")}} property of the `Element` node, which is `"P"` in this case (note that it is always in uppercase for HTML elements). The attributes correspond to the `Attr` nodes stored in the {{domxref("Element/attributes", "attributes")}} property of the `Element` node. We will discuss attributes in more detail in the [Element and its attributes](#element_and_its_attributes) section.
+In addition to the contents, there are two parts you can specify: the tag name and the attributes. The tag name corresponds to the {{domxref("Element/tagName", "tagName")}} property of the `Element` node, which is `"P"` in this case (note that it is always in uppercase for HTML elements). The attributes correspond to the `Attr` nodes stored in the {{domxref("Element/attributes", "attributes")}} property of the `Element` node. We will discuss attributes in more detail in the [Element and its attributes](#element_and_its_attributes) section. We'll also take another look at the tag name and the attributes in the [XML namespaces](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces) guide.
 
 The `Element` node does not hold any data itself, so its `nodeValue` is always `null`. Its `textContent` is the concatenation of all its text node descendants in tree order, which is `"This is a paragraph."` in this case. For the following element:
 
@@ -175,7 +175,7 @@ For the following element:
 <p class="note" id="intro">This is a paragraph.</p>
 ```
 
-The `<p>` element has two attributes, represented by two `Attr` nodes. Each attribute consists of a name and a value, corresponding to the {{domxref("Attr/name", "name")}} and {{domxref("Attr/value", "value")}} properties. The first attribute has `"class"` as `name` and `"note"` as `value`, while the second attribute has `"id"` as `name` and `"intro"` as `value`.
+The `<p>` element has two attributes, represented by two `Attr` nodes. Each attribute consists of a name and a value, corresponding to the {{domxref("Attr/name", "name")}} and {{domxref("Attr/value", "value")}} properties. The first attribute has `"class"` as `name` and `"note"` as `value`, while the second attribute has `"id"` as `name` and `"intro"` as `value`. We'll take another look at the attribute name in the [XML namespaces](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces) guide.
 
 ## Element and its attributes
 
@@ -216,7 +216,7 @@ The `isEqualNode()` method compares two nodes structurally. Two nodes are consid
 - For `Document`, there is no data, so only the child nodes need to be compared.
 - For `DocumentType`, the `name`, `publicId`, and `systemId` properties need to be compared.
 - For `Element`, the `tagName` (more accurately, the `namespaceURI`, `prefix`, and `localName`; we will introduce these in the [XML namespaces](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces) guide) and the attributes need to be compared.
-- For `Attr`, the `name` (more accurately, the `namespaceURI`, `prefix`, and `localName`; we will introduce these in the [XML namespaces](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces) guide) and `value` properties need to be compared.
+- For `Attr`, the `name` (more accurately, the `namespaceURI` and `localName`, but not `prefix`; we will introduce these in the [XML namespaces](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces) guide) and `value` properties need to be compared.
 - For all `CharacterData` nodes (`Text`, `CDATASection`, `Comment`, and `ProcessingInstruction`), the `data` property needs to be compared. For `ProcessingInstruction`, the `target` property also needs to be compared.
 
 The `a.compareDocumentPosition(b)` method compares two nodes by tree order. It returns a bitmask indicating their relative positions. The possible cases are:
