@@ -10,7 +10,7 @@ sidebar: cssref
 
 ## Reduced Motion
 
-Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity. Reducing animations or switching animation off completely based on the user's preference can also benefit users with low battery or low-end devices.
+Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for vestibular disorders, epilepsy, migraine, and scotopic sensitivity. Reducing animations or switching animation off completely based on the user's preference can also benefit users with low battery or low-end devices.
 
 The [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) media query enables providing an experience with fewer animations and transitions to users who have set their operating system's accessibility preferences to reduce motion. It has two possible values:
 
