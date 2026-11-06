@@ -26,8 +26,8 @@ The `overflow-inline` feature is specified as a keyword value chosen from the li
 ### HTML
 
 ```html
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac turpis
+<p class="overflowing">
+  <strong>This paragraph is overflowing</strong>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac turpis
   eleifend, fringilla velit ac, aliquam tellus. Vestibulum ante ipsum primis in
   faucibus orci luctus et ultrices posuere cubilia Curae; Nunc velit erat,
   tempus id rutrum sed, dapibus ut urna. Integer vehicula nibh a justo imperdiet
@@ -36,18 +36,32 @@ The `overflow-inline` feature is specified as a keyword value chosen from the li
   Proin sit amet tincidunt risus. Sed nec augue congue eros accumsan tincidunt
   sed eget ex.
 </p>
+
+<p class="not-overflowing">
+  <strong>This paragraph does not overflow</strong>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac turpis
+  eleifend, fringilla velit ac, aliquam tellus. Vestibulum ante ipsum primis in
+  faucibus orci luctus et ultrices posuere cubilia Curae;
+</p>
 ```
 
 ### CSS
 
 ```css
 p {
+  border: 2px solid black;
+  margin-block: 1em;
+}
+
+.overflowing {
   white-space: nowrap;
 }
 
 @media (overflow-inline: scroll) {
   p {
+    /* applies to all paragraphs because this feature detects
+       how overflow is handled by the device */
     color: red;
+    border-style: dashed;
   }
 }
 ```
