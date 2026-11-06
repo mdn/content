@@ -15,4 +15,6 @@ The bfcache is great for performance, so it is in your interests to make sure yo
 
 ## See also
 
+- [Back/forward cache (bfcache)](/en-US/docs/Web/Performance/Guides/bfcache) guide
+- [Monitoring bfcache blocking reasons](/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons)
 - [Back and forward cache](https://web.dev/articles/bfcache) on web.dev (2023)
