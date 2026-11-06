@@ -1057,6 +1057,12 @@ You can query the following `pname` parameters when using [WebGL extensions](/en
       <td>{{domxref("OVR_multiview2")}}</td>
       <td>Maximum number of views.</td>
     </tr>
+    <tr>
+      <td><code>ext.POLYGON_OFFSET_CLAMP_EXT</code></td>
+      <td>{{domxref("WebGL_API/Types", "GLfloat")}}</td>
+      <td>{{domxref("EXT_polygon_offset_clamp")}}</td>
+      <td>Maximum or minimum depth offset.</td>
+    </tr>
   </tbody>
 </table>
 
