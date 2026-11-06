@@ -74,6 +74,26 @@ let updating = browser.menus.update(
         > [!NOTE]
         > The top-level menu item uses the [icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.
 
+    - `iconVariants` {{optional_inline}}
+      - : `Array` of {{WebExtAPIRef("extensionTypes.IconVariant")}}. One or more icons to display next to the menu item for a color scheme. This is the same as the `iconVariants` property of {{WebExtAPIRef("menus.create()")}}.
+
+        ```js
+        browser.menus.update(menuId, {
+          iconVariants: [
+            {
+              16: "path/to/geo-dark-16.png",
+              32: "path/to/geo-dark-32.png",
+              colorSchemes: ["dark"],
+            },
+            {
+              16: "path/to/geo-light-16.png",
+              32: "path/to/geo-light-32.png",
+              colorSchemes: ["light"],
+            },
+          ],
+        });
+        ```
+
     - `id` {{optional_inline}}
       - : `string`. The unique ID to assign to this item. Mandatory for event pages. Cannot be the same as another ID for this extension.
     - `onclick` {{optional_inline}}

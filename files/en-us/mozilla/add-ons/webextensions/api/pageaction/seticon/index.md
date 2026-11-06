@@ -25,7 +25,7 @@ let settingIcon = browser.pageAction.setIcon(
 ### Parameters
 
 - `details`
-  - : `object`. An object containing either `imageData` or `path` properties, and a `tabId` property.
+  - : `object`. An object containing `imageData`, `path`, or `variants`, and a `tabId` property.
     - `imageData` {{optional_inline}}
       - : {{WebExtAPIRef('pageAction.ImageDataType')}} or `object`. This is either a single `ImageData` object or a dictionary object.
 
@@ -40,7 +40,7 @@ let settingIcon = browser.pageAction.setIcon(
         });
         ```
 
-        The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
+        The browser will choose the image to use depending on the display's pixel density. See [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons) for more information on this.
 
     - `path` {{optional_inline}}
       - : `string` or `object`. This is either a relative path to an icon file or a dictionary object.
@@ -56,13 +56,34 @@ let settingIcon = browser.pageAction.setIcon(
         });
         ```
 
-        The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
+        The browser will choose the image to use depending on the display's pixel density. See [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons) for more information on this.
 
         If `path` is `null`, this will reset the page action's icon to the icon that was given in the [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key.
 
         If `path` is `""`, this will reset the icon to the browser's global default icon (that is, the icon used if no icon is given in the [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key).
 
         If `path` does not point to a valid icon, then no icon will be displayed.
+
+    - `variants` {{optional_inline}}
+      - : `Array` of {{WebExtAPIRef("extensionTypes.IconVariant")}}. Icons with a set for each color scheme. The browser uses the first icon group that matches its active color scheme, then picks the icon that best fits the required size. The active color scheme can differ from the device's color scheme, for example when the browser toolbar is dark. If `variants` is present, the browser ignores `path` and `imageData`.
+
+        ```js
+        browser.pageAction.setIcon({
+          tabId: tab.id,
+          variants: [
+            {
+              16: "icons/dark-16.png",
+              32: "icons/dark-32.png",
+              colorSchemes: ["dark"],
+            },
+            {
+              16: "icons/light-16.png",
+              32: "icons/light-32.png",
+              colorSchemes: ["light"],
+            },
+          ],
+        });
+        ```
 
     - `tabId`
       - : `integer`. The ID of the tab whose icon you want to set.
