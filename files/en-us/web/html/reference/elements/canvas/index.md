@@ -7,12 +7,18 @@ browser-compat: html.elements.canvas
 sidebar: htmlsidebar
 ---
 
-Use the **HTML `<canvas>` element** with either the [canvas scripting API](/en-US/docs/Web/API/Canvas_API) or the [WebGL API](/en-US/docs/Web/API/WebGL_API) to draw graphics and animations.
+Use the **HTML `<canvas>` element** with either the [canvas scripting API](/en-US/docs/Web/API/Canvas_API), [WebGL API](/en-US/docs/Web/API/WebGL_API), or [WebGPU API](/en-US/docs/Web/API/WebGPU_API) to draw graphics and animations.
 
 ## Attributes
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
+- `content`
+  - : Enables opting the `<canvas>` element into rendering its descendants rather than treating them as [fallback content](#fallback_content). Possible values are:
+    - `drawable`
+      - : Descendants of the `<canvas>` element can be rendered on the canvas context using the [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API).
+    - `fallback`
+      - : Descendants of the `<canvas>` element are always treated as fallback content. This is the default value.
 - `height`
   - : The height of the coordinate space in CSS pixels. Defaults to 150.
 - `moz-opaque` {{non-standard_inline}} {{deprecated_inline}}
@@ -22,9 +28,9 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 
 ## Usage notes
 
-### Alternative content
+### Fallback content
 
-You should provide alternate content inside the `<canvas>` block. That content will be rendered both on older browsers that don't support canvas and in browsers with JavaScript disabled.
+You should provide fallback content inside the `<canvas>` tags, which will be rendered both on older browsers that don't support canvas and in browsers with JavaScript disabled. Note that, when JavaScript is turned off, descendants of `<canvas>` elements with `content="drawable"` set will still be displayed as fallback content.
 
 ### Closing `</canvas>` tag
 
@@ -52,23 +58,20 @@ For more information, see the {{domxref("OffscreenCanvas")}} API documentation.
 
 ## Accessibility
 
-### Alternative content
+Any content generated directly by a canvas context (including [text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text)) is just pixels — it is not exposed to accessibility tools (as semantic HTML is) and is therefore inaccessible. You can get around this problem by including meaningful content in your HTML as descendants of the `<canvas>` element and rendering it on the canvas using the [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API).
 
-The `<canvas>` element on its own is just a bitmap and does not provide information about any drawn objects. Canvas content is not exposed to accessibility tools as semantic HTML is. In general, you should avoid using canvas in an accessible website or app. The following guides can help to make it more accessible.
-
-- [Canvas accessibility use cases](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)
-- [Canvas element accessibility issues](https://www.w3.org/html/wg/wiki/AddedElementCanvas)
-- [Best practices for interactive canvas elements](https://html.spec.whatwg.org/multipage/scripting.html#best-practices)
+If HTML-in-Canvas is not suitable for your circumstances, you should avoid using canvas to display meaningful content altogether, and instead rely on semantic HTML.
 
 ## Examples
 
 ### HTML
 
-This code snippet adds a canvas element to your HTML document. A fallback text is provided if a browser is unable to read or render the canvas.
+This code snippet adds a canvas element to your HTML document. Fallback text is provided that will be rendered in cases where the browser is unable to read or render the canvas.
 
 ```html
+<p>A 100-pixel green square:</p>
 <canvas width="120" height="120">
-  An alternative text describing what your canvas displays.
+  The square could not be rendered, sorry!
 </canvas>
 ```
 
@@ -86,7 +89,7 @@ ctx.fillRect(10, 10, 100, 100);
 
 ### Result
 
-{{EmbedLiveSample('Examples', 600, 150)}}
+{{EmbedLiveSample('Examples', 600, 190)}}
 
 ## Technical summary
 
@@ -174,7 +177,9 @@ ctx.fillRect(10, 10, 100, 100);
 - [Canvas cheat sheet](https://websitesetup.org/wp-content/uploads/2015/11/Infopgraphic-CanvasCheatSheet-Final2.pdf) (pdf) (2015)
 - [Safari HTML canvas guide](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html) via Apple (2013)
 - [`CanvasRenderingContext2D` 2D drawing context for a canvas element](https://developer.apple.com/documentation/webkitjs/canvasrenderingcontext2d) via Apple.com
-- [WebGL](/en-US/docs/Web/API/WebGL_API) API
+- [WebGL API](/en-US/docs/Web/API/WebGL_API)
+- [WebGPU API](/en-US/docs/Web/API/WebGPU_API)
+- [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API)
 - {{HTMLElement("img")}}
 - [SVG](/en-US/docs/Web/SVG)
 - [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)

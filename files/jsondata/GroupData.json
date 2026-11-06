@@ -952,6 +952,35 @@
         "HTMLElement: drop"
       ]
     },
+    "HTML-in-Canvas API": {
+      "overview": ["HTML-in-Canvas API"],
+      "guides": ["/docs/Web/API/HTML-in-Canvas_API/Using"],
+      "interfaces": [
+        "CanvasPaintEvent",
+        "ElementGeometryUpdateEvent",
+        "ElementImage"
+      ],
+      "methods": [
+        "HTMLCanvasElement.captureElementImage()",
+        "HTMLCanvasElement.updateElementGeometry()",
+        "HTMLCanvasElement.clearElementGeometry()",
+        "HTMLCanvasElement.getElementImageDefaultSize()",
+        "HTMLCanvasElement.getElementTransform()",
+        "HTMLCanvasElement.requestPaint()",
+        "OffscreenCanvas.updateElementGeometry()",
+        "OffscreenCanvas.clearElementGeometry()",
+        "OffscreenCanvas.getElementImageDefaultSize()",
+        "CanvasRenderingContext2D.drawElementImage()",
+        "OffscreenCanvasRenderingContext2D.drawElementImage()",
+        "WebGLRenderingContext.texElementSubImage2D()",
+        "GPUQueue.drawElementImageToTexture()"
+      ],
+      "properties": ["HTMLCanvasElement.content", "HTMLElement.drawable"],
+      "events": [
+        "HTMLCanvasElement: elementgeometryupdate",
+        "HTMLCanvasElement: paint"
+      ]
+    },
     "HTML Sanitizer API": {
       "overview": ["HTML Sanitizer API"],
       "guides": [

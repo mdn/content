@@ -24,6 +24,11 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLCanvasElement.mozPrintCallback")}} {{non-standard_inline}}
   - : A `function` that is Initially null. Web content can set this to a JavaScript function that will be called when the canvas is to be redrawn while the page is being printed. When called, the callback is passed a "printState" object that implements the [MozCanvasPrintState](https://searchfox.org/firefox-main/search?q=interface%20MozCanvasPrintState&path=HTMLCanvasElement.webidl) interface. The callback can get the context to draw to from the printState object and must then call done() on it when finished. The purpose of `mozPrintCallback` is to obtain a higher resolution rendering of the canvas at the resolution of the printer being used. [See this blog post.](https://blog.mozilla.org/labs/2012/09/a-new-way-to-control-printing-output/)
 
+### HTML-in-Canvas instance properties
+
+- {{domxref("HTMLCanvasElement.content")}}
+  - : Indicates whether the `<canvas>` element is opted into rendering its descendants rather than treating them as [fallback content](/en-US/docs/Web/HTML/Reference/Elements/canvas#fallback_content). Reflects the value of the HTML [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute.
+
 ## Instance methods
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}._
@@ -38,6 +43,21 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
   - : Creates a {{domxref("Blob")}} object representing the image contained in the canvas; this file may be cached on the disk or stored in memory at the discretion of the user agent.
 - {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}
   - : Transfers control to an {{domxref("OffscreenCanvas")}} object, either on the main thread or on a worker.
+
+### HTML-in-Canvas instance methods
+
+- {{domxref("HTMLCanvasElement.captureElementImage()")}}
+  - : Captures a snapshot of a [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) element's current rendered state, which can be rendered later on.
+- {{domxref("HTMLCanvasElement.updateElementGeometry()")}}
+  - : Supplies a {{domxref("DOMMatrix")}} that updates the size, shape, and position of a `drawable` element's underlying DOM presence so that it can be kept in sync with the canvas rendering as it updates for hit testing purposes.
+- {{domxref("HTMLCanvasElement.clearElementGeometry()")}}
+  - : Clears any previous `DOMMatrix` applied to a `drawable` element's underlying DOM presence, returning it to its original size, shape, and position.
+- {{domxref("HTMLCanvasElement.getElementImageDefaultSize()")}}
+  - : Returns an object containing an element's original size as it would be rendered in the DOM. The returned size is in canvas grid coordinates.
+- {{domxref("HTMLCanvasElement.getElementTransform()")}}
+  - : Returns the `DOMMatrix` representing the transform currently applied to a `drawable` element's underlying DOM presence.
+- {{domxref("HTMLCanvasElement.requestPaint()")}}
+  - : Schedules a single {{domxref("HTMLCanvasElement.paint_event", "paint")}} event even if no repaints occurred.
 
 ## Events
 
@@ -56,6 +76,13 @@ Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEvent
 - [`webglcontextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event)
   - : Fired if the user agent restores the drawing buffer for a `WebGLRenderingContext` or `WebGL2RenderingContext` object.
 
+### HTML-in-Canvas events
+
+- {{domxref("HTMLCanvasElement.paint_event", "paint")}}
+  - : Fired when `drawable` elements have been repainted.
+- {{domxref("HTMLCanvasElement.elementgeometryupdate_event", "elementgeometryupdate")}}
+  - : Fired when `drawable` element geometry has been updated via an {{domxref("OffscreenCanvas")}}.
+
 ## Specifications
 
 {{Specifications}}
@@ -67,3 +94,4 @@ Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEvent
 ## See also
 
 - HTML element implementing this interface: {{HTMLElement("canvas")}}
+- [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API)

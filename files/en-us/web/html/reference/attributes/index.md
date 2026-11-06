@@ -312,6 +312,13 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/class">content</a></code>
+      </td>
+      <td>{{ HTMLElement("canvas") }}</td>
+      <td>Enables opting the {{ HTMLElement("canvas") }} element into rendering its descendants rather than treating them as fallback content.</td>
+    </tr>
+    <tr>
+      <td>
         <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable">contenteditable</a></code>
       </td>
       <td>
@@ -469,6 +476,15 @@ Elements in HTML have **attributes**; these are additional values that configure
         <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
       </td>
       <td>Defines whether the element can be dragged.</td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/drawable">drawable</a></code>
+      </td>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
+      </td>
+      <td>A boolean attribute that marks an element as a <strong>paint root</strong>, meaning that it can be rendered independently on a parent <code>&lt;canvas&gt;</code> element with its <code><a href="/en-US/docs/Web/HTML/Reference/Elements/canvas#content">content</a></code> attribute set to <code>drawable</code>, using the <a href="/en-US/docs/Web/API/HTML-in-Canvas_API">HTML-in-Canvas API</a>.</td>
     </tr>
     <tr>
       <td>
