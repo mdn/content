@@ -19,13 +19,13 @@ Values of this type are objects. They contain these properties:
 - `cssOrigin` {{optional_inline}}
   - : `string`. The style origin for the injection, either `"user"`, to add the CSS as a user stylesheet, or `"author"`, to add it as an author stylesheet. Defaults to `"author"`. This property is case insensitive in Firefox and Safari.
 - `excludeMatches` {{optional_inline}}
-  - : `array` of `string`. Array of pages that this content script is excluded from but would otherwise be injected into.
+  - : `array` of `string`. Array of [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) defining the pages that this content script is excluded from but would otherwise be injected into.
 - `id`
   - : `string`. The ID of the content script, specified in the API call.
 - `js` {{optional_inline}}
   - : `array` of `string`. Array of path to JavaScript files in the extension package to inject into matching pages. Scripts are injected in the order they appear in this array.
 - `matches` {{optional_inline}}
-  - : `array` of `string`. Array of the pages this content script is injected into. Must be specified for {{WebExtAPIRef("scripting.registerContentScripts()")}}.
+  - : `array` of `string`. Array of [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) defining the pages this content script is injected into. Must be specified for {{WebExtAPIRef("scripting.registerContentScripts()")}}.
 - `matchOriginAsFallback` {{optional_inline}}
   - : `boolean`. Whether code is injected into `about:`, `data:`, and `blob:` pages when their origin matches the pattern in `matches`, even if the document origin is opaque (due to the use of CSP or iframe sandbox). Match patterns in `matches` must specify a wildcard path glob. Defaults to `false`.
 - `persistAcrossSessions` {{optional_inline}}
