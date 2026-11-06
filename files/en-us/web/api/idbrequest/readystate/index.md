@@ -26,14 +26,7 @@ One of the following strings:
 
 ## Examples
 
-The following example requests a given record title, `onsuccess` gets the
-associated record from the {{domxref("IDBObjectStore")}} (made available
-as `objectStoreTitleRequest.result`), updates
-one property of the record, and then puts the updated record back into the object
-store in another request. The `readyState` of the 2nd request is logged to
-the developer console. For a full working example, see our
-[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app
-([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+The following example requests a given record title, `onsuccess` gets the associated record from the {{domxref("IDBObjectStore")}} (made available as `objectStoreTitleRequest.result`), updates one property of the record, and then puts the updated record back into the object store in another request. The `readyState` of the 2nd request is logged to the developer console. For a complete working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 const title = "Walk dog";
@@ -86,4 +79,3 @@ objectStoreTitleRequest.onsuccess = () => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

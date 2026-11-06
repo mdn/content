@@ -57,7 +57,7 @@ The interface {{domxref("IDBOpenDBRequest")}} is derived from `IDBRequest`.
 ### Basic usage
 
 In the following code snippet, we open a database asynchronously and make a request; event listeners for `error` and `success` are included to handle the success and error cases.
-For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+For a complete working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 let db;
@@ -97,4 +97,3 @@ DBOpenRequest.addEventListener("success", (event) => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

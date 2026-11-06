@@ -57,7 +57,7 @@ The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/In
 
 ## Example
 
-This example shows a variety of different uses of object stores, from updating the data structure with {{domxref("IDBObjectStore.createIndex")}} inside an `onupgradeneeded` function, to adding a new item to our object store with {{domxref("IDBObjectStore.add")}}. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+This example shows a variety of different uses of object stores, from updating the data structure with {{domxref("IDBObjectStore.createIndex")}} inside an `onupgradeneeded` function, to adding a new item to our object store with {{domxref("IDBObjectStore.add")}}. For a complete working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // Let us open our database
@@ -156,4 +156,3 @@ objectStoreRequest.onsuccess = (event) => {
 - Using transactions: {{domxref("IDBTransaction")}}
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

@@ -22,7 +22,7 @@ Many examples of this now exist, such as [Slack](https://slack.com/).
 
 We've written a real-world example — a to-do list app — to give more of an idea of how web notifications can be used.
 It stores data locally using [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) and notifies users when tasks are due using system notifications.
-[Download the To-do list code](https://github.com/mdn/dom-examples/tree/main/to-do-notifications), or [view the app running live](https://mdn.github.io/dom-examples/to-do-notifications/).
+For a complete working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Requesting permission
 
