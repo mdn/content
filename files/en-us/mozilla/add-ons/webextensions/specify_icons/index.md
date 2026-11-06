@@ -15,7 +15,10 @@ These manifest keys and APIs set icons:
 
 - The [`icon_variants`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icon_variants) and [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) manifest keys set the icon for the extension in the browser's interface, for example in its extension manager.
 - The `icon_variants` and `default_icon` properties of the [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) manifest key set the icon of the extension's action button. You can change the icon while the extension runs with {{WebExtAPIRef("action.setIcon()")}}, which accepts icon variants in its `variants` property. Manifest V2 extensions use [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) or [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) instead.
-- Use `icon_variants` to provide a different set of icons for light and dark appearance, or icons in different formats. Refer to the [Provide icons for dark mode](#provide_icons_for_dark_mode) and [Provide more than one format](#provide_more_than_one_format) sections.
+- The `iconUrl` property of {{WebExtAPIRef("notifications.create()")}} sets the icon of a notification.
+- The `iconVariants` and `icons` properties of {{WebExtAPIRef("menus.create()")}} and {{WebExtAPIRef("menus.update()")}} set the icon of a menu item. Browsers that support them show these icons next to menu items.
+
+Use `icon_variants` to provide a different set of icons for light and dark appearance, or icons in different formats. Refer to the [Provide icons for dark mode](#provide_icons_for_dark_mode) and [Provide more than one format](#provide_more_than_one_format) sections.
 
 The browser chooses the icon of the action button in this order. It uses the first icon that the extension defines, and it skips a key that it doesn't support:
 
@@ -29,10 +32,10 @@ If the extension doesn't define an icon for the action button, the browser uses 
 
 ## Choose image formats
 
-You can provide icons as PNG or SVG resources. An SVG icon scales to any size, and PNG icons work in every browser.
+PNG and SVG are the recommended formats for icons. An SVG icon scales to any size, and PNG icons work in every browser. Browsers can support other image formats, but support varies.
 
 > [!NOTE]
-> Browsers differ in the image formats they support. Firefox and Safari support PNG and SVG icons, and Chrome supports only PNG icons, so an extension that targets Chrome needs PNG icons.
+> Browsers differ in the image formats they support. Firefox and Safari support SVG icons, and Chrome supports only bitmap icons.
 
 To provide icons in more than one format, refer to the [Provide more than one format](#provide_more_than_one_format) section.
 
@@ -83,23 +86,24 @@ The pixel density depends on the display:
 - On a 3x display, such as an iPhone, an icon needs three times as many pixels.
 - Displays with fractional scale factors, such as 1.5x, are becoming more common, and Windows lets the user choose scales like these. For a 16 point icon, the browser looks for 24 pixels on a 1.5x display. Provide several sizes, such as 16, 24, 32 and 48 pixels, so the browser can pick a close match.
 
-Browsers display icons at different sizes. This table shows the size at which each browser displays the icon in the extension manager, and the recommended set of pixel sizes to provide for 1x, 2x and 3x displays:
+Browsers display icons at different sizes. This table shows the size at which each browser displays the icon in the extension manager, and the recommended set of pixel sizes to provide for 1x and 2x displays and, in Safari, 3x displays:
 
 | Browser | Interface       | Displayed size (pt) | Recommended set (px) |
 | ------- | --------------- | ------------------- | -------------------- |
-| Chrome  | Extensions page | 48                  | 48, 96, 144          |
-| Firefox | Add-ons Manager | 32                  | 32, 48, 64, 96       |
+| Chrome  | Extensions page | 48                  | 48, 96               |
+| Firefox | Add-ons Manager | 32                  | 32, 64               |
 | Safari  | Settings        | 48                  | 48, 96, 144          |
 
-Browsers can also show your icon in other places, at other sizes. Providing icons in a range of sizes, from 16 pixels to 256 pixels, means the browser always has a close match.
+Browsers can also show your icon in other places, such as alerts and permission prompts, at other sizes. For example, Chrome and Safari use a 16 point icon as the favicon of the extension's pages, and Chrome uses a 128 pixel icon during installation and in the Chrome Web Store. Providing icons in a range of sizes, from 16 pixels to 256 pixels, helps the browser find a close match as the places and sizes change.
 
 This table shows the same for the icon of the action button. If you don't specify an action icon, the browser uses the extension's icon at this size:
 
-| Browser | Displayed size (pt) | Recommended set (px) |
-| ------- | ------------------- | -------------------- |
-| Chrome  | 16                  | 16, 32, 48           |
-| Firefox | 16                  | 16, 32, 48           |
-| Safari  | 19                  | 19, 38, 57           |
+| Browser | Interface     | Displayed size (pt) | Recommended set (px) |
+| ------- | ------------- | ------------------- | -------------------- |
+| Chrome  | Action button | 16                  | 16, 32               |
+| Firefox | Action button | 16                  | 16, 32               |
+| Firefox | Menu panel    | 32                  | 32, 64               |
+| Safari  | Action button | 19                  | 19, 38, 57           |
 
 ## Provide icons for dark mode
 
