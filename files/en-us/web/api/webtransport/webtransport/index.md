@@ -28,6 +28,20 @@ new WebTransport(url, options)
       - : A boolean value.
         If `true`, the network connection for this {{domxref("WebTransport")}} can be shared with a pool of other HTTP/3 sessions.
         By default the value is `false`, and the connection cannot be shared.
+    - `anticipatedConcurrentIncomingBidirectionalStreams` {{optional_inline}} {{experimental_inline}}
+      - : An integer between `0` and `65535`, or `null`, that indicates the number of incoming bidirectional streams that the application expects the server to have open at the same time.
+
+        This is a hint that the browser can use to raise its limit on server-opened streams in advance.
+        By default the value is `null`, and no hint is given.
+        The value is available afterwards in the {{domxref("WebTransport.anticipatedConcurrentIncomingBidirectionalStreams","anticipatedConcurrentIncomingBidirectionalStreams")}} property.
+
+    - `anticipatedConcurrentIncomingUnidirectionalStreams` {{optional_inline}} {{experimental_inline}}
+      - : An integer between `0` and `65535`, or `null`, that indicates the number of incoming unidirectional streams that the application expects the server to have open at the same time.
+
+        This is a hint that the browser can use to raise its limit on server-opened streams in advance.
+        By default the value is `null`, and no hint is given.
+        The value is available afterwards in the {{domxref("WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams","anticipatedConcurrentIncomingUnidirectionalStreams")}} property.
+
     - `congestionControl` {{optional_inline}}
       - : A string indicating the application's preference that the congestion control algorithm used when sending data over this connection be tuned for either throughput or low-latency.
         This is a hint to the user agent.
@@ -84,6 +98,7 @@ new WebTransport(url, options)
     Also thrown if `protocols` contains a duplicate value, a value with characters not allowed in a protocol token, or a value whose encoded length is `0` or greater than `512` bytes.
 - {{jsxref("TypeError")}}
   - : Thrown if a `serverCertificateHashes` is set for a non-dedicated connection (in other words, if `allowPooling` is `true`).
+    Also thrown if `anticipatedConcurrentIncomingBidirectionalStreams` or `anticipatedConcurrentIncomingUnidirectionalStreams` is outside the range `0` to `65535`.
 
 ## Examples
 
