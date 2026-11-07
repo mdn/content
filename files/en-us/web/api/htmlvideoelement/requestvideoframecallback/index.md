@@ -102,19 +102,26 @@ video.addEventListener("play", () => {
 let width = canvas.width;
 let height = canvas.height;
 
-let paintCount = 0;
-let startTime = 0.0;
+let startFrames = null;
+let startMediaTime = 0;
+
+const resetFps = () => {
+  startFrames = null;
+};
+video.addEventListener("play", resetFps);
+video.addEventListener("seeked", resetFps);
 
 const updateCanvas = (now, metadata) => {
-  if (startTime === 0.0) {
-    startTime = now;
-  }
-
   ctx.drawImage(video, 0, 0, width, height);
 
-  const elapsed = (now - startTime) / 1000.0;
-  const fps = (++paintCount / elapsed).toFixed(3);
-  fpsInfo.innerText = !isFinite(fps) ? 0 : fps;
+  if (startFrames === null) {
+    startFrames = metadata.presentedFrames;
+    startMediaTime = metadata.mediaTime;
+  } else {
+    const frames = metadata.presentedFrames - startFrames;
+    const seconds = metadata.mediaTime - startMediaTime;
+    fpsInfo.innerText = seconds > 0 ? (frames / seconds).toFixed(3) : 0;
+  }
   metadataInfo.innerText = JSON.stringify(metadata, null, 2);
 
   video.requestVideoFrameCallback(updateCanvas);
@@ -133,9 +140,9 @@ canvas {
 
 ```html
 <p>
-  Start <button type="button">⏯</button> playing the video. Pause the video to
-  read the metadata. Drawing video frames on the canvas is synced with the
-  actual video framerate.
+   Start <button type="button">⏯</button> playing the video. Pause the video to
+   read the metadata. Drawing video frames on the canvas is synced with the
+   actual video framerate.
 </p>
 <video controls playsinline></video>
 <canvas width="960" height="540"></canvas>
