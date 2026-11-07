@@ -139,7 +139,7 @@ See the W3C's [Unsanctioned Web Tracking](https://www.w3.org/2001/tag/doc/unsanc
 
 ## Anti-tracking
 
-Because tracking represents such a significant privacy violation, browsers and browser extensions have designed and implemented a number of techniques to prevent websites from tracking users. In this section we'll outline the general techniques, and in the next section we'll look at the specific policies implemented by browsers.
+Because tracking represents such a significant privacy violation, browsers and browser extensions have designed and implemented a number of techniques to prevent websites from tracking users. In this section we'll outline the techniques that browsers have developed to combat tracking.
 
 First, though, we'll explore some of the reasons that browsers can't just disable the techniques used by trackers.
 
@@ -255,3 +255,12 @@ The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) enables a scrip
 When a script requests access, the browser may decide whether to grant it by asking the user, but may also apply its own rules, including indications that the third party is participating in federated login and any custom rules that grant or deny unpartitioned storage access.
 
 ## See also
+
+- [Client-Side Storage Partitioning](https://privacycg.github.io/storage-partitioning/) (Privacy Community Group)
+- [Navigational-Tracking Mitigations](https://privacycg.github.io/nav-tracking-mitigations/) (Privacy Community Group)
+- [The Storage Access API](https://privacycg.github.io/storage-access/) (Privacy Community Group)
+- [Unsanctioned Web Tracking](https://www.w3.org/2001/tag/doc/unsanctioned-tracking/) (W3C Technical Architecture Group)
+- [Mitigating Browser Fingerprinting in Web Specifications](https://www.w3.org/TR/fingerprinting-guidance/) (W3C)
+- [Tracking Prevention in WebKit](https://webkit.org/tracking-prevention/) (webkit.org)
+- [Mozilla Anti tracking policy](https://wiki.mozilla.org/Security/Anti_tracking_policy) (mozilla.org)
+- [Cover Your Tracks](https://coveryourtracks.eff.org/) (eff.org)
