@@ -252,6 +252,6 @@ In these techniques, browsers identify patterns in which the user is actively in
 
 The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) enables a script to request [unpartitioned](#partitioned_storage) storage access, by calling the {{domxref("Document.requestStorageAccess()")}} API.
 
-This API requires the caller to have [transient activation](/en-US/docs/Web/Security/Defenses/User_activation#transient_activation). In the API's implementation, the browser may decide whether to grant access by asking the user, but may also apply its own rules, including indications that the third party is participating in federated login and any custom rules that grant or deny unpartitioned storage access.
+When a script requests access, the browser may decide whether to grant it by asking the user, but may also apply its own rules, including indications that the third party is participating in federated login and any custom rules that grant or deny unpartitioned storage access.
 
 ## See also
