@@ -79,10 +79,6 @@ You can compare the `now` callback parameter and the `expectedDisplayTime` metad
 
 This example shows how to use `requestVideoFrameCallback()` to draw the frames of a video onto a {{htmlelement("canvas")}} element at exactly the same frame rate as the video. It also logs the frame metadata to the screen for debugging purposes.
 
-The technique given in the section Description that helps determine whether your callback is a v-sync late can be used for fine analysis of your application but, en masse, this trick is prone to produce a garbled output when used to compute a frame-per-second parameter on the fly. In the example below we hide the video controls for the first time playback and record increments of 'now' and 'metadata.mediaTime', on each frame played. The parameter fps can be calculated manually from these increments, i.e., fps = ((metadata.presentedFrames - 1) / metadata.mediaTime). Video controls are made enabled after the 'ended' event is triggered and processed.
-
-In later playback runs you can pause playback and seek in the timeline to observe the metadata evolution. You can also select the video source from three options on the page. After re-connect, the timing data list is recorded in the first-time playback with this source.
-
 ```js
 const button = document.querySelector("button");
 const video = document.querySelector("video");
