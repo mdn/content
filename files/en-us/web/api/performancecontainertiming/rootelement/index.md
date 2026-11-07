@@ -3,10 +3,12 @@ title: "PerformanceContainerTiming: rootElement property"
 short-title: rootElement
 slug: Web/API/PerformanceContainerTiming/rootElement
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceContainerTiming.rootElement
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`rootElement`** read-only property of the {{domxref("PerformanceContainerTiming")}} interface returns the container root element.
 This is the {{domxref("HTMLElement")}} to which the [`containertiming`](/en-US/docs/Web/HTML/Reference/Global_attributes/containertiming) attribute was applied.
