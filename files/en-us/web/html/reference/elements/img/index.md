@@ -226,7 +226,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
     When the `<img>` element's `srcset` uses `x` descriptors, browsers also consider the URL in the `src` attribute (if present) as a candidate, and assign it a default descriptor of `1x`. On the other hand, if the `srcset` attribute uses width descriptors, `src` is not considered, and the `sizes` attribute is used instead.
 
-    The user agent selects any of the available sources at its discretion. This provides them with significant leeway to tailor their selection based on things like user preferences or {{glossary("bandwidth")}} conditions. See our [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images) tutorial for an example.
+    The browser selects a source using these steps:
+
+    1. Deduplicate candidates with the same pixel density, keeping the earliest. For `w` descriptors, the density is calculated using the source size from `sizes`.
+    2. Sort candidates by ascending pixel density.
+    3. Pick the first candidate whose density is greater than or equal to {{domxref("Window.devicePixelRatio")}} (which accounts for zoom), or the last one if all are lower.
+
+    The browser may pick a higher-density candidate if its image data is already available without a network request (for example, in the available images list, an in-memory cache, or a `data:` URL). See our [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images) tutorial for an example.
 
 - `width`
   - : The intrinsic width of the image in pixels. Must be an integer without a unit.
