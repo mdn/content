@@ -599,14 +599,14 @@ You can also [add the `codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/c
       <th scope="row">VP8</th>
       <td></td>
       <td></td>
-      <td>Yes</td>
+      <td></td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">VP9</th>
       <td></td>
       <td></td>
-      <td>Yes</td>
+      <td></td>
       <td></td>
     </tr>
   </tbody>
