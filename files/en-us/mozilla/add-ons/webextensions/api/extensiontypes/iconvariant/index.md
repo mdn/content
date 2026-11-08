@@ -15,7 +15,7 @@ Values of this type are objects. They contain the following properties:
 - `<size>` {{optional_inline}}
   - : One or more properties named for an icon size in pixels, such as `16` or `32`. The value is a relative path to an icon or, where the API accepts one, an `ImageData` object.
 - `any` {{optional_inline}}
-  - : A relative path or `ImageData` object for an icon to use at any size.
+  - : A relative path or `ImageData` object for an icon to use at any size, typically an SVG file.
 - `colorSchemes` {{optional_inline}}
   - : `Array` of `String`. The color schemes this group is for: `"light"` for icons that work on light backgrounds, `"dark"` for icons that work on dark backgrounds, or both. A group without `colorSchemes` is for both color schemes.
 

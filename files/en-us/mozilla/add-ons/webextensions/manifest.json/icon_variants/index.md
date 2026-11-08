@@ -55,7 +55,7 @@ The `icon_variants` key is an array of icon groups. Each icon group is an object
 - `<size>` {{optional_inline}}
   - : One or more properties named for an icon size in pixels, such as `"16"` or `"32"`. The value is the path of the image relative to the extension's root directory, as in [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons).
 - `any` {{optional_inline}}
-  - : The path of an image that scales to any size, typically an SVG file.
+  - : The path of an image to use at any icon size, typically an SVG file.
 - `color_schemes` {{optional_inline}}
   - : `Array` of `String`. The color schemes this group is for. Each entry is one of:
     - `"light"`: icons that work on light backgrounds.
