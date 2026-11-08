@@ -69,7 +69,7 @@ Firefox 160 is the current [Beta version of Firefox](https://www.firefox.com/en-
   You can then use a {{domxref("ReadableStreamBYOBReader")}} to read each datagram into a buffer that you supply and reuse, instead of receiving a new {{jsxref("Uint8Array")}} for every datagram.
   ([Firefox bug 2007755](https://bugzil.la/2007755)).
 - The {{domxref("WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams", "anticipatedConcurrentIncomingUnidirectionalStreams")}} and {{domxref("WebTransport.anticipatedConcurrentIncomingBidirectionalStreams","anticipatedConcurrentIncomingBidirectionalStreams")}} properties of the `WebTransport` interface are now supported, along with the corresponding `options` properties that can be used to set them in the {{domxref("WebTransport/WebTransport", "WebTransport()")}} constructor.
-  These represent the maximum number of incoming unidirectional and bidirectional streams that the application expects the server to have open at the same time, respectively.
+  These properties represent the maximum number of incoming unidirectional and bidirectional streams, respectively, that the application expects the server to have open at the same time.
   ([Firefox bug 2007825](https://bugzil.la/2007825)).
 
 <!-- #### DOM -->
