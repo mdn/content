@@ -76,7 +76,9 @@ Firefox 160 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Media, WebRTC, and Web Audio -->
 
-<!-- #### Removals -->
+#### Removals
+
+- The non-standard `MozScrolledAreaChanged` event is no longer fired to web content. It was fired at the document when the size of the page's scrollable area changed, and is now only available to the Firefox user interface. You can restore it for web content by setting the `layout.scrolled-area-changed.content.enabled` preference to `true`. ([Firefox bug 2079865](https://bugzil.la/2079865)).
 
 <!-- ### WebAssembly -->
 
