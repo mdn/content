@@ -12,6 +12,17 @@ The **`<animateTransform>`** [SVG](/en-US/docs/Web/SVG) element animates a trans
 
 {{svginfo}}
 
+## Attributes
+
+- {{ SVGAttr("by") }}
+- {{ SVGAttr("from") }}
+- {{ SVGAttr("to") }}
+- {{ SVGAttr("type") }}
+
+## DOM Interface
+
+This element implements the [`SVGAnimateTransformElement`](/en-US/docs/Web/API/SVGAnimateTransformElement) interface.
+
 ## Example
 
 ```html
@@ -34,17 +45,6 @@ The **`<animateTransform>`** [SVG](/en-US/docs/Web/SVG) element animates a trans
 ```
 
 {{ EmbedLiveSample('Example','120','120') }}
-
-## Attributes
-
-- {{ SVGAttr("by") }}
-- {{ SVGAttr("from") }}
-- {{ SVGAttr("to") }}
-- {{ SVGAttr("type") }}
-
-## DOM Interface
-
-This element implements the [`SVGAnimateTransformElement`](/en-US/docs/Web/API/SVGAnimateTransformElement) interface.
 
 ## Specifications
 
