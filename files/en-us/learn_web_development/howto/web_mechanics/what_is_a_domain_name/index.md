@@ -167,4 +167,4 @@ Okay, we talked a lot about processes and architecture. Time to move on.
 
 - If you want to get hands-on, it's a good time to start digging into design and explore [the anatomy of a web page](/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts).
 - Or read more about [Domain Names](https://en.wikipedia.org/wiki/Domain_name) on Wikipedia.
-- The [How DNS works](https://howdns.works/) tutorial has a fun and colorful explanation.
+- The [How DNS works](https://dnsimple.com/comics/how-dns-works/) tutorial has a fun and colorful explanation.

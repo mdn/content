@@ -3,10 +3,12 @@ title: "PerformanceContainerTiming: presentationTime property"
 short-title: presentationTime
 slug: Web/API/PerformanceContainerTiming/presentationTime
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceContainerTiming.presentationTime
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`presentationTime`** read-only property of the {{domxref("PerformanceContainerTiming")}} interface returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the container's newly painted content was actually drawn on the screen.
 

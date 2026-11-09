@@ -47,7 +47,7 @@ The HTML Sanitizer API provides XSS-safe and XSS-unsafe methods for injecting HT
 #### Difference between Safe and Unsafe methods
 
 All the methods take the HTML to be injected and an optional {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} as arguments.
-The sanitizer objects defines the HTML entities that will be filtered out of the input before it is injected.
+The sanitizer object defines the HTML entities that will be filtered out of the input before it is injected.
 The {{domxref('Element')}} methods are context aware, and will additionally drop any elements that the HTML specification does not allow in the target element.
 
 The safe methods always remove XSS-unsafe elements and attributes.

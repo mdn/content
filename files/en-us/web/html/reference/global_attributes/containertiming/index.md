@@ -3,9 +3,13 @@ title: "`containertiming` HTML global attribute"
 short-title: containertiming
 slug: Web/HTML/Reference/Global_attributes/containertiming
 page-type: html-attribute
+status:
+  - experimental
 browser-compat: html.global_attributes.containertiming
 sidebar: htmlsidebar
 ---
+
+{{SeeCompatTable}}
 
 The **`containertiming`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) marks an element as a _container root_, for which {{domxref("PerformanceContainerTiming")}} entries can be observed by {{domxref("PerformanceObserver")}} objects using the `"container"` type.
 

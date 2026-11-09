@@ -3,12 +3,10 @@ title: "SpeechRecognition: unspokenPunctuation property"
 short-title: unspokenPunctuation
 slug: Web/API/SpeechRecognition/unspokenPunctuation
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.SpeechRecognition.unspokenPunctuation
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`unspokenPunctuation`** property of the
 {{domxref("SpeechRecognition")}} interface specifies whether the speech recognition engine will infer and insert punctuation marks based on the user's natural speech patterns.

@@ -242,7 +242,7 @@ observer.observe({ type: "long-animation-frame", buffered: true });
 
 ## Comparing with the Long Tasks API
 
-The Long Animation Frames API was preceded by the [Long Tasks API](https://w3c.github.io/longtasks/) (see {{domxref("PerformanceLongTaskTiming")}}). Both the APIs have a similar purpose and usage — exposing information about [long tasks](/en-US/docs/Glossary/Long_task) that block the main thread for 50ms or more.
+The Long Animation Frames API was preceded by the [Long Tasks API](https://wicg.github.io/longtasks/) (see {{domxref("PerformanceLongTaskTiming")}}). Both the APIs have a similar purpose and usage — exposing information about [long tasks](/en-US/docs/Glossary/Long_task) that block the main thread for 50ms or more.
 
 Cutting down the number of long tasks that occur on your website is useful because long tasks can cause responsiveness issues. For example, if a user clicks a button while the main thread is dealing with a long task, the UI response to the click will be delayed until the long task is completed. Conventional wisdom is to break up long tasks into multiple smaller tasks so that important interactions can be handled in between.
 
