@@ -201,9 +201,9 @@ The `column-rule-inset-*` properties enable insetting column segment cap and jun
 
 The `column-rule-inset-cap-*` properties specify the space between the segment and the container edge or gap junction where no other gap decoration segments exist. Positive values make the segment smaller, while negative values make the segments longer. The properties accept `<inset-value>` values, which are either `<length-percentage>` values defining the space between the top or bottom of the column segment and the bottom or top of the row gutter or the top or bottom edge of the container, or the `overlap-join` keyword, which resolves to `0` for cap edges. If the segment ends at the container's edge, percentage values resolve to `0`. Otherwise, percentages are relative to the row gap size, plus spacing added by the {{cssxref("align-content")}} property.
 
-- {{cssxref("column-rule-inset-cap-end")}}: Defines the space between the end, or top, of the column rule segment and, depending on whether the segment starts at the top of the container or at an interior junction, either the start edge of the container or the bottom edge of the row gutter.
+- {{cssxref("column-rule-inset-cap-end")}}: Defines the space between the end, or top, of the column rule segment and, depending on whether the segment starts at the top of the container or at an interior junction, either the start edge of the container or the bottom edge of the row gutter, respectively.
 
-- {{cssxref("column-rule-inset-cap-start")}}: Defines the space between the start, or top, of the column rule segment and, depending on whether the segment starts at the top of the container or at an interior junction, either the start edge of the container or the bottom edge of the row gutter.
+- {{cssxref("column-rule-inset-cap-start")}}: Defines the space between the start, or top, of the column rule segment and, depending on whether the segment starts at the top of the container or at an interior junction, either the start edge of the container or the bottom edge of the row gutter, respectively.
 
 - {{cssxref("column-rule-inset-cap")}} shorthand: Specifies both the `column-rule-inset-cap-start` and `column-rule-inset-cap-end` as one or two `<inset-value>` values. If you specify only one value, both properties are set to that value. If you specify two values, the first sets `column-rule-inset-cap-start` and the second sets `column-rule-inset-cap-end`.
 
@@ -211,15 +211,15 @@ The `column-rule-inset-cap-*` properties specify the space between the segment a
 
 The `column-rule-inset-junction-*` properties specify the space between the segment and the edge of the row gutter at junctions with other rule segments. Positive values make the segment smaller, while negative values and the `overlap-join` keyword value make the segments longer. Percentage values are relative to the row gap size, plus spacing added by the {{cssxref("align-content")}} property.
 
-- {{cssxref("column-rule-inset-junction-end")}}: Defines the space between the end, or bottom, of the column rule segment and the top edge of the abutting row gutter.
+- {{cssxref("column-rule-inset-junction-end")}}: Defines the space between the end, or bottom, of the column rule segment and the top edge of the row gutter below the segment.
 
-- {{cssxref("column-rule-inset-junction-start")}}: Defines the space between the start, or top, of the column rule segment and the bottom edge of the abutting row gutter.
+- {{cssxref("column-rule-inset-junction-start")}}: Defines the space between the start, or top, of the column rule segment and the bottom edge of the row gutter above the segment.
 
 - {{cssxref("column-rule-inset-junction")}} shorthand: Specifies both the `column-rule-inset-junction-start` and `column-rule-inset-junction-end` properties as one or two values. If you specify only one value, both properties are set to that value. If you specify two values, the first sets `column-rule-inset-junction-start` and the second sets `column-rule-inset-junction-end`.
 
 #### Column cap and junction shorthand properties
 
-You can use the `column-rule-inset-*` properties to set cap and junction insets to the same value.
+You can use the `column-rule-inset-*` properties to set cap and junction insets to the same value, while the `column-rule-inset` shorthand can be used to set the edges to a independent values:
 
 - {{cssxref("column-rule-inset-end")}}: The single `<inset-value>` sets both the `column-rule-inset-cap-end` and `column-rule-inset-junction-end` to the same value, defining the bottom insets of all column segments.
 
@@ -229,13 +229,13 @@ You can use the `column-rule-inset-*` properties to set cap and junction insets 
 
 ### Row inset properties
 
-The `row-rule-inset-*` properties let you inset row segment cap and junction end edges, controlling the start or both. Whether the left or right is the start edge depends on the writing mode. In left-to-right languages, like English, the start is the left edge, and the end is the right edge.
+The `row-rule-inset-*` properties let you inset row segment edges. Whether the left or right is the start edge depends on the writing mode: in left-to-right languages, like English, the start is the left edge, and the end is the right edge.
 
 #### Row rule inset cap properties
 
-As with the `column-rule-inset-cap-*` properties, the `row-rule-inset-cap-*` properties specify the space between the segment cap edge and the container or gap junction where no other gap decoration segments exist. The `<length-percentage>` values define the space between the left or right of the segment and the right or left of the column gutter at interior junctions where no other gap decoration segment exists, or the left or right edge of the container. Percentages are relative to the size of the column gap, plus any additional spacing added by {{cssxref("justify-content")}} property. If the end of the segment is the edge of the container, percentages resolve to `0`. The `overlay-join` value resolves to `0`.
+As with the `column-rule-inset-cap-*` properties, the `row-rule-inset-cap-*` properties specify the space between the segment cap edge and the container or gap junction where no other segments exist. The `<length-percentage>` values define the space between the left or right of the segment and the right or left of the column gutter at interior junctions where no other gap decoration segment exists, or the left or right edge of the container. Percentages are relative to the size of the abutting column gap, plus any additional spacing added by {{cssxref("justify-content")}} property. If the end of the segment is the edge of the container, percentages resolve to `0`. The `overlay-join` value also resolves to `0`.
 
-- {{cssxref("row-rule-inset-cap-end")}}: Defines the space between the end of the row segment and the edge of the container or the edge of a column gap where no other gap decoration segment exists. Whether the `end` is the left or the right side of the segment depends on the writing mode.
+- {{cssxref("row-rule-inset-cap-end")}}: Defines the space between the end of the row segment and the edge of the container or the edge of a column gap where no other gap decoration segment exists; whether this is the left or the right edge of the segment depends on the writing mode.
 
 - {{cssxref("row-rule-inset-cap-start")}}: The same as `row-rule-inset-cap-start`, but for the start edge instead of the end edge of the segment.
 
@@ -243,21 +243,23 @@ As with the `column-rule-inset-cap-*` properties, the `row-rule-inset-cap-*` pro
 
 #### Row rule inset junction properties
 
-The `row-rule-inset-junction-*` properties specify the space between the segment and the edge of the column gutter at junctions with other rule segments. Positive values make the segment smaller, while negative values and the `overlap-join` keyword value make the segments longer. Percentage values are relative to the column gap size, plus spacing added by the {{cssxref("justify-content")}} property.
+The `row-rule-inset-junction-*` properties specify the space between the segment and the edge of the column gutter at junctions with other rule segments. Positive values make the segments smaller, while negative values and the `overlap-join` keyword value make the segments longer. Percentage values are relative to the column gap size, plus spacing added by the {{cssxref("justify-content")}} property.
 
 - {{cssxref("row-rule-inset-junction-end")}}: Defines the space between the end of the segment and the start of the column gap. Whether the `end` is the left or the right side of the segment depends on the writing mode.
 
 - {{cssxref("row-rule-inset-junction-start")}}: Defines the space between the start of the segment and the end of the column gap.
 
-- {{cssxref("row-rule-inset-junction")}} shorthand: One or two `<inset-value>` values setting the `row-rule-inset-junction-start` and the `row-rule-inset-junction-end` values. If you specify only one value, both properties are set to that value. If two values are specified, `row-rule-inset-junction-start` is set to the first value and `row-rule-inset-junction-end` is set to the second value.
+- {{cssxref("row-rule-inset-junction")}} shorthand: One or two `<inset-value>` values setting the `row-rule-inset-junction-start` and the `row-rule-inset-junction-end` values. If you specify only one value, both properties are set to that value. If two values are specified, the first specifies the `row-rule-inset-junction-start` and the second the `row-rule-inset-junction-end` value.
 
 #### Row cap and junction shorthand properties
 
-- {{cssxref("row-rule-inset-end")}}: The single `<inset-value>` sets both the `row-rule-inset-cap-end` and `row-rule-inset-junction-end` to the same value, defining the end insets of all column segments
+You can use the `row-rule-inset-*` properties to set cap and junction insets to the same value, while the `row-rule-inset` shorthand can be used to set row segment edges to a independent values:
 
-- {{cssxref("row-rule-inset-start")}}: The single `<inset-value>` sets both the `row-rule-inset-cap-start` and `row-rule-inset-junction-start` to the same value, defining the starting insets of all column segments
+- {{cssxref("row-rule-inset-end")}}: The single `<inset-value>` defines the end inset of all row segments, setting both the `row-rule-inset-cap-end` and `row-rule-inset-junction-end` to the same value.
 
-- {{cssxref("row-rule-inset")}} shorthand: Specifies the `row-rule-inset-cap-start`, `row-rule-inset-cap-end`, `row-rule-inset-junction-start`, and `row-rule-inset-junction-end` properties as one to four `<inset-value>` values. If you set the cap insets to different values from the junction insets, separate them with a slash (`/`). This property offers more control than the `row-rule-inset-end` and `row-rule-inset-start` shorthands, letting you set cap and junction edges to different values.
+- {{cssxref("row-rule-inset-start")}}: The single `<inset-value>` defines the start inset of all row segments, setting both the `row-rule-inset-cap-start` and `row-rule-inset-junction-start` to the same value.
+
+- {{cssxref("row-rule-inset")}} shorthand: Specifies the `row-rule-inset-cap-start`, `row-rule-inset-cap-end`, `row-rule-inset-junction-start`, and `row-rule-inset-junction-end` properties as one to four `<inset-value>` values. If you set the cap insets to different values from the junction insets, separate them with a slash (`/`). This property offers more control than the `row-rule-inset-end` and `row-rule-inset-start` shorthands, letting you set row cap and junction start and end edges to different values.
 
 ### Column and row shorthands
 
@@ -309,13 +311,13 @@ In this example, note how no rule segments are painted alongside the empty grid 
 
 {{EmbedLiveSample("visibility", "", "340")}}
 
-- {{cssxref("column-rule-visibility-items")}}: The keyword `all`, `around`, `between`, or `normal`. Sets decorations to be painted in all column-gap segments if at least one column area adjacent to the gap has an item, or only if both column areas adjacent to the gap have an item.
-- {{cssxref("row-rule-visibility-items")}}: The same vocabulary as `column-rule-visibility-items`. Sets decorations to be painted in all row-gap segments, only in a gap segment if at least one row area adjacent to the gap segment has an item, or only if both row areas adjacent to the gap segment have an item.
-- {{cssxref("rule-visibility-items")}}: The same vocabulary as `column-rule-visibility-items`. Sets `column-rule-visibility-items` and `row-rule-visibility-items` to the same value.
+- {{cssxref("column-rule-visibility-items")}}: Specifies whether the segments of column rules that are set to break should to be painted in all column gaps, in a column gap section if at least one column area adjacent to the gap has an item, or only if both column areas adjacent to the gap have an item. Valid values include the `all`, `around`, `between`, and `normal` keywords.
+- {{cssxref("row-rule-visibility-items")}}: The same as `column-rule-visibility-items`, but for row rule segments.
+- {{cssxref("rule-visibility-items")}}: Sets the `column-rule-visibility-items` and `row-rule-visibility-items` properties to the same value.
 
 ## Controlling rule overlap
 
-If row and column rules don't break, they overlap at junction intersections. We can control whether row rules are painted over column rules, or vice versa.
+If row and column rules don't break, they overlap at junction intersections. Broken rules with junction edges set to `overlap-join` also overlap. And, depending on the size of the gap, the size of the rule, and the value of the inset, negative insets may also cause rule segment junction edges to overlap. We can control whether row rules are painted over column rules, or vice versa, with the {{cssxref("rule-overlap")}} property.
 
 Expanding on the first example on this page, we've set the column rules to be painted over the row rules when they intersect.
 
@@ -335,7 +337,7 @@ Expanding on the first example on this page, we've set the column rules to be pa
 
 {{EmbedLiveSample("overlap", "", "210")}}
 
-- {{cssxref("rule-overlap")}}: The keyword `row-over-column` or `column-over-row`. Sets the paint order where row rules and column rules overlap.
+- {{cssxref("rule-overlap")}}: Sets the paint order where row rules and column rules overlap as either the keyword `row-over-column` or `column-over-row`.
 
 ## See also
 
