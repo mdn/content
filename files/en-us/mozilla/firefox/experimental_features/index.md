@@ -651,6 +651,20 @@ You can now set a {{domxref("ReadableStream")}} as a request body (for example, 
 
 ### Graphics: Canvas, WebGL, and WebGPU
 
+#### Canvas 2D color space
+
+The [`colorSpace`](/en-US/docs/Web/API/HTMLCanvasElement/getContext#colorspace) option of {{domxref("HTMLCanvasElement.getContext()")}} and {{domxref("OffscreenCanvas.getContext()")}} is supported for `2d` contexts, and {{domxref("CanvasRenderingContext2D.getContextAttributes()")}} returns it. Image data also has a color space: the {{domxref("ImageData.colorSpace")}} property returns it, and the `colorSpace` setting of the {{domxref("ImageData.ImageData", "ImageData()")}} constructor and the {{domxref("CanvasRenderingContext2D.createImageData()", "createImageData()")}} and {{domxref("CanvasRenderingContext2D.getImageData()", "getImageData()")}} methods sets it. The supported values are `"srgb"` and `"display-p3"`. Pixel data isn't converted between color spaces yet. ([Firefox bug 1841326](https://bugzil.la/1841326)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 160           | No                  |
+| Developer Edition | 160           | No                  |
+| Beta              | 160           | No                  |
+| Release           | 160           | No                  |
+
+- `gfx.canvas.colorspace.enabled`
+  - : Set to `true` to enable.
+
 #### WebGL: Draft extensions
 
 When this preference is enabled, any WebGL extensions currently in "draft" status which are being tested are enabled for use. Currently, there are no WebGL extensions being tested by Firefox.
