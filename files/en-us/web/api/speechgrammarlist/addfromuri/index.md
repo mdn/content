@@ -1,16 +1,16 @@
 ---
-title: "SpeechGrammarList: addFromURI() method"
-short-title: addFromURI()
-slug: Web/API/SpeechGrammarList/addFromURI
+title: "SpeechGrammarList: addFromUri() method"
+short-title: addFromUri()
+slug: Web/API/SpeechGrammarList/addFromUri
 page-type: web-api-instance-method
 status:
   - deprecated
-browser-compat: api.SpeechGrammarList.addFromURI
+browser-compat: api.SpeechGrammarList.addFromUri
 ---
 
 {{APIRef("Web Speech API")}}
 
-The **`addFromURI()`** method of the
+The **`addFromUri()`** method of the
 {{domxref("SpeechGrammarList")}} interface takes a grammar present at a specific URI and
 adds it to the `SpeechGrammarList` as a new {{domxref("SpeechGrammar")}}
 object.
@@ -21,8 +21,8 @@ specified by URI.
 ## Syntax
 
 ```js-nolint
-addFromURI(src)
-addFromURI(src, weight)
+addFromUri(src)
+addFromUri(src, weight)
 ```
 
 ### Parameters
