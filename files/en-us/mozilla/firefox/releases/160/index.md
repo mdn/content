@@ -108,6 +108,10 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The `blocking="render"` attribute and value is now supported for the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} HTML elements. This allows for rendering to be blocked until the element's stylesheet has loaded or its script has run, including for elements that don't block rendering by default, such as scripts and stylesheets added with JavaScript. ([Firefox bug 1751383](https://bugzil.la/1751383)).
 
+- **Speculation rules: `Speculation-Rules` header**: `dom.speculation_rules.enabled`
+
+  The {{httpheader("Speculation-Rules")}} HTTP response header is now supported in Nightly. It lists the URLs of external files containing [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API), as an alternative to an inline [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules) element. The header applies to top-level documents only, and each file must be served with the `application/speculationrules+json` MIME type. ([Firefox bug 2020709](https://bugzil.la/2020709)).
+
 - **`CSSNumericValue` arithmetic methods**: `layout.css.typed-om.enabled`
 
   The {{domxref("CSSNumericValue.add()", "add()")}}, {{domxref("CSSNumericValue.sub()", "sub()")}}, {{domxref("CSSNumericValue.mul()", "mul()")}}, and {{domxref("CSSNumericValue.div()", "div()")}} methods of the {{domxref("CSSNumericValue")}} interface in the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) are now supported in Nightly.

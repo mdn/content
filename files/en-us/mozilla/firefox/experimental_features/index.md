@@ -121,6 +121,20 @@ Firefox 158 added support for [`moderate`](/en-US/docs/Web/HTML/Reference/Elemen
 - `dom.speculation_rules.enabled`
   - : Set to `true` to enable.
 
+#### Speculation-Rules header
+
+Firefox 160 added support for the {{httpheader("Speculation-Rules")}} HTTP response header, which lists the URLs of external files containing speculation rules, as an alternative to an inline `<script type="speculationrules">` element. The header applies to top-level documents only, and each file must be served with the `application/speculationrules+json` MIME type. ([Firefox bug 2020709](https://bugzil.la/2020709)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 160           | Yes                 |
+| Developer Edition | 160           | No                  |
+| Beta              | 160           | No                  |
+| Release           | 160           | No                  |
+
+- `dom.speculation_rules.enabled`
+  - : Set to `true` to enable.
+
 ### Render blocking
 
 The `blocking="render"` attribute and value is now supported for the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} HTML elements. This allows for rendering to be blocked until the element's stylesheet has loaded or its script has run, including for elements that don't block rendering by default, such as scripts and stylesheets added with JavaScript. ([Firefox bug 1751383](https://bugzil.la/1751383)).
