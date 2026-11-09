@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`param()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is used to set link parameters. This can be done using the {{cssxref("link-parameters")}} CSS function, in the fragment URL of an external resource, or in the [`<url-modifier>`](/en-US/docs/Web/CSS/Reference/Values/url_function#url-modifier) of the `url()` CSS function.
+The **`param()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is used to set link parameters. It can be used in the {{cssxref("link-parameters")}} CSS property, in the URL fragment of an external resource, or in the [`<url-modifier>`](/en-US/docs/Web/CSS/Reference/Values/url_function#url-modifier) of the `url()` CSS function.
 
 ## Syntax
 
@@ -28,14 +28,14 @@ param(--color3, green);
 ## Values
 
 - [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident)
-  - : A `<dashed-ident>` is a user defined variable that is used as an identifier in the {{cssxref("env")}} CSS function to update the value.
+  - : A `<dashed-ident>` is a user-defined variable that is used as an identifier in the {{cssxref("env")}} CSS function to update the value.
 
 - `<declaration_value>` {{optional_inline}}
   - : A `<declaration_value>` is the value of the attribute being updated. If the `<declaration-value>` is omitted, it represents an empty value.
 
-## Formal definition
+## Formal syntax
 
-{{CSSInfo}}
+{{CSSSyntax}}
 
 ## Examples
 
@@ -131,7 +131,7 @@ In this example the SVG attributes are updated by passing the `param()` function
 .foo {
   background-image: url(
     "square.svg"
-    param(--color1, slategrey),
+    param(--color1, slategrey)
     param(--color2, lightgrey)
   );
 }

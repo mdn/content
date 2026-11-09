@@ -157,7 +157,7 @@ if (crossOriginIsolated) {
 
 ### Avoiding COEP blockage with CORS
 
-If you enable COEP using `require-corp` and want to embed a cross origin resource that supports [CORS](/en-US/docs/Web/HTTP/Guides/CORS), you will need to explicitly specify that it is requested in `cors` mode.
+If you enable COEP using `require-corp` and want to embed a cross-origin resource that supports [CORS](/en-US/docs/Web/HTTP/Guides/CORS), you will need to explicitly specify that it is requested in `cors` mode.
 
 For example, to fetch an image declared in HTML from a third-party site that supports CORS, you can use the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute so that it is requested in `cors` mode:
 

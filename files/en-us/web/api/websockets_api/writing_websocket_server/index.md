@@ -8,7 +8,10 @@ page-type: guide
 
 If you would like to use the WebSocket API, it is useful if you have a server. In this article I will show you how to write one in C#. You can do it in any server-side language, but to keep things simple and more understandable, I chose Microsoft's language.
 
-This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455), so it will only handle connections from Chrome version 16, Firefox 11, IE 10 and over.
+This learning example demonstrates the handshake and basic message framing defined by [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455).
+
+> [!WARNING]
+> This is not a complete WebSocket implementation: for example, its receive loop does not buffer partial frames or handle control frames and fragmented messages. Use a WebSocket library for a production server.
 
 ## First steps
 
@@ -219,6 +222,48 @@ for (int i = 0; i < encoded.Length; i++) {
 }
 ```
 
+## Sending messages from the server
+
+After the handshake, either side can send messages without waiting for a message from the other side. For example, the server can push a notification when a file changes or an administrator enters a message in its terminal.
+
+Sending plain UTF-8 bytes is not enough: the message needs a WebSocket frame. The following method sends a text message in one frame. It sets the FIN bit and text opcode, writes the UTF-8 byte length (which may differ from the string length), then appends the payload. Extended lengths use network byte order, with the most significant byte first. Unlike client frames, server frames must not be masked.
+
+Add this method to the `Server` class:
+
+```cs
+static void SendText(NetworkStream stream, string message) {
+    byte[] payload = Encoding.UTF8.GetBytes(message);
+    int headerLength = payload.Length <= 125 ? 2 : payload.Length <= 65535 ? 4 : 10;
+    byte[] frame = new byte[headerLength + payload.Length];
+    frame[0] = 0x81; // FIN = 1, opcode = 1 (text)
+
+    // Server-to-client frames are not masked.
+    if (headerLength == 2) {
+        frame[1] = (byte)payload.Length;
+    } else if (headerLength == 4) {
+        frame[1] = 126;
+        frame[2] = (byte)(payload.Length >> 8);
+        frame[3] = (byte)(payload.Length & 0xff);
+    } else {
+        frame[1] = 127;
+        ulong length = (ulong)payload.Length;
+        for (int i = 0; i < 8; i++) {
+            frame[2 + i] = (byte)((length >> (8 * (7 - i))) & 0xff);
+        }
+    }
+
+    Array.Copy(payload, 0, frame, headerLength, payload.Length);
+    // Keep frames intact if multiple server tasks use this helper.
+    lock (stream) {
+        stream.Write(frame, 0, frame.Length);
+    }
+}
+```
+
+In the complete example below, a background task reads lines from the server's terminal and calls `SendText()`. Start this task after writing the handshake response. This lets the receive loop continue independently of terminal input. The helper serializes writes; the receive loop may read from the `NetworkStream` at the same time.
+
+To try it, start the server, open `client.html`, then type a message in the server's terminal and press Enter. The browser displays the message even if you have not clicked its send button. You can also send messages from the browser to the server using the text area.
+
 ## Put together
 
 ### ws-server.cs
@@ -229,12 +274,42 @@ for (int i = 0; i < encoded.Length; i++) {
 // ws-server.exe
 
 using System;
+using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 class Server {
+    static void SendText(NetworkStream stream, string message) {
+        byte[] payload = Encoding.UTF8.GetBytes(message);
+        int headerLength = payload.Length <= 125 ? 2 : payload.Length <= 65535 ? 4 : 10;
+        byte[] frame = new byte[headerLength + payload.Length];
+        frame[0] = 0x81; // FIN = 1, opcode = 1 (text)
+
+        // Server-to-client frames are not masked.
+        if (headerLength == 2) {
+            frame[1] = (byte)payload.Length;
+        } else if (headerLength == 4) {
+            frame[1] = 126;
+            frame[2] = (byte)(payload.Length >> 8);
+            frame[3] = (byte)(payload.Length & 0xff);
+        } else {
+            frame[1] = 127;
+            ulong length = (ulong)payload.Length;
+            for (int i = 0; i < 8; i++) {
+                frame[2 + i] = (byte)((length >> (8 * (7 - i))) & 0xff);
+            }
+        }
+
+        Array.Copy(payload, 0, frame, headerLength, payload.Length);
+        // Keep frames intact if multiple server tasks use this helper.
+        lock (stream) {
+            stream.Write(frame, 0, frame.Length);
+        }
+    }
+
     public static void Main() {
         string ip = "127.0.0.1";
         int port = 80;
@@ -277,6 +352,21 @@ class Server {
                     "Sec-WebSocket-Accept: " + swkAndSaltSha1Base64 + "\r\n\r\n");
 
                 stream.Write(response, 0, response.Length);
+
+                // Terminal input can send messages without any client request.
+                Task.Run(() => {
+                    Console.WriteLine("Type a message and press Enter to send it to the browser.");
+                    try {
+                        string message;
+                        while ((message = Console.ReadLine()) != null) {
+                            SendText(stream, message);
+                        }
+                    } catch (IOException ex) {
+                        Console.WriteLine("Could not send the message: {0}", ex.Message);
+                    } catch (ObjectDisposedException) {
+                        Console.WriteLine("The connection is closed.");
+                    }
+                });
             } else {
                 bool fin = (bytes[0] & 0b10000000) != 0,
                     mask = (bytes[1] & 0b10000000) != 0; // must be true, "All messages from the client to the server have this bit set"
@@ -349,10 +439,10 @@ textarea {
 #output > p {
   overflow-wrap: break-word;
 }
-#output span {
+#output .received {
   color: blue;
 }
-#output span.error {
+#output .error {
   color: red;
 }
 ```
@@ -360,7 +450,6 @@ textarea {
 ### client.js
 
 ```js
-// http://www.websocket.org/echo.html
 const button = document.querySelector("button");
 const output = document.querySelector("#output");
 const textarea = document.querySelector("textarea");
@@ -371,7 +460,6 @@ button.addEventListener("click", onClickButton);
 
 websocket.onopen = (e) => {
   writeToScreen("CONNECTED");
-  doSend("WebSocket rocks");
 };
 
 websocket.onclose = (e) => {
@@ -379,11 +467,14 @@ websocket.onclose = (e) => {
 };
 
 websocket.onmessage = (e) => {
-  writeToScreen(`<span>RESPONSE: ${e.data}</span>`);
+  writeToScreen(`RECEIVED: ${e.data}`, "received");
 };
 
-websocket.onerror = (e) => {
-  writeToScreen(`<span class="error">ERROR:</span> ${e.data}`);
+websocket.onerror = () => {
+  writeToScreen(
+    "A WebSocket error occurred. Check the browser console.",
+    "error",
+  );
 };
 
 function doSend(message) {
@@ -391,8 +482,11 @@ function doSend(message) {
   websocket.send(message);
 }
 
-function writeToScreen(message) {
-  output.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
+function writeToScreen(message, className = "") {
+  const paragraph = document.createElement("p");
+  paragraph.textContent = message;
+  paragraph.className = className;
+  output.prepend(paragraph);
 }
 
 function onClickButton() {

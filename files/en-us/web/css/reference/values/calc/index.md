@@ -102,7 +102,7 @@ When an {{cssxref("&lt;integer&gt;")}} is expected, the `calc()` expression can 
 
 ### Input considerations
 
-- `calc()` cannot perform calculations on [intrinsic size values](/en-US/docs/Glossary/Intrinsic_Size) such as {{cssxref("width#auto", "auto"}} and {{cssxref("fit-content")}}. Use the {{cssxref("calc-size()")}} function instead.
+- `calc()` cannot perform calculations on [intrinsic size values](/en-US/docs/Glossary/Intrinsic_Size) such as {{cssxref("width#auto", "auto")}} and {{cssxref("fit-content")}}. Use the {{cssxref("calc-size()")}} function instead.
 - The `*` and `/` operators do not require whitespace, but adding it for consistency is recommended.
 - It is permitted to nest `calc()` functions, in which case, the inner ones are treated as simple parentheses.
 - Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables _may_ be treated as if `auto` is specified.
@@ -189,15 +189,13 @@ input {
 }
 ```
 
-Here, the form itself is established to use 1/6 of the available window width. Then, to ensure that input fields retain an appropriate size, we use `calc()` again to establish that they should be the width of their container minus 1em. Then, the following HTML makes use of this CSS:
+Here, the container is established to use 1/6 of the available window width. Then, to ensure that input fields retain an appropriate size, we use `calc()` again to establish that they should be the width of their container minus 1em. Then, the following HTML makes use of this CSS:
 
 ```html
-<form>
-  <div id="form-box">
-    <label for="misc">Type something:</label>
-    <input type="text" id="misc" name="misc" />
-  </div>
-</form>
+<div id="form-box">
+  <label for="misc">Type something:</label>
+  <input type="text" id="misc" name="misc" />
+</div>
 ```
 
 {{EmbedLiveSample('Automatically_sizing_form_fields_to_fit_their_container', '700', '80')}}

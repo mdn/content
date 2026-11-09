@@ -33,7 +33,7 @@ When set to the `null` value, that `null` value is converted to the empty string
   - : Thrown if an attempt was made to set `outerHTML` on an element which is a direct child of a {{domxref("Document")}}, such as {{domxref("Document.documentElement")}}.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if an attempt was made to set `outerHTML` using an XML input which is not well-formed.
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if the property is set to a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
 
 ## Description
@@ -70,7 +70,7 @@ console.log(anchor.outerHTML); // output: "<a href='https://developer.mozilla.or
 ```
 
 Some browsers also serialize the `<` and `>` characters as `&lt;` and `&gt;` when they appear in attribute values (see [Browser compatibility](#browser_compatibility)).
-This is to prevent a potential security vulnerability ([mutation XSS](https://www.securitum.com/mutation-xss-via-mathml-mutation-dompurify-2-0-17-bypass.html)) in which an attacker can craft input that bypasses a [sanitization function](/en-US/docs/Web/Security/Attacks/XSS#sanitization), enabling a cross-site scripting (XSS) attack.
+This is to prevent a potential security vulnerability ([mutation XSS](https://securitum.com/mutation-xss-via-mathml-mutation-dompurify-2-0-17-bypass.html)) in which an attacker can craft input that bypasses a [sanitization function](/en-US/docs/Web/Security/Attacks/XSS#sanitization), enabling a cross-site scripting (XSS) attack.
 
 ### Shadow DOM considerations
 

@@ -59,7 +59,7 @@ A new {{domxref("TreeWalker")}} object.
 
 ### Using whatToShow
 
-This example uses `whatToShow` to transform text contents into upper case. Note that the text nodes of the descendants of the `#root` element are also traversed despite of the fact that they are not child nodes of the `#root` element.
+This example uses `whatToShow` to transform text contents into upper case. Note that the text nodes of the descendants of the `#root` element are also traversed despite the fact that they are not child nodes of the `#root` element.
 
 #### HTML
 

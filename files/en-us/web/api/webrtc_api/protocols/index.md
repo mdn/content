@@ -51,7 +51,7 @@ SDP consists of one or more lines of UTF-8 text, each beginning with a one-chara
 To learn more about SDP, see the following useful resources:
 
 - Specification: {{RFC(8866, "SDP: Session Description Protocol")}}
-- [IANA registry of SDP parameters](https://www.iana.org/assignments/sip-parameters/sip-parameters.xhtml)
+- [IANA registry of SDP parameters](https://www.iana.org/assignments/sip-parameters)
 
 ## Multi-party video conferencing
 

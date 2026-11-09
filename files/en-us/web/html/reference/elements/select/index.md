@@ -63,7 +63,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     The placeholder label option is the text shown in the box before the user makes a choice, like the "--Please choose an option--" in the [Try it](#try_it) demo above. Semantically, it is considered equivalent to the [`placeholder`](/en-US/docs/Web/HTML/Reference/Attributes/placeholder) attribute and is not considered an actual option. It is defined as the first option in the options list which is a direct child of the `<select>` (not inside an `<optgroup>`) and has an empty string as its value. It is only relevant when the `size` is `1` and `multiple` is not specified; in all other cases, such an `<option>` is just a regular option due to the way the `<select>` is rendered.
 
 - [`size`](/en-US/docs/Web/HTML/Reference/Attributes/size)
-  - : This attribute represents the number of options to show at once, and must be a positive integer. If the value is `1`, browsers will render a drop-down list. If the value is greater than `1`, browsers will render a scrolling list box that has the specified number of rows visible. If the attribute is not specified, the default value is `1`. If the `multiple` attribute is specified, the default value is `4`. However, due to backwards compatibility, the {{domxref("HTMLSelectElement.size","size")}} property will always return `0` as the default value.
+  - : Specifies the number of options to display in the closed state as a positive integer. If the attribute is not specified, the default value is `1`, unless the `multiple` attribute is specified, in which case the default value is `4`. If the value is greater than `1` or the `multiple` attribute is present, browsers render a scrolling list box that has the specified number of rows visible; otherwise the options render as a drop-down list. For backwards compatibility, the {{domxref("HTMLSelectElement.size","size")}} property always returns `0` as the default value.
 
 ## Usage notes
 
@@ -91,14 +91,36 @@ To group options under a heading, use an {{HTMLElement("optgroup")}}; an {{HTMLE
 
 ### Selecting multiple options
 
+A `<select>` element with the [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple) attribute lets the user choose zero or more options. How the control is rendered depends on the [`size`](#size) attribute:
+
+- If the `multiple` attribute is set, browsers show a scrolling list box, unless the `size` is set to `1`. When `size` is omitted, the list box is four options tall, even if there are fewer options.
+- If `size` is `1`, supporting browsers display a drop-down that lets the user select more than one option when the control is active. If exactly one option is selected, the selected option is displayed, otherwise, the control displays the count of its selected options as a single-line list box. Browsers that don't support these features display a multiple option menu list within a control that is the height of a single-line box.
+
+When using the `multiple` attribute, always inform users that more than one option can be selected.
+
+The following example uses `<select multiple size="1">` to create a drop-down that allows multiple selections:
+
+```html
+<label for="flavors">Choose one or more ice cream flavors:</label>
+<select id="flavors" name="flavors" multiple size="1">
+  <option value="chocolate">Chocolate</option>
+  <option value="strawberry">Strawberry</option>
+  <option value="vanilla">Vanilla</option>
+</select>
+```
+
+{{EmbedLiveSample("Selecting_multiple_options", "", "100")}}
+
+#### Selecting options in a list box
+
 On a desktop computer, there are a number of ways to select multiple options in a `<select>` element with a `multiple` attribute and a `size` attribute greater than `1`.
 
-Mouse users can hold the <kbd>Ctrl</kbd>, <kbd>Command</kbd>, or <kbd>Shift</kbd> keys (depending on what makes sense for your operating system) and then click multiple options to select/deselect them.
+Mouse users can hold the <kbd>Ctrl</kbd> (<kbd>Command</kbd> on macOS) or <kbd>Shift</kbd> key (depending on what makes sense for your operating system) and then click multiple options to select/deselect them.
 
-> [!WARNING]
-> The mechanism for selecting multiple non-contiguous items via the keyboard described below currently only seems to work in Firefox.
+> [!NOTE]
+> The keyboard mechanisms described below are not standardized and depend on the browser and operating system.
 >
-> On macOS, the <kbd>Ctrl</kbd> + <kbd>Up</kbd> and <kbd>Ctrl</kbd> + <kbd>Down</kbd> shortcuts conflict with the OS default shortcuts for _Mission Control_ and _Application windows_, so you'll have to turn these off before it will work.
+> For example, Firefox on macOS additionally supports using <kbd>Ctrl</kbd>, while Safari on macOS does not support using <kbd>Space</kbd> for non-contiguous selection.
 
 Keyboard users can select multiple contiguous items by:
 
@@ -109,7 +131,7 @@ Keyboard users can select multiple contiguous items by:
 Keyboard users can select multiple non-contiguous items by:
 
 - Focusing on the `<select>` element (e.g., using <kbd>Tab</kbd>).
-- Holding down the <kbd>Ctrl</kbd> key then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to change the "focused" select option, i.e., the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
+- Holding down the <kbd>Ctrl</kbd> key (<kbd>Command</kbd> on macOS) then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to change the "focused" select option, i.e., the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
 - Pressing <kbd>Space</kbd> to select/deselect "focused" select options.
 
 ## Styling with CSS
@@ -137,6 +159,8 @@ For more information on legacy `<select>` styling, see:
 ## Accessibility
 
 The `<hr>` within a `<select>` should be considered purely decorative, as they are currently not exposed within the accessibility tree and therefore not exposed to assistive technologies.
+
+Setting `size="1"` on a multiple select (i.e., `<select multiple size="1">`) renders a drop-down that lets users select multiple options. Some browsers don't expand the option list when the control is active, displaying multiple options in a menu list the height of a single-line box. This harms usability. When including a multiple-select, inform users they can select more than one option, even when multiple options are displayed.
 
 ## Examples
 
@@ -271,7 +295,7 @@ The following example is more complex, showing off more features you can use on 
       <th scope="row">Permitted content</th>
       <td>
         <ul>
-          <li>{{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, or {{HTMLElement("hr")}} elements, optionally preceded by a {{htmlelement("button")}} element with a nested {{htmlelement("selectedcontent")}} element if a drop down box.</li>
+          <li>{{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, or {{HTMLElement("hr")}} elements, optionally preceded by a {{htmlelement("button")}} element with a nested {{htmlelement("selectedcontent")}} element if a dropdown box.</li>
           <li>{{htmlelement("div")}}, {{htmlelement("script")}}, {{htmlelement("template")}}, and {{htmlelement("noscript")}} elements.</li>
         </ul>
       </td>

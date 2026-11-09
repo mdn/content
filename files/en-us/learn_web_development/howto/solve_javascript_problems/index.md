@@ -12,7 +12,7 @@ The following links point to solutions to common problems you may encounter when
 
 ### Correct spelling and casing
 
-If your code doesn't work and/or the browser complains that something is undefined, check that you've spelt all your variable names, function names, etc. correctly.
+If your code doesn't work and/or the browser complains that something is undefined, check that you've spelled all your variable names, function names, etc. correctly.
 
 Some common built-in browser functions that cause problems are:
 

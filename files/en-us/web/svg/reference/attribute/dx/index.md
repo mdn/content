@@ -107,7 +107,7 @@ For {{SVGElement('feOffset')}}, `dx` defines the x offset of the filter input gr
 
 For {{SVGElement('text')}}, if it contains a single value, `dx` defines a shift along the x-axis for all glyphs.
 
-If there are multiple values, `dx` defines a shift along the x-axis for each individual glyph relative to the preceding glyph. If there are less values than glyphs, the remaining glyphs use a value of `0`. If there are more values than glyphs, extra values are ignored.
+If there are multiple values, `dx` defines a shift along the x-axis for each individual glyph relative to the preceding glyph. If there are fewer values than glyphs, the remaining glyphs use a value of `0`. If there are more values than glyphs, extra values are ignored.
 
 <table class="properties">
   <tbody>
@@ -181,7 +181,7 @@ line {
 
 For {{SVGElement('tspan')}}, if it contains a single value, `dx` defines a shift along the x-axis for all alternate glyph.
 
-If there are multiple values, `dx` defines a shift along the x-axis for each individual glyph relative to the preceding glyph. If there are less values than glyphs, the remaining glyphs use a value of `0`. If there are more values than glyphs, extra values are ignored.
+If there are multiple values, `dx` defines a shift along the x-axis for each individual glyph relative to the preceding glyph. If there are fewer values than glyphs, the remaining glyphs use a value of `0`. If there are more values than glyphs, extra values are ignored.
 
 <table class="properties">
   <tbody>

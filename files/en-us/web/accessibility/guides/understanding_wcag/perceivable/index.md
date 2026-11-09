@@ -269,9 +269,9 @@ This guideline refers to the ability of content to be consumed by users in multi
         <ul>
           <li>
             "Click the round button to continue"<br />The button should be
-            clearly labelled so that it is obvious that it is the button you
+            clearly labeled so that it is obvious that it is the button you
             need to press. If there are multiple buttons, make sure they are all
-            clearly labelled to distinguish their function.
+            clearly labeled to distinguish their function.
           </li>
           <li>
             "Listen to the audio instructions for guidance"<br />This is

@@ -14,11 +14,9 @@ to fill the stream's internal queue.
 
 ## Value
 
-An integer. Note that this can be negative if the queue is over-full.
+A number, or `null`.
 
-The value will be `null` if the stream cannot be successfully written to
-(due to either being errored, or having an abort queued up), and zero if the stream is
-closed.
+The number can be negative if the queue is over-full. When a custom queuing strategy is used, its chunk sizes can cause the number to have a fractional component. The value is `null` if the stream is erroring or errored, and `0` if it is closed.
 
 ### Exceptions
 

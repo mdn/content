@@ -9,7 +9,7 @@ status:
 browser-compat: api.Document.requestStorageAccessFor
 ---
 
-{{APIRef("Storage Access API")}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("Storage Access API")}}{{non-standard_header}}
 
 The **`requestStorageAccessFor()`** method of the {{domxref("Document")}} interface allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](https://privacysandbox.google.com/cookies/related-website-sets-integration). It returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
 
@@ -47,7 +47,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-pa
     - The embedding {{htmlelement("iframe")}} is sandboxed, and the `allow-storage-access-by-user-activation` token is not set.
     - Usage is blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
     - Usage is denied by the user agent's permission request to use the API.
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if `requestedOrigin` is not a valid URL.
 
 ## Description

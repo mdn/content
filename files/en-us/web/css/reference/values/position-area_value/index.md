@@ -75,7 +75,7 @@ position-area: self-x-start span-all;
 position-area: top; /* equiv: top span-all */
 position-area: inline-start; /* equiv: inline-start span-all */
 position-area: center; /* equiv: center center */
-position-area: span-all; /* equiv: center center */
+position-area: span-all; /* equiv: span-all span-all */
 position-area: start; /* equiv: start start */
 position-area: end; /* equiv: end end */
 ```
@@ -132,8 +132,11 @@ If only a single physical keyword is specified in the `position-area` value, the
 - `left`, `right`, `top`, or `bottom`
   - : The other value defaults to [`span-all`](#span-all_2), causing the element to span all three tiles of the column or row it was initially placed in. For example, `left` is equivalent to `left span-all`.
 
-- `center`, `span-left`, `span-right`, `span-top`, or `span-bottom`
-  - : The other value defaults to `center`. For example, `span-left` is equivalent to `center span-left` and `center` is equivalent to `center center`.
+- `span-left`, `span-right`, `span-top`, or `span-bottom`
+  - : The other value defaults to [`span-all`](#span-all_2). For example, `span-left` is equivalent to `span-left span-all`.
+
+- `center` or `span-all`
+  - : The other value defaults to the same as the first value. For example, `center` is equivalent to `center center` and `span-all` is equivalent to `span-all span-all`.
 
 ## Logical grid keywords
 
@@ -231,13 +234,13 @@ If only a single logical `<position-area>` keyword is specified, the other value
   - : The other value defaults to the same as the first value, selecting the grid cell at the start row and column, or the end row and column.
 
 - `span-start`, `span-self-start`, `span-end`, `span-self-end`
-  - : The other value defaults to `center`. For example, `span-start` is equivalent to `span-start center`.
+  - : The other value defaults to the same as the first value. For example, `span-start` is equivalent to `span-start span-start`.
 
 - `block-start`, `block-end`, `inline-start`, `inline-end`
   - : The other value defaults to [`span-all`](#span-all_2), spanning all three tiles of the column or row set. For example, `block-start` is equivalent to `block-start span-all`.
 
 - `span-block-start`, `span-block-end`, `span-inline-start`, `span-inline-end`
-  - : The other value defaults to `center`. For example, `span-inline-start` is equivalent to `span-inline-start center`.
+  - : The other value defaults to [`span-all`](#span-all_2). For example, `span-inline-start` is equivalent to `span-inline-start span-all`.
 
 ## Coordinate grid keywords
 
@@ -315,7 +318,7 @@ If only a single coordinate grid `<position-area>` keyword is specified, the oth
   - : The other value defaults to [`span-all`](#span-all_2), selecting the grid tiles spanning all three tiles of the column or row it was initially placed in. For example, `x-start` is equivalent to `x-start span-all`.
 
 - `span-x-start`, `span-x-end`, `span-y-start`, `span-y-end`, `span-self-x-start`, `span-self-x-end`, `span-self-y-end`, or `span-self-y-start`
-  - : The other value defaults to `center`. For example, `span-start` is equivalent to `span-start center`.
+  - : The other value defaults to [`span-all`](#span-all_2). For example, `span-x-start` is equivalent to `span-x-start span-all`.
 
 ## `span-all`
 

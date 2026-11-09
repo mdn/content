@@ -67,7 +67,7 @@ You'll solve this challenge on your local development environment; ideally, you'
            <ul>
              <li>Emotional resilience</li>
              <li>Critical thinking</li>
-             <li>Judgement</li>
+             <li>Judgment</li>
              <li>Assertion</li>
              <li>Focus and resolve</li>
            </ul>

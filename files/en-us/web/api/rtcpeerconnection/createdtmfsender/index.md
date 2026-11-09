@@ -9,7 +9,7 @@ status:
 browser-compat: api.RTCPeerConnection.createDTMFSender
 ---
 
-{{APIRef("WebRTC")}}{{Deprecated_Header}}{{non-standard_header}}
+{{APIRef("WebRTC")}}{{non-standard_header}}
 
 The **`createDTMFSender()`** method of the {{domxref("RTCPeerConnection")}} interface creates a new {{domxref("RTCDTMFSender")}} object associated with the specified {{domxref("MediaStreamTrack")}}, which can be used to send DTMF tones over the connection.
 
@@ -32,25 +32,31 @@ A new {{domxref("RTCDTMFSender")}} object.
 
 ## Examples
 
+### Using createDTMFSender()
+
 This example creates a new DTMF sender associated with the specified track.
 
 ```js
-navigator.getUserMedia({ audio: true }, (stream) => {
+async function getDtmfSender() {
+  const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
   const pc = new RTCPeerConnection();
-  const track = stream.getAudioTracks()[0];
-  const dtmfSender = pc.createDTMFSender(track);
-});
+  const [track] = stream.getAudioTracks();
+  return pc.createDTMFSender(track);
+}
 ```
 
-This could be rewritten using the {{domxref("RTCRtpSender.dtmf")}} property:
+### Using RTCRtpSender.dtmf instead
+
+The previous example can be rewritten using the {{domxref("RTCRtpSender.dtmf")}} property of the sender returned by {{domxref("RTCPeerConnection.addTrack()")}}:
 
 ```js
-navigator.getUserMedia({ audio: true }, (stream) => {
+async function getDtmfSender() {
+  const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
   const pc = new RTCPeerConnection();
-  const track = stream.getAudioTracks()[0];
+  const [track] = stream.getAudioTracks();
   const sender = pc.addTrack(track, stream);
-  const dtmfSender = sender.dtmf;
-});
+  return sender.dtmf;
+}
 ```
 
 ## Specifications

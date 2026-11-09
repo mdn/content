@@ -3,13 +3,9 @@ title: "`font-width` CSS property"
 short-title: font-width
 slug: Web/CSS/Reference/Properties/font-width
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.font-width
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 > [!NOTE]
 > The `font-width` property is the modern replacement for {{cssxref("font-stretch")}}, which is a legacy alias. While `font-width` is the specification's preferred name, `font-stretch` currently has broader browser support. Check the [fallback example](#providing_a_font-stretch_fallback) and [browser compatibility](#browser_compatibility) table for details.
@@ -139,13 +135,13 @@ The table below demonstrates the effect of setting different percentage values o
 ```css hidden
 @font-face {
   font-family: "Inconsolata";
-  src: url("https://fonts.gstatic.com/s/inconsolata/v31/QlddNThLqRwH-OJ1UHjlKENVzlm-WkL3GZQmAwPyya15.woff2")
+  src: url("https://mdn.github.io/shared-assets/fonts/inconsolata/Inconsolata-VF.woff2")
     format("woff2");
 }
 
 @font-face {
   font-family: "Anek Malayalam";
-  src: url("https://fonts.gstatic.com/s/anekmalayalam/v4/6qLUKZActRTs_mZAJUZWWkhke0nYa-f6__Azq3-gP1W7db9_.woff2")
+  src: url("https://mdn.github.io/shared-assets/fonts/anek-malayalam/AnekMalayalam-VF.woff2")
     format("woff2");
 }
 

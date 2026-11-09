@@ -8,7 +8,7 @@ status:
 browser-compat: api.PaymentAddress
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 The **`PaymentAddress`** interface of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) is used to store shipping or payment address information.
 
@@ -43,7 +43,7 @@ It may be useful to refer to the Universal Postal Union website's [Addressing S4
 ## Instance methods
 
 - {{domxref('PaymentAddress.toJSON()')}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : A standard serializer that returns a JSON representation of the `PaymentAddress` object's properties.
+  - : Returns a JSON-serializable plain object representing the `PaymentAddress` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 

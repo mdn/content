@@ -27,7 +27,7 @@ _This interface has no specific event, but inherits the events of {{domxref("XML
 
 ### Uploading a file with a timeout
 
-This allows you to upload a file to a server; it displays a progress bar while the upload is happening as well as a message with the progress and the results, success or failure. An abort button allows to stop an upload.
+This allows you to upload a file to a server; it displays a progress bar while the upload is happening as well as a message with the progress and the results, success or failure. An abort button allows you to stop an upload.
 
 #### HTML
 

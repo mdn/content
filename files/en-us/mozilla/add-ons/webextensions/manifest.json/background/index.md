@@ -55,7 +55,7 @@ The `background` key is an object that must have one of these properties (for mo
           file to an HTML document included in your extension bundle.
         </p>
         <p>
-          If you use this property, you can not specify background scripts using
+          If you use this property, you cannot specify background scripts using
           <code>scripts</code>, but you can include scripts from the
           page, just like a normal web page.
         </p>
@@ -222,6 +222,8 @@ With this `background` configuration, this happens:
 - in Chrome, the `service_worker` property is used, and a service worker starts because, in a Manifest V3 extension, Chrome only supports service workers for background scripts.
 - in Firefox, the `scripts` property is used, and an event page starts because Firefox only supports scripts for background scripts.
 - in Safari, the `scripts` property is used by default, and an event page starts.
+
+The [script-on-click](https://github.com/mdn/webextensions-examples/tree/main/script-on-click) example also provides a demonstration of this pattern.
 
 ## Examples
 

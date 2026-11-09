@@ -77,7 +77,7 @@ If the server wishes a faster website or application response, it is possible fo
 
 ## Conclusion
 
-Improved connection management allows considerable boosting of performance in HTTP. With HTTP/1.1 or HTTP/1.0, using a persistent connection – at least until it becomes idle – leads to the best performance. However, the failure of pipelining has lead to designing superior connection management models, which have been incorporated into HTTP/2.
+Improved connection management allows considerable boosting of performance in HTTP. With HTTP/1.1 or HTTP/1.0, using a persistent connection – at least until it becomes idle – leads to the best performance. However, the failure of pipelining has led to designing superior connection management models, which have been incorporated into HTTP/2.
 
 ## See also
 

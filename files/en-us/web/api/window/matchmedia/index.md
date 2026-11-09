@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Window.matchMedia
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 The {{domxref("Window")}} interface's **`matchMedia()`** method
 returns a new {{domxref("MediaQueryList")}} object that can then be used to determine if

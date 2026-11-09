@@ -9,8 +9,6 @@ browser-compat: javascript.builtins.Object.defineGetter
 sidebar: jsref
 ---
 
-{{Deprecated_Header}}
-
 > [!NOTE]
 > This feature is deprecated in favor of defining [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) using the [object initializer syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) or the {{jsxref("Object.defineProperty()")}} API. This method's behavior is only specified for web compatibility, and is not required to be implemented in any platform. It may not work everywhere.
 
@@ -93,7 +91,7 @@ console.log(o.gimmeFive); // 5
 
 ## See also
 
-- [Polyfill of `Object.prototype.__defineGetter__` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.prototype.__defineGetter__` in `core-js`](https://core-js.io/docs/features/ecmascript/object)
 - [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - {{jsxref("Functions/get", "get")}}
 - {{jsxref("Object.defineProperty()")}}

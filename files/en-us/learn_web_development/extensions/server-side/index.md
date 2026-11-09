@@ -18,11 +18,10 @@ Getting started with server-side programming is usually easier than client-side 
 
 Basic knowledge of programming concepts (or of a particular programming language) is useful, but not essential. Similarly, expertise in client-side coding is not required, but a basic knowledge will help you work better with the developers creating your client-side web "front end".
 
-You will need to understand "how the web works". We recommend that you first read the following topics:
+You will need to understand "how the web works". We recommend that you first read the following modules:
 
-- [What is a web server](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
-- [What software do I need to build a website?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
-- [How do you upload files to a web server?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
+- [Environment setup](/en-US/docs/Learn_web_development/Getting_started/Environment_setup)
+- [Web standards](/en-US/docs/Learn_web_development/Getting_started/Web_standards)
 
 With that basic understanding, you'll be ready to work your way through the modules in this section.
 

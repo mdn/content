@@ -24,7 +24,7 @@ A string.
 
 ```js
 // An <area id="myArea" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLAreaElement"> is in the document
-const area = document.getElementByID("myArea");
+const area = document.getElementById("myArea");
 area.password; // returns 'flabada'
 ```
 

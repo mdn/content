@@ -50,13 +50,11 @@ Let's have a look at creating vertical range sliders, meters, and progress bars.
 A typical set of visual [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) slider, {{htmlelement("progress")}}, and {{htmlelement("meter")}} controls is created like this:
 
 ```html
-<form>
-  <input type="range" min="0" max="11" value="9" step="1" />
-  <meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="20">
-    at 50/100
-  </meter>
-  <progress id="file" max="100" value="70">70%</progress>
-</form>
+<input type="range" min="0" max="11" value="9" step="1" />
+<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="20">
+  at 50/100
+</meter>
+<progress id="file" max="100" value="70">70%</progress>
 ```
 
 > [!NOTE]
@@ -86,13 +84,11 @@ By default, the controls have a {{cssxref("direction")}} value of `ltr`. This ca
 You can change this by setting `direction: rtl` — this causes them to be drawn from bottom to top instead:
 
 ```html hidden
-<form>
-  <input type="range" min="0" max="11" value="9" step="1" />
-  <meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="20">
-    at 50/100
-  </meter>
-  <progress id="file" max="100" value="70">70%</progress>
-</form>
+<input type="range" min="0" max="11" value="9" step="1" />
+<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="20">
+  at 50/100
+</meter>
+<progress id="file" max="100" value="70">70%</progress>
 ```
 
 ```css
@@ -119,9 +115,7 @@ In older browsers that do not support the creation of vertical form controls wit
 The HTML for this example includes an [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) slider only, with `orient="vertical"` added to make it display vertically in older Firefox versions:
 
 ```html
-<form>
-  <input type="range" min="0" max="11" value="9" step="1" orient="vertical" />
-</form>
+<input type="range" min="0" max="11" value="9" step="1" orient="vertical" />
 ```
 
 To cause the controls to also display vertically in older versions of Chrome and Safari, we can use `appearance: slider-vertical`:
@@ -146,22 +140,20 @@ This section shows how to handle vertical {{htmlelement("select")}} elements.
 The below HTML creates two `<select>` elements, one where a single selection can be made and one with multiple selections:
 
 ```html
-<form>
-  <select multiple>
-    <option>First</option>
-    <option>Second</option>
-    <option>Third</option>
-    <option>Fourth</option>
-    <option>Fifth</option>
-  </select>
-  <select>
-    <option>First</option>
-    <option>Second</option>
-    <option>Third</option>
-    <option>Fourth</option>
-    <option>Fifth</option>
-  </select>
-</form>
+<select multiple>
+  <option>First</option>
+  <option>Second</option>
+  <option>Third</option>
+  <option>Fourth</option>
+  <option>Fifth</option>
+</select>
+<select>
+  <option>First</option>
+  <option>Second</option>
+  <option>Third</option>
+  <option>Fourth</option>
+  <option>Fifth</option>
+</select>
 ```
 
 To display the controls vertically, we can use CSS like this:
@@ -187,7 +179,7 @@ It is also worth noting that in the above example, the inline direction for the 
 We'll explore these two use cases using three listbox (`multiple`) `<select>` elements, to enable comparing the effects side-by-side.
 
 ```html
-<form>
+<div class="controls">
   <div>
     <h2>writing-mode: vertical-lr</h2>
     <select multiple>
@@ -218,7 +210,7 @@ We'll explore these two use cases using three listbox (`multiple`) `<select>` el
       <option>Fifth</option>
     </select>
   </div>
-</form>
+</div>
 ```
 
 In the CSS for this example, we set the following properties on the three listboxes:
@@ -228,7 +220,7 @@ In the CSS for this example, we set the following properties on the three listbo
 3. `writing-mode: vertical-lr`, with the text going from top-to-bottom while reversing the option order from left-to-right.
 
 ```css hidden
-form {
+.controls {
   box-sizing: border-box;
   display: flex;
   gap: 20px;
@@ -242,7 +234,7 @@ h2 {
   flex: 1 0 100%;
 }
 
-div {
+.controls > div {
   margin-bottom: 20px;
   flex: 1;
   display: flex;
@@ -367,10 +359,8 @@ Last but not least, we'll look at handling vertical {{htmlelement("textarea")}}s
 The below HTML creates a `<textarea>` and an `<input type="text">`:
 
 ```html
-<form>
-  <textarea>This is my textarea</textarea>
-  <input type="text" value="Input text" />
-</form>
+<textarea>This is my textarea</textarea>
+<input type="text" value="Input text" />
 ```
 
 To display the input and textarea vertically, we can use CSS like this:
@@ -395,7 +385,7 @@ You can use a {{cssxref("direction")}} property value of `rtl` to change the tex
 This example uses three copies of the same text controls we saw in the previous example, so you can easily see the effects of changing `direction` and `writing-mode` as discussed above:
 
 ```html
-<form>
+<div class="controls">
   <div>
     <h2>writing-mode: vertical-lr</h2>
     <textarea>This is my textarea</textarea>
@@ -411,7 +401,7 @@ This example uses three copies of the same text controls we saw in the previous 
     <textarea>This is my textarea</textarea>
     <input type="text" value="Input text" />
   </div>
-</form>
+</div>
 ```
 
 In the CSS, we set the following properties on the three sets of text controls:
@@ -421,7 +411,7 @@ In the CSS, we set the following properties on the three sets of text controls:
 3. `writing-mode: vertical-lr` to flow the text top-to-bottom but reverse the flow of lines — left-to-right. Note that this has no effect on `<input type="text">` elements, as they are always single lines.
 
 ```css hidden
-form {
+.controls {
   box-sizing: border-box;
   display: flex;
   gap: 20px;
@@ -435,7 +425,7 @@ h2 {
   flex: 1 0 100%;
 }
 
-div {
+.controls > div {
   margin-bottom: 20px;
   flex: 1;
   display: flex;

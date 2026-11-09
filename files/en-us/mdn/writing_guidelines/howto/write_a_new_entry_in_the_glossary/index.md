@@ -14,7 +14,7 @@ It's possible that the glossary will never be complete because the web is always
 By contributing new entries or fixing problems, you can help us update the glossary and fill-in gaps.
 
 Contributing to the glossary is an easy way to help make the web more understandable for everyone.
-You don't need high level technical skills.
+You don't need high-level technical skills.
 Glossary entries are intended to be straightforward and brief.
 
 ## How to write an entry
@@ -31,8 +31,10 @@ Preferably, this should be no more than two sentences.
 Make sure anyone reading the description can immediately understand the defined term.
 
 > [!NOTE]
-> Please don't copy-and-paste from other definitions or content on the internet.
-> (And especially not Wikipedia, since its range of license versions is smaller and incompatible with MDN.) Your glossary entry should be original content.
+> Don't copy and paste from other definitions or content on the internet.
+> (And especially not Wikipedia, since its range of license versions is smaller and incompatible with MDN.)
+> Don't use generated text either.
+> Your glossary entry should be original content, written in your own words.
 
 #### Writing a good glossary entry
 

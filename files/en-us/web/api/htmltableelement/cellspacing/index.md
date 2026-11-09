@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLTableElement.cellSpacing
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 While you should instead use the CSS
 {{cssxref("border-spacing")}} property, the obsolete {{domxref("HTMLTableElement")}}

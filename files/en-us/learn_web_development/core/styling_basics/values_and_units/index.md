@@ -574,7 +574,7 @@ Similar to the {{cssxref("color_value/hwb")}} function is the {{cssxref("color_v
 HSL uses `Hue`, in addition to `Saturation` and `Lightness`:
 
 - **Hue**: Again, this represents the base shade of the color.
-- **Saturation**: How saturated is the color? This takes a value from `0`–`100%`, where `0` is no color (it will appear as a shade of grey), and `100%` is full color saturation.
+- **Saturation**: How saturated is the color? This takes a value from `0`–`100%`, where `0` is no color (it will appear as a shade of gray), and `100%` is full color saturation.
 - **Lightness**: How light or bright is the color? This takes a value from `0`–`100%`, where `0` is no light (it will appear completely black) and `100%` is full light (it will appear completely white).
 
 The {{cssxref("color_value/hsl")}} color value also has an optional fourth value, separated from the color with a slash (`/`), representing the alpha transparency.

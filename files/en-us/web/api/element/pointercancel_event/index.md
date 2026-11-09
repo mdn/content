@@ -23,11 +23,15 @@ Some examples of situations that will trigger a `pointercancel` event:
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("pointercancel", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onpointercancel = (event) => { }
 ```
 
@@ -45,17 +49,17 @@ Using `addEventListener()`:
 const para = document.querySelector("p");
 
 para.addEventListener("pointercancel", (event) => {
-  console.log("Pointer event cancelled");
+  console.log("Pointer event canceled");
 });
 ```
 
-Using the `onpointercancel` event handler property:
+Using the `onpointercancel` event handler property (but note that this replaces other event listeners added using `onpointercancel`, if any):
 
 ```js
 const para = document.querySelector("p");
 
 para.onpointercancel = (event) => {
-  console.log("Pointer event cancelled");
+  console.log("Pointer event canceled");
 };
 ```
 

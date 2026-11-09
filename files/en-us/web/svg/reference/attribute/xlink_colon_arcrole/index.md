@@ -8,8 +8,6 @@ spec-urls: https://www.w3.org/TR/SVG11/linking.html#XLinkArcRoleAttribute
 sidebar: svgref
 ---
 
-{{Deprecated_Header}}
-
 The **`xlink:arcrole`** attribute specifies a contextual role for the element and corresponds to the [RDF Primer](https://www.w3.org/TR/rdf-primer/) notion of a property.
 
 This contextual role can differ from the meaning of the resource when taken outside the context of this particular arc. For example, a resource might generically represent a "person," but in the context of a particular arc it might have the role of "mother" and in the context of a different arc it might have the role of "daughter."

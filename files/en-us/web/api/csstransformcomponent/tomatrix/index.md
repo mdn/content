@@ -8,7 +8,7 @@ browser-compat: api.CSSTransformComponent.toMatrix
 
 {{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`toMatrix()`** method of the {{domxref("CSSTransformComponent")}} interface returns a {{domxref('DOMMatrix')}} object.
+The **`toMatrix()`** method of the {{domxref("CSSTransformComponent")}} interface returns a {{domxref("DOMMatrix")}} object.
 
 All transform functions can be represented mathematically as a 4x4 transformation matrix.
 
@@ -29,7 +29,7 @@ None.
 
 ### Return value
 
-A {{domxref('DOMMatrix')}} object
+A {{domxref("DOMMatrix")}} object.
 
 ### Exceptions
 
@@ -38,7 +38,28 @@ A {{domxref('DOMMatrix')}} object
 
 ## Examples
 
-To Do
+### Converting a component to a matrix
+
+```js
+const translate = new CSSTranslate(CSS.px(10), CSS.px(20));
+
+const matrix = translate.toMatrix();
+console.log(matrix.e, matrix.f); // 10 20
+```
+
+### Handling incompatible units
+
+`toMatrix()` throws if a length can't be resolved to pixels, such as a percentage:
+
+```js
+const translate = new CSSTranslate(CSS.percent(50), CSS.px(20));
+
+try {
+  translate.toMatrix();
+} catch (e) {
+  console.log(e); // TypeError
+}
+```
 
 ## Specifications
 
@@ -47,3 +68,11 @@ To Do
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("CSSTransformComponent.is2D")}}
+- {{domxref("CSSTransformComponent.toString()")}}
+- {{domxref("CSSTransformValue.toMatrix()")}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

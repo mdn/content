@@ -43,7 +43,7 @@ When looking to contribute to the MDN project, you will find yourself in one of 
 
 - **If you are looking to contribute to the project**, you can find tasks under 'Issues' in any of the [MDN GitHub repositories](https://github.com/orgs/mdn/repositories) (for example, [`mdn/content` issues](https://github.com/mdn/content/issues)) and our [public GitHub project boards](https://github.com/orgs/mdn/projects).
   Make sure the issue isn't assigned to someone and no one has already opened a pull request for the task.
-  Issues labelled with `good first issue` are a good place to start.
+  Issues labeled with `good first issue` are a good place to start.
 
 - **If you have found a problem on MDN**, you should open an issue first.
   **Issues need a response from maintainers before you start working** so that you know a problem addressed by a pull request is valid and that your pull request will be accepted.
@@ -57,9 +57,11 @@ If you're not sure where to start, reach out to us on [the Discord server](/disc
 
 When you're ready to open a pull request, follow these guidelines:
 
+- **Review your changes before you open a pull request:** A human must review every pull request before it is opened, including pull requests created by automated tools on your behalf.
+  Make sure that you understand each change and have tested any code.
 - **Pull requests should be short and focused to one issue:** If possible, group related set of changes into multiple, small pull requests.
   If a pull request becomes too large, the reviewer may close it and ask that you to submit pull requests for each logical set of changes that belong together.
-- **Add a description of the changes:** Provide as much context and rationale for the pull request as possible.
+- **Add a description of the changes:** Explain what you changed and why, in your own words.
 - **Add the link to the issue you are closing:** In the pull request description, add 'Fixes' if it fully resolves the issue or 'Relates to' if it is a related issue.
   More information about linking to issues in pull requests can be found in [GitHub docs](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
 - **Add 'depends on'** with a link to a dependency if there are pull requests that must be merged first (e.g., code examples in other repositories).
@@ -70,6 +72,8 @@ When you're ready to open a pull request, follow these guidelines:
   MDN Web Docs contains technical documentation; you should not suggest prose style changes except where grammar is incorrect.
 - **Don't unnecessarily add or remove line breaks** on pages that follow a certain formatting style.
 
+We reserve the right to close pull requests that don't follow these guidelines.
+
 ### After you open a pull request
 
 - **Handle CI failures** from the automated tests that run as GitHub Actions (see `.github/workflows`).
@@ -77,7 +81,7 @@ When you're ready to open a pull request, follow these guidelines:
   If you don't know how to resolve the underlying issues, ask for help.
 - **Resolve merge conflicts** with the main branch; you are responsible for resolving these.
   You can do this by merging the `mdn/main` branch into your branch.
-  For more information, see the GitHub documentation on [keeping your branch up to date](https://docs.github.com/en/pull-requests/proposing-changes-to-your-work-with-pull-requests/keeping-your-pull-request-in-sync-with-the-base-branch#about-keeping-your-pull-request-in-sync).
+  For more information, see the GitHub documentation on [keeping your branch up to date](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/keeping-your-pull-request-in-sync-with-the-base-branch#about-keeping-your-pull-request-in-sync).
 - **Be responsive to feedback.**
   This means being prepared to make changes to the pull request based on the review.
   If a review happens and the changes are not made, the pull request may be closed.
@@ -88,7 +92,7 @@ When you're ready to open a pull request, follow these guidelines:
 
 ## Pull request review process
 
-Reviewer(s) are automatically assigned when you open a pull request based on a `CODEOWNERS` file, but if there is a specific person you want to request review from, you can [request a review](https://docs.github.com/en/pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review) manually.
+Reviewer(s) are automatically assigned when you open a pull request based on a `CODEOWNERS` file, but if there is a specific person you want to request review from, you can [request a review](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/requesting-a-pull-request-review) manually.
 We also use auto-labeling on pull requests to help us triage them.
 Maintainers can further triage pull requests and add any additional labels, such as `needs-info` or `on-hold`, if needed based on context.
 
@@ -136,8 +140,8 @@ When you are reviewing a pull request, you should:
   If you are not sure how to fix the failing tests, [ask for help](/en-US/docs/MDN/Community/Communication_channels) or assign the pull request to someone else.
 
 If a pull request looks good apart from small typos or other minor issues, you may want to fix the problem directly.
-You can do this provided the pull request [has been set up to allow changes](https://docs.github.com/en/pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork).
-It's recommended to use [comments with suggestions](https://docs.github.com/en/pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request) for fixing minor issues, as they can be batched and committed in one go.
+You can do this provided the pull request [has been set up to allow changes](https://docs.github.com/en/pull-requests/how-tos/work-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork).
+It's recommended to use [comments with suggestions](https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request) for fixing minor issues, as they can be batched and committed in one go.
 
 When submitting your review you have three options, **approve**, **comment**, or **request changes**.
 The following sections explain when to use each option.

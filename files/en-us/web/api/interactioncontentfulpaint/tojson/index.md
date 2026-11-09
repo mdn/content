@@ -1,0 +1,109 @@
+---
+title: "InteractionContentfulPaint: toJSON() method"
+short-title: toJSON()
+slug: Web/API/InteractionContentfulPaint/toJSON
+page-type: web-api-instance-method
+status:
+  - experimental
+browser-compat: api.InteractionContentfulPaint.toJSON
+---
+
+{{APIRef("Performance API")}}{{SeeCompatTable}}
+
+The **`toJSON()`** method of the {{domxref("InteractionContentfulPaint")}} interface returns a JSON-serializable plain object representing the `InteractionContentfulPaint` object.
+
+The method is automatically called by {{jsxref("JSON.stringify()")}} when an `InteractionContentfulPaint` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
+
+## Syntax
+
+```js-nolint
+toJSON()
+```
+
+### Parameters
+
+None.
+
+### Return value
+
+A JSON-serializable plain object containing the following properties:
+
+- {{domxref("PerformanceEntry/name", "name")}}
+- {{domxref("PerformanceEntry/entryType", "entryType")}}
+- {{domxref("PerformanceEntry/startTime", "startTime")}}
+- {{domxref("PerformanceEntry/duration", "duration")}}
+- {{domxref("PerformanceEntry/navigationId", "navigationId")}}
+- {{domxref("InteractionContentfulPaint/paintTime", "paintTime")}}
+- {{domxref("InteractionContentfulPaint/presentationTime", "presentationTime")}}
+- {{domxref("InteractionContentfulPaint/interactionId", "interactionId")}}
+- {{domxref("InteractionContentfulPaint/largestContentfulPaint", "largestContentfulPaint")}}
+
+Each property's value is copied as-is. When the returned object is passed to {{jsxref("JSON.stringify()")}}, the `largestContentfulPaint` property is further serialized using {{domxref("LargestContentfulPaint/toJSON", "LargestContentfulPaint.toJSON()")}}.
+
+## Examples
+
+### Calling toJSON() directly
+
+This example obtains an `InteractionContentfulPaint` object. Calling `toJSON()` directly returns a plain object. Its properties have the same values as the corresponding properties of the original object.
+
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const json = entry.toJSON();
+    console.log(json); // A plain object
+    console.log(typeof json); // "object"
+    console.log(json.interactionId); // Same value as entry.interactionId
+  });
+});
+
+observer.observe({ type: "interaction-contentful-paint", buffered: true });
+```
+
+### Serializing to a JSON string
+
+Within the callback from the previous example, the same object can be serialized using {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method automatically.
+
+```js
+console.log(JSON.stringify(entry));
+```
+
+This would log a JSON string like so (formatted for readability):
+
+```json
+{
+  "name": "",
+  "entryType": "interaction-contentful-paint",
+  "startTime": 2226.25,
+  "duration": 390.25,
+  "navigationId": 2463,
+  "paintTime": 2589.5,
+  "presentationTime": 2616.5,
+  "interactionId": 1704,
+  "largestContentfulPaint": {
+    "name": "",
+    "entryType": "largest-contentful-paint",
+    "startTime": 2616.5,
+    "duration": 0,
+    "navigationId": 2463,
+    "paintTime": 2589.5,
+    "presentationTime": 2616.5,
+    "size": 19824,
+    "renderTime": 2616.5,
+    "loadTime": 0,
+    "id": "",
+    "url": ""
+  }
+}
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{jsxref("JSON")}}

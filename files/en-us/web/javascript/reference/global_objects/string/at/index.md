@@ -38,7 +38,7 @@ at(index)
 
 ### Return value
 
-A {{jsxref("String")}} consisting of the single UTF-16 code unit located at the specified position. Returns {{jsxref("undefined")}} if the given index can not be found.
+A {{jsxref("String")}} consisting of the single UTF-16 code unit located at the specified position. Returns {{jsxref("undefined")}} if the given index cannot be found.
 
 ## Examples
 
@@ -91,7 +91,7 @@ console.log(atWay); // 't'
 
 ## See also
 
-- [Polyfill of `String.prototype.at` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.at` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - [es-shims polyfill of `String.prototype.at`](https://www.npmjs.com/package/string.prototype.at)
 - {{jsxref("String.prototype.indexOf()")}}
 - {{jsxref("String.prototype.lastIndexOf()")}}

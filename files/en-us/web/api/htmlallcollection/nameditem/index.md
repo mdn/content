@@ -3,6 +3,8 @@ title: "HTMLAllCollection: namedItem() method"
 short-title: namedItem()
 slug: Web/API/HTMLAllCollection/namedItem
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.HTMLAllCollection.namedItem
 ---
 

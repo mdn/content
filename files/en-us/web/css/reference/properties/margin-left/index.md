@@ -73,7 +73,7 @@ margin-left: 5%; /* relative to the nearest block container's width */
 margin-left: anchor-size(self-inline);
 margin-left: calc(anchor-size(--my-anchor width, 20px) / 4);
 
-/* Keyword values */
+/* Keyword value */
 margin-left: auto;
 
 /* Global values */

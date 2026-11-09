@@ -83,7 +83,7 @@ The following deprecated historical errors don't have an error name but instead 
 - `InvalidNodeTypeError` {{experimental_inline}}
   - : The node is incorrect or has an incorrect ancestor for this operation. (Legacy code value: `24` and legacy constant name: `INVALID_NODE_TYPE_ERR`)
 - `DataCloneError` {{experimental_inline}}
-  - : The object can not be cloned. (Legacy code value: `25` and legacy constant name: `DATA_CLONE_ERR`)
+  - : The object cannot be cloned. (Legacy code value: `25` and legacy constant name: `DATA_CLONE_ERR`)
 - `EncodingError` {{experimental_inline}}
   - : The encoding or decoding operation failed (No legacy code value and constant name).
 - `NotReadableError` {{experimental_inline}}
@@ -115,5 +115,5 @@ The following deprecated historical errors don't have an error name but instead 
 
 ## See also
 
-- [A polyfill of `DOMException`](https://github.com/zloirock/core-js#domexception) is available in [`core-js`](https://github.com/zloirock/core-js)
+- [A polyfill of `DOMException`](https://core-js.io/docs/features/web-standards/dom-exception) is available in [`core-js`](https://core-js.io/)
 - {{ domxref("DOMError") }}

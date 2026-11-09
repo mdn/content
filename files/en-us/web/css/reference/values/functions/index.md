@@ -116,7 +116,7 @@ Each of the pages below contains detailed information about a math function's sy
 - {{cssxref("mod()")}}
   - : Calculates a modulus (with the same sign as the divisor) when dividing one number by another.
 - {{cssxref("progress()")}}
-  - : Calculates the position of a value between two other values — a start value and an end value. The result is expressed as a number between 0 and 1 representing the progress between the start and end values.
+  - : Calculates the position of a value between two other values — a start value and an end value. The result represents the progress between the start and end values, where 0 is the start, and 1 is the end.
 - {{cssxref("rem()")}}
   - : Calculates a remainder (with the same sign as the dividend) when dividing one number by another.
 
@@ -149,6 +149,11 @@ Each of the pages below contains detailed information about a math function's sy
   - : Calculates the logarithm of a number.
 - {{cssxref("exp()")}}
   - : Calculates `e` raised to the power of a number.
+
+### Random value functions
+
+- {{cssxref("random")}}
+  - : Generates a random value between a minimum and maximum value.
 
 ### Sign-related functions
 

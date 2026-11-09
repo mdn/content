@@ -2,7 +2,7 @@
 title: "PreferenceObject: override property"
 short-title: override
 slug: Web/API/PreferenceObject/override
-page-type: web-api-instance-method
+page-type: web-api-instance-property
 status:
   - experimental
 browser-compat: api.PreferenceObject.override

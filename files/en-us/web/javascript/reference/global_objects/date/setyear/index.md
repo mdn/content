@@ -9,8 +9,6 @@ browser-compat: javascript.builtins.Date.setYear
 sidebar: jsref
 ---
 
-{{Deprecated_Header}}
-
 The **`setYear()`** method of {{jsxref("Date")}} instances sets the year for a specified date according to local time.
 
 However, the way the legacy `setYear()` method sets year values is different from how the preferred {{jsxref("Date/setFullYear", "setFullYear()")}} method sets year values — and in some cases, also different from how `new Date()` and {{jsxref("Date.parse()")}} set year values. Specifically, given two-digit numbers, such as `22` and `61`:
@@ -66,7 +64,7 @@ theBigDay.setYear(2000);
 
 ## See also
 
-- [Polyfill of `Date.prototype.setYear` in `core-js`](https://github.com/zloirock/core-js#ecmascript-date)
+- [Polyfill of `Date.prototype.setYear` in `core-js`](https://core-js.io/docs/features/ecmascript/date)
 - {{jsxref("Date.prototype.getFullYear()")}}
 - {{jsxref("Date.prototype.getUTCFullYear()")}}
 - {{jsxref("Date.prototype.setFullYear()")}}

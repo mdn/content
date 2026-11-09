@@ -52,13 +52,13 @@ There are many frameworks out there, but currently the "big four" are considered
 
 ### Angular
 
-[Angular](https://angular.dev/) is an open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. It is a complete rewrite from the same team that built [AngularJS](https://angularjs.org/). Angular was officially released on the 14th of September 2016.
+[Angular](https://angular.dev/) is an open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. It is a complete rewrite from the same team that built [AngularJS](https://en.wikipedia.org/wiki/AngularJS). Angular was officially released on the 14th of September 2016.
 
 Angular is a component-based framework which uses declarative HTML templates. At build time, transparently to developers, the framework's compiler translates the templates to optimized JavaScript instructions. Angular uses [TypeScript](https://www.typescriptlang.org/), a superset of JavaScript that we'll look at in a little more detail in the next chapter.
 
 ### Vue
 
-After working on and learning from the original [AngularJS](https://angularjs.org/) project, Evan You released [Vue](https://vuejs.org/) in 2014. Vue is the youngest of the big four, but has enjoyed a recent uptick in popularity.
+After working on and learning from the original [AngularJS](https://en.wikipedia.org/wiki/AngularJS) project, Evan You released [Vue](https://vuejs.org/) in 2014. Vue is the youngest of the big four, but has enjoyed a recent uptick in popularity.
 
 Vue, like Angular, extends HTML with some of its own code. Apart from that, it mainly relies on modern, standard JavaScript.
 

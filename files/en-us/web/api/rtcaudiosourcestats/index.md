@@ -87,12 +87,12 @@ This example shows how you might iterate the stats object returned from `RTCRtpS
 const stats = await sender.getStats();
 let audioSourceStats = null;
 
-stats.forEach((report) => {
-  if (report.type === "media-source" && report.kind==="audio") {
+for (const report of stats.values()) {
+  if (report.type === "media-source" && report.kind === "audio") {
     audioSourceStats = report;
     break;
   }
-});
+}
 
 const audioLevel = audioSourceStats?.audioLevel;
 ```

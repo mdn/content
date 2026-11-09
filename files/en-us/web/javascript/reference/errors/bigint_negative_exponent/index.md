@@ -34,7 +34,7 @@ const c = a ** b;
 // RangeError: BigInt negative exponent
 ```
 
-Instead, check if the exponent is negative first, and either issue an error with a better message, or fallback to a different value, like `0n` or `undefined`.
+Instead, check if the exponent is negative first, and either issue an error with a better message, or fall back to a different value, like `0n` or `undefined`.
 
 ```js example-good
 const a = 1n;

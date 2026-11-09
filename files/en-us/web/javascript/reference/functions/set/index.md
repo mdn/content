@@ -54,10 +54,10 @@ An object property is either a data property or an accessor property, but it can
 
 ```js
 const obj = {
-  set prop() {
+  set prop(val) {
     // setter, the code executed when setting obj.prop
   },
-}
+};
 ```
 
 Properties defined using this syntax are own properties of the created object, and they are configurable and enumerable.
@@ -85,7 +85,7 @@ language.current = "FA";
 console.log(language.log); // ['EN', 'FA']
 ```
 
-Note that `current` is not defined, and any attempts to access it will
+Note that `current` has no getter, and any attempts to access it will
 result in `undefined`.
 
 ### Using setters in classes

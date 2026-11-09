@@ -14,7 +14,7 @@ Block size is the size of an element in the dimension perpendicular to the flow 
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 contain-intrinsic-block-size: none;
 
 /* <length> values */

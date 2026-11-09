@@ -39,7 +39,7 @@ new NavigateEvent(type, init)
     - `navigationType` {{optional_inline}}
       - : The type of the navigation. Possible values — `push`, `reload`, `replace`, and `traverse`. Defaults to `push`.
     - `signal`
-      - : An {{domxref("AbortSignal")}}, which will become aborted if the navigation is cancelled (e.g., by the user pressing the browser's "Stop" button, or another navigation starting and thus cancelling the ongoing one).
+      - : An {{domxref("AbortSignal")}}, which will become aborted if the navigation is canceled (e.g., by the user pressing the browser's "Stop" button, or another navigation starting and thus canceling the ongoing one).
     - `sourceElement` {{optional_inline}}
       - : An {{domxref("Element")}} object representing the initiating element in cases where the navigation was initiated by an element, or `null` if the navigation was not initiated by an element. Defaults to `null`.
     - `userInitiated` {{optional_inline}}

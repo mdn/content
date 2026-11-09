@@ -15,7 +15,7 @@ The **`math-depth`** property describes a notion of _depth_ for each element of 
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 math-depth: auto-add;
 
 /* Relative values */

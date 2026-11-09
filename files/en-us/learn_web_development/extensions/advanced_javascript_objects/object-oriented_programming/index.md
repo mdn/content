@@ -236,7 +236,7 @@ That said, constructors and prototypes can be used to implement class-based OOP 
 
 ## Summary
 
-This article has described the basic features of class-based object oriented programming, and briefly looked at how JavaScript constructors and prototypes compare with these concepts.
+This article has described the basic features of class-based object-oriented programming, and briefly looked at how JavaScript constructors and prototypes compare with these concepts.
 
 In the next article, we'll look at the features JavaScript provides to support class-based object-oriented programming.
 

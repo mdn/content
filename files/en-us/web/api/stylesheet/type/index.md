@@ -8,8 +8,7 @@ browser-compat: api.StyleSheet.type
 
 {{APIRef("CSSOM")}}
 
-The **`type`** property of the {{domxref("StyleSheet")}}
-interface specifies the style sheet language for the given style sheet.
+The **`type`** read-only property of the {{domxref("StyleSheet")}} interface specifies the style sheet language for the given style sheet.
 
 ## Value
 

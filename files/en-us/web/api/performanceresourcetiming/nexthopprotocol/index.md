@@ -8,7 +8,7 @@ browser-compat: api.PerformanceResourceTiming.nextHopProtocol
 
 {{APIRef("Performance API")}}{{AvailableInWorkers}}
 
-The **`nextHopProtocol`** read-only property is a string representing the network protocol used to fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://www.iana.org/assignments/tls-extensiontype-values/tls-extensiontype-values.xhtml#alpn-protocol-ids).
+The **`nextHopProtocol`** read-only property is a string representing the network protocol used to fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://www.iana.org/assignments/tls-extensiontype-values#alpn-protocol-ids).
 
 When a proxy is used, if a tunnel connection is established, this property returns the ALPN Protocol ID of the tunneled protocol. Otherwise, this property returns the ALPN Protocol ID of the first hop to the proxy.
 
@@ -16,7 +16,7 @@ When a proxy is used, if a tunnel connection is established, this property retur
 
 The `nextHopProtocol` property can have the following values:
 
-- A string representing the network protocol used to fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://www.iana.org/assignments/tls-extensiontype-values/tls-extensiontype-values.xhtml#alpn-protocol-ids). Typical values are:
+- A string representing the network protocol used to fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://www.iana.org/assignments/tls-extensiontype-values#alpn-protocol-ids). Typical values are:
   - `"http/0.9"`
   - `"http/1.0"`
   - `"http/1.1"`

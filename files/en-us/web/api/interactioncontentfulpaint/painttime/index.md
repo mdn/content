@@ -3,10 +3,12 @@ title: "InteractionContentfulPaint: paintTime property"
 short-title: paintTime
 slug: Web/API/InteractionContentfulPaint/paintTime
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.InteractionContentfulPaint.paintTime
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`paintTime`** read-only property of the {{domxref("InteractionContentfulPaint")}} interface returns the {{domxref("DOMHighResTimeStamp","timestamp")}} of when the rendering phase ended and the paint phase started.
 

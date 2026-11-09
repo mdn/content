@@ -29,9 +29,9 @@ There are no hard and fast rules about which elements you should use to mark up 
 ### Associated WAI-ARIA Roles, States, and Properties
 
 - [`list`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/list_role)
-  - : A list of items. Elements with role `list` must have one or more elements with the role `listitem` as children, a one or more elements with the role of `group` that have one or more elements with the `listitem` role as children.
+  - : A list of items. Elements with role `list` must have one or more elements with the role `listitem` as children, or one or more elements with the role of `group` that have one or more elements with the `listitem` role as children.
 - [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)
-  - : A collection of related objects, limited to list items when nested in a list, not important enough to have their own place in a pages table of contents.
+  - : A collection of related objects, limited to list items when nested in a list, not important enough to have their own place in a page's table of contents.
 
 ## Best practices
 

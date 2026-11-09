@@ -13,7 +13,7 @@ The {{httpheader("Referer")}} (sic) header contains the address of a request (fo
 
 For example, consider a "reset password" page with a social media link in a footer. If the link was followed, depending on how information was shared the social media site may receive the reset password URL and may still be able to use the shared information, potentially compromising a user's security.
 
-By the same logic, an image from a third party site embedded in your page could result in sensitive information being leaked to the third party. Even if security is not compromised, the information may not be something the user wants shared.
+By the same logic, an image from a third-party site embedded in your page could result in sensitive information being leaked to the third party. Even if security is not compromised, the information may not be something the user wants shared.
 
 ## How can we fix this?
 
@@ -23,7 +23,7 @@ You should use {{HTTPMethod("POST")}} rather than {{HTTPMethod("GET")}} wherever
 
 You should always use {{glossary("HTTPS")}} for your sites. This has many security advantages, including the fact that HTTPS sites will never transmit referrer information to non-HTTPS sites. This advice is less relevant now that most of the web is using HTTPS, but it is still a worthy consideration.
 
-In addition, you should consider removing any third party content (e.g., social networking widgets embedded in {{htmlelement("iframe")}}) from secure areas of your website, like password reset pages, payment forms, login areas, etc.
+In addition, you should consider removing any third-party content (e.g., social networking widgets embedded in {{htmlelement("iframe")}}) from secure areas of your website, like password reset pages, payment forms, login areas, etc.
 
 You can also mitigate such risks using:
 
@@ -33,9 +33,9 @@ You can also mitigate such risks using:
 - A {{HTMLElement("meta")}} element with a [name](/en-US/docs/Web/HTML/Reference/Elements/meta/name) of `referrer` and the content set to `no-referrer` to disable the Referer header for the whole document. See [Referrer-Policy Integration with HTML](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy#integration_with_html).
 - The [Exit page](https://geekthis.net/post/hide-http-referer-headers/#exit-page-redirect) technique.
 
-Security-conscious server-side frameworks tend to have built in mitigations for such problems, for example:
+Security-conscious server-side frameworks tend to have built-in mitigations for such problems, for example:
 
-- [Security in Django](https://docs.djangoproject.com/en/stable/topics/security/) (especially see [Cross site request forgery (CSRF) protection](https://docs.djangoproject.com/en/stable/topics/security/#cross-site-request-forgery-csrf-protection)).
+- [Security in Django](https://docs.djangoproject.com/en/stable/topics/security/) (especially see [Cross-site request forgery (CSRF) protection](https://docs.djangoproject.com/en/stable/topics/security/#cross-site-request-forgery-csrf-protection)).
 - [Helmet referrer-policy](https://github.com/helmetjs/helmet/tree/main/middlewares/referrer-policy) — middleware for setting Referrer-Policy in Node.js/Express apps (see also [Helmet](https://github.com/helmetjs) for more security provisions).
 
 ## Policy and requirements

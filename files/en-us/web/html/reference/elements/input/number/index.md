@@ -11,6 +11,8 @@ sidebar: htmlsidebar
 
 The browser may opt to provide stepper arrows to let the user increase and decrease the value using their mouse or by tapping with a fingertip.
 
+On browsers that don't support inputs of type `number`, a `number` input falls back to type `text`.
+
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
@@ -32,8 +34,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-On browsers that don't support inputs of type `number`, a `number` input falls back to type `text`.
 
 ## Value
 
@@ -254,6 +254,12 @@ The following example exhibits all of the above features, as well as using some 
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 {{EmbedLiveSample("Validation", 600, 110)}}
 
 Try submitting the form with different invalid values entered — e.g., no value; a value below 0 or above 100; a value that is not a multiple of 10; or a non-numerical value — and see how the error messages the browser gives you differ with different ones.
@@ -342,6 +348,12 @@ The HTML looks like this:
     <input type="submit" value="Submit form" />
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 You'll see that we are using many of the attributes we've already looked at in the article earlier on. Since we want to accept a meter value in centimeters, we've set the `step` value to `0.01`, so that values like _1.78_ are not seen as invalid. We've also provided a placeholder for that input.

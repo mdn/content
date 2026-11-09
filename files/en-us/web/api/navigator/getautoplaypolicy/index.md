@@ -69,7 +69,7 @@ Once the user has interacted with the page/site, on some browsers individual ite
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : The object passed to the method is not an allowed type.
     The allowed types include [`HTMLMediaElement`](/en-US/docs/Web/API/HTMLMediaElement) (or a derived element such as [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement) and [`HTMLAudioElement`](/en-US/docs/Web/API/HTMLAudioElement)), or [`AudioContext`](/en-US/docs/Web/API/AudioContext).
 

@@ -102,7 +102,7 @@ Because elements are also properties, you can access them using [property access
 const myArray = ["Wind", "Rain", "Fire"];
 ```
 
-You can refer to the first element of the array as `myArray[0]`, the second element of the array as `myArray[1]`, etc… The index of the elements begins with zero.
+You can refer to the first element of the array as `myArray[0]`, the second element of the array as `myArray[1]`, etc. The index of the elements begins with zero.
 
 > [!NOTE]
 > You can also use [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) to access other properties of the array, like with an object.

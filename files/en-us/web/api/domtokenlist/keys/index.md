@@ -9,7 +9,7 @@ browser-compat: api.DOMTokenList.keys
 {{APIRef("DOM")}}
 
 The **`keys()`** method of the {{domxref("DOMTokenList")}} interface
-returns an {{jsxref("Iteration_protocols",'iterator',"",1)}} allowing to go through all keys contained in this object.
+returns an {{jsxref("Iteration_protocols",'iterator',"",1)}} allowing you to go through all keys contained in this object.
 The keys are unsigned integers.
 
 ## Syntax
@@ -66,4 +66,5 @@ The output looks like this:
 
 ## See also
 
+- [Polyfill of `DOMTokenList.prototype.keys` in `core-js`](https://core-js.io/docs/features/web-standards/iterable-dom-collections)
 - {{domxref("DOMTokenList.entries()")}}, {{domxref("DOMTokenList.forEach()")}} and {{domxref("DOMTokenList.values")}}.

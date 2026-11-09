@@ -32,19 +32,19 @@ _This interface also inherits properties from its parent interfaces, {{domxref("
 
 _This interface also inherits methods from its parent interfaces, {{domxref("CharacterData")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 
-- {{domxref("ProcessingInstruction.getAttribute()")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ProcessingInstruction.getAttribute()")}} {{Experimental_Inline}}
   - : Retrieves the value of the named attribute from the current node and returns it as a string.
-- {{domxref("ProcessingInstruction.getAttributeNames()")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ProcessingInstruction.getAttributeNames()")}} {{Experimental_Inline}}
   - : Returns an array of attribute names from the current node.
-- {{domxref("ProcessingInstruction.hasAttribute()")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ProcessingInstruction.hasAttribute()")}} {{Experimental_Inline}}
   - : Returns a boolean value indicating if the element has the specified attribute or not.
-- {{domxref("ProcessingInstruction.hasAttributes()")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ProcessingInstruction.hasAttributes()")}} {{Experimental_Inline}}
   - : Returns a boolean value indicating if the element has one or more HTML attributes present.
-- {{domxref("ProcessingInstruction.removeAttribute()")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ProcessingInstruction.removeAttribute()")}} {{Experimental_Inline}}
   - : Removes the named attribute from the current node.
-- {{domxref("ProcessingInstruction.setAttribute()")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ProcessingInstruction.setAttribute()")}} {{Experimental_Inline}}
   - : Sets the named attribute of the current node to a new value.
-- {{domxref("ProcessingInstruction.toggleAttribute()")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ProcessingInstruction.toggleAttribute()")}} {{Experimental_Inline}}
   - : Toggles a boolean attribute, removing it if it is present and adding it if it is not present, on the specified element.
 
 These methods provide easier access to the {{domxref("CharacterData.data", "data")}} string attributes.
@@ -95,9 +95,7 @@ This example shows a processing instruction with a target of `xml-stylesheet` an
 
 This example uses the `<?start>` and `<?end>` processing instructions as placeholders and later on fills in the contents using `<template for>`. Both exclude the optional trailing `?`.
 
-<!-- Have prettier ignore this, as indentation is important and discussed next -->
-<!-- prettier-ignore-start -->
-```html
+```html-nolint
 <body>
   <div>
     <?start name="placeholder">
@@ -111,7 +109,6 @@ This example uses the `<?start>` and `<?end>` processing instructions as placeho
   ...
 </body>
 ```
-<!-- prettier-ignore-end -->
 
 This example also demonstrates the lack of processing instruction children and nesting. The `<?start>` and `<?end>` processing instructions, although linked in terms of `<template for>`, are not linked in terms of the DOM and do not cause the `Loading...` content in between to be a child (as demonstrated by the lack of indentation).
 
@@ -127,7 +124,7 @@ const pi = document.createProcessingInstruction(
 
 console.log(pi.data);
 console.log(pi.getAttribute("my-data1"));
-console.log(pi.getAttribute("my-data1"));
+console.log(pi.getAttribute("my-data2"));
 // logs
 // my-data1='value1' my-data2='value2'
 // value1

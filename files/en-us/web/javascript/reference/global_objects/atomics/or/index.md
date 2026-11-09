@@ -37,7 +37,7 @@ The old value at the given position (`typedArray[index]`).
 
 ## Description
 
-The bitwise OR operation yields 1, if either `a` or `b` are 1. The truth table for the OR operation is:
+The bitwise OR operation yields 1, if either `a` or `b` is 1. The truth table for the OR operation is:
 
 | `a` | `b` | `a \| b` |
 | --- | --- | -------- |

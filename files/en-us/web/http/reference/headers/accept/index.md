@@ -65,7 +65,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*
 
 ### Using default Accept request headers
 
-HTTP requests made using command line tools such as [curl](https://curl.se/) and [wget](https://www.gnu.org/software/wget/) use `*/*` as the default `Accept` value:
+HTTP requests made using command-line tools such as [curl](https://curl.se/) and [wget](https://www.gnu.org/software/wget/) use `*/*` as the default `Accept` value:
 
 ```http
 GET / HTTP/1.1

@@ -30,8 +30,7 @@ Content-Type: application/json
 Content-Length: 38
 
 {
-  "email": "b@example.com
-",
+  "email": "b@example.com",
   "username": "b.smith"
 }
 ```

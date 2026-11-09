@@ -46,7 +46,7 @@ An {{jsxref("Array")}} whose contents depend on the presence or absence of the g
 
 ## Description
 
-This method exists for customizing match behavior within `RegExp` subclasses. It is called internally in {{jsxref("String.prototype.match()")}}. For example, the following two examples return same result.
+This method exists for customizing match behavior within `RegExp` subclasses. It is called internally in {{jsxref("String.prototype.match()")}}. For example, the following two examples return the same result.
 
 ```js
 "abc".match(/a/);
@@ -133,7 +133,7 @@ console.log(result.group(3)); // 02
 
 ## See also
 
-- [Polyfill of `RegExp.prototype[Symbol.match]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `RegExp.prototype[Symbol.match]` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - {{jsxref("String.prototype.match()")}}
 - [`RegExp.prototype[Symbol.matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
 - [`RegExp.prototype[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)

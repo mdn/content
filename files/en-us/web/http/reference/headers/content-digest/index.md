@@ -52,7 +52,7 @@ Content-Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-val
 
 ## Examples
 
-In all of the examples, endpoints are configured to send unsolicited digest headers. The {{HTTPHeader("Want-Content-Digest")}} and {{HTTPHeader("Want-Repr-Digest")}} fields could optionally be used by a sender to request a `Content-Digest` or `Repr-Digest` along with their hashing algorithm preferences."
+In all of the examples, endpoints are configured to send unsolicited digest headers. The {{HTTPHeader("Want-Content-Digest")}} and {{HTTPHeader("Want-Repr-Digest")}} fields could optionally be used by a sender to request a `Content-Digest` or `Repr-Digest` along with their hashing algorithm preferences.
 
 ### A SHA-256 Content-Digest in a response
 
@@ -161,7 +161,7 @@ Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
 ```
 
 Instead of omitting `Content-Digest` when there is no content, a server can explicitly compute it over an empty string.
-Per [Section 6.3 of RFC 9530](https://www.rfc-editor.org/rfc/rfc9530.html#section-6.3), this lets a recipient, particularly when the digest is covered by an HTTP message signature, verify that no content was added or removed, rather than only that the header was left out:
+Per [Section 6.3 of RFC 9530](https://www.rfc-editor.org/info/rfc9530/#section-6.3), this lets a recipient, particularly when the digest is covered by an HTTP message signature, verify that no content was added or removed, rather than only that the header was left out:
 
 ```http
 HTTP/1.1 200 OK
@@ -201,4 +201,4 @@ Developers can set and get HTTP headers using `fetch()` in order to provide appl
 - {{HTTPHeader("Want-Content-Digest")}} header to request a content digest
 - {{HTTPHeader("Repr-Digest")}}, {{HTTPHeader("Want-Repr-Digest")}} representation digest headers
 - {{HTTPHeader("ETag")}}
-- [Digital Signatures for APIs](https://developer.ebay.com/develop/guides/digital-signatures-for-apis) SDK guide uses `Content-Digest`s for digital signatures in HTTP calls (developer.ebay.com)
+- [Digital Signatures for APIs](https://developer.ebay.com/develop/guides/sell/digital-signatures-for-apis) SDK guide uses `Content-Digest`s for digital signatures in HTTP calls (developer.ebay.com)

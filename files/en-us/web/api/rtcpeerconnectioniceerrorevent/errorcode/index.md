@@ -8,11 +8,11 @@ browser-compat: api.RTCPeerConnectionIceErrorEvent.errorCode
 
 {{APIRef("WebRTC")}}
 
-The **`errorCode`** property of the {{domxref("RTCPeerConnectionIceErrorEvent")}} interface represents the [STUN error code](https://www.iana.org/assignments/stun-parameters/stun-parameters.xhtml#stun-parameters-6) returned by the {{Glossary("STUN")}} or {{Glossary("TURN")}} server if there was an error during ICE negotiation.
+The **`errorCode`** property of the {{domxref("RTCPeerConnectionIceErrorEvent")}} interface represents the [STUN error code](https://www.iana.org/assignments/stun-parameters#stun-parameters-6) returned by the {{Glossary("STUN")}} or {{Glossary("TURN")}} server if there was an error during ICE negotiation.
 
 ## Value
 
-A positive integer value stating the numeric [STUN error code](https://www.iana.org/assignments/stun-parameters/stun-parameters.xhtml#stun-parameters-6) returned by the STUN or TURN server.
+A positive integer value stating the numeric [STUN error code](https://www.iana.org/assignments/stun-parameters#stun-parameters-6) returned by the STUN or TURN server.
 
 If no host candidate can reach the server, this property is set to the number 701, which is outside the range of valid STUN error codes.
 This value is reported only once per server URL, and only while the {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} is `gathering`.

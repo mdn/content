@@ -126,7 +126,7 @@ When the `filter` property values contains multiple functions, the filters are a
     ```
 
 - {{cssxref("filter-function/contrast", "contrast()")}}
-  - : Adjusts the contrast of the input image. A value of `0%` makes the image grey, `100%` has no effect, and values over `100%` create a contrast.
+  - : Adjusts the contrast of the input image. A value of `0%` makes the image gray, `100%` has no effect, and values over `100%` create a contrast.
 
     ```css
     filter: contrast(200%);
@@ -207,7 +207,7 @@ If the filter lists are of different lengths, the missing equivalent filter func
 
 ### Applying filter functions
 
-The `filter` property is applied to the second image, greying and blurring both the image and its border.
+The `filter` property is applied to the second image, graying and blurring both the image and its border.
 
 ```css
 img {

@@ -56,7 +56,7 @@ Events have three functions:
                   <td>This extension is allowed to modify the setting.</td>
                 </tr>
                 <tr>
-                  <td><code>controlled_by_this_extension"</code></td>
+                  <td><code>"controlled_by_this_extension"</code></td>
                   <td>This extension has already modified the setting.</td>
                 </tr>
               </tbody>

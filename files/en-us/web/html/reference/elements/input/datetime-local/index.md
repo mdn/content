@@ -9,6 +9,8 @@ sidebar: htmlsidebar
 
 {{htmlelement("input")}} elements of type **`datetime-local`** create input controls that let the user easily enter both a date and a time, including the year, month, and day as well as the time in hours and minutes.
 
+The control's UI varies in general from browser to browser. The control is intended to represent _a local date and time_, not necessarily _the user's local date and time_. In other words, the input allows any valid combination of year, month, day, hour, and minute—even if such a combination is invalid in the user's local time zone (such as the one hour within a daylight saving time spring-forward transition gap).
+
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;datetime-local&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
@@ -36,8 +38,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-The control's UI varies in general from browser to browser. The control is intended to represent _a local date and time_, not necessarily _the user's local date and time_. In other words, the input allows any valid combination of year, month, day, hour, and minute—even if such a combination is invalid in the user's local time zone (such as the one hour within a daylight saving time spring-forward transition gap).
 
 ## Value
 
@@ -157,6 +157,12 @@ Let's look at an example; here we've set minimum and maximum date/time values, a
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 If you try to submit the form with an incomplete date (or with a date outside the set bounds), the browser displays an error. Try playing with the example now:
 
 {{ EmbedLiveSample('Validation', 600, 120) }}
@@ -199,10 +205,8 @@ input:valid + span::after {
 The most basic use of `<input type="datetime-local">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
 
 ```html
-<form>
-  <label for="party">Enter a date and time for your party booking:</label>
-  <input id="party" type="datetime-local" name="party-date" />
-</form>
+<label for="party">Enter a date and time for your party booking:</label>
+<input id="party" type="datetime-local" name="party-date" />
 ```
 
 {{ EmbedLiveSample('Basic_uses_of_datetime-local', 600, 40) }}
@@ -212,15 +216,13 @@ The most basic use of `<input type="datetime-local">` involves a basic `<input>`
 You can use the [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) and [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max) attributes to restrict the dates/times that can be chosen by the user. In the following example, we are setting a minimum datetime of `2025-06-01T08:30` and a maximum datetime of `2025-06-30T16:30`:
 
 ```html
-<form>
-  <label for="party">Enter a date and time for your party booking:</label>
-  <input
-    id="party"
-    type="datetime-local"
-    name="party-date"
-    min="2025-06-01T08:30"
-    max="2025-06-30T16:30" />
-</form>
+<label for="party">Enter a date and time for your party booking:</label>
+<input
+  id="party"
+  type="datetime-local"
+  name="party-date"
+  min="2025-06-01T08:30"
+  max="2025-06-30T16:30" />
 ```
 
 {{ EmbedLiveSample('Setting_maximum_and_minimum_dates_and_times', 600, 40) }}

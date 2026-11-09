@@ -172,7 +172,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
     <tr>
       <td><code>"FnLock"</code></td>
       <td>
-        The <kbd>FnLock</kbd> or <kbd>F-Lock</kbd> (Function Lock) key.Toggles
+        The <kbd>FnLock</kbd> or <kbd>F-Lock</kbd> (Function Lock) key. Toggles
         the function key mode described by <code>"Fn"</code> on and off. Often
         handled in hardware so that events aren't generated for this key.
       </td>
@@ -3134,7 +3134,7 @@ The values below are derived in part from a number of consumer electronics techn
     <tr>
       <td><code>"ColorF4Grey"</code></td>
       <td>
-        General-purpose media function key, color-coded grey. This has index
+        General-purpose media function key, color-coded gray. This has index
         <code>4</code> among the colored keys.
       </td>
       <td><code>VK_COLORED_KEY_4</code></td>

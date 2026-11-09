@@ -11,7 +11,7 @@ browser-compat: api.Element.ariaMultiSelectable
 The **`ariaMultiSelectable`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable) attribute, which indicates that the user may select more than one item from the current selectable descendants.
 
 > [!NOTE]
-> Where possible use an HTML {{htmlelement("select")}} element as this has built in semantics and does not require ARIA attributes.
+> Where possible use an HTML {{htmlelement("select")}} element as this has built-in semantics and does not require ARIA attributes.
 
 ## Value
 

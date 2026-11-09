@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Window.message_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The `message` event is fired on a {{domxref('Window')}} object when the window receives a message, for example from a call to [`Window.postMessage()`](/en-US/docs/Web/API/Window/postMessage) from another browsing context.
 
@@ -14,11 +14,15 @@ This event is not cancellable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("message", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onmessage = (event) => { }
 ```
 
@@ -50,7 +54,7 @@ window.addEventListener("message", (event) => {
 });
 ```
 
-Alternatively the listener could use the `onmessage` event handler property:
+Alternatively the listener could use the `onmessage` event handler property (but note that this replaces other event listeners added using `onmessage`, if any):
 
 ```js
 window.onmessage = (event) => {

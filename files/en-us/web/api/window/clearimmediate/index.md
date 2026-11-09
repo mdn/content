@@ -9,7 +9,7 @@ status:
 browser-compat: api.Window.clearImmediate
 ---
 
-{{APIRef("HTML DOM")}} {{deprecated_header}}{{non-standard_header}}
+{{APIRef("HTML DOM")}} {{non-standard_header}}
 
 This method clears the action specified by {{DOMxRef("window.setImmediate")}}.
 
@@ -52,5 +52,5 @@ specification is no longer being worked on.
 
 ## See also
 
-- [Polyfill of `clearImmediate` in `core-js`](https://github.com/zloirock/core-js#setimmediate)
+- [Polyfill of `clearImmediate` in `core-js`](https://core-js.io/docs/features/web-standards/set-immediate)
 - {{DOMxRef("Window.setImmediate()")}}

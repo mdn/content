@@ -12,7 +12,7 @@ The **`mask-border-repeat`** [CSS](/en-US/docs/Web/CSS) property specifies how t
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 mask-border-repeat: stretch;
 mask-border-repeat: repeat;
 mask-border-repeat: round;

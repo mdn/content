@@ -32,7 +32,15 @@ AbortSignal.timeout(time)
 
 An {{domxref("AbortSignal")}}.
 
-The signal will abort with its {{domxref("AbortSignal.reason")}} property set to a `TimeoutError` {{domxref("DOMException")}} on timeout, or an `AbortError` {{domxref("DOMException")}} if the operation was user-triggered.
+The signal will abort with its {{domxref("AbortSignal.reason")}} property set to a `TimeoutError` {{domxref("DOMException")}} on timeout.
+
+## Description
+
+`AbortSignal.timeout()` does not provide a way to cancel its timeout. Finishing the operation early, or aborting another signal combined with it through {{domxref("AbortSignal/any_static", "AbortSignal.any()")}}, does not cancel the timeout.
+
+While the timeout is pending, the signal is kept alive if it has `abort` event listeners. [Remove listeners](/en-US/docs/Web/API/AbortSignal#removing_the_abort_event_listener) added by your code when they are no longer needed, rather than waiting for the timeout to expire. Creating long timeouts with listeners can prevent garbage collection even after application code drops its references to the signal.
+
+The `AbortSignal` becoming unreachable is not guaranteed to cancel the timeout. If resources are constrained and you want to definitively cancel timeouts early, use an {{domxref("AbortController")}} with {{domxref("Window.setTimeout", "setTimeout()")}} instead, and call {{domxref("Window.clearTimeout", "clearTimeout()")}} when the operation finishes.
 
 ## Examples
 

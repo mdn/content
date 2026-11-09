@@ -28,8 +28,6 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
   - : Returns `true` if the event was dispatched by the user attempting to reload the page, and `false` otherwise.
 - {{domxref("FetchEvent.preloadResponse")}} {{ReadOnlyInline}}
   - : A {{jsxref("Promise")}} for a {{domxref("Response")}}, or `undefined` if this fetch is not a navigation, or [navigation preload](/en-US/docs/Web/API/NavigationPreloadManager) is not enabled.
-- {{domxref("FetchEvent.replacesClientId")}} {{ReadOnlyInline}}
-  - : The {{domxref("Client.id", "id")}} of the {{domxref("Client", "client")}} that is being replaced during a page navigation.
 - {{domxref("FetchEvent.resultingClientId")}} {{ReadOnlyInline}}
   - : The {{domxref("Client.id", "id")}} of the {{domxref("Client", "client")}} that replaces the previous client during a page navigation.
 - {{domxref("FetchEvent.request")}} {{ReadOnlyInline}}

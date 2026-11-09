@@ -147,7 +147,7 @@ Web frameworks often provide a mechanism to make it easy to generate other forma
 For example, the Django template system allows you to specify variables using a "double-handlebars" syntax (e.g., `\{{ variable_name }}`), which will be replaced by values passed in from the view function when a page is rendered. The template system also provides support for expressions (with syntax: `{% expression %}`), which allow templates to perform simple operations like iterating list values passed into the template.
 
 > [!NOTE]
-> Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), etc.
+> Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), Handlebars (JavaScript), Mustache (JavaScript), etc.
 
 The code snippet below shows how this works. Continuing the "youngest team" example from the previous section, the HTML template is passed a list variable called `youngest_teams` by the view. Inside the HTML skeleton we have an expression that first checks if the `youngest_teams` variable exists, and then iterates it in a `for` loop. On each iteration the template displays the team's `team_name` value in a list item.
 
@@ -184,7 +184,7 @@ Some of the factors that may affect your decision are:
   - _Whether or not the framework encourages good development practices_: For example, a framework that encourages a [Model-View-Controller](/en-US/docs/Glossary/MVC) architecture to separate code into logical functions will result in more maintainable code than one that has no expectations on developers. Similarly, framework design can have a large impact on how easy it is to test and re-use code.
 
 - **Performance of the framework/programming language:** Usually "speed" is not the biggest factor in selection because even relatively slow runtimes like Python are more than "good enough" for mid-sized sites running on moderate hardware. The perceived speed benefits of another language, e.g., C++ or JavaScript, may well be offset by the costs of learning and maintenance.
-- **Caching support:** As your website becomes more successful then you may find that it can no longer cope with the number of requests it is receiving as users access it. At this point you may consider adding support for caching. Caching is an optimization where you store all or part of a web response so that it does not have to be recalculated on subsequent requests. Returning a cached response is much faster than calculating one in the first place. Caching can be implemented in your code or in the server (see [reverse proxy](https://en.wikipedia.org/wiki/Reverse_proxy)). Web frameworks will have different levels of support for defining what content can be cached.
+- **Caching support:** As your website becomes more successful, you may find that it can no longer cope with the number of requests it is receiving as users access it. At this point you may consider adding support for caching. Caching is an optimization where you store all or part of a web response so that it does not have to be recalculated on subsequent requests. Returning a cached response is much faster than calculating one in the first place. Caching can be implemented in your code or in the server (see [reverse proxy](https://en.wikipedia.org/wiki/Reverse_proxy)). Web frameworks will have different levels of support for defining what content can be cached.
 - **Scalability:** Once your website is fantastically successful you will exhaust the benefits of caching and even reach the limits of _vertical scaling_ (running your web application on more powerful hardware). At this point you may need to _scale horizontally_ (share the load by distributing your site across a number of web servers and databases) or scale "geographically" because some of your customers are based a long way away from your server. The web framework you choose can make a big difference on how easy it is to scale your site.
 - **Web security:** Some web frameworks provide better support for handling common web attacks. Django for example sanitizes all user input from HTML templates so that user-entered JavaScript cannot be run. Other frameworks provide similar protection, but it is not always enabled by default.
 
@@ -272,13 +272,13 @@ Rails has been used for high profile sites, including: [Basecamp](https://baseca
 
 [Laravel](https://laravel.com/) is a web application framework with expressive, elegant syntax. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [Simple, fast routing engine](https://laravel.com/framework/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/framework/docs/container).
+- Multiple back-ends for [session](https://laravel.com/framework/docs/session) and [cache](https://laravel.com/framework/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/framework/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/framework/docs/migrations).
+- [Robust background job processing](https://laravel.com/framework/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/framework/docs/broadcasting).
 
 Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
 
@@ -309,13 +309,13 @@ Some of the features provided by Mojolicious are:
 
 [Spring Boot](https://spring.io/projects/spring-boot/) is one of a number of projects provided by [Spring](https://spring.io/). It is a good starting point for doing server-side web development using [Java](https://www.java.com/).
 
-Although definitely not the only framework based on [Java](https://www.java.com/) it is easy to use to create stand-alone, production-grade Spring-based Applications that you can "just run". It is an opinionated view of the Spring platform and third-party libraries but allows to start with minimum fuss and configuration.
+Although definitely not the only framework based on [Java](https://www.java.com/) it is easy to use to create stand-alone, production-grade Spring-based Applications that you can "just run". It is an opinionated view of the Spring platform and third-party libraries but allows you to start with minimum fuss and configuration.
 
 It can be used for small problems but its strength is building larger scale applications that use a cloud approach. Usually multiple applications run in parallel talking to each other, with some providing user interaction and others doing back end work (e.g., accessing databases or other services). Load balancers help to ensure redundancy and reliability or allow geolocated handling of user requests to ensure responsiveness.
 
 ## Summary
 
-This article has shown that web frameworks can make it easier to develop and maintain server-side code. It has also provided a high level overview of a few popular frameworks, and discussed criteria for choosing a web application framework. You should now have at least an idea of how to choose a web framework for your own server-side development. If not, then don't worry — later on in the course we'll give you detailed tutorials on Django and Express to give you some experience of actually working with a web framework.
+This article has shown that web frameworks can make it easier to develop and maintain server-side code. It has also provided a high-level overview of a few popular frameworks, and discussed criteria for choosing a web application framework. You should now have at least an idea of how to choose a web framework for your own server-side development. If not, then don't worry — later on in the course we'll give you detailed tutorials on Django and Express to give you some experience of actually working with a web framework.
 
 For the next article in this module we'll change direction slightly and consider web security.
 

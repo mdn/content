@@ -162,7 +162,7 @@ async function returnPathDirectories(directoryHandle) {
   // Get a file handle by showing a file picker:
   const [handle] = await self.showOpenFilePicker();
   if (!handle) {
-    // User cancelled, or otherwise failed to open a file.
+    // User canceled, or otherwise failed to open a file.
     return;
   }
 
@@ -186,7 +186,7 @@ async function returnPathDirectories(directoryHandle) {
 
 The following asynchronous function opens the save file picker, which returns a {{domxref('FileSystemFileHandle')}} once a file is selected. A writable stream is then created using the {{domxref('FileSystemFileHandle.createWritable()')}} method.
 
-A user defined {{domxref('Blob')}} is then written to the stream which is subsequently closed.
+A user-defined {{domxref('Blob')}} is then written to the stream which is subsequently closed.
 
 ```js
 async function saveFile() {

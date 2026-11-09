@@ -166,7 +166,7 @@ It is not true in all cases, but most files need an extension to be handled prop
 > [!NOTE]
 > It is possible to put more than one dot in a file name, for example `my.cats.html`. In such cases, the last dot is assumed to be the start of the file extension.
 
-On Windows computers, you might have trouble seeing the extensions of some files, because Windows has an option called **Hide extensions for known file types** turned on by default. You can turn this off by going to File Explorer, selecting the **Folder options…** option, unchecking the **Hide extensions for known file types** check box, then clicking **OK**. For more specific information covering your version of Windows, you can search on the web.
+On Windows computers, you might have trouble seeing the extensions of some files, because Windows has an option called **Hide extensions for known file types** turned on by default. You can turn this off by going to File Explorer, selecting the **Folder options…** option, unchecking the **Hide extensions for known file types** checkbox, then clicking **OK**. For more specific information covering your version of Windows, you can search on the web.
 
 ### Best practices for naming files
 

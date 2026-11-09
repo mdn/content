@@ -104,7 +104,7 @@ translate: 20px 4rem 150px;
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 translate: none;
 
 /* Single values */

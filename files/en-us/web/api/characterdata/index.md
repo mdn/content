@@ -37,13 +37,13 @@ _This interface also inherits methods from its parents, {{domxref("Node")}} and 
   - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the
     `CharacterData`'s parent, just before the `CharacterData` object.
 - {{domxref("CharacterData.deleteData()")}}
-  - : Removes the specified amount of characters, starting at the specified offset, from the `CharacterData.data` string; when this method returns, `data` contains the shortened string.
+  - : Removes the specified number of characters, starting at the specified offset, from the `CharacterData.data` string; when this method returns, `data` contains the shortened string.
 - {{domxref("CharacterData.insertData()")}}
   - : Inserts the specified characters, at the specified offset, in the `CharacterData.data` string; when this method returns, `data` contains the modified string.
 - {{domxref("CharacterData.remove()")}}
   - : Removes the object from its parent children list.
 - {{domxref("CharacterData.replaceData()")}}
-  - : Replaces the specified amount of characters, starting at the specified offset, with the specified string; when this method returns, `data` contains the modified string.
+  - : Replaces the specified number of characters, starting at the specified offset, with the specified string; when this method returns, `data` contains the modified string.
 - {{DOMxRef("CharacterData.replaceWith()")}}
   - : Replaces the characters in the children list of its parent with a set of {{domxref("Node")}} objects or strings.
 - {{domxref("CharacterData.substringData()")}}

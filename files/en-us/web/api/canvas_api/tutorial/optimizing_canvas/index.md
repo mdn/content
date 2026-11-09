@@ -21,7 +21,7 @@ myCanvas.offscreenCanvas = document.createElement("canvas");
 myCanvas.offscreenCanvas.width = myCanvas.width;
 myCanvas.offscreenCanvas.height = myCanvas.height;
 
-myCanvas.getContext("2d").drawImage(myCanvas.offScreenCanvas, 0, 0);
+myCanvas.getContext("2d").drawImage(myCanvas.offscreenCanvas, 0, 0);
 ```
 
 ### Avoid floating-point coordinates and use integers instead

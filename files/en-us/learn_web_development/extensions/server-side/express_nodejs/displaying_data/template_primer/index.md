@@ -84,7 +84,7 @@ html(lang="en")
 Element attributes are defined in parentheses after their associated element. Inside the parentheses, the attributes are defined in comma- or whitespace- separated lists of the pairs of attribute names and attribute values, for example:
 
 - `script(type='text/javascript')`, `link(rel='stylesheet', href='/stylesheets/style.css')`
-- `meta(name='viewport' content='width=device-width initial-scale=1')`
+- `meta(name='viewport' content='width=device-width')`
 
 The values of all attributes are _escaped_ (e.g., characters like `>` are converted to their HTML code equivalents like `&gt;`) to prevent JavaScript injection or cross-site scripting attacks.
 
@@ -127,7 +127,7 @@ else
   p A variable named "title" does not exist
 ```
 
-You can also perform loop/iteration operations using `each-in` or `while` syntax. In the code fragment below we've looped through an array to display a list of variables (note the use of the 'li=' to evaluate the "val" as a variable below. The value you iterate across can also be passed into the template as a variable!
+You can also perform loop/iteration operations using `each-in` or `while` syntax. In the code fragment below we've looped through an array to display a list of variables (note the use of the 'li=' to evaluate the "val" as a variable below). The value you iterate across can also be passed into the template as a variable!
 
 ```pug
 ul

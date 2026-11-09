@@ -7,14 +7,19 @@ sidebar: glossarysidebar
 
 A **shallow copy** of an object is a copy whose properties share the same {{Glossary("object reference", "references")}} (point to the same underlying values) as those of the source object from which the copy was made. As a result, when you change either the source or the copy, you may also cause the other object to change too. That behavior contrasts with the behavior of a {{Glossary("deep copy")}}, in which the source and copy are completely independent.
 
-More formally, two objects `o1` and `o2` are shallow copies if:
+Shallow copying is usually implemented as such:
 
-1. They are not the same object (`o1 !== o2`).
-2. The properties of `o1` and `o2` have the same names in the same order.
-3. The values of their properties are equal.
-4. Their prototype chains are equal.
+1. A new object of the same type is created. The prototype chain is nearly always preserved. For example, deep copying a {{jsxref("Map")}} should result in a {{jsxref("Map")}} and not something else.
+2. For each own property of the original object, a property with the same key is defined on the new object.
+3. Each new property's value is set to the same reference as the original property's value. If the property's value is a primitive, no copying is done.
+4. Any data that's not exposed as properties (such as {{jsxref("Map")}}) is ported over, but without copying any object references inside the data, provided that the implementation recognizes the object type and knows how to retrieve and set the data.
 
-See also the definition of _{{Glossary("deep copy", "structural equivalence")}}_.
+Note that because JavaScript has no built-in mechanism that performs a generic shallow copy (the existing ones only assume specific object types like plain objects or arrays), library implementations often diverge on technical details, such as:
+
+- Whether non-enumerable or symbol properties are copied
+- Whether property descriptors are copied
+- Whether accessor properties are copied as accessors
+- What data structures support copying non-property data
 
 The copy of an object whose properties all have primitive values fits the definition of both a {{Glossary("deep copy")}} and a shallow copy. It is somewhat useless to talk about the depth of such a copy, though, because it has no nested properties and we usually talk about deep copying in the context of mutating nested properties.
 
@@ -57,4 +62,5 @@ console.log(JSON.stringify(ingredientsList));
 ## See also
 
 - Related glossary terms:
+  - {{Glossary("Deep equality")}}
   - {{Glossary("Deep copy")}}

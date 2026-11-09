@@ -8,8 +8,6 @@ browser-compat: javascript.builtins.escape
 sidebar: jssidebar
 ---
 
-{{Deprecated_Header}}
-
 > [!NOTE]
 > `escape()` is a non-standard function implemented by browsers and was only standardized for cross-engine compatibility. It is not required to be implemented by all JavaScript engines and may not work everywhere. Use {{jsxref("encodeURIComponent()")}} or {{jsxref("encodeURI()")}} if possible.
 
@@ -62,7 +60,7 @@ escape("@*_+-./"); // "@*_+-./"
 
 ## See also
 
-- [Polyfill of `escape` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `escape` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - {{jsxref("encodeURI")}}
 - {{jsxref("encodeURIComponent")}}
 - {{jsxref("unescape")}}

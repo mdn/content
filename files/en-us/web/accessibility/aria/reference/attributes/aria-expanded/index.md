@@ -52,7 +52,7 @@ By default, some roles are hidden or collapsed and other roles are open or expan
   <span aria-hidden="true">?</span>
 </button>
 <p id="username-desc" hidden>
-  Your username is the name that you use to log in to this service.
+  Your username is the name that you use to log into this service.
 </p>
 ```
 

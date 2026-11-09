@@ -3,6 +3,8 @@ title: "HTMLAllCollection: item() method"
 short-title: item()
 slug: Web/API/HTMLAllCollection/item
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.HTMLAllCollection.item
 ---
 

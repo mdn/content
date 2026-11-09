@@ -56,7 +56,7 @@ accent-color: hsl(250 100% 34%);
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 accent-color: auto;
 
 /* <color> values */

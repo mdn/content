@@ -23,7 +23,7 @@ This affects federated sign-in in general, as well as more specific identity fed
 
 - [OIDC front-channel logout](https://openid.net/specs/openid-connect-frontchannel-1_0.html): This flow requires the IDP to embed several RP `<iframe>`s, which rely on RP cookies.
 - Social Widgets: In order to provide social widgets, the IdP third-party cookie must be provided from the RP top-level origin.
-- Personalized buttons: The display of personalized sign in information on a {{htmlelement("button")}} in the RP origin is implemented as an IdP `<iframe>` that requires third party cookies.
+- Personalized buttons: The display of personalized sign in information on a {{htmlelement("button")}} in the RP origin is implemented as an IdP `<iframe>` that requires third-party cookies.
 - Session Refresh without top-level navigation or popups.
 
 FedCM aims to work around this problem, providing a dedicated mechanism for federated identity flows on the web, and enabling supporting browsers to provide special UI elements on RPs, allowing users to choose an IdP account to use for sign-in.

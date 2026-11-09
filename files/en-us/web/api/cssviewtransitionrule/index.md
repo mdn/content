@@ -33,7 +33,7 @@ A stylesheet includes a {{cssxref("@view-transition")}} [at-rule](/en-US/docs/We
 ```css
 @view-transition {
   navigation: auto;
-  types: slide, rotate;
+  types: slide rotate;
 }
 ```
 

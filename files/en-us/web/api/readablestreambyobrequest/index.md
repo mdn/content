@@ -7,7 +7,7 @@ browser-compat: api.ReadableStreamBYOBRequest
 
 {{APIRef("Streams")}}{{AvailableInWorkers}}
 
-The **`ReadableStreamBYOBRequest`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a "pull request" for data from an underlying source that will made as a zero-copy transfer to a consumer (bypassing the stream's internal queues).
+The **`ReadableStreamBYOBRequest`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a "pull request" for data from an underlying source that will be made as a zero-copy transfer to a consumer (bypassing the stream's internal queues).
 
 `ReadableStreamBYOBRequest` objects are created in "BYOB mode" when a consumer makes a request for data and the stream's internal queue is _empty_.
 (The stream will resolve the consumer's request directly if it already has buffered data).

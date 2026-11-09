@@ -23,7 +23,7 @@ If the intrinsic height is not available—either because the image does not spe
 
 ## Examples
 
-This example displays both the natural, density-adjusted size of an image as well as its rendered size as altered by the page's CSS and other factors.
+This example displays both the natural, density-adjusted size of an image and its rendered size as altered by the page's CSS and other factors.
 
 ### HTML
 

@@ -15,6 +15,8 @@ The **`GPUSupportedLimits`** interface of the {{domxref("WebGPU API", "WebGPU AP
 
 The following limits are represented by properties in a `GPUSupportedLimits` object. See the [Limits](https://gpuweb.github.io/gpuweb/#limits) section of the specification for detailed descriptions of what the limits relate to.
 
+All properties are read-only.
+
 | Limit name                                                                                                                                                                                                                                                            | Default value            |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
 | `maxTextureDimension1D`                                                                                                                                                                                                                                               | 8192                     |
@@ -64,6 +66,10 @@ If your GPU's actual limit is 16384, the browser will still report 8192.
 Given that different browsers will handle this differently and the tier values may change over time, it is hard to provide an accurate account of what limit values to expect — thorough testing is advised.
 
 Note that when calling {{domxref("GPUAdapter.requestDevice()")}} to request a {{domxref("GPUDevice")}} that meets some minimum requirements ("limits"), you pass an object that has the same property names as `GPUSupportedLimits`.
+
+### Storage buffer and texture limits outside compatibility mode
+
+When creating a device, requested `maxStorageBuffersInFragmentStage`, `maxStorageBuffersInVertexStage`, `maxStorageTexturesInFragmentStage`, and `maxStorageTexturesInVertexStage` limits aren't kept as separate values when [WebGPU compatibility mode](/en-US/docs/Web/API/WebGPU_API#webgpu_compatibility_mode) isn't being used. Instead, they raise the `maxStorageBuffersPerShaderStage` and `maxStorageTexturesPerShaderStage` limits if they're higher, and are then adjusted to equal them.
 
 ## Examples
 

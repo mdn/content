@@ -52,6 +52,12 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - `width`
   - : The width of the display resource, as in {{cssxref("&lt;integer&gt;")}} in {{glossary("CSS pixel", "CSS pixels")}}.
 
+## Usage notes
+
+The `<object>` element can display PDFs using the browser's built-in PDF viewer. Its children provide fallback content when the resource cannot be displayed. You can use this to provide a link to the PDF, but also provide a link outside the element so it remains available if the viewer loads but fails to display the PDF.
+
+Unlike {{HTMLElement("iframe")}}, `<object>` has no attributes that control loading. The embedding page's Content Security Policy controls its sources through {{CSP("object-src")}}.
+
 ## Examples
 
 ### Embed a video

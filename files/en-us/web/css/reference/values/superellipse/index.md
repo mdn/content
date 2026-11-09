@@ -119,7 +119,7 @@ The following diagram illustrates different `superellipse()` values for the top 
 
 ![Line diagram illustrating the ellipses created using different K values, as described subsequently](superellipse-param.svg)
 
-- A `K` value of `0` creates a straight line. This value can be used to create bevelled corners and corresponds to the {{cssxref("&lt;corner-shape-value>")}} `bevel` keyword.
+- A `K` value of `0` creates a straight line. This value can be used to create beveled corners and corresponds to the {{cssxref("&lt;corner-shape-value>")}} `bevel` keyword.
 - A `K` value of `1` creates an ordinary ellipse, corresponding to the `round` keyword.
 - A `K` value of `>1` makes the ellipse shape more square; `2` corresponds to the `squircle` keyword.
 - A `K` value of `infinity` creates a perfect square (corresponding to the `square` keyword), although `K` values of `10` or more are virtually indistinguishable from a square.

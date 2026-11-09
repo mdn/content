@@ -41,9 +41,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 ## Accessibility
 
-### Labelling
+### Labeling
 
-In most cases you should provide an accessible label when using `<progress>`. While you can use the standard ARIA labelling attributes [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) as you would for any element with `role="progressbar"`, when using `<progress>` you can alternatively use the {{htmlelement("label")}} element.
+In most cases you should provide an accessible label when using `<progress>`. While you can use the standard ARIA labeling attributes [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) as you would for any element with `role="progressbar"`, when using `<progress>` you can alternatively use the {{htmlelement("label")}} element.
 
 > [!NOTE]
 > Text placed between the element's tags is not an accessible label, it is only recommended as a fallback for old browsers that do not support this element.

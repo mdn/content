@@ -7,7 +7,7 @@ browser-compat: webassembly.instructions.ctz
 sidebar: webassemblysidebar
 ---
 
-The **`ctz`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _count trailing zeros_, is used to count the amount of zeros at the end of the numbers binary representation.
+The **`ctz`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _count trailing zeros_, is used to count the number of zeros at the end of the numbers binary representation.
 
 {{InteractiveExample("Wat Demo: ctz", "tabbed-taller")}}
 

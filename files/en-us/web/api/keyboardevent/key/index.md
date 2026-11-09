@@ -30,7 +30,7 @@ Its value is determined as follows:
 
 Every `KeyboardEvent` is fired in a pre-determined sequence. For a given key press, the sequence of `KeyboardEvent`s fired is as follows assuming that {{domxref("Event.preventDefault")}} is not called:
 
-1. A {{domxref("Element/keydown_event", "keydown")}} event is first fired. If the key is held down further and the key produces a character key, then the event continues to be emitted in a platform implementation dependent interval and the {{domxref("KeyboardEvent.repeat")}} read only property is set to `true`.
+1. A {{domxref("Element/keydown_event", "keydown")}} event is first fired. If the key is held down further and the key produces a character key, then the event continues to be emitted in a platform implementation dependent interval and the {{domxref("KeyboardEvent.repeat")}} read-only property is set to `true`.
 2. If the key produces a character key that would result in a character being inserted into possibly an {{HTMLElement("input")}}, {{HTMLElement("textarea")}} or an element with {{domxref("HTMLElement.contentEditable")}} set to true, the {{domxref("Element/beforeinput_event", "beforeinput")}} and {{domxref("Element/input_event", "input")}} event types are fired in that order. Note that some other implementations may fire {{domxref("Element/keypress_event", "keypress")}} event if supported. The events will be fired repeatedly while the key is held down.
 3. A {{domxref("Element/keyup_event", "keyup")}} event is fired once the key is released. This completes the process.
 

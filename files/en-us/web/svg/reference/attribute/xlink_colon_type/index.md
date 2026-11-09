@@ -8,8 +8,6 @@ spec-urls: https://www.w3.org/TR/SVG11/linking.html#XLinkTypeAttribute
 sidebar: svgref
 ---
 
-{{Deprecated_Header}}
-
 The **`xlink:type`** attribute identifies the type of {{Glossary("XLink")}} being used. In SVG, only simple links are available.
 
 You can use this attribute with the following SVG elements:

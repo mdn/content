@@ -9,8 +9,6 @@ browser-compat: javascript.builtins.Date.getYear
 sidebar: jsref
 ---
 
-{{Deprecated_Header}}
-
 The **`getYear()`** method of {{jsxref("Date")}} instances returns the year for this date according to local time. Because `getYear()` does not return full years ("year 2000 problem"), it is deprecated and has been replaced by the {{jsxref("Date/getFullYear", "getFullYear()")}} method.
 
 ## Syntax
@@ -82,7 +80,7 @@ const year = xmas.getYear(); // returns 95
 
 ## See also
 
-- [Polyfill of `Date.prototype.getYear` in `core-js`](https://github.com/zloirock/core-js#ecmascript-date)
+- [Polyfill of `Date.prototype.getYear` in `core-js`](https://core-js.io/docs/features/ecmascript/date)
 - [es-shims polyfill of `Date.prototype.getYear`](https://www.npmjs.com/package/date.prototype.getyear)
 - {{jsxref("Date.prototype.getFullYear()")}}
 - {{jsxref("Date.prototype.getUTCFullYear()")}}

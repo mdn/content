@@ -36,7 +36,7 @@ Promise.race(iterable)
 ### Parameters
 
 - `iterable`
-  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) of promises.
+  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) of promises. These values are [awaited](/en-US/docs/Web/JavaScript/Reference/Operators/await), so other [thenables](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) are also resolved, while non-thenables are returned as-is.
 
 ### Return value
 
@@ -49,6 +49,8 @@ The `Promise.race()` method is one of the [promise concurrency](/en-US/docs/Web/
 If the iterable contains one or more non-promise values and/or an already settled promise, then `Promise.race()` will settle to the first of these values found in the iterable.
 
 Like other promise combinators, `Promise.race()` immediately marks all promises as "handled" when it is called (by calling their `.then()` methods). Subsequent rejections after the first settlement will be ignored, and will not trigger any `unhandledrejection` events.
+
+Settling the returned promise does not cancel the losing operations or unsubscribe the handlers attached to their promises. If you repeatedly race a long-lived pending promise against short-lived promises, handlers can accumulate on the pending promise even after each race settles.
 
 ## Examples
 
@@ -188,9 +190,9 @@ const data = Promise.race([
   .catch((err) => displayError(err));
 ```
 
-If the `data` promise fulfills, it will contain the data fetched from `/api`; otherwise, it will reject if `fetch` remains pending for 5 seconds and loses the race with the `setTimeout` timer.
+If the `data` promise fulfills, it will contain the data fetched from `/api`. `Promise.race` will capture and discard the settlement results of the losing promises, so the `"Request timed out"` rejection will not bubble up as unhandled. Otherwise, if `fetch` remains pending for 5 seconds and loses the race with the `setTimeout` timer, the final promise will reject.
 
-Note that there's no need to explicitly clean up the timeout rejection (such as clearing the timeout) in case the `fetch` promise finishes first. `Promise.race` will capture and discard the settlement results of the losing promises, so the `"Request timed out"` rejection will not bubble up as unhandled.
+One promise finishing does not automatically cancel the other; the other's result is simply ignored. This does not pose problems in this small example, but it keeps resources such as network connections and timers alive for longer than necessary. To release resources early, abort the fetch if the timeout wins, or clear the timeout if the fetch wins. Whenever possible—including fetch—prefer using the {{domxref("AbortController")}} API instead.
 
 ### Using Promise.race() to detect the status of a promise
 

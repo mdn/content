@@ -56,7 +56,7 @@ _No changes._
 
 ### WebDriver conformance (Marionette)
 
-- Marionette will no longer be enabled unless the `--marionette` command line argument or the `MOZ_MARIONETTE` environment variable is specified. As such the `marionette.enabled` preference is no longer used. With this change the state of `navigator.webdriver` now correctly reflects the enabled state of Marionette ([Firefox bug 1593343](https://bugzil.la/1593343)).
+- Marionette will no longer be enabled unless the `--marionette` command-line argument or the `MOZ_MARIONETTE` environment variable is specified. As such the `marionette.enabled` preference is no longer used. With this change the state of `navigator.webdriver` now correctly reflects the enabled state of Marionette ([Firefox bug 1593343](https://bugzil.la/1593343)).
 - Fixed a bug where pointer actions other than `down` and `up` inappropriately led to buttons being pressed ([Firefox bug 1686361](https://bugzil.la/1686361)).
 - Fixed a race condition in `WebDriver:GetCurrentURL` that could have led the command to return the URL of the previously opened page, or even a hang in Marionette ([Firefox bug 1664881](https://bugzil.la/1664881)).
 

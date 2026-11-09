@@ -14,11 +14,15 @@ Once an exception is thrown, the processor (and thus the node) will output silen
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("processorerror", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onprocessorerror = (event) => { }
 ```
 
@@ -36,7 +40,7 @@ whiteNoiseNode.addEventListener("processorerror", (event) => {
 });
 ```
 
-Alternatively, you can use the `onprocessorerror` event handler property to establish a handler for the `processorerror` event:
+Alternatively, you can use the `onprocessorerror` event handler property to establish a handler for the `processorerror` event (but note that this replaces other event listeners added using `onprocessorerror`, if any):
 
 ```js
 whiteNoiseNode.onprocessorerror = (event) => {

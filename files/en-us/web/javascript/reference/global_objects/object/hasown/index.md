@@ -50,7 +50,7 @@ Object.hasOwn(obj, prop)
 
 The `Object.hasOwn()` method returns `true` if the specified property is a direct property of the object — even if the property value is `null` or `undefined`. The method returns `false` if the property is inherited, or has not been declared at all. Unlike the {{jsxref("Operators/in", "in")}} operator, this method does not check for the specified property in the object's prototype chain.
 
-It is recommended over {{jsxref("Object.prototype.hasOwnProperty()")}} because it works for [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) and with objects that have overridden the inherited `hasOwnProperty()` method. While it is possible to workaround these problems by accessing `Object.prototype.hasOwnProperty()` on another object (like `Object.prototype.hasOwnProperty.call(obj, prop)`, `Object.hasOwn()` is more intuitive and concise.
+It is recommended over {{jsxref("Object.prototype.hasOwnProperty()")}} because it works for [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) and with objects that have overridden the inherited `hasOwnProperty()` method. While it is possible to work around these problems by accessing `Object.prototype.hasOwnProperty()` on another object (like `Object.prototype.hasOwnProperty.call(obj, prop)`), `Object.hasOwn()` is more intuitive and concise.
 
 ## Examples
 
@@ -162,7 +162,7 @@ console.log(Object.hasOwn(foo, "prop")); // true
 
 ## See also
 
-- [Polyfill of `Object.hasOwn` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.hasOwn` in `core-js`](https://core-js.io/docs/features/ecmascript/object)
 - [es-shims polyfill of `Object.hasOwn`](https://www.npmjs.com/package/object.hasown)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

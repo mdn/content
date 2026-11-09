@@ -30,25 +30,25 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 - {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Always returns `"layout-shift"`.
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Always returns `"layout-shift"`.
+  - : Always returns an empty string.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time when the layout shift started.
 
 This interface also supports the following properties:
 
-- {{domxref("LayoutShift.value")}} {{Experimental_Inline}}
+- {{domxref("LayoutShift.value")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the layout shift score calculated as the impact fraction (fraction of the viewport that was shifted) multiplied by the distance fraction (distance moved as a fraction of viewport).
-- {{domxref("LayoutShift.hadRecentInput")}} {{Experimental_Inline}}
+- {{domxref("LayoutShift.hadRecentInput")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if {{domxref("LayoutShift.lastInputTime", "lastInputTime")}} is less than 500 milliseconds in the past.
-- {{domxref("LayoutShift.lastInputTime")}} {{Experimental_Inline}}
+- {{domxref("LayoutShift.lastInputTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the time of the most recent excluding input (user input that would exclude this entry as a contributor to the CLS score) or `0` if no excluding input has occurred.
-- {{domxref("LayoutShift.sources")}} {{Experimental_Inline}}
+- {{domxref("LayoutShift.sources")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an array of {{domxref("LayoutShiftAttribution")}} objects with information on the elements that were shifted.
 
 ## Instance methods
 
 - {{domxref("LayoutShift.toJSON()")}} {{Experimental_Inline}}
-  - : Converts the properties to JSON.
+  - : Returns a JSON-serializable plain object representing the `LayoutShift` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 

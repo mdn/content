@@ -46,7 +46,7 @@ If the height or width of the canvas is `0` or larger than the [maximum canvas s
 
 ### Exceptions
 
-- `SecurityError`
+- `SecurityError` {{domxref("DOMException")}}
   - : The canvas's bitmap is not origin clean;
     at least some of its contents have or may have been loaded from a site other than the one from which the document itself was loaded.
 

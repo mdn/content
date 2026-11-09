@@ -8,7 +8,7 @@ status:
 browser-compat: api.SpeechGrammarList.item
 ---
 
-{{APIRef("Web Speech API")}}{{deprecated_header}}
+{{APIRef("Web Speech API")}}
 
 The **`item`** getter of the {{domxref("SpeechGrammarList")}}
 interface is a standard getter — it allows individual {{domxref("SpeechGrammar")}}

@@ -8,7 +8,7 @@ status:
 browser-compat: api.Performance.timing
 ---
 
-{{APIRef("Performance API")}}{{deprecated_header}}
+{{APIRef("Performance API")}}
 
 The legacy
 **`Performance.timing`** read-only

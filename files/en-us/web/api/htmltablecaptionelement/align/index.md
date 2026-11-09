@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLTableCaptionElement.align
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 The **`align`** property of the {{domxref("HTMLTableCaptionElement")}} interface is a string indicating how to horizontally align text in the {{htmlelement("caption")}} table element.
 

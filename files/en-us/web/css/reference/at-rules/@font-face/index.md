@@ -16,8 +16,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Gu
   font-family: "Trickster";
   src:
     local("Trickster"),
-    url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
-    url("trickster-outline.otf") format("opentype"),
+    url("trickster-COLRv1.woff2") format("woff2") tech(color-COLRv1),
     url("trickster-outline.woff2") format("woff2");
 }
 ```
@@ -151,6 +150,6 @@ In this example, the user's local copy of "Helvetica Neue Bold" is used; if the 
 ## See also
 
 - [About WOFF](/en-US/docs/Web/CSS/Guides/Fonts/WOFF)
-- [FontSquirrel @font-face generator](https://www.fontsquirrel.com/tools/webfont-generator)
+- [Transfonter webfont generator](https://transfonter.org/)
 - [Beautiful fonts with @font-face](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
 - [Font Library](https://fontlibrary.org/)

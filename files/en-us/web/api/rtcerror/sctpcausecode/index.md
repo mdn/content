@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.RTCError.sctpCauseCode
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`sctpCauseCode`** read-only property of the {{domxref("RTCError")}} interface provides the {{Glossary("SCTP")}} cause code explaining why the SCTP negotiation failed, if the `RTCError` represents an SCTP error.
 

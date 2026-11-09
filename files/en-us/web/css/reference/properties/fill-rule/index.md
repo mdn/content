@@ -17,7 +17,7 @@ The `fill-rule` clarifies which areas of a shape should be considered "inside" t
 ## Syntax
 
 ```css
-/* keywords */
+/* Keyword values */
 fill-rule: evenodd;
 fill-rule: nonzero;
 

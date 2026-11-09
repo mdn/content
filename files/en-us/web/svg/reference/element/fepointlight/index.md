@@ -6,7 +6,7 @@ browser-compat: svg.elements.fePointLight
 sidebar: svgref
 ---
 
-The **`<fePointLight>`** [SVG](/en-US/docs/Web/SVG) element defines a light source which allows to create a point light effect. It can be used within a lighting filter primitive: {{SVGElement("feDiffuseLighting")}} or {{SVGElement("feSpecularLighting")}}.
+The **`<fePointLight>`** [SVG](/en-US/docs/Web/SVG) element defines a light source which allows you to create a point light effect. It can be used within a lighting filter primitive: {{SVGElement("feDiffuseLighting")}} or {{SVGElement("feSpecularLighting")}}.
 
 ## Usage context
 

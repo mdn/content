@@ -20,7 +20,7 @@ A number representing the radius of the cylinder.
 
 ### Getting a layer's radius
 
-The {{domxref("XRWebGLBinding.createCylinderLayer()")}} method creates a cylinder layer and allows to specify a `radius`. The `XRCylinder.radius` property can be used after layer creation to get the radius used or to set it to a new one.
+The {{domxref("XRWebGLBinding.createCylinderLayer()")}} method creates a cylinder layer and allows you to specify a `radius`. The `XRCylinder.radius` property can be used after layer creation to get the radius used or to set it to a new one.
 
 ```js
 const cylinderLayer = xrGlBinding.createCylinderLayer({

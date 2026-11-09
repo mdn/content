@@ -9,8 +9,6 @@ browser-compat: javascript.builtins.String.blink
 sidebar: jsref
 ---
 
-{{Deprecated_Header}}
-
 The **`blink()`** method of {{jsxref("String")}} values creates a string that embeds this string in a `<blink>` element (`<blink>str</blink>`), which used to cause a string to blink in old browsers.
 
 > [!NOTE]
@@ -63,6 +61,6 @@ You should avoid blinking elements altogether.
 
 ## See also
 
-- [Polyfill of `String.prototype.blink` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.blink` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - [es-shims polyfill of `String.prototype.blink`](https://www.npmjs.com/package/es-string-html-methods)
 - [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)

@@ -21,7 +21,10 @@ For technology-specific guidelines, see the following articles:
 There is one overarching consideration that you need to keep in mind: **Readers will copy and paste examples into their own code and may put it into production.**
 Therefore, you should make sure that code examples are usable, follow generally accepted best practices, and do not do anything that will cause an application to be insecure, inefficient, bloated, or inaccessible.
 
-If the code example is not runnable or production-worthy, include a warning in a code comment and in the explanatory text; for example, if it is only a snippet and not a full example, make this clear. This also means that you should provide all of the information necessary to run the example including any dependencies and setup information.
+Run and test every code example before you submit it, regardless of the tools you used to create it.
+Don't paste in code that you haven't verified.
+
+If a code example is an incomplete snippet, make clear that it is not a full example. Provide all of the information necessary to run the example, including any dependencies and setup information. If the example is not production-worthy, include a warning in a code comment and in the explanatory text.
 
 Code examples should be straightforward enough to be understandable, but complex enough to do something interesting, and (preferably) useful.
 The aim is not necessarily to produce efficient, clever code that impresses experts and has great functionality, but rather to share reduced working examples that can be understood and learned from as quickly as possible.
@@ -38,8 +41,65 @@ Some more general guidelines include:
 
 ### Browser support
 
-When creating code examples for a technology that's not yet available in all major browsers, consider using [feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) to fall back to a simpler behavior or inform the user that their browser is not yet supported.
 Do not specify supported browsers and their versions in code comments or prose, as this information quickly becomes outdated.
+
+When creating code examples for a technology that's not yet available in all major browsers, consider using [feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) to provide a fallback behavior or display a message indicating that the reader's browser doesn't support the demonstrated feature.
+
+Keep the rendered output of code examples visible even when the reader's browser doesn't support the demonstrated feature. This lets readers compare the code with its result and see how the example behaves without the feature. Display a browser-support message alongside the rendered output instead of hiding or removing it to explain why the result may appear different from the intended demonstration.
+
+For example, in CSS code examples, use the [`@supports` at-rule with the `not` operator](/en-US/docs/Web/CSS/Reference/At-rules/@supports#the_not_operator) to display a browser-support message when the reader's browser doesn't support the feature being demonstrated.
+
+#### HTML
+
+```html live-sample___corner-shape-support
+<div>Nice scooped corners</div>
+```
+
+#### CSS
+
+```css live-sample___corner-shape-support
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  width: 240px;
+  margin: 20px auto;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  background-color: cyan;
+  border-radius: 30px;
+  box-shadow: 1px 1px 3px gray;
+}
+
+@supports not (corner-shape: scoop) {
+  body::before {
+    content: "Your browser does not support the 'corner-shape' property.";
+    color: black;
+    background-color: wheat;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+```
+
+```css live-sample___corner-shape-support
+div {
+  corner-shape: scoop;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("corner-shape-support", "100%", "240")}}
+
+Compare the rendered output in different browsers to see how the example behaves when `corner-shape` is supported and when it isn't.
+
+In your own examples, you can mark the browser-support CSS block as [`hidden`](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples#hiding_code) so its styles apply to the live sample without displaying the code block in the article.
 
 ## MDN code style and formatting
 

@@ -63,7 +63,7 @@ cursor: zoom-in;
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 cursor: auto;
 cursor: pointer;
 /* … */

@@ -8,22 +8,11 @@ browser-compat: api.DataTransfer.effectAllowed
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The **`DataTransfer.effectAllowed`** property specifies the
-effect that is allowed for a drag operation. The _copy_ operation is used to
-indicate that the data being dragged will be copied from its present location to the
-drop location. The _move_ operation is used to indicate that the data being
-dragged will be moved, and the _link_ operation is used to indicate that some
-form of relationship or connection will be created between the source and drop
-locations.
+The **`effectAllowed`** property of the {{domxref("DataTransfer")}} interface specifies the effect that is allowed for a drag operation. The _copy_ operation is used to indicate that the data being dragged will be copied from its present location to the drop location. The _move_ operation is used to indicate that the data being dragged will be moved, and the _link_ operation is used to indicate that some form of relationship or connection will be created between the source and drop locations.
 
-This property should be set in the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event to set the desired drag
-effect for the drag source. Within the {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragover_event", "dragover")}}
-event handlers, this property will be set to whatever value was assigned during the
-{{domxref("HTMLElement/dragstart_event", "dragstart")}} event, thus `effectAllowed` may be used to determine
-which effect is permitted.
+During a drag operation, this property can only be set in the handler for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event, because that's the only time the drag operation's data store is writable. Assigning a value to it from any other drag event does nothing. See [Modifying the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#modifying_the_drag_data_store) for details.
 
-Assigning a value to `effectAllowed` in events other than
-{{domxref("HTMLElement/dragstart_event", "dragstart")}} has no effect.
+Within the {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} event handlers, this property will be set to whatever value was assigned during the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event, thus `effectAllowed` may be used to determine which effect is permitted.
 
 ## Value
 

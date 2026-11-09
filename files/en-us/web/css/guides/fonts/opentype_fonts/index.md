@@ -529,7 +529,7 @@ checkBox2.addEventListener("change", () => {
 
 Associated CSS property: {{cssxref("font-variant-caps")}}
 
-One of the more common use cases for OpenType features is proper small caps. These are capital letters sized to fit better amongst lower case letters and are generally used for acronyms and abbreviations. Click "Play" in the code blocks below to edit the example in the MDN Playground:
+One of the more common use cases for OpenType features is proper small caps. These are capital letters sized to fit better among lower case letters and are generally used for acronyms and abbreviations. Click "Play" in the code blocks below to edit the example in the MDN Playground:
 
 ```html hidden live-sample___font-variant-caps-example
 <fieldset>
@@ -1109,7 +1109,7 @@ checkBox2.addEventListener("change", () => {
 
 ## Font feature settings
 
-{{cssxref("font-feature-settings")}} is the 'low level syntax' that allows explicit access to every named available OpenType feature. This gives a lot of control but has some disadvantages in how it impacts inheritance and — as mentioned above — if you wish to change one setting, you have to redeclare the entire string (unless you're using [CSS custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) to set the values). Because of this, it's best to use the standard properties shown above wherever possible.
+{{cssxref("font-feature-settings")}} is the 'low-level syntax' that allows explicit access to every named available OpenType feature. This gives a lot of control but has some disadvantages in how it impacts inheritance and — as mentioned above — if you wish to change one setting, you have to redeclare the entire string (unless you're using [CSS custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) to set the values). Because of this, it's best to use the standard properties shown above wherever possible.
 
 There are a huge number of possible features. You can see examples of a number of them above, and there are several resources available for finding more of them.
 

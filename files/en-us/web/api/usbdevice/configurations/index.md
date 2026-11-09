@@ -10,7 +10,7 @@ browser-compat: api.USBDevice.configurations
 
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-The **`configurations`** read only property of the
+The **`configurations`** read-only property of the
 {{domxref("USBDevice")}} interface an {{jsxref("Array")}} of device-specific interfaces
 for controlling a paired USB device.
 

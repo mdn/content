@@ -9,7 +9,7 @@ status:
 browser-compat: api.Element.afterscriptexecute_event
 ---
 
-{{APIRef}}{{Non-standard_header}}{{deprecated_header}}
+{{APIRef}}{{Non-standard_header}}
 
 > [!WARNING]
 > This event was a proposal in an early version of the specification. Do not rely on it.
@@ -22,11 +22,15 @@ This event is not cancelable.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("afterscriptexecute", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onafterscriptexecute = (event) => { }
 ```
 

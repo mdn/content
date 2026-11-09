@@ -7,7 +7,7 @@ status:
 browser-compat: api.MimeTypeArray
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 The **`MimeTypeArray`** interface returns an array of {{domxref('MimeType')}} instances, each of which contains information about a supported browser plugins. This object is returned by the deprecated {{domxref("Navigator.mimeTypes")}} property.
 
@@ -15,7 +15,7 @@ This interface was an [attempt to create an unmodifiable list](https://stackover
 
 ## Instance properties
 
-- {{domxref("MimeTypeArray.length")}} {{Deprecated_Inline}}
+- {{domxref("MimeTypeArray.length")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : The number of items in the array.
 
 ## Instance methods

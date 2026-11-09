@@ -23,7 +23,7 @@ m=video 53000 RTP/AVP 32
 a=rtpmap:32 MPV/90000
 ```
 
-SDP is used together with protocols such as {{Glossary("RTP")}} and {{Glossary("RTSP")}}. It is also used by {{Glossary("WebRTC")}} to describe multimedia sessions.
+SDP is used together with protocols such as {{Glossary("RTP")}} and {{Glossary("RTSP")}}. During WebRTC [session negotiation](/en-US/docs/Web/API/WebRTC_API/Session_lifetime), one peer sends an _offer_ describing the connection it wants, and the other replies with an _answer_ describing what it accepts. Both are session descriptions in SDP format, exchanged over a signaling channel and applied with {{domxref("RTCPeerConnection.setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription()")}}.
 
 ## See also
 

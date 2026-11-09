@@ -94,8 +94,6 @@ Several other interfaces are also extended by the CSSOM-related specifications: 
 
 ### Obsolete CSSOM interfaces {{deprecated_inline}}
 
-{{deprecated_header}}
-
 - {{DOMxRef("CSSPrimitiveValue")}} {{deprecated_inline}}
 - {{DOMxRef("CSSValue")}} {{deprecated_inline}}
 - {{DOMxRef("CSSValueList")}} {{deprecated_inline}}

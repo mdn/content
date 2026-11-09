@@ -23,7 +23,7 @@ In single-select tab interfaces, only the `tabpanel` associated with the current
 
 In multi-select tab interfaces, multiple `tabpanel` elements may be displayed, matching the expanded state of their associated `tab` elements.
 
-Tabs do not act as anchor links to individual panels — and upon activation, keyboard focus should remain on the current `tab` element and not automatically move to the newly displayed `tabpanel`. While a tab interface may be progressively enhanced based off an underlying markup pattern of in-page hyperlinks pointing to their associated sections of content, when JavaScript is used to modify these elements into a tabbed interface, the hyperlinks' default behavior should be prevented. Ideally, this could be done by removing or modifying the `href` attribute, as this would have the added benefit of removing the hyperlink-specific menu items from the element's browser context menu.
+Tabs do not act as anchor links to individual panels — and upon activation, keyboard focus should remain on the current `tab` element and not automatically move to the newly displayed `tabpanel`. While a tab interface may be progressively enhanced based on an underlying markup pattern of in-page hyperlinks pointing to their associated sections of content, when JavaScript is used to modify these elements into a tabbed interface, the hyperlinks' default behavior should be prevented. Ideally, this could be done by removing or modifying the `href` attribute, as this would have the added benefit of removing the hyperlink-specific menu items from the element's browser context menu.
 
 When keyboard focus is on a `tablist`, or a `tab` within the `tablist`, the <kbd>Tab</kbd> key should be programmed to move from the focused tab — which may or may not be the selected tab — to the `tabpanel` which represents the currently selected tab.
 
@@ -41,7 +41,15 @@ Make sure to define styles for a `tabpanel` for when it receives focus, optimall
 
 Carousels can be created using this tab pattern: A slide picker controls can be marked up as `tabs` in a `tablist` with the slide represented by a `tabpanel` element.
 
-### Associated Roles and Attributes
+If a tab panel is empty (for example, because its data is still loading or the record is empty), there are three options:
+
+- Keep the empty panel accessible and focusable with `tabindex="0"` and preserve its accessible name
+- Render some content explaining the state, such as "Loading..." or "No results"
+- Remove the tab and panel from the DOM
+
+There is no empty-panel-specific ARIA requirement. Choosing between these approaches is primarily a product-design decision. Generally, avoid empty panels because they are confusing to both sighted users and screen reader users (screen readers may announce the panel's name followed by nothing). Removing the tab and panel avoids an additional item to navigate past, but may be confusing if users expect that tab to exist (e.g., because the same set of tabs has appeared multiple times) or the tab will appear later (e.g., because it's still loading).
+
+### Associated roles and attributes
 
 - [`tab` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
   - : Controls the visibility of the associated `tabpanel`

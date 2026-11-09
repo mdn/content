@@ -9,7 +9,7 @@ Instead of coding everything from scratch you can also use the online **PlayCanv
 
 ## Creating an account
 
-The PlayCanvas Editor is free — all you have to do to begin with is [register](https://login.playcanvas.com/signup) your account and login:
+The PlayCanvas Editor is free — all you have to do to begin with is [register](https://login.playcanvas.com/signup) your account and log in:
 
 ![PlayCanvas Editor - Login](playcanvas-editor-login.png)
 

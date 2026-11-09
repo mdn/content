@@ -3,10 +3,12 @@ title: "ProcessingInstruction: hasAttributes() method"
 short-title: hasAttributes()
 slug: Web/API/ProcessingInstruction/hasAttributes
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ProcessingInstruction.hasAttributes
 ---
 
-{{ApiRef("DOM")}}
+{{ApiRef("DOM")}}{{SeeCompatTable}}
 
 The **`hasAttributes()`** method of the {{domxref("ProcessingInstruction")}}
 interface returns a boolean value indicating whether the current element has any

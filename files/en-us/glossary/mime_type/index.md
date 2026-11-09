@@ -17,4 +17,4 @@ The name originates from the {{glossary("mime","MIME")}} standard originally use
 - [Incomplete list of MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types/Common_types)
 - [MediaRecorder.mimeType](/en-US/docs/Web/API/MediaRecorder/mimeType)
 - [Internet media type](https://en.wikipedia.org/wiki/Internet_media_type) on Wikipedia
-- [List of MIME types](https://www.iana.org/assignments/media-types/media-types.xhtml)
+- [List of MIME types](https://www.iana.org/assignments/media-types)

@@ -9,7 +9,7 @@ status:
 browser-compat: api.PaymentRequest.merchantvalidation_event
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{non-standard_header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{non-standard_header}}
 
 **`merchantvalidation`** events are delivered by the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentRequest")}} object when a payment handler requires that the merchant requesting the purchase validate itself as permitted to use the payment handler.
 
@@ -19,11 +19,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("merchantvalidation", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onmerchantvalidation = (event) => { }
 ```
 
@@ -53,7 +57,7 @@ const response = await request.show();
 
 How merchant server handles the validation depends on the server implementation and payment method documentation. The content delivered by the validation server is forwarded to the merchant server and is then returned from the `fetch()` call's fulfillment handler to the {{domxref("MerchantValidationEvent.complete", "complete()")}} method on the event. This response lets the payment handler know if the merchant is validated.
 
-You can also use the `onmerchantvalidation` event handler property to set up the handler for this event:
+You can also use the `onmerchantvalidation` event handler property to set up the handler for this event (but note that this replaces other event listeners added using `onmerchantvalidation`, if any):
 
 ```js
 request.onmerchantvalidation = (event) => {

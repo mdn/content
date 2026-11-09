@@ -189,7 +189,7 @@ await secondClone.prompt("Another question, please.");
 
 Creating a new session via `clone()` is also a common way to get around the problem of running out of tokens.
 
-## Cancelling operations and destroying instances
+## Canceling operations and destroying instances
 
 You can cancel pending `prompt()`, `clone()` and other operations using an {{domxref("AbortController")}}, with the associated {{domxref("AbortSignal")}} being included inside the method options object as a `signal` property value. For example, aborting a `LanguageModel.prompt()` operation via a button press could look like this:
 

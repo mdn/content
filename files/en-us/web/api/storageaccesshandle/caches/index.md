@@ -18,7 +18,7 @@ A {{domxref("CacheStorage")}} object.
 
 ```js
 document.requestStorageAccess({ caches: true }).then(
-  (handle) => {
+  async (handle) => {
     console.log("caches access granted");
     const cache = await handle.caches.open("foo");
     await cache.add("/");

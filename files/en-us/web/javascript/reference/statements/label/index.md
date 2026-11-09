@@ -227,13 +227,15 @@ console.log("swap");
 
 ### Labeled function declarations
 
-Labels can only be applied to [statements, not declarations](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations). There is a legacy grammar that allows function declarations to be labeled in non-strict code:
+Labels can only be applied to [statements, not declarations](/en-US/docs/Web/JavaScript/Reference/Statements#what_are_statements_declarations_and_expressions). There is a legacy grammar that allows function declarations to be labeled in non-strict code:
 
 ```js
 L: function F() {}
 ```
 
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) code, however, this will throw a {{jsxref("SyntaxError")}}:
+
+<!-- cSpell:ignore labelled -->
 
 ```js-nolint example-bad
 "use strict";

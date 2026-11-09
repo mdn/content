@@ -94,4 +94,4 @@ In Edge, the installed PWAs are listed and can be managed by visiting [`edge://a
 ## See also
 
 - [Using PWAs in Chrome: computer and Android](https://support.google.com/chrome/answer/9658361)
-- [Install, manage, or uninstall apps in Microsoft Edge](https://support.microsoft.com/en-US/edge/install-manage-or-uninstall-apps-in-microsoft-edge)
+- [Install, manage, or uninstall apps in Microsoft Edge](https://support.microsoft.com/en-us/edge/install-manage-or-uninstall-apps-in-microsoft-edge)

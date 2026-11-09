@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.RTCErrorEvent.RTCErrorEvent
 ---
 
-{{APIRef("WebRTC")}}{{AvailableInWorkers}}
+{{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`RTCErrorEvent()`** constructor creates a new {{domxref("RTCErrorEvent")}} object.
 

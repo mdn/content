@@ -7,11 +7,6 @@ sidebar: accessibilitysidebar
 
 Using JavaScript, it is possible to dynamically change parts of a page without requiring the entire page to reload — for instance, to update a list of search results on the fly, or to display a discreet alert or notification which does not require user interaction. While these changes are usually visually apparent to users who can see the page, they may not be obvious to users of assistive technologies. ARIA live regions fill this gap and provide a way to programmatically expose dynamic content changes in a way that can be announced by assistive technologies.
 
-> [!NOTE]
-> Assistive technologies will generally only announce _dynamic_ changes in the content of a live region.
-> Including an `aria-live` attribute or a specialized live region `role` (such as [`role="status"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role)) on the element you want to announce changes to works as long as you add the attribute before the changes occur — either in the original markup, or dynamically using JavaScript. Start with an empty live region, then – in a separate step – change the content inside the region.
-> While not explicitly documented in the specification, browsers/assistive technologies do include special handling for [`role="alert"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role): in most cases, the content inside `role="alert"` regions is announced, even when the region (which already contains the notification/message) is present in the initial markup of the page, or injected dynamically into the page. However, note that `role="alert"` regions are – depending on the specific browser/assistive technology combination – automatically prefixed with "Alert" when they are announced.
-
 ## Live regions
 
 Dynamic content which updates without a page reload is generally either a region or a widget. Simple content changes which are not interactive should be marked as live regions. A live region is explicitly denoted using the `aria-live` attribute.
@@ -23,6 +18,13 @@ Normally, only `aria-live="polite"` is used. Any region which receives updates t
 `aria-live="assertive"` should only be used for time-sensitive/critical notifications that absolutely require the user's immediate attention. Generally, a change to an assertive live region will interrupt any announcement a screen reader is currently making. As such, it can be extremely annoying and disruptive and should only be used sparingly.
 
 Unintuitively, `aria-live="off"` does not indicate that changes should not be announced. When an element has `aria-live="off"` (or has a `role` with this implicit value, such as `role="marquee"` or `role="timer"`), changes to the element's content are only supposed to be announced when focus is on, or inside, the element.
+
+Live regions are typically announced as plain text, so links, buttons, and other semantics in the updated content may not be conveyed in the announcement itself.
+
+Assistive technologies will generally only announce _dynamic_ changes in the content of a live region. Establish the live region before updating its content. Start with an empty live region, then allow time for it to be exposed to assistive technologies before updating its content. If you establish the region with JavaScript (either inserting a new element or adding `aria-live` to an existing element), defer the content update to a later event-loop task, for example using `setTimeout()`. Behavior can vary across browser and assistive technology combinations. The most reliable way to ensure that live regions are registered is to include them in the initial markup.
+
+> [!NOTE]
+> While not explicitly documented in the specification, browsers/assistive technologies do include special handling for [`role="alert"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role): in most cases, the content inside `role="alert"` regions is announced, even when the region (which already contains the notification/message) is present in the initial markup of the page, or injected dynamically into the page. However, note that `role="alert"` regions are – depending on the specific browser/assistive technology combination – automatically prefixed with "Alert" when they are announced.
 
 ### Basic example: Dropdown box updates useful onscreen information
 
@@ -141,7 +143,7 @@ Elements with the following [`role="…"`](/en-US/docs/Web/Accessibility/ARIA/Re
   </tr>
   <tr>
    <td>alert</td>
-   <td>Error or warning message that flashes on the screen. Alerts are particularly important for client side validation notices to users. <a href="https://www.w3.org/WAI/ARIA/apg/example-index/alert/alert.html" class="external" rel="noopener">Alert Example.</a></td>
+   <td>Error or warning message that flashes on the screen. Alerts are particularly important for client-side validation notices to users. <a href="https://www.w3.org/WAI/ARIA/apg/example-index/alert/alert.html" class="external" rel="noopener">Alert Example.</a></td>
    <td>To maximize compatibility, some people recommend adding a redundant <code>aria-live="assertive"</code> when using this role. However, adding both <code>aria-live</code> and <code>role="alert"</code> causes double speaking issues in VoiceOver on iOS.</td>
   </tr>
   <tr>

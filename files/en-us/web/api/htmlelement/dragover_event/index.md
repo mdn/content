@@ -8,17 +8,23 @@ browser-compat: api.HTMLElement.dragover_event
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The `dragover` event is fired when an element or text selection is being dragged over a valid drop target (every few hundred milliseconds).
+The `dragover` event is fired repeatedly when an element or text selection is being dragged over a potential drop target.
+
+The firing frequency depends on the browser, operating system, and pointer movement. The `dragover` event can continue to fire while the pointer is stationary, and can fire more frequently while it is moving. Do not rely on a fixed interval or expect an event for every pointer movement. The [HTML specification](https://html.spec.whatwg.org/multipage/dnd.html#drag-and-drop-processing-model) uses a firing frequency of roughly 350 ms (±200 ms). In practice, browsers use native drag updates and platform-specific timers to dispatch these events, so this interval does not describe all browser behavior.
 
 This event is cancelable and may bubble up to the {{domxref("Document")}} and {{domxref("Window")}} objects.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("dragover", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 ondragover = (event) => { }
 ```
 

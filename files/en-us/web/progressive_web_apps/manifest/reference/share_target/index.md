@@ -83,7 +83,7 @@ If the share request includes one or multiple files or causes a side effect in y
 }
 ```
 
-You can either handle `POST` share data using server-side code, or, to provide a better experience for offline users, a `fetch` event listener can be used to intercept the HTTP request which allows to access the data in a [service worker](/en-US/docs/Web/API/Service_Worker_API).
+You can either handle `POST` share data using server-side code, or, to provide a better experience for offline users, a `fetch` event listener can be used to intercept the HTTP request which allows you to access the data in a [service worker](/en-US/docs/Web/API/Service_Worker_API).
 
 ```js
 self.addEventListener("fetch", (event) => {

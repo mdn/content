@@ -741,7 +741,7 @@ console.log(
 // "-2.3"
 ```
 
-The table below show the effect of different rounding modes for positive and negative values that are on and around the half-increment.
+The table below shows the effect of different rounding modes for positive and negative values that are on and around the half-increment.
 
 | rounding mode | 2.23 | 2.25 | 2.28 | -2.23 | -2.25 | -2.28 |
 | ------------- | ---- | ---- | ---- | ----- | ----- | ----- |

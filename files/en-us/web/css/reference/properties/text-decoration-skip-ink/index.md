@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`text-decoration-skip-ink`** [CSS](/en-US/docs/Web/CSS) property specifies how overlines and underlines are drawn when they pass over glyph ascenders and descenders.
 
+`text-decoration-skip-ink` is not part of the {{cssxref("text-decoration")}} shorthand.
+
 {{InteractiveExample("CSS Demo: text-decoration-skip-ink")}}
 
 ```css interactive-example-choice
@@ -35,8 +37,6 @@ p {
   text-decoration: underline;
 }
 ```
-
-`text-decoration-skip-ink` is not part of the {{cssxref("text-decoration")}} shorthand.
 
 ## Syntax
 

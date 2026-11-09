@@ -126,7 +126,7 @@ await dataUrlToBytes("data:application/octet-stream;base64,AAEC"); // Uint8Array
 
 ## See also
 
-- [A polyfill of `btoa`](https://github.com/zloirock/core-js#base64-utility-methods) is available in [`core-js`](https://github.com/zloirock/core-js)
+- [A polyfill of `btoa`](https://core-js.io/docs/features/web-standards/atob-btoa) is available in [`core-js`](https://core-js.io/)
 - [`data` URLs](/en-US/docs/Web/URI/Reference/Schemes/data)
 - {{domxref("WorkerGlobalScope.btoa()")}}: the same method, but in worker scopes.
 - {{domxref("Window.atob()")}}

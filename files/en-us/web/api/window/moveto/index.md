@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Window.moveTo
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 The **`moveTo()`** method of the {{domxref("Window")}}
 interface moves the current window to the specified coordinates.

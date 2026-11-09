@@ -8,12 +8,11 @@ browser-compat: api.DataTransfer.getData
 
 {{APIRef("HTML DOM")}}
 
-The **`DataTransfer.getData()`**
-method retrieves drag data (as a string) for the specified type.
-If the drag operation does not include data, this method returns an empty
-string.
+The **`getData()`** method of the {{domxref("DataTransfer")}} interface retrieves drag data (as a string) for the specified type. If the drag operation does not include data, this method returns an empty string.
 
 Example data types are `text/plain` and `text/uri-list`.
+
+During a drag operation, this method can only read data in the handlers for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} and {{domxref("HTMLElement/drop_event", "drop")}} events, because those are the only times the drag data store is readable. Calling it from any other drag event returns an empty string. See [Reading the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#reading_the_drag_data_store) for details.
 
 ## Syntax
 
@@ -30,7 +29,7 @@ getData(format)
 
 A string representing the drag data for the specified `format`. If the drag operation has no data or the operation has no data for the specified `format`, this method returns an empty string.
 
-Note that `DataTransfer.getData()` may not return an expected value, because it only allows reading and writing data for specified events. During the `dragstart` and `drop` events, it is safe to access the data. For all other events, the data should be considered unavailable. Despite this, the items and their formats can still be enumerated.
+The items and their formats can still be enumerated during other drag events using {{domxref("DataTransfer.items")}} and {{domxref("DataTransfer.types")}}.
 
 ## Examples
 

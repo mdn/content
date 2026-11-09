@@ -35,7 +35,7 @@ In this example, `i32.const 0xff` pushes the value `0xff` (`255`) onto the stack
 ## WAT syntax
 
 ```plain
-value_type.extend8_s <input> <output>
+value_type.extend8_s
 ```
 
 - `value_type`

@@ -14,7 +14,7 @@ Dealing with this wilderness is part of the job. Fortunately, there are a few tr
 
 To understand common patterns, it helps to read documentation. If you are reading this on [MDN](/), you are at the right place to start. Just check the support of the elements (or DOM interfaces) you want to use. MDN has compatibility tables available for most elements, properties and APIs that can be used in a web page.
 
-Because [HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms) involves complex interaction, there is one important rule: keep it simple, also known as the "[KISS principal](https://en.wikipedia.org/wiki/KISS_principle)". There are so many cases where we want forms that are "nicer" or "with advanced functionality", but building efficient HTML Forms is not a question of design or technology. Rather, it's about simplicity, intuitiveness, and ease of user interaction. The tutorial, [forms usability on UX For The Masses,](https://www.uxforthemasses.com/forms-usability/) explains it well.
+Because [HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms) involves complex interaction, there is one important rule: keep it simple, also known as the "[KISS principle](https://en.wikipedia.org/wiki/KISS_principle)". There are so many cases where we want forms that are "nicer" or "with advanced functionality", but building efficient HTML Forms is not a question of design or technology. Rather, it's about simplicity, intuitiveness, and ease of user interaction. The tutorial, [forms usability on UX For The Masses,](https://www.uxforthemasses.com/forms-usability/) explains it well.
 
 ### Graceful degradation is web developer's best friend
 

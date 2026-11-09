@@ -14,7 +14,9 @@ sidebar: cssref
 
 Level 3 of the [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) specification defines **grid lanes layout**, which is accessed via the {{cssxref("display")}} values `grid-lanes` and `inline-grid-lanes`. This guide explains how grid lanes layout works and how to use it.
 
-Grid lanes layout is a layout method where one axis uses a typical strict grid layout, most often columns, and the other uses a stacking algorithm. On the stacking axis, rather than sticking to a strict grid with gaps being left after shorter items, the items in the following row rise up to fill the gaps.
+Grid lanes layout is a layout method where one axis uses a strict grid layout and the other uses a stacking algorithm. Each item is placed into the lane with the most available space, producing a tightly packed layout without strict tracks on the stacking axis.
+
+Grid lanes layout is often referred to as _masonry layout_, because it resembles the way bricks are laid in a wall, filling gaps as efficiently as possible.
 
 ## Creating a grid lanes layout
 

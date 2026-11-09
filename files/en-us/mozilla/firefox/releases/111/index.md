@@ -32,7 +32,7 @@ No notable changes.
 
 ### HTTP
 
-- The HTTP [`Authorization`](/en-US/docs/Web/HTTP/Reference/Headers/Authorization) header is removed from cross origin redirects.
+- The HTTP [`Authorization`](/en-US/docs/Web/HTTP/Reference/Headers/Authorization) header is removed from cross-origin redirects.
   See [Firefox bug 1802086](https://bugzil.la/1802086) for more details.
 
 ### APIs

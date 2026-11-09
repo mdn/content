@@ -36,7 +36,7 @@ The value of the argument at `index`.
 
 The `getArg()` method accepts a [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) as a parameter and will only succeed if the thrown `Exception` was created using the same tag, otherwise it will throw a `TypeError`.
 This ensures that the exception can only be read if the calling code has access to the tag.
-Tags that are neither imported into or exported from the WebAssembly code are internal, and their associated exceptions cannot be queried using this method.
+Tags that are neither imported into nor exported from the WebAssembly code are internal, and their associated exceptions cannot be queried using this method.
 
 > [!NOTE]
 > It is not enough that the tag has an identical sequence of data types — it must have the same _identity_ (be the same tag) as was used to create the exception.
