@@ -52,6 +52,16 @@ No notable changes.
 
 - The non-standard `MozScrolledAreaChanged` event is no longer dispatched to web pages. It used to be fired at the document when the size of the page's scrollable area changed. It is now available only to Firefox user interface. You can restore the event for web pages by setting the `layout.scrolled-area-changed.content.enabled` preference to `true`. ([Firefox bug 2079865](https://bugzil.la/2079865)).
 
+### WebDriver conformance (WebDriver BiDi, Marionette)
+
+#### WebDriver BiDi
+
+- Added machine-readable CDDL for all Firefox WebDriver BiDi vendor extensions (`moz:` commands, events, parameters, capabilities…). ([Firefox bug 2057588](https://bugzil.la/2057588)).
+- Fixed the `context` field in the `script.message` event to return a correct browsing context id when sending the event from a preload script triggered by `window.open`. ([Firefox bug 2079905](https://bugzil.la/2079905)).
+- Fixed the handling of `Set-Cookie` response headers so that `\n` separated values now show up as individual entries instead of a single merged value. Also applies to other "newline-merged" headers: `proxy-authenticate` and `www-authenticate`. ([Firefox bug 1940389](https://bugzil.la/1940389)).
+- Updated network events monitoring to stop computing unused security details, which could have visible impacts on the performance, e.g., during a page load. ([Firefox bug 2075175](https://bugzil.la/2075175)).
+- Updated the `script.evaluate` and `script.callFunction` commands to stop clearing a pre-existing user activation flag when called with `userActivation: false`. ([Firefox bug 2084107](https://bugzil.la/2084107)).
+
 ## Changes for add-on developers
 
 - {{WebExtAPIRef("runtime.PlatformInfo")}} now returns `arch` as `arm64` for ARM64 platforms. Previously, it returned `aarch64`. This aligns the value returned by Firefox for ARM64 platforms with Chrome. ([Firefox bug 2080310](https://bugzil.la/2080310)).
