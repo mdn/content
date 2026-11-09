@@ -137,7 +137,7 @@ The `blocking="render"` attribute and value is now supported for the {{HTMLEleme
 
 ### Lazy loading for video and audio
 
-The `loading` attribute of the {{HTMLElement("video", "", "#loading")}} and {{HTMLElement("audio", "", "#loading")}} elements, and the {{domxref("HTMLMediaElement.loading")}} property that reflects it, are now supported. With `loading="lazy"`, the browser defers loading the media, loading the video's poster image, and starting`autoplay` playback until the element is near the viewport. ([Firefox bug 2005072](https://bugzil.la/2005072)).
+The `loading` attribute of the {{HTMLElement("video", "", "#loading")}} and {{HTMLElement("audio", "", "#loading")}} elements, and the {{domxref("HTMLMediaElement.loading")}} property that reflects it, are now supported. With `loading="lazy"`, the browser defers loading the media, loading the video's poster image, and starting `autoplay` playback until the element is near the viewport. ([Firefox bug 2005072](https://bugzil.la/2005072)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
