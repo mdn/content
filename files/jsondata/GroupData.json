@@ -167,6 +167,13 @@
       "properties": [],
       "events": []
     },
+    "Capture Handle API": {
+      "overview": ["Capture Handle API"],
+      "interfaces": [],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Channel Messaging API": {
       "overview": ["Channel Messaging API"],
       "guides": ["/docs/Web/API/Channel_Messaging_API/Using_channel_messaging"],
