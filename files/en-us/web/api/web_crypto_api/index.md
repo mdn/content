@@ -30,7 +30,7 @@ The {{domxref("Crypto.subtle")}} property gives access to an object implementing
 - {{domxref("SubtleCrypto")}}
   - : Represents an object that provides low-level cryptographic functions for key generation, encryption, decryption, key wrapping and unwrapping, key encapsulation, and so on.
 - {{domxref("CryptoKey")}}
-  - : Represents a cryptographic {{glossary("key")}} obtained from one of the {{domxref("SubtleCrypto")}} methods {{domxref("SubtleCrypto.generateKey", "generateKey()")}}, {{domxref("SubtleCrypto.deriveKey", "deriveKey()")}}, {{domxref("SubtleCrypto.importKey", "importKey()")}}, or {{domxref("SubtleCrypto.unwrapKey", "unwrapKey()")}}.
+  - : Represents a cryptographic {{glossary("key")}} obtained from {{domxref("SubtleCrypto")}} methods such as {{domxref("SubtleCrypto.generateKey", "generateKey()")}}, {{domxref("SubtleCrypto.deriveKey", "deriveKey()")}}, {{domxref("SubtleCrypto.importKey", "importKey()")}}, and {{domxref("SubtleCrypto.unwrapKey", "unwrapKey()")}}.
 
 ### Dictionaries
 

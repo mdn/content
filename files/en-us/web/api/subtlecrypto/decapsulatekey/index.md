@@ -68,6 +68,8 @@ See the [Supported algorithms section of the `encapsulateKey()` documentation](/
 
 In this example, Alice generates an ML-KEM key pair and gives her public key to Bob. Bob uses it to create a shared HMAC key and a ciphertext, signs a message with the shared key, and sends the ciphertext, the message, and the signature to Alice. Alice recovers the shared key from the ciphertext with her private key, and verifies the signature.
 
+A valid signature shows that the message hasn't changed since it was signed by whoever created the ciphertext. It doesn't show that this was Bob, because anyone with Alice's public key can create a ciphertext. To know who sent the message, Alice needs another way to authenticate Bob, for example a signature made with a key that she knows belongs to him.
+
 ```html hidden
 <pre id="log"></pre>
 ```
@@ -122,7 +124,7 @@ async function verifyMessage() {
     ["verify"],
   );
 
-  // Alice verifies the signature
+  // Alice checks that the message was signed with the shared key
   const valid = await crypto.subtle.verify(hmac, aliceKey, signature, message);
   log(`Signature valid: ${valid}`);
 }
