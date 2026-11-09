@@ -116,7 +116,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **Speculation rules: `Speculation-Rules` header**: `dom.speculation_rules.enabled`
 
-  The support for {{httpheader("Speculation-Rules")}} HTTP response header is enabled by default in Nightly. It lists the URLs of external files containing [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API), as an alternative to an inline [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules) element. The header applies to top-level documents only, and each file must be served with the `application/speculationrules+json` MIME type. ([Firefox bug 2020709](https://bugzil.la/2020709)).
+  Support for the {{httpheader("Speculation-Rules")}} HTTP response header is enabled by default in Nightly. It lists the URLs of external files containing [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API), as an alternative to an inline [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules) element. The header applies to top-level documents only, and each file must be served with the `application/speculationrules+json` MIME type. ([Firefox bug 2020709](https://bugzil.la/2020709)).
 
 - **`CSSNumericValue` arithmetic methods**: `layout.css.typed-om.enabled`
 
