@@ -16,7 +16,7 @@ A non-negative integer.
 
 ## Description
 
-By default, the Web Audio API processes [audio graphs](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_graphs) in chunks of 128 audio [sample frames](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers_frames_samples_and_channels. The number of frames per chunk is called the **render quantum size**. A smaller render quantum size means less latency because each update is smaller and can be processed and output more quickly, but the processing overhead increases because more chunks are processed. A larger render quantum size has the opposite effect.
+By default, the Web Audio API processes [audio graphs](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_graphs) in chunks of 128 audio [sample frames](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers_frames_samples_and_channels). The number of frames per chunk is called the **render quantum size**. A smaller render quantum size means less latency because each update is smaller and can be processed and output more quickly, but the processing overhead increases because more chunks are processed. A larger render quantum size has the opposite effect.
 
 128 frames provides a reasonable balance between processing overhead and latency, and it matches the processing buffer size (the number of frames processed in one go) of some systems. However, other systems have different processing buffer sizes. When the render quantum size doesn't match the underlying system processing buffer size, the process becomes inefficient.
 
