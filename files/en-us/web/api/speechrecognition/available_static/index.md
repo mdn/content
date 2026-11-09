@@ -56,27 +56,35 @@ Possible values include:
 - `downloading`
   - : Indicates that all the specified languages are supported at the given `quality` level for on-device processing, and that the relevant language pack for at least one language is in the process of being downloaded. Only relevant when `processLocally` is `true`.
 - `downloadable`
-  - : Indicates that support for the specified languages is available on-device, at the specified `quality` level, but the relevant language pack for at least one language has not yet been downloaded. Only relevant when `processLocally` is `true`.
+  - : Indicates that support for the specified languages is available on-device, at the specified `quality` level, but the relevant language pack for at least one language has not yet been downloaded, or the site hasn't yet called {{domxref("SpeechRecognition.install_static", "install()")}} for it (see the following note).
+    Only relevant when `processLocally` is `true`.
 - `unavailable`
   - : Indicates that at least one of the specified languages is not supported at the given `quality` level.
     - If `processLocally` is set to `true`, `unavailable` means that on-device speech recognition is not available for at least one of the specified languages.
     - If `processLocally` is set to `false`, `unavailable` means that speech recognition is not available for at least one of the specified languages either on-device or remotely.
 
+> [!NOTE]
+> To protect user privacy, browsers hide whether a language pack is already on the user's device until the site has called {{domxref("SpeechRecognition.install_static", "install()")}} for that language.
+> Until then, `available()` returns `downloadable` instead of `available` or `downloading`, even if the language pack is installed or downloading.
+> Calling `install()` for a language pack that's already installed doesn't download it again, and later calls to `available()` return its true status.
+
 #### Final return value for multiple languages with different statuses
 
-Only one status value is returned, even if multiple languages are specified in the `langs` array. If different specified languages have different availability statuses, the final return value is the "furthest away" status from `available` for any of the languages, in the order shown in the following lists:
+Only one status value is returned, even if multiple languages are specified in the `langs` array.
+If the specified languages have different availability statuses, the final return value is the status furthest from `available` among those languages.
+The following lists show how the final status is chosen, checking each rule in order:
 
 If `processLocally` is `false`:
 
-- If all languages are `available`, then return `available`.
+- If all languages are `available`, return `available`.
 - Otherwise, return `unavailable`.
 
 If `processLocally` is `true`:
 
-- If all languages are `available`, return `available`.
-- If at least one language is `downloading`, return `downloading`.
-- If at least one language is `downloadable`, return `downloadable`.
 - If at least one language is `unavailable`, return `unavailable`.
+- Otherwise, if at least one language is `downloadable`, return `downloadable`.
+- Otherwise, if at least one language is `downloading`, return `downloading`.
+- Otherwise, return `available`.
 
 ### Exceptions
 
