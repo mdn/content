@@ -242,12 +242,7 @@ selectList.forEach((select) => {
   select.addEventListener("blur", (event) => {
     deactivateSelect(select);
   });
-});
 
-const selectList = document.querySelectorAll(".select");
-
-selectList.forEach((select) => {
-  const optionList = select.querySelectorAll(".option");
   const selectedIndex = getIndex(select);
 
   select.tabIndex = 0;

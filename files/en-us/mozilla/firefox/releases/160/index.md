@@ -32,7 +32,9 @@ Firefox 160 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The `::-webkit-input-placeholder` pseudo-element is now supported as an alias of {{cssxref("::placeholder")}}, for compatibility with websites that use it to style the placeholder text of {{htmlelement("input")}} and {{htmlelement("textarea")}} elements. ([Firefox bug 2083700](https://bugzil.la/2083700)).
 
 <!-- #### Removals -->
 
@@ -108,6 +110,10 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The `blocking="render"` attribute and value is now supported for the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} HTML elements. This allows for rendering to be blocked until the element's stylesheet has loaded or its script has run, including for elements that don't block rendering by default, such as scripts and stylesheets added with JavaScript. ([Firefox bug 1751383](https://bugzil.la/1751383)).
 
+- **Lazy loading for video and audio**: `media.lazy_loading.enabled`
+
+  The `loading` attribute of the {{HTMLElement("video", "", "#loading")}} and {{HTMLElement("audio", "", "#loading")}} elements, and the {{domxref("HTMLMediaElement.loading")}} property that reflects it, are now supported. With `loading="lazy"`, the browser defers loading the media, loading the video's poster image, and starting`autoplay` playback until the element is near the viewport. ([Firefox bug 2005072](https://bugzil.la/2005072)).
+
 - **Speculation rules: `Speculation-Rules` header**: `dom.speculation_rules.enabled`
 
   The support for {{httpheader("Speculation-Rules")}} HTTP response header is enabled by default in Nightly. It lists the URLs of external files containing [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API), as an alternative to an inline [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules) element. The header applies to top-level documents only, and each file must be served with the `application/speculationrules+json` MIME type. ([Firefox bug 2020709](https://bugzil.la/2020709)).
@@ -117,3 +123,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   The {{domxref("CSSNumericValue.add()", "add()")}}, {{domxref("CSSNumericValue.sub()", "sub()")}}, {{domxref("CSSNumericValue.mul()", "mul()")}}, and {{domxref("CSSNumericValue.div()", "div()")}} methods of the {{domxref("CSSNumericValue")}} interface in the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) are now supported in Nightly.
   They add, subtract, multiply, or divide numeric values, respectively; for example, `CSS.px(10).add(CSS.px(5))` adds two pixel values.
   The result is a {{domxref("CSSUnitValue")}} (`15px` in this example) when it can be simplified to a single unit, or a math expression such as a {{domxref("CSSMathSum")}} when it can't be simplified (for example, when adding `px` to `%`). ([Firefox bug 2081689](https://bugzil.la/2081689)).
+
+- **Canvas 2D color space**: `gfx.canvas.colorspace.enabled`
+
+  The [`colorSpace`](/en-US/docs/Web/API/HTMLCanvasElement/getContext#colorspace) option of {{domxref("HTMLCanvasElement.getContext()")}} and {{domxref("OffscreenCanvas.getContext()")}} is now supported for `2d` contexts. {{domxref("CanvasRenderingContext2D.getContextAttributes()")}} returns the selected color space. Image data also has a color space: the {{domxref("ImageData.colorSpace")}} property returns it. The `colorSpace` setting of the {{domxref("ImageData.ImageData", "ImageData()")}} constructor and the {{domxref("CanvasRenderingContext2D.createImageData()", "createImageData()")}} and {{domxref("CanvasRenderingContext2D.getImageData()", "getImageData()")}} methods sets it. The supported values are `"srgb"` and `"display-p3"`. Pixel data isn't converted between color spaces yet, so `getImageData()` returns the same pixels whichever color space is requested. ([Firefox bug 1841326](https://bugzil.la/1841326)).

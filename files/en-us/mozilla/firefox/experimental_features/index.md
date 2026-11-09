@@ -149,6 +149,20 @@ The `blocking="render"` attribute and value is now supported for the {{HTMLEleme
 - `dom.element.blocking.enabled`
   - : Set to `true` to enable.
 
+### Lazy loading for video and audio
+
+The `loading` attribute of the {{HTMLElement("video", "", "#loading")}} and {{HTMLElement("audio", "", "#loading")}} elements, and the {{domxref("HTMLMediaElement.loading")}} property that reflects it, are now supported. With `loading="lazy"`, the browser defers loading the media, loading the video's poster image, and starting`autoplay` playback until the element is near the viewport. ([Firefox bug 2005072](https://bugzil.la/2005072)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 160           | No                  |
+| Developer Edition | 160           | No                  |
+| Beta              | 160           | No                  |
+| Release           | 160           | No                  |
+
+- `media.lazy_loading.enabled`
+  - : Set to `true` to enable.
+
 ## CSS
 
 ### `circle()` and `ellipse()` allow `farthest-corner` and `closest-corner` keywords
@@ -664,6 +678,20 @@ You can now set a {{domxref("ReadableStream")}} as a request body (for example, 
   - : Set to `true` to enable.
 
 ### Graphics: Canvas, WebGL, and WebGPU
+
+#### Canvas 2D color space
+
+The [`colorSpace`](/en-US/docs/Web/API/HTMLCanvasElement/getContext#colorspace) option of {{domxref("HTMLCanvasElement.getContext()")}} and {{domxref("OffscreenCanvas.getContext()")}} is supported for `2d` contexts. {{domxref("CanvasRenderingContext2D.getContextAttributes()")}} returns the selected color space. Image data also has a color space: the {{domxref("ImageData.colorSpace")}} property returns it. The `colorSpace` setting of the {{domxref("ImageData.ImageData", "ImageData()")}} constructor and the {{domxref("CanvasRenderingContext2D.createImageData()", "createImageData()")}} and {{domxref("CanvasRenderingContext2D.getImageData()", "getImageData()")}} methods sets it. The supported values are `"srgb"` and `"display-p3"`. Pixel data isn't converted between color spaces yet. ([Firefox bug 1841326](https://bugzil.la/1841326)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 160           | No                  |
+| Developer Edition | 160           | No                  |
+| Beta              | 160           | No                  |
+| Release           | 160           | No                  |
+
+- `gfx.canvas.colorspace.enabled`
+  - : Set to `true` to enable.
 
 #### WebGL: Draft extensions
 
