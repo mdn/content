@@ -20,13 +20,6 @@ For more information, see [Using WebGL extensions](/en-US/docs/Web/API/WebGL_API
 >
 > This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
 
-## Instance methods
-
-This extension exposes one new methods.
-
-- {{domxref("WEBGL_compressed_texture_astc.getSupportedProfiles", "ext.getSupportedProfiles()")}}
-  - : Returns an array of strings containing the names of the ASTC profiles supported by the implementation.
-
 ## Constants
 
 The compressed texture formats are exposed by 28 constants and can be used in two functions: {{domxref("WebGLRenderingContext.compressedTexImage2D", "compressedTexImage2D()")}} and {{domxref("WebGLRenderingContext.compressedTexSubImage2D", "compressedTexSubImage2D()")}}.
@@ -226,6 +219,13 @@ The compressed texture formats are exposed by 28 constants and can be used in tw
     </tr>
   </tbody>
 </table>
+
+## Instance methods
+
+This extension exposes one new methods.
+
+- {{domxref("WEBGL_compressed_texture_astc.getSupportedProfiles", "ext.getSupportedProfiles()")}}
+  - : Returns an array of strings containing the names of the ASTC profiles supported by the implementation.
 
 ## Examples
 
