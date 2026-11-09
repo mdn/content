@@ -236,6 +236,9 @@ browser.browserAction.onClicked.addListener(() => {
 On the application side, you use standard input to receive messages and standard output to send them.
 
 Each message is serialized using JSON, UTF-8 encoded and is preceded with an unsigned 32-bit value containing the message length in native byte order.
+Beware apps that buffer their output: for instance, C programs must call `fflush(stdout)` after each message it writes,
+otherwise Firefox will not see them and e.g. the `Promise` returned by `browser.runtime.sendNativeMessage` will never be resolved,
+thus silently breaking your extension with no exceptions thrown nor error messages of any kind. 
 
 The maximum size of a single message from the application is 1 MB. The maximum size of a message sent to the application is 4 GB.
 
@@ -441,6 +444,11 @@ If you haven't managed to run the application, you should see an error message g
   ```
 
 - There was a problem starting the application.
+
+No exception is thrown, no error messages received, but the `Promise` returned by `browser.runtime.sendNativeMessage()` is never resolved,
+thus awaiting it never resumes execution, nor are ever called the callbacks provided to `.then()` and `.catch()`.
+
+- Verify whether your application output is buffered, if so, e.g. for a C program call `fflush(stdout)` after each message it prints.
 
 ## Chrome incompatibilities
 
