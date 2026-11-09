@@ -55,7 +55,7 @@ function init() {
 
   console.log(audioCtx.renderQuantumSize);
   // returns an appropriate number for the current combination of
-  // hardware, driver, browser, etc
+  // hardware, driver, browser, etc.
 }
 
 btn.addEventListener("click", init);
