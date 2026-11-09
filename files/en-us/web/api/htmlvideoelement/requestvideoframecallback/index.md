@@ -77,7 +77,9 @@ You can compare the `now` callback parameter and the `expectedDisplayTime` metad
 
 ### Drawing video frames on a canvas
 
-This example shows how to use `requestVideoFrameCallback()` to draw the frames of a video onto a {{htmlelement("canvas")}} element at exactly the same frame rate as the video. It also logs the frame metadata to the screen for debugging purposes.
+This example shows how to use `requestVideoFrameCallback()` to draw the frames of a video onto a {{htmlelement("canvas")}} element at exactly the same frame rate as the video.
+It also displays the video's frame rate, and logs the frame metadata to the screen for debugging purposes.
+The frame rate is calculated from the `presentedFrames` and `mediaTime` metadata, counting from when playback last started or the video was last seeked (time spent paused isn't included).
 
 ```js
 const button = document.querySelector("button");
@@ -140,9 +142,9 @@ canvas {
 
 ```html
 <p>
-   Start <button type="button">⏯</button> playing the video. Pause the video to
-   read the metadata. Drawing video frames on the canvas is synced with the
-   actual video framerate.
+  Start <button type="button">⏯</button> playing the video. Pause the video to
+  read the metadata. Drawing video frames on the canvas is synced with the
+  actual video framerate.
 </p>
 <video controls playsinline></video>
 <canvas width="960" height="540"></canvas>
