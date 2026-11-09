@@ -109,7 +109,7 @@ Initial support included [`prefetch`](/en-US/docs/Web/HTML/Reference/Elements/sc
 
 #### Moderate eagerness
 
-Firefox 158 added support for [`moderate`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#moderate) eagerness: a matching prefetch starts once the user hovers over a link for a short time (200 milliseconds by default). ([Firefox bug 2061013](https://bugzil.la/2061013)).
+With [`moderate`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#moderate) eagerness, a matching prefetch starts once the user hovers over a link for a short time (200 milliseconds by default). ([Firefox bug 2061013](https://bugzil.la/2061013)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -117,6 +117,20 @@ Firefox 158 added support for [`moderate`](/en-US/docs/Web/HTML/Reference/Elemen
 | Developer Edition | 158           | No                  |
 | Beta              | 158           | No                  |
 | Release           | 158           | No                  |
+
+- `dom.speculation_rules.enabled`
+  - : Set to `true` to enable.
+
+#### Speculation-Rules header
+
+The {{httpheader("Speculation-Rules")}} HTTP response header lists the URLs of external files containing speculation rules, as an alternative to an inline `<script type="speculationrules">` element. The header applies to top-level documents only, and each file must be served with the `application/speculationrules+json` MIME type. ([Firefox bug 2020709](https://bugzil.la/2020709)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 160           | Yes                 |
+| Developer Edition | 160           | No                  |
+| Beta              | 160           | No                  |
+| Release           | 160           | No                  |
 
 - `dom.speculation_rules.enabled`
   - : Set to `true` to enable.

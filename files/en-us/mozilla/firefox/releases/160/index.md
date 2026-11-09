@@ -114,6 +114,10 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The `loading` attribute of the {{HTMLElement("video", "", "#loading")}} and {{HTMLElement("audio", "", "#loading")}} elements, and the {{domxref("HTMLMediaElement.loading")}} property that reflects it, are now supported. With `loading="lazy"`, the browser defers loading the media, loading the video's poster image, and starting `autoplay` playback until the element is near the viewport. ([Firefox bug 2005072](https://bugzil.la/2005072)).
 
+- **Speculation rules: `Speculation-Rules` header**: `dom.speculation_rules.enabled`
+
+  Support for the {{httpheader("Speculation-Rules")}} HTTP response header is enabled by default in Nightly. It lists the URLs of external files containing [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API), as an alternative to an inline [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules) element. The header applies to top-level documents only, and each file must be served with the `application/speculationrules+json` MIME type. ([Firefox bug 2020709](https://bugzil.la/2020709)).
+
 - **`CSSNumericValue` arithmetic methods**: `layout.css.typed-om.enabled`
 
   The {{domxref("CSSNumericValue.add()", "add()")}}, {{domxref("CSSNumericValue.sub()", "sub()")}}, {{domxref("CSSNumericValue.mul()", "mul()")}}, and {{domxref("CSSNumericValue.div()", "div()")}} methods of the {{domxref("CSSNumericValue")}} interface in the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) are now supported in Nightly.
