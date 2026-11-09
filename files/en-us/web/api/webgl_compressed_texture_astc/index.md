@@ -222,7 +222,7 @@ The compressed texture formats are exposed by 28 constants and can be used in tw
 
 ## Instance methods
 
-This extension exposes one new methods.
+This extension exposes one new method.
 
 - {{domxref("WEBGL_compressed_texture_astc.getSupportedProfiles", "ext.getSupportedProfiles()")}}
   - : Returns an array of strings containing the names of the ASTC profiles supported by the implementation.
