@@ -30,7 +30,7 @@ The HTML Sanitizer API provides XSS-safe and XSS-unsafe methods for injecting HT
   - : {{domxref('Element.setHTMLUnsafe()')}}, {{domxref('ShadowRoot.setHTMLUnsafe()')}}, and {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}.
 
 All the methods take the HTML to be injected and an optional {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} as arguments.
-The sanitizer objects defines the HTML entities that will be filtered out of the input before it is injected.
+The sanitizer object defines the HTML entities that will be filtered out of the input before it is injected.
 The {{domxref('Element')}} methods are context aware, and will additionally drop any elements that the HTML specification does not allow in the target element.
 
 The safe methods always remove XSS-unsafe elements and attributes.
@@ -280,7 +280,7 @@ They may be useful with the unsafe HTML methods and trusted types, depending on 
 - {{domxref('ShadowRoot.setHTMLUnsafe()')}}
   - : Parse a string of HTML into a subtree of nodes.
     Then drop any elements and attributes that are not allowed by the sanitizer: if no sanitizer is specified allow all elements.
-    The subtree is then inserted into as a subtree of the `ShadowRoot`.
+    The subtree is then inserted as a subtree of the `ShadowRoot`.
 - {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}
   - : Parse a string of HTML into a subtree of nodes.
     Then drop any elements and attributes that are not allowed by the sanitizer: if no sanitizer is specified allow all elements.
