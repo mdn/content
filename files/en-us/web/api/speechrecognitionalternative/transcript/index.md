@@ -8,9 +8,7 @@ browser-compat: api.SpeechRecognitionAlternative.transcript
 
 {{APIRef("Web Speech API")}}
 
-The **`transcript`** read-only property of the
-{{domxref("SpeechRecognitionResult")}} interface returns a string containing the
-transcript of the recognized word(s).
+The **`transcript`** read-only property of the {{domxref("SpeechRecognitionAlternative")}} interface returns a string containing the transcript of the recognized word(s).
 
 For continuous recognition, leading or trailing whitespace will be included where
 necessary so that concatenation of consecutive {{domxref("SpeechRecognitionResult")}}s

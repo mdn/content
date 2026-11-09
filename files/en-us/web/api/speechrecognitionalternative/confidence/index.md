@@ -8,9 +8,7 @@ browser-compat: api.SpeechRecognitionAlternative.confidence
 
 {{APIRef("Web Speech API")}}
 
-The **`confidence`** read-only property of the
-{{domxref("SpeechRecognitionResult")}} interface returns a numeric estimate of how
-confident the speech recognition system is that the recognition is correct.
+The **`confidence`** read-only property of the {{domxref("SpeechRecognitionAlternative")}} interface returns a numeric estimate of how confident the speech recognition system is that the recognition is correct.
 
 > [!NOTE]
 > Mozilla's implementation of `confidence` is still
