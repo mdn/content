@@ -1,56 +1,27 @@
 ---
-title: Firefox 160 release notes for developers (Beta)
-short-title: Firefox 160 (Beta)
+title: Firefox 160 release notes for developers (Stable)
+short-title: Firefox 160 (Stable)
 slug: Mozilla/Firefox/Releases/160
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 160 that affect developers.
-Firefox 160 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [November 10, 2026](https://whattrainisitnow.com/release/?version=160).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 160 was released on [November 10, 2026](https://whattrainisitnow.com/release/?version=160).
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
+### HTML
 
-<!-- ### HTML -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### CSS
 
 - The `::-webkit-input-placeholder` pseudo-element is now supported as an alias of {{cssxref("::placeholder")}}, for compatibility with websites that use it to style the placeholder text of {{htmlelement("input")}} and {{htmlelement("textarea")}} elements. ([Firefox bug 2083700](https://bugzil.la/2083700)).
 
-<!-- #### Removals -->
+### JavaScript
 
-<!-- ### JavaScript -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### APIs
 
@@ -77,33 +48,13 @@ Firefox 160 is the current [Beta version of Firefox](https://www.firefox.com/en-
   Recognition is not supported on Android, and neither is remote (cloud) recognition.
   ([Firefox bug 2080908](https://bugzil.la/2080908)).
 
-<!-- #### DOM -->
-
-<!-- #### Media, WebRTC, and Web Audio -->
-
 #### Removals
 
 - The non-standard `MozScrolledAreaChanged` event is no longer dispatched to web pages. It used to be fired at the document when the size of the page's scrollable area changed. It is now available only to Firefox user interface. You can restore the event for web pages by setting the `layout.scrolled-area-changed.content.enabled` preference to `true`. ([Firefox bug 2079865](https://bugzil.la/2079865)).
 
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
-
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
-
-<!-- #### General -->
-
-<!-- #### WebDriver BiDi -->
-
-<!-- #### Marionette -->
-
 ## Changes for add-on developers
 
-- {{WebExtAPIRef("runtime.PlatformInfo")}} now returns `arch` as `arm64` for ARM64 platforms. Previously, it returned `aarch64`. This aligns the value returned by Firefox for ARM64 platforms with Chrome. ([Firefox bug 2080310](https://bugzil.la/2080310))
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
+- {{WebExtAPIRef("runtime.PlatformInfo")}} now returns `arch` as `arm64` for ARM64 platforms. Previously, it returned `aarch64`. This aligns the value returned by Firefox for ARM64 platforms with Chrome. ([Firefox bug 2080310](https://bugzil.la/2080310)).
 
 ## Experimental web features
 

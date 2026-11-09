@@ -1,8 +1,8 @@
 ---
-title: Firefox 159 release notes for developers (Stable)
-short-title: Firefox 159 (Stable)
+title: Firefox 159 release notes for developers
+short-title: Firefox 159
 slug: Mozilla/Firefox/Releases/159
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
