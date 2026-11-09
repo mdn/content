@@ -49,11 +49,13 @@ In the case of `AudioContext()`, when `hardware` is specified, the resulting `Au
 const btn = document.querySelector("button");
 
 function init() {
-  const audioCtx = new AudioContext({ renderSizeHint: 192 });
+  const audioCtx = new AudioContext({ renderSizeHint: "hardware" });
 
   // ...
 
-  console.log(audioCtx.renderQuantumSize); // 192
+  console.log(audioCtx.renderQuantumSize);
+  // returns an appropriate number for the current combination of
+  // hardware, driver, browser, etc
 }
 
 btn.addEventListener("click", init);
