@@ -300,7 +300,7 @@ startBtn.addEventListener("click", () => {
 
 There will be times when a speech recognition service will fail to correctly recognize a specific word or phrase. This most often happens with domain-specific terms (such as medical or scientific vocabulary), proper nouns, uncommon phrases, or words that sound similar to other words and so may be misidentified.
 
-For example, during testing, we found that our [On-device speech color changer](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) had trouble recognizing the color `azure` — it kept returning results like "as you". Other colors that were frequently misidentified included `khaki` ("car key"), `tan`, and `thistle` ("this all").
+For example, during testing, we found that our [On-device speech color changer](https://mdn.github.io/dom-examples/web-speech-api/on-device-speech-color-changer/) had trouble recognizing the color `azure` — it kept returning results like "as you". Other colors that were frequently misidentified included `khaki` ("car key"), `tan`, and `thistle` ("this all").
 
 To mitigate such problems, the Web Speech API lets you provide hints to the recognition engine to highlight phrases that are more likely to be spoken and which the engine should be biased towards. This makes those words and phrases more likely to be recognized correctly.
 

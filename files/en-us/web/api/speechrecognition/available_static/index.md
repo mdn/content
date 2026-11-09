@@ -130,13 +130,13 @@ We first run the `available()` method, specifying one language (`langs: ["en-US"
 
 The `install()` method starts the `en-US` language pack downloading and returns a {{jsxref("Promise")}} that resolves with a boolean indicating whether the specified language packs were downloaded and installed successfully (`true`) or not (`false`).
 
-This code is excerpted from our [on-device speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/on-device-speech-color-changer) ([run the demo live](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/)). See [Using the Web Speech API](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API) for a full explanation.
+This code is excerpted from our [on-device speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/on-device-speech-color-changer) ([run the demo live](https://mdn.github.io/dom-examples/web-speech-api/on-device-speech-color-changer/)). See [Using the Web Speech API](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API) for a full explanation.
 
 ### Checking on-device model capabilities
 
 The following code snippet is a modification of the previous example in which we call the `available()` method with the `quality` option set to `dictation`, to check whether on-device recognition will support this quality level. If the result returned is `unavailable`, we set the `SpeechRecognition` object's {{domxref("SpeechRecognition.processLocally", "processLocally")}} property to `false` (assuming it was previously set to `true`) to force the API to use a cloud recognition service, then `start()` the recognition service.
 
-If the result is `available`, we are good to go, so we just call {{domxref("SpeechRecognition.start", "start()")}} to start on-device recognition. If the result is any other value, we run the {{domxref("SpeechRecognition.install", "install()")}} method with the `quality` option set to `dictation` to install the required language packs.
+If the result is `available`, we are good to go, so we just call {{domxref("SpeechRecognition.start", "start()")}} to start on-device recognition. If the result is any other value, we run the {{domxref("SpeechRecognition.install_static", "install()")}} method with the `quality` option set to `dictation` to install the required language packs.
 
 ```js
 startBtn.addEventListener("click", () => {
