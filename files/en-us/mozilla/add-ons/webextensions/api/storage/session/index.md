@@ -13,6 +13,8 @@ The amount of data that an extension can store in the session storage area is li
 
 When the browser stops, all session storage is cleared. When the extension is disabled or uninstalled, its associated session storage is cleared.
 
+You need to add `"storage"` to the list of permissions of your manifest (the array `"permissions": []`) so that accessing `browser.storage.session` works.
+
 ## Properties
 
 - {{WebExtAPIRef("storage.session.QUOTA_BYTES")}}
