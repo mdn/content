@@ -70,9 +70,6 @@ Firefox 160 is the current [Beta version of Firefox](https://www.firefox.com/en-
   Setting it to `bytes` makes the transport's stream of incoming datagrams, {{domxref("WebTransportDatagramDuplexStream.readable", "transport.datagrams.readable")}}, a [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams).
   You can then use a {{domxref("ReadableStreamBYOBReader")}} to read each datagram into a buffer that you supply and reuse, instead of receiving a new {{jsxref("Uint8Array")}} for every datagram.
   ([Firefox bug 2007755](https://bugzil.la/2007755)).
-- The {{domxref("WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams", "anticipatedConcurrentIncomingUnidirectionalStreams")}} and {{domxref("WebTransport.anticipatedConcurrentIncomingBidirectionalStreams","anticipatedConcurrentIncomingBidirectionalStreams")}} properties of the `WebTransport` interface are now supported, along with the corresponding `options` properties that can be used to set them in the {{domxref("WebTransport/WebTransport", "WebTransport()")}} constructor.
-  These properties represent the maximum number of incoming unidirectional and bidirectional streams, respectively, that the application expects the server to have open at the same time.
-  ([Firefox bug 2007825](https://bugzil.la/2007825)).
 - [On-device speech recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) using the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is now available on desktop, enabling on-device real-time speech-to-text conversion in 40 languages.
   Recognition is not supported on Android, and neither is remote (cloud) recognition.
   ([Firefox bug 2080908](https://bugzil.la/2080908)).

@@ -50,7 +50,11 @@ Firefox 161 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
+
+- The {{domxref("WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams", "anticipatedConcurrentIncomingUnidirectionalStreams")}} and {{domxref("WebTransport.anticipatedConcurrentIncomingBidirectionalStreams","anticipatedConcurrentIncomingBidirectionalStreams")}} properties of the `WebTransport` interface are now supported, along with the corresponding `options` properties that can be used to set them in the {{domxref("WebTransport/WebTransport", "WebTransport()")}} constructor.
+  These properties represent the maximum number of incoming unidirectional and bidirectional streams, respectively, that the application expects the server to have open at the same time.
+  ([Firefox bug 2007825](https://bugzil.la/2007825)).
 
 <!-- #### DOM -->
 
