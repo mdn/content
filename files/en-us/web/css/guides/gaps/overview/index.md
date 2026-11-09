@@ -271,6 +271,8 @@ When setting both column and row insets to the same values, you can use a `rule-
 
 - {{cssxref("rule-inset")}}: Sets `column-rule-inset` and `row-rule-inset` to the same values. Specifies the `rule-inset-cap-start`, `rule-inset-cap-end`, `rule-inset-junction-start`, and `rule-inset-junction-end` properties as one to four `<inset-value>` values. If you set the cap insets to different values from the junction insets, separate them with a slash (`/`).
 
+<!--See [Defining rule insets](/en-US/docs/Web/CSS/Guides/Gaps/Rule_insets) to learn more about defining CSS gap rule insets, including breaking rules into segments, and understanding how to control insets at cap and junction edges. -->
+
 ## Controlling rule visibility
 
 You can define whether rule segments are painted in portions of gaps adjacent to empty areas.
