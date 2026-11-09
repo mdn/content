@@ -32,7 +32,9 @@ Firefox 160 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The `::-webkit-input-placeholder` pseudo-element is now supported as an alias of {{cssxref("::placeholder")}}, for compatibility with websites that use it to style the placeholder text of {{htmlelement("input")}} and {{htmlelement("textarea")}} elements. ([Firefox bug 2083700](https://bugzil.la/2083700)).
 
 <!-- #### Removals -->
 
