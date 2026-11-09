@@ -3,9 +3,13 @@ title: "`browsingContext.stopScreencast` command"
 short-title: stopScreencast
 slug: Web/WebDriver/Reference/BiDi/Modules/browsingContext/stopScreencast
 page-type: webdriver-command
+status:
+  - experimental
 browser-compat: webdriver.bidi.browsingContext.stopScreencast
 sidebar: webdriver
 ---
+
+{{SeeCompatTable}}
 
 The `browsingContext.stopScreencast` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module stops the specified screencast recording and returns the path to the recording file.
 

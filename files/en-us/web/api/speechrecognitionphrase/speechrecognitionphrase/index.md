@@ -3,12 +3,10 @@ title: "SpeechRecognitionPhrase: SpeechRecognitionPhrase() constructor"
 short-title: SpeechRecognitionPhrase()
 slug: Web/API/SpeechRecognitionPhrase/SpeechRecognitionPhrase
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.SpeechRecognitionPhrase.SpeechRecognitionPhrase
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`SpeechRecognitionPhrase()`** constructor creates a new {{domxref("SpeechRecognitionPhrase")}} object.
 

@@ -68,6 +68,9 @@ Firefox 160 is the current [Beta version of Firefox](https://www.firefox.com/en-
   Setting it to `bytes` makes the transport's stream of incoming datagrams, {{domxref("WebTransportDatagramDuplexStream.readable", "transport.datagrams.readable")}}, a [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams).
   You can then use a {{domxref("ReadableStreamBYOBReader")}} to read each datagram into a buffer that you supply and reuse, instead of receiving a new {{jsxref("Uint8Array")}} for every datagram.
   ([Firefox bug 2007755](https://bugzil.la/2007755)).
+- The {{domxref("WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams", "anticipatedConcurrentIncomingUnidirectionalStreams")}} and {{domxref("WebTransport.anticipatedConcurrentIncomingBidirectionalStreams","anticipatedConcurrentIncomingBidirectionalStreams")}} properties of the `WebTransport` interface are now supported, along with the corresponding `options` properties that can be used to set them in the {{domxref("WebTransport/WebTransport", "WebTransport()")}} constructor.
+  These properties represent the maximum number of incoming unidirectional and bidirectional streams, respectively, that the application expects the server to have open at the same time.
+  ([Firefox bug 2007825](https://bugzil.la/2007825)).
 
 <!-- #### DOM -->
 
@@ -100,6 +103,10 @@ Firefox 160 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 160 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Render blocking**: `dom.element.blocking.enabled`
+
+  The `blocking="render"` attribute and value is now supported for the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} HTML elements. This allows for rendering to be blocked until the element's stylesheet has loaded or its script has run, including for elements that don't block rendering by default, such as scripts and stylesheets added with JavaScript. ([Firefox bug 1751383](https://bugzil.la/1751383)).
 
 - **`CSSNumericValue` arithmetic methods**: `layout.css.typed-om.enabled`
 

@@ -2,10 +2,12 @@
 title: PerformanceContainerTiming
 slug: Web/API/PerformanceContainerTiming
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.PerformanceContainerTiming
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`PerformanceContainerTiming`** interface of the [Performance API](/en-US/docs/Web/API/Performance_API) represents a single update of the timing information for the painting of elements within a container.
 A developer can observe a stream of these objects to analyze the rendering behavior of a component built from multiple elements.

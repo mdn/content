@@ -107,7 +107,7 @@ In this example, `[ab]+` first greedily matches `"abb"`, but `[abc]c` is not abl
 
 Greedy quantifiers avoid matching infinitely many empty strings. If the minimum number of matches is reached and no more characters are being consumed by the atom at this position, the quantifier stops matching. This is why `/(a*)*/.exec("b")` does not result in an infinite loop.
 
-Greedy quantifiers try to match as many _times_ as possible; it does not maximize the _length_ of the match. For example, `/(aa|aabaac|ba)*/.exec("aabaac")` matches `"aa"` and then `"ba"` instead of `"aabaac"`.
+Greedy quantifiers try to match as many _times_ as possible; they do not maximize the _length_ of the match. For example, `/(aa|aabaac|ba)*/.exec("aabaac")` matches `"aa"` and then `"ba"` instead of `"aabaac"`.
 
 Quantifiers apply to a single atom. If you want to quantify a longer pattern or a disjunction, you must [group](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group) it. Quantifiers cannot be applied to [assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#assertions).
 
@@ -115,10 +115,10 @@ Quantifiers apply to a single atom. If you want to quantify a longer pattern or 
 /^*/; // SyntaxError: Invalid regular expression: nothing to repeat
 ```
 
-In [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), [lookahead assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) can be quantified. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
+In [Unicode-unaware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), [lookahead assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) can be quantified. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
 
 ```js
-/(?=a)?b/.test("b"); // true; the lookahead is matched 0 time
+/(?=a)?b/.test("b"); // true; the lookahead is matched 0 times
 ```
 
 ## Examples
@@ -129,7 +129,7 @@ The following example removes HTML tags enclosed in angle brackets. Note the use
 
 ```js
 function stripTags(str) {
-  return str.replace(/<.+?>/g, "");
+  return str.replace(/<.+?>/gs, "");
 }
 
 stripTags("<p><em>lorem</em> <strong>ipsum</strong></p>"); // 'lorem ipsum'
@@ -154,7 +154,7 @@ In Markdown, paragraphs are separated by one or more blank lines. The following 
 
 ```js
 function countParagraphs(str) {
-  return str.match(/(?:\r?\n){2,}/g).length + 1;
+  return (str.match(/(?:\r?\n){2,}/g)?.length ?? 0) + 1;
 }
 
 countParagraphs(`

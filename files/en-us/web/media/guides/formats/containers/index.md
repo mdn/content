@@ -592,21 +592,21 @@ You can also [add the `codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/c
       <th scope="row">Theora</th>
       <td></td>
       <td></td>
-      <td>Yes</td>
+      <td>Yes. Removed in version 128.</td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">VP8</th>
       <td></td>
       <td></td>
-      <td>Yes</td>
+      <td></td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">VP9</th>
       <td></td>
       <td></td>
-      <td>Yes</td>
+      <td></td>
       <td></td>
     </tr>
   </tbody>

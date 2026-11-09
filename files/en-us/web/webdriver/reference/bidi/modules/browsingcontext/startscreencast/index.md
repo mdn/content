@@ -3,9 +3,13 @@ title: "`browsingContext.startScreencast` command"
 short-title: startScreencast
 slug: Web/WebDriver/Reference/BiDi/Modules/browsingContext/startScreencast
 page-type: webdriver-command
+status:
+  - experimental
 browser-compat: webdriver.bidi.browsingContext.startScreencast
 sidebar: webdriver
 ---
+
+{{SeeCompatTable}}
 
 The `browsingContext.startScreencast` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module starts recording the viewport of the specified [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) to a file.
 
