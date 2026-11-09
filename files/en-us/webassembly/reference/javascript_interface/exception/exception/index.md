@@ -31,7 +31,7 @@ new Exception(tag, payload, options)
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : The `payload` and `tag` sequences do not have the same number of elements and/or the elements are not of matching types.
 
 ## Description

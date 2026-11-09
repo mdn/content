@@ -70,4 +70,4 @@ button.onclick = () => {
 
 ## See also
 
-- [A polyfill of `DOMException` constructor](https://github.com/zloirock/core-js#domexception) is available in [`core-js`](https://github.com/zloirock/core-js)
+- [A polyfill of `DOMException` constructor](https://core-js.io/docs/features/web-standards/dom-exception) is available in [`core-js`](https://core-js.io/)

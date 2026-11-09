@@ -90,7 +90,7 @@ Object.preventExtensions(1);
 
 ## See also
 
-- [Polyfill of `Reflect.preventExtensions` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.preventExtensions` in `core-js`](https://core-js.io/docs/features/ecmascript/reflect)
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.preventExtensions()")}}
 - [`handler.preventExtensions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions)

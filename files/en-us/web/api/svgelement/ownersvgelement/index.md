@@ -8,7 +8,7 @@ browser-compat: api.SVGElement.ownerSVGElement
 
 {{APIRef("SVG")}}
 
-The **`ownerSVGElement`** property of the {{DOMxRef("SVGElement")}} interface reflects the nearest ancestor {{SVGElement("svg")}} element. `null` if the given element is the outermost `<svg>` element.
+The **`ownerSVGElement`** read-only property of the {{domxref("SVGElement")}} interface reflects the nearest ancestor {{SVGElement("svg")}} element. `null` if the given element is the outermost `<svg>` element.
 
 ## Value
 

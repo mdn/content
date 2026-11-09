@@ -273,9 +273,7 @@ When the modal dialog is displayed, it appears above any other dialogs that migh
 
 This example demonstrates the [`returnValue`](/en-US/docs/Web/API/HTMLDialogElement/returnValue) of the `<dialog>` element and how to close a modal dialog by using a form. By default, the `returnValue` is the empty string or the value of the button that submits the form within the `<dialog>` element, if there is one.
 
-This example opens a modal dialog when the "Show the dialog" button is activated. The dialog contains a form with a {{HTMLElement("select")}} and two {{HTMLElement("button")}} elements, which default to `type="submit"`. An event listener updates the value of the "Confirm" button when the select option changes. If the "Confirm" button is activated to close the dialog, the current value of the button is the return value. If the dialog is closed by pressing the "Cancel" button, the `returnValue` is `cancel`.
-
-When the dialog is closed, the return value is displayed under the "Show the dialog" button. If the dialog is closed by pressing the <kbd>Esc</kbd> key, the `returnValue` is not updated, and the `close` event doesn't occur, so the text in the {{HTMLElement("output")}} is not updated.
+This example opens a modal dialog when the "Show the dialog" button is activated. The dialog contains a form with a {{HTMLElement("select")}} and three {{HTMLElement("button")}} elements, which default to `type="submit"`. Only the "Cancel" button has an explicit `value` attribute, which will be automatically used to set the dialog's `returnValue`.
 
 #### HTML
 
@@ -287,7 +285,7 @@ When the dialog is closed, the return value is displayed under the "Show the dia
       <label>
         Favorite animal:
         <select>
-          <option value="default">Choose…</option>
+          <option value="nothing">Choose…</option>
           <option>Brine shrimp</option>
           <option>Red panda</option>
           <option>Spider monkey</option>
@@ -296,7 +294,8 @@ When the dialog is closed, the return value is displayed under the "Show the dia
     </p>
     <div>
       <button value="cancel" formmethod="dialog">Cancel</button>
-      <button id="confirmBtn" value="default">Confirm</button>
+      <button id="requestCloseBtn">Cancel with requestClose</button>
+      <button id="confirmBtn">Confirm</button>
     </div>
   </form>
 </dialog>
@@ -313,13 +312,18 @@ The dialog is opened using an event listener on the "Show the dialog" button, wh
 The dialog is closed when the "Cancel" button is clicked, because the `<button>` includes the [`formmethod="dialog"`](/en-US/docs/Web/HTML/Reference/Elements/input/submit#formmethod) attribute.
 When a form's method is [`dialog`](#additional_notes), the state of the form is saved but not submitted, and the dialog gets closed (the attribute overrides the {{HTMLElement("form")}}'s default {{HTTPMethod("GET")}} method).
 Without an `action`, submitting the form via the default {{HTTPMethod("GET")}} method causes a page to reload.
-We use JavaScript to prevent the submission and close the dialog with the {{domxref("event.preventDefault()")}} and {{domxref("HTMLDialogElement.close()")}} methods, respectively.
+For the other two buttons, we use JavaScript to prevent the submission with {{domxref("event.preventDefault()")}} and close the dialog with {{domxref("HTMLDialogElement.close()")}} or {{domxref("HTMLDialogElement.requestClose()")}}.
+
+If the dialog is closed by pressing the <kbd>Esc</kbd> key or the `requestClose()` button, a `cancel` event gets triggered first, giving code a chance to prevent closure in some cases. In this example, the `cancel` event listener doesn't cancel the event; it just sets `returnValue` to `"cancelEvent"`. This value is only observable when pressing the <kbd>Esc</kbd> key, because the argument passed to `requestClose()`, `"requestClose"`, overwrites `returnValue` just before the `close` event listener gets called.
+
+However the dialog is closed, the `close` event listener updates the text in the {{HTMLElement("output")}} with the final `returnValue`.
 
 ```js
 const showButton = document.getElementById("showDialog");
 const favDialog = document.getElementById("favDialog");
 const outputBox = document.querySelector("output");
 const selectEl = favDialog.querySelector("select");
+const requestCloseBtn = favDialog.querySelector("#requestCloseBtn");
 const confirmBtn = favDialog.querySelector("#confirmBtn");
 
 // "Show the dialog" button opens the <dialog> modally
@@ -327,18 +331,25 @@ showButton.addEventListener("click", () => {
   favDialog.showModal();
 });
 
-// "Cancel" button closes the dialog without submitting because of [formmethod="dialog"], triggering a close event.
-favDialog.addEventListener("close", (e) => {
-  outputBox.value =
-    favDialog.returnValue === "default"
-      ? "No return value."
-      : `ReturnValue: ${favDialog.returnValue}.`; // Have to check for "default" rather than empty string
+requestCloseBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  favDialog.requestClose("requestClose");
 });
 
-// Prevent the "confirm" button from the default behavior of submitting the form, and close the dialog with the `close()` method, which triggers the "close" event.
+// Close the dialog with the selected animal
 confirmBtn.addEventListener("click", (event) => {
-  event.preventDefault(); // We don't want to submit this fake form
-  favDialog.close(selectEl.value); // Have to send the select box value here.
+  event.preventDefault();
+  favDialog.close(selectEl.value);
+});
+
+// From Escape key or requestClose()
+favDialog.addEventListener("cancel", () => {
+  favDialog.returnValue = "cancelEvent";
+});
+
+// Display the return value whenever the dialog closes
+favDialog.addEventListener("close", () => {
+  outputBox.value = `ReturnValue: ${favDialog.returnValue}.`;
 });
 ```
 

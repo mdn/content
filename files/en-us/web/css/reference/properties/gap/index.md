@@ -113,7 +113,7 @@ This property is specified as one or two values from the following list:
 
 ## Description
 
-The `gap` property defines gaps between columns and rows, with the effect of the definition depending on whether the container is a grid container, a flexbox container, or a multi-column layout container.
+The `gap` property defines gaps between columns and rows, with the effect of the definition depending on whether the container is a grid container, a flexbox container, or a multi-column layout container. See [Defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps) for more information about gaps by layout type.
 
 The shorthand accepts one or two values. A single value sets both the `row-gap` and the `column-gap`. Two values set `row-gap` first, then `column-gap`. The default value is `normal` for both sub-properties; but if you declare only one value, it applies to both.
 
@@ -259,7 +259,7 @@ In [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout), the pr
 
 ### Percentage gap value and explicit container size
 
-If the container has a fixed size set, then gap percentage value calculations are based on the size of the container. Thus, gap behavior is consistent across all layouts. In the following example, there are two containers, one with a grid layout and the other with a flex layout. The containers have five red 20x20px children. Both containers are explicitly set to 200px high using `height: 200px` and the gap is set with `gap: 12.5% 0`.
+If the container has a fixed size set, then gap percentage value calculations are based on the size of the container. Thus, gap behavior is consistent across all layouts. In the following example, there are two containers, one with a grid layout and the other with a flex layout. The containers have five red 20x20px children. Both containers are explicitly set to 200px high using `height: 200px` and the gap is set with `gap: 12.5% 0`. See [Specifying gap values as percentages](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps#specifying_gap_values_as_percentages) for more information.
 
 ```html
 <span>Grid</span>
@@ -380,6 +380,7 @@ In case of the flex layout, the percentage gap always results in zero value.
 - {{CSSxRef("row-gap")}}
 - {{CSSxRef("column-gap")}}
 - {{CSSxRef("rule")}}
+- [Defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [Basic concepts of grid layout: gutters](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#gutters)
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
 - [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module

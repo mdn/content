@@ -254,7 +254,7 @@ Chrome and Edge also provide errors and warnings, protocol handlers, and informa
 
 Our web app doesn't have any protocol handlers; a topic not covered in this tutorial. Had we included some, they would be found under "Protocol Handlers". As that section is empty, the developer tools link to more information on the topic.
 
-![The four icons included in the Manifest file, with the background removed as "show only the minimum safe area for maskable icons is checked.](manifest_icons.jpg)
+![The four icons included in the Manifest file, with the background removed as "show only the minimum safe area for maskable icons" is checked.](manifest_icons.jpg)
 
 The manifest panel also includes insight into the safe area for maskable icons and a link to a [PWA image generator](https://www.pwabuilder.com/imageGenerator). This tool creates over 100 square PNG images for Android, Apple OSs, and Windows, as well as a JSON object listing all the images and their sizes. The images produced may not serve your needs, but the list of image sizes produced for each OS demonstrates the diversity of where and how PWAs can be served.
 

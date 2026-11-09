@@ -67,6 +67,10 @@ To render the writing modes correctly, we use the global HTML [`dir`](/en-US/doc
 
 For vertical languages, we use the {{cssxref("writing-mode")}} and {{cssxref("text-orientation")}} properties:
 
+```css hidden
+@import "https://fonts.googleapis.com/css2?family=Noto+Sans+Mongolian&display=swap";
+```
+
 ```css
 :lang(ja) {
   writing-mode: vertical-rl;
@@ -81,8 +85,6 @@ For vertical languages, we use the {{cssxref("writing-mode")}} and {{cssxref("te
 {{EmbedLiveSample("Writing system modes", "100%", "500")}}
 
 ```css hidden
-@import "https://fonts.googleapis.com/css2?family=Noto+Sans+Mongolian&display=swap";
-
 :lang(ja),
 :lang(mn-Mong) {
   float: left;

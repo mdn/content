@@ -14,7 +14,7 @@ The value of a `TrustedHTML` object is set when the object is created and cannot
 ## Instance methods
 
 - {{domxref("TrustedHTML.toJSON()")}}
-  - : Returns a JSON representation of the stored data.
+  - : Returns a string representing the `TrustedHTML` object, which is the same value as {{domxref("TrustedHTML.toString()")}}. Automatically called by {{jsxref("JSON.stringify()")}}.
 - {{domxref("TrustedHTML.toString()")}}
   - : A string containing the sanitized HTML.
 

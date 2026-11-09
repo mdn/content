@@ -103,7 +103,7 @@ For example, you might have an anchor-positioned tooltip element that is positio
 ```css
 .tooltip {
   position: absolute;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top;
   position-try-fallbacks: flip-block;
   container-type: anchored;

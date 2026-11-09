@@ -41,7 +41,7 @@ The **`MediaRecorder`** interface of the [MediaStream Recording API](/en-US/docs
 - {{domxref("MediaRecorder.pause()")}}
   - : Pauses the recording of media.
 - {{domxref("MediaRecorder.requestData()")}}
-  - : Requests a {{domxref("Blob")}} containing the saved data received thus far (or since the last time `requestData()` was called. After calling this method, recording continues, but in a new `Blob`.
+  - : Requests a {{domxref("Blob")}} containing the saved data received thus far (or since the last time `requestData()` was called). After calling this method, recording continues, but in a new `Blob`.
 - {{domxref("MediaRecorder.resume()")}}
   - : Resumes recording of media after having been paused.
 - {{domxref("MediaRecorder.start()")}}

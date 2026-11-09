@@ -78,7 +78,7 @@ new Uint8Array([12, 5, 8, 1, 4]).some(isBiggerThan10); // true
 
 ## See also
 
-- [Polyfill of `TypedArray.prototype.some` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.some` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.every()")}}

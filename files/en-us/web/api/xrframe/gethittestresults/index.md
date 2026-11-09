@@ -31,7 +31,7 @@ An array of {{domxref("XRHitTestResult")}} objects.
 
 ### Getting hit test results
 
-To request a hit test source, start an {{domxref("XRSession")}} with the `hit-test` session feature enabled. Next, request a the hit test source with {{domxref("XRSession.requestHitTestSource()")}} and store it for later use in the frame loop. Finally, call `getHitTestResults()` to obtain the result.
+To request a hit test source, start an {{domxref("XRSession")}} with the `hit-test` session feature enabled. Next, request the hit test source with {{domxref("XRSession.requestHitTestSource()")}} and store it for later use in the frame loop. Finally, call `getHitTestResults()` to obtain the result.
 
 ```js
 const xrSession = navigator.xr.requestSession("immersive-ar", {

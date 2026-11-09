@@ -41,7 +41,7 @@ The **`DOMRectReadOnly`** interface specifies the standard properties (also used
 ## Instance methods
 
 - {{domxref("DOMRectReadOnly.toJSON()")}}
-  - : Returns a JSON representation of the `DOMRectReadOnly` object.
+  - : Returns a JSON-serializable plain object representing the `DOMRectReadOnly` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Specifications
 

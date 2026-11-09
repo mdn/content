@@ -325,4 +325,5 @@ ul {
 - {{cssxref("column-rule")}} shorthand
 - {{cssxref("rule-color")}} shorthand
 - {{cssxref("rule")}} shorthand
+- [Defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module

@@ -28,6 +28,10 @@ console.time(label)
 
 None ({{jsxref("undefined")}}).
 
+## Description
+
+Developer tools may also include the interval between `console.time()` and `console.timeEnd()` in a performance recording. This profiling behavior is separate from the console output and is not specified by the Console API. For standard timing entries accessible to JavaScript, use {{domxref("Performance.mark", "performance.mark()")}} and {{domxref("Performance.measure", "performance.measure()")}}.
+
 ## Specifications
 
 {{Specifications}}
@@ -39,6 +43,9 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - See {{domxref("console/timeLog_static", "console.timeLog()")}} and {{domxref("console/timeEnd_static", "console.timeEnd()")}} for examples
+- {{domxref("console/timeStamp_static", "console.timeStamp()")}}
+- {{domxref("Performance.mark", "performance.mark()")}}
+- {{domxref("Performance.measure", "performance.measure()")}}
 - [Microsoft Edge's documentation for `console.time()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#time)
 - [Node.js documentation for `console.time()`](https://nodejs.org/docs/latest/api/console.html#consoletimelabel)
 - [Google Chrome's documentation for `console.time()`](https://developer.chrome.com/docs/devtools/console/api/#time)

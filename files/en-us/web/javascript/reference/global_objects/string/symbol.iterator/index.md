@@ -98,7 +98,7 @@ console.log(strIter.next().value); // "\uD835\uDC68"
 
 ## See also
 
-- [Polyfill of `String.prototype[Symbol.iterator]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype[Symbol.iterator]` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - [Numbers and strings](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings) guide
 - {{jsxref("Symbol.iterator")}}
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 344" role="img" aria-labelledby="title description">
+  <title id="title">A dynamic import augments the module graph</title>
+  <desc id="description">main.js and its dependency config.js already exist, shown in light gray. Receiving a data chunk whose trimmed text is Hi on standard input starts a dynamic import of formatters.js, shown with a teal double-line arrow. Single-line arrows show static dependencies: formatters.js imports the existing config.js and the new logger.js. The existing main.js to config.js edge is light gray; newly discovered dependency edges are teal. Function and object bodies are omitted where unchanged.</desc>
+  <style>
+    text { fill: #6b7280; font-family: Menlo, Consolas, monospace; font-size: 12px; }
+    .existing text { fill: #a1a1aa; }
+    .specifier { fill: #08827e; font-weight: bold; }
+    .existing .specifier { fill: #b0b0b8; }
+    .existing .active { fill: #08827e; font-weight: bold; }
+    .outline { fill: none; stroke: #08827e; }
+    .existing .outline { stroke: #d1d5db; }
+    .edge { fill: none; stroke: #08827e; stroke-width: 1.5; marker-end: url(#arrow); }
+    .dynamic-import { fill: none; stroke: #08827e; stroke-width: 1.5; stroke-linejoin: round; }
+    .old-edge { fill: none; stroke: #d1d5db; marker-end: url(#old-arrow); }
+    .status { text-anchor: end; paint-order: stroke; stroke: white; stroke-width: 4; stroke-linejoin: round; fill: #08827e; }
+    .old-status { fill: #a1a1aa; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#08827e"/>
+    </marker>
+    <marker id="old-arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#d1d5db"/>
+    </marker>
+  </defs>
+
+  <rect x="20" y="30" width="430" height="142" fill="#fafafa"/>
+  <rect x="20" y="244" width="280" height="70" fill="#fafafa"/>
+  <rect x="500" y="30" width="500" height="116" fill="#edf8f5"/>
+  <rect x="670" y="244" width="270" height="80" fill="#edf8f5"/>
+
+
+  <path class="old-edge" d="M 255 58 V 244"/>
+  <path class="edge" d="M 654 58 L 300 244"/>
+  <path class="edge" d="M 734 76 V 244"/>
+
+  <g class="existing">
+    <path class="outline" d="M 92 30 H 450 V 172 H 20 V 30 H 28"/>
+    <text x="34" y="34">main.js</text>
+    <text x="34" y="52">import config from <tspan class="specifier">"./config.js"</tspan>;</text>
+    <text x="34" y="88">process.stdin.on("data", async (data) =&gt; {</text>
+    <text x="34" y="106" xml:space="preserve">  if (data.toString().trim() !== "Hi") return;</text>
+    <text x="34" y="124" xml:space="preserve">  const { greet } = await <tspan class="active">import("./formatters.js")</tspan>;</text>
+    <text x="34" y="142" xml:space="preserve">  greet("Josh", config.locale);</text>
+    <text x="34" y="160">});</text>
+
+    <path class="outline" d="M 106 244 H 300 V 314 H 20 V 244 H 28"/>
+    <text x="34" y="248">config.js</text>
+    <text x="34" y="266">export default {</text>
+    <text x="34" y="284" xml:space="preserve">  // ...</text>
+    <text x="34" y="302">};</text>
+  </g>
+
+  <path class="outline" d="M 614 30 H 1000 V 146 H 500 V 30 H 508"/>
+  <text x="514" y="34">formatters.js</text>
+  <text x="514" y="52">import config from <tspan class="specifier">"./config.js"</tspan>;</text>
+  <text x="514" y="70">import { log } from <tspan class="specifier">"./logger.js"</tspan>;</text>
+  <text x="514" y="98">export function greet(name, localeName = config.defaultLocale) {</text>
+  <text x="514" y="116" xml:space="preserve">  // ...</text>
+  <text x="514" y="134">}</text>
+
+  <path class="outline" d="M 756 244 H 940 V 324 H 670 V 244 H 678"/>
+  <text x="684" y="248">logger.js</text>
+  <text x="684" y="266">export function log(message) {</text>
+  <text x="684" y="284" xml:space="preserve">  // ...</text>
+  <text x="684" y="302">}</text>
+
+  <text class="status old-status" x="450" y="22">Existing</text>
+  <text class="status old-status" x="300" y="236">Reused</text>
+  <text class="status" x="1000" y="22">New</text>
+  <text class="status" x="940" y="236">New</text>
+  <path class="dynamic-import" d="M 425 117 H 490 V 113 L 500 120 L 490 127 V 123 H 425"/>
+</svg>

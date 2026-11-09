@@ -11,44 +11,6 @@ The **`PerformanceResourceTiming`** interface enables retrieval and analysis of 
 
 {{InheritanceDiagram}}
 
-## Description
-
-The interface's properties create a resource loading timeline with high-resolution timestamps for network events such as redirect start and end times, fetch start, DNS lookup start and end times, response start and end times, and more. Additionally, the interface extends {{domxref("PerformanceEntry")}} with other properties which provide data about the size of the fetched resource as well as the type of resource that initiated the fetch.
-
-### Typical resource timing metrics
-
-The properties of this interface allow you to calculate certain resource timing metrics. Common use cases include:
-
-- Measuring TCP handshake time (`connectEnd` - `connectStart`)
-- Measuring DNS lookup time (`domainLookupEnd` - `domainLookupStart`)
-- Measuring redirection time (`redirectEnd` - `redirectStart`)
-- Measuring interim request time (`firstInterimResponseStart` - `finalResponseHeadersStart`)
-- Measuring request time (`responseStart` - `requestStart`)
-- Measuring document request time (`finalResponseHeadersStart` - `requestStart`)
-- Measuring TLS negotiation time (`requestStart` - `secureConnectionStart`)
-- Measuring time to fetch (without redirects) (`responseEnd` - `fetchStart`)
-- Measuring ServiceWorker processing time (`fetchStart` - `workerStart`)
-- Checking if content was compressed (`decodedBodySize` should not be `encodedBodySize`)
-- Checking if local caches were hit (`transferSize` should be `0`)
-- Checking if modern and fast protocols are used (`nextHopProtocol` should be HTTP/2 or HTTP/3)
-- Checking if the correct resources are render-blocking (`renderBlockingStatus`)
-
-### Managing resource buffer sizes
-
-By default only 250 resource timing entries are buffered. For more information see the [resource buffer sizes](/en-US/docs/Web/API/Performance_API/Resource_timing#managing_resource_buffer_sizes) of the Resource Timing guide.
-
-### Cross-origin timing information
-
-Many of the resource timing properties are restricted to return `0` or an empty string when the resource is a cross-origin request. To expose cross-origin timing information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
-
-The properties which are returned as `0` by default when loading a resource from an origin other than the one of the web page itself: `redirectStart`, `redirectEnd`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, and `responseStart`.
-
-For example, to allow `https://developer.mozilla.org` to see resource timing information, the cross-origin resource should send:
-
-```http
-Timing-Allow-Origin: https://developer.mozilla.org
-```
-
 ## Instance properties
 
 ### Inherited from `PerformanceEntry`
@@ -122,14 +84,61 @@ Additionally, this interface exposes the following properties containing more in
 - {{domxref('PerformanceResourceTiming.responseStatus')}} {{ReadOnlyInline}}
   - : A number representing the HTTP response status code returned when fetching the resource.
 - {{domxref('PerformanceResourceTiming.transferSize')}} {{ReadOnlyInline}}
-  - : A number representing the size (in octets) of the fetched resource. The size includes the response header fields plus the response payload body.
+  - : A number representing the size (in octets) of the fetched resource. This is the size of the response body plus a fixed value that stands in for the size of the response headers.
 - {{domxref('PerformanceResourceTiming.serverTiming')}} {{ReadOnlyInline}}
   - : An array of {{domxref("PerformanceServerTiming")}} entries containing server timing metrics.
 
 ## Instance methods
 
 - {{domxref("PerformanceResourceTiming.toJSON()")}}
-  - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `PerformanceResourceTiming` object.
+  - : Returns a JSON-serializable plain object representing the `PerformanceResourceTiming` object. Automatically called by {{jsxref("JSON.stringify()")}}.
+
+## Description
+
+The interface's properties create a resource loading timeline with high-resolution timestamps for network events such as redirect start and end times, fetch start, DNS lookup start and end times, response start and end times, and more. Additionally, the interface extends {{domxref("PerformanceEntry")}} with other properties which provide data about the size of the fetched resource as well as the type of resource that initiated the fetch.
+
+### Typical resource timing metrics
+
+The properties of this interface allow you to calculate certain resource timing metrics. Common use cases include:
+
+- Measuring TCP handshake time (`connectEnd` - `connectStart`)
+- Measuring DNS lookup time (`domainLookupEnd` - `domainLookupStart`)
+- Measuring redirection time (`redirectEnd` - `redirectStart`)
+- Measuring interim request time (`firstInterimResponseStart` - `finalResponseHeadersStart`)
+- Measuring request time (`responseStart` - `requestStart`)
+- Measuring document request time (`finalResponseHeadersStart` - `requestStart`)
+- Measuring TLS negotiation time (`requestStart` - `secureConnectionStart`)
+- Measuring time to fetch (without redirects) (`responseEnd` - `fetchStart`)
+- Measuring ServiceWorker processing time (`fetchStart` - `workerStart`)
+- Checking if content was compressed (`decodedBodySize` should not be `encodedBodySize`)
+- Checking if local caches were hit (`transferSize` should be `0`)
+- Checking if modern and fast protocols are used (`nextHopProtocol` should be HTTP/2 or HTTP/3)
+- Checking if the correct resources are render-blocking (`renderBlockingStatus`)
+
+### Managing resource buffer sizes
+
+By default only 250 resource timing entries are buffered. For more information see the [resource buffer sizes](/en-US/docs/Web/API/Performance_API/Resource_timing#managing_resource_buffer_sizes) of the Resource Timing guide.
+
+### Cross-origin restrictions
+
+Timing information for a cross-origin resource is restricted unless the resource passes the {{HTTPHeader("Timing-Allow-Origin")}} check.
+This applies to the following properties, which return `0`, an empty string, or an empty array by default when loading a resource from an origin other than the one of the web page itself: `redirectStart`, `redirectEnd`, `workerStart`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, `firstInterimResponseStart`, `responseStart`, `finalResponseHeadersStart`, `nextHopProtocol`, `transferSize`, `deliveryType`, and `serverTiming`.
+Even a resource that passes the [CORS](/en-US/docs/Web/HTTP/Guides/CORS) check still needs `Timing-Allow-Origin` to expose them.
+
+For example, to allow `https://developer.mozilla.org` to see resource timing information, the cross-origin resource should send:
+
+```http
+Timing-Allow-Origin: https://developer.mozilla.org
+```
+
+Other properties describe the response itself rather than its timing, and depend on the CORS check instead of the `Timing-Allow-Origin` check.
+The `contentType`, `encodedBodySize`, `decodedBodySize`, and `responseStatus` properties return `0` or an empty string for cross-origin resources unless the resource was requested in `cors` [mode](/en-US/docs/Web/API/Request/mode) and passed the CORS check.
+Frame navigations, such as an {{HTMLElement("iframe")}} loading its document, don't use CORS, so their body sizes are exposed only for same-origin frames loaded without cross-origin redirects.
+The `transferSize` property depends on both checks: it's `0` without `Timing-Allow-Origin`, and it excludes the body size if the resource doesn't pass the CORS check.
+
+If the document in a cross-origin {{HTMLElement("iframe")}} fails the `Timing-Allow-Origin` check, the browser reports a fallback entry.
+In this entry, `responseEnd` is the time at which the iframe finished loading, including its subresources.
+See [Cross-origin iframes](/en-US/docs/Web/API/PerformanceResourceTiming/responseEnd#cross-origin_iframes) for more information.
 
 ## Examples
 

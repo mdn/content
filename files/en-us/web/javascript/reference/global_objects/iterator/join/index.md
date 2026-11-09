@@ -57,7 +57,7 @@ console.log(fibonacci().take(5).join(" - ")); // "1 - 1 - 2 - 3 - 5"
 
 ## See also
 
-- [Polyfill of `Iterator.prototype.join` in `core-js`](https://github.com/zloirock/core-js#iterator-join)
+- [Polyfill of `Iterator.prototype.join` in `core-js`](https://core-js.io/docs/features/ecmascript/iterator)
 - [es-shims polyfill of `Iterator.prototype.join`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.reduce()")}}

@@ -82,7 +82,7 @@ The following criteria must be met when calling **`writeTexture()`**, otherwise 
 
 ## Examples
 
-In [Efficiently rendering glTF models](https://toji.github.io/webgpu-gltf-case-study/), a function is defined for creating a solid color texture:
+In [Efficiently rendering glTF models](https://toji.dev/webgpu-gltf-case-study/), a function is defined for creating a solid color texture:
 
 ```js
 function createSolidColorTexture(r, g, b, a) {
