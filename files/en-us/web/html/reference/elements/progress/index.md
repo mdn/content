@@ -64,7 +64,7 @@ In most cases you should provide an accessible label when using `<progress>`. Wh
 
 #### Result
 
-{{EmbedLiveSample('Labelling')}}
+{{EmbedLiveSample('Labeling')}}
 
 ### Describing a particular region
 
