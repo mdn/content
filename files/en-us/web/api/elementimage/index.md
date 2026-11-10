@@ -104,7 +104,7 @@ function main() {
 
     const initialView = canvas.captureElementImage(divElem);
     const initialViewSize = canvas.getElementImageDefaultSize(initialView);
-    output.textContent = `Elment initial size (canvas grid units): ${Math.ceil(initialViewSize.width)}, ${Math.ceil(initialViewSize.height)}`;
+    output.textContent = `Elment initial size (canvas units): ${Math.ceil(initialViewSize.width)}, ${Math.ceil(initialViewSize.height)}`;
     initialView.close();
   });
 }
@@ -116,7 +116,7 @@ main();
 
 {{EmbedLiveSample("report-size", "100%", 360)}}
 
-The element's returned size is given in canvas grid coordinates. It can be useful to query the element's initial size so that you can get the element's size in canvas dimensions rather than CSS pixels, and use it to size texture storage up front, and check whether an element's rendered size has changed.
+The element's returned size is given in canvas units. It can be useful to query the element's initial size so that you can get the element's size in canvas dimensions rather than CSS pixels. This can be used to size texture storage up front, or check whether an element's rendered size has changed.
 
 ## Specifications
 

@@ -15,7 +15,7 @@ Drawing UI features inside a {{htmlelement("canvas")}} element is a common path 
 
 HTML-in-Canvas provides a solution, allowing DOM subtrees to be drawn into a canvas context. The content's state is retained in the background, meaning that it remains [accessible](#accessibility), while its visual rendering can be manipulated using your chosen canvas API ([2D Canvas API](/en-US/docs/Web/API/Canvas_API), [WebGL](/en-US/docs/Web/API/WebGL_API), or [WebGPU](/en-US/docs/Web/API/WebGPU_API)) in whatever way you like.
 
-To prepare DOM content to be rendered in a canvas, you first need to place it between your `<canvas>` tags. You then opt your `<canvas>` into rendering its descendants rather than treating them as fallback content by setting its [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute to `drawable`. Finally, each DOM subtree that you want to render on the canvas independently is given a [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) attribute.
+To prepare DOM content to be rendered on a canvas, you first need to place it between your `<canvas>` tags. You then opt your `<canvas>` into rendering its descendants rather than treating them as fallback content by setting its [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute to `drawable`. Finally, each DOM subtree that you want to render on the canvas independently is given a [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) attribute.
 
 ```html
 <canvas width="640" height="480" content="drawable">
@@ -24,22 +24,26 @@ To prepare DOM content to be rendered in a canvas, you first need to place it be
 </canvas>
 ```
 
-Each context type comes with a feature to draw `drawable` DOM trees onto the context. For example, the {{domxref("CanvasRenderingContext2D.drawElementImage()")}} method takes a DOM reference and various other arguments to declare where and how it should be drawn. The simplest version takes `x` and `y` coordinates that define where the top-left corner of the element should be placed:
+Each context type comes with a feature to draw `drawable` DOM trees onto the context. For example, the {{domxref("CanvasRenderingContext2D.drawElementImage()")}} method takes an element reference and various other arguments to declare where and how it should be drawn. The simplest version takes `x` and `y` coordinates that define where the top-left corner of the element should be placed:
 
 ```js
 const canvas = document.querySelector("canvas");
 const div1 = document.querySelector("#subtree1");
 const ctx = canvas.getContext("2d");
 // ...
-ctx.drawElementImage(div1, 100, 100);
+canvas.addEventListener("paint", () => {
+  ctx.drawElementImage(div1, 100, 100);
+});
 ```
+
+The element draw call needs to be invoked inside a {{domxref("HTMLCanvasElement.paint_event", "paint")}} event handler to guarantee that the element has been painted, and that the latest paint will be drawn.
 
 In 3D contexts, the elements are uploaded/drawn into textures to be used inside fragment shaders: {{domxref("WebGLRenderingContext.texElementSubImage2D()")}} in the case of WebGL, and {{domxref("GPUQueue.drawElementImageToTexture()")}} in the case of WebGPU.
 
 Other features include:
 
-- The {{domxref("HTMLCanvasElement.paint_event", "paint")}} event, which fires on the `<canvas>` whenever `drawable` descendants are repainted, enabling you to only repaint the ones that have changed.
-- The {{domxref("HTMLCanvasElement.requestPaint()")}} method, which schedules a single `paint` event even if no repaints occurred, useful for example if you want to move elements around the canvas.
+- The {{domxref("HTMLCanvasElement.getElementImageDefaultSize()")}} method, which returns the element's initial rendered size. This is useful if you want to re-render the element at a size relative to its default size, or preallocate texture storage, for example.
+- The {{domxref("HTMLCanvasElement.requestPaint()")}} method, which schedules a single `paint` event even if no repaints occurred, useful for example if you want to move an element around the canvas when its state hasn't changed.
 - The {{domxref("HTMLCanvasElement.updateElementGeometry()")}} method, which updates the size, shape, and position of a rendered element's underlying DOM presence, for example so you can still click a rendered {{htmlelement("button")}} after the canvas rendering has moved.
 
 For more information, read our guides, starting with [Using the HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API/Using).
@@ -103,7 +107,7 @@ canvas.addEventListener("paint", () => {
 - {{domxref("HTMLCanvasElement.clearElementGeometry()")}}
   - : Clears any previous `DOMMatrix` applied to a `drawable` element's underlying DOM presence, returning it to its original size, shape, and position.
 - {{domxref("HTMLCanvasElement.getElementImageDefaultSize()")}}
-  - : Returns an object containing an element's original size as it would be rendered in the DOM. The returned size is in canvas grid coordinates.
+  - : Returns an object containing an element's original size as it would be rendered in the DOM. The returned size is in canvas units.
 - {{domxref("HTMLCanvasElement.getElementTransform()")}}
   - : Returns the `DOMMatrix` representing the transform currently applied to a `drawable` element's underlying DOM presence.
 - {{domxref("HTMLCanvasElement.requestPaint()")}}

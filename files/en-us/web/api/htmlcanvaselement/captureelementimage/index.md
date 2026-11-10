@@ -43,7 +43,7 @@ We include a {{htmlelement("canvas")}} element with its `content` attribute set 
 ```html live-sample___restore-initial-view
 <p>
   <button id="update">Update box background</button>
-  <button id="restore">Restore initial paint</button>
+  <button id="restore">Restore initial render</button>
 </p>
 <canvas width="640" height="320" content="drawable">
   <div drawable>Initial render status</div>

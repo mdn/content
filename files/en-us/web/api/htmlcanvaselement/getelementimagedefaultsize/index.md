@@ -8,7 +8,7 @@ browser-compat: api.HTMLCanvasElement.getElementImageDefaultSize
 
 {{APIRef("Canvas API")}}
 
-The **`getElementImageDefaultSize()`** method of the {{domxref("HTMLCanvasElement")}} interface returns an object containing an element's original size as it would be rendered in the DOM, once rendered using the [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API). The returned size is in canvas grid coordinates.
+The **`getElementImageDefaultSize()`** method of the {{domxref("HTMLCanvasElement")}} interface returns an object containing an element's original size as it would be rendered in the DOM, once rendered using the [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API). The returned size is in canvas units.
 
 ## Syntax
 
@@ -26,9 +26,9 @@ getElementImageDefaultSize(element)
 An object containing the following properties:
 
 - `height`
-  - : The initial rendered height of the element, in canvas grid coordinates.
+  - : The initial rendered height of the element, in canvas units.
 - `width`
-  - : The initial rendered width of the element, in canvas grid coordinates.
+  - : The initial rendered width of the element, in canvas units.
 
 ### Exceptions
 
@@ -154,7 +154,7 @@ function main() {
       initialSize.height * Number(rangeInput.value),
     );
 
-    sizeOutput.textContent = `Element rendered size (canvas grid units): ${Math.ceil(initialSize.width * Number(rangeInput.value))}, ${Math.ceil(initialSize.height * Number(rangeInput.value))}`;
+    sizeOutput.textContent = `Element rendered size (canvas units): ${Math.ceil(initialSize.width * Number(rangeInput.value))}, ${Math.ceil(initialSize.height * Number(rangeInput.value))}`;
   });
 }
 ```
