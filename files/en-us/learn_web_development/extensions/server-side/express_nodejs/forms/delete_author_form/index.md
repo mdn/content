@@ -79,13 +79,12 @@ export const authorDeletePost = async (req, res, next) => {
     return;
   }
   // Author has no books. Delete object and redirect to the list of authors.
-  await Author.findByIdAndDelete(req.body.authorid);
+  await Author.findByIdAndDelete(req.params.id);
   res.redirect("/catalog/authors");
 };
 ```
 
-First we validate that an id has been provided (this is sent via the form body parameters, rather than using the version in the URL).
-Then we get the author and their associated books in the same way as for the `GET` route.
+First we get the author and their associated books in the same way as for the `GET` route, using the id from the URL.
 If there are no books then we delete the author object and redirect to the list of all authors.
 If there are still books then we just re-render the form, passing in the author and list of books to be deleted.
 
@@ -120,9 +119,6 @@ block content
     p Do you really want to delete this Author?
 
     form(method='POST')
-      div.form-group
-        input#authorid.form-control(type='hidden', name='authorid', value=author._id )
-
       button.btn.btn-primary(type='submit') Delete
 ```
 
@@ -131,7 +127,7 @@ It then includes a conditional statement based on the number of **`author_books`
 
 - If there _are_ books associated with the author then the page lists the books and states that these must be deleted before this `Author` may be deleted.
 - If there _are no_ books then the page displays a confirmation prompt.
-- If the **Delete** button is clicked then the author id is sent to the server in a `POST` request and that author's record will be deleted.
+- If the **Delete** button is clicked then the form sends a `POST` request to the same URL, which includes the author id, and that author's record will be deleted.
 
 ## Add a delete control
 

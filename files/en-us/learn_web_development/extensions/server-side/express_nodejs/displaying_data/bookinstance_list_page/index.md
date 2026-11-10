@@ -83,12 +83,16 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
   month: "short",
   day: "numeric",
+  timeZone: "UTC",
 });
 
 BookInstanceSchema.virtual("due_back_formatted").get(function () {
   return dateFormatter.format(this.due_back);
 });
 ```
+
+The dates are stored as midnight UTC, so we set the `timeZone` option to `"UTC"`.
+Otherwise the dates would be shown in the server's local time zone, and appear one day early on servers west of UTC.
 
 Open **views/bookinstance_list.pug** and replace `due_back` with `due_back_formatted`.
 

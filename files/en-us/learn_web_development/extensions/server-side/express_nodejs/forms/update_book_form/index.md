@@ -127,9 +127,9 @@ export const bookUpdatePost = [
     }
 
     // Data from form is valid. Update the record.
-    const updatedBook = await Book.findByIdAndUpdate(req.params.id, book, {});
+    await Book.findByIdAndUpdate(req.params.id, book, {});
     // Redirect to book detail page.
-    res.redirect(updatedBook.url);
+    res.redirect(book.url);
   },
 ];
 ```

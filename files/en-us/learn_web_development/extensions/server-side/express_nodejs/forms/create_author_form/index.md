@@ -175,7 +175,4 @@ Run the application, open your browser to `http://localhost:3000/`, then select 
 
 ![Author Create Page - Express Local Library site](locallibary_express_author_create_empty.png)
 
-> [!NOTE]
-> If you experiment with various input formats for the dates, you may find that the format `yyyy-mm-dd` misbehaves. This is because JavaScript treats date strings as including the time of 0 hours, but additionally treats date strings in that format (the ISO 8601 standard) as including the time 0 hours UTC, rather than the local time. If your time zone is west of UTC, the date display, being local, will be one day before the date you entered. This is one of several complexities (such as multi-word family names and multi-author books) that we are not addressing here.
-
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_genre_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_book_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms")}}
