@@ -15,6 +15,11 @@ The **`WebAssembly.Exception`** object represents a runtime exception thrown in 
 - [`WebAssembly.Exception()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/Exception)
   - : Creates a new `WebAssembly.Exception` object instance.
 
+## Instance properties
+
+- [`Exception.prototype.stack`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack)
+  - : Returns the stack trace for the exception.
+
 ## Instance methods
 
 - [`Exception.prototype.is()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/is)
@@ -22,11 +27,6 @@ The **`WebAssembly.Exception`** object represents a runtime exception thrown in 
 
 - [`Exception.prototype.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg)
   - : Returns the data fields of an exception that matches a specified tag.
-
-## Instance properties
-
-- [`Exception.prototype.stack`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack)
-  - : Returns the stack trace for the exception.
 
 ## Description
 
