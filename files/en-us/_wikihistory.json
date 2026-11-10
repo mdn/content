@@ -54880,10 +54880,6 @@
       "Jeremie"
     ]
   },
-  "Web/API/SVGAnimateColorElement": {
-    "modified": "2020-10-15T21:10:55.137Z",
-    "contributors": ["fscholz", "Sebastianz", "kscarfone", "Sheppy", "Jeremie"]
-  },
   "Web/API/SVGAnimateElement": {
     "modified": "2020-10-15T21:10:55.159Z",
     "contributors": ["fscholz", "Sebastianz", "kscarfone", "Sheppy", "Jeremie"]
