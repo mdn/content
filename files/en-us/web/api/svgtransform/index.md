@@ -11,6 +11,23 @@ The **`SVGTransform`** interface reflects one of the component transformations w
 
 An `SVGTransform` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
+## Static properties
+
+- `SVG_TRANSFORM_UNKNOWN` (0)
+  - : The unit type is not one of predefined unit types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+- `SVG_TRANSFORM_MATRIX` (1)
+  - : A `matrix(…)` transformation.
+- `SVG_TRANSFORM_TRANSLATE` (2)
+  - : A `translate(…)` transformation.
+- `SVG_TRANSFORM_SCALE` (3)
+  - : A `scale(…)` transformation.
+- `SVG_TRANSFORM_ROTATE` (4)
+  - : A `rotate(…)` transformation.
+- `SVG_TRANSFORM_SKEWX` (5)
+  - : A `skewx(…)` transformation.
+- `SVG_TRANSFORM_SKEWY` (6)
+  - : A `skewy(…)` transformation.
+
 ## Instance properties
 
 - {{domxref("SVGTransform.type", "type")}} {{ReadOnlyInline}}
@@ -34,23 +51,6 @@ An `SVGTransform` object can be designated as read only, which means that attemp
   - : Sets the transform type to `SVG_TRANSFORM_SKEWX`, with parameter `angle` defining the amount of skew.
 - {{domxref("SVGTransform.setSkewY", "setSkewY()")}}
   - : Sets the transform type to `SVG_TRANSFORM_SKEWY`, with parameter `angle` defining the amount of skew.
-
-## Static properties
-
-- `SVG_TRANSFORM_UNKNOWN` (0)
-  - : The unit type is not one of predefined unit types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
-- `SVG_TRANSFORM_MATRIX` (1)
-  - : A `matrix(…)` transformation.
-- `SVG_TRANSFORM_TRANSLATE` (2)
-  - : A `translate(…)` transformation.
-- `SVG_TRANSFORM_SCALE` (3)
-  - : A `scale(…)` transformation.
-- `SVG_TRANSFORM_ROTATE` (4)
-  - : A `rotate(…)` transformation.
-- `SVG_TRANSFORM_SKEWX` (5)
-  - : A `skewx(…)` transformation.
-- `SVG_TRANSFORM_SKEWY` (6)
-  - : A `skewy(…)` transformation.
 
 ## Specifications
 

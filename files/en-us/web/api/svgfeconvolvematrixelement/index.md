@@ -11,6 +11,17 @@ The **`SVGFEConvolveMatrixElement`** interface corresponds to the {{SVGElement("
 
 {{InheritanceDiagram}}
 
+## Static properties
+
+- `SVG_EDGEMODE_UNKNOWN` (0)
+  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+- `SVG_EDGEMODE_DUPLICATE` (1)
+  - : Corresponds to the value `duplicate`.
+- `SVG_EDGEMODE_WRAP` (2)
+  - : Corresponds to the value `wrap`.
+- `SVG_EDGEMODE_NONE` (3)
+  - : Corresponds to the value `none`.
+
 ## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
@@ -53,17 +64,6 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 ## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
-
-## Static properties
-
-- `SVG_EDGEMODE_UNKNOWN` (0)
-  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
-- `SVG_EDGEMODE_DUPLICATE` (1)
-  - : Corresponds to the value `duplicate`.
-- `SVG_EDGEMODE_WRAP` (2)
-  - : Corresponds to the value `wrap`.
-- `SVG_EDGEMODE_NONE` (3)
-  - : Corresponds to the value `none`.
 
 ## Specifications
 
