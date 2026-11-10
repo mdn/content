@@ -38,6 +38,15 @@ _This interface doesn't inherit any properties._
     | `e` | `m41`         |
     | `f` | `m42`         |
 
+## Static methods
+
+- {{domxref("DOMMatrixReadOnly.fromFloat32Array_static", "fromFloat32Array()")}}
+  - : Creates a new `DOMMatrixReadOnly` object given a {{jsxref("Float32Array")}} of 6 or 16 single-precision (32-bit) floating-point values.
+- {{domxref("DOMMatrixReadOnly.fromFloat64Array_static", "fromFloat64Array()")}}
+  - : Creates a new `DOMMatrixReadOnly` object given a {{jsxref("Float64Array")}} of 6 or 16 double-precision (64-bit) floating-point values.
+- {{domxref("DOMMatrixReadOnly.fromMatrix_static", "fromMatrix()")}}
+  - : Creates a new `DOMMatrixReadOnly` object given an existing matrix or an object which provides the values for its properties.
+
 ## Instance methods
 
 _This interface doesn't inherit any methods. None of the following methods alter the original matrix._
@@ -78,15 +87,6 @@ _This interface doesn't inherit any methods. None of the following methods alter
   - : Transforms the specified point using the matrix, returning a new {{domxref("DOMPoint")}} object containing the transformed point. Neither the matrix nor the original point are altered.
 - {{domxref("DOMMatrixReadOnly.translate()")}}
   - : Returns a new {{domxref("DOMMatrix")}} containing a matrix calculated by translating the source matrix using the specified vector. By default, the vector is `(0, 0, 0)`. The original matrix is not changed.
-
-## Static methods
-
-- {{domxref("DOMMatrixReadOnly.fromFloat32Array_static", "fromFloat32Array()")}}
-  - : Creates a new `DOMMatrixReadOnly` object given a {{jsxref("Float32Array")}} of 6 or 16 single-precision (32-bit) floating-point values.
-- {{domxref("DOMMatrixReadOnly.fromFloat64Array_static", "fromFloat64Array()")}}
-  - : Creates a new `DOMMatrixReadOnly` object given a {{jsxref("Float64Array")}} of 6 or 16 double-precision (64-bit) floating-point values.
-- {{domxref("DOMMatrixReadOnly.fromMatrix_static", "fromMatrix()")}}
-  - : Creates a new `DOMMatrixReadOnly` object given an existing matrix or an object which provides the values for its properties.
 
 ## Specifications
 

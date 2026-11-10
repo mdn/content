@@ -24,15 +24,6 @@ This property is available as {{domxref("Document.fonts")}}, or `self.fonts` in 
 - {{domxref("FontFaceSet.size")}} {{ReadOnlyInline}}
   - : Returns the number of values in the `FontFaceSet`.
 
-### Events
-
-- {{domxref("FontFaceSet.loading_event", "loading")}}
-  - : Fires when a font-face set has started loading.
-- {{domxref("FontFaceSet.loadingdone_event", "loadingdone")}}
-  - : Fires when a font face set has finished loading.
-- {{domxref("FontFaceSet.loadingerror_event", "loadingerror")}}
-  - : Fires when an error occurred while loading a font-face set.
-
 ## Instance methods
 
 - {{domxref("FontFaceSet.add","FontFaceSet.add()")}}
@@ -55,6 +46,15 @@ This property is available as {{domxref("Document.fonts")}}, or `self.fonts` in 
   - : Returns a {{jsxref("Promise")}} which resolves to a list of font-faces for a requested font.
 - {{domxref("FontFaceSet.values","FontFaceSet.values()")}}
   - : Returns a new iterator object that yields the values for each element in the `FontFaceSet` object in insertion order.
+
+## Events
+
+- {{domxref("FontFaceSet.loading_event", "loading")}}
+  - : Fires when a font-face set has started loading.
+- {{domxref("FontFaceSet.loadingdone_event", "loadingdone")}}
+  - : Fires when a font face set has finished loading.
+- {{domxref("FontFaceSet.loadingerror_event", "loadingerror")}}
+  - : Fires when an error occurred while loading a font-face set.
 
 ## Specifications
 
