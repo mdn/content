@@ -20,24 +20,19 @@ This interface requires a secure context.
 - {{domxref("IdleDetector.IdleDetector", "IdleDetector()")}} {{Experimental_Inline}}
   - : Creates a new `IdleDetector` object.
 
-## Instance properties
-
-- {{domxref("IdleDetector.userState")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a string indicating whether the users has interacted with either the screen or the device within the threshold provided to `start()`, one of `"active"` or `"idle"`. This attribute returns `null` before `start()` is called.
-- {{domxref("IdleDetector.screenState")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a string indicating whether the screen is locked, one of `"locked"` or `"unlocked"`. This attribute returns `null` before `start()` is called.
-
-## Events
-
-- {{domxref("IdleDetector.change_event", "change")}} {{Experimental_Inline}}
-  - : Called when the value of `userState` or `screenState` has changed.
-
 ## Static methods
 
 - {{domxref("IdleDetector/requestPermission_static", "IdleDetector.requestPermission()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref('Promise')}} that resolves when the user has chosen
     whether to grant the origin access to their idle state. Resolves with
     `"granted"` on acceptance and `"denied"` on refusal.
+
+## Instance properties
+
+- {{domxref("IdleDetector.userState")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a string indicating whether the users has interacted with either the screen or the device within the threshold provided to `start()`, one of `"active"` or `"idle"`. This attribute returns `null` before `start()` is called.
+- {{domxref("IdleDetector.screenState")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a string indicating whether the screen is locked, one of `"locked"` or `"unlocked"`. This attribute returns `null` before `start()` is called.
 
 ## Instance methods
 
@@ -47,6 +42,11 @@ This interface requires a secure context.
     initial values. This method takes an optional `options` object with the `threshold` in
     milliseconds where inactivity should be reported and `signal` for an
     `AbortSignal` to abort the idle detector.
+
+## Events
+
+- {{domxref("IdleDetector.change_event", "change")}} {{Experimental_Inline}}
+  - : Called when the value of `userState` or `screenState` has changed.
 
 ## Examples
 

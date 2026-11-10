@@ -20,6 +20,13 @@ The **`LanguageModel`** interface of the [Prompt API](/en-US/docs/Web/API/Prompt
 - {{domxref("LanguageModel.create_static", "LanguageModel.create()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with a new `LanguageModel` session, downloading the model data if necessary.
 
+## Instance properties
+
+- {{domxref("LanguageModel.contextUsage")}} {{ReadOnlyInline}}
+  - : Returns the number of context window tokens currently consumed by this session.
+- {{domxref("LanguageModel.contextWindow")}} {{ReadOnlyInline}}
+  - : Returns the total context window size available for this session, in tokens.
+
 ## Instance methods
 
 - {{domxref("LanguageModel.append()")}}
@@ -34,13 +41,6 @@ The **`LanguageModel`** interface of the [Prompt API](/en-US/docs/Web/API/Prompt
   - : Returns a {{jsxref("Promise")}} that resolves with the model's complete response to the given input.
 - {{domxref("LanguageModel.promptStreaming()")}}
   - : Returns a {{domxref("ReadableStream")}} that streams the model's response to the given input as it is generated.
-
-## Instance properties
-
-- {{domxref("LanguageModel.contextUsage")}} {{ReadOnlyInline}}
-  - : Returns the number of context window tokens currently consumed by this session.
-- {{domxref("LanguageModel.contextWindow")}} {{ReadOnlyInline}}
-  - : Returns the total context window size available for this session, in tokens.
 
 ## Events
 
