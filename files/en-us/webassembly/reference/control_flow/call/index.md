@@ -9,7 +9,7 @@ sidebar: webassemblysidebar
 
 **`call`** calls a function, `return_call` being the tail-call version of it. `call_indirect` calls a function in a table with the `return_call_indirect` tail-call version as well.
 
-{{InteractiveExample("Wat Demo: call", "tabbed-standard")}}
+{{InteractiveExample("Wat Demo: call", "tabbed-taller")}}
 
 ```wat interactive-example
 (module
