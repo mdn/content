@@ -68,12 +68,12 @@ This view is much the same as all the others. It extends the layout, replacing t
 
 ## Formatting the dates
 
-The default rendering of dates from our models is very ugly: _Mon Apr 10 2020 15:49:58 GMT+1100 (AUS Eastern Daylight Time)_. In this section we'll show how you can update the _BookInstance List_ page from the previous section to present the `due_date` field in a more friendly format: _Apr 10, 2020_.
+The default rendering of dates from our models is very ugly: _Mon Apr 10 2020 15:49:58 GMT+1100 (AUS Eastern Daylight Time)_. In this section we'll show how you can update the _BookInstance List_ page from the previous section to present the `due_back` field in a more friendly format: _Apr 10, 2020_.
 
 The approach we will use is to create a virtual property in our `BookInstance` model that returns the formatted date. We'll do the actual formatting using {{jsxref("Intl")}}.
 
 > [!NOTE]
-> It is possible to format the strings directly in our Pug templates, or we could format the string in a number of other places. Using a virtual property allows us to get the formatted date in exactly the same way as we get the `due_date` currently.
+> It is possible to format the strings directly in our Pug templates, or we could format the string in a number of other places. Using a virtual property allows us to get the formatted date in exactly the same way as we get `due_back` currently.
 
 Open **models/bookinstance.js**.
 Add the virtual property `due_back_formatted` just after the URL property.
@@ -91,8 +91,8 @@ BookInstanceSchema.virtual("due_back_formatted").get(function () {
 });
 ```
 
-The dates are stored as midnight UTC, so we set the `timeZone` option to `"UTC"`.
-Otherwise the dates would be shown in the server's local time zone, and appear one day early on servers west of UTC.
+Dates entered as `YYYY-MM-DD` (as our forms will do later) are stored as midnight UTC, so we set the `timeZone` option to `"UTC"`.
+Otherwise those dates would be shown in the server's local time zone and appear one day early on servers west of UTC.
 
 Open **views/bookinstance_list.pug** and replace `due_back` with `due_back_formatted`.
 

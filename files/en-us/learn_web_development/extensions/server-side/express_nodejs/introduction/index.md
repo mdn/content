@@ -175,7 +175,7 @@ The middle part of the code (the three lines starting with `app.get`) shows a _r
 The final block starts up the server on a specified port ('3000') and prints a log comment to the console. With the server running, you could go to `localhost:3000` in your browser to see the example response returned.
 
 > [!NOTE]
-> [The Express documentation](https://expressjs.com/en/starter/hello-world/), consistent with the Node documentation, offers instructions for both the standard ECMAScript modules (using `import`/`export` declarations) and CommonJS modules (using `require()` and `module.exports`). The latter is considered legacy. When reading the official documentation, always select the "ESM" tab for the code blocks.
+> [The Express documentation](https://expressjs.com/en/starter/hello-world/) offers instructions for both ECMAScript modules (using `import`/`export` declarations) and CommonJS modules (using `require()` and `module.exports`). ECMAScript modules are the official JavaScript standard, and they're what this tutorial uses. When reading the official documentation, select the "ESM" tab for the code blocks.
 
 ### Importing and creating modules
 

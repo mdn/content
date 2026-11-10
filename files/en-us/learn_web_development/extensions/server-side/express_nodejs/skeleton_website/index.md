@@ -164,7 +164,7 @@ server.on("listening", () => {
 server.listen(port);
 ```
 
-The very first thing this does is `import` the "real" application entry point (**app.js**, in the project root) that sets up and returns the [`express()`](https://expressjs.com/en/api/) application object. The remainder of the code in this file sets up a node HTTP server with `app` set to a specific port (defined in an environment variable or 3000 if the variable isn't defined), and starts listening and reporting server errors and connections. For now you don't really need to know anything else about the code (everything in this file is "boilerplate"), but feel free to review it if you're interested.
+This file imports the "real" application entry point (**app.js**, in the project root), which sets up and exports the [`express()`](https://expressjs.com/en/api/) application object. The rest of the code creates a Node HTTP server for `app` on a specific port (from the `PORT` environment variable, or 3000 if the variable isn't defined), starts listening, logs a message once the server is listening, and throws an error if the server fails to start. For now, you don't really need to know anything else about the code (everything in this file is "boilerplate"), but feel free to review it if you're interested.
 
 ### app.js
 
@@ -246,8 +246,8 @@ export default app;
 ### Routes
 
 The route file **routes/index.js** is the most basic route module structure.
-First, it imports the `Router` object from the _express_ module.
-Then it specifies a route on that object and lastly exports the router from the module (this is what allows the file to be imported into **app.js**).
+First, it imports the `Router` function from the _express_ module and calls it to create a router.
+Then it exports the router from the module (this is what allows the file to be imported into **app.js**). We'll add a route to it in [Views (templates)](#views_templates).
 
 ```js
 import { Router } from "express";
@@ -364,7 +364,7 @@ You should see a browser page that just contains the title "Express".
 Congratulations! You now have a working Express application that can be accessed via port 3000.
 
 > [!NOTE]
-> You could also start the app just using the `npm start` command. Specifying the DEBUG variable as shown enables console logging/debugging. For example, when you visit the above page you'll see debug output like this:
+> You could also start the app just using the `npm start` command. Specifying the `DEBUG` variable as shown turns on the debug messages from **server.js**. Other modules may log even without it set, such as the _morgan_ middleware, which logs the `GET` requests in the following output:
 >
 > ```bash
 > DEBUG=express-locallibrary-tutorial:* npm start

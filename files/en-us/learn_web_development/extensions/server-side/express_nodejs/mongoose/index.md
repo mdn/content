@@ -63,8 +63,8 @@ A few solutions that were popular at the time of writing are:
 - [Prisma ORM](https://www.prisma.io/orm): Defines models in a dedicated schema file and generates a database client from them. This gives you autocomplete and type checking for queries against your own models, while migration tools help keep the database structure in sync with the schema.
 - [Drizzle ORM](https://orm.drizzle.team/docs/overview): Defines schemas directly in TypeScript and provides a query API that closely follows SQL. This lets developers familiar with SQL reuse that knowledge to write joins and other queries while getting inferred TypeScript types, without generating a separate database client.
 - [TypeORM](https://typeorm.io/docs/guides/active-record-data-mapper/): Maps database records to JavaScript or TypeScript classes. You can put query methods on the model classes themselves (Active Record), or keep database access in separate repositories (Data Mapper), giving you a choice of how to organize persistence and application logic.
-- [Sequelize](https://sequelize.org/) is a promise-based ORM for Node.js and TypeScript. It supports the dialects PostgreSQL, MySQL, MariaDB, SQLite, and MSSQL and features solid transaction support, relations, read replication and more.
-- [GraphQL](https://graphql.org/) is primarily a query language that replaces restful APIs. It can query databases directly or query another ORM.
+- [Sequelize](https://sequelize.org/): A promise-based ORM for Node.js and TypeScript. It supports the dialects PostgreSQL, MySQL, MariaDB, SQLite, and MSSQL and features solid transaction support, relations, read replication and more.
+- [GraphQL](https://graphql.org/): A query language for APIs, often used as an alternative to REST. A GraphQL server gets its data through resolver functions, which can use a database driver or an ORM.
 
 As a general rule, you should consider both the features provided and the "community activity" (downloads, contributions, bug reports, quality of documentation, etc.) when selecting a solution. Some other things to consider:
 

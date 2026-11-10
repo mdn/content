@@ -242,7 +242,7 @@ Implement the update pages for the `BookInstance`, `Author`, and `Genre` models,
 A few tips:
 
 - The _Book update page_ we just implemented is the hardest! The same patterns can be used for the update pages for the other objects.
-- The `Author` date of death and date of birth fields and the `BookInstance` due_date field are the wrong format to input into the date input field on the form (it requires data in form "YYYY-MM-DD"). The easiest way to get around this is to define a new virtual property for the dates that formats the dates appropriately, and then use this field in the associated view templates.
+- The `Author` date of death and date of birth fields and the `BookInstance` `due_back` field are the wrong format to input into the date input field on the form (it requires data in form "YYYY-MM-DD"). The easiest way to get around this is to define a new virtual property for the dates that formats the dates appropriately, and then use this field in the associated view templates.
 - If you get stuck, there are examples of the update pages in [the example here](https://github.com/mdn/express-locallibrary-tutorial).
 
 ## Summary
