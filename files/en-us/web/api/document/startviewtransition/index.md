@@ -101,7 +101,7 @@ changeColorButton.addEventListener("keypress", changeColor);
 If view transitions are supported, clicking the button will transition the color from one to another over 2 seconds.
 Otherwise, the background color is set using a fallback method, without any animation.
 
-{{EmbedLiveSample('color_change', '100%', '120')}}
+{{EmbedLiveSample('basic_usage', '100%', '120')}}
 
 ## Specifications
 

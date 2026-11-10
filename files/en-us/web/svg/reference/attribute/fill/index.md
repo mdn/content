@@ -118,7 +118,7 @@ The {{SVGElement('circle')}} has `stroke="context-stroke"` and `fill="context-fi
 
 The output is as follows:
 
-{{EmbedLiveSample("`context-stroke` example", '100%', 220)}}
+{{EmbedLiveSample("context-fill_example", '100%', 220)}}
 
 > [!NOTE]
 > Elements can also use `context-stroke` and `context-fill` to inherit `stroke` and `fill` values when they are referenced by {{SVGElement('use')}} elements.

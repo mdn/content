@@ -220,7 +220,7 @@ async function test() {
 
 The information about the created keys is logged below (or an error string if the browser does not allow the key to be created).
 
-{{EmbedLiveSample("Ed25519", "100%", "240px")}}
+{{EmbedLiveSample("ed25519_key_generation", "100%", "240px")}}
 
 ### X25519 key generation
 
@@ -302,7 +302,7 @@ async function test() {
 
 The information about the created keys is logged below (or an error string if the browser does not allow the key to be created).
 
-{{EmbedLiveSample("X25519", "100%", "240px")}}
+{{EmbedLiveSample("x25519_key_generation", "100%", "240px")}}
 
 ## Specifications
 

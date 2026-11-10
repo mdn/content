@@ -171,6 +171,6 @@ function drawStar(ctx, r) {
 draw();
 ```
 
-{{EmbedLiveSample("Hole_in_rectangle", "", "160")}}
+{{EmbedLiveSample("inverse_clipping_path", "", "160")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

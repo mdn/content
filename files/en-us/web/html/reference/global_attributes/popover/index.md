@@ -58,7 +58,7 @@ The following code renders a button that, when activated, will open a popover el
 <div popover id="my-popover">Greetings, one and all!</div>
 ```
 
-{{EmbedLiveSample('basic_example_of_popover', 600, 100)}}
+{{EmbedLiveSample('making_an_element_a_popover', 600, 100)}}
 
 ### Nesting popovers
 
@@ -177,7 +177,7 @@ div.info-popover {
 
 Click the _Open Menu_ button, then click the info icons (ⓘ) next to the menu options to open the info popovers.
 
-{{EmbedLiveSample('popover_hint', 600, 250)}}
+{{EmbedLiveSample('nesting_popovers', 600, 250)}}
 
 > [!NOTE]
 > See our [Popover API examples landing page](https://mdn.github.io/dom-examples/popover-api/) to access the full collection of MDN popover examples.

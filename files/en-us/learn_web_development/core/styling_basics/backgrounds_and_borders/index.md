@@ -383,7 +383,7 @@ Another option we have available for backgrounds is specifying how they scroll w
 
 The {{cssxref("background-attachment")}} property only has an effect when there is content to scroll, so we've made a demo to demonstrate the differences between the three values:
 
-```html hidden live-sample___background-atachment
+```html hidden live-sample___background-attachment
 <section>
   <article class="scroll">
     <p>
@@ -420,7 +420,7 @@ The {{cssxref("background-attachment")}} property only has an effect when there 
 </section>
 ```
 
-```css hidden live-sample___background-atachment
+```css hidden live-sample___background-attachment
 html,
 body {
   margin: 0;

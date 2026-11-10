@@ -75,7 +75,7 @@ You can enable animations to and from `fit-content` using the {{cssxref("interpo
 
 #### Result
 
-{{EmbedLiveSample("Using_fit-content_for_box_sizing", "100%", 200)}}
+{{EmbedLiveSample("sizing_boxes_with_fit-content", "100%", 200)}}
 
 ## Specifications
 
