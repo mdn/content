@@ -46,7 +46,7 @@ sidebar: webassemblysidebar
 
 ```js interactive-example
 const url = "{%wasm-url%}";
-await WebAssembly.instantiateStreaming(fetch(url), {
+const { instance } = await WebAssembly.instantiateStreaming(fetch(url), {
   env: {
     greet() {
       console.log("Hello");
