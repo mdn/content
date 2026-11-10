@@ -31,12 +31,12 @@ A JSON-serializable plain object containing the following properties:
 - {{domxref("PublicKeyCredential/id", "id")}}
 - {{domxref("PublicKeyCredential/rawId", "rawId")}}: encoded as a [base64url](/en-US/docs/Glossary/Base64) string
 - {{domxref("PublicKeyCredential/response", "response")}}: a JSON-serializable object representing the {{domxref("AuthenticatorResponse")}} value, with buffer values encoded as base64url strings. Namely:
-  - When it's a {{domxref("AuthenticatorAssertionResponse")}}, contains the following properties:
+  - When it's an {{domxref("AuthenticatorAssertionResponse")}}, contains the following properties:
     - {{domxref("AuthenticatorAssertionResponse/authenticatorData", "authenticatorData")}}
     - {{domxref("AuthenticatorResponse/clientDataJSON", "clientDataJSON")}}
     - {{domxref("AuthenticatorAssertionResponse/signature", "signature")}}
     - {{domxref("AuthenticatorAssertionResponse/userHandle", "userHandle")}} {{optional_inline}}: not present if its value is `null`
-  - When it's a {{domxref("AuthenticatorAttestationResponse")}}, contains the following properties:
+  - When it's an {{domxref("AuthenticatorAttestationResponse")}}, contains the following properties:
     - {{domxref("AuthenticatorAttestationResponse/attestationObject", "attestationObject")}}
     - `authenticatorData`: the value returned by {{domxref("AuthenticatorAttestationResponse.getAuthenticatorData()", "getAuthenticatorData()")}}
     - {{domxref("AuthenticatorResponse/clientDataJSON", "clientDataJSON")}}
