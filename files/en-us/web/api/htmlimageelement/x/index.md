@@ -29,6 +29,18 @@ The example below demonstrates the use of the `HTMLImageElement` properties `x` 
 <pre id="log"></pre>
 ```
 
+### CSS
+
+The CSS defining the image size and its position:
+
+```css
+img {
+  margin-left: 30px;
+  margin-top: 20px;
+  max-width: 4em;
+}
+```
+
 ### JavaScript
 
 The JavaScript code that fetches the image and looks up its `x` and `y` values is below.
@@ -47,18 +59,6 @@ log(`Image's global Y: ${image.y}`);
 ```
 
 Finally, we can look up and display the values of the `HTMLImageElement`'s `x` and `y` properties.
-
-### CSS
-
-The CSS defining the image size and its position:
-
-```css
-img {
-  margin-left: 30px;
-  margin-top: 20px;
-  max-width: 4em;
-}
-```
 
 ### Result
 
