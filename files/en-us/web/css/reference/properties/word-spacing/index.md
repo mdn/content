@@ -125,7 +125,7 @@ Our CSS applies a different `word-spacing` to each paragraph:
 
 The example renders like so:
 
-{{ EmbedLiveSample("live-sample___basic-usage", "100%", "100") }}
+{{ EmbedLiveSample("basic-usage", "100%", "100") }}
 
 ### Comparing word-spacing set with length and percentage
 

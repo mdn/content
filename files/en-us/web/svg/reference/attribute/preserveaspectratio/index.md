@@ -460,7 +460,7 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('Using slice height width', '100%', 200)}}
+{{EmbedLiveSample('using_slice_when_height_width', '100%', 200)}}
 
 ### Using the `none` alignment value
 

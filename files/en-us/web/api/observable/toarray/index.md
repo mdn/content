@@ -46,13 +46,13 @@ Source values are stored as-is. If a value is a promise, the array contains that
 
 This example collects the coordinates of the first three button clicks and displays them as an array in click order. Click Restart after the stream ends to try again.
 
-```html hidden live-sample___basic-toArray
+```html hidden live-sample___basic-toarray
 <button>Click me</button>
 <p>Waiting for clicks</p>
 <button id="restart" disabled>Restart</button>
 ```
 
-```js live-sample___basic-toArray
+```js live-sample___basic-toarray
 const btn = document.querySelector("button");
 const output = document.querySelector("p");
 

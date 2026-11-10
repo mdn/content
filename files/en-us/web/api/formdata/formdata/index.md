@@ -101,7 +101,7 @@ for (const [key, value] of formData) {
 
 For brevity, the `<form>` element is hidden from view.
 
-{{EmbedLiveSample("prepopulating_from_a_html_form_element", "", 150)}}
+{{EmbedLiveSample("prepopulating_from_an_html_form_element", "", 150)}}
 
 ## Specifications
 

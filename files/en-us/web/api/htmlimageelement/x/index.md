@@ -64,7 +64,7 @@ img {
 
 The resulting image looks like this:
 
-{{EmbedLiveSample("Example", 600, 200)}}
+{{EmbedLiveSample("examples", 600, 200)}}
 
 ## Specifications
 

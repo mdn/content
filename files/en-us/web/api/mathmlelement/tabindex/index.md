@@ -56,7 +56,7 @@ math1.focus(); // Works, even though it is not in the tabbing order
 
 ### Result
 
-{{EmbedLiveSample("tabindex",100,100)}}
+{{EmbedLiveSample("using_the_tabindex_property",100,100)}}
 
 ## Specifications
 
