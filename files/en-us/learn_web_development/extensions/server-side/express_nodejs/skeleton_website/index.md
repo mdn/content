@@ -271,20 +271,18 @@ router.get("/", (req, res) => {
 export default router;
 ```
 
-It only has one additional line.
+It adds a single route.
 The route defines a callback that will be invoked whenever an HTTP `GET` request with the correct pattern is detected. The matching pattern is the route specified when the module is imported (`"/users"`) plus whatever is defined in this file (`"/"`). In other words, this route will be used when a URL of `/users/` is received.
 
 > [!NOTE]
 > Try this out by running the server with node and visiting the URL in your browser: `http://localhost:3000/users/`. You should see a message: 'respond with a resource'.
-
-One thing of interest above is that the callback function has the third argument `next`, and is hence a middleware function rather than a simple route callback. While the code doesn't currently use the `next` argument, it may be useful in the future if you want to add multiple route handlers to the `'/'` route path.
 
 ### Views (templates)
 
 The views (templates) are stored in the **views/** directory (as specified in **app.js**) and are given the file extension **.pug**. The method [`Response.render()`](https://expressjs.com/en/5x/api/#res.render) is used to render a specified template along with the values of named variables passed in an object, and then send the result as a response. In **routes/index.js**, add the following code above the `export` line, which uses the template "index" passing the template variable "title".
 
 ```js
-router.get("/", (req, res, next) => {
+router.get("/", (req, res) => {
   res.render("index", { title: "Express" });
 });
 ```
@@ -306,7 +304,7 @@ html(lang='en')
   head
     title= title
     meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     div(class='container-fluid')
@@ -351,7 +349,7 @@ At this point, we have a complete skeleton project. The website doesn't actually
      ```
 
      > [!NOTE]
-     > PowerShell commands are not covered in this tutorial (The provided "Windows" commands assume you're using the Windows CMD prompt.)
+     > PowerShell commands are not provided in the remainder of this tutorial (the listed "Windows" commands assume you're using the Windows CMD prompt).
 
    - On macOS or Linux, use this command:
 
@@ -373,7 +371,7 @@ Congratulations! You now have a working Express application that can be accessed
 > ```
 >
 > ```plain
-> > express-locallibrary-tutorial-test@1.0.0 start
+> > express-locallibrary-tutorial@1.0.0 start
 > > node server.js
 >
 >   express-locallibrary-tutorial:server Listening on port 3000 +0ms
@@ -401,7 +399,6 @@ Next, we'll start modifying the skeleton so that it works as a library website.
 
 ## See also
 
-- [Express application generator](https://expressjs.com/en/starter/generator/) (Express docs)
 - [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines/) (Express docs)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

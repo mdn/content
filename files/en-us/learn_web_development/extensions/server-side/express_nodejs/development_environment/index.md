@@ -35,7 +35,7 @@ The _Express_ development environment includes an installation of _Node.js_ and 
 
 _Node_ and the _npm_ package manager are installed together from prepared binary packages, installers, operating system package managers or from source (as shown in the following sections). _Express_ is then installed by npm as a dependency of your individual _Express_ web applications (along with other libraries like template engines, database drivers, authentication middleware, middleware to serve static files, etc.).
 
-For the Local Library tutorial, we'll use a starter project that follows the [MVC pattern](/en-US/docs/Glossary/MVC). The starter provides a modular application structure that we can extend as we work through the tutorial.
+For the Local Library tutorial, we'll build a project that follows the [MVC pattern](/en-US/docs/Glossary/MVC), using a modular application structure that we can extend as needed.
 
 > [!NOTE]
 > Unlike some other web frameworks, the development environment does not include a separate development web server. In _Node_/_Express_ a web application creates and runs its own web server!
@@ -127,7 +127,7 @@ The _Node.js_ package manager _npm_ should also have been installed, and can be 
 
 ```bash
 > npm -v
-10.9.2
+11.3.0
 ```
 
 The version numbers may differ from those shown above. With both commands working, you can configure the Local Library project.
@@ -144,7 +144,7 @@ You can manually use npm to separately fetch each needed package. Typically we i
 
 ### Creating the project
 
-We'll prepare the configuration for the Local Library [starter project](https://github.com/mdn/express-locallibrary-tutorial). By the end of this article, you'll have its package configuration and dependencies ready. We'll add the application code in [Creating a skeleton website](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website).
+In this section we'll create the Local Library project. By the end of this article, you'll have its package configuration and dependencies ready. We'll add the application code in [Creating a skeleton website](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website).
 
 1. Create a directory for the application and navigate into it:
 
@@ -196,7 +196,7 @@ We'll prepare the configuration for the Local Library [starter project](https://
 
 ### Adding dependencies
 
-Install the packages used by the starter from inside the **express-locallibrary-tutorial** directory:
+Install the packages that the project needs, from inside the **express-locallibrary-tutorial** directory:
 
 ```bash
 npm install debug express http-errors morgan pug
@@ -216,7 +216,8 @@ The [`npm install`](https://docs.npmjs.com/cli/commands/npm-install/) command do
 > It is a good idea to regularly update to the latest compatible versions of your dependency libraries — this may even be done automatically or semi-automatically as part of a {{glossary("continuous integration")}} setup.
 >
 > Usually library updates to the minor and patch version remain compatible.
-> We've prefixed each version with `^` above so that we can automatically update to the latest `minor.patch` version by running:
+> When you install a package, npm records its version in **package.json** with a `^` prefix (for example, `"express": "^5.2.1"`).
+> This allows you to update to the latest compatible `minor.patch` version by running:
 >
 > ```bash
 > npm update --save
@@ -308,7 +309,7 @@ This imports Express and creates an application. The `app.get()` method responds
    ```
 
 4. Change the message in `res.send()` to "Hello again!" and save **server.js**. Node restarts the server automatically. Reload the page to see the updated message.
-5. Stop the server with **Ctrl+C** and delete this temporary **server.js** file. We'll add the starter's server and application files in the skeleton website chapter. Keep the npm scripts; they will run that server too.
+5. Stop the server with **Ctrl+C** and delete this temporary **server.js** file. We'll add the project's server and application files in the skeleton website chapter. Keep the npm scripts; they will run that server too.
 
 ### Ignoring generated and local files
 

@@ -541,7 +541,7 @@ For more information see [Using template engines with Express](https://expressjs
 
 Express makes no assumptions in terms of structure or what components you use. Routes, views, static files, and other application-specific logic can live in any number of files with any directory structure. While it is perfectly possible to have the whole _Express_ application in one file, typically it makes sense to split your application into files based on function (e.g., account management, blogs, discussion boards) and architectural problem domain (e.g., model, view or controller if you happen to be using an [MVC architecture](/en-US/docs/Glossary/MVC)).
 
-In a later topic we'll use a starter project that provides a modular app skeleton that we can easily extend for creating web applications.
+In a later topic we'll create a modular app skeleton that we can extend for creating web applications.
 
 ## Summary
 

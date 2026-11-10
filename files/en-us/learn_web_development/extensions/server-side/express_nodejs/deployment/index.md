@@ -245,7 +245,7 @@ import helmet from "helmet";
 const app = express();
 
 // Add helmet to the middleware chain.
-// Set CSP headers to allow our Bootstrap and jQuery to be served
+// Set CSP headers to allow our Bootstrap scripts to be served
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
@@ -306,7 +306,7 @@ The command above limits all requests to 20 per minute (you can change this as n
 
 For node applications, including Express, the **package.json** file contains everything a hosting provider should need to work out the application dependencies and entry point file.
 
-The starter already specifies the minimum Node.js version in **package.json**:
+We already specified the minimum Node.js version in **package.json** when we [created the project](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment#creating_the_project):
 
 ```json
 {
