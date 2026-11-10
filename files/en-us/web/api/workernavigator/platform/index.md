@@ -21,9 +21,8 @@ the platform on which the browser is executing.
 
 For example: `"MacIntel"`, `"Win32"`, `"FreeBSD i386"`, `"WebTV OS"`.
 
-## Usage notes
-
-On Windows, modern browsers return `"Win32"` even if running on a 64-bit version of Windows
+> [!NOTE]
+> On Windows, modern browsers return `"Win32"` even if running on a 64-bit version of Windows.
 
 ## Examples
 
