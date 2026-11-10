@@ -164,7 +164,7 @@ form.addEventListener("submit", () => {
 
 ##### Get the `returnValue` on `close`
 
-Calling {{domxref("HTMLDialogElement.close()", "close()")}} (or successfully submitting a form with `method="dialog"`") fires the {{domxref("HTMLDialogElement/close_event", "close")}} event, which we implement below by logging the return value of the dialog.
+Calling {{domxref("HTMLDialogElement.close()", "close()")}} (or successfully submitting a form with `method="dialog"`) fires the {{domxref("HTMLDialogElement/close_event", "close")}} event, which we implement below by logging the return value of the dialog.
 
 ```js
 dialog.addEventListener("close", (event) => {

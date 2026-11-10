@@ -24,7 +24,7 @@ cd borderify
 
 ### manifest.json
 
-Using a suitable [text editor](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors), create a file called "manifest.json" under the "borderify" directory. Give it this content:
+Using a suitable [code editor](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors), create a file called "manifest.json" under the "borderify" directory. Give it this content:
 
 ```json
 {

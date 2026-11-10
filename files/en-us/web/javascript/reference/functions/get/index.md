@@ -157,11 +157,11 @@ console.log(MyConstants.foo); // 'foo', a static getter's value cannot be change
 
 Getters give you a way to _define_ a property of an object, but they do not _calculate_ the property's value until it is accessed. A getter defers the cost of calculating the value until the value is needed. If it is never needed, you never pay the cost.
 
-An additional optimization technique to lazify or delay the calculation of a property value and cache it for later access are _smart_ (or _{{Glossary("Memoization", "memoized")}}_) getters. The value is calculated the first time the getter is called and is then cached so subsequent accesses return the cached value without recalculating it. This is useful in the following situations:
+An additional optimization technique to lazify or delay the calculation of a property value and cache it for later access is _smart_ (or _{{Glossary("Memoization", "memoized")}}_) getters. The value is calculated the first time the getter is called and is then cached so subsequent accesses return the cached value without recalculating it. This is useful in the following situations:
 
 - If the calculation of a property value is expensive (takes much RAM or CPU time, spawns worker threads, retrieves remote file, etc.).
 - If the value isn't needed just now. It will be used later, or in some cases, it's not used at all.
-- If it's used, it will be accessed several times, and there is no need to re-calculate that value will never be changed or shouldn't be re-calculated.
+- If it's used, it will be accessed several times, and there is no need to re-calculate that value because it will never be changed or shouldn't be re-calculated.
 
 > [!NOTE]
 > This means that you shouldn't write a lazy getter for a property whose value you expect to change, because if the getter is lazy, then it will not recalculate the value.

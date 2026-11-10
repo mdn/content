@@ -86,7 +86,7 @@ We'll apply the above CSS to the following HTML:
 
 This will render as follows:
 
-{{ EmbedLiveSample("CSS-only method", "100%", "120") }}
+{{ EmbedLiveSample("explicit_css_anchor_association", "100%", "120") }}
 
 The anchor and infobox are now associated, but for the moment you'll have to trust us on this. They are not tethered to each other yet — if you were to position the anchor and move it somewhere else on the page, it would move on its own, leaving the infobox in the same place. You'll see the actual tethering in action when we look at [positioning elements based on anchor position](#positioning_elements_relative_to_their_anchor).
 
@@ -98,6 +98,9 @@ In some cases, an implicit anchor reference will be made between two elements, d
   - Declaratively associating a popover with a control using the [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) and [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attributes or the [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) and `id` attributes.
   - Programmatically associating a popover action such as {{domxref("HTMLElement.showPopover", "showPopover()")}} with a control using the `source` option.
 - A {{htmlelement("select")}} element and its dropdown picker are opted into [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) functionality via the {{cssxref("appearance")}} property `base-select` value. In this case, an implicit popover-invoker relationship is created between the two, which also means they'll have an implicit anchor reference.
+
+> [!NOTE]
+> See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more information on positioning elements relative to their implicit anchors.
 
 > [!NOTE]
 > The methods above associate an anchor with an element, but they are not yet tethered. To tether them together, the positioned element needs to be positioned relative to its anchor, which is done with CSS.
@@ -360,6 +363,9 @@ This gives us the following result:
 {{ EmbedLiveSample("`anchor()` example", "100%", "250") }}
 
 The positioned element is `5px` below and `5px` to the right of the anchor element. If you scroll the document up and down, the positioned element maintains its position relative to the anchor element — it is fixed to the anchor element, not the viewport.
+
+> [!NOTE]
+> When positioning elements relative to [implicit anchors](#implicit_anchor_association) using `anchor()`, some additional steps are required, such as resetting default popover property values, and setting `position-anchor: auto` to opt in to the implicit association. See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more information.
 
 ### Setting a `position-area`
 
@@ -888,7 +894,7 @@ Now onto the most interesting part. Here we set the anchor's `width` to `300px` 
 
 The rendered result is as follows:
 
-{{EmbedLiveSample("Basic `anchor-size()` usage", "100%", "240")}}
+{{EmbedLiveSample("anchor-size_position_and_margin_example", "100%", "240")}}
 
 Try tabbing to the anchor or hovering over it with the mouse pointer, and note how the infobox's position and left margin grow in proportion to the anchor element's width.
 

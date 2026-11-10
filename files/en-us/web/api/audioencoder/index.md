@@ -25,11 +25,6 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 - {{domxref("AudioEncoder.state")}} {{ReadOnlyInline}}
   - : Represents the state of the underlying codec and whether it is configured for encoding.
 
-### Events
-
-- {{domxref("AudioEncoder.dequeue_event", "dequeue")}}
-  - : Fires to signal a decrease in {{domxref("AudioEncoder.encodeQueueSize")}}.
-
 ## Static methods
 
 - {{domxref("AudioEncoder.isConfigSupported_static", "AudioEncoder.isConfigSupported()")}}
@@ -49,6 +44,11 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
   - : Resets all states including configuration, control messages in the control message queue, and all pending callbacks.
 - {{domxref("AudioEncoder.close()")}}
   - : Ends all pending work and releases system resources.
+
+## Events
+
+- {{domxref("AudioEncoder.dequeue_event", "dequeue")}}
+  - : Fires to signal a decrease in {{domxref("AudioEncoder.encodeQueueSize")}}.
 
 ## Specifications
 

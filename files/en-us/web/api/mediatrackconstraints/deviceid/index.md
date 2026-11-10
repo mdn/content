@@ -11,7 +11,7 @@ browser-compat: api.MediaStreamTrack.applyConstraints.deviceId_constraint
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`deviceId`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring)
 describing the requested or mandatory constraints placed upon the value of the
-{{domxref("MediaTrackSettings.deviceId", "deviceId")}} constrainable property.
+[`deviceId`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#deviceid) constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
 the value of [`deviceId`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#deviceid) as returned by a

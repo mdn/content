@@ -42,7 +42,7 @@ Array(arrayLength)
     its `length` property set to that number.
 
     > [!NOTE]
-    > This implies an array of `arrayLength` empty slots, not slots with actual `undefined` values — see [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)).
+    > This implies an array of `arrayLength` empty slots, not slots with actual `undefined` values — see [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
 ### Exceptions
 

@@ -313,7 +313,7 @@ slice(arguments);
 
 ## See also
 
-- [Polyfill of `Function.prototype.bind` in `core-js`](https://github.com/zloirock/core-js#ecmascript-function)
+- [Polyfill of `Function.prototype.bind` in `core-js`](https://core-js.io/docs/features/ecmascript/function)
 - {{jsxref("Function.prototype.apply()")}}
 - {{jsxref("Function.prototype.call()")}}
 - {{jsxref("Functions", "Functions", "", 1)}}

@@ -11,7 +11,7 @@ browser-compat: api.MediaStreamTrack.applyConstraints.height_constraint
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`height`** property is a [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#constrainulong)
 describing the requested or mandatory constraints placed upon the value of the
-{{domxref("MediaTrackSettings.height", "height")}} constrainable property.
+[`height`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#height) constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
 the value of [`height`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#height) as returned by a call

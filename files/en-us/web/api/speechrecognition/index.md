@@ -31,11 +31,11 @@ _`SpeechRecognition` also inherits properties from its parent interface, {{domxr
   - : Controls whether interim results should be returned (`true`) or not (`false`.) Interim results are results that are not yet final (e.g., the {{domxref("SpeechRecognitionResult.isFinal")}} property is `false`.)
 - {{domxref("SpeechRecognition.maxAlternatives")}}
   - : Sets the maximum number of {{domxref("SpeechRecognitionAlternative")}}s provided per result. The default value is 1.
-- {{domxref("SpeechRecognition.phrases")}} {{experimental_inline}}
+- {{domxref("SpeechRecognition.phrases")}}
   - : Sets an array of {{domxref("SpeechRecognitionPhrase")}} objects to be used for [contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#contextual_biasing_in_speech_recognition).
-- {{domxref("SpeechRecognition.processLocally")}} {{experimental_inline}}
+- {{domxref("SpeechRecognition.processLocally")}}
   - : Specifies whether speech recognition must be performed locally on the user's device.
-- {{domxref("SpeechRecognition.unspokenPunctuation")}} {{experimental_inline}}
+- {{domxref("SpeechRecognition.unspokenPunctuation")}}
   - : Specifies whether the speech recognition engine will infer and insert punctuation marks based on the user's natural speech patterns.
 
 ### Deprecated properties
@@ -47,9 +47,9 @@ The concept of grammar has been removed from the Web Speech API. Related feature
 
 ## Static methods
 
-- {{domxref("SpeechRecognition.available_static", "SpeechRecognition.available()")}} {{experimental_inline}}
+- {{domxref("SpeechRecognition.available_static", "SpeechRecognition.available()")}}
   - : Checks whether the specified languages are available for speech recognition.
-- {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} {{experimental_inline}}
+- {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}}
   - : Installs the required language packs for on-device speech recognition in the specified languages.
 
 ## Instance methods

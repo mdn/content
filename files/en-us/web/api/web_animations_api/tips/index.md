@@ -47,7 +47,7 @@ const button = document.querySelector(".runButton");
 /*
   equivalent to the following CSS @keyframes
 
-  @keyframes colorChange {
+  @keyframes color-change {
     0% {
       background-color: grey;
     }

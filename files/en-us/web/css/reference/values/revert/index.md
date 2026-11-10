@@ -59,7 +59,7 @@ h3 {
 
 #### Result
 
-{{EmbedLiveSample('Revert_vs_unset', 0, 200)}}
+{{EmbedLiveSample('revert_vs._unset', 0, 200)}}
 
 ### Revert all
 

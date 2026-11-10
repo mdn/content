@@ -11,7 +11,7 @@ browser-compat: api.MediaStreamTrack.applyConstraints.echoCancellation_constrain
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`echoCancellation`** property is a
 [`ConstrainBooleanOrDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constrainbooleanordomstring) describing the requested or mandatory constraints placed
-upon the value of the {{domxref("MediaTrackSettings.echoCancellation", "echoCancellation")}} constrainable property.
+upon the value of the [`echoCancellation`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#echocancellation) constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
 the value of [`echoCancellation`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#echocancellation) as returned

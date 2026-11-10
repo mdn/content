@@ -6,56 +6,29 @@ page-type: web-api-event
 browser-compat: api.HTMLTextAreaElement.select_event
 ---
 
-{{APIRef("Selection API")}}
+{{APIRef("HTML DOM")}}
 
-The **`select`** event fires when some text has been selected.
+The **`select`** event of the {{domxref("HTMLTextAreaElement")}} interface fires when the selection's extent or direction is changed programmatically, or when the user selects text.
+
+For general information about this event, see [`HTMLInputElement`: `select` event](/en-US/docs/Web/API/HTMLInputElement/select_event).
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("select", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onselect = (event) => { }
 ```
 
 ## Event type
 
 A generic {{domxref("Event")}}.
-
-## Examples
-
-### Selection logger
-
-```html
-<textarea>Try selecting some text in this element.</textarea>
-<p id="log"></p>
-```
-
-```js
-function logSelection(event) {
-  const log = document.getElementById("log");
-  const selection = event.target.value.substring(
-    event.target.selectionStart,
-    event.target.selectionEnd,
-  );
-  log.textContent = `You selected: ${selection}`;
-}
-
-const textarea = document.querySelector("textarea");
-textarea.addEventListener("select", logSelection);
-```
-
-{{EmbedLiveSample("Selection_logger")}}
-
-### onselect equivalent
-
-You can also set up the event handler using the `onselect` property:
-
-```js
-textarea.onselect = logSelection;
-```
 
 ## Specifications
 
@@ -64,7 +37,3 @@ textarea.onselect = logSelection;
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("HTMLTextAreaElement.select()")}}

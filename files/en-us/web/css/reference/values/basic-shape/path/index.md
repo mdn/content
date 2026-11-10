@@ -134,7 +134,7 @@ btn.addEventListener("click", () => {
 });
 ```
 
-{{EmbedLiveSample("Use as the value of offset-path", "100%", 350)}}
+{{EmbedLiveSample("using_a_path_function_as_an_offset-path_value", "100%", 350)}}
 
 ### Modify the value of the SVG path d attribute
 

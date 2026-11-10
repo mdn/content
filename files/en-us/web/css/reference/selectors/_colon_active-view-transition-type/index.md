@@ -221,7 +221,7 @@ Finally, we use {{cssxref("@keyframes")}} animation blocks to define the animati
 
 The example is rendered like so:
 
-{{EmbedLiveSample("basic-usage", "100%", 200)}}
+{{EmbedLiveSample("basic_usage", "100%", 200)}}
 
 Try clicking the "Backwards" and "Forwards" buttons, and note how, even though the same code is used to trigger the content update and view transition in each case, a different animation is used for the transition. This is because a different transition type is set depending on which button is pressed.
 

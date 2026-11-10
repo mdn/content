@@ -79,7 +79,7 @@ See {{domxref("Window.setInterval", "setInterval()")}} for examples.
 
 ## See also
 
-- [Polyfill of `setInterval` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
+- [Polyfill of `setInterval` which allows passing arguments to the callback in `core-js`](https://core-js.io/docs/features/web-standards/settimeout-setinterval)
 - {{domxref("Window.setInterval()")}}
 - {{domxref("WorkerGlobalScope.clearInterval()")}}
 - {{domxref("WorkerGlobalScope.setTimeout()")}}

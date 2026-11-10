@@ -6,7 +6,7 @@ page-type: webgl-extension-method
 browser-compat: api.EXT_disjoint_timer_query.createQueryEXT
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`EXT_disjoint_timer_query.createQueryEXT()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) creates and initializes

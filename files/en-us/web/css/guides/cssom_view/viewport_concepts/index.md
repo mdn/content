@@ -172,4 +172,3 @@ The `width` property controls the size of the viewport. It should preferably be 
 - [CSSOM view API](/en-US/docs/Web/API/CSSOM_view_API)
 - {{HTMLElement("meta")}}, specifically [`<meta name="viewport">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport)
 - [CSS viewport](/en-US/docs/Web/CSS/Guides/Viewport) module
-- [CSSOM view](/en-US/docs/Web/CSS/Guides/CSSOM_view) module

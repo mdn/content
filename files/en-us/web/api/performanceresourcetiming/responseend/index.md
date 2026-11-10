@@ -10,13 +10,22 @@ browser-compat: api.PerformanceResourceTiming.responseEnd
 
 The **`responseEnd`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser receives the last byte of the resource or immediately before the transport connection is closed, whichever comes first.
 
-Unlike many other `PerformanceResourceTiming` properties, the `responseEnd` property is available for cross-origin requests without the need of the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header.
-
 ## Value
 
-A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the last
-byte of the resource or immediately before the transport connection is closed, whichever
-comes first.
+A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the last byte of the resource or immediately before the transport connection is closed, whichever comes first.
+
+## Description
+
+The `responseEnd` property is available for cross-origin requests without the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header, except for navigations of cross-origin {{HTMLElement("iframe")}} elements.
+
+### Cross-origin iframes
+
+For a cross-origin {{HTMLElement("iframe")}}, if the iframe's document is served with a {{HTTPHeader("Timing-Allow-Origin")}} header that allows the embedding page's origin, `responseEnd` is the time immediately after the browser receives the last byte of that document.
+
+Without this header, the precise time isn't reported, because it could reveal how the user interacted with the frame.
+Instead, the browser reports a fallback entry once the iframe's {{domxref("HTMLElement/load_event", "load")}} event fires.
+In this entry, {{domxref("PerformanceEntry.startTime", "startTime")}} is the time the iframe started navigating, and `responseEnd` is the time the iframe finished loading, including all of its subresources.
+The other timestamps, as well as the {{domxref("PerformanceResourceTiming.encodedBodySize", "encodedBodySize")}} and {{domxref("PerformanceResourceTiming.decodedBodySize", "decodedBodySize")}} properties, are `0`.
 
 ## Examples
 
@@ -62,3 +71,8 @@ resources.forEach((entry) => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{HTTPHeader("Timing-Allow-Origin")}}
+- [Resource timing](/en-US/docs/Web/API/Performance_API/Resource_timing)

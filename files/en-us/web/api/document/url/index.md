@@ -17,12 +17,6 @@ A string containing the URL of the document.
 
 ## Examples
 
-### JavaScript
-
-```js
-document.getElementById("url").textContent = document.URL;
-```
-
 ### HTML
 
 ```html
@@ -30,6 +24,12 @@ document.getElementById("url").textContent = document.URL;
   URL:<br />
   <span id="url">URL goes here</span>
 </p>
+```
+
+### JavaScript
+
+```js
+document.getElementById("url").textContent = document.URL;
 ```
 
 ### Result

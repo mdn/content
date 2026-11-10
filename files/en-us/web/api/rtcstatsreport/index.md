@@ -16,6 +16,26 @@ An `RTCStatsReport` instance is a read-only [`Map`-like object](/en-US/docs/Web/
 - {{domxref("RTCStatsReport.size")}}
   - : Returns the number of items in the `RTCStatsReport` object.
 
+### Common instance properties
+
+All the dictionary types have the following properties:
+
+- `id`
+  - : A string that uniquely identifies the object was monitored to produce the set of statistics.
+    This value persists across reports for (at least) the lifetime of the connection.
+    Note however that for some statistics the ID may vary between browsers and for subsequent connections, even to the same peer.
+- `timestamp`
+  - : A high resolution timestamp object ({{domxref("DOMHighResTimeStamp")}}) object indicating the time at which the sample was taken.
+    Many reported statistics are cumulative values; the timestamp allows rates and averages to be calculated between any two reports, at any desired reporting rate.
+- `type`
+  - : A string with a value that indicates the type of statistics that the object contains, such as `candidate-pair`, `inbound-rtp`, `certificate`, and so on.
+    The [types of statistics and their corresponding objects](#the_statistic_types) are listed below.
+
+Users typically iterate a `RTCStatsReport`, using a {{domxref("RTCStatsReport.forEach()", "forEach()")}} or [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop, selecting the statistics of interest using the `type` property.
+Once a particular statistic object has been identified using its `type`, the `id` property can subsequently be used with {{domxref("RTCStatsReport.get()", "get()")}} to obtain the same statistic report at a different time.
+
+The timestamp can be used to calculate average values for statistics that accumulate over the lifetime of a connection.
+
 ## Instance methods
 
 - {{domxref("RTCStatsReport.entries()")}}
@@ -45,26 +65,6 @@ A `RTCStatsReport` can be iterated and used the same ways as a read-only `Map`.
 
 The report may contain many different categories of statistics, including inbound and outbound statistics for both the current and remote ends of the peer connection, information about codecs, certificates and media used, and so on.
 Each category of statistic is provided in a different type of statistics dictionary object, which can be identified from its [`type`](#type) property.
-
-### Common instance properties
-
-All the dictionary types have the following properties:
-
-- `id`
-  - : A string that uniquely identifies the object was monitored to produce the set of statistics.
-    This value persists across reports for (at least) the lifetime of the connection.
-    Note however that for some statistics the ID may vary between browsers and for subsequent connections, even to the same peer.
-- `timestamp`
-  - : A high resolution timestamp object ({{domxref("DOMHighResTimeStamp")}}) object indicating the time at which the sample was taken.
-    Many reported statistics are cumulative values; the timestamp allows rates and averages to be calculated between any two reports, at any desired reporting rate.
-- `type`
-  - : A string with a value that indicates the type of statistics that the object contains, such as `candidate-pair`, `inbound-rtp`, `certificate`, and so on.
-    The [types of statistics and their corresponding objects](#the_statistic_types) are listed below.
-
-Users typically iterate a `RTCStatsReport`, using a {{domxref("RTCStatsReport.forEach()", "forEach()")}} or [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop, selecting the statistics of interest using the `type` property.
-Once a particular statistic object has been identified using its `type`, the `id` property can subsequently be used with {{domxref("RTCStatsReport.get()", "get()")}} to obtain the same statistic report at a different time.
-
-The timestamp can be used to calculate average values for statistics that accumulate over the lifetime of a connection.
 
 ### The statistic types
 

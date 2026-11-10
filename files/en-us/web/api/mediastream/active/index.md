@@ -25,7 +25,7 @@ otherwise, the value is `false`.
 
 In this example, a new stream whose source is the user's local camera and microphone is
 requested using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}. When that
-stream becomes available (that is, when the returned {{jsxref("Promise")}} is fulfilled,
+stream becomes available (that is, when the returned {{jsxref("Promise")}} is fulfilled),
 a button on the page is updated based on whether or not the stream is currently active.
 
 ```js

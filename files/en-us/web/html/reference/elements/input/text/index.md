@@ -123,41 +123,31 @@ The value returned by reading `spellcheck` may not reflect the actual state of s
 ### Basic example
 
 ```html
-<form>
-  <div>
-    <label for="uname">Choose a username: </label>
-    <input type="text" id="uname" name="name" />
-  </div>
-  <div>
-    <button>Submit</button>
-  </div>
-</form>
+<div>
+  <label for="uname">Choose a username: </label>
+  <input type="text" id="uname" name="name" />
+</div>
 ```
 
 This renders like so:
 
 {{EmbedLiveSample("Basic_example", 600, 80)}}
 
-When submitted, the data name/value pair sent to the server will be `name=Chris` (if "Chris" was entered as the input value before submission). You must remember to include [`name`](/en-US/docs/Web/HTML/Reference/Elements/input#name) attribute on the {{HTMLElement("input")}} element, otherwise the text field's value won't be included with the submitted data.
+If this input is included in a form and submitted, the data name/value pair sent to the server will be `name=Chris` (if "Chris" was entered as the input value before submission). You must remember to include [`name`](/en-US/docs/Web/HTML/Reference/Elements/input#name) attribute on the {{HTMLElement("input")}} element, otherwise the text field's value won't be included with the submitted data.
 
 ### Setting placeholders
 
 You can provide a useful placeholder inside your text input that can provide a hint as to what to enter by including using the [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder) attribute. Look at the following example:
 
 ```html
-<form>
-  <div>
-    <label for="uname">Choose a username: </label>
-    <input
-      type="text"
-      id="uname"
-      name="name"
-      placeholder="Lower case, all one word" />
-  </div>
-  <div>
-    <button>Submit</button>
-  </div>
-</form>
+<div>
+  <label for="uname">Choose a username: </label>
+  <input
+    type="text"
+    id="uname"
+    name="name"
+    placeholder="Lower case, all one word" />
+</div>
 ```
 
 You can see how the placeholder is rendered below:
@@ -171,20 +161,15 @@ The placeholder is typically rendered in a lighter color than the element's fore
 The physical size of the input box can be controlled using the [`size`](/en-US/docs/Web/HTML/Reference/Elements/input#size) attribute. With it, you can specify the number of characters the text input can display at a time. This affects the width of the element, letting you specify the width in terms of characters rather than pixels. In this example, for instance, the input is 30 characters wide:
 
 ```html
-<form>
-  <div>
-    <label for="uname">Choose a username: </label>
-    <input
-      type="text"
-      id="uname"
-      name="name"
-      placeholder="Lower case, all one word"
-      size="30" />
-  </div>
-  <div>
-    <button>Submit</button>
-  </div>
-</form>
+<div>
+  <label for="uname">Choose a username: </label>
+  <input
+    type="text"
+    id="uname"
+    name="name"
+    placeholder="Lower case, all one word"
+    size="30" />
+</div>
 ```
 
 {{EmbedLiveSample('Physical_input_element_size', 600, 80)}}
@@ -242,6 +227,12 @@ You can use the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#requi
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```css hidden
 div {
   margin-bottom: 10px;
@@ -293,6 +284,12 @@ The example below requires that the entered value be 4–8 characters in length.
     <button>Submit</button>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden
@@ -348,6 +345,12 @@ The example below restricts the value to 4-8 characters and requires that it con
     <button>Submit</button>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden

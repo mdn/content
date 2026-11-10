@@ -32,7 +32,7 @@ A {{domxref('CSSMathProduct')}}, or a {{domxref('CSSUnitValue')}} if `this` and 
 
 - {{jsxref("TypeError")}}
   - : Thrown if an invalid type was passed to the method.
-- [`RangeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError)
+- {{jsxref("RangeError")}}
   - : Thrown if any of `number1`, …, `numberN` is, or resolves to, 0 or -0.
 
 ## Examples

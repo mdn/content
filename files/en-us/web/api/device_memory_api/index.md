@@ -2,6 +2,8 @@
 title: Device Memory API
 slug: Web/API/Device_Memory_API
 page-type: web-api-overview
+status:
+  - non-standard
 browser-compat:
   - api.Navigator.deviceMemory
   - api.WorkerNavigator.deviceMemory
@@ -9,7 +11,7 @@ browser-compat:
 spec-urls: https://www.w3.org/TR/device-memory/
 ---
 
-{{DefaultAPISidebar("Device Memory API")}}{{securecontext_header}}{{AvailableInWorkers}}
+{{DefaultAPISidebar("Device Memory API")}}{{securecontext_header}}{{AvailableInWorkers}}{{non-standard_header}}
 
 The capabilities of a client device largely depend on the amount of available RAM. Traditionally, developers had to use heuristics and either benchmark a device or infer device capabilities based on other factors like the device manufacturer or User Agent strings.
 

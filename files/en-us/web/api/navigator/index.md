@@ -31,7 +31,7 @@ _Doesn't inherit any properties._
   - : Returns false if setting a cookie will be ignored and true otherwise.
 - {{domxref("Navigator.credentials")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the {{domxref("CredentialsContainer")}} interface which exposes methods to request credentials and notify the user agent when interesting events occur such as successful sign in or sign out.
-- {{domxref("Navigator.deviceMemory")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
+- {{domxref("Navigator.deviceMemory")}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{non-standard_inline}}
   - : Returns the amount of device memory in gigabytes. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024.
 - {{domxref("Navigator.devicePosture")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the browser's {{domxref("DevicePosture")}} object, which allows developers to query the device's current posture (that is, whether the viewport is in a flat or folded state) and run code in response to posture changes.
@@ -100,15 +100,6 @@ _Doesn't inherit any properties._
 - {{domxref("Navigator.xr")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns {{domxref("XRSystem")}} object, which represents the entry point into the [WebXR API](/en-US/docs/Web/API/WebXR_Device_API).
 
-### Non-standard properties
-
-- {{domxref("Navigator.buildID")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Returns the build identifier of the browser. In modern browsers this property now returns a fixed timestamp as a privacy measure, e.g., `20181001000000` in Firefox 64 onwards.
-- {{domxref("Navigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a boolean indicating a user's consent to their information being shared or sold.
-- {{domxref("Navigator.standalone")}} {{Non-standard_Inline}}
-  - : Returns a boolean indicating whether the browser is running in standalone mode. Available on Apple's iOS Safari only.
-
 ### Deprecated properties
 
 - {{domxref("Navigator.activeVRDisplays")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
@@ -137,6 +128,15 @@ _Doesn't inherit any properties._
   - : Returns either the empty string, `'Apple Computer Inc.'`, or `'Google Inc.'`.
 - {{domxref("Navigator.vendorSub")}} {{ReadOnlyInline}}
   - : Always returns the empty string.
+
+### Non-standard properties
+
+- {{domxref("Navigator.buildID")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+  - : Returns the build identifier of the browser. In modern browsers this property now returns a fixed timestamp as a privacy measure, e.g., `20181001000000` in Firefox 64 onwards.
+- {{domxref("Navigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a boolean indicating a user's consent to their information being shared or sold.
+- {{domxref("Navigator.standalone")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+  - : Returns a boolean indicating whether the browser is running in standalone mode. Available on Apple's iOS Safari only.
 
 ## Instance methods
 

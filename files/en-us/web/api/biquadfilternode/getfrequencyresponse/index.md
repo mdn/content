@@ -47,7 +47,7 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `InvalidAccessError`
+- `InvalidAccessError` {{domxref("DOMException")}}
   - : The three arrays provided are not all of the same length.
 
 ## Examples

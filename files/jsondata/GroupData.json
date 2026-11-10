@@ -1112,7 +1112,6 @@
         "MediaStreamTrack",
         "MediaStreamTrackEvent",
         "MediaTrackConstraints",
-        "MediaTrackSettings",
         "OverconstrainedError"
       ],
       "methods": [
@@ -1189,6 +1188,17 @@
       "properties": ["Navigator.connection", "WorkerNavigator.connection"],
       "events": []
     },
+    "Observable API": {
+      "overview": ["Observable API"],
+      "guides": [
+        "/docs/Web/API/Observable_API/Using_observables",
+        "/docs/Web/API/Observable_API/Creating_observables"
+      ],
+      "interfaces": ["Observable", "Subscriber"],
+      "methods": ["EventTarget.when()"],
+      "properties": [],
+      "events": []
+    },
     "Page Visibility API": {
       "overview": ["Page Visibility API"],
       "interfaces": [],
@@ -1237,6 +1247,7 @@
         "NotRestoredReasons",
         "NotRestoredReasonDetails",
         "Performance",
+        "PerformanceContainerTiming",
         "PerformanceEntry",
         "PerformanceElementTiming",
         "PerformanceEventTiming",
@@ -1509,16 +1520,13 @@
       ],
       "methods": [
         "MediaDevices.getDisplayMedia()",
-        "MediaDevices.getSupportedConstraints()"
+        "MediaDevices.getSupportedConstraints()",
+        "MediaStreamTrack.getSettings()"
       ],
       "properties": [
         "MediaTrackConstraints.displaySurface",
         "MediaTrackConstraints.logicalSurface",
-        "MediaTrackConstraints.suppressLocalAudioPlayback",
-        "MediaTrackSettings.cursor",
-        "MediaTrackSettings.displaySurface",
-        "MediaTrackSettings.logicalSurface",
-        "MediaTrackSettings.suppressLocalAudioPlayback"
+        "MediaTrackConstraints.suppressLocalAudioPlayback"
       ],
       "events": []
     },
@@ -2242,7 +2250,18 @@
         "ANGLE_instanced_arrays",
         "EXT_blend_minmax",
         "EXT_disjoint_timer_query",
-        "OES_draw_buffers_indexed"
+        "OES_draw_buffers_indexed",
+        "EXT_color_buffer_float",
+        "EXT_float_blend",
+        "EXT_texture_compression_bptc",
+        "EXT_texture_compression_rgtc",
+        "EXT_texture_norm16",
+        "KHR_parallel_shader_compile",
+        "OES_fbo_render_mipmap",
+        "OVR_multiview2",
+        "WEBGL_compressed_texture_astc",
+        "WEBGL_compressed_texture_etc",
+        "WEBGL_multi_draw"
       ],
       "methods": [],
       "properties": [],

@@ -11,7 +11,7 @@ browser-compat: api.MediaStreamTrack.applyConstraints.latency_constraint
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`latency`** property is a [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble)
 describing the requested or mandatory constraints placed upon the value of the
-{{domxref("MediaTrackSettings.latency", "latency")}} constrainable property.
+[`latency`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#latency) constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
 the value of [`latency`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#latency) as returned by a call

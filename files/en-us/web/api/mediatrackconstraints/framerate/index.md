@@ -11,7 +11,7 @@ browser-compat: api.MediaStreamTrack.applyConstraints.frameRate_constraint
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`frameRate`** property is a [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble)
 describing the requested or mandatory constraints placed upon the value of the
-{{domxref("MediaTrackSettings.frameRate", "frameRate")}} constrainable property.
+[`frameRate`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#framerate) constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
 the value of [`frameRate`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#framerate) as returned by a

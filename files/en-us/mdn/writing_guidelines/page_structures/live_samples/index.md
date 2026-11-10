@@ -344,7 +344,7 @@ We get this output by running the code blocks above using the string identifier 
 
 Use the `height` parameter to specify the size of the `<iframe>` element that contains the live sample output.
 
-```html
+```html live-sample___iframe_size
 <p>Just some simple text here.</p>
 ```
 

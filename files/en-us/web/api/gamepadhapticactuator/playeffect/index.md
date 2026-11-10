@@ -57,7 +57,7 @@ The promise may reject with the following exception types:
   - : The current document is not active or hidden.
 - `NotSupportedError` {{domxref("DOMException")}}
   - : The requested `type` is not supported by the current gamepad's actuator.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : The requested `type` is not a valid effect type.
 
 ## Examples

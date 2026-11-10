@@ -189,7 +189,7 @@ Finally, we use {{cssxref("@keyframes")}} animation blocks to define the animati
 
 The example is rendered like so:
 
-{{EmbedLiveSample("basic-usage", "100%", 200)}}
+{{EmbedLiveSample("basic_usage", "100%", 200)}}
 
 Try clicking each button and note how the DOM changes are identical in each case, but the animation is different. This is because a different transition type is set depending on which button is pressed (or no transition type in the "Default" case).
 

@@ -200,11 +200,11 @@ These constraints apply to the `video` property of the object passed into {{domx
     These may include backing buffers for windows to allow capture of window contents that are hidden by other windows in front of them, or buffers containing larger documents that need to be scrolled through to see the entire contents in their windows.
 
 - {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback", "suppressLocalAudioPlayback")}} {{Experimental_Inline}}
-  - : A [`ConstrainBoolean`](#constrainboolean) value describing the requested or mandatory constraints placed upon the value of the {{domxref("MediaTrackSettings.suppressLocalAudioPlayback","suppressLocalAudioPlayback")}} constrainable property.
+  - : A [`ConstrainBoolean`](#constrainboolean) value describing the requested or mandatory constraints placed upon the value of the [`suppressLocalAudioPlayback`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#suppresslocalaudioplayback) constrainable property.
     This property controls whether the audio playing in a tab will continue to be played out of a user's local speakers when the tab is captured.
 
 - {{domxref("MediaTrackConstraints.restrictOwnAudio", "restrictOwnAudio")}} {{Experimental_Inline}}
-  - : A [`ConstrainBoolean`](#constrainboolean) value that specifies the requested or mandatory constraints placed on the value of the {{domxref("MediaTrackSettings.restrictOwnAudio","restrictOwnAudio")}} constrainable property.
+  - : A [`ConstrainBoolean`](#constrainboolean) value that specifies the requested or mandatory constraints placed on the value of the [`restrictOwnAudio`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#restrictownaudio) constrainable property.
     This property controls whether the system audio originating from the capturing tab is filtered out of the screen capture.
 
 ## Specifications

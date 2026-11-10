@@ -73,7 +73,7 @@ console.log(str); // 'foo  '
 
 ## See also
 
-- [Polyfill of `String.prototype.trimStart` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.trimStart` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - [es-shims polyfill of `String.prototype.trimStart`](https://www.npmjs.com/package/string.prototype.trimstart)
 - {{jsxref("String.prototype.trim()")}}
 - {{jsxref("String.prototype.trimEnd()")}}
