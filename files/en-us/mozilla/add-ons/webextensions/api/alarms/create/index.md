@@ -45,8 +45,8 @@ browser.alarms.create(
       - : `double`. If this is specified, the alarm will fire again every `periodInMinutes` after its initial firing. If you specify this value you may omit both `when` and `delayInMinutes`, and the alarm will then fire initially after `periodInMinutes`. If `periodInMinutes` is not specified, the alarm will only fire once.
     - `persistAcrossSessions` {{optional_inline}}
       - : `boolean`. Whether the alarm should persist across sessions (browser restarts). When:
-        - `true`, the alarm persists until the extension updates. 
-        - `false`, the alarm clears when the extension reloads or updates, or the browser restarts (after the last open browser window is closed). In browsers that support profiles (such as Chrome), closing all windows for the same (non-incognito) profile clears an alarm set in the profile. 
+        - `true`, the alarm persists until the extension updates.
+        - `false`, the alarm clears when the extension reloads or updates, or the browser restarts (after the last open browser window is closed). In browsers that support profiles (such as Chrome), closing all windows for the same (non-incognito) profile clears an alarm set in the profile.
 
 ### Return value
 
