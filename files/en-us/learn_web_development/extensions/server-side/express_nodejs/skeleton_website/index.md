@@ -194,7 +194,7 @@ app.set("view engine", "pug");
 ```
 
 The next set of functions call `app.use()` to add the _middleware_ libraries that we imported above into the request handling chain.
-For example, `express.json()` and `express.urlencoded()` are needed to populate [`req.body`](https://expressjs.com/en/api/#req.body) with the form fields.
+For example, `express.json()` and `express.urlencoded()` are needed to populate [`req.body`](https://expressjs.com/en/5x/api/request/#reqbody) with the form fields.
 After these libraries we also use the `express.static` middleware, which makes _Express_ serve all the static files in the **public/** directory in the project root.
 
 ```js
@@ -279,7 +279,7 @@ The route defines a callback that will be invoked whenever an HTTP `GET` request
 
 ### Views (templates)
 
-The views (templates) are stored in the **views/** directory (as specified in **app.js**) and are given the file extension **.pug**. The method [`Response.render()`](https://expressjs.com/en/5x/api/#res.render) is used to render a specified template along with the values of named variables passed in an object, and then send the result as a response. In **routes/index.js**, add the following code above the `export` line, which uses the template "index" passing the template variable "title".
+The views (templates) are stored in the **views/** directory (as specified in **app.js**) and are given the file extension **.pug**. The method [`Response.render()`](https://expressjs.com/en/5x/api/response/#resrender) is used to render a specified template along with the values of named variables passed in an object, and then send the result as a response. In **routes/index.js**, add the following code above the `export` line, which uses the template "index" passing the template variable "title".
 
 ```js
 router.get("/", (req, res) => {

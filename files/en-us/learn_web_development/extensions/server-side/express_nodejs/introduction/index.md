@@ -111,7 +111,7 @@ While _Express_ itself is fairly minimalist, developers have created compatible 
 
 Node was initially released, for Linux only, in 2009. The npm package manager was released in 2010, and native Windows support was added in 2012. Delve into [Wikipedia](https://en.wikipedia.org/wiki/Node.js#History) if you want to know more.
 
-Express was initially released in November 2010 and is currently on major version 5 of the API. You can check out the [changelog](https://expressjs.com/en/changelog/#5.x) for information about changes in the current release, and [GitHub](https://github.com/expressjs/express/blob/master/History.md) for more detailed historical release notes.
+Express was initially released in November 2010 and is currently on major version 5 of the API. You can check out the [changelog](https://github.com/expressjs/express/releases) for information about changes in the current release, and [GitHub](https://github.com/expressjs/express/blob/master/History.md) for more detailed historical release notes.
 
 ## How popular are Node and Express?
 
@@ -168,9 +168,9 @@ app.listen(port, () => {
 });
 ```
 
-The first two statements import the express module and create an [Express application](https://expressjs.com/en/5x/api/#app). This object, which is traditionally named `app`, has methods for routing HTTP requests, configuring middleware, rendering HTML views, registering a template engine, and modifying [application settings](https://expressjs.com/en/5x/api/#app.settings.table) that control how the application behaves (e.g., the environment mode, whether route definitions are case sensitive, etc.)
+The first two statements import the express module and create an [Express application](https://expressjs.com/en/5x/api/application/). This object, which is traditionally named `app`, has methods for routing HTTP requests, configuring middleware, rendering HTML views, registering a template engine, and modifying [application settings](https://expressjs.com/en/5x/api/application/#application-settings) that control how the application behaves (e.g., the environment mode, whether route definitions are case sensitive, etc.)
 
-The middle part of the code (the three lines starting with `app.get`) shows a _route definition_. The `app.get()` method specifies a callback function that will be invoked whenever there is an HTTP `GET` request with a path (`'/'`) relative to the site root. The callback function takes a request and a response object as arguments, and calls [`send()`](https://expressjs.com/en/5x/api/#res.send) on the response to return the string "Hello World!"
+The middle part of the code (the three lines starting with `app.get`) shows a _route definition_. The `app.get()` method specifies a callback function that will be invoked whenever there is an HTTP `GET` request with a path (`'/'`) relative to the site root. The callback function takes a request and a response object as arguments, and calls [`send()`](https://expressjs.com/en/5x/api/response/#ressend) on the response to return the string "Hello World!"
 
 The final block starts up the server on a specified port ('3000') and prints a log comment to the console. With the server running, you could go to `localhost:3000` in your browser to see the example response returned.
 
@@ -183,7 +183,7 @@ A module is a JavaScript library/file that you can import into other code using 
 
 This tutorial uses [ECMAScript modules (ESM)](/en-US/docs/Web/JavaScript/Guide/Modules). Set `"type": "module"` in your project's **package.json** so that Node treats its **.js** files as ES modules. Read the [Node ESM](https://nodejs.org/api/esm.html) reference to understand more about how ESM work in Node.
 
-The code below shows how we import a module by name, using the _Express_ framework as an example. We import the module's default export as `express`, then call it to create an [Express application](https://expressjs.com/en/5x/api/#app). We can then access the properties and functions of the application object.
+The code below shows how we import a module by name, using the _Express_ framework as an example. We import the module's default export as `express`, then call it to create an [Express application](https://expressjs.com/en/5x/api/application/). We can then access the properties and functions of the application object.
 
 ```js
 import express from "express";
@@ -285,7 +285,7 @@ app.get("/", (req, res) => {
 });
 ```
 
-The callback function takes a request and a response object as arguments. In this case, the method calls [`send()`](https://expressjs.com/en/5x/api/#res.send) on the response to return the string "Hello World!" There are a [number of other response methods](https://expressjs.com/en/guide/routing/#response-methods) for ending the request/response cycle, for example, you could call [`res.json()`](https://expressjs.com/en/5x/api/#res.json) to send a JSON response or [`res.sendFile()`](https://expressjs.com/en/5x/api/#res.sendFile) to send a file.
+The callback function takes a request and a response object as arguments. In this case, the method calls [`send()`](https://expressjs.com/en/5x/api/response/#ressend) on the response to return the string "Hello World!" There are a [number of other response methods](https://expressjs.com/en/guide/routing/#response-methods) for ending the request/response cycle, for example, you could call [`res.json()`](https://expressjs.com/en/5x/api/response/#resjson) to send a JSON response or [`res.sendFile()`](https://expressjs.com/en/5x/api/response/#ressendfile) to send a file.
 
 > [!NOTE]
 > You can use any argument names you like in the callback functions; when the callback is invoked the first argument will always be the request and the second will always be the response. It makes sense to name them such that you can identify the object you're working with in the body of the callback.
@@ -305,7 +305,7 @@ app.all("/secret", (req, res, next) => {
 
 Routes allow you to match particular patterns of characters in a URL, and extract some values from the URL and pass them as parameters to the route handler (as attributes of the request object passed as a parameter).
 
-Often it is useful to group route handlers for a particular part of a site together and access them using a common route-prefix (e.g., a site with a Wiki might have all wiki-related routes in one file and have them accessed with a route prefix of _/wiki/_). In _Express_ this is achieved by using the [`express.Router`](https://expressjs.com/en/guide/routing/#express-router) object. For example, we can create our wiki route in a module named **wiki.js**, and then export the `Router` object, as shown below:
+Often it is useful to group route handlers for a particular part of a site together and access them using a common route-prefix (e.g., a site with a Wiki might have all wiki-related routes in one file and have them accessed with a route prefix of _/wiki/_). In _Express_ this is achieved by using the [`express.Router`](https://expressjs.com/en/guide/routing/#expressrouter) object. For example, we can create our wiki route in a module named **wiki.js**, and then export the `Router` object, as shown below:
 
 ```js
 // wiki.js - Wiki route module
@@ -407,7 +407,7 @@ The Express documentation has a lot more excellent documentation about [using](h
 
 ### Serving static files
 
-You can use the [express.static](https://expressjs.com/en/5x/api/#express.static) middleware to serve static files, including your images, CSS and JavaScript (`static()` is the only middleware function that is actually **part** of _Express_). For example, you would use the line below to serve images, CSS files, and JavaScript files from a directory named '**public'** at the same level as where you call node:
+You can use the [express.static](https://expressjs.com/en/5x/api/express/#expressstatic) middleware to serve static files, including your images, CSS and JavaScript (`static()` is the only middleware function that is actually **part** of _Express_). For example, you would use the line below to serve images, CSS files, and JavaScript files from a directory named '**public'** at the same level as where you call node:
 
 ```js
 app.use(express.static("public"));
@@ -429,7 +429,7 @@ app.use(express.static("public"));
 app.use(express.static("media"));
 ```
 
-You can also create a virtual prefix for your static URLs, rather than having the files added to the base URL. For example, here we [specify a mount path](https://expressjs.com/en/5x/api/#app.use) so that the files are loaded with the prefix "/media":
+You can also create a virtual prefix for your static URLs, rather than having the files added to the base URL. For example, here we [specify a mount path](https://expressjs.com/en/5x/api/application/#appuse) so that the files are loaded with the prefix "/media":
 
 ```js
 app.use("/media", express.static("public"));
@@ -527,7 +527,7 @@ app.set("views", path.join(import.meta.dirname, "views"));
 app.set("view engine", "some_template_engine_name");
 ```
 
-The appearance of the template will depend on what engine you use. Assuming that you have a template file named "index.\<template_extension>" that contains placeholders for data variables named 'title' and "message", you would call [`Response.render()`](https://expressjs.com/en/5x/api/#res.render) in a route handler function to create and send the HTML response:
+The appearance of the template will depend on what engine you use. Assuming that you have a template file named "index.\<template_extension>" that contains placeholders for data variables named 'title' and "message", you would call [`Response.render()`](https://expressjs.com/en/5x/api/response/#resrender) in a route handler function to create and send the HTML response:
 
 ```js
 app.get("/", (req, res) => {
