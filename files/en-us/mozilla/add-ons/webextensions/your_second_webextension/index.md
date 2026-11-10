@@ -143,7 +143,7 @@ Both icons are based on one from the [IconBeast Lite icon set](https://www.iconb
 
 Toolbar buttons let you add a popup that opens when the user clicks the toolbar button.
 
-If you don't supply a popup, clicking the button dispatches a {{WebExtAPIRef("action.onClicked")}} event to your extension. Your extension uses this event to trigger the functionality associated with the button.
+If you don't supply a popup, clicking the button dispatches an {{WebExtAPIRef("action.onClicked")}} event to your extension. Your extension uses this event to trigger the functionality associated with the button.
 
 For this example, you want a popup. The popup lets the user choose one of three beasts.
 
