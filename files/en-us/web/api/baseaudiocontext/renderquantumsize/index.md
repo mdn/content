@@ -23,8 +23,8 @@ When a browser plays audio, two processing loops are involved:
 
 Audio can't be sent to the audio system until rendered, and the graph always renders a whole render quantum at a time. As a result, both the system buffer size and the render quantum size limit how low latency can go, and whichever is larger sets the limit:
 
-- If the render quantum size is larger than the system buffer size, the render quantum size sets the latency. The browser can’t send any part of a quantum until the whole quantum renders, so it has to render more frames than each request needs and hold the extra for later requests.
-- If the render quantum size is smaller than or equal to the system buffer size, the system buffer size sets the latency. The audio system’s requests determine when audio is needed, and rendering in smaller chunks doesn’t make it arrive any sooner. It only adds overhead, because each render quantum has a fixed processing cost.
+- If the render quantum size is larger than the system buffer size, the render quantum size sets the latency. The browser can't send any part of a quantum until the whole quantum renders, so it has to render more frames than each request needs and hold the extra for later requests.
+- If the render quantum size is smaller than or equal to the system buffer size, the system buffer size sets the latency. The audio system's requests determine when audio is needed, and rendering in smaller chunks doesn't make it arrive any sooner. It only adds overhead, because each render quantum has a fixed processing cost.
 
 128 frames is a reasonable balance between overhead and latency, and it matches the system buffer size on some platforms. On other platforms, the two sizes don't match. If the system buffer size isn't a whole multiple of the render quantum size, requests need different numbers of render quanta. The CPU load then varies from one request to the next, which wastes processing capacity.
 
