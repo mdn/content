@@ -188,7 +188,7 @@ We can then selectively apply styles only to elements inside containers with tha
 
 #### Result
 
-{{embedlivesample("name-only", "100%", 300)}}
+{{embedlivesample("using_a_name-only_container_query", "100%", 300)}}
 
 The specified styles should be applied only to the first and second {{htmlelement("p")}} elements, but not to the third.
 

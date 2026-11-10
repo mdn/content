@@ -186,7 +186,7 @@ The following example shows how to apply colors to scrollbars using {{cssxref("s
 
 In the example below, you can scroll the bordered box vertically to see the effect of styling the scrollbar.
 
-{{EmbedLiveSample("adding_a_fallback_to_standard_scrollbar_style_properties")}}
+{{EmbedLiveSample("adding_a_fallback_for_scrollbar_styles")}}
 
 ## Specifications
 

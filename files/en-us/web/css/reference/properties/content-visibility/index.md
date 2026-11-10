@@ -209,7 +209,7 @@ document.querySelectorAll("button.toggle").forEach((button) => {
 
 #### Result
 
-{{ EmbedLiveSample('Using hidden to manually manage visibility') }}
+{{ EmbedLiveSample('using_hidden_to_manage_visibility') }}
 
 ### Animating content-visibility
 

@@ -94,7 +94,7 @@ log(`Line mid point: ${basicMidPoint.x}, ${basicMidPoint.y}`);
 log(`Heart mid point: ${complexMidPoint.x}, ${complexMidPoint.y}`);
 ```
 
-{{EmbedLiveSample('Getting the total length of a `<path>`',"100%","220px")}}
+{{EmbedLiveSample('getting_the_midpoint_of_a_path',"100%","220px")}}
 
 ## Specifications
 

@@ -48,7 +48,7 @@ Similarly to what we saw in the [previous article](/en-US/docs/Web/MathML/Tutori
 
 Below is the rendering of the above example in your browser.
 
-{{ EmbedLiveSample('Subtrees_of_msub_msup_msubsup', 700, 200, "", "") }}
+{{ EmbedLiveSample('subscripts_and_superscripts', 700, 200, "", "") }}
 
 You should notice that:
 
