@@ -32,6 +32,16 @@ You can have an unlimited number of cursors at the same time. You always get the
 - {{domxref("IDBCursor.request")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("IDBRequest")}} that was used to obtain the cursor.
 
+## Constants
+
+> [!WARNING]
+> These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ([Firefox bug 891944](https://bugzil.la/891944))
+
+- `NEXT`: `"next"` : The cursor shows all records, including duplicates. It starts at the lower bound of the key range and moves upwards (monotonically increasing in the order of keys).
+- `NEXTUNIQUE` : `"nextunique"` : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the lower bound of the key range and moves upwards.
+- `PREV`: `"prev"` : The cursor shows all records, including duplicates. It starts at the upper bound of the key range and moves downwards (monotonically decreasing in the order of keys).
+- `PREVUNIQUE`: `"prevunique"` : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the upper bound of the key range and moves downwards.
+
 ## Instance methods
 
 - {{domxref("IDBCursor.advance()")}}
@@ -44,16 +54,6 @@ You can have an unlimited number of cursors at the same time. You always get the
   - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, deletes the record at the cursor's position, without changing the cursor's position. This can be used to delete specific records.
 - {{domxref("IDBCursor.update()")}}
   - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, updates the value at the current position of the cursor in the object store. This can be used to update specific records.
-
-## Constants
-
-> [!WARNING]
-> These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ([Firefox bug 891944](https://bugzil.la/891944))
-
-- `NEXT`: `"next"` : The cursor shows all records, including duplicates. It starts at the lower bound of the key range and moves upwards (monotonically increasing in the order of keys).
-- `NEXTUNIQUE` : `"nextunique"` : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the lower bound of the key range and moves upwards.
-- `PREV`: `"prev"` : The cursor shows all records, including duplicates. It starts at the upper bound of the key range and moves downwards (monotonically decreasing in the order of keys).
-- `PREVUNIQUE`: `"prevunique"` : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the upper bound of the key range and moves downwards.
 
 ## Examples
 

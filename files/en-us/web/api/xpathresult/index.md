@@ -28,13 +28,6 @@ Since XPath expressions can result in a variety of result types, this interface 
 - {{domxref("XPathResult.stringValue")}} {{ReadOnlyInline}}
   - : A string representing the value of the result if `resultType` is `STRING_TYPE`.
 
-## Instance methods
-
-- {{domxref("XPathResult.iterateNext()")}}
-  - : If the result is a node set, this method iterates over it and returns the next node from it or `null` if there are no more nodes.
-- {{domxref("XPathResult.snapshotItem()")}}
-  - : Returns an item of the snapshot collection or `null` in case the index is not within the range of nodes. Unlike the iterator result, the snapshot does not become invalid, but may not correspond to the current document if it is mutated.
-
 ## Constants
 
 <table class="no-markdown">
@@ -131,6 +124,13 @@ Since XPath expressions can result in a variety of result types, this interface 
     </tr>
   </tbody>
 </table>
+
+## Instance methods
+
+- {{domxref("XPathResult.iterateNext()")}}
+  - : If the result is a node set, this method iterates over it and returns the next node from it or `null` if there are no more nodes.
+- {{domxref("XPathResult.snapshotItem()")}}
+  - : Returns an item of the snapshot collection or `null` in case the index is not within the range of nodes. Unlike the iterator result, the snapshot does not become invalid, but may not correspond to the current document if it is mutated.
 
 ## Specifications
 
