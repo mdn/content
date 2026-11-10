@@ -269,7 +269,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample("Gradient_with_multi-position_color_stops", 120, 120)}}
+{{EmbedLiveSample("gradient_with_multi-position_color-stops", 120, 120)}}
 
 ### More linear-gradient examples
 

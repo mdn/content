@@ -107,6 +107,7 @@ The flow elements are:
 - {{HTMLElement("small")}}
 - {{HTMLElement("span")}}
 - {{HTMLElement("strong")}}
+- {{HTMLElement("style")}}
 - {{HTMLElement("sub")}}
 - {{HTMLElement("sup")}}
 - {{SVGElement("svg")}}

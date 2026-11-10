@@ -71,7 +71,7 @@ re[Symbol.match] = false;
 
 ## See also
 
-- [Polyfill of `Symbol.match` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [Polyfill of `Symbol.match` in `core-js`](https://core-js.io/docs/features/ecmascript/symbol)
 - {{jsxref("Symbol.matchAll")}}
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.search")}}

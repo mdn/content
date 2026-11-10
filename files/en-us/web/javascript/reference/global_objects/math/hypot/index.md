@@ -86,7 +86,7 @@ Math.hypot(-3); // 3, the same as Math.abs(-3)
 
 ## See also
 
-- [Polyfill of `Math.hypot` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.hypot` in `core-js`](https://core-js.io/docs/features/ecmascript/math)
 - {{jsxref("Math.abs()")}}
 - {{jsxref("Math.pow()")}}
 - {{jsxref("Math.sqrt()")}}

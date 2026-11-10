@@ -195,13 +195,26 @@ A CSS gradient is specified as an object in the form `{ "GRADIENT_TYPE": "GRADIE
 
 ### colors
 
-These properties define the colors used for different parts of the browser. They are all optional. How these properties affect the Firefox UI is shown here:
+These properties define the colors used for different parts of the browser. They are all optional.
+
+> [!NOTE]
+> Color properties introduced in Firefox 157 (Nova) are ignored in earlier Firefox versions; use `strict_min_version` for themes designed only for Nova.
+
+How these properties affect the Firefox UI is shown here:
 
 <table class="fullwidth-table standard-table">
   <tbody>
     <tr>
       <td>
         <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Overview of the color properties and how they apply to Firefox UI components in Nova"
+            src="themes_components_annotations-nova.webp"
+          />
+        </p>
+        <p>
+           Firefox 156 and earlier:
           <img
             alt="Overview of the color properties and how they apply to Firefox UI components"
             src="themes_components_annotations.png"
@@ -265,6 +278,14 @@ All these properties can be specified as either a string containing any valid [C
           >
         </details>
         <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Browser Firefox is black. Browser's tab is black with white text. URL bar and the find in page bar are white with black text but all the browser and the find in page bar icons are red."
+            src="theme-bookmark_text-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
           <img
             alt="Browser Firefox is black. Browser's tab is black with white text. URL bar and the find in page bar are white with black text but all the browser and the find in page bar icons are red."
             src="theme-bookmark_text.png"
@@ -288,7 +309,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are gray with white text. The customize toolbar icon in the url bar in white with a red background is pressed and a popup is open displaying a short list of thing to add to the toolbar such as the browser's library and the sidebars." src="theme-button_background_active.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Browser firefox is black. Browser's tabs and URL bar are gray with white text. The customize toolbar icon in the url bar in white with a red background is pressed and a popup is open displaying a short list of thing to add to the toolbar such as the browser's library and the sidebars."
+            src="theme-button_background_active-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="Browser firefox is black. Browser's tabs and URL bar are gray with white text. The customize toolbar icon in the url bar in white with a red background is pressed and a popup is open displaying a short list of thing to add to the toolbar such as the browser's library and the sidebars." src="theme-button_background_active.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -307,7 +338,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are gray with white text. The go back one page icon is white with a red circle background." src="theme-button_background_hover.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Browser firefox is black. Browser's tabs and URL bar are gray with white text. The go back one page icon is white with a red circle background."
+            src="theme-button_background_hover-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="Browser firefox is black. Browser's tabs and URL bar are gray with white text. The go back one page icon is white with a red circle background." src="theme-button_background_hover.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -334,7 +375,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are gray with white text. The URL bar and open a new tab icons are red. The red icons contrast well with the black background color of the header area." src="theme-icons.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Browser firefox is black. Browser's tabs and URL bar are gray with white text. The URL bar and open a new tab icons are red. The red icons contrast well with the black background color of the header area."
+            src="theme-icons-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="Browser firefox is black. Browser's tabs and URL bar are gray with white text. The URL bar and open a new tab icons are red. The red icons contrast well with the black background color of the header area." src="theme-icons.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -364,7 +415,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are gray with white text. The bookmark this page icon is red and pressed, an open popup name edit this bookmark is displayed. While in attention state, the toolbar icons contrast well with the black background of the header area." src="theme-icons_attention.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Browser firefox is black. Browser's tabs and URL bar are gray with white text. The bookmark this page icon is red and pressed, an open popup name edit this bookmark is displayed. While in attention state, the toolbar icons contrast well with the black background of the header area."
+            src="theme-icons_attention-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="Browser firefox is black. Browser's tabs and URL bar are gray with white text. The bookmark this page icon is red and pressed, an open popup name edit this bookmark is displayed. While in attention state, the toolbar icons contrast well with the black background of the header area." src="theme-icons_attention.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -386,7 +447,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is red with white text. Browsers tabs are lighter red, also with white text. URL bar is very light red with black text" src="theme-frame.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Browser firefox is red with white text. Browsers tabs are lighter red, also with white text. URL bar is very light red with black text"
+            src="theme-frame-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="Browser firefox is red with white text. Browsers tabs are lighter red, also with white text. URL bar is very light red with black text" src="theme-frame.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -411,6 +482,14 @@ All these properties can be specified as either a string containing any valid [C
           >
         </details>
         <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Browser firefox is gray. Browser's tabs and URL bar are lighter gray. The tab text is white and the URL bar icon are darker gray."
+            src="theme-frame_inactive-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
           <img
             alt="Browser firefox is gray. Browser's tabs and URL bar are lighter gray. The tab text is white and the URL bar icon are darker gray."
             src="theme-frame_inactive.png"
@@ -432,7 +511,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Firefox showing a new tab page. The background of the page is red." src="ntp-background.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Firefox showing a new tab page. The background of the page is red."
+            src="ntp-background-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="Firefox showing a new tab page. The background of the page is red." src="ntp-background.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -449,7 +538,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Firefox showing a new tab page. On the page, the background to the search bar and shortcut buttons is red." src="ntp-card-background.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Firefox showing a new tab page. On the page, the background to the search bar and shortcut buttons is red."
+            src="ntp-card-background-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="Firefox showing a new tab page. On the page, the background to the search bar and shortcut buttons is red." src="ntp-card-background.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -462,6 +561,11 @@ All these properties can be specified as either a string containing any valid [C
             that used in <code>ntp_background</code> and <code>ntp_card_background</code>.
           </p>
         </div>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> In Nova, the text in the search box is not styled. It takes the default text color.
+          </p>
+        </div>
         <details open>
           <summary>See example</summary>
           <pre class="brush: json">
@@ -472,7 +576,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Firefox showing a new tab page. On the page, the text is in red." src="ntp-text.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Firefox showing a new tab page. On the page, the text is in red."
+            src="ntp-text-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="Firefox showing a new tab page. On the page, the text is in red." src="ntp-text.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -481,6 +595,15 @@ All these properties can be specified as either a string containing any valid [C
         <p>
           The background color of popups (such as the URL bar dropdown and the
           arrow panels).
+        </p>
+        <p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> In Firefox 157 and later (Nova), the URL bar dropdown doesn't use
+          <code>popup</code> or <code>popup_text</code>: it keeps the browser's
+          default colors.
+          </p>
+        </div>
         </p>
         <details open>
           <summary>See example</summary>
@@ -494,7 +617,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter gray with icons and text in white. The bookmark this page icon is blue and pressed, an open popup name 'edit this bookmark' is displayed with a red background. The background color of the popup is red." src="theme-popup.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Browser firefox is black. Browser's tabs and URL bar are lighter gray with icons and text in white. The bookmark this page icon is blue and pressed, an open popup name 'edit this bookmark' is displayed with a red background. The background color of the popup is red."
+            src="theme-popup-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="Browser firefox is black. Browser's tabs and URL bar are lighter gray with icons and text in white. The bookmark this page icon is blue and pressed, an open popup name 'edit this bookmark' is displayed with a red background. The background color of the popup is red." src="theme-popup.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -515,7 +648,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter gray with icons and text in white. The bookmark this page icon is blue and pressed, an open popup name 'edit this bookmark' is displayed with a red outline and black background. The popup's border is red." src="theme-popup_border.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Browser firefox is black. Browser's tabs and URL bar are lighter gray with icons and text in white. The bookmark this page icon is blue and pressed, an open popup name 'edit this bookmark' is displayed with a red outline and black background. The popup's border is red."
+            src="theme-popup_border-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="Browser firefox is black. Browser's tabs and URL bar are lighter gray with icons and text in white. The bookmark this page icon is blue and pressed, an open popup name 'edit this bookmark' is displayed with a red outline and black background. The popup's border is red." src="theme-popup_border.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -545,7 +688,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="screenshot of firefox is black. Browser's tabs and URL bar are lighter gray with icons and text in white. A search results popup is displayed with a highlighted item's background in red. The background color of the highlighted item inside the popup is red." src="theme-popup_highlight.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="screenshot of firefox is black. Browser's tabs and URL bar are lighter gray with icons and text in white. A search results popup is displayed with a highlighted item's background in red. The background color of the highlighted item inside the popup is red."
+            src="theme-popup_highlight-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="screenshot of firefox is black. Browser's tabs and URL bar are lighter gray with icons and text in white. A search results popup is displayed with a highlighted item's background in red. The background color of the highlighted item inside the popup is red." src="theme-popup_highlight.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -571,7 +724,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter gray with icons and text in white. A search results popup is displayed with a highlighted item's text in red with a black background. The text color of the highlighted item contrasts well with the black background color of this item." src="theme-popup_highlight_text.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Browser firefox is black. Browser's tabs and URL bar are lighter gray with icons and text in white. A search results popup is displayed with a highlighted item's text in red with a black background. The text color of the highlighted item contrasts well with the black background color of this item."
+            src="theme-popup_highlight_text-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="Browser firefox is black. Browser's tabs and URL bar are lighter gray with icons and text in white. A search results popup is displayed with a highlighted item's text in red with a black background. The text color of the highlighted item contrasts well with the black background color of this item." src="theme-popup_highlight_text.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -584,6 +747,15 @@ All these properties can be specified as either a string containing any valid [C
             that used in <code>popup</code>.
           </p>
         </div>
+        <p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> In Firefox 157 and later (Nova), the URL bar dropdown doesn't use
+          <code>popup</code> or <code>popup_text</code>: it keeps the browser's
+          default colors.
+          </p>
+        </div>
+        </p>
         <details open>
           <summary>See example</summary>
           <pre class="brush: json">
@@ -597,7 +769,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter gray with icons and text in white. A search results popup is displayed with items texts in red. The text color contrasts well with the black background color of the popup." src="popup_text.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Firefox with a black frame and white tab text. The Add bookmark panel is open, with a black background and its labels, fields, and buttons in red."
+            src="popup_text-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="Browser firefox is black. Browser's tabs and URL bar are lighter gray with icons and text in white. A search results popup is displayed with items texts in red. The text color contrasts well with the black background color of the popup." src="popup_text.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -617,13 +799,28 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A close-up screenshot of a browser windows's open sidebar. The background color of the sidebar is red." src="sidebar-colors.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="A close-up screenshot of a browser windows's open sidebar. The background color of the sidebar is red."
+            src="sidebar-colors-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="A close-up screenshot of a browser windows's open sidebar. The background color of the sidebar is red." src="sidebar-colors.png" />
+        </p>
       </td>
     </tr>
     <tr>
       <td><code>sidebar_border</code></td>
       <td>
         <p>The border and splitter color of the browser sidebar</p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> In Firefox 157 and later (Nova), the redesigned sidebar no longer includes a splitter.
+          </p>
+        </div>
         <details open>
           <summary>See example</summary>
           <pre class="brush: json">
@@ -634,13 +831,30 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a red horizontal separator between the sidebar title and the sidebar menu. The border and splitter color of the sidebar is red." src="sidebar-border.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="A closeup of the firefox browser bookmarks sidebar with a red horizontal separator between the sidebar title and the sidebar menu. The border and splitter color of the sidebar is red."
+            src="sidebar-border-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="A closeup of the firefox browser bookmarks sidebar with a red horizontal separator between the sidebar title and the sidebar menu. The border and splitter color of the sidebar is red." src="sidebar-border.png" />
+        </p>
       </td>
     </tr>
     <tr>
       <td><code>sidebar_highlight</code></td>
       <td>
         <p>The background color of highlighted rows in built-in sidebars</p>
+        <p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> In Firefox 157 and later (Nova), a highlighted row in the redesigned sidebar keeps the browser's default highlight color, so this property has no visible effect.
+          </p>
+        </div>
+        </p>
         <details open>
           <summary>See example</summary>
           <pre class="brush: json">
@@ -652,7 +866,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The background color of a highlighted row in the sidebar is red with white text." src="sidebar-highlight.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="The bookmarks sidebar with a row highlighted. The highlighted row keeps the browser's default lavender background rather than the red set by the theme."
+            src="sidebar-highlight-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The background color of a highlighted row in the sidebar is red with white text." src="sidebar-highlight.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -665,6 +889,13 @@ All these properties can be specified as either a string containing any valid [C
             that used in <code>sidebar_highlight</code>.
           </p>
         </div>
+        <p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> In Firefox 157 and later (Nova), a highlighted row in the redesigned sidebar keeps the browser's default text color, so this property has no visible effect.
+          </p>
+        </div>
+        </p>
         <details open>
           <summary>See example</summary>
           <pre class="brush: json">
@@ -676,7 +907,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The color of the text of a highlighted row in the sidebar is red. The text color contrasts well with the pink background color of the highlighted row." src="sidebar-highlight-text.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="The bookmarks sidebar with a row highlighted. The highlighted row's label keeps the browser's default color rather than the red set by the theme."
+            src="sidebar-highlight-text-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The color of the text of a highlighted row in the sidebar is red. The text color contrasts well with the pink background color of the highlighted row." src="sidebar-highlight-text.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -702,7 +943,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A close-up screenshot of a browser windows's open sidebar. The color of the text inside the sidebar is white. The text color contrasts well with the red background of the sidebar." src="sidebar-colors.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="A close-up screenshot of a browser windows's open sidebar. The color of the text inside the sidebar is white. The text color contrasts well with the red background of the sidebar."
+            src="sidebar-colors-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="A close-up screenshot of a browser windows's open sidebar. The color of the text inside the sidebar is white. The text color contrasts well with the red background of the sidebar." src="sidebar-colors.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -730,6 +981,14 @@ All these properties can be specified as either a string containing any valid [C
           >
         </details>
         <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="A closeup of browser tabs to highlight the separator."
+            src="theme-tab-background-separator-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
           <img
             alt="A closeup of browser tabs to highlight the separator."
             src="theme-tab-background-separator.png"
@@ -764,7 +1023,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are white with red icons and red text. The color of the text in the open tab is red. The text color contrasts well with the black background color of the tab." src="theme-tab_background_text.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are white with red icons and red text. The color of the text in the open tab is red. The text color contrasts well with the black background color of the tab."
+            src="theme-tab_background_text-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are white with red icons and red text. The color of the text in the open tab is red. The text color contrasts well with the black background color of the tab." src="theme-tab_background_text.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -783,13 +1052,28 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are darker gray with lighter gray icons and white text. The selected tab has a red outline." src="theme-tab_line.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Browser firefox is black. Browser's tabs and URL bar are darker gray with lighter gray icons and white text. The selected tab has a red outline."
+            src="theme-tab_line-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="Browser firefox is black. Browser's tabs and URL bar are darker gray with lighter gray icons and white text. The selected tab has a red outline." src="theme-tab_line.png" />
+        </p>
       </td>
     </tr>
     <tr>
       <td><code>tab_loading</code></td>
       <td>
         <p>The color of the tab loading indicator and the tab loading burst.</p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> In Firefox 157 and later (Nova), the tab loading indicator keeps its default color, so this property has no visible effect.
+          </p>
+        </div>
         <details open>
           <summary>See example</summary>
           <pre class="brush: json">
@@ -802,7 +1086,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are darker gray with icons and text in white. Inside the selected tab an animated loading indicator is red." src="theme-tab_loading.gif" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Firefox with a black frame and white tab text, loading a page. The loading indicator in the tab is the browser's default gray rather than the red set by the theme."
+            src="theme-tab_loading-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are darker gray with icons and text in white. Inside the selected tab an animated loading indicator is red." src="theme-tab_loading.gif" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -812,7 +1106,11 @@ All these properties can be specified as either a string containing any valid [C
           The background color of the selected tab. When not in use selected tab
           color is set by <code>frame</code> and the
           <code>frame_inactive</code>.
-        </p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> Nova removed the selected tab drop shadow. To ensure selected tabs are clearly visible, set this property to a color that contrasts with <code>frame</code> and <code>frame_inactive</code>.
+          </p>
+        </div>
         <details open>
           <summary>See example</summary>
           <pre class="brush: json">
@@ -828,7 +1126,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are darker gray with icons and text in white. The selected tab has red background and white text." src="theme-tab_selected.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are darker gray with icons and text in white. The selected tab has red background and white text."
+            src="theme-tab_selected-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are darker gray with icons and text in white. The selected tab has red background and white text." src="theme-tab_selected.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -862,7 +1170,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox has a picture of an insect theme. URL bar is lighter gray with white icons. The selected tab text is red with white background." src="theme-tab_text.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Browser firefox has a picture of an insect theme. URL bar is lighter gray with white icons. The selected tab text is red with white background."
+            src="theme-tab_text-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="Browser firefox has a picture of an insect theme. URL bar is lighter gray with white icons. The selected tab text is red with white background." src="theme-tab_text.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -885,15 +1203,24 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tab, find in page bar and URL bar are red with white text and icons, except for the find in page bar where the text and icon are black." src="toolbar.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Browser firefox is black. Browser's tab, find in page bar and URL bar are red with white text and icons, except for the find in page bar where the text and icon are black."
+            src="toolbar-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="Browser firefox is black. Browser's tab, find in page bar and URL bar are red with white text and icons, except for the find in page bar where the text and icon are black." src="toolbar.png" />
+        </p>
       </td>
     </tr>
     <tr>
       <td><code>toolbar_bottom_separator</code></td>
       <td>
         <p>
-          The color of the line separating the bottom of the toolbar from the
-          region below.
+          The color of the line separating the top and left edges of the area containing the web page. It therefore separates the page content from the toolbar above it and, where the sidebar is displayed, from the sidebar to its left.
         </p>
         <details open>
           <summary>See example</summary>
@@ -907,7 +1234,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tab and URL bar are lighter gray with white text and icons. A horizontal red line separates the bottom of the toolbar and the beginning of the display of the web page." src="theme-toolbar_bottom_separator.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Browser Firefox is black with white tab text and the sidebar showing its icons. A red line runs along the top and left edges of the area holding the web page, separating that area from the toolbar above it and from the sidebar to its left."
+            src="theme-toolbar_bottom_separator-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="Browser firefox is black. Browser's tab and URL bar are lighter gray with white text and icons. A horizontal red line separates the bottom of the toolbar and the beginning of the display of the web page." src="theme-toolbar_bottom_separator.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -932,7 +1269,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tab, find in page bar and URL bar are lighter gray with white text and icons. The background color of the URL bar is red. The find in page bar is white with black text. The find in page field is red with black text." src="toolbar-field.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Browser firefox is black. Browser's tab, find in page bar and URL bar are lighter gray with white text and icons. The background color of the URL bar is red. The find in page bar is white with black text. The find in page field is red with black text."
+            src="toolbar-field-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="Browser firefox is black. Browser's tab, find in page bar and URL bar are lighter gray with white text and icons. The background color of the URL bar is red. The find in page bar is white with black text. The find in page field is red with black text." src="toolbar-field.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -958,7 +1305,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tab, find in page and URL bar are black with white text and icons. The URL bar and find in page fields are outlined in red." src="toolbar-field-border.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Browser firefox is black. Browser's tab, find in page and URL bar are black with white text and icons. The URL bar and find in page fields are outlined in red."
+            src="toolbar-field-border-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="Browser firefox is black. Browser's tab, find in page and URL bar are black with white text and icons. The URL bar and find in page fields are outlined in red." src="toolbar-field-border.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -980,7 +1337,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tab and URL bar are black with white text and icons. The url bar field is focused and outlined in red." src="theme-toolbar_field_border_focus.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Browser firefox is black. Browser's tab and URL bar are black with white text and icons. The url bar field is focused and outlined in red."
+            src="theme-toolbar_field_border_focus-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="Browser firefox is black. Browser's tab and URL bar are black with white text and icons. The url bar field is focused and outlined in red." src="theme-toolbar_field_border_focus.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -1005,7 +1372,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tab, find in page and URL bar are black with white text and icons. The background color of the focused URL bar is red and the text is white." src="theme-toolbar_field_focus.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Browser firefox is black. Browser's tab, find in page and URL bar are black with white text and icons. The background color of the focused URL bar is red and the text is white."
+            src="theme-toolbar_field_focus-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="Browser firefox is black. Browser's tab, find in page and URL bar are black with white text and icons. The background color of the focused URL bar is red and the text is white." src="theme-toolbar_field_focus.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -1027,6 +1404,14 @@ All these properties can be specified as either a string containing any valid [C
           >
         </details>
         <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Browser firefox is white. Browser's tab and URL bar are white with text and icons in black. The URL bar field is focused and outlined in blue and URL bar text is selected."
+            src="toolbar_field_highlight-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
           <img
             alt="Browser firefox is white. Browser's tab and URL bar are white with text and icons in black. The URL bar field is focused and outlined in blue and URL bar text is selected."
             src="toolbar_field_highlight.png"
@@ -1066,6 +1451,14 @@ All these properties can be specified as either a string containing any valid [C
           >
         </details>
         <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="Browser firefox is white. Browser's tab and URL bar are white with text and icons in black. The URL bar field is focused and outlined in blue and URL bar text is selected."
+            src="toolbar_field_highlight-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
           <img
             alt="Browser firefox is white. Browser's tab and URL bar are white with text and icons in black. The URL bar field is focused and outlined in blue and URL bar text is selected."
             src="toolbar_field_highlight.png"
@@ -1104,7 +1497,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A screenshot of a browser window with one open tab. Browser firefox is black. Browser's tab and URL bar are black with text and icons in white. Inside the white URL bar field, after the reader mode icon a red vertical line separating the rest of URL bar icons. The color of the vertical separator line inside the URL bar is red." src="theme-toolbar_field_separator.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="A screenshot of a browser window with one open tab. Browser firefox is black. Browser's tab and URL bar are black with text and icons in white. Inside the white URL bar field, after the reader mode icon a red vertical line separating the rest of URL bar icons. The color of the vertical separator line inside the URL bar is red."
+            src="theme-toolbar_field_separator-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="A screenshot of a browser window with one open tab. Browser firefox is black. Browser's tab and URL bar are black with text and icons in white. Inside the white URL bar field, after the reader mode icon a red vertical line separating the rest of URL bar icons. The color of the vertical separator line inside the URL bar is red." src="theme-toolbar_field_separator.png" />
+        </p>
         <p>
           In this screenshot, <code>"toolbar_vertical_separator"</code> is the
           red vertical line in the URL bar dividing the Reader Mode icon from
@@ -1140,7 +1543,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tab and URL bar are black with white text and icons. The text inside the URL bar is red. The icons and find in page field have red text with black background." src="toolbar-field-text.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tab and URL bar are black with white text and icons. The text inside the URL bar is red. The icons and find in page field have red text with black background."
+            src="toolbar-field-text-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tab and URL bar are black with white text and icons. The text inside the URL bar is red. The icons and find in page field have red text with black background." src="toolbar-field-text.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -1171,7 +1584,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A screenshot of a browser window with two open tabs. Browser is black. Browser's tab and URL bar are black with text and icons in white. The URL bar has focus; the bar's text and icons are red with black background." src="theme-toolbar_field_text_focus.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="A screenshot of a browser window with two open tabs. Browser is black. Browser's tab and URL bar are black with text and icons in white. The URL bar has focus; the bar's text and icons are red with black background."
+            src="theme-toolbar_field_text_focus-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="A screenshot of a browser window with two open tabs. Browser is black. Browser's tab and URL bar are black with text and icons in white. The URL bar has focus; the bar's text and icons are red with black background." src="theme-toolbar_field_text_focus.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -1200,7 +1623,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tab, find in page bar, and URL bar are black with red text and icons. The text inside the active tab, the navigator bar and the find bar is red." src="toolbar-text.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tab, find in page bar, and URL bar are black with red text and icons. The text inside the active tab, the navigator bar and the find bar is red."
+            src="toolbar-text-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tab, find in page bar, and URL bar are black with red text and icons. The text inside the active tab, the navigator bar and the find bar is red." src="toolbar-text.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -1223,7 +1656,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tab and URL bar are black with white text and icons. A red line separates the top of the URL bar from the browser." src="theme-toolbar_top_separator.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tab and URL bar are black with white text and icons. A red line separates the top of the URL bar from the browser."
+            src="theme-toolbar_top_separator-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tab and URL bar are black with white text and icons. A red line separates the top of the URL bar from the browser." src="theme-toolbar_top_separator.png" />
+        </p>
       </td>
     </tr>
     <tr>
@@ -1246,7 +1689,17 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tab and URL bar are black with text and icons in white. The color of the vertical line separating the bookmarks toolbar from the content to the right is red." src="theme-toolbar_vertical_separator.png" /></p>
+        <p>
+          Firefox 157 and later (Nova):
+          <img
+            alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tab and URL bar are black with text and icons in white. The color of the vertical line separating the bookmarks toolbar from the content to the right is red."
+            src="theme-toolbar_vertical_separator-nova.png"
+          />
+        </p>
+        <p>
+          Firefox 156 and earlier:
+          <img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tab and URL bar are black with text and icons in white. The color of the vertical line separating the bookmarks toolbar from the content to the right is red." src="theme-toolbar_vertical_separator.png" />
+        </p>
       </td>
     </tr>
   </tbody>
@@ -1516,6 +1969,12 @@ The following example uses most of the different values for `theme.colors`:
 ```
 
 It will give you a browser that looks like this:
+
+Firefox 157 and later (Nova):
+
+![A browser window with two open tabs and dark green background color in the header area. The inactive tab has a white text color. The active tab and the toolbar have a blue background color with cyan-colored text. The URL bar has an orange background with white borders, a green text color and a white-colored vertical line separator. A red-colored line is used to separate the tabs on the top and a white line to separate the tabs from the content below them.](theme-nova.png)
+
+Firefox 156 and earlier:
 
 ![A browser window with two open tabs and dark green background color in the header area. The inactive tab has a white text color. The active tab and the toolbar have a blue background color with cyan-colored text. The URL bar has an orange background with white borders, a green text color and a white-colored vertical line separator. A red-colored line is used to separate the tabs on the top and a white line to separate the tabs from the content below them.](theme.png)
 

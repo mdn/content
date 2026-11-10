@@ -150,8 +150,6 @@ class LabeledCheckbox extends HTMLElement {
   }
 }
 
-customElements.define("labeled-checkbox", LabeledCheckbox);
-
 // Display a warning to unsupported browsers
 if (!LabeledCheckbox.isStateSyntaxSupported()) {
   if (!document.getElementById("state-warning")) {
@@ -202,7 +200,7 @@ labeled-checkbox:state(checked) {
 
 Click the element to see a different border being applied as the checkbox `checked` state is toggled.
 
-{{EmbedLiveSample("Labeled Checkbox", "100%", 50)}}
+{{EmbedLiveSample("matching_the_custom_state_of_a_custom_checkbox_element", "100%", 50)}}
 
 ### Matching a custom state in a shadow part of a custom element
 
@@ -343,7 +341,7 @@ question-box::part(checkbox):state(checked) {
 
 Click either of the checkboxes to see the color change from `red` to `green` with an outline when the `checked` state toggles.
 
-{{EmbedLiveSample("Question box", "100%", 100)}}
+{{EmbedLiveSample("matching_a_custom_state_in_a_shadow_part_of_a_custom_element", "100%", 100)}}
 
 ### Non-boolean internal states
 

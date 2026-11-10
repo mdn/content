@@ -62,7 +62,7 @@ The `params` field contains:
     It can take one of the following values:
     - `"none"`: The browser does not keep a reference to the returned object, so the response contains no `handle` field.
       This is the default.
-    - `"root"`: The browser keeps the returned object alive and includes a [`handle`](#handle_2) field in the response.
+    - `"root"`: The browser keeps the returned object alive and includes a [`handle`](#handle_2) field in the response if the returned value supports a handle.
       You can pass the `handle` to other `script` module commands and release it when you no longer need it by using [`script.disown`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/disown).
       The browser also releases handles when the realm is destroyed.
 - `serializationOptions` {{optional_inline}}
@@ -165,8 +165,11 @@ The following fields are available in the `result` object in the response, depen
     - `handle` {{optional_inline}}
       - : A string that contains an ID for referencing the returned object in subsequent `script` module commands.
         This handle can be used only in the realm in which it is created.
-        The browser includes this field when the [`resultOwnership`](#resultownership) parameter is specified as `"root"` and the returned value supports a handle.
-        This field is omitted when the [`type`](#type_2) field in this `result` object is `"bigint"`, `"boolean"`, `"null"`, `"number"`, `"string"`, or `"undefined"`.
+
+        The browser includes this field when the [`resultOwnership`](#resultownership) parameter is specified as `root` and the result is of a [`type`](#type_2) that supports a handle.
+        - Types that support handles: Objects (including arrays and DOM nodes) and symbols.
+        - Types that don't support handles: `bigint`, `boolean`, `null`, `number`, `string`, and `undefined`.
+          The browser omits this field for these types.
     - `internalId` {{optional_inline}}
       - : A string that uniquely identifies an object within the response.
         This field is present only when the same object appears more than once in the response.
@@ -270,8 +273,10 @@ You can use `script.evaluate` to run the following expression to find the status
 
 In `[node, node]`, both items refer to the same status element.
 The successful `result`, therefore, includes two representations of the same node, one for each array item.
-With the [`resultOwnership`](#resultownership) parameter set to `"root"`, the returned array includes a `handle`.
-Both node representations within the array share an `internalId` and a `sharedId`, but do not include handles.
+Arrays support handles, so the browser can retain a reference to the returned array.
+With the [`resultOwnership`](#resultownership) parameter set to `root`, the array's representation in the response includes a `handle` field.
+This handle identifies the array itself, not the nodes it contains.
+Both node representations within the array share an `internalId` and a `sharedId`.
 The following table compares the identifiers returned in this example:
 
 | `handle`                                                                                                                                                                                                                                         | `internalId`                                                                       | `sharedId`                                                                                                                                                                                                                                 |

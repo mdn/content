@@ -25,14 +25,6 @@ The **`:past`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Re
 
 ## Examples
 
-### CSS
-
-```css
-:past(p, span) {
-  display: none;
-}
-```
-
 ### HTML
 
 ```html
@@ -46,6 +38,14 @@ The **`:past`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Re
     src="subtitles.vtt"
     default />
 </video>
+```
+
+### CSS
+
+```css
+:past(p, span) {
+  display: none;
+}
 ```
 
 ### WebVTT

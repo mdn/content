@@ -86,7 +86,7 @@ console.log(Array.prototype.toSorted.call(arrayLike));
 
 ## See also
 
-- [Polyfill of `Array.prototype.toSorted` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
+- [Polyfill of `Array.prototype.toSorted` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.toSorted`](https://www.npmjs.com/package/array.prototype.tosorted)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array.prototype.sort()")}}

@@ -54,7 +54,7 @@ console.log(numbers); // Uint8Array [ 40, 1, 5, 200 ]
 
 ## See also
 
-- [Polyfill of `TypedArray.prototype.toSorted` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
+- [Polyfill of `TypedArray.prototype.toSorted` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray.prototype.sort()")}}
 - {{jsxref("TypedArray.prototype.toReversed()")}}

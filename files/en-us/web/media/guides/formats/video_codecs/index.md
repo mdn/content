@@ -1226,15 +1226,7 @@ You almost certainly don't want to use this format, since it isn't supported in 
     <tr>
       <th scope="row">Licensing</th>
       <td>
-        Proprietary;
-        <a href="https://www.via-la.com/licensing-programs/mpeg-4-visual/"
-          >obtain a license</a
-        >
-        through <a href="https://www.via-la.com/">Via LA</a> and/or
-        <a href="https://about.att.com/innovation/ip/patents"
-          >AT&#x26;T</a
-        >
-        as needed
+        All patents in Via LA's MPEG-4 Visual patent pool expired by July 19, 2026.
       </td>
     </tr>
   </tbody>

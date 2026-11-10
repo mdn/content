@@ -432,7 +432,7 @@ colSize.addEventListener("input", () => {
 
 #### Result
 
-{{EmbedLiveSample("Setting two value", "", "500")}}
+{{EmbedLiveSample("setting_two_values", "", "500")}}
 
 Change the inset values for the starts and ends of the cap segment endpoints.
 

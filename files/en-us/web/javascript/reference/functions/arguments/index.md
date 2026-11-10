@@ -193,7 +193,7 @@ list("u", "One", "Two", "Three");
 
 ### Using typeof with arguments
 
-The {{jsxref("Operators/typeof", "typeof")}} operator returns `'object'` when used with `arguments`
+The {{jsxref("Operators/typeof", "typeof")}} operator returns `'object'` when used with `arguments`:
 
 ```js
 console.log(typeof arguments); // 'object'

@@ -396,7 +396,7 @@ function log(text) {
 
 #### Result
 
-{{EmbedLiveSample("Complete_example", 230, 300)}}
+{{EmbedLiveSample("the_various_value_types", 230, 300)}}
 
 Select different options to change the `clip-path` value.
 
