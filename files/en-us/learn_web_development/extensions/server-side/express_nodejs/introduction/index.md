@@ -553,7 +553,9 @@ Of course Express is deliberately a very lightweight web application framework, 
 
 - [Learn Node.js](https://scrimba.com/learn-nodejs-c00ho9qqh6?via=mdn) from Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides a fun, interactive introduction to Node.js.
 - [Learn Express.js](https://scrimba.com/learn-expressjs-c062las154?via=mdn) from Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> builds on top of the previous link, showing how to start using the Express framework to build server-side websites.
-- [Modules](https://nodejs.org/api/modules.html#modules_modules) (Node API docs)
+- [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
+- [Modules across platforms](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms)
+- [ECMAScript modules](https://nodejs.org/api/esm.html) (Node API docs)
 - [Express](https://expressjs.com/) (home page)
 - [Basic routing](https://expressjs.com/en/starter/basic-routing/) (Express docs)
 - [Routing guide](https://expressjs.com/en/guide/routing/) (Express docs)

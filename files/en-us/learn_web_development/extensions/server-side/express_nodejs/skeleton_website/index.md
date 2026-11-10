@@ -194,7 +194,7 @@ app.set("view engine", "pug");
 ```
 
 The next set of functions call `app.use()` to add the _middleware_ libraries that we imported above into the request handling chain.
-For example, `express.json()` and `express.urlencoded()` are needed to populate [`req.body`](https://expressjs.com/en/5x/api/request/#reqbody) with the form fields.
+For example, `express.urlencoded()` populates [`req.body`](https://expressjs.com/en/5x/api/request/#reqbody) with the fields from submitted HTML forms, and `express.json()` does the same for requests that send JSON.
 After these libraries we also use the `express.static` middleware, which makes _Express_ serve all the static files in the **public/** directory in the project root.
 
 ```js
@@ -275,7 +275,7 @@ It adds a single route.
 The route defines a callback that will be invoked whenever an HTTP `GET` request with the correct pattern is detected. The matching pattern is the route specified when the module is imported (`"/users"`) plus whatever is defined in this file (`"/"`). In other words, this route will be used when a URL of `/users/` is received.
 
 > [!NOTE]
-> Try this out by running the server with node and visiting the URL in your browser: `http://localhost:3000/users/`. You should see a message: 'respond with a resource'.
+> Once you've [run the skeleton website](#running_the_skeleton_website), you'll be able to try this out by visiting `http://localhost:3000/users/` in your browser. You should see a message: 'respond with a resource'.
 
 ### Views (templates)
 

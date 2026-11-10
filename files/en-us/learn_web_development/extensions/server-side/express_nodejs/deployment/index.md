@@ -150,7 +150,7 @@ Logging calls can have an impact on a high-traffic website. In a production envi
 
 One way to minimize "debug" logging in production is to use a module like [debug](https://www.npmjs.com/package/debug) that allows you to control what logging is performed by setting an environment variable.
 For example, the code fragment below shows how you might set up "author" logging.
-The debug variable is declared with the name 'author', and the prefix "author" will be automatically displayed for all logs from this object.
+Calling `createDebug("author")` creates a `debug()` function for the "author" _namespace_: every message it logs is prefixed with "author", and it only logs when "author" is listed in the `DEBUG` environment variable.
 
 ```js
 import createDebug from "debug";

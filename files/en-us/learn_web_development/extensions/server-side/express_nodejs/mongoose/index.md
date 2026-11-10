@@ -543,7 +543,7 @@ This is almost everything you need to know about working with related items _for
 
 ### One schema/model per file
 
-While you can create schemas and models using any file structure you like, we highly recommend defining each model schema in its own module (file), then exporting the method to create the model.
+While you can create schemas and models using any file structure you like, we highly recommend defining each model schema in its own module (file), then exporting the model.
 This is shown below:
 
 ```js
@@ -560,7 +560,7 @@ const SomeModelSchema = new Schema({
   a_date: Date,
 });
 
-// Export function to create "SomeModel" model class
+// Export model
 export default mongoose.model("SomeModel", SomeModelSchema);
 ```
 

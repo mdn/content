@@ -118,7 +118,7 @@ To use the validator in our controllers, we specify the particular functions we 
 import { body, validationResult } from "express-validator";
 ```
 
-There are many functions available, allowing you to check and sanitize data from request parameters, body, headers, cookies, etc., or all of them at once. For this tutorial, we'll primarily be using `body` and `validationResult` (as "required" above).
+There are many functions available, allowing you to check and sanitize data from request parameters, body, headers, cookies, etc., or all of them at once. For this tutorial, we'll primarily be using the `body` and `validationResult` functions that we just imported.
 
 The functions are defined as below:
 

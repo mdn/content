@@ -280,18 +280,20 @@ app.get("/", (req, res, next) => {
 });
 ```
 
-Lastly, if you're using the older style of asynchronous methods that return an error or result in a callback function, then you need to propagate the error yourself.
-The following example shows how.
+Lastly, if you're using an older-style asynchronous API that passes an error or result to a callback function, then you need to propagate the error yourself.
+The following example shows how, using the callback version of Node's `readFile()` function.
 
 ```js
+import { readFile } from "node:fs";
+
 router.get("/about", (req, res, next) => {
-  About.find({}).exec((err, queryResults) => {
+  readFile("about.txt", "utf8", (err, text) => {
     if (err) {
       // Propagate the error
       return next(err);
     }
-    // Successful, so render
-    res.render("about_view", { title: "About", list: queryResults });
+    // Successful, so send the file contents
+    res.send(text);
   });
 });
 ```
