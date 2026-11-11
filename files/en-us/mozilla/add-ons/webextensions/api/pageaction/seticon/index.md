@@ -65,7 +65,7 @@ let settingIcon = browser.pageAction.setIcon(
         If `path` does not point to a valid icon, then no icon will be displayed.
 
     - `variants` {{optional_inline}}
-      - : `Array` of {{WebExtAPIRef("extensionTypes.IconVariant")}}. Icons with a set for each color scheme. The browser uses the first icon group that matches its active color scheme, then picks the icon that best fits the required size. The active color scheme can differ from the device's color scheme, for example when the browser toolbar is dark. If `variants` is present, the browser ignores `path` and `imageData`.
+      - : `Array` of {{WebExtAPIRef("extensionTypes.IconVariant")}}. Each icon group can have matching criteria, such as `colorSchemes`. The browser uses the first icon group whose criteria match, for example its active color scheme, then picks the icon that best fits the required size. The active color scheme can differ from the device's color scheme, for example when the browser toolbar is dark. If `variants` is present, the browser ignores `path` and `imageData`. If `variants` is `null`, this resets the page action's icon, like `path` and `imageData` do.
 
         ```js
         browser.pageAction.setIcon({
@@ -79,7 +79,6 @@ let settingIcon = browser.pageAction.setIcon(
             {
               16: "icons/light-16.png",
               32: "icons/light-32.png",
-              colorSchemes: ["light"],
             },
           ],
         });

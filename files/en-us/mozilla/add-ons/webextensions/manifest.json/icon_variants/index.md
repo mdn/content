@@ -32,8 +32,7 @@ sidebar: addonsidebar
   },
   {
     "16": "icons/light-16.png",
-    "32": "icons/light-32.png",
-    "color_schemes": ["light"]
+    "32": "icons/light-32.png"
   }
 ]</pre
         >
@@ -61,11 +60,11 @@ The `icon_variants` key is an array of icon groups. Each icon group is an object
     - `"light"`: icons that work on light backgrounds.
     - `"dark"`: icons that work on dark backgrounds.
 
-    A group without `color_schemes` is for both color schemes.
+    A group without `color_schemes` is for any color scheme.
 
 The browser checks the groups in order and uses the first one that matches the active color scheme. The browser decides which color scheme to match. It can differ from the operating system preference, for example, to keep icons legible against a theme. Within the group, the browser picks the icon that best fits the required size. It considers the display's pixel density, so provide larger icon versions for high-density displays.
 
-Browsers differ in what they do when no group matches the active color scheme, how they handle a group with properties not listed here, and how they choose between `any` and a numeric size when a group has both. List a group for each color scheme to avoid unexpected color matches.
+Browsers differ in what they do when no group matches the active color scheme, how they handle a group with properties not listed here, and how they choose between `any` and a numeric size when a group has both. To make sure there is always a match, end the list with a group that has no `color_schemes`.
 
 ## Examples
 
@@ -82,8 +81,7 @@ This example provides icons for dark and light backgrounds, each in two sizes:
   },
   {
     "16": "icons/light-16.png",
-    "32": "icons/light-32.png",
-    "color_schemes": ["light"]
+    "32": "icons/light-32.png"
   }
 ]
 ```
@@ -95,7 +93,7 @@ This example uses an SVG file for each color scheme:
 ```json
 "icon_variants": [
   { "any": "icons/dark.svg", "color_schemes": ["dark"] },
-  { "any": "icons/light.svg", "color_schemes": ["light"] }
+  { "any": "icons/light.svg" }
 ]
 ```
 
@@ -116,8 +114,7 @@ This example declares `icons` for browsers that don't support `icon_variants`:
   },
   {
     "16": "icons/light-16.png",
-    "32": "icons/light-32.png",
-    "color_schemes": ["light"]
+    "32": "icons/light-32.png"
   }
 ]
 ```

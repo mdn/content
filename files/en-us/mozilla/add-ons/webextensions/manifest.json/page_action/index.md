@@ -119,7 +119,7 @@ The `page_action` key is an object that may have any of three properties, all op
   - : `String`. Tooltip for the icon, displayed when the user moves their mouse over it. This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
 - `icon_variants` {{optional_inline}}
-  - : `Array`. Icons for the page action, with a set for each color scheme. It has the same format as the top-level [`icon_variants`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icon_variants) key and takes precedence over `default_icon`.
+  - : `Array`. A list of icon groups for the page action, each with optional matching criteria such as `color_schemes`. It has the same format as the top-level [`icon_variants`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icon_variants) key and takes precedence over `default_icon`.
 - `hide_matches` {{optional_inline}}
   - : `Array` of `MatchPattern` except `<all_urls>`. Hide the page action by default for pages whose URLs match any of the given [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
 
