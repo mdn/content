@@ -289,10 +289,10 @@ You can inspect the error thrown in your browser's console. It has the following
 
 ```plain
 SuppressedError: An error was suppressed during disposal
+  error: Error: Can't dispose resource1
   suppressed: SuppressedError: An error was suppressed during disposal
-    suppressed: Error: Can't dispose resource1
-    error: Error: Error in main block
-  error: Error: Can't dispose resource2
+    error: Error: Can't dispose resource2
+    suppressed: Error: Error in main block
 ```
 
 As you can see, `error` contains all the errors that were thrown during disposal, as a {{jsxref("SuppressedError")}}. Each additional error is added as the `error` property, and the original error is added as the `suppressed` property.
