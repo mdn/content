@@ -7,22 +7,23 @@ page-type: guide
 {{DefaultAPISidebar("HTML Sanitizer API")}}
 
 The default sanitizer configuration defines the configuration returned by the [`Sanitizer()` constructor](/en-US/docs/Web/API/Sanitizer/Sanitizer) if no `configuration` is passed as an argument.
+
 This same configuration is implicitly used if you call the [safe sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods), such as {{domxref("Element.setHTML()")}}, {{domxref("ShadowRoot.setHTML()")}}, and {{domxref("Document.parseHTML_static","Document.parseHTML()")}}, without specifying a custom sanitizer.
 
-This configuration removes the following sorts of items:
+The default sanitizer configuration is applied on top of the [XSS-safe baseline configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/#xss-safe-baseline-configuration) which removes unsafe elements (for example {{htmlelement("script")}}), event handlers, and JavaScript URLs.
 
-1. Those that are known to be XSS-unsafe:
-   - {{htmlelement("base")}}, {{htmlelement("embed")}}, {{htmlelement("frame")}}, {{htmlelement("iframe")}}, {{htmlelement("object")}}, {{htmlelement("script")}}, and {{SVGElement("use")}}.
-   - All event handler content attributes, such as `onafterprint`, `onbeforeinput`, and so on.
-2. Items that might be used in clickjacking, spoofing, or other attacks.
-3. Deprecated items.
-4. Comments and `data-*` attributes.
+This configuration removes the following items in addition to the XSS-safe baseline configuration:
+
+1. Elements that might be used in clickjacking, spoofing, or other attacks by only allowing an allow list of elements.
+2. Attributes that might be used in clickjacking, spoofing, or other attacks by only allowing an allow list of global, and element-specific attributes.
+3. Processing Instructions and Comments
+4. `data-*` attributes.
 
 It therefore provides a sanitizer with a minimal attack surface, which is still suitable for the majority of sanitization use cases.
 
 > [!NOTE]
 > Calling {{domxref("Sanitizer.removeUnsafe()")}}, or passing a custom sanitizer to the safe sanitization method, only removes the XSS-unsafe items.
-> It does not remove the additional items, comments, and `data-*` attributes.
+> It does not remove the additional elements, attributes, processing instructions, comments, and `data-*` attributes.
 
 The following sections list all the elements, with a &check; mark indicating those that are _allowed_ by the default configuration (the ❌ therefore indicates those that will be removed).
 The "Additional allowed attributes" column lists the attributes that are allowed for the corresponding elements; any other attributes on the element would be removed (unless allowed by the global attributes).
