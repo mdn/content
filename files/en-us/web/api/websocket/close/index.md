@@ -27,7 +27,7 @@ close(code, reason)
 
 - `code` {{optional_inline}}
   - : An integer [WebSocket connection close code](https://www.rfc-editor.org/info/rfc6455/#section-7.1.5) value indicating a reason for closure:
-    - If unspecified, a close code for the connection is automatically set: to `1000` for a normal closure, or otherwise to [another standard value in the range `1001`-`1015`](https://www.rfc-editor.org/info/rfc6455/#section-7.4.1) that indicates the actual reason the connection was closed.
+    - If unspecified, the close frame is sent without a status code, so the close code for the connection is reported as `1005` ("No Status Received"), unless the connection was closed abnormally, in which case it is set to [another standard value](https://www.rfc-editor.org/info/rfc6455/#section-7.4.1) that indicates the actual reason the connection was closed.
     - If specified, the value of this `code` parameter overrides the automatic setting of the close code for the connection, and instead sets a custom code.
       The value must be an integer: either `1000`, or else a custom code of your choosing in the range `3000`-`4999`. If you specify a `code` value, you should also specify a [`reason`](#reason) value.
 
