@@ -107,11 +107,11 @@ This table shows the same for the icon of the action button. If you don't specif
 
 ## Provide icons for dark mode
 
-An icon that works on a light background can be hard to see on a dark one. Use the [`icon_variants`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icon_variants) manifest key to provide icons for both. It is a list of icon groups, and each group has a `color_schemes` property, which is an array of the color schemes the icons in the group are for: `"light"`, `"dark"`, or both. List both, or leave out `color_schemes`, when the icons work on either background. The browser uses the first group that matches the current color scheme and has an icon in a format it supports.
+An icon that works on a light background can be hard to see on a dark one. Use the [`icon_variants`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icon_variants) manifest key to provide icons for both. It is a list of icon groups, and each group can have matching criteria, such as a `color_schemes` property. It is an array of the color schemes the icons in the group are for: `"light"`, `"dark"`, or both. A group without `color_schemes` is for any color scheme. The browser uses the first group that matches the current color scheme and has an icon in a format it supports, so end the list with a group that has no `color_schemes`.
 
 ### Set the extension icon
 
-In this example, `icon_variants` has a group of icons for dark backgrounds and a group for light backgrounds. The `icons` key is for browsers that don't support `icon_variants`:
+In this example, `icon_variants` has a group of icons for dark backgrounds, followed by a group that has no `color_schemes`. The `icons` key is for browsers that don't support `icon_variants`:
 
 ```json
 "icon_variants": [
@@ -124,8 +124,7 @@ In this example, `icon_variants` has a group of icons for dark backgrounds and a
   {
     "16": "icons/light-16.png",
     "32": "icons/light-32.png",
-    "48": "icons/light-48.png",
-    "color_schemes": ["light"]
+    "48": "icons/light-48.png"
   }
 ],
 "icons": {
@@ -153,8 +152,7 @@ In this example, the `action` key has the same groups for the icon of the action
     {
       "16": "icons/action-light-16.png",
       "32": "icons/action-light-32.png",
-      "48": "icons/action-light-48.png",
-      "color_schemes": ["light"]
+      "48": "icons/action-light-48.png"
     }
   ],
   "default_icon": {
@@ -183,7 +181,7 @@ To use an SVG icon in the browsers that support it and PNG icons in the others, 
 
 In `icon_variants`, an icon group can have an `any` entry, which is an icon to use at any size. To provide an SVG icon, add a group with an `any` entry, and add a group of PNG icons after it. If your SVG icon works at any size, one SVG icon for each color scheme is a good starting point. For explicit sizes instead of `any`, refer to the [Choose icon sizes](#choose_icon_sizes) section.
 
-Use one image type in each icon group. In this example, each color scheme has an SVG group followed by a PNG group:
+Use one image type in each icon group. In this example, the dark color scheme has an SVG group followed by a PNG group, and the groups after them have no `color_schemes`:
 
 ```json
 "icon_variants": [
@@ -198,14 +196,12 @@ Use one image type in each icon group. In this example, each color scheme has an
     "color_schemes": ["dark"]
   },
   {
-    "any": "icons/light.svg",
-    "color_schemes": ["light"]
+    "any": "icons/light.svg"
   },
   {
     "16": "icons/light-16.png",
     "32": "icons/light-32.png",
-    "48": "icons/light-48.png",
-    "color_schemes": ["light"]
+    "48": "icons/light-48.png"
   }
 ]
 ```
