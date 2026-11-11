@@ -21,20 +21,20 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   - : A string equal to a URL pointing to the [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) of the PWA to be installed. If this is omitted, the browser will attempt to install the current document as a PWA.
 
 - `manifestId` {{experimental_inline}}
-  - : A string equal to a URL representing the ID of the PWA to be installed. This can be omitted if the `manifest` attribute is also omitted, or if `manifest` is included and the referenced manifest contains a valid [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field.
+  - : A string equal to a URL representing the ID of the PWA to be installed. This can be omitted if the `manifest` attribute is also omitted, or if `manifest` is included and the referenced manifest contains an [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field.
 
-    If the `manifestId` attribute is included without the `manifest` attribute, installation will fail ({{domxref("InstallResultEvent.result")}} will equal `invalid_data`).
+    If the `manifestId` attribute is included without the `manifest` attribute, installation will fail.
 
 ## Description
 
-The `<install>` element provides a declarative browser-defined control that instructs the browser to install a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps) on the user's device. In Chrome, for example, the button features an installation icon (the same as the PWA install controls on the browser UI) and intuitive text ("Install" in English content).
+The `<install>` element provides a declarative browser-defined control that instructs the browser to install a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps) on the user's device.
 
 This uses the same installation confirmation dialog as the browser's built-in install functionality, but it has some advantages. It allows the developer to create an install experience that is more consistent across supporting browsers, has greater flexibility as to where it can be implemented, and is easier to discover.
 
 > [!NOTE]
 > There is an equivalent DOM method, {{domxref("Navigator.install()")}}, which provides a programmatic mechanism to create such an install button.
 
-The element's DOM API interface, {{domxref("HTMLInstallElement")}}, provides features to access current permission status and errors if the data retrieval was unsuccessful. It also has events available to run code in response to changes in permission status and to report the result of the installation attempt.
+The element's DOM API interface, {{domxref("HTMLInstallElement")}}, provides features to access current validity status, manifest URL, and manifest ID. It also has events available to run code in response to changes in validity status and to report the result of the installation attempt.
 
 ### Usage contexts
 
@@ -129,7 +129,7 @@ You can include fallback content between the `<install>` element's opening and c
 
 The `<install>` element is designed to prevent bad actors from tricking users into activating it, for example via [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking). To enable this, the browser keeps a record of so-called **blocker reasons** for each rendered element.
 
-When a blocker is active on an `<install>` element, it is prevented from functioning (blocked), either temporarily or permanently, depending on the reason. When a `<install>` element is blocked, it is said to be invalid. You can check whether it is invalid by querying the {{domxref("HTMLInstallElement.isValid")}} property. You can also return the reason why it is invalid via the {{domxref("HTMLInstallElement.invalidReason")}} property — see that page for a full list of possible reasons.
+When an `<install>` element is blocked, it is prevented from functioning, either temporarily or permanently, depending on the reason. When a `<install>` element is blocked, it is said to be invalid. You can check whether it is invalid by querying the {{domxref("HTMLInstallElement.isValid")}} property. You can also return the reason why it is invalid via the {{domxref("HTMLInstallElement.invalidReason")}} property — see that page for a full list of possible reasons.
 
 ### Styling restrictions
 
@@ -151,7 +151,8 @@ The `<install>` element is restricted to [secure contexts](/en-US/docs/Web/Secur
 
 ## Examples
 
-See our [PWA install demos](https://mdn.github.io/pwa-examples/install-demos/).
+- [Install the current app with `<install>`](https://mdn.github.io/pwa-examples/install-demos/install-element-app/) ([source code](https://github.com/mdn/pwa-examples/tree/main/install-demos/install-element-app))
+- [Install multiple apps from a catalog page with `<install>`](https://mdn.github.io/pwa-examples/install-demos/install-element-catalog/) ([source code](https://github.com/mdn/pwa-examples/tree/main/install-demos/install-element-catalog))
 
 ## Technical summary
 
@@ -217,3 +218,6 @@ See our [PWA install demos](https://mdn.github.io/pwa-examples/install-demos/).
 
 - {{domxref("HTMLInstallElement")}}
 - {{domxref("Navigator.install()")}}
+- [Trigger installation from your PWA](/en-US/docs/Web/Progressive_web_apps/How_to/Trigger_install_prompt)
+- [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
+- [Installing and uninstalling web apps](/en-US/docs/Web/Progressive_web_apps/Guides/Installing)

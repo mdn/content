@@ -10,9 +10,9 @@ browser-compat: api.HTMLInstallElement.validationstatuschange_event
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-The **`validationstatuschange`** event of the {{domxref("HTMLInstallElement")}} interface is fired whenever the {{htmlelement("install")}} element's validation state changes, which can include changes to {{domxref("HTMLInstallElement.isValid", "isValid")}} or the reported {{domxref("HTMLInstallElement.invalidReason", "invalidReason")}}.
+The **`validationstatuschange`** event of the {{domxref("HTMLInstallElement")}} interface is fired whenever the {{htmlelement("install")}} element's validation state or invalid reason changes, due to the element becoming [blocked](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking) or unblocked.
 
-This occurs as a result of a [blocker](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking) being added to or removed from an `<install>` element.
+The validation state and invalid reason can be checked using the {{domxref("HTMLInstallElement.isValid", "isValid")}} and {{domxref("HTMLInstallElement.invalidReason", "invalidReason")}} properties, respectively.
 
 ## Syntax
 
@@ -30,23 +30,28 @@ An {{domxref("Event")}}.
 
 ## Examples
 
-### Using `validationstatuschange` to report invalid reasons
+### Reporting validity details
 
-On the {{domxref("HTMLInstallElement.invalidReason")}} page, the [Exploring invalid reasons demo](/en-US/docs/Web/API/HTMLInstallElement/invalidReason#exploring_invalid_reasons) uses a `validationstatuschange` event handler to report when an `<install>` element becomes valid, and report the invalid reason when it becomes invalid:
+Consider the following `<install>` button:
+
+```html
+<install></install>
+```
+
+We could add a `validationstatuschange` event listener to it like so:
 
 ```js
 const installElem = document.querySelector("install");
 
-installElem.addEventListener("validationstatuschange", () => {
-  if (installElem.isValid) {
-    reasonElem.textContent = `<install> is valid`;
-  } else {
-    reasonElem.textContent = `Invalid reason: ${installElem.invalidReason}`;
+installElem.addEventListener("validationstatuschange", (e) => {
+  console.log(`isValid: ${installElem.isValid}`);
+  if (!installElem.isValid) {
+    console.log(`invalidReason: ${installElem.invalidReason}`);
   }
 });
 ```
 
-Whenever the validation status changes, we check whether the `<install>` element is valid using {{domxref("HTMLInstallElement.isValid")}}, and if so, print a message confirming this to the `<p>` element text content. If the `<install>` element is invalid, we print the {{domxref("HTMLInstallElement.invalidReason")}} to the `<p>` element text content.
+This way, when the validation status changes, we log the {{domxref("HTMLInstallElement.isValid", "isValid")}} value. If it is invalid, we also log the {{domxref("HTMLInstallElement.invalidReason", "invalidReason")}}.
 
 ## Specifications
 
@@ -58,4 +63,6 @@ Whenever the validation status changes, we check whether the `<install>` element
 
 ## See also
 
+- {{domxref("HTMLInstallElement.isValid", "isValid")}}
+- {{domxref("HTMLInstallElement.invalidReason", "invalidReason")}}
 - {{htmlelement("install")}} element

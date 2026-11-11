@@ -8,37 +8,47 @@ status:
 browser-compat: api.HTMLInstallElement.isValid
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-The **`isValid`** read-only property of the {{domxref("HTMLInstallElement")}} interface returns a boolean value indicating whether the associated {{htmlelement("install")}} element is valid or invalid (blocked).
+The **`isValid`** read-only property of the {{domxref("HTMLInstallElement")}} interface is a boolean value indicating whether the associated {{htmlelement("install")}} element is valid or invalid (blocked).
 
-When a [blocker](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking) is active on an `<install>` element, it is prevented from functioning (invalid), either temporarily or permanently, depending on the reason.
+When an `<install>` element is [blocked](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking), it is prevented from functioning, either temporarily or permanently, depending on the reason.
 
-You can return the reason why it is invalid via the {{domxref("HTMLInstallElement.invalidReason")}} property — see that page for a full list of possible reasons.
+To find out why it is invalid, check the {{domxref("HTMLInstallElement.invalidReason")}} property. You can also detect when `invalidReason` or `isValid` change using the {{domxref("HTMLInstallElement.validationstatuschange_event", "validationstatuschange")}} event.
 
 ## Value
 
 A boolean value:
 
-- If `true`, the `<install>` element is valid and functional, meaning that it can be used to install a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps).
-- If `false`, the `<install>` element is invalid and non-functional, meaning that it can't be used to install a PWA.
+- If `true`, the `<install>` element is valid, meaning that it can be used to install a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps).
+- If `false`, the `<install>` element is invalid, meaning that it can't be used to install a PWA.
 
 Defaults to `false`.
 
 ## Examples
 
-### Basic usage
+### Reporting validity details
+
+Consider the following `<install>` button:
 
 ```html
 <install></install>
 ```
 
+We could add a {{domxref("HTMLInstallElement.validationstatuschange_event", "validationstatuschange")}} event listener to it like so:
+
 ```js
 const installElem = document.querySelector("install");
-console.log(installElem.isValid);
+
+installElem.addEventListener("validationstatuschange", (e) => {
+  console.log(`isValid: ${installElem.isValid}`);
+  if (!installElem.isValid) {
+    console.log(`invalidReason: ${installElem.invalidReason}`);
+  }
+});
 ```
 
-See the {{domxref("HTMLInstallElement.invalidReason")}} page for a more complete example involving `isValid`.
+This way, when the validation status changes, we log the `isValid` value. If it is invalid, we also log the {{domxref("HTMLInstallElement.invalidReason", "invalidReason")}}.
 
 ## Specifications
 
@@ -50,4 +60,6 @@ See the {{domxref("HTMLInstallElement.invalidReason")}} page for a more complete
 
 ## See also
 
+- {{domxref("HTMLInstallElement.invalidReason")}}
+- {{domxref("HTMLInstallElement.validationstatuschange_event", "validationstatuschange")}} event
 - {{htmlelement("install")}} element

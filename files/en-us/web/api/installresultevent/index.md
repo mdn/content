@@ -21,25 +21,31 @@ The **`InstallResultEvent`** interface represents events that fire when a browse
 _This interface also inherits the properties of its parent, {{domxref("Event")}}._
 
 - {{domxref("InstallResultEvent.result")}} {{ReadOnlyInline}}
-  - : An enumerated value representing the status of the PWA installation.
+  - : An enumerated value representing the result of the PWA installation.
 
 ## Examples
 
-### Using `installresult` to report installation status
+### Querying installation
 
-If a PWA landing page has an {{htmlelement("install")}} element included on it:
-
-```html
-<install></install>
-```
-
-We can track whether the installation was successful when the install button is pressed using an {{domxref("HTMLInstallElement.installresult_event", "installresult")}} event listener, querying the event object's {{domxref("InstallResultEvent.result", "result")}} property:
+Given an {{htmlelement("install")}} element, we can check its installation result by adding an {{domxref("HTMLInstallElement.installresult_event", "installresult")}} event listener. Inside the event hander, we use a [`switch`](/en-US/docs/Web/JavaScript/Reference/Statements/switch) statement to query the {{domxref("InstallResultEvent.result", "result")}} property and log a human-readable description.
 
 ```js
 const installElem = document.querySelector("install");
 
 installElem.addEventListener("installresult", (e) => {
-  console.log(`Install result: ${e.result}`);
+  switch (e.result) {
+    case "success":
+      console.log("Installation was successful.");
+      break;
+    case "aborted":
+      console.log("Installation was aborted by the user or the user agent.");
+      break;
+    case "invalid_data":
+      console.log(
+        "Installation failed because of a data issue, such as a badly-formed manifest or a missing manifest URL or manifestId.",
+      );
+      break;
+  }
 });
 ```
 
@@ -51,8 +57,8 @@ installElem.addEventListener("installresult", (e) => {
 
 {{Compat}}
 
-## Related events
+## See also
 
 - {{htmlelement("install")}}
 - {{domxref("HTMLInstallElement")}}
-- {{domxref("HTMLInstallElement.installresult_event", "HTMLInstallElement.installresult")}} event
+- {{domxref("HTMLInstallElement.installresult_event", "installresult")}} event

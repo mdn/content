@@ -26,15 +26,15 @@ Permissions-Policy: web-app-installation=<allowlist>;
 
 ## Default policy
 
-The default allowlist for `web-app-installation` is `self`. The top-level browsing context are allowed access to the `Navigator.install()` method by default.
+The default allowlist for `web-app-installation` is `self`. The top-level browsing context is allowed access to the `Navigator.install()` method by default.
 
-Iframe-embedded content is not permitted to use `Navigator.install()`.
+Code running inside {{htmlelement("iframe")}} elements is not permitted to use `Navigator.install()`. As a result, the only use for this policy directive is blocking your own document from using `install()` by setting the value to `()`.
 
 ## Examples
 
 ### Blocking web app installation
 
-To block PWA installation via the `Navigator.install()` method, set an empty allowlist in the `Permissions-Policy` header:
+To prevent the top-level document from installing PWAs using the `Navigator.install()` method, set an empty allowlist in the `Permissions-Policy` header:
 
 ```http
 Permissions-Policy: web-app-installation=();

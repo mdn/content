@@ -8,11 +8,11 @@ browser-compat: api.InstallResultEvent.result
 
 {{APIRef("HTML DOM")}}
 
-The **`result`** read-only property of the {{domxref("InstallResultEvent")}} interface represents the status of a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps) installation.
+The **`result`** read-only property of the {{domxref("InstallResultEvent")}} interface represents the result of a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps) installation.
 
 ## Value
 
-An enumerated value representing the status of the PWA installation. This can be one of the following values:
+An enumerated value representing the result of the PWA installation. This can be one of the following values:
 
 - `success`
   - : Installation was successful.
@@ -23,15 +23,7 @@ An enumerated value representing the status of the PWA installation. This can be
 
 ## Examples
 
-### Basic usage
-
-```js
-const installElem = document.querySelector("install");
-
-installElem.addEventListener("installresult", (e) => {
-  console.log(`Install result: ${e.result}`);
-});
-```
+See the main {{domxref("InstallResultEvent")}} page for an example.
 
 ## Specifications
 
@@ -40,3 +32,7 @@ installElem.addEventListener("installresult", (e) => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLInstallElement.installresult_event", "installresult")}} event

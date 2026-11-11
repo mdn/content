@@ -8,13 +8,13 @@ status:
 browser-compat: api.HTMLInstallElement.manifestId
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`manifestId`** property of the {{domxref("HTMLInstallElement")}} interface gets and sets the ID of the [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps) to be installed.
 
 It reflects the value of the `<install>` [`manifestId`](/en-US/docs/Web/HTML/Reference/Elements/install#manifestId) attribute.
 
-`manifestId`s can be absolute or relative URLs. If a relative URL is specified, it is resolved against the current document's base URL.
+`manifestId` values can be absolute or relative URLs. If a relative URL is specified, it is resolved against the current document's base URL.
 
 ## Value
 
@@ -24,13 +24,22 @@ A string representing the ID of the PWA to be installed, or `null` if no `manife
 
 ### Basic usage
 
+Consider the following `<install>` element:
+
 ```html
-<install></install>
+<install manifest="manifest.json" manifestId="https://example.com/index.html">
+  Install this app
+</install>
 ```
+
+We could log the `manifest` and `manifestId` like this (the logs shown in comments assume that the site's base URL is `https://example.com`):
 
 ```js
 const installElem = document.querySelector("install");
+console.log(installElem.manifest);
+// https://example.com/manifest.json
 console.log(installElem.manifestId);
+// https://example.com/index.html
 ```
 
 ## Specifications
@@ -43,4 +52,6 @@ console.log(installElem.manifestId);
 
 ## See also
 
+- {{domxref("HTMLInstallElement.manifest", "manifest")}} property
 - {{htmlelement("install")}} element
+  - [`manifestId`](/en-US/docs/Web/HTML/Reference/Elements/install#manifestid) attribute

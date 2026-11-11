@@ -10,7 +10,7 @@ browser-compat: api.HTMLInstallElement.installresult_event
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-The **`installresult`** event of the {{domxref("HTMLInstallElement")}} interface is fired when a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps) installation attempt completes; it can be used to report whether the installation attempt was successful.
+The **`installresult`** event of the {{domxref("HTMLInstallElement")}} interface is fired when a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps) installation attempt initiated using an {{htmlelement("install")}} element completes; it can be used to report whether the installation attempt was successful.
 
 ## Syntax
 

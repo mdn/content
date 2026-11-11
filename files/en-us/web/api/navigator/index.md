@@ -142,8 +142,6 @@ _Doesn't inherit any properties._
 
 _Doesn't inherit any methods._
 
-### Standard methods
-
 - {{domxref("Navigator.canShare()")}} {{SecureContext_Inline}}
   - : Returns `true` if a call to `Navigator.share()` would succeed.
 - {{domxref("Navigator.clearAppBadge()")}} {{SecureContext_Inline}}
@@ -158,6 +156,8 @@ _Doesn't inherit any methods._
   - : Returns an array of {{domxref("Gamepad")}} objects, one for each gamepad connected to the device.
 - {{domxref("Navigator.getInstalledRelatedApps()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a promise that resolves with an array of objects representing any related native or [Progressive Web Applications](/en-US/docs/Web/Progressive_web_apps) that the user has installed.
+- {{domxref("Navigator.install()")}}
+  - : Instructs the browser to install a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps).
 - {{domxref("Navigator.registerProtocolHandler()")}} {{SecureContext_Inline}}
   - : Allows websites to register themselves as a possible handler for a given protocol.
 - {{domxref("Navigator.requestMediaKeySystemAccess()")}} {{SecureContext_Inline}}
@@ -174,11 +174,6 @@ _Doesn't inherit any methods._
   - : Causes vibration on devices with support for it. Does nothing if vibration support isn't available.
 - {{domxref("Navigator.unregisterProtocolHandler()")}} {{SecureContext_Inline}}
   - : Unregister a website that is a handler for a given protocol.
-
-### Non-standard methods
-
-- {{domxref("Navigator.install()")}} {{non-standard_inline}}
-  - : Instructs the browser to install a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps).
 
 ### Deprecated methods
 

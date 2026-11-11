@@ -22,7 +22,7 @@ install(options)
 - `options` {{optional_inline}}
   - : An options object. If this is omitted, the browser will attempt to install the current document as a PWA. This object can contain the following properties:
     - `manifest`
-      - : A string equal to a URL pointing to the [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) of the PWA to be installed. If `options` is included but `manifest` is omitted, a `TypeError` is thrown.
+      - : A string equal to a URL pointing to the [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) of the PWA to be installed.
     - `manifestId` {{optional_inline}}
       - : A string equal to a URL representing the ID of the PWA to be installed. This can be omitted if the manifest at `manifest` contains a valid [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field.
 
@@ -55,7 +55,7 @@ The following exceptions can be thrown synchronously:
 
 ## Description
 
-The `install()` function provides a programmatic way for developers to create a {{htmlelement("button")}} or other control that will install a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps) on the user's device.
+The `install()` function provides a programmatic way for developers to create a {{htmlelement("button")}} or other control that will install a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps) on the user's device. The app must meet the basic PWA [installability](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installability) criteria.
 
 This uses the same installation confirmation dialog as the browser's built-in install functionality, but it has some advantages. It allows the developer to create an install experience that is more consistent across supporting browsers, has greater flexibility as to where it can be implemented, and is easier to discover.
 
@@ -114,11 +114,11 @@ There are three distinct usage contexts in which `install()` is useful:
 
 You can specify absolute or relative URLs for `manifest` and `manifestId` values. If a relative URL is specified, it is resolved against the current document's base URL.
 
-When the `install()` call includes a `manifest`, the permission flow is different — in addition to asking the user whether they want to install each specific app, they are also asked to confirm whether they give the current site permission to install apps. The permission feature behind this is `web-app-installation`, and it can be programmatically monitored using the [Permissions](/en-US/docs/Web/API/Permissions_API).
+When the `install()` call includes a `manifest`, the permission flow is different — in addition to asking the user whether they want to install each specific app, they are also asked to confirm whether they give the current site permission to install apps. The permission feature behind this is `web-app-installation`, and it can be programmatically monitored using the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
 ### Including a `manifestId`
 
-The snippets in the previous section don't include `manifestId` properties in the `install()` option objects. They assume that the referenced manifests specify an [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field, in which case `manifestId`s are not required.
+The snippets in the previous section don't include `manifestId` properties in the `install()` option objects. They assume that the referenced manifests specify an [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field, in which case `manifestId`s are not required. All app
 
 If your manifest doesn't include an `id` field, the browser will use a computed `id` value to identify the app, which you must specify in the `install()` method's `manifestId` option. This supplies an explicit expected ID; if this does not match the ID of the app, installation will fail with a `DataError`.
 
@@ -135,24 +135,18 @@ installBtn.addEventListener("click", () => {
 
 The `manifestId` can be found in your browser developer tools. For example, open the Chrome/Edge developer tools _Application_ panel, select the _Manifest_ option, and scan the page for the _Computed App ID_ field.
 
-### Criteria for installing a PWA via `install()`
-
-For an app to be installed via the `install()` method, the following criteria must be met:
-
-- The app must meet the basic PWA [installability](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installability) criteria, namely, it must have a valid manifest and must be served over HTTPS, or from a `localhost` address.
-- The app must have a manifest ID available, either in the manifest file `id` field, or provided in the `install()` call's `manifestId` option.
-
 ## Security considerations
 
 The `Navigator.install()` method is restricted to [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts) (HTTPS), and requires that the user has recently interacted with the page ([transient user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required).
 
 Access to the API is also controlled via the {{httpheader("Permissions-Policy/web-app-installation", "web-app-installation")}} {{httpheader("Permissions-Policy")}} directive.
 
-In addition, when calling `Navigator.install()` with an options object, the user is asked for permission to install apps. The current user permission status can be queried via the [Permissions API](/en-US/docs/Web/API/Permissions_API) (the feature name is `web-app-installation`).
+In addition, when calling `Navigator.install()` with an options object, the user is asked to grant the current site permission to install apps. The current user permission status can be queried via the [Permissions API](/en-US/docs/Web/API/Permissions_API) (the feature name is `web-app-installation`).
 
 ## Examples
 
-See our [PWA install demos](https://mdn.github.io/pwa-examples/install-demos/).
+- [Install the current app with `install()`](https://mdn.github.io/pwa-examples/install-demos/install-method-app/) ([source code](https://github.com/mdn/pwa-examples/tree/main/install-demos/install-method-app))
+- [Install multiple apps from a catalog page with `install()`](https://mdn.github.io/pwa-examples/install-demos/install-method-catalog/) ([source code](https://github.com/mdn/pwa-examples/tree/main/install-demos/install-method-catalog))
 
 ## Specifications
 
@@ -167,3 +161,6 @@ See our [PWA install demos](https://mdn.github.io/pwa-examples/install-demos/).
 - {{htmlelement("install")}}
 - The {{httpheader("Permissions-Policy/web-app-installation", "web-app-installation")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)
 - [Permissions API](/en-US/docs/Web/API/Permissions_API)
+- [Trigger installation from your PWA](/en-US/docs/Web/Progressive_web_apps/How_to/Trigger_install_prompt)
+- [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
+- [Installing and uninstalling web apps](/en-US/docs/Web/Progressive_web_apps/Guides/Installing)
