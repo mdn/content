@@ -266,7 +266,7 @@ The luminance values of `black`, `white`, and `green` are `0`, `100`, and [`46.2
 
 #### Results
 
-{{EmbedLiveSample("SVG elements as masks", "100%", 540)}}
+{{EmbedLiveSample("masking_with_svg_mask", "100%", 540)}}
 
 Toggle the checkbox to toggle the value of the `mask-mode` between `alpha` (checked) and the initial value, which resolves to `luminance` (unchecked). When `alpha` is used, the color of the mask doesn't matter; all that matters is the alpha-transparency. When the value resolves to `luminance`, `white` areas are visible, `black` areas are not, and `green` areas are visible but at an opacity that matches the luminance of the color `green`. When `mask-mode` is set to `alpha`, the colors are equivalent as they are all fully opaque.
 

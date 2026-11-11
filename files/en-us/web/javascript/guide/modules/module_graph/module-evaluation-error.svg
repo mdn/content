@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 910 384" role="img" aria-labelledby="title description">
+  <title id="title">An error during module evaluation</title>
+  <desc id="description">All five modules have loaded and linked. extra.js finishes evaluating successfully. config.js creates its configuration object, then throws. The error propagates through formatters.js to main.js before either body executes. These three modules are marked evaluated with the error recorded. The traversal never reaches logger.js, which remains linked but unevaluated and has a gray dashed border. Solid arrows show module dependencies. Function and object bodies are omitted.</desc>
+  <style>
+    text { fill: #6b7280; font-family: Menlo, Consolas, monospace; font-size: 12px; }
+    .specifier { fill: #08827e; font-weight: bold; }
+    .outline { fill: none; stroke: #808080; stroke-width: 1; }
+    .unvisited { stroke: #9ca3af; stroke-dasharray: 4 3; }
+    .success { stroke: #08827e; }
+    .failed { stroke: #c23b40; }
+    .status { text-anchor: end; paint-order: stroke; stroke: white; stroke-width: 4; stroke-linejoin: round; }
+    .success-label { fill: #08827e; }
+    .failed-label { fill: #b32930; }
+    .edge { fill: none; stroke: #808080; stroke-width: 1; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#808080"/>
+    </marker>
+  </defs>
+
+  <rect x="20" y="30" width="330" height="106" fill="#fff0f0"/>
+  <rect x="390" y="30" width="500" height="116" fill="#fff0f0"/>
+  <rect x="20" y="186" width="450" height="98" fill="#fff0f0"/>
+  <rect x="560" y="186" width="270" height="80" fill="#f3f4f6"/>
+
+  <rect x="20" y="330" width="250" height="34" fill="#edf8f5"/>
+
+  <path class="edge" d="M 340 66 H 390"/>
+  <path class="edge" d="M 265 94 V 186"/>
+  <path class="edge" d="M 544 58 L 470 186"/>
+  <path class="edge" d="M 624 76 V 186"/>
+
+  <path class="outline failed" d="M 92 30 H 350 V 136 H 20 V 30 H 28"/>
+  <text x="34" y="34">main.js</text>
+  <text x="34" y="70">import { greet } from <tspan class="specifier">"./formatters.js"</tspan>;</text>
+  <text x="34" y="88">import config from <tspan class="specifier">"./config.js"</tspan>;</text>
+  <text x="34" y="52">import <tspan class="specifier">"./extra.js"</tspan>;</text>
+  <text x="34" y="124">greet("Josh", config.locale);</text>
+
+  <path class="outline failed" d="M 504 30 H 890 V 146 H 390 V 30 H 398"/>
+  <text x="404" y="34">formatters.js</text>
+  <text x="404" y="70">import { log } from <tspan class="specifier">"./logger.js"</tspan>;</text>
+  <text x="404" y="52">import config from <tspan class="specifier">"./config.js"</tspan>;</text>
+  <text x="404" y="98">export function greet(name, localeName = config.defaultLocale) {</text>
+  <text x="404" y="116" xml:space="preserve">  // ...</text>
+  <text x="404" y="134">}</text>
+
+  <path class="outline failed" d="M 106 186 H 470 V 284 H 20 V 186 H 28"/>
+  <text x="34" y="190">config.js</text>
+  <text x="34" y="208">export default {</text>
+  <text x="34" y="226" xml:space="preserve">  // ...</text>
+  <text x="34" y="244">};</text>
+  <text class="failed-label" x="34" y="272">throw new Error("Configuration unavailable");</text>
+
+  <path class="outline unvisited" d="M 646 186 H 830 V 266 H 560 V 186 H 568"/>
+  <text x="574" y="190">logger.js</text>
+  <text x="574" y="208">export function log(message) {</text>
+  <text x="574" y="226" xml:space="preserve">  // ...</text>
+  <text x="574" y="244">}</text>
+  <text class="status failed-label" x="350" y="22">Evaluated (error)</text>
+  <text class="status failed-label" x="890" y="22">Evaluated (error)</text>
+  <text class="status failed-label" x="470" y="178">Evaluated (error)</text>
+  <text class="status" x="830" y="178">Linked</text>
+  <path class="edge" d="M 82 48 H 8 V 348 H 20"/>
+  <path class="outline success" d="M 98 330 H 270 V 364 H 20 V 330 H 28"/>
+  <text x="34" y="334">extra.js</text>
+  <text x="34" y="352">export const extra = 1;</text>
+  <text class="status success-label" x="270" y="322">Evaluated</text>
+</svg>

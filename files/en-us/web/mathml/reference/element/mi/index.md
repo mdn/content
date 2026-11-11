@@ -86,7 +86,7 @@ This element also accepts the [global MathML attributes](/en-US/docs/Web/MathML/
 </math>
 ```
 
-{{ EmbedLiveSample('mi_example', 400, 100) }}
+{{ EmbedLiveSample('examples', 400, 100) }}
 
 ## Technical summary
 

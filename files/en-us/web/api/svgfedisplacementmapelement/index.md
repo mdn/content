@@ -11,6 +11,19 @@ The **`SVGFEDisplacementMapElement`** interface corresponds to the {{SVGElement(
 
 {{InheritanceDiagram}}
 
+## Static properties
+
+- `SVG_CHANNEL_UNKNOWN` (0)
+  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+- `SVG_CHANNEL_R` (1)
+  - : Corresponds to the value `R`.
+- `SVG_CHANNEL_G` (2)
+  - : Corresponds to the value `G`.
+- `SVG_CHANNEL_B` (3)
+  - : Corresponds to the value `B`.
+- `SVG_CHANNEL_A` (4)
+  - : Corresponds to the value `A`.
+
 ## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
@@ -39,19 +52,6 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 ## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
-
-## Static properties
-
-- `SVG_CHANNEL_UNKNOWN` (0)
-  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
-- `SVG_CHANNEL_R` (1)
-  - : Corresponds to the value `R`.
-- `SVG_CHANNEL_G` (2)
-  - : Corresponds to the value `G`.
-- `SVG_CHANNEL_B` (3)
-  - : Corresponds to the value `B`.
-- `SVG_CHANNEL_A` (4)
-  - : Corresponds to the value `A`.
 
 ## Specifications
 

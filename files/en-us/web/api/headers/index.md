@@ -14,26 +14,6 @@ You can retrieve a `Headers` object via the {{domxref("Request.headers")}} and {
 > [!NOTE]
 > You can find out more about the available headers by reading our [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers) reference.
 
-## Description
-
-A `Headers` object has an associated header list, which is initially empty and consists of zero or more name and value pairs. You can add to this using methods like {{domxref("Headers.append","append()")}} (see [Examples](#examples).) In all methods of this interface, header names are matched by case-insensitive byte sequence.
-
-An object implementing `Headers` can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, instead of {{domxref('Headers.entries()', 'entries()')}}: `for (const p of myHeaders)` is equivalent to `for (const p of myHeaders.entries())`.
-
-### Modification restrictions
-
-Some `Headers` objects have restrictions on whether the {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, and {{domxref("Headers.append","append()")}} methods can mutate the header. The modification restrictions are set depending on how the `Headers` object is created.
-
-- For headers created with {{domxref("Headers.Headers","Headers()")}} constructor, there are no modification restrictions.
-- For headers of {{domxref("Request")}} objects:
-  - If the request's {{domxref("Request.mode","mode")}} is `no-cors`, you can modify any {{Glossary("CORS-safelisted request header")}} name/value.
-  - Otherwise, you can modify any {{Glossary("forbidden request header", "non-forbidden request header")}} name/value.
-- For headers of {{domxref("Response")}} objects:
-  - If the response is created using {{domxref("Response.error_static", "Response.error()")}} or {{domxref("Response.redirect_static", "Response.redirect()")}}, or received from a {{domxref("Window/fetch", "fetch()")}} call, the headers are immutable and cannot be modified.
-  - Otherwise, if the response is created using {{domxref("Response.Response","Response()")}} or {{domxref("Response.json_static","Response.json()")}}, you can modify any {{Glossary("forbidden response header name", "non-forbidden response header")}} name/value.
-
-All of the Headers methods will throw a {{jsxref("TypeError")}} if you try to pass in a reference to a name that isn't a [valid HTTP Header name](https://fetch.spec.whatwg.org/#concept-header-name). The mutation operations will throw a `TypeError` if the header is immutable. In any other failure case they fail silently.
-
 ## Constructor
 
 - {{domxref("Headers.Headers()", "Headers()")}}
@@ -67,6 +47,26 @@ All of the Headers methods will throw a {{jsxref("TypeError")}} if you try to pa
 
 > [!NOTE]
 > When Header values are iterated over, they are automatically sorted in lexicographical order, and values from duplicate header names are combined.
+
+## Description
+
+A `Headers` object has an associated header list, which is initially empty and consists of zero or more name and value pairs. You can add to this using methods like {{domxref("Headers.append","append()")}} (see [Examples](#examples).) In all methods of this interface, header names are matched by case-insensitive byte sequence.
+
+An object implementing `Headers` can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, instead of {{domxref('Headers.entries()', 'entries()')}}: `for (const p of myHeaders)` is equivalent to `for (const p of myHeaders.entries())`.
+
+### Modification restrictions
+
+Some `Headers` objects have restrictions on whether the {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, and {{domxref("Headers.append","append()")}} methods can mutate the header. The modification restrictions are set depending on how the `Headers` object is created.
+
+- For headers created with {{domxref("Headers.Headers","Headers()")}} constructor, there are no modification restrictions.
+- For headers of {{domxref("Request")}} objects:
+  - If the request's {{domxref("Request.mode","mode")}} is `no-cors`, you can modify any {{Glossary("CORS-safelisted request header")}} name/value.
+  - Otherwise, you can modify any {{Glossary("forbidden request header", "non-forbidden request header")}} name/value.
+- For headers of {{domxref("Response")}} objects:
+  - If the response is created using {{domxref("Response.error_static", "Response.error()")}} or {{domxref("Response.redirect_static", "Response.redirect()")}}, or received from a {{domxref("Window/fetch", "fetch()")}} call, the headers are immutable and cannot be modified.
+  - Otherwise, if the response is created using {{domxref("Response.Response","Response()")}} or {{domxref("Response.json_static","Response.json()")}}, you can modify any {{Glossary("forbidden response header name", "non-forbidden response header")}} name/value.
+
+All of the Headers methods will throw a {{jsxref("TypeError")}} if you try to pass in a reference to a name that isn't a [valid HTTP Header name](https://fetch.spec.whatwg.org/#concept-header-name). The mutation operations will throw a `TypeError` if the header is immutable. In any other failure case they fail silently.
 
 ## Examples
 

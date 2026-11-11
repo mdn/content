@@ -1566,7 +1566,7 @@
 /en-US/docs/DOM/RotationRate.gamma	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
 /en-US/docs/DOM/SVGAElement	/en-US/docs/Web/API/SVGAElement
 /en-US/docs/DOM/SVGAngle	/en-US/docs/Web/API/SVGAngle
-/en-US/docs/DOM/SVGAnimateColorElement	/en-US/docs/Web/API/SVGAnimateColorElement
+/en-US/docs/DOM/SVGAnimateColorElement	/en-US/docs/Web/API/SVGAnimationElement
 /en-US/docs/DOM/SVGAnimateElement	/en-US/docs/Web/API/SVGAnimateElement
 /en-US/docs/DOM/SVGAnimateMotionElement	/en-US/docs/Web/API/SVGAnimateMotionElement
 /en-US/docs/DOM/SVGAnimateTransformElement	/en-US/docs/Web/API/SVGAnimateTransformElement
@@ -2882,7 +2882,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/RotationRate.gamma	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
 /en-US/docs/Document_Object_Model_(DOM)/SVGAElement	/en-US/docs/Web/API/SVGAElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGAngle	/en-US/docs/Web/API/SVGAngle
-/en-US/docs/Document_Object_Model_(DOM)/SVGAnimateColorElement	/en-US/docs/Web/API/SVGAnimateColorElement
+/en-US/docs/Document_Object_Model_(DOM)/SVGAnimateColorElement	/en-US/docs/Web/API/SVGAnimationElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGAnimateElement	/en-US/docs/Web/API/SVGAnimateElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGAnimateMotionElement	/en-US/docs/Web/API/SVGAnimateMotionElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGAnimateTransformElement	/en-US/docs/Web/API/SVGAnimateTransformElement
@@ -5648,7 +5648,7 @@
 /en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page	/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 /en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page	/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
 /en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page	/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page
-/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment	/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
+/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment	/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 /en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page	/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
 /en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page	/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page
 /en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template	/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
@@ -5886,6 +5886,7 @@
 /en-US/docs/Learn_web_development/Extensions/Performance/Resources	/en-US/docs/Learn_web_development/Extensions/Performance/Best_practices
 /en-US/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics	/en-US/docs/Learn_web_development/Extensions/Performance/Best_practices
 /en-US/docs/Learn_web_development/Extensions/Security_privacy	/en-US/docs/Web/Security
+/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment	/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 /en-US/docs/Learn_web_development/Extensions/Transform_animate	/en-US/docs/Learn_web_development/Extensions
 /en-US/docs/Learn_web_development/Getting_started/Basic_setup	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software
 /en-US/docs/Learn_web_development/Getting_started/Soft_skills/Job_interviews	/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Finding_a_job
@@ -10290,6 +10291,7 @@
 /en-US/docs/Web/API/RotationRate.gamma	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
 /en-US/docs/Web/API/SVGAElement/SVGAlement.target	/en-US/docs/Web/API/SVGAElement/target
 /en-US/docs/Web/API/SVGAElement/text	/en-US/docs/Web/API/Node/textContent
+/en-US/docs/Web/API/SVGAnimateColorElement	/en-US/docs/Web/API/SVGAnimationElement
 /en-US/docs/Web/API/SVGAnimatedPoints	/en-US/docs/Web/API/SVGPolygonElement
 /en-US/docs/Web/API/SVGAnimationElement/onbegin	/en-US/docs/Web/API/SVGAnimationElement/beginEvent_event
 /en-US/docs/Web/API/SVGAnimationElement/onend	/en-US/docs/Web/API/SVGAnimationElement/endEvent_event

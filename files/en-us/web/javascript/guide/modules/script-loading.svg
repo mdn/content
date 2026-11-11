@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 440" role="img" aria-labelledby="title description">
+  <title id="title">Classic scripts share the global scope</title>
+  <desc id="description">An HTML page loads external-script.js and external-script-2.js and contains an inline script. All three scripts execute in the same global scope, so the latter two can use the dollar-sign function declared by the first.</desc>
+  <style>
+    text { fill: #6b7280; font-family: Menlo, Consolas, monospace; font-size: 12px; }
+    .identifier { fill: #08827e; font-weight: bold; }
+    .outline { fill: none; stroke: #808080; stroke-width: 1; }
+    .edge { fill: none; stroke: #808080; stroke-width: 1; marker-end: url(#arrow); }
+    .scope { fill: none; stroke: #808080; stroke-width: 1; stroke-dasharray: 6 5; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#808080"/>
+    </marker>
+  </defs>
+  <rect class="scope" x="450" y="38" width="360" height="380"/>
+  <text x="470" y="24" xml:space="preserve">Global scope</text>
+  <path class="outline" d="M 71 70 H 410 V 268 H 20 V 70 H 28"/>
+  <text x="34" y="74" xml:space="preserve">HTML</text>
+  <text x="34" y="92" xml:space="preserve">&lt;head&gt;</text>
+  <text x="34" y="110" xml:space="preserve">  &lt;script src=&quot;external-script.js&quot;&gt;&lt;/script&gt;</text>
+  <text x="34" y="128" xml:space="preserve">&lt;/head&gt;</text>
+  <text x="34" y="146" xml:space="preserve">&lt;body&gt;</text>
+  <text x="34" y="164" xml:space="preserve">  &lt;!-- page content --&gt;</text>
+  <text x="34" y="182" xml:space="preserve">  &lt;script src=&quot;external-script-2.js&quot;&gt;&lt;/script&gt;</text>
+  <text x="34" y="200" xml:space="preserve">  &lt;script&gt;</text>
+  <text x="34" y="218" xml:space="preserve">    // inline script</text>
+  <text x="34" y="236" xml:space="preserve">  &lt;/script&gt;</text>
+  <text x="34" y="254" xml:space="preserve">&lt;/body&gt;</text>
+  <path class="outline" d="M 622 60 H 790 V 154 H 470 V 60 H 478"/>
+  <text x="484" y="64" xml:space="preserve">external-script.js</text>
+  <text x="484" y="82" xml:space="preserve">function <tspan class="identifier">$</tspan>() {</text>
+  <text x="484" y="100" xml:space="preserve">  // ...</text>
+  <text x="484" y="118" xml:space="preserve">}</text>
+  <text x="484" y="136" xml:space="preserve">// ...</text>
+  <path class="outline" d="M 637 190 H 790 V 248 H 470 V 190 H 478"/>
+  <text x="484" y="194" xml:space="preserve">external-script-2.js</text>
+  <text x="484" y="212" xml:space="preserve"><tspan class="identifier">$</tspan>.ajax(/* ... */);</text>
+  <text x="484" y="230" xml:space="preserve">// ...</text>
+  <path class="outline" d="M 586 290 H 790 V 402 H 470 V 290 H 478"/>
+  <text x="484" y="294" xml:space="preserve">Inline script</text>
+  <text x="484" y="312" xml:space="preserve">var hiddenBox = <tspan class="identifier">$</tspan>(&quot;#banner-message&quot;);</text>
+  <text x="484" y="330" xml:space="preserve"><tspan class="identifier">$</tspan>(&quot;#button-container button&quot;)</text>
+  <text x="484" y="348" xml:space="preserve">  .on(&quot;click&quot;, function (event) {</text>
+  <text x="484" y="366" xml:space="preserve">    hiddenBox.show();</text>
+  <text x="484" y="384" xml:space="preserve">  });</text>
+  <path class="edge" d="M 215 115 L 470 135"/>
+  <path class="edge" d="M 245 187 L 470 218"/>
+  <path class="edge" d="M 194 214 L 470 330"/>
+</svg>

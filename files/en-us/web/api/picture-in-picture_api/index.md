@@ -166,7 +166,7 @@ pipButton.addEventListener("click", togglePictureInPicture);
 
 Clicking the "Toggle PiP" button lets the user toggle between playing the video in the page and in a floating window:
 
-{{embedlivesample("toggling_picture-in-picture", , "350")}}
+{{embedlivesample("toggling_picture-in-picture_mode", , "350")}}
 
 ## Specifications
 

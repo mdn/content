@@ -44,7 +44,7 @@ A paragraph of text that includes `<code>`:
 
 ### Result
 
-{{EmbedLiveSample("Example", 640, 70)}}
+{{EmbedLiveSample("examples", 640, 70)}}
 
 ## Notes
 

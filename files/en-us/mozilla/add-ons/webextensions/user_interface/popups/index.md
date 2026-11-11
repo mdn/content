@@ -7,7 +7,7 @@ sidebar: addonsidebar
 
 A popup is a dialog that's associated with a [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) or [address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions). This page describes popups in general, specifying them, debugging, resizing, and designing them, as well as examples of use.
 
-![Page action pop-up example with three options: kittens, puppies, and reset.](page_action_popup.png)
+![Address bar button popup example with four options: Frog, Turtle, Snake, and Reset.](page_action_popup.png)
 
 When the user clicks the button, the popup is shown. When the user clicks anywhere outside the popup, the popup is closed. The popup can be closed programmatically by calling [`window.close()`](/en-US/docs/Web/API/Window/close) from a script running in the popup. However, you can't open the popup programmatically from an extension's JavaScript; it can be opened only in response to a user action.
 

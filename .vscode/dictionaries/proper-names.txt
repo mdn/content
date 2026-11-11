@@ -234,6 +234,7 @@ Grigsby
 Grissom
 Groff
 Grosso
+Grsync
 Gruber
 GSAP
 Guildford
@@ -361,7 +362,6 @@ Liskov
 Lorc
 Lorde
 Loycom
-Luxon
 Léonie
 Macknik
 Macromedia

@@ -147,7 +147,7 @@ for (const img of document.querySelectorAll("img")) {
 }
 ```
 
-{{EmbedLiveSample("Color_scheme_inheritance")}}
+{{EmbedLiveSample("inherited_color_scheme_in_embedded_elements")}}
 
 ## Specifications
 

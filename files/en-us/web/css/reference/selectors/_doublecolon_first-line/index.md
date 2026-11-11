@@ -141,7 +141,7 @@ text::first-line {
 
 #### Result
 
-{{EmbedLiveSample("styling_the_first_line_of_a_SVG_text_element", "100%", 150)}}
+{{EmbedLiveSample("styling_the_first_line_of_an_svg_text_element", "100%", 150)}}
 
 ## Specifications
 

@@ -22,18 +22,6 @@ This example runs the media query `(width <= 600px)` and displays the
 value of the resulting `MediaQueryList`'s `media` property in a
 {{HTMLElement("span")}}.
 
-### JavaScript
-
-```js
-let mql = window.matchMedia("(width <= 600px)");
-
-document.querySelector(".mq-value").innerText = mql.media;
-```
-
-The JavaScript code passes the media query to match into {{DOMxRef("Window.matchMedia", "matchMedia()")}} to compile it, then sets the `<span>`'s
-{{DOMxRef("HTMLElement.innerText", "innerText")}} to the value of the result's
-`media` property.
-
 ### HTML
 
 ```html
@@ -53,6 +41,18 @@ A `<span>` to receive the output.
   border: 1px solid #ddddee;
 }
 ```
+
+### JavaScript
+
+```js
+let mql = window.matchMedia("(width <= 600px)");
+
+document.querySelector(".mq-value").innerText = mql.media;
+```
+
+The JavaScript code passes the media query to match into {{DOMxRef("Window.matchMedia", "matchMedia()")}} to compile it, then sets the `<span>`'s
+{{DOMxRef("HTMLElement.innerText", "innerText")}} to the value of the result's
+`media` property.
 
 ### Result
 

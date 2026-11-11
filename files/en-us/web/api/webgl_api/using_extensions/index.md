@@ -62,6 +62,7 @@ The current extensions are:
 - {{domxref("EXT_disjoint_timer_query")}}
 - {{domxref("EXT_float_blend")}}
 - {{domxref("EXT_frag_depth")}}
+- {{domxref("EXT_polygon_offset_clamp")}}
 - {{domxref("EXT_shader_texture_lod")}}
 - {{domxref("EXT_sRGB")}}
 - {{domxref("EXT_texture_compression_bptc")}}

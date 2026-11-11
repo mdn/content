@@ -31,7 +31,7 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
 In the following example we retrieve the list of classes set on a
 {{htmlelement("span")}} element as a `DOMTokenList` using
-{{domxref("Element.classList")}}. We when retrieve an iterator containing the key/value
+{{domxref("Element.classList")}}. We then retrieve an iterator containing the key/value
 pairs using `entries()`, then iterate through each one using a
 {{jsxref("Statements/for...of", "for...of")}} loop, writing them to the
 `<span>`'s {{domxref("Node.textContent")}}.

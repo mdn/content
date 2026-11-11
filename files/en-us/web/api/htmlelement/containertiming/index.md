@@ -3,10 +3,12 @@ title: "HTMLElement: containerTiming property"
 short-title: containerTiming
 slug: Web/API/HTMLElement/containerTiming
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.HTMLElement.containerTiming
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`containerTiming`** property of the {{domxref("HTMLElement")}} interface marks the element as a container root for observation in the [Container Timing API](/en-US/docs/Web/API/PerformanceContainerTiming).
 

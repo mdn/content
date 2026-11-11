@@ -16,10 +16,6 @@ The `FileEntrySync` interface represents a file in a file system. It lets you wr
 > This interface is deprecated and is no more on the standard track.
 > _Do not use it anymore._ Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
-## Basic concepts
-
-To write content to file, create a FileWriter object by calling [`createWriter()`](#createwriter).
-
 ## Method overview
 
 <table class="standard-table">
@@ -88,6 +84,10 @@ This method can raise a [DOMException](/en-US/docs/Web/API/DOMException) with th
 | ------------------- | ------------------------------------------------------------------------------ |
 | `NOT_FOUND_ERR`     | The file does not exist.                                                       |
 | `INVALID_STATE_ERR` | The file is no longer valid for some reason other than it having been deleted. |
+
+## Description
+
+To write content to file, create a FileWriter object by calling [`createWriter()`](#createwriter).
 
 ## Specifications
 

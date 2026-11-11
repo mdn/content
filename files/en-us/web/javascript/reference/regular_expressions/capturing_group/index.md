@@ -27,7 +27,8 @@ A capturing group acts like the [grouping operator](/en-US/docs/Web/JavaScript/R
 
 Capturing groups are numbered by the order of their opening parentheses. The first capturing group is numbered `1`, the second `2`, and so on. [Named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) are also capturing groups and are numbered together with other (unnamed) capturing groups. The information of the capturing group's match can be accessed through:
 
-- The return value (which is an array) of {{jsxref("RegExp.prototype.exec()")}}, {{jsxref("String.prototype.match()")}}, and {{jsxref("String.prototype.matchAll()")}}
+- The return value (which is an array) of {{jsxref("RegExp.prototype.exec()")}}, or {{jsxref("String.prototype.match()")}} when the regex does not have the `g` flag
+- Each match array yielded by the iterator returned by {{jsxref("String.prototype.matchAll()")}}
 - The `pN` parameters of the {{jsxref("String.prototype.replace()")}} and {{jsxref("String.prototype.replaceAll()")}} methods' `replacement` callback function
 - [Backreferences](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference) within the same pattern
 

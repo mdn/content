@@ -150,7 +150,7 @@ Then we declare a `<dialog>` element that contains a "Close" `<button>`. This bu
 Open the dialog by pressing the "Open dialog" button.
 You can close the dialog by selecting the "Close" button or pressing the <kbd>Esc</kbd> key.
 
-{{EmbedLiveSample("Open and close a dialog using Invoker Command API HTML attributes", "100%", 200)}}
+{{EmbedLiveSample("invoker_command_api_html_attributes", "100%", 200)}}
 
 ### Popover API HTML attributes
 
@@ -202,7 +202,7 @@ In this case, no JavaScript is needed to close the form.
 This dialog is initially open and non-modal because of the presence of the `open` attribute.
 After clicking "OK", the dialog gets dismissed, leaving the Result frame empty.
 
-{{EmbedLiveSample("HTML-only non-modal dialog", "100%", 200)}}
+{{EmbedLiveSample("using_the_dialog_open_attribute", "100%", 200)}}
 
 > [!NOTE]
 > Reload the page to reset the output.
@@ -522,7 +522,7 @@ closeBtns.forEach((btn) => {
 
 The rendered result is as follows:
 
-{{EmbedLiveSample("closedby-values", "100%", 300)}}
+{{EmbedLiveSample("closedbyvalues", "100%", 300)}}
 
 Try clicking each button to open a dialog. The first one can only be closed by clicking its "Close" button. The second one can also be closed via a device-specific user action such as pressing the <kbd>Esc</kbd> key. The third one has full ["light-dismiss" behavior](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss), so it can also be closed by clicking or tapping outside the dialog.
 

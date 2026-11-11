@@ -95,7 +95,7 @@ class Button extends GameObject {
 }
 ```
 
-Add a `initButtonControls()` function at the bottom of the script, which will register pointer event listeners that control the button. Everything that follows in this section, unless stated otherwise, will be appended to ths function's body.
+Add an `initButtonControls()` function at the bottom of the script, which will register pointer event listeners that control the button. Everything that follows in this section, unless stated otherwise, will be appended to ths function's body.
 
 ```js
 function initButtonControls() {
