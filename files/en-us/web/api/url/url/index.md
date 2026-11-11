@@ -101,6 +101,9 @@ new URL("/a", "https://example.com/?query=1");
 
 new URL("//foo.example", "https://example.com");
 // => 'https://foo.example/' (see relative URLs)
+
+new URL("https://example.com", "https://beispiel.de");
+// => 'https://example.com/' (ignores base)
 ```
 
 ## Specifications
