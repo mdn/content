@@ -51,7 +51,7 @@ const transport = new WebTransport(url);
 console.log(transport.anticipatedConcurrentIncomingBidirectionalStreams); // null
 ```
 
-This example sets the option to `300`, which tells the browser that the application expects the server to have up to 300 bidirectional streams open at once.
+The second sets the option to `300`, which tells the browser that the application expects the server to have up to 300 bidirectional streams open at once.
 
 ```js
 const busyTransport = new WebTransport(url, {
