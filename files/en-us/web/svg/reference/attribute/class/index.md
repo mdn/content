@@ -15,29 +15,6 @@ An element's class name serves two key roles:
 
 You can use this class to style SVG content using CSS.
 
-## Usage context
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Categories</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <a href="/en-US/docs/Web/SVG/Guides/Content_type#list-of-ts"
-          >&#x3C;list-of-class-names></a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Elements
 
 The following elements can use the `class` attribute:
@@ -117,6 +94,29 @@ The following elements can use the `class` attribute:
   </body>
 </html>
 ```
+
+## Usage notes
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Categories</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <a href="/en-US/docs/Web/SVG/Guides/Content_type#list-of-ts"
+          >&#x3C;list-of-class-names></a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

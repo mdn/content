@@ -15,35 +15,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("textPath")}}
 
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path
-    id="MyPath"
-    fill="none"
-    stroke="silver"
-    d="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50" />
-
-  <text>
-    <textPath
-      path="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50">
-      Quick brown fox jumps over the lazy dog.
-    </textPath>
-  </text>
-</svg>
-```
-
-{{EmbedLiveSample("Example", "420", "220")}}
-
 ## animateMotion
 
 For {{SVGElement("animateMotion")}}, `path` defines the motion path, expressed in the same format and interpreted the same way as the {{SVGAttr("d")}} geometric property for the {{SVGElement("path")}} element. The effect of a motion path animation is a translation along the x- and y-axes of the current user coordinate system by the x and y values computed over time.
@@ -91,6 +62,35 @@ For {{SVGElement("textPath")}}, `path` defines the path onto which the {{Glossar
 
 - `<path-data>`
   - : This value defines the text path along which the glyphs of the `<text>` element are aligned. For detailed information about the commands that can be used, see the [explanation for the `d` attribute](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands).
+
+## Example
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path
+    id="MyPath"
+    fill="none"
+    stroke="silver"
+    d="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50" />
+
+  <text>
+    <textPath
+      path="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50">
+      Quick brown fox jumps over the lazy dog.
+    </textPath>
+  </text>
+</svg>
+```
+
+{{EmbedLiveSample("Example", "420", "220")}}
 
 ## Specifications
 
