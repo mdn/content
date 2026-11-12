@@ -41,21 +41,6 @@ None.
 
 None.
 
-## Examples
-
-```html
-<div role="navigation" aria-label="Customer service">
-  <ul>
-    <li><a href="#">Help</a></li>
-    <li><a href="#">Order tracking</a></li>
-    <li><a href="#">Shipping &amp; Delivery</a></li>
-    <li><a href="#">Returns</a></li>
-    <li><a href="#">Contact us</a></li>
-    <li><a href="#">Find a store</a></li>
-  </ul>
-</div>
-```
-
 ## Accessibility concerns
 
 [Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles) are intended to be used sparingly, to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
@@ -107,6 +92,21 @@ If a `navigation` landmark role or {{HTMLElement('nav')}} element in a document 
 #### Redundant descriptions
 
 Screen readers will announce the type of role the landmark is. Because of this, you do not need to describe what the landmark is in its label. For example, a declaration of `role="navigation"` with an `aria-label="Primary navigation"` may be announced redundantly as, "primary navigation navigation".
+
+## Examples
+
+```html
+<div role="navigation" aria-label="Customer service">
+  <ul>
+    <li><a href="#">Help</a></li>
+    <li><a href="#">Order tracking</a></li>
+    <li><a href="#">Shipping &amp; Delivery</a></li>
+    <li><a href="#">Returns</a></li>
+    <li><a href="#">Contact us</a></li>
+    <li><a href="#">Find a store</a></li>
+  </ul>
+</div>
+```
 
 ## Specifications
 

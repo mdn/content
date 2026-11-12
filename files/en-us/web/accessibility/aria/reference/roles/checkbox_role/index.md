@@ -84,6 +84,30 @@ From the assistive technology user's perspective, the heading does not exist sin
 - `onKeyDown`
   - : Handle the case where the user presses the <kbd>Space</kbd> key to change the state of the checkbox by changing the value of the `aria-checked` attribute and the appearance of the checkbox so it appears checked or unchecked to the sighted user
 
+## Accessibility concerns
+
+When the `checkbox` role is added to an element, the user agent should do the following:
+
+- Expose the element as having a `checkbox` role in the operating system's accessibility API.
+- When the `aria-checked` value changes, send an accessible state changed event.
+
+Assistive technology products should do the following:
+
+- Screen readers should announce the element as a checkbox, and optionally provide instructions on how to activate it.
+
+People implementing checkboxes should do the following:
+
+- Ensure that the checkbox can be reached and interacted with by both keyboard controls and clicks
+- Keep the `aria-checked` attribute up to date following user interactions
+- Provide styles that indicate when the checkbox has focus
+
+> [!NOTE]
+> Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and may change.
+
+## Best practices
+
+The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use the native [HTML checkbox](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) using form control instead of recreating a checkbox's functionality with JavaScript and ARIA.
+
 ## Examples
 
 The following example creates an otherwise non-semantic checkbox element using CSS and JavaScript to handle the checked or unchecked status of the element.
@@ -152,30 +176,6 @@ label.addEventListener("click", changeCheckbox);
 ```
 
 {{EmbedLiveSample("Examples", 230, 250)}}
-
-## Accessibility concerns
-
-When the `checkbox` role is added to an element, the user agent should do the following:
-
-- Expose the element as having a `checkbox` role in the operating system's accessibility API.
-- When the `aria-checked` value changes, send an accessible state changed event.
-
-Assistive technology products should do the following:
-
-- Screen readers should announce the element as a checkbox, and optionally provide instructions on how to activate it.
-
-People implementing checkboxes should do the following:
-
-- Ensure that the checkbox can be reached and interacted with by both keyboard controls and clicks
-- Keep the `aria-checked` attribute up to date following user interactions
-- Provide styles that indicate when the checkbox has focus
-
-> [!NOTE]
-> Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and may change.
-
-## Best practices
-
-The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use the native [HTML checkbox](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) using form control instead of recreating a checkbox's functionality with JavaScript and ARIA.
 
 ## See also
 

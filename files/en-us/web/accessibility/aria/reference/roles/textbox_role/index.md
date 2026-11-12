@@ -98,6 +98,10 @@ Assistive technology products should listen for such an event and notify the use
 > [!NOTE]
 > Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and may be experienced differently.
 
+## Best practices
+
+Be sure to add the `contenteditable="true"` attribute to the HTML element to which this role is applied. Do so even if you set `aria-readonly` to `true`; in this way, you communicate that the content would be editable if it were not read-only.
+
 ## Examples
 
 ### Example 1: Adding the role in the HTML code for single line input
@@ -115,10 +119,6 @@ The snippet below shows how the textbox role is added directly into the HTML sou
 ```html
 <div role="textbox" contenteditable="true" aria-multiline="true"></div>
 ```
-
-## Best practices
-
-Be sure to add the `contenteditable="true"` attribute to the HTML element to which this role is applied. Do so even if you set `aria-readonly` to `true`; in this way, you communicate that the content would be editable if it were not read-only.
 
 ## See also
 

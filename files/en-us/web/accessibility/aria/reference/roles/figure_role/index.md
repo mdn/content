@@ -65,24 +65,6 @@ No role specific keyboard interactions.
 
 No role specific JavaScript requirements. If you don't have control over the HTML semantics, you can improve the accessibility of HTML by adding these roles and properties with JavaScript.
 
-## Examples
-
-We could extend the initial example on the page to also identify a paragraph that provides a descriptive label for the figure by referencing its ID in `aria-labelledby`:
-
-```html
-<div role="figure" aria-labelledby="figure-1">
-  <img
-    src="diagram.png"
-    alt="diagram showing the four layers of awesome and their relative priority order —
-        music, cats, nature, and ice cream" />
-  <pre>
-`
-        let awesome = ['music', 'cats', 'nature', 'ice cream'];
-      `</pre>
-  <p id="figure-1">Figure 1: The four layers of awesome.</p>
-</div>
-```
-
 ## Best practices
 
 Only use `role="figure"` if you have to — for example if you don't have control over your HTML but are able to improve accessibility dynamically after the fact with JavaScript.
@@ -101,6 +83,24 @@ If at all possible, you should use the appropriate semantic HTML elements to mar
   `</pre>
   <figcaption>Figure 1: The four layers of awesome.</figcaption>
 </figure>
+```
+
+## Examples
+
+We could extend the initial example on the page to also identify a paragraph that provides a descriptive label for the figure by referencing its ID in `aria-labelledby`:
+
+```html
+<div role="figure" aria-labelledby="figure-1">
+  <img
+    src="diagram.png"
+    alt="diagram showing the four layers of awesome and their relative priority order —
+        music, cats, nature, and ice cream" />
+  <pre>
+`
+        let awesome = ['music', 'cats', 'nature', 'ice cream'];
+      `</pre>
+  <p id="figure-1">Figure 1: The four layers of awesome.</p>
+</div>
 ```
 
 ## Specifications

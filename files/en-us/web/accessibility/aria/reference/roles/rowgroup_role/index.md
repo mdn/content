@@ -70,6 +70,44 @@ None.
 > [!NOTE]
 > The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML `<table>` element instead of the ARIA role of table whenever possible.
 
+## Best practices
+
+Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, and so on for data table structure. You can add these ARIA roles to ensure accessibility should the native semantics of the table be removed, such as with CSS. A relevant use case for the ARIA table role is when the CSS's display property overrides the native semantics of a table, such as by `display: grid`. In this case, you can use the ARIA table roles to add in the semantics.
+
+```html
+<table
+  role="table"
+  aria-label="Semantic Elements"
+  aria-describedby="semantic_elements_table_desc"
+  aria-rowcount="81">
+  <caption id="semantic_elements_table_desc">
+    Semantic Elements to use instead of ARIA's roles
+  </caption>
+  <thead role="rowgroup">
+    <tr role="row">
+      <th role="columnheader" aria-sort="none">ARIA Role</th>
+      <th role="columnheader" aria-sort="none">Semantic Element</th>
+    </tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row" aria-rowindex="11">
+      <td role="cell">header</td>
+      <td role="cell">h1</td>
+    </tr>
+    <tr role="row" aria-rowindex="16">
+      <td role="cell">header</td>
+      <td role="cell">h6</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+Above is the semantic way of writing a table. The ARIA roles are only necessary if the native semantics of the table, and therefore the table rows, are obliterated, such as by setting the [display property to flex or grid](/en-US/docs/Web/CSS/Reference/Properties/display#accessibility).
+
+### Added benefits
+
+none
+
 ## Examples
 
 ```html
@@ -109,44 +147,6 @@ None.
 ```
 
 The above is a non-semantic ARIA table with a table header and table body, with five of 81 rows present in the DOM: one within a table header and four rows within the table body. The header row, alone in a header rowgroup, has two column headers. The columns are sortable, but not currently sorted, as indicated by the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) property. The table body is a separate rowgroup, with four rows currently in the DOM. Because not all the rows are in the DOM, we've included the [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex) property on every row.
-
-## Best practices
-
-Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, and so on for data table structure. You can add these ARIA roles to ensure accessibility should the native semantics of the table be removed, such as with CSS. A relevant use case for the ARIA table role is when the CSS's display property overrides the native semantics of a table, such as by `display: grid`. In this case, you can use the ARIA table roles to add in the semantics.
-
-```html
-<table
-  role="table"
-  aria-label="Semantic Elements"
-  aria-describedby="semantic_elements_table_desc"
-  aria-rowcount="81">
-  <caption id="semantic_elements_table_desc">
-    Semantic Elements to use instead of ARIA's roles
-  </caption>
-  <thead role="rowgroup">
-    <tr role="row">
-      <th role="columnheader" aria-sort="none">ARIA Role</th>
-      <th role="columnheader" aria-sort="none">Semantic Element</th>
-    </tr>
-  </thead>
-  <tbody role="rowgroup">
-    <tr role="row" aria-rowindex="11">
-      <td role="cell">header</td>
-      <td role="cell">h1</td>
-    </tr>
-    <tr role="row" aria-rowindex="16">
-      <td role="cell">header</td>
-      <td role="cell">h6</td>
-    </tr>
-  </tbody>
-</table>
-```
-
-Above is the semantic way of writing a table. The ARIA roles are only necessary if the native semantics of the table, and therefore the table rows, are obliterated, such as by setting the [display property to flex or grid](/en-US/docs/Web/CSS/Reference/Properties/display#accessibility).
-
-### Added benefits
-
-none
 
 ## Specifications
 

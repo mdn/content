@@ -29,6 +29,10 @@ Along with [`alert`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_ro
 - [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
   - : Elements with the role `timer` have an implicit `aria-live` value of `off`.
 
+## Accessibility concerns
+
+If a time limit needs to be in place, for example, for security reasons, the user should have the option to turn it off or extend it. This restriction does not apply if the time limit is due to a live event, such as an auction or a game, or if the time to complete the form is essential for a valid submission.
+
 ## Examples
 
 ### A basic timer
@@ -84,10 +88,6 @@ window.setInterval(() => {
   decrement();
 }, 500);
 ```
-
-## Accessibility concerns
-
-If a time limit needs to be in place, for example, for security reasons, the user should have the option to turn it off or extend it. This restriction does not apply if the time limit is due to a live event, such as an auction or a game, or if the time to complete the form is essential for a valid submission.
 
 ## Specifications
 

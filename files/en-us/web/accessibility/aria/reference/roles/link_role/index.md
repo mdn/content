@@ -23,6 +23,19 @@ Use the [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) 
 > [!WARNING]
 > Applying the `link` role to an element will not cause browsers to enhance the element with standard link appearance or behaviors, such as underlining, focus rings, navigation to the link target, or context menu actions. That's the developer's responsibility.
 
+## Best practices
+
+The various widget roles are used to define common interactive patterns. Similar to the document-structure roles, some of these roles, including the `link` role, duplicate the semantics of native HTML elements that are well supported, and should not be used.
+
+Avoid using `link`, which we've included for completeness. The {{HTMLElement('a')}} semantic equivalent with accessible interactivity is available and supported.
+
+### Prefer HTML
+
+Using the {{HTMLElement('a')}} instead.
+
+> [!NOTE]
+> There is no need to include `role="link"` on an HTML link as the `<a>`, by default, has that role already.
+
 ## Examples
 
 To recreate an accessible link using the `link` role on an element that is not an {{HTMLElement('a')}}, you need to ensure the link receives focus in the correct tab order, that the element looks like a link, and that the "link" behaves like a link.
@@ -77,19 +90,6 @@ function navigateLink(e) {
 If the element with `role="link"` receives an <kbd>Enter</kbd> key event, this executes the link, going to the linked page or moving focus to the in page target.
 
 Optionally, <kbd>Shift</kbd> + <kbd>F10</kbd> opens a context menu for the link.
-
-## Best practices
-
-The various widget roles are used to define common interactive patterns. Similar to the document-structure roles, some of these roles, including the `link` role, duplicate the semantics of native HTML elements that are well supported, and should not be used.
-
-Avoid using `link`, which we've included for completeness. The {{HTMLElement('a')}} semantic equivalent with accessible interactivity is available and supported.
-
-### Prefer HTML
-
-Using the {{HTMLElement('a')}} instead.
-
-> [!NOTE]
-> There is no need to include `role="link"` on an HTML link as the `<a>`, by default, has that role already.
 
 ## Specifications
 

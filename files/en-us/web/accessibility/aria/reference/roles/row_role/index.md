@@ -116,46 +116,6 @@ None. For sortable columns, see the [`columnheader`](/en-US/docs/Web/Accessibili
 > [!NOTE]
 > The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML {{HTMLElement('table')}} element instead of the ARIA role of table whenever possible.
 
-## Examples
-
-```html
-<div
-  role="table"
-  aria-label="Semantic Elements"
-  aria-describedby="semantic_elements_table_desc"
-  aria-rowcount="81">
-  <div id="semantic_elements_table_desc">
-    Semantic Elements to use instead of ARIA's roles
-  </div>
-  <div role="rowgroup">
-    <div role="row">
-      <span role="columnheader" aria-sort="none">ARIA Role</span>
-      <span role="columnheader" aria-sort="none">Semantic Element</span>
-    </div>
-  </div>
-  <div role="rowgroup">
-    <div role="row" aria-rowindex="11">
-      <span role="cell">header</span>
-      <span role="cell">h1</span>
-    </div>
-    <div role="row" aria-rowindex="16">
-      <span role="cell">header</span>
-      <span role="cell">h6</span>
-    </div>
-    <div role="row" aria-rowindex="18">
-      <span role="cell">rowgroup</span>
-      <span role="cell">thead</span>
-    </div>
-    <div role="row" aria-rowindex="24">
-      <span role="cell">term</span>
-      <span role="cell">dt</span>
-    </div>
-  </div>
-</div>
-```
-
-The above is a non-semantic ARIA table with five of 81 rows present in the DOM: One within a table header and four rows within the table body. The header row, alone in a header rowgroup, has two column headers. The columns are sortable, but not currently sorted, as indicated by the `aria-sort` property. The table body is in a separate rowgroup, with four rows currently in the DOM. Because not all the rows are in the DOM, we've included the `aria-rowindex` property on every row.
-
 ## Best practices
 
 Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, etc., for data table structure. You can add these ARIA roles to ensure accessibility should the native semantics of the table be removed, such as with CSS. A relevant use case for the ARIA table role is when the native semantics of a table are overridden by CSS's display property, such as by display: grid. In this case, you can use the ARIA table roles to add the semantics back in.
@@ -201,6 +161,46 @@ Above is the semantic way of writing a table. The ARIA roles are only necessary 
 ### Added benefits
 
 none
+
+## Examples
+
+```html
+<div
+  role="table"
+  aria-label="Semantic Elements"
+  aria-describedby="semantic_elements_table_desc"
+  aria-rowcount="81">
+  <div id="semantic_elements_table_desc">
+    Semantic Elements to use instead of ARIA's roles
+  </div>
+  <div role="rowgroup">
+    <div role="row">
+      <span role="columnheader" aria-sort="none">ARIA Role</span>
+      <span role="columnheader" aria-sort="none">Semantic Element</span>
+    </div>
+  </div>
+  <div role="rowgroup">
+    <div role="row" aria-rowindex="11">
+      <span role="cell">header</span>
+      <span role="cell">h1</span>
+    </div>
+    <div role="row" aria-rowindex="16">
+      <span role="cell">header</span>
+      <span role="cell">h6</span>
+    </div>
+    <div role="row" aria-rowindex="18">
+      <span role="cell">rowgroup</span>
+      <span role="cell">thead</span>
+    </div>
+    <div role="row" aria-rowindex="24">
+      <span role="cell">term</span>
+      <span role="cell">dt</span>
+    </div>
+  </div>
+</div>
+```
+
+The above is a non-semantic ARIA table with five of 81 rows present in the DOM: One within a table header and four rows within the table body. The header row, alone in a header rowgroup, has two column headers. The columns are sortable, but not currently sorted, as indicated by the `aria-sort` property. The table body is in a separate rowgroup, with four rows currently in the DOM. Because not all the rows are in the DOM, we've included the `aria-rowindex` property on every row.
 
 ## Specifications
 

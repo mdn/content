@@ -142,6 +142,10 @@ Because arrow keys are used to navigate among elements of a toolbar and the <kbd
 - `onKeyPress`
   - : Handle the case where the user presses the <kbd>Space</kbd> key to change the state of the radio by changing the value of the `aria-checked` attribute and the appearance of the radio so it appears checked or unchecked to the sighted user
 
+## Best practices
+
+The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use native [HTML radio button](/en-US/docs/Web/HTML/Reference/Elements/input/radio) form controls instead of recreating a radio's functionality with JavaScript and ARIA.
+
 ## Examples
 
 The following example uses ARIA to modify otherwise generic elements to be exposed as radio buttons. CSS and JavaScript are used to visually and programmatically modify the checked or unchecked state of the element.
@@ -278,10 +282,6 @@ No JavaScript (or even CSS) would be needed had we used semantic HTML element wi
   </div>
 </fieldset>
 ```
-
-## Best practices
-
-The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use native [HTML radio button](/en-US/docs/Web/HTML/Reference/Elements/input/radio) form controls instead of recreating a radio's functionality with JavaScript and ARIA.
 
 ## See also
 

@@ -57,6 +57,13 @@ If a dialog already has a visible title bar, the text inside that bar can be use
 > [!NOTE]
 > Keep in mind that a dialog's title and description text do not have to be focusable in order to be perceived by screen readers operating in a non-virtual mode. The combination of the ARIA dialog role and labeling techniques should make the screen reader announce the dialog's information when focus is moved into it.
 
+### Associated ARIA roles, states, and properties
+
+- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
+  - : Use this attribute to label the dialog. Often, the value of the `aria-labelledby` attribute will be the id of the element used to title the dialog.
+- [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
+  - : Use this attribute to describe the contents of the dialog.
+
 ### Required JavaScript features
 
 #### Focus management
@@ -69,13 +76,6 @@ A dialog has particular requirements for how keyboard focus should be managed:
 - For most dialogs, the expected behavior is that the dialog's tab order _wraps_, which means that when the user tabs through the focusable elements in the dialog, the first focusable element will be focused after the last one has been reached. In other words, the tab order should be contained within and by the dialog.
 - If the dialog can be moved or resized, ensure that these actions must be performable by keyboard users as well as mouse users. Similarly, if a dialog provides special features like toolbars or context menus, these must be reachable and operable by keyboard users as well.
 - Dialogs can be modal or non-modal. When a _modal_ dialog appears on the screen, it's not possible to interact with any page content outside the dialog. In other words, the main application UI or page content is considered to be temporarily disabled as long as the modal dialog is showing. For _non-modal_ dialogs it is still possible to interact with content outside of the dialog while the dialog is showing. Note that for non-modal dialogs there will have to be a global keyboard shortcut that allows focus to be moved between opened dialogs and the main page.
-
-### Associated ARIA roles, states, and properties
-
-- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-  - : Use this attribute to label the dialog. Often, the value of the `aria-labelledby` attribute will be the id of the element used to title the dialog.
-- [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
-  - : Use this attribute to describe the contents of the dialog.
 
 ### Possible effects on user agents and assistive technology
 

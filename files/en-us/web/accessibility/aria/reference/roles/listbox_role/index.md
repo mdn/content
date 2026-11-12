@@ -121,6 +121,14 @@ When the user clicks on an option, hits <kbd>Space</kbd> when focused on an opti
 > [!NOTE]
 > The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. The {{HTMLElement('select')}} element with descendant {{HTMLElement('option')}} elements handles all the needed interactions natively.
 
+## Best practices
+
+- To be keyboard-accessible, authors should [manage focus](https://w3c.github.io/aria/#managingfocus) of all descendants of this role.
+- It is recommended that authors use different styling for the selection when the list is not focused, e.g., a non-active selection is often shown with a lighter background color.
+- If the listbox is not part of another widget, it should have the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) property set.
+- If one or more entries are not DOM children of listbox, additional `aria-*` properties will need to be set (see [ARIA Best Practices](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/)).
+- If there is a valid reason to [expand](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) the listbox, the [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) role may be more appropriate.
+
 ## Examples
 
 ### Example 1: A single select listbox that uses `aria-activedescendant`
@@ -172,14 +180,6 @@ This could have more easily been handled with the native HTML {{HTMLElement('sel
 - [Scrollable Listbox Example](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-scrollable/): Single-select listbox that scrolls to reveal more options, similar to HTML {{HTMLElement('select')}} with `size` attribute greater than one.
 - [Listbox Example with Grouped Options](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-grouped/): Single-select listbox with grouped options, similar to HTML {{HTMLElement('select')}} with the attribute `size` set to greater than `"1"` and options grouped with `optgroup` elements.
 - [Example Listboxes with Rearrangeable Options](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-rearrangeable/): Examples of both single-select and multi-select listboxes with accompanying toolbars where options can be added, moved, and removed.
-
-## Best practices
-
-- To be keyboard-accessible, authors should [manage focus](https://w3c.github.io/aria/#managingfocus) of all descendants of this role.
-- It is recommended that authors use different styling for the selection when the list is not focused, e.g., a non-active selection is often shown with a lighter background color.
-- If the listbox is not part of another widget, it should have the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) property set.
-- If one or more entries are not DOM children of listbox, additional `aria-*` properties will need to be set (see [ARIA Best Practices](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/)).
-- If there is a valid reason to [expand](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) the listbox, the [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) role may be more appropriate.
 
 ## Specifications
 
