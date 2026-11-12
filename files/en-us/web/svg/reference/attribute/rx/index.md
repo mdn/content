@@ -13,30 +13,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("ellipse")}}
 - {{SVGElement("rect")}}
 
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="50" cy="50" rx="0" ry="25" />
-  <ellipse cx="150" cy="50" rx="25" ry="25" />
-  <ellipse cx="250" cy="50" rx="50" ry="25" />
-
-  <rect x="20" y="120" width="60" height="60" rx="0" ry="15" />
-  <rect x="120" y="120" width="60" height="60" rx="15" ry="15" />
-  <rect x="220" y="120" width="60" height="60" rx="150" ry="15" />
-</svg>
-```
-
-{{EmbedLiveSample("Example", '100%', 200)}}
-
 ## ellipse
 
 For {{SVGElement('ellipse')}}, `rx` defines the x-radius of the shape. With a value lower or equal to zero the ellipse won't be drawn at all.
@@ -116,6 +92,30 @@ The way the value of the `rx` attribute is interpreted depend on both the {{SVGA
 
 > [!NOTE]
 > The horizontal curve of the corners of the `<rect>` can also be defined with the {{cssxref("rx")}} _geometry property_. If set in CSS, the `rx` property value overrides the `rx` attribute value.
+
+## Example
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="50" cy="50" rx="0" ry="25" />
+  <ellipse cx="150" cy="50" rx="25" ry="25" />
+  <ellipse cx="250" cy="50" rx="50" ry="25" />
+
+  <rect x="20" y="120" width="60" height="60" rx="0" ry="15" />
+  <rect x="120" y="120" width="60" height="60" rx="15" ry="15" />
+  <rect x="220" y="120" width="60" height="60" rx="150" ry="15" />
+</svg>
+```
+
+{{EmbedLiveSample("Example", '100%', 200)}}
 
 ## Specifications
 

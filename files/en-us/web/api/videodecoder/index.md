@@ -28,11 +28,6 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
     - `"configured"`
     - `"closed"`
 
-### Events
-
-- {{domxref("VideoDecoder.dequeue_event", "dequeue")}}
-  - : Fires to signal a decrease in {{domxref("VideoDecoder.decodeQueueSize")}}.
-
 ## Static methods
 
 - {{domxref("VideoDecoder.isConfigSupported_static", "VideoDecoder.isConfigSupported()")}}
@@ -52,6 +47,11 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
   - : Resets all states including configuration, control messages in the control message queue, and all pending callbacks.
 - {{domxref("VideoDecoder.close()")}}
   - : Ends all pending work and releases system resources.
+
+## Events
+
+- {{domxref("VideoDecoder.dequeue_event", "dequeue")}}
+  - : Fires to signal a decrease in {{domxref("VideoDecoder.decodeQueueSize")}}.
 
 ## Specifications
 

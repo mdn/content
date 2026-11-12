@@ -136,7 +136,7 @@ Promise.any([coffee, tea])
 
 ## See also
 
-- [Polyfill of `Promise.any` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [Polyfill of `Promise.any` in `core-js`](https://core-js.io/docs/features/ecmascript/promise)
 - [es-shims polyfill of `Promise.any`](https://www.npmjs.com/package/promise.any)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.all()")}}

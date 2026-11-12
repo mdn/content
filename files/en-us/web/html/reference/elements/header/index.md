@@ -52,6 +52,10 @@ header > time {
 }
 ```
 
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
+
 ## Usage notes
 
 When not nested within [sectioning content](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content), {{htmlelement("main")}}, or an element with the same ARIA role as these elements' implicit ARIA role, then the `<header>` element has an identical meaning to the site-wide [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark role. It defines a global site header, which usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
@@ -61,10 +65,6 @@ Otherwise, when nested within said elements, it loses its landmark status and re
 ### Historical Usage
 
 The `<header>` element originally existed at the very beginning of HTML for headings. It is seen in [the very first website](https://info.cern.ch/). At some point, headings became [`<h1>` through `<h6>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements), allowing `<header>` to be free to fill a different role.
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 ## Accessibility
 

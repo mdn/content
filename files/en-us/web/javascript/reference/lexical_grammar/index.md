@@ -7,7 +7,7 @@ spec-urls: https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar
 sidebar: jssidebar
 ---
 
-This page describes JavaScript's lexical grammar. JavaScript source text is just a sequence of characters — in order for the interpreter to understand it, the string has to be _parsed_ to a more structured representation. The initial step of parsing is called [lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis), in which the text gets scanned from left to right and is converted into a sequence of individual, atomic input elements. Some input elements are insignificant to the interpreter, and will be stripped after this step — they include [white space](#white_space) and [comments](#comments). The others, including [identifiers](#identifiers), [keywords](#keywords), [literals](#literals), and punctuators (mostly [operators](/en-US/docs/Web/JavaScript/Reference/Operators)), will be used for further syntax analysis. [Line terminators](#line_terminators) and multiline comments are also syntactically insignificant, but they guide the process for [automatic semicolons insertion](#automatic_semicolon_insertion) to make certain invalid token sequences become valid.
+This page describes JavaScript's lexical grammar. JavaScript source text is just a sequence of characters — in order for the interpreter to understand it, the string has to be _parsed_ to a more structured representation. The initial step of parsing is called [lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis), in which the text gets scanned from left to right and is converted into a sequence of individual, atomic input elements. Some input elements are insignificant to the interpreter, and will be stripped after this step — they include [white space](#white_space) and [comments](#comments). The others, including [identifiers](#identifiers), [keywords](#keywords), [literals](#literals), and punctuators (mostly [operators](/en-US/docs/Web/JavaScript/Reference/Operators)), will be used for further syntax analysis. [Line terminators](#line_terminators) and multiline comments are also syntactically insignificant, but they guide the process for [automatic semicolon insertion](#automatic_semicolon_insertion) to make certain invalid token sequences become valid.
 
 ## Format-control characters
 
@@ -49,7 +49,7 @@ In addition to [white space](#white_space) characters, line terminator character
 
 Outside the context of lexical grammar, white space and line terminators are often conflated. For example, {{jsxref("String.prototype.trim()")}} removes all white space and line terminators from the beginning and end of a string. The `\s` [character class escape](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) in regular expressions matches all white space and line terminators.
 
-Only the following Unicode code points are treated as line terminators in ECMAScript, other line breaking characters are treated as white space (for example, Next Line, NEL, U+0085 is considered as white space).
+Only the following Unicode code points are treated as line terminators in ECMAScript. Other line breaking characters are treated as white space (for example, Line Tabulation, VT, U+000B).
 
 | Code point | Name                | Abbreviation | Description                                            | Escape sequence |
 | ---------- | ------------------- | ------------ | ------------------------------------------------------ | --------------- |
@@ -292,10 +292,10 @@ The following are reserved as future keywords by older ECMAScript specifications
 
 A few identifiers have a special meaning in some contexts without being reserved words of any kind. They include:
 
-- {{jsxref("Functions/arguments", "arguments")}} (not a keyword, but cannot be declared as identifier in strict mode)
+- {{jsxref("Functions/arguments", "arguments")}} (not a keyword, but cannot be declared as an identifier in strict mode)
 - `as` ([`import * as ns from "mod"`](/en-US/docs/Web/JavaScript/Reference/Statements/import#namespace_import))
 - [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
-- {{jsxref("Global_Objects/eval", "eval")}} (not a keyword, but cannot be declared as identifier in strict mode)
+- {{jsxref("Global_Objects/eval", "eval")}} (not a keyword, but cannot be declared as an identifier in strict mode)
 - `from` ([`import x from "mod"`](/en-US/docs/Web/JavaScript/Reference/Statements/import))
 - {{jsxref("Functions/get", "get")}}
 - [`of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
@@ -357,7 +357,7 @@ The decimal exponential literal is specified by the following format: `beN`; whe
 
 #### Binary
 
-Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). Any character after the `0b` that is not 0 or 1 will terminate the literal sequence.
+Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). The digits after the prefix must be `0` or `1`.
 
 ```js-nolint
 0b10000000000000000000000000000000 // 2147483648
@@ -367,7 +367,7 @@ Binary number syntax uses a leading zero followed by a lowercase or uppercase La
 
 #### Octal
 
-Octal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "O" (`0o` or `0O`). Any character after the `0o` that is outside the range (01234567) will terminate the literal sequence.
+Octal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "O" (`0o` or `0O`). The digits after the prefix must be in the range `0`–`7`.
 
 ```js-nolint
 0O755 // 493
@@ -376,7 +376,7 @@ Octal number syntax uses a leading zero followed by a lowercase or uppercase Lat
 
 #### Hexadecimal
 
-Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X`). Any character after the `0x` that is outside the range (0123456789ABCDEF) will terminate the literal sequence.
+Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X`). The digits after the prefix must be in the ranges `0`–`9`, `A`–`F`, or `a`–`f`.
 
 ```js-nolint
 0xFFFFFFFFFFFFF // 4503599627370495
@@ -395,7 +395,7 @@ The [BigInt](/en-US/docs/Web/JavaScript/Guide/Data_structures#bigint_type) type 
 0b11101001010101010101n // 955733
 ```
 
-BigInt literals cannot start with `0` to avoid confusion with legacy octal literals.
+Decimal BigInt literals cannot have leading zeros to avoid confusion with legacy octal literals.
 
 ```js-nolint example-bad
 0755n; // SyntaxError: invalid BigInt syntax

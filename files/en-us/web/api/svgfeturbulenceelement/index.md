@@ -11,6 +11,21 @@ The **`SVGFETurbulenceElement`** interface corresponds to the {{SVGElement("feTu
 
 {{InheritanceDiagram}}
 
+## Static properties
+
+- `SVG_TURBULENCE_TYPE_UNKNOWN` (0)
+  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+- `SVG_TURBULENCE_TYPE_FRACTALNOISE` (1)
+  - : Corresponds to the value `fractalNoise`.
+- `SVG_TURBULENCE_TYPE_TURBULENCE` (2)
+  - : Corresponds to the value `turbulence`.
+- `SVG_STITCHTYPE_UNKNOWN` (0)
+  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+- `SVG_STITCHTYPE_STITCH` (1)
+  - : Corresponds to the value `stitch`.
+- `SVG_STITCHTYPE_NOSTITCH` (2)
+  - : Corresponds to the value `noStitch`.
+
 ## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
@@ -41,21 +56,6 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 ## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
-
-## Static properties
-
-- `SVG_TURBULENCE_TYPE_UNKNOWN` (0)
-  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
-- `SVG_TURBULENCE_TYPE_FRACTALNOISE` (1)
-  - : Corresponds to the value `fractalNoise`.
-- `SVG_TURBULENCE_TYPE_TURBULENCE` (2)
-  - : Corresponds to the value `turbulence`.
-- `SVG_STITCHTYPE_UNKNOWN` (0)
-  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
-- `SVG_STITCHTYPE_STITCH` (1)
-  - : Corresponds to the value `stitch`.
-- `SVG_STITCHTYPE_NOSTITCH` (2)
-  - : Corresponds to the value `noStitch`.
 
 ## Specifications
 

@@ -25,6 +25,21 @@ The `group` role should not be used for major perceivable sections of a page. If
 
 When the role is added to an element, the browser will send out an accessible group event to assistive technology products, which can then notify the user about it.
 
+### Scrollable content areas
+
+A visually overflowing container may need `tabindex="0"` so that keyboard-only users can focus it and scroll. A focusable container should have a role and an accessible name. If there is no appropriate native role and the content does not warrant a page landmark, use the `group` role.
+
+```html
+<div
+  role="group"
+  aria-labelledby="transcript-heading"
+  tabindex="0"
+  style="max-height: 12rem; overflow: auto;">
+  <h3 id="transcript-heading">Interview transcript</h3>
+  <!-- Long transcript content -->
+</div>
+```
+
 ## Examples
 
 The HTML code example below uses the `group` role with a `tree` view:

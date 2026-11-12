@@ -56,7 +56,7 @@ Where you want information about the current tab only, you can get a {{WebExtAPI
 
 To see how {{WebExtAPIRef("tabs.query()")}} and {{WebExtAPIRef("tabs.Tab")}} are used, let's walk through how the [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs) example adds the list of "switch to tabs" to its toolbar button popup.
 
-![The tabs toolbar menu showing the switch to tap area](switch_to_tab.png)
+![The tabs-tabs-tabs popup in Firefox, with the Switch to tab section highlighted](switch_to_tab.png)
 
 - manifest.json
   - : Here is the [`manifest.json`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/manifest.json):
@@ -325,7 +325,7 @@ But first, here is a demonstration of the feature in action:
 
     It's worth noting the use of `console.log()`. This enables you to output information to the [debugger](https://extensionworkshop.com/documentation/develop/debugging/) console, which can be useful when resolving issues found during development.
 
-    ![Example of the console.log output, from the move tabs feature, in the debugging console](console.png)
+    ![Example of the console.log output, from the move tabs feature, in the Firefox Toolbox console](console.png)
 
     The move code first calls `callOnActiveTab()` which in turn calls `getCurrentWindowTabs()` to get a {{WebExtAPIRef("tabs.Tab")}} object containing the active window's tabs. It then loops through the object to find and return the active tab object:
 

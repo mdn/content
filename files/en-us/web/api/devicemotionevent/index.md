@@ -19,11 +19,6 @@ The **`DeviceMotionEvent`** interface of the {{domxref("Device Orientation Event
 - {{domxref("DeviceMotionEvent.DeviceMotionEvent", "DeviceMotionEvent()")}}
   - : Creates a new `DeviceMotionEvent`.
 
-## Static methods
-
-- {{DOMxRef("DeviceMotionEvent.requestPermission_static", "DeviceMotionEvent.requestPermission()")}}
-  - : Requests the user's permission to access device motion data from the accelerometer and gyroscope sensors. Returns a {{jsxref("Promise")}} that resolves with a string of `"granted"` or `"denied"`.
-
 ## Instance properties
 
 - {{DOMxRef("DeviceMotionEvent.acceleration")}} {{ReadOnlyInline}}
@@ -34,6 +29,11 @@ The **`DeviceMotionEvent`** interface of the {{domxref("Device Orientation Event
   - : An object giving the rate of change of the device's orientation on the three orientation axis alpha, beta and gamma. Rotation rate is expressed in degrees per seconds.
 - {{DOMxRef("DeviceMotionEvent.interval")}} {{ReadOnlyInline}}
   - : A number representing the interval of time, in milliseconds, at which data is obtained from the device.
+
+## Static methods
+
+- {{DOMxRef("DeviceMotionEvent.requestPermission_static", "DeviceMotionEvent.requestPermission()")}}
+  - : Requests the user's permission to access device motion data from the accelerometer and gyroscope sensors. Returns a {{jsxref("Promise")}} that resolves with a string of `"granted"` or `"denied"`.
 
 ## Example
 

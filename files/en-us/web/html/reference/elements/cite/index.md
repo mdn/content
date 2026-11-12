@@ -84,7 +84,7 @@ Typically, browsers style the contents of a `<cite>` element in italics by defau
 
 ### Result
 
-{{EmbedLiveSample("Example", 640, 80)}}
+{{EmbedLiveSample("examples", 640, 80)}}
 
 ## Technical summary
 

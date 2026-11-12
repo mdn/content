@@ -28,6 +28,10 @@ A string providing a string which identifies the operating system on which the b
 
 In this table `x.y` refers to the version of the operating system
 
+## Usage notes
+
+Unless your code is privileged (chrome or at least has the UniversalBrowserRead privilege), it may get the value of the `general.oscpu.override` preference instead of the true platform.
+
 ## Examples
 
 ```js
@@ -37,10 +41,6 @@ function osInfo() {
 
 osInfo(); // alerts "Windows NT 6.0" for example
 ```
-
-## Usage notes
-
-Unless your code is privileged (chrome or at least has the UniversalBrowserRead privilege), it may get the value of the `general.oscpu.override` preference instead of the true platform.
 
 ## Specifications
 

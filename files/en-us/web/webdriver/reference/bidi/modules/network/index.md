@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.network
 sidebar: webdriver
 ---
 
-The **`network`** module contains commands and events related to network requests.
+The **`network`** module contains commands and events for monitoring and controlling the browser's network requests and responses.
 
 ## Intercepts
 
@@ -38,6 +38,8 @@ When the session ends, the browser resumes every request the session blocked.
 - [`network.continueRequest`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueRequest)
 - [`network.failRequest`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/failRequest)
 - [`network.removeIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/removeIntercept)
+- [`network.setCacheBehavior`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/setCacheBehavior)
+- [`network.setExtraHeaders`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/setExtraHeaders)
 
 ## Specifications
 

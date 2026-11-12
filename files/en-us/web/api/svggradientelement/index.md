@@ -11,6 +11,17 @@ The **`SVGGradient`** interface is a base interface used by {{domxref("SVGLinear
 
 {{InheritanceDiagram}}
 
+## Static properties
+
+- `SVG_SPREADMETHOD_UNKNOWN` (0)
+  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+- `SVG_SPREADMETHOD_PAD` (1)
+  - : Corresponds to value `pad`.
+- `SVG_SPREADMETHOD_REFLECT` (2)
+  - : Corresponds to value `reflect`.
+- `SVG_SPREADMETHOD_REPEAT` (3)
+  - : Corresponds to value `repeat`.
+
 ## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
@@ -27,17 +38,6 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
 ## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
-
-## Static properties
-
-- `SVG_SPREADMETHOD_UNKNOWN` (0)
-  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
-- `SVG_SPREADMETHOD_PAD` (1)
-  - : Corresponds to value `pad`.
-- `SVG_SPREADMETHOD_REFLECT` (2)
-  - : Corresponds to value `reflect`.
-- `SVG_SPREADMETHOD_REPEAT` (3)
-  - : Corresponds to value `repeat`.
 
 ## Specifications
 

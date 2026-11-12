@@ -76,7 +76,7 @@ console.log(seq.next()); // { value: undefined, done: true }
 
 ## See also
 
-- [Polyfill of `Iterator.prototype.every` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [Polyfill of `Iterator.prototype.every` in `core-js`](https://core-js.io/docs/features/ecmascript/iterator)
 - [es-shims polyfill of `Iterator.prototype.every`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.find()")}}

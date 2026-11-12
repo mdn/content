@@ -31,11 +31,15 @@ This includes:
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("pageshow", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onpageshow = (event) => { }
 ```
 
@@ -56,6 +60,16 @@ In addition to the `Window` interface, the event handler property `onpageshow` i
 ## Examples
 
 This example sets up event handlers for events listed in the array `events`. The handler, `eventLogger()`, logs the type of event that occurred to the console, and includes the value of the {{domxref("PageTransitionEvent.persisted", "persisted")}} flag on `pageshow` and `pagehide` events.
+
+### HTML
+
+```html
+<p>
+  Open the console and watch the output as you navigate to and from this page.
+  Try loading new pages into this tab, then navigating forward and backward
+  through history, noting the events' output to the log.
+</p>
+```
 
 ### JavaScript
 
@@ -79,17 +93,7 @@ const eventLogger = (event) => {
 events.forEach((eventName) => window.addEventListener(eventName, eventLogger));
 ```
 
-### HTML
-
-```html
-<p>
-  Open the console and watch the output as you navigate to and from this page.
-  Try loading new pages into this tab, then navigating forward and backward
-  through history, noting the events' output to the log.
-</p>
-```
-
-### Results
+### Result
 
 {{EmbedLiveSample("Examples", 640, 250)}}
 

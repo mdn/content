@@ -18,3 +18,4 @@ export const VALID_MIME_TYPES = new Set([
 ]);
 
 export const MAX_COMPRESSION_DIFFERENCE_PERCENTAGE = 25;
+export const JPEG_QUALITY = 75;

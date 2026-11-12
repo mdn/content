@@ -29,20 +29,20 @@ element { style properties }
 
 ## Examples
 
-### CSS
-
-```css
-span {
-  background-color: skyblue;
-}
-```
-
 ### HTML
 
 ```html
 <span>Here's a span with some text.</span>
 <p>Here's a p with some text.</p>
 <span>Here's a span with more text.</span>
+```
+
+### CSS
+
+```css
+span {
+  background-color: skyblue;
+}
 ```
 
 ### Result

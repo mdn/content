@@ -74,7 +74,7 @@ userInput.addEventListener("input", () => {
 });
 ```
 
-{{EmbedLiveSample("input_with_too_long_string_value", "100%", "200")}}
+{{EmbedLiveSample("textarea_with_too_long_character_count", "100%", "200")}}
 
 ## Specifications
 
