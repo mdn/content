@@ -36,9 +36,10 @@ The {{domxref('Sanitizer')}} is essentially a wrapper around a {{domxref('Saniti
 
 ### Using safe methods with a sanitizer
 
-The XSS-safe methods always remove any unsafe HTML elements or attributes (as discussed in [Safe sanitization by default](#safe_sanitization_by_default) above).
+The safe methods always remove any XSS-unsafe HTML elements or attributes (as discussed in [XSS-safe baseline configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) above).
 
-You can pass a sanitizer as the second argument to the safe methods to allow the same or fewer entities than the default configuration.
+You can pass a sanitizer as the second argument to the safe methods to allow the same or fewer entities than the default configuration. This configuration (whether passed as an argument or using the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) if not supplied) is applied on top of the baseline configuration.
+
 For example, if you know that only {{htmlelement("p")}} and {{htmlelement("a")}} elements are expected in the context of `someElement` below, you might create a sanitizer configuration that allows only those elements:
 
 ```js
@@ -117,7 +118,7 @@ const sanitizer = new Sanitizer({
 ```
 
 You can also add the elements to a `Sanitizer` using {{domxref("Sanitizer.allowElement()")}}.
-Here we add the same elements to an empty sanitizer:
+Here we add the same elements to [the default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration):
 
 ```js
 const sanitizer = new Sanitizer({});
