@@ -241,7 +241,7 @@ The `SharedArrayBuffer` (SAB) interface is mostly identical to `ArrayBuffer`. Yo
 const sab = new SharedArrayBuffer(1024);
 ```
 
-You can read and write the memory contents by constructing a [view](/en-US/docs/Web/JavaScript/Guide/Typed_arrays#views), such as a {{jsxref("Int8Array")}}.
+You can read and write the memory contents by constructing a [view](/en-US/docs/Web/JavaScript/Guide/Typed_arrays#views), such as an {{jsxref("Int8Array")}}.
 
 ```js
 const int8 = new Int8Array(sab);

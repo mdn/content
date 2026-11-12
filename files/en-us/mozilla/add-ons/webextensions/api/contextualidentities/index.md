@@ -12,7 +12,7 @@ Work with contextual identities: list, create, remove, and update contextual ide
 
 With the contextual identities feature, each contextual identity has a name, a color, and an icon. New tabs can be assigned to an identity, and the name, icon, and color appears in the address bar. Internally, each identity gets a cookie store that is not shared with other tabs. This cookie store is identified by the `cookieStoreId` in this and other APIs.
 
-![A context menu with "open in new container tab" submenu highlighted. The submenu shows personal, work, banking, and shopping contextual identities.](containers.png)
+![A link context menu with the Open Link in New Container Tab submenu highlighted. The submenu shows personal, work, banking, and shopping contextual identities.](containers.png)
 
 Contextual identities are an experimental feature in Firefox and are only enabled by default in Firefox Nightly. To enable them in other versions of Firefox, set the `privacy.userContext.enabled` preference to `true`. Note that although contextual identities are available in Firefox for Android, there's no UI to work with them in this version of the browser.
 

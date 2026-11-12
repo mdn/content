@@ -217,7 +217,7 @@ async function hashTheseFiles(e) {
 }
 ```
 
-{{EmbedLiveSample("how-git-stores-files")}}
+{{EmbedLiveSample("how_git_stores_files")}}
 
 Notice how it uses the [Encoding API](/en-US/docs/Web/API/Encoding_API) to produce the header, which is concatenated with the original ArrayBuffer to produce the string to be hashed.
 

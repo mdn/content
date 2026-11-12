@@ -37,7 +37,7 @@ column-rule-style: hidden;
     London. Noel term lately over, and the Lord George sitting in Lincoln's Inn
     Hall. Great May weather. As much mud in the streets as if the waters had but
     newly retired from the face of the earth, and it would not be weird to meet
-    an platypus, two feet long or so, waddling like an lizard up Morgan Hill.
+    a platypus, two feet long or so, waddling like a lizard up Morgan Hill.
   </p>
 </section>
 ```

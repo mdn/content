@@ -34,7 +34,7 @@ An `await using` declares an async disposable resource that's tied to the lifeti
 
 When a variable is first declared and its value is non-nullish, a _disposer_ is retrieved from the object. The `[Symbol.asyncDispose]` property is tried first, and falls back to `[Symbol.dispose]` if `[Symbol.asyncDispose]` is `undefined`. If neither property contains a function, a `TypeError` is thrown. Notably, the `[Symbol.dispose]()` method is wrapped into a function that looks like `async () => { object[Symbol.dispose](); }`, which means if it returns a promise, that promise is _not_ awaited. This disposer is saved to the scope.
 
-When the variable goes out of scope, the disposer is called and awaited. If the scope contains multiple {{jsxref("Statements/using", "using")}} or `await using` declarations, all disposers are run in sequence in the reverse order of declaration, regardless of the type of declaration. All disposers are guaranteed to run (much like the `finally` block in {{jsxref("Statements/try...catch", "try...catch...finally")}}). All errors thrown during disposal, including the initial error that caused the scope exit (if applicable), are all aggregated inside one {{jsxref("SuppressedError")}}, with each earlier exception as the `suppressed` property and the later exception as the `error` property. This `SuppressedError` is thrown after disposal is complete.
+When the variable goes out of scope, the disposer is called and awaited. If the scope contains multiple {{jsxref("Statements/using", "using")}} or `await using` declarations, all disposers are run in sequence in the reverse order of declaration, regardless of the type of declaration. All disposers are guaranteed to run (much like the `finally` block in {{jsxref("Statements/try...catch", "try...catch...finally")}}). If multiple errors are thrown, including the initial error that caused the scope exit (if applicable), they are aggregated inside one {{jsxref("SuppressedError")}}, with each earlier exception as the `suppressed` property and the later exception as the `error` property. The `SuppressedError` is thrown after disposal is complete.
 
 The variable is allowed to have value `null` or `undefined`, so the resource can be optionally present. As long as one `await using` variable is declared in this scope, at least one `await` is guaranteed to happen on scope exit, even if the variable actually has value `null` or `undefined`. This prevents the disposal from happening synchronously, causing timing issues (see [control flow effects of `await`](/en-US/docs/Web/JavaScript/Reference/Operators/await#control_flow_effects_of_await)).
 
@@ -78,16 +78,16 @@ for await (await using x of await y) {
 
 First, `await y` does what you expect: we {{jsxref("Operators/await", "await")}} the promise `y`, which is expected to resolve to an object we iterate over. Let us set this variant aside.
 
-The {{jsxref("Statements/for-await...of", "for await...of")}} loop requires the `y` object to be an _async iterable_. This means that the object must have a `[Symbol.asyncIterator]` method that returns an _async iterator_, whose `next()` method returns a promise representing the result. This is for when the iterable doesn't know what the next value is, or even if it's done yet, until some async operation is complete.
+The {{jsxref("Statements/for-await...of", "for await...of")}} loop requires the `y` object to be an _async iterable_. An async iterable has a `[Symbol.asyncIterator]` method that returns an _async iterator_, whose `next()` method returns a promise representing the result. This is for when the iterable doesn't know what the next value is, or even if it's done yet, until some async operation is complete. (If `[Symbol.asyncIterator]` is `null` or `undefined`, the loop uses `[Symbol.iterator]` instead, and wraps each result into a promise.)
 
-On the other hand, the `await using x` syntax requires the `x` object, as yielded from the iterable, to be an _async disposable_. This means that the object must have a `[Symbol.asyncDispose]` method that returns a promise representing the disposal operation. This is a separate concern from the iteration itself, and is only called when the variable `x` goes out of scope.
+On the other hand, the `await using x` syntax requires the `x` object, as yielded from the iterable, to be an _async disposable_. An async disposable has a `[Symbol.asyncDispose]` method that returns a promise representing the disposal operation. (If `[Symbol.asyncDispose]` is `null` or `undefined`, `[Symbol.dispose]` is used instead.) This is a separate concern from the iteration itself, and the disposer is only called when the variable `x` goes out of scope.
 
 In other words, all of the following four combinations are valid and do different things:
 
 - `for (using x of y)`: `y` is synchronously iterated, yielding one result at a time, which can be disposed synchronously.
 - `for await (using x of y)`: `y` is asynchronously iterated, yielding one result at a time after awaiting, but the result value can be disposed synchronously.
-- `for (await using x of y)`: `y` is synchronously iterated, yielding one result at a time, but the result value can only be disposed asynchronously.
-- `for await (await using x of y)`: `y` is asynchronously iterated, yielding one result at a time after awaiting, and the result value can only be disposed asynchronously.
+- `for (await using x of y)`: `y` is synchronously iterated, yielding one result at a time, but disposal of the result value is awaited.
+- `for await (await using x of y)`: `y` is asynchronously iterated, yielding one result at a time after awaiting, and disposal of the result value is awaited.
 
 Below, we create some fictitious values of `y` to demonstrate their use cases. For asynchronous APIs, we base our code on the Node.js [`fs/promises`](https://nodejs.org/api/fs.html#promises-api) module.
 
@@ -118,15 +118,20 @@ for await (using reader of asyncIterableOfSyncDisposables) {
 ```
 
 ```js
+import fs from "node:fs";
+import fsPromises from "node:fs/promises";
+
 const syncIterableOfAsyncDisposables = await Promise.all(
-  fs.globSync("*.txt").map((path) => fs.open(path, "r")),
+  fs.globSync("*.txt").map((path) => fsPromises.open(path, "r")),
 );
 for (await using file of syncIterableOfAsyncDisposables) {
-  console.log(await file.read());
+  console.log(await file.readFile("utf8"));
 }
 ```
 
 ```js
+import fs from "node:fs/promises";
+
 async function* globHandles(pattern) {
   for await (const path of fs.glob(pattern)) {
     yield await fs.open(path, "r");
@@ -134,7 +139,7 @@ async function* globHandles(pattern) {
 }
 const asyncIterableOfAsyncDisposables = globHandles("*.txt");
 for await (await using file of asyncIterableOfAsyncDisposables) {
-  console.log(await file.read());
+  console.log(await file.readFile("utf8"));
 }
 ```
 

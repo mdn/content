@@ -1638,7 +1638,7 @@ But wait a second, are we really done?
 
 ## Making it accessible
 
-We have built something that works, and though we're far from a fully-featured select box, it works nicely. But what we've done is nothing more than fiddle with the DOM. It has no real semantics, and even though it looks like a select box, assistive technologies won't recognise it as one. In short, this pretty new select box isn't accessible!
+We have built something that works, and though we're far from a fully-featured select box, it works nicely. But what we've done is nothing more than fiddle with the DOM. It has no real semantics, and even though it looks like a select box, assistive technologies won't recognize it as one. In short, this pretty new select box isn't accessible!
 
 Fortunately, there is a solution: [ARIA](/en-US/docs/Web/Accessibility/ARIA). ARIA stands for "Accessible Rich Internet Applications", and it's [a W3C specification](https://w3c.github.io/aria/) specifically designed for what we are doing here: making web applications and custom controls accessible. It's a set of attributes that extend HTML to describe roles, states, and properties, allowing us to add missing semantics. Some of these are added in HTML, while others are kept up to date with JavaScript.
 

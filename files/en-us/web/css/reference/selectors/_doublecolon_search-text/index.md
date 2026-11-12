@@ -30,6 +30,21 @@ p::search-text {
 </p>
 ```
 
+## Allowable properties
+
+A limited subset of CSS properties can be used with `::search-text`:
+
+- {{CSSxRef("color")}}
+- {{CSSxRef("background-color")}}
+- The {{CSSxRef("text-decoration")}} shorthand and associated longhand properties:
+  - {{CSSxRef("text-decoration-line")}}: the `grammar-error`, `spelling-error`, `line-through`, `none`, and `underline` values only.
+  - {{CSSxRef("text-decoration-color")}}
+  - {{CSSxRef("text-decoration-style")}}
+  - {{CSSxRef("text-decoration-thickness")}}
+  - {{CSSxRef("text-decoration-skip-ink")}}
+- {{CSSxRef("text-underline-offset")}}
+- {{CSSxRef("text-shadow")}}
+
 ## Syntax
 
 ```css
@@ -62,21 +77,6 @@ p::search-text:current {
 ### Inheritance model
 
 The `::search-text` pseudo-element follows a special inheritance model common to all highlight pseudo-elements, wherein styles are inherited from both their parent elements and the pseudo-elements of their parents. For more details on how this inheritance works, see the [Highlight pseudo-elements inheritance](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#highlight_pseudo-elements_inheritance) section.
-
-### Allowable properties
-
-A limited subset of CSS properties can be used with `::search-text`:
-
-- {{CSSxRef("color")}}
-- {{CSSxRef("background-color")}}
-- The {{CSSxRef("text-decoration")}} shorthand and associated longhand properties:
-  - {{CSSxRef("text-decoration-line")}}: the `grammar-error`, `spelling-error`, `line-through`, `none`, and `underline` values only.
-  - {{CSSxRef("text-decoration-color")}}
-  - {{CSSxRef("text-decoration-style")}}
-  - {{CSSxRef("text-decoration-thickness")}}
-  - {{CSSxRef("text-decoration-skip-ink")}}
-- {{CSSxRef("text-underline-offset")}}
-- {{CSSxRef("text-shadow")}}
 
 ## Accessibility
 
@@ -170,7 +170,7 @@ Finally, we style the currently-focused search result via `::search-text:current
 
 The example renders as follows:
 
-{{EmbedLiveSample("live-sample___custom-search-results", "100%", 300)}}
+{{EmbedLiveSample("custom-search-results", "100%", 300)}}
 
 Try using the browser's find in page interface to find a word that appears multiple times in the example text, such as "aliquam", "amet", or "tortor". Move between the previous and next results to check out the `:current` styling.
 

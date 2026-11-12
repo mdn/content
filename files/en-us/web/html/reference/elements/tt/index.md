@@ -43,15 +43,7 @@ This example uses `<tt>` to show text entered into, and output by, a terminal ap
 
 ### Overriding the default font
 
-You can override the browser's default font—if the browser permits you to do so, which it isn't required to do—using CSS:
-
-#### CSS
-
-```css
-tt {
-  font-family: "Lucida Console", "Menlo", "Monaco", "Courier New", monospace;
-}
-```
+You can override the browser's default font—if the browser permits you to do so, which it isn't required to do—using CSS.
 
 #### HTML
 
@@ -62,6 +54,14 @@ tt {
 
   The telnet client should display: <tt>Local Echo is on</tt>
 </p>
+```
+
+#### CSS
+
+```css
+tt {
+  font-family: "Lucida Console", "Menlo", "Monaco", "Courier New", monospace;
+}
 ```
 
 #### Result

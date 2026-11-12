@@ -334,7 +334,7 @@ Gives you this output:
 
 The [`value`](/en-US/docs/Web/HTML/Reference/Elements/li#value) attribute allows you to set your list items to specific numerical values. The following example:
 
-```html counting-control-values
+```html live-sample___counting-control-values
 <ol>
   <li value="2">Toast pita, leave to cool, then slice down the edge.</li>
   <li value="4">

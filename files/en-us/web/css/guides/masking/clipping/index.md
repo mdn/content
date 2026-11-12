@@ -30,7 +30,7 @@ The `clip-path` property applies clipping. The value it accepts is a vector path
 }
 ```
 
-{{ EmbedLiveSample('clip-path', 230, 230) }}
+{{ EmbedLiveSample('the_clip-path_property', 230, 230) }}
 
 With the `clip-path` property, you can make complex shapes by clipping an element to a `<basic-shape>` or to an [SVG source](#svg_as_source). You can [animate and transition `clip-path` shapes](#animation) if the declared states have the same number of vector points.
 

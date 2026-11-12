@@ -29,6 +29,12 @@ A list (array) of {{domxref("SpeechSynthesisVoice")}} objects.
 
 ## Examples
 
+### HTML
+
+```html
+<select id="voiceSelect"></select>
+```
+
 ### JavaScript
 
 ```js
@@ -60,12 +66,6 @@ if (
 ) {
   speechSynthesis.onvoiceschanged = populateVoiceList;
 }
-```
-
-### HTML
-
-```html
-<select id="voiceSelect"></select>
 ```
 
 {{EmbedLiveSample("Examples", 400, 25)}}

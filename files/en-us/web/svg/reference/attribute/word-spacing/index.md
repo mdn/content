@@ -23,27 +23,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("textPath")}}
 - {{SVGElement("tspan")}}
 
-## Usage notes
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td><code>normal</code> | {{cssxref("length")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Default values</th>
-      <td><code>normal</code></td>
-    </tr>
-  </tbody>
-</table>
-
-For a description of the values, please refer to the [CSS `letter-spacing`](/en-US/docs/Web/CSS/Reference/Properties/letter-spacing#values) property.
-
 ## Examples
 
 This example includes two {{SVGElement("text")}} elements with different `word-spacing` values.
@@ -64,6 +43,27 @@ svg {
 ```
 
 {{EmbedLiveSample("Examples", "250", "100")}}
+
+## Usage notes
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>normal</code> | {{cssxref("length")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Default values</th>
+      <td><code>normal</code></td>
+    </tr>
+  </tbody>
+</table>
+
+For a description of the values, please refer to the [CSS `letter-spacing`](/en-US/docs/Web/CSS/Reference/Properties/letter-spacing#values) property.
 
 ## Specifications
 

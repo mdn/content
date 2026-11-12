@@ -307,7 +307,7 @@ input.addEventListener("input", (event) => {
 
 The output is anchored to the thumb. Change the value and the output will remain above and to the right of the thumb, no matter where it is along the slider.
 
-{{ EmbedLiveSample("A range thumb as anchor", "100%", "225") }}
+{{ EmbedLiveSample("using_a_slider_thumb_as_an_anchor", "100%", "225") }}
 
 > [!NOTE]
 > The anchor positioning CSS for this demo currently doesn't work in Firefox. The slider's thumb can be targeted via the {{cssxref("::-moz-range-thumb")}} pseudo-element in Firefox, but it is currently not available as an anchor (see [Firefox bug 1993699](https://bugzil.la/1993699)).

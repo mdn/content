@@ -130,7 +130,7 @@ p {
 
 #### Result
 
-{{EmbedLiveSample("Comparing_to_the_default_size", "100%", "250")}}
+{{EmbedLiveSample("default_tab_size_vs_custom_sizes", "100%", "250")}}
 
 ## Specifications
 
