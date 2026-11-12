@@ -18,15 +18,19 @@ This is accessed via the {{domxref("WebTransport.datagrams")}} property.
 ## Instance properties
 
 - {{domxref("WebTransportDatagramDuplexStream.incomingHighWaterMark", "incomingHighWaterMark")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Gets or sets the high water mark for incoming chunks of data — this is the maximum size, in chunks, that the incoming {{domxref("ReadableStream")}}'s internal queue can reach before it is considered full. See [Internal queues and queuing strategies](/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies) for more information.
+  - : Represents the maximum number of incoming datagrams that can be queued while waiting to be read from the {{domxref("WebTransportDatagramDuplexStream.readable", "readable")}} stream. Use {{domxref("WebTransportDatagramDuplexStream.incomingMaxBufferedDatagrams", "incomingMaxBufferedDatagrams")}} instead.
 - {{domxref("WebTransportDatagramDuplexStream.incomingMaxAge", "incomingMaxAge")}}
   - : Gets or sets the maximum age for incoming datagrams, in milliseconds. Returns `null` if no maximum age has been set.
+- {{domxref("WebTransportDatagramDuplexStream.incomingMaxBufferedDatagrams", "incomingMaxBufferedDatagrams")}}
+  - : Represents the maximum number of incoming datagrams that can be queued while waiting to be read from the {{domxref("WebTransportDatagramDuplexStream.readable", "readable")}} stream.
 - {{domxref("WebTransportDatagramDuplexStream.maxDatagramSize", "maxDatagramSize")}} {{ReadOnlyInline}}
   - : Returns the maximum allowable size of outgoing datagrams, in bytes, that can be written to a {{domxref("WebTransportDatagramsWritable")}} obtained via {{domxref("WebTransportDatagramDuplexStream.createWritable", "createWritable()")}}, or the deprecated {{domxref("WebTransportDatagramDuplexStream/writable", "writable")}} property.
 - {{domxref("WebTransportDatagramDuplexStream.outgoingHighWaterMark", "outgoingHighWaterMark")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Gets or sets the high water mark for outgoing chunks of data — this is the maximum size, in chunks, that the outgoing {{domxref("WritableStream")}}'s internal queue can reach before it is considered full. See [Internal queues and queuing strategies](/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies) for more information.
+  - : Represents the maximum number of outgoing datagrams that can be queued for sending before backpressure is applied. Use {{domxref("WebTransportDatagramDuplexStream.outgoingMaxBufferedDatagrams", "outgoingMaxBufferedDatagrams")}} instead.
 - {{domxref("WebTransportDatagramDuplexStream.outgoingMaxAge", "outgoingMaxAge")}}
   - : Gets or sets the maximum age for outgoing datagrams, in milliseconds. Returns `null` if no maximum age has been set.
+- {{domxref("WebTransportDatagramDuplexStream.outgoingMaxBufferedDatagrams", "outgoingMaxBufferedDatagrams")}}
+  - : Represents the maximum number of outgoing datagrams that can be queued for sending on each {{domxref("WebTransportDatagramsWritable")}} before backpressure is applied.
 - {{domxref("WebTransportDatagramDuplexStream.readable", "readable")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ReadableStream")}} instance that can be used to read incoming datagrams from the stream.
 - {{domxref("WebTransportDatagramDuplexStream.writable", "writable")}} {{ReadOnlyInline}} {{deprecated_inline}} {{non-standard_inline}}
