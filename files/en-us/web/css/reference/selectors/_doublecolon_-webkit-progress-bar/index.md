@@ -26,6 +26,12 @@ The **`::-webkit-progress-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en
 
 ## Examples
 
+### HTML
+
+```html
+<progress value="10" max="50"></progress>
+```
+
 ### CSS
 
 ```css
@@ -38,17 +44,9 @@ progress {
 }
 ```
 
-### HTML
-
-```html
-<progress value="10" max="50"></progress>
-```
-
 ### Result
 
 {{EmbedLiveSample("Examples", 200, 50)}}
-
-### Result screenshot
 
 The code above results in a progress bar that looks like this when using a WebKit or Blink browser:
 

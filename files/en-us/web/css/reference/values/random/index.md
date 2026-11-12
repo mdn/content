@@ -283,7 +283,7 @@ We render the five badges as circles. We use the `random()` function within an {
 
 #### Result
 
-{{EmbedLiveSample('Generate random colors for circular badge', '100%', '300px')}}
+{{EmbedLiveSample('basic_usage', '100%', '300px')}}
 
 ### Random value sharing between properties
 

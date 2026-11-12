@@ -144,6 +144,14 @@ Click the button in this example to increment the {{HTMLElement("input/number", 
 <input type="button" value="Increment" id="theButton" />
 ```
 
+### CSS
+
+```css
+input:invalid {
+  border: red solid 3px;
+}
+```
+
 ### JavaScript
 
 ```js
@@ -164,14 +172,6 @@ function stepOnUp() {
     /* or without a parameter. Try it with 0 */
     input.stepUp();
   }
-}
-```
-
-### CSS
-
-```css
-input:invalid {
-  border: red solid 3px;
 }
 ```
 

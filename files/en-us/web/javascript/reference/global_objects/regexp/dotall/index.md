@@ -91,7 +91,7 @@ console.log(str2.replace(regex2, ""));
 
 ## See also
 
-- [Polyfill of the `dotAll` flag in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of the `dotAll` flag in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - {{jsxref("RegExp.prototype.lastIndex")}}
 - {{jsxref("RegExp.prototype.global")}}
 - {{jsxref("RegExp.prototype.hasIndices")}}

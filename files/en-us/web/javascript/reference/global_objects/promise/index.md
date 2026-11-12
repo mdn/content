@@ -540,7 +540,7 @@ In the above example, the inner text of the `<iframe>` will be updated only if t
 
 ## See also
 
-- [Polyfill of `Promise` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [Polyfill of `Promise` in `core-js`](https://core-js.io/docs/features/ecmascript/promise)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
 - [Promises/A+ specification](https://promisesaplus.com/)
 - [JavaScript Promises: an introduction](https://web.dev/articles/promises) on web.dev (2013)

@@ -18,28 +18,6 @@ The `intercept` attribute is supported by children of the {{SVGElement("feCompon
 - {{SVGElement("feFuncG")}}
 - {{SVGElement("feFuncR")}}
 
-## Usage notes
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>{{cssxref("number")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-- `<number>`
-  - : This value indicates the intercept of the linear component transfer functions.
-
 ## Example
 
 ```css hidden
@@ -99,6 +77,28 @@ svg {
 ```
 
 {{EmbedLiveSample("Example", "480", "200")}}
+
+## Usage notes
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>{{cssxref("number")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+- `<number>`
+  - : This value indicates the intercept of the linear component transfer functions.
 
 ## Specifications
 

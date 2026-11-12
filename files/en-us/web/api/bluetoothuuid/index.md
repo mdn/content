@@ -10,13 +10,6 @@ browser-compat: api.BluetoothUUID
 The **`BluetoothUUID`** interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) provides a way to look up Universally Unique Identifier (UUID) values by name in the
 [registry](https://www.bluetooth.com/specifications/assigned-numbers/) maintained by the Bluetooth SIG.
 
-## Description
-
-A UUID string is a 128-bit UUID, for example `00001818-0000-1000-8000-00805f9b34fb`.
-The Bluetooth registry contains lists of descriptors, services, and characteristics identified by these UUIDs in addition to a 16- or 32- bit alias, and a name.
-
-The `BluetoothUUID` interface provides methods to retrieve these 128-bit UUIDs.
-
 ## Static methods
 
 - [`BluetoothUUID.canonicalUUID()`](/en-US/docs/Web/API/BluetoothUUID/canonicalUUID_static) {{Experimental_Inline}}
@@ -27,6 +20,13 @@ The `BluetoothUUID` interface provides methods to retrieve these 128-bit UUIDs.
   - : Returns a UUID representing a registered descriptor when passed a name or the 16- or 32-bit UUID alias.
 - [`BluetoothUUID.getService()`](/en-US/docs/Web/API/BluetoothUUID/getService_static) {{Experimental_Inline}}
   - : Returns a UUID representing a registered service when passed a name or the 16- or 32-bit UUID alias.
+
+## Description
+
+A UUID string is a 128-bit UUID, for example `00001818-0000-1000-8000-00805f9b34fb`.
+The Bluetooth registry contains lists of descriptors, services, and characteristics identified by these UUIDs in addition to a 16- or 32- bit alias, and a name.
+
+The `BluetoothUUID` interface provides methods to retrieve these 128-bit UUIDs.
 
 ## Examples
 

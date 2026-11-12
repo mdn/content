@@ -12,21 +12,20 @@ To use this API you need to have the "pkcs11" [permission](/en-US/docs/Mozilla/A
 
 ## Using the Firefox Preferences Dialog to Install PKCS #11 Modules
 
-Perform the following steps:
+Perform these steps:
 
-1. Save the PKCS #11 module to a permanent location on your local computer
-2. Select **Tools > Options** or select the **Firefox menu** and then **Options**
-3. Once the Options page opens, select **Privacy & Security**
-4. Scroll down to the bottom of the page and under **Certificates** click or tap on **Security Devices…**
-   ![Security modules and devices](device_manager.png)
-5. Click or tap the **Load** button
-   ![Load PKCS#11 device driver](load_device_driver.png)
+1. Save the PKCS #11 module to a permanent location on your local computer.
+2. Open Firefox Settings.
+3. In the Settings page, select **Privacy & Security** and under Connection and software security click **Advanced settings**.
+4. Locate the Certificates section and click **Manage security devices**.
+   ![The Device Manager dialog listing security modules and devices](device_manager.png)
+
+5. Click **Load**.
+   ![The Load PKCS#11 Device Driver dialog](load_device_driver.png)
+
 6. Enter a name for the security module, such as "_My Client Database_"
 
-   > [!WARNING]
-   > Be careful about using international characters as there is currently a bug in Firefox where international characters may cause problems.
-
-7. Choose **Browse…** to find the location of the PKCS #11 module on your local computer, and then click or tap **OK** to confirm.
+7. Click **Browse…** to find the location of the PKCS #11 module on your local computer, and then click **OK** to confirm.
 
 ## Provisioning PKCS #11 modules
 

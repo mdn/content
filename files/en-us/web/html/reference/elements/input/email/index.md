@@ -305,6 +305,12 @@ label::after {
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 {{EmbedLiveSample("Pattern_validation", 700, 300)}}
 
 Our {{HTMLElement("form")}} contains one {{HTMLElement("input")}} of type `email` for the user's email address, a {{HTMLElement("textarea")}} to enter their message for IT into, and an `<input>` of type [`"submit"`](/en-US/docs/Web/HTML/Reference/Elements/input/submit), which creates a button to submit the form. Each text entry box has a {{HTMLElement("label")}} associated with it to let the user know what's expected of them.

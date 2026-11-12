@@ -12,6 +12,10 @@ The **`GamepadButton.pressed`** property of the
 {{domxref("GamepadButton")}} interface returns a `boolean` indicating whether
 the button is currently pressed (`true`) or unpressed (`false`).
 
+## Value
+
+A boolean value.
+
 ## Examples
 
 ```js
@@ -21,10 +25,6 @@ if (gp.buttons[0].pressed) {
   // respond to button being pressed
 }
 ```
-
-## Value
-
-A boolean value.
 
 ## Specifications
 

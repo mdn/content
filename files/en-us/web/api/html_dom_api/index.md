@@ -293,7 +293,24 @@ The {{domxref("EventSource")}} interface represents the source which sent or is 
 
 ## Examples
 
-In this example, an {{HTMLElement("input")}} element's {{domxref("Element/input_event", "input")}} event is monitored in order to update the state of a form's "submit" button based on whether or not a given field currently has a value.
+In this example, an {{HTMLElement("input")}} element's {{domxref("Element/input_event", "input")}} event is monitored in order to update the state of a "Send" button based on whether or not a given field currently has a value.
+
+### HTML
+
+The HTML looks like this:
+
+```html
+<p>Please provide the information below. Items marked with "*" are required.</p>
+<p>
+  <label for="userName" required>Your name:</label>
+  <input type="text" id="userName" /> (*)
+</p>
+<p>
+  <label for="userEmail">Email:</label>
+  <input type="email" id="userEmail" />
+</p>
+<input type="button" value="Send" id="sendButton" />
+```
 
 ### JavaScript
 
@@ -324,25 +341,6 @@ The {{domxref("HTMLInputElement")}} object for the "Send" button's {{domxref("HT
 Then {{domxref("EventTarget.addEventListener", "addEventListener()")}} is called to add a handler for the `input` event to the user name input. This code looks at the length of the current value of the input; if it's zero, then the "Send" button is disabled if it's not already disabled. Otherwise, the code ensures that the button is enabled.
 
 With this in place, the "Send" button is always enabled whenever the user name input field has a value, and disabled when it's empty.
-
-### HTML
-
-The HTML for the form looks like this:
-
-```html
-<p>Please provide the information below. Items marked with "*" are required.</p>
-<form action="" method="get">
-  <p>
-    <label for="userName" required>Your name:</label>
-    <input type="text" id="userName" /> (*)
-  </p>
-  <p>
-    <label for="userEmail">Email:</label>
-    <input type="email" id="userEmail" />
-  </p>
-  <input type="submit" value="Send" id="sendButton" />
-</form>
-```
 
 ### Result
 

@@ -36,6 +36,11 @@ A client can block requests with intercepts, which it adds with the [`network.ad
 When a request matches an intercept, the event for the phase that the intercept covers, such as `network.beforeRequestSent` or `network.responseStarted`, has `isBlocked` set to `true` and lists the matching intercepts in its `intercepts` field.
 The browser then waits until the client lets the request continue, for example with the [`network.continueRequest`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueRequest) command.
 
+## Commands
+
+- [`network.setCacheBehavior`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/setCacheBehavior)
+- [`network.setExtraHeaders`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/setExtraHeaders)
+
 ## Events
 
 - [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent)

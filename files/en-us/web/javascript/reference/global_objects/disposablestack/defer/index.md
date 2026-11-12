@@ -74,6 +74,7 @@ async function requestWithLock(url, options) {
 
 ## See also
 
+- [Polyfill of `DisposableStack.prototype.defer` in `core-js`](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
 - {{jsxref("DisposableStack")}}
 - {{jsxref("DisposableStack.prototype.adopt()")}}

@@ -13,6 +13,16 @@ The **`integrity`** attribute provides a mechanism for a developer to assert tha
 
 This is a defense against a [supply-chain attack](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks) in which an attacker gets access to the domain that serves the script or stylesheet, and changes the expected resource for a malicious one.
 
+## Values
+
+The value of this attribute consists of a whitespace-separated list of components, each of which has one of the following forms:
+
+- `sha256-HASH_VALUE`
+- `sha384-HASH_VALUE`
+- `sha512-HASH_VALUE`
+
+In each case, the part preceding `-` identifies the {{glossary("hash function")}} used, and `HASH_VALUE` is the {{glossary("base64")}} encoding of the result of hashing the resource using the specified hash function.
+
 ## Description
 
 The attribute can be applied to {{htmlelement("script")}} or {{htmlelement("link")}} elements only.
@@ -27,16 +37,6 @@ When the browser downloads a resource with the `integrity` attribute set, it wil
 The browser will then calculate the hash of the resource contents using the specified function, and compare the result with all the specified values: if the actual value matches any of the specified values, then the browser will load the resource, otherwise it will refuse to load the resource.
 
 For more details, see our guide to [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity).
-
-## Values
-
-The value of this attribute consists of a whitespace-separated list of components, each of which has one of the following forms:
-
-- `sha256-HASH_VALUE`
-- `sha384-HASH_VALUE`
-- `sha512-HASH_VALUE`
-
-In each case, the part preceding `-` identifies the {{glossary("hash function")}} used, and `HASH_VALUE` is the {{glossary("base64")}} encoding of the result of hashing the resource using the specified hash function.
 
 ## Examples
 

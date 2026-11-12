@@ -85,6 +85,7 @@ doSomething();
 
 ## See also
 
+- [Polyfill of `AsyncDisposableStack.prototype.disposeAsync` in `core-js`](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
 - {{jsxref("AsyncDisposableStack")}}
 - {{jsxref("AsyncDisposableStack.prototype.adopt()")}}

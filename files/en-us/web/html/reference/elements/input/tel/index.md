@@ -235,6 +235,12 @@ You can make it so that an empty input is invalid and won't be submitted to the 
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 And let's include the following CSS to highlight valid entries with a checkmark and invalid entries with a cross:
 
 ```css
@@ -296,6 +302,12 @@ In this example we'll use the same CSS as before, but our HTML is changed to loo
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```css hidden
 div {
   margin-bottom: 10px;
@@ -336,55 +348,50 @@ In this example, we present a {{htmlelement("select")}} element that lets the us
 Each input has a [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder) attribute to show a hint to sighted users about what to enter into it, a [`pattern`](/en-US/docs/Web/HTML/Reference/Elements/input#pattern) to enforce a specific number of characters for the desired section, and an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute to contain a hint to be read out to screen reader users about what to enter into it.
 
 ```html
-<form>
-  <div>
-    <label for="country">Choose your country:</label>
-    <select id="country" name="country">
-      <option>UK</option>
-      <option selected>US</option>
-      <option>Germany</option>
-    </select>
-  </div>
-  <div>
-    <p>Enter your telephone number:</p>
-    <span class="areaDiv">
-      <input
-        id="areaNo"
-        name="areaNo"
-        type="tel"
-        required
-        placeholder="Area code"
-        pattern="[0-9]{3}"
-        aria-label="Area code" />
-      <span class="validity"></span>
-    </span>
-    <span class="number1Div">
-      <input
-        id="number1"
-        name="number1"
-        type="tel"
-        required
-        placeholder="First part"
-        pattern="[0-9]{3}"
-        aria-label="First part of number" />
-      <span class="validity"></span>
-    </span>
-    <span class="number2Div">
-      <input
-        id="number2"
-        name="number2"
-        type="tel"
-        required
-        placeholder="Second part"
-        pattern="[0-9]{4}"
-        aria-label="Second part of number" />
-      <span class="validity"></span>
-    </span>
-  </div>
-  <div>
-    <button>Submit</button>
-  </div>
-</form>
+<div>
+  <label for="country">Choose your country:</label>
+  <select id="country" name="country">
+    <option>UK</option>
+    <option selected>US</option>
+    <option>Germany</option>
+  </select>
+</div>
+<div>
+  <p>Enter your telephone number:</p>
+  <span class="areaDiv">
+    <input
+      id="areaNo"
+      name="areaNo"
+      type="tel"
+      required
+      placeholder="Area code"
+      pattern="[0-9]{3}"
+      aria-label="Area code" />
+    <span class="validity"></span>
+  </span>
+  <span class="number1Div">
+    <input
+      id="number1"
+      name="number1"
+      type="tel"
+      required
+      placeholder="First part"
+      pattern="[0-9]{3}"
+      aria-label="First part of number" />
+    <span class="validity"></span>
+  </span>
+  <span class="number2Div">
+    <input
+      id="number2"
+      name="number2"
+      type="tel"
+      required
+      placeholder="Second part"
+      pattern="[0-9]{4}"
+      aria-label="Second part of number" />
+    <span class="validity"></span>
+  </span>
+</div>
 ```
 
 The JavaScript contains an {{domxref("HTMLElement.change_event", "onchange")}} event handler that, when the `<select>` value is changed, updates the `<input>` element's `pattern`, `placeholder`, and `aria-label` to suit the format of telephone numbers in that country/territory.

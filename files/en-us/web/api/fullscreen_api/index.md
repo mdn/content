@@ -2,16 +2,13 @@
 title: Fullscreen API
 slug: Web/API/Fullscreen_API
 page-type: web-api-overview
-browser-compat:
-  - api.Document.fullscreenElement
-  - api.Document.fullscreenEnabled
-  - api.Document.exitFullscreen
-  - api.Element.requestFullscreen
+browser-compat: api.Element.requestFullscreen
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}
 
-The **Fullscreen API** adds methods to present a specific {{DOMxRef("Element")}} (and its descendants) in fullscreen mode, and to exit fullscreen mode once it is no longer needed. This makes it possible to present desired content—such as an online game—using the user's entire screen, removing all browser user interface elements and other applications from the screen until fullscreen mode is shut off.
+The **Fullscreen API** adds methods to present a specific {{DOMxRef("Element")}} (and its descendants) in fullscreen mode, and to exit fullscreen mode once it is no longer needed.
+This makes it possible to present desired content—such as an online game—using the user's entire screen, removing all browser user interface elements and other applications from the screen until fullscreen mode is shut off.
 
 See the article [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide) for details on how to use the API.
 
@@ -36,9 +33,11 @@ The Fullscreen API adds methods to the {{DOMxRef("Document")}} and {{DOMxRef("El
 ## Instance properties
 
 - {{DOMxRef("Document.fullscreenElement")}} / {{DOMxRef("ShadowRoot.fullscreenElement")}}
-  - : The `fullscreenElement` property tells you the {{DOMxRef("Element")}} that's currently being displayed in fullscreen mode on the DOM (or shadow DOM). If this is `null`, the document (or shadow DOM) is not in fullscreen mode.
+  - : The `fullscreenElement` property tells you the {{DOMxRef("Element")}} that's currently being displayed in fullscreen mode on the DOM (or shadow DOM).
+    If this is `null`, the document (or shadow DOM) is not in fullscreen mode.
 - {{DOMxRef("Document.fullscreenEnabled")}}
-  - : The `fullscreenEnabled` property tells you whether or not it is possible to engage fullscreen mode. This is `false` if fullscreen mode is not available for any reason (such as the `"fullscreen"` feature not being allowed, or fullscreen mode not being supported).
+  - : The `fullscreenEnabled` property tells you whether or not it is possible to engage fullscreen mode.
+    This is `false` if fullscreen mode is not available for any reason (such as the `"fullscreen"` feature not being allowed, or fullscreen mode not being supported).
 
 ### Obsolete properties
 
@@ -55,16 +54,27 @@ The Fullscreen API adds methods to the {{DOMxRef("Document")}} and {{DOMxRef("El
 - {{domxref("Element/fullscreenerror_event", "fullscreenerror")}}
   - : Sent to an `Element` if an error occurs while attempting to switch it into or out of fullscreen mode.
 
-## Controlling access
+## Security considerations
 
-The availability of fullscreen mode can be controlled using a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy). The fullscreen mode feature is identified by the string `"fullscreen"`, with a default allowlist value of `"self"`, meaning that fullscreen mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.
+[Transient user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required to enter fullscreen mode (the user has to interact with the page or a UI element in order for this feature to work).
 
-## Usage notes
+Fullscreen mode is controlled by the [Permissions-Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) directive {{HTTPHeader("Permissions-Policy/fullscreen","fullscreen")}}.
 
-Users can choose to exit fullscreen mode by pressing the <kbd>ESC</kbd> (or <kbd>F11</kbd>) key, rather than waiting for the site or app to programmatically do so. Make sure you provide, somewhere in your user interface, appropriate user interface elements that inform the user that this option is available to them.
+The default allowlist for `fullscreen` is `self`.
+This allows fullscreen usage in same-origin nested frames but prevents it in third-party content.
+Third-party usage can be enabled by the server first setting the `Permissions-Policy` header to grant permission to a particular third-party origin.
 
-> [!NOTE]
-> Navigating to another page, changing tabs, or switching to another application using any application switcher (or <kbd>Alt</kbd>-<kbd>Tab</kbd>) will likewise exit fullscreen mode.
+```http
+Permissions-Policy: fullscreen=(self "https://b.example.com")
+```
+
+Then the `allow="fullscreen"` attribute must be added to the frame container element for sources from that origin:
+
+```html
+<iframe src="https://b.example.com" allow="fullscreen"></iframe>
+```
+
+The [Permissions API](/en-US/docs/Web/API/Permissions_API) `fullscreen` permission can be used to test whether access to use the mode is `granted`, `denied` or `prompt` (requires user acknowledgement of a prompt).
 
 ## Examples
 
