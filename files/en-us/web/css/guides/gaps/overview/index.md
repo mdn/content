@@ -135,7 +135,7 @@ Expanding on the first example, we split the row rules into separate segments at
 ```css hidden live-sample___breaking
 @supports not (rule-break: intersection) {
   body::before {
-    content: "Your browser doesn't support the row-break properties ";
+    content: "Your browser doesn't support the rule-break properties ";
   }
 }
 ```
