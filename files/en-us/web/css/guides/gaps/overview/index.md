@@ -133,9 +133,9 @@ Expanding on the first example, we split the row rules into separate segments at
 ```
 
 ```css hidden live-sample___breaking
-@supports not (row-rule: solid thin darkviolet) {
+@supports not (rule-break: intersection) {
   body::before {
-    content: "Your browser doesn't support the row-rule property ";
+    content: "Your browser doesn't support the row-break properties ";
   }
 }
 ```
@@ -170,7 +170,7 @@ In this example, the column rules are continuous but shortened on at both the to
   row-rule-style: solid;
 }
 
-@supports not (rule-break: intersection) {
+@supports not (row-rule-inset-cap: -20p) {
   body::before {
     content: "Your browser doesn't support all the gap decoration properties.";
   }
