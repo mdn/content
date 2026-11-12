@@ -170,7 +170,7 @@ In this example, the column rules are continuous but shortened on at both the to
   row-rule-style: solid;
 }
 
-@supports not (row-rule-inset-cap: -20p) {
+@supports not (row-rule-inset-cap: -20px) {
   body::before {
     content: "Your browser doesn't support all the gap decoration properties.";
   }
