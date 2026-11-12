@@ -74,6 +74,9 @@ new URL("/en-US/docs", a);
 
 new URL("/en-US/docs", "https://developer.mozilla.org/fr-FR/toto");
 // => 'https://developer.mozilla.org/en-US/docs'
+
+new URL("https://example.com", "https://beispiel.de");
+// => 'https://example.com/'
 ```
 
 Here are some examples of invalid URLs:
@@ -101,9 +104,6 @@ new URL("/a", "https://example.com/?query=1");
 
 new URL("//foo.example", "https://example.com");
 // => 'https://foo.example/' (see relative URLs)
-
-new URL("https://example.com", "https://beispiel.de");
-// => 'https://example.com/' (ignores base)
 ```
 
 ## Specifications
