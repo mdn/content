@@ -190,7 +190,7 @@ We include five items in a container element:
 
 #### CSS
 
-We set the {{cssxref("display")}} property to `grid`, the {{cssxref("height")}} to `240px`, the {{cssxref("width")}} to `350px` and {{cssxref("grid-template-rows")}} to `repeat(3, 1fr)` to create a 350px-wide grid container with three columns and as many rows as needed. Each row is `100px` tall, as defined by the {{cssxref("grid-template-rows")}} property.
+We set the {{cssxref("display")}} property to `grid`, the {{cssxref("height")}} to `240px`, the {{cssxref("width")}} to `350px` and {{cssxref("grid-template-rows")}} to `repeat(3, 1fr)` to create a 350px-wide grid container with two columns and three rows. Each row is equally tall, as defined by the {{cssxref("grid-template-rows")}} property.
 
 The `row-gap` is set to `5%`. The container height is `240px`. The `5%` value creates a row gap that is `12px` tall, leaving `216px` for three rows of grid items, meaning each row is `72px` tall.
 
