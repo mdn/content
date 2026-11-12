@@ -87,6 +87,25 @@ Include a complete description of the attribute or role.
 > [!NOTE]
 > Include a note about semantic alternatives to using this role or attribute. The first rule of ARIA use is that you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state, or property to make it accessible, then do so. Then post full details in best practices section below.
 
+## Precedence order
+
+What are the related properties, and in what order will this attribute or property be read (which property will take precedence over this one, and which property will be overwritten.)
+
+## Accessibility concerns
+
+Optionally, warn of any potential accessibility concerns that exist with using this property, and how to work around them. Remove this section if there are none to list.
+
+## Best practices
+
+Optionally, list any best practices that exist for this role. Remove the section if none exist.
+
+### Added benefits
+
+- Associated role
+  - : If that role is a required parent, child or sibling, and what it does.
+
+Any additional benefits this feature has for non-typical screen reader users, like Google or mobile speech recognition.
+
 ## Examples
 
 Note that we use the plural "Examples" even if the page only contains one example.
@@ -126,30 +145,11 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > For examples of this API, see [the page on fetch()](https://example.org/).
 > ```
 
-## Accessibility concerns
-
-Optionally, warn of any potential accessibility concerns that exist with using this property, and how to work around them. Remove this section if there are none to list.
-
-## Best practices
-
-Optionally, list any best practices that exist for this role. Remove the section if none exist.
-
-### Added benefits
-
-- Associated role
-  - : If that role is a required parent, child or sibling, and what it does.
-
-Any additional benefits this feature has for non-typical screen reader users, like Google or mobile speech recognition.
-
 ## Specifications
 
 `\{{Specifications}}`
 
 _Remember to remove the backticks and backslash to use this macro._
-
-## Precedence order
-
-What are the related properties, and in what order will this attribute or property be read (which property will take precedence over this one, and which property will be overwritten.)
 
 ## Screen reader support
 
