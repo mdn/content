@@ -126,16 +126,9 @@ The `result` field in the response is an empty object (`{}`).
 
 ## Description
 
-The browser adds the headers to all requests from the specified contexts or user contexts, or to all requests if neither `contexts` nor `userContexts` is specified.
+When you send the `network.setExtraHeaders` command, the browser adds the specified headers to all requests from the selected contexts or user contexts, or from all contexts if neither `contexts` nor `userContexts` is specified.
 These include navigation requests and requests made by scripts, such as with {{domxref("Window/fetch", "fetch()")}}.
 The headers are added before the browser emits the [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) event, so the `headers` array in the event's `request` object already includes them.
-
-A header you specify replaces any existing header with the same name that the browser would otherwise send.
-The browser doesn't add to the existing value.
-For example, specifying {{HTTPHeader("Accept-Language")}} with the value `de-DE` replaces the browser's existing value, such as `en-US,en;q=0.9`.
-
-The browser combines the headers you specify for all contexts, for a user context, and for a top-level context within the same session.
-If you set the same header for more than one of these, the most specific value is sent: a value set for the top-level context wins over a value set for the user context, which wins over a value set for all contexts.
 
 Each call to `network.setExtraHeaders` replaces the previously set headers only for the specified contexts or user contexts, or for all contexts if neither parameter is specified.
 For example, changing the headers for one tab doesn't remove the headers set for its user context.
@@ -143,6 +136,13 @@ For example, changing the headers for one tab doesn't remove the headers set for
 Headers set for all contexts or for a user context also apply to contexts created after the command is processed.
 Headers set for a top-level context also apply to child contexts created within it later.
 The headers stay in effect until you replace them with another `network.setExtraHeaders` command or until the session ends.
+
+A header you specify replaces any existing header with the same name that the browser would otherwise send.
+The browser doesn't add to the existing value.
+For example, specifying {{HTTPHeader("Accept-Language")}} with the value `de-DE` replaces the browser's existing value, such as `en-US,en;q=0.9`.
+
+The browser combines the headers you specify for all contexts, for a user context, and for a top-level context within the same session.
+If you set the same header for more than one of these, the most specific value is sent: a value set for the top-level context wins over a value set for the user context, which wins over a value set for all contexts.
 
 ## Examples
 

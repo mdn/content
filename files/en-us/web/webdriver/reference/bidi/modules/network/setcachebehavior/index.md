@@ -67,7 +67,7 @@ The `result` field in the response is an empty object (`{}`).
 
 A cache behavior you set for specific contexts takes precedence over the cache behavior you set for all contexts.
 For example, you can bypass the cache for all contexts and then set `default` for one tab so that only that tab uses the cache.
-A command sent without `contexts` replaces every cache behavior set for specific contexts.
+A command sent without `contexts` clears the per-context settings and applies the specified cache behavior to all contexts.
 
 A cache behavior set for all contexts also applies to contexts created after the command is processed, and one set for a top-level context also applies to child contexts created within it later.
 The cache behavior is shared by all sessions and stays in effect until changed by another `network.setCacheBehavior` command or until the last active session ends.
