@@ -45,17 +45,6 @@ This property is specified as one of the following keyword values:
 
 ### Changing the style of a formula to compact
 
-#### CSS
-
-```css
-math {
-  math-style: normal;
-}
-.compact {
-  math-style: compact;
-}
-```
-
 #### HTML
 
 ```html
@@ -96,6 +85,17 @@ math {
   </math>
   equations.
 </p>
+```
+
+#### CSS
+
+```css
+math {
+  math-style: normal;
+}
+.compact {
+  math-style: compact;
+}
 ```
 
 #### Result

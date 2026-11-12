@@ -117,19 +117,6 @@ No namespaces are explicitly declared in the HTML or within the SVG.
 </svg>
 ```
 
-#### JavaScript
-
-With JavaScript, with {{DOMXRef("document.createElementNS")}}, we create an anchor link without a namespace, then append the link.
-
-```js
-// create 'no namespace' anchor
-const a = document.createElementNS("", "a");
-a.href = "#";
-a.appendChild(document.createTextNode("Link created without a namespace"));
-
-document.body.appendChild(a);
-```
-
 #### CSS
 
 We declare a namespace with {{cssxref("@namespace")}}. By omitting the name for the namespace, the `@namespace` declaration creates a default namespace.
@@ -161,6 +148,19 @@ p {
   color: magenta;
   fill: magenta;
 }
+```
+
+#### JavaScript
+
+With JavaScript, with {{DOMXRef("document.createElementNS")}}, we create an anchor link without a namespace, then append the link.
+
+```js
+// create 'no namespace' anchor
+const a = document.createElementNS("", "a");
+a.href = "#";
+a.appendChild(document.createTextNode("Link created without a namespace"));
+
+document.body.appendChild(a);
 ```
 
 #### Result

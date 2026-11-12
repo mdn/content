@@ -50,39 +50,6 @@ Authors should avoid styling scrollbars, as changing the appearance of scrollbar
 
 ### Styling scrollbars using `-webkit-scrollbar`
 
-#### CSS
-
-```css
-.visible-scrollbar,
-.invisible-scrollbar,
-.mostly-customized-scrollbar {
-  display: block;
-  width: 10em;
-  overflow: auto;
-  height: 2em;
-  padding: 1em;
-  margin: 1em auto;
-  outline: 2px dashed cornflowerblue;
-}
-
-.invisible-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-/* Demonstrate a "mostly customized" scrollbar
- * (won't be visible otherwise if width/height is specified) */
-.mostly-customized-scrollbar::-webkit-scrollbar {
-  width: 5px;
-  height: 8px;
-  background-color: #aaaaaa; /* or add it to the track */
-}
-
-/* Add a thumb */
-.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
-  background: black;
-}
-```
-
 #### HTML
 
 ```html
@@ -118,6 +85,39 @@ Authors should avoid styling scrollbars, as changing the appearance of scrollbar
     Who thought scrollbars could be made weird?
   </p>
 </div>
+```
+
+#### CSS
+
+```css
+.visible-scrollbar,
+.invisible-scrollbar,
+.mostly-customized-scrollbar {
+  display: block;
+  width: 10em;
+  overflow: auto;
+  height: 2em;
+  padding: 1em;
+  margin: 1em auto;
+  outline: 2px dashed cornflowerblue;
+}
+
+.invisible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Demonstrate a "mostly customized" scrollbar
+ * (won't be visible otherwise if width/height is specified) */
+.mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaaaaa; /* or add it to the track */
+}
+
+/* Add a thumb */
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+  background: black;
+}
 ```
 
 #### Result

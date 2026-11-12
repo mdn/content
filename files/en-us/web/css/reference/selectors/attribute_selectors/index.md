@@ -75,6 +75,18 @@ If the attribute value is case-sensitive, like [`class`](/en-US/docs/Web/HTML/Re
 
 ### Links
 
+#### HTML
+
+```html
+<ul>
+  <li><a href="#internal">Internal link</a></li>
+  <li><a href="http://example.com">Example link</a></li>
+  <li><a href="#InSensitive">Insensitive internal link</a></li>
+  <li><a href="http://example.org">Example org link</a></li>
+  <li><a href="https://example.org">Example https org link</a></li>
+</ul>
+```
+
 #### CSS
 
 ```css
@@ -115,23 +127,21 @@ a[href^="https://"][href$=".org"] {
 }
 ```
 
-#### HTML
-
-```html
-<ul>
-  <li><a href="#internal">Internal link</a></li>
-  <li><a href="http://example.com">Example link</a></li>
-  <li><a href="#InSensitive">Insensitive internal link</a></li>
-  <li><a href="http://example.org">Example org link</a></li>
-  <li><a href="https://example.org">Example https org link</a></li>
-</ul>
-```
-
 #### Result
 
 {{EmbedLiveSample("Links")}}
 
 ### Languages
+
+#### HTML
+
+```html
+<div lang="en-us en-gb en-au en-nz">Hello World!</div>
+<div lang="pt">Olá Mundo!</div>
+<div lang="zh-Hans-CN">世界您好！</div>
+<div lang="zh-Hant-TW">世界您好！</div>
+<div data-lang="zh-Hant-TW">世界您好！</div>
+```
 
 #### CSS
 
@@ -171,16 +181,6 @@ div[data-lang="zh-Hant-TW"] {
 }
 ```
 
-#### HTML
-
-```html
-<div lang="en-us en-gb en-au en-nz">Hello World!</div>
-<div lang="pt">Olá Mundo!</div>
-<div lang="zh-Hans-CN">世界您好！</div>
-<div lang="zh-Hant-TW">世界您好！</div>
-<div data-lang="zh-Hant-TW">世界您好！</div>
-```
-
 #### Result
 
 {{EmbedLiveSample("Languages")}}
@@ -189,6 +189,27 @@ div[data-lang="zh-Hant-TW"] {
 
 The HTML specification requires the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute to be matched case-insensitively because it is primarily used in the {{HTMLElement("input")}} element.
 Note that if a modifier is not supported by the user agent, then the selector will not match.
+
+#### HTML
+
+```html
+<ol type="A">
+  <li>
+    Red background for case-insensitive matching (default for the type selector)
+  </li>
+</ol>
+<ol type="i">
+  <li>Lime background if `s` modifier is supported (case-sensitive match)</li>
+</ol>
+<ol type="I">
+  <li>Grey background if `s` modifier is supported (case-sensitive match)</li>
+</ol>
+<ol type="A">
+  <li>
+    Green background if `i` modifier is supported (case-insensitive match)
+  </li>
+</ol>
+```
 
 #### CSS
 
@@ -213,27 +234,6 @@ ol[type="a" i] {
   list-style-type: upper-alpha;
   background: green;
 }
-```
-
-#### HTML
-
-```html
-<ol type="A">
-  <li>
-    Red background for case-insensitive matching (default for the type selector)
-  </li>
-</ol>
-<ol type="i">
-  <li>Lime background if `s` modifier is supported (case-sensitive match)</li>
-</ol>
-<ol type="I">
-  <li>Grey background if `s` modifier is supported (case-sensitive match)</li>
-</ol>
-<ol type="A">
-  <li>
-    Green background if `i` modifier is supported (case-insensitive match)
-  </li>
-</ol>
 ```
 
 #### Result

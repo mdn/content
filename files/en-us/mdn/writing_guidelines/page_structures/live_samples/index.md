@@ -405,6 +405,16 @@ Create a {{HTMLElement("pre")}} element with an `id` of `"log"` for displaying t
 <pre id="log"></pre>
 ```
 
+#### CSS
+
+The CSS sets the height of the logging element.
+
+```css
+#log {
+  height: 20px;
+}
+```
+
 #### JavaScript
 
 Next define the logging function `log()`.
@@ -418,16 +428,6 @@ function log(text) {
 ```
 
 Note that the content of the log element is set using the `innerText` property, which is safer than using `innerHTML` because the logged text is not parsed to HTML (which might potentially inject malicious code).
-
-#### CSS
-
-The CSS sets the height of the logging element.
-
-```css
-#log {
-  height: 20px;
-}
-```
 
 #### Logging test code
 
@@ -474,6 +474,20 @@ Create a {{HTMLElement("pre")}} element with an `id` of `"log"` for displaying t
 <pre id="log"></pre>
 ```
 
+#### CSS
+
+The CSS adds scrollbars if the element content overflows, sets the height of the logging element, and adds a border.
+Note that the JavaScript below ensures that if it does overflow, addition of new log text will scroll the text into view.
+
+```css
+#log {
+  height: 100px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
 #### JavaScript
 
 Next define the logging function `log()`.
@@ -489,20 +503,6 @@ function log(text) {
 ```
 
 As with the previous example we set the content using the `innerText` property as this is less susceptible to malicious code than using `innerHTML`.
-
-#### CSS
-
-The CSS adds scrollbars if the element content overflows, sets the height of the logging element, and adds a border.
-Note that the JavaScript above ensures that if it does overflow, addition of new log text will scroll the text into view.
-
-```css
-#log {
-  height: 100px;
-  overflow: scroll;
-  padding: 0.5rem;
-  border: 1px solid black;
-}
-```
 
 #### Logging test code
 
