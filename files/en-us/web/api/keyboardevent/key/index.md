@@ -140,7 +140,7 @@ btnReset.addEventListener("click", (e) => {
 > [!NOTE]
 > On browsers that don't fully implement the {{domxref("InputEvent")}} interface which is used for the {{domxref("Element/beforeinput_event", "beforeinput")}} and {{domxref("Element/input_event", "input")}} events, you may get incorrect output on those lines of the log output.
 
-### Case 1
+#### Case 1
 
 When the shift key is pressed, a {{domxref("Element/keydown_event", "keydown")}} event is first fired, and the `key` property value is set to the string `Shift`. As we keep holding this key, the {{domxref("Element/keydown_event", "keydown")}} event does not continue to fire repeatedly because it does not produce a character key.
 
@@ -150,7 +150,7 @@ As we release the `key 2`, a {{domxref("Element/keyup_event", "keyup")}} event i
 
 As we finally release the `shift` key, another {{domxref("Element/keyup_event", "keyup")}} event is fired for it, and the key attribute value remains `Shift`.
 
-### Case 2
+#### Case 2
 
 When the shift key is pressed, a {{domxref("Element/keydown_event", "keydown")}} event is first fired, and the `key` property value is set to be the string `Shift`. As we keep holding this key, the {{domxref("Element/keydown_event", "keydown")}} event does not continue to fire repeatedly because it produced no character key.
 

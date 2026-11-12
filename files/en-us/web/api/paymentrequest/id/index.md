@@ -15,6 +15,8 @@ The **`id`** read-only attribute of the
 When constructing an instance of the {{domxref("PaymentRequest")}}, you are able to
 supply a custom id. If none is provided, the browser automatically sets the id value to a UUID.
 
+## Value
+
 A string.
 
 ## Example
@@ -45,8 +47,6 @@ console.log(response.requestId === request.id);
 const json = response.toJSON();
 console.log(json.requestId, response.requestId, request.id);
 ```
-
-## Value
 
 ## Specifications
 
