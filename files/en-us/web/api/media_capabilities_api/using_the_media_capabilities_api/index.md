@@ -111,14 +111,6 @@ navigator.mediaCapabilities
 
 ## Media Capabilities live example
 
-### CSS
-
-```css
-li {
-  margin: 1em;
-}
-```
-
 ### HTML
 
 ```html
@@ -177,6 +169,14 @@ li {
 </form>
 
 <ul id="results"></ul>
+```
+
+### CSS
+
+```css
+li {
+  margin: 1em;
+}
 ```
 
 ### JavaScript

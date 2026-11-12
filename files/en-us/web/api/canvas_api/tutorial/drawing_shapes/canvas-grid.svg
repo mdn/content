@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="463" height="152" viewBox="0 0 463 152">
+  <defs>
+    <marker id="arrow" viewBox="0 0 4 4" refX="4" refY="2" markerWidth="4" markerHeight="4" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M0 0 4 2 0 4Z" fill="context-stroke"/>
+    </marker>
+  </defs>
+  <rect width="463" height="152" fill="#fff"/>
+  <g transform="translate(13 13)" font-family="sans-serif" font-size="10">
+    <rect x="40" y="20" width="60" height="80" fill="#ffebeb" stroke="#f00"/>
+    <path d="M0 0V130M0 0H130 M20 0V130M0 20H130 M40 0V130M0 40H130 M60 0V130M0 60H130 M80 0V130M0 80H130 M100 0V130M0 100H130 M120 0V130M0 120H130" fill="none" stroke="#000" shape-rendering="crispEdges"/>
+    <path d="M0 130V0H136" fill="none" stroke="#000" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text x="-7" y="-3">(0,0)</text>
+    <text x="29" y="18" fill="#00f">(2,1)</text><text x="93" y="113" fill="#00f">(5,5)</text>
+
+  </g>
+  <g transform="translate(166 13)" font-family="sans-serif" font-size="10">
+    <path d="M40 20H80V100H40Z" fill="#bde2fe"/><path d="M50 20H60V100H50Z" fill="#4167fe"/><path d="M60 20H70V100H60Z" fill="#5870fe"/>
+    <path d="M0 0V130M0 0H130 M20 0V130M0 20H130 M40 0V130M0 40H130 M60 0V130M0 60H130 M80 0V130M0 80H130 M100 0V130M0 100H130 M120 0V130M0 120H130" fill="none" stroke="#000" shape-rendering="crispEdges"/>
+    <path d="M0 130V0H136" fill="none" stroke="#000" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text x="-7" y="-3">(0,0)</text>
+    <path d="M60 20V100" stroke="#f00"/><text x="67" y="18" fill="#f00">(3,1)</text><text x="74" y="100" fill="#f00">(3,5)</text>
+    <path d="M50 107h20" fill="none" stroke="#259130" marker-start="url(#arrow)" marker-end="url(#arrow)"/><text x="52" y="120" fill="#259130">1.0 width</text>
+  </g>
+  <g transform="translate(318 13)" font-family="sans-serif" font-size="10">
+    <rect x="60" y="20" width="10" height="80" fill="#4167fe"/><rect x="70" y="20" width="10" height="80" fill="#5870fe"/>
+    <path d="M0 0V130M0 0H130 M20 0V130M0 20H130 M40 0V130M0 40H130 M60 0V130M0 60H130 M80 0V130M0 80H130 M100 0V130M0 100H130 M120 0V130M0 120H130" fill="none" stroke="#000" shape-rendering="crispEdges"/>
+    <path d="M0 130V0H136" fill="none" stroke="#000" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text x="-7" y="-3">(0,0)</text>
+    <path d="M70 20V100" stroke="#f00"/><text x="72" y="18" fill="#f00">(3.5,1)</text><text x="85" y="100" fill="#f00">(3.5,5)</text>
+    <path d="M60 107h20" fill="none" stroke="#259130" marker-start="url(#arrow)" marker-end="url(#arrow)"/><text x="62" y="120" fill="#259130">1.0 width</text>
+  </g>
+</svg>

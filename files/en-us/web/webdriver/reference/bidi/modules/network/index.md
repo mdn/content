@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.network
 sidebar: webdriver
 ---
 
-The **`network`** module contains commands and events related to network requests.
+The **`network`** module contains commands and events for monitoring and controlling the browser's network requests and responses.
 
 ## Data collectors
 
@@ -41,6 +41,8 @@ When a new body doesn't fit, the browser discards bodies collected earlier until
 - [`network.disownData`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/disownData)
 - [`network.getData`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/getData)
 - [`network.removeDataCollector`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/removeDataCollector)
+- [`network.setCacheBehavior`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/setCacheBehavior)
+- [`network.setExtraHeaders`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/setExtraHeaders)
 
 ## Specifications
 

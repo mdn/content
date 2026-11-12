@@ -17,11 +17,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("repeatEvent", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onrepeat = (event) => { }
 ```
 
@@ -81,9 +85,9 @@ animateElem.addEventListener("repeatEvent", (e) => {
 
 {{EmbedLiveSample('Animated_circle', '100%', '270')}}
 
-### Event handler property equivalent
+### Using the event handler property
 
-Note that you can also create an event listener for the `repeat` event using the `onrepeat` event handler property:
+You can also create an event listener for the `repeat` event using the `onrepeat` event handler property (but note that this replaces other event listeners added using `onrepeat`, if any):
 
 ```js
 animateElem.onrepeat = () => {

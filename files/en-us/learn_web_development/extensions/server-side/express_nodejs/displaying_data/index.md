@@ -47,16 +47,15 @@ You need to read and work through each one of these in turn, before moving on to
 3. [Home page](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page)
 4. [Book list page](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
 5. [BookInstance list page](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
-6. [Date formatting using luxon](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
-7. [Author list page and Genre list page challenge](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
-8. [Genre detail page](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
-9. [Book detail page](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
-10. [Author detail page](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
-11. [BookInstance detail page and challenge](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
+6. [Author list page and Genre list page challenge](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
+7. [Genre detail page](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
+8. [Book detail page](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
+9. [Author detail page](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
+10. [BookInstance detail page and challenge](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
 
 ## Summary
 
-We've now created all the "read-only" pages for our site: a home page that displays counts of instances of each of our models, and list and detail pages for our books, book instances, authors, and genres. Along the way, we've gained a lot of fundamental knowledge about controllers, managing flow control when using asynchronous operations, creating views using _Pug_, querying the site's database using models, passing information to a view, and creating and extending templates. The challenges will also have taught readers a little about date handling using _Luxon_.
+We've now created all the "read-only" pages for our site: a home page that displays counts of instances of each of our models, and list and detail pages for our books, book instances, authors, and genres. Along the way, we've gained a lot of fundamental knowledge about controllers, managing flow control when using asynchronous operations, creating views using _Pug_, querying the site's database using models, passing information to a view, and creating and extending templates.
 
 In our next article, we'll build on our knowledge, creating HTML forms and form handling code to start modifying the data stored by the site.
 
@@ -64,6 +63,5 @@ In our next article, we'll build on our knowledge, creating HTML forms and form 
 
 - [Using Template engines with Express](https://expressjs.com/en/guide/using-template-engines/) (Express docs)
 - [Pug](https://pugjs.org/api/getting-started.html) (Pug docs)
-- [Luxon](https://moment.github.io/luxon/#/) (Luxon docs)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

@@ -196,7 +196,7 @@ In this example, various `offset-path: ray()` values are applied to the boxes nu
 
 #### Result
 
-{{EmbedLiveSample('Giving an angle to the ray', '100%', 1100)}}
+{{EmbedLiveSample('defining_the_angle_and_starting_position_for_a_ray', '100%', 1100)}}
 
 - `box1` gets initially positioned such that its anchor point (its center) is at the default offset starting position (`50% 50%` of the containing block). `box1` is also rotated to orient it towards the `0deg` angle of the ray. This will now be the starting point of the path. You can observe the change in position and rotation of the box by comparing it to the faded `box0` on the left. The box is rotated to match the `0deg` angle along y-axis, pointing up. The box rotation is evident from the orientation of the number inside the box.
 

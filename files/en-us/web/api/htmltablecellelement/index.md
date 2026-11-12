@@ -28,11 +28,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLTableCellElement.scope")}}
   - : A string indicating the scope of a {{HTMLElement("th")}} cell. Possible values for `scope` are: `col`, `colgroup`, `row`, `rowgroup`, or the empty string (`""`).
 
-## Instance methods
-
-_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}_.
-
-## Deprecated properties
+### Deprecated properties
 
 > [!WARNING]
 > These properties have been deprecated and should no longer be used. They are documented primarily to help understand older code bases.
@@ -55,6 +51,10 @@ _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}
   - : A string representing an enumerated value indicating how the content of the cell must be vertically aligned. It reflects the [`valign`](/en-US/docs/Web/HTML/Reference/Elements/td#valign) attribute and can have one of the following values: `"top"`, `"middle"`, `"bottom"`, or `"baseline"`. Use the CSS {{cssxref("vertical-align")}} property instead.
 - {{domxref("HTMLTableCellElement.width")}} {{deprecated_inline}}
   - : A string specifying the number of pixels wide the cell should be drawn, if possible. This property reflects the also obsolete [`width`](/en-US/docs/Web/HTML/Reference/Elements/td#width) attribute. Use the CSS {{cssxref("width")}} property instead.
+
+## Instance methods
+
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}_.
 
 ## Specifications
 

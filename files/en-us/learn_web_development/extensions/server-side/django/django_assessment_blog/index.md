@@ -77,7 +77,7 @@ The pages that need to be displayed, their URLs, and other requirements, are lis
             Contains some biographical information about the blogger/author.
           </li>
           <li>List sorted by post date (newest to oldest).</li>
-          <li>Not paginated.</li>
+          <li>List paginated in groups of 5 articles.</li>
           <li>List items display just the blog post name and post date.</li>
           <li>Blog post names are linked to blog detail pages.</li>
         </ul>
@@ -86,7 +86,7 @@ The pages that need to be displayed, their URLs, and other requirements, are lis
     <tr>
       <td>Blog post detail page</td>
       <td>
-        <code>/blog/<em>&#x3C;blog-id></em></code>
+        <code>/blog/blog/<em>&#x3C;blog-id></em></code>
       </td>
       <td>
         <p>Blog post details.</p>
@@ -120,7 +120,7 @@ The pages that need to be displayed, their URLs, and other requirements, are lis
     </tr>
     <tr>
       <td>Comment form page</td>
-      <td><code>/blog/<em>&#x3C;blog-id></em>/create</code></td>
+      <td><code>/blog/blog/<em>&#x3C;blog-id></em>/comment/</code></td>
       <td>
         <p>Create comment for blog post:</p>
         <ul>
@@ -188,7 +188,7 @@ In addition you should write some basic tests to verify:
 
 - All model fields have the correct label and length.
 - All models have the expected object name (e.g., `__str__()` returns the expected value).
-- Models have the expected URL for individual Blog and Comment records (e.g., `get_absolute_url()` returns the expected URL).
+- Models have the expected URL for individual Blog and BlogAuthor records (e.g., `get_absolute_url()` returns the expected URL).
 - The BlogListView (all-blog page) is accessible at the expected location (e.g., /blog/blogs)
 - The BlogListView (all-blog page) is accessible at the expected named URL (e.g., 'blogs')
 - The BlogListView (all-blog page) uses the expected template (e.g., the default)
@@ -268,12 +268,12 @@ Some general hints:
 1. The index page can be implemented as a basic function view and template (just like for the locallibrary).
 2. The list view for blog posts and bloggers, and the detail view for blog posts can be created using the [generic list and detail views](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Generic_views).
 3. The list of blog posts for a particular author can be created by using a generic blog list view and filtering for blog objects that match the specified author.
-   - You will have to implement `get_queryset(self)` to do the filtering (much like in our library class `LoanedBooksAllListView`) and get the author information from the URL.
+   - You will have to implement `get_queryset(self)` to do the filtering (much like in our library class `LoanedBooksByUserListView`) and get the author information from the URL.
    - You will also need to pass the name of the author to the page in the context. To do this in a class-based view you need to implement `get_context_data()` (discussed below).
 
 4. The _add comment_ form can be created using a function-based view (and associated model and form) or using a generic `CreateView`. If you use a `CreateView` (recommended) then:
    - You will also need to pass the name of the blog post to the comment page in the context (implement `get_context_data()` as discussed below).
-   - The form should only display the comment "description" for user entry (date and associated blog post should not be editable). Since they won't be in the form itself, your code will need to set the comment's author in the `form_valid()` function so it can be saved into the model ([as described here](https://docs.djangoproject.com/en/5.0/topics/class-based-views/generic-editing/#models-and-request-user) — Django docs). In that same function we set the associated blog. A possible implementation is shown below (`pk` is a blog id passed in from the URL/URL configuration).
+   - The form should only display the comment "description" for user entry (date and associated blog post should not be editable). Since they won't be in the form itself, your code will need to set the comment's author in the `form_valid()` function so it can be saved into the model (see [Models and request.user](https://docs.djangoproject.com/en/6.1/topics/class-based-views/generic-editing/#models-and-request-user) in the Django docs). In that same function we set the associated blog. A possible implementation is shown below (`pk` is a blog id passed in from the URL/URL configuration).
 
      ```python
          def form_valid(self, form):
@@ -285,7 +285,7 @@ Some general hints:
              #Associate comment with blog based on passed id
              form.instance.blog=get_object_or_404(Blog, pk = self.kwargs['pk'])
              # Call super-class form validation behavior
-             return super(BlogCommentCreate, self).form_valid(form)
+             return super().form_valid(form)
      ```
 
    - You will need to provide a success URL to redirect to after the form validates; this should be the original blog. To do this you will need to override `get_success_url()` and "reverse" the URL for the original blog. You can get the required blog ID using the `self.kwargs` attribute, as shown in the `form_valid()` method above.
@@ -298,7 +298,7 @@ class SomeView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
-        context = super(SomeView, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         # Get the blogger object from the "pk" URL parameter and add it to the context
         context['blogger'] = get_object_or_404(BlogAuthor, pk = self.kwargs['pk'])
         return context
@@ -306,8 +306,9 @@ class SomeView(generic.ListView):
 
 ## Assessment
 
-The assessment for this challenge is [available on GitHub here](https://github.com/mdn/django-diy-blog/blob/main/MarkingGuide.md). This assessment is primarily based on how well your application meets the requirements we listed above, though there are some parts that check your code uses appropriate models, and that you have written at least some test code.
-When you're done, you can check out [the finished example](https://github.com/mdn/django-diy-blog) which reflects a "full marks" project.
+There is no formal marking guide for this challenge.
+If your application works and meets the requirements listed in this article, well done!
+When you're done, you can compare your code with [the finished example](https://github.com/mdn/django-diy-blog).
 
 Once you've completed this module you've also finished all the MDN content for learning basic Django server-side website programming! We hope you enjoyed this module and feel you have a good grasp of the basics!
 

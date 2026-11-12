@@ -9,45 +9,18 @@ sidebar: webassemblysidebar
 
 **`call`** calls a function, `return_call` being the tail-call version of it. `call_indirect` calls a function in a table with the `return_call_indirect` tail-call version as well.
 
-## Examples
-
-Calling the `greet` function imported from JavaScript using `call`:
-
-{{InteractiveExample("Wat Demo: call", "tabbed-standard")}}
+{{InteractiveExample("Wat Demo: call", "tabbed-taller")}}
 
 ```wat interactive-example
 (module
   ;; Import the `greet` function from the environment
   (import "env" "greet" (func $greet))
 
-  (func
+  (func (export "greet")
     ;; Call the imported `greet` function
     call $greet
   )
 
-  ;; Automatically run the first function when the module starts
-  (start 1)
-)
-```
-
-```js interactive-example
-const url = "{%wasm-url%}";
-await WebAssembly.instantiateStreaming(fetch(url), {
-  env: {
-    greet() {
-      console.log("Hello");
-      // Expected output: "Hello"
-    },
-  },
-});
-```
-
-Calculating factorial for a number using `return_call` and logging the result using the exported `fac` function:
-
-{{InteractiveExample("Wat Demo: return_call", "tabbed-standard")}}
-
-```wat interactive-example
-(module
   ;; Calculate the factorial of a number
   (func $fac (export "fac") (param $x i64) (result i64)
     ;; Call the `fac-aux` function with $x and 1 parameters
@@ -73,10 +46,18 @@ Calculating factorial for a number using `return_call` and logging the result us
 
 ```js interactive-example
 const url = "{%wasm-url%}";
-const { instance } = await WebAssembly.instantiateStreaming(fetch(url));
-const result = instance.exports.fac(5n);
+const { instance } = await WebAssembly.instantiateStreaming(fetch(url), {
+  env: {
+    greet() {
+      console.log("Hello");
+    },
+  },
+});
 
-console.log(result);
+instance.exports.greet();
+// Expected output: "Hello"
+
+console.log(instance.exports.fac(5n));
 // Expected output: 120n
 ```
 

@@ -15,41 +15,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feSpotLight")}}
 
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
-  <filter id="diffuseLighting1" x="0" y="0" width="100%" height="100%">
-    <feSpecularLighting in="SourceGraphic" specularExponent="1">
-      <fePointLight x="60" y="60" z="20" />
-    </feSpecularLighting>
-  </filter>
-  <filter id="diffuseLighting2" x="0" y="0" width="100%" height="100%">
-    <feSpecularLighting in="SourceGraphic" specularExponent="5">
-      <fePointLight x="60" y="60" z="20" />
-    </feSpecularLighting>
-  </filter>
-
-  <rect x="0" y="0" width="200" height="200" filter="url(#diffuseLighting1)" />
-  <rect
-    x="220"
-    y="0"
-    width="200"
-    height="200"
-    filter="url(#diffuseLighting2)" />
-</svg>
-```
-
-{{EmbedLiveSample("Example", "420", "200")}}
-
 ## feSpecularLighting
 
 For {{SVGElement("feSpecularLighting")}}, `specularExponent` defines the exponent value for the specular term.
@@ -91,6 +56,41 @@ For {{SVGElement("feSpotLight")}}, `specularExponent` defines the exponent value
     </tr>
   </tbody>
 </table>
+
+## Example
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
+  <filter id="diffuseLighting1" x="0" y="0" width="100%" height="100%">
+    <feSpecularLighting in="SourceGraphic" specularExponent="1">
+      <fePointLight x="60" y="60" z="20" />
+    </feSpecularLighting>
+  </filter>
+  <filter id="diffuseLighting2" x="0" y="0" width="100%" height="100%">
+    <feSpecularLighting in="SourceGraphic" specularExponent="5">
+      <fePointLight x="60" y="60" z="20" />
+    </feSpecularLighting>
+  </filter>
+
+  <rect x="0" y="0" width="200" height="200" filter="url(#diffuseLighting1)" />
+  <rect
+    x="220"
+    y="0"
+    width="200"
+    height="200"
+    filter="url(#diffuseLighting2)" />
+</svg>
+```
+
+{{EmbedLiveSample("Example", "420", "200")}}
 
 ## Specifications
 

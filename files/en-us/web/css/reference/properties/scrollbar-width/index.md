@@ -71,17 +71,6 @@ WCAG criterion 2.1.1 (Keyboard) has been in place for a long time to advise on b
 
 ### Sizing overflow scrollbars
 
-#### CSS
-
-```css
-.scroller {
-  width: 300px;
-  height: 100px;
-  overflow-y: scroll;
-  scrollbar-width: thin;
-}
-```
-
 #### HTML
 
 ```html
@@ -92,6 +81,17 @@ WCAG criterion 2.1.1 (Keyboard) has been in place for a long time to advise on b
   fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
   earthnut pea peanut soko zucchini.
 </div>
+```
+
+#### CSS
+
+```css
+.scroller {
+  width: 300px;
+  height: 100px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
 ```
 
 #### Result

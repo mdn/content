@@ -94,7 +94,7 @@ The following CSS code snippet demonstrates how to style the registered custom h
 
 ### Result
 
-{{EmbedLiveSample("example", "100%", '100')}}
+{{EmbedLiveSample("examples", "100%", '100')}}
 
 ## Specifications
 

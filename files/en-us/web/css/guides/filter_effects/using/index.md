@@ -39,7 +39,7 @@ The following table lists the 10 filter functions, along with their value types,
 | {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}   | {{cssxref("angle")}}                                               |           |            | `0deg`                    |
 | {{cssxref("filter-function/invert", "invert()")}}           | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `0` or `0%`               |
 | {{cssxref("filter-function/opacity", "opacity()")}}         | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `1` or `100%`             |
-| {{cssxref("filter-function/saturate", "saturate()")}}       | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `100%`                    |
+| {{cssxref("filter-function/saturate", "saturate()")}}       | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       |            | `100%`                    |
 | {{cssxref("filter-function/sepia", "sepia()")}}             | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `0%`                      |
 
 The minimum value allowed is included for filter functions that have a minimum value. Including a value less than the minimum value for any filter function invalidates the entire property declaration, not just the offending filter function in the comma-separated list.
@@ -210,7 +210,7 @@ h1 {
 <h1>No filter effects applied.</h1>
 ```
 
-{{EmbedLiveSample('Applying_a_filter_to_an_element','100%','280')}}
+{{EmbedLiveSample('specifying_filter_function_order','100%','280')}}
 
 The same filters are applied to both the lines of text but in a different order. In the first line, the hue of the text is altered before the shadow is applied, so the shadow is `magenta`. In the second line, the drop shadow is added to the dark blue text, and then the hue of both the text and the shadow are altered.
 
@@ -318,7 +318,7 @@ td {
 }
 ```
 
-{{EmbedLiveSample('blur_example','100%','550')}}
+{{EmbedLiveSample('blurring_an_image','100%','550')}}
 
 ## See also
 

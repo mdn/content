@@ -28,13 +28,13 @@ Returns a string corresponding to the path that would be imported if the argumen
 `import.meta.resolve()` allows a script to access the _module specifier resolution_ algorithm for a name, like this:
 
 ```js
-// Script at https://example.com/main.js
+// -- https://example.com/main.js --
 
 const helperPath = import.meta.resolve("./lib/helper.js");
 console.log(helperPath); // "https://example.com/lib/helper.js"
 ```
 
-Note that `import.meta.resolve()` only performs resolution and does not attempt to load or import the resulting path. Therefore, its return value is the same _regardless of whether the returned path corresponds to a file that exists, and regardless of whether that file contains valid code for a module_. This allows `import.meta.resolve()` to be a _synchronous_ operation.
+Note that `import.meta.resolve()` only performs resolution and does not attempt to [load](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#loading_the_graph) or import the resulting module. In browsers, its return value is the same _regardless of whether the returned URL corresponds to a file that exists, and regardless of whether that file contains valid code for a module_. The operation is _synchronous_. Non-browser hosts may inspect the file system during resolution; for example, Node.js can read package metadata and check paths.
 
 It is different from [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import), because although both accept a module specifier as the first argument, `import.meta.resolve()` returns the path that _would be imported_ without making any attempt to access that path. Therefore, the following two are effectively the same code:
 
@@ -51,7 +51,7 @@ However, even if `"./lib/helper.js"` cannot be successfully imported, the second
 
 ### Bare module names
 
-You can pass a bare module name (also known as a bare module specifier) to `import.meta.resolve()`, as long as module resolution is defined for the name. For example, you can define this using an [import map](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps) inside a browser:
+You can pass a bare module name (also known as a bare module specifier) to `import.meta.resolve()`, as long as module resolution is defined for the name. For example, you can define this using an [import map](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#importing_modules_using_import_maps) inside a browser:
 
 ```html
 <!-- index.html -->
@@ -103,14 +103,14 @@ This means that `import.meta.resolve()` is not required to be implemented by all
 `import.meta.resolve()` is particularly valuable for APIs that take a path to a script file as an argument, such as the [`Worker()`](/en-US/docs/Web/API/Worker/Worker) constructor:
 
 ```js
-// main.js
+// -- main.js --
 const workerPath = import.meta.resolve("./worker.js");
 const worker = new Worker(workerPath, { type: "module" });
 worker.addEventListener("message", console.log);
 ```
 
 ```js
-// worker.js
+// -- worker.js --
 self.postMessage("hello!");
 ```
 

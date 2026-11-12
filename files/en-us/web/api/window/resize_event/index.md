@@ -12,7 +12,10 @@ The **`resize`** event fires when the document view (window) has been resized.
 
 This event is not cancelable and does not bubble.
 
-In some earlier browsers it was possible to register `resize` event handlers on any HTML element. It is still possible to set `onresize` attributes or use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to set a handler on any element. However, `resize` events are only fired on the {{domxref("Window", "window")}} object (i.e., returned by {{domxref("document.defaultView")}}). Only handlers registered on the `window` object will receive `resize` events.
+In some earlier browsers it was possible to register `resize` event handlers on any HTML element.
+It is still possible to set `onresize` attributes (but note that this replaces other event listeners added using `onresize`, if any) or use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to set a handler on any element.
+However, `resize` events are only fired on the {{domxref("Window", "window")}} object (i.e., returned by {{domxref("document.defaultView")}}).
+Only handlers registered on the `window` object will receive `resize` events.
 
 While the `resize` event fires only for the window nowadays, you can get resize notifications for other elements using the [ResizeObserver](/en-US/docs/Web/API/ResizeObserver) API.
 
@@ -20,11 +23,15 @@ If the resize event is triggered too many times for your application, see [Optim
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("resize", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onresize = (event) => { }
 ```
 
@@ -36,7 +43,7 @@ A generic {{domxref("Event")}}.
 
 ### Window size logger
 
-The following example reports the window size each time it is resized.
+The following example reports the window size each time it is resized. It uses the `onresize` event handler property (but note that this replaces other event listeners added using `onresize`, if any).
 
 #### HTML
 
@@ -69,7 +76,7 @@ window.onresize = reportWindowSize;
 >
 > The effect is easier to see if you {{LiveSampleLink("Window_size_logger", "view the example in its own window")}}.
 
-### addEventListener equivalent
+### Using addEventListener()
 
 You could set up the event handler using the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
