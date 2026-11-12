@@ -55,7 +55,7 @@ mpadded {
 }
 ```
 
-{{ EmbedLiveSample('dimensions_and_offsets_example', 700, 200, "", "") }}
+{{ EmbedLiveSample('dimensions_and_offsets', 700, 200, "", "") }}
 
 ### Legacy syntax
 
@@ -98,7 +98,7 @@ mpadded:nth-child(4) {
 }
 ```
 
-{{ EmbedLiveSample('legacy_syntax_example', 700, 200, "", "") }}
+{{ EmbedLiveSample('legacy_syntax_2', 700, 200, "", "") }}
 
 ## Technical summary
 

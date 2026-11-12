@@ -111,6 +111,7 @@ Because member access has higher [precedence](/en-US/docs/Web/JavaScript/Referen
 
 ## See also
 
+- [Polyfill of modern `Number.prototype.toFixed` behavior in `core-js`](https://core-js.io/docs/features/ecmascript/number)
 - {{jsxref("Number.prototype.toExponential()")}}
 - {{jsxref("Number.prototype.toPrecision()")}}
 - {{jsxref("Number.prototype.toString()")}}

@@ -50,6 +50,14 @@ This property is specified as the following value:
 
 ### Varying stroke widths
 
+#### HTML
+
+```html
+<p id="thin">Thin stroke</p>
+<p id="medium">Medium stroke</p>
+<p id="thick">Thick stroke</p>
+```
+
 #### CSS
 
 ```css
@@ -70,14 +78,6 @@ p {
 #thick {
   -webkit-text-stroke-width: 1.5mm;
 }
-```
-
-#### HTML
-
-```html
-<p id="thin">Thin stroke</p>
-<p id="medium">Medium stroke</p>
-<p id="thick">Thick stroke</p>
 ```
 
 #### Results

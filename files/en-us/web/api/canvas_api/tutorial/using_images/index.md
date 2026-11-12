@@ -159,7 +159,7 @@ draw();
 
 The resulting graph looks like this:
 
-{{EmbedLiveSample("Example_A_simple_line_graph", "", "160")}}
+{{EmbedLiveSample("example_a_small_line_graph", "", "160")}}
 
 ## Scaling
 

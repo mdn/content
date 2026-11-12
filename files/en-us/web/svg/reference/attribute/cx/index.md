@@ -20,31 +20,6 @@ You can use this attribute with the following SVG elements:
 > [!NOTE]
 > As a _geometry property_, {{cssxref("cx")}} can also be used as CSS property for `<circle>` and `<ellipse>`.
 
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <radialGradient cx="25%" id="myGradient">
-    <stop offset="0" stop-color="white" />
-    <stop offset="100%" stop-color="black" />
-  </radialGradient>
-
-  <circle cx="50" cy="50" r="45" />
-  <ellipse cx="150" cy="50" rx="45" ry="25" />
-  <rect x="205" y="5" width="90" height="90" fill="url(#myGradient)" />
-</svg>
-```
-
-{{EmbedLiveSample("Example", 100, 100)}}
-
 ## circle
 
 For {{SVGElement('circle')}}, `cx` defines the x-axis coordinate of the center of the shape.
@@ -116,7 +91,34 @@ For {{SVGElement('radialGradient')}}, `cx` defines the x-axis coordinate of the 
   </tbody>
 </table>
 
-### Example
+## Examples
+
+### Usage with various elements
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <radialGradient cx="25%" id="myGradient">
+    <stop offset="0" stop-color="white" />
+    <stop offset="100%" stop-color="black" />
+  </radialGradient>
+
+  <circle cx="50" cy="50" r="45" />
+  <ellipse cx="150" cy="50" rx="45" ry="25" />
+  <rect x="205" y="5" width="90" height="90" fill="url(#myGradient)" />
+</svg>
+```
+
+{{EmbedLiveSample("Usage with various elements", 100, 100)}}
+
+### Usage with radialGradient
 
 ```css hidden
 html,
@@ -172,7 +174,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('radialGradient', 150, '100%')}}
+{{EmbedLiveSample('Usage with radialGradient', 150, '100%')}}
 
 ## Specifications
 

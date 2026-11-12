@@ -15,7 +15,7 @@ sidebar: cssref
 The **`-moz-user-focus`** [CSS](/en-US/docs/Web/CSS) property is used to indicate whether an element can have the focus.
 
 By setting its value to `ignore`, you can disable focusing the element, which means that the user will not be able to activate the element, and the element will be skipped in the tab sequence.
-The default is `none`, which disables focussing on the element and removes focus on other elements if there is an attempt to select the element.
+The default is `none`, which disables focusing on the element and removes focus on other elements if there is an attempt to select the element.
 
 ## Syntax
 

@@ -116,7 +116,7 @@ p {
 
 The output is as follows. Note how we've included a top and bottom border on each paragraph, so that you can see how the space has been trimmed in each case.
 
-{{EmbedLiveSample("Basic `text-box-edge` usage","100%","360")}}
+{{EmbedLiveSample("basic_text-box-trim_usage","100%","360")}}
 
 ### Interactive `text-box-trim` and `text-box-edge` value comparison
 
@@ -272,7 +272,7 @@ trimUnderSelect.addEventListener("change", setEdgeTrim);
 
 The output is as follows:
 
-{{EmbedLiveSample("`text-box-trim` value comparison","100%","520")}}
+{{EmbedLiveSample("interactive_text-box-trim_and_text-box-edge_value_comparison","100%","520")}}
 
 `text-box-trim` is initially set to `trim-both`, meaning that the over _and_ under edges of the paragraph are trimmed. `text-box-edge` is initially set to `cap alphabetic`, meaning that the text is trimmed flush with the top of capital letters at the start edge, and flush with the baseline at the end edge.
 

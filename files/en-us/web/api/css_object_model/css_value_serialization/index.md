@@ -104,7 +104,7 @@ for (const property of [
 document.body.appendChild(table);
 ```
 
-{{EmbedLiveSample("", "", 400)}}
+{{EmbedLiveSample("when_and_how_values_are_serialized", "", 400)}}
 
 ## Examples
 

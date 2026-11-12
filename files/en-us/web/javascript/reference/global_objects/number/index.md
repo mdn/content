@@ -241,7 +241,7 @@ Number("-Infinity"); // -Infinity
 
 ## See also
 
-- [Polyfill of modern `Number` behavior (with support binary and octal literals) in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [Polyfill of modern `Number` behavior (with support binary and octal literals) in `core-js`](https://core-js.io/docs/features/ecmascript/number)
 - {{jsxref("NaN")}}
 - [Arithmetic operators](/en-US/docs/Web/JavaScript/Reference/Operators#arithmetic_operators)
 - {{jsxref("Math")}}

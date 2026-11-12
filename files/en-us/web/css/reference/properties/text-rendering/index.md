@@ -141,7 +141,7 @@ p {
 
 #### Result
 
-{{ EmbedLiveSample('optimizeSpeed_vs_optimizeLegibility') }}
+{{ EmbedLiveSample('optimizespeed_vs._optimizelegibility') }}
 
 ## Specifications
 

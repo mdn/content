@@ -8,65 +8,27 @@ browser-compat: api.HTMLTextAreaElement.selectionchange_event
 
 {{APIRef("Selection API")}}
 
-The **`selectionchange`** event of the [Selection API](/en-US/docs/Web/API/Selection) is fired when the text selection within a {{HTMLElement("textarea")}} element is changed.
-This includes both changes in the selected range of characters, or if the caret moves.
+The **`selectionchange`** event of the [Selection API](/en-US/docs/Web/API/Selection) is fired when the text selection within a {{HTMLElement("textarea")}} element is changed in either extent or direction, whether the selection is a caret or a range of characters.
 
-This event is not cancelable.
-
-> [!NOTE]
-> When you change the selection programmatically, for example by calling {{domxref("HTMLTextAreaElement.setSelectionRange()", "setSelectionRange()")}}, the selection updates immediately, but the `selectionchange` event is queued as a task. Its listeners run later, after the current script finishes executing. This contrasts with events such as `focus` and `click`, whose listeners run synchronously when triggered by {{domxref("HTMLElement.focus()", "focus()")}} and {{domxref("HTMLElement.click()", "click()")}}, respectively.
-
-The event is usually processed by adding an event listener on the {{HTMLElement("textarea")}}, and in the handler function read by the {{domxref("HTMLTextAreaElement")}} `selectionStart`, `selectionEnd` and `selectionDirection` properties.
-
-It is also possible to add a listener on the global `onselectionchange` event handler, and within the handler function use {{domxref("Document.getSelection()")}} to get the {{domxref("Selection", "Selection")}}. However this is not very useful for getting changes to _text_ selections.
+For general information about this event, see [`HTMLInputElement`: `selectionchange` event](/en-US/docs/Web/API/HTMLInputElement/selectionchange_event).
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("selectionchange", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onselectionchange = (event) => { }
 ```
 
 ## Event type
 
 A generic {{domxref("Event")}}.
-
-## Examples
-
-The example below shows how to get the text selected in a {{HTMLElement("textarea")}} element.
-
-### HTML
-
-```html
-<div>
-  Enter and select text here:<br /><textarea
-    id="my-text"
-    rows="2"
-    cols="20"></textarea>
-</div>
-<div>selectionStart: <span id="start"></span></div>
-<div>selectionEnd: <span id="end"></span></div>
-<div>selectionDirection: <span id="direction"></span></div>
-```
-
-### JavaScript
-
-```js
-const myInput = document.getElementById("my-text");
-
-myInput.addEventListener("selectionchange", () => {
-  document.getElementById("start").textContent = myInput.selectionStart;
-  document.getElementById("end").textContent = myInput.selectionEnd;
-  document.getElementById("direction").textContent = myInput.selectionDirection;
-});
-```
-
-### Result
-
-{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

@@ -6,7 +6,7 @@ page-type: webgl-extension-method
 browser-compat: api.WEBGL_multi_draw.multiDrawArraysWEBGL
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WEBGL_multi_draw.multiDrawArraysWEBGL()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) renders multiple primitives from

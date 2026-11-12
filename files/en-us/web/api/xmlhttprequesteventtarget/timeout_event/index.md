@@ -14,11 +14,15 @@ The **`timeout`** event is fired when progression is terminated due to preset ti
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("timeout", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 ontimeout = (event) => { }
 ```
 
@@ -32,9 +36,12 @@ A {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
 
 ### Usage with XMLHttpRequest
 
+Using the `ontimeout` event handler property (but note that this replaces other event listeners added using `ontimeout`, if any):
+
 ```js
 const client = new XMLHttpRequest();
 client.open("GET", "http://www.example.org/example.txt");
+client.timeout = 5000;
 client.ontimeout = () => {
   console.error("Timeout!!");
 };

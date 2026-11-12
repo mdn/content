@@ -3,12 +3,10 @@ title: "SpeechRecognition: install() static method"
 short-title: install()
 slug: Web/API/SpeechRecognition/install_static
 page-type: web-api-static-method
-status:
-  - experimental
 browser-compat: api.SpeechRecognition.install_static
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`install()`** static method of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) installs the required language packs for [on-device speech recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) in the specified languages and quality level.
 

@@ -116,7 +116,7 @@ modify-page/
 
 Now [reload the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on), open a page (any page, this time) activate the context menu, and select "Eat this page":
 
-![Option to eat a page on the context menu](eat_from_menu.png)
+![The Eat this page option, highlighted, on the context menu](eat_from_menu.png)
 
 ## Messaging
 

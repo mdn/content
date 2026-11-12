@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.network
 sidebar: webdriver
 ---
 
-The **`network`** module contains commands and events related to network requests.
+The **`network`** module contains commands and events for monitoring and controlling the browser's network requests and responses.
 
 ## Authentication
 
@@ -26,6 +26,8 @@ If the server rejects the credentials and asks again, you receive another `netwo
 ## Commands
 
 - [`network.continueWithAuth`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueWithAuth)
+- [`network.setCacheBehavior`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/setCacheBehavior)
+- [`network.setExtraHeaders`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/setExtraHeaders)
 
 ## Events
 

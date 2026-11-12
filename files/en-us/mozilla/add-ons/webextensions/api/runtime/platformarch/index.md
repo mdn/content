@@ -13,11 +13,22 @@ The machine's processor architecture.
 Values of this type are strings. Possible values are:
 
 - `"arm"`
-  - : The platform is based on arm architecture.
+  - : The platform is based on the ARM 32-bit architecture. Safari returns this value for the 64-bit architecture.
+- `"arm64"`
+  - : The platform is based on the ARM 64-bit architecture.
+- `"mips"`
+  - : The platform is based on the 32-bit MIPS instruction set architecture (ISA).
+- `"mips64"`
+  - : The platform is based on the 64-bit MIPS instruction set architecture (ISA).
+- `"riscv64"`
+  - : The platform is based on the 64-bit implementation of the RISC-V open-standard instruction set architecture (ISA).
 - `"x86-32"`
-  - : The platform is based on x86 32-bit architecture.
+  - : The platform is based on the x86 32-bit architecture.
 - `"x86-64"`
-  - : The platform is based on x86 64-bit architecture.
+  - : The platform is based on the x86 64-bit architecture.
+
+> [!NOTE]
+> Other values may be used by unofficial builds for other platforms. Where known, these values are documented in the browser compatibility listing.
 
 {{WebExtExamples}}
 

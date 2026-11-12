@@ -27,14 +27,6 @@ The **`:-moz-first-node`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs
 
 ## Examples
 
-### CSS
-
-```css
-span:-moz-first-node {
-  background-color: lime;
-}
-```
-
 ### HTML
 
 ```html
@@ -47,6 +39,14 @@ span:-moz-first-node {
   Blahblah.
   <span>This doesn't match because it's preceded by text.</span>
 </p>
+```
+
+### CSS
+
+```css
+span:-moz-first-node {
+  background-color: lime;
+}
 ```
 
 ### Result

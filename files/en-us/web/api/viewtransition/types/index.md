@@ -34,55 +34,6 @@ The markup includes a single {{htmlelement("p")}} element to contain the content
 </div>
 ```
 
-#### JavaScript
-
-In our script, we create references to the buttons and the content paragraph, and then store our two different pieces of content in two constants.
-
-```js live-sample___basic_usage
-const defaultBtn = document.getElementById("default");
-const slideBtn = document.getElementById("slide");
-const flipBtn = document.getElementById("flip");
-const content = document.querySelector("p");
-
-const first = "This is my first piece of content. I hope you like it!";
-const second =
-  "This is my second piece of content. Is it better than the first?";
-```
-
-Next, we add `click` event listeners to the buttons; when they are clicked, the `changeContent()` function is run.
-
-```js live-sample___basic_usage
-defaultBtn.addEventListener("click", changeContent);
-slideBtn.addEventListener("click", changeContent);
-flipBtn.addEventListener("click", changeContent);
-```
-
-Finally, we define the `changeContent()` function. We start by invoking the {{domxref("Document.startViewTransition", "startViewTransition()")}} method to update the content and start the transition, saving the returned `ViewTransition` object in the `vt` constant. Inside `startViewTransition()`, the `update` callback checks whether the paragraph `textContent` is equal to the `first` string. If so, we set it to the `second` string. If not, we set it to the `first` string.
-
-In the second part of the `changeContent()` function, we check the value of the `click` event target:
-
-- If it is the "Slide" button, we add a `slide` type to the active view transition's types using `vt.types.add("slide")`.
-- If it is the "Flip" button, we add a `flip` type to the active view transition's types using `vt.types.add("flip")`.
-- We don't do anything if the "Default" button was pressed. In this case, we want to use the default view transition cross-fade animation.
-
-```js live-sample___basic_usage
-function changeContent(e) {
-  const vt = document.startViewTransition({
-    update() {
-      content.textContent === first
-        ? (content.textContent = second)
-        : (content.textContent = first);
-    },
-  });
-
-  if (e.target === slideBtn) {
-    vt.types.add("slide");
-  } else if (e.target === flipBtn) {
-    vt.types.add("flip");
-  }
-}
-```
-
 #### CSS
 
 In our styles, we start off by creating a set of nested rules using the `:active-view-transition` pseudo-class. These styles will be applied whenever a view transition is active, regardless of the their types. We apply a {{cssxref("view-transition-name")}} of `none` to the {{cssxref(":root")}}, as we don't want any elements captured and animated on transition except for the `<p>` element, which is given a `view-transition-name` of `content`.
@@ -185,11 +136,60 @@ Finally, we use {{cssxref("@keyframes")}} animation blocks to define the animati
 }
 ```
 
+#### JavaScript
+
+In our script, we create references to the buttons and the content paragraph, and then store our two different pieces of content in two constants.
+
+```js live-sample___basic_usage
+const defaultBtn = document.getElementById("default");
+const slideBtn = document.getElementById("slide");
+const flipBtn = document.getElementById("flip");
+const content = document.querySelector("p");
+
+const first = "This is my first piece of content. I hope you like it!";
+const second =
+  "This is my second piece of content. Is it better than the first?";
+```
+
+Next, we add `click` event listeners to the buttons; when they are clicked, the `changeContent()` function is run.
+
+```js live-sample___basic_usage
+defaultBtn.addEventListener("click", changeContent);
+slideBtn.addEventListener("click", changeContent);
+flipBtn.addEventListener("click", changeContent);
+```
+
+Finally, we define the `changeContent()` function. We start by invoking the {{domxref("Document.startViewTransition", "startViewTransition()")}} method to update the content and start the transition, saving the returned `ViewTransition` object in the `vt` constant. Inside `startViewTransition()`, the `update` callback checks whether the paragraph `textContent` is equal to the `first` string. If so, we set it to the `second` string. If not, we set it to the `first` string.
+
+In the second part of the `changeContent()` function, we check the value of the `click` event target:
+
+- If it is the "Slide" button, we add a `slide` type to the active view transition's types using `vt.types.add("slide")`.
+- If it is the "Flip" button, we add a `flip` type to the active view transition's types using `vt.types.add("flip")`.
+- We don't do anything if the "Default" button was pressed. In this case, we want to use the default view transition cross-fade animation.
+
+```js live-sample___basic_usage
+function changeContent(e) {
+  const vt = document.startViewTransition({
+    update() {
+      content.textContent === first
+        ? (content.textContent = second)
+        : (content.textContent = first);
+    },
+  });
+
+  if (e.target === slideBtn) {
+    vt.types.add("slide");
+  } else if (e.target === flipBtn) {
+    vt.types.add("flip");
+  }
+}
+```
+
 #### Result
 
 The example is rendered like so:
 
-{{EmbedLiveSample("basic-usage", "100%", 200)}}
+{{EmbedLiveSample("basic_usage", "100%", 200)}}
 
 Try clicking each button and note how the DOM changes are identical in each case, but the animation is different. This is because a different transition type is set depending on which button is pressed (or no transition type in the "Default" case).
 

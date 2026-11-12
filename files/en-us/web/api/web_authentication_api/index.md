@@ -75,6 +75,70 @@ To illustrate how the credential creation process works, let's describe the typi
 > [!WARNING]
 > Attestation provides a way for a relying party to determine the provenance of an authenticator. Relying parties should not attempt to maintain allowlists of authenticators.
 
+#### Conditional create
+
+Many websites that want to adopt passkeys will have an existing userbase that uses passwords. These websites could ask users if they want to create a passkey alongside their existing password, but doing so can be an unwelcome interruption for users who are focused on signing in and actually using the site.
+
+With _conditional create_, a website can create a new passkey for a user's account without requiring any user interaction at all, when certain conditions are met.
+
+To request conditional create, a website calls {{domxref("CredentialsContainer.create()")}} to create a new public key credential, setting the [`mediation`](/en-US/docs/Web/API/CredentialsContainer/create#mediation) option to `"conditional"`.
+
+- If the conditions are met, then the browser creates a new public key credential without asking the user. If this is successful, then the browser may use a non-modal UI element to tell the user that the credential was created.
+
+- If the conditions are not met, then the `create()` call rejects with an error, which the website can catch and discard.
+
+The specification allows some leeway for browsers in determining whether the conditions are met. However, as a rule, conditional create is allowed if the user has already created a credential (such as a password) in the credential manager, and has recently used that credential to sign into the site.
+
+The rationale for this is that if the user already trusts the credential manager to manage their account security, then they can trust the credential manager to create a new passkey for them.
+
+This means that the best time for a website to attempt conditional create is immediately after the user has successfully signed in, using a password that was stored in the credential manager.
+
+Note that:
+
+- Before attempting conditional create, a website must abort any existing WebAuthn `create()` or `get()` calls. This applies especially to [conditional get](#autofill_ui), because these calls will wait until their conditions are met.
+- Conditional create is not allowed from a cross-origin iframe: the call will reject with an `NotAllowedError` exception.
+- The {{domxref("AuthenticatorAttestationResponse.attestationObject")}} object returned from the `create()` call will always have the User Presence (UP) [authenticator data](/en-US/docs/Web/API/AuthenticatorAttestationResponse/attestationObject#authdata) flag set to `false`. This means that in the case of conditional creation, the server should not require this flag to be set.
+
+The following code sample shows how a website might use conditional create:
+
+```js
+async function signInWithConditionalCreate() {
+  const accountDetails = await signIn();
+  try {
+    conditionalCreate(accountDetails);
+  } catch (e) {
+    // Conditional create failed: ignore the error
+  }
+}
+
+async function conditionalCreate(account) {
+  const capabilities = await PublicKeyCredential.getClientCapabilities();
+  // Only attempt conditional create if it is supported,
+  // and if the user doesn't already have a passkey
+  if (capabilities.conditionalCreate && !account.hasPasskey) {
+    // Abort any existing WebAuthn calls
+    webAuthnController.abort();
+
+    // Get creation options, including the challenge value from the server
+    const pkOptions = await getNewPasskeyOptions();
+    const credential = await navigator.credentials.create({
+      publicKey: pkOptions,
+      mediation: "conditional",
+    });
+    // Conditional create succeeded: send the new credential to the server
+    // for validation and storage
+    await processNewPasskey(credential);
+  }
+}
+```
+
+Note that the code:
+
+- Attempts conditional create after a successful sign in.
+- Only attempts conditional create if conditional create is supported and the user does not already have a passkey.
+- Aborts any outstanding WebAuthn operations, by calling {{domxref("AbortController.abort", "abort()")}} on the `AbortController` associated with the [`signal`](/en-US/docs/Web/API/CredentialsContainer/get#signal) that was passed into the operation.
+- Attempts conditional create, then processes the new passkey if it is successful, or ignores the error if it isn't.
+
 ### Authenticating a user
 
 After a user has registered with WebAuthn, they can authenticate (login) with the service. The authentication flow looks similar to the registration flow, the main differences being that authentication:
@@ -116,6 +180,51 @@ A typical authentication flow is as follows:
    3. Checking that the Relying Party ID is the one expected for this service.
 
 5. Once verified by the server, the authentication flow is considered successful.
+
+#### Autofill UI
+
+Autofill UI, also sometimes called _conditional get_, is a feature that makes it easier for users to sign in using public key credentials, especially when they also have passwords for the site.
+
+It's expected that websites that adopt passkeys will typically add them alongside existing support for password-based authentication, so a user might, for a given site, have a password, one or more passkeys, or both. In this situation, a UI that asks them which method they want to sign in with can be confusing: they might not remember which method they have for which account. Autofill UI helps with this problem, by inviting users to sign in with a passkey if and only if a suitable passkey is currently available.
+
+To enable autofill UI, the website's sign-in page contains a form, which invites them to sign in. In the field for the username, the website includes an [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) value of "webauthn":
+
+```html
+<input type="text" name="username" autocomplete="username webauthn" />
+```
+
+When the page loads, the website first checks that conditional get is supported, and if it is, makes a call to {{domxref("CredentialsContainer.get()")}}. The call:
+
+- Passes `"conditional"` as the value of the [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option.
+- Omits the [`allowCredentials`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#allowcredentials) option, to indicate that any applicable credentials are acceptable.
+
+```js
+const support = await PublicKeyCredential.getClientCapabilities();
+const supported = support.conditionalGet;
+
+if (supported) {
+  const options = {
+    challenge: challengeFromServer,
+    rpId: "example.com",
+    userVerification: "required",
+    // allowCredentials is omitted here
+  };
+
+  const assertion = await navigator.credentials.get({
+    publicKey: options,
+    mediation: "conditional",
+  });
+}
+```
+
+This will wait until the user has interacted with the username field.
+
+If and when the user does interact with the field, the browser will ask any available authenticators for public key credentials that can be used to sign into this website, and display the associated usernames as autofill options for the user, alongside any saved passwords for the account. If the user selects one of these options, the browser will use that credential to sign the user in.
+
+This essentially enables a website to provide a unified autofill, including both passwords and public key credentials for a single account.
+
+> [!NOTE]
+> Note that only [discoverable credentials](#discoverable_and_non-discoverable_credentials) are included in calls that use conditional get, because the browser needs to request applicable credentials without knowing the credential ID values for them.
 
 ### Discoverable and non-discoverable credentials
 
@@ -161,49 +270,6 @@ Use the [`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#r
 
 > [!NOTE]
 > Note that by definition, [passkeys](/en-US/docs/Web/Security/Authentication/Passkeys) must always be discoverable credentials.
-
-### Autofill UI
-
-Autofill UI, also sometimes called _conditional mediation_, is a feature that makes it easier for users to work with public key credentials, especially when they also have passwords for the site.
-
-It's expected that websites that adopt passkeys will typically add them alongside existing support for password-based authentication, so a user might, for a given site, have a password, one or more passkeys, or both. In this situation, a UI that asks them which method they want to sign in with can be confusing: they might not remember which method they have for which account. Autofill UI helps with this problem, by inviting users to sign in with a passkey if and only if a suitable passkey is currently available.
-
-To enable autofill UI, the website's sign-in page contains a form, which invites them to sign in. In the field for the username, the website includes an [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) value of "webauthn":
-
-```html
-<input type="text" name="username" autocomplete="username webauthn" />
-```
-
-When the page loads, the website first checks that conditional mediation is supported, and if it is, makes a call to {{domxref("CredentialsContainer.get()")}}. The call:
-
-- Passes `"conditional"` as the value of the [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option.
-- Omits the [`allowCredentials`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#allowcredentials) option, to indicate that any applicable credentials are acceptable.
-
-```js
-const supported = await PublicKeyCredential.isConditionalMediationAvailable();
-if (supported) {
-  const options = {
-    challenge: challengeFromServer,
-    rpId: "example.com",
-    userVerification: "required",
-    // allowCredentials is omitted here
-  };
-
-  const assertion = await navigator.credentials.get({
-    publicKey: options,
-    mediation: "conditional",
-  });
-}
-```
-
-This will wait until the user has interacted with the username field.
-
-If and when the user does interact with the field, the browser will ask any available authenticators for public key credentials that can be used to sign into this website, and display the associated usernames as autofill options for the user, alongside any saved passwords for the account. If the user selects one of these options, the browser will use that credential to sign the user in.
-
-This essentially enables a website to provide a unified autofill, including both passwords and public key credentials for a single account.
-
-> [!NOTE]
-> Note that only [discoverable credentials](#discoverable_and_non-discoverable_credentials) are included in calls that use conditional mediation, because the browser needs to request applicable credentials without knowing the credential ID values for them.
 
 ### Discoverable credential synchronization methods
 
