@@ -21,8 +21,6 @@ An `ElementImage` can also be transferred to a [web worker](/en-US/docs/Web/API/
 
 ## Instance methods
 
-_Inherits methods from its parent, {{domxref("Event")}}_.
-
 - {{domxref("ElementImage.close", "close()")}}
   - : Removes an `ElementImage`, freeing up the memory used to store it.
 

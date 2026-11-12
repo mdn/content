@@ -7,7 +7,7 @@ browser-compat: html.elements.canvas.content
 
 {{DefaultAPISidebar("HTML-in-Canvas API")}}
 
-The **HTML-in-Canvas API** allows you to draw DOM subtrees directly into a 2D or 3D canvas context. This enables taking advantage of the high-performance, graphically rich nature of canvas, while the content's DOM representation is retained in the background, meaning that it remains interactive, accessible, and integrated with key browser features such as autocomplete, text selection, find-in-page, and keyboard navigation.
+The **HTML-in-Canvas API** allows you to draw DOM elements directly into a 2D or 3D canvas context. This exploits the high-performance, graphically rich nature of canvas, while the content's DOM representation is retained in the background, meaning that it remains interactive, accessible, and integrated with key browser features such as autocomplete, text selection, find-in-page, and keyboard navigation.
 
 ## Concepts and usage
 
@@ -24,7 +24,7 @@ To prepare DOM content to be rendered on a canvas, you first need to place it be
 </canvas>
 ```
 
-Each context type comes with a feature to draw `drawable` DOM trees onto the context. For example, the {{domxref("CanvasRenderingContext2D.drawElementImage()")}} method takes an element reference and various other arguments to declare where and how it should be drawn. The simplest version takes `x` and `y` coordinates that define where the top-left corner of the element should be placed:
+Each canvas context type (except `bitmaprenderer`) comes with a feature to draw `drawable` DOM trees onto the context. For example, the {{domxref("CanvasRenderingContext2D.drawElementImage()")}} method takes an element reference and various other arguments to declare where and how it should be drawn. The simplest version takes `x` and `y` coordinates that define where the top-left corner of the element should be placed:
 
 ```js
 const canvas = document.querySelector("canvas");
@@ -42,7 +42,7 @@ In 3D contexts, the elements are uploaded/drawn into textures to be used inside 
 
 Other features include:
 
-- The {{domxref("HTMLCanvasElement.getElementImageDefaultSize()")}} method, which returns the element's initial rendered size. This is useful if you want to re-render the element at a size relative to its default size, or preallocate texture storage, for example.
+- The {{domxref("HTMLCanvasElement.getElementImageDefaultSize()")}} method, which returns the element's default rendered size. This is useful if you want to re-render the element at a size relative to its default size, or preallocate texture storage, for example.
 - The {{domxref("HTMLCanvasElement.requestPaint()")}} method, which schedules a single `paint` event even if no repaints occurred, useful for example if you want to move an element around the canvas when its state hasn't changed.
 - The {{domxref("HTMLCanvasElement.updateElementGeometry()")}} method, which updates the size, shape, and position of a rendered element's underlying DOM presence, for example so you can still click a rendered {{htmlelement("button")}} after the canvas rendering has moved.
 
@@ -88,7 +88,7 @@ canvas.addEventListener("paint", () => {
 ## Interfaces
 
 - {{domxref("CanvasPaintEvent")}}
-  - : Event object for the {{domxref("HTMLCanvasElement.paint_event", "paint")}} event, which fires when `drawable` elements have been repainted.
+  - : Event object for the {{domxref("HTMLCanvasElement.paint_event", "paint")}} event, which fires when `drawable` elements have been updated and require redrawing to display the changes.
 - {{domxref("ElementGeometryUpdateEvent")}}
   - : Event object for the {{domxref("HTMLCanvasElement.elementgeometryupdate_event", "elementgeometryupdate")}} event, which fires when `drawable` element geometry has been updated via an {{domxref("OffscreenCanvas")}}.
 - {{domxref("ElementImage")}}
@@ -103,20 +103,20 @@ canvas.addEventListener("paint", () => {
 - {{domxref("HTMLCanvasElement.captureElementImage()")}}
   - : Captures a snapshot of a `drawable` element's current rendered state, which can be rendered later on.
 - {{domxref("HTMLCanvasElement.updateElementGeometry()")}}
-  - : Supplies a {{domxref("DOMMatrix")}} that updates the size, shape, and position of a `drawable` element's underlying DOM presence so that it can be kept in sync with the canvas rendering as it updates for hit testing purposes.
+  - : Supplies a {{domxref("DOMMatrix")}} that updates the size, shape, and position of a `drawable` element (or {{domxref("ElementImage")}})'s underlying DOM presence so that it can be kept in sync with the canvas rendering as it updates for hit testing purposes.
 - {{domxref("HTMLCanvasElement.clearElementGeometry()")}}
-  - : Clears any previous `DOMMatrix` applied to a `drawable` element's underlying DOM presence, returning it to its original size, shape, and position.
+  - : Clears any previous `DOMMatrix` applied to a `drawable` element (or {{domxref("ElementImage")}})'s underlying DOM presence, returning it to its original size, shape, and position.
 - {{domxref("HTMLCanvasElement.getElementImageDefaultSize()")}}
-  - : Returns an object containing an element's original size as it would be rendered in the DOM. The returned size is in canvas units.
+  - : Returns an object containing the default size, in canvas units, of an element (or {{domxref("ElementImage")}}) when drawn with {{domxref("CanvasRenderingContext2D.drawElementImage", "drawElementImage()")}} (specifying no destination size).
 - {{domxref("HTMLCanvasElement.getElementTransform()")}}
-  - : Returns the `DOMMatrix` representing the transform currently applied to a `drawable` element's underlying DOM presence.
+  - : Returns the `DOMMatrix` representing the transform currently applied to a `drawable` element (or {{domxref("ElementImage")}})'s underlying DOM presence.
 - {{domxref("HTMLCanvasElement.requestPaint()")}}
   - : Schedules a single {{domxref("HTMLCanvasElement.paint_event", "paint")}} event even if no repaints occurred.
 
 #### Events
 
 - {{domxref("HTMLCanvasElement.paint_event", "paint")}}
-  - : Fired when `drawable` elements have been repainted.
+  - : Fired when `drawable` elements have been updated and require redrawing to display the changes.
 - {{domxref("HTMLCanvasElement.elementgeometryupdate_event", "elementgeometryupdate")}}
   - : Fired when `drawable` element geometry has been updated via an {{domxref("OffscreenCanvas")}}.
 
@@ -128,11 +128,11 @@ canvas.addEventListener("paint", () => {
 ### `OffscreenCanvas`
 
 - {{domxref("OffscreenCanvas.updateElementGeometry()")}}
-  - : Supplies a {{domxref("DOMMatrix")}} that updates the size, shape, and position of a `drawable` element's underlying DOM presence, once it has been transferred to an offscreen canvas.
+  - : Supplies a {{domxref("DOMMatrix")}} that updates the size, shape, and position of a `drawable` element (or {{domxref("ElementImage")}})'s underlying DOM presence, once it has been transferred to an offscreen canvas.
 - {{domxref("OffscreenCanvas.clearElementGeometry()")}}
-  - : Clears any previous `DOMMatrix` applied to a `drawable` element's underlying DOM presence, once it has been transferred to an offscreen canvas.
+  - : Clears any previous `DOMMatrix` applied to a `drawable` element (or {{domxref("ElementImage")}})'s underlying DOM presence, once it has been transferred to an offscreen canvas.
 - {{domxref("OffscreenCanvas.getElementImageDefaultSize()")}}
-  - : Returns an object containing a `drawable` element's original size as it would be rendered in the DOM, once it has been transferred to an offscreen canvas.
+  - : Returns an object containing the default size, in canvas units, of an element (or {{domxref("ElementImage")}}), once it has been drawn to an offscreen canvas.
 
 ### 2D canvas context
 

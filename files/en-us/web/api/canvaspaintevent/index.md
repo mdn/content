@@ -7,7 +7,7 @@ browser-compat: api.CanvasPaintEvent
 
 {{APIRef("HTML-in-Canvas API")}}
 
-The **`CanvasPaintEvent`** interface is the event object for the {{domxref("HTMLCanvasElement.paint_event", "paint")}} event, which fires when [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) elements have been repainted.
+The **`CanvasPaintEvent`** interface is the event object for the {{domxref("HTMLCanvasElement.paint_event", "paint")}} event, which fires when [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) elements have been updated and require redrawing to display the changes.
 
 {{InheritanceDiagram}}
 

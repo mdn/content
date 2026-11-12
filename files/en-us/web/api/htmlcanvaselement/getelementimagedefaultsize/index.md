@@ -8,7 +8,7 @@ browser-compat: api.HTMLCanvasElement.getElementImageDefaultSize
 
 {{APIRef("Canvas API")}}
 
-The **`getElementImageDefaultSize()`** method of the {{domxref("HTMLCanvasElement")}} interface returns an object containing an element's original size as it would be rendered in the DOM, once rendered using the [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API). The returned size is in canvas units.
+The **`getElementImageDefaultSize()`** method of the {{domxref("HTMLCanvasElement")}} interface returns an object containing the default size, in canvas units, of an element (or {{domxref("ElementImage")}}) when drawn with {{domxref("CanvasRenderingContext2D.drawElementImage", "drawElementImage()")}} (specifying no destination size).
 
 ## Syntax
 
@@ -26,9 +26,12 @@ getElementImageDefaultSize(element)
 An object containing the following properties:
 
 - `height`
-  - : The initial rendered height of the element, in canvas units.
+  - : The default height of the element, in canvas units.
 - `width`
-  - : The initial rendered width of the element, in canvas units.
+  - : The default width of the element, in canvas units.
+
+> [!NOTE]
+> These are live values that will change if, for example, the canvas resolution changes.
 
 ### Exceptions
 

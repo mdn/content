@@ -8,7 +8,7 @@ browser-compat: api.HTMLCanvasElement.paint_event
 
 {{APIRef("Canvas API")}}
 
-The **`paint`** event of the [Canvas API](/en-US/docs/Web/API/Canvas_API) is fired when [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) elements have been repainted.
+The **`paint`** event of the [Canvas API](/en-US/docs/Web/API/Canvas_API) is fired when [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) elements have been updated and require redrawing to display the changes.
 
 ## Syntax
 

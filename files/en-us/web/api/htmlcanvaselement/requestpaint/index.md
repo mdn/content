@@ -8,9 +8,9 @@ browser-compat: api.HTMLCanvasElement.requestPaint
 
 {{APIRef("Canvas API")}}
 
-The **`requestPaint()`** method of the {{domxref("HTMLCanvasElement")}} schedules a single {{domxref("HTMLCanvasElement.paint_event", "paint")}} event even if no repaints occurred, when rendering elements on a {{htmlelement("canvas")}} using the [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API).
+The **`requestPaint()`** method of the {{domxref("HTMLCanvasElement")}} schedules a single {{domxref("HTMLCanvasElement.paint_event", "paint")}} event even if no repaints occurred, when rendering elements on a {{htmlelement("canvas")}} using the [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API). This can be useful for example if you want to redraw the element at a different size on the `<canvas>` without changing its rendered DOM state.
 
-This can be useful for example if you want to redraw the element at a different size on the `<canvas>` without changing its rendered DOM state.
+The `requestPaint()` method and the `paint` event operate similarly to {{domxref("window.requestAnimationFrame", "requestAnimationFrame()")}}, although the `requestAnimationFrame()` callback is invoked at the start of the document lifecycle, and the `paint` event is fired at the end.
 
 ## Syntax
 

@@ -49,11 +49,11 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLCanvasElement.captureElementImage()")}}
   - : Captures a snapshot of a [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) element's current rendered state, which can be rendered later on.
 - {{domxref("HTMLCanvasElement.updateElementGeometry()")}}
-  - : Supplies a {{domxref("DOMMatrix")}} that updates the size, shape, and position of a `drawable` element's underlying DOM presence so that it can be kept in sync with the canvas rendering as it updates for hit testing purposes.
+  - : Supplies a {{domxref("DOMMatrix")}} that updates the size, shape, and position of a `drawable` element (or {{domxref("ElementImage")}})'s underlying DOM presence so that it can be kept in sync with the canvas rendering as it updates for hit testing purposes.
 - {{domxref("HTMLCanvasElement.clearElementGeometry()")}}
-  - : Clears any previous `DOMMatrix` applied to a `drawable` element's underlying DOM presence, returning it to its original size, shape, and position.
+  - : Clears any previous `DOMMatrix` applied to a `drawable` element (or {{domxref("ElementImage")}})'s underlying DOM presence, returning it to its original size, shape, and position.
 - {{domxref("HTMLCanvasElement.getElementImageDefaultSize()")}}
-  - : Returns an object containing an element's original size as it would be rendered in the DOM. The returned size is in canvas units.
+  - : Returns an object containing the default size, in canvas units, of an element (or {{domxref("ElementImage")}}) when drawn with {{domxref("CanvasRenderingContext2D.drawElementImage", "drawElementImage()")}} (specifying no destination size).
 - {{domxref("HTMLCanvasElement.getElementTransform()")}}
   - : Returns the `DOMMatrix` representing the transform currently applied to a `drawable` element's underlying DOM presence.
 - {{domxref("HTMLCanvasElement.requestPaint()")}}
@@ -79,7 +79,7 @@ Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEvent
 ### HTML-in-Canvas events
 
 - {{domxref("HTMLCanvasElement.paint_event", "paint")}}
-  - : Fired when `drawable` elements have been repainted.
+  - : Fired when `drawable` elements have been updated and require redrawing to display the changes.
 - {{domxref("HTMLCanvasElement.elementgeometryupdate_event", "elementgeometryupdate")}}
   - : Fired when `drawable` element geometry has been updated via an {{domxref("OffscreenCanvas")}}.
 
