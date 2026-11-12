@@ -11,7 +11,7 @@ browser-compat: api.WebTransport.exportKeyingMaterial
 {{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`exportKeyingMaterial()`** method of the {{domxref("WebTransport")}} interface returns a {{jsxref("Promise")}} that fulfills with keying material derived from the {{Glossary("TLS")}} session underlying the transport's connection.
-This can be used to bind application-level authentication to the specific connection, for example to detect {{Glossary("MitM", "manipulator-in-the-middle")}} attacks when connecting to a peer that uses a self-signed certificate.
+This can be used to bind application-level authentication to the specific connection, for example to detect {{Glossary("MitM", "manipulator-in-the-middle")}} (MitM) attacks when connecting to a peer that uses a self-signed certificate.
 
 ## Syntax
 
@@ -71,8 +71,8 @@ An attacker who substitutes a false hash during peer discovery can trick each si
 The attacker then relays messages between them.
 
 To detect this attack, an application can run a secondary handshake over one of the connection's ordinary (TLS-protected) streams.
-The handshake authenticates the peer's identity, with the exported keying material as a channel-binding value.
-If both ends are directly connected by a single TLS connection, they will have a unique shared master secret generated as part of key exchange, and hence export the same keying material.
+The handshake authenticates the peer's identity using the exported keying material as a channel-binding value.
+If both ends are directly connected by a single TLS connection, they share a unique master secret generated during key exchange, so they export the same keying material.
 
 Each peer proves its identity by signing the exported keying material with its identity private key, and sending that signature along with the matching public key.
 An attacker can't spoof the signature, because it doesn't have either peer's private key.
@@ -139,4 +139,4 @@ async function signTokenForConnection(transport, token) {
 - {{domxref("WebTransport.WebTransport", "WebTransport()")}} constructor
 - {{domxref("SubtleCrypto.importKey()")}}
 - {{domxref("SubtleCrypto.sign()")}}
-- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
+- [How to use WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport), Chrome for Developers
