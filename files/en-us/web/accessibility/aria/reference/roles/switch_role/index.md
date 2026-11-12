@@ -105,26 +105,6 @@ A switch is implemented as a {{HTMLElement("button")}} element, which is initial
 <label for="speakerPower" class="switch">Speaker power</label>
 ```
 
-#### JavaScript
-
-This JavaScript code defines and applies a function to handle click events on switch widgets. The function changes the `aria-checked` attribute from `true` to `false`, or vice versa.
-
-```js
-document.querySelectorAll(".switch").forEach((theSwitch) => {
-  theSwitch.addEventListener("click", handleClickEvent);
-});
-
-function handleClickEvent(evt) {
-  const el = evt.target;
-
-  if (el.getAttribute("aria-checked") === "true") {
-    el.setAttribute("aria-checked", "false");
-  } else {
-    el.setAttribute("aria-checked", "true");
-  }
-}
-```
-
 #### CSS
 
 The purpose of the CSS is to establish a look and feel for the switch that's reminiscent of the power switch paradigm.
@@ -174,6 +154,26 @@ label.switch {
 ```
 
 The most interesting part is probably the use of attribute selectors and the {{cssxref(":first-child")}} and {{cssxref(":last-child")}} pseudo-classes to do all the heavy lifting of changing the appearance of the switch based on whether it's on or off.
+
+#### JavaScript
+
+This JavaScript code defines and applies a function to handle click events on switch widgets. The function changes the `aria-checked` attribute from `true` to `false`, or vice versa.
+
+```js
+document.querySelectorAll(".switch").forEach((theSwitch) => {
+  theSwitch.addEventListener("click", handleClickEvent);
+});
+
+function handleClickEvent(evt) {
+  const el = evt.target;
+
+  if (el.getAttribute("aria-checked") === "true") {
+    el.setAttribute("aria-checked", "false");
+  } else {
+    el.setAttribute("aria-checked", "true");
+  }
+}
+```
 
 #### Result
 

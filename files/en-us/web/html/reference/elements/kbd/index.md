@@ -100,7 +100,18 @@ The output looks like this without a style sheet applied:
 
 #### With custom styles
 
-We can make more sense of this by adding some CSS:
+We can make more sense of this by adding some CSS.
+
+##### HTML
+
+We nest `<kbd>` elements to mark up individual keys within the keyboard shortcut:
+
+```html
+<p>
+  You can also create a new document by pressing the
+  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd> shortcut.
+</p>
+```
 
 ##### CSS
 
@@ -112,17 +123,6 @@ kbd > kbd {
   padding: 1px 2px 0;
   border: 1px solid black;
 }
-```
-
-##### HTML
-
-Then we update the HTML to use this class on the keys in the output to be presented:
-
-```html
-<p>
-  You can also create a new document by pressing the
-  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd> shortcut.
-</p>
 ```
 
 ##### Result

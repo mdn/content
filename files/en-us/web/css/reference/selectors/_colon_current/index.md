@@ -139,14 +139,6 @@ Try using the browser's find in page interface to find a word that appears multi
 
 ### Styling currently-shown WebVTT subtitles
 
-#### CSS
-
-```css
-:current(p, span) {
-  background-color: yellow;
-}
-```
-
 #### HTML
 
 ```html
@@ -160,6 +152,14 @@ Try using the browser's find in page interface to find a word that appears multi
     src="subtitles.vtt"
     default />
 </video>
+```
+
+#### CSS
+
+```css
+:current(p, span) {
+  background-color: yellow;
+}
 ```
 
 #### WebVTT

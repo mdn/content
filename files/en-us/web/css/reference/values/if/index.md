@@ -467,20 +467,7 @@ Our HTML contains an {{htmlelement("article")}} element with some content inside
 </form>
 ```
 
-### JavaScript
-
-Our JavaScript adds a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event listener to the `<select>` element. When a new value is selected, our script sets the `<article>` element's [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) attribute to equal that value.
-
-```js live-sample___color-scheme
-const articleElem = document.querySelector("article");
-const selectElem = document.querySelector("select");
-
-selectElem.addEventListener("change", () => {
-  articleElem.className = selectElem.value;
-});
-```
-
-### CSS
+#### CSS
 
 In our CSS, we give the `<body>` element a {{cssxref("max-width")}} of `700px` and center it using `auto` {{cssxref("margin")}} values. However, we use an `if()` function with a media query `<if-test>` to set the {{cssxref("margin-top")}} component inside the `margin` shorthand to `0` if the viewport's width is less than `700px`, and `20px` if it is wider. This means that on wide screens we get a bit of margin at the top of the content, but this is removed on narrow screens, where it looks a bit weird.
 
@@ -586,6 +573,19 @@ h1::before {
     else: "";
   );
 }
+```
+
+#### JavaScript
+
+Our JavaScript adds a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event listener to the `<select>` element. When a new value is selected, our script sets the `<article>` element's [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) attribute to equal that value.
+
+```js live-sample___color-scheme
+const articleElem = document.querySelector("article");
+const selectElem = document.querySelector("select");
+
+selectElem.addEventListener("change", () => {
+  articleElem.className = selectElem.value;
+});
 ```
 
 #### Result

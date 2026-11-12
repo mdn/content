@@ -88,6 +88,27 @@ Additionally, the `:state()` pseudo-class can be used after the {{cssxref("::par
 This example, which is adapted from the specification, demonstrates a custom checkbox element that has an internal "checked" state.
 This is mapped to the `checked` custom state, allowing styling to be applied using the `:state(checked)` custom state pseudo class.
 
+#### HTML
+
+The HTML uses the custom element that the JavaScript below registers:
+
+```html
+<labeled-checkbox>You need to check this</labeled-checkbox>
+```
+
+#### CSS
+
+We use the `:state(checked)` custom state pseudo class to select CSS for when the box is checked.
+
+```css
+labeled-checkbox {
+  border: dashed red;
+}
+labeled-checkbox:state(checked) {
+  border: solid;
+}
+```
+
 #### JavaScript
 
 First we define our class `LabeledCheckbox` which extends from `HTMLElement`.
@@ -175,27 +196,6 @@ We then call the {{domxref("CustomElementRegistry/define", "define()")}} method 
 customElements.define("labeled-checkbox", LabeledCheckbox);
 ```
 
-#### HTML
-
-After registering the custom element we can use the element in HTML as shown:
-
-```html
-<labeled-checkbox>You need to check this</labeled-checkbox>
-```
-
-#### CSS
-
-Finally we use the `:state(checked)` custom state pseudo class to select CSS for when the box is checked.
-
-```css
-labeled-checkbox {
-  border: dashed red;
-}
-labeled-checkbox:state(checked) {
-  border: solid;
-}
-```
-
 #### Result
 
 Click the element to see a different border being applied as the checkbox `checked` state is toggled.
@@ -209,6 +209,37 @@ Shadow parts are sections of the shadow tree that are intentionally exposed to p
 
 The example creates a `<question-box>` custom element that displays a question prompt along with a checkbox labeled "Yes".
 The element uses the `<labeled-checkbox>` defined in the [previous example](#matching_the_custom_state_of_a_custom_checkbox_element) for the checkbox.
+
+#### HTML
+
+The HTML uses the custom element that the JavaScript below registers.
+
+```html
+<!-- Question box with default prompt "Question" -->
+<question-box></question-box>
+
+<!-- Question box with custom prompt "Continue?" -->
+<question-box>Continue?</question-box>
+```
+
+#### CSS
+
+The first block of CSS matches the exposed shadow part named `checkbox` using the {{cssxref("::part()")}} selector, styling it to be `red` by default.
+
+```css
+question-box::part(checkbox) {
+  color: red;
+}
+```
+
+The second block follows `::part()` with `:state()`, in order to match `checkbox` parts that are in the `checked` state:
+
+```css
+question-box::part(checkbox):state(checked) {
+  color: green;
+  outline: dashed 1px green;
+}
+```
 
 #### JavaScript
 
@@ -306,37 +337,6 @@ Next, we call the {{domxref("CustomElementRegistry/define", "define()")}} method
 customElements.define("question-box", QuestionBox);
 ```
 
-#### HTML
-
-After registering the custom element, we can use the element in HTML as shown below.
-
-```html
-<!-- Question box with default prompt "Question" -->
-<question-box></question-box>
-
-<!-- Question box with custom prompt "Continue?" -->
-<question-box>Continue?</question-box>
-```
-
-#### CSS
-
-The first block of CSS matches the exposed shadow part named `checkbox` using the {{cssxref("::part()")}} selector, styling it to be `red` by default.
-
-```css
-question-box::part(checkbox) {
-  color: red;
-}
-```
-
-The second block follows `::part()` with `:state()`, in order to match `checkbox` parts that are in the `checked` state:
-
-```css
-question-box::part(checkbox):state(checked) {
-  color: green;
-  outline: dashed 1px green;
-}
-```
-
 #### Result
 
 Click either of the checkboxes to see the color change from `red` to `green` with an outline when the `checked` state toggles.
@@ -352,6 +352,32 @@ To make this work, we map each value to its custom state and create code to ensu
 You can see this in the implementation of the `set state()` method: we set the internal state, add the identifier for the matching custom state to `CustomStateSet`, and remove the identifiers associated with all the other values.
 
 Most of the remaining code is similar to the example that demonstrates a single boolean state (we show different text for each state as the user toggles through them).
+
+#### HTML
+
+The HTML uses the custom element that the JavaScript below registers.
+This is similar to the example that demonstrates a single boolean state, except we don't specify a value and use the default value from the slot (`<slot>Click me</slot>`).
+
+```html
+<many-state-element></many-state-element>
+```
+
+#### CSS
+
+In the CSS we use the three custom state pseudo classes to select CSS for each of the internal state values: `:state(loading)`, `:state(interactive)`, `:state(complete)`.
+Note that the custom element code ensures that only one of these custom states can be defined at a time.
+
+```css
+many-state-element:state(loading) {
+  border: dotted grey;
+}
+many-state-element:state(interactive) {
+  border: dashed blue;
+}
+many-state-element:state(complete) {
+  border: solid green;
+}
+```
 
 #### JavaScript
 
@@ -446,32 +472,6 @@ if (!LabeledCheckbox.isStateSyntaxSupported()) {
 }
 ```
 
-#### HTML
-
-After registering the new element we add it to the HTML.
-This is similar to the example that demonstrates a single boolean state, except we don't specify a value and use the default value from the slot (`<slot>Click me</slot>`).
-
-```html
-<many-state-element></many-state-element>
-```
-
-#### CSS
-
-In the CSS we use the three custom state pseudo classes to select CSS for each of the internal state values: `:state(loading)`, `:state(interactive)`, `:state(complete)`.
-Note that the custom element code ensures that only one of these custom states can be defined at a time.
-
-```css
-many-state-element:state(loading) {
-  border: dotted grey;
-}
-many-state-element:state(interactive) {
-  border: dashed blue;
-}
-many-state-element:state(complete) {
-  border: solid green;
-}
-```
-
 #### Results
 
 Click the element to see a different border being applied as the state changes.
@@ -487,6 +487,14 @@ If support for these browsers is required, either use a [try...catch](/en-US/doc
 ### Using a try...catch block
 
 This code shows how you can use `try...catch` to attempt adding a state identifier that does not use a `<dashed-ident>`, and fall back to `<dashed-ident>` if an error is thrown.
+
+#### CSS
+
+```css
+compatible-state-element:is(:--loaded, :state(loaded)) {
+  border: solid green;
+}
+```
 
 #### JavaScript
 
@@ -509,18 +517,18 @@ class CompatibleStateElement extends HTMLElement {
 }
 ```
 
-#### CSS
-
-```css
-compatible-state-element:is(:--loaded, :state(loaded)) {
-  border: solid green;
-}
-```
-
 ### Using double dash prefixed idents
 
 An alternative solution can be to use the `<dashed-ident>` within JavaScript.
 The downside to this approach is that the dashes must be included when using the CSS `:state()` syntax.
+
+#### CSS
+
+```css
+compatible-state-element:is(:--loaded, :state(--loaded)) {
+  border: solid green;
+}
+```
 
 #### JavaScript
 
@@ -535,14 +543,6 @@ class CompatibleStateElement extends HTMLElement {
     // legacy syntax, but works with the modern syntax
     this._internals.states.add("--loaded");
   }
-}
-```
-
-#### CSS
-
-```css
-compatible-state-element:is(:--loaded, :state(--loaded)) {
-  border: solid green;
 }
 ```
 

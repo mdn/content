@@ -65,6 +65,14 @@ Not only can the user override the behavior, but each user agent is allowed to d
 In this example, a box is shown which uses a {{cssxref("background-image")}} and a translucent {{cssxref("gradient/linear-gradient", "linear-gradient()")}} function atop a black background color to have a dark blue gradient behind medium red text.
 For whatever reason, this is the desired appearance in any rendering environment, including on paper, so we also use `print-color-adjust: exact` to tell the browser not to make color or style adjustments to the box when rendering it.
 
+#### HTML
+
+```html
+<div class="my-box">
+  <p>Need more contrast!</p>
+</div>
+```
+
 #### CSS
 
 ```css
@@ -83,14 +91,6 @@ For whatever reason, this is the desired appearance in any rendering environment
   justify-content: center;
   print-color-adjust: exact;
 }
-```
-
-#### HTML
-
-```html
-<div class="my-box">
-  <p>Need more contrast!</p>
-</div>
 ```
 
 #### Result

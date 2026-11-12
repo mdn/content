@@ -320,52 +320,6 @@ This example contains a button which, when pressed, appends new elements to a {{
 <section></section>
 ```
 
-#### JavaScript
-
-JavaScript enables the addition and removal of elements:
-
-```js
-const btn = document.querySelector("button");
-const sectionElem = document.querySelector("section");
-
-btn.addEventListener("click", createColumn);
-
-function randomBackground() {
-  function randomNum() {
-    return Math.floor(Math.random() * 255);
-  }
-  const baseColor = `${randomNum()} ${randomNum()} ${randomNum()}`;
-
-  return `linear-gradient(to right, rgb(${baseColor} / 0), rgb(${baseColor} / 0.5))`;
-}
-
-function createColumn() {
-  const divElem = document.createElement("div");
-  divElem.style.background = randomBackground();
-
-  const closeBtn = document.createElement("button");
-  closeBtn.textContent = "✖";
-  closeBtn.setAttribute("aria-label", "close");
-  divElem.append(closeBtn);
-  sectionElem.append(divElem);
-
-  closeBtn.addEventListener("click", () => {
-    divElem.classList.add("fade-out");
-
-    setTimeout(() => {
-      divElem.remove();
-    }, 1000);
-  });
-}
-```
-
-When the "Create new column" button is clicked, the `createColumn()` function is called. This creates a {{htmlelement("div")}} element with a randomly generated background color and a {{htmlelement("button")}} element to close the `<div>`. It then appends the `<button>` to the `<div>` and the `<div>` to the `<section>` container.
-
-We then add an event listener to the close button via {{domxref("EventTarget.addEventListener", "addEventListener()")}}. Clicking the close button does two things:
-
-- Adds the `fade-out` class to the `<div>`. Adding the class triggers the exit animation set on that class.
-- Removes the `<div>` after a 1000ms delay. The {{domxref("Window.setTimeout", "setTimeout()")}} delays removal of the `<div>` from the DOM (via {{domxref("Element.remove()")}}) until after the animation ends.
-
 #### CSS
 
 We include a {{cssxref("transition")}} that animates the {{cssxref("opacity")}} and {{cssxref("scale")}} of each column as they are added and removed:
@@ -446,6 +400,52 @@ To animate the {{cssxref("opacity")}} and {{cssxref("scale")}} of each `<div>` a
 - Specify the starting state from which to transition the properties inside a `@starting-style` block.
 - Specify the exit animation inside the `.fade-out` rule — this is the class that the JavaScript assigns to the `<div>` elements when their close buttons are pressed. Besides setting the `opacity` and `scale` ending states, we also set [`display: none`](/en-US/docs/Web/CSS/Reference/Properties/display) on the `<div>`s — we want them to become immediately unavailable when removed from the UI.
 - Specify the {{cssxref("transition")}} list inside the `div { ... }` rule to animate `opacity`, `scale`, and `display`. Note that for `display`, the {{cssxref("transition-behavior", "transition-behavior: allow-discrete")}} value is also set in the shorthand so that it will animate.
+
+#### JavaScript
+
+JavaScript enables the addition and removal of elements:
+
+```js
+const btn = document.querySelector("button");
+const sectionElem = document.querySelector("section");
+
+btn.addEventListener("click", createColumn);
+
+function randomBackground() {
+  function randomNum() {
+    return Math.floor(Math.random() * 255);
+  }
+  const baseColor = `${randomNum()} ${randomNum()} ${randomNum()}`;
+
+  return `linear-gradient(to right, rgb(${baseColor} / 0), rgb(${baseColor} / 0.5))`;
+}
+
+function createColumn() {
+  const divElem = document.createElement("div");
+  divElem.style.background = randomBackground();
+
+  const closeBtn = document.createElement("button");
+  closeBtn.textContent = "✖";
+  closeBtn.setAttribute("aria-label", "close");
+  divElem.append(closeBtn);
+  sectionElem.append(divElem);
+
+  closeBtn.addEventListener("click", () => {
+    divElem.classList.add("fade-out");
+
+    setTimeout(() => {
+      divElem.remove();
+    }, 1000);
+  });
+}
+```
+
+When the "Create new column" button is clicked, the `createColumn()` function is called. This creates a {{htmlelement("div")}} element with a randomly generated background color and a {{htmlelement("button")}} element to close the `<div>`. It then appends the `<button>` to the `<div>` and the `<div>` to the `<section>` container.
+
+We then add an event listener to the close button via {{domxref("EventTarget.addEventListener", "addEventListener()")}}. Clicking the close button does two things:
+
+- Adds the `fade-out` class to the `<div>`. Adding the class triggers the exit animation set on that class.
+- Removes the `<div>` after a 1000ms delay. The {{domxref("Window.setTimeout", "setTimeout()")}} delays removal of the `<div>` from the DOM (via {{domxref("Element.remove()")}}) until after the animation ends.
 
 #### Result
 
