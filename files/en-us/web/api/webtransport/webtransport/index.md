@@ -42,7 +42,7 @@ new WebTransport(url, options)
         Reading into your own buffer lets you reuse the same memory for every datagram, instead of the browser allocating new memory for each one.
         This is most useful when an application receives datagrams at a high rate, for example to deliver frequent game state or sensor updates.
 
-        Unless you use the `min` option, each read returns one datagram.
+        Unless you use the {{domxref("ReadableStreamBYOBReader.read#min", "min")}} option, each read returns one datagram.
         If the supplied buffer is smaller than the datagram, the stream is errored, and the pending {{domxref("ReadableStreamBYOBReader.read()", "read()")}} rejects with a {{jsxref("RangeError")}}.
         To avoid this, use a buffer of at least 64 KiB (65536 bytes), which is the recommended maximum size of the {{Glossary("QUIC")}} frames that carry datagrams.
         Use a {{jsxref("Uint8Array")}} as the view passed to `read()`: a {{jsxref("DataView")}} or a typed array with multi-byte elements errors the stream, and `read()` rejects with a {{jsxref("TypeError")}}.
