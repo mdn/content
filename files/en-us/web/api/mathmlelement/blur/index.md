@@ -63,7 +63,7 @@ blurButton.addEventListener("click", () => {
 
 ### Result
 
-{{EmbedLiveSample("blur",100,100)}}
+{{EmbedLiveSample("remove_focus_from_a_mathml_element",100,100)}}
 
 ## Specifications
 

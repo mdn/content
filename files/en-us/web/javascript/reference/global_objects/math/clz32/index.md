@@ -166,7 +166,7 @@ const { ctrz, ctron } = countTrailsMethods;
 
 ## See also
 
-- [Polyfill of `Math.clz32` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.clz32` in `core-js`](https://core-js.io/docs/features/ecmascript/math)
 - [es-shims polyfill of `Math.clz32`](https://www.npmjs.com/package/math.clz32)
 - {{jsxref("Math")}}
 - {{jsxref("Math.imul")}}

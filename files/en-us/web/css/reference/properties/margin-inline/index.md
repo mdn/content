@@ -113,6 +113,17 @@ The `margin-inline` property takes the same values as the {{CSSxRef("margin-top"
 
 ### Setting inline start and end margins
 
+#### HTML
+
+```html
+<div>
+  <p>Example text</p>
+</div>
+<div class="verticalExample">
+  <p>Example text</p>
+</div>
+```
+
 #### CSS
 
 ```css
@@ -132,17 +143,6 @@ p {
 .verticalExample {
   writing-mode: vertical-rl;
 }
-```
-
-#### HTML
-
-```html
-<div>
-  <p>Example text</p>
-</div>
-<div class="verticalExample">
-  <p>Example text</p>
-</div>
 ```
 
 #### Result

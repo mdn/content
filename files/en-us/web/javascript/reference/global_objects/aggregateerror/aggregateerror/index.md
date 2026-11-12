@@ -61,6 +61,6 @@ try {
 
 ## See also
 
-- [Polyfill of `AggregateError` in `core-js`](https://github.com/zloirock/core-js#ecmascript-error)
+- [Polyfill of `AggregateError` in `core-js`](https://core-js.io/docs/features/ecmascript/error)
 - [es-shims polyfill of `AggregateError`](https://www.npmjs.com/package/es-aggregate-error)
 - {{jsxref("Promise.any")}}

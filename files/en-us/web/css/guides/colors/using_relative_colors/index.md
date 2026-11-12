@@ -332,7 +332,7 @@ The alpha channel is referenced using the `alpha` keyword. In this case, the `ca
 
 The output is as follows:
 
-{{ EmbedLiveSample("Manipulating alpha channel", "100%", "200") }}
+{{ EmbedLiveSample("manipulating_the_alpha_channel", "100%", "200") }}
 
 ## Channel values resolve to `<number>` values
 

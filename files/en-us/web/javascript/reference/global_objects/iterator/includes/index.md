@@ -105,6 +105,7 @@ If `fromIndex` is greater than or equal to the elements available, `false` is re
 
 ## See also
 
+- [Polyfill of `Iterator.prototype.includes` in `core-js`](https://core-js.io/docs/features/ecmascript/iterator)
 - [es-shims polyfill of `Iterator.prototype.includes`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.every()")}}

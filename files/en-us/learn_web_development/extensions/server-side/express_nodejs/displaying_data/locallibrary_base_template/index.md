@@ -5,9 +5,11 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
+
 Now that we understand how to extend templates using Pug, let's start by creating a base template for the project. This will have a sidebar with links for the pages we hope to create across the tutorial articles (e.g., to display and create books, genres, authors, etc.) and a main content area that we'll override in each of our individual pages.
 
-Open **/views/layout.pug** and replace the content with the code below.
+Open **views/layout.pug** and replace the content with the code below.
 
 ```pug
 doctype html
@@ -15,7 +17,7 @@ html(lang='en')
   head
     title= title
     meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css", integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr", crossorigin="anonymous")
     script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js", integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q", crossorigin="anonymous")
     link(rel='stylesheet', href='/stylesheets/style.css')
@@ -58,7 +60,7 @@ The template uses (and includes) JavaScript and CSS from [Bootstrap](https://get
 
 The layout should be fairly obvious if you've read our above [Template primer](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer). Note the use of `block content` as a placeholder for where the content for our individual pages will be placed.
 
-The base template also references a local CSS file (**style.css**) that provides a little additional styling. Open **/public/stylesheets/style.css** and replace its content with the following CSS code:
+The base template also references a local CSS file (**style.css**) that provides a little additional styling. Open **public/stylesheets/style.css** (which has been an empty file) and add the following:
 
 ```css
 .sidebar-nav {
@@ -70,7 +72,4 @@ The base template also references a local CSS file (**style.css**) that provides
 
 Now we have a base template for creating pages with a sidebar. In the next sections we will use it to define the individual pages.
 
-## Next steps
-
-- Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [Home page](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page).
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}

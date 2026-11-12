@@ -217,7 +217,7 @@ p {
 
 #### Results
 
-{{EmbedLiveSample("Using_the_fallback_value", "350px", "250px")}}
+{{EmbedLiveSample("using_a_fallback_value", "350px", "250px")}}
 
 ### Using env() to ensure content is not obscured by window control buttons in desktop PWAs
 

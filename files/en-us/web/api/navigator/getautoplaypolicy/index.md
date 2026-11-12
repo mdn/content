@@ -212,7 +212,7 @@ The video is displayed below along with information about whether the `getAutopl
 If `getAutoplayPolicy()` is supported and the policy is `allowed`, the video will play automatically with sound.
 If the policy is `allowed-muted`, the video will play without sound.
 
-{{EmbedLiveSample('Test autoplay policy for media elements', '', '400')}}
+{{EmbedLiveSample('test_autoplay_policy_for_media_element_type', '', '400')}}
 
 Note that if `getAutoplayPolicy()` is not supported, the video will either autoplay with audio or not play.
 The code has no control over this behavior: you're at the mercy of the browser implementation!

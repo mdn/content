@@ -7,8 +7,8 @@ browser-compat: http.headers.Origin-Agent-Cluster
 sidebar: http
 ---
 
-The HTTP **`Origin-Agent-Cluster`** {{Glossary("response header")}} is used to request that the associated {{domxref("Document")}} should be placed in an origin-keyed [agent cluster](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing).
-This means that operating system resources (for example, the operating system process) used to evaluate the document should be shared only with other documents from the same {{glossary("origin")}}.
+The HTTP **`Origin-Agent-Cluster`** {{Glossary("response header")}} is used to request whether the associated {{domxref("Document")}} should be placed in an origin-keyed or site-keyed [agent cluster](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing).
+When enabled, operating system resources (for example, the operating system process) used to evaluate the document should be shared only with other documents from the same {{glossary("origin")}}, and not same-site, cross-origin documents.
 
 The effect of this is that a resource-intensive document will be less likely to degrade the performance of documents from other origins.
 
@@ -30,8 +30,13 @@ Origin-Agent-Cluster: <boolean>
 ### Directives
 
 - `<boolean>`
-  - : `?1` indicates that the associated {{domxref("Document")}} should be placed in an origin-keyed agent cluster.
-    Values other than `?1` are ignored (e.g., the `?0` structured field for false).
+  - : A structured boolean value indicating the requested agent cluster scoping:
+    - `?1`
+      - : Requests that the associated {{domxref("Document")}} should be placed in an origin-keyed agent cluster.
+    - `?0`
+      - : Requests a site-keyed agent cluster. This enables cross-origin same-site communication, by setting {{domxref("Document.domain")}}.
+
+    Browsers are in the process of switching the default from `?0` to `?1`.
 
 ## Description
 
@@ -44,11 +49,11 @@ https://apples.example.org
 https://oranges.example.org
 ```
 
-By setting the `Origin-Agent-Cluster` header, a page can request that the browser allocate dedicated resources to this origin that are not shared with any other origins.
+By setting the `Origin-Agent-Cluster` header to `?1`, a page can request that the browser allocate dedicated resources to this origin that are not shared with any other origins.
 
 The browser is not required to honor the request. If it does, the {{domxref("Window.originAgentCluster")}} property returns `true`, and the window is not able to do the following things, which all depend on same-site, cross-origin communication:
 
-- Use {{domxref("Document.domain")}}.
+- Set {{domxref("Document.domain")}}.
 - Send [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) objects to other same-site cross-origin pages using {{domxref("Window.postMessage()", "postMessage()")}}.
 - Send {{jsxref("SharedArrayBuffer")}} or [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) objects to other same-site cross-origin pages.
 
@@ -58,15 +63,27 @@ For example, suppose your site includes a page from one origin that embeds a sam
 
 The browser will ensure that all pages from a given origin are either origin-keyed or they are not. This means that:
 
-- If the first page from an origin does not set the header, then no other pages from that origin will be origin-keyed, even if those other pages do set the header.
-- If the first page from an origin sets the header and is made origin-keyed, then all other pages from that origin will be origin-keyed whether they ask for it or not.
+- If the first page from an origin sets the header to `?0` and is made site-keyed, then no other pages from that origin will be origin-keyed, even if those other pages do set the header.
+- If the first page from an origin sets the header to `?1` and is made origin-keyed, then all other pages from that origin will be origin-keyed whether they ask for it or not.
 
 To avoid this kind of unpredictable situation, you should set this header for all pages from a given origin, or none of them.
 
 ## Examples
 
+### Requesting origin-keying
+
+In browser versions where the default is `?0` (historical behavior), the following is the only meaningful setting:
+
 ```http
 Origin-Agent-Cluster: ?1
+```
+
+### Requesting site-keying
+
+In browser versions where the default is `?1` (new behavior), the following is the only meaningful setting:
+
+```http
+Origin-Agent-Cluster: ?0
 ```
 
 ## Specifications

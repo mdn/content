@@ -38,10 +38,24 @@ The backreference must refer to an existent capturing group. If the number it sp
 /(a)\2/u; // SyntaxError: Invalid regular expression: Invalid escape
 ```
 
-In [Unicode-unaware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), invalid backreferences become a [legacy octal escape](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences) sequence. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
+The entire sequence of decimal digits is interpreted as the capturing group number. For example, `\12` refers to the twelfth capturing group, not the first capturing group followed by a literal `2`.
+
+In [Unicode-unaware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), if that capturing group does not exist, the escape is interpreted differently depending on its first digit:
+
+- If it starts with `1` through `7`, it becomes a [legacy octal escape](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences) sequence, consuming up to three octal digits with a maximum value of `0o377`. Any remaining digits are literal characters.
+- If it starts with `8` or `9`, it becomes an [identity escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape), matching the digit itself. Any remaining digits are literal characters.
+
+The parser does not retry a shorter capturing group number.
+
+These are [deprecated syntaxes for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on them.
 
 ```js
 /(a)\2/.test("a\x02"); // true
+/(a)\12/.test("a\n"); // true; octal 12, not a backreference to group 1 followed by 2
+/\18/.test("\x018"); // true; octal 1 followed by a literal 8
+/\1234/.test("S4"); // true; octal 123 followed by a literal 4
+/\400/.test(" 0"); // true; octal 40 followed by a literal 0
+/\89/.test("89"); // true; identity escape followed by a literal 9
 ```
 
 If the referenced capturing group is unmatched (for example, because it belongs to an unmatched alternative in a [disjunction](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)), or the group hasn't matched yet (for example, because it lies to the right of the backreference), the backreference always succeeds (as if it matches the empty string).

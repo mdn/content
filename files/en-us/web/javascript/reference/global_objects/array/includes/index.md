@@ -138,7 +138,7 @@ console.log(Array.prototype.includes.call(arrayLike, 1));
 
 ## See also
 
-- [Polyfill of `Array.prototype.includes` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.includes` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.includes`](https://www.npmjs.com/package/array-includes)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

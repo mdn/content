@@ -10,7 +10,7 @@ sidebar: jssidebar
 
 {{SeeCompatTable}}
 
-The **`import defer`** declaration behaves like regular [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations, except that it results in a [deferred module namespace object](#deferred_module_namespace_object). The module and its dependencies are fetched and linked up front, but their synchronous evaluation is deferred until the namespace's properties are accessed. Modules that use [top-level `await`](#top-level_await) are evaluated eagerly.
+The **`import defer`** declaration behaves like regular [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations, except that it results in a [deferred module namespace object](#deferred_module_namespace_object). The module and its dependencies are [fetched](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#loading_the_graph) and [linked](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#linking_modules) up front, but their synchronous [evaluation](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#evaluating_modules) is deferred until the namespace's properties are accessed. Modules that use [top-level `await`](#top-level_await) are evaluated eagerly.
 
 ## Syntax
 
@@ -62,7 +62,7 @@ function compileFile(path) {
 > [!WARNING]
 > Deferring an import changes when its side effects occur. Do not defer modules whose side effects are needed before the rest of your code runs, such as modules that install polyfills.
 
-Unlike [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source), a deferred module is still linked up front. Linking up front lets the module loader resolve dependencies, catching missing dependencies or invalid imports before the module is used. Leaving the module unlinked avoids loading dependencies you may not need and allows you to control how it is instantiated.
+Unlike [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source), a deferred module's dependencies are [loaded](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#loading_the_graph) and the module is linked up front, catching missing dependencies or invalid imports before the module is used. Source-phase imports instead leave dependencies unloaded and allow you to control how the module is instantiated.
 
 Unlike [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import), the deferred module is still fetched, parsed, and linked up front, avoiding unnecessary [async coloring](https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/) (entire chain of function calls forced to become async). `import defer` also enjoys most benefits of a static declaration, such as better static analysis.
 
@@ -132,7 +132,7 @@ Merely referring to the namespace, assigning it to another variable, comparing i
 
 ### Top-level await
 
-Reading a namespace property is synchronous, so it cannot wait for asynchronous module evaluation. Modules that contain [top-level `await`](/en-US/docs/Web/JavaScript/Guide/Modules#top_level_await) are evaluated eagerly, along with the dependencies required to evaluate them. This includes modules reached through further deferred imports. The importing module waits for this asynchronous evaluation before running its own body.
+Reading a namespace property is synchronous, so it cannot wait for asynchronous module evaluation. Modules that contain [top-level `await`](/en-US/docs/Web/JavaScript/Guide/Modules#top-level_await) are evaluated eagerly, along with the dependencies required to evaluate them. This includes modules reached through further deferred imports. The importing module waits for this asynchronous evaluation before running its own body.
 
 If the directly imported module contains top-level `await`, its evaluation is not deferred. If only some of its dependencies contain top-level `await`, those dependencies are evaluated eagerly, but the synchronous parts of the graph that are not required for their evaluation can remain deferred. See [Deferring a module with an asynchronous dependency](#deferring_a_module_with_an_asynchronous_dependency).
 
@@ -142,7 +142,7 @@ Loading, parsing, and linking errors are not deferred. For example, a missing mo
 
 Errors thrown during deferred evaluation are thrown synchronously by the operation that triggers evaluation. You can catch them with [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) around that operation. The error is cached: subsequent operations that trigger evaluation throw the same error instead of retrying the module's code. This also applies if another import previously caused the module's evaluation to fail.
 
-An operation that triggers evaluation throws a {{jsxref("TypeError")}} if the module or its dependencies are not ready for synchronous evaluation. This can happen with [cyclic imports](/en-US/docs/Web/JavaScript/Guide/Modules#cyclic_imports), when an access would require a module that is still being evaluated. An `import defer` declaration does not make every cyclic dependency safe to access during initialization. A readiness failure itself does not mark the requested module as having failed evaluation: a later access can succeed once its dependencies are ready.
+An operation that triggers evaluation throws a {{jsxref("TypeError")}} if the module or its dependencies are not ready for synchronous evaluation. This can happen with [cyclic imports](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#cyclic_imports), when an access would require a module that is still being evaluated. An `import defer` declaration does not make every cyclic dependency safe to access during initialization. A readiness failure itself does not mark the requested module as having failed evaluation: a later access can succeed once its dependencies are ready.
 
 ## Examples
 

@@ -11,6 +11,21 @@ The **`SVGComponentTransferFunctionElement`** interface represents a base interf
 
 {{InheritanceDiagram}}
 
+## Static properties
+
+- `SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN` (0)
+  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+- `SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY` (1)
+  - : Corresponds to the value `identity`.
+- `SVG_FECOMPONENTTRANSFER_TYPE_TABLE` (2)
+  - : Corresponds to the value `table`.
+- `SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE` (3)
+  - : Corresponds to the value `discrete`.
+- `SVG_FECOMPONENTTRANSFER_TYPE_LINEAR` (4)
+  - : Corresponds to the value `linear`.
+- `SVG_FECOMPONENTTRANSFER_TYPE_GAMMA` (5)
+  - : Corresponds to the value `gamma`.
+
 ## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
@@ -33,21 +48,6 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 ## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
-
-## Static properties
-
-- `SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN` (0)
-  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
-- `SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY` (1)
-  - : Corresponds to the value `identity`.
-- `SVG_FECOMPONENTTRANSFER_TYPE_TABLE` (2)
-  - : Corresponds to the value `table`.
-- `SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE` (3)
-  - : Corresponds to the value `discrete`.
-- `SVG_FECOMPONENTTRANSFER_TYPE_LINEAR` (4)
-  - : Corresponds to the value `linear`.
-- `SVG_FECOMPONENTTRANSFER_TYPE_GAMMA` (5)
-  - : Corresponds to the value `gamma`.
 
 ## Specifications
 

@@ -36,7 +36,9 @@ Every `KeyboardEvent` is fired in a pre-determined sequence. For a given key pre
 
 In sequence 1 & 3, the `KeyboardEvent.key` attribute is defined and is set appropriately to a value according to the rules defined earlier.
 
-## KeyboardEvent sequence example
+## Examples
+
+### KeyboardEvent sequence example
 
 Consider the event sequence generated when we interact with the <kbd>Shift</kbd> and the <kbd>2</kbd> key using a U.S keyboard layout as compared to when we do so using a UK keyboard layout.
 
@@ -45,7 +47,7 @@ Try experimenting using the following two test cases:
 1. Press and hold the <kbd>Shift</kbd> key, then press <kbd>2</kbd> and release it. Next, release the <kbd>Shift</kbd> key.
 2. Press and hold the <kbd>Shift</kbd> key, then press and hold <kbd>2</kbd>. Release the <kbd>Shift</kbd> key. Finally, release <kbd>2</kbd>.
 
-### HTML
+#### HTML
 
 ```html
 <div class="fx">
@@ -59,7 +61,7 @@ Try experimenting using the following two test cases:
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 .fx {
@@ -90,7 +92,7 @@ Try experimenting using the following two test cases:
 }
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 const textarea = document.getElementById("test-target");
@@ -131,14 +133,14 @@ btnReset.addEventListener("click", (e) => {
 });
 ```
 
-### Result
+#### Result
 
 {{EmbedLiveSample('KeyboardEvent_sequence_example')}}
 
 > [!NOTE]
 > On browsers that don't fully implement the {{domxref("InputEvent")}} interface which is used for the {{domxref("Element/beforeinput_event", "beforeinput")}} and {{domxref("Element/input_event", "input")}} events, you may get incorrect output on those lines of the log output.
 
-### Case 1
+#### Case 1
 
 When the shift key is pressed, a {{domxref("Element/keydown_event", "keydown")}} event is first fired, and the `key` property value is set to the string `Shift`. As we keep holding this key, the {{domxref("Element/keydown_event", "keydown")}} event does not continue to fire repeatedly because it does not produce a character key.
 
@@ -148,7 +150,7 @@ As we release the `key 2`, a {{domxref("Element/keyup_event", "keyup")}} event i
 
 As we finally release the `shift` key, another {{domxref("Element/keyup_event", "keyup")}} event is fired for it, and the key attribute value remains `Shift`.
 
-### Case 2
+#### Case 2
 
 When the shift key is pressed, a {{domxref("Element/keydown_event", "keydown")}} event is first fired, and the `key` property value is set to be the string `Shift`. As we keep holding this key, the {{domxref("Element/keydown_event", "keydown")}} event does not continue to fire repeatedly because it produced no character key.
 
@@ -158,7 +160,7 @@ As we release the `shift` key, a {{domxref("Element/keyup_event", "keyup")}} eve
 
 As we finally release the `key 2`, a {{domxref("Element/keyup_event", "keyup")}} event is fired but the `key` property will be set to the string value `2` for both keyboard layouts because the modifier `shift` key is no longer active.
 
-## Examples
+### Different actions based on key type
 
 This example uses {{domxref("EventTarget.addEventListener()")}} to listen for {{domxref("Element/keydown_event", "keydown")}} events. When they occur, the key's value is checked to see if it's one of the keys the code is interested in, and if it is, it gets processed in some way (possibly by steering a spacecraft, perhaps by changing the selected cell in a spreadsheet).
 

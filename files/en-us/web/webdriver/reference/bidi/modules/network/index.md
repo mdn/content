@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.network
 sidebar: webdriver
 ---
 
-The **`network`** module contains commands and events related to network requests.
+The **`network`** module contains commands and events for monitoring and controlling the browser's network requests and responses.
 
 ## Changing responses
 
@@ -23,6 +23,8 @@ Two commands change what the page receives for a blocked request:
 
 - [`network.continueResponse`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueResponse)
 - [`network.provideResponse`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/provideResponse)
+- [`network.setCacheBehavior`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/setCacheBehavior)
+- [`network.setExtraHeaders`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/setExtraHeaders)
 
 ## Specifications
 
