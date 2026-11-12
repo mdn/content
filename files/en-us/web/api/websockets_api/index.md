@@ -14,6 +14,15 @@ The `WebSocket` interface doesn't support [backpressure](/en-US/docs/Web/API/Str
 > [!NOTE]
 > If a page has an open WebSocket connection, the browser may not add it to the {{glossary("bfcache")}}. It's therefore good practice to close the connection when the user has finished with the page. See [working with the bfcache](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications#working_with_the_bfcache).
 
+## Guides
+
+- [Writing WebSocket client applications](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [Writing WebSocket servers](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
+- [Writing a WebSocket server in C#](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_server)
+- [Writing a WebSocket server in Java](/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java)
+- [Writing a WebSocket server in JavaScript (Deno)](/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno)
+- [Using WebSocketStream to write a client](/en-US/docs/Web/API/WebSockets_API/Using_WebSocketStream)
+
 ## Interfaces
 
 - [`WebSocket`](/en-US/docs/Web/API/WebSocket)
@@ -45,15 +54,6 @@ The HTTP headers are used in the [WebSocket handshake](/en-US/docs/Web/API/WebSo
 - {{HTTPHeader("Sec-WebSocket-Extensions")}}
   - : An HTTP header that in requests indicates the WebSocket extensions supported by the client in preferred order.
     In responses, it indicates the extension selected by the server from the client's preferences.
-
-## Guides
-
-- [Writing WebSocket client applications](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
-- [Writing WebSocket servers](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
-- [Writing a WebSocket server in C#](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_server)
-- [Writing a WebSocket server in Java](/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java)
-- [Writing a WebSocket server in JavaScript (Deno)](/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno)
-- [Using WebSocketStream to write a client](/en-US/docs/Web/API/WebSockets_API/Using_WebSocketStream)
 
 ## Tools
 
