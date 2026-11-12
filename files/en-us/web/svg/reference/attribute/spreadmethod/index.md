@@ -15,41 +15,11 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("linearGradient")}}
 - {{SVGElement("radialGradient")}}
 
-## Usage notes
+## Examples
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td><code>pad</code> | <code>reflect</code> | <code>repeat</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Initial value</th>
-      <td><code>pad</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
+### spreadMethod with linear gradients
 
-- `pad`
-  - : This value indicates that the final color of the gradient fills the shape beyond the gradient's edges.
-- `reflect`
-  - : This value indicates that the gradient repeats in reverse beyond its edges.
-- `repeat`
-  - : This value specifies that the gradient repeats in the original order beyond its edges.
-
-### Defining a gradient's edges
-
-By default, a gradient reaches to the edges of the shape being filled. To see the effects of this attribute, you will need to set the size of the gradient smaller than the shape.
-
-In the case of a linear gradient, the edges may be defined as a rectangle by the `x1`, `x2`, `y1` and `y2` attributes. In the case of a radial gradient, the edges may be defined as outer and inner circles by the `cx`, `cy` and `r` (outer) and `fx`, `fy` and `fr` (inner) attributes.
-
-## Examples of spreadMethod with linear gradients
-
-### SVG
+#### SVG
 
 ```html
 <svg width="220" height="150" xmlns="http://www.w3.org/2000/svg">
@@ -78,15 +48,15 @@ In the case of a linear gradient, the edges may be defined as a rectangle by the
 </svg>
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample('Examples_of_spreadMethod_with_linear_gradients')}}
+{{EmbedLiveSample('spreadMethod with linear gradients')}}
 
 Notice that the middle third of each gradient is the same. The outer thirds show the difference between the three spread methods.
 
-## Examples of spreadMethod with radial gradients
+### spreadMethod with radial gradients
 
-### SVG
+#### SVG
 
 ```html
 <svg width="340" height="120" xmlns="http://www.w3.org/2000/svg">
@@ -144,9 +114,41 @@ Notice that the middle third of each gradient is the same. The outer thirds show
 </svg>
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample('Examples_of_spreadMethod_with_radial_gradients')}}
+{{EmbedLiveSample('spreadMethod with radial gradients')}}
+
+## Usage notes
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>pad</code> | <code>reflect</code> | <code>repeat</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Initial value</th>
+      <td><code>pad</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+- `pad`
+  - : This value indicates that the final color of the gradient fills the shape beyond the gradient's edges.
+- `reflect`
+  - : This value indicates that the gradient repeats in reverse beyond its edges.
+- `repeat`
+  - : This value specifies that the gradient repeats in the original order beyond its edges.
+
+### Defining a gradient's edges
+
+By default, a gradient reaches to the edges of the shape being filled. To see the effects of this attribute, you will need to set the size of the gradient smaller than the shape.
+
+In the case of a linear gradient, the edges may be defined as a rectangle by the `x1`, `x2`, `y1` and `y2` attributes. In the case of a radial gradient, the edges may be defined as outer and inner circles by the `cx`, `cy` and `r` (outer) and `fx`, `fy` and `fr` (inner) attributes.
 
 ## Specifications
 

@@ -44,10 +44,6 @@ For {{SVGElement('pattern')}}, `patternTransform` defines a list of [transform d
   </tbody>
 </table>
 
-### Transform functions
-
-To know more about the definition of transform functions, see the {{ SVGAttr("transform") }} attribute definition.
-
 ## Examples
 
 ```css hidden
@@ -85,3 +81,7 @@ svg {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{ SVGAttr("transform") }}
