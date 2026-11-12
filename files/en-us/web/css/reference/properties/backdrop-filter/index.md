@@ -193,6 +193,16 @@ body {
 
 ## Examples
 
+### HTML
+
+```html
+<div class="container">
+  <div class="box">
+    <p>backdrop-filter: blur(10px)</p>
+  </div>
+</div>
+```
+
 ### CSS
 
 ```css
@@ -229,16 +239,6 @@ body {
   max-height: 50%;
   padding: 20px 40px;
 }
-```
-
-### HTML
-
-```html
-<div class="container">
-  <div class="box">
-    <p>backdrop-filter: blur(10px)</p>
-  </div>
-</div>
 ```
 
 ### Result

@@ -223,13 +223,13 @@ In this example, as `--defaultSize` is registered, `.a`, `.b`, and `.c` will be 
 }
 ```
 
-## Accessibility
-
-Because `random()` can generate an unknown value within a range, you don't have full control over what you get. This can lead to inaccessible results. For example, if you use `random()` to generate text color, you could end up with a value that has low contrast with its background. It is important to be mindful of the context in which `random()` is used, ensuring your results are always accessible.
-
 ## Formal syntax
 
 {{CSSSyntax}}
+
+## Accessibility
+
+Because `random()` can generate an unknown value within a range, you don't have full control over what you get. This can lead to inaccessible results. For example, if you use `random()` to generate text color, you could end up with a value that has low contrast with its background. It is important to be mindful of the context in which `random()` is used, ensuring your results are always accessible.
 
 ## Examples
 
@@ -283,7 +283,7 @@ We render the five badges as circles. We use the `random()` function within an {
 
 #### Result
 
-{{EmbedLiveSample('Generate random colors for circular badge', '100%', '300px')}}
+{{EmbedLiveSample('basic_usage', '100%', '300px')}}
 
 ### Random value sharing between properties
 

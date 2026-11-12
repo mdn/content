@@ -36,10 +36,6 @@ If media action handlers have been set via the [Media Session API](/en-US/docs/W
 
 The {{cssxref(":picture-in-picture")}} [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches the video element currently in picture-in-picture mode, allowing you to configure your stylesheets to automatically adjust the size, style, or layout of content when a video switches back and forth between picture-in-picture and traditional presentation modes.
 
-### Security considerations
-
-The availability of picture-in-picture mode can be controlled using [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy). The picture-in-picture mode feature is identified by the string `"picture-in-picture"`, with a default allowlist value of `*`, meaning that picture-in-picture mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.
-
 ## Interfaces
 
 - {{DOMxRef("PictureInPictureWindow")}}
@@ -90,6 +86,10 @@ _The Picture-in-Picture API defines three events, which can be used to detect wh
   - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it leaves picture-in-picture mode.
 - {{domxref("PictureInPictureWindow.resize_event", "resize")}}
   - : Sent to a {{DOMxRef("PictureInPictureWindow")}} when it changes size.
+
+## Security considerations
+
+The availability of picture-in-picture mode can be controlled using [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy). The picture-in-picture mode feature is identified by the string `"picture-in-picture"`, with a default allowlist value of `*`, meaning that picture-in-picture mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.
 
 ## Examples
 
@@ -166,7 +166,7 @@ pipButton.addEventListener("click", togglePictureInPicture);
 
 Clicking the "Toggle PiP" button lets the user toggle between playing the video in the page and in a floating window:
 
-{{embedlivesample("toggling_picture-in-picture", , "350")}}
+{{embedlivesample("toggling_picture-in-picture_mode", , "350")}}
 
 ## Specifications
 

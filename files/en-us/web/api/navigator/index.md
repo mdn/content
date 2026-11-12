@@ -100,15 +100,6 @@ _Doesn't inherit any properties._
 - {{domxref("Navigator.xr")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns {{domxref("XRSystem")}} object, which represents the entry point into the [WebXR API](/en-US/docs/Web/API/WebXR_Device_API).
 
-### Non-standard properties
-
-- {{domxref("Navigator.buildID")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Returns the build identifier of the browser. In modern browsers this property now returns a fixed timestamp as a privacy measure, e.g., `20181001000000` in Firefox 64 onwards.
-- {{domxref("Navigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a boolean indicating a user's consent to their information being shared or sold.
-- {{domxref("Navigator.standalone")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Returns a boolean indicating whether the browser is running in standalone mode. Available on Apple's iOS Safari only.
-
 ### Deprecated properties
 
 - {{domxref("Navigator.activeVRDisplays")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
@@ -137,6 +128,15 @@ _Doesn't inherit any properties._
   - : Returns either the empty string, `'Apple Computer Inc.'`, or `'Google Inc.'`.
 - {{domxref("Navigator.vendorSub")}} {{ReadOnlyInline}}
   - : Always returns the empty string.
+
+### Non-standard properties
+
+- {{domxref("Navigator.buildID")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+  - : Returns the build identifier of the browser. In modern browsers this property now returns a fixed timestamp as a privacy measure, e.g., `20181001000000` in Firefox 64 onwards.
+- {{domxref("Navigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a boolean indicating a user's consent to their information being shared or sold.
+- {{domxref("Navigator.standalone")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+  - : Returns a boolean indicating whether the browser is running in standalone mode. Available on Apple's iOS Safari only.
 
 ## Instance methods
 

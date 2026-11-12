@@ -102,6 +102,22 @@ console.log(encodeURIComponent(set2)); // -.!~*'()
 console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (the space gets encoded as %20)
 ```
 
+### Encoding for RFC3986
+
+The more recent [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986) makes square brackets reserved (for {{Glossary("IPv6")}}) and thus not encoded when forming something which could be part of a URL (such as a host). It also reserves !, ', (, ), and \*, even though these characters have no formalized URI delimiting uses. The following function encodes a string for RFC3986-compliant URL format.
+
+```js
+function encodeRFC3986URI(str) {
+  return encodeURI(str)
+    .replace(/%5B/g, "[")
+    .replace(/%5D/g, "]")
+    .replace(
+      /[!'()*]/g,
+      (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
+    );
+}
+```
+
 ### Encoding a lone surrogate throws
 
 A {{jsxref("URIError")}} will be thrown if one attempts to encode a surrogate which is not part of a high-low pair. For example:
@@ -118,22 +134,6 @@ encodeURI("\uDFFF");
 ```
 
 You can use {{jsxref("String.prototype.toWellFormed()")}}, which replaces lone surrogates with the Unicode replacement character (U+FFFD), to avoid this error. You can also use {{jsxref("String.prototype.isWellFormed()")}} to check if a string contains lone surrogates before passing it to `encodeURI()`.
-
-### Encoding for RFC3986
-
-The more recent [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986) makes square brackets reserved (for {{Glossary("IPv6")}}) and thus not encoded when forming something which could be part of a URL (such as a host). It also reserves !, ', (, ), and \*, even though these characters have no formalized URI delimiting uses. The following function encodes a string for RFC3986-compliant URL format.
-
-```js
-function encodeRFC3986URI(str) {
-  return encodeURI(str)
-    .replace(/%5B/g, "[")
-    .replace(/%5D/g, "]")
-    .replace(
-      /[!'()*]/g,
-      (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
-    );
-}
-```
 
 ## Specifications
 

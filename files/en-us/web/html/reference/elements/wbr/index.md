@@ -51,7 +51,7 @@ _[The Yahoo Style Guide](https://web.archive.org/web/20121014054923/http://style
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("examples")}}
 
 ## Technical summary
 

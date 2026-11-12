@@ -73,17 +73,6 @@ Here's a basic example, using `<var>` to denote variable names in a mathematical
 
 Using CSS, you can override the default style for the `<var>` element. In this example, variable names are rendered in bold, using Courier if it's available, otherwise it falls back to the default monospace font.
 
-#### CSS
-
-```css
-var {
-  font:
-    bold 15px "Courier",
-    "Courier New",
-    monospace;
-}
-```
-
 #### HTML
 
 ```html
@@ -94,6 +83,17 @@ var {
 ```
 
 This HTML uses `<var>` to enclose the names of two variables.
+
+#### CSS
+
+```css
+var {
+  font:
+    bold 15px "Courier",
+    "Courier New",
+    monospace;
+}
+```
 
 #### Result
 

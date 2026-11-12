@@ -42,7 +42,7 @@ li {
 <li>A list item</li>
 ```
 
-{{EmbedLiveSample("The stand-alone list item", "100%", 200)}}
+{{EmbedLiveSample("stand-alone_list_item", "100%", 200)}}
 
 That dotted red border represents the outer edges of the content area of each list item. At this point, the list items have no padding or borders.
 
@@ -50,7 +50,7 @@ That dotted red border represents the outer edges of the content area of each li
 
 Now we wrap these in a parent element; in this case, we'll wrap them in an unordered list (i.e., `<ul>`). According to the CSS box model, the list items' boxes must be displayed within the parent element's content area.
 
-```css
+```css live-sample___nested-list-items
 ul {
   border: 1px dashed blue;
 }
@@ -60,13 +60,13 @@ li {
 }
 ```
 
-```css hidden
+```css hidden live-sample___nested-list-items
 body {
   width: 15em;
 }
 ```
 
-```html hidden
+```html hidden live-sample___nested-list-items
 <ul>
   <li>A list item</li>
   <li>A list item</li>
@@ -74,7 +74,7 @@ body {
 </ul>
 ```
 
-{{EmbedLiveSample("List items nested in a list", "100%", 150)}}
+{{EmbedLiveSample("nested-list-items", "100%", 150)}}
 
 The dotted blue border shows us the edges of the `<ul>` element's content area. That parent comes with both margin and padding. Browsers set the following default styles on unordered lists:
 
@@ -126,7 +126,7 @@ ul {
 </ul>
 ```
 
-{{EmbedLiveSample("Inheriting `list-style-type`", "100%", 220)}}
+{{EmbedLiveSample("default_bullet_position", "100%", 220)}}
 
 Visually, the markers are _outside_ the content area of the `<ul>`, but that's not the important part here. What's key is that the markers are placed outside the "principal box" of the `<li>` elements, not the `<ul>`. They're sort of like appendages to the list items, hanging outside the content-area of the `<li>` but still attached to the `<li>`.
 

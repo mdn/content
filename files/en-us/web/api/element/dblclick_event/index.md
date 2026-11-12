@@ -36,16 +36,6 @@ A {{domxref("MouseEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref(
 
 This example toggles the size of a card when you double click on it.
 
-### JavaScript
-
-```js
-const card = document.querySelector("aside");
-
-card.addEventListener("dblclick", (e) => {
-  card.classList.toggle("large");
-});
-```
-
 ### HTML
 
 ```html
@@ -72,6 +62,16 @@ aside {
 .large {
   transform: scale(1.3);
 }
+```
+
+### JavaScript
+
+```js
+const card = document.querySelector("aside");
+
+card.addEventListener("dblclick", (e) => {
+  card.classList.toggle("large");
+});
 ```
 
 ### Result

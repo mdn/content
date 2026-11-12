@@ -33,15 +33,6 @@ The basic approach for implementing a web component generally looks something li
 4. If required, define an HTML template using {{htmlelement("template")}} and {{htmlelement("slot")}}. Again use regular DOM methods to clone the template and attach it to your shadow DOM.
 5. Use your custom element wherever you like on your page, just like you would any regular HTML element.
 
-## Guides
-
-- [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
-  - : A guide showing how to use the features of custom elements to create simple web components, as well as looking into lifecycle callbacks and some other more advanced features.
-- [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
-  - : A guide that looks at shadow DOM fundamentals, showing how to attach a shadow DOM to an element, add to the shadow DOM tree, style it, and more.
-- [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
-  - : A guide showing how to define a reusable HTML structure using {{htmlelement("template")}} and {{htmlelement("slot")}} elements, and then use that structure inside your web components.
-
 ## Reference
 
 ### Custom elements
@@ -138,6 +129,15 @@ The basic approach for implementing a web component generally looks something li
 
 - The {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} event
   - : Fired on an {{domxref("HTMLSlotElement")}} instance ({{htmlelement("slot")}} element) when the node(s) contained in that slot change.
+
+## Guides
+
+- [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
+  - : A guide showing how to use the features of custom elements to create simple web components, as well as looking into lifecycle callbacks and some other more advanced features.
+- [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
+  - : A guide that looks at shadow DOM fundamentals, showing how to attach a shadow DOM to an element, add to the shadow DOM tree, style it, and more.
+- [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
+  - : A guide showing how to define a reusable HTML structure using {{htmlelement("template")}} and {{htmlelement("slot")}} elements, and then use that structure inside your web components.
 
 ## Examples
 

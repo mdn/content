@@ -146,7 +146,7 @@ if ("ariaOwnsElements" in Element.prototype) {
 The result of running the code is shown below.
 The log shows that the relationship defined using the `aria-owns` attribute is reflected in the `ariaOwnsElements` property (elements in the array match the attribute element references).
 
-{{EmbedLiveSample("Get the flow-to element","100%","200px")}}
+{{EmbedLiveSample("get_the_owned_element","100%","200px")}}
 
 ## Specifications
 

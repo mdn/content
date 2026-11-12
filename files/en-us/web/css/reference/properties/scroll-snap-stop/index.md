@@ -279,7 +279,7 @@ Scroll from left to right and from top to bottom in the X and Y boxes below, res
 
 If required, you can be selective about the items that are `always` stopped at inside the scroll container. This is demonstrated in the example below by targeting odd and even items; you can choose a different strategy based on your requirement. In the example below, scrolling does not "pass over" odd and even items in the second and third boxes, respectively.
 
-{{EmbedLiveSample("Snapping_in_different_axes", "100%", "1080")}}
+{{EmbedLiveSample("setting_different_snap_stops", "100%", "1080")}}
 
 ## Specifications
 

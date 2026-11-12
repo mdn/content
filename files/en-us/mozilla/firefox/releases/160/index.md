@@ -1,56 +1,27 @@
 ---
-title: Firefox 160 release notes for developers (Beta)
-short-title: Firefox 160 (Beta)
+title: Firefox 160 release notes for developers (Stable)
+short-title: Firefox 160 (Stable)
 slug: Mozilla/Firefox/Releases/160
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 160 that affect developers.
-Firefox 160 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [November 10, 2026](https://whattrainisitnow.com/release/?version=160).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 160 was released on [November 10, 2026](https://whattrainisitnow.com/release/?version=160).
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
+### HTML
 
-<!-- ### HTML -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### CSS
 
 - The `::-webkit-input-placeholder` pseudo-element is now supported as an alias of {{cssxref("::placeholder")}}, for compatibility with websites that use it to style the placeholder text of {{htmlelement("input")}} and {{htmlelement("textarea")}} elements. ([Firefox bug 2083700](https://bugzil.la/2083700)).
 
-<!-- #### Removals -->
+### JavaScript
 
-<!-- ### JavaScript -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### APIs
 
@@ -70,40 +41,27 @@ Firefox 160 is the current [Beta version of Firefox](https://www.firefox.com/en-
   Setting it to `bytes` makes the transport's stream of incoming datagrams, {{domxref("WebTransportDatagramDuplexStream.readable", "transport.datagrams.readable")}}, a [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams).
   You can then use a {{domxref("ReadableStreamBYOBReader")}} to read each datagram into a buffer that you supply and reuse, instead of receiving a new {{jsxref("Uint8Array")}} for every datagram.
   ([Firefox bug 2007755](https://bugzil.la/2007755)).
-- The {{domxref("WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams", "anticipatedConcurrentIncomingUnidirectionalStreams")}} and {{domxref("WebTransport.anticipatedConcurrentIncomingBidirectionalStreams","anticipatedConcurrentIncomingBidirectionalStreams")}} properties of the `WebTransport` interface are now supported, along with the corresponding `options` properties that can be used to set them in the {{domxref("WebTransport/WebTransport", "WebTransport()")}} constructor.
-  These properties represent the maximum number of incoming unidirectional and bidirectional streams, respectively, that the application expects the server to have open at the same time.
-  ([Firefox bug 2007825](https://bugzil.la/2007825)).
 - [On-device speech recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) using the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is now available on desktop, enabling on-device real-time speech-to-text conversion in 40 languages.
   Recognition is not supported on Android, and neither is remote (cloud) recognition.
   ([Firefox bug 2080908](https://bugzil.la/2080908)).
-
-<!-- #### DOM -->
-
-<!-- #### Media, WebRTC, and Web Audio -->
 
 #### Removals
 
 - The non-standard `MozScrolledAreaChanged` event is no longer dispatched to web pages. It used to be fired at the document when the size of the page's scrollable area changed. It is now available only to Firefox user interface. You can restore the event for web pages by setting the `layout.scrolled-area-changed.content.enabled` preference to `true`. ([Firefox bug 2079865](https://bugzil.la/2079865)).
 
-<!-- ### WebAssembly -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### Removals -->
+#### WebDriver BiDi
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
-
-<!-- #### General -->
-
-<!-- #### WebDriver BiDi -->
-
-<!-- #### Marionette -->
+- Added machine-readable CDDL for all Firefox WebDriver BiDi vendor extensions (`moz:` commands, events, parameters, capabilities…). ([Firefox bug 2057588](https://bugzil.la/2057588)).
+- Fixed the `context` field in the `script.message` event to return a correct browsing context id when sending the event from a preload script triggered by `window.open`. ([Firefox bug 2079905](https://bugzil.la/2079905)).
+- Fixed the handling of `Set-Cookie` response headers so that `\n` separated values now show up as individual entries instead of a single merged value. Also applies to other "newline-merged" headers: `proxy-authenticate` and `www-authenticate`. ([Firefox bug 1940389](https://bugzil.la/1940389)).
+- Updated network events monitoring to stop computing unused security details, which could have visible impacts on the performance, e.g., during a page load. ([Firefox bug 2075175](https://bugzil.la/2075175)).
+- Updated the `script.evaluate` and `script.callFunction` commands to stop clearing a pre-existing user activation flag when called with `userActivation: false`. ([Firefox bug 2084107](https://bugzil.la/2084107)).
 
 ## Changes for add-on developers
 
-- {{WebExtAPIRef("runtime.PlatformInfo")}} now returns `arch` as `arm64` for ARM64 platforms. Previously, it returned `aarch64`. This aligns the value returned by Firefox for ARM64 platforms with Chrome. ([Firefox bug 2080310](https://bugzil.la/2080310))
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
+- {{WebExtAPIRef("runtime.PlatformInfo")}} now returns `arch` as `arm64` for ARM64 platforms. Previously, it returned `aarch64`. This aligns the value returned by Firefox for ARM64 platforms with Chrome. ([Firefox bug 2080310](https://bugzil.la/2080310)).
 
 ## Experimental web features
 

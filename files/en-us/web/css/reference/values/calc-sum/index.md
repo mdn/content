@@ -19,10 +19,6 @@ The `<calc-sum>` type defines two numeric values and one of the following [arith
 - `-`
   - : Subtracts the right number from the left.
 
-### Formal syntax
-
-{{CSSSyntax}}
-
 ## Description
 
 The operands in the expression may be any {{cssxref("&lt;length&gt;")}} syntax value. You can use {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("angle")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, or {{cssxref("&lt;integer&gt;")}}.
@@ -32,6 +28,10 @@ The two operands' types must be consistent. For lengths, you can't use `0` to me
 Including [CSS variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) in `calc-sum` expressions is also allowed. The following code `calc(10px + var(--variable))`, is a valid expression.
 
 The `+` and `-` operators **must be surrounded by {{Glossary("whitespace")}}**. For instance, `calc(50% -8px)` will be parsed as "a percentage followed by a negative length" — which is an invalid expression — while `calc(50% - 8px)` is "a percentage followed by a subtraction operator and a length". Likewise, `calc(8px + -50%)` is treated as "a length followed by an addition operator and a negative percentage".
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Specifications
 

@@ -295,6 +295,23 @@ The {{domxref("EventSource")}} interface represents the source which sent or is 
 
 In this example, an {{HTMLElement("input")}} element's {{domxref("Element/input_event", "input")}} event is monitored in order to update the state of a "Send" button based on whether or not a given field currently has a value.
 
+### HTML
+
+The HTML looks like this:
+
+```html
+<p>Please provide the information below. Items marked with "*" are required.</p>
+<p>
+  <label for="userName" required>Your name:</label>
+  <input type="text" id="userName" /> (*)
+</p>
+<p>
+  <label for="userEmail">Email:</label>
+  <input type="email" id="userEmail" />
+</p>
+<input type="button" value="Send" id="sendButton" />
+```
+
 ### JavaScript
 
 ```js
@@ -325,23 +342,6 @@ Then {{domxref("EventTarget.addEventListener", "addEventListener()")}} is called
 
 With this in place, the "Send" button is always enabled whenever the user name input field has a value, and disabled when it's empty.
 
-### HTML
-
-The HTML looks like this:
-
-```html
-<p>Please provide the information below. Items marked with "*" are required.</p>
-<p>
-  <label for="userName" required>Your name:</label>
-  <input type="text" id="userName" /> (*)
-</p>
-<p>
-  <label for="userEmail">Email:</label>
-  <input type="email" id="userEmail" />
-</p>
-<input type="button" value="Send" id="sendButton" />
-```
-
 ### Result
 
 {{EmbedLiveSample("Examples", 640, 300)}}
@@ -356,12 +356,7 @@ The HTML looks like this:
 
 ## See also
 
-### References
-
 - [HTML elements reference](/en-US/docs/Web/HTML/Reference/Elements)
 - [HTML attribute reference](/en-US/docs/Web/HTML/Reference/Attributes)
 - {{DOMxRef("Document_Object_Model", "Document Object Model (DOM)", "", "1")}} reference
-
-### Guides
-
 - [DOM scripting introduction](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting)

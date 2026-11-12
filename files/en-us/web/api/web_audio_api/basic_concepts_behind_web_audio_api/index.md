@@ -6,11 +6,13 @@ page-type: guide
 
 {{DefaultAPISidebar("Web Audio API")}}
 
-This article explains some of the audio theory behind how the features of the Web Audio API work to help you make informed decisions while designing how your app routes audio. If you are not already a sound engineer, it will give you enough background to understand why the Web Audio API works as it does.
+This article explains some of the audio theory behind how the features of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) work to help you make informed decisions while designing how your app routes audio. If you are not already a sound engineer, it will give you enough background to understand why the Web Audio API works as it does.
 
 ## Audio graphs
 
-The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) involves handling audio operations inside an [audio context](/en-US/docs/Web/API/AudioContext), and has been designed to allow _modular routing_. Each [audio node](/en-US/docs/Web/API/AudioNode) performs a basic audio operation and is linked with one more other audio nodes to form an [audio routing graph](/en-US/docs/Web/API/AudioNode#the_audio_routing_graph). Several sources with different channel layouts are supported, even within a single context. This modular design provides the flexibility to create complex audio functions with dynamic effects.
+An **audio graph** (or [audio routing graph](/en-US/docs/Web/API/AudioNode#the_audio_routing_graph)) is a network of connected [audio nodes](/en-US/docs/Web/API/AudioNode), contained inside an [`AudioContext`](/en-US/docs/Web/API/AudioContext), which the Web Audio API uses to process and produce sound. Each node does one specific job, and multiple nodes are connected together to build a signal path from a source to a destination, usually the speakers. This modular design provides the flexibility to create complex audio functions with dynamic effects.
+
+Several sources with different channel layouts are supported, even within a single context.
 
 Audio nodes are linked via their inputs and outputs, forming a chain that starts with one or more sources, goes through one or more nodes, then ends up at a destination (although you don't have to provide a destination if you only want to visualize some audio data). A simple, typical workflow for web audio would look something like this:
 
@@ -46,13 +48,15 @@ You'll find more information on the Wikipedia page [_Sampling (signal processing
 
 An {{domxref("AudioBuffer")}} is defined with three parameters:
 
-- the number of channels (1 for mono, 2 for stereo, etc.),
+- the number of channels (1 for mono, 2 for stereo, six for 5.1, etc.),
 - its length, meaning the number of sample frames inside the buffer,
 - and the sample rate, the number of sample frames played per second.
 
-A _sample_ is a single 32-bit floating point value representing the value of the audio stream at each specific moment in time within a particular channel (left or right, if in the case of stereo). A _frame_, or _sample frame_, is the set of all values for all channels that will play at a specific moment in time: all the samples of all the channels that play at the same time (two for a stereo sound, six for 5.1, etc.).
+Some important definitions:
 
-The _sample rate_ is the quantity of those samples (or frames, since all samples of a frame play at the same time) that will play in one second, measured in Hz. The higher the sample rate, the better the sound quality.
+- A _sample_ is a single 32-bit floating point value representing the value of the audio stream at each specific moment in time within a particular channel (left or right, if in the case of stereo).
+- A _frame_, or _sample frame_, is the set of all values for all channels that will play at a specific moment in time (again, 1 for mono, there will be 2 for stereo...).
+- The _sample rate_ is the quantity of those samples (or frames, since all samples of a frame play at the same time) that will play in one second, measured in Hz. The higher the sample rate, the better the sound quality.
 
 Let's look at a _mono_ and a _stereo_ audio buffer, each one second long at a rate of 44100Hz:
 

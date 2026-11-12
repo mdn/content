@@ -11,24 +11,6 @@ The **`SVGLength`** interface correspond to the [\<length>](/en-US/docs/Web/SVG/
 
 An `SVGLength` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
-## Instance properties
-
-- {{domxref("SVGLength.unitType", "unitType")}} {{ReadOnlyInline}}
-  - : The type of the value as specified by one of the `SVG_LENGTHTYPE_*` constants defined on this interface.
-- {{domxref("SVGLength.value", "value")}}
-  - : The value as a floating point value, in user units.
-- {{domxref("SVGLength.valueAsString", "valueAsString")}}
-  - : The value as a string value, in the units expressed by `unitType`.
-- {{domxref("SVGLength.valueInSpecifiedUnits", "valueInSpecifiedUnits")}}
-  - : The value as a floating point value, in the units expressed by `unitType`.
-
-## Instance methods
-
-- {{domxref("SVGLength.convertToSpecifiedUnits", "convertToSpecifiedUnits()")}}
-  - : Preserve the same underlying stored value, but reset the stored unit identifier to the given `unitType`.
-- {{domxref("SVGLength.newValueSpecifiedUnits", "newValueSpecifiedUnits()")}}
-  - : Reset the value as a number with an associated `unitType`, thereby replacing the values for all of the attributes on the object.
-
 ## Static properties
 
 - `SVG_LENGTHTYPE_UNKNOWN` (0)
@@ -53,6 +35,24 @@ An `SVGLength` object can be designated as read only, which means that attempts 
   - : A value was specified using the `pt` units.
 - `SVG_LENGTHTYPE_PC` (10)
   - : A value was specified using the `pc` units.
+
+## Instance properties
+
+- {{domxref("SVGLength.unitType", "unitType")}} {{ReadOnlyInline}}
+  - : The type of the value as specified by one of the `SVG_LENGTHTYPE_*` constants defined on this interface.
+- {{domxref("SVGLength.value", "value")}}
+  - : The value as a floating point value, in user units.
+- {{domxref("SVGLength.valueAsString", "valueAsString")}}
+  - : The value as a string value, in the units expressed by `unitType`.
+- {{domxref("SVGLength.valueInSpecifiedUnits", "valueInSpecifiedUnits")}}
+  - : The value as a floating point value, in the units expressed by `unitType`.
+
+## Instance methods
+
+- {{domxref("SVGLength.convertToSpecifiedUnits", "convertToSpecifiedUnits()")}}
+  - : Preserve the same underlying stored value, but reset the stored unit identifier to the given `unitType`.
+- {{domxref("SVGLength.newValueSpecifiedUnits", "newValueSpecifiedUnits()")}}
+  - : Reset the value as a number with an associated `unitType`, thereby replacing the values for all of the attributes on the object.
 
 ## Example
 

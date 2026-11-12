@@ -168,6 +168,20 @@ It looks exactly the same as the Three.js cube demo but the slightly different p
 </script>
 ```
 
+### CSS
+
+```css
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+canvas {
+  width: 100%;
+  height: 100%;
+}
+```
+
 ### JavaScript
 
 ```js
@@ -201,20 +215,6 @@ function render() {
   renderer.render(scene, camera);
 }
 render();
-```
-
-### CSS
-
-```css
-body {
-  margin: 0;
-  padding: 0;
-  font-size: 0;
-}
-canvas {
-  width: 100%;
-  height: 100%;
-}
 ```
 
 ### Result
