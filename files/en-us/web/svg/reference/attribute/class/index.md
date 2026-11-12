@@ -38,36 +38,6 @@ You can use this class to style SVG content using CSS.
   </tbody>
 </table>
 
-## Example
-
-```html
-<html lang="en">
-  <body>
-    <svg
-      width="120"
-      height="220"
-      viewPort="0 0 120 120"
-      xmlns="http://www.w3.org/2000/svg">
-      <style>
-        <![CDATA[
-          rect.rectClass {
-            stroke: #000066;
-            fill: #00cc00;
-          }
-          circle.circleClass {
-            stroke: #006600;
-            fill: #cc0000;
-          }
-        ]]>
-      </style>
-
-      <rect class="rectClass" x="10" y="10" width="100" height="100" />
-      <circle class="circleClass" cx="40" cy="50" r="26" />
-    </svg>
-  </body>
-</html>
-```
-
 ## Elements
 
 The following elements can use the `class` attribute:
@@ -117,6 +87,36 @@ The following elements can use the `class` attribute:
 - {{ SVGElement("title") }}
 - {{ SVGElement("tspan") }}
 - {{ SVGElement("use") }}
+
+## Example
+
+```html
+<html lang="en">
+  <body>
+    <svg
+      width="120"
+      height="220"
+      viewPort="0 0 120 120"
+      xmlns="http://www.w3.org/2000/svg">
+      <style>
+        <![CDATA[
+          rect.rectClass {
+            stroke: #000066;
+            fill: #00cc00;
+          }
+          circle.circleClass {
+            stroke: #006600;
+            fill: #cc0000;
+          }
+        ]]>
+      </style>
+
+      <rect class="rectClass" x="10" y="10" width="100" height="100" />
+      <circle class="circleClass" cx="40" cy="50" r="26" />
+    </svg>
+  </body>
+</html>
+```
 
 ## Specifications
 
