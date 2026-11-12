@@ -18,6 +18,13 @@ To learn how to use server-sent events, see our article [Using server-sent event
 - {{domxref("EventSource")}}
   - : Defines all the features that handle connecting to a server, receiving events/data, errors, closing a connection, etc.
 
+## Libraries
+
+- [Mercure: a real-time communication protocol (publish-subscribe) built on top of SSE](https://mercure.rocks/)
+- [Transmit: a native opinionated Server-Sent-Event (SSE) module built for AdonisJS](https://docs.adonisjs.com/guides/digging-deeper/server-sent-events)
+- [EventSource polyfill for Node.js](https://github.com/EventSource/eventsource)
+- intercooler.js [declarative SSE support](https://intercoolerjs.org/docs.html#sse)
+
 ## Examples
 
 - [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events)
@@ -28,19 +35,7 @@ To learn how to use server-sent events, see our article [Using server-sent event
 
 ## See also
 
-### Tools
-
-- [Mercure: a real-time communication protocol (publish-subscribe) built on top of SSE](https://mercure.rocks/)
-- [Transmit: a native opinionated Server-Sent-Event (SSE) module built for AdonisJS](https://docs.adonisjs.com/guides/digging-deeper/server-sent-events)
-- [EventSource polyfill for Node.js](https://github.com/EventSource/eventsource)
-- intercooler.js [declarative SSE support](https://intercoolerjs.org/docs.html#sse)
-
-### Related Topics
-
 - [Learn: Making network requests with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [JavaScript](/en-US/docs/Web/JavaScript)
 - [WebSockets](/en-US/docs/Web/API/WebSockets_API)
-
-### Other resources
-
 - [Creating a wall/feed social application](https://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/) powered by server-sent events and [its code on GitHub](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline).

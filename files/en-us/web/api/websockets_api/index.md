@@ -55,7 +55,7 @@ The HTTP headers are used in the [WebSocket handshake](/en-US/docs/Web/API/WebSo
   - : An HTTP header that in requests indicates the WebSocket extensions supported by the client in preferred order.
     In responses, it indicates the extension selected by the server from the client's preferences.
 
-## Tools
+## Libraries
 
 - [AsyncAPI](https://www.asyncapi.com/): A specification for describing event-driven architectures based on protocols like WebSocket. You can use it to describe WebSocket-based APIs just as you would describe REST APIs with the OpenAPI specification. Learn [why you should consider using AsyncAPI with WebSocket](https://www.asyncapi.com/blog/websocket-part1) and [how to do so](https://www.asyncapi.com/blog/websocket-part2).
 - [µWebSockets](https://github.com/uNetworking/uWebSockets): Highly scalable WebSocket server and client implementation for [C++11](https://isocpp.org/) and [Node.js](https://nodejs.org/).
