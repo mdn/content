@@ -20,14 +20,14 @@ This example demonstrates how to confirm that both a model's scene and environme
 ```js
 const modelElem = document.getElementById("model");
 
-model.setAttribute("src", "./teapot.usdz");
-model.setAttribute("environmentmap", "./night.hdr");
-Promise.all([model.ready, model.environmentMapReady])
+modelElem.setAttribute("src", "./teapot.usdz");
+modelElem.setAttribute("environmentmap", "./night.hdr");
+Promise.all([modelElem.ready, modelElem.environmentMapReady])
   .then(enhanceWithModel)
-  .error(showModelError);
+  .catch(showModelError);
 ```
 
-In this example, the display of the model is prevented until both resource Promises are resolved. If processing fails on either resource, the `showModelError()` function is called to display any relevant fallback representation to the user.
+In this example, `enhanceWithModel()` is called after both promises are fulfilled. If processing fails on either resource, the `showModelError()` function is called to display any relevant fallback representation to the user.
 
 ## Specifications
 

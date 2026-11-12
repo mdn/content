@@ -12,7 +12,7 @@ The **`HTMLModelElement.entityTransform`** property reflects the model's visual 
 
 ## Value
 
-A {{domxref("DOMMatrixReadOnly")}} that can be read for the current transformation, or written to in order to update the view of the model contents. It is also possible to assign it a {{domxref("DOMMatrix")}} that include the self-mutating transformations such as [`translateSelf`](/en-US/docs/Web/API/DOMMatrix/translateSelf),[`rotateSelf`](/en-US/docs/Web/API/DOMMatrix/rotateSelf) etc.
+A {{domxref("DOMMatrixReadOnly")}} that can be read for the current transformation, or written to in order to update the view of the model contents. It is also possible to assign it a {{domxref("DOMMatrix")}} that includes the self-mutating transformations such as [`translateSelf`](/en-US/docs/Web/API/DOMMatrix/translateSelf), [`rotateSelf`](/en-US/docs/Web/API/DOMMatrix/rotateSelf) etc.
 
 > [!NOTE]
 > Some transformations cannot be set on a model. Attempts to set transformations containing a non-uniform `scale` component or any shearing will be ignored and result in an error.
@@ -23,7 +23,7 @@ By default, the `entityTransform` of a model element will be computed to contain
 
 ### Natural units
 
-A model resource will be automatically scaled to fit within the initially-assigned viewport allocated. However, the scale _relationship_ between model contents and the viewport allocated obey the implied CSS scale of 1 centimeter representing 37.8 CSS pixels.
+A model resource will be automatically scaled to fit within the initially-assigned viewport allocated. However, the scale _relationship_ between model contents and the viewport allocated obeys the implied CSS scale of 1 centimeter representing 37.8 CSS pixels.
 
 > [!NOTE]
 > For privacy reasons, a user agent does not provide any indication of the true, real-world scale of a model or the containing window.
@@ -32,7 +32,7 @@ A model resource will be automatically scaled to fit within the initially-assign
 
 ```js
 // Set the model to the identity transform. A 10cm object would have an
-// apparent size of 10 * 32.8 = 328 CSS pixels.
+// apparent size of 10 * 37.8 = 378 CSS pixels.
 document.querySelector("#model").entityTransform = new DOMMatrix();
 ```
 

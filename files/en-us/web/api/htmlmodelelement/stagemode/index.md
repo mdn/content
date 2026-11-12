@@ -1,5 +1,5 @@
 ---
-title: "HTMLModelElement: stagemode property"
+title: "HTMLModelElement: stageMode property"
 short-title: stageMode
 slug: Web/API/HTMLModelElement/stageMode
 page-type: web-api-instance-property
@@ -24,7 +24,7 @@ While the specific behavior of an orbit mode may vary between user agents, it ha
 
 - The `entityTransform` becomes read-only, and reflects a scale and translation that fully accommodates the model contents within the visible bounding box of the model's viewport.
 
-- [Pointer events](/en-US/docs/Web/API/Pointer_events) on the model's viewport reflect a pivoting behavior, similar to an "Orbit camera" as provided in may computer graphics applications.
+- [Pointer events](/en-US/docs/Web/API/Pointer_events) on the model's viewport reflect a pivoting behavior, similar to an "Orbit camera" as provided in many computer graphics applications.
 
 ### Impact on `entityTransform`
 
@@ -34,9 +34,9 @@ Setting the `stagemode` to `orbit` immediately has these consequences for the mo
   The scale and position reflected by the model's `entityTransform` is forced to be centered on its `boundingBoxCenter` and to accommodate the full size of the model's `boundingBoxExtents`. This differs to - and is likely smaller than - the model's default, [object fit](/en-US/docs/Web/HTML/Reference/Elements/model#object_fit) transformation.
 
 - Transform is **read-only**:
-  While `entityTransform` is set to a read-only mode where any programmatic attempt to set it directly is ignored, throwing an error.
+  `entityTransform` is set to a read-only mode where any programmatic attempt to set it directly is ignored, throwing an error.
 - Transform **remains updated**:
-  Updates to the effective transform _are_ reflected in the parameter, so that information related the model's current orientation can be used to drive other aspects of the page's behavior.
+  Updates to the effective transform _are_ reflected in the parameter, so that information related to the model's current orientation can be used to drive other aspects of the page's behavior.
 
 ## Examples
 
@@ -55,5 +55,3 @@ This example demonstrates how to set a model's stage mode to orbit.
 ## Browser compatibility
 
 {{Compat}}
-
-## See also

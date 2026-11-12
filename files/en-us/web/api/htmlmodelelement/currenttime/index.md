@@ -40,5 +40,3 @@ console.log(model.currentTime);
 ## Browser compatibility
 
 {{Compat}}
-
-## See also

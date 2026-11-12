@@ -41,7 +41,7 @@ This example demonstrates how to specify a custom environment map, both in JavaS
   <source src="teapot.glb" type="model/gltf+binary" />
   <source src="teapot.usdz" type="model/vnd.usdz+zip" />
 </model>
-<button onclick="goToTundra()"></button>
+<button onclick="goToTundra()">Switch to tundra</button>
 ```
 
 ```js
@@ -67,5 +67,3 @@ in conjunction with a change to the `environmentMap`.
 ## Browser compatibility
 
 {{Compat}}
-
-## See also

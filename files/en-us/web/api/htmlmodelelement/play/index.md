@@ -10,7 +10,7 @@ browser-compat: api.HTMLModelElement.play
 
 The {{domxref("HTMLModelElement")}} **`play()`** method attempts to begin playback of the model. It returns a {{jsxref("Promise")}} which is resolved when playback has been successfully started.
 
-Failure to begin playback for any reason, such as permission issues, result in the promise being rejected.
+Failure to begin playback for any reason, such as permission issues, results in the promise being rejected.
 
 ## Syntax
 
@@ -68,5 +68,3 @@ When this example is executed, it begins by collecting references to the {{HTMLE
 ## Browser compatibility
 
 {{Compat}}
-
-## See also

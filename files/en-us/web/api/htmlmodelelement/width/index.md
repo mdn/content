@@ -20,7 +20,7 @@ While valid model content does possess dimensional data, the model's _portal dim
 
 ### Initial presentation
 
-A model's contents is set to automatically fit within the portal's `width` and `height` dimensions at the moment that the `ready` Promise is resolved. However, the resulting [entityTransform](/en-US/docs/Web/API/HTMLModelElement/entityTransform) is not updated during subsequent changes to the viewport dimensions, meaning that the model contents will remain the same size within the portal's overall dimensions.
+A model's contents are set to automatically fit within the portal's `width` and `height` dimensions at the moment that the `ready` Promise is resolved. However, the resulting [entityTransform](/en-US/docs/Web/API/HTMLModelElement/entityTransform) is not updated during subsequent changes to the viewport dimensions, meaning that the model contents will remain the same size within the portal's overall dimensions.
 
 ### `stagemode="orbit"`
 

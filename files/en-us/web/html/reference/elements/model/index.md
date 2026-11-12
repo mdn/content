@@ -44,7 +44,6 @@ The coordinate space in a model context
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - [`environmentmap`](/en-US/docs/Web/API/HTMLModelElement/environmentMap#usage_notes)
-
   - : Defines the URL for the environment map to use to illuminate the model. This resource is assumed to be in an [equirectangular](https://en.wikipedia.org/wiki/Equirectangular_projection) projection. A valid environment map may be supplied in any valid image format, but it is recommended to supply a resource capable of presenting raw luminance values, such as [OpenEXR `.exr`](https://en.wikipedia.org/wiki/OpenEXR) format, or [RGBE `.hdr`](https://en.wikipedia.org/wiki/RGBE_image_format) format.
 
 <table> <tr> <td>
@@ -62,35 +61,24 @@ The projection of the equirectangular back to a sphere
 > [!NOTE]
 > While environment map resources are provided as images, an appropriate resource should contain a very high dynamic range of luminance values, and may not be appropriate to display directly.
 
-- [`autoplay`](/en-US/docs/Web/API/HTMLModelElement/autoplay#usage_notes)
-
+- [`autoplay`](/en-US/docs/Web/API/HTMLModelElement/autoplay)
   - : A Boolean attribute; if specified, the model automatically begins to play back as soon as the model file has been loaded and parsed.
-
-- [`loop`](/en-US/docs/Web/API/HTMLModelElement/loop#usage_notes)
-
+- [`loop`](/en-US/docs/Web/API/HTMLModelElement/loop)
   - : A Boolean attribute; if specified, the browser will automatically seek back to the start upon reaching the end of the model's animation and continue playback.
-
-- [`stagemode`](/en-US/docs/Web/API/HTMLModelElement/stageMode#usage_notes)
-
+- [`stagemode`](/en-US/docs/Web/API/HTMLModelElement/stageMode)
   - : An enumerated attribute indicating which mode, if any, the User Agent should respond to pointer events with by default. It can have the following values:
     - `none`, which indicates that the User Agent should take no action,
-    - `orbit`, which indicates that the User Agent should provide the orbit mode interaction. see [stageMode:orbit mode](/en-US/docs/Web/API/HTMLModelElement/stageMode#orbit_mode) for more in-depth discussion.
-
+    - `orbit`, which indicates that the User Agent should provide the orbit mode interaction. See [stageMode:orbit mode](/en-US/docs/Web/API/HTMLModelElement/stageMode#orbit_mode) for more in-depth discussion.
 - `src`
-
   - : The model {{glossary("URL")}} to be fetched. Multiple model file candidates may also be provided through one or more [source](/en-US/docs/Web/HTML/Reference/Elements/source) elements for alternate resources, such as the [GLTF](https://www.khronos.org/gltf/) or [USDZ](https://openusd.org/release/spec_usdz.html) formats.
-
 - `height`
-
   - : The intrinsic height of the model's viewport, in pixels. Must be an integer without a unit.
-
 - `width`
-
   - : The intrinsic width of the model's viewport, in pixels. Must be an integer without a unit.
 
 ## Usage notes
 
-- While it provides benefits for all devices and User Agents, the `<model>` element has particular value on platforms with stereoscopic and/or head-tracking capabilities, such as Head-Mounted Displays (HMDs). It can be used as declarative alternative to the WebXR API to provide spatial content.
+- While it provides benefits for all devices and User Agents, the `<model>` element has particular value on platforms with stereoscopic and/or head-tracking capabilities, such as Head-Mounted Displays (HMDs). It can be used as a declarative alternative to the WebXR API to provide spatial content.
 
 ### Object fit
 
@@ -109,7 +97,7 @@ A model file scaled to the bounds of the viewport specified
 
 ### Natural scale
 
-While model elements are governed by "object fit" and ["orbit fit"](/en-US/docs/Web/API/HTMLModelElement/stageMode#orbit_mode) transformations by default, model resources have implicit real-world dimensions. For example, A model with its `entityTransform` set to the [identity matrix](https://en.wikipedia.org/wiki/Identity_matrix) _I<sub>4</sub>_ with a 10cm teapot will be displayed as occupying 10cm, or approximately 378 CSS pixels in the window.
+While model elements are governed by "object fit" and ["orbit fit"](/en-US/docs/Web/API/HTMLModelElement/stageMode#orbit_mode) transformations by default, model resources have implicit real-world dimensions. For example, a model with its `entityTransform` set to the [identity matrix](https://en.wikipedia.org/wiki/Identity_matrix) _I<sub>4</sub>_ with a 10cm teapot will be displayed as occupying 10cm, or approximately 378 CSS pixels in the window.
 
 > [!NOTE]
 > The CSS-equivalent scale for model contents is unlikely to equate to real-world dimensions on any device. See discussion of [CSS units and values](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units) for more details.
@@ -128,7 +116,7 @@ In this example, a `<model>` element is used to portray a teapot.
 
 {{EmbedLiveSample('basic-model')}}
 
-The semantics of the `model` element is that of declaratively portraying a single, three-dimensional object.
+The semantics of the `model` element are those of declaratively portraying a single, three-dimensional object.
 
 ## Technical summary
 
@@ -157,7 +145,7 @@ The semantics of the `model` element is that of declaratively portraying a singl
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None; it is a {{Glossary("void element")}}.</td>
+      <td>Transparent if a <code>src</code> attribute is present; otherwise, zero or more {{HTMLElement("source")}} elements followed by transparent content, optionally intermixed with script-supporting elements.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
@@ -255,7 +243,6 @@ The semantics of the `model` element is that of declaratively portraying a singl
       </td>
     </tr>
     <tr>
-    <tr>
     <th scope="row">DOM interface</th>
       <td>{{domxref("HTMLModelElement")}}</td>
     </tr>
@@ -272,4 +259,4 @@ The semantics of the `model` element is that of declaratively portraying a singl
 
 ## See also
 
-- WebXR, Media element, ..?
+- [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)

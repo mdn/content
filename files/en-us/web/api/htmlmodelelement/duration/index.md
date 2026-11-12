@@ -31,5 +31,3 @@ console.log(obj.duration); // NaN
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
