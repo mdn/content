@@ -50,10 +50,10 @@ None (`undefined`).
 
 ## Description
 
-The **`setHTML()`** method provides an XSS-safe method to parse and sanitize a string of HTML into a {{domxref("DocumentFragment")}}, and then insert it into the DOM as a subtree of the element.
-
-`setHTML()` drops any elements in the HTML input string that are invalid in the context of the current element, such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
-It then removes any HTML entities that aren't allowed by the sanitizer configuration, and further removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer.
+The **`setHTML()`** method parses a string of HTML, sanitizing it as it is parsed, and replaces the element's subtree with the result.
+The parser uses the target element as its context; for example, {{htmlelement("col")}} is dropped unless the target is a {{htmlelement("table")}}, {{htmlelement("colgroup")}}, or {{htmlelement("template")}} element.
+The sanitizer configuration determines which elements, attributes, and comments are allowed, but XSS-unsafe elements and attributes are always removed, even if allowed by the configuration.
+See [Sanitization during parsing](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_during_parsing).
 
 If no sanitizer is specified in the `options.sanitizer` parameter, `setHTML()` is used with the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
 This configuration is suitable for the majority of use cases as it prevents XSS attacks, as well as other attacks like clickjacking or spoofing.

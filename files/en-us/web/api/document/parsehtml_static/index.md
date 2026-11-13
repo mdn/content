@@ -20,7 +20,7 @@ Document.parseHTML(input, options)
 ### Parameters
 
 - `input`
-  - : A string defining HTML to be sanitized and injected into the shadow root.
+  - : A string defining HTML to be parsed and sanitized into a new document.
 - `options` {{optional_inline}}
   - : An options object with the following optional parameters:
     - `sanitizer`
@@ -45,8 +45,11 @@ A {{domxref("Document")}}.
 
 ## Description
 
-The **`parseHTML()`** method parses and sanitize a string of HTML in order to create a new {{domxref("Document")}} instance that is XSS-safe.
+The **`parseHTML()`** method parses and sanitizes a string of HTML in order to create a new {{domxref("Document")}} instance that is XSS-safe.
 The resulting `Document` will have a [content type](/en-US/docs/Web/API/Document/contentType) of "text/html", a [character set](/en-US/docs/Web/API/Document/characterSet) of UTF-8, and a URL of "about:blank".
+
+The sanitizer configuration is applied during parsing, and XSS-unsafe elements and attributes are always removed.
+See [Sanitization during parsing](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_during_parsing).
 
 If no sanitizer is specified in the `options.sanitizer` parameter, `parseHTML()` is used with the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
 This configuration is suitable for the majority of use cases as it prevents XSS attacks, as well as other attacks like clickjacking or spoofing.
@@ -55,6 +58,7 @@ A custom `Sanitizer` or `SanitizerConfig` can be specified to choose which eleme
 Note that even if unsafe options are allowed by the sanitizer, they will still be removed when using this method (it removes the same elements as a sanitizer on which {{domxref('Sanitizer.removeUnsafe()')}} has been called).
 
 The input HTML may include [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom).
+When sanitizing, a shadow root is attached only if its host is kept and the sanitizer allows both the {{htmlelement("template")}} element and its `shadowrootmode` attribute.
 If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as {{htmlelement("template")}} elements within that shadow root.
 
 `parseHTML()` should be used instead of {{domxref("Document.parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.

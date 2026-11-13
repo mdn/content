@@ -60,7 +60,11 @@ A {{domxref("Document")}}.
 The **`parseHTMLUnsafe()`** static method can be used to create a new {{domxref("Document")}} instance, optionally filter out unwanted elements and attributes.
 The resulting `Document` will have a [content type](/en-US/docs/Web/API/Document/contentType) of "text/html", a [character set](/en-US/docs/Web/API/Document/characterSet) of UTF-8, and a URL of "about:blank".
 
+If a sanitizer is specified, its configuration is applied during parsing, rather than to a complete tree after parsing.
+See [Sanitization during parsing](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_during_parsing).
+
 The input HTML may include [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom).
+When sanitizing, a shadow root is attached only if its host is kept and the sanitizer allows both the {{htmlelement("template")}} element and its `shadowrootmode` attribute.
 If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as {{htmlelement("template")}} elements within that shadow root.
 
 `parseHTMLUnsafe()` doesn't perform any sanitization by default.
