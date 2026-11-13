@@ -74,7 +74,7 @@ Intl.DateTimeFormat(locales, options)
 - `calendar`
   - : The calendar to use, such as `"chinese"`, `"gregory"`, `"persian"`, and so on. For a list of supported calendar types, see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types); the default is locale dependent. This option can also be set through the `ca` Unicode extension key; if both are provided, this `options` property takes precedence.
 - `numberingSystem`
-  - : The numbering system to use for number formatting, such as `"arab"`, `"hans"`, `"mathsans"`, and so on. For a list of supported numbering system types, see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types); the default is locale dependent. This option can also be set through the `nu` Unicode extension key; if both are provided, this `options` property takes precedence.
+  - : The numbering system to use for number formatting, such as `"arab"`, `"hanidec"`, `"mathsans"`, and so on. For a list of supported numbering system types, see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types); the default is locale dependent. This option can also be set through the `nu` Unicode extension key; if both are provided, this `options` property takes precedence.
 - `hour12`
   - : Whether to use 12-hour time (as opposed to 24-hour time). Possible values are `true` and `false`; the default is locale dependent. When `true`, this option sets `hourCycle` to either `"h11"` or `"h12"`, depending on the locale. When `false`, it sets `hourCycle` to `"h23"`. `hour12` overrides both the `hc` locale extension tag and the `hourCycle` option, should either or both of those be present.
 - `hourCycle`
@@ -286,7 +286,7 @@ console.log(
     timeZone: "UTC",
   }).format(date),
 );
-// 4 at night"  (same formatting in en-GB for all dayPeriod values)
+// "4 at night"  (same formatting in en-GB for all dayPeriod values)
 
 console.log(
   new Intl.DateTimeFormat("fr", {

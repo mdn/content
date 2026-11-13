@@ -36,7 +36,7 @@ new Intl.DurationFormat(locales, options)
     - `localeMatcher`
       - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
     - `numberingSystem`
-      - : The numbering system to use for number formatting, such as `"arab"`, `"hans"`, `"mathsans"`, and so on. For a list of supported numbering system types, see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types); the default is locale dependent. This option can also be set through the `nu` Unicode extension key; if both are provided, this `options` property takes precedence.
+      - : The numbering system to use for number formatting, such as `"arab"`, `"hanidec"`, `"mathsans"`, and so on. For a list of supported numbering system types, see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types); the default is locale dependent. This option can also be set through the `nu` Unicode extension key; if both are provided, this `options` property takes precedence.
     - `style`
       - : The style of the formatted duration. This value is used as the default for all other unit options, and also corresponds to the `style` option of {{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat()")}} when concatenating the list of duration units. Possible values are:
         - `"long"`
@@ -130,7 +130,7 @@ When the time segment uses the `"2-digit"` style, the following options are also
 When the time segment uses the `"long"`, `"short"`, or `"narrow"` style, the following options are also used:
 
 - `style`: `"unit"` when `"long"`, `"short"`, or `"narrow"` is specified, `undefined` otherwise
-- `unit`: the currently formatted unit (`"years"`, `"days"`, `"nanoseconds"`, etc.)
+- `unit`: the currently formatted unit (`"year"`, `"day"`, `"nanosecond"`, etc.)
 - `unitDisplay`: the value of the time segment style (`"long"`, `"short"`, or `"narrow"`)
 
 ## Examples

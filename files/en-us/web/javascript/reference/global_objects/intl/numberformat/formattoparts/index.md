@@ -20,7 +20,7 @@ const parts = numberFormat.formatToParts(amount);
 const partValues = parts.map((p) => p.value);
 
 console.log(partValues);
-// Expected output: "["$", "654", ",", "321", ".", "99"]"
+// Expected output: Array ["$", "654", ",", "321", ".", "99"]
 ```
 
 ## Syntax
@@ -32,7 +32,7 @@ formatToParts(number)
 ### Parameters
 
 - `number`
-  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format. Strings are parsed in the same way as in [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), except that `formatToParts()` will use the exact value that the string represents, avoiding loss of precision during implicitly conversion to a number.
+  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format. Strings are parsed in the same way as in [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), except that `formatToParts()` will use the exact value that the string represents, avoiding loss of precision during implicit conversion to a number.
 
 ### Return value
 

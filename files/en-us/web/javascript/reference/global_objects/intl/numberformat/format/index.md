@@ -36,7 +36,7 @@ format(number)
 ### Parameters
 
 - `number`
-  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format. Strings are parsed in the same way as in [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), except that `format()` will use the exact value that the string represents, avoiding loss of precision during implicitly conversion to a number.
+  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format. Strings are parsed in the same way as in [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), except that `format()` will use the exact value that the string represents, avoiding loss of precision during implicit conversion to a number.
 
 > [!NOTE]
 > Older versions of the specification parsed strings as a {{jsxref("Number")}}.

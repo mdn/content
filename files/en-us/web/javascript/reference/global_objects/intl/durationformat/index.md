@@ -30,7 +30,7 @@ These properties are defined on `Intl.DurationFormat.prototype` and shared by al
 ## Instance methods
 
 - {{jsxref("Intl/DurationFormat/format", "Intl.DurationFormat.prototype.format()")}}
-  - : Getter function that formats a duration according to the locale and formatting options of this `DurationFormat` object.
+  - : Formats a duration according to the locale and formatting options of this `DurationFormat` object.
 - {{jsxref("Intl/DurationFormat/formatToParts", "Intl.DurationFormat.prototype.formatToParts()")}}
   - : Returns an {{jsxref("Array")}} of objects representing the formatted duration in parts.
 - {{jsxref("Intl/DurationFormat/resolvedOptions", "Intl.DurationFormat.prototype.resolvedOptions()")}}

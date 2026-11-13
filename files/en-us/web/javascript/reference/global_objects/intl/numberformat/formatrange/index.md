@@ -18,7 +18,7 @@ formatRange(startRange, endRange)
 ### Parameters
 
 - `startRange`
-  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format. Strings are parsed in the same way as in [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), except that `formatRange()` will use the exact value that the string represents, avoiding loss of precision during implicitly conversion to a number.
+  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format. Strings are parsed in the same way as in [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), except that `formatRange()` will use the exact value that the string represents, avoiding loss of precision during implicit conversion to a number.
 - `endRange`
   - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format.
 
@@ -35,13 +35,13 @@ A string representing the given range of numbers formatted according to the loca
 
 ## Description
 
-The `formatRange` getter function formats a range of numbers into a string according to the locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object from which it is called.
+The `formatRange` method formats a range of numbers into a string according to the locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object from which it is called.
 
 ## Examples
 
 ### Using formatRange
 
-Use the `formatRange` getter function for formatting a range of currency values:
+Use the `formatRange` method for formatting a range of currency values:
 
 ```js
 const nf = new Intl.NumberFormat("en-US", {
