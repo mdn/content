@@ -69,7 +69,17 @@ This allows non-critical resources to load only if needed, potentially speeding 
 ```html
 <img loading="lazy" src="image.jpg" alt="..." />
 <iframe loading="lazy" src="video-player.html" title="..."></iframe>
+<video
+  loading="lazy"
+  src="video.mp4"
+  poster="poster.jpg"
+  width="640"
+  height="360"
+  controls></video>
+<audio loading="lazy" src="audio.mp3" controls></audio>
 ```
+
+A lazy-loaded `<audio>` element needs the [`controls`](/en-US/docs/Web/HTML/Reference/Elements/audio#controls) attribute: without it, the element isn't displayed, so it never comes near the viewport and its audio never loads.
 
 The `load` event fires when the eagerly-loaded content has all been loaded. At that time, it's entirely possible (or even likely) that there may be lazily-loaded images, iframes, videos, or audio within the {{Glossary("visual viewport")}} that haven't yet loaded.
 
