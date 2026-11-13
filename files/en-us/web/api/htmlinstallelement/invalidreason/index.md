@@ -112,7 +112,7 @@ The `<install>` element will not install the PWA and its `invalidReason` propert
 
 ### Exploring invalid reasons
 
-In our [Exploring invalid reasons example](https://mdn.github.io/pwa-examples/install-demos/exploring-invalid-reasons/) ([source code](https://github.com/mdn/pwa-examples/tree/main/install-demos/exploring-invalid-reasons)), we provide a {{htmlelement("select")}} to apply different styles to an `<install>` element that make it invalid. When each set of styles is applied, we output the `invalidReason` provided by the browser into a {{htmlelement("p")}} element.
+In our [Exploring invalid reasons example](https://mdn.github.io/pwa-examples/install-demos/exploring-invalid-reasons/) ([source code](https://github.com/mdn/pwa-examples/tree/main/install-demos/exploring-invalid-reasons)), you can see some of the different ways in which an `<install>` element can be invalid.
 
 ## Specifications
 
