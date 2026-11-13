@@ -24,9 +24,9 @@ _This interface doesn't inherit any properties._
   - : A Boolean flag whose value is `true` if the matrix was initialized as a 2D matrix. If `false`, the matrix is 3D.
 - {{domxref("DOMMatrixReadOnly.isIdentity")}} {{ReadOnlyInline}}
   - : A Boolean whose value is `true` if the matrix is an [identity matrix](https://en.wikipedia.org/wiki/Identity_matrix).
-- `m11`, `m12`, `m13`, `m14`, `m21`, `m22`, `m23`, `m24`, `m31`, `m32`, `m33`, `m34`, `m41`, `m42`, `m43`, `m44`
+- `m11`, `m12`, `m13`, `m14`, `m21`, `m22`, `m23`, `m24`, `m31`, `m32`, `m33`, `m34`, `m41`, `m42`, `m43`, `m44` {{ReadOnlyInline}}
   - : Double-precision floating-point values representing each component of a 4×4 matrix, where `m11` through `m14` are the first column, `m21` through `m24` are the second column, and so forth.
-- `a`, `b`, `c`, `d`, `e`, `f`
+- `a`, `b`, `c`, `d`, `e`, `f` {{ReadOnlyInline}}
   - : Double-precision floating-point values representing the components of a 4×4 matrix which are required in order to perform 2D rotations and translations. These are aliases for specific components of a 4×4 matrix, as shown below.
 
     | 2D  | 3D equivalent |
@@ -37,6 +37,15 @@ _This interface doesn't inherit any properties._
     | `d` | `m22`         |
     | `e` | `m41`         |
     | `f` | `m42`         |
+
+## Static methods
+
+- {{domxref("DOMMatrixReadOnly.fromFloat32Array_static", "fromFloat32Array()")}}
+  - : Creates a new `DOMMatrixReadOnly` object given a {{jsxref("Float32Array")}} of 6 or 16 single-precision (32-bit) floating-point values.
+- {{domxref("DOMMatrixReadOnly.fromFloat64Array_static", "fromFloat64Array()")}}
+  - : Creates a new `DOMMatrixReadOnly` object given a {{jsxref("Float64Array")}} of 6 or 16 double-precision (64-bit) floating-point values.
+- {{domxref("DOMMatrixReadOnly.fromMatrix_static", "fromMatrix()")}}
+  - : Creates a new `DOMMatrixReadOnly` object given an existing matrix or an object which provides the values for its properties.
 
 ## Instance methods
 
@@ -71,22 +80,13 @@ _This interface doesn't inherit any methods. None of the following methods alter
 - {{domxref("DOMMatrixReadOnly.toFloat64Array()")}}
   - : Returns a new {{jsxref("Float64Array")}} of double-precision floating-point numbers, containing all 16 elements which comprise the matrix.
 - {{domxref("DOMMatrixReadOnly.toJSON()")}}
-  - : Returns a JSON representation of the `DOMMatrixReadOnly` object.
+  - : Returns a JSON-serializable plain object representing the `DOMMatrixReadOnly` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 - {{domxref("DOMMatrixReadOnly.toString()")}}
   - : Creates and returns a string representation of the matrix in CSS matrix syntax, using the appropriate CSS matrix notation.
 - {{domxref("DOMMatrixReadOnly.transformPoint()")}}
   - : Transforms the specified point using the matrix, returning a new {{domxref("DOMPoint")}} object containing the transformed point. Neither the matrix nor the original point are altered.
 - {{domxref("DOMMatrixReadOnly.translate()")}}
   - : Returns a new {{domxref("DOMMatrix")}} containing a matrix calculated by translating the source matrix using the specified vector. By default, the vector is `(0, 0, 0)`. The original matrix is not changed.
-
-## Static methods
-
-- {{domxref("DOMMatrixReadOnly.fromFloat32Array_static", "fromFloat32Array()")}}
-  - : Creates a new `DOMMatrixReadOnly` object given a {{jsxref("Float32Array")}} of 6 or 16 single-precision (32-bit) floating-point values.
-- {{domxref("DOMMatrixReadOnly.fromFloat64Array_static", "fromFloat64Array()")}}
-  - : Creates a new `DOMMatrixReadOnly` object given a {{jsxref("Float64Array")}} of 6 or 16 double-precision (64-bit) floating-point values.
-- {{domxref("DOMMatrixReadOnly.fromMatrix_static", "fromMatrix()")}}
-  - : Creates a new `DOMMatrixReadOnly` object given an existing matrix or an object which provides the values for its properties.
 
 ## Specifications
 

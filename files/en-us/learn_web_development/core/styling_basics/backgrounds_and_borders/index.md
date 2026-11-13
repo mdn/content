@@ -383,7 +383,7 @@ Another option we have available for backgrounds is specifying how they scroll w
 
 The {{cssxref("background-attachment")}} property only has an effect when there is content to scroll, so we've made a demo to demonstrate the differences between the three values:
 
-```html hidden live-sample___background-atachment
+```html hidden live-sample___background-attachment
 <section>
   <article class="scroll">
     <p>
@@ -420,7 +420,7 @@ The {{cssxref("background-attachment")}} property only has an effect when there 
 </section>
 ```
 
-```css hidden live-sample___background-atachment
+```css hidden live-sample___background-attachment
 html,
 body {
   margin: 0;
@@ -447,7 +447,7 @@ body {
 p {
   padding: 10px;
   color: white;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgb(0 0 0 / 0.3);
 }
 
 section {
@@ -458,8 +458,8 @@ section {
 article {
   flex: 1;
   height: 300px;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/grapefruit-slice.jpg);
+  background-color: rgb(0 0 0 / 0.5);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/grapefruit-slice.jpg");
   background-size: 400px 400px;
   background-repeat: no-repeat;
   background-position: top center;

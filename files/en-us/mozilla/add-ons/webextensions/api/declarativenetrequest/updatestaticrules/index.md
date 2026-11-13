@@ -1,5 +1,5 @@
 ---
-title: declarativeNetRequest.updateStaticRules
+title: declarativeNetRequest.updateStaticRules()
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/updateStaticRules
 page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.updateStaticRules

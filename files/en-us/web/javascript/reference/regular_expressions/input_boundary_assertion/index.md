@@ -9,7 +9,7 @@ sidebar: jssidebar
 An **input boundary assertion** checks if the current position in the string is an input boundary. An input boundary is the start or end of the string; or, if the `m` flag is set, the start or end of a line.
 
 > [!NOTE]
-> To match the start and end of the entire string in `m` mode, use the [buffer boundary assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion) `\A`, `\z`, and `\Z`.
+> To match the start and end of the entire string in `m` mode, use the [buffer boundary assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion) `\A` and `\z`.
 
 ## Syntax
 

@@ -99,7 +99,7 @@ Now create a file called "manifest.json", and give it this content:
   - The `gecko` property provides addons.mozilla.org and Firefox with extra configuration information about the extension:
   - [`id`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#id) defines a unique identifier for the extension. This ID is needed before an extension can be published on addons.mozilla.org (AMO).
   - [`data_collection_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#data_collection_permissions) provides information on whether the extension collects and transmits personally identifiable information. This example doesn't collect or transmit any data.
-- [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) lists permissions the extension needs. In this example, the extension asks for the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
+- [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) lists permissions the extension needs. In this example, the extension asks for the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission).
 - [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) specifies the toolbar button, its icons, tooltip, and popup. See [The toolbar button](#the_toolbar_button) for details of the properties used in this example.
 - [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) lists files that you want to make accessible to web pages. As the extension replaces the page's content with images packaged in the extension, you need to make those images accessible to the page.
 
@@ -143,7 +143,7 @@ Both icons are based on one from the [IconBeast Lite icon set](https://www.iconb
 
 Toolbar buttons let you add a popup that opens when the user clicks the toolbar button.
 
-If you don't supply a popup, clicking the button dispatches a {{WebExtAPIRef("action.onClicked")}} event to your extension. Your extension uses this event to trigger the functionality associated with the button.
+If you don't supply a popup, clicking the button dispatches an {{WebExtAPIRef("action.onClicked")}} event to your extension. Your extension uses this event to trigger the functionality associated with the button.
 
 For this example, you want a popup. The popup lets the user choose one of three beasts.
 
@@ -482,13 +482,17 @@ beastify/
     manifest.json
 ```
 
-Now load the extension as a temporary add-on. Open `about:debugging` in Firefox, click **This Firefox** and then **Load Temporary Add-on**, and select your manifest.json file. You see the extension's icon appear in the Firefox toolbar:
+Now load the extension as a temporary add-on. Open `about:debugging` in Firefox, click **This Firefox** and then **Load Temporary Add-on**, and select your manifest.json file.
 
-![The beastify icon in the Firefox toolbar](beastify_icon.png)
+Firefox adds the extension's button to the extensions panel, so you need to pin it to the toolbar. In the toolbar, click the extensions button (jigsaw puzzle icon) and locate the extension. Click the extension's 3-dot menu, or right-click the extension, and select **Pin to Toolbar**:
+
+![The extensions panel with the Beastify extension's menu open and the Pin to Toolbar option highlighted](beastify_icon.png)
+
+The extension's icon now appears in the Firefox toolbar.
 
 Open a web page, click the icon, select a beast, and see the web page change:
 
-![A page replaced with the image of a turtle](beastify_page.png)
+![The beastify popup with Turtle highlighted, and the page replaced with an image of a turtle](beastify_page.png)
 
 ## Developing from the command line
 

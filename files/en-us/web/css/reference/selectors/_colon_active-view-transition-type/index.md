@@ -83,46 +83,6 @@ The markup includes a single {{htmlelement("p")}} element to contain the content
 </div>
 ```
 
-#### JavaScript
-
-In our script, we create references to both buttons and the content paragraph, and then store our two different pieces of content in two constants.
-
-```js live-sample___basic_usage
-const backBtn = document.getElementById("backwards");
-const fwdBtn = document.getElementById("forwards");
-const content = document.querySelector("p");
-
-const first = "This is my first piece of content. I hope you like it!";
-const second =
-  "This is my second piece of content. Is it better than the first?";
-```
-
-Next, we add `click` event listeners to the backwards and forwards buttons; when they are clicked, the `changeContent()` function is run.
-
-```js live-sample___basic_usage
-backBtn.addEventListener("click", changeContent);
-fwdBtn.addEventListener("click", changeContent);
-```
-
-Finally, we define the `changeContent()` function. We start by declaring a `type` value that will hold our view transition type value. If the event target is the "Backwards" button, we set `type` to `backwards`. If not, we set `type` to `forwards`. We then invoke the {{domxref("Document.startViewTransition", "startViewTransition()")}} method to update the content and start the transition:
-
-- The `update` callback checks whether the paragraph `textContent` is equal to the `first` string. If so, we set it to the `second` string. If not, we set it to the `first` string.
-- The `types` array is given one element: the `type` value we declared earlier.
-
-```js live-sample___basic_usage
-function changeContent(e) {
-  const type = e.target === backBtn ? "backwards" : "forwards";
-  document.startViewTransition({
-    update() {
-      content.textContent === first
-        ? (content.textContent = second)
-        : (content.textContent = first);
-    },
-    types: [type],
-  });
-}
-```
-
 #### CSS
 
 In our styles, we start off by creating a set of nested rules using the `:active-view-transition` pseudo-class. These styles will be applied whenever a view transition is active, regardless of the their types. We apply a {{cssxref("view-transition-name")}} of `none` to the {{cssxref(":root")}}, as we don't want any elements captured and animated on transition except for the `<p>` element, which is given a `view-transition-name` of `slide`.
@@ -217,11 +177,51 @@ Finally, we use {{cssxref("@keyframes")}} animation blocks to define the animati
 }
 ```
 
+#### JavaScript
+
+In our script, we create references to both buttons and the content paragraph, and then store our two different pieces of content in two constants.
+
+```js live-sample___basic_usage
+const backBtn = document.getElementById("backwards");
+const fwdBtn = document.getElementById("forwards");
+const content = document.querySelector("p");
+
+const first = "This is my first piece of content. I hope you like it!";
+const second =
+  "This is my second piece of content. Is it better than the first?";
+```
+
+Next, we add `click` event listeners to the backwards and forwards buttons; when they are clicked, the `changeContent()` function is run.
+
+```js live-sample___basic_usage
+backBtn.addEventListener("click", changeContent);
+fwdBtn.addEventListener("click", changeContent);
+```
+
+Finally, we define the `changeContent()` function. We start by declaring a `type` value that will hold our view transition type value. If the event target is the "Backwards" button, we set `type` to `backwards`. If not, we set `type` to `forwards`. We then invoke the {{domxref("Document.startViewTransition", "startViewTransition()")}} method to update the content and start the transition:
+
+- The `update` callback checks whether the paragraph `textContent` is equal to the `first` string. If so, we set it to the `second` string. If not, we set it to the `first` string.
+- The `types` array is given one element: the `type` value we declared earlier.
+
+```js live-sample___basic_usage
+function changeContent(e) {
+  const type = e.target === backBtn ? "backwards" : "forwards";
+  document.startViewTransition({
+    update() {
+      content.textContent === first
+        ? (content.textContent = second)
+        : (content.textContent = first);
+    },
+    types: [type],
+  });
+}
+```
+
 #### Result
 
 The example is rendered like so:
 
-{{EmbedLiveSample("basic-usage", "100%", 200)}}
+{{EmbedLiveSample("basic_usage", "100%", 200)}}
 
 Try clicking the "Backwards" and "Forwards" buttons, and note how, even though the same code is used to trigger the content update and view transition in each case, a different animation is used for the transition. This is because a different transition type is set depending on which button is pressed.
 

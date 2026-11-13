@@ -9,6 +9,133 @@ sidebar: htmlsidebar
 
 The **`itemprop`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is used to add properties to an item. Every HTML element can have an `itemprop` attribute specified, and an `itemprop` consists of a name-value pair. Each name-value pair is called a **property**, and a group of one or more properties forms an **item**. Property values are either a string or a URL and can be associated with a very wide range of elements including {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}}, {{HTMLElement("track")}}, and {{HTMLElement("video")}}.
 
+## Value
+
+The property value of a name-value pair is as given for the first matching case in the following list:
+
+- If the element has an `itemscope` attribute
+  - The value is the **item** created by the element
+
+- If the element is a `meta` element
+  - The value is the value of the element's `content` attribute
+
+- If the element is an `audio`, `embed`, `iframe`, `img`, `source`, `track`, or `video` element
+  - The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the [Microdata DOM API](/en-US/docs/Web/HTML/Guides/Microdata)) of the element at the time the attribute is set
+
+- If the element is an `a`, `area`, or `link` element
+  - The value is the resulting URL string that results from parsing the value of the element's href attribute relative to the node document of the element at the time the attribute is set
+
+- If the element is an `object` element
+  - The value is the resulting URL string that results from parsing the value of the element's data attribute relative to the node document of the element at the time the attribute is set
+
+- If the element is a `data` element
+  - The value is the value of the element's value attribute
+
+- If the element is a `meter` element
+  - The value is the value of the element's `value` attribute
+
+- If the element is a `time` element
+  - The value is the element's `datetime` value
+
+Otherwise
+
+- The value is the element's _textContent_.
+
+If a property's value is a `URL`, the property must be specified using a URL property element. The URL property elements are the `a`, `area`, `audio`, `embed`, `iframe`, `img`, `link`, `object`, `source`, `track`, and `video` elements.
+
+### Name order
+
+Names are unordered relative to each other, but if a particular name has multiple values, they do have a relative order.
+
+In the following example, the "a" property has the values "1" and "2", _in that order_, but whether the "a" property comes before the "b" property or not is not important.
+
+```html
+<div itemscope>
+  <p itemprop="a">1</p>
+  <p itemprop="a">2</p>
+  <p itemprop="b">test</p>
+</div>
+```
+
+Here are several equivalent examples:
+
+```html
+<div itemscope>
+  <p itemprop="b">test</p>
+  <p itemprop="a">1</p>
+  <p itemprop="a">2</p>
+</div>
+```
+
+```html
+<div itemscope>
+  <p itemprop="a">1</p>
+  <p itemprop="b">test</p>
+  <p itemprop="a">2</p>
+</div>
+```
+
+```html
+<div id="x">
+  <p itemprop="a">1</p>
+</div>
+<div itemscope itemref="x">
+  <p itemprop="b">test</p>
+  <p itemprop="a">2</p>
+</div>
+```
+
+### Representing structured data for a book
+
+This example uses microdata attributes to represent the following structured data:
+
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td rowspan="4">itemscope</td>
+      <td>itemtype: itemid</td>
+      <td colspan="2">https://schema.org/Book: urn:isbn:0-374-22848-5</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>title</td>
+      <td>Owls of the Eastern Ice</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>author</td>
+      <td>Jonathan C Slaght</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>datePublished</td>
+      <td>2020-08-04</td>
+    </tr>
+  </tbody>
+</table>
+
+#### HTML
+
+```html
+<dl
+  itemscope
+  itemtype="https://schema.org/Book"
+  itemid="urn:isbn:0-374-22848-5<">
+  <dt>Title</dt>
+  <dd itemprop="title">Owls of the Eastern Ice</dd>
+  <dt>Author</dt>
+  <dd itemprop="author">Jonathan C Slaght</dd>
+  <dt>Publication date</dt>
+  <dd>
+    <time itemprop="datePublished" datetime="2020-08-04">August 4 2020</time>
+  </dd>
+</dl>
+```
+
+#### Result
+
+{{EmbedLiveSample('Representing structured data for a book')}}
+
 ## Examples
 
 The example below shows the source for a set of elements marked up with `itemprop` attributes, followed by a table showing the resulting structured data.
@@ -285,133 +412,6 @@ A property is an unordered set of unique tokens that are case-sensitive and repr
 
 > [!NOTE]
 > The rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.
-
-## Value
-
-The property value of a name-value pair is as given for the first matching case in the following list:
-
-- If the element has an `itemscope` attribute
-  - The value is the **item** created by the element
-
-- If the element is a `meta` element
-  - The value is the value of the element's `content` attribute
-
-- If the element is an `audio`, `embed`, `iframe`, `img`, `source`, `track`, or `video` element
-  - The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the [Microdata DOM API](/en-US/docs/Web/HTML/Guides/Microdata)) of the element at the time the attribute is set
-
-- If the element is an `a`, `area`, or `link` element
-  - The value is the resulting URL string that results from parsing the value of the element's href attribute relative to the node document of the element at the time the attribute is set
-
-- If the element is an `object` element
-  - The value is the resulting URL string that results from parsing the value of the element's data attribute relative to the node document of the element at the time the attribute is set
-
-- If the element is a `data` element
-  - The value is the value of the element's value attribute
-
-- If the element is a `meter` element
-  - The value is the value of the element's `value` attribute
-
-- If the element is a `time` element
-  - The value is the element's `datetime` value
-
-Otherwise
-
-- The value is the element's _textContent_.
-
-If a property's value is a `URL`, the property must be specified using a URL property element. The URL property elements are the `a`, `area`, `audio`, `embed`, `iframe`, `img`, `link`, `object`, `source`, `track`, and `video` elements.
-
-### Name order
-
-Names are unordered relative to each other, but if a particular name has multiple values, they do have a relative order.
-
-In the following example, the "a" property has the values "1" and "2", _in that order_, but whether the "a" property comes before the "b" property or not is not important.
-
-```html
-<div itemscope>
-  <p itemprop="a">1</p>
-  <p itemprop="a">2</p>
-  <p itemprop="b">test</p>
-</div>
-```
-
-Here are several equivalent examples:
-
-```html
-<div itemscope>
-  <p itemprop="b">test</p>
-  <p itemprop="a">1</p>
-  <p itemprop="a">2</p>
-</div>
-```
-
-```html
-<div itemscope>
-  <p itemprop="a">1</p>
-  <p itemprop="b">test</p>
-  <p itemprop="a">2</p>
-</div>
-```
-
-```html
-<div id="x">
-  <p itemprop="a">1</p>
-</div>
-<div itemscope itemref="x">
-  <p itemprop="b">test</p>
-  <p itemprop="a">2</p>
-</div>
-```
-
-### Representing structured data for a book
-
-This example uses microdata attributes to represent the following structured data:
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td rowspan="4">itemscope</td>
-      <td>itemtype: itemid</td>
-      <td colspan="2">https://schema.org/Book: urn:isbn:0-374-22848-5</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>title</td>
-      <td>Owls of the Eastern Ice</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>author</td>
-      <td>Jonathan C Slaght</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>datePublished</td>
-      <td>2020-08-04</td>
-    </tr>
-  </tbody>
-</table>
-
-#### HTML
-
-```html
-<dl
-  itemscope
-  itemtype="https://schema.org/Book"
-  itemid="urn:isbn:0-374-22848-5<">
-  <dt>Title</dt>
-  <dd itemprop="title">Owls of the Eastern Ice</dd>
-  <dt>Author</dt>
-  <dd itemprop="author">Jonathan C Slaght</dd>
-  <dt>Publication date</dt>
-  <dd>
-    <time itemprop="datePublished" datetime="2020-08-04">August 4 2020</time>
-  </dd>
-</dl>
-```
-
-#### Result
-
-{{EmbedLiveSample('Representing structured data for a book')}}
 
 ## Specifications
 

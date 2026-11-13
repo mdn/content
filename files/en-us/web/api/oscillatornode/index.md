@@ -45,10 +45,10 @@ The **`OscillatorNode`** interface represents a periodic waveform, such as a sin
 
 _Also inherits properties from its parent, {{domxref("AudioScheduledSourceNode")}}._
 
-- {{domxref("OscillatorNode.frequency")}}
-  - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the frequency of oscillation in hertz (though the `AudioParam` returned is read-only, the value it represents is not). The default value is 440 Hz (a standard middle-A note).
-- {{domxref("OscillatorNode.detune")}}
-  - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing detuning of oscillation in cents (though the `AudioParam` returned is read-only, the value it represents is not). The default value is 0.
+- {{domxref("OscillatorNode.frequency")}} {{ReadOnlyInline}}
+  - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the frequency of oscillation in hertz (the value of the `AudioParam` can be changed). The default value is 440 Hz (a standard middle-A note).
+- {{domxref("OscillatorNode.detune")}} {{ReadOnlyInline}}
+  - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing detuning of oscillation in cents (the value of the `AudioParam` can be changed). The default value is 0.
 - {{domxref("OscillatorNode.type")}}
   - : A string which specifies the shape of waveform to play; this can be one of a number of standard values, or `custom` to use a {{domxref("PeriodicWave")}} to describe a custom waveform. Different waves will produce different tones. Standard values are `"sine"`, `"square"`, `"sawtooth"`, `"triangle"` and `"custom"`. The default is `"sine"`.
 

@@ -113,7 +113,7 @@ This property is specified as one or more comma-separated keyword values:
 
 #### HTML
 
-We include an unordered list ({{htmlelement("ul")}}) with some list items (({{htmlelement("li")}}).
+We include an unordered list ({{htmlelement("ul")}}) with some list items ({{htmlelement("li")}}).
 
 ```html
 <ul>

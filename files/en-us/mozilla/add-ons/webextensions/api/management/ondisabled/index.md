@@ -1,5 +1,5 @@
 ---
-title: management.onDisabled()
+title: management.onDisabled
 slug: Mozilla/Add-ons/WebExtensions/API/management/onDisabled
 page-type: webextension-api-event
 browser-compat: webextensions.api.management.onDisabled

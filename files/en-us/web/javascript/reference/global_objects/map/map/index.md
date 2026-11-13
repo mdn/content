@@ -46,7 +46,7 @@ const myMap = new Map([
 
 ## See also
 
-- [Polyfill for `Map` in `core-js`](https://github.com/zloirock/core-js#map)
+- [Polyfill for `Map` in `core-js`](https://core-js.io/docs/features/ecmascript/collections#h-map)
 - [es-shims polyfill of `Map`](https://www.npmjs.com/package/es-map)
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}

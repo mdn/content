@@ -18,7 +18,7 @@ The `PerformanceEntry` instances will always be one of the following subclasses:
 - {{domxref("InteractionContentfulPaint")}} {{Experimental_Inline}}
 - {{domxref("LargestContentfulPaint")}}
 - {{domxref("LayoutShift")}} {{Experimental_Inline}}
-- `PerformanceContainerTiming` {{Experimental_Inline}}
+- {{domxref("PerformanceContainerTiming")}} {{Experimental_Inline}}
 - {{domxref("PerformanceElementTiming")}} {{Experimental_Inline}}
 - {{domxref("PerformanceEventTiming")}}
 - {{domxref("PerformanceLongAnimationFrameTiming")}} {{Experimental_Inline}}
@@ -49,9 +49,9 @@ The `PerformanceEntry` instances will always be one of the following subclasses:
 ## Instance methods
 
 - {{domxref("PerformanceEntry.toJSON","PerformanceEntry.toJSON()")}}
-  - : Returns a JSON representation of the `PerformanceEntry` object.
+  - : Returns a JSON-serializable plain object representing the `PerformanceEntry` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
-## Example
+## Examples
 
 ### Working with performance entries
 

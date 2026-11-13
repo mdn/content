@@ -7,7 +7,7 @@ browser-compat: css.types.filter-function.saturate
 sidebar: cssref
 ---
 
-The **`saturate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) super-saturates or desaturates the input image. Its result is a {{cssxref("filter-function")}}.
+The **`saturate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) super-saturates or desaturates the input image. It is used as a value for the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
 
 > [!NOTE]
 > `saturate()` is specified as a matrix operation on the RGB color. It does not actually convert the color to the HSL model, which is a non-linear operation. Therefore, it may not preserve the hue or lightness of the original color.
@@ -43,29 +43,37 @@ filter: saturate(0);
 ## Syntax
 
 ```css
-saturate(amount)
+/* Completely unsaturated */
+saturate(0)
+
+/* No change */
+saturate()
+saturate(1)
+saturate(100%)
+
+/* 60% saturation */
+saturate(.6)
+saturate(60%)
+
+/* Double saturation */
+saturate(2)
+saturate(200%)
 ```
 
 ### Parameters
 
-- `amount` {{Optional_Inline}}
-  - : The amount of the conversion, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value under `100%` desaturates the image, while a value over `100%` super-saturates it. A value of `0%` is completely unsaturated, while a value of `100%` leaves the input unchanged. The initial value for {{Glossary("interpolation")}} is `1`. The default value is `1`.
+- {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} {{Optional_Inline}}
+  - : Specifies the amount of the conversion. A value under `100%` desaturates the image, while a value over `100%` super-saturates it. A value of `0%` is completely unsaturated, while a value of `100%` leaves the input unchanged. Negative values are not allowed. The initial value for {{Glossary("interpolation")}} is `1`. The default value is `1`.
+
+### Return value
+
+A {{cssxref("filter-function")}} value.
 
 ## Formal syntax
 
 {{CSSSyntax}}
 
 ## Examples
-
-### Examples of correct values for saturate()
-
-```css
-saturate(0)     /* Completely unsaturated */
-saturate(.4)    /* 40% saturated */
-saturate()      /* No effect */
-saturate(100%)  /* No effect */
-saturate(200%)  /* Double saturation */
-```
 
 ### saturate() does not preserve hue or lightness
 
@@ -114,6 +122,87 @@ for (let i = 0; i <= 200; i++) {
 
 {{EmbedLiveSample('saturate_does_not_preserve_hue_or_lightness','100%','350')}}
 
+### Using the SVG filter
+
+This example shows three images for comparison: an image with a `saturate()` filter function applied, an image with the equivalent SVG filter applied, and the original image.
+
+#### SVG
+
+The SVG {{SVGElement("feColorMatrix")}} filter element can also be used to adjust the saturation of content. We set the `type` to `saturate` and the `values` to the saturation amount, then we can reference the SVG effect by the ID of the {{SVGElement("filter")}}:
+
+```html live-sample___svg-filter
+<svg height="0" role="none">
+  <filter id="saturate20" color-interpolation-filters="sRGB">
+    <feColorMatrix type="saturate" values="0.2" />
+  </filter>
+</svg>
+```
+
+The following declarations produce the same effect:
+
+```css
+filter: saturate(0.2);
+filter: saturate(20%);
+filter: url("#saturate20"); /* with embedded SVG */
+filter: url("fileName.svg#saturate20"); /* external SVG */
+```
+
+#### CSS
+
+We include CSS that will adjust the saturation of elements based on their `css-filter` or `svg-filter` class:
+
+```css live-sample___svg-filter
+.css-filter {
+  filter: saturate(0.2);
+}
+
+.svg-filter {
+  filter: url("#saturate20");
+}
+```
+
+```css hidden live-sample___svg-filter
+th,
+td {
+  padding: 5px;
+}
+```
+
+```html hidden live-sample___svg-filter
+<table>
+  <thead>
+    <tr>
+      <th><code>saturate()</code> filter</th>
+      <th>SVG filter equivalent</th>
+      <th>Original image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <img
+          class="css-filter"
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
+      </td>
+      <td>
+        <img
+          class="svg-filter"
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
+      </td>
+      <td>
+        <img
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+```
+
+{{EmbedLiveSample('svg-filter','100%','280')}}
+
 ## Specifications
 
 {{Specifications}}
@@ -124,14 +213,14 @@ for (let i = 0; i <= 200; i++) {
 
 ## See also
 
-The other {{cssxref("filter-function")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
-
-- {{cssxref("filter-function/blur", "blur()")}}
-- {{cssxref("filter-function/brightness", "brightness()")}}
-- {{cssxref("filter-function/contrast", "contrast()")}}
-- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- {{cssxref("filter-function/grayscale", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-- {{cssxref("filter-function/invert", "invert()")}}
-- {{cssxref("filter-function/opacity", "opacity()")}}
-- {{cssxref("filter-function/sepia", "sepia()")}}
+- [CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module
+- The other {{cssxref("filter-function")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
+  - {{cssxref("filter-function/blur", "blur()")}}
+  - {{cssxref("filter-function/brightness", "brightness()")}}
+  - {{cssxref("filter-function/contrast", "contrast()")}}
+  - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+  - {{cssxref("filter-function/grayscale", "grayscale()")}}
+  - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+  - {{cssxref("filter-function/invert", "invert()")}}
+  - {{cssxref("filter-function/opacity", "opacity()")}}
+  - {{cssxref("filter-function/sepia", "sepia()")}}

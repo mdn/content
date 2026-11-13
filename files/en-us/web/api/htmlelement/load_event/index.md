@@ -17,11 +17,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("load", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onload = (event) => { }
 ```
 
@@ -93,7 +97,7 @@ function reload() {
 
 The example's `<img>` element contains an `src` attribute in the markup, so the image may load before the `load` event listener attaches. Clicking "reload" is guaranteed to trigger the event listener.
 
-{{EmbedLiveSample("Example", "100%", "200")}}
+{{EmbedLiveSample("examples", "100%", "200")}}
 
 ## Specifications
 

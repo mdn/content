@@ -15,10 +15,10 @@ The **`toLocaleLowerCase()`** method of {{jsxref("String")}} values returns this
 const dotted = "İstanbul";
 
 console.log(`EN-US: ${dotted.toLocaleLowerCase("en-US")}`);
-// Expected output: "i̇stanbul"
+// Expected output: "EN-US: i̇stanbul"
 
 console.log(`TR: ${dotted.toLocaleLowerCase("tr")}`);
-// Expected output: "istanbul"
+// Expected output: "TR: istanbul"
 ```
 
 ## Syntax

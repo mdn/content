@@ -24,7 +24,7 @@ Firefox 15 shipped on August 28, 2012. This article lists key changes that are u
 - The CSS {{cssxref("text-transform")}} property has been extended to correctly handle Unicode ligature characters (like `ﬁ`).
 - The CSS {{cssxref("word-break")}} property has been implemented.
 - The {{cssxref("border-image")}} property has been updated to match the latest Specification and properties have been unprefixed. ([bug 713643](https://bugzil.la/713643))
-- The `skew()` {{cssxref("transform")}} function dropped in Firefox 14 has been restored due to existing site compatibility. Authors are however, advised to use `skewX()` and `skewY(`) functions instead.
+- The `skew()` {{cssxref("transform")}} function dropped in Firefox 14 has been restored due to existing site compatibility. Authors are however, advised to use `skewX()` and `skewY()` functions instead.
 - The value `plaintext` of CSS {{cssxref("unicode-bidi")}} property now applies to inline elements too. ([Firefox bug 746987](https://bugzil.la/746987)).
 
 ### DOM

@@ -39,7 +39,7 @@ It may be useful to refer to the Universal Postal Union website's [Addressing S4
 ## Instance methods
 
 - {{domxref('ContactAddress.toJSON()')}} {{experimental_inline}}
-  - : A standard serializer that returns a JSON representation of the `ContactAddress` object's properties.
+  - : Returns a JSON-serializable plain object representing the `ContactAddress` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 

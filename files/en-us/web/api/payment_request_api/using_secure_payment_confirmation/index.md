@@ -182,7 +182,7 @@ async function spcSupport() {
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
 - [Payment Method Identifiers](/en-US/docs/Web/API/Payment_Request_API/Concepts#payment_method_identifiers)
 - [Web Authentication](/en-US/docs/Web/API/Web_Authentication_API)
-- [Secure Payment Confirmation Explainer](https://github.com/w3c/secure-payment-confirmation/blob/main/explainer.md)
+- [Secure Payment Confirmation Explainer](https://github.com/w3c/secure-payment-confirmation/blob/main/explainers/secure-payment-confirmation.md)
 - [Secure Payment Confirmation Scope](https://github.com/w3c/secure-payment-confirmation/blob/main/scope.md)
 - General [flow diagram for SPC during a payment](https://github.com/w3c/wpsig/blob/gh-pages/spc-general.png)
 - [Secure Payment Confirmation Test Suite](https://wpt.fyi/results/secure-payment-confirmation?label=master&label=experimental&aligned)

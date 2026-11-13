@@ -198,7 +198,7 @@ Host: example.org
 Content-Type: application/x-www-form-urlencoded
 Accept: application/json
 
-select=surname,givenname,email&limit=10&email=%2A%40example.%2A
+select=surname,givenName,email&limit=10&email=%2A%40example.%2A
 ```
 
 A successful response includes the query result in the response content:
@@ -210,12 +210,12 @@ Content-Type: application/json
 [
   {
     "surname": "Smith",
-    "givenname": "John",
+    "givenName": "John",
     "email": "smith@example.org"
   },
   {
     "surname": "Jones",
-    "givenname": "Sally",
+    "givenName": "Sally",
     "email": "sally.jones@example.com"
   }
 ]
@@ -235,12 +235,12 @@ Last-Modified: Sat, 25 Aug 2012 23:34:45 GMT
 [
   {
     "surname": "Smith",
-    "givenname": "John",
+    "givenName": "John",
     "email": "smith@example.org"
   },
   {
     "surname": "Jones",
-    "givenname": "Sally",
+    "givenName": "Sally",
     "email": "sally.jones@example.com"
   }
 ]
@@ -266,7 +266,7 @@ ETag: "42-1"
 [
   {
     "surname": "Smith",
-    "givenname": "John",
+    "givenName": "John",
     "email": "smith@example.org"
   }
 ]

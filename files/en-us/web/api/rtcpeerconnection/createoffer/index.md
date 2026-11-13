@@ -57,7 +57,7 @@ The parameters for the older form of `createOffer()` are described below, to aid
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with an object containing the same properties as an {{domxref("RTCSessionDescription")}} objects:
+A {{jsxref("Promise")}} that fulfills with an object containing the same properties as an {{domxref("RTCSessionDescription")}} object:
 
 - `type`
   - : A string whose value is `"offer"`.

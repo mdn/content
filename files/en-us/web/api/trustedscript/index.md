@@ -14,7 +14,7 @@ The value of a **TrustedScript** object is set when the object is created and ca
 ## Instance methods
 
 - {{domxref("TrustedScript.toJSON()")}}
-  - : Returns a JSON representation of the stored data.
+  - : Returns a string representing the `TrustedScript` object, which is the same value as {{domxref("TrustedScript.toString()")}}. Automatically called by {{jsxref("JSON.stringify()")}}.
 - {{domxref("TrustedScript.toString()")}}
   - : A string containing the sanitized script.
 

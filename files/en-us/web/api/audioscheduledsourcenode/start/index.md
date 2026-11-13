@@ -33,7 +33,7 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `InvalidStateNode` {{domxref("DOMException")}}
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the node has already been started. This error occurs even if the node is no longer
     running because of a prior call to {{domxref("AudioScheduledSourceNode.stop", "stop()")}}.
 - {{jsxref("RangeError")}}

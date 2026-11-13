@@ -12,6 +12,10 @@ browser-compat: api.PerformanceLongAnimationFrameTiming.blockingDuration
 
 The **`blockingDuration`** read-only property of the {{domxref("PerformanceLongAnimationFrameTiming")}} interface returns a {{domxref("DOMHighResTimeStamp")}} indicating the total time in milliseconds for which the main thread was blocked from responding to high priority tasks, such as user input.
 
+## Value
+
+A {{domxref("DOMHighResTimeStamp")}}.
+
 ## Description
 
 `blockingDuration` is calculated by taking all the [long tasks](/en-US/docs/Web/API/PerformanceLongTaskTiming#description) within the LoAF that have a `duration` of more than `50ms`, subtracting `50ms` from each, adding the rendering time to the longest task time, and summing the results. Let's look at an example to clarify what this means.
@@ -47,10 +51,6 @@ The difference between `duration` and `blockingDuration` of LoAFs can be summari
 - `blockingDuration` is a measure of the total time the LoAF blocked the main thread from responding to high priority tasks, such as user interactions, which can cause the UI to feel [janky](/en-US/docs/Glossary/Jank). To put it another way, it is a measure of the effect the LoAF will have on responsiveness.
 
 The reason why the `blockingDuration` of each task is calculated as `duration - 50ms` is that response delays of above 50ms start to be perceptible by users. This threshold is when users start noticing sluggishness; therefore, the time above the 50ms mark is important to measure for determining the severity of jank. See [Total Blocking Time (TBT)](https://web.dev/articles/tbt) for more details.
-
-## Value
-
-A {{domxref("DOMHighResTimeStamp")}}.
 
 ## Examples
 

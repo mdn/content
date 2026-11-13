@@ -18,7 +18,7 @@ Background scripts or a page are:
 > - persistent background scripts running at the time of the crash are reloaded automatically.
 > - non-persistent background scripts (also known as "Event Pages") running at the time of the crash are not reloaded. However, they are restarted automatically when Firefox calls one of their WebExtensions API events listeners.
 > - extension pages loaded in tabs at the time of the crash are not automatically restored. A warning message in each tab informs the user the page has crashed and enables the user to close or restore the tab.
->   ![Browser window displaying the user message indicating that a page has crashed with the options to close or restart the tab](your-tab-crashed-screenshot.png)
+>   ![Firefox displaying the message that a tab has crashed with the options to close or restore the tab](your-tab-crashed-screenshot.png)
 >   You can test this condition by opening a new tab and navigating to `about:crashextensions`, which silently triggers a crash of the extension process.
 
 In Manifest V2, background scripts or a page can be persistent or non-persistent. Non-persistent background scripts are recommended as they reduce the resource cost of your extension. In Manifest V3, only non-persistent background scripts or a page are supported.
@@ -94,6 +94,8 @@ However, if you need certain content in the background page, you can specify one
   ```
 
 You cannot specify background scripts and a background page.
+
+To support background scripts on browsers that use service workers (such as Chrome) and those that use event pages, specify both `scripts` and `service_worker` in the `background` key. The [script-on-click](https://github.com/mdn/webextensions-examples/tree/main/script-on-click) example demonstrates this cross-browser pattern.
 
 ### Initialize the extension
 

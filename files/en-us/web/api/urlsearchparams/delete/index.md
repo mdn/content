@@ -85,4 +85,4 @@ Otherwise the result will be the same as in the previous example (`bar=2`).
 
 ## See also
 
-- [Polyfill of `URLSearchParams` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [Polyfill of `URLSearchParams` in `core-js`](https://core-js.io/docs/features/web-standards/url)

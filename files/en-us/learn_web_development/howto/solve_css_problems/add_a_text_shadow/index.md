@@ -34,7 +34,7 @@ h1 {
 }
 ```
 
-{{EmbedLiveSample("Text_shadow")}}
+{{EmbedLiveSample("text-shadow")}}
 
 > [!NOTE]
 > When adding text shadows, you might unintentionally make the text difficult to read. Ensure that your choices offer sufficient [color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast) to keep your text readable.

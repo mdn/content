@@ -15,9 +15,9 @@ The **`CSSScopeRule`** interface of the [CSS Object Model](/en-US/docs/Web/API/C
 
 _Inherits properties from its ancestors {{domxref("CSSGroupingRule")}} and {{domxref("CSSRule")}}._
 
-- {{domxref("CSSScopeRule.end", "end")}}
+- {{domxref("CSSScopeRule.end", "end")}} {{ReadOnlyInline}}
   - : Returns a string containing the value of the `@scope` at-rule's scope limit.
-- {{domxref("CSSScopeRule.start", "start")}}
+- {{domxref("CSSScopeRule.start", "start")}} {{ReadOnlyInline}}
   - : Returns a string containing the value of the `@scope` at-rule's scope root.
 
 ## Instance methods

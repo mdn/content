@@ -19,7 +19,7 @@ For browser support, see [Content-Encoding: Browser compatibility](/en-US/docs/W
   - {{glossary("Brotli compression")}}
   - {{glossary("Gzip compression")}}
 - [Zstandard RFC](https://datatracker.ietf.org/doc/html/rfc8878)
-- [Zstandard home page](https://facebook.github.io/zstd/)
-- [Zstandard GitHub repository](https://github.com/facebook/zstd)
+- [Zstandard home page](https://meta.github.io/zstd/)
+- [Zstandard GitHub repository](https://github.com/meta/zstd)
 - [Zstandard](https://en.wikipedia.org/wiki/Zstandard) on Wikipedia
 - [Zstandard on Caniuse](https://caniuse.com/#feat=zstandard)

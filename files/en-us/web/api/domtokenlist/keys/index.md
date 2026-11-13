@@ -66,4 +66,5 @@ The output looks like this:
 
 ## See also
 
+- [Polyfill of `DOMTokenList.prototype.keys` in `core-js`](https://core-js.io/docs/features/web-standards/iterable-dom-collections)
 - {{domxref("DOMTokenList.entries()")}}, {{domxref("DOMTokenList.forEach()")}} and {{domxref("DOMTokenList.values")}}.

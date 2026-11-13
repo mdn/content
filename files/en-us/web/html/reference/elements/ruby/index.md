@@ -49,7 +49,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
 
 #### Result
 
-{{EmbedLiveSample('Example 1: Word')}}
+{{EmbedLiveSample('example_2_word')}}
 
 ## Technical summary
 

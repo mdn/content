@@ -28,7 +28,7 @@ The interface also provides information about when the subscription will expire,
 - {{domxref("PushSubscription.getKey()")}}
   - : Returns an {{jsxref("ArrayBuffer")}} which contains the client's public key, which can then be sent to a server and used in encrypting push message data.
 - {{domxref("PushSubscription.toJSON()")}}
-  - : Standard serializer — returns a JSON representation of the subscription properties.
+  - : Returns a JSON-serializable plain object representing the `PushSubscription` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 - {{domxref("PushSubscription.unsubscribe()")}}
   - : Starts the asynchronous process of unsubscribing from the push service, returning a {{jsxref("Promise")}} that resolves to a boolean value when the current subscription is successfully unregistered.
 

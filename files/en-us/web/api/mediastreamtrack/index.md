@@ -53,7 +53,7 @@ In addition to the properties listed below, `MediaStreamTrack` has constrainable
 - {{domxref("MediaStreamTrack.getConstraints()")}}
   - : Returns a {{domxref('MediaTrackConstraints')}} object containing the currently set constraints for the track; the returned value matches the constraints last set using {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}.
 - {{domxref("MediaStreamTrack.getSettings()")}}
-  - : Returns a {{domxref("MediaTrackSettings")}} object containing the current values of each of the `MediaStreamTrack`'s constrainable properties.
+  - : Returns an object containing the current values of each of the `MediaStreamTrack`'s constrainable properties.
 - {{domxref("MediaStreamTrack.stop()")}}
   - : Stops playing the source associated to the track, both the source and the track are disassociated. The track state is set to `ended`.
 

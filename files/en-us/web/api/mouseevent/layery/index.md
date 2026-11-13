@@ -3,12 +3,10 @@ title: "MouseEvent: layerY property"
 short-title: layerY
 slug: Web/API/MouseEvent/layerY
 page-type: web-api-instance-property
-status:
-  - non-standard
 browser-compat: api.MouseEvent.layerY
 ---
 
-{{APIRef("Pointer Events")}}{{Non-standard_Header}}
+{{APIRef("Pointer Events")}}
 
 The **`MouseEvent.layerY`** read-only property returns the
 vertical coordinate of the event relative to the current layer.
@@ -102,7 +100,7 @@ window.addEventListener("mousedown", showCoords);
 
 ## Specifications
 
-_This property is not part of any specification._
+{{Specifications}}
 
 ## Browser compatibility
 

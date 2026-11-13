@@ -1,5 +1,5 @@
 ---
-title: identity.launchWebAuthFlow
+title: identity.launchWebAuthFlow()
 slug: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
 page-type: webextension-api-function
 browser-compat: webextensions.api.identity.launchWebAuthFlow

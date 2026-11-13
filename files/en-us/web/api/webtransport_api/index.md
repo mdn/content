@@ -47,7 +47,16 @@ async function initTransport(url) {
 
 ### Server implementation
 
-A WebTransport connection requires a supporting server. To establish a session, the client sends an extended `CONNECT` request with a `:protocol` pseudo-header identifying WebTransport. For browser clients, the request also includes an `Origin` header, which the server must verify before accepting the session. (This is automatically handled by the `WebTransport()` constructor.) The server accepts the session by sending a successful (2xx) response. The client and server can then exchange data using multiple bidirectional streams, unidirectional streams, and datagrams associated with that session.
+A WebTransport connection requires a supporting server.
+To establish a session, the client sends an [extended `CONNECT`](/en-US/docs/Web/HTTP/Reference/Methods/CONNECT#extended_connect) request with a `:protocol` pseudo-header identifying WebTransport.
+For browser clients, the request also includes an `Origin` header, which the server must verify before accepting the session.
+(This is automatically handled by the `WebTransport()` constructor.)
+The server accepts the session by sending a successful (2xx) response.
+The client and server can then exchange data using multiple bidirectional streams, unidirectional streams, and datagrams associated with that session.
+
+The client can add custom headers to the request using the [`headers`](/en-US/docs/Web/API/WebTransport/WebTransport#headers) option of the `WebTransport()` constructor.
+For example, it might pass an authentication token for the server to check before it accepts the session.
+The client can read the headers that the server includes in its response, other than `WT-Protocol`, from the {{domxref("WebTransport.responseHeaders")}} property once the session is established.
 
 The [WebTransport over HTTP/3 specification](https://datatracker.ietf.org/doc/draft-ietf-webtrans-http3/) describes the protocol and server requirements in more detail.
 
@@ -253,6 +262,9 @@ try {
   writer.releaseLock();
 }
 ```
+
+On the client, you can also read datagrams into a buffer that you supply, by constructing the transport with the [`datagramsReadableType`](/en-US/docs/Web/API/WebTransport/WebTransport#datagramsreadabletype) option set to `bytes` and reading the stream using a {{domxref("ReadableStreamBYOBReader")}}.
+See the [Reading datagrams with a BYOB reader](/en-US/docs/Web/API/WebTransport/WebTransport#reading_datagrams_with_a_byob_reader) example on the `WebTransport()` constructor page.
 
 ### Reliable transmission via streams
 
@@ -466,7 +478,7 @@ for await (const data of stream.readable) {
 
 For complete examples, see:
 
-- [WebTransport over HTTP/3 client](https://webtransport.day/)
+- [WebTransport over HTTP/3 client](https://googlechrome.github.io/samples/webtransport/client.html)
 
 ## Specifications
 
