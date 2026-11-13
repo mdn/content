@@ -54,6 +54,7 @@ Sec-Fetch-Dest: report
 Sec-Fetch-Dest: script
 Sec-Fetch-Dest: serviceworker
 Sec-Fetch-Dest: sharedworker
+Sec-Fetch-Dest: speculationrules
 Sec-Fetch-Dest: style
 Sec-Fetch-Dest: text
 Sec-Fetch-Dest: track
@@ -106,6 +107,8 @@ Servers should ignore this header if it contains any other value.
   - : The destination is a service worker. This might originate from a call to {{domxref("ServiceWorkerContainer.register","navigator.serviceWorker.register()")}}.
 - `sharedworker`
   - : The destination is a shared worker. This might originate from a {{domxref("SharedWorker")}}.
+- `speculationrules` {{experimental_inline}}
+  - : The destination is a [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) JSON file. This might originate from a URL listed in a {{httpheader("Speculation-Rules")}} response header.
 - `style`
   - : The destination is a style. This might originate from an HTML {{HTMLElement("link","&lt;link rel=stylesheet&gt;")}}, a CSS {{cssxref("@import")}}, or a JavaScript [`import with { type: "css" }`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#css_modules_type_css).
 - `text`

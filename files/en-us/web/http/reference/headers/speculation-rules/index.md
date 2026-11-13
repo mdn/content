@@ -11,9 +11,11 @@ sidebar: http
 
 {{SeeCompatTable}}
 
-The HTTP **`Speculation-Rules`** {{Glossary("response header")}} provides one or more URLs pointing to text resources containing speculation rule JSON definitions. When the response is an HTML document, these rules will be added to the document's speculation rule set. See the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) for more information.
+The HTTP **`Speculation-Rules`** {{Glossary("response header")}} provides one or more URLs pointing to text resources containing speculation rule JSON definitions. When the response is an HTML document loaded in a top-level browsing context, these rules will be added to the document's speculation rule set. The header is ignored for documents in an {{htmlelement("iframe")}} or other nested browsing context. See the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) for more information.
 
-The resource file containing the speculation rules JSON can have any valid name and extension, but it will be requested with a [`destination`](/en-US/docs/Web/API/Request/destination) type of [`speculationrules`](/en-US/docs/Web/API/Request/destination#speculationrules), and must be served with an `application/speculationrules+json` MIME type.
+The resource file containing the speculation rules JSON can have any valid name and extension, but it will be requested with a [`destination`](/en-US/docs/Web/API/Request/destination) type of [`speculationrules`](/en-US/docs/Web/API/Request/destination#speculationrules), and must be served with an `application/speculationrules+json` MIME type. The file is fetched in [CORS](/en-US/docs/Web/HTTP/Guides/CORS) mode, so a file on a different origin from the document must be served with the appropriate CORS headers, such as {{httpheader("Access-Control-Allow-Origin")}}. A file that fails to load, is served with another MIME type, or doesn't contain valid speculation rules JSON is ignored.
+
+Unlike speculation rules inside a `<script type="speculationrules">` element, rules loaded through this header are not subject to the document's {{httpheader("Content-Security-Policy")}}, so they don't need to be allowed in the [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) directive.
 
 > [!NOTE]
 > This mechanism provides an alternative to specifying the JSON definition inside an inline [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules) element. Specifying an HTTP header is useful in cases where developers are not able to directly modify the document itself.
