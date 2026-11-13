@@ -64,6 +64,17 @@ new WebTransport(url, options)
         > [!NOTE]
         > A byte stream doesn't fully preserve datagram boundaries: empty datagrams are not delivered, and reading with the [`min`](/en-US/docs/Web/API/ReadableStreamBYOBReader/read#min) option can combine several datagrams into one read.
 
+    - `headers` {{optional_inline}}
+      - : An object literal, array, or {{domxref("Headers")}} object that can be used to add custom HTTP request headers to the [extended `CONNECT`](/en-US/docs/Web/HTTP/Reference/Methods/CONNECT#extended_connect) request that sets up the session.
+        This allows information such as authentication tokens to be sent to the server in request headers when the session is established, rather than in the URL query string.
+        By default, the value is `{}`, and no custom headers are added.
+
+        The value has the same form as the `init` parameter of the {{domxref("Headers.Headers", "Headers()")}} constructor: an object literal with string values, an array of two-item `[name, value]` arrays, or an existing `Headers` object.
+        [Forbidden request headers](/en-US/docs/Glossary/Forbidden_request_header), such as {{httpheader("Cookie")}}, are silently ignored.
+        The `WT-Available-Protocols` header can't be set using this option, and is instead set from the values in `protocols`.
+
+        The headers that the server sends in its response, other than `WT-Protocol`, can be read from {{domxref("WebTransport.responseHeaders")}} once the session is established.
+
     - `protocols` {{optional_inline}}
       - : An array of strings, each indicating an application-specific protocol name, listed in order of preference.
         By default, the value is an empty array.
@@ -95,7 +106,7 @@ new WebTransport(url, options)
 
         The certificate must be an X.509v3 certificate with a validity period of less than 2 weeks, and the current time must be within that validity period.
         The format of the public key in the certificate depends on the implementation, but must minimally include ECDSA with the secp256r1 (NIST P-256) named group, and must not include RSA keys.
-        An ECSDA key is, therefore, an interoperable default public key format.
+        An ECDSA key is, therefore, an interoperable default public key format.
         A user agent may add further requirements; these will be listed in the [browser compatibility](#browser_compatibility) section if known.
 
         Each object in the array has the following properties:
@@ -107,6 +118,10 @@ new WebTransport(url, options)
         - `value`
           - : An [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), {{jsxref("TypedArray")}} or [`DataView`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView) containing the hash value.
 
+### Return value
+
+A new {{domxref("WebTransport")}} object.
+
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
@@ -117,6 +132,7 @@ new WebTransport(url, options)
 - {{jsxref("TypeError")}}
   - : Thrown if a `serverCertificateHashes` is set for a non-dedicated connection (in other words, if `allowPooling` is `true`).
     Also thrown if `anticipatedConcurrentIncomingBidirectionalStreams` or `anticipatedConcurrentIncomingUnidirectionalStreams` is outside the range `0` to `65535`.
+    Also thrown if `headers` contains an entry that isn't a two-item array, an invalid header name or value, or a header named `WT-Available-Protocols` (case-insensitive).
 
 ## Examples
 
@@ -239,6 +255,42 @@ while (true) {
   console.log(`Received a datagram of ${value.byteLength} bytes`);
   buffer = value.buffer;
 }
+```
+
+### Setting custom request headers
+
+This example shows the three ways that you can use the `headers` option to add custom headers to the request that sets up the session.
+
+First we pass an object literal, where each property name is a header name and its value is the header value:
+
+```js
+const transport = new WebTransport(url, {
+  headers: {
+    Authorization: "Bearer abc123",
+    "X-Client-Version": "2.4.1",
+  },
+});
+```
+
+You can also pass an array of two-item `[name, value]` arrays:
+
+```js
+const transport = new WebTransport(url, {
+  headers: [
+    ["Authorization", "Bearer abc123"],
+    ["X-Client-Version", "2.4.1"],
+  ],
+});
+```
+
+You can also pass a {{domxref("Headers")}} object:
+
+```js
+const headers = new Headers();
+headers.append("Authorization", "Bearer abc123");
+headers.append("X-Client-Version", "2.4.1");
+
+const transport = new WebTransport(url, { headers });
 ```
 
 ## Specifications
