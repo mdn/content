@@ -20,6 +20,10 @@ background: radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
 ```
 
 ```css interactive-example-choice
+background: radial-gradient(ellipse 75% 50% at 15% 85%, #ffff00, transparent);
+```
+
+```css interactive-example-choice
 background: radial-gradient(
   circle at 100%,
   #333333,
@@ -59,6 +63,9 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 
 /* hsl color space with longer hue interpolation */
 radial-gradient(circle at center in hsl longer hue, red 0, blue, green 100%)
+
+/* A gradient with a specific ellipse size and center */
+radial-gradient(ellipse 100% 25% at 0% 50%, red, blue)
 ```
 
 A radial gradient is specified by indicating the center of the gradient (where the 0% ellipse will be) and the size and shape of the _ending shape_ (the 100% ellipse).
