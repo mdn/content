@@ -202,7 +202,7 @@ This will make it easier to submit a pull request for your changes.
 
 3. Check for detected flaws at the top of the previewed page. Some flaws may be automatically fixable.
 
-4. Commit your changes to the branch (our example is using the `fix-typo` branch) and push the changes to your fork's remote:
+3. Commit all of the changed files and push your branch to your fork:
 
    ```bash
    # Adding all files to the commit
