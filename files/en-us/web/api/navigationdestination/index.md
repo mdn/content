@@ -9,18 +9,18 @@ browser-compat: api.NavigationDestination
 
 The **`NavigationDestination`** interface of the {{domxref("Navigation API", "Navigation API", "", "nocode")}} represents the destination being navigated to in the current navigation.
 
-It is accessed via the {{domxref("NavigateEvent.destination")}} property.
+It is returned by the {{domxref("NavigateEvent.destination")}} property inside a {{domxref("Navigation/navigate_event", "navigate")}} event handler, and by the {{domxref("NavigationTransition.to")}} property while an intercepted navigation is in progress.
 
 {{InheritanceDiagram}}
 
 ## Instance properties
 
 - {{domxref("NavigationDestination.id", "id")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("NavigationHistoryEntry.id", "id")}} value of the destination {{domxref("NavigationHistoryEntry")}} if the {{domxref("NavigateEvent.navigationType")}} is `traverse`, or an empty string otherwise.
+  - : Returns the {{domxref("NavigationHistoryEntry.id", "id")}} value of the destination {{domxref("NavigationHistoryEntry")}} if the navigation is a `traverse` navigation, or an empty string otherwise.
 - {{domxref("NavigationDestination.index", "index")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("NavigationHistoryEntry.index", "index")}} value of the destination {{domxref("NavigationHistoryEntry")}} if the {{domxref("NavigateEvent.navigationType")}} is `traverse`, or `-1` otherwise.
+  - : Returns the {{domxref("NavigationHistoryEntry.index", "index")}} value of the destination {{domxref("NavigationHistoryEntry")}} if the navigation is a `traverse` navigation, or `-1` otherwise.
 - {{domxref("NavigationDestination.key", "key")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("NavigationHistoryEntry.key", "key")}} value of the destination {{domxref("NavigationHistoryEntry")}} if the {{domxref("NavigateEvent.navigationType")}} is `traverse`, or an empty string otherwise.
+  - : Returns the {{domxref("NavigationHistoryEntry.key", "key")}} value of the destination {{domxref("NavigationHistoryEntry")}} if the navigation is a `traverse` navigation, or an empty string otherwise.
 - {{domxref("NavigationDestination.sameDocument", "sameDocument")}} {{ReadOnlyInline}}
   - : Returns `true` if the navigation is to the same `document` as the current {{domxref("Document")}} value, or `false` otherwise.
 - {{domxref("NavigationDestination.url", "url")}} {{ReadOnlyInline}}
