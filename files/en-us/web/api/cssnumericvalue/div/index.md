@@ -40,7 +40,7 @@ Otherwise, a {{domxref('CSSMathProduct')}}.
 
 ## Description
 
-The method divides by each supplied value by first inverting it (turning it into 1 divided by that value), and then multiplying the `CSSNumericValue` by the inverted values.
+The method inverts each supplied value (turning it into 1 divided by that value), and then multiplies the `CSSNumericValue` by the inverted values.
 It follows the same rules as {{domxref("CSSNumericValue.mul()", "mul()")}}, with one difference: a supplied value with a unit can't be inverted into a single value.
 
 If the `CSSNumericValue` is a single value and every supplied value is a plain number, the result is a single {{domxref("CSSUnitValue")}} in the unit of the `CSSNumericValue`.
