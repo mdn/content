@@ -117,7 +117,7 @@ The browser responds with an empty `result` object:
 ```
 
 After the command succeeds, trigger the page's date formatting.
-When the page creates a new [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) object without specifying a locale, the formatter uses the overridden locale, `fr-FR`.
+When the page creates a new [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) object without specifying a locale, the object uses the overridden locale, `fr-FR`.
 Check that the page displays dates using French formatting conventions, such as "14 mars 2026" for March 14, 2026, when using the [`dateStyle: "long"`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#datestyle) option.
 
 To remove the override, send the same command with `locale` set to `null` and the same `contexts` array.
