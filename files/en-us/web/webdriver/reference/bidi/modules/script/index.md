@@ -94,6 +94,7 @@ You configure channels through the `arguments` parameter of [`script.addPreloadS
 
 ## Events
 
+- [`script.message`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/message)
 - [`script.realmCreated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/realmCreated)
 - [`script.realmDestroyed`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/realmDestroyed)
 
