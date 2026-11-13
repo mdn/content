@@ -102,11 +102,6 @@ In addition to poor browser support, the same concerns arise for `accesskey` as 
 - Values that rely on numbers may be confusing to individuals experiencing cognitive concerns, where the number doesn't have a logical association with the functionality it triggers.
 - Informing the user that shortcuts are present, so that they are aware of the functionality. If the system lacks a method of notifying the user about this feature, the user might accidentally activate a shortcut.
 
-## Values
-
-- `<string>`
-  - : The space-separated list of key combinations that, when pressed, perform the action.
-
 ## Example
 
 In this example, the `aria-keyshortcuts` attribute on the element is set to "Alt+Shift+A".
@@ -114,6 +109,11 @@ In this example, the `aria-keyshortcuts` attribute on the element is set to "Alt
 ```html
 <a href="#content" aria-keyshortcuts="Alt+Shift+A">Skip to content</a>
 ```
+
+## Values
+
+- `<string>`
+  - : The space-separated list of key combinations that, when pressed, perform the action.
 
 ## Associated interfaces
 

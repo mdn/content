@@ -36,19 +36,6 @@ If the user had entered a value in the preceding input example above the maximum
 
 If you are creating your own form validation scripts, make sure to include `aria-invalid` on invalid form controls, along with styling (use the `[aria-invalid="true"]` attribute selector) and messaging (with [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)) to help users understand where the mistake is and how they can fix it.
 
-## Values
-
-- `grammar`
-  - : A grammatical error was detected.
-- `false` (default)
-  - : There are no detected errors in the value.
-- `spelling`
-  - : A spelling error was detected.
-- `true`
-  - : The value entered by the user has failed validation.
-
-Any value not in this list will be treated as `true`.
-
 ## Example
 
 The following snippet shows a simplified version of two form fields with a validation function attached to the blur event. Note that since the default value for `aria-invalid` is `false`, it is not strictly necessary to add the attribute to input.
@@ -128,6 +115,19 @@ function updateAlert(msg) {
 ```
 
 Note that the alert has the ARIA role attribute set to [`alert`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role).
+
+## Values
+
+- `grammar`
+  - : A grammatical error was detected.
+- `false` (default)
+  - : There are no detected errors in the value.
+- `spelling`
+  - : A spelling error was detected.
+- `true`
+  - : The value entered by the user has failed validation.
+
+Any value not in this list will be treated as `true`.
 
 ## Associated interfaces
 
