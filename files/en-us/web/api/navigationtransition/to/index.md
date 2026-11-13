@@ -3,12 +3,10 @@ title: "NavigationTransition: to property"
 short-title: to
 slug: Web/API/NavigationTransition/to
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigationTransition.to
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}
 
 The **`to`** read-only property of the {{domxref("NavigationTransition")}} interface returns the {{domxref("NavigationDestination")}} that the transition is navigating to.
 

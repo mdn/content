@@ -24,7 +24,7 @@ Note that this property is only populated while the [`intercept()`](/en-US/docs/
   - : Returns the {{domxref("NavigationHistoryEntry")}} that the transition is coming from.
 - {{domxref("NavigationTransition.navigationType", "navigationType")}} {{ReadOnlyInline}}
   - : Returns the type of the ongoing navigation.
-- {{domxref("NavigationTransition.to", "to")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("NavigationTransition.to", "to")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("NavigationDestination")}} that the transition is navigating to.
 
 ## Examples

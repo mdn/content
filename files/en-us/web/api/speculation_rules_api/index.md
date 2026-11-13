@@ -2,8 +2,6 @@
 title: Speculation Rules API
 slug: Web/API/Speculation_Rules_API
 page-type: web-api-overview
-status:
-  - experimental
 browser-compat:
   - html.elements.script.type.speculationrules
   - http.headers.Speculation-Rules
@@ -12,7 +10,7 @@ spec-urls:
   - https://wicg.github.io/nav-speculation/prerendering.html
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Speculation Rules API")}}
+{{DefaultAPISidebar("Speculation Rules API")}}
 
 The **Speculation Rules API** is designed to improve performance for future navigations. It targets document URLs rather than specific resource files, and so makes sense for multi-page applications (MPAs) rather than single-page applications (SPAs).
 

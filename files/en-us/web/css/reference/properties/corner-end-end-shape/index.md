@@ -3,13 +3,9 @@ title: "`corner-end-end-shape` CSS property"
 short-title: corner-end-end-shape
 slug: Web/CSS/Reference/Properties/corner-end-end-shape
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.corner-end-end-shape
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`corner-end-end-shape`** [CSS](/en-US/docs/Web/CSS) property specifies the shape of a box's block-end and inline-end corner, within its {{cssxref("border-radius")}} area.
 
