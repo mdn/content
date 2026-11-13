@@ -316,7 +316,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample("the safe keyword", "100%", 260)}}
+{{EmbedLiveSample("the_safe_keyterm", "100%", 260)}}
 
 As an item overflows the alignment container, with `safe` included the alignment mode behaves as `start` and the `center` alignment is not implemented. The `safe` keyterm has no effect if the items do not overflow the container.
 

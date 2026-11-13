@@ -25,7 +25,7 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("script")}}
 - {{SVGElement("style")}}
 
-## Usage context
+## Usage notes
 
 ### For the &lt;animateTransform&gt; elements
 

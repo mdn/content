@@ -49,7 +49,7 @@ This element implements the {{domxref("SVGFilterElement")}} interface.
 
 #### Result
 
-{{EmbedLiveSample("Example",235,150)}}
+{{EmbedLiveSample("adding_a_blur_effect",235,150)}}
 
 ## Specifications
 

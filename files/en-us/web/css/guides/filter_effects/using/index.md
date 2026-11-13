@@ -210,7 +210,7 @@ h1 {
 <h1>No filter effects applied.</h1>
 ```
 
-{{EmbedLiveSample('Applying_a_filter_to_an_element','100%','280')}}
+{{EmbedLiveSample('specifying_filter_function_order','100%','280')}}
 
 The same filters are applied to both the lines of text but in a different order. In the first line, the hue of the text is altered before the shadow is applied, so the shadow is `magenta`. In the second line, the drop shadow is added to the dark blue text, and then the hue of both the text and the shadow are altered.
 
@@ -318,7 +318,7 @@ td {
 }
 ```
 
-{{EmbedLiveSample('blur_example','100%','550')}}
+{{EmbedLiveSample('blurring_an_image','100%','550')}}
 
 ## See also
 

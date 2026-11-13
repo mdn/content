@@ -23,12 +23,16 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
 
 ## Instance properties
 
+- {{domxref("WebTransport.anticipatedConcurrentIncomingBidirectionalStreams", "anticipatedConcurrentIncomingBidirectionalStreams")}} {{experimental_inline}}
+  - : Represents the number of incoming bidirectional streams that the application expects the server to have open at the same time.
+- {{domxref("WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams", "anticipatedConcurrentIncomingUnidirectionalStreams")}} {{experimental_inline}}
+  - : Represents the number of incoming unidirectional streams that the application expects the server to have open at the same time.
 - {{domxref("WebTransport.closed", "closed")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} that resolves when the transport is closed.
-- {{domxref("WebTransport.datagrams", "datagrams")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("WebTransportDatagramDuplexStream")}} instance that can be used to send and receive datagrams.
 - {{domxref("WebTransport.congestionControl", "congestionControl")}} {{ReadOnlyInline}}
   - : Returns a string that indicates the application preference for either high throughput or low-latency when sending data.
+- {{domxref("WebTransport.datagrams", "datagrams")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("WebTransportDatagramDuplexStream")}} instance that can be used to send and receive datagrams.
 - {{domxref("WebTransport.draining", "draining")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} that resolves when the transport session starts draining.
 - {{domxref("WebTransport.incomingBidirectionalStreams", "incomingBidirectionalStreams")}} {{ReadOnlyInline}}
@@ -42,6 +46,8 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
   - : Returns a {{jsxref("Promise")}} that resolves when the transport is ready to use.
 - {{domxref("WebTransport.reliability", "reliability")}} {{ReadOnlyInline}}
   - : Returns a string that indicates whether the connection supports reliable transports only, or whether it also supports unreliable transports (such as UDP).
+- {{domxref("WebTransport.responseHeaders", "responseHeaders")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("Headers")}} object containing the HTTP headers from the server's response to the request that set up the session, or `null` if the session has not yet been established.
 
 ## Instance methods
 
@@ -56,7 +62,7 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
 - {{domxref("WebTransport.exportKeyingMaterial", "exportKeyingMaterial()")}} {{experimental_inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with keying material derived from the TLS session underlying the connection.
 - {{domxref("WebTransport.getStats", "getStats()")}}
-  - : Returns a {{jsxref("Promise")}} that fulfills with an object containing HTTP/3 connection statistics.
+  - : Returns a {{jsxref("Promise")}} that fulfills with an object containing statistics for the transport's underlying connection.
 
 ## Examples
 

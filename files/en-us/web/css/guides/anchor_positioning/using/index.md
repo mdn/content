@@ -86,7 +86,7 @@ We'll apply the above CSS to the following HTML:
 
 This will render as follows:
 
-{{ EmbedLiveSample("CSS-only method", "100%", "120") }}
+{{ EmbedLiveSample("explicit_css_anchor_association", "100%", "120") }}
 
 The anchor and infobox are now associated, but for the moment you'll have to trust us on this. They are not tethered to each other yet — if you were to position the anchor and move it somewhere else on the page, it would move on its own, leaving the infobox in the same place. You'll see the actual tethering in action when we look at [positioning elements based on anchor position](#positioning_elements_relative_to_their_anchor).
 
@@ -894,7 +894,7 @@ Now onto the most interesting part. Here we set the anchor's `width` to `300px` 
 
 The rendered result is as follows:
 
-{{EmbedLiveSample("Basic `anchor-size()` usage", "100%", "240")}}
+{{EmbedLiveSample("anchor-size_position_and_margin_example", "100%", "240")}}
 
 Try tabbing to the anchor or hovering over it with the mouse pointer, and note how the infobox's position and left margin grow in proportion to the anchor element's width.
 

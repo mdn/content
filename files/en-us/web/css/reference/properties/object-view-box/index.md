@@ -295,7 +295,7 @@ update();
 
 #### Result
 
-{{ EmbedLiveSample("Live zoom in using object-view-box property", "", 480) }}
+{{ EmbedLiveSample("live_zoom-in_using_object-view-box_property", "", 480) }}
 
 Move the slider to the right to increase the zoom-in effect and left to reduce it. The slider only affects the dimensions of the view box, while the x and y values, the origin point of the viewbox, remain constant. The size of the `<img>` element doesn't change either.
 

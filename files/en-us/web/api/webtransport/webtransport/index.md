@@ -28,10 +28,53 @@ new WebTransport(url, options)
       - : A boolean value.
         If `true`, the network connection for this {{domxref("WebTransport")}} can be shared with a pool of other HTTP/3 sessions.
         By default the value is `false`, and the connection cannot be shared.
+    - `anticipatedConcurrentIncomingBidirectionalStreams` {{optional_inline}} {{experimental_inline}}
+      - : An integer between `0` and `65535`, or `null`, that indicates the number of incoming bidirectional streams that the application expects the server to have open at the same time.
+
+        This is a hint that the browser can use to raise its limit on server-opened streams in advance.
+        By default the value is `null`, and no hint is given.
+        The value is available afterwards in the {{domxref("WebTransport.anticipatedConcurrentIncomingBidirectionalStreams","anticipatedConcurrentIncomingBidirectionalStreams")}} property.
+
+    - `anticipatedConcurrentIncomingUnidirectionalStreams` {{optional_inline}} {{experimental_inline}}
+      - : An integer between `0` and `65535`, or `null`, that indicates the number of incoming unidirectional streams that the application expects the server to have open at the same time.
+
+        This is a hint that the browser can use to raise its limit on server-opened streams in advance.
+        By default the value is `null`, and no hint is given.
+        The value is available afterwards in the {{domxref("WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams","anticipatedConcurrentIncomingUnidirectionalStreams")}} property.
+
     - `congestionControl` {{optional_inline}}
       - : A string indicating the application's preference that the congestion control algorithm used when sending data over this connection be tuned for either throughput or low-latency.
         This is a hint to the user agent.
         The allowed values are: `default` (default), `throughput`, and `low-latency`.
+    - `datagramsReadableType` {{optional_inline}}
+      - : A string that sets the type of the {{domxref("ReadableStream")}} that the new transport uses for incoming datagrams.
+        You access this stream as `transport.datagrams.readable` (see {{domxref("WebTransport.datagrams")}} and {{domxref("WebTransportDatagramDuplexStream.readable")}}).
+        The only allowed value is `bytes`, which creates a [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams).
+        This stream can be read with a {{domxref("ReadableStreamBYOBReader")}}, which reads each datagram into a buffer that you supply.
+        If this option is omitted, the transport creates a default readable stream, in which each chunk is a new {{jsxref("Uint8Array")}} containing one datagram.
+
+        Reading into your own buffer lets you reuse the same memory for every datagram, instead of the browser allocating new memory for each one.
+        This is most useful when an application receives datagrams at a high rate, for example to deliver frequent game state or sensor updates.
+
+        Unless you use the {{domxref("ReadableStreamBYOBReader.read#min", "min")}} option, each read returns one datagram.
+        If the supplied buffer is smaller than the datagram, the stream is errored, and the pending {{domxref("ReadableStreamBYOBReader.read()", "read()")}} rejects with a {{jsxref("RangeError")}}.
+        To avoid this, use a buffer of at least 64 KiB (65536 bytes), which is the recommended maximum size of the {{Glossary("QUIC")}} frames that carry datagrams.
+        Use a {{jsxref("Uint8Array")}} as the view passed to `read()`: a {{jsxref("DataView")}} or a typed array with multi-byte elements errors the stream, and `read()` rejects with a {{jsxref("TypeError")}}.
+
+        > [!NOTE]
+        > A byte stream doesn't fully preserve datagram boundaries: empty datagrams are not delivered, and reading with the [`min`](/en-US/docs/Web/API/ReadableStreamBYOBReader/read#min) option can combine several datagrams into one read.
+
+    - `headers` {{optional_inline}}
+      - : An object literal, array, or {{domxref("Headers")}} object that can be used to add custom HTTP request headers to the [extended `CONNECT`](/en-US/docs/Web/HTTP/Reference/Methods/CONNECT#extended_connect) request that sets up the session.
+        This allows information such as authentication tokens to be sent to the server in request headers when the session is established, rather than in the URL query string.
+        By default, the value is `{}`, and no custom headers are added.
+
+        The value has the same form as the `init` parameter of the {{domxref("Headers.Headers", "Headers()")}} constructor: an object literal with string values, an array of two-item `[name, value]` arrays, or an existing `Headers` object.
+        [Forbidden request headers](/en-US/docs/Glossary/Forbidden_request_header), such as {{httpheader("Cookie")}}, are silently ignored.
+        The `WT-Available-Protocols` header can't be set using this option, and is instead set from the values in `protocols`.
+
+        The headers that the server sends in its response, other than `WT-Protocol`, can be read from {{domxref("WebTransport.responseHeaders")}} once the session is established.
+
     - `protocols` {{optional_inline}}
       - : An array of strings, each indicating an application-specific protocol name, listed in order of preference.
         By default, the value is an empty array.
@@ -63,7 +106,7 @@ new WebTransport(url, options)
 
         The certificate must be an X.509v3 certificate with a validity period of less than 2 weeks, and the current time must be within that validity period.
         The format of the public key in the certificate depends on the implementation, but must minimally include ECDSA with the secp256r1 (NIST P-256) named group, and must not include RSA keys.
-        An ECSDA key is, therefore, an interoperable default public key format.
+        An ECDSA key is, therefore, an interoperable default public key format.
         A user agent may add further requirements; these will be listed in the [browser compatibility](#browser_compatibility) section if known.
 
         Each object in the array has the following properties:
@@ -75,6 +118,10 @@ new WebTransport(url, options)
         - `value`
           - : An [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), {{jsxref("TypedArray")}} or [`DataView`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView) containing the hash value.
 
+### Return value
+
+A new {{domxref("WebTransport")}} object.
+
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
@@ -84,6 +131,8 @@ new WebTransport(url, options)
     Also thrown if `protocols` contains a duplicate value, a value with characters not allowed in a protocol token, or a value whose encoded length is `0` or greater than `512` bytes.
 - {{jsxref("TypeError")}}
   - : Thrown if a `serverCertificateHashes` is set for a non-dedicated connection (in other words, if `allowPooling` is `true`).
+    Also thrown if `anticipatedConcurrentIncomingBidirectionalStreams` or `anticipatedConcurrentIncomingUnidirectionalStreams` is outside the range `0` to `65535`.
+    Also thrown if `headers` contains an entry that isn't a two-item array, an invalid header name or value, or a header named `WT-Available-Protocols` (case-insensitive).
 
 ## Examples
 
@@ -175,6 +224,73 @@ const transport = new WebTransport(url, {
     },
   ],
 });
+```
+
+### Reading datagrams with a BYOB reader
+
+This example shows how to read incoming datagrams into a buffer that you supply, using a {{domxref("ReadableStreamBYOBReader")}}.
+
+First, we construct the `WebTransport` with the `datagramsReadableType` option set to `bytes`, so that the transport's {{domxref("WebTransportDatagramDuplexStream.readable", "datagrams.readable")}} property returns a readable byte stream.
+We then get a BYOB ("bring your own buffer") reader by passing `mode: "byob"` to {{domxref("ReadableStream.getReader()", "getReader()")}}.
+
+We allocate a 64 KiB buffer, which is large enough to hold any datagram (see the [`datagramsReadableType`](#datagramsreadabletype) option).
+Each call to {{domxref("ReadableStreamBYOBReader.read()", "read()")}} fills a view of this buffer with one datagram.
+The returned `value` is a new `Uint8Array` over the same memory, sized to fit the datagram.
+Passing a view to `read()` transfers its buffer, so the original can no longer be used.
+Instead, we take the buffer from `value` and reuse it for the next read.
+
+```js
+const transport = new WebTransport(url, { datagramsReadableType: "bytes" });
+await transport.ready;
+
+const reader = transport.datagrams.readable.getReader({ mode: "byob" });
+let buffer = new ArrayBuffer(65536);
+
+while (true) {
+  const { value, done } = await reader.read(new Uint8Array(buffer));
+  if (done) {
+    break;
+  }
+  // value is a Uint8Array containing one datagram
+  console.log(`Received a datagram of ${value.byteLength} bytes`);
+  buffer = value.buffer;
+}
+```
+
+### Setting custom request headers
+
+This example shows the three ways that you can use the `headers` option to add custom headers to the request that sets up the session.
+
+First we pass an object literal, where each property name is a header name and its value is the header value:
+
+```js
+const transport = new WebTransport(url, {
+  headers: {
+    Authorization: "Bearer abc123",
+    "X-Client-Version": "2.4.1",
+  },
+});
+```
+
+You can also pass an array of two-item `[name, value]` arrays:
+
+```js
+const transport = new WebTransport(url, {
+  headers: [
+    ["Authorization", "Bearer abc123"],
+    ["X-Client-Version", "2.4.1"],
+  ],
+});
+```
+
+You can also pass a {{domxref("Headers")}} object:
+
+```js
+const headers = new Headers();
+headers.append("Authorization", "Bearer abc123");
+headers.append("X-Client-Version", "2.4.1");
+
+const transport = new WebTransport(url, { headers });
 ```
 
 ## Specifications

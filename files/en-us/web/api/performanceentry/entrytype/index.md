@@ -39,7 +39,7 @@ A string. The return value depends on the subtype of the `PerformanceEntry` obje
 - `interaction-contentful-paint`
   - : Reports the largest paint an element triggered on screen after an interaction.
 
-    The entry instance will be a {{domxref("InteractionContentfulPaint")}} object.
+    The entry instance will be an {{domxref("InteractionContentfulPaint")}} object.
 
 - `largest-contentful-paint`
   - : Reports the largest paint an element triggered on screen.

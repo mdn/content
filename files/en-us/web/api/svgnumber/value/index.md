@@ -8,7 +8,7 @@ browser-compat: api.SVGNumber.value
 
 {{APIRef("SVG")}}
 
-The **`value`** read-only property of the {{domxref("SVGNumber")}} interface represents the number.
+The **`value`** property of the {{domxref("SVGNumber")}} interface represents the number.
 
 ## Value
 

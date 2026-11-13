@@ -97,7 +97,7 @@ function reload() {
 
 The example's `<img>` element contains an `src` attribute in the markup, so the image may load before the `load` event listener attaches. Clicking "reload" is guaranteed to trigger the event listener.
 
-{{EmbedLiveSample("Example", "100%", "200")}}
+{{EmbedLiveSample("examples", "100%", "200")}}
 
 ## Specifications
 

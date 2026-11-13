@@ -171,7 +171,20 @@ Try opening all the disclosure widgets. When you open one, all the others automa
 
 ### Customizing the appearance
 
-Now let's apply some CSS to customize the appearance of the disclosure box.
+This example uses CSS to customize the appearance of the disclosure box.
+
+#### HTML
+
+```html
+<details>
+  <summary>System Requirements</summary>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
+</details>
+```
 
 #### CSS
 
@@ -210,19 +223,6 @@ This CSS creates a look similar to a tabbed interface, where clicking the tab op
 
 > [!NOTE]
 > In browsers that don't support the {{cssxref(":open")}} pseudo-class, you can use the attribute selector `details[open]` to style the `<details>` element when it is in the open state.
-
-#### HTML
-
-```html
-<details>
-  <summary>System Requirements</summary>
-  <p>
-    Requires a computer running an operating system. The computer must have some
-    memory and ideally some kind of long-term storage. An input device as well
-    as some form of output device is recommended.
-  </p>
-</details>
-```
 
 #### Result
 

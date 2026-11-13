@@ -5,30 +5,32 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_book_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Delete_author_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms")}}
+
 This subarticle shows how to define a page/form to create `BookInstance` objects.
 This is very much like the form we used to [create `Book` objects](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_book_form).
 
 ## Import validation and sanitization methods
 
-Open **/controllers/bookinstanceController.js**, and add the following lines at the top of the file:
+Open **controllers/bookinstanceController.js**, and add the following lines at the top of the file:
 
 ```js
-const { body, validationResult } = require("express-validator");
+import { body, validationResult } from "express-validator";
 ```
 
 ## Controller—get route
 
-At the top of the file, require the _Book_ module (needed because each `BookInstance` is associated with a particular `Book`).
+At the top of the file, import the _Book_ module (needed because each `BookInstance` is associated with a particular `Book`).
 
 ```js
-const Book = require("../models/book");
+import Book from "../models/book.js";
 ```
 
-Find the exported `bookinstance_create_get()` controller method and replace it with the following code.
+Find the exported `bookInstanceCreateGet()` controller method and replace it with the following code.
 
 ```js
 // Display BookInstance create form on GET.
-exports.bookinstance_create_get = async (req, res, next) => {
+export const bookInstanceCreateGet = async (req, res, next) => {
   const allBooks = await Book.find({}, "title").sort({ title: 1 }).exec();
 
   res.render("bookinstance_form", {
@@ -44,11 +46,11 @@ Because of this, `selected_book` will have a value of `undefined` in the templat
 
 ## Controller—post route
 
-Find the exported `bookinstance_create_post()` controller method and replace it with the following code.
+Find the exported `bookInstanceCreatePost()` controller method and replace it with the following code.
 
 ```js
 // Handle BookInstance create on POST.
-exports.bookinstance_create_post = [
+export const bookInstanceCreatePost = [
   // Validate and sanitize fields.
   body("book", "Book must be specified").trim().isLength({ min: 1 }).escape(),
   body("imprint", "Imprint must be specified")
@@ -102,7 +104,7 @@ If the data is valid, we save the new `BookInstance` record and redirect the use
 
 ## View
 
-Create **/views/bookinstance_form.pug** and copy in the text below.
+Create **views/bookinstance_form.pug** and paste in the text below.
 
 ```pug
 extends layout
@@ -167,7 +169,7 @@ Add the `due_back_yyyy_mm_dd()` virtual function shown below (after the `due_bac
 
 ```js
 BookInstanceSchema.virtual("due_back_yyyy_mm_dd").get(function () {
-  return DateTime.fromJSDate(this.due_back).toISODate(); // format 'YYYY-MM-DD'
+  return this.due_back ? this.due_back.toISOString().slice(0, 10) : "";
 });
 ```
 
@@ -178,7 +180,4 @@ Then select the _Create new book instance (copy)_ link. If everything is set up 
 
 ![Create BookInstance of the Local library application screenshot from localhost:3000. The page is divided into two columns. The narrow left column has a vertical navigation bar with 10 links separated into two sections by a light-colored horizontal line. The top section link to already created data. The bottom links go to create new data forms. The wide right column has the create book instance form with a 'Create BookInstance' heading and four input fields labeled 'Book', 'Imprint', 'Date when book available' and 'Status'. The form is filled. There is a 'Submit' button at the bottom of the form.](locallibary_express_bookinstance_create_empty.png)
 
-## Next steps
-
-- Return to [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms).
-- Proceed to the next subarticle of part 6: [Delete Author form](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Delete_author_form).
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_book_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Delete_author_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms")}}

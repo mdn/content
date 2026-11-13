@@ -64,7 +64,7 @@ In most cases you should provide an accessible label when using `<progress>`. Wh
 
 #### Result
 
-{{EmbedLiveSample('Labelling')}}
+{{EmbedLiveSample('Labeling')}}
 
 ### Describing a particular region
 
@@ -88,13 +88,13 @@ If the `<progress>` element is describing the loading progress of a section of a
 
 ## Examples
 
-```html
+```html live-sample___basic-progress
 <progress value="70" max="100">70 %</progress>
 ```
 
 ### Result
 
-{{ EmbedLiveSample("Examples", 200, 50) }}
+{{ EmbedLiveSample("basic-progress", 200, 50) }}
 
 ## Technical summary
 
