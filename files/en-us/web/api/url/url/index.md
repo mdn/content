@@ -45,65 +45,49 @@ new URL(url, base)
 
 ## Examples
 
-Here are some examples of using the constructor.
-
 > [!NOTE]
 > [Resolving relative references to a URL](/en-US/docs/Web/API/URL_API/Resolving_relative_references) provides additional examples demonstrating how different `url` and `base` values are resolved to a final absolute URL.
 
+Using the constructor without a base URL:
+
 ```js
-// Base URLs:
-let baseUrl = "https://developer.mozilla.org";
-
-let a = new URL("/", baseUrl);
-// => 'https://developer.mozilla.org/'
-
-let b = new URL(baseUrl);
-// => 'https://developer.mozilla.org/'
-
-new URL("en-US/docs", b);
-// => 'https://developer.mozilla.org/en-US/docs'
-
-let d = new URL("/en-US/docs", b);
-// => 'https://developer.mozilla.org/en-US/docs'
-
-new URL("/en-US/docs", d);
-// => 'https://developer.mozilla.org/en-US/docs'
-
-new URL("/en-US/docs", a);
-// => 'https://developer.mozilla.org/en-US/docs'
-
-new URL("/en-US/docs", "https://developer.mozilla.org/fr-FR/toto");
-// => 'https://developer.mozilla.org/en-US/docs'
-
-new URL("https://example.com", "https://beispiel.de");
-// => 'https://example.com/'
+new URL("https://example.org");
+// => 'https://example.org/'
 ```
 
-Here are some examples of invalid URLs:
+Using the constructor with a base URL:
 
 ```js
-new URL("/en-US/docs", "");
-// Raises a TypeError exception as '' is not a valid URL
+new URL("", "https://example.com/?query=1");
+// => 'https://example.com/?query=1'
 
+new URL("/", "https://example.com");
+// => 'https://example.com/'
+
+new URL("/en-US/docs", "https://example.com/");
+// => 'https://example.com/en-US/docs'
+
+new URL("/en-US/docs", "https://example.com/fr-FR/toto");
+// => 'https://example.com/en-US/docs'
+
+new URL("/a", "https://example.com/?query=1");
+// => 'https://example.com/a'
+
+new URL("https://example.org", "https://example.com");
+// => 'https://example.org/'
+
+new URL("//example.org", "https://example.com");
+// => 'https://example.org/'
+```
+
+Some examples of invalid arguments:
+
+```js
 new URL("/en-US/docs");
 // Raises a TypeError exception as '/en-US/docs' is not a valid URL
 
-// Other cases:
-
-new URL("http://www.example.com");
-// => 'http://www.example.com/'
-
-new URL("http://www.example.com", B);
-// => 'http://www.example.com/'
-
-new URL("", "https://example.com/?query=1");
-// => 'https://example.com/?query=1' (Edge before 79 removes query arguments)
-
-new URL("/a", "https://example.com/?query=1");
-// => 'https://example.com/a' (see relative URLs)
-
-new URL("//foo.example", "https://example.com");
-// => 'https://foo.example/' (see relative URLs)
+new URL("/en-US/docs", "");
+// Raises a TypeError exception as '' is not a valid URL
 ```
 
 ## Specifications
