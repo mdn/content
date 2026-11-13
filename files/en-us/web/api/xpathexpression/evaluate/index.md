@@ -26,7 +26,7 @@ evaluate(contextNode, type, result)
   - : A {{domxref("Node")}} representing the context to use for evaluating the expression.
 - `type` {{optional_inline}}
   - : Specifies the type of result to be returned by evaluating the expression. This must
-    be one of the {{domxref("XPathResult", "XPathResult", "Constants")}}.
+    be one of the {{domxref("XPathResult", "XPathResult", "#Constants")}}.
 - `result` {{optional_inline}}
   - : Allows you to specify a result object which may be reused and returned by this method.
     If this is specified as `null` or the implementation does not reuse the

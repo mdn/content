@@ -71,7 +71,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **Render blocking**: `dom.element.blocking.enabled`
 
-  The `blocking="render"` attribute and value is now supported for the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} HTML elements. This allows for rendering to be blocked until the element's stylesheet has loaded or its script has run, including for elements that don't block rendering by default, such as scripts and stylesheets added with JavaScript. ([Firefox bug 1751383](https://bugzil.la/1751383)).
+  The `blocking="render"` attribute and value is now supported for the {{HTMLElement("link",,"#blocking")}}, {{HTMLElement("script",,"#blocking")}}, and {{HTMLElement("style",,"#blocking")}} HTML elements. This allows for rendering to be blocked until the element's stylesheet has loaded or its script has run, including for elements that don't block rendering by default, such as scripts and stylesheets added with JavaScript. ([Firefox bug 1751383](https://bugzil.la/1751383)).
 
 - **Lazy loading for video and audio**: `media.lazy_loading.enabled`
 

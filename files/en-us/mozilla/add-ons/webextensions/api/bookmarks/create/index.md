@@ -6,7 +6,7 @@ browser-compat: webextensions.api.bookmarks.create
 sidebar: addonsidebar
 ---
 
-Creates a bookmark or folder as a child of the {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} with the specified `parentId`. To create a folder, omit or leave empty the {{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}} parameter.
+Creates a bookmark or folder as a child of the {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} with the specified `parentId`. To create a folder, omit or leave empty the {{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "#url")}} parameter.
 
 > [!WARNING]
 > If your extension tries to create a new bookmark in the bookmark tree's root node, it raises an error: "_The bookmark root cannot be modified_" and the bookmark won't be created.

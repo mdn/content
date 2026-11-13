@@ -81,7 +81,7 @@ A variable declared with `let`, `const`, or `class` is said to be in a "temporal
 
 While inside the TDZ, the variable has not been initialized with a value, and any attempt to access it will result in a {{jsxref("ReferenceError")}}. The variable is initialized with a value when execution reaches the place in the code where it was declared. If no initial value was specified with the variable declaration, it will be initialized with a value of `undefined`.
 
-This differs from {{jsxref("Statements/var", "var", "hoisting")}} variables, which will return a value of `undefined` if they are accessed before they are declared. The code below demonstrates the different result when `let` and `var` are accessed in code before the place where they are declared.
+This differs from {{jsxref("Statements/var", "var", "#hoisting")}} variables, which will return a value of `undefined` if they are accessed before they are declared. The code below demonstrates the different result when `let` and `var` are accessed in code before the place where they are declared.
 
 ```js example-bad
 {
