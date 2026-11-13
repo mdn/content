@@ -62,7 +62,7 @@ A sanitizer configuration defines what HTML entities will be allowed, replaced, 
 
 There are two mechanisms for defining a sanitizer configuration, either of which can be passed to all the sanitization methods:
 
-- {{domxref('SanitizerConfig')}} is a dictionary object that defines arrays for the allowed/disallowed elements and attributes and boolean properties that indicate whether comments and data attributes will be allowed or omitted, and so on.
+- {{domxref('SanitizerConfig')}} is a dictionary object that defines arrays for the allowed/disallowed elements and attributes and boolean properties that indicate whether comments, data attributes, and `javascript:` URLs will be allowed or omitted, and so on.
 
   Only a subset of possible configuration options may be specified in a particular configuration in order to reduce redundancy and ambiguity.
   The allowed subset is summarized in the [Allow and remove configurations](#allow_and_remove_configurations) section below, and described in detail in [Valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration).
@@ -203,6 +203,7 @@ The XSS-safe baseline configuration defines the items that must be removed from 
 
 - {{htmlelement("embed")}}, {{htmlelement("frame")}}, {{htmlelement("iframe")}}, {{htmlelement("object")}}, {{htmlelement("script")}}, and {{SVGElement("use")}}.
 - All event handler content attributes, such as `onafterprint`, `onbeforeinput`, and so on.
+- Attributes that contain [`javascript:` URLs](/en-US/docs/Web/URI/Reference/Schemes/javascript), such as `<a href="javascript:…">`. See {{domxref("Sanitizer.setJavascriptURLs()")}} for the attributes this covers.
 
 The configuration is automatically applied to {{domxref("Element.setHTML()")}} and the other [safe sanitization methods](#sanitization_methods), and ensures that XSS-unsafe items are removed from the output even if they are allowed by a passed sanitizer.
 You can also call {{domxref("Sanitizer/removeUnsafe","removeUnsafe")}} on a {{domxref("Sanitizer")}} instance to apply this configuration and make it XSS-safe.
