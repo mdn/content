@@ -16,7 +16,7 @@ The **Web Storage API** provides mechanisms by which browsers can store key/valu
 The two mechanisms within Web Storage are as follows:
 
 - `sessionStorage` is partitioned by browser tabs and by {{glossary("origin")}}. The main document, and all embedded {{glossary("browsing context", "browsing contexts")}} (iframes), are grouped by their origin and each origin has access to its own separate storage area. Closing the browser tab destroys all `sessionStorage` data associated with that tab.
-- `localStorage` is partitioned by {{glossary("origin")}} only. All documents with the same origin have access to the same `localStorage` area, and it persists even when the browser is closed and reopened.
+- `localStorage` is partitioned by {{glossary("origin")}}. All documents with the same origin have access to the same `localStorage` area, and it persists even when the browser is closed and reopened.
 
 These mechanisms are available via the {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} properties. Accessing one of these will return an instance of a {{domxref("Storage")}} object, through which data items can be set, retrieved and removed. A different storage object is used for the `sessionStorage` and `localStorage` for each origin — they function and are controlled separately.
 
@@ -41,6 +41,8 @@ Third-party code can be added to another site by injecting it with a {{htmleleme
 
 - If your third-party code is added to another site with a `<script>` element, your code will be executed in the browsing context of the embedder. Therefore, when you call {{domxref("Storage.setItem()")}} or {{domxref("SharedStorage.set()")}}, the key/value pair will be written to the embedder's storage. From the browser's perspective, there is no difference between first-party code and third-party code when a `<script>` tag is used.
 - When your third-party code is added to another site within an `<iframe>`, the code inside the `<iframe>` will be executed with the origin of the `<iframe>`'s browsing context. If the code inside the `<iframe>` calls {{domxref("Storage.setItem()")}}, data will be written into the local or session storage of the `<iframe>`'s origin. If the `<iframe>` code calls {{domxref("SharedStorage.set()")}}, the data will be written into the shared storage of the `<iframe>`'s origin.
+
+To limit cross-site tracking, browsers may partition storage so that it is keyed not just by the frame's origin, but also by the top-level site. This means embedded third-party content may get its own separate storage area per top-level site, rather than unconditionally sharing a single storage area with the same origin elsewhere on the web. Different browsers implement this mechanism differently; see [State partitioning](/en-US/docs/Web/Privacy/Guides/State_Partitioning) for the general concept and the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) for the mechanism that grants embedded content access to storage in its normal (unpartitioned) keying when the user permits it.
 
 ## Web Storage interfaces
 
