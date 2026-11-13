@@ -61,7 +61,7 @@ userInput.addEventListener("input", () => {
 });
 ```
 
-{{EmbedLiveSample("displaying_validity_state", "100%", "140")}}
+{{EmbedLiveSample("detecting_bad_input", "100%", "140")}}
 
 ## Specifications
 

@@ -7,9 +7,9 @@ sidebar: addonsidebar
 
 A sidebar is a pane that is displayed at the side of the browser window, next to the web page. This page describes sidebars, specifying them, designing them, and examples of use.
 
-The browser provides a UI that enables the user to select a sidebar to display. For example, Firefox has the "View" > "Sidebar" menu. Each browser window can display its own sidebar, which is displayed on every tab in the window.
+The browser provides a UI that enables the user to select a sidebar to display. For example, in Firefox, the user clicks the sidebar button in the toolbar and then selects a tool or extension from the sidebar. Each browser window can display its own sidebar, which is displayed on every tab in the window.
 
-The browser may include a number of built-in sidebars. For example, Firefox includes a sidebar for interacting with bookmarks:
+The browser may include a number of built-in sidebars. For example, Firefox's sidebar provides tools such as bookmarks, history, and passwords, alongside any sidebars added by extensions. This screenshot shows the sidebar added by the [annotate-page](https://github.com/mdn/webextensions-examples/tree/main/annotate-page) example:
 
 ![Annotator sidebar with a box allowing the user to take notes about the page.](bookmarks-sidebar.png)
 

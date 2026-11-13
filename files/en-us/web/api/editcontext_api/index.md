@@ -56,24 +56,6 @@ In return, the EditContext API makes the DOM element you choose editable and par
 
 If you use the EditContext API with a `<canvas>` element, make sure to also make the text accessible to assistive technology. Screen readers can't read the text in a `<canvas>` element. For example, you could maintain a separate view of the text in an offscreen DOM element that's presented to screen readers.
 
-### Basic usage
-
-To use the EditContext API, you need to create an instance of the {{domxref("EditContext")}} interface, and then attach it to the DOM element you want to make editable by using the {{domxref("HTMLElement/editContext", "editContext")}} property. The DOM element can be any element, including a `<div>` or a `<canvas>` element.
-
-```html
-<canvas id="editor-canvas"></canvas>
-```
-
-```js-nolint
-const canvas = document.getElementById("editor-canvas");
-const editContext = new EditContext();
-canvas.editContext = editContext;
-```
-
-An `EditContext` instance can only be attached to one DOM element at a time.
-
-Attaching an `EditContext` instance to a DOM element makes the element focusable, as part of the document's focus order. The user can enter text into the element using the input method of their choice, and you can use event fired by the `EditContext` instance to render the text and selection.
-
 ### Model and view architecture
 
 When using the EditContext API, it helps to build your editing experience as a model and view architecture.
@@ -99,6 +81,26 @@ You can then render the text and selection in the view, using the information pr
 
 - {{domxref("HTMLElement.editContext")}} {{experimental_inline}}
   - : The `editContext` property of the {{domxref("HTMLElement")}} interface gets and sets an element's associated {{domxref("EditContext")}} object.
+
+## Examples
+
+### Basic usage
+
+To use the EditContext API, you need to create an instance of the {{domxref("EditContext")}} interface, and then attach it to the DOM element you want to make editable by using the {{domxref("HTMLElement/editContext", "editContext")}} property. The DOM element can be any element, including a `<div>` or a `<canvas>` element.
+
+```html
+<canvas id="editor-canvas"></canvas>
+```
+
+```js
+const canvas = document.getElementById("editor-canvas");
+const editContext = new EditContext();
+canvas.editContext = editContext;
+```
+
+An `EditContext` instance can only be attached to one DOM element at a time.
+
+Attaching an `EditContext` instance to a DOM element makes the element focusable, as part of the document's focus order. The user can enter text into the element using the input method of their choice, and you can use event fired by the `EditContext` instance to render the text and selection.
 
 ## Specifications
 

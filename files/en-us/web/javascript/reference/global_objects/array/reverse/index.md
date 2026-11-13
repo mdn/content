@@ -124,7 +124,7 @@ console.log(Array.prototype.reverse.call(arrayLike));
 
 ## See also
 
-- [Polyfill of `Array.prototype.reverse` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.reverse` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.reverse`](https://www.npmjs.com/package/array.prototype.reverse)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

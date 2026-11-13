@@ -30,7 +30,7 @@ When set to the `null` value, that `null` value is converted to the empty string
 
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if an attempt was made to set the value of `innerHTML` using a string which is not properly-formed HTML.
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if the property is set to a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
 - `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown if an attempt was made to insert the HTML into a node whose parent is a {{domxref("Document")}}.

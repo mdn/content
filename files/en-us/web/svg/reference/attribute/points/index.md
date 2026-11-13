@@ -15,37 +15,29 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("polyline")}}
 - {{SVGElement("polygon")}}
 
-## Example
+## polygon
 
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
+For {{SVGElement('polygon')}}, `points` defines a list of points, each representing a vertex of the shape to be drawn. Each point is define by a X and Y coordinate in the user coordinate system.
 
-```html
-<svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- polyline is an open shape -->
-  <polyline stroke="black" fill="none" points="50,0 21,90 98,35 2,35 79,90" />
+> [!NOTE]
+> A polygon is a closed shape, meaning the last point is connected to the first point.
 
-  <!-- polygon is a closed shape -->
-  <polygon
-    stroke="black"
-    fill="none"
-    transform="translate(100,0)"
-    points="50,0 21,90 98,35 2,35 79,90" />
-
-  <!--
-  It is usually considered best practices to separate a X and Y
-  coordinate with a comma and a group of coordinates by a space.
-  It makes things more readable for human beings.
-  -->
-</svg>
-```
-
-{{EmbedLiveSample("Example", '100%', 200)}}
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>[ {{cssxref("number")}}+ ]#</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
 ## polyline
 
@@ -88,29 +80,41 @@ svg {
 
 {{EmbedLiveSample('polyline', '100%', 200)}}
 
-## polygon
+## Examples
 
-For {{SVGElement('polygon')}}, `points` defines a list of points, each representing a vertex of the shape to be drawn. Each point is define by a X and Y coordinate in the user coordinate system.
+### Usage with polyline
 
-> [!NOTE]
-> A polygon is a closed shape, meaning the last point is connected to the first point.
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>[ {{cssxref("number")}}+ ]#</td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><em>none</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
+```html
+<svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- polyline is an open shape -->
+  <polyline stroke="black" fill="none" points="50,0 21,90 98,35 2,35 79,90" />
+
+  <!-- polygon is a closed shape -->
+  <polygon
+    stroke="black"
+    fill="none"
+    transform="translate(100,0)"
+    points="50,0 21,90 98,35 2,35 79,90" />
+
+  <!--
+  It is usually considered best practices to separate a X and Y
+  coordinate with a comma and a group of coordinates by a space.
+  It makes things more readable for human beings.
+  -->
+</svg>
+```
+
+{{EmbedLiveSample("Usage with polyline", '100%', 200)}}
+
+### Usage with polygon
 
 ```css hidden
 html,
@@ -127,7 +131,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('polygon', '100%', 200)}}
+{{EmbedLiveSample('Usage with polygon', '100%', 200)}}
 
 ## Specifications
 

@@ -100,6 +100,13 @@ When animating `content-visibility` with [CSS transitions](/en-US/docs/Web/CSS/G
 > [!NOTE]
 > When transitioning an element's `content-visibility` value, you don't need to provide a set of starting values for transitioned properties using a {{cssxref("@starting-style")}} block, like you do when [transitioning `display`](/en-US/docs/Web/CSS/Reference/Properties/display#animating_display). This is because `content-visibility` doesn't hide an element from the DOM like `display` does: it just skips rendering the element's content.
 
+## Accessibility
+
+Off-screen content within a `content-visibility: auto` property remains in the document object model and the accessibility tree. This allows improving page performance with `content-visibility: auto` without negatively impacting accessibility.
+
+Since styles for off-screen content are not rendered, elements intentionally hidden with `display: none` or `visibility: hidden` _will still appear in the accessibility tree_.
+If you don't want an element to appear in the accessibility tree, use `aria-hidden="true"`.
+
 ## Formal definition
 
 {{cssinfo}}
@@ -107,13 +114,6 @@ When animating `content-visibility` with [CSS transitions](/en-US/docs/Web/CSS/G
 ## Formal syntax
 
 {{CSSSyntax}}
-
-## Accessibility
-
-Off-screen content within a `content-visibility: auto` property remains in the document object model and the accessibility tree. This allows improving page performance with `content-visibility: auto` without negatively impacting accessibility.
-
-Since styles for off-screen content are not rendered, elements intentionally hidden with `display: none` or `visibility: hidden` _will still appear in the accessibility tree_.
-If you don't want an element to appear in the accessibility tree, use `aria-hidden="true"`.
 
 ## Examples
 
@@ -209,7 +209,7 @@ document.querySelectorAll("button.toggle").forEach((button) => {
 
 #### Result
 
-{{ EmbedLiveSample('Using hidden to manually manage visibility') }}
+{{ EmbedLiveSample('using_hidden_to_manage_visibility') }}
 
 ### Animating content-visibility
 

@@ -28,6 +28,16 @@ former_element + target_element { style properties }
 
 This example demonstrates how to select the next sibling if that next sibling is of a specific type.
 
+#### HTML
+
+```html
+<ul>
+  <li>One</li>
+  <li>Two!</li>
+  <li>Three</li>
+</ul>
+```
+
 #### CSS
 
 We only style the `<li>` that comes immediately after an `<li>` that is the first of its type:
@@ -39,16 +49,6 @@ li:first-of-type + li {
 }
 ```
 
-#### HTML
-
-```html
-<ul>
-  <li>One</li>
-  <li>Two!</li>
-  <li>Three</li>
-</ul>
-```
-
 #### Result
 
 {{EmbedLiveSample("Basic usage", "100%", 100)}}
@@ -56,17 +56,6 @@ li:first-of-type + li {
 ### Selecting a previous sibling
 
 The next-sibling combinator can be included within the {{cssxref(":has()")}} functional selector to select the previous sibling.
-
-#### CSS
-
-We only style the `<li>` with a next sibling that is an `<li>` that is the last of its type:
-
-```css
-li:has(+ li:last-of-type) {
-  color: red;
-  font-weight: bold;
-}
-```
 
 #### HTML
 
@@ -77,6 +66,17 @@ li:has(+ li:last-of-type) {
   <li>Three!</li>
   <li>Four</li>
 </ul>
+```
+
+#### CSS
+
+We only style the `<li>` with a next sibling that is an `<li>` that is the last of its type:
+
+```css
+li:has(+ li:last-of-type) {
+  color: red;
+  font-weight: bold;
+}
 ```
 
 #### Result

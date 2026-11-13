@@ -254,7 +254,7 @@ body {
   width: 60%;
   margin: 0 auto;
   font-size: 1.3rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
 }
 
 p {

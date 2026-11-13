@@ -287,7 +287,7 @@ You can also use {{jsxref("Array.from()")}} to transform `elems` to an array, an
 
 ## See also
 
-- [Polyfill of `Array.prototype.map` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.map` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.map`](https://www.npmjs.com/package/array.prototype.map)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

@@ -54,4 +54,4 @@ if (url.searchParams.size) {
 ## See also
 
 - {{domxref("URL.searchParams")}}
-- [Polyfill of `URLSearchParams` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [Polyfill of `URLSearchParams` in `core-js`](https://core-js.io/docs/features/web-standards/url)

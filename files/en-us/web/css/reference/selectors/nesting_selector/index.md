@@ -210,7 +210,7 @@ This example uses normal CSS styling.
 
 #### Result
 
-{{EmbedLiveSample('Original_CSS_styles','100%','65')}}
+{{EmbedLiveSample('using_normal_css_styles','100%','65')}}
 
 ### Using `&` in nested CSS styles
 
@@ -243,7 +243,7 @@ This example uses nested CSS styling.
 
 #### Result
 
-{{EmbedLiveSample('Nested_CSS_styles','100%','65')}}
+{{EmbedLiveSample('using_in_nested_css_styles','100%','65')}}
 
 ### Using `&` outside nested rule
 
@@ -266,7 +266,7 @@ If not used in a nested style rule, `&` represents the [scoping root](/en-US/doc
 
 #### Result
 
-{{EmbedLiveSample('Usage_outside_nested_rule','100%','65')}}
+{{EmbedLiveSample('using_outside_nested_rule','100%','65')}}
 
 ## Specifications
 

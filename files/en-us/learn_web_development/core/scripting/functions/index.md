@@ -379,7 +379,7 @@ Let's look at a real example to demonstrate scoping.
 1. First, create a new HTML file on your local file system, and put the following code into it:
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />

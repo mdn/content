@@ -293,7 +293,7 @@ li:nth-child(even of .noted) {
 
 Items with `class="noted"` have a thick bottom border and items 3, 10 and 17 have a solid background as they are the _even_ list items with `class="noted"`.
 
-{{EmbedLiveSample('of_selector_syntax_example', 550, 120)}}
+{{EmbedLiveSample('using_of_selector', 550, 120)}}
 
 ### of selector syntax vs selector nth-child
 

@@ -19,7 +19,7 @@ A string, which can be one of the following values:
 - `"navigational-prefetch"` {{experimental_inline}} {{non-standard_inline}}
   - : The resource was retrieved from a prefetched response stored in an in-memory cache via the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
 - `""` (empty string)
-  - : Returned if none of the above delivery types apply.
+  - : Returned if none of the earlier delivery types apply, or if the resource is cross-origin and doesn't pass the {{HTTPHeader("Timing-Allow-Origin")}} check. In the cross-origin case, `""` is returned even if the resource was retrieved from the cache.
 
 ## Examples
 
@@ -56,3 +56,8 @@ console.log(scripts);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{HTTPHeader("Timing-Allow-Origin")}}
+- [Resource timing](/en-US/docs/Web/API/Performance_API/Resource_timing)

@@ -110,7 +110,7 @@ console.log(
 
 ## See also
 
-- [Polyfill of `JSON.isRawJSON` in `core-js`](https://github.com/zloirock/core-js#jsonparse-source-text-access)
+- [Polyfill of `JSON.isRawJSON` in `core-js`](https://core-js.io/docs/features/ecmascript/json)
 - {{jsxref("JSON")}}
 - {{jsxref("JSON.stringify()")}}
 - {{jsxref("JSON.rawJSON()")}}

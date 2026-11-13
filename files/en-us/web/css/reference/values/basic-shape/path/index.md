@@ -134,13 +134,21 @@ btn.addEventListener("click", () => {
 });
 ```
 
-{{EmbedLiveSample("Use as the value of offset-path", "100%", 350)}}
+{{EmbedLiveSample("using_a_path_function_as_an_offset-path_value", "100%", 350)}}
 
 ### Modify the value of the SVG path d attribute
 
 The `path()` can be used to modify the value of the SVG [`d` attribute](/en-US/docs/Web/SVG/Reference/Attribute/d), which can also be set to `none` in your CSS.
 
 The "V" symbol will flip vertically when you hover over it, if `d` is supported as a CSS property.
+
+#### HTML
+
+```html
+<svg id="svg_css_ex1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path fill="none" stroke="red" d="M20,20 L50,80 L80,20" />
+</svg>
+```
 
 #### CSS
 
@@ -155,14 +163,6 @@ svg {
 #svg_css_ex1:hover path {
   d: path("M20,80 L50,20 L80,80");
 }
-```
-
-#### HTML
-
-```html
-<svg id="svg_css_ex1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path fill="none" stroke="red" d="M20,20 L50,80 L80,20" />
-</svg>
 ```
 
 #### Result

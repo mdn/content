@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`column-rule-inset-junction`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property can be used to offset both the top and bottom endpoints of column rule segments that are [junction endpoints](#understanding_junction_endpoints); that is, endpoints at gap junctions where rule segments intersect.
+The **`column-rule-inset-junction`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property can be used to offset both the top and bottom endpoints of column rule segments that are [junction endpoints](/en-US/docs/Web/CSS/Reference/Properties/column-rule-inset-junction-end#understanding_junction_endpoints); that is, endpoints at gap junctions where rule segments intersect.
 
 {{InteractiveExample("CSS Demo: column-rule-inset-junction")}}
 
@@ -69,6 +69,7 @@ column-rule-inset-junction: overlap-join 10px;
 }
 #example-element i {
   background-color: #efefef;
+  color: #333333;
   padding: 1em;
 }
 ```
@@ -140,7 +141,7 @@ All segment endpoints, including this property's `-cap` and `-row` equivalents, 
 
 ### Basic usage
 
-This example demonstrates setting `column-rule-inset-junction` to inset the edges of junction segments on flex containers.
+This example demonstrates setting `column-rule-inset-junction` to inset the edges of column junction segments on flex containers.
 
 #### HTML
 
@@ -278,7 +279,7 @@ inset.addEventListener("input", () => {
 
 {{EmbedLiveSample("Basic usage", "", "330")}}
 
-Change the size of the inset. Note that in the right-hand example, where the column rule is a single segment that goes from top to bottom, the segment has two cap endpoints and no junction endpoints. Therefore, changing the `column-rule-inset-junction` value does not affect this example.
+Change the size of the inset. Note that this property affects only column rules split into multiple segments. When a column rule is a single segment that spans the height of the container, the segment has two cap endpoints and no junction endpoints, and remains unaffected by changes to the `column-rule-inset-junction` value.
 
 ### With grid layout
 
@@ -441,7 +442,6 @@ endSize.addEventListener("input", () => {
 ## See also
 
 - {{cssxref("column-rule-inset-junction-start")}}
-- {{cssxref("column-rule-inset-junction")}} shorthand
 - {{cssxref("column-rule-inset")}} shorthand
 - {{cssxref("rule-inset")}} shorthand
 - {{cssxref("column-rule-break")}}

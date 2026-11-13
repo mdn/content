@@ -432,7 +432,7 @@ colSize.addEventListener("input", () => {
 
 #### Result
 
-{{EmbedLiveSample("Setting two value", "", "500")}}
+{{EmbedLiveSample("setting_two_values", "", "500")}}
 
 Change the inset values for the starts and ends of the cap segment endpoints.
 
@@ -468,14 +468,14 @@ We also include a {{htmlelement("select")}} element with an {{htmlelement("optio
 </ul>
 
 <p>
-  <label
-    ><code>rule-visibility-items</code> value <code>
+  <label>
+    <code>rule-visibility-items</code> value
     <select id="visibility">
       <option>all</option>
       <option>between</option>
       <option>around</option>
       <option selected>normal</option>
-  </select>
+    </select>
   </label>
 </p>
 

@@ -136,14 +136,6 @@ The keywords and data types mentioned above are described in more detail below:
 - alternative text: `/ <string> | <counter> | attr()`
   - : Alternative text may be specified for an image or any `<content-list>` items, by appending a forward slash and then a combination of strings, counters, and `attr()` functions. The alternative text is intended for speech output by screen-readers, but may also be displayed in some browsers.
 
-## Formal definition
-
-{{cssinfo}}
-
-## Formal syntax
-
-{{csssyntax}}
-
 ## Accessibility
 
 CSS-generated content is not included in the [DOM](/en-US/docs/Web/API/Document_Object_Model). Because of this, it will not be represented in the [accessibility tree](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis) and certain assistive technology/browser combinations will not announce it. If the content conveys information that is critical to understanding the page's purpose, it is better to include it in the main document.
@@ -154,6 +146,14 @@ If inserted content is not decorative, check that the information is provided to
 - [WCAG, Guideline 1.3: Create content that can be presented in different ways](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 - [Failure of Success Criterion 1.3.1: inserting non-decorative generated content](https://www.w3.org/TR/WCAG20-TECHS/F87) Techniques for WCAG 2.0
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 

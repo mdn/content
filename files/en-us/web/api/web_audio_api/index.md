@@ -190,6 +190,15 @@ It is possible to process/render an audio graph very quickly in the background â
 
 {{SubpagesWithSummaries}}
 
+## Libraries
+
+- [Tone.js](https://tonejs.github.io/): a framework for creating interactive music in the browser.
+- [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://webaudio.github.io/web-audio-api/) and falls back to [HTML Audio](https://html.spec.whatwg.org/multipage/media.html#the-audio-element), as well as providing other useful features.
+- [Mooog](https://github.com/mattlima/mooog): jQuery-style chaining of AudioNodes, mixer-style sends/returns, and more.
+- [XSound](https://xsound.jp/): Web Audio API Library for Synthesizer, Effects, Visualization, Recording, etc.
+- [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML video language lab web application using the Web Audio API to record and combine video and audio from different sources into a single file ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))
+- [Pts.js](https://ptsjs.org/): Simplifies web audio visualization ([guide](https://ptsjs.org/guide/sound-0800))
+
 ## Examples
 
 You can find a number of examples at our [webaudio-examples repo](https://github.com/mdn/webaudio-examples/) on GitHub.
@@ -204,8 +213,6 @@ You can find a number of examples at our [webaudio-examples repo](https://github
 
 ## See also
 
-### Tutorials/guides
-
 - [Basic concepts behind Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Advanced techniques: creating sound, sequencing, timing, scheduling](/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques)
@@ -214,19 +221,7 @@ You can find a number of examples at our [webaudio-examples repo](https://github
 - [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 - [Web audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
-- [Mixing Positional Audio and WebGL (2012)](https://web.dev/articles/webaudio-positional-audio)
-- [Developing Game Audio with the Web Audio API (2012)](https://web.dev/articles/webaudio-games)
-
-### Libraries
-
-- [Tone.js](https://tonejs.github.io/): a framework for creating interactive music in the browser.
-- [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://webaudio.github.io/web-audio-api/) and falls back to [HTML Audio](https://html.spec.whatwg.org/multipage/media.html#the-audio-element), as well as providing other useful features.
-- [Mooog](https://github.com/mattlima/mooog): jQuery-style chaining of AudioNodes, mixer-style sends/returns, and more.
-- [XSound](https://xsound.jp/): Web Audio API Library for Synthesizer, Effects, Visualization, Recording, etc.
-- [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML video language lab web application using the Web Audio API to record and combine video and audio from different sources into a single file ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))
-- [Pts.js](https://ptsjs.org/): Simplifies web audio visualization ([guide](https://ptsjs.org/guide/sound-0800))
-
-### Related topics
-
 - [Web media technologies](/en-US/docs/Web/Media)
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Guides/Formats)
+- [Mixing Positional Audio and WebGL (2012)](https://web.dev/articles/webaudio-positional-audio)
+- [Developing Game Audio with the Web Audio API (2012)](https://web.dev/articles/webaudio-games)

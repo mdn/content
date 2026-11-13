@@ -122,7 +122,7 @@ When the `<select>` value is changed, the `change` event handler function fires,
 
 The example is rendered as follows:
 
-{{ EmbedLiveSample('canvas-l10n', "100%", 220) }}
+{{ EmbedLiveSample('demonstrating_canvas_context_localization_support', "100%", 220) }}
 
 Try changing the document language using the `<select>` element. When the language is set to English, the font will be rendered with the "fi" ligature. However, when it is set to Turkish, the font will be rendered without the "fi" ligature, because that locale doesn't include it.
 
@@ -197,7 +197,7 @@ function init() {
 
 The example is rendered as follows:
 
-{{ EmbedLiveSample('offscreen-l10n', "100%", 220) }}
+{{ EmbedLiveSample('language_support_for_offscreen_canvases', "100%", 220) }}
 
 ## Specifications
 

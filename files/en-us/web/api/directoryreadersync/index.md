@@ -16,11 +16,41 @@ The `DirectoryReaderSync` interface lets you read the entries in a directory.
 > This interface is deprecated and is no more on the standard track.
 > _Do not use it anymore._ Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
-## Basic concepts
+## Instance methods
+
+### readEntries()
+
+Returns a list of entries from a specific directory. Call this method until an empty array is returned.
+
+#### Syntax
+
+```js-nolint
+readEntries()
+```
+
+##### Parameters
+
+None.
+
+##### Return value
+
+Array containing [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync) and [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync).
+
+##### Exceptions
+
+This method can raise a [DOMException](/en-US/docs/Web/API/DOMException) with the following codes:
+
+| Exception           | Description                                                                        |
+| ------------------- | ---------------------------------------------------------------------------------- |
+| `NOT_FOUND_ERR`     | The directory does not exist.                                                      |
+| `INVALID_STATE_ERR` | The directory has been modified since the first call to readEntries was processed. |
+| `SECURITY_ERR`      | The browser determined that it was not safe to look up the metadata.               |
+
+## Description
 
 Before you call the only method in this interface, [`readEntries()`](#readentries), create the [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync) object. But DirectoryEntrySync (as well as [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync)) is not a data type that you can pass between a calling app and Web Worker thread. It's not a big deal, because you don't really need to have the main app and the worker thread see the same JavaScript object; you just need them to access the same files. You can do that by passing a list of `filesystem:` URLs—which are just strings—instead of a list of entries. You can also use the `filesystem:` URL to look up the entry with `resolveLocalFileSystemURL()`. That gets you back to a DirectoryEntrySync (as well as FileEntrySync) object.
 
-### Example
+## Examples
 
 In the following code snippet from [HTML5Rocks (web.dev)](https://web.dev/articles/filesystem-sync), we create Web Workers and pass data from it to the main app.
 
@@ -94,36 +124,6 @@ self.onmessage = (e) => {
   }
 };
 ```
-
-## Method
-
-### readEntries()
-
-Returns a list of entries from a specific directory. Call this method until an empty array is returned.
-
-#### Syntax
-
-```js-nolint
-readEntries()
-```
-
-##### Parameters
-
-None.
-
-##### Return value
-
-Array containing [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync) and [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync).
-
-##### Exceptions
-
-This method can raise a [DOMException](/en-US/docs/Web/API/DOMException) with the following codes:
-
-| Exception           | Description                                                                        |
-| ------------------- | ---------------------------------------------------------------------------------- |
-| `NOT_FOUND_ERR`     | The directory does not exist.                                                      |
-| `INVALID_STATE_ERR` | The directory has been modified since the first call to readEntries was processed. |
-| `SECURITY_ERR`      | The browser determined that it was not safe to look up the metadata.               |
 
 ## Specifications
 

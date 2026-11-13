@@ -72,7 +72,7 @@ svgLink.rel = "alternate bookmark";
 log(`New rel: "${svgLink.rel}"`); // New rel: "alternate bookmark"
 ```
 
-{{EmbedLiveSample("Example","100%","200")}}
+{{EmbedLiveSample("examples","100%","200")}}
 
 ## Specifications
 

@@ -144,20 +144,17 @@ To make a checkbox checked by default, you give it the `checked` attribute. See 
 The following example shows how to make a checkbox look and act like an on/off switch.
 
 ```html
-<form>
-  <fieldset>
-    <legend>Adjust your setting</legend>
-    <div>
-      <label for="theme">Dark mode</label>
-      <input type="checkbox" name="theme" id="theme" switch checked />
-    </div>
-    <div>
-      <label for="notifications">Notifications</label>
-      <input type="checkbox" name="notifications" id="notifications" switch />
-    </div>
-    <button type="submit">Submit</button>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>Adjust your setting</legend>
+  <div>
+    <label for="theme">Dark mode</label>
+    <input type="checkbox" name="theme" id="theme" switch checked />
+  </div>
+  <div>
+    <label for="notifications">Notifications</label>
+    <input type="checkbox" name="notifications" id="notifications" switch />
+  </div>
+</fieldset>
 ```
 
 > [!NOTE]
@@ -228,37 +225,35 @@ function updateDisplay() {
 ```
 
 ```html live-sample___indeterminate_state
-<form>
-  <fieldset>
-    <legend>Complete the recipe</legend>
-    <div>
-      <input type="checkbox" id="enchantment" name="enchantment" />
-      <label for="enchantment">Enchantment table</label>
-      <ul>
-        <li>
-          <input type="checkbox" id="book" name="ingredient" value="book" />
-          <label for="book">Book</label>
-        </li>
-        <li>
-          <input
-            type="checkbox"
-            id="diamonds"
-            name="ingredient"
-            value="diamonds" />
-          <label for="diamonds">Diamonds (x2)</label>
-        </li>
-        <li>
-          <input
-            type="checkbox"
-            id="obsidian"
-            name="ingredient"
-            value="obsidian" />
-          <label for="obsidian">Obsidian (x4)</label>
-        </li>
-      </ul>
-    </div>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>Complete the recipe</legend>
+  <div>
+    <input type="checkbox" id="enchantment" name="enchantment" />
+    <label for="enchantment">Enchantment table</label>
+    <ul>
+      <li>
+        <input type="checkbox" id="book" name="ingredient" value="book" />
+        <label for="book">Book</label>
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          id="diamonds"
+          name="ingredient"
+          value="diamonds" />
+        <label for="diamonds">Diamonds (x2)</label>
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          id="obsidian"
+          name="ingredient"
+          value="obsidian" />
+        <label for="obsidian">Obsidian (x4)</label>
+      </li>
+    </ul>
+  </div>
+</fieldset>
 ```
 
 {{EmbedLiveSample("indeterminate_state", "", 200)}}
@@ -274,55 +269,50 @@ The following example is an extended version of the "multiple checkboxes" exampl
 ### HTML
 
 ```html
-<form>
-  <fieldset>
-    <legend>Choose your interests</legend>
-    <div>
-      <label>
-        <input type="checkbox" id="coding" name="interest" value="coding" />
-        Coding
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="music" name="interest" value="music" />
-        Music
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="art" name="interest" value="art" />
-        Art
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="sports" name="interest" value="sports" />
-        Sports
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="cooking" name="interest" value="cooking" />
-        Cooking
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="other" name="interest" value="other" />
-        Other
-      </label>
-      <input
-        type="text"
-        id="otherValue"
-        name="other"
-        aria-label="Other interest" />
-    </div>
-    <div>
-      <button type="submit">Submit form</button>
-    </div>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>Choose your interests</legend>
+  <div>
+    <label>
+      <input type="checkbox" id="coding" name="interest" value="coding" />
+      Coding
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="music" name="interest" value="music" />
+      Music
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="art" name="interest" value="art" />
+      Art
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="sports" name="interest" value="sports" />
+      Sports
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="cooking" name="interest" value="cooking" />
+      Cooking
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="other" name="interest" value="other" />
+      Other
+    </label>
+    <input
+      type="text"
+      id="otherValue"
+      name="other"
+      aria-label="Other interest" />
+  </div>
+</fieldset>
 ```
 
 ### CSS
@@ -332,16 +322,13 @@ html {
   font-family: sans-serif;
 }
 
-form {
-  width: 600px;
-  margin: 0 auto;
-}
-
 div {
   margin-bottom: 10px;
 }
 
 fieldset {
+  width: 600px;
+  margin: 0 auto;
   background: cyan;
   border: 5px solid blue;
 }

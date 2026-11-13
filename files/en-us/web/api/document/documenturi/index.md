@@ -17,12 +17,6 @@ A string.
 
 ## Examples
 
-### JavaScript
-
-```js
-document.getElementById("url").textContent = document.documentURI;
-```
-
 ### HTML
 
 ```html
@@ -30,6 +24,12 @@ document.getElementById("url").textContent = document.documentURI;
   URL:<br />
   <span id="url">URL goes here</span>
 </p>
+```
+
+### JavaScript
+
+```js
+document.getElementById("url").textContent = document.documentURI;
 ```
 
 ### Result

@@ -8,21 +8,19 @@ browser-compat: api.CharacterData.after
 
 {{APIRef("DOM")}}
 
-The **`after()`** method of the {{domxref("CharacterData")}} interface
-inserts a set of {{domxref("Node")}} objects or strings in the children list of the
-object's parent, just after the object itself.
-
-Strings are inserted as {{domxref("Text")}} nodes; the string is being passed as argument to the {{domxref("Text/Text", "Text()")}} constructor.
+The **`after()`** method of the {{domxref("CharacterData")}} interface inserts a set of {{domxref("Node")}} objects or strings in the children list of the `CharacterData`'s parent, just after the `CharacterData`. Strings are inserted as equivalent {{domxref("Text")}} nodes. Nothing happens if {{domxref("Node.parentNode", "parentNode")}} is `null`.
 
 ## Syntax
 
 ```js-nolint
-after(...nodes)
+after(param1)
+after(param1, param2)
+after(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
 
-- `nodes`
+- `param1`, …, `paramN`
   - : A set of {{domxref("Node")}} objects or strings to insert.
 
 ### Return value

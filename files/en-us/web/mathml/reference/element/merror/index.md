@@ -27,7 +27,7 @@ In the following example, `<merror>` is used to indicate a parsing error for som
 </math>
 ```
 
-{{ EmbedLiveSample('merror_example', 700, 200, "", "") }}
+{{ EmbedLiveSample('examples', 700, 200, "", "") }}
 
 ## Technical summary
 

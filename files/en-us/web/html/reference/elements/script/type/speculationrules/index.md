@@ -31,7 +31,7 @@ Speculation rules take the form of a JSON structure that determine what resource
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : The speculation rules definition is not a valid JSON object.
 
 ## Description

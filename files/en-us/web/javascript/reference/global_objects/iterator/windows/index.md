@@ -107,7 +107,7 @@ for (const substring of substrings) {
 
 ## See also
 
-- [Polyfill of `Iterator.prototype.windows` in `core-js`](https://github.com/zloirock/core-js#iterator-chunking)
+- [Polyfill of `Iterator.prototype.windows` in `core-js`](https://core-js.io/docs/features/ecmascript/iterator)
 - [es-shims polyfill of `Iterator.prototype.windows`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.chunks()")}}

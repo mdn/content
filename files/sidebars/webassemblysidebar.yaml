@@ -209,6 +209,11 @@ sidebar:
         link: /WebAssembly/Reference/Numeric
         title: Numeric
         details: closed
+      - type: listSubPages
+        path: /WebAssembly/Reference/Reference
+        link: /WebAssembly/Reference/Reference
+        title: Reference
+        details: closed
       - link: /WebAssembly/Reference/SIMD
         title: SIMD
         details: closed

@@ -39,7 +39,7 @@ console.log(inverted.value); // CSSUnitValue {value: 4, unit: "percent"}
 console.log(inverted.toString()); // "calc(1 / 4%)"
 ```
 
-Note that if a plain number is passed to `arg`, the `value` is rectified to a {{domxref("CSSUnitValue")}} with unit `"number"`:
+Note that if a plain number is passed to `arg`, it's converted to a {{domxref("CSSUnitValue")}} whose unit is `"number"`:
 
 ```js
 const invertedNumber = new CSSMathInvert(4);

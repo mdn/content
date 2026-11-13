@@ -29,7 +29,7 @@ A **character escape** represents a character that may not be able to be conveni
 ### Parameters
 
 - `H…H`
-  - : A hexadecimal number representing the Unicode code point of the character. The `\xHH` form must have two hexadecimal digits; the `\uHHHH` form must have four; the `\u{H…H}` form may have 1 to 6 hexadecimal digits.
+  - : A hexadecimal number representing the Unicode code point of the character. The `\xHH` form must have two hexadecimal digits; the `\uHHHH` form must have four; the `\u{H…H}` form must have one or more hexadecimal digits representing a value no greater than `0x10FFFF`.
 
 ## Description
 
@@ -48,7 +48,7 @@ The following character escapes are recognized in regular expressions:
 - `\uHHHH`
   - : Represents the character with the given hexadecimal Unicode code point. The hexadecimal number must be exactly four digits long. Two such escape sequences can be used to represent a surrogate pair in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). (In Unicode-unaware mode, they are always two separate characters.)
 - `\u{H…H}`
-  - : ([Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode) only) Represents the character with the given hexadecimal Unicode code point. The hexadecimal number can be from 1 to 6 digits long.
+  - : ([Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode) only) Represents the character with the given hexadecimal Unicode code point. The hexadecimal number must have one or more digits and a value no greater than `0x10FFFF`. Leading zeros are allowed, so the number can be arbitrarily long.
 
 In [Unicode-unaware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), escape sequences that are not one of the above become _identity escapes_: they represent the character that follows the backslash. For example, `\a` represents the character `a`. This behavior limits the ability to introduce new escape sequences without causing backward compatibility issues, and is therefore forbidden in Unicode-aware mode.
 

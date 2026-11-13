@@ -11,17 +11,6 @@ The **`SVGPreserveAspectRatio`** interface corresponds to the {{SVGAttr("preserv
 
 An `SVGPreserveAspectRatio` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
-## Instance properties
-
-- {{domxref("SVGPreserveAspectRatio.align", "align")}}
-  - : The type of the alignment value as specified by one of the `SVG_PRESERVEASPECTRATIO_*` constants defined on this interface.
-- {{domxref("SVGPreserveAspectRatio.meetOrSlice", "meetOrSlice")}}
-  - : The type of the meet-or-slice value as specified by one of the `SVG_MEETORSLICE_*` constants defined on this interface.
-
-## Instance methods
-
-_The `SVGPreserveAspectRatio` interface do not provide any specific methods._
-
 ## Static properties
 
 - `SVG_PRESERVEASPECTRATIO_UNKNOWN` (0)
@@ -52,6 +41,17 @@ _The `SVGPreserveAspectRatio` interface do not provide any specific methods._
   - : Corresponds to value `meet` for attribute {{SVGAttr("preserveAspectRatio")}}.
 - `SVG_MEETORSLICE_SLICE` (2)
   - : Corresponds to value `slice` for attribute {{SVGAttr("preserveAspectRatio")}}.
+
+## Instance properties
+
+- {{domxref("SVGPreserveAspectRatio.align", "align")}}
+  - : The type of the alignment value as specified by one of the `SVG_PRESERVEASPECTRATIO_*` constants defined on this interface.
+- {{domxref("SVGPreserveAspectRatio.meetOrSlice", "meetOrSlice")}}
+  - : The type of the meet-or-slice value as specified by one of the `SVG_MEETORSLICE_*` constants defined on this interface.
+
+## Instance methods
+
+_The `SVGPreserveAspectRatio` interface do not provide any specific methods._
 
 ## Specifications
 

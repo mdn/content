@@ -28,16 +28,16 @@ _Also inherits properties from: {{DOMxRef("EventTarget")}}_.
 - {{DOMxRef("RTCSctpTransport.transport")}} {{ReadOnlyInline}}
   - : An {{DOMxRef("RTCDtlsTransport")}} object representing the {{Glossary("DTLS")}} transport used for the transmission and receipt of data packets.
 
+## Instance methods
+
+_This interface has no methods, but inherits methods from: {{DOMxRef("EventTarget")}}._
+
 ## Events
 
 Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
 - {{domxref("RTCSctpTransport.statechange_event", "statechange")}}
   - : Sent when the {{DOMxRef("RTCSctpTransport.state")}} changes.
-
-## Instance methods
-
-_This interface has no methods, but inherits methods from: {{DOMxRef("EventTarget")}}._
 
 ## Example
 

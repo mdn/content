@@ -26,14 +26,6 @@ Tasks can be aborted by calling {{domxref("AbortController.abort()","abort()")}}
 - {{domxref("TaskController.TaskController", "TaskController()")}}
   - : Creates a new `TaskController` object, optionally specifying the priority of its associated [`signal`](#taskcontroller.signal).
 
-## Instance methods
-
-_This interface also inherits the methods of its parent, {{domxref("AbortController")}}._
-
-- {{domxref('TaskController.setPriority()')}}
-  - : Sets the priority of the controller's [`signal`](#taskcontroller.signal), and hence the priority of any tasks with which it is associated.
-    This notifies observers of the priority change by dispatching a [`prioritychange`](/en-US/docs/Web/API/TaskSignal/prioritychange_event) event.
-
 ## Instance properties
 
 _This interface also inherits the properties of its parent, {{domxref("AbortController")}}._
@@ -42,6 +34,14 @@ _This interface also inherits the properties of its parent, {{domxref("AbortCont
   - : Returns a {{domxref("TaskSignal")}} object instance.
     The signal is passed to tasks so that they can be aborted or re-prioritized by the controller.
     The property is inherited from [`AbortController`](/en-US/docs/Web/API/AbortController/signal).
+
+## Instance methods
+
+_This interface also inherits the methods of its parent, {{domxref("AbortController")}}._
+
+- {{domxref('TaskController.setPriority()')}}
+  - : Sets the priority of the controller's [`signal`](#taskcontroller.signal), and hence the priority of any tasks with which it is associated.
+    This notifies observers of the priority change by dispatching a [`prioritychange`](/en-US/docs/Web/API/TaskSignal/prioritychange_event) event.
 
 ## Examples
 
