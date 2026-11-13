@@ -10,7 +10,7 @@ Creates a menu item using an options object defining properties for the item.
 
 Unlike other asynchronous functions, this one does not return a promise, but uses an optional callback to communicate success or failure. This is because its return value is the ID of the new item.
 
-For compatibility with other browsers, Firefox makes this method available in the `contextMenus` namespace and `menus` namespace.
+This page documents the `menus.create()` method, which is also available as `contextMenus.create()` in Firefox. For information about the relationship between these namespaces, their permissions, and their browser support, see [Namespace compatibility](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus#namespace-compatibility).
 
 > **Creating menus in persistent and non-persistent extensions**
 >
@@ -121,7 +121,12 @@ browser.menus.create(
 
 ## Examples
 
-This example creates a context menu item that's shown when the user has selected some text in the page. It just logs the selected text to the console:
+The following examples in the [webextensions-examples repository](https://github.com/mdn/webextensions-examples) use the `contextMenus` namespace:
+
+- [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/main/context-menu-copy-link-with-types) adds a context menu item to links that copies the link URL to the clipboard as plain text or rich HTML.
+- [store-collected-images](https://github.com/mdn/webextensions-examples/tree/main/store-collected-images) demonstrates collecting and storing images using context menu items.
+
+This example creates a context menu item that's shown when the user has selected some text in the page. It logs the selected text to the console:
 
 ```js
 browser.menus.create({
