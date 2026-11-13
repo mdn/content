@@ -31,8 +31,8 @@ supports(type)
 
     These MIME types may be supported:
     - `image/svg+xml`
-    - Custom MIME-type formats starting with `"web "`.
-      The custom type (without the `"web "` prefix), must have the correct formatting for a MIME type.
+    - [Custom formats](/en-US/docs/Web/API/Clipboard_API#custom_clipboard_formats) starting with `"web "`.
+      The text after the `"web "` prefix must be a [correctly structured media (MIME) type](/en-US/docs/Web/HTTP/Guides/MIME_types#structure_of_a_mime_type).
 
 ### Return value
 

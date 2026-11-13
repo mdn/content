@@ -98,6 +98,9 @@ When reading from the clipboard, the specification requires that a user has rece
 For writing to the clipboard the specification expects that the page has been granted the [Permissions API](/en-US/docs/Web/API/Permissions_API) `clipboard-write` permission, and the browser may also require [transient user activation](/en-US/docs/Web/Security/Defenses/User_activation).
 Browsers may place additional restrictions over use of the methods to access the clipboard.
 
+[Custom formats](#custom_clipboard_formats) are stored on the system clipboard under names that any site or native application can write to.
+Data in a custom format might not have been written by your app, so validate it before use.
+
 The {{domxref("Clipboard.clipboardchange_event", "clipboardchange")}} event is only fired with [sticky activation](/en-US/docs/Glossary/Sticky_activation) or after the `clipboard-read` permission is granted.
 
 Browser implementations have diverged from the specification.
@@ -466,7 +469,7 @@ We also add code to reload and clear the example when the "Reload" button is pre
 const reload = document.querySelector("#reload_custom");
 
 reload.addEventListener("click", () => {
-  window.location.reload(true);
+  window.location.reload();
 });
 ```
 
@@ -517,7 +520,7 @@ document.addEventListener("copy", (event) => {
 });
 ```
 
-We then define the code for pasting a representation into each of tje target boxes.
+We then define the code for pasting a representation into each of the target boxes.
 
 The "Your app" button looks specifically for the custom format representation and rebuilds the full table, including the `SKU` column, from structured data — reproducing the source table exactly.
 
