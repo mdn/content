@@ -195,3 +195,4 @@ The specification also lists an additional value, `manual`, which is not current
 - {{cssxref("hyphens")}}
 - {{cssxref("line-break")}}
 - [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/Guides/Text/Wrapping_breaking_text)
+- [Approaches to line breaking](https://www.w3.org/International/articles/typography/linebreak)
