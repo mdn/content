@@ -17,7 +17,7 @@ The following example creates a new WebAssembly Table instance with an initial s
 
 ```js
 const table = new WebAssembly.Table({
-  element: "anyfunc",
+  element: "funcref",
   initial: 2,
   maximum: 10,
 });
