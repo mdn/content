@@ -2,6 +2,11 @@
 title: dx
 slug: Web/SVG/Reference/Attribute/dx
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.feDropShadow.dx
+  - svg.elements.feOffset.dx
+  - svg.elements.text.dx
+  - svg.elements.tspan.dx
 spec-urls:
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fedropshadow-dx
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-feoffset-dx
@@ -217,3 +222,7 @@ line {
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
