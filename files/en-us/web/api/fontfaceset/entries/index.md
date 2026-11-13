@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-A new iterator object that contains an array of `[value, value]` for each element in the `CustomStateSet`, in insertion order.
+A new iterator object that contains an array of `[value, value]` for each element in the `FontFaceSet`, in insertion order.
 
 ## Specifications
 

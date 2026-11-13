@@ -9,7 +9,7 @@ status:
 
 {{APIRef("Force Touch Events")}}{{Non-standard_header}}
 
-**`MouseEvent.webkitForce`** is a proprietary, WebKit-specific numeric property whose value represents the amount of pressure that is being applied on the touchpad or touchscreen.
+The **`webkitForce`** read-only property of the {{domxref("MouseEvent")}} interface is a proprietary, WebKit-specific numeric property whose value represents the amount of pressure that is being applied on the touchpad or touchscreen.
 
 ## Specifications
 
