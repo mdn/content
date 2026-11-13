@@ -54,9 +54,6 @@ transform: translate(3ch, 3mm);
 }
 ```
 
-This transformation is characterized by a two-dimensional vector [tx, ty]. Its coordinates define how much the element moves
-in each direction.
-
 ## Syntax
 
 ```css
@@ -122,6 +119,13 @@ transform: translate(30%, 50%);
     </tr>
   </tbody>
 </table>
+
+## Description
+
+The `translate()` function repositions an element in the horizontal direction, vertical direction, or both. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
+
+This transformation is characterized by a two-dimensional vector [tx, ty]. Its coordinates define how much the element moves
+in each direction.
 
 ## Formal syntax
 

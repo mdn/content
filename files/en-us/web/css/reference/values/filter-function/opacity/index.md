@@ -41,9 +41,6 @@ filter: opacity(0);
 </section>
 ```
 
-> [!NOTE]
-> This function is similar to the more established {{Cssxref("opacity")}} property. The difference is that with filters, some browsers provide hardware acceleration for better performance.
-
 ## Syntax
 
 ```css
@@ -68,6 +65,12 @@ opacity(60%)
 ### Return value
 
 A {{cssxref("filter-function")}} value.
+
+## Description
+
+The `opacity()` [filter function](/en-US/docs/Web/CSS/Guides/Filter_effects/Using#filter_functions) applies transparency to the samples in the input image. The level of transparency is specified by the argument.
+
+This function is similar to the more established {{Cssxref("opacity")}} property. The difference is that with filters, some browsers provide hardware acceleration for better performance.
 
 ## Formal syntax
 
