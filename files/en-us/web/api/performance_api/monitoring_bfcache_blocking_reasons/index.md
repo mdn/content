@@ -249,7 +249,7 @@ Additional blocking reasons that may be used by some browsers are also specified
 - `"webtransport"`
   - : While unloading, an open [`WebTransport`](/en-US/docs/Web/API/WebTransport) connection was shut down, so the page was not in a state that could be stored in the back/forward cache.
 - `"webxrdevice"`
-  - : The Document created a [XRSystem](/en-US/docs/Web/API/XRSystem).
+  - : The Document created an [XRSystem](/en-US/docs/Web/API/XRSystem).
 
 ## Browser compatibility
 

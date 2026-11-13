@@ -92,6 +92,14 @@ Legible `word-spacing` must be determined on a case-by-case basis, as different 
 - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 ### Basic usage
@@ -125,7 +133,7 @@ Our CSS applies a different `word-spacing` to each paragraph:
 
 The example renders like so:
 
-{{ EmbedLiveSample("live-sample___basic-usage", "100%", "100") }}
+{{ EmbedLiveSample("basic-usage", "100%", "100") }}
 
 ### Comparing word-spacing set with length and percentage
 
@@ -204,14 +212,6 @@ The rendered result looks like this:
 {{ EmbedLiveSample("percentage-versus-length", "100%", 460) }}
 
 First, note how the initial length letter spacing value looks OK when applied to the larger font sizes, but it doesn't look good on the smaller font sizes. Now toggle the checkbox, and note how the percentage letter spacing looks appropriate on all lines, as it scales with the font size.
-
-## Formal definition
-
-{{CSSInfo}}
-
-## Formal syntax
-
-{{CSSSyntax}}
 
 ## Specifications
 

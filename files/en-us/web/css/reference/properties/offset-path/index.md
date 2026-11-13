@@ -368,7 +368,7 @@ The SVG rectangle that defines the path shape is shown here only to visually dem
 }
 ```
 
-{{EmbedLiveSample('live-sample___offset_path_url', '100%', '250')}}
+{{EmbedLiveSample('offset_path_url', '100%', '250')}}
 
 ### Different shapes
 

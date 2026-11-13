@@ -21,18 +21,14 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A number representing the cell's position in the {{domxref("HTMLTableRowElement.cells", "cells")}} collection of the {{HTMLElement("tr")}} the cell is contained within. If the cell doesn't belong to a `<tr>`, it returns `-1`.
 - {{domxref("HTMLTableCellElement.colSpan")}}
   - : A positive number indicating the number of columns this cell must span; this lets the cell occupy space across multiple columns of the table. It reflects the [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute.
-- {{domxref("HTMLTableCellElement.headers")}} {{ReadOnlyInline}}
+- {{domxref("HTMLTableCellElement.headers")}}
   - : A {{domxref("DOMTokenList")}} describing a list of `id` of {{HTMLElement("th")}} elements that represent headers associated with the cell. It reflects the [`headers`](/en-US/docs/Web/HTML/Reference/Elements/td#headers) attribute.
 - {{domxref("HTMLTableCellElement.rowSpan")}}
   - : A positive number indicating the number of rows this cell must span; this lets a cell occupy space across multiple rows of the table. It reflects the [`rowspan`](/en-US/docs/Web/HTML/Reference/Elements/td#rowspan) attribute.
 - {{domxref("HTMLTableCellElement.scope")}}
   - : A string indicating the scope of a {{HTMLElement("th")}} cell. Possible values for `scope` are: `col`, `colgroup`, `row`, `rowgroup`, or the empty string (`""`).
 
-## Instance methods
-
-_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}_.
-
-## Deprecated properties
+### Deprecated properties
 
 > [!WARNING]
 > These properties have been deprecated and should no longer be used. They are documented primarily to help understand older code bases.
@@ -55,6 +51,10 @@ _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}
   - : A string representing an enumerated value indicating how the content of the cell must be vertically aligned. It reflects the [`valign`](/en-US/docs/Web/HTML/Reference/Elements/td#valign) attribute and can have one of the following values: `"top"`, `"middle"`, `"bottom"`, or `"baseline"`. Use the CSS {{cssxref("vertical-align")}} property instead.
 - {{domxref("HTMLTableCellElement.width")}} {{deprecated_inline}}
   - : A string specifying the number of pixels wide the cell should be drawn, if possible. This property reflects the also obsolete [`width`](/en-US/docs/Web/HTML/Reference/Elements/td#width) attribute. Use the CSS {{cssxref("width")}} property instead.
+
+## Instance methods
+
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}_.
 
 ## Specifications
 

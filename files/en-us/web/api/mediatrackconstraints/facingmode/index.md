@@ -11,7 +11,7 @@ browser-compat: api.MediaStreamTrack.applyConstraints.facingMode_constraint
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`facingMode`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring)
 describing the requested or mandatory constraints placed upon the value of the
-{{domxref("MediaTrackSettings.facingMode", "facingMode")}} constrainable property.
+[`facingMode`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#facingmode) constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
 the value of [`facingMode`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#facingmode) as returned by a

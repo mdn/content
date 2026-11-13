@@ -44,10 +44,11 @@ As a contributor, you can get involved with the project by engaging in the follo
 
 **Requirements:**
 
-To be a contributor, you must follow:
+To be a contributor, you must:
 
-- [Mozilla's code of conduct](https://www.mozilla.org/en-US/about/governance/policies/participation/)
-- The specific guidelines for each repository. If there are any project-specific hints or guidelines, you will find them in a `CONTRIBUTING.md` file in the project repository root.
+- Follow [Mozilla's code of conduct](https://www.mozilla.org/en-US/about/governance/policies/participation/).
+- Follow the specific guidelines for each repository. If there are any project-specific hints or guidelines, you will find them in a `CONTRIBUTING.md` file in the project repository root.
+- Take responsibility for your contributions. Before submitting, review everything and test any code, regardless of the tools you use to create it.
 
 **Privileges:**
 
@@ -173,7 +174,7 @@ They are responsible for reviewing and approving pull requests in their topic or
 
 In addition to the responsibilities of an [organization member](#organization_member), invited experts are responsible for:
 
-- Following the [reviewing guide](https://github.com/mdn/content/blob/main/REVIEWING.md).
+- Following the [pull request review process](/en-US/docs/MDN/Community/Pull_requests#reviewing_a_pull_request).
 - Reviewing pull requests in their topic area.
 - Helping other contributors become reviewers.
 

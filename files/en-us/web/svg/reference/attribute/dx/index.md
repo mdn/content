@@ -18,41 +18,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement('text')}}
 - {{SVGElement('tspan')}}
 
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Lines materialized the position of the glyphs -->
-  <line x1="0" x2="100%" y1="50%" y2="50%" />
-  <line x1="10%" x2="10%" y1="0" y2="100%" />
-  <line x1="60%" x2="60%" y1="0" y2="100%" />
-
-  <!-- Some reference text -->
-  <text x="10%" y="50%" fill="grey">SVG</text>
-
-  <!-- The same text with a shift along the x-axis -->
-  <text dx="50%" x="10%" y="50%">SVG</text>
-</svg>
-```
-
-```css
-line {
-  stroke: red;
-  stroke-width: 0.5px;
-  stroke-dasharray: 3px;
-}
-```
-
-{{EmbedLiveSample("Example", '100%', 200)}}
-
 ## feDropShadow
 
 For {{SVGElement('feDropShadow')}}, `dx` defines the x offset of the dropped shadow. The unit used to resolve the value of the attribute is set by the {{SVGAttr('primitiveUnits')}} attribute of the {{SVGElement('filter')}} element.
@@ -138,7 +103,79 @@ If there are multiple values, `dx` defines a shift along the x-axis for each ind
   </tbody>
 </table>
 
-### Example
+## tspan
+
+For {{SVGElement('tspan')}}, if it contains a single value, `dx` defines a shift along the x-axis for all alternate glyph.
+
+If there are multiple values, `dx` defines a shift along the x-axis for each individual glyph relative to the preceding glyph. If there are fewer values than glyphs, the remaining glyphs use a value of `0`. If there are more values than glyphs, extra values are ignored.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        List of (<strong
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+## Examples
+
+### Shifting text
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Lines materialized the position of the glyphs -->
+  <line x1="0" x2="100%" y1="50%" y2="50%" />
+  <line x1="10%" x2="10%" y1="0" y2="100%" />
+  <line x1="60%" x2="60%" y1="0" y2="100%" />
+
+  <!-- Some reference text -->
+  <text x="10%" y="50%" fill="grey">SVG</text>
+
+  <!-- The same text with a shift along the x-axis -->
+  <text dx="50%" x="10%" y="50%">SVG</text>
+</svg>
+```
+
+```css
+line {
+  stroke: red;
+  stroke-width: 0.5px;
+  stroke-dasharray: 3px;
+}
+```
+
+{{EmbedLiveSample("Shifting text", '100%', 200)}}
+
+### Multiple values
 
 ```css hidden
 html,
@@ -175,42 +212,7 @@ line {
 }
 ```
 
-{{EmbedLiveSample('text', '100%', 100)}}
-
-## tspan
-
-For {{SVGElement('tspan')}}, if it contains a single value, `dx` defines a shift along the x-axis for all alternate glyph.
-
-If there are multiple values, `dx` defines a shift along the x-axis for each individual glyph relative to the preceding glyph. If there are fewer values than glyphs, the remaining glyphs use a value of `0`. If there are more values than glyphs, extra values are ignored.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        List of (<strong
-          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
-        >
-        |
-        <strong
-          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
-        >)
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><em>none</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
+{{EmbedLiveSample('Multiple values', '100%', 100)}}
 
 ## Specifications
 

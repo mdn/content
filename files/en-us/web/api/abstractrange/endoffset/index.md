@@ -8,7 +8,7 @@ browser-compat: api.AbstractRange.endOffset
 
 {{APIRef("DOM")}}
 
-The **`endOffset`** property of the {{domxref("AbstractRange")}} interface returns the offset into the end node of the range's end position.
+The **`endOffset`** read-only property of the {{domxref("AbstractRange")}} interface returns the offset into the end node of the range's end position.
 
 To change the end position, use the {{domxref("Range.setEnd()")}} method or a similar one.
 

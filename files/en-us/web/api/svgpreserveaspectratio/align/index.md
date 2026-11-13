@@ -8,7 +8,7 @@ browser-compat: api.SVGPreserveAspectRatio.align
 
 {{APIRef("SVG")}}
 
-The **`align`** read-only property of the {{domxref("SVGPreserveAspectRatio")}} interface reflects the type of the alignment value as specified by one of the `SVG_PRESERVEASPECTRATIO_*` constants defined on this interface.
+The **`align`** property of the {{domxref("SVGPreserveAspectRatio")}} interface reflects the type of the alignment value as specified by one of the `SVG_PRESERVEASPECTRATIO_*` constants defined on this interface.
 
 ## Value
 

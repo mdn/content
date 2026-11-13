@@ -82,17 +82,6 @@ When using `scrollbar-color` property with specific color values, authors should
 
 ### Coloring overflow scrollbars
 
-#### CSS
-
-```css
-.scroller {
-  width: 300px;
-  height: 100px;
-  overflow-y: scroll;
-  scrollbar-color: #000077 #bada55;
-}
-```
-
 #### HTML
 
 ```html
@@ -103,6 +92,17 @@ When using `scrollbar-color` property with specific color values, authors should
   fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
   earthnut pea peanut soko zucchini.
 </div>
+```
+
+#### CSS
+
+```css
+.scroller {
+  width: 300px;
+  height: 100px;
+  overflow-y: scroll;
+  scrollbar-color: #000077 #bada55;
+}
 ```
 
 #### Result

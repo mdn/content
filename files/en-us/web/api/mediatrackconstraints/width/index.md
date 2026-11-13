@@ -11,7 +11,7 @@ browser-compat: api.MediaStreamTrack.applyConstraints.width_constraint
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`width`** property is a [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#constrainulong)
 describing the requested or mandatory constraints placed upon the value of the
-{{domxref("MediaTrackSettings.width", "width")}} constrainable property.
+[`width`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#width) constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
 the value of [`width`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#width) as returned by a call

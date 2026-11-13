@@ -227,7 +227,7 @@ xhr.send();
 On browsers that support deprecation reports, a report should be displayed below.
 Note that the `type` is `"deprecation"`.
 
-{{EmbedLiveSample("Using the `ReportingObserver` interface", "100%", "280px")}}
+{{EmbedLiveSample("reporting_deprecated_features", "100%", "280px")}}
 
 ## Specifications
 

@@ -15,6 +15,14 @@ custom-element::part(foo) {
 }
 ```
 
+## Syntax
+
+```css
+::part(<ident>+) {
+  /* ... */
+}
+```
+
 ## Description
 
 The global [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part) attribute makes a shadow tree element visible to its parent DOM. The part names declared using the `part` attribute are used as the parameter of the `::part()` pseudo-element. In this way, you can apply CSS styles to elements in the shadow tree from outside of it.
@@ -26,14 +34,6 @@ The `::part()` pseudo-element is only visible to the parent DOM. This means that
 [Pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) (such as `::part(label):hover`) can be appended to the `::part()` selector, but [structural pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes#tree-structural_pseudo-classes) that match based on tree information, such as `:empty` and `:last-child`, cannot be appended.
 
 Additional pseudo-elements, such as `::before`, can be appended to the `::part()` selector, but additional `::part()` element can't be appended. For example, `::part(confirm-button)::part(active)` never matches anything, i.e, it is not the same as `::part(confirm-button active)`. This is because doing so would expose more structural information than is intended.
-
-## Syntax
-
-```css
-::part(<ident>+) {
-  /* ... */
-}
-```
 
 ## Examples
 

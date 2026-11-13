@@ -23,9 +23,9 @@ This interface directly defines the following properties:
   - : The intrinsic size of the element returned as the area (width \* height).
 - {{domxref("LargestContentfulPaint.id")}} {{ReadOnlyInline}}
   - : The id of the element. This property returns an empty string when there is no id.
-- {{domxref("LargestContentfulPaint.paintTime")}}
+- {{domxref("LargestContentfulPaint.paintTime")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the rendering phase ended and the paint phase started.
-- {{domxref("LargestContentfulPaint.presentationTime")}}
+- {{domxref("LargestContentfulPaint.presentationTime")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the painted pixels were actually drawn on the screen.
 - {{domxref("LargestContentfulPaint.url")}} {{ReadOnlyInline}}
   - : If the element is an image, the request url of the image.

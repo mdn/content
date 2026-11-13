@@ -148,7 +148,7 @@ for (const brick of bricks) {
 }
 ```
 
-Add a `onCollide()` method to each brick, which removes itself from the `bricks` and `colliders` collections:
+Add an `onCollide()` method to each brick, which removes itself from the `bricks` and `colliders` collections:
 
 ```js
 class Brick extends GameObject {

@@ -24,7 +24,7 @@ cd borderify
 
 ### manifest.json
 
-Using a suitable [text editor](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors), create a file called "manifest.json" under the "borderify" directory. Give it this content:
+Using a suitable [code editor](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors), create a file called "manifest.json" under the "borderify" directory. Give it this content:
 
 ```json
 {
@@ -129,7 +129,7 @@ Alternatively, you can run the extension from the command line using the [web-ex
 
 Now, visit a page under `https://www.mozilla.org/en-US/`, and you see a red border around the page.
 
-![Border displayed on mozilla.org](border_on_mozilla_org.png)
+![Red border displayed around mozilla.org in Firefox](border_on_mozilla_org.png)
 
 > [!NOTE]
 > However, it doesn't work on `addons.mozilla.org` because this domain blocks content scripts.

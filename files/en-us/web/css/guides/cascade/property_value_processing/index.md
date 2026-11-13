@@ -234,7 +234,7 @@ window.addEventListener("resize", updateAllUsedWidths);
 
 While the three specified values, `auto`, `50%`, and `inherit`, are keyword and {{cssxref("percentage")}} values, retrieving the `width` using `window.getComputedStyle(el)["width"];` returns an [absolute length](/en-US/docs/Web/CSS/Reference/Values/length#absolute_length_units) `px` value:
 
-{{ EmbedLiveSample('Example', '80%', 372) }}
+{{ EmbedLiveSample('used_value', '80%', 372) }}
 
 Change the window size or rotate your mobile device to change the size and the used values.
 

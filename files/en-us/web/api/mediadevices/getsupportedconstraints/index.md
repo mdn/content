@@ -166,7 +166,7 @@ The function below sets up the options object for the call to {{domxref("MediaDe
 - `logicalSurface`, requesting logical display surfaces, which may not be entirely visible onscreen.
 - `suppressLocalAudioPlayback`, requesting that captured audio is not played out of the user's local speakers.
 
-These constraints do not limit the display surfaces the user can choose to share. Capturing is then started by calling `getDisplayMedia()` and attaching the returned stream to the {{(htmlelement("video")}} element represented by `videoElem`.
+These constraints do not limit the display surfaces the user can choose to share. Capturing is then started by calling `getDisplayMedia()` and attaching the returned stream to the {{htmlelement("video")}} element represented by `videoElem`.
 
 ```js
 async function capture(videoElem) {

@@ -8,8 +8,7 @@ browser-compat: api.Window.parent
 
 {{APIRef("HTML DOM")}}
 
-The **`Window.parent`** property is a reference to the parent
-of the current window or subframe.
+The **`parent`** read-only property of the {{domxref("Window")}} interface is a reference to the parent of the current window or subframe.
 
 If a window does not have a parent, its `parent` property is a reference to
 itself.

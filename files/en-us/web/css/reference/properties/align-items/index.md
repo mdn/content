@@ -154,6 +154,62 @@ There are also two values that were defined for flexbox, as they are base on [fl
 
 In this example we have a container with six children. A {{htmlelement("select")}} dropdown menu enables toggling the {{cssxref("display")}} of the container between `grid` and `flex`. A second menu enables changing the value of the container's `align-items` property.
 
+### HTML
+
+We include a container {{htmlelement("div")}} with six nested `<div>` children. The HTML for the form and the JavaScript that changes the container's class have been hidden for the sake of brevity.
+
+```html
+<div id="container" class="flex">
+  <div id="item1">1</div>
+  <div id="item2">2</div>
+  <div id="item3">3</div>
+  <div id="item4">4<br />line 2</div>
+  <div id="item5">5</div>
+  <div id="item6">6</div>
+</div>
+```
+
+```html hidden
+<div class="row">
+  <label for="display">display: </label>
+  <select id="display">
+    <option value="flex">flex</option>
+    <option value="grid">grid</option>
+  </select>
+</div>
+
+<div class="row">
+  <label for="values">align-items: </label>
+  <select id="values">
+    <option value="normal">normal</option>
+    <option value="flex-start">flex-start</option>
+    <option value="flex-end">flex-end</option>
+    <option value="center" selected>center</option>
+    <option value="baseline">baseline</option>
+    <option value="stretch">stretch</option>
+
+    <option value="start">start</option>
+    <option value="end">end</option>
+    <option value="self-start">self-start</option>
+    <option value="self-end">self-end</option>
+
+    <option value="first baseline">first baseline</option>
+    <option value="last baseline">last baseline</option>
+
+    <option value="safe center">safe center</option>
+    <option value="unsafe center">unsafe center</option>
+    <option value="safe right">safe right</option>
+    <option value="unsafe right">unsafe right</option>
+    <option value="safe end">safe end</option>
+    <option value="unsafe end">unsafe end</option>
+    <option value="safe self-end">safe self-end</option>
+    <option value="unsafe self-end">unsafe self-end</option>
+    <option value="safe flex-end">safe flex-end</option>
+    <option value="unsafe flex-end">unsafe flex-end</option>
+  </select>
+</div>
+```
+
 ### CSS
 
 We style the container and items in a manner that ensures we have two lines or rows of items. We defined `.flex` and `.grid` classes, which will be applied to the container with JavaScript. They set the {{cssxref("display")}} value of the container, and change its background and border colors providing an additional indicator that the layout has changed. The six flex items each have a different background color, with the 4th item being two lines long and the 6th item having an enlarged font.
@@ -231,62 +287,6 @@ div > div {
   align-items: center;
   justify-content: center;
 }
-```
-
-### HTML
-
-We include a container {{htmlelement("div")}} with six nested `<div>` children. The HTML for the form and the JavaScript that changes the container's class have been hidden for the sake of brevity.
-
-```html
-<div id="container" class="flex">
-  <div id="item1">1</div>
-  <div id="item2">2</div>
-  <div id="item3">3</div>
-  <div id="item4">4<br />line 2</div>
-  <div id="item5">5</div>
-  <div id="item6">6</div>
-</div>
-```
-
-```html hidden
-<div class="row">
-  <label for="display">display: </label>
-  <select id="display">
-    <option value="flex">flex</option>
-    <option value="grid">grid</option>
-  </select>
-</div>
-
-<div class="row">
-  <label for="values">align-items: </label>
-  <select id="values">
-    <option value="normal">normal</option>
-    <option value="flex-start">flex-start</option>
-    <option value="flex-end">flex-end</option>
-    <option value="center" selected>center</option>
-    <option value="baseline">baseline</option>
-    <option value="stretch">stretch</option>
-
-    <option value="start">start</option>
-    <option value="end">end</option>
-    <option value="self-start">self-start</option>
-    <option value="self-end">self-end</option>
-
-    <option value="first baseline">first baseline</option>
-    <option value="last baseline">last baseline</option>
-
-    <option value="safe center">safe center</option>
-    <option value="unsafe center">unsafe center</option>
-    <option value="safe right">safe right</option>
-    <option value="unsafe right">unsafe right</option>
-    <option value="safe end">safe end</option>
-    <option value="unsafe end">unsafe end</option>
-    <option value="safe self-end">safe self-end</option>
-    <option value="unsafe self-end">unsafe self-end</option>
-    <option value="safe flex-end">safe flex-end</option>
-    <option value="unsafe flex-end">unsafe flex-end</option>
-  </select>
-</div>
 ```
 
 ```js hidden

@@ -60,7 +60,7 @@ escape("@*_+-./"); // "@*_+-./"
 
 ## See also
 
-- [Polyfill of `escape` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `escape` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - {{jsxref("encodeURI")}}
 - {{jsxref("encodeURIComponent")}}
 - {{jsxref("unescape")}}

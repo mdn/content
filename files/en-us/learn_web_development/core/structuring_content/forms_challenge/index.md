@@ -388,6 +388,14 @@ Your finished HTML should look like this:
 </html>
 ```
 
+```js hidden live-sample___form-finished
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+});
+```
+
 For the stretch goal, arguably a better way to add decorative images to a web page is using [CSS background images](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders#background_images). Delete the `<img>` element and use the CSS {{cssxref("background")}} property to place the image on the page instead. A good element to place the background image on would be the `<form>` element, and you need to tell the browser not to repeat the image. You also need to provide some {{cssxref("margin")}} and {{cssxref("padding")}} to space out the background image so it doesn't overlap the text.
 
 ```css

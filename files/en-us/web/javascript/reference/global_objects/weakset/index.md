@@ -118,7 +118,7 @@ The number of objects or their traversal order is immaterial, so a `WeakSet` is 
 
 ## See also
 
-- [Polyfill of `WeakSet` in `core-js`](https://github.com/zloirock/core-js#weakset)
+- [Polyfill of `WeakSet` in `core-js`](https://core-js.io/docs/features/ecmascript/collections#h-weakset)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}

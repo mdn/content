@@ -71,6 +71,7 @@ This code consumes a {{domxref("ReadableStream")}} via a {{domxref("ReadableStre
 
 ## See also
 
+- [Polyfill of `DisposableStack.prototype.use` in `core-js`](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
 - {{jsxref("DisposableStack")}}
 - {{jsxref("DisposableStack.prototype.adopt()")}}

@@ -14,11 +14,15 @@ The **`visibilitychange`** event is sent to an {{domxref("XRSession")}} to infor
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("visibilitychange", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onvisibilitychange = (event) => { }
 ```
 
@@ -62,7 +66,7 @@ navigator.xr.requestSession("inline").then((xrSession) => {
 
 When a visibility state change occurs, the event is received and dispatched to a function `mySessionVisible()`, with a Boolean parameter indicating whether or not the session is presently being displayed to the user.
 
-You can also create the event handler by assigning it to the {{domxref("XRSession")}}'s `onvisibilitychange` event handler property, like this:
+You can also create the event handler by assigning it to the {{domxref("XRSession")}}'s `onvisibilitychange` event handler property, like this (but note that this replaces other event listeners added using `onvisibilitychange`, if any):
 
 ```js
 xrSession.onvisibilitychange = (e) => {
