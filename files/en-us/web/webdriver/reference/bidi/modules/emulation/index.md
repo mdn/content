@@ -12,6 +12,8 @@ The **`emulation`** module contains commands for overriding the behavior of cert
 ## Commands
 
 - [`emulation.setGeolocationOverride`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/emulation/setGeolocationOverride)
+- [`emulation.setLocaleOverride`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/emulation/setLocaleOverride)
+- [`emulation.setTimezoneOverride`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/emulation/setTimezoneOverride)
 
 ## Specifications
 
