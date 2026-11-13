@@ -34,11 +34,11 @@ hyphens: auto;
   border: 2px dashed #999999;
   font-size: 1.5rem;
   text-align: left;
-  width: 7rem;
+  width: 5rem;
 }
 ```
 
-The example text "An extraordinarily long English word!" contains the hidden `&shy;` (soft hyphen) character: `An extra&shy;ordinarily long English word!`. This character is used to indicate a potential place to insert a hyphen when `hyphens: manual;` is specified.
+The example text "An extraordinarily long English word!" contains a single hidden `&shy;` (soft hyphen) character separaing "extra" and "ordinarily": `An extra&shy;ordinarily long English word!`. This character is used to indicate a potential place to insert a hyphen when `hyphens: manual;` or `hyphens: auto;` is specified. With `hyphens:auto;`, the browser is permitted to insert additional hyphens where needed, in order to fit the wrapped word within the enclosing paragraph tag (denoted by the dashed outline).
 
 ## Syntax
 
@@ -98,53 +98,6 @@ There are two Unicode characters used to manually specify potential line break p
 ## Formal syntax
 
 {{csssyntax}}
-
-## Examples
-
-### Basic example
-
-This example demonstrates the three values of the `hyphens` property.
-
-#### HTML
-
-We include three {{htmlelement("dd")}} elements containing the same text but with three different classes.
-
-```html
-<dl>
-  <dt><code>none</code>: no hyphen; overflow if needed</dt>
-  <dd lang="en" class="none">An extreme&shy;ly long English word</dd>
-  <dt>
-    <code>manual</code>: hyphen only at &amp;hyphen; or &amp;shy; (if needed)
-  </dt>
-  <dd lang="en" class="manual">An extreme&shy;ly long English word</dd>
-  <dt><code>auto</code>: hyphens where the algorithm decides (if needed)</dt>
-  <dd lang="en" class="auto">An extreme&shy;ly long English word</dd>
-</dl>
-```
-
-#### CSS
-
-Each of the three classes is set to a different `hyphens` value.
-
-```css
-dd {
-  width: 55px;
-  border: 1px solid black;
-}
-dd.none {
-  hyphens: none;
-}
-dd.manual {
-  hyphens: manual;
-}
-dd.auto {
-  hyphens: auto;
-}
-```
-
-#### Result
-
-{{EmbedLiveSample("Basic example", "100%", 490)}}
 
 ## Specifications
 
