@@ -42,7 +42,7 @@ installElem.addEventListener("installresult", (e) => {
       break;
     case "invalid_data":
       console.log(
-        "Installation failed because of a data issue, such as a badly-formed manifest or a missing manifest URL or manifestId."
+        "Installation failed because of a data issue, such as a badly-formed manifest or a missing manifest URL or manifestId.",
       );
       break;
   }
