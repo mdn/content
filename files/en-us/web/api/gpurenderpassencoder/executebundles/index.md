@@ -12,7 +12,7 @@ The **`executeBundles()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface executes commands previously recorded into the referenced {{domxref("GPURenderBundle")}}s, as part of this render pass.
 
 > [!NOTE]
-> After calling `executeBundles()` the currently set vertex buffers, index buffers, bind groups, and pipeline are all cleared, even if no bundles are actually executed.
+> Calling `executeBundles()` resets the pass's binding state, which includes clearing the currently set immediates, vertex buffers, index buffers, bind groups, and pipeline, even if no bundles are actually executed. If you wish to use such items again after executing bundles, you must set them again.
 
 ## Syntax
 

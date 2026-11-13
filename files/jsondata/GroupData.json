@@ -2307,7 +2307,8 @@
         "GPUTexture",
         "GPUTextureView",
         "GPUUncapturedErrorEvent",
-        "GPUValidationError"
+        "GPUValidationError",
+        "WGSLLanguageFeatures"
       ],
       "methods": ["HTMLCanvasElement.getContext()"],
       "properties": ["Navigator.gpu", "WorkerNavigator.gpu"],
