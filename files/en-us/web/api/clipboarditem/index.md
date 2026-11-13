@@ -37,6 +37,7 @@ The **`ClipboardItem`** interface of the [Clipboard API](/en-US/docs/Web/API/Cli
 ## Description
 
 A single `ClipboardItem` can hold several representations of that data at once, each identified by a different {{Glossary("MIME type")}} — for example, some copied rich text might be stored as both `text/html` and `text/plain`.
+A representation can also use a [custom format](/en-US/docs/Web/API/Clipboard_API#custom_clipboard_formats): a MIME type prefixed with `"web "`, for data that has no standard representation.
 
 When you construct a `ClipboardItem`, you provide these representations as MIME-type-keyed properties of a single object; see {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}} for details.
 
