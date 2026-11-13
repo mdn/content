@@ -28,7 +28,8 @@ Permissions-Policy: web-app-installation=<allowlist>;
 
 The default allowlist for `web-app-installation` is `self`. The top-level browsing context is allowed access to the `Navigator.install()` method by default.
 
-Code running inside {{htmlelement("iframe")}} elements is not permitted to use `Navigator.install()`. As a result, the only use for this policy directive is blocking your own document from using `install()` by setting the value to `()`.
+> [!NOTE]
+> Code running inside {{htmlelement("iframe")}} elements is not permitted to use `Navigator.install()`. As a result, the only use for this policy directive is blocking your own document from using `install()` by setting the value to `()`.
 
 ## Examples
 

@@ -10,9 +10,7 @@ browser-compat: api.HTMLInstallElement.validationstatuschange_event
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-The **`validationstatuschange`** event of the {{domxref("HTMLInstallElement")}} interface is fired whenever the {{htmlelement("install")}} element's validation state or invalid reason changes, due to the element becoming [blocked](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking) or unblocked.
-
-The validation state and invalid reason can be checked using the {{domxref("HTMLInstallElement.isValid", "isValid")}} and {{domxref("HTMLInstallElement.invalidReason", "invalidReason")}} properties, respectively.
+The **`validationstatuschange`** event of the {{domxref("HTMLInstallElement")}} interface is fired whenever the {{htmlelement("install")}} element's [validation status](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking) changes. This change is reflected in a change to the {{domxref("HTMLInstallElement.invalidReason", "invalidReason")}} property and, if the element has become valid or invalid, also in a change to the {{domxref("HTMLInstallElement.isValid", "isValid")}} property.
 
 ## Syntax
 
@@ -51,7 +49,7 @@ installElem.addEventListener("validationstatuschange", (e) => {
 });
 ```
 
-This way, when the validation status changes, we log the {{domxref("HTMLInstallElement.isValid", "isValid")}} value. If it is invalid, we also log the {{domxref("HTMLInstallElement.invalidReason", "invalidReason")}}.
+This way, when the validation state changes, we log the {{domxref("HTMLInstallElement.isValid", "isValid")}} value. If it is invalid, we also log the {{domxref("HTMLInstallElement.invalidReason", "invalidReason")}}.
 
 ## Specifications
 

@@ -37,7 +37,7 @@ _Also inherits events from its parent interface, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLInstallElement.installresult_event", "installresult")}} {{experimental_inline}}
   - : Fired when a PWA installation attempt initiated using an {{htmlelement("install")}} element completes; it can be used to report whether the installation attempt was successful.
 - {{domxref("HTMLInstallElement.validationstatuschange_event", "validationstatuschange")}} {{experimental_inline}}
-  - : Fired whenever the {{htmlelement("install")}} element's validation state or invalid reason changes, due to the element becoming [blocked](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking) or unblocked.
+  - : Fired whenever the {{htmlelement("install")}} element's [validation status](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking) changes. This change is reflected in a change to the {{domxref("HTMLInstallElement.invalidReason", "invalidReason")}} property and, if the element has become valid or invalid, also in a change to the {{domxref("HTMLInstallElement.isValid", "isValid")}} property.
 
 ## Description
 

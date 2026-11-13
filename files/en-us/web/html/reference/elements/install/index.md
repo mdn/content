@@ -151,8 +151,33 @@ The `<install>` element is restricted to [secure contexts](/en-US/docs/Web/Secur
 
 ## Examples
 
+For complete demos, see:
+
 - [Install the current app with `<install>`](https://mdn.github.io/pwa-examples/install-demos/install-element-app/) ([source code](https://github.com/mdn/pwa-examples/tree/main/install-demos/install-element-app))
 - [Install multiple apps from a catalog page with `<install>`](https://mdn.github.io/pwa-examples/install-demos/install-element-catalog/) ([source code](https://github.com/mdn/pwa-examples/tree/main/install-demos/install-element-catalog))
+
+### Install current document
+
+To install the current document as a PWA, you can include an `<install>` element with no attributes. The resulting install button will work provided the web manifest specifies an [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field. The browser will find the app's manifest via its [`<link rel="manifest">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/manifest) element.
+
+```html
+<install></install>
+```
+
+### Install different documents
+
+A third-party app catalog can provide one-click installation of any apps it wishes to, by including `<install>` elements with the app manifests specified in their `manifest` attributes:
+
+```html
+<p>
+  Install app1:
+  <install manifest="https://example1.com/app/manifest.json"></install>
+</p>
+<p>
+  Install app2:
+  <install manifest="https://example2.com/app/manifest.json"></install>
+</p>
+```
 
 ## Technical summary
 

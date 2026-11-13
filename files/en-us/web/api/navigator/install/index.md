@@ -62,6 +62,9 @@ This uses the same installation confirmation dialog as the browser's built-in in
 > [!NOTE]
 > There is an equivalent HTML element, {{htmlelement("install")}}, which provides a declarative mechanism to create such an install button.
 
+> [!NOTE]
+> Code running inside {{htmlelement("iframe")}} elements is not permitted to use `Navigator.install()`.
+
 ### Usage contexts
 
 There are three distinct usage contexts in which `install()` is useful:
@@ -118,7 +121,7 @@ When the `install()` call includes a `manifest`, the permission flow is differen
 
 ### Including a `manifestId`
 
-The snippets in the previous section don't include `manifestId` properties in the `install()` option objects. They assume that the referenced manifests specify an [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field, in which case `manifestId`s are not required. All app
+The snippets in the previous section don't include `manifestId` properties in the `install()` option objects. They assume that the referenced manifests specify an [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field, in which case `manifestId`s are not required.
 
 If your manifest doesn't include an `id` field, the browser will use a computed `id` value to identify the app, which you must specify in the `install()` method's `manifestId` option. This supplies an explicit expected ID; if this does not match the ID of the app, installation will fail with a `DataError`.
 
@@ -139,14 +142,44 @@ The `manifestId` can be found in your browser developer tools. For example, open
 
 The `Navigator.install()` method is restricted to [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts) (HTTPS), and requires that the user has recently interacted with the page ([transient user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required).
 
-Access to the API is also controlled via the {{httpheader("Permissions-Policy/web-app-installation", "web-app-installation")}} {{httpheader("Permissions-Policy")}} directive.
+Access to the API is also controlled via the {{httpheader("Permissions-Policy/web-app-installation", "web-app-installation")}} {{httpheader("Permissions-Policy")}} directive. Because code running inside {{htmlelement("iframe")}} elements is not permitted to use `install()`, the only use for this policy directive is blocking your own document from using `install()` by setting the value to `()`.
 
 In addition, when calling `Navigator.install()` with an options object, the user is asked to grant the current site permission to install apps. The current user permission status can be queried via the [Permissions API](/en-US/docs/Web/API/Permissions_API) (the feature name is `web-app-installation`).
 
 ## Examples
 
+For complete demos, see:
+
 - [Install the current app with `install()`](https://mdn.github.io/pwa-examples/install-demos/install-method-app/) ([source code](https://github.com/mdn/pwa-examples/tree/main/install-demos/install-method-app))
 - [Install multiple apps from a catalog page with `install()`](https://mdn.github.io/pwa-examples/install-demos/install-method-catalog/) ([source code](https://github.com/mdn/pwa-examples/tree/main/install-demos/install-method-catalog))
+
+### Install current document
+
+To install the current document as a PWA, you can invoke the `install()` method on a user interaction event with no `options` object, provided the web manifest specifies an [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field. The browser will find the app's manifest via its [`<link rel="manifest">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/manifest) element.
+
+```js
+installBtn.addEventListener("click", () => {
+  navigator.install();
+});
+```
+
+### Install different documents
+
+A third-party app catalog can provide one-click installation of any apps it wishes to, by specifying the app manifests in the `install()` function `manifest` properties:
+
+```js
+installBtn1.addEventListener("click", () => {
+  navigator.install({
+    manifest: "https://example1.com/app/manifest.json",
+  });
+});
+
+installBtn2.addEventListener("click", () => {
+  navigator.install({
+    manifest: "https://example2.com/app/manifest.json",
+  });
+});
+```
 
 ## Specifications
 
