@@ -236,6 +236,8 @@ Objects in the `CanvasRenderingContext2D` rendering context have a current trans
 
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}
   - : Draws the specified image. This method is available in multiple formats, providing a great deal of flexibility in its use.
+- {{domxref("CanvasRenderingContext2D.drawElementImage()")}}
+  - : Draws a `drawable` element's state recorded during the current rendering update (or an {{domxref("ElementImage")}}) to a 2D canvas context.
 
 ### Pixel manipulation
 

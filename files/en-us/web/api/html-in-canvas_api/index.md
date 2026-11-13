@@ -1,0 +1,178 @@
+---
+title: HTML-in-Canvas API
+slug: Web/API/HTML-in-Canvas_API
+page-type: web-api-overview
+browser-compat: html.elements.canvas.content
+---
+
+{{DefaultAPISidebar("HTML-in-Canvas API")}}
+
+The **HTML-in-Canvas API** allows you to draw DOM elements directly into a 2D or 3D canvas context. This exploits the high-performance, graphically rich nature of canvas, while the content's DOM representation is retained in the background, meaning that it remains interactive, accessible, and integrated with key browser features such as autocomplete, text selection, find-in-page, and keyboard navigation.
+
+## Concepts and usage
+
+Drawing UI features inside a {{htmlelement("canvas")}} element is a common path for developers that want to create graphically rich websites that offer different experiences than might be possible using DOM elements. However, this comes with its own set of problems. Traditionally, anything drawn into a canvas context is just a set of pixels, and therefore isn't accessible, and doesn't benefit from the same level of interactivity or browser integration as the DOM.
+
+HTML-in-Canvas provides a solution, allowing DOM subtrees to be drawn into a canvas context. The content's state is retained in the background, meaning that it remains [accessible](#accessibility), while its visual rendering can be manipulated using your chosen canvas API ([2D Canvas API](/en-US/docs/Web/API/Canvas_API), [WebGL](/en-US/docs/Web/API/WebGL_API), or [WebGPU](/en-US/docs/Web/API/WebGPU_API)) in whatever way you like.
+
+To prepare DOM content to be rendered on a canvas, you first need to place it between your `<canvas>` tags. You then opt your `<canvas>` into rendering its descendants rather than treating them as fallback content by setting its [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute to `drawable`. Finally, each DOM subtree that you want to render on the canvas independently is given a [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) attribute.
+
+```html
+<canvas width="640" height="480" content="drawable">
+  <div id="subtree1" drawable>...</div>
+  <div id="subtree2" drawable>...</div>
+</canvas>
+```
+
+Each canvas context type (except `bitmaprenderer`) comes with a feature to draw `drawable` DOM trees onto the context. For example, the {{domxref("CanvasRenderingContext2D.drawElementImage()")}} method takes an element reference and various other arguments to declare where and how it should be drawn. The simplest version takes `x` and `y` coordinates that define where the top-left corner of the element should be placed:
+
+```js
+const canvas = document.querySelector("canvas");
+const div1 = document.querySelector("#subtree1");
+const ctx = canvas.getContext("2d");
+// ...
+canvas.addEventListener("paint", () => {
+  ctx.drawElementImage(div1, 100, 100);
+});
+```
+
+The element draw call needs to be invoked inside a {{domxref("HTMLCanvasElement.paint_event", "paint")}} event handler to guarantee that the element has been painted, and that the latest paint will be drawn.
+
+In 3D contexts, the elements are uploaded/drawn into textures to be used inside fragment shaders: {{domxref("WebGLRenderingContext.texElementSubImage2D()")}} in the case of WebGL, and {{domxref("GPUQueue.drawElementImageToTexture()")}} in the case of WebGPU.
+
+Other features include:
+
+- The {{domxref("HTMLCanvasElement.getElementImageDefaultSize()")}} method, which returns the element's default rendered size. This is useful if you want to re-render the element at a size relative to its default size, or preallocate texture storage, for example.
+- The {{domxref("HTMLCanvasElement.requestPaint()")}} method, which schedules a single `paint` event even if no repaints occurred, useful for example if you want to move an element around the canvas when its state hasn't changed.
+- The {{domxref("HTMLCanvasElement.updateElementGeometry()")}} method, which updates the size, shape, and position of a rendered element's underlying DOM presence, for example so you can still click a rendered {{htmlelement("button")}} after the canvas rendering has moved.
+
+For more information, read our guides, starting with [Using the HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API/Using).
+
+### Accessibility
+
+`drawable` DOM elements are exposed to the accessibility tree in the same way as regular DOM elements; this includes hiding them using features such as [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden), [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert), etc.
+
+There is one exception: if a `drawable` element's geometry is not updated (either automatically via `drawElementImage()` or explicitly with `updateElementGeometry()`), the `drawable` element and its subtree are reported to the accessibility tree without geometry information. This allows assistive technologies to filter out content without geometry information. It is important that the accessibility implications of unused canvas descendants, such as hidden views or no-longer-drawn content, are considered. In many cases, these should be removed from the DOM or hidden.
+
+> [!NOTE]
+> When elements are rendered to a canvas using `drawElementImage()`, `texElementSubImage2D()`, or `drawElementImageToTexture()`, accessibility indicators such as focus rings or carets are rendered as expected.
+
+Consider the following example, where a {{htmlelement("figure")}}, {{htmlelement("img")}}, and {{htmlelement("caption")}} are included inside a `<canvas content="drawable">`. The `<img>` and `<figcaption>` elements include the `drawable` attribute.
+
+```html
+<canvas id="canvas" content="drawable">
+  <figure id="figure">
+    <img drawable id="image" src="..." alt="image alt text" />
+    <figcaption drawable id="caption">A caption</figcaption>
+  </figure>
+</canvas>
+```
+
+The semantic structure of the `<canvas>` content is preserved, while the `<img>` and `<figcaption>` can be rendered separately:
+
+```js
+const canvas = document.querySelector("canvas");
+const image = document.querySelector("img");
+const caption = document.querySelector("figcaption");
+const ctx = canvas.getContext("2d");
+
+canvas.addEventListener("paint", () => {
+  ctx.reset();
+  // By default, drawElementImage() automatically updates element geometry,
+  // so that the image and caption have geometry information for accessibility.
+  ctx.drawElementImage(image, 0, 0);
+  ctx.drawElementImage(caption, 0, 200);
+});
+```
+
+## Interfaces
+
+- {{domxref("CanvasPaintEvent")}}
+  - : Event object for the {{domxref("HTMLCanvasElement.paint_event", "paint")}} event, which fires when `drawable` elements have been updated and require redrawing to display the changes.
+- {{domxref("ElementGeometryUpdateEvent")}}
+  - : Event object for the {{domxref("HTMLCanvasElement.elementgeometryupdate_event", "elementgeometryupdate")}} event, which fires when `drawable` element geometry has been updated via an {{domxref("OffscreenCanvas")}}.
+- {{domxref("ElementImage")}}
+  - : Represents a snapshot of a `drawable` element's rendered state (captured using {{domxref("HTMLCanvasElement.captureElementImage()")}}), which can be rerendered later on.
+
+## Extensions to other interfaces
+
+### `HTMLCanvasElement`
+
+- {{domxref("HTMLCanvasElement.content")}}
+  - : Indicates whether the `<canvas>` element is opted into rendering its descendants rather than treating them as [fallback content](/en-US/docs/Web/HTML/Reference/Elements/canvas#fallback_content). Reflects the value of the HTML [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute.
+- {{domxref("HTMLCanvasElement.captureElementImage()")}}
+  - : Captures a snapshot of a `drawable` element's current rendered state, which can be rendered later on.
+- {{domxref("HTMLCanvasElement.updateElementGeometry()")}}
+  - : Supplies a {{domxref("DOMMatrix")}} that updates the size, shape, and position of a `drawable` element (or {{domxref("ElementImage")}})'s underlying DOM presence so that it can be kept in sync with the canvas rendering as it updates for hit testing purposes.
+- {{domxref("HTMLCanvasElement.clearElementGeometry()")}}
+  - : Clears any previous `DOMMatrix` applied to a `drawable` element (or {{domxref("ElementImage")}})'s underlying DOM presence, returning it to its original size, shape, and position.
+- {{domxref("HTMLCanvasElement.getElementImageDefaultSize()")}}
+  - : Returns an object containing the default size, in canvas units, of an element (or {{domxref("ElementImage")}}) when drawn with {{domxref("CanvasRenderingContext2D.drawElementImage", "drawElementImage()")}} (specifying no destination size).
+- {{domxref("HTMLCanvasElement.getElementTransform()")}}
+  - : Returns the `DOMMatrix` representing the transform currently applied to a `drawable` element (or {{domxref("ElementImage")}})'s underlying DOM presence.
+- {{domxref("HTMLCanvasElement.requestPaint()")}}
+  - : Schedules a single {{domxref("HTMLCanvasElement.paint_event", "paint")}} event even if no repaints occurred.
+
+#### Events
+
+- {{domxref("HTMLCanvasElement.paint_event", "paint")}}
+  - : Fired when `drawable` elements have been updated and require redrawing to display the changes.
+- {{domxref("HTMLCanvasElement.elementgeometryupdate_event", "elementgeometryupdate")}}
+  - : Fired when `drawable` element geometry has been updated via an {{domxref("OffscreenCanvas")}}.
+
+### `HTMLElement`
+
+- {{DOMxRef("HTMLElement.drawable")}}
+  - : Marks an element as a **paint root**, meaning that it can be rendered independently on a parent {{htmlelement("canvas")}} element with its [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute set to `drawable`, using the [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API). Reflects the value of the HTML [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) attribute.
+
+### `OffscreenCanvas`
+
+- {{domxref("OffscreenCanvas.updateElementGeometry()")}}
+  - : Supplies a {{domxref("DOMMatrix")}} that updates the size, shape, and position of a `drawable` element (or {{domxref("ElementImage")}})'s underlying DOM presence, once it has been transferred to an offscreen canvas.
+- {{domxref("OffscreenCanvas.clearElementGeometry()")}}
+  - : Clears any previous `DOMMatrix` applied to a `drawable` element (or {{domxref("ElementImage")}})'s underlying DOM presence, once it has been transferred to an offscreen canvas.
+- {{domxref("OffscreenCanvas.getElementImageDefaultSize()")}}
+  - : Returns an object containing the default size, in canvas units, of an element (or {{domxref("ElementImage")}}), once it has been drawn to an offscreen canvas.
+
+### 2D canvas context
+
+- {{domxref("CanvasRenderingContext2D.drawElementImage()")}}
+  - : Draws a `drawable` element's state recorded during the current rendering update (or an {{domxref("ElementImage")}}) to a 2D canvas context.
+- {{domxref("OffscreenCanvasRenderingContext2D.drawElementImage()")}}
+  - : Draws a `drawable` element's state recorded during the current rendering update (or an {{domxref("ElementImage")}}) to an offscreen 2D canvas context.
+
+### WebGL context
+
+- {{domxref("WebGLRenderingContext.texElementSubImage2D()")}}
+  - : Uploads a `drawable` element's state recorded during the current rendering update (or an {{domxref("ElementImage")}}) into a texture that can be used in a WebGL canvas context.
+
+### WebGPU context
+
+- {{domxref("GPUQueue.drawElementImageToTexture()")}}
+  - : Draws a `drawable` element's state recorded during the current rendering update (or an {{domxref("ElementImage")}}) into a texture that can be used in a WebGPU canvas context.
+
+## HTML additions
+
+- `<canvas>` [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute
+  - : Enables opting a `<canvas>` element into rendering its descendants rather than treating them as fallback content.
+- Global [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) attribute
+  - : Marks an element as a **paint root**, meaning that it (along with its descendants) can be rendered independently on a parent `<canvas content="drawable">` element.
+
+## Examples
+
+- [MDN HTML-in-canvas examples](https://mdn.github.io/dom-examples/html-in-canvas/)
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Canvas API](/en-US/docs/Web/API/Canvas_API)
+- [WebGL API](/en-US/docs/Web/API/WebGL_API)
+- [WebGPU API](/en-US/docs/Web/API/WebGPU_API)
+- [HTML-in-Canvas](https://developer.chrome.com/docs/web-platform/html-in-canvas) on developer.chrome.com (2026)
