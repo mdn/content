@@ -10,7 +10,7 @@ The default sanitizer configuration defines the configuration returned by the [`
 
 This same configuration is implicitly used if you call the [safe sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods), such as {{domxref("Element.setHTML()")}}, {{domxref("ShadowRoot.setHTML()")}}, and {{domxref("Document.parseHTML_static","Document.parseHTML()")}}, without specifying a custom sanitizer.
 
-The default sanitizer configuration is applied on top of the [XSS-safe baseline configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/#xss-safe-baseline-configuration) which removes unsafe elements (for example {{htmlelement("script")}}), event handlers, and JavaScript URLs.
+The default sanitizer configuration is applied on top of the [XSS-safe baseline configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe-baseline-configuration) which removes unsafe elements (for example {{htmlelement("script")}}), event handlers, and JavaScript URLs.
 
 This configuration removes the following items in addition to the XSS-safe baseline configuration:
 
