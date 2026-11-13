@@ -3,12 +3,10 @@ title: "QuotaExceededError: QuotaExceededError() constructor"
 short-title: QuotaExceededError()
 slug: Web/API/QuotaExceededError/QuotaExceededError
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.QuotaExceededError.QuotaExceededError
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 The **`QuotaExceededError()`** constructor creates a new `QuotaExceededError` object.
 

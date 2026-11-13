@@ -3,13 +3,9 @@ title: "`corner-right-shape` CSS property"
 short-title: corner-right-shape
 slug: Web/CSS/Reference/Properties/corner-right-shape
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.corner-right-shape
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`corner-right-shape`** [CSS](/en-US/docs/Web/CSS) property specifies the shape of both the corners on a box's right-hand edge, within their {{cssxref("border-radius")}} area.
 

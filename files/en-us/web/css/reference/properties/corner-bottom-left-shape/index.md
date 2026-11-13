@@ -3,13 +3,9 @@ title: "`corner-bottom-left-shape` CSS property"
 short-title: corner-bottom-left-shape
 slug: Web/CSS/Reference/Properties/corner-bottom-left-shape
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.corner-bottom-left-shape
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`corner-bottom-left-shape`** [CSS](/en-US/docs/Web/CSS) property specifies the shape of a box's bottom-left corner, within its {{cssxref("border-radius")}} area.
 

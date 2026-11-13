@@ -3,12 +3,10 @@ title: "CSSFunctionDeclarations: style property"
 short-title: style
 slug: Web/API/CSSFunctionDeclarations/style
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSFunctionDeclarations.style
 ---
 
-{{ APIRef("CSSOM") }}{{SeeCompatTable}}
+{{ APIRef("CSSOM") }}
 
 The read-only **`style`** property of the {{domxref("CSSFunctionDeclarations")}} interface contains a {{domxref("CSSFunctionDescriptors")}} object representing the descriptors available in the {{cssxref("@function")}} rule's body.
 

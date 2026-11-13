@@ -3,12 +3,10 @@ title: "WebTransport: exportKeyingMaterial() method"
 short-title: exportKeyingMaterial()
 slug: Web/API/WebTransport/exportKeyingMaterial
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.WebTransport.exportKeyingMaterial
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}{{SeeCompatTable}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`exportKeyingMaterial()`** method of the {{domxref("WebTransport")}} interface returns a {{jsxref("Promise")}} that fulfills with keying material derived from the {{Glossary("TLS")}} session underlying the transport's connection.
 This can be used to bind application-level authentication to the specific connection, for example to detect {{Glossary("MitM", "manipulator-in-the-middle")}} (MitM) attacks when connecting to a peer that uses a self-signed certificate.
