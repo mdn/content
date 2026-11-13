@@ -10,24 +10,38 @@ browser-compat: api.NavigationTransition.to
 
 {{APIRef("Navigation API")}}{{seecompattable}}
 
-The **`to`** read-only property of the {{domxref("NavigationTransition")}} interface returns the {{domxref("NavigationDestination")}} that the transition is navigating to.
-
-This mirrors the {{domxref("NavigateEvent.destination")}} property but, unlike that, is available outside of the {{domxref("Navigation.navigate_event", "navigate")}} event handler. It is especially useful when calling functions prior to the URL changing (e.g., during precommit or on error).
+The **`to`** read-only property of the {{domxref("NavigationTransition")}} interface returns a {{domxref("NavigationDestination")}} object representing the destination of the ongoing navigation.
 
 ## Value
 
 A {{domxref("NavigationDestination")}} object.
 
+## Description
+
+This property lets code outside the {{domxref("Navigation/navigate_event", "navigate")}} event handler find out the destination of a navigation while it's in progress.
+For example, a {{domxref("Navigation/navigateerror_event", "navigateerror")}} event handler can use it to report which navigation failed.
+The error event itself doesn't include the destination, and if the navigation failed before the URL changed, the document URL and {{domxref("Navigation.currentEntry")}} still refer to the previous page.
+
+`to` returns the same object as the {{domxref("NavigateEvent.destination")}} property of the `navigate` event that started the navigation.
+
+{{domxref("Navigation.transition")}} is only set for navigations that a `navigate` event handler intercepted using {{domxref("NavigateEvent.intercept()")}}.
+It is set back to `null` after the {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} or `navigateerror` event fires, so handlers for those events can still read it.
+
 ## Examples
 
-### Handling a navigation error
+### Reporting which navigation failed
+
+This `navigateerror` handler logs the path of a navigation that failed, along with the error message.
+It first checks that `navigation.transition` isn't `null`, which is the case for navigations that weren't intercepted, such as one canceled with {{domxref("Event.preventDefault()", "preventDefault()")}}.
 
 ```js
-navigation.onnavigateerror = (e) => {
-  if (navigation.transition?.to?.url === loginPageURL) {
-    /* do something when failing to go to login page */
+navigation.addEventListener("navigateerror", (event) => {
+  if (!navigation.transition) {
+    return;
   }
-};
+  const { pathname } = new URL(navigation.transition.to.url);
+  console.error(`Navigation to ${pathname} failed: ${event.message}`);
+});
 ```
 
 ## Specifications
