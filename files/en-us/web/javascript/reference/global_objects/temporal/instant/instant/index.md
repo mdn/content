@@ -1,5 +1,6 @@
 ---
 title: Temporal.Instant() constructor
+short-title: Temporal.Instant()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/Instant
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Temporal.Instant.Instant

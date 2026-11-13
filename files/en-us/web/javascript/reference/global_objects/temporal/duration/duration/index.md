@@ -1,5 +1,6 @@
 ---
 title: Temporal.Duration() constructor
+short-title: Temporal.Duration()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/Duration
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Temporal.Duration.Duration
