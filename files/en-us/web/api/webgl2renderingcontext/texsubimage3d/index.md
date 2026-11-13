@@ -47,7 +47,7 @@ texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, fo
 The texture source can be provided in one of three ways: from an {{jsxref("ArrayBuffer")}} (possibly shared) using `srcData` and `srcOffset`; from a DOM pixel `source`; or from `gl.PIXEL_UNPACK_BUFFER` using `offset`.
 
 - `srcData`
-  - : A {{jsxref("TypedArray")}} or {{jsxref("DataView")}} containing the compressed texture data. Its type must match the `type` parameter; see {{domxref("WebGLRenderingContext.texImage2D()")}}.
+  - : A {{jsxref("TypedArray")}} or {{jsxref("DataView")}} containing the image pixel data. Its type must match the `type` parameter; see {{domxref("WebGLRenderingContext.texImage2D()")}}.
 - `srcOffset` {{optional_inline}}
   - : An integer specifying the index of `srcData` to start reading from. Defaults to `0`.
 - `source`
