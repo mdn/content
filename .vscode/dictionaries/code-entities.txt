@@ -738,6 +738,7 @@ sharpyuv
 shrd
 shtm
 Silf
+simulatePreconnectedPeripheral
 sinkchange
 sizemodechange
 skipad
