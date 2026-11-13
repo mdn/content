@@ -7,20 +7,24 @@ browser-compat: api.StylePropertyMapReadOnly
 
 {{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`StylePropertyMapReadOnly`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) provides a read-only representation of a CSS declaration block that is an alternative to {{domxref("CSSStyleDeclaration")}}.
-Retrieve an instance of this interface using {{domxref('Element.computedStyleMap','Element.computedStyleMap()')}}.
+The **`StylePropertyMapReadOnly`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) provides a read-only representation of a CSS declaration block.
+
+This exposes each value as a typed {{domxref("CSSStyleValue")}} object (such as a {{domxref("CSSUnitValue")}} with a numeric `value` and a `unit`), so it can be read without parsing.
+It can be obtained from an element using {{domxref('Element.computedStyleMap','Element.computedStyleMap()')}}.
+
+Note that this is an alternative to {{domxref("CSSStyleDeclaration")}}, which represents every value as a string (e.g., `"10px"`).
 
 ## Instance properties
 
 - {{domxref('StylePropertyMapReadOnly.size')}} {{ReadOnlyInline}}
-  - : Returns an unsigned integer containing the size of the `StylePropertyMapReadOnly` object.
+  - : Returns a non-negative integer containing the number of declarations in the `StylePropertyMapReadOnly` object.
 
 ## Instance methods
 
 - {{domxref('StylePropertyMapReadOnly.entries()')}}
-  - : Returns an array of a given object's own enumerable property `[key, value]` pairs, in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
+  - : Returns a new iterator that yields `[property, values]` pairs for each declaration in the object.
 - {{domxref('StylePropertyMapReadOnly.forEach()')}}
-  - : Executes a provided function once for each element of `StylePropertyMapReadOnly`.
+  - : Executes a provided function once for each declaration in the object.
 - {{domxref('StylePropertyMapReadOnly.get()')}}
   - : Returns the value of the specified property.
 - {{domxref('StylePropertyMapReadOnly.getAll()')}}
@@ -28,9 +32,9 @@ Retrieve an instance of this interface using {{domxref('Element.computedStyleMap
 - {{domxref('StylePropertyMapReadOnly.has()')}}
   - : Indicates whether the specified property is in the `StylePropertyMapReadOnly` object.
 - {{domxref('StylePropertyMapReadOnly.keys()')}}
-  - : Returns a new _array iterator_ containing the keys for each item in `StylePropertyMapReadOnly`.
+  - : Returns a new iterator that yields the CSS property name of each declaration in the object.
 - {{domxref('StylePropertyMapReadOnly.values()')}}
-  - : Returns a new _array iterator_ containing the values for each index in the `StylePropertyMapReadOnly` object.
+  - : Returns a new iterator that yields the values of each declaration in the object.
 
 ## Examples
 
@@ -92,3 +96,10 @@ for (const [prop, val] of stylePropertyMap) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("StylePropertyMap")}}
+- {{domxref("Element.computedStyleMap()")}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
