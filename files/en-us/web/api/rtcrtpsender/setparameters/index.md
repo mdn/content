@@ -7,6 +7,7 @@ browser-compat: api.RTCRtpSender.setParameters
 spec-urls:
   - https://w3c.github.io/webrtc-pc/#dom-rtcrtpsender-setparameters
   - https://w3c.github.io/mst-content-hint/#dom-rtcdegradationpreference
+  - https://w3c.github.io/webrtc-extensions/#dom-rtcsetparameteroptions-encodingoptions
 ---
 
 {{APIRef("WebRTC API")}}
@@ -19,6 +20,7 @@ In other words, `setParameters()` updates the configuration of the {{Glossary("R
 
 ```js-nolint
 setParameters(parameters)
+setParameters(parameters, setParameterOptions)
 ```
 
 ### Parameters
@@ -141,9 +143,26 @@ setParameters(parameters)
         - `maintain-framerate-and-resolution`
           - : The browser will maintain framerate and resolution regardless of video quality, which may cause frames to be dropped before encoding if necessary so as not to overuse network and encoder resources. This setting is useful for applications that implement their own video encoding quality and performance optimization mechanism, and don't want the browser's own internal mechanism to interfere with it.
 
+- `setParameterOptions` {{optional_inline}}
+  - : An object containing options for this call to `setParameters()`.
+    The available options are:
+    - `encodingOptions` {{optional_inline}}
+      - : An array of objects that set options for each encoding in the `parameters` object's [`encodings`](#encodings) array.
+        The object at each index applies to the encoding at the same index.
+        If the array isn't empty, it must have the same number of items as `encodings`.
+        The default value is an empty array, which sets no options.
+        This option is ignored if the sender sends audio.
+
+        Each object in the array may have the following property: <!-- RTCEncodingOptions -->
+        - `keyFrame` {{optional_inline}}
+          - : A boolean value.
+            If `true`, the browser asks the encoder that produces the matching encoding to generate a [key frame](#requesting_key_frames).
+            The default value is `false`.
+
 ### Return value
 
 A {{jsxref("Promise")}} that resolves when the {{domxref("RTCRtpSender.track")}} property is updated with the given parameters.
+The promise doesn't wait for the encoder to generate any key frames requested in `setParameterOptions`.
 
 ### Exceptions
 
@@ -155,6 +174,8 @@ If an error occurs, the returned promise is rejected with the appropriate except
       You cannot change the number of encoding options after the sender has been created.
     - The order of the specified `encodings` has changed from the current list's order.
     - An attempt has been made to alter a property that cannot be changed after the sender is first created.
+    - The `setParameterOptions` object's `encodingOptions` array is not empty and does not have the same number of items as the `parameters` object's `encodings` array.
+      The browser skips this check if the sender sends audio.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Returned if the transceiver, of which the `RTCRtpSender` is a part, is not running or has no parameters to set.
 - `OperationError` {{domxref("DOMException")}}
@@ -166,16 +187,36 @@ In addition, if a WebRTC error occurs while configuring or accessing the media, 
 
 ## Description
 
-It's important to keep in mind that you can't create the `parameters` object yourself and expect it to work.
-Instead, you _must_ first call {{domxref("RTCRtpSender.getParameters", "getParameters()")}}, modify the received parameters object, then pass that object into `setParameters()`.
-WebRTC uses the parameters object's `transactionId` property to ensure that when you set parameters, your changes are based on the most recent parameters rather than an out-of-date configuration.
+### Getting and setting parameters
+
+The `parameters` object that you pass to `setParameters()` must be one returned by the same sender's {{domxref("RTCRtpSender.getParameters", "getParameters()")}} method, with your changes made to it.
+You must also call `setParameters()` straight after `getParameters()`, without waiting for anything in between, such as with `await`.
+This is because the sender discards its record of the parameters it returned shortly after `getParameters()` runs.
+The browser uses this record, including the object's `transactionId`, to check that your changes are based on the sender's current configuration rather than an out-of-date one.
+If you don't follow these rules, the promise rejects with an `InvalidStateError` or an `InvalidModificationError`.
+
+### Requesting key frames
+
+You can use `setParameters()` to ask the encoder that produces a video encoding to generate a key frame.
+This lets you provide a key frame when you change the encodings, so that receivers don't have to request one.
+
+A key frame contains a complete image, while the frames between key frames contain only the changes since the frame before.
+A receiver therefore can't start decoding video until it gets a key frame.
+The browser generates key frames automatically when sending starts and when a receiver asks for one because it has just joined or has lost data.
+However, it doesn't necessarily generate one when you change the encodings.
+
+For example, with [simulcast](/en-US/docs/Web/API/WebRTC_API/Protocols#simulcast), a sender sends several encodings of the same video at different resolutions, and a server forwards one of them to each participant.
+If you set the high-resolution encoding's `active` property to `false`, the server switches the participants who were receiving it to a lower-resolution encoding.
+Those participants can't display the lower-resolution video until that encoding sends its next key frame.
+To avoid that wait, set `keyFrame` to `true` in `setParameterOptions.encodingOptions` for the encodings that need a key frame, in the same `setParameters()` call that changes the encodings.
+The browser then requests the key frames while it applies the change.
 
 ## Examples
 
 One use case for `setParameters()` is to try to reduce network bandwidth used in constrained environments by altering the resolution and/or bit rate of the media being transmitted by the {{domxref("RTCRtpSender")}}.
 
 Currently, some browsers have limitations on their implementations that may cause issues.
-For that reason, two examples are given here.
+For that reason, the first two examples cover this use case.
 The first shows how to use `setParameters()` when all browsers fully support the parameters being used, while the second example demonstrates workarounds to help solve limitations in browsers with incomplete support for the [`maxBitrate`](#maxbitrate) and [`scaleResolutionDownBy`](#scaleresolutiondownby) parameters.
 
 ### By the specification
@@ -238,6 +279,28 @@ The differences here:
 
 This code will cleanly fall back and work the normal way if the browser fully implements the used features.
 
+### Requesting key frames when deactivating an encoding
+
+This example shows how to request key frames when you stop sending one of several encodings.
+It assumes a video call in which the sender uses simulcast to send several encodings at different resolutions, and a server forwards one of them to each participant.
+When the code deactivates an encoding, the server switches the participants who were receiving it to one of the other encodings, and they can't display that video until they get a key frame.
+The code therefore requests a key frame from every encoding that is still active.
+
+The `deactivateEncoding()` function gets the sender's current parameters and sets `active` to `false` for the encoding at `deactivateIndex`.
+It then creates an `encodingOptions` array with one object for each item in `params.encodings`, setting `keyFrame` to `true` for every encoding that is still active.
+Finally, it passes the changed parameters and the options to `setParameters()`, which requests the key frames while it applies the encoding change.
+
+```js
+async function deactivateEncoding(sender, deactivateIndex) {
+  const params = sender.getParameters();
+  params.encodings[deactivateIndex].active = false;
+  const encodingOptions = params.encodings.map((encoding) => ({
+    keyFrame: encoding.active,
+  }));
+  await sender.setParameters(params, { encodingOptions });
+}
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -248,6 +311,8 @@ This code will cleanly fall back and work the normal way if the browser fully im
 
 ## See also
 
+- {{domxref("RTCRtpScriptTransformer.generateKeyFrame()")}}
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms)
 - [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs)
 - [Web media technologies](/en-US/docs/Web/Media)
