@@ -10,7 +10,7 @@ browser-compat: api.Document.xmlEncoding
 
 {{APIRef("DOM")}}
 
-Returns the encoding as determined by the XML declaration. Should be `null` if unspecified or unknown.
+The **`xmlEncoding`** read-only property of the {{domxref("Document")}} interface returns the encoding as determined by the XML declaration. Should be `null` if unspecified or unknown.
 
 > [!WARNING]
 > Do not use this attribute; it has been removed from the DOM Level 4 specification and is no longer supported in Firefox 10.0.

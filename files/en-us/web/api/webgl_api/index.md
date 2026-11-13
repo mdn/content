@@ -124,13 +124,6 @@ Below, you'll find an assortment of guides to help you learn WebGL concepts and 
 - [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial)
   - : A beginner's guide to WebGL core concepts. A good place to start if you don't have previous WebGL experience.
 
-### Examples
-
-- [A basic 2D WebGL animation example](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example)
-  - : This example demonstrates the simple animation of a one-color shape. Topics examined are adapting to {{glossary("aspect ratio")}} differences, a function to build shader programs from sets of multiple shaders, and the basics of drawing in WebGL.
-- [WebGL by example](/en-US/docs/Web/API/WebGL_API/By_example)
-  - : A series of live samples with short explanations that showcase WebGL concepts and capabilities. The examples are sorted according to topic and level of difficulty, covering the WebGL rendering context, shader programming, textures, geometry, user interaction, and more.
-
 ### Advanced tutorials
 
 - [Compressed texture formats](/en-US/docs/Web/API/WebGL_API/Compressed_texture_formats)
@@ -160,6 +153,13 @@ Below, you'll find an assortment of guides to help you learn WebGL concepts and 
 - [RedGL](https://github.com/redcamel/RedGL2) is an open-source 3D WebGL library.
 - [vtk.js](https://kitware.github.io/vtk-js/) is a JavaScript library for scientific visualization in your browser.
 - [webgl-lint](https://greggman.github.io/webgl-lint/) will help find errors in your WebGL code and provide useful info
+
+## Examples
+
+- [A basic 2D WebGL animation example](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example)
+  - : This example demonstrates the simple animation of a one-color shape. Topics examined are adapting to {{glossary("aspect ratio")}} differences, a function to build shader programs from sets of multiple shaders, and the basics of drawing in WebGL.
+- [WebGL by example](/en-US/docs/Web/API/WebGL_API/By_example)
+  - : A series of live samples with short explanations that showcase WebGL concepts and capabilities. The examples are sorted according to topic and level of difficulty, covering the WebGL rendering context, shader programming, textures, geometry, user interaction, and more.
 
 ## Specifications
 

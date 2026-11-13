@@ -33,9 +33,13 @@ _Also inherits methods from its parent interface, {{DOMxRef("CSSMathValue")}}._
 
 ## Description
 
-A `CSSMathProduct` is produced whenever a multiplication or division can't be resolved to a single value — this happens when more than one operand carries a unit, for example, multiplying two lengths (`10px * 20px`) or a length by a percentage, rather than a value and a plain number.
+A `CSSMathProduct` is produced whenever a multiplication or division can't be resolved to a single value.
+This happens when any of the values is itself a calculation rather than a single unit value — for example, multiplying or dividing a sum such as `1px + 2%`.
+It also happens for a multiplication when more than one value has a unit, for example `10px * 20px` or a length times a percentage, and for a division whenever a divisor has a unit, for example `10px / 2px` or `10 / 2px`.
 
-Calling {{domxref('CSSNumericValue.mul','mul()')}} or {{domxref('CSSNumericValue.div','div()')}} on operands that can't be combined returns a `CSSMathProduct`; if every operand is a plain number, or all but one of them are, they resolve immediately to a single {{domxref('CSSUnitValue')}} instead.
+{{domxref('CSSNumericValue.mul','mul()')}} returns a single {{domxref('CSSUnitValue')}} only if every value is a `CSSUnitValue` and all of them, or all but one, are plain numbers.
+{{domxref('CSSNumericValue.div','div()')}} works the same way, except that every divisor must be a plain number.
+Otherwise, both methods return a `CSSMathProduct`.
 
 [`StylePropertyMapReadOnly.get()`](/en-US/docs/Web/API/StylePropertyMapReadOnly/get) returns a `CSSMathProduct` the same way — for a {{cssxref("calc()")}} value that resolves to a multiplication or division it can't combine into one value.
 
