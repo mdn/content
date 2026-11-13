@@ -40,6 +40,8 @@ Values of this type are objects. They contain the following properties:
 
 - `userScriptWorldId` {{optional_inline}}
   - : `string`. The `worldId` of the `USER_SCRIPT` world that sent the message. Only present in {{WebExtAPIRef("runtime.onUserScriptMessage")}} and in [`port.sender`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port#sender) for {{WebExtAPIRef("runtime.onUserScriptConnect")}}.
+- `windowId` {{optional_inline}}
+  - : `integer`. The ID of the window that contains the sender. Unlike {{WebExtAPIRef("tabs.Tab", "Tab", "#windowId")}}, it can also be set for senders not in a tab, such as a popup or sidebar. It is absent when the sender has no window, such as a background page.
 
 {{WebExtExamples}}
 
