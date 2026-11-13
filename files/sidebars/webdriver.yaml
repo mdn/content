@@ -134,9 +134,16 @@ sidebar:
           - type: section
             link: /Web/WebDriver/Reference/BiDi/Modules/network#commands
             title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/continueWithAuth
+            code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/network/setCacheBehavior
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/network/setExtraHeaders
+            code: true
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/network#events
+            title: Events
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/authRequired
             code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/permissions
         code: true
