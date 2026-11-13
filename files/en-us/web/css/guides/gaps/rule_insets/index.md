@@ -6,7 +6,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-When creating [grid](/en-US/docs/Web/CSS/Guides/Grid_layout), [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout) layouts using [CSS gap properties](/en-US/docs/Web/CSS/Guides/Gaps#properties), you can define and control gaps between columns and rows and the line decorations, or rules, within those gaps. The ends of the rules can be inset or outset. Rules that cross gutters can also be broken into segments at each gutter intersection. These segments can also be inset or outset. This guide explains how to break rules into segments and inset the edges of those segments.
+When creating [grid](/en-US/docs/Web/CSS/Guides/Grid_layout), [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout) layouts using [CSS gap properties](/en-US/docs/Web/CSS/Guides/Gaps#properties), you can define and control gaps between columns and rows and the line decorations, or rules, within those gaps. The ends of the rules can be inset or outset. Rules that cross gutters can also be broken into segments at each gutter intersection. These segments can also be inset or outset. This guide explains how to break rules into segments and inset their edges.
 
 ## Overview
 
@@ -375,7 +375,7 @@ Setting `column-rule-inset-end: -50%` offsets the bottom of the junction segment
 
 If row and column rules don't break, they overlap at junction intersections. Broken rules with junction edges set to `overlap-join` also overlap if a perpendicular segment is present to meet the segment edge at the interior junction.
 
-The `overlap-join` keyword value offsets the end of interior segments, so they align with the far edge of the rule that is perpendicular to the rule segment. The value resolves to half the gap size (extending it to the middle of the gap) plus half the rule width.
+The `overlap-join` keyword value offsets the end of interior segments, so they align with the far edge of the rule perpendicular to the rule segment. The value resolves to half the gap size (extending it to the middle of the gap) plus half the rule width.
 
 For example, when `column-rule-inset-start` is set to the `overlap-join` keyword value, the top edges of the junction end segments extend up into the row gap to meet, or "join", the top edge of the row rule painted in that gap.
 
@@ -432,7 +432,7 @@ When setting both the start and end edges of a segment type, you can use the fol
 
 - {{cssxref("column-rule-inset-junction")}} shorthand: Specifies both the `column-rule-inset-junction-start` and `column-rule-inset-junction-end` properties. If you specify only one value, both properties are set to that value. If you specify two values, the first sets `column-rule-inset-junction-start` and the second sets `column-rule-inset-junction-end`.
 
-- {{cssxref("row-rule-inset-cap")}} shorthand: Specifies both the `row-rule-inset-cap-start` and `row-rule-inset-cap-end` values. If you specify only one value, both properties are set to that value. If you specify two values, `row-rule-inset-cap-start` is set to the first value and `row-rule-inset-cap-end` is set to the second value.
+- {{cssxref("row-rule-inset-cap")}} shorthand: Specifies both the `row-rule-inset-cap-start` and `row-rule-inset-cap-end` values. If you specify only one value, both properties are set to that value. If you specify two values, `row-rule-inset-cap-start` is set to the first value and `row-rule-inset-cap-end` to the second.
 
 - {{cssxref("row-rule-inset-junction")}} shorthand: Specifies both the `row-rule-inset-junction-start` and `row-rule-inset-junction-end` values. If you specify only one value, both properties are set to that value. If you specify two values, the first specifies `row-rule-inset-junction-start` and the second specifies `row-rule-inset-junction-end`.
 
