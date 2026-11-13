@@ -140,7 +140,7 @@ _Doesn't inherit any properties._
 
 ## Instance methods
 
-_Doesn't inherit any method._
+_Doesn't inherit any methods._
 
 - {{domxref("Navigator.canShare()")}} {{SecureContext_Inline}}
   - : Returns `true` if a call to `Navigator.share()` would succeed.
@@ -156,6 +156,8 @@ _Doesn't inherit any method._
   - : Returns an array of {{domxref("Gamepad")}} objects, one for each gamepad connected to the device.
 - {{domxref("Navigator.getInstalledRelatedApps()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a promise that resolves with an array of objects representing any related native or [Progressive Web Applications](/en-US/docs/Web/Progressive_web_apps) that the user has installed.
+- {{domxref("Navigator.install()")}}
+  - : Instructs the browser to install a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps).
 - {{domxref("Navigator.registerProtocolHandler()")}} {{SecureContext_Inline}}
   - : Allows websites to register themselves as a possible handler for a given protocol.
 - {{domxref("Navigator.requestMediaKeySystemAccess()")}} {{SecureContext_Inline}}

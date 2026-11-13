@@ -1,0 +1,105 @@
+---
+title: HTMLInstallElement
+slug: Web/API/HTMLInstallElement
+page-type: web-api-interface
+status:
+  - experimental
+browser-compat: api.HTMLInstallElement
+---
+
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+
+The **`HTMLInstallElement`** interface of the [HTML DOM API](/en-US/docs/Web/API/HTML_DOM_API) represents the {{htmlelement("install")}} element, and provides access to its properties and events. The `<install>` element creates a button that, when pressed, instructs the browser to install a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps).
+
+{{InheritanceDiagram}}
+
+## Instance properties
+
+_Also inherits properties from its parent interface, {{domxref("HTMLElement")}}._
+
+- {{domxref("HTMLInstallElement.invalidReason", "invalidReason")}} {{readonlyinline}} {{experimental_inline}}
+  - : An enumerated value representing the reason why the `<install>` element is invalid ([blocked](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking)), if it is blocked at all.
+- {{domxref("HTMLInstallElement.isValid", "isValid")}} {{readonlyinline}} {{experimental_inline}}
+  - : A boolean value indicating whether the `<install>` element is valid or invalid (blocked).
+- {{domxref("HTMLInstallElement.manifest", "manifest")}} {{experimental_inline}}
+  - : A string representing the URL of the [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) defining the app to be installed. Reflects the value of the associated `<install>` element's [`manifest`](/en-US/docs/Web/HTML/Reference/Elements/install#manifest) attribute.
+- {{domxref("HTMLInstallElement.manifestId", "manifestId")}} {{experimental_inline}}
+  - : A string representing the ID of the PWA to be installed. Reflects the value of the associated `<install>` element's [`manifestId`](/en-US/docs/Web/HTML/Reference/Elements/install#manifestid) attribute.
+
+## Instance methods
+
+_Inherits properties from its parent interface, {{domxref("HTMLElement")}}._
+
+## Events
+
+_Also inherits events from its parent interface, {{domxref("HTMLElement")}}._
+
+- {{domxref("HTMLInstallElement.installresult_event", "installresult")}} {{experimental_inline}}
+  - : Fired when a PWA installation attempt initiated using an {{htmlelement("install")}} element completes; it can be used to report whether the installation attempt was successful.
+- {{domxref("HTMLInstallElement.validationstatuschange_event", "validationstatuschange")}} {{experimental_inline}}
+  - : Fired whenever the {{htmlelement("install")}} element's [validation status](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking) changes. This change is reflected in a change to the {{domxref("HTMLInstallElement.invalidReason", "invalidReason")}} property and, if the element has become valid or invalid, also in a change to the {{domxref("HTMLInstallElement.isValid", "isValid")}} property.
+
+## Description
+
+The `HTMLInstallElement` interface represents the {{htmlelement("install")}} element, which creates a button to install a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps) on the user's device. The button is more consistent and flexible, and is easier to discover than the browser's built-in install functionality.
+
+You can check whether an installation was successful by listening for the {{domxref("HTMLInstallElement.installresult_event", "installresult")}} event and querying the event object's {{domxref("InstallResultEvent.result", "result")}} property.
+
+When an {{htmlelement("install")}} element is [blocked](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking), it is prevented from functioning (invalid), either temporarily or permanently, depending on the reason. You can check whether it is invalid by querying the {{domxref("HTMLInstallElement.isValid")}} property. You can also return the reason why it is invalid via the {{domxref("HTMLInstallElement.invalidReason")}} property — see that page for a full list of possible reasons. You can detect when the element changes from valid to invalid or vice versa using the {{domxref("HTMLInstallElement.validationstatuschange_event", "validationstatuschange")}} event.
+
+## Examples
+
+See also our [PWA install demos](https://mdn.github.io/pwa-examples/install-demos/).
+
+### Basic usage
+
+If a PWA landing page has an `<install>` element included on it:
+
+```html
+<install></install>
+```
+
+We can grab a reference to it and access its properties:
+
+```js
+const installElem = document.querySelector("install");
+console.log(installElem.manifestId);
+console.log(installElem.manifest);
+console.log(installElem.isValid);
+console.log(installElem.invalidReason);
+```
+
+If we want to track whether the installation was successful when the install button is pressed, we can add an {{domxref("HTMLInstallElement.installresult_event", "installresult")}} event listener, and query the event object's {{domxref("InstallResultEvent.result", "result")}} property:
+
+```js
+installElem.addEventListener("installresult", (e) => {
+  console.log(`Install result: ${e.result}`);
+});
+```
+
+We can also query changes in the `<install>` element's validation status (see [`<install>` blocking](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking)) using a {{domxref("HTMLInstallElement.validationstatuschange_event", "validationstatuschange")}} event listener:
+
+```js
+installElem.addEventListener("validationstatuschange", (e) => {
+  console.log(e);
+  console.log(installElem.isValid);
+  if (!installElem.isValid) {
+    console.log(installElem.invalidReason);
+  }
+});
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{htmlelement("install")}} element
+- [Trigger installation from your PWA](/en-US/docs/Web/Progressive_web_apps/How_to/Trigger_install_prompt)
+- [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
+- [Installing and uninstalling web apps](/en-US/docs/Web/Progressive_web_apps/Guides/Installing)
