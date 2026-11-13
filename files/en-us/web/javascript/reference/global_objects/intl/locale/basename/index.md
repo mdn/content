@@ -21,7 +21,7 @@ The set accessor of `baseName` is `undefined`. You cannot change this property d
 
 ```js
 const myLoc = new Intl.Locale("fr-Latn-CA"); // Sets locale to Canadian French
-console.log(myLoc.toString()); // "fr-Latn-CA-u-ca-gregory"
+console.log(myLoc.toString()); // "fr-Latn-CA"
 console.log(myLoc.baseName); // "fr-Latn-CA"
 ```
 
@@ -30,7 +30,7 @@ console.log(myLoc.baseName); // "fr-Latn-CA"
 ```js
 // Sets language to Japanese, region to Japan,
 // calendar to Gregorian, hour cycle to 24 hours
-const japan = new Intl.Locale("ja-JP-u-ca-gregory-hc-24");
+const japan = new Intl.Locale("ja-JP-u-ca-gregory-hc-h24");
 console.log(japan.toString()); // "ja-JP-u-ca-gregory-hc-h24"
 console.log(japan.baseName); // "ja-JP"
 ```
