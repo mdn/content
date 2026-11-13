@@ -35,6 +35,10 @@ For documents loaded from `file:` URLs (that is, files opened in the browser dir
 
 In all current browsers, `localStorage` seems to return a different object for each `file:` URL. In other words, each `file:` URL seems to have its own unique local-storage area. But there are no guarantees about that behavior, so you shouldn't rely on it because, as mentioned above, the requirements for `file:` URLs remain undefined. So it's possible that browsers may change their `file:` URL handling for `localStorage` at any time. In fact some browsers _have_ changed their handling for it over time.
 
+### Storage partitioning
+
+Modern browsers implement [State Partitioning](/en-US/docs/Web/Privacy/Guides/State_Partitioning) (also known as storage partitioning or double-keying) to mitigate cross-site tracking. When `localStorage` is accessed from within an embedded third-party {{glossary("browsing context")}} (such as an {{htmlelement("iframe")}}), the storage area is keyed by both the origin of the document and the top-level site. Consequently, data stored in `localStorage` by an embedded iframe on one website is isolated from the `localStorage` accessed by the same origin when embedded on another website, or when loaded directly in a top-level browsing context.
+
 ## Examples
 
 The following snippet accesses the current domain's local {{DOMxRef("Storage")}} object and adds a data item to it using {{DOMxRef("Storage.setItem()")}}, or updates the item if one already exists for that key.
@@ -76,3 +80,4 @@ localStorage.clear();
 
 - [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
 - {{DOMxRef("Window.sessionStorage")}}
+- [State Partitioning](/en-US/docs/Web/Privacy/Guides/State_Partitioning)

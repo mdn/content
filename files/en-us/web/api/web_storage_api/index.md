@@ -15,8 +15,10 @@ The **Web Storage API** provides mechanisms by which browsers can store key/valu
 
 The two mechanisms within Web Storage are as follows:
 
-- `sessionStorage` is partitioned by browser tabs and by {{glossary("origin")}}. The main document, and all embedded {{glossary("browsing context", "browsing contexts")}} (iframes), are grouped by their origin and each origin has access to its own separate storage area. Closing the browser tab destroys all `sessionStorage` data associated with that tab.
-- `localStorage` is partitioned by {{glossary("origin")}} only. All documents with the same origin have access to the same `localStorage` area, and it persists even when the browser is closed and reopened.
+- `sessionStorage` maintains a separate storage area for each given {{glossary("origin")}} that is available for the duration of the page session (as long as the browser tab remains open). Embedded {{glossary("browsing context", "browsing contexts")}} (such as iframes) are grouped by their origin. Closing the browser tab destroys all `sessionStorage` data associated with that tab.
+- `localStorage` persists data even when the browser is closed and reopened. For top-level browsing contexts, all documents from the same origin share the same `localStorage` area.
+
+In modern browsers, client-side storage is also subject to [State Partitioning](/en-US/docs/Web/Privacy/Guides/State_Partitioning) to mitigate cross-site tracking. When accessed from within an embedded third-party iframe, both `sessionStorage` and `localStorage` are double-keyed by the origin of the embedded resource and the top-level site.
 
 These mechanisms are available via the {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} properties. Accessing one of these will return an instance of a {{domxref("Storage")}} object, through which data items can be set, retrieved and removed. A different storage object is used for the `sessionStorage` and `localStorage` for each origin — they function and are controlled separately.
 
@@ -40,7 +42,7 @@ Each origin has its own storage — this is true for both web storage and [share
 Third-party code can be added to another site by injecting it with a {{htmlelement("script")}} element or by setting the source of an {{htmlelement("iframe")}} to a site that contains third-party code. The method used for integrating third-party code determines the browsing context of the code.
 
 - If your third-party code is added to another site with a `<script>` element, your code will be executed in the browsing context of the embedder. Therefore, when you call {{domxref("Storage.setItem()")}} or {{domxref("SharedStorage.set()")}}, the key/value pair will be written to the embedder's storage. From the browser's perspective, there is no difference between first-party code and third-party code when a `<script>` tag is used.
-- When your third-party code is added to another site within an `<iframe>`, the code inside the `<iframe>` will be executed with the origin of the `<iframe>`'s browsing context. If the code inside the `<iframe>` calls {{domxref("Storage.setItem()")}}, data will be written into the local or session storage of the `<iframe>`'s origin. If the `<iframe>` code calls {{domxref("SharedStorage.set()")}}, the data will be written into the shared storage of the `<iframe>`'s origin.
+- When your third-party code is added to another site within an `<iframe>`, the code inside the `<iframe>` will be executed with the origin of the `<iframe>`'s browsing context. If the code inside the `<iframe>` calls {{domxref("Storage.setItem()")}}, data will be written into the local or session storage of the `<iframe>`'s origin. Under [State Partitioning](/en-US/docs/Web/Privacy/Guides/State_Partitioning), modern browsers partition this storage by the top-level site, meaning data stored by an iframe on one site is isolated from the same origin loaded on another site or directly in a first-party tab. If the `<iframe>` code calls {{domxref("SharedStorage.set()")}}, the data will be written into the shared storage of the `<iframe>`'s origin.
 
 ## Web Storage interfaces
 
@@ -73,3 +75,4 @@ Private windows, incognito mode, and similarly named privacy browsing options, d
 
 - [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
 - [Browser storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)
+- [State Partitioning](/en-US/docs/Web/Privacy/Guides/State_Partitioning)
