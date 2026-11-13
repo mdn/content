@@ -8,17 +8,19 @@ browser-compat: api.SpeechRecognition.continuous
 
 {{APIRef("Web Speech API")}}
 
-The **`continuous`** property of the
-{{domxref("SpeechRecognition")}} interface controls whether continuous results are
-returned for each recognition, or only a single result.
+The **`continuous`** property of the {{domxref("SpeechRecognition")}} interface represents whether recognition returns a single final result, or multiple final results from consecutive recognitions.
 
-It defaults to single results (`false`.)
+The default value is `false`.
 
 ## Value
 
-A boolean value representing the current `SpeechRecognition`'s
-continuous status. `true` means continuous, and `false` means not
-continuous (single result each time.)
+A boolean value.
+
+- `true` means recognition can return any number of final results, one for each consecutive recognition, as in dictation.
+- `false` (the default) means recognition returns at most one final result.
+
+This setting doesn't affect interim results.
+See {{domxref("SpeechRecognition.interimResults")}}.
 
 ## Examples
 

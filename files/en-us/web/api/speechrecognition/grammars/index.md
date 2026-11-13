@@ -8,10 +8,7 @@ browser-compat: api.SpeechRecognition.grammars
 
 {{APIRef("Web Speech API")}}
 
-The **`grammars`** property of the
-{{domxref("SpeechRecognition")}} interface returns and sets a collection of
-{{domxref("SpeechGrammar")}} objects that represent the grammars that will be understood
-by the current `SpeechRecognition`.
+The **`grammars`** property of the {{domxref("SpeechRecognition")}} interface represents a collection of {{domxref("SpeechGrammar")}} objects.
 
 > [!NOTE]
 > The concept of grammar has been removed from the Web Speech API. Related features remain in the specification and are still recognized by supporting browsers for backwards compatibility, but they have no effect on speech recognition services.

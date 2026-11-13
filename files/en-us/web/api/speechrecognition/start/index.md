@@ -8,7 +8,8 @@ browser-compat: api.SpeechRecognition.start
 
 {{APIRef("Web Speech API")}}
 
-The **`start()`** method of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) starts the speech recognition service to listen for incoming audio (from a microphone or an audio track) and returns the results of that recognition.
+The **`start()`** method of the {{domxref("SpeechRecognition")}} interface starts the speech recognition service listening for incoming audio (from a microphone or an audio track).
+Results are delivered through the {{domxref("SpeechRecognition.result_event", "result")}} event.
 
 ## Syntax
 
@@ -29,9 +30,11 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if an `audioTrack` is specified and one or both of the following are true:
-    - The track's {{domxref("MediaStreamTrack.kind", "kind")}} property is not `audio`.
-    - The track's {{domxref("MediaStreamTrack.readyState", "readyState")}} property is not `live`.
+  - : Thrown in any of the following cases:
+    - The current document is not fully active.
+    - Recognition has already started, and no {{domxref("SpeechRecognition.end_event", "end")}} or {{domxref("SpeechRecognition.error_event", "error")}} event has fired since.
+    - An `audioTrack` is specified and its {{domxref("MediaStreamTrack.kind", "kind")}} property is not `audio`.
+    - An `audioTrack` is specified and its {{domxref("MediaStreamTrack.readyState", "readyState")}} property is not `live`.
 
 ## Examples
 

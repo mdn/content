@@ -14,11 +14,12 @@ Speech recognition involves receiving audio from a device's microphone (or from 
 
 The Web Speech API has a main controller interface for this — {{domxref("SpeechRecognition")}} — and several related interfaces for representing results.
 
-Generally, the speech recognition system available on the user's device is used for the speech recognition. Most modern operating systems have a speech recognition system for issuing voice commands, such as **Dictation** on macOS or **Copilot** on Windows.
+The browser decides where speech recognition is performed.
+Depending on the browser, your audio might be sent to a server-based recognition service, in which case recognition won't work offline, or it might be processed on the user's device.
 
-By default, using speech recognition on a web page involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.
-
-To improve privacy and performance, you can specify that speech recognition be performed on the device. This ensures that neither the audio nor the transcribed speech are sent to a third-party service for processing. We cover the on-device functionality in more detail in the [On-device speech recognition](#on-device_speech_recognition) section.
+To improve privacy and performance, you can require that speech recognition be performed on the device.
+This ensures that neither the audio nor the transcribed speech is sent to a third-party service for processing.
+We cover the on-device functionality in more detail in the [On-device speech recognition](#on-device_speech_recognition) section.
 
 ### Demo
 
@@ -103,7 +104,9 @@ recognition.maxAlternatives = 1;
 
 #### Starting the speech recognition
 
-After grabbing references to the output paragraph, the `<html>` element, the instruction paragraph, and the `<button>`, we implement an `onclick` handler. When a user presses the button, the speech recognition service starts by calling {{domxref("SpeechRecognition.start()")}}. We've also used a `forEach()` method to output colored indicators showing what colors users can try to say.
+After grabbing references to the output paragraph, the `<html>` element, the instruction paragraph, and the `<button>`, we use the {{jsxref("Array.prototype.map()", "map()")}} and {{jsxref("Array.prototype.join()", "join()")}} methods to output colored indicators showing what colors users can try to say.
+We then implement an `onclick` handler.
+When a user presses the button, the handler calls {{domxref("SpeechRecognition.start()")}} to start the speech recognition service.
 
 ```js
 const diagnostic = document.querySelector(".output");
@@ -135,11 +138,14 @@ recognition.onresult = (event) => {
 };
 ```
 
-The second line is a bit complex, so we'll explain each part here:
+The second line is a bit complex, so the following list explains each part:
 
-- The {{domxref("SpeechRecognitionEvent.results")}} property returns a {{domxref("SpeechRecognitionResultList")}} object containing {{domxref("SpeechRecognitionResult")}} objects. It has a getter so it can be accessed like an array — the first `[0]` returns the `SpeechRecognitionResult` at position `0`.
-- Each `SpeechRecognitionResult` object in turn contains {{domxref("SpeechRecognitionAlternative")}} objects, each representing an individual recognized word. These also have getters, so they can be accessed like arrays — the second `[0]` returns the `SpeechRecognitionAlternative` at position `0`.
-- The `transcript` property of the `SpeechRecognitionAlternative` returns a string containing the recognized text. This value is then used to set the background color to a recognized color and also report it as a diagnostic message in the UI.
+- The {{domxref("SpeechRecognitionEvent.results")}} property returns a {{domxref("SpeechRecognitionResultList")}} object containing {{domxref("SpeechRecognitionResult")}} objects.
+  You can access its items like an array, so the first `[0]` returns the `SpeechRecognitionResult` at position `0`.
+- Each `SpeechRecognitionResult` object contains one or more {{domxref("SpeechRecognitionAlternative")}} objects, each representing one possible match for what the user said, ordered from most to least confident.
+  You can access these like an array too, so the second `[0]` returns the most likely match.
+- The `transcript` property of the `SpeechRecognitionAlternative` returns a string containing the recognized text.
+  This value is then used to set the background color to a recognized color and also report it as a diagnostic message in the UI.
 
 We also use the {{domxref("SpeechRecognition.speechend_event", "speechend")}} event to stop the speech recognition service (using {{domxref("SpeechRecognition.stop()")}}) after a single word has been recognized:
 
@@ -169,7 +175,9 @@ recognition.onerror = (event) => {
 
 ## On-device speech recognition
 
-Speech recognition is usually performed using an online service. This means that an audio recording is sent to a server for processing, and the results are then returned to the browser. This has a couple of problems:
+Some browsers perform speech recognition using an online service.
+This means that an audio recording is sent to a server for processing, and the results are then returned to the browser.
+This has a couple of problems:
 
 - Privacy: Many users are not comfortable with their speech being sent to a server.
 - Performance: Sending data to a server for every bit of recognition can slow down performance in more intensive applications, and your apps won't work offline.
@@ -197,12 +205,13 @@ recognition.processLocally = true;
 
 ### Checking availability and installing language packs
 
-For on-device speech recognition to work, the browser must have a language pack installed for the language you want to recognize. If you run the `start()` method after specifying `processLocally = true` but the correct language pack isn't installed, the function call will fail with a [`language-not-supported`](/en-US/docs/Web/API/SpeechRecognitionErrorEvent/error#language-not-supported) error.
+For on-device speech recognition to work, the browser must have a language pack installed for the language you want to recognize.
+If you call `start()` after setting `processLocally` to `true` but the correct language pack isn't installed, recognition fails and an {{domxref("SpeechRecognition.error_event", "error")}} event fires with a [`service-not-allowed`](/en-US/docs/Web/API/SpeechRecognitionErrorEvent/error#service-not-allowed) error code.
 
-To get the correct language pack installed, ensure you follow these two steps:
+To install the correct language pack, follow these two steps:
 
-1. Check whether the language pack is available on the user's device: This is handled using the {{domxref("SpeechRecognition.available_static", "SpeechRecognition.available()")}} static method.
-2. Install the language pack if it isn't available: This is handled using the {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} static method.
+1. Use the {{domxref("SpeechRecognition.available_static", "SpeechRecognition.available()")}} method to check whether the language pack is installed on the user's device.
+2. If it isn't installed, use the {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} method to install it.
 
 These steps are handled in the following `click` event handler on the app's control `<button>`:
 
@@ -234,7 +243,7 @@ startBtn.addEventListener("click", () => {
 });
 ```
 
-The `available()` method takes an options object containing two properties:
+In this demo, we pass `available()` an options object containing two properties:
 
 - A `langs` array containing the languages to check availability for.
 - A `processLocally` boolean specifying whether to check for the availability of the language only on-device (`true`) _or_ either locally or via a server-based recognition service (`false`, the default).
@@ -245,13 +254,15 @@ When run, this method returns a {{jsxref("Promise")}} that resolves with an enum
 - If the resulting value is `available`, it means that the language pack is available locally, so recognition can begin. In this case, we run `start()` and log a message to the console when the app is ready to receive speech.
 - If the value is something else (`downloadable` or `downloading`), we print a diagnostic message to inform the user that a language pack download is starting, then run the `install()` method to handle the download.
 
-The `install()` method works in a similar way to the `available()` method, except that its options object only takes the `langs` array. When run, it starts downloading all the language packs for the languages indicated in `langs` and returns a {{jsxref("Promise")}} that resolves with a boolean indicating whether the specified language packs were downloaded and installed successfully (`true`) or not (`false`).
+We then call the `install()` method with the same options.
+It starts downloading the language packs for the languages listed in `langs`, and returns a {{jsxref("Promise")}} that resolves with `true` if the language packs were downloaded and installed successfully, or `false` if not.
 
 For this demo, we print a diagnostic message to indicate the success and failure cases. In a more complete app, you'd probably disable the controls during the download process and enable them again after the promise resolves.
 
 ### Permissions-policy integration
 
-The use of the `available()` and `install()` methods is controlled by the {{httpheader("Permissions-Policy/on-device-speech-recognition", "on-device-speech-recognition")}} {{httpheader("Permissions-Policy")}}. Specifically, where a defined policy blocks usage, any attempts to call these methods will fail.
+Access to the `available()` and `install()` methods is controlled by the {{httpheader("Permissions-Policy/on-device-speech-recognition", "on-device-speech-recognition")}} {{httpheader("Permissions-Policy")}} directive.
+If a policy blocks access, the promise returned by `available()` resolves to `unavailable`, and the promise returned by `install()` rejects with a `NotAllowedError` {{domxref("DOMException")}}.
 
 The default allowlist value for `on-device-speech-recognition` is `self`. This means you don't need to worry about adjusting the policy unless you're attempting to use these methods in embedded cross-origin documents or want to explicitly disable their use.
 
@@ -259,9 +270,12 @@ The default allowlist value for `on-device-speech-recognition` is `self`. This m
 
 The `available()` and `install()` methods both support the [`quality`](/en-US/docs/Web/API/SpeechRecognition/available_static#quality) option. This allows you to check support for varying speech recognition complexity levels — for example, processing short voice commands is much simpler than handling dictation/transcription, and the former use case is likely to be supported by more hardware and language pack combinations than the latter.
 
-For example, the following code snippet is a modification of code from the [On-device speech color changer](#demo_2) example in which we call the `available()` method with the `quality` option set to `dictation`, to check whether on-device recognition will support this quality level. If the result returned is `unavailable`, we set the `SpeechRecognition` object's {{domxref("SpeechRecognition.processLocally", "processLocally")}} property to `false` to force the API to use a cloud recognition service, then `start()` the recognition service.
+For example, the following code snippet modifies code from the [On-device speech color changer](#demo_2) example.
+It calls `available()` with the `quality` option set to `dictation`, to check whether on-device recognition supports this quality level.
+If the result is `unavailable`, we set the `SpeechRecognition` object's {{domxref("SpeechRecognition.processLocally", "processLocally")}} property to `false`, which allows the browser to use a remote recognition service if it has one, and then call `start()`.
 
-If the result is `available`, we are good to go, so we just call `start()` to start on-device recognition. If the result is any other value, we run the `install()` method with the `quality` option set to `dictation` to install the required language packs.
+If the result is `available`, we call `start()` to begin on-device recognition.
+If the result is any other value, we call `install()` with the `quality` option set to `dictation` to install the required language packs.
 
 ```js
 startBtn.addEventListener("click", () => {
@@ -272,7 +286,7 @@ startBtn.addEventListener("click", () => {
     quality: "dictation",
   }).then((result) => {
     if (result === "unavailable") {
-      diagnostic.textContent = `On-device recognition for dictation not available, running with cloud recognition`;
+      diagnostic.textContent = `On-device recognition for dictation not available. Falling back to any available recognition service.`;
       recognition.processLocally = false;
       recognition.start();
     } else if (result === "available") {
@@ -300,7 +314,7 @@ startBtn.addEventListener("click", () => {
 
 There will be times when a speech recognition service will fail to correctly recognize a specific word or phrase. This most often happens with domain-specific terms (such as medical or scientific vocabulary), proper nouns, uncommon phrases, or words that sound similar to other words and so may be misidentified.
 
-For example, during testing, we found that our [On-device speech color changer](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) had trouble recognizing the color `azure` — it kept returning results like "as you". Other colors that were frequently misidentified included `khaki` ("car key"), `tan`, and `thistle` ("this all").
+For example, during testing, we found that our [On-device speech color changer](https://mdn.github.io/dom-examples/web-speech-api/on-device-speech-color-changer/) had trouble recognizing the color `azure` — it kept returning results like "as you". Other colors that were frequently misidentified included `khaki` ("car key"), `tan`, and `thistle` ("this all").
 
 To mitigate such problems, the Web Speech API lets you provide hints to the recognition engine to highlight phrases that are more likely to be spoken and which the engine should be biased towards. This makes those words and phrases more likely to be recognized correctly.
 
@@ -405,12 +419,16 @@ const pitchValue = document.querySelector(".pitch-value");
 const rate = document.querySelector("#rate");
 const rateValue = document.querySelector(".rate-value");
 
-const voices = [];
+let voices = [];
 ```
 
 #### Populating the select element
 
-To populate the {{htmlelement("select")}} element with the different voice options the device has available, we've written a `populateVoiceList()` function. We first invoke {{domxref("SpeechSynthesis.getVoices()")}}, which returns a list of all the available voices, represented by {{domxref("SpeechSynthesisVoice")}} objects. We then loop through this list — for each voice we create an {{htmlelement("option")}} element, set its text content to display the name of the voice (grabbed from {{domxref("SpeechSynthesisVoice.name")}}), the language of the voice (grabbed from {{domxref("SpeechSynthesisVoice.lang")}}), and `-- DEFAULT` if the voice is the default voice for the synthesis engine (checked by seeing if {{domxref("SpeechSynthesisVoice.default")}} returns `true`.)
+To populate the {{htmlelement("select")}} element with the different voice options the device has available, we've written a `populateVoiceList()` function.
+We first invoke {{domxref("SpeechSynthesis.getVoices()")}}, which returns an array of all the available voices, represented by {{domxref("SpeechSynthesisVoice")}} objects.
+We then loop through this array, and for each voice we create an {{htmlelement("option")}} element.
+We set its text content to the name of the voice (from {{domxref("SpeechSynthesisVoice.name")}}) followed by its language (from {{domxref("SpeechSynthesisVoice.lang")}}).
+If the voice is the default voice for the synthesis engine (that is, {{domxref("SpeechSynthesisVoice.default")}} returns `true`), we also append `— DEFAULT` to it.
 
 We also create `data-` attributes for each option, containing the name and language of the associated voice, so we can grab them easily later on, and then append the options as children of the select.
 
