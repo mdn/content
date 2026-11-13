@@ -457,6 +457,8 @@ When the column rule is larger than the column gap, the decorative line appears 
   - : Guide to understanding and defining gaps in grid, flexbox, and multi-column layouts, including how percentage values are resolved.
 - [Defining CSS gap rules](/en-US/docs/Web/CSS/Guides/Gaps/Defining_rules)
   - : Guide to understanding and defining CSS gap rules, including using the `repeat()` function, to define rule colors, widths, and styles.
+- [Defining rule insets](/en-US/docs/Web/CSS/Guides/Gaps/Rule_insets)
+  - : Guide to controlling the insets of column and row rules and rule segments, including breaking rules into segments.
 - [Styling columns](/en-US/docs/Web/CSS/Guides/Multicol_layout/Styling_columns)
   - : Guide to styling columns and managing spacing between columns.
 - [Handling content breaks in multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout/Handling_content_breaks)
