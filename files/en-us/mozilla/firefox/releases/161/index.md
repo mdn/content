@@ -56,6 +56,11 @@ Firefox 161 is the current [Beta version of Firefox](https://www.firefox.com/en-
   These properties represent the maximum number of incoming unidirectional and bidirectional streams, respectively, that the application expects the server to have open at the same time.
   ([Firefox bug 2007825](https://bugzil.la/2007825)).
 
+- The {{domxref("NavigationTransition.to")}} property of the [Navigation API](/en-US/docs/Web/API/Navigation_API) is now supported.
+  This returns a {{domxref("NavigationDestination")}} for the ongoing navigation, so code outside the {{domxref("Navigation/navigate_event", "navigate")}} event handler can find out where the navigation is going.
+  For example, a {{domxref("Navigation/navigateerror_event", "navigateerror")}} handler can use it to report which navigation failed.
+  ([Firefox bug 1991959](https://bugzil.la/1991959)).
+
 <!-- #### DOM -->
 
 <!-- #### Media, WebRTC, and Web Audio -->
