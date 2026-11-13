@@ -208,7 +208,7 @@ We also add code to reload and clear the example when the "Reload" button is pre
 const reload = document.querySelector("#reload");
 
 reload.addEventListener("click", () => {
-  window.location.reload(true);
+  window.location.reload();
 });
 ```
 
@@ -301,7 +301,7 @@ We also add code to reload and clear the example when the "Reload" button is pre
 const reload = document.querySelector("#reload");
 
 reload.addEventListener("click", () => {
-  window.location.reload(true);
+  window.location.reload();
 });
 ```
 
@@ -627,7 +627,7 @@ function buildTable(headers, rows) {
 const reload = document.querySelector("#reload_custom");
 
 reload.addEventListener("click", () => {
-  window.location.reload(true);
+  window.location.reload();
 });
 ```
 
