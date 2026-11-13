@@ -33,11 +33,11 @@ p {
   border: 2px dashed #999999;
   font-size: 1.5rem;
   text-align: left;
-  width: 14rem;
+  width: 20ch;
 }
 
 #example-element {
-  background-color: #ffe4a1;
+  background-color: rgba(255, 193, 7, 0.3);
 }
 ```
 
