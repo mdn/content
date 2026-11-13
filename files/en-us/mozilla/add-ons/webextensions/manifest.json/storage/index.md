@@ -35,7 +35,7 @@ sidebar: addonsidebar
 
 Use the `storage` key to specify the name of the schema file that defines the structure of data in managed storage.
 
-Managed data declares the enterprise policies supported by the app. Policies are analogous to options but are configured by a system administrator instead of the user, enabling the app to be configured for all users of an organization.
+Managed data declares the [enterprise policies](/en-US/docs/Mozilla/Add-ons/WebExtensions/Enterprise_policies) that an extension implements. Policies are like options but are configured by a system administrator, not the user, enabling an enterprise to determine which extension features are available to users.
 
 After declaring the policies, they are read from the {{WebExtAPIRef("storage.managed")}} API. However, if a policy value does not conform to the schema, then it is not published by the `storage.managed` API. It's up to the app to enforce the policies configured by the administrator.
 
