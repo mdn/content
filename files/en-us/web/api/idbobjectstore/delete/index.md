@@ -53,11 +53,7 @@ This method may raise a {{domxref("DOMException")}} of the following types:
 
 ## Examples
 
-The following code snippet shows the `deleteItem()` function,
-which is part of the To-do Notifications example app. This app stores to-do
-list items using IndexedDB. You can
-[see the app's complete code on GitHub](https://github.com/mdn/dom-examples/tree/main/to-do-notifications), and
-[try out the app live](https://mdn.github.io/dom-examples/to-do-notifications/).
+The following code snippet shows the `deleteItem()` function, which is part of the To-do Notifications example app. This app stores to-do list items using IndexedDB. For a complete working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 The `deleteItem()` function is called when the user clicks the
 button to delete a to-do list item. The item key is set in the button's
@@ -105,4 +101,3 @@ function deleteItem(event) {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
