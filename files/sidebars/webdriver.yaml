@@ -134,6 +134,10 @@ sidebar:
           - type: section
             link: /Web/WebDriver/Reference/BiDi/Modules/network#commands
             title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/continueResponse
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/provideResponse
+            code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/network/setCacheBehavior
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/network/setExtraHeaders
