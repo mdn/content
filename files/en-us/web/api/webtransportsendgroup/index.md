@@ -16,7 +16,7 @@ The **`WebTransportSendGroup`** interface of the {{domxref("WebTransport API", "
 ## Instance methods
 
 - {{domxref("WebTransportSendGroup.getStats", "getStats()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with an object containing statistics aggregated across all of the {{domxref("WebTransportSendStream")}} and {{domxref("WebTransportDatagramsWritable")}} objects currently associated with this group.
+  - : Returns a {{jsxref("Promise")}} that resolves with an object containing statistics aggregated across all of the {{domxref("WebTransportSendStream")}} objects currently associated with this group.
 
 ## Description
 
