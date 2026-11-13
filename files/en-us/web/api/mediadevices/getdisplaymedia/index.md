@@ -28,11 +28,11 @@ getDisplayMedia(options)
     The options for `getDisplayMedia()` work in the same as the [constraints](/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters) for the {{domxref("MediaDevices.getUserMedia()")}} method, although in that case only `audio` and `video` can be specified.
     The list of possible option properties for `getDisplayMedia()` is as follows:
     - `video` {{optional_inline}}
-      - : A boolean or a {{domxref("MediaTrackConstraints")}} instance; the default value is `true`.
+      - : A boolean or a [`MediaTrackConstraints`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#return_value) object; the default value is `true`.
         If this option is omitted or set to `true`, the returned {{domxref("MediaStream")}} will contain a video track.
         Since `getDisplayMedia()` requires a video track, if this option is set to `false` the promise will reject with a `TypeError`.
     - `audio` {{optional_inline}}
-      - : A boolean or a {{domxref("MediaTrackConstraints")}} instance; the default value is `false`.
+      - : A boolean or a [`MediaTrackConstraints`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#return_value) object; the default value is `false`.
         A value of `true` indicates that the returned {{domxref("MediaStream")}} will contain an audio track, if audio is supported and available for the display surface chosen by the user.
     - `controller` {{Experimental_Inline}} {{optional_inline}}
       - : A {{domxref("CaptureController")}} object instance containing methods that can be used to further manipulate the capture session if included.
@@ -44,7 +44,7 @@ getDisplayMedia(options)
         - `exclude`: Hints that screen options should be excluded.
 
         > [!NOTE]
-        > You cannot set `monitorTypeSurfaces: "exclude"` at the same time as [`displaySurface: "monitor"`](/en-US/docs/Web/API/MediaTrackConstraints/displaySurface) as the two settings are contradictory.
+        > You cannot set `monitorTypeSurfaces: "exclude"` at the same time as [`displaySurface: "monitor"`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#displaysurface) as the two settings are contradictory.
         > Trying to do so will result in the `getDisplayMedia()` call failing with a `TypeError`.
 
     - `preferCurrentTab` {{non-standard_inline}} {{Experimental_Inline}} {{optional_inline}}
@@ -109,7 +109,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("MediaStream")}} containing
 - `OverconstrainedError` {{domxref("DOMException")}}
   - : Thrown if, after creating the stream, applying any specified constraints fails because no compatible stream could be generated.
 - {{jsxref("TypeError")}}
-  - : Thrown if the specified `options` include values that are not permitted when calling `getDisplayMedia()`, for example a `video` property set to false, or if any specified {{domxref("MediaTrackConstraints")}} are not permitted.
+  - : Thrown if the specified `options` include values that are not permitted when calling `getDisplayMedia()`, for example a `video` property set to false, or if any specified constraints are not permitted.
     `min` and `exact` values are not permitted in constraints used in `getDisplayMedia()` calls.
 
 ## Security

@@ -319,7 +319,7 @@ You can play with this effect using, for example, the Firefox developer tools' [
 
 ## Using specific devices
 
-You can, if needed, restrict the set of permitted video sources to a specific device or set of devices. To do so, call {{domxref("MediaDevices.enumerateDevices")}}. When the promise is fulfilled with an array of {{domxref("MediaDeviceInfo")}} objects describing the available devices, find the ones that you want to allow and specify the corresponding {{domxref("MediaTrackConstraints.deviceId", "deviceId")}} or `deviceId`s in the {{domxref("MediaTrackConstraints")}} object passed into {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}.
+You can, if needed, restrict the set of permitted video sources to a specific device or set of devices. To do so, call {{domxref("MediaDevices.enumerateDevices")}}. When the promise is fulfilled with an array of {{domxref("MediaDeviceInfo")}} objects describing the available devices, find the ones that you want to allow and specify the corresponding [`deviceId`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#deviceid) passed into {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}.
 
 ## See also
 
