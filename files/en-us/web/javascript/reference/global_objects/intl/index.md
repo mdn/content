@@ -79,7 +79,7 @@ If the selected locale identifier had a Unicode extension sequence, that extensi
 - {{jsxref("Intl.ListFormat")}}
   - : Constructor for objects that enable language-sensitive list formatting.
 - {{jsxref("Intl.Locale")}}
-  - : Constructor for objects that represents a Unicode locale identifier.
+  - : Constructor for objects that represent a Unicode locale identifier.
 - {{jsxref("Intl.NumberFormat")}}
   - : Constructor for objects that enable language-sensitive number formatting.
 - {{jsxref("Intl.PluralRules")}}

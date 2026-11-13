@@ -19,7 +19,7 @@ const pluralRules2 = new Intl.PluralRules("bn");
 const options2 = pluralRules2.resolvedOptions();
 
 console.log(options1.pluralCategories);
-// Expected output: Array ["few", "many", "one", "other"]
+// Expected output: Array ["one", "few", "many", "other"]
 
 console.log(options2.pluralCategories);
 // Expected output: Array ["one", "other"]
@@ -43,10 +43,12 @@ A new object with properties reflecting the options computed during the initiali
   - : The {{glossary("BCP 47 language tag")}} for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. No Unicode extension key will be included in the output.
 - `type`
   - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"cardinal"` or `"ordinal"`. The default is `"cardinal"`.
-- `minimumIntegerDigits`, `minimumFractionDigits`, `maximumFractionDigits` {{optional_inline}}
-  - : The value provided for these properties in the `options` argument, with defaults filled in as needed. These properties are present only if neither `minimumSignificantDigits` nor `maximumSignificantDigits` was provided in the `options` argument.
+- `minimumIntegerDigits`
+  - : The value provided for this property in the `options` argument, with default filled in as needed.
+- `minimumFractionDigits`, `maximumFractionDigits` {{optional_inline}}
+  - : The value provided for these properties in the `options` argument, with defaults filled in as needed. They are only present if necessary; see [digit options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#digit_options).
 - `minimumSignificantDigits`, `maximumSignificantDigits` {{optional_inline}}
-  - : The value provided for these properties in the `options` argument, with defaults filled in as needed. These properties are present only if at least one of them was provided in the `options` argument.
+  - : The value provided for these properties in the `options` argument, with defaults filled in as needed. They are only present if necessary; see [digit options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#digit_options).
 - `pluralCategories`
   - : An {{jsxref("Array")}} of plural categories used by the given locale, selected from the list `"zero"`, `"one"`, `"two"`, `"few"`, `"many"` and `"other"`.
 - `roundingIncrement`

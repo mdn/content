@@ -59,7 +59,7 @@ const pr = new Intl.PluralRules("ar-EG");
 ```
 
 Then call `select()` on the rules object, specifying the number for which the plural form is required.
-Note that Arabic has 5 forms for cardinal numbers, as shown.
+Note that Arabic has 6 forms for cardinal numbers, as shown.
 
 ```js
 pr.select(0); // 'zero'
@@ -67,6 +67,7 @@ pr.select(1); // 'one'
 pr.select(2); // 'two'
 pr.select(6); // 'few'
 pr.select(18); // 'many'
+pr.select(100); // 'other'
 ```
 
 ## Specifications

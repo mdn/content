@@ -25,7 +25,7 @@ const parts = dateTimeFormat.formatToParts(date);
 const partValues = parts.map((p) => p.value);
 
 console.log(partValues);
-// Expected output: "["Friday", ", ", "June", " ", "1", ", ", "2012"]"
+// Expected output: Array ["Friday", ", ", "June", " ", "1", ", ", "2012"]
 ```
 
 ## Syntax
@@ -128,6 +128,7 @@ formatter.formatToParts(date);
   { type: "minute", value: "00" },
   { type: "literal", value: ":" },
   { type: "second", value: "42" },
+  { type: "literal", value: "." },
   { type: "fractionalSecond", value: "000" },
   { type: "literal", value: " " },
   { type: "dayPeriod", value: "AM" },
@@ -170,7 +171,7 @@ df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
 ];
 ```
 
-Sometimes, the combination of date-time component options maps to a format that also includes a `yearName`. There isn't a separate option that controls whether `yearName` is displayed or not. For example, the options below sets `month` to `"long"` and results in a `yearName` token, despite `year` still being `"numeric"`:
+Sometimes, the combination of date-time component options maps to a format that also includes a `yearName`. There isn't a separate option that controls whether `yearName` is displayed or not. For example, the options below set `month` to `"long"` and result in a `yearName` token, despite `year` still being `"numeric"`:
 
 ```js
 const opts = { year: "numeric", month: "long", day: "numeric" };

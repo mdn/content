@@ -25,11 +25,11 @@ for (const part of parts) {
   console.log(part);
 }
 // Expected output (in GMT timezone):
-// Object { type: "hour", value: "2", source: "startRange" }
+// Object { type: "hour", value: "10", source: "startRange" }
 // Object { type: "literal", value: ":", source: "startRange" }
 // Object { type: "minute", value: "00", source: "startRange" }
 // Object { type: "literal", value: " – ", source: "shared" }
-// Object { type: "hour", value: "3", source: "endRange" }
+// Object { type: "hour", value: "11", source: "endRange" }
 // Object { type: "literal", value: ":", source: "endRange" }
 // Object { type: "minute", value: "00", source: "endRange" }
 // Object { type: "literal", value: " ", source: "shared" }

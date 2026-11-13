@@ -17,7 +17,7 @@ formatToParts(duration)
 
 ### Parameters
 
-- `duration` {{optional_inline}}
+- `duration`
   - : The duration object to be formatted. It should include some or all of the following properties: `years`, `months`, `weeks`, `days`, `hours`, `minutes`, `seconds`, `milliseconds`, `microseconds`, `nanoseconds`. Each property's value should be an integer, and their signs should be consistent. This can be a {{jsxref("Temporal.Duration")}} object; see the {{jsxref("Temporal.Duration")}} documentation for more information about these properties.
 
 ### Return value

@@ -58,7 +58,7 @@ These properties are defined on `Intl.PluralRules.prototype` and shared by all `
 ## Instance methods
 
 - {{jsxref("Intl/PluralRules/resolvedOptions", "Intl.PluralRules.prototype.resolvedOptions()")}}
-  - : Returns a new object with properties reflecting the locale and collation options computed during initialization of the object.
+  - : Returns a new object with properties reflecting the locale and pluralization options computed during initialization of the object.
 - {{jsxref("Intl/PluralRules/select", "Intl.PluralRules.prototype.select()")}}
   - : Returns a string indicating which plural rule to use for locale-aware formatting.
 - {{jsxref("Intl/PluralRules/selectRange", "Intl.PluralRules.prototype.selectRange()")}}
