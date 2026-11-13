@@ -104,6 +104,7 @@ CACHEDIR
 cakm
 cand-type
 canmakepayment
+capturehandlechange
 cbcs
 ccall
 cdylib
