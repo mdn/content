@@ -33,7 +33,8 @@ A new {{domxref('CSSUnitValue')}} whose unit is `unit`.
 - {{jsxref("TypeError")}}
   - : Thrown if:
     - The `CSSNumericValue` is a calculation whose terms can't be combined into a single value.
-      For example, `calc(1px + 1em)` can't be combined, because the size of an `em` depends on the font size, and a length multiplied by a length can't be written in a single unit.
+      For example, `calc(1px + 1em)` can't be combined, because the size of an `em` depends on the font size.
+      A length multiplied by a length, such as `calc(1px * 2px)`, can't be combined either, because it can't be written in a single unit.
     - The value can't be converted to `unit`.
       For example, you can't convert `px` to `s`, or `px` to `em`.
 
