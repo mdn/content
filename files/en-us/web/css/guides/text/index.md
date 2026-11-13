@@ -19,6 +19,7 @@ The **CSS text** module defines how to perform text manipulation, like line brea
 - {{cssxref("hanging-punctuation")}}
 - {{cssxref("hyphenate-character")}}
 - {{cssxref("hyphenate-limit-chars")}}
+- {{cssxref("hyphenate-limit-lines")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("letter-spacing")}}
 - {{cssxref("line-break")}}
