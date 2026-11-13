@@ -44,6 +44,36 @@ This role does not require any special keyboard navigation. As with any heading,
 > [!NOTE]
 > Instead of using a `<div>` or `<span>` with a `heading` role and `aria-level`, consider using a native {{HTMLElement("Heading_Elements", "h1")}} through {{HTMLElement("Heading_Elements", "h6")}} elements instead to indicate that this text is a heading, and what part of the structure it represents.
 
+## Precedence order
+
+The heading role overrides the native semantic meaning of the element it is being used for. The `aria-level` attribute, in addition, determines what level of heading is being exposed.
+
+## Accessibility concerns
+
+> [!WARNING]
+> Using [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) will hide the content of your heading from assistive technologies, reading the label instead of the heading.
+
+If you must use the `heading` role and [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level) attribute, do not go over level 6 so that you are consistent with HTML. Although theoretically you can go higher, and some screen readers may support it, the results can be unpredictable with other browser and screen reader combinations.
+
+## Best practices
+
+The best way to use this role is to **not use it at all**, and instead use the native heading tags {{HTMLElement("Heading_Elements", "h1")}} through {{HTMLElement("Heading_Elements", "h6")}} as shown in the example above. The `heading` role and `aria-level` attribute should only be used to retrofit accessibility on legacy code that you cannot make major changes to.
+
+Instead of using the ARIA `heading` role, use the semantic HTML element:
+
+| HTML Element                              | `heading` role                        |
+| ----------------------------------------- | ------------------------------------- |
+| {{HTMLElement("Heading_Elements", "h1")}} | `<div role="heading" aria-level="1">` |
+| {{HTMLElement("Heading_Elements", "h2")}} | `<div role="heading" aria-level="2">` |
+| {{HTMLElement("Heading_Elements", "h3")}} | `<div role="heading" aria-level="3">` |
+| {{HTMLElement("Heading_Elements", "h4")}} | `<div role="heading" aria-level="4">` |
+| {{HTMLElement("Heading_Elements", "h5")}} | `<div role="heading" aria-level="5">` |
+| {{HTMLElement("Heading_Elements", "h6")}} | `<div role="heading" aria-level="6">` |
+
+### Added benefits
+
+None.
+
 ## Examples
 
 The following shows a typical page structure.
@@ -76,39 +106,9 @@ However, instead, you should do:
 </div>
 ```
 
-## Accessibility concerns
-
-> [!WARNING]
-> Using [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) will hide the content of your heading from assistive technologies, reading the label instead of the heading.
-
-If you must use the `heading` role and [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level) attribute, do not go over level 6 so that you are consistent with HTML. Although theoretically you can go higher, and some screen readers may support it, the results can be unpredictable with other browser and screen reader combinations.
-
-## Best practices
-
-The best way to use this role is to **not use it at all**, and instead use the native heading tags {{HTMLElement("Heading_Elements", "h1")}} through {{HTMLElement("Heading_Elements", "h6")}} as shown in the example above. The `heading` role and `aria-level` attribute should only be used to retrofit accessibility on legacy code that you cannot make major changes to.
-
-Instead of using the ARIA `heading` role, use the semantic HTML element:
-
-| HTML Element                              | `heading` role                        |
-| ----------------------------------------- | ------------------------------------- |
-| {{HTMLElement("Heading_Elements", "h1")}} | `<div role="heading" aria-level="1">` |
-| {{HTMLElement("Heading_Elements", "h2")}} | `<div role="heading" aria-level="2">` |
-| {{HTMLElement("Heading_Elements", "h3")}} | `<div role="heading" aria-level="3">` |
-| {{HTMLElement("Heading_Elements", "h4")}} | `<div role="heading" aria-level="4">` |
-| {{HTMLElement("Heading_Elements", "h5")}} | `<div role="heading" aria-level="5">` |
-| {{HTMLElement("Heading_Elements", "h6")}} | `<div role="heading" aria-level="6">` |
-
-### Added benefits
-
-None.
-
 ## Specifications
 
 {{Specifications}}
-
-## Precedence order
-
-The heading role overrides the native semantic meaning of the element it is being used for. The `aria-level` attribute, in addition, determines what level of heading is being exposed.
 
 ## See also
 

@@ -34,6 +34,12 @@ When dealing with a single large graphic with discrete regions that can be rearr
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
   - : A `graphics-document` must have an accessible name. Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`. For SVG, a {{SVGElement("title")}} element can also provide the name.
 
+## Best practices
+
+Do not add an explicit `graphics-document` role when the element already provides that role through its native semantics, as {{SVGElement("svg")}} does.
+
+For decorative SVG graphics, use `aria-hidden="true"`. For graphics without meaningful internal structure, use the [`img`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/img_role) role with an accessible name. For HTML images, use the native {{HTMLElement("img")}} element with an `alt` attribute.
+
 ## Examples
 
 This flowchart uses HTML elements laid out with CSS. The `graphics-document` role identifies the diagram as a graphical document because the arrangement of its nodes and arrows conveys the authentication flow. The `aria-label` attribute supplies its accessible name. Each arrow has a `graphics-symbol` role and a label describing the connection, so the flow can also be understood without seeing the layout.
@@ -192,12 +198,6 @@ If this graphic were implemented using {{SVGElement("svg")}} instead, then no `r
 ```
 
 {{EmbedLiveSample('Examples', 600, 350)}}
-
-## Best practices
-
-Do not add an explicit `graphics-document` role when the element already provides that role through its native semantics, as {{SVGElement("svg")}} does.
-
-For decorative SVG graphics, use `aria-hidden="true"`. For graphics without meaningful internal structure, use the [`img`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/img_role) role with an accessible name. For HTML images, use the native {{HTMLElement("img")}} element with an `alt` attribute.
 
 ## Specifications
 

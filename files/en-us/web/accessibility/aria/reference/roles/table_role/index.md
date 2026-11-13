@@ -91,6 +91,10 @@ None. For sortable columns, see the [columnheader](/en-US/docs/Web/Accessibility
 > [!NOTE]
 > The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML {{HTMLElement('table')}} element instead of the ARIA role of table whenever possible.
 
+## Best practices
+
+Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, etc., for data table structure. You can add these ARIA roles to ensure accessibility should the native semantics of the table be removed, such as with CSS. A relevant use case for the ARIA table role is when CSS's display property overrides the native semantics of a table, such as by `display: grid`. In this case, you can use the ARIA table roles to re-add the semantics.
+
 ## Examples
 
 ```html
@@ -130,10 +134,6 @@ None. For sortable columns, see the [columnheader](/en-US/docs/Web/Accessibility
 ```
 
 The above is part of a table. While the full table has 81 entries, as indicated by the [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount) property, only four are currently visible. The columns are sortable, but not currently sorted, as indicated by the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) property on the column headers.
-
-## Best practices
-
-Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, etc., for data table structure. You can add these ARIA roles to ensure accessibility should the native semantics of the table be removed, such as with CSS. A relevant use case for the ARIA table role is when CSS's display property overrides the native semantics of a table, such as by `display: grid`. In this case, you can use the ARIA table roles to re-add the semantics.
 
 ## Specifications
 

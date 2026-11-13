@@ -72,6 +72,16 @@ The <kbd>Tab</kbd>, <kbd>Space</kbd> and <kbd>Enter</kbd> keys, as well as <kbd>
 > [!NOTE]
 > The `application` role does not have a related HTML widget and thus is completely free form. The author of the application must take full responsibility for not letting users get stuck in a focus trap inside something the user cannot exit from. All aspects of interaction, including returning to the regular web content on other parts of the page, must be handled. Use wisely, and cautiously, and remember to test!
 
+## Precedence order
+
+Applying the `application` role will cause this and all of the descendant elements of this element to be treated like application content, not web content. Any reading mechanisms assistive technologies may have for web content will not apply.
+
+## Accessibility concerns
+
+Improperly using the `application` role can unintentionally take away access from information on a web page, so be very mindful of using it. Think hard on if you actually need it and cannot just use a set of other known widgets to accomplish the same task.
+
+If used, the application role should be added to the lowest common container possible, not on the `<body>` element, for example. Also be sure to test what you have written with assistive technology, to verify it works as intended.
+
 ## Examples
 
 Some prominent web applications that use or have used the application role properly are:
@@ -80,19 +90,9 @@ Some prominent web applications that use or have used the application role prope
 - CKEditor and TinyMCE WYSIWYG web editors, like the one used on the Mozilla Developer Network
 - Some parts of Gmail
 
-## Accessibility concerns
-
-Improperly using the `application` role can unintentionally take away access from information on a web page, so be very mindful of using it. Think hard on if you actually need it and cannot just use a set of other known widgets to accomplish the same task.
-
-If used, the application role should be added to the lowest common container possible, not on the `<body>` element, for example. Also be sure to test what you have written with assistive technology, to verify it works as intended.
-
 ## Specifications
 
 {{Specifications}}
-
-## Precedence order
-
-Applying the `application` role will cause this and all of the descendant elements of this element to be treated like application content, not web content. Any reading mechanisms assistive technologies may have for web content will not apply.
 
 ## See also
 

@@ -78,16 +78,6 @@ When focus is on a tab in a tablist with either horizontal or vertical orientati
 - <kbd>Delete</kbd> (Optional)
   - : If deletion is allowed, deletes (closes) the current tab element and its associated tab panel, sets focus on the tab following the tab that was closed, and optionally activates the newly focused tab. If there is not a tab that followed the tab that was deleted, e.g., the deleted tab was the right-most tab in a left-to-right horizontal tab list, sets focus on and optionally activates the tab that preceded the deleted tab. If the application allows all tabs to be deleted, and the user deletes the last remaining tab in the tab list, the application moves focus to another element that provides a logical work flow. As an alternative to Delete, or in addition to supporting Delete, the delete function is available in a context menu.
 
-<!--
-### Required JavaScript features
-
-## Accessibility concerns
-
-## Best Practices
-
-### Prefer HTML
--->
-
 ## Examples
 
 See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role#example) in the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) role definition.

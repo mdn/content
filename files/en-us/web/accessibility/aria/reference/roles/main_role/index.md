@@ -38,21 +38,6 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should use 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or `aria-labelledby`
   - : Identify the accessible name with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) if a visible header is present. Otherwise, including an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) can be helpful for orienting assistive technology users, especially in single-page applications where main content changes happen without generating a page load event.
 
-## Example
-
-```html
-<body>
-  <!-- primary navigation -->
-
-  <div role="main">
-    <h1>The First Indochina War</h1>
-    <!-- article content -->
-  </div>
-
-  <!-- sidebar and footer -->
-</body>
-```
-
 ## Accessibility concerns
 
 ### Use only one `main` role per document
@@ -114,6 +99,21 @@ Which is the equivalent of:
 ```
 
 - [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
+
+## Example
+
+```html
+<body>
+  <!-- primary navigation -->
+
+  <div role="main">
+    <h1>The First Indochina War</h1>
+    <!-- article content -->
+  </div>
+
+  <!-- sidebar and footer -->
+</body>
+```
 
 ## Specifications
 

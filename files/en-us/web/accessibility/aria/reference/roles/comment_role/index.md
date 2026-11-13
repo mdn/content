@@ -11,6 +11,10 @@ The `comment` role semantically denotes a comment/reaction to some content on th
 > [!NOTE]
 > The comment role is proposed in WAI-ARIA 1.3 ([Most recent ARIA draft](https://w3c.github.io/aria/)), which is still being drafted.
 
+## Accessibility concerns
+
+None.
+
 ## Examples
 
 In the following example we have a document section that has been commented. The commented section is marked up using `<span role="mark">`.
@@ -79,10 +83,6 @@ It's possible to nest comments inside one another, like so:
   </div>
 </div>
 ```
-
-## Accessibility concerns
-
-None.
 
 ## Specifications
 

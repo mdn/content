@@ -32,6 +32,14 @@ None.
 
 None.
 
+## Accessibility concerns
+
+Don't use the `role="term"` on interactive elements such as links as it can interfere with the assistive technology user's ability to interact with the element.
+
+## Best practices
+
+Allow the term itself to define the accessible name. Do not use `aria-label` or `aria-labelledby`.
+
 ## Examples
 
 ```html
@@ -70,14 +78,6 @@ or without any ARIA (but possibly not how you want it presented)
   </dd>
 </dl>
 ```
-
-## Accessibility concerns
-
-Don't use the `role="term"` on interactive elements such as links as it can interfere with the assistive technology user's ability to interact with the element.
-
-## Best practices
-
-Allow the term itself to define the accessible name. Do not use `aria-label` or `aria-labelledby`.
 
 ## Specifications
 

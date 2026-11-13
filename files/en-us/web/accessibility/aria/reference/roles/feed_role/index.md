@@ -67,13 +67,13 @@ None, except as required by any attributes. For example, setting [`aria-busy`](/
 
 Note: It is the author's responsibility to apply the "above" keyboard behavior.
 
-## Examples
-
-[Example Implementation of Feed Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/feed/examples/feed/)
-
 ## Best practices
 
 To ensure good user experience, avoid inserting or removing articles in the middle of a `feed`, load new articles before the user has reached the end of the feed, and provide keyboard commands for moving focus among articles so that keyboard users can navigate through your feed. See [Keyboard interactions](#keyboard_interactions).
+
+## Examples
+
+[Example Implementation of Feed Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/feed/examples/feed/)
 
 ## Specifications
 

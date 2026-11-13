@@ -30,6 +30,12 @@ The children of a `graphics-symbol` are not exposed separately to assistive tech
 - [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription)
   - : When used as part of a structured symbolic language, this attribute can name the symbol type separately from the name and description of an individual symbol.
 
+## Best practices
+
+Don't use this role for decorative graphics. Use `aria-hidden="true"` instead.
+
+Avoid this role for complex graphics with internal structure. Use [`graphics-object`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-object_role) instead.
+
 ## Examples
 
 Each parking-space symbol combines a rectangle and text into one {{SVGElement("g")}} element. The `graphics-symbol` role makes this combination a single object for assistive technologies, with its meaning supplied by `aria-label`. The outer {{SVGElement("svg")}} provides the graphical document semantics.
@@ -115,12 +121,6 @@ Each parking-space symbol combines a rectangle and text into one {{SVGElement("g
 ```
 
 {{EmbedLiveSample('Examples', 600, 250)}}
-
-## Best practices
-
-Don't use this role for decorative graphics. Use `aria-hidden="true"` instead.
-
-Avoid this role for complex graphics with internal structure. Use [`graphics-object`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-object_role) instead.
 
 ## Specifications
 

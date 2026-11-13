@@ -61,6 +61,14 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) elements rather than the `progressbar` role. User agents provide a stylize widget for the {{HTMLElement("progress")}} element based on the current `value` as it relates to the `0`, the minimum value, and the `max` value. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript and CSS.
 
+## Best practices
+
+If the progress bar is describing the loading progress of a particular region of a page, include the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute to reference the progress bar's status, and set the [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) attribute to `true` on the region until it is finished loading.
+
+### Prefer HTML
+
+It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) elements rather than the `progressbar` role.
+
 ## Examples
 
 In the example below, the progress bar uses the default values of 0 and 100 for `aria-valuemin` and `aria-valuemax`:
@@ -83,14 +91,6 @@ Using semantic HTML, this could be written as:
 <label for="loadinglabel">Loading:</label>
 <progress id="loadinglabel" max="100" value="23"></progress>
 ```
-
-## Best practices
-
-If the progress bar is describing the loading progress of a particular region of a page, include the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute to reference the progress bar's status, and set the [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) attribute to `true` on the region until it is finished loading.
-
-### Prefer HTML
-
-It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) elements rather than the `progressbar` role.
 
 ## Specifications
 
