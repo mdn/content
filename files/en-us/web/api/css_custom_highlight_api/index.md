@@ -30,7 +30,7 @@ There are four steps to style text ranges on a webpage using the CSS Custom High
 
 ### Create ranges
 
-The first step is to define the text ranges that you want to style by creating {{domxref("Range")}} objects in JavaScript. For example:
+The first step is to define the text ranges that you want to style by creating {{domxref("Range")}} or {{domxref("StaticRange")}} objects in JavaScript. For example:
 
 ```js
 const parentNode = document.getElementById("foo");
@@ -43,6 +43,11 @@ const range2 = new Range();
 range2.setStart(parentNode, 40);
 range2.setEnd(parentNode, 60);
 ```
+
+> [!NOTE]
+> While {{domxref("Range")}} objects automatically update their boundaries as the DOM changes, updating large collections of live `Range` objects (such as thousands of search query matches) incurs significant performance overhead during subsequent DOM mutations.
+>
+> If your application creates many ranges or modifies document content frequently, consider using {{domxref("StaticRange")}} objects instead. Unlike `Range`, `StaticRange` instances are lightweight and do not observe or react to DOM changes, but you must manually recreate or update them when the underlying content changes.
 
 ### Create highlights
 
