@@ -169,9 +169,6 @@ The list of actual web safe fonts will change as operating systems evolve, but i
 </table>
 
 > [!NOTE]
-> Among various resources, the [cssfontstack.com](https://www.cssfontstack.com/) website maintains a list of web safe fonts available on Windows and macOS operating systems, which can help you make your decision about what you consider safe for your usage.
-
-> [!NOTE]
 > There is a way to download a custom font along with a webpage, to allow you to customize your font usage in any way you want: **web fonts**. This is a little bit more complex, and we will discuss it in a [separate article](/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts) later on in the module.
 
 #### Default fonts
