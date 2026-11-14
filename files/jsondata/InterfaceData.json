@@ -20,6 +20,10 @@
       "inh": "Sensor",
       "impl": []
     },
+    "Alarms": {
+      "inh": "",
+      "impl": []
+    },
     "AmbientLightSensor": {
       "inh": "Sensor",
       "impl": []
@@ -320,6 +324,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "Browser": {
+      "inh": "",
+      "impl": []
+    },
     "BrowserCaptureMediaStreamTrack": {
       "inh": "MediaStreamTrack",
       "impl": []
@@ -461,6 +469,10 @@
       "impl": []
     },
     "ContactsManager": {
+      "inh": "",
+      "impl": []
+    },
+    "ContainerQueryList": {
       "inh": "",
       "impl": []
     },
@@ -1353,10 +1365,6 @@
       "impl": []
     },
     "GamepadHapticActuator": {
-      "inh": "",
-      "impl": []
-    },
-    "GamepadPose": {
       "inh": "",
       "impl": []
     },
@@ -2508,6 +2516,10 @@
       "inh": "",
       "impl": []
     },
+    "NodeRange": {
+      "inh": "AbstractRange",
+      "impl": []
+    },
     "Notification": {
       "inh": "EventTarget",
       "impl": []
@@ -2589,6 +2601,10 @@
       "impl": []
     },
     "OffscreenCanvasRenderingContext2D": {
+      "inh": "",
+      "impl": []
+    },
+    "OnAlarmEvent": {
       "inh": "",
       "impl": []
     },
@@ -2697,6 +2713,10 @@
       "impl": []
     },
     "PerformanceLongAnimationFrameTiming": {
+      "inh": "PerformanceEntry",
+      "impl": []
+    },
+    "PerformanceLongTaskTiming": {
       "inh": "PerformanceEntry",
       "impl": []
     },
@@ -2921,7 +2941,7 @@
       "impl": []
     },
     "Range": {
-      "inh": "AbstractRange",
+      "inh": "NodeRange",
       "impl": []
     },
     "RdfDataset": {
@@ -3054,6 +3074,10 @@
     },
     "RTCIceCandidatePair": {
       "inh": "",
+      "impl": []
+    },
+    "RTCIceCandidatePairEvent": {
+      "inh": "Event",
       "impl": []
     },
     "RTCIceTransport": {
@@ -3309,7 +3333,7 @@
       "impl": []
     },
     "StaticRange": {
-      "inh": "AbstractRange",
+      "inh": "NodeRange",
       "impl": []
     },
     "StereoPannerNode": {
@@ -3766,6 +3790,10 @@
     },
     "Tag": {
       "inh": "",
+      "impl": []
+    },
+    "TaskAttributionTiming": {
+      "inh": "PerformanceEntry",
       "impl": []
     },
     "TaskController": {
@@ -4357,6 +4385,10 @@
       "impl": []
     },
     "WorkletGroupEffect": {
+      "inh": "",
+      "impl": []
+    },
+    "WorkletPerformance": {
       "inh": "",
       "impl": []
     },
