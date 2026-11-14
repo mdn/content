@@ -287,7 +287,7 @@ Now let's look at what we have to do in the first place, to actually set up a da
    To handle this in IndexedDB, you create a request object (which can be called anything you like — we called it `openRequest` here, so it is obvious what it is for). You then use event handlers to run code when the request completes, fails, etc., which you'll see in use below.
 
    > [!NOTE]
-   > The version number is important. If you want to upgrade your database (for example, by changing the table structure), you have to run your code again with an increased version number, different schema specified inside the `upgradeneeded` handler (see below), etc. We won't cover upgrading databases in this tutorial.
+   > The version number is important. If you want to upgrade your database (for example, by changing the table structure), you have to run your code again with an increased version number, a different structure specified inside the `upgradeneeded` handler (see below), etc. We won't cover upgrading databases in this tutorial.
 
 3. Now add the following event handlers just below your previous addition:
 
@@ -336,13 +336,13 @@ Now let's look at what we have to do in the first place, to actually set up a da
    });
    ```
 
-   This is where we define the schema (structure) of our database; that is, the set of columns (or fields) it contains. Here we first grab a reference to the existing database from the `result` property of the event's target (`e.target.result`), which is the `request` object. This is equivalent to the line `db = openRequest.result;` inside the `success` event handler, but we need to do this separately here because the `upgradeneeded` event handler (if needed) will run before the `success` event handler, meaning that the `db` value wouldn't be available if we didn't do this.
+   This is where we set up the structure of our database; that is, the object stores and indexes it contains. Here we first grab a reference to the existing database from the `result` property of the event's target (`e.target.result`), which is the `request` object. This is equivalent to the line `db = openRequest.result;` inside the `success` event handler, but we need to do this separately here because the `upgradeneeded` event handler (if needed) will run before the `success` event handler, meaning that the `db` value wouldn't be available if we didn't do this.
 
    We then use {{domxref("IDBDatabase.createObjectStore()")}} to create a new object store inside our opened database called `notes_os`. This is equivalent to a single table in a conventional database system. We've given it the name notes, and also specified an `autoIncrement` key field called `id` — in each new record this will automatically be given an incremented value — the developer doesn't need to set this explicitly. Being the key, the `id` field will be used to uniquely identify records, such as when deleting or displaying a record.
 
-   We also create two other indexes (fields) using the {{domxref("IDBObjectStore.createIndex()")}} method: `title` (which will contain a title for each note), and `body` (which will contain the body text of the note).
+   We also create two indexes using the {{domxref("IDBObjectStore.createIndex()")}} method: `title` (for the title of each note) and `body` (for the body text of the note). An index lets you look up records by the value of a property other than the key. Indexes don't define what a record can contain; the objects you store can have any properties, whether they are indexed or not.
 
-So with this database schema set up, when we start adding records to the database, each one will be represented as an object along these lines:
+With the database set up, when we start adding records to the database, each one will be represented as an object along these lines:
 
 ```json
 {
