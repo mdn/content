@@ -38,7 +38,7 @@ An integer representing the year for the given date according to universal time.
 
 ## Description
 
-Unlike {{jsxref("Date/getYear", "getYear()")}}, the value returned by `getUTCFullYear()` is an absolute number. For dates between the years 1000 and 9999, `getFullYear()` returns a four-digit number, for example, 1995. Use this function to make sure a year is compliant with years after 2000.
+Unlike {{jsxref("Date/getYear", "getYear()")}}, the value returned by `getUTCFullYear()` is an absolute number. For dates between the years 1000 and 9999, `getUTCFullYear()` returns a four-digit number, for example, 1995. Use this function to make sure a year is compliant with years after 2000.
 
 ## Examples
 

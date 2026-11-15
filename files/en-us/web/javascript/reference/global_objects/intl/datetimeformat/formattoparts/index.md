@@ -49,7 +49,7 @@ formatToParts(date)
 An {{jsxref("Array")}} of objects containing the formatted date in parts. Each object has two properties, `type` and `value`, each containing a string. The string concatenation of `value`, in the order provided, will result in the same string as {{jsxref("Intl/DateTimeFormat/format", "format()")}}. The `type` may be one of the [date-time components](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#date-time_component_options):
 
 - `weekday`
-  - : For example `"M"`, `"Monday"`, or `"Montag"`.
+  - : For example `"T"`, `"Tuesday"`, or `"Dienstag"`.
 - `era`
   - : For example `"BC"` or `"AD"`.
 - `year`

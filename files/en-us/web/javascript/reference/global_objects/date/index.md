@@ -9,7 +9,7 @@ sidebar: jsref
 JavaScript **`Date`** objects represent a single moment in time in a platform-independent format. `Date` objects encapsulate an integral number that represents milliseconds since the midnight at the beginning of January 1, 1970, UTC (the _epoch_).
 
 > [!NOTE]
-> With the introduction of the {{jsxref("Temporal")}} API, the `Date` object is considered a legacy feature. Consider using `Temporal` for new code and migrate existing code over to it if possible (check the [browser compatibility](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#browser_compatibility). Read the [Representing dates & times](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times) guide for the `Temporal` object, and the [Temporal cookbook](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times/Cookbook) for snippets that implement common use cases (including how to migrate from `Date` to `Temporal`).
+> With the introduction of the {{jsxref("Temporal")}} API, the `Date` object is considered a legacy feature. Consider using `Temporal` for new code and migrate existing code over to it if possible (check the [browser compatibility](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#browser_compatibility)). Read the [Representing dates & times](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times) guide for the `Temporal` object, and the [Temporal cookbook](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times/Cookbook) for snippets that implement common use cases (including how to migrate from `Date` to `Temporal`).
 
 ## Description
 
@@ -20,7 +20,7 @@ A JavaScript date is fundamentally specified as the time in milliseconds that ha
 > [!NOTE]
 > While the time value at the heart of a Date object is UTC, the basic methods to fetch the date and time or its components all work in the local (i.e., host system) time zone and offset.
 
-The maximum timestamp representable by a `Date` object is slightly smaller than the maximum safe integer ({{jsxref("Number.MAX_SAFE_INTEGER")}}, which is 9,007,199,254,740,991). A `Date` object can represent a maximum of ±8,640,000,000,000,000 milliseconds, or ±100,000,000 (one hundred million) days, relative to the epoch. This is the range from April 20, 271821 BC to September 13, 275760 AD. Any attempt to represent a time outside this range results in the `Date` object holding a timestamp value of [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN), which is an "Invalid Date".
+The maximum timestamp representable by a `Date` object is slightly smaller than the maximum safe integer ({{jsxref("Number.MAX_SAFE_INTEGER")}}, which is 9,007,199,254,740,991). A `Date` object can represent a maximum of ±8,640,000,000,000,000 milliseconds, or ±100,000,000 (one hundred million) days, relative to the epoch. This is the range from April 20, 271822 BC to September 13, 275760 AD. Any attempt to represent a time outside this range results in the `Date` object holding a timestamp value of [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN), which is an "Invalid Date".
 
 ```js
 console.log(new Date(8.64e15).toString()); // "Sat Sep 13 275760 00:00:00 GMT+0000 (Coordinated Universal Time)"
@@ -129,7 +129,7 @@ The {{jsxref("Date/Date", "Date()")}} constructor can be called with two or more
 > [!NOTE]
 > Some methods, including the `Date()` constructor, `Date.UTC()`, and the deprecated {{jsxref("Date/getYear", "getYear()")}}/{{jsxref("Date/setYear", "setYear()")}} methods, interpret a two-digit year as a year in the 1900s. For example, `new Date(99, 5, 24)` is interpreted as June 24, 1999, not June 24, 99. See [Interpretation of two-digit years](#interpretation_of_two-digit_years) for more information.
 
-When a segment overflows or underflows its expected range, it usually "carries over to" or "borrows from" the higher segment. For example, if the month is set to 12 (months are zero-based, so December is 11), it becomes the January of the next year. If the day of month is set to 0, it becomes the last day of the previous month. This also applies to dates specified with the [date time string format](#date_time_string_format).
+When a segment overflows or underflows its expected range, it usually "carries over to" or "borrows from" the higher segment. For example, if the month is set to 12 (months are zero-based, so December is 11), it becomes the January of the next year. If the day of month is set to 0, it becomes the last day of the previous month.
 
 When attempting to set the local time to a time falling within an offset transition (usually daylight saving time), the exact time is derived using the same behavior as `Temporal`'s [`disambiguation: "compatible"`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#ambiguity_and_gaps_from_local_time_to_utc_time) option. That is, if the local time corresponds to two instants, the earlier one is chosen; if the local time does not exist (there is a gap), we go forward by the gap duration.
 
@@ -203,7 +203,7 @@ See the [Formats of `toString` method return values](#formats_of_tostring_method
 - {{jsxref("Date.parse()")}}
   - : Parses a string representation of a date and returns the number of milliseconds since January 1, 1970 00:00:00 UTC, with leap seconds ignored.
 - {{jsxref("Date.UTC()")}}
-  - : Accepts the same parameters as the longest form of the constructor (i.e., 2 to 7) and returns the number of milliseconds since January 1, 1970 00:00:00 UTC, with leap seconds ignored.
+  - : Accepts 1 to 7 parameters representing date and time components and returns the number of milliseconds since January 1, 1970 00:00:00 UTC, with leap seconds ignored.
 
 ## Instance properties
 
@@ -233,7 +233,7 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
 - {{jsxref("Date.prototype.getTime()")}}
   - : Returns the numeric value of the specified date as the number of milliseconds since January 1, 1970 00:00:00 UTC. (Negative values are returned for prior times.)
 - {{jsxref("Date.prototype.getTimezoneOffset()")}}
-  - : Returns the time-zone offset in minutes for the current locale.
+  - : Returns the time-zone offset in minutes for the host environment's time zone.
 - {{jsxref("Date.prototype.getUTCDate()")}}
   - : Returns the day (date) of the month (`1` – `31`) in the specified date according to universal time.
 - {{jsxref("Date.prototype.getUTCDay()")}}
@@ -355,7 +355,7 @@ const [month, day, year] = [
   date.getDate(),
   date.getFullYear(),
 ];
-// [0, 17, 2000] as month are 0-indexed
+// [0, 17, 2000] as months are 0-indexed
 const [hour, minutes, seconds] = [
   date.getHours(),
   date.getMinutes(),
@@ -380,7 +380,7 @@ date.setYear(22);
 date.toString(); // Wed Feb 01 1922 00:00:00 GMT+0000 (GMT)
 ```
 
-So, to create and get dates between the years `0` and `99`, instead use the preferred {{jsxref("Date/setFullYear", "setFullYear()")}} and {{jsxref("Date/getFullYear", "getFullYear()")}} methods:.
+So, to create and get dates between the years `0` and `99`, instead use the preferred {{jsxref("Date/setFullYear", "setFullYear()")}} and {{jsxref("Date/getFullYear", "getFullYear()")}} methods:
 
 ```js
 // Preferred method; never interprets any value as being a relative offset,
@@ -398,7 +398,7 @@ The following examples show how to determine the elapsed time between two JavaSc
 Due to the differing lengths of days (due to daylight saving changeover), months, and years, expressing elapsed time in units greater than hours, minutes, and seconds requires addressing a number of issues, and should be thoroughly researched before being attempted.
 
 ```js
-// Using Date objects
+// Implicit conversion
 const start = Date.now();
 
 // The event to time goes here:
@@ -408,7 +408,7 @@ const elapsed = end - start; // elapsed time in milliseconds
 ```
 
 ```js
-// Using built-in methods
+// Explicit conversion
 const start = new Date();
 
 // The event to time goes here:
@@ -424,7 +424,7 @@ function printElapsedTime(testFn) {
   const result = testFn();
   const endTime = Date.now();
 
-  console.log(`Elapsed time: ${String(endTime - startTime)} milliseconds`);
+  console.log(`Elapsed time: ${endTime - startTime} milliseconds`);
   return result;
 }
 
