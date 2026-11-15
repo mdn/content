@@ -11,6 +11,8 @@ The **`filter`** [CSS](/en-US/docs/Web/CSS) property applies graphical effects l
 
 Several [functions](#functions), such as `blur()` and `contrast()`, are available to help you achieve predefined effects.
 
+A value other than `none` makes the element the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block#identifying_the_containing_block) for any `position: absolute` or `position: fixed` descendants, unless the element is the document's root element.
+
 {{InteractiveExample("CSS Demo: filter")}}
 
 ```css interactive-example-choice
