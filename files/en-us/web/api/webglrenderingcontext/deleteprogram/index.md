@@ -22,7 +22,7 @@ deleteProgram(program)
 ### Parameters
 
 - `program`
-  - : A {{domxref("WebGLProgram")}} object to delete.
+  - : A {{domxref("WebGLProgram")}} object to delete. Passing `null` does nothing.
 
 ### Return value
 
