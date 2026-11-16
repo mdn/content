@@ -86,9 +86,8 @@ Our superuser is already authenticated and has all permissions, so we'll need to
 > ```
 >
 > For your own projects, consider whether you should set up a [custom user model](https://docs.djangoproject.com/en/6.1/topics/auth/customizing/#substituting-a-custom-user-model).
-> These allow more customization, but are not suitable in all cases.
-> They are also easier to set up before you run your first migration.
-> If using a custom user model the code to create the same user would look like this:
+> These allow more customization and are easier to set up before you run your first migration, but are not suitable in all cases.
+> When using a custom user model, the code to create the same user would look like this:
 >
 > ```python
 > # Get current user model from settings
