@@ -34,10 +34,10 @@ Events have three functions:
 
   - : The function called when this event occurs. The function is passed this argument:
 
-    - `content`
-      - : `string` The content of the resource.
     - `resource`
       - : {{WebExtAPIRef('devtools.inspectedWindow.Resource')}}. The resource that was committed.
+    - `content`
+      - : `string` The new content of the resource.
 
 {{WebExtExamples("h2")}}
 
