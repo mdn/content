@@ -156,9 +156,10 @@ Note that [render blocking](#render_blocking) may be used to ensure that importa
 
 ### Render blocking
 
-The `blocking="render"` attribute and value is now supported for the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} HTML elements. This allows for rendering to be blocked until the element's stylesheet has loaded or its script has run, including for elements that don't block rendering by default, such as scripts and stylesheets added with JavaScript.
+The `blocking="render"` attribute of the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} elements is supported.
+This lets you block rendering of the page until the marked stylesheet has loaded or script has run, so the page doesn't first appear unstyled or incomplete.
 You can also use [`<link rel="expect">`](/en-US/docs/Web/HTML/Reference/Attributes/rel#expect) with `blocking="render"` to block rendering until a particular element in the document has been parsed.
-The {{domxref("PerformanceResourceTiming.renderBlockingStatus")}} property tells you whether a resource blocked rendering.
+The {{domxref("PerformanceResourceTiming.renderBlockingStatus")}} property indicates whether a resource blocked rendering.
 ([Firefox bug 1751383](https://bugzil.la/1751383), [Firefox bug 2053279](https://bugzil.la/2053279)).
 
 | Release channel   | Version added | Enabled by default? |
