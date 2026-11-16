@@ -460,7 +460,7 @@ We set the anchor to {{cssxref("scale")}} by a factor of `1.5` when the anchor i
 }
 ```
 
-We can detect browsers that don't automatically adjust transformed anchor-positioned elements when their anchors are transformed using `@supports not named-feature(anchor-position-follows-transforms)` and manually correct the positioned element's position by setting the `left` value to `anchor(right)` plus half the `--anchor-length` custom property value when the anchor element is hovered or focused:
+We use `@supports not named-feature(anchor-position-follows-transforms)` to detect browsers that don't automatically adjust anchor-positioned elements when their anchors are transformed. In such cases, we manually correct the positioned element's position by setting the `left` value to `anchor(right)` plus half the `--anchor-length` custom property value when the anchor element is hovered or focused:
 
 ```css live-sample___named-feature
 @supports not named-feature(anchor-position-follows-transforms) {
