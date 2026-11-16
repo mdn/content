@@ -21,6 +21,24 @@ Other examples of controls include:
 - An element with a role of [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role): the scrollbar requires an `aria-controls` attribute referencing the ID of the element it controls.
 - A group of tabs that each display a different tab panel: each element with [`role="tab"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) has an `aria-controls` attribute referencing its associated [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role).
 
+## Values
+
+- `id` list
+  - : A space-separated list of one or more ID values referencing the elements being controlled by the current element
+
+## Associated interfaces
+
+- {{domxref("Element.ariaControlsElements")}}
+  - : The `ariaControlsElements` property is part of each element's interface.
+    Its value is an array of instances of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-controls` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
+- {{domxref("ElementInternals.ariaControlsElements")}}
+  - : The `ariaControlsElements` property is part of each custom element's interface.
+    Its value is an array of instances of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-controls` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
+
+## Associated roles
+
+Used in **ALL** roles.
+
 ## Example
 
 In this tabs example, each tab controls one tabpanel:
@@ -77,24 +95,6 @@ In this tabs example, each tab controls one tabpanel:
 
 > [!NOTE]
 > ARIA only modifies the accessibility tree for an element, identifying how assistive technology can present the content to users. ARIA doesn't change any implicit functionality or styling.
-
-## Values
-
-- `id` list
-  - : A space-separated list of one or more ID values referencing the elements being controlled by the current element
-
-## Associated interfaces
-
-- {{domxref("Element.ariaControlsElements")}}
-  - : The `ariaControlsElements` property is part of each element's interface.
-    Its value is an array of instances of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-controls` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
-- {{domxref("ElementInternals.ariaControlsElements")}}
-  - : The `ariaControlsElements` property is part of each custom element's interface.
-    Its value is an array of instances of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-controls` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
-
-## Associated roles
-
-Used in **ALL** roles.
 
 ## Specifications
 
