@@ -153,7 +153,7 @@ The `named-feature()` function checks whether a browser supports the specified n
 The following {{cssxref("ident")}} values can be specified as arguments for the `named-feature()` function:
 
 - `anchor-position-follows-transforms`
-  - : Checks whether the browser's [anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) calculations are [transform](/en-US/docs/Web/CSS/Guides/Transforms)-aware. In other words, when an anchor element has transforms applied, do elements positioned relative to that anchor have their placement shifted to the correct position relative to the anchor's transformed size or position? Older versions of the anchor positioning specification did not take transforms into account.
+  - : Checks whether the browser's [anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) calculations are [transform](/en-US/docs/Web/CSS/Guides/Transforms)-aware. In other words, when an anchor element has transforms applied, do elements positioned relative to that anchor shift relative to the anchor's transformed size or position? Originally, anchor positioning did not account for transforms.
 
 These named features represent valuable conditions that are not possible to test using other `@supports` mechanisms.
 
