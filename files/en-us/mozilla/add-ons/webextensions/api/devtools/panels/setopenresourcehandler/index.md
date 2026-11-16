@@ -12,7 +12,7 @@ Specifies the function called when the user clicks a resource link in the devtoo
 ## Syntax
 
 ```js-nolint
-let settingOpenResourceHandler = browser.devtools.setOpenResourceHandler(
+let settingOpenResourceHandler = browser.devtools.panels.setOpenResourceHandler(
   resource // object
 )
 ```

@@ -2,7 +2,7 @@
 title: devtools.panels.Button.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/Button/onClicked
 page-type: webextension-api-event
-browser-compat: webextensions.api.devtools.panels.Buttom.onClicked
+browser-compat: webextensions.api.devtools.panels.Button.onClicked
 ---
 
 {{AddonSidebar()}}
@@ -12,9 +12,9 @@ Fires when the button is clicked.
 ## Syntax
 
 ```js-nolint
-browser.devtools.panels.Buttom.onSelectionChanged.addListener(listener)
-browser.devtools.panels.Buttom.onSelectionChanged.removeListener(listener)
-browser.devtools.panels.Buttom.onSelectionChanged.hasListener(listener)
+browser.devtools.panels.Button.onClicked.addListener(listener)
+browser.devtools.panels.Button.onClicked.removeListener(listener)
+browser.devtools.panels.Button.onClicked.hasListener(listener)
 ```
 
 Events have three functions:

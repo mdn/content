@@ -10,7 +10,7 @@ An `ExtensionPanel` represents a panel added to the devtools. It's the resolutio
 
 ## Functions
 
-- [`devtools.panels.ExtensionPanel,createStatusBarButton()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel/createStatusBarButton)
+- [`createStatusBarButton()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel/createStatusBarButton)
   - : Appends a button to the status bar of the panel.
 
 ## Events
@@ -41,7 +41,7 @@ browser.devtools.panels
   .create(
     "My Panel", // title
     "icons/star.png", // icon
-    "devtools/panel/panel.html" // content
+    "devtools/panel/panel.html", // content
   )
   .then((newPanel) => {
     newPanel.onShown.addListener(handleShown);

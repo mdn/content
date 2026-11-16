@@ -12,7 +12,7 @@ Opens a URL in a devtools panel.
 ## Syntax
 
 ```js-nolint
-let openingResource = browser.devtools.openResource(
+let openingResource = browser.devtools.panels.openResource(
   columnNumber, // number
   lineNumber,    // number
   url            // string
