@@ -7,7 +7,7 @@ browser-compat: css.at-rules.page.descriptor_page-margin-safety
 sidebar: cssref
 ---
 
-The **`page-margin-safety`** [CSS](/en-US/docs/Web/CSS) descriptor for the {{cssxref("@page")}} at-rule constrains page margins so that the content stays within the printable page area.
+The **`page-margin-safety`** [CSS](/en-US/docs/Web/CSS) descriptor for the {{cssxref("@page")}} at-rule can be used to constrain page margins so that the content stays within the printable page area.
 
 ## Syntax
 
