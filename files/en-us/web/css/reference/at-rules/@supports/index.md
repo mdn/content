@@ -450,7 +450,7 @@ We position our second `<div>` relative to the anchor `<div>` by setting its {{c
 }
 ```
 
-On {{cssxref(":hover")}} and {{cssxref(":focus")}}, we {{cssxref("scale")}} the anchor by a factor of `1.5`. We set its {{cssxref("transform-origin")}} to `top left` so that the anchor's top-left corner stays in the same place, and the scaling happens towards the bottom-right corner:
+We set the anchor to {{cssxref("scale")}} by a factor of `1.5` when the anchor is hovered over or receives focus. We specify that the anchor should grow down and to the right by setting the {{cssxref("transform-origin")}} property to `top left`.
 
 ```css live-sample___named-feature
 .anchor:hover,
