@@ -95,7 +95,7 @@ The property only has an effect when hyphenation is enabled, for example by sett
 
 ### Limiting consecutive hyphenated lines
 
-In this example, we have two boxes containing the same text, which includes a very long word. Each box uses `hyphens: auto` and is narrow enough that the long word needs to be broken across three lines. The boxes set `hyphenate-limit-lines` to `no-limit` and `1`, respectively.
+This example demonstrates how the `hyphenate-limit-lines` property can be used to limit consecutive hyphenated lines.
 
 #### HTML
 
