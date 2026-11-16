@@ -576,6 +576,7 @@ Statcounter
 Stratford
 Stylo
 sunhpark42
+Supabase
 SVGOMG
 Swooop
 Symfony
