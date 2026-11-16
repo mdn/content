@@ -403,7 +403,7 @@ This example uses the `named-feature()` function with the [`anchor-position-foll
 
 #### HTML
 
-We include two {{htmlelement("div")}} elements to represent our anchor and positioned elements:
+We include an anchor element and a positioned element. We include the [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute on the anchor to enable keyboard focus.
 
 ```html live-sample___named-feature
 <div class="anchor" tabindex="0">Anchor</div>
