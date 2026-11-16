@@ -405,7 +405,7 @@ This example uses the `named-feature()` function with the [`anchor-position-foll
 
 We include an anchor element and a positioned element. We include the [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute on the anchor to enable keyboard focus.
 
-```html live-sample___named-feature
+```html live-sample___named-feature-usage
 <div class="anchor" tabindex="0">Anchor</div>
 
 <div class="positionedElem">Positioned</div>
@@ -415,7 +415,7 @@ We include an anchor element and a positioned element. We include the [`tabindex
 
 We store the size of our anchor element in a [CSS custom property](/en-US/docs/Web/CSS/Reference/Properties/--*), and use that to define the size of the first `<div>` element, which we designate as an anchor by giving it an {{cssxref("anchor-name")}}:
 
-```css live-sample___named-feature
+```css live-sample___named-feature-usage
 :root {
   --anchor-length: 100px;
 }
@@ -427,7 +427,7 @@ We store the size of our anchor element in a [CSS custom property](/en-US/docs/W
 }
 ```
 
-```css hidden live-sample___named-feature
+```css hidden live-sample___named-feature-usage
 .anchor,
 .positionedElem {
   border: 1px solid gray;
@@ -440,7 +440,7 @@ We store the size of our anchor element in a [CSS custom property](/en-US/docs/W
 
 We position our second `<div>` relative to the anchor `<div>` by setting its {{cssxref("position")}} to `absolute`, setting its {{cssxref("position-anchor")}} equal to the anchor `<div>`'s `anchor-name` identifier, and setting its {{cssxref("left")}} and {{cssxref("top")}} properties to {{cssxref("anchor()")}} functions. The `anchor(right)` function positions the positioned element's left edge next to the anchor's right edge, while `top: anchor(top);` aligns the two elements' top edges. Finally, we set a {{cssxref("margin-left")}} of `20px` to create some horizontal space between the two elements:
 
-```css live-sample___named-feature
+```css live-sample___named-feature-usage
 .positionedElem {
   position: absolute;
   position-anchor: --myAnchor;
@@ -452,7 +452,7 @@ We position our second `<div>` relative to the anchor `<div>` by setting its {{c
 
 We set the anchor to {{cssxref("scale")}} by a factor of `1.5` when the anchor is hovered over or receives focus. We specify that the anchor should grow down and to the right by setting the {{cssxref("transform-origin")}} property to `top left`.
 
-```css live-sample___named-feature
+```css live-sample___named-feature-usage
 .anchor:hover,
 .anchor:focus {
   transform-origin: top left;
@@ -462,7 +462,7 @@ We set the anchor to {{cssxref("scale")}} by a factor of `1.5` when the anchor i
 
 We use `@supports not named-feature(anchor-position-follows-transforms)` to detect browsers that don't automatically adjust anchor-positioned elements when their anchors are transformed. In such cases, we manually correct the positioned element's position by setting the `left` value to `anchor(right)` plus half the `--anchor-length` custom property value when the anchor element is hovered or focused:
 
-```css live-sample___named-feature
+```css live-sample___named-feature-usage
 @supports not named-feature(anchor-position-follows-transforms) {
   .anchor:hover + .positionedElem,
   .anchor:focus + .positionedElem {
@@ -473,7 +473,7 @@ We use `@supports not named-feature(anchor-position-follows-transforms)` to dete
 
 #### Result
 
-{{embedlivesample("named-feature", "100%", 200)}}
+{{embedlivesample("named-feature-usage", "100%", 200)}}
 
 Hover over or give focus to the anchor element to transform it. The positioned element stays the same distance from the anchor's right edge, whether or not the browser supports transform-aware anchor positioning.
 
