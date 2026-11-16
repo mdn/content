@@ -108,7 +108,7 @@ In this case, only the top page margin is constrained:
 
 ### Basic usage
 
-This example shows how to use the `page-margin-safety` descriptor to stop your page content from being cut off while printing. We present two versions of the same example, one with the `page-margin-safety` descriptor applied, and one without.
+This example shows how the `page-margin-safety` descriptor prevents page content from being cut off when printing by comparing two printed pages: one with the `page-margin-safety` descriptor applied and one without.
 
 #### HTML
 
