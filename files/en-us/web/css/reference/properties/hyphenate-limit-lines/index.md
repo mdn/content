@@ -159,4 +159,4 @@ In the second box, with `1`, only one hyphenated line is allowed in a row. The b
 - {{cssxref("hyphenate-character")}}
 - {{cssxref("hyphenate-limit-chars")}}
 - [Wrapping and breaking text](/en-US/docs/Web/CSS/Guides/Text/Wrapping_breaking_text)
-- [CSS Text module](/en-US/docs/Web/CSS/Guides/Text)
+- [CSS text module](/en-US/docs/Web/CSS/Guides/Text)
