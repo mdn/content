@@ -43,6 +43,10 @@ A new object with properties reflecting the options computed during the initiali
   - : The {{glossary("BCP 47 language tag")}} for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. No Unicode extension key will be included in the output.
 - `type`
   - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"cardinal"` or `"ordinal"`. The default is `"cardinal"`.
+- `notation`
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is one of `"standard"`, `"scientific"`, `"engineering"`, and `"compact"`. The default is `"standard"`.
+- `compactDisplay` {{optional_inline}}
+  - : Only present if `notation` is `"compact"`. The value provided for this property in the `options` argument, with default filled in as needed. It is either `"short"` or `"long"`. The default is `"short"`.
 - `minimumIntegerDigits`
   - : The value provided for this property in the `options` argument, with default filled in as needed.
 - `minimumFractionDigits`, `maximumFractionDigits` {{optional_inline}}
@@ -78,6 +82,8 @@ const usedOptions = de.resolvedOptions();
 console.log(usedOptions.locale); // "de-DE"
 console.log(usedOptions.pluralCategories); // Array ["one", "other"]
 console.log(usedOptions.type); // "cardinal"
+console.log(usedOptions.notation); // "standard"
+console.log(usedOptions.compactDisplay); // undefined (notation is not "compact")
 console.log(usedOptions.minimumIntegerDigits); // 1
 console.log(usedOptions.minimumFractionDigits); // undefined (maximumSignificantDigits is set)
 console.log(usedOptions.maximumFractionDigits); // undefined (maximumSignificantDigits is set)

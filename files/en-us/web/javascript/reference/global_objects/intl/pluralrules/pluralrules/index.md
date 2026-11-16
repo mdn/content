@@ -35,6 +35,11 @@ new Intl.PluralRules(locales, options)
         - `"ordinal"`
           - : For ordinal number (referring to the ordering or ranking of things, e.g., "1st", "2nd", "3rd" in English).
 
+    - `notation`
+      - : See [`Intl.NumberFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#notation). Possible values are `"standard"`, `"scientific"`, `"engineering"`, and `"compact"`; the default is `"standard"`.
+    - `compactDisplay`
+      - : See [`Intl.NumberFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#compactdisplay). Possible values are `"short"` and `"long"`; the default is `"short"`. Only used if `notation` is `"compact"`.
+
     `Intl.PluralRules` also supports the `Intl.NumberFormat()` [digit options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#digit_options) (see `Intl.NumberFormat()` for details):
     - `minimumIntegerDigits`
     - `minimumFractionDigits`
@@ -46,7 +51,9 @@ new Intl.PluralRules(locales, options)
     - `roundingMode`
     - `trailingZeroDisplay`
 
-    These options are interpreted as if the `notation` option from `Intl.NumberFormat` is `"standard"` and `style` is `"decimal"`.
+    These options are interpreted using the specified `notation` and as if the `style` option from `Intl.NumberFormat` is `"decimal"`.
+
+    Together, these options ensure that a number formatted by `NumberFormat` and the pluralized word selected based on this number can be joined together to form a grammatical phrase.
 
 ### Exceptions
 
@@ -72,7 +79,7 @@ pr.select(1); // 'one' if in US English locale
 pr.select(2); // 'other' if in US English locale
 ```
 
-### Using options
+### Ordinal formatting
 
 The results can be customized using the `options` argument, which has one property called `type` which you can set to `ordinal`. This is useful to figure out the ordinal indicator, e.g., "1st", "2nd", "3rd", "4th", "42nd",
 and so forth.
@@ -102,6 +109,62 @@ formatOrdinals(21); // '21st'
 formatOrdinals(42); // '42nd'
 formatOrdinals(103); // '103rd'
 ```
+
+### Using notation
+
+The `notation` affects the plural used because it may introduce wording differences in context. Consider displaying a quantity in French. It can be one of:
+
+- `{value} croissant` - singular croissant (`one`)
+- `{value} croissants` - plural croissants (`other`)
+- `{value} de croissants` - plural croissants used with a measuring word, like English "a bag of croissants" (`many`)
+
+Without passing `notation`, `PluralRules` will assume that you are always formatting the number with `notation: "standard"` (i.e., with no measuring words):
+
+```js
+const pr = new Intl.PluralRules("fr-FR");
+const nf = new Intl.NumberFormat("fr-FR");
+const formats = new Map([
+  ["one", "croissant"],
+  ["other", "croissants"],
+  ["many", "de croissants"],
+]);
+
+function getLabel(value) {
+  return `${nf.format(value)} ${formats.get(pr.select(value))}`;
+}
+
+console.log(getLabel(1)); // 1 croissant
+console.log(getLabel(10)); // 10 croissants
+console.log(getLabel(1000000)); // 1 000 000 de croissants (pronounced "un million de croissants")
+console.log(getLabel(1100000)); // 1 100 000 croissants (pronounced "un million cent mille croissants")
+```
+
+But if you actually want to format 1100000 as "1,1 million" instead (by using `notation: "compact"`), then "1,1 million croissants" is ungrammatical in French, and you must say "1,1 million _de_ croissants" because "million" is also a measuring word. You must tell `PluralRules` that you are formatting the number this way.
+
+```js
+const sharedOptions = { notation: "compact", compactDisplay: "long" };
+const pr = new Intl.PluralRules("fr-FR", sharedOptions);
+const nf = new Intl.NumberFormat("fr-FR", sharedOptions);
+const formats = new Map([
+  ["one", "croissant"],
+  ["other", "croissants"],
+  ["many", "de croissants"],
+]);
+
+function getLabel(value) {
+  return `${nf.format(value)} ${formats.get(pr.select(value))}`;
+}
+
+console.log(getLabel(1)); // 1 croissant
+console.log(getLabel(10)); // 10 croissants
+console.log(getLabel(1000000)); // 1 million de croissants
+console.log(getLabel(1100000)); // 1,1 million de croissants
+```
+
+> [!NOTE]
+> There's no known case where `compactDisplay` affects the plural selection, but you should keep the options passed to `NumberFormat` and `PluralRules` consistent, as demonstrated above.
+
+The same would happen when `notation` is `"scientific"` or `"engineering"`. You will get "1E0 croissant", "1E1 croissants", and "1E6 de croissants", respectively.
 
 ## Specifications
 
