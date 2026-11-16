@@ -438,7 +438,7 @@ We store the size of our anchor element in a [CSS custom property](/en-US/docs/W
 }
 ```
 
-We position our second `<div>` relative to the first `<div>` by setting its {{cssxref("position")}} to `absolute`, setting its {{cssxref("position-anchor")}} equal to the first `<div>`'s `anchor-name` identifier, and setting its {{cssxref("left")}} and {{cssxref("top")}} properties to {{cssxref("anchor()")}} functions. The `anchor(right)` function positions the positioned element's left edge next to the anchor's right edge, while `top: anchor(top);` positions the two element's top edges flush with one another. Finally, we set a {{cssxref("margin-left")}} of `20px` to create some horizontal space between the two elements:
+We position our second `<div>` relative to the anchor `<div>` by setting its {{cssxref("position")}} to `absolute`, setting its {{cssxref("position-anchor")}} equal to the anchor `<div>`'s `anchor-name` identifier, and setting its {{cssxref("left")}} and {{cssxref("top")}} properties to {{cssxref("anchor()")}} functions. The `anchor(right)` function positions the positioned element's left edge next to the anchor's right edge, while `top: anchor(top);` aligns the two elements' top edges. Finally, we set a {{cssxref("margin-left")}} of `20px` to create some horizontal space between the two elements:
 
 ```css live-sample___named-feature
 .positionedElem {
