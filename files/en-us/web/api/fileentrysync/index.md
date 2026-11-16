@@ -16,78 +16,12 @@ The `FileEntrySync` interface represents a file in a file system. It lets you wr
 > This interface is deprecated and is no more on the standard track.
 > _Do not use it anymore._ Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
-## Method overview
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td>
-        <code>FileWriterSync <a href="#createwriter">createWriter</a> ();</code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>File <a href="#file">file</a> ();</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Instance methods
 
-### createWriter()
-
-Creates a new `FileWriter` associated with the file that the `FileEntry` represents.
-
-```js-nolint
-createWriter()
-```
-
-#### Parameters
-
-None.
-
-#### Return value
-
-A `FileWriterSync` object.
-
-#### Exceptions
-
-This method can raise a [DOMException](/en-US/docs/Web/API/DOMException) with the following codes:
-
-| Exception           | Description                                                                    |
-| ------------------- | ------------------------------------------------------------------------------ |
-| `NOT_FOUND_ERR`     | The file does not exist.                                                       |
-| `INVALID_STATE_ERR` | The file is no longer valid for some reason other than it having been deleted. |
-
-### file()
-
-Returns a File that represents the current state of the file that this `FileEntry` represents.
-
-```js-nolint
-file()
-```
-
-#### Parameters
-
-None.
-
-#### Return value
-
-A `File` object.
-
-#### Exceptions
-
-This method can raise a [DOMException](/en-US/docs/Web/API/DOMException) with the following codes:
-
-| Exception           | Description                                                                    |
-| ------------------- | ------------------------------------------------------------------------------ |
-| `NOT_FOUND_ERR`     | The file does not exist.                                                       |
-| `INVALID_STATE_ERR` | The file is no longer valid for some reason other than it having been deleted. |
-
-## Description
-
-To write content to file, create a FileWriter object by calling [`createWriter()`](#createwriter).
+- {{domxref("FileEntrySync.createWriter()")}}
+  - : Creates a new `FileWriterSync` associated with the file that the `FileEntrySync` represents.
+- {{domxref("FileEntrySync.file()")}}
+  - : Returns a File that represents the current state of the file that this `FileEntry` represents.
 
 ## Specifications
 
