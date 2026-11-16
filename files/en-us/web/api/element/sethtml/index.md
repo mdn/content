@@ -8,10 +8,7 @@ browser-compat: api.Element.setHTML
 
 {{APIRef("HTML Sanitizer API")}}
 
-The **`setHTML()`** method of the {{domxref("Element")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and insert it into the DOM as a subtree of the element.
-
-The method removes any elements and attributes in the [XSS-safe baseline configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe-baseline-configuration) which removes unsafe elements (for example {{htmlelement("script")}}), event handlers, and JavaScript URLs. Additional elements and attributes, processing instructions and comments can be removed on top of these by passing a [sanitizer](#sanitizer) option of by using the default sanitizer if no `sanitizer` option is passed. For more information see the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API)., even if the caller passes a [sanitizer](#sanitizer) option which allows them. For more information see the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API).
-Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{HTMLElement("base")}}, {{SVGElement("use")}}, as well event handler content attributes (for example, `onclick`, `onload`, `onerror` and so forth). See [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) for more information.
+The **`setHTML()`** method of the {{domxref("Element")}} interface provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the DOM as a subtree of the element.
 
 It is recommended (if supported) as a drop-in replacement for {{domxref("Element.innerHTML")}} when setting a user-provided string of HTML.
 
@@ -29,11 +26,10 @@ setHTML(input, options)
 - `options` {{optional_inline}}
   - : An options object with the following optional parameters:
     - `sanitizer`
-      - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed, or the string `"default"` for the default configuration.
-        The method will remove any XSS-unsafe elements and attributes, even if allowed by the sanitizer.
-        If not specified, the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) is used.
+      - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines which items in the input will be removed, or the string `"default"` for the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
 
-        Note that if you're using the same configuration multiple times, it's expected to be more efficient to use a `Sanitizer` and modify it when you need to.
+        If this option is omitted, the default sanitizer configuration is used.
+        Note that if you're using the same configuration multiple times, it's likely to be more efficient to use a `Sanitizer` than a `SanitizerConfig`.
 
 ### Return value
 
@@ -50,38 +46,16 @@ None (`undefined`).
 
 ## Description
 
-The **`setHTML()`** method provides an XSS-safe method to parse and sanitize a string of HTML into a {{domxref("DocumentFragment")}}, and then insert it into the DOM as a subtree of the element.
+**`setHTML()`** provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the DOM as a subtree of the element.
 
-`setHTML()` drops any elements in the HTML input string that are invalid in the context of the current element, such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
-It then removes any [XSS-unsafe elements or attributes](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe-baseline-configuration) as well as HTML elements and attributes that aren't allowed by the sanitizer configuration. For more information see the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API).
-
-If no sanitizer is specified in the `options.sanitizer` parameter, `setHTML()` is used with the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
-This configuration is suitable for the majority of use cases as it prevents XSS attacks, as well as other attacks like clickjacking or spoofing.
+Like all [similar HTML setters](#related_html_setter_apis), it removes all elements from the input string that are invalid in the context of the node's parent element (or the shadow host, if the parent is a shadow root), such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
 
 For {{HTMLElement("template")}} elements, the HTML is inserted into the template contents (the template `DocumentFragment`), rather than as direct children.
-
-A custom {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} can be specified to choose which elements, attributes, and comments are allowed or removed.
-Note that even if unsafe options are allowed by the sanitizer, they will still be removed when using this method (it removes the same elements as a sanitizer on which {{domxref('Sanitizer.removeUnsafe()')}} has been called).
 
 `setHTML()` should be used instead of {{domxref("Element.innerHTML")}} for inserting untrusted strings of HTML into an element.
 It should also be used instead of {{domxref("Element.setHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
 
 Note that since this method always sanitizes input strings of XSS-unsafe entities, it is not secured or validated using the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
-
-### Related HTML setter APIs
-
-This is part of a series of APIs to set HTML in {{domxref("Element")}}:
-
-| Action                                         | API                                                       | Unsafe API                                                            |
-| ---------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------- |
-| Set the HTML contents of the element           | {{domxref("Element.setHTML", "setHTML")}}                 | {{domxref("Element.setHTMLUnsafe", "setHTMLUnsafe")}}                 |
-| Replace the entire element with this HTML      | {{domxref("Element.replaceWithHTML", "replaceWithHTML")}} | {{domxref("Element.replaceWithHTMLUnsafe", "replaceWithHTMLUnsafe")}} |
-| Add the HTML before the element                | {{domxref("Element.beforeHTML", "beforeHTML")}}           | {{domxref("Element.beforeHTMLUnsafe", "beforeHTMLUnsafe")}}           |
-| Add the HTML as the first child of the element | {{domxref("Element.prependHTML", "prependHTML")}}         | {{domxref("Element.prependHTMLUnsafe", "prependHTMLUnsafe")}}         |
-| Add the HTML as the last child of the element  | {{domxref("Element.appendHTML", "appendHTML")}}           | {{domxref("Element.appendHTMLUnsafe", "appendHTMLUnsafe")}}           |
-| Add the HTML after the element                 | {{domxref("Element.afterHTML", "afterHTML")}}             | {{domxref("Element.afterHTMLUnsafe", "afterHTMLUnsafe")}}             |
-
-Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allows scripts to be run using the `runScripts` options.
 
 ### Re-parsing and mutated XSS (mXSS)
 
@@ -108,6 +82,21 @@ otherDiv.setHTML(serializedHTML); // Safe — re-sanitized by setHTML()
 
 There is a class of attacks that take advantage of this flaw, referred to as [mutation XSS](https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#sanitizer-security-mxss).
 The simple rule to avoid this problem is to only ever inject HTML strings using safe methods such as `setHTML()`.
+
+### Related HTML setter APIs
+
+This is part of a series of APIs to set HTML in {{domxref("Element")}}:
+
+| Action                                         | API                                                       | Unsafe API                                                            |
+| ---------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------- |
+| Set the HTML contents of the element           | {{domxref("Element.setHTML", "setHTML")}}                 | {{domxref("Element.setHTMLUnsafe", "setHTMLUnsafe")}}                 |
+| Replace the entire element with this HTML      | {{domxref("Element.replaceWithHTML", "replaceWithHTML")}} | {{domxref("Element.replaceWithHTMLUnsafe", "replaceWithHTMLUnsafe")}} |
+| Add the HTML before the element                | {{domxref("Element.beforeHTML", "beforeHTML")}}           | {{domxref("Element.beforeHTMLUnsafe", "beforeHTMLUnsafe")}}           |
+| Add the HTML as the first child of the element | {{domxref("Element.prependHTML", "prependHTML")}}         | {{domxref("Element.prependHTMLUnsafe", "prependHTMLUnsafe")}}         |
+| Add the HTML as the last child of the element  | {{domxref("Element.appendHTML", "appendHTML")}}           | {{domxref("Element.appendHTMLUnsafe", "appendHTMLUnsafe")}}           |
+| Add the HTML after the element                 | {{domxref("Element.afterHTML", "afterHTML")}}             | {{domxref("Element.afterHTMLUnsafe", "afterHTMLUnsafe")}}             |
+
+Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allows scripts to be run using the `runScripts` options.
 
 ## Examples
 

@@ -10,10 +10,7 @@ browser-compat: api.CharacterData.beforeHTML
 
 {{APIRef("DOM")}}
 
-The **`beforeHTML()`** method of the {{domxref("CharacterData")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and insert it in the children list of the `CharacterData`'s parent, just before the `CharacterData`. Nothing happens if the node has no parent or the parent is a {{HTMLElement("script")}} element (and similar for SVG {{SVGElement("script")}} elements).
-
-The method removes any elements and attributes in the [XSS-safe baseline configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe-baseline-configuration) which removes unsafe elements (for example {{htmlelement("script")}}), event handlers, and JavaScript URLs. Additional elements and attributes, processing instructions and comments can be removed on top of these by passing a [sanitizer](#sanitizer) option of by using the default sanitizer if no `sanitizer` option is passed. For more information see the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API)., even if the caller passes a [sanitizer](#sanitizer) option which allows them. For more information see the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API).
-Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{HTMLElement("base")}}, {{SVGElement("use")}}, as well event handler content attributes (for example, `onclick`, `onload`, `onerror` and so forth). See [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) for more information.
+The **`beforeHTML()`** method of the {{domxref("CharacterData")}} interface provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the `CharacterData`'s parent, just before the `CharacterData`.
 
 ## Syntax
 
@@ -29,11 +26,10 @@ beforeHTML(input, options)
 - `options` {{optional_inline}} {{experimental_inline}}
   - : An options object with the following optional parameters:
     - `sanitizer` {{optional_inline}} {{experimental_inline}}
-      - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed, or the string `"default"` for the default configuration.
-        The method will remove any XSS-unsafe elements and attributes, even if allowed by the sanitizer.
-        If not specified, the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) is used.
+      - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines which items in the input will be removed, or the string `"default"` for the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
 
-        Note that if you're using the same configuration multiple times, it's expected to be more efficient to use a `Sanitizer` and modify it when you need to.
+        If this option is omitted, the default sanitizer configuration is used.
+        Note that if you're using the same configuration multiple times, it's likely to be more efficient to use a `Sanitizer` than a `SanitizerConfig`.
 
 ### Return value
 
@@ -53,21 +49,17 @@ None (`undefined`).
 
 ## Description
 
-`beforeHTML()` drops any elements in the HTML input string that are invalid in the context of the node's parent element (or the shadow host, if the parent is a shadow root), such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
+**`beforeHTML()`** provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the `CharacterData`'s parent, just before the `CharacterData`.
 
-It then removes any [XSS-unsafe elements or attributes](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe-baseline-configuration) as well as HTML elements and attributes that aren't allowed by the sanitizer configuration. For more information see the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API).
+Like all [similar HTML setters](#related_html_setter_apis), it removes all elements from the input string that are invalid in the context of the node's parent element (or the shadow host, if the parent is a shadow root), such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
 
-If no sanitizer is specified in the `options.sanitizer` parameter, `beforeHTML()` is used with the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
-This configuration is suitable for the majority of use cases as it prevents XSS attacks, as well as other attacks like clickjacking or spoofing.
+Nothing happens if the node has no parent or the parent is a {{HTMLElement("script")}} element (and similar for SVG {{SVGElement("script")}} elements).
 
-A custom {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} can be specified to choose which elements, attributes, and comments are allowed or removed.
-Note that even if unsafe options are allowed by the sanitizer, they will still be removed when using this method (it removes the same elements as a sanitizer on which {{domxref('Sanitizer.removeUnsafe()')}} has been called).
-
-`beforeHTML()` can be used instead of {{domxref("Element.setHTML")}} when HTML needs to be inserted before a text or comment node.
-
-It should also be used instead of {{domxref("CharacterData.beforeHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
+It should be used instead of {{domxref("CharacterData.beforeHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
 
 Note that since this method always sanitizes input strings of XSS-unsafe entities, it is not secured or validated using the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
+
+Even after sanitizing HTML input with with this method, it is still not safe to serialize the HTML and re-parse it using methods like `innerHTML`. See the [Re-parsing and mutated XSS](/en-US/docs/Web/API/Element/setHTML#re-parsing_and_mutated_xss_mxss) section of {{domxref("Element.setHTML()")}}.
 
 ### Related HTML setter APIs
 
