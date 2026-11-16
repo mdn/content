@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLElement.drawable
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("HTML DOM")}}
 
 The **`drawable`** property of the {{domxref("HTMLElement")}} interface marks an element as a **paint root**, meaning that it can be rendered independently on a parent {{htmlelement("canvas")}} element with its [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute set to `drawable`, using the [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API).
 
@@ -38,7 +38,7 @@ console.log(divElem.drawable); // true
 And set it like this:
 
 ```js
-divElem.drawable = "false";
+divElem.drawable = false;
 console.log(divElem.drawable); // false
 ```
 

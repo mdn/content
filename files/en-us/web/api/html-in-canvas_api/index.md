@@ -120,9 +120,9 @@ canvas.addEventListener("paint", () => {
 - {{domxref("HTMLCanvasElement.elementgeometryupdate_event", "elementgeometryupdate")}}
   - : Fired when `drawable` element geometry has been updated via an {{domxref("OffscreenCanvas")}}.
 
-### `HTMLElement`
+### `HTMLElement`, `SVGElement`, `MathMLElement`
 
-- {{DOMxRef("HTMLElement.drawable")}}
+- {{DOMxRef("HTMLElement.drawable")}}, {{DOMxRef("SVGElement.drawable")}}, {{DOMxRef("MathMLElement.drawable")}}
   - : Marks an element as a **paint root**, meaning that it can be rendered independently on a parent {{htmlelement("canvas")}} element with its [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute set to `drawable`, using the [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API). Reflects the value of the HTML [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) attribute.
 
 ### `OffscreenCanvas`
@@ -151,11 +151,11 @@ canvas.addEventListener("paint", () => {
 - {{domxref("GPUQueue.drawElementImageToTexture()")}}
   - : Draws a `drawable` element's state recorded during the current rendering update (or an {{domxref("ElementImage")}}) into a texture that can be used in a WebGPU canvas context.
 
-## HTML additions
+## Markup additions
 
 - `<canvas>` [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute
   - : Enables opting a `<canvas>` element into rendering its descendants rather than treating them as fallback content.
-- Global [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) attribute
+- HTML [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) attribute, SVG [`drawable`](/en-US/docs/Web/SVG/Reference/Attribute/drawable) attribute, MathML [`drawable`](/en-US/docs/Web/MathML/Reference/Global_attributes/drawable) attribute
   - : Marks an element as a **paint root**, meaning that it (along with its descendants) can be rendered independently on a parent `<canvas content="drawable">` element.
 
 ## Examples
