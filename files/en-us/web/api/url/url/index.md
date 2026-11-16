@@ -141,7 +141,7 @@ new URL("/url1/url2");
 If `base` is supplied, it must be an absolute URL (even if `url` is absolute):
 
 ```js
-new URL("/url1/url2", "/base1/base2");
+new URL("https://example.org/url1/url2", "/base1/base2");
 // TypeError exception: `base` not an absolute URL
 ```
 
