@@ -9,23 +9,6 @@ sidebar: htmlsidebar
 
 The **`popover`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is used to designate an element as a popover element.
 
-## Value
-
-The `popover` attribute can take one of the following values:
-
-- `"auto"`
-  - : [`auto`](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss) popovers can be "light dismissed" — this means that you can hide the popover by clicking outside it or pressing the <kbd>Esc</kbd> key. Showing an `auto` popover will generally close other `auto` popovers that are already displayed, unless they are nested.
-
-    > [!NOTE]
-    > Setting an empty value for `popover` — `popover` or `popover=""` — is equivalent to setting `popover="auto"`.
-
-- `"hint"`
-  - : [`hint`](/en-US/docs/Web/API/Popover_API/Using#using_hint_popover_state) popovers do not close `auto` popovers when they are displayed, but will close other hint popovers that are not its ancestors in the [hint stack](/en-US/docs/Web/API/Popover_API/Using#popover_openclose_interaction_rules).
-    They can be light dismissed and will respond to close requests.
-
-- `"manual"`
-  - : [`manual`](/en-US/docs/Web/API/Popover_API/Using#using_manual_popover_state) popovers cannot be "light dismissed" and are not automatically closed. Popovers must explicitly be displayed and closed using declarative show/hide/toggle buttons or JavaScript. Multiple independent `manual` popovers can be shown simultaneously.
-
 ## Description
 
 Popover elements are hidden via `display: none` until opened via an invoking/control element (i.e., a `<button>` or `<input type="button">` with a [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) attribute) or a {{domxref("HTMLElement.showPopover()")}} call.
@@ -45,6 +28,23 @@ By contrast, [`manual`](/en-US/docs/Web/API/Popover_API/Using#using_manual_popov
 Usually `hint` popovers are shown and hidden in response to non-click JavaScript events such as [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event)/[`mouseout`](/en-US/docs/Web/API/Element/mouseout_event) and [`focus`](/en-US/docs/Web/API/Element/focus_event)/[`blur`](/en-US/docs/Web/API/Element/blur_event). Clicking a button to open a `hint` popover would cause an open `auto` popover to light-dismiss.
 
 For detailed information on usage, see the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page.
+
+## Value
+
+The `popover` attribute can take one of the following values:
+
+- `"auto"`
+  - : [`auto`](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss) popovers can be "light dismissed" — this means that you can hide the popover by clicking outside it or pressing the <kbd>Esc</kbd> key. Showing an `auto` popover will generally close other `auto` popovers that are already displayed, unless they are nested.
+
+    > [!NOTE]
+    > Setting an empty value for `popover` — `popover` or `popover=""` — is equivalent to setting `popover="auto"`.
+
+- `"hint"`
+  - : [`hint`](/en-US/docs/Web/API/Popover_API/Using#using_hint_popover_state) popovers do not close `auto` popovers when they are displayed, but will close other hint popovers that are not its ancestors in the [hint stack](/en-US/docs/Web/API/Popover_API/Using#popover_openclose_interaction_rules).
+    They can be light dismissed and will respond to close requests.
+
+- `"manual"`
+  - : [`manual`](/en-US/docs/Web/API/Popover_API/Using#using_manual_popover_state) popovers cannot be "light dismissed" and are not automatically closed. Popovers must explicitly be displayed and closed using declarative show/hide/toggle buttons or JavaScript. Multiple independent `manual` popovers can be shown simultaneously.
 
 ## Examples
 

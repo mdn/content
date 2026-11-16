@@ -56,30 +56,6 @@ When used with progressbar and scrollbar, assistive technologies announce the va
 
 When the value to be announced, either the actual value or the value as a percent, may not be clear to users, the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) attribute should be used to provide a user-friendly representation of the value. When set, the valuetext string is announced instead of the valuenow numeric value. For example, if a slider represents the days of the week, so the day of the week's `aria-valuenow` is a number, the `aria-valuetext` property should be set to a string that makes the slider value understandable, such as "Monday".
 
-## Examples
-
-```html
-<p id="temperatureLabel">Oven Temperature</p>
-<div
-  role="meter"
-  id="temperature"
-  aria-valuenow="205"
-  aria-valuemin="70"
-  aria-valuemax="250"
-  aria-labelledby="temperatureLabel">
-  <div class="meter-color" aria-hidden="true"></div>
-</div>
-```
-
-The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so."
-
-```html
-<label for="temperature">Oven Temperature</label>
-<input type="range" id="temperature" value="205" min="70" max="250" step="5" />
-```
-
-If we employ native HTML semantics with {{HTMLElement('input')}} we get styles and semantics for free.
-
 ## Values
 
 - `<number>`
@@ -109,6 +85,30 @@ Inherited into roles:
 - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)
 - [`slider`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
 - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
+
+## Examples
+
+```html
+<p id="temperatureLabel">Oven Temperature</p>
+<div
+  role="meter"
+  id="temperature"
+  aria-valuenow="205"
+  aria-valuemin="70"
+  aria-valuemax="250"
+  aria-labelledby="temperatureLabel">
+  <div class="meter-color" aria-hidden="true"></div>
+</div>
+```
+
+The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so."
+
+```html
+<label for="temperature">Oven Temperature</label>
+<input type="range" id="temperature" value="205" min="70" max="250" step="5" />
+```
+
+If we employ native HTML semantics with {{HTMLElement('input')}} we get styles and semantics for free.
 
 ## Specifications
 

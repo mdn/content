@@ -52,17 +52,6 @@ By using the {{htmlelement("input")}} element with `type="checkbox"` instead of 
 - undefined (default)
   - : The element does not support being checked.
 
-## Associated roles
-
-Used in roles:
-
-- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
-- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
-- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
-- [`option`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
-- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
-- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
-
 ## Associated interfaces
 
 - {{domxref("Element.ariaChecked")}}
@@ -73,6 +62,17 @@ Used in roles:
 ```js
 myHTMLElement.ariaChecked = true;
 ```
+
+## Associated roles
+
+Used in roles:
+
+- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
+- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
+- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
+- [`option`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
+- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
+- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
 
 ## Specifications
 

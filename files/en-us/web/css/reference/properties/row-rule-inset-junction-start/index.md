@@ -3,9 +3,13 @@ title: "`row-rule-inset-junction-start` CSS property"
 short-title: row-rule-inset-junction-start
 slug: Web/CSS/Reference/Properties/row-rule-inset-junction-start
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.row-rule-inset-junction-start
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`row-rule-inset-junction-start`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the start edge of row rule segments that are [junction endpoints](#understanding_junction_start); that is, endpoints at gap junctions where rule segments intersect.
 

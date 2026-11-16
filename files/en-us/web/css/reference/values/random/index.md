@@ -164,8 +164,8 @@ Pair a `<dashed-ident>` with a scope keyword to narrow that sharing. `property-s
 .a,
 .b,
 .c {
-  width: random(--custom-name element-shared, 10px, 200px);
-  height: random(--custom-name element-shared, 10px, 200px);
+  width: random(--custom-name element-scoped, 10px, 200px);
+  height: random(--custom-name element-scoped, 10px, 200px);
 }
 ```
 
@@ -223,13 +223,13 @@ In this example, as `--defaultSize` is registered, `.a`, `.b`, and `.c` will be 
 }
 ```
 
-## Accessibility
-
-Because `random()` can generate an unknown value within a range, you don't have full control over what you get. This can lead to inaccessible results. For example, if you use `random()` to generate text color, you could end up with a value that has low contrast with its background. It is important to be mindful of the context in which `random()` is used, ensuring your results are always accessible.
-
 ## Formal syntax
 
 {{CSSSyntax}}
+
+## Accessibility
+
+Because `random()` can generate an unknown value within a range, you don't have full control over what you get. This can lead to inaccessible results. For example, if you use `random()` to generate text color, you could end up with a value that has low contrast with its background. It is important to be mindful of the context in which `random()` is used, ensuring your results are always accessible.
 
 ## Examples
 

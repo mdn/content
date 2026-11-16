@@ -20,7 +20,7 @@ isSampler(sampler)
 ### Parameters
 
 - `sampler`
-  - : A {{domxref("WebGLSampler")}} object to test.
+  - : A {{domxref("WebGLSampler")}} object to test. Passing `null` returns `false`.
 
 ### Return value
 

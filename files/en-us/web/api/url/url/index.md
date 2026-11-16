@@ -74,6 +74,9 @@ new URL("/en-US/docs", a);
 
 new URL("/en-US/docs", "https://developer.mozilla.org/fr-FR/toto");
 // => 'https://developer.mozilla.org/en-US/docs'
+
+new URL("https://example.com", "https://beispiel.de");
+// => 'https://example.com/'
 ```
 
 Here are some examples of invalid URLs:

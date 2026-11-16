@@ -22,6 +22,15 @@ This element is obsolete, however. You should use the more semantically helpful 
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes)
 
+## Usage notes
+
+The `<tt>` element is, by default, rendered using the browser's default non-proportional font. You can override this using CSS by creating a rule using the `tt` selector, as seen in the example [Overriding the default font](#overriding_the_default_font) above.
+
+> [!NOTE]
+> User-configured changes to the default monospace font setting may take precedence over your CSS.
+
+Although this element wasn't officially deprecated in HTML 4.01, its use was discouraged in favor of the semantic elements and/or CSS. The `<tt>` element is obsolete in HTML 5.
+
 ## Examples
 
 ### Basic example
@@ -67,15 +76,6 @@ tt {
 #### Result
 
 {{EmbedLiveSample("Overriding_the_default_font", 650, 80)}}
-
-## Usage notes
-
-The `<tt>` element is, by default, rendered using the browser's default non-proportional font. You can override this using CSS by creating a rule using the `tt` selector, as seen in the example [Overriding the default font](#overriding_the_default_font) above.
-
-> [!NOTE]
-> User-configured changes to the default monospace font setting may take precedence over your CSS.
-
-Although this element wasn't officially deprecated in HTML 4.01, its use was discouraged in favor of the semantic elements and/or CSS. The `<tt>` element is obsolete in HTML 5.
 
 ## Technical summary
 

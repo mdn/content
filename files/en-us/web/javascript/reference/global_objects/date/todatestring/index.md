@@ -42,7 +42,7 @@ A string representing the date portion of the given date (see description for th
 
 1. First three letters of the week day name
 2. First three letters of the month name
-3. Two-digit day of the month, padded on the left a zero if necessary
+3. Two-digit day of the month, padded on the left with a zero if necessary
 4. Four-digit year (at least), padded on the left with zeros if necessary. May have a negative sign
 
 For example: "Thu Jan 01 1970".

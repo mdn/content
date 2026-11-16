@@ -59,7 +59,7 @@ framebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer)
       - : Buffer data storage for single images in a renderable internal format.
 
 - `renderbuffer`
-  - : A {{domxref("WebGLRenderbuffer")}} object to attach.
+  - : A {{domxref("WebGLRenderbuffer")}} object to attach, or `null` to detach the image currently attached to the specified attachment point.
 
 ### Return value
 

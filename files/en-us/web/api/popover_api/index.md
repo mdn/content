@@ -69,6 +69,15 @@ A related feature — **interest invokers** — can be used to show popovers on 
 
 ## Extensions to other interfaces
 
+### Instance methods
+
+- {{domxref("HTMLElement.hidePopover()")}}
+  - : Hides a popover element by removing it from the top layer and styling it with `display: none`.
+- {{domxref("HTMLElement.showPopover()")}}
+  - : Shows a popover element by adding it to the top layer.
+- {{domxref("HTMLElement.togglePopover()")}}
+  - : Toggles a popover element between the showing and hidden states.
+
 ### Instance properties
 
 - {{domxref("HTMLButtonElement.interestForElement", "interestForElement")}} {{experimental_inline}}
@@ -79,15 +88,6 @@ A related feature — **interest invokers** — can be used to show popovers on 
   - : Gets and sets the popover element being controlled by the control button. The JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) HTML attribute.
 - {{domxref("HTMLButtonElement.popoverTargetAction")}} and {{domxref("HTMLInputElement.popoverTargetAction")}}
   - : Gets and sets the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on the popover element being controlled by the control button. Reflects the value of the [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction) HTML attribute.
-
-### Instance methods
-
-- {{domxref("HTMLElement.hidePopover()")}}
-  - : Hides a popover element by removing it from the top layer and styling it with `display: none`.
-- {{domxref("HTMLElement.showPopover()")}}
-  - : Shows a popover element by adding it to the top layer.
-- {{domxref("HTMLElement.togglePopover()")}}
-  - : Toggles a popover element between the showing and hidden states.
 
 ### Events
 

@@ -48,19 +48,6 @@ In all three scenarios, the attribute is unnecessary to add because the element 
 
 Using `aria-hidden="false"` will not re-expose the element to assistive technology if any of its parents specify `aria-hidden="true"`.
 
-## Example
-
-Adding `aria-hidden="true"` to the icon hides the icon character from being included in the accessible name.
-
-```html
-<button>
-  <span class="fa fa-tweet" aria-hidden="true"></span>
-  <span class="label"> Tweet </span>
-</button>
-```
-
-We have a button with [a Font Awesome icon](https://fontawesome.com/). We hide the icon from assistive technologies with `aria-hidden="true"`, as exposing the icon to assistive technologies could lead to redundancy or, if the icon doesn't have the same content as the visible text, confusion.
-
 ## Values
 
 - `false`
@@ -80,6 +67,19 @@ We have a button with [a Font Awesome icon](https://fontawesome.com/). We hide t
 ## Associated roles
 
 Used in **ALL** roles
+
+## Example
+
+Adding `aria-hidden="true"` to the icon hides the icon character from being included in the accessible name.
+
+```html
+<button>
+  <span class="fa fa-tweet" aria-hidden="true"></span>
+  <span class="label"> Tweet </span>
+</button>
+```
+
+We have a button with [a Font Awesome icon](https://fontawesome.com/). We hide the icon from assistive technologies with `aria-hidden="true"`, as exposing the icon to assistive technologies could lead to redundancy or, if the icon doesn't have the same content as the visible text, confusion.
 
 ## Specifications
 

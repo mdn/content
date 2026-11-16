@@ -28,6 +28,24 @@ The elements referenced by `aria-details` should be visible to all users. `aria-
 
 Unlike `aria-describedby`, elements referenced by `aria-details` are not used in accessible descriptions and are not turned into a plain string when presented to assistive technology users. If the associated content is not too long and flattening the contents of the referenced element to a simple string of text wouldn't cause loss of information, consider using `aria-describedby` instead. That said, it is valid for an element to have both `aria-details` and a description specified with either `aria-describedby` or `aria-description`.
 
+## Values
+
+- ID reference list
+  - : An `id` or space separated list of ids of elements that provide or link to additional related information.
+
+## Associated interfaces
+
+- {{domxref("Element.ariaDetailsElements")}}
+  - : The `ariaDetailsElements` property is part of each element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-details` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
+- {{domxref("ElementInternals.ariaDetailsElements")}}
+  - : The `ariaDetailsElements` property is part of each custom element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-details` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
+
+## Associated roles
+
+Used in **ALL** roles.
+
 ## Example
 
 When it comes to definition and term roles, the `aria-details` would be included on the [`term`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/term_role) element with the `id` of the element with a [`definition`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/definition_role) role.
@@ -56,24 +74,6 @@ When it comes to definition and term roles, the `aria-details` would be included
   <img alt="Animated Bézier curve showing 4 control points." src="bezier.gif" />
 </a>
 ```
-
-## Values
-
-- ID reference list
-  - : An `id` or space separated list of ids of elements that provide or link to additional related information.
-
-## Associated interfaces
-
-- {{domxref("Element.ariaDetailsElements")}}
-  - : The `ariaDetailsElements` property is part of each element's interface.
-    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-details` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
-- {{domxref("ElementInternals.ariaDetailsElements")}}
-  - : The `ariaDetailsElements` property is part of each custom element's interface.
-    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-details` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
-
-## Associated roles
-
-Used in **ALL** roles.
 
 ## Specifications
 
