@@ -138,7 +138,7 @@ new URL("/url1/url2");
 // TypeError exception: '/url1/url2' cannot be resolved
 ```
 
-If `base` is supplied, it must be an absolute URL:
+If `base` is supplied, it must be an absolute URL (even if `url` is absolute):
 
 ```js
 new URL("/url1/url2", "/base1/base2");
