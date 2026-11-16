@@ -40,9 +40,9 @@ drawElementImage(element, sx, sy, sw, sh, dx, dy, dw, dh, options)
 - `sy` {{optional_inline}}
   - : A number representing the vertical coordinate of the top-left corner of the source `element` area to render.
 - `sw` {{optional_inline}}
-  - : A number representing the width of the `element` area to render, in canvas units.
+  - : A number representing the width of the source `element` area to render, in canvas units.
 - `sh` {{optional_inline}}
-  - : A number representing the height of the `element` area to render, in canvas units.
+  - : A number representing the height of the source `element` area to render, in canvas units.
 - `options` {{optional_inline}}
   - : An object containing options. This can include:
     - `preserveElementGeometry` {{optional_inline}}
