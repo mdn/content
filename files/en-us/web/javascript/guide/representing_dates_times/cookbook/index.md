@@ -476,12 +476,12 @@ const tc39meetings = [
 // To follow the meetings remotely from Tokyo, calculate the times you would
 // need to join:
 const localTimeZone = "Asia/Tokyo";
-const localTimes = tc39meetings.map(({ dateTime, timeZone }) => {
-  return Temporal.PlainDateTime.from(dateTime)
+const localTimes = tc39meetings.map(({ dateTime, timeZone }) =>
+  Temporal.PlainDateTime.from(dateTime)
     .toZonedDateTime(timeZone, { disambiguation: "reject" })
     .withTimeZone(localTimeZone)
-    .toPlainDateTime();
-});
+    .toPlainDateTime(),
+);
 
 console.log(localTimes.map((dt) => dt.toString()));
 // [
@@ -783,35 +783,35 @@ An example HTML form inspired by [Days Calculator](https://www.timeanddate.com/d
 <form>
   <label>
     Enter future date:
-    <input type="date" name="futuredate" />
+    <input type="date" name="future-date" />
   </label>
   <button>Submit</button>
 </form>
 
-<div id="futuredate-results"></div>
+<div id="future-date-results"></div>
 ```
 
 ```js
 // Initialize the input; see 'Calendar input element'.
-const futureDatePicker = document.querySelector('input[name="futuredate"]');
+const futureDatePicker = document.querySelector('input[name="future-date"]');
 const today = Temporal.Now.plainDateISO();
 futureDatePicker.min = today;
 futureDatePicker.value = today.add({ months: 1 });
 
 document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault();
-  const futuredateParam = futureDatePicker.value;
-  if (!futuredateParam) return;
+  const futureDateParam = futureDatePicker.value;
+  if (!futureDateParam) return;
 
   const browserCalendar = new Intl.DateTimeFormat().resolvedOptions().calendar;
   const futureDate =
-    Temporal.PlainDate.from(futuredateParam).withCalendar(browserCalendar);
+    Temporal.PlainDate.from(futureDateParam).withCalendar(browserCalendar);
   const today = Temporal.Now.plainDateISO().withCalendar(browserCalendar);
   const until = today.until(futureDate, { largestUnit: "day" });
   const untilMonths = until.round({ largestUnit: "month", relativeTo: today });
 
   const dayString = until.toLocaleString();
-  const results = document.getElementById("futuredate-results");
+  const results = document.getElementById("future-date-results");
   results.innerHTML = `
     <p>From and including: <strong>${today.toLocaleString()}</strong></p>
     <p>To but not including: <strong>${futureDate.toLocaleString()}</strong></p>
