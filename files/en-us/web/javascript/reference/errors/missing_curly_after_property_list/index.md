@@ -2,9 +2,8 @@
 title: "SyntaxError: missing } after property list"
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "missing } after property list" occurs when there is a mistake
 in the [object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) syntax somewhere.

@@ -8,10 +8,7 @@ browser-compat: api.DocumentType.before
 
 {{APIRef("DOM")}}
 
-The **`DocumentType.before()`** method inserts a set of
-{{domxref("Node")}} objects or strings in the children list of the
-`DocumentType`'s parent, just before the `DocumentType`.
-Strings are inserted as equivalent {{domxref("Text")}} nodes.
+The **`before()`** method of the {{domxref("DocumentType")}} interface inserts a set of {{domxref("Node")}} objects or strings in the children list of this `DocumentType`'s parent, just before this `DocumentType`. Strings are inserted as equivalent {{domxref("Text")}} nodes. Nothing happens if {{domxref("Node.parentNode", "parentNode")}} is `null`.
 
 ## Syntax
 
@@ -41,12 +38,12 @@ None ({{jsxref("undefined")}}).
 
 Comment nodes are valid before doctype declarations but not advisable
 given they trigger quirks mode in IE. A
-[conditional comment](https://en.wikipedia.org/wiki/Conditional_comment)
+[conditional comment](https://www.sitepoint.com/internet-explorer-conditional-comments/)
 works for IE as well, though:
 
 ```js
-let docType = document.implementation.createDocumentType("html", "", "");
-let myDoc = document.implementation.createDocument("", "", docType);
+const docType = document.implementation.createDocumentType("html", "", "");
+const myDoc = document.implementation.createDocument("", "", docType);
 
 docType.before(
   document.createComment("<!--[if !IE]> conditional comment <![endif]-->"),
@@ -67,3 +64,5 @@ myDoc.childNodes;
 ## See also
 
 - {{domxref("DocumentType.after()")}}
+- {{domxref("CharacterData.before()")}}
+- {{domxref("Element.before()")}}

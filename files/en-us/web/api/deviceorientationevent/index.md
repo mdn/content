@@ -31,6 +31,11 @@ The **`DeviceOrientationEvent`** interface of the {{domxref("Device Orientation 
 - `DeviceOrientationEvent.webkitCompassAccuracy` {{Non-Standard_Inline}} {{ReadOnlyInline}}
   - : The accuracy of the compass means that the deviation is positive or negative. It's usually 10.
 
+## Static methods
+
+- {{domxref("DeviceOrientationEvent.requestPermission_static", "DeviceOrientationEvent.requestPermission()")}}
+  - : Requests the user's permission to access device orientation data. Returns a {{jsxref("Promise")}} that resolves with a string of `"granted"` or `"denied"`.
+
 ## Example
 
 ```js

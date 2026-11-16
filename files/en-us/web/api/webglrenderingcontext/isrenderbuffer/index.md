@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.isRenderbuffer
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.isRenderbuffer()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) returns `true` if the
@@ -21,7 +21,7 @@ isRenderbuffer(renderbuffer)
 ### Parameters
 
 - `renderbuffer`
-  - : A {{domxref("WebGLRenderbuffer")}} to check.
+  - : A {{domxref("WebGLRenderbuffer")}} to check. Passing `null` returns `false`.
 
 ### Return value
 

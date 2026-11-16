@@ -6,18 +6,22 @@ page-type: web-api-event
 browser-compat: api.VideoTrackList.change_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The `change` event is fired when a video track is made active or inactive, for example by changing the track's [`selected`](/en-US/docs/Web/API/VideoTrack/selected) property.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("change", (event) => {});
+```js-nolint
+addEventListener("change", (event) => { })
+```
 
-onchange = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onchange = (event) => { }
 ```
 
 ## Event type
@@ -42,7 +46,7 @@ toggleTrackButton.addEventListener("click", () => {
 });
 ```
 
-Using the `onchange` event handler property:
+Using the `onchange` event handler property (but note that this replaces other event listeners added using `onchange`, if any):
 
 ```js
 const videoElement = document.querySelector("video");

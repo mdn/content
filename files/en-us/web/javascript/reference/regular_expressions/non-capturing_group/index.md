@@ -3,9 +3,8 @@ title: "Non-capturing group: (?:...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Non-capturing_group
 page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.non_capturing_group
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 A **non-capturing group** groups a subpattern, allowing you to apply a [quantifier](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier) to the entire group or use [disjunctions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction) within it. It acts like the [grouping operator](/en-US/docs/Web/JavaScript/Reference/Operators/Grouping) in JavaScript expressions, and unlike [capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group), it does not memorize the matched text, allowing for better performance and avoiding confusion when the pattern also contains useful capturing groups.
 
@@ -65,7 +64,7 @@ function parseTitle(metastring) {
 parseTitle('title="foo"'); // 'foo'
 ```
 
-If we later decided to add `name='xxx'` as an alias for `title=`, we will need to group the disjunction in another group:
+If we later decided to add `name='xxx'` as an alias for `title=`, we would need to group the disjunction in another group:
 
 ```js example-bad
 function parseTitle(metastring) {
@@ -89,7 +88,7 @@ function parseTitle(metastring) {
 parseTitle('name="foo"'); // 'foo'
 ```
 
-[Named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) are another way to avoid refactoring hazards. It allows capturing groups to accessed by a custom name, which is unaffected when other capturing groups are added or removed.
+[Named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) are another way to avoid refactoring hazards. They allow capturing groups to be accessed by a custom name, which is unaffected when other capturing groups are added or removed.
 
 ## Specifications
 

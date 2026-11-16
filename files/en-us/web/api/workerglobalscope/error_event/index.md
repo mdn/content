@@ -12,13 +12,22 @@ The **`error`** event of the {{domxref("WorkerGlobalScope")}} interface fires wh
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("error", (event) => {});
-
-onerror = (message, filename, lineno, colno, error) => {};
+```js-nolint
+addEventListener("error", (event) => { })
 ```
+
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onerror = (message, filename, lineno, colno, error) => { }
+```
+
+> [!NOTE]
+> For historical reasons, `onerror` on {{domxref("Window")}} and `WorkerGlobalScope` objects is the only event handler property that receives more than one argument.
+>
+> For more details about this, see the page for the {{domxref("Window.error_event", "error")}} event on `Window` objects.
 
 ## Event type
 
@@ -26,7 +35,7 @@ A generic {{domxref("Event")}}.
 
 ## Example
 
-The following code snippet shows an `onerror` handler set inside a worker:
+The following code snippet shows an `onerror` handler set inside a worker (but note that this replaces other event listeners added using `onerror`, if any):
 
 ```js
 self.onerror = () => {

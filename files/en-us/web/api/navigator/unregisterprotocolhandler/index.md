@@ -25,7 +25,7 @@ unregisterProtocolHandler(scheme, url)
     For example, you can unregister the handler for SMS text message links by passing the `"sms"` scheme.
 - `url`
   - : A string containing the URL of the handler.
-    **This URL should match the one that was used to register the handler (e.g. it must include `%s`)**.
+    **This URL should match the one that was used to register the handler (e.g., it must include `%s`)**.
 
 ### Return value
 

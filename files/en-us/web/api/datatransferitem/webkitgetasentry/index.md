@@ -8,11 +8,12 @@ browser-compat: api.DataTransferItem.webkitGetAsEntry
 
 {{APIRef("HTML Drag and Drop API")}}
 
-If the item described by the {{domxref("DataTransferItem")}} is a file, `webkitGetAsEntry()` returns a {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}} representing it. If the item isn't a file, `null` is returned.
+The **`webkitGetAsEntry()`** method of the {{domxref("DataTransferItem")}} interface returns a {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}} representing the item if it is a file. If the item isn't a file, `null` is returned.
+
+During a drag operation, this method can only read data in the handlers for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} and {{domxref("HTMLElement/drop_event", "drop")}} events, because those are the only times the drag data store is readable. Calling it from any other drag event returns `null`. See [Reading the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#reading_the_drag_data_store) for details.
 
 > [!NOTE]
-> This function is implemented as `webkitGetAsEntry()` in non-WebKit browsers including Firefox at this time; it may be renamed to
-> `getAsEntry()` in the future, so you should code defensively, looking for both.
+> This function is implemented as `webkitGetAsEntry()` in non-WebKit browsers including Firefox at this time; it may be renamed to `getAsEntry()` in the future, so you should code defensively, looking for both.
 
 ## Syntax
 
@@ -133,36 +134,28 @@ Any of them which are files are inserted into the list; any which are directorie
 Then come the event handlers. First, we prevent the {{domxref("HTMLElement/dragover_event", "dragover")}} event from being handled by the default handler, so that our drop zone can receive the drop:
 
 ```js
-dropzone.addEventListener(
-  "dragover",
-  (event) => {
-    event.preventDefault();
-  },
-  false,
-);
+dropzone.addEventListener("dragover", (event) => {
+  event.preventDefault();
+});
 ```
 
 The event handler that kicks everything off, of course, is the handler for the {{domxref("HTMLElement/drop_event", "drop")}} event:
 
 ```js
-dropzone.addEventListener(
-  "drop",
-  (event) => {
-    let items = event.dataTransfer.items;
+dropzone.addEventListener("drop", (event) => {
+  let items = event.dataTransfer.items;
 
-    event.preventDefault();
-    listing.textContent = "";
+  event.preventDefault();
+  listing.textContent = "";
 
-    for (let i = 0; i < items.length; i++) {
-      let item = items[i].webkitGetAsEntry();
+  for (const item of items) {
+    const entry = item.webkitGetAsEntry();
 
-      if (item) {
-        scanFiles(item, listing);
-      }
+    if (entry) {
+      scanFiles(entry, listing);
     }
-  },
-  false,
-);
+  }
+});
 ```
 
 This fetches the list of {{domxref("DataTransferItem")}} objects representing the items dropped from `event.dataTransfer.items`.
@@ -192,7 +185,6 @@ You can see how this works by trying it out below. Find some files and directori
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("DataTransferItem")}}
 - {{domxref("FileSystemEntry")}}, {{domxref("FileSystemFileEntry")}}, and {{domxref("FileSystemDirectoryEntry")}}
 - Events: {{domxref("HTMLElement/dragover_event", "dragover")}} and {{domxref("HTMLElement/drop_event", "drop")}}

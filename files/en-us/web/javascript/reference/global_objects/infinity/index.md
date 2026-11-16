@@ -3,13 +3,24 @@ title: Infinity
 slug: Web/JavaScript/Reference/Global_Objects/Infinity
 page-type: javascript-global-property
 browser-compat: javascript.builtins.Infinity
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Objects")}}
 
 The **`Infinity`** global property is a numeric value representing infinity.
 
-{{EmbedInteractiveExample("pages/js/globalprops-infinity.html")}}
+{{InteractiveExample("JavaScript Demo: Infinity")}}
+
+```js interactive-example
+const maxNumber = 10 ** 1000; // Max positive number
+
+if (maxNumber === Infinity) {
+  console.log("Let's call it Infinity!");
+  // Expected output: "Let's call it Infinity!"
+}
+
+console.log(1 / maxNumber);
+// Expected output: 0
+```
 
 ## Value
 
@@ -32,7 +43,7 @@ This value behaves slightly differently than mathematical infinity; see {{jsxref
 ```js
 console.log(Infinity); /* Infinity */
 console.log(Infinity + 1); /* Infinity */
-console.log(Math.pow(10, 1000)); /* Infinity */
+console.log(10 ** 1000); /* Infinity */
 console.log(Math.log(0)); /* -Infinity */
 console.log(1 / Infinity); /* 0 */
 console.log(1 / 0); /* Infinity */

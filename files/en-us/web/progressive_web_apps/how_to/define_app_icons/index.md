@@ -2,9 +2,8 @@
 title: Define your app icons
 slug: Web/Progressive_web_apps/How_to/Define_app_icons
 page-type: how-to
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 [Progressive Web Apps (PWAs)](/en-US/docs/Web/Progressive_web_apps) can be installed on devices just like other apps. Once a PWA is installed, its app icon appears on the device's home screen, dock, taskbar, or any other place where operating system native apps normally appear.
 
@@ -15,7 +14,7 @@ For example, on Windows, the taskbar can contain icons for both native and PWA a
 When creating a PWA, you can define your own set of icons to be used when the app is installed on a device. This article explains how to define your own app icons, which icon sizes to create, and how to make your icons support masking.
 
 > [!NOTE]
-> The PWA app icon is not the same as the {{glossary("favicon")}} image, which is displayed in places like the browser's address bar. PWAs can have both a favicon and an app icon. To learn more about favicons, see [Adding custom icons to your site](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site).
+> The PWA app icon is not the same as the {{glossary("favicon")}} image, which is displayed in places like the browser's address bar. PWAs can have both a favicon and an app icon. To learn more about favicons, see [Adding custom icons to your site](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_custom_icons_to_your_site).
 
 ## Design your icon
 
@@ -29,7 +28,7 @@ Designing your icon as an SVG file is a good idea, as this will allow it to be s
 
 ## Reference your icons in the web app manifest
 
-Use the [`icons`](/en-US/docs/Web/Manifest/icons) web app manifest member to define a set of icons for your PWA.
+Use the [`icons`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons) web app manifest member to define a set of icons for your PWA.
 
 As described in [Create the necessary icon sizes](#create_the_necessary_icon_sizes), you should create multiple versions of your icon to ensure it appears correctly in all the places where it's used. This is why the `icons` member is an array of objects, each of which represents an icon, with its own size, type, and purpose. Each icon object has the following properties:
 
@@ -85,13 +84,13 @@ Various operating systems use different icon sizes in different places and for d
 
 For example, Windows can display your app icon as a 44x44 pixels image in the taskbar, or as a 150x150 pixels image in the start menu. Use the links below for more information about the icon sizes used by different operating systems and tips for creating effective icons:
 
-- For Windows, see [Define icons and a theme color](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/icon-theme-color) on learn.microsoft.com.
+- For Windows, see [Define icons and a theme color](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/how-to/icon-theme-color) on learn.microsoft.com.
 - For Android, see [Google Play icon design specifications](https://developer.android.com/distribute/google-play/resources/icon-design-specifications) on developer.android.com.
 - For iOS and macOS, see [App icons](https://developer.apple.com/design/human-interface-guidelines/app-icons#App-icon-sizes) on developer.apple.com.
 
 The sizes at which your icon is displayed depend on the operating system and may change over time. It's best to test your icon on all the devices and operating systems you want to support, and generate the sizes and image types that lead to the best results. You can also use a tool like [PWA Image Generator](https://www.pwabuilder.com/imageGenerator) to generate the necessary icon sizes for you from a single high-definition image.
 
-Note that some operating systems support [SVG](/en-US/docs/Web/SVG) icons which can help reduce the number of images you need to create since SVG can be scaled to any size automatically. If your SVG icon doesn't scale down to small sizes nicely. creating additional icons with fewer details and less complexity may be necessary. To support all OSs and small sizes, create PNG versions of your icon as well.
+Note that some operating systems support [SVG](/en-US/docs/Web/SVG) icons which can help reduce the number of images you need to create since SVG can be scaled to any size automatically. If your SVG icon doesn't scale down to small sizes nicely, creating additional icons with fewer details and less complexity may be necessary. To support all OSs and small sizes, create PNG versions of your icon as well.
 
 The following web app manifest example uses a WebP image for the small icon, an ICO image for medium size icons, and a scalable SVG image for higher resolution icons:
 
@@ -159,8 +158,8 @@ You can also use tools like [Maskable.app](https://maskable.app/) to preview how
 
 ## See also
 
-- [`icons` manifest member](/en-US/docs/Web/Manifest/icons)
+- [`icons` manifest member](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons)
 - [App design](https://web.dev/learn/pwa/app-design#the_icon) on web.dev
 - [Adaptive icon support in PWAs with maskable icons](https://web.dev/articles/maskable-icon) on web.dev
-- [Define icons and a theme color](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/icon-theme-color) on microsoft.com
+- [Define icons and a theme color](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/how-to/icon-theme-color) on microsoft.com
 - [PWA Image Generator](https://www.pwabuilder.com/imageGenerator) on pwabuilder.com

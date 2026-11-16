@@ -17,11 +17,9 @@ The **`PublicKeyCredential`** interface provides information about a public key 
 ## Instance properties
 
 - {{domxref("PublicKeyCredential.authenticatorAttachment")}} {{ReadOnlyInline}}
-
   - : A string that indicates the mechanism by which the WebAuthn implementation is attached to the authenticator at the time the associated {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} or {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} call completes.
 
 - {{domxref("PublicKeyCredential.id")}} {{ReadOnlyInline}}
-
   - : Inherited from {{domxref("Credential")}} and overridden to be the [base64url encoding](/en-US/docs/Glossary/Base64) of {{domxref("PublicKeyCredential.rawId")}}.
 
 - {{domxref("PublicKeyCredential.rawId")}} {{ReadOnlyInline}}
@@ -33,6 +31,8 @@ The **`PublicKeyCredential`** interface provides information about a public key 
 
 ## Static methods
 
+- {{domxref("PublicKeyCredential.getClientCapabilities_static", "PublicKeyCredential.getClientCapabilities()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves with an object that can be used to check whether or not particular WebAuthn capabilities and [extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions) are supported.
 - {{domxref("PublicKeyCredential.isConditionalMediationAvailable_static", "PublicKeyCredential.isConditionalMediationAvailable()")}}
   - : Returns a {{jsxref("Promise")}} which resolves to `true` if conditional mediation is available.
 - {{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable_static", "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}}
@@ -41,13 +41,19 @@ The **`PublicKeyCredential`** interface provides information about a public key 
   - : Convenience method for deserializing server-sent credential registration data when [registering a user with credentials](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user).
 - {{domxref("PublicKeyCredential.parseRequestOptionsFromJSON_static", "PublicKeyCredential.parseRequestOptionsFromJSON()")}}
   - : Convenience method for deserializing server-sent credential request data when [authenticating a (registered) user](/en-US/docs/Web/API/Web_Authentication_API#authenticating_a_user).
+- {{domxref("PublicKeyCredential.signalAllAcceptedCredentials_static", "PublicKeyCredential.signalAllAcceptedCredentials()")}}
+  - : Signals to the authenticator all of the valid [credential IDs](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#id) that the [relying party](https://en.wikipedia.org/wiki/Relying_party) server still holds for a particular user.
+- {{domxref("PublicKeyCredential.signalCurrentUserDetails_static", "PublicKeyCredential.signalCurrentUserDetails()")}}
+  - : Signals to the authenticator that a particular user has updated their user name and/or display name.
+- {{domxref("PublicKeyCredential.signalUnknownCredential_static", "PublicKeyCredential.signalUnknownCredential()")}}
+  - : Signals to the authenticator that a [credential ID](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#id) was not recognized by the [relying party](https://en.wikipedia.org/wiki/Relying_party) server, for example because it was deleted.
 
 ## Instance methods
 
 - {{domxref("PublicKeyCredential.getClientExtensionResults()")}}
   - : If any extensions were requested, this method will return the results of processing those extensions.
 - {{domxref("PublicKeyCredential.toJSON()")}}
-  - : Convenience method for creating a JSON string representation of a `PublicKeyCredential` for sending to the server when [registering a user with credentials](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user) and [authenticating a registered user](/en-US/docs/Web/API/Web_Authentication_API#authenticating_a_user).
+  - : Returns a JSON-serializable plain object representing the `PublicKeyCredential` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 
@@ -98,9 +104,7 @@ Here, we fetch an existing credential from an authenticator, using {{domxref("Cr
 ```js
 const requestCredentialOptions = {
   publicKey: {
-    challenge: new Uint8Array([
-      /* bytes sent from the server */
-    ]),
+    challenge: new Uint8Array([/* bytes sent from the server */]),
   },
 };
 

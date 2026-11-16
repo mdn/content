@@ -1,18 +1,40 @@
 ---
-title: Extend
-slug: WebAssembly/Reference/Numeric/Extend
+title: "extend: Wasm numeric instruction"
+short-title: extend
+slug: WebAssembly/Reference/Numeric/extend
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.extend
+sidebar: webassemblysidebar
 ---
 
-{{WebAssemblySidebar}}
+The **`extend`** [numeric instructions](/en-US/docs/WebAssembly/Reference/Numeric) are used to convert (extend) numbers of type `i32` to type `i64`. There are signed and unsigned versions of this instruction.
 
-The **`extend`** instructions, are used to convert (extend) numbers of type `i32` to type `i64`. There are signed and unsigned versions of this instruction.
+{{InteractiveExample("Wat Demo: extend", "tabbed-taller")}}
 
-{{EmbedInteractiveExample("pages/wat/extend.html", "tabbed-taller")}}
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param i64)))
+  (func $main
+
+    i32.const 10 ;; push an i32 onto the stack
+
+    i64.extend_i32_s ;; sign-extend from i32 to i64
+
+    call $log ;; log the result
+
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 
-```wasm
+```wat
 ;; push an i32 onto the stack
 i32.const 10
 
@@ -26,3 +48,11 @@ i64.extend_i32_s
 | ------------------ | ------------- |
 | `i64.extend_i32_s` | `0xac`        |
 | `i64.extend_i32_u` | `0xad`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

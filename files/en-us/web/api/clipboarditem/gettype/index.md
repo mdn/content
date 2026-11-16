@@ -34,8 +34,7 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} object.
 
 ## Examples
 
-In the following example, we're returning all items on the clipboard via the {{domxref("clipboard.read()")}} method.
-Then utilizing the {{domxref("ClipboardItem.types")}} property to set the `getType()` argument and return the corresponding blob object.
+In the following example, we're returning all items on the clipboard via the {{domxref("clipboard.read()")}} method. For each one, we pass the {{domxref("ClipboardItem.types")}} property to the `getType()` method, which returns the corresponding `Blob` object.
 
 ```js
 async function getClipboardContents() {

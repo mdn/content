@@ -1,0 +1,141 @@
+---
+title: "Test your skills: Audio and video"
+short-title: "Test: Audio and video"
+slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
+page-type: learn-module-assessment
+sidebar: learnsidebar
+---
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/Splash_page", "Learn_web_development/Core/Structuring_content")}}
+
+The aim of this skill test is to help you assess whether you understand how to [embed video and audio content in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio).
+
+> [!NOTE]
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+
+## Audio and video 1
+
+In this task, we want you to embed an audio file onto the page.
+
+To complete this task:
+
+1. Add the path to the audio file to an appropriate attribute to embed it on the page. The audio is called `audio.mp3`, and it is available at the path `https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/audio-video/audio.mp3`.
+2. Add an attribute to make browsers display some default controls.
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample('audio-1', "100%", 150) }}
+
+Here's the underlying code for this starting point:
+
+```html live-sample___audio-1
+<h1>Basic audio embed</h1>
+
+<audio></audio>
+```
+
+<!-- Shared styles -->
+
+```css hidden live-sample___video-1 live-sample___audio-1 live-sample___video-1-finished live-sample___audio-1-finished
+body {
+  background-color: white;
+  color: #333333;
+  font:
+    1em / 1.4 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
+    sans-serif;
+  padding: 1em;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+audio,
+video {
+  border: 1px solid black;
+}
+```
+
+The updated content should look like this:
+
+{{ EmbedLiveSample('audio-1-finished', "100%", 180) }}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+Your finished HTML should look like this:
+
+```html live-sample___audio-1-finished
+<h1>Basic audio embed</h1>
+
+<audio
+  controls
+  src="https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/audio-video/audio.mp3"></audio>
+```
+
+</details>
+
+## Audio and video 2
+
+In this task, we want you to mark up a slightly more complex video player, with multiple sources, subtitles, and other features besides.
+
+To complete this task:
+
+1. Add an attribute to make browsers display some default controls.
+2. Add multiple sources, containing the paths to the video files. The files are called `video.mp4` and `video.webm`, and are available at the following paths:
+   1. `https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/audio-video/video.mp4`
+   2. `https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/audio-video/video.webm`
+3. Let the browser know in advance what video formats the sources point to, so it can make an informed choice of which one to download ahead of time.
+4. Give the `<video>` a width and height equal to its intrinsic size (320 by 240 pixels).
+5. Make the video muted by default.
+6. Display the text tracks contained in the `subtitles_en.vtt` file when the video is playing. You must explicitly set the type as subtitles, and the subtitle language to English. Also set the `default` attribute so that the track is displayed by default.
+   > [!NOTE]
+   > If you are completing the task live on MDN via the MDN Playground, the path you need is `/shared-assets/misc/subtitles_en.vtt`. If you decide to recreate the example on your local file system, you can find a copy at the path `https://mdn.github.io/shared-assets/misc/subtitles_en.vtt`.
+7. Make sure the readers can identify the subtitle language when they use the default controls.
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample('video-1', "100%", 300)}}
+
+Here's the underlying code for this starting point:
+
+```html live-sample___video-1
+<h1>Video embed</h1>
+
+<video></video>
+```
+
+The updated content should look like this:
+
+{{EmbedLiveSample('video-1-finished', "100%", 380)}}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+Your finished HTML should look like this:
+
+```html live-sample___video-1-finished
+<h1>Video embed</h1>
+
+<video controls width="320" height="240" muted>
+  <source
+    src="https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/audio-video/video.mp4"
+    type="video/mp4" />
+  <source
+    src="https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/audio-video/video.webm"
+    type="video/webm" />
+  <track
+    kind="subtitles"
+    src="/shared-assets/misc/subtitles_en.vtt"
+    srclang="en"
+    label="English"
+    default />
+</video>
+```
+
+</details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/Splash_page", "Learn_web_development/Core/Structuring_content")}}

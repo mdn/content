@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Request.referrer
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`referrer`** read-only property of the
 {{domxref("Request")}} interface is set by the user agent to be the referrer of the
@@ -42,5 +42,5 @@ const myReferrer = myRequest.referrer; // returns "about:client" by default
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

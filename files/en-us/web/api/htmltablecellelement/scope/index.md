@@ -14,7 +14,7 @@ indicates the scope of a {{HTMLElement("th")}} cell.
 Header cells can be configured, using the `scope` attribute, to apply to a specified row or column, or to the not-yet-scoped cells within the current row group (that is, the same ancestor {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, or {{HTMLElement("tfoot")}} element). If no value is specified for `scope`, the header is not associated directly with cells in this way. Permitted values for `scope` are:
 
 > [!NOTE]
-> This property doesn't have a visual effect in browsers. It adds semantic information to help assistive technology like screenreaders to present the table in a more coherent way.
+> This property doesn't have a visual effect in browsers. It adds semantic information to help assistive technology like screen readers to present the table in a more coherent way.
 
 ## Value
 
@@ -33,7 +33,7 @@ One of the following values:
 
 ## Examples
 
-This example adds a label all the cell numbers of the first row of the `tbody`.
+This example adds a scope label to all the `th` numbers of the `thead`.
 
 ### HTML
 
@@ -42,55 +42,68 @@ This example adds a label all the cell numbers of the first row of the `tbody`.
   <caption>
     Tallest Dams
   </caption>
-  <tr>
-    <td></td>
-    <th scope="col">Dam</th>
-    <th scope="col">Country</th>
-    <th scope="col">Height</th>
-  </tr>
-  <tr>
-    <td>1.</td>
-    <th scope="row">Jinping-I Dam</th>
-    <td>China</td>
-    <td>305 m</td>
-  </tr>
-  <tr>
-    <td>2.</td>
-    <th scope="row">Nurek Dam</th>
-    <td>Tajikistan</td>
-    <td>300 m</td>
-  </tr>
-  <tr>
-    <td>3.</td>
-    <th scope="row">Lianghekou Dam</th>
-    <td>China</td>
-    <td>295 m</td>
-  </tr>
-  <tr>
-    <td>4.</td>
-    <th scope="row">Xiowan Dam</th>
-    <td>China</td>
-    <td>292 m</td>
-  </tr>
-  <tr>
-    <td>5.</td>
-    <th scope="row">Balhetan Dam</th>
-    <td>China</td>
-    <td>289 m</td>
-  </tr>
-  <tr>
-    <td>6.</td>
-    <th scope="row">Xiluodu Dam</th>
-    <td>China</td>
-    <td>285.5 m</td>
-  </tr>
-  <tr>
-    <td>7.</td>
-    <th scope="row">Grande-Dixence Dam</th>
-    <td>Switzerland</td>
-    <td>285 m</td>
-  </tr>
+  <thead>
+    <tr>
+      <td></td>
+      <th>Dam</th>
+      <th>Country</th>
+      <th>Height</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.</td>
+      <th scope="row">Jinping-I Dam</th>
+      <td>China</td>
+      <td>305 m</td>
+    </tr>
+    <tr>
+      <td>2.</td>
+      <th scope="row">Nurek Dam</th>
+      <td>Tajikistan</td>
+      <td>300 m</td>
+    </tr>
+    <tr>
+      <td>3.</td>
+      <th scope="row">Lianghekou Dam</th>
+      <td>China</td>
+      <td>295 m</td>
+    </tr>
+    <tr>
+      <td>4.</td>
+      <th scope="row">Xiowan Dam</th>
+      <td>China</td>
+      <td>292 m</td>
+    </tr>
+    <tr>
+      <td>5.</td>
+      <th scope="row">Balhetan Dam</th>
+      <td>China</td>
+      <td>289 m</td>
+    </tr>
+    <tr>
+      <td>6.</td>
+      <th scope="row">Xiluodu Dam</th>
+      <td>China</td>
+      <td>285.5 m</td>
+    </tr>
+    <tr>
+      <td>7.</td>
+      <th scope="row">Grande-Dixence Dam</th>
+      <td>Switzerland</td>
+      <td>285 m</td>
+    </tr>
+  </tbody>
 </table>
+```
+
+### JavaScript
+
+```js
+const thElements = document.querySelectorAll("thead th");
+thElements.forEach((th) => {
+  th.scope = "col";
+});
 ```
 
 ### Results

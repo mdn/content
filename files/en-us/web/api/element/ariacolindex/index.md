@@ -8,7 +8,7 @@ browser-compat: api.Element.ariaColIndex
 
 {{APIRef("DOM")}}
 
-The **`ariaColIndex`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) attribute, which defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.
+The **`ariaColIndex`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) attribute, which defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.
 
 ## Value
 
@@ -85,4 +85,4 @@ console.log(el.ariaColIndex); // 2
 
 ## See also
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)

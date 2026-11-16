@@ -1,11 +1,11 @@
 ---
 title: Intl.Locale.prototype.getHourCycles()
+short-title: getHourCycles()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getHourCycles
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.getHourCycles
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getHourCycles()`** method of {{jsxref("Intl.Locale")}} instances returns a list of one or more unique hour cycle identifiers for this locale.
 
@@ -43,7 +43,7 @@ Below is a list of supported hour cycle types.
 
 ### Obtaining supported hour cycles
 
-If the `Locale` object doesn't have a `hourCycle` already, `getHourCycles()` lists all commonly-used hour cycle identifiers for the given `Locale`. For examples of explicitly setting a `hourCycle`, see [`hourCycle` examples](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle#examples).
+If the `Locale` object doesn't have an `hourCycle` already, `getHourCycles()` lists all commonly-used hour cycle identifiers for the given `Locale`. For examples of explicitly setting an `hourCycle`, see [`hourCycle` examples](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle#examples).
 
 ```js
 const arEG = new Intl.Locale("ar-EG");

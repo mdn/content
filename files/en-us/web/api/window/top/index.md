@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.Window.top
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
-Returns a reference to the topmost window in the window hierarchy.
+The **`top`** read-only property of the {{domxref("Window")}} interface returns a reference to the topmost window in the window hierarchy.
 
 ## Value
 

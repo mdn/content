@@ -8,7 +8,7 @@ status:
 browser-compat: api.UIEvent.which
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{APIRef("UI Events")}}
 
 The **`UIEvent.which`** read-only property of the {{domxref("UIEvent")}} interface returns a number that indicates which button was pressed on the mouse, or the numeric `keyCode` or the character code (`charCode`) of the key pressed on the keyboard.
 
@@ -40,35 +40,30 @@ In this case, the values are read from right to left.
 ## Examples
 
 ```html
-<html lang="en">
-  <head>
-    <title>charCode/keyCode/which example</title>
+<p>Please press any key.</p>
+```
 
-    <script>
-      function showKeyPress(evt) {
-        alert(
-          `onkeypress handler:\n` +
-            `keyCode property: ${evt.keyCode}\n` +
-            `which property: ${evt.which}\n` +
-            `charCode property: ${evt.charCode}\n` +
-            `Character Key Pressed: ${String.fromCharCode(evt.charCode)}\n`,
-        );
-      }
+```js
+function showKeyPress(evt) {
+  console.log(
+    `onkeypress handler:\n` +
+      `keyCode property: ${evt.keyCode}\n` +
+      `which property: ${evt.which}\n` +
+      `charCode property: ${evt.charCode}\n` +
+      `Character Key Pressed: ${String.fromCharCode(evt.charCode)}\n`,
+  );
+}
 
-      function keyDown(evt) {
-        alert(
-          `onkeydown handler:\n` +
-            `keyCode property: ${evt.keyCode}\n` +
-            `which property: ${evt.which}\n`,
-        );
-      }
-    </script>
-  </head>
+function keyDown(evt) {
+  console.log(
+    `onkeydown handler:\n` +
+      `keyCode property: ${evt.keyCode}\n` +
+      `which property: ${evt.which}\n`,
+  );
+}
 
-  <body onkeypress="showKeyPress(event);" onkeydown="keyDown(event);">
-    <p>Please press any key.</p>
-  </body>
-</html>
+document.addEventListener("keypress", showKeyPress);
+document.addEventListener("keydown", keyDown);
 ```
 
 ## Specifications

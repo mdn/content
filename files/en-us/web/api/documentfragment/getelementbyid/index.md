@@ -57,7 +57,7 @@ List content:
 Fragment content:
 <ul id="fragment"></ul>
 Current status:
-<pre id="log" />
+<pre id="log"></pre>
 ```
 
 ```css hidden
@@ -102,7 +102,7 @@ function displayStatus() {
   while (fragmentViewer.hasChildNodes()) {
     fragmentViewer.removeChild(fragmentViewer.lastChild);
   }
-  for (entry of fragment.children) {
+  for (const entry of fragment.children) {
     fragmentViewer.appendChild(entry.cloneNode(true));
   }
 }

@@ -3,9 +3,8 @@ title: declarativeNetRequest.SESSION_RULESET_ID
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/SESSION_RULESET_ID
 page-type: webextension-api-property
 browser-compat: webextensions.api.declarativeNetRequest.SESSION_RULESET_ID
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The ruleset ID for the session-scoped rules added by the extension.
 

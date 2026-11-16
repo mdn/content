@@ -22,7 +22,7 @@ setCustomValidity(string)
 ### Parameters
 
 - `string`
-  - : The string containing the error message.
+  - : The string containing the error message. The empty string removes any custom validity errors.
 
 ### Return value
 
@@ -38,4 +38,4 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [Form validation](/en-US/docs/Web/HTML/Constraint_validation).
+- [Form validation](/en-US/docs/Web/HTML/Guides/Constraint_validation).

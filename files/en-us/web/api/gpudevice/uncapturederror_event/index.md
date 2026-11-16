@@ -3,12 +3,10 @@ title: "GPUDevice: uncapturederror event"
 short-title: uncapturederror
 slug: Web/API/GPUDevice/uncapturederror_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.GPUDevice.uncapturederror_event
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`uncapturederror`** event of the {{domxref("GPUDevice")}} interface is fired when an error is thrown that has not been observed by a GPU error scope, to provide a way to report unexpected errors.
 
@@ -16,17 +14,21 @@ Known error cases should be handled using {{domxref("GPUDevice.pushErrorScope", 
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("uncapturederror", (event) => {});
+```js-nolint
+addEventListener("uncapturederror", (event) => { })
+```
 
-onuncapturederror = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onuncapturederror = (event) => { }
 ```
 
 ## Event type
 
-An {{domxref("GPUUncapturedErrorEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("GPUUncapturedErrorEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("GPUUncapturedErrorEvent")}}
 

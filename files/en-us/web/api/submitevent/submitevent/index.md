@@ -10,7 +10,7 @@ browser-compat: api.SubmitEvent.SubmitEvent
 
 The **`SubmitEvent()`** constructor creates and returns a new {{domxref("SubmitEvent")}} object,
 which is used to represent a {{domxref("HTMLFormElement.submit_event", "submit")}} event
-fired at an {{Glossary("HTML")}} [form](/en-US/docs/Learn/Forms).
+fired at an {{Glossary("HTML")}} [form](/en-US/docs/Learn_web_development/Extensions/Forms).
 
 ## Syntax
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PerformanceEntry.startTime
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The read-only **`startTime`** property returns the first {{domxref("DOMHighResTimeStamp","timestamp", "", "no-code")}} recorded for this {{domxref("PerformanceEntry")}}. The meaning of this property depends on the value of this entry's {{domxref("PerformanceEntry.entryType", "entryType")}}.
 
@@ -17,12 +17,14 @@ A {{domxref("DOMHighResTimeStamp")}} representing the first timestamp when the
 
 The meaning of this property depends on the value of this performance entry's {{domxref("PerformanceEntry.entryType","entryType")}}:
 
+- `container`
+  - : The value of this entry's {{domxref("PerformanceContainerTiming.paintTime", "paintTime")}}.
 - `element`
   - : Either the value of this entry's {{domxref("PerformanceElementTiming.renderTime", "renderTime")}} if it is not `0`, otherwise the value of this entry's {{domxref("PerformanceElementTiming.loadTime", "loadTime")}}.
 - `event`
-  - : The time the event was created, i.e. the event's [`timeStamp`](/en-US/docs/Web/API/Event/timeStamp) property.
+  - : The time the event was created, i.e., the event's [`timeStamp`](/en-US/docs/Web/API/Event/timeStamp) property.
 - `first-input`
-  - : The time the first input event was created, i.e. that event's [`timeStamp`](/en-US/docs/Web/API/Event/timeStamp).
+  - : The time the first input event was created, i.e., that event's [`timeStamp`](/en-US/docs/Web/API/Event/timeStamp).
 - `largest-contentful-paint`
   - : The value of this entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} if it is not `0`, otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}}.
 - `layout-shift`
@@ -38,7 +40,7 @@ The meaning of this property depends on the value of this performance entry's {{
 - `paint`
   - : The time when the paint occurred.
 - `resource`
-  - : The value of this entry's {{domxref("PerformanceResourceTiming.fetchStart", "fetchStart")}} property.
+  - : The time the resource fetch started, including redirects. If there are no HTTP redirects or their timing information is not exposed, this value is equivalent to {{domxref("PerformanceResourceTiming.fetchStart")}}. Otherwise, this value can be earlier than `fetchStart`.
 - `taskattribution`
   - : Always `0`.
 - `visibility-state`
@@ -50,7 +52,7 @@ The meaning of this property depends on the value of this performance entry's {{
 
 The following example shows the use of the `startTime` property which you can log during performance observation.
 
-Note: The {{domxref("performance.mark()")}} method allows you to set your own `startTime`, and the {{domxref("performance.measure()")}} method allows to set the start of the measure.
+Note: The {{domxref("performance.mark()")}} method allows you to set your own `startTime`, and the {{domxref("performance.measure()")}} method allows you to set the start of the measure.
 
 ```js
 performance.mark("my-mark");

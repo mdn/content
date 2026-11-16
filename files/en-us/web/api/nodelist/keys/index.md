@@ -9,7 +9,7 @@ browser-compat: api.NodeList.keys
 {{APIRef("DOM")}}
 
 The **`NodeList.keys()`** method returns an
-{{jsxref("Iteration_protocols",'iterator')}} allowing to go through all keys contained
+{{jsxref("Iteration_protocols",'iterator')}} allowing you to go through all keys contained
 in this object. The keys are `unsigned integer`.
 
 ## Syntax
@@ -17,6 +17,10 @@ in this object. The keys are `unsigned integer`.
 ```js-nolint
 keys()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -50,12 +54,16 @@ The result is:
 2
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
 
 ## See also
 
-- [Polyfill of `NodeList.prototype.keys` in `core-js`](https://github.com/zloirock/core-js#iterable-dom-collections)
+- [Polyfill of `NodeList.prototype.keys` in `core-js`](https://core-js.io/docs/features/web-standards/iterable-dom-collections)
 - {{domxref("Node")}}
 - {{domxref("NodeList")}}

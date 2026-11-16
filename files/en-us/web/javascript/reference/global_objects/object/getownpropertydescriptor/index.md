@@ -1,11 +1,11 @@
 ---
 title: Object.getOwnPropertyDescriptor()
+short-title: getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.getOwnPropertyDescriptor
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.getOwnPropertyDescriptor()`** static method returns an
 object describing the configuration of a specific property on a given object (that is,
@@ -13,7 +13,21 @@ one directly present on an object and not in the object's prototype chain). The 
 returned is mutable but mutating it has no effect on the original property's
 configuration.
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptor.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyDescriptor()")}}
+
+```js interactive-example
+const object = {
+  foo: 42,
+};
+
+const descriptor = Object.getOwnPropertyDescriptor(object, "foo");
+
+console.log(descriptor.configurable);
+// Expected output: true
+
+console.log(descriptor.value);
+// Expected output: 42
+```
 
 ## Syntax
 

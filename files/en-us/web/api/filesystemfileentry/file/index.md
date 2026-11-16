@@ -77,4 +77,3 @@ called; similarly, its {{domxref("FileReader/error_event", "error")}} handler is
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

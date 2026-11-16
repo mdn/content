@@ -10,7 +10,7 @@ browser-compat: api.ServiceWorkerContainer.startMessages
 
 The **`startMessages()`** method of
 the {{domxref("ServiceWorkerContainer")}} interface explicitly starts the flow of
-messages being dispatched from a service worker to pages under its control (e.g. sent
+messages being dispatched from a service worker to pages under its control (e.g., sent
 via {{domxref("Client.postMessage()")}}). This can be used to react to sent messages
 earlier, even before that page's content has finished loading.
 
@@ -18,7 +18,7 @@ earlier, even before that page's content has finished loading.
 
 By default, all messages sent from a page's controlling service worker to the page
 (using {{domxref("Client.postMessage()")}}) are queued while the page is loading, and
-get dispatched once the page's HTML document has been loaded and parsed (i.e. after the
+get dispatched once the page's HTML document has been loaded and parsed (i.e., after the
 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event fires). It's possible to start dispatching these
 messages earlier by calling `ServiceWorkerContainer.startMessages()`, for
 example if you've invoked a message handler using

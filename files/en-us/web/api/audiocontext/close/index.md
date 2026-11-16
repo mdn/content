@@ -34,7 +34,7 @@ The following snippet is taken from our [AudioContext states demo](https://githu
 stopBtn.onclick = () => {
   audioCtx.close().then(() => {
     startBtn.removeAttribute("disabled");
-    susresBtn.setAttribute("disabled", "disabled");
+    susResBtn.setAttribute("disabled", "disabled");
     stopBtn.setAttribute("disabled", "disabled");
   });
 };

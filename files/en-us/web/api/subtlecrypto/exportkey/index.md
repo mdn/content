@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.exportKey
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`exportKey()`** method of the {{domxref("SubtleCrypto")}}
 interface exports a key: that is, it takes as input a {{domxref("CryptoKey")}} object
@@ -57,7 +57,7 @@ The promise is rejected when one of the following exceptions is encountered:
 
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Raised when trying to export a non-extractable key.
-- `NotSupported` {{domxref("DOMException")}}
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Raised when trying to export in an unknown format.
 - {{jsxref("TypeError")}}
   - : Raised when trying to use an invalid format.

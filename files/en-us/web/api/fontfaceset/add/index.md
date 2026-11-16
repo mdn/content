@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FontFaceSet.add
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`add()`** method of the {{domxref("FontFaceSet")}} interface adds a new font to the set.
 
@@ -35,7 +35,7 @@ A new {{domxref("FontFaceSet")}}.
 In the following example a new {{domxref("FontFace")}} object is created and then added to the {{domxref("FontFaceSet")}}.
 
 ```js
-const font = new FontFace("MyFont", "url(myFont.woff2)");
+const font = new FontFace("MyFont", 'url("myFont.woff2")');
 document.fonts.add(font);
 ```
 

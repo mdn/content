@@ -26,7 +26,7 @@ method.
 ## Syntax
 
 ```js-nolint
-newNode = textNode.splitText(offset)
+splitText(offset)
 ```
 
 ### Parameters

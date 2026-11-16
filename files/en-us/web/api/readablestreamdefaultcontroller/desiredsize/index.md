@@ -14,14 +14,16 @@ required to fill the stream's internal queue.
 
 ## Value
 
-An integer. Note that this can be negative if the queue is over-full.
+A number, or `null`.
+
+The number can be negative if the queue is over-full. When a custom queuing strategy is used, its chunk sizes can cause the number to have a fractional component. The value is `null` if the stream has errored and `0` if it is closed.
 
 ## Examples
 
 The [A readable stream with an underlying push source and backpressure support](https://streams.spec.whatwg.org/#example-rs-push-backpressure) example in the spec
 provides a good example of using `desiredSize` to manually detect when the
 stream is full and apply backpressure, and also of using
-{{domxref("ReadablestreamDefaultController.error()")}} to manually trigger a stream
+{{domxref("ReadableStreamDefaultController.error()")}} to manually trigger a stream
 error if another part of the system it relies on fails.
 
 ## Specifications

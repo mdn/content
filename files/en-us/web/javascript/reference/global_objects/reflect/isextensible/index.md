@@ -1,15 +1,32 @@
 ---
 title: Reflect.isExtensible()
+short-title: isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.isExtensible
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Reflect.isExtensible()`** static method is like {{jsxref("Object.isExtensible()")}}. It determines if an object is extensible (whether it can have new properties added to it).
 
-{{EmbedInteractiveExample("pages/js/reflect-isextensible.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Reflect.isExtensible()", "taller")}}
+
+```js interactive-example
+const object1 = {};
+
+console.log(Reflect.isExtensible(object1));
+// Expected output: true
+
+Reflect.preventExtensions(object1);
+
+console.log(Reflect.isExtensible(object1));
+// Expected output: false
+
+const object2 = Object.seal({});
+
+console.log(Reflect.isExtensible(object2));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -48,7 +65,7 @@ See also {{jsxref("Object.isExtensible()")}}.
 const empty = {};
 Reflect.isExtensible(empty); // true
 
-// ...but that can be changed.
+// … but that can be changed.
 Reflect.preventExtensions(empty);
 Reflect.isExtensible(empty); // false
 
@@ -83,7 +100,7 @@ Object.isExtensible(1);
 
 ## See also
 
-- [Polyfill of `Reflect.isExtensible` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.isExtensible` in `core-js`](https://core-js.io/docs/features/ecmascript/reflect)
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.isExtensible()")}}
 - [`handler.isExtensible()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible)

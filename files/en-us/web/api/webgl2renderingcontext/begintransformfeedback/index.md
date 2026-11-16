@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.beginTransformFeedback
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.beginTransformFeedback()`**
 method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) starts a transform
@@ -21,11 +21,9 @@ beginTransformFeedback(primitiveMode)
 ### Parameters
 
 - `primitiveMode`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the output type of the primitives that will be
     recorded into the buffer objects that are bound for transform feedback. Possible
     values:
-
     - `gl.POINTS`
     - `gl.LINES`
     - `gl.TRIANGLES`

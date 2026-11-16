@@ -1,10 +1,9 @@
 ---
-title: First Meaningful Paint
+title: First Meaningful Paint (FMP)
 slug: Glossary/First_meaningful_paint
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **First Meaningful Paint** (FMP) is the paint after which the biggest above-the-fold layout change has happened and web fonts have loaded. It is when the answer to "Is it useful?" becomes "yes", upon first meaningful paint completion.
 
@@ -16,5 +15,5 @@ FMP is very sensitive to small differences in the page load. This can lead to in
 ## See also
 
 - Related glossary terms:
-  - {{Glossary("First contentful paint")}}
-  - {{Glossary("Largest contentful paint")}}
+  - {{Glossary("First Contentful Paint")}}
+  - {{Glossary("Largest Contentful Paint")}}

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Crypto.subtle
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`Crypto.subtle`** read-only property returns a
 {{domxref("SubtleCrypto")}} which can then be used to perform low-level
@@ -30,4 +30,3 @@ low-level cryptography features.
 - {{domxref("Crypto")}}.
 - {{domxref("SubtleCrypto")}}.
 - [Compatibility test page](https://vibornoff.github.io/webcrypto-examples/index.html).
-- [Shim for IE11 and Safari](https://github.com/vibornoff/webcrypto-shim).

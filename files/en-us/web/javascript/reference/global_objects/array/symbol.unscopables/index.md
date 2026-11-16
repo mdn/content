@@ -1,11 +1,11 @@
 ---
 title: Array.prototype[Symbol.unscopables]
+short-title: "[Symbol.unscopables]"
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Array.@@unscopables
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.unscopables]`** data property of `Array.prototype` is shared by all {{jsxref("Array")}} instances. It contains property names that were not included in the ECMAScript standard prior to the ES2015 version and that are ignored for [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement-binding purposes.
 
@@ -66,7 +66,7 @@ So the `[Symbol.unscopables]` data property for `Array.prototype` causes the `Ar
 
 ## See also
 
-- [Polyfill of `Array.prototype[Symbol.unscopables]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype[Symbol.unscopables]` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Statements/with", "with")}}

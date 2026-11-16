@@ -111,7 +111,13 @@ Let's see how it looks in action so far.
 #### HTML
 
 ```html
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+<canvas id="canvas" width="600" height="300"></canvas>
+```
+
+```css hidden
+#canvas {
+  border: 1px solid black;
+}
 ```
 
 #### JavaScript
@@ -192,7 +198,13 @@ This slows down the vertical velocity each frame, so that the ball will just bou
 #### HTML
 
 ```html
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+<canvas id="canvas" width="600" height="300"></canvas>
+```
+
+```css hidden
+#canvas {
+  border: 1px solid black;
+}
 ```
 
 #### JavaScript
@@ -271,7 +283,13 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 #### HTML
 
 ```html
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+<canvas id="canvas" width="600" height="300"></canvas>
+```
+
+```css hidden
+#canvas {
+  border: 1px solid black;
+}
 ```
 
 #### JavaScript
@@ -346,7 +364,13 @@ To get some control over the ball, we can make it follow our mouse using the [`m
 #### HTML
 
 ```html
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+<canvas id="canvas" width="600" height="300"></canvas>
+```
+
+```css hidden
+#canvas {
+  border: 1px solid black;
+}
 ```
 
 #### JavaScript

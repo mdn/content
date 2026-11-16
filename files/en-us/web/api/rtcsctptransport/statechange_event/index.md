@@ -14,12 +14,16 @@ A **`statechange`** event is sent to an {{domxref("RTCSctpTransport")}} to provi
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("statechange", (event) => {});
+```js-nolint
+addEventListener("statechange", (event) => { })
+```
 
-onstatechange = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onstatechange = (event) => { }
 ```
 
 ## Event type
@@ -31,20 +35,16 @@ A generic {{domxref("Event")}}.
 Given an {{domxref("RTCSctpTransport")}}, `transport`, and an `updateStatus()` function that presents connection state information to the user, this code sets up an event handler to let the user know when the transport is connected.
 
 ```js
-pc.addEventListener(
-  "statechange",
-  (event) => {
-    switch (transport.state) {
-      case "connected":
-        updateStatus("Connection started");
-        break;
-    }
-  },
-  false,
-);
+transport.addEventListener("statechange", (event) => {
+  switch (transport.state) {
+    case "connected":
+      updateStatus("Connection started");
+      break;
+  }
+});
 ```
 
-Using `onstatechange`, it looks like this:
+Using `onstatechange`, it looks like this (but note that this replaces other event listeners added using `onstatechange`, if any):
 
 ```js
 transport.onstatechange = (event) => {

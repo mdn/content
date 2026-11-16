@@ -9,9 +9,9 @@ status:
 browser-compat: api.RTCEncodedVideoFrame.timestamp
 ---
 
-{{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}{{non-standard_header}}
 
-The readonly **`timestamp`** property of the {{domxref("RTCEncodedVideoFrame")}} interface indicates the time at which frame sampling started.
+The **`timestamp`** read-only property of the {{domxref("RTCEncodedVideoFrame")}} interface indicates the time at which frame sampling started.
 
 ## Value
 

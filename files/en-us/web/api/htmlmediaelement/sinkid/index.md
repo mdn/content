@@ -10,7 +10,7 @@ browser-compat: api.HTMLMediaElement.sinkId
 
 The **`sinkId`** read-only property of the {{domxref("HTMLMediaElement")}} interface returns a string that is the unique ID of the device to be used for playing audio output.
 
-This ID should be one of the {{domxref("MediaDeviceInfo.deviceId")}} values returned from {{domxref("MediaDevices.enumerateDevices()")}}, `id-multimedia`, or `id-communications`.
+This ID should be one of the {{domxref("MediaDeviceInfo.deviceId")}} values returned from {{domxref("MediaDevices.enumerateDevices()")}}.
 If the user agent default device is being used, it returns an empty string.
 
 ## Value
@@ -21,7 +21,7 @@ A string indicating the current audio output device, or the empty string if the 
 
 Access to the property is subject to the following constraints:
 
-- The property must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+- The property must be called in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 ## Specifications
 

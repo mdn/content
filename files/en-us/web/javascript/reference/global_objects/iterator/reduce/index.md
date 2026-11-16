@@ -1,13 +1,11 @@
 ---
 title: Iterator.prototype.reduce()
+short-title: reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/reduce
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Iterator.reduce
+sidebar: jsref
 ---
-
-{{JSRef}}{{SeeCompatTable}}
 
 The **`reduce()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.reduce")}}: it executes a user-supplied "reducer" callback function on each element produced by the iterator, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements is a single value.
 
@@ -77,7 +75,8 @@ console.log(
 
 ## See also
 
-- [Polyfill of `Iterator.prototype.reduce` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [Polyfill of `Iterator.prototype.reduce` in `core-js`](https://core-js.io/docs/features/ecmascript/iterator)
+- [es-shims polyfill of `Iterator.prototype.reduce`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.map()")}}
 - {{jsxref("Iterator.prototype.flatMap()")}}

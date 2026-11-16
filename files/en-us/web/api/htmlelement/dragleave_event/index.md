@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLElement.dragleave_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML Drag and Drop API")}}
 
 The `dragleave` event is fired when a dragged element or text selection leaves a valid drop target.
 
@@ -14,12 +14,16 @@ This event is not cancelable and may bubble up to the {{domxref("Document")}} an
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("dragleave", (event) => {});
+```js-nolint
+addEventListener("dragleave", (event) => { })
+```
 
-ondragleave = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+ondragleave = (event) => { }
 ```
 
 ## Event type
@@ -27,13 +31,6 @@ ondragleave = (event) => {};
 A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("DragEvent")}}
-
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
-  - : The data that is transferred during a drag-and-drop interaction.
 
 ## Examples
 
@@ -51,7 +48,7 @@ However, in this partial example, we haven't implemented dropping: for a complet
 <div class="dropzone">
   <div id="draggable" draggable="true">This div is draggable</div>
 </div>
-<div class="dropzone" id="droptarget"></div>
+<div class="dropzone" id="drop-target"></div>
 ```
 
 #### CSS
@@ -83,7 +80,7 @@ body {
 #### JavaScript
 
 ```js
-const target = document.getElementById("droptarget");
+const target = document.getElementById("drop-target");
 target.addEventListener("dragenter", (event) => {
   // highlight potential drop target when the draggable element enters it
   if (event.target.classList.contains("dropzone")) {
@@ -114,7 +111,6 @@ target.addEventListener("dragleave", (event) => {
 ## See also
 
 - Other drag and drop events:
-
   - {{domxref("HTMLElement/drag_event", "drag")}}
   - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
   - {{domxref("HTMLElement/dragend_event", "dragend")}}

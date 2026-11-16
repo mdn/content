@@ -2,7 +2,7 @@
 title: "console: dir() static method"
 short-title: dir()
 slug: Web/API/console/dir_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.dir_static
 ---
 
@@ -19,8 +19,8 @@ In runtimes like {{glossary("Node.js", "Node")}} and {{glossary("Deno")}}, where
 ## Syntax
 
 ```js-nolint
-dir(object)
-dir(object, options)
+console.dir(object)
+console.dir(object, options)
 ```
 
 ### Parameters
@@ -50,6 +50,6 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [Microsoft Edge's documentation for `console.dir()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#dir)
-- [Node.JS documentation for `console.dir()`](https://nodejs.org/docs/latest/api/console.html#consoledirobj-options)
+- [Microsoft Edge's documentation for `console.dir()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#dir)
+- [Node.js documentation for `console.dir()`](https://nodejs.org/docs/latest/api/console.html#consoledirobj-options)
 - [Google Chrome's documentation for `console.dir()`](https://developer.chrome.com/docs/devtools/console/api/#dir)

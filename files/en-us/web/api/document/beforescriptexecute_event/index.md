@@ -4,22 +4,27 @@ short-title: beforescriptexecute
 slug: Web/API/Document/beforescriptexecute_event
 page-type: web-api-event
 status:
+  - deprecated
   - non-standard
 browser-compat: api.Document.beforescriptexecute_event
 ---
 
-{{APIRef}}{{non-standard_header}}
+{{APIRef("DOM")}}{{non-standard_header}}
 
 The `beforescriptexecute` event fires when a static {{HTMLElement("script")}} is about to start executing. It does not fire if the element is added dynamically, such as with {{domxref("Node.appendChild()", "appendChild()")}}.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("beforescriptexecute", (event) => {});
+```js-nolint
+addEventListener("beforescriptexecute", (event) => { })
+```
 
-onbeforescriptexecute = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onbeforescriptexecute = (event) => { }
 ```
 
 ## Event type
@@ -33,8 +38,9 @@ function starting(e) {
   logMessage(`Starting script with ID: ${e.target.id}`);
 }
 
-document.addEventListener("beforescriptexecute", starting, true);
-// or
+document.addEventListener("beforescriptexecute", starting);
+// Or (but note that this replaces other event listeners
+// added using onbeforescriptexecute, if any)
 document.onbeforescriptexecute = starting;
 ```
 

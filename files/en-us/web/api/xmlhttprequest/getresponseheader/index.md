@@ -59,7 +59,7 @@ client.send();
 client.onreadystatechange = () => {
   if (client.readyState === client.HEADERS_RECEIVED) {
     const contentType = client.getResponseHeader("Content-Type");
-    if (contentType !== my_expected_type) {
+    if (contentType !== myExpectedType) {
       client.abort();
     }
   }
@@ -77,7 +77,7 @@ client.onreadystatechange = () => {
 ## See also
 
 - [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [HTTP headers](/en-US/docs/Web/HTTP/Headers)
+- [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)
 - {{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}}
 - {{DOMxRef("XMLHttpRequest.response", "response")}}
 - Setting request headers: {{DOMxRef("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}

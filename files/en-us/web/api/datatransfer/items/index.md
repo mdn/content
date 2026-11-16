@@ -8,8 +8,9 @@ browser-compat: api.DataTransfer.items
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The read-only `items` property of the {{domxref("DataTransfer")}} interface is a
-{{domxref("DataTransferItemList","list")}} of the {{domxref("DataTransferItem","data transfer items", "", "nocode")}} in a drag operation. The list includes one item for each item in the operation and if the operation had no items, the list is empty.
+The **`items`** read-only property of the {{domxref("DataTransfer")}} interface is a {{domxref("DataTransferItemList")}} of the {{domxref("DataTransferItem")}} objects in a drag operation. The list includes one item for each item in the operation, and if the operation had no items, the list is empty.
+
+During a drag operation, this property can be used to enumerate the items and inspect their kinds and types in any drag event handler. However, the items' data can only be read in the handlers for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} and {{domxref("HTMLElement/drop_event", "drop")}} events, and the list can only be modified in the `dragstart` handler. See [Reading the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#reading_the_drag_data_store) and [Modifying the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#modifying_the_drag_data_store) for details.
 
 ## Value
 
@@ -107,5 +108,4 @@ reset.addEventListener("click", () => document.location.reload());
 
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
+- [Working with the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)

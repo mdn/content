@@ -35,5 +35,5 @@ link.title = "Wikipedia page on grapes";
 
 ## See also
 
-- The HTML [**title**](/en-US/docs/Web/HTML/Global_attributes/title)
+- The HTML [**title**](/en-US/docs/Web/HTML/Reference/Global_attributes/title)
   global attribute.

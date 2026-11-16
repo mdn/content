@@ -2,9 +2,8 @@
 title: Dominator
 slug: Glossary/Dominator
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In graph theory, node A **dominates** node B if every path from the root node to B passes through A.
 
@@ -14,4 +13,4 @@ This concept is important for {{Glossary("garbage collection")}} because it mean
 
 - [Dominator](<https://en.wikipedia.org/wiki/Dominator_(graph_theory)>) on Wikipedia
 - [Dominators](https://firefox-source-docs.mozilla.org/devtools-user/memory/dominators/index.html)
-- [Garbage collection](/en-US/docs/Web/JavaScript/Memory_management#garbage_collection)
+- [Garbage collection](/en-US/docs/Web/JavaScript/Guide/Memory_management#garbage_collection)

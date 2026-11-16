@@ -14,8 +14,6 @@ The **`pauseOnExit`** property of the {{domxref("TextTrackCue")}} interface retu
 
 A {{jsxref("Boolean")}}, true if the media will pause.
 
-## Examples
-
 ## Specifications
 
 {{Specifications}}

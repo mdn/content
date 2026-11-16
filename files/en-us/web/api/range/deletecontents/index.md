@@ -8,13 +8,18 @@ browser-compat: api.Range.deleteContents
 
 {{ApiRef("DOM")}}
 
-The **`Range.deleteContents()`** method removes the contents of
-the {{ domxref("Range") }} from the {{ domxref("Document") }}.
+The **`Range.deleteContents()`** method removes all completely-selected {{ domxref("Node", "nodes", "", "nocode") }} within this range from the document. For the partially selected nodes at the start or end of the range, only the selected portion of the text is deleted, while the node itself remains intact. Afterwards, the range is collapsed to the end of the last selected node.
 
-In the context of a {{ domxref("Range") }}, when a node is partially selected—meaning it overlaps with the start or end of the selection—only the selected portion of the text is deleted, while the node itself remains intact. However, if a node is fully selected, the entire node and its contents are removed.
+```plain
+<p>paragraph 1</p><p>paragraph 2</p><p>paragraph 3</p>
+       ^----------- selection ------------^
 
-Unlike {{ domxref("Range.extractContents()") }}, this method does not return a
-{{domxref("DocumentFragment")}} containing the deleted content.
+deleteContents() returns:
+
+<p>para</p><p>graph 3</p>
+```
+
+Unlike {{ domxref("Range.extractContents()") }}, this method does not return a {{domxref("DocumentFragment")}} containing the deleted content.
 
 ## Syntax
 
@@ -32,11 +37,34 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-```js
-range = document.createRange();
-range.selectNode(document.getElementsByTagName("div").item(0));
-range.deleteContents();
+### Using deleteContents()
+
+Select some text, possibly spanning multiple paragraphs, and then click the button to delete the selected text. Open your DOM inspector to check the updated DOM structure.
+
+```html
+<p>paragraph 1</p>
+<p>paragraph 2</p>
+<p>paragraph 3</p>
+<button id="delete">Delete selected text</button>
+<button id="reset">Reset</button>
 ```
+
+```js
+const button = document.getElementById("delete");
+const reset = document.getElementById("reset");
+const output = document.getElementById("output");
+
+button.addEventListener("click", () => {
+  const range = document.getSelection().getRangeAt(0);
+  range.deleteContents();
+});
+
+reset.addEventListener("click", () => {
+  window.location.reload();
+});
+```
+
+{{EmbedLiveSample("using_deletecontents", "", "150")}}
 
 ## Specifications
 

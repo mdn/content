@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Performance.getEntries
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`getEntries()`** method returns an array of all {{domxref("PerformanceEntry")}} objects currently present in the performance timeline.
 
@@ -18,6 +18,7 @@ If you are only interested in performance entries of certain types or that have 
 
 The following entry types are not supported by this method at all and won't be returned even if entries for these types might exist:
 
+- `"container"` ({{domxref("PerformanceContainerTiming")}})
 - `"element"` ({{domxref("PerformanceElementTiming")}})
 - `"event"` ({{domxref("PerformanceEventTiming")}})
 - `"largest-contentful-paint"` ({{domxref("LargestContentfulPaint")}})

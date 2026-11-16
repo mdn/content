@@ -7,7 +7,7 @@ status:
 browser-compat: api.PerformanceTiming
 ---
 
-{{APIRef("Performance API")}}{{Deprecated_Header}}
+{{APIRef("Performance API")}}
 
 > [!WARNING]
 > This interface is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.
@@ -63,16 +63,16 @@ These properties are listed in the order in which they occur during the navigati
 - {{domxref("PerformanceTiming.domComplete")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : When the parser finished its work on the main document, that is when its {{domxref("Document.readyState")}} changes to `'complete'` and the corresponding {{domxref("Document/readystatechange_event", "readystatechange")}} event is thrown.
 - {{domxref("PerformanceTiming.loadEventStart")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : When the {{domxref("Window/load_event", "load")}} event was sent for the current document. If this event has not yet been sent, it returns `0.`
+  - : When the {{domxref("Window/load_event", "load")}} event was sent for the current document. If this event has not yet been sent, it returns `0`.
 - {{domxref("PerformanceTiming.loadEventEnd")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : When the {{domxref("Window/load_event", "load")}} event handler terminated, that is when the load event is completed. If this event has not yet been sent, or is not yet completed, it returns `0.`
+  - : When the {{domxref("Window/load_event", "load")}} event handler terminated, that is when the load event is completed. If this event has not yet been sent, or is not yet completed, it returns `0`.
 
 ## Instance methods
 
 _The `PerformanceTiming`_ _interface doesn't inherit any methods._
 
 - {{domxref("PerformanceTiming.toJSON()")}} {{Deprecated_Inline}}
-  - : Returns a [JSON object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) representing this `PerformanceTiming` object.
+  - : Returns a JSON-serializable plain object representing the `PerformanceTiming` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Specifications
 

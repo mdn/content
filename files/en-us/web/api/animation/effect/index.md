@@ -12,7 +12,7 @@ The **`Animation.effect`** property of the [Web Animations API](/en-US/docs/Web/
 
 ## Value
 
-A {{domxref("AnimationEffect")}} object describing the target animation effect for the animation, or `null` to indicate no active effect.
+An {{domxref("AnimationEffect")}} object describing the target animation effect for the animation, or `null` to indicate no active effect.
 
 ## Specifications
 

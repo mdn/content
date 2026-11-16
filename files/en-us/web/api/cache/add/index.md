@@ -23,7 +23,8 @@ fetch(url).then((response) => {
 
 For more complex operations, you'll need to use {{domxref("Cache.put","Cache.put()")}} directly.
 
-> **Note:** `add()` will overwrite any key/value pair previously stored in the cache that matches the request.
+> [!NOTE]
+> `add()` will overwrite any key/value pair previously stored in the cache that matches the request.
 
 ## Syntax
 
@@ -34,7 +35,6 @@ add(request)
 ### Parameters
 
 - `request`
-
   - : A request for the resource you want to add to the cache. This can be a {{domxref("Request")}} object or a URL.
 
     This parameter is used as a parameter to the {{domxref("Request.Request()", "Request()")}} constructor, so URLs follow the same rules as for that constructor. In particular, URLs may be relative to the base URL, which is the document's {{domxref("Node.baseURI", "baseURI")}} in a window context, or {{domxref("WorkerGlobalScope.location")}} in a worker context.
@@ -46,7 +46,6 @@ A {{jsxref("Promise")}} that resolves with `undefined`.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-
   - : The URL scheme is not `http` or `https`.
 
     The Response status is not in the 200 range (i.e., not a successful response.) This occurs if the request does not return successfully, but also if the request is a _cross-origin no-cors_ request (in which case the reported status is always 0.)

@@ -3,19 +3,20 @@ title: notifications
 slug: Mozilla/Add-ons/WebExtensions/API/notifications
 page-type: webextension-api
 browser-compat: webextensions.api.notifications
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Display notifications to the user, using the underlying operating system's notification mechanism. Because this API uses the operating system's notification mechanism, the details of how notifications appear and behave may differ according to the operating system and the user's settings.
 
 On macOS, the notification looks something like this:
 
-![Example notification on macOS, located below the system clock, with a bold title reading "Click notification" followed by regular text reading "You clicked https://developer.mozilla.org/en-US/docs/MDN". The notification has the Firefox Nightly logo on the left side, and a link icon on the right.](notification-macos.png)
+![Example notification on macOS, with a bold title reading "Click notification" followed by regular text reading "You clicked https://developer.mozilla.org/en-US/docs/MDN." The notification has the Firefox Developer Edition logo on the left side, and a link icon on the right.](notification-macos.png)
 
-On Windows, the notification persists in the Action Center until the browser is closed. The notification looks something like this:
+On Windows, the notification looks something like this:
 
 ![Example notification on Windows 10, located above the system clock, with a bold title reading "Click notification" followed by regular text reading "You clicked https://developer.mozilla.org/en-US/docs/MDN". The notification has a small Firefox logo in the top left corner that is followed by "Mozilla Firefox", and a link icon to the left of the primary notification text.](notification-windows.png)
+
+The notification persists in the Windows Action Center until the browser is closed.
 
 To use this API, you need to have the "notifications" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
@@ -48,11 +49,11 @@ To use this API, you need to have the "notifications" [permission](/en-US/docs/M
 - {{WebExtAPIRef("notifications.onShown")}}
   - : Fired immediately after a notification has been shown.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

@@ -2,13 +2,11 @@
 title: Using the Permissions API
 slug: Web/API/Permissions_API/Using_the_Permissions_API
 page-type: guide
-status:
-  - experimental
 ---
 
 {{DefaultAPISidebar("Permissions API")}}
 
-This article provides a basic guide to using the W3C [Permissions API](/en-US/docs/Web/API/Permissions_API), which provides a programmatic way to query the status of API permissions attributed to the current context.
+This article provides a basic guide to using the [Permissions API](/en-US/docs/Web/API/Permissions_API), which provides a programmatic way to query the status of API permissions attributed to the current context.
 
 ## The trouble with asking for permission…
 
@@ -85,12 +83,3 @@ The {{domxref("Permissions.query()")}} method takes a `PermissionDescriptor` dic
 ### Responding to permission state changes
 
 You'll notice that we're listening to the {{domxref("PermissionStatus.change_event", "change")}} event in the code above, attached to the {{domxref("PermissionStatus")}} object — this allows us to respond to any changes in the permission status for the API we are interested in. At the moment we are just reporting the change in state.
-
-## Conclusion and future work
-
-At the moment this doesn't offer much more than what we had already. If we choose to never share our location from the permission prompt (deny permission), then we can't get back to the permission prompt without using the browser menu options:
-
-- **Firefox**: _Tools > Page Info > Permissions > Access Your Location_. Select _Always Ask_.
-- **Chrome**: _Hamburger Menu > Settings > Show advanced settings_. In the _Privacy_ section, click _Content Settings_. In the resulting dialog, find the _Location_ section and select _Ask when a site tries to…_. Finally, click _Manage Exceptions_ and remove the permissions you granted to the sites you are interested in.
-
-There are proposals to add the ability for sites to imperatively [request](https://github.com/WICG/permissions-request) and [revoke](https://github.com/WICG/permissions-revoke) permissions, but there has not been much progress as the use case is unclear and they have faced opposition from browser vendors. See the discussions to [remove `permissions.request()`](https://github.com/w3c/permissions/issues/83) and [remove `permissions.revoke()`](https://github.com/w3c/permissions/issues/46) from the main specification.

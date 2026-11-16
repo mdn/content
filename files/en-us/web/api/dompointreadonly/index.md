@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.DOMPointReadOnly
 ---
 
-{{APIRef("Geometry Interfaces")}} {{AvailableInWorkers}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMPointReadOnly`** interface specifies the coordinate and perspective fields used by {{domxref("DOMPoint")}} to define a 2D or 3D point in a coordinate system.
 
@@ -54,7 +54,7 @@ const point = DOMPointReadOnly.fromPoint({ x: 100, y: 100, z: 50, w: 1.0 });
 - {{domxref("DOMPointReadOnly.matrixTransform", "matrixTransform()")}}
   - : Applies a matrix transform specified as an object to the `DOMPointReadOnly` object.
 - {{domxref("DOMPointReadOnly.toJSON()", "toJSON()")}}
-  - : Returns a JSON representation of the `DOMPointReadOnly` object.
+  - : Returns a JSON-serializable plain object representing the `DOMPointReadOnly` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Specifications
 

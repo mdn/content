@@ -3,13 +3,10 @@ title: "PaymentResponse: payerdetailchange event"
 short-title: payerdetailchange
 slug: Web/API/PaymentResponse/payerdetailchange_event
 page-type: web-api-event
-status:
-  - deprecated
-  - non-standard
 browser-compat: api.PaymentResponse.payerdetailchange_event
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}
 
 A **`payerdetailchange`** event is fired by the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentResponse")}} object when the user makes changes to their personal information while filling out a payment request form. This can happen when the payer is retrying to submit its details after an error has been detected.
 
@@ -19,12 +16,16 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("payerdetailchange", async (event) => {});
+```js-nolint
+addEventListener("payerdetailchange", (event) => { })
+```
 
-onpayerdetailchange = async (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onpayerdetailchange = (event) => { }
 ```
 
 ## Event type
@@ -33,13 +34,9 @@ A {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PaymentRequestUpdateEvent")}}
 
-## Event properties
-
-Although this event type is {{domxref("PaymentRequestUpdateEvent")}}, it doesn't implement any property that is not already on {{domxref("Event")}}.
-
 ## Examples
 
-In the example below, `onpayerdetailchange` is used to set up a listener for the `payerdetailchange` event in order to validate the information entered by the user, requesting that any mistakes be corrected
+In the example below, `onpayerdetailchange` is used to set up a listener for the `payerdetailchange` event (but note that this replaces other event listeners added using `onpayerdetailchange`, if any) in order to validate the information entered by the user, requesting that any mistakes be corrected.
 
 ```js
 // Options for PaymentRequest(), indicating that shipping address,
@@ -90,7 +87,7 @@ response.onpayerdetailchange = async (ev) => {
   // validation to the errors list
 
   const errors = await Promise.all(promisesToValidate).then((results) =>
-    results.reduce((errors, result), Object.assign(errors, result)),
+    results.reduce((errors, result) => Object.assign(errors, result)),
   );
 
   // If we found any errors, wait for them to be corrected
@@ -112,7 +109,7 @@ await response.retry({
 });
 ```
 
-### addEventListener equivalent
+### Using addEventListener()
 
 You could also set up the event handler using the `addEventListener()` method:
 
@@ -121,6 +118,10 @@ response.addEventListener("payerdetailchange", async (ev) => {
   // …
 });
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

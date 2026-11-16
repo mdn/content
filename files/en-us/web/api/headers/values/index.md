@@ -9,7 +9,7 @@ browser-compat: api.Headers.values
 {{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 The **`Headers.values()`** method returns an
-{{jsxref("Iteration_protocols",'iterator')}} allowing to go through all values contained
+{{jsxref("Iteration_protocols",'iterator')}} allowing you to go through all values contained
 in this object. The values are {{jsxref("String")}} objects.
 
 ## Syntax
@@ -47,6 +47,10 @@ text/xml
 Accept-Language
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
@@ -54,5 +58,5 @@ Accept-Language
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

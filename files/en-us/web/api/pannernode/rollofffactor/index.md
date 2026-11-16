@@ -14,11 +14,11 @@ The `rolloffFactor` property of the {{ domxref("PannerNode") }} interface is a d
 
 A number whose range depends on the {{ domxref("PannerNode.distanceModel", "distanceModel") }} of the panner as follows (negative values are not allowed):
 
-- "`linear`"
+- `"linear"`
   - : The range is 0 to 1.
-- "`inverse`"
+- `"inverse"`
   - : The range is 0 to `Infinity`.
-- "`exponential`"
+- `"exponential"`
   - : The range is 0 to `Infinity`.
 
 ### Exceptions

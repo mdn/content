@@ -1,11 +1,11 @@
 ---
 title: arguments.length
+short-title: length
 slug: Web/JavaScript/Reference/Functions/arguments/length
 page-type: javascript-instance-data-property
 browser-compat: javascript.functions.arguments.length
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Functions")}}
 
 The **`arguments.length`** data property contains the number of arguments passed to the function.
 
@@ -17,7 +17,7 @@ A non-negative integer.
 
 ## Description
 
-The `arguments.length` property provides the number of arguments actually passed to a function. This can be more or less than the defined parameter's count (see {{jsxref("Function.prototype.length")}}). For example, for the function below:
+The `arguments.length` property provides the number of arguments actually passed to a function. This can be more or less than the number of defined parameters (see {{jsxref("Function.prototype.length")}}). For example, for the function below:
 
 ```js
 function func1(a, b, c) {

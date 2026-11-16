@@ -24,7 +24,7 @@ self.onmessage = () => {
 };
 ```
 
-If the origin is not a scheme/host/port tuple (say you are trying to run it locally, i.e. via `file://` URL), `origin` will return the string `"null"`.
+If the origin is not a scheme/host/port tuple (say you are trying to run it locally, i.e., via `file://` URL), `origin` will return the string `"null"`.
 
 ## Specifications
 

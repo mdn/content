@@ -2,12 +2,11 @@
 title: WAI ARIA Live Regions/API Support
 slug: Mozilla/Firefox/Releases/3/WAI_ARIA_Live_Regions_API_Support
 page-type: guide
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
-
 > [!WARNING]
-> These notes are for developers of screen readers. Developers should use the [ARIA live regions developer documentation](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions).
+> These notes are for developers of screen readers. Developers should use the [ARIA live regions developer documentation](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions).
 
 Firefox 3 contains important improvements to the way the Mozilla engine exposes live changes in a document.
 
@@ -35,13 +34,13 @@ For any mutation event in a page, the author can get the following object attrib
 | Object attribute name | Possible values                                                                                                                        | Default value                        | ARIA markup if required                | Meaning                                                                                                                                                                                                                                                                                                                      |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `container-live`      | `"off" \| "polite" \| "assertive"`                                                                                                     | `"off"`                              | `aria-live` on ancestor element        | Interruption                                                                                                                                                                                                                                                                                                                 |
-| `container-relevant`  | `'additions'` `'removals'` `'text' \| "all"`                                                                                           | `"additions text"`                   | `aria-relevant` on ancestor element    | What types of mutations are possibly relevant? See [section](#events_fired_for_web_page_mutations_the_mutation_events_list) to match the type of event with this attribute's value, to determine whether the author believed the event should be presented to the user or not.                                               |
+| `container-relevant`  | `'additions'` `'removals'` `'text' \| "all"`                                                                                           | `"additions text"`                   | `aria-relevant` on ancestor element    | What types of mutations are possibly relevant? See [section](#events_fired_for_web_page_mutations) to match the type of event with this attribute's value, to determine whether the author believed the event should be presented to the user or not.                                                                        |
 | `container-busy`      | `"true" \| "false" \| "error"`                                                                                                         | `"false"`                            | `aria-busy` on ancestor element        | The current changes are not yet complete. A state change event for the A11y API's BUSY state will be fired on the container object currently marked as BUSY, once it is no longer BUSY. This is especially important in atomic regions. The entire atomic region should be presented once when it is finally no longer BUSY. |
 | `container-atomic`    | `"true" \| "false"`                                                                                                                    | `"false"`                            | `aria-atomic` on ancestor element      | Is this change inside a region that should always be presented at once. If yes, member-of relation will point to the root of the region (see next section)                                                                                                                                                                   |
 | `member-of`           | If `container-atomic=true`, points to an ancestor accessible object (thus it is actually an accessible relation, not object attribute) | Not in atomic region if not provided | `aria-atomic` on ancestor element      | Points to the root of the atomic container that this object is in. This will always be an ancestor of the current object.                                                                                                                                                                                                    |
 | `event-from-input`    | `"true" \| "false"` (described more below)                                                                                             | Browser could not calculate this     | Does not require author's cooperation. | Was the root cause of this event explicit user input?                                                                                                                                                                                                                                                                        |
 
-The "container-" prefix is so named because the attribute describes what the final computed property of similar name is for that node. This means that the AT does not need to traverse up the parent chain to get this information. At this time, for properties where the `container-`_name_ attribute has not been set, the AT must have code to fall back on the default value as defined in the W3C spec.
+The "container-" prefix is so named because the attribute describes what the final computed property of similar name is for that node. This means that the AT does not need to traverse up the parent chain to get this information. At this time, for properties where the `container-*` attribute has not been set, the AT must have code to fall back on the default value as defined in the W3C spec.
 
 ## Determining if event was from user input
 
@@ -66,4 +65,4 @@ Everything else, including focus changes, timer callbacks, XMLHttpRequest callba
 
 ## What Should Screen Readers Present?
 
-Please read the live region section of the [WAI-ARIA Screen Reader Implementor's Guide](/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide#live_regions).
+Please read the live region section of the [WAI-ARIA Screen Reader Implementor's Guide](/en-US/docs/Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors#live_regions).

@@ -3,9 +3,8 @@ title: dom.openOrClosedShadowRoot()
 slug: Mozilla/Add-ons/WebExtensions/API/dom/openOrClosedShadowRoot
 page-type: webextension-api-function
 browser-compat: webextensions.api.dom.openOrClosedShadowRoot
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the open shadow root or the closed shadow root hosted by the specified element. If the shadow root isn't attached to the element, it will return `null`.
 

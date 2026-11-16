@@ -20,7 +20,6 @@ cancelWatchAvailability(id)
 ### Parameters
 
 - `id` {{optional_inline}}
-
   - : The `callbackId` of a particular remote playback device.
 
     If a `callbackId` of a specific device is passed in, then that device will be removed from the list of watched devices. Otherwise, the whole list will be cleared.
@@ -38,7 +37,7 @@ A {{jsxref("Promise")}} that resolves with `undefined`.
 
 ## Examples
 
-Once a remote playback device has been identified and is connected, the monitoring of available devices can be stopped using `cancelWatchAvailability().`
+Once a remote playback device has been identified and is connected, the monitoring of available devices can be stopped using `cancelWatchAvailability()`.
 
 ```js
 function switchToRemoteUI() {

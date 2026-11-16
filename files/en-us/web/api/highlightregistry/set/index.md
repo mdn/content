@@ -41,7 +41,7 @@ CSS.highlights.set("foo", fooHighlight);
 
 ### Using set() with chaining
 
-Since the `set()` method returns back the registry, you can chain the method call like below:
+Since the `set()` method returns the registry, you can chain the method call like below:
 
 ```js
 const fooHighlight = new Highlight();
@@ -65,4 +65,5 @@ CSS.highlights
 ## See also
 
 - {{domxref("css_custom_highlight_api", "The CSS Custom Highlight API", "", "nocode")}}
+- [CSS custom highlight API](/en-US/docs/Web/CSS/Guides/Custom_highlight_API) module
 - [CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web](https://css-tricks.com/css-custom-highlight-api-early-look/)

@@ -3,9 +3,8 @@ title: declarativeNetRequest.RuleAction
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleAction
 page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.RuleAction
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Details of the action to take if a rule is matched, as the `action` property of a {{WebExtAPIRef("declarativeNetRequest.Rule")}}.
 
@@ -20,7 +19,7 @@ Values of this type are objects. They contain these properties:
 - `responseHeaders` {{optional_inline}}
   - : {{WebExtAPIRef("declarativeNetRequest.ModifyHeaderInfo")}}. The response headers to modify for the request. Only valid if `type` is `"modifyHeaders"`.
 - `type`
-  - : A `string`. The type of action to perform. Possible values are `"block"`, `"redirect"`, `"allow"`, `"upgradeScheme"`, `"modifyHeaders"`, and `"allowAllRequests"`. The use of the `"redirect"` and `"modifyHeaders"` actions require [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the request and request initiator. The "block" and "upgradeScheme" actions also require host permissions unless the "declarativeNetRequest" permission is specified. Without these permissions, matching rules are ignored. See [Permissions at declarativeNetRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#permissions) for more information. More details about the effects of rule actions are provided in [Matching precedents](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#matching_precedents).
+  - : A `string`. The type of action to perform. Possible values are `"block"`, `"redirect"`, `"allow"`, `"upgradeScheme"`, `"modifyHeaders"`, and `"allowAllRequests"`. The use of the `"redirect"` and `"modifyHeaders"` actions require [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the request and request initiator. The "block" and "upgradeScheme" actions also require host permissions unless the "declarativeNetRequest" permission is specified. Without these permissions, matching rules are ignored. See [Permissions at declarativeNetRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#permissions) for more information. More details about the effects of rule actions are provided in [Matching precedence](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#matching_precedence).
 
 {{WebExtExamples("h2")}}
 

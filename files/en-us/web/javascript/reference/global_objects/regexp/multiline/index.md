@@ -1,19 +1,39 @@
 ---
 title: RegExp.prototype.multiline
+short-title: multiline
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.multiline
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`multiline`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `m` flag is used with this regular expression.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-multiline.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.multiline", "taller")}}
+
+```js interactive-example
+const regex1 = /^football/;
+const regex2 = /^football/m;
+
+console.log(regex1.multiline);
+// Expected output: false
+
+console.log(regex2.multiline);
+// Expected output: true
+
+console.log(regex1.test("rugby\nfootball"));
+// Expected output: false
+
+console.log(regex2.test("rugby\nfootball"));
+// Expected output: true
+```
 
 ## Description
 
 `RegExp.prototype.multiline` has the value `true` if the `m` flag was used; otherwise, `false`. The `m` flag indicates that a multiline input string should be treated as multiple lines. For example, if `m` is used, `^` and `$` change from matching at only the start or end of the entire string to the start or end of any line within the string.
+
+> [!NOTE]
+> To match the start and end of the entire string in `m` mode, use the [buffer boundary assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion) `\A`, `\z`, and `\Z`.
 
 The set accessor of `multiline` is `undefined`. You cannot change this property directly.
 
@@ -22,7 +42,7 @@ The set accessor of `multiline` is `undefined`. You cannot change this property 
 ### Using multiline
 
 ```js
-const regex = /foo/m;
+const regex = /^foo/m;
 
 console.log(regex.multiline); // true
 ```

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.vertexAttribI4i
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.vertexAttribI4[u]i[v]()`**
 methods of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) specify integer
@@ -40,7 +40,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.vertexAttribI4i(a_foobar, 10);
+gl.vertexAttribI4i(index, 10);
 ```
 
 ## Specifications

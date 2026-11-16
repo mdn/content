@@ -47,7 +47,6 @@ start(timeslice)
 ### Parameters
 
 - `timeslice` {{optional_inline}}
-
   - : The number of milliseconds to record into each {{domxref("Blob")}}. If this
     parameter isn't included, the entire media duration is recorded into a single
     `Blob` unless the {{domxref("MediaRecorder.requestData", "requestData()")}}
@@ -76,7 +75,7 @@ handler to respond to these errors.
   - : Thrown if:
     - The media stream you are attempting to record is inactive.
     - One or more of the stream's tracks is in a format that cannot be recorded using the current configuration
-    - The `videoKeyFrameIntervalDuration` and `videoKeyFrameIntervalCount` parameter are both specificed when creating the `MediaRecorder`.
+    - The `videoKeyFrameIntervalDuration` and `videoKeyFrameIntervalCount` parameter are both specified when creating the `MediaRecorder`.
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("MediaStream")}} is configured to disallow recording. This may be the
     case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} when the user denies permission to use an input device. This

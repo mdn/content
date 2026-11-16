@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.deleteSampler
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.deleteSampler()`** method of the
 [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) deletes a given
@@ -21,7 +21,7 @@ deleteSampler(sampler)
 ### Parameters
 
 - `sampler`
-  - : A {{domxref("WebGLSampler")}} object to delete.
+  - : A {{domxref("WebGLSampler")}} object to delete. Passing `null` does nothing.
 
 ### Return value
 

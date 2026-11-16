@@ -8,15 +8,14 @@ status:
 browser-compat: api.Document.linkColor
 ---
 
-{{APIRef("DOM")}} {{Deprecated_header}}
+{{APIRef("DOM")}}
 
 The **`Document.linkColor`** property gets/sets the color of
 links within the document.
 
 This property is deprecated. As an alternative, you can set the CSS
 {{cssxref("color")}} property on either HTML anchor links ({{HtmlElement("a")}}) or on
-{{cssxref(":link")}} pseudo-classes. Another alternative is
-`document.body.link`, although this is [deprecated in HTML 4.01](https://www.w3.org/TR/html401/struct/global.html#adef-link).
+{{cssxref(":link")}} pseudo-classes.
 
 ## Value
 

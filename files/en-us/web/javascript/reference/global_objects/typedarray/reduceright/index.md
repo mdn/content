@@ -1,15 +1,26 @@
 ---
 title: TypedArray.prototype.reduceRight()
+short-title: reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.reduceRight
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`reduceRight()`** method of {{jsxref("TypedArray")}} instances applies a function against an accumulator and each value of the typed array (from right-to-left) to reduce it to a single value. This method has the same algorithm as {{jsxref("Array.prototype.reduceRight()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-reduceright.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.reduceRight()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30]);
+
+const result = uint8.reduceRight(
+  (accumulator, currentValue) => `${accumulator}, ${currentValue}`,
+);
+
+console.log(result);
+// Expected output: "30, 20, 10"
+```
 
 ## Syntax
 
@@ -60,7 +71,7 @@ const total = new Uint8Array([0, 1, 2, 3]).reduceRight((a, b) => a + b);
 
 ## See also
 
-- [Polyfill of `TypedArray.prototype.reduceRight` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.reduceRight` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.map()")}}

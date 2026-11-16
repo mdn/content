@@ -1,18 +1,29 @@
 ---
-title: Application Context
+title: Application context
 slug: Glossary/Application_context
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
-{{GlossarySidebar}}
+**Application context** refers to the top-level {{glossary("browsing context")}} of a [web application](/en-US/docs/Web/Progressive_web_apps).
+It determines how an app's browsing context, such as a tab or a window, is presented and behaves.
 
-An **application context** is a top-level {{glossary("browsing context")}} that has a [manifest](/en-US/docs/Web/Manifest) applied to it.
+Web developers define the application context in the [web app's manifest file](/en-US/docs/Web/Progressive_web_apps/Manifest).
+They use the [`scope`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/scope) member in the manifest to specify the set of URLs that are considered part of the application context and to which the manifest applies.
 
-If an application context is created as a result of the user agent being asked to navigate to a deep link, the user agent must immediately navigate to the deep link with replacement enabled. Otherwise, when the application context is created, the user agent must immediately navigate to the start URL with replacement enabled.
+The manifest is applied after the application context is created but before navigation begins to either a start URL or a deep link.
+A **start URL** is the initial page of the web app.
+A **deep link** is a URL that directs users to a specific page within the web app, bypassing the home page.
+The application context ensures that the app's defined behavior and presentation are maintained within its scope.
 
-Please note that the start URL is not necessarily the value of the start_url member: the user or user agent could have changed it when the application was added to home-screen or otherwise bookmarked.
+When an application context is created, browsers must immediately navigate to a start URL or a deep link.
+This navigation replaces the current entry in the browsing history.
+If the application context is created to navigate to a deep link, the browser navigates directly to that deep link; otherwise, it navigates to the start URL.
+
+Note that the start URL is not necessarily the value of the [`start_url`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/start_url) member in the manifest. Browsers may ignore the specified `start_url` or may allow users to change its value when adding the web app to their device's home screen or bookmarking it.
 
 ## See also
 
+- [`scope`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/scope)
+- [Web app manifests](/en-US/docs/Web/Progressive_web_apps/Manifest)
 - [Progressive web apps (PWA)](/en-US/docs/Web/Progressive_web_apps)
-- [`scope`](/en-US/docs/Web/Manifest/scope)

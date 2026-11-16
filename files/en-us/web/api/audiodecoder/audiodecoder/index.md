@@ -3,12 +3,10 @@ title: "AudioDecoder: AudioDecoder() constructor"
 short-title: AudioDecoder()
 slug: Web/API/AudioDecoder/AudioDecoder
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.AudioDecoder.AudioDecoder
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`AudioDecoder()`** constructor creates a new {{domxref("AudioDecoder")}} object with the provided `init.output` callback assigned as the output callback, the provided `init.error` callback as the error callback, and the {{domxref("AudioDecoder.state")}} set to `"unconfigured"`.
 

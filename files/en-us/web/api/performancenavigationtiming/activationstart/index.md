@@ -50,9 +50,9 @@ let firstContentfulPaint = performance.getEntriesByName(
   "first-contentful-paint",
 )[0].startTime;
 
-console.log("time to first paint: " + (firstPaint - activationStart));
+console.log(`time to first paint: ${firstPaint - activationStart}`);
 console.log(
-  "time to first-contentful-paint: " + (firstContentfulPaint - activationStart),
+  `time to first-contentful-paint: ${firstContentfulPaint - activationStart}`,
 );
 ```
 
@@ -67,4 +67,4 @@ console.log(
 ## See also
 
 - [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API)
-- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading)
+- [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading)

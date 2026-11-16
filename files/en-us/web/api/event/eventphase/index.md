@@ -88,22 +88,17 @@ div {
 
 ```js
 let clear = false;
-let divInfo = null;
-let divs = null;
-let chCapture = null;
+const divInfo = document.getElementById("divInfo");
+const divs = document.getElementsByTagName("div");
+const chCapture = document.getElementById("chCapture");
 
-window.onload = () => {
-  divInfo = document.getElementById("divInfo");
-  divs = document.getElementsByTagName("div");
-  chCapture = document.getElementById("chCapture");
-  chCapture.onclick = () => {
-    removeListeners();
-    addListeners();
-    clearDivs();
-  };
-  clearDivs();
+chCapture.addEventListener("click", () => {
+  removeListeners();
   addListeners();
-};
+  clearDivs();
+});
+clearDivs();
+addListeners();
 
 function removeListeners() {
   for (const div of divs) {

@@ -27,7 +27,14 @@ A {{jsxref("String")}} that is one of the following values:
 The following example shows how to use the `textformatupdate` event's `underlineThickness` property to determine the underline thickness that needs to be applied to the text being formatted. Note that the event listener callback in this example is only called when using an IME window to compose text.
 
 ```html
-<div id="editor" style="height:200px;background:#eee;"></div>
+<div id="editor"></div>
+```
+
+```css hidden
+#editor {
+  height: 200px;
+  background: #eeeeee;
+}
 ```
 
 ```js

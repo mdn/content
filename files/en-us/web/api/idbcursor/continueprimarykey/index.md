@@ -46,7 +46,7 @@ None ({{jsxref("undefined")}}).
 This method may raise a {{domxref("DOMException")}} of one of the following types:
 
 - `TransactionInactiveError` {{domxref("DOMException")}}
-  - : Thrown if this IDBCursor's transaction is inactive.
+  - : Thrown if this `IDBCursor`'s transaction is inactive.
 - `DataError` {{domxref("DOMException")}}
   - : Thrown if the key parameter has any of the following conditions:
     - The key is not a valid key.

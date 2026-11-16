@@ -1,11 +1,11 @@
 ---
 title: TypeError() constructor
+short-title: TypeError()
 slug: Web/JavaScript/Reference/Global_Objects/TypeError/TypeError
 page-type: javascript-constructor
 browser-compat: javascript.builtins.TypeError.TypeError
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`TypeError()`** constructor creates {{jsxref("TypeError")}} objects.
 
@@ -25,7 +25,8 @@ TypeError(message, fileName)
 TypeError(message, fileName, lineNumber)
 ```
 
-> **Note:** `TypeError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `TypeError` instance.
+> [!NOTE]
+> `TypeError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `TypeError` instance.
 
 ### Parameters
 

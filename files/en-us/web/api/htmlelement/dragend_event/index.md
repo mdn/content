@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLElement.dragend_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML Drag and Drop API")}}
 
 The `dragend` event is fired when a drag operation ends (by releasing a mouse button or hitting the escape key).
 
@@ -14,12 +14,16 @@ This event is cancelable and may bubble up to the {{domxref("Document")}} and {{
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("dragend", (event) => {});
+```js-nolint
+addEventListener("dragend", (event) => { })
+```
 
-ondragend = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+ondragend = (event) => { }
 ```
 
 ## Event type
@@ -27,13 +31,6 @@ ondragend = (event) => {};
 A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("DragEvent")}}
-
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
-  - : The data that is transferred during a drag-and-drop interaction.
 
 ## Examples
 
@@ -96,7 +93,7 @@ source.addEventListener("dragend", (event) => {
 
 #### Result
 
-{{EmbedLiveSample('Resetting opacity on drag end')}}
+{{EmbedLiveSample('resetting_opacity_on_dragend')}}
 
 ## Specifications
 
@@ -109,7 +106,6 @@ source.addEventListener("dragend", (event) => {
 ## See also
 
 - Other drag and drop events:
-
   - {{domxref("HTMLElement/drag_event", "drag")}}
   - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
   - {{domxref("HTMLElement/dragover_event", "dragover")}}

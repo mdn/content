@@ -3,10 +3,12 @@ title: "XSLTProcessor: reset() method"
 short-title: reset()
 slug: Web/API/XSLTProcessor/reset
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.XSLTProcessor.reset
 ---
 
-{{APIRef("XSLT")}}
+{{APIRef("DOM")}}
 
 The `reset()` method of the {{domxref("XSLTProcessor")}} interface removes all parameters (`<xsl:param>`) and the XSLT stylesheet from the processor. The `XSLTProcessor` will then be in its original state when it was created.
 

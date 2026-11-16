@@ -3,20 +3,22 @@ title: runtime.MessageSender
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
 page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.MessageSender
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An object containing information about the sender of a message or connection request that is passed to the {{WebExtAPIRef("runtime.onMessage()")}} listener.
 
-It is also a property of {{WebExtAPIRef("runtime.Port")}}, but only in the `Port` instance passed into the {{WebExtAPIRef("runtime.onConnect()")}} or {{WebExtAPIRef("runtime.onConnectExternal()")}} listeners.
+Available for:
+
+- connections in the {{WebExtAPIRef("runtime.onConnect")}}, {{WebExtAPIRef("runtime.onConnectExternal")}}, and {{WebExtAPIRef("runtime.onUserScriptConnect")}} listeners. In the {{WebExtAPIRef("runtime.onConnect()")}} and {{WebExtAPIRef("runtime.onConnectExternal()")}} listeners, it's a property of the `port` argument ({{WebExtAPIRef("runtime.Port")}}).
+- messages in {{WebExtAPIRef("runtime.onMessage")}}, {{WebExtAPIRef("runtime.onMessageExternal")}}, and {{WebExtAPIRef("runtime.onUserScriptMessage")}} listeners.
 
 ## Type
 
 Values of this type are objects. They contain the following properties:
 
 - `documentId` {{optional_inline}}
-  - : `string`. A UUID of the document that opened the connection.
+  - : `string`. A UUID of the document that opened the connection. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 - `documentLifecycle` {{optional_inline}}
   - : `string`. The lifecycle state the document that opened the connection was in when the port was created. Note that the lifecycle state of the document may have changed since the port was created.
 - `frameId` {{optional_inline}}
@@ -30,12 +32,16 @@ Values of this type are objects. They contain the following properties:
 - `tlsChannelId` {{optional_inline}}
   - : `string`. The TLS channel ID of the page or frame that opened the connection, if requested by the extension and available.
 - `url` {{optional_inline}}
-
   - : `string`. The URL of the page or frame hosting the script that sent the message.
 
-    If the sender is a script running in an extension page (such as a [background page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts), an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages), or a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#page_actions) popup), the URL is in the form `"moz-extension://<extension-internal-id>/path/to/page.html"`. If the sender is a background script and you haven't included a background page, it is `"moz-extension://<extension-internal-id>/_generated_background_page.html"`.
+    If the sender is a script running in an extension page (such as a [background page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts), an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages), or a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) popup), the URL is in the form `"moz-extension://<extension-internal-id>/path/to/page.html"`. If the sender is a background script and you haven't included a background page, it is `"moz-extension://<extension-internal-id>/_generated_background_page.html"`.
 
     If the sender is a script running in a web page (including content and normal page scripts), then `url` is the web page URL. If the script is running in an iframe, `url` is the iframe's URL.
+
+- `userScriptWorldId` {{optional_inline}}
+  - : `string`. The `worldId` of the `USER_SCRIPT` world that sent the message. Only present in {{WebExtAPIRef("runtime.onUserScriptMessage")}} and in [`port.sender`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port#sender) for {{WebExtAPIRef("runtime.onUserScriptConnect")}}.
+- `windowId` {{optional_inline}}
+  - : `integer`. The ID of the window that contains the sender. Unlike {{WebExtAPIRef("tabs.Tab", "Tab", "#windowId")}}, it can also be set for senders not in a tab, such as a popup or sidebar. It is absent when the sender has no window, such as a background page.
 
 {{WebExtExamples}}
 

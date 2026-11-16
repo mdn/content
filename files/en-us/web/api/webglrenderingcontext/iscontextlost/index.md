@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.isContextLost
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The
 **`WebGLRenderingContext.isContextLost()`** method returns a
@@ -71,4 +71,4 @@ if (!gl.getProgramParameter(program, gl.LINK_STATUS) && !gl.isContextLost()) {
 ## See also
 
 - The {{domxref("WebGLContextEvent")}} signals changes in the context state.
-- [Handling lost context in WebGL](https://www.khronos.org/webgl/wiki/HandlingContextLost): Khronos WebGL wiki
+- [Handling lost context in WebGL](https://wikis.khronos.org/webgl/HandlingContextLost): Khronos WebGL wiki

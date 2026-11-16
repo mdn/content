@@ -13,7 +13,7 @@ The **`AmbientLightSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/
 
 To use this sensor, the user must grant permission to the `'ambient-light-sensor'` device sensor through the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
-This feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
+This feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) set on your server.
 
 {{InheritanceDiagram}}
 

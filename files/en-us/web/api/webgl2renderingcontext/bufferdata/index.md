@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.bufferData
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.bufferData()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) creates and initializes the buffer object's data store.
 
@@ -22,9 +22,7 @@ bufferData(target, srcData, usage, srcOffset, length)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-
     - `gl.ARRAY_BUFFER`
       - : Buffer containing vertex attributes, such as
         vertex coordinates, texture coordinate data, or vertex color data.
@@ -44,19 +42,12 @@ bufferData(target, srcData, usage, srcOffset, length)
       - : Buffer used for pixel transfer operations.
 
 - `size` {{optional_inline}}
-  - : A {{domxref("WebGL_API/Types", "GLsizeiptr")}} setting the size in bytes of the buffer object's data
-    store.
-    One of `size` and `srcData` must be provided.
+  - : A {{domxref("WebGL_API/Types", "GLsizeiptr")}} setting the size in bytes of the buffer object's data store. One of `size` and `srcData` must be provided. The data store is initialized to zero.
 - `srcData` {{optional_inline}}
-  - : An {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}}
-    that will be copied into the data store.
-    If `null`, a data store is still created, but the content is uninitialized and undefined.
-    One of `size` and `srcData` must be provided.
+  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} that views an {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}} that will be copied into the data store. One of `size` and `srcData` must be provided.
 - `usage`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the intended usage pattern of the data store
     for optimization purposes. Possible values:
-
     - `gl.STATIC_DRAW`
       - : The contents are intended to be specified
         once by the application, and used many times as the source for WebGL

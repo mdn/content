@@ -46,7 +46,7 @@ To do this, configure the ICE agent's ICE transport policy with an object confir
 const rtcConfig = {
   iceServers: [
     {
-      urls: "turn:myturn.server.ip",
+      urls: "turn:my-turn.server.ip",
       username: "username",
       credential: "password",
     },

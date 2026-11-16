@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLTableElement.width
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.width`** property represents the
 desired width of the table.
@@ -20,7 +20,7 @@ A string representing the width in number of pixels or as a percentage value.
 ## Examples
 
 ```js
-mytable.width = "75%";
+myTable.width = "75%";
 ```
 
 ## Specifications

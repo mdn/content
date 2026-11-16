@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Node.selectstart_event
 ---
 
-{{APIRef}}
+{{APIRef("Selection API")}}
 
 The **`selectstart`** event of the [Selection API](/en-US/docs/Web/API/Selection) is fired when a user starts a new selection.
 
@@ -14,12 +14,16 @@ If the event is canceled, the selection is not changed.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("selectstart", (event) => {});
+```js-nolint
+addEventListener("selectstart", (event) => { })
+```
 
-onselectstart = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onselectstart = (event) => { }
 ```
 
 ## Event type
@@ -34,7 +38,8 @@ document.addEventListener("selectstart", () => {
   console.log("Selection started");
 });
 
-// onselectstart version
+// onselectstart version (but note that this replaces other event listeners
+// added using onselectstart, if any)
 document.onselectstart = () => {
   console.log("Selection started.");
 };

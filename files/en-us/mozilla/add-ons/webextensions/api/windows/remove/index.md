@@ -3,9 +3,8 @@ title: windows.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/remove
 page-type: webextension-api-function
 browser-compat: webextensions.api.windows.remove
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Closes a window and all the tabs inside it, given the window's ID.
 
@@ -28,10 +27,6 @@ let removing = browser.windows.remove(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the window has been closed. If any error occurs, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 When the user clicks a browser action's icon, close the window in which the icon was clicked:
@@ -51,7 +46,7 @@ browser.browserAction.onClicked.addListener((tab) => {
 });
 ```
 
-Close the current, e.g. popup, window when the user clicks a button on the page:
+Close the current, e.g., popup, window when the user clicks a button on the page:
 
 ```js
 // in a script loaded by the page in the window
@@ -70,6 +65,10 @@ document.querySelector("#close").addEventListener(async ({ button }) => {
 In Firefox, the same could be achieved with the `.allowScriptsToClose` window creation property and `window.close()`.
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows#method-remove) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.

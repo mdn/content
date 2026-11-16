@@ -3,9 +3,8 @@ title: Event.hasListeners()
 slug: Mozilla/Add-ons/WebExtensions/API/events/Event/hasListeners
 page-type: webextension-api-event
 browser-compat: webextensions.api.events.Event.hasListeners
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Checks if any listeners are registered to the event.
 

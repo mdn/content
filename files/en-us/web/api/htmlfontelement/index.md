@@ -7,7 +7,7 @@ status:
 browser-compat: api.HTMLFontElement
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 Implements the document object model (DOM) representation of the font element. The HTML Font Element {{HTMLElement("font")}} defines the font size, font face and color of text.
 
@@ -18,11 +18,11 @@ Implements the document object model (DOM) representation of the font element. T
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLFontElement.color")}} {{Deprecated_Inline}}
-  - : A string that reflects the [`color`](/en-US/docs/Web/HTML/Element/font#color) HTML attribute, containing either a named color or a color specified in the hexadecimal #RRGGBB format.
+  - : A string that reflects the [`color`](/en-US/docs/Web/HTML/Reference/Elements/font#color) HTML attribute, containing either a named color or a color specified in the hexadecimal #RRGGBB format.
 - {{domxref("HTMLFontElement.face")}} {{Deprecated_Inline}}
-  - : A string that reflects the [`face`](/en-US/docs/Web/HTML/Element/font#face) HTML attribute, containing a comma-separated list of one or more font names.
+  - : A string that reflects the [`face`](/en-US/docs/Web/HTML/Reference/Elements/font#face) HTML attribute, containing a comma-separated list of one or more font names.
 - {{domxref("HTMLFontElement.size")}} {{Deprecated_Inline}}
-  - : A string that reflects the [`size`](/en-US/docs/Web/HTML/Element/font#size) HTML attribute, containing either a font size ranging from 1 to 7 or a number relative to the default value 3, for example -2 or +1.
+  - : A string that reflects the [`size`](/en-US/docs/Web/HTML/Reference/Elements/font#size) HTML attribute, containing either a font size ranging from 1 to 7 or a number relative to the default value 3, for example -2 or +1.
 
 ## Instance methods
 

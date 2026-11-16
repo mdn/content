@@ -189,11 +189,13 @@ for await (const filePath of walkSync(rootDir)) {
 
       // check broken URL fragment
       for (const fragment of deletedFragmentDetails) {
-        const locations = getLocations(content, fragment);
+        const locations = getLocations(content, `${fragment}(?: "|\\))`);
         // check fragments in the same file
         const urlParts = fragment.split("#");
         if (filePath.includes(`${urlParts[0]}/index.md`)) {
-          locations.push(...getLocations(content, `[(]#${urlParts[1]}`));
+          locations.push(
+            ...getLocations(content, `\\(#${urlParts[1]}(?: "|\\))`),
+          );
         }
         if (locations.length) {
           isAllOk = false;

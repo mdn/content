@@ -26,12 +26,11 @@ new URL(url, base)
     If `url` is a relative reference, `base` is required, and is used to resolve the final URL.
     If `url` is an absolute URL, a given `base` will not be used to create the resulting URL.
 - `base` {{optional_inline}}
-
   - : A string representing the base URL to use in cases where `url` is a relative reference.
     If not specified, it defaults to `undefined`.
 
     When a `base` is specified, the resolved URL is not simply a concatenation of `url` and `base`.
-    Relative references to the parent and current directory are resolved are relative to the current directory of the `base` URL, which includes path segments up until the last forward-slash, but not any after.
+    Relative references to the parent and current directory are resolved relative to the current directory of the `base` URL, which includes path segments up until the last forward-slash, but not any after.
     Relative references to the root are resolved relative to the base origin.
     For more information see [Resolving relative references to a URL](/en-US/docs/Web/API/URL_API/Resolving_relative_references).
 
@@ -48,32 +47,36 @@ new URL(url, base)
 
 Here are some examples of using the constructor.
 
-> **Note:** [Resolving relative references to a URL](/en-US/docs/Web/API/URL_API/Resolving_relative_references) provides additional examples demonstrating how different `url` and `base` values are resolved to a final absolute URL.
+> [!NOTE]
+> [Resolving relative references to a URL](/en-US/docs/Web/API/URL_API/Resolving_relative_references) provides additional examples demonstrating how different `url` and `base` values are resolved to a final absolute URL.
 
 ```js
 // Base URLs:
 let baseUrl = "https://developer.mozilla.org";
 
-let A = new URL("/", baseUrl);
+let a = new URL("/", baseUrl);
 // => 'https://developer.mozilla.org/'
 
-let B = new URL(baseUrl);
+let b = new URL(baseUrl);
 // => 'https://developer.mozilla.org/'
 
-new URL("en-US/docs", B);
+new URL("en-US/docs", b);
 // => 'https://developer.mozilla.org/en-US/docs'
 
-let D = new URL("/en-US/docs", B);
+let d = new URL("/en-US/docs", b);
 // => 'https://developer.mozilla.org/en-US/docs'
 
-new URL("/en-US/docs", D);
+new URL("/en-US/docs", d);
 // => 'https://developer.mozilla.org/en-US/docs'
 
-new URL("/en-US/docs", A);
+new URL("/en-US/docs", a);
 // => 'https://developer.mozilla.org/en-US/docs'
 
 new URL("/en-US/docs", "https://developer.mozilla.org/fr-FR/toto");
 // => 'https://developer.mozilla.org/en-US/docs'
+
+new URL("https://example.com", "https://beispiel.de");
+// => 'https://example.com/'
 ```
 
 Here are some examples of invalid URLs:
@@ -99,8 +102,8 @@ new URL("", "https://example.com/?query=1");
 new URL("/a", "https://example.com/?query=1");
 // => 'https://example.com/a' (see relative URLs)
 
-new URL("//foo.com", "https://example.com");
-// => 'https://foo.com/' (see relative URLs)
+new URL("//foo.example", "https://example.com");
+// => 'https://foo.example/' (see relative URLs)
 ```
 
 ## Specifications
@@ -114,5 +117,5 @@ new URL("//foo.com", "https://example.com");
 ## See also
 
 - {{domxref("URL.parse_static", "URL.parse()")}}, a non-throwing alternative to this constructor
-- [Polyfill of `URL` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [Polyfill of `URL` in `core-js`](https://core-js.io/docs/features/web-standards/url)
 - The interface it belongs to: {{domxref("URL")}}.

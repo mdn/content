@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XPathResult.snapshotLength
 ---
 
-{{APIRef("DOM XPath")}} {{AvailableInWorkers}}
+{{APIRef("DOM")}} {{AvailableInWorkers}}
 
 The read-only **`snapshotLength`** property of the
 {{domxref("XPathResult")}} interface represents the number of nodes in the result
@@ -21,8 +21,8 @@ An integer value representing the number of nodes in the result snapshot.
 #### TYPE_ERR
 
 In case {{domxref("XPathResult.resultType")}} is not
-`UNORDERED_NODE_SNAPSHOT_TYPE` or `ORDERED_NODE_SNAPSHOT_TYPE`, an
-{{domxref("XPathException")}} of type `TYPE_ERR` is thrown.
+`UNORDERED_NODE_SNAPSHOT_TYPE` or `ORDERED_NODE_SNAPSHOT_TYPE`, a
+{{domxref("DOMException")}} of type `TYPE_ERR` is thrown.
 
 ## Examples
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.bindRenderbuffer
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.bindRenderbuffer()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) binds a given
@@ -22,15 +22,13 @@ bindRenderbuffer(target, renderbuffer)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-
     - `gl.RENDERBUFFER`
       - : Buffer data storage for single images in a
         renderable internal format.
 
 - `renderbuffer`
-  - : A {{domxref("WebGLRenderbuffer")}} object to bind.
+  - : A {{domxref("WebGLRenderbuffer")}} object to bind, or `null` to unbind the object currently bound to the specified target.
 
 ### Return value
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.getLineDash
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`getLineDash()`** method of the Canvas 2D API's
 {{domxref("CanvasRenderingContext2D")}} interface gets the current line dash pattern.

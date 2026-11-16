@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.responseStart
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`responseStart`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser receives the first byte of the response from the server, cache, or local resource.
 
@@ -17,6 +17,7 @@ The `responseStart` property can have the following values:
 - A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the first byte of the response from the server.
 - `0` if the resource was instantaneously retrieved from a cache.
 - `0` if the resource is a cross-origin request and no {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header is used.
+- `0` if the resource is a canceled request.
 
 ## Examples
 

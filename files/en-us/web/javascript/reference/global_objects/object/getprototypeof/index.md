@@ -1,17 +1,25 @@
 ---
 title: Object.getPrototypeOf()
+short-title: getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.getPrototypeOf
+sidebar: jsref
 ---
 
-{{JSRef}}
-
 The **`Object.getPrototypeOf()`** static method returns the prototype
-(i.e. the value of the internal `[[Prototype]]` property) of the specified
+(i.e., the value of the internal `[[Prototype]]` property) of the specified
 object.
 
-{{EmbedInteractiveExample("pages/js/object-getprototypeof.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Object.getPrototypeOf()", "shorter")}}
+
+```js interactive-example
+const prototype = {};
+const object = Object.create(prototype);
+
+console.log(Object.getPrototypeOf(object) === prototype);
+// Expected output: true
+```
 
 ## Syntax
 
@@ -61,7 +69,8 @@ Object.getPrototypeOf("foo");
 
 ## See also
 
-- [Polyfill of `Object.getPrototypeOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.getPrototypeOf` in `core-js`](https://core-js.io/docs/features/ecmascript/object)
+- [es-shims polyfill of `Object.getPrototypeOf`](https://www.npmjs.com/package/object.getprototypeof)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

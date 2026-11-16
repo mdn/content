@@ -25,7 +25,7 @@ collapse(node, offset)
 - `node`
   - : The caret location will be within this node. This value can also be set to
     `null` — if `null` is specified, the method will behave like
-    {{domxref("Selection.removeAllRanges()")}}, i.e. all ranges will be removed from the
+    {{domxref("Selection.removeAllRanges()")}}, i.e., all ranges will be removed from the
     selection.
 - `offset` {{optional_inline}}
   - : The offset in `node` to which the selection will be collapsed. If not

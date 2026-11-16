@@ -2,9 +2,8 @@
 title: Legacy Version Formats
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/version/format
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This page describes legacy web extension version string formats. See the manifest [version key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) documentation for information on the current version string format.
 

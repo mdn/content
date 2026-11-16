@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 910 314" role="img" aria-labelledby="title description">
+  <title id="title">Module evaluation while configuration is pending</title>
+  <desc id="description">config.js is suspended at its first top-level await while fetching configuration. main.js and formatters.js are waiting for it, and their bodies have not started. All three are in progress, shown in amber. logger.js has evaluated successfully, shown in green. Solid arrows show module dependencies. Function bodies and the HTTP error check's body are omitted.</desc>
+  <style>
+    text { fill: #6b7280; font-family: Menlo, Consolas, monospace; font-size: 12px; }
+    .specifier { fill: #08827e; font-weight: bold; }
+    .outline { fill: none; stroke: #808080; stroke-width: 1; }
+    .pending { stroke: #a66b00; }
+    .success { stroke: #08827e; }
+    .status { text-anchor: end; paint-order: stroke; stroke: white; stroke-width: 4; stroke-linejoin: round; }
+    .pending-label { fill: #895900; }
+    .success-label { fill: #08827e; }
+    .edge { fill: none; stroke: #808080; stroke-width: 1; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#808080"/>
+    </marker>
+  </defs>
+
+  <rect x="20" y="30" width="330" height="88" fill="#fff8e6"/>
+  <rect x="390" y="30" width="500" height="116" fill="#fff8e6"/>
+  <rect x="20" y="186" width="510" height="108" fill="#fff8e6"/>
+  <rect x="560" y="186" width="270" height="80" fill="#edf8f5"/>
+
+  <path class="edge" d="M 340 48 H 390"/>
+  <path class="edge" d="M 265 76 V 186"/>
+  <path class="edge" d="M 544 58 L 300 186"/>
+  <path class="edge" d="M 624 76 V 186"/>
+
+  <path class="outline pending" d="M 92 30 H 350 V 118 H 20 V 30 H 28"/>
+  <text x="34" y="34">main.js</text>
+  <text x="34" y="52">import { greet } from <tspan class="specifier">"./formatters.js"</tspan>;</text>
+  <text x="34" y="70">import config from <tspan class="specifier">"./config.js"</tspan>;</text>
+  <text x="34" y="106">greet("Josh", config.locale);</text>
+
+  <path class="outline pending" d="M 504 30 H 890 V 146 H 390 V 30 H 398"/>
+  <text x="404" y="34">formatters.js</text>
+  <text x="404" y="52">import config from <tspan class="specifier">"./config.js"</tspan>;</text>
+  <text x="404" y="70">import { log } from <tspan class="specifier">"./logger.js"</tspan>;</text>
+  <text x="404" y="98">export function greet(name, localeName = config.defaultLocale) {</text>
+  <text x="404" y="116" xml:space="preserve">  // ...</text>
+  <text x="404" y="134">}</text>
+
+  <path class="outline pending" d="M 106 186 H 530 V 294 H 20 V 186 H 28"/>
+  <text x="34" y="190">config.js</text>
+  <text x="34" y="208">const response = await fetch("https://example.com/config.json");</text>
+  <text x="34" y="226">if (!response.ok) {</text>
+  <text x="34" y="244" xml:space="preserve">  // ...</text>
+  <text x="34" y="262">}</text>
+  <text x="34" y="280">export default await response.json();</text>
+
+  <path class="outline success" d="M 646 186 H 830 V 266 H 560 V 186 H 568"/>
+  <text x="574" y="190">logger.js</text>
+  <text x="574" y="208">export function log(message) {</text>
+  <text x="574" y="226" xml:space="preserve">  // ...</text>
+  <text x="574" y="244">}</text>
+  <text class="status pending-label" x="350" y="22">In progress</text>
+  <text class="status pending-label" x="890" y="22">In progress</text>
+  <text class="status pending-label" x="530" y="178">In progress</text>
+  <text class="status success-label" x="830" y="178">Evaluated</text>
+</svg>

@@ -1,18 +1,40 @@
 ---
-title: Convert
-slug: WebAssembly/Reference/Numeric/Convert
+title: "convert: Wasm numeric instruction"
+short-title: convert
+slug: WebAssembly/Reference/Numeric/convert
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.convert
+sidebar: webassemblysidebar
 ---
 
-{{WebAssemblySidebar}}
+The **`convert`** [numeric instructions](/en-US/docs/WebAssembly/Reference/Numeric) are used for converting integer numbers to floating point numbers. There are signed and unsigned versions of this instruction.
 
-The **`convert`** instructions, are used for converting integer numbers to floating point numbers. There are signed and unsigned versions of this instruction.
+{{InteractiveExample("Wat Demo: convert", "tabbed-taller")}}
 
-{{EmbedInteractiveExample("pages/wat/convert.html", "tabbed-taller")}}
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param f32)))
+  (func $main
+
+    i32.const 10 ;; push an i32 onto the stack
+
+    f32.convert_i32_s ;; convert from signed i32 to f32
+
+    call $log ;; log the result
+
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 
-```wasm
+```wat
 ;; push an i32 onto the stack
 i32.const 10
 
@@ -32,3 +54,11 @@ f32.convert_i32_s
 | `f64.convert_i32_u` | `0xb8`        |
 | `f64.convert_i64_s` | `0xb9`        |
 | `f64.convert_i64_u` | `0xba`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

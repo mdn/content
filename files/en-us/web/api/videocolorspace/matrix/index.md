@@ -22,6 +22,8 @@ A string containing one of the following values:
   - : Matrix coefficients used by BT.601 PAL.
 - `"smpte170m"`
   - : Matrix coefficients used by BT.601 NTSC.
+- `"bt2020-ncl"`
+  - : Matrix coefficients used by BT.2020 NCL.
 
 ## Examples
 

@@ -12,7 +12,7 @@ The **`delete()`** method of the {{domxref("Headers")}}
 interface deletes a header from the current `Headers` object.
 
 For security reasons, some headers can only be controlled by the user agent. These
-headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
+headers include the {{Glossary("Forbidden_request_header", "forbidden request headers")}}
 and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
 
 ## Syntax
@@ -63,5 +63,5 @@ myHeaders.get("Content-Type"); // Returns null, as it has been deleted
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

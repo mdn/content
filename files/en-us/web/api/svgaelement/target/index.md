@@ -14,19 +14,17 @@ This property is used when there are multiple possible targets for the ending re
 
 ## Value
 
-An {{domxref("SVGAnimatedString")}} indicating the ending resource target that opens the document when the link is activated.
-
-Sample values can be found [here](https://www.w3.org/TR/2011/REC-SVG11-20110816/linking.html#AElementTargetAttribute)
+An {{domxref("SVGAnimatedString")}} indicating the ending resource target that opens the document when the link is activated. See {{SVGAttr("target")}} for valid values.
 
 ## Examples
 
 The code is taken from the ["SVGAElement example code"](/en-US/docs/Web/API/SVGAElement#example)
 
 ```js
-// ...
+// …
 const linkRef = document.querySelector("a");
 linkRef.target = "_blank";
-// ...
+// …
 ```
 
 ## Specifications

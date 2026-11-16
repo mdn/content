@@ -3,9 +3,8 @@ title: downloads.FilenameConflictAction
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/FilenameConflictAction
 page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.FilenameConflictAction
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `FilenameConflictAction` type of the {{WebExtAPIRef("downloads")}} API specifies what to do if the name of a downloaded file conflicts with an existing file.
 
@@ -22,11 +21,11 @@ Values of this type are strings. Possible values are:
 - `"prompt"`
   - : The browser will prompt the user, asking them to choose whether to uniquify or overwrite.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-FilenameConflictAction) API.

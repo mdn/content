@@ -10,36 +10,33 @@ browser-compat: api.EditContext.textformatupdate_event
 
 {{APIRef("EditContext API")}}{{SeeCompatTable}}
 
-The `textformatupdate` event of the {{domxref("EditContext")}} interface fires when composition using a {{glossary("Input Method Editor")}} (IME) window is happening.
+The `textformatupdate` event of the {{domxref("EditContext")}} interface fires when composition using an {{glossary("Input Method Editor")}} (IME) window is happening.
 
 The event is fired when the IME decides that certain parts of the text being composed should be formatted differently to indicate the composition state.
 
-The following screenshot shows an example of text being written in the Nodepad app on Windows, by using the Japanese IME. The text is formatted with a thick underline to indicate that it's been composed from one of the IME's suggestions.
+The following screenshot shows an example of text being written in the Notepad app on Windows, by using the Japanese IME. The text is formatted with a thick underline to indicate that it's been composed from one of the IME's suggestions.
 
-![Nodepad on Windows with some Japanese text being composed from the IME window](./ime-nodepad.png)
+![Notepad on Windows with some Japanese text being composed from the IME window](./ime-notepad.png)
 
 As a web developer, you should listen for the `textformatupdate` event and update the formatting of the text displayed in your editable region accordingly.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("textformatupdate", (event) => {});
+```js-nolint
+addEventListener("textformatupdate", (event) => { })
+```
 
-ontextformatupdate = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+ontextformatupdate = (event) => { }
 ```
 
 ## Event type
 
 A {{domxref("TextFormatUpdateEvent")}}. Inherits from {{domxref("Event")}}.
-
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref('TextFormatUpdateEvent.getTextFormats')}}
-  - : Returns the list of text formats that the IME window wants to apply to the text.
 
 ## Examples
 

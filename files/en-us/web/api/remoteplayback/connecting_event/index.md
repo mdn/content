@@ -12,12 +12,16 @@ The **`connecting`** event of the {{domxref("RemotePlayback")}} interface fires 
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("connecting", (event) => {});
+```js-nolint
+addEventListener("connecting", (event) => { })
+```
 
-onconnecting = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onconnecting = (event) => { }
 ```
 
 ## Event type

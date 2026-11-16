@@ -28,4 +28,4 @@ An {{domxref("HTMLFormElement")}} or `null`.
 - {{domxref("HTMLFieldSetElement.form")}}
 - {{domxref("HTMLFormElement")}}
 - {{HTMLElement("legend")}}
-- [HTML forms guide](/en-US/docs/Learn/Forms)
+- [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms)

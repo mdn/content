@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.FontFaceSet.status
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`status`** read-only property of the {{domxref("FontFaceSet")}} interface returns the loading state of the fonts in the set.
 

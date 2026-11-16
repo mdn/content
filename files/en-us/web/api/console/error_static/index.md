@@ -2,7 +2,7 @@
 title: "console: error() static method"
 short-title: error()
 slug: Web/API/console/error_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.error_static
 ---
 
@@ -13,16 +13,16 @@ The **`console.error()`** static method outputs a message to the console at the 
 ## Syntax
 
 ```js-nolint
-error(val1)
-error(val1, /* …, */ valN)
-error(msg)
-error(msg, subst1, /* …, */ substN)
+console.error(val1)
+console.error(val1, /* …, */ valN)
+console.error(msg)
+console.error(msg, subst1, /* …, */ substN)
 ```
 
 ### Parameters
 
 - `val1` … `valN`
-  - : A list of JavaScript values to output. A representation of each of these values is output to the console in the order given with some type of separation between each of them. There is a special case if `obj1` is a string, which is described subsequently.
+  - : A list of JavaScript values to output. A representation of each of these values is output to the console in the order given with some type of separation between each of them. There is a special case if `val1` is a string, which is described subsequently.
 - `msg`
   - : A JavaScript string containing zero or more substitution strings, which are replaced with `subst1` through `substN` in consecutive order up to the number of substitution strings. See [Using string substitutions](/en-US/docs/Web/API/console#using_string_substitutions) for a description of how substitutions work.
 - `subst1` … `substN`
@@ -44,6 +44,6 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [Microsoft Edge's documentation for `console.error()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#error)
-- [Node.JS documentation for `console.error()`](https://nodejs.org/docs/latest/api/console.html#consoleerrordata-args)
+- [Microsoft Edge's documentation for `console.error()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#error)
+- [Node.js documentation for `console.error()`](https://nodejs.org/docs/latest/api/console.html#consoleerrordata-args)
 - [Google Chrome's documentation for `console.error()`](https://developer.chrome.com/docs/devtools/console/api/#error)

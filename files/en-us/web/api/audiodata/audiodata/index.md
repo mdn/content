@@ -3,12 +3,10 @@ title: "AudioData: AudioData() constructor"
 short-title: AudioData()
 slug: Web/API/AudioData/AudioData
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.AudioData.AudioData
 ---
 
-{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`AudioData()`** constructor creates a new {{domxref("AudioData")}} object which represents an individual audio sample.
 

@@ -16,14 +16,14 @@ The **`ResizeObserverEntry`** interface represents the object passed to the {{do
 - {{domxref('ResizeObserverEntry.contentBoxSize')}} {{ReadOnlyInline}}
   - : An array of objects containing the new content box size of the observed element when the callback is run.
 - {{domxref('ResizeObserverEntry.devicePixelContentBoxSize')}} {{ReadOnlyInline}}
-  - : An array of objects containing the new content box size in device pixels of the observed element when the callback is run.
+  - : An array of objects containing the new content box size in {{glossary("device pixel", "device pixels")}} of the observed element when the callback is run.
 - {{domxref('ResizeObserverEntry.contentRect')}} {{ReadOnlyInline}}
   - : A {{domxref('DOMRectReadOnly')}} object containing the new size of the observed element when the callback is run. Note that this is now a legacy property that is retained in the spec for backward-compatibility reasons only.
 - {{domxref('ResizeObserverEntry.target')}} {{ReadOnlyInline}}
   - : A reference to the {{domxref('Element')}} or {{domxref("SVGElement")}} being observed.
 
 > [!NOTE]
-> The content box is the box in which content can be placed, meaning the border box minus the padding and border width. The border box encompasses the content, padding, and border. See [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) for further explanation.
+> The content box is the box in which content can be placed, meaning the border box minus the padding and border width. The border box encompasses the content, padding, and border. See [The box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model) for further explanation.
 
 ## Instance methods
 
@@ -41,25 +41,20 @@ Note that the code covers three different compatibility cases:
 
 ```js
 const resizeObserver = new ResizeObserver((entries) => {
-  for (let entry of entries) {
+  for (const entry of entries) {
     if (entry.contentBoxSize) {
       // The standard makes contentBoxSize an array...
       if (entry.contentBoxSize[0]) {
-        h1Elem.style.fontSize =
-          Math.max(1.5, entry.contentBoxSize[0].inlineSize / 200) + "rem";
-        pElem.style.fontSize =
-          Math.max(1, entry.contentBoxSize[0].inlineSize / 600) + "rem";
+        h1Elem.style.fontSize = `${Math.max(1.5, entry.contentBoxSize[0].inlineSize / 200)}rem`;
+        pElem.style.fontSize = `${Math.max(1, entry.contentBoxSize[0].inlineSize / 600)}rem`;
       } else {
-        // ...but old versions of Firefox treat it as a single item
-        h1Elem.style.fontSize =
-          Math.max(1.5, entry.contentBoxSize.inlineSize / 200) + "rem";
-        pElem.style.fontSize =
-          Math.max(1, entry.contentBoxSize.inlineSize / 600) + "rem";
+        // … but old versions of Firefox treat it as a single item
+        h1Elem.style.fontSize = `${Math.max(1.5, entry.contentBoxSize.inlineSize / 200)}rem`;
+        pElem.style.fontSize = `${Math.max(1, entry.contentBoxSize.inlineSize / 600)}rem`;
       }
     } else {
-      h1Elem.style.fontSize =
-        Math.max(1.5, entry.contentRect.width / 200) + "rem";
-      pElem.style.fontSize = Math.max(1, entry.contentRect.width / 600) + "rem";
+      h1Elem.style.fontSize = `${Math.max(1.5, entry.contentRect.width / 200)}rem`;
+      pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
     }
   }
   console.log("Size changed");

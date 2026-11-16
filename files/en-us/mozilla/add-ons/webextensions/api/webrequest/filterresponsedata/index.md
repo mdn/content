@@ -3,9 +3,8 @@ title: webRequest.filterResponseData()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData
 page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.filterResponseData
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Use this function to create a {{WebExtAPIRef("webRequest.StreamFilter")}} object for a request. The stream filter gives the web extension full control over the stream, with the ability to monitor and modify the response. It's the extension's responsibility to write and close or disconnect the stream, as the default behavior is to keep the request open without a response.
 
@@ -68,7 +67,7 @@ function listener(details) {
     let str = decoder.decode(event.data, { stream: true });
     // Just change any instance of Example in the HTTP response
     // to WebExtension Example.
-    str = str.replace(/Example/g, "WebExtension Example");
+    str = str.replaceAll("Example", "WebExtension Example");
     filter.write(encoder.encode(str));
     filter.disconnect();
   };

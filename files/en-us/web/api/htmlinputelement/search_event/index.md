@@ -8,11 +8,11 @@ status:
 browser-compat: api.HTMLInputElement.search_event
 ---
 
-{{APIRef}}{{non-standard_header}}
+{{APIRef("HTML DOM")}}{{non-standard_header}}
 
 The **`search`** event is fired when a search is initiated using an {{HTMLElement("input")}} element of `type="search"`.
 
-There are several ways a search can be initiated, such as by pressing <kbd>Enter</kbd> while the {{HTMLElement("input")}} is focused, or, if the [`incremental`](/en-US/docs/Web/HTML/Element/input#incremental) attribute is present, after a UA-defined timeout elapses since the most recent keystroke (with new keystrokes resetting the timeout so the firing of the event is {{glossary("debounce", "debounced")}}).
+There are several ways a search can be initiated, such as by pressing <kbd>Enter</kbd> while the {{HTMLElement("input")}} is focused, or, if the [`incremental`](/en-US/docs/Web/HTML/Reference/Elements/input#incremental) attribute is present, after a UA-defined timeout elapses since the most recent keystroke (with new keystrokes resetting the timeout so the firing of the event is {{glossary("debounce", "debounced")}}).
 
 Current UA implementations of `<input type="search">` have an additional control to clear the field. Using this control also fires the `search` event. In that case the `value` of the {{HTMLElement("input")}} element will be the empty string.
 
@@ -20,12 +20,16 @@ This event is not cancelable.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("search", (event) => {});
+```js-nolint
+addEventListener("search", (event) => { })
+```
 
-onsearch = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onsearch = (event) => { }
 ```
 
 ## Event type
@@ -44,7 +48,8 @@ input.addEventListener("search", () => {
 ```
 
 ```js
-// onsearch version
+// onsearch version (but note that this replaces other event listeners
+// added using onsearch, if any)
 const input = document.querySelector('input[type="search"]');
 
 input.onsearch = () => {

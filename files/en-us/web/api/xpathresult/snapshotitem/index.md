@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XPathResult.snapshotItem
 ---
 
-{{APIRef("DOM XPath")}}
+{{APIRef("DOM")}}
 
 The **`snapshotItem()`** method of the
 {{domxref("XPathResult")}} interface returns an item of the snapshot collection or
@@ -35,8 +35,8 @@ The {{domxref("Node")}} at the given index within the node set of the
 #### TYPE_ERR
 
 In case {{domxref("XPathResult.resultType")}} is not
-`UNORDERED_NODE_SNAPSHOT_TYPE` or `ORDERED_NODE_SNAPSHOT_TYPE`, an
-{{domxref("XPathException")}} of type `TYPE_ERR` is thrown.
+`UNORDERED_NODE_SNAPSHOT_TYPE` or `ORDERED_NODE_SNAPSHOT_TYPE`, a
+{{domxref("DOMException")}} of type `TYPE_ERR` is thrown.
 
 ## Examples
 

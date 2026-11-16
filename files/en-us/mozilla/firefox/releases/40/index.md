@@ -1,14 +1,14 @@
 ---
-title: Firefox 40 for developers
+title: Firefox 40 release notes for developers
+short-title: Firefox 40
 slug: Mozilla/Firefox/Releases/40
 page-type: firefox-release-notes
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/) Firefox 40 was released on August 11, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 40 was released on August 11, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
-
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -56,13 +56,13 @@ _No change._
 - Unreachable code after {{jsxref("Statements/return", "return")}} statement (including unreachable expression after {{jsxref("Statements/return", "semicolon-less return statements", "#Automatic_semicolon_insertion", 1)}}) will now show a warning in the console ([Firefox bug 1005110](https://bugzil.la/1005110), [Firefox bug 1151931](https://bugzil.la/1151931)).
 - {{jsxref("Symbol.match")}} has been added ([Firefox bug 1054755](https://bugzil.la/1054755)).
 - Passing an object which has a property named {{jsxref("Symbol.match")}} with a {{Glossary("truthy")}} value to {{jsxref("String.prototype.startsWith")}}, {{jsxref("String.prototype.endsWith")}}, and `String.prototype.contains` now throws a {{jsxref("TypeError")}} ([Firefox bug 1054755](https://bugzil.la/1054755)).
-- {{jsxref("RegExp")}} function returns pattern itself if called without {{jsxref("Operators/new", "new")}} and pattern object has a property named {{jsxref("Symbol.match")}} with a {{Glossary("truthy")}} value, and the pattern object's `constructor` property equals to {{jsxref("RegExp")}} function. ([Firefox bug 1147817](https://bugzil.la/1147817)).
+- {{jsxref("RegExp")}} function returns pattern itself if called without {{jsxref("new")}} and pattern object has a property named {{jsxref("Symbol.match")}} with a {{Glossary("truthy")}} value, and the pattern object's `constructor` property equals to {{jsxref("RegExp")}} function. ([Firefox bug 1147817](https://bugzil.la/1147817)).
 - Support for the non-standard JS1.7 destructuring for-in has been dropped ([Firefox bug 1083498](https://bugzil.la/1083498)).
 - [Non-standard initializer expressions](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer) in [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops are now ignored and will present a warning in the console. ([Firefox bug 748550](https://bugzil.la/748550) and [Firefox bug 1164741](https://bugzil.la/1164741)).
 - [`\u{xxxxxx}`](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_code_point_escapes) Unicode code point escapes have been added ([Firefox bug 320500](https://bugzil.la/320500)).
-- {{jsxref("String.prototype.includes", "String.prototype.contains", "#String.prototype.contains")}} has been replaced with {{jsxref("String.prototype.includes")}}, `String.prototype.contains` is kept as an alias ([Firefox bug 1102219](https://bugzil.la/1102219)).
+- `String.prototype.contains` has been replaced with {{jsxref("String.prototype.includes")}}, `String.prototype.contains` is kept as an alias ([Firefox bug 1102219](https://bugzil.la/1102219)).
 - If the {{jsxref("DataView")}} constructor is called as a function without the {{ jsxref("Operators/new", "new") }} operator, a {{jsxref("TypeError")}} is now thrown as per the ES2015 specification.
-- An issue regressed in Firefox 21, where proxyfied arrays without the `get` trap were not working properly, has been fixed. If the `get` trap in a {{jsxref("Proxy")}} was not defined, {{jsxref("Array.length")}} returned `0` and the `set` trap didn't get called. A workaround was to add the `get` trap even if was not necessary in your code. This issue has been fixed now ([Firefox bug 895223](https://bugzil.la/895223)).
+- An issue regressed in Firefox 21, where proxified arrays without the `get` trap were not working properly, has been fixed. If the `get` trap in a {{jsxref("Proxy")}} was not defined, {{jsxref("Array.length")}} returned `0` and the `set` trap didn't get called. A workaround was to add the `get` trap even if was not necessary in your code. This issue has been fixed now ([Firefox bug 895223](https://bugzil.la/895223)).
 - `WeakMap.prototype` and `WeakSet.prototype` have been updated to be just ordinary objects, per ES2015 specification ([Firefox bug 1055473](https://bugzil.la/1055473)).
 
 ### Interfaces/APIs/DOM
@@ -92,7 +92,7 @@ Improvement in our experimental Web Animations implementation, mostly to match l
 
 #### DOM & HTML DOM
 
-- When unable to parse the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset), the {{domxref("HTMLImageElement.currentSrc")}} method doesn't return `null` anymore but `""`, as requested by the latest specification ([Firefox bug 1139560](https://bugzil.la/1139560)).
+- When unable to parse the [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset), the {{domxref("HTMLImageElement.currentSrc")}} method doesn't return `null` anymore but `""`, as requested by the latest specification ([Firefox bug 1139560](https://bugzil.la/1139560)).
 - Like for images, Firefox now throttles {{domxref("Window.requestAnimationFrame()")}} for non-visible {{HTMLElement("iframe")}} ([Firefox bug 1145439](https://bugzil.la/1145439)).
 - {{domxref("Navigator.taintEnabled")}} is no longer available for Web workers ([Firefox bug 1154878](https://bugzil.la/1154878)).
 
@@ -107,7 +107,7 @@ New extensions to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API):
 
 - Slight improvement in our [Service Worker API](/en-US/docs/Web/API/Service_Worker_API): the {{domxref("ServiceWorkerRegistration.update()", "update()")}} method has been moved from {{domxref("ServiceWorkerGlobalScope")}} to {{domxref("ServiceWorkerRegistration")}} ([Firefox bug 1131350](https://bugzil.la/1131350)).
 - {{domxref("ServiceWorkerRegistration")}} is now available in Web workers ([Firefox bug 1131327](https://bugzil.la/1131327)).
-- {{domxref("DataStore")}} is now available in Web workers ([Firefox bug 916196](https://bugzil.la/916196)).
+- `DataStore` is now available in Web workers ([Firefox bug 916196](https://bugzil.la/916196)).
 
 #### IndexedDB
 
@@ -151,7 +151,6 @@ _No change._
 
 - The `nsIClassInfo.implementationLanguage` attribute has been removed, along with the `nsClassInfo::GetImplementationLanguage()` function.
 - The following XPCOM interfaces have been removed; you should use the standard HTML interfaces instead:
-
   - `nsIDOMHTMLBRElement`
   - `nsIDOMDivElement`
   - `nsIDOMHTMLHeadingElement`
@@ -163,7 +162,3 @@ _No change._
 
 - Places Keywords API has been deprecated and will be removed soon ([Firefox bug 1140395](https://bugzil.la/1140395)).
 - The automated testing system now supports skipping individual test functions. See [running conditional tests](https://firefox-source-docs.mozilla.org/testing/xpcshell/index.html#conditionally-running-a-test) in XPCShell testing.
-
-## Older versions
-
-{{Firefox_for_developers}}

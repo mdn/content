@@ -12,12 +12,16 @@ The **`cuechange`** event fires when a {{domxref("TextTrack")}} has changed the 
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("cuechange", (event) => {});
+```js-nolint
+addEventListener("cuechange", (event) => { })
+```
 
-oncuechange = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+oncuechange = (event) => { }
 ```
 
 ## Event type
@@ -31,17 +35,17 @@ The underlying {{domxref("TextTrack")}}, indicated by the {{domxref("HTMLTrackEl
 If the track _is_ associated with a media element, using the {{HTMLElement("track")}} element as a child of the {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, the `cuechange` event is also sent to the {{domxref("HTMLTrackElement")}}.
 
 ```js
-let textTrackElem = document.getElementById("texttrack");
+let textTrackElem = document.getElementById("text-track");
 
 textTrackElem.addEventListener("cuechange", (event) => {
   let cues = event.target.track.activeCues;
 });
 ```
 
-Alternatively, you can use the `oncuechange` event handler:
+Alternatively, you can use the `oncuechange` event handler (but note that this replaces other event listeners added using `oncuechange`, if any):
 
 ```js
-let textTrackElem = document.getElementById("texttrack");
+let textTrackElem = document.getElementById("text-track");
 
 textTrackElem.oncuechange = (event) => {
   let cues = event.target.track.activeCues;

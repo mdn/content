@@ -3,9 +3,8 @@ title: Functions
 slug: Web/JavaScript/Reference/Functions
 page-type: guide
 browser-compat: javascript.functions
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Functions")}}
 
 Generally speaking, a function is a "subprogram" that can be _called_ by code external (or internal, in the case of recursion) to the function. Like the program itself, a function is composed of a sequence of statements called the _function body_. Values can be _passed_ to a function as parameters, and the function will _return_ a value.
 
@@ -18,11 +17,11 @@ For more examples and explanations, see the [JavaScript guide about functions](/
 Function values are typically instances of [`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function). See {{jsxref("Function")}} for information on properties and methods of `Function` objects. Callable values cause [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) to return `"function"` instead of `"object"`.
 
 > [!NOTE]
-> Not all callable values are `instanceof Function`. For example, the `Function.prototype` object is callable but not an instance of `Function`. You can also manually set the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) of your function so it no longer inherits from `Function.prototype`. However, such cases are extremely rare.
+> Not all callable values are `instanceof Function`. For example, the `Function.prototype` object is callable but not an instance of `Function`. You can also manually set the [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) of your function so it no longer inherits from `Function.prototype`. However, such cases are extremely rare.
 
 ### Return value
 
-By default, if a function's execution doesn't end at a [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement, or if the `return` keyword doesn't have an expression after it, then the return value is {{jsxref("undefined")}}. The `return` statement allows you to return an arbitrary value from the function. One function call can only return one value, but you can simulate the effect of returning multiple values by returning an object or array and [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) the result.
+By default, if a function's execution doesn't end at a [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement, or if the `return` keyword doesn't have an expression after it, then the return value is {{jsxref("undefined")}}. The `return` statement allows you to return an arbitrary value from the function. One function call can only return one value, but you can simulate the effect of returning multiple values by returning an object or array and [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) the result.
 
 > [!NOTE]
 > Constructors called with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) have a different set of logic to determine their return values.
@@ -41,7 +40,7 @@ formatNumber(2);
 
 In this example, the `num` variable is called the function's _parameter_: it's declared in the parenthesis-enclosed list of the function's definition. The function expects the `num` parameter to be a number — although this is not enforceable in JavaScript without writing runtime validation code. In the `formatNumber(2)` call, the number `2` is the function's _argument_: it's the value that is actually passed to the function in the function call. The argument value can be accessed inside the function body through the corresponding parameter name or the [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object.
 
-Arguments are always [_passed by value_](https://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_reference) and never _passed by reference_. This means that if a function reassigns a parameter, the value won't change outside the function. More precisely, object arguments are [_passed by sharing_](https://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_sharing), which means if the object's properties are mutated, the change will impact the outside of the function. For example:
+Arguments are always [_passed by value_](https://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_value) and never [_passed by reference_](https://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_reference). This means that if a function reassigns a parameter, the value won't change outside the function. More precisely, object arguments are [_passed by sharing_](https://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_sharing), which means if the object's properties are mutated, the change will impact the outside of the function. For example:
 
 ```js
 function updateBrand(obj) {
@@ -123,7 +122,7 @@ All syntaxes do approximately the same thing, but there are some subtle behavior
 - The `Function()` constructor, `function` expression, and `function` declaration syntaxes create full-fledged function objects, which can be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). However, arrow functions and methods cannot be constructed. Async functions, generator functions, and async generator functions are not constructible regardless of syntax.
 - The `function` declaration creates functions that are [_hoisted_](/en-US/docs/Web/JavaScript/Guide/Functions#function_hoisting). Other syntaxes do not hoist the function and the function value is only visible after the definition.
 - The arrow function and `Function()` constructor always create _anonymous_ functions, which means they can't easily call themselves recursively. One way to call an arrow function recursively is by assigning it to a variable.
-- The arrow function syntax does not have access to `arguments` or `this`.
+- The arrow function syntax does not create its own bindings for `arguments` or `this`.
 - The `Function()` constructor cannot access any local variables — it only has access to the global scope.
 - The `Function()` constructor causes runtime compilation and is often slower than other syntaxes.
 
@@ -238,7 +237,7 @@ There are three special parameter syntaxes:
 
 - [_Default parameters_](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) allow formal parameters to be initialized with default values if no value or `undefined` is passed.
 - The [_rest parameter_](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) allows representing an indefinite number of arguments as an array.
-- [_Destructuring_](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) allows unpacking elements from arrays, or properties from objects, into distinct variables.
+- [_Destructuring_](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) allows unpacking elements from arrays, or properties from objects, into distinct variables.
 
 ```js
 function myFunc({ a, b }, c = 1, ...rest) {

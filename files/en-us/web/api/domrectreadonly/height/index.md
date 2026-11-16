@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.DOMRectReadOnly.height
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`height`** read-only property of the **`DOMRectReadOnly`** interface represents the height of the `DOMRect`.
 

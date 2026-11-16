@@ -8,12 +8,7 @@ browser-compat: api.XMLHttpRequest.response
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-The {{domxref("XMLHttpRequest")}}
-**`response`** property returns the response's body content as
-an {{jsxref("ArrayBuffer")}}, a {{domxref("Blob")}}, a {{domxref("Document")}},
-a JavaScript {{jsxref("Object")}}, or a string, depending on the value
-of the request's {{domxref("XMLHttpRequest.responseType", "responseType")}}
-property.
+The **`response`** read-only property of the {{domxref("XMLHttpRequest")}} interface returns the response's body content as an {{jsxref("ArrayBuffer")}}, a {{domxref("Blob")}}, a {{domxref("Document")}}, a JavaScript {{jsxref("Object")}}, or a string, depending on the value of the request's {{domxref("XMLHttpRequest.responseType", "responseType")}} property.
 
 ## Value
 
@@ -41,7 +36,7 @@ The content is handled as raw text data (since nothing here is overriding the de
 {{domxref("XMLHttpRequest.responseType", "responseType")}}).
 
 ```js
-const url = "somePage.html"; //A local page
+const url = "somePage.html"; // A local page
 
 function load(url, callback) {
   const xhr = new XMLHttpRequest();

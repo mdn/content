@@ -10,8 +10,7 @@ browser-compat: api.AbortSignal.timeout_static
 
 The **`AbortSignal.timeout()`** static method returns an {{domxref("AbortSignal")}} that will automatically abort after a specified time.
 
-The signal aborts with a `TimeoutError` {{domxref("DOMException")}} on timeout, or with `AbortError` {{domxref("DOMException")}} due to pressing a browser stop button (or some other inbuilt "stop" operation).
-This allows UIs to differentiate timeout errors, which typically require user notification, from user-triggered aborts that do not.
+The signal aborts with a `TimeoutError` {{domxref("DOMException")}} on timeout.
 
 The timeout is based on active rather than elapsed time, and will effectively be paused if the code is running in a suspended worker, or while the document is in a back-forward cache ("[bfcache](https://web.dev/articles/bfcache)").
 
@@ -27,16 +26,25 @@ AbortSignal.timeout(time)
 
 - `time`
   - : The "active" time in milliseconds before the returned {{domxref("AbortSignal")}} will abort.
+    The value must be within range of 0 and {{jsxref("Number.MAX_SAFE_INTEGER")}}.
 
 ### Return value
 
 An {{domxref("AbortSignal")}}.
 
-The signal will abort with its {{domxref("AbortSignal.reason")}} property set to a `TimeoutError` {{domxref("DOMException")}} on timeout, or an `AbortError` {{domxref("DOMException")}} if the operation was user-triggered.
+The signal will abort with its {{domxref("AbortSignal.reason")}} property set to a `TimeoutError` {{domxref("DOMException")}} on timeout.
+
+## Description
+
+`AbortSignal.timeout()` does not provide a way to cancel its timeout. Finishing the operation early, or aborting another signal combined with it through {{domxref("AbortSignal/any_static", "AbortSignal.any()")}}, does not cancel the timeout.
+
+While the timeout is pending, the signal is kept alive if it has `abort` event listeners. [Remove listeners](/en-US/docs/Web/API/AbortSignal#removing_the_abort_event_listener) added by your code when they are no longer needed, rather than waiting for the timeout to expire. Creating long timeouts with listeners can prevent garbage collection even after application code drops its references to the signal.
+
+The `AbortSignal` becoming unreachable is not guaranteed to cancel the timeout. If resources are constrained and you want to definitively cancel timeouts early, use an {{domxref("AbortController")}} with {{domxref("Window.setTimeout", "setTimeout()")}} instead, and call {{domxref("Window.clearTimeout", "clearTimeout()")}} when the operation finishes.
 
 ## Examples
 
-Below is a simple example showing a fetch operation that will timeout if unsuccessful after 5 seconds.
+Below is an example showing a fetch operation that will timeout if unsuccessful after 5 seconds.
 Note that this may also fail if the method is not supported, if a browser "stop" button is pressed, or for another reason.
 
 ```js
@@ -48,8 +56,10 @@ try {
   // …
 } catch (err) {
   if (err.name === "TimeoutError") {
+    // This exception is from the abort signal
     console.error("Timeout: It took more than 5 seconds to get the result!");
   } else if (err.name === "AbortError") {
+    // This exception is from the fetch itself
     console.error(
       "Fetch aborted by user action (browser stop button, closing tab, etc.",
     );

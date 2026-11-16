@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WebGLShaderPrecisionFormat.precision
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The read-only **`WebGLShaderPrecisionFormat.precision`** property returns the number of bits of precision that can be represented.
 

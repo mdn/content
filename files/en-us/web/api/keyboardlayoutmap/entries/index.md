@@ -15,7 +15,17 @@ The **`entries()`** method of the {{domxref("KeyboardLayoutMap")}} interface ret
 
 The method is otherwise the same as {{jsxref("Map.prototype.entries()")}}.
 
-## Value
+## Syntax
+
+```js-nolint
+entries()
+```
+
+### Parameters
+
+None.
+
+### Return value
 
 A new [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) object.
 

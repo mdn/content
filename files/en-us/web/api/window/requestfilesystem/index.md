@@ -9,7 +9,7 @@ status:
 browser-compat: api.Window.requestFileSystem
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{non-standard_header}}
+{{APIRef("HTML DOM")}}{{non-standard_header}}
 
 The non-standard {{domxref("Window")}} method
 **`requestFileSystem()`** method is a Google Chrome-specific
@@ -44,7 +44,7 @@ requestFileSystem(type, size, successCallback, errorCallback)
   - : An optional parameter specifying a function which is called if an error occurs while
     attempting to obtain the file system, or if the user denies permission to create or
     access the file system. The callback receives as input a single parameter: a
-    `FileError` object describing the error.
+    `DOMException` object describing the error.
 
 ### Return value
 
@@ -57,7 +57,3 @@ As this method was removed from the [File and Directory Entries API](https://wic
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [File and Directory Entries API support in Firefox](/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)

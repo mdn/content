@@ -3,9 +3,8 @@ title: windows.WindowType
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
 page-type: webextension-api-type
 browser-compat: webextensions.api.windows.WindowType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The type of browser window this is.
 
@@ -18,11 +17,11 @@ Values of this type are `strings`. Possible values are:
 - `"panel"`
 - `"devtools"`
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows#type-WindowType) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.

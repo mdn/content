@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.WebSocket.WebSocket
 ---
 
-{{APIRef("WebSockets API")}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
 The **`WebSocket()`** constructor returns a new {{domxref("WebSocket")}} object and immediately attempts to establish a connection to the specified WebSocket URL.
 
@@ -20,15 +20,13 @@ new WebSocket(url, protocols)
 ### Parameters
 
 - `url`
-
   - : The URL of the target WebSocket server to connect to.
-    The URL must use one of the following schemes: `ws`, `wss`, `http`, or `https`, and cannot include a [URL fragment](/en-US/docs/Web/URI/Fragment).
+    The URL must use one of the following schemes: `ws`, `wss`, `http`, or `https`, and cannot include a [URL fragment](/en-US/docs/Web/URI/Reference/Fragment).
     If a relative URL is provided, it is relative to the base URL of the calling script.
 
 - `protocols` {{optional_inline}}
-
   - : A single string or an array of strings representing the [sub-protocol(s)](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#subprotocols) that the client would like to use, in order of preference.
-    If it is omitted, an empty array is used by default, i.e. `[]`.
+    If it is omitted, an empty array is used by default, i.e., `[]`.
 
     A single server can implement multiple WebSocket sub-protocols, and handle different types of interactions depending on the specified value.
     Note however that only one sub-protocol can be selected per connection.
@@ -43,44 +41,79 @@ new WebSocket(url, protocols)
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
-
   - : Thrown if:
-
     - parsing of [`url`](#url) fails
     - [`url`](#url) has a scheme other than `ws`, `wss`, `http`, or `https`
-    - [`url`](#url) has a [fragment](/en-US/docs/Web/URI/Fragment)
-    - any of the values in [`protocols`](#protocols) occur more than once, or otherwise fail to match the requirements for elements that comprise the value of [`Sec-WebSocket-Protocol`](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism#sec-websocket-protocol) fields as defined by the WebSocket Protocol specification
+    - [`url`](#url) has a [fragment](/en-US/docs/Web/URI/Reference/Fragment)
+    - any of the values in [`protocols`](#protocols) occur more than once, or otherwise fail to match the requirements for elements that comprise the value of [`Sec-WebSocket-Protocol`](/en-US/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism#sec-websocket-protocol) fields as defined by the WebSocket Protocol specification
 
 ## Examples
 
 The examples below show how you might connect to a `WebSocket`.
 
-The code below shows how we can connect to a socket using an URL with the `wss` schema:
+The code below shows how we can connect to a socket using a URL with the `wss` scheme:
 
 ```js
-const httpsWebSocket = new WebSocket('wss://websocket.example.org');
-console.log(httpsWebSocket.url); // 'wss://websocket.example.org'
-... // Do something with socket
-httpsWebSocket.close();
+const wssWebSocket = new WebSocket("wss://websocket.example.org");
+console.log(wssWebSocket.url); // 'wss://websocket.example.org'
+
+// Do something with socket
+
+wssWebSocket.close();
 ```
 
 The code for connecting to an HTTPS URL is nearly the same.
-Under the hood the browser resolves this to a "WSS" connection, so the {{domxref("WebSocket.url")}} will have the schema "wss:".
+Under the hood the browser resolves this to a "WSS" connection, so the {{domxref("WebSocket.url")}} will have the scheme "wss:".
 
 ```js
-let wssWebSocket = new WebSocket('https://websocket.example.org');
-console.log(wssWebSocket.url); // 'wss://websocket.example.org'
-... // Do something with socket
-wssWebSocket.close();
+const httpsWebSocket = new WebSocket("https://websocket.example.org");
+console.log(httpsWebSocket.url); // 'wss://websocket.example.org'
+
+// Do something with socket
+
+httpsWebSocket.close();
 ```
 
 We can also resolve relative URLs.
 The absolute URL will depend on the base URL of the context in which it is called.
 
 ```js
-relativeWebSocket = new WebSocket('/local/url');
-... // Do something with socket
+relativeWebSocket = new WebSocket("/local/url");
+
+// Do something with socket
+
 relativeWebSocket.close();
+```
+
+The previous examples show how to _construct_ a `WebSocket`, but the connection is established asynchronously. Calling {{domxref("WebSocket/send", "send()")}} before the {{domxref("WebSocket/open_event", "open")}} event fires throws an `InvalidStateError` exception, because {{domxref("WebSocket/readyState", "readyState")}} is still `CONNECTING`. If the connection cannot be established (for example, the server is unreachable or the handshake fails), an {{domxref("WebSocket/error_event", "error")}} event fires and is followed by a {{domxref("WebSocket/close_event", "close")}} event whose `wasClean` property is `false` — so every connection attempt ultimately ends with either an `open` event or a `close` event. The example below shows how to wait for the connection before sending, and how to handle the `error` and `close` events:
+
+```js
+// Create WebSocket connection.
+const socket = new WebSocket("wss://websocket.example.org");
+
+// Connection opened
+socket.addEventListener("open", (event) => {
+  socket.send("Hello Server!");
+});
+
+// Listen for messages
+socket.addEventListener("message", (event) => {
+  console.log("Message from server:", event.data);
+});
+
+// Handle errors
+socket.addEventListener("error", (event) => {
+  console.error("WebSocket error:", event);
+});
+
+// Handle disconnection
+socket.addEventListener("close", (event) => {
+  if (event.wasClean) {
+    console.log(`Closed cleanly, code=${event.code}, reason=${event.reason}`);
+  } else {
+    console.log("Connection died");
+  }
+});
 ```
 
 ## Specifications
@@ -93,4 +126,4 @@ relativeWebSocket.close();
 
 ## See also
 
-- [RFC 6455](https://www.rfc-editor.org/rfc/rfc6455.html) (the WebSocket Protocol specification)
+- [RFC 6455](https://www.rfc-editor.org/info/rfc6455/) (the WebSocket Protocol specification)

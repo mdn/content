@@ -3,13 +3,27 @@ title: NaN
 slug: Web/JavaScript/Reference/Global_Objects/NaN
 page-type: javascript-global-property
 browser-compat: javascript.builtins.NaN
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Objects")}}
 
 The **`NaN`** global property is a value representing Not-A-Number.
 
-{{EmbedInteractiveExample("pages/js/globalprops-nan.html")}}
+{{InteractiveExample("JavaScript Demo: NaN")}}
+
+```js interactive-example
+function sanitize(x) {
+  if (isNaN(x)) {
+    return NaN;
+  }
+  return x;
+}
+
+console.log(sanitize("1"));
+// Expected output: "1"
+
+console.log(sanitize("NotANumber"));
+// Expected output: NaN
+```
 
 ## Value
 
@@ -25,11 +39,11 @@ In modern browsers, `NaN` is a non-configurable, non-writable property. Even whe
 
 There are five different types of operations that return `NaN`:
 
-- Failed number conversion (e.g. explicit ones like `parseInt("blabla")`, `Number(undefined)`, or implicit ones like `Math.abs(undefined)`)
-- Math operation where the result is not a real number (e.g. `Math.sqrt(-1)`)
-- Indeterminate form (e.g. `0 * Infinity`, `1 ** Infinity`, `Infinity / Infinity`, `Infinity - Infinity`)
-- A method or expression whose operand is or gets coerced to `NaN` (e.g. `7 ** NaN`, `7 * "blabla"`) — this means `NaN` is contagious
-- Other cases where an invalid value is to be represented as a number (e.g. an invalid [Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) `new Date("blabla").getTime()`, `"".charCodeAt(1)`)
+- Failed number conversion (e.g., explicit ones like `parseInt("blabla")`, `Number(undefined)`, or implicit ones like `Math.abs(undefined)`)
+- Math operation where the result is not a real number (e.g., `Math.sqrt(-1)`)
+- Indeterminate form (e.g., `0 * Infinity`, `1 ** Infinity`, `Infinity / Infinity`, `Infinity - Infinity`)
+- A method or expression whose operand is or gets coerced to `NaN` (e.g., `7 ** NaN`, `7 * "blabla"`) — this means `NaN` is contagious
+- Other cases where an invalid value is to be represented as a number (e.g., an invalid [Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) `new Date("blabla").getTime()`, `"".charCodeAt(1)`)
 
 `NaN` and its behaviors are not invented by JavaScript. Its semantics in floating point arithmetic (including that `NaN !== NaN`) are specified by [IEEE 754](https://en.wikipedia.org/wiki/Double_precision_floating-point_format). `NaN`'s behaviors include:
 
@@ -85,11 +99,11 @@ arr.includes(NaN); // true
 arr.findIndex((n) => Number.isNaN(n)); // 2
 ```
 
-For more information about `NaN` and its comparison, see [Equality comparison and sameness](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
+For more information about `NaN` and its comparison, see [Equality comparison and sameness](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness).
 
 ### Observably distinct NaN values
 
-It's possible to produce two floating point numbers with different binary representations but are both `NaN`, because in [IEEE 754 encoding](https://en.wikipedia.org/wiki/NaN#Floating_point), any floating point number with exponent `0x7ff` and a non-zero mantissa is `NaN`. In JavaScript, you can do bit-level manipulation using [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays).
+It's possible to produce two floating point numbers that have different binary representations but are both `NaN`, because in [IEEE 754 encoding](https://en.wikipedia.org/wiki/NaN#Floating_point), any floating point number with exponent `0x7ff` and a non-zero mantissa is `NaN`. In JavaScript, you can do bit-level manipulation using [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays).
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
@@ -117,7 +131,7 @@ console.log(f2b(nan3)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
 
 ### Silently escaping NaN
 
-`NaN` propagates through mathematical operations, so it's usually sufficient to test for `NaN` once at the end of calculation to detect error conditions. The only case where `NaN` gets silently escaped is when using [exponentiation](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation) with an exponent of `0`, which immediately returns `1` without testing the base's value.
+`NaN` propagates through mathematical operations, so it's usually sufficient to test for `NaN` once at the end of calculation to detect error conditions. One case where `NaN` gets silently escaped is when using [exponentiation](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation) with an exponent of `0`, which immediately returns `1` without testing the base's value. Other cases involve {{jsxref("Math")}} functions, like {{jsxref("Math.hypot()")}} which prioritizes `Infinity` over `NaN`.
 
 ```js
 NaN ** 0 === 1; // true

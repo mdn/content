@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.DOMStringList
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`DOMStringList`** interface is a legacy type returned by some APIs and represents a non-modifiable list of strings (`DOMString`).
 

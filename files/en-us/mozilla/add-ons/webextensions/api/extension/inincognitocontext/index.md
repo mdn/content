@@ -3,9 +3,8 @@ title: extension.inIncognitoContext
 slug: Mozilla/Add-ons/WebExtensions/API/extension/inIncognitoContext
 page-type: webextension-api-property
 browser-compat: webextensions.api.extension.inIncognitoContext
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Boolean value, `true` for content scripts running inside private browsing tabs and for extension pages running inside a private browsing process.
 
@@ -19,11 +18,11 @@ let isPrivate = browser.extension.inIncognitoContext;  // true or false
 
 A _boolean_ value indicate if the current script is running in a private tab or process.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension#property-inIncognitoContext) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.

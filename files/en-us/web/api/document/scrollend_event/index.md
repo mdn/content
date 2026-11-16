@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Document.scrollend_event
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 The **`scrollend`** event fires when the document view has completed scrolling.
 Scrolling is considered completed when the scroll position has no more pending updates and the user has completed their gesture.
@@ -19,12 +19,16 @@ For detecting when scrolling inside an element is complete, see the {{domxref("E
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("scrollend", (event) => {});
+```js-nolint
+addEventListener("scrollend", (event) => { })
+```
 
-onscrollend = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onscrollend = (event) => { }
 ```
 
 ## Event type
@@ -93,7 +97,7 @@ document.addEventListener("scrollend", (event) => {
 
 The following example shows how to use the `scrollend` event handler property to detect when the user has stopped scrolling the document.
 In the example, there is content in the embedded iframe that is taller and wider than the iframe itself, so scrolling within the iframe in both directions is possible.
-This builds on the first example, but uses `document.onscrollend` instead of an event listener:
+This builds on the first example, but uses `document.onscrollend` instead of an event listener (but note that this replaces other event listeners added using `onscroll` and `onscrollend`, if any):
 
 ```css hidden
 * {
@@ -141,7 +145,7 @@ document.onscrollend = (event) => {
 };
 ```
 
-{{EmbedLiveSample("Using_scrollend_with_an_event_handler_property", "100%", 200)}}
+{{EmbedLiveSample("using_onscrollend_event_handler_property", "100%", 200)}}
 
 ## Specifications
 

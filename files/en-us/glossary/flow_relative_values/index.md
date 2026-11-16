@@ -2,9 +2,8 @@
 title: Flow relative values
 slug: Glossary/Flow_relative_values
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In CSS, **flow relative values** are directional keyword values relative to an element's block and inline axes. These values include `block-start`, `block-end`, `inline-start`, `inline-end`, `start`, and `end`.
 
@@ -30,5 +29,5 @@ A CSS property's effects can be either one-dimensional or two-dimensional. For e
 
 ## See also
 
-- [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
-- [Basic concepts of logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
+- [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) module
+- [Basic concepts of logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts)

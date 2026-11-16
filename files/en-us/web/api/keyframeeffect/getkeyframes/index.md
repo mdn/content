@@ -31,7 +31,7 @@ Returns a sequence of objects with the following format:
 - `computedOffset`
   - : The computed offset for this keyframe, calculated when the list of computed keyframes was produced. Unlike **`offset`,** above, the **`computedOffset`** is never `null`.
 - `easing`
-  - : The [easing function](/en-US/docs/Web/CSS/easing-function) used from this keyframe until the next keyframe in the series.
+  - : The [easing function](/en-US/docs/Web/CSS/Reference/Values/easing-function) used from this keyframe until the next keyframe in the series.
 - `composite`
   - : The {{domxref("KeyframeEffect.composite")}} operation used to combine the values specified in this keyframe with the underlying value. This will be absent if the composite operation specified on the effect is being used.
 

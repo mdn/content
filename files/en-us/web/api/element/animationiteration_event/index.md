@@ -6,18 +6,22 @@ page-type: web-api-event
 browser-compat: api.Element.animationiteration_event
 ---
 
-{{APIRef}}
+{{APIRef("Web Animations")}}
 
-The **`animationiteration`** event is fired when an iteration of a [CSS Animation](/en-US/docs/Web/CSS/CSS_animations) ends, and another one begins. This event does not occur at the same time as the {{domxref("Element/animationend_event", "animationend")}} event, and therefore does not occur for animations with an `animation-iteration-count` of one.
+The **`animationiteration`** event is fired when an iteration of a [CSS Animation](/en-US/docs/Web/CSS/Guides/Animations) ends, and another one begins. This event does not occur at the same time as the {{domxref("Element/animationend_event", "animationend")}} event, and therefore does not occur for animations with an `animation-iteration-count` of one.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("animationiteration", (event) => {});
+```js-nolint
+addEventListener("animationiteration", (event) => { })
+```
 
-onanimationiteration = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onanimationiteration = (event) => { }
 ```
 
 ## Event type
@@ -25,17 +29,6 @@ onanimationiteration = (event) => {};
 An {{domxref("AnimationEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("AnimationEvent")}}
-
-## Event properties
-
-_Also inherits properties from its parent {{domxref("Event")}}_.
-
-- {{domxref("AnimationEvent.animationName")}} {{ReadOnlyInline}}
-  - : A string containing the value of the {{cssxref("animation-name")}} that generated the animation.
-- {{domxref("AnimationEvent.elapsedTime")}} {{ReadOnlyInline}}
-  - : A `float` giving the amount of time the animation has been running, in seconds, when this event fired, excluding any time the animation was paused. For an `animationstart` event, `elapsedTime` is `0.0` unless there was a negative value for {{cssxref("animation-delay")}}, in which case the event will be fired with `elapsedTime` containing `(-1 * delay)`.
-- {{domxref("AnimationEvent.pseudoElement")}} {{ReadOnlyInline}}
-  - : A string, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the animation doesn't run on a pseudo-element but on the element, an empty string: `''`.
 
 ## Examples
 
@@ -52,7 +45,7 @@ animated.addEventListener("animationiteration", () => {
 });
 ```
 
-The same, but using the `onanimationiteration` event handler property:
+The same, but using the `onanimationiteration` event handler property (but note that this replaces other event listeners added using `onanimationiteration`, if any):
 
 ```js
 const animated = document.querySelector(".animated");
@@ -96,11 +89,11 @@ animated.onanimationiteration = () => {
 
 .animation.active {
   animation-duration: 2s;
-  animation-name: slidein;
+  animation-name: slide-in;
   animation-iteration-count: 2;
 }
 
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(100%) scaleX(3);
   }
@@ -166,7 +159,7 @@ applyAnimation.addEventListener("click", () => {
 
 ## See also
 
-- [CSS Animations](/en-US/docs/Web/CSS/CSS_animations)
-- [Using CSS Animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations)
+- [Using CSS Animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
 - {{domxref("AnimationEvent")}}
 - Related events: {{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationend_event", "animationend")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}

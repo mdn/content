@@ -8,9 +8,7 @@ browser-compat: api.HTMLElement.offsetTop
 
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLElement.offsetTop`** read-only property returns the
-distance from the outer border of the current element (including its margin) to the top padding edge of the {{domxref("HTMLelement.offsetParent","offsetParent")}}, the _closest positioned_
-ancestor element.
+The **`offsetTop`** read-only property of the {{domxref("HTMLElement")}} interface returns the distance from the outer border of the current element (including its margin) to the top padding edge of the {{domxref("HTMLelement.offsetParent","offsetParent")}}, the _closest positioned_ ancestor element.
 
 ## Value
 
@@ -35,3 +33,13 @@ if (topPos > 10) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("Element.clientTop")}}
+- {{domxref("Element.scrollTop")}}
+- {{domxref("HTMLElement.offsetHeight")}}
+- {{domxref("HTMLElement.offsetWidth")}}
+- {{domxref("HTMLElement.offsetLeft")}}
+- {{domxref("Element.getBoundingClientRect()")}}

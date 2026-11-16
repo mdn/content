@@ -6,26 +6,30 @@ page-type: web-api-event
 browser-compat: api.Document.securitypolicyviolation_event
 ---
 
-{{APIRef}}
+{{APIRef("Reporting API")}}
 
-The **`securitypolicyviolation`** event is fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
+The **`securitypolicyviolation`** event is fired when a [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) is violated.
 
 The event is fired on the document when there is a violation of the document CSP policy (and may also bubble from elements in the document).
 
-This event [bubbles](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling) to the {{domxref("Window")}} object, and is [composed](/en-US/docs/Web/API/Event/composed).
+This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) to the {{domxref("Window")}} object, and is [composed](/en-US/docs/Web/API/Event/composed).
 
 > [!NOTE]
-> You should add the handler for this event to a top level object (i.e. {{domxref("Window")}} or {{domxref("Document")}}).
-> While the property exists in HTML elements, you can't assign a handler to the property until the elements have been loaded, by which time this event will already have fired.
+> You should generally add the handler for this event to a top-level object (i.e., {{domxref("Window")}} or {{domxref("Document")}}).
+> While HTML elements can technically be the target of the `securitypolicyviolation` event, in reality this event does not fire on them—for example, a blocked `<img>` source directly triggers this event on `document` as the target, instead of bubbling from the `<img>` element.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("securitypolicyviolation", (event) => {});
+```js-nolint
+addEventListener("securitypolicyviolation", (event) => { })
+```
 
-onsecuritypolicyviolation = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onsecuritypolicyviolation = (event) => { }
 ```
 
 ## Event type
@@ -36,7 +40,7 @@ A {{domxref("SecurityPolicyViolationEvent")}}. Inherits from {{domxref("Event")}
 
 ## Examples
 
-The code below shows how you might add an event handler function using the `onsecuritypolicyviolation` event handler property or `addEventListener()` on the `Document`.
+The code below shows how you might add an event handler function using the `onsecuritypolicyviolation` event handler property (but note that this replaces other event listeners added using `onsecuritypolicyviolation`, if any) or `addEventListener()` on the `Document`.
 
 ```js
 document.onsecuritypolicyviolation = (e) => {
@@ -60,4 +64,4 @@ document.addEventListener("securitypolicyviolation", (e) => {
 
 - The {{domxref("Element/securitypolicyviolation_event", "securitypolicyviolation")}} event of the {{domxref("Element")}} interface
 - The {{domxref("WorkerGlobalScope/securitypolicyviolation_event", "securitypolicyviolation")}} event of the {{domxref("WorkerGlobalScope")}} interface
-- [HTTP > Content Security Policy](/en-US/docs/Web/HTTP/CSP)
+- [HTTP > Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP)

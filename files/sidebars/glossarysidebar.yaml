@@ -1,0 +1,13 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Glossary
+    title: Glossary
+  - type: listSubPages
+    path: /Glossary
+    depth: 2
+    nested: true
+l10n:
+  fr:
+    Glossary: Glossaire

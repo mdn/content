@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.DOMRectReadOnly.DOMRectReadOnly
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMRectReadOnly()`** constructor creates a new {{domxref("DOMRectReadOnly")}} object.
 

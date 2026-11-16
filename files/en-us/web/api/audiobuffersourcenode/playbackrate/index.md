@@ -8,9 +8,7 @@ browser-compat: api.AudioBufferSourceNode.playbackRate
 
 {{ APIRef("Web Audio API") }}
 
-The **`playbackRate`** property of
-the {{ domxref("AudioBufferSourceNode") }} interface Is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} that
-defines the speed at which the audio asset will be played.
+The **`playbackRate`** read-only property of the {{domxref("AudioBufferSourceNode")}} interface is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} that defines the speed at which the audio asset will be played.
 
 A value of 1.0 indicates it should play at the same speed as its sampling rate,
 values less than 1.0 cause the sound to play more slowly, while values greater than
@@ -39,7 +37,7 @@ In this example, when the user presses "Play", we load an audio track, decode it
 
 The example then sets the `loop` property to `true`, so the track loops, and plays the track.
 
-The user can set the `playbackRate` property using a [range control](/en-US/docs/Web/HTML/Element/input/range).
+The user can set the `playbackRate` property using a [range control](/en-US/docs/Web/HTML/Reference/Elements/input/range).
 
 > [!NOTE]
 > You can [run the full example live](https://mdn.github.io/webaudio-examples/audio-buffer-source-node/playbackrate/) (or [view the source](https://github.com/mdn/webaudio-examples/tree/main/audio-buffer-source-node/playbackrate).)

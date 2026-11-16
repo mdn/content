@@ -8,7 +8,7 @@ status:
 browser-compat: api.PaymentRequestEvent.PaymentRequestEvent
 ---
 
-{{APIRef("Payment Handler API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
+{{APIRef("Web-Based Payment Handler API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
 The **`PaymentRequestEvent`** constructor creates a new {{domxref("PaymentRequestEvent")}} object instance.
 
@@ -50,7 +50,7 @@ A developer would not use this constructor manually. A new `PaymentRequestEvent`
 
 ```js
 self.addEventListener("paymentrequest", (e) => {
-  // ...
+  // …
 });
 ```
 

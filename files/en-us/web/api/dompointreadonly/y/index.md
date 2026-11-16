@@ -1,12 +1,12 @@
 ---
 title: "DOMPointReadOnly: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/DOMPointReadOnly/y
 page-type: web-api-instance-property
 browser-compat: api.DOMPointReadOnly.y
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMPointReadOnly`** interface's
 **`y`** property holds the vertical coordinate, y, for a

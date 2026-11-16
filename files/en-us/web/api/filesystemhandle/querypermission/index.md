@@ -23,12 +23,9 @@ queryPermission(descriptor)
 ### Parameters
 
 - `descriptor` {{optional_inline}}
-
   - : An object which specifies the permission mode to query for. Options are as follows:
-
     - `'mode'` {{optional_inline}}
-
-      - : Can be either `'read'` or `'readwrite'`.
+      - : Can be either `'read'`, `'write'`, or `'readwrite'`.
 
 ### Return value
 
@@ -45,7 +42,7 @@ the user revoking permission, a handle retrieved from IndexedDB is also likely t
 
 - {{jsxref("TypeError")}}
   - : Thrown if `mode` is specified with a value other than
-    `'read'` or `'readwrite'`
+    `'read'`, `'write'`, or `'readwrite'`
 
 ## Examples
 

@@ -1,11 +1,11 @@
 ---
 title: Uint32Array() constructor
+short-title: Uint32Array()
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array/Uint32Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Uint32Array.Uint32Array
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Uint32Array()`** constructor creates {{jsxref("Uint32Array")}} objects. The contents are initialized to `0` unless initialization data is explicitly provided.
 
@@ -22,7 +22,8 @@ new Uint32Array(buffer, byteOffset)
 new Uint32Array(buffer, byteOffset, length)
 ```
 
-> **Note:** `Uint32Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Uint32Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -76,7 +77,7 @@ console.log(uint32FromIterable);
 
 ## See also
 
-- [Polyfill of `Uint32Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `Uint32Array` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}

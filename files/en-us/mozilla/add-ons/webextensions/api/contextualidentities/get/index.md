@@ -3,9 +3,8 @@ title: contextualIdentities.get()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/get
 page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.get
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets information about a contextual identity, given its cookie store ID.
 
@@ -28,10 +27,6 @@ let getContext = browser.contextualIdentities.get(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} that describes the identity. If the identity could not be found or the contextual identities feature is not enabled, the promise is rejected.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example tries to retrieve the contextual identity whose ID is "firefox-container-1":
@@ -53,3 +48,7 @@ browser.contextualIdentities.get("firefox-container-1").then(onGot, onError);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

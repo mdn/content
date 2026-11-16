@@ -2,15 +2,14 @@
 title: Throttle
 slug: Glossary/Throttle
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Throttling** originally meant slowing down the rate of fluid flow using an obstruction. In the context of programming, it refers to slowing down a process such that an operation can only be performed at a certain rate.
 
 Throttling is very similar to {{glossary("debounce", "debouncing")}}. The key difference is that when invocations happen continuously, throttling ensures that the operation is still performed at a certain maximum rate, while debouncing waits indefinitely until the invocations stop for a certain amount of time.
 
-A typical use case of debouncing is when synchronizing with another constantly-updating state. Consider a function `onScrolled`, which listens for the [`scroll`](/en-US/docs/Web/API/Document/scroll_event) event. The `scroll` event may fire as often as every pixel scrolled, so the function will be called in very short intervals. If `onScrolled` is computationally expensive, earlier invocations might block later invocations from happening on time, or block other things from executing in the meantime, leading to a noticeable {{glossary("jank")}}. In this case, we can throttle `onScrolled`, such that it can only be called at most once every 10 milliseconds:
+A typical use case of throttling is when synchronizing with another constantly-updating state. Consider a function `onScrolled`, which listens for the [`scroll`](/en-US/docs/Web/API/Document/scroll_event) event. The `scroll` event may fire as often as every pixel scrolled, so the function will be called in very short intervals. If `onScrolled` is computationally expensive, earlier invocations might block later invocations from happening on time, or block other things from executing in the meantime, leading to a noticeable {{glossary("jank")}}. In this case, we can throttle `onScrolled`, such that it can only be called at most once every 10 milliseconds:
 
 1. The first call to `onScrolled` is known as the _leading edge_.
 2. For every next call to `onScrolled`, if it is within 10 milliseconds from the first call, it is in the same "batch" as the first call.

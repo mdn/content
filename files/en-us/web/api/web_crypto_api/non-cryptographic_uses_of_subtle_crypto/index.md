@@ -10,9 +10,9 @@ This article will focus on uses of the [`digest`](/en-US/docs/Web/API/SubtleCryp
 
 This article does not discuss the cryptographic uses of the [SubtleCrypto interface](/en-US/docs/Web/API/SubtleCrypto). An important thing to take away from this article is **don't use this API** for production cryptographic purposes because it is powerful and low level. To use it correctly you will need to take many context specific steps to accomplish cryptographic tasks correctly. If any of those steps are taken incorrectly at best your code won't run, at worse it _will_ run and you will unknowingly be putting your users at risk with an insecure product.
 
-You may not even need to use the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) at all. Many of the things you would want to use cryptography for are already solved and part of the Web platform. For example, if you are worried about man-in-the-middle attacks, such as Wi-Fi hotspots reading the information between the client and the server, this is solved by ensuring correct use of [HTTPS](/en-US/docs/Glossary/HTTPS). Do you want to securely send information between users? Then you can set up a data connection between users using [WebRTC Data Channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels) which is encrypted as part of the standard.
+You may not even need to use the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) at all. Many of the things you would want to use cryptography for are already solved and part of the Web platform. For example, if you are worried about [manipulator in the middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM) attacks, such as Wi-Fi hotspots reading the information between the client and the server, this is solved by ensuring correct use of [HTTPS](/en-US/docs/Glossary/HTTPS). Do you want to securely send information between users? Then you can set up a data connection between users using [WebRTC Data Channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels) which is encrypted as part of the standard.
 
-The [SubtleCrypto interface](/en-US/docs/Web/API/SubtleCrypto) provides low level primitives for working with cryptography, but implementing a system using these tools is a complicated task. Mistakes are hard to notice and the results can mean your user's data is not as secure as you think it is. Which could have catastrophic results if your users are sharing sensitive or valuable data.
+The [SubtleCrypto interface](/en-US/docs/Web/API/SubtleCrypto) provides low-level primitives for working with cryptography, but implementing a system using these tools is a complicated task. Mistakes are hard to notice and the results can mean your user's data is not as secure as you think it is. Which could have catastrophic results if your users are sharing sensitive or valuable data.
 
 If in doubt don't try doing it yourself, hire someone with experience and ensure your software is audited by a security expert.
 
@@ -20,7 +20,7 @@ If in doubt don't try doing it yourself, hire someone with experience and ensure
 
 This is the simplest useful thing you can do with the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API). It doesn't involve generating keys or certificates and has one single step.
 
-[Hashing](/en-US/docs/Glossary/Hash) is a technique where you convert a large string of bytes into a smaller string, where small changes to the long string result in large changes in the smaller string. This technique is useful for identifying two identical files without checking every byte of both files. This is very useful as you have a simple string to compare. To be clear hashing is a **one way** operation. You cannot generate the original string of bytes from the hash.
+{{glossary("Hash function", "Hashing")}} is a technique where you convert a large string of bytes into a smaller string, where small changes to the long string result in large changes in the smaller string. This technique is useful for identifying two identical files without checking every byte of both files. This is very useful as you have a simple string to compare. To be clear hashing is a **one way** operation. You cannot generate the original string of bytes from the hash.
 
 If two generated hashes are the same, but the files that used to generate them are different, that is known as a _hash collision_ which is an extremely improbable thing to occur by accident and, for a secure hash function like SHA256, almost impossible to manufacture. So if the two strings are the same you can be reasonably sure the two original files are identical.
 
@@ -45,7 +45,14 @@ First we add some HTML elements for loading some files and displaying the SHA-25
 <label
   >Choose file(s) to hash <input type="file" id="file" name="file" multiple
 /></label>
-<output style="display:block;font-family:monospace;"></output>
+<output></output>
+```
+
+```css hidden
+output {
+  display: block;
+  font-family: monospace;
+}
 ```
 
 Next we use the SubtleCrypto interface to process them. This works by:
@@ -74,6 +81,10 @@ async function fileHash(file) {
   // each byte of the array buffer. This gets us an array where each byte
   // of the array buffer becomes one item in the array
   const uint8ViewOfHash = new Uint8Array(hashAsArrayBuffer);
+  if (uint8ViewOfHash.toHex) {
+    // The logic below is equivalent to the toHex() method, introduced in 2025.
+    return uint8ViewOfHash.toHex();
+  }
   // We then convert it to a regular array so we can convert each item
   // to hexadecimal strings, where characters of 0-9 or a-f represent
   // a number between 0 and 15, containing 4 bits of information,
@@ -99,10 +110,10 @@ async function hashTheseFiles(e) {
 
 ### Where would you use this?
 
-At this point you may be thinking to yourself "_I can use this on my own website, so when users go to download a file we can ensure the hashes match to reassure the user their download is secure_". Unfortunately this has two issues that immediate spring to mind:
+At this point you may be thinking to yourself "_I can use this on my own website, so when users go to download a file we can ensure the hashes match to reassure the user their download is secure_". Unfortunately, this has two issues that immediately spring to mind:
 
 - Executable downloads should **always** be done over HTTPS. This prevents intermediate parties from performing attacks like this so it would be redundant.
-- If the attacker is able to replace the download file on the original server, then they can also simply replace the code which invokes the SubtleCrypto interface to bypass it and just state that everything is fine. Probably something sneaky like replacing [strict equality](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using), which can be a pain to spot in your own code:
+- If the attacker is able to replace the download file on the original server, then they can also simply replace the code which invokes the SubtleCrypto interface to bypass it and just state that everything is fine. Probably something sneaky like replacing [strict equality](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#strict_equality_using), which can be a pain to spot in your own code:
 
   ```diff
   --- if (checksum === correctCheckSum) return true;
@@ -126,7 +137,7 @@ To solve this issue, you perform what is known as _salting the hash_. For each p
 
 You can use SHA1 to quickly generate non-cryptographically secure hashes. These are incredibly useful for turning some arbitrary data into a key you can look up later.
 
-For example, if you want to have a database which includes a large blob of data as one of the fields in a row. This decreases the efficiency of your database because one of the fields has to be either variable length, or large enough to store the largest possible blob. An alternative solution is to generate a hash of the blob and store it in a separate look up table using the hash as the index. You can then store just the hash in your original database which is a nice fixed length.
+For example, if you want to have a database which includes a large blob of data as one of the fields in a row. This decreases the efficiency of your database because one of the fields has to be either variable length, or large enough to store the largest possible blob. An alternative solution is to generate a hash of the blob and store it in a separate lookup table using the hash as the index. You can then store just the hash in your original database which is a nice fixed length.
 
 The possible variations for a SHA1 hash are incredibly numerous. So much so that accidentally producing two blobs with the same SHA1 hash is nearly-impossible. It _is_ possible to intentionally produce two files with the same SHA1 hash, because SHA1 is not cryptographically secure. So a malicious user could in theory generate a blob of data that replaces the original in the database, which goes undetected because the hash is the same. This is an attack vector worth being aware of.
 
@@ -145,7 +156,14 @@ The code below, like our SHA256 example, can be used to generate these hashes fr
   >Choose file(s) to hash <input type="file" id="file" name="file" multiple
 /></label>
 
-<output style="display:block;font-family:monospace;"></output>
+<output></output>
+```
+
+```css hidden
+output {
+  display: block;
+  font-family: monospace;
+}
 ```
 
 ```js
@@ -199,7 +217,7 @@ async function hashTheseFiles(e) {
 }
 ```
 
-{{EmbedLiveSample("how-git-stores-files")}}
+{{EmbedLiveSample("how_git_stores_files")}}
 
 Notice how it uses the [Encoding API](/en-US/docs/Web/API/Encoding_API) to produce the header, which is concatenated with the original ArrayBuffer to produce the string to be hashed.
 

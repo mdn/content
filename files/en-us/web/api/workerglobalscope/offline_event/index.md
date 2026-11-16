@@ -12,12 +12,16 @@ The **`offline`** event of the {{domxref("WorkerGlobalScope")}} fires when the d
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("offline", (event) => {});
+```js-nolint
+addEventListener("offline", (event) => { })
+```
 
-onoffline = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onoffline = (event) => { }
 ```
 
 ## Event type
@@ -26,7 +30,7 @@ A generic {{domxref("Event")}}.
 
 ## Example
 
-The following code snippet shows an `onoffline` handler set inside a worker:
+The following code snippet shows an `onoffline` handler set inside a worker (but note that this replaces other event listeners added using `onoffline`, if any):
 
 ```js
 self.onoffline = () => {

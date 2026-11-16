@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.DOMRectReadOnly.right
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`right`** read-only property of the **`DOMRectReadOnly`** interface returns the right coordinate value of the `DOMRect`. (Has the same value as `x + width`, or `x` if `width` is negative.)
 

@@ -19,14 +19,16 @@ A {{domxref("CustomStateSet")}} which is a {{jsxref("Set")}} of strings.
 The following function adds and removes the state `--checked` to a `CustomStateSet`, then prints to the console `true` or `false` as the custom checkbox is checked or unchecked.
 
 ```js
-set checked(flag) {
-  if (flag) {
-    this._internals.states.add('--checked');
-  } else {
-    this._internals.states.delete('--checked');
-  }
+class MyElement extends HTMLElement {
+  set checked(flag) {
+    if (flag) {
+      this._internals.states.add("--checked");
+    } else {
+      this._internals.states.delete("--checked");
+    }
 
-  console.log(this._internals.states.has('--checked'));
+    console.log(this._internals.states.has("--checked"));
+  }
 }
 ```
 

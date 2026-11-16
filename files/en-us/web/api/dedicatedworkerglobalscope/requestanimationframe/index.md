@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.DedicatedWorkerGlobalScope.requestAnimationFrame
 ---
 
-{{APIRef}}{{AvailableInWorkers("dedicated")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("dedicated")}}
 
 The **`requestAnimationFrame()`** method of the {{domxref("DedicatedWorkerGlobalScope")}} interface tells the browser you wish to perform an animation frame request and call a user-supplied callback function before the next repaint.
 
@@ -28,11 +28,8 @@ requestAnimationFrame(callback)
 ### Parameters
 
 - `callback`
-
   - : The function to call when it's time to update your animation for the next repaint. This callback function is passed a single argument:
-
     - `timestamp`
-
       - : A {{domxref("DOMHighResTimeStamp")}} indicating the end time of the previous frame's rendering (based on the number of milliseconds since [time origin](/en-US/docs/Web/API/Performance/timeOrigin)). The timestamp is a decimal number, in milliseconds, but with a minimal precision of 1 millisecond. The timestamp value is also similar to calling {{domxref('performance.now()')}} at the start of the callback function, but it is never the same value.
 
         When multiple callbacks queued by `requestAnimationFrame()` begin to fire in a single frame, each receives the same timestamp even though time has passed during the computation of every previous callback's workload.
@@ -51,13 +48,25 @@ assumptions about it. You can pass this value to
 
 ## Examples
 
-On the main thread, we start by transferring the control of a {{HTMLElement("canvas")}} element to an {{domxref("OffscreenCanvas")}}, using {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}, then send a message to the worker to `"start"` its work with the offscreen canvas:
+Here's a complete example showing how to use `requestAnimationFrame()` in a dedicated worker with an `OffscreenCanvas`.
+
+The HTML should contain:
+
+```html
+<canvas width="100" height="100"></canvas>
+```
+
+It should link to the following JavaScript:
 
 ```js
+const worker = new Worker("worker.js");
+
+// Transfer canvas control to the worker
 const offscreenCanvas = document
   .querySelector("canvas")
   .transferControlToOffscreen();
 
+// Start the animation
 worker.postMessage(
   {
     type: "start",
@@ -65,41 +74,65 @@ worker.postMessage(
   },
   [offscreenCanvas],
 );
+
+// Stop the animation after 5 seconds
+setTimeout(() => {
+  worker.postMessage({
+    type: "stop",
+  });
+}, 5000);
 ```
 
-When receiving the `"start"` message, the worker starts the animation, moving the rectangle from left to right. Upon reception of a `"stop"` message, it will stop the animation.
+**worker.js:**
 
 ```js
 let ctx;
 let pos = 0;
-let handle;
+let animationId;
+let isRunning = false;
+let lastTime = 0;
 
-function draw(dt) {
+function draw(currentTime) {
+  if (!isRunning) return;
+
+  // Calculate delta time for smooth animation
+  if (lastTime === 0) lastTime = currentTime;
+  const deltaTime = (currentTime - lastTime) / 1000;
+  lastTime = currentTime;
+
+  // Clear and draw the moving rectangle
   ctx.clearRect(0, 0, 100, 100);
   ctx.fillRect(pos, 0, 10, 10);
-  pos += 10 * dt;
-  handle = self.requestAnimationFrame(draw);
+  pos += 50 * deltaTime; // Move 50 pixels per second
+
+  // Loop the animation
+  if (pos > 100) pos = -10;
+
+  animationId = self.requestAnimationFrame(draw);
 }
 
 self.addEventListener("message", (e) => {
   if (e.data.type === "start") {
     const transferredCanvas = e.data.canvas;
     ctx = transferredCanvas.getContext("2d");
-    handle = self.requestAnimationFrame(draw);
+    isRunning = true;
+    lastTime = 0;
+    animationId = self.requestAnimationFrame(draw);
   }
   if (e.data.type === "stop") {
-    self.cancelAnimationFrame(handle);
+    isRunning = false;
+    if (animationId) {
+      self.cancelAnimationFrame(animationId);
+    }
   }
 });
 ```
 
-Finally, if needed, the main thread can send a `"stop"` message to the worker to stop the animation:
+On the main thread, we start by transferring the control of a {{HTMLElement("canvas")}} element to an {{domxref("OffscreenCanvas")}}, using {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}} and send a message to `"start"` its work to the worker, with the offscreen canvas.
 
-```js
-worker.postMessage({
-  type: "stop",
-});
-```
+In the worker file (`worker.js`), we handle the animation logic. When receiving the `"start"` message, the worker starts the animation, moving the rectangle from left to right. Upon reception of a `"stop"` message, it will stop the animation.
+
+Finally, the main thread can send a `"stop"` message to the worker to stop the animation after a delay, allowing the animation to be visible before stopping.
 
 ## Specifications
 

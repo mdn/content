@@ -1,17 +1,26 @@
 ---
 title: Promise.resolve()
+short-title: resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.resolve
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Promise.resolve()`** static method "resolves" a given value to a {{jsxref("Promise")}}. If the value is a promise, that promise is returned; if the value is a [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables), `Promise.resolve()` will call the `then()` method with two callbacks it prepared; otherwise the returned promise will be fulfilled with the value.
 
-This function flattens nested layers of promise-like objects (e.g. a promise that fulfills to a promise that fulfills to something) into a single layer — a promise that fulfills to a non-thenable value.
+This function flattens nested layers of promise-like objects (e.g., a promise that fulfills to a promise that fulfills to something) into a single layer — a promise that fulfills to a non-thenable value.
 
-{{EmbedInteractiveExample("pages/js/promise-resolve.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.resolve()")}}
+
+```js interactive-example
+const promise1 = Promise.resolve(123);
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: 123
+});
+```
 
 ## Syntax
 
@@ -187,9 +196,12 @@ class NotPromise {
       (reason) => console.log("Rejected", reason),
     );
   }
+
+  static resolve = Promise.resolve;
 }
 
-Promise.resolve.call(NotPromise, "foo"); // Logs "Resolved foo"
+const p = NotPromise.resolve("foo"); // Logs "Resolved foo"
+// p is a NotPromise instance
 ```
 
 The ability to flatten nested thenables is implemented by the `resolve` function of the `Promise()` constructor, so if you call it on another constructor, nested thenables may not be flattened, depending on how that constructor implements its `resolve` function.
@@ -206,7 +218,8 @@ const thenable = {
   },
 };
 
-Promise.resolve.call(NotPromise, thenable); // Logs "Resolved { then: [Function: then] }"
+const p = NotPromise.resolve(thenable); // Logs "Resolved { then: [Function: then] }"
+// p is a NotPromise instance
 ```
 
 ## Specifications

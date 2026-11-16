@@ -11,9 +11,9 @@ The **`AudioNode`** interface is a generic interface for representing an audio p
 
 Examples include:
 
-- an audio source (e.g. an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, an {{domxref("OscillatorNode")}}, etc.),
+- an audio source (e.g., an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, an {{domxref("OscillatorNode")}}, etc.),
 - the audio destination,
-- intermediate processing module (e.g. a filter like {{domxref("BiquadFilterNode")}} or {{domxref("ConvolverNode")}}), or
+- intermediate processing module (e.g., a filter like {{domxref("BiquadFilterNode")}} or {{domxref("ConvolverNode")}}), or
 - volume control (like {{domxref("GainNode")}})
 
 {{InheritanceDiagram}}

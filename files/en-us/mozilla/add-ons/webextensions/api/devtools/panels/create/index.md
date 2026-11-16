@@ -3,9 +3,8 @@ title: devtools.panels.create()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/create
 page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.panels.create
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Adds a new panel to the devtools.
 
@@ -26,17 +25,13 @@ let creating = browser.devtools.panels.create(
 - `title`
   - : `string`. The panel's title. This will appear in the row of tabs along the top of the devtools window, and is the main way the user will be able to identify your panel.
 - `iconPath`
-  - : `string`. Specifies an icon which will be shown next to the title. It's provided as a URL to an image file that's been bundled with your extension. Chromium-based browsers and Safari resolve this URL as absolute, while Firefox resolves this URL as relative to the current extension page (unless expressed as an absolute URL, e.g. "/icons/panel.png").
+  - : `string`. Specifies an icon which will be shown next to the title. It's provided as a URL to an image file that's been bundled with your extension. Chromium-based browsers and Safari resolve this URL as absolute, while Firefox resolves this URL as relative to the current extension page (unless expressed as an absolute URL, e.g., "/icons/panel.png").
 - `pagePath`
   - : string. Specifies an HTML file that defines the content of the panel. It's provided as a URL to an HTML file bundled with your extension. The URL may be resolved as an absolute URL or relative to the current extension page. See the browser compatibility data for more information. The HTML file can include CSS and JavaScript files, just like a normal web page. The JavaScript running in the panel can use the devtools APIs. See [Extending the developer tools](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools).
 
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an [`ExtensionPanel`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel) object representing the new panel.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -64,6 +59,10 @@ browser.devtools.panels
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/api/devtools/panels) API.

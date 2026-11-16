@@ -8,25 +8,13 @@ browser-compat: api.Element.clientTop
 
 {{ APIRef("DOM") }}
 
-The width of the top border of an element in pixels. It is a read-only, integer
-property of element.
+The **`clientTop`** read-only property of the {{domxref("Element")}} interface returns the width of the top border of an element in pixels.
 
-As it happens, all that lies between the two locations (`offsetTop` and
-client area top) is the element's border. This is because the `offsetTop`
-indicates the location of the top of the border (not the margin) while the client area
-starts immediately below the border, (client area includes padding.) Therefore, the
-**clientTop** value will always equal the integer portion of the
-`.getComputedStyle()` value for "border-top-width". (Actually might be
-Math.round(parseFloat()).) For example, if the computed "border-top-width" is zero,
-then **`clientTop`** is also zero.
-
-> [!NOTE]
-> This property will round the value to an integer. If you
-> need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
+All that lies between the `offsetTop` and `clientTop` is the element's border. This is because the `offsetTop` indicates the location of the top of the border (not the margin) while the client area starts immediately below the border, including padding. Therefore, the `clientTop` value is always equal to the `border-top-width`, rounded to integer. For example, if the computed `border-top-width` is zero, then `clientTop` is also zero.
 
 ## Value
 
-A number.
+An integer.
 
 ## Examples
 
@@ -69,10 +57,6 @@ In the following example, the client area has a white background and a 24px blac
 
 {{EmbedLiveSample("Examples", 400, 350)}}
 
-## Notes
-
-`clientTop` was first introduced in the MS IE DHTML object model.
-
 ## Specifications
 
 {{Specifications}}
@@ -80,3 +64,13 @@ In the following example, the client area has a white background and a 24px blac
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("HTMLElement.offsetTop")}}
+- {{domxref("Element.scrollTop")}}
+- {{domxref("Element.clientHeight")}}
+- {{domxref("Element.clientWidth")}}
+- {{domxref("Element.clientLeft")}}
+- {{domxref("Element.getBoundingClientRect()")}}

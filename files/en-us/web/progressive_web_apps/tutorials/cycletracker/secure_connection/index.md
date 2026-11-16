@@ -3,14 +3,13 @@ title: "CycleTracker: Secure connection"
 short-title: Secure connection
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection
 page-type: tutorial-chapter
+sidebar: pwasidebar
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
-{{PWASidebar}}
-
 PWAs can only be installed using a manifest file when served with the `https://` protocol, or when served locally from `127.0.0.1` and `localhost` URLs with the `http://` protocol.
-They also commonly use APIs that are [restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts).
+They also commonly use APIs that are [restricted to secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts).
 
 In the previous section, we used HTML and CSS to create the shell of our period tracking application. In this section, we'll open the CycleTracker static content in a browser, view the content from a locally started development environment, and view the content on a remote, secure server.
 
@@ -22,11 +21,11 @@ With the `index.html` updated, and the `style.css` housed in the same directory,
 
 ![Light green web page with a large header, a form with a legend, two date pickers and a button. The bottom shows two placeholder menstrual cycles and a header.](filefile.jpg)
 
-We are viewing our page using the `file://` protocol, which provides a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+We are viewing our page using the `file://` protocol, which provides a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 This ensures that the pages can be viewed with the current state of our codebase, and will continue to work as we [add JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) that requires a secure context.
 
 > [!NOTE]
-> Serving your app over `https` isn't only good for PWAs, but for all websites as it ensures the information that transits between your web server and the user's browser is encrypted end to end. Several [Web APIs require secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts). Even if you aren't creating installable PWAs, as you add features to any web app, you may run into cases where a secure context is required.
+> Serving your app over `https` isn't only good for PWAs, but for all websites as it ensures the information that transits between your web server and the user's browser is encrypted end to end. Several [Web APIs require secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts). Even if you aren't creating installable PWAs, as you add features to any web app, you may run into cases where a secure context is required.
 
 While we can view and test most application functionality using the `file://` protocol, we can't use it to test application installation using our [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file).
 
@@ -36,7 +35,7 @@ We need a local development environment to test the whole tutorial including ins
 
 The default method for setting up a local development environment varies by operating system. While the default location for the index and configuration files on your operating system may differ, most desktop operating systems enable a server configuration accessible to you, the developer.
 
-For example, on macOS, at least on Sierra and Monterey, entering `sudo apachectl start` enables an Apache HTTP server. Once the server is started, entering `http://localhost` in the browser displays an basic web page that reads "It works!". By default, the HTML file displayed is `Library/WebServer/Documents/index.html.en`. To enable file extensions other than `.html.en` or to change the root directory away from `Library/WebServer/Documents/`, you have to edit the apache http configuration file, located at `/etc/apache2/httpd.conf`. The server can be stopped with `sudo apachectl stop`.
+For example, on macOS, at least on Sierra and Monterey, entering `sudo apachectl start` enables an Apache HTTP server. Once the server is started, entering `http://localhost` in the browser displays a basic web page that reads "It works!". By default, the HTML file displayed is `Library/WebServer/Documents/index.html.en`. To enable file extensions other than `.html.en` or to change the root directory away from `Library/WebServer/Documents/`, you have to edit the apache http configuration file, located at `/etc/apache2/httpd.conf`. The server can be stopped with `sudo apachectl stop`.
 
 The OS's default `localhost` has an easy-to-remember URL, but a difficult to remember server root location and configuration process. It also only allows for one local server in one location at a time. Fortunately, there are more intuitive server set up method options to create one or more local development environments on multiple ports.
 
@@ -44,12 +43,12 @@ The OS's default `localhost` has an easy-to-remember URL, but a difficult to rem
 
 There are several {{glossary("IDE")}} extensions and programming-language specific packages that enable starting a development environment with a single click or terminal command. You can even start multiple local servers, each with a different port number.
 
-You can run a local HTTP server using a [VSCode plugin](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#using_an_extension_in_your_code_editor), which enables running a local server on a single or different port. The [Preview on Web Server extension](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server) for the [VSCode](https://code.visualstudio.com/download) IDE creates a server at the root of the directory currently opened by the editor, with a default port of `8080`. VS Code extensions are configurable. The `previewServer.port` setting is the port number of the web server. The extensions default setting of `8080` can be edited and changed. By default, entering `localhost:8080` in the browser URL bar will load the page.
+You can run a local HTTP server using a [VS Code plugin](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#using_an_extension_in_your_code_editor), which enables running a local server on a single or different port. The [Preview on Web Server extension](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server) for the [VS Code](https://code.visualstudio.com/download) IDE creates a server at the root of the directory currently opened by the editor, with a default port of `8080`. VS Code extensions are configurable. The `previewServer.port` setting is the port number of the web server. The extensions default setting of `8080` can be edited and changed. By default, entering `localhost:8080` in the browser URL bar will load the page.
 
 > [!NOTE]
 > The Preview on Web Server extension uses Browsersync. When your development environment is started by this extension, `localhost:3001` provides a user interface for Browsersync, providing an overview of the current server environment.
 
-Learn how to [set up a local testing server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) using [Python](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#using_python) or [local server side language](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#running_server-side_languages_locally) like PHP.
+Learn how to [set up a local testing server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) using [Python](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#using_python) or [local server-side language](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#running_server-side_languages_locally) like PHP.
 
 ## Localhost with npx
 
@@ -59,7 +58,7 @@ By default, entering `localhost:8080` in the browser URL bar will load the page.
 
 You can choose a different port number. Entering `npx http-server /user/yourName/CycleTracker -p 8787` will start local server at port `8787` if available. If not, if you enter a port number that is already being used, you will get an `address already in use` or similar error. If successful, entering `localhost:8787` in the browser URL bar will render the index file stored as `~/user/yourName/CycleTracker/index.html`, or will display the directory contents of `~/user/yourName/CycleTracker/` if no index file is present.
 
-This non-configurable static HTTP server suffices for our basic app. Apps served via `localhost` and `127.0.0.1` are exempt from https and always considered secure. Browser insecure warnings, if given, can be bypassed. While not necessary, to configurable your local web server to be served over HTTPS, you can [add a built-in TLS certificate](https://github.com/lwsjs/local-web-server/wiki/How-to-get-the-%22green-padlock%22-using-the-built-in-certificate). With the certificate, you will be able to install and run [local-web-server](<https://github.com/lwsjs/local-web-server/wiki/How-to-launch-a-secure-local-web-server-(HTTPS)>) from the command line to serve your project locally over `https`, preventing any security warning.
+This non-configurable static HTTP server suffices for our basic app. Apps served via `localhost` and `127.0.0.1` are exempt from https and always considered secure. Browser insecure warnings, if given, can be bypassed. While not necessary, to configure your local web server to be served over HTTPS, you can [add a built-in TLS certificate](https://github.com/lwsjs/local-web-server/wiki/How-to-get-the-%22green-padlock%22-using-the-built-in-certificate). With the certificate, you will be able to install and run [local-web-server](<https://github.com/lwsjs/local-web-server/wiki/How-to-launch-a-secure-local-web-server-(HTTPS)>) from the command line to serve your project locally over `https`, preventing any security warning.
 
 ```bash
 npm install -g local-web-server
@@ -78,7 +77,7 @@ The previous options are fine, and necessary, for testing your application as yo
 
 To get the added features of PWAs, including single click installation, a standalone UI, admission to app stores, and optionally offline functionality through service workers, we will need a secure connection. To distribute your app, enabling others to view, use, and install your PWA, you'll want to have your content hosted and available on a secure _remote_ server.
 
-When officially publishing a PWA, you will likely want to invest in a [domain name and web hosting](/en-US/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#hosting). For open source projects, where developers can learn from the codebase and even contribute back to the project, you can host your progress on [GitHub Pages](https://pages.github.com/).
+When officially publishing a PWA, you will likely want to invest in [web hosting and a domain name](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#getting_hosting_and_a_domain_name). For open-source projects, where developers can learn from the codebase and even contribute back to the project, you can host your progress on [GitHub Pages](https://pages.github.com/).
 
 ## GitHub Pages
 

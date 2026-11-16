@@ -1,15 +1,26 @@
 ---
 title: Date.prototype.toDateString()
+short-title: toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toDateString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toDateString()`** method of {{jsxref("Date")}} instances returns a string representing the date portion of this date interpreted in the local timezone.
 
-{{EmbedInteractiveExample("pages/js/date-todatestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.toDateString()")}}
+
+```js interactive-example
+const event = new Date(1993, 6, 28, 14, 39, 7);
+
+console.log(event.toString());
+// Expected output: "Wed Jul 28 1993 14:39:07 GMT+0200 (CEST)"
+// Note: your timezone may vary
+
+console.log(event.toDateString());
+// Expected output: "Wed Jul 28 1993"
+```
 
 ## Syntax
 
@@ -31,7 +42,7 @@ A string representing the date portion of the given date (see description for th
 
 1. First three letters of the week day name
 2. First three letters of the month name
-3. Two-digit day of the month, padded on the left a zero if necessary
+3. Two-digit day of the month, padded on the left with a zero if necessary
 4. Four-digit year (at least), padded on the left with zeros if necessary. May have a negative sign
 
 For example: "Thu Jan 01 1970".
@@ -39,7 +50,7 @@ For example: "Thu Jan 01 1970".
 - If you only want to get the _time_ part, use {{jsxref("Date/toTimeString", "toTimeString()")}}.
 - If you want to get both the date and time, use {{jsxref("Date/toString", "toString()")}}.
 - If you want to make the date interpreted as UTC instead of local timezone, use {{jsxref("Date/toUTCString", "toUTCString()")}}.
-- If you want to format the date in a more user-friendly format (e.g. localization), use {{jsxref("Date/toLocaleDateString", "toLocaleDateString()")}}.
+- If you want to format the date in a more user-friendly format (e.g., localization), use {{jsxref("Date/toLocaleDateString", "toLocaleDateString()")}}.
 
 ## Examples
 

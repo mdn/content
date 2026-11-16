@@ -3,11 +3,10 @@ title: omnibox.onInputCancelled
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputCancelled
 page-type: webextension-api-event
 browser-compat: webextensions.api.omnibox.onInputCancelled
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar}}
-
-Fired when the user has cancelled their interaction with your extension (for example, by clicking outside the address bar).
+Fired when the user has canceled their interaction with your extension (for example, by clicking outside the address bar).
 
 ## Syntax
 
@@ -30,19 +29,19 @@ Events have three functions:
 
 The listener function is passed no parameters.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
 browser.omnibox.onInputCancelled.addListener(() => {
-  console.log("The user cancelled the session.");
+  console.log("The user canceled the session.");
 });
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox) API.

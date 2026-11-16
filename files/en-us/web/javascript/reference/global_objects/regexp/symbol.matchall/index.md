@@ -1,15 +1,31 @@
 ---
 title: RegExp.prototype[Symbol.matchAll]()
+short-title: "[Symbol.matchAll]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@matchAll
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.matchAll]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.matchAll`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) should behave.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-@@matchall.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.matchAll]()", "taller")}}
+
+```js interactive-example
+class MyRegExp extends RegExp {
+  [Symbol.matchAll](str) {
+    const result = RegExp.prototype[Symbol.matchAll].call(this, str);
+    if (!result) {
+      return null;
+    }
+    return Array.from(result);
+  }
+}
+
+const re = new MyRegExp("-\\d+", "g");
+console.log("2016-01-02|2019-03-07".matchAll(re));
+// Expected output: Array [Array ["-01"], Array ["-02"], Array ["-03"], Array ["-07"]]
+```
 
 ## Syntax
 
@@ -28,7 +44,7 @@ An [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Object
 
 ## Description
 
-This method is called internally in {{jsxref("String.prototype.matchAll()")}}. For example, the following two examples return the same result.
+This method exists for customizing the behavior of `matchAll()` in {{jsxref("RegExp")}} subclasses. It is called internally in {{jsxref("String.prototype.matchAll()")}}. For example, the following two examples return the same result.
 
 ```js
 "abc".matchAll(/a/g);
@@ -36,7 +52,7 @@ This method is called internally in {{jsxref("String.prototype.matchAll()")}}. F
 /a/g[Symbol.matchAll]("abc");
 ```
 
-Like [`[Symbol.split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split), `[Symbol.matchAll]()` starts by using [`[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species) to construct a new regex, thus avoiding mutating the original regexp in any way. [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) starts as the original regex's value.
+Like [`[Symbol.split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split), `[Symbol.matchAll]()` starts by using [`[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species) to construct a new regex, thus avoiding mutating the original regexp in any way. The constructor receives `this` and the original flags. [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) starts as the original regex's value.
 
 ```js
 const regexp = /[a-c]/g;
@@ -46,16 +62,7 @@ Array.from(str.matchAll(regexp), (m) => `${regexp.lastIndex} ${m[0]}`);
 // [ "1 b", "1 c" ]
 ```
 
-The validation that the input is a global regex happens in [`String.prototype.matchAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll). `[Symbol.matchAll]()` does not validate the input. If the regex is not global, the returned iterator yields the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) result once and then returns `undefined`. If the regexp is global, each time the returned iterator's `next()` method is called, the regex's [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) is called and the result is yielded.
-
-When the regex is sticky and global, it will still perform sticky matches — i.e. it will not match any occurrences beyond the `lastIndex`.
-
-```js
-console.log(Array.from("ab-c".matchAll(/[abc]/gy)));
-// [ [ "a" ], [ "b" ] ]
-```
-
-If the current match is an empty string, the [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) will still be advanced. If the regex has the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag, it advances by one Unicode code point; otherwise, it advances by one UTF-16 code point.
+If the regex is global (with the `g` flag), each time the returned iterator's `next()` method is called, the regex's [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) is called and the result is yielded. If the current match is an empty string, the [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) will still be advanced. If the regex has the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag, it advances by one Unicode code point; otherwise, it advances by one UTF-16 code point.
 
 ```js
 console.log(Array.from("😄".matchAll(/(?:)/g)));
@@ -65,7 +72,14 @@ console.log(Array.from("😄".matchAll(/(?:)/gu)));
 // [ [ "" ], [ "" ] ]
 ```
 
-This method exists for customizing the behavior of `matchAll()` in {{jsxref("RegExp")}} subclasses.
+If the regex is not global, the returned iterator yields the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) result once and then completes. (The validation that the input is a global regex happens in [`String.prototype.matchAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll). `[Symbol.matchAll]()` does not validate the flags of `this`.)
+
+When the regex is sticky and global, it will still perform sticky matches — i.e., it will not match any occurrences beyond the `lastIndex`.
+
+```js
+console.log(Array.from("ab-c".matchAll(/[abc]/gy)));
+// [ [ "a" ], [ "b" ] ]
+```
 
 ## Examples
 
@@ -74,7 +88,7 @@ This method exists for customizing the behavior of `matchAll()` in {{jsxref("Reg
 This method can be used in almost the same way as {{jsxref("String.prototype.matchAll()")}}, except for the different value of `this` and the different order of arguments.
 
 ```js
-const re = /[0-9]+/g;
+const re = /\d+/g;
 const str = "2016-01-02";
 const result = re[Symbol.matchAll](str);
 
@@ -96,7 +110,7 @@ class MyRegExp extends RegExp {
   }
 }
 
-const re = new MyRegExp("([0-9]+)-([0-9]+)-([0-9]+)", "g");
+const re = new MyRegExp("(\\d+)-(\\d+)-(\\d+)", "g");
 const str = "2016-01-02|2019-03-07";
 const result = str.matchAll(re);
 
@@ -117,7 +131,8 @@ console.log(result[1]);
 
 ## See also
 
-- [Polyfill of `RegExp.prototype[Symbol.matchAll]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `RegExp.prototype[Symbol.matchAll]` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
+- [es-shims polyfill of `RegExp.prototype[Symbol.matchAll]`](https://www.npmjs.com/package/string.prototype.matchall)
 - {{jsxref("String.prototype.matchAll()")}}
 - [`RegExp.prototype[Symbol.match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)
 - [`RegExp.prototype[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)

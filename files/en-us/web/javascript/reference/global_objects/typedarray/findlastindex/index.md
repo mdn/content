@@ -1,15 +1,26 @@
 ---
 title: TypedArray.prototype.findLastIndex()
+short-title: findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findLastIndex
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.findLastIndex
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`findLastIndex()`** method of {{jsxref("TypedArray")}} instances iterates the typed array in reverse order and returns the index of the first element that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned. This method has the same algorithm as {{jsxref("Array.prototype.findLastIndex()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-findlastindex.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.findLastIndex()")}}
+
+```js interactive-example
+function isNegative(element /*, index, array */) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([10, -20, 30, -40, 50]);
+
+console.log(int8.findLastIndex(isNegative));
+// Expected output: 3
+```
 
 ## Syntax
 
@@ -47,12 +58,15 @@ See {{jsxref("Array.prototype.findLastIndex()")}} for more details. This method 
 The following example returns the index of the last element in the typed array that is a prime number, or `-1` if there is no prime number.
 
 ```js
-function isPrime(element) {
-  if (element % 2 === 0 || element < 2) {
+function isPrime(n) {
+  if (n < 2) {
     return false;
   }
-  for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
-    if (element % factor === 0) {
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
@@ -67,6 +81,9 @@ console.log(uint8.findLastIndex(isPrime));
 // 5
 ```
 
+> [!NOTE]
+> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily {{Glossary("Memoization", "memoized")}} algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
+
 ## Specifications
 
 {{Specifications}}
@@ -77,7 +94,7 @@ console.log(uint8.findLastIndex(isPrime));
 
 ## See also
 
-- [Polyfill of `TypedArray.prototype.findLastIndex` in `core-js`](https://github.com/zloirock/core-js#array-find-from-last)
+- [Polyfill of `TypedArray.prototype.findLastIndex` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.find()")}}

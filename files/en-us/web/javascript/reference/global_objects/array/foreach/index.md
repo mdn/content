@@ -1,16 +1,26 @@
 ---
 title: Array.prototype.forEach()
+short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.forEach
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`forEach()`** method of {{jsxref("Array")}} instances executes a provided function once
 for each array element.
 
-{{EmbedInteractiveExample("pages/js/array-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.forEach()")}}
+
+```js interactive-example
+const array = ["a", "b", "c"];
+
+array.forEach((element) => console.log(element));
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## Syntax
 
@@ -146,7 +156,7 @@ invoked. The callback uses it as its `this` value.
 > If passing the callback function used an
 > [arrow function expression](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
 > the `thisArg` parameter could be omitted,
-> since all arrow functions lexically bind the {{jsxref("Operators/this", "this")}}
+> since all arrow functions lexically bind the {{jsxref("this")}}
 > value.
 
 ### An object copy function
@@ -264,7 +274,8 @@ Array.prototype.forEach.call(arrayLike, (x) => console.log(x));
 
 ## See also
 
-- [Polyfill of `Array.prototype.forEach` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.forEach` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
+- [es-shims polyfill of `Array.prototype.forEach`](https://www.npmjs.com/package/array.prototype.foreach)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}

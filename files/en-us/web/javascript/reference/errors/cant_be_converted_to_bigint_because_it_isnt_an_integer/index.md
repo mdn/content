@@ -2,9 +2,8 @@
 title: "RangeError: x can't be converted to BigInt because it isn't an integer"
 slug: Web/JavaScript/Reference/Errors/Cant_be_converted_to_BigInt_because_it_isnt_an_integer
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "x can't be converted to BigInt because it isn't an integer" occurs when the [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) function is used on a number that isn't an integer.
 

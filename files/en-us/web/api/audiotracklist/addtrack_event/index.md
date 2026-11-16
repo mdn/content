@@ -6,17 +6,21 @@ page-type: web-api-event
 browser-compat: api.AudioTrackList.addtrack_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The `addtrack` event is fired when a track is added to an [`AudioTrackList`](/en-US/docs/Web/API/AudioTrackList).
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("addtrack", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onaddtrack = (event) => { }
 ```
 
@@ -25,13 +29,6 @@ onaddtrack = (event) => { }
 A {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TrackEvent")}}
-
-## Event properties
-
-_`TrackEvent` is based on {{domxref("Event")}}, so properties of `Event` are also available on `TrackEvent` objects._
-
-- {{domxref("TrackEvent.track", "track")}} {{ReadOnlyInline}}
-  - : The DOM track object the event is in reference to. If not `null`, this is always an object of one of the media track types: {{domxref("AudioTrack")}}, {{domxref("VideoTrack")}}, or {{domxref("TextTrack")}}).
 
 ## Description
 
@@ -61,7 +58,7 @@ videoElement.audioTracks.addEventListener("addtrack", (event) => {
 });
 ```
 
-Using the `onaddtrack` event handler property:
+Using the `onaddtrack` event handler property (but note that this replaces other event listeners added using `onaddtrack`, if any):
 
 ```js
 const videoElement = document.querySelector("video");

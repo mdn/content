@@ -45,14 +45,19 @@ The parameters for the older form of `createAnswer()` are described below, to ai
 
 ### Exceptions
 
-- `NotReadableError`
+- `NotReadableError` {{domxref("DOMException")}}
   - : The identity provider wasn't able to provide an identity assertion.
-- `OperationError`
+- `OperationError` {{domxref("DOMException")}}
   - : Generation of the SDP failed for some reason; this is a general failure catch-all exception.
 
 ### Return value
 
-A {{jsxref("Promise")}} whose fulfillment handler is called with an object conforming to the {{domxref("RTCSessionDescriptionInit")}} dictionary which contains the SDP answer to be delivered to the other peer.
+A {{jsxref("Promise")}} that fulfills with an object containing the same properties as an {{domxref("RTCSessionDescription")}} object:
+
+- `type`
+  - : A string whose value is `"answer"`.
+- `sdp`
+  - : A string containing the SDP describing the session, to be delivered to the remote peer.
 
 ## Examples
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CloseEvent.wasClean
 ---
 
-{{APIRef("Websockets API")}}
+{{APIRef("Websockets API")}}{{AvailableInWorkers}}
 
 The **`wasClean`** read-only property of the {{domxref("CloseEvent")}} interface returns `true` if the connection closed cleanly.
 

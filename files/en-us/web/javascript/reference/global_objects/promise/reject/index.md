@@ -1,15 +1,28 @@
 ---
 title: Promise.reject()
+short-title: reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.reject
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Promise.reject()`** static method returns a `Promise` object that is rejected with a given reason.
 
-{{EmbedInteractiveExample("pages/js/promise-reject.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.reject()")}}
+
+```js interactive-example
+function resolved(result) {
+  console.log("Resolved");
+}
+
+function rejected(result) {
+  console.error(result);
+}
+
+Promise.reject(new Error("fail")).then(resolved, rejected);
+// Expected output: Error: fail
+```
 
 ## Syntax
 
@@ -76,9 +89,12 @@ class NotPromise {
       (reason) => console.log("Rejected", reason),
     );
   }
+
+  static reject = Promise.reject;
 }
 
-Promise.reject.call(NotPromise, "foo"); // Logs "Rejected foo"
+const p = NotPromise.reject("foo"); // Logs "Rejected foo"
+// p is a NotPromise instance
 ```
 
 ## Specifications

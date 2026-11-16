@@ -8,7 +8,7 @@ status:
 browser-compat: api.KeyboardEvent.initKeyboardEvent
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{APIRef("UI Events")}}
 
 The **`KeyboardEvent.initKeyboardEvent()`** method initializes
 the attributes of a keyboard event object. This method was introduced in draft of DOM
@@ -56,7 +56,7 @@ None ({{jsxref("undefined")}}).
 
 {{Specifications}}
 
-The `KeyboardEvent` interface specification went through numerous draft versions, first under DOM Events Level 2 where it was dropped as no consensus arose, then under DOM Events Level 3. This led to the implementation of non-standard initialization methods, the early DOM Events Level 2 version, {{domxref("KeyboardEvent.initKeyEvent()")}} by Gecko browsers and the early DOM Events Level 3 version, `KeyboardEvent.initKeyboardEvent()` by others. Both have been superseded by the modern usage of a constructor: {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.
+The `KeyboardEvent` interface specification went through numerous draft versions, first under DOM Events Level 2 where it was dropped as no consensus arose, then under DOM Events Level 3. This led to the implementation of non-standard initialization methods, the early DOM Events Level 2 version, `KeyboardEvent.initKeyEvent()` by Gecko browsers and the early DOM Events Level 3 version, `KeyboardEvent.initKeyboardEvent()` by others. Both have been superseded by the modern usage of a constructor: {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.
 
 ## Browser compatibility
 

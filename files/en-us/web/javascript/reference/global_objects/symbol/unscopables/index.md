@@ -1,15 +1,30 @@
 ---
 title: Symbol.unscopables
+short-title: unscopables
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.unscopables
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Symbol.unscopables`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.unscopables`. The {{jsxref("Statements/with", "with")}} statement looks up this symbol on the scope object for a property containing a collection of properties that should not become bindings within the `with` environment.
 
-{{EmbedInteractiveExample("pages/js/symbol-unscopables.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.unscopables")}}
+
+```js interactive-example
+const object = {
+  foo: 42,
+};
+
+object[Symbol.unscopables] = {
+  foo: true,
+};
+
+with (object) {
+  console.log(foo);
+  // Expected output: Error: foo is not defined
+}
+```
 
 ## Value
 
@@ -92,7 +107,7 @@ with (character) {
 }
 ```
 
-To preserve backward compatibility, you decided to add an `[Symbol.unscopables]` property when adding more properties to `character`. You may naïvely do it like:
+To preserve backward compatibility, you decided to add a `[Symbol.unscopables]` property when adding more properties to `character`. You may naïvely do it like:
 
 ```js example-bad
 const character = {

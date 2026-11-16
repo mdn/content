@@ -23,7 +23,7 @@ The following example demonstrates reading the value of
 {{domxref("CSSConditionRule")}} interface.
 
 ```css
-@media (min-width: 500px) {
+@media (width >= 500px) {
   body {
     color: blue;
   }
@@ -32,7 +32,7 @@ The following example demonstrates reading the value of
 
 ```js
 const targetRule = document.styleSheets[0].cssRules[0];
-console.log(targetRule.conditionText); // "(min-width: 500px)"
+console.log(targetRule.conditionText); // "(width >= 500px)"
 ```
 
 ## Specifications

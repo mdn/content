@@ -13,7 +13,7 @@ The **`replaceData()`** method of the {{domxref("CharacterData")}} interface rem
 ## Syntax
 
 ```js-nolint
-characterData.replaceData(offset, count, data)
+replaceData(offset, count, data)
 ```
 
 ### Parameters
@@ -43,9 +43,9 @@ None.
 
 ```js
 const span = document.querySelector("span");
-const textnode = span.nextSibling;
+const textNode = span.nextSibling;
 
-textnode.replaceData(2, 4, "replaced");
+textNode.replaceData(2, 4, "replaced");
 ```
 
 {{EmbedLiveSample("Example", "100%", 50)}}

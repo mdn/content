@@ -3,9 +3,8 @@ title: action.disable()
 slug: Mozilla/Add-ons/WebExtensions/API/action/disable
 page-type: webextension-api-function
 browser-compat: webextensions.api.action.disable
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Disables the browser action for a tab, meaning that it cannot be clicked when that tab is active.
 

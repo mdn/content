@@ -21,7 +21,7 @@ the same element and arguments repeatedly if the DOM changes in between calls.
 When called on an HTML element in an HTML document, `getElementsByTagName`
 lower-cases the argument before searching for it. This is undesirable when trying to
 match {{Glossary("camel_case", "camel-cased")}} SVG elements (such as
-[`<linearGradient>`](/en-US/docs/Web/SVG/Element/linearGradient))
+[`<linearGradient>`](/en-US/docs/Web/SVG/Reference/Element/linearGradient))
 in an HTML document. Instead, use {{ domxref("Element.getElementsByTagNameNS()") }},
 which preserves the capitalization of the tag name.
 

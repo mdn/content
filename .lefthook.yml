@@ -1,0 +1,67 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - name: Format sidebars
+      glob: "files/sidebars/*.yaml"
+      run: npm run content fmt-sidebars
+      stage_fixed: true
+
+    - name: Fix redirects
+      glob: "files/en-us/_redirects.txt"
+      run: npm run content fix-redirects en-US && npm run content validate-redirects en-US
+      stage_fixed: true
+
+    - name: Format non-markdown
+      glob: "*.{js,json,yml,yaml,css,html}"
+      run: npx prettier --write --cache {staged_files}
+      stage_fixed: true
+
+    - name: Sort cSpell dictionaries
+      glob: ".vscode/dictionaries/*.txt"
+      run: node scripts/sort_and_unique_file_lines.js {staged_files}
+      stage_fixed: true
+
+    - name: Check files
+      glob: "files/*.{svg,png,jpeg,jpg,gif}"
+      run: npm run filecheck {staged_files}
+
+    - name: Check URL issues
+      glob: "files/**/*.md"
+      run: node scripts/log-url-issues.js
+
+    - name: Run unit tests
+      glob:
+        - "*.*"
+        - "scripts/**"
+        - "tests/**"
+      exclude:
+        - "*.md"
+      run: npm test
+
+    - name: Fix markdown
+      glob: "*.md"
+      group:
+        parallel: true
+        jobs:
+          - name: Front matter
+            run: node scripts/front-matter_linter.js --fix true {staged_files}
+            stage_fixed: true
+          - name: Markdownlint
+            run: npx markdownlint-cli2 --fix {staged_files}
+            stage_fixed: true
+          - name: Prettier
+            run: npx prettier --write --cache {staged_files}
+            stage_fixed: true
+          - name: Check changed xrefs
+            run: node scripts/update-moved-file-links.js --check
+
+post-merge:
+  only:
+    - ref: main
+  commands:
+    npm-install:
+      run: npm install
+
+output:
+  - summary
+  - failure

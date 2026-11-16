@@ -11,7 +11,7 @@ The **`SVGUnitTypes`** interface defines a commonly used set of constants used f
 
 {{InheritanceDiagram}}
 
-## Constants
+## Static properties
 
 - `SVG_UNIT_TYPE_UNKNOWN` (0)
   - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.

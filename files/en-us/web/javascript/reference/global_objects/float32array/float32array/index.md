@@ -1,11 +1,11 @@
 ---
 title: Float32Array() constructor
+short-title: Float32Array()
 slug: Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Float32Array.Float32Array
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Float32Array()`** constructor creates {{jsxref("Float32Array")}} objects. The contents are initialized to `0` unless initialization data is explicitly provided.
 
@@ -22,7 +22,8 @@ new Float32Array(buffer, byteOffset)
 new Float32Array(buffer, byteOffset, length)
 ```
 
-> **Note:** `Float32Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Float32Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -76,7 +77,7 @@ console.log(float32FromIterable);
 
 ## See also
 
-- [Polyfill of `Float32Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `Float32Array` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}

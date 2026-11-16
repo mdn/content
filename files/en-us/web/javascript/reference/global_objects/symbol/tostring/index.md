@@ -1,15 +1,29 @@
 ---
 title: Symbol.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Symbol.toString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toString()`** method of {{jsxref("Symbol")}} values returns a string representing this symbol value.
 
-{{EmbedInteractiveExample("pages/js/symbol-prototype-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.prototype.toString()")}}
+
+```js interactive-example
+console.log(Symbol("desc").toString());
+// Expected output: "Symbol(desc)"
+
+console.log(Symbol.iterator.toString());
+// Expected output: "Symbol(Symbol.iterator)
+
+console.log(Symbol.for("foo").toString());
+// Expected output: "Symbol(foo)"
+
+// console.log(Symbol('foo') + 'bar');
+// Expected output: Error: Can't convert symbol to string
+```
 
 ## Syntax
 

@@ -12,6 +12,8 @@ The **`KeyboardEvent.ctrlKey`** read-only property returns a
 boolean value that indicates if the <kbd>control</kbd> key was pressed
 (`true`) or not (`false`) when the event occurred.
 
+When the <kbd>Control</kbd> key itself is pressed or released, this property is `true` for its {{domxref("Element/keydown_event", "keydown")}} event and `false` for its {{domxref("Element/keyup_event", "keyup")}} event, because both events fire _after_ the state change.
+
 ## Value
 
 A boolean value.
@@ -19,23 +21,26 @@ A boolean value.
 ## Examples
 
 ```html
-<html lang="en">
-  <head>
-    <title>ctrlKey example</title>
-    <script>
-      function showChar(e) {
-        alert(`Key Pressed: ${e.key}\nCTRL key pressed: ${e.ctrlKey}\n`);
-      }
-    </script>
-  </head>
-  <body onkeypress="showChar(event);">
-    <p>
-      Press any character key, with or without holding down the CTRL key.<br />
-      You can also use the SHIFT key together with the CTRL key.
-    </p>
-  </body>
-</html>
+<p>
+  Press any character key, with or without holding down the CTRL key.<br />
+  You can also use the SHIFT key together with the CTRL key.
+</p>
+<pre id="output"></pre>
 ```
+
+```js
+const output = document.getElementById("output");
+
+function showChar(e) {
+  output.textContent = `Key KeyDown: "${e.key}"
+CTRL key KeyDown: ${e.ctrlKey}
+`;
+}
+
+document.addEventListener("keydown", showChar);
+```
+
+{{EmbedLiveSample("examples", "", "400")}}
 
 ## Specifications
 

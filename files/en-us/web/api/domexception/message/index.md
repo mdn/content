@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.DOMException.message
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`message`** read-only property of the
 {{domxref("DOMException")}} interface returns a string representing

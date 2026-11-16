@@ -2,13 +2,28 @@
 title: Assertions
 slug: Web/JavaScript/Guide/Regular_expressions/Assertions
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("JavaScript Guide")}}
 
 Assertions include boundaries, which indicate the beginnings and endings of lines and words, and other patterns indicating in some way that a match is possible (including look-ahead, look-behind, and conditional expressions).
 
-{{EmbedInteractiveExample("pages/js/regexp-assertions.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp Assertions", "taller")}}
+
+```js interactive-example
+const text = "A quick fox";
+
+const regexpLastWord = /\w+$/;
+console.log(text.match(regexpLastWord));
+// Expected output: Array ["fox"]
+
+const regexpWords = /\b\w+\b/g;
+console.log(text.match(regexpWords));
+// Expected output: Array ["A", "quick", "fox"]
+
+const regexpFoxQuality = /\w+(?= fox)/;
+console.log(text.match(regexpFoxQuality));
+// Expected output: Array ["quick"]
+```
 
 ## Types
 
@@ -53,6 +68,33 @@ Assertions include boundaries, which indicate the beginnings and endings of line
           matches immediately before a line break character. For example,
           <code>/t$/</code> does not match the "t" in "eater", but does match it
           in "eat".
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>\A</code></td>
+      <td>
+        <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion"><strong>Buffer boundary start assertion:</strong></a> Matches the start of the entire string regardless of the presence of the <code>m</code> flag.
+          Only valid in <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode">Unicode-aware mode</a>.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>\z</code></td>
+      <td>
+        <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion"><strong>Buffer boundary end assertion:</strong></a> Matches the end of the entire string regardless of the presence of the <code>m</code> flag.
+          Only valid in <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode">Unicode-aware mode</a>.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>\Z</code></td>
+      <td>
+        <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion"><strong>Buffer boundary end assertion with optional newline:</strong></a> Matches the end of the entire string, but allows an optional trailing newline character sequence (either a <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators">line terminator</a> or a <code>\r\n</code> sequence).
+          Only valid in <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode">Unicode-aware mode</a>.
         </p>
       </td>
     </tr>
@@ -189,6 +231,8 @@ Assertions include boundaries, which indicate the beginnings and endings of line
 
 ### General boundary-type overview example
 
+<!-- cSpell:ignore greon -->
+
 ```js
 // Using Regex boundaries to fix buggy string.
 buggyMultiline = `tey, ihe light-greon apple
@@ -251,8 +295,8 @@ In this example, we match fruit names containing a word that ends in "en" or "ed
 const fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
 
 // Select descriptions that contains 'en' or 'ed' words endings:
-const enEdSelection = fruitsWithDescription.filter((descr) =>
-  /(en|ed)\b/.test(descr),
+const enEdSelection = fruitsWithDescription.filter((description) =>
+  /(?:en|ed)\b/.test(description),
 );
 
 console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]
@@ -277,7 +321,7 @@ See more examples in the [lookahead assertion](/en-US/docs/Web/JavaScript/Refere
 
 ### Basic negative lookahead assertion
 
-For example, `/\d+(?!\.)/` matches a number only if it is not followed by a decimal point. `/\d+(?!\.)/.exec('3.141')` matches "141" but not "3.
+For example, `/\d+(?!\.)/` matches a number only if it is not followed by a decimal point. `/\d+(?!\.)/.exec('3.141')` matches "141" but not "3".
 
 ```js
 console.log(/\d+(?!\.)/g.exec("3.141")); // [ '141', index: 2, input: '3.141' ]

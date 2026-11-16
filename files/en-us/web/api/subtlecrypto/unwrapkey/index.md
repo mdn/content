@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.unwrapKey
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`unwrapKey()`** method of the {{domxref("SubtleCrypto")}} interface "unwraps" a key.
 This means that it takes as its input a key that has been exported and then encrypted (also called "wrapped").
@@ -88,7 +88,7 @@ The promise is rejected when one of the following exceptions is encountered:
 
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Raised when the unwrapping key is not a key for the requested unwrap algorithm or if the `keyUsages` value of that key doesn't contain `unwrap`.
-- `NotSupported` {{domxref("DOMException")}}
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Raised when trying to use an algorithm that is either unknown or isn't suitable for encryption or wrapping.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Raised when `keyUsages` is empty but the unwrapped key is of type `secret` or `private`.

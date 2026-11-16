@@ -9,13 +9,15 @@ status:
 browser-compat: api.PaymentRequest.shippingAddress
 ---
 
-{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+{{securecontext_header}}{{APIRef("Payment Request API")}}{{Non-standard_header}}
 
 The **`shippingAddress`** read-only property of
 the {{domxref('PaymentRequest')}} interface returns the shipping address provided by the
 user. It is `null` by default.
 
 ## Value
+
+A {{domxref('PaymentAddress')}} object or `null`.
 
 ## Examples
 

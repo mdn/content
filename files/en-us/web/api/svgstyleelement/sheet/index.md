@@ -20,7 +20,7 @@ This example demonstrates how to get the CSS sheet associated with an element.
 
 ### HTML
 
-The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Element/circle).
+The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Reference/Element/circle).
 
 ```html
 <textarea id="log" rows="3" cols="50"></textarea>

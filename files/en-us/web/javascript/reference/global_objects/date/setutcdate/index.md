@@ -1,15 +1,27 @@
 ---
 title: Date.prototype.setUTCDate()
+short-title: setUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setUTCDate
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setUTCDate()`** method of {{jsxref("Date")}} instances changes the day of the month for this date according to universal time.
 
-{{EmbedInteractiveExample("pages/js/date-setutcdate.html")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.setUTCDate()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30 GMT-3:00");
+
+console.log(event.getUTCDate());
+// Expected output: 20
+
+event.setUTCDate(19);
+
+console.log(event.getUTCDate());
+// Expected output: 19
+```
 
 ## Syntax
 
@@ -28,7 +40,7 @@ Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](
 
 ## Description
 
-If the `dateValue` is outside of the range of date values for the month, `setDate()` will update the {{jsxref("Date")}} object accordingly.
+If the `dateValue` is outside of the range of date values for the month, `setUTCDate()` will update the {{jsxref("Date")}} object accordingly.
 
 For example, if 0 is provided for `dateValue`, the date will be set to the last day of the previous month. If you use 40 for `dateValue`, and the month stored in the {{jsxref("Date")}} object is June, the day will be changed to 10 and the month will be incremented to July.
 

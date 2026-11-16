@@ -1,20 +1,31 @@
 ---
 title: Map.prototype.size
+short-title: size
 slug: Web/JavaScript/Reference/Global_Objects/Map/size
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Map.size
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`size`** accessor property of {{jsxref("Map")}} instances returns the number of elements in this map.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-size.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.size")}}
+
+```js interactive-example
+const map = new Map();
+
+map.set("a", "alpha");
+map.set("b", "beta");
+map.set("g", "gamma");
+
+console.log(map.size);
+// Expected output: 3
+```
 
 ## Description
 
 The value of `size` is an integer representing how many entries the `Map` object
-has. A set accessor function for `size` is `undefined`; you can not change this
+has. A set accessor function for `size` is `undefined`; you cannot change this
 property.
 
 ## Examples

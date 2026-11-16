@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getProgramInfoLog
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **WebGLRenderingContext.getProgramInfoLog** returns the information
 log for the specified {{domxref("WebGLProgram")}} object. It contains errors that

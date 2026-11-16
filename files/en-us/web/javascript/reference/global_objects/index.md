@@ -2,19 +2,18 @@
 title: Standard built-in objects
 slug: Web/JavaScript/Reference/Global_Objects
 page-type: landing-page
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Objects")}}
 
 This chapter documents all of JavaScript's standard, built-in objects, including their methods and properties.
 
 The term "global objects" (or standard built-in objects) here is not to be confused with **the global object**. Here, "global objects" refer to **objects in the global scope**.
 
-The **global object** itself can be accessed using the {{jsxref("Operators/this", "this")}} operator in the global scope. In fact, the global scope **consists of** the properties of the global object, including inherited properties, if any.
+The **global object** itself can be accessed using the {{jsxref("this")}} operator in the global scope. In fact, the global scope **consists of** the properties of the global object, including inherited properties, if any.
 
 Other objects in the global scope are either [created by the user script](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects) or provided by the host application. The host objects available in browser contexts are documented in the [API reference](/en-US/docs/Web/API).
 
-For more information about the distinction between the [DOM](/en-US/docs/Web/API/Document_Object_Model) and core [JavaScript](/en-US/docs/Web/JavaScript), see [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview).
+For more information about the distinction between the [DOM](/en-US/docs/Web/API/Document_Object_Model) and core [JavaScript](/en-US/docs/Web/JavaScript), see [JavaScript technologies overview](/en-US/docs/Web/JavaScript/Reference/JavaScript_technologies_overview).
 
 ## Standard objects by category
 
@@ -61,6 +60,7 @@ Error objects are a special type of fundamental object. They include the basic {
 - {{jsxref("EvalError")}}
 - {{jsxref("RangeError")}}
 - {{jsxref("ReferenceError")}}
+- {{jsxref("SuppressedError")}}
 - {{jsxref("SyntaxError")}}
 - {{jsxref("TypeError")}}
 - {{jsxref("URIError")}}
@@ -74,6 +74,7 @@ These are the base objects representing numbers, dates, and mathematical calcula
 - {{jsxref("BigInt")}}
 - {{jsxref("Math")}}
 - {{jsxref("Date")}}
+- {{jsxref("Temporal")}}
 
 ### Text processing
 
@@ -87,6 +88,7 @@ These objects represent strings and support manipulating them.
 These objects represent collections of data which are ordered by an index value. This includes (typed) arrays and array-like constructs.
 
 - {{jsxref("Array")}}
+- {{jsxref("TypedArray")}}
 - {{jsxref("Int8Array")}}
 - {{jsxref("Uint8Array")}}
 - {{jsxref("Uint8ClampedArray")}}
@@ -138,9 +140,12 @@ Control abstractions can help to structure code, especially async code (without 
 - {{jsxref("Generator")}}
 - {{jsxref("AsyncGenerator")}}
 - {{jsxref("AsyncFunction")}}
+- {{jsxref("DisposableStack")}}
+- {{jsxref("AsyncDisposableStack")}}
 
 ### Reflection
 
+- {{jsxref("AbstractModuleSource")}}
 - {{jsxref("Reflect")}}
 - {{jsxref("Proxy")}}
 

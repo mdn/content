@@ -2,17 +2,16 @@
 title: Options page
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
 page-type: guide
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar}}
+An Options page enables you to define preferences for your extension that your users can change.
 
-An Options page enables you to define preferences for your extension that your users can change. Users can access the options page for an extension from the browser's add-ons manager:
+The way users access the page, and the way it's integrated into the browser's user interface, varies among browsers. In Firefox, users access the options page for an extension from the add-ons manager.
 
-{{EmbedYouTube("eODy24csH5M")}}
+![The favourite-colour example's options page displayed on the Preferences tab of its Firefox Add-ons Manager entry](options_page.png)
 
-The way users access the page, and the way it's integrated into the browser's user interface, will vary from one browser to another.
-
-You can open the page programmatically by calling [`runtime.openOptionsPage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage).
+Your extension can open the page programmatically by calling [`runtime.openOptionsPage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage).
 
 Options pages have a Content Security Policy that restricts the sources from which they can load resources, and disallows some unsafe practices such as the use of [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). See [Content Security Policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) for more details.
 
@@ -40,7 +39,7 @@ To create an options page, write an HTML file defining the page. This page can i
 </html>
 ```
 
-Note the use of `<meta name="color-scheme" content="dark light">`. This enables automatic switching between light and dark themes in the embedded UI based on the user's browser preferences.
+Note the use of `<meta name="color-scheme" content="dark light">`. This enables automatic switching between light and dark themes in the embedded UI based on the user's browser preferences. For more information, see [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/color-scheme).
 
 JavaScript running in the page can use all the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) that the add-on has [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) for. In particular, you can use the [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) API to persist preferences.
 

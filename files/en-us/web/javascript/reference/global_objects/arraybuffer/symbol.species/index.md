@@ -1,11 +1,11 @@
 ---
 title: ArrayBuffer[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.ArrayBuffer.@@species
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`ArrayBuffer[Symbol.species]`** static accessor property returns the constructor used to construct return values from array buffer methods.
 

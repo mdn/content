@@ -6,13 +6,27 @@ page-type: web-api-event
 browser-compat: api.Window.gamepadconnected_event
 ---
 
-{{APIRef}}
+{{APIRef("Gamepad API")}}
 
 The `gamepadconnected` event is fired when the browser detects that a gamepad has been connected or the first time a button/axis of the gamepad is used.
 
-The event will not fire if disallowed by the document's {{httpheader('Permissions-Policy/gamepad','gamepad')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+The event will not fire if disallowed by the document's {{httpheader('Permissions-Policy/gamepad','gamepad')}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
 
 This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
+
+```js-nolint
+addEventListener("gamepadconnected", (event) => { })
+```
+
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+ongamepadconnected = (event) => { }
+```
 
 ## Examples
 
@@ -25,7 +39,7 @@ window.addEventListener("gamepadconnected", (event) => {
 });
 ```
 
-Alternatively, you can use the `window.ongamepadconnected` event handler property to establish a handler for the `gamepadconnected` event:
+Alternatively, you can use the `window.ongamepadconnected` event handler property to establish a handler for the `gamepadconnected` event (but note that this replaces other event listeners added using `ongamepadconnected`, if any):
 
 ```js
 window.ongamepadconnected = (event) => {

@@ -2,12 +2,9 @@
 title: options_page
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_page
 page-type: webextension-manifest-key
-status:
-  - deprecated
 browser-compat: webextensions.manifest.options_page
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -26,7 +23,7 @@ browser-compat: webextensions.manifest.options_page
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json;">"options_page": "options/options.html"</pre>
+        <pre class="brush: json">"options_page": "options/options.html"</pre>
       </td>
     </tr>
   </tbody>
@@ -36,7 +33,7 @@ Use the `options_page` key to define an [options page](/en-US/docs/Mozilla/Add-o
 
 The way the user opens the page is browser-dependent. In Firefox, the page opens when the extension's icon is clicked. Your extension can also open the page using {{WebExtAPIRef("runtime.openOptionsPage()")}}.
 
-Alternatively, you can use the [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) key with `open_in_tab` set to `true`. If `options_ui` is specified, `options page` is ignored.
+Alternatively, you can use the [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) key with `open_in_tab` set to `true`. If `options_ui` is specified, `options_page` is ignored.
 
 See [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) for more information on developing a settings page.
 

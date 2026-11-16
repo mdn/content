@@ -8,7 +8,7 @@ browser-compat: api.Performance.eventCounts
 
 {{APIRef("Performance API")}}
 
-The read-only `performance.eventCounts` property is an {{domxref("EventCounts")}} map containing the number of events which have been dispatched per event type.
+The read-only `performance.eventCounts` property is an {{domxref("EventCounts")}} map containing the number of events which have been dispatched per event type since the page was loaded.
 
 Not all event types are exposed. You can only get counts for event types supported by the {{domxref("PerformanceEventTiming")}} interface.
 
@@ -25,9 +25,7 @@ If you like to send event counts to your analytics, you may want to implement a 
 
 ```js
 // Report all exposed events
-for (entry of performance.eventCounts.entries()) {
-  const type = entry[0];
-  const count = entry[1];
+for (const [type, count] of performance.eventCounts.entries()) {
   // sendToEventAnalytics(type, count);
 }
 

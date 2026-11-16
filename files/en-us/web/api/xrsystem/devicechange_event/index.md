@@ -17,15 +17,19 @@ A **`devicechange`** event is fired on an {{DOMxRef("XRSystem")}} object wheneve
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("devicechange", (event) => {});
-
-ondevicechange = (event) => {};
+```js-nolint
+addEventListener("devicechange", (event) => { })
 ```
 
-If the use of WebXR has been blocked by an `xr-spatial-tracking` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), `devicechange` events will not fire.
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+ondevicechange = (event) => { }
+```
+
+If the use of WebXR has been blocked by an `xr-spatial-tracking` [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy), `devicechange` events will not fire.
 
 ## Event type
 
@@ -57,7 +61,7 @@ if (navigator.xr) {
 
 When `devicechange` is received, the handler set up in this code calls the `XR` method {{domxref("XRSystem.isSessionSupported", "isSessionSupported()")}} to find out if there's a device available that can handle immersive VR presentations. If there is, the button to enter XR mode is enabled; otherwise it's disabled.
 
-You can also use the `ondevicechange` event handler property to set a single handler for `devicechange` events:
+You can also use the `ondevicechange` event handler property to set a single handler for `devicechange` events (but note that this replaces other event listeners added using `ondevicechange`, if any):
 
 ```js
 if (navigator.xr) {

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.renderBlockingStatus
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`renderBlockingStatus`** read-only property returns the render-blocking status of the resource.
 
@@ -14,6 +14,15 @@ It is useful to determine resources that:
 
 - weren't render-blocking and therefore could be delayed, or
 - were render-blocking and therefore could be preloaded.
+
+## Value
+
+The `renderBlockingStatus` property can have the following values:
+
+- `"blocking"`
+  - : The resource might potentially block rendering.
+- `"non-blocking"`
+  - : The resource does not block rendering.
 
 ## Description
 
@@ -24,15 +33,6 @@ In addition to the automatic render-blocking mechanism, `blocking="render"` can 
 ```html
 <script blocking="render" src="important.js" defer></script>
 ```
-
-## Value
-
-The `renderBlockingStatus` property can have the following values:
-
-- `"blocking"`
-  - : The resource might potentially block rendering.
-- `"non-blocking"`
-  - : The resource does not block rendering.
 
 ## Examples
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ViewTransition.updateCallbackDone
 ---
 
-{{APIRef("View Transitions API")}}
+{{APIRef("View Transition API")}}
 
 The **`updateCallbackDone`** read-only property of the
 {{domxref("ViewTransition")}} interface is a {{jsxref("Promise")}} that fulfills when the promise returned by the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method's callback fulfills, or rejects when it rejects.
@@ -43,4 +43,4 @@ See [Transitions as an enhancement](https://developer.chrome.com/docs/web-platfo
 
 ## See also
 
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.FontFace
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`FontFace`** interface of the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) represents a single usable font face.
 
@@ -33,6 +33,8 @@ For URL font sources it allows authors to trigger when the remote font is fetche
   - : A string that retrieves or sets the _line-gap metric_ of the font. It is equivalent to the {{cssxref("@font-face/line-gap-override", "line-gap-override")}} descriptor.
 - {{domxref("FontFace.loaded")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} that resolves with the current `FontFace` object when the font specified in the object's constructor is done loading or rejects with a `SyntaxError` {{domxref("DOMException")}}.
+- {{domxref("FontFace.sizeAdjust")}}
+  - : A string that retrieves or sets a multiplier for the font's glyph outlines and metrics. It is equivalent to the {{cssxref("@font-face/size-adjust", "size-adjust")}} descriptor.
 - {{domxref("FontFace.status")}} {{ReadOnlyInline}}
   - : Returns an enumerated value indicating the status of the font, one of `"unloaded"`, `"loading"`, `"loaded"`, or `"error"`.
 - {{domxref("FontFace.stretch")}}
@@ -43,7 +45,7 @@ For URL font sources it allows authors to trigger when the remote font is fetche
   - : A string that retrieves or sets the _range of unicode code points_ encompassing the font. It is equivalent to the {{cssxref("@font-face/unicode-range", "unicode-range")}} descriptor.
 - {{domxref("FontFace.variant")}} {{non-standard_inline}}
   - : A string that retrieves or sets the _variant_ of the font.
-- {{domxref("FontFace.variationSettings")}} {{Experimental_Inline}}
+- {{domxref("FontFace.variationSettings")}}
   - : A string that retrieves or sets the _variation settings_ of the font. It is equivalent to the {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}} descriptor.
 - {{domxref("FontFace.weight")}}
   - : A string that contains the _weight_ of the font. It is equivalent to the {{cssxref("@font-face/font-weight", "font-weight")}} descriptor.
@@ -52,12 +54,12 @@ For URL font sources it allows authors to trigger when the remote font is fetche
 
 ## Examples
 
-The code below defines a font face using data at the URL "myfont.woff" with a few font descriptors.
+The code below defines a font face using data at the URL "my-font.woff" with a few font descriptors.
 Just to show how it works, we then define the `stretch` descriptor using a property.
 
 ```js
-//Define a FontFace
-const font = new FontFace("myfont", "url(myfont.woff)", {
+// Define a FontFace
+const font = new FontFace("my-font", 'url("my-font.woff")', {
   style: "italic",
   weight: "400",
 });
@@ -68,7 +70,7 @@ font.stretch = "condensed";
 Next we load the font using {{domxref("FontFace.load()")}} and use the returned promise to track completion or report an error.
 
 ```js
-//Load the font
+// Load the font
 font.load().then(
   () => {
     // Resolved - add font to document.fonts
@@ -94,4 +96,4 @@ For additional examples see [CSS Font Loading API > Examples](/en-US/docs/Web/AP
 
 ## See also
 
-- [@font-face](/en-US/docs/Web/CSS/@font-face)
+- {{cssxref("@font-face")}}

@@ -8,16 +8,11 @@ browser-compat: api.DataTransfer.setData
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The **`DataTransfer.setData()`** method sets the drag
-operation's [drag data](/en-US/docs/Web/API/DataTransfer) to the specified data and type. If
-data for the given type does not exist, it is added at the end of the drag data store,
-such that the last item in the {{domxref("DataTransfer.types","types")}} list will be
-the new type. If data for the given type already exists, the existing data is replaced
-in the same position. That is, the order of the
-{{domxref("DataTransfer.types","types")}} list is not changed when replacing data of the
-same type.
+The **`setData()`** method of the {{domxref("DataTransfer")}} interface sets the drag operation's [drag data](/en-US/docs/Web/API/DataTransfer) to the specified data and type. If data for the given type does not exist, it is added at the end of the drag data store, such that the last item in the {{domxref("DataTransfer.types","types")}} list will be the new type. If data for the given type already exists, the existing data is replaced in the same position. That is, the order of the {{domxref("DataTransfer.types","types")}} list is not changed when replacing data of the same type.
 
 Example data types are `text/plain` and `text/uri-list`.
+
+During a drag operation, this method can only be used in the handler for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event, because that's the only time the drag operation's data store is writable. Calling it from any other drag event does nothing. See [Modifying the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#modifying_the_drag_data_store) for details.
 
 ## Syntax
 
@@ -132,5 +127,4 @@ reset.addEventListener("click", () => document.location.reload());
 
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
+- [Working with the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)

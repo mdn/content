@@ -35,16 +35,14 @@ send(body)
 ### Parameters
 
 - `body` {{optional_inline}}
-
   - : A body of data to be sent in the XHR request. This can be:
-
     - A {{domxref("Document")}}, in which case it is serialized before being sent.
     - An `XMLHttpRequestBodyInit`, which [per the Fetch spec](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit) can be a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("FormData")}}, a {{domxref("URLSearchParams")}}, or a string.
     - `null`
 
     If no value is specified for the body, a default value of `null` is used.
 
-The best way to send binary content (e.g. in file uploads) is by using
+The best way to send binary content (e.g., in file uploads) is by using
 a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}} or a {{domxref("Blob")}} object
 in conjunction with the `send()` method.
 

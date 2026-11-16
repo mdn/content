@@ -3,9 +3,8 @@ title: action.setBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/action/setBadgeText
 page-type: webextension-api-function
 browser-compat: webextensions.api.action.setBadgeText
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the badge text for the browser action. The badge is displayed on top of the icon.
 
@@ -27,11 +26,8 @@ This API is also available as `chrome.action.setBadgeText()`.
 ### Parameters
 
 - `details`
-
   - : An object with the following properties:
-
     - `text`
-
       - : `string` or `null`. Any number of characters can be passed, but only about four can fit in the space.
 
         Use an empty string - `""` - if you don't want any badge.
@@ -39,6 +35,8 @@ This API is also available as `chrome.action.setBadgeText()`.
         If a `tabId` is specified, `null` removes the tab-specific badge text so that the tab inherits the global badge text. Otherwise it reverts the global badge text to `""`.
 
         If a `windowId` is specified, `null` removes the window-specific badge text so that the tab inherits the global badge text. Otherwise it reverts the global badge text to `""`.
+
+        From Chrome 152, badge text longer than 100 bytes is rejected. Other browsers may implement this limit. See [Proposal: limit byte length of extension action badge text](https://github.com/w3c/webextensions/issues/960) for more information.
 
     - `tabId` {{optional_inline}}
       - : `integer`. Set the badge text only for the given tab. The text is reset when the user navigates this tab to a new page.

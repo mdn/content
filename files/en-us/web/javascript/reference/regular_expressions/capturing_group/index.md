@@ -3,9 +3,8 @@ title: "Capturing group: (...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Capturing_group
 page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.capturing_group
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 A **capturing group** groups a subpattern, allowing you to apply a [quantifier](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier) to the entire group or use [disjunctions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction) within it. It memorizes information about the subpattern match, so that you can refer back to it later with a [backreference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference), or access the information through the [match results](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec#return_value).
 
@@ -28,7 +27,8 @@ A capturing group acts like the [grouping operator](/en-US/docs/Web/JavaScript/R
 
 Capturing groups are numbered by the order of their opening parentheses. The first capturing group is numbered `1`, the second `2`, and so on. [Named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) are also capturing groups and are numbered together with other (unnamed) capturing groups. The information of the capturing group's match can be accessed through:
 
-- The return value (which is an array) of {{jsxref("RegExp.prototype.exec()")}}, {{jsxref("String.prototype.match()")}}, and {{jsxref("String.prototype.matchAll()")}}
+- The return value (which is an array) of {{jsxref("RegExp.prototype.exec()")}}, or {{jsxref("String.prototype.match()")}} when the regex does not have the `g` flag
+- Each match array yielded by the iterator returned by {{jsxref("String.prototype.matchAll()")}}
 - The `pN` parameters of the {{jsxref("String.prototype.replace()")}} and {{jsxref("String.prototype.replaceAll()")}} methods' `replacement` callback function
 - [Backreferences](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference) within the same pattern
 

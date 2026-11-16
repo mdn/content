@@ -4,11 +4,11 @@ short-title: fence
 slug: Web/API/Window/fence
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
 browser-compat: api.Window.fence
 ---
 
-{{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
+{{APIRef("Fenced Frame API")}}
 
 The `fence` read-only property of the {{domxref("Window")}} interface returns a {{domxref("Fence")}} object instance for the current document context.
 
@@ -41,5 +41,5 @@ window.fence.reportEvent({
 
 ## See also
 
-- [Fenced frames](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame) on developers.google.com
-- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com
+- [Fenced frames](https://privacysandbox.google.com/private-advertising/fenced-frame) on privacysandbox.google.com
+- [The Privacy Sandbox](https://privacysandbox.google.com/) on privacysandbox.google.com

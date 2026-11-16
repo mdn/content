@@ -8,7 +8,7 @@ browser-compat: api.ReadableByteStreamController.enqueue
 
 {{APIRef("Streams")}}{{AvailableInWorkers}}
 
-The **`enqueue()`** method of the {{domxref("ReadableByteStreamController")}} interface enqueues a given chunk on the associated readable byte stream (the chunk is copied into the stream's internal queues).
+The **`enqueue()`** method of the {{domxref("ReadableByteStreamController")}} interface enqueues a given chunk on the associated readable byte stream (the chunk is transferred into the stream's internal queues).
 
 This should only be used to transfer data to the queue when {{domxref("ReadableByteStreamController.byobRequest","byobRequest")}} is `null`.
 

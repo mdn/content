@@ -8,7 +8,7 @@ browser-compat: api.Element.ariaDescription
 
 {{APIRef("DOM")}}
 
-The **`ariaDescription`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description) attribute, which defines a string value that describes or annotates the current element.
+The **`ariaDescription`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description) attribute, which defines a string value that describes or annotates the current element.
 
 ## Value
 

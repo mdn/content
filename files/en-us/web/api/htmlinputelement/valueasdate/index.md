@@ -16,7 +16,11 @@ This property always returns `null` when accessed on an input that isn't date- o
 
 ## Value
 
-A {{jsxref("Date")}} object or `null` if a conversion is impossible.
+A {{jsxref("Date")}} object or `null` if a conversion is impossible. The date returned should always be interpreted as a UTC time—for example, using methods like `getUTCDate()` instead of `getDate()`. If you are not careful, the result may be off by 1—for example, if the user lives in a negative UTC offset (the US, for example), then interpreting the date as a local date will result in the previous day from what the user selected.
+
+The [`month`](/en-US/docs/Web/HTML/Reference/Elements/input/month), [`date`](/en-US/docs/Web/HTML/Reference/Elements/input/date), and [`week`](/en-US/docs/Web/HTML/Reference/Elements/input/week) input types return a UTC date that represents the first instant of the inputted time span—that is, they are always midnight in UTC. For `month`, the date is the first day of the month. For `week`, the date is the Monday of the week. The [`time`](/en-US/docs/Web/HTML/Reference/Elements/input/time) input type always has the date set to `1970-01-01`.
+
+The [`datetime-local`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local) input type does not support the `valueAsDate` property, because it represents a date and time in the local time zone (a [wall clock time](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime)), but `Date` objects represent an absolute point in time. However, some browsers may provide a non-standard implementation. [WHATWG is working on integrating](https://github.com/whatwg/html/issues/10882) the {{jsxref("Temporal")}} API with the date/time inputs to account for this use case.
 
 ## Examples
 

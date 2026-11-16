@@ -21,7 +21,7 @@ new MediaStreamTrackGenerator(options)
 
 ### Parameters
 
-- `options`
+- `options` {{Experimental_Inline}} {{Non-standard_Inline}}
   - : An object containing the property `kind`, which is one of the following strings:
     - `"audio"`
       - : Specifies that the stream accepts {{domxref("AudioTrack")}} objects.

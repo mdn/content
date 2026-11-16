@@ -3,13 +3,32 @@ title: Object initializer
 slug: Web/JavaScript/Reference/Operators/Object_initializer
 page-type: javascript-language-feature
 browser-compat: javascript.operators.object_initializer
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 An **object initializer** is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`). Objects can also be initialized using [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) or [by invoking a constructor function](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#using_a_constructor_function) with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator.
 
-{{EmbedInteractiveExample("pages/js/expressions-objectinitializer.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Object initializer", "taller")}}
+
+```js interactive-example
+const object1 = { a: "foo", b: 42, c: {} };
+
+console.log(object1.a);
+// Expected output: "foo"
+
+const a = "foo";
+const b = 42;
+const c = {};
+const object2 = { a: a, b: b, c: c };
+
+console.log(object2.b);
+// Expected output: 42
+
+const object3 = { a, b, c };
+
+console.log(object3.a);
+// Expected output: "foo"
+```
 
 ## Syntax
 
@@ -47,7 +66,7 @@ An object initializer is an expression that describes the initialization of an {
 The object literal syntax is not the same as the **J**ava**S**cript **O**bject **N**otation ([JSON](/en-US/docs/Glossary/JSON)). Although they look similar, there are differences between them:
 
 - JSON _only_ permits property definition using the `"property": value` syntax. The property name must be double-quoted, and the definition cannot be a shorthand. Computed property names are not allowed either.
-- JSON object property values can only be strings, numbers, `true`, `false`, `null`, arrays, or another JSON object. This means JSON cannot express methods or non-plain objects like [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) or [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp).
+- JSON object property values can only be strings, numbers, `true`, `false`, `null`, arrays, or another JSON object. This means JSON cannot express methods or non-plain objects like [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) or [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp).
 - In JSON, `"__proto__"` is a normal property key. In an object literal, it [sets the object's prototype](#prototype_setter).
 
 JSON is a _strict subset_ of the object literal syntax, meaning that every valid JSON text can be parsed as an object literal, and would likely not cause syntax errors. The only exception is that the object literal syntax prohibits duplicate `__proto__` keys, which does not apply to [`JSON.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse). The latter treats `__proto__` like a normal property and takes the last occurrence as the property's value. The only time when the object value they represent (a.k.a. their semantic) differ is also when the source contains the `__proto__` key — for object literals, it sets the object's prototype; for JSON, it's a normal property.
@@ -90,7 +109,7 @@ Once you have created an object, you might want to read or change them. Object p
 object.foo; // "bar"
 object["age"]; // 42
 object.baz; // {myProp: 12}
-object.baz.myProp; //12
+object.baz.myProp; // 12
 ```
 
 ### Property definitions
@@ -132,7 +151,7 @@ const a = { x: 1, x: 2 };
 console.log(a); // {x: 2}
 ```
 
-After ES2015, duplicate property names are allowed everywhere, including [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#duplicate_property_names). You can also have duplicate property names in [classes](/en-US/docs/Web/JavaScript/Reference/Classes). The only exception is [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties), which must be unique in the class body.
+After ES2015, duplicate property names are allowed everywhere, including [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#duplicate_property_names). You can also have duplicate property names in [classes](/en-US/docs/Web/JavaScript/Reference/Classes). The only exception is [private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements), which must be unique in the class body.
 
 ### Method definitions
 
@@ -141,7 +160,9 @@ A property of an object can also refer to a [function](/en-US/docs/Web/JavaScrip
 ```js
 const o = {
   property: function (parameters) {},
-  get property() {},
+  get property() {
+    return 1;
+  },
   set property(value) {},
 };
 ```

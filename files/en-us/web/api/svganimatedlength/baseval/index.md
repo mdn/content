@@ -12,7 +12,7 @@ The **`baseVal`** property of the {{domxref("SVGAnimatedLength")}} interface con
 
 ## Value
 
-A {{domxref("SVGLength")}} containing the initial value of the length.
+An {{domxref("SVGLength")}} containing the initial value of the length.
 
 ## Examples
 

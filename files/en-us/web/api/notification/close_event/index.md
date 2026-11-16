@@ -12,12 +12,16 @@ The **`close`** event of the {{domxref("Notification")}} interface fires when a 
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("close", (event) => {});
+```js-nolint
+addEventListener("close", (event) => { })
+```
 
-onclose = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onclose = (event) => { }
 ```
 
 ## Event type

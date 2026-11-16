@@ -2,12 +2,10 @@
 title: NavigationActivation
 slug: Web/API/NavigationActivation
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.NavigationActivation
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`NavigationActivation`** interface of the [Navigation API](/en-US/docs/Web/API/Navigation_API) represents a recent cross-document navigation. It contains the navigation type and outgoing and inbound document history entries.
 
@@ -18,11 +16,11 @@ This object is accessed via the {{domxref("PageSwapEvent.activation")}} and {{do
 
 ## Instance properties
 
-- {{domxref("NavigationActivation.entry", "entry")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("NavigationActivation.entry", "entry")}} {{ReadOnlyInline}}
   - : Contains a {{domxref("NavigationHistoryEntry")}} object representing the history entry for the inbound ("to") document in the navigation. This is equivalent to the {{domxref("Navigation.currentEntry")}} property at the moment the inbound document was activated.
-- {{domxref("NavigationActivation.from", "from")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("NavigationActivation.from", "from")}} {{ReadOnlyInline}}
   - : Contains a {{domxref("NavigationHistoryEntry")}} object representing the history entry for the outgoing ("from") document in the navigation.
-- {{domxref("NavigationActivation.navigationType", "navigationType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("NavigationActivation.navigationType", "navigationType")}} {{ReadOnlyInline}}
   - : Contains a string indicating the type of navigation.
 
 ## Examples
@@ -79,7 +77,7 @@ window.addEventListener("pagereveal", async (e) => {
 ```
 
 > [!NOTE]
-> See [List of Chrome DevRel team members](https://view-transitions.netlify.app/profiles/mpa/) for the live demo this code is taken from.
+> See [List of Chrome DevRel team members](https://view-transitions.chrome.dev/profiles/mpa/) for the live demo this code is taken from.
 
 ## Specifications
 
@@ -92,4 +90,4 @@ window.addEventListener("pagereveal", async (e) => {
 ## See also
 
 - [Navigation API](/en-US/docs/Web/API/Navigation_API)
-- [View Transitions API](/en-US/docs/Web/API/View_Transitions_API)
+- [View Transition API](/en-US/docs/Web/API/View_Transition_API)

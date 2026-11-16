@@ -2,12 +2,9 @@
 title: "Modifier: (?ims-ims:...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Modifier
 page-type: javascript-language-feature
-status:
-  - experimental
 browser-compat: javascript.regular_expressions.modifier
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}{{SeeCompatTable}}
 
 A **modifier** overrides [flag](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#regex_flags) settings in a specific part of a regular expression. It can be used to enable or disable flags that change the meanings of certain regex syntax elements. These flags are [`i`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase), [`m`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline), and [`s`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll).
 
@@ -34,7 +31,7 @@ A **modifier** overrides [flag](/en-US/docs/Web/JavaScript/Reference/Regular_exp
 
 Some flags change the meanings of regex syntax elements:
 
-- The [`i`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) flag makes the regex case-insensitive by making all [literal characters](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) and [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class) implicitly be lowercase.
+- The [`i`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) flag makes the regex case-insensitive by normalizing the case of [literal characters](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) and [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class).
 - The [`m`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline) flag changes the behavior of [input boundary assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion) `^` and `$` to match the start and end of each line, in addition to the start and end of the input string.
 - The [`s`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll) flag changes the behavior of the [wildcard](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Wildcard) `.` character to match any character, including line terminators.
 
@@ -87,7 +84,7 @@ pattern.test(input2); // false
 Imagine you are finding all variable declarations called `foo` or `bar` (because they are bad names). The word may appear in any case, but you know the keyword is always lowercase, so you can do this:
 
 ```js
-const pattern = /(?:var|let|const) (?i:foo|bar)\b/i;
+const pattern = /(?:var|let|const) (?i:foo|bar)\b/;
 
 pattern.test("let foo;"); // true
 pattern.test("const BAR = 1;"); // true

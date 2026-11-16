@@ -1,11 +1,11 @@
 ---
 title: Error() constructor
+short-title: Error()
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Error.Error
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Error()`** constructor creates {{jsxref("Error")}} objects.
 
@@ -25,7 +25,8 @@ Error(message, fileName)
 Error(message, fileName, lineNumber)
 ```
 
-> **Note:** `Error()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Error` instance.
+> [!NOTE]
+> `Error()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Error` instance.
 
 ### Parameters
 
@@ -44,7 +45,7 @@ Error(message, fileName, lineNumber)
 
 ### Function call or new construction
 
-When `Error` is used like a function, that is without {{jsxref("Operators/new", "new")}}, it will return an `Error` object.
+When `Error` is used like a function, that is without {{jsxref("new")}}, it will return an `Error` object.
 Therefore, a mere call to `Error` will produce the same output that constructing an `Error` object via the `new` keyword would.
 
 ```js
@@ -97,7 +98,8 @@ console.log("cause" in error3); // false
 
 ## See also
 
-- [Polyfill of `Error` with `cause` support in `core-js`](https://github.com/zloirock/core-js#ecmascript-error)
+- [Polyfill of `Error` with `cause` support in `core-js`](https://core-js.io/docs/features/ecmascript/error)
+- [es-shims polyfill of Error `cause`](https://www.npmjs.com/package/error-cause)
 - {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try...catch")}}
 - [Error causes](https://v8.dev/features/error-cause) on v8.dev (2021)

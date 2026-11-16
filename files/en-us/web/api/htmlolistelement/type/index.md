@@ -10,7 +10,7 @@ browser-compat: api.HTMLOListElement.type
 
 The **`type`** property of the {{domxref("HTMLOListElement")}} interface indicates the kind of marker to be used to display ordered list.
 
-It reflects the [`type`](/en-US/docs/Web/HTML/Element/ol#type) attribute of the {{HTMLElement("ol")}} element.
+It reflects the [`type`](/en-US/docs/Web/HTML/Reference/Elements/ol#type) attribute of the {{HTMLElement("ol")}} element.
 
 > [!NOTE]
 > The `type` can be defined in CSS with the {{CSSxRef("list-style-type")}} property. The `list-style-type` property provides many more values.
@@ -19,7 +19,7 @@ It reflects the [`type`](/en-US/docs/Web/HTML/Element/ol#type) attribute of the 
 
 A string representing the type.
 
-Its possible values are listed in the attribute [marker types](/en-US/docs/Web/HTML/Element/ol#type) section.
+Its possible values are listed in the attribute [marker types](/en-US/docs/Web/HTML/Reference/Elements/ol#type) section.
 
 ## Examples
 

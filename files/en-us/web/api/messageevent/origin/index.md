@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MessageEvent.origin
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`origin`** read-only property of the
 {{domxref("MessageEvent")}} interface is a string representing the

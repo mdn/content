@@ -8,16 +8,21 @@ browser-compat: api.SpeechRecognition.result_event
 
 {{APIRef("Web Speech API")}}
 
-The **`result`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when the speech recognition service returns a result — a word or phrase has been positively recognized and this has been communicated back to the app
+The **`result`** event of the {{domxref("SpeechRecognition")}} interface is fired when the speech recognition service returns a result.
+This can be a final result, or an interim result that may still change (if {{domxref("SpeechRecognition.interimResults", "interimResults")}} is `true`).
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("result", (event) => {});
+```js-nolint
+addEventListener("result", (event) => { })
+```
 
-onresult = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onresult = (event) => { }
 ```
 
 ## Event type
@@ -25,19 +30,6 @@ onresult = (event) => {};
 A {{domxref("SpeechRecognitionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("SpeechRecognitionEvent")}}
-
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("SpeechRecognitionEvent.emma")}} {{ReadOnlyInline}}
-  - : Returns an Extensible MultiModal Annotation markup language (EMMA) — XML — representation of the result.
-- {{domxref("SpeechRecognitionEvent.interpretation")}} {{ReadOnlyInline}}
-  - : Returns the semantic meaning of what the user said.
-- {{domxref("SpeechRecognitionEvent.resultIndex")}} {{ReadOnlyInline}}
-  - : Returns the lowest index value result in the {{domxref("SpeechRecognitionResultList")}} "array" that has actually changed.
-- {{domxref("SpeechRecognitionEvent.results")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("SpeechRecognitionResultList")}} object representing all the speech recognition results for the current session.
 
 ## Examples
 
@@ -55,7 +47,7 @@ recognition.addEventListener("result", (event) => {
 });
 ```
 
-Or use the `onresult` event handler property:
+Or use the `onresult` event handler property (but note that this replaces other event listeners added using `onresult`, if any):
 
 ```js
 recognition.onresult = (event) => {

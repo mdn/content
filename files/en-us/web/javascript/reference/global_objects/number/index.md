@@ -3,9 +3,8 @@ title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
 page-type: javascript-class
 browser-compat: javascript.builtins.Number
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 **`Number`** values represent floating-point numbers like `37` or `-9.25`.
 
@@ -52,7 +51,7 @@ The mantissa (also called _significand_) is the part of the number representing 
 </math>
 <!-- prettier-ignore-end -->
 
-The mantissa is stored with 52 bits, interpreted as digits after `1.…` in a binary fractional number. Therefore, the mantissa's precision is 2<sup>-52</sup> (obtainable via {{jsxref("Number.EPSILON")}}), or about 15 to 17 decimal places; arithmetic above that level of precision is subject to [rounding](https://en.wikipedia.org/wiki/Floating-point_arithmetic#Representable_numbers,_conversion_and_rounding).
+The mantissa is stored with 52 bits, interpreted as digits after `1.…` in a binary fractional number. Therefore, the mantissa's precision is 2<sup>-52</sup> (obtainable via {{jsxref("Number.EPSILON")}}), or about 15 to 17 significant decimal digits; arithmetic above that level of precision is subject to [rounding](https://en.wikipedia.org/wiki/Floating-point_arithmetic#Representable_numbers,_conversion_and_rounding).
 
 The largest value a number can hold is 2<sup>1023</sup> × (2 - 2<sup>-52</sup>) (with the exponent being 1023 and the mantissa being 0.1111… in base 2), which is obtainable via {{jsxref("Number.MAX_VALUE")}}. Values higher than that are replaced with the special number constant {{jsxref("Infinity")}}.
 
@@ -77,7 +76,7 @@ Many built-in operations that expect numbers first coerce their arguments to num
   - [Numeric separators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators) are not allowed.
 - [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) throw a {{jsxref("TypeError")}} to prevent unintended implicit coercion causing loss of precision.
 - [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) throw a {{jsxref("TypeError")}}.
-- Objects are first [converted to a primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling their [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), `valueOf()`, and `toString()` methods, in that order. The resulting primitive is then converted to a number.
+- Objects are first [converted to a primitive](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion) by calling their [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), `valueOf()`, and `toString()` methods, in that order. The resulting primitive is then converted to a number.
 
 There are two ways to achieve nearly the same effect in JavaScript.
 
@@ -242,7 +241,7 @@ Number("-Infinity"); // -Infinity
 
 ## See also
 
-- [Polyfill of modern `Number` behavior (with support binary and octal literals) in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [Polyfill of modern `Number` behavior (with support binary and octal literals) in `core-js`](https://core-js.io/docs/features/ecmascript/number)
 - {{jsxref("NaN")}}
 - [Arithmetic operators](/en-US/docs/Web/JavaScript/Reference/Operators#arithmetic_operators)
 - {{jsxref("Math")}}

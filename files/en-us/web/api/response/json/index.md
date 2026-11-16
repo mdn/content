@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Response.json
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`json()`** method of the {{DOMxRef("Response")}} interface takes
 a {{DOMxRef("Response")}} stream and reads it to completion. It returns a promise which
@@ -31,7 +31,7 @@ anything that can be represented by JSON — an object, an array, a string, a nu
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : The request was [aborted](/en-US/docs/Web/API/Fetch_API/Using_Fetch#canceling_a_request).
 - {{jsxref("TypeError")}}
   - : Thrown for one of the following reasons:
@@ -79,5 +79,5 @@ fetch(myRequest)
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

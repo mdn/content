@@ -8,7 +8,7 @@ browser-compat: api.Element.scrollTop
 
 {{APIRef("DOM")}}
 
-The **`Element.scrollTop`** property gets or sets the number of pixels by which an element's content is scrolled from its top edge. This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number.
+The **`scrollTop`** property of the {{domxref("Element")}} interface gets or sets the number of pixels by which an element's content is scrolled from its top edge. This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number.
 
 ## Value
 
@@ -24,22 +24,20 @@ The `scrollTop` property can be set, which causes the element to scroll to the s
 
 ### Scrolling an element
 
-In this example, try scrolling the inner container with the dashed border, and see how the value of `scrollTop` changes.
+In this example, try scrolling the container with the dashed border, and see how the value of `scrollTop` changes.
 
 #### HTML
 
 ```html
 <div id="container">
-  <div id="scroller">
-    <p>
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
-      Orbiting this at a distance of roughly ninety-two million miles is an
-      utterly insignificant little blue green planet whose ape-descended life
-      forms are so amazingly primitive that they still think digital watches are
-      a pretty neat idea.
-    </p>
-  </div>
+  <p>
+    Far out in the uncharted backwaters of the unfashionable end of the western
+    spiral arm of the Galaxy lies a small unregarded yellow sun. Orbiting this
+    at a distance of roughly ninety-two million miles is an utterly
+    insignificant little blue green planet whose ape-descended life forms are so
+    amazingly primitive that they still think digital watches are a pretty neat
+    idea.
+  </p>
 </div>
 
 <div id="output">scrollTop: 0</div>
@@ -48,7 +46,7 @@ In this example, try scrolling the inner container with the dashed border, and s
 #### CSS
 
 ```css
-#scroller {
+#container {
   overflow: scroll;
   height: 150px;
   width: 150px;
@@ -63,11 +61,11 @@ In this example, try scrolling the inner container with the dashed border, and s
 #### JavaScript
 
 ```js
-const scroller = document.querySelector("#scroller");
+const container = document.querySelector("#container");
 const output = document.querySelector("#output");
 
-scroller.addEventListener("scroll", (event) => {
-  output.textContent = `scrollTop: ${scroller.scrollTop}`;
+container.addEventListener("scroll", (event) => {
+  output.textContent = `scrollTop: ${container.scrollTop}`;
 });
 ```
 
@@ -85,5 +83,11 @@ scroller.addEventListener("scroll", (event) => {
 
 ## See also
 
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("HTMLElement.offsetTop")}}
+- {{domxref("Element.clientTop")}}
+- {{domxref("Element.scrollHeight")}}
+- {{domxref("Element.scrollWidth")}}
 - {{domxref("Element.scrollLeft")}}
+- {{domxref("Element.getBoundingClientRect()")}}
 - {{domxref("Element.scrollTo()")}}

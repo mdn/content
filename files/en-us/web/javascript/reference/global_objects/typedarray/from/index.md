@@ -1,18 +1,25 @@
 ---
 title: TypedArray.from()
+short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/from
 page-type: javascript-static-method
 browser-compat: javascript.builtins.TypedArray.from
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`TypedArray.from()`** static method creates a new
 [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects)
 from an array-like or iterable object. This method is nearly the same as
 {{jsxref("Array.from()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-from.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.from()", "shorter")}}
+
+```js interactive-example
+const uint16 = Int16Array.from("12345");
+
+console.log(uint16);
+// Expected output: Int16Array [1, 2, 3, 4, 5]
+```
 
 ## Syntax
 
@@ -133,7 +140,7 @@ console.log(Int8Array.from.call(NotArray2, [1, 2, 3]));
 
 ## See also
 
-- [Polyfill of `TypedArray.from` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.from` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.of()")}}

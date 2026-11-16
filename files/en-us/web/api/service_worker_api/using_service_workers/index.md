@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Service Workers API")}}
 
-This article provides information on getting started with service workers, including basic architecture, registering a service worker, the installation and activation process for a new service worker, updating your service worker, cache control and custom responses, all in the context of a simple app with offline functionality.
+This article provides information on getting started with service workers, including basic architecture, registering a service worker, the installation and activation process for a new service worker, updating your service worker, cache control and custom responses, all in the context of an app with offline functionality.
 
 ## The premise of service workers
 
@@ -22,16 +22,59 @@ Service workers are enabled by default in all modern browsers. To run code using
 
 ## Basic architecture
 
-With service workers, the following steps are generally observed for basic setup:
+With service workers, the following steps are generally observed for initial installation and for replacing an existing service worker. The diagrams show an example that populates versioned caches during installation and removes old caches during activation.
 
-1. The service worker code is fetched and then registered using [`serviceWorkerContainer.register()`](/en-US/docs/Web/API/ServiceWorkerContainer/register). If successful, the service worker is executed in a [`ServiceWorkerGlobalScope`](/en-US/docs/Web/API/ServiceWorkerGlobalScope); this is basically a special kind of worker context, running off the main script execution thread, with no DOM access. The service worker is now ready to process events.
+### Initial installation
+
+In this example, two pages are already open before the first service worker is registered. One of the pages calls [`serviceWorkerContainer.register()`](/en-US/docs/Web/API/ServiceWorkerContainer/register), which initiates the process.
+
+1. The service worker code is fetched and then registered. If successful, the service worker is executed in a [`ServiceWorkerGlobalScope`](/en-US/docs/Web/API/ServiceWorkerGlobalScope); this is basically a special kind of worker context, running off the main script execution thread, with no DOM access. The service worker is now ready to process events.
+
+   ![Registration of the first service worker, showing its parsed state, scope, and two open, uncontrolled clients.](sw-registration.svg)
+
 2. Installation takes place. An `install` event is always the first one sent to a service worker (this can be used to start the process of populating an IndexedDB, and caching site assets). During this step, the application is preparing to make everything available for use offline.
-3. When the `install` handler completes, the service worker is considered installed. At this point a previous version of the service worker may be active and controlling open pages. Because we don't want two different versions of the same service worker running at the same time, the new version is not yet active.
-4. Once all pages controlled by the old version of the service worker have closed, it's safe to retire the old version, and the newly installed service worker receives an `activate` event. The primary use of `activate` is to clean up resources used in previous versions of the service worker. The new service worker can call [`skipWaiting()`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting) to ask to be activated immediately without waiting for open pages to be closed. The new service worker will then receive `activate` immediately, and will take over any open pages.
-5. After activation, the service worker will now control pages, but only those that were opened after the `register()` is successful. In other words, documents will have to be reloaded to actually be controlled, because a document starts life with or without a service worker and maintains that for its lifetime. To override this default behavior and adopt open pages, a service worker can call [`clients.claim()`](/en-US/docs/Web/API/Clients/claim).
-6. Whenever a new version of a service worker is fetched, this cycle happens again and the remains of the previous version are cleaned during the new version's activation.
 
-![lifecycle diagram](sw-lifecycle.svg)
+   ![The install event populates a cache while the same two clients remain open.](sw-installation.svg)
+
+3. When installation completes successfully, the service worker is considered installed.
+
+   ![The service worker is installed, with a populated cache, but does not yet control clients.](sw-installed.svg)
+
+4. Because this is the first service worker, it receives an `activate` event without waiting for open pages to close. The `activate` handler can finish setting up the service worker.
+
+   ![The activate event finishes setup while the same two existing clients remain open.](sw-activation.svg)
+
+5. After activation, the service worker will control pages opened within its scope. Existing documents will have to be reloaded to actually be controlled, because a document starts life with or without a service worker and maintains that for its lifetime. To override this default behavior and adopt open pages, a service worker can call [`clients.claim()`](/en-US/docs/Web/API/Clients/claim).
+
+   ![A new client opens and is controlled by the activated service worker, while the two existing clients remain open and uncontrolled.](sw-activated.svg)
+
+### Replacing an existing service worker
+
+This independent example starts with one open client controlled by version 1. It illustrates the default waiting behavior when replacing an existing service worker.
+
+1. Whenever a new version of a service worker is fetched, this cycle happens again. The previous version remains active and continues to control its clients.
+
+   ![The open client calls register(), and version 2 is parsed while version 1 remains activated and controls the client.](sw-replacement-fetched.svg)
+
+2. Installation takes place for the new version. Its `install` handler can populate a new cache while the old version continues to use its existing cache.
+
+   ![Version 2 receives the install event and populates a new cache while version 1 continues to control the same client.](sw-replacement-installation.svg)
+
+3. When installation completes successfully, the new version waits while the old version is still controlling clients. The new version is not yet active.
+
+   ![Version 2 is installed and waiting, with its new cache ready, while version 1 still controls the open client.](sw-replacement-waiting.svg)
+
+4. Once all pages controlled by the old version of the service worker have closed and the old version has finished handling pending events, it's safe to retire the old version, and the newly installed service worker receives an `activate` event. The primary use of `activate` is to clean up resources used in previous versions of the service worker, such as the old cache in this example.
+
+   The new service worker can call [`skipWaiting()`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting) to ask to be activated without waiting for open pages to be closed. It then takes over the pages controlled by the old version.
+
+   ![The client controlled by version 1 closes. Version 1 is retired, and version 2 receives activate and deletes the old cache.](sw-replacement-activation.svg)
+
+5. After activation, newly opened pages within the registration's scope are controlled by the new version.
+
+   ![A new client opens and is controlled by version 2, which uses its new cache.](sw-replacement-activated.svg)
+
+### Service worker events
 
 Here is a summary of the available service worker events:
 
@@ -93,21 +136,26 @@ A single service worker can control many pages. Each time a page within your sco
 
 #### Why is my service worker failing to register?
 
-This could be for the following reasons:
+A service worker fails to register for one of the following reasons:
 
-- You are not running your application through HTTPS.
-- The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app's root directory. In our example, the worker is at `https://bncb2v.csb.app/sw.js`, and the app's root is `https://bncb2v.csb.app/`. But the path needs to be written as `/sw.js`.
-- It is also not allowed to point to a service worker of a different origin than that of your app.
-- The service worker will only catch requests from clients under the service worker's scope.
-- The max scope for a service worker is the location of the worker (in other words if the script `sw.js` is located in `/js/sw.js`, it can only control URLs under `/js/` by default). A list of max scopes for that worker can be specified with the `Service-Worker-Allowed` header.
-- In Firefox, Service Worker APIs are hidden and cannot be used when the user is in [private browsing mode](https://bugzil.la/1320796), or when history is disabled, or if cookies are cleared when Firefox is closed.
-- In Chrome, registration fails when the "Block all cookies (not recommended)" option is enabled.
+- You are not running your application in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts) (over HTTPS).
+- The path of the service worker file is incorrect.
+  The path must be relative to the origin, not an app's root directory.
+  In our example, the worker is at `https://bncb2v.csb.app/sw.js`, and the app's root is `https://bncb2v.csb.app/`, so the service worker must be specified as `/sw.js`.
+- The path to your service worker points to a service worker of a different origin to your app.
+- The service worker registration contains a `scope` option broader than permitted by the worker path.
+  The default scope for a service worker is the directory where the worker is located.
+  In other words, if the script `sw.js` is located in `/js/sw.js`, it can only control URLs in (or nested within) the `/js/` path by default.
+  The scope for a service worker can be broadened (or narrowed) with the {{HTTPHeader("Service-Worker-Allowed")}} header.
+- Browser-specific settings are enabled, such as blocking all cookies, private browsing mode, automatic cookie deletion on close, etc.
+  See [`serviceWorker.register()` browser compatibility](/en-US/docs/Web/API/ServiceWorkerContainer/register#browser_compatibility) for more information.
 
 ### Install and activate: populating your cache
 
 After your service worker is registered, the browser will attempt to install then activate the service worker for your page/site.
 
-The `install` event is fired when an installation is successfully completed. The `install` event is generally used to populate your browser's offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker's storage API — [`cache`](/en-US/docs/Web/API/Cache) — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser's standard cache, but it is specific to your domain. The contents of the cache are kept until you clear them.
+The `install` event is the first event that is fired on service worker installation or update.
+It is emitted just once, immediately after registration is successfully completed, and is generally used to populate your browser's offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker's storage API — [`cache`](/en-US/docs/Web/API/Cache) — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser's standard cache, but it is specific to your domain. The contents of the cache are kept until you clear them.
 
 Here's how our service worker handles the `install` event:
 
@@ -134,14 +182,16 @@ self.addEventListener("install", (event) => {
 });
 ```
 
-1. Here we add an `install` event listener to the service worker (hence `self`), and then chain a [`ExtendableEvent.waitUntil()`](/en-US/docs/Web/API/ExtendableEvent/waitUntil) method onto the event — this ensures that the service worker will not install until the code inside `waitUntil()` has successfully occurred.
+1. Here we add an `install` event listener to the service worker (hence `self`), and then chain an [`ExtendableEvent.waitUntil()`](/en-US/docs/Web/API/ExtendableEvent/waitUntil) method onto the event — this ensures that the service worker will not install until the code inside `waitUntil()` has successfully occurred.
 2. Inside `addResourcesToCache()` we use the [`caches.open()`](/en-US/docs/Web/API/CacheStorage/open) method to create a new cache called `v1`, which will be version 1 of our site resources cache. Then we call a function `addAll()` on the created cache, which for its parameter takes an array of URLs to all the resources you want to cache. The URLs are relative to the worker's {{domxref("WorkerGlobalScope.location", "location", "", 1)}}.
 3. If the promise is rejected, the installation fails, and the worker won't do anything. This is OK, as you can fix your code and then try again the next time registration occurs.
 4. After a successful installation, the service worker activates. This doesn't have much of a distinct use the first time your service worker is installed/activated, but it means more when the service worker is updated (see the [Updating your service worker](#updating_your_service_worker) section later on.)
 
-> **Note:** [The Web Storage API (`localStorage`)](/en-US/docs/Web/API/Web_Storage_API) works in a similar way to service worker cache, but it is synchronous, so not allowed in service workers.
+> [!NOTE]
+> [The Web Storage API (`localStorage`)](/en-US/docs/Web/API/Web_Storage_API) works in a similar way to service worker cache, but it is synchronous, so not allowed in service workers.
 
-> **Note:** [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) can be used inside a service worker for data storage if you require it.
+> [!NOTE]
+> [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) can be used inside a service worker for data storage if you require it.
 
 ### Custom responses to requests
 
@@ -199,18 +249,18 @@ const putInCache = async (request, response) => {
   await cache.put(request, response);
 };
 
-const cacheFirst = async (request) => {
+const cacheFirst = async (request, event) => {
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
     return responseFromCache;
   }
   const responseFromNetwork = await fetch(request);
-  putInCache(request, responseFromNetwork.clone());
+  event.waitUntil(putInCache(request, responseFromNetwork.clone()));
   return responseFromNetwork;
 };
 
 self.addEventListener("fetch", (event) => {
-  event.respondWith(cacheFirst(event.request));
+  event.respondWith(cacheFirst(event.request, event));
 });
 ```
 
@@ -218,7 +268,7 @@ If the request URL is not available in the cache, we request the resource from t
 
 Cloning the response is necessary because request and response streams can only be read once. In order to return the response to the browser and put it in the cache we have to clone it. So the original gets returned to the browser and the clone gets sent to the cache. They are each read once.
 
-What might look a bit weird is that the promise returned by `putInCache()` is not awaited. But the reason is that we don't want to wait until the response clone has been added to the cache before returning a response.
+What might look a bit weird is that the promise returned by `putInCache()` is not awaited. The reason is that we don't want to wait until the response clone has been added to the cache before returning a response. However, we do need to call `event.waitUntil()` on the promise, to make sure the service worker doesn't terminate before the cache is populated.
 
 The only trouble we have now is that if the request doesn't match anything in the cache, and the network is not available, our request will still fail. Let's provide a default fallback so that whatever happens, the user will at least get something:
 
@@ -228,7 +278,7 @@ const putInCache = async (request, response) => {
   await cache.put(request, response);
 };
 
-const cacheFirst = async ({ request, fallbackUrl }) => {
+const cacheFirst = async ({ request, fallbackUrl, event }) => {
   // First try to get the resource from the cache
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
@@ -241,7 +291,7 @@ const cacheFirst = async ({ request, fallbackUrl }) => {
     // response may be used only once
     // we need to save clone to put one copy in cache
     // and serve second one
-    putInCache(request, responseFromNetwork.clone());
+    event.waitUntil(putInCache(request, responseFromNetwork.clone()));
     return responseFromNetwork;
   } catch (error) {
     const fallbackResponse = await caches.match(fallbackUrl);
@@ -263,6 +313,7 @@ self.addEventListener("fetch", (event) => {
     cacheFirst({
       request: event.request,
       fallbackUrl: "/gallery/myLittleVader.jpg",
+      event,
     }),
   );
 });
@@ -303,10 +354,17 @@ const putInCache = async (request, response) => {
   await cache.put(request, response);
 };
 
-const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
+const cacheFirst = async ({
+  request,
+  preloadResponsePromise,
+  fallbackUrl,
+  event,
+}) => {
   // First try to get the resource from the cache
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
+    // Keep the navigation preload request alive even if we do not use its response.
+    event.waitUntil(preloadResponsePromise.catch(() => undefined));
     return responseFromCache;
   }
 
@@ -314,7 +372,7 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
   const preloadResponse = await preloadResponsePromise;
   if (preloadResponse) {
     console.info("using preload response", preloadResponse);
-    putInCache(request, preloadResponse.clone());
+    event.waitUntil(putInCache(request, preloadResponse.clone()));
     return preloadResponse;
   }
 
@@ -324,7 +382,7 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
     // response may be used only once
     // we need to save clone to put one copy in cache
     // and serve second one
-    putInCache(request, responseFromNetwork.clone());
+    event.waitUntil(putInCache(request, responseFromNetwork.clone()));
     return responseFromNetwork;
   } catch (error) {
     const fallbackResponse = await caches.match(fallbackUrl);
@@ -374,6 +432,7 @@ self.addEventListener("fetch", (event) => {
       request: event.request,
       preloadResponsePromise: event.preloadResponse,
       fallbackUrl: "/gallery/myLittleVader.jpg",
+      event,
     }),
   );
 });
@@ -445,9 +504,10 @@ self.addEventListener("activate", (event) => {
 - [Chrome](https://www.chromium.org/blink/serviceworker/service-worker-faq/)
 - [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/application/service_workers/index.html)
   - The "Forget about this site" button, available in [Firefox's toolbar customization options](https://support.mozilla.org/en-US/kb/customize-firefox-controls-buttons-and-toolbars), can be used to clear service workers and their caches.
-- [Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/service-workers/)
+- [Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools/progressive-web-apps/#service-workers)
 
 ## See also
 
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- {{HTTPHeader("Service-Worker-Allowed")}} HTTP header

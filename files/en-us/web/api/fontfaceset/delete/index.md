@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FontFaceSet.delete
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`delete()`** method of the {{domxref("FontFaceSet")}} interface removes a font from the set.
 
@@ -32,7 +32,7 @@ A boolean value which is `true` if the deletion was successful, and `false` othe
 In the following example a new {{domxref("FontFace")}} object is created and then deleted from the {{domxref("FontFaceSet")}}.
 
 ```js
-const font = new FontFace("MyFont", "url(myFont.woff2)");
+const font = new FontFace("MyFont", 'url("myFont.woff2")');
 document.fonts.delete(font);
 ```
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Window.cancelAnimationFrame
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`window.cancelAnimationFrame()`** method cancels an
 animation frame request previously scheduled through a call to
@@ -31,7 +31,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const start = Date.now();
+const start = document.timeline.currentTime;
 
 let myReq;
 

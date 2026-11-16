@@ -17,7 +17,7 @@ The method returns `false` if the data cannot be _validated_. Reasons the data m
 - Files are specified but the implementation does not support file sharing.
 - Sharing the specified data would be considered a "hostile share" by the user-agent.
 
-The [Web Share API](/en-US/docs/Web/API/Web_Share_API) is gated by the [web-share](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/web-share) permission policy.
+The [Web Share API](/en-US/docs/Web/API/Web_Share_API) is gated by the [web-share](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) permission policy.
 The `canShare()` method will return `false` if the permission is supported but has not been granted.
 
 ## Syntax
@@ -30,7 +30,6 @@ canShare(data)
 ### Parameters
 
 - `data` {{optional_inline}}
-
   - : An object defining the share data to test.
     Typically, an object with the same properties is passed to {{domxref("navigator.share()")}} if this call returns `true`.
 
@@ -38,7 +37,6 @@ canShare(data)
     All properties are optional but at least one known data property must be specified or the method will return `false`.
 
     Possible values are:
-
     - `url` {{optional_inline}}
       - : A string representing a URL to be shared.
     - `text` {{optional_inline}}

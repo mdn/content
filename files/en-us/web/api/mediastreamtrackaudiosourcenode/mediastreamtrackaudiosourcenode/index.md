@@ -23,9 +23,7 @@ new MediaStreamTrackAudioSourceNode(context, options)
 - `context`
   - : An {{domxref("AudioContext")}} representing the audio context you want the node to be associated with.
 - `options`
-
   - : An object defining the properties you want the `MediaStreamTrackAudioSourceNode` to have:
-
     - `mediaStreamTrack`
       - : The {{domxref("MediaStreamTrack")}} from which to take audio data for this node's output.
 
@@ -38,7 +36,7 @@ A new {{domxref("MediaStreamTrackAudioSourceNode")}} object representing the aud
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the specified `context` is not an {{domxref("AudioContext")}}.
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the specified {{domxref("MediaStreamTrack")}} isn't an audio track (that is, its {{domxref("MediaStreamTrack.kind", "kind")}} property isn't `audio`.
+  - : Thrown if the specified {{domxref("MediaStreamTrack")}} isn't an audio track (that is, its {{domxref("MediaStreamTrack.kind", "kind")}} property isn't `audio`).
 
 ## Example
 

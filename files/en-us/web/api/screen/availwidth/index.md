@@ -6,10 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.Screen.availWidth
 ---
 
-{{APIRef("CSSOM View")}}
+{{APIRef("CSSOM view API")}}
 
-The **`Screen.availWidth`** property returns the amount of
-horizontal space (in pixels) available to the window.
+The **`availWidth`** read-only property of the {{domxref("Screen")}} interface returns the amount of horizontal space (in CSS pixels) available to the window.
 
 ## Value
 

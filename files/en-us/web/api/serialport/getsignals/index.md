@@ -3,14 +3,12 @@ title: "SerialPort: getSignals() method"
 short-title: getSignals()
 slug: Web/API/SerialPort/getSignals
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.SerialPort.getSignals
 ---
 
-{{SecureContext_Header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Web Serial API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`SerialPort.getSignals()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves with an object containing the current state of the port's control signals.
+The **`getSignals()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves with an object containing the current state of the port's control signals.
 
 ## Syntax
 
@@ -37,10 +35,23 @@ Returns a {{jsxref("Promise")}} that resolves with an object containing the foll
 
 ### Exceptions
 
+The returned `Promise` rejects with one of the following exceptions:
+
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Returned if the port is not open. Call {{domxref("SerialPort.open()")}} to avoid this error.
+  - : If `getSignals()` is called when the port is not open. Call {{domxref("SerialPort.open()")}} to open the port first.
 - `NetworkError` {{domxref("DOMException")}}
-  - : Returned if the signals on the device could not be read.
+  - : If the signals on the device could not be read.
+
+## Examples
+
+### Check whether the device is ready to send and receive data
+
+The following example reads the control signals from an open port and checks the `dataSetReady` property to determine whether the connected device is ready to communicate.
+
+```js
+const signals = await port.getSignals();
+console.log(`Device ready: ${signals.dataSetReady}`);
+```
 
 ## Specifications
 

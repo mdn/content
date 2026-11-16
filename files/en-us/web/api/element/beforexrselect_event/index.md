@@ -8,20 +8,24 @@ status:
 browser-compat: api.Element.beforexrselect_event
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`beforexrselect`** event is fired before WebXR select events ({{domxref("XRSession/select_event", "select")}}, {{domxref("XRSession/selectstart_event", "selectstart")}}, {{domxref("XRSession/selectend_event", "selectend")}}) are dispatched. It can be used to suppress XR world input events while the user is interacting with a DOM overlay UI.
 
-This event [bubbles](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling), is [cancelable](/en-US/docs/Web/API/Event/cancelable) and is [composed](/en-US/docs/Web/API/Event/composed).
+This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling), is [cancelable](/en-US/docs/Web/API/Event/cancelable) and is [composed](/en-US/docs/Web/API/Event/composed).
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("beforexrselect", (event) => {});
+```js-nolint
+addEventListener("beforexrselect", (event) => { })
+```
 
-onbeforexrselect = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onbeforexrselect = (event) => { }
 ```
 
 ## Event type
@@ -29,11 +33,6 @@ onbeforexrselect = (event) => {};
 An {{domxref("XRSessionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("XRSessionEvent")}}
-
-## Event properties
-
-- {{domxref("XRSessionEvent.session", "session")}} {{ReadOnlyInline}}
-  - : The {{domxref("XRSession")}} to which the event refers.
 
 ## Event availability
 
@@ -68,3 +67,4 @@ document
 - {{domxref("XRSession/select_event", "select")}} event
 - {{domxref("XRSession/selectstart_event", "selectstart")}} event
 - {{domxref("XRSession/selectend_event", "selectend")}} event
+- {{cssxref(":xr-overlay")}} pseudo-class

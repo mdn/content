@@ -8,7 +8,7 @@ status:
 browser-compat: api.AudioListener.setPosition
 ---
 
-{{ APIRef("Web Audio API") }} {{deprecated_header}}
+{{ APIRef("Web Audio API") }}
 
 The `setPosition()` method of the {{ domxref("AudioListener") }} Interface defines the position of the listener.
 

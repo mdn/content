@@ -3,13 +3,25 @@ title: decodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 page-type: javascript-function
 browser-compat: javascript.builtins.decodeURIComponent
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Objects")}}
 
 The **`decodeURIComponent()`** function decodes a Uniform Resource Identifier (URI) component previously created by {{jsxref("encodeURIComponent()")}} or by a similar routine.
 
-{{EmbedInteractiveExample("pages/js/globalprops-decodeuricomponent.html")}}
+{{InteractiveExample("JavaScript Demo: decodeURIComponent()")}}
+
+```js interactive-example
+function containsEncodedComponents(x) {
+  // ie ?,=,&,/ etc
+  return decodeURI(x) !== decodeURIComponent(x);
+}
+
+console.log(containsEncodedComponents("%3Fx%3Dtest")); // ?x=test
+// Expected output: true
+
+console.log(containsEncodedComponents("%D1%88%D0%B5%D0%BB%D0%BB%D1%8B")); // шеллы
+// Expected output: false
+```
 
 ## Syntax
 

@@ -3,17 +3,15 @@ title: "PointerEvent: altitudeAngle property"
 short-title: altitudeAngle
 slug: Web/API/PointerEvent/altitudeAngle
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.PointerEvent.altitudeAngle
 ---
 
-{{ APIRef("Pointer Events") }}{{SeeCompatTable}}
+{{ APIRef("Pointer Events") }}
 
 The **`altitudeAngle`** read-only property of the {{domxref("PointerEvent")}} interface represents the angle between a transducer (a pointer or stylus) axis and the X-Y plane of a device screen.
 The altitude angle describes whether the transducer is perpendicular to the screen, parallel, or at some angle in between.
 
-Depending on the specific hardware and platform, user agents will likely only receive one set of values for the transducer orientation relative to the screen plane — either {{domxref("PointerEvent.tiltx", "tiltX")}} and {{domxref("PointerEvent.tilty", "tiltY")}} or `altitudeAngle` and {{domxref("PointerEvent.azimuthAngle", "azimuthAngle")}}.
+Depending on the specific hardware and platform, user agents will likely only receive one set of values for the transducer orientation relative to the screen plane — either {{domxref("PointerEvent.tiltX", "tiltX")}} and {{domxref("PointerEvent.tiltY", "tiltY")}} or `altitudeAngle` and {{domxref("PointerEvent.azimuthAngle", "azimuthAngle")}}.
 
 ![The azimuth angle of a pointer compared to the altitude angle](./azimuth_altitude_angles.svg)
 
@@ -28,13 +26,9 @@ For hardware and platforms that do not report tilt or angle, the value is `π/2`
 ## Example
 
 ```js
-someElement.addEventListener(
-  "pointerdown",
-  (event) => {
-    process_angles(event.altitudeAngle, event.azimuthAngle);
-  },
-  false,
-);
+someElement.addEventListener("pointerdown", (event) => {
+  process_angles(event.altitudeAngle, event.azimuthAngle);
+});
 ```
 
 ## Specifications
@@ -50,3 +44,4 @@ someElement.addEventListener(
 - {{ domxref("PointerEvent.azimuthAngle") }}
 - {{ domxref("PointerEvent.tiltX") }}
 - {{ domxref("PointerEvent.tiltY") }}
+- {{ domxref("Touch.altitudeAngle") }}

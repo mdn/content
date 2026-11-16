@@ -11,14 +11,7 @@ browser-compat: api.RTCSessionDescription.sdp
 The property **`RTCSessionDescription.sdp`** is a read-only
 string containing the {{Glossary("SDP")}} which describes the session.
 
-## Syntax
-
-```js-nolint
-const value = sessionDescription.sdp
-sessionDescription.sdp = value
-```
-
-### Value
+## Value
 
 The value is a string containing an SDP message like this one:
 

@@ -3,9 +3,8 @@ title: theme_experiment
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.theme_experiment
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

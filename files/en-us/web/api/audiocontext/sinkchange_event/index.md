@@ -14,12 +14,16 @@ The **`sinkchange`** event of the {{domxref("AudioContext")}} interface is fired
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("sinkchange", (event) => {});
+```js-nolint
+addEventListener("sinkchange", (event) => { })
+```
 
-onsinkchange = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onsinkchange = (event) => { }
 ```
 
 ## Event type
@@ -42,7 +46,7 @@ audioCtx.addEventListener("sinkchange", () => {
 });
 ```
 
-See our [SetSinkId test example](https://set-sink-id.glitch.me/) for working code.
+See our [SetSinkId test example](https://mdn.github.io/dom-examples/audiocontext-setsinkid/) for working code (also check out the [source code](https://github.com/mdn/dom-examples/tree/main/audiocontext-setsinkid)).
 
 ## Specifications
 
@@ -54,7 +58,6 @@ See our [SetSinkId test example](https://set-sink-id.glitch.me/) for working cod
 
 ## See also
 
-- [SetSinkId test example](https://set-sink-id.glitch.me/)
 - [Change the destination output device in Web Audio](https://developer.chrome.com/blog/audiocontext-setsinkid/)
 - {{domxref("AudioContext.setSinkId()")}}
 - {{domxref("AudioContext.sinkId")}}

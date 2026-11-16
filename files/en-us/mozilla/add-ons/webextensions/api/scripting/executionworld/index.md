@@ -3,9 +3,8 @@ title: scripting.ExecutionWorld
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/ExecutionWorld
 page-type: webextension-api-type
 browser-compat: webextensions.api.scripting.ExecutionWorld
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Specifies the execution environment of a script injected with {{WebExtAPIRef("scripting.executeScript()")}}
 or registered with {{WebExtAPIRef("scripting.registerContentScripts()")}}.

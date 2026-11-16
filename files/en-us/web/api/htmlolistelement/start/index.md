@@ -10,7 +10,7 @@ browser-compat: api.HTMLOListElement.start
 
 The **`start`** property of the {{domxref("HTMLOListElement")}} interface indicates starting value of the ordered list, with default value of 1.
 
-It reflects the [`start`](/en-US/docs/Web/HTML/Element/ol#start) attribute of the {{HTMLElement("ol")}} element.
+It reflects the [`start`](/en-US/docs/Web/HTML/Reference/Elements/ol#start) attribute of the {{HTMLElement("ol")}} element.
 
 > [!NOTE]
 > The `start` property value is independent of the {{domxref("HTMLOListElement.type")}} property; it is always numeric, even when type is letters or Roman numerals.

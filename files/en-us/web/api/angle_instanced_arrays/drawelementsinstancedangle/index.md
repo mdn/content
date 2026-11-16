@@ -2,11 +2,11 @@
 title: "ANGLE_instanced_arrays: drawElementsInstancedANGLE() method"
 short-title: drawElementsInstancedANGLE()
 slug: Web/API/ANGLE_instanced_arrays/drawElementsInstancedANGLE
-page-type: web-api-instance-method
+page-type: webgl-extension-method
 browser-compat: api.ANGLE_instanced_arrays.drawElementsInstancedANGLE
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`ANGLE_instanced_arrays.drawElementsInstancedANGLE()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) renders primitives from array data like the {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} method. In addition, it can execute multiple instances of a set of elements.
 
@@ -22,9 +22,7 @@ drawElementsInstancedANGLE(mode, count, type, offset, primcount)
 ### Parameters
 
 - `mode`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type primitive to render. Possible values are:
-
     - `gl.POINTS`: Draws a single dot.
     - `gl.LINE_STRIP`: Draws a straight line to the next vertex.
     - `gl.LINE_LOOP`: Draws a straight line to the next vertex, and connects the last vertex back to the first.
@@ -36,9 +34,7 @@ drawElementsInstancedANGLE(mode, count, type, offset, primcount)
 - `count`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of elements to be rendered.
 - `type`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type of the values in the element array buffer. Possible values are:
-
     - `gl.UNSIGNED_BYTE`
     - `gl.UNSIGNED_SHORT`
     - `gl.UNSIGNED_INT` when using the {{domxref("OES_element_index_uint")}} extension.

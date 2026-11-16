@@ -1,14 +1,14 @@
 ---
-title: Firefox 26 for developers
+title: Firefox 26 release notes for developers
+short-title: Firefox 26
 slug: Mozilla/Firefox/Releases/26
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 26 was released on December 10, 2013. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### CSS
 
@@ -46,7 +46,7 @@ ECMAScript 2015 implementation continues!
 - IndexedDB can now be used as an "optimistic" storage area so it doesn't require any prompts and data is stored in a pool with LRU eviction policy, in short temporary storage ([Firefox bug 785884](https://bugzil.la/785884)).
 - Support for {{domxref("WaveShaperNode.oversample")}} has been added ([Firefox bug 875277](https://bugzil.la/875277)).
 - Path of the persistent storage has been changed from `<profile>/indexedDB` to `<profile>/storage/persistent` (on b2g from `/data/local/indexedDB` to `/data/local/storage/persistent`).
-- The {{domxref("Screen.orientation")}} property and {{domxref("Screen.lockOrientation()")}} method now support the `default` value, mapping to `portrait-primary` or `landscape-primary`, depending of the device ([Firefox bug 908058](https://bugzil.la/908058)) This works only for Firefox OS and Firefox for Android. Firefox Desktop is not supported.
+- The {{domxref("Screen.orientation")}} property and {{domxref("Screen.lockOrientation()")}} method now support the `default` value, mapping to `portrait-primary` or `landscape-primary`, depending on the device ([Firefox bug 908058](https://bugzil.la/908058)) This works only for Firefox OS and Firefox for Android. Firefox Desktop is not supported.
 - {{domxref("Event")}} constructors can be used in Web workers ([Firefox bug 910910](https://bugzil.la/910910)).
 - Trying to set the {{domxref("Document.domain")}} property on a page embedded in an {{HTMLElement("iframe")}} with the `sandbox` attribute now throws a security error ([Firefox bug 907892](https://bugzil.la/907892)).
 - The {{domxref("MessageEvent")}} interface has been updated to comply with the latest spec. The `initMessageEvent` method has been removed while the interface has now a constructor ([Firefox bug 848294](https://bugzil.la/848294)).
@@ -67,7 +67,3 @@ ECMAScript 2015 implementation continues!
 
 - The Inspector is now remotable ([Firefox bug 805526](https://bugzil.la/805526)).
 - The web console text can be selected, {{cssxref("::before")}} and {{cssxref("::after")}} now inspectable, debugger and responsive design features are planned for this release. (<https://hacks.mozilla.org/2013/09/new-features-in-the-firefox-developer-tools-episode-26/>)
-
-### Older versions
-
-{{Firefox_for_developers}}

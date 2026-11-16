@@ -1,11 +1,11 @@
 ---
 title: Error.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Error.toString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toString()`** method of {{jsxref("Error")}} instances returns a string representing this error.
 
@@ -87,4 +87,4 @@ console.log(e5.toString()); // "hello"
 
 ## See also
 
-- [Polyfill of `Error.prototype.toString` with many bug fixes in `core-js`](https://github.com/zloirock/core-js#ecmascript-error)
+- [Polyfill of `Error.prototype.toString` with many bug fixes in `core-js`](https://core-js.io/docs/features/ecmascript/error)

@@ -1,15 +1,47 @@
 ---
 title: handler.isExtensible()
+short-title: isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.isExtensible
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`handler.isExtensible()`** method is a trap for the `[[IsExtensible]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.isExtensible()")}}.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-isextensible.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.isExtensible()", "taller")}}
+
+```js interactive-example
+const monster = {
+  canEvolve: true,
+};
+
+const handler = {
+  isExtensible(target) {
+    return Reflect.isExtensible(target);
+  },
+  preventExtensions(target) {
+    target.canEvolve = false;
+    return Reflect.preventExtensions(target);
+  },
+};
+
+const proxy = new Proxy(monster, handler);
+
+console.log(Object.isExtensible(proxy));
+// Expected output: true
+
+console.log(monster.canEvolve);
+// Expected output: true
+
+Object.preventExtensions(proxy);
+
+console.log(Object.isExtensible(proxy));
+// Expected output: false
+
+console.log(monster.canEvolve);
+// Expected output: false
+```
 
 ## Syntax
 

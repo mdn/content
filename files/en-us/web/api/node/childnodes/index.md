@@ -21,7 +21,7 @@ comments.
 > Therefore a node obtained, for example, using `Node.childNodes[0]`
 > may refer to a whitespace text node rather than the actual element the author intended to get.
 >
-> See [Whitespace in the DOM](/en-US/docs/Web/API/Document_Object_Model/Whitespace) for more information.
+> See [Working with whitespace in the DOM](/en-US/docs/Web/CSS/Guides/Text/Whitespace#working_with_whitespace_in_the_dom) for more information.
 
 The items in the collection of nodes are objects, not strings. To get data from node
 objects, use their properties. For example, to get the name of the first
@@ -47,11 +47,11 @@ A live {{domxref("NodeList")}} containing the children of the node.
 ### Simple usage
 
 ```js
-// Note that parg is an object reference to a <p> element
+// Note that para is an object reference to a <p> element
 
 // First check that the element has child nodes
-if (parg.hasChildNodes()) {
-  let children = parg.childNodes;
+if (para.hasChildNodes()) {
+  let children = para.childNodes;
 
   for (const node of children) {
     // Do something with each child as children[i]

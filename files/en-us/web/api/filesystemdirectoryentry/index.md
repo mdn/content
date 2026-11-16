@@ -11,40 +11,6 @@ The **`FileSystemDirectoryEntry`** interface of the [File and Directory Entries 
 
 {{InheritanceDiagram}}
 
-## Basic concepts
-
-You can create a new directory by calling {{domxref("FileSystemDirectoryEntry.getDirectory", "getDirectory()")}}. If you want to create subdirectories, create each child directory in sequence. If you try creating a directory using a full path that includes parent directories that do not exist yet, an error is returned. So create the hierarchy by recursively adding a new path after creating the parent directory.
-
-### Example
-
-In the following code snippet, we create a directory called "Documents."
-
-```js
-// Taking care of the browser-specific prefixes.
-window.requestFileSystem =
-  window.requestFileSystem || window.webkitRequestFileSystem;
-window.directoryEntry = window.directoryEntry || window.webkitDirectoryEntry;
-
-// …
-
-function onFs(fs) {
-  fs.root.getDirectory(
-    "Documents",
-    { create: true },
-    (directoryEntry) => {
-      //directoryEntry.isFile === false
-      //directoryEntry.isDirectory === true
-      //directoryEntry.name === 'Documents'
-      //directoryEntry.fullPath === '/Documents'
-    },
-    onError,
-  );
-}
-
-// Opening a file system with temporary storage
-window.requestFileSystem(TEMPORARY, 1024 * 1024 /*1MB*/, onFs, onError);
-```
-
 ## Instance properties
 
 _This interface has no properties of its own, but inherits properties from its parent interface, {{domxref("FileSystemEntry")}}._
@@ -62,6 +28,40 @@ _This interface inherits methods from its parent interface, {{domxref("FileSyste
 - {{domxref("FileSystemDirectoryEntry.removeRecursively", "removeRecursively()")}} {{Deprecated_inline}} {{Non-standard_inline}}
   - : Removes the directory as well as all of its content, hierarchically iterating over its entire subtree of descendant files and directories.
 
+## Description
+
+You can create a new directory by calling {{domxref("FileSystemDirectoryEntry.getDirectory", "getDirectory()")}}. If you want to create subdirectories, create each child directory in sequence. If you try creating a directory using a full path that includes parent directories that do not exist yet, an error is returned. So create the hierarchy by recursively adding a new path after creating the parent directory.
+
+## Examples
+
+In the following code snippet, we create a directory called "Documents."
+
+```js
+// Taking care of the browser-specific prefixes.
+window.requestFileSystem =
+  window.requestFileSystem || window.webkitRequestFileSystem;
+window.directoryEntry = window.directoryEntry || window.webkitDirectoryEntry;
+
+// …
+
+function onFs(fs) {
+  fs.root.getDirectory(
+    "Documents",
+    { create: true },
+    (directoryEntry) => {
+      // directoryEntry.isFile === false
+      // directoryEntry.isDirectory === true
+      // directoryEntry.name === 'Documents'
+      // directoryEntry.fullPath === '/Documents'
+    },
+    onError,
+  );
+}
+
+// Opening a file system with temporary storage
+window.requestFileSystem(TEMPORARY, 1024 * 1024 /* 1MB */, onFs, onError);
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -73,7 +73,6 @@ _This interface inherits methods from its parent interface, {{domxref("FileSyste
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryReader")}}
 - {{domxref("FileSystemEntry")}}
 - {{domxref("FileSystemFileEntry")}}

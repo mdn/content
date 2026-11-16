@@ -3,9 +3,8 @@ title: devtools.panels.ExtensionSidebarPane.setPage()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setPage
 page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setPage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets an HTML page to be displayed in the sidebar pane.
 

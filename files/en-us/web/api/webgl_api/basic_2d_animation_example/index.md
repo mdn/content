@@ -69,7 +69,7 @@ This starts by specifying the precision of the `float` type, as required. Then w
 The HTML consists solely of the {{HTMLElement("canvas")}} that we'll obtain a WebGL context on.
 
 ```html
-<canvas id="glcanvas" width="600" height="460">
+<canvas id="gl-canvas" width="600" height="460">
   Oh no! Your browser doesn't support canvas!
 </canvas>
 ```
@@ -79,80 +79,49 @@ The HTML consists solely of the {{HTMLElement("canvas")}} that we'll obtain a We
 First, the global variables. We won't discuss these here; instead, we'll talk about them as they're used in the code to come.
 
 ```js
-let gl = null;
-let glCanvas = null;
+const glCanvas = document.getElementById("gl-canvas");
+const gl = glCanvas.getContext("webgl");
 
-// Aspect ratio and coordinate system
-// details
+const shaderSet = [
+  {
+    type: gl.VERTEX_SHADER,
+    id: "vertex-shader",
+  },
+  {
+    type: gl.FRAGMENT_SHADER,
+    id: "fragment-shader",
+  },
+];
 
-let aspectRatio;
-let currentRotation = [0, 1];
-let currentScale = [1.0, 1.0];
+const shaderProgram = buildShaderProgram(shaderSet);
+
+// Aspect ratio and coordinate system details
+const aspectRatio = glCanvas.width / glCanvas.height;
+const currentRotation = [0, 1];
+const currentScale = [1.0, aspectRatio];
 
 // Vertex information
+const vertexArray = new Float32Array([
+  -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5,
+]);
+const vertexBuffer = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+gl.bufferData(gl.ARRAY_BUFFER, vertexArray, gl.STATIC_DRAW);
+const vertexNumComponents = 2;
+const vertexCount = vertexArray.length / vertexNumComponents;
 
-let vertexArray;
-let vertexBuffer;
-let vertexNumComponents;
-let vertexCount;
-
-// Rendering data shared with the
-// scalers.
-
+// Rendering data shared with the scalers.
 let uScalingFactor;
 let uGlobalColor;
 let uRotationVector;
 let aVertexPosition;
 
 // Animation timing
-
-let shaderProgram;
-let currentAngle;
 let previousTime = 0.0;
-let degreesPerSecond = 90.0;
-```
+const degreesPerSecond = 90.0;
+let currentAngle = 0.0;
 
-Initializing the program is handled through a {{domxref("Window/load_event", "load")}} event handler called `startup()`:
-
-```js
-window.addEventListener("load", startup, false);
-
-function startup() {
-  glCanvas = document.getElementById("glcanvas");
-  gl = glCanvas.getContext("webgl");
-
-  const shaderSet = [
-    {
-      type: gl.VERTEX_SHADER,
-      id: "vertex-shader",
-    },
-    {
-      type: gl.FRAGMENT_SHADER,
-      id: "fragment-shader",
-    },
-  ];
-
-  shaderProgram = buildShaderProgram(shaderSet);
-
-  aspectRatio = glCanvas.width / glCanvas.height;
-  currentRotation = [0, 1];
-  currentScale = [1.0, aspectRatio];
-
-  vertexArray = new Float32Array([
-    -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5,
-  ]);
-
-  vertexBuffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
-  gl.bufferData(gl.ARRAY_BUFFER, vertexArray, gl.STATIC_DRAW);
-
-  vertexNumComponents = 2;
-  vertexCount = vertexArray.length / vertexNumComponents;
-
-  currentAngle = 0.0;
-
-  animateScene();
-}
+animateScene();
 ```
 
 After getting the WebGL context, `gl`, we need to begin by building the shader program. Here, we're using code designed to let us add multiple shaders to our program quite easily. The array `shaderSet` contains a list of objects, each describing one shader function to be compiled into the program. Each function has a type (one of `gl.VERTEX_SHADER` or `gl.FRAGMENT_SHADER`) and an ID (the ID of the {{HTMLElement("script")}} element containing the shader's code).
@@ -243,7 +212,7 @@ The source code is sent into the new shader by passing it into {{domxref("WebGLR
 
 Compile errors are logged to the console. Note the use of a [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals) string to insert the correct shader type string into the message that gets generated. The actual error details are obtained by calling {{domxref("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}.
 
-Finally, the compiled shader is returned to the caller (which is the `buildShaderProgram()` function.
+Finally, the compiled shader is returned to the caller (which is the `buildShaderProgram()` function).
 
 ### Drawing and animating the scene
 
@@ -305,7 +274,7 @@ Next, the current rotation vector is computed by converting the current rotation
 
 The uniform named `uScalingFactor` is set to the `currentScale` value previously computed; this, as you may recall, is the value used to adjust the coordinate system based on the aspect ratio of the context. This is done using {{domxref("WebGLRenderingContext/uniform", "uniform2fv()")}} (since this is a 2-value floating-point vector).
 
-`uRotationVector` is set to the current rotation vector (`currentRotation)`, also using `uniform2fv()`.
+`uRotationVector` is set to the current rotation vector (`currentRotation`), also using `uniform2fv()`.
 
 `uGlobalColor` is set using {{domxref("WebGLRenderingContext/uniform", "uniform4fv()")}} to the color we wish to use when drawing the square. This is a 4-component floating-point vector (one component each for red, green, blue, and alpha).
 

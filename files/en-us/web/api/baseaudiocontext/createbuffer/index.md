@@ -15,7 +15,8 @@ can then be populated by data, and played via an {{ domxref("AudioBufferSourceNo
 For more details about audio buffers, check out the {{ domxref("AudioBuffer") }}
 reference page.
 
-> **Note:** `createBuffer()` used to be able to take compressed
+> [!NOTE]
+> `createBuffer()` used to be able to take compressed
 > data and give back decoded samples, but this ability was removed from the specification,
 > because all the decoding was done on the main thread, so
 > `createBuffer()` was blocking other code execution. The asynchronous method

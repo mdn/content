@@ -9,9 +9,9 @@ status:
 browser-compat: api.Window.setImmediate
 ---
 
-{{APIRef("HTML DOM")}} {{deprecated_header}}{{non-standard_header}}
+{{APIRef("HTML DOM")}} {{non-standard_header}}
 
-This method is used to break up long running operations and run a callback function immediately after the browser has completed other operations such as events and display updates.
+This method is used to break up long-running operations and run a callback function immediately after the browser has completed other operations such as events and display updates.
 
 ## Syntax
 
@@ -25,7 +25,6 @@ setImmediate(func, param1, param2, /* …, */ paramN)
 ### Parameters
 
 - `func`
-
   - : The function you wish to call.
 
 - `param1`, …, `paramN`
@@ -37,13 +36,13 @@ The ID of the immediate which can be used later with {{DOMxRef("window.clearImme
 
 ## Notes
 
-The {{DOMxRef("Window.clearImmediate", "clearImmediate")}} method can be used to clear the immediate actions, just like {{DOMxRef("clearTimeout")}} for {{DOMxRef("setTimeout()")}}.
+The {{DOMxRef("Window.clearImmediate", "clearImmediate()")}} method can be used to clear the immediate actions, just like {{DOMxRef("Window.clearTimeout", "clearTimeout()")}} for {{DOMxRef("Window.setTimeout", "setTimeout()")}}.
 
 This method can be used instead of the `setTimeout(fn, 0)` method to execute [heavy operations](https://humanwhocodes.com/blog/2009/08/11/timed-array-processing-in-javascript/).
 
 The feature can be emulated in a few different ways:
 
-- {{DOMxRef("Window.postMessage", "postMessage")}} can be used to trigger an immediate but yielding callback.
+- {{DOMxRef("Window.postMessage", "postMessage()")}} can be used to trigger an immediate but yielding callback.
 - {{DOMxRef("MessageChannel")}} can be used reliably inside of Web Workers whereas the
   semantics of postMessage mean it cannot be used there.
 - `setTimeout(fn, 0)` _can_ potentially be used, however as it is clamped to 4ms for timers nested more than 5 levels deep [per the HTML spec](https://html.spec.whatwg.org/multipage/webappapis.html#timers), it does not make for a suitable polyfill for the natural immediacy of `setImmediate`.
@@ -61,7 +60,7 @@ The [Efficient Script Yielding](https://w3c.github.io/setImmediate/#si-setImmedi
 
 ## See also
 
-- [Polyfill of `setImmediate` in `core-js`](https://github.com/zloirock/core-js#setimmediate)
+- [Polyfill of `setImmediate` in `core-js`](https://core-js.io/docs/features/web-standards/set-immediate)
 - [Microsoft `setImmediate` API Demo](https://jphpsf.github.io/setImmediate-shim-demo/)
 - {{DOMxRef("Window.clearImmediate()")}}
 - {{DOMxRef("Window.requestIdleCallback()")}}

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Navigator.getGamepads
 ---
 
-{{APIRef("Gamepad API")}}{{securecontext_header}}
+{{APIRef("Gamepad API")}}
 
 The **`Navigator.getGamepads()`** method returns an array of
 {{domxref("Gamepad")}} objects, one for each gamepad connected to the device.
@@ -31,7 +31,7 @@ An {{jsxref("Array")}} of {{domxref("Gamepad")}} objects, eventually empty.
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
 
 ## Examples
 

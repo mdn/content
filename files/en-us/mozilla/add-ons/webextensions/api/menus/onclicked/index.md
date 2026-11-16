@@ -3,13 +3,14 @@ title: menus.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
 page-type: webextension-api-event
 browser-compat: webextensions.api.menus.onClicked
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a menu item is clicked.
 
 For compatibility with other browsers, Firefox makes this event available via the `contextMenus` namespace as well as the `menus` namespace.
+
+If the extension has the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission), selecting a menu item is a user action that grants it temporary access to the tab where the click occurred.
 
 ## Syntax
 
@@ -33,17 +34,11 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `info`
       - : {{WebExtAPIRef('menus.OnClickData')}}. Information about the item clicked and the context where the click happened.
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The details of the tab where the click took place. If the click did not take place in or on a tab, this parameter will be missing.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -62,6 +57,10 @@ browser.menus.onClicked.addListener((info, tab) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus#event-onClicked) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.

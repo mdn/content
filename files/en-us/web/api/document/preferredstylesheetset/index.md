@@ -9,10 +9,9 @@ status:
 browser-compat: api.Document.preferredStyleSheetSet
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_header}}
 
-The **`preferredStyleSheetSet`** property returns the preferred style sheet set as set by the page
-author.
+The **`preferredStyleSheetSet`** read-only property of the {{domxref("Document")}} interface returns the preferred style sheet set as set by the page author.
 
 ## Value
 

@@ -8,7 +8,7 @@ browser-compat: api.SVGMaskElement.width
 
 {{APIRef("SVG")}}
 
-The read-only **`width`** property of the {{domxref("SVGMaskElement")}} interface returns an {{domxref("SVGAnimatedLength")}} object containing the value of the {{SVGattr("width")}} attribute of the {{SVGElement("marker")}}.
+The read-only **`width`** property of the {{domxref("SVGMaskElement")}} interface returns an {{domxref("SVGAnimatedLength")}} object containing the value of the {{SVGattr("width")}} attribute of the {{SVGElement("mask")}}.
 
 > [!NOTE]
 > Although this property is read-only, it is merely a container for two values you can modify, {{domxref("SVGAnimatedLength.baseVal", "baseVal")}} and {{domxref("SVGAnimatedLength.animVal", "animVal")}}.
@@ -67,7 +67,7 @@ function displayLog() {
 displayLog();
 ```
 
-{{EmbedLiveSample('Example', 100, 160)}}
+{{EmbedLiveSample('examples', 100, 160)}}
 
 ## Specifications
 

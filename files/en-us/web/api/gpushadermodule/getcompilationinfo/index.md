@@ -3,12 +3,10 @@ title: "GPUShaderModule: getCompilationInfo() method"
 short-title: getCompilationInfo()
 slug: Web/API/GPUShaderModule/getCompilationInfo
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUShaderModule.getCompilationInfo
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`getCompilationInfo()`** method of the
 {{domxref("GPUShaderModule")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUCompilationInfo")}} object containing messages generated during the `GPUShaderModule`'s compilation.
@@ -62,7 +60,7 @@ When we compile the shader module, we use `getCompilationInfo()` to grab some in
 
 ```js
 async function init() {
-  // ...
+  // …
 
   const shaderModule = device.createShaderModule({
     code: shaders,
@@ -75,7 +73,7 @@ async function init() {
   console.log(firstMessage.message); // "expected ')' for function declaration"
   console.log(firstMessage.type); // "error"
 
-  // ...
+  // …
 }
 ```
 

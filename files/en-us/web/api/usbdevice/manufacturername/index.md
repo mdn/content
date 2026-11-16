@@ -8,9 +8,9 @@ status:
 browser-compat: api.USBDevice.manufacturerName
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}{{SecureContext_Header}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-The **`manufacturerName`** read only property of the
+The **`manufacturerName`** read-only property of the
 {{domxref("USBDevice")}} interface the of the organization that manufactured the USB
 device.
 

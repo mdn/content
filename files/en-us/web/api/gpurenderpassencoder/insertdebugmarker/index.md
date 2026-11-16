@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: insertDebugMarker() method"
 short-title: insertDebugMarker()
 slug: Web/API/GPURenderPassEncoder/insertDebugMarker
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.insertDebugMarker
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`insertDebugMarker()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface marks a specific point in a series of encoded render pass commands with a label.
@@ -28,16 +26,16 @@ insertDebugMarker(markerLabel)
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
-// ...
+// …
 
-passEncoder.insertDebugMarker("mymarker");
+passEncoder.insertDebugMarker("my_marker");
 
-// ...
+// …
 ```
 
 ## Specifications

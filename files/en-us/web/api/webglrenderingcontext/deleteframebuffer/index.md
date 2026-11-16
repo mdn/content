@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.deleteFramebuffer
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.deleteFramebuffer()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) deletes a given
@@ -22,7 +22,7 @@ deleteFramebuffer(framebuffer)
 ### Parameters
 
 - `framebuffer`
-  - : A {{domxref("WebGLFramebuffer")}} object to delete.
+  - : A {{domxref("WebGLFramebuffer")}} object to delete. Passing `null` does nothing.
 
 ### Return value
 

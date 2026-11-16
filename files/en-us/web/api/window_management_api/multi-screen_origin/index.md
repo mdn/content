@@ -33,11 +33,11 @@ If the secondary screen was positioned directly to the right of the primary scre
 - The primary screen `left`/`top` values would be (0,0) while its `availLeft`/`availTop` values would be (0,25) — the OS UI thickness is added on.
 - The secondary screen `left`/`top` values would be (1920,0) while its `availLeft`/`availTop` values would also be (1920,0) — the OS UI is not drawn on the secondary screen.
 
-![Two rectangles representing the primary screen with the secondary screen positioned to the right, as described above](primary-screen-left.png)
+![Two rectangles representing the primary screen with the secondary screen positioned to the right, as described above](/shared-assets/images/diagrams/api/window-management/primary-screen-left.svg)
 
 However, if the secondary screen was positioned directly to the left of the primary screen, top screen edges in line:
 
 - The primary screen `left`/`top` values would still be (0,0) while its `availLeft`/`availTop` values would be (0,25).
 - The secondary screen `left`/`top` values would be (-1440,0) while its `availLeft`/`availTop` values would also be (-1440,0).
 
-![Two rectangles representing the primary screen with the secondary screen positioned to the left, as described above](primary-screen-right.png)
+![Two rectangles representing the primary screen with the secondary screen positioned to the left, as described above](/shared-assets/images/diagrams/api/window-management/primary-screen-right.svg)

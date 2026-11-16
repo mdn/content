@@ -3,12 +3,10 @@ title: "GPURenderBundleEncoder: pushDebugGroup() method"
 short-title: pushDebugGroup()
 slug: Web/API/GPURenderBundleEncoder/pushDebugGroup
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderBundleEncoder.pushDebugGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`pushDebugGroup()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface begins a render bundle debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a {{domxref("GPURenderBundleEncoder.popDebugGroup", "popDebugGroup()")}} method is invoked.
@@ -31,16 +29,16 @@ pushDebugGroup(groupLabel)
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
-// ...
+// …
 
 const bundleEncoder = device.createRenderBundleEncoder(renderBundleDescriptor);
 
-bundleEncoder.pushDebugGroup("mygroupmarker"); // Start labeled debug group
+bundleEncoder.pushDebugGroup("my_group_marker"); // Start labeled debug group
 
 bundleEncoder.setPipeline(renderPipeline);
 bundleEncoder.setVertexBuffer(0, vertexBuffer);
@@ -48,7 +46,7 @@ bundleEncoder.draw(3);
 
 bundleEncoder.popDebugGroup();
 
-// ...
+// …
 ```
 
 ## Specifications

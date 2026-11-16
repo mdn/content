@@ -14,7 +14,7 @@ This property can also be set directly, for example to set a default value based
 
 ## Value
 
-A string containing the value of the {{htmlelement("input")}} element, or the empty string if the input element has no value set.
+A string specifying the default value of the {{htmlelement("input")}} element.
 
 ## Examples
 
@@ -27,9 +27,9 @@ In this example, the log displays the current value as the user enters data into
 We include an {{htmlelement("input")}} and an associated {{htmlelement("label")}}, with a {{htmlelement("pre")}} container for our output.
 
 ```html
-<label for="givenname">Your name:</label>
+<label for="given-name">Your name:</label>
 
-<input name="givenname" id="givenname" />
+<input name="given-name" id="given-name" />
 
 <pre id="log"></pre>
 ```
@@ -40,7 +40,7 @@ The `<pre>` element's {{domxref("HTMLElement.innerText", "innerText")}} is updat
 
 ```js
 const logElement = document.getElementById("log");
-const inputElement = document.getElementById("givenname");
+const inputElement = document.getElementById("given-name");
 
 inputElement.addEventListener("keyup", () => {
   logElement.innerText = `Name: ${inputElement.value}`;

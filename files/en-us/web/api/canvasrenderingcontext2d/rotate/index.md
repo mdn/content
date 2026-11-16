@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.rotate
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.rotate()`**
@@ -18,7 +18,7 @@ method of the Canvas 2D API adds a rotation to the transformation matrix.
 rotate(angle)
 ```
 
-![Rectangular coordinate system with the rotation of the abscissa axis by the alpha angle](canvas_grid_rotate.png)
+![Rectangular coordinate system with the rotation of the abscissa axis by the angle](canvas_grid_rotate.svg)
 
 ### Parameters
 

@@ -36,7 +36,7 @@ None ({{jsxref("undefined")}}).
 - {{jsxref("TypeError")}}
   - : Thrown when one of the arguments is invalid or missing.
 - `InvalidModificationError` {{domxref("DOMException")}}
-  - : Thrown when the a worklet already exists with the specified name.
+  - : Thrown when a worklet already exists with the specified name.
 
 ## Examples
 
@@ -44,7 +44,7 @@ The following shows registering an example worklet module. This should be in a s
 js file. Note that `registerPaint()` is called without a reference to
 `PaintWorkletGlobalScope`. The file itself is loaded
 through `CSS.paintWorklet.addModule()` (documented here on the parent class
-of PaintWorklet, at {{domxref('Worklet.addModule()')}}.
+of PaintWorklet, at {{domxref('Worklet.addModule()')}}).
 
 ```js
 /* checkboardWorklet.js */
@@ -74,13 +74,11 @@ The first step in using a paintworklet is defining the paint worklet using the
 `registerPaint()` function, as done above. To use it, you register it with
 the `CSS.paintWorklet.addModule()` method:
 
-```html
-<script>
-  CSS.paintWorklet.addModule("checkboardWorklet.js");
-</script>
+```js
+CSS.paintWorklet.addModule("checkboardWorklet.js");
 ```
 
-You can then use the `{{cssxref('image/paint', 'paint()')}}` CSS function in your
+You can then use the {{cssxref('image/paint', 'paint()')}} CSS function in your
 CSS anywhere an {{cssxref('&lt;image&gt;')}} value is valid.
 
 ```css

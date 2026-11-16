@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.deleteRenderbuffer
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.deleteRenderbuffer()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) deletes a given
@@ -22,7 +22,7 @@ deleteRenderbuffer(renderbuffer)
 ### Parameters
 
 - `renderbuffer`
-  - : A {{domxref("WebGLRenderbuffer")}} object to delete.
+  - : A {{domxref("WebGLRenderbuffer")}} object to delete. Passing `null` does nothing.
 
 ### Return value
 

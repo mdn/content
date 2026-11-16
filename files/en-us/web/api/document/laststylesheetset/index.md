@@ -9,11 +9,9 @@ status:
 browser-compat: api.Document.lastStyleSheetSet
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_header}}
 
-The **`Document.lastStyleSheetSet`** property returns the last enabled style sheet set. This property's
-value changes whenever the {{domxref("document.selectedStyleSheetSet")}} property is
-changed.
+The **`lastStyleSheetSet`** read-only property of the {{domxref("Document")}} interface returns the last enabled style sheet set. This property's value changes whenever the {{domxref("document.selectedStyleSheetSet")}} property is changed.
 
 ## Value
 

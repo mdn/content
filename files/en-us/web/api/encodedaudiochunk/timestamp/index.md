@@ -3,12 +3,10 @@ title: "EncodedAudioChunk: timestamp property"
 short-title: timestamp
 slug: Web/API/EncodedAudioChunk/timestamp
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.EncodedAudioChunk.timestamp
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`timestamp`** read-only property of the {{domxref("EncodedAudioChunk")}} interface returns an integer indicating the timestamp of the audio in microseconds.
 
@@ -27,9 +25,9 @@ const init = {
   timestamp: 23000000,
   duration: 2000000,
 };
-chunk = EncodedAudioChunk(init);
+const chunk = new EncodedAudioChunk(init);
 
-console.log(chunk.timestamp); //23000000
+console.log(chunk.timestamp); // 23000000
 ```
 
 ## Specifications

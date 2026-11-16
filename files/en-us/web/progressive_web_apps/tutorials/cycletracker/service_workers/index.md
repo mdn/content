@@ -1,11 +1,10 @@
 ---
 title: "CycleTracker: Service workers"
-short-title: Service workers
+short-title: Offline support using service workers
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers
 page-type: tutorial-chapter
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 {{PreviousMenu("Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
@@ -28,7 +27,7 @@ The service worker is what makes the application work offline while making sure 
 The service worker is also responsible for:
 
 - Installing the cache when the app is installed.
-- Updating itself and the other application file as needed.
+- Updating itself and the other application files as needed.
 - Removing cached files that are no longer used.
 
 We achieve these tasks by reacting to three service worker events, including the
@@ -67,7 +66,7 @@ const APP_STATIC_RESOURCES = [
 ];
 ```
 
-You don't need to include the various icons that are used by all the different operating systems and devices in the list. But do include any images that are used within the app, including assets to used within any splash pages that may be visible if the app is slow as the app loads or used in any "you need to connect to the internet for the full experience" type pages.
+You don't need to include the various icons that are used by all the different operating systems and devices in the list. But do include any images that are used within the app, including assets to be used within any splash pages that may be visible if the app is slow to load or used in any "you need to connect to the internet for the full experience" type pages.
 
 Do not include the service worker file in the list of resources to be cached.
 
@@ -83,14 +82,16 @@ We include the static resources created in other sections of this tutorial that 
 const VERSION = "v1";
 
 const APP_STATIC_RESOURCES = [
-  "/",
-  "/index.html",
-  "/style.css",
-  "/app.js",
-  "/cycletracker.json",
-  "/icons/wheel.svg",
+  "./",
+  "./index.html",
+  "./style.css",
+  "./app.js",
+  "./cycletracker.json",
+  "./icons/wheel.svg",
 ];
 ```
+
+As we are storing the PWA in a GitHub subdirectory, we prefix the paths with a `./` rather than linking to resources at the root with `/`.
 
 We included the `wheel.svg` icon, even though our current application doesn't use it, in case you are enhancing the PWA UI, such as displaying the logo when there is no period data.
 
@@ -110,7 +111,9 @@ We name our cache `period-tracker-` with the current `VERSION` appended. As the 
 const VERSION = "v1";
 const CACHE_NAME = `period-tracker-${VERSION}`;
 
-const APP_STATIC_RESOURCES = [ ... ];
+const APP_STATIC_RESOURCES = [
+  // …
+];
 ```
 
 We have successfully declared our constants; a unique identifier, the list of offline resources as an array, and the application's cache name that changes every time the identifier is updated. Now let's focus on installing, updating, and deleting unused cached resources.
@@ -127,15 +130,11 @@ The {{domxref("Cache.addAll()")}} method takes an array of URLs as a parameter, 
 
 ```js
 self.addEventListener("install", (e) => {
-  e.waitUntil((async () => {
+  e.waitUntil(
+    (async () => {
       const cache = await caches.open("cacheName_identifier");
-      cache.addAll([
-        "/",
-        "/index.html"
-        "/style.css"
-        "/app.js"
-      ]);
-    })()
+      cache.addAll(["./", "./index.html", "./style.css", "./app.js"]);
+    })(),
   );
 });
 ```
@@ -179,6 +178,7 @@ self.addEventListener("activate", (event) => {
           if (name !== CACHE_NAME) {
             return caches.delete(name);
           }
+          return undefined;
         }),
       );
       await clients.claim();
@@ -193,11 +193,11 @@ Add the above `activate` eventListener to your `sw.js` file.
 
 ### The fetch event
 
-We can take advantage of the [`fetch`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event) event, to prevent an installed PWA from making requests if the user is online. Listening to the fetch event makes it possible to intercept all requests and respond with cached responses instead of going to the network. Most applications don't require this behavior. In fact, many business models want users to regularly make server requests for tracking and marketing purposes. So, while intercepting requests may be an anti-pattern for some, to improve the privacy of our CycleTracker app, we don't want the app to make unnecessary server requests.
+We can take advantage of the [`fetch`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event) event, to prevent an installed PWA from making requests if the user is offline. Listening to the fetch event makes it possible to intercept all requests and respond with cached responses instead of going to the network. Most applications don't require this behavior. In fact, many business models want users to regularly make server requests for tracking and marketing purposes. So, while intercepting requests may be an anti-pattern for some, to improve the privacy of our CycleTracker app, we don't want the app to make unnecessary server requests.
 
 As our PWA consists of a single page, for page navigation requests, we go back to the `index.html` home page. There are no other pages and we don't ever want to go to the server. If the Fetch API's [`Request`](/en-US/docs/Web/API/Request) readonly [`mode`](/en-US/docs/Web/API/Request/mode) property is `navigate`, meaning it's looking for a web page, we use the FetchEvent's [`respondWith()`](/en-US/docs/Web/API/FetchEvent/respondWith) method to prevent the browser's default fetch handling, providing our own response promise employing the [`caches.match()`](/en-US/docs/Web/API/CacheStorage/match) method.
 
-For all other request modes, we open the caches as done in the [install event response](#saving_the_cache_on_pwa_installation), instead passing the event request to the same `match()` method. It checks if the request is a key for a stored {{domxref("Response")}}. If yes, it returns the cached response. If not, we return a [404 status](/en-US/docs/Web/HTTP/Status/404) as a response.
+For all other request modes, we open the caches as done in the [install event response](#saving_the_cache_on_pwa_installation), instead passing the event request to the same `match()` method. It checks if the request is a key for a stored {{domxref("Response")}}. If yes, it returns the cached response. If not, we return a [404 status](/en-US/docs/Web/HTTP/Reference/Status/404) as a response.
 
 Using the [`Response()`](/en-US/docs/Web/API/Response/Response) constructor to pass a `null` body and a `status: 404` as options, doesn't mean there is an error in our PWA. Rather, everything we need should already be in the cache, and if it isn't, we're not going to the server to resolve this non-issue.
 
@@ -206,7 +206,7 @@ self.addEventListener("fetch", (event) => {
   // when seeking an HTML page
   if (event.request.mode === "navigate") {
     // Return to the index.html page
-    event.respondWith(caches.match("/"));
+    event.respondWith(caches.match("./"));
     return;
   }
 
@@ -219,7 +219,7 @@ self.addEventListener("fetch", (event) => {
         // Return the cached response if it's available.
         return cachedResponse;
       }
-      // Respond with a HTTP 404 response status.
+      // Respond with an HTTP 404 response status.
       return new Response(null, { status: 404 });
     })(),
   );
@@ -239,11 +239,11 @@ const CACHE_NAME = `period-tracker-${VERSION}`;
 
 // The static resources that the app needs to function.
 const APP_STATIC_RESOURCES = [
-  "/",
-  "/index.html",
-  "/app.js",
-  "/style.css",
-  "/icons/wheel.svg",
+  "./",
+  "./index.html",
+  "./app.js",
+  "./style.css",
+  "./icons/wheel.svg",
 ];
 
 // On install, cache the static resources
@@ -266,6 +266,7 @@ self.addEventListener("activate", (event) => {
           if (name !== CACHE_NAME) {
             return caches.delete(name);
           }
+          return undefined;
         }),
       );
       await clients.claim();
@@ -278,7 +279,7 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   // As a single page app, direct app to always go to cached home page.
   if (event.request.mode === "navigate") {
-    event.respondWith(caches.match("/"));
+    event.respondWith(caches.match("./"));
     return;
   }
 
@@ -298,6 +299,9 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
+> [!NOTE]
+> If your PWA's main page is at the root of your site, you can use `/` instead of `./` for the array of resources (`APP_STATIC_RESOURCES`) and the fetch response (`match("/"`).
+
 When updating a service worker, the VERSION constant doesn't need to be updated, as any change in the content of the service worker script itself will trigger the browser to install the new service worker. However, it is a good practice to update the version number as it makes it easier for devs, including yourself, to see which version of the service worker is currently running in the browser, by [checking the name of the Cache in the Application tool](#with_developer_tools) (or Sources tool).
 
 > [!NOTE]
@@ -307,27 +311,23 @@ When updating a service worker, the VERSION constant doesn't need to be updated,
 
 Now that our service worker script is complete, we need to register the service worker.
 
-We start by checking that the browser supports the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) by using [feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection#the_concept_of_feature_detection) for the presence of the [`serviceWorker`](/en-US/docs/Web/API/ServiceWorker) property on the global [`navigator`](/en-US/docs/Web/API/Navigator) object:
+We start by checking that the browser supports the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) by using [feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection#the_concept_of_feature_detection) for the presence of the [`serviceWorker`](/en-US/docs/Web/API/ServiceWorker) property on the global [`navigator`](/en-US/docs/Web/API/Navigator) object:
 
-```html
-<script>
-  // Does "serviceWorker" exist
-  if ("serviceWorker" in navigator) {
-    // If yes, we register the service worker
-  }
-</script>
+```js
+// Does "serviceWorker" exist
+if ("serviceWorker" in navigator) {
+  // If yes, we register the service worker
+}
 ```
 
 If the property is supported, we can then use the [`register()`](/en-US/docs/Web/API/ServiceWorkerContainer/register) method of the service worker API's [`ServiceWorkerContainer`](/en-US/docs/Web/API/ServiceWorkerContainer) interface.
 
-```html
-<script>
-  if ("serviceWorker" in navigator) {
-    // Register the app's service worker
-    // Passing the filename where that worker is defined.
-    navigator.serviceWorker.register("sw.js");
-  }
-</script>
+```js
+if ("serviceWorker" in navigator) {
+  // Register the app's service worker
+  // Passing the filename where that worker is defined.
+  navigator.serviceWorker.register("sw.js");
+}
 ```
 
 While the above suffices for the CycleTracker app needs, the `register()` method does return a {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistration")}} object. For a more robust application, error check the registration:
@@ -371,15 +371,15 @@ Because of the way we have set up the service worker, once it is registered, eve
 To get a new cache, you can change the [version number](#version_number) and then do a hard browser refresh. The way you do a hard refresh depends on the browser and operating system:
 
 - On Windows: Ctrl+F5, Shift+F5, or Ctrl+Shift+R.
-- On MacOS: Shift+Command+R.
-- Safari on MacOS: Option+Command+E to empty the cache, then Option+Command+R.
+- On macOS: Shift+Command+R.
+- Safari on macOS: Option+Command+E to empty the cache, then Option+Command+R.
 - On Mobile: Go to the browser (Android) or operating system (Samsung, iOS) settings, under advanced setting find the browser (iOS) or website data (Android, Samsung) site settings, and delete the data for CycleTracker, before reloading the page.
 
 ### With developer tools
 
 You likely don't want to update the version number with every save. Until you are ready to launch a new version of your PWA to production and give everyone a new version of your PWA, instead of changing the version number on save, you can unregister the service worker.
 
-You can unregister a service worker by clicking on the `unregister` button in the [browser developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools). Hard refreshing the page will re-register the service worker and create a new cache.
+You can unregister a service worker by clicking on the `unregister` button in the [browser developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools). Hard refreshing the page will re-register the service worker and create a new cache.
 
 ![Firefox developer tools application panel with a stopped service worker and an unregister button](firefox_sw.jpg)
 

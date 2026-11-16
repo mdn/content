@@ -10,7 +10,7 @@ browser-compat: api.TextUpdateEvent.selectionStart
 
 {{APIRef("EditContext API")}}{{SeeCompatTable}}
 
-The **`TextUpdateEvent.selectionStart`** read-only property indicates the position of the end of the selection (or caret) within the text content of the editable region attached to the {{domxref("EditContext")}} object.
+The **`TextUpdateEvent.selectionStart`** read-only property indicates the position of the start of the selection (or caret) within the text content of the editable region attached to the {{domxref("EditContext")}} object.
 
 ## Value
 
@@ -25,7 +25,7 @@ This example shows how to use the `selectionStart` property to render the select
 ```css
 #editor {
   height: 200px;
-  background: #eee;
+  background: #eeeeee;
   color: black;
 }
 

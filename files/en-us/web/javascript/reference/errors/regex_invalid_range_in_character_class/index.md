@@ -2,9 +2,8 @@
 title: "SyntaxError: invalid range in character class"
 slug: Web/JavaScript/Reference/Errors/Regex_invalid_range_in_character_class
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid range in character class" occurs when a [character class](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class) in a regular expression uses a range, but the start of the range is greater than the end.
 
@@ -29,14 +28,14 @@ In character classes, you can join two characters with a hyphen `-` to represent
 ### Invalid cases
 
 ```js example-bad
-/[2-1]/; // The range is out of order
+/[9-1]/; // The range is out of order
 /[_-=]/; // _ has value 95, = has value 61
 ```
 
 ### Valid cases
 
 ```js example-good
-/[1-2]/; // Swap the range
+/[1-9]/; // Swap the range
 /[_\-=]/; // Escape the hyphen so it matches the literal character
 ```
 

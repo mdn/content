@@ -3,12 +3,10 @@ title: "CSSPositionTryRule: name property"
 short-title: name
 slug: Web/API/CSSPositionTryRule/name
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSPositionTryRule.name
 ---
 
-{{APIRef("CSSOM") }}{{SeeCompatTable}}
+{{APIRef("CSSOM") }}
 
 The **`name`** read-only property of the {{domxref("CSSPositionTryRule")}} interface represents the name of the position try fallback option specified by the `@position-try` at-rule's {{cssxref("dashed-ident")}}.
 
@@ -24,7 +22,7 @@ The CSS includes a `@position-try` at-rule with a name of `--custom-bottom` and 
 @position-try --custom-bottom {
   top: anchor(bottom);
   min-width: 100px;
-  margin: 10px 0 0 0;
+  margin-top: 10px;
 }
 ```
 
@@ -47,6 +45,6 @@ console.log(tryOption.name); // "--custom-bottom"
 - {{DOMxRef("CSSPositionTryDescriptors")}}
 - {{cssxref("@position-try")}}
 - {{cssxref("position-try-fallbacks")}}
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
-- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
-- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
+- [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using)
+- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)

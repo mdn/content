@@ -3,24 +3,20 @@ title: "WorkerNavigator: appCodeName property"
 short-title: appCodeName
 slug: Web/API/WorkerNavigator/appCodeName
 page-type: web-api-instance-property
-status:
-  - deprecated
 browser-compat: api.WorkerNavigator.appCodeName
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}{{AvailableInWorkers("worker")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers("worker")}}
 
-The value of the **`WorkerNavigator.appCodeName`** property is
-always "`Mozilla`", in any browser. This property is kept only for
-compatibility purposes.
+The **`appCodeName`** read-only property of the {{domxref("WorkerNavigator")}} interface is always `"Mozilla"`, in any browser. This property is kept only for compatibility purposes.
 
 > [!NOTE]
 > Do not rely on this property to return a real
-> product name. All browsers return "`Mozilla`" as the value of this property.
+> product name. All browsers return `"Mozilla"` as the value of this property.
 
 ## Value
 
-The string "`Mozilla`".
+The string `"Mozilla"`.
 
 ## Specifications
 

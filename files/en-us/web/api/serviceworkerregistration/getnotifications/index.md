@@ -26,10 +26,8 @@ getNotifications(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object containing options to filter the notifications returned. The available
     options are:
-
     - `tag` {{optional_inline}}
       - : A string representing a notification tag. If
         specified, only notifications that have this tag will be returned.

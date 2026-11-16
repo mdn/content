@@ -1,15 +1,31 @@
 ---
 title: Promise() constructor
+short-title: Promise()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Promise.Promise
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Promise()`** constructor creates {{jsxref("Promise")}} objects. It is primarily used to wrap callback-based APIs that do not already support promises.
 
-{{EmbedInteractiveExample("pages/js/promise-constructor.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Promise() constructor", "taller")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("foo");
+  }, 300);
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: "foo"
+});
+
+console.log(promise1);
+// Expected output: [object Promise]
+```
 
 ## Syntax
 
@@ -17,16 +33,17 @@ The **`Promise()`** constructor creates {{jsxref("Promise")}} objects. It is pri
 new Promise(executor)
 ```
 
-> **Note:** `Promise()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Promise()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
 - `executor`
-  - : A {{jsxref("function")}} to be executed by the constructor. It receives two functions as parameters: `resolveFunc` and `rejectFunc`. Any errors thrown in the `executor` will cause the promise to be rejected, and the return value will be neglected. The semantics of `executor` are detailed below.
+  - : A {{jsxref("Function")}} to be executed by the constructor. It receives two functions as parameters: `resolveFunc` and `rejectFunc`. Any errors thrown in the `executor` will cause the promise to be rejected, and the return value will be neglected. The semantics of `executor` are detailed below.
 
 ### Return value
 
-When called via `new`, the `Promise` constructor returns a promise object. The promise object will become _resolved_ when either of the functions `resolveFunc` or `rejectFunc` are invoked. Note that if you call `resolveFunc` or `rejectFunc` and pass another `Promise` object as an argument, it can be said to be "resolved", but still not "settled". See the [Promise description](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#description) for more explanation.
+When called via `new`, the `Promise` constructor returns a promise object. The promise object will become _resolved_ when either of the functions `resolveFunc` or `rejectFunc` are invoked. Note that if you call `resolveFunc` and pass another promise object as an argument, the initial promise can be said to be "resolved", but still not "settled". See the [Promise description](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#description) for more explanation.
 
 ## Description
 
@@ -84,7 +101,7 @@ Here's a summary of the typical flow:
    - If `rejectFunc` is called first, the promise instantly becomes rejected.
    - Once one of the resolving functions (`resolveFunc` or `rejectFunc`) is called, the promise stays resolved. Only the first call to `resolveFunc` or `rejectFunc` affects the promise's eventual state, and subsequent calls to either function can neither change the fulfillment value/rejection reason nor toggle its eventual state from "fulfilled" to "rejected" or opposite.
    - If `executor` exits by throwing an error, then the promise is rejected. However, the error is ignored if one of the resolving functions has already been called (so that the promise is already resolved).
-   - Resolving the promise does not necessarily cause the promise to become fulfilled or rejected (i.e. settled). The promise may still be pending because it's resolved with another thenable, but its eventual state will match that of the resolved thenable.
+   - Resolving the promise does not necessarily cause the promise to become fulfilled or rejected (i.e., settled). The promise may still be pending because it's resolved with another thenable, but its eventual state will match that of the resolved thenable.
 5. Once the promise settles, it (asynchronously) invokes any further handlers associated through {{jsxref("Promise/then", "then()")}}, {{jsxref("Promise/catch", "catch()")}}, or {{jsxref("Promise/finally", "finally()")}}. The eventual fulfillment value or rejection reason is passed to the invocation of fulfillment and rejection handlers as an input parameter (see [Chained Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises)).
 
 For example, the callback-based `readFile` API above can be transformed into a promise-based one.
@@ -222,6 +239,6 @@ const rejectedResolved2 = new Promise((resolve) => {
 
 ## See also
 
-- [Polyfill of `Promise` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [Polyfill of `Promise` in `core-js`](https://core-js.io/docs/features/ecmascript/promise)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
 - {{jsxref("Promise.withResolvers()")}}

@@ -13,7 +13,7 @@ The **`fractionLost`** property of the {{domxref("RTCRemoteInboundRtpStreamStats
 To convert the value to a percentage, divide it by 256 and multiply by 100.
 For example, a value of 20 indicates a 7.8% packet loss.
 
-Note that the value may not be precisely accurate due to the way that it is calculated, but it does provides a quick and convenient measure of the link quality.
+Note that the value may not be precisely accurate due to the way that it is calculated, but it does provide a quick and convenient measure of the link quality.
 
 ## Value
 

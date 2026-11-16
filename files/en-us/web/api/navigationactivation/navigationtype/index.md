@@ -3,12 +3,10 @@ title: "NavigationActivation: navigationType property"
 short-title: navigationType
 slug: Web/API/NavigationActivation/navigationType
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigationActivation.navigationType
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`navigationType`** read-only property of the {{domxref("NavigationActivation")}} interface contains a string indicating the type of navigation.
 
@@ -46,4 +44,4 @@ window.addEventListener("pageswap", (event) => {
 ## See also
 
 - [Navigation API](/en-US/docs/Web/API/Navigation_API)
-- [View Transitions API](/en-US/docs/Web/API/View_Transitions_API)
+- [View Transition API](/en-US/docs/Web/API/View_Transition_API)

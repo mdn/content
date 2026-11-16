@@ -2,9 +2,8 @@
 title: JavaScript reference
 slug: Web/JavaScript/Reference
 page-type: landing-page
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 The JavaScript reference serves as a repository of facts about the JavaScript language. The entire language is described here in detail. As you write JavaScript code, you'll refer to these pages often (thus the title "JavaScript reference").
 
@@ -51,6 +50,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 - {{jsxref("EvalError")}}
 - {{jsxref("RangeError")}}
 - {{jsxref("ReferenceError")}}
+- {{jsxref("SuppressedError")}}
 - {{jsxref("SyntaxError")}}
 - {{jsxref("TypeError")}}
 - {{jsxref("URIError")}}
@@ -62,6 +62,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 - {{jsxref("BigInt")}}
 - {{jsxref("Math")}}
 - {{jsxref("Date")}}
+- {{jsxref("Temporal")}}
 
 ### Text processing
 
@@ -114,9 +115,12 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 - {{jsxref("Generator")}}
 - {{jsxref("AsyncGenerator")}}
 - {{jsxref("AsyncFunction")}}
+- {{jsxref("DisposableStack")}}
+- {{jsxref("AsyncDisposableStack")}}
 
 ### Reflection
 
+- {{jsxref("AbstractModuleSource")}}
 - {{jsxref("Reflect")}}
 - {{jsxref("Proxy")}}
 
@@ -153,6 +157,8 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/let", "let")}}
 - {{jsxref("Statements/const", "const")}}
+- {{jsxref("Statements/using", "using")}}
+- {{jsxref("Statements/await_using", "await using")}}
 
 ### Functions and classes
 
@@ -179,6 +185,8 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 - {{jsxref("Statements/debugger", "debugger")}}
 - {{jsxref("Statements/export", "export")}}
 - {{jsxref("Statements/import", "import")}}
+- {{jsxref("Statements/import/defer", "import defer")}}
+- {{jsxref("Statements/import/source", "import source")}}
 - {{jsxref("Statements/label", "label", "", 1)}}
 - {{jsxref("Statements/with", "with")}} {{deprecated_inline}}
 
@@ -188,7 +196,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 
 ### Primary expressions
 
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
 - [Literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
 - {{jsxref("Array", "[]")}}
 - {{jsxref("Operators/Object_initializer", "{}")}}
@@ -205,11 +213,13 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 
 - {{jsxref("Operators/Property_accessors", "Property accessors", "", 1)}}
 - {{jsxref("Operators/Optional_chaining", "?.")}}
-- {{jsxref("Operators/new", "new")}}
-- {{jsxref("Operators/new%2Etarget", "new.target")}}
-- {{jsxref("Operators/import%2Emeta", "import.meta")}}
+- {{jsxref("new")}}
+- {{jsxref("Operators/new.target", "new.target")}}
+- {{jsxref("Operators/import.meta", "import.meta")}}
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Operators/import", "import()")}}
+- {{jsxref("Operators/import/defer", "import.defer()")}}
+- {{jsxref("Operators/import/source", "import.source()")}}
 
 ### Increment and decrement
 
@@ -220,7 +230,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 
 ### Unary operators
 
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Operators/void", "void")}}
 - {{jsxref("Operators/typeof", "typeof")}}
 - {{jsxref("Operators/Unary_plus", "+")}}
@@ -244,7 +254,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 - {{jsxref("Operators/Greater_than", "&gt;")}} (Greater than)
 - {{jsxref("Operators/Less_than_or_equal", "&lt;=")}}
 - {{jsxref("Operators/Greater_than_or_equal", "&gt;=")}}
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 - {{jsxref("Operators/in", "in")}}
 
 ### Equality operators
@@ -294,7 +304,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 - {{jsxref("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
 - {{jsxref("Operators/Logical_OR_assignment", "||=")}}
 - {{jsxref("Operators/Nullish_coalescing_assignment", "??=")}}
-- [`[a, b] = arr`, `{ a, b } = obj`](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [`[a, b] = arr`, `{ a, b } = obj`](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring)
 
 ### Yield operators
 
@@ -325,9 +335,9 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 
 [JavaScript classes.](/en-US/docs/Web/JavaScript/Reference/Classes)
 
-- {{jsxref("Classes/Constructor", "constructor")}}
+- {{jsxref("Classes/constructor", "constructor")}}
 - {{jsxref("Classes/extends", "extends")}}
-- [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties)
+- [Private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements)
 - [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
 - {{jsxref("Classes/static", "static")}}
 - [Static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
@@ -357,8 +367,10 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 
 ## Additional reference pages
 
+- [JavaScript technologies overview](/en-US/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)
+- [Execution model](/en-US/docs/Web/JavaScript/Reference/Execution_model)
 - {{jsxref("Lexical_grammar", "Lexical grammar", "", 1)}}
-- [Data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [Data types and data structures](/en-US/docs/Web/JavaScript/Guide/Data_structures)
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - [Trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas)
 - [Errors](/en-US/docs/Web/JavaScript/Reference/Errors)

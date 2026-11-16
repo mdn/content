@@ -11,6 +11,11 @@ The **`RTCSessionDescription`** interface describes one end of a connection—or
 
 The process of negotiating a connection between two peers involves exchanging `RTCSessionDescription` objects back and forth, with each description suggesting one combination of connection configuration options that the sender of the description supports. Once the two peers agree upon a configuration for the connection, negotiation is complete.
 
+## Constructor
+
+- {{domxref("RTCSessionDescription.RTCSessionDescription", "RTCSessionDescription()")}} {{deprecated_inline}}
+  - : Creates a new `RTCSessionDescription` by specifying the `type` and `sdp`. All methods that accept `RTCSessionDescription` objects also accept objects with the same properties, so you can use a plain object instead of creating an `RTCSessionDescription` instance.
+
 ## Instance properties
 
 _The `RTCSessionDescription` interface doesn't inherit any properties._
@@ -22,12 +27,10 @@ _The `RTCSessionDescription` interface doesn't inherit any properties._
 
 ## Instance methods
 
-_The `RTCSessionDescription` doesn't inherit any methods._
+_The `RTCSessionDescription` interface doesn't inherit any methods._
 
-- {{domxref("RTCSessionDescription.RTCSessionDescription", "RTCSessionDescription()")}} {{deprecated_inline}}
-  - : This constructor returns a new `RTCSessionDescription`. The parameter is a `RTCSessionDescriptionInit` dictionary containing the values to assign the two properties.
 - {{domxref("RTCSessionDescription.toJSON()")}}
-  - : Returns a {{Glossary("JSON")}} description of the object. The values of both properties, {{domxref("RTCSessionDescription.type", "type")}} and {{domxref("RTCSessionDescription.sdp", "sdp")}}, are contained in the generated JSON.
+  - : Returns a JSON-serializable plain object representing the `RTCSessionDescription` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Example
 
@@ -36,7 +39,7 @@ signalingChannel.onmessage = (evt) => {
   if (!pc) start(false);
 
   const message = JSON.parse(evt.data);
-  if (message.sdp) {
+  if (message.type && message.sdp) {
     pc.setRemoteDescription(
       new RTCSessionDescription(message),
       () => {

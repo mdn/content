@@ -1,18 +1,47 @@
 ---
-title: Local
-slug: WebAssembly/Reference/Variables/Local
+title: "local: Wasm variable instruction"
+short-title: local
+slug: WebAssembly/Reference/Variables/local
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.local
+sidebar: webassemblysidebar
 ---
 
-{{WebAssemblySidebar}}
+The **`local`** [variable instruction](/en-US/docs/WebAssembly/Reference/Variables) declares a new local variable.
 
-The **`local`** instruction declares a new local variable.
+{{InteractiveExample("Wat Demo: local", "tabbed-taller")}}
 
-{{EmbedInteractiveExample("pages/wat/local.html", "tabbed-taller")}}
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param i32)))
+  (func $main
+
+    (local $var i32) ;; create a local variable named $var
+    (local.set $var (i32.const 10)) ;; set $var to 10
+    local.get $var ;; load $var onto the stack
+    call $log ;; log the result
+
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 
-```wasm
+```wat
 ;; declare new variable named $val of type i32
 (local $val i32)
 ```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

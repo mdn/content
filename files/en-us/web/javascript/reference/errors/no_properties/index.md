@@ -2,9 +2,8 @@
 title: "TypeError: null/undefined has no properties"
 slug: Web/JavaScript/Reference/Errors/No_properties
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "null (or undefined) has no properties" occurs when you
 attempt to access properties of [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxref("undefined")}}. They
@@ -28,7 +27,7 @@ TypeError: Right side of assignment cannot be destructured (Safari)
 
 ## What went wrong?
 
-Both [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxref("undefined")}} have no properties you could access. Therefore, you cannot use [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) on them, or [destructure](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) them.
+Both [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxref("undefined")}} have no properties you could access. Therefore, you cannot use [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) on them, or [destructure](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) them.
 
 ## Examples
 

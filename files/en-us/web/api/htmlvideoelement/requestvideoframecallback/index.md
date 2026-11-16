@@ -10,6 +10,53 @@ browser-compat: api.HTMLVideoElement.requestVideoFrameCallback
 
 The **`requestVideoFrameCallback()`** method of the {{domxref("HTMLVideoElement")}} interface registers a callback function that runs when a new video frame is sent to the compositor. This enables developers to perform efficient operations on each video frame.
 
+## Syntax
+
+```js-nolint
+requestVideoFrameCallback(callback)
+```
+
+### Parameters
+
+- `callback`
+  - : The callback function that runs when a new video frame is sent to the compositor. This contains two parameters:
+    - `now`
+      - : A {{domxref("DOMHighResTimeStamp")}} representing the time when the callback was called.
+    - `metadata`
+      - : An object containing the following properties:
+        - `expectedDisplayTime`
+          - : A {{domxref("DOMHighResTimeStamp")}} representing the time when the browser expects the frame to be visible.
+        - `height`
+          - : A number, in media pixels, representing the height of the video frame (the visible decoded pixels, without aspect ratio adjustments).
+        - `mediaTime`
+          - : A number, in seconds, representing the media presentation timestamp of the presented frame. This is equal to the frame's timestamp on the {{domxref("HTMLMediaElement.currentTime")}} timeline.
+        - `presentationTime`
+          - : A {{domxref("DOMHighResTimeStamp")}} representing the time when the browser submitted the frame for composition.
+        - `presentedFrames`
+          - : A number representing the number of frames submitted for composition so far alongside the current callback.
+            This can be used to detect whether frames were missed between callback instances.
+        - `processingDuration`
+          - : A number, in seconds, representing the duration between the submission of the encoded packet with the same presentation timestamp as this frame to the decoder (i.e., the `mediaTime`) and the decoded frame being ready for presentation.
+        - `width`
+          - : A number, in media pixels, representing the width of the video frame (the visible decoded pixels, without aspect ratio adjustments).
+
+        Additional metadata properties may be available within `requestVideoFrameCallback()` callbacks used in {{domxref("WebRTC_API", "WebRTC", "", "nocode")}} applications:
+        - `captureTime`
+          - : A {{domxref("DOMHighResTimeStamp")}} representing the time when the frame was captured. This applies to video frames coming from a local or remote source. For a remote source, the capture time is estimated using clock synchronization and RTCP sender reports to convert RTP timestamps to capture time.
+        - `receiveTime`
+          - : A {{domxref("DOMHighResTimeStamp")}} representing the time when the encoded frame was received by the platform. This applies to video frames coming from a remote source. Specifically, this corresponds to the time when the last packet belonging to this frame was received over the network.
+        - `rtpTimestamp`
+          - : A number representing the RTP timestamp associated with this video frame.
+
+> [!NOTE]
+> `width` and `height` may differ from {{domxref("HTMLVideoElement.videoWidth")}} and {{domxref("HTMLVideoElement.videoHeight")}} in certain cases (for example, an anamorphic video may have rectangular pixels).
+
+### Return value
+
+A number representing a unique callback ID.
+
+This can be passed to {{DOMxRef("HTMLVideoElement.cancelVideoFrameCallback()")}} to cancel the callback registration.
+
 ## Description
 
 Typical use cases for `requestVideoFrameCallback()` include video processing and painting to a canvas, video analysis, and synchronization with external audio sources. Per-frame processing used to be done in a less efficient or accurate fashion by running operations on the current video display whenever the {{domxref("HTMLMediaElement.timeupdate_event", "timeupdate")}} event fired. This technique did not provide access to the actual video frames.
@@ -26,81 +73,86 @@ The API runs on the main thread, while video compositing likely happens on a sep
 
 You can compare the `now` callback parameter and the `expectedDisplayTime` metadata property to determine whether your callback is a v-sync late. If `expectedDisplayTime` is within about five to ten microseconds of `now`, the frame is already rendered. If the `expectedDisplayTime` is approximately sixteen milliseconds in the future (assuming your browser/screen is refreshing at 60Hz), then the callback is a v-sync out.
 
-## Syntax
-
-```js-nolint
-requestVideoFrameCallback(callback)
-```
-
-### Parameters
-
-- `callback`
-
-  - : The callback function that runs when a new video frame is sent to the compositor. This contains two parameters:
-
-    - `now`
-      - : A {{domxref("DOMHighResTimeStamp")}} representing the time when the callback was called.
-    - `metadata`
-
-      - : An object containing the following properties:
-
-        - `expectedDisplayTime`: A {{domxref("DOMHighResTimeStamp")}} representing the time when the browser expects the frame to be visible.
-        - `height`: A number, in media pixels, representing the height of the video frame (the visible decoded pixels, without aspect ratio adjustments).
-        - `mediaTime`: A number, in seconds, representing the media presentation timestamp of the presented frame. This is equal to the frame's timestamp on the {{domxref("HTMLMediaElement.currentTime")}} timeline.
-        - `presentationTime`: A {{domxref("DOMHighResTimeStamp")}} representing the time when the browser submitted the frame for composition.
-        - `presentedFrames`: A number representing the number of frames submitted for composition so far alongside the current callback. This can be used to detect whether frames were missed between callback instances.
-        - `processingDuration`: A number, in seconds, representing the duration between the submission of the encoded packet with the same presentation timestamp as this frame to the decoder (i.e., the `mediaTime`) and the decoded frame being ready for presentation.
-        - `width`: A number, in media pixels, representing the width of the video frame (the visible decoded pixels, without aspect ratio adjustments).
-
-        Additional metadata properties may be available within `requestVideoFrameCallback()` callbacks used in {{domxref("WebRTC_API", "WebRTC", "", "nocode")}} applications:
-
-        - `captureTime`: A {{domxref("DOMHighResTimeStamp")}} representing the time when the frame was captured. This applies to video frames coming from a local or remote source. For a remote source, the capture time is estimated using clock synchronization and RTCP sender reports to convert RTP timestamps to capture time.
-        - `receiveTime`: A {{domxref("DOMHighResTimeStamp")}} representing the time when the encoded frame was received by the platform. This applies to video frames coming from a remote source. Specifically, this corresponds to the time when the last packet belonging to this frame was received over the network.
-        - `rtpTimestamp`: A number representing the RTP timestamp associated with this video frame.
-
-> **Note:** `width` and `height` may differ from {{domxref("HTMLVideoElement.videoWidth")}} and {{domxref("HTMLVideoElement.videoHeight")}} in certain cases (for example, an anamorphic video may have rectangular pixels).
-
-### Return value
-
-A number representing a unique callback ID.
-
-This can be passed to {{DOMxRef("HTMLVideoElement.cancelVideoFrameCallback()")}} to cancel the callback registration.
-
 ## Examples
 
 ### Drawing video frames on a canvas
 
-This example shows how to use `requestVideoFrameCallback()` to draw the frames of a video onto a {{htmlelement("canvas")}} element at exactly the same frame rate as the video. It also logs the frame metadata to the DOM for debugging purposes.
+This example shows how to use `requestVideoFrameCallback()` to draw the frames of a video onto a {{htmlelement("canvas")}} element at exactly the same frame rate as the video.
+It also displays the video's frame rate, and logs the frame metadata to the screen for debugging purposes.
+The frame rate is calculated from the `presentedFrames` and `mediaTime` metadata, counting from when playback last started or the video was last seeked (time spent paused isn't included).
 
 ```js
-if ("requestVideoFrameCallback" in HTMLVideoElement.prototype) {
-  let paintCount = 0;
-  let startTime = 0.0;
+const button = document.querySelector("button");
+const video = document.querySelector("video");
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+const fpsInfo = document.querySelector("#fps-info");
+const metadataInfo = document.querySelector("#metadata-info");
 
-  const updateCanvas = (now, metadata) => {
-    if (startTime === 0.0) {
-      startTime = now;
-    }
+button.addEventListener("click", () =>
+  video.paused ? video.play() : video.pause(),
+);
 
-    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+video.addEventListener("play", () => {
+  if (!("requestVideoFrameCallback" in HTMLVideoElement.prototype)) {
+    console.error(
+      "Your browser does not support the `Video.requestVideoFrameCallback()` API.",
+    );
+  }
+});
 
-    const elapsed = (now - startTime) / 1000.0;
-    const fps = (++paintCount / elapsed).toFixed(3);
-    fpsInfo.innerText = `video fps: ${fps}`;
-    metadataInfo.innerText = JSON.stringify(metadata, null, 2);
+let width = canvas.width;
+let height = canvas.height;
 
-    // Re-register the callback to run on the next frame
-    video.requestVideoFrameCallback(updateCanvas);
-  };
+let startFrames = null;
+let startMediaTime = 0;
 
-  // Initial registration of the callback to run on the first frame
+const resetFps = () => {
+  startFrames = null;
+};
+video.addEventListener("play", resetFps);
+video.addEventListener("seeked", resetFps);
+
+const updateCanvas = (now, metadata) => {
+  ctx.drawImage(video, 0, 0, width, height);
+
+  if (startFrames === null) {
+    startFrames = metadata.presentedFrames;
+    startMediaTime = metadata.mediaTime;
+  } else {
+    const frames = metadata.presentedFrames - startFrames;
+    const seconds = metadata.mediaTime - startMediaTime;
+    fpsInfo.innerText = seconds > 0 ? (frames / seconds).toFixed(3) : 0;
+  }
+  metadataInfo.innerText = JSON.stringify(metadata, null, 2);
+
   video.requestVideoFrameCallback(updateCanvas);
-} else {
-  alert("Your browser does not support requestVideoFrameCallback().");
+};
+
+video.src = "https://mdn.github.io/shared-assets/videos/flower.mp4";
+video.requestVideoFrameCallback(updateCanvas);
+```
+
+```css
+video,
+canvas {
+  max-width: 49%;
 }
 ```
 
-See [requestVideoFrameCallback Demo](https://requestvideoframecallback.glitch.me/) for a working implementation of the above code.
+```html
+<p>
+  Start <button type="button">⏯</button> playing the video. Pause the video to
+  read the metadata. Drawing video frames on the canvas is synced with the
+  actual video framerate.
+</p>
+<video controls playsinline></video>
+<canvas width="960" height="540"></canvas>
+<p><span id="fps-info">0</span>fps</p>
+<pre id="metadata-info"></pre>
+```
+
+{{embedlivesample("drawing_video_frames_on_a_canvas", , "540")}}
 
 ## Specifications
 

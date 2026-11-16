@@ -13,7 +13,7 @@ The **`clonable`** read-only property of the {{domxref("ShadowRoot")}} interface
 When the value is `true`, a shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include a copy of the shadow root.
 
 By default the value is `false`.
-It can be set to `true` using the `clonable` option of the {{domxref("Element.attachShadow()")}} method or by setting the [`shadowrootclonable`](/en-US/docs/Web/HTML/Element/template#shadowrootclonable) attribute of the `<template>` element that is being used to declaratively attach a shadow root.
+It can be set to `true` using the `clonable` option of the {{domxref("Element.attachShadow()")}} method or by setting the [`shadowrootclonable`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootclonable) attribute of the `<template>` element that is being used to declaratively attach a shadow root.
 
 ## Value
 

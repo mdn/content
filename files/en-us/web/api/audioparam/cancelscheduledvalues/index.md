@@ -21,7 +21,7 @@ cancelScheduledValues(startTime)
 
 - `startTime`
   - : A double representing the time (in seconds) after the {{ domxref("AudioContext") }}
-    was first created after which all scheduled changes will be cancelled.
+    was first created after which all scheduled changes will be canceled.
 
 ### Return value
 
@@ -32,7 +32,7 @@ method returns {{jsxref('undefined')}}.
 
 ```js
 const gainNode = audioCtx.createGain();
-gainNode.gain.setValueCurveAtTime(waveArray, audioCtx.currentTime, 2); //'gain' is the AudioParam
+gainNode.gain.setValueCurveAtTime(waveArray, audioCtx.currentTime, 2); // 'gain' is the AudioParam
 gainNode.gain.cancelScheduledValues(audioCtx.currentTime);
 ```
 

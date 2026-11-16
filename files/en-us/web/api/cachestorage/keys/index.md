@@ -25,7 +25,7 @@ None.
 
 ### Return value
 
-a {{jsxref("Promise")}} that resolves with an array of the {{domxref("Cache")}} names inside the {{domxref("CacheStorage")}} object.
+A {{jsxref("Promise")}} that resolves with an array of the {{domxref("Cache")}} names inside the {{domxref("CacheStorage")}} object.
 
 ## Examples
 
@@ -45,6 +45,7 @@ this.addEventListener("activate", (event) => {
           if (!cacheAllowlist.includes(key)) {
             return caches.delete(key);
           }
+          return undefined;
         }),
       ),
     ),

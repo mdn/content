@@ -3,9 +3,8 @@ title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 page-type: javascript-class
 browser-compat: javascript.builtins.Set
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Set`** object lets you store unique values of any type, whether {{Glossary("Primitive", "primitive values")}} or object references.
 
@@ -17,7 +16,7 @@ The specification requires sets to be implemented "that, on average, provide acc
 
 ### Value equality
 
-Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm. (It used to use [SameValue](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is), which treated `0` and `-0` as different. Check [browser compatibility](#browser_compatibility).) This means {{jsxref("NaN")}} is considered the same as `NaN` (even though `NaN !== NaN`) and all other values are considered equal according to the semantics of the `===` operator.
+Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm. (It used to use [SameValue](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value_equality_using_object.is), which treated `0` and `-0` as different. Check [browser compatibility](#browser_compatibility).) This means {{jsxref("NaN")}} is considered the same as `NaN` (even though `NaN !== NaN`) and all other values are considered equal according to the semantics of the `===` operator. Also, for object keys, equality is based on object identity. They are compared by reference, not by value. See [Using the Set object](#using_the_set_object) for examples.
 
 ### Performance
 
@@ -67,7 +66,7 @@ The `Set` object provides some methods that allow you to compose sets like you w
       <td>
         <math><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cup B</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="A Venn diagram where two circles overlap. The symmetric difference of A and B is the region contained by either or both circles." style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="A Venn diagram where two circles overlap. The union of A and B is the region contained by either or both circles." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/isDisjointFrom", "A.isDisjointFrom(B)")}}</td>
@@ -83,7 +82,7 @@ The `Set` object provides some methods that allow you to compose sets like you w
       <td>
         <math><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow><annotation encoding="TeX">A\subseteq B</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="isSubsetOf/diagram.svg" alt="A Venn diragram with two circles. A is a subset of B because A is completely contained in B." style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="isSubsetOf/diagram.svg" alt="A Venn diagram with two circles. A is a subset of B because A is completely contained in B." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/isSupersetOf", "A.isSupersetOf(B)")}}</td>
@@ -100,7 +99,7 @@ To make them more generalizable, these methods don't just accept `Set` objects, 
 
 ### Set-like objects
 
-All [set composition methods](#set_composition) require {{jsxref("Operators/this", "this")}} to be an actual `Set` instance, but their arguments just need to be set-like. A _set-like object_ is an object that provides the following:
+All [set composition methods](#set_composition) require {{jsxref("this")}} to be an actual `Set` instance, but their arguments just need to be set-like. A _set-like object_ is an object that provides the following:
 
 - A {{jsxref("Set/size", "size")}} property that contains a number.
 - A {{jsxref("Set/has", "has()")}} method that takes an element and returns a boolean.
@@ -143,8 +142,8 @@ interface GPUSupportedFeatures {
 
 `Set`-like objects are either read-only or read-writable (see the `readonly` keyword in the IDL above).
 
-- Read-only `Set`-like objects have the property [`size`](#set.prototype.size), and the methods: [`entries()`](#set.prototype.entries), [`forEach()`](#set.prototype.foreach), [`has()`](#set.prototype.has), [`keys()`](#set.prototype.keys), [`values()`](#set.prototype.values), and [`[Symbol.iterator]()`](#set.prototypesymbol.iterator).
-- Writeable `Set`-like objects additionally have the methods: [`clear()`](#set.prototype.clear), [`delete()`](#set.prototype.delete), and [`add()`](#set.prototype.add).
+- Read-only `Set`-like objects have the property {{jsxref("Set/size", "size")}}, and the methods: {{jsxref("Set/entries", "entries()")}}, {{jsxref("Set/forEach", "forEach()")}}, {{jsxref("Set/has", "has()")}}, {{jsxref("Set/keys", "keys()")}}, {{jsxref("Set/values", "values()")}}, and [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator).
+- Writeable `Set`-like objects additionally have the methods: {{jsxref("Set/clear", "clear()")}}, {{jsxref("Set/delete", "delete()")}}, and {{jsxref("Set/add", "add()")}}.
 
 The methods and properties have the same behavior as the equivalent entities in `Set`, except for the restriction on the types of the entry.
 
@@ -158,6 +157,7 @@ The following are examples of writable `Set`-like browser objects:
 - {{domxref("CustomStateSet")}}
 - {{domxref("FontFaceSet")}}
 - {{domxref("Highlight")}}
+- {{domxref("ViewTransitionTypeSet")}}
 
 ## Constructor
 
@@ -183,11 +183,11 @@ These properties are defined on `Set.prototype` and shared by all `Set` instance
 ## Instance methods
 
 - {{jsxref("Set.prototype.add()")}}
-  - : Inserts a new element with a specified value in to a `Set` object, if there isn't an element with the same value already in the `Set`.
+  - : Inserts the specified value into this set, if it is not already present.
 - {{jsxref("Set.prototype.clear()")}}
   - : Removes all elements from the `Set` object.
 - {{jsxref("Set.prototype.delete()")}}
-  - : Removes the element associated to the `value` and returns a boolean asserting whether an element was successfully removed or not. `Set.prototype.has(value)` will return `false` afterwards.
+  - : Removes the specified value from this set, if it is in the set.
 - {{jsxref("Set.prototype.difference()")}}
   - : Takes a set and returns a new set containing elements in this set but not in the given set.
 - {{jsxref("Set.prototype.entries()")}}
@@ -195,7 +195,7 @@ These properties are defined on `Set.prototype` and shared by all `Set` instance
 - {{jsxref("Set.prototype.forEach()")}}
   - : Calls `callbackFn` once for each value present in the `Set` object, in insertion order. If a `thisArg` parameter is provided, it will be used as the `this` value for each invocation of `callbackFn`.
 - {{jsxref("Set.prototype.has()")}}
-  - : Returns a boolean asserting whether an element is present with the given value in the `Set` object or not.
+  - : Returns a boolean indicating whether the specified value exists in this `Set` or not.
 - {{jsxref("Set.prototype.intersection()")}}
   - : Takes a set and returns a new set containing elements in both this set and the given set.
 - {{jsxref("Set.prototype.isDisjointFrom()")}}
@@ -418,7 +418,8 @@ console.assert(set.size === array.length);
 
 ## See also
 
-- [Polyfill of `Set` in `core-js`](https://github.com/zloirock/core-js#set)
+- [Polyfill of `Set` in `core-js`](https://core-js.io/docs/features/ecmascript/collections#h-set)
+- [es-shims polyfill of `Set`](https://www.npmjs.com/package/es-set)
 - {{jsxref("Map")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}

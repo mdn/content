@@ -2,13 +2,12 @@
 title: Address bar suggestions
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Using the {{WebExtAPIRef("omnibox")}} API, extensions can customize the suggestions offered in the browser address bar's drop-down when the user enters a keyword.
 
-![Example showing the result of the firefox_code_search WebExtension's customization of the address bar suggestions.](omnibox_example_small.png)
+![Example showing the result of the firefox-code-search example's customization of the address bar suggestions.](omnibox_example_small.png)
 
 This enables your extension to, for example, search a library of free ebooks or, as in the example above, a repository of code examples.
 
@@ -29,7 +28,7 @@ browser.omnibox.setDefaultSuggestion({
 });
 ```
 
-You can then add the code to provide the customized content by listening for {{WebExtAPIRef("omnibox.onInputStarted")}}, which is dispatched when the user has typed the keyword and a space, and {{WebExtAPIRef("omnibox.onInputChanged")}}, which is dispatched whenever the user updates the address bar entry. You can then populate the suggestions, in this case building a [search of mozilla-central](https://searchfox.org/mozilla-central) using the term entered by the user:
+You can then add the code to provide the customized content by listening for {{WebExtAPIRef("omnibox.onInputStarted")}}, which is dispatched when the user has typed the keyword and a space, and {{WebExtAPIRef("omnibox.onInputChanged")}}, which is dispatched whenever the user updates the address bar entry. You can then populate the suggestions, in this case building a [search of mozilla-central](https://searchfox.org/firefox-main/search) using the term entered by the user:
 
 ```js
 browser.omnibox.onInputChanged.addListener((text, addSuggestions) => {

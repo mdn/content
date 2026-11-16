@@ -2,9 +2,8 @@
 title: WAI
 slug: Glossary/WAI
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The **Web Accessibility Initiative (WAI)** is an effort by the {{glossary("W3C")}} to develop standards and guidelines to help everyone building the web ensure and improve {{glossary("accessibility")}} for people with various challenges.
 

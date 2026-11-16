@@ -1,21 +1,31 @@
 ---
 title: String.prototype.concat()
+short-title: concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.concat
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`concat()`** method of {{jsxref("String")}} values concatenates
 the string arguments to this string and returns a new string.
 
-{{EmbedInteractiveExample("pages/js/string-concat.html")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.concat()")}}
+
+```js interactive-example
+const str1 = "Hello";
+const str2 = "World";
+
+console.log(str1.concat(" ", str2));
+// Expected output: "Hello World"
+
+console.log(str2.concat(", ", str1));
+// Expected output: "World, Hello"
+```
 
 ## Syntax
 
 ```js-nolint
-concat()
 concat(str1)
 concat(str1, str2)
 concat(str1, str2, /* …, */ strN)
@@ -24,7 +34,7 @@ concat(str1, str2, /* …, */ strN)
 ### Parameters
 
 - `str1`, …, `strN`
-  - : One or more strings to concatenate to `str`.
+  - : One or more strings to concatenate to `str`. Though technically permitted, calling `String.prototype.concat()` with no arguments is a useless operation, because it does not result in observable copying (like {{jsxref("Array.prototype.concat()")}}), since strings are immutable. It should only happen if you are [spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) an array of strings as arguments, and that array happens to be empty.
 
 ### Return value
 

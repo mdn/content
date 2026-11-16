@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CryptoKey.usages
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_Header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The read-only **`usages`** property of the {{DOMxRef("CryptoKey")}} interface indicates what can be done with the key.
 
@@ -38,9 +38,10 @@ function importSecretKey(rawKey) {
   ]);
 }
 
-const key = importSecretKey(rawKey);
-console.log(
-  `The following usages are reported for this key: ${key.usages.toString()}`,
+importSecretKey(rawKey).then((key) =>
+  console.log(
+    `The following usages are reported for this key: ${key.usages.toString()}`,
+  ),
 );
 ```
 

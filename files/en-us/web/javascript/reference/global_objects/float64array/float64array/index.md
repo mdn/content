@@ -1,11 +1,11 @@
 ---
 title: Float64Array() constructor
+short-title: Float64Array()
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array/Float64Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Float64Array.Float64Array
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Float64Array()`** constructor creates {{jsxref("Float64Array")}} objects. The contents are initialized to `0` unless initialization data is explicitly provided.
 
@@ -22,7 +22,8 @@ new Float64Array(buffer, byteOffset)
 new Float64Array(buffer, byteOffset, length)
 ```
 
-> **Note:** `Float64Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Float64Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -76,7 +77,7 @@ console.log(float64FromIterable);
 
 ## See also
 
-- [Polyfill of `Float64Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `Float64Array` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}

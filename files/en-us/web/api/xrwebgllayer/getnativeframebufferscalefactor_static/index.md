@@ -111,7 +111,7 @@ function requestNativeScaleWebGLLayer(gl, xrSession) {
 ```
 
 This starts by calling the [WebGL rendering context](/en-US/docs/Web/API/WebGLRenderingContext) function
-{{domxref("WebGLRenderingContext.makeXRCompatible", "makeXRCompatible()")}}. When the returned {{jsxref("promise")}} resolves, we proceed by
+{{domxref("WebGLRenderingContext.makeXRCompatible", "makeXRCompatible()")}}. When the returned {{jsxref("Promise")}} resolves, we proceed by
 calling `XRWebGLLayer`'s `getNativeFramebufferScaleFactor()`
 static function to get the scale factor needed to reach the native resolution, and we
 then pass that into the {{domxref("XRWebGLLayer.XRWebGLLayer", "WebGLLayer()")}}

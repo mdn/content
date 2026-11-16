@@ -48,7 +48,7 @@ A {{jsxref("Promise")}} that fulfills with a value of `undefined`.
 
 ## Examples
 
-Our [`FileSystemHandle.remove()` demo](https://filesystemhandle-remove.glitch.me/) (see the [source code](https://glitch.com/edit/#!/filesystemhandle-remove)) is a file creator app. You can enter text into the {{htmlelement("textarea")}} and press the "Save file" {{htmlelement("button")}}, and the app will open a file picker allowing you to save that text onto your local file system in a text file of your choice. You can also choose to delete files you create.
+Our [`FileSystemHandle.remove()` demo](https://mdn.github.io/dom-examples/file-system-api/filesystemhandle-remove/) (see the [source code](https://github.com/mdn/dom-examples/tree/main/file-system-api/filesystemhandle-remove)) is a file creator app. You can enter text into the {{htmlelement("textarea")}} and press the "Save file" {{htmlelement("button")}}, and the app will open a file picker allowing you to save that text onto your local file system in a text file of your choice. You can also choose to delete files you create.
 
 It doesn't allow you to view the content of created files, and it doesn't stay in sync with the underlying file system on page reloads/closes. This means that files created by the app will still exist on the file system if you don't choose to delete them before reloading or closing the tab.
 
@@ -64,10 +64,10 @@ When the "Delete" button is pressed, the `deleteFile()` function is run, which l
 ```js
 async function deleteFile(e) {
   for (const handle of savedFileRefs) {
-    if (handle.name === e.target.id + ".txt") {
+    if (handle.name === `${e.target.id}.txt`) {
       await handle.remove();
       savedFileRefs = savedFileRefs.filter(
-        (handle) => handle.name !== e.target.id + ".txt",
+        (handle) => handle.name !== `${e.target.id}.txt`,
       );
       e.target.parentElement.parentElement.removeChild(e.target.parentElement);
     }
@@ -93,4 +93,3 @@ This feature is not part of any specification, but may become standard in the fu
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [FileSystemHandle.remove() demo](https://filesystemhandle-remove.glitch.me/)

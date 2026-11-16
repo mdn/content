@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.focusout_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`focusout`** event fires when an element has lost focus, after the {{domxref("Element/blur_event", "blur")}} event. The two events differ in that `focusout` bubbles, while `blur` does not.
 
@@ -16,10 +16,16 @@ The `focusout` event is not cancelable.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("focusout", (event) => {});
+```js-nolint
+addEventListener("focusout", (event) => { })
+```
+
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onfocusout = (event) => { }
 ```
 
 ## Event type
@@ -27,13 +33,6 @@ addEventListener("focusout", (event) => {});
 A {{domxref("FocusEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("FocusEvent")}}
-
-## Event properties
-
-_This interface also inherits properties from its parent {{domxref("UIEvent")}}, and indirectly from {{domxref("Event")}}_.
-
-- {{domxref("FocusEvent.relatedTarget")}}
-  - : The element receiving focus, if any.
 
 ## Examples
 

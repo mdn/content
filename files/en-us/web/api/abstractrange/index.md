@@ -58,7 +58,7 @@ const contents = range.cloneContents();
 document.body.appendChild(contents);
 ```
 
-This example creates a new range, `range`, and sets its starting point to the third child node of the first element whose class is `elementclass`. The end point is set to be the middle of the first child of the span, and then the range is used to copy the contents of the range.
+This example creates a new range, `range`, and sets its starting point to the third child node of the first element. The end point is set to be the middle of the first child of the span, and then the range is used to copy the contents of the range.
 
 ### Ranges and the hierarchy of the DOM
 
@@ -75,7 +75,7 @@ To illustrate this, consider the HTML below:
 ```html
 <div class="container">
   <div class="header">
-    <img src="" class="sitelogo" />
+    <img src="..." alt="" class="sitelogo" />
     <h1>The Ultimate Website</h1>
   </div>
   <article>

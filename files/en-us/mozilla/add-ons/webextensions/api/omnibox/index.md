@@ -3,9 +3,8 @@ title: omnibox
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox
 page-type: webextension-api
 browser-compat: webextensions.api.omnibox
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Enables extensions to implement customized behavior when the user types into the browser's address bar.
 

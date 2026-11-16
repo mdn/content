@@ -8,9 +8,9 @@ browser-compat: api.URL.protocol
 
 {{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-The **`protocol`** property of the {{domxref("URL")}} interface
-is a string representing the protocol scheme of the URL, including the
-final `':'`.
+The **`protocol`** property of the {{domxref("URL")}} interface is a string containing the protocol or scheme of the URL, including the final `":"`.
+
+This property can be set to change the protocol of the URL. A `":"` is appended to the provided string if not provided. The provided scheme has to be compatible with the rest of the URL to be considered valid.
 
 ## Value
 
