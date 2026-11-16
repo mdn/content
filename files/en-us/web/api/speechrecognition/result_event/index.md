@@ -8,7 +8,8 @@ browser-compat: api.SpeechRecognition.result_event
 
 {{APIRef("Web Speech API")}}
 
-The **`result`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when the speech recognition service returns a result — a word or phrase has been positively recognized and this has been communicated back to the app
+The **`result`** event of the {{domxref("SpeechRecognition")}} interface is fired when the speech recognition service returns a result.
+This can be a final result, or an interim result that may still change (if {{domxref("SpeechRecognition.interimResults", "interimResults")}} is `true`).
 
 ## Syntax
 

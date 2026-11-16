@@ -30,7 +30,7 @@ Grammar is defined using [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (
 
 - {{domxref("SpeechGrammarList.item()")}} {{deprecated_inline}}
   - : Standard getter — allows individual {{domxref("SpeechGrammar")}} objects to be retrieved from the `SpeechGrammarList` using array syntax.
-- {{domxref("SpeechGrammarList.addFromURI()")}} {{deprecated_inline}}
+- {{domxref("SpeechGrammarList.addFromUri()")}} {{deprecated_inline}}
   - : Takes a grammar present at a specific URI and adds it to the `SpeechGrammarList` as a new {{domxref("SpeechGrammar")}} object.
 - {{domxref("SpeechGrammarList.addFromString()")}} {{deprecated_inline}}
   - : Adds a grammar in a string to the `SpeechGrammarList` as a new {{domxref("SpeechGrammar")}} object.

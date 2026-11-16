@@ -42,7 +42,7 @@ bindBuffer(target, buffer)
       - : Buffer used for pixel transfer operations.
 
 - `buffer`
-  - : A {{domxref("WebGLBuffer")}} to bind.
+  - : A {{domxref("WebGLBuffer")}} to bind, or `null` to unbind the object currently bound to the specified target.
 
 ### Return value
 

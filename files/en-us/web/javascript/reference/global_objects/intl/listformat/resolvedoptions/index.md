@@ -53,7 +53,7 @@ A new object with properties reflecting the options computed during the initiali
 ```js
 const deListFormatter = new Intl.ListFormat("de-DE", { style: "short" });
 
-const usedOptions = de.resolvedOptions();
+const usedOptions = deListFormatter.resolvedOptions();
 console.log(usedOptions.locale); // "de-DE"
 console.log(usedOptions.style); // "short"
 console.log(usedOptions.type); // "conjunction" (the default value)

@@ -60,9 +60,9 @@ These properties are defined on `Intl.Locale.prototype` and shared by all `Intl.
 - {{jsxref("Intl/Locale/baseName", "Intl.Locale.prototype.baseName")}}
   - : Returns basic, core information about the `Locale` in the form of a substring of the complete data string.
 - {{jsxref("Intl/Locale/calendar", "Intl.Locale.prototype.calendar")}}
-  - : Returns the part of the `Locale` that indicates the Locale's calendar era.
+  - : Returns the part of the `Locale` that indicates the Locale's calendar type.
 - {{jsxref("Intl/Locale/caseFirst", "Intl.Locale.prototype.caseFirst")}}
-  - : Returns whether case is taken into account for the locale's collation rules.
+  - : Returns whether upper case or lower case is sorted first in the locale's collation rules.
 - {{jsxref("Intl/Locale/collation", "Intl.Locale.prototype.collation")}}
   - : Returns the collation type for the `Locale`, which is used to order strings according to the locale's rules.
 - {{jsxref("Object/constructor", "Intl.Locale.prototype.constructor")}}

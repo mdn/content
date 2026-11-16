@@ -20,7 +20,7 @@ isTexture(texture)
 ### Parameters
 
 - `texture`
-  - : A {{domxref("WebGLTexture")}} to check.
+  - : A {{domxref("WebGLTexture")}} to check. Passing `null` returns `false`.
 
 ### Return value
 

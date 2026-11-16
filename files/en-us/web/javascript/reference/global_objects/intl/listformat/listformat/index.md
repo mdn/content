@@ -106,7 +106,7 @@ console.log(new Intl.ListFormat("en-US", { type: "conjunction" }).format(list));
 
 ### Unit formatting
 
-Use `style: "unit"` to format the list items as a compound unit. In fact, {{jsxref("Intl.DurationFormat")}} uses unit-style list formatting under the hood to format durations.
+Use `type: "unit"` to format the list items as a compound unit. In fact, {{jsxref("Intl.DurationFormat")}} uses unit-style list formatting under the hood to format durations.
 
 ```js
 const marathon = [
@@ -157,7 +157,7 @@ const marathon = [
 
 function formatDistance(locale, distance, style) {
   return new Intl.ListFormat(locale, { type: "unit", style }).format(
-    marathon.map((component) =>
+    distance.map((component) =>
       component[0].toLocaleString(locale, {
         style: "unit",
         unit: component[1],

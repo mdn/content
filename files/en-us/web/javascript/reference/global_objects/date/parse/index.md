@@ -65,7 +65,7 @@ Date.parse("2019-01-01T00:00:00.000Z");
 Date.parse("2019-01-01T00:00:00.000+00:00");
 ```
 
-The following call, which does not specify a time zone will be set to 2019-01-01 at 00:00:00 in the local timezone of the system, because it has both date and time.
+The following call, which does not specify a time zone, will be set to 2019-01-01 at 00:00:00 in the local timezone of the system, because it has both date and time.
 
 ```js
 Date.parse("2019-01-01T00:00:00");
@@ -118,7 +118,7 @@ Here are some more examples of non-standard date strings. Browsers are very leni
 </tr>
 <tr>
 <td><code>999</code> (three-/four-digit)</td>
-<td colspan="3">-30641733102000 (Jan 01 0999)</td>
+<td colspan="3">-30641760000000 (Jan 01 0999)</td>
 </tr>
 <tr>
 <td rowspan="4">Date strings that use different separators</td>
@@ -185,13 +185,13 @@ Here are some more examples of non-standard date strings. Browsers are very leni
 <td colspan="3">1393718400000</td>
 </tr>
 <tr>
-<td rowspan="5">Extraneous characters after the month name</td>
+<td rowspan="3">Extraneous characters after the month name</td>
 <td><code>04 Dec 1995</code><br><code>04 Decem 1995</code><br><code>04 December 1995</code></td>
-<td colspan="3">818031600000</td>
+<td colspan="3">818035200000</td>
 </tr>
 <tr>
 <td><code>04 DecFoo 1995</code></td>
-<td colspan="3">818031600000<br>Only the first three characters are read.<br>Firefox ≤121 reads up to the valid month name, thus returning NaN when it sees "F".</td>
+<td colspan="3">818035200000<br>Only the first three characters are read.<br>Firefox ≤121 reads up to the valid month name, thus returning NaN when it sees "F".</td>
 </tr>
 <tr>
 <td><code>04 De 1995</code></td>
