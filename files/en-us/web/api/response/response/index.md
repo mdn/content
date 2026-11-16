@@ -45,6 +45,16 @@ new Response(body, options)
       - : Any headers you want to add to your response, contained within a {{domxref("Headers")}} object or object literal of {{jsxref("String")}} key/value pairs (see [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers) for a reference).
         By default this is empty.
 
+### Exceptions
+
+- {{jsxref("RangeError")}}
+  - : Thrown if `status` is not in the range `200` to `599`, inclusive.
+- {{jsxref("TypeError")}}
+  - : Thrown if:
+    - `statusText` contains characters that are not allowed in an HTTP status message.
+    - `headers` contains an invalid header name or value.
+    - `body` is not `null` and `status` is `204`, `205`, or `304`, which are statuses that must not have a body. Note that an empty string is not `null`, so `new Response("", { status: 204 })` throws.
+
 ## Examples
 
 In our [Fetch Response example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) (see [Fetch Response live](https://mdn.github.io/dom-examples/fetch/fetch-response/))
