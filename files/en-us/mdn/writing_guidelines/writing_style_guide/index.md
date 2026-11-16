@@ -26,7 +26,9 @@ The following subsections provide the recommendations to achieve this:
 - [Include relevant examples](#include_relevant_examples)
 - [Provide a descriptive introduction](#provide_a_descriptive_introduction)
 - [Use inclusive language](#use_inclusive_language)
+- [Use accessible language](#use_accessible_language)
 - [Write with SEO in mind](#write_with_seo_in_mind)
+- [Own your writing](#own_your_writing)
 
 ### Consider your target audience
 
@@ -193,6 +195,12 @@ The following checklist is good to keep in mind while writing and reviewing cont
     > Likewise, **do not** add repetitive, unhelpful material or blobs of keywords within the actual page, in an attempt to improve the page's size and search ranking. This does more harm than good, both to content readability and to our search results.
 
 - **Focus on topic content**: It is far better to write content around the topic of the page than a specific keyword. It is highly likely that there will be many keywords you could include for a given topic; in fact, many SEOs compile a list of 5-100 different keywords (varying between short, medium, and long-tail keywords) to include within their article, depending on the length. Doing so will diversify your wording, leading to less repetition.
+
+### Own your writing
+
+Whatever tools you use to help you write, you are responsible for the result.
+A human must review all prose before it is submitted.
+Edit the text to follow the [three Cs of writing](#consider_the_three_cs_of_writing) and check that it is technically accurate.
 
 ## Writing style
 

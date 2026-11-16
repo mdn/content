@@ -8,9 +8,7 @@ browser-compat: api.Element.replaceWith
 
 {{APIRef("DOM")}}
 
-The **`Element.replaceWith()`** method replaces this
-`Element` in the children list of its parent with a set of
-{{domxref("Node")}} objects or strings. Strings are inserted as equivalent {{domxref("Text")}} nodes.
+The **`replaceWith()`** method of the {{domxref("Element")}} interface replaces this `Element` in the children list of its parent with a set of {{domxref("Node")}} objects or strings. Strings are inserted as equivalent {{domxref("Text")}} nodes. Nothing happens if {{domxref("Node.parentNode", "parentNode")}} is `null`.
 
 ## Syntax
 
@@ -23,7 +21,7 @@ replaceWith(param1, param2, /* …, */ paramN)
 ### Parameters
 
 - `param1`, …, `paramN`
-  - : A set of {{domxref("Node")}} objects or strings to replace.
+  - : A set of {{domxref("Node")}} objects or strings to insert.
 
 ### Return value
 

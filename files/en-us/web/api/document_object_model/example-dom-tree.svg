@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440">
+  <title>A document represented as a DOM tree</title>
+  <desc>Document contains HTML, which has HEAD and BODY children. HEAD contains TITLE, with the text "My Document". BODY contains H1, with the text "Header", and P, with the text "Paragraph".</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M1 1 7 4 1 7" fill="none" stroke="#687582" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </marker>
+  </defs>
+  <rect width="640" height="440" fill="#fff" />
+  <g fill="none" stroke="#687582" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M320 68V100" />
+    <path d="M300 148 140 180" />
+    <path d="M340 148 440 180" />
+    <path d="M140 228V260" />
+    <path d="M420 228 350 260" />
+    <path d="M460 228 530 260" />
+    <path d="M140 308V360" />
+    <path d="M350 308V360" />
+    <path d="M530 308V360" />
+  </g>
+  <rect x="248" y="24" width="144" height="44" rx="6" fill="#eef1f5" stroke="#687582" stroke-width="1.5" />
+  <g fill="#e7f6f5" stroke="#26847f" stroke-width="1.5">
+    <rect x="260" y="104" width="120" height="44" rx="6" />
+    <rect x="80" y="184" width="120" height="44" rx="6" />
+    <rect x="380" y="184" width="120" height="44" rx="6" />
+    <rect x="80" y="264" width="120" height="44" rx="6" />
+    <rect x="290" y="264" width="120" height="44" rx="6" />
+    <rect x="470" y="264" width="120" height="44" rx="6" />
+  </g>
+  <g fill="#f5f6f8" stroke="#a6afb8" stroke-width="1.5">
+    <rect x="50" y="364" width="180" height="48" rx="24" />
+    <rect x="280" y="364" width="140" height="48" rx="24" />
+    <rect x="450" y="364" width="160" height="48" rx="24" />
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">
+    <text x="320" y="53" fill="#26323d">Document</text>
+    <g fill="#165d5a" font-weight="600">
+      <text x="320" y="133">HTML</text>
+      <text x="140" y="213">HEAD</text>
+      <text x="440" y="213">BODY</text>
+      <text x="140" y="293">TITLE</text>
+      <text x="350" y="293">H1</text>
+      <text x="530" y="293">P</text>
+    </g>
+    <g fill="#26323d" font-size="18">
+      <text x="140" y="394">"My Document"</text>
+      <text x="350" y="394">"Header"</text>
+      <text x="530" y="394">"Paragraph"</text>
+    </g>
+  </g>
+</svg>

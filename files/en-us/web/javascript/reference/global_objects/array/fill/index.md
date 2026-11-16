@@ -133,7 +133,7 @@ console.log(Array.prototype.fill.call(arrayLike, 1));
 
 ## See also
 
-- [Polyfill of `Array.prototype.fill` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.fill` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("TypedArray.prototype.fill()")}}

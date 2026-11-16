@@ -76,7 +76,7 @@ If there is more than one `complementary` landmark role or {{HTMLElement('aside'
 
 #### Redundant descriptions
 
-Screen readers will announce the type of role the landmark is. Because of this, you do not need to describe what the landmark is in its label. For example, a declaration of `role="complementary"` with an of `aria-label="Sidebar"` may be announced redundantly as, "complementary sidebar".
+Screen readers will announce the type of role the landmark is. Because of this, you do not need to describe what the landmark is in its label. For example, a declaration of `role="complementary"` with an `aria-label="Sidebar"` may be announced redundantly as, "complementary sidebar".
 
 ### Added benefits
 

@@ -59,7 +59,7 @@ The discrete types currently registered with the IANA are:
   - : Any kind of binary data that doesn't fall explicitly into one of the other types;
     either data that will be executed or interpreted in some way or binary data that requires a specific application or category of application to use.
     Generic binary data (or binary data whose true type is unknown) is `application/octet-stream`.
-    Other common examples include `application/pdf`, `application/pkcs8`, and `application/zip`.
+    Other common examples include `application/pdf`, `application/pkcs8`, `application/wasm`, and `application/zip`.
     [(See application type registry at IANA)](https://www.iana.org/assignments/media-types#application)
 - `audio`
   - : Audio or music data. Examples include `audio/mpeg`,
@@ -253,9 +253,7 @@ The following `<form>`:
   enctype="multipart/form-data">
   <label>Name: <input name="myTextField" value="Test" /></label>
   <label><input type="checkbox" name="myCheckBox" /> Check</label>
-  <label>
-    Upload file: <input type="file" name="myFile" value="test.txt" />
-  </label>
+  <label> Upload file: <input type="file" name="myFile" /> </label>
   <button>Send the file</button>
 </form>
 ```

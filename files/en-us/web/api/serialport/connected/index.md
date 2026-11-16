@@ -10,6 +10,10 @@ browser-compat: api.SerialPort.connected
 
 The **`connected`** read-only property of the {{domxref("SerialPort")}} interface returns a boolean value that indicates whether the port is [logically connected](/en-US/docs/Web/API/SerialPort/connect_event#description) to the device.
 
+## Value
+
+A boolean — `true` if the port is logically connected, and `false` if not.
+
 ## Description
 
 When a wireless device goes out of range of the host, any wireless serial port opened by a web app automatically closes, even though it stays logically connected. In such cases, the web app could attempt to reopen the port using {{domxref("SerialPort.open()")}}.
@@ -32,10 +36,6 @@ for (const port of ports) {
   }
 }
 ```
-
-## Value
-
-A boolean — `true` if the port is logically connected, and `false` if not.
 
 ## Examples
 

@@ -35,6 +35,8 @@ requestDevice(options)
         - `subclassCode`
         - `protocolCode`
         - `serialNumber`
+    - `exclusionFilters` {{optional_inline}}
+      - : An array of filter objects representing devices to exclude from the pairing flow. These objects have the same properties as those in `filters`. Exclusion takes priority over inclusion.
 
 ### Return value
 
@@ -45,6 +47,8 @@ A {{JSxRef("Promise")}} that resolves with an instance of {{DOMxRef("USBDevice")
 [Transient user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
+
+### Requesting specific USB devices
 
 The following example looks for one of two USB devices. Notice that two product IDs are
 specified. Both are passed to `requestDevice()`. This triggers a user-agent
@@ -64,6 +68,24 @@ const filters = [
 ];
 navigator.usb
   .requestDevice({ filters })
+  .then((usbDevice) => {
+    console.log(`Product name: ${usbDevice.productName}`);
+  })
+  .catch((e) => {
+    console.error(`There is no device. ${e}`);
+  });
+```
+
+### Excluding devices
+
+The following example requests a device with vendor ID `0x1209`; it excludes devices with that vendor ID that have the product ID `0xa850`:
+
+```js
+navigator.usb
+  .requestDevice({
+    filters: [{ vendorId: 0x1209 }],
+    exclusionFilters: [{ vendorId: 0x1209, productId: 0xa850 }],
+  })
   .then((usbDevice) => {
     console.log(`Product name: ${usbDevice.productName}`);
   })

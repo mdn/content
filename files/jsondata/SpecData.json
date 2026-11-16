@@ -1111,7 +1111,7 @@
   },
   "Long Tasks": {
     "name": "Long Tasks API 1",
-    "url": "https://w3c.github.io/longtasks/",
+    "url": "https://wicg.github.io/longtasks/",
     "status": "WD"
   },
   "Magnetometer": {

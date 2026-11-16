@@ -8,7 +8,7 @@ browser-compat: api.XMLHttpRequest.upload
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-The {{domxref("XMLHttpRequest")}} `upload` property returns an {{domxref("XMLHttpRequestUpload")}} object that can be observed to monitor an upload's progress.
+The **`upload`** read-only property of the {{domxref("XMLHttpRequest")}} interface returns an {{domxref("XMLHttpRequestUpload")}} object that can be observed to monitor an upload's progress.
 
 It is an opaque object, but because it's also an {{domxref("XMLHttpRequestEventTarget")}}, event listeners can be attached to track its process.
 

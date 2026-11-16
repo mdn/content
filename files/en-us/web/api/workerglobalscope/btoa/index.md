@@ -58,7 +58,7 @@ For more information and workarounds see [`Window.btoa()`](/en-US/docs/Web/API/W
 
 ## See also
 
-- [A polyfill of `btoa`](https://github.com/zloirock/core-js#base64-utility-methods) is available in [`core-js`](https://github.com/zloirock/core-js)
+- [A polyfill of `btoa`](https://core-js.io/docs/features/web-standards/atob-btoa) is available in [`core-js`](https://core-js.io/)
 - [`data` URLs](/en-US/docs/Web/URI/Reference/Schemes/data)
 - {{domxref("WorkerGlobalScope.atob()")}}
 - {{domxref("Window.btoa()")}}: the same method, but in window scopes.

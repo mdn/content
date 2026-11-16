@@ -15,9 +15,9 @@ An `SVGStringList` object is indexable and can be accessed like an array using [
 
 ## Instance properties
 
-- {{domxref("SVGStringList.length", "length")}}
+- {{domxref("SVGStringList.length", "length")}} {{ReadOnlyInline}}
   - : The number of items in the list.
-- {{domxref("SVGStringList.numberOfItems", "numberOfItems")}}
+- {{domxref("SVGStringList.numberOfItems", "numberOfItems")}} {{ReadOnlyInline}}
   - : The number of items in the list.
 
 ## Instance methods

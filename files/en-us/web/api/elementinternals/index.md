@@ -82,7 +82,7 @@ The `ElementInternals` interface also includes the following properties.
   - : A string reflecting the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
 - {{domxref("ElementInternals.ariaModal")}}
   - : A string reflecting the [`aria-modal`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal) attribute, which indicates whether an element is modal when displayed.
-- {{domxref("ElementInternals.ariaMultiline")}}
+- {{domxref("ElementInternals.ariaMultiLine")}}
   - : A string reflecting the [`aria-multiline`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline) attribute, which indicates whether a text box accepts multiple lines of input or only a single line.
 - {{domxref("ElementInternals.ariaMultiSelectable")}}
   - : A string reflecting the [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable) attribute, which indicates that the user may select more than one item from the current selectable descendants.

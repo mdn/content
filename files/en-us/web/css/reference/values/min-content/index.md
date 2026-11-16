@@ -50,7 +50,7 @@ grid-template-columns: 200px 1fr min-content;
 
 #### Result
 
-{{EmbedLiveSample("Using_min-content_for_box_sizing", "100%", 200)}}
+{{EmbedLiveSample("sizing_boxes_with_min-content", "100%", 200)}}
 
 ### Sizing grid columns with min-content
 

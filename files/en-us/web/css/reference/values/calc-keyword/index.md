@@ -49,10 +49,6 @@ Examples of how these rules apply are shown in the [Infinity, NaN, and division 
 > It's rare to need to use `infinity` as an argument in `calc()`, but it can be used to avoid hardcoded "magic numbers" or making sure a certain value is always larger than another value.
 > It may be useful if you need to make it obvious that a property has "the largest possible value" for that data type.
 
-### Formal syntax
-
-{{CSSSyntax}}
-
 ## Description
 
 Mathematical constants can only be used inside [CSS math functions](/en-US/docs/Web/CSS/Reference/Values/Functions#math_functions) for calculations. Math constants are not CSS keywords, but if they are used outside of a calculation, they're treated like any other keyword.
@@ -68,7 +64,7 @@ Both `infinity` and `NaN` are slightly different, they are considered as degener
 While not technically numbers, they act as {{CSSxRef("number")}} values, so to get an infinite {{CSSxRef("length")}}, for example, requires an expression like `calc(infinity * 1px)`.
 
 The `infinity` and `NaN` values are included mostly to make serialization simpler and more obvious, but can be used to indicate a "largest possible value", since an infinite value is clamped to the allowed range.
-It's rare for this to be reasonable, but when using infinity its much simpler than just putting an enormous number in a stylesheet or hardcoding magic numbers.
+It's rare for this to be reasonable, but when using infinity it's much simpler than just putting an enormous number in a stylesheet or hardcoding magic numbers.
 
 All constants are case-insensitive except for `NaN`, which makes `calc(Pi)`, `calc(E)` and `calc(InFiNiTy)` valid:
 
@@ -92,6 +88,10 @@ nan
 Nan
 NAN
 ```
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Examples
 

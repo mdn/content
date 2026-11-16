@@ -2,12 +2,10 @@
 title: CSSFunctionDescriptors
 slug: Web/API/CSSFunctionDescriptors
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.CSSFunctionDescriptors
 ---
 
-{{ APIRef("CSSOM") }}{{SeeCompatTable}}
+{{ APIRef("CSSOM") }}
 
 The **`CSSFunctionDescriptors`** interface of the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) represents the descriptors contained within a set of CSS declarations represented by a {{domxref("CSSFunctionDeclarations")}} object.
 

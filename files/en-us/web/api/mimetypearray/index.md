@@ -15,7 +15,7 @@ This interface was an [attempt to create an unmodifiable list](https://stackover
 
 ## Instance properties
 
-- {{domxref("MimeTypeArray.length")}} {{Deprecated_Inline}}
+- {{domxref("MimeTypeArray.length")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : The number of items in the array.
 
 ## Instance methods

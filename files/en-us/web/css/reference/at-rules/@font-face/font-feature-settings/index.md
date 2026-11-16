@@ -83,7 +83,7 @@ p {
 
 #### Result
 
-{{EmbedLiveSample("Enabling swash glyphs using the @font-face rule", 0, 230)}}
+{{EmbedLiveSample("enabling_swash_glyphs_using_the_font-face_at-rule", 0, 230)}}
 
 Line 1 shows the default ornate design of the [MonteCarlo](https://github.com/googlefonts/monte-carlo) font, and line 2 shows the default glyphs being replaced with [swash](https://learn.microsoft.com/en-ca/typography/opentype/spec/features_pt#tag-swsh) glyphs.
 

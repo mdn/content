@@ -142,6 +142,14 @@ Click the button in this example to decrement the {{HTMLElement("input/number", 
 <input type="button" value="Decrement" id="theButton" />
 ```
 
+### CSS
+
+```css
+input:invalid {
+  border: red solid 3px;
+}
+```
+
 ### JavaScript
 
 ```js
@@ -162,14 +170,6 @@ function stepOnDown() {
     // or without a parameter. Try it with 0, 5, -2, etc.
     input.stepDown();
   }
-}
-```
-
-### CSS
-
-```css
-input:invalid {
-  border: red solid 3px;
 }
 ```
 

@@ -19,6 +19,10 @@ transformation to documents.
 - {{domxref("XSLTProcessor.XSLTProcessor", "XSLTProcessor()")}} {{deprecated_inline}}
   - : Create a new `XSLTProcessor`.
 
+## Instance properties
+
+_This are no properties for this interface._
+
 ## Instance methods
 
 - {{domxref("XSLTProcessor.importStylesheet()")}} {{deprecated_inline}}
@@ -42,10 +46,6 @@ transformation to documents.
     The `XSLTProcessor` will then use the default values specified in the XSLT stylesheet.
 - {{domxref("XSLTProcessor.reset()")}} {{deprecated_inline}}
   - : Removes all parameters and stylesheets from the `XSLTProcessor`.
-
-## Instance properties
-
-_This are no properties for this interface._
 
 ## Examples
 
@@ -105,7 +105,7 @@ const fragment = xsltProcessor.transformToFragment(xmlRef, document);
 
 ### Basic Example
 
-The basic example will load an XML file and apply a XSL transformation on it. These are the same files used in the [Generating HTML](/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT#generating_html) example. The XML file describes an article and the XSL file formats the information for display.
+The basic example will load an XML file and apply an XSL transformation on it. These are the same files used in the [Generating HTML](/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT#generating_html) example. The XML file describes an article and the XSL file formats the information for display.
 
 #### XML
 

@@ -34,13 +34,13 @@ Most notably, it cannot be used:
 
 - At the top level of a script, because script scopes are persistent.
 - At the top level of a [`switch`](/en-US/docs/Web/JavaScript/Reference/Statements/switch) statement.
-- In the initializer of a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop. Because the loop variable can only be a string or symbol, this doesn't make sense.
+- In the initializer of a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop. Because the loop variable can only be a string, this doesn't make sense.
 
 A `using` declares a disposable resource that's tied to the lifetime of the variable's scope (block, function, module, etc.). When the scope exits, the resource is disposed of synchronously. The variable is allowed to have value `null` or `undefined`, so the resource can be optionally present.
 
 When the variable is first declared and its value is non-nullish, a _disposer_ is retrieved from the object. If the `[Symbol.dispose]` property doesn't contain a function, a `TypeError` is thrown. This disposer is saved to the scope.
 
-When the variable goes out of scope, the disposer is called. If the scope contains multiple `using` or {{jsxref("Statements/await_using", "await using")}} declarations, all disposers are run in the reverse order of declaration, regardless of the type of declaration. All disposers are guaranteed to run (much like the `finally` block in {{jsxref("Statements/try...catch", "try...catch...finally")}}). All errors thrown during disposal, including the initial error that caused the scope exit (if applicable), are all aggregated inside one {{jsxref("SuppressedError")}}, with each earlier exception as the `suppressed` property and the later exception as the `error` property. This `SuppressedError` is thrown after disposal is complete.
+When the variable goes out of scope, the disposer is called. If the scope contains multiple `using` or {{jsxref("Statements/await_using", "await using")}} declarations, all disposers are run in the reverse order of declaration, regardless of the type of declaration. All disposers are guaranteed to run (much like the `finally` block in {{jsxref("Statements/try...catch", "try...catch...finally")}}). If multiple errors are thrown, including the initial error that caused the scope exit (if applicable), they are aggregated inside one {{jsxref("SuppressedError")}}, with each earlier exception as the `suppressed` property and the later exception as the `error` property. The `SuppressedError` is thrown after disposal is complete.
 
 `using` ties resource management to lexical scopes, which is both convenient and sometimes confusing. There are many ways to preserve the variable's value when the variable itself is out of scope, so you may hold a reference to an already-disposed resource. See below for some examples where it may not behave how you expect. If you want to hand-manage resource disposal, while maintaining the same error handling guarantees, you can use {{jsxref("DisposableStack")}} instead.
 
@@ -213,7 +213,7 @@ Note that `_` is a normal identifier, but it's a convention to use it as a "thro
 
 ### Initialization and temporal dead zones
 
-`using` variables are subject to the same [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) restriction as `let` and `const` variables. This means that you can't access the variable before the initialization—the valid lifetime of the resource is strictly from its initialization to the end of its scope. This is enables [RAII](https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization)-style resource management.
+`using` variables are subject to the same [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) restriction as `let` and `const` variables. This means that you can't access the variable before the initialization—the valid lifetime of the resource is strictly from its initialization to the end of its scope. This enables [RAII](https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization)-style resource management.
 
 ```js
 let useResource;
@@ -290,9 +290,9 @@ You can inspect the error thrown in your browser's console. It has the following
 ```plain
 SuppressedError: An error was suppressed during disposal
   suppressed: SuppressedError: An error was suppressed during disposal
-    suppressed: Error: Can't dispose resource1
-    error: Error: Error in main block
-  error: Error: Can't dispose resource2
+    suppressed: Error: Error in main block
+    error: Error: Can't dispose resource2
+  error: Error: Can't dispose resource1
 ```
 
 As you can see, `error` contains all the errors that were thrown during disposal, as a {{jsxref("SuppressedError")}}. Each additional error is added as the `error` property, and the original error is added as the `suppressed` property.

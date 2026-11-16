@@ -14,13 +14,21 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("fetch", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onfetch = (event) => { }
 ```
+
+## Event type
+
+A {{domxref("FetchEvent")}}.
 
 ## Description
 
@@ -67,10 +75,6 @@ self.addEventListener("fetch", (event) => {
 
 If `respondWith()` is not called in the handler, then the user agent automatically makes the original network request.
 For example, in the code above, all requests that do not match `pattern1` or `pattern2` are made as if the service worker did not exist.
-
-## Event type
-
-A {{domxref("FetchEvent")}}.
 
 ## Examples
 

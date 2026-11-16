@@ -14,17 +14,15 @@ The input value is automatically validated to ensure that it's either empty or a
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;url&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<form>
-  <label for="url">Enter an https:// URL:</label>
-  <input
-    type="url"
-    name="url"
-    id="url"
-    placeholder="https://example.com"
-    pattern="https://.*"
-    size="30"
-    required />
-</form>
+<label for="url">Enter an https:// URL:</label>
+<input
+  type="url"
+  name="url"
+  id="url"
+  placeholder="https://example.com"
+  pattern="https://.*"
+  size="30"
+  required />
 ```
 
 ```css interactive-example
@@ -295,6 +293,14 @@ The [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute 
   </label>
   <button>Submit</button>
 </form>
+```
+
+```js hidden live-sample___url-validation
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+});
 ```
 
 #### CSS

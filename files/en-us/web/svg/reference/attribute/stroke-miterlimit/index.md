@@ -96,7 +96,7 @@ The ratio of miter length (distance between the outer tip and the inner corner o
 
 For example, a miter limit of 1.414 converts miters to bevels for theta less than 90 degrees, a limit of 4.0 converts them for theta less than approximately 29 degrees, and a limit of 10.0 converts them for theta less than approximately 11.5 degrees.
 
-## Usage context
+## Usage notes
 
 <table class="properties">
   <tbody>

@@ -174,7 +174,7 @@ After the {{domxref("PaymentRequest.show()")}} method is invoked, a {{domxref("S
 
 ```js
 let paymentRequestEvent;
-let resolver;
+const resolver = Promise.withResolvers();
 let client;
 
 // `self` is the global object in service worker

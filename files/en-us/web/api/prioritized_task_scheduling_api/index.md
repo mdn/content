@@ -356,7 +356,7 @@ Priorities that are set in this way are [immutable](#mutable_and_immutable_task_
 
 Below we post two groups of three tasks, each member in reverse order of priority.
 The final task has the default priority.
-When run, each task simply logs it's expected order (we're not waiting on the result because we don't need to in order to show execution order).
+When run, each task simply logs its expected order (we're not waiting on the result because we don't need to in order to show execution order).
 
 ```js hidden
 let log = document.getElementById("log");

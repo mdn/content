@@ -15,9 +15,9 @@ An `SVGLengthList` object is indexable and can be accessed like an array using [
 
 ## Instance properties
 
-- {{domxref("SVGLengthList.length", "length")}}
+- {{domxref("SVGLengthList.length", "length")}} {{ReadOnlyInline}}
   - : The number of items in the list.
-- {{domxref("SVGLengthList.numberOfItems", "numberOfItems")}}
+- {{domxref("SVGLengthList.numberOfItems", "numberOfItems")}} {{ReadOnlyInline}}
   - : The number of items in the list.
 
 ## Instance methods

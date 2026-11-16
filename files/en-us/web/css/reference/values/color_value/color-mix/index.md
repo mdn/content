@@ -75,14 +75,20 @@ The `<polar-color-space>` category includes [`hsl`](/en-US/docs/Web/CSS/Referenc
 
 ### Default color space and interpolation method
 
-When mixing colors without a color space or hue interpolation method, the `oklab` color space is used, using `shorter` as the hue interpolation method.
+When mixing colors without specifying a color space, the `oklab` color space is used.
 
-The following three declarations are equivalent:
+The following two declarations are equivalent:
 
 ```css
 background-color: color-mix(red, blue);
 background-color: color-mix(in oklab, red, blue);
-background-color: color-mix(in oklab shorter hue, red, blue);
+```
+
+When using a polar color space such as `oklch`, the hue interpolation method defaults to `shorter hue`. The following two declarations are equivalent:
+
+```css
+background-color: color-mix(in oklch, red, blue);
+background-color: color-mix(in oklch shorter hue, red, blue);
 ```
 
 ### Color percentages
@@ -477,7 +483,7 @@ li:nth-child(6) {
 
 #### Result
 
-{{EmbedLiveSample("using_hue_interpolation_in_color_mix", "100%", 440)}}
+{{EmbedLiveSample("using_hue_interpolation_in_color-mix", "100%", 440)}}
 
 With `longer hue` the increments or decrements between colors will always be the same or larger than when using `shorter hue`. Use `increasing hue` or `decreasing hue` when the direction of the hue value change is more important than the length between values.
 

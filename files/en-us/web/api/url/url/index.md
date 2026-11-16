@@ -74,6 +74,9 @@ new URL("/en-US/docs", a);
 
 new URL("/en-US/docs", "https://developer.mozilla.org/fr-FR/toto");
 // => 'https://developer.mozilla.org/en-US/docs'
+
+new URL("https://example.com", "https://beispiel.de");
+// => 'https://example.com/'
 ```
 
 Here are some examples of invalid URLs:
@@ -114,5 +117,5 @@ new URL("//foo.example", "https://example.com");
 ## See also
 
 - {{domxref("URL.parse_static", "URL.parse()")}}, a non-throwing alternative to this constructor
-- [Polyfill of `URL` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [Polyfill of `URL` in `core-js`](https://core-js.io/docs/features/web-standards/url)
 - The interface it belongs to: {{domxref("URL")}}.

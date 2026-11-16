@@ -15,11 +15,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("message", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onmessage = (event) => { }
 ```
 
@@ -61,7 +65,7 @@ addEventListener("message", (event) => {
 });
 ```
 
-Alternatively, the script can listen for the message using `onmessage`:
+Alternatively, the script can listen for the message using `onmessage` (but note that this replaces other event listeners added using `onmessage`, if any):
 
 ```js
 // service-worker.js

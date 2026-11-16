@@ -195,7 +195,7 @@ Of course, if there is actual initialization code in the `Constructor` function,
 
 ## See also
 
-- [Polyfill of `Object.create` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.create` in `core-js`](https://core-js.io/docs/features/ecmascript/object)
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.prototype.isPrototypeOf()")}}

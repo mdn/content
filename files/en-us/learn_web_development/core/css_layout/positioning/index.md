@@ -41,7 +41,7 @@ Positioning allows you to take elements out of normal document flow and make the
 We'd like you to do the following exercises on your local computer. To get started, create a new HTML file on your local system and add the following content to it:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

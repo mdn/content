@@ -21,7 +21,7 @@ isTransformFeedback(transformFeedback)
 ### Parameters
 
 - `transformFeedback`
-  - : A {{domxref("WebGLTransformFeedback")}} object to test.
+  - : A {{domxref("WebGLTransformFeedback")}} object to test. Passing `null` returns `false`.
 
 ### Return value
 

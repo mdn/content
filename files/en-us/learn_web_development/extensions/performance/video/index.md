@@ -59,7 +59,7 @@ Your video editing software probably has a feature to reduce file size. If not, 
 Order video source from smallest to largest. For example, given video compressions in the formats at 10MB and 12MB, declare the 10MB resource first:
 
 ```html
-<video width="400" height="300" controls="controls">
+<video width="400" height="300" controls>
   <!-- WebM: 10 MB -->
   <source src="video.webm" type="video/webm" />
   <!-- MPEG-4/H.264: 12 MB -->
@@ -74,7 +74,7 @@ The browser downloads the first format it understands. The goal is to offer smal
 For hero-video or other video without audio, removing audio is smart.
 
 ```html
-<video autoplay="" loop="" muted playsinline="" id="hero-video">
+<video autoplay loop muted playsinline id="hero-video">
   <source src="banner_video.webm" type='video/webm; codecs="vp8, vorbis"' />
   <source src="web_banner.mp4" type="video/mp4" />
 </video>

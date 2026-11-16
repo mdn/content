@@ -38,7 +38,7 @@ It also extends the following {{domxref("PerformanceEntry")}} properties, qualif
 ## Instance methods
 
 - {{domxref("InteractionContentfulPaint.toJSON()")}} {{experimental_inline}}
-  - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `InteractionContentfulPaint` object.
+  - : Returns a JSON-serializable plain object representing the `InteractionContentfulPaint` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Description
 
@@ -62,7 +62,7 @@ The [Event Timing API](/en-US/docs/Web/API/PerformanceEventTiming) provides deta
 
 ### Observing interaction contentful paints
 
-In the following example, a {{domxref("PerformanceObserver")}} is registered to get the soft navigations. The `buffered` flag is used to access data from before observer creation.
+In the following example, a {{domxref("PerformanceObserver")}} is registered to get the interaction contentful paints. The `buffered` flag is used to access data from before observer creation.
 
 ```js
 const observer = new PerformanceObserver((list) => {
@@ -70,7 +70,7 @@ const observer = new PerformanceObserver((list) => {
     console.log("Interaction Contentful Paints:", entry.startTime, entry);
   }
 });
-observer.observe({ type: "interaction-contentful-paints", buffered: true });
+observer.observe({ type: "interaction-contentful-paint", buffered: true });
 ```
 
 ### Observing interaction contentful paints specific to a soft navigation
@@ -84,12 +84,12 @@ let currentNavigationInteractionId = 1045; // hardcoded in this example
 
 const observer = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {
-    if (entry.InteractionId === currentNavigationInteractionId) {
+    if (entry.interactionId === currentNavigationInteractionId) {
       console.log("Soft LCP candidate:", entry.startTime, entry);
     }
   }
 });
-observer.observe({ type: "interaction-contentful-paints", buffered: true });
+observer.observe({ type: "interaction-contentful-paint", buffered: true });
 ```
 
 ## Specifications

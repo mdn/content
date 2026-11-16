@@ -7,7 +7,7 @@ browser-compat: css.types.filter-function.blur
 sidebar: cssref
 ---
 
-The **`blur()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) applies a [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) to the input image. Its result is a {{cssxref("filter-function")}}.
+The **`blur()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) applies a [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) to the input image. It is used as a value for the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
 
 {{InteractiveExample("CSS Demo: blur()")}}
 
@@ -36,37 +36,25 @@ filter: blur(1.5rem);
 ## Syntax
 
 ```css
-blur()         /* No effect */
-blur(0)        /* No effect */
+/* No blur */
+blur()
+blur(0)
 
-blur(8px)      /* Blur with 8px radius */
-blur(1.17rem)  /* Blur with 1.17rem radius */
+/* Blur with 8px radius */
+blur(8px)
+
+/* Blur with 1.17rem radius */
+blur(1.17rem)
 ```
 
 ### Parameters
 
 - {{cssxref("length")}} {{Optional_Inline}}
-  - : Specifies the radius of the blur. It defines the value of the standard deviation to the Gaussian function, that is, how many pixels on the screen blend into each other. Therefore, a larger value will create more blur. A value of `0` leaves the input unchanged. The initial value for {{Glossary("interpolation")}} is `0`. Percentage values are invalid. The default value is `0`.
+  - : Specifies the radius of the blur. It defines the value of the standard deviation to the Gaussian function, that is, how many pixels on the screen blend into each other. Therefore, a larger value will create more blur. A value of `0` leaves the input unchanged. The initial value for {{Glossary("interpolation")}} is `0`. Percentage values and negative values are invalid. The default value is `0`.
 
-## SVG filter
+### Return value
 
-The SVG {{SVGElement("feGaussianBlur")}} filter element can also be used to blur content. The filter's {{SVGAttr("stdDeviation")}} attribute accepts up to two values enabling creating more complex blur values. To create an equivalent blur, we include one value for `stdDeviation`. This SVG effect can then be referenced by ID:
-
-```html
-<svg role="none">
-  <filter id="blur11">
-    <feGaussianBlur stdDeviation="1.1" edgeMode="duplicate" />
-  </filter>
-</svg>
-```
-
-The following declarations produce the same effect:
-
-```css
-filter: blur(1.1px);
-filter: url("#blur11"); /* with embedded SVG */
-filter: url("folder/fileName.svg#blur11"); /* external svg filter definition */
-```
+A {{cssxref("filter-function")}} value.
 
 ## Formal syntax
 
@@ -74,43 +62,57 @@ filter: url("folder/fileName.svg#blur11"); /* external svg filter definition */
 
 ## Examples
 
-This example shows three images: the image with a `blur()` filter function applied, the image with the equivalent SVG blur function applied, and the original images for comparison:
+### Using the SVG filter
 
-```css
-.filter {
-  filter: blur(3.5px);
-}
-```
+This example shows three images for comparison: an image with a `blur()` filter function applied, an image with the equivalent SVG filter applied, and the original image.
 
-```html
-<svg role="img" aria-label="Flag">
-  <filter id="blur">
-    <feGaussianBlur stdDeviation="3.5" edgeMode="duplicate" />
+#### SVG
+
+The SVG {{SVGElement("feGaussianBlur")}} filter element can also be used to blur content. We set the `stdDeviation` to the blur radius, then we can reference the SVG effect by the ID of the {{SVGElement("filter")}}:
+
+```html live-sample___svg-filter
+<svg height="0" role="none">
+  <filter id="blur35" color-interpolation-filters="sRGB">
+    <feGaussianBlur stdDeviation="3.5" />
   </filter>
-  <image
-    href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-    xlink:href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-    filter="url('#blur')" />
 </svg>
 ```
 
-```css hidden
-svg:not([height]) {
-  display: none;
+The following declarations produce the same effect:
+
+```css
+filter: blur(3.5px);
+filter: url("#blur35"); /* with embedded SVG */
+filter: url("fileName.svg#blur35"); /* external SVG */
+```
+
+#### CSS
+
+We include CSS that will blur elements based on their `css-filter` or `svg-filter` class:
+
+```css live-sample___svg-filter
+.css-filter {
+  filter: blur(3.5px);
 }
 
+.svg-filter {
+  filter: url("#blur35");
+}
+```
+
+```css hidden live-sample___svg-filter
 th,
 td {
   padding: 5px;
 }
 ```
 
-```html hidden
+```html hidden live-sample___svg-filter
 <table>
   <thead>
     <tr>
-      <th>Live example</th>
-      <th>SVG Equivalent</th>
+      <th><code>blur()</code> filter</th>
+      <th>SVG filter equivalent</th>
       <th>Original image</th>
     </tr>
   </thead>
@@ -118,20 +120,15 @@ td {
     <tr>
       <td>
         <img
-          class="filter"
+          class="css-filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="Pride flag" />
       </td>
       <td>
-        <svg id="svg" height="220" width="220" overflow="visible">
-          <filter id="svgBlur">
-            <feGaussianBlur stdDeviation="3.5" />
-          </filter>
-          <image
-            href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-            xlink:href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-            filter="url('#svgBlur')" />
-        </svg>
+        <img
+          class="svg-filter"
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
       </td>
       <td>
         <img
@@ -143,7 +140,7 @@ td {
 </table>
 ```
 
-{{EmbedLiveSample('blur','100%','280')}}
+{{EmbedLiveSample('svg-filter','100%','280')}}
 
 ## Specifications
 

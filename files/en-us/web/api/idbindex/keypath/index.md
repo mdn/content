@@ -8,8 +8,7 @@ browser-compat: api.IDBIndex.keyPath
 
 {{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
-The **`keyPath`** property of the {{domxref("IDBIndex")}}
-interface returns the [key path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) of the current index. If null, this index is not auto-populated.
+The **`keyPath`** read-only property of the {{domxref("IDBIndex")}} interface returns the [key path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) of the current index. If null, this index is not auto-populated.
 
 ## Value
 

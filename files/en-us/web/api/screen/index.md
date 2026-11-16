@@ -17,21 +17,21 @@ Note that browsers determine which screen to report as current by detecting whic
 
 _Also inherits properties from its parent {{domxref("EventTarget")}}_.
 
-- {{DOMxRef("Screen.availHeight")}}
+- {{DOMxRef("Screen.availHeight")}} {{ReadOnlyInline}}
   - : Specifies the height of the screen, in pixels, minus permanent or semipermanent user interface features displayed by the operating system, such as the Taskbar on Windows.
-- {{DOMxRef("Screen.availWidth")}}
+- {{DOMxRef("Screen.availWidth")}} {{ReadOnlyInline}}
   - : Returns the amount of horizontal space in pixels available to the window.
-- {{DOMxRef("Screen.colorDepth")}}
+- {{DOMxRef("Screen.colorDepth")}} {{ReadOnlyInline}}
   - : Returns the color depth of the screen.
-- {{DOMxRef("Screen.height")}}
+- {{DOMxRef("Screen.height")}} {{ReadOnlyInline}}
   - : Returns the height of the screen in pixels.
-- {{domxref("Screen.isExtended")}} {{experimental_inline}} {{securecontext_inline}}
+- {{domxref("Screen.isExtended")}} {{ReadOnlyInline}} {{experimental_inline}} {{securecontext_inline}}
   - : Returns `true` if the user's device has multiple screens, and `false` if not.
-- {{DOMxRef("Screen.orientation")}}
+- {{DOMxRef("Screen.orientation")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef("ScreenOrientation")}} instance associated with this screen.
-- {{DOMxRef("Screen.pixelDepth")}}
+- {{DOMxRef("Screen.pixelDepth")}} {{ReadOnlyInline}}
   - : Gets the bit depth of the screen.
-- {{DOMxRef("Screen.width")}}
+- {{DOMxRef("Screen.width")}} {{ReadOnlyInline}}
   - : Returns the width of the screen.
 - {{DOMxRef("Screen.mozEnabled")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Boolean. Setting to false will turn off the device's screen.

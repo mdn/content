@@ -38,15 +38,21 @@ isNaN(value)
 
 ### Return value
 
-`true` if the given value is {{jsxref("NaN")}} after being [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion); otherwise, `false`.
+`true` if the given value is {{jsxref("NaN")}} after being [coerced to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion).
 
 ## Description
 
 `isNaN()` is a function property of the global object.
 
-For number values, `isNaN()` tests if the number is the value [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN). When the argument to the `isNaN()` function is not of type [Number](/en-US/docs/Web/JavaScript/Guide/Data_structures#number_type), the value is first coerced to a number, and the resulting value is then compared against {{jsxref("NaN")}}.
+For number values, `isNaN()` tests if the number is the value [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN). When the argument to the `isNaN()` function is not of type [Number](/en-US/docs/Web/JavaScript/Guide/Data_structures#number_type), the value is first [coerced to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), and the resulting value is then compared against {{jsxref("NaN")}}.
 
-This behavior of `isNaN()` for non-numeric arguments can be confusing! For example, an empty string is coerced to 0, while a boolean is coerced to 0 or 1; both values are intuitively "not numbers", but they don't evaluate to `NaN`, so `isNaN()` returns `false`. Therefore, `isNaN()` answers neither the question "is the input the floating point {{jsxref("NaN")}} value" nor the question "is the input not a number".
+This behavior of `isNaN()` for non-numeric arguments can be confusing! For example:
+
+- [`null`](/en-US/docs/Web/JavaScript/Guide/Data_structures#null_type) is coerced to 0
+- an empty string is coerced to 0
+- a boolean is coerced to 0 or 1
+
+These values are intuitively "not numbers", but they don't evaluate to `NaN`, so `isNaN()` returns `false`. Therefore, `isNaN()` answers neither the question "is the input the floating point {{jsxref("NaN")}} value" nor the question "is the input not a number".
 
 {{jsxref("Number.isNaN()")}} is a more reliable way to test whether a value is the number value `NaN` or not. Alternatively, the expression `x !== x` can be used, and neither of the solutions is subject to the false positives that make the global `isNaN()` unreliable. To test if a value is a number, use [`typeof x === "number"`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof).
 

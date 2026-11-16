@@ -15,7 +15,7 @@ A stylesheet is associated to an `HTMLLinkElement` if `rel="stylesheet"` is used
 
 ## Value
 
-A {{DOMxRef("StyleSheet")}} object, or `null` if none is associated with the element.
+A {{DOMxRef("CSSStyleSheet")}} object, or `null` if none is associated with the element.
 
 ## Examples
 
@@ -23,7 +23,7 @@ A {{DOMxRef("StyleSheet")}} object, or `null` if none is associated with the ele
 <link rel="stylesheet" href="styles.css" />
 ```
 
-The `sheet` property of the `HTMLLinkElement` object will return the {{domxref("StyleSheet")}} object describing `styles.css`.
+The `sheet` property of the `HTMLLinkElement` object will return the {{domxref("CSSStyleSheet")}} object describing `styles.css`.
 
 ## Specifications
 

@@ -44,6 +44,7 @@ new Intl.PluralRules(locales, options)
     - `roundingPriority`
     - `roundingIncrement`
     - `roundingMode`
+    - `trailingZeroDisplay`
 
     These options are interpreted as if the `notation` option from `Intl.NumberFormat` is `"standard"` and `style` is `"decimal"`.
 
@@ -51,12 +52,14 @@ new Intl.PluralRules(locales, options)
 
 - {{jsxref("RangeError")}}
   - : Thrown if `locales` or `options` contain invalid values.
+- {{jsxref("TypeError")}}
+  - : Thrown if `roundingIncrement` is not `1` and is combined with either significant-digit rounding or a `roundingPriority` other than `"auto"`.
 
 ## Examples
 
 ### Basic usage
 
-In basic use without specifying a locale, a formatted string in the default locale and with default options is returned.
+In basic use without specifying a locale, `select()` returns a plural category for the default locale and with default options.
 This is useful to distinguish between singular and plural forms, e.g., "dog" and "dogs".
 
 ```js

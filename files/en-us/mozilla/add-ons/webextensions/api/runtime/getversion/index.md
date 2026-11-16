@@ -11,7 +11,7 @@ Returns the extension's version from the [`version`](/en-US/docs/Mozilla/Add-ons
 ## Syntax
 
 ```js-nolint
-let extensionVersion = await browser.runtime.getVersion()
+let extensionVersion = browser.runtime.getVersion()
 ```
 
 ### Parameters

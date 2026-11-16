@@ -3,14 +3,14 @@ title: "Request: duplex property"
 short-title: duplex
 slug: Web/API/Request/duplex
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Request.duplex
 ---
 
-{{APIRef("Fetch API")}}{{SeeCompatTable}}
+{{APIRef("Fetch API")}}
 
 The **`duplex`** read-only property of the {{domxref("Request")}} interface returns the duplex mode of the request, which determines whether the browser must send the entire request before processing the response.
+
+Although `duplex` can be passed as an option when constructing a `Request`, it is not currently exposed as a readable property on the resulting `Request` object in all browsers.
 
 ## Value
 
@@ -18,10 +18,6 @@ A string with the following possible value:
 
 - `"half"`
   - : The browser must send the entire request before processing the response.
-
-## Notes
-
-Although `duplex` can be passed as an option when constructing a `Request`, it is not currently exposed as a readable property on the resulting `Request` object in all browsers.
 
 ## Examples
 

@@ -16,6 +16,11 @@ The **`MediaSource`** interface of the {{domxref("Media Source Extensions API", 
 - {{domxref("MediaSource.MediaSource", "MediaSource()")}}
   - : Constructs and returns a new `MediaSource` object with no associated source buffers.
 
+## Static properties
+
+- {{domxref("MediaSource.canConstructInDedicatedWorker_static", "MediaSource.canConstructInDedicatedWorker")}} {{ReadOnlyInline}}
+  - : A boolean; returns `true` if `MediaSource` worker support is implemented, providing a low-latency feature detection mechanism.
+
 ## Instance properties
 
 - {{domxref("MediaSource.activeSourceBuffers")}} {{ReadOnlyInline}}
@@ -29,10 +34,10 @@ The **`MediaSource`** interface of the {{domxref("Media Source Extensions API", 
 - {{domxref("MediaSource.sourceBuffers")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("SourceBufferList")}} object containing the list of {{domxref("SourceBuffer")}} objects associated with this `MediaSource`.
 
-## Static properties
+## Static methods
 
-- {{domxref("MediaSource.canConstructInDedicatedWorker_static", "MediaSource.canConstructInDedicatedWorker")}} {{ReadOnlyInline}}
-  - : A boolean; returns `true` if `MediaSource` worker support is implemented, providing a low-latency feature detection mechanism.
+- {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}}
+  - : Returns a boolean value indicating whether the current user agent supports the given MIME type — this is, if it can successfully create {{domxref("SourceBuffer")}} objects for that MIME type.
 
 ## Instance methods
 
@@ -48,11 +53,6 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
   - : Removes the given {{domxref("SourceBuffer")}} from the {{domxref("MediaSource.sourceBuffers")}} list.
 - {{domxref("MediaSource.setLiveSeekableRange()")}}
   - : Sets the range that the user can seek to in the media element.
-
-## Static methods
-
-- {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}}
-  - : Returns a boolean value indicating whether the current user agent supports the given MIME type — this is, if it can successfully create {{domxref("SourceBuffer")}} objects for that MIME type.
 
 ## Events
 

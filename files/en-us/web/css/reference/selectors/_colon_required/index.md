@@ -14,11 +14,11 @@ The **`:required`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CS
 ```css interactive-example
 label {
   display: block;
-  margin-top: 1em;
+  margin-top: 0.5em;
 }
 
-.req {
-  color: red;
+fieldset {
+  margin-top: 0.5em;
 }
 
 *:required {
@@ -27,23 +27,36 @@ label {
 ```
 
 ```html interactive-example
-<form>
-  <label for="name">Name: <span class="req">*</span></label>
-  <input id="name" name="name" type="text" required />
+<label for="name">Name (required):</label>
+<input id="name" name="name" type="text" required />
 
-  <label for="birth">Date of Birth:</label>
-  <input id="birth" name="birth" type="date" />
+<label for="birth">Date of birth:</label>
+<input id="birth" name="birth" type="date" />
 
-  <label for="origin"
-    >How did you find out about us? <span class="req">*</span></label
-  >
-  <select id="origin" name="origin" required>
-    <option>Google</option>
-    <option>Facebook</option>
-    <option>Advertisement</option>
-  </select>
-  <p><span class="req">*</span> - Required field</p>
-</form>
+<label for="origin">How did you find out about us? (required)</label>
+<select id="origin" name="origin" required>
+  <option value="">Choose an option</option>
+  <option value="google">Google</option>
+  <option value="facebook">Facebook</option>
+  <option value="advertisement">Advertisement</option>
+</select>
+
+<fieldset>
+  <legend>Preferred contact method:</legend>
+  <label>
+    <input name="contact" type="radio" value="email" checked /> Email
+  </label>
+  <label><input name="contact" type="radio" value="phone" /> Phone</label>
+</fieldset>
+
+<label>
+  <input name="newsletter" type="checkbox" checked /> I want to subscribe to a
+  personalized newsletter.
+</label>
+<label>
+  <input name="privacy" type="checkbox" required /> I have read and I agree to
+  the Privacy Policy (required).
+</label>
 ```
 
 This pseudo-class is useful for highlighting fields that must have valid data before a form can be submitted.

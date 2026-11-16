@@ -295,7 +295,7 @@ Some mathematical concepts are sometimes written using fraction-like notations s
 </math>
 ```
 
-{{ EmbedLiveSample('Fraction_without_bar', 700, 200, "", "") }}
+{{ EmbedLiveSample('fractions_without_bar', 700, 200, "", "") }}
 
 > [!NOTE]
 > Although the `linethickness` attribute can be used to specify an arbitrary thickness, it is better to keep the default value, which is calculated from parameters specified in the math font.

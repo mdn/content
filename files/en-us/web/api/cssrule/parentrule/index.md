@@ -8,9 +8,7 @@ browser-compat: api.CSSRule.parentRule
 
 {{ APIRef("CSSOM") }}
 
-The **`parentRule`** property of the {{domxref("CSSRule")}}
-interface returns the containing rule of the current rule if this exists, or otherwise
-returns null.
+The **`parentRule`** read-only property of the {{domxref("CSSRule")}} interface returns the containing rule of the current rule if this exists, or otherwise returns null.
 
 ## Value
 

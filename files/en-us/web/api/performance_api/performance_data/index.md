@@ -32,6 +32,7 @@ A single recorded performance data point is called a _performance entry_ and is 
 
 The Performance API records various different types of performance data, and the `PerformanceEntry` has an {{domxref("PerformanceEntry.entryType", "entryType")}} property which is a string describing the type of this performance entry:
 
+- `"container"` records when groups of elements within a container are rendered.
 - `"element"` records how long it takes an element to load and render.
 - `"event"` records how long it took the browser to start running an event handler in response to its trigger, and how long the event handler took to run. Used to measure {{Glossary("Interaction to Next Paint")}}.
 - `"first-input"` records the {{Glossary("First Input Delay")}}.
@@ -55,6 +56,7 @@ The following interfaces inherit from `PerformanceEntry`:
 
 - {{domxref("LargestContentfulPaint")}}
 - {{domxref("LayoutShift")}}
+- {{domxref("PerformanceContainerTiming")}}
 - {{domxref("PerformanceElementTiming")}}
 - {{domxref("PerformanceEventTiming")}}
 - {{domxref("PerformanceLongTaskTiming")}}
@@ -118,6 +120,7 @@ There is a buffer limit for performance entries for each global object. It ensur
 | `"resource"`                                                      | {{domxref("PerformanceResourceTiming")}}   | 250 (adjustable, see below)      |
 | `"longtask"`                                                      | {{domxref("PerformanceLongTaskTiming")}}   | 200                              |
 | `"paint"`                                                         | {{domxref("PerformancePaintTiming")}}      | 2 (there won't be more)          |
+| `"container"`                                                     | {{domxref("PerformanceContainerTiming")}}  | 150                              |
 | `"element"`                                                       | {{domxref("PerformanceElementTiming")}}    | 150                              |
 | `"event"`                                                         | {{domxref("PerformanceEventTiming")}}      | 150                              |
 | `"first-input"`                                                   | {{domxref("PerformanceEventTiming")}}      | 1 (there won't be more)          |

@@ -148,6 +148,5 @@ const int32View1 = new Int32Array(object1.buffer);
 
 ## See also
 
-- [A polyfill of `structuredClone`](https://github.com/zloirock/core-js#structuredclone) is available in [`core-js`](https://github.com/zloirock/core-js)
+- [A polyfill of `structuredClone`](https://core-js.io/docs/features/web-standards/structured-clone) is available in [`core-js`](https://core-js.io/)
 - [Structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)
-- [Structured clone polyfill](https://github.com/ungap/structured-clone)

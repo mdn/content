@@ -97,10 +97,16 @@ As with other URLs in CSS, the URL may be relative, in which case it is resolved
 If the font file is a container for multiple fonts, a fragment identifier is included to indicate the sub-font that should be used, as shown below:
 
 ```css
-/* WhichFont is the PostScript name of a font in the font file */
-src: url("collection.otc#WhichFont");
-/* WhichFont is the element id of a font in the SVG Font file */
-src: url("fonts.svg#WhichFont");
+@font-face {
+  font-family: "WhichFont";
+  /* WhichFont is the PostScript name of a font in the font file */
+  src: url("collection.otc#WhichFont");
+}
+@font-face {
+  font-family: "WhichFont-svg";
+  /* WhichFont is the element id of a font in the SVG Font file */
+  src: url("fonts.svg#WhichFont");
+}
 ```
 
 ### Font formats

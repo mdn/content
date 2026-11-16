@@ -449,7 +449,9 @@ html {
 p {
   line-height: 1.5;
 }
+```
 
+```css hidden live-sample___scroll-snapped live-sample___column-playground live-sample___basic-example
 @supports not (column-height: 15em) {
   body::before {
     content: "Your browser does not support the 'column-height' property.";
