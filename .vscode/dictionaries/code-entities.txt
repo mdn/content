@@ -256,6 +256,7 @@ fullwide
 FunciOES
 funcref
 funcrefs
+futuredate
 fwdred
 fwid
 gapi
