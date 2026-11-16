@@ -19,6 +19,13 @@ An `array` of `object`s. Each object has the following properties:
 - `binaryValue` {{optional_inline}}
   - : `array` of `integer`. Value of the HTTP header if it cannot be represented by UTF-8, represented as bytes (0..255). Either this property or `value` must be present.
 
+Header names are not guaranteed to be unique within the array. An HTTP message can contain the same header more than once (for example, multiple `Set-Cookie` response headers), and how browsers represent this differs:
+
+- Chrome includes a separate object for each occurrence of the header, so several objects can have the same `name`.
+- Firefox and Safari combine repeated headers into a single object, joining the values with a comma (`,`). Firefox joins the values of `Set-Cookie`, `WWW-Authenticate`, and `Proxy-Authenticate` with a newline (`\n`) instead.
+
+To work across browsers, handle both multiple objects with the same `name` and a single object with combined values.
+
 {{WebExtExamples}}
 
 ## Browser compatibility
