@@ -8,11 +8,11 @@ status:
 browser-compat: api.HTMLObjectElement.useMap
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 The **`useMap`** property of the
 {{domxref("HTMLObjectElement")}} interface returns a string that
-reflects the [`usemap`](/en-US/docs/Web/HTML/Element/object#usemap) HTML attribute, specifying a
+reflects the [`usemap`](/en-US/docs/Web/HTML/Reference/Elements/object#usemap) HTML attribute, specifying a
 {{HTMLElement("map")}} element to use.
 
 ## Value

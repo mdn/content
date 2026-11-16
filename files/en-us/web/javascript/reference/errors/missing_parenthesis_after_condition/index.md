@@ -2,9 +2,8 @@
 title: "SyntaxError: missing ) after condition"
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_condition
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "missing ) after condition" occurs when there is an error with
 how an
@@ -93,4 +92,4 @@ if (done) {
 
 - [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Relational operators](/en-US/docs/Web/JavaScript/Reference/Operators#relational_operators)
-- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Learn: Making decisions in your code — conditionals](/en-US/docs/Learn_web_development/Core/Scripting/Conditionals)

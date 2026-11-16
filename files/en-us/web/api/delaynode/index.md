@@ -45,7 +45,7 @@ When creating a graph that has a cycle, it is mandatory to have at least one `De
 ## Constructor
 
 - {{domxref("DelayNode.DelayNode", "DelayNode()")}}
-  - : Creates a new instance of an DelayNode object instance. As an alternative, you can use the {{domxref("BaseAudioContext.createDelay()")}} factory method; see [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
+  - : Creates a new instance of a DelayNode object instance. As an alternative, you can use the {{domxref("BaseAudioContext.createDelay()")}} factory method; see [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
 ## Instance properties
 

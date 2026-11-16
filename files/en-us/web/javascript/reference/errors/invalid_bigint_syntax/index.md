@@ -2,9 +2,8 @@
 title: "SyntaxError: invalid BigInt syntax"
 slug: Web/JavaScript/Reference/Errors/Invalid_BigInt_syntax
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid BigInt syntax" occurs when a string value is being coerced to a {{jsxref("BigInt")}} but it failed to be parsed as an integer.
 

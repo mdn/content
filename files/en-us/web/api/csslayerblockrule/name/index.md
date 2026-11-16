@@ -47,9 +47,7 @@ output {
 ```js
 const item1 = document.getElementsByTagName("output")[0];
 const item2 = document.getElementsByTagName("output")[1];
-const rules = document.styleSheets[1].cssRules;
-// Note that stylesheet #1 is the stylesheet associated with this embedded example,
-// while stylesheet #0 is the stylesheet associated with the whole MDN page
+const rules = document.getElementById("css-output").sheet.cssRules;
 
 const layer = rules[1]; // A CSSLayerBlockRule
 const anonymous = rules[2]; // An anonymous CSSLayerBlockRule
@@ -73,4 +71,4 @@ item2.textContent = `A second CSSLayerBlockRule defines a layer with the followi
 ## See also
 
 - The statement declaration of an {{cssxref("@layer")}} is represented by a {{domxref("CSSLayerStatementRule")}}.
-- How to [create named cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers#creating_cascade_layers) in CSS.
+- How to [create named cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#creating_cascade_layers) in CSS.

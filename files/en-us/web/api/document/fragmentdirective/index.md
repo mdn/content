@@ -59,5 +59,5 @@ if (document.fragmentDirective) {
 
 ## See also
 
-- [Text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments)
+- [Text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments)
 - {{cssxref("::target-text")}}

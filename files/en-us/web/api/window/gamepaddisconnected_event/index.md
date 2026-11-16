@@ -6,13 +6,27 @@ page-type: web-api-event
 browser-compat: api.Window.gamepaddisconnected_event
 ---
 
-{{APIRef}}
+{{APIRef("Gamepad API")}}
 
 The `gamepaddisconnected` event is fired when the browser detects that a gamepad has been disconnected.
 
-The event will not fire if disallowed by the document's {{httpheader('Permissions-Policy/gamepad','gamepad')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+The event will not fire if disallowed by the document's {{httpheader('Permissions-Policy/gamepad','gamepad')}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
 
 This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
+
+```js-nolint
+addEventListener("gamepaddisconnected", (event) => { })
+```
+
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+ongamepaddisconnected = (event) => { }
+```
 
 ## Examples
 
@@ -24,7 +38,7 @@ window.addEventListener("gamepaddisconnected", (event) => {
 });
 ```
 
-Alternatively, you can use the `window.ongamepaddisconnected` event handler property to establish a handler for the `gamepaddisconnected` event:
+Alternatively, you can use the `window.ongamepaddisconnected` event handler property to establish a handler for the `gamepaddisconnected` event (but note that this replaces other event listeners added using `ongamepaddisconnected`, if any):
 
 ```js
 window.ongamepaddisconnected = (event) => {

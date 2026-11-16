@@ -44,9 +44,9 @@ The code at the end shows how the stream is piped through the transform stream f
 addEventListener("rtctransform", (event) => {
   let transform;
   // Select a transform based on passed options
-  if (event.transformer.options.name == "senderTransform") {
+  if (event.transformer.options.name === "senderTransform") {
     transform = createSenderTransform(); // A TransformStream (not shown)
-  } else if (event.transformer.options.name == "receiverTransform") {
+  } else if (event.transformer.options.name === "receiverTransform") {
     transform = createReceiverTransform(); // A TransformStream (not shown)
   }
   // Pipe frames from the readable to writeable through TransformStream

@@ -11,7 +11,7 @@ browser-compat: api.File.webkitRelativePath
 The **`webkitRelativePath`** read-only property of the {{domxref("File")}} interface
 contains a string which specifies the file's path relative to the
 directory selected by the user in an {{HTMLElement("input")}} element with its
-[`webkitdirectory`](/en-US/docs/Web/HTML/Element/input#webkitdirectory) attribute set.
+[`webkitdirectory`](/en-US/docs/Web/HTML/Reference/Elements/input#webkitdirectory) attribute set.
 
 ## Value
 
@@ -27,7 +27,7 @@ within the selected directory hierarchies is generated and displayed.
 ### HTML
 
 ```html
-<input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
+<input type="file" id="file-picker" name="fileList" webkitdirectory multiple />
 <output id="output"></output>
 ```
 
@@ -42,9 +42,9 @@ output {
 
 ```js
 const output = document.getElementById("output");
-const filepicker = document.getElementById("filepicker");
+const filePicker = document.getElementById("file-picker");
 
-filepicker.addEventListener("change", (event) => {
+filePicker.addEventListener("change", (event) => {
   const files = event.target.files;
 
   for (const file of files) {

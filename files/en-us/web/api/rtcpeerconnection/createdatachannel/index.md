@@ -13,6 +13,8 @@ This can be useful for back-channel content, such as images, file transfer, text
 
 If the new data channel is the first one added to the connection, renegotiation is started by delivering a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event.
 
+You can avoid this renegotiation by setting `alwaysNegotiateDataChannels` to `true` in the {{domxref("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}} constructor. This specifies that the application negotiates data channels in the {{glossary("SDP")}} offer before creating an {{domxref("RTCDataChannel")}}. As a result, you don't need to create a data channel before your first `createOffer()` call, or accept a second renegotiation.
+
 ## Syntax
 
 ```js-nolint
@@ -26,10 +28,8 @@ createDataChannel(label, options)
   - : A human-readable name for the channel.
     This string may not be longer than 65,535 bytes.
 - `options` {{optional_inline}}
-
   - : An object providing configuration options for the data channel.
     It can contain the following fields:
-
     - `ordered` {{optional_inline}}
       - : Indicates whether or not messages sent on the {{domxref("RTCDataChannel")}} are required to arrive at their destination in the same order in which they were sent (`true`), or if they're allowed to arrive out-of-order (`false`).
         **Default: `true`.**

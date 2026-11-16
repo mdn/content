@@ -16,17 +16,17 @@ The HTML {{HTMLElement("meter")}} elements expose the **`HTMLMeterElement`** int
 _Also inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLMeterElement.high")}}
-  - : A `double` representing the value of the high boundary, reflecting the [`high`](/en-US/docs/Web/HTML/Element/meter#high) attribute.
+  - : A `double` representing the value of the high boundary, reflecting the [`high`](/en-US/docs/Web/HTML/Reference/Elements/meter#high) attribute.
 - {{domxref("HTMLMeterElement.low")}}
-  - : A `double` representing the value of the low boundary, reflecting the [`low`](/en-US/docs/Web/HTML/Element/meter#low) attribute.
+  - : A `double` representing the value of the low boundary, reflecting the [`low`](/en-US/docs/Web/HTML/Reference/Elements/meter#low) attribute.
 - {{domxref("HTMLMeterElement.max")}}
-  - : A `double` representing the maximum value, reflecting the [`max`](/en-US/docs/Web/HTML/Element/meter#max) attribute.
+  - : A `double` representing the maximum value, reflecting the [`max`](/en-US/docs/Web/HTML/Reference/Elements/meter#max) attribute.
 - {{domxref("HTMLMeterElement.min")}}
-  - : A `double` representing the minimum value, reflecting the [`min`](/en-US/docs/Web/HTML/Element/meter#min) attribute.
+  - : A `double` representing the minimum value, reflecting the [`min`](/en-US/docs/Web/HTML/Reference/Elements/meter#min) attribute.
 - {{domxref("HTMLMeterElement.optimum")}}
-  - : A `double` representing the optimum, reflecting the [`optimum`](/en-US/docs/Web/HTML/Element/meter#optimum) attribute.
+  - : A `double` representing the optimum, reflecting the [`optimum`](/en-US/docs/Web/HTML/Reference/Elements/meter#optimum) attribute.
 - {{domxref("HTMLMeterElement.value")}}
-  - : A `double` representing the current value, reflecting the [`value`](/en-US/docs/Web/HTML/Element/meter#value) attribute.
+  - : A `double` representing the current value, reflecting the [`value`](/en-US/docs/Web/HTML/Reference/Elements/meter#value) attribute.
 - {{domxref("HTMLMeterElement.labels")}} {{ReadOnlyInline}}
   - : A {{domxref("NodeList")}} of {{HTMLElement("label")}} elements that are associated with the element.
 

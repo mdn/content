@@ -27,8 +27,7 @@ None.
 
 ### Return value
 
-A string, without the question mark. (Returns an empty string if no
-search parameters have been set.)
+A string, without the question mark. Returns an empty string if no search parameters have been set. Characters in the [`application/x-www-form-urlencoded` percent-encode set](https://url.spec.whatwg.org/#application-x-www-form-urlencoded-percent-encode-set) (which contains all code points except ASCII alphanumeric, `*`, `-`, `.`, and `_`) are [percent-encoded](/en-US/docs/Glossary/Percent-encoding), and U+0020 SPACE is encoded as `+`.
 
 ## Examples
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.wrapKey
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`wrapKey()`** method of the {{domxref("SubtleCrypto")}} interface "wraps" a key.
 This means that it exports the key in an external, portable format, then encrypts the exported key.
@@ -68,7 +68,7 @@ The promise is rejected when one of the following exceptions is encountered:
 
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Raised when the wrapping key is not a key for the requested wrap algorithm.
-- `NotSupported` {{domxref("DOMException")}}
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Raised when trying to use an algorithm that is either unknown or isn't suitable for
     encryption or wrapping.
 - {{jsxref("TypeError")}}

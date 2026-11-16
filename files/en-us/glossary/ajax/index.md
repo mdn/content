@@ -2,9 +2,8 @@
 title: Ajax
 slug: Glossary/AJAX
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 Asynchronous JavaScript and XML (**Ajax**, or **AJAX**) is a web development technique in which a web app fetches content from the server by making asynchronous HTTP requests, and uses the new content to update the relevant parts of the page without requiring a full page load. This can make the page more responsive, because only the parts that need to be updated are requested.
 
@@ -16,7 +15,7 @@ This technique is so common in modern web development that the specific term "Aj
 
 ## See also
 
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [Learn: Making network requests with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
 - Related glossary terms:
   - {{Glossary("SPA", "Single-page application")}}

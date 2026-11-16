@@ -8,7 +8,9 @@ browser-compat: api.AbstractRange.startContainer
 
 {{APIRef("DOM")}}
 
-The read-only **`startContainer`** property of the {{domxref("AbstractRange")}} interface returns the start {{domxref("Node")}} for the range.
+The read-only **`startContainer`** property of the {{domxref("AbstractRange")}} interface returns the {{domxref("Node")}} in which the start of the range is located.
+
+To change the start position, use the {{domxref("Range.setStart()")}} method or a similar one.
 
 ## Value
 
@@ -17,7 +19,11 @@ The {{domxref("Node")}} inside which the start position of the range is found.
 ## Example
 
 ```js
-let startNode = range.startContainer;
+const range = document.createRange();
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
+
+const startRangeNode = range.startContainer;
 ```
 
 ## Specifications

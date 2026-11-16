@@ -10,16 +10,20 @@ browser-compat: api.VideoEncoder.dequeue_event
 
 The **`dequeue`** event of the {{domxref("VideoEncoder")}} interface fires to signal a decrease in {{domxref("VideoEncoder.encodeQueueSize")}}.
 
-This eliminates the need for developers to use a {{domxref("setTimeout()")}} poll to determine when the queue has decreased, and more work should be queued up.
+This eliminates the need for developers to use a {{domxref("Window.setTimeout", "setTimeout()")}} poll to determine when the queue has decreased, and more work should be queued up.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("dequeue", (event) => {});
+```js-nolint
+addEventListener("dequeue", (event) => { })
+```
 
-ondequeue = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+ondequeue = (event) => { }
 ```
 
 ## Example

@@ -2,7 +2,7 @@
 title: "console: warn() static method"
 short-title: warn()
 slug: Web/API/console/warn_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.warn_static
 ---
 
@@ -13,16 +13,16 @@ The **`console.warn()`** static method outputs a warning message to the console 
 ## Syntax
 
 ```js-nolint
-warn(val1)
-warn(val1, /* …, */ valN)
-warn(msg)
-warn(msg, subst1, /* …, */ substN)
+console.warn(val1)
+console.warn(val1, /* …, */ valN)
+console.warn(msg)
+console.warn(msg, subst1, /* …, */ substN)
 ```
 
 ### Parameters
 
 - `val1` … `valN`
-  - : A list of JavaScript values to output. A representation of each of these values is output to the console in the order given with some type of separation between each of them. There is a special case if `obj1` is a string, which is described subsequently.
+  - : A list of JavaScript values to output. A representation of each of these values is output to the console in the order given with some type of separation between each of them. There is a special case if `val1` is a string, which is described subsequently.
 - `msg`
   - : A JavaScript string containing zero or more substitution strings, which are replaced with `subst1` through `substN` in consecutive order up to the number of substitution strings. See [Using string substitutions](/en-US/docs/Web/API/console#using_string_substitutions) for a description of how substitutions work.
 - `subst1` … `substN`
@@ -44,6 +44,6 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [Microsoft Edge's documentation for `console.warn()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#warn)
-- [Node.JS documentation for `console.warn()`](https://nodejs.org/docs/latest/api/console.html#consolewarndata-args)
+- [Microsoft Edge's documentation for `console.warn()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#warn)
+- [Node.js documentation for `console.warn()`](https://nodejs.org/docs/latest/api/console.html#consolewarndata-args)
 - [Google Chrome's documentation for `console.warn()`](https://developer.chrome.com/docs/devtools/console/api/#warn)

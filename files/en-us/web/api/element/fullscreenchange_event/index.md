@@ -6,9 +6,9 @@ page-type: web-api-event
 browser-compat: api.Element.fullscreenchange_event
 ---
 
-{{APIRef}}
+{{APIRef("Fullscreen API")}}
 
-The `fullscreenchange` event is fired immediately after an {{domxref("Element")}} switches into or out of fullscreen mode.
+The **`fullscreenchange`** event is fired immediately after an {{domxref("Element")}} switches into or out of fullscreen mode.
 
 This event is sent to the `Element` which is transitioning into or out of fullscreen mode.
 
@@ -18,12 +18,16 @@ This event is not cancelable.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("fullscreenchange", (event) => {});
+```js-nolint
+addEventListener("fullscreenchange", (event) => { })
+```
 
-onfullscreenchange = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onfullscreenchange = (event) => { }
 ```
 
 ## Event type
@@ -36,9 +40,9 @@ In this example, a handler for the `fullscreenchange` event is added to the elem
 
 If the user clicks on the "Toggle Fullscreen Mode" button, the `click` handler will toggle fullscreen mode for the `div`. If `document.fullscreenElement` has a value it will exit fullscreen mode. If not, the div will be placed into fullscreen mode.
 
-Remember that by the time the `fullscreenchange` event is handled, the status of the element has already changed. So if the change is to fullscreen mode, `document.fullscreenElement` will point to the element that is now in fullscreen mode. On the other hand, if `document.fullscreenElement` is null, fullscreen mode has been canceled.
+Remember that by the time the `fullscreenchange` event is handled, the status of the element has already changed. So if the change is to fullscreen mode, `document.fullscreenElement` will point to the element that is now in fullscreen mode. On the other hand, if `document.fullscreenElement` is `null`, fullscreen mode has been canceled.
 
-What that means to the example code is that, if an element is currently in fullscreen mode, the `fullscreenchange` handler logs the `id` of the fullscreen element to the console. If `document.fullscreenElement` is null, the code logs a message that the change is to leave fullscreen mode.
+What that means to the example code is that, if an element is currently in fullscreen mode, the `fullscreenchange` handler logs the `id` of the fullscreen element to the console. If `document.fullscreenElement` is `null`, the code logs a message that the change is to leave fullscreen mode.
 
 ### HTML
 
@@ -52,7 +56,7 @@ What that means to the example code is that, if an element is currently in fulls
 ### JavaScript
 
 ```js
-function fullscreenchanged(event) {
+function fullscreenchangeHandler(event) {
   // document.fullscreenElement will point to the element that
   // is in fullscreen mode if there is one. If not, the value
   // of the property is null.
@@ -67,9 +71,10 @@ function fullscreenchanged(event) {
 
 const el = document.getElementById("fullscreen-div");
 
-el.addEventListener("fullscreenchange", fullscreenchanged);
-// or
-el.onfullscreenchange = fullscreenchanged;
+el.addEventListener("fullscreenchange", fullscreenchangeHandler);
+// Or (but note that this replaces other event listeners
+// added using onfullscreenchange, if any)
+el.onfullscreenchange = fullscreenchangeHandler;
 
 // When the toggle button is clicked, enter/exit fullscreen
 document

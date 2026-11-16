@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.bindFramebuffer
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.bindFramebuffer()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) binds to the specified target the provided {{domxref("WebGLFramebuffer")}}, or, if the `framebuffer` argument is null, the default {{domxref("WebGLFramebuffer")}}, which is associated with the canvas rendering context.
@@ -20,16 +20,13 @@ bindFramebuffer(target, framebuffer)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-
     - `gl.FRAMEBUFFER`
       - : Collection buffer data storage of color, alpha,
         depth and stencil buffers used as both a destination for drawing and as a source for reading (see below).
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
     the following values are available additionally:
-
     - `gl.DRAW_FRAMEBUFFER`
       - : Used as a destination for drawing operations such as `gl.draw*`, `gl.clear*` and `gl.blitFramebuffer`.
     - `gl.READ_FRAMEBUFFER`

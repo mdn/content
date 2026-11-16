@@ -1,11 +1,11 @@
 ---
 title: AsyncGenerator.prototype.throw()
+short-title: throw()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator/throw
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncGenerator.throw
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`throw()`** method of {{jsxref("AsyncGenerator")}} instances acts as if a `throw` statement is inserted in the generator's body at the current suspended position, which informs the generator of an error condition and allows it to handle the error, or perform cleanup and close itself.
 
@@ -37,7 +37,7 @@ If the exception is caught by a [`try...catch`](/en-US/docs/Web/JavaScript/Refer
 
 ### Using throw()
 
-The following example shows a simple generator and an error that is thrown using the `throw` method. An error can be caught by a {{jsxref("Statements/try...catch", "try...catch")}} block as usual.
+The following example shows a generator and an error that is thrown using the `throw` method. An error can be caught by a {{jsxref("Statements/try...catch", "try...catch")}} block as usual.
 
 ```js
 // An async task. Pretend it's doing something more useful

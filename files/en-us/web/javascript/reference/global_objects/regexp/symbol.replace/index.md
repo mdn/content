@@ -1,15 +1,28 @@
 ---
 title: RegExp.prototype[Symbol.replace]()
+short-title: "[Symbol.replace]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@replace
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.replace]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) and [`String.prototype.replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) should behave when the regular expression is passed in as the pattern.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-@@replace.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.replace]()")}}
+
+<!-- cSpell:ignore tball -->
+
+```js interactive-example
+class RegExp1 extends RegExp {
+  [Symbol.replace](str) {
+    return RegExp.prototype[Symbol.replace].call(this, str, "#!@?");
+  }
+}
+
+console.log("football".replace(new RegExp1("foo")));
+// Expected output: "#!@?tball"
+```
 
 ## Syntax
 
@@ -32,7 +45,7 @@ A new string, with one, some, or all matches of the pattern replaced by the spec
 
 ## Description
 
-This method is called internally in {{jsxref("String.prototype.replace()")}} and {{jsxref("String.prototype.replaceAll()")}} if the `pattern` argument is a {{jsxref("RegExp")}} object. For example, the following two examples return the same result.
+This method exists for customizing replace behavior in `RegExp` subclasses. It is called internally in {{jsxref("String.prototype.replace()")}} and {{jsxref("String.prototype.replaceAll()")}} if the `pattern` argument is a {{jsxref("RegExp")}} object. For example, the following two examples return the same result.
 
 ```js
 "abc".replace(/a/, "A");
@@ -40,9 +53,18 @@ This method is called internally in {{jsxref("String.prototype.replace()")}} and
 /a/[Symbol.replace]("abc", "A");
 ```
 
-If the regex is global (with the `g` flag), the regex's [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method will be repeatedly called until `exec()` returns `null`. Otherwise, `exec()` would only be called once. For each `exec()` result, the substitution will be prepared based on the description in [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#description).
+If the regex is global (with the `g` flag), its [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) is first set to 0, so matching always starts from the beginning of the string, and the regex's [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method is repeatedly called until `exec()` returns `null`. If the current match is an empty string, the `lastIndex` would still be advanced — if the regex is [Unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), it would advance by one Unicode code point; otherwise, it advances by one UTF-16 code unit.
 
-Because `[Symbol.replace]()` would keep calling `exec()` until it returns `null`, and `exec()` would automatically reset the regex's [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) to 0 when the last match fails, `[Symbol.replace]()` would typically not have side effects when it exits. However, when the regex is [sticky](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) but not global, `lastIndex` would not be reset. In this case, each call to `replace()` may return a different result.
+```js
+console.log("😄".replace(/(?:)/g, " ")); // " \ud83d \ude04 "
+console.log("😄".replace(/(?:)/gu, " ")); // " 😄 "
+```
+
+If the regex is not global, `exec()` would only be called once.
+
+Substitution happens after all matching substrings are identified. For each successful `exec()` result, a substitution string is created based on the `replacement` argument, the process of which is described in [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#description).
+
+The `exec()` method automatically resets `lastIndex` to 0 when the last match fails, so for global regexes with `lastIndex` starting at 0, `[Symbol.replace]()` generally produces no side-effects. However, when the regex is [sticky](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) but not global, `exec()` is only called once and therefore does not reset `lastIndex` if the match was successful. In this case, each call to `replace()` may return a different result.
 
 ```js
 const re = /a/y;
@@ -58,20 +80,11 @@ for (let i = 0; i < 5; i++) {
 // baa 1
 ```
 
-When the regex is sticky and global, it would still perform sticky matches — i.e. it would fail to match any occurrences beyond the `lastIndex`.
+When the regex is sticky and global, it would still perform sticky matches — i.e., it would fail to match any occurrences beyond the `lastIndex`.
 
 ```js
 console.log("aa-a".replace(/a/gy, "b")); // "bb-a"
 ```
-
-If the current match is an empty string, the `lastIndex` would still be advanced — if the regex is [Unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), it would advance by one Unicode code point; otherwise, it advances by one UTF-16 code unit.
-
-```js
-console.log("😄".replace(/(?:)/g, " ")); // " \ud83d \ude04 "
-console.log("😄".replace(/(?:)/gu, " ")); // " 😄 "
-```
-
-This method exists for customizing replace behavior in `RegExp` subclasses.
 
 ## Examples
 
@@ -82,8 +95,8 @@ This method can be used in almost the same way as {{jsxref("String.prototype.rep
 ```js
 const re = /-/g;
 const str = "2016-01-01";
-const newstr = re[Symbol.replace](str, ".");
-console.log(newstr); // 2016.01.01
+const newStr = re[Symbol.replace](str, ".");
+console.log(newStr); // 2016.01.01
 ```
 
 ### Using `[Symbol.replace]()` in subclasses
@@ -108,8 +121,8 @@ class MyRegExp extends RegExp {
 
 const re = new MyRegExp("\\d", "", 3);
 const str = "01234567";
-const newstr = str.replace(re, "#"); // String.prototype.replace calls re[Symbol.replace]().
-console.log(newstr); // ###34567
+const newStr = str.replace(re, "#"); // String.prototype.replace calls re[Symbol.replace]().
+console.log(newStr); // ###34567
 ```
 
 ## Specifications
@@ -122,7 +135,7 @@ console.log(newstr); // ###34567
 
 ## See also
 
-- [Polyfill of `RegExp.prototype[Symbol.replace]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `RegExp.prototype[Symbol.replace]` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - {{jsxref("String.prototype.replace()")}}
 - {{jsxref("String.prototype.replaceAll()")}}
 - [`RegExp.prototype[Symbol.match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)

@@ -2,12 +2,10 @@
 title: GPUQueue
 slug: Web/API/GPUQueue
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPUQueue
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUQueue`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} controls execution of encoded commands on the GPU.
 
@@ -17,20 +15,20 @@ A device's primary queue is accessed via the {{domxref("GPUDevice.queue")}} prop
 
 ## Instance properties
 
-- {{domxref("GPUQueue.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUQueue.label", "label")}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Instance methods
 
-- {{domxref("GPUQueue.copyExternalImageToTexture", "copyExternalImageToTexture()")}} {{Experimental_Inline}}
+- {{domxref("GPUQueue.copyExternalImageToTexture", "copyExternalImageToTexture()")}}
   - : Copies a snapshot taken from a source image, video, or canvas into a given {{domxref("GPUTexture")}}.
-- {{domxref("GPUQueue.onSubmittedWorkDone", "onSubmittedWorkDone()")}} {{Experimental_Inline}}
+- {{domxref("GPUQueue.onSubmittedWorkDone", "onSubmittedWorkDone()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when all the work submitted to the GPU via this `GPUQueue` at the point the method is called has been processed.
-- {{domxref("GPUQueue.submit", "submit()")}} {{Experimental_Inline}}
+- {{domxref("GPUQueue.submit", "submit()")}}
   - : Schedules the execution of command buffers represented by one or more {{domxref("GPUCommandBuffer")}} objects by the GPU.
-- {{domxref("GPUQueue.writeBuffer", "writeBuffer()")}} {{Experimental_Inline}}
+- {{domxref("GPUQueue.writeBuffer", "writeBuffer()")}}
   - : Writes a provided data source into a given {{domxref("GPUBuffer")}}.
-- {{domxref("GPUQueue.writeTexture", "writeTexture()")}} {{Experimental_Inline}}
+- {{domxref("GPUQueue.writeTexture", "writeTexture()")}}
   - : Writes a provided data source into a given {{domxref("GPUTexture")}}.
 
 ## Examples

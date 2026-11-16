@@ -8,9 +8,9 @@ status:
 browser-compat: api.USBDevice.productId
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-The **`productId`** read only property of the
+The **`productId`** read-only property of the
 {{domxref("USBDevice")}} interface the manufacturer-defined code that identifies a USB
 device.
 

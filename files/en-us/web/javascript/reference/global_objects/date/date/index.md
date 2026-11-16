@@ -1,15 +1,26 @@
 ---
 title: Date() constructor
+short-title: Date()
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Date.Date
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Date()`** constructor creates {{jsxref("Date")}} objects. When called as a function, it returns a string representing the current time.
 
-{{EmbedInteractiveExample("pages/js/date-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Date() constructor")}}
+
+```js interactive-example
+const date1 = new Date("December 17, 1995 03:24:00");
+// Sun Dec 17 1995 03:24:00 GMT...
+
+const date2 = new Date("1995-12-17T03:24:00");
+// Sun Dec 17 1995 03:24:00 GMT...
+
+console.log(date1.getTime() === date2.getTime());
+// Expected output: true
+```
 
 ## Syntax
 
@@ -29,7 +40,8 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 Date()
 ```
 
-> **Note:** `Date()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
+> [!NOTE]
+> `Date()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
 
 ### Parameters
 
@@ -54,7 +66,7 @@ When no parameters are provided, the newly-created `Date` object represents the 
 - `dateObject`
   - : An existing `Date` object. This effectively makes a copy of the existing `Date` object with the same date and time. This is equivalent to `new Date(dateObject.valueOf())`, except the `valueOf()` method is not called.
 
-When one parameter is passed to the `Date()` constructor, `Date` instances are specially treated. All other values are [converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion). If the result is a string, it will be parsed as a date string. Otherwise, the resulting primitive is further coerced to a number and treated as a timestamp.
+When one parameter is passed to the `Date()` constructor, `Date` instances are specially treated. All other values are [converted to primitives](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion). If the result is a string, it will be parsed as a date string. Otherwise, the resulting primitive is further coerced to a number and treated as a timestamp.
 
 #### Individual date and time component values
 
@@ -89,27 +101,11 @@ Calling the `Date()` function (without the `new` keyword) returns a string repre
 
 ### Reduced time precision
 
-To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `new Date()` might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `new Date()` may be reduced depending on browser settings.
 
-For example, with reduced time precision, the result of `new Date().getTime()` will always be a multiple of 2, or a multiple of 100 (or `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`) with `privacy.resistFingerprinting` enabled.
+When a timestamp, date string, date object, or date component values are supplied to the constructor, the browser does not apply timer rounding to the supplied time.
 
-```js
-// reduced time precision (2ms) in Firefox 60
-new Date().getTime();
-// Might be:
-// 1519211809934
-// 1519211810362
-// 1519211811670
-// …
-
-// reduced time precision with `privacy.resistFingerprinting` enabled
-new Date().getTime();
-// Might be:
-// 1519129853500
-// 1519129858900
-// 1519129864400
-// …
-```
+When called without arguments, the constructor obtains the current time in the same way as {{jsxref("Date.now()")}}. It inherits the precision of that clock reading without introducing additional inaccuracy.
 
 ## Examples
 
@@ -120,10 +116,10 @@ The following examples show several ways to create JavaScript dates:
 ```js
 const today = new Date();
 const birthday = new Date("December 17, 1995 03:24:00"); // DISCOURAGED: may not work in all runtimes
-const birthday = new Date("1995-12-17T03:24:00"); // This is standardized and will work reliably
-const birthday = new Date(1995, 11, 17); // the month is 0-indexed
-const birthday = new Date(1995, 11, 17, 3, 24, 0);
-const birthday = new Date(628021800000); // passing epoch timestamp
+const birthday2 = new Date("1995-12-17T03:24:00"); // This is standardized and will work reliably
+const birthday3 = new Date(1995, 11, 17); // the month is 0-indexed
+const birthday4 = new Date(1995, 11, 17, 3, 24, 0);
+const birthday5 = new Date(628021800000); // passing epoch timestamp
 ```
 
 ### Passing a non-Date, non-string, non-number value

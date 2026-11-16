@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.readOnly
 
 {{ APIRef("HTML DOM") }}
 
-The **`readOnly`** property of the {{DOMxRef("HTMLInputElement")}} interface indicates that the user cannot modify the value of the {{htmlelement("input")}}. It reflects the {{htmlelement("input")}} element's [`readonly`](/en-US/docs/Web/HTML/Element/input#readonly) boolean attribute; returning `true` if the attribute is present and `false` when omitted.
+The **`readOnly`** property of the {{DOMxRef("HTMLInputElement")}} interface indicates that the user cannot modify the value of the {{htmlelement("input")}}. It reflects the {{htmlelement("input")}} element's [`readonly`](/en-US/docs/Web/HTML/Reference/Elements/input#readonly) boolean attribute; returning `true` if the attribute is present and `false` when omitted.
 
 Unlike a form control with a true {{domxref("HTMLInputElement.disabled", "disabled")}} property, a true `readOnly` property value does not prevent the user from clicking or selecting in the control.
 

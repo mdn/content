@@ -2,11 +2,9 @@
 title: Using VR controllers with WebVR
 slug: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
 page-type: guide
-status:
-  - experimental
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{DefaultAPISidebar("WebVR API")}}
 
 Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the [Gamepad API](/en-US/docs/Web/API/Gamepad_API), and specifically the [Gamepad Extensions API](/en-US/docs/Web/API/Gamepad_API#experimental_gamepad_extensions) that adds API features for accessing [controller pose](/en-US/docs/Web/API/GamepadPose), [haptic actuators](/en-US/docs/Web/API/GamepadHapticActuator), and more. This article explains the basics.
 
@@ -15,7 +13,7 @@ Many WebVR hardware setups feature controllers that go along with the headset. T
 
 ## The WebVR API
 
-The [WebVR API](/en-US/docs/Web/API/WebVR_API) is a nascent, but very interesting new feature of the web platform that allows developers to create web-based virtual reality experiences. It does this by providing access to VR headsets connected to your computer as {{domxref("VRDisplay")}} objects, which can be manipulated to start and stop presentation to the display, queried for movement data (e.g. orientation and position) that can be used to update the display on each frame of the animation loop, and more.
+The [WebVR API](/en-US/docs/Web/API/WebVR_API) is a nascent, but very interesting new feature of the web platform that allows developers to create web-based virtual reality experiences. It does this by providing access to VR headsets connected to your computer as {{domxref("VRDisplay")}} objects, which can be manipulated to start and stop presentation to the display, queried for movement data (e.g., orientation and position) that can be used to update the display on each frame of the animation loop, and more.
 
 Before you read this article, you should really be familiar with the basics of the WebVR API already — go and read [Using the WebVR API](/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API) first, if you haven't already done so, which also details browser support and required hardware setup.
 
@@ -25,7 +23,7 @@ The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) is a fairly well-supported AP
 
 You can find more about basic Gamepad API usage in [Using the Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API), and [Implementing controls using the Gamepad API](/en-US/docs/Games/Techniques/Controls_Gamepad_API).
 
-However, in this article we will mainly be concentrating on some of the new features provided by the [Gamepad Extensions](https://w3c.github.io/gamepad/extensions.html) API, which allows access to advanced controller information such as position and orientation data, control over haptic actuators (e.g. vibration hardware), and more. This API is very new, and currently is only supported and enabled by default in Firefox 55+ Beta/Nightly channels.
+However, in this article we will mainly be concentrating on some of the new features provided by the [Gamepad Extensions](https://w3c.github.io/gamepad/extensions.html) API, which allows access to advanced controller information such as position and orientation data, control over haptic actuators (e.g., vibration hardware), and more. This API is very new, and currently is only supported and enabled by default in Firefox 55+ Beta/Nightly channels.
 
 ## Types of controller
 
@@ -38,7 +36,7 @@ There are two types of controller you'll encounter with VR hardware:
 
 Now onto some code. Let's look first at the basics of how we get access to VR controllers with the Gamepad API. There are a few strange nuances to bear in mind here, so it is worth taking a look.
 
-We've written up a simple example to demonstrate — see our [vr-controller-basic-info](https://github.com/mdn/webvr-tests/blob/main/webvr/vr-controller-basic-info/index.html) source code ([see it running live here also](https://mdn.github.io/webvr-tests/webvr/vr-controller-basic-info/)). This demo outputs information on the VR displays and gamepads connected to your computer.
+We've written up an example to demonstrate — see our [vr-controller-basic-info](https://github.com/mdn/webvr-tests/blob/main/webvr/vr-controller-basic-info/index.html) source code ([see it running live here also](https://mdn.github.io/webvr-tests/webvr/vr-controller-basic-info/)). This demo outputs information on the VR displays and gamepads connected to your computer.
 
 ### Getting the display information
 
@@ -89,7 +87,7 @@ Display max layers: ${cap.maxLayers}`;
 
 This function first uses the promise-based {{domxref("Navigator.getVRDisplays()")}} method, which resolves with an array containing {{domxref("VRDisplay")}} objects representing the connected displays. Next, it prints out each display's {{domxref("VRDisplay.displayId")}} and {{domxref("VRDisplay.displayName")}} values, and a number of useful values contained in the display's associated {{domxref("VRDisplayCapabilities")}} object. The most useful of these are {{domxref("VRDisplayCapabilities.hasOrientation","hasOrientation")}} and {{domxref("VRDisplayCapabilities.hasPosition","hasPosition")}}, which allow you to detect whether the device can return orientation and position data and set up your app accordingly.
 
-The last line contained in this function is a {{domxref("setTimeout()")}} call, which runs the `reportGamepads()` function after a 1 second delay. Why do we need to do this? First of all, VR controllers will only be ready after their associated VR headset is active, so we need to invoke this after `getVRDisplays()` has been called and returned the display information. Second, the Gamepad API is much older than the WebVR API, and not promise-based. As you'll see later, the `getGamepads()` method is synchronous, and just returns the `Gamepad` objects immediately — it doesn't wait for the controller to be ready to report information. Unless you wait for a little while, returned information may not be accurate (at least, this is what we found in our tests).
+The last line contained in this function is a {{domxref("Window.setTimeout", "setTimeout()")}} call, which runs the `reportGamepads()` function after a 1 second delay. Why do we need to do this? First of all, VR controllers will only be ready after their associated VR headset is active, so we need to invoke this after `getVRDisplays()` has been called and returned the display information. Second, the Gamepad API is much older than the WebVR API, and not promise-based. As you'll see later, the `getGamepads()` method is synchronous, and just returns the `Gamepad` objects immediately — it doesn't wait for the controller to be ready to report information. Unless you wait for a little while, returned information may not be accurate (at least, this is what we found in our tests).
 
 ### Getting the Gamepad information
 
@@ -110,7 +108,6 @@ Gamepad can return position info: ${gp.pose.hasPosition}
 Gamepad can return orientation info: ${gp.pose.hasOrientation}`;
     listItem.insertBefore(
       document.createElement("strong"),
-      }),
       listItem.firstChild,
     ).textContent = `Gamepad ${gp.index}`;
     list.appendChild(listItem);
@@ -140,8 +137,8 @@ At the end of our example we first include the `removeGamepads()` function:
 ```js
 function removeGamepads() {
   const gpLi = document.querySelectorAll(".gamepad");
-  for (let i = 0; i < gpLi.length; i++) {
-    list.removeChild(gpLi[i]);
+  for (const li of gpLi) {
+    list.removeChild(li);
   }
   reportGamepads();
 }

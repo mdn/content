@@ -8,7 +8,7 @@ status:
 browser-compat: api.PaymentRequestEvent.openWindow
 ---
 
-{{APIRef("Payment Handler API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
+{{APIRef("Web-Based Payment Handler API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
 The **`openWindow()`** method of the {{domxref("PaymentRequestEvent")}} interface opens the specified URL in a new window, only if the given URL is on the same origin as the calling page. It returns a {{jsxref("Promise")}} that resolves with a reference to a {{domxref("WindowClient")}}.
 
@@ -32,9 +32,8 @@ A {{jsxref("Promise")}} that resolves with a reference to a
 ## Examples
 
 ```js
-…
-self.addEventListener('paymentrequest', async e => {
-…
+self.addEventListener("paymentrequest", async (e) => {
+  // …
   // Retain a promise for future resolution
   // Polyfill for PromiseResolver at link below.
   resolver = new PromiseResolver();
@@ -47,14 +46,13 @@ self.addEventListener('paymentrequest', async e => {
     client = await e.openWindow(checkoutURL);
     if (!client) {
       // Reject if the window fails to open
-      throw 'Failed to open window';
+      throw new Error("Failed to open window");
     }
   } catch (err) {
     // Reject the promise on failure
     resolver.reject(err);
-  };
+  }
 });
-…
 ```
 
 See [Open the payment handler window to display the web-based payment app frontend](https://web.dev/articles/orchestrating-payment-transactions#open-payment-handler-window) for more details about how this would be used.

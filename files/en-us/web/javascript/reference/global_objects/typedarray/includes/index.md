@@ -1,15 +1,26 @@
 ---
 title: TypedArray.prototype.includes()
+short-title: includes()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.includes
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`includes()`** method of {{jsxref("TypedArray")}} instances determines whether a typed array includes a certain value among its entries, returning `true` or `false` as appropriate. This method has the same algorithm as {{jsxref("Array.prototype.includes()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-includes.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.includes()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+
+console.log(uint8.includes(20));
+// Expected output: true
+
+// Check from position 3
+console.log(uint8.includes(20, 3));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -58,7 +69,7 @@ new Float32Array([NaN]).includes(NaN); // true
 
 ## See also
 
-- [Polyfill of `TypedArray.prototype.includes` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.includes` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.indexOf()")}}

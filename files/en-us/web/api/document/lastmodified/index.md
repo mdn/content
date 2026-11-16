@@ -8,9 +8,7 @@ browser-compat: api.Document.lastModified
 
 {{APIRef("DOM")}}
 
-The **`lastModified`** property of the {{domxref("Document")}}
-interface returns a string containing the date and local time on which the current document
-was last modified.
+The **`lastModified`** read-only property of the {{domxref("Document")}} interface returns a string containing the date and local time on which the current document was last modified.
 
 ## Value
 

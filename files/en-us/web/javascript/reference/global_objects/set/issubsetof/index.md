@@ -1,11 +1,11 @@
 ---
 title: Set.prototype.isSubsetOf()
+short-title: isSubsetOf()
 slug: Web/JavaScript/Reference/Global_Objects/Set/isSubsetOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.isSubsetOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`isSubsetOf()`** method of {{jsxref("Set")}} instances takes a set and returns a boolean indicating if all elements of this set are in the given set.
 
@@ -36,12 +36,12 @@ In mathematical notation, _subset_ is defined as:
 
 And using Venn diagram:
 
-![A Venn diragram with two circles. A is a subset of B because A is completely contained in B.](diagram.svg)
+![A Venn diagram with two circles. A is a subset of B because A is completely contained in B.](diagram.svg)
 
 > [!NOTE]
 > The _subset_ relationship is not _proper subset_, which means `isSubsetOf()` returns `true` if `this` and `other` contain the same elements.
 
-`isSubsetOf()` accepts [set-like](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) objects as the `other` parameter. It requires {{jsxref("Operators/this", "this")}} to be an actual {{jsxref("Set")}} instance, because it directly retrieves the underlying data stored in `this` without invoking any user code. Then, its behavior depends on the sizes of `this` and `other`:
+`isSubsetOf()` accepts [set-like](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) objects as the `other` parameter. It requires {{jsxref("this")}} to be an actual {{jsxref("Set")}} instance, because it directly retrieves the underlying data stored in `this` without invoking any user code. Then, its behavior depends on the sizes of `this` and `other`:
 
 - If there are more elements in `this` than `other.size`, then it directly returns `false`.
 - Otherwise, it iterates over the elements in `this`, and returns `false` if any element `e` in `this` causes `other.has(e)` to return a [falsy](/en-US/docs/Glossary/Falsy) value. Otherwise, it returns `true`.
@@ -85,7 +85,8 @@ console.log(set2.isSubsetOf(set1)); // true
 
 ## See also
 
-- [Polyfill of `Set.prototype.isSubsetOf` in `core-js`](https://github.com/zloirock/core-js#new-set-methods)
+- [Polyfill of `Set.prototype.isSubsetOf` in `core-js`](https://core-js.io/docs/features/ecmascript/collections#h-set)
+- [es-shims polyfill of `Set.prototype.isSubsetOf`](https://www.npmjs.com/package/set.prototype.issubsetof)
 - {{jsxref("Set.prototype.difference()")}}
 - {{jsxref("Set.prototype.intersection()")}}
 - {{jsxref("Set.prototype.isDisjointFrom()")}}

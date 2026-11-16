@@ -22,10 +22,8 @@ forEach(callback, thisArg)
 ### Parameters
 
 - `callback`
-
   - : A function to execute on each element of `someNodeList`. It
     accepts 3 parameters:
-
     - `currentValue`
       - : The current element being processed in `someNodeList`.
     - `currentIndex` {{Optional_inline}}
@@ -81,6 +79,6 @@ The above code results in the following:
 
 ## See also
 
-- [Polyfill of `NodeList.prototype.forEach` in `core-js`](https://github.com/zloirock/core-js#iterable-dom-collections)
+- [Polyfill of `NodeList.prototype.forEach` in `core-js`](https://core-js.io/docs/features/web-standards/iterable-dom-collections)
 - {{domxref("Node")}}
 - {{domxref("NodeList")}}

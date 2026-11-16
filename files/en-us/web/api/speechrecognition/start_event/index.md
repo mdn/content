@@ -8,16 +8,20 @@ browser-compat: api.SpeechRecognition.start_event
 
 {{APIRef("Web Speech API")}}
 
-The **`start`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) {{domxref("SpeechRecognition")}} object is fired when the speech recognition service has begun listening to incoming audio with intent to recognize grammars associated with the current `SpeechRecognition`.
+The **`start`** event of the {{domxref("SpeechRecognition")}} interface is fired when the speech recognition service has begun listening to incoming audio with the intention of recognizing speech.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("start", (event) => {});
+```js-nolint
+addEventListener("start", (event) => { })
+```
 
-onstart = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onstart = (event) => { }
 ```
 
 ## Event type
@@ -29,14 +33,16 @@ A generic {{DOMxRef("Event")}} with no added properties.
 You can use the `start` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const recognition = new (
+  window.SpeechRecognition || window.webkitSpeechRecognition
+)();
 
 recognition.addEventListener("start", () => {
   console.log("Speech recognition service has started");
 });
 ```
 
-Or use the `onstart` event handler property:
+Or use the `onstart` event handler property (but note that this replaces other event listeners added using `onstart`, if any):
 
 ```js
 recognition.onstart = () => {

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.deleteProgram
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.deleteProgram()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) deletes a given
@@ -22,7 +22,7 @@ deleteProgram(program)
 ### Parameters
 
 - `program`
-  - : A {{domxref("WebGLProgram")}} object to delete.
+  - : A {{domxref("WebGLProgram")}} object to delete. Passing `null` does nothing.
 
 ### Return value
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getIndexedParameter
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.getIndexedParameter()`** method
 of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns indexed
@@ -21,10 +21,8 @@ getIndexedParameter(target, index)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target for which to return information.
     Possible values:
-
     - `gl.TRANSFORM_FEEDBACK_BUFFER_BINDING`: Returns a
       {{domxref("WebGLBuffer")}}.
     - `gl.TRANSFORM_FEEDBACK_BUFFER_SIZE`: Returns a
@@ -36,7 +34,6 @@ getIndexedParameter(target, index)
     - `gl.UNIFORM_BUFFER_START`: Returns a {{domxref("WebGL_API/Types", "GLintptr")}}.
 
     When using the {{domxref("OES_draw_buffers_indexed")}} WebGL 2 extension, the following values are available additionally:
-
     - `gl.BLEND_EQUATION_RGB`: Returns the RGB blend equation for the draw buffer at `index`.
     - `gl.BLEND_EQUATION_ALPHA`: Returns the alpha blend equation for the draw buffer at `index`.
     - `gl.BLEND_SRC_RGB`: Returns the source RGB blend function for the draw buffer at `index`.

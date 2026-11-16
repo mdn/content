@@ -40,7 +40,7 @@ function hide(evt) {
 
 // Attach the listener to the list
 // It will fire when each <li> is clicked
-ul.addEventListener("click", hide, false);
+ul.addEventListener("click", hide);
 ```
 
 ## Specifications
@@ -53,4 +53,4 @@ ul.addEventListener("click", hide, false);
 
 ## See also
 
-- [Event bubbling](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
+- [Learn: Event bubbling](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling)

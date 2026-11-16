@@ -21,9 +21,7 @@ new StereoPannerNode(context, options)
 - `context`
   - : A reference to an {{domxref("AudioContext")}}.
 - `options` {{optional_inline}}
-
   - : Options are as follows:
-
     - `pan`
       - : A floating point number in the range \[-1,1] indicating the position of an {{domxref("AudioNode")}} in an output image.
         The value -1 represents full left and 1 represents full right.

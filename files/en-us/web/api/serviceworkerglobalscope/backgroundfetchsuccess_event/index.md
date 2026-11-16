@@ -16,12 +16,16 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("backgroundfetchsuccess", (event) => {});
+```js-nolint
+addEventListener("backgroundfetchsuccess", (event) => { })
+```
 
-onbackgroundfetchsuccess = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onbackgroundfetchsuccess = (event) => { }
 ```
 
 ## Event type
@@ -29,13 +33,6 @@ onbackgroundfetchsuccess = (event) => {};
 A {{domxref("BackgroundFetchUpdateUIEvent")}}.
 
 {{InheritanceDiagram("BackgroundFetchUpdateUIEvent")}}
-
-## Event properties
-
-_Inherits properties from its parent, {{domxref("BackgroundFetchEvent")}}._
-
-- {{domxref("BackgroundFetchUpdateUIEvent.updateUI()")}}
-  - : Updates the UI of the element that the browser displays to show the progress of the fetch operation.
 
 ## Description
 

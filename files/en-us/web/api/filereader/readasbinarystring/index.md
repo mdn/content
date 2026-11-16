@@ -8,7 +8,7 @@ status:
 browser-compat: api.FileReader.readAsBinaryString
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}{{Deprecated_Header}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 > [!NOTE]
 > This method is deprecated in favor of {{DOMxRef("FileReader.readAsArrayBuffer","readAsArrayBuffer()")}}.
@@ -51,7 +51,7 @@ canvas.height = height;
 
 const ctx = canvas.getContext("2d");
 
-ctx.strokeStyle = "#090";
+ctx.strokeStyle = "#009900";
 ctx.beginPath();
 ctx.arc(width / 2, height / 2, width / 2 - width / 10, 0, Math.PI * 2);
 ctx.stroke();

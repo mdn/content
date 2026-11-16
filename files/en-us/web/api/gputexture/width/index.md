@@ -3,12 +3,10 @@ title: "GPUTexture: width property"
 short-title: width
 slug: Web/API/GPUTexture/width
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUTexture.width
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`width`** read-only property of the
 {{domxref("GPUTexture")}} interface represents the width of the `GPUTexture`.
@@ -22,7 +20,7 @@ A number.
 ## Examples
 
 ```js
-// ...
+// …
 
 const depthTexture = device.createTexture({
   size: [640, 480],

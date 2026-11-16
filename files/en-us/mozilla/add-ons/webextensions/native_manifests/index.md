@@ -2,9 +2,8 @@
 title: Native manifests
 slug: Mozilla/Add-ons/WebExtensions/Native_manifests
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Native manifests are JSON files provisioned on the user's computer by means other than the extension installation process. For example, a native manifest might be provisioned by a device administrator or native application installer.
 
@@ -93,7 +92,7 @@ The native messaging manifest is a file with a name that matches the string pass
       <td>
         <p>Path to the native application.</p>
         <p>
-          On Windows, this may be relative to the manifest itself. On MacOS and
+          On Windows, this may be relative to the manifest itself. On macOS and
           Linux, it must be absolute.
         </p>
       </td>
@@ -350,7 +349,7 @@ browser.pkcs11.installModule("my_module");
 
 On Linux and macOS, you need to store the manifest in a particular place. On Windows, you need to create a registry key that points to the manifest's location.
 
-The detailed rules are the same for all the manifest types, except that the penultimate component of the path identifies the type of manifest. The examples below show the form for each of the three different types. In all the examples, `<name>` is the value of the `name` property in the manifest.
+The detailed rules are the same for all the manifest types, except that the penultimate component of the path identifies the type of manifest. The examples below show the form for each of the three different types. In all the examples, `<name>` is the value of the name property in the native manifest.
 
 ### Windows
 

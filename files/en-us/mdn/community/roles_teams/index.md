@@ -1,14 +1,14 @@
 ---
 title: MDN Web Docs roles and teams
+short-title: Roles and teams
 slug: MDN/Community/Roles_teams
 page-type: mdn-community-guide
+sidebar: mdnsidebar
 ---
 
-{{MDNSidebar}}
+The success and growth of the MDN Web Docs project is, in large part, due to our community of contributors. Some contributors have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. Changes to the site, including maintenance tasks, are performed by employees, contractors, and a network of partners who are all dedicated to the health, growth, and maintenance of MDN Web Docs. The project relies heavily on [roles](#roles) and [teams](#teams) in the [MDN organization on GitHub](https://github.com/mdn) to manage and incorporate changes from these different groups. A list of the organization's current members can be found at [github.com/orgs/mdn](https://github.com/orgs/mdn/people).
 
-The success and growth of the MDN Web Docs project is, in large part, due to our community of contributors. Some contributors have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. Changes to the site, including maintenance tasks, are performed by employees, contractors, and a network of partners who are all dedicated to the health, growth, and maintenance of MDN Web Docs. The project relies heavily on [roles](#roles) and [teams](#teams) in the [MDN organization on GitHub](https://github.com/mdn) to manage and incorporate changes from these different groups. A list of the organization's members can be [found here](https://github.com/orgs/mdn/people).
-
-Community contributions help this open source project immensely.
+Community contributions help this open-source project immensely.
 Contributors can use their work on MDN Web Docs to show their writing, technical, and collaboration skills, and the ability to work with people from diverse backgrounds. This section describes the roles you can take on while volunteering on the MDN Web Docs project.
 
 ## Roles
@@ -30,14 +30,13 @@ Apart from writing and testing code, contributions include creating and updating
 Depending on the frequency of your contributions, you can be someone who contributes occasionally or an active contributor.
 If you demonstrate a large impact on the project, you may be nominated as a [spotlight contributor](#spotlight_contributor) or be promoted to an [organization member](#organization_member).
 
-If you're new here and you would like to become a contributor, take a look at our [contribution guide](https://github.com/mdn/content/blob/main/CONTRIBUTING.md) and the [repositories in the MDN GitHub organization](https://github.com/orgs/mdn/repositories).
+If you're new here and you would like to become a contributor, take a look at our [Getting started guide](/en-US/docs/MDN/Community/Getting_started) and the [repositories in the MDN GitHub organization](https://github.com/orgs/mdn/repositories).
 
 As a contributor, you can get involved with the project by engaging in the following activities:
 
 - Participating in community discussions on the [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 - Helping other contributors with their pull requests and issues or mentoring new contributors.
-- Submitting bug reports. Check out the [kind of issues you can open](https://github.com/mdn/content/issues/new/choose) on MDN's [`content`](https://github.com/mdn/content) repository.
-  If you notice a platform bug, you can [open an issue](https://github.com/mdn/yari/issues/new/choose) on MDN's `yari` repository.
+- Submitting bug reports. Check out [the main repositories](/en-US/docs/MDN/Community/Our_repositories) for more information.
 - Commenting on issues to move conversations towards a fruitful resolution.
 - Addressing open issues (for example, in the [`content`](https://github.com/mdn/content/issues) repository) by submitting [pull requests](/en-US/docs/MDN/Community/Pull_requests).
 - Attending community events.
@@ -45,10 +44,11 @@ As a contributor, you can get involved with the project by engaging in the follo
 
 **Requirements:**
 
-To be a contributor, you must follow:
+To be a contributor, you must:
 
-- [Mozilla's code of conduct](https://www.mozilla.org/en-US/about/governance/policies/participation/)
-- Contribution guidelines (check the `CONTRIBUTING.md` file in each repository; for example, these are the [contribution guidelines](https://github.com/mdn/content/blob/main/CONTRIBUTING.md) for the `mdn/content` repository).
+- Follow [Mozilla's code of conduct](https://www.mozilla.org/en-US/about/governance/policies/participation/).
+- Follow the specific guidelines for each repository. If there are any project-specific hints or guidelines, you will find them in a `CONTRIBUTING.md` file in the project repository root.
+- Take responsibility for your contributions. Before submitting, review everything and test any code, regardless of the tools you use to create it.
 
 **Privileges:**
 
@@ -174,7 +174,7 @@ They are responsible for reviewing and approving pull requests in their topic or
 
 In addition to the responsibilities of an [organization member](#organization_member), invited experts are responsible for:
 
-- Following the [reviewing guide](https://github.com/mdn/content/blob/main/REVIEWING.md).
+- Following the [pull request review process](/en-US/docs/MDN/Community/Pull_requests#reviewing_a_pull_request).
 - Reviewing pull requests in their topic area.
 - Helping other contributors become reviewers.
 
@@ -318,7 +318,6 @@ The teams in the [MDN GitHub organization](https://github.com/orgs/mdn/teams) in
 - `@OWD`: Contributors from the Open Web Docs non-profit organization
 - `@sre`: Site reliability engineers who support MDN Web Docs
 - `@yari-content`: The umbrella team for all MDN Web Docs content reviewers
-
   - There is a subteam for the different topic areas — accessibility, Add-ons, CSS, HTML, HTTP, JavaScript, SVG, Web API, and WebAssembly. For example, there's `@yari-content-css` and `@yari-content-svg`.
   - There are also subteams for different languages — Brazilian Portuguese, Chinese, French, Japanese, Korean, Russian, and Spanish. For example, there's `@yari-content-fr` and `@yari-content-ko`.
 

@@ -3,13 +3,26 @@ title: let
 slug: Web/JavaScript/Reference/Statements/let
 page-type: javascript-statement
 browser-compat: javascript.statements.let
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`let`** declaration declares re-assignable, block-scoped local variables, optionally initializing each to a value.
 
-{{EmbedInteractiveExample("pages/js/statement-let.html")}}
+{{InteractiveExample("JavaScript Demo: let declaration")}}
+
+```js interactive-example
+let x = 1;
+
+if (x === 1) {
+  let x = 2;
+
+  console.log(x);
+  // Expected output: 2
+}
+
+console.log(x);
+// Expected output: 1
+```
 
 ## Syntax
 
@@ -24,7 +37,7 @@ let name1 = value1, name2, /* …, */ nameN = valueN;
 ### Parameters
 
 - `nameN`
-  - : The name of the variable to declare. Each must be a legal JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) or a [destructuring binding pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+  - : The name of the variable to declare. Each must be a legal JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) or a [destructuring binding pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring).
 - `valueN` {{optional_inline}}
   - : Initial value of the variable. It can be any legal expression. Default value is `undefined`.
 
@@ -50,7 +63,7 @@ Compared with {{jsxref("Statements/var", "var")}}, `let` declarations have the f
 - `let` declarations can only be accessed after the place of declaration is reached (see [temporal dead zone](#temporal_dead_zone_tdz)). For this reason, `let` declarations are commonly regarded as [non-hoisted](/en-US/docs/Glossary/Hoisting).
 - `let` declarations do not create properties on {{jsxref("globalThis")}} when declared at the top level of a script.
 - `let` declarations cannot be [redeclared](#redeclarations) by any other declaration in the same scope.
-- `let` begins [_declarations_, not _statements_](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations). That means you cannot use a lone `let` declaration as the body of a block (which makes sense, since there's no way to access the variable).
+- `let` begins [_declarations_, not _statements_](/en-US/docs/Web/JavaScript/Reference/Statements#what_are_statements_declarations_and_expressions). That means you cannot use a lone `let` declaration as the body of a block (which makes sense, since there's no way to access the variable).
 
   ```js-nolint example-bad
   if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
@@ -58,7 +71,7 @@ Compared with {{jsxref("Statements/var", "var")}}, `let` declarations have the f
 
 Note that `let` is allowed as an identifier name when declared with `var` or `function` in [non-strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), but you should avoid using `let` as an identifier name to prevent unexpected syntax ambiguities.
 
-Many style guides (including [MDN's](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript#variable_declarations)) recommend using {{jsxref("Statements/const", "const")}} over `let` whenever a variable is not reassigned in its scope. This makes the intent clear that a variable's type (or value, in the case of a primitive) can never change. Others may prefer `let` for non-primitives that are mutated.
+Many style guides (including [MDN's](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript#variable_declarations)) recommend using {{jsxref("Statements/const", "const")}} over `let` whenever a variable is not reassigned in its scope. This makes the intent clear that a variable's type (or value, in the case of a primitive) can never change. Others may prefer `let` for non-primitives that are mutated.
 
 The list that follows the `let` keyword is called a _{{Glossary("binding")}} list_ and is separated by commas, where the commas are _not_ [comma operators](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator) and the `=` signs are _not_ [assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment). Initializers of later variables can refer to earlier variables in the list.
 
@@ -109,7 +122,8 @@ This differs from using `typeof` for undeclared variables, and variables that ho
 console.log(typeof undeclaredVariable); // "undefined"
 ```
 
-> **Note:** `let` and `const` declarations are only processed when the current script gets processed. If you have two `<script>` elements running in script mode within one HTML, the first script is not subject to the TDZ restrictions for top-level `let` or `const` variables declared in the second script, although if you declare a `let` or `const` variable in the first script, declaring it again in the second script will cause a [redeclaration error](#redeclarations).
+> [!NOTE]
+> `let` and `const` declarations are only processed when the current script gets processed. If you have two `<script>` elements running in script mode within one HTML, the first script is not subject to the TDZ restrictions for top-level `let` or `const` variables declared in the second script, although if you declare a `let` or `const` variable in the first script, declaring it again in the second script will cause a [redeclaration error](#redeclarations).
 
 ### Redeclarations
 
@@ -275,7 +289,7 @@ let [, a, b, c] = result;
 console.log(a, b, c); // "aaa" "b" "cc"
 ```
 
-For more information, see [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+For more information, see [Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring).
 
 ## Specifications
 

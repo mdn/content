@@ -7,7 +7,7 @@ browser-compat: api.FragmentDirective
 
 {{APIRef("URL Fragment Text Directives")}}
 
-The **`FragmentDirective`** interface is an object exposed to allow code to check whether or not a browser supports text fragments.
+The **`FragmentDirective`** interface is an object exposed to allow code to check whether or not a browser supports [text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments).
 
 It is accessed via the {{domxref("Document.fragmentDirective")}} property.
 
@@ -64,5 +64,4 @@ if (document.fragmentDirective) {
 
 ## See also
 
-- [Text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments)
 - {{cssxref("::target-text")}}

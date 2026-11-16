@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.TextDecoder.decode
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
 The **`TextDecoder.decode()`** method returns a string containing text decoded from the buffer passed as a parameter.
 
@@ -26,9 +26,7 @@ decode(buffer, options)
 - `buffer` {{Optional_Inline}}
   - : An [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} object containing the encoded text to decode.
 - `options` {{Optional_Inline}}
-
   - : An object with the property:
-
     - `stream`
       - : A boolean flag indicating whether additional data will follow in subsequent calls to `decode()`.
         Set to `true` if processing the data in chunks, and `false` for the final chunk or if the data is not chunked.

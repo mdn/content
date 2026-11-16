@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.SubtleCrypto
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`SubtleCrypto`** interface of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) provides a number of low-level cryptographic functions.
 
@@ -295,8 +295,8 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td>✓</td>
       <td></td>
-      <td>✓</td>
       <td></td>
+      <td>✓</td>
     </tr>
     <tr>
       <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2">PBKDF2</a></th>
@@ -305,8 +305,8 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td>✓</td>
       <td></td>
-      <td>✓</td>
       <td></td>
+      <td>✓</td>
     </tr>
   </tbody>
 </table>

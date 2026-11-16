@@ -25,10 +25,8 @@ matchAll(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An options object allowing you to set options for the matching operation. Available
     options are:
-
     - `includeUncontrolled`
       - : A boolean value — if set to
         `true`, the matching operation will return all service worker clients

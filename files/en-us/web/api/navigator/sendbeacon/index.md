@@ -9,7 +9,7 @@ browser-compat: api.Navigator.sendBeacon
 {{APIRef("HTML DOM")}}
 
 The **`navigator.sendBeacon()`**
-method {{glossary("Asynchronous", "asynchronously")}} sends an [HTTP POST](/en-US/docs/Web/HTTP/Methods/POST) request containing a small amount of data to a web server.
+method {{glossary("Asynchronous", "asynchronously")}} sends an [HTTP POST](/en-US/docs/Web/HTTP/Reference/Methods/POST) request containing a small amount of data to a web server.
 
 It's intended to be used for
 sending analytics data to a web server, and avoids some of the problems with
@@ -31,15 +31,11 @@ sendBeacon(url, data)
 - `url`
   - : The URL that will receive the _data_. Can be relative or absolute.
 - `data` {{Optional_inline}}
-  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("Blob")}},
-    a string literal or object, a {{domxref("FormData")}} or a {{domxref("URLSearchParams")}}
-    object containing the data to send.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("Blob")}}, a string literal or object, a {{domxref("FormData")}} or a {{domxref("URLSearchParams")}} object containing the data to send. The total size of queued data is limited to 64 KiB (65,536 bytes).
 
-### Return values
+### Return value
 
-The **`sendBeacon()`** method returns `true` if the
-{{glossary("user agent")}} successfully queued the `data` for transfer.
-Otherwise, it returns `false`.
+Returns `true` if the {{glossary("user agent")}} successfully queued the `data` for transfer. Otherwise, it returns `false`.
 
 ## Description
 
@@ -70,7 +66,9 @@ This means:
 - It's sent asynchronously
 - It doesn't impact the loading of the next page
 
-The data is sent as an [HTTP POST](/en-US/docs/Web/HTTP/Methods/POST) request.
+The data is sent as an [HTTP POST](/en-US/docs/Web/HTTP/Reference/Methods/POST) request.
+
+The limitation, however, is that the payload size is limited to about 64 KiB. For larger data transfers, consider using `fetch()` instead.
 
 ### Sending analytics at the end of a session
 
@@ -78,19 +76,17 @@ Websites often want to send analytics or diagnostics to the server when the user
 The most reliable way to do this is to send the data on the [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) event:
 
 ```js
-document.addEventListener("visibilitychange", function logData() {
+document.addEventListener("visibilitychange", () => {
   if (document.visibilityState === "hidden") {
     navigator.sendBeacon("/log", analyticsData);
   }
 });
 ```
 
-#### Avoid unload and beforeunload
+#### Legacy events
 
-In the past, many websites have used the [`unload`](/en-US/docs/Web/API/Window/unload_event)
-or [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) events to send analytics at the end of a session.
-However, this is extremely unreliable. In many situations, especially on mobile, the browser will not fire the
-`unload`, `beforeunload`, or `pagehide` events. For example, these events will not fire in the following situation:
+In the past, many websites have used the {{domxref("Window.unload_event", "unload")}}, {{domxref("Window.beforeunload_event", "beforeunload")}}, or {{domxref("Window.pagehide_event", "pagehide")}} events to send analytics at the end of a session.
+However, this is unreliable. In many situations, especially on mobile, the browser will not fire these events. For example, they will not fire in the following situation:
 
 1. The user loads the page and interacts with it.
 2. When they are finished, they switch to a different app, instead of closing the tab.
@@ -100,19 +96,14 @@ Additionally, the `unload` event is incompatible with the back/forward cache ([b
 implemented in modern browsers. Some browsers, such as Firefox, handle this incompatibility by excluding pages from the bfcache if they contain unload handlers,
 thus hurting performance. Others, such as Safari and Chrome on Android, handle it by not firing the `unload` event when the user navigates to another page in the same tab.
 
-Firefox will also exclude pages from the bfcache if they contain `beforeunload` handlers.
-
-#### Use pagehide as a fallback
-
-To support browsers which don't implement `visibilitychange`, use the [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) event.
-Like `beforeunload` and `unload`, this event is not reliably fired, especially on mobile. However, it is compatible with the bfcache.
+The `pagehide` event is not as problematic as `unload`, because it is compatible with the bfcache. However, it suffers from the same reliability problems. Developers should use `visibilitychange` instead.
 
 ## Examples
 
 The following example specifies a handler for the {{domxref("document.visibilitychange_event", "visibilitychange")}} event. The handler calls `sendBeacon()` to send analytics.
 
 ```js
-document.addEventListener("visibilitychange", function logData() {
+document.addEventListener("visibilitychange", () => {
   if (document.visibilityState === "hidden") {
     navigator.sendBeacon("/log", analyticsData);
   }

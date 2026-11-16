@@ -8,7 +8,7 @@ browser-compat: api.CharacterData.remove
 
 {{APIRef("DOM")}}
 
-The **`remove()`** method of the {{domxref("CharacterData")}} removes the text contained in the node.
+The **`remove()`** method of the {{domxref("CharacterData")}} interface removes the `CharacterData` node from its parent node. Nothing happens if {{domxref("Node.parentNode", "parentNode")}} is `null`.
 
 ## Syntax
 
@@ -20,6 +20,10 @@ remove()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Example
 
 ### Using `remove()`
@@ -30,9 +34,9 @@ None.
 
 ```js
 const span = document.querySelector("span");
-const textnode = span.nextSibling;
+const textNode = span.nextSibling;
 
-textnode.remove(); // Removes the text
+textNode.remove(); // Removes the text
 ```
 
 {{EmbedLiveSample("Example", "100%", 50)}}
@@ -47,5 +51,6 @@ textnode.remove(); // Removes the text
 
 ## See also
 
-- {{domxref("Element.remove()")}}
 - {{domxref("CharacterData.deleteData()")}}
+- {{domxref("DocumentType.remove()")}}
+- {{domxref("Element.remove()")}}

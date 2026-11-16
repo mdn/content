@@ -3,9 +3,8 @@ title: proxy.onError
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/onError
 page-type: webextension-api-event
 browser-compat: webextensions.api.proxy.onError
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when there is an error evaluating the PAC file or the `onRequest` listener.
 
@@ -33,9 +32,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `newState`
       - : `Object`. An [Error](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) object representing the error.
 

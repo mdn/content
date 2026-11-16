@@ -8,7 +8,7 @@ browser-compat: api.Document.evaluate
 
 {{ ApiRef("DOM") }}
 
-The **`evaluate()`** method of the {{domxref("Document")}} interface selects elements based on the [XPath](/en-US/docs/Web/XPath)
+The **`evaluate()`** method of the {{domxref("Document")}} interface selects elements based on the [XPath](/en-US/docs/Web/XML/XPath)
 expression given in parameters.
 
 XPath expressions can be evaluated on both HTML and XML documents.
@@ -24,17 +24,18 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
 - `xpathExpression`
   - : A string representing the _xpath_ to be evaluated.
 - `contextNode`
-  - : The _context node_ for the query (see the [XPath specification](https://www.w3.org/TR/1999/REC-xpath-19991116/)).
+  - : The _context node_ for the query.
     It's common to pass `document` as the context node.
-- `namespaceResolver`
+- `namespaceResolver` {{optional_inline}}
   - : A function that will be passed any namespace prefixes
     and should return a string representing the namespace URI associated with that prefix.
     It will be used to resolve prefixes within the _xpath_ itself,
     so that they can be matched with the document.
     The value `null` is common for HTML documents or when no namespace prefixes are used.
-- `resultType`
-
-  - : An integer that corresponds to the type of result `XPathResult` to return.
+    If omitted, it defaults to `null`.
+- `resultType` {{optional_inline}}
+  - : An integer that corresponds to the type of `XPathResult` to return.
+    If omitted, it defaults to `ANY_TYPE` (`0`).
     The following values are possible:
     - `ANY_TYPE` (`0`)
       - : Whatever type naturally results from the given expression.
@@ -89,8 +90,8 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
       - : A result set containing the first node in the document that matches the
         expression.
 
-- `result`
-  - : An existing `XPathResult` to use for the results. If set to `null` the method will create and return a new `XPathResult`.
+- `result` {{optional_inline}}
+  - : An existing `XPathResult` to use for the results. If set to `null` or omitted, the method will create and return a new `XPathResult`.
 
 ### Return value
 
@@ -142,17 +143,17 @@ context node, document.body. If the "." was left out (leaving `//h2`) the
 query would start from the root node (`html`) which would be more
 wasteful.)
 
-See [Introduction to using XPath in JavaScript](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript) for more information.
+See [Introduction to using XPath in JavaScript](/en-US/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript) for more information.
 
 ### Getting element by xml:id
 
 This function is a replacement for {{domxref("Document.getElementById()")}} for when you need to search by `xml:id` instead.
 
 ```js
-function getElementByIdWrapper(xmldoc, id) {
-  return xmldoc.evaluate(
+function getElementByIdWrapper(xmlDoc, id) {
+  return xmlDoc.evaluate(
     `//*[@xml:id="${id}"]`,
-    xmldoc,
+    xmlDoc,
     () => "http://www.w3.org/XML/1998/namespace",
     XPathResult.FIRST_ORDERED_NODE_TYPE,
     null,
@@ -172,4 +173,3 @@ function getElementByIdWrapper(xmldoc, id) {
 
 - {{domxref("Document.createExpression()")}}
 - {{domxref("XPathResult")}}
-- [Check for browser support](https://codepen.io/johan/full/DJoqaX)

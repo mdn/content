@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.focus_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`focus`** event fires when an element has received focus. The event does not bubble, but the related {{domxref("Element/focusin_event", "focusin")}} event that follows does bubble.
 
@@ -16,12 +16,16 @@ The `focus` event is not cancelable.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("focus", (event) => {});
+```js-nolint
+addEventListener("focus", (event) => { })
+```
 
-onfocus = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onfocus = (event) => { }
 ```
 
 ## Event type
@@ -29,13 +33,6 @@ onfocus = (event) => {};
 A {{domxref("FocusEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("FocusEvent")}}
-
-## Event properties
-
-_This interface also inherits properties from its parent {{domxref("UIEvent")}}, and indirectly from {{domxref("Event")}}._
-
-- {{domxref("FocusEvent.relatedTarget")}}
-  - : The element losing focus, if any.
 
 ## Examples
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.generateKey
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`generateKey()`** method of the {{domxref("SubtleCrypto")}} interface is used to generate a new key (for symmetric algorithms) or key pair (for public-key algorithms).
 
@@ -19,9 +19,7 @@ generateKey(algorithm, extractable, keyUsages)
 ### Parameters
 
 - `algorithm`
-
   - : An object defining the type of key to generate and providing extra algorithm-specific parameters.
-
     - For [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss),
       or [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep):
       pass an [`RsaHashedKeyGenParams`](/en-US/docs/Web/API/RsaHashedKeyGenParams) object.
@@ -36,11 +34,10 @@ generateKey(algorithm, extractable, keyUsages)
 
 - `extractable`
   - : A boolean value indicating whether it will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or {{domxref("SubtleCrypto.wrapKey()")}}.
+    Note that when generating asymmetric key pairs (such as RSA or ECDSA), the `extractable` parameter determines whether the private key can be exported; the public key is always extractable.
 - `keyUsages`
-
   - : An {{jsxref("Array")}} of strings indicating what can be done with the newly generated key.
     Possible values for array elements are:
-
     - `encrypt`
       - : The key may be used to {{domxref("SubtleCrypto.encrypt()", "encrypt", "", "nocode")}} messages.
     - `decrypt`
@@ -223,7 +220,7 @@ async function test() {
 
 The information about the created keys is logged below (or an error string if the browser does not allow the key to be created).
 
-{{EmbedLiveSample("Ed25519", "100%", "240px")}}
+{{EmbedLiveSample("ed25519_key_generation", "100%", "240px")}}
 
 ### X25519 key generation
 
@@ -305,7 +302,7 @@ async function test() {
 
 The information about the created keys is logged below (or an error string if the browser does not allow the key to be created).
 
-{{EmbedLiveSample("X25519", "100%", "240px")}}
+{{EmbedLiveSample("x25519_key_generation", "100%", "240px")}}
 
 ## Specifications
 

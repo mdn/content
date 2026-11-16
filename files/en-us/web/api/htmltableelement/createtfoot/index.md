@@ -8,16 +8,9 @@ browser-compat: api.HTMLTableElement.createTFoot
 
 {{APIRef("HTML DOM")}}
 
-The **`createTFoot()`** method of
-{{domxref("HTMLTableElement")}} objects returns the {{HTMLElement("tfoot")}} element
-associated with a given {{HtmlElement("table")}}. If no footer exists in the table, this
-method creates it, and then returns it.
+The **`createTFoot()`** method of the {{domxref("HTMLTableElement")}} interface creates a {{HTMLElement("tfoot")}} element, inserts it as the last child of the given {{HTMLElement("table")}}, and returns it. If the table already has a `<tfoot>` element child, this method returns the first such child without creating one.
 
-> [!NOTE]
-> If no footer exists, `createTFoot()` inserts a new
-> footer directly into the table. The footer does not need to be added separately as
-> would be the case if {{domxref("Document.createElement()")}} had been used to create
-> the new `<tfoot>` element.
+When creation is needed, this method creates and inserts the element directly, without requiring separate calls to methods such as {{domxref("Document.createElement()")}} and {{domxref("Node.appendChild()")}}.
 
 ## Syntax
 
@@ -31,13 +24,13 @@ None.
 
 ### Return value
 
-{{domxref("HTMLTableSectionElement")}}
+An {{domxref("HTMLTableSectionElement")}} (which is always a `tfoot`).
 
 ## Examples
 
 ```js
-let myfoot = mytable.createTFoot();
-// Now this should be true: myfoot === mytable.tFoot
+const myFoot = myTable.createTFoot();
+// Now this should be true: myFoot === myTable.tFoot
 ```
 
 ## Specifications
@@ -47,3 +40,10 @@ let myfoot = mytable.createTFoot();
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLTableElement.createCaption()")}}
+- {{domxref("HTMLTableElement.createTBody()")}}
+- {{domxref("HTMLTableElement.createTHead()")}}
+- {{domxref("HTMLTableElement.deleteTFoot()")}}

@@ -3,9 +3,8 @@ title: pkcs11.installModule()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/installModule
 page-type: webextension-api-function
 browser-compat: webextensions.api.pkcs11.installModule
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Installs the named PKCS #11 module, making it available to Firefox.
 
@@ -33,10 +32,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 If the module could not be found or some other error occurs, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Installs a module, then lists its slots and list the tokens they contain:
@@ -61,3 +56,7 @@ browser.pkcs11.installModule("my_module").then(onInstalled).then(onGotSlots);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

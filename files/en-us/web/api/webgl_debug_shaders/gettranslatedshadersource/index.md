@@ -6,7 +6,7 @@ page-type: webgl-extension-method
 browser-compat: api.WEBGL_debug_shaders.getTranslatedShaderSource
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WEBGL_debug_shaders.getTranslatedShaderSource()`**
 method is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and allows

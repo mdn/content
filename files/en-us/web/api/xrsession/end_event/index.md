@@ -14,12 +14,16 @@ An `end` event is fired at an {{DOMxRef("XRSession")}} object when the WebXR ses
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("end", (event) => {});
+```js-nolint
+addEventListener("end", (event) => { })
+```
 
-onend = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onend = (event) => { }
 ```
 
 ## Event type
@@ -27,13 +31,6 @@ onend = (event) => {};
 An {{domxref("XRSessionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("XRSessionEvent")}}
-
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("XRSessionEvent.session", "session")}} {{ReadOnlyInline}}
-  - : The {{domxref("XRSession")}} to which the event refers.
 
 ## Description
 
@@ -45,22 +42,22 @@ This event is not cancelable and does not bubble.
 
 ### Use cases
 
-You can use this event to react to the ending of an WebXR session. You may want to display a UI element informing about the termination of the session, for example.
+You can use this event to react to the ending of a WebXR session. You may want to display a UI element informing about the termination of the session, for example.
 
 ## Examples
 
 To be informed when a WebXR session comes to an end, you can add a handler to your {{domxref("XRSession")}} instance using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, like this:
 
 ```js
-XRSession.addEventListener("end", (event) => {
+xrSession.addEventListener("end", (event) => {
   /* the session has shut down */
 });
 ```
 
-Alternatively, you can use the `XRSession.onend` event handler property to establish a handler for the `end` event:
+Alternatively, you can use the `xrSession.onend` event handler property to establish a handler for the `end` event (but note that this replaces other event listeners added using `onend`, if any):
 
 ```js
-XRSession.onend = (event) => {
+xrSession.onend = (event) => {
   /* the session has shut down */
 };
 ```

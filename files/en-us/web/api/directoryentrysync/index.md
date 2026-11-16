@@ -8,31 +8,13 @@ status:
 browser-compat: api.DirectoryEntrySync
 ---
 
-{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}
 
 The `DirectoryEntrySync` interface represents a directory in a file system. It includes methods for creating, reading, looking up, and recursively removing files in a directory.
 
 > [!WARNING]
 > This interface is deprecated and is no more on the standard track.
 > _Do not use it anymore._ Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
-
-## Basic concepts
-
-If you want to create subdirectories, you have to create each child directory in sequence. If you try to create a directory using a full path that includes parent directories that do not exist yet, you get an error. So create the hierarchy by recursively adding a new path after creating the parent directory.
-
-### Example
-
-The `getFile()` method returns a `FileEntrySync`, which represents a file in the file system. The following creates an empty file called `logs.txt` in the root directory.
-
-```js
-const fileEntry = fs.root.getFile("logs.txt", { create: true });
-```
-
-The `getDirectory()` method returns a `DirectoryEntrySync`, which represents a file in the file system. The following creates a new directory called `project_dir` in the root directory.
-
-```js
-const dirEntry = fs.root.getDirectory("project_dir", { create: true });
-```
 
 ## Method overview
 
@@ -59,8 +41,7 @@ None.
 
 ##### Return value
 
-- [`DirectoryReaderSync`](/en-US/docs/Web/API/DirectoryReaderSync)
-  - : Represents a directory in a file system.
+A [`DirectoryReaderSync`](/en-US/docs/Web/API/DirectoryReaderSync) object represents a directory in a file system.
 
 ##### Exceptions
 
@@ -134,8 +115,7 @@ getFile(path, options)
 
 ##### Return value
 
-- [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync)
-  - : Represents a file in a file system.
+A [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync) object representing a file in a file system.
 
 ##### Exceptions
 
@@ -216,8 +196,7 @@ getDirectory(path, options)
 
 ##### Return value
 
-- [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryReaderSync)
-  - : Represents a directory in a file system.
+A [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryReaderSync) object representing a directory in a file system.
 
 ##### Exceptions
 
@@ -294,6 +273,24 @@ This method can raise a {{domxref("DOMException")}} with the following codes:
   </tbody>
 </table>
 
+## Description
+
+If you want to create subdirectories, you have to create each child directory in sequence. If you try to create a directory using a full path that includes parent directories that do not exist yet, you get an error. So create the hierarchy by recursively adding a new path after creating the parent directory.
+
+## Examples
+
+The `getFile()` method returns a `FileEntrySync`, which represents a file in the file system. The following creates an empty file called `logs.txt` in the root directory.
+
+```js
+const fileEntry = fs.root.getFile("logs.txt", { create: true });
+```
+
+The `getDirectory()` method returns a `DirectoryEntrySync`, which represents a file in the file system. The following creates a new directory called `project_dir` in the root directory.
+
+```js
+const dirEntry = fs.root.getDirectory("project_dir", { create: true });
+```
+
 ## Specifications
 
 This feature is not part of any current specification. It is no longer on track to become a standard.
@@ -306,4 +303,3 @@ Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

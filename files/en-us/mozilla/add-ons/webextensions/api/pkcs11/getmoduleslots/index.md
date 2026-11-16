@@ -3,9 +3,8 @@ title: pkcs11.getModuleSlots()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/getModuleSlots
 page-type: webextension-api-function
 browser-compat: webextensions.api.pkcs11.getModuleSlots
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Enumerate a module's slots. This function returns an array containing one entry for each slot. Each entry contains the slot's name and, if the slot contains a token, information about the token.
 
@@ -40,19 +39,15 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 - `manufacturer`
   - : `string`. Name of the token's manufacturer.
 - `HWVersion`
-  - : `string`. Hardware version, as a PKCS #11 version number (two 32-bit integers separated with a dot, like "1.0".
+  - : `string`. Hardware version, as a PKCS #11 version number (two 32-bit integers separated with a dot, like "1.0").
 - `FWVersion`
-  - : `string`. Firmware version, as a PKCS #11 version number (two 32-bit integers separated with a dot, like "1.0".
+  - : `string`. Firmware version, as a PKCS #11 version number (two 32-bit integers separated with a dot, like "1.0").
 - `serial`
   - : `string`. Serial number, whose format is defined by the token specification.
 - `isLoggedIn`
   - : `boolean`: `true` if the token is logged on already, `false` otherwise.
 
 If the module could not be found or some other error occurs, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -78,3 +73,7 @@ browser.pkcs11.installModule("my_module").then(onInstalled).then(onGotSlots);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

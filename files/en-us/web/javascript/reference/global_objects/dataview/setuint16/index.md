@@ -1,15 +1,26 @@
 ---
 title: DataView.prototype.setUint16()
+short-title: setUint16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint16
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.setUint16
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setUint16()`** method of {{jsxref("DataView")}} instances takes a number and stores it as a 16-bit unsigned integer in the 2 bytes starting at the specified byte offset of this `DataView`. There is no alignment constraint; multi-byte values may be stored at any offset within bounds.
 
-{{EmbedInteractiveExample("pages/js/dataview-setuint16.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.prototype.setUint16()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setUint16(1, 65535); // Max unsigned 16-bit integer
+
+console.log(view.getUint16(1));
+// Expected output: 65535
+```
 
 ## Syntax
 

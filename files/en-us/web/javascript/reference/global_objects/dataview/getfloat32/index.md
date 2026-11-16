@@ -1,15 +1,26 @@
 ---
 title: DataView.prototype.getFloat32()
+short-title: getFloat32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat32
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getFloat32
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getFloat32()`** method of {{jsxref("DataView")}} instances reads 4 bytes starting at the specified byte offset of this `DataView` and interprets them as a 32-bit floating point number. There is no alignment constraint; multi-byte values may be fetched from any offset within bounds.
 
-{{EmbedInteractiveExample("pages/js/dataview-getfloat32.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.prototype.getFloat32()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setFloat32(1, Math.PI);
+
+console.log(view.getFloat32(1));
+// Expected output: 3.1415927410125732
+```
 
 ## Syntax
 

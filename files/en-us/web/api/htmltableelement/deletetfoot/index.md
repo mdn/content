@@ -8,8 +8,7 @@ browser-compat: api.HTMLTableElement.deleteTFoot
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLTableElement.deleteTFoot()`** method removes the
-{{HTMLElement("tfoot")}} element from a given {{HtmlElement("table")}}.
+The **`deleteTFoot()`** method of the {{domxref("HTMLTableElement")}} interface removes the first {{HTMLElement("tfoot")}} element child from a given {{HTMLElement("table")}}, if any.
 
 ## Syntax
 
@@ -34,20 +33,26 @@ This example uses JavaScript to delete a table's footer.
 ```html
 <table>
   <thead>
-    <th>Name</th>
-    <th>Score</th>
+    <tr>
+      <th>Name</th>
+      <th>Score</th>
+    </tr>
   </thead>
-  <tr>
-    <td>Bob</td>
-    <td>541</td>
-  </tr>
-  <tr>
-    <td>Jim</td>
-    <td>225</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Bob</td>
+      <td>541</td>
+    </tr>
+    <tr>
+      <td>Jim</td>
+      <td>225</td>
+    </tr>
+  </tbody>
   <tfoot>
-    <th>Average</th>
-    <td>383</td>
+    <tr>
+      <th>Average</th>
+      <td>383</td>
+    </tr>
   </tfoot>
 </table>
 ```
@@ -55,7 +60,7 @@ This example uses JavaScript to delete a table's footer.
 ### JavaScript
 
 ```js
-let table = document.querySelector("table");
+const table = document.querySelector("table");
 table.deleteTFoot();
 ```
 
@@ -70,3 +75,9 @@ table.deleteTFoot();
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLTableElement.createTFoot()")}}
+- {{domxref("HTMLTableElement.deleteCaption()")}}
+- {{domxref("HTMLTableElement.deleteTHead()")}}

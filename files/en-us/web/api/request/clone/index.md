@@ -6,12 +6,12 @@ page-type: web-api-instance-method
 browser-compat: api.Request.clone
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`clone()`** method of the {{domxref("Request")}} interface creates a copy of the current `Request` object.
 
 Like the underlying {{domxref("ReadableStream.tee")}} api,
-the {{domxref("Request.body", "body")}} of a cloned `Response`
+the {{domxref("Request.body", "body")}} of a cloned `Request`
 will signal backpressure at the rate of the _faster_ consumer of the two bodies,
 and unread data is enqueued internally on the slower consumed `body`
 without any limit or backpressure.
@@ -54,6 +54,6 @@ const newRequest = myRequest.clone(); // a copy of the request is now stored in 
 
 ## See also
 
-- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

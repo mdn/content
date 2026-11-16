@@ -8,13 +8,9 @@ browser-compat: api.DataTransferItemList.clear
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The {{domxref("DataTransferItemList")}} method
-**`clear()`** removes all {{domxref("DataTransferItem")}}
-objects from the drag data items list, leaving the list empty.
+The **`clear()`** method of the {{domxref("DataTransferItemList")}} interface removes all {{domxref("DataTransferItem")}} objects from the drag data items list, leaving the list empty.
 
-The drag data store in which this list is kept is only writable while handling the
-{{domxref("HTMLElement/dragstart_event", "dragstart")}} event. While handling {{domxref("HTMLElement/drop_event", "drop")}}, the drag data store is
-in read-only mode, and this method silently does nothing. No exception is thrown.
+During a drag operation, this method can only be used in the handler for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event, because that's the only time the drag operation's data store is writable. Calling it from any other drag event does nothing. See [Modifying the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#modifying_the_drag_data_store) for details.
 
 ## Syntax
 
@@ -38,21 +34,12 @@ This example shows the use of the `clear()` method.
 
 ```html
 <div>
-  <p
-    id="source"
-    ondragstart="dragstartHandler(event);"
-    ondragend="dragendHandler(event);"
-    draggable="true">
+  <p id="source" draggable="true">
     Select this element, drag it to the Drop Zone and then release the selection
     to move the element.
   </p>
 </div>
-<div
-  id="target"
-  ondrop="dropHandler(event);"
-  ondragover="dragoverHandler(event);">
-  Drop Zone
-</div>
+<div id="target">Drop Zone</div>
 ```
 
 ### CSS
@@ -74,16 +61,31 @@ div {
 ### JavaScript
 
 ```js
-function dragstartHandler(ev) {
+const source = document.getElementById("source");
+const target = document.getElementById("target");
+
+source.addEventListener("dragstart", (ev) => {
   console.log("dragStart");
 
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
   const dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, "text/plain");
-}
 
-function dropHandler(ev) {
+  // Add some other items to the drag payload
+  dataList.add("<p>Paragraph…</p>", "text/html");
+  dataList.add("http://www.example.org", "text/uri-list");
+});
+
+source.addEventListener("dragend", (ev) => {
+  console.log("dragEnd");
+  const dataList = ev.dataTransfer.items;
+
+  // Clear any remaining drag data
+  dataList.clear();
+});
+
+target.addEventListener("drop", (ev) => {
   console.log("Drop");
   ev.preventDefault();
 
@@ -106,23 +108,15 @@ function dropHandler(ev) {
       });
     }
   }
-}
+});
 
-function dragoverHandler(ev) {
+target.addEventListener("dragover", (ev) => {
   console.log("dragOver");
   ev.preventDefault();
 
   // Set the dropEffect to move
   ev.dataTransfer.dropEffect = "move";
-}
-
-function dragendHandler(ev) {
-  console.log("dragEnd");
-  const dataList = ev.dataTransfer.items;
-
-  // Clear any remaining drag data
-  dataList.clear();
-}
+});
 ```
 
 ### Result

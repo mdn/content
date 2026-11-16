@@ -25,7 +25,7 @@ This example shows how to use the `selectionEnd` property to render the selected
 ```css
 #editor {
   height: 200px;
-  background: #eee;
+  background: #eeeeee;
   color: black;
 }
 

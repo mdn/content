@@ -16,12 +16,16 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("error", (event) => {});
+```js-nolint
+addEventListener("error", (event) => { })
+```
 
-onerror = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onerror = (event) => { }
 ```
 
 ## Event type
@@ -29,13 +33,6 @@ onerror = (event) => {};
 An {{domxref("RTCErrorEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("RTCErrorEvent")}}
-
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("RTCErrorEvent.error", "error")}} {{ReadOnlyInline}}
-  - : An {{domxref("RTCError")}} object specifying the error which occurred; this object includes the type of error that occurred, and information about where the error occurred (such as which line number in the {{Glossary("SDP")}} or what {{Glossary("SCTP")}} cause code was at issue).
 
 ## Examples
 
@@ -61,55 +58,51 @@ const sctpCauseCodes = [
   "Protocol violation",
 ];
 
-dc.addEventListener(
-  "error",
-  (ev) => {
-    const err = ev.error;
+dc.addEventListener("error", (ev) => {
+  const err = ev.error;
 
-    console.error("WebRTC error: ", err.message);
+  console.error("WebRTC error: ", err.message);
 
-    // Handle specific error detail types
+  // Handle specific error detail types
 
-    switch (err.errorDetail) {
-      case "sdp-syntax-error":
-        console.error("    SDP syntax error in line ", err.sdpLineNumber);
-        break;
-      case "idp-load-failure":
-        console.error(
-          "    Identity provider load failure: HTTP error ",
-          err.httpRequestStatusCode,
-        );
-        break;
-      case "sctp-failure":
-        if (err.sctpCauseCode < sctpCauseCodes.length) {
-          console.error("    SCTP failure: ", err.sctpCauseCode);
-        } else {
-          console.error("    Unknown SCTP error");
-        }
-        break;
-      case "dtls-failure":
-        if (err.receivedAlert) {
-          console.error("    Received DLTS failure alert: ", err.receivedAlert);
-        }
-        if (err.sentAlert) {
-          console.error("    Sent DLTS failure alert: ", err.receivedAlert);
-        }
-        break;
-    }
+  switch (err.errorDetail) {
+    case "sdp-syntax-error":
+      console.error("    SDP syntax error in line ", err.sdpLineNumber);
+      break;
+    case "idp-load-failure":
+      console.error(
+        "    Identity provider load failure: HTTP error ",
+        err.httpRequestStatusCode,
+      );
+      break;
+    case "sctp-failure":
+      if (err.sctpCauseCode < sctpCauseCodes.length) {
+        console.error("    SCTP failure: ", err.sctpCauseCode);
+      } else {
+        console.error("    Unknown SCTP error");
+      }
+      break;
+    case "dtls-failure":
+      if (err.receivedAlert) {
+        console.error("    Received DTLS failure alert: ", err.receivedAlert);
+      }
+      if (err.sentAlert) {
+        console.error("    Sent DTLS failure alert: ", err.sentAlert);
+      }
+      break;
+  }
 
-    // Add source file name and line information
+  // Add source file name and line information
 
-    console.error(
-      "    Error in file ",
-      err.filename,
-      " at line ",
-      err.lineNumber,
-      ", column ",
-      err.columnNumber,
-    );
-  },
-  false,
-);
+  console.error(
+    "    Error in file ",
+    err.filename,
+    " at line ",
+    err.lineNumber,
+    ", column ",
+    err.columnNumber,
+  );
+});
 ```
 
 The received event provides details in an {{domxref("RTCError")}} object called {{domxref("RTCErrorEvent.error", "error")}}; `RTCError` is an extension of the {{domxref("DOMException")}} interface. The error's {{domxref("DOMException.name", "name")}} is `RTCError` and the {{domxref("DOMException.message", "message")}} is an error string specified by the WebRTC layer.
@@ -118,7 +111,7 @@ Error information is output to the console using {{domxref("console/error_static
 
 In addition, however, depending on the value of {{domxref("RTCError.errorDetail", "errorDetail")}}, additional information may be output. Each error type has a different set of information output. For example, an SDP syntax error displays the line number of the error within the SDP, and an SCTP error displays a message corresponding to the SCTP cause code. Other error types similarly output appropriate information.
 
-You can also set up an event handler for `error` events using the `RTCDataChannel` interface's `onerror` event handler property:
+You can also set up an event handler for `error` events using the `RTCDataChannel` interface's `onerror` event handler property (but note that this replaces other event listeners added using `onerror`, if any):
 
 ```js
 dc.onerror = (ev) => {

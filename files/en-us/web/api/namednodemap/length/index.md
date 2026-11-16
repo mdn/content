@@ -18,7 +18,7 @@ A number containing the number of objects in the map
 ## Example
 
 ```html
-<pre zero="test" one="test" two="test"></pre>
+<pre class="foo" id="bar" contenteditable></pre>
 ```
 
 ```js

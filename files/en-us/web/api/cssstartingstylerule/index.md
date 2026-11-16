@@ -30,5 +30,5 @@ _Inherits methods from its ancestors {{domxref("CSSGroupingRule")}} and {{domxre
 ## See also
 
 - {{CSSxRef("@starting-style")}}
-- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) module
+- [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions) module
 - [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

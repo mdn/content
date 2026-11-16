@@ -6,10 +6,10 @@ page-type: web-api-instance-method
 browser-compat: api.XPathExpression.evaluate
 ---
 
-{{APIRef("DOM XPath")}}
+{{APIRef("DOM")}}
 
 The **`evaluate()`** method of the
-{{domxref("XPathExpression")}} interface executes an [XPath](/en-US/docs/Web/XPath) expression on the given node or document and
+{{domxref("XPathExpression")}} interface executes an [XPath](/en-US/docs/Web/XML/XPath) expression on the given node or document and
 returns an {{domxref("XPathResult")}}.
 
 ## Syntax
@@ -28,7 +28,7 @@ evaluate(contextNode, type, result)
   - : Specifies the type of result to be returned by evaluating the expression. This must
     be one of the {{domxref("XPathResult", "XPathResult", "Constants")}}.
 - `result` {{optional_inline}}
-  - : Allows to specify a result object which may be reused and returned by this method.
+  - : Allows you to specify a result object which may be reused and returned by this method.
     If this is specified as `null` or the implementation does not reuse the
     specified result, a new result object will be returned.
 
@@ -42,13 +42,13 @@ expression.
 #### INVALID_EXPRESSION_ERR
 
 If the expression is not legal according to the rules of the
-{{domxref("XPathEvaluator")}}, an {{domxref("XPathException")}} of type
+{{domxref("XPathEvaluator")}}, a {{domxref("DOMException")}} of type
 `INVALID_EXPRESSION_ERR` is raised.
 
 #### TYPE_ERR
 
-In case result cannot be converted to the specified type, an
-{{domxref("XPathException")}} of type `TYPE_ERR` is raised.
+In case result cannot be converted to the specified type, a
+{{domxref("DOMException")}} of type `TYPE_ERR` is raised.
 
 #### NAMESPACE_ERR
 

@@ -22,9 +22,7 @@ getRootNode(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object that sets options for getting the root node. The available options are:
-
     - `composed`: A boolean value that indicates whether the shadow
       root should be returned (`false`, the default), or a root node beyond
       shadow root (`true`).

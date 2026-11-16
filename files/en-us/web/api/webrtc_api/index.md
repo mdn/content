@@ -49,7 +49,7 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 - {{DOMxRef("RTCStatsReport")}}
   - : Provides information detailing statistics for a connection or for an individual track on the connection; the report can be obtained by calling {{DOMxRef("RTCPeerConnection.getStats()")}}.
 - {{DOMxRef("RTCIceCandidate")}}
-  - : Represents a candidate Interactive Connectivity Establishment ({{Glossary("ICE")}}) server for establishing an {{DOMxRef("RTCPeerConnection")}}.
+  - : Represents a candidate Interactive Connectivity Establishment ({{Glossary("ICE")}}) configuration for establishing an {{DOMxRef("RTCPeerConnection")}}.
 - {{DOMxRef("RTCIceTransport")}}
   - : Represents information about an {{Glossary("ICE")}} transport.
 - {{DOMxRef("RTCPeerConnectionIceEvent")}}
@@ -86,9 +86,9 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 - {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}}
   - : An {{domxref("RTCPeerConnectionIceErrorEvent")}} indicating that an error has occurred while gathering ICE candidates.
 - {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
-  - : Sent to an {{domxref("RTCPeerConnection")}} when its ICE connection's state—found in the {{domxref("RTCPeerConnection.iceconnectionstate", "iceconnectionstate")}} property—changes.
+  - : Sent to an {{domxref("RTCPeerConnection")}} when its ICE connection's state—found in the {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} property—changes.
 - {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
-  - : Sent to an {{domxref("RTCPeerConnection")}} when its ICE gathering state—found in the {{domxref("RTCPeerConnection.icegatheringstate", "icegatheringstate")}} property—changes.
+  - : Sent to an {{domxref("RTCPeerConnection")}} when its ICE gathering state—found in the {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} property—changes.
 - {{domxref("RTCDataChannel.message_event", "message")}}
   - : A message has been received on the data channel. The event is of type {{domxref("MessageEvent")}}.
 - {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
@@ -98,9 +98,9 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 - {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}}
   - : The currently-selected pair of ICE candidates has changed for the `RTCIceTransport` on which the event is fired.
 - {{domxref("RTCPeerConnection.track_event", "track")}}
-  - : The `track` event, of type {{domxref("RTCTrackevent")}} is sent to an {{domxref("RTCPeerConnection")}} when a new track is added to the connection following the successful negotiation of the media's streaming.
+  - : The `track` event, of type {{domxref("RTCTrackEvent")}} is sent to an {{domxref("RTCPeerConnection")}} when a new track is added to the connection following the successful negotiation of the media's streaming.
 - {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
-  - : Sent to the peer connection when its {{domxref("RTCPeerConnection.signalingstate", "signalingstate")}} has changed. This happens as a result of a call to either {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} or {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}.
+  - : Sent to the peer connection when its {{domxref("RTCPeerConnection.signalingState", "signalingState")}} has changed. This happens as a result of a call to either {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} or {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}.
 - {{domxref("RTCDtlsTransport.statechange_event", "statechange")}}
   - : The state of the `RTCDtlsTransport` has changed.
 - {{domxref("RTCIceTransport.statechange_event", "statechange")}}
@@ -173,6 +173,8 @@ These interfaces and events are used to process incoming and outgoing encoded vi
 
 ## Guides
 
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+  - : The Real-time Transport Protocol (RTP), defined in {{RFC(3550)}}, is an IETF standard protocol to enable real-time connectivity for exchanging data that needs real-time priority. This article provides an overview of what RTP is and how it functions in the context of WebRTC.
 - [Introduction to WebRTC protocols](/en-US/docs/Web/API/WebRTC_API/Protocols)
   - : This article introduces the protocols on top of which the WebRTC API is built.
 - [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
@@ -183,7 +185,7 @@ These interfaces and events are used to process incoming and outgoing encoded vi
   - : **Perfect negotiation** is a design pattern which is recommended for your signaling process to follow, which provides transparency in negotiation while allowing both sides to be either the offerer or the answerer, without significant coding needed to differentiate the two.
 - [Signaling and two-way video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
   - : A tutorial and example which turns a WebSocket-based chat system created for a previous example and adds support for opening video calls among participants. The chat server's WebSocket connection is used for WebRTC signaling.
-- [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs)
+- [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs)
   - : A guide to the codecs which WebRTC requires browsers to support as well as the optional ones supported by various popular browsers. Included is a guide to help you choose the best codecs for your needs.
 - [Using WebRTC data channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
   - : This guide covers how you can use a peer connection and an associated {{DOMxRef("RTCDataChannel")}} to exchange arbitrary data between two peers.
@@ -232,7 +234,8 @@ These interfaces and events are used to process incoming and outgoing encoded vi
 - {{DOMxRef("MessageEvent")}}
 - {{DOMxRef("MediaStream")}}
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
+- [Web media technologies](/en-US/docs/Web/Media)
 - [Firefox multistream and renegotiation for Jitsi Videobridge](https://hacks.mozilla.org/2015/06/firefox-multistream-and-renegotiation-for-jitsi-videobridge/)
 - [Peering Through the WebRTC Fog with SocketPeer](https://hacks.mozilla.org/2015/04/peering-through-the-webrtc-fog-with-socketpeer/)
 - [Inside the Party Bus: Building a Web App with Multiple Live Video Streams + Interactive Graphics](https://hacks.mozilla.org/2014/04/inside-the-party-bus-building-a-web-app-with-multiple-live-video-streams-interactive-graphics/)
-- [Web media technologies](/en-US/docs/Web/Media)
+- [WebRTC samples](https://webrtc.github.io/samples/)

@@ -6,18 +6,22 @@ page-type: web-api-event
 browser-compat: api.HTMLFormElement.reset_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`reset`** event fires when a {{HTMLElement("form")}} is reset.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("reset", (event) => {});
+```js-nolint
+addEventListener("reset", (event) => { })
+```
 
-onreset = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onreset = (event) => { }
 ```
 
 ## Event type
@@ -32,7 +36,7 @@ This example uses {{domxref("EventTarget.addEventListener()")}} to listen for fo
 
 ```html
 <form id="form">
-  <label>Test field: <input type="text" /></label>
+  <label>Test checkbox: <input type="checkbox" /></label>
   <br /><br />
   <button type="reset">Reset form</button>
 </form>
@@ -42,12 +46,13 @@ This example uses {{domxref("EventTarget.addEventListener()")}} to listen for fo
 ### JavaScript
 
 ```js
+const form = document.getElementById("form");
+const log = document.getElementById("log");
+
 function logReset(event) {
   log.textContent = `Form reset! Timestamp: ${event.timeStamp}`;
 }
 
-const form = document.getElementById("form");
-const log = document.getElementById("log");
 form.addEventListener("reset", logReset);
 ```
 

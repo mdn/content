@@ -7,7 +7,7 @@ status:
 browser-compat: api.HID
 ---
 
-{{DefaultAPISidebar("WebHID API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
 A Human Interface Device (HID) is a type of device that takes input from or provides output to humans. It also refers to the HID protocol, a standard for bi-directional communication between a host and a device that is designed to simplify the installation procedure. The HID protocol was originally developed for USB devices but has since been implemented over many other protocols, including Bluetooth.
 

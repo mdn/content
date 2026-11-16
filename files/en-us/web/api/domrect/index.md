@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.DOMRect
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 A **`DOMRect`** describes the size and position of a rectangle.
 
@@ -24,21 +24,21 @@ It inherits from its parent, {{domxref("DOMRectReadOnly")}}.
 
 _`DOMRect` inherits properties from its parent, {{domxref("DOMRectReadOnly")}}. The difference is that they are not read-only anymore._
 
-- {{domxref("DOMRectReadOnly.x")}}
+- {{domxref("DOMRect.x")}}
   - : The x coordinate of the `DOMRect`'s origin (typically the top-left corner of the rectangle).
-- {{domxref("DOMRectReadOnly.y")}}
+- {{domxref("DOMRect.y")}}
   - : The y coordinate of the `DOMRect`'s origin (typically the top-left corner of the rectangle).
-- {{domxref("DOMRectReadOnly.width")}}
+- {{domxref("DOMRect.width")}}
   - : The width of the `DOMRect`.
-- {{domxref("DOMRectReadOnly.height")}}
+- {{domxref("DOMRect.height")}}
   - : The height of the `DOMRect`.
-- {{domxref("DOMRectReadOnly.top")}}
+- {{domxref("DOMRectReadOnly.top")}} {{ReadOnlyInline}}
   - : Returns the top coordinate value of the `DOMRect` (has the same value as `y`, or `y + height` if `height` is negative).
-- {{domxref("DOMRectReadOnly.right")}}
+- {{domxref("DOMRectReadOnly.right")}} {{ReadOnlyInline}}
   - : Returns the right coordinate value of the `DOMRect` (has the same value as `x + width`, or `x` if `width` is negative).
-- {{domxref("DOMRectReadOnly.bottom")}}
+- {{domxref("DOMRectReadOnly.bottom")}} {{ReadOnlyInline}}
   - : Returns the bottom coordinate value of the `DOMRect` (has the same value as `y + height`, or `y` if `height` is negative).
-- {{domxref("DOMRectReadOnly.left")}}
+- {{domxref("DOMRectReadOnly.left")}} {{ReadOnlyInline}}
   - : Returns the left coordinate value of the `DOMRect` (has the same value as `x`, or `x + width` if `width` is negative).
 
 ## Static methods

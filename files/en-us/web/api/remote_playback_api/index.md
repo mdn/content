@@ -14,7 +14,7 @@ The **Remote Playback API** extends the {{domxref("HTMLMediaElement")}} to enabl
 
 Remote playback devices are connected devices such as TVs, projectors, or speakers. The API takes into account wired devices connected via HDMI or DVI, and wireless devices, for example Chromecast or AirPlay.
 
-The API enables a page, which has an media element such as a video or audio file, to initiate and control playback of that media on a connected remote device. For example, playing a video on a connected TV.
+The API enables a page, which has a media element such as a video or audio file, to initiate and control playback of that media on a connected remote device. For example, playing a video on a connected TV.
 
 > [!NOTE]
 > Safari for iOS has some APIs which enable remote playback on AirPlay. Details of these can be found in [the Safari 9.0 release notes](https://developer.apple.com/library/archive/releasenotes/General/WhatsNewInSafari/Articles/Safari_9_0.html#//apple_ref/doc/uid/TP40014305-CH9-SW16).
@@ -39,8 +39,14 @@ The following example demonstrates a player with custom controls that supports r
 
 ```html
 <video id="videoElement" src="https://example.org/media.ext">
-  <button id="deviceBtn" style="display: none;">Pick device</button>
+  <button id="deviceBtn" class="hidden">Pick device</button>
 </video>
+```
+
+```css
+.hidden {
+  display: none;
+}
 ```
 
 The {{domxref("RemotePlayback.watchAvailability()")}} method watches for available remote playback devices. If a device is available, use the callback to show the button.
@@ -51,12 +57,16 @@ const videoElem = document.getElementById("videoElement");
 
 function availabilityCallback(available) {
   // Show or hide the device picker button depending on device availability.
-  deviceBtn.style.display = available ? "inline" : "none";
+  if (available) {
+    deviceBtn.classList.remove("hidden");
+  } else {
+    deviceBtn.classList.add("hidden");
+  }
 }
 
 videoElem.remote.watchAvailability(availabilityCallback).catch(() => {
-  /* If the device cannot continuously watch available,
-  show the button to allow the user to try to prompt for a connection.*/
+  // If the device cannot continuously watch available,
+  // show the button to allow the user to try to prompt for a connection.
   deviceBtn.style.display = "inline";
 });
 ```

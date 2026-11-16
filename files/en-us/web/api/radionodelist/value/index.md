@@ -18,13 +18,6 @@ does not contain any radio buttons or none of the radio buttons in the collectio
 `value` property is equal to the new value will be set to
 `checked`.
 
-## Syntax
-
-```js-nolint
-value = radioNodeList.value
-radioNodeList.value = string
-```
-
 ## Example
 
 ### HTML

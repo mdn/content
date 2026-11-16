@@ -14,12 +14,16 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("devicechange", (event) => {});
+```js-nolint
+addEventListener("devicechange", (event) => { })
+```
 
-ondevicechange = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+ondevicechange = (event) => { }
 ```
 
 ## Event type
@@ -112,34 +116,30 @@ function log(msg) {
   logElement.innerText += `${msg}\n`;
 }
 
-startButton.addEventListener(
-  "click",
-  () => {
-    const constraints = {
-      video: {
-        width: 160,
-        height: 120,
-        frameRate: 30,
-      },
-      audio: {
-        sampleRate: 44100,
-        sampleSize: 16,
-        volume: 0.25,
-      },
-    };
+startButton.addEventListener("click", () => {
+  const constraints = {
+    video: {
+      width: 160,
+      height: 120,
+      frameRate: 30,
+    },
+    audio: {
+      sampleRate: 44100,
+      sampleSize: 16,
+      volume: 0.25,
+    },
+  };
 
-    navigator.mediaDevices
-      .getUserMedia(constraints)
-      .then((stream) => {
-        videoElement.srcObject = stream;
-        updateDeviceList();
-      })
-      .catch((err) => {
-        log(`${err.name}: ${err.message}`);
-      });
-  },
-  false,
-);
+  navigator.mediaDevices
+    .getUserMedia(constraints)
+    .then((stream) => {
+      videoElement.srcObject = stream;
+      updateDeviceList();
+    })
+    .catch((err) => {
+      log(`${err.name}: ${err.message}`);
+    });
+});
 ```
 
 We set up global variables that contain references to the {{HTMLElement("ul")}}
@@ -181,7 +181,7 @@ function updateDeviceList() {
 {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} on the
 {{domxref("MediaDevices")}} object referenced in the
 {{domxref("navigator.mediaDevices")}} property, as well as the code that's run when the
-{{jsxref("promise")}} returned by `enumerateDevices()` is fulfilled. The
+{{jsxref("Promise")}} returned by `enumerateDevices()` is fulfilled. The
 fulfillment handler is called when the device list is ready. The list is passed into the
 fulfillment handler as an array of {{domxref("MediaDeviceInfo")}} objects, each
 describing one media input or output device.
@@ -192,7 +192,7 @@ display it to the user.
 
 The line
 `let [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);`
-deserves special notice. This uses [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to assign the values of the first three items in the array returned by
+deserves special notice. This uses [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) to assign the values of the first three items in the array returned by
 {{jsxref("String.match()")}} to the variables `kind`, `type`, and
 `direction`. We do this because the value of
 {{domxref("MediaDeviceInfo.kind")}} is a single string that includes both the media type

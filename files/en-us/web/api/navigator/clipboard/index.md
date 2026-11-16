@@ -24,14 +24,14 @@ The following code uses `navigator.clipboard` to access the system clipboard in 
 navigator.clipboard
   .readText()
   .then(
-    (clipText) => (document.querySelector(".cliptext").innerText = clipText),
+    (clipText) => (document.querySelector(".clip-text").innerText = clipText),
   );
 ```
 
-This snippet replaces the contents of the element whose class is `"cliptext"` with the text contents of the clipboard.
+This snippet replaces the contents of the element whose class is `"clip-text"` with the text contents of the clipboard.
 Perhaps this code is being used in a browser extension that displays the current clipboard contents, automatically updating periodically or when specific events fire.
 
-If the clipboard is empty or doesn't contain text, the `"cliptext"` element's contents are cleared.
+If the clipboard is empty or doesn't contain text, the `"clip-text"` element's contents are cleared.
 This happens because {{domxref("Clipboard.readText", "readText()")}} returns an empty string if the clipboard is empty or doesn't contain text.
 
 ## Specifications

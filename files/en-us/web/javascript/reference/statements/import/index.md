@@ -3,9 +3,8 @@ title: import
 slug: Web/JavaScript/Reference/Statements/import
 page-type: javascript-statement
 browser-compat: javascript.statements.import
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The static **`import`** declaration is used to import read-only live {{Glossary("binding", "bindings")}} which are [exported](/en-US/docs/Web/JavaScript/Reference/Statements/export) by another module. The imported bindings are called _live bindings_ because they are updated by the module that exported the binding, but cannot be re-assigned by the importing module.
 
@@ -32,9 +31,9 @@ import "module-name";
 - `defaultExport`
   - : Name that will refer to the default export from the module. Must be a valid JavaScript identifier.
 - `module-name`
-  - : The module to import from. The evaluation of the specifier is host-specified. This is often a relative or absolute URL to the `.js` file containing the module. In Node, extension-less imports often refer to packages in `node_modules`. Certain bundlers may permit importing files without extensions; check your environment. Only single quoted and double quoted Strings are allowed.
+  - : The module to import from. Only single- and double-quoted string literals are allowed. The evaluation of the specifier is host-specified. Most hosts align with browsers and resolve the specifiers as URLs relative to the current module URL (see [`import.meta.url`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)). Node, bundlers, and other non-browser environments often define their own features on top of this, so you should find documentation for them to understand the exact rules. The [module specifier resolution](#module_specifier_resolution) section also has more information.
 - `name`
-  - : Name of the module object that will be used as a kind of namespace when referring to the imports. Must be a valid JavaScript identifier.
+  - : Name of the [module namespace object](/en-US/docs/Web/JavaScript/Reference/Operators/import#module_namespace_object) that will be used as a kind of namespace when referring to the imports. Must be a valid JavaScript identifier.
 - `exportN`
   - : Name of the exports to be imported. The name can be either an identifier or a string literal, depending on what `module-name` declares to export. If it is a string literal, it must be aliased to a valid identifier.
 - `aliasN`
@@ -44,11 +43,18 @@ The `"module-name"` may be followed by a set of [import attributes](/en-US/docs/
 
 ## Description
 
-`import` declarations can only be present in modules, and only at the top-level (i.e. not inside blocks, functions, etc.). If an `import` declaration is encountered in non-module contexts (for example, `<script>` tags without `type="module"`, `eval`, `new Function`, which all have "script" or "function body" as parsing goals), a `SyntaxError` is thrown. To load modules in non-module contexts, use the [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) syntax instead.
+`import` declarations can only be present in modules, and only at the top-level (i.e., not inside blocks, functions, etc.). If an `import` declaration is encountered in non-module contexts (for example, `<script>` tags without `type="module"`, `eval`, `new Function`, which all have "script" or "function body" as parsing goals), a `SyntaxError` is thrown. To [load](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#loading_the_graph) modules in non-module contexts, use the [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) syntax instead.
 
 All imported bindings cannot be in the same scope as any other declaration, including {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/class", "class")}}, {{jsxref("Statements/function", "function")}}, {{jsxref("Statements/var", "var")}}, and `import` declaration.
 
-`import` declarations are designed to be syntactically rigid (for example, only string literal specifiers, only permitted at the top-level, all bindings must be identifiers), which allows modules to be statically analyzed and linked before getting evaluated. This is the key to making modules asynchronous by nature, powering features like [top-level await](/en-US/docs/Web/JavaScript/Guide/Modules#top_level_await).
+`import` declarations are designed to be syntactically rigid (for example, only string literal specifiers, only permitted at the top-level, all bindings must be identifiers), which allows modules to be statically analyzed and [linked](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#linking_modules) before getting [evaluated](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#evaluating_modules). This allows dependencies to be loaded asynchronously and supports features like [top-level await](/en-US/docs/Web/JavaScript/Guide/Modules#top-level_await).
+
+The `import` keyword may be followed by a "phase modifier" that stops the module import process at a particular phase:
+
+- [`import defer`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer)
+- [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source)
+
+Each of these syntaxes is considered a distinct type of declaration.
 
 ### Forms of import declarations
 
@@ -84,7 +90,7 @@ import { reallyReallyLongModuleExportName as shortName } from "/modules/my-modul
 A module may also export a member as a string literal which is not a valid identifier, in which case you must alias it in order to use it in the current module.
 
 ```js
-// /modules/my-module.js
+// -- /modules/my-module.js --
 const a = 1;
 export { a as "a-b" };
 ```
@@ -93,11 +99,12 @@ export { a as "a-b" };
 import { "a-b" as a } from "/modules/my-module.js";
 ```
 
-> **Note:** `import { x, y } from "mod"` is not equivalent to `import defaultExport from "mod"` and then destructuring `x` and `y` from `defaultExport`. Named and default imports are distinct syntaxes in JavaScript modules.
+> [!NOTE]
+> `import { x, y } from "mod"` is not equivalent to `import defaultExport from "mod"` and then destructuring `x` and `y` from `defaultExport`. Named and default imports are distinct syntaxes in JavaScript modules.
 
 #### Default import
 
-Default exports need to be imported with the corresponding default import syntax. The simplest version directly imports the default:
+Default exports can be imported with the corresponding default import syntax. This version directly imports the default:
 
 ```js
 import myDefault from "/modules/my-module.js";
@@ -138,7 +145,7 @@ Here, `myModule` represents a _namespace_ object which contains all exports as p
 myModule.doAllTheAmazingThings();
 ```
 
-`myModule` is a [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) object with [`null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). The default export available as a key called `default`. For more information, see [module namespace object](/en-US/docs/Web/JavaScript/Reference/Operators/import#module_namespace_object).
+`myModule` is a [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) object with [`null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). The default export is available as a key called `default`. For more information, see [module namespace object](/en-US/docs/Web/JavaScript/Reference/Operators/import#module_namespace_object).
 
 > [!NOTE]
 > JavaScript does not have wildcard imports like `import * from "module-name"`, because of the high possibility of name conflicts.
@@ -156,13 +163,59 @@ This is often used for [polyfills](/en-US/docs/Glossary/Polyfill), which mutate 
 
 ### Hoisting
 
-Import declarations are [hoisted](/en-US/docs/Glossary/Hoisting). In this case, that means that the identifiers the imports introduce are available in the entire module scope, and their side effects are produced before the rest of the module's code runs.
+Import declarations are [hoisted](/en-US/docs/Glossary/Hoisting). In this case, that means that the bindings the imports introduce are available in the entire module scope, and the imported modules' side effects are produced before the rest of the module's code runs. With [cyclic imports](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#cyclic_imports), an imported module may not have finished evaluating, so an imported binding may still be uninitialized.
 
 ```js
 myModule.doAllTheAmazingThings(); // myModule.doAllTheAmazingThings is imported by the next line
 
 import * as myModule from "/modules/my-module.js";
 ```
+
+### Module specifier resolution
+
+The ECMAScript specification does not define how module specifiers are resolved and leaves it to the host environment (e.g., browsers, Node.js, Deno). Browser behavior is specified by [the HTML spec](https://html.spec.whatwg.org/multipage/webappapis.html#resolve-a-module-specifier), and this has become the _de facto_ baseline for all environments.
+
+There are three types of specifiers widely recognized, as implemented by the HTML spec, Node, and many others:
+
+- _Relative specifiers_ that start with `/`, `./`, or `../`, which are resolved relative to the current module URL.
+- _Absolute specifiers_ that are parsable URLs, which are resolved as-is.
+- _Bare specifiers_ that are not one of the above.
+
+The most notable caveat for relative specifiers, especially for people familiar with the [CommonJS](https://wiki.commonjs.org/wiki/CommonJS) conventions, is that browsers forbid one specifier to implicitly resolve to many potential candidates. In CommonJS, if you have `main.js` and `utils/index.js`, then all of the following will import the "default export" from `utils/index.js`:
+
+```js
+// -- main.js --
+const utils = require("./utils"); // Omit the "index.js" file name
+const utils = require("./utils/index"); // Omit only the ".js" extension
+const utils = require("./utils/index.js"); // The most explicit form
+```
+
+On the web, this is costly because if you write `import x from "./utils"`, the browser needs to send requests to `utils`, `utils/index.js`, `utils.js`, and potentially many other URLs until it finds an importable module. Therefore, in the HTML spec, the specifier by default can only be a URL resolved relative to the current module URL. You cannot omit the file extension or the `index.js` file name. This behavior has been inherited by Node's ESM implementation, but it is not a part of the ECMAScript specification.
+
+Note that this does not mean that `import x from "./utils"` never works on the web. The browser still sends a request to that URL, and if the server can respond with the correct content, the import will succeed. This requires the server to implement some custom resolution logic, because usually extension-less requests are understood as requests for HTML files.
+
+Absolute specifiers can be any kind of [URL](/en-US/docs/Web/URI) that resolve to importable source code. Most notably:
+
+- [HTTP URLs](/en-US/docs/Web/HTTP) are always supported on the web since most scripts already have HTTP URLs. It's supported natively by Deno (which initially predicated its entire module system on HTTP URLs), but it only has experimental support in Node via [custom HTTPS loaders](https://nodejs.org/api/module.html#import-from-https).
+- `file:` URLs are supported by many non-browser runtimes such as Node, since scripts there already have `file:` URLs, but they are not supported by browsers due to security reasons.
+- [Data URLs](/en-US/docs/Web/URI/Reference/Schemes/data) are supported by many runtimes including browsers, Node, Deno, etc. They are useful for embedding small modules directly into the source code. Supported [MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types) are those that designate importable source code, such as `text/javascript` for JavaScript, `application/json` for JSON modules, `application/wasm` for WebAssembly modules, etc. (They may still require [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with).)
+
+  ```js
+  // HTTP URLs
+  import x from "https://example.com/x.js";
+  // Data URLs
+  import x from "data:text/javascript,export default 42;";
+  // Data URLs for JSON modules
+  import x from 'data:application/json,{"foo":42}' with { type: "json" };
+  ```
+
+  `text/javascript` data URLs are still interpreted as modules, but they cannot use relative imports — because the `data:` URL scheme is not hierarchical. That is, `import x from "data:text/javascript,import y from './y.js';"` will throw an error because the relative specifier `'./y.js'` cannot be resolved.
+
+- [`node:` URLs](https://nodejs.org/api/esm.html#node-imports) resolve to built-in Node.js modules. They are supported by Node and other runtimes that claim compatibility with Node, such as Bun.
+
+Bare specifiers, popularized by CommonJS, are resolved according to host-specific rules. In Node.js, package names generally resolve to packages within `node_modules` directories. For example, if you have `import x from "foo"`, then Node.js searches for the `foo` package in `node_modules` directories starting from the current module's directory and continuing through its ancestors. Browsers require [import maps](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#importing_modules_using_import_maps) to resolve bare specifiers; these maps associate names with URLs rather than searching `node_modules` directories.
+
+The module resolution algorithm can also be executed programmatically using the [`import.meta.resolve`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta/resolve) function defined by the HTML spec.
 
 ## Examples
 
@@ -171,7 +224,7 @@ import * as myModule from "/modules/my-module.js";
 In this example, we create a re-usable module that exports a function to get all primes within a given range.
 
 ```js
-// getPrimes.js
+// -- getPrimes.js --
 /**
  * Returns a list of prime numbers that are smaller than `max`.
  */
@@ -205,7 +258,7 @@ The identifier being imported is a _live binding_, because the module exporting 
 You can also observe the new value through the [module namespace object](/en-US/docs/Web/JavaScript/Reference/Operators/import#module_namespace_object).
 
 ```js
-// my-module.js
+// -- my-module.js --
 export let myValue = 1;
 setTimeout(() => {
   myValue = 2;
@@ -213,7 +266,7 @@ setTimeout(() => {
 ```
 
 ```js
-// main.js
+// -- main.js --
 import { myValue } from "/modules/my-module.js";
 import * as myModule from "/modules/my-module.js";
 
@@ -225,6 +278,14 @@ setTimeout(() => {
   myValue = 3; // TypeError: Assignment to constant variable.
   // The importing module can only read the value but can't re-assign it.
 }, 1000);
+```
+
+### Importing non-JavaScript modules
+
+Non-JavaScript modules can also be imported using the `import` statement. Some module types need to be explicitly declared using [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with). For example, to import a JSON module, you need to specify the `type: "json"` attribute.
+
+```js
+import data from "./data.json" with { type: "json" };
 ```
 
 ## Specifications

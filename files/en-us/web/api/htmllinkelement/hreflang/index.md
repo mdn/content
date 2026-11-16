@@ -31,7 +31,7 @@ A string that contains a language tag, or the empty string (`""`) if there is no
 ```css
 .tag {
   margin-left: 20px;
-  font: bold;
+  font-weight: bold;
   font-size: 24px;
 }
 ```

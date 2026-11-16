@@ -1,15 +1,26 @@
 ---
 title: Date.prototype.getUTCFullYear()
+short-title: getUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCFullYear
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getUTCFullYear()`** method of {{jsxref("Date")}} instances returns the year for this date according to universal time.
 
-{{EmbedInteractiveExample("pages/js/date-getutcfullyear.html")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getUTCFullYear()")}}
+
+```js interactive-example
+const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+const date2 = new Date("December 31, 1975, 23:15:30 GMT-11:00");
+
+console.log(date1.getUTCFullYear());
+// Expected output: 1975
+
+console.log(date2.getUTCFullYear());
+// Expected output: 1976
+```
 
 ## Syntax
 
@@ -27,7 +38,7 @@ An integer representing the year for the given date according to universal time.
 
 ## Description
 
-Unlike {{jsxref("Date/getYear", "getYear()")}}, the value returned by `getUTCFullYear()` is an absolute number. For dates between the years 1000 and 9999, `getFullYear()` returns a four-digit number, for example, 1995. Use this function to make sure a year is compliant with years after 2000.
+Unlike {{jsxref("Date/getYear", "getYear()")}}, the value returned by `getUTCFullYear()` is an absolute number. For dates between the years 1000 and 9999, `getUTCFullYear()` returns a four-digit number, for example, 1995. Use this function to make sure a year is compliant with years after 2000.
 
 ## Examples
 

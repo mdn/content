@@ -2,11 +2,10 @@
 title: Debounce
 slug: Glossary/Debounce
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
-{{GlossarySidebar}}
-
-**Debouncing**, in the context of programming, means to "batch" all operations requested during a specific interval into a single invocation.
+**Debouncing**, in the context of programming, means to discard operations that occur too close together during a specific interval, and consolidate them into a single invocation.
 
 Debouncing is very similar to {{glossary("throttle", "throttling")}}. The key difference is that throttling enforces limits on continuous operations, while debouncing waits for invocations to stop for a specific time to consolidate many noisy invocations into one single invocation.
 

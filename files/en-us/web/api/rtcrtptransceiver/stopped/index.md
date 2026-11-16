@@ -5,10 +5,11 @@ slug: Web/API/RTCRtpTransceiver/stopped
 page-type: web-api-instance-property
 status:
   - deprecated
+  - non-standard
 browser-compat: api.RTCRtpTransceiver.stopped
 ---
 
-{{APIRef("WebRTC")}}{{deprecated_header}}
+{{APIRef("WebRTC")}}{{non-standard_header}}
 
 > [!NOTE]
 > Instead of using this deprecated property, compare {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} to `"stopped"`.
@@ -23,8 +24,6 @@ A Boolean value which is `true` if the transceiver's
 {{domxref("RTCRtpTransceiver.sender", "sender")}} will no longer send data, and its
 {{domxref("RTCRtpTransceiver.receiver", "receiver")}} will no longer receive data. If
 either or both are still at work, the result is `false`.
-
-## Usage notes
 
 ## Specifications
 

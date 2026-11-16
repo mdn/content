@@ -10,7 +10,7 @@ browser-compat: api.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvai
 
 The **`isUserVerifyingPlatformAuthenticatorAvailable()`** static method of the {{domxref("PublicKeyCredential")}} interface returns a {{jsxref("Promise")}} which resolves to `true` if a user-verifying platform authenticator is present.
 
-A user-verifying platform authenticator is a kind of multi-factor authenticator that is part of the client device (it is generally not removable) and that involves an action from the user in order to identify them. Common user-verifying platform authenticators include:
+A user-verifying platform authenticator is a kind of {{glossary("multi-factor authentication", "multi-factor authenticator")}} that is part of the client device (it is generally not removable) and that involves an action from the user in order to identify them. Common user-verifying platform authenticators include:
 
 - Touch ID or Face ID (macOS and iOS)
 - Windows Hello (Windows)
@@ -31,12 +31,17 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} which resolves to a boolean value indicating whether or
-a not a user-verifying platform authenticator is available.
+A {{jsxref("Promise")}} which resolves to a boolean value indicating whether or a not a user-verifying platform authenticator is available.
 
 > [!NOTE]
-> In earlier versions of the specification, the boolean also
-> conveyed the consent of the user to disclose such an authenticator existed.
+> In earlier versions of the specification, the boolean also conveyed the consent of the user to disclose such an authenticator existed.
+
+### Exceptions
+
+The returned {{jsxref("Promise")}} may be rejected with the following values:
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : The RP domain is not valid.
 
 ## Examples
 

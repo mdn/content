@@ -3,15 +3,29 @@ title: in
 slug: Web/JavaScript/Reference/Operators/in
 page-type: javascript-operator
 browser-compat: javascript.operators.in
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`in`** operator returns `true` if the specified property is in the specified object or its prototype chain.
 
 The `in` operator cannot be used to search for values in other collections. To test if a certain value exists in an array, use {{jsxref("Array.prototype.includes()")}}. For sets, use {{jsxref("Set.prototype.has()")}}.
 
-{{EmbedInteractiveExample("pages/js/expressions-inoperator.html")}}
+{{InteractiveExample("JavaScript Demo: in operator")}}
+
+```js interactive-example
+const car = { make: "Honda", model: "Accord", year: 1998 };
+
+console.log("make" in car);
+// Expected output: true
+
+delete car.make;
+if ("make" in car === false) {
+  car.make = "Suzuki";
+}
+
+console.log(car.make);
+// Expected output: "Suzuki"
+```
 
 ## Syntax
 
@@ -23,26 +37,26 @@ prop in object
 ### Parameters
 
 - `prop`
-  - : A string or symbol representing a property name (non-symbols will be [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)). Can also be a [private property identifier](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties).
+  - : A string or symbol representing a property name (non-symbols will be [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)). Can also be a [private element identifier](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements).
 - `object`
   - : Object to check if it (or its prototype chain) contains the property with specified name (`prop`).
 
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if `object` is not an object (i.e. a primitive).
+  - : Thrown if `object` is not an object (i.e., a primitive).
 
 ## Description
 
 The `in` operator tests if a string or symbol property is present in an object or its prototype chain. If you want to check for only _non-inherited_ properties, use {{jsxref("Object.hasOwn()")}} instead.
 
-A property may be present in an object but have value `undefined`. Therefore, `x in obj` is not the same as `obj.x !== undefined`. To make `in` return `false` after a property is added, use the [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator instead of setting that property's value to `undefined`.
+A property may be present in an object but have value `undefined`. Therefore, `"x" in obj` is not the same as `obj.x !== undefined`. To make `in` return `false` after a property is added, use the [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator instead of setting that property's value to `undefined`.
 
-You can also use the `in` operator to check whether a particular [private class field or method](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) has been defined in an object. The operator returns `true` if the property is defined, and `false` otherwise. This is known as a _branded check_, because it returns `true` if and only if the object was created with that class constructor, after which you can safely access other private properties as well.
+You can also use the `in` operator to check whether a particular [private class field or method](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) has been defined in an object. The operator returns `true` if the property is defined, and `false` otherwise. This is known as a _branded check_, because it returns `true` if and only if the object was created with that class constructor, after which you can safely access other private elements as well.
 
-This is a special syntax — the left-hand side of the `in` operator is a property identifier instead of an expression, but unquoted (because otherwise it's a string property, not a private property).
+This is a special syntax — the left-hand side of the `in` operator is a property identifier instead of an expression, but unquoted (because otherwise it's a string property, not a private element).
 
-Because accessing private properties on objects unrelated to the current class throws a {{jsxref("TypeError")}} instead of returning `undefined`, this syntax allows you to shorten:
+Because accessing private elements on objects unrelated to the current class throws a {{jsxref("TypeError")}} instead of returning `undefined`, this syntax allows you to shorten:
 
 ```js
 class C {
@@ -69,9 +83,9 @@ class C {
 }
 ```
 
-It also generally avoids the need for dealing with error handling just to access a private property that may be nonexistent.
+It also generally avoids the need for dealing with error handling just to access a private element that may be nonexistent.
 
-However, the `in` operator still requires the private property to be declared beforehand in the enclosing class — otherwise, it would throw a {{jsxref("SyntaxError")}} ("Private field '#x' must be declared in an enclosing class"), the same one as when you try to access an undeclared private property.
+However, the `in` operator still requires the private element to be declared beforehand in the enclosing class — otherwise, it would throw a {{jsxref("SyntaxError")}} ("Private field '#x' must be declared in an enclosing class"), the same one as when you try to access an undeclared private element.
 
 ```js-nolint example-bad
 class C {
@@ -103,9 +117,9 @@ Symbol.iterator in trees; // returns true
 "PI" in Math; // returns true
 
 // Custom objects
-const mycar = { make: "Honda", model: "Accord", year: 1998 };
-"make" in mycar; // returns true
-"model" in mycar; // returns true
+const myCar = { make: "Honda", model: "Accord", year: 1998 };
+"make" in myCar; // returns true
+"model" in myCar; // returns true
 ```
 
 You must specify an object on the right side of the `in` operator. For example, you can specify a string created with the `String` constructor, but you cannot specify a string literal.
@@ -124,9 +138,9 @@ const color2 = "coral";
 If you delete a property with the [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator, the `in` operator returns `false` for that property.
 
 ```js
-const mycar = { make: "Honda", model: "Accord", year: 1998 };
-delete mycar.make;
-"make" in mycar; // returns false
+const myCar = { make: "Honda", model: "Accord", year: 1998 };
+delete myCar.make;
+"make" in myCar; // returns false
 
 const trees = ["redwood", "bay", "cedar", "oak", "maple"];
 delete trees[3];
@@ -136,9 +150,9 @@ delete trees[3];
 If you set a property to {{jsxref("undefined")}} but do not delete it, the `in` operator returns true for that property.
 
 ```js
-const mycar = { make: "Honda", model: "Accord", year: 1998 };
-mycar.make = undefined;
-"make" in mycar; // returns true
+const myCar = { make: "Honda", model: "Accord", year: 1998 };
+myCar.make = undefined;
+"make" in myCar; // returns true
 ```
 
 ```js
@@ -239,7 +253,7 @@ const p2 = {};
 p1.ageDifference(p2); // TypeError: Cannot read private member #age from an object whose class did not declare it
 ```
 
-Without the `in` operator, you would have to use a `try...catch` block to check if the object has the private property.
+Without the `in` operator, you would have to use a `try...catch` block to check if the object has the private element.
 
 You can also implement this as a [`[Symbol.hasInstance]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) method of the class, so that you can use the [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) operator to perform the same check (which, by default, only checks for the existence of `Person.prototype` in the object's prototype chain).
 
@@ -267,7 +281,7 @@ if (p1 instanceof Person && p2 instanceof Person) {
 }
 ```
 
-For more examples, see [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) and the [class guide](/en-US/docs/Web/JavaScript/Guide/Using_classes#private_fields).
+For more examples, see [Private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) and the [class guide](/en-US/docs/Web/JavaScript/Guide/Using_classes#private_fields).
 
 ## Specifications
 
@@ -283,4 +297,4 @@ For more examples, see [Private properties](/en-US/docs/Web/JavaScript/Reference
 - [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Reflect.has()")}}
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

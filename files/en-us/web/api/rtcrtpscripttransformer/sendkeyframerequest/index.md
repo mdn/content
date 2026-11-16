@@ -1,5 +1,5 @@
 ---
-title: "RTCRtpScriptTransformer: sendKeyFrameRequest()"
+title: "RTCRtpScriptTransformer: sendKeyFrameRequest() method"
 short-title: sendKeyFrameRequest()
 slug: Web/API/RTCRtpScriptTransformer/sendKeyFrameRequest
 page-type: web-api-instance-method
@@ -33,7 +33,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined` once the request is sent,
 
 ### Exceptions
 
-- `InvalidStateError`
+- `InvalidStateError` {{domxref("DOMException")}}
   - : The de-packetizer is not processing video packets, or is `undefined`.
 
 ## Examples
@@ -71,8 +71,8 @@ event.transformer.options.port.onmessage = (event) => {
   // key is used by the transformer to decrypt frames (not shown)
 
   // Request sender to emit a key frame.
-  // Here 'rcevent' is the rtctransform event.
-  rcevent.transformer.sendKeyFrameRequest();
+  // Here 'rcEvent' is the rtctransform event.
+  rcEvent.transformer.sendKeyFrameRequest();
 };
 ```
 

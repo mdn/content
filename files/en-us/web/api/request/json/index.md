@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Request.json
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`json()`** method of the {{domxref("Request")}} interface
 reads the request body and returns it as a promise that resolves with the result of parsing the body text as {{JSxRef("JSON")}}.
@@ -27,6 +27,15 @@ None.
 
 A {{jsxref("Promise")}} that resolves to a JavaScript object. This object could be
 anything that can be represented by JSON — an object, an array, a string, a number…
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown for one of the following reasons:
+    - The request body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
+    - There was an error decoding the body content (for example, because the {{httpheader("Content-Encoding")}} header is incorrect).
+- {{jsxref("SyntaxError")}}
+  - : The request body cannot be parsed as JSON.
 
 ## Examples
 

@@ -9,7 +9,7 @@ status:
 browser-compat: api.WebSocketStream.url
 ---
 
-{{APIRef("WebSockets API")}}{{non-standard_header}}
+{{APIRef("WebSockets API")}}{{SeeCompatTable}}{{AvailableInWorkers}}{{non-standard_header}}
 
 The **`url`** read-only property of the
 {{domxref("WebSocketStream")}} interface returns the URL of the WebSocket server that the `WebSocketStream` instance was created with.

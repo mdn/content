@@ -25,7 +25,7 @@ This example looks at the `pendingLocalDescription` to determine whether or not 
 
 ```js
 const pc = new RTCPeerConnection();
-// ...
+// …
 const sd = pc.pendingLocalDescription;
 if (sd) {
   // There's a description change underway!

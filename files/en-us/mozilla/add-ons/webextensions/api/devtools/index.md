@@ -3,9 +3,8 @@ title: devtools
 slug: Mozilla/Add-ons/WebExtensions/API/devtools
 page-type: webextension-api
 browser-compat: webextensions.api.devtools
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Enables extensions to interact with the browser's {{Glossary("Developer Tools")}}. You use this API to create Developer Tools pages, interact with the window that is being inspected, inspect the page network usage.
 
@@ -13,6 +12,8 @@ To use this API, you must specify the [`devtools_page`](/en-US/docs/Mozilla/Add-
 
 > [!NOTE]
 > The "devtools" optional permission is only supported by Firefox and not Chrome ([Chromium issue 1143015](https://crbug.com/1143015)).
+
+The `devtools` namespace is only available to pages loaded as a [`devtools_page`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) and to extension panels or sidebars created from that page using APIs such as {{WebExtAPIRef("devtools.panels.create")}} or {{WebExtAPIRef("devtools.panels.ElementsPanel.createSidebarPane", "devtools.panels.elements.createSidebarPane")}}. Other extension pages, such as background pages or action popups, can't access this namespace.
 
 ## Properties
 

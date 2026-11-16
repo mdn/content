@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MediaQueryList.media
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM view API")}}
 
 The **`media`** read-only property of the
 {{DOMxRef("MediaQueryList")}} interface is a string representing a
@@ -18,21 +18,9 @@ A string representing a serialized media query.
 
 ## Examples
 
-This example runs the media query `(max-width: 600px)` and displays the
+This example runs the media query `(width <= 600px)` and displays the
 value of the resulting `MediaQueryList`'s `media` property in a
 {{HTMLElement("span")}}.
-
-### JavaScript
-
-```js
-let mql = window.matchMedia("(max-width: 600px)");
-
-document.querySelector(".mq-value").innerText = mql.media;
-```
-
-The JavaScript code passes the media query to match into {{DOMxRef("Window.matchMedia", "matchMedia()")}} to compile it, then sets the `<span>`'s
-{{DOMxRef("HTMLElement.innerText", "innerText")}} to the value of the result's
-`media` property.
 
 ### HTML
 
@@ -40,19 +28,31 @@ The JavaScript code passes the media query to match into {{DOMxRef("Window.match
 <span class="mq-value"></span>
 ```
 
-A simple `<span>` to receive the output.
+A `<span>` to receive the output.
 
 ```css hidden
 .mq-value {
   font:
-    18px arial,
+    18px "Arial",
     sans-serif;
   font-weight: bold;
-  color: #88f;
+  color: #8888ff;
   padding: 0.4em;
-  border: 1px solid #dde;
+  border: 1px solid #ddddee;
 }
 ```
+
+### JavaScript
+
+```js
+let mql = window.matchMedia("(width <= 600px)");
+
+document.querySelector(".mq-value").innerText = mql.media;
+```
+
+The JavaScript code passes the media query to match into {{DOMxRef("Window.matchMedia", "matchMedia()")}} to compile it, then sets the `<span>`'s
+{{DOMxRef("HTMLElement.innerText", "innerText")}} to the value of the result's
+`media` property.
 
 ### Result
 
@@ -68,8 +68,8 @@ A simple `<span>` to receive the output.
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
+- [Using media queries from code](/en-US/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

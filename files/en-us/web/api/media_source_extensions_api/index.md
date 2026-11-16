@@ -2,16 +2,16 @@
 title: Media Source API
 slug: Web/API/Media_Source_Extensions_API
 page-type: web-api-overview
-status:
-  - experimental
-spec-urls: https://w3c.github.io/media-source/
+spec-urls:
+  - https://w3c.github.io/media-source/
+  - https://w3c.github.io/media-playback-quality/
 ---
 
-{{DefaultAPISidebar("Media Source Extensions")}}
+{{DefaultAPISidebar("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **Media Source API**, formally known as **Media Source Extensions** (**MSE**), provides functionality enabling plugin-free web-based streaming media. Using MSE, media streams can be created via JavaScript, and played using {{htmlelement("audio")}} and {{htmlelement("video")}} elements.
 
-## Media Source Extensions concepts and usage
+## Concepts and usage
 
 Playing video and audio has been available in web applications without plugins for a few years now, but the basic features offered have really only been useful for playing single whole tracks. We can't, for example, combine/split arraybuffers. Streaming media has up until recently been the domain of Flash, with technologies like Flash Media Server serving video streams using the RTMP protocol.
 
@@ -27,13 +27,13 @@ If you do not require explicit control of video quality over time, the rate at w
 
 Dynamic Adaptive Streaming over HTTP (DASH) is a protocol for specifying how adaptive content should be fetched. It is effectively a layer built on top of MSE for building adaptive bitrate streaming clients. While there are other protocols available (such as HTTP Live Streaming (HLS)), DASH has the most platform support.
 
-DASH moves lots of logic out of the network protocol and into the client side application logic, using the simpler HTTP protocol to fetch files. Indeed, one can support DASH with a simple static file server, which is also great for CDNs. This is in direct contrast with previous streaming solutions that required expensive licenses for proprietary non-standard client/server protocol implementations.
+DASH moves lots of logic out of the network protocol and into the client-side application logic, using the simpler HTTP protocol to fetch files. Indeed, one can support DASH with a simple static file server, which is also great for CDNs. This is in direct contrast with previous streaming solutions that required expensive licenses for proprietary non-standard client/server protocol implementations.
 
 The two most common use cases for DASH involve watching content "on demand" or "live." On demand allows a developer to take their time transcoding the assets into multiple resolutions of various quality.
 
-Live profile content can introduce latency due to its transcoding and broadcasting, so DASH is not suitable for real time communication like [WebRTC](/en-US/docs/Web/API/WebRTC_API) is. It can however support significantly more client connections than WebRTC.
+Live profile content can introduce latency due to its transcoding and broadcasting, so DASH is not suitable for real-time communication like [WebRTC](/en-US/docs/Web/API/WebRTC_API) is. It can however support significantly more client connections than WebRTC.
 
-There are numerous available free and open source tools for transcoding content and preparing it for use with DASH, DASH file servers, and DASH client libraries written in JavaScript.
+There are numerous available free and open-source tools for transcoding content and preparing it for use with DASH, DASH file servers, and DASH client libraries written in JavaScript. The [DASH Adaptive Streaming for HTML video](/en-US/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming) article provides an example of how to use DASH with MSE.
 
 ### Availability in workers
 
@@ -45,19 +45,29 @@ See [MSE-in-Workers Demo by Matt Wolenetz](https://wolenetz.github.io/mse-in-wor
 
 - {{domxref("MediaSource")}}
   - : Represents a media source to be played via an {{domxref("HTMLMediaElement")}} object.
+- {{domxref("MediaSourceHandle")}}
+  - : A proxy for a {{domxref("MediaSource")}} that can be transferred from a dedicated worker back to the main thread and attached to a media element via its {{domxref("HTMLMediaElement.srcObject")}} property.
 - {{domxref("SourceBuffer")}}
   - : Represents a chunk of media to be passed into an {{domxref("HTMLMediaElement")}} via a `MediaSource` object.
 - {{domxref("SourceBufferList")}}
   - : A simple container list for multiple `SourceBuffer` objects.
+- {{domxref("ManagedMediaSource")}}
+  - : A {{domxref("MediaSource")}} that actively manages its memory content. Unlike a regular `MediaSource`, a `ManagedMediaSource` can evict content from its source buffers at any time for reasons such as memory or hardware limitations.
+- {{domxref("ManagedSourceBuffer")}}
+  - : A {{domxref("SourceBuffer")}} created by a `ManagedMediaSource`. Fires {{domxref("ManagedSourceBuffer.bufferedchange_event", "bufferedchange")}} events to notify the application when buffered ranges are modified, including when the user agent evicts content.
+- {{domxref("BufferedChangeEvent")}}
+  - : The event object for the {{domxref("ManagedSourceBuffer.bufferedchange_event", "bufferedchange")}} event, which contains {{domxref("TimeRanges")}} representing the added and removed buffered ranges.
 - {{domxref("VideoPlaybackQuality")}}
   - : Contains information about the quality of video being played by a {{htmlelement("video")}} element, such as number of dropped or corrupted frames. Returned by the {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method.
 
-## Extensions to other interfaces
+### Extensions to other interfaces
 
-- {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}
-  - : Creates an object URL pointing to a `MediaSource` object that can then be specified as the `src` value of an HTML media element to play a media stream.
+- {{domxref("HTMLMediaElement.buffered")}}
+  - : Returns a {{domxref("TimeRanges")}} object that indicates the ranges of the media source that the browser has buffered (if any) at the moment the `buffered` property is accessed.
 - {{domxref("HTMLMediaElement.seekable")}}
-  - : When a `MediaSource` object is played by an HTML media element, this property will return a {{domxref("TimeRanges")}} object that contains the time ranges that the user is able to seek to.
+  - : Returns a {{domxref('TimeRanges')}} object that contains the time ranges that the user is able to seek to, if any.
+- {{domxref("HTMLMediaElement.srcObject")}}
+  - : A media provider object representing the media resource to play or that has played in the current `HTMLMediaElement`, or `null` if not assigned.
 - {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}}
   - : Returns a {{domxref("VideoPlaybackQuality")}} object for the currently played video.
 - {{domxref("AudioTrack.sourceBuffer")}}, {{domxref("VideoTrack.sourceBuffer")}}, {{domxref("TextTrack.sourceBuffer")}}

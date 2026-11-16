@@ -3,9 +3,8 @@ title: declarativeNetRequest.DYNAMIC_RULESET_ID
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/DYNAMIC_RULESET_ID
 page-type: webextension-api-property
 browser-compat: webextensions.api.declarativeNetRequest.DYNAMIC_RULESET_ID
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Ruleset ID for the dynamic rules added by the extension using {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules","updateDynamicRules")}}.
 

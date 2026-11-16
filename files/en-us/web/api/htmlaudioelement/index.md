@@ -26,6 +26,10 @@ _No specific properties; inherits properties from its parent, {{domxref("HTMLMed
 
 _Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from {{domxref("HTMLElement")}}. It offers no methods of its own._
 
+## Events
+
+_Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from its ancestor {{domxref("HTMLElement")}}._ Listen to events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+
 ## Examples
 
 ### Basic usage
@@ -43,7 +47,7 @@ audioElement.play();
 ```
 
 > [!NOTE]
-> A common gotcha is trying to play an audio element immediately on page load. Modern browser's default autoplay policy will block that from happening. Refer to [Firefox](https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/) and [chrome](https://developer.chrome.com/blog/autoplay/) for best practices and work arounds.
+> A common gotcha is trying to play an audio element immediately on page load. Modern browser's default autoplay policy will block that from happening. Refer to [Firefox](https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/) and [chrome](https://developer.chrome.com/blog/autoplay/) for best practices and workarounds.
 
 Some of the more commonly used properties of the audio element include {{domxref("HTMLMediaElement.src", "src")}}, {{domxref("HTMLMediaElement.currentTime", "currentTime")}}, {{domxref("HTMLMediaElement.duration", "duration")}}, {{domxref("HTMLMediaElement.paused", "paused")}}, {{domxref("HTMLMediaElement.muted", "muted")}}, and {{domxref("HTMLMediaElement.volume", "volume")}}. This snippet copies the audio file's duration to a variable:
 
@@ -54,10 +58,6 @@ audioElement.addEventListener("loadeddata", () => {
   // The duration variable now holds the duration (in seconds) of the audio clip
 });
 ```
-
-## Events
-
-_Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from its ancestor {{domxref("HTMLElement")}}._ Listen to events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
 ## Specifications
 
@@ -70,5 +70,5 @@ _Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from its
 ## See also
 
 - [Web media technologies](/en-US/docs/Web/Media)
-- [Using audio and video in HTML](/en-US/docs/Web/Media/HTML_media)
+- [Audio and Video Delivery](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery)
 - HTML element implementing this interface: {{HTMLElement("audio")}}.

@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Canvas API")}}
 
-This tutorial describes how to use the [**`<canvas>`**](/en-US/docs/Web/HTML/Element/canvas) element to draw 2D graphics, starting with the basics. The examples provided should give you some clear ideas about what you can do with canvas, and will provide code snippets that may get you started in building your own content.
+This tutorial describes how to use the [**`<canvas>`**](/en-US/docs/Web/HTML/Reference/Elements/canvas) element to draw 2D graphics, starting with the basics. The examples provided should give you some clear ideas about what you can do with canvas, and will provide code snippets that may get you started in building your own content.
 
 `<canvas>` is an [HTML](/en-US/docs/Web/HTML) element which can be used to draw graphics via scripting (usually [JavaScript](/en-US/docs/Glossary/JavaScript)). This can, for instance, be used to draw graphs, combine photos, or create simple animations.
 
@@ -34,10 +34,5 @@ Using the `<canvas>` element is not very difficult, but you do need a basic unde
 ## See also
 
 - [Canvas topic page](/en-US/docs/Web/API/Canvas_API)
-- [HTML5CanvasTutorials](https://www.html5canvastutorials.com/)
-
-## A note to contributors
-
-Due to an unfortunate technical error that occurred the week of June 17, 2013, we lost the history of this tutorial, including attributions to all past contributors to its content. We apologize for this, and hope you'll forgive this unfortunate mishap.
 
 {{ Next("Web/API/Canvas_API/Tutorial/Basic_usage") }}

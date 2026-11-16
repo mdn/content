@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.isBuffer
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.isBuffer()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns `true` if the
 passed {{domxref("WebGLBuffer")}} is valid and `false` otherwise.
@@ -20,7 +20,7 @@ isBuffer(buffer)
 ### Parameters
 
 - `buffer`
-  - : A {{domxref("WebGLBuffer")}} to check.
+  - : A {{domxref("WebGLBuffer")}} to check. Passing `null` returns `false`.
 
 ### Return value
 

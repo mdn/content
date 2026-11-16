@@ -49,15 +49,11 @@ show(details)
 ### Parameters
 
 - `details` {{optional_inline}}
-
   - : Either an object or a {{jsxref("Promise")}} that resolves to an object. Provide this if your architecture requires
     that the payment request's details need to be updated between instantiating the
     payment interface and the user beginning to interact with it. The object should contain the updated information:
-
     - `displayItems` {{optional_inline}}
-
       - : An array of objects, each describing one line item for the payment request. These represent the line items on a receipt or invoice, each with the following properties:
-
         - `amount`
           - : An object describing the monetary value of the item. This object includes the following fields:
             - `currency`
@@ -70,13 +66,10 @@ show(details)
           - : A Boolean value which is `true` if the specified `amount` has not yet been finalized. This can be used to show items such as shipping or tax amounts that depend upon the selection of shipping address, shipping option, or so forth. The user agent may show this information but is not required to do so.
 
     - `error` {{optional_inline}} {{deprecated_inline}} {{non-standard_inline}}
-
       - : A string specifying an error message to present to the user. When calling {{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}}, including `error` in the updated data causes the {{Glossary("user agent")}} to display the text as a general error message. For address-field specific errors, use the `shippingAddressErrors` field.
 
     - `modifiers` {{optional_inline}}
-
       - : An array of objects, each describing a modifier for particular payment method identifiers, each with the following properties:
-
         - `supportedMethods`
           - : A string that represents the payment method identifier. The payment method identifier only applies if the user selects this payment method.
         - `total` {{optional_inline}}
@@ -103,18 +96,15 @@ The promise is resolved when the user accepts the payment request (such as by cl
 
 ### Exceptions
 
-Exceptions are not thrown but returned when the {{jsxref("Promise")}} rejects.
+The following exceptions can be returned when the {{jsxref("Promise")}} rejects.
 
 - `AbortError` {{domxref("DOMException")}}
+  - : Returned if:
 
-  - : Returned if the
-    {{Glossary("user agent")}} is already showing a payment panel. Only one payment
-    panel may be visible at a time _across all documents loaded by the user
-    agent_.
-
-    The promise is also rejected with `AbortError` if the user cancels the
-    payment request.
-
+    - The user cancels the payment request.
+    - The {{Glossary("user agent")}} is already showing a payment panel. Only one payment
+      panel may be visible at a time _across all documents loaded by the user
+      agent_.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Returned if the same payment has
     already been shown for this request (its state is `interactive` because it
@@ -123,6 +113,8 @@ Exceptions are not thrown but returned when the {{jsxref("Promise")}} rejects.
   - : Returned if the user agent does not
     support the payment methods specified when the
     {{domxref("PaymentRequest.PaymentRequest","PaymentRequest")}} constructor was called.
+- `OperationError` {{domxref("DOMException")}}
+  - : Returned to indicate an internal error in the underlying app that is handling the payment.
 - `SecurityError` {{domxref("DOMException")}}
   - : Returned if the call to
     `show()` was not in response to a user action, such as a {{domxref("Element/click_event", "click")}}
@@ -133,7 +125,7 @@ Exceptions are not thrown but returned when the {{jsxref("Promise")}} rejects.
 
 ## Security
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+[Transient user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Usage notes
 
@@ -270,7 +262,7 @@ call to {{domxref("paymentResponse.complete()")}} can indicate the success or fa
 the payment.
 
 ```js
-button.onclick = async function handlePurchase() {
+button.onclick = async () => {
   // Initialization of PaymentRequest arguments are excerpted for the sake of
   // brevity.
   const payment = new PaymentRequest(methods, details, options);

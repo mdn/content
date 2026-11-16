@@ -2,9 +2,8 @@
 title: Accessibility
 slug: Glossary/Accessibility
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Accessibility** (**A11y**) means enabling as many people as possible to use websites, including those with limited abilities. The most common way to achieve this is by ensuring that assistive technologies work properly to access the content. These technologies include {{glossary("screen reader", "screen readers")}}, screen magnifiers, speech recognition tools, and alternative input devices.
 
@@ -15,7 +14,7 @@ Web accessibility is formally defined and discussed at the {{Glossary("W3C")}} t
 ## See also
 
 - [Accessibility](/en-US/docs/Web/Accessibility)
-- [Learn accessibility](/en-US/docs/Learn/Accessibility)
+- [Learn accessibility](/en-US/docs/Learn_web_development/Core/Accessibility)
 - [ARIA](/en-US/docs/Web/Accessibility/ARIA)
 - [Web accessibility](https://en.wikipedia.org/wiki/Web_accessibility) on Wikipedia
 - [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) on W3C

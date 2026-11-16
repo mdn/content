@@ -1,10 +1,10 @@
 ---
-title: Firefox 73 for developers
+title: Firefox 73 release notes for developers
+short-title: Firefox 73
 slug: Mozilla/Firefox/Releases/73
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 73 that will affect developers. Firefox 73 was released on February 11, 2020.
 
@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 73 that will affe
 
 ### Developer tools
 
-- [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors) now appear as errors in the console (and no longer as warnings) giving them the appropriate visibility ([Firefox bug 1602093](https://bugzil.la/1602093)).
+- [CORS errors](/en-US/docs/Web/HTTP/Guides/CORS/Errors) now appear as errors in the console (and no longer as warnings) giving them the appropriate visibility ([Firefox bug 1602093](https://bugzil.la/1602093)).
 - Text and regular expression searches in the web console [can now be negated by prefixing them with '-'](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#filtering-and-searching) ([Firefox bug 1291192](https://bugzil.la/1291192)).
 
 ### HTML
@@ -25,7 +25,7 @@ _No changes._
 
 #### Removals
 
-- The proprietary `-moz-touch-enabled` media query has been removed ([Firefox bug 1486964](https://bugzil.la/1486964)). You should use [`pointer: coarse`](/en-US/docs/Web/CSS/@media/pointer) instead.
+- The proprietary `-moz-touch-enabled` media query has been removed ([Firefox bug 1486964](https://bugzil.la/1486964)). You should use [`pointer: coarse`](/en-US/docs/Web/CSS/Reference/At-rules/@media/pointer) instead.
 
 ### SVG
 
@@ -78,7 +78,3 @@ _No changes._
 ## See also
 
 - Hacks blog post: [Firefox 73 is upon us](https://hacks.mozilla.org/2020/02/firefox-73-is-upon-us/)
-
-## Older versions
-
-{{Firefox_for_developers}}

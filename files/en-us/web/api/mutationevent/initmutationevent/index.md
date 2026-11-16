@@ -5,10 +5,11 @@ slug: Web/API/MutationEvent/initMutationEvent
 page-type: web-api-instance-method
 status:
   - deprecated
+  - non-standard
 browser-compat: api.MutationEvent.initMutationEvent
 ---
 
-{{APIRef("UI Events")}}{{deprecated_header}}
+{{APIRef("UI Events")}}{{non-standard_header}}
 
 The **`initMutationEvent()`** method of the {{domxref("MutationEvent")}} interface initializes the
 value of a mutation event once it's been created (normally using the {{domxref("Document.createEvent()")}} method).
@@ -43,7 +44,7 @@ initMutationEvent(type, canBubble, cancelable, relatedNode,
 - `attrName`
   - : A string representing the name of the {{domxref("Attr")}} node changed, if any. Sets the value of {{domxref("MutationEvent.attrName")}}.
 - `attrChange`
-  - : A integer representing the reason attribute node changed. Sets the value of {{domxref("MutationEvent.attrChange")}}.
+  - : An integer representing the reason attribute node changed. Sets the value of {{domxref("MutationEvent.attrChange")}}.
 
 ### Return value
 

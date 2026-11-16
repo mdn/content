@@ -2,9 +2,8 @@
 title: Background scripts
 slug: Mozilla/Add-ons/WebExtensions/Background_scripts
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Background scripts or a background page enable you to monitor and react to events in the browser, such as navigating to a new page, removing a bookmark, or closing a tab.
 
@@ -19,7 +18,7 @@ Background scripts or a page are:
 > - persistent background scripts running at the time of the crash are reloaded automatically.
 > - non-persistent background scripts (also known as "Event Pages") running at the time of the crash are not reloaded. However, they are restarted automatically when Firefox calls one of their WebExtensions API events listeners.
 > - extension pages loaded in tabs at the time of the crash are not automatically restored. A warning message in each tab informs the user the page has crashed and enables the user to close or restore the tab.
->   ![Browser window displaying the user message indicating that a page has crashed with the options to close or restart the tab](your-tab-crashed-screenshot.png)
+>   ![Firefox displaying the message that a tab has crashed with the options to close or restore the tab](your-tab-crashed-screenshot.png)
 >   You can test this condition by opening a new tab and navigating to `about:crashextensions`, which silently triggers a crash of the extension process.
 
 In Manifest V2, background scripts or a page can be persistent or non-persistent. Non-persistent background scripts are recommended as they reduce the resource cost of your extension. In Manifest V3, only non-persistent background scripts or a page are supported.
@@ -96,6 +95,8 @@ However, if you need certain content in the background page, you can specify one
 
 You cannot specify background scripts and a background page.
 
+To support background scripts on browsers that use service workers (such as Chrome) and those that use event pages, specify both `scripts` and `service_worker` in the `background` key. The [script-on-click](https://github.com/mdn/webextensions-examples/tree/main/script-on-click) example demonstrates this cross-browser pattern.
+
 ### Initialize the extension
 
 Listen to {{WebExtAPIRef("runtime.onInstalled")}} to initialize an extension on installation. Use this event to set a state or for one-time initialization.
@@ -165,7 +166,9 @@ browser.runtime.onMessage.addListener(
 
 ### Filter events
 
-Use APIs that support event filters to restrict listeners to the cases the extension cares about. If an extension is listening for {{WebExtAPIRef("tabs.onUpdated")}}, use the {{WebExtAPIRef("webNavigation.onCompleted")}} event with filters instead, as the tabs API does not support filters.
+When your extension only needs to act on a subset of events, such as when a web page is opened from a specific domain, use event filters where they are available.
+
+For example, you can add a filter to the {{WebExtAPIRef("webNavigation.onCompleted")}} event to start your background script when certain URLs load, like this:
 
 ```js
 browser.webNavigation.onCompleted.addListener(
@@ -175,6 +178,8 @@ browser.webNavigation.onCompleted.addListener(
   { url: [{ urlMatches: "https://www.mozilla.org/" }] },
 );
 ```
+
+When targeting Firefox desktop only, you can also add filters to {{WebExtAPIRef("tabs.onUpdated")}} to achieve a similar outcome.
 
 ### React to listeners
 
@@ -324,7 +329,7 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 ### Change timers into alarms
 
-DOM-based timers, such as {{domxref("setTimeout()")}}, do not remain active after an event page has idled. Instead, use the {{WebExtAPIRef("alarms")}} API if you need a timer to wake an event page.
+DOM-based timers, such as {{domxref("Window.setTimeout", "setTimeout()")}}, do not remain active after an event page has idled. Instead, use the {{WebExtAPIRef("alarms")}} API if you need a timer to wake an event page.
 
 ```js
 browser.alarms.create({ delayInMinutes: 3.0 });
@@ -340,7 +345,7 @@ browser.alarms.onAlarm.addListener(() => {
 
 ### Update calls for background script functions
 
-Extensions commonly host their primary functionality in the background script. Some extensions access functions and variables defined in the background page through the `window` returned by {{WebExtAPIRef("extension.getBackgroundPage")}}.
+Extensions commonly host their primary functionality in the background script. Some extensions access functions and variables defined in the background page through the `window` returned by {{WebExtAPIRef("runtime.getBackgroundPage")}}.
 The method returns `null` when:
 
 - extension pages are isolated, such as extension pages in Private Browsing mode or container tabs.
@@ -351,11 +356,11 @@ The method returns `null` when:
 > The `getBackgroundPage()` methods discussed in this section cannot be used in a cross-browser extension, because Manifest Version 3 extensions in Chrome cannot use background or event pages.
 
 If your extension requires a reference to the `window` of the background page, use {{WebExtAPIRef("runtime.getBackgroundPage")}} to ensure the event page is running.
-If the call is optional (that is, only needed if the event page is alive) then use {{WebExtAPIRef("extension.getBackgroundPage")}}.
+If the call is optional (that is, only needed if the event page is alive) then use {{WebExtAPIRef("runtime.getBackgroundPage")}}.
 
 ```js example-bad
 document.getElementById("target").addEventListener("click", async () => {
-  let backgroundPage = browser.extension.getBackgroundPage();
+  let backgroundPage = browser.runtime.getBackgroundPage();
   // Warning: backgroundPage is likely null.
   backgroundPage.backgroundFunction();
 });

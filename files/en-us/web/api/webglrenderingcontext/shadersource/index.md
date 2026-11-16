@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.shaderSource
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.shaderSource()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the source code of a
 {{domxref("WebGLShader")}}.
@@ -27,6 +27,11 @@ shaderSource(shader, source)
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the specified `shader` is not of type `WebGLShader`.
 
 ## Examples
 

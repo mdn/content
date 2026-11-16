@@ -3,9 +3,8 @@ title: omnibox.onInputStarted
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputStarted
 page-type: webextension-api-event
 browser-compat: webextensions.api.omnibox.onInputStarted
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the user starts interacting with your extension by entering its keyword in the address bar and then pressing the space key.
 
@@ -35,10 +34,6 @@ Events have three functions:
 - `listener`
   - : The function called when this event occurs. The function is passed no arguments.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -48,6 +43,10 @@ browser.omnibox.onInputStarted.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox) API.

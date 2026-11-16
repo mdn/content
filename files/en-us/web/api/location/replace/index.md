@@ -24,7 +24,7 @@ replace(url)
 ### Parameters
 
 - `url`
-  - : A string containing the URL of the page to navigate to.
+  - : A string or any other object with a {{Glossary("stringifier")}}, such as a {{domxref("URL")}} object, containing the URL of the page to navigate to.
 
 ### Exceptions
 

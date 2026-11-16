@@ -6,13 +6,14 @@ page-type: webgl-extension
 browser-compat: api.WEBGL_compressed_texture_s3tc_srgb
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WEBGL_compressed_texture_s3tc_srgb`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes four [S3TC compressed texture formats](https://en.wikipedia.org/wiki/S3_Texture_Compression) for the sRGB colorspace.
 
 Compressed textures reduce the amount of memory needed to store a texture on the GPU, allowing for higher resolution textures or more of the same resolution textures.
 
-WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method.
+For more information, see [Using WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions).
 
 > [!NOTE]
 > This extension is available to both {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
@@ -24,7 +25,7 @@ The compressed texture formats are exposed by four constants and can be used in 
 - `ext.COMPRESSED_SRGB_S3TC_DXT1_EXT`
   - : A DXT1-compressed image in an sRGB image format.
 - `ext.COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT`
-  - : A DXT1-compressed image in an sRGB image format with a simple on/off alpha value.
+  - : A DXT1-compressed image in an sRGB image format with an on/off alpha value.
 - `ext.COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT`
   - : A DXT3-compressed image in an sRGBA image format.
 - `ext.COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT`
@@ -62,7 +63,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 
 ## See also
 
-- [S3 Texture Compression – OpenGL wiki](https://www.khronos.org/opengl/wiki/S3_Texture_Compression#sRGB_and_S3TC)
+- [S3 Texture Compression – OpenGL wiki](https://wikis.khronos.org/opengl/S3_Texture_Compression#sRGB_and_S3TC)
 - {{domxref("WebGLRenderingContext.getExtension()")}}
 - {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
 - {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}

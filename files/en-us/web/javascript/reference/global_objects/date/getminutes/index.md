@@ -1,15 +1,22 @@
 ---
 title: Date.prototype.getMinutes()
+short-title: getMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getMinutes
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getMinutes()`** method of {{jsxref("Date")}} instances returns the minutes for this date according to local time.
 
-{{EmbedInteractiveExample("pages/js/date-getminutes.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getMinutes()", "shorter")}}
+
+```js interactive-example
+const birthday = new Date("March 13, 08 04:20");
+
+console.log(birthday.getMinutes());
+// Expected output: 20
+```
 
 ## Syntax
 

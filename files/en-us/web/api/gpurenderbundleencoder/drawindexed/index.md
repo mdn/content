@@ -3,12 +3,10 @@ title: "GPURenderBundleEncoder: drawIndexed() method"
 short-title: drawIndexed()
 slug: Web/API/GPURenderBundleEncoder/drawIndexed
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderBundleEncoder.drawIndexed
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`drawIndexed()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface draws indexed primitives based on the vertex and index buffers provided by {{domxref("GPURenderBundleEncoder.setVertexBuffer", "setVertexBuffer()")}} and {{domxref("GPURenderBundleEncoder.setIndexBuffer", "setIndexBuffer()")}}.
@@ -41,12 +39,12 @@ drawIndexed(indexCount, instanceCount, firstIndex, baseVertex, firstInstance)
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
-// ...
+// …
 
 const bundleEncoder = device.createRenderBundleEncoder(descriptor);
 
@@ -59,7 +57,7 @@ bundleEncoder.drawIndexed(indexCount);
 
 const renderBundle = bundleEncoder.finish();
 
-// ...
+// …
 ```
 
 ## Specifications

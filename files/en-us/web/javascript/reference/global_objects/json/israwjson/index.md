@@ -1,13 +1,11 @@
 ---
 title: JSON.isRawJSON()
+short-title: isRawJSON()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/isRawJSON
 page-type: javascript-static-method
-status:
-  - experimental
 browser-compat: javascript.builtins.JSON.isRawJSON
+sidebar: jsref
 ---
-
-{{JSRef}}{{SeeCompatTable}}
 
 The **`JSON.isRawJSON()`** static method tests whether a value is an object returned by {{jsxref("JSON.rawJSON()")}}.
 
@@ -112,7 +110,7 @@ console.log(
 
 ## See also
 
-- [Polyfill of `JSON.isRawJSON` in `core-js`](https://github.com/zloirock/core-js#jsonparse-source-text-access)
+- [Polyfill of `JSON.isRawJSON` in `core-js`](https://core-js.io/docs/features/ecmascript/json)
 - {{jsxref("JSON")}}
 - {{jsxref("JSON.stringify()")}}
 - {{jsxref("JSON.rawJSON()")}}

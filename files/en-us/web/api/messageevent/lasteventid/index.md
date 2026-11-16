@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MessageEvent.lastEventId
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`lastEventId`** read-only property of the
 {{domxref("MessageEvent")}} interface is a string representing a

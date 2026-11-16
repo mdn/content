@@ -1,12 +1,12 @@
 ---
 title: Subresource integrity (SRI) implementation
+short-title: Subresource integrity (SRI)
 slug: Web/Security/Practical_implementation_guides/SRI
 page-type: guide
+sidebar: security
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
-
-[Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) (SRI) enables browsers to verify that resources they fetch (for example, from a CDN) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that the fetched resource must match.
+[Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) (SRI) enables browsers to verify that resources they fetch (for example, from a CDN) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that the fetched resource must match.
 
 ## Problem
 
@@ -22,7 +22,7 @@ If the file is modified after this point, the hash won't match, and supporting w
 
 SRI should be used when loading external JavaScript or stylesheet resources. The resources should be loaded over HTTPS.
 
-Note that CDNs must use [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/Security/Practical_implementation_guides/CORS) by setting the [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) header.
+Note that CDNs must use [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/Security/Practical_implementation_guides/CORS) by setting the [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin) header.
 
 ## Examples
 
@@ -58,4 +58,4 @@ r1y8TJcloKTvouxnYsi4PJAx+nHNr90ibsEn3zznzDzWBN9X3o3kbHLSgcIPtzAp
 
 - {{htmlelement("link")}}
 - {{htmlelement("script")}}
-- [SRI Hash Generator](https://www.srihash.org/) on `srihash.org`: Generates the required {{htmlelement("script")}} elements for you, and informs you if the CDN lacks CORS support.
+- [SRI Hash Generator](https://srihash.org/) on `srihash.org`: Generates the required {{htmlelement("script")}} elements for you, and informs you if the CDN lacks CORS support.

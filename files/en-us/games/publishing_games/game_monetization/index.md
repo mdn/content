@@ -2,11 +2,10 @@
 title: Game monetization
 slug: Games/Publishing_games/Game_monetization
 page-type: guide
+sidebar: games
 ---
 
-{{GamesSidebar}}
-
-When you've spent your time building a game, [distributing](/en-US/docs/Games/Publishing_games/Game_distribution) it and [promoting](/en-US/docs/Games/Publishing_games/Game_promotion) it you should consider earning some money out of it. If your work is a serious endeavour on the path to becoming an independent game developer able to make a living, read on and see what your options are. The technology is mature enough; now it's just about choosing the right approach.
+When you've spent your time building a game, [distributing](/en-US/docs/Games/Publishing_games/Game_distribution) it and [promoting](/en-US/docs/Games/Publishing_games/Game_promotion) it you should consider earning some money out of it. If your work is a serious endeavor on the path to becoming an independent game developer able to make a living, read on and see what your options are. The technology is mature enough; now it's just about choosing the right approach.
 
 ## Paid games
 
@@ -52,7 +51,7 @@ This approach is less strict — you can sell a license to multiple publishers. 
 
 ### Subscriptions
 
-There's also an option to get a passive, monthly revenue via a subscription deal. Instead of getting a one-time payment you can get a small amount of money per game, per month — it can be something around 20-50 USD per month, per game. It's normally up to you if you want to get all the money in a lump sum or get it per month. Remember that it can be cancelled, so it's not an indefinitely working solution.
+There's also an option to get a passive, monthly revenue via a subscription deal. Instead of getting a one-time payment you can get a small amount of money per game, per month — it can be something around 20-50 USD per month, per game. It's normally up to you if you want to get all the money in a lump sum or get it per month. Remember that it can be canceled, so it's not an indefinitely working solution.
 
 ### Ad revenue
 
@@ -76,7 +75,7 @@ If you're a graphic designer, you can sell the assets from the games you've crea
 
 ### Writing articles and tutorials
 
-It is possible to write articles about your games and even get paid for them. Game [promotion](/en-US/docs/Games/Publishing_games/Game_promotion) and monetization at the same time is a win-win, and if you don't abuse it with too much advertising the readers will enjoy reading them and as well as learning a thing or two. If you focus on sharing the knowledge first and use your games just as the examples it should be OK. Check out [Tuts+ Game Development](https://gamedevelopment.tutsplus.com/) or similar websites for writing opportunities.
+It is possible to write articles about your games and even get paid for them. Game [promotion](/en-US/docs/Games/Publishing_games/Game_promotion) and monetization at the same time is a win-win, and if you don't abuse it with too much advertising the readers will enjoy reading them and as well as learning a thing or two. If you focus on sharing the knowledge first and use your games just as the examples it should be OK. Check out [Tuts+ Game Development](https://code.tutsplus.com/c/game-development) or similar websites for writing opportunities.
 
 ### Merchandise
 

@@ -13,7 +13,7 @@ The **`href`** property of the {{domxref("HTMLLinkElement")}} interface contains
 It reflects the `href` attribute of the {{HTMLElement("link")}} element. If the element does not have an `href` attribute, then this property's value is the empty string (`""`).
 
 > [!NOTE]
-> Every `<link>` element must contain either one or both of the `href` or [`imagesrcset`](/en-US/docs/Web/HTML/Element/link#imagesrcset) attributes. This means, for each valid `<link>`, either this property or {{domxref("HTMLLinkElement.imageSrcset", "imageSrcset")}} will not be empty.
+> Every `<link>` element must contain either one or both of the `href` or [`imagesrcset`](/en-US/docs/Web/HTML/Reference/Elements/link#imagesrcset) attributes. This means, for each valid `<link>`, either this property or {{domxref("HTMLLinkElement.imageSrcset", "imageSrcset")}} will not be empty.
 
 ## Value
 

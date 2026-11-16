@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.FontFace.featureSettings
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`featureSettings`** property of the {{domxref("FontFace")}} interface retrieves or sets infrequently used font features that are not available from a font's variant properties.
 

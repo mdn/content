@@ -35,8 +35,8 @@ The first {{domxref("Element")}} in the {{domxref("HTMLCollection")}} matching t
 ```html
 <div id="personal">
   <span name="title">Dr.</span>
-  <span name="firstname">Carina</span>
-  <span name="lastname">Anand</span>
+  <span name="first-name">Carina</span>
+  <span name="last-name">Anand</span>
   <span id="degree">(MD)</span>
 </div>
 ```
@@ -50,14 +50,14 @@ const container = document.getElementById("personal");
 const titleSpan = container.children.namedItem("title");
 
 // The following variants return undefined instead of null if there's no element with a matching name or id
-const firstnameSpan = container.children["firstname"];
-const lastnameSpan = container.children.lastname;
+const firstNameSpan = container.children["first-name"];
+const lastNameSpan = container.children["last-name"];
 
 // Returns the span element with the id "degree"
 const degreeSpan = container.children.namedItem("degree");
 
 const output = document.createElement("div");
-output.textContent = `Result: ${titleSpan.textContent} ${firstnameSpan.textContent} ${lastnameSpan.textContent} ${degreeSpan.textContent}`;
+output.textContent = `Result: ${titleSpan.textContent} ${firstNameSpan.textContent} ${lastNameSpan.textContent} ${degreeSpan.textContent}`;
 
 container.insertAdjacentElement("afterend", output);
 ```

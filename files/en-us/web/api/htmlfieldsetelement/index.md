@@ -16,21 +16,21 @@ The **`HTMLFieldSetElement`** interface provides special properties and methods 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLFieldSetElement.disabled")}}
-  - : A boolean value reflecting the [`disabled`](/en-US/docs/Web/HTML/Element/fieldset#disabled) HTML attribute, indicating whether the user can interact with the control.
+  - : A boolean value reflecting the [`disabled`](/en-US/docs/Web/HTML/Reference/Elements/fieldset#disabled) HTML attribute, indicating whether the user can interact with the control.
 - {{domxref("HTMLFieldSetElement.elements")}} {{ReadOnlyInline}}
   - : The elements belonging to this field set. The type of this property depends on the version of the spec that is implemented by the browser.
 - {{domxref("HTMLFieldSetElement.form")}} {{ReadOnlyInline}}
   - : An {{domxref("HTMLFormControlsCollection")}} or {{domxref("HTMLCollection")}} referencing the containing form element, if this element is in a form.
     If the field set is not a descendant of a form element, then the attribute can be the ID of any form element in the same document it is related to, or the `null` value if none matches.
 - {{domxref("HTMLFieldSetElement.name")}}
-  - : A string reflecting the [`name`](/en-US/docs/Web/HTML/Element/fieldset#name) HTML attribute, containing the name of the field set. This can be used when accessing the field set in JavaScript. It is _not_ part of the data which is sent to the server.
+  - : A string reflecting the [`name`](/en-US/docs/Web/HTML/Reference/Elements/fieldset#name) HTML attribute, containing the name of the field set. This can be used when accessing the field set in JavaScript. It is _not_ part of the data which is sent to the server.
 - {{domxref("HTMLFieldSetElement.type")}} {{ReadOnlyInline}}
-  - : The string "`fieldset`".
-- {{domxref("HTMLFieldSetElement.validationMessage")}}
+  - : The string `"fieldset"`.
+- {{domxref("HTMLFieldSetElement.validationMessage")}} {{ReadOnlyInline}}
   - : A string representing a localized message that describes the validation constraints that the element does not satisfy (if any). This is the empty string if the element is not a candidate for constraint validation (`willValidate` is `false`), or it satisfies its constraints.
-- {{domxref("HTMLFieldSetElement.validity")}}
+- {{domxref("HTMLFieldSetElement.validity")}} {{ReadOnlyInline}}
   - : A {{domxref("ValidityState")}} representing the validity states that this element is in.
-- {{domxref("HTMLFieldSetElement.willValidate")}}
+- {{domxref("HTMLFieldSetElement.willValidate")}} {{ReadOnlyInline}}
   - : A boolean value `false`, because {{HTMLElement("fieldset")}} objects are never candidates for constraint validation.
 
 ## Instance methods

@@ -16,12 +16,16 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("deviceorientation", (event) => {});
+```js-nolint
+addEventListener("deviceorientation", (event) => { })
+```
 
-ondeviceorientation = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+ondeviceorientation = (event) => { }
 ```
 
 ## Event type
@@ -29,21 +33,6 @@ ondeviceorientation = (event) => {};
 A {{domxref("DeviceOrientationEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("DeviceOrientationEvent")}}
-
-## Event properties
-
-- {{domxref("DeviceOrientationEvent.absolute")}} {{ReadOnlyInline}}
-  - : A boolean that indicates whether the device is providing orientation data absolutely.
-- {{domxref("DeviceOrientationEvent.alpha")}} {{ReadOnlyInline}}
-  - : A number representing the motion of the device around the z axis, express in degrees with values ranging from 0 (inclusive) to 360 (exclusive).
-- {{domxref("DeviceOrientationEvent.beta")}} {{ReadOnlyInline}}
-  - : A number representing the motion of the device around the x axis, expressed in degrees with values ranging from -180 (inclusive) to 180 (exclusive). This represents the front to back motion of the device.
-- {{domxref("DeviceOrientationEvent.gamma")}} {{ReadOnlyInline}}
-  - : A number representing the motion of the device around the y axis, expressed in degrees with values ranging from -90 (inclusive) to 90 (exclusive). This represents the left to right motion of the device.
-- `DeviceOrientationEvent.webkitCompassHeading` {{Non-Standard_Inline}} {{ReadOnlyInline}}
-  - : A number represents the difference between the motion of the device around the z axis of the world system and the direction of the north, expressed in degrees with values ranging from 0 to 360.
-- `DeviceOrientationEvent.webkitCompassAccuracy` {{Non-Standard_Inline}} {{ReadOnlyInline}}
-  - : The accuracy of the compass given as a positive or negative deviation. It's usually 10.
 
 ## Examples
 
@@ -62,9 +51,9 @@ if (window.DeviceOrientationEvent) {
   );
 }
 
-const handleOrientationEvent = (frontToBack, leftToRight, rotateDegrees) => {
+function handleOrientationEvent(frontToBack, leftToRight, rotateDegrees) {
   // do something amazing
-};
+}
 ```
 
 ## Specifications

@@ -27,13 +27,18 @@ new Animation(effect, timeline)
 
 ## Examples
 
-In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), the `Animation()` constructor is used to create an `Animation` for the `rabbitDownKeyframes` using the document's `timeline`:
+In the [Follow the White Rabbit example](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#pausing_and_playing_animations), we can use the `Animation()` constructor to create an `Animation` for the `rabbitDownKeyframes` using the document's `timeline`:
 
 ```js
-const rabbitDownAnimation = new Animation(
-  rabbitDownKeyframes,
-  document.timeline,
+const whiteRabbit = document.getElementById("rabbit");
+
+const rabbitDownKeyframes = new KeyframeEffect(
+  whiteRabbit,
+  [{ transform: "translateY(0%)" }, { transform: "translateY(100%)" }],
+  { duration: 3000, fill: "forwards" },
 );
+
+const rabbitDownAnimation = new Animation(rabbitDownKeyframes);
 ```
 
 ## Specifications

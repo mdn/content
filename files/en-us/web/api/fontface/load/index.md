@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FontFace.load
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`load()`** method of the {{domxref("FontFace")}} interface requests and loads a font whose `source` was specified as a URL. It returns a {{jsxref('Promise')}} that resolves with the current `FontFace` object.
 
@@ -45,7 +45,7 @@ const canvas = document.getElementById("js-canvas");
 // load the "Bitter" font from Google Fonts
 const fontFile = new FontFace(
   "FontFamily Style Bitter",
-  "url(https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2)",
+  'url("https://mdn.github.io/shared-assets/fonts/bitter/Bitter-Regular.woff2")',
 );
 document.fonts.add(fontFile);
 

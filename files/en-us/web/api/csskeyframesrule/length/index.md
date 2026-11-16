@@ -8,7 +8,7 @@ browser-compat: api.CSSKeyframesRule.length
 
 {{APIRef("CSSOM") }}
 
-The read-only **`length`** property of the {{domxref("CSSKeyframeRule")}} interface returns the number of {{domxref("CSSKeyframeRule")}} objects in its list. You can then access each keyframe rule by its index directly on the `CSSKeyframeRule` object.
+The read-only **`length`** property of the {{domxref("CSSKeyframesRule")}} interface returns the number of {{domxref("CSSKeyframeRule")}} objects in its list. You can then access each keyframe rule by its index directly on the `CSSKeyframeRule` object.
 
 ## Value
 
@@ -20,7 +20,7 @@ The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule"
 `myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object. The `cssRules` property returns a {{domxref("CSSRuleList")}} containing two rules.
 
 ```css
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(0%);
   }

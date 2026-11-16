@@ -1,0 +1,203 @@
+---
+title: "SpeechRecognition: available() static method"
+short-title: available()
+slug: Web/API/SpeechRecognition/available_static
+page-type: web-api-static-method
+browser-compat: api.SpeechRecognition.available_static
+---
+
+{{APIRef("Web Speech API")}}
+
+The **`available()`** static method of the {{domxref("SpeechRecognition")}} interface checks whether the specified languages are available for speech recognition at the given quality level.
+
+To install the language packs needed for [on-device speech recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) of those languages, use the {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} method.
+A language pack is the data a browser needs to recognize speech in a particular language.
+
+Access to the `available()` method is controlled by the {{httpheader("Permissions-Policy/on-device-speech-recognition", "on-device-speech-recognition")}} {{httpheader("Permissions-Policy")}} directive.
+If a policy blocks access, the promise returned by `available()` resolves to `unavailable`.
+
+## Syntax
+
+```js-nolint
+available(options)
+```
+
+### Parameters
+
+- `options`
+  - : An object specifying options for the availability check. Possible properties include:
+    - `langs`
+      - : An array of one or more strings containing {{glossary("BCP 47 language tag", "BCP 47 language tags")}}, each representing a language to check for availability.
+        If `langs` is an empty array, the promise resolves to `unavailable`.
+        See [Browser compatibility](#browser_compatibility) for browser-specific differences.
+    - `quality` {{optional_inline}}
+      - : An enumerated value that indicates the approximate use case of your speech recognition app, and therefore the required level of complexity of the language pack and speech recognition service. Possible values are:
+        - `command`
+          - : Level 1: Short isolated phrases with limited vocabulary and a single speaker. Use cases include voice commands for apps. This is the default value.
+        - `dictation`
+          - : Level 2: Continuous speech with moderate background noise and a single primary speaker. Use cases include dictating long-form text inputs such as SMS messages, email bodies, or strings for translation.
+        - `conversation`
+          - : Level 3: Continuous speech with complex vocabulary, high background noise, and multiple primary speakers. Use cases include transcribing meetings and continuous live captioning.
+    - `processLocally` {{optional_inline}}
+      - : A boolean that specifies whether to check availability of the languages only for [on-device speech recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) (`true`) or for on-device _or_ remote speech recognition (`false`). The default value is `false`.
+        > [!NOTE]
+        > It is not possible to use `available()` to guarantee that a remote service supports the specified languages. A value of `false` means that either an on-device _or_ a remote speech recognition service supports them.
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves with an enumerated value indicating the availability of the specified languages for speech recognition.
+
+Possible values include:
+
+- `available`
+  - : Indicates that all the specified languages are supported at the given `quality` level.
+    - If `processLocally` is set to `true`, `available` means that speech recognition is available for those languages on-device (the required language packs have been downloaded and installed on the user's device).
+    - If `processLocally` is set to `false`, `available` means that speech recognition is available for those languages either on-device or remotely.
+- `downloading`
+  - : Indicates that all the specified languages are supported at the given `quality` level for on-device processing, and that the relevant language pack for at least one language is in the process of being downloaded. Only relevant when `processLocally` is `true`.
+- `downloadable`
+  - : Indicates that support for the specified languages is available on-device, at the specified `quality` level, but the relevant language pack for at least one language has not yet been downloaded, or the site hasn't yet called {{domxref("SpeechRecognition.install_static", "install()")}} for it (see the following note).
+    Only relevant when `processLocally` is `true`.
+- `unavailable`
+  - : Indicates that at least one of the specified languages is not supported at the given `quality` level.
+    - If `processLocally` is set to `true`, `unavailable` means that on-device speech recognition is not available for at least one of the specified languages.
+    - If `processLocally` is set to `false`, `unavailable` means that speech recognition is not available for at least one of the specified languages either on-device or remotely.
+
+> [!NOTE]
+> To protect user privacy, browsers hide whether a language pack is already on the user's device until the site has called {{domxref("SpeechRecognition.install_static", "install()")}} for that language.
+> Until then, `available()` returns `downloadable` instead of `available` or `downloading`, even if the language pack is installed or downloading.
+> Calling `install()` for a language pack that's already installed doesn't download it again, and later calls to `available()` return its true status.
+
+#### Final return value for multiple languages with different statuses
+
+Only one status value is returned, even if multiple languages are specified in the `langs` array.
+If the specified languages have different availability statuses, the final return value is the status furthest from `available` among those languages.
+The following lists show how the final status is chosen, checking each rule in order:
+
+If `processLocally` is `false`:
+
+- If all languages are `available`, return `available`.
+- Otherwise, return `unavailable`.
+
+If `processLocally` is `true`:
+
+- If at least one language is `unavailable`, return `unavailable`.
+- Otherwise, if at least one language is `downloadable`, return `downloadable`.
+- Otherwise, if at least one language is `downloading`, return `downloading`.
+- Otherwise, return `available`.
+
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : The current document is not fully active.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : One or more of the strings specified in `langs` aren't valid BCP 47 language tags.
+
+## Examples
+
+### Checking on-device availability and installing language packs
+
+For on-device speech recognition to work, the browser must have a language pack installed for the language you want to recognize.
+If you call `start()` after setting `processLocally` to `true` but the correct language pack isn't installed, recognition fails and an {{domxref("SpeechRecognition.error_event", "error")}} event fires with a [`service-not-allowed`](/en-US/docs/Web/API/SpeechRecognitionErrorEvent/error#service-not-allowed) error code.
+
+To install the correct language pack, follow these two steps:
+
+1. Use the `available()` method to check whether the language pack is installed on the user's device.
+2. If it isn't installed, use the {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} method to install it.
+
+These steps are handled using the following code snippet:
+
+```js
+startBtn.addEventListener("click", () => {
+  // Check availability of target language
+  SpeechRecognition.available({ langs: ["en-US"], processLocally: true }).then(
+    (result) => {
+      if (result === "unavailable") {
+        diagnostic.textContent = `en-US not available to download at this time. Sorry!`;
+      } else if (result === "available") {
+        recognition.start();
+        console.log("Ready to receive a color command.");
+      } else {
+        diagnostic.textContent = `en-US language pack downloading`;
+        SpeechRecognition.install({
+          langs: ["en-US"],
+          processLocally: true,
+        }).then((result) => {
+          if (result) {
+            diagnostic.textContent = `en-US language pack downloaded. Try again.`;
+          } else {
+            diagnostic.textContent = `en-US language pack failed to download. Try again later.`;
+          }
+        });
+      }
+    },
+  );
+});
+```
+
+We first run the `available()` method, specifying one language (`langs: ["en-US"]`) to check availability for, and `processLocally: true`. We test for three different possibilities of the return value:
+
+- If the resulting value is `unavailable`, it means that no suitable language pack is available to download. We also print an appropriate message to the output.
+- If the resulting value is `available`, it means that the language pack is available locally, so recognition can begin. In this case, we run `start()` and log a message to the console when the app is ready to receive speech.
+- If the value is something else (`downloadable` or `downloading`), we print a diagnostic message to inform the user that a language pack download is starting, then run the `install()` method to handle the download.
+
+The `install()` method starts the `en-US` language pack downloading and returns a {{jsxref("Promise")}} that resolves with a boolean indicating whether the specified language packs were downloaded and installed successfully (`true`) or not (`false`).
+
+This code is excerpted from our [on-device speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/on-device-speech-color-changer) ([run the demo live](https://mdn.github.io/dom-examples/web-speech-api/on-device-speech-color-changer/)). See [Using the Web Speech API](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API) for a full explanation.
+
+### Checking on-device model capabilities
+
+The following code snippet modifies the previous example.
+It calls `available()` with the `quality` option set to `dictation`, to check whether on-device recognition supports this quality level.
+If the result is `unavailable`, we set the `SpeechRecognition` object's {{domxref("SpeechRecognition.processLocally", "processLocally")}} property to `false` (assuming it was previously `true`), which allows the browser to use a remote recognition service if it has one, and then call `start()`.
+
+If the result is `available`, we call {{domxref("SpeechRecognition.start", "start()")}} to begin on-device recognition.
+If the result is any other value, we call {{domxref("SpeechRecognition.install_static", "install()")}} with the `quality` option set to `dictation` to install the required language packs.
+
+```js
+startBtn.addEventListener("click", () => {
+  // Check availability of on-device target language dictation quality
+  SpeechRecognition.available({
+    langs: ["en-US"],
+    processLocally: true,
+    quality: "dictation",
+  }).then((result) => {
+    if (result === "unavailable") {
+      diagnostic.textContent = `On-device recognition for dictation not available. Falling back to any available recognition service.`;
+      recognition.processLocally = false;
+      recognition.start();
+    } else if (result === "available") {
+      recognition.start();
+      console.log("Ready to receive a color command.");
+    } else {
+      diagnostic.textContent = `en-US language pack downloading`;
+      SpeechRecognition.install({
+        langs: ["en-US"],
+        processLocally: true,
+        quality: "dictation",
+      }).then((result) => {
+        if (result) {
+          diagnostic.textContent = `en-US language pack downloaded. Try again.`;
+        } else {
+          diagnostic.textContent = `en-US language pack failed to download. Try again later.`;
+        }
+      });
+    }
+  });
+});
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}}
+- {{domxref("SpeechRecognition.processLocally")}}
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)
+- [Using the Web Speech API](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)

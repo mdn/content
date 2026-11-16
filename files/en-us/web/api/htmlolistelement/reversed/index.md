@@ -10,7 +10,7 @@ browser-compat: api.HTMLOListElement.reversed
 
 The **`reversed`** property of the {{domxref("HTMLOListElement")}} interface indicates order of a list.
 
-It reflects the [`reversed`](/en-US/docs/Web/HTML/Element/ol#reversed) attribute of the {{HTMLElement("ol")}} element.
+It reflects the [`reversed`](/en-US/docs/Web/HTML/Reference/Elements/ol#reversed) attribute of the {{HTMLElement("ol")}} element.
 
 ## Value
 

@@ -20,9 +20,11 @@ Use {{domxref("CacheStorage.match()")}} to check if a given {{domxref("Request")
 
 You can access `CacheStorage` through the {{domxref("Window.caches")}} property in windows or through the {{domxref("WorkerGlobalScope.caches")}} property in workers.
 
-> **Note:** `CacheStorage` always rejects with a `SecurityError` on untrusted origins (i.e. those that aren't using HTTPS, although this definition will likely become more complex in the future.) When testing on Firefox, you can get around this by checking the **Enable Service Workers over HTTP (when toolbox is open)** option in the Firefox Devtools options/gear menu. Furthermore, because `CacheStorage` requires file-system access, it may be unavailable in private mode in Firefox.
+> [!NOTE]
+> `CacheStorage` always rejects with a `SecurityError` on untrusted origins (i.e., those that aren't using HTTPS, although this definition will likely become more complex in the future.) When testing on Firefox, you can get around this by checking the **Enable Service Workers over HTTP (when toolbox is open)** option in the Firefox DevTools options/gear menu. Furthermore, because `CacheStorage` requires file-system access, it may be unavailable in private mode in Firefox.
 
-> **Note:** {{domxref("CacheStorage.match()")}} is a convenience method. Equivalent functionality to match a cache entry can be implemented by returning an array of cache names from {{domxref("CacheStorage.keys()")}}, opening each cache with {{domxref("CacheStorage.open()")}}, and matching the one you want with {{domxref("Cache.match()")}}.
+> [!NOTE]
+> {{domxref("CacheStorage.match()")}} is a convenience method. Equivalent functionality to match a cache entry can be implemented by returning an array of cache names from {{domxref("CacheStorage.keys()")}}, opening each cache with {{domxref("CacheStorage.open()")}}, and matching the one you want with {{domxref("Cache.match()")}}.
 
 ## Instance methods
 
@@ -46,7 +48,7 @@ In the second code block, we wait for a {{domxref("FetchEvent")}} to fire. We co
 
 1. Check whether a match for the request is found in the CacheStorage. If so, serve that.
 2. If not, fetch the request from the network, then also open the cache created in the first block and add a clone of the request to it using {{domxref("Cache.put")}} (`cache.put(event.request, response.clone())`.)
-3. If this fails (e.g. because the network is down), return a fallback response.
+3. If this fails (e.g., because the network is down), return a fallback response.
 
 Finally, return whatever the custom response ended up being equal to, using {{domxref("FetchEvent.respondWith")}}.
 
@@ -78,21 +80,20 @@ self.addEventListener("fetch", (event) => {
       // but in case of success response will have value
       if (response !== undefined) {
         return response;
-      } else {
-        return fetch(event.request)
-          .then((response) => {
-            // response may be used only once
-            // we need to save clone to put one copy in cache
-            // and serve second one
-            let responseClone = response.clone();
-
-            caches.open("v1").then((cache) => {
-              cache.put(event.request, responseClone);
-            });
-            return response;
-          })
-          .catch(() => caches.match("/gallery/myLittleVader.jpg"));
       }
+      return fetch(event.request)
+        .then((response) => {
+          // response may be used only once
+          // we need to save clone to put one copy in cache
+          // and serve second one
+          let responseClone = response.clone();
+
+          caches
+            .open("v1")
+            .then((cache) => cache.put(event.request, responseClone));
+          return response;
+        })
+        .catch(() => caches.match("/gallery/myLittleVader.jpg"));
     }),
   );
 });

@@ -3,6 +3,7 @@ title: tabs.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
 page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onUpdated
+sidebar: addonsidebar
 ---
 
 Fired when a tab is updated.
@@ -38,35 +39,32 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `tabId`
       - : `integer`. The ID of the updated tab.
     - `changeInfo`
-      - : `object`. Properties of the tab that changed. See the [changeInfo](#changeinfo_2) section for more details.
+      - : `object`. Properties of the tab that changed. See the [changeInfo](#changeinfo) section for more details.
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The new state of the tab.
 
 - `filter` {{optional_inline}}
-
   - : `object`. A set of filters that restrict the events sent to this listener. This object can have one or more of these properties. Events are only sent if they satisfy all the filters provided.
-
     - `urls`
       - : `Array`. An array of [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Fires the event only for tabs whose current `url` property matches any one of the patterns.
     - `properties`
-
       - : `Array`. An array of strings consisting of supported {{WebExtAPIRef("tabs.Tab")}} object property names. Fires the event only for changes to one of the properties named in the array. These properties can be used:
-
         - "attention"
         - "autoDiscardable"
         - "audible"
         - "discarded"
         - "favIconUrl"
+        - "groupId"
         - "hidden"
         - "isArticle"
         - "mutedInfo"
+        - "openerTabId"
         - "pinned"
+        - "splitViewId"
         - "status"
         - "title"
         - "url"
@@ -78,6 +76,8 @@ Events have three functions:
       - : `Integer`. Fires this event only for the tab identified by this ID.
     - `windowId`
       - : `Integer`. Fires this event only for tabs in the window identified by this ID.
+    - `cookieStoreId`
+      - : `Integer`. Fires this event only for tabs in the cookie store identified by this ID.
 
 ## Additional objects
 
@@ -95,14 +95,20 @@ Lists the changes to the state of the tab that is updated. To learn more about t
   - : `boolean`. Whether the tab is discarded. A discarded tab is one whose content has been unloaded from memory but is visible in the tab strip. Its content gets reloaded the next time it's activated.
 - `favIconUrl` {{optional_inline}}
   - : `string`. The tab's new favicon URL. Not included when a tab loses its favicon (navigating from a page with a favicon to a page without one). Check `favIconUrl` in [tab](#tab) instead.
+- `groupId` {{optional_inline}}
+  - : `integer`. The ID of the group the tabs are in or `-1` ({{WebExtAPIRef("tabGroups.TAB_GROUP_ID_NONE")}}) for ungrouped tabs.
 - `hidden` {{optional_inline}}
   - : `boolean`. True if the tab is {{WebExtAPIRef("tabs.hide()", "hidden")}}.
 - `isArticle` {{optional_inline}}
   - : `boolean`. True if the tab is an article and is therefore eligible for display in [Reader Mode](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode).
 - `mutedInfo` {{optional_inline}}
   - : {{WebExtAPIRef('tabs.MutedInfo')}}. The tab's new muted state and the reason for the change.
+- `openerTabId` {{optional_inline}}
+  - : `integer`. The ID of the tab that opened this tab, if any. This property is only present if the opener tab exists and is in the same window.
 - `pinned` {{optional_inline}}
   - : `boolean`. The tab's new pinned state.
+- `splitViewId` {{optional_inline}}
+  - : `integer`. The ID of the [split view](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#working_with_tab_split_views) the tab belongs to. Set to {{WebExtAPIRef('tabs.SPLIT_VIEW_ID_NONE')}} when the tab doesn't belong to a split view.
 - `status` {{optional_inline}}
   - : `string`. The status of the tab. Can be either _loading_ or _complete_.
 - `title` {{optional_inline}}
@@ -138,11 +144,11 @@ browser.tabs.onUpdated.addListener(handleUpdated);
 
 ### Filtering examples
 
-Log changes only to tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mozilla.social/@mdn`:
+Log changes only to tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mastodon.social/@mdn`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://mozilla.social/@mdn";
+const pattern2 = "https://mastodon.social/@mdn";
 
 const filter = {
   urls: [pattern1, pattern2],
@@ -173,11 +179,11 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
 browser.tabs.onUpdated.addListener(handleUpdated, filter);
 ```
 
-Combine both the previous filters, log only when the `pinned` property of tabs changes for tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mozilla.social/@mdn`:
+Combine both the previous filters, log only when the `pinned` property of tabs changes for tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mastodon.social/@mdn`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://mozilla.social/@mdn";
+const pattern2 = "https://mastodon.social/@mdn";
 
 const filter = {
   urls: [pattern1, pattern2],
@@ -193,11 +199,11 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
 browser.tabs.onUpdated.addListener(handleUpdated, filter);
 ```
 
-Log changes only when the `pinned` property of tabs changes for tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mozilla.social/@mdn` where the tab was part of the current browser window when the update event fired:
+Log changes only when the `pinned` property of tabs changes for tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mastodon.social/@mdn` where the tab was part of the current browser window when the update event fired:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://mozilla.social/@mdn";
+const pattern2 = "https://mastodon.social/@mdn";
 
 const filter = {
   urls: [pattern1, pattern2],
@@ -252,5 +258,3 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
-
-{{AddonSidebar}}

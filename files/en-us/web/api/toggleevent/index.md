@@ -7,17 +7,19 @@ browser-compat: api.ToggleEvent
 
 {{APIRef("Popover API")}}
 
-The **`ToggleEvent`** interface represents an event notifying the user an Element's state has changed.
+The **`ToggleEvent`** interface represents an event that fires when a popover element is toggled between being shown and hidden.
 
-It is the event object for the `HTMLElement` {{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} and {{domxref("HTMLElement.toggle_event", "toggle")}} events, which fire on popovers when they transition between showing and hidden (before and after, respectively).
-It is also the event object for the `HTMLDetailsElement` {{domxref("HTMLDetailsElement.toggle_event", "toggle")}} event, which fires when a `<details>` element is toggled between open and closed.
+This is the event object for the {{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} and {{domxref("HTMLElement.toggle_event", "toggle")}} events, which fire on elements as follows:
+
+- The `beforetoggle` event fires before [popover](/en-US/docs/Web/API/Popover_API) or {{htmlelement("dialog")}} elements are shown or hidden.
+- The `toggle` event fires after popover, `<dialog>`, or {{htmlelement("details")}} elements are shown or hidden.
 
 {{InheritanceDiagram}}
 
 ## Constructor
 
 - {{DOMxRef("ToggleEvent.ToggleEvent", "ToggleEvent()")}}
-  - : Creates an `ToggleEvent` object.
+  - : Creates a `ToggleEvent` object.
 
 ## Instance properties
 
@@ -27,6 +29,8 @@ _This interface inherits properties from its parent, {{DOMxRef("Event")}}._
   - : A string (either `"open"` or `"closed"`), representing the state the element is transitioning to.
 - {{DOMxRef("ToggleEvent.oldState")}} {{ReadOnlyInline}}
   - : A string (either `"open"` or `"closed"`), representing the state the element is transitioning from.
+- {{DOMxRef("ToggleEvent.source")}} {{ReadOnlyInline}}
+  - : An {{domxref("Element")}} object instance representing the HTML control that initiated the toggle.
 
 ## Examples
 
@@ -35,7 +39,7 @@ _This interface inherits properties from its parent, {{DOMxRef("Event")}}._
 ```js
 const popover = document.getElementById("mypopover");
 
-// ...
+// …
 
 popover.addEventListener("beforetoggle", (event) => {
   if (event.newState === "open") {

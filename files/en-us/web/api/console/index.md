@@ -11,7 +11,7 @@ The **`console`** object provides access to the debugging console (e.g., the [We
 
 Implementations of the console API may differ between runtimes. In particular, some console methods may work differently or not work at all in some online editors and IDEs. To see the behavior described in this documentation, try the methods in your browser's developer tools, although even here, there are some differences between browsers.
 
-The `console` object can be accessed from any global object. {{domxref("Window")}} on browsing scopes and {{domxref("WorkerGlobalScope")}} as specific variants in workers via the property console. It's exposed as {{domxref("Window.console")}}, and can be referenced as `console`. For example:
+The `console` object is available in any global scope. For example:
 
 ```js
 console.log("Failed to open the specified link");
@@ -23,6 +23,8 @@ console.log("Failed to open the specified link");
   - : Log an error message to console if the first argument is `false`.
 - {{domxref("console/clear_static", "console.clear()")}}
   - : Clear the console.
+- {{domxref("console/context_static", "console.context()")}} {{Non-standard_inline}}
+  - : Creates a new console context, an object with most of the `console` methods whose messages are associated with an optional label.
 - {{domxref("console/count_static", "console.count()")}}
   - : Log the number of times this line has been called with the given label.
 - {{domxref("console/countReset_static", "console.countReset()")}}
@@ -60,7 +62,7 @@ console.log("Failed to open the specified link");
 - {{domxref("console/timeLog_static", "console.timeLog()")}}
   - : Logs the value of the specified [timer](#timers) to the console.
 - {{domxref("console/timeStamp_static", "console.timeStamp()")}} {{Non-standard_inline}}
-  - : Adds a marker to the browser performance tool's timeline ([Chrome](https://developer.chrome.com/docs/devtools/performance/reference) or [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline)).
+  - : Adds a marker to a performance recording in developer tools that support it. Recording and display depend on the browser and profiling tool.
 - {{domxref("console/trace_static", "console.trace()")}}
   - : Outputs a [stack trace](#stack_traces).
 - {{domxref("console/warn_static", "console.warn()")}}
@@ -112,7 +114,7 @@ If you are going to mutate your object and you want to prevent the logged inform
 console.log(JSON.parse(JSON.stringify(obj)));
 ```
 
-There are other alternatives that work in browsers, such as [`structuredClone()`](/en-US/docs/Web/API/structuredClone), which are more effective at cloning different types of objects.
+There are other alternatives that work in browsers, such as {{DOMxRef("Window.structuredClone", "structuredClone()")}}, which are more effective at cloning different types of objects.
 
 #### Outputting multiple objects
 
@@ -127,7 +129,7 @@ console.info("My first car was a", car, ". The object is:", someObject);
 The output will look like this:
 
 ```plain
-My first car was a Dodge Charger. The object is: {str:"Some text", id:5}
+My first car was a Dodge Charger . The object is: {str:"Some text", id:5}
 ```
 
 #### Using string substitutions
@@ -147,7 +149,7 @@ The first parameter to the logging methods can be a string containing zero or mo
 - `%c`
   - : Applies CSS style rules to all following text. See [Styling console output](#styling_console_output).
 
-Some browsers may implement additional format specifiers. For example, Safari and Firefox support the C-style precision formating `%.<precision>f`. For example `console.log("Foo %.2f", 1.1)` will output the number to 2 decimal places: `Foo 1.10`, while `console.log("Foo %.2d", 1.1)` will output the number as two significant figures with a leading 0: `Foo 01`.
+Some browsers may implement additional format specifiers. For example, Safari and Firefox support the C-style precision formatting `%.<precision>f`. For example `console.log("Foo %.2f", 1.1)` will output the number to 2 decimal places: `Foo 1.10`, while `console.log("Foo %.2d", 1.1)` will output the number as two significant figures with a leading 0: `Foo 01`.
 
 Each of these pulls the next argument after the format string off the parameter list. For example:
 
@@ -183,6 +185,8 @@ The text before the directive will not be affected, but the text after the direc
 ![Styled Text in Firefox console](css-styling.png)
 
 You may use `%c` multiple times:
+
+<!-- cSpell:ignore corange cred -->
 
 ```js
 console.log(

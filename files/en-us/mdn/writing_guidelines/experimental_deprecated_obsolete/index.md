@@ -2,9 +2,8 @@
 title: Experimental, deprecated, and obsolete
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 These terms are commonly associated with technologies and specifications and are used on MDN Web Docs to label the status of a technology. For the definition of these terms, MDN Web Docs align with the [Browser Compatibility Data (BCD)](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information) repository.
 These terms are described below in the context of their use on MDN Web Docs.
@@ -29,7 +28,7 @@ The **experimental** status of a technology may expire if one or more of the fol
 - It is supported by default by a single browser rendering engine for two or more years and undergoes no major changes.
 - Its defining specification is unlikely to change in ways that will break compatibility.
 
-For examples of these conditions, see the [experimental flag](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-experimental) BCD documentation.
+For examples of these conditions, see the [experimental flag](https://github.com/mdn/browser-compat-data/tree/main/docs/data-guidelines#setting-experimental) BCD documentation.
 
 Usually, if a technology is supported across several major browsers, the specification will be stable, but this is not always the case.
 On the other hand, some technologies might have a stable specification, but do not have native support in browsers. [IMSC](/en-US/docs/Related/IMSC) for example is used via a JavaScript polyfill. <!-- need to revisit link -->
@@ -40,7 +39,7 @@ A feature or technology that is part of an active specification or standardizati
 
 The term **deprecated** on MDN Web Docs is used to mark an API or technology that is no longer recommended. A deprecated API or technology might be removed in the future or might only be kept for compatibility purposes and may still work. We recommend to avoid using the functionality marked as deprecated.
 
-For more information on the definition of **deprecated**, see the [deprecated flag](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-deprecated) BCD documentation.
+For more information on the definition of **deprecated**, see the [deprecated flag](https://github.com/mdn/browser-compat-data/tree/main/docs/data-guidelines#setting-deprecated) BCD documentation.
 
 ## Obsolete
 
@@ -101,11 +100,11 @@ When in doubt, feel free to ask for advice on the [MDN Web Docs chat rooms](/en-
 
 Sometimes, but rarely, there might be a conflict between different specification versions (usually W3C versus WHATWG). For example, one version might have a feature listed as deprecated, while the other doesn't.
 In such cases, consider what the reality is, that is, consider what browsers are actually doing, and write an "important" note to summarize that latest status.
-For example, as of Jan 2019, the [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) global attribute has a conflict, which was summarized like so: <!--this warning example for spec conflict does not exist anymore on that page. couldn't find any other examples as well -->
+For example, as of Jan 2019, the [`inputmode`](/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode) global attribute has a conflict, which was summarized like so: <!--this warning example for spec conflict does not exist anymore on that page. couldn't find any other examples as well -->
 
 > [!WARNING]
 > Specification conflict: The WHATWG specification lists [`inputmode`](https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode) and modern browsers are working towards supporting it.
-> The [W3C HTML 5.2 spec](https://html.spec.whatwg.org/multipage/index.html#contents), however, no longer lists it (i.e. marks it as obsolete).
+> The [W3C HTML 5.2 spec](https://html.spec.whatwg.org/multipage/index.html#contents), however, no longer lists it (i.e., marks it as obsolete).
 > You should consider the WHATWG definition as correct, until a consensus is reached.
 
 ## See also

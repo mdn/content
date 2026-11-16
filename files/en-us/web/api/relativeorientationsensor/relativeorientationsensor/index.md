@@ -22,15 +22,13 @@ new RelativeOrientationSensor(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : Options are as follows:
-
     - `frequency` {{optional_inline}}
       - : The desired number of times per second a sample
         should be taken, meaning the number of times per second that the
         {{domxref('sensor.reading_event', 'reading')}} event will be called. A whole number or decimal
         may be used, the latter for frequencies less than a second. The actual
-        reading frequency depends device hardware and consequently may be less
+        reading frequency depends on device hardware and consequently may be less
         than requested.
     - `referenceFrame` {{optional_inline}}
       - : Either `'device'` or
@@ -39,7 +37,7 @@ new RelativeOrientationSensor(options)
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
 
 ## Specifications
 

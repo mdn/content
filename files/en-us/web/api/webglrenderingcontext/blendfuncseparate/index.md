@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.blendFuncSeparate
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.blendFuncSeparate()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) defines which function is used

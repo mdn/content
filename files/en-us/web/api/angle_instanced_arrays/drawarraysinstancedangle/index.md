@@ -2,11 +2,11 @@
 title: "ANGLE_instanced_arrays: drawArraysInstancedANGLE() method"
 short-title: drawArraysInstancedANGLE()
 slug: Web/API/ANGLE_instanced_arrays/drawArraysInstancedANGLE
-page-type: web-api-instance-method
+page-type: webgl-extension-method
 browser-compat: api.ANGLE_instanced_arrays.drawArraysInstancedANGLE
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`ANGLE_instanced_arrays.drawArraysInstancedANGLE()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) renders primitives from array data like the {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} method. In addition, it can execute multiple instances of the range of elements.
 
@@ -22,9 +22,7 @@ drawArraysInstancedANGLE(mode, first, count, primcount)
 ### Parameters
 
 - `mode`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type primitive to render. Possible values are:
-
     - `gl.POINTS`: Draws a single dot.
     - `gl.LINE_STRIP`: Draws a straight line to the next vertex.
     - `gl.LINE_LOOP`: Draws a straight line to the next vertex, and connects the last vertex back to the first.

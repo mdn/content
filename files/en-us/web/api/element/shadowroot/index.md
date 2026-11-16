@@ -19,6 +19,8 @@ A {{DOMxRef("ShadowRoot")}} object instance, or `null` if the associated
 shadow root was attached with its {{DOMxRef("ShadowRoot.mode", "mode")}} set to
 `closed`. (See {{DOMxRef("Element.attachShadow()")}} for further details).
 
+Some built-in elements, such as {{HTMLElement("input")}} and {{HTMLElement("img")}}, have user-agent shadow roots that are closed to script. Therefore, their `shadowRoot` property is always `null`.
+
 ## Examples
 
 The following snippets are taken from our [life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/main/life-cycle-callbacks)

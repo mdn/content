@@ -6,7 +6,7 @@ page-type: webgl-extension-method
 browser-compat: api.WEBGL_draw_buffers.drawBuffersWEBGL
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WEBGL_draw_buffers.drawBuffersWEBGL()`** method is part
 of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and allows you to define
@@ -28,10 +28,8 @@ drawBuffersWEBGL(buffers)
 ### Parameters
 
 - `buffers`
-
   - : An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLenum")}} constants defining drawing buffers.
     Possible values:
-
     - `gl.NONE`: The fragment shader is not written to any color buffer.
     - `gl.BACK`: The fragment shader is written to the back color buffer.
     - `ext.COLOR_ATTACHMENT0_WEBGL` The fragment shader is written the

@@ -3,18 +3,15 @@ title: browsingData.removeCookies()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies
 page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.removeCookies
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Clears the browser's cookies.
 
 You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
 
-- clear only cookies created after a given time
-- control whether to clear cookies only set from normal web pages or to clear cookies set from hosted apps and extensions as well.
-
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+- clear cookies created after a given time.
+- control whether to clear cookies set from web pages or web pages and extensions.
 
 ## Syntax
 
@@ -27,11 +24,11 @@ let removing = browser.browsingData.removeCookies(
 ### Parameters
 
 - `removalOptions`
-  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which may be used to clear only cookies created after a given time, and whether to clear cookies only set from normal web pages or to clear cookies set from hosted apps and extensions as well.
+  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which may be used to clear cookies created after a given time, and control whether to clear cookies set from web pages or web pages and extensions.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the removal has finished. If any error occurs, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with no arguments when the removal has finished. If any error occurs, the promise is rejected with an error message.
 
 ## Examples
 
@@ -76,11 +73,11 @@ function onError(error) {
 browser.browsingData.removeCookies({}).then(onRemoved, onError);
 ```
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API.

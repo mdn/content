@@ -25,7 +25,7 @@ const ctx = canvas.getContext("2d");
 ctx.font = "25px serif";
 const text = "Foo";
 
-const textMetrics = ctx.measureText("foo"); // returns TextMetrics object
+const textMetrics = ctx.measureText(text); // returns TextMetrics object
 const descentCssPixels = textMetrics.fontBoundingBoxDescent;
 ```
 

@@ -2,36 +2,15 @@
 title: Payload body
 slug: Glossary/Payload_body
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
-{{GlossarySidebar}}
+In HTTP messages, the **payload body** or **payload** was the resource representation transferred in a message body, stripped of any [transfer encoding](/en-US/docs/Web/HTTP/Reference/Headers/Transfer-Encoding). With no transfer encoding, the _payload body_ and _message body_ are identical. Representation data could also be transferred in HTTP headers, but such data would not be considered a "payload".
 
-The HTTP message **payload body** is the _information_ ("payload") part of the data that is sent in the HTTP Message Body (if any), prior to [transfer encoding](/en-US/docs/Web/HTTP/Headers/Transfer-Encoding) being applied. If transfer encoding is not used, the _payload body_ and _message body_ are the same!
+Since {{RFC("9110")}}, the word **content** replaces the word **payload**. See [**HTTP content**](/en-US/docs/Glossary/HTTP_Content).
 
-For example, in this response the message body contains only the payload body: "Mozilla Developer Network":
+## See also
 
-```http
-HTTP/1.1 200 OK
-Content-Type: text/plain
-
-Mozilla Developer Network
-```
-
-By contrast, the below response uses _transfer encoding_ to encode the payload body into chunks. The payload body (information) sent is still "Mozilla Developer Network", but the message body includes additional data to separate the chunks:
-
-```http
-HTTP/1.1 200 OK
-Content-Type: text/plain
-Transfer-Encoding: chunked
-
-7\r\n
-Mozilla\r\n
-9\r\n
-Developer\r\n
-7\r\n
-Network\r\n
-0\r\n
-\r\n
-```
-
-For more information see [RFC 7230, section 3.3: Message Body](https://datatracker.ietf.org/doc/html/rfc7230#section-3.3) and [RFC 7230, section 3.3.1: Transfer-Encoding](https://datatracker.ietf.org/doc/html/rfc7230#section-3.3.1).
+- {{Glossary("Content header")}}
+- [RFC 9110, section 6.4: Content](https://httpwg.org/specs/rfc9110.html#rfc.section.6.4) (obsoletes [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#section-3.3) Payload Semantics)
+  - [Changes from RFC 7231](https://httpwg.org/specs/rfc9110.html#changes.from.rfc.7231)

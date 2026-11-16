@@ -3,9 +3,8 @@ title: downloads.search()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/search
 page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.search
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`search()`** function of the {{WebExtAPIRef("downloads")}} API queries the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} available in the browser's downloads manager, and returns those that match the specified search criteria.
 
@@ -24,11 +23,7 @@ let searching = browser.downloads.search(query);
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). The promise is fulfilled with an `array` of `{{WebExtAPIRef('downloads.DownloadItem')}}` objects that match the given criteria.
-
-## Browser compatibility
-
-{{Compat}}
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). The promise is fulfilled with an `array` of {{WebExtAPIRef('downloads.DownloadItem')}} objects that match the given criteria.
 
 ## Examples
 
@@ -122,6 +117,10 @@ browser.downloads
 You can see this code in action in our [latest-download](https://github.com/mdn/webextensions-examples/blob/main/latest-download/popup/latest_download.js) example.
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-search) API.

@@ -1,15 +1,25 @@
 ---
 title: String.prototype.substring()
+short-title: substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.substring
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`substring()`** method of {{jsxref("String")}} values returns the part of this string from the start index up to and excluding the end index, or to the end of the string if no end index is supplied.
 
-{{EmbedInteractiveExample("pages/js/string-substring.html")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.substring()")}}
+
+```js interactive-example
+const str = "Mozilla";
+
+console.log(str.substring(1, 3));
+// Expected output: "oz"
+
+console.log(str.substring(2));
+// Expected output: "zilla"
+```
 
 ## Syntax
 
@@ -33,7 +43,7 @@ A new string containing the specified part of the given string.
 
 `substring()` extracts characters from `indexStart` up to _but not including_ `indexEnd`. In particular:
 
-- If `indexEnd` is omitted, `substring()` extracts characters to the end of the string.
+- If `indexEnd` is omitted or `undefined`, `substring()` extracts characters to the end of the string.
 - If `indexStart` is equal to `indexEnd`, `substring()` returns an empty string.
 - If `indexStart` is greater than `indexEnd`, then the effect of `substring()` is as if the two arguments were swapped; see example below.
 
@@ -47,6 +57,8 @@ Any argument value that is {{jsxref("NaN")}} is treated as if it were `0`.
 
 The following example uses `substring()` to display characters from the
 string `"Mozilla"`:
+
+<!-- cSpell:ignore Mozill -->
 
 ```js
 const anyString = "Mozilla";
@@ -70,6 +82,8 @@ The following example uses the `substring()` method and
 {{jsxref("String/length", "length")}} property to extract the last characters of a
 particular string. This method may be easier to remember, given that you don't need to
 know the starting and ending indices as you would in the above examples.
+
+<!-- cSpell:ignore illa zilla -->
 
 ```js
 const text = "Mozilla";

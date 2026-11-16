@@ -1,15 +1,33 @@
 ---
 title: String.prototype.indexOf()
+short-title: indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.indexOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`indexOf()`** method of {{jsxref("String")}} values searches this string and returns the index of the first occurrence of the specified substring. It takes an optional starting position and returns the first occurrence of the specified substring at an index greater than or equal to the specified number.
 
-{{EmbedInteractiveExample("pages/js/string-indexof.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.indexOf()", "taller")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+const searchTerm = "dog";
+const indexOfFirst = paragraph.indexOf(searchTerm);
+
+console.log(`The index of the first "${searchTerm}" is ${indexOfFirst}`);
+// Expected output: "The index of the first "dog" is 15"
+
+console.log(
+  `The index of the second "${searchTerm}" is ${paragraph.indexOf(
+    searchTerm,
+    indexOfFirst + 1,
+  )}`,
+);
+// Expected output: "The index of the second "dog" is 38"
+```
 
 ## Syntax
 
@@ -21,13 +39,10 @@ indexOf(searchString, position)
 ### Parameters
 
 - `searchString`
-
   - : Substring to search for. All values are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), so omitting it or passing `undefined` causes `indexOf()` to search for the string `"undefined"`, which is rarely what you want.
 
 - `position` {{optional_inline}}
-
   - : The method returns the index of the first occurrence of the specified substring at a position greater than or equal to `position`, which defaults to `0`. If `position` is greater than the length of the calling string, the method doesn't search the calling string at all. If `position` is less than zero, the method behaves as it would if `position` were `0`.
-
     - `'hello world hello'.indexOf('o', -5)` returns `4` — because it causes the method to behave as if the second argument were `0`, and the first occurrence of `o` at a position greater or equal to `0` is at position `4`.
 
     - `'hello world hello'.indexOf('world', 12)` returns `-1` — because, while it's true the substring `world` occurs at index `6`, that position is not greater than or equal to `12`.
@@ -65,7 +80,7 @@ Strings are zero-indexed: The index of a string's first character is `0`, and th
 
 ```js
 "Blue Whale".indexOf("Blue"); // returns  0
-"Blue Whale".indexOf("Blute"); // returns -1
+"Blue Whale".indexOf("Wale"); // returns -1
 "Blue Whale".indexOf("Whale", 0); // returns  5
 "Blue Whale".indexOf("Whale", 5); // returns  5
 "Blue Whale".indexOf("Whale", 7); // returns -1
@@ -88,7 +103,7 @@ When checking if a specific substring occurs within a string, the correct way to
 
 ```js
 "Blue Whale".indexOf("Blue") !== -1; // true; found 'Blue' in 'Blue Whale'
-"Blue Whale".indexOf("Bloe") !== -1; // false; no 'Bloe' in 'Blue Whale'
+"Blue Whale".indexOf("Wale") !== -1; // false; no 'Wale' in 'Blue Whale'
 ```
 
 ## Examples

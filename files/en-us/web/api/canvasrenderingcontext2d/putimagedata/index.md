@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.putImageData
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D.putImageData()`**
 method of the Canvas 2D API paints data from the given {{domxref("ImageData")}} object
@@ -83,18 +83,14 @@ function putImageData(
   imageData,
   dx,
   dy,
-  dirtyX,
-  dirtyY,
-  dirtyWidth,
-  dirtyHeight,
+  dirtyX = 0,
+  dirtyY = 0,
+  dirtyWidth = imageData.width,
+  dirtyHeight = imageData.height,
 ) {
   const data = imageData.data;
   const height = imageData.height;
   const width = imageData.width;
-  dirtyX = dirtyX || 0;
-  dirtyY = dirtyY || 0;
-  dirtyWidth = dirtyWidth !== undefined ? dirtyWidth : width;
-  dirtyHeight = dirtyHeight !== undefined ? dirtyHeight : height;
   const limitBottom = dirtyY + dirtyHeight;
   const limitRight = dirtyX + dirtyWidth;
   for (let y = dirtyY; y < limitBottom; y++) {

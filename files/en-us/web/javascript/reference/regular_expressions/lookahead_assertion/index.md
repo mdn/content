@@ -3,9 +3,8 @@ title: "Lookahead assertion: (?=...), (?!...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion
 page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.lookahead_assertion
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 A **lookahead assertion** "looks ahead": it attempts to match the subsequent input with the given pattern, but it does not consume any of the input — if the match is successful, the current position in the input stays the same.
 
@@ -63,7 +62,7 @@ The matching of the pattern above happens as follows:
 Normally, assertions cannot be [quantified](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier). However, in [Unicode-unaware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), lookahead assertions can be quantified. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
 
 ```js
-/(?=a)?b/.test("b"); // true; the lookahead is matched 0 time
+/(?=a)?b/.test("b"); // true; the lookahead is matched 0 times
 ```
 
 ## Examples
@@ -87,12 +86,11 @@ A similar effect can be achieved by [capturing](/en-US/docs/Web/JavaScript/Refer
 
 Using lookahead, you can match a string multiple times with different patterns, which allows you to express complex relationships like subtraction (is X but not Y) and intersection (is both X and Y).
 
-The following example matches any [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) that's not a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words) (only showing three reserved words here for brevity; more reserved words can be added to this disjunction). The `[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*` syntax describes exactly the set of identifier strings in the language spec; you can read more about identifiers in [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) and the `\p` escape in [Unicode character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape).
+The following example matches any [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) that's not a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words) (only showing three reserved words here for brevity; more reserved words can be added to this disjunction). The `[$_\p{ID_Start}][$\p{ID_Continue}]*` syntax describes exactly the set of identifier strings in the language spec; you can read more about identifiers in [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) and the `\p` escape in [Unicode character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape).
 
 ```js
 function isValidIdentifierName(str) {
-  const re =
-    /^(?!(?:break|case|catch)$)[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*$/u;
+  const re = /^(?!(?:break|case|catch)$)[$_\p{ID_Start}][$\p{ID_Continue}]*$/u;
   return re.test(str);
 }
 
@@ -105,7 +103,7 @@ The following example matches a string that's both ASCII and can be used as an i
 
 ```js
 function isASCIIIDPart(char) {
-  return /^(?=\p{ASCII}$)\p{ID_Start}$/u.test(char);
+  return /^(?=\p{ASCII}$)[$\p{ID_Continue}]$/u.test(char);
 }
 
 isASCIIIDPart("a"); // true

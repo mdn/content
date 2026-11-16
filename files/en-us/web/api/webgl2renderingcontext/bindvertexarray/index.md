@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.bindVertexArray
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.bindVertexArray()`** method of
 the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) binds a
@@ -21,7 +21,7 @@ bindVertexArray(vertexArray)
 ### Parameters
 
 - `vertexArray`
-  - : A {{domxref("WebGLVertexArrayObject")}} (VAO) object to bind.
+  - : A {{domxref("WebGLVertexArrayObject")}} (VAO) object to bind, or `null` to bind the default vertex array object.
 
 ### Return value
 

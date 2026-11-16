@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.alinkColor
 ---
 
-{{APIRef("DOM")}}{{Deprecated_header}}
+{{APIRef("DOM")}}
 
 Returns or sets the color of an active link in the document body. A link is active
 during the time between `mousedown` and `mouseup` events.
@@ -24,9 +24,7 @@ When set to the `null` value, that `null` value is converted to the empty string
 The default value for this property in Mozilla Firefox is red (`#ee0000` in
 hexadecimal).
 
-`document.alinkColor` is deprecated in [DOM Level 2 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268). One alternative is the CSS selector {{Cssxref(":active")}}.
-
-Another alternative is `document.body.aLink`, although this is [deprecated in HTML 4.01](https://www.w3.org/TR/html401/struct/global.html#adef-alink) in favor of the CSS alternative.
+`document.alinkColor` is deprecated in [the HTML specification](https://html.spec.whatwg.org/multipage/obsolete.html#dom-document-alinkcolor). One alternative is the CSS selector {{Cssxref(":active")}}.
 
 Firefox supports both `alinkColor`/`:active` and {{Cssxref(":focus")}}.
 

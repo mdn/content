@@ -3,9 +3,8 @@ title: export
 slug: Web/JavaScript/Reference/Statements/export
 page-type: javascript-statement
 browser-compat: javascript.statements.export
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`export`** declaration is used to export values from a JavaScript module. Exported values can then be imported into other programs with the {{jsxref("Statements/import", "import")}} declaration or [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import). The value of an imported binding is subject to change in the module that exports it — when a module updates the value of a binding that it exports, the update will be visible in its imported value.
 
@@ -70,6 +69,16 @@ export function myFunction() {
 
 After the `export` keyword, you can use `let`, `const`, and `var` declarations, as well as function or class declarations. You can also use the `export { name1, name2 }` syntax to export a list of names declared elsewhere. Note that `export {}` does not export an empty object — it's a no-op declaration that exports nothing (an empty name list).
 
+You cannot use `export` on a {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}} declaration. You can, however, export a variable that was declared elsewhere using `using` or `await using`. Doing so is still strongly discouraged, because the variable is disposed as soon as the module finishes executing, causing all importers to receive a value that's already disposed.
+
+```js-nolint example-bad
+export using resource1 = getResource(); // SyntaxError
+
+// Allowed by syntax but discouraged
+using resource2 = getResource();
+export { resource2 };
+```
+
 Export declarations are not subject to [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) rules. You can declare that the module exports `X` before the name `X` itself is declared.
 
 ```js
@@ -92,8 +101,10 @@ export default function () { /* … */ }
 export default class { /* … */ }
 ```
 
+`export { myFunction as default }` exports a live binding, whereas `export default myFunction` evaluates `myFunction` and exports its value at that point. Later reassignment of `myFunction` only updates the default export in the first form.
+
 > [!NOTE]
-> Names for export declarations must be distinct from each other. Having exports with duplicate names or using more than one `default` export will result in a {{jsxref("SyntaxError")}} and prevent the module from being evaluated.
+> Names for export declarations must be distinct from each other. Having exports with duplicate names or using more than one `default` export will result in a {{jsxref("SyntaxError")}} and prevent the module from being [evaluated](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#evaluating_modules).
 
 The `export default` syntax allows any expression.
 
@@ -122,14 +133,15 @@ export default function () {
 Named exports are useful when you need to export several values. When importing this module, named exports must be referred to by the exact same name (optionally renaming it with `as`), but the default export can be imported with any name. For example:
 
 ```js
-// file test.js
+// -- test.js --
 const k = 12;
 export default k;
 ```
 
 ```js
 // some other file
-import m from "./test"; // note that we have the freedom to use import m instead of import k, because k was default export
+import m from "./test.js"; // note that we have the freedom to use import m instead of import k, because k was default export
+
 console.log(m); // 12
 ```
 
@@ -159,6 +171,7 @@ Which is comparable to a combination of import and export, except that `function
 
 ```js
 import { default as function1, function2 } from "bar.js";
+
 export { function1, function2 };
 ```
 
@@ -170,7 +183,7 @@ export { x as v } from "mod";
 export * as ns from "mod";
 ```
 
-There is also `export * from "mod"`, although there's no `import * from "mod"`. This re-exports all **named** exports from `mod` as the named exports of the current module, but the default export of `mod` is not re-exported. If there are two wildcard exports statements that implicitly re-export the same name, neither one is re-exported.
+There is also `export * from "mod"`, although there's no `import * from "mod"`. This re-exports all **named** exports from `mod` as the named exports of the current module, but the default export of `mod` is not re-exported. If two wildcard export statements implicitly re-export the same name from different bindings, the name is ambiguous and is omitted from the module namespace. If both resolve to the same binding, there is no ambiguity. An explicit export of that name takes precedence over wildcard exports.
 
 ```js
 // -- mod1.js --
@@ -185,10 +198,11 @@ export * from "./mod2.js";
 
 // -- main.js --
 import * as ns from "./barrel.js";
+
 console.log(ns.a); // undefined
 ```
 
-Attempting to import the duplicate name directly will throw an error.
+Attempting to import the ambiguous name directly will throw a syntax error during [linking](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#linking_modules), before evaluation starts.
 
 ```js
 import { a } from "./barrel.js";
@@ -200,6 +214,9 @@ The following is syntactically invalid despite its import equivalent:
 ```js-nolint example-bad
 export DefaultExport from "bar.js"; // Invalid
 ```
+
+> [!NOTE]
+> Due to the lack of this syntax, [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source) also has no re-exporting counterpart.
 
 The correct way of doing this is to rename the export:
 
@@ -219,14 +236,15 @@ export { default, function2 } from "bar.js";
 export { default } from "./data.json" with { type: "json" };
 ```
 
+> [!NOTE]
+> The [`import defer * as ns`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer) declaration has no re-exporting counterpart, despite `import * as ns` having one. Deferred re-exports are being developed in a [separate proposal](https://github.com/tc39/proposal-deferred-reexports), because they can also avoid [loading](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#loading_the_graph) unused modules, which requires additional tree-shaking semantics. You can instead [import and export in two separate statements](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer#exporting_a_deferred_namespace), although this immediately loads the module.
+
 ## Examples
 
 ### Using named exports
 
-In a module `my-module.js`, we could include the following code:
-
 ```js
-// module "my-module.js"
+// -- my-module.js --
 function cube(x) {
   return x * x * x;
 }
@@ -264,14 +282,14 @@ console.log(foo); // 4.555806215962888
 It is important to note the following:
 
 - You need to include this script in your HTML with a {{HTMLElement("script")}} element of `type="module"`, so that it gets recognized as a module and dealt with appropriately.
-- You can't run JS modules via a `file://` URL — you'll get [CORS](/en-US/docs/Web/HTTP/CORS) errors. You need to run it via an HTTP server.
+- You can't run JS modules via a `file://` URL — you'll get [CORS](/en-US/docs/Web/HTTP/Guides/CORS) errors. You need to run it via an HTTP server.
 
 ### Using the default export
 
-If we want to export a single value or to have a fallback value for your module, you could use a default export:
+If we want to export a single value representing an entire module, we could use a default export:
 
 ```js
-// module "my-module.js"
+// -- cube.js --
 
 export default function cube(x) {
   return x * x * x;
@@ -281,7 +299,8 @@ export default function cube(x) {
 Then, in another script, it is straightforward to import the default export:
 
 ```js
-import cube from "./my-module.js";
+import cube from "./cube.js";
+
 console.log(cube(3)); // 27
 ```
 
@@ -297,7 +316,7 @@ Let's take an example where we have the following hierarchy:
 This is what it would look like using code snippets:
 
 ```js
-// In childModule1.js
+// -- childModule1.js --
 function myFunction() {
   console.log("Hello!");
 }
@@ -306,7 +325,7 @@ export { myFunction, myVariable };
 ```
 
 ```js
-// In childModule2.js
+// -- childModule2.js --
 class MyClass {
   constructor(x) {
     this.x = x;
@@ -317,18 +336,18 @@ export { MyClass };
 ```
 
 ```js
-// In parentModule.js
+// -- parentModule.js --
 // Only aggregating the exports from childModule1 and childModule2
 // to re-export them
-export { myFunction, myVariable } from "childModule1.js";
-export { MyClass } from "childModule2.js";
+export { myFunction, myVariable } from "./childModule1.js";
+export { MyClass } from "./childModule2.js";
 ```
 
 ```js
-// In top-level module
+// -- top-level module --
 // We can consume the exports from a single module since parentModule
 // "collected"/"bundled" them in a single source
-import { myFunction, myVariable, MyClass } from "parentModule.js";
+import { myFunction, myVariable, MyClass } from "./parentModule.js";
 ```
 
 ## Specifications
@@ -345,4 +364,3 @@ import { myFunction, myVariable, MyClass } from "parentModule.js";
 - [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) on hacks.mozilla.org (2015)
 - [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) on hacks.mozilla.org (2018)
-- [Exploring JS, Ch.16: Modules](https://exploringjs.com/es6/ch_modules.html) by Dr. Axel Rauschmayer

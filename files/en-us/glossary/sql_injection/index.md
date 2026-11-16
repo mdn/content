@@ -1,10 +1,9 @@
 ---
-title: SQL Injection
+title: SQL injection
 slug: Glossary/SQL_Injection
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 SQL injection takes advantage of Web apps that fail to validate user input. Hackers can maliciously pass SQL commands through the Web app for execution by a backend database.
 
@@ -24,7 +23,7 @@ After entering username and password, behind the GUI the SQL queries work as fol
 "SELECT Count(*) FROM Users WHERE Username=' " + txt.User.Text+" ' AND Password=' "+ txt.Password.Text+" ' ";
 ```
 
-Now suppose User enters the Username: admin and Password: passwd123, so after clicking on the Log in button, SQL query will run as follows:
+Now suppose User enters the Username: admin and Password: passwd123, so after clicking on the Login button, SQL query will run as follows:
 
 ```sql
 "SELECT Count(*) FROM Users WHERE Username=' admin ' AND Password=' passwd123 ' ";
@@ -56,10 +55,10 @@ The password is not 'anything', hence password=anything results in FALSE, but '1
 
 Before executing the queries for the user credentials, make some changes like the following:
 
-```sql
-$id = $_GET['id']
+```php
+$id = $_GET["id"]
 
-(1) $id = Stripslashes($id)
+(1) $id = stripslashes($id)
 
 (2) $id = mysql_real_escape_String($id)
 ```
@@ -69,4 +68,4 @@ So due to (1) each single quote (') in the input string is replaced with double 
 ## See also
 
 - [SQL injection](https://en.wikipedia.org/wiki/SQL_injection) on Wikipedia
-- [Explanation of SQL injection](https://owasp.org/www-community/attacks/SQL_Injection) on OWASP (Open Web Application Security Project)
+- [Explanation of SQL injection](https://community.owasp.org/attacks/SQL_Injection) on OWASP (Open Web Application Security Project)

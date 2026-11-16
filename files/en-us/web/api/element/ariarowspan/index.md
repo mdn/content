@@ -8,7 +8,7 @@ browser-compat: api.Element.ariaRowSpan
 
 {{APIRef("DOM")}}
 
-The **`ariaRowSpan`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) attribute, which defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.
+The **`ariaRowSpan`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan) attribute, which defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.
 
 ## Value
 
@@ -20,16 +20,22 @@ In this example the `aria-rowspan` attribute on the element with an ID of `spann
 
 ```html
 <table>
-  <tr>
-    <th id="spanning-heading" rowspan="3" aria-rowspan="3">Spanning heading</th>
-    <th>Heading</th>
-  </tr>
-  <tr>
-    <td>One</td>
-  </tr>
-  <tr>
-    <td>Two</td>
-  </tr>
+  <thead>
+    <tr>
+      <th id="spanning-heading" rowspan="3" aria-rowspan="3">
+        Spanning heading
+      </th>
+      <th>Heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>One</td>
+    </tr>
+    <tr>
+      <td>Two</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -50,4 +56,4 @@ console.log(el.ariaRowSpan);
 
 ## See also
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)

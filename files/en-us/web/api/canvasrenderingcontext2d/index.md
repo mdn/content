@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.CanvasRenderingContext2D
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D`** interface, part of the [Canvas API](/en-US/docs/Web/API/Canvas_API), provides the 2D rendering context for the drawing surface of a {{HTMLElement("canvas")}} element.
 It is used for drawing shapes, text, images, and other objects.
@@ -60,6 +60,8 @@ The resulting drawing looks like this:
 
 ### Context
 
+- {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
+  - : Returns an object containing the context attributes used by the browser. Context attributes can be requested when using {{domxref("HTMLCanvasElement.getContext()")}} to create the 2D context.
 - {{domxref("CanvasRenderingContext2D.isContextLost()")}}
   - : Returns `true` if the rendering context was lost.
 
@@ -128,15 +130,17 @@ The following properties control how text is laid out.
   - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`, `geometricPrecision`.
 - {{domxref("CanvasRenderingContext2D.wordSpacing")}}
   - : Word spacing. Default value: `0px`
+- {{domxref("CanvasRenderingContext2D.lang")}}
+  - : Gets or sets the language of the canvas drawing context.
 
 ### Fill and stroke styles
 
 Fill styling is used for colors and styles inside shapes and stroke styling is used for the lines around shapes.
 
 - {{domxref("CanvasRenderingContext2D.fillStyle")}}
-  - : Color or style to use inside shapes. Default `#000` (black).
+  - : Color or style to use inside shapes. Default is `black`.
 - {{domxref("CanvasRenderingContext2D.strokeStyle")}}
-  - : Color or style to use for the lines around shapes. Default `#000` (black).
+  - : Color or style to use for the lines around shapes. Default is `black`.
 
 ### Gradients and patterns
 
@@ -259,8 +263,8 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
   - : Saves the current drawing style state using a stack so you can revert any change you make to it using `restore()`.
 - {{domxref("CanvasRenderingContext2D.restore()")}}
   - : Restores the drawing style state to the last element on the 'state stack' saved by `save()`.
-- {{domxref("CanvasRenderingContext2D.canvas")}}
-  - : A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if it is not associated with a {{HTMLElement("canvas")}} element.
+- {{domxref("CanvasRenderingContext2D.canvas")}} {{ReadOnlyInline}}
+  - : A back-reference to the {{domxref("HTMLCanvasElement")}}. Might be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if it is not associated with a {{HTMLElement("canvas")}} element.
 - {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
   - : Returns an object containing the context attributes used by the browser. Context attributes can be requested when using {{domxref("HTMLCanvasElement.getContext()")}} to create the 2D context.
 - {{domxref("CanvasRenderingContext2D.reset()")}}

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.FontFace.stretch
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`stretch`** property of the {{domxref("FontFace")}} interface retrieves or sets how the font stretches.
 

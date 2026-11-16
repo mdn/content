@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.URL.parse_static
 ---
 
-{{ApiRef("URL API")}}
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
 The **`URL.parse()`** static method of the {{domxref("URL")}} interface returns a newly created {{domxref("URL")}} object representing the URL defined by the parameters.
 
@@ -27,7 +27,6 @@ URL.parse(url, base)
     If `url` is a relative reference, `base` is required, and is used to resolve the final URL.
     If `url` is an absolute URL, a given `base` will not be used to create the resulting URL.
 - `base` {{optional_inline}}
-
   - : A string representing the base URL to use in cases where `url` is a relative URL.
     If not specified, it defaults to `undefined`.
 
@@ -122,7 +121,7 @@ if ("parse" in URL) {
 
 The results of each of the checks are shown below.
 
-{{EmbedLiveSample('URL.parse()', '100%')}}
+{{EmbedLiveSample('using_url.parse', '100%')}}
 
 ## Specifications
 
@@ -135,4 +134,4 @@ The results of each of the checks are shown below.
 ## See also
 
 - [`URL()` constructor](/en-US/docs/Web/API/URL/URL), which throws if the passed parameters define an invalid URL
-- [A polyfill of `URL.parse()`](https://github.com/zloirock/core-js#url-and-urlsearchparams) is available in [`core-js`](https://github.com/zloirock/core-js)
+- [A polyfill of `URL.parse()`](https://core-js.io/docs/features/web-standards/url) is available in [`core-js`](https://core-js.io/)

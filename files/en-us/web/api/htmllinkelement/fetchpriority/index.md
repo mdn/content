@@ -8,43 +8,18 @@ browser-compat: api.HTMLLinkElement.fetchPriority
 
 {{APIRef("HTML DOM")}}
 
-The **`fetchPriority`** property of the
-{{domxref("HTMLLinkElement")}} interface represents a hint given to the browser
-on how it should prioritize the preload of the given resource relative to other
-resources of the same
-[type](/en-US/docs/Web/HTML/Attributes/rel/preload#what_types_of_content_can_be_preloaded).
+The **`fetchPriority`** property of the {{domxref("HTMLLinkElement")}} interface represents a hint to the browser indicating how it should prioritize fetching a particular resource relative to other resources of the same type.
+It reflects the `<link>` element's [`fetchpriority`](/en-US/docs/Web/HTML/Reference/Elements/link#fetchpriority) content attribute.
 
 ## Value
 
-A string representing the priority hint. Possible values are:
-
-- `high`
-  - : Fetch the preload resource at a high priority relative to other resources
-    of the same type.
-- `low`
-  - : Fetch the preload resource at a low priority relative to other resources of
-    the same type.
-- `auto`
-  - : Default mode, which indicates no preference for
-    the fetch priority. The browser decides what is best for the user.
-
-The `fetchPriority` property allows you to signal high or low priority preload
-fetches. This can be useful when applied to {{HTMLElement("link")}} elements
-to signal preloads that are more or less important to the user experience early
-in the loading process.
-
-The effects of the hint on resource loading is browser-specific so make sure to
-test on multiple browser engines.
-
-Use it sparingly for exceptional cases where the browser may not be able to
-infer the best way to load the resource automatically. Over use can result in
-degrading performance.
+A string. For the permitted values, see the HTML [`fetchpriority`](/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority) attribute.
 
 ## Examples
 
 ```js
 const preloadLink = document.createElement("link");
-preloadLink.href = "myimage.jpg";
+preloadLink.href = "my-image.jpg";
 preloadLink.rel = "preload";
 preloadLink.as = "image";
 preloadLink.fetchPriority = "high";
@@ -63,3 +38,5 @@ document.head.appendChild(preloadLink);
 
 - {{domxref("HTMLImageElement.fetchPriority")}}
 - {{domxref("HTMLScriptElement.fetchPriority")}}
+- HTTP {{httpheader("Link")}} header
+- [Optimize resource loading with the Fetch Priority API](https://web.dev/articles/fetch-priority?hl=en#browser_priority_and_fetchpriority) for information about how this API affects priorities on Chrome.

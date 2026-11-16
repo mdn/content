@@ -14,12 +14,16 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("statechange", (event) => {});
+```js-nolint
+addEventListener("statechange", (event) => { })
+```
 
-onstatechange = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onstatechange = (event) => { }
 ```
 
 ## Event type
@@ -33,18 +37,14 @@ Given an {{domxref("RTCPeerConnection")}}, `pc`, the following code creates an e
 ```js
 let iceTransport = pc.getSenders()[0].transport.iceTransport;
 
-iceTransport.addEventListener(
-  "statechange",
-  (ev) => {
-    if (iceTransport.state === "failed") {
-      handleFailure(pc);
-    }
-  },
-  false,
-);
+iceTransport.addEventListener("statechange", (ev) => {
+  if (iceTransport.state === "failed") {
+    handleFailure(pc);
+  }
+});
 ```
 
-The same code, using the `onstatechange` event handler property, looks like this:
+The same code, using the `onstatechange` event handler property, looks like this (but note that this replaces other event listeners added using `onstatechange`, if any):
 
 ```js
 let iceTransport = pc.getSenders()[0].transport.iceTransport;

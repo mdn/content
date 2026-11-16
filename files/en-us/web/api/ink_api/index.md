@@ -22,13 +22,13 @@ The Ink API significantly reduces this latency by allowing browsers to bypass th
 > [!NOTE]
 > Compositors are part of the rendering machinery that draws the UI to the screen in a browser or operating system. See [Inside look at modern web browser (part 3)](https://developer.chrome.com/blog/inside-browser-part3/) for some interesting insights into how a compositor functions inside a web browser.
 
-The entry point is the {{domxref("Navigator.ink")}} property, which returns an {{domxref("Ink")}} object for the current document. The {{domxref("Ink.requestPresenter","Ink.requestPresenter()")}} method returns a {{jsxref("Promise")}} that fulfills with an {{domxref("InkPresenter")}} object instance. This instructs the OS-level compositor to render ink strokes between pointer event dispatches in the next available frame in each case.
+The entry point is the {{domxref("Navigator.ink")}} property, which returns an {{domxref("Ink")}} object for the current document. The {{domxref("Ink.requestPresenter","Ink.requestPresenter()")}} method returns a {{jsxref("Promise")}} that fulfills with a {{domxref("DelegatedInkTrailPresenter")}} object instance. This instructs the OS-level compositor to render ink strokes between pointer event dispatches in the next available frame in each case.
 
 ## Interfaces
 
-- {{domxref("Ink")}}
-  - : Provides access to {{domxref("InkPresenter")}} objects for the application to use to render the strokes.
-- {{domxref("InkPresenter")}}
+- {{domxref("Ink")}} {{Experimental_Inline}}
+  - : Provides access to {{domxref("DelegatedInkTrailPresenter")}} objects for the application to use to render the strokes.
+- {{domxref("DelegatedInkTrailPresenter")}} {{Experimental_Inline}}
   - : Instructs the OS-level compositor to render ink strokes between pointer event dispatches.
 
 ### Extensions to other interfaces
@@ -42,7 +42,7 @@ The entry point is the {{domxref("Navigator.ink")}} property, which returns an {
 
 In this example, we draw a trail onto a 2D canvas. Near the start of the code, we call {{domxref("Ink.requestPresenter()")}}, passing it the canvas as the presentation area for it to take care of and storing the promise it returns in the `presenter` variable.
 
-Later on, in the `pointermove` event listener, the new position of the trailhead is drawn onto the canvas each time the event fires. In addition, the {{domxref("InkPresenter")}} object returned when the `presenter` promise fulfills has its {{domxref("InkPresenter.updateInkTrailStartPoint", "updateInkTrailStartPoint()")}} method invoked; this is passed:
+Later on, in the `pointermove` event listener, the new position of the trailhead is drawn onto the canvas each time the event fires. In addition, the {{domxref("DelegatedInkTrailPresenter")}} object returned when the `presenter` promise fulfills has its {{domxref("DelegatedInkTrailPresenter.updateInkTrailStartPoint", "updateInkTrailStartPoint()")}} method invoked; this is passed:
 
 - The last trusted pointer event representing the rendering point for the current frame.
 - A `style` object containing color and diameter settings.
@@ -52,7 +52,7 @@ The result is that a delegated ink trail is drawn ahead of the default browser r
 #### HTML
 
 ```html
-<canvas id="canvas"></canvas>
+<canvas id="my-canvas"></canvas>
 <div id="div">Delegated ink trail should match the color of this div.</div>
 ```
 
@@ -60,7 +60,7 @@ The result is that a delegated ink trail is drawn ahead of the default browser r
 
 ```css
 div {
-  background-color: rgb(0 255 0 / 100%);
+  background-color: lime;
   position: fixed;
   top: 1rem;
   left: 1rem;
@@ -70,10 +70,11 @@ div {
 #### JavaScript
 
 ```js
+const canvas = document.getElementById("my-canvas");
 const ctx = canvas.getContext("2d");
 const presenter = navigator.ink.requestPresenter({ presentationArea: canvas });
-let move_cnt = 0;
-let style = { color: "rgb(0 255 0 / 100%)", diameter: 10 };
+let moveCnt = 0;
+let style = { color: "lime", diameter: 10 };
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -85,18 +86,18 @@ canvas.addEventListener("pointermove", async (evt) => {
   const pointSize = 10;
   ctx.fillStyle = style.color;
   ctx.fillRect(evt.pageX, evt.pageY, pointSize, pointSize);
-  if (move_cnt == 20) {
+  if (moveCnt === 20) {
     const r = getRandomInt(0, 255);
     const g = getRandomInt(0, 255);
     const b = getRandomInt(0, 255);
 
     style = { color: `rgb(${r} ${g} ${b} / 100%)`, diameter: 10 };
-    move_cnt = 0;
+    moveCnt = 0;
     document.getElementById("div").style.backgroundColor =
       `rgb(${r} ${g} ${b} / 60%)`;
   }
-  move_cnt += 1;
-  await presenter.updateInkTrailStartPoint(evt, style);
+  moveCnt += 1;
+  (await presenter).updateInkTrailStartPoint(evt, style);
 });
 
 window.addEventListener("pointerdown", () => {
@@ -118,7 +119,3 @@ canvas.height = window.innerHeight;
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Enhancing Inking on the Web](https://blogs.windows.com/msedgedev/2021/08/18/enhancing-inking-on-the-web/)

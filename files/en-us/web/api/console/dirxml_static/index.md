@@ -2,7 +2,7 @@
 title: "console: dirxml() static method"
 short-title: dirxml()
 slug: Web/API/console/dirxml_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.dirxml_static
 ---
 
@@ -13,7 +13,7 @@ The **`console.dirxml()`** static method displays an interactive tree of the des
 ## Syntax
 
 ```js-nolint
-dirxml(object)
+console.dirxml(object)
 ```
 
 ### Parameters
@@ -35,6 +35,6 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [Microsoft Edge's documentation for `console.dirxml()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#dirxml)
-- [Node.JS documentation for `console.dirxml()`](https://nodejs.org/docs/latest/api/console.html#consoledirxmldata)
+- [Microsoft Edge's documentation for `console.dirxml()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#dirxml)
+- [Node.js documentation for `console.dirxml()`](https://nodejs.org/docs/latest/api/console.html#consoledirxmldata)
 - [Google Chrome's documentation for `console.dirxml()`](https://developer.chrome.com/docs/devtools/console/api/#dirxml)

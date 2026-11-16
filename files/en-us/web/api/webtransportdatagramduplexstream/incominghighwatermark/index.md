@@ -3,12 +3,19 @@ title: "WebTransportDatagramDuplexStream: incomingHighWaterMark property"
 short-title: incomingHighWaterMark
 slug: Web/API/WebTransportDatagramDuplexStream/incomingHighWaterMark
 page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.WebTransportDatagramDuplexStream.incomingHighWaterMark
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}{{non-standard_header}}
 
-The **`incomingHighWaterMark`** property of the {{domxref("WebTransportDatagramDuplexStream")}} interface gets or sets the high water mark for incoming chunks of data — this is the maximum size, in chunks, that the incoming {{domxref("ReadableStream")}}'s internal queue can reach before it is considered full. See [Internal queues and queuing strategies](/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies) for more information.
+The **`incomingHighWaterMark`** property of the {{domxref("WebTransportDatagramDuplexStream")}} interface represents the maximum number of incoming datagrams that can be queued while waiting to be read from the {{domxref("WebTransportDatagramDuplexStream.readable", "readable")}} stream.
+If more datagrams arrive than the queue can hold, the oldest datagrams in the queue are dropped.
+The number of datagrams dropped this way is reported in the [`droppedIncoming`](/en-US/docs/Web/API/WebTransport/getStats#droppedincoming) property of the datagram statistics returned by {{domxref("WebTransport.getStats()")}}.
+
+This property has been replaced in the specification by {{domxref("WebTransportDatagramDuplexStream.incomingMaxBufferedDatagrams", "incomingMaxBufferedDatagrams")}}, which should be used instead if supported (see its [browser compatibility](/en-US/docs/Web/API/WebTransportDatagramDuplexStream/incomingMaxBufferedDatagrams#browser_compatibility) table).
 
 ## Value
 
@@ -46,6 +53,7 @@ async function initTransport(url) {
 
 ## See also
 
+- {{domxref("WebTransport.getStats()")}}
 - [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}

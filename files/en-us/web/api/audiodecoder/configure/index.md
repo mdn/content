@@ -21,7 +21,7 @@ configure(config)
 - `config`
   - : A dictionary object containing the following members:
     - `codec`
-      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry). See ["codecs" parameter](/en-US/docs/Web/Media/Formats/codecs_parameter#codec_options_by_container) for details on codec string construction.
+      - : A string containing a [valid codec string](https://w3c.github.io/webcodecs/codec_registry.html#audio-codec-registry). See ["codecs" parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter#codec_options_by_container) for details on codec string construction.
     - `sampleRate`
       - : An integer representing the number of frame samples per second.
     - `numberOfChannels`
@@ -30,7 +30,7 @@ configure(config)
       - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing a sequence of codec specific bytes, commonly known as extradata.
 
 > [!NOTE]
-> The registrations in the [WebCodecs Codec Registry](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry) link to a specification detailing whether and how to populate the optional `description` member.
+> The registrations in the [WebCodecs Codec Registry](https://w3c.github.io/webcodecs/codec_registry.html#audio-codec-registry) link to a specification detailing whether and how to populate the optional `description` member.
 
 ### Return value
 

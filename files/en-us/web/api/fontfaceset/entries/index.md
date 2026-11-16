@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FontFaceSet.entries
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`entries()`** method of the {{domxref("FontFaceSet")}} interface returns a new {{jsxref("Iterator")}} object, containing an array of `[value,value]` for each element in the `FontFaceSet`.
 
@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-A new iterator object that contains an array of `[value, value]` for each element in the `CustomStateSet`, in insertion order.
+A new iterator object that contains an array of `[value, value]` for each element in the `FontFaceSet`, in insertion order.
 
 ## Specifications
 

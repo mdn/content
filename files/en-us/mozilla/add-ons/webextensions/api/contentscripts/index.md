@@ -3,9 +3,8 @@ title: contentScripts
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts
 page-type: webextension-api
 browser-compat: webextensions.api.contentScripts
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Use this API to register content scripts. Registering a content script instructs the browser to insert the given content scripts into pages that match the given URL patterns.
 
@@ -30,8 +29,8 @@ There is no `contentScripts` API permission, but an extension must have the appr
 - {{WebExtAPIRef("contentScripts.register()")}}
   - : Registers the given content scripts.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}

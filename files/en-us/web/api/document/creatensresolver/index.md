@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.createNSResolver
 ---
 
-{{ ApiRef("DOM") }}{{deprecated_header}}
+{{ ApiRef("DOM") }}
 
 The **`createNSResolver()`** method of the {{domxref("Document")}} interface used to create a custom `XPathNSResolver` object. It now returns the input as-is and is only kept for compatibility reasons.
 
@@ -38,4 +38,4 @@ createNSResolver(nodeResolver)
 ## See also
 
 - {{domxref("Document.evaluate()")}}
-- [Introduction to using XPath in JavaScript](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)
+- [Introduction to using XPath in JavaScript](/en-US/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript)

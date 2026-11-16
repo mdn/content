@@ -3,9 +3,8 @@ title: pageAction.show()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/show
 page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.show
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Shows the {{WebExtAPIRef("pageAction")}} for a given {{WebExtAPIRef("tabs/Tab", "tab")}}. The page action is shown whenever the given tab is the active tab.
 
@@ -30,10 +29,6 @@ browser.pageAction.show(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `undefined`.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example shows the {{WebExtAPIRef("pageAction")}} for the active tab when the user selects a context menu item.
@@ -55,6 +50,10 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/mv2/reference/pageAction#method-show) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.

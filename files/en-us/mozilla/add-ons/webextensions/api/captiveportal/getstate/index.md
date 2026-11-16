@@ -1,11 +1,10 @@
 ---
-title: getState
+title: captivePortal.getState()
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/getState
 page-type: webextension-api-function
 browser-compat: webextensions.api.captivePortal.getState
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns the portal state as one of `unknown`, `not_captive`, `unlocked_portal`, or `locked_portal`.
 

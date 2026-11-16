@@ -21,7 +21,6 @@ PublicKeyCredential.parseCreationOptionsFromJSON(options)
 ### Parameters
 
 - `options`
-
   - : An object with the same structure as a {{domxref("PublicKeyCredentialCreationOptions")}}, but with [base64url](/en-US/docs/Glossary/Base64)-encoded strings used in place of buffer properties.
 
 ### Return value
@@ -32,6 +31,8 @@ A {{domxref("PublicKeyCredentialCreationOptions")}} object.
 
 - `EncodingError` {{domxref("DOMException")}}
   - : Thrown the `options` object cannot be converted into a {{domxref("PublicKeyCredentialCreationOptions")}} object.
+- `SecurityError` {{domxref("DOMException")}}
+  - : The RP domain is not valid.
 
 ## Description
 
@@ -86,7 +87,7 @@ const createCredentialOptions =
   );
 
 navigator.credentials
-  .create({ createCredentialOptions })
+  .create({ publicKey: createCredentialOptions })
   .then((newCredentialInfo) => {
     // Handle the new credential information here.
   })

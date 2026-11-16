@@ -3,12 +3,10 @@ title: "GPUTexture: depthOrArrayLayers property"
 short-title: depthOrArrayLayers
 slug: Web/API/GPUTexture/depthOrArrayLayers
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUTexture.depthOrArrayLayers
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`depthOrArrayLayers`** read-only property of the
 {{domxref("GPUTexture")}} interface represents the depth or layer count of the `GPUTexture`.
@@ -27,7 +25,7 @@ In cases where the `GPUTexture` does not have a depth or layers, the value is 1.
 ## Examples
 
 ```js
-// ...
+// …
 
 const test = device.createTexture({
   size: [128],

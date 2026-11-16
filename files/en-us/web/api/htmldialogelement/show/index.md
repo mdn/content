@@ -8,9 +8,9 @@ browser-compat: api.HTMLDialogElement.show
 
 {{ APIRef("HTML DOM") }}
 
-The **`show()`** method of the {{domxref("HTMLDialogElement")}}
-interface displays the dialog modelessly, i.e. still allowing interaction with content
-outside of the dialog.
+The **`show()`** method of the {{domxref("HTMLDialogElement")}} interface displays the dialog as a non-modal dialog.
+
+A non-modal dialog is one where users can interact with content outside/behind the open dialog.
 
 ## Syntax
 
@@ -26,69 +26,59 @@ None.
 
 None ({{jsxref("undefined")}}).
 
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the dialog is already open and modal (i.e., if the dialog has already been opened with {{domxref("HTMLDialogElement.showModal()")}}).
+
 ## Examples
 
-The following example shows a simple button that, when clicked, opens a
-{{htmlelement("dialog")}} containing a form via the `show()` method. From
-there you can click the _Cancel_ button to close the dialog (via the
-{{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit
-button.
+### Basic usage
+
+The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} using the `show()` method.
+
+When the dialog is open, you can still interact with the rest of the page, including clicking the _Click me_ button that triggers an alert.
+
+You can click the _Close dialog_ button to close the dialog (via the {{domxref("HTMLDialogElement.close()", "close()")}} method).
+
+#### HTML
 
 ```html
-<!-- Simple pop-up dialog box, containing a form -->
-<dialog id="favDialog">
-  <form method="dialog">
-    <section>
-      <p>
-        <label for="favAnimal">Favorite animal:</label>
-        <select id="favAnimal" name="favAnimal">
-          <option></option>
-          <option>Brine shrimp</option>
-          <option>Red panda</option>
-          <option>Spider monkey</option>
-        </select>
-      </p>
-    </section>
-    <menu>
-      <button id="cancel" type="reset">Cancel</button>
-      <button type="submit">Confirm</button>
-    </menu>
-  </form>
+<dialog id="dialog">
+  <button type="button" id="close">Close dialog</button>
 </dialog>
 
-<menu>
-  <button id="updateDetails">Update details</button>
-</menu>
-
-<script>
-  (() => {
-    const updateButton = document.getElementById("updateDetails");
-    const cancelButton = document.getElementById("cancel");
-    const dialog = document.getElementById("favDialog");
-    dialog.returnValue = "favAnimal";
-
-    function openCheck(dialog) {
-      if (dialog.open) {
-        console.log("Dialog open");
-      } else {
-        console.log("Dialog closed");
-      }
-    }
-
-    // Update button opens a modeless dialog
-    updateButton.addEventListener("click", () => {
-      dialog.show();
-      openCheck(dialog);
-    });
-
-    // Form cancel button closes the dialog box
-    cancelButton.addEventListener("click", () => {
-      dialog.close("animalNotChosen");
-      openCheck(dialog);
-    });
-  })();
-</script>
+<p><button id="open">Open dialog</button></p>
+<p><button id="alert">Trigger alert</button></p>
 ```
+
+#### JavaScript
+
+```js
+const dialog = document.getElementById("dialog");
+const openButton = document.getElementById("open");
+const closeButton = document.getElementById("close");
+const alertButton = document.getElementById("alert");
+
+// Open button opens a modeless dialog
+openButton.addEventListener("click", () => {
+  dialog.show();
+});
+
+// Alert button triggers an alert
+alertButton.addEventListener("click", () => {
+  alert("you clicked me!");
+});
+
+// Close button closes the dialog box
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
+```
+
+#### Result
+
+{{EmbedLiveSample("Basic usage", '100%', "250px")}}
 
 ## Specifications
 
@@ -100,4 +90,5 @@ button.
 
 ## See also
 
-- The HTML element implementing this interface: {{ HTMLElement("dialog") }}.
+- HTML {{htmlelement("dialog")}} element
+- {{domxref("HTMLDialogElement.showModal()")}}

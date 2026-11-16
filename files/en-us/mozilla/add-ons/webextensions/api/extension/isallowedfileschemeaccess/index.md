@@ -3,13 +3,10 @@ title: extension.isAllowedFileSchemeAccess()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedFileSchemeAccess
 page-type: webextension-api-function
 browser-compat: webextensions.api.extension.isAllowedFileSchemeAccess
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar}}
-
 Returns `true` if the extension can access the "file://" scheme, `false` otherwise.
-
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
@@ -23,13 +20,7 @@ None.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a boolean: `true` if the extension is allowed access to "file://" URLs, `false` otherwise.
-
-Firefox will always return `false`.
-
-## Browser compatibility
-
-{{Compat}}
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with a boolean: `true` if the extension is allowed access to "file://" URLs, `false` otherwise.
 
 ## Examples
 
@@ -43,6 +34,10 @@ isAllowed.then(logIsAllowed);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension#method-isAllowedFileSchemeAccess) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.

@@ -8,18 +8,22 @@ browser-compat: api.HTMLMediaElement.suspend_event
 
 {{APIRef("HTMLMediaElement")}}
 
-The `suspend` event is fired when media data loading has been suspended.
+The `suspend` event is fired when the user agent is intentionally not fetching media data, in which case {{domxref("HTMLMediaElement.networkState")}} is set to `HTMLMediaElement.NETWORK_IDLE`. This can happen if there's no more data to load, or if loading is unnecessary; for example, the browser may decide to only buffer 5 minutes of a video in advance, in which case loading is suspended until the user watches more of the video.
 
 This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("suspend", (event) => {});
+```js-nolint
+addEventListener("suspend", (event) => { })
+```
 
-onsuspend = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onsuspend = (event) => { }
 ```
 
 ## Event type
@@ -40,7 +44,7 @@ video.addEventListener("suspend", (event) => {
 });
 ```
 
-Using the `onsuspend` event handler property:
+Using the `onsuspend` event handler property (but note that this replaces other event listeners added using `onsuspend`, if any):
 
 ```js
 const video = document.querySelector("video");

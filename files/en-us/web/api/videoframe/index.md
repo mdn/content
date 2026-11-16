@@ -11,23 +11,6 @@ The **`VideoFrame`** interface of the [Web Codecs API](/en-US/docs/Web/API/WebCo
 
 `VideoFrame` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
-## Description
-
-A `VideoFrame` object can be created or accessed in a number of ways. The {{domxref("MediaStreamTrackProcessor")}} breaks a media track into individual `VideoFrame` objects.
-
-A `VideoFrame` is an image source and has a constructor that accepts any other canvas source (
-an {{domxref("SVGImageElement")}},
-an {{domxref("HTMLVideoElement")}},
-an {{domxref("HTMLCanvasElement")}},
-an {{domxref("ImageBitmap")}},
-an {{domxref("OffscreenCanvas")}},
-or another `VideoFrame`).
-This means that a frame can be created from an image or video element.
-
-A second constructor enables the creation of a `VideoFrame` from its binary pixel representation in an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
-
-Created frames may then turned into a media track, for example with the {{domxref("MediaStreamTrackGenerator")}} interface that creates a media track from a stream of frames.
-
 ## Constructor
 
 - {{domxref("VideoFrame.VideoFrame", "VideoFrame()")}}
@@ -55,6 +38,10 @@ Created frames may then turned into a media track, for example with the {{domxre
   - : Returns an integer indicating the timestamp of the video in microseconds.
 - {{domxref("VideoFrame.colorSpace")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("VideoColorSpace")}} object.
+- {{domxref("VideoFrame.flip")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns whether the `VideoFrame` is horizontally mirrored.
+- {{domxref("VideoFrame.rotation")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns the rotation (0, 90, 180, or 270) in degrees clockwise applied to the `VideoFrame`. Arbitrary numbers (including negatives) are rounded to the next quarter turn.
 
 ## Instance methods
 
@@ -66,18 +53,37 @@ Created frames may then turned into a media track, for example with the {{domxre
   - : Creates a new `VideoFrame` object with reference to the same media resource as the original.
 - {{domxref("VideoFrame.close()")}}
   - : Clears all states and releases the reference to the media resource.
+- {{domxref("VideoFrame.metadata()")}} {{experimental_inline}}
+  - : Returns the metadata associated with the `VideoFrame`.
+
+## Description
+
+A `VideoFrame` object can be created or accessed in a number of ways. The {{domxref("MediaStreamTrackProcessor")}} breaks a media track into individual `VideoFrame` objects.
+
+A `VideoFrame` is an image source and has a constructor that accepts any other canvas source (
+an {{domxref("SVGImageElement")}},
+an {{domxref("HTMLVideoElement")}},
+an {{domxref("HTMLCanvasElement")}},
+an {{domxref("ImageBitmap")}},
+an {{domxref("OffscreenCanvas")}},
+or another `VideoFrame`).
+This means that a frame can be created from an image or video element.
+
+A second constructor enables the creation of a `VideoFrame` from its binary pixel representation in an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
+
+Created frames may then be turned into a media track, for example with the {{domxref("MediaStreamTrackGenerator")}} interface that creates a media track from a stream of frames.
 
 ## Examples
 
 In the following example frames are returned from a {{domxref("MediaStreamTrackProcessor")}}, then encoded. See the full example and read more about it in the article [Video processing with WebCodecs](https://developer.chrome.com/docs/web-platform/best-practices/webcodecs).
 
 ```js
-let frame_counter = 0;
+let frameCounter = 0;
 
 const track = stream.getVideoTracks()[0];
-const media_processor = new MediaStreamTrackProcessor(track);
+const mediaProcessor = new MediaStreamTrackProcessor(track);
 
-const reader = media_processor.readable.getReader();
+const reader = mediaProcessor.readable.getReader();
 while (true) {
   const result = await reader.read();
   if (result.done) break;
@@ -88,9 +94,9 @@ while (true) {
     // let's drop this frame.
     frame.close();
   } else {
-    frame_counter++;
-    const insert_keyframe = frame_counter % 150 === 0;
-    encoder.encode(frame, { keyFrame: insert_keyframe });
+    frameCounter++;
+    const insertKeyframe = frameCounter % 150 === 0;
+    encoder.encode(frame, { keyFrame: insertKeyframe });
     frame.close();
   }
 }

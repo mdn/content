@@ -8,9 +8,7 @@ browser-compat: api.CSSRule.parentRule
 
 {{ APIRef("CSSOM") }}
 
-The **`parentRule`** property of the {{domxref("CSSRule")}}
-interface returns the containing rule of the current rule if this exists, or otherwise
-returns null.
+The **`parentRule`** read-only property of the {{domxref("CSSRule")}} interface returns the containing rule of the current rule if this exists, or otherwise returns null.
 
 ## Value
 
@@ -19,7 +17,7 @@ A {{domxref("CSSRule")}} which is the type of the containing rules. If the curre
 ## Examples
 
 ```css
-@media (min-width: 500px) {
+@media (width >= 500px) {
   .box {
     width: 100px;
     height: 200px;

@@ -36,28 +36,27 @@ Returns the old attribute if replaced, or `null` if the attribute is new.
 ## Example
 
 ```html
-<span one="one" two="two"></span>
-<pre test="testValue"></pre>
+<span class="foo" id="bar"></span>
+<pre contenteditable></pre>
 ```
 
 ```js
 const span = document.querySelector("span");
 const pre = document.querySelector("pre");
-const attrMap = pre.attributes;
 
-let result = `The '<pre>' element initially contains ${attrMap.length} attributes.\n\n`;
+let result = `The \`<pre>\` element initially contains ${pre.attributes.length} attributes.\n\n`;
 
-result += "We remove `one` from `<span>` and adds it to `<pre>`.\n";
-const one = span.attributes.removeNamedItem("one");
-attrMap.setNamedItem(one);
-result += `The '<pre>' element now contains ${pre.attributes.length} attributes.\n\n`;
+result += "We remove `class` from `<span>` and add it to `<pre>`.\n";
+const classAttribute = span.attributes.removeNamedItem("class");
+pre.attributes.setNamedItem(classAttribute);
+result += `The \`<pre>\` element now contains ${pre.attributes.length} attributes.\n\n`;
 
-result += "We get 'two' from '<span>' and try to adds it to '<pre>'.\n";
-const two = span.attributes.getNamedItem("two");
+result += "We get `id` from `<span>` and try to add it to `<pre>`.\n";
+const id = span.attributes.getNamedItem("id");
 try {
-  attrMap.setNamedItem(two);
+  pre.attributes.setNamedItem(id);
 } catch (error) {
-  result += `An exception has been raised: ${error.name}.\n`;
+  result += `An exception has been raised: ${error.name}: ${error.message}.\n`;
 }
 
 pre.textContent = result;

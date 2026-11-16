@@ -8,7 +8,7 @@ browser-compat: api.HTMLObjectElement.willValidate
 
 {{APIRef("HTML DOM")}}
 
-The **`willValidate`** read-only property of the {{domxref("HTMLObjectElement")}} interface returns `false`, because {{HTMLElement("object")}} elements are not candidates for [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
+The **`willValidate`** read-only property of the {{domxref("HTMLObjectElement")}} interface returns `false`, because {{HTMLElement("object")}} elements are not candidates for [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation).
 
 ## Value
 
@@ -27,5 +27,5 @@ The boolean value `false`.
 - {{domxref("HTMLObjectElement.checkValidity()")}}
 - {{HTMLElement("object")}}
 - {{HTMLElement("form")}}
-- [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Learn: Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [Guide: Constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)

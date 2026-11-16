@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.FontFace.style
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`style`** property of the {{domxref("FontFace")}} interface retrieves or sets the font's style.
 

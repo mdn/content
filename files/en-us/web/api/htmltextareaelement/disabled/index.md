@@ -8,7 +8,7 @@ browser-compat: api.HTMLTextAreaElement.disabled
 
 {{ APIRef("HTML DOM") }}
 
-The **`disabled`** property of the {{DOMxRef("HTMLTextAreaElement")}} interface indicates whether this multi-line text control is disabled and cannot be interacted with. It reflects the {{htmlelement("textarea")}} element's [`disabled`](/en-US/docs/Web/HTML/Element/textarea#autocomplete) attribute. When `false`, this `textarea` may still be disabled if its containing element, such as a {{htmlelement("fieldset")}}, is disabled.
+The **`disabled`** property of the {{DOMxRef("HTMLTextAreaElement")}} interface indicates whether this multi-line text control is disabled and cannot be interacted with. It reflects the {{htmlelement("textarea")}} element's [`disabled`](/en-US/docs/Web/HTML/Reference/Elements/textarea#autocomplete) attribute. When `false`, this `textarea` may still be disabled if its containing element, such as a {{htmlelement("fieldset")}}, is disabled.
 
 ## Value
 

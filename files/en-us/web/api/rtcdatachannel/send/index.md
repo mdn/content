@@ -45,9 +45,8 @@ None ({{jsxref("undefined")}}).
   - : Thrown when the data channel has not finished establishing its own connection (that is, its
     {{domxref("RTCDataChannel.readyState", "readyState")}} is `connecting`). The data channel
     must establish its own connection because it uses a transport channel separate from that of the media content. This error occurs without sending or buffering the `data`.
-- `NetworkError` {{domxref("DOMException")}}
-  - : Thrown when the specified `data` would need to be buffered, and there isn't room for
-    it in the buffer. In this scenario, the underlying transport is immediately closed.
+- `OperationError` {{domxref("DOMException")}}
+  - : Thrown when the specified `data` would need to be buffered, and there isn't room for it in the buffer.
 - {{jsxref("TypeError")}}
   - : Thrown if the specified `data` is too large for the other peer to receive. Since
     there are multiple techniques for breaking up large data into smaller pieces for

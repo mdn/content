@@ -16,12 +16,16 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("paymentmethodchange", (event) => {});
+```js-nolint
+addEventListener("paymentmethodchange", (event) => { })
+```
 
-onpaymentmethodchange = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onpaymentmethodchange = (event) => { }
 ```
 
 ## Event type
@@ -29,15 +33,6 @@ onpaymentmethodchange = (event) => {};
 A {{domxref("PaymentMethodChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PaymentMethodChangeEvent")}}
-
-## Event properties
-
-_In addition to the properties below, this interface includes properties inherited from {{domxref("PaymentRequestUpdateEvent")}}._
-
-- {{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} {{ReadOnlyInline}}
-  - : An object containing payment method-specific data useful when handling a payment method change. If no such information is available, this value is `null`.
-- {{domxref("PaymentMethodChangeEvent.methodName", "methodName")}} {{ReadOnlyInline}}
-  - : A string containing the payment method identifier, a string which uniquely identifies a particular payment method. This identifier is usually a URL used during the payment process, but may be a standardized non-URL string as well, such as `basic-card`. The default value is the empty string, `""`.
 
 ## Examples
 
@@ -51,11 +46,7 @@ const paymentRequest = new PaymentRequest(
   detailsForTransaction(),
 );
 
-paymentRequest.addEventListener(
-  "paymentmethodchange",
-  handlePaymentChange,
-  false,
-);
+paymentRequest.addEventListener("paymentmethodchange", handlePaymentChange);
 
 paymentRequest
   .show()

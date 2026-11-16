@@ -8,7 +8,7 @@ status:
 browser-compat: api.IdleDetector.userState
 ---
 
-{{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`userState`** read-only property of the {{domxref("IdleDetector")}} interface returns a string indicating whether the user has interacted with the device since the call to `start()`.
 

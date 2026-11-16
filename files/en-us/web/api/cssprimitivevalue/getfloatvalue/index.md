@@ -5,10 +5,11 @@ slug: Web/API/CSSPrimitiveValue/getFloatValue
 page-type: web-api-instance-method
 status:
   - deprecated
+  - non-standard
 browser-compat: api.CSSPrimitiveValue.getFloatValue
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}
+{{APIRef("CSSOM")}}{{non-standard_header}}
 
 The **`getFloatValue()`** method of the
 {{domxref("CSSPrimitiveValue")}} interface is used to get a float value in a specified
@@ -33,7 +34,6 @@ getFloatValue(unit)
 ### Parameters
 
 - `unit`
-
   - : An `unsigned short` representing the code for the unit type, in which the
     value should be returned. Valid values are:
 

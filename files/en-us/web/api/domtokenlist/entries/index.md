@@ -19,6 +19,10 @@ to go through all key/value pairs contained in this object. The values are
 entries()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.
@@ -27,7 +31,7 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
 In the following example we retrieve the list of classes set on a
 {{htmlelement("span")}} element as a `DOMTokenList` using
-{{domxref("Element.classList")}}. We when retrieve an iterator containing the key/value
+{{domxref("Element.classList")}}. We then retrieve an iterator containing the key/value
 pairs using `entries()`, then iterate through each one using a
 {{jsxref("Statements/for...of", "for...of")}} loop, writing them to the
 `<span>`'s {{domxref("Node.textContent")}}.
@@ -64,4 +68,5 @@ The output looks like this:
 
 ## See also
 
+- [Polyfill of `DOMTokenList.prototype.entries` in `core-js`](https://core-js.io/docs/features/web-standards/iterable-dom-collections)
 - {{domxref("DOMTokenList.foreach()")}}, {{domxref("DOMTokenList.keys")}} and {{domxref("DOMTokenList.values")}}.

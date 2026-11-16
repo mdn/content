@@ -3,9 +3,8 @@ title: runtime.requestUpdateCheck()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/requestUpdateCheck
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.requestUpdateCheck
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Checks to see if an update for the extension is available.
 
@@ -26,11 +25,8 @@ None.
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with an object with the result of the update request.
 
 - `result`
-
   - : An object with the following properties:
-
     - `status`
-
       - : {{WebExtAPIRef('runtime.RequestUpdateCheckStatus')}}. The result of the update check.
 
     - `version` {{optional_inline}}

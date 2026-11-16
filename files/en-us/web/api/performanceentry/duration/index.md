@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PerformanceEntry.duration
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The read-only **`duration`** property returns a {{domxref("DOMHighResTimeStamp","timestamp", "", "no-code")}} that is the duration of the {{domxref("PerformanceEntry","performance entry", "", "no-code")}}. The meaning of this property depends on the value of this entry's {{domxref("PerformanceEntry.entryType", "entryType")}}.
 
@@ -31,6 +31,7 @@ The meaning of this property depends on the value of this performance entry's {{
 
 For the following entry types, `duration` is not applicable, and in this case the value is always `0`:
 
+- `container`
 - `element`
 - `largest-contentful-paint`
 - `layout-shift`

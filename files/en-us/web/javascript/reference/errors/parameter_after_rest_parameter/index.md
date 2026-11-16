@@ -2,9 +2,8 @@
 title: "SyntaxError: parameter after rest parameter"
 slug: Web/JavaScript/Reference/Errors/Parameter_after_rest_parameter
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "parameter after rest parameter" occurs when a [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) is followed by anything else in a parameter list, including another rest parameter, a formal parameter, or a [trailing comma](/en-US/docs/Web/JavaScript/Reference/Trailing_commas).
 

@@ -36,13 +36,13 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `FileError.INVALID_STATE_ERR`
+- `DOMException.INVALID_STATE_ERR`
   - : The operation failed because the file system's state doesn't permit it. This can
     happen, for example, if the file system's cached state differs from the actual state
     of the file system.
-- `FileError.NOT_FOUND_ERR`
+- `DOMException.NOT_FOUND_ERR`
   - : The specified path could not be found.
-- `FileError.SECURITY_ERR`
+- `DOMException.SECURITY_ERR`
   - : Security restrictions prohibit obtaining the parent directory's information.
 
 ## Examples
@@ -96,4 +96,3 @@ A similar approach can be taken elsewhere in the File and Directory Entries API.
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

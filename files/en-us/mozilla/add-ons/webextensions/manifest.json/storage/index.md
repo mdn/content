@@ -3,9 +3,8 @@ title: storage
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/storage
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.storage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

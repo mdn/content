@@ -12,7 +12,7 @@ The **`AudioWorkletProcessor`** interface of the [Web Audio API](/en-US/docs/Web
 ## Constructor
 
 > [!NOTE]
-> The `AudioWorkletProcessor` and classes that derive from it cannot be instantiated directly from a user-supplied code. Instead, they are created only internally by the creation of an associated {{domxref("AudioWorkletNode")}}s. The constructor of the deriving class is getting called with an options object, so you can perform a custom initialization procedures — see constructor page for details.
+> The `AudioWorkletProcessor` and classes that derive from it cannot be instantiated directly from user-supplied code. Instead, they are created only internally by the creation of an associated {{domxref("AudioWorkletNode")}}. The constructor of the deriving class is getting called with an options object, so you can perform custom initialization procedures — see constructor page for details.
 
 - {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}}
   - : Creates a new instance of an `AudioWorkletProcessor` object.
@@ -36,7 +36,7 @@ _The `AudioWorkletProcessor` interface doesn't respond to any events._
 
 To define custom audio processing code you have to derive a class from the `AudioWorkletProcessor` interface. Although not defined on the interface, the deriving class must have the {{domxref("AudioWorkletProcessor.process", "process")}} method. This method gets called for each block of 128 sample-frames and takes input and output arrays and calculated values of custom {{domxref("AudioParam")}}s (if they are defined) as parameters. You can use inputs and audio parameter values to fill the outputs array, which by default holds silence.
 
-Optionally, if you want custom {{domxref("AudioParam")}}s on your node, you can supply a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} property as a _static getter_ on the processor. The array of {{domxref("AudioParamDescriptor")}}-based objects returned is used internally to create the {{domxref("AudioParam")}}s during the instantiation of the `AudioWorkletNode`.
+Optionally, if you want custom {{domxref("AudioParam")}}s on your node, you can supply a {{domxref("AudioWorkletProcessor.parameterDescriptors_static", "parameterDescriptors")}} property as a _static getter_ on the processor. The array of {{domxref("AudioParamDescriptor")}}-based objects returned is used internally to create the {{domxref("AudioParam")}}s during the instantiation of the `AudioWorkletNode`.
 
 The resulting `AudioParam`s reside in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node and can be automated using standard methods such as [`linearRampToValueAtTime`](/en-US/docs/Web/API/AudioParam/linearRampToValueAtTime). Their calculated values will be passed into the {{domxref("AudioWorkletProcessor.process", "process()")}} method of the processor for you to shape the node output accordingly.
 
@@ -46,7 +46,6 @@ An example algorithm of creating a custom audio processing mechanism is:
 
 1. Create a separate file;
 2. In the file:
-
    1. Extend the `AudioWorkletProcessor` class (see ["Deriving classes" section](#deriving_classes)) and supply your own {{domxref("AudioWorkletProcessor.process", "process()")}} method in it;
    2. Register the processor using {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} method;
 

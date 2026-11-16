@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SourceBuffer.remove
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`remove()`** method of the {{domxref("SourceBuffer")}}
 interface removes media segments within a specific time range from the
@@ -35,7 +35,6 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-
   - : Thrown if either the {{domxref("MediaSource.duration")}} property is equal to `NaN`, the `start` parameter is negative or greater than {{domxref("MediaSource.duration")}}, or the `end` parameter is less than or equal to `start` or equal to `NaN`.
 
 - `InvalidStateError` {{domxref("DOMException")}}

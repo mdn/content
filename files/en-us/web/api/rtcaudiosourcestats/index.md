@@ -10,7 +10,7 @@ spec-urls: https://w3c.github.io/webrtc-stats/#dom-rtcaudiosourcestats
 
 The **`RTCAudioSourceStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides statistics information about an audio track ({{domxref("MediaStreamTrack")}}) that is attached to one or more senders ({{domxref("RTCRtpSender")}}).
 
-These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCRtpSender.getStats()")}} or {{domxref("RTCPeerConnection.getStats()")}} until you find a report with the [`type`](#type) of `media-source` and a [`kind`](#kind) of `audio`.
+These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCRtpSender.getStats()")}} or {{domxref("RTCPeerConnection.getStats()")}} until you find a report with the [`type`](/en-US/docs/Web/API/RTCAudioSourceStats/type) of `media-source` and a [`kind`](/en-US/docs/Web/API/RTCAudioSourceStats/kind) of `audio`.
 
 > [!NOTE]
 > For audio information about remotely sourced tracks (that are being received), see {{domxref("RTCInboundRtpStreamStats")}}.
@@ -87,12 +87,12 @@ This example shows how you might iterate the stats object returned from `RTCRtpS
 const stats = await sender.getStats();
 let audioSourceStats = null;
 
-stats.forEach((report) => {
-  if (report.type === "media-source" && report.kind==="audio") {
+for (const report of stats.values()) {
+  if (report.type === "media-source" && report.kind === "audio") {
     audioSourceStats = report;
     break;
   }
-});
+}
 
 const audioLevel = audioSourceStats?.audioLevel;
 ```

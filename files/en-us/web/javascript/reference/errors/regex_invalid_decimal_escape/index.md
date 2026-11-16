@@ -2,9 +2,8 @@
 title: "SyntaxError: invalid decimal escape in regular expression"
 slug: Web/JavaScript/Reference/Errors/Regex_invalid_decimal_escape
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid decimal escape in regular expression" occurs when a legacy [octal escape sequence](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences) is used in a [Unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode) regular expression pattern.
 

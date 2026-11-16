@@ -3,9 +3,8 @@ title: webRequest.StreamFilter.write()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/write
 page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.StreamFilter.write
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Writes some response data to the output stream.
 
@@ -28,10 +27,6 @@ filter.write(
 
 None.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example uses `write()`, to replace "Example" in the first chunk of the response with "WebExtension Example".
@@ -46,12 +41,12 @@ function listener(details) {
     let str = decoder.decode(event.data, { stream: true });
     // Just change any instance of Example in the HTTP response
     // to WebExtension Example.
-    str = str.replace(/Example/g, "WebExtension Example");
+    str = str.replaceAll("Example", "WebExtension Example");
     filter.write(encoder.encode(str));
     filter.disconnect();
   };
 
-  //return {}; // not needed
+  // return {}; // not needed
 }
 
 browser.webRequest.onBeforeRequest.addListener(
@@ -62,3 +57,7 @@ browser.webRequest.onBeforeRequest.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

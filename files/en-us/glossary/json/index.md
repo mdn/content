@@ -2,9 +2,8 @@
 title: JSON
 slug: Glossary/JSON
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 _JavaScript Object Notation_ (**JSON**) is a data-interchange format. Although not a strict subset, JSON closely resembles a subset of {{Glossary("JavaScript")}} syntax. Though many programming languages support JSON, it is especially useful for JavaScript-based apps, including websites and browser extensions.
 
@@ -12,5 +11,5 @@ JSON can represent numbers, booleans, strings, `null`, arrays (ordered sequences
 
 ## See also
 
+- [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - [JSON](https://en.wikipedia.org/wiki/JSON) on Wikipedia
-- [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) on MDN

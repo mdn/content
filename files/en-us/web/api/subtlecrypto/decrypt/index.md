@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.decrypt
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`decrypt()`** method of the {{domxref("SubtleCrypto")}} interface decrypts some encrypted data.
 It takes as arguments a {{glossary("key")}} to decrypt with, some optional extra parameters, and the data to decrypt (also known as "ciphertext").
@@ -21,7 +21,6 @@ decrypt(algorithm, key, data)
 ### Parameters
 
 - `algorithm`
-
   - : An object specifying the [algorithm](#supported_algorithms) to be used, and any extra parameters as required.
     The values given for the extra parameters must match those passed into the corresponding {{domxref("SubtleCrypto.encrypt()", "encrypt()")}} call.
     - To use [RSA-OAEP](#rsa-oaep), pass an {{domxref("RsaOaepParams")}} object.
@@ -44,9 +43,9 @@ A {{jsxref("Promise")}} that fulfills with an {{jsxref("ArrayBuffer")}} containi
 The promise is rejected when the following exceptions are encountered:
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Raised when the requested operation is not valid for the provided key (e.g. invalid encryption algorithm, or invalid key for the specified encryption algorithm).
+  - : Raised when the requested operation is not valid for the provided key (e.g., invalid encryption algorithm, or invalid key for the specified encryption algorithm).
 - `OperationError` {{domxref("DOMException")}}
-  - : Raised when the operation failed for an operation-specific reason (e.g. algorithm parameters of invalid sizes, or there was an error decrypting the ciphertext).
+  - : Raised when the operation failed for an operation-specific reason (e.g., algorithm parameters of invalid sizes, or there was an error decrypting the ciphertext).
 
 ## Supported algorithms
 

@@ -17,15 +17,44 @@ if an {{HTMLElement('img')}} initiates the request, the response body needs to b
 image data. For security reasons, there are a few global rules:
 
 - You can only return {{domxref("Response")}} objects of {{domxref("Response.type", "type")}}
-  "`opaque`" if the {{domxref("fetchEvent.request")}} object's
-  {{domxref("request.mode", "mode")}} is "`no-cors`". This prevents the
+  `"opaque"` if the {{domxref("fetchEvent.request")}} object's
+  {{domxref("request.mode", "mode")}} is `"no-cors"`. This prevents the
   leaking of private data.
 - You can only return {{domxref("Response")}} objects of {{domxref("Response.type", "type")}}
-  "`opaqueredirect`" if the {{domxref("fetchEvent.request")}}
-  object's {{domxref("request.mode", "mode")}} is "`manual`".
+  `"opaqueredirect"` if the {{domxref("fetchEvent.request")}}
+  object's {{domxref("request.mode", "mode")}} is `"manual"`.
 - You cannot return {{domxref("Response")}} objects of {{domxref("Response.type", "type")}}
-  "`cors`" if the {{domxref("fetchEvent.request")}} object's
-  {{domxref("request.mode", "mode")}} is "`same-origin`".
+  `"cors"` if the {{domxref("fetchEvent.request")}} object's
+  {{domxref("request.mode", "mode")}} is `"same-origin"`.
+
+## Syntax
+
+```js-nolint
+respondWith(response)
+```
+
+### Parameters
+
+- `response`
+  - : A {{domxref("Response")}} or a {{jsxref("Promise")}} that resolves to a
+    `Response`. Otherwise, a network error is returned to Fetch.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+### Exceptions
+
+- `NetworkError` {{domxref("DOMException")}}
+  - : Returned if a network error is triggered on certain combinations of
+    {{domxref("Request.mode","FetchEvent.request.mode")}} and
+    {{domxref("Response.type")}} values, as hinted at in the "global rules"
+    listed above.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the event has not been dispatched or `respondWith()` has
+    already been invoked.
+
+## Description
 
 ### Specifying the final URL of a resource
 
@@ -63,33 +92,6 @@ specification handles redirects for navigations ends up using the request URL fo
 resulting {{domxref("Window.location")}}. This means sites can still provide an
 "alternate" view of a web page when offline without changing the user-visible URL.
 
-## Syntax
-
-```js-nolint
-respondWith(response)
-```
-
-### Parameters
-
-- `response`
-  - : A {{domxref("Response")}} or a {{jsxref("Promise")}} that resolves to a
-    `Response`. Otherwise, a network error is returned to Fetch.
-
-### Return value
-
-None ({{jsxref("undefined")}}).
-
-### Exceptions
-
-- `NetworkError` {{domxref("DOMException")}}
-  - : Returned if a network error is triggered on certain combinations of
-    {{domxref("Request.mode","FetchEvent.request.mode")}} and
-    {{domxref("Response.type")}} values, as hinted at in the "global rules"
-    listed above.
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : Returned if the event has not been dispatched or `respondWith()` has
-    already been invoked.
-
 ## Examples
 
 This fetch event tries to return a response from the cache API, falling back to the
@@ -111,7 +113,8 @@ addEventListener("fetch", (event) => {
 });
 ```
 
-> **Note:** {{domxref("CacheStorage.match()", "caches.match()")}} is a
+> [!NOTE]
+> {{domxref("CacheStorage.match()", "caches.match()")}} is a
 > convenience method. Equivalent functionality is to call
 > {{domxref("cache.match()")}} on each cache (in the order returned by
 > {{domxref("CacheStorage.keys()", "caches.keys()")}}) until a

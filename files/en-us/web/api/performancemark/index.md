@@ -5,9 +5,9 @@ page-type: web-api-interface
 browser-compat: api.PerformanceMark
 ---
 
-{{APIRef("Performance API")}} {{AvailableInWorkers}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
-**`PerformanceMark`** is an interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`mark`".
+**`PerformanceMark`** is an interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of `"mark"`.
 
 Entries of this type are typically created by calling {{domxref("Performance.mark","performance.mark()")}} to add a _named_ {{domxref("DOMHighResTimeStamp")}} (the _mark_) to the browser's performance timeline. To create a performance mark that isn't added to the browser's performance timeline, use the constructor.
 
@@ -20,29 +20,29 @@ Entries of this type are typically created by calling {{domxref("Performance.mar
 
 ## Instance properties
 
+- {{domxref("PerformanceMark.detail")}} {{ReadOnlyInline}}
+  - : Contains arbitrary metadata about the measure.
+
 This interface extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
 
 - {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
-  - : Returns "`mark`".
+  - : Returns `"mark"`.
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : Returns the name given to the mark when it was created via a call to {{domxref("Performance.mark()","performance.mark()")}}.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("DOMHighResTimeStamp")}} when {{domxref("Performance.mark()","performance.mark()")}} was called.
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
-  - : Returns "`0`". (A mark has no _duration_.)
-
-This interface also supports the following properties:
-
-- {{domxref("PerformanceMark.detail")}} {{ReadOnlyInline}}
-  - : Returns arbitrary metadata that has been included in the mark upon construction.
+  - : Returns `0`. (A mark has no _duration_.)
 
 ## Instance methods
 
 This interface has no methods.
 
-## Example
+## Examples
 
 See the example in [Using the User Timing API](/en-US/docs/Web/API/Performance_API/User_timing).
+
+Chrome DevTools uses `performance.mark()` and in particular a structured `detail` property as part of its extensibility API that surfaces these in custom tracks in performance traces. See the example in [Performance: mark() method](/en-US/docs/Web/API/Performance/mark) page and the [Chrome's extensibility API documentation](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_the_user_timings_api) for more information and examples.
 
 ## Specifications
 

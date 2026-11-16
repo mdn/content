@@ -8,7 +8,7 @@ status:
 browser-compat: api.PaymentRequestEvent.total
 ---
 
-{{SeeCompatTable}}{{APIRef("Payment Handler API")}}{{AvailableInWorkers("service")}}
+{{SeeCompatTable}}{{APIRef("Web-Based Payment Handler API")}}{{AvailableInWorkers("service")}}
 
 The **`total`** read-only property of the {{domxref("PaymentRequestEvent")}} interface returns a
 `PaymentCurrencyAmount` object containing the total amount being requested for payment.
@@ -20,7 +20,7 @@ A `PaymentCurrencyAmount` object. This object contains the following properties:
 - `currency`
   - : A string containing a three-letter [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) standard currency code representing the currency of the payment. Examples include `USD`, `CAN`, and `GBP`.
 - `value`
-  - : A string containing a decimal monetary value, e.g. `2.55`.
+  - : A string containing a decimal monetary value, e.g., `2.55`.
 
 ## Examples
 

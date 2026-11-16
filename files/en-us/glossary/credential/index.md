@@ -2,9 +2,8 @@
 title: Credential
 slug: Glossary/Credential
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **credential** is an object which enables a system to make an {{glossary("authentication")}} decision: for example, to decide whether to sign a user into an account.
 

@@ -20,12 +20,16 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("icecandidate", (event) => {});
+```js-nolint
+addEventListener("icecandidate", (event) => { })
+```
 
-onicecandidate = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onicecandidate = (event) => { }
 ```
 
 ## Event type
@@ -33,14 +37,6 @@ onicecandidate = (event) => {};
 An {{domxref("RTCPeerConnectionIceEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("RTCPeerConnectionIceEvent")}}
-
-## Event properties
-
-_A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements the following property_.
-
-- {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{ReadOnlyInline}}
-  - : Indicates the {{domxref("RTCIceCandidate")}} containing the candidate associated with the event.
-    This will be the empty string if the event indicates that there are no further candidates to come in this **generation**, or `null` if all ICE gathering on all transports is complete.
 
 ## Description
 
@@ -105,21 +101,17 @@ This example creates a simple handler for the `icecandidate` event that uses a f
 First, an example using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-pc.addEventListener(
-  "icecandidate",
-  (ev) => {
-    if (ev.candidate !== null) {
-      sendMessage({
-        type: "new-ice-candidate",
-        candidate: ev.candidate,
-      });
-    }
-  },
-  false,
-);
+pc.addEventListener("icecandidate", (ev) => {
+  if (ev.candidate !== null) {
+    sendMessage({
+      type: "new-ice-candidate",
+      candidate: ev.candidate,
+    });
+  }
+});
 ```
 
-You can also set the `onicecandidate` event handler property directly:
+You can also set the `onicecandidate` event handler property directly (but note that this replaces other event listeners added using `onicecandidate`, if any):
 
 ```js
 pc.onicecandidate = (ev) => {

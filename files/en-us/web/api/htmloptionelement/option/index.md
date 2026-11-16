@@ -24,18 +24,18 @@ new Option(text, value, defaultSelected, selected)
 ### Parameters
 
 - `text` {{optional_inline}}
-  - : A string representing the content of the element, i.e. the
+  - : A string representing the content of the element, i.e., the
     displayed text. If this is not specified, a default value of "" (empty string) is
     used.
 - `value` {{optional_inline}}
   - : A string representing the value of the
-    {{domxref("HTMLOptionElement")}}, i.e. the value attribute of the equivalent
+    {{domxref("HTMLOptionElement")}}, i.e., the value attribute of the equivalent
     {{htmlelement("option")}}. If this is not specified, the value of text is used as the
-    value, e.g. for the associated {{htmlelement("select")}} element's value when the form
+    value, e.g., for the associated {{htmlelement("select")}} element's value when the form
     is submitted to the server.
 - `defaultSelected` {{optional_inline}}
-  - : A value of either `true` or `false` that sets the [`selected`](/en-US/docs/Web/HTML/Element/option#selected)
-    attribute value, i.e. so that this {{htmlelement("option")}} will be the default value
+  - : A value of either `true` or `false` that sets the [`selected`](/en-US/docs/Web/HTML/Reference/Elements/option#selected)
+    attribute value, i.e., so that this {{htmlelement("option")}} will be the default value
     selected in the {{htmlelement("select")}} element when the page is first loaded. If
     this is not specified, a default value of false is used. Note that a value of true
     does not set the option to selected if it is not already selected.
@@ -65,15 +65,11 @@ options.forEach((element, key) => {
 
 ### Append options with different parameters
 
-```js
-/* assuming we have the following HTML
-<select id="s">
-    <option>First</option>
-    <option>Second</option>
-    <option>Third</option>
-</select>
-*/
+```html
+<select id="s"></select>
+```
 
+```js
 const s = document.getElementById("s");
 const options = ["zero", "one", "two"];
 
@@ -85,17 +81,20 @@ options.forEach((element, key) => {
     s[key] = new Option(element, s.options.length, true, false); // Will add the "selected" attribute
   }
   if (element === "two") {
-    s[key] = new Option(element, s.options.length, false, true); // Just will be selected in "view"
+    s[key] = new Option(element, s.options.length, false, true); // Will actually be selected in the view
   }
 });
+```
 
-/* Result
+Result:
+
+```html
 <select id="s">
   <option value="0">zero</option>
-  <option value="1" selected="">one</option>
-  <option value="2">two</option> // User will see this as 'selected'
+  <option value="1" selected>one</option>
+  <option value="2">two</option>
+  <!-- User will see two as 'selected' -->
 </select>
-*/
 ```
 
 ## Specifications

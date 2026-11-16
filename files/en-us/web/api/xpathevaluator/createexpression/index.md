@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XPathEvaluator.createExpression
 ---
 
-{{APIRef("DOM XPath")}}
+{{APIRef("DOM")}}
 
 This method compiles an {{domxref("XPathExpression")}} which can then be used for
 (repeated) evaluations of the {{Glossary("XPath")}} expression.
@@ -35,7 +35,7 @@ expression.
 #### INVALID_EXPRESSION_ERR
 
 If the expression is not legal according to the rules of the
-`XPathEvaluator`, an {{domxref("XPathException")}} of type
+`XPathEvaluator`, a {{domxref("DOMException")}} of type
 `INVALID_EXPRESSION_ERR` is raised.
 
 #### NAMESPACE_ERR

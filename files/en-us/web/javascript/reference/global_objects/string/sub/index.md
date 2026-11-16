@@ -1,13 +1,13 @@
 ---
 title: String.prototype.sub()
+short-title: sub()
 slug: Web/JavaScript/Reference/Global_Objects/String/sub
 page-type: javascript-instance-method
 status:
   - deprecated
 browser-compat: javascript.builtins.String.sub
+sidebar: jsref
 ---
-
-{{JSRef}} {{Deprecated_Header}}
 
 The **`sub()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("sub")}} element (`<sub>str</sub>`), which causes this string to be displayed as subscript.
 
@@ -65,6 +65,7 @@ document.body.appendChild(elem);
 
 ## See also
 
-- [Polyfill of `String.prototype.sub` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.sub` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
+- [es-shims polyfill of `String.prototype.sub`](https://www.npmjs.com/package/es-string-html-methods)
 - [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)
 - {{HTMLElement("sub")}}

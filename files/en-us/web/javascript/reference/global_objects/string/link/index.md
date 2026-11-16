@@ -1,13 +1,13 @@
 ---
 title: String.prototype.link()
+short-title: link()
 slug: Web/JavaScript/Reference/Global_Objects/String/link
 page-type: javascript-instance-method
 status:
   - deprecated
 browser-compat: javascript.builtins.String.link
+sidebar: jsref
 ---
-
-{{JSRef}} {{Deprecated_Header}}
 
 The **`link()`** method of {{jsxref("String")}} values creates a string that embeds this string in an {{HTMLElement("a")}} element (`<a href="...">str</a>`), to be used as a hypertext link to another URL.
 
@@ -67,6 +67,7 @@ document.body.appendChild(elem);
 
 ## See also
 
-- [Polyfill of `String.prototype.link` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.link` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
+- [es-shims polyfill of `String.prototype.link`](https://www.npmjs.com/package/es-string-html-methods)
 - [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)
 - {{HTMLElement("a")}}

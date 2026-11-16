@@ -8,7 +8,7 @@ status:
 browser-compat: api.USBDevice.isochronousTransferIn
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`isochronousTransferIn()`** method of the {{domxref("USBDevice")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("USBIsochronousInTransferResult")}} when time sensitive information has been transmitted to (received by) the USB device.
 

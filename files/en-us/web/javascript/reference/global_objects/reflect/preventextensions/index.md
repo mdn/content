@@ -1,15 +1,27 @@
 ---
 title: Reflect.preventExtensions()
+short-title: preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.preventExtensions
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Reflect.preventExtensions()`** static method is like {{jsxref("Object.preventExtensions()")}}. It prevents new properties from ever being added to an object (i.e., prevents future extensions to the object).
 
-{{EmbedInteractiveExample("pages/js/reflect-preventextensions.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.preventExtensions()")}}
+
+```js interactive-example
+const object = {};
+
+console.log(Reflect.isExtensible(object));
+// Expected output: true
+
+Reflect.preventExtensions(object);
+
+console.log(Reflect.isExtensible(object));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -51,7 +63,7 @@ See also {{jsxref("Object.preventExtensions()")}}.
 const empty = {};
 Reflect.isExtensible(empty); // true
 
-// ...but that can be changed.
+// … but that can be changed.
 Reflect.preventExtensions(empty);
 Reflect.isExtensible(empty); // false
 ```
@@ -78,7 +90,7 @@ Object.preventExtensions(1);
 
 ## See also
 
-- [Polyfill of `Reflect.preventExtensions` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.preventExtensions` in `core-js`](https://core-js.io/docs/features/ecmascript/reflect)
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.preventExtensions()")}}
 - [`handler.preventExtensions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions)

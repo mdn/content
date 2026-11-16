@@ -23,7 +23,6 @@ This project uses the [glMatrix](https://glmatrix.net/) library to perform its m
   <head>
     <meta charset="utf-8" />
     <title>WebGL Demo</title>
-    <link rel="stylesheet" href="./webgl.css" type="text/css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
       integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
@@ -33,7 +32,7 @@ This project uses the [glMatrix](https://glmatrix.net/) library to perform its m
   </head>
 
   <body>
-    <canvas id="glcanvas" width="640" height="480"></canvas>
+    <canvas id="gl-canvas" width="640" height="480"></canvas>
   </body>
 </html>
 ```
@@ -274,7 +273,7 @@ function drawScene(gl, programInfo, buffers) {
   const zFar = 100.0;
   const projectionMatrix = mat4.create();
 
-  // note: glmatrix.js always has the first argument
+  // note: glMatrix always has the first argument
   // as the destination to receive the result.
   mat4.perspective(projectionMatrix, fieldOfView, aspect, zNear, zFar);
 

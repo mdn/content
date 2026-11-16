@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.innerHeight
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 The read-only **`innerHeight`** property of the
 {{domxref("Window")}} interface returns the interior height of the window in pixels,
@@ -52,7 +52,7 @@ console.log(top.innerHeight);
 To change the size of a window, see {{domxref("window.resizeBy()")}} and
 {{domxref("window.resizeTo()")}}.
 
-To get the outer height of a window, i.e. the height of the whole browser window, see
+To get the outer height of a window, i.e., the height of the whole browser window, see
 {{domxref("window.outerHeight")}}.
 
 ### Graphical example

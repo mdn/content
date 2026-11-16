@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.deriveKey
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`deriveKey()`** method of the {{domxref("SubtleCrypto")}} interface can be used to derive a secret key from a master key.
 
@@ -19,7 +19,7 @@ See [Supported algorithms](#supported_algorithms) for some more detail on this.
 ## Syntax
 
 ```js-nolint
-deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
+deriveKey(algorithm, baseKey, derivedKeyType, extractable, keyUsages)
 ```
 
 ### Parameters
@@ -28,22 +28,21 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
   - : An object defining the [derivation algorithm](#supported_algorithms) to use.
     - To use [ECDH](#ecdh), pass an [`EcdhKeyDeriveParams`](/en-US/docs/Web/API/EcdhKeyDeriveParams) object, specifying the string `ECDH` as the `name` property.
     - To use [HKDF](#hkdf), pass an [`HkdfParams`](/en-US/docs/Web/API/HkdfParams) object.
+    - To use [PBKDF2](#pbkdf2), pass a [`Pbkdf2Params`](/en-US/docs/Web/API/Pbkdf2Params) object.
     - To use [X25519](#x25519), pass an [`EcdhKeyDeriveParams`](/en-US/docs/Web/API/EcdhKeyDeriveParams) object, specifying the string `X25519` as the `name` property.
 - `baseKey`
   - : A {{domxref("CryptoKey")}} representing the input to the derivation algorithm.
     If `algorithm` is ECDH or X25519, then this will be the ECDH or X25519 private key.
     Otherwise it will be the initial key material for the derivation function: for example, for PBKDF2 it might be a password, imported as a `CryptoKey` using [`SubtleCrypto.importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey).
-- `derivedKeyAlgorithm`
+- `derivedKeyType`
   - : An object defining the algorithm the derived key will be used for:
-    - For [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac) pass an [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams) object.
-    - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc), [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw), pass an [`AesKeyGenParams`](/en-US/docs/Web/API/AesKeyGenParams) object.
-    - For [HKDF](#hkdf), pass an [`HkdfParams`](/en-US/docs/Web/API/HkdfParams) object.
-    - For [PBKDF2](#pbkdf2), pass a [`Pbkdf2Params`](/en-US/docs/Web/API/Pbkdf2Params) object.
+    - For [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac) pass an [`HmacImportParams`](/en-US/docs/Web/API/HmacImportParams) object.
+    - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc), [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw), pass an [`AesDerivedKeyParams`](/en-US/docs/Web/API/AesDerivedKeyParams) object.
 - `extractable`
   - : A boolean value indicating whether it will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or {{domxref("SubtleCrypto.wrapKey()")}}.
 - `keyUsages`
   - : An {{jsxref("Array")}} indicating what can be done with the derived key.
-    Note that the key usages must be allowed by the algorithm set in `derivedKeyAlgorithm`.
+    Note that the key usages must be allowed by the algorithm set in `derivedKeyType`.
     Possible values of the array are:
     - `encrypt`: The key may be used to [encrypt](/en-US/docs/Web/API/SubtleCrypto/encrypt) messages.
     - `decrypt`: The key may be used to [decrypt](/en-US/docs/Web/API/SubtleCrypto/decrypt) messages.
@@ -64,7 +63,7 @@ The promise is rejected when one of the following exceptions are encountered:
 
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Raised when the master key is not a key for the requested derivation algorithm or if the `keyUsages` value of that key doesn't contain `deriveKey`.
-- `NotSupported` {{domxref("DOMException")}}
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Raised when trying to use an algorithm that is either unknown or isn't suitable for derivation, or if the algorithm requested for the derived key doesn't define a key length.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Raised when `keyUsages` is empty but the unwrapped key is of type `secret` or `private`.
@@ -98,7 +97,7 @@ PBKDF2 is specified in [RFC 2898](https://datatracker.ietf.org/doc/html/rfc2898)
 
 #### ECDH
 
-ECDH (Elliptic Curve Diffie-Hellman) is a _key-agreement algorithm_.
+ECDH (Elliptic Curve Diffie–Hellman) is a _key-agreement algorithm_.
 It enables two people who each have an ECDH public/private key pair to generate a shared secret: that is, a secret that they — and no one else — share.
 They can then use this shared secret as a symmetric key to secure their communication, or can use the secret as an input to derive such a key (for example, using the HKDF algorithm).
 
@@ -150,7 +149,7 @@ async function agreeSharedSecretKey() {
   // Generate 2 ECDH key pairs: one for Alice and one for Bob
   // In more normal usage, they would generate their key pairs
   // separately and exchange public keys securely
-  let alicesKeyPair = await window.crypto.subtle.generateKey(
+  let aliceKeyPair = await window.crypto.subtle.generateKey(
     {
       name: "ECDH",
       namedCurve: "P-384",
@@ -159,7 +158,7 @@ async function agreeSharedSecretKey() {
     ["deriveKey"],
   );
 
-  let bobsKeyPair = await window.crypto.subtle.generateKey(
+  let bobKeyPair = await window.crypto.subtle.generateKey(
     {
       name: "ECDH",
       namedCurve: "P-384",
@@ -169,27 +168,27 @@ async function agreeSharedSecretKey() {
   );
 
   // Alice then generates a secret key using her private key and Bob's public key.
-  let alicesSecretKey = await deriveSecretKey(
-    alicesKeyPair.privateKey,
-    bobsKeyPair.publicKey,
+  let aliceSecretKey = await deriveSecretKey(
+    aliceKeyPair.privateKey,
+    bobKeyPair.publicKey,
   );
 
   // Bob generates the same secret key using his private key and Alice's public key.
-  let bobsSecretKey = await deriveSecretKey(
-    bobsKeyPair.privateKey,
-    alicesKeyPair.publicKey,
+  let bobSecretKey = await deriveSecretKey(
+    bobKeyPair.privateKey,
+    aliceKeyPair.publicKey,
   );
 
   // Alice can then use her copy of the secret key to encrypt a message to Bob.
   let encryptButton = document.querySelector(".ecdh .encrypt-button");
   encryptButton.addEventListener("click", () => {
-    encrypt(alicesSecretKey);
+    encrypt(aliceSecretKey);
   });
 
   // Bob can use his copy to decrypt the message.
   let decryptButton = document.querySelector(".ecdh .decrypt-button");
   decryptButton.addEventListener("click", () => {
-    decrypt(bobsSecretKey);
+    decrypt(bobSecretKey);
   });
 }
 ```
@@ -246,7 +245,7 @@ This is followed by another two elements for displaying the ciphertext after Ali
 ```css hidden
 input {
   display: block;
-  margin: 5px 0px 5px 0px;
+  margin: 5px 0px;
 }
 #results {
   margin-top: 20px;
@@ -354,7 +353,7 @@ async function agreeSharedSecretKey() {
     // Generate 2 X25519 key pairs: one for Alice and one for Bob
     // In more normal usage, they would generate their key pairs
     // separately and exchange public keys securely
-    const alicesKeyPair = await window.crypto.subtle.generateKey(
+    const aliceKeyPair = await window.crypto.subtle.generateKey(
       {
         name: "X25519",
       },
@@ -363,12 +362,12 @@ async function agreeSharedSecretKey() {
     );
 
     log(
-      `Created Alices's key pair: (algorithm: ${JSON.stringify(
-        alicesKeyPair.privateKey.algorithm,
-      )}, usages: ${alicesKeyPair.privateKey.usages})`,
+      `Created Alice's key pair: (algorithm: ${JSON.stringify(
+        aliceKeyPair.privateKey.algorithm,
+      )}, usages: ${aliceKeyPair.privateKey.usages})`,
     );
 
-    const bobsKeyPair = await window.crypto.subtle.generateKey(
+    const bobKeyPair = await window.crypto.subtle.generateKey(
       {
         name: "X25519",
       },
@@ -378,32 +377,32 @@ async function agreeSharedSecretKey() {
 
     log(
       `Created Bob's key pair: (algorithm: ${JSON.stringify(
-        bobsKeyPair.privateKey.algorithm,
-      )}, usages: ${bobsKeyPair.privateKey.usages})`,
+        bobKeyPair.privateKey.algorithm,
+      )}, usages: ${bobKeyPair.privateKey.usages})`,
     );
 
     // Alice then generates a secret key using her private key and Bob's public key.
-    const alicesSecretKey = await deriveSecretKey(
-      alicesKeyPair.privateKey,
-      bobsKeyPair.publicKey,
+    const aliceSecretKey = await deriveSecretKey(
+      aliceKeyPair.privateKey,
+      bobKeyPair.publicKey,
     );
 
     log(
-      `alicesSecretKey: ${alicesSecretKey.type} (algorithm: ${JSON.stringify(
-        alicesSecretKey.algorithm,
-      )}, usages: ${alicesSecretKey.usages}), `,
+      `aliceSecretKey: ${aliceSecretKey.type} (algorithm: ${JSON.stringify(
+        aliceSecretKey.algorithm,
+      )}, usages: ${aliceSecretKey.usages}), `,
     );
 
     // Bob generates the same secret key using his private key and Alice's public key.
-    const bobsSecretKey = await deriveSecretKey(
-      bobsKeyPair.privateKey,
-      alicesKeyPair.publicKey,
+    const bobSecretKey = await deriveSecretKey(
+      bobKeyPair.privateKey,
+      aliceKeyPair.publicKey,
     );
 
     log(
-      `bobsSecretKey: ${bobsSecretKey.type} (algorithm: ${JSON.stringify(
-        bobsSecretKey.algorithm,
-      )}, usages: ${bobsSecretKey.usages}), \n`,
+      `bobSecretKey: ${bobSecretKey.type} (algorithm: ${JSON.stringify(
+        bobSecretKey.algorithm,
+      )}, usages: ${bobSecretKey.usages}), \n`,
     );
 
     // Get access for the encrypt button and the three inputs
@@ -423,7 +422,7 @@ async function agreeSharedSecretKey() {
 
       // Alice can use her copy of the shared key to encrypt the message.
       const encryptedMessage = await encryptMessage(
-        alicesSecretKey,
+        aliceSecretKey,
         initializationVector,
         messageInput.value,
       );
@@ -438,7 +437,7 @@ async function agreeSharedSecretKey() {
 
       // Bob uses his shared secret key to decrypt the message.
       const decryptedCiphertext = await decryptMessage(
-        bobsSecretKey,
+        bobSecretKey,
         initializationVector,
         encryptedMessage,
       );
@@ -460,7 +459,7 @@ agreeSharedSecretKey();
 Press the Encrypt button to encrypt the text in the top `<input>` element, displaying the encrypted ciphertext and decrypted ciphertext in the following two elements.
 The log area at the bottom provides information about the keys that are generated by the code.
 
-{{EmbedLiveSample("X25519 derived shared key", "100%", "400px")}}
+{{EmbedLiveSample("x25519_derive_shared_secret_key", "100%", "400px")}}
 
 ### PBKDF2: derive AES key from password
 
@@ -518,7 +517,7 @@ function getKey(keyMaterial, salt) {
   return window.crypto.subtle.deriveKey(
     {
       name: "HKDF",
-      salt: salt,
+      salt,
       info: new TextEncoder().encode("Encryption example"),
       hash: "SHA-256",
     },

@@ -8,7 +8,7 @@ status:
 browser-compat: api.Window.releaseEvents
 ---
 
-{{APIRef}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 Releases the window from trapping events of a specific type.
 
@@ -21,7 +21,6 @@ releaseEvents(eventType)
 ### Parameters
 
 - `eventType`
-
   - : `eventType` is a combination of the following values:
     `Event.ABORT`, `Event.BLUR`, `Event.CLICK`,
     `Event.CHANGE`, `Event.DBLCLICK`, `Event.DRAGDDROP`,

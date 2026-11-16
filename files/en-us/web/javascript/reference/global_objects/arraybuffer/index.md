@@ -3,9 +3,8 @@ title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 page-type: javascript-class
 browser-compat: javascript.builtins.ArrayBuffer
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`ArrayBuffer`** object is used to represent a generic raw binary data buffer.
 
@@ -21,7 +20,7 @@ The [`ArrayBuffer()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayB
 
 `ArrayBuffer` objects can be made resizable by including the `maxByteLength` option when calling the {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer()")}} constructor. You can query whether an `ArrayBuffer` is resizable and what its maximum size is by accessing its {{jsxref("ArrayBuffer/resizable", "resizable")}} and {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} properties, respectively. You can assign a new size to a resizable `ArrayBuffer` with a {{jsxref("ArrayBuffer/resize", "resize()")}} call. New bytes are initialized to 0.
 
-These features make resizing `ArrayBuffer`s more efficient — otherwise, you have to make a copy of the buffer with a new size. It also gives JavaScript parity with WebAssembly in this regard (Wasm linear memory can be resized with [`WebAssembly.Memory.prototype.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow)).
+These features make resizing `ArrayBuffer`s more efficient — otherwise, you have to make a copy of the buffer with a new size. It also gives JavaScript parity with WebAssembly in this regard (Wasm linear memory can be resized with [`WebAssembly.Memory.prototype.grow()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow)).
 
 ### Transferring ArrayBuffers
 
@@ -81,7 +80,7 @@ These properties are defined on `ArrayBuffer.prototype` and shared by all `Array
 
 ### Creating an ArrayBuffer
 
-In this example, we create a 8-byte buffer with a {{jsxref("Int32Array")}} view referring to the buffer:
+In this example, we create a 8-byte buffer with an {{jsxref("Int32Array")}} view referring to the buffer:
 
 ```js
 const buffer = new ArrayBuffer(8);
@@ -98,7 +97,7 @@ const view = new Int32Array(buffer);
 
 ## See also
 
-- [Polyfill of `ArrayBuffer` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `ArrayBuffer` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("SharedArrayBuffer")}}
 - [RangeError: invalid array length](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

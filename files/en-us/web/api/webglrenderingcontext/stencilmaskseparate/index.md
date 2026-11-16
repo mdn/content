@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.stencilMaskSeparate
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.stencilMaskSeparate()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) controls enabling and
@@ -24,10 +24,8 @@ stencilMaskSeparate(face, mask)
 ### Parameters
 
 - `face`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying whether the front and/or back stencil writemask
     is updated. The possible values are:
-
     - `gl.FRONT`
     - `gl.BACK`
     - `gl.FRONT_AND_BACK`

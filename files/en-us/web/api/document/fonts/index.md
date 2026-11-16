@@ -8,7 +8,7 @@ browser-compat: api.Document.fonts
 
 {{APIRef("DOM")}}
 
-The **`fonts`** property of the {{domxref("Document")}} interface returns the {{domxref("FontFaceSet")}} interface of the document.
+The **`fonts`** read-only property of the {{domxref("Document")}} interface returns the {{domxref("FontFaceSet")}} interface of the document.
 
 This feature is part of the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API).
 
@@ -32,7 +32,7 @@ document.fonts.ready.then((fontFaceSet) => {
 });
 ```
 
-The promise fulfils when loading and layout operations of all used fonts are done. The set of used fonts can be different from the set of _declared_ fonts, e.g. if optional fonts (i.e. fonts declared via `font-display: optional`) were not able to load in time.
+The promise fulfills when loading and layout operations of all used fonts are done. The set of used fonts can be different from the set of _declared_ fonts, e.g., if optional fonts (i.e., fonts declared via `font-display: optional`) were not able to load in time.
 
 ## Specifications
 

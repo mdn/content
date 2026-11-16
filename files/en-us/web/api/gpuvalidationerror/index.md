@@ -2,12 +2,10 @@
 title: GPUValidationError
 slug: Web/API/GPUValidationError
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPUValidationError
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUValidationError`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} describes an application error indicating that an operation did not pass the WebGPU API's validation constraints.
 
@@ -22,7 +20,7 @@ Validation errors occur whenever invalid inputs are given to a WebGPU call. Thes
 
 ## Constructor
 
-- {{domxref("GPUValidationError.GPUValidationError", "GPUValidationError()")}} {{Experimental_Inline}}
+- {{domxref("GPUValidationError.GPUValidationError", "GPUValidationError()")}}
   - : Creates a new `GPUValidationError` object instance.
 
 ## Instance properties

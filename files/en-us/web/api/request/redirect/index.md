@@ -6,13 +6,13 @@ page-type: web-api-instance-property
 browser-compat: api.Request.redirect
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`redirect`** read-only property of the {{domxref("Request")}} interface contains the mode for how redirects are handled.
 
 ## Value
 
-A `RequestRedirect` enum value, which can be one the following strings:
+A `RequestRedirect` enum value, which can be one of the following strings:
 
 - `follow`
 - `error`
@@ -40,5 +40,5 @@ const myCred = myRequest.redirect;
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

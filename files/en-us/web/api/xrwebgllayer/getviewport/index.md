@@ -56,9 +56,6 @@ one half for each eye, setting the WebGL viewport to match the WebXR layer's vie
 will ensure that when rendering the scene for the current eye's pose, it is rendered
 into the correct half of the framebuffer.
 
-**<<<--- add link to appropriate section in the Cameras and views
-article --->>>**
-
 ```js
 function drawFrame(time, frame) {
   const session = frame.session;

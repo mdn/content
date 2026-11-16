@@ -3,12 +3,10 @@ title: "GPUAdapter: limits property"
 short-title: limits
 slug: Web/API/GPUAdapter/limits
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUAdapter.limits
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`limits`** read-only property of the
 {{domxref("GPUAdapter")}} interface returns a {{domxref("GPUSupportedLimits")}} object that describes the limits supported by the adapter.
@@ -47,7 +45,7 @@ async function init() {
     requiredLimits,
   });
 
-  // ...
+  // …
 }
 ```
 

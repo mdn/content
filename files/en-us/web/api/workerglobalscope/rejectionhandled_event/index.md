@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.WorkerGlobalScope.rejectionhandled_event
 ---
 
-{{APIRef}}{{AvailableInWorkers("worker")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers("worker")}}
 
 The **`rejectionhandled`** event is sent to the script's global scope (typically {{domxref("WorkerGlobalScope")}}) whenever a rejected {{jsxref("Promise")}} is handled late, i.e., when a handler is attached to the promise after its rejection had caused an {{domxref("WorkerGlobalScope.unhandledrejection_event", "unhandledrejection")}} event.
 
@@ -14,11 +14,16 @@ This can be used in debugging and for general application resiliency, in tandem 
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-self.addEventListener("rejectionhandled", (event) => {});
-self.onrejectionhandled = (event) => {};
+```js-nolint
+addEventListener("rejectionhandled", (event) => { })
+```
+
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onrejectionhandled = (event) => { }
 ```
 
 ## Event type
@@ -26,13 +31,6 @@ self.onrejectionhandled = (event) => {};
 A {{domxref("PromiseRejectionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PromiseRejectionEvent")}}
-
-## Event properties
-
-- {{domxref("PromiseRejectionEvent.promise")}} {{ReadOnlyInline}}
-  - : The {{jsxref("Promise")}} that was rejected.
-- {{domxref("PromiseRejectionEvent.reason")}} {{ReadOnlyInline}}
-  - : A value or {{jsxref("Object")}} indicating why the promise was rejected, as passed to {{jsxref("Promise.reject()")}}.
 
 ## Example
 

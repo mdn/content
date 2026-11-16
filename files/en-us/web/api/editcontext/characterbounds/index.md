@@ -24,6 +24,10 @@ The `characterBounds()` method returns the list of character bounds that were la
 characterBounds()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An {{jsxref("Array")}} containing {{domxref("DOMRect")}} objects.

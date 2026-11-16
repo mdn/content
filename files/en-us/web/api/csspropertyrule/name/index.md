@@ -27,8 +27,8 @@ This stylesheet contains a single {{cssxref("@property")}} rule. The first {{dom
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].name); //the string "--property-name"
+const myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].name); // "--property-name"
 ```
 
 ## Specifications

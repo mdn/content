@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.SecurityPolicyViolationEvent.SecurityPolicyViolationEvent
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
 The **`SecurityPolicyViolationEvent()`** constructor creates a new {{domxref("SecurityPolicyViolationEvent")}} object.
 
@@ -62,9 +62,7 @@ A new `SecurityPolicyViolationEvent` object.
 ## Examples
 
 ```js
-let SPVEvt = new SecurityPolicyViolationEvent("foo", {
-  /* ... */
-});
+let SPVEvt = new SecurityPolicyViolationEvent("foo", {/* ... */});
 ```
 
 ## Specifications
@@ -77,4 +75,4 @@ let SPVEvt = new SecurityPolicyViolationEvent("foo", {
 
 ## See also
 
-- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
+- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP)

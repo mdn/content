@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.uniformMatrix2fv
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.uniformMatrix[234]x[234]fv()`**
 methods of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) specify matrix
@@ -60,8 +60,7 @@ uniformMatrix4fv(location, transpose, data, srcOffset, srcLength)
 ### Parameters
 
 - `location`
-  - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
-    attribute to modify.
+  - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform attribute to modify, or `null` to silently ignore the uniform update.
 - `transpose`
   - : A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether to transpose the matrix.
 - `data`

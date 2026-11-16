@@ -14,7 +14,7 @@ The **`uploadTotal`** read-only property of the {{domxref("BackgroundFetchRegist
 
 ## Value
 
-A {{jsxref("number")}}.
+A {{jsxref("Number")}}.
 
 ## Examples
 

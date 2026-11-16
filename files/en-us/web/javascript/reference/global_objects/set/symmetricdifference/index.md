@@ -1,11 +1,11 @@
 ---
 title: Set.prototype.symmetricDifference()
+short-title: symmetricDifference()
 slug: Web/JavaScript/Reference/Global_Objects/Set/symmetricDifference
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.symmetricDifference
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`symmetricDifference()`** method of {{jsxref("Set")}} instances takes a set and returns a new set containing elements which are in either this set or the given set, but not in both.
 
@@ -38,7 +38,7 @@ And using Venn diagram:
 
 ![A Venn diagram where two circles overlap. The symmetric difference of A and B is the region contained by either circle but not both.](diagram.svg)
 
-`symmetricDifference()` accepts [set-like](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) objects as the `other` parameter. It requires {{jsxref("Operators/this", "this")}} to be an actual {{jsxref("Set")}} instance, because it directly retrieves the underlying data stored in `this` without invoking any user code. Then, it iterates over `other` by calling its `keys()` method, and constructs a new set with all elements in `this` that are not seen in `other`, and all elements in `other` that are not seen in `this`.
+`symmetricDifference()` accepts [set-like](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) objects as the `other` parameter. It requires {{jsxref("this")}} to be an actual {{jsxref("Set")}} instance, because it directly retrieves the underlying data stored in `this` without invoking any user code. Then, it iterates over `other` by calling its `keys()` method, and constructs a new set with all elements in `this` that are not seen in `other`, and all elements in `other` that are not seen in `this`.
 
 The order of elements in the returned set is first those in `this` followed by those in `other`.
 
@@ -64,7 +64,8 @@ console.log(evens.symmetricDifference(squares)); // Set(5) { 2, 6, 8, 1, 9 }
 
 ## See also
 
-- [Polyfill of `Set.prototype.symmetricDifference` in `core-js`](https://github.com/zloirock/core-js#new-set-methods)
+- [Polyfill of `Set.prototype.symmetricDifference` in `core-js`](https://core-js.io/docs/features/ecmascript/collections#h-set)
+- [es-shims polyfill of `Set.prototype.symmetricDifference`](https://www.npmjs.com/package/set.prototype.symmetricdifference)
 - {{jsxref("Set.prototype.difference()")}}
 - {{jsxref("Set.prototype.intersection()")}}
 - {{jsxref("Set.prototype.isDisjointFrom()")}}

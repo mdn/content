@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.MediaSource
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`MediaSource`** interface of the {{domxref("Media Source Extensions API", "Media Source Extensions API", "", "nocode")}} represents a source of media data for an {{domxref("HTMLMediaElement")}} object. A `MediaSource` object can be attached to a {{domxref("HTMLMediaElement")}} to be played in the user agent.
 
@@ -15,6 +15,11 @@ The **`MediaSource`** interface of the {{domxref("Media Source Extensions API", 
 
 - {{domxref("MediaSource.MediaSource", "MediaSource()")}}
   - : Constructs and returns a new `MediaSource` object with no associated source buffers.
+
+## Static properties
+
+- {{domxref("MediaSource.canConstructInDedicatedWorker_static", "MediaSource.canConstructInDedicatedWorker")}} {{ReadOnlyInline}}
+  - : A boolean; returns `true` if `MediaSource` worker support is implemented, providing a low-latency feature detection mechanism.
 
 ## Instance properties
 
@@ -29,10 +34,10 @@ The **`MediaSource`** interface of the {{domxref("Media Source Extensions API", 
 - {{domxref("MediaSource.sourceBuffers")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("SourceBufferList")}} object containing the list of {{domxref("SourceBuffer")}} objects associated with this `MediaSource`.
 
-## Static properties
+## Static methods
 
-- {{domxref("MediaSource.canConstructInDedicatedWorker_static", "MediaSource.canConstructInDedicatedWorker")}} {{ReadOnlyInline}}
-  - : A boolean; returns `true` if `MediaSource` worker support is implemented, providing a low-latency feature detection mechanism.
+- {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}}
+  - : Returns a boolean value indicating whether the current user agent supports the given MIME type — this is, if it can successfully create {{domxref("SourceBuffer")}} objects for that MIME type.
 
 ## Instance methods
 
@@ -49,11 +54,6 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 - {{domxref("MediaSource.setLiveSeekableRange()")}}
   - : Sets the range that the user can seek to in the media element.
 
-## Static methods
-
-- {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}}
-  - : Returns a boolean value indicating if the given MIME type is supported by the current user agent — this is, if it can successfully create {{domxref("SourceBuffer")}} objects for that MIME type.
-
 ## Events
 
 - {{domxref("MediaSource.sourceclose_event", "sourceclose")}}
@@ -61,13 +61,13 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 - {{domxref("MediaSource.sourceended_event", "sourceended")}}
   - : Fired when the `MediaSource` instance is still attached to a media element, but {{domxref("MediaSource.endOfStream", "endOfStream()")}} has been called.
 - {{domxref("MediaSource.sourceopen_event", "sourceopen")}}
-  - : Fired when the `MediaSource` instance has been opened by a media element and is ready for data to be appended to the {{domxref("SourceBuffer")}} objects in {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}}.
+  - : Fired when a media element has opened the `MediaSource` instance and it is ready for data to be appended to the {{domxref("SourceBuffer")}} objects in {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}}.
 
 ## Examples
 
 ### Complete basic example
 
-The following simple example loads a video with {{domxref("XMLHttpRequest")}}, playing it as soon as it can. This example was written by Nick Desaulniers and can be [viewed live here](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (you can also [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation). The function `getMediaSource()`, which is not defined here, returns a `MediaSource`.
+The following basic example loads a video using {{domxref("XMLHttpRequest")}} and plays it as soon as it can. This example can be [viewed live here](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (you can also [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation).
 
 ```js
 const video = document.querySelector("video");
@@ -79,7 +79,7 @@ const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 let mediaSource;
 
 if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
-  mediaSource = getMediaSource();
+  mediaSource = new MediaSource();
   console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
   mediaSource.addEventListener("sourceopen", sourceOpen);
@@ -114,7 +114,7 @@ function fetchAB(url, cb) {
 
 ### Constructing a `MediaSource` in a dedicated worker and passing it to the main thread
 
-The {{domxref("MediaSource.handle", "handle")}} property can be accessed inside a dedicated worker and the resulting {{domxref("MediaSourceHandle")}} object is then transferred over to the thread that created the worker (in this case the main thread) via a {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}} call:
+The {{domxref("MediaSource.handle", "handle")}} property can be accessed inside a dedicated worker, and the resulting {{domxref("MediaSourceHandle")}} object is then transferred over to the thread that created the worker (in this case, the main thread) via a {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}} call:
 
 ```js
 // Inside dedicated worker
@@ -141,7 +141,8 @@ worker.addEventListener("message", (msg) => {
 });
 ```
 
-> **Note:** {{domxref("MediaSourceHandle")}}s cannot be successfully transferred into or via a shared worker or service worker.
+> [!NOTE]
+> {{domxref("MediaSourceHandle")}}s cannot be successfully transferred into or via a shared worker or service worker.
 
 ## Specifications
 

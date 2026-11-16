@@ -9,7 +9,7 @@ status:
 browser-compat: api.PaymentRequest.shippingaddresschange_event
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 The **`shippingaddresschange`** event is sent to the {{domxref("PaymentRequest")}} object when the user selects a shipping address or changes details of their shipping address.
 
@@ -17,12 +17,16 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("shippingaddresschange", (event) => {});
+```js-nolint
+addEventListener("shippingaddresschange", (event) => { })
+```
 
-onshippingaddresschange = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onshippingaddresschange = (event) => { }
 ```
 
 ## Event type
@@ -30,10 +34,6 @@ onshippingaddresschange = (event) => {};
 A {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PaymentRequestUpdateEvent")}}
-
-## Event properties
-
-_Provides only the properties inherited from {{domxref("Event")}}._
 
 ## Usage notes
 
@@ -46,29 +46,25 @@ In this example, a handler for the `shippingaddresschange` event is set up to va
 ```js
 const paymentRequest = new PaymentRequest(methodData, details, options);
 
-paymentRequest.addEventListener(
-  "shippingaddresschange",
-  (event) => {
-    let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
-    event.updateWith(detailsUpdate);
-  },
-  false,
-);
+paymentRequest.addEventListener("shippingaddresschange", (event) => {
+  const detailsUpdate = checkAddress(paymentRequest.shippingAddress);
+  event.updateWith(detailsUpdate);
+});
 
-const checkAddress = (theAddress) => {
-  let detailsUpdate = {};
+function checkAddress(theAddress) {
+  const detailsUpdate = {};
 
   // Check the address, return an object with any changes or errors.
 
   return detailsUpdate;
-};
+}
 ```
 
-You can also establish a handler for `shippingaddresschange` using the `onshippingaddresschange` event handler property:
+You can also establish a handler for `shippingaddresschange` using the `onshippingaddresschange` event handler property (but note that this replaces other event listeners added using `onshippingaddresschange`, if any):
 
 ```js
 paymentRequest.onshippingaddresschange = (event) => {
-  let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
+  const detailsUpdate = checkAddress(paymentRequest.shippingAddress);
   event.updateWith(detailsUpdate);
 };
 ```

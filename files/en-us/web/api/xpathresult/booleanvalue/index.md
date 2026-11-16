@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XPathResult.booleanValue
 ---
 
-{{APIRef("DOM XPath")}} {{AvailableInWorkers}}
+{{APIRef("DOM")}} {{AvailableInWorkers}}
 
 The read-only **`booleanValue`** property of the
 {{domxref("XPathResult")}} interface returns the boolean value of a result with
@@ -21,8 +21,8 @@ The return value is the boolean value of the `XPathResult` returned by
 
 #### TYPE_ERR
 
-In case {{domxref("XPathResult.resultType")}} is not `BOOLEAN_TYPE`, an
-{{domxref("XPathException")}} of type `TYPE_ERR` is thrown.
+In case {{domxref("XPathResult.resultType")}} is not `BOOLEAN_TYPE`, a
+{{domxref("DOMException")}} of type `TYPE_ERR` is thrown.
 
 ## Examples
 

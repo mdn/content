@@ -9,7 +9,7 @@ browser-compat: api.Headers.entries
 {{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 The **`Headers.entries()`** method returns an
-{{jsxref("Iteration_protocols",'iterator')}} allowing to go through all key/value pairs
+{{jsxref("Iteration_protocols",'iterator')}} allowing you to go through all key/value pairs
 contained in this object. Both the key and value of each pair are
 {{jsxref("String")}} objects.
 
@@ -48,6 +48,10 @@ content-type: text/xml
 vary: Accept-Language
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
@@ -55,5 +59,5 @@ vary: Accept-Language
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

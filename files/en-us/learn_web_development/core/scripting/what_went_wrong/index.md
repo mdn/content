@@ -1,0 +1,262 @@
+---
+title: What went wrong? Troubleshooting JavaScript
+short-title: Troubleshooting
+slug: Learn_web_development/Core/Scripting/What_went_wrong
+page-type: learn-module-chapter
+sidebar: learnsidebar
+---
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting")}}
+
+When you built up the "Guess the number" game in the previous article, you may have found that it didn't work. Never fear — this article aims to save you from tearing your hair out over such problems by providing you with some tips on how to find and fix errors in JavaScript programs.
+
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>An understanding of <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a> and the <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">fundamentals of CSS</a>, basic experience with writing JavaScript.</td>
+    </tr>
+    <tr>
+      <th scope="row">Learning outcomes:</th>
+      <td>
+        <ul>
+          <li>Understand the types of error that can occur in JavaScript.</li>
+          <li>Using <code>console.log()</code> to debug errors.</li>
+          <li>Basic experience with using the browser DevTools JavaScript console.</li>
+          <li>Basic familiarity with JavaScript error messages and their meanings.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Types of error
+
+Generally speaking, when you do something wrong in code, there are three main types of errors that you'll come across:
+
+- **Syntax errors**: These are spelling errors in your code that actually cause the program not to run at all, or stop working partway through — you will usually be provided with some error messages too. These are usually not too hard to fix, as long as you are familiar with the right tools and know what the error messages mean!
+- **Logic errors**: These are errors where the syntax is actually correct, but the code is not what you intended it to be, meaning that the program runs successfully but gives incorrect results. These are often harder to fix than syntax errors, as there usually isn't an error message to direct you to the source of the error.
+- **Runtime errors**: These happen when the code has correct syntax, so it can start running, but something goes wrong while it is running. For example, trying to call something that isn't actually a function will cause a runtime error. The syntax is fine, but the operation itself cannot be performed.
+
+Okay, so it's not quite _that_ simple — there are other differentiators as you drill down deeper. But the above classifications will do at this early stage in your career. We'll look at these types in the next section.
+
+## An erroneous example
+
+To get started, let's return to our number-guessing game — except this time we'll explore a version with some deliberate errors. Go to GitHub and make yourself a local copy of [number-game-errors.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html) (see it [running live here](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html)).
+
+1. To get started, open the local copy inside your favorite text editor and your browser.
+2. Try playing the game — you'll notice that when you press the "Submit guess" button, it doesn't work!
+
+> [!NOTE]
+> You might have your own version of the game example that doesn't work, and want to fix it! We'd still like you to work through the article with our version, so you can learn the techniques we are teaching here. Then you can go back and try to fix your example.
+
+At this point, let's consult the developer console to see if it reports any errors, then try to fix them. You'll learn how below.
+
+## Fixing errors reported in the console
+
+Earlier on in the course, we got you to type some simple JavaScript commands into the [developer tools JavaScript console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) (if you can't remember how to open this in your browser, follow the previous link to find out how). What's even more useful is that the console gives you error messages whenever an error exists inside the JavaScript being fed into the browser's JavaScript engine. Now let's go hunting.
+
+1. Go to the tab that you've got `number-game-errors.html` open in, and open your JavaScript console. You should see an error message along the following lines: !["Number guessing game" demo page in Firefox. One error is visible in the JavaScript console: "X TypeError: guessSubmit.addeventListener is not a function [Learn More] (number-game-errors.html:87:19)".](not-a-function.png)
+2. The first line of the error message is:
+
+   ```plain
+   Uncaught TypeError: guessSubmit.addeventListener is not a function
+   number-game-errors.html:87:19
+   ```
+
+   - The first part, `Uncaught TypeError: guessSubmit.addeventListener is not a function`, is telling us something about what went wrong.
+   - The second part, `number-game-errors.html:87:19`, is telling us where in the code the error came from: line 87, character 19 of the file "number-game-errors.html".
+
+3. If we look at line 87 in our code editor, we'll find this line:
+
+   ```js
+   guessSubmit.addeventListener("click", checkGuess);
+   ```
+
+4. The error message says "guessSubmit.addeventListener is not a function", which means that the JavaScript interpreter doesn't recognize the function we're calling. Often, this error message actually means that we've misspelled something. If you are not sure of the correct spelling of a piece of syntax, look it up on MDN. The best way to do this currently is to search for "mdn _name-of-feature_" with your favorite search engine. Here's a shortcut to save you some time in this instance: [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
+5. So, looking at this page, the error appears to be that we've spelled the function name wrong! This is a syntax error. Remember that JavaScript is case-sensitive, so any slight difference in spelling or casing will cause an error. Changing `addeventListener` to `addEventListener` should fix this. Do this now.
+
+> [!NOTE]
+> See our [TypeError: "x" is not a function](/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function) reference page for more details about this error.
+
+### Fixing a runtime error
+
+1. Save your page and refresh, and you should see that the error has gone.
+2. Now, if you try to enter a guess and press the Submit guess button, you'll see another error! ![Screenshot of the same "Number guessing game" demo. This time, a different error is visible in the console, reading "X TypeError: lowOrHi is null".](variable-is-null.png)
+3. This time, the error being reported is:
+
+   ```plain
+   Uncaught TypeError: can't access property "textContent", lowOrHi is null
+   ```
+
+   Depending on the browser you are using, you might see a different message here. The message above is what Firefox will show you, but Chrome, for example, will show you this:
+
+   ```plain
+   Uncaught TypeError: Cannot set properties of null (setting 'textContent')
+   ```
+
+   It's the same error, but different browsers describe it differently.
+
+   > [!NOTE]
+   > This error didn't appear on page load because it occurred inside a function (the `checkGuess() { }` block). As you'll learn in more detail in our later [functions article](/en-US/docs/Learn_web_development/Core/Scripting/Functions), code inside functions runs in a separate scope than code outside functions. In this case, the code was not run, and the error was not thrown until the `checkGuess()` function was run by line 87.
+
+4. The line number given in the error is 79. Have a look at line 79, and you'll see the following code:
+
+   ```js
+   lowOrHi.textContent = "Last guess was too high!";
+   ```
+
+5. This line is trying to set the `textContent` property of the `lowOrHi` variable to a text string, but it's not working because `lowOrHi` does not contain what it's supposed to. Let's see why this is — try searching for other instances of `lowOrHi` in the code. The earliest instance you'll find is on line 51:
+
+   ```js
+   const lowOrHi = document.querySelector("lowOrHi");
+   ```
+
+6. At this point, we are trying to make the variable contain a reference to an element in the document's HTML. Let's see what the variable contains after this line runs. Add the following code on line 54:
+
+   ```js
+   console.log(lowOrHi);
+   ```
+
+   This code will print the value of `lowOrHi` to the console after we tried to set it in line 51. See {{domxref("console/log_static", "console.log()")}} for more information.
+
+7. Save and refresh, and you should now see the `console.log()` result in your console. ![Screenshot of the same demo. One log statement is visible in the console, reading simply "null".](console-log-output.png) Sure enough, `lowOrHi`'s value is `null` at this point, and this matches up with the Firefox error message `lowOrHi is null`. So there is definitely a problem with line 51. The [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value means "nothing", or "no value". So our code that sets `lowOrHi` to an element reference is going wrong.
+
+8. Let's think about what the problem could be. Line 51 uses the [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) method to select an element reference with a CSS selector. Looking further up our file, we can find the paragraph in question:
+
+   ```html
+   <p class="lowOrHi"></p>
+   ```
+
+9. So we need a class selector here, which begins with a dot (`.`). But the selector passed into the `querySelector()` method in line 51 has no dot. This could be the problem! Try changing `lowOrHi` to `.lowOrHi` in line 51.
+10. Try saving and refreshing again, and your `console.log()` statement should return the `<p>` element we want. Phew! Another error fixed! You can delete your `console.log()` line now, or keep it to reference later on — your choice.
+
+> [!NOTE]
+> See our [TypeError: "x" is (not) "y"](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type) reference page for more details about this error.
+
+### Fixing another syntax error
+
+1. Now, if you try playing the game through again, you should get more success — the game should play through absolutely fine, until you end the game, either by guessing the right number, or by running out of guesses.
+2. At that point, the game fails again, and the same error is spat out that we got at the beginning — "TypeError: resetButton.addeventListener is not a function"! However, this time it's listed as coming from line 95.
+3. Looking at line number 95, it is easy to see that we've made the same mistake here. We need to change `addeventListener` to `addEventListener` again. Do this now.
+
+## A logic error
+
+At this point, the game should play through fine. After playing through a few times, however, you'll undoubtedly notice that the game always chooses 1 as the "random" number you've got to guess. Definitely not quite how we want the game to play out!
+
+There's definitely a problem in the game logic somewhere — the game is not returning an error; it just isn't playing right.
+
+1. Search for the `randomNumber` variable and the lines where the random number is first set. The instance that stores the random number that we want to guess at the start of the game should be around line number 47:
+
+   ```js
+   let randomNumber = Math.floor(Math.random()) + 1;
+   ```
+
+2. And the one that generates the random number before each subsequent game is around line 114:
+
+   ```js
+   randomNumber = Math.floor(Math.random()) + 1;
+   ```
+
+3. To check whether these lines are indeed the problem, let's turn to our friend `console.log()` again — insert the following line directly below each of the above two lines:
+
+   ```js
+   console.log(randomNumber);
+   ```
+
+4. Save and refresh, then play a few games — you'll see that `randomNumber` is equal to 1 at each point where it is logged to the console.
+
+### Working through the logic
+
+To fix this, let's consider how this line is working. First, we invoke [`Math.random()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random), which generates a random decimal number between 0 and 1, e.g., 0.5675493843.
+
+```js
+Math.random();
+```
+
+Next, we pass the result of invoking `Math.random()` through [`Math.floor()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor), which rounds down the number passed to the nearest whole number. We then add 1 to that result:
+
+```js
+Math.floor(Math.random()) + 1;
+```
+
+Rounding a random decimal number between 0 and 1 down will always return 0, so adding 1 to it will always return 1. We need to multiply the random number by 100 before we round it down. The following would give us a random number between 0 and 99:
+
+```js
+Math.floor(Math.random() * 100);
+```
+
+We therefore want to add 1 to give us a random number between 1 and 100:
+
+```js
+Math.floor(Math.random() * 100) + 1;
+```
+
+Try updating both lines like this, then save and refresh — the game should now play as intended!
+
+## Other common errors
+
+There are other common errors you'll come across in your code. This section highlights most of them.
+
+### The game is over after the first wrong guess
+
+This could be another symptom of mixing up the assignment and strict equality operators. For example, if we were to change this line inside `checkGuess()`:
+
+```js
+} else if (guessCount === 10) {
+```
+
+to
+
+```js
+} else if (guessCount = 10) {
+```
+
+The test would always return `true`, causing the program to `setGameOver()` after the first wrong guess. Be careful!
+
+### SyntaxError: missing ) after argument list
+
+This one is pretty simple — it generally means that you've missed the closing parenthesis at the end of a function/method call.
+
+> [!NOTE]
+> See our [SyntaxError: missing ) after argument list](/en-US/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) reference page for more details about this error.
+
+### SyntaxError: missing : after property id
+
+This error usually relates to an incorrectly formed JavaScript object, but in this case, we managed to get it by changing
+
+```js
+function checkGuess() {
+```
+
+to
+
+```js
+function checkGuess( {
+```
+
+This has caused the browser to think we are trying to pass the function's contents into it as an argument. Be careful with those parentheses!
+
+### SyntaxError: missing } after function body
+
+This is easy — it generally means you've missed a curly brace from a function or conditional structure. We got this error by deleting one of the closing curly braces near the bottom of the `checkGuess()` function.
+
+### SyntaxError: expected expression, got '_string_' or SyntaxError: string literal contains an unescaped line break
+
+These errors generally mean you've missed an opening or closing quotation mark from a string value. In the first error above, _string_ would be replaced by unexpected character(s) instead of a quote mark at the start of a string. The second error means that the string has not been ended with a quotation mark.
+
+For all of these errors, think about how we tackled the examples we looked at in the walkthrough. When an error arises, look at the line number you are given, go to that line, and see if you can spot what's wrong. Bear in mind that the error will not necessarily be on that line, and the error might not be caused by the same problem we cited above!
+
+> [!NOTE]
+> See our [SyntaxError: Unexpected token](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_token) and [SyntaxError: string literal contains an unescaped line break](/en-US/docs/Web/JavaScript/Reference/Errors/String_literal_EOL) reference pages for more details about these errors.
+
+## Summary
+
+So there we have it, the basics of figuring out errors in simple JavaScript programs. It won't always be that simple to work out what's wrong in your code, but at least this will save you a few hours of sleep and help you progress a bit faster when things don't turn out right, especially in the early stages of your learning journey.
+
+## See also
+
+- There are many other types of errors that aren't listed here; we are compiling a reference that explains what they mean in detail — see the [JavaScript error reference](/en-US/docs/Web/JavaScript/Reference/Errors).
+- If you come across any errors in your code that you aren't sure how to fix after reading this article, you can get help! Ask for help on the [communication channels](/en-US/docs/MDN/Community/Communication_channels). Tell us what your error is, and we'll try to help you. A listing of your code would be useful as well.
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting")}}

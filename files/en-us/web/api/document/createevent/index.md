@@ -3,6 +3,8 @@ title: "Document: createEvent() method"
 short-title: createEvent()
 slug: Web/API/Document/createEvent
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.Document.createEvent
 ---
 
@@ -41,13 +43,9 @@ const event = document.createEvent("Event");
 event.initEvent("build", true, true);
 
 // Listen for the event.
-elem.addEventListener(
-  "build",
-  (e) => {
-    // e.target matches elem
-  },
-  false,
-);
+elem.addEventListener("build", (e) => {
+  // e.target matches elem
+});
 
 // Target can be any Element or other EventTarget.
 elem.dispatchEvent(event);
@@ -69,4 +67,4 @@ are the modern recommended way to create event object instances.
 
 ## See also
 
-- [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events)
+- [Creating and dispatching events](/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events)

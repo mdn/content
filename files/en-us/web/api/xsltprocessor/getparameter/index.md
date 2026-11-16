@@ -3,10 +3,12 @@ title: "XSLTProcessor: getParameter() method"
 short-title: getParameter()
 slug: Web/API/XSLTProcessor/getParameter
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.XSLTProcessor.getParameter
 ---
 
-{{APIRef("XSLT")}}
+{{APIRef("DOM")}}
 
 The `getParameter()` method of the {{domxref("XSLTProcessor")}} interface returns the value of a parameter (`<xsl:param>`) from the stylesheet imported in the processor.
 

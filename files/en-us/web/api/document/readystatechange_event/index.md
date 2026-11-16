@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Document.readystatechange_event
 ---
 
-{{APIRef}}
+{{APIRef("DOM")}}
 
 The **`readystatechange`** event is fired when the {{domxref("Document.readyState", "readyState")}} attribute of a document has changed.
 
@@ -14,12 +14,16 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("readystatechange", (event) => {});
+```js-nolint
+addEventListener("readystatechange", (event) => { })
+```
 
-onreadystatechange = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onreadystatechange = (event) => { }
 ```
 
 ## Event type

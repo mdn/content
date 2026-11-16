@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.CloseEvent.CloseEvent
 ---
 
-{{APIRef("Websockets API")}}
+{{APIRef("Websockets API")}}{{AvailableInWorkers}}
 
 The **`CloseEvent()`** constructor creates a new {{domxref("CloseEvent")}} object.
 

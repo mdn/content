@@ -8,7 +8,7 @@ browser-compat: api.HTMLTextAreaElement.rows
 
 {{ APIRef("HTML DOM") }}
 
-The **`rows`** property of the {{DOMxRef("HTMLTextAreaElement")}} interface is a positive integer representing the visible text lines of the text control. It reflects the `<textarea>` element's [`rows`](/en-US/docs/Web/HTML/Element/textarea#rows) attribute.
+The **`rows`** property of the {{DOMxRef("HTMLTextAreaElement")}} interface is a positive integer representing the visible text lines of the text control. It reflects the `<textarea>` element's [`rows`](/en-US/docs/Web/HTML/Reference/Elements/textarea#rows) attribute.
 
 ## Value
 

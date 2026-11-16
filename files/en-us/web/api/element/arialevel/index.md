@@ -11,7 +11,7 @@ browser-compat: api.Element.ariaLevel
 The **`ariaLevel`** property of the {{domxref("Element")}} interface reflects the value of the `aria-level` attribute, which defines the hierarchical level of an element within a structure.
 
 > [!NOTE]
-> Where possible use an HTML {{htmlelement("Heading_Elements", "h1")}} or other correct heading level as these have built in semantics and do not require ARIA attributes.
+> Where possible use an HTML {{htmlelement("Heading_Elements", "h1")}} or other correct heading level as these have built-in semantics and do not require ARIA attributes.
 
 ## Value
 
@@ -44,4 +44,4 @@ console.log(el.ariaLevel); // "2"
 
 ## See also
 
-- [ARIA: heading role](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role)
+- [ARIA: heading role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role)

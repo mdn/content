@@ -1,15 +1,29 @@
 ---
 title: Math.floor()
+short-title: floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.floor
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.floor()`** static method always rounds down and returns the largest integer less than or equal to a given number.
 
-{{EmbedInteractiveExample("pages/js/math-floor.html")}}
+{{InteractiveExample("JavaScript Demo: Math.floor()")}}
+
+```js interactive-example
+console.log(Math.floor(5.95));
+// Expected output: 5
+
+console.log(Math.floor(5.05));
+// Expected output: 5
+
+console.log(Math.floor(5));
+// Expected output: 5
+
+console.log(Math.floor(-5.05));
+// Expected output: -6
+```
 
 ## Syntax
 
@@ -79,7 +93,7 @@ function decimalAdjust(type, value, exp) {
   const adjustedValue = Math[type](`${magnitude}e${exponent - exp}`);
   // Shift back
   const [newMagnitude, newExponent = 0] = adjustedValue.toString().split("e");
-  return Number(`${newMagnitude}e${+newExponent + exp}`);
+  return Number(`${newMagnitude}e${Number(newExponent) + exp}`);
 }
 
 // Decimal round

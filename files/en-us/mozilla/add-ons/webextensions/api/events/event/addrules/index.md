@@ -3,9 +3,8 @@ title: Event.addRules()
 slug: Mozilla/Add-ons/WebExtensions/API/events/Event/addRules
 page-type: webextension-api-event
 browser-compat: webextensions.api.events.Event.addRules
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Registers rules for a declarative event.
 
@@ -18,11 +17,9 @@ events.Event.addRules(rules, callback)
 ### Parameters
 
 - `rules`
-
   - : `array` of {{WebExtAPIRef("events.Rule")}}. Rules to register. These rules do not replace the registered rules.
 
 - `callback` {{optional_inline}}
-
   - : `function`. Called when the rules are registered. The parameter of the callback function is an array of the {{WebExtAPIRef("events.Rule")}} objects registered.
 
 ## Browser compatibility

@@ -11,7 +11,7 @@ spec-urls: https://w3c.github.io/uievents/
 
 The UI Events API defines a system for handling user interactions such as mouse and keyboard input. This includes:
 
-- events that are fired on specific user actions such keypresses or mouse clicks. Most of these events fire on the {{domxref("Element")}} interface, but the events relating to loading and unloading resources fire on the {{domxref("Window")}} interface.
+- events that are fired on specific user actions such key presses or mouse clicks. Most of these events fire on the {{domxref("Element")}} interface, but the events relating to loading and unloading resources fire on the {{domxref("Window")}} interface.
 - event interfaces, which are passed into handlers for these events. These interfaces inherit from {{domxref("Event")}} and provide extra information specific to the type of user interaction: for example, the {{domxref("KeyboardEvent")}} is passed into a {{domxref("Element.keydown_event", "keydown")}} event handler and provides information about the key that was pressed.
 
 ## Interfaces

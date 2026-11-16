@@ -14,12 +14,16 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("open", (event) => {});
+```js-nolint
+addEventListener("open", (event) => { })
+```
 
-onopen = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onopen = (event) => { }
 ```
 
 ## Event type
@@ -28,33 +32,22 @@ An {{domxref("RTCDataChannelEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("RTCDataChannelEvent")}}
 
-## Event properties
-
-_Also inherits properties from its parent interface, {{DOMxRef("Event")}}._
-
-- {{DOMxRef("RTCDataChannelEvent.channel", "channel")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("RTCDataChannel")}} associated with the event.
-
 ## Examples
 
 This example adds to the {{domxref("RTCDataChannel")}} `dc` a handler for the `open` event that adjusts the user interface to indicate that a chat window is ready to be used after a connection has been established. It enables the message input box and send button as well as enabling the disconnect button and disabling the connect button. Finally, the message input box is focused so the user can immediately begin to type.
 
 ```js
-dc.addEventListener(
-  "open",
-  (ev) => {
-    messageInputBox.disabled = false;
-    sendMessageButton.disabled = false;
-    disconnectButton.disabled = false;
-    connectButton.disabled = true;
+dc.addEventListener("open", (ev) => {
+  messageInputBox.disabled = false;
+  sendMessageButton.disabled = false;
+  disconnectButton.disabled = false;
+  connectButton.disabled = true;
 
-    messageInputBox.focus();
-  },
-  false,
-);
+  messageInputBox.focus();
+});
 ```
 
-This can also be done by directly setting the value of the channel's `onopen` event handler property.
+This can also be done by directly setting the value of the channel's `onopen` event handler property (but note that this replaces other event listeners added using `onopen`, if any).
 
 ```js
 dc.onopen = (ev) => {

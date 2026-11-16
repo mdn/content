@@ -6,11 +6,12 @@ page-type: webgl-extension
 browser-compat: api.OES_standard_derivatives
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`OES_standard_derivatives`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and adds the GLSL derivative functions `dFdx`, `dFdy`, and `fwidth`.
 
-WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method.
+For more information, see [Using WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions).
 
 > [!NOTE]
 > This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. In WebGL 2, the constant is available as `gl.FRAGMENT_SHADER_DERIVATIVE_HINT` and it requires GLSL `#version 300 es`.
@@ -26,11 +27,20 @@ This extension exposes one new constant, which can be used in the {{domxref("Web
 
 The following new functions can be used in GLSL shader code, if this extension is enabled:
 
-```cpp
-genType dFdx(genType)
-genType dFdy(genType)
-genType fwidth(genType)
+```c
+genType dFdx(genType p)
+genType dFdy(genType p)
+genType fwidth(genType p)
 ```
+
+- `dFdx()`
+  - : Returns the derivative in `x` using local differencing for the input argument `p`.
+- `dFdy()`
+  - : Returns the derivative in `y` using local differencing for the input argument `p`.
+- `fwidth()`
+  - : Returns the sum of the absolute derivative in `x` and `y` using local differencing for the input argument `p`. That is, `abs(dFdx(p)) + abs(dFdy(p))`.
+
+`dFdx()` and `dFdy()` are commonly used to estimate the filter width used to anti-alias procedural textures.
 
 ## Examples
 
@@ -49,11 +59,11 @@ Shader code that avoids artifacts when wrapping texture coordinates:
   #extension GL_OES_standard_derivatives : enable
 
   uniform sampler2D myTexture;
-  varying vec2 texcoord;
+  varying vec2 texCoord;
 
   void main(){
-    gl_FragColor = texture2DGradEXT(myTexture, mod(texcoord, vec2(0.1, 0.5)),
-                                    dFdx(texcoord), dFdy(texcoord));
+    gl_FragColor = texture2DGradEXT(myTexture, mod(texCoord, vec2(0.1, 0.5)),
+                                    dFdx(texCoord), dFdy(texCoord));
   }
 </script>
 ```

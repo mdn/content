@@ -3,12 +3,10 @@ title: "GPUDevice: createRenderBundleEncoder() method"
 short-title: createRenderBundleEncoder()
 slug: Web/API/GPUDevice/createRenderBundleEncoder
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUDevice.createRenderBundleEncoder
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createRenderBundleEncoder()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPURenderBundleEncoder")}} that can be used to pre-record bundles of commands. These can be reused in {{domxref("GPURenderPassEncoder")}}s via the {{domxref("GPURenderPassEncoder.executeBundles", "executeBundles()")}} method, as many times as required.
@@ -45,9 +43,8 @@ A {{domxref("GPURenderBundleEncoder")}} object instance.
 In the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer/), numerous similar operations are done on many different objects simultaneously. A bundle of commands is encoded using the following function:
 
 ```js
-function recordRenderPass(
-  passEncoder: GPURenderBundleEncoder | GPURenderPassEncoder
-) {
+// passEncoder is a GPURenderBundleEncoder or a GPURenderPassEncoder
+function recordRenderPass(passEncoder) {
   if (settings.dynamicOffsets) {
     passEncoder.setPipeline(dynamicPipeline);
   } else {
@@ -81,7 +78,7 @@ const renderBundle = renderBundleEncoder.finish();
 {{domxref("GPURenderPassEncoder.executeBundles()")}} is then used to reuse the work across multiple render passes to improve performance. Study the example code listing for the full context.
 
 ```js
-// ...
+// …
 
 return function doDraw(timestamp) {
   if (startTime === undefined) {
@@ -107,7 +104,7 @@ return function doDraw(timestamp) {
   device.queue.submit([commandEncoder.finish()]);
 };
 
-// ...
+// …
 ```
 
 ## Specifications

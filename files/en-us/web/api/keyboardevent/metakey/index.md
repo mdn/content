@@ -21,6 +21,8 @@ systems may intercept the key so it is never detected.
 > as an "OS" key rather than the "Meta" key. `KeyboardEvent.metaKey` was
 > `false` when the <kbd>⊞ Windows</kbd> key was pressed.
 
+When the <kbd>Meta</kbd> key itself is pressed or released, this property is `true` for its {{domxref("Element/keydown_event", "keydown")}} event and `false` for its {{domxref("Element/keyup_event", "keyup")}} event, because both events fire _after_ the state change.
+
 ## Value
 
 A boolean value.
@@ -28,16 +30,16 @@ A boolean value.
 ## Examples
 
 ```html
-<button onclick="ismetaKey(event)">Click me with the meta key</button>
+<button>Click me with the meta key</button>
 
 <p id="output"></p>
 ```
 
 ```js
-function ismetaKey(e) {
+document.querySelector("button").addEventListener("click", (e) => {
   document.querySelector("#output").textContent =
     `metaKey pressed? ${e.metaKey}`;
-}
+});
 ```
 
 ### Result

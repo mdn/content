@@ -4,6 +4,7 @@ short-title: afterscriptexecute
 slug: Web/API/Element/afterscriptexecute_event
 page-type: web-api-event
 status:
+  - deprecated
   - non-standard
 browser-compat: api.Element.afterscriptexecute_event
 ---
@@ -21,12 +22,16 @@ This event is not cancelable.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("afterscriptexecute", (event) => {});
+```js-nolint
+addEventListener("afterscriptexecute", (event) => { })
+```
 
-onafterscriptexecute = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onafterscriptexecute = (event) => { }
 ```
 
 ## Event type

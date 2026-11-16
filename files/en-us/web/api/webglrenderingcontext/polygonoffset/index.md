@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.polygonOffset
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.polygonOffset()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies the scale factors and
@@ -66,3 +66,4 @@ gl.getParameter(gl.POLYGON_OFFSET_UNITS); // 3
 ## See also
 
 - {{domxref("WebGLRenderingContext.depthFunc()")}}
+- {{domxref("EXT_polygon_offset_clamp.polygonOffsetClampEXT()")}}

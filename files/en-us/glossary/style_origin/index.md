@@ -2,9 +2,8 @@
 title: Style origin
 slug: Glossary/Style_origin
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In {{Glossary("CSS")}}, there are three categories of sources for style changes. These categories are called **style origins**. They are the **user agent origin**, **user origin**, and the **author origin**.
 
@@ -19,4 +18,4 @@ The style origins are used to determine where to stop rolling back (or backtrack
 
 ## See also
 
-- [CSS Cascading and Inheritance: Cascading Origins](https://drafts.csswg.org/css-cascade-4/#cascading-origins)
+- [CSS cascading and inheritance: Cascading Origins](https://drafts.csswg.org/css-cascade-4/#cascading-origins)

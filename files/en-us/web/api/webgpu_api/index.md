@@ -2,12 +2,10 @@
 title: WebGPU API
 slug: Web/API/WebGPU_API
 page-type: web-api-overview
-status:
-  - experimental
 browser-compat: api.GPU
 ---
 
-{{DefaultAPISidebar("WebGPU API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{DefaultAPISidebar("WebGPU API")}}{{securecontext_header}}
 
 The **WebGPU API** enables web developers to use the underlying system's GPU (Graphics Processing Unit) to carry out high-performance computations and draw complex images that can be rendered in the browser.
 
@@ -17,7 +15,7 @@ WebGPU is the successor to {{domxref("WebGL_API", "WebGL", "", "nocode")}}, prov
 
 It is fair to say that {{domxref("WebGL_API", "WebGL", "", "nocode")}} revolutionized the web in terms of graphical capabilities after it first appeared around 2011. WebGL is a JavaScript port of the [OpenGL ES 2.0](https://registry.khronos.org/OpenGL-Refpages/es2.0/) graphics library, allowing web pages to pass rendering computations directly to the device's GPU to be processed at very high speeds, and render the result inside a {{htmlelement("canvas")}} element.
 
-WebGL and the [GLSL](<https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)>) language used to write WebGL shader code are complex, so several WebGL libraries have been created to make WebGL apps easier to write: Popular examples include [Three.js](https://threejs.org/), [Babylon.js](https://www.babylonjs.com/), and [PlayCanvas](https://playcanvas.com/). Developers have used these tools to build immersive web-based 3D games, music videos, training and modeling tools, VR and AR experiences, and more.
+WebGL and the [GLSL](<https://wikis.khronos.org/opengl/Core_Language_(GLSL)>) language used to write WebGL shader code are complex, so several WebGL libraries have been created to make WebGL apps easier to write: Popular examples include [Three.js](https://threejs.org/), [Babylon.js](https://www.babylonjs.com/), and [PlayCanvas](https://playcanvas.com/). Developers have used these tools to build immersive web-based 3D games, music videos, training and modeling tools, VR and AR experiences, and more.
 
 However, WebGL has some fundamental issues that needed addressing:
 
@@ -34,7 +32,6 @@ There are several layers of abstraction between a device GPU and a web browser r
 ![A basic stack diagram showing the position of the different elements of a WebGPU architecture on a device](basic-webgpu-stack.png)
 
 - Physical devices have GPUs. Most devices only have one GPU, but some have more than one. Different GPU types are available:
-
   - Integrated GPUs, which live on the same board as the CPU and share its memory.
   - Discrete GPUs, which live on their own board, separate from the CPU.
   - Software "GPUs", implemented on the CPU.
@@ -42,7 +39,7 @@ There are several layers of abstraction between a device GPU and a web browser r
   > [!NOTE]
   > The above diagram assumes a device with only one GPU.
 
-- A native GPU API, which is part of the OS (e.g. Metal on macOS), is a programming interface allowing native applications to use the capabilities of the GPU. API instructions are sent to the GPU (and responses received) via a driver. It is possible for a system to have multiple native OS APIs and drivers available to communicate with the GPU, although the above diagram assumes a device with only one native API/driver.
+- A native GPU API, which is part of the OS (for example, Metal on macOS), is a programming interface allowing native applications to use the capabilities of the GPU. API instructions are sent to the GPU (and responses received) via a driver. It is possible for a system to have multiple native OS APIs and drivers available to communicate with the GPU, although the above diagram assumes a device with only one native API/driver.
 - A browser's WebGPU implementation handles communicating with the GPU via a native GPU API driver. A WebGPU adapter effectively represents a physical GPU and driver available on the underlying system, in your code.
 - A logical device is an abstraction via which a single web app can access GPU capabilities in a compartmentalized way. Logical devices are required to provide multiplexing capabilities. A physical device's GPU is used by many applications and processes concurrently, including potentially many web apps. Each web app needs to be able to access WebGPU in isolation for security and logic reasons.
 
@@ -51,7 +48,7 @@ There are several layers of abstraction between a device GPU and a web browser r
 A logical device — represented by a {{domxref("GPUDevice")}} object instance — is the basis from which a web app accesses all WebGPU functionality. Accessing a device is done as follows:
 
 1. The {{domxref("Navigator.gpu")}} property (or {{domxref("WorkerNavigator.gpu")}} if you are using WebGPU functionality from inside a worker) returns the {{domxref("GPU")}} object for the current context.
-2. You access an adapter via the {{domxref("GPU.requestAdapter", "GPU.requestAdapter()")}} method. This method accepts an optional settings object allowing you to request for example a high-performance or low-energy adapter. If this is not included, the device will provide access to the default adapter, which is good enough for most purposes.
+2. You access an adapter via the {{domxref("GPU.requestAdapter", "GPU.requestAdapter()")}} method. This method accepts an optional settings object allowing you to request, for example, a [compatibility mode](#webgpu_compatibility_mode), high-performance, or low-energy adapter. If this is not included, the device will provide access to the default adapter, which is good enough for most purposes.
 3. A device can be requested via {{domxref("GPUAdapter.requestDevice()")}}. This method also accepts an options object (referred to as a descriptor), which can be used to specify the exact features and limits you want the logical device to have. If this is not included, the supplied device will have a reasonable general-purpose spec that is good enough for most purposes.
 
 Putting this together with some feature detection checks, the above process could be achieved as follows:
@@ -62,30 +59,57 @@ async function init() {
     throw Error("WebGPU not supported.");
   }
 
-  const adapter = await navigator.gpu.requestAdapter();
+  let adapter;
+  try {
+    adapter = await navigator.gpu.requestAdapter();
+  } catch (error) {
+    console.error(error);
+  }
   if (!adapter) {
     throw Error("Couldn't request WebGPU adapter.");
   }
 
   const device = await adapter.requestDevice();
 
-  //...
+  // …
 }
 ```
+
+### WebGPU compatibility mode
+
+By default, a `GPUAdapter` supports all core WebGPU features and limits, which allows applications to support devices with modern platform graphics APIs. This is referred to as "core" WebGPU.
+
+It is possible to opt WebGPU into "compatibility mode", which specifies that the `GPUAdapter` will support a restricted subset of the WebGPU API capable of running in older graphics APIs such as OpenGL ES 3.1 and Direct3D 11. This is done by specifying a [`featureLevel`](/en-US/docs/Web/API/GPU/requestAdapter#featurelevel) value of `compatibility` in your {{domxref("GPU.requestAdapter()")}} call:
+
+```js
+const adapter = await navigator.gpu.requestAdapter({
+  featureLevel: "compatibility",
+});
+```
+
+The exact restrictions of compatibility mode are detailed at [WebGPU Compatibility Mode](https://webgpufundamentals.org/webgpu/lessons/webgpu-compatibility-mode.html).
+Restricted applications are still valid WebGPU core applications due to supporting a subset of core WebGPU, and will therefore run on all browsers that support core WebGPU, even if they don't explicitly support compatibility mode.
+
+A `GPUAdapter` or `GPUDevice` that supports core WebGPU will have the `core-features-and-limits` feature available (see {{domxref("GPUSupportedFeatures")}}). To test whether a WebGPU app is in core or compatibility mode, check whether the `core-features-and-limits` feature is supported, for example:
+
+```js
+const isCore = device.features.has("core-features-and-limits");
+```
+
+See also [Using compatibility mode only if necessary](/en-US/docs/Web/API/GPU/requestAdapter#using_compatibility_mode_only_if_necessary).
 
 ## Pipelines and shaders: WebGPU app structure
 
 A pipeline is a logical structure containing programmable stages that are completed to get your program's work done. WebGPU is currently able to handle two types of pipeline:
 
 - A render pipeline renders graphics, typically into a {{htmlelement("canvas")}} element, but it could also render graphics offscreen. It has two main stages:
-
   - A vertex stage, in which a vertex shader takes positioning data fed into the GPU and uses it to position a series of vertices in 3D space by applying specified effects like rotation, translation, or perspective. The vertices are then assembled into primitives such as triangles (the basic building block of rendered graphics) and rasterized by the GPU to figure out what pixels each one should cover on the drawing canvas.
 
   - A fragment stage, in which a fragment shader computes the color for each pixel covered by the primitives produced by the vertex shader. These computations frequently use inputs such as images (in the form of textures) that provide surface details and the position and color of virtual lights.
 
 - A compute pipeline is for general computation. A compute pipeline contains a single compute stage in which a compute shader takes general data, processes it in parallel across a specified number of workgroups, then returns the result in one or more buffers. The buffers can contain any kind of data.
 
-The shaders mentioned above are sets of instructions processed by the GPU. WebGPU shaders are written in a low-level Rust-like language called [WebGPU Shader Language](https://gpuweb.github.io/gpuweb/wgsl/) (WGSL).
+The shaders mentioned above are sets of instructions processed by the GPU. WebGPU shaders are written in a low-level Rust-like language called [WebGPU Shading Language](https://gpuweb.github.io/gpuweb/wgsl/) (WGSL).
 
 There are several different ways in which you could architect a WebGPU app, but the process will likely contain the following steps:
 
@@ -157,7 +181,7 @@ const canvas = document.querySelector("#gpuCanvas");
 const context = canvas.getContext("webgpu");
 
 context.configure({
-  device: device,
+  device,
   format: navigator.gpu.getPreferredCanvasFormat(),
   alphaMode: "premultiplied",
 });
@@ -225,7 +249,7 @@ Next, we create a descriptor object that specifies the configuration of our rend
 
 In addition, in the case of the vertex shader stage we provide our `vertexBuffers` object to provide the expected state of our vertex data. And in the case of our fragment shader stage, we provide an array of color target states that indicate the specified rendering format (this matches the format specified in our canvas context config earlier).
 
-We also specify a `primitive` state, which in this case just states the type of primitive we will be drawing, and a `layout` of `auto`. The `layout` property defines the layout (structure, purpose, and type) of all the GPU resources (buffers, textures, etc.) used during the execution of the pipeline. In more complex apps, this would take the form of a {{domxref("GPUPipelineLayout")}} object, created using {{domxref("GPUDevice.createPipelineLayout()")}} (you can see an example in our [Basic compute pipeline](#basic_compute_pipeline)), which allows the GPU to figure out how to run the pipeline most efficiently ahead of time. Here however we are specifying the `auto` value, which will cause the pipeline to generate an implicit bind group layout based on any bindings defined in the shader code.
+We also specify a `primitive` object, which in this case just states the type of primitive we will be drawing, and a `layout` of `auto`. The `layout` property defines the layout (structure, purpose, and type) of all the GPU resources (buffers, textures, etc.) used during the execution of the pipeline. In more complex apps, this would take the form of a {{domxref("GPUPipelineLayout")}} object, created using {{domxref("GPUDevice.createPipelineLayout()")}} (you can see an example in our [Basic compute pipeline](#basic_compute_pipeline)), which allows the GPU to figure out how to run the pipeline most efficiently ahead of time. However, we are specifying the `auto` value, which will cause the pipeline to generate an implicit bind group layout based on any bindings defined in the shader code.
 
 ```js
 const pipelineDescriptor = {
@@ -321,7 +345,8 @@ The app follows a similar structure to the basic rendering demo. We create a {{d
 
 ```js
 // Define global buffer size
-const BUFFER_SIZE = 1000;
+const NUM_ELEMENTS = 1000;
+const BUFFER_SIZE = NUM_ELEMENTS * 4; // Buffer size, in bytes
 
 const shader = `
 @group(0) @binding(0)
@@ -336,7 +361,7 @@ fn main(
   local_id : vec3u,
 ) {
   // Avoid accessing the buffer out of bounds
-  if (global_id.x >= ${BUFFER_SIZE}) {
+  if (global_id.x >= ${NUM_ELEMENTS}) {
     return;
   }
 
@@ -431,7 +456,7 @@ We then signal the end of the render pass command list using {{domxref("GPURende
 ```js
 passEncoder.setPipeline(computePipeline);
 passEncoder.setBindGroup(0, bindGroup);
-passEncoder.dispatchWorkgroups(Math.ceil(BUFFER_SIZE / 64));
+passEncoder.dispatchWorkgroups(Math.ceil(NUM_ELEMENTS / 64));
 
 passEncoder.end();
 ```
@@ -447,7 +472,7 @@ commandEncoder.copyBufferToBuffer(
   0, // Source offset
   stagingBuffer,
   0, // Destination offset
-  BUFFER_SIZE,
+  BUFFER_SIZE, // Length, in bytes
 );
 
 // End frame by passing array of command buffers to command queue for execution
@@ -461,7 +486,7 @@ Once the output data is available in the `stagingBuffer`, we use the {{domxref("
 await stagingBuffer.mapAsync(
   GPUMapMode.READ,
   0, // Offset
-  BUFFER_SIZE, // Length
+  BUFFER_SIZE, // Length, in bytes
 );
 
 const copyArrayBuffer = stagingBuffer.getMappedRange(0, BUFFER_SIZE);
@@ -515,7 +540,7 @@ You can find more information about WebGPU error handling in the explainer — s
 - {{domxref("HTMLCanvasElement.getContext()")}} — the `"webgpu"` `contextType`
   - : Invoking `getContext()` with the `"webgpu"` `contextType` returns a {{domxref("GPUCanvasContext")}} object instance, which can then be configured with {{domxref("GPUCanvasContext.configure()")}}.
 - {{domxref("GPUCanvasContext")}}
-  - : Represents the WebGPU rendering context of an {{htmlelement("canvas")}} element.
+  - : Represents the WebGPU rendering context of a {{htmlelement("canvas")}} element.
 
 ### Representing pipeline resources
 
@@ -554,7 +579,7 @@ You can find more information about WebGPU error handling in the explainer — s
 - {{domxref("GPUComputePassEncoder")}}
   - : Encodes commands related to controlling the compute shader stage, as issued by a {{domxref("GPUComputePipeline")}}. Part of the overall encoding activity of a {{domxref("GPUCommandEncoder")}}.
 - {{domxref("GPUQueue")}}
-  - : controls execution of encoded commands on the GPU.
+  - : Controls execution of encoded commands on the GPU.
 - {{domxref("GPURenderBundle")}}
   - : A container for pre-recorded bundles of commands (see {{domxref("GPURenderBundleEncoder")}}).
 - {{domxref("GPURenderBundleEncoder")}}
@@ -590,7 +615,7 @@ You can find more information about WebGPU error handling in the explainer — s
 
 ## Security requirements
 
-The whole API is available only in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+The whole API is available only in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 ## Examples
 

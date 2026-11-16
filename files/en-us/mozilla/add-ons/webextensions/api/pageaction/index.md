@@ -3,15 +3,14 @@ title: pageAction
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction
 page-type: webextension-api
 browser-compat: webextensions.api.pageAction
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Read and modify attributes of and listen to clicks on the address bar button defined with the [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key.
 
 An [address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) is a button added to the browser address bar.
 
-![Paw print icon representing a page action](page-action.png)
+![Paw print icon representing a page action, highlighted, in the Firefox address bar](page-action.png)
 
 You can listen for clicks on the icon in a background script, or specify a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) that opens when the icon is clicked.
 
@@ -52,11 +51,11 @@ Page actions are for actions that are only relevant to particular pages (such as
 - {{WebExtAPIRef("pageAction.onClicked")}}
   - : Fired when a page action icon is clicked. This event will not fire if the page action has a popup.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/mv2/reference/pageAction) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.

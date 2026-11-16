@@ -2,9 +2,8 @@
 title: Symmetric-key cryptography
 slug: Glossary/Symmetric-key_cryptography
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 Symmetric-key cryptography is a term used for cryptographic algorithms that use the same key for encryption and for decryption. The key is usually called a "symmetric key" or a "secret key".
 
@@ -21,4 +20,4 @@ Most symmetric-key algorithms currently in use are block {{Glossary("Cipher", "c
 - Related glossary terms:
   - {{Glossary("Block cipher mode of operation")}}
   - {{Glossary("Cryptography")}}
-  - {{Glossary("Cryptographic hash function")}}
+  - {{Glossary("Hash function")}}

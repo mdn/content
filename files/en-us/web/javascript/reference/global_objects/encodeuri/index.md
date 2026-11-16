@@ -3,13 +3,27 @@ title: encodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURI
 page-type: javascript-function
 browser-compat: javascript.builtins.encodeURI
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Objects")}}
 
 The **`encodeURI()`** function encodes a {{Glossary("URI")}} by replacing each instance of certain characters by one, two, three, or four escape sequences representing the {{Glossary("UTF-8")}} encoding of the character (will only be four escape sequences for characters composed of two surrogate characters). Compared to {{jsxref("encodeURIComponent()")}}, this function encodes fewer characters, preserving those that are part of the URI syntax.
 
-{{EmbedInteractiveExample("pages/js/globalprops-encodeuri.html")}}
+{{InteractiveExample("JavaScript Demo: encodeURI()")}}
+
+```js interactive-example
+const uri = "https://mozilla.org/?x=шеллы";
+const encoded = encodeURI(uri);
+console.log(encoded);
+// Expected output: "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+
+try {
+  console.log(decodeURI(encoded));
+  // Expected output: "https://mozilla.org/?x=шеллы"
+} catch (e) {
+  // Catches a malformed URI
+  console.error(e);
+}
+```
 
 ## Syntax
 
@@ -59,15 +73,13 @@ http://username:password@www.example.com:80/path/to/file.php?foo=316&bar=this+ha
 const name = "Ben & Jerry's";
 
 // This is bad:
-const link = encodeURI(`https://example.com/?choice=${name}`); // "https://example.com/?choice=Ben%20&%20Jerry's"
-console.log([...new URL(link).searchParams]); // [['choice', 'Ben '], [" Jerry's", '']
+const badLink = encodeURI(`https://example.com/?choice=${name}`); // "https://example.com/?choice=Ben%20&%20Jerry's"
+console.log([...new URL(badLink).searchParams]); // [['choice', 'Ben '], [" Jerry's", '']]
 
 // Instead:
-const link = encodeURI(
-  `https://example.com/?choice=${encodeURIComponent(name)}`,
-);
-// "https://example.com/?choice=Ben%2520%2526%2520Jerry's"
-console.log([...new URL(link).searchParams]); // [['choice', "Ben%20%26%20Jerry's"]]
+const goodLink = `https://example.com/?choice=${encodeURIComponent(name)}`;
+// "https://example.com/?choice=Ben%20%26%20Jerry's"
+console.log([...new URL(goodLink).searchParams]); // [['choice', "Ben & Jerry's"]]
 ```
 
 ## Examples
@@ -85,9 +97,25 @@ console.log(encodeURI(set1)); // ;/?:@&=+$,#
 console.log(encodeURI(set2)); // -.!~*'()
 console.log(encodeURI(set3)); // ABC%20abc%20123 (the space gets encoded as %20)
 
-console.log(encodeURIComponent(set1)); // %3B%2C%2F%3F%3A%40%26%3D%2B%24%23
+console.log(encodeURIComponent(set1)); // %3B%2F%3F%3A%40%26%3D%2B%24%2C%23
 console.log(encodeURIComponent(set2)); // -.!~*'()
 console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (the space gets encoded as %20)
+```
+
+### Encoding for RFC3986
+
+The more recent [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986) makes square brackets reserved (for {{Glossary("IPv6")}}) and thus not encoded when forming something which could be part of a URL (such as a host). It also reserves !, ', (, ), and \*, even though these characters have no formalized URI delimiting uses. The following function encodes a string for RFC3986-compliant URL format.
+
+```js
+function encodeRFC3986URI(str) {
+  return encodeURI(str)
+    .replace(/%5B/g, "[")
+    .replace(/%5D/g, "]")
+    .replace(
+      /[!'()*]/g,
+      (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
+    );
+}
 ```
 
 ### Encoding a lone surrogate throws
@@ -106,22 +134,6 @@ encodeURI("\uDFFF");
 ```
 
 You can use {{jsxref("String.prototype.toWellFormed()")}}, which replaces lone surrogates with the Unicode replacement character (U+FFFD), to avoid this error. You can also use {{jsxref("String.prototype.isWellFormed()")}} to check if a string contains lone surrogates before passing it to `encodeURI()`.
-
-### Encoding for RFC3986
-
-The more recent [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986) makes square brackets reserved (for {{Glossary("IPv6")}}) and thus not encoded when forming something which could be part of a URL (such as a host). It also reserves !, ', (, ), and \*, even though these characters have no formalized URI delimiting uses. The following function encodes a string for RFC3986-compliant URL format.
-
-```js
-function encodeRFC3986URI(str) {
-  return encodeURI(str)
-    .replace(/%5B/g, "[")
-    .replace(/%5D/g, "]")
-    .replace(
-      /[!'()*]/g,
-      (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
-    );
-}
-```
 
 ## Specifications
 

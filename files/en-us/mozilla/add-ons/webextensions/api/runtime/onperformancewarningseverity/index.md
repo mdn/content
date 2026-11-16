@@ -3,9 +3,8 @@ title: runtime.OnPerformanceWarningSeverity
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/OnPerformanceWarningSeverity
 page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.OnPerformanceWarningSeverity
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The severity of warning that dispatched the {{WebExtAPIRef("runtime.onPerformanceWarning")}} event.
 

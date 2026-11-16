@@ -23,7 +23,7 @@ abort(reason)
 
 ### Return value
 
-A {{jsxref("Promise")}}, which fulfills with the value given in the `reason` parameter.
+A {{jsxref("Promise")}}, which fulfills with `undefined`.
 
 ### Exceptions
 
@@ -36,19 +36,19 @@ A {{jsxref("Promise")}}, which fulfills with the value given in the `reason` par
 const writableStream = new WritableStream(
   {
     write(chunk) {
-      // ...
+      // …
     },
     close() {
-      // ...
+      // …
     },
     abort(err) {
-      // ...
+      // …
     },
   },
   queuingStrategy,
 );
 
-// ...
+// …
 
 // abort the stream later on, when required
 writableStream.abort();

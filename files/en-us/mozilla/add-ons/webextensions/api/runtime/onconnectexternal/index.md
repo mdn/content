@@ -3,9 +3,8 @@ title: runtime.onConnectExternal
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal
 page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onConnectExternal
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when an extension receives a connection request from a different extension.
 
@@ -35,15 +34,9 @@ Events have three functions:
 ### Parameters
 
 - `function`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `port`
       - : A {{WebExtAPIRef('runtime.Port')}} object connecting the current script to the other extension it is connecting to.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -84,6 +77,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnectExternal) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

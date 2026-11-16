@@ -48,7 +48,7 @@ In some cases, you must read many external files. This is a standard function wh
 
 ```js
 function xhrSuccess() {
-  this.callback.apply(this, this.arguments);
+  this.callback(...this.arguments);
 }
 
 function xhrError() {
@@ -154,28 +154,15 @@ The `if` statement checks the status code after the transaction is completed. If
 
 One of the few cases in which a synchronous request does not usually block execution is the use of {{domxref('XMLHttpRequest')}} within a [`Worker`](/en-US/docs/Web/API/Worker).
 
-**`example.html`** (the main page):
+**`example.js`** (script to be invoked on the main page):
 
-```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>MDN Example</title>
-    <script>
-      const worker = new Worker("myTask.js");
-      worker.onmessage = (event) => {
-        alert(`Worker said: ${event.data}`);
-      };
+```js
+const worker = new Worker("myTask.js");
+worker.onmessage = (event) => {
+  console.log(`Worker said: ${event.data}`);
+};
 
-      worker.postMessage("Hello");
-    </script>
-  </head>
-  <body>
-    …
-  </body>
-</html>
+worker.postMessage("Hello");
 ```
 
 **`myFile.txt`** (the target of the synchronous {{domxref('XMLHttpRequest')}} invocation):
@@ -209,7 +196,7 @@ There are some cases in which the synchronous usage of {{domxref('XMLHttpRequest
 The following example shows theoretical analytics code that attempts to submit data to a server by using a synchronous {{domxref('XMLHttpRequest')}} in an unload handler. This results in the unloading of the page to be delayed.
 
 ```js
-window.addEventListener("unload", logData, false);
+window.addEventListener("unload", logData);
 
 function logData() {
   const client = new XMLHttpRequest();
@@ -224,7 +211,7 @@ Using the **`sendBeacon()`** method, the data will be transmitted asynchronously
 The following example shows a theoretical analytics code pattern that submits data to a server by using the **`sendBeacon()`** method.
 
 ```js
-window.addEventListener("unload", logData, false);
+window.addEventListener("unload", logData);
 
 function logData() {
   navigator.sendBeacon("/log", analyticsData);

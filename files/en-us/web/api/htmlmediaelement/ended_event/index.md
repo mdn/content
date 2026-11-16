@@ -19,12 +19,16 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("ended", (event) => {});
+```js-nolint
+addEventListener("ended", (event) => { })
+```
 
-onended = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onended = (event) => { }
 ```
 
 ## Event type
@@ -47,7 +51,7 @@ video.addEventListener("ended", (event) => {
 });
 ```
 
-Using the `onended` event handler property:
+Using the `onended` event handler property (but note that this replaces other event listeners added using `onended`, if any):
 
 ```js
 const video = document.querySelector("video");
@@ -94,9 +98,7 @@ video.onended = (event) => {
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
 - [Media Capture and Streams](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
-
   - [`MediaStreamTrack`: `ended` event](/en-US/docs/Web/API/MediaStreamTrack/ended_event)
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-
   - [Web audio API: ended event](/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event)

@@ -9,7 +9,7 @@ browser-compat: api.Selection.toString
 {{ ApiRef("DOM") }}
 
 The **`Selection.toString()`** method returns a string
-currently being represented by the selection object, i.e. the currently selected text.
+currently being represented by the selection object, i.e., the currently selected text.
 
 ## Syntax
 

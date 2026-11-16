@@ -3,15 +3,25 @@ title: class
 slug: Web/JavaScript/Reference/Statements/class
 page-type: javascript-statement
 browser-compat: javascript.statements.class
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`class`** declaration creates a {{Glossary("binding")}} of a new [class](/en-US/docs/Web/JavaScript/Reference/Classes) to a given name.
 
 You can also define classes using the [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class).
 
-{{EmbedInteractiveExample("pages/js/statement-class.html")}}
+{{InteractiveExample("JavaScript Demo: class declaration")}}
+
+```js interactive-example
+class Polygon {
+  constructor(height, width) {
+    this.area = height * width;
+  }
+}
+
+console.log(new Polygon(4, 3).area);
+// Expected output: 12
+```
 
 ## Syntax
 
@@ -53,7 +63,7 @@ console.log(Foo3); // 1
 
 ## Examples
 
-### A simple class declaration
+### A class declaration
 
 In the following example, we first define a class named `Rectangle`, then extend it to create a class named `FilledRectangle`.
 

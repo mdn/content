@@ -10,7 +10,7 @@ browser-compat: api.TextUpdateEvent.text
 
 {{APIRef("EditContext API")}}{{SeeCompatTable}}
 
-The **`TextUpdateEvent.text`** read-only property contains the text that was inserted within the updated range of a {{domxref("EditContext")}}'s `textupdate` event.
+The **`TextUpdateEvent.text`** read-only property contains the text that was inserted within the updated range of an {{domxref("EditContext")}}'s `textupdate` event.
 
 ## Value
 

@@ -3,9 +3,8 @@ title: action.getBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/action/getBadgeText
 page-type: webextension-api-function
 browser-compat: webextensions.api.action.getBadgeText
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the browser action's badge text.
 
@@ -25,9 +24,7 @@ let gettingText = browser.action.getBadgeText(
 ### Parameters
 
 - `details`
-
   - : An object with the following properties:
-
     - `tabId` {{optional_inline}}
       - : `integer`. Specifies the tab from which to get the badge text.
     - `windowId` {{optional_inline}}

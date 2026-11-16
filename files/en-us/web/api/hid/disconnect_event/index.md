@@ -8,18 +8,22 @@ status:
 browser-compat: api.HID.disconnect_event
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
 The **`disconnect`** event of the {{domxref("HID")}} interface fires when the user agent disconnects a HID device.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("disconnect", (event) => {});
+```js-nolint
+addEventListener("disconnect", (event) => { })
+```
 
-ondisconnect = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+ondisconnect = (event) => { }
 ```
 
 ## Event type
@@ -27,13 +31,6 @@ ondisconnect = (event) => {};
 A {{domxref("HIDConnectionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("HIDConnectionEvent")}}
-
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("HIDConnectionEvent.device", "device")}} {{ReadOnlyInline}}
-  - : The {{domxref("HIDDevice")}} the event is fired for.
 
 ## Examples
 

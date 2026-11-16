@@ -3,9 +3,8 @@ title: name
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/name
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.name
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -28,7 +27,7 @@ Name of the extension. This is used to identify the extension in the browser's u
 
 It's good practice to keep the name short enough to display in the UI. Also, the length of the name of a published extension may be limited. For example, as of February 2024:
 
-- addons.mozilla.org accepts a maximum of 50 characters.
+- addons.mozilla.org accepts a maximum of 45 characters.
 - the Chrome Web Store accepts a maximum of 75 characters.
 - the Microsoft Edge Addons store accepts a maximum of 45 characters.
 

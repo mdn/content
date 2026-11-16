@@ -12,12 +12,16 @@ The **`speechend`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("speechend", (event) => {});
+```js-nolint
+addEventListener("speechend", (event) => { })
+```
 
-onspeechend = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onspeechend = (event) => { }
 ```
 
 ## Event type
@@ -29,14 +33,16 @@ A generic {{DOMxRef("Event")}} with no added properties.
 You can use the `speechend` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const recognition = new (
+  window.SpeechRecognition || window.webkitSpeechRecognition
+)();
 
 recognition.addEventListener("speechend", () => {
   console.log("Speech has stopped being detected");
 });
 ```
 
-Or use the `onspeechend` event handler property:
+Or use the `onspeechend` event handler property (but note that this replaces other event listeners added using `onspeechend`, if any):
 
 ```js
 recognition.onspeechend = () => {

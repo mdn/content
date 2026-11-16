@@ -13,7 +13,7 @@ The **`KeyboardLayoutMap`** interface of the {{domxref("Keyboard API", "", "", "
 
 A `KeyboardLayoutMap` instance is a read-only [`Map`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis), in which each key is a string identifying the unique physical key on the keyboard (a "key code"), and the corresponding value is the associated key attribute value (which may be affected by the keyboard layout, and so on).
 
-A list of valid keys is found in the [UI Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) specification.
+A list of valid keys is found in the [UI Events KeyboardEvent code Values](https://w3c.github.io/uievents-code/) specification.
 
 ## Instance properties
 

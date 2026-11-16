@@ -8,18 +8,22 @@ browser-compat: api.Element.transitionstart_event
 
 {{APIRef}}
 
-The **`transitionstart`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has actually started, i.e., after any {{cssxref("transition-delay")}} has ended.
+The **`transitionstart`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/Guides/Transitions/Using) has actually started, i.e., after any {{cssxref("transition-delay")}} has ended.
 
 This event is not cancelable.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("transitionstart", (event) => {});
+```js-nolint
+addEventListener("transitionstart", (event) => { })
+```
 
-ontransitionstart = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+ontransitionstart = (event) => { }
 ```
 
 ## Event type
@@ -27,17 +31,6 @@ ontransitionstart = (event) => {};
 A {{domxref("TransitionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TransitionEvent")}}
-
-## Event properties
-
-_Also inherits properties from its parent {{domxref("Event")}}_.
-
-- {{domxref("TransitionEvent.propertyName")}} {{ReadOnlyInline}}
-  - : A string containing the name CSS property associated with the transition.
-- {{domxref("TransitionEvent.elapsedTime")}} {{ReadOnlyInline}}
-  - : A `float` giving the amount of time the transition has been running, in seconds, when this event fired. This value is not affected by the {{cssxref("transition-delay")}} property.
-- {{domxref("TransitionEvent.pseudoElement")}} {{ReadOnlyInline}}
-  - : A string, starting with `::`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the transition doesn't run on a pseudo-element but on the element, an empty string: `''`.
 
 ## Examples
 
@@ -49,7 +42,7 @@ element.addEventListener("transitionstart", () => {
 });
 ```
 
-The same, but using the `ontransitionstart` property instead of `addEventListener()`:
+The same, but using the `ontransitionstart` property instead of `addEventListener()` (but note that this replaces other event listeners added using `ontransitionstart`, if any):
 
 ```js
 element.ontransitionstart = () => {
@@ -70,7 +63,7 @@ In the following example, we have a simple {{htmlelement("div")}} element, style
 .transition {
   width: 100px;
   height: 100px;
-  background: rgb(255 0 0 / 100%);
+  background: red;
   transition-property: transform, background;
   transition-duration: 2s;
   transition-delay: 1s;
@@ -78,7 +71,7 @@ In the following example, we have a simple {{htmlelement("div")}} element, style
 
 .transition:hover {
   transform: rotate(90deg);
-  background: rgb(255 0 0 / 0%);
+  background: transparent;
 }
 ```
 
@@ -105,8 +98,8 @@ transition.addEventListener("transitionend", () => {
 
 The difference is that:
 
-- transitionrun fires when the transition is created (i.e. at the start of any delay).
-- transitionstart fires when the actual animation has begun (i.e. at the end of any delay).
+- transitionrun fires when the transition is created (i.e., at the start of any delay).
+- transitionstart fires when the actual animation has begun (i.e., at the end of any delay).
 
 ## Specifications
 

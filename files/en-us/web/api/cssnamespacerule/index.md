@@ -7,7 +7,7 @@ browser-compat: api.CSSNamespaceRule
 
 {{APIRef("CSSOM")}}
 
-The **`CSSNamespaceRule`** interface describes an object representing a single CSS {{ cssxref("@namespace") }} [at-rule](/en-US/docs/Web/CSS/At-rule).
+The **`CSSNamespaceRule`** interface describes an object representing a single CSS {{ cssxref("@namespace") }} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 
 {{InheritanceDiagram}}
 
@@ -15,9 +15,9 @@ The **`CSSNamespaceRule`** interface describes an object representing a single C
 
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
-- {{domxref("CSSNamespaceRule.namespaceURI")}}
+- {{domxref("CSSNamespaceRule.namespaceURI")}} {{ReadOnlyInline}}
   - : Returns a string containing the text of the URI of the given namespace.
-- {{domxref("CSSNamespaceRule.prefix")}}
+- {{domxref("CSSNamespaceRule.prefix")}} {{ReadOnlyInline}}
   - : Returns a string with the name of the prefix associated to this namespace. If there is no such prefix, returns an empty string.
 
 ## Instance methods
@@ -29,12 +29,12 @@ _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 The stylesheet includes a namespace as the only rule. Therefore the first {{domxref("CSSRule")}} returned will be a `CSSNamespaceRule`.
 
 ```css
-@namespace url(http://www.w3.org/1999/xhtml);
+@namespace url("http://www.w3.org/1999/xhtml");
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); //a CSSNamespaceRule
+const myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0]); // A CSSNamespaceRule
 ```
 
 ## Specifications

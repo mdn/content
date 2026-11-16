@@ -11,9 +11,9 @@ The `ReadableStreamBYOBReader` interface of the [Streams API](/en-US/docs/Web/AP
 It is used for efficient copying from underlying sources where the data is delivered as an "anonymous" sequence of bytes, such as files.
 
 An instance of this reader type should usually be obtained by calling {{domxref("ReadableStream.getReader()")}} on the stream, specifying `mode: "byob"` in the options parameter.
-The readable stream must have an _underlying byte source_. In other words, it must have been [constructed](/en-US/docs/Web/API/ReadableStream/ReadableStream) specifying an underlying source with [`type: "bytes"`](/en-US/docs/Web/API/ReadableStream/ReadableStream#type)).
+The readable stream must have an _underlying byte source_. In other words, it must have been [constructed](/en-US/docs/Web/API/ReadableStream/ReadableStream) specifying an underlying source with [`type: "bytes"`](/en-US/docs/Web/API/ReadableStream/ReadableStream#type).
 
-Using this kind of reader, a [`read()`](#readablestreambyobreader.read) request when the readable stream's internal queues are empty will result in a zero copy transfer from the underlying source (bypassing the stream's internal queues).
+Using this kind of reader, a [`read()`](/en-US/docs/Web/API/ReadableStreamBYOBReader/read) request when the readable stream's internal queues are empty will result in a zero copy transfer from the underlying source (bypassing the stream's internal queues).
 If the internal queues are not empty, a `read()` will satisfy the request from the buffered data.
 
 Note that the methods and properties are similar to those for the default reader ({{domxref("ReadableStreamDefaultReader")}}).
@@ -107,8 +107,8 @@ reader.closed
 ```
 
 To cancel the stream call {{domxref("ReadableStreamBYOBReader.cancel()")}}, optionally specifying a _reason_.
-This returns a promise that will resolve when the stream has been cancelled.
-When the stream is cancelled the controller will in turn call `cancel()` on the underlying source, passing in the optional reason.
+This returns a promise that will resolve when the stream has been canceled.
+When the stream is canceled the controller will in turn call `cancel()` on the underlying source, passing in the optional reason.
 
 The example code in [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams#examples) calls the cancel method when a button is pressed, as shown:
 
@@ -137,5 +137,4 @@ reader.releaseLock();
 - [Streams API concepts](/en-US/docs/Web/API/Streams_API)
 - [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
 - {{domxref("ReadableStream")}}
-- [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.
-- [Web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) or [sd-streams](https://github.com/stardazed/sd-streams) - polyfills
+- [Web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill)

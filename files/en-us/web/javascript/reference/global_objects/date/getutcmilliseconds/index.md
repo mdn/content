@@ -1,15 +1,22 @@
 ---
 title: Date.prototype.getUTCMilliseconds()
+short-title: getUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCMilliseconds
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getUTCMilliseconds()`** method of {{jsxref("Date")}} instances returns the milliseconds for this date according to universal time.
 
-{{EmbedInteractiveExample("pages/js/date-getutcmilliseconds.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getUTCMilliseconds()", "shorter")}}
+
+```js interactive-example
+const exampleDate = new Date("2018-01-02T03:04:05.678Z"); // 2 January 2018, 03:04:05.678 (UTC)
+
+console.log(exampleDate.getUTCMilliseconds());
+// Expected output: 678
+```
 
 ## Syntax
 

@@ -3,12 +3,10 @@ title: "GPUBuffer: mapState property"
 short-title: mapState
 slug: Web/API/GPUBuffer/mapState
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUBuffer.mapState
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`mapState`** read-only property of the
 {{domxref("GPUBuffer")}} interface represents the mapped state of the `GPUBuffer`.
@@ -36,7 +34,7 @@ const stagingBuffer = device.createBuffer({
 
 console.log(stagingBuffer.mapState); // "unmapped"
 
-// ...
+// …
 
 await stagingBuffer.mapAsync(
   GPUMapMode.READ,

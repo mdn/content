@@ -35,8 +35,6 @@ new FetchEvent(type, options)
         Typically, pressing the refresh button in a browser is a reload, while clicking a
         link and pressing the back button is not. If not present, it defaults to
         `false`.
-    - `replacesClientId` {{optional_inline}}
-      - : A string which identifies the client which is being replaced by `resultingClientId`. It defaults to `""`.
     - `resultingClientId` {{optional_inline}}
       - : A string containing the new `clientId` if the client changes as a result of the page load. It defaults to `""`
     - `handled`

@@ -1,17 +1,27 @@
 ---
 title: Array.prototype.map()
+short-title: map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.map
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`map()`** method of {{jsxref("Array")}} instances creates
 a new array populated with the results of calling a provided function on
 every element in the calling array.
 
-{{EmbedInteractiveExample("pages/js/array-map.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.map()")}}
+
+```js interactive-example
+const array = [1, 4, 9, 16];
+
+// Pass a function to map
+const mapped = array.map((x) => x * 2);
+
+console.log(mapped);
+// Expected output: Array [2, 8, 18, 32]
+```
 
 ## Syntax
 
@@ -135,7 +145,7 @@ const filteredNumbers = numbers.map((num, index) => {
   }
 });
 
-// index goes from 0, so the filterNumbers are 1,2,3 and undefined.
+// index goes from 0, so the filteredNumbers are 1,2,3 and undefined.
 // filteredNumbers is [1, 2, 3, undefined]
 // numbers is still [1, 2, 3, 4]
 ```
@@ -188,9 +198,10 @@ products.forEach((product) => {
 Or, if you want to create a new array instead:
 
 ```js
-const productsWithPrice = products.map((product) => {
-  return { ...product, price: 100 };
-});
+const productsWithPrice = products.map((product) => ({
+  ...product,
+  price: 100,
+}));
 ```
 
 ### Using the third argument of callbackFn
@@ -257,7 +268,7 @@ console.log(Array.prototype.map.call(arrayLike, (x) => x ** 2));
 // [ 4, 9, 16 ]
 ```
 
-This example shows how to iterate through a collection of objects collected by `querySelectorAll`. This is because `querySelectorAll` returns a `NodeList` (which is a collection of objects). In this case, we return all the selected `option`s' values on the screen:
+This example shows how to iterate through a collection of objects collected by `querySelectorAll()`, returning an array containing the values of all the selected `option` elements. Because `querySelectorAll()` returns a `NodeList`, which is an array-like object without the `map()` method, we use `Array.prototype.map.call()`, passing `elems` as the `this` value and the callback as the second argument.
 
 ```js
 const elems = document.querySelectorAll("select option:checked");
@@ -276,7 +287,8 @@ You can also use {{jsxref("Array.from()")}} to transform `elems` to an array, an
 
 ## See also
 
-- [Polyfill of `Array.prototype.map` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.map` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
+- [es-shims polyfill of `Array.prototype.map`](https://www.npmjs.com/package/array.prototype.map)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}

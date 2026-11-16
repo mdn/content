@@ -2,9 +2,8 @@
 title: Offline and background operation
 slug: Web/Progressive_web_apps/Guides/Offline_and_background_operation
 page-type: guide
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 Usually, websites are very dependent on both reliable network connectivity and on the user having their pages open in a browser. Without network connectivity, most websites are just unusable, and if the user does not have the site open in a browser tab, most websites are unable to do anything.
 
@@ -37,7 +36,7 @@ Normally, an entire website runs in a single thread. This includes the website's
 
 A [service worker](/en-US/docs/Web/API/Service_Worker_API) is a specific type of [web worker](/en-US/docs/Web/API/Web_Workers_API) that's used to implement PWAs. Like all web workers, a service worker runs in a separate thread to the main JavaScript code. The main code creates the worker, passing in a URL to the worker's script. The worker and the main code can't directly access each other's state, but can communicate by sending each other messages. Workers can be used to run computationally expensive tasks in the background: because they run in a separate thread, the main JavaScript code in the app, that implements the app's UI, can stay responsive to the user.
 
-So a PWA always has a high level architecture split between:
+So a PWA always has a high-level architecture split between:
 
 - The _main app_, with the HTML, CSS, and the part of the JavaScript that implements the app's UI (by handling user events, for example)
 - The _service worker_, which handles offline and background tasks
@@ -170,7 +169,7 @@ As soon as the device has network connectivity, the `sync` event fires in the se
 // service-worker.js
 
 self.addEventListener("sync", (event) => {
-  if (event.tag == "send-message") {
+  if (event.tag === "send-message") {
     event.waitUntil(sendMessage());
   }
 });
@@ -216,7 +215,7 @@ async function requestBackgroundFetch(movieData) {
       downloadTotal: 60 * 1024 * 1024,
     },
   );
-  //...
+  // …
 }
 ```
 
@@ -279,7 +278,7 @@ The event object passed into `backgroundfetchsuccess` and `backgroundfetchfail` 
 
 self.addEventListener("backgroundfetchsuccess", (event) => {
   // retrieve and store response data
-  // ...
+  // …
 
   event.updateUI({ title: "Finished your download!" });
 });
@@ -362,7 +361,7 @@ When the PWA no longer needs periodic background updates, (for example, because 
 ```js
 // main.js
 
-async function registerPeriodicSync() {
+async function unregisterPeriodicSync() {
   const swRegistration = await navigator.serviceWorker.ready;
   swRegistration.periodicSync.unregister("update-news");
 }
@@ -391,11 +390,9 @@ The pattern for subscribing to push messages looks like this:
 1. As a prerequisite, the app server needs to be provisioned with a {{Glossary("Public-key_cryptography", "public/private key pair")}}, so it can sign push messages. Signing messages needs to follow the [VAPID](https://datatracker.ietf.org/doc/html/draft-thomson-webpush-vapid-02) specification.
 
 2. On the device, the app uses the {{domxref("PushManager.subscribe()")}} method to subscribe to messages from the server. The `subscribe()` method:
-
    - Takes the app server's public key as an argument: this is what the push service will use to verify the signature on messages from the app server.
 
    - Returns a `Promise` that resolves to a {{domxref("PushSubscription")}} object. This object includes:
-
      - The [endpoint](/en-US/docs/Web/API/PushSubscription/endpoint) for the push service: this is how the app server knows where to send push messages.
      - The [public encryption key](/en-US/docs/Web/API/PushSubscription/getKey) that your server will use to encrypt messages to the push service.
 

@@ -38,5 +38,5 @@ console.log(obj.playbackRate); // Expected Output: 1
 ## See also
 
 - {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.playbackRate` property
-- Browser bug reports to support negative `playbackRate` in [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=1468019) and [Blink](https://issues.chromium.org/issues/40410591) (Chrome, etc.)
+- Browser bug reports to support negative `playbackRate` in [Firefox](https://bugzil.la/1468019) and [Blink](https://crbug.com/40410591) (Chrome, etc.)
 - The Web Hypertext Application Technology Working Group (WHATWG) [issue to require support for negative `playbackRate`](https://github.com/whatwg/html/issues/3754)

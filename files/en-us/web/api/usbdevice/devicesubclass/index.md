@@ -8,9 +8,9 @@ status:
 browser-compat: api.USBDevice.deviceSubclass
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}{{SecureContext_Header}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-The **`deviceSubclass`** read only property of the
+The **`deviceSubclass`** read-only property of the
 {{domxref("USBDevice")}} interface one of three properties that identify USB devices for
 the purpose of loading a USB driver that will work with that device. The other two
 properties are USBDevice.deviceClass and USBDevice.deviceProtocol.

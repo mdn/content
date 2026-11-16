@@ -14,12 +14,16 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("enterpictureinpicture", (event) => {});
+```js-nolint
+addEventListener("enterpictureinpicture", (event) => { })
+```
 
-onenterpictureinpicture = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onenterpictureinpicture = (event) => { }
 ```
 
 ## Event type
@@ -27,10 +31,6 @@ onenterpictureinpicture = (event) => {};
 A {{domxref("PictureInPictureEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PictureInPictureEvent")}}
-
-## Event properties
-
-This interface also inherits properties from its parent {{domxref("Event")}}.
 
 ## Examples
 
@@ -46,14 +46,14 @@ function onEnterPip() {
   console.log("Picture-in-Picture mode activated!");
 }
 
-video.addEventListener("enterpictureinpicture", onEnterPip, false);
+video.addEventListener("enterpictureinpicture", onEnterPip);
 
 button.onclick = () => {
   video.requestPictureInPicture();
 };
 ```
 
-Using the `onenterpictureinpicture` event handler property:
+Using the `onenterpictureinpicture` event handler property (but note that this replaces other event listeners added using `onenterpictureinpicture`, if any):
 
 ```js
 const video = document.querySelector("#video");

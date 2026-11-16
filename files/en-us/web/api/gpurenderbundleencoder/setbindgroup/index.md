@@ -3,12 +3,10 @@ title: "GPURenderBundleEncoder: setBindGroup() method"
 short-title: setBindGroup()
 slug: Web/API/GPURenderBundleEncoder/setBindGroup
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderBundleEncoder.setBindGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setBindGroup()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface sets the {{domxref("GPUBindGroup")}} to use for subsequent render bundle commands, for a given index.
@@ -30,9 +28,9 @@ setBindGroup(index, bindGroup, dynamicOffsets, dynamicOffsetsStart,
 - `index`
   - : The index to set the bind group at. This matches the `n` index value of the corresponding [`@group(n)`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-group) attribute in the shader code ({{domxref("GPUShaderModule")}}) used in the related pipeline.
 - `bindGroup`
-  - : The {{domxref("GPUBindGroup")}} to use for subsequent render bundle commands.
+  - : The {{domxref("GPUBindGroup")}} to use for subsequent render bundle commands, or `null`, in which case any previously-set bind group in the given slot is unset.
 - `dynamicOffsets` {{optional_inline}}
-  - : A value specifying the offset, in bytes, for each entry in `bindGroup` with `hasDynamicOffset: true` set (i.e. in the descriptor of the {{domxref("GPUDevice.createBindGroupLayout()")}} call that created the {{domxref("GPUBindGroupLayout")}} object that the `bindGroup` is based on). This value can be:
+  - : A value specifying the offset, in bytes, for each entry in `bindGroup` with `hasDynamicOffset: true` set (i.e., in the descriptor of the {{domxref("GPUDevice.createBindGroupLayout()")}} call that created the {{domxref("GPUBindGroupLayout")}} object that the `bindGroup` is based on). This value can be:
     - An array of numbers specifying the different offsets.
     - A {{jsxref("Uint32Array")}} containing numbers specifying the offsets.
 
@@ -45,11 +43,11 @@ If a {{jsxref("Uint32Array")}} value is specified for `dynamicOffsets`, both of 
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-For `setBindGroup()` calls that use a {{jsxref("Uint32Array")}} value for `dynamicOffsets`, the call will throw with a `RangeError` {{domxref("DOMException")}} if:
+For `setBindGroup()` calls that use a {{jsxref("Uint32Array")}} value for `dynamicOffsets`, the call will throw with a {{jsxref("RangeError")}} if:
 
 - `dynamicOffsetsStart` is less than 0.
 - `dynamicOffsetsStart` + `dynamicOffsetsLength` is greater than `dynamicOffsets.length`.
@@ -65,6 +63,8 @@ The following criteria must be met when calling **`setBindGroup()`**, otherwise 
 - For each `bindGroup` entry, the bound `buffer`'s `offset`, plus the corresponding layout entry's `minBindingSize`, plus the corresponding dynamic offset specified in `dynamicOffsets`, is less than or equal to the bound `buffer`'s `size`.
 
 ## Examples
+
+### Set bind group
 
 ```js
 function recordRenderPass(passEncoder) {
@@ -89,6 +89,16 @@ function recordRenderPass(passEncoder) {
 ```
 
 The above snippet is taken from the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer/).
+
+### Unset bind group
+
+```js
+// Set bind group in slot 0
+passEncoder.setBindGroup(0, timeBindGroup);
+
+// Later, unset bind group in slot 0
+passEncoder.setBindGroup(0, null);
+```
 
 ## Specifications
 

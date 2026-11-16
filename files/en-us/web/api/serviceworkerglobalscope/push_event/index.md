@@ -14,12 +14,16 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("push", (event) => {});
+```js-nolint
+addEventListener("push", (event) => { })
+```
 
-onpush = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onpush = (event) => { }
 ```
 
 ## Event type
@@ -28,34 +32,23 @@ A {{domxref("PushEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PushEvent")}}
 
-## Event properties
-
-_Inherits properties from its parent, {{domxref("ExtendableEvent")}}. Additional properties:_
-
-- {{domxref("PushEvent.data")}} {{ReadOnlyInline}}
-  - : Returns a reference to a {{domxref("PushMessageData")}} object containing data sent to the {{domxref("PushSubscription")}}.
-
 ## Example
 
 This example sets up a handler for `push` events that takes {{Glossary("JSON")}} data, parses it, and dispatches the message for handling based on information contained within the message.
 
 ```js
-self.addEventListener(
-  "push",
-  (event) => {
-    let message = event.data.json();
+self.addEventListener("push", (event) => {
+  let message = event.data.json();
 
-    switch (message.type) {
-      case "init":
-        doInit();
-        break;
-      case "shutdown":
-        doShutdown();
-        break;
-    }
-  },
-  false,
-);
+  switch (message.type) {
+    case "init":
+      doInit();
+      break;
+    case "shutdown":
+      doShutdown();
+      break;
+  }
+});
 ```
 
 ## Specifications

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Navigator.windowControlsOverlay
 ---
 
-{{SecureContext_Header}}{{APIRef("")}}
+{{SecureContext_Header}}{{APIRef("Window Controls Overlay API")}}
 
 The **`windowControlsOverlay`** read-only property of the {{domxref("Navigator")}}
 interface returns the {{domxref("WindowControlsOverlay")}} interface, which exposes
@@ -14,7 +14,7 @@ information about the title bar geometry in desktop Progressive Web Apps that us
 
 Progressive Web Apps installed on desktop Operating Systems can opt-in to the
 Window Controls Overlay feature by using the `window-controls-overlay` value in the
-[`display_override`](/en-US/docs/Web/Manifest/display_override) web app manifest member.
+[`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) web app manifest member.
 
 Doing so hides the default window title bar and gives the app access to the full area
 of the app window.

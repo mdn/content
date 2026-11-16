@@ -16,9 +16,9 @@ Each time you call `setRequestHeader()` after the first time you call it, the sp
 
 If no {{HTTPHeader("Accept")}} header has been set using this, an `Accept` header with the type `"*/*"` is sent with the request when {{domxref("XMLHttpRequest.send", "send()")}} is called.
 
-For security reasons, there are several {{Glossary("Forbidden_header_name", "forbidden header names")}} whose values are controlled by the user agent. Any attempt to set a value for one of those headers from frontend JavaScript code will be ignored without warning or error.
+For security reasons, there are several {{Glossary("Forbidden_request_header", "forbidden request headers")}} whose values are controlled by the user agent. Any attempt to set a value for one of those headers from frontend JavaScript code will be ignored without warning or error.
 
-In addition, the [`Authorization`](/en-US/docs/Web/HTTP/Headers/Authorization) HTTP header may be added to a request, but will be removed if the request is redirected cross-origin.
+In addition, the [`Authorization`](/en-US/docs/Web/HTTP/Reference/Headers/Authorization) HTTP header may be added to a request, but will be removed if the request is redirected cross-origin.
 
 > [!NOTE]
 > For your custom fields, you may encounter a "**not allowed by Access-Control-Allow-Headers in preflight response**" exception when you send requests across domains.

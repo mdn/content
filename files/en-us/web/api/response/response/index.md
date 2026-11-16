@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.Response.Response
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`Response()`** constructor creates a new {{domxref("Response")}} object.
 
@@ -21,10 +21,8 @@ new Response(body, options)
 ### Parameters
 
 - `body` {{optional_inline}}
-
   - : An object defining a body for the response. This can be `null` (which is
     the default value), or one of:
-
     - {{domxref("Blob")}}
     - {{jsxref("ArrayBuffer")}}
     - {{jsxref("TypedArray")}}
@@ -36,9 +34,7 @@ new Response(body, options)
     - string literal
 
 - `options` {{optional_inline}}
-
   - : An options object containing any custom settings that you want to apply to the response, or an empty object (which is the default value). The possible options are:
-
     - `status`
       - : The status code for the response.
         The default value is `200`.
@@ -46,7 +42,7 @@ new Response(body, options)
       - : The status message associated with the status code, such as `"OK"`.
         The default value is `""`.
     - `headers`
-      - : Any headers you want to add to your response, contained within a {{domxref("Headers")}} object or object literal of {{jsxref("String")}} key/value pairs (see [HTTP headers](/en-US/docs/Web/HTTP/Headers) for a reference).
+      - : Any headers you want to add to your response, contained within a {{domxref("Headers")}} object or object literal of {{jsxref("String")}} key/value pairs (see [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers) for a reference).
         By default this is empty.
 
 ## Examples
@@ -71,5 +67,5 @@ const myResponse = new Response(myBlob, myOptions);
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

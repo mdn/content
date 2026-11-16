@@ -37,11 +37,11 @@ each element that matches at least one of the specified selectors or an empty
 ## Examples
 
 This example returns a list of all `div` elements within the
-`DocumentFragment` with a class of either "`note`" or
-"`alert`":
+`DocumentFragment` with a class of either `note` or
+`alert`:
 
 ```js
-const matches = documentfrag.querySelectorAll("div.note, div.alert");
+const matches = documentFrag.querySelectorAll("div.note, div.alert");
 ```
 
 ## Specifications

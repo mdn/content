@@ -27,17 +27,17 @@ A string. The value of this property can be one of the following:
 - **Any other value**
   - : The embedded content is treated as a data block, and won't be processed by the browser.
 
-For more information, please refer to the [`type`](/en-US/docs/Web/HTML/Element/script/type) attribute of the {{HTMLElement("script")}} element.
+For more information, please refer to the [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute of the {{HTMLElement("script")}} element.
 
 ## Examples
 
 ```html
-<script id="el" type="text/javascript"></script>
+<script id="el" type="module"></script>
 ```
 
 ```js
 const el = document.getElementById("el");
-console.log(el.type); // Output: "text/javascript"
+console.log(el.type); // Output: "module"
 ```
 
 ## Specifications

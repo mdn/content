@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 220 220">
+  <defs>
+    <marker id="arrow" viewBox="0 0 4 4" refX="4" refY="2" markerWidth="4" markerHeight="4" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M0 0 4 2 0 4Z" fill="context-stroke"/>
+    </marker>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse" x="30" y="30">
+      <path d="M20 0H0V20" fill="none" stroke="#e5e5e5" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="220" height="220" fill="#fff"/>
+  <rect x="30" y="30" width="150" height="150" fill="url(#grid)" stroke="#a6a6a6"/>
+  <path d="M30 186V30H186" fill="none" stroke="#000" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <g font-family="sans-serif" font-size="10" fill="#000">
+    <text x="27" y="25">0</text>
+    <text x="21" y="34">0</text>
+    <text x="191" y="34">X</text>
+    <text x="26" y="199">Y</text>
+  </g>
+  <rect x="80" y="80" width="60" height="60" fill="#315ea0"/>
+  <g fill="none" stroke="#000" marker-end="url(#arrow)">
+    <path d="M31 80H79"/>
+    <path d="M80 31V79"/>
+    <path d="M80 188H140" marker-start="url(#arrow)"/>
+    <path d="M188 80V140" marker-start="url(#arrow)"/>
+  </g>
+  <g font-family="sans-serif" font-size="10">
+    <text x="52" y="77">x</text>
+    <text x="71" y="59">y</text>
+    <text x="110" y="201" text-anchor="middle" letter-spacing="1">width</text>
+    <text x="201" y="110" text-anchor="middle" letter-spacing="1" transform="rotate(-90 201 110)">height</text>
+  </g>
+</svg>

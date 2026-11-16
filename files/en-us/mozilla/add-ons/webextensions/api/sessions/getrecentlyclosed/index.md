@@ -3,9 +3,8 @@ title: sessions.getRecentlyClosed()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed
 page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.getRecentlyClosed
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns an array of {{WebExtAPIRef("sessions.Session", "Session")}} objects, representing windows and tabs that were closed in the current browsing session (that is: the time since the browser was started).
 
@@ -29,10 +28,6 @@ let gettingSessions = browser.sessions.getRecentlyClosed(
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). This will be fulfilled with an array of {{WebExtAPIRef("sessions.Session", "Session")}} objects, one for each of the most recently closed tabs or windows in the current browsing session, up to {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}} or the number included in the `filter` argument, whichever is smaller. The array is given in the reverse of the order in which tabs or windows were closed, so the most recently closed will be at index 0.
 
 If an error occurs, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -65,6 +60,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions) API.

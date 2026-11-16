@@ -8,8 +8,7 @@ browser-compat: api.IDBIndex.objectStore
 
 {{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
-The **`objectStore`** property of the {{domxref("IDBIndex")}}
-interface returns the object store referenced by the current index.
+The **`objectStore`** read-only property of the {{domxref("IDBIndex")}} interface returns the object store referenced by the current index.
 
 ## Value
 
@@ -27,7 +26,7 @@ based on the index, not the primary key.
 The current object store is logged to the console: it should be returned something like
 this:
 
-```json
+```plain
 IDBObjectStore { name: "contactsList", keyPath: "id", indexNames: DOMStringList[7], transaction: IDBTransaction, autoIncrement: false }
 ```
 

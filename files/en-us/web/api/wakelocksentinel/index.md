@@ -28,10 +28,8 @@ _Also inherits properties from its parent interface, {{DOMxRef("EventTarget")}}.
 - {{domxref("WakeLockSentinel.released", "released")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the `WakeLockSentinel` has been released.
 - {{domxref("WakeLockSentinel.type", "type")}} {{ReadOnlyInline}}
-
   - : Returns a string representation of the currently acquired `WakeLockSentinel` type.
     Return values are:
-
     - `screen`: A screen wake lock.
       Prevents devices from dimming or locking the screen.
 

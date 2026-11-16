@@ -7,7 +7,7 @@ status:
 browser-compat: api.HTMLMarqueeElement
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 The **`HTMLMarqueeElement`** interface provides methods to manipulate {{HTMLElement("marquee")}} elements.
 
@@ -59,25 +59,6 @@ _Inherits methods from its parent, {{DOMxRef("HTMLElement")}}._
   - : Fires when the marquee has finished the amount of scrolling that is set by the loop attribute. It can only fire when the loop attribute is set to some number that is greater than 0.
 - `start` {{Deprecated_Inline}}
   - : Fires when the marquee starts scrolling.
-
-## Examples
-
-```html
-<marquee>This text will scroll from right to left</marquee>
-
-<marquee direction="up">This text will scroll from bottom to top</marquee>
-
-<marquee
-  direction="down"
-  width="250"
-  height="200"
-  behavior="alternate"
-  style="border:solid">
-  <marquee behavior="alternate">This text will bounce</marquee>
-</marquee>
-```
-
-{{EmbedLiveSample("Examples", 600, 450)}}
 
 ## Specifications
 

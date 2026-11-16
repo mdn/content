@@ -8,7 +8,7 @@ browser-compat: api.HTMLOutputElement.checkValidity
 
 {{APIRef("HTML DOM")}}
 
-The **`checkValidity()`** method of the {{domxref("HTMLOutputElement")}} interface checks if the element is valid, but always returns true because {{HTMLElement("output")}} elements are never candidates for [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
+The **`checkValidity()`** method of the {{domxref("HTMLOutputElement")}} interface checks if the element is valid, but always returns true because {{HTMLElement("output")}} elements are never candidates for [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation).
 
 ## Syntax
 
@@ -46,5 +46,5 @@ console.log(element.checkValidity());
 - {{domxref("HTMLOutputElement.reportValidity()")}}
 - {{HTMLElement("output")}}
 - {{HTMLElement("form")}}
-- [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Learn: Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [Guide: Constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)

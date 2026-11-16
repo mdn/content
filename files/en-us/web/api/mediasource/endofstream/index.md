@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaSource.endOfStream
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`endOfStream()`** method of the
 {{domxref("MediaSource")}} interface signals the end of the stream.
@@ -21,10 +21,8 @@ endOfStream(endOfStreamError)
 ### Parameters
 
 - `endOfStreamError` {{optional_inline}}
-
   - : A string representing an error to throw when the end of the stream
     is reached. The possible values are:
-
     - `network`
       - : Terminates playback and signals that a network error has
         occurred. This can be used create a custom error handler related to media streams.
@@ -47,12 +45,12 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if {{domxref("MediaSource.readyState")}} is not equal to `open`, or one or more of the {{domxref("SourceBuffer")}} objects in {{domxref("MediaSource.sourceBuffers")}} are being updated (i.e. their {{domxref("SourceBuffer.updating")}} property is
+  - : Thrown if {{domxref("MediaSource.readyState")}} is not equal to `open`, or one or more of the {{domxref("SourceBuffer")}} objects in {{domxref("MediaSource.sourceBuffers")}} are being updated (i.e., their {{domxref("SourceBuffer.updating")}} property is
     `true`.)
 
 ## Examples
 
-The following snippet is from a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation). The function `getMediaSource()`, which is not defined here, returns a `MediaSource`.
+The following snippet is from an example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation). The function `getMediaSource()`, which is not defined here, returns a `MediaSource`.
 
 ```js
 const assetURL = "frag_bunny.mp4";

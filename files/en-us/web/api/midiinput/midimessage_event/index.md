@@ -12,26 +12,23 @@ The `midimessage` event of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) 
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("midimessage", (event) => {});
+```js-nolint
+addEventListener("midimessage", (event) => { })
+```
 
-onmidimessage = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onmidimessage = (event) => { }
 ```
 
 ## Event type
 
-An {{domxref("MIDIMessageEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MIDIMessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MIDIMessageEvent")}}
-
-## Event properties
-
-_This interface also inherits properties from {{domxref("Event")}}._
-
-- {{domxref("MIDIMessageEvent.data")}}
-  - : A {{jsxref("Uint8Array")}} containing the data bytes of a single MIDI message. See the [MIDI specification](https://midi.org/summary-of-midi-1-0-messages) for more information on its form.
 
 ## Examples
 

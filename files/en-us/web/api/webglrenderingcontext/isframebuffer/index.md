@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.isFramebuffer
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.isFramebuffer()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) returns `true` if the
@@ -21,7 +21,7 @@ isFramebuffer(framebuffer)
 ### Parameters
 
 - `framebuffer`
-  - : A {{domxref("WebGLFramebuffer")}} to check.
+  - : A {{domxref("WebGLFramebuffer")}} to check. Passing `null` returns `false`.
 
 ### Return value
 

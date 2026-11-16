@@ -6,19 +6,12 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLIFrameElement.src
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`HTMLIFrameElement.src`**
-A string that reflects the [`src`](/en-US/docs/Web/HTML/Element/iframe#src) HTML attribute, containing the address of the content to be embedded.
+A string that reflects the [`src`](/en-US/docs/Web/HTML/Reference/Elements/iframe#src) HTML attribute, containing the address of the content to be embedded.
 
-Note that programmatically removing an `<iframe>`'s src attribute (e.g. via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame.
-
-## Syntax
-
-```js-nolint
-src = iframeElt.src
-iframeElt.src= src
-```
+Note that programmatically removing an `<iframe>`'s src attribute (e.g., via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame.
 
 ## Example
 

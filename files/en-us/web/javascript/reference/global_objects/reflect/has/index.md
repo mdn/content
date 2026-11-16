@@ -1,16 +1,31 @@
 ---
 title: Reflect.has()
+short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.has
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Reflect.has()`** static method is like the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator, but
 as a function.
 
-{{EmbedInteractiveExample("pages/js/reflect-has.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.has()")}}
+
+```js interactive-example
+const object = {
+  property1: 42,
+};
+
+console.log(Reflect.has(object, "property1"));
+// Expected output: true
+
+console.log(Reflect.has(object, "property2"));
+// Expected output: false
+
+console.log(Reflect.has(object, "toString"));
+// Expected output: true
+```
 
 ## Syntax
 
@@ -88,7 +103,7 @@ Reflect.has(c, "foo"); // true
 
 ## See also
 
-- [Polyfill of `Reflect.has` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.has` in `core-js`](https://core-js.io/docs/features/ecmascript/reflect)
 - {{jsxref("Reflect")}}
 - [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in)
 - [`handler.has()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has)

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.cullFace
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.cullFace()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies whether or not front-
 and/or back-facing polygons can be culled.
@@ -20,11 +20,9 @@ cullFace(mode)
 ### Parameters
 
 - `mode`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying whether front- or back-facing polygons are
     candidates for culling. The default value is `gl.BACK`. Possible values
     are:
-
     - `gl.FRONT`
     - `gl.BACK`
     - `gl.FRONT_AND_BACK`

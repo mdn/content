@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.Window.toolbar
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
-Returns the `toolbar` object.
+The **`toolbar`** read-only property of the {{domxref("Window")}} interface returns the `toolbar` object.
 
 This is one of a group of `Window` properties that contain a boolean `visible` property, that used to represent whether or not a particular part of a web browser's user interface was visible.
 

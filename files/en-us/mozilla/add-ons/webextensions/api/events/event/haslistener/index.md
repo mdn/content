@@ -3,9 +3,8 @@ title: Event.hasListener()
 slug: Mozilla/Add-ons/WebExtensions/API/events/Event/hasListener
 page-type: webextension-api-event
 browser-compat: webextensions.api.events.Event.hasListener
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Checks if a listener is registered to the event.
 
@@ -18,12 +17,11 @@ events.Event.hasListener(listener)
 ### Parameters
 
 - `listener`
-
   - : `function`. The listener to check.
 
 ### Return value
 
-A boolean value: `true` if the listener is registered to the event. Otherwise,`false`.
+A boolean value: `true` if the listener is registered to the event. Otherwise, `false`.
 
 ## Browser compatibility
 

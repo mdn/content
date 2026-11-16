@@ -3,9 +3,8 @@ title: devtools.panels.ElementsPanel
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel
 page-type: webextension-api-type
 browser-compat: webextensions.api.devtools.panels.ElementsPanel
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An `ElementsPanel` represents the HTML/CSS inspector in the browser's devtools. This is called the Page Inspector in Firefox and the Elements panel in Chrome.
 
@@ -19,11 +18,11 @@ An `ElementsPanel` represents the HTML/CSS inspector in the browser's devtools. 
 - [`devtools.panels.ElementsPanel.onSelectionChanged`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged)
   - : Fired when the user selects a different element in the page, for example using the "Inspect element" context menu item.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools) API.

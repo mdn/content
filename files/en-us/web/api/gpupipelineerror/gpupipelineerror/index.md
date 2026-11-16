@@ -3,12 +3,10 @@ title: "GPUPipelineError: GPUPipelineError() constructor"
 short-title: GPUPipelineError()
 slug: Web/API/GPUPipelineError/GPUPipelineError
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.GPUPipelineError.GPUPipelineError
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUPipelineError()`** constructor creates a new
 {{domxref("GPUPipelineError")}} object instance.
@@ -32,7 +30,7 @@ new GPUPipelineError(message, options)
 
 ## Examples
 
-A developer would not manually use the constructor to create a `GPUPipelineError` object. The user agent uses this constructor to create an appropriate object when a {{jsxref("Promise")}} returned by a {{domxref("GPUDevice.createComputePipelineAsync()")}} or {{domxref("GPUDevice.createRenderPipelineAsync()")}} call rejects, signalling a pipeline failure.
+A developer would not manually use the constructor to create a `GPUPipelineError` object. The user agent uses this constructor to create an appropriate object when a {{jsxref("Promise")}} returned by a {{domxref("GPUDevice.createComputePipelineAsync()")}} or {{domxref("GPUDevice.createRenderPipelineAsync()")}} call rejects, signaling a pipeline failure.
 
 See the main [`GPUPipelineError`](/en-US/docs/Web/API/GPUPipelineError#examples) page for an example involving a `GPUPipelineError` object instance.
 

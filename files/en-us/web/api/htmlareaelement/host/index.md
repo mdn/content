@@ -8,10 +8,9 @@ browser-compat: api.HTMLAreaElement.host
 
 {{ApiRef("HTML DOM")}}
 
-The **`HTMLAreaElement.host`** property is a
-string containing the host, that is the _hostname_, and then,
-if the _port_ of the URL is nonempty, a `':'`, and the _port_
-of the URL.
+The **`host`** property of the {{domxref("HTMLAreaElement")}} interface is a string containing the host, which is the {{domxref("HTMLAreaElement.hostname", "hostname")}}, and then, if the {{glossary("port")}} of the URL is nonempty, a `":"`, followed by the {{domxref("HTMLAreaElement.port", "port")}} of the URL. If the URL does not have a `hostname`, this property contains an empty string, `""`.
+
+See {{domxref("URL.host")}} for more information.
 
 ## Value
 

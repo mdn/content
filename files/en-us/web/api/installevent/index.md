@@ -15,7 +15,7 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
 ## Constructor
 
-- {{domxref("InstallEvent.InstallEvent", "InstallEvent()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- {{domxref("InstallEvent.InstallEvent", "InstallEvent()")}}
   - : Creates a new `InstallEvent` object.
 
 ## Instance properties
@@ -26,7 +26,7 @@ _Inherits properties from its parent, {{domxref("ExtendableEvent")}}_.
 
 _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 
-- {{domxref("InstallEvent.addRoutes()", "addRoutes()")}} {{experimental_inline}}
+- {{domxref("InstallEvent.addRoutes()", "addRoutes()")}}
   - : Specifies one or more static routes, which define rules for fetching specified resources that will be used even before service worker startup.
 
 ## Examples
@@ -59,16 +59,15 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     caches
       .open(CURRENT_CACHES["prefetch"])
-      .then((cache) => {
-        return cache
-          .addAll(
-            urlsToPrefetch.map((urlToPrefetch) => {
-              return new Request(urlToPrefetch, { mode: "no-cors" });
-            }),
-          )
-          .then(() => {
-            console.log("All resources have been fetched and cached.");
-          });
+      .then((cache) =>
+        cache.addAll(
+          urlsToPrefetch.map(
+            (urlToPrefetch) => new Request(urlToPrefetch, { mode: "no-cors" }),
+          ),
+        ),
+      )
+      .then(() => {
+        console.log("All resources have been fetched and cached.");
       })
       .catch((error) => {
         console.error("Pre-fetching failed:", error);

@@ -12,12 +12,16 @@ The **`voiceschanged`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Sp
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("voiceschanged", (event) => {});
+```js-nolint
+addEventListener("voiceschanged", (event) => { })
+```
 
-onvoiceschanged = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onvoiceschanged = (event) => { }
 ```
 
 ## Event type
@@ -33,27 +37,27 @@ const synth = window.speechSynthesis;
 
 synth.addEventListener("voiceschanged", () => {
   const voices = synth.getVoices();
-  for (let i = 0; i < voices.length; i++) {
+  for (const voice of voices) {
     const option = document.createElement("option");
-    option.textContent = `${voices[i].name} (${voices[i].lang})`;
-    option.setAttribute("data-lang", voices[i].lang);
-    option.setAttribute("data-name", voices[i].name);
+    option.textContent = `${voice.name} (${voice.lang})`;
+    option.setAttribute("data-lang", voice.lang);
+    option.setAttribute("data-name", voice.name);
     voiceSelect.appendChild(option);
   }
 });
 ```
 
-Or use the `onvoiceschanged` event handler property:
+Or use the `onvoiceschanged` event handler property (but note that this replaces other event listeners added using `onvoiceschanged`, if any):
 
 ```js
 const synth = window.speechSynthesis;
 synth.onvoiceschanged = () => {
   const voices = synth.getVoices();
-  for (let i = 0; i < voices.length; i++) {
+  for (const voice of voices) {
     const option = document.createElement("option");
-    option.textContent = `${voices[i].name} (${voices[i].lang})`;
-    option.setAttribute("data-lang", voices[i].lang);
-    option.setAttribute("data-name", voices[i].name);
+    option.textContent = `${voice.name} (${voice.lang})`;
+    option.setAttribute("data-lang", voice.lang);
+    option.setAttribute("data-name", voice.name);
     voiceSelect.appendChild(option);
   }
 };

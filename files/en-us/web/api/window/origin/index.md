@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.origin
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
 The **`origin`** read-only property of the {{domxref("Window")}} interface returns the origin of the global scope, serialized as a string.
 
@@ -22,7 +22,7 @@ Executed from inside window scope, the following snippet will log the document's
 console.log(window.origin); // On this page returns 'https://developer.mozilla.org'
 ```
 
-If the origin is not a scheme/host/port tuple (say you are trying to run it locally, i.e. via `file://` URL), `origin` will return the string `"null"`.
+If the origin is not a scheme/host/port tuple (say you are trying to run it locally, i.e., via `file://` URL), `origin` will return the string `"null"`.
 
 ## Specifications
 

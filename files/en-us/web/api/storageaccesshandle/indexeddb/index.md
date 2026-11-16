@@ -12,13 +12,13 @@ The **`indexedDB`** property of the {{domxref("StorageAccessHandle")}} interface
 
 ## Value
 
-A {{domxref("IDBFactory")}} object.
+An {{domxref("IDBFactory")}} object.
 
 ## Examples
 
 ```js
 document.requestStorageAccess({ indexedDB: true }).then(
-  (handle) => {
+  async (handle) => {
     console.log("indexedDB access granted");
     await handle.indexedDB.deleteDatabase("foo");
   },

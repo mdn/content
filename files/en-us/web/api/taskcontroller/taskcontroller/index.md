@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.TaskController.TaskController
 ---
 
-{{APIRef("Prioritized Task Scheduling API")}}
+{{APIRef("Prioritized Task Scheduling API")}}{{AvailableInWorkers}}
 
 The **`TaskController()`** constructor creates a new {{domxref("TaskController")}} object, optionally setting the initial [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) of its associated [`signal`](/en-US/docs/Web/API/TaskController#taskcontroller.signal).
 
@@ -22,9 +22,7 @@ new TaskController(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object with the following properties:
-
     - `priority` {{optional_inline}}
       - : The [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) of the signal associated with this `TaskController`.
         One of: `"user-blocking"`, `"user-visible"` (default), `"background"`.

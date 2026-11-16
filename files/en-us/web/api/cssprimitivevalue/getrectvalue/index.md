@@ -5,10 +5,11 @@ slug: Web/API/CSSPrimitiveValue/getRectValue
 page-type: web-api-instance-method
 status:
   - deprecated
+  - non-standard
 browser-compat: api.CSSPrimitiveValue.getRectValue
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}
+{{APIRef("CSSOM")}}{{non-standard_header}}
 
 The **`getRectValue()`** method of the
 {{domxref("CSSPrimitiveValue")}} interface is used to get a rect value. If this CSS
@@ -41,9 +42,9 @@ A {{domxref("Rect")}} object representing the rect value.
 
 ### Exceptions
 
-| **Type**       | **Description**                                                                                                 |
-| -------------- | --------------------------------------------------------------------------------------------------------------- |
-| `DOMException` | An `INVALID_ACCESS_ERR` is raised if the CSS value doesn't contain a Rect value. (i.e. this is not `CSS_RECT`). |
+| **Type**       | **Description**                                                                                                  |
+| -------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `DOMException` | An `INVALID_ACCESS_ERR` is raised if the CSS value doesn't contain a Rect value. (i.e., this is not `CSS_RECT`). |
 
 ## Examples
 

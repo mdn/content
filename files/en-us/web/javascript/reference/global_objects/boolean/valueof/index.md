@@ -1,16 +1,28 @@
 ---
 title: Boolean.prototype.valueOf()
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Boolean.valueOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`valueOf()`** method of {{jsxref("Boolean")}} values returns the primitive value of a
 {{jsxref("Boolean")}} object.
 
-{{EmbedInteractiveExample("pages/js/boolean-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Boolean.prototype.valueOf()")}}
+
+```js interactive-example
+const x = new Boolean();
+
+console.log(x.valueOf());
+// Expected output: false
+
+const y = new Boolean("Mozilla");
+
+console.log(y.valueOf());
+// Expected output: true
+```
 
 ## Syntax
 
@@ -38,8 +50,8 @@ This method is usually called internally by JavaScript and not explicitly in cod
 ### Using `valueOf()`
 
 ```js
-x = new Boolean();
-myVar = x.valueOf(); // assigns false to myVar
+const x = new Boolean();
+const myVar = x.valueOf(); // assigns false to myVar
 ```
 
 ## Specifications

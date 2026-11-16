@@ -11,11 +11,11 @@ browser-compat: api.HTMLElement.autocapitalize
 The **`autocapitalize`** property of the {{domxref("HTMLElement")}} interface represents the element's capitalization behavior for user input. It is available on all HTML elements, though it doesn't affect all of them, including:
 
 - {{htmlelement("input")}} and {{htmlelement("textarea")}} elements.
-- Any element with [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) set on it.
+- Any element with [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) set on it.
 
 `autocapitalize` doesn't affect behavior when typing on a physical keyboard. It affects the behavior of other input mechanisms such as virtual keyboards on mobile devices and voice input. This can assist users by making data entry quicker and easier, for example by automatically capitalizing the first letter of each sentence.
 
-It reflects the value of the [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) HTML global attribute.
+It reflects the value of the [`autocapitalize`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocapitalize) HTML global attribute.
 
 ## Value
 
@@ -72,4 +72,4 @@ controller.addEventListener("input", (e) => {
 
 ## See also
 
-- [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes#autocapitalize) HTML global attribute
+- [`autocapitalize`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocapitalize) HTML global attribute

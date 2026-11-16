@@ -19,13 +19,13 @@ A {{domxref("TextTrack")}} object.
 In the following example a new {{domxref("VTTCue")}} (which inherits from `TextTrackCue`) is created, then added to a track. The value of `track` is printed to the console.
 
 ```js
-let video = document.querySelector("video");
-let captiontrack = video.addTextTrack("captions", "Captions", "en");
-captiontrack.mode = "showing";
+const video = document.querySelector("video");
+const captionTrack = video.addTextTrack("captions", "Captions", "en");
+captionTrack.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, "Hildy!");
-captiontrack.addCue(cue1);
-console.log(cue1.track); // a TextTrack object.
+const cue = new VTTCue(0, 0.9, "Hildy!");
+captionTrack.addCue(cue);
+console.log(cue.track); // a TextTrack object.
 ```
 
 ## Specifications

@@ -3,13 +3,39 @@ title: Intl.NumberFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 page-type: javascript-class
 browser-compat: javascript.builtins.Intl.NumberFormat
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.NumberFormat`** object enables language-sensitive number formatting.
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat")}}
+
+```js interactive-example
+const number = 123456.789;
+
+console.log(
+  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
+    number,
+  ),
+);
+// Expected output: "123.456,79 €"
+
+// The Japanese yen doesn't use a minor unit
+console.log(
+  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
+    number,
+  ),
+);
+// Expected output: "￥123,457"
+
+// Limit to three significant digits
+console.log(
+  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
+    number,
+  ),
+);
+// Expected output: "1,23,000"
+```
 
 ## Constructor
 
@@ -35,13 +61,13 @@ These properties are defined on `Intl.NumberFormat.prototype` and shared by all 
 - {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format()")}}
   - : Getter function that formats a number according to the locale and formatting options of this `Intl.NumberFormat` object.
 - {{jsxref("Intl/NumberFormat/formatRange", "Intl.NumberFormat.prototype.formatRange()")}}
-  - : Getter function that formats a range of numbers according to the locale and formatting options of the `Intl.NumberFormat` object from which the method is called.
+  - : Formats a range of numbers according to the locale and formatting options of the `Intl.NumberFormat` object from which the method is called.
 - {{jsxref("Intl/NumberFormat/formatRangeToParts", "Intl.NumberFormat.prototype.formatRangeToParts()")}}
   - : Returns an {{jsxref("Array")}} of objects representing the range of number strings in parts that can be used for custom locale-aware formatting.
 - {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
   - : Returns an {{jsxref("Array")}} of objects representing the number string in parts that can be used for custom locale-aware formatting.
 - {{jsxref("Intl/NumberFormat/resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
-  - : Returns a new object with properties reflecting the locale and collation options computed during initialization of the object.
+  - : Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object.
 
 ## Examples
 
@@ -147,5 +173,6 @@ For an exhaustive list of options, see the [`Intl.NumberFormat()` constructor](/
 
 ## See also
 
-- [Polyfill of `Intl.NumberFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-numberformat/)
+- [Polyfill of `Intl.NumberFormat` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-numberformat/)
 - {{jsxref("Intl")}}
+- {{jsxref("Number.prototype.toLocaleString()")}}

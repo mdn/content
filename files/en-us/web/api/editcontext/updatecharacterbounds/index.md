@@ -16,16 +16,6 @@ The `characterboundsupdate` event is the only time you need to call the `updateC
 
 The character bounds information is then used by the operating system to correctly position the {{glossary("Input Method Editor")}} (IME) window when needed. This is especially important in situations where the operating system can't automatically detect the position and size of the characters, such as when rendering text in a `<canvas>` element.
 
-### Avoid sudden jumps in the IME window position
-
-Calculating the character bounds and calling `updateCharacterBounds` synchronously, within the `characterboundsupdate` event ensures that the operating system has the information it needs when it displays the IME window. If you don't call `updateCharacterBounds()` synchronously within the event handler, users may observe the IME window being displayed in the wrong position before being moved to the correct position.
-
-### Which characters to include
-
-The `updateCharacterBounds()` method should only be called when the operating system indicates that it requires the information, and only for the characters that are included in the current IME composition.
-
-The event object passed to the `characterboundsupdate` event handler contains a `rangeStart` and `rangeEnd` properties that indicate the range of characters that are currently being composed. The `updateCharacterBounds()` method should only be called for the characters in this range.
-
 ## Syntax
 
 ```js-nolint
@@ -39,10 +29,26 @@ updateCharacterBounds(rangeStart, characterBounds)
 - `characterBounds`
   - : An {{jsxref("Array")}} containing {{domxref("DOMRect")}} objects representing the character bounds.
 
+### Return value
+
+None (`undefined`).
+
 ### Exceptions
 
-- If less than two arguments are provided, a `TypeError` {{domxref("DOMException")}} is thrown.
-- if `rangeStart` is not a number or `characterBounds` is not iterable, a `TypeError` {{domxref("DOMException")}} is thrown.
+- {{jsxref("TypeError")}}
+  - : Thrown if the method is called with less than two arguments, or if the first argument is not a number or the second argument is not an iterable (like an array).
+
+## Usage notes
+
+### Avoid sudden jumps in the IME window position
+
+Calculating the character bounds and calling `updateCharacterBounds` synchronously, within the `characterboundsupdate` event ensures that the operating system has the information it needs when it displays the IME window. If you don't call `updateCharacterBounds()` synchronously within the event handler, users may observe the IME window being displayed in the wrong position before being moved to the correct position.
+
+### Which characters to include
+
+The `updateCharacterBounds()` method should only be called when the operating system indicates that it requires the information, and only for the characters that are included in the current IME composition.
+
+The event object passed to the `characterboundsupdate` event handler contains a `rangeStart` and `rangeEnd` properties that indicate the range of characters that are currently being composed. The `updateCharacterBounds()` method should only be called for the characters in this range.
 
 ## Examples
 

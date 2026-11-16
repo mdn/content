@@ -12,12 +12,16 @@ The **`keystatuseschange`** event of the {{domxref("MediaKeySession")}} API fire
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-```js
-addEventListener("keystatuseschange", (event) => {});
+```js-nolint
+addEventListener("keystatuseschange", (event) => { })
+```
 
-onkeystatuseschange = (event) => {};
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
+onkeystatuseschange = (event) => { }
 ```
 
 ## Event type
@@ -25,10 +29,6 @@ onkeystatuseschange = (event) => {};
 An {{domxref("ExtendableEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("ExtendableEvent")}}
-
-## Event properties
-
-_Doesn't implement any specific properties, but inherits properties from its parent, {{domxref("Event")}}._
 
 ## Specifications
 

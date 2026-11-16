@@ -14,7 +14,7 @@ removes all or part of the data from this `CharacterData` node.
 ## Syntax
 
 ```js-nolint
-characterData.deleteData(offset, count)
+deleteData(offset, count)
 ```
 
 ### Parameters
@@ -42,9 +42,9 @@ None.
 
 ```js
 const span = document.querySelector("span");
-const textnode = span.nextSibling;
+const textNode = span.nextSibling;
 
-textnode.deleteData(1, 5);
+textNode.deleteData(1, 5);
 ```
 
 {{EmbedLiveSample("Example", "100%", 50)}}

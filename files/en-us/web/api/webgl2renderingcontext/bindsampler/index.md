@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.bindSampler
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.bindSampler()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) binds a
 passed {{domxref("WebGLSampler")}} object to the texture unit at the passed index.
@@ -23,7 +23,7 @@ bindSampler(unit, sampler)
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the texture unit to which to bind
     the sampler to.
 - `sampler`
-  - : A {{domxref("WebGLSampler")}} object to bind.
+  - : A {{domxref("WebGLSampler")}} object to bind, or `null` to unbind the sampler from the texture unit and use the texture's sampling parameters instead.
 
 ### Return value
 

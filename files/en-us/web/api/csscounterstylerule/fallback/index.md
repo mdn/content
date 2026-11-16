@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CSSCounterStyleRule.fallback
 ---
 
-{{APIRef("CSS Counter Styles")}}
+{{APIRef("CSSOM")}}
 
 The **`fallback`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/fallback","fallback")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.
 

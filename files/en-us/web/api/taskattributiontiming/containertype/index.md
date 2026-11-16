@@ -5,12 +5,13 @@ slug: Web/API/TaskAttributionTiming/containerType
 page-type: web-api-instance-property
 status:
   - experimental
+  - non-standard
 browser-compat: api.TaskAttributionTiming.containerType
 ---
 
-{{APIRef("Performance API")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}{{non-standard_header}}
 
-The **`containerType`** readonly property of the {{domxref("TaskAttributionTiming")}} interface returns the type of the container, one of `iframe`, `embed`, or `object`.
+The **`containerType`** read-only property of the {{domxref("TaskAttributionTiming")}} interface returns the type of the container, one of `iframe`, `embed`, or `object`.
 
 ## Value
 
