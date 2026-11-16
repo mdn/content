@@ -135,6 +135,25 @@ The {{httpheader("Speculation-Rules")}} HTTP response header lists the URLs of e
 - `dom.speculation_rules.enabled`
   - : Set to `true` to enable.
 
+### Cross-document view transitions
+
+[Cross-document view transitions](/en-US/docs/Web/API/View_Transition_API/Using#basic_mpa_view_transition) can be used to animate the transition between same-origin page navigations in a multi-page application.
+Both pages must opt in using the CSS {{cssxref("@view-transition")}} at-rule.
+To customize the transition with JavaScript, use the {{domxref("Window.pageswap_event", "pageswap")}} event ({{domxref("PageSwapEvent")}}), which fires on the old page just before it is replaced, and the {{domxref("Window.pagereveal_event", "pagereveal")}} event ({{domxref("PageRevealEvent")}}), which fires on the new page when it is first shown.
+The {{domxref("CSSViewTransitionRule")}} interface represents an `@view-transition` rule in the CSS Object Model.
+Note that [render blocking](#render_blocking) may be used to ensure that important parts of the new page are loaded before the transition starts.
+([Firefox bug 2084340](https://bugzil.la/2084340)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 160           | No                  |
+| Beta              | 160           | No                  |
+| Release           | 160           | No                  |
+
+- `dom.viewTransitions.cross-document.enabled`
+  - : Set to `true` to enable.
+
 ### Render blocking
 
 The `blocking="render"` attribute and value is now supported for the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} HTML elements. This allows for rendering to be blocked until the element's stylesheet has loaded or its script has run, including for elements that don't block rendering by default, such as scripts and stylesheets added with JavaScript.
@@ -918,25 +937,6 @@ This is supported on desktop from Firefox 154 and on Android from Firefox 156 ([
 | Release           | 154             | No                  |
 
 - `dom.clipboard.customFormatSupport.enabled`
-  - : Set to `true` to enable.
-
-### Cross-document view transitions
-
-[Cross-document view transitions](/en-US/docs/Web/API/View_Transition_API/Using#basic_mpa_view_transition) animate the change from one page to another when the user navigates between two pages on the same origin.
-Both pages opt in using the CSS {{cssxref("@view-transition")}} at-rule.
-To customize the transition with JavaScript, use the {{domxref("Window.pageswap_event", "pageswap")}} event ({{domxref("PageSwapEvent")}}), which fires on the old page just before it is replaced, and the {{domxref("Window.pagereveal_event", "pagereveal")}} event ({{domxref("PageRevealEvent")}}), which fires on the new page when it is first shown.
-The {{domxref("CSSViewTransitionRule")}} interface represents an `@view-transition` rule in the CSS Object Model.
-This is enabled together with [render blocking](#render_blocking), which you can use to make sure that important parts of the new page are loaded before the transition starts.
-([Firefox bug 2084340](https://bugzil.la/2084340)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 161           | Yes                 |
-| Developer Edition | 160           | No                  |
-| Beta              | 160           | No                  |
-| Release           | 160           | No                  |
-
-- `dom.viewTransitions.cross-document.enabled`
   - : Set to `true` to enable.
 
 ## Security and privacy
