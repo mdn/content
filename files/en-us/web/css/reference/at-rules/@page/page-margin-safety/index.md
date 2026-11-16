@@ -138,7 +138,7 @@ In the first live example, we set `margin: 0` inside a `@page` at-rule to push t
 }
 ```
 
-The second live example's `@page` at-rule also includes `margin: 0`, but in addition we set `page-margin-safety: clamp` to ensure that the page content will all be inside the printable area during printing:
+In addition to `margin: 0`, the second live example's `@page` at-rule has `page-margin-safety: clamp` set, ensuring all the page's content is within the printable area:
 
 ```css live-sample___page-margin-safety-2
 @page {
