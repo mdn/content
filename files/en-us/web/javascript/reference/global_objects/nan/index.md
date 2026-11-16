@@ -103,7 +103,7 @@ For more information about `NaN` and its comparison, see [Equality comparison an
 
 ### Observably distinct NaN values
 
-It's possible to produce two floating point numbers with different binary representations but are both `NaN`, because in [IEEE 754 encoding](https://en.wikipedia.org/wiki/NaN#Floating_point), any floating point number with exponent `0x7ff` and a non-zero mantissa is `NaN`. In JavaScript, you can do bit-level manipulation using [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays).
+It's possible to produce two floating point numbers that have different binary representations but are both `NaN`, because in [IEEE 754 encoding](https://en.wikipedia.org/wiki/NaN#Floating_point), any floating point number with exponent `0x7ff` and a non-zero mantissa is `NaN`. In JavaScript, you can do bit-level manipulation using [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays).
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
@@ -131,7 +131,7 @@ console.log(f2b(nan3)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
 
 ### Silently escaping NaN
 
-`NaN` propagates through mathematical operations, so it's usually sufficient to test for `NaN` once at the end of calculation to detect error conditions. The only case where `NaN` gets silently escaped is when using [exponentiation](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation) with an exponent of `0`, which immediately returns `1` without testing the base's value.
+`NaN` propagates through mathematical operations, so it's usually sufficient to test for `NaN` once at the end of calculation to detect error conditions. One case where `NaN` gets silently escaped is when using [exponentiation](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation) with an exponent of `0`, which immediately returns `1` without testing the base's value. Other cases involve {{jsxref("Math")}} functions, like {{jsxref("Math.hypot()")}} which prioritizes `Infinity` over `NaN`.
 
 ```js
 NaN ** 0 === 1; // true
