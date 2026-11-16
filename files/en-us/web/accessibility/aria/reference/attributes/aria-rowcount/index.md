@@ -17,6 +17,29 @@ Included on the {{HTMLElement('table')}} element or on an element with a role of
 
 If all of the rows are loaded and in the DOM, you don't need to include `aria-rowcount` as browsers automatically count the total number of rows. However, if the rows aren't all present in the DOM at any time, this attribute is needed to provide the number of rows when the full table size is known and to tell the browser to not automatically count the rows when the total number of rows is not known.
 
+## Values
+
+- `<integer>`
+  - : The number of rows in the full table or `-1` is the table size is not known.
+
+## Associated interfaces
+
+- {{domxref("Element.ariaRowCount")}}
+  - : The [`ariaRowCount`](/en-US/docs/Web/API/Element/ariaRowCount) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowcount` attribute.
+- {{domxref("ElementInternals.ariaRowCount")}}
+  - : The [`ariaRowCount`](/en-US/docs/Web/API/ElementInternals/ariaRowCount) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-rowcount` attribute.
+
+## Associated roles
+
+Used in roles:
+
+- [`table`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
+
+Inherited into roles:
+
+- [`grid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
+
 ## Example
 
 The following example shows a grid with 24 rows, of which the first row and rows 7 through 9 are displayed to the user.
@@ -49,29 +72,6 @@ The following example shows a grid with 24 rows, of which the first row and rows
   </div>
 </div>
 ```
-
-## Values
-
-- `<integer>`
-  - : The number of rows in the full table or `-1` is the table size is not known.
-
-## Associated interfaces
-
-- {{domxref("Element.ariaRowCount")}}
-  - : The [`ariaRowCount`](/en-US/docs/Web/API/Element/ariaRowCount) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowcount` attribute.
-- {{domxref("ElementInternals.ariaRowCount")}}
-  - : The [`ariaRowCount`](/en-US/docs/Web/API/ElementInternals/ariaRowCount) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-rowcount` attribute.
-
-## Associated roles
-
-Used in roles:
-
-- [`table`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
-
-Inherited into roles:
-
-- [`grid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
-- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
 
 ## Specifications
 

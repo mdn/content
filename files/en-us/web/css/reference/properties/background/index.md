@@ -157,6 +157,13 @@ If the document {{htmlelement("html")}} `:root` element's computed `background-i
 
 Because of this behavior, the specification authors recommend setting your document's background styles in your `body` style block rather than your `html` style block. However, it's important to note that using containment disables this behavior. When the {{cssxref("contain")}} property is set to anything other than `none` on either the `<html>` or `<body>` element, the `background` property and any longhand components do not propagate from the `<body>` element to the root `<html>` element.
 
+## Accessibility
+
+Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
+
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
+
 ## Formal definition
 
 {{cssinfo}}
@@ -164,13 +171,6 @@ Because of this behavior, the specification authors recommend setting your docum
 ## Formal syntax
 
 {{csssyntax}}
-
-## Accessibility
-
-Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
-
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ## Examples
 
