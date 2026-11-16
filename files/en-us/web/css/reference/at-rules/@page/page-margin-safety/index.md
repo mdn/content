@@ -121,7 +121,7 @@ The HTML features a "print" {{htmlelement("button")}} and a {{htmlelement("p")}}
 
 #### CSS
 
-We have deliberately set the {{htmlelement("body")}} element's {{cssxref("margin")}} to `0`:
+We deliberately set the {{htmlelement("body")}} element's {{cssxref("margin")}} to `0`:
 
 ```css live-sample___page-margin-safety-1 live-sample___page-margin-safety-2
 body {
