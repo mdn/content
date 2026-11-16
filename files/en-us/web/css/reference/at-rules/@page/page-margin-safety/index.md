@@ -7,22 +7,21 @@ browser-compat: css.at-rules.page.descriptor_page-margin-safety
 sidebar: cssref
 ---
 
-The **`page-margin-safety`** [CSS](/en-US/docs/Web/CSS) descriptor for the {{cssxref("@page")}} at-rule can be used to constrain page margins so that the content stays within the printable page area.
+The **`page-margin-safety`** [CSS](/en-US/docs/Web/CSS) descriptor for the {{cssxref("@page")}} at-rule can be used to constrain the outer page margins to a browser-defined value that ensures content stays within the printable page area.
 
 ## Syntax
 
 ```css
-/* Page margins are not constrained  */
+/* Keywords */
 @page {
   page-margin-safety: none;
 }
 
-/* Clamp all page margins using the clamp keyword  */
 @page {
   page-margin-safety: clamp;
 }
 
-/* Clamp the top and right page margins using the add keyword */
+/* Keyword nested inside specific margin at-rule */
 @page {
   @top-right {
     page-margin-safety: add;
@@ -37,15 +36,15 @@ This descriptor is specified as one of the following keywords:
 - `none`
   - : Page margins are not constrained.
 - `clamp`
-  - : Constrained page margins are set to the larger of the [`safe-printable-inset`](#the_safe-printable-inset) value and the margin's [resolved value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#resolved_value).
+  - : The outer page margins are set to the larger of the [`safe-printable-inset`](#the_safe-printable-inset) value and the margin's [resolved value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#resolved_value).
 - `add`
-  - : Constrained page margins are set to the `safe-printable-inset` value plus the margin's resolved value.
+  - : The outer page margins are set to the `safe-printable-inset` value plus the margin's resolved value.
 
 ## Description
 
-Most printers have a small region along the edge of the page that is unprintable, typically due to the printer's paper handling mechanism. The `page-margin-safety` descriptor can be set inside a web document `@page` at-rule to constain the page's outer margins, making sure that the page content stays within the page's printable area during printing. The margins are constrained relative to a value called the [`safe-printable-inset`](#the_safe-printable-inset).
+Most printers have a small region along the edge of the page that is unprintable, typically due to the printer's paper handling mechanism. The `page-margin-safety` descriptor can be set inside a `@page` at-rule to constain the page's outer margins, making sure that the page content stays within the page's printable area during printing. The margins are constrained relative to a value called the [`safe-printable-inset`](#the_safe-printable-inset).
 
-The constrained margins are those that are adjacent to one of the edges of a page. No other margins are affected.
+The constrained margins are those that are adjacent to the edges of a page. No other margins are affected.
 
 Two values are available for `page-margin-safety`:
 
@@ -65,7 +64,7 @@ Two values are available for `page-margin-safety`:
   }
   ```
 
-## The safe-printable-inset
+### The safe-printable-inset
 
 The browser is able to determine a width for each page margin from the underlying operating system that guarantees all content will be kept out of the unprintable page area. This width is called the `safe-printable-inset`, and it is used to constrain the page margins when `page-margin-safety` is set to `clamp` or `add`.
 
@@ -74,7 +73,7 @@ The value of the `safe-printable-inset` depends on how a printer operates:
 - Some printers don't have a uniform unprintable region along each of the four paper edges. Different edges may have unprintable regions with different widths, and the printer may rotate the print output at its own discretion. The browser therefore may not know which edge will be fed first into the printer, or what orientation the sheet of paper has. In such cases, the width of each edge's unprintable region is collected, and `safe-printable-inset` for each side of the page is set to the largest of those values.
 - Some printers return such information reliably. If the user agent can trust that the four values are usable individually, and that no rotation will be applied, each side of the page will use its own `safe-printable-inset` value returned from the OS.
 
-## Constraining specific margins
+### Constraining specific margins
 
 When `page-margin-safety` is applied to a [margin at-rule](/en-US/docs/Web/CSS/Reference/At-rules/@page#margin_at-rules) inside the `@page` at rule, it will only constrain the margin on one or two sides. For example, in this case, only the bottom and left page margins are constrained:
 
@@ -188,13 +187,13 @@ The first live example doesn't have the `page-margin-safety` descriptor applied:
 
 {{EmbedLiveSample("page-margin-safety-1", "100%", "300", , , , , "allow-modals")}}
 
-Click the print button and examine the page inset during printing.
+Click the print button and examine the print preview. The border touches the edge of the page.
 
 The second live example **does** have the `page-margin-safety` descriptor applied:
 
 {{EmbedLiveSample("page-margin-safety-2", "100%", "300", , , , , "allow-modals")}}
 
-Again, click the print button and examine the page inset during printing. Note the inset that has been added around the page content in the second case, due to the `page-margin-safety` descriptor inside the `@page` at-rule.
+Again, click the print button and examine the print preview. Note the inset that has been added between the border and the edge of the page, due to the `page-margin-safety` descriptor inside the `@page` at-rule.
 
 ## Specifications
 
