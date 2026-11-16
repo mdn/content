@@ -399,7 +399,7 @@ The following example applies a set of scoped color scheme styles if the browser
 
 ### Testing for the support of a named feature
 
-This example shows how to use the `named-feature()` function to adjust [anchor-positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) instances when a transform is applied to an anchor element and the browser doesn't automatically shift anchor-positioned element placement to account for the anchor element's transformed size, position, etc.
+This example uses the `named-feature()` function with the [`anchor-position-follows-transforms`](#anchor-position-follows-transforms) feature to adjust [anchor-positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) when transforms are applied to anchor elements in browsers that don't automatically handle anchor-element transformations.
 
 #### HTML
 
