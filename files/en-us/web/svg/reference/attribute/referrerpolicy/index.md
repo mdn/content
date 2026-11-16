@@ -25,7 +25,7 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("script")}}
   - : Sets the policy used when fetching the script referenced by the element's {{SVGAttr("href")}} attribute.
 
-If the attribute isn't set, or its value isn't one of the values listed below, the request uses the document's referrer policy instead.
+If the attribute isn't set, or its value isn't one of the values listed below, the request uses the document's referrer policy.
 A document's policy can be set using the {{HTTPHeader("Referrer-Policy")}} HTTP header.
 
 ## Examples
