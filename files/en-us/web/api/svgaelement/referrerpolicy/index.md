@@ -16,11 +16,10 @@ It reflects the {{SVGAttr("referrerpolicy")}} attribute of the {{SVGElement("a")
 ## Value
 
 A string.
-Possible values are `no-referrer`, `no-referrer-when-downgrade`, `origin`, `origin-when-cross-origin`, `same-origin`, `strict-origin`, `strict-origin-when-cross-origin`, and `unsafe-url`.
-For their meanings, see the SVG {{SVGAttr("referrerpolicy")}} attribute.
+Possible values are [`no-referrer`](/en-US/docs/Web/SVG/Reference/Attribute/referrerpolicy#no-referrer), [`no-referrer-when-downgrade`](/en-US/docs/Web/SVG/Reference/Attribute/referrerpolicy#no-referrer-when-downgrade), [`origin`](/en-US/docs/Web/SVG/Reference/Attribute/referrerpolicy#origin), [`origin-when-cross-origin`](/en-US/docs/Web/SVG/Reference/Attribute/referrerpolicy#origin-when-cross-origin), [`same-origin`](/en-US/docs/Web/SVG/Reference/Attribute/referrerpolicy#same-origin), [`strict-origin`](/en-US/docs/Web/SVG/Reference/Attribute/referrerpolicy#strict-origin), [`strict-origin-when-cross-origin`](/en-US/docs/Web/SVG/Reference/Attribute/referrerpolicy#strict-origin-when-cross-origin), and [`unsafe-url`](/en-US/docs/Web/SVG/Reference/Attribute/referrerpolicy#unsafe-url).
 
 The property is an empty string (`""`) if the attribute isn't set, or if its value isn't one of the possible values.
-In this case, the request uses the document's referrer policy instead.
+In this case, the request uses the document's referrer policy.
 
 ## Examples
 
