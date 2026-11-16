@@ -22,9 +22,7 @@ browser-compat: api.ShadowRoot.appendHTMLUnsafe
 
 The **`appendHTMLUnsafe()`** method of the {{domxref("ShadowRoot")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and then inserting it into the DOM as the last child of a shadow root.
 
-This is similar to {{domxref("ShadowRoot.setHTMLUnsafe")}} but allows addition of the HTML as the last child of the shadow root, rather than setting the whole child HTML only.
-
-Note that the safe variants of these methods (for example, {{domxref("ShadowRoot.appendHTML")}}) always use the XSS-safe sanitizer, as well as any provided sanitizer parameter. The provided sanitizer is applied in addition to the default XSS-safe sanitizer, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
+Note that the safe variant of this method ( {{domxref("ShadowRoot.appendHTML")}}) always use the XSS-safe sanitizer, as well as any provided sanitizer parameter, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
 
 ## Syntax
 
@@ -88,59 +86,7 @@ Each API type takes the same arguments but allows for ease of inserting the requ
 
 ### Security considerations
 
-The suffix "Unsafe" in the method name indicates that it does not enforce removal of all XSS-unsafe HTML entities (unlike {{domxref("ShadowRoot.appendHTML()")}}).
-While it can do so if used with an appropriate sanitizer, it doesn't have to use an effective sanitizer, or any sanitizer at all!
-The method is therefore a possible vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, where potentially unsafe strings provided by a user are injected into the DOM without first being sanitized.
-
-You should mitigate this risk by always passing {{domxref("TrustedHTML")}} objects instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
-This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup (such as {{htmlelement("script")}} elements and event handler attributes), before it is injected.
-
-Using `TrustedHTML` makes it possible to audit and check that sanitization code is effective in just a few places, rather than scattered across all your injection sinks.
-You should not have to pass a sanitizer to the method when using `TrustedHTML`.
-
-If for any reason you can't use `TrustedHTML` (or even better, `appendHTML()`) then the next safest option is to use `appendHTMLUnsafe()` with the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
-
-### When should `appendHTMLUnsafe()` be used?
-
-`appendHTMLUnsafe()` should almost never be used if {{domxref("ShadowRoot.appendHTML()")}} is available, because there are very few (if any) cases where user-provided HTML input should need to include XSS-unsafe elements.
-Not only is `appendHTML()` safe, but it avoids having to consider trusted types.
-
-Using `appendHTMLUnsafe()` might be appropriate if:
-
-- You can't use `appendHTML()` or trusted types (for whatever reason) and you want to have the safest possible filtering.
-  In this case you might use `appendHTMLUnsafe()` with the default {{domxref("Sanitizer")}} to filter all XSS-unsafe elements.
-- You can't use `appendHTML()` and the input might contain declarative shadow roots, so you can't use {{domxref("ShadowRoot.innerHTML")}}.
-- You have an edge case where you have to allow HTML input that includes a known set of unsafe HTML entities.
-
-  You can't use `appendHTML()` in this case, because it strips all unsafe entities.
-  You could use `appendHTMLUnsafe()` without a sanitizer or `innerHTML`, but that would allow all unsafe entities.
-
-  A better option here is to call `appendHTMLUnsafe()` with a sanitizer that allows just those dangerous elements and attributes we actually need.
-  While this is still unsafe, it is safer than allowing all of them.
-
-For the last point, consider a situation where your code relies on being able to use unsafe `onclick` handlers.
-The following code shows the effect of the different methods and sanitizers for this case.
-
-```js
-const target = document.querySelector("#target");
-
-const input = "<img src=x onclick=alert('onclick') onerror=alert('onerror')>";
-
-// Safe - removes all XSS-unsafe entities.
-target.appendHTML(input);
-
-// Removes no event handler attributes
-target.appendHTMLUnsafe(input);
-
-// Safe - removes all XSS-unsafe entities.
-const configSafe = new Sanitizer();
-target.appendHTMLUnsafe(input, { sanitizer: configSafe });
-
-// Removes all XSS-unsafe entities except `onclick`
-const configLessSafe = new Sanitizer();
-configLessSafe.allowAttribute("onclick");
-target.appendHTMLUnsafe(input, { sanitizer: configLessSafe });
-```
+This has extra security considerations as detailed in the `setHTMLUnsafe` ["Security considerations" section](/en-US/docs/Web/API/Element/setHTMLUnsafe#security_considerations) and ["When should `setHTMLUnsafe()` be used?" section](/en-US/docs/Web/API/Element/setHTMLUnsafe#when_should_sethtmlunsafe_be_used).
 
 ## Examples
 

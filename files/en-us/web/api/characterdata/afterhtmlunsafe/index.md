@@ -22,9 +22,7 @@ browser-compat: api.CharacterData.afterHTMLUnsafe
 
 The **`afterHTMLUnsafe()`** method of the {{domxref("CharacterData")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and is then inserted into the DOM immediately after the node
 
-The method does nothing if the node has no parent.
-
-Note that the safe variants of these methods (for example, {{domxref("CharacterData.afterHTML")}}) always use the XSS-safe sanitizer, as well as any provided sanitizer parameter. The provided sanitizer is applied in addition to the default XSS-safe sanitizer, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
+Note that the safe variant of this method ( {{domxref("CharacterData.afterHTML")}}) always use the XSS-safe sanitizer, as well as any provided sanitizer parameter, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
 
 ## Syntax
 
@@ -72,6 +70,8 @@ None (`undefined`).
 The **`afterHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes, and discarding elements that the HTML specification doesn't allow in the target element ({{htmlelement("col")}} element outside of a {{htmlelement("table")}}).
 The `DocumentFragment` is then inserted into the DOM immediately after the node.
 
+The method does nothing if the node has no parent.
+
 Unlike with {{domxref("Element.innerHTML")}}, [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in the input will be parsed into the DOM.
 If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as `<template>` elements within that shadow root.
 
@@ -94,58 +94,7 @@ Similar methods, and more, exist on {{domxref("Element")}} (for example {{domxre
 ### Security considerations
 
 The suffix "Unsafe" in the method name indicates that it does not enforce removal of all XSS-unsafe HTML entities (unlike {{domxref("Element.afterHTML()")}}).
-While it can do so if used with an appropriate sanitizer, it doesn't have to use an effective sanitizer, or any sanitizer at all!
-The method is therefore a possible vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, where potentially unsafe strings provided by a user are injected into the DOM without first being sanitized.
-
-You should mitigate this risk by always passing {{domxref("TrustedHTML")}} objects instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
-This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup (such as {{htmlelement("script")}} elements and event handler attributes), before it is injected.
-
-Using `TrustedHTML` makes it possible to audit and check that sanitization code is effective in just a few places, rather than scattered across all your injection sinks.
-You should not have to pass a sanitizer to the method when using `TrustedHTML`.
-
-If for any reason you can't use `TrustedHTML` (or even better, `afterHTML()`) then the next safest option is to use `afterHTMLUnsafe()` with the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
-
-### When should `afterHTMLUnsafe()` be used?
-
-`afterHTMLUnsafe()` should almost never be used if {{domxref("CharacterData.afterHTML()")}} is available, because there are very few (if any) cases where user-provided HTML input should need to include XSS-unsafe elements.
-Not only is `afterHTML()` safe, but it avoids having to consider trusted types.
-
-Using `afterHTMLUnsafe()` might be appropriate if:
-
-- You can't use `afterHTML()` or trusted types (for whatever reason) and you want to have the safest possible filtering.
-  In this case you might use `afterHTMLUnsafe()` with the default {{domxref("Sanitizer")}} to filter all XSS-unsafe elements.
-- You can't use `afterHTML()` and the input might contain declarative shadow roots, so you can't use {{domxref("Element.innerHTML")}}.
-- You have an edge case where you have to allow HTML input that includes a known set of unsafe HTML entities.
-
-  You can't use `afterHTML()` in this case, because it strips all unsafe entities.
-  You could use `afterHTMLUnsafe()` without a sanitizer or `innerHTML`, but that would allow all unsafe entities.
-
-  A better option here is to call `afterHTMLUnsafe()` with a sanitizer that allows just those dangerous elements and attributes we actually need.
-  While this is still unsafe, it is safer than allowing all of them.
-
-For the last point, consider a situation where your code relies on being able to use unsafe `onclick` handlers.
-The following code shows the effect of the different methods and sanitizers for this case.
-
-```js
-const myText = document.querySelector("#myText").firstChild;
-
-const input = "<img src=x onclick=alert('onclick') onerror=alert('onerror')>";
-
-// Safe - removes all XSS-unsafe entities.
-myText.afterHTML(input);
-
-// Removes no event handler attributes
-myText.afterHTMLUnsafe(input);
-
-// Safe - removes all XSS-unsafe entities.
-const configSafe = new Sanitizer();
-myText.afterHTMLUnsafe(input, { sanitizer: configSafe });
-
-// Removes all XSS-unsafe entities except `onclick`
-const configLessSafe = new Sanitizer();
-configLessSafe.allowAttribute("onclick");
-myText.afterHTMLUnsafe(input, { sanitizer: configLessSafe });
-```
+This has extra security considerations as detailed in the [`setHTMLUnsafe` Security considerations section](/en-US/docs/Web/API/Element/setHTMLUnsafe#security_considerations)
 
 ## Examples
 
