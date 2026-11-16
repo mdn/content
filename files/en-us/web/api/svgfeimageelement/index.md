@@ -23,6 +23,8 @@ _This interface also inherits properties from its parent interface, {{domxref("S
   - : An {{domxref("SVGAnimatedString")}} that reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given element.
 - {{domxref("SVGFEImageElement.preserveAspectRatio")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedPreserveAspectRatio")}} corresponding to the {{SVGAttr("preserveAspectRatio")}} attribute of the given element.
+- {{domxref("SVGFEImageElement.referrerPolicy")}} {{non-standard_inline}}
+  - : A string reflecting the {{SVGAttr("referrerpolicy")}} attribute of the given element, which sets the referrer policy used when fetching the image.
 - {{domxref("SVGFEImageElement.result")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("result")}} attribute of the given element.
 - {{domxref("SVGFEImageElement.width")}} {{ReadOnlyInline}}

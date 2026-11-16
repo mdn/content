@@ -21,6 +21,8 @@ The **`SVGScriptElement`** interface corresponds to the SVG {{SVGElement("script
   - : A boolean reflecting the `defer` attribute of the given {{SVGElement("script")}} element. It indicates whether the script should be executed after the document has been parsed.
 - {{domxref("SVGScriptElement.href")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("script")}} element.
+- {{domxref("SVGScriptElement.referrerPolicy")}}
+  - : A string reflecting the {{SVGAttr("referrerpolicy")}} attribute of the given {{SVGElement("script")}} element, which sets the referrer policy used when fetching the script.
 - {{domxref("SVGScriptElement.type")}}
   - : A string corresponding to the {{SVGAttr("type")}} attribute of the given {{SVGElement("script")}} element.
 

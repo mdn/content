@@ -56,6 +56,9 @@ SVG files displayed with `<image>` are [treated as an image](/en-US/docs/Web/SVG
       - : Doesn't set a preference for the fetch priority.
         It is used if no value or an invalid value is set.
         This is the default.
+- {{SVGAttr("referrerpolicy")}}
+  - : Which [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referer) to send when fetching the image.
+    _Value type_: `no-referrer` | `no-referrer-when-downgrade` | `same-origin` | `origin` | `strict-origin` | `origin-when-cross-origin` | `strict-origin-when-cross-origin` | `unsafe-url`; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : Points at a URL for the image file.
     _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Guides/Content_type#url)**; _Default value_: _none_; _Animatable_: **no**
