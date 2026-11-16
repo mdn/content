@@ -37,7 +37,7 @@ Like all the `devtools` APIs, this API is only available to code running in the 
 - [`devtools.onResourceAdded`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/onResourceAdded)
   - : Fired when a resource is added to the inspected page.
 - [`devtools.onResourceContentCommitted`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/onResourceContentCommitted)
-  - : Fired when a revision of the resource is committed (e.g. the user saves an edited version of the resource in the Developer Tools).
+  - : Fired when a revision of the resource is committed (e.g., the user saves an edited version of the resource in the Developer Tools).
 
 {{WebExtExamples("h2")}}
 
