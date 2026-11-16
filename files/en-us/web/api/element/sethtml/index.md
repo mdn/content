@@ -8,7 +8,7 @@ browser-compat: api.Element.setHTML
 
 {{APIRef("HTML Sanitizer API")}}
 
-The **`setHTML()`** method of the {{domxref("Element")}} interface provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the DOM as a subtree of the element.
+The **`setHTML()`** method of the {{domxref("Element")}} interface provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#explanation_of_the_safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the DOM as a subtree of the element.
 
 It is recommended (if supported) as a drop-in replacement for {{domxref("Element.innerHTML")}} when setting a user-provided string of HTML.
 
@@ -46,7 +46,7 @@ None (`undefined`).
 
 ## Description
 
-**`setHTML()`** provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the DOM as a subtree of the element.
+**`setHTML()`** provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#explanation_of_the_safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the DOM as a subtree of the element.
 
 Like all [similar HTML setters](#related_html_setter_apis), it removes all elements from the input string that are invalid in the context of the node's parent element (or the shadow host, if the parent is a shadow root), such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
 

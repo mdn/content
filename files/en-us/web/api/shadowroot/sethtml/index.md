@@ -8,7 +8,7 @@ browser-compat: api.ShadowRoot.setHTML
 
 {{APIRef("HTML Sanitizer API")}}
 
-The **`setHTML()`** method of the {{domxref("ShadowRoot")}} interface provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API), which then replaces the existing tree in the Shadow DOM.
+The **`setHTML()`** method of the {{domxref("ShadowRoot")}} interface provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#explanation_of_the_safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API), which then replaces the existing tree in the Shadow DOM.
 
 It is recommended (if supported) as a drop-in replacement for {{domxref("ShadowRoot.innerHTML")}} when setting a user-provided string of HTML.
 
@@ -47,7 +47,7 @@ None (`undefined`).
 
 ## Description
 
-The **`setHTML()`** provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and use it to replace the existing tree in the Shadow DOM.
+The **`setHTML()`** provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#explanation_of_the_safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and use it to replace the existing tree in the Shadow DOM.
 
 `setHTML()` should be used instead of {{domxref("ShadowRoot.innerHTML")}} for inserting untrusted strings of HTML into the shadow DOM.
 It should also be used instead of {{domxref("ShadowRoot.setHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.

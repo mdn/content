@@ -10,7 +10,7 @@ browser-compat: api.Element.afterHTML
 
 {{APIRef("DOM")}}
 
-The **`afterHTML()`** method of the {{domxref("Element")}} interface provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the `Element`'s parent, just after the `Element`.
+The **`afterHTML()`** method of the {{domxref("Element")}} interface provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#explanation_of_the_safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the `Element`'s parent, just after the `Element`.
 
 ## Syntax
 
@@ -49,7 +49,7 @@ None (`undefined`).
 
 ## Description
 
-**`afterHTML()`** provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML and insert it in the children list of the element's parent, just after the element.
+**`afterHTML()`** provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#explanation_of_the_safe_methods) to parse and sanitize a string of HTML and insert it in the children list of the element's parent, just after the element.
 
 Like all [similar HTML setters](#related_html_setter_apis), it removes all elements from the input string that are invalid in the context of the node's parent element (or the shadow host, if the parent is a shadow root), such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
 
