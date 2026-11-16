@@ -21,7 +21,7 @@ deleteTransformFeedback(transformFeedback)
 ### Parameters
 
 - `transformFeedback`
-  - : A {{domxref("WebGLTransformFeedback")}} object to delete.
+  - : A {{domxref("WebGLTransformFeedback")}} object to delete. Passing `null` does nothing.
 
 ### Return value
 

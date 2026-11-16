@@ -43,13 +43,9 @@ bufferData(target, srcData, usage)
       - : Buffer used for pixel transfer operations.
 
 - `size`
-  - : A {{domxref("WebGL_API/Types", "GLsizeiptr")}} setting the size in bytes of the buffer object's data
-    store.
+  - : A {{domxref("WebGL_API/Types", "GLsizeiptr")}} setting the size in bytes of the buffer object's data store. The data store is initialized to zero.
 - `srcData` {{optional_inline}}
-  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} that views an {{jsxref("ArrayBuffer")}} or
-    {{jsxref("SharedArrayBuffer")}}
-    that will be copied into the data store.
-    If `null`, a data store is still created, but the content is uninitialized and undefined.
+  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} that views an {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}} that will be copied into the data store.
 - `usage`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the intended usage pattern of the data store
     for optimization purposes. Possible values:

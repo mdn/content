@@ -36,7 +36,7 @@ If the `Locale` object doesn't have a `collation` already, `getCollations()` lis
 
 ```js
 const locale = new Intl.Locale("zh");
-console.log(locale.getCollations()); // ["pinyin", "stroke", "zhuyin", "emoji", "eor"]
+console.log(locale.getCollations()); // ["emoji", "eor", "pinyin", "stroke", "zhuyin"]
 ```
 
 ## Specifications

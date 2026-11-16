@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.Locale.caseFirst
 sidebar: jsref
 ---
 
-The **`caseFirst`** accessor property of {{jsxref("Intl.Locale")}} instances returns whether case is taken into account for this locale's collation rules.
+The **`caseFirst`** accessor property of {{jsxref("Intl.Locale")}} instances returns whether upper case or lower case is sorted first in this locale's collation rules.
 
 ## Description
 

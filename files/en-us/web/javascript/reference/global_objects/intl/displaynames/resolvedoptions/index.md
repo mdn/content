@@ -31,8 +31,8 @@ A new object with properties reflecting the options computed during the initiali
   - : The value provided for this property in the `options` argument. It is either `"language"`, `"region"`, `"script"`, `"currency"`, `"calendar"`, or `"dateTimeField"`. It is required so there is no default.
 - `fallback`
   - : The value provided for this property in the `options` argument. It is either `"code"` or `"none"`. The default is `"code"`.
-- `languageDisplay`
-  - : The value provided for this property in the `options` argument. It is either `"dialect"` or `"standard"`. The default is `"dialect"`.
+- `languageDisplay` {{optional_inline}}
+  - : The value provided for this property in the `options` argument. It is only present if `type` is `"language"`. It is either `"dialect"` or `"standard"`. The default is `"dialect"`.
 
 ## Examples
 

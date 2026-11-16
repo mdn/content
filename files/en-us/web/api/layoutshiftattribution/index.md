@@ -38,9 +38,9 @@ const observer = new PerformanceObserver((list) => {
 
     const mostImpactfulSource = entry.sources[0];
     console.log("Layout shift score:", entry.value);
-    console.log("Most impactful element:", largestShiftSource.node);
-    console.log("Previous position:", largestShiftSource.previousRect);
-    console.log("Current position:", largestShiftSource.currentRect);
+    console.log("Most impactful element:", mostImpactfulSource.node);
+    console.log("Previous position:", mostImpactfulSource.previousRect);
+    console.log("Current position:", mostImpactfulSource.currentRect);
   }
 });
 

@@ -62,6 +62,7 @@ No notable changes.
 ## Changes for add-on developers
 
 - {{WebExtAPIRef("runtime.PlatformInfo")}} now returns `arch` as `arm64` for ARM64 platforms. Previously, it returned `aarch64`. This aligns the value returned by Firefox for ARM64 platforms with Chrome. ([Firefox bug 2080310](https://bugzil.la/2080310)).
+- Adds the `windowId` property to {{WebExtAPIRef("runtime.MessageSender")}}, which contains the ID of the window that contains the sender. Unlike `tab.windowId`, it is also set for senders not in a tab, such as a popup or sidebar. ([Firefox bug 2072133](https://bugzil.la/2072133)).
 
 ## Experimental web features
 

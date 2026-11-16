@@ -27,32 +27,6 @@ If a form contains both required and optional form elements, the required elemen
 > [!NOTE]
 > Which elements are required should be apparent to all users. Ensure the visual presentation indicates the form control is required in a consistent, visible manner, remembering that color is not enough to convey information.
 
-## Examples
-
-The attribute should be added to the form-control role. If the user needs to fill in an email address [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role), include `aria-required="true"` on the textbox.
-
-```html
-<div id="tbLabel">Email Address *</div>
-<div
-  role="textbox"
-  contenteditable
-  aria-labelledby="tblabel"
-  aria-required="true"
-  id="email1"></div>
-```
-
-> [!NOTE]
-> If the field's label already contains the word "required", it is recommended to leave out the `aria-required` attribute. This avoids that screen readers read out the term "required" twice.
-
-In this example, JavaScript must be used to prevent the containing form from being submitted if the textbox has no content.
-
-This could be written semantically, without the need for JavaScript:
-
-```html
-<label for="email1">Email Address (required)</label>
-<input type="email" id="email1" required />
-```
-
 ## Values
 
 - `true`
@@ -87,6 +61,32 @@ Inherits into roles:
 - [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
 - [`switch`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
 - [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
+
+## Examples
+
+The attribute should be added to the form-control role. If the user needs to fill in an email address [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role), include `aria-required="true"` on the textbox.
+
+```html
+<div id="tbLabel">Email Address *</div>
+<div
+  role="textbox"
+  contenteditable
+  aria-labelledby="tblabel"
+  aria-required="true"
+  id="email1"></div>
+```
+
+> [!NOTE]
+> If the field's label already contains the word "required", it is recommended to leave out the `aria-required` attribute. This avoids that screen readers read out the term "required" twice.
+
+In this example, JavaScript must be used to prevent the containing form from being submitted if the textbox has no content.
+
+This could be written semantically, without the need for JavaScript:
+
+```html
+<label for="email1">Email Address (required)</label>
+<input type="email" id="email1" required />
+```
 
 ## Specifications
 
