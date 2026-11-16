@@ -61,7 +61,7 @@ Firefox 161 is the current [Beta version of Firefox](https://www.firefox.com/en-
 #### Media, WebRTC, and Web Audio
 
 - The {{domxref("RTCRtpSender.setParameters()")}} method now supports the optional [`setParameterOptions`](/en-US/docs/Web/API/RTCRtpSender/setParameters#setparameteroptions) parameter.
-  This lets you ask the encoder for an encoding to generate a key frame in the same call that you use to change the sender's encoding parameters, such as `active` or `scaleResolutionDownBy`, so that receivers don't have to request a key frame after the change.
+  This lets you ask the encoder for an encoding to generate a key frame in the same call that you use to change the sender's encoding parameters, such as `active` or `scaleResolutionDownBy`. Receivers can then avoid requesting a key frame after the change.
   ([Firefox bug 2057265](https://bugzil.la/2057265)).
 
 <!-- #### Removals -->
