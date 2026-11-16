@@ -91,7 +91,7 @@ The following example returns true and applies the contained CSS styles if the b
 #### `font-format()`
 
 The `font-format()` function checks whether a browser supports the specified font format for layout and rendering.
-The following example returns true and applies the contained CSS styles if the browser supports the `opentype` font format:
+For example, the following returns true and applies the contained CSS styles if the browser supports the `opentype` font format:
 
 ```css
 @supports font-format(opentype) {
