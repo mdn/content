@@ -14,8 +14,8 @@ Opens a URL in a devtools panel.
 ```js-nolint
 let openingResource = browser.devtools.panels.openResource(
   columnNumber, // number
-  lineNumber,    // number
-  url            // string
+  lineNumber,   // number
+  url           // string
 )
 ```
 
@@ -26,7 +26,7 @@ let openingResource = browser.devtools.panels.openResource(
 - `lineNumber` {{optional_inline}}
   - : `number`. The line number to scroll to when the resource is loaded.
 - `url`
-  - : string. The URL of the resource to open.
+  - : `string`. The URL of the resource to open.
 
 ### Return value
 
