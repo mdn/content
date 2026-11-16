@@ -21,12 +21,14 @@ new PageSwapEvent(type, init)
 
 - `type`
   - : A string representing the type of event. In the case of `PageSwapEvent` this is always `pageswap`.
-- `init`
+- `init` {{optional_inline}}
   - : An object containing the following properties:
-    - `activation`
-      - : A {{domxref("NavigationActivation")}} object representing the navigation type and current and destination document history entries. Defaults to `null` if the associated navigation is a cross-origin navigation.
-    - `viewTransition`
-      - : A {{domxref("ViewTransition")}} object representing the active view transition for the related navigation. Defaults to `null` if there is no active view transition.
+    - `activation` {{optional_inline}}
+      - : A {{domxref("NavigationActivation")}} object representing the navigation type and current and destination document history entries.
+        Defaults to `null`.
+    - `viewTransition` {{optional_inline}}
+      - : A {{domxref("ViewTransition")}} object representing the active view transition for the related navigation.
+        Defaults to `null`.
 
 ## Examples
 

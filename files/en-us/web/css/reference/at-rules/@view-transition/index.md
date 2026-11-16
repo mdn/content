@@ -13,10 +13,10 @@ For a cross-document view transition to work, the current and destination docume
 
 ## Syntax
 
-```css
+```css-nolint
 @view-transition {
   navigation: auto | none;
-  types: none | <custom-ident>#;
+  types: none | <custom-ident>+;
 }
 ```
 
@@ -25,12 +25,15 @@ For a cross-document view transition to work, the current and destination docume
 - `navigation`
   - : A keyword specifying the effect this at-rule will have on the document's view transition behavior. Possible values are:
     - `auto`
-      - : The document will undergo a view transition when taking part in a navigation, provided the navigation is [same-origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy), without cross-origin redirects, and its {{domxref("NavigateEvent.navigationType", "navigationType")}} is `traverse`, `push`, or `replace`. In the case of `push` or `replace`, the navigation must be initiated by a user interacting with the page content, not by a browser UI feature.
+      - : The document will undergo a view transition when taking part in a navigation, provided the navigation is [same-origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy), without cross-origin redirects, and its {{domxref("NavigateEvent.navigationType", "navigationType")}} is `traverse`, `push`, or `replace`.
+        A `push` or `replace` navigation must be started by the page (for example, by clicking a link, submitting a form, or calling a script), not from the browser UI (for example, by typing in the address bar or selecting a bookmark).
     - `none`
       - : The document will not undergo a view transition.
 
 - `types`
-  - : Specifies the view transition [types](/en-US/docs/Web/API/View_Transition_API/Using_types) to set on the active view transition for the current and destination documents. Possible values are:
+  - : Specifies the view transition [types](/en-US/docs/Web/API/View_Transition_API/Using_types) to set on the active view transition for the document that contains the rule.
+    To use the same types on both sides of the navigation, declare them in both the current and destination documents.
+    Possible values are:
     - `<custom-ident>+`
       - : One or more space-separated {{cssxref("&lt;custom-ident>")}} values representing the types to set.
     - `none`
