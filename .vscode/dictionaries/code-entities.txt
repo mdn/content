@@ -261,6 +261,8 @@ fwid
 gapi
 gara
 gattserverdisconnected
+gbsct
+gbzzzz
 geometrychange
 geor
 gesturechange
@@ -337,6 +339,7 @@ IXML
 jpan
 jpanfin
 jpanyear
+jpzzzz
 jsapi.h
 jscript
 jsdouble
