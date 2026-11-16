@@ -96,5 +96,5 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The `blocking="render"` attribute of the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} elements is now enabled by default in Nightly.
   This lets you block rendering of the page until the marked stylesheet has loaded or script has run, so the page doesn't first appear unstyled or incomplete.
-  This also enables [`<link rel="expect">`](/en-US/docs/Web/HTML/Reference/Attributes/rel#expect), which blocks rendering until a particular element has been parsed, and the {{domxref("PerformanceResourceTiming.renderBlockingStatus")}} property.
+  This preference also enables [`<link rel="expect">`](/en-US/docs/Web/HTML/Reference/Attributes/rel#expect), which blocks rendering until a particular element has been parsed. It also enables the {{domxref("PerformanceResourceTiming.renderBlockingStatus")}} property, which indicates whether a resource blocked rendering.
   ([Firefox bug 2084340](https://bugzil.la/2084340), [Firefox bug 2053279](https://bugzil.la/2053279)).
