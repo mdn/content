@@ -242,6 +242,7 @@ Below are all values that are commonly supported by browsers for the `numberingS
 | `tibt`     | Tibetan digits                                                             | `༠༡༢༣༤༥༦༧༨༩` (U+0F20 to U+0F29)                                                                         |
 | `tirh`     | Tirhuta digits                                                             | `𑓐𑓑𑓒𑓓𑓔𑓕𑓖𑓗𑓘𑓙` (U+114D0 to U+114D9)                                                                       |
 | `tnsa`     | Tangsa digits                                                              | `𖫀𖫁𖫂𖫃𖫄𖫅𖫆𖫇𖫈𖫉` (U+16AC0 to U+16AC9)                                                                       |
+| `tols`     | Tolong Siki digits                                                         | `𑷠𑷡𑷢𑷣𑷤𑷥𑷦𑷧𑷨𑷩` (U+11DE0 to U+11DE9)                                                                       |
 | `vaii`     | Vai digits                                                                 | `꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩` (U+A620 to U+A629)                                                                         |
 | `wara`     | Warang Citi digits                                                         | `𑣠𑣡𑣢𑣣𑣤𑣥𑣦𑣧𑣨𑣩` (U+118E0 to U+118E9)                                                                       |
 | `wcho`     | Wancho digits                                                              | `𞋰𞋱𞋲𞋳𞋴𞋵𞋶𞋷𞋸𞋹` (U+1E2F0 to U+1E2F9)                                                                       |
