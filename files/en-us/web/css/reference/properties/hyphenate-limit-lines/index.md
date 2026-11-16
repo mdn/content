@@ -30,7 +30,7 @@ hyphenate-limit-lines: 0;
 ```html interactive-example
 <section id="default-example">
   <p id="example-element" lang="en">
-    The word pneumonoultramicroscopicsilicovolcanoconiosis names a lung disease.
+    The word supercalifragilisticexpialidocious is a mouthful of nonsensical syllables.
   </p>
 </section>
 ```
@@ -70,18 +70,19 @@ The property is specified as a single value from the following list:
 - `no-limit`
   - : There is no limit on the number of consecutive hyphenated lines. This is the default.
 - {{cssxref("integer")}}
-  - : Specifies the maximum number of consecutive lines that can end with a hyphenated word. For example, a value of `2` allows at most two lines in a row to be hyphenated. A value of `0` prevents any line from ending with a hyphenated word, which effectively disables hyphenation. Negative values are invalid.
+  - : A positive integer specifying the maximum number of consecutive lines that can end with a hyphenated word.
 
 ## Description
 
-The `hyphenate-limit-lines` property lets you limit how many lines in a row can end with a hyphenated word. In narrow or justified text, the browser may need to [hyphenate](/en-US/docs/Web/CSS/Reference/Properties/hyphens) words on several consecutive lines. Many typographic style guides consider a long run of hyphenated lines (sometimes called a "ladder" or "stack") to be distracting and hard to read, and recommend limiting it to two or three lines.
+The `hyphenate-limit-lines` property lets you limit how many lines in a row can end with a hyphenated word. In narrow or justified text, the browser may need to [hyphenate](/en-US/docs/Web/CSS/Reference/Properties/hyphens) words on several consecutive lines. Many typographic style guides consider a long run of hyphenated lines (sometimes called a "ladder" or "stack") to be distracting and hard to read, and recommend limiting hyphenation to two or three lines.
+
+The `<integer>` value specifies the maximum number of consecutive lines that can be hyphenated. For example, a value of `2` allows at most two consecutive lines to be hyphenated. A value of `0` prevents any line from ending with a hyphenated word, which effectively disables hyphenation. Negative values are invalid.
 
 Once the specified number of consecutive lines has been hyphenated, the browser won't hyphenate the next line. Instead, it breaks that line at a regular line-break opportunity, such as a space between words. After a line that isn't hyphenated, the count starts again.
 
-> [!NOTE]
-> If {{cssxref("overflow-wrap")}} is set to `break-word` or `anywhere`, a word that doesn't fit on a line can still be broken to prevent it from overflowing, even after the `hyphenate-limit-lines` limit has been reached. In this case, the browser may still break the word without inserting a hyphen or ignore the limit.
+The property only has an effect when hyphenation is enabled, for example, by setting {{cssxref("hyphens", "hyphens: auto")}} or by including soft hyphens (`&shy;`) in the text with `hyphens: manual`.
 
-The property only has an effect when hyphenation is enabled, for example by setting {{cssxref("hyphens", "hyphens: auto")}} or by including soft hyphens (`&shy;`) in the text with `hyphens: manual`.
+If {{cssxref("overflow-wrap")}} is set to `break-word` or `anywhere`, a word that doesn't fit on a line can still be broken to prevent it from overflowing, even after the `hyphenate-limit-lines` limit has been reached. In this case, the browser may still break the word without inserting a hyphen or ignore the limit.
 
 ## Formal definition
 
@@ -98,6 +99,7 @@ The property only has an effect when hyphenation is enabled, for example by sett
 This example demonstrates how the `hyphenate-limit-lines` property can be used to limit consecutive hyphenated lines.
 
 #### HTML
+We include two boxes with the same text, including a very long word.
 
 ```html
 <div class="container">
@@ -111,7 +113,7 @@ This example demonstrates how the `hyphenate-limit-lines` property can be used t
 ```
 
 #### CSS
-
+We include some basic styles, including limiting the width to `10em`, which is too narrow to contain our long word. We set each box to `hyphens: auto`, which, in the narrow container, will cause the long word to break across three lines by default. We then explicitly set `hyphenate-limit-lines` on one box to the default `no-limit` value and the other to `1`, allowing any word to be hyphenated at most once.
 ```css
 .container {
   display: flex;
@@ -121,10 +123,10 @@ This example demonstrates how the `hyphenate-limit-lines` property can be used t
 
 p {
   margin: 0;
-  width: 150px;
   padding: 0.5rem;
   border: 2px dashed #999999;
   font-size: 1.25rem;
+  width: 10em;
   hyphens: auto;
 }
 
@@ -136,14 +138,11 @@ p {
   hyphenate-limit-lines: 1;
 }
 ```
-
 #### Result
 
 {{EmbedLiveSample("Limiting consecutive hyphenated lines", "", 250)}}
 
-In the first box, with `no-limit`, the browser can hyphenate as many lines in a row as it needs to, so it breaks the long word across three lines, and two lines in a row end with a hyphen.
-
-In the second box, with `1`, only one hyphenated line is allowed in a row. The browser can hyphenate the long word once, but it can't hyphenate the next line as well, so the rest of the word overflows the box.
+The `no-limit` in the first box allows the long word to be hyphenated as needed to prevent it from overflowing the container. The `1` value on the second box limits hyphenation to a single occurrence per word, so the long word isn't prevented from overflowing its container.
 
 ## Specifications
 
