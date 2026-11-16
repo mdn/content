@@ -10,7 +10,7 @@ browser-compat: api.URL.URL
 
 The **`URL()`** constructor returns a newly created {{domxref("URL")}} object representing the URL defined by the parameters.
 
-If the given base URL or the resulting URL are not valid URLs, the JavaScript {{jsxref("TypeError")}} exception is thrown.
+If the given base URL or the resulting URL are not valid absolute URLs, the JavaScript {{jsxref("TypeError")}} exception is thrown.
 
 ## Syntax
 
