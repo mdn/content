@@ -52,7 +52,7 @@ For secure connections established over HTTPS, another "handshake" is required. 
 
 Making the connection secure adds time to the page load, but it is worth the latency expense, as a third party cannot decrypt the data transmitted between the browser and the web server.
 
-Once DNS resolution is complete, a new TCP connection and a full TLS handshake together take two round trips (TLS 1.3) or three (TLS 1.2) before the browser can make the request.
+Once DNS resolution is complete, a new TCP connection and a full TLS handshake take two round trips (TLS 1.3) or three (TLS 1.2) before the browser can make the request.
 
 ## Response
 
