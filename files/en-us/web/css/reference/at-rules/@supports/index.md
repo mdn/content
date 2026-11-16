@@ -475,7 +475,7 @@ We can detect browsers that don't automatically adjust transformed anchor-positi
 
 {{embedlivesample("named-feature", "100%", 200)}}
 
-Hover or focus the anchor `<div>` to transform it; you should see the positioned `<div>` move over so that it is still positioned the same distance from the anchor's right edge, both in browsers with transform-aware anchor positioning, and those without.
+Hover over or give focus to the anchor element to transform it. The positioned element stays the same distance from the anchor's right edge, whether or not the browser supports transform-aware anchor positioning.
 
 ## Specifications
 
