@@ -3,12 +3,10 @@ title: "Document: moveBefore() method"
 short-title: moveBefore()
 slug: Web/API/Document/moveBefore
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Document.moveBefore
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 The **`moveBefore()`** method of the {{domxref("Document")}} interface moves a given {{domxref("Node")}} inside the `Document` DOM node as a direct child, before a given reference node.
 
@@ -31,21 +29,21 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `HierarchyRequestError` {{jsxref("TypeError")}}
+- `HierarchyRequestError` {{domxref("DOMException")}}
   - : Thrown in any of the following situations:
     - The specified `movedNode` is not part of this document.
     - The specified `movedNode` is not an {{domxref("Element")}} or {{domxref("CharacterData")}} node.
     - You are trying to move `movedNode` before the document's {{glossary("doctype")}} (represented by a {{domxref("DocumentType")}} object).
-- `NotFoundError` {{jsxref("TypeError")}}
+- `NotFoundError` {{domxref("DOMException")}}
   - : The specified `referenceNode` is not a child of the node you are calling `moveBefore()` on, that is, the node you are trying to move `movedNode` inside.
-- `TypeError` {{jsxref("TypeError")}}
+- {{jsxref("TypeError")}}
   - : The second argument was not supplied.
 
 ## Description
 
 The `moveBefore()` method moves a given node to a new place in the DOM. It provides similar functionality to the {{domxref("Node.insertBefore()")}} method, except that it doesn't remove and then reinsert the node. This means that the state of the node (which would be reset if moving it with `insertBefore()` and similar mechanisms) is preserved after the move. This includes:
 
-- [Animation](/en-US/docs/Web/CSS/CSS_animations) and [transition](/en-US/docs/Web/CSS/CSS_transitions) state.
+- [Animation](/en-US/docs/Web/CSS/Guides/Animations) and [transition](/en-US/docs/Web/CSS/Guides/Transitions) state.
 - {{htmlelement("iframe")}} loading state.
 - Interactivity states (for example, {{cssxref(":focus")}} and {{cssxref(":active")}}).
 - [Fullscreen](/en-US/docs/Web/API/Fullscreen_API) element state.

@@ -47,7 +47,7 @@ new Intl.ListFormat(locales, options)
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
+  - : A string with a {{glossary("BCP 47 language tag")}} or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
   - : An object containing the following properties, in the order they are retrieved (all of them are optional):
     - `localeMatcher`
@@ -106,7 +106,7 @@ console.log(new Intl.ListFormat("en-US", { type: "conjunction" }).format(list));
 
 ### Unit formatting
 
-Use `style: "unit"` to format the list items as a compound unit. In fact, {{jsxref("Intl.DurationFormat")}} uses unit-style list formatting under the hood to format durations.
+Use `type: "unit"` to format the list items as a compound unit. In fact, {{jsxref("Intl.DurationFormat")}} uses unit-style list formatting under the hood to format durations.
 
 ```js
 const marathon = [
@@ -157,7 +157,7 @@ const marathon = [
 
 function formatDistance(locale, distance, style) {
   return new Intl.ListFormat(locale, { type: "unit", style }).format(
-    marathon.map((component) =>
+    distance.map((component) =>
       component[0].toLocaleString(locale, {
         style: "unit",
         unit: component[1],

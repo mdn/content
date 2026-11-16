@@ -16,11 +16,15 @@ This event is not cancellable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("track", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 ontrack = (event) => { }
 ```
 
@@ -29,19 +33,6 @@ ontrack = (event) => { }
 An {{domxref("RTCTrackEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("RTCTrackEvent")}}
-
-## Event properties
-
-_Since `RTCTrackEvent` is based on {{domxref("Event")}}, its properties are also available._
-
-- {{domxref("RTCTrackEvent.receiver", "receiver")}} {{ReadOnlyInline}}
-  - : The {{domxref("RTCRtpReceiver")}} used by the track that's been added to the `RTCPeerConnection`.
-- {{domxref("RTCTrackEvent.streams", "streams")}} {{ReadOnlyInline}} {{optional_inline}}
-  - : An array of {{domxref("MediaStream")}} objects, each representing one of the media streams to which the added {{domxref("RTCTrackEvent.track", "track")}} belongs. By default, the array is empty, indicating a streamless track.
-- {{domxref("RTCTrackEvent.track", "track")}} {{ReadOnlyInline}}
-  - : The {{domxref("MediaStreamTrack")}} which has been added to the connection.
-- {{domxref("RTCTrackEvent.transceiver", "transceiver")}} {{ReadOnlyInline}}
-  - : The {{domxref("RTCRtpTransceiver")}} being used by the new track.
 
 ## Examples
 
@@ -58,19 +49,15 @@ pc = new RTCPeerConnection({
   ],
 });
 
-pc.addEventListener(
-  "track",
-  (e) => {
-    videoElement.srcObject = e.streams[0];
-    hangupButton.disabled = false;
-  },
-  false,
-);
+pc.addEventListener("track", (e) => {
+  videoElement.srcObject = e.streams[0];
+  hangupButton.disabled = false;
+});
 ```
 
 The event handler assigns the new track's first stream to an existing {{HTMLElement("video")}} element, identified using the variable `videoElement`.
 
-You can also assign the event handler function to the `ontrack` property, rather than use {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
+You can also assign the event handler function to the `ontrack` property, rather than use {{domxref("EventTarget.addEventListener", "addEventListener()")}} (but note that this replaces other event listeners added using `ontrack`, if any).
 
 ```js
 pc.ontrack = (e) => {

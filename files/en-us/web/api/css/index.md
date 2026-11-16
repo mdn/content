@@ -11,9 +11,9 @@ The **`CSS`** interface holds useful CSS-related methods. No objects with this i
 
 ## Static properties
 
-- {{DOMxRef("CSS/highlights_static", "CSS.highlights")}}
+- {{DOMxRef("CSS/highlights_static", "CSS.highlights")}} {{ReadOnlyInline}}
   - : Provides access to the `HighlightRegistry` used to style arbitrary text ranges using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
-- {{DOMxRef("CSS/paintWorklet_static", "CSS.paintWorklet")}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{DOMxRef("CSS/paintWorklet_static", "CSS.paintWorklet")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Provides access to the Worklet responsible for all the classes related to painting.
 
 ## Instance properties
@@ -25,7 +25,7 @@ _The CSS interface is a utility interface and no object of this type can be crea
 _No inherited static methods_.
 
 - {{DOMxRef("CSS/registerProperty_static", "CSS.registerProperty()")}}
-  - : Registers [custom properties](/en-US/docs/Web/CSS/--*), allowing for property type checking, default values, and properties that do or do not inherit their value.
+  - : Registers [custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*), allowing for property type checking, default values, and properties that do or do not inherit their value.
 - {{DOMxRef("CSS/supports_static", "CSS.supports()")}}
   - : Returns a boolean value indicating if the pair _property-value_, or the condition, given in parameter is supported.
 - {{DOMxRef("CSS/escape_static", "CSS.escape()")}}

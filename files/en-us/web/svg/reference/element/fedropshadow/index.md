@@ -19,15 +19,14 @@ Like other filter primitives, it handles color components in the `linearRGB` {{g
 
 ## Attributes
 
-- {{SVGAttr("dx")}}
-  - : This attribute defines the x offset of the drop shadow.
-    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `2`; _Animatable_: **yes**
-- {{SVGAttr("dy")}}
-  - : This attribute defines the y offset of the drop shadow.
-    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `2`; _Animatable_: **yes**
-- {{SVGAttr("stdDeviation")}}
-  - : This attribute defines the standard deviation for the blur operation in the drop shadow.
-    _Value type_: [**\<number-optional-number>**](/en-US/docs/Web/SVG/Guides/Content_type#number-optional-number); _Default value_: `2`; _Animatable_: **yes**
+- {{SVGAttr("dx")}}: This attribute defines the x offset of the drop shadow.
+  _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `2`; _Animatable_: **yes**
+- {{SVGAttr("dy")}}: This attribute defines the y offset of the drop shadow.
+  _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `2`; _Animatable_: **yes**
+- {{SVGAttr("in")}}
+- {{SVGAttr("stdDeviation")}}: This attribute defines the standard deviation for the blur operation in the drop shadow.
+  _Value type_: [**\<number-optional-number>**](/en-US/docs/Web/SVG/Guides/Content_type#number-optional-number); _Default value_: `2`; _Animatable_: **yes**
+- [Filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes): {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("result")}}
 
 ## DOM Interface
 

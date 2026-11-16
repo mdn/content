@@ -3,13 +3,9 @@ title: Temporal.Duration.prototype.minutes
 short-title: minutes
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/minutes
 page-type: javascript-instance-accessor-property
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.Duration.minutes
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`minutes`** accessor property of {{jsxref("Temporal.Duration")}} instances returns an integer representing the number of minutes in the duration.
 
@@ -27,8 +23,8 @@ const d2 = Temporal.Duration.from({ hours: -1, minutes: -30 });
 const d3 = Temporal.Duration.from({ hours: 1 });
 const d4 = Temporal.Duration.from({ minutes: 60 });
 
-console.log(d1.minutes); // 1
-console.log(d2.minutes); // -1
+console.log(d1.minutes); // 30
+console.log(d2.minutes); // -30
 console.log(d3.minutes); // 0
 console.log(d4.minutes); // 60
 

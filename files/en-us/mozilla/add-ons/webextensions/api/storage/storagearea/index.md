@@ -6,7 +6,14 @@ browser-compat: webextensions.api.storage.StorageArea
 sidebar: addonsidebar
 ---
 
-StorageArea is an object representing a storage area.
+StorageArea is an object representing a storage area. This documentation describes the common interface of these concrete implementations:
+
+- {{WebExtAPIRef("storage.local")}}
+- {{WebExtAPIRef("storage.managed")}}
+- {{WebExtAPIRef("storage.session")}}
+- {{WebExtAPIRef("storage.sync")}}
+
+`storage.StorageArea` is not an API object; it is a mechanism for describing the concrete APIs.
 
 ## Type
 
@@ -18,6 +25,8 @@ Values of this type are objects.
   - : Retrieves one or more items from the storage area.
 - {{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}
   - : Gets the amount of storage space (in bytes) used one or more items being stored in the storage area.
+- {{WebExtAPIRef("storage.StorageArea.getKeys()")}}
+  - : Retrieves the keys of all items in the storage area.
 - {{WebExtAPIRef("storage.StorageArea.set()")}}
   - : Stores one or more items in the storage area. If an item already exists, its value will be updated.
 - {{WebExtAPIRef("storage.StorageArea.setAccessLevel()")}}

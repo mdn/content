@@ -100,7 +100,7 @@ try {
 
 ### Handling a specific error type
 
-You can choose to handle only specific error types by testing the error type with the {{jsxref("Operators/instanceof", "instanceof")}} keyword:
+You can choose to handle only specific error types by testing the error type with the {{jsxref("instanceof")}} keyword:
 
 ```js
 try {
@@ -223,7 +223,7 @@ try {
 
 ## See also
 
-- [Polyfill of `Error` with `cause` support in `core-js`](https://github.com/zloirock/core-js#ecmascript-error)
+- [Polyfill of `Error` with `cause` support in `core-js`](https://core-js.io/docs/features/ecmascript/error)
 - [es-shims polyfill of Error `cause`](https://www.npmjs.com/package/error-cause)
 - {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try...catch")}}

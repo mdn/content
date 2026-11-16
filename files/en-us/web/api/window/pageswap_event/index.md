@@ -16,11 +16,15 @@ It also provides access to the navigation type and current and destination docum
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("pageswap", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onpageswap = (event) => { }
 ```
 
@@ -29,13 +33,6 @@ onpageswap = (event) => { }
 A {{domxref("PageSwapEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PageSwapEvent")}}
-
-## Event properties
-
-- {{domxref("PageSwapEvent.activation")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("NavigationActivation")}} object containing the navigation type and current and destination document history entries for a same-origin navigation. If the navigation has a cross-origin URL anywhere in the redirect chain, it returns `null`.
-- {{domxref("PageSwapEvent.viewTransition")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("ViewTransition")}} object representing the inbound cross-document view transition, if one is active when the event is fired. If this is not the case, it returns `null`.
 
 ## Examples
 

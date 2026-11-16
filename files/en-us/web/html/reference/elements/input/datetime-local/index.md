@@ -1,5 +1,6 @@
 ---
-title: <input type="datetime-local">
+title: '`<input type="datetime-local">` HTML attribute value'
+short-title: <input type="datetime-local">
 slug: Web/HTML/Reference/Elements/input/datetime-local
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_datetime-local
@@ -7,6 +8,8 @@ sidebar: htmlsidebar
 ---
 
 {{htmlelement("input")}} elements of type **`datetime-local`** create input controls that let the user easily enter both a date and a time, including the year, month, and day as well as the time in hours and minutes.
+
+The control's UI varies in general from browser to browser. The control is intended to represent _a local date and time_, not necessarily _the user's local date and time_. In other words, the input allows any valid combination of year, month, day, hour, and minute—even if such a combination is invalid in the user's local time zone (such as the one hour within a daylight saving time spring-forward transition gap).
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;datetime-local&quot;&gt;", "tabbed-shorter")}}
 
@@ -35,8 +38,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-The control's UI varies in general from browser to browser. The control is intended to represent _a local date and time_, not necessarily _the user's local date and time_. In other words, the input allows any valid combination of year, month, day, hour, and minute—even if such a combination is invalid in the user's local time zone (such as the one hour within a daylight saving time spring-forward transition gap).
 
 ## Value
 
@@ -85,16 +86,14 @@ This value must specify a date string earlier than or equal to the one specified
 
 ### step
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) otherwise, and an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are a whole number of steps from the step base are valid. The step base is [`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) otherwise, or `0` (the Unix epoch, `1970-01-01T00:00`) if neither is provided.
 
-A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
+For `datetime-local` inputs, the value of `step` is given in seconds and is treated as a number of milliseconds equal to 1000 times the `step` value (the underlying numeric value is in milliseconds). The default value is 60, indicating 1 minute.
+
+A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)). In reality, it has the same effect as `60` for `datetime-local` inputs because the picker UI in this case only allows selecting whole minutes.
 
 > [!NOTE]
 > When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
-
-For `datetime-local` inputs, the value of `step` is given in seconds, with a scaling factor of 1000 (since the underlying numeric value is in milliseconds). The default value of `step` is 60, indicating 60 seconds (or 1 minute, or 60,000 milliseconds).
-
-_At this time, it's unclear what a value of `any` means for `step` when used with `datetime-local` inputs. This will be updated as soon as that information is determined._
 
 ## Using datetime-local inputs
 
@@ -158,6 +157,12 @@ Let's look at an example; here we've set minimum and maximum date/time values, a
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 If you try to submit the form with an incomplete date (or with a date outside the set bounds), the browser displays an error. Try playing with the example now:
 
 {{ EmbedLiveSample('Validation', 600, 120) }}
@@ -200,10 +205,8 @@ input:valid + span::after {
 The most basic use of `<input type="datetime-local">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
 
 ```html
-<form>
-  <label for="party">Enter a date and time for your party booking:</label>
-  <input id="party" type="datetime-local" name="party-date" />
-</form>
+<label for="party">Enter a date and time for your party booking:</label>
+<input id="party" type="datetime-local" name="party-date" />
 ```
 
 {{ EmbedLiveSample('Basic_uses_of_datetime-local', 600, 40) }}
@@ -213,22 +216,20 @@ The most basic use of `<input type="datetime-local">` involves a basic `<input>`
 You can use the [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) and [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max) attributes to restrict the dates/times that can be chosen by the user. In the following example, we are setting a minimum datetime of `2025-06-01T08:30` and a maximum datetime of `2025-06-30T16:30`:
 
 ```html
-<form>
-  <label for="party">Enter a date and time for your party booking:</label>
-  <input
-    id="party"
-    type="datetime-local"
-    name="party-date"
-    min="2025-06-01T08:30"
-    max="2025-06-30T16:30" />
-</form>
+<label for="party">Enter a date and time for your party booking:</label>
+<input
+  id="party"
+  type="datetime-local"
+  name="party-date"
+  min="2025-06-01T08:30"
+  max="2025-06-30T16:30" />
 ```
 
 {{ EmbedLiveSample('Setting_maximum_and_minimum_dates_and_times', 600, 40) }}
 
 Only days in June 2025 can be selected. Depending on what browser you are using, times outside the specified values might not be selectable. In other browsers, invalid dates and times are selectable but will match {{CSSXref(":invalid")}} and {{CSSXref(":out-of-range")}} and will fail [validation](#validation).
 
-In some browsers (Chrome and Edge), only the "days" part of the date value will be editable, and dates outside June can't be scrolled. In others (Safari), the date picker will appear to allow any date, but the value will be clamped to the valid range when a date is selected.
+In some browsers (Safari), the date picker will appear to allow any date, but the value will be clamped to the valid range when a date is selected.
 
 The valid range included all times between the `min` and `max` values; the time of day is only constrained on the first and last dates in the range.
 
@@ -274,14 +275,6 @@ The valid range included all times between the `min` and `max` values; the time 
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

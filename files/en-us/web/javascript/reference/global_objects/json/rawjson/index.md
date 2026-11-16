@@ -130,7 +130,7 @@ Note that the double backslashes in the `rawJSON` actually represents a single s
 
 ## See also
 
-- [Polyfill of `JSON.rawJSON` in `core-js`](https://github.com/zloirock/core-js#jsonparse-source-text-access)
+- [Polyfill of `JSON.rawJSON` in `core-js`](https://core-js.io/docs/features/ecmascript/json)
 - {{jsxref("JSON")}}
 - {{jsxref("JSON.isRawJSON()")}}
 - {{jsxref("JSON.stringify()")}}

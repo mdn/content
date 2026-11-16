@@ -10,7 +10,7 @@ browser-compat: api.CryptoKey.algorithm
 
 The read-only **`algorithm`** property of the {{DOMxRef("CryptoKey")}} interface returns an object describing the algorithm for which this key can be used, and any associated extra parameters.
 
-The object returned depends of the algorithm used to generate the key.
+The object returned depends on the algorithm used to generate the key.
 
 ## Value
 
@@ -38,8 +38,11 @@ function importSecretKey(rawKey) {
   ]);
 }
 
-const key = importSecretKey(rawKey);
-console.log(`This key is to be used with the ${key.algorithm} algorithm.`);
+importSecretKey(rawKey).then((key) =>
+  console.log(
+    `This key is to be used with the ${key.algorithm.name} algorithm.`,
+  ),
+);
 ```
 
 ## Specifications

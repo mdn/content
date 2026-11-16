@@ -75,6 +75,8 @@ else
 // …
 ```
 
+The conditions are evaluated in order until one evaluates to `true`. At that point, the associated statement is executed and the rest of the `else if` clauses are skipped.
+
 To execute multiple statements within a clause, use a block statement (`{ /* ... */ }`) to group those statements.
 
 ```js-nolint

@@ -57,7 +57,7 @@ const str = "Hello, "
 
 ### Assignments producing ReferenceErrors
 
-Invalid assignments don't always produce syntax errors. Sometimes the syntax is almost correct, but at runtime, the left hand side expression evaluates to a _value_ instead of a _reference_, so the assignment is still invalid. Such errors occur later in execution, when the statement is actually executed.
+Invalid assignments don't always produce syntax errors. Sometimes the syntax is almost correct, but at runtime, the left-hand side expression evaluates to a _value_ instead of a _reference_, so the assignment is still invalid. Such errors occur later in execution, when the statement is actually executed.
 
 ```js-nolint example-bad
 function foo() {
@@ -66,7 +66,7 @@ function foo() {
 foo() = 1; // ReferenceError: invalid assignment left-hand side
 ```
 
-Function calls, [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) calls, [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super), and [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) are all values instead of references. If you want to use them on the left hand side, the assignment target needs to be a property of their produced values instead.
+Function calls, [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) calls, [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super), and [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) are all values instead of references. If you want to use them on the left-hand side, the assignment target needs to be a property of their produced values instead.
 
 ```js example-good
 function foo() {

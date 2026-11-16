@@ -29,8 +29,14 @@ Let's see how the js13kPWA app uses Service Workers to provide offline capabilit
 We'll start by looking at the code that registers a new Service Worker, in the app.js file:
 
 ```js
+let swRegistration = null;
+
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("./pwa-examples/js13kpwa/sw.js");
+  navigator.serviceWorker
+    .register("./pwa-examples/js13kpwa/sw.js")
+    .then((reg) => {
+      swRegistration = reg;
+    });
 }
 ```
 
@@ -61,8 +67,6 @@ const appShellFiles = [
   "/pwa-examples/js13kpwa/index.html",
   "/pwa-examples/js13kpwa/app.js",
   "/pwa-examples/js13kpwa/style.css",
-  "/pwa-examples/js13kpwa/fonts/graduate.eot",
-  "/pwa-examples/js13kpwa/fonts/graduate.ttf",
   "/pwa-examples/js13kpwa/fonts/graduate.woff",
   "/pwa-examples/js13kpwa/favicon.ico",
   "/pwa-examples/js13kpwa/img/js13kgames.png",

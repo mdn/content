@@ -3,8 +3,8 @@ title: operator
 slug: Web/SVG/Reference/Attribute/operator
 page-type: svg-attribute
 spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-femorphology-operator
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomposite-operator
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-femorphology-operator
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fecomposite-operator
 sidebar: svgref
 ---
 
@@ -14,37 +14,6 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement("feComposite")}}
 - {{SVGElement("feMorphology")}}
-
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-  font:
-    20px Arial,
-    Helvetica,
-    sans-serif;
-}
-```
-
-```html
-<svg viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg">
-  <filter id="erode">
-    <feMorphology operator="erode" radius="0.4" />
-  </filter>
-  <filter id="dilate">
-    <feMorphology operator="dilate" radius="0.8" />
-  </filter>
-
-  <text x="0" y="15">Normal text</text>
-  <text x="0" y="40" filter="url(#erode)">Thin text</text>
-  <text x="0" y="65" filter="url(#dilate)">Fat text</text>
-</svg>
-```
-
-{{EmbedLiveSample("Example", "240", "200")}}
 
 ## feComposite
 
@@ -116,6 +85,37 @@ For {{SVGElement("feMorphology")}}, `operator` defines whether to erode (i.e., t
   - : This value thins the source graphic defined in the {{SVGAttr("in")}} attribute.
 - `dilate`
   - : This value fattens the source graphic defined in the `in` attribute.
+
+## Example
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+  font:
+    20px "Helvetica",
+    "Arial",
+    sans-serif;
+}
+```
+
+```html
+<svg viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg">
+  <filter id="erode">
+    <feMorphology operator="erode" radius="0.4" />
+  </filter>
+  <filter id="dilate">
+    <feMorphology operator="dilate" radius="0.8" />
+  </filter>
+
+  <text x="0" y="15">Normal text</text>
+  <text x="0" y="40" filter="url(#erode)">Thin text</text>
+  <text x="0" y="65" filter="url(#dilate)">Fat text</text>
+</svg>
+```
+
+{{EmbedLiveSample("Example", "240", "200")}}
 
 ## Specifications
 

@@ -14,11 +14,15 @@ This event is not cancellable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("message", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onmessage = (event) => { }
 ```
 
@@ -27,21 +31,6 @@ onmessage = (event) => { }
 A {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MessageEvent")}}
-
-## Event properties
-
-_This interface also inherits properties from its parent, {{domxref("Event")}}._
-
-- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
-  - : The data sent by the message emitter.
-- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
-  - : A string representing the origin of the message emitter.
-- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
-  - : A string representing a unique ID for the event.
-- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : A `MessageEventSource` (which can be a {{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
-- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
-  - : An array containing all {{domxref("MessagePort")}} objects sent with the message, in order.
 
 ## Examples
 
@@ -63,7 +52,7 @@ channelMessageButton.addEventListener("click", () => {
 targetFrame.postMessage("init", targetOrigin, [channel.port2]);
 ```
 
-The target can receive the port and start listening for messages on it using code like this:
+The target can receive the port and start listening for messages and message errors on it using code like this:
 
 ```js
 window.addEventListener("message", (event) => {
@@ -73,11 +62,15 @@ window.addEventListener("message", (event) => {
     received.textContent = event.data;
   });
 
+  myPort.addEventListener("messageerror", (event) => {
+    console.error(event.data);
+  });
+
   myPort.start();
 });
 ```
 
-Note that the listener must call [`MessagePort.start()`](/en-US/docs/Web/API/MessagePort/start) before any messages will be delivered to this port. This is only needed when using the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) method: if the receiver uses `onmessage` instead, `start()` is called implicitly:
+Note that the listener must call [`MessagePort.start()`](/en-US/docs/Web/API/MessagePort/start) before any messages will be delivered to this port. This is only needed when using the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) method: if the receiver uses `onmessage` instead, `start()` is called implicitly. The following example uses `onmessage` and `onmessageerror` (but note that this replaces other event listeners added using `onmessage` and `onmessageerror`, if any):
 
 ```js
 window.addEventListener("message", (event) => {
@@ -85,6 +78,10 @@ window.addEventListener("message", (event) => {
 
   myPort.onmessage = (event) => {
     received.textContent = event.data;
+  };
+
+  myPort.onmessageerror = (event) => {
+    console.error(event.data);
   };
 });
 ```

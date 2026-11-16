@@ -197,7 +197,7 @@ This function accepts a {{domxref("MediaStreamTrack")}} and a string indicating 
 
 ### Getting the current settings for a track
 
-Unless you only use exact constraints (which is pretty restrictive, so be sure you mean it!), there's no guarantee exactly what you're going to actually get after the constraints are applied. The values of the constrainable properties as they actually are in the resulting media are referred to as the settings. If you need to know the true format and other properties of the media, you can obtain those settings by calling {{domxref("MediaStreamTrack.getSettings()")}}. This returns an object based on the dictionary {{domxref("MediaTrackSettings")}}. For example:
+Unless you only use exact constraints (which is pretty restrictive, so be sure you mean it!), there's no guarantee exactly what you're going to actually get after the constraints are applied. The values of the constrainable properties as they actually are in the resulting media are referred to as the settings. If you need to know the true format and other properties of the media, you can obtain those settings by calling {{domxref("MediaStreamTrack.getSettings()")}}. For example:
 
 ```js
 function whichCamera(track) {
@@ -205,7 +205,7 @@ function whichCamera(track) {
 }
 ```
 
-This function uses `getSettings()` to obtain the track's currently in-use values for the constrainable properties and returns the value of {{domxref("MediaTrackSettings.facingMode", "facingMode")}}.
+This function uses `getSettings()` to obtain the track's currently in-use values for the constrainable properties and returns the value of [`facingMode`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#facingmode).
 
 ## Example: Constraint exerciser
 
@@ -250,7 +250,7 @@ The HTML and CSS for this example are pretty simple, and aren't shown here. You 
 
   <div class="button" id="applyButton">Apply Constraints</div>
 </div>
-<video id="video" autoplay></video>
+<video id="my-video" autoplay></video>
 
 <div class="button" id="stopButton">Stop Video</div>
 
@@ -344,7 +344,7 @@ let videoTrack = null;
 And we get references to all of the elements we'll need to access.
 
 ```js
-const videoElement = document.getElementById("video");
+const videoElement = document.getElementById("my-video");
 const logElement = document.getElementById("log");
 const supportedConstraintList = document.getElementById("supportedConstraints");
 const videoConstraintEditor = document.getElementById("videoConstraintEditor");
@@ -464,13 +464,9 @@ There are several steps here:
 We also need to set up an event listener to watch for the "Start Video" button to be clicked:
 
 ```js
-document.getElementById("startButton").addEventListener(
-  "click",
-  () => {
-    startVideo();
-  },
-  false,
-);
+document.getElementById("startButton").addEventListener("click", () => {
+  startVideo();
+});
 ```
 
 ### Applying constraint set updates
@@ -483,37 +479,33 @@ Next, we set up an event listener for the "Apply Constraints" button. If it's cl
 4. If an error occurs applying either set of constraints, `handleError()` is used to output a message into the log.
 
 ```js
-document.getElementById("applyButton").addEventListener(
-  "click",
-  () => {
-    if (!videoTrack && !audioTrack) {
-      startVideo();
-    } else {
-      buildConstraints();
+document.getElementById("applyButton").addEventListener("click", () => {
+  if (!videoTrack && !audioTrack) {
+    startVideo();
+  } else {
+    buildConstraints();
 
-      const prettyJson = (obj) => JSON.stringify(obj, null, 2);
+    const prettyJson = (obj) => JSON.stringify(obj, null, 2);
 
-      if (videoTrack) {
-        videoTrack
-          .applyConstraints(videoConstraints)
-          .then(() => {
-            videoSettingsText.value = prettyJson(videoTrack.getSettings());
-          })
-          .catch(handleError);
-      }
-
-      if (audioTrack) {
-        audioTrack
-          .applyConstraints(audioConstraints)
-          .then(() => {
-            audioSettingsText.value = prettyJson(audioTrack.getSettings());
-          })
-          .catch(handleError);
-      }
+    if (videoTrack) {
+      videoTrack
+        .applyConstraints(videoConstraints)
+        .then(() => {
+          videoSettingsText.value = prettyJson(videoTrack.getSettings());
+        })
+        .catch(handleError);
     }
-  },
-  false,
-);
+
+    if (audioTrack) {
+      audioTrack
+        .applyConstraints(audioConstraints)
+        .then(() => {
+          audioSettingsText.value = prettyJson(audioTrack.getSettings());
+        })
+        .catch(handleError);
+    }
+  }
+});
 ```
 
 ### Handling the stop button
@@ -557,8 +549,8 @@ function keyDownHandler(event) {
   }
 }
 
-videoConstraintEditor.addEventListener("keydown", keyDownHandler, false);
-audioConstraintEditor.addEventListener("keydown", keyDownHandler, false);
+videoConstraintEditor.addEventListener("keydown", keyDownHandler);
+audioConstraintEditor.addEventListener("keydown", keyDownHandler);
 ```
 
 ### Show constrainable properties the browser supports
@@ -574,7 +566,7 @@ for (const constraint in supportedConstraints) {
   if (Object.hasOwn(supportedConstraints, constraint)) {
     const elem = document.createElement("li");
 
-    elem.innerHTML = `<code><a href='https://developer.mozilla.org/docs/Web/API/MediaTrackSupportedConstraints/${constraint}' target='_blank'>${constraint}</a></code>`;
+    elem.innerHTML = `<code><a href='https://developer.mozilla.org/docs/Web/API/MediaDevices/getSupportedConstraints#${constraint.toLowerCase()}' target='_blank'>${constraint}</a></code>`;
     supportedConstraintList.appendChild(elem);
   }
 }
@@ -600,7 +592,7 @@ function handleError(reason) {
 
 Here you can see the complete example in action.
 
-{{EmbedLiveSample("Example_Constraint_exerciser", 650, 800)}}
+{{EmbedLiveSample("Example_Constraint_exerciser", 650, 1200, , , , "camera;microphone")}}
 
 ## Specifications
 
@@ -614,7 +606,6 @@ Here you can see the complete example in action.
 
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaTrackConstraints")}}
-- {{domxref("MediaTrackSettings")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaStreamTrack.applyConstraints()")}}
 - {{domxref("MediaStreamTrack.getSettings()")}}

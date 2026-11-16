@@ -19,7 +19,7 @@ import.meta
 The `import.meta` object is created by the host environment, as an extensible [`null`-prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) object where all properties are writable, configurable, and enumerable. The spec doesn't specify any properties to be defined on it, but hosts usually implement the following properties:
 
 - `url`
-  - : The full URL to the module, includes query parameters and/or hash (following the `?` or `#`). In browsers, this is either the URL from which the script was obtained (for external scripts), or the URL of the containing document (for inline scripts). In Node.js, this is the file path (including the `file://` protocol).
+  - : The full URL to the module, includes query parameters and/or hash (following the `?` or `#`). In browsers, this is either the URL from which the script was obtained (for external scripts), or the document's base URL when the module script was created (for inline scripts). In Node.js, file-based modules use a `file:` URL, while modules loaded from other supported URL schemes use their corresponding URLs.
 - [`resolve`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta/resolve)
   - : Resolves a module specifier to a URL using the current module's URL as base.
 
@@ -44,17 +44,17 @@ Using query parameters in the `import` specifier allows module-specific argument
 The `index.mjs` module is able to retrieve the `someURLInfo` parameter through `import.meta`:
 
 ```js
-// index.mjs
+// -- index.mjs --
 new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 ```
 
 The same applies when a module imports another:
 
 ```js
-// index.mjs
+// -- index.mjs --
 import "./index2.mjs?someURLInfo=5";
 
-// index2.mjs
+// -- index2.mjs --
 new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 ```
 
@@ -62,7 +62,7 @@ The ES module implementation in Node.js supports resolving module specifiers con
 
 ### Resolving a file relative to the current one
 
-In Node.js CommonJS modules, there's a `__dirname` variable that contains the absolute path to the folder containing current module, which is useful for resolving relative paths. However, ES modules cannot have contextual variables except for `import.meta`. Therefore, to resolve a relative file you can use `import.meta.url`. Note that this uses URLs rather than filesystem paths.
+In Node.js CommonJS modules, there's a `__dirname` variable that contains the absolute path to the folder containing current module, which is useful for resolving relative paths. However, Node.js does not provide this variable in ES modules. To resolve a relative file you can use `import.meta.url`. Note that this uses URLs rather than filesystem paths.
 
 Before (CommonJS):
 

@@ -16,7 +16,7 @@ A {{domxref("ValidityState")}} object.
 
 ## Examples
 
-The following example demonstrates that an `<output>` is in an invalid state when a {{domxref("ValidityState/customError", "customError")}} is set; in this state, {{domxref("HTMLOutputElement/checkValidity", "checkValidity()")}} returns `true` while the `validityState`'s `validity` property is `false`.
+The following example demonstrates that an `<output>` is in an invalid state when a {{domxref("ValidityState/customError", "customError")}} is set; in this state, {{domxref("HTMLOutputElement/checkValidity", "checkValidity()")}} returns `true` while the `validityState`'s `valid` property is `false`.
 
 ```js
 const output = document.getElementById("myOutput");

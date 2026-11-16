@@ -11,13 +11,13 @@ Injects a script into a target context. The script is run at `document_idle` by 
 > [!NOTE]
 > This method is available in Manifest V3 or higher in Chrome and Firefox 101. In Safari and Firefox 102+, this method is also available in Manifest V2.
 
-To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the target's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission). Note that some special pages do not allow this permission, including reader view, view-source, and PDF viewer pages.
+To use this API you must have the `scripting` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the target's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission).
 
 In Firefox and Safari, partial lack of host permissions can result in a successful execution (with the partial results in the resolved promise). In Chrome, any missing permission prevents any execution from happening (see [Issue 1325114](https://crbug.com/1325114)).
 
 The scripts you inject are called [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts).
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+Extensions cannot run content scripts in [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages). If an extension wants to run code in an extension page dynamically, it can include a script in the document. This script contains the code to run and registers a {{WebExtAPIRef("runtime.onMessage")}} listener that implements a way to execute the code. The extension can then send a message to the listener to trigger the code's execution.
 
 ## Syntax
 
@@ -37,6 +37,8 @@ let results = await browser.scripting.executeScript(
       - : `array` of `string`. An array of path of the JS files to inject, relative to the extension's root directory. Exactly one of `files` and `func` must be specified.
     - `func` {{optional_inline}}
       - : `function`. A JavaScript function to inject. This function is serialized and then deserialized for injection. This means that any bound parameters and execution context are lost. Exactly one of `files` and `func` must be specified.
+
+        The function is serialized from its source text, which must be a valid function expression. Use a function declaration, function expression, or arrow function. A function defined using [method syntax](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), such as `method() {}` in an object literal or class, doesn't serialize to a valid function expression, so it fails to run. Firefox returns a `SyntaxError` in the `error` property of the `InjectionResult`, while Chrome only reports the error in the target tab's console.
     - `injectImmediately` {{optional_inline}}
       - : `boolean`. Whether the injection into the target is triggered as soon as possible, but not necessarily prior to page load.
     - `target`
@@ -46,12 +48,14 @@ let results = await browser.scripting.executeScript(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an array of `InjectionResult` objects, which represent the result of the injected script in every injected frame.
+A {{JSxRef("Promise")}} that fulfills with an array of `InjectionResult` objects, which represent the result of the injected script in every injected frame.
 
-The promise is rejected if the injection fails, such as when the injection target is invalid. When script execution has started, its result is included in the result, whether successful (as `result`) or unsuccessfully (as `error`).
+The promise is rejected if the injection fails, such as when the injection target is invalid. After injection has started, the promise fulfills even if the script fails to parse or throws an error. In that case, the `InjectionResult` for the frame contains the error in its `error` property rather than a `result`. To handle all failures, catch the rejected promise and check the `error` property of each result.
 
 Each `InjectionResult` object has these properties:
 
+- `documentId`
+  - : `string`. The document associated with the injection. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 - `frameId`
   - : `number`. The frame ID associated with the injection.
 - `result` {{optional_inline}}
@@ -61,7 +65,7 @@ Each `InjectionResult` object has these properties:
 
     Chrome does not support the `error` property yet (see [Issue 1271527: Propagate errors from scripting.executeScript to InjectionResult](https://crbug.com/1271527)). As an alternative, runtime errors can be caught by wrapping the code to execute in a try-catch statement. Uncaught errors are also reported to the console of the target tab.
 
-The result of the script is the last evaluated statement, which is similar to the results seen if you executed the script in the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) (not any `console.log()` output). For example, consider a script like this:
+The result of a script is the value produced by the last evaluated statement. If the last statement produces a Promise, the result is the settled value of that Promise. This is similar to the results seen if you execute the script in the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) (excluding any `console.log()` output). For example, consider a script like this:
 
 ```js
 let foo = "my result";
@@ -74,12 +78,12 @@ The script result must be a [structured cloneable](/en-US/docs/Web/API/Web_Worke
 
 ## Examples
 
-This example executes a one-line code snippet in the active tab:
+This example executes a one-line code snippet in the active tab. It catches the promise rejection that occurs if the injection fails, and checks each result for an error from running the script:
 
 ```js
 browser.action.onClicked.addListener(async (tab) => {
   try {
-    await browser.scripting.executeScript({
+    const results = await browser.scripting.executeScript({
       target: {
         tabId: tab.id,
       },
@@ -87,6 +91,11 @@ browser.action.onClicked.addListener(async (tab) => {
         document.body.style.border = "5px solid green";
       },
     });
+    for (const { frameId, error } of results) {
+      if (error) {
+        console.error(`script failed in frame ${frameId}: ${error}`);
+      }
+    }
   } catch (err) {
     console.error(`failed to execute script: ${err}`);
   }

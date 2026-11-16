@@ -35,7 +35,7 @@ A number representing the [timestamp](/en-US/docs/Web/JavaScript/Reference/Globa
 
 ## Description
 
-`Date` objects are fundamentally represented by a [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), and this method allows you to retrieve the timestamp. You can use this method to help assign a date and time to another {{jsxref("Date")}} object. This method is functionally equivalent to the {{jsxref("Date/valueof", "valueOf()")}} method.
+`Date` objects are fundamentally represented by a [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), and this method allows you to retrieve the timestamp. You can use this method to help assign a date and time to another {{jsxref("Date")}} object. This method is functionally equivalent to the {{jsxref("Date/valueOf", "valueOf()")}} method.
 
 ## Examples
 
@@ -52,7 +52,7 @@ copy.setTime(birthday.getTime());
 
 ### Measuring execution time
 
-Subtracting two subsequent `getTime()` calls on newly generated {{jsxref("Date")}} objects, give the time span between these two calls. This can be used to calculate the executing time of some operations. See also {{jsxref("Date.now()")}} to prevent instantiating unnecessary {{jsxref("Date")}} objects.
+Subtracting two subsequent `getTime()` calls on newly generated {{jsxref("Date")}} objects gives the time span between these two calls. This can be used to calculate the execution time of some operations. See also {{jsxref("Date.now()")}} to prevent instantiating unnecessary {{jsxref("Date")}} objects.
 
 ```js
 let end, start;

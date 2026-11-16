@@ -3,6 +3,8 @@ title: "CSSStyleDeclaration: cssFloat property"
 short-title: cssFloat
 slug: Web/API/CSSStyleDeclaration/cssFloat
 page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.CSSStyleDeclaration.cssFloat
 ---
 

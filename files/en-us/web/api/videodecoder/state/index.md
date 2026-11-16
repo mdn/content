@@ -8,7 +8,7 @@ browser-compat: api.VideoDecoder.state
 
 {{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`state`** property of the {{domxref("VideoDecoder")}} interface returns the current state of the underlying codec.
+The **`state`** read-only property of the {{domxref("VideoDecoder")}} interface returns the current state of the underlying codec.
 
 ## Value
 

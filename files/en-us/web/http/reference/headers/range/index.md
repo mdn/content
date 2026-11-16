@@ -15,7 +15,7 @@ If the ranges are invalid, the server returns the {{HTTPStatus("416", "416 Range
 A server that doesn't support range requests may ignore the `Range` header and return the whole resource with a {{HTTPStatus("200")}} status code.
 Older browsers used a response header of {{HTTPHeader("Accept-Ranges", "Accept-Ranges: none")}} to disable features like 'pause' or 'resume' in download managers, but since a server ignoring the `Range` header has the same meaning as responding with `Accept-Ranges: none`, the header is rarely used in this way.
 
-Currently only [`bytes` units are registered](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units) which are _offsets_ (zero-indexed & inclusive).
+Currently only [`bytes` units are registered](https://www.iana.org/assignments/http-parameters#range-units) which are _offsets_ (zero-indexed & inclusive).
 If the requested data has a [content coding](/en-US/docs/Web/HTTP/Reference/Headers/Content-Encoding) applied, each byte range represents the encoded sequence of bytes, not the bytes that would be obtained after decoding.
 
 The header is a [CORS-safelisted request header](/en-US/docs/Glossary/CORS-safelisted_request_header) when the directive specifies a single byte range.
@@ -133,6 +133,22 @@ Content-Length: 146515
 Content-Type: image/jpeg
 …
 Accept-Ranges: bytes
+```
+
+### Fetching a range from a blob URL
+
+The [`blob:`](/en-US/docs/Web/URI/Reference/Schemes/blob) URL also supports range requests by using [`fetch()`](/en-US/docs/Web/API/Window/fetch).
+
+```js
+const blob = new Blob(["Hello, world!"], { type: "text/plain" });
+const url = URL.createObjectURL(blob);
+fetch(url, {
+  headers: {
+    Range: "bytes=7-11",
+  },
+})
+  .then((response) => response.text())
+  .then((text) => console.log(text)); // "world"
 ```
 
 ## Specifications

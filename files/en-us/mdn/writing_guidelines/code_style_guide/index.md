@@ -21,7 +21,10 @@ For technology-specific guidelines, see the following articles:
 There is one overarching consideration that you need to keep in mind: **Readers will copy and paste examples into their own code and may put it into production.**
 Therefore, you should make sure that code examples are usable, follow generally accepted best practices, and do not do anything that will cause an application to be insecure, inefficient, bloated, or inaccessible.
 
-If the code example is not runnable or production-worthy, include a warning in a code comment and in the explanatory text; for example, if it is only a snippet and not a full example, make this clear. This also means that you should provide all of the information necessary to run the example including any dependencies and setup information.
+Run and test every code example before you submit it, regardless of the tools you used to create it.
+Don't paste in code that you haven't verified.
+
+If a code example is an incomplete snippet, make clear that it is not a full example. Provide all of the information necessary to run the example, including any dependencies and setup information. If the example is not production-worthy, include a warning in a code comment and in the explanatory text.
 
 Code examples should be straightforward enough to be understandable, but complex enough to do something interesting, and (preferably) useful.
 The aim is not necessarily to produce efficient, clever code that impresses experts and has great functionality, but rather to share reduced working examples that can be understood and learned from as quickly as possible.
@@ -35,6 +38,68 @@ Some more general guidelines include:
 - Be inclusive in your code examples; consider that MDN readers come from all over the world, and are diverse in their ethnicities, religions, ages, genders, etc. Ensure text in code examples reflects that diversity and is inclusive of all people.
 - Don't use deprecated features for brevity (such as presentation elements like {{HTMLElement("big")}} or {{domxref("Document.write", "document.write()")}}); do it correctly.
 - In the case of API demos, if you are using multiple APIs together, point out which APIs are included and which features come from where.
+
+### Browser support
+
+Do not specify supported browsers and their versions in code comments or prose, as this information quickly becomes outdated.
+
+When creating code examples for a technology that's not yet available in all major browsers, consider using [feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) to provide a fallback behavior or display a message indicating that the reader's browser doesn't support the demonstrated feature.
+
+Keep the rendered output of code examples visible even when the reader's browser doesn't support the demonstrated feature. This lets readers compare the code with its result and see how the example behaves without the feature. Display a browser-support message alongside the rendered output instead of hiding or removing it to explain why the result may appear different from the intended demonstration.
+
+For example, in CSS code examples, use the [`@supports` at-rule with the `not` operator](/en-US/docs/Web/CSS/Reference/At-rules/@supports#the_not_operator) to display a browser-support message when the reader's browser doesn't support the feature being demonstrated.
+
+#### HTML
+
+```html live-sample___corner-shape-support
+<div>Nice scooped corners</div>
+```
+
+#### CSS
+
+```css live-sample___corner-shape-support
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  width: 240px;
+  margin: 20px auto;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  background-color: cyan;
+  border-radius: 30px;
+  box-shadow: 1px 1px 3px gray;
+}
+
+@supports not (corner-shape: scoop) {
+  body::before {
+    content: "Your browser does not support the 'corner-shape' property.";
+    color: black;
+    background-color: wheat;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+```
+
+```css live-sample___corner-shape-support
+div {
+  corner-shape: scoop;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("corner-shape-support", "100%", "240")}}
+
+Compare the rendered output in different browsers to see how the example behaves when `corner-shape` is supported and when it isn't.
+
+In your own examples, you can mark the browser-support CSS block as [`hidden`](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples#hiding_code) so its styles apply to the live sample without displaying the code block in the article.
 
 ## MDN code style and formatting
 
@@ -111,39 +176,6 @@ These guidelines should be followed to ensure that the code examples you write d
 
 - **Set the width to 100%**: The main content pane on MDN Web Docs is about 700px wide on desktop, so the embedded code examples must look OK at that width.
 - **Set height below 700px**: We recommend keeping this height for the rendered code example width for maximum onscreen legibility.
-
-### Color in the rendered code example
-
-Use keywords for primary and other "basic" colors, for example:
-
-```css example-good
-color: black;
-color: white;
-color: red;
-```
-
-Use `rgb()` for more complex colors (including semi-transparent ones):
-
-```css example-good
-color: rgb(0 0 0 / 50%);
-color: rgb(248 242 230);
-```
-
-For hex colors, use the short form where relevant:
-
-```css example-good
-color: #058ed9;
-color: #a39a92c1;
-color: #ff0;
-color: #fbfa;
-```
-
-As opposed to:
-
-```css-nolint example-bad
-color: #ffff00;
-color: #ffbbffaa;
-```
 
 ### Highlight examples as good or bad
 

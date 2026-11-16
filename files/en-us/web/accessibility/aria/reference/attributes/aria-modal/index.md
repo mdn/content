@@ -28,11 +28,36 @@ Ensure the modal is controllable using only its descendant elements. If a modal 
 
 When a modal element is displayed, authors **should** mark all other contents as inert (such as "inert subtrees" in HTML). Disabled content is not inert content. Inert content cannot be interacted with using both normal and specialized browsing modes such as caret browsing, which allow an assistive technology user to explore a page in detail. This includes disabled content, whose content may provide meaning.
 
-The [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute is a boolean attribute that indicates, by its presence, that the element and all its shadow-including descendants are to be made inert. Until [`HTMLElement.inert`](/en-US/docs/Web/API/HTMLElement/inert) is fully supported, content can be [made inert with JavaScript](https://samthor.au/2021/inert/).
+The [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute is a boolean attribute that indicates, by its presence, that the element and all its shadow-including descendants are to be made inert.
 
 Including `aria-modal="true"` on a [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role) or [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role), removes the requirement of putting [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) on background content, as the `aria-modal` informs assistive technologies that content outside a dialog is inert. Note that while support for the {{HTMLElement("dialog")}} element is good, thoroughly testing your implementation is vitally important.
 
 If a dialog is not modal — there is no inert background and focus isn't confined to the dialog — either include `aria-modal="false"` or omit the attribute altogether.
+
+## Values
+
+- `false` (default)
+  - : Element is not modal.
+- `true`
+  - : Element is modal.
+
+## Associated interfaces
+
+- {{domxref("Element.ariaModal")}}
+  - : The [`ariaModal`](/en-US/docs/Web/API/Element/ariaModal) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-modal` attribute.
+- {{domxref("ElementInternals.ariaModal")}}
+  - : The [`ariaModal`](/en-US/docs/Web/API/ElementInternals/ariaModal) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-modal` attribute.
+
+## Associated roles
+
+Used in roles:
+
+- [`window`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/window_role)
+
+Inherits into roles:
+
+- [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role)
+- [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
 
 ## Example
 
@@ -70,31 +95,6 @@ The [`role="alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/al
 The `aria-modal="true"` informs the assistive technology user that the content underneath the dialog is not interactive so long as the element with a declaration of `role="alertdialog"` has focus.
 
 The `aria-modal` attribute exposes the existence of the modal to assistive technologies so the disabling of the content behind the modal can be communicated to AT users. Like all ARIA attributes, `aria-modal` itself has no effect on the page's functionality; focus management and disabling, interactivity on background elements, and the ability to remove focus from the alertdialog must all be managed with JavaScript.
-
-## Values
-
-- `false` (default)
-  - : Element is not modal.
-- `true`
-  - : Element is modal.
-
-## Associated interfaces
-
-- {{domxref("Element.ariaModal")}}
-  - : The [`ariaModal`](/en-US/docs/Web/API/Element/ariaModal) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-modal` attribute.
-- {{domxref("ElementInternals.ariaModal")}}
-  - : The [`ariaModal`](/en-US/docs/Web/API/ElementInternals/ariaModal) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-modal` attribute.
-
-## Associated roles
-
-Used in roles:
-
-- [`window`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/window_role)
-
-Inherits into roles:
-
-- [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role)
-- [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
 
 ## Specifications
 

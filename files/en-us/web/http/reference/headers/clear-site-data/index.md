@@ -18,10 +18,6 @@ It allows web developers to have more control over the data stored by browsers f
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 
@@ -59,10 +55,10 @@ Clear-Site-Data: "*"
 - `"executionContexts"` {{Experimental_Inline}}
   - : The server signals that the client should reload all browsing contexts for the origin of the response ({{domxref("Location.reload")}}).
 
-- `"prefetchCache"` {{experimental_inline}}
+- `"prefetchCache"` {{experimental_inline}} {{non-standard_inline}}
   - : Used to clear {{domxref("Speculation Rules API", "speculation rules", "", "nocode")}} prefetches that are scoped to the referrer origin.
 
-- `"prerenderCache"` {{experimental_inline}}
+- `"prerenderCache"` {{experimental_inline}} {{non-standard_inline}}
   - : Used to clear {{domxref("Speculation Rules API", "speculation rules","", "nocode")}} prerenders that are scoped to the referrer origin.
 
 - `"storage"`

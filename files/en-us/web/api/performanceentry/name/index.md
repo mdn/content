@@ -23,12 +23,20 @@ A string. The value depends on the subclass of the `PerformanceEntry` object as 
   </thead>
   <tbody>
     <tr>
+      <td>{{domxref('InteractionContentfulPaint')}}</td>
+      <td>Always returns an empty string.</td>
+    </tr>
+    <tr>
       <td>{{domxref('LargestContentfulPaint')}}</td>
       <td>Always returns an empty string.</td>
     </tr>
     <tr>
       <td>{{domxref('LayoutShift')}}</td>
-      <td>Always returns <code>"layout-shift"</code>.</td>
+      <td>Always returns an empty string.</td>
+    </tr>
+    <tr>
+      <td>{{domxref('PerformanceContainerTiming')}}</td>
+      <td>Always returns an empty string.</td>
     </tr>
     <tr>
       <td>{{domxref('PerformanceElementTiming')}}</td>
@@ -42,6 +50,10 @@ A string. The value depends on the subclass of the `PerformanceEntry` object as 
     <tr>
       <td>{{domxref('PerformanceEventTiming')}}</td>
       <td>The associated event's type.</td>
+    </tr>
+    <tr>
+      <td>{{domxref('PerformanceLongAnimationFrameTiming')}}</td>
+      <td>Always returns <code>"long-animation-frame"</code>.</td>
     </tr>
     <tr>
       <td>{{domxref('PerformanceLongTaskTiming')}}</td>
@@ -92,6 +104,10 @@ A string. The value depends on the subclass of the `PerformanceEntry` object as 
     <tr>
       <td>{{domxref('PerformanceResourceTiming')}}</td>
       <td>The resolved URL of the requested resource. This value doesn't change even if the request is redirected.</td>
+    </tr>
+    <tr>
+      <td>{{domxref('PerformanceSoftNavigation')}}</td>
+      <td>The new URL navigated to.</td>
     </tr>
     <tr>
       <td>{{domxref('TaskAttributionTiming')}}</td>

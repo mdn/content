@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-Developers commonly think of embedding media such as images, video and audio into web pages. In this article we take somewhat of a sideways step, looking at some elements that allow you to embed a wide variety of content types into your webpages: the {{htmlelement("iframe")}}, {{htmlelement("embed")}} and {{htmlelement("object")}} elements. `<iframe>`s are for embedding other web pages, and the other two allow you to embed external resources such as PDF files.
+Developers commonly think of embedding media such as images, video and audio into web pages. In this article we take somewhat of a sideways step, looking at some elements that allow you to embed a wide variety of content types into your webpages: the {{htmlelement("iframe")}}, {{htmlelement("embed")}} and {{htmlelement("object")}} elements. These elements allow you to embed external resources such as other web pages and PDF files.
 
 <table>
   <tbody>
@@ -20,7 +20,7 @@ Developers commonly think of embedding media such as images, video and audio int
         <a
           href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >working with files</a
-        >, familiarity with <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/"
+        >, familiarity with <a href="/en-US/docs/Learn_web_development/Core/Structuring_content"
           >HTML fundamentals</a>.
       </td>
     </tr>
@@ -45,155 +45,26 @@ Finally, the {{htmlelement("iframe")}} element appeared (along with other ways o
 
 With the history lesson out of the way, let's move on and see how to use some of these.
 
-## Active learning: classic embedding uses
+## Playing with classic embedding uses
 
-In this article we are going to jump straight into an active learning section, to immediately give you a real idea of just what embedding technologies are useful for. The online world is very familiar with [YouTube](https://www.youtube.com/), but many people don't know about some of the sharing facilities it has available. Let's look at how YouTube allows us to embed a video in any page we like using an {{htmlelement("iframe")}}.
+In this article we are going to jump straight into an exercise, to immediately give you an idea of what embedding technologies are useful for. The online world is very familiar with [YouTube](https://www.youtube.com/), but many people don't know about some of the sharing facilities it has available.
 
-1. First, go to YouTube and find a video you like.
-2. Below the video, you'll find a _Share_ button — select this to display the sharing options.
-3. Select the _Embed_ button and you'll be given some `<iframe>` code — copy this.
-4. Insert it into the _Input_ box below, and see what the result is in the _Output_.
+1. First of all, open the [MDN Playground](/en-US/play).
+2. Now we'll look at how YouTube allows us to embed a video in any page we like using an {{htmlelement("iframe")}}.
+   1. Go to YouTube and find a video you like.
+   2. Below the video, you'll find a _Share_ button — select this to display the sharing options.
+   3. Select the _Embed_ button and you'll be given some `<iframe>` code — copy this.
+   4. Paste it into the _HTML_ pane in the Playground, and see what the result is in the output.
+3. For bonus points, you could also try embedding a [Google Map](https://www.google.com/maps/) in the Playground:
+   1. Go to Google Maps and find a map you like.
+   2. Click on the "hamburger menu" (three horizontal lines) in the top left of the UI.
+   3. Select the _Share or embed map_ option.
+   4. Select the _Embed a map_ option, which will give you some `<iframe>` code — copy it.
+   5. Paste it into the _HTML_ pane in the Playground, and see what the result is in the output.
 
-For bonus points, you could also try embedding a [Google Map](https://www.google.com/maps/) in the example:
+If you make a mistake, you can always reset it using the _Reset_ button in the Playground.
 
-1. Go to Google Maps and find a map you like.
-2. Click on the "Hamburger Menu" (three horizontal lines) in the top left of the UI.
-3. Select the _Share or embed map_ option.
-4. Select the Embed map option, which will give you some `<iframe>` code — copy this.
-5. Insert it into the _Input_ box below, and see what the result is in the _Output_.
-
-If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see an answer.
-
-```html hidden
-<h2>Live output</h2>
-
-<div class="output" style="min-height: 250px;"></div>
-
-<h2>Editable code</h2>
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
-</p>
-
-<textarea
-  id="code"
-  class="input"
-  style="width: 95%;min-height: 100px;"></textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
-</div>
-```
-
-```css hidden
-html {
-  font-family: sans-serif;
-}
-
-h2 {
-  font-size: 16px;
-}
-
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
-
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
-```
-
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-let code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Show solution";
-  updateCode();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
-  }
-  updateCode();
-});
-
-const htmlSolution =
-  '<iframe width="420" height="315" src="https://www.youtube.com/embed/QH2-TGUlwu4" frameborder="0" allowfullscreen>\n</iframe>\n\n<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37995.65748333395!2d-2.273568166412784!3d53.473310471916975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae6c05743d3d%3A0xf82fddd1e49fc0a1!2sThe+Lowry!5e0!3m2!1sen!2suk!4v1518171785211" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>\n</iframe>';
-let solutionEntry = htmlSolution;
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = function (e) {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('Active_learning_classic_embedding_uses', 700, 600) }}
-
-## iframes in detail
+## Using iframes to embed webpages
 
 So, that was easy and fun, right? {{htmlelement("iframe")}} elements are designed to allow you to embed other web documents into the current document. This is great for incorporating third-party content into your website that you might not have direct control over and don't want to have to implement your own version of — such as video from online video providers, commenting systems like [Disqus](https://disqus.com/), maps from online map providers, advertising banners, etc. Even the live editable examples you've been using through this course are implemented using `<iframe>`s.
 
@@ -208,11 +79,6 @@ If you were to add the code below into one of your pages, you might be surprised
   height="500"
   allowfullscreen
   sandbox>
-  <p>
-    <a href="/en-US/docs/Glossary">
-      Fallback link for browsers that don't support iframes
-    </a>
-  </p>
 </iframe>
 ```
 
@@ -232,7 +98,7 @@ The [Security](#security_concerns) section below goes into more detail about why
 
 The example includes the bare essentials needed to use an `<iframe>`:
 
-- [`border: none`](/en-US/docs/Web/CSS/border)
+- [`border: none`](/en-US/docs/Web/CSS/Reference/Properties/border)
   - : If used, the `<iframe>` is displayed without a surrounding border. Otherwise, by default, browsers display the `<iframe>` with a surrounding border (which is generally undesirable).
 - [`allowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
   - : If set, the `<iframe>` is able to be placed in fullscreen mode using the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) (somewhat beyond the scope of this article).
@@ -267,16 +133,11 @@ If the content is licensed, you must obey the license terms. For example, the co
 
 #### Use HTTPS
 
-{{Glossary("HTTPS")}} is the encrypted version of {{Glossary("HTTP")}}. You should serve your websites using HTTPS whenever possible:
+{{Glossary("HTTPS")}} is the encrypted version of {{Glossary("HTTP")}}, which reduces the chance that content has been read or tampered with in transit.
 
-1. HTTPS reduces the chance that remote content has been tampered with in transit.
-2. HTTPS prevents embedded content from accessing content in your parent document, and vice versa.
+These days, all content needs to be served over HTTPS — browsers increasingly provide warnings when content is served over HTTP, HTTP subresources won't load in HTTPS pages, and many web features require HTTPS to work. HTTPS-enabling your site requires a security certificate to be installed. Most hosting providers offer HTTPS by default, so you don't need to set up a certificate yourself.
 
-HTTPS-enabling your site requires a special security certificate to be installed. Many hosting providers offer HTTPS-enabled hosting without you needing to do any setup on your own to put a certificate in place. But if you _do_ need to set up HTTPS support for your site on your own, [Let's Encrypt](https://letsencrypt.org/) provides tools and instructions you can use for automatically creating and installing the necessary certificate — with built-in support for the most widely-used web servers, including the Apache web server, Nginx, and others. The Let's Encrypt tooling is designed to make the process as easy as possible, so there's really no good reason to avoid using it or other available means to HTTPS-enable your site.
-
-> [!NOTE]
-> [GitHub pages](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) allow content to be served via HTTPS by default.
-> If you are using a different hosting provider you should check what support they provide for serving content with HTTPS.
+If you _do_ need to set up HTTPS support for your site on your own, [Let's Encrypt](https://letsencrypt.org/) provides tools and instructions you can use for automatically creating and installing the necessary certificate — with support for many web servers, including Apache, Nginx, and others. The Let's Encrypt tooling is designed to make the process as easy as possible.
 
 #### Always use the `sandbox` attribute
 
@@ -284,7 +145,7 @@ You want to give attackers as little power as you can to do bad things on your w
 
 Content that's not sandboxed may be able to execute JavaScript, submit forms, trigger popup windows, etc. By default, you should impose all available restrictions by using the `sandbox` attribute with no parameters, as shown in our previous example.
 
-If absolutely required, you can add permissions back one by one (inside the `sandbox=""` attribute value) — see the [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) reference entry for all the available options. One important note is that you should _never_ add both `allow-scripts` and `allow-same-origin` to your `sandbox` attribute — in that case, the embedded content could bypass the [Same-origin policy](/en-US/docs/Glossary/Same-origin_policy) that stops sites from executing scripts, and use JavaScript to turn off sandboxing altogether.
+If absolutely required, you can add permissions back one by one (inside the `sandbox=""` attribute value) — see the [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) reference entry for all the available options. One important note is that you should _never_ add both `allow-scripts` and `allow-same-origin` to your `sandbox` attribute when the embedded content has the same origin as the embedding page — in that case, the embedded content could use JavaScript to remove the attribute and reload itself to turn off sandboxing altogether.
 
 > [!NOTE]
 > Sandboxing provides no protection if attackers can fool people into visiting malicious content directly (outside an `iframe`). If there's any chance that certain content may be malicious (e.g., user-generated content), please serve it from a different {{glossary("domain")}} to your main site.
@@ -298,13 +159,11 @@ If absolutely required, you can add permissions back one by one (inside the `san
 
 ## The \<embed> and \<object> elements
 
-The {{htmlelement("embed")}} and {{htmlelement("object")}} elements serve a different function to {{htmlelement("iframe")}} — these elements are general purpose embedding tools for embedding external content, such as PDFs.
+Just like {{htmlelement("iframe")}}, the {{htmlelement("embed")}} and {{htmlelement("object")}} elements can also embed external content. Depending on the content being embedded, this can be a more lightweight option, since the browser doesn't have to create a full browsing context for the embedded content.
 
-However, you are unlikely to use these elements very much. If you need to display PDFs, it's usually better to link to them, rather than embedding them in the page.
+Historically, these elements have also been used for embedding content handled by browser {{Glossary("Plugin", "plugins")}} such as {{Glossary("Adobe Flash")}}, but this technology is now obsolete and is not supported by modern browsers. Today, almost all of their use cases can be covered by `<iframe>`, which provides more security features.
 
-Historically these elements have also been used for embedding content handled by browser {{Glossary("Plugin", "plugins")}} such as {{Glossary("Adobe Flash")}}, but this technology is now obsolete and is not supported by modern browsers.
-
-If you find yourself needing to embed plugin content, this is the kind of information you'll need, at a minimum:
+If you find yourself needing to embed external content with these elements, this is the kind of information you'll need, at a minimum:
 
 <table class="standard-table no-markdown">
   <thead>
@@ -330,7 +189,7 @@ If you find yourself needing to embed plugin content, this is the kind of inform
     </tr>
     <tr>
       <td>
-        Height and width (in CSS pixels) of the box controlled by the plugin
+        Height and width (in CSS pixels) of the embedded content's box
       </td>
       <td>
          <a href="/en-US/docs/Web/HTML/Reference/Elements/embed#height"><code>height</code></a><br /><a href="/en-US/docs/Web/HTML/Reference/Elements/embed#width"><code>width</code></a>
@@ -350,13 +209,27 @@ If you find yourself needing to embed plugin content, this is the kind of inform
   </tbody>
 </table>
 
-Let's look at an `<object>` example that embeds a PDF into a page (see the [live example](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) and the [source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)):
+## Embedding PDFs
+
+On the web, most media already have dedicated elements: {{HTMLElement("audio")}}, {{HTMLElement("img")}}, {{HTMLElement("video")}}, {{SVGElement("svg")}}, etc. Apart from webpages, the other major use case of `<iframe>`, `<object>`, and `<embed>` elements is to embed PDF documents.
+
+All browsers today natively provide PDF renderers. These renderers already sandbox any executable content, so embedding PDFs is generally safe by default. If you use `<iframe>`, there's no need to provide the `sandbox` attribute; in fact, adding `sandbox` may prevent the PDF viewer from working.
+
+If your page needs a PDF preview, choose an element based on the features you need:
+
+- The {{htmlelement("iframe")}} element should be the top choice: it offers controls such as [`loading="lazy"`](/en-US/docs/Web/HTML/Reference/Elements/iframe#loading) and [`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/iframe#referrerpolicy).
+- Use {{htmlelement("object")}} only if the resource may not render and fallback content is needed.
+- The {{htmlelement("embed")}} element offers no advantage for a PDF preview.
+
+Because the browser's PDF viewer already provides its own sandboxing, no sandboxing is necessary on the element. In fact, adding `sandbox` may prevent the PDF viewer from working. If you use [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP), the `<iframe>` sources are controlled through {{CSP("frame-src")}}, and `<object>` and `<embed>` sources through {{CSP("object-src")}}. As the `object-src` reference page says, you should generally keep `object-src 'none'`, in which case `<iframe>` is the only viable option.
+
+Let's look at an `<object>` example that embeds a PDF into a page:
 
 ```html
 <object data="my-pdf.pdf" type="application/pdf" width="800" height="1200">
   <p>
-    You don't have a PDF plugin, but you can
-    <a href="my-pdf.pdf">download the PDF file. </a>
+    The PDF preview is unavailable.
+    <a href="my-pdf.pdf">Open the PDF file.</a>
   </p>
 </object>
 ```

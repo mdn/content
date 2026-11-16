@@ -17,11 +17,15 @@ After this event has occurred, the {{domxref('Sensor')}} object becomes idle. If
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("error", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onerror = (event) => { }
 ```
 
@@ -31,18 +35,11 @@ A {{domxref("SensorErrorEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("SensorErrorEvent")}}
 
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref('SensorErrorEvent.error', 'error')}} {{ReadOnlyInline}}
-  - : Returns the {{domxref('DOMException')}} that has been thrown.
-
 ## Examples
 
 ### Log accelerometer exceptions
 
-This example adds an event listener to log errors occurred on an {{domxref("Accelerometer")}}.
+This example adds an event listener to log errors that occurred on an {{domxref("Accelerometer")}}.
 
 ```js
 const acl = new Accelerometer({ frequency: 60 });

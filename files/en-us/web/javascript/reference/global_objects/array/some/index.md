@@ -7,9 +7,7 @@ browser-compat: javascript.builtins.Array.some
 sidebar: jsref
 ---
 
-The **`some()`** method of {{jsxref("Array")}} instances tests whether
-at least one element in the array passes the test implemented by the provided
-function. It returns true if, in the array, it finds an element for which the provided function returns true; otherwise it returns false. It doesn't modify the array.
+The **`some()`** method of {{jsxref("Array")}} instances returns `true` if it finds an element in the array that satisfies the provided testing function. Otherwise, it returns `false`.
 
 {{InteractiveExample("JavaScript Demo: Array.prototype.some()")}}
 
@@ -178,7 +176,7 @@ console.log(Array.prototype.some.call(arrayLike, (x) => typeof x === "number"));
 
 ## See also
 
-- [Polyfill of `Array.prototype.some` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.some` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.some`](https://www.npmjs.com/package/array.prototype.some)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

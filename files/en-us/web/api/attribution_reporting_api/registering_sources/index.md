@@ -2,6 +2,8 @@
 title: Registering attribution sources
 slug: Web/API/Attribution_Reporting_API/Registering_sources
 page-type: guide
+status:
+  - deprecated
 ---
 
 {{DefaultAPISidebar("Attribution Reporting API")}}
@@ -147,7 +149,7 @@ If you leave the attribute value blank, the registration request will be sent to
 Let's look at an `<img>` element example:
 
 ```html
-<img src="advertising-image.png" attributionsrc />
+<img src="advertising-image.png" alt="" attributionsrc />
 ```
 
 You could also achieve this via the {{domxref("HTMLImageElement.attributionSrc")}} property:

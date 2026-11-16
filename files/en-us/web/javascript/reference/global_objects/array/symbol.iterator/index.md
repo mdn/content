@@ -14,10 +14,10 @@ The initial value of this property is the same function object as the initial va
 {{InteractiveExample("JavaScript Demo: Array.prototype[Symbol.iterator]()")}}
 
 ```js interactive-example
-const array1 = ["a", "b", "c"];
-const iterator1 = array1[Symbol.iterator]();
+const array = ["a", "b", "c"];
+const iterator = array[Symbol.iterator]();
 
-for (const value of iterator1) {
+for (const value of iterator) {
   console.log(value);
 }
 
@@ -124,7 +124,7 @@ logIterable(123);
 
 ## See also
 
-- [Polyfill of `Array.prototype[Symbol.iterator]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype[Symbol.iterator]` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.keys()")}}

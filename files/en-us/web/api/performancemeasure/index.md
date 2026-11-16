@@ -13,29 +13,29 @@ browser-compat: api.PerformanceMeasure
 
 ## Instance properties
 
-This interface defines:
-
-- {{domxref("PerformanceMeasure.detail")}}
+- {{domxref("PerformanceMeasure.detail")}} {{ReadOnlyInline}}
   - : Contains arbitrary metadata about the measure.
 
-In addition, it extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
+This interface extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
 
-- {{domxref("PerformanceEntry.entryType")}}
+- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
   - : Returns `"measure"`.
-- {{domxref("PerformanceEntry.name")}}
+- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : Returns the name given to the measure when it was created via a call to {{domxref("Performance.measure()","performance.measure()")}}.
-- {{domxref("PerformanceEntry.startTime")}}
+- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMHighResTimeStamp","timestamp")}} given to the measure when {{domxref("Performance.measure()","performance.measure()")}} was called.
-- {{domxref("PerformanceEntry.duration")}}
+- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} that is the duration of the measure (typically, the measure's end mark timestamp minus its start mark timestamp).
 
 ## Instance methods
 
 This interface has no methods.
 
-## Example
+## Examples
 
 See the example in [Using the User Timing API](/en-US/docs/Web/API/Performance_API/User_timing).
+
+Chrome DevTools uses `performance.measure()` and in particular a structured `detail` property as part of its extensibility API that surfaces these in custom tracks in performance traces. See the example in [Performance: measure() method](/en-US/docs/Web/API/Performance/measure) page and the [Chrome's extensibility API documentation](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_the_user_timings_api) for more information and examples.
 
 ## Specifications
 

@@ -14,11 +14,15 @@ This can be used in debugging and for general application resiliency, in tandem 
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("rejectionhandled", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onrejectionhandled = (event) => { }
 ```
 
@@ -27,13 +31,6 @@ onrejectionhandled = (event) => { }
 A {{domxref("PromiseRejectionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PromiseRejectionEvent")}}
-
-## Event properties
-
-- {{domxref("PromiseRejectionEvent.promise")}} {{ReadOnlyInline}}
-  - : The JavaScript {{jsxref("Promise")}} that was rejected.
-- {{domxref("PromiseRejectionEvent.reason")}} {{ReadOnlyInline}}
-  - : A value or {{jsxref("Object")}} indicating why the promise was rejected, as passed to {{jsxref("Promise.reject()")}}.
 
 ## Event handler aliases
 
@@ -48,13 +45,9 @@ In addition to the `Window` interface, the event handler property `onrejectionha
 You can use the `rejectionhandled` event to log promises that get rejected to the console, along with the reasons why they were rejected:
 
 ```js
-window.addEventListener(
-  "rejectionhandled",
-  (event) => {
-    console.log(`Promise rejected; reason: ${event.reason}`);
-  },
-  false,
-);
+window.addEventListener("rejectionhandled", (event) => {
+  console.log(`Promise rejected; reason: ${event.reason}`);
+});
 ```
 
 ## Specifications

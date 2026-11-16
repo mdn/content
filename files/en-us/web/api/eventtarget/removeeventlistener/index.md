@@ -132,10 +132,10 @@ function makeBackgroundYellow() {
   toggle = !toggle;
 }
 
-clickTarget.addEventListener("click", makeBackgroundYellow, false);
+clickTarget.addEventListener("click", makeBackgroundYellow);
 
 mouseOverTarget.addEventListener("mouseover", () => {
-  clickTarget.removeEventListener("click", makeBackgroundYellow, false);
+  clickTarget.removeEventListener("click", makeBackgroundYellow);
 });
 ```
 

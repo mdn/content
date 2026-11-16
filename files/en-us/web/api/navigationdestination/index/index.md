@@ -3,12 +3,10 @@ title: "NavigationDestination: index property"
 short-title: index
 slug: Web/API/NavigationDestination/index
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigationDestination.index
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`index`** read-only property of the
 {{domxref("NavigationDestination")}} interface returns the {{domxref("NavigationHistoryEntry.index", "index")}} value of the destination {{domxref("NavigationHistoryEntry")}} if the {{domxref("NavigateEvent.navigationType")}} is `traverse`, or `-1` otherwise.

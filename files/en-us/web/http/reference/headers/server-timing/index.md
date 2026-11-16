@@ -16,10 +16,6 @@ It is used to surface backend server timing metrics (for example, database read/
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 
@@ -106,7 +102,7 @@ Server-Timing: custom-metric;dur=123.4
 ```
 
 > [!WARNING]
-> Only the browser's DevTools can use the `Server-Timing` header as a HTTP trailer to display information in the Network -> Timings tab.
+> Only the browser's DevTools can use the `Server-Timing` header as an HTTP trailer to display information in the Network -> Timings tab.
 > The Fetch API cannot access HTTP trailers.
 > See [Browser compatibility](#browser_compatibility) for more information.
 

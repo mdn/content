@@ -21,3 +21,8 @@ An {{domxref("SVGStringList")}} object.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- SVG {{SVGAttr("requiredExtensions")}} attribute
+- SVG {{SVGAttr("systemLanguage")}} attribute

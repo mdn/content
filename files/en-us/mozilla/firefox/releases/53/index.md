@@ -1,5 +1,5 @@
 ---
-title: Firefox 53 for developers
+title: Firefox 53 release notes for developers
 short-title: Firefox 53
 slug: Mozilla/Firefox/Releases/53
 page-type: firefox-release-notes
@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 53 was released on April 19, 2017. This article lists key changes that are useful not only for web developers but also for Firefox and Gecko developers, as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -21,7 +21,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 #### New features
 
-- The `mask-*` longhand properties (see [CSS Masks](/en-US/docs/Web/CSS/CSS_masking)) are all supported and available by default (see [Firefox bug 1251161](https://bugzil.la/1251161)).
+- The `mask-*` longhand properties (see [CSS Masks](/en-US/docs/Web/CSS/Guides/Masking)) are all supported and available by default (see [Firefox bug 1251161](https://bugzil.la/1251161)).
 - Added {{cssxref("caret-color")}} property ([Firefox bug 1063162](https://bugzil.la/1063162)).
 - Implemented the {{cssxref("place-items")}}/{{cssxref("place-self")}}/{{cssxref("place-content")}} shorthands ([Firefox bug 1319958](https://bugzil.la/1319958)).
 - Added `flow-root` value to {{cssxref("display")}} property ([Firefox bug 1322191](https://bugzil.la/1322191)).
@@ -55,11 +55,11 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 - The {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent")}} constructor has been implemented (see [Firefox bug 1002256](https://bugzil.la/1002256)).
 - The {{domxref("MouseEvent.x")}} and {{domxref("MouseEvent.y")}} aliases of {{domxref("MouseEvent.clientX")}}/{{domxref("MouseEvent.clientY")}} have been implemented (see [Firefox bug 424390](https://bugzil.la/424390)).
 - The {{domxref("Element/auxclick_event", "auxclick")}} event and corresponding event handler have been implemented (see [Firefox bug 1304044](https://bugzil.la/1304044)).
-- The {{domxref("Element/transitioncancel_event", "transitioncancel")}} event is now fired after a [transition](/en-US/docs/Web/CSS/CSS_transitions) is cancelled.
+- The {{domxref("Element/transitioncancel_event", "transitioncancel")}} event is now fired after a [transition](/en-US/docs/Web/CSS/Guides/Transitions) is canceled.
 
 ### DOM
 
-- The {{domxref("HTMLAnchorElement/pathname", "pathname")}} and {{domxref("HTMLAnchorElement/search", "search")}} properties of links (like for {{HTMLElement("a")}} and {{HTMLELement("link")}} elements' interfaces previously returned the wrong parts of the URL. For example, for a URL of `http://z.com/x?a=true&b=false`, `pathname` would return `"/x?a=true&b=false"` and `search` would return `""`, rather than `"/x"` and `"?a=true&b=false"` respectively. This has now been fixed ([Firefox bug 1310483](https://bugzil.la/1310483)).
+- The {{domxref("HTMLAnchorElement/pathname", "pathname")}} and {{domxref("HTMLAnchorElement/search", "search")}} properties of links (like for {{HTMLElement("a")}} and {{HTMLELement("link")}} elements' interfaces) previously returned the wrong parts of the URL. For example, for a URL of `http://z.com/x?a=true&b=false`, `pathname` would return `"/x?a=true&b=false"` and `search` would return `""`, rather than `"/x"` and `"?a=true&b=false"` respectively. This has now been fixed ([Firefox bug 1310483](https://bugzil.la/1310483)).
 - The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor now accepts a string or sequence of strings as an init object ([Firefox bug 1330678](https://bugzil.la/1330678)).
 - The {{domxref("Selection.setBaseAndExtent()")}} method of the [Selection API](/en-US/docs/Web/API/Selection) is now implemented (see [Firefox bug 1321623](https://bugzil.la/1321623)).
 - The ["fakepath"](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly) addition to `file` type {{htmlelement("input")}} `values` has been implemented in Gecko, giving it parity with other browsers (see [Firefox bug 1274596](https://bugzil.la/1274596)).

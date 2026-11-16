@@ -44,7 +44,7 @@ The `getUserMedia()` endpoint takes a `constraints` object that specifies which 
 
 3. Refresh your app, which should still be running at `localhost:8000`; you should see the following permission pop up:
 
-   ![A browser permission dialogue box which says "http://localhost:8000 wants to use your microphone" with two options: "block" and "allow"](use_microphone_dialogue_box.png)
+   ![A browser permission dialog box which says "http://localhost:8000 wants to use your microphone" with two options: "block" and "allow"](use_microphone_dialogue_box.png)
 
 4. Plugin in some headphones before you allow the microphone usage so that when you unmute yourself later, you don't get any feedback. If you didn't see the permission prompt, open the inspector to see if you have any errors. Make sure your JavaScript file is correctly linked to your `index.html` too.
 

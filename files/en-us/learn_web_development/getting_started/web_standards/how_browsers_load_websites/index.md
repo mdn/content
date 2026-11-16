@@ -74,7 +74,7 @@ P
 
 In this DOM tree, the node corresponding to our `<p>` element is a parent. Its children include a text node and the three nodes corresponding to our `<span>` elements. The `SPAN` nodes are also parents, with text nodes as their children. When the browser renders this DOM tree, it will look like so:
 
-{{EmbedLiveSample('Handling the HTML', '100%', 55)}}
+{{EmbedLiveSample('handling_html', '100%', 55)}}
 
 ```css hidden
 p {
@@ -122,7 +122,7 @@ The only rule available in the CSS has a `span` selector, so the browser is able
 
 The updated output is as follows:
 
-{{EmbedLiveSample('Parsing the CSS, and rendering the page', '100%', 90)}}
+{{EmbedLiveSample('parsing_css_and_rendering_the_page', '100%', 90)}}
 
 ## Handling JavaScript
 
@@ -158,7 +158,7 @@ You don't need to understand exactly how this JavaScript works, but at a high le
 
 The final output is as follows:
 
-{{EmbedLiveSample('Handling the JavaScript', '100%', 90)}}
+{{EmbedLiveSample('handling_javascript', '100%', 90)}}
 
 ## What other rendering steps are there?
 
@@ -178,5 +178,10 @@ On the upside, the web is also an awesome programming environment, for many reas
 - App delivery across the web is simple and powerful. You don't need to take your users through a complicated installation process: you just point them to a web address and off they go.
 - App updates are usually straightforward. In many cases, visitors can see new versions of an application when they reload their browser tab. You don't need to worry about getting visitors to regularly download and install software updates.
 - The web community is vibrant and helpful. As we discuss later on in our [Research and learning](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning) article, there are lots of places you can go to ask for help, and great resources available to learn from.
+
+## See also
+
+- [When and how to file bugs with browsers](/en-US/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs)
+  - : If something isn't working as expected in a browser, it could be a browser bug. This article explains how to figure out if it is, and how to file a bug report if so.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Soft_skills", "Learn_web_development/Getting_started/Web_standards")}}

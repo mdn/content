@@ -16,11 +16,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("gatheringstatechange", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 ongatheringstatechange = (event) => { }
 ```
 
@@ -44,12 +48,11 @@ pc.getSenders().forEach((sender) => {
         but others may still be working on it */
       }
     },
-    false,
   );
 });
 ```
 
-Likewise, you can use the `ongatheringstatechange` event handler property:
+Likewise, you can use the `ongatheringstatechange` event handler property (but note that this replaces other event listeners added using `ongatheringstatechange`, if any):
 
 ```js
 pc.getSenders().forEach((sender) => {

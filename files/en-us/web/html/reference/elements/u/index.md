@@ -1,5 +1,6 @@
 ---
-title: "<u>: The Unarticulated Annotation (Underline) element"
+title: "`<u>` HTML unarticulated annotation (underline) element"
+short-title: <u>
 slug: Web/HTML/Reference/Elements/u
 page-type: html-element
 browser-compat: html.elements.u
@@ -28,7 +29,7 @@ p {
 }
 
 u {
-  text-decoration: #f00 wavy underline;
+  text-decoration: red wavy underline;
 }
 ```
 

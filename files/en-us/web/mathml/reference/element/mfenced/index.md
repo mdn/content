@@ -9,7 +9,7 @@ browser-compat: mathml.elements.mfenced
 sidebar: mathmlref
 ---
 
-{{Deprecated_Header}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 The **`<mfenced>`** [MathML](/en-US/docs/Web/MathML) element provides the possibility to add custom opening and closing brackets (such as parentheses) and separators (such as commas or semicolons) to an expression.
 
@@ -62,7 +62,7 @@ Sample rendering:
 
 Rendering in your browser:
 
-{{ EmbedLiveSample('mfenced_example1', 700, 200, "", "") }}
+{{ EmbedLiveSample('the_last_separator_is_repeated', 700, 200, "", "") }}
 
 ### All excess is ignored (`,`)
 
@@ -97,7 +97,7 @@ Sample rendering:
 
 Rendering in your browser:
 
-{{ EmbedLiveSample('mfenced_example1', 700, 200, "", "") }}
+{{ EmbedLiveSample('all_excess_is_ignored', 700, 200, "", "") }}
 
 ## Technical summary
 

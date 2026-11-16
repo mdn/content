@@ -26,7 +26,7 @@ const x = 1;
 }
 ```
 
-If the `const x = 2` declaration is not hoisted at all (as in, it only comes into effect when it's executed), then the `console.log(x)` statement should be able to read the `x` value from the upper scope. However, because the `const` declaration still "taints" the entire scope it's defined in, the `console.log(x)` statement reads the `x` from the `const x = 2` declaration instead, which is not yet initialized, and throws a {{jsxref("ReferenceError")}}. Still, it may be more useful to characterize lexical declarations as non-hoisting, because from a utilitarian perspective, the hoisting of these declarations doesn't bring any meaningful features.
+If the `const x = 2` declaration is not hoisted at all (as in, it only comes into effect when it's executed), then the `console.log(x)` statement should be able to read the `x` value from the outer scope. However, because the `const` declaration still "taints" the entire scope it's defined in, the `console.log(x)` statement reads the `x` from the `const x = 2` declaration instead, which is not yet initialized, and throws a {{jsxref("ReferenceError")}}. Still, it may be more useful to characterize lexical declarations as non-hoisting, because from a utilitarian perspective, the hoisting of these declarations doesn't bring any meaningful features.
 
 Note that the following is not a form of hoisting:
 

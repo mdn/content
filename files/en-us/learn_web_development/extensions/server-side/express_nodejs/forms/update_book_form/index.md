@@ -5,15 +5,17 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Delete_author_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms")}}
+
 This final subarticle shows how to define a page to update `Book` objects. Form handling when updating a book is much like that for creating a book, except that you must populate the form in the `GET` route with values from the database.
 
 ## Controller—get route
 
-Open **/controllers/bookController.js**. Find the exported `book_update_get()` controller method and replace it with the following code.
+Open **controllers/bookController.js**. Find the exported `bookUpdateGet()` controller method and replace it with the following code.
 
 ```js
 // Display book update form on GET.
-exports.book_update_get = asyncHandler(async (req, res, next) => {
+export const bookUpdateGet = async (req, res, next) => {
   // Get book, authors and genres for form.
   const [book, allAuthors, allGenres] = await Promise.all([
     Book.findById(req.params.id).populate("author").exec(),
@@ -39,7 +41,7 @@ exports.book_update_get = asyncHandler(async (req, res, next) => {
     genres: allGenres,
     book,
   });
-});
+};
 ```
 
 The controller gets the id of the `Book` to be updated from the URL parameter (`req.params.id`).
@@ -48,17 +50,17 @@ It `awaits` on the promise returned by `Promise.all()` to get the specified `Boo
 When the operations complete the function checks whether any books were found, and if none were found sends an error "Book not found" to the error handling middleware.
 
 > [!NOTE]
-> Not finding any book results is **not an error** for a search — but it is for this application because we know there must be a matching book record! The code above compares for (`book===null`) in the callback, but it could equally well have daisy chained the method [orFail()](<https://mongoosejs.com/docs/api/query.html#Query.prototype.orFail()>) to the query.
+> Not finding any book results is **not an error** for a search, but it is for this application because we know there must be a matching book record! The code above tests for (`book===null`) in the callback, but it could equally well have daisy-chained the method [`orFail()`](<https://mongoosejs.com/docs/api/query.html#Query.prototype.orFail()>) to the query.
 
 We then mark the currently selected genres as checked and then render the **book_form.pug** view, passing variables for `title`, book, all `authors`, and all `genres`.
 
 ## Controller—post route
 
-Find the exported `book_update_post()` controller method, and replace it with the following code.
+Find the exported `bookUpdatePost()` controller method, and replace it with the following code.
 
 ```js
 // Handle book update on POST.
-exports.book_update_post = [
+export const bookUpdatePost = [
   // Convert the genre to an array.
   (req, res, next) => {
     if (!Array.isArray(req.body.genre)) {
@@ -85,7 +87,7 @@ exports.book_update_post = [
   body("genre.*").escape(),
 
   // Process request after validation and sanitization.
-  asyncHandler(async (req, res, next) => {
+  async (req, res, next) => {
     // Extract the validation errors from a request.
     const errors = validationResult(req);
 
@@ -123,11 +125,12 @@ exports.book_update_post = [
       });
       return;
     }
+
     // Data from form is valid. Update the record.
-    const updatedBook = await Book.findByIdAndUpdate(req.params.id, book, {});
+    await Book.findByIdAndUpdate(req.params.id, book, {});
     // Redirect to book detail page.
-    res.redirect(updatedBook.url);
-  }),
+    res.redirect(book.url);
+  },
 ];
 ```
 
@@ -136,7 +139,7 @@ First we validate and sanitize the book data from the form and use it to create 
 
 ## View
 
-There is no need to change the view for the form (**/views/book_form.pug**) as the same template works for both creating and updating the book.
+There is no need to change the view for the form (**views/book_form.pug**) as the same template works for both creating and updating the book.
 
 ## Add an update button
 
@@ -158,11 +161,9 @@ Run the application, open your browser to `http://localhost:3000/`, select the _
 
 The form should look just like the _Create book_ page, only with a title of 'Update book', and pre-populated with record values.
 
-![The update book section of the Local library application. The left column has a vertical navigation bar. The right column has a form to update the book with an heading that reads 'Update book'. There are five input fields labelled Title, Author, Summary, ISBN, Genre. Genre is a checkbox option field. There is a button labelled 'Submit' at the end.](locallibary_express_book_update_noerrors.png)
+![The update book section of the Local library application. The left column has a vertical navigation bar. The right column has a form to update the book with a heading that reads 'Update book'. There are five input fields labeled Title, Author, Summary, ISBN, Genre. Genre is a checkbox option field. There is a button labeled 'Submit' at the end.](locallibary_express_book_update_noerrors.png)
 
 > [!NOTE]
 > The other pages for updating objects can be implemented in much the same way. We've left that as a challenge.
 
-## Next steps
-
-- Return to [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms).
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Delete_author_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms")}}

@@ -1,5 +1,6 @@
 ---
-title: "<p>: The Paragraph element"
+title: "`<p>` HTML paragraph element"
+short-title: <p>
 slug: Web/HTML/Reference/Elements/p
 page-type: html-element
 browser-compat: html.elements.p
@@ -28,7 +29,7 @@ Paragraphs are [block-level elements](/en-US/docs/Glossary/Block-level_content),
 p {
   margin: 10px 0;
   padding: 5px;
-  border: 1px solid #999;
+  border: 1px solid #999999;
 }
 ```
 

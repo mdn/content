@@ -22,7 +22,7 @@ browser.browserAction.setBadgeTextColor(
   - : An object with the following properties:
     - `color`
       - : The color, specified as one of:
-        - a string: any CSS [\<color>](/en-US/docs/Web/CSS/color_value) value, for example `"red"`, `"#FF0000"`, or `"rgb(255 0 0)"`. If the string is not a valid color, the returned promise will be rejected and the text color won't be altered.
+        - a string: any CSS [\<color>](/en-US/docs/Web/CSS/Reference/Values/color_value) value, for example `"red"`, `"#FF0000"`, or `"rgb(255 0 0)"`. If the string is not a valid color, the returned promise will be rejected and the text color won't be altered.
         - a {{WebExtAPIRef('browserAction.ColorArray')}} object.
         - `null`. If a `tabId` is specified, it removes the tab-specific badge text color so that the tab inherits the global badge text color. Otherwise it reverts the global badge text color to the default value.
 

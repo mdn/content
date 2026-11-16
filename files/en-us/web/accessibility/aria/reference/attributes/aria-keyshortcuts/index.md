@@ -107,14 +107,6 @@ In addition to poor browser support, the same concerns arise for `accesskey` as 
 - `<string>`
   - : The space-separated list of key combinations that, when pressed, perform the action.
 
-## Example
-
-In this example, the `aria-keyshortcuts` attribute on the element is set to "Alt+Shift+A".
-
-```html
-<a href="#content" aria-keyshortcuts="Alt+Shift+A">Skip to content</a>
-```
-
 ## Associated interfaces
 
 - {{domxref("Element.ariaKeyShortcuts")}}
@@ -125,6 +117,14 @@ In this example, the `aria-keyshortcuts` attribute on the element is set to "Alt
 ## Associated roles
 
 Used in **ALL** roles.
+
+## Example
+
+In this example, the `aria-keyshortcuts` attribute on the element is set to "Alt+Shift+A".
+
+```html
+<a href="#content" aria-keyshortcuts="Alt+Shift+A">Skip to content</a>
+```
 
 ## Specifications
 

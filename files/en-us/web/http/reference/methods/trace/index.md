@@ -3,7 +3,7 @@ title: TRACE request method
 short-title: TRACE
 slug: Web/HTTP/Reference/Methods/TRACE
 page-type: http-method
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#TRACE
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#TRACE
 sidebar: http
 ---
 
@@ -105,4 +105,4 @@ The browser doesn't use the `TRACE` method for user-initiated actions, so "brows
 - [HTTP request methods](/en-US/docs/Web/HTTP/Reference/Methods)
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Reference/Status)
 - [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)
-- [Cross-Site Tracing (XST)](https://owasp.org/www-community/attacks/Cross_Site_Tracing)
+- [Cross-Site Tracing (XST)](https://community.owasp.org/attacks/Cross_Site_Tracing)

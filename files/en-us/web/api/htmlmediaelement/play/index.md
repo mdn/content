@@ -105,7 +105,7 @@ This ensures that the `playButton` matches the playback state by watching for th
 let videoElem = document.getElementById("video");
 let playButton = document.getElementById("play-button");
 
-playButton.addEventListener("click", handlePlayButton, false);
+playButton.addEventListener("click", handlePlayButton);
 playVideo();
 
 function toggleButton(playing) {

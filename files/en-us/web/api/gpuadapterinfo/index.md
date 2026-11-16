@@ -23,12 +23,14 @@ This object allows developers to access specific details about the user's GPU so
   - : A human-readable string describing the adapter. Returns an empty string if it is not available.
 - {{domxref("GPUAdapterInfo.device", "device")}} {{ReadOnlyInline}}
   - : A vendor-specific identifier for the adapter. Returns an empty string if it is not available.
-- {{domxref("GPUAdapterInfo.vendor", "vendor")}} {{ReadOnlyInline}}
-  - : The name of the adapter vendor. Returns an empty string if it is not available.
+- {{domxref("GPUAdapterInfo.isFallbackAdapter", "isFallbackAdapter")}} {{ReadOnlyInline}}
+  - : A boolean value. Returns `true` if the adapter is a [fallback adapter](/en-US/docs/Web/API/GPU/requestAdapter#fallback_adapters), and `false` if not.
 - {{domxref("GPUAdapterInfo.subgroupMaxSize", "subgroupMaxSize")}} {{ReadOnlyInline}}
   - : The maximum supported [subgroup size](https://gpuweb.github.io/gpuweb/wgsl/#subgroup-size) for the {{domxref("GPUAdapter")}}.
 - {{domxref("GPUAdapterInfo.subgroupMinSize", "subgroupMinSize")}} {{ReadOnlyInline}}
   - : The minimum supported [subgroup size](https://gpuweb.github.io/gpuweb/wgsl/#subgroup-size) for the {{domxref("GPUAdapter")}}.
+- {{domxref("GPUAdapterInfo.vendor", "vendor")}} {{ReadOnlyInline}}
+  - : The name of the adapter vendor. Returns an empty string if it is not available.
 
 ## Examples
 

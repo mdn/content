@@ -67,7 +67,7 @@ Symbol("foo") === Symbol("foo"); // false
 
 ### new Symbol()
 
-The following syntax with the {{jsxref("Operators/new", "new")}} operator will throw a
+The following syntax with the {{jsxref("new")}} operator will throw a
 {{jsxref("TypeError")}}:
 
 ```js example-bad
@@ -99,4 +99,4 @@ typeof symObj; // "object"
 
 ## See also
 
-- [Polyfill of `Symbol` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [Polyfill of `Symbol` in `core-js`](https://core-js.io/docs/features/ecmascript/symbol)

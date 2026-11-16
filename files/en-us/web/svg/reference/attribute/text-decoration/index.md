@@ -48,19 +48,19 @@ svg {
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/CSS/text-decoration-line"
+          ><a href="/en-US/docs/Web/CSS/Reference/Properties/text-decoration-line"
             >&#x3C;'text-decoration-line'></a
           ></code
         >
         ||
         <code
-          ><a href="/en-US/docs/Web/CSS/text-decoration-style"
+          ><a href="/en-US/docs/Web/CSS/Reference/Properties/text-decoration-style"
             >&#x3C;'text-decoration-style'></a
           ></code
         >
         ||
         <code
-          ><a href="/en-US/docs/Web/CSS/text-decoration-color"
+          ><a href="/en-US/docs/Web/CSS/Reference/Properties/text-decoration-color"
             >&#x3C;'text-decoration-color'></a
           ></code
         >
@@ -77,7 +77,7 @@ svg {
   </tbody>
 </table>
 
-For a description of the values, please refer to the [CSS `text-decoration`](/en-US/docs/Web/CSS/text-decoration#values) property.
+For a description of the values, please refer to the [CSS `text-decoration`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration#values) property.
 
 ## Specifications
 

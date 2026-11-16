@@ -14,11 +14,15 @@ This is useful in the case of cross-document (MPA) [view transitions](/en-US/doc
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("pagereveal", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onpagereveal = (event) => { }
 ```
 
@@ -27,11 +31,6 @@ onpagereveal = (event) => { }
 A {{domxref("PageRevealEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PageRevealEvent")}}
-
-## Event properties
-
-- {{domxref("PageRevealEvent.viewTransition")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("ViewTransition")}} object representing the inbound cross-document view transition, if one is active when the event is fired. If this is not the case, it returns `null`.
 
 ## Examples
 

@@ -1,5 +1,6 @@
 ---
-title: "<blockquote>: The Block Quotation element"
+title: "`<blockquote>` HTML block quotation element"
+short-title: <blockquote>
 slug: Web/HTML/Reference/Elements/blockquote
 page-type: html-element
 browser-compat: html.elements.blockquote
@@ -14,8 +15,8 @@ The **`<blockquote>`** [HTML](/en-US/docs/Web/HTML) element indicates that the e
 <div>
   <blockquote cite="https://www.huxley.net/bnw/four.html">
     <p>
-      Words can be like X-rays, if you use them properly—they’ll go through
-      anything. You read and you’re pierced.
+      Words can be like X-rays, if you use them properly—they'll go through
+      anything. You read and you're pierced.
     </p>
   </blockquote>
   <p>—Aldous Huxley, <cite>Brave New World</cite></p>

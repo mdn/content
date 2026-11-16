@@ -264,7 +264,7 @@ When you find solutions to such problems, it is worth writing down notes on what
 
 ### Look at other people's code
 
-The web has [developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) that allow you to look at the code used to build any site. If you don't have a solution to hand, one good research method is to find websites with similar features in the wild, and look at how they did it.
+The web has [developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) that allow you to look at the code used to build any site. If you don't have a solution available, a good research method is to find websites with similar features in the wild and look at how they did it.
 
 ## Constant learning mindset
 

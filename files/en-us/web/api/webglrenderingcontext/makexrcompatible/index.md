@@ -93,15 +93,13 @@ const gl = outputCanvas.getContext("webgl");
 let xrSession = null;
 let usingXR = false;
 let currentScene = "scene1";
-let glStartButton;
-let xrStartButton;
+const glStartButton = document.querySelector(".green.button");
+const xrStartButton = document.querySelector(".use-webxr");
 
-window.addEventListener("load", (event) => {
-  loadSceneResources(currentScene);
+loadSceneResources(currentScene);
 
-  glStartButton.addEventListener("click", handleStartButtonClick);
-  xrStartButton.addEventListener("click", handleStartButtonClick);
-});
+glStartButton.addEventListener("click", handleStartButtonClick);
+xrStartButton.addEventListener("click", handleStartButtonClick);
 
 outputCanvas.addEventListener("webglcontextlost", (event) => {
   /* The context has been lost but can be restored */

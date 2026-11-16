@@ -14,11 +14,15 @@ The **`inputreport`** event of the {{domxref("HIDDevice")}} interface fires when
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("inputreport", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 oninputreport = (event) => { }
 ```
 
@@ -27,17 +31,6 @@ oninputreport = (event) => { }
 An {{domxref("HIDInputReportEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("HIDInputReportEvent")}}
-
-## Event properties
-
-_This interface also inherits properties from {{domxref("Event")}}._
-
-- {{domxref("HIDInputReportEvent.data")}} {{ReadOnlyInline}}
-  - : A {{jsxref("DataView")}} containing the data from the input report, excluding the `reportId` if the HID interface uses report IDs.
-- {{domxref("HIDInputReportEvent.device")}} {{ReadOnlyInline}}
-  - : The {{domxref("HIDDevice")}} instance that represents the HID interface that sent the input report.
-- {{domxref("HIDInputReportEvent.reportId")}} {{ReadOnlyInline}}
-  - : The one-byte identification prefix for this report, or 0 if the HID interface does not use report IDs.
 
 ## Example
 

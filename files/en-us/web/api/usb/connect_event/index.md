@@ -14,11 +14,15 @@ The **`connect`** event of the {{DOMxRef("USB")}} interface is fired whenever a 
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("connect", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onconnect = (event) => { }
 ```
 
@@ -27,13 +31,6 @@ onconnect = (event) => { }
 A {{domxref("USBConnectionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("USBConnectionEvent")}}
-
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("USBConnectionEvent.device", "device")}} {{ReadOnlyInline}}
-  - : The {{domxref("USBDevice")}} the event is fired for.
 
 ## Examples
 
@@ -45,7 +42,7 @@ navigator.usb.addEventListener("connect", (event) => {
 });
 ```
 
-Alternatively, you can use the `USB.onconnect` event handler property to establish a handler for the `connect` event:
+Alternatively, you can use the `USB.onconnect` event handler property to establish a handler for the `connect` event (but note that this replaces other event listeners added using `onconnect`, if any):
 
 ```js
 navigator.usb.onconnect = (event) => {

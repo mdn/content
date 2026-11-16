@@ -5,6 +5,8 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
+
 The first page we'll create will be the website home page, which is accessible from either the site (`/`) or catalog (`catalog/`) root. This will display some static text describing the site, along with dynamically calculated "counts" of different record types in the database.
 
 We've already created a route for the home page. In order to complete the page we need to update our controller function to fetch "counts" of records from the database, and create a view (template) that we can use to render the page.
@@ -16,19 +18,19 @@ We've already created a route for the home page. In order to complete the page w
 ## Route
 
 We created our index page routes in a [previous tutorial](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes).
-As a reminder, all the route functions are defined in **/routes/catalog.js**:
+As a reminder, all the route functions are defined in **routes/catalog.js**:
 
 ```js
 // GET catalog home page.
-router.get("/", book_controller.index); // This actually maps to /catalog/ because we import the route with a /catalog prefix
+router.get("/", bookController.index); // This actually maps to /catalog/ because we import the route with a /catalog prefix
 ```
 
-The book controller index function passed as a parameter (`book_controller.index`) has a "placeholder" implementation defined in **/controllers/bookController.js**:
+The book controller index function passed as a parameter (`bookController.index`) has a "placeholder" implementation defined in **controllers/bookController.js**:
 
 ```js
-exports.index = asyncHandler(async (req, res, next) => {
+export const index = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Site Home Page");
-});
+};
 ```
 
 It is this controller function that we extend to get information from our models and then render it using a template (view).
@@ -37,31 +39,27 @@ It is this controller function that we extend to get information from our models
 
 The index controller function needs to fetch information about how many `Book`, `BookInstance` (all), `BookInstance` (available), `Author`, and `Genre` records we have in the database, render this data in a template to create an HTML page, and then return it in an HTTP response.
 
-Open **/controllers/bookController.js**. Near the top of the file you should see the exported `index()` function.
+Open **controllers/bookController.js**. Near the top of the file you should see the exported `index()` function.
 
 ```js
-const Book = require("../models/book");
-const asyncHandler = require("express-async-handler");
+import Book from "../models/book.js";
 
-exports.index = asyncHandler(async (req, res, next) => {
+export const index = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Site Home Page");
-});
+};
 ```
 
 Replace all the code above with the following code fragment.
-The first thing this does is import (`require()`) all the models.
+The first thing this does is import all the models.
 We need to do this because we'll be using them to get our counts of documents.
-The code also requires "express-async-handler", which provides a wrapper to [catch exceptions thrown in route handler functions](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes#handling_exceptions_in_route_functions).
 
 ```js
-const Book = require("../models/book");
-const Author = require("../models/author");
-const Genre = require("../models/genre");
-const BookInstance = require("../models/bookinstance");
+import Book from "../models/book.js";
+import Author from "../models/author.js";
+import Genre from "../models/genre.js";
+import BookInstance from "../models/bookinstance.js";
 
-const asyncHandler = require("express-async-handler");
-
-exports.index = asyncHandler(async (req, res, next) => {
+export const index = async (req, res, next) => {
   // Get details of books, book instances, authors and genre counts (in parallel)
   const [
     numBooks,
@@ -85,7 +83,7 @@ exports.index = asyncHandler(async (req, res, next) => {
     author_count: numAuthors,
     genre_count: numGenres,
   });
-});
+};
 ```
 
 We use the [`countDocuments()`](<https://mongoosejs.com/docs/api/model.html#Model.countDocuments()>) method to get the number of instances of each model.
@@ -96,7 +94,7 @@ Because the queries for document counts are independent of each other we use [`P
 The method returns a new promise that we [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) for completion (execution pauses within _this function_ at `await`).
 When all the queries complete, the promise returned by `all()` fulfills, continuing execution of the route handler function, and populating the array with the results of the database queries.
 
-We then call [`res.render()`](https://expressjs.com/en/4x/api.html#res.render), specifying a view (template) named '**index**' and objects mapping the results of the database queries to the view template.
+We then call [`res.render()`](https://expressjs.com/en/5x/api/response/#resrender), specifying a view (template) named '**index**' and objects mapping the results of the database queries to the view template.
 The data is supplied as key-value pairs, and can be accessed in the template using the key.
 
 > [!NOTE]
@@ -104,11 +102,11 @@ The data is supplied as key-value pairs, and can be accessed in the template usi
 > Other template languages may require that you pass in values for all objects that you use.
 
 Note that the code is very simple because we can assume that the database queries succeed.
-If any of the database operations fail, the exception that is thrown will be caught by `asyncHandler()` and passed to the `next` middleware handler in the chain.
+If any of the database operations fail, the exception that is thrown will cause the Promise to reject, and Express will pass the error to the `next` middleware handler in the chain.
 
 ## View
 
-Open **/views/index.pug** and replace its content with the text below.
+Open **views/index.pug** and replace its content with the text below.
 
 ```pug
 extends layout
@@ -146,7 +144,4 @@ At this point we should have created everything needed to display the index page
 > [!NOTE]
 > You won't be able to _use_ the sidebar links yet because the URLs, views, and templates for those pages haven't been defined. If you try you'll get errors like "NOT IMPLEMENTED: Book list" for example, depending on the link you click on. These string literals (which will be replaced with proper data) were specified in the different controllers that live inside your "controllers" file.
 
-## Next steps
-
-- Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [Book list page](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page).
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}

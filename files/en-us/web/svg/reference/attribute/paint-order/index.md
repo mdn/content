@@ -24,40 +24,13 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("textPath")}}
 - {{SVGElement("tspan")}}
 
-## Usage notes
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Value</th>
-      <td>
-        <code>normal</code> | [ <code>fill</code> || <code>stroke</code> ||
-        <code>markers</code> ]
-      </td>
-    </tr>
-    <tr>
-      <th>Default value</th>
-      <td><code>normal</code></td>
-    </tr>
-    <tr>
-      <th>Animatable</th>
-      <td>discrete</td>
-    </tr>
-  </tbody>
-</table>
-
-- normal
-  - : This value indicates that the fill will be painted first, then the stroke, and finally the markers.
-- \[ fill || stroke || markers ]
-  - : The order of these three keywords indicates the order in which the painting happens, from left to right. If any of the three painting components is omitted, they will be painted in their default order after the specified components. For example, using `stroke` is equivalent to `stroke fill markers`.
-
 ## Example
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
   <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-    <stop stop-color="#888" />
-    <stop stop-color="#ccc" offset="1" />
+    <stop stop-color="#888888" />
+    <stop stop-color="#cccccc" offset="1" />
   </linearGradient>
   <rect width="400" height="200" fill="url(#g)" />
   <g
@@ -88,6 +61,33 @@ The stroke under effect could be achieved via the following CSS property:
   paint-order: stroke;
 }
 ```
+
+## Usage notes
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th>Value</th>
+      <td>
+        <code>normal</code> | [ <code>fill</code> || <code>stroke</code> ||
+        <code>markers</code> ]
+      </td>
+    </tr>
+    <tr>
+      <th>Default value</th>
+      <td><code>normal</code></td>
+    </tr>
+    <tr>
+      <th>Animatable</th>
+      <td>discrete</td>
+    </tr>
+  </tbody>
+</table>
+
+- normal
+  - : This value indicates that the fill will be painted first, then the stroke, and finally the markers.
+- \[ fill || stroke || markers ]
+  - : The order of these three keywords indicates the order in which the painting happens, from left to right. If any of the three painting components is omitted, they will be painted in their default order after the specified components. For example, using `stroke` is equivalent to `stroke fill markers`.
 
 ## Specifications
 

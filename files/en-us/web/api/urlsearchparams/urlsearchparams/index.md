@@ -68,22 +68,22 @@ console.log(url.href);
 console.log(url.origin);
 // https://example.com
 
-const add_params = {
+const addParams = {
   c: "a",
   d: 2,
   e: false,
 };
 
-const new_params = new URLSearchParams([
+const newParams = new URLSearchParams([
   ...Array.from(url.searchParams.entries()), // [["a","hello"],["b","world"]]
-  ...Object.entries(add_params), // [["c","a"],["d",2],["e",false]]
+  ...Object.entries(addParams), // [["c","a"],["d",2],["e",false]]
 ]).toString();
-console.log(new_params);
+console.log(newParams);
 // a=hello&b=world&c=a&d=2&e=false
 
-const new_url = new URL(`${url.origin}${url.pathname}?${new_params}`);
+const newURL = new URL(`${url.origin}${url.pathname}?${newParams}`);
 
-console.log(new_url.href);
+console.log(newURL.href);
 // https://example.com/?a=hello&b=world&c=a&d=2&e=false
 
 // Here it is as a function that accepts (URL, Record<string, string>)

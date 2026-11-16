@@ -16,11 +16,15 @@ This event is not cancellable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("rtctransform", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onrtctransform = (event) => { }
 ```
 
@@ -29,13 +33,6 @@ onrtctransform = (event) => { }
 A {{domxref("RTCTransformEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("RTCTransformEvent")}}
-
-## Event properties
-
-_This interface also inherits properties from its parent, {{domxref("Event")}}._
-
-- {{domxref("RTCTransformEvent.transformer")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("RTCRtpScriptTransformer")}} associated with the event.
 
 ## Example
 

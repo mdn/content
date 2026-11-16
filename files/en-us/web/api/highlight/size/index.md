@@ -9,7 +9,7 @@ spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-get-set.
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The **`size`** property returns the number of {{domxref("Range")}} objects in a
+The **`size`** property returns the number of {{domxref("AbstractRange")}} objects in a
 {{domxref("Highlight")}} object.
 
 ## Value

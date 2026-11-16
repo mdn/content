@@ -40,11 +40,11 @@ If a {{jsxref("Uint32Array")}} value is specified for `dynamicOffsets`, both of 
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-For `setBindGroup()` calls that use a {{jsxref("Uint32Array")}} value for `dynamicOffsets`, the call will throw with a `RangeError` {{domxref("DOMException")}} if:
+For `setBindGroup()` calls that use a {{jsxref("Uint32Array")}} value for `dynamicOffsets`, the call will throw with a {{jsxref("RangeError")}} if:
 
 - `dynamicOffsetsStart` is less than 0.
 - `dynamicOffsetsStart` + `dynamicOffsetsLength` is greater than `dynamicOffsets.length`.
@@ -73,7 +73,7 @@ const BUFFER_SIZE = 1000;
 // Create GPUCommandEncoder to encode commands to issue to the GPU
 const commandEncoder = device.createCommandEncoder();
 
-// Initiate render pass
+// Initiate compute pass
 const passEncoder = commandEncoder.beginComputePass();
 
 // Issue commands

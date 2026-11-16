@@ -3,7 +3,7 @@ title: URI path
 short-title: Path
 slug: Web/URI/Reference/Path
 page-type: uri-component
-spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html#section-3.3
+spec-urls: https://www.rfc-editor.org/info/rfc3986/#section-3.3
 sidebar: urlsidebar
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: "<samp>: The Sample Output element"
+title: "`<samp>` HTML sample output element"
+short-title: <samp>
 slug: Web/HTML/Reference/Elements/samp
 page-type: html-element
 browser-compat: html.elements.samp
@@ -83,7 +84,7 @@ The CSS that achieves the appearance we want is:
 
 ```css
 .prompt {
-  color: #b00;
+  color: #bb0000;
 }
 
 samp > kbd {
@@ -91,7 +92,7 @@ samp > kbd {
 }
 
 .cursor {
-  color: #00b;
+  color: #0000bb;
 }
 ```
 

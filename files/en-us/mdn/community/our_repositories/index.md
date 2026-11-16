@@ -16,7 +16,7 @@ This document describes the repositories (repos) you may need when contributing 
   - : This is where all the English content of the site is maintained, and where you'll make all changes to page content, prose, and in-page code examples.
 - [rari](https://github.com/mdn/rari)
   - : The **backend** of the MDN Web Docs platform, where you'll go if you want to make changes to page structures, templating, and rendering machinery.
-- [yari](https://github.com/mdn/yari)
+- [fred](https://github.com/mdn/fred)
   - : The **frontend** of MDN Web Docs, where you'll find styles, design, and layout functionality.
 - [browser-compat-data](https://github.com/mdn/browser-compat-data)
   - : Data used to generate the browser compatibility tables found on our reference pages.

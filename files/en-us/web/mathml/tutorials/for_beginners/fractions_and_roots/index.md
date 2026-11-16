@@ -47,7 +47,7 @@ Below is a screenshot of how it is rendered by a browser:
 - The `<msqrt>` is rendered as a square root: its children are laid out like an [`<mrow>`](/en-US/docs/Web/MathML/Tutorials/For_beginners/Getting_started#grouping_with_the_mrow_element), prefixed by a root symbol √ and completely covered by an overbar.
 - Finally, the `<mroot>` element is rendered as an nth root: The first element is covered by the radical symbol while the second element is used as the degree of the root and rendered as a prefix superscript.
 
-### Active learning: nesting different elements
+### Nesting different elements
 
 Here is an exercise to verify whether you understood the relation between a MathML subtree and its visual rendering. The document contains a MathML formula and you must check all subtrees corresponding to a subtree in that MathML formula. Once you are done, you can inspect the source of the MathML formula and verify if it matches your expectation.
 
@@ -184,10 +184,7 @@ Here is an exercise to verify whether you understood the relation between a Math
 
 ```css hidden
 math {
-  font-family:
-    Latin Modern Math,
-    STIX Two Math,
-    math;
+  font-family: "Latin Modern Math", "STIX Two Math", math;
   font-size: 200%;
 }
 math .highlight {
@@ -208,7 +205,7 @@ const checkboxes = Array.from(options.getElementsByTagName("input"));
 const status = document.getElementById("status");
 function verifyOption(checkbox) {
   const mathml = checkbox.dataset.highlight
-    ? document.getElementById(mathml)
+    ? document.getElementById(checkbox.dataset.highlight)
     : null;
   if (checkbox.checked) {
     comment.textContent = checkbox.dataset.comment;
@@ -237,7 +234,7 @@ checkboxes.forEach((checkbox) => {
 });
 ```
 
-{{ EmbedLiveSample('Active_learning_nesting_different_elements', 700, 600, "", "") }}
+{{ EmbedLiveSample('nesting_different_elements', 700, 600, "", "") }}
 
 ## Stretchy radical symbols
 
@@ -298,7 +295,7 @@ Some mathematical concepts are sometimes written using fraction-like notations s
 </math>
 ```
 
-{{ EmbedLiveSample('Fraction_without_bar', 700, 200, "", "") }}
+{{ EmbedLiveSample('fractions_without_bar', 700, 200, "", "") }}
 
 > [!NOTE]
 > Although the `linethickness` attribute can be used to specify an arbitrary thickness, it is better to keep the default value, which is calculated from parameters specified in the math font.

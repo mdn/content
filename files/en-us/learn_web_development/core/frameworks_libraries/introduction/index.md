@@ -52,15 +52,15 @@ There are many frameworks out there, but currently the "big four" are considered
 
 ### Angular
 
-[Angular](https://angular.dev/) is an open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. It is a complete rewrite from the same team that built [AngularJS](https://angularjs.org/). Angular was officially released on the 14th of September 2016.
+[Angular](https://angular.dev/) is an open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. It is a complete rewrite from the same team that built [AngularJS](https://en.wikipedia.org/wiki/AngularJS). Angular was officially released on the 14th of September 2016.
 
 Angular is a component-based framework which uses declarative HTML templates. At build time, transparently to developers, the framework's compiler translates the templates to optimized JavaScript instructions. Angular uses [TypeScript](https://www.typescriptlang.org/), a superset of JavaScript that we'll look at in a little more detail in the next chapter.
 
 ### Vue
 
-After working on and learning from the original [AngularJS](https://angularjs.org/) project, Evan You released [Vue](https://vuejs.org/) in 2014. Vue is the youngest of the big four, but has enjoyed a recent uptick in popularity.
+After working on and learning from the original [AngularJS](https://en.wikipedia.org/wiki/AngularJS) project, Evan You released [Vue](https://vuejs.org/) in 2014. Vue is the youngest of the big four, but has enjoyed a recent uptick in popularity.
 
-Vue, like [AngularJS](https://angularjs.org/), extends HTML with some of its own code. Apart from that, it mainly relies on modern, standard JavaScript.
+Vue, like Angular, extends HTML with some of its own code. Apart from that, it mainly relies on modern, standard JavaScript.
 
 ### React
 
@@ -133,6 +133,12 @@ function buildDeleteButtonEl(id) {
 
 The interesting part to note is that every time we update the state, we need to manually call `renderTodoList` so our state gets synced to the screen. The code that will render our items on the page might read something like this:
 
+```js hidden
+const todoFormEl = document.querySelector("#todo-form");
+const todoInputEl = document.querySelector("#todo-input");
+const todoListEl = document.querySelector("#todo-list");
+```
+
 ```js
 function renderTodoList() {
   const frag = document.createDocumentFragment();
@@ -176,7 +182,8 @@ body {
   line-height: 1.25;
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", Roboto, Helvetica, Arial, sans-serif;
+    "Segoe UI Emoji", "Segoe UI Symbol", "Roboto", "Helvetica", "Arial",
+    sans-serif;
   color: hsl(0 0 0.13);
 
   width: 95%;
@@ -216,10 +223,6 @@ label + input[type="text"] {
 ```
 
 ```js hidden
-const todoFormEl = document.querySelector("#todo-form");
-const todoInputEl = document.querySelector("#todo-input");
-const todoListEl = document.querySelector("#todo-list");
-
 function generateUniqueId(prefix = "prefix") {
   return `${prefix}-${Math.floor(Math.random() * Date.now())}`;
 }
@@ -249,7 +252,7 @@ renderInput();
 renderTodoList();
 ```
 
-{{EmbedLiveSample("the_verbosity_of_dom_change", "", "400", , , , , "allow-forms")}}
+{{EmbedLiveSample("the_verbosity_of_dom_changes", "", "400", , , , , "allow-forms")}}
 
 Working directly with the DOM, as in this example, requires understanding many things about how the DOM works: how to make elements; how to change their properties; how to put elements inside of each other; how to get them on the page. None of this code actually handles user interactions, or addresses adding or deleting a task. If we add those features, we have to remember to update our UI at the right time and in the right way.
 

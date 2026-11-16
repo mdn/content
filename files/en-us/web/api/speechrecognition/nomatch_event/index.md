@@ -14,11 +14,15 @@ This may involve some degree of recognition, which doesn't meet or exceed the {{
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("nomatch", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onnomatch = (event) => { }
 ```
 
@@ -28,32 +32,21 @@ A {{domxref("SpeechRecognitionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("SpeechRecognitionEvent")}}
 
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("SpeechRecognitionEvent.emma")}} {{ReadOnlyInline}}
-  - : Returns an Extensible MultiModal Annotation markup language (EMMA) — XML — representation of the result.
-- {{domxref("SpeechRecognitionEvent.interpretation")}} {{ReadOnlyInline}}
-  - : Returns the semantic meaning of what the user said.
-- {{domxref("SpeechRecognitionEvent.resultIndex")}} {{ReadOnlyInline}}
-  - : Returns the lowest index value result in the {{domxref("SpeechRecognitionResultList")}} "array" that has actually changed.
-- {{domxref("SpeechRecognitionEvent.results")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("SpeechRecognitionResultList")}} object representing all the speech recognition results for the current session.
-
 ## Examples
 
 You can use the `nomatch` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-const recognition = new (SpeechRecognition || webkitSpeechRecognition)();
+const recognition = new (
+  window.SpeechRecognition || window.webkitSpeechRecognition
+)();
 
 recognition.addEventListener("nomatch", () => {
   console.error("Speech not recognized");
 });
 ```
 
-Or use the `onnomatch` event handler property:
+Or use the `onnomatch` event handler property (but note that this replaces other event listeners added using `onnomatch`, if any):
 
 ```js
 recognition.onnomatch = () => {

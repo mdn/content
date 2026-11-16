@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLTableElement.summary
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.summary`** property represents the
 table description.

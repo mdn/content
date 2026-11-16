@@ -20,8 +20,8 @@ The **WebGLContextEvent** interface is part of the [WebGL API](/en-US/docs/Web/A
 
 _This interface inherits properties from its parent interface, {{domxref("Event")}}._
 
-- {{domxref("WebGLContextEvent.statusMessage")}}
-  - : A read-only property containing additional information about the event.
+- {{domxref("WebGLContextEvent.statusMessage")}} {{ReadOnlyInline}}
+  - : A property containing additional information about the event.
 
 ## Instance methods
 
@@ -35,13 +35,9 @@ With the help of the {{domxref("WEBGL_lose_context")}} extension, you can simula
 const canvas = document.getElementById("canvas");
 const gl = canvas.getContext("webgl");
 
-canvas.addEventListener(
-  "webglcontextlost",
-  (e) => {
-    console.log(e);
-  },
-  false,
-);
+canvas.addEventListener("webglcontextlost", (e) => {
+  console.log(e);
+});
 
 gl.getExtension("WEBGL_lose_context").loseContext();
 

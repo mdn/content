@@ -7,13 +7,13 @@ sidebar: mdnsidebar
 
 MDN Web Docs contains _browser-neutral_ documentation that enables web developers to write _browser-agnostic_ code. In this article, you'll find information about whether or not a given topic and/or type of content should be included on MDN Web Docs.
 
-## Editorial Policies
+## Editorial policies
 
 This section describes the policies set by the Mozilla MDN staff to govern the content on MDN Web Docs. All contributors to MDN Web Docs are expected to abide by these policies.
 
 ### Relevance
 
-All content on MDN Web Docs must be relevant to the technology section in which it appears. Spam (commercial advertisement) and other irrelevant content will never be accepted onto the site. Contributors who keep trying to submit spam may be banned from MDN at the discretion of Mozilla MDN staff.
+All content on MDN Web Docs must be relevant to the technology section in which it appears. Spam (commercial advertisement) and other irrelevant content will never be accepted onto the site. The same applies to low-effort content, such as generated text that repeats what is already on the page or hasn't been checked for accuracy. Contributors who keep trying to submit such content may be banned from MDN at the discretion of Mozilla MDN staff.
 
 Outbound links to commercial sites that are relevant to the topic from which they are linked will be judged on a case-by-case basis. Their value in aiding web developers must outweigh the commercial benefit to the linked site.
 
@@ -27,6 +27,11 @@ Articles on MDN Web Docs must maintain a [neutral point-of-view](https://en.wiki
 ### Standardization
 
 Web technologies to be documented on MDN Web Docs should be on a standards track and must be implemented by at least one rendering engine. Variations in browser support are documented in the [browser compatibility](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) section of an article.
+
+### Accountability
+
+You are responsible for all content you submit, including suggestions and drafts.
+A human must review every contribution before it is submitted, whatever tools were used to create it.
 
 ## Suggesting content
 
@@ -42,7 +47,7 @@ In general, if it's an open web technology, we document it on MDN Web Docs. This
 
 If a feature is implemented by multiple browsers and either accepted as standard or is progressing towards standardization, then yes, we definitely document it here. If a feature is still very experimental and not implemented in multiple browsers and/or liable to change, then it is still suitable for inclusion but may not be seen as a priority for the writing team to work on.
 
-In other words, web technologies to be documented on MDN Web Docs should fulfil all of the following criteria:
+In other words, web technologies to be documented on MDN Web Docs should fulfill all of the following criteria:
 
 - Be on a standards track.
 - Be specified in a specification published by a reliable standards body.
@@ -109,7 +114,7 @@ The following examples describe situations when pages/content might be deleted:
 - Articles contain content that is inappropriate for MDN Web Docs.
 - Sections of MDN Web Docs are not focused on open web technologies and are a maintenance burden.
 
-For more information on _how_ to delete documents, please see the [Creating, moving and deleting pages](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting) guide.
+For more information on _how_ to delete individual documents, please see the [Creating, moving and deleting pages](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting) guide. If you want to delete an entire section of content, consult the [Retiring content](/en-US/docs/MDN/Writing_guidelines/Howto/Retiring_content) guide.
 
 ## Types of documents allowed on MDN Web Docs
 

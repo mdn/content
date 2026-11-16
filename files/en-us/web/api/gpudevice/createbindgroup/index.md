@@ -27,10 +27,12 @@ createBindGroup(descriptor)
           - : A number representing a unique identifier for this resource binding, which matches the `binding` value of a corresponding {{domxref("GPUBindGroupLayout")}} entry. In addition, it matches the `n` index value of the corresponding [`@binding(n)`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-binding) attribute in the shader ({{domxref("GPUShaderModule")}}) used in the related pipeline.
         - `resource`
           - : The resource to bind. This can be one of the following:
-            - `GPUBufferBinding` (which wraps a {{domxref("GPUBuffer")}}; see [GPUBufferBinding objects](#gpubufferbinding_objects) for a definition)
+            - `GPUBufferBinding`: Wraps a {{domxref("GPUBuffer")}}; see [GPUBufferBinding objects](#gpubufferbinding_objects) for a definition.
+            - {{domxref("GPUBuffer")}}: Can be used directly rather than being wrapped in a `GPUBufferBinding`, provided the default [`offset`](#offset) and [`size`](#size) values are being used.
             - {{domxref("GPUExternalTexture")}}
+            - {{domxref("GPUTextureView")}}: Can be used in place of a `GPUExternalTexture` provided it is compatible (a 2D format with a single subresource, that is, [`dimension: "2d"`](/en-US/docs/Web/API/GPUTexture/createView#dimension)).
+            - {{domxref("GPUTexture")}}: Can be used in place of a `GPUTextureView`, provided a default view is desired. When used in this context, `GPUTexture` is equivalent to a `GPUTextureView` object created using a {{domxref("GPUTexture.createView()")}} call with no argument specified.
             - {{domxref("GPUSampler")}}
-            - {{domxref("GPUTextureView")}}; can be used in place of a `GPUExternalTexture` provided it is compatible (a 2D format with a single subresource, that is, [`dimension: "2d"`](/en-US/docs/Web/API/GPUTexture/createView#dimension)).
     - `label` {{optional_inline}}
       - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
     - `layout`

@@ -22,3 +22,7 @@ sidebar:
     path: /Web/URI/Reference/Fragment
     link: /Web/URI/Reference/Fragment
     details: open
+l10n:
+  fr:
+    URIs: URIs
+    Reference: Références

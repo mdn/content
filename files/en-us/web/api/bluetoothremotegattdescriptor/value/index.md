@@ -11,7 +11,7 @@ browser-compat: api.BluetoothRemoteGATTDescriptor.value
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`BluetoothRemoteGATTDescriptor.value`**
-read-only property returns an {{jsxref("DataView")}} containing the currently cached
+read-only property returns a {{jsxref("DataView")}} containing the currently cached
 descriptor value. This value gets updated when the value of the descriptor is read.
 
 ## Value

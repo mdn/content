@@ -14,11 +14,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("leavepictureinpicture", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onleavepictureinpicture = (event) => { }
 ```
 
@@ -27,10 +31,6 @@ onleavepictureinpicture = (event) => { }
 A {{domxref("PictureInPictureEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PictureInPictureEvent")}}
-
-## Event properties
-
-This interface also inherits properties from its parent {{domxref("Event")}}.
 
 ## Examples
 
@@ -46,7 +46,7 @@ function onExitPip() {
   console.log("Picture-in-Picture mode deactivated!");
 }
 
-video.addEventListener("leavepictureinpicture", onExitPip, false);
+video.addEventListener("leavepictureinpicture", onExitPip);
 
 button.onclick = () => {
   if (document.pictureInPictureElement) {
@@ -55,7 +55,7 @@ button.onclick = () => {
 };
 ```
 
-Using the `onleavepictureinpicture` event handler property:
+Using the `onleavepictureinpicture` event handler property (but note that this replaces other event listeners added using `onleavepictureinpicture`, if any):
 
 ```js
 const video = document.querySelector("#video");

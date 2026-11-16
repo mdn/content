@@ -1,43 +1,34 @@
 ---
 title: "Test your skills: CSS and JavaScript accessibility"
-short-title: CSS and JavaScript
+short-title: "Test: CSS/JS a11y"
 slug: Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
+
 The aim of this skill test is to help you assess whether you've understood our [CSS and JavaScript accessibility best practices](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript) article.
 
 > [!NOTE]
-> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
->
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## CSS accessibility 1
 
 In the first task you are presented with a list of links. However, their accessibility is pretty bad — there is no way to really tell that they are links, or to tell which one the user is focused on. We'd like you to assume that the existing ruleset with the `a` selector is supplied by some CMS, and that you can't change it.
 
-To complete the task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Create new rules to make the links look and behave like links, and for the user to be able to tell which link they are focused on in the list.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/css/css-a11y1-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+To complete the task, create new rules to make the links look and behave like links, and for the user to be able to tell which link they are focused on in the list.
 
 <!-- Code shared across examples -->
 
-```css hidden live-sample___css-js-ally-1 live-sample___css-js-ally-2 live-sample___css-js-ally-3
+```css hidden live-sample___css-js-ally-1 live-sample___css-js-ally-2 live-sample___css-js-ally-3 live-sample___css-js-ally-1-finish live-sample___css-js-ally-2-finish
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
+    1em / 1.4 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0;
@@ -50,7 +41,13 @@ body {
 
 <!-- Example-specific code -->
 
-```html live-sample___css-js-ally-1
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("css-js-ally-1", "100%", 200) }}
+
+Here's the underlying code for this starting point:
+
+```html live-sample___css-js-ally-1 live-sample___css-js-ally-1-finish
 <ul>
   <li><a href="">Animals</a></li>
   <li><a href="">Computers</a></li>
@@ -64,7 +61,7 @@ body {
 ```css live-sample___css-js-ally-1
 a {
   text-decoration: none;
-  color: #666;
+  color: #666666;
   outline: none;
 }
 
@@ -73,7 +70,9 @@ a {
 /* Add your code here */
 ```
 
-{{ EmbedLiveSample("css-js-ally-1", "100%", 200) }}
+When the task is complete, the links should look something like this:
+
+{{ EmbedLiveSample("css-js-ally-1-finish", "100%", 200) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -92,7 +91,26 @@ li a {
 li a:hover,
 li a:focus {
   text-decoration: none;
-  color: rgb(255 0 0);
+  color: red;
+}
+```
+
+```css hidden live-sample___css-js-ally-1-finish
+a {
+  text-decoration: none;
+  color: #666666;
+  outline: none;
+}
+
+li a {
+  text-decoration: underline;
+  color: rgb(150 0 0);
+}
+
+li a:hover,
+li a:focus {
+  text-decoration: none;
+  color: red;
 }
 ```
 
@@ -104,20 +122,19 @@ In this next task you are presented with a simple bit of content — just headin
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Think about what the problems are, and which guidelines state the acceptable values for color and sizing.
-3. Update the CSS with new values for the color and font-size to fix the problem.
-4. Test the code to make sure the problem is now fixed. Explain what tools or methods you used to select the new values and test the code.
+1. Think about what the problems are, and which guidelines state the acceptable values for color and sizing.
+2. Update the CSS with new values for the color and font-size to fix the problem.
+3. Test the code to make sure the problem is now fixed. Explain what tools or methods you used to select the new values and test the code.
 
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/css/css-a11y2-download.html) to work in your own editor or in an online editor.
+The starting point of the task looks like this:
 
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+{{ EmbedLiveSample("css-js-ally-2", "100%", 240) }}
+
+Here's the underlying code for this starting point:
 
 <!-- spellchecker: disable -->
 
-```html live-sample___css-js-ally-2
+```html live-sample___css-js-ally-2 live-sample___css-js-ally-2-finish
 <main>
   <h1>I am the eggman</h1>
 
@@ -156,7 +173,7 @@ main {
 h1,
 h2,
 p {
-  color: #999;
+  color: #999999;
 }
 
 h1 {
@@ -172,7 +189,9 @@ p {
 }
 ```
 
-{{ EmbedLiveSample("css-js-ally-2", "100%", 240) }}
+The updated content should look like this:
+
+{{ EmbedLiveSample("css-js-ally-2-finish", "100%", 600) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -189,7 +208,7 @@ p {
 
 For the updated code, something like this would fix the color contrast:
 
-```css
+```css live-sample___css-js-ally-2-finish
 main {
   padding: 20px;
   background-color: red;
@@ -204,7 +223,7 @@ p {
 
 And something like this would work for the font sizing:
 
-```css
+```css live-sample___css-js-ally-2-finish
 h1 {
   font-size: 2.5rem;
 }
@@ -242,13 +261,11 @@ In our final accessibility task, you have some JavaScripting to do. We have an a
 
 But it is not very accessible — in its current state you can only operate it with the mouse. We'd like you to add some HTML and JavaScript to make it keyboard accessible too.
 
-Click **"Play"** in the code block below to edit the example in the MDN Playground, and make the required changes.
+The starting point of the task looks like this:
 
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/js/js/js1-download.html) to work in your own editor or in an online editor.
+{{ EmbedLiveSample("css-js-ally-3", "100%", 400) }}
 
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+Here's the underlying code for this starting point:
 
 ```html live-sample___css-js-ally-3
 <section class="preview">
@@ -312,7 +329,7 @@ function handleSelection(e) {
 }
 ```
 
-{{ EmbedLiveSample("css-js-ally-3", "100%", 400) }}
+We've not provided finished content for this task, as it looks the same as the starting point.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -329,3 +346,5 @@ item.addEventListener("keyup", (e) => {
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}

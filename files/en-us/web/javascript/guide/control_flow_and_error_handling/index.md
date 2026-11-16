@@ -329,7 +329,7 @@ The following example uses a `try...catch` statement. The example calls a
 function that retrieves a month name from an array based on the value passed to the
 function. If the value does not correspond to a month number
 (`1` – `12`), an exception is thrown with the value
-`'InvalidMonthNo'` and the statements in the `catch` block set the
+`'Invalid month code'` and the statements in the `catch` block set the
 `monthName` variable to `'unknown'`.
 
 ```js
@@ -398,7 +398,7 @@ try {
 The `finally` block contains statements to be executed _after_ the
 `try` and `catch` blocks execute. Additionally, the
 `finally` block executes _before_ the code that follows the
-`try…catch…finally` statement.
+`try...catch...finally` statement.
 
 It is also important to note that the `finally` block will execute
 _whether or not_ an exception is thrown. If an exception is thrown, however, the
@@ -427,7 +427,7 @@ try {
 ```
 
 If the `finally` block returns a value, this value becomes the return value
-of the entire `try…catch…finally` production, regardless of any
+of the entire `try...catch...finally` production, regardless of any
 `return` statements in the `try` and `catch` blocks:
 
 ```js
@@ -444,9 +444,9 @@ function f() {
   } finally {
     console.log(3);
     return false; // overwrites the previous "return"
+    // `f` exits here
     console.log(4); // not reachable
   }
-  // "return false" is executed now
   console.log(5); // not reachable
 }
 console.log(f()); // 0, 1, 3, false
@@ -466,8 +466,8 @@ function f() {
     throw e;
   } finally {
     return false; // overwrites the previous "throw"
+    // `f` exits here
   }
-  // "return false" is executed now
 }
 
 try {

@@ -24,7 +24,7 @@ The `unloadEventStart` property can have the following values:
 
 The `unloadEventStart` property can be used to measure how long it takes to process the [`unload`](/en-US/docs/Web/API/Window/unload_event) event handler.
 
-This is useful to measure the time of long running [`unload`](/en-US/docs/Web/API/Window/load_event) event handlers.
+This is useful to measure the time of long-running [`unload`](/en-US/docs/Web/API/Window/load_event) event handlers.
 
 ```js
 window.addEventListener("unload", (event) => {
@@ -54,7 +54,7 @@ Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `n
 ```js
 const entries = performance.getEntriesByType("navigation");
 entries.forEach((entry) => {
-  const loadEventTime = entry.unloadEventEnd - entry.unloadEventStart;
+  const unloadEventTime = entry.unloadEventEnd - entry.unloadEventStart;
   if (unloadEventTime > 0) {
     console.log(`${entry.name}:
       load event handler time: ${unloadEventTime}ms`);

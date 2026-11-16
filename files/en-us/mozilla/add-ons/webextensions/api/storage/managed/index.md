@@ -16,6 +16,8 @@ For Firefox, you need to create a [JSON manifest (native manifest) file in a spe
 
 Here's an example native manifest:
 
+<!-- cSpell:ignore colour -->
+
 ```json
 {
   "name": "favourite-colour-examples@mozilla.org",
@@ -47,6 +49,8 @@ The `managed` object implements the methods defined on the {{WebExtAPIRef("stora
   - : Retrieves one or more items from the storage area.
 - {{WebExtAPIRef("storage.StorageArea.getBytesInUse()", "storage.managed.getBytesInUse()")}}
   - : Gets the amount of storage space (in bytes) used for one or more items in the storage area.
+- {{WebExtAPIRef("storage.StorageArea.getKeys()", "storage.managed.getKeys()")}}
+  - : Retrieves the keys of all items in the storage area.
 
 ## Events
 

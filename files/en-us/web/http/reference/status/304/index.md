@@ -2,7 +2,7 @@
 title: 304 Not Modified
 slug: Web/HTTP/Reference/Status/304
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.304
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.304
 sidebar: http
 ---
 

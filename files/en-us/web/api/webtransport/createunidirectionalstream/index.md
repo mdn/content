@@ -33,7 +33,7 @@ createUnidirectionalStream(options)
 - `options` {{optional_inline}}
   - : An object that may have the following properties:
     - `sendOrder` {{optional_inline}}
-      - : A integer value specifying the send priority of this stream relative to other streams for which the value has been set.
+      - : An integer value specifying the send priority of this stream relative to other streams for which the value has been set.
         Queued bytes are sent first for streams that have a higher value.
         If not set, the send order depends on the implementation.
 
@@ -50,7 +50,7 @@ A {{jsxref("Promise")}} that resolves to a `WebTransportSendStream` object (this
 
 Use the `createUnidirectionalStream()` method to get a reference to a {{domxref("WritableStream")}}. From this you can {{domxref("WritableStream.getWriter", "get a writer", "", "nocode")}} to allow data to be written to the stream and sent to the server.
 
-Use the {{domxref("WritableStreamDefaultWriter.close", "close()")}} method of the resulting {{domxref("WritableStreamDefaultWriter")}} to close the associated HTTP/3 connection. The browser tries to send all pending data before actually closing the associated connection.
+Use the {{domxref("WritableStreamDefaultWriter.close", "close()")}} method of the resulting {{domxref("WritableStreamDefaultWriter")}} to close the stream. The browser tries to send all pending data before actually closing the stream.
 
 ```js
 async function writeData() {

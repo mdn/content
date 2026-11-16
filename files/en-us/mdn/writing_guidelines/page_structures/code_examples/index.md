@@ -22,20 +22,20 @@ There are four types of code examples available:
   The published page displays the source code blocks and the results side-by-side.
 - **Interactive examples** — A macro renders source code onto the page and renders the results in a panel beside the source.
   Readers can edit the source code and re-run the example to see the effect of their changes.
-- **GitHub embeds** — A macro takes a document in a GitHub repo in the [MDN organization](https://github.com/mdn/), puts it in an {{htmlelement("iframe")}} , and embeds it into the page to show the result.
+- **GitHub embeds** — A macro takes a document in a GitHub repo in the [MDN organization](https://github.com/mdn/), puts it in an {{htmlelement("iframe")}}, and embeds it into the page to show the result.
 
 ## When should you use each one?
 
 Each type of code example has its own use cases:
 
 - **Static examples** are useful if you need to show code and it's not important to demonstrate the results of the code on the published page, or you are showing an intermediate step in an article.
-  Readers will often look for these types of code blocks that show how use of a feature so they can copy and paste a minimal example into their project.
+  Readers will often look for these types of code blocks that show how to use a feature so they can copy and paste a minimal example into their project.
   Additionally, you might want a static code block demonstrating an API or a feature that doesn't work well as a live sample.
 - **Live samples** are useful if you want to show source code, then show it running, and you're not that bothered about it being a standalone example.
   They are useful because you only need to update the code once to update both the code blocks on the page and the live results side-by-side.
 - **Interactive examples** are used on reference pages.
   They are limited to one occurrence per page, and must be in a specific place on the page after the introduction.
-  They're useful for showing what the common or practical uses of a feature is.
+  They're useful for showing what the common or practical uses of a feature are.
 - **GitHub embeds** are useful when you've got an existing example you want to embed, don't want to show the source code for, and/or you want to make sure the example is available in standalone form.
   Because on-page code and source code are in two different places, the maintenance costs are higher.
 
@@ -66,10 +66,6 @@ console.log(test);
 
 The [`InteractiveExample`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/interactive_example.rs) macro is used to embed interactive examples at the top of MDN reference pages.
 They are for readers who want to try an example without having to read through the full article for a topic or feature.
-
-> [!WARNING]
-> Currently **only JavaScript** examples are supported.
-> See https://github.com/orgs/mdn/discussions/782 for implementation details.
 
 The `InteractiveExample` macro accepts a title for the example as a string, followed by a keyword to specify the height of the example.
 The code blocks to include in the example appear after the macro call and contain the keyword `interactive-example` in the info string after the code block's language.
@@ -112,10 +108,10 @@ The macro has three parameters:
 2. The width of the `<iframe>`, which can be expressed as a percentage or in pixels.
 3. The height of the `<iframe>`, which can be expressed as a percentage or in pixels.
 
-Let's look at an example. Say we wanted to embed the code at <https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/>. We could use the following call:
+Let's look at an example. Say we wanted to embed the code at <https://mdn.github.io/learning-area/html/introduction-to-html/getting-started/>. We could use the following call:
 
-\\{{EmbedGHLiveSample("learning-area/css/styling-boxes/backgrounds/", '100%', 100)}}
+\\{{EmbedGHLiveSample("learning-area/html/introduction-to-html/getting-started/", '100%', 100)}}
 
 This looks like so when rendered:
 
-{{EmbedGHLiveSample("learning-area/css/styling-boxes/backgrounds/", '100%', 100)}}
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/getting-started/", '100%', 100)}}

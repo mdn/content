@@ -14,13 +14,13 @@ See also {{jsxref("Array.prototype.reduce()")}} for left-to-right.
 {{InteractiveExample("JavaScript Demo: Array.prototype.reduceRight()")}}
 
 ```js interactive-example
-const array1 = [
+const array = [
   [0, 1],
   [2, 3],
   [4, 5],
 ];
 
-const result = array1.reduceRight((accumulator, currentValue) =>
+const result = array.reduceRight((accumulator, currentValue) =>
   accumulator.concat(currentValue),
 );
 
@@ -249,7 +249,7 @@ console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
 
 ## See also
 
-- [Polyfill of `Array.prototype.reduceRight` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.reduceRight` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.reduceRight`](https://www.npmjs.com/package/array.prototype.reduceright)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

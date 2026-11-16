@@ -25,10 +25,6 @@ In general, a more robust approach to server security is to ensure software is r
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 
@@ -62,4 +58,4 @@ Server: Apache/2.4.1 (Unix)
 
 - {{HTTPHeader("Allow")}}
 - [HTTP Observatory](/en-US/observatory)
-- [Prevent information disclosure via HTTP headers](https://owasp.org/www-project-secure-headers/index.html#prevent-information-disclosure-via-http-headers) - OWASP Secure Headers Project
+- [Prevent information disclosure via HTTP headers](https://secure-headers-project.owasp.org/best-practices/#prevent-information-disclosure-via-http-headers) - OWASP Secure Headers Project

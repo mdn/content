@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XPathEvaluator.evaluate
 ---
 
-{{APIRef("DOM XPath")}}
+{{APIRef("DOM")}}
 
 The `evaluate()` method of the {{domxref("XPathEvaluator")}} interface
 executes an XPath expression on the given node or document and returns an
@@ -35,7 +35,7 @@ evaluate(expression, contextNode, resolver, type, result)
   - : Specifies the type of result to be returned by evaluating the expression. This must
     be one of the {{domxref("XPathResult", "XPathResult", "Constants")}}.
 - `result` {{optional_inline}}
-  - : Allows to specify a result object which may be reused and returned by this method.
+  - : Allows you to specify a result object which may be reused and returned by this method.
     If this is specified as `null` or the implementation does not reuse the
     specified result, a new result object will be returned.
 

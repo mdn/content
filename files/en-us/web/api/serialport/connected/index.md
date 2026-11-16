@@ -3,14 +3,16 @@ title: "SerialPort: connected property"
 short-title: connected
 slug: Web/API/SerialPort/connected
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.SerialPort.connected
 ---
 
-{{SecureContext_Header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Web Serial API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`connected`** read-only property of the {{domxref("SerialPort")}} interface returns a boolean value that indicates whether the port is [logically connected](/en-US/docs/Web/API/SerialPort/connect_event#description) to the device.
+
+## Value
+
+A boolean — `true` if the port is logically connected, and `false` if not.
 
 ## Description
 
@@ -34,10 +36,6 @@ for (const port of ports) {
   }
 }
 ```
-
-## Value
-
-A boolean — `true` if the port is logically connected, and `false` if not.
 
 ## Examples
 

@@ -18,7 +18,7 @@ Below is a list of interfaces based on the AuthenticatorResponse interface.
 
 ## Instance properties
 
-- {{domxref("AuthenticatorResponse.clientDataJSON")}}
+- {{domxref("AuthenticatorResponse.clientDataJSON")}} {{ReadOnlyInline}}
   - : A [JSON](/en-US/docs/Learn_web_development/Core/Scripting/JSON) string in an {{jsxref("ArrayBuffer")}}, representing the client data that was passed to {{domxref("CredentialsContainer.create()")}} or {{domxref("CredentialsContainer.get()")}}.
 
 ## Instance methods
@@ -31,9 +31,7 @@ None.
 
 ```js
 const options = {
-  challenge: new Uint8Array([
-    /* bytes sent from the server */
-  ]),
+  challenge: new Uint8Array([/* bytes sent from the server */]),
 };
 
 navigator.credentials

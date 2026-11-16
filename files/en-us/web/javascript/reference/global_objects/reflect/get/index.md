@@ -12,17 +12,17 @@ The **`Reflect.get()`** static method is like the [property accessor](/en-US/doc
 {{InteractiveExample("JavaScript Demo: Reflect.get()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   x: 1,
   y: 2,
 };
 
-console.log(Reflect.get(object1, "x"));
+console.log(Reflect.get(object, "x"));
 // Expected output: 1
 
-const array1 = ["zero", "one"];
+const array = ["zero", "one"];
 
-console.log(Reflect.get(array1, 1));
+console.log(Reflect.get(array, 1));
 // Expected output: "one"
 ```
 
@@ -40,7 +40,7 @@ Reflect.get(target, propertyKey, receiver)
 - `propertyKey`
   - : The name of the property to get.
 - `receiver` {{optional_inline}}
-  - : The value of `this` provided for the call to `target` if a getter is encountered.
+  - : The value of `this` provided for the call to `target` if a getter is encountered. Defaults to `target`.
 
 ### Return value
 
@@ -108,7 +108,7 @@ Reflect.get(obj3, "foo", { foo: 3 }); // "3bar"
 
 ## See also
 
-- [Polyfill of `Reflect.get` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.get` in `core-js`](https://core-js.io/docs/features/ecmascript/reflect)
 - {{jsxref("Reflect")}}
 - [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 - [`handler.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get)

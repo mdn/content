@@ -8,8 +8,6 @@ browser-compat: svg.elements.a.xlink_href
 sidebar: svgref
 ---
 
-{{Deprecated_Header}}
-
 The **`xlink:href`** attribute defines a reference to a resource as a reference [IRI](/en-US/docs/Web/SVG/Guides/Content_type#iri). The exact meaning of that link depends on the context of each element using it.
 
 > [!NOTE]
@@ -32,26 +30,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("set")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("use")}}
-
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg">
-  <a xlink:href="https://developer.mozilla.org/">
-    <text x="10" y="25">MDN Web Docs</text>
-  </a>
-</svg>
-```
-
-{{EmbedLiveSample("Example", "320", "100")}}
 
 ## a
 
@@ -360,6 +338,26 @@ For {{SVGElement("use")}}, `xlink:href` defines the location of the referenced o
     </tr>
   </tbody>
 </table>
+
+## Example
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg">
+  <a xlink:href="https://developer.mozilla.org/">
+    <text x="10" y="25">MDN Web Docs</text>
+  </a>
+</svg>
+```
+
+{{EmbedLiveSample("Example", "320", "100")}}
 
 ## Specifications
 

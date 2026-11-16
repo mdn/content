@@ -21,7 +21,7 @@ new CommandEvent(type, options)
 
 - `type`
   - : A string with the name of the event.
-    It is case-sensitive and browsers set it to `beforeinput` or `input`.
+    It is case-sensitive and browsers set it to `command`.
 - `options` {{optional_inline}}
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `source` {{optional_inline}}

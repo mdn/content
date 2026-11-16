@@ -1,17 +1,17 @@
 ---
 title: "Test your skills: Strings"
-short-title: Strings
+short-title: "Test: Strings"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Strings
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you've understood our [Handling text — strings in JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Strings) and [Useful string methods](/en-US/docs/Learn_web_development/Core/Scripting/Useful_string_methods) articles.
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}
+
+The aim of this skill test is to help you assess whether you've understood our [Handling text — strings in JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Strings) and [Useful string methods](/en-US/docs/Learn_web_development/Core/Scripting/Useful_string_methods) articles.
 
 > [!NOTE]
-> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
->
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Strings 1
 
@@ -19,24 +19,17 @@ In our first strings task, we start off small. You already have half of a famous
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Look up the other half of the quote, and add it to the example inside a variable called `quoteEnd`.
-3. Concatenate the two strings together to make a single string containing the complete quote. Save the result inside a variable called `finalQuote`.
-4. You'll find that you get an error at this point. Can you fix the problem with `quoteStart`, so that the full quote displays correctly?
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/strings/strings1-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Look up the other half of the quote, and add it to the example inside a variable called `quoteEnd`.
+2. Concatenate the two strings together to make a single string containing the complete quote. Save the result inside a variable called `finalQuote`.
+3. You'll find that you get an error at this point. Can you fix the problem with `quoteStart`, so that the full quote displays correctly?
 
 <!-- Code shared across examples -->
 
-```html hidden live-sample___strings-1 live-sample___strings-2 live-sample___strings-3 live-sample___strings-4
+```html hidden live-sample___strings-1 live-sample___strings-2 live-sample___strings-3 live-sample___strings-4 live-sample___strings-1-finish live-sample___strings-2-finish live-sample___strings-3-finish live-sample___strings-4-finish
 <section></section>
 ```
 
-```css hidden live-sample___strings-1 live-sample___strings-2 live-sample___strings-3 live-sample___strings-4
+```css hidden live-sample___strings-1 live-sample___strings-2 live-sample___strings-3 live-sample___strings-4 live-sample___strings-1-finish live-sample___strings-2-finish live-sample___strings-3-finish live-sample___strings-4-finish
 * {
   box-sizing: border-box;
 }
@@ -48,6 +41,12 @@ p {
 ```
 
 <!-- Example-specific code -->
+
+The starting point of the task looks like this (nothing is shown yet):
+
+{{ EmbedLiveSample("strings-1", "100%", 60) }}
+
+Here's the underlying code for this starting point:
 
 ```js-nolint live-sample___strings-1
 const quoteStart = 'Don't judge each day by the harvest you reap ';
@@ -62,7 +61,9 @@ para1.textContent = finalQuote;
 section.appendChild(para1);
 ```
 
-{{ EmbedLiveSample("strings-1", "100%", 60) }}
+The updated output should look like this:
+
+{{ EmbedLiveSample("strings-1-finish", "100%", 60) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -81,6 +82,21 @@ const finalQuote = `${quoteStart}${quoteEnd}`;
 // ...
 ```
 
+```js hidden live-sample___strings-1-finish
+const quoteStart = "Don't judge each day by the harvest you reap ";
+
+const quoteEnd = "but by the seeds that you plant.";
+
+const finalQuote = `${quoteStart}${quoteEnd}`;
+
+// Don't edit the code below here!
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = finalQuote;
+section.appendChild(para1);
+```
+
 </details>
 
 ## Strings 2
@@ -89,16 +105,15 @@ In this task you are provided with two variables, `quote` and `substring`, which
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Retrieve the length of the quote, and store it in a variable called `quoteLength`.
-3. Find the index position where `substring` appears in `quote`, and store that value in a variable called `index`.
-4. Use a combination of the variables you have and available string properties/methods to trim down the original quote to "I do not like green eggs and ham.", and store it in a variable called `revisedQuote`.
+1. Retrieve the length of the quote, and store it in a variable called `quoteLength`.
+2. Find the index position where `substring` appears in `quote`, and store that value in a variable called `index`.
+3. Use a combination of the variables you have and available string properties/methods to trim down the original quote to "I do not like green eggs and ham.", and store it in a variable called `revisedQuote`.
 
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/strings/strings2-download.html) to work in your own editor or in an online editor.
+The starting point of the task looks like this (nothing is shown yet):
 
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+{{ EmbedLiveSample("strings-2", "100%", 60) }}
+
+Here's the underlying code for this starting point:
 
 ```js live-sample___strings-2
 const quote = "I do not like green eggs and ham. I do not like them, Sam-I-Am.";
@@ -120,7 +135,9 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
-{{ EmbedLiveSample("strings-2", "100%", 60) }}
+The updated output should look like this:
+
+{{ EmbedLiveSample("strings-2-finish", "100%", 80) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -139,6 +156,24 @@ const revisedQuote = quote.slice(0, index + substring.length + 1);
 // ...
 ```
 
+```js hidden live-sample___strings-2-finish
+const quote = "I do not like green eggs and ham. I do not like them, Sam-I-Am.";
+const substring = "green eggs and ham";
+
+const quoteLength = quote.length;
+const index = quote.indexOf(substring);
+const revisedQuote = quote.slice(0, index + substring.length + 1);
+
+const section = document.querySelector("section");
+section.innerHTML = " ";
+const para1 = document.createElement("p");
+para1.textContent = `The quote is ${quoteLength} characters long.`;
+const para2 = document.createElement("p");
+para2.textContent = revisedQuote;
+section.appendChild(para1);
+section.appendChild(para2);
+```
+
 </details>
 
 ## Strings 3
@@ -147,16 +182,15 @@ In the next string task, you are given the same quote that you ended up with in 
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Change the casing to correct sentence case (all lowercase, except for upper case first letter). Store the new quote in a variable called `fixedQuote`.
-3. In `fixedQuote`, replace "green eggs and ham" with another food that you really don't like.
-4. There is one more small fix to do — add a period to the end of the quote, and save the final version in a variable called `finalQuote`.
+1. Change the casing to correct sentence case (all lowercase, except for upper case first letter). Store the new quote in a variable called `fixedQuote`.
+2. In `fixedQuote`, replace "green eggs and ham" with another food that you really don't like.
+3. There is one more small fix to do — add a period to the end of the quote, and save the final version in a variable called `finalQuote`.
 
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/strings/strings3-download.html) to work in your own editor or in an online editor.
+The starting point of the task looks like this (nothing is shown yet):
 
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+{{ EmbedLiveSample("strings-3", "100%", 60) }}
+
+Here's the underlying code for this starting point:
 
 ```js live-sample___strings-3
 const quote = "I dO nOT lIke gREen eGgS anD HAM";
@@ -173,7 +207,9 @@ para1.textContent = finalQuote;
 section.appendChild(para1);
 ```
 
-{{ EmbedLiveSample("strings-3", "100%", 60) }}
+The updated output should look like this:
+
+{{ EmbedLiveSample("strings-3-finish", "100%", 60) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -194,6 +230,21 @@ const finalQuote = `${fixedQuote}.`;
 // ...
 ```
 
+```js hidden live-sample___strings-3-finish
+const quote = "I dO nOT lIke gREen eGgS anD HAM";
+
+let fixedQuote = quote.toLowerCase();
+const firstLetter = fixedQuote.slice(0, 1);
+fixedQuote = fixedQuote.replace(firstLetter, firstLetter.toUpperCase());
+fixedQuote = fixedQuote.replace("green eggs and ham", "pickled onions");
+const finalQuote = `${fixedQuote}.`;
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = finalQuote;
+section.appendChild(para1);
+```
+
 </details>
 
 ## Strings 4
@@ -202,18 +253,17 @@ In the final string task, we have given you the name of a theorem, two numeric v
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Change the string from a regular string literal into a template literal.
-3. Replace the four asterisks with four template literal embedded expressions. These should be:
+1. Change the string from a regular string literal into a template literal.
+2. Replace the four asterisks with four template literal embedded expressions. These should be:
    1. The name of the theorem.
    2. The two number values we have.
    3. The length of the hypotenuse of a right-angled triangle, assuming the two other side lengths are the same as the two values we have. You'll need to look up how to calculate this from what you have. Do the calculation inside the placeholder.
 
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/strings/strings4-download.html) to work in your own editor or in an online editor.
+The starting point of the task looks like this:
 
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+{{ EmbedLiveSample("strings-4", "100%", 60) }}
+
+Here's the underlying code for this starting point:
 
 ```js live-sample___strings-4
 const theorem = "Pythagorean theorem";
@@ -235,7 +285,9 @@ para1.textContent = myString;
 section.appendChild(para1);
 ```
 
-{{ EmbedLiveSample("strings-4", "100%", 60) }}
+The updated output should look like this:
+
+{{ EmbedLiveSample("strings-4-finish", "100%", 60) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -253,4 +305,21 @@ const myString = `Using ${theorem}, we can work out that if the two shortest sid
 // ...
 ```
 
+```js hidden live-sample___strings-4-finish
+const theorem = "Pythagorean theorem";
+
+const a = 5;
+const b = 8;
+
+const myString = `Using ${theorem}, we can work out that if the two shortest sides of a right-angled triangle have lengths of ${a} and ${b},
+  the length of the hypotenuse is ${Math.sqrt(a ** 2 + b ** 2)}.`;
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = myString;
+section.appendChild(para1);
+```
+
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}

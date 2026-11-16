@@ -44,6 +44,8 @@ The above text is a good indicator as to why we've put web forms into its own st
   - : Here we look at some more advanced form styling techniques that need to be used when trying to deal with some of the more difficult-to-style form elements.
 - [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select)
   - : This article explains how to use dedicated, modern HTML and CSS features together to create fully-customized `<select>` elements. This includes having full control over styling the select button, drop-down picker, arrow icon, current selection checkmark, and each individual `<option>` element.
+- [Customizable select listboxes](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select_listboxes)
+  - : This article follows on from the previous one, looking at how to style customizable listbox `<select>` elements.
 - [UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
   - : An introduction to the UI pseudo-classes enabling HTML form controls to be targeted based on their current state.
 
@@ -54,7 +56,7 @@ The above text is a good indicator as to why we've put web forms into its own st
 - [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
   - : This article looks at what happens when a user submits a form — where does the data go, and how do we handle it when it gets there? We also look at some of the security concerns associated with sending form data.
 
-## Additional articles
+## Additional tutorials
 
 The following articles aren't included in the learning pathway, but they'll prove interesting and useful when you've mastered the above techniques and want to know more.
 
@@ -62,14 +64,15 @@ The following articles aren't included in the learning pathway, but they'll prov
   - : You'll come across some cases where the native form widgets just don't provide what you need, e.g., because of styling or functionality. In such cases, you may need to build your own form widget out of raw HTML. This article explains how you'd do this and the considerations you need to be aware of when doing so, with a practical case study.
 - [Sending forms through JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
   - : This article looks at ways to use a form to assemble an HTTP request and send it via custom JavaScript, rather than standard form submission. It also looks at why you'd want to do this, and the implications of doing so. (See also [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects).)
-- [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select)
-  - : This article explains how to use dedicated, modern HTML and CSS features together to create fully-customized {{htmlelement("select")}} elements.
+- [HTML forms in legacy browsers](/en-US/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
+  - : This article provides tips and tricks to help ease the pain if, and when, you need to support legacy browsers with your HTML forms.
+- [User input methods and controls](/en-US/docs/Learn_web_development/Extensions/Forms/User_input_methods)
+  - : This article shows the different ways that users interact with forms and other web content, and provides recommendations for managing user input, real-world examples, and links to further information.
 
 ## See also
 
 - [HTML forms element reference](/en-US/docs/Web/HTML/Reference/Elements#forms)
 - [HTML \<input> types reference](/en-US/docs/Web/HTML/Reference/Elements/input)
 - [HTML attribute reference](/en-US/docs/Web/HTML/Reference/Attributes)
-- [User input methods and controls](/en-US/docs/Learn_web_development/Extensions/Forms/User_input_methods)
 
 {{NextMenu("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions")}}

@@ -27,13 +27,9 @@ For devices that do not support this property, the value is `0`.
 This example illustrates simple accessing of the `tiltX` and {{domxref("PointerEvent.tiltY","tiltY")}} properties.
 
 ```js
-someElement.addEventListener(
-  "pointerdown",
-  (event) => {
-    process_tilt(event.tiltX, event.tiltY);
-  },
-  false,
-);
+someElement.addEventListener("pointerdown", (event) => {
+  processTilt(event.tiltX, event.tiltY);
+});
 ```
 
 ## Specifications

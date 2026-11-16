@@ -6,7 +6,7 @@ browser-compat: webextensions.api.permissions.onAdded
 sidebar: addonsidebar
 ---
 
-Fired when the extension granted new permissions.
+Fires when the extension is granted permissions.
 
 ## Syntax
 
@@ -40,6 +40,9 @@ Events have three functions:
 function handleAdded(permissions) {
   console.log(`New API permissions: ${permissions.permissions}`);
   console.log(`New host permissions: ${permissions.origins}`);
+  console.log(
+    `New data collection permissions: ${permissions.data_collection}`,
+  );
 }
 
 browser.permissions.onAdded.addListener(handleAdded);

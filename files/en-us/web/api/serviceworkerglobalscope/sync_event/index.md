@@ -14,11 +14,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("sync", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onsync = (event) => { }
 ```
 
@@ -27,15 +31,6 @@ onsync = (event) => { }
 A {{domxref("SyncEvent")}}. Inherits from {{domxref("ExtendableEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("SyncEvent")}}
-
-## Event properties
-
-_Inherits properties from its ancestor, {{domxref("ExtendableEvent")}} and {{domxref("Event")}}_.
-
-- {{domxref("SyncEvent.tag")}} {{ReadOnlyInline}}
-  - : Returns the developer-defined identifier for this `SyncEvent`.
-- {{domxref("SyncEvent.lastChance")}} {{ReadOnlyInline}}
-  - : Returns `true` if the user agent will not make further synchronization attempts after the current attempt.
 
 ## Examples
 
@@ -49,7 +44,7 @@ self.addEventListener("sync", (event) => {
 });
 ```
 
-You can also set up the event handler using the `onsync` property:
+You can also set up the event handler using the `onsync` property (but note that this replaces other event listeners added using `onsync`, if any):
 
 ```js
 self.onsync = (event) => {
@@ -68,4 +63,3 @@ self.onsync = (event) => {
 ## See also
 
 - [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync)
-- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

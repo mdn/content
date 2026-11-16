@@ -16,11 +16,15 @@ This event works in much the same way as the {{domxref("Element")}} interface's 
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("scrollsnapchanging", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onscrollsnapchanging = (event) => { }
 ```
 
@@ -89,6 +93,6 @@ At the start of the function, we select all elements that previously had the `pe
 - {{DOMxRef("Document/scrollend_event", "scrollend")}} event
 - {{domxref("SnapEvent")}}
 - CSS {{cssxref("scroll-snap-type")}} property
-- [CSS scroll snap module](/en-US/docs/Web/CSS/CSS_scroll_snap)
-- [Using scroll snap events](/en-US/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events)
+- [CSS scroll snap module](/en-US/docs/Web/CSS/Guides/Scroll_snap)
+- [Using scroll snap events](/en-US/docs/Web/CSS/Guides/Scroll_snap/Using_scroll_snap_events)
 - [Scroll Snap Events](https://developer.chrome.com/blog/scroll-snap-events) on developer.chrome.com (2024)

@@ -9,11 +9,6 @@ browser-compat: api.Client
 
 The `Client` interface represents an executable context such as a {{domxref("Worker")}}, or a {{domxref("SharedWorker")}}. {{domxref("Window")}} clients are represented by the more-specific {{domxref("WindowClient")}}. You can get `Client`/`WindowClient` objects from methods such as {{domxref("Clients.matchAll","Clients.matchAll()")}} and {{domxref("Clients.get","Clients.get()")}}.
 
-## Instance methods
-
-- {{domxref("Client.postMessage()")}}
-  - : Sends a message to the client.
-
 ## Instance properties
 
 - {{domxref("Client.frameType")}} {{ReadOnlyInline}}
@@ -24,6 +19,11 @@ The `Client` interface represents an executable context such as a {{domxref("Wor
   - : The client's type as a string. It can be `"window"`, `"worker"`, or `"sharedworker"`.
 - {{domxref("Client.url")}} {{ReadOnlyInline}}
   - : The URL of the client as a string.
+
+## Instance methods
+
+- {{domxref("Client.postMessage()")}}
+  - : Sends a message to the client.
 
 ## Specifications
 

@@ -1,5 +1,5 @@
 ---
-title: Firefox 81 for developers
+title: Firefox 81 release notes for developers
 short-title: Firefox 81
 slug: Mozilla/Firefox/Releases/81
 page-type: firefox-release-notes
@@ -32,7 +32,7 @@ This article provides information about the changes in Firefox 81 that will affe
 
 #### Removals
 
-- The non-standard `::-moz-focus-outer` [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) has been removed ([Firefox bug 1655859](https://bugzil.la/1655859)).
+- The non-standard `::-moz-focus-outer` [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) has been removed ([Firefox bug 1655859](https://bugzil.la/1655859)).
 
 ### JavaScript
 

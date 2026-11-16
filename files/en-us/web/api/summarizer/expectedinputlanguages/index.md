@@ -16,7 +16,7 @@ The **`expectedInputLanguages`** read-only property of the {{domxref("Summarizer
 
 An array of strings specifying the languages the `Summarizer` should support.
 
-The strings should be valid [BCP 47 language tags](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)).
+The strings should be valid {{glossary("BCP 47 language tag", "BCP 47 language tags")}}.
 
 ## Examples
 

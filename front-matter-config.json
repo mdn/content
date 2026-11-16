@@ -354,6 +354,7 @@
                 "webassembly-instance-property",
                 "webassembly-instance-method",
                 "webassembly-static-method",
+                "webassembly-static-property",
                 "webassembly-instruction"
               ]
             }
@@ -376,6 +377,7 @@
                 "webdriver-command",
                 "webdriver-capability",
                 "webdriver-error",
+                "webdriver-event",
                 "reference"
               ]
             }

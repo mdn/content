@@ -18,7 +18,7 @@ Breadcrumb trails enable users to be aware of their location within a website. T
 
 ## See also
 
-- [Breadcrumb Navigation](/en-US/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation)
+- [Breadcrumb Navigation](/en-US/docs/Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation)
 - [Google Search Central: Breadcrumb Structured Data](https://developers.google.com/search/docs/appearance/structured-data/breadcrumb)
 - [APG Guide: Breadcrumb Example](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/)
 - [Understanding Success Criterion 2.4.8 | W3C Understanding WCAG 2.2](https://www.w3.org/WAI/WCAG22/Understanding/location)

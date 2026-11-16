@@ -12,8 +12,8 @@ The **`keys()`** method of {{jsxref("Array")}} instances returns a new _[array i
 {{InteractiveExample("JavaScript Demo: Array.prototype.keys()")}}
 
 ```js interactive-example
-const array1 = ["a", "b", "c"];
-const iterator = array1.keys();
+const array = ["a", "b", "c"];
+const iterator = array.keys();
 
 for (const key of iterator) {
   console.log(key);
@@ -84,7 +84,7 @@ for (const entry of Array.prototype.keys.call(arrayLike)) {
 
 ## See also
 
-- [Polyfill of `Array.prototype.keys` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.keys` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.keys`](https://www.npmjs.com/package/array.prototype.keys)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

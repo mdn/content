@@ -20,21 +20,6 @@ Declaring the minimum and maximum values allows assistive technologies to convey
 > [!WARNING]
 > The [`range`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/range_role) role itself should **NOT** be used as it is an ["abstract"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles). The `aria-valuemax` attribute is used on all of the range roles subtypes.
 
-## Example
-
-The code below shows a slider with a maximum value of 9.
-
-```html
-<div id="dimesLabel">Dimes</div>
-<div
-  role="slider"
-  aria-valuenow="0"
-  aria-valuemin="0"
-  aria-valuemax="9"
-  aria-labelledby="dimesLabel"
-  id="dimes"></div>
-```
-
 ## Values
 
 - `<number>`
@@ -64,6 +49,21 @@ Inherited into roles:
 - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)
 - [`slider`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
 - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
+
+## Example
+
+The code below shows a slider with a maximum value of 9.
+
+```html
+<div id="dimesLabel">Dimes</div>
+<div
+  role="slider"
+  aria-valuenow="0"
+  aria-valuemin="0"
+  aria-valuemax="9"
+  aria-labelledby="dimesLabel"
+  id="dimes"></div>
+```
 
 ## Specifications
 

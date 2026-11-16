@@ -9,7 +9,7 @@ browser-compat: api.TransitionEvent.pseudoElement
 {{ apiref("CSSOM") }}
 
 The **`TransitionEvent.pseudoElement`** read-only property is a
-string, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on.
+string, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) the animation runs on.
 If the transition doesn't run on a pseudo-element but on the element, an empty string:
 `""`.
 
@@ -27,7 +27,7 @@ A string.
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using)
 - {{cssxref("transition")}}, {{cssxref("transition-delay")}},
   {{cssxref("transition-duration")}}, {{cssxref("transition-property")}},
   {{cssxref("transition-timing-function")}}.

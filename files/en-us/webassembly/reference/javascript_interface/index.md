@@ -34,12 +34,19 @@ The primary uses for the `WebAssembly` object are:
   - : Contains stateless WebAssembly code that has already been compiled by the browser and can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
 - [`WebAssembly.RuntimeError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)
   - : Error type that is thrown whenever WebAssembly specifies a [trap](https://webassembly.github.io/simd/core/intro/overview.html#trap).
+- [`WebAssembly.Suspending`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Suspending)
+  - : Represents a suspending function — an asynchronous ({{jsxref("Promise")}}-based) JavaScript function that, when imported into a Wasm module and called from inside, will result in execution being suspended until the promise resolves.
 - [`WebAssembly.Table`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table)
   - : An array-like structure representing a WebAssembly Table, which stores [references](https://webassembly.github.io/spec/core/syntax/types.html#syntax-reftype), such as function references.
 - [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag)
   - : An object that represents a type of WebAssembly exception.
 - [`WebAssembly.Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception)
   - : A WebAssembly exception object that can be thrown, caught, and rethrown both within and across WebAssembly/JavaScript boundaries.
+
+## Static properties
+
+- [`WebAssembly.JSTag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/JSTag_static)
+  - : A built-in [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) representing exceptions thrown in the JavaScript host — it allows exceptions thrown in JavaScript to be handled from inside a Wasm module.
 
 ## Static methods
 
@@ -51,6 +58,8 @@ The primary uses for the `WebAssembly` object are:
   - : The primary API for compiling and instantiating WebAssembly code, returning both a `Module` and its first `Instance`.
 - [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static)
   - : Compiles and instantiates a WebAssembly module directly from a streamed underlying source, returning both a `Module` and its first `Instance`.
+- [`WebAssembly.promising()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/promising_static)
+  - : Wraps an exported Wasm function that relies on an asynchronous operation (that is, an imported suspending function created via the [`WebAssembly.Suspending()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Suspending/Suspending) constructor), turning it into a {{jsxref("Promise")}}.
 - [`WebAssembly.validate()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/validate_static)
   - : Validates a given typed array of WebAssembly binary code, returning whether the bytes are valid WebAssembly code (`true`) or not (`false`).
 

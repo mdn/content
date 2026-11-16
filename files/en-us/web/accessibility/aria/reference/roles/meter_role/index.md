@@ -23,7 +23,7 @@ Each element with `role="meter"` must also have one of the following:
 
 ### All descendants are presentational
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `meter`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `meter` element as it is a role that does not support semantic children.
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `meter`. To deal with this limitation, browsers automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `meter` element as it is a role that does not support semantic children.
 
 For example, consider the following `meter` element, which contains a heading.
 
@@ -68,7 +68,7 @@ An example of a meter using `role="meter"`:
   aria-valuemax="100"
   aria-labelledby="cpu_usage_label">
   <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width: 90%">
-    <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+    <rect x="0" y="0" width="100%" height="100%" fill="currentColor"></rect>
   </svg>
 </div>
 ```

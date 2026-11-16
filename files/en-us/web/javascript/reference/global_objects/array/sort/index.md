@@ -22,9 +22,9 @@ months.sort();
 console.log(months);
 // Expected output: Array ["Dec", "Feb", "Jan", "March"]
 
-const array1 = [1, 30, 4, 21, 100000];
-array1.sort();
-console.log(array1);
+const array = [1, 30, 4, 21, 100000];
+array.sort();
+console.log(array);
 // Expected output: Array [1, 100000, 21, 30, 4]
 ```
 
@@ -365,7 +365,7 @@ console.log(Array.prototype.sort.call(arrayLike));
 
 ## See also
 
-- [Polyfill of `Array.prototype.sort` with modern behavior like stable sort in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.sort` with modern behavior like stable sort in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.reverse()")}}

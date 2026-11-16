@@ -3,19 +3,23 @@ title: DELETE request method
 short-title: DELETE
 slug: Web/HTTP/Reference/Methods/DELETE
 page-type: http-method
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110.html#name-delete
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#name-delete
 sidebar: http
 ---
 
 The **`DELETE`** HTTP method asks the server to delete a specified resource.
 
-The `DELETE` method has no defined semantics for the message body, so this should be empty.
+Requests using `DELETE` should only be used to delete data and shouldn't contain a body.
+
+> [!NOTE]
+> The semantics of sending a message body in `DELETE` requests are undefined.
+> Some servers may reject the request with a [4XX client error](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) response.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Request has body</th>
-      <td>May</td>
+      <td>No</td>
     </tr>
     <tr>
       <th scope="row">Successful response has body</th>

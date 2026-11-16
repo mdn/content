@@ -1,5 +1,5 @@
 ---
-title: Firefox 91 for developers
+title: Firefox 91 release notes for developers
 short-title: Firefox 91
 slug: Mozilla/Firefox/Releases/91
 page-type: firefox-release-notes
@@ -35,13 +35,13 @@ No changes
 
 ### HTTP
 
-- The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) now requires a [secure context](/en-US/docs/Web/Security/Secure_Contexts) ([Firefox bug 1704005](https://bugzil.la/1704005)).
+- The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) now requires a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts) ([Firefox bug 1704005](https://bugzil.la/1704005)).
 
 ### APIs
 
 #### DOM
 
-- The [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API) is now enabled by default on Firefox desktop releases (it has been enabled on Firefox for Android since version 68).
+- The [Visual Viewport API](/en-US/docs/Web/API/VisualViewport) is now enabled by default on Firefox desktop releases (it has been enabled on Firefox for Android since version 68).
   The API provides access to information describing the position of the {{Glossary("visual viewport")}} relative to the document, as well as to the window's content area.
   It also provides events that allow changes to the viewport to be monitored. ([Firefox bug 1551302](https://bugzil.la/1551302)).
 - The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) is now protected by `Feature-Policy: gamepad`.
@@ -55,3 +55,7 @@ No changes
 
 - Fixed a bug, which caused the commands `WebDriver:AcceptAlert` and `WebDriver:DismissAlert` to hang for user prompts as opened in a popup window ([Firefox bug 1721982](https://bugzil.la/1721982)).
 - Fixed an inappropriate handling of the `webSocketUrl` capability, which would return `true` if `webSocketUrl` was not supported ([Firefox bug 1713775](https://bugzil.la/1713775)).
+
+## Changes for add-on developers
+
+- The `menus` and `contextMenus` APIs now support the same values in {{WebExtAPIRef("menus.ContextType")}}. This means that `tools_menu` is also supported in the `contextMenus` namespace ([Firefox bug 1706398](https://bugzil.la/1706398#c11)).

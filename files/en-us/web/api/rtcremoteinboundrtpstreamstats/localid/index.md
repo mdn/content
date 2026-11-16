@@ -19,7 +19,7 @@ A string which can be compared to the value of an {{domxref("RTCOutboundRtpStrea
 ## Usage notes
 
 You can think of the local and remote views of the same RTP stream as pairs, each of which has a reference back to the other one.
-Thus, if an {{domxref("RTCStatsReport")}} includes an `remote-inbound-rtp` statistics object (of type `RTCRemoteInboundRtpStreamStats`), it should also have a corresponding `outbound-rtp` object.
+Thus, if an {{domxref("RTCStatsReport")}} includes a `remote-inbound-rtp` statistics object (of type `RTCRemoteInboundRtpStreamStats`), it should also have a corresponding `outbound-rtp` object.
 
 Both of these provide information about the same batch of packets being sent from the local device to the remote peer.
 The difference is that `outbound-rtp` offers statistics about the outgoing data from the local peer's perspective, while `remote-inbound-rtp` provides statistics about the same data from the perspective of the remote peer, as it is received.

@@ -20,7 +20,7 @@ deleteQuery(query)
 ### Parameters
 
 - `query`
-  - : A {{domxref("WebGLQuery")}} object to delete.
+  - : A {{domxref("WebGLQuery")}} object to delete. Passing `null` does nothing.
 
 ### Return value
 

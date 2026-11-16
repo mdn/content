@@ -40,5 +40,5 @@ const hostElem = shadow.host;
 
 - [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part) and [`exportparts`](/en-US/docs/Web/HTML/Reference/Global_attributes/exportparts) HTML attributes
 - {{HTMLelement("template")}} and {{HTMLElement("slot")}} HTML elements
-- {{CSSXref(":host")}}, {{CSSXref(":host_function", ":host()")}}, and {{CSSXref(":host-context", ":host-context()")}} CSS pseudo-classes
+- {{CSSXref(":host")}}, {{cssxref(":host()")}}, and {{cssxref(":host-context()")}} CSS pseudo-classes
 - {{CSSXref("::part")}} and {{CSSXref("::slotted")}} CSS pseudo-elements

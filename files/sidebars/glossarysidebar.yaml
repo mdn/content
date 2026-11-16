@@ -8,3 +8,6 @@ sidebar:
     path: /Glossary
     depth: 2
     nested: true
+l10n:
+  fr:
+    Glossary: Glossaire

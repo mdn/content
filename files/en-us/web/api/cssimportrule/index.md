@@ -7,7 +7,7 @@ browser-compat: api.CSSImportRule
 
 {{APIRef("CSSOM")}}
 
-The **`CSSImportRule`** interface represents an {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
+The **`CSSImportRule`** interface represents an {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 
 {{InheritanceDiagram}}
 
@@ -18,7 +18,7 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 - {{domxref("CSSImportRule.href")}} {{ReadOnlyInline}}
   - : Returns the URL specified by the {{cssxref("@import")}} rule.
 - {{domxref("CSSImportRule.layerName")}} {{ReadOnlyInline}}
-  - : Returns the name of the [cascade layer](/en-US/docs/Web/CSS/@layer) declared in the {{cssxref("@import")}} rule, the empty string if the layer is anonymous, the or `null` if the rule doesn't declare any.
+  - : Returns the name of the [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer) declared in the {{cssxref("@import")}} rule, the empty string if the layer is anonymous, the or `null` if the rule doesn't declare any.
 - {{domxref("CSSImportRule.media")}}
   - : Returns the value of the `media` attribute of the associated stylesheet.
 - {{domxref("CSSImportRule.styleSheet")}} {{ReadOnlyInline}}
@@ -35,7 +35,7 @@ _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 The document includes a single stylesheet which contains a single {{cssxref("@import")}} rule. Therefore the first item in the list of CSS rules will be a `CSSImportRule`.
 
 ```css
-@import url("style.css") screen;
+@import "style.css" screen;
 ```
 
 ```js

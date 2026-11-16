@@ -1,5 +1,6 @@
 ---
-title: "<cite>: The Citation element"
+title: "`<cite>` HTML citation element"
+short-title: <cite>
 slug: Web/HTML/Reference/Elements/cite
 page-type: html-element
 browser-compat: html.elements.cite
@@ -83,7 +84,7 @@ Typically, browsers style the contents of a `<cite>` element in italics by defau
 
 ### Result
 
-{{EmbedLiveSample("Example", 640, 80)}}
+{{EmbedLiveSample("examples", 640, 80)}}
 
 ## Technical summary
 

@@ -13,16 +13,16 @@ The **`Object.isFrozen()`** static method determines if an object is
 {{InteractiveExample("JavaScript Demo: Object.isFrozen()")}}
 
 ```js interactive-example
-const object1 = {
-  property1: 42,
+const object = {
+  foo: 42,
 };
 
-console.log(Object.isFrozen(object1));
+console.log(Object.isFrozen(object));
 // Expected output: false
 
-Object.freeze(object1);
+Object.freeze(object);
 
-console.log(Object.isFrozen(object1));
+console.log(Object.isFrozen(object));
 // Expected output: true
 ```
 

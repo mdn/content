@@ -12,17 +12,17 @@ The **`Object.seal()`** static method _seals_ an object. Sealing an object [prev
 {{InteractiveExample("JavaScript Demo: Object.seal()")}}
 
 ```js interactive-example
-const object1 = {
-  property1: 42,
+const object = {
+  foo: 42,
 };
 
-Object.seal(object1);
-object1.property1 = 33;
-console.log(object1.property1);
+Object.seal(object);
+object.foo = 33;
+console.log(object.foo);
 // Expected output: 33
 
-delete object1.property1; // Cannot delete when sealed
-console.log(object1.property1);
+delete object.foo; // Cannot delete when sealed
+console.log(object.foo);
 // Expected output: 33
 ```
 

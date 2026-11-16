@@ -8,11 +8,11 @@ browser-compat: api.SVGScriptElement.type
 
 {{APIRef("SVG")}}
 
-The **`type`** read-only property of the {{domxref("SVGScriptElement")}} interface reflects the {{SVGAttr("type")}} attribute of the given {{SVGElement("script")}} element.
+The **`type`** property of the {{domxref("SVGScriptElement")}} interface reflects the {{SVGAttr("type")}} attribute of the given {{SVGElement("script")}} element.
 
 ## Value
 
-An string.
+A string.
 
 ## Examples
 

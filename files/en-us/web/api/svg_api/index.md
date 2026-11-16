@@ -2,7 +2,7 @@
 title: SVG API
 slug: Web/API/SVG_API
 page-type: web-api-overview
-spec-urls: https://svgwg.org/svg2-draft/
+spec-urls: https://w3c.github.io/svgwg/svg2-draft/
 ---
 
 {{DefaultAPISidebar("SVG")}}
@@ -13,7 +13,7 @@ The SVG API is a set of interfaces that have been categorized into the following
 
 1. [The element interfaces](#svg_element_interfaces) provide access to the properties of SVG elements and methods to manipulate them.
 2. [The static data type](#svg_data_type_interfaces) interfaces provide access to element attribute values and methods to manipulate them.
-3. For attributes that can be animated, the [animated data type interfaces](#svg_data_type_interfaces) provide read only access to the current animated value of an attribute.
+3. For attributes that can be animated, the [animated data type interfaces](#svg_data_type_interfaces) provide read-only access to the current animated value of an attribute.
 4. [The Synchronized Multimedia Integration Language (SMIL) interfaces](#smil-related_interfaces)
 5. [Others](#other_svg_interfaces)
 

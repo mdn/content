@@ -1,43 +1,34 @@
 ---
 title: "Test your skills: HTML accessibility"
-short-title: HTML
+short-title: "Test: HTML a11y"
 slug: Learn_web_development/Core/Accessibility/Test_your_skills/HTML
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
+
 The aim of this skill test is to help you assess whether you've understood our [HTML: A good basis for accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/HTML) article.
 
 > [!NOTE]
-> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
->
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## HTML accessibility 1
 
 In this task we will test your understanding of semantic HTML, and why it is good for accessibility. The given text is an information panel with action buttons, but the HTML is really bad.
 
-To complete the task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Update the markup to use appropriate semantic HTML. You don't need to worry too much about recreating the _exact_ same look and text sizing, as long as the semantics are good.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/html/html-a11y1-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+To complete the task, update the markup to use appropriate semantic HTML. You don't need to worry too much about recreating the _exact_ same look and text sizing, as long as the semantics are good.
 
 <!-- Code shared across examples -->
 
-```css hidden live-sample___html-ally-1 live-sample___html-ally-2 live-sample___html-ally-3 live-sample___html-ally-4
+```css hidden live-sample___html-ally-1 live-sample___html-ally-2 live-sample___html-ally-3 live-sample___html-ally-4 live-sample___html-ally-2-finish
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
+    1em / 1.4 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0;
@@ -49,6 +40,12 @@ body {
 ```
 
 <!-- Example-specific code -->
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("html-ally-1", "100%", 630) }}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___html-ally-1
 <font size="7">Need help?</font> <br /><br />
@@ -87,7 +84,7 @@ answer you're looking for.
 }
 ```
 
-{{ EmbedLiveSample("html-ally-1", "100%", 400) }}
+We've not provided finished content for this task, as it doesn't look significantly different to the starting state.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -138,16 +135,15 @@ In the second task, you have a form containing three input fields.
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Semantically associate the inputs with their labels.
-3. Assume that these inputs will be part of a larger form, and wrap them in an element that associates them all together as a single related group.
-4. Give the group a description/title that summarizes all of the information as personal data.
+1. Semantically associate the inputs with their labels.
+2. Assume that these inputs will be part of a larger form, and wrap them in an element that associates them all together as a single related group.
+3. Give the group a description/title that summarizes all of the information as personal data.
 
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/html/html-a11y2-download.html) to work in your own editor or in an online editor.
+The starting point of the task looks like this:
 
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+{{ EmbedLiveSample("html-ally-2", "100%", 200) }}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___html-ally-2
 <form>
@@ -168,7 +164,7 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
 </form>
 ```
 
-```css live-sample___html-ally-2
+```css live-sample___html-ally-2 live-sample___html-ally-2-finish
 form {
   width: 400px;
 }
@@ -181,14 +177,16 @@ li {
 }
 ```
 
-{{ EmbedLiveSample("html-ally-2", "100%", 200) }}
+The updated form should look like this:
+
+{{ EmbedLiveSample("html-ally-2-finish", "100%", 220) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look something like this:
 
-```html
+```html live-sample___html-ally-2-finish
 <form>
   <fieldset>
     <legend>Personal data</legend>
@@ -220,28 +218,29 @@ In this task you are required to turn all the information links in the paragraph
 - The third link goes to a PDF, and it's large — 8MB.
 - The fourth link goes to a Word document, so the user will need some kind of application installed that can handle that.
 
-To complete the task:
+To complete the task, update the links appropriately based on the above descriptions.
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Update the links appropriately, based on the above descriptions.
+The starting point of the task looks like this:
 
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/html/html-a11y3-download.html) to work in your own editor or in an online editor.
+{{ EmbedLiveSample("html-ally-3", "100%", 140) }}
 
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+Here's the underlying code for this starting point:
 
-```html live-sample___html-ally-3
+```html-nolint live-sample___html-ally-3
 <p>
-  For more information about our activities, check out our fundraising page (
-  <a href="/fundraising">click here</a>), education page (
-  <a href="/education">click here</a>), sponsorship pack (
-  <a href="/resources/sponsorship.pdf">click here</a>), and assessment sheets (
-  <a href="/resources/assessments.docx">click here</a>).
+  For more information about our activities, check out our fundraising page
+  (<a href="/fundraising" target="_blank">click here</a>), education page
+  (<a href="/education" target="_blank">click here</a>), sponsorship pack
+  (<a href="/resources/sponsorship.pdf" target="_blank">click here</a>),
+   and assessment sheets
+  (<a href="/resources/assessments.docx" target="_blank">click here</a>).
 </p>
 ```
 
-{{ EmbedLiveSample("html-ally-3", "100%", 140) }}
+> [!NOTE]
+> The links in the starting code have the `target="_blank"` attribute set on them, so that when you click on them, they try to open the linked pages in a new tab rather than the same tab. This is not strictly best practice, but we've done it here so that the pages don't open in the MDN Playground output `<iframe>`, getting rid of your example code in the process!
+
+We've not provided finished content for this task, as it would give the solution away.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -251,10 +250,14 @@ Your finished HTML should look something like this:
 ```html
 <p>
   For more information about our activities, check out our
-  <a href="/fundraising">fundraising page</a>,
-  <a href="/education">education page</a>,
-  <a href="/resources/sponsorship.pdf">sponsorship pack (PDF, 8MB)</a>, and
-  <a href="/resources/assessments.docx">assessment sheets (Word document)</a>.
+  <a href="/fundraising" target="_blank">fundraising page</a>,
+  <a href="/education" target="_blank">education page</a>,
+  <a href="/resources/sponsorship.pdf" target="_blank"
+    >sponsorship pack (PDF, 8MB)</a
+  >, and
+  <a href="/resources/assessments.docx" target="_blank"
+    >assessment sheets (Word document)</a
+  >.
 </p>
 ```
 
@@ -267,16 +270,13 @@ In our final HTML accessibility task, you are given an image gallery, which has 
 - The header image has an accessibility issue, and so do the gallery images.
 - You could take the header image further and implement it using CSS for arguably better accessibility. How would you create such a solution?
 
-To complete the task:
+Update the code to fix the problems described above.
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Update the code to fix the problems described above.
+The starting point of the task looks like this:
 
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/html/html-a11y4-download.html) to work in your own editor or in an online editor.
+{{ EmbedLiveSample("html-ally-4", "100%", 400) }}
 
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+Here's the underlying code for this starting point:
 
 ```html live-sample___html-ally-4
 <header>
@@ -314,14 +314,14 @@ header {
 }
 ```
 
-{{ EmbedLiveSample("html-ally-4", "100%", 400) }}
+We've not provided finished content for this task, as it looks the same as the starting point.
 
 <details>
 <summary>Click here to show the solution</summary>
 
 The accessibility issues are:
 
-1. The header image is decorative, so doesn't need alt text. The best solution if you are going to use decorative HTML images is to put `alt=""`, so a screenreader will just read out nothing — rather than a description, or the image file name. It is not part of the content.
+1. The header image is decorative, so doesn't need alt text. The best solution if you are going to use decorative HTML images is to put `alt=""`, so a screen reader will just read out nothing — rather than a description, or the image file name. It is not part of the content.
 2. The gallery images need alt text, and they are part of the content.
 
 The updated HTML could look something like this:
@@ -347,10 +347,12 @@ It would be arguably better to implement the background header image using CSS b
 
 ```css
 h1 {
-  background: url(https://mdn.github.io/shared-assets/images/examples/star-pink_32x32.png)
+  background: url("https://mdn.github.io/shared-assets/images/examples/star-pink_32x32.png")
     no-repeat left;
   padding-left: 50px;
 }
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}

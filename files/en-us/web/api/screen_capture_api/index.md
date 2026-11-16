@@ -78,26 +78,30 @@ The Screen Capture API adds properties to the following dictionaries defined by 
 - {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback")}}
   - : Controls whether the audio playing in a tab will continue to be played out of a user's local speakers when the tab is captured, or whether it will be suppressed. A value of `true` indicates that it will be suppressed.
 
-### MediaTrackSettings
+### MediaStreamTrack.getSettings()
 
-- {{domxref("MediaTrackSettings.cursor")}}
+There are additional properties in the object returned by {{domxref("MediaStreamTrack.getSettings()")}}.
+
+- [`cursor`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#cursor)
   - : A string which indicates whether or not the display surface currently being captured includes the mouse cursor, and if so, whether it's only visible while the mouse is in motion or if it's always visible. The value is one of `always`, `motion`, or `never`.
-- {{domxref("MediaTrackSettings.displaySurface")}}
+- [`displaySurface`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#displaysurface)
   - : A string indicating what type of display surface is currently being captured. The value is one of `browser`, `monitor`, or `window`.
-- {{domxref("MediaTrackSettings.logicalSurface")}}
+- [`logicalSurface`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#logicalsurface)
   - : A boolean value, which is `true` if the video being captured doesn't directly correspond to a single onscreen display area.
-- {{domxref("MediaTrackSettings.suppressLocalAudioPlayback")}}
+- [`suppressLocalAudioPlayback`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#suppresslocalaudioplayback)
   - : A boolean value, which is `true` if the audio being captured is not played out of the user's local speakers.
-- {{domxref("MediaTrackSettings.screenPixelRatio")}}
+- [`screenPixelRatio`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#screenpixelratio)
   - : A number representing the ratio of the physical size of a pixel on the captured display surface (displayed at its physical resolution) to the logical size of a CSS pixel on the capturing screen (displayed at its logical resolution). It cannot be used as a constraint or capability.
 
-### MediaTrackSupportedConstraints
+### MediaDevices.getSupportedConstraints()
 
-- {{domxref("MediaTrackSupportedConstraints.displaySurface")}}
+There are three additional properties in the object returned by {{domxref("MediaDevices.getSupportedConstraints()")}}.
+
+- `displaySurface`
   - : A boolean, which is `true` if the current environment supports the {{domxref("MediaTrackConstraints.displaySurface")}} constraint.
-- {{domxref("MediaTrackSupportedConstraints.logicalSurface")}}
+- `logicalSurface`
   - : A boolean, which is `true` if the current environment supports the constraint {{domxref("MediaTrackConstraints.logicalSurface")}}.
-- {{domxref("MediaTrackSupportedConstraints.suppressLocalAudioPlayback")}}
+- `suppressLocalAudioPlayback`
   - : A boolean, which is `true` if the current environment supports the constraint {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback")}}.
 
 ## Security considerations
@@ -112,7 +116,7 @@ A site can also specify a desire to use the [Captured Surface Control API](/en-U
 
 The default allowlist for both directives is `self`, which permits any content within the same origin use Screen Capture.
 
-These methods are considered [powerful features](/en-US/docs/Web/Security#secure_contexts_and_feature_permissions), which means that even if permission is allowed via a `Permissions-Policy`, the user will still be prompted for permission to use them. The [Permissions API](/en-US/docs/Web/API/Permissions_API) can be used to query the aggregate permission (from both the website and the user) for using the listed features.
+These methods are considered _powerful features_, which means that even if permission is allowed via a `Permissions-Policy`, the user will still be prompted for permission to use them. The [Permissions API](/en-US/docs/Web/API/Permissions_API) can be used to query the aggregate permission (from both the website and the user) for using the listed features.
 
 In addition, the specification requires that a user has recently interacted with the page to use these features — this means that [transient activation](/en-US/docs/Glossary/Transient_activation) is required. See the individual method pages for more details.
 

@@ -13,9 +13,9 @@ for each array element.
 {{InteractiveExample("JavaScript Demo: Array.prototype.forEach()")}}
 
 ```js interactive-example
-const array1 = ["a", "b", "c"];
+const array = ["a", "b", "c"];
 
-array1.forEach((element) => console.log(element));
+array.forEach((element) => console.log(element));
 
 // Expected output: "a"
 // Expected output: "b"
@@ -156,7 +156,7 @@ invoked. The callback uses it as its `this` value.
 > If passing the callback function used an
 > [arrow function expression](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
 > the `thisArg` parameter could be omitted,
-> since all arrow functions lexically bind the {{jsxref("Operators/this", "this")}}
+> since all arrow functions lexically bind the {{jsxref("this")}}
 > value.
 
 ### An object copy function
@@ -274,7 +274,7 @@ Array.prototype.forEach.call(arrayLike, (x) => console.log(x));
 
 ## See also
 
-- [Polyfill of `Array.prototype.forEach` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.forEach` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.forEach`](https://www.npmjs.com/package/array.prototype.foreach)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

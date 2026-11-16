@@ -15,9 +15,9 @@ Tooltips provide contextual information about an element when that owning elemen
 
 A tooltip typically becomes visible, after a short delay of generally one to five seconds, in response to a mouse hover, or after the owning element receives keyboard focus. Just as it is opened automatically, without user request, it is closed automatically when the focus is lost or on mouse out. It must stay open when the mouse moves over the tooltip itself, and should also close when the user presses the <kbd>Escape</kbd> key.
 
-Because the tooltip itself never receives focus and is not in the tabbing order, a tooltip can not contain interactive elements like links, inputs, or buttons.
+Because the tooltip itself never receives focus and is not in the tabbing order, a tooltip cannot contain interactive elements like links, inputs, or buttons.
 
-The tooltip is not the appropriate role for the more information "i" icon, ⓘ. A tooltip is directly associated with the owning element. The ⓘ isn't 'described by' detailed information; the tool or control is.
+The `tooltip` is not the appropriate role for the more information "i" icon, ⓘ. A tooltip is directly associated with the owning element. The `role="tooltip"` is included on the element containing the tip content, not on the icon or control that triggers it. To show a tooltip when the ⓘ is hovered or focused, give the trigger an accessible name and reference the tooltip with `aria-describedby`, so the tip content is announced when the trigger receives focus. Because the detailed information describes the related control rather than the ⓘ itself, also put `aria-describedby` on that control, as shown in the [more information icon example](#using_a_more_information_icon).
 
 The use of the ARIA `tooltip` role is a supplement to the normal browser tooltip behavior. An example of a native browser tooltip is the way some browsers display an element's [`title` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/title) on long mouse hover. One cannot activate this feature through either keyboard focus or through touch interaction, making this feature inaccessible. If the information is important enough to include as a tooltip or title, consider including it in visible text.
 
@@ -57,6 +57,8 @@ The tooltip should appear on focus or when the element is hovered on, without ad
 
 ## Examples
 
+### Using a tooltip
+
 ```html
 <label for="password">Password:</label>
 <input aria-describedby="passwordrules" id="password" type="password" />
@@ -76,26 +78,101 @@ The tooltip should appear on focus or when the element is hovered on, without ad
 The tooltip can be instantiated with CSS. Change the class name with JavaScript to a class that hides the tooltip if the user hits the <kbd>Escape</kbd> key.
 
 ```css
-[role="tooltip"],
-.hide-tooltip.hide-tooltip.hide-tooltip + [role="tooltip"] {
+[role="tooltip"] {
   visibility: hidden;
   position: absolute;
   top: 2rem;
   left: 2rem;
   background: black;
   color: white;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  /* Give some time before hiding so mouse can exit the input
+  and enter the tooltip */
+  transition: visibility 0.5s;
 }
 [aria-describedby]:hover,
 [aria-describedby]:focus {
   position: relative;
 }
 [aria-describedby]:hover + [role="tooltip"],
-[aria-describedby]:focus + [role="tooltip"] {
+[aria-describedby]:focus + [role="tooltip"],
+[role="tooltip"]:hover,
+[role="tooltip"]:focus {
   visibility: visible;
 }
 ```
 
-The above hides the tooltip with CSS in the default state or if the `hide-tooltip` class has been added with JavaScript (when the user hit <kbd>Escape</kbd>), with high specificity to ensure the tooltip doesn't show. When the owning element receives focus, it gets positioned relatively and the tooltip becomes visible.
+{{EmbedLiveSample("using_a_tooltip", "", 300)}}
+
+The above hides the tooltip with CSS in the default state or if the `hide-tooltip` class has been added with JavaScript (when the user hit <kbd>Escape</kbd>), with high specificity to ensure the tooltip doesn't show. When the owning element receives focus, it gets positioned relatively and the tooltip becomes visible. We keep the tooltip visible when hovering over the tooltip, consistent with [WCAG 1.4.13](#accessibility_concerns). Here, we allow the cursor to move from the input to the tooltip without the latter disappearing by waiting 0.5s in between; there are other ways to achieve this, such as filling the gap with a transparent element that also keeps the tooltip visible when hovered over.
+
+### Using a more information icon
+
+This example shows a tooltip when the ⓘ button is hovered over or receives keyboard focus. The button has an {{glossary("accessible name")}} and references the tooltip with [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby), so the tooltip content is announced when the button receives focus. The input also references the tooltip with `aria-describedby`, because the information describes that control, even when the tooltip is hidden.
+
+```html
+<label for="username">Username:</label>
+<input id="username" aria-describedby="username-help" />
+<div class="info">
+  <button
+    type="button"
+    aria-label="More information about usernames"
+    aria-describedby="username-help">
+    <span aria-hidden="true">ⓘ</span>
+  </button>
+  <div role="tooltip" id="username-help">
+    <p>Your username is displayed publicly alongside your comments.</p>
+  </div>
+</div>
+```
+
+The tooltip is positioned below the icon. Padding above the text bubble bridges the gap to the button so the pointer can move onto the tooltip without closing it.
+
+```css
+.info {
+  display: inline-block;
+  position: relative;
+}
+
+[role="tooltip"] {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 15rem;
+  padding-top: 0.5rem;
+  z-index: 1;
+}
+
+.info:hover [role="tooltip"],
+.info:focus-within [role="tooltip"] {
+  visibility: visible;
+}
+
+[role="tooltip"] p {
+  margin: 0;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  background: #222222;
+  color: white;
+  box-shadow: 0 2px 6px #00000044;
+}
+
+[role="tooltip"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid #222222;
+  border-left: 0.5rem solid transparent;
+}
+```
+
+The tooltip stays visible while the button has focus or the pointer is over the button or tooltip. It is hidden when neither condition applies.
+
+{{EmbedLiveSample("using_a_more_information_icon", "", 200)}}
 
 ## Accessibility concerns
 
@@ -114,6 +191,6 @@ Instead of using tooltips and hiding important information, consider writing cle
 ## See also
 
 - [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
-- [CSS: `:focus` pseudoclass](/en-US/docs/Web/CSS/:focus)
+- [CSS: `:focus` pseudoclass](/en-US/docs/Web/CSS/Reference/Selectors/:focus)
 - [Tooltips & Toggletips](https://inclusive-components.design/tooltips-toggletips/) by Heydon Pickering
 - [Understanding SC 1.4.13:Content on Hover or Focus (WCAG Level AA)](https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html)

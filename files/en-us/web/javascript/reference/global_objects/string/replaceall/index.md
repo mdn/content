@@ -12,15 +12,13 @@ The **`replaceAll()`** method of {{jsxref("String")}} values returns a new strin
 {{InteractiveExample("JavaScript Demo: String.prototype.replaceAll()")}}
 
 ```js interactive-example
-const paragraph = "I think Ruth's dog is cuter than your dog!";
+const paragraph = "This dog's name is just Dog! Yes, that is the name.";
 
-console.log(paragraph.replaceAll("dog", "monkey"));
-// Expected output: "I think Ruth's monkey is cuter than your monkey!"
+console.log(paragraph.replaceAll("name", "nickname"));
+// Expected output: "This dog's nickname is just Dog! Yes, that is the nickname."
 
-// Global flag required when calling replaceAll with regex
-const regex = /dog/gi;
-console.log(paragraph.replaceAll(regex, "ferret"));
-// Expected output: "I think Ruth's ferret is cuter than your ferret!"
+console.log(paragraph.replaceAll(/\bis\b/g, "was"));
+// Expected output: "This dog's name was just Dog! Yes, that was the name."
 ```
 
 ## Syntax
@@ -53,6 +51,8 @@ A new string, with all matches of a pattern replaced by a replacement.
 This method does not mutate the string value it's called on. It returns a new string.
 
 Unlike [`replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace), this method replaces all occurrences of a string, not just the first one. While it is also possible to use `replace()` with a global regex dynamically constructed with [`RegExp()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) to replace all instances of a string, this can have unintended consequences if the string contains special characters that have meaning in regular expressions (which might happen if the replacement string comes from user input). While you can mitigate this case using {{jsxref("RegExp.escape()")}} to make the regular expression string into a literal pattern, it is simpler to pass the string to `replaceAll()` directly, without converting it to a regex.
+
+<!-- cSpell:ignore acke -->
 
 ```js
 function unsafeRedactName(text, name) {
@@ -126,7 +126,7 @@ This will work:
 
 ## See also
 
-- [Polyfill of `String.prototype.replaceAll` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.replaceAll` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - [es-shims polyfill of `String.prototype.replaceAll`](https://www.npmjs.com/package/string.prototype.replaceall)
 - [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("String.prototype.replace()")}}

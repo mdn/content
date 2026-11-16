@@ -33,7 +33,7 @@ _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 These properties are defined on `Int32Array.prototype` and shared by all `Int32Array` instances.
 
 - {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Int32Array.prototype.BYTES_PER_ELEMENT")}}
-  - : Returns a number value of the element size. `4` in the case of a `Int32Array`.
+  - : Returns a number value of the element size. `4` in the case of an `Int32Array`.
 - {{jsxref("Object/constructor", "Int32Array.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Int32Array` instances, the initial value is the {{jsxref("Int32Array/Int32Array", "Int32Array")}} constructor.
 
@@ -85,7 +85,7 @@ console.log(int32FromIterable);
 
 ## See also
 
-- [Polyfill of `Int32Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `Int32Array` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}

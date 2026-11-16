@@ -21,10 +21,12 @@ A string.
 ## Examples
 
 ```html
-<source
-  id="el"
-  srcset="smile.png, smile-1.5x.png 1.5x, smile-2x.png 2x"
-  type="image/png" />
+<picture>
+  <source
+    id="el"
+    srcset="smile.png, smile-1.5x.png 1.5x, smile-2x.png 2x"
+    type="image/png" />
+</picture>
 ```
 
 ```js

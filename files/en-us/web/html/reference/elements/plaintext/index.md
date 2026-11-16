@@ -1,5 +1,6 @@
 ---
-title: "<plaintext>: The Plain Text element (Deprecated)"
+title: "`<plaintext>` HTML plain text element"
+short-title: <plaintext>
 slug: Web/HTML/Reference/Elements/plaintext
 page-type: html-element
 status:
@@ -7,8 +8,6 @@ status:
 browser-compat: html.elements.plaintext
 sidebar: htmlsidebar
 ---
-
-{{deprecated_header}}
 
 The **`<plaintext>`** [HTML](/en-US/docs/Web/HTML) element renders everything following the start tag as raw text, ignoring any following HTML. There is no closing tag, since everything after it is considered raw text.
 

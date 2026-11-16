@@ -20,7 +20,7 @@ Encoded video frames ({{domxref("RTCEncodedVideoFrame")}}) or audio frames ({{do
 The `RTCRtpScriptTransformer` is made available to code as the `transformer` property of the {{domxref("DedicatedWorkerGlobalScope/rtctransform_event", "rtctransform")}} event, which is fired at the worker global scope whenever an encoded frame is enqueued for processing (and initially on construction of the corresponding {{domxref("RTCRtpScriptTransform")}}).
 The worker code must implement a handler for the event that reads encoded frames from `transformer.readable`, modifies them as needed, and writes them to `transformer.writable` in the same order and without any duplication.
 
-While the interface doesn't place any other restrictions on the implementation, a natural way to transform the frames is to create a [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains) that sends frames enqueued on the `event.transformer.readable` stream through an {{DOMxRef("TransformStream")}} to the `event.transformer.writable` stream.
+While the interface doesn't place any other restrictions on the implementation, a natural way to transform the frames is to create a [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains) that sends frames enqueued on the `event.transformer.readable` stream through a {{DOMxRef("TransformStream")}} to the `event.transformer.writable` stream.
 We can use the `event.transformer.options` property to configure any transform code that depends on whether the transform is enqueuing incoming frames from the packetizer or outgoing frames from a codec.
 
 The {{domxref("RTCRtpScriptTransformer")}} interface also provides methods that can be used when sending encoded video to get the codec to generate a "key" frame, and when receiving video to request that a new key frame be sent.
@@ -88,7 +88,7 @@ peerConnection.ontrack = (event) => {
   event.receiver.transform = new RTCRtpScriptTransform(worker, {
     name: "receiverTransform",
   });
-  received_video.srcObject = event.streams[0];
+  receivedVideo.srcObject = event.streams[0];
 };
 ```
 

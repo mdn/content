@@ -56,7 +56,7 @@ Intl.NumberFormat(locales, options)
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
+  - : A string with a {{glossary("BCP 47 language tag")}} or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
     The following Unicode extension key is allowed:
     - `nu`
@@ -73,7 +73,7 @@ Intl.NumberFormat(locales, options)
   - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`.
     For information about this option, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
 - `numberingSystem`
-  - : The numbering system to use for number formatting, such as `"arab"`, `"hans"`, `"mathsans"`, and so on. For a list of supported numbering system types, see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types). This option can also be set through the `nu` Unicode extension key; if both are provided, this `options` property takes precedence.
+  - : The numbering system to use for number formatting, such as `"arab"`, `"hanidec"`, `"mathsans"`, and so on. For a list of supported numbering system types, see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types); the default is locale dependent. This option can also be set through the `nu` Unicode extension key; if both are provided, this `options` property takes precedence.
 
 #### Style options
 
@@ -104,7 +104,7 @@ Depending on the `style` used, some of them may be ignored, and others may be re
 - `currencySign`
   - : In many locales, accounting format means to wrap the number with parentheses instead of appending a minus sign. Possible values are `"standard"` and `"accounting"`; the default is `"standard"`.
 - `unit`
-  - : The unit to use in `unit` formatting, Possible values are listed in [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_unit_identifiers). Pairs of simple units can be concatenated with "-per-" to make a compound unit. There is no default value; if the `style` is `"unit"`, the `unit` property must be provided.
+  - : The unit to use in `unit` formatting. Possible values are listed in [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_unit_identifiers). Pairs of simple units can be concatenated with "-per-" to make a compound unit. There is no default value; if the `style` is `"unit"`, the `unit` property must be provided.
 - `unitDisplay`
   - : The unit formatting style to use in `unit` formatting. Possible values are:
     - `"short"` (default)
@@ -140,7 +140,7 @@ The following properties are also supported by {{jsxref("Intl.PluralRules")}}.
 
     The value `"auto"` is normalized to `"morePrecision"` if `notation` is `"compact"` and none of the four "FractionDigits"/"SignificantDigits" options are set.
 
-    Note that for values other than `auto` the result with more precision is calculated from the [`maximumSignificantDigits`](#minimumsignificantdigits) and [`maximumFractionDigits`](#maximumfractiondigits) (minimum fractional and significant digit settings are ignored).
+    Note that for values other than `auto` the result with more precision is calculated from the [`maximumSignificantDigits`](#maximumsignificantdigits) and [`maximumFractionDigits`](#maximumfractiondigits) (minimum fractional and significant digit settings are ignored).
 
 - `roundingIncrement`
   - : Indicates the increment at which rounding should take place relative to the calculated rounding magnitude. Possible values are `1`, `2`, `5`, `10`, `20`, `25`, `50`, `100`, `200`, `250`, `500`, `1000`, `2000`, `2500`, and `5000`; the default is `1`. It cannot be mixed with significant-digits rounding or any setting of `roundingPriority` other than `auto`.
@@ -261,12 +261,15 @@ This behavior, called `ChainNumberFormat`, does not happen when `Intl.NumberForm
 
 - {{jsxref("RangeError")}}
   - : Thrown in one of the following cases:
-    - A property that takes enumerated values (such as `style`, `units`, `currency`, and so on) is set to an invalid value.
-    - Both `maximumFractionDigits` and `minimumFractionDigits` are set, and they are set to different values.
+    - A property that takes enumerated values (such as `style`, `unit`, `currency`, and so on) is set to an invalid value.
+    - `minimumFractionDigits` is greater than `maximumFractionDigits`.
+    - `roundingIncrement` is not `1`, and `maximumFractionDigits` and `minimumFractionDigits` are set to different values.
       Note that depending on various formatting options, these properties can have default values.
       It is therefore possible to get this error even if you only set one of the properties.
 - {{jsxref("TypeError")}}
-  - : Thrown if the `options.style` property is set to "unit" or "currency", and no value has been set for the corresponding property `options.unit` or `options.currency`.
+  - : Thrown in one of the following cases:
+    - The `options.style` property is set to "unit" or "currency", and no value has been set for the corresponding property `options.unit` or `options.currency`.
+    - `roundingIncrement` is not `1` and is combined with either significant-digit rounding or a `roundingPriority` other than `"auto"`.
 
 ## Examples
 
@@ -316,9 +319,7 @@ new Intl.NumberFormat("en-US", {
 
 ### Currency formatting
 
-If the `style` is `'currency'`, a `currency` property
-must be provided. Optionally, `currencyDisplay` and
-`currencySign` control the unit formatting.
+If the `style` is `'currency'`, a `currency` property must be provided. Optionally, `currencyDisplay` and `currencySign` control the currency formatting.
 
 ```js
 const amount = -3500;
@@ -463,7 +464,7 @@ console.log(
 > The default maximum digit value is `3` for plain values, `2` for currency, and may have different values for other predefined types.
 
 The formatted value above is rounded to 3 digits, even though we didn't specify the maximum digits!
-This is because a default value of `maximumFractionDigits` is set when we specify `minimumFractionDigits`, and visa versa. The default values of `maximumFractionDigits` and `minimumFractionDigits` are `3` and `0`, respectively.
+This is because a default value of `maximumFractionDigits` is set when we specify `minimumFractionDigits`, and vice versa. The default values of `maximumFractionDigits` and `minimumFractionDigits` are `3` and `0`, respectively.
 
 You can use [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions) to inspect the formatter.
 
@@ -552,7 +553,7 @@ The fraction digits ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximum
 If both are used at the same time, it is possible for them to conflict.
 
 These conflicts are resolved using the [`roundingPriority`](#roundingpriority) property.
-By default, this has a value of `"auto"`, which means that if either [`minimumSignificantDigits`](#minimumsignificantdigits) or [`maximumSignificantDigits`](#minimumsignificantdigits) is specified, the fractional and integer digit properties will be ignored.
+By default, this has a value of `"auto"`, which means that if either [`minimumSignificantDigits`](#minimumsignificantdigits) or [`maximumSignificantDigits`](#maximumsignificantdigits) is specified, the fractional digit properties will be ignored.
 
 For example, the code below formats the value of `4.33145` with `maximumFractionDigits: 3`, and then `maximumSignificantDigits: 2`, and then both.
 The value with both is the one set with `maximumSignificantDigits`.
@@ -620,7 +621,7 @@ const maxFracNF = new Intl.NumberFormat("en", {
   maximumFractionDigits: 3,
 });
 console.log(`maximumFractionDigits:3 - ${maxFracNF.format(1.23456)}`);
-// "maximumFractionDigits:2 - 1.235"
+// "maximumFractionDigits:3 - 1.235"
 
 const maxSigNS = new Intl.NumberFormat("en", {
   maximumSignificantDigits: 3,
@@ -741,7 +742,7 @@ console.log(
 // "-2.3"
 ```
 
-The table below show the effect of different rounding modes for positive and negative values that are on and around the half-increment.
+The table below shows the effect of different rounding modes for positive and negative values that are on and around the half-increment.
 
 | rounding mode | 2.23 | 2.25 | 2.28 | -2.23 | -2.25 | -2.28 |
 | ------------- | ---- | ---- | ---- | ----- | ----- | ----- |

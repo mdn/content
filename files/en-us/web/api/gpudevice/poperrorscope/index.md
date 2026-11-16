@@ -23,7 +23,7 @@ None.
 
 ### Return value
 
-a {{jsxref("Promise")}} that resolves to an object describing the first error captured in the scope. This can be of type:
+A {{jsxref("Promise")}} that resolves to an object describing the first error captured in the scope. This can be of type:
 
 - {{domxref("GPUInternalError")}}
 - {{domxref("GPUOutOfMemoryError")}}

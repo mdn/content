@@ -1,27 +1,34 @@
 ---
 title: "Test your skills: Overflow"
-short-title: Overflow
+short-title: "Test: Overflow"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand [overflow in CSS and how to manage it](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow).
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Size_decorate_content_panel", "Learn_web_development/Core/Styling_basics")}}
+
+The aim of this skill test is to help you assess whether you understand [overflow in CSS and how to manage it](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow).
 
 > [!NOTE]
-> Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
-> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## Overflow 1
 
-In this task, the content is overflowing the box because it has a fixed height. Keep the height but cause the box to have scrollbars only if there is enough text to cause an overflow. Test by removing some of the text from the HTML, that if there is only a small amount of text that does not overflow, no scrollbar appears.
+In this task, the content is overflowing the box because it has a fixed height.
 
-![A small box with a border and a vertical scrollbar.](mdn-overflow1.png)
+To complete the task:
 
-Try to update the code below to recreate the finished example:
+1. Update the CSS so that the box height is maintained and scrollbars appear only when there is enough text to cause an overflow.
+2. Test your solution by removing some text from the HTML and checking that no scrollbar appears when there is only a small amount of text.
 
-```html live-sample___overflow-scroll
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("overflow1-start", "", "450px")}}
+
+Here's the underlying code for this starting point:
+
+```html live-sample___overflow1-start live-sample___overflow1-finish
 <div class="box">
   <p>
     Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
@@ -36,7 +43,7 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css live-sample___overflow-scroll
+```css live-sample___overflow1-start live-sample___overflow1-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -49,14 +56,16 @@ body {
 }
 ```
 
-{{EmbedLiveSample("overflow-scroll", "", "450px")}}
+The updated styling should look like this:
+
+{{EmbedLiveSample("overflow1-finish", "", "300px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 You should add `overflow: auto` so that the box will only gain scrollbars when the content is too large:
 
-```css
+```css live-sample___overflow1-finish
 .box {
   overflow: auto;
 }
@@ -64,17 +73,17 @@ You should add `overflow: auto` so that the box will only gain scrollbars when t
 
 </details>
 
-## Task 2
+## Overflow 2
 
-In this task, there is an image in the box that is bigger than the dimensions of the box so that it overflows visibly. Change it so that any image outside of the box is hidden.
+In this task, there is an image in the box that is bigger than the dimensions of the box so that it overflows visibly. Update the CSS so that any image outside of the box is hidden.
 
-Your final result should look like the image below:
+The starting point of the task looks like this:
 
-![A box with an image which fills the box but does not spill out the edges.](mdn-overflow2.png)
+{{EmbedLiveSample("overflow2-start", "", "260px")}}
 
-Try to update the code below to recreate the finished example:
+Here's the underlying code for this starting point:
 
-```html live-sample___overflow-hidden
+```html live-sample___overflow2-start live-sample___overflow2-finish
 <div class="box">
   <img
     alt="flowers"
@@ -82,7 +91,7 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css live-sample___overflow-hidden
+```css live-sample___overflow2-start live-sample___overflow2-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -93,14 +102,16 @@ body {
 }
 ```
 
-{{EmbedLiveSample("overflow-hidden", "", "300px")}}
+The updated styling should look like this:
+
+{{EmbedLiveSample("overflow2-finish", "", "260px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 You should add `overflow: hidden` to the `.box` selector:
 
-```css
+```css live-sample___overflow2-finish
 .box {
   overflow: hidden;
 }
@@ -108,6 +119,4 @@ You should add `overflow: hidden` to the `.box` selector:
 
 </details>
 
-## See also
-
-- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Size_decorate_content_panel", "Learn_web_development/Core/Styling_basics")}}

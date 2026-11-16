@@ -5,10 +5,11 @@ slug: Web/API/CSSPrimitiveValue/setFloatValue
 page-type: web-api-instance-method
 status:
   - deprecated
+  - non-standard
 browser-compat: api.CSSPrimitiveValue.setFloatValue
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}
+{{APIRef("CSSOM")}}{{non-standard_header}}
 
 The **`setFloatValue()`** method of the
 {{domxref("CSSPrimitiveValue")}} interface is used to set a float value. If the property
@@ -79,7 +80,7 @@ None ({{jsxref("undefined")}}).
       <td>
         An <code>INVALID_ACCESS_ERR</code> is raised if the CSS value doesn't
         contain a float value or if the string value can't be converted into the
-        specified unit.<br />An NO_MODIFICATION_ALLOWED_ERR is raised if this
+        specified unit.<br />A NO_MODIFICATION_ALLOWED_ERR is raised if this
         property is read-only.
       </td>
     </tr>

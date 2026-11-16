@@ -13,6 +13,11 @@ sidebar: http
 
 The HTTP **`Permissions-Policy`** {{Glossary("response header")}} provides a mechanism to allow and deny the use of browser features in a document or within any {{HTMLElement("iframe")}} elements in the document.
 
+Violations of a policy can be reported using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+Reports may be sent to a server indicated by name in a per-directive `report-to` parameter, or otherwise to the server endpoint named `"default"` (the mapping between server endpoint names and URLs is set using the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header).
+Reports can also be observed in the page for which the policy is being enforced using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver).
+The format of the report and additional detail is provided in {{domxref("PermissionsPolicyViolationReport")}}.
+
 For more information, see the main [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) article.
 
 <table class="properties">
@@ -21,18 +26,24 @@ For more information, see the main [Permissions Policy](/en-US/docs/Web/HTTP/Gui
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>yes</td>
-    </tr>
   </tbody>
 </table>
 
 ## Syntax
 
 ```http
+# Single directive
 Permissions-Policy: <directive>=<allowlist>
+
+# Single directive with reporting endpoint
+Permissions-Policy: <directive>=<allowlist>;report-to=<endpoint>
+
+# Multiple directives, with and without server reporting endpoints
+Permissions-Policy: <directive>=<allowlist>, <directive>=<allowlist>;report-to=<endpoint>, ...
 ```
+
+The header can be used to set the allowlists for one or more directives, and optionally a per-directive `report-to` parameter indicating the server endpoint to send policy violation reports to.
+The entries for each directive are comma separated.
 
 - `<directive>`
   - : The Permissions Policy directive to apply the `allowlist` to. See [Directives](#directives) below for a list of the permitted directive names.
@@ -45,25 +56,33 @@ Permissions-Policy: <directive>=<allowlist>
     - `self`
       - : The feature will be allowed in this document, and in all nested browsing contexts (`<iframe>`s) in the same origin only. The feature is not allowed in cross-origin documents in nested browsing contexts. `self` can be considered shorthand for `https://your-site.example.com`. The equivalent for `<iframe>` `allow` attributes is `self`.
     - `src`
-      - : The feature will be allowed in this `<iframe>`, as long as the document loaded into it comes from the same origin as the URL in its {{HTMLElement('iframe','src','#Attributes')}} attribute. This value is only used in the `<iframe>` `allow` attribute, and is the _default_ `allowlist` value in `<iframe>`s.
+      - : The feature will be allowed in this `<iframe>`, as long as the document loaded into it comes from the same origin as the URL in its {{HTMLElement('iframe','src','#Attributes')}} attribute. This value is only used in the `<iframe>` `allow` attribute, and is the _default_ value for a feature listed without an explicit allowlist value — for example, `allow="geolocation"` is equivalent to `allow="geolocation 'src'"`.
     - `"<origin>"`
       - : The feature is allowed for specific origins (for example, `"https://a.example.com"`). Origins should be separated by spaces. Note that origins in `<iframe>` allow attributes are not quoted.
 
     The values `*` and `()` may only be used on their own, while `self` and `src` may be used in combination with one or more origins.
 
     > [!NOTE]
-    > Directives have a default allowlist, which is always one of `*`, `self`, or `none` for the `Permissions-Policy` HTTP header, and governs the default behavior if they are not explicitly listed in a policy.
-    > These are specified on the individual [directive reference pages](#directives). For `<iframe>` `allow` attributes, the default behavior is always `src`.
+    > Directives have a default allowlist, which applies when the directive is not explicitly listed in a policy; the specific default for each directive is given on its [directive reference page](#directives).
+    > See [Default allowlists](/en-US/docs/Web/HTTP/Guides/Permissions_Policy#default_allowlists) for how this interacts with the `Permissions-Policy` header and the `<iframe>` `allow` attribute.
 
-Where supported, you can include wildcards in Permissions Policy origins. This means that instead of having to explicitly specify several different subdomains in an allowlist, you can specify them all in a single origin with a wildcard.
+- `report-to=<endpoint>` {{optional_inline}}
+  - : The `report-to` parameter can be used to indicate the name of a reporting endpoint where reports will be sent if there is a policy violation for the associated directive.
+    The endpoint name and its associated URL must be specified in a separate {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
 
-So instead of
+    If omitted, reports will be send to the [`default` reporting endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint) if one has been defined.
+    See [Reporting API](/en-US/docs/Web/API/Reporting_API) for more information.
+
+Where supported, you can include wildcards in Permissions Policy origins.
+This means that instead of having to explicitly specify several different subdomains in an allowlist, you can specify them all in a single origin with a wildcard.
+
+So instead of:
 
 ```http
 ("https://example.com" "https://a.example.com" "https://b.example.com" "https://c.example.com")
 ```
 
-You can specify
+You can specify:
 
 ```http
 ("https://example.com" "https://*.example.com")
@@ -80,7 +99,10 @@ You can specify
 - {{httpheader('Permissions-Policy/ambient-light-sensor','ambient-light-sensor')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to gather information about the amount of light in the environment around the device through the {{DOMxRef("AmbientLightSensor")}} interface.
 
-- {{httpheader('Permissions-Policy/attribution-reporting','attribution-reporting')}} {{Experimental_Inline}}
+- {{httpheader("Permissions-Policy/aria-notify", "aria-notify")}} {{Experimental_Inline}}
+  - : Controls whether the current document is allowed to use the {{domxref("Document.ariaNotify", "ariaNotify()")}} method to fire {{glossary("screen reader")}} announcements.
+
+- {{httpheader('Permissions-Policy/attribution-reporting','attribution-reporting')}} {{deprecated_inline}} {{non-standard_inline}}
   - : Controls whether the current document is allowed to use the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API).
 
 - {{httpheader('Permissions-Policy/autoplay','autoplay')}} {{Experimental_Inline}}
@@ -89,7 +111,7 @@ You can specify
 - {{httpheader('Permissions-Policy/bluetooth','bluetooth')}} {{Experimental_Inline}}
   - : Controls whether the use of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) is allowed. When this policy is disabled, the methods of the {{DOMxRef("Bluetooth")}} object returned by {{DOMxRef("Navigator.bluetooth")}} will either return `false` or reject the returned {{JSxRef("Promise")}} with a `SecurityError` {{DOMxRef("DOMException")}}.
 
-- {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} {{Experimental_Inline}} {{non-standard_inline}}
+- {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} {{deprecated_inline}} {{non-standard_inline}}
   - : Controls access to the [Topics API](/en-US/docs/Web/API/Topics_API). Where a policy specifically disallows the use of the Topics API, any attempts to call the {{domxref("Document.browsingTopics()")}} method or send a request with a {{httpheader("Sec-Browsing-Topics")}} header will fail with a `NotAllowedError` {{domxref("DOMException")}}.
 
 - {{httpheader('Permissions-Policy/camera', 'camera')}} {{experimental_inline}}
@@ -100,6 +122,10 @@ You can specify
   - : Controls whether or not the document is permitted to use the [Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control).
     The promise returned by the API's main methods will reject with a `NotAllowedError` {{DOMxRef("DOMException")}} if the permission is not allowed.
 
+- {{HTTPHeader('Permissions-Policy/ch-ua-high-entropy-values', 'ch-ua-high-entropy-values')}} {{experimental_inline}}
+  - : Controls whether or not the document is permitted to use the {{domxref("NavigatorUAData.getHighEntropyValues()")}} method to retrieve high-entropy user-agent data.
+    If the permission is not allowed, the method will only return the `brands`, `mobile`, and `platform` low-entropy data.
+
 - {{httpheader('Permissions-Policy/compute-pressure','compute-pressure')}} {{Experimental_Inline}}
   - : Controls access to the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API).
 
@@ -107,10 +133,10 @@ You can specify
   - : Controls whether the current document can be treated as {{domxref("Window.crossOriginIsolated", "cross-origin isolated", "", 1)}}.
 
 - {{HTTPHeader('Permissions-Policy/deferred-fetch', 'deferred-fetch')}} {{experimental_inline}}
-  - : Controls the allocation of the top-level origin's [`fetchLater()` quota](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas).
+  - : Controls the allocation of the top-level origin's [`fetchLater()` quota](/en-US/docs/Web/API/Fetch_API/Using_Deferred_Fetch#quotas).
 
 - {{HTTPHeader('Permissions-Policy/deferred-fetch-minimal', 'deferred-fetch-minimal')}} {{experimental_inline}}
-  - : Controls the allocation of the shared cross-origin subframe [`fetchLater()` quota](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas).
+  - : Controls the allocation of the shared cross-origin subframe [`fetchLater()` quota](/en-US/docs/Web/API/Fetch_API/Using_Deferred_Fetch#quotas).
 
 - {{HTTPHeader('Permissions-Policy/display-capture', 'display-capture')}} {{experimental_inline}}
   - : Controls whether or not the current document is permitted to use the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture screen contents. When this policy is disabled, the promise returned by `getDisplayMedia()` will reject with a `NotAllowedError` {{DOMxRef("DOMException")}} if permission is not obtained to capture the display's contents.
@@ -135,7 +161,7 @@ You can specify
   - : Controls whether the current document is allowed to use the {{domxref("WebHID API", "WebHID API", "", "nocode")}} to connect to uncommon or exotic human interface devices such as alternative keyboards or gamepads.
 
 - {{httpheader('Permissions-Policy/identity-credentials-get','identity-credentials-get')}} {{Experimental_Inline}}
-  - : Controls whether the current document is allowed to use the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API), and more specifically the {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} method with an `identity` option. Where this policy forbids use of the API, the {{jsxref("Promise")}} returned by the `get()` call will reject with a `NotAllowedError` {{domxref("DOMException")}}.
+  - : Controls whether the current document is allowed to use the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API).
 
 - {{httpheader('Permissions-Policy/idle-detection','idle-detection')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to use the {{domxref("Idle Detection API", "Idle Detection API", "", "nocode")}} to detect when users are interacting with their devices, for example to report "available"/"away" status in chat applications.
@@ -143,8 +169,20 @@ You can specify
 - {{httpheader("Permissions-Policy/language-detector", "language-detector")}} {{Experimental_Inline}}
   - : Controls access to the language detection functionality of the [Translator and Language Detector APIs](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs).
 
+- {{httpheader("Permissions-Policy/language-model", "language-model")}} {{Experimental_Inline}}
+  - : Controls access to the [Prompt API](/en-US/docs/Web/API/Prompt_API).
+
 - {{httpheader('Permissions-Policy/local-fonts','local-fonts')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to gather data on the user's locally-installed fonts via the {{DOMxRef("Window.queryLocalFonts()")}} method (see also the {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}}).
+
+- {{httpheader('Permissions-Policy/local-network','local-network')}} {{Experimental_Inline}}
+  - : Controls whether the current document is allowed to make network requests to local addresses.
+
+- {{httpheader('Permissions-Policy/local-network-access','local-network-access')}} {{Experimental_Inline}}
+  - : Controls whether the current document is allowed to make network requests to local and loopback addresses. This policy directive is an alias for the more granular `local-network` and `loopback-network` directives.
+
+- {{httpheader('Permissions-Policy/loopback-network','loopback-network')}} {{Experimental_Inline}}
+  - : Controls whether the current document is allowed to make network requests to loopback addresses.
 
 - {{httpheader('Permissions-Policy/magnetometer','magnetometer')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to gather information about the orientation of the device through the {{DOMxRef("Magnetometer")}} interface.
@@ -155,6 +193,9 @@ You can specify
 - {{httpheader('Permissions-Policy/midi', 'midi')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to use the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API). When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMIDIAccess()")}} will reject with a `SecurityError` {{domxref("DOMException")}}.
 
+- {{httpheader("Permissions-Policy/on-device-speech-recognition", "on-device-speech-recognition")}} {{Experimental_Inline}}
+  - : Controls access to the [on-device speech recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) functionality of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API).
+
 - {{httpheader("Permissions-Policy/otp-credentials", "otp-credentials")}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to use the [WebOTP API](/en-US/docs/Web/API/WebOTP_API) to request a one-time password (OTP) from a specially-formatted SMS message sent by the app's server, i.e., via {{domxref("CredentialsContainer.get", "navigator.credentials.get({otp: ..., ...})")}}.
 
@@ -163,6 +204,12 @@ You can specify
 
 - {{httpheader('Permissions-Policy/picture-in-picture', 'picture-in-picture')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.
+
+- {{httpheader('Permissions-Policy/private-state-token-issuance','private-state-token-issuance')}} {{Experimental_Inline}}
+  - : Controls usage of [private state token](/en-US/docs/Web/API/Private_State_Token_API) `token-request` operations.
+
+- {{httpheader('Permissions-Policy/private-state-token-redemption','private-state-token-redemption')}} {{Experimental_Inline}}
+  - : Controls usage of [private state token](/en-US/docs/Web/API/Private_State_Token_API) `token-redemption` and `send-redemption-record` operations.
 
 - {{httpheader("Permissions-Policy/publickey-credentials-create", "publickey-credentials-create")}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to create new asymmetric key credentials, i.e., via {{domxref("CredentialsContainer.create", "navigator.credentials.create({publicKey: ..., ...})")}}.
@@ -187,6 +234,9 @@ You can specify
 
 - {{httpheader("Permissions-Policy/summarizer", "summarizer")}} {{Experimental_Inline}}
   - : Controls access to the [Summarizer API](/en-US/docs/Web/API/Summarizer_API).
+
+- {{httpheader("Permissions-Policy/unload", "unload")}} {{Experimental_Inline}} {{non-standard_inline}}
+  - : Controls whether the current document is allowed to run [`unload`](/en-US/docs/Web/API/Window/unload_event) event handlers.
 
 - {{httpheader('Permissions-Policy/usb', 'usb')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to use the [WebUSB API](/en-US/docs/Web/API/WebUSB_API).
@@ -232,7 +282,9 @@ Permissions-Policy: camera=*
 
 #### iframes
 
-For an `<iframe>` to have a feature enabled its allowed origin must also be in the allowlist for the parent page. Because of this [inheritance behavior](/en-US/docs/Web/HTTP/Guides/Permissions_Policy#inheritance_of_policies_for_embedded_content), it is a good idea to specify the widest acceptable support for a feature in the HTTP header, and then specify the subset of support you need in each `<iframe>`.
+The `Permissions-Policy` header allowlist for a feature defines the superset of origins that are potentially allowed to access the feature.
+An `<iframe>`'s `allow` attribute grants a feature to the origins it names, provided they are present in that superset.
+Because of this [inheritance behavior](/en-US/docs/Web/HTTP/Guides/Permissions_Policy#inheritance_of_policies_for_embedded_content), it is a good idea to specify the widest acceptable support for a feature in the HTTP header, and then specify the subset of support you need in each `<iframe>`.
 
 To allow all origins access to geolocation, you would do this:
 
@@ -261,9 +313,8 @@ Several features can be controlled at the same time by including a semi-colon-se
 It is worth giving the `src` value a special mention. We mentioned above that using this allowlist value will mean that the associated feature will be allowed in this `<iframe>`, as long as the document loaded into it comes from the same origin as the URL in its {{HTMLElement('iframe','src','#Attributes')}} attribute. This value is the _default_ `allowlist` value for features listed in `allow`, so the following are equivalent:
 
 ```html
-<iframe src="https://example.com" allow="geolocation 'src'">
-  <iframe src="https://example.com" allow="geolocation"></iframe
-></iframe>
+<iframe src="https://example.com" allow="geolocation 'src'"></iframe>
+<iframe src="https://example.com" allow="geolocation"></iframe>
 ```
 
 ### Denying access to powerful features
@@ -296,6 +347,60 @@ If a different origin ended up getting loaded into `<iframe>`, it would not have
 <iframe src="https://rogue-origin-example.com" allow="geolocation"></iframe>
 ```
 
+### Reporting violations
+
+This example shows how to configure reporting of `Permissions-Policy` violations to a server endpoint.
+
+The response headers below block geolocation and define the reporting endpoint name for the feature as "geo_endpoint".
+The {{HTTPHeader("Reporting-Endpoints")}} HTTP response header is used to define the URL of this endpoint name.
+
+```http
+Reporting-Endpoints: geo_endpoint="https://example.com/reports"
+Permissions-Policy: geolocation=();report-to=geo_endpoint
+```
+
+> [!NOTE]
+> To send all violation reports to the same endpoint we might instead define the [`"default"` reporting endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint):
+>
+> ```http
+> Reporting-Endpoints: default="https://example.com/reports"
+> Permissions-Policy: geolocation=()
+> ```
+
+A violation occurs when a page attempts to use the blocked feature, for example:
+
+```js
+navigator.geolocation.getCurrentPosition(
+  () => {},
+  () => {},
+);
+```
+
+The [report payload](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) sent to the endpoint might look like this:
+
+```json
+[
+  {
+    "age": 48512,
+    "body": {
+      "columnNumber": 29,
+      "disposition": "enforce",
+      "lineNumber": 44,
+      "message": "Permissions policy violation: geolocation access has been blocked because of a permissions policy applied to the current document.",
+      "featureId": "geolocation",
+      "sourceFile": "https://example.com/"
+    },
+    "type": "permissions-policy-violation",
+    "url": "https://example.com/",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+  }
+]
+```
+
+> [!NOTE]
+> Chrome's server-side serialization of violation reports uses `policyId` rather than [`featureId`](/en-US/docs/Web/API/PermissionsPolicyViolationReport#featureid) for the feature name in the `body` of a server report.
+> The {{domxref("PermissionsPolicyViolationReport")}} returned by a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver) follows the specification.
+
 ## Specifications
 
 {{Specifications}}
@@ -307,6 +412,11 @@ If a different origin ended up getting loaded into `<iframe>`, it would not have
 ## See also
 
 - [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)
+- {{HTTPHeader("Permissions-Policy-Report-Only")}}
 - {{DOMxRef("Document.featurePolicy")}} and {{DOMxRef("FeaturePolicy")}}
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTTPHeader("Referrer-Policy")}}
+- {{HTTPHeader("Reporting-Endpoints")}}
+- {{domxref("PermissionsPolicyViolationReport")}}
+- {{domxref("ReportingObserver")}}
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)

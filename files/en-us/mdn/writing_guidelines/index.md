@@ -20,12 +20,15 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
   - : The "Learn web development" section of MDN is aimed specifically at folks learning the basic fundamentals of web development, and as such, requires a different approach to the rest of MDN's content. This article provides guidelines for writing learning content.
 
 - [How to write for MDN Web Docs](/en-US/docs/MDN/Writing_guidelines/Howto)
-  - : This section covers all the information for creating and editing pages, including certain processes and techniques we adhere to. This section provides information about getting started, a general overview into how pages are structured, and where to find how-tos on specific tasks. This section includes topics such as:
+  - : This section covers all the information for creating and editing pages, including certain processes and techniques we adhere to. This section provides information about getting started, a general overview of how pages are structured, and where to find how-tos on specific tasks. This section includes topics such as:
     - [How to research a technology](/en-US/docs/MDN/Writing_guidelines/Howto/Research_technology)
       - : This section provides some handy tips for researching a technology you are documenting.
 
     - [How to create, move, and delete pages](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)
       - : This section explains how we create, move, or delete a page on MDN Web Docs. It also explains how we redirect a page when moving or deleting the page.
+
+    - [How to retire a section of content](/en-US/docs/MDN/Writing_guidelines/Howto/Retiring_content)
+      - : This section explains the process for retiring entire sections of MDN Web Docs content in a planned and transparent way, including decision-making, notice periods, archival, and removal.
 
     - [How to use markdown](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN)
       - : The markdown format we use derives from [GitHub flavored markdown (GFM)](https://github.github.com/gfm/). This section is a guide to the markdown we use on MDN Web Docs, including formats for specific in-page components, such as notes and definition lists.

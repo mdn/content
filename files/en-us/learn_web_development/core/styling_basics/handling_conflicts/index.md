@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model", "Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade", "Learn_web_development/Core/Styling_basics")}}
 
 The aim of this lesson is to develop your understanding of some of the most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts between style declarations are resolved.
 
@@ -42,15 +42,15 @@ CSS stands for **Cascading Style Sheets**, and that first word _cascading_ is in
 
 At some point, you will be working on a project and you will find that some CSS you think should be applying to an element is not working. Often, this problem occurs when you create two rules that apply different values of the same property to the same element.
 
-The [**Cascade**](/en-US/docs/Web/CSS/CSS_cascade/Cascade), and the closely-related concept of [**specificity**](/en-US/docs/Web/CSS/CSS_cascade/Specificity), are mechanisms that control which rule applies when such a conflict occurs. The declaration that's styling your element may not be the one you expect, so you need to understand how these mechanisms work.
+The [**Cascade**](/en-US/docs/Web/CSS/Guides/Cascade/Introduction), and the closely-related concept of [**specificity**](/en-US/docs/Web/CSS/Guides/Cascade/Specificity), are mechanisms that control which rule applies when such a conflict occurs. The declaration that's styling your element may not be the one you expect, so you need to understand how these mechanisms work.
 
-Also significant here is the concept of [**inheritance**](/en-US/docs/Web/CSS/CSS_cascade/Inheritance), which means that some CSS properties by default inherit values set on the current element's parent element and some don't. This can also cause unexpected behavior.
+Also significant here is the concept of [**inheritance**](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance), which means that some CSS properties by default inherit values set on the current element's parent element and some don't. This can also cause unexpected behavior.
 
 Let's start by taking a quick look at the key concepts we are dealing with, then we'll look at each in turn and see how they interact with each other and your CSS. These concepts can seem tricky to understand, but they will become clearer as you get more practice writing CSS.
 
 ### Cascade
 
-Stylesheets [**cascade**](/en-US/docs/Web/CSS/CSS_cascade/Cascade). At a very simple level, this means that the origin and the order of CSS rules matter. When two rules both have equal specificity, the one that is defined last in the stylesheet is the one that will be used. There are other concepts that have an effect, such as [cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers), but these are more advanced and we won't cover them in any detail here.
+Stylesheets [**cascade**](/en-US/docs/Web/CSS/Guides/Cascade/Introduction). At a very simple level, this means that the origin and the order of CSS rules matter. When two rules both have equal specificity, the one that is defined last in the stylesheet is the one that will be used. There are other concepts that have an effect, such as [cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers), but these are more advanced and we won't cover them in any detail here.
 
 In the below example, we have two rules that could apply to the `<h1>` element. The `<h1>` content ends up being colored blue. This is because both the rules are from the same source, have an identical element selector, and therefore, carry the same specificity, but the last one in the source order wins.
 
@@ -71,9 +71,9 @@ h1 {
 
 ### Specificity
 
-[Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) is an algorithm that the browser uses to decide which property value is applied to an element. If multiple rules have different selectors that set different values for the same property and target the same element, specificity decides the property value that gets applied to the element. Specificity is basically a measure of how specific a selector's selection will be:
+[Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity) is an algorithm that the browser uses to decide which property value is applied to an element. If multiple rules have different selectors that set different values for the same property and target the same element, specificity decides the property value that gets applied to the element. Specificity is basically a measure of how specific a selector's selection will be:
 
-- An type (element) selector is less specific; it will select all elements of that type that appear on a page, so it has less weight. Pseudo-element selectors have the same specificity as regular element selectors.
+- A type (element) selector is less specific; it will select all elements of that type that appear on a page, so it has less weight. Pseudo-element selectors have the same specificity as regular element selectors.
 - A class selector is more specific; it will select only the elements on a page that have a specific `class` attribute value, so it has more weight. Attribute selectors and pseudo-classes have the same weight as a class.
 - An ID selector is even more specific — it only selects a single element with a specific `id` value. It therefore has even more weight.
 
@@ -130,7 +130,7 @@ span {
 Some properties do not inherit — for example {{cssxref("width")}} If you set a `width` of `50%` on an element, all of its descendants do not get a width of `50%` of their parent's `width`. If this was the case, CSS would be very frustrating to use!
 
 > [!NOTE]
-> On MDN CSS property reference pages, you can find a technical information box called "Formal definition", which lists a number of data points about that property, including whether it is inherited or not. See the [color property Formal definition section](/en-US/docs/Web/CSS/color#formal_definition) as an example.
+> On MDN CSS property reference pages, you can find a technical information box called "Formal definition", which lists a number of data points about that property, including whether it is inherited or not. See the [color property Formal definition section](/en-US/docs/Web/CSS/Reference/Properties/color#formal_definition) as an example.
 
 ### Understanding how the concepts work together
 
@@ -171,7 +171,7 @@ The `color` property is an inherited property. So, the `color` property value is
 ```css live-sample___inheritance
 .main {
   color: rebeccapurple;
-  border: 2px solid #ccc;
+  border: 2px solid #cccccc;
   padding: 1em;
 }
 
@@ -194,27 +194,19 @@ CSS provides five special universal property values for controlling inheritance.
 - {{cssxref("inherit")}}
   - : Sets the property value applied to a selected element to be the same as that of its parent element. Effectively, this "turns on inheritance".
 - {{cssxref("initial")}}
-  - : Sets the property value applied to a selected element to the [initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value) of that property.
+  - : Sets the property value applied to a selected element to the [initial value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value) of that property.
 - {{cssxref("revert")}}
   - : Resets the property value applied to a selected element to the browser's default styling rather than the defaults applied to that property. This value acts like {{cssxref("unset")}} in many cases.
 - {{cssxref("revert-layer")}}
-  - : Resets the property value applied to a selected element to the value established in a previous [cascade layer](/en-US/docs/Web/CSS/@layer).
+  - : Resets the property value applied to a selected element to the value established in a previous [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer).
 - {{cssxref("unset")}}
   - : Resets the property to its natural value, which means that if the property is naturally inherited it acts like `inherit`, otherwise it acts like `initial`.
 
-> [!NOTE]
-> See [Origin types](/en-US/docs/Web/CSS/CSS_cascade/Cascade#origin_types) for more information on each of these and how they work.
+### Playing with inheritance control values
 
-### Playing with inheritance control properties
+In this section, you will play with the universal property values to get a better idea of their effects. Playing with code really is the best way to gain a deeper understanding of HTML and CSS.
 
-We can look at a list of links and explore how universal values work. The live example below allows you to play with the CSS and see what happens when you make changes. Playing with code really is the best way to better understand HTML and CSS.
-
-For example:
-
-1. The second list item has the class `my-class-1` applied. This sets the color of the `<a>` element nested inside to `inherit`. If you remove the rule, how does it change the color of the link?
-2. Do you understand why the third and fourth links are the color that they are? The third link is set to `initial`, which means it uses the initial value of the property (in this case black) and not the browser default for links, which is blue. The fourth is set to `unset` which means that the link text uses the color of the parent element, green.
-3. Which of the links will change color if you define a new color for the `<a>` element — for example `a { color: red; }`?
-4. After reading the next section on resetting all properties, come back and change the `color` property to `all`. Notice how the second link is on a new line and has a bullet. What properties do you think were inherited?
+The following HTML defines a list of links:
 
 ```html live-sample___keywords
 <ul>
@@ -225,8 +217,12 @@ For example:
 </ul>
 ```
 
+We've applied the following CSS to it; note how the second, third, and fourth links have different universal property values set as their {{cssxref("color")}} property values:
+
 ```css live-sample___keywords
 body {
+  font-family: sans-serif;
+  font-size: 1.3rem;
   color: green;
 }
 
@@ -243,11 +239,42 @@ body {
 }
 ```
 
+The example renders like so:
+
 {{EmbedLiveSample("keywords")}}
+
+Click on the "Play" button to open the example in the MDN Playground, then follow the steps below:
+
+1. The second list item has the class `my-class-1` applied. As a result, the `color` of the second `<a>` element is set to `inherit`, so it inherits its parent `<li>` element's `green` color (the `color` property is inherited by default). If you remove the `.my-class-1 a` rule, how does it change the color of the link?
+
+   You should see the second `<a>` element change to `blue` — it no longer inherits the `green` color, and instead adopts its default `blue` color, as set by the browser's own stylesheet.
+
+   Put the `.my-class-1 a` rule back before continuing.
+
+2. Do you understand why the third and fourth links are the color that they are? Read the earlier explanations of the `initial` and `unset` values and think about it before reading the explanations below.
+
+   The third `<a>` element's `color` is set to `initial`, which means it uses the initial value of the property (in this case black) and not the browser default for links, which is blue.
+
+   The fourth `<a>` element's `color` is set to `unset`, which unsets any `color` value applied to the `<a>` element in the browser's stylesheet or elsewhere. Because `color` is inheritable, `unset` causes the `<a>` element to adopt the `color` of its parent `<li>` element: `green`.
+
+3. Which of the links will change color if you define a new `color` for all of the `<a>` elements — for example `a { color: hotpink; }`? Think of what the answer might be, and then add the rule at the bottom of the CSS.
+
+   This is actually a bit of a trick question — the only `<a>` element that adopts the new color is the first one. The others don't adopt the new color set later in the stylesheet because the selectors in the rules that apply `color` values to them earlier in the stylesheet (`.my-class-1 a`, etc.) have a higher [specificity](#specificity) than the `a` selector.
+
+4. The {{cssxref("all")}} property allows you to set a universal property value as the value of nearly all of an element's properties. You'll learn a bit more about this in the next section, but for now, try changing the second, third, and fourth `color` property names to `all`. For example, update `color: inherit` to `all: inherit`.
+
+   This has the effect of setting all properties on those `<a>` elements to `inherit`, `initial`, and `unset`, respectively. Notice how the second link is on a new line and has a bullet. What property values do you think it has inherited to cause this?
+
+   To give you some hints, it has inherited:
+
+   - A {{cssxref("display")}} value of `list-item` to cause it to sit on a new line and generate a bullet.
+   - A {{cssxref("text-decoration")}} value of `none` to remove its underline.
+   - A {{cssxref("list-style-type")}} value of `disc` to give its bullet a filled circle shape.
+   - A {{cssxref("color")}} value of `green`, like it did in the first place.
 
 ### Resetting all property values
 
-The CSS shorthand property [`all`](/en-US/docs/Web/CSS/all) can be used to apply one of these inheritance values to (almost) all properties at once. Its value can be any one of the inheritance values (`inherit`, `initial`, `revert`, `revert-layer`, or `unset`). It's a convenient way to undo changes made to styles so that you can get back to a known starting point before beginning new changes.
+The CSS shorthand property {{cssxref("all")}} can be used to apply one of these inheritance values to (almost) all properties at once. Its value can be any one of the inheritance values (`inherit`, `initial`, `revert`, `revert-layer`, or `unset`). It's a convenient way to undo changes made to styles so that you can get back to a known starting point before beginning new changes.
 
 In the below example, we have two blockquotes. The first has styling applied to the blockquote element itself. The second has a class applied to the blockquote, which sets the value of `all` to `unset`.
 
@@ -313,8 +340,8 @@ This behavior helps avoid repetition in your CSS. A common practice is to define
 ```css live-sample___mixing-rules
 h2 {
   font-size: 2em;
-  color: #000;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  color: black;
+  font-family: "Georgia", serif;
 }
 
 .small {
@@ -337,9 +364,9 @@ The amount of specificity a selector has is measured using three different value
 - **Elements**: Score one in this column (1 point) for each element selector or pseudo-element contained inside the overall selector.
 
 > [!NOTE]
-> The universal selector ([`*`](/en-US/docs/Web/CSS/Universal_selectors)), [combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`, `>`, `~`, ' '), and specificity adjustment selector ([`:where()`](/en-US/docs/Web/CSS/:where)) along with its parameters, have no effect on specificity.
+> The universal selector ([`*`](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)), [combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`, `>`, `~`, ' '), and specificity adjustment selector ({{cssxref(":where()")}}) along with its parameters, have no effect on specificity.
 
-The following table shows a few isolated examples to get you in the mood. Try going through these, and make sure you understand why they have the specificity that we have given them. We've not covered selectors in detail yet, but you can find details of each selector on the MDN [selectors reference](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators).
+The following table shows a few isolated examples to get you in the mood. Try going through these, and make sure you understand why they have the specificity that we have given them. You can find details of each selector in the MDN [selectors reference](/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators).
 
 | Selector                                  | Identifiers | Classes | Elements | Total specificity |
 | ----------------------------------------- | ----------- | ------- | -------- | ----------------- |
@@ -423,8 +450,8 @@ li {
 So what's going on here? First of all, we are only interested in the first seven rules of this example, and as you'll notice, we have included their specificity values in a comment before each one.
 
 - The first two selectors are competing over the styling of the link's `background-color`. The second one wins and makes the background color `blue` because it has an extra ID selector in the chain: its specificity is 2-0-1 vs. 1-0-1.
-- Selectors 3 and 4 are competing over the styling of the link's text `color`. The second one wins and makes the text `white` because although it has one less element selector, the missing selector is swapped out for a class selector, which has more weight than an element selectors. The winning specificity is 1-1-3 vs. 1-0-4.
-- Selectors 5–7 are competing over the styling of the link's `border` when hovered. Selector 6 clearly loses to selector 5 with a specificity of 0-2-3 vs. 0-2-4; it has one fewer element selectors in the chain. Selector 7, however, beats both selectors 5 and 6 because it has the same number of sub-selectors in the chain as selector 5, but an element has been swapped out for a class selector. So the winning specificity is 0-3-3 vs. 0-2-3 and 0-2-4.
+- Selectors 3 and 4 are competing over the styling of the link's text `color`. The second one wins and makes the text `white` because although it has one less element selector, the missing selector is swapped out for a class selector, which has more weight than an element selector. The winning specificity is 1-1-3 vs. 1-0-4.
+- Selectors 5–7 are competing over the styling of the link's `border` when hovered. Selector 6 clearly loses to selector 5 with a specificity of 0-2-3 vs. 0-2-4; it has one fewer element selector in the chain. Selector 7, however, beats both selectors 5 and 6 because it has the same number of sub-selectors in the chain as selector 5, but an element has been swapped out for a class selector. So the winning specificity is 0-3-3 vs. 0-2-3 and 0-2-4.
 
 > [!NOTE]
 > Each selector type has its own level of specificity that cannot be overwritten by selectors with a lower specificity level. For example, a _million_ **class** selectors combined would not be able to overwrite the specificity of _one_ **id** selector.
@@ -435,7 +462,7 @@ So what's going on here? First of all, we are only interested in the first seven
 
 ID selectors have high specificity. This means styles applied based on matching an ID selector will overrule styles applied based on other selectors, including class and type selectors. Because an ID can only occur once on a page and because of the high specificity of ID selectors, it is preferable to add a class to an element instead of an ID.
 
-If using the ID is the only way to target the element — perhaps because you do not have access to the markup and cannot edit it — consider using the ID within an [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors), such as `p[id="header"]`.
+If using the ID is the only way to target the element — perhaps because you do not have access to the markup and cannot edit it — consider using the ID within an [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors), such as `p[id="header"]`.
 
 ### Inline styles
 
@@ -507,16 +534,12 @@ Conflicting declarations will be applied in the following order, with later ones
 > [!NOTE]
 > The order of precedence is inverted for styles flagged with `!important`. It makes sense for web developers' stylesheets to override user stylesheets, so the design can be kept as intended; however, sometimes users have good reasons to override web developer styles, as mentioned above, and this can be achieved by using `!important` in their rules.
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Cascade](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade).
-
 ## Summary
 
 If you understood most of this article, then well done — you've started getting familiar with the fundamental mechanics of CSS.
 
 If you didn't fully understand the cascade, specificity, and inheritance, then don't worry! This is definitely the most complicated thing we've covered so far in the course and is something that even professional web developers sometimes find tricky. We'd advise that you return to this article a few times as you continue through the course, and keep thinking about it.
 
-Refer back here if you start to come across strange issues with styles not applying as expected. It could be a specificity issue.
+Refer back here if you start to come across strange issues with styles not applying as expected. It could be a specificity issue. Next, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on the cascade.
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model", "Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade", "Learn_web_development/Core/Styling_basics")}}

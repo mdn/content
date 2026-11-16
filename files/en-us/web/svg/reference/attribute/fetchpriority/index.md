@@ -22,6 +22,21 @@ You can use this attribute with the following SVG elements:
 - {{SVGelement("image")}}
 - {{SVGelement("script")}}
 
+## Examples
+
+This example shows how to set an SVG {{SVGelement("script")}} element priority to `high`.
+
+```html
+<svg
+  viewBox="0 0 10 10"
+  height="120px"
+  width="120px"
+  xmlns="http://www.w3.org/2000/svg">
+  <circle id="normal" cx="5" cy="5" r="4" />
+  <script href="./color-change.js" fetchpriority="high"></script>
+</svg>
+```
+
 ## Usage notes
 
 <table class="properties">
@@ -46,21 +61,6 @@ You can use this attribute with the following SVG elements:
     It is used if no value or an invalid value is set.
     This is the default.
 
-## Examples
-
-This example shows how to set an SVG {{SVGelement("script")}} element priority to `high`.
-
-```html
-<svg
-  viewBox="0 0 10 10"
-  height="120px"
-  width="120px"
-  xmlns="http://www.w3.org/2000/svg">
-  <circle id="normal" cx="5" cy="5" r="4" />
-  <script href="./color-change.js" fetchpriority="high"></script>
-</svg>
-```
-
 ## Browser compatibility
 
 {{Compat}}
@@ -68,4 +68,4 @@ This example shows how to set an SVG {{SVGelement("script")}} element priority t
 ## See also
 
 - SVG {{SVGelement("script")}} element
-- HTML `<script>` element's [`fetchpriority`](/en-US/docs/Web/HTML/Reference/Elements/script#fetchpriority) attribute
+- HTML [`fetchpriority`](/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority) attribute

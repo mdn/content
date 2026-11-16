@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.TypedArray.join
 sidebar: jsref
 ---
 
-The **`join()`** method of {{jsxref("TypedArray")}} instances creates and returns a new string by concatenating all of the elements in this typed array, separated by commas or a specified separator string. If the typed array has only one item, then that item will be returned without using the separator. This method has the same algorithm as {{jsxref("Array.prototype.join()")}}.
+The **`join()`** method of {{jsxref("TypedArray")}} instances returns a new string that is the concatenation of all elements in this typed array, separated by commas or a specified separator string. If the typed array has only one item, that item's stringification is returned without using the separator. This method has the same algorithm as {{jsxref("Array.prototype.join()")}}.
 
 {{InteractiveExample("JavaScript Demo: TypedArray.prototype.join()")}}
 
@@ -65,7 +65,7 @@ uint8.join(""); // '123'
 
 ## See also
 
-- [Polyfill of `TypedArray.prototype.join` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.join` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.toString()")}}

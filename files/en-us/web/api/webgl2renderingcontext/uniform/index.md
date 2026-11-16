@@ -82,13 +82,12 @@ uniform4uiv(location, data, srcOffset, srcLength)
 ### Parameters
 
 - `location`
-  - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
-    attribute to modify.
+  - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform attribute to modify, or `null` to silently ignore the uniform update.
 - `data`, `v0`, `v1`, `v2`, `v3`
   - : A new value to be used for the uniform variable. Possible types:
     - A {{jsxref("Number")}} for unsigned integer values (methods with `ui`), for integer values (methods with `i`), or for floats (methods with `f`).
     - A {{jsxref("Uint32Array")}} (or an {{jsxref("Array")}} of unsigned integer numbers) for unsigned integer vector methods (methods with `uiv`).
-    - A {{jsxref("Int32Array")}} (or an {{jsxref("Array")}} of integer numbers) for integer vector methods (methods with `iv`).
+    - An {{jsxref("Int32Array")}} (or an {{jsxref("Array")}} of integer numbers) for integer vector methods (methods with `iv`).
     - A {{jsxref("Float32Array")}} (or an {{jsxref("Array")}} of numbers) for floating point vector methods (methods with `fv`).
 - `srcOffset` {{optional_inline}}
   - : A non-negative integer specifying the index of the first element in the `data` array to be used. Defaults to `0`.

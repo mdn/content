@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Conditionals","Learn_web_development/Core/Scripting/Test_your_skills/Loops", "Learn_web_development/Core/Scripting")}}
 
 Programming languages are very useful for rapidly completing repetitive tasks, from multiple basic calculations to just about any other situation where you've got a lot of similar items of work to complete. Here we'll look at the loop structures available in JavaScript that handle such needs.
 
@@ -46,7 +46,7 @@ Suppose we wanted to draw 100 random circles on a {{htmlelement("canvas")}} elem
 html {
   width: 100%;
   height: inherit;
-  background: #ddd;
+  background: #dddddd;
 }
 
 canvas {
@@ -73,10 +73,8 @@ const btn = document.querySelector("button");
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
-document.addEventListener("DOMContentLoaded", () => {
-  canvas.width = document.documentElement.clientWidth;
-  canvas.height = document.documentElement.clientHeight;
-});
+canvas.width = document.documentElement.clientWidth;
+canvas.height = document.documentElement.clientHeight;
 
 function random(number) {
   return Math.floor(Math.random() * number);
@@ -150,7 +148,7 @@ But there are other collections in JavaScript as well, including {{jsxref("Set")
 
 ### The for...of loop
 
-The basic tool for looping through a collection is the {{jsxref("statements/for...of","for...of")}} loop:
+The basic tool for looping through a collection is the {{jsxref("Statements/for...of","for...of")}} loop:
 
 ```js
 const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
@@ -164,7 +162,7 @@ In this example, `for (const cat of cats)` says:
 
 1. Given the collection `cats`, get the first item in the collection.
 2. Assign it to the variable `cat` and then run the code between the curly braces `{}`.
-3. Get the next item, and repeat (2) until you've reached the end of the collection.
+3. Get the next item, and repeat Step 2 until you've reached the end of the collection.
 
 ### map() and filter()
 
@@ -227,7 +225,7 @@ console.log(filtered);
 ## The standard for loop
 
 In the "drawing circles" example above, you don't have a collection of items to loop through: you really just want to run the same code 100 times.
-In a case like that, you can use the {{jsxref("statements/for","for")}} loop.
+In a case like that, you can use the {{jsxref("Statements/for","for")}} loop.
 This has the following syntax:
 
 ```js-nolint
@@ -248,6 +246,9 @@ Here we have:
       It usually serves to increment (or in some cases decrement) the counter variable, to bring it closer to the point where the condition is no longer `true`.
 
 3. Some curly braces that contain a block of code — this code will be run each time the loop iterates.
+
+> [!NOTE]
+> [Aside: Loops](https://scrimba.com/learn-javascript-c0v/~02a?via=mdn) from Scrimba<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides a useful interactive breakdown of the `for` loop syntax.
 
 ### Calculating squares
 
@@ -285,7 +286,7 @@ This code calculates squares for the numbers from 1 to 9, and writes out the res
 
 Let's break down the `for (let i = 1; i < 10; i++)` line into its three pieces:
 
-1. `let i = 1`: the counter variable, `i`, starts at `1`. Note that we have to use `let` for the counter, because we're reassigning it each time we go round the loop.
+1. `let i = 1`: the counter variable, `i`, starts at `1`. Note that we have to use `let` for the counter, because we're incrementing it with `i++` (which is a reassignment) each time we go round the loop.
 2. `i < 10`: keep going round the loop for as long as `i` is smaller than `10`.
 3. `i++`: add one to `i` each time round the loop.
 
@@ -332,38 +333,42 @@ However, it offers more chances to introduce bugs into your code. For example:
 For reasons like this, it's usually best to use `for...of` if you can.
 
 Sometimes you still need to use a `for` loop to iterate through an array.
-For example, in the code below we want to log a message listing our cats:
+For example, in the code below we want to print a message listing our cats to a {{htmlelement("p")}} element:
 
-```js
-const cats = ["Pete", "Biggles", "Jasmine"];
+```html hidden live-sample___for-of-loop-cats live-sample___for-loop-cats live-sample___while-loop-cats live-sample___do-while-loop-cats
+<p></p>
+```
 
-let myFavoriteCats = "My cats are called ";
+```js live-sample___for-of-loop-cats
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+const pElem = document.querySelector("p");
+
+let myFavoriteCats = "My favorite big cats are ";
 
 for (const cat of cats) {
   myFavoriteCats += `${cat}, `;
 }
 
-console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmine, "
+pElem.textContent = myFavoriteCats;
 ```
 
 The final output sentence isn't very well-formed:
 
-```plain
-My cats are called Pete, Biggles, Jasmine,
-```
+{{embedlivesample("for-of-loop-cats", "100%", "60")}}
 
-We'd prefer it to handle the last cat differently, like this:
+We'd prefer a grammatically correct sentence, which means handling the last cat differently:
 
 ```plain
-My cats are called Pete, Biggles, and Jasmine.
+My favorite big cats are Leopard, Serval, Jaguar, Tiger, Caracal, and Lion.
 ```
 
-But to do this we need to know when we are on the final loop iteration, and to do that we can use a `for` loop and examine the value of `i`:
+To do this we need to know when we are on the final loop iteration, and to do that we can use a `for` loop and examine the value of `i`:
 
-```js
-const cats = ["Pete", "Biggles", "Jasmine"];
+```js live-sample___for-loop-cats
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+const pElem = document.querySelector("p");
 
-let myFavoriteCats = "My cats are called ";
+let myFavoriteCats = "My favorite big cats are ";
 
 for (let i = 0; i < cats.length; i++) {
   if (i === cats.length - 1) {
@@ -374,8 +379,12 @@ for (let i = 0; i < cats.length; i++) {
   }
 }
 
-console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
+pElem.textContent = myFavoriteCats;
 ```
+
+This gives us the output we want:
+
+{{embedlivesample("for-loop-cats", "100%", "60")}}
 
 ## Exiting loops with break
 
@@ -440,9 +449,6 @@ btn.addEventListener("click", () => {
 
 5. After the loop, we check whether we set a contact, and if not we set the paragraph text to "Contact not found.".
 
-> [!NOTE]
-> You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
-
 ## Skipping iterations with continue
 
 The [continue](/en-US/docs/Web/JavaScript/Reference/Statements/continue) statement works similarly to `break`, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop.
@@ -489,9 +495,6 @@ Here's the output:
 3. If the square root and the rounded down square root do not equal one another (`!==`), it means that the square root is not an integer, so we are not interested in it. In such a case, we use the `continue` statement to skip on to the next loop iteration without recording the number anywhere.
 4. If the square root is an integer, we skip past the `if` block entirely, so the `continue` statement is not executed; instead, we concatenate the current `i` value plus a space at the end of the paragraph content.
 
-> [!NOTE]
-> You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
-
 ## while and do...while
 
 `for` is not the only type of general loop available in JavaScript. There are actually many others and, while you don't need to understand all of these now, it is worth having a look at the structure of a couple of others so that you can recognize the same features at work in a slightly different way.
@@ -516,10 +519,11 @@ The final-expression is then run after the code inside the loop has run (an iter
 
 Let's have a look again at our cats list example, but rewritten to use a while loop:
 
-```js
-const cats = ["Pete", "Biggles", "Jasmine"];
+```js live-sample___while-loop-cats
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+const pElem = document.querySelector("p");
 
-let myFavoriteCats = "My cats are called ";
+let myFavoriteCats = "My favorite big cats are ";
 
 let i = 0;
 
@@ -533,11 +537,12 @@ while (i < cats.length) {
   i++;
 }
 
-console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
+pElem.textContent = myFavoriteCats;
 ```
 
-> [!NOTE]
-> This still works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/while.html)).
+This still works just the same as expected:
+
+{{embedlivesample("while-loop-cats", "100%", "60")}}
 
 The [`do...while`](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) loop is very similar, but provides a variation on the while structure:
 
@@ -556,10 +561,11 @@ The main difference between a `do...while` loop and a `while` loop is that _the 
 
 Let's rewrite our cat listing example again to use a `do...while` loop:
 
-```js
-const cats = ["Pete", "Biggles", "Jasmine"];
+```js live-sample___do-while-loop-cats
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+const pElem = document.querySelector("p");
 
-let myFavoriteCats = "My cats are called ";
+let myFavoriteCats = "My favorite big cats are ";
 
 let i = 0;
 
@@ -573,11 +579,12 @@ do {
   i++;
 } while (i < cats.length);
 
-console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
+pElem.textContent = myFavoriteCats;
 ```
 
-> [!NOTE]
-> Again, this works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)).
+Again, this works just the same as expected:
+
+{{embedlivesample("do-while-loop-cats", "100%", "60")}}
 
 > [!WARNING]
 > With any kind of loop, you must make sure that the initializer is incremented or, depending on the case, decremented, so the condition eventually becomes false.
@@ -591,7 +598,7 @@ To complete the exercise:
 
 1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
 2. Add code to loop from 10 down to 0. We've provided you with an initializer — `let i = 10;`.
-3. For each iteration, create a new paragraph and append it to the output `<div>`, which we've selected using `const output = document.querySelector('.output');`. We've provided you with three code lines inside comment that need to be used somewhere inside the loop:
+3. For each iteration, create a new paragraph and append it to the output `<div>`, which we've selected using `const output = document.querySelector('.output');`. We've provided you with three code lines inside comments that need to be used somewhere inside the loop:
    1. `const para = document.createElement('p');` — creates a new paragraph.
    2. `output.appendChild(para);` — appends the paragraph to the output `<div>`.
    3. `para.textContent =` — makes the text inside the paragraph equal to whatever you put on the right-hand side, after the equals sign.
@@ -702,7 +709,7 @@ Have a look at the [Useful string methods](/en-US/docs/Learn_web_development/Cor
 If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
 
 ```html hidden live-sample___loops-2
-<div class="output" style="height: 100px;overflow: auto;">
+<div class="output">
   <p class="admitted">Admit:</p>
   <p class="refused">Refuse:</p>
 </div>
@@ -850,16 +857,12 @@ do {
 > [!NOTE]
 > There are other loop types/features too, which are useful in advanced/specialized situations and beyond the scope of this article. If you want to go further with your loop learning, read our advanced [Loops and iteration guide](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration).
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Loops](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Loops).
-
 ## Summary
 
 This article has revealed to you the basic concepts behind, and different options available when looping code in JavaScript.
 You should now be clear on why loops are a good mechanism for dealing with repetitive code and raring to use them in your own examples!
 
-Next up, we'll look at functions.
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained this information.
 
 ## See also
 
@@ -869,4 +872,4 @@ Next up, we'll look at functions.
 - [while](/en-US/docs/Web/JavaScript/Reference/Statements/while) and [do...while](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) references
 - [break](/en-US/docs/Web/JavaScript/Reference/Statements/break) and [continue](/en-US/docs/Web/JavaScript/Reference/Statements/continue) references
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Conditionals","Learn_web_development/Core/Scripting/Test_your_skills/Loops", "Learn_web_development/Core/Scripting")}}

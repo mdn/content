@@ -22,7 +22,7 @@ console.log(new RegExp("bar", "g").toString());
 // Expected output: "/bar/g"
 
 console.log(new RegExp("\n", "g").toString());
-// Expected output (if your browser supports escaping): "/\n/g"
+// Expected output: "/\n/g"
 
 console.log(new RegExp("\\n", "g").toString());
 // Expected output: "/\n/g"
@@ -82,4 +82,5 @@ new RegExp("\n").toString() === "/\\n/"; // true
 
 ## See also
 
+- [Polyfill of modern `RegExp.prototype.toString` behavior in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - {{jsxref("Object.prototype.toString()")}}

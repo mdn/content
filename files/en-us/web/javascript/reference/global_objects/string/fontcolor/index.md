@@ -9,8 +9,6 @@ browser-compat: javascript.builtins.String.fontcolor
 sidebar: jsref
 ---
 
-{{Deprecated_Header}}
-
 The **`fontcolor()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("font")}} element (`<font color="...">str</font>`), which causes this string to be displayed in the specified font color.
 
 > [!NOTE]
@@ -25,7 +23,7 @@ fontcolor(color)
 ### Parameters
 
 - `color`
-  - : A string expressing the color as a hexadecimal RGB triplet or as a string literal. String literals for color names are listed in the [CSS color reference](/en-US/docs/Web/CSS/color_value).
+  - : A string expressing the color as a hexadecimal RGB triplet or as a string literal. String literals for color names are listed in the [CSS color reference](/en-US/docs/Web/CSS/Reference/Values/color_value).
 
 ### Return value
 
@@ -72,7 +70,7 @@ document.getElementById("yourElemId").style.color = "red";
 
 ## See also
 
-- [Polyfill of `String.prototype.fontcolor` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.fontcolor` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - [es-shims polyfill of `String.prototype.fontcolor`](https://www.npmjs.com/package/es-string-html-methods)
 - [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)
 - {{HTMLElement("font")}}

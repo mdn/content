@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.TypedArray.every
 sidebar: jsref
 ---
 
-The **`every()`** method of {{jsxref("TypedArray")}} instances tests whether all elements in the typed array pass the test implemented by the provided function. It returns a Boolean value. This method has the same algorithm as {{jsxref("Array.prototype.every()")}}.
+The **`every()`** method of {{jsxref("TypedArray")}} instances returns `false` if it finds an element in the array that does not satisfy the provided testing function. Otherwise, it returns `true`. This method has the same algorithm as {{jsxref("Array.prototype.every()")}}.
 
 {{InteractiveExample("JavaScript Demo: TypedArray.prototype.every()")}}
 
@@ -74,7 +74,7 @@ new Uint8Array([12, 54, 18, 130, 44]).every(isBigEnough); // true
 
 ## See also
 
-- [Polyfill of `TypedArray.prototype.every` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.every` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.forEach()")}}

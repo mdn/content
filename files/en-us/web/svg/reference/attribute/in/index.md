@@ -2,7 +2,7 @@
 title: in
 slug: Web/SVG/Reference/Attribute/in
 page-type: svg-attribute
-spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-in
+spec-urls: https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-primitive-in
 sidebar: svgref
 ---
 
@@ -100,7 +100,7 @@ You can use this attribute with the following SVG elements:
     cx="50%"
     cy="40%"
     r="40%"
-    fill="#c00"
+    fill="#cc0000"
     filter="url(#backgroundMultiply)" />
 </svg>
 
@@ -119,7 +119,12 @@ You can use this attribute with the following SVG elements:
       <feBlend in2="SourceGraphic" mode="multiply" />
     </filter>
   </defs>
-  <circle cx="50%" cy="40%" r="40%" fill="#c00" filter="url(#imageMultiply)" />
+  <circle
+    cx="50%"
+    cy="40%"
+    r="40%"
+    fill="#cc0000"
+    filter="url(#imageMultiply)" />
 </svg>
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: Firefox 17 for developers
+title: Firefox 17 release notes for developers
 short-title: Firefox 17
 slug: Mozilla/Firefox/Releases/17
 page-type: firefox-release-notes
@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 17 shipped on November 20, 2012. This article lists key changes that are useful for not only web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### HTML
 

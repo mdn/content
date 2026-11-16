@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.formatToParts
 sidebar: jsref
 ---
 
-The **`formatToParts()`** method of {{jsxref("Intl.DateTimeFormat")}} instances returns an array of objects representing each part of the formatted string that would be returned by {{jsxref("Intl/DatetimeFormat/format", "format()")}}. It is useful for building custom strings from the locale-specific tokens.
+The **`formatToParts()`** method of {{jsxref("Intl.DateTimeFormat")}} instances returns an array of objects representing each part of the formatted string that would be returned by {{jsxref("Intl/DateTimeFormat/format", "format()")}}. It is useful for building custom strings from the locale-specific tokens.
 
 {{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.formatToParts()", "taller")}}
 
@@ -25,7 +25,7 @@ const parts = dateTimeFormat.formatToParts(date);
 const partValues = parts.map((p) => p.value);
 
 console.log(partValues);
-// Expected output: "["Friday", ", ", "June", " ", "1", ", ", "2012"]"
+// Expected output: Array ["Friday", ", ", "June", " ", "1", ", ", "2012"]
 ```
 
 ## Syntax
@@ -49,7 +49,7 @@ formatToParts(date)
 An {{jsxref("Array")}} of objects containing the formatted date in parts. Each object has two properties, `type` and `value`, each containing a string. The string concatenation of `value`, in the order provided, will result in the same string as {{jsxref("Intl/DateTimeFormat/format", "format()")}}. The `type` may be one of the [date-time components](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#date-time_component_options):
 
 - `weekday`
-  - : For example `"M"`, `"Monday"`, or `"Montag"`.
+  - : For example `"T"`, `"Tuesday"`, or `"Dienstag"`.
 - `era`
   - : For example `"BC"` or `"AD"`.
 - `year`
@@ -128,6 +128,7 @@ formatter.formatToParts(date);
   { type: "minute", value: "00" },
   { type: "literal", value: ":" },
   { type: "second", value: "42" },
+  { type: "literal", value: "." },
   { type: "fractionalSecond", value: "000" },
   { type: "literal", value: " " },
   { type: "dayPeriod", value: "AM" },
@@ -170,7 +171,7 @@ df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
 ];
 ```
 
-Sometimes, the combination of date-time component options maps to a format that also includes a `yearName`. There isn't a separate option that controls whether `yearName` is displayed or not. For example, the options below sets `month` to `"long"` and results in a `yearName` token, despite `year` still being `"numeric"`:
+Sometimes, the combination of date-time component options maps to a format that also includes a `yearName`. There isn't a separate option that controls whether `yearName` is displayed or not. For example, the options below set `month` to `"long"` and result in a `yearName` token, despite `year` still being `"numeric"`:
 
 ```js
 const opts = { year: "numeric", month: "long", day: "numeric" };

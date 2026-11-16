@@ -8,7 +8,7 @@ status:
 browser-compat: api.Element.keypress_event
 ---
 
-{{APIRef}} {{deprecated_header}}
+{{APIRef("UI Events")}}
 
 The **`keypress`** event is fired when a [letter, number, punctuation, or symbol](https://w3c.github.io/uievents/#unicode-character-categories) key is pressed, or else when the <kbd>Enter</kbd> key is pressed — including when the <kbd>Enter</kbd> key is pressed in combination with the <kbd>Shift</kbd> key or <kbd>Ctrl</kbd> key. Otherwise, when a modifier key such as the <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, <kbd>Meta</kbd>, <kbd>Esc</kbd>, or <kbd>Option</kbd> key is pressed in isolation, the `keypress` event is _not_ fired.
 
@@ -19,11 +19,15 @@ The event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbl
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("keypress", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onkeypress = (event) => { }
 ```
 
@@ -33,38 +37,11 @@ A {{domxref("KeyboardEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxr
 
 {{InheritanceDiagram("KeyboardEvent")}}
 
-## Event properties
-
-_This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
-
-- {{domxref("KeyboardEvent.altKey")}} {{ReadOnlyInline}}
-  - : Returns a boolean value that is `true` if the <kbd>Alt</kbd> (<kbd>Option</kbd> or <kbd>⌥</kbd> on macOS) key was active when the key event was generated.
-
-- {{domxref("KeyboardEvent.code")}} {{ReadOnlyInline}}
-  - : Returns a string with the code value of the physical key represented by the event.
-
-- {{domxref("KeyboardEvent.ctrlKey")}} {{ReadOnlyInline}}
-  - : Returns a boolean value that is `true` if the <kbd>Ctrl</kbd> key was active when the key event was generated.
-
-- {{domxref("KeyboardEvent.isComposing")}} {{ReadOnlyInline}}
-  - : Returns a boolean value that is `true` if the event is fired between after `compositionstart` and before `compositionend`.
-- {{domxref("KeyboardEvent.key")}} {{ReadOnlyInline}}
-  - : Returns a string representing the key value of the key represented by the event.
-- {{domxref("KeyboardEvent.location")}} {{ReadOnlyInline}}
-  - : Returns a number representing the location of the key on the keyboard or other input device. A list of the constants identifying the locations is shown in [Keyboard locations](/en-US/docs/Web/API/KeyboardEvent#keyboard_locations).
-- {{domxref("KeyboardEvent.metaKey")}} {{ReadOnlyInline}}
-  - : Returns a boolean value that is `true` if the <kbd>Meta</kbd> key (on Mac keyboards, the <kbd>⌘ Command</kbd> key; on Windows keyboards, the Windows key (<kbd>⊞</kbd>)) was active when the key event was generated.
-
-- {{domxref("KeyboardEvent.repeat")}} {{ReadOnlyInline}}
-  - : Returns a boolean value that is `true` if the key is being held down such that it is automatically repeating.
-- {{domxref("KeyboardEvent.shiftKey")}} {{ReadOnlyInline}}
-  - : Returns a boolean value that is `true` if the <kbd>Shift</kbd> key was active when the key event was generated.
-
 ## Examples
 
 ### addEventListener keypress example
 
-This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press a key after focussing the {{htmlelement("input")}} element.
+This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press a key after focusing the {{htmlelement("input")}} element.
 
 To see which keys cause a `keypress` event to fire, and which keys don't, try pressing the following:
 
@@ -96,7 +73,9 @@ function logKey(e) {
 
 {{EmbedLiveSample("addEventListener_keypress_example")}}
 
-### onkeypress equivalent
+### Using the `onkeypress` event handler property
+
+You can also use the `onkeypress` event handler property (but note that this replaces other event listeners added using `onkeypress`, if any):
 
 ```js
 input.onkeypress = logKey;

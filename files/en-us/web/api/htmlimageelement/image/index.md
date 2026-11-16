@@ -13,7 +13,7 @@ constructor creates a new {{DOMxRef("HTMLImageElement")}} instance. It is functi
 equivalent to {{DOMxRef("Document.createElement()", "document.createElement('img')")}}.
 
 > [!NOTE]
-> This function should not be confused with the CSS [`image()`](/en-US/docs/Web/CSS/image/image) function.
+> This function should not be confused with the CSS [`image()`](/en-US/docs/Web/CSS/Reference/Values/image/image) function.
 
 ## Syntax
 

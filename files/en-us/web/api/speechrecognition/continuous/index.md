@@ -8,29 +8,26 @@ browser-compat: api.SpeechRecognition.continuous
 
 {{APIRef("Web Speech API")}}
 
-The **`continuous`** property of the
-{{domxref("SpeechRecognition")}} interface controls whether continuous results are
-returned for each recognition, or only a single result.
+The **`continuous`** property of the {{domxref("SpeechRecognition")}} interface represents whether recognition returns a single final result, or multiple final results from consecutive recognitions.
 
-It defaults to single results (`false`.)
+The default value is `false`.
 
 ## Value
 
-A boolean value representing the current `SpeechRecognition`'s
-continuous status. `true` means continuous, and `false` means not
-continuous (single result each time.)
+A boolean value.
+
+- `true` means recognition can return any number of final results, one for each consecutive recognition, as in dictation.
+- `false` (the default) means recognition returns at most one final result.
+
+This setting doesn't affect interim results.
+See {{domxref("SpeechRecognition.interimResults")}}.
 
 ## Examples
 
 This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
-const grammar =
-  "#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;";
 const recognition = new SpeechRecognition();
-const speechRecognitionList = new SpeechGrammarList();
-speechRecognitionList.addFromString(grammar, 1);
-recognition.grammars = speechRecognitionList;
 recognition.continuous = false;
 recognition.lang = "en-US";
 recognition.interimResults = false;

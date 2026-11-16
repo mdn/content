@@ -46,7 +46,7 @@ The {{cssxref("object-fit")}} property makes each of these approaches possible. 
 }
 
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
 }
 
 .box img {

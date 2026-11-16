@@ -8,7 +8,7 @@ status:
 browser-compat: api.CustomEvent.initCustomEvent
 ---
 
-{{APIRef("DOM")}}{{Deprecated_header}}{{AvailableInWorkers}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`CustomEvent.initCustomEvent()`** method initializes a {{domxref("CustomEvent")}} object.
 If the event has already been dispatched, this method does nothing.
@@ -21,7 +21,7 @@ Once dispatched, it doesn't do anything anymore.
 > **Do not use this method anymore, as it is deprecated.**
 >
 > Rather than using the feature, instead use specific event constructors, like {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}.
-> The page on [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events) gives more information about the way to use those.
+> The section on [Creating and dispatching events](/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events) gives more information about the way to use those.
 
 ## Syntax
 

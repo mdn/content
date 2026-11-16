@@ -67,7 +67,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td><code>background</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
-        Use CSS <a href="/en-US/docs/Web/CSS/background-color"><code>background-color</code></a> instead.
+        Use CSS <a href="/en-US/docs/Web/CSS/Reference/Properties/background-color"><code>background-color</code></a> instead.
       </td>
     </tr>
     <tr>
@@ -79,7 +79,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td><code>color</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
-        Use CSS <a href="/en-US/docs/Web/CSS/color"><code>color</code></a> instead.
+        Use CSS <a href="/en-US/docs/Web/CSS/Reference/Properties/color"><code>color</code></a> instead.
       </td>
     </tr>
     <tr>
@@ -145,7 +145,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td>
         <p>
         A <a href="/en-US/docs/Web/MathML/Reference/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> specifying whether to set the
-        <a href="/en-US/docs/Web/CSS/math-style">math-style</a>
+        <a href="/en-US/docs/Web/CSS/Reference/Properties/math-style">math-style</a>
         to <code>normal</code> (if true) or <code>compact</code> (otherwise).
         </p>
       </td>
@@ -162,28 +162,28 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td><code>fontfamily</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
-        Use CSS <a href="/en-US/docs/Web/CSS/font-family"><code>font-family</code></a> instead.
+        Use CSS <a href="/en-US/docs/Web/CSS/Reference/Properties/font-family"><code>font-family</code></a> instead.
       </td>
     </tr>
     <tr>
       <td><code>fontsize</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
-        Use CSS <a href="/en-US/docs/Web/CSS/font-size"><code>font-size</code></a> instead.
+        Use CSS <a href="/en-US/docs/Web/CSS/Reference/Properties/font-size"><code>font-size</code></a> instead.
       </td>
     </tr>
     <tr>
       <td><code>fontstyle</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
-        Use CSS <a href="/en-US/docs/Web/CSS/font-style"><code>font-style</code></a> instead.
+        Use CSS <a href="/en-US/docs/Web/CSS/Reference/Properties/font-style"><code>font-style</code></a> instead.
       </td>
     </tr>
     <tr>
       <td><code>fontweight</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
-        Use CSS <a href="/en-US/docs/Web/CSS/font-weight"><code>font-weight</code></a> instead.
+        Use CSS <a href="/en-US/docs/Web/CSS/Reference/Properties/font-weight"><code>font-weight</code></a> instead.
       </td>
     </tr>
     <tr>
@@ -257,21 +257,21 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td><code>mathbackground</code></td>
       <td><a href="/en-US/docs/Web/MathML/Reference/Global_attributes">All MathML elements</a></td>
       <td>
-        A <a href="/en-US/docs/Web/CSS/background-color">background-color</a> for the element.
+        A <a href="/en-US/docs/Web/CSS/Reference/Properties/background-color">background-color</a> for the element.
       </td>
     </tr>
     <tr>
       <td><code>mathcolor</code></td>
       <td><a href="/en-US/docs/Web/MathML/Reference/Global_attributes">All MathML elements</a></td>
       <td>
-        A <a href="/en-US/docs/Web/CSS/color">color</a> for the element.
+        A <a href="/en-US/docs/Web/CSS/Reference/Properties/color">color</a> for the element.
       </td>
     </tr>
     <tr>
       <td><code>mathsize</code></td>
       <td><a href="/en-US/docs/Web/MathML/Reference/Global_attributes">All MathML elements</a></td>
       <td>
-        A {{cssxref("length-percentage")}} used as a <a href="/en-US/docs/Web/CSS/font-size"><code>font-size</code></a> for the element.
+        A {{cssxref("length-percentage")}} used as a <a href="/en-US/docs/Web/CSS/Reference/Properties/font-size"><code>font-size</code></a> for the element.
       </td>
     </tr>
     <tr>
@@ -293,7 +293,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td><code>movablelimits</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        A <a href="/en-US/docs/Web/MathML/Reference/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether attached under- and overscripts move to sub- and superscript positions when <a href="/en-US/docs/Web/CSS/math-style">math-style</a> is set to <code>compact</code>.
+        A <a href="/en-US/docs/Web/MathML/Reference/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether attached under- and overscripts move to sub- and superscript positions when <a href="/en-US/docs/Web/CSS/Reference/Properties/math-style">math-style</a> is set to <code>compact</code>.
       </td>
     </tr>
     <tr>
@@ -357,7 +357,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td><code>scriptlevel</code></td>
       <td><a href="/en-US/docs/Web/MathML/Reference/Global_attributes">All MathML elements</a></td>
       <td>
-        Specifies a <a href="/en-US/docs/Web/CSS/math-depth">math-depth</a> for the element. See the <a href="/en-US/docs/Web/MathML/Reference/Global_attributes/scriptlevel#values">scriptlevel page</a> for accepted values and mapping.
+        Specifies a <a href="/en-US/docs/Web/CSS/Reference/Properties/math-depth">math-depth</a> for the element. See the <a href="/en-US/docs/Web/MathML/Reference/Global_attributes/scriptlevel#values">scriptlevel page</a> for accepted values and mapping.
       </td>
     </tr>
     <tr>

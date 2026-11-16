@@ -23,6 +23,7 @@ Like other filter primitives, it handles color components in the `linearRGB` {{g
 - {{SVGAttr("specularConstant")}}
 - {{SVGAttr("specularExponent")}}
 - {{SVGAttr("kernelUnitLength")}}
+- [Filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes): {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("result")}}
 
 ## DOM Interface
 

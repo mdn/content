@@ -5,7 +5,7 @@ page-type: tutorial-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics", "Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text", "Learn_web_development/Core/Structuring_content")}}
 
 There are many other elements in HTML for defining text semantics, which we didn't get to in the [Emphasis and importance](/en-US/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance) article. The elements described in this article are less known, but still useful to know about (and this is still not a complete list by any means). Here you'll learn about marking up quotations, computer code and other related text, subscript and superscript, contact information, and more.
 
@@ -314,9 +314,7 @@ There are a number of elements available for marking up computer code using HTML
 - {{htmlelement("kbd")}}: For marking up keyboard (and other types of) input entered into the computer.
 - {{htmlelement("samp")}}: For marking up the output of a computer program.
 
-Let's look at examples of these elements and how they're used to represent computer code.
-If you want to see the full file, take a look at the [other-semantics.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/advanced-text-formatting/other-semantics.html) sample file.
-You can download the file and open it in your browser to see for yourself, but here is a snippet of the code:
+Let's look at examples of these elements and how they're used to represent computer code:
 
 ```html
 <pre><code>const para = document.querySelector('p');
@@ -342,7 +340,7 @@ para.onclick = function() {
 64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
 ```
 
-The above code will look like so:
+The above code renders like so:
 
 {{ EmbedLiveSample('Representing_computer_code','100%',350) }}
 
@@ -395,12 +393,10 @@ The basic example above just provides a simple machine readable date, but there 
 <time datetime="2016-W04">The fourth week of 2016</time>
 ```
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Advanced HTML text](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text).
-
 ## Summary
 
-That marks the end of our study of less-common HTML text semantics. What you have seen during this course is not an exhaustive list of HTML text elements — we wanted to try to cover the essentials, and some of the more common ones you will see in the wild. Next up, we'll look at links, one of the most important features of the web.
+That marks the end of our study of less-common HTML text semantics. What you have seen during this course is not an exhaustive list of HTML text elements — we wanted to try to cover the essentials, and some of the more common ones you will see in the wild.
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}
+Next up, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on less-common HTML text features.
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics", "Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text", "Learn_web_development/Core/Structuring_content")}}

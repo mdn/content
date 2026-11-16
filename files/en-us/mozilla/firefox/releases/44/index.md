@@ -1,15 +1,15 @@
 ---
-title: Firefox 44 for developers
+title: Firefox 44 release notes for developers
 short-title: Firefox 44
 slug: Mozilla/Firefox/Releases/44
 page-type: firefox-release-notes
 sidebar: firefox
 ---
 
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/).
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/).
 Firefox 44 was released on January 26, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer tools
 
@@ -83,7 +83,7 @@ Highlights:
 #### Changes
 
 - The [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) bindings in the global level have been made compliant with ES2015 semantics. See [Firefox bug 589199](https://bugzil.la/589199) and the blog post ["Breaking changes in let and const in Firefox Nightly 44"](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/). In addition, `let` is now available to default Web JavaScript (strict and non-strict) and does not require a version opt-in anymore ([Firefox bug 932517](https://bugzil.la/932517)).
-- If [typed arrays'](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) (like {{jsxref("Int8Array", "Int8Array")}}) and {{jsxref("ArrayBuffer", "ArrayBuffer")}}) constructors are called as a function without the {{jsxref("Operators/new", "new")}} operator, a {{jsxref("TypeError")}} is now thrown as per the ES2015 specification ([Firefox bug 980945](https://bugzil.la/980945), [Firefox bug 1214936](https://bugzil.la/1214936)).
+- If [typed arrays'](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) (like {{jsxref("Int8Array", "Int8Array")}}) and {{jsxref("ArrayBuffer", "ArrayBuffer")}}) constructors are called as a function without the {{jsxref("new")}} operator, a {{jsxref("TypeError")}} is now thrown as per the ES2015 specification ([Firefox bug 980945](https://bugzil.la/980945), [Firefox bug 1214936](https://bugzil.la/1214936)).
 - The {{jsxref("RegExp")}} sticky flag now follows the ES2015 standard for [anchored sticky regular expressions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky#anchored_sticky_flag) ([Firefox bug 773687](https://bugzil.la/773687)).
 - The JavaScript shell (SpiderMonkey's REPL) now defaults to the default, Web-compatible JS version (and not JS1.7+ anymore) ([Firefox bug 1192329](https://bugzil.la/1192329)).
 
@@ -203,12 +203,12 @@ _No change._
 ### JavaScript code modules
 
 - Added `LIKE` support to Sqlite.jsm ([Firefox bug 1188760](https://bugzil.la/1188760)).
-- Added [Snackbars.jsm](/en-US/docs/Mozilla/Add-ons/Firefox_for_Android/API/Snackbars.jsm) module to [Firefox for Android](/en-US/docs/Mozilla/Firefox_for_Android) ([Firefox bug 1215026](https://bugzil.la/1215026))
+- Added [Snackbars.jsm](https://web.archive.org/web/20160423072423/https://developer.mozilla.org/en-US/Add-ons/Firefox_for_Android/API/Snackbars.jsm) module to [Firefox for Android](https://web.archive.org/web/20210518020027/https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_for_Android) ([Firefox bug 1215026](https://bugzil.la/1215026))
 
 ### XPCOM
 
-- The `nsIDOMWindow` interface is now empty. Its contents were either no longer used, had moved elsewhere, or were only used from C++. The items available from C++ code now reside in the [nsPIDOMWindow](https://searchfox.org/mozilla-central/source/dom/base/nsPIDOMWindow.h) interface ([Firefox bug 1216401](https://bugzil.la/1216401)).
+- The `nsIDOMWindow` interface is now empty. Its contents were either no longer used, had moved elsewhere, or were only used from C++. The items available from C++ code now reside in the [nsPIDOMWindow](https://searchfox.org/firefox-main/source/dom/base/nsPIDOMWindow.h) interface ([Firefox bug 1216401](https://bugzil.la/1216401)).
 
 ### Other
 
-- Due to breaking changes in Firefox 44 ([bug 1202902](https://bugzil.la/1202902)), add-ons packed with [cfx](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx) will not work any longer. To make your add-on compatible again, please use [jpm](/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm). See the [_cfx_ to _jpm_ migration guide](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx_to_jpm).
+- Due to breaking changes in Firefox 44 ([bug 1202902](https://bugzil.la/1202902)), add-ons packed with [cfx](https://web.archive.org/web/20201201072958/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/Tools/cfx) will not work any longer. To make your add-on compatible again, please use [jpm](https://web.archive.org/web/20210221222338/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/Tools/jpm). See the [_cfx_ to _jpm_ migration guide](https://web.archive.org/web/20181116093809/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/Tools/cfx_to_jpm).

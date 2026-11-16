@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Document.caretPositionFromPoint
 ---
 
-{{APIRef("CSSOM View")}}
+{{APIRef("CSSOM view API")}}
 
 The **`caretPositionFromPoint()`** method of the {{domxref("Document")}} interface returns a {{domxref('CaretPosition')}} object, containing the DOM node, along with the caret and caret's character offset within that node.
 
@@ -158,7 +158,7 @@ The method is the added as the click event handler for any paragraph elements.
 ```js
 const paragraphs = document.getElementsByTagName("p");
 for (const paragraph of paragraphs) {
-  paragraph.addEventListener("click", insertBreakAtPoint, false);
+  paragraph.addEventListener("click", insertBreakAtPoint);
 }
 ```
 
@@ -382,14 +382,14 @@ Note that we need to specifically query the elements within the `shadowRoot` as 
 // Click event handler <p> elements in the DOM
 const paragraphs = document.getElementsByTagName("p");
 for (const paragraph of paragraphs) {
-  paragraph.addEventListener("click", insertBreakAtPoint, false);
+  paragraph.addEventListener("click", insertBreakAtPoint);
 }
 
 // Click event handler <p> elements in the Shadow DOM
 const shadowParagraphs = host.shadowRoot.querySelectorAll("p");
 for (const paragraph of shadowParagraphs) {
   console.log(paragraph);
-  paragraph.addEventListener("click", insertBreakAtPoint, false);
+  paragraph.addEventListener("click", insertBreakAtPoint);
 }
 ```
 

@@ -1,12 +1,15 @@
 ---
-title: "<kbd>: The Keyboard Input element"
+title: "`<kbd>` HTML keyboard input element"
+short-title: <kbd>
 slug: Web/HTML/Reference/Elements/kbd
 page-type: html-element
 browser-compat: html.elements.kbd
 sidebar: htmlsidebar
 ---
 
-The **`<kbd>`** [HTML](/en-US/docs/Web/HTML) element represents a span of inline text denoting textual user input from a keyboard, voice input, or any other text entry device. By convention, the {{Glossary("user agent")}} defaults to rendering the contents of a `<kbd>` element using its default monospace font, although this is not mandated by the HTML standard.
+The **`<kbd>`** [HTML](/en-US/docs/Web/HTML) element represents user input (typically keyboard input). By default, the content text is displayed using the {{Glossary("user agent", "user agent's")}} default monospace font.
+
+`<kbd>` may be nested in various combinations with the {{HTMLElement("samp")}} (Sample Output) element to represent various forms of input or output based on visual cues.
 
 {{InteractiveExample("HTML Demo: &lt;kbd&gt;", "tabbed-shorter")}}
 
@@ -19,23 +22,21 @@ The **`<kbd>`** [HTML](/en-US/docs/Web/HTML) element represents a span of inline
 
 ```css interactive-example
 kbd {
-  background-color: #eee;
+  background-color: #eeeeee;
   border-radius: 3px;
   border: 1px solid #b4b4b4;
   box-shadow:
     0 1px 1px rgb(0 0 0 / 0.2),
     0 2px 0 0 rgb(255 255 255 / 0.7) inset;
-  color: #333;
+  color: #333333;
   display: inline-block;
   font-size: 0.85em;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1;
   padding: 2px 4px;
   white-space: nowrap;
 }
 ```
-
-`<kbd>` may be nested in various combinations with the {{HTMLElement("samp")}} (Sample Output) element to represent various forms of input or output based on visual cues.
 
 ## Attributes
 
@@ -99,7 +100,18 @@ The output looks like this without a style sheet applied:
 
 #### With custom styles
 
-We can make more sense of this by adding some CSS:
+We can make more sense of this by adding some CSS.
+
+##### HTML
+
+We nest `<kbd>` elements to mark up individual keys within the keyboard shortcut:
+
+```html
+<p>
+  You can also create a new document by pressing the
+  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd> shortcut.
+</p>
+```
 
 ##### CSS
 
@@ -111,17 +123,6 @@ kbd > kbd {
   padding: 1px 2px 0;
   border: 1px solid black;
 }
-```
-
-##### HTML
-
-Then we update the HTML to use this class on the keys in the output to be presented:
-
-```html
-<p>
-  You can also create a new document by pressing the
-  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd> shortcut.
-</p>
 ```
 
 ##### Result

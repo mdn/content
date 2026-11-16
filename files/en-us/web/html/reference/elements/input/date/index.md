@@ -1,5 +1,6 @@
 ---
-title: <input type="date">
+title: '`<input type="date">` HTML attribute value'
+short-title: <input type="date">
 slug: Web/HTML/Reference/Elements/input/date
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_date
@@ -82,17 +83,14 @@ If both the `max` and `min` attributes are set, this value must be a date string
 
 ### step
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) otherwise, and an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are a whole number of steps from the step base are valid. The step base is [`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) otherwise, or `0` (the Unix epoch, `1970-01-01`) if neither is provided.
 
-A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
+For `date` inputs, the value of `step` is given in days and is treated as a number of milliseconds equal to 86,400,000 times the `step` value (the underlying numeric value is in milliseconds). The default value is 1, indicating 1 day.
+
+A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)). In reality, it has the same effect as `1` for `date` inputs because the picker UI only allows selecting whole days.
 
 > [!NOTE]
 > When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
-
-For `date` inputs, the value of `step` is given in days; and is treated as a number of milliseconds equal to 86,400,000 times the `step` value (the underlying numeric value is in milliseconds). The default value of `step` is 1, indicating 1 day.
-
-> [!NOTE]
-> Specifying `any` as the value for `step` has the same effect as `1` for `date` inputs.
 
 ## Using date inputs
 
@@ -105,31 +103,25 @@ In this section, we'll look at basic and then more complex uses of `<input type=
 The most basic use of `<input type="date">` involves one `<input>` combined with its {{htmlelement("label")}}, as seen below:
 
 ```html
-<form action="https://example.com">
-  <label>
-    Enter your birthday:
-    <input type="date" name="bday" />
-  </label>
-
-  <p><button>Submit</button></p>
-</form>
+<label>
+  Enter your birthday:
+  <input type="date" name="bday" />
+</label>
 ```
 
 {{EmbedLiveSample('Basic_uses_of_date', 600, 40)}}
 
-This HTML submits the entered date under the key `bday` to `https://example.com` — resulting in a URL like `https://example.com/?bday=1955-06-08`.
+If this input is included in a form submitted to `https://example.com` using the `GET` method, the entered date is sent under the key `bday` — resulting in a URL like `https://example.com/?bday=1955-06-08`.
 
 ### Setting maximum and minimum dates
 
 You can use the [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) and [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max) attributes to restrict the dates that can be chosen by the user. In the following example, we set a minimum date of `2017-04-01` and a maximum date of `2017-04-30`:
 
 ```html
-<form>
-  <label>
-    Choose your preferred party date:
-    <input type="date" name="party" min="2017-04-01" max="2017-04-30" />
-  </label>
-</form>
+<label>
+  Choose your preferred party date:
+  <input type="date" name="party" min="2017-04-01" max="2017-04-30" />
+</label>
 ```
 
 {{EmbedLiveSample('Setting_maximum_and_minimum_dates', 600, 40)}}
@@ -171,11 +163,17 @@ Let's look at an example of minimum and maximum dates, and also make a field req
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 If you try to submit the form with an incomplete date (or with a date outside the set bounds), the browser displays an error. Try playing with the example now:
 
 {{EmbedLiveSample('Validation', 600, 100)}}
 
-Here's the CSS used in the above example. We make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) to add an icon next to the input, based on whether the current value is valid. We had to put the icon on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome at least the input's generated content is placed inside the form control, and can't be styled or shown effectively.
+Here's the CSS used in the above example. We make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) to add an icon next to the input, based on whether the current value is valid. We had to put the icon on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome at least the input's generated content is placed inside the form control, and can't be styled or shown effectively.
 
 ```css
 label {
@@ -208,13 +206,11 @@ In this example, we create a date picker using the native `<input type="date">` 
 The HTML looks like so:
 
 ```html
-<form>
-  <div class="nativeDatePicker">
-    <label for="bday">Enter your birthday:</label>
-    <input type="date" id="bday" name="bday" />
-    <span class="validity"></span>
-  </div>
-</form>
+<div class="nativeDatePicker">
+  <label for="bday">Enter your birthday:</label>
+  <input type="date" id="bday" name="bday" />
+  <span class="validity"></span>
+</div>
 ```
 
 ### CSS
@@ -273,14 +269,6 @@ input:valid + span::after {
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

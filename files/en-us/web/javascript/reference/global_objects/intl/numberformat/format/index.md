@@ -36,7 +36,7 @@ format(number)
 ### Parameters
 
 - `number`
-  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format. Strings are parsed in the same way as in [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), except that `format()` will use the exact value that the string represents, avoiding loss of precision during implicitly conversion to a number.
+  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format. Strings are parsed in the same way as in [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), except that `format()` will use the exact value that the string represents, avoiding loss of precision during implicit conversion to a number.
 
 > [!NOTE]
 > Older versions of the specification parsed strings as a {{jsxref("Number")}}.
@@ -83,7 +83,7 @@ console.log(numberFormat.format(654321.987));
 
 Use the `format` getter function for formatting all numbers in an array.
 Note that the function is bound to the {{jsxref("Intl.NumberFormat")}} from which it was obtained, so it can be passed directly to {{jsxref("Array.prototype.map")}}.
-This is considered a historical artefact, as part of a convention which is no longer followed for new features, but is preserved to maintain compatibility with existing programs.
+This is considered a historical artifact, as part of a convention which is no longer followed for new features, but is preserved to maintain compatibility with existing programs.
 
 ```js
 const a = [123456.789, 987654.321, 456789.123];

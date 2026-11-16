@@ -16,7 +16,7 @@ A `LanguageDetector` instance's `expectedInputLanguages` are set when creating i
 
 ## Value
 
-An array of strings specifying the expected input languages. These will be valid [BCP 47 language tags](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)).
+An array of strings specifying the expected input languages. These will be valid {{glossary("BCP 47 language tag", "BCP 47 language tags")}}.
 
 ## Examples
 

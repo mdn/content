@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.beforeinput_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The DOM **`beforeinput`** event fires when the value of an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element is about to be modified. But in contrast to the {{domxref("Element/input_event", "input")}} event, it does not fire on the {{HTMLElement("select")}} element. The event also applies to elements with {{domxref("HTMLElement.contentEditable", "contenteditable")}} enabled, and to any element when {{domxref("Document.designMode", "designMode")}} is turned on.
 
@@ -19,11 +19,15 @@ In the case of `contenteditable` and `designMode`, the event target is the **edi
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("beforeinput", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onbeforeinput = (event) => { }
 ```
 
@@ -32,19 +36,6 @@ onbeforeinput = (event) => { }
 An {{domxref("InputEvent")}}. Inherits from {{domxref("UIEvent")}}.
 
 {{InheritanceDiagram("InputEvent")}}
-
-## Event properties
-
-_This interface inherits properties from its parents, {{DOMxRef("UIEvent")}} and {{DOMxRef("Event")}}._
-
-- {{DOMxRef("InputEvent.data")}} {{ReadOnlyInline}}
-  - : Returns a string with the inserted characters. This may be an empty string if the change doesn't insert text (for example, when deleting characters).
-- {{DOMxRef("InputEvent.dataTransfer")}} {{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DataTransfer")}} object containing information about richtext or plaintext data being added to or removed from editable content.
-- {{DOMxRef("InputEvent.inputType")}} {{ReadOnlyInline}}
-  - : Returns the type of change for editable content such as, for example, inserting, deleting, or formatting text.
-- {{DOMxRef("InputEvent.isComposing")}} {{ReadOnlyInline}}
-  - : Returns a {{JSxRef("Boolean")}} value indicating if the event is fired after {{domxref("Element/compositionstart_event", "compositionstart")}} and before {{domxref("Element/compositionend_event", "compositionend")}}.
 
 ## Examples
 

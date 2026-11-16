@@ -23,11 +23,15 @@ When the user uses the in-app installation UI to install the app, the in-app ins
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("beforeinstallprompt", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onbeforeinstallprompt = (event) => { }
 ```
 
@@ -36,15 +40,6 @@ onbeforeinstallprompt = (event) => { }
 A {{domxref("BeforeInstallPromptEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("BeforeInstallPromptEvent")}}
-
-## Event properties
-
-_Inherits properties from its parent, {{domxref("Event")}}._
-
-- {{domxref("BeforeInstallPromptEvent.platforms")}} {{ReadOnlyInline}}{{Non-standard_Inline}} {{Experimental_Inline}}
-  - : Returns an array of string items containing the platforms on which the event was dispatched. This is provided for user agents that want to present a choice of versions to the user such as, for example, "web" or "play" which would allow the user to choose between a web version or an Android version.
-- {{domxref("BeforeInstallPromptEvent.userChoice")}} {{ReadOnlyInline}}{{Non-standard_Inline}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Promise")}} that resolves to an object describing the user's choice when they were prompted to install the app.
 
 ## Event methods
 

@@ -34,7 +34,7 @@ In this article, we provide an overview of modern web tooling, what kinds of too
 
 Writing software for the web has become more sophisticated through the ages. Although it is still entirely reasonable to write HTML, CSS, and JavaScript "by hand" there is now a wealth of tools that developers can use to speed up the process of building a website, or app.
 
-There are some extremely well-established tools that have become common "household names" amongst the development community, and new tools are being written and released every day to solve specific problems. You might even find yourself writing a piece of software to aid your own development process, to solve a specific problem that existing tools don't already seem to handle.
+There are some extremely well-established tools that have become common "household names" among the development community, and new tools are being written and released every day to solve specific problems. You might even find yourself writing a piece of software to aid your own development process, to solve a specific problem that existing tools don't already seem to handle.
 
 It is easy to become overwhelmed by the sheer number of tools that can be included in a single project. Equally, a single configuration file for a tool like [webpack](https://webpack.js.org/) can be hundreds of lines long, most of which are magical incantations that seem to do the job but which only a master engineer will fully understand!
 
@@ -61,7 +61,7 @@ Let's look at each one of these in more detail.
 
 The editor, operating system, and browser are all development environments. We will assume that you have already settled down with a choice you are most comfortable with. However, before installing and running other tools, there are yet two choices to make:
 
-- Where you are going to run the tools on. Most tools that are run locally are written in JavaScript, so you need a JavaScript interpreter on your computer that can be invoked from the command line (not the one in your browser). [Node.js](https://nodejs.org/) remains the industry standard and we will use it. [Bun](https://bun.sh/) is intended as a drop-in replacement for Node.js, known for its speed and powerful APIs.
+- Where you are going to run the tools on. Most tools that are run locally are written in JavaScript, so you need a JavaScript interpreter on your computer that can be invoked from the command line (not the one in your browser). [Node.js](https://nodejs.org/) remains the industry standard and we will use it. [Bun](https://bun.com/) is intended as a drop-in replacement for Node.js, known for its speed and powerful APIs.
 - How you are going to install the tools, in other words, the _package manager_. Node provides [npm](https://www.npmjs.com/) by default, so we will use it. [Yarn](https://yarnpkg.com/) and [pnpm](https://pnpm.io/) are other popular choices, each with their own advantages such as speed, project management, etc.
 
 ### Safety net
@@ -106,7 +106,7 @@ Type checkers are tools that help you write more reliable code by checking that 
 
 This stage of your web app lifecycle typically allows you to code in either "future code" (such as the latest CSS or JavaScript features that might not have native support in browsers yet) or code using another language entirely, such as TypeScript. Transformation tools will then generate browser-compatible code for you, to be used in production.
 
-Generally, web development is thought of as three languages: [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting), and there are transformation tools for all of these languages. Transformation offers three main benefits (amongst others):
+Generally, web development is thought of as three languages: [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting), and there are transformation tools for all of these languages. Transformation offers three main benefits (among others):
 
 1. The ability to write code using the latest language features and have that transformed into code that works on everyday devices. For example, you might want to write JavaScript using cutting-edge new language features, but still have your final production code work on older browsers that don't support those features. Good examples here include:
    - [Babel](https://babeljs.io/): A JavaScript compiler that allows developers to write their code using cutting-edge JavaScript, which Babel then takes and converts into old-fashioned JavaScript that more browsers can understand. Developers can also write and publish [plugins for Babel](https://babeljs.io/docs/plugins).
@@ -118,7 +118,7 @@ Generally, web development is thought of as three languages: [HTML](/en-US/docs/
    - Frameworks such as [React](https://react.dev/), [Ember](https://emberjs.com/), and [Vue](https://vuejs.org/): Frameworks provide a lot of functionality for free and allow you to use it via custom syntax built on top of vanilla JavaScript. In the background, the framework's JavaScript code works hard to interpret this custom syntax and render it as a final web app.
 
 3. Optimization. This is provided by _bundlers_, which are tools that get your code ready for production, for example by "[tree-shaking](/en-US/docs/Glossary/Tree_shaking)" to make sure only the parts of your code libraries that you are actually using are put into your final production code, or "[minifying](/en-US/docs/Glossary/Minification)" to remove all the whitespace in your production code, making it as small as possible before it is uploaded to a server. For example:
-   - [Webpack](https://webpack.js.org/) has been the most popular bundler for a long time, featuring a huge number of plugins and a powerful configuration system. However, it is also known for being quite complex to set up, and is slow compared to more modern alternatives.
+   - [webpack](https://webpack.js.org/) has been the most popular bundler for a long time, featuring a huge number of plugins and a powerful configuration system. However, it is also known for being quite complex to set up, and is slow compared to more modern alternatives.
    - [Vite](https://vite.dev/) is a more modern build tool that is popular for its speed, simplicity, and richness of features.
 
 ### Post development

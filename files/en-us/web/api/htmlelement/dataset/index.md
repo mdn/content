@@ -18,6 +18,10 @@ of the {{DOMxRef("HTMLElement")}} interface provides read/write access to [custo
 > Instead, all writes must be to the individual properties within the
 > `dataset`, which in turn represent the data attributes.
 
+## Value
+
+A {{domxref("DOMStringMap")}}.
+
 An HTML `data-*` attribute and its corresponding DOM
 `dataset.property` modify their shared name according to where
 they are read or written:
@@ -79,10 +83,6 @@ For example, a `data-abc-def` attribute corresponds to
   converted into `data-example="null"`.
 
 - To remove an attribute, you can use the [`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete): `delete element.dataset.keyname`.
-
-## Value
-
-A {{domxref("DOMStringMap")}}.
 
 ## Examples
 

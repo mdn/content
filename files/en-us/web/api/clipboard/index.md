@@ -17,7 +17,7 @@ The system clipboard is exposed through the global {{domxref("Navigator.clipboar
 All of the Clipboard API methods operate asynchronously; they return a {{jsxref("Promise")}} which is resolved once the clipboard access has been completed.
 The promise is rejected if clipboard access is denied.
 
-All the methods require a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+All the methods require a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 Additional requirements for using the API are discussed in the [Security consideration](/en-US/docs/Web/API/Clipboard_API#security_considerations) section of the API overview topic.
 
 ## Instance methods
@@ -25,13 +25,19 @@ Additional requirements for using the API are discussed in the [Security conside
 _`Clipboard` is based on the {{domxref("EventTarget")}} interface, and includes its methods._
 
 - {{domxref("Clipboard.read()","read()")}}
-  - : Requests arbitrary data (such as images) from the clipboard, returning a {{jsxref("Promise")}} that resolves with an array of {{domxref("ClipboardItem")}} objects containing the clipboard's contents.
+  - : Reads the items on the system clipboard, returning a {{jsxref("Promise")}} that is fulfilled when the operation completes.
+    Each item is a {{domxref("ClipboardItem")}} that can contain several representations of the copied data, such as versions in HTML and text.
 - {{domxref("Clipboard.readText()","readText()")}}
   - : Requests text from the system clipboard, returning a {{jsxref("Promise")}} that is fulfilled with a string containing the clipboard's text once it's available.
 - {{domxref("Clipboard.write()","write()")}}
-  - : Writes arbitrary data to the system clipboard, returning a {{jsxref("Promise")}} that resolves when the operation completes.
+  - : Writes one or more {{domxref("ClipboardItem")}} objects to the system clipboard, returning a {{jsxref("Promise")}} that is fulfilled when the operation completes.
 - {{domxref("Clipboard.writeText()","writeText()")}}
   - : Writes text to the system clipboard, returning a {{jsxref("Promise")}} that is resolved once the text is fully copied into the clipboard.
+
+## Events
+
+- {{domxref("Clipboard.clipboardchange_event","clipboardchange")}} {{experimental_inline}}
+  - : Fired when the system clipboard contents are changed in any way, for example via a system copy command, or via an API method such as {{domxref("Clipboard.writeText()")}}.
 
 ## Specifications
 

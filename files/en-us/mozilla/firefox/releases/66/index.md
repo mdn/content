@@ -1,5 +1,5 @@
 ---
-title: Firefox 66 for developers
+title: Firefox 66 release notes for developers
 short-title: Firefox 66
 slug: Mozilla/Firefox/Releases/66
 page-type: firefox-release-notes
@@ -27,8 +27,8 @@ This article provides information about the changes in Firefox 66 that will affe
 ### CSS
 
 - [Scroll anchoring](https://drafts.csswg.org/css-scroll-anchoring/) has been implemented in Firefox Desktop (but not mobile yet), which includes the {{cssxref("overflow-anchor")}} property ([Firefox bug 1305957](https://bugzil.la/1305957)).
-- We've implemented the case-sensitive [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) modifier, `s` ([Firefox bug 1512386](https://bugzil.la/1512386)).
-- Several [logical property](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) shorthands have landed, along with the flow-relative border radius properties:
+- We've implemented the case-sensitive [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) modifier, `s` ([Firefox bug 1512386](https://bugzil.la/1512386)).
+- Several [logical property](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) shorthands have landed, along with the flow-relative border radius properties:
   - {{cssxref("padding-block")}} and {{cssxref("padding-inline")}} ([Firefox bug 1519847](https://bugzil.la/1519847)).
   - {{cssxref("margin-block")}} and {{cssxref("margin-inline")}} ([Firefox bug 1519944](https://bugzil.la/1519944)).
   - {{cssxref("inset")}}, {{cssxref("inset-block")}}, and {{cssxref("inset-inline")}} ([Firefox bug 1520229](https://bugzil.la/1520229)).

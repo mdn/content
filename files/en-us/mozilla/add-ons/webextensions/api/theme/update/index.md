@@ -37,7 +37,7 @@ const sunTheme = {
   },
   colors: {
     frame: "#CF723F",
-    tab_background_text: "#111",
+    tab_background_text: "#111111",
   },
 };
 
@@ -53,7 +53,7 @@ const day = {
   },
   colors: {
     frame: "#CF723F",
-    tab_background_text: "#111",
+    tab_background_text: "#111111",
   },
 };
 

@@ -1,5 +1,5 @@
 ---
-title: HTML exportparts global attribute
+title: "`exportparts` HTML global attribute"
 short-title: exportparts
 slug: Web/HTML/Reference/Global_attributes/exportparts
 page-type: html-attribute
@@ -61,6 +61,17 @@ First, let's create a card component that we will then wrap with another compone
 </card-component>
 ```
 
+#### CSS
+
+We style parts of the `<card-component>` shadow tree using the {{cssxref("::part")}} pseudo-element:
+
+```css
+::part(body) {
+  color: red;
+  font-style: italic;
+}
+```
+
 #### JavaScript
 
 We use JavaScript to define our web component defined in the HTML above:
@@ -71,27 +82,14 @@ customElements.define(
   class extends HTMLElement {
     constructor() {
       super(); // Always call super first in constructor
-      const cardComponent = document.getElementById(
-        "card-component-template",
-      ).content;
+      const template = document.getElementById("card-component-template");
       const shadowRoot = this.attachShadow({
         mode: "open",
       });
-      shadowRoot.appendChild(cardComponent.cloneNode(true));
+      shadowRoot.appendChild(document.importNode(template.content, true));
     }
   },
 );
-```
-
-#### CSS
-
-We style parts of the `<card-component>` shadow tree using the {{cssxref("::part")}} pseudo-element:
-
-```css
-::part(body) {
-  color: red;
-  font-style: italic;
-}
 ```
 
 #### Results
@@ -154,45 +152,9 @@ We include a `<card-wrapper>` custom element, and a `<card-component>` for compa
 </card-component>
 ```
 
-#### JavaScript
-
-```js hidden
-customElements.define(
-  "card-component",
-  class extends HTMLElement {
-    constructor() {
-      super(); // Always call super first in constructor
-      const cardComponent = document.getElementById(
-        "card-component-template",
-      ).content;
-      const shadowRoot = this.attachShadow({
-        mode: "open",
-      });
-      shadowRoot.appendChild(cardComponent.cloneNode(true));
-    }
-  },
-);
-```
-
-```js
-customElements.define(
-  "card-wrapper",
-  class extends HTMLElement {
-    constructor() {
-      super(); // Always call super first in constructor
-      const cardWrapper = document.getElementById("card-wrapper").content;
-      const shadowRoot = this.attachShadow({
-        mode: "open",
-      });
-      shadowRoot.appendChild(cardWrapper.cloneNode(true));
-    }
-  },
-);
-```
-
 #### CSS
 
-Now, we can target parts of the `<card-component>` directly and when nested within a `<card-wrapper>` like so:
+The following CSS targets parts of the `<card-component>` directly and when nested within a `<card-wrapper>`:
 
 ```css
 h2 {
@@ -214,6 +176,40 @@ card-component {
 ::part(footer) {
   font-weight: bold;
 }
+```
+
+#### JavaScript
+
+```js hidden
+customElements.define(
+  "card-component",
+  class extends HTMLElement {
+    constructor() {
+      super(); // Always call super first in constructor
+      const template = document.getElementById("card-component-template");
+      const shadowRoot = this.attachShadow({
+        mode: "open",
+      });
+      shadowRoot.appendChild(document.importNode(template.content, true));
+    }
+  },
+);
+```
+
+```js
+customElements.define(
+  "card-wrapper",
+  class extends HTMLElement {
+    constructor() {
+      super(); // Always call super first in constructor
+      const template = document.getElementById("card-wrapper");
+      const shadowRoot = this.attachShadow({
+        mode: "open",
+      });
+      shadowRoot.appendChild(document.importNode(template.content, true));
+    }
+  },
+);
 ```
 
 #### Results
@@ -261,42 +257,6 @@ We update the prior `<card-wrapper>` custom element with the remapping syntax (o
 </template>
 ```
 
-#### JavaScript
-
-```js hidden
-customElements.define(
-  "card-component",
-  class extends HTMLElement {
-    constructor() {
-      super(); // Always call super first in constructor
-      const cardComponent = document.getElementById(
-        "card-component-template",
-      ).content;
-      const shadowRoot = this.attachShadow({
-        mode: "open",
-      });
-      shadowRoot.appendChild(cardComponent.cloneNode(true));
-    }
-  },
-);
-```
-
-```js
-customElements.define(
-  "card-wrapper",
-  class extends HTMLElement {
-    constructor() {
-      super(); // Always call super first in constructor
-      const cardWrapper = document.getElementById("card-wrapper").content;
-      const shadowRoot = this.attachShadow({
-        mode: "open",
-      });
-      shadowRoot.appendChild(cardWrapper.cloneNode(true));
-    }
-  },
-);
-```
-
 #### CSS
 
 In targeting the parts of the `<card-component>` from within the `<card-wrapper>`, we can only style the exported parts via their exposed part names:
@@ -311,6 +271,40 @@ In targeting the parts of the `<card-component>` from within the `<card-wrapper>
 ::part(body) {
   font-weight: bold;
 }
+```
+
+#### JavaScript
+
+```js hidden
+customElements.define(
+  "card-component",
+  class extends HTMLElement {
+    constructor() {
+      super(); // Always call super first in constructor
+      const template = document.getElementById("card-component-template");
+      const shadowRoot = this.attachShadow({
+        mode: "open",
+      });
+      shadowRoot.appendChild(document.importNode(template.content, true));
+    }
+  },
+);
+```
+
+```js
+customElements.define(
+  "card-wrapper",
+  class extends HTMLElement {
+    constructor() {
+      super(); // Always call super first in constructor
+      const template = document.getElementById("card-wrapper");
+      const shadowRoot = this.attachShadow({
+        mode: "open",
+      });
+      shadowRoot.appendChild(document.importNode(template.content, true));
+    }
+  },
+);
 ```
 
 #### Results
@@ -334,4 +328,4 @@ In targeting the parts of the `<card-component>` from within the `<card-wrapper>
 - [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) interface
 - {{DOMxRef("Element.part")}} property
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
-- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
+- [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module

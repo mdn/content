@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Window.error_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The `error` event is fired on a {{domxref("Window")}} object when a resource failed to load or couldn't be used — for example if a script has an execution error.
 
@@ -14,11 +14,15 @@ This event is only generated for script errors thrown synchronously, such as dur
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("error", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onerror = (message, source, lineno, colno, error) => { }
 ```
 
@@ -27,7 +31,7 @@ onerror = (message, source, lineno, colno, error) => { }
 
 ## Event type
 
-The event object is a {{domxref("ErrorEvent")}} instance if it was generated from a user interface element, or an {{domxref("Event")}} instance otherwise.
+The event object is an {{domxref("ErrorEvent")}} instance if it was generated from a user interface element, or an {{domxref("Event")}} instance otherwise.
 
 {{InheritanceDiagram("ErrorEvent")}}
 
@@ -100,7 +104,7 @@ This special behavior only happens for the `onerror` event handler on `window`. 
 ```html
 <div class="controls">
   <button id="script-error" type="button">Generate script error</button>
-  <img class="bad-img" />
+  <img src="bad-image.jpg" class="bad-img" alt="I don't exist" />
 </div>
 
 <div class="event-log">
@@ -163,8 +167,7 @@ window.addEventListener("error", (event) => {
 
 const scriptError = document.querySelector("#script-error");
 scriptError.addEventListener("click", () => {
-  const badCode = "const s;";
-  eval(badCode);
+  throw new Error("This is a script error");
 });
 ```
 

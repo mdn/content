@@ -147,6 +147,21 @@ console.log(sector);
 console.log(typeof radius); // "undefined"
 ```
 
+### `using` declarations in a block
+
+You can declare variables with {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}} in a block, which causes the object stored in the variable to be disposed when control exits the block. For more information, see [resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management).
+
+```js
+{
+  using reader1 = stream1.getReader();
+  using reader2 = stream2.getReader();
+
+  // do something with reader1 and reader2
+
+  // Before we exit the block, reader1 and reader2 are automatically released
+}
+```
+
 ## Specifications
 
 {{Specifications}}

@@ -48,7 +48,7 @@ async function name(param0, param1, /* …, */ paramN) {
 
 ## Description
 
-An `async function` expression is very similar to, and has almost the same syntax as, an [`async function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/async_function). The main difference between an `async function` expression and an `async function` declaration is the _function name_, which can be omitted in `async function` expressions to create _anonymous_ functions. An `async function` expression can be used as an [IIFE](/en-US/docs/Glossary/IIFE) (Immediately Invoked Function Expression) which runs as soon as it is defined, allowing you to mimic [top-level await](/en-US/docs/Web/JavaScript/Guide/Modules#top_level_await). See also the chapter about [functions](/en-US/docs/Web/JavaScript/Reference/Functions) for more information.
+An `async function` expression is very similar to, and has almost the same syntax as, an [`async function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/async_function). The main difference between an `async function` expression and an `async function` declaration is the _function name_, which can be omitted in `async function` expressions to create _anonymous_ functions. An `async function` expression can be used as an [IIFE](/en-US/docs/Glossary/IIFE) (Immediately Invoked Function Expression) which runs as soon as it is defined, allowing you to mimic [top-level await](/en-US/docs/Web/JavaScript/Guide/Modules#top-level_await). See also the chapter about [functions](/en-US/docs/Web/JavaScript/Reference/Functions) for more information.
 
 ## Examples
 
@@ -86,7 +86,7 @@ add(10).then((v) => {
 
 ### Async IIFE
 
-An `async` [IIFE](/en-US/docs/Glossary/IIFE) allows you to use [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) and [`for...await`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) in contexts where [top-level await](/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await) is not available. Here we use an [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to define the IIFE, but `async function` expressions can also be used.
+An `async` [IIFE](/en-US/docs/Glossary/IIFE) allows you to use [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) and [`for...await`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) in contexts where [top-level await](/en-US/docs/Web/JavaScript/Reference/Operators/await#top-level_await) is not available. Here we use an [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to define the IIFE, but `async function` expressions can also be used.
 
 ```js
 const getFileStream = async (url) => {

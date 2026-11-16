@@ -14,11 +14,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("messageerror", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onmessageerror = (event) => { }
 ```
 
@@ -27,21 +31,6 @@ onmessageerror = (event) => { }
 An {{domxref("ExtendableMessageEvent")}}. Inherits from {{domxref("ExtendableEvent")}}.
 
 {{InheritanceDiagram("ExtendableMessageEvent")}}
-
-## Event properties
-
-_Inherits properties from its parent, {{domxref("ExtendableEvent")}}_.
-
-- {{domxref("ExtendableMessageEvent.data")}} {{ReadOnlyInline}}
-  - : Returns the event's data. It can be any data type. If dispatched in `messageerror` event, the property will be `null`.
-- {{domxref("ExtendableMessageEvent.origin")}} {{ReadOnlyInline}}
-  - : Returns the origin of the {{domxref("Client")}} that sent the message.
-- {{domxref("ExtendableMessageEvent.lastEventId")}} {{ReadOnlyInline}}
-  - : Represents, in [server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events), the last event ID of the event source.
-- {{domxref("ExtendableMessageEvent.source")}} {{ReadOnlyInline}}
-  - : Returns a reference to the {{domxref("Client")}} object that sent the message.
-- {{domxref("ExtendableMessageEvent.ports")}} {{ReadOnlyInline}}
-  - : Returns the array containing the {{domxref("MessagePort")}} objects representing the ports of the associated message channel.
 
 ## Examples
 
@@ -73,7 +62,7 @@ self.addEventListener("messageerror", (event) => {
 });
 ```
 
-Alternatively, the script can listen for the message deserialization error using `onmessageerror`:
+Alternatively, the script can listen for the message deserialization error using `onmessageerror` (but note that this replaces other event listeners added using `onmessageerror`, if any):
 
 ```js
 // service-worker.js

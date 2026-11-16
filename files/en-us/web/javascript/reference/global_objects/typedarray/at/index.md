@@ -64,7 +64,7 @@ console.log(lastItem); // 18
 
 ### Comparing methods
 
-Here we compare different ways to select the penultimate (last but one) item of a {{jsxref("TypedArray")}}. Whilst all below methods are valid, it highlights the succinctness and readability of the `at()` method.
+Here we compare different ways to select the penultimate (last but one) item of a {{jsxref("TypedArray")}}. While all below methods are valid, it highlights the succinctness and readability of the `at()` method.
 
 ```js
 // Our typed array with values
@@ -93,7 +93,7 @@ console.log(atWay); // 11
 
 ## See also
 
-- [Polyfill of `TypedArray.prototype.at` in `core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
+- [Polyfill of `TypedArray.prototype.at` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [es-shims polyfill of `TypedArray.prototype.at`](https://www.npmjs.com/package/typedarray.prototype.at)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}

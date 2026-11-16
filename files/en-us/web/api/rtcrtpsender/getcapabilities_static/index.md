@@ -43,7 +43,7 @@ The returned object has the following properties:
       - : A positive integer value indicating the maximum number of channels supported by the codec; for example, a codec that supports only mono sound would have a value of 1; stereo codecs would have a 2, etc.
     - `clockRate`
       - : A positive integer specifying the codec's clock rate in Hertz (Hz).
-        The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1), including their clock rates.
+        The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters#rtp-parameters-1), including their clock rates.
     - `mimeType`
       - : A string indicating the codec's MIME media type and subtype.
         The MIME type strings used by RTP differ from those used elsewhere.
@@ -95,7 +95,7 @@ There are three special entries that should always be present, representing unde
     One possible value is `video/ulpfec` (a generic error connection model).
     There may also be multiple FEC entries if more than one form is supported.
 - RTX (Retransmission)
-  - : This component is responsible for retransmission of data; it's media type should be `video/rtx`.
+  - : This component is responsible for retransmission of data; its media type should be `video/rtx`.
     There will only be one entry for RTX, and it will not have an [`sdpFmtpLine`](#sdpfmtpline) property.
 
 These entries should be ignored if only codecs related to the media are of interest.
@@ -133,14 +133,9 @@ The function below returns a `true` or `false` indicating whether or not the dev
 
 ```js
 function canSendH264() {
-  let capabilities = RTCRtpSender.getCapabilities("video");
+  const capabilities = RTCRtpSender.getCapabilities("video");
 
-  capabilities.codecs.forEach((codec) => {
-    if (codec.mimeType === "video/H264") {
-      return true;
-    }
-  });
-  return false;
+  return capabilities.codecs.some((codec) => codec.mimeType === "video/H264");
 }
 ```
 

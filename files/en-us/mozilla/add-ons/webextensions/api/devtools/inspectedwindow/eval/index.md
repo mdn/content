@@ -10,13 +10,15 @@ Executes JavaScript in the window that the devtools are attached to.
 
 This is somewhat like using {{WebExtAPIRef("tabs.executeScript()")}} to attach a content script, but with two main differences:
 
-First, the JavaScript can use a set of [special commands that browsers typically provide in their devtools console implementation](#helpers): for example, using "$0" to refer to the element currently selected in the Inspector.
+First, the JavaScript can use a set of [special commands that browsers typically provide in their devtools console implementation](#helpers): for example, using "$0" to refer to the element selected in the Inspector.
 
 Second, the JavaScript you execute can see any changes made to the page by scripts that the page loaded. This is in contrast to content scripts, which see the page [as it would exist if no page scripts were loaded](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#dom_access). However, note that the isolation provided by content scripts is a deliberate security feature, intended to make it harder for malicious or uncooperative web pages to confuse or subvert WebExtensions APIs by redefining DOM functions and properties. This means you need to be very careful if you waive this protection by using `eval()`, and should use content scripts unless you need to use `eval()`.
 
 The script is evaluated by default in the main frame of the page. The script must evaluate to a value that can be represented as JSON (meaning that, for example, it may not evaluate to a function or an object that contains any functions). By default, the script does not see any content scripts attached to the page.
 
 You can't call `eval()` on privileged browser windows such as "about:addons".
+
+In Firefox 153 and later, calling `eval()` on a `file://` URL requires the extension to be granted file scheme access by the user. Without this permission, the promise rejects with an error. Use {{WebExtAPIRef("extension.isAllowedFileSchemeAccess()")}} to check whether the user has granted the extension this permission.
 
 You can optionally provide an `options` parameter, which includes options to evaluate the script in a different frame or in the context of attached content scripts. Note that Firefox does not yet support the `options` parameter.
 
@@ -29,7 +31,7 @@ The script gets access to a number of objects that help the injected script inte
 - `$0`
   - : Contains a reference to the element that's currently selected in the devtools Inspector.
 - `inspect()`
-  - : Given an object, if it is an DOM element in the page, selects it in the devtools Inspector, otherwise it creates an object preview in the console.
+  - : Given an object, if it is a DOM element in the page, selects it in the devtools Inspector, otherwise it creates an object preview in the console.
 
 [See some examples.](#examples)
 
@@ -47,13 +49,17 @@ let evaluating = browser.devtools.inspectedWindow.eval(
 - `expression`
   - : `string`. The JavaScript expression to evaluate. The string must evaluate to an object that can be represented as JSON, or an exception will be thrown. For example, `expression` must not evaluate to a function.
 - `options` {{optional_inline}}
-  - : `object`. Options for the function (Note that Firefox does not yet support this options), as follows:
-    - `frameURL` {{optional_inline}}
-      - : `string`. The URL of the frame in which to evaluate the expression. If this is omitted, the expression is evaluated in the main frame of the window.
-    - `useContentScriptContext` {{optional_inline}}
-      - : `boolean`. If `true`, evaluate the expression in the context of any content scripts that this extension has attached to the page. If you set this option, then you must have actually attached some content scripts to the page, or a DevTools error will be thrown.
+
+  - : `object`. Options for the function, as follows:
+
     - `contextSecurityOrigin` {{optional_inline}}
       - : `string`. Evaluate the expression in the context of a content script attached by a different extension, whose origin matches the value given here. This overrides `useContentScriptContext`.
+    - `frameURL` {{optional_inline}}
+      - : `string`. The URL of the frame in which to evaluate the expression. If this is omitted, the expression is evaluated in the main frame of the window.
+    - `scriptExecutionContext` {{optional_inline}}
+      - : `string`. Evaluate the expression in the context of a content script of an extension that matches the specified origin. If given, `scriptExecutionContext` overrides the `true` setting on `useContentScriptContext`.
+    - `useContentScriptContext` {{optional_inline}}
+      - : `boolean`. If `true`, evaluate the expression in the context of any content scripts that this extension has attached to the page. If you set this option, then you must have actually attached some content scripts to the page, or a Devtools error will be thrown.
 
 ### Return value
 

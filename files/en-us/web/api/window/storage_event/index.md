@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Window.storage_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`storage`** event of the {{domxref("Window")}} interface fires when another document that shares the same storage area (either {{domxref("Window/localStorage", "localStorage")}} or {{domxref("Window/sessionStorage", "sessionStorage")}}) as the current window updates that storage area. The event is _not_ fired on the window that made the change.
 
@@ -17,11 +17,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("storage", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onstorage = (event) => { }
 ```
 
@@ -30,24 +34,6 @@ onstorage = (event) => { }
 A {{domxref("StorageEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("StorageEvent")}}
-
-## Event properties
-
-- {{domxref("StorageEvent.key", "key")}} {{ReadOnlyInline}}
-  - : Returns a string with the key for the storage item that was changed.
-    The `key` attribute is `null` when the change is caused by the storage `clear()` method.
-- {{domxref("StorageEvent.newValue", "newValue")}} {{ReadOnlyInline}}
-  - : Returns a string with the new value of the storage item that was changed.
-    This value is `null` when the change has been invoked by storage `clear()` method,
-    or the storage item has been removed from the storage.
-- {{domxref("StorageEvent.oldValue", "oldValue")}} {{ReadOnlyInline}}
-  - : Returns a string with the original value of the storage item that was changed.
-    This value is `null` when the storage item has been newly added
-    and therefore doesn't have any previous value.
-- {{domxref("StorageEvent.storageArea", "storageArea")}} {{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("Storage")}} object that represents the storage object that was affected.
-- {{domxref("StorageEvent.url", "url")}} {{ReadOnlyInline}}
-  - : Returns string with the URL of the document whose storage changed.
 
 ## Event handler aliases
 
@@ -69,7 +55,7 @@ window.addEventListener("storage", () => {
 });
 ```
 
-The same action can be achieved using the `onstorage` event handler property:
+The same action can be achieved using the `onstorage` event handler property (but note that this replaces other event listeners added using `onstorage`, if any):
 
 ```js
 window.onstorage = () => {

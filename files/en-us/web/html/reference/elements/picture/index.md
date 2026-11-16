@@ -1,5 +1,6 @@
 ---
-title: "<picture>: The Picture element"
+title: "`<picture>` HTML picture element"
+short-title: <picture>
 slug: Web/HTML/Reference/Elements/picture
 page-type: html-element
 browser-compat: html.elements.picture
@@ -23,6 +24,12 @@ The browser will consider each child `<source>` element and choose the best matc
 </picture>
 ```
 
+## Attributes
+
+This element includes only [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
+
+## Usage notes
+
 To decide which URL to load, the {{Glossary("user agent")}} examines each `<source>`'s [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/source#srcset), [`media`](/en-US/docs/Web/HTML/Reference/Elements/source#media), and [`type`](/en-US/docs/Web/HTML/Reference/Elements/source#type) attributes to select a compatible image that best matches the current layout and capabilities of the display device.
 
 The `<img>` element serves two purposes:
@@ -41,12 +48,6 @@ Common use cases for `<picture>`:
 - **Saving bandwidth and speeding page load times** by loading the most appropriate image for the viewer's display.
 
 If providing higher-density versions of an image for high-DPI (Retina) display, use [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) on the `<img>` element instead. This lets browsers opt for lower-density versions in data-saving modes, and you don't have to write explicit `media` conditions.
-
-## Attributes
-
-This element includes only [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
-
-## Usage notes
 
 You can use the {{cssxref("object-position")}} property to adjust the positioning of the image within the element's frame, and the {{cssxref("object-fit")}} property to control how the image is resized to fit within the frame.
 
@@ -67,6 +68,16 @@ If the {{HTMLElement("source")}}'s media condition evaluates to `false`, the bro
 <picture>
   <source srcset="mdn-logo-wide.png" media="(width >= 600px)" />
   <img src="mdn-logo-narrow.png" alt="MDN" />
+</picture>
+```
+
+You can swap image assets for light and dark themes using the {{cssxref("@media/prefers-color-scheme")}} media feature:
+
+```html
+<picture>
+  <source srcset="logo-dark.png" media="(prefers-color-scheme: dark)" />
+  <source srcset="logo-light.png" media="(prefers-color-scheme: light)" />
+  <img src="logo-light.png" alt="Product logo" />
 </picture>
 ```
 
@@ -106,7 +117,28 @@ The `srcset` attribute can also be used on the `<img>` element without needing t
   alt="MDN Web Docs logo" />
 ```
 
-The `sizes` attribute is not mandatory when using srcset, but it is recommended to use it in order to provide additional information to the browser to help it select the best image source.
+### The sizes attribute
+
+The [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) attribute of the `<source>` element allows you to specify a set of media condition-length pairs and indicate the image display size for each condition. This helps the browser select the most appropriate image from the `srcset` attribute, which lists images with their [intrinsic](/en-US/docs/Glossary/Intrinsic_Size) widths.
+
+The browser evaluates the media conditions in the sizes attribute before it downloads any images. See the sizes attribute of the [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) and [`<source>`](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) elements for more information.
+
+For example:
+
+```html
+<picture>
+  <source
+    srcset="small.jpg 480w, medium.jpg 800w, large.jpg 1200w"
+    sizes="(max-width: 600px) 400px, 800px"
+    type="image/jpeg" />
+  <img src="fallback.jpg" alt="Example image" />
+</picture>
+```
+
+In this example:
+
+- If the viewport is 600px wide or less, the slot size is 400px; otherwise, it is 800px.
+- The browser multiplies the slot size by the device pixel ratio to determine the ideal image width, then picks the closest available image from `srcset`.
 
 Without sizes, the browser will use the default size of the image as specified by its dimensions in pixels. This may not be the best fit for all devices, especially if the image is displayed on different screen sizes or in different contexts.
 
@@ -190,3 +222,4 @@ The `type` attribute specifies a [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_ty
 - {{HTMLElement("source")}} element
 - Positioning and sizing the picture within its frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 - [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types)
+- {{cssxref("@media/prefers-color-scheme")}} media feature

@@ -3,8 +3,8 @@ title: refY
 slug: Web/SVG/Reference/Attribute/refY
 page-type: svg-attribute
 spec-urls:
-  - https://svgwg.org/svg2-draft/painting.html#MarkerElementRefYAttribute
-  - https://svgwg.org/svg2-draft/struct.html#SymbolElementRefYAttribute
+  - https://w3c.github.io/svgwg/svg2-draft/painting.html#MarkerElementRefYAttribute
+  - https://w3c.github.io/svgwg/svg2-draft/struct.html#SymbolElementRefYAttribute
 sidebar: svgref
 ---
 

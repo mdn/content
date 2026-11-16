@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance/Javascript", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance/JavaScript", "Learn_web_development/Extensions/Performance")}}
 
 As we learned in the previous section, media, namely images and video, account for over 70% of the bytes downloaded for the average website. We have already taken a look at optimizing images. This article looks at optimizing video to improve web performance.
 
@@ -59,7 +59,7 @@ Your video editing software probably has a feature to reduce file size. If not, 
 Order video source from smallest to largest. For example, given video compressions in the formats at 10MB and 12MB, declare the 10MB resource first:
 
 ```html
-<video width="400" height="300" controls="controls">
+<video width="400" height="300" controls>
   <!-- WebM: 10 MB -->
   <source src="video.webm" type="video/webm" />
   <!-- MPEG-4/H.264: 12 MB -->
@@ -74,7 +74,7 @@ The browser downloads the first format it understands. The goal is to offer smal
 For hero-video or other video without audio, removing audio is smart.
 
 ```html
-<video autoplay="" loop="" muted playsinline="" id="hero-video">
+<video autoplay loop muted playsinline id="hero-video">
   <source src="banner_video.webm" type='video/webm; codecs="vp8, vorbis"' />
   <source src="web_banner.mp4" type="video/mp4" />
 </video>
@@ -106,4 +106,4 @@ Changing the setting to `auto` tells the browser to automatically download the e
 
 Optimizing video has the potential to significantly improve website performance. Video files are relatively large compared to other website files, and always worthy of attention. This article explains how to optimize website video through reducing file size, with (HTML) download settings, and with streaming.
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance/Javascript", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance/JavaScript", "Learn_web_development/Extensions/Performance")}}

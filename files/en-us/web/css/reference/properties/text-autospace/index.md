@@ -1,0 +1,127 @@
+---
+title: "`text-autospace` CSS property"
+short-title: text-autospace
+slug: Web/CSS/Reference/Properties/text-autospace
+page-type: css-property
+browser-compat: css.properties.text-autospace
+sidebar: cssref
+---
+
+The **`text-autospace`** [CSS](/en-US/docs/Web/CSS) property allows you to specify the space applied between Chinese/Japanese/Korean (CJK) and non-CJK characters.
+
+Many CJK typographic conventions require a small amount of space between CJK characters and Western letters or numbers (see W3C's descriptions for [Chinese](https://www.w3.org/International/clreq/#mixed_text_composition_in_horizontal_writing_mode) and [Japanese](https://www.w3.org/International/jlreq/#japanese_and_western_mixed_text_composition) text layout conventions). Some authors would manually insert a space character for this purpose, but `text-autospace` adds this spacing at the layout engine level, without requiring extra characters in the textual content.
+
+{{InteractiveExample("CSS Demo: text-autospace")}}
+
+```css interactive-example-choice
+text-autospace: no-autospace;
+```
+
+```css interactive-example-choice
+text-autospace: normal;
+```
+
+```css interactive-example-choice
+text-autospace: ideograph-alpha;
+```
+
+```css interactive-example-choice
+text-autospace: ideograph-numeric;
+```
+
+```css interactive-example-choice
+text-autospace: auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element" lang="zh">
+    <p>HTML超文本标记语言</p>
+    <p>42四十二</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font: 2rem sans-serif;
+}
+
+p {
+  margin: 0;
+}
+```
+
+## Syntax
+
+```css
+text-autospace: normal;
+text-autospace: no-autospace;
+text-autospace: ideograph-alpha;
+text-autospace: ideograph-numeric;
+text-autospace: punctuation;
+text-autospace: insert;
+text-autospace: replace;
+text-autospace: ideograph-alpha ideograph-numeric punctuation;
+text-autospace: ideograph-alpha ideograph-numeric;
+text-autospace: ideograph-alpha ideograph-numeric insert;
+text-autospace: auto;
+
+/* Global values */
+text-autospace: inherit;
+text-autospace: initial;
+text-autospace: revert;
+text-autospace: revert-layer;
+text-autospace: unset;
+```
+
+### Values
+
+- `normal`
+  - : Creates the default behavior to automatically apply spacing between CJK and non-CJK characters and around punctuation. This value has the same effect as applying both [`ideograph-alpha`](#ideograph-alpha) and [`ideograph-numeric`](#ideograph-numeric).
+- `<autospace>`
+  - : Provides more control over spacing behaviors. It accepts the keyword `no-autospace`, or a combination of one or more of `ideograph-alpha`, `ideograph-numeric`, and `punctuation`, optionally followed by `insert` or `replace`.
+    - `no-autospace`
+      - : Disables automatic spacing between CJK and non-CJK characters.
+    - `ideograph-alpha`
+      - : Adds spacing only between ideographic characters (such as Katakana and Han) and non-ideographic letters (such as Latin). It does not add spacing between ideographic characters and non-ideographic numbers.
+    - `ideograph-numeric`
+      - : Adds spacing only between ideographic characters (such as Katakana and Han) and non-ideographic numbers (such as Latin). It does not add spacing between ideographic characters and non-ideographic letters.
+    - `punctuation`
+      - : Adds non-breaking spacing around punctuation as required by language-specific typographic conventions.
+    - `insert`
+      - : Adds the specified spacing only if there are no existing spaces between the ideographic and non-ideographic scripts.
+    - `replace`
+      - : Replaces existing spacing (such as [U+0020](/en-US/docs/Glossary/Whitespace)) between ideographic and non-ideographic characters with the specified spacing.
+- `auto`
+  - : Lets the browser choose typographically appropriate spacing. The spacing may vary across browsers and platforms.
+
+> [!NOTE]
+> If neither `insert` nor `replace` are specified, the behavior is the same as `insert`.
+
+> [!NOTE]
+> This property is additive with the {{CSSXRef("word-spacing")}} and {{CSSXRef("letter-spacing")}} properties. The amount of spacing contributed by the `letter-spacing` setting is added to the spacing created by `text-autospace`. The same applies to `word-spacing`.
+
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
+
+{{csssyntax}}
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{cssxref('text-spacing-trim')}}
+- [`ic`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#local_font-relative_lengths) and [`ric`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#root_font-relative_lengths) units
+- [CSS Text](/en-US/docs/Web/CSS/Guides/Text) module
+- [Mixed text composition in horizontal writing mode](https://www.w3.org/International/clreq/#mixed_text_composition_in_horizontal_writing_mode) in Requirements for Chinese Text Layout on w3.org
+- [Japanese and Western mixed text composition](https://www.w3.org/International/jlreq/#japanese_and_western_mixed_text_composition) in Requirements for Japanese Text Layout on w3.org

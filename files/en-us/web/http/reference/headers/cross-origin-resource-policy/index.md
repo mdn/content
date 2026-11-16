@@ -17,10 +17,6 @@ It specifies resource owner's policy for what sites/origins should be allowed to
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 
@@ -63,7 +59,7 @@ Cross-Origin-Resource-Policy: same-origin
 
 ## See also
 
-- [Cross-Origin Resource Policy (CORP) explainer](/en-US/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy)
+- [Cross-Origin Resource Policy (CORP) explainer](/en-US/docs/Web/Security/Practical_implementation_guides/CORP)
 - [Consider deploying Cross-Origin Resource Policy](https://resourcepolicy.fyi/)
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}}
 - {{HTTPHeader("Access-Control-Allow-Origin")}}

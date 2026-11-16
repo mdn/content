@@ -40,7 +40,7 @@ If enumeration fails, the promise is rejected.
 
 Access to the API is subject to the following constraints:
 
-- The method must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+- The method must be called in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 - The document must be fully active and its visibility must be "visible".
 
 ## Examples

@@ -1,5 +1,6 @@
 ---
-title: "<noscript>: The Noscript element"
+title: "`<noscript>` HTML noscript element"
+short-title: <noscript>
 slug: Web/HTML/Reference/Elements/noscript
 page-type: html-element
 browser-compat: html.elements.noscript
@@ -11,6 +12,13 @@ The **`<noscript>`** [HTML](/en-US/docs/Web/HTML) element defines a section of H
 ## Attributes
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
+
+## Usage notes
+
+The `<noscript>` element represents its children differently depending on if scripting is enabled:
+
+- If scripting is disabled the `<noscript>` element represents its children as [HTML content](/en-US/docs/Web/API/HTMLElement).
+- If scripting is enabled, the `<noscript>` element represents its children as [text](/en-US/docs/Web/API/Text).
 
 ## Examples
 
@@ -31,13 +39,6 @@ Rocks!
 [External Link](https://www.mozilla.org/)
 
 Rocks!
-
-## Usage notes
-
-The `<noscript>` element represents its children differently depending on if scripting is enabled:
-
-- If scripting is disabled the `<noscript>` element represents its children as [HTML content](/en-US/docs/Web/API/HTMLElement).
-- If scripting is enabled, the `<noscript>` element represents its children as [text](/en-US/docs/Web/API/Text).
 
 ## Technical summary
 

@@ -61,7 +61,7 @@ input.placeholder = "Modified placeholder";
 
 Note that the name of the reflected attribute and the property are the same: `placeholder`.
 This is not always the case: properties are usually named following the {{glossary("Camel case","camelCase")}} convention.
-This is particularly true for multi-word attribute names that contain a characters that are not allowed in a property name, such as the hyphen.
+This is particularly true for multi-word attribute names that contain characters that are not allowed in a property name, such as the hyphen.
 For example the [aria-checked](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) attribute is reflected by the [`ariaChecked`](/en-US/docs/Web/API/Element/ariaChecked) property.
 
 ### Boolean reflected attributes
@@ -76,6 +76,36 @@ For example, the checkbox {{htmlelement("input")}} element below has the `checke
 The {{domxref("Element.getAttribute()")}} will return `""` if the input is checked or `null` if it is not.
 The corresponding {{domxref("HTMLInputElement.checked")}} property returns `true` or `false` for the checked state.
 Otherwise boolean reflected attributes are the same as any other reflected attributes.
+
+### Enumerated reflected attributes
+
+In HTML, [enumerated attributes](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute) are attributes with a limited, predefined set of text values. For example, the global HTML [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) attribute has three valid values: `ltr`, `rtl`, and `auto`.
+
+```html
+<p dir="rtl">Right to left</p>
+```
+
+Like for HTML tag names, HTML enumerated attributes and their values are case-insensitive, so `LTR`, `RTL`, and `AUTO` will also work.
+
+```html
+<p dir="RTL">Right to left</p>
+```
+
+The IDL-reflected property, {{domxref("HTMLElement.dir")}}, always returns a canonical value as provided in the specification (lowercased values in this example). Setting the value also serializes it to the canonical form.
+
+```js
+const pElement = document.querySelector("p");
+console.log(pElement.dir); // "rtl"
+pElement.dir = "RTL";
+console.log(pElement.dir); // "rtl"
+```
+
+Alternatively, you can use the {{domxref("Element.getAttribute()","getAttribute()")}} method of the {{domxref("Element")}} interface. It will get the attribute value from HTML without modifications.
+
+```js
+const pElement = document.querySelector("p");
+console.log(pElement.getAttribute("dir")); // "RTL"
+```
 
 ## Reflected element references
 
@@ -111,7 +141,7 @@ console.log(inputElement.ariaLabelledByElements);
 
 The first thing to note from the code above is that the attribute and the property contain different numbers of elements — the property doesn't _directly_ reflect the attribute because the reference `label_3` does not have a corresponding element.
 It is also possible that a reference will not match because the `id` is [out of scope for the element](#element_id_reference_scope).
-This can happen if the referenced element is not in the same DOM or shadow DOM as the element, since ids are only only valid in the scope in which they are declared.
+This can happen if the referenced element is not in the same DOM or shadow DOM as the element, since ids are only valid in the scope in which they are declared.
 
 We can iterate the elements in the property array, in this case to get the accessible name from their inner text (this is more natural than using the attribute, because we don't have to first get the element references and then use them to find the elements, and we only have to work with elements that we know to be available in the current scope):
 
@@ -160,7 +190,7 @@ Setting the attribute value restores the relationship between the attribute and 
 Continuing the example from above:
 
 ```js
-inputElement.setAttribute("aria-labelledby", "input1");
+inputElement.setAttribute("aria-labelledby", "label_1");
 
 attributeValue = inputElement.getAttribute("aria-labelledby");
 console.log(attributeValue);

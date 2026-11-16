@@ -7,10 +7,7 @@ browser-compat: javascript.builtins.Array.join
 sidebar: jsref
 ---
 
-The **`join()`** method of {{jsxref("Array")}} instances creates and
-returns a new string by concatenating all of the elements in this array,
-separated by commas or a specified separator string. If the array has
-only one item, then that item will be returned without using the separator.
+The **`join()`** method of {{jsxref("Array")}} instances returns a new string that is the concatenation of all elements in this array, separated by commas or a specified separator string. If the array has only one item, that item's stringification is returned without using the separator.
 
 {{InteractiveExample("JavaScript Demo: Array.prototype.join()")}}
 
@@ -127,7 +124,7 @@ console.log(Array.prototype.join.call(arrayLike, "."));
 
 ## See also
 
-- [Polyfill of `Array.prototype.join` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.join` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.join`](https://www.npmjs.com/package/array.prototype.join)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

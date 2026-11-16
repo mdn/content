@@ -26,7 +26,7 @@ const writableStream = new WritableStream(
     write(chunk, controller) {
       // …
     },
-    close(controller) {
+    close() {
       // …
     },
     abort(err) {

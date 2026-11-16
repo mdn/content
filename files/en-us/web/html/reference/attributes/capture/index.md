@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: capture"
+title: "`capture` HTML attribute"
 short-title: capture
 slug: Web/HTML/Reference/Attributes/capture
 page-type: html-attribute

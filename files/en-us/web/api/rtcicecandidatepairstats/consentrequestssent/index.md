@@ -16,7 +16,7 @@ If either or both of the peers in the pair access the internet via [Network Addr
 This property counts the number of requests.
 {{rfc("7675")}} has more information about NAT and consent.
 
-### Value
+## Value
 
 An integer value indicating the total number consent requests sent to the peers in the candidate pair.
 

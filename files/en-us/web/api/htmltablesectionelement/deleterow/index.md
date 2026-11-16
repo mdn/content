@@ -8,8 +8,7 @@ browser-compat: api.HTMLTableSectionElement.deleteRow
 
 {{APIRef("HTML DOM")}}
 
-The **`deleteRow()`** method of the {{domxref("HTMLTableSectionElement")}} interface removes a
-specific row ({{HtmlElement("tr")}}) from a given {{HtmlElement("section")}}.
+The **`deleteRow()`** method of the {{domxref("HTMLTableSectionElement")}} interface removes a specific row ({{HTMLElement("tr")}}) from the given table sectioning element ({{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, or {{HTMLElement("tbody")}}).
 
 ## Syntax
 
@@ -20,9 +19,7 @@ deleteRow(index)
 ### Parameters
 
 - `index`
-  - : `index` is an integer representing the row that should be deleted.
-    However, the special index `-1` can be used to remove the very last row of
-    the section.
+  - : The index of the row to remove in the {{domxref("HTMLTableSectionElement.rows", "rows")}} collection. If `index` is `-1`, the last row is removed.
 
 ### Return value
 
@@ -31,7 +28,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
-  - : Thrown if `index` is greater than or equal to the number of available rows or is a negative value other than `-1`.
+  - : Thrown if `index` is greater than or equal to the number of rows or smaller than `-1`.
 
 ## Examples
 
@@ -42,9 +39,11 @@ In this example, two buttons allow you to add and remove rows from the table bod
 ```html
 <table>
   <thead>
-    <th>Col 1</th>
-    <th>Col 2</th>
-    <th>Col 3</th>
+    <tr>
+      <th>Col 1</th>
+      <th>Col 2</th>
+      <th>Col 3</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
@@ -125,4 +124,6 @@ removeButton.addEventListener("click", () => {
 
 ## See also
 
+- {{domxref("HTMLTableRowElement.deleteCell()")}}
 - {{domxref("HTMLTableElement.deleteRow()")}}
+- {{domxref("HTMLTableSectionElement.insertRow()")}}

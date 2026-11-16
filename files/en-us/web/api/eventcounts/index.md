@@ -42,9 +42,8 @@ This interface has no constructor. You typically get an instance of this object 
 Below are a few examples to get information from an `EventCounts` map. Note that the map is read-only and the `clear()`, `delete()`, and `set()` methods aren't available.
 
 ```js
-for (entry of performance.eventCounts.entries()) {
-  const type = entry[0];
-  const count = entry[1];
+for (const [type, count] of performance.eventCounts.entries()) {
+  console.log(type, count);
 }
 
 const clickCount = performance.eventCounts.get("click");

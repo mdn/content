@@ -65,7 +65,7 @@ function startCapture(displayMediaOptions) {
 
 Either way, the {{Glossary("user agent")}} responds by presenting a user interface that prompts the user to choose the screen area to share. Both of these implementations of `startCapture()` return the {{domxref("MediaStream")}} containing the captured display imagery.
 
-See [Options and constraints](#options_and_constraints), below, for more on both how to specify the type of surface you want as well as other ways to adjust the resulting stream.
+See [Options and constraints](#options_and_constraints), below, for more on both how to specify the type of surface you want and other ways to adjust the resulting stream.
 
 ### Example of a window allowing the user to select a display surface to capture
 
@@ -87,7 +87,7 @@ A user agent might allow the capture of the entire content of an obscured window
 
 The options object passed into {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is used to set options for the resulting stream.
 
-The `video` and `audio` objects passed into the options object can also hold additional constraints particular to those media tracks. See [Properties of shared screen tracks](/en-US/docs/Web/API/MediaTrackConstraints#instance_properties_of_shared_screen_tracks) for details about additional constraints for configuring a screen-capture stream that are added to {{domxref("MediaTrackConstraints")}}, {{domxref("MediaTrackSupportedConstraints")}}, and {{domxref("MediaTrackSettings")}}).
+The `video` and `audio` objects passed into the options object can also hold additional constraints particular to those media tracks. See [Properties of shared screen tracks](/en-US/docs/Web/API/MediaTrackConstraints#instance_properties_of_shared_screen_tracks) for details about additional constraints for configuring a screen-capture stream that are added to {{domxref("MediaTrackConstraints")}}, supported constraints returned by {{domxref("MediaDevices.getSupportedConstraints()")}}, and current settings returned by {{domxref("MediaStreamTrack.getSettings()")}}.
 
 None of the constraints are applied in any way until after the content to capture has been selected. The constraints alter what you see in the resulting stream. For example, if you specify a {{domxref("MediaTrackConstraints.width", "width")}} constraint for the video, it's applied by scaling the video after the user selects the area to share. It doesn't establish a restriction on the size of the source itself.
 
@@ -145,7 +145,7 @@ Capturing audio is always optional, and even when web content requests a stream 
 
 ## Using the captured stream
 
-The {{jsxref("promise")}} returned by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} resolves to a {{domxref("MediaStream")}} that contains at least one video stream that contains the screen or screen area, and which is adjusted or filtered based upon the constraints specified when `getDisplayMedia()` was called.
+The {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} resolves to a {{domxref("MediaStream")}} that contains at least one video stream that contains the screen or screen area, and which is adjusted or filtered based upon the constraints specified when `getDisplayMedia()` was called.
 
 ### Potential risks
 
@@ -164,119 +164,6 @@ Before streaming of captured screen contents can begin, the {{Glossary("user age
 ### Streaming screen capture
 
 In this example, the contents of the captured screen area are streamed into a {{HTMLElement("video")}} element on the same page.
-
-#### JavaScript
-
-There isn't all that much code needed in order to make this work, and if you're familiar with using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to capture video from a camera, you'll find {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} to be very familiar.
-
-##### Setup
-
-First, some constants are set up to reference the elements on the page to which we'll need access: the {{HTMLElement("video")}} into which the captured screen contents will be streamed, a box into which logged output will be drawn, and the start and stop buttons that will turn on and off capture of screen imagery.
-
-The object `displayMediaOptions` contains the options to pass into `getDisplayMedia()`; here, the {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} property is set to `window`, indicating that the whole window should be captured.
-
-Finally, event listeners are established to detect user clicks on the start and stop buttons.
-
-```js
-const videoElem = document.getElementById("video");
-const logElem = document.getElementById("log");
-const startElem = document.getElementById("start");
-const stopElem = document.getElementById("stop");
-
-// Options for getDisplayMedia()
-
-const displayMediaOptions = {
-  video: {
-    displaySurface: "window",
-  },
-  audio: false,
-};
-
-// Set event listeners for the start and stop buttons
-startElem.addEventListener(
-  "click",
-  (evt) => {
-    startCapture();
-  },
-  false,
-);
-
-stopElem.addEventListener(
-  "click",
-  (evt) => {
-    stopCapture();
-  },
-  false,
-);
-```
-
-##### Logging content
-
-This example overrides certain {{domxref("console")}} methods to output their messages to the {{HTMLElement("pre")}} block whose ID is `log`.
-
-```js
-console.log = (msg) => (logElem.textContent = `${logElem.textContent}\n${msg}`);
-console.error = (msg) =>
-  (logElem.textContent = `${logElem.textContent}\nError: ${msg}`);
-```
-
-This allows us to use {{domxref("console/log_static", "console.log()")}} and {{domxref("console.error_static", "console.error()")}} to log information to the log box in the document.
-
-##### Starting display capture
-
-The `startCapture()` method, below, starts the capture of a {{domxref("MediaStream")}} whose contents are taken from a user-selected area of the screen. `startCapture()` is called when the "Start Capture" button is clicked.
-
-```js
-async function startCapture() {
-  logElem.textContent = "";
-
-  try {
-    videoElem.srcObject =
-      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-    dumpOptionsInfo();
-  } catch (err) {
-    console.error(err);
-  }
-}
-```
-
-After clearing the contents of the log in order to get rid of any leftover text from the previous attempt to connect, `startCapture()` calls {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, passing into it the constraints object defined by `displayMediaOptions`. Using {{jsxref("Operators/await", "await")}}, the following line of code does not get executed until after the {{jsxref("promise")}} returned by `getDisplayMedia()` resolves. Upon resolution, the promise returns a {{domxref("MediaStream")}}, which will stream the contents of the screen, window, or other region selected by the user.
-
-The stream is connected to the {{HTMLElement("video")}} element by storing the returned `MediaStream` into the element's {{domxref("HTMLMediaElement.srcObject", "srcObject")}}.
-
-The `dumpOptionsInfo()` function—which we will look at in a moment—dumps information about the stream to the log box for educational purposes.
-
-If any of that fails, the [`catch()`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) clause outputs an error message to the log box.
-
-##### Stopping display capture
-
-The `stopCapture()` method is called when the "Stop Capture" button is clicked. It stops the stream by getting its track list using {{domxref("MediaStream.getTracks()")}}, then calling each track's {{domxref("MediaStreamTrack.stop", "stop()")}} method. Once that's done, `srcObject` is set to `null` to make sure it's understood by anyone interested that there's no stream connected.
-
-```js
-function stopCapture(evt) {
-  let tracks = videoElem.srcObject.getTracks();
-
-  tracks.forEach((track) => track.stop());
-  videoElem.srcObject = null;
-}
-```
-
-##### Dumping configuration information
-
-For informational purposes, the `startCapture()` method shown above calls a method named `dumpOptions()`, which outputs the current track settings as well as the constraints that were placed upon the stream when it was created.
-
-```js
-function dumpOptionsInfo() {
-  const videoTrack = videoElem.srcObject.getVideoTracks()[0];
-
-  console.log("Track settings:");
-  console.log(JSON.stringify(videoTrack.getSettings(), null, 2));
-  console.log("Track constraints:");
-  console.log(JSON.stringify(videoTrack.getConstraints(), null, 2));
-}
-```
-
-The track list is obtained by calling {{domxref("MediaStream.getVideoTracks", "getVideoTracks()")}} on the captured screen's {{domxref("MediaStream")}}. The settings currently in effect are obtained using {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} and the established constraints are gotten with {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}
 
 #### HTML
 
@@ -315,7 +202,7 @@ The CSS is entirely cosmetic in this example. The video is given a border, and i
 
 ```css
 #video {
-  border: 1px solid #999;
+  border: 1px solid #999999;
   width: 98%;
   max-width: 860px;
 }
@@ -328,6 +215,111 @@ The CSS is entirely cosmetic in this example. The video is given a border, and i
   overflow: scroll;
 }
 ```
+
+#### JavaScript
+
+There isn't all that much code needed in order to make this work, and if you're familiar with using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to capture video from a camera, you'll find {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} to be very familiar.
+
+##### Setup
+
+First, some constants are set up to reference the elements on the page to which we'll need access: the {{HTMLElement("video")}} into which the captured screen contents will be streamed, a box into which logged output will be drawn, and the start and stop buttons that will turn on and off capture of screen imagery.
+
+The object `displayMediaOptions` contains the options to pass into `getDisplayMedia()`; here, the {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} property is set to `window`, indicating that the whole window should be captured.
+
+Finally, event listeners are established to detect user clicks on the start and stop buttons.
+
+```js
+const videoElem = document.getElementById("video");
+const logElem = document.getElementById("log");
+const startElem = document.getElementById("start");
+const stopElem = document.getElementById("stop");
+
+// Options for getDisplayMedia()
+
+const displayMediaOptions = {
+  video: {
+    displaySurface: "window",
+  },
+  audio: false,
+};
+
+// Set event listeners for the start and stop buttons
+startElem.addEventListener("click", (evt) => {
+  startCapture();
+});
+
+stopElem.addEventListener("click", (evt) => {
+  stopCapture();
+});
+```
+
+##### Logging content
+
+This example overrides certain {{domxref("console")}} methods to output their messages to the {{HTMLElement("pre")}} block whose ID is `log`.
+
+```js
+console.log = (msg) => (logElem.textContent = `${logElem.textContent}\n${msg}`);
+console.error = (msg) =>
+  (logElem.textContent = `${logElem.textContent}\nError: ${msg}`);
+```
+
+This allows us to use {{domxref("console/log_static", "console.log()")}} and {{domxref("console.error_static", "console.error()")}} to log information to the log box in the document.
+
+##### Starting display capture
+
+The `startCapture()` method, below, starts the capture of a {{domxref("MediaStream")}} whose contents are taken from a user-selected area of the screen. `startCapture()` is called when the "Start Capture" button is clicked.
+
+```js
+async function startCapture() {
+  logElem.textContent = "";
+
+  try {
+    videoElem.srcObject =
+      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+    dumpOptionsInfo();
+  } catch (err) {
+    console.error(err);
+  }
+}
+```
+
+After clearing the contents of the log in order to get rid of any leftover text from the previous attempt to connect, `startCapture()` calls {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, passing into it the constraints object defined by `displayMediaOptions`. Using {{jsxref("Operators/await", "await")}}, the following line of code does not get executed until after the {{jsxref("Promise")}} returned by `getDisplayMedia()` resolves. Upon resolution, the promise returns a {{domxref("MediaStream")}}, which will stream the contents of the screen, window, or other region selected by the user.
+
+The stream is connected to the {{HTMLElement("video")}} element by storing the returned `MediaStream` into the element's {{domxref("HTMLMediaElement.srcObject", "srcObject")}}.
+
+The `dumpOptionsInfo()` function—which we will look at in a moment—dumps information about the stream to the log box for educational purposes.
+
+If any of that fails, the [`catch()`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) clause outputs an error message to the log box.
+
+##### Stopping display capture
+
+The `stopCapture()` method is called when the "Stop Capture" button is clicked. It stops the stream by getting its track list using {{domxref("MediaStream.getTracks()")}}, then calling each track's {{domxref("MediaStreamTrack.stop", "stop()")}} method. Once that's done, `srcObject` is set to `null` to make sure it's understood by anyone interested that there's no stream connected.
+
+```js
+function stopCapture(evt) {
+  let tracks = videoElem.srcObject.getTracks();
+
+  tracks.forEach((track) => track.stop());
+  videoElem.srcObject = null;
+}
+```
+
+##### Dumping configuration information
+
+For informational purposes, the `startCapture()` method shown above calls a method named `dumpOptions()`, which outputs the current track settings as well as the constraints that were placed upon the stream when it was created.
+
+```js
+function dumpOptionsInfo() {
+  const videoTrack = videoElem.srcObject.getVideoTracks()[0];
+
+  console.log("Track settings:");
+  console.log(JSON.stringify(videoTrack.getSettings(), null, 2));
+  console.log("Track constraints:");
+  console.log(JSON.stringify(videoTrack.getConstraints(), null, 2));
+}
+```
+
+The track list is obtained by calling {{domxref("MediaStream.getVideoTracks", "getVideoTracks()")}} on the captured screen's {{domxref("MediaStream")}}. The settings currently in effect are obtained using {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} and the established constraints are gotten with {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}
 
 #### Result
 

@@ -78,6 +78,14 @@ async function loadAudio() {
     console.error(`Unable to fetch the audio file. Error: ${err.message}`);
   }
 }
+
+play.addEventListener("click", async () => {
+  if (!audioCtx) {
+    audioCtx = new AudioContext();
+    await loadAudio();
+  }
+  // …
+});
 ```
 
 ### Callback syntax
@@ -110,6 +118,15 @@ async function loadAudio() {
     console.error(`Unable to fetch the audio file. Error: ${err.message}`);
   }
 }
+
+play.addEventListener("click", async () => {
+  if (!audioCtx) {
+    audioCtx = new AudioContext();
+    await loadAudio();
+  } else {
+    playBuffer();
+  }
+});
 ```
 
 ## Specifications

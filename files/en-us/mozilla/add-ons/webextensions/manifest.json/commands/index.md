@@ -204,7 +204,7 @@ In Firefox, your extension can update shortcut key settings using {{WebExtAPIRef
 
 In Chrome, extensions can't programmatically update shortcut keys. Users can change shortcuts at `chrome://extensions/shortcuts`, which can be opened using {{WebExtAPIRef("tabs.create()")}}.
 
-Safari doesn't support programmatic or user modification of extension shortcut keys.
+Safari doesn't support programmatic modification of extension shortcut keys. From Safari 26, users can change an extension's shortcuts in Safari's extensions settings.
 
 ## Example
 

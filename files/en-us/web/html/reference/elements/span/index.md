@@ -1,5 +1,6 @@
 ---
-title: "<span>: The Content Span element"
+title: "`<span>` HTML content span element"
+short-title: <span>
 slug: Web/HTML/Reference/Elements/span
 page-type: html-element
 browser-compat: html.elements.span
@@ -25,7 +26,7 @@ The **`<span>`** [HTML](/en-US/docs/Web/HTML) element is a generic inline contai
 
 ```css interactive-example
 span.ingredient {
-  color: #f00;
+  color: red;
 }
 ```
 

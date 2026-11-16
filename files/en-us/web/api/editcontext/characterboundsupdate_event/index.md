@@ -20,26 +20,21 @@ See the documentation of the {{domxref("EditContext.updateCharacterBounds()", "u
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("characterboundsupdate", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 oncharacterboundsupdate = (event) => { }
 ```
 
 ## Event type
 
 A {{domxref("CharacterBoundsUpdateEvent")}}. Inherits from {{domxref("Event")}}.
-
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref('CharacterBoundsUpdateEvent.rangeStart')}} {{readonlyinline}}
-  - : The offset of the first character within the editable region text for which the operating system needs the bounds.
-- {{domxref('CharacterBoundsUpdateEvent.rangeEnd')}} {{readonlyinline}}
-  - : The offset of the last character within the editable region text for which the operating system needs the bounds.
 
 ## Examples
 

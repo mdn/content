@@ -23,9 +23,9 @@ If you need to find:
 {{InteractiveExample("JavaScript Demo: Array.prototype.findLast()", "shorter")}}
 
 ```js interactive-example
-const array1 = [5, 12, 50, 130, 44];
+const array = [5, 12, 50, 130, 44];
 
-const found = array1.findLast((element) => element > 45);
+const found = array.findLast((element) => element > 45);
 
 console.log(found);
 // Expected output: 130
@@ -129,7 +129,27 @@ console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
 ```
 
 > [!NOTE]
-> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily memoized algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
+> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily {{Glossary("Memoization", "memoized")}} algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
+
+### Find the most recent completed task
+
+This example demonstrates a practical use case for `findLast()` when working with time-ordered data. It finds the most recent completed task from a list already sorted by `timestamp`.
+
+```js
+const tasks = [
+  { name: "Setup project", completed: true, timestamp: 1609459200000 },
+  { name: "Write tests", completed: false, timestamp: 1609545600000 },
+  { name: "Fix bug #42", completed: true, timestamp: 1609632000000 },
+  { name: "Deploy to staging", completed: true, timestamp: 1609718400000 },
+  { name: "Review PR", completed: false, timestamp: 1609804800000 },
+];
+
+const lastCompletedTask = tasks.findLast((task) => task.completed);
+
+console.log(lastCompletedTask.name); // Deploy to staging
+```
+
+This is more efficient than using `find()` with a reversed array, because it avoids creating a new array.
 
 ### Using the third argument of callbackFn
 
@@ -218,7 +238,7 @@ console.log(
 
 ## See also
 
-- [Polyfill of `Array.prototype.findLast` in `core-js`](https://github.com/zloirock/core-js#array-find-from-last)
+- [Polyfill of `Array.prototype.findLast` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.findLast`](https://www.npmjs.com/package/array.prototype.findlast)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

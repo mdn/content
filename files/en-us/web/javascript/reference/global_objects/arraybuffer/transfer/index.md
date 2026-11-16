@@ -33,7 +33,7 @@ A new {{jsxref("ArrayBuffer")}} object. Its contents are initialized to the cont
 - {{jsxref("RangeError")}}
   - : Thrown if this `ArrayBuffer` is resizable and `newByteLength` is greater than the {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} of this `ArrayBuffer`.
 - {{jsxref("TypeError")}}
-  - : Thrown if this `ArrayBuffer` is already detached.
+  - : Thrown if this `ArrayBuffer` is already detached, or if it can only be detached by designated operations. Currently, only certain web APIs are capable of creating `ArrayBuffer` objects with designated detaching methods, such as {{domxref("GPUBuffer.getMappedRange()")}} and [`WebAssembly.Memory.buffer`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer).
 
 ## Description
 
@@ -116,7 +116,7 @@ buffer3.transfer(20); // RangeError: Invalid array buffer length
 
 ## See also
 
-- [Polyfill of `ArrayBuffer.prototype.transfer` in `core-js`](https://github.com/zloirock/core-js#arraybufferprototypetransfer-and-friends)
+- [Polyfill of `ArrayBuffer.prototype.transfer` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [es-shims polyfill of `ArrayBuffer.prototype.transfer`](https://www.npmjs.com/package/arraybuffer.prototype.transfer)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("ArrayBuffer.prototype.detached")}}

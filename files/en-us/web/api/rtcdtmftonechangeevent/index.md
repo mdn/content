@@ -11,17 +11,17 @@ The **`RTCDTMFToneChangeEvent`** interface represents events sent to indicate th
 
 {{InheritanceDiagram}}
 
+## Constructors
+
+- {{domxref("RTCDTMFToneChangeEvent.RTCDTMFToneChangeEvent()", "RTCDTMFToneChangeEvent()")}}
+  - : Returns a new `RTCDTMFToneChangeEvent`. It takes two parameters, the first being a string representing the type of the event (always `"tonechange"`); the second a dictionary containing the initial state of the properties of the event.
+
 ## Instance properties
 
 _In addition to the properties of {{domxref("Event")}}, this interface offers the following:_
 
 - {{domxref("RTCDTMFToneChangeEvent.tone")}} {{ReadOnlyInline}}
   - : A string specifying the tone which has begun playing, or an empty string (`""`) if the previous tone has finished playing.
-
-## Constructors
-
-- {{domxref("RTCDTMFToneChangeEvent.RTCDTMFToneChangeEvent()", "RTCDTMFToneChangeEvent()")}}
-  - : Returns a new `RTCDTMFToneChangeEvent`. It takes two parameters, the first being a string representing the type of the event (always `"tonechange"`); the second a dictionary containing the initial state of the properties of the event.
 
 ## Instance methods
 
@@ -32,17 +32,13 @@ _Supports the methods defined in {{domxref("Event")}}. There are no additional m
 This snippet is derived loosely from the full, working example you'll find in the section on [When a tone finishes playing](/en-US/docs/Web/API/WebRTC_API/Using_DTMF#when_a_tone_finishes_playing). It appends each tone to a display box as it's played, and, once all tones have been sent, re-enabled a previously-disabled "Send" button, allowing the next DTMF string to be entered.
 
 ```js
-dtmfSender.addEventListener(
-  "change",
-  (event) => {
-    if (event.tone !== "") {
-      dialStringBox.innerText += event.tone;
-    } else {
-      sendDTMFButton.disabled = false;
-    }
-  },
-  false,
-);
+dtmfSender.addEventListener("change", (event) => {
+  if (event.tone !== "") {
+    dialStringBox.innerText += event.tone;
+  } else {
+    sendDTMFButton.disabled = false;
+  }
+});
 ```
 
 ## Specifications

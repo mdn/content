@@ -14,11 +14,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("encrypted", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onencrypted = (event) => { }
 ```
 
@@ -27,13 +31,6 @@ onencrypted = (event) => { }
 A {{domxref("MediaEncryptedEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaEncryptedEvent")}}
-
-## Event properties
-
-- {{domxref("MediaEncryptedEvent.initDataType")}} {{ReadOnlyInline}}
-  - : Returns a case-sensitive string with the _type_ of the format of the initialization data found.
-- {{domxref("MediaEncryptedEvent.initData")}} {{ReadOnlyInline}}
-  - : Returns an {{jsxref("ArrayBuffer")}} containing the initialization data found. If there is no initialization data associated with the format, it returns `null`.
 
 ## Specifications
 

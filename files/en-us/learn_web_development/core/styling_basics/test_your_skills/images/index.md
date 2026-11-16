@@ -1,29 +1,29 @@
 ---
 title: "Test your skills: Images and form elements"
-short-title: Images and forms
+short-title: "Test: Images and forms"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Images
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
+
 The aim of this skill test is to assess whether you understand how special elements like [images, media and form elements are treated in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms).
 
 > [!NOTE]
-> Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
-> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## Images and forms 1
 
-In this task, you have an image that is overflowing the box. We want the image to scale down to fit inside the box without any extra white space, but we do not mind if some part of the image is cropped.
+In this task, you have an image that is overflowing the box. We want you to scale down the image so that it fits inside the box without any extra white space; we don't mind if some part of the image is cropped. Update the CSS to achieve this.
 
-Your final result should look like the image below:
+The starting point of the task looks like this:
 
-![An image in a box](mdn-images-object-fit.png)
+{{EmbedLiveSample("images-forms1-start", "", "260px")}}
 
-Try to update the code below to recreate the finished example so that the image doesn't overflow the box:
+Here's the underlying code for this starting point:
 
-```html live-sample___object-fit
+```html live-sample___images-forms1-start live-sample___images-forms1-finish
 <div class="box">
   <img
     alt="Hot air balloons flying in clear sky, and a crowd of people in the foreground"
@@ -31,9 +31,9 @@ Try to update the code below to recreate the finished example so that the image 
 </div>
 ```
 
-```css live-sample___object-fit
+```css live-sample___images-forms1-start live-sample___images-forms1-finish
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   width: 400px;
   height: 200px;
 }
@@ -43,7 +43,9 @@ img {
 }
 ```
 
-{{EmbedLiveSample("object-fit", "", "400px")}}
+The updated styling should look like this:
+
+{{EmbedLiveSample("images-forms1-finish", "", "260px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -51,7 +53,7 @@ img {
 It is ok if some parts of the image are cropped.
 Using `object-fit: cover` is the best choice, you also need to set the width and height to `100%`:
 
-```css
+```css live-sample___images-forms1-finish
 img {
   height: 100%;
   width: 100%;
@@ -61,51 +63,55 @@ img {
 
 </details>
 
-## Task 2
+## Images and forms 2
 
-In this task, you have a basic form. Your task is to make the following changes:
+In this task, you have a search field and button.
 
-- Use attribute selectors to target the search field and button inside `.my-form`.
-- Make the form field and button use the same text size as the rest of the form.
-- Give the form field and button 10px of padding.
-- Give the button a background of `rebeccapurple`, white foreground, no border and rounded corners of 5px.
+To complete the task:
 
-Your final result should look like the image below:
+1. Use attribute selectors to target the search field and button inside `.my-form`.
+2. Make the form field and button use the same text size as the rest of the container.
+3. Give the form field and button `10px` of padding.
+4. Give the button a background of `rebeccapurple`, white foreground, no border and rounded corners of 5px.
 
-![A single line form](mdn-images-form.png)
+The starting point of the task looks like this:
 
-Try to update the code below to recreate the finished example:
+{{EmbedLiveSample("images-forms2-start", "", "80px")}}
 
-```html live-sample___forms-1
-<form action="" class="my-form" method="post">
+Here's the underlying code for this starting point:
+
+```html live-sample___images-forms2-start live-sample___images-forms2-finish
+<div class="my-form">
   <div>
     <label for="fldSearch">Keywords</label>
     <input id="fldSearch" name="keywords" type="search" />
-    <input name="btnSubmit" type="submit" value="Search" />
+    <input name="btnSubmit" type="button" value="Search" />
   </div>
-</form>
+</div>
 ```
 
-```css live-sample___forms-1
+```css live-sample___images-forms2-start live-sample___images-forms2-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
 .my-form {
-  border: 2px solid #000;
+  border: 2px solid black;
   padding: 5px;
 }
 ```
 
-{{EmbedLiveSample("forms-1")}}
+The updated styling should look like this:
+
+{{EmbedLiveSample("images-forms2-finish", "", "80px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Here's an example solution for the task:
 
-```css
+```css live-sample___images-forms2-finish
 .my-form {
-  border: 2px solid #000;
+  border: 2px solid black;
   padding: 5px;
 }
 
@@ -114,7 +120,7 @@ Here's an example solution for the task:
   font-size: inherit;
 }
 
-.my-form input[type="submit"] {
+.my-form input[type="button"] {
   padding: 10px;
   font-size: inherit;
   background-color: rebeccapurple;
@@ -126,53 +132,50 @@ Here's an example solution for the task:
 
 </details>
 
-## Task 3
+## Images and forms 3
 
-Our second form styling assessment is fairly free-form, and you have a lot of flexibility over what you end up doing here. Your CSS needs to fulfill the requirements described below.
+The solution for this assessment is fairly free-form, and you have a lot of flexibility over what you can do here. So we're not providing an example rendering.
 
-To complete the task:
+Your CSS needs to include the following:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Add some kind of lightweight "reset" to make fonts, padding, margin, and sizing more consistent to begin with, as described in [Normalizing form behavior](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms#normalizing_form_behavior)
-3. On top of that, add in some nice, consistent styling for the inputs and button.
-4. Use some kind of layout technique to make the inputs and labels line up neatly.
+1. A lightweight "reset" to make fonts, padding, margin, and sizing more consistent to begin with, as described in [Normalizing form behavior](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms#normalizing_form_behavior).
+2. Some nice, consistent styling for the inputs and button.
+3. A layout technique to make the inputs and labels line up neatly.
 
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/styling-basics/styling-basics1-download.html) to work in your own editor or in an online editor.
+The starting point of the task looks like this:
 
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+{{ EmbedLiveSample("forms-2", "100%", 250) }}
+
+Here's the underlying code for this starting point:
 
 ```html hidden live-sample___forms-2
-<form>
-  <h2>Edit your preferences</h2>
-  <ul>
-    <li>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" />
-    </li>
-    <li>
-      <label for="website">Website:</label>
-      <input type="url" id="website" name="website" />
-    </li>
-    <li>
-      <label for="phone">Phone number:</label>
-      <input type="tel" id="phone" name="phone" />
-    </li>
-    <li>
-      <label for="food">Favorite food:</label>
-      <select name="food" id="food">
-        <option>Salad</option>
-        <option>Curry</option>
-        <option>Pizza</option>
-        <option>Fajitas</option>
-      </select>
-    </li>
-    <li>
-      <button>Update preferences</button>
-    </li>
-  </ul>
-</form>
+<h2>Edit your preferences</h2>
+<ul>
+  <li>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" />
+  </li>
+  <li>
+    <label for="website">Website:</label>
+    <input type="url" id="website" name="website" />
+  </li>
+  <li>
+    <label for="phone">Phone number:</label>
+    <input type="tel" id="phone" name="phone" />
+  </li>
+  <li>
+    <label for="food">Favorite food:</label>
+    <select name="food" id="food">
+      <option>Salad</option>
+      <option>Curry</option>
+      <option>Pizza</option>
+      <option>Fajitas</option>
+    </select>
+  </li>
+  <li>
+    <button type="button">Update preferences</button>
+  </li>
+</ul>
 ```
 
 ```css live-sample___forms-2
@@ -181,12 +184,12 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
 }
 
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
+    1em / 1.4 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0;
@@ -198,7 +201,7 @@ body {
 /* Add your code here */
 ```
 
-{{ EmbedLiveSample("forms-2", "100%", 250) }}
+We've not provided finished content for this task, as many valid solutions are possible.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -245,7 +248,7 @@ select,
 button {
   display: block;
   padding: 5px 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 3px;
 }
 
@@ -257,13 +260,15 @@ button {
   margin: 0 auto;
   padding: 5px 20px;
   line-height: 1.5;
-  background: #eee;
+  background: #eeeeee;
 }
 
 button:hover,
 button:focus {
-  background: #ddd;
+  background: #dddddd;
 }
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}

@@ -29,7 +29,7 @@ Events based on `TrackEvent` are always sent to one of the media track list type
 _`TrackEvent` is based on {{domxref("Event")}}, so properties of `Event` are also available on `TrackEvent` objects._
 
 - {{domxref("TrackEvent.track", "track")}} {{ReadOnlyInline}}
-  - : The DOM track object the event is in reference to. If not `null`, this is always an object of one of the media track types: {{domxref("AudioTrack")}}, {{domxref("VideoTrack")}}, or {{domxref("TextTrack")}}).
+  - : The DOM track object the event is in reference to. If not `null`, this is always an object of one of the media track types: {{domxref("AudioTrack")}}, {{domxref("VideoTrack")}}, or {{domxref("TextTrack")}}.
 
 ## Instance methods
 
@@ -42,12 +42,12 @@ This example sets up a function, `handleTrackEvent()`, which is called for any `
 ```js
 const videoElem = document.querySelector("video");
 
-videoElem.videoTracks.addEventListener("addtrack", handleTrackEvent, false);
-videoElem.videoTracks.addEventListener("removetrack", handleTrackEvent, false);
-videoElem.audioTracks.addEventListener("addtrack", handleTrackEvent, false);
-videoElem.audioTracks.addEventListener("removetrack", handleTrackEvent, false);
-videoElem.textTracks.addEventListener("addtrack", handleTrackEvent, false);
-videoElem.textTracks.addEventListener("removetrack", handleTrackEvent, false);
+videoElem.videoTracks.addEventListener("addtrack", handleTrackEvent);
+videoElem.videoTracks.addEventListener("removetrack", handleTrackEvent);
+videoElem.audioTracks.addEventListener("addtrack", handleTrackEvent);
+videoElem.audioTracks.addEventListener("removetrack", handleTrackEvent);
+videoElem.textTracks.addEventListener("addtrack", handleTrackEvent);
+videoElem.textTracks.addEventListener("removetrack", handleTrackEvent);
 
 function handleTrackEvent(event) {
   let trackKind;

@@ -9,7 +9,7 @@ browser-compat: api.Headers.values
 {{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 The **`Headers.values()`** method returns an
-{{jsxref("Iteration_protocols",'iterator')}} allowing to go through all values contained
+{{jsxref("Iteration_protocols",'iterator')}} allowing you to go through all values contained
 in this object. The values are {{jsxref("String")}} objects.
 
 ## Syntax
@@ -46,6 +46,10 @@ The result is:
 text/xml
 Accept-Language
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -12,14 +12,6 @@ The **`Atomics`** namespace object contains static methods for carrying out atom
 
 Unlike most global objects, `Atomics` is not a constructor. You cannot use it with the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `Atomics` object as a function. All properties and methods of `Atomics` are static (just like the {{jsxref("Math")}} object).
 
-### Atomic operations
-
-When memory is shared, multiple threads can read and write the same data in memory. Atomic operations make sure that predictable values are written and read, that operations are finished before the next operation starts and that operations are not interrupted.
-
-### Wait and notify
-
-The `wait()` and `notify()` methods are modeled on Linux futexes ("fast user-space mutex") and provide ways for waiting until a certain condition becomes true and are typically used as blocking constructs.
-
 ## Static properties
 
 - `Atomics[Symbol.toStringTag]`
@@ -57,6 +49,8 @@ The `wait()` and `notify()` methods are modeled on Linux futexes ("fast user-spa
   - : Computes a bitwise XOR on the value at the specified index of the array with the provided value. Returns the old value at that index.
 
 ## Examples
+
+Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
 ### Using Atomics
 
@@ -132,6 +126,7 @@ Atomics.notify(int32, 0, 1);
 
 ## See also
 
+- [Agent communication and coordination](/en-US/docs/Web/JavaScript/Guide/Agent_communication_and_coordination) guide
 - {{jsxref("ArrayBuffer")}}
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API)

@@ -6,11 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.Window.frameElement
 ---
 
-{{ApiRef}}
+{{ApiRef("HTML DOM")}}
 
-The **`Window.frameElement`** property
-returns the element (such as {{HTMLElement("iframe")}} or {{HTMLElement("object")}})
-in which the window is embedded.
+The **`frameElement`** read-only property of the {{domxref("Window")}} interface returns the element (such as {{HTMLElement("iframe")}} or {{HTMLElement("object")}}) in which the window is embedded.
 
 > [!NOTE]
 > Despite this property's name, it works for documents embedded

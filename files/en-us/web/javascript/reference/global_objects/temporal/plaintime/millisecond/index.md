@@ -3,15 +3,11 @@ title: Temporal.PlainTime.prototype.millisecond
 short-title: millisecond
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime/millisecond
 page-type: javascript-instance-accessor-property
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.PlainTime.millisecond
 sidebar: jsref
 ---
 
-{{SeeCompatTable}}
-
-The **`millisecond`** accessor property of {{jsxref("Temporal.PlainTime")}} instances returns a integer from 0 to 999 representing the millisecond (10<sup>-3</sup> second) component of this time.
+The **`millisecond`** accessor property of {{jsxref("Temporal.PlainTime")}} instances returns an integer from 0 to 999 representing the millisecond (10<sup>-3</sup> second) component of this time.
 
 The set accessor of `millisecond` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/PlainTime/with", "with()")}} method to create a new `Temporal.PlainTime` object with the desired new value.
 

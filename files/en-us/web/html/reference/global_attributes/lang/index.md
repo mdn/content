@@ -1,5 +1,5 @@
 ---
-title: HTML lang global attribute
+title: "`lang` HTML global attribute"
 short-title: lang
 slug: Web/HTML/Reference/Global_attributes/lang
 page-type: html-attribute
@@ -10,7 +10,7 @@ sidebar: htmlsidebar
 The **`lang`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) helps define the language of an element: the language that non-editable elements are written in, or the language that the editable elements should be written in by the user. The attribute contains a single {{glossary("BCP 47 language tag")}}.
 
 > [!NOTE]
-> The default value of `lang` is the empty string, which means that the language is unknown. Therefore, it is recommended to always specify an appropriate value for this attribute.
+> The language is in an unknown state if there's no indication of language anywhere. It is recommended to always specify an appropriate value for this attribute, especially due to [accessibility concerns](#accessibility_concerns).
 
 {{InteractiveExample("HTML Demo: lang", "tabbed-shorter")}}
 
@@ -36,11 +36,17 @@ p::before {
 }
 ```
 
-If the attribute value is the _empty string_ (`lang=""`), the language is set to _unknown_; if the language tag is not valid according to BCP47, it is set to _invalid_.
+## Values
 
-Even if the `lang` attribute is set, it may not be taken into account, as the `xml:lang` attribute has priority.
+The attribute contains a single {{glossary("BCP 47 language tag")}}. If the attribute value is the _empty string_ (`lang=""`), the language is set to _unknown_; if the language tag is not valid according to BCP47, it is set to _invalid_.
+
+If the `xml:lang` attribute is also specified, the HTML spec requires the `lang` and `xml:lang` attributes' values to be equal case-insensitively. The `xml:lang` attribute takes priority.
 
 For the CSS pseudo-class {{cssxref(":lang")}}, two invalid language names are different if their names are different. So while `:lang(es)` matches both `lang="es-ES"` and `lang="es-419"`, `:lang(xyzzy)` would _not_ match `lang="xyzzy-Zorp!"`.
+
+### Inheritance
+
+If an element has no `lang` or `xml:lang` attribute, it inherits the language of its [parent element](/en-US/docs/Web/API/Node/parentElement), or the {{domxref("ShadowRoot/host", "host")}} if the parent node is a {{domxref("ShadowRoot")}}. If no ancestor sets a language, the language can also be specified by [`<meta http-equiv="content-language">`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv#content-language) or the HTTP {{HTTPHeader("Content-Language")}} header. If no single content language can be determined from these cues, the default is the empty string (with _unknown_ as the content language).
 
 ## Accessibility concerns
 
@@ -150,10 +156,6 @@ For example, the language menu on this site (MDN) includes a **`lang`** attribut
   </ul>
 </div>
 ```
-
-## Inheritance
-
-If an element has no `lang` attribute, it will inherit the `lang` value set on its [parent node](/en-US/docs/Glossary/Node/DOM), which in turn may inherit it from its parent, and so on.
 
 ## Specifications
 

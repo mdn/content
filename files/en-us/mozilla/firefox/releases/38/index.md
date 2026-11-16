@@ -1,5 +1,5 @@
 ---
-title: Firefox 38 for developers
+title: Firefox 38 release notes for developers
 short-title: Firefox 38
 slug: Mozilla/Firefox/Releases/38
 page-type: firefox-release-notes
@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 38 was released on May 12th, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -39,7 +39,7 @@ Highlights:
   - Direction-independent equivalents of {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}} and {{cssxref("border-left")}} and their longhands for width, style and color: {{cssxref("border-block-start")}}, {{cssxref("border-block-start-width")}}, {{cssxref("border-block-start-style")}}, {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end")}}, {{cssxref("border-block-end-width")}}, {{cssxref("border-block-end-style")}}, {{cssxref("border-block-end-color")}}, {{cssxref("border-inline-start")}}, {{cssxref("border-inline-start-width")}}, {{cssxref("border-inline-start-style")}}, {{cssxref("border-inline-start-color")}}, {{cssxref("border-inline-end")}}, {{cssxref("border-inline-end-width")}}, {{cssxref("border-inline-end-style")}} and {{cssxref("border-inline-end-color")}} ([Firefox bug 649142](https://bugzil.la/649142)).
   - Direction-independent equivalents of {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} and {{cssxref("left")}}: {{cssxref("inset-block-start")}}, `offset-block-end`, `offset-inline-start` and `offset-inline-end` ([Firefox bug 1120283](https://bugzil.la/1120283)).
 
-- How [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) start has been modified to match a recent change of the specifications, aiming at having an interoperable behavior between browsers ([Firefox bug 960465](https://bugzil.la/960465)).
+- How [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using) start has been modified to match a recent change of the specifications, aiming at having an interoperable behavior between browsers ([Firefox bug 960465](https://bugzil.la/960465)).
 
 ### HTML
 
@@ -61,13 +61,13 @@ Highlights:
 - Duplicated parameter name is no longer allowed when rest-parameter is present ([Firefox bug 1096376](https://bugzil.la/1096376)).
 - Duplicated parameter name is no longer allowed in arrow functions ([Firefox bug 1096377](https://bugzil.la/1096377)).
 - Duplicated parameter name is no longer allowed in concise method definitions ([Firefox bug 1096378](https://bugzil.la/1096378)).
-- Warning is shown when {{jsxref("Map")}}/{{jsxref("Set")}}/{{jsxref("WeakMap")}} constructor is called without {{jsxref("Operators/new", "new")}} ([Firefox bug 1108930](https://bugzil.la/1108930)).
+- Warning is shown when {{jsxref("Map")}}/{{jsxref("Set")}}/{{jsxref("WeakMap")}} constructor is called without {{jsxref("new")}} ([Firefox bug 1108930](https://bugzil.la/1108930)).
 - The {{jsxref("WeakMap.get", "get")}}, {{jsxref("WeakMap.has", "has")}}, and {{jsxref("WeakMap.delete", "delete")}} methods of {{jsxref("WeakMap")}} objects no longer throw when the `key` parameter is not an object ([Firefox bug 1127827](https://bugzil.la/1127827)).
 - The optional and non-standard second `fallback` parameter for {{jsxref("WeakMap.prototype.get()")}} has been removed ([Firefox bug 1127827](https://bugzil.la/1127827)).
 - When defining a [generator method](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), `set` and `get` are no longer invalid names ([Firefox bug 1073809](https://bugzil.la/1073809)).
 - {{jsxref("RegExp.prototype.source")}} now returns "(?:)" instead of an empty string for empty regular expressions ([Firefox bug 1130798](https://bugzil.la/1130798)).
 - {{jsxref("RegExp.prototype.source")}} and {{jsxref("RegExp.prototype.toString()")}} now escape regular expression patterns properly (e.g., line terminators, "\n") ([Firefox bug 1130860](https://bugzil.la/1130860)).
-- The {{jsxref("Regexp")}} {{jsxref("Regexp.global", "global")}}, {{jsxref("Regexp.ignoreCase", "ignoreCase")}}, {{jsxref("Regexp.multiline", "multiline")}}, and {{jsxref("Regexp.sticky", "sticky")}} properties are now prototype accessor properties rather than own data properties of `RegExp` instances ([Firefox bug 1120169](https://bugzil.la/1120169)).
+- The {{jsxref("RegExp")}} {{jsxref("RegExp.global", "global")}}, {{jsxref("RegExp.ignoreCase", "ignoreCase")}}, {{jsxref("RegExp.multiline", "multiline")}}, and {{jsxref("RegExp.sticky", "sticky")}} properties are now prototype accessor properties rather than own data properties of `RegExp` instances ([Firefox bug 1120169](https://bugzil.la/1120169)).
 - The {{jsxref("RegExp.prototype.source")}} property is now prototype accessor property rather than own data property of `RegExp` instances ([Firefox bug 1120169](https://bugzil.la/1120169)). Available only in non-Release version, due to [Firefox bug 1150297](https://bugzil.la/1150297).
 - {{jsxref("Function.prototype.toString()")}} now throws for {{jsxref("Proxy")}} objects ([Firefox bug 1100936](https://bugzil.la/1100936)).
 
@@ -80,7 +80,7 @@ Highlights:
 - Constants of {{domxref("KeyboardEvent.location")}}, `DOM_KEY_LOCATION_MOBILE` and DOM_KEY_LOCATION_JOYSTICK, have been removed, since they were removed from the DOM Level 3 Spec ([Firefox bug 936313](https://bugzil.la/936313).
 - {{domxref("KeyboardEvent.code")}} is now available; previously it was only available in prerelease builds. ([Firefox bug 1126673](https://bugzil.la/1126673))
 - {{domxref("KeyboardEvent.code")}} now supports special keys on Sun keyboards on Linux, Android, and Firefox OS. ([Firefox bug 1020139](https://bugzil.la/1020139))
-- The {{domxref("TextEncoder.TextEncoder", "TextEncoder()")}} constructor has been changed to match the spec: when an invalid parameter is passed, the `RangeError` {{domxref("DOMException")}} is now raised, rather than the erroneous {{jsxref("TypeError")}} ([Firefox bug 1125766](https://bugzil.la/1125766)).
+- The {{domxref("TextEncoder.TextEncoder", "TextEncoder()")}} constructor has been changed to match the spec: when an invalid parameter is passed, the {{jsxref("RangeError")}} is now raised, rather than the erroneous {{jsxref("TypeError")}} ([Firefox bug 1125766](https://bugzil.la/1125766)).
 - The User Timing API, adding {{domxref("Performance.mark()")}}, {{domxref("Performance.clearMarks()")}}, {{domxref("Performance.measure()")}}, and {{domxref("Performance.clearMeasures()")}} has been implemented ([Firefox bug 782751](https://bugzil.la/782751)).
 - The prefixed version of {{domxref("Window.indexedDB")}}, `mozIndexedDB`, has been removed ([Firefox bug 975699](https://bugzil.la/975699)).
 - The {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event is no longer cancelable ([Firefox bug 1134559](https://bugzil.la/1134559)).
@@ -139,7 +139,7 @@ _No change._
 
 #### Downloads.jsm
 
-- [`DownloadTarget`](/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadTarget) objects now have `exists` and `size` properties, allowing you to determine the existence of and the size of the download's target file on disk, as well as a new `refresh()` method, which asks that these values be updated.
+- [`DownloadTarget`](https://web.archive.org/web/20210623121639/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadTarget) objects now have `exists` and `size` properties, allowing you to determine the existence of and the size of the download's target file on disk, as well as a new `refresh()` method, which asks that these values be updated.
 
 ### XPCOM
 

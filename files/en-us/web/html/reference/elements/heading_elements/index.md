@@ -1,5 +1,6 @@
 ---
-title: "<h1>–<h6>: The HTML Section Heading elements"
+title: "`<h1>–<h6>` HTML section heading elements"
+short-title: <h1>–<h6>
 slug: Web/HTML/Reference/Elements/Heading_Elements
 page-type: html-element
 browser-compat:
@@ -58,6 +59,8 @@ h4 {
 ## Attributes
 
 These elements only include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
+
+The [`headingoffset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingoffset) and [`headingreset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingreset) global attributes can be used to adjust the computed heading level of these elements.
 
 ## Usage notes
 

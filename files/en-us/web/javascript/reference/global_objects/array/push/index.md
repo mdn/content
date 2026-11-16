@@ -85,7 +85,7 @@ vegetables.push(...moreVegs);
 console.log(vegetables); // ['parsnip', 'potato', 'celery', 'beetroot']
 ```
 
-Merging two arrays can also be done with the {{jsxref("Array/concat", "concat()")}} method.
+Merging two arrays can also be done with the {{jsxref("Array/concat", "concat()")}} method, which will make a new combined array instead of adding to the original. The spread syntax only works if the number of elements in the array is less than the maximum number of function arguments allowed by the engine. For longer arrays, use `concat()` or call `push()` multiple times in a loop.
 
 ### Calling push() on non-array objects
 
@@ -151,7 +151,7 @@ were dealing with an actual array.
 
 ## See also
 
-- [Polyfill of `Array.prototype.push` in `core-js` with fixes of this method](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.push` in `core-js` with fixes of this method](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.push`](https://www.npmjs.com/package/array.prototype.push)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

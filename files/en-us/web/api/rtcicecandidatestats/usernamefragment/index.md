@@ -16,7 +16,7 @@ The fragment uniquely identifies a single ICE interaction session, and can be us
 
 For more information see {{domxref("RTCIceCandidate.usernameFragment")}}.
 
-### Value
+## Value
 
 A string representing the {{domxref("RTCIceCandidate.usernameFragment", "usernameFragment")}} of the corresponding {{domxref("RTCIceCandidate")}}.
 

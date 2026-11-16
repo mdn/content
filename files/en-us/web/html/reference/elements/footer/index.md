@@ -1,5 +1,6 @@
 ---
-title: "<footer>: The Footer element"
+title: "`<footer>` HTML footer element"
+short-title: <footer>
 slug: Web/HTML/Reference/Elements/footer
 page-type: html-element
 browser-compat: html.elements.footer
@@ -36,7 +37,7 @@ footer {
   justify-content: center;
   padding: 5px;
   background-color: #45a1ff;
-  color: #fff;
+  color: white;
 }
 ```
 
@@ -80,7 +81,7 @@ footer {
   text-align: center;
   padding: 5px;
   background-color: #abbaba;
-  color: #000;
+  color: black;
 }
 ```
 

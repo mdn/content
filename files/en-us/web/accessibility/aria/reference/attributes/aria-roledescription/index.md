@@ -32,7 +32,23 @@ Again, avoid using `aria-roledescription`. In this example, `escape` has no rele
 
 When using `aria-roledescription`, also ensure that the element to which it is applied has a valid ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) or has implicit role semantics and that the value itself is not empty and contains more than just whitespace characters.
 
-The `aria-roledescription` is required when using `aria-brailleroledescription`. Note that, in general, `aria-brailleroledescription` should only be used in rare cases when a `aria-roledescription` is excessively verbose when rendered in Braille.
+The `aria-roledescription` is required when using `aria-brailleroledescription`. Note that, in general, `aria-brailleroledescription` should only be used in rare cases when an `aria-roledescription` is excessively verbose when rendered in Braille.
+
+## Values
+
+- `<string>`
+  - : A non-empty string, an unconstrained value type, containing more than just white space.
+
+## Associated interfaces
+
+- {{domxref("Element.ariaRoleDescription")}}
+  - : The [`ariaRoleDescription`](/en-US/docs/Web/API/Element/ariaRoleDescription) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-roledescription` attribute.
+- {{domxref("ElementInternals.ariaRoleDescription")}}
+  - : The [`ariaRoleDescription`](/en-US/docs/Web/API/ElementInternals/ariaRoleDescription) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-roledescription` attribute.
+
+## Associated roles
+
+Supported by all roles and by all base markup elements except for `role="generic"`.
 
 ## Examples
 
@@ -50,22 +66,6 @@ The following example shows the use of `aria-roledescription` to indicate that a
 ```
 
 In the previous examples, a screen reader user may hear "Quarterly Report, slide" rather than the less precise "Quarterly Report, article".
-
-## Values
-
-- `<string>`
-  - : A non-empty string, an unconstrained value type, containing more than just white space.
-
-## Associated interfaces
-
-- {{domxref("Element.ariaRoleDescription")}}
-  - : The [`ariaRoleDescription`](/en-US/docs/Web/API/Element/ariaRoleDescription) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-roledescription` attribute.
-- {{domxref("ElementInternals.ariaRoleDescription")}}
-  - : The [`ariaRoleDescription`](/en-US/docs/Web/API/ElementInternals/ariaRoleDescription) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-roledescription` attribute.
-
-## Associated roles
-
-Supported by all roles and by all base markup elements except for `role="generic"`.
 
 ## Specifications
 

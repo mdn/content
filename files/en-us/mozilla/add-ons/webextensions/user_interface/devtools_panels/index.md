@@ -10,7 +10,7 @@ sidebar: addonsidebar
 
 When an extension provides tools that are of use to developers, it's possible to add a UI for them to the browser's developer tools as a new panel.
 
-![Simple example showing the addition of "My panel" to the Developer Tools tabs.](developer_panel_tab.png)
+![Simple example showing the addition of "My Panel" to the Firefox Developer Tools tabs.](developer_panel_tab.png)
 
 ## Specifying a developer tools panel
 
@@ -61,7 +61,7 @@ For details on how to design your developer panel's web page to match the style 
 
 ## Icons
 
-For details on how to create icons to use with your developer tools panel, see [Iconography](https://acorn.firefox.com/latest/styles/iconography/overview-QEDMXQqj) in the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
+For details on how to create icons to use with your developer tools panel, see [Iconography](https://acorn.firefox.com/latest/foundations/styles/iconography-QEDMXQqj) in the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
 
 ## Examples
 

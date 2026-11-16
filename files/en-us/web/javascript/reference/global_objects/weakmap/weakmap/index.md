@@ -68,9 +68,8 @@ wm1.has(o1); // false
 
 ## See also
 
-- [Polyfill of `WeakMap` in `core-js`](https://github.com/zloirock/core-js#weakmap)
+- [Polyfill of `WeakMap` in `core-js`](https://core-js.io/docs/features/ecmascript/collections#h-weakmap)
 - [`WeakMap` in the JavaScript guide](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
-- [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgen.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}

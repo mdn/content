@@ -20,7 +20,7 @@ This interface, and hence the system wake lock, is exposed through the {{domxref
 
 The following code `awaits` the request for a {{domxref("WakeLockSentinel")}} object, and continues if the request is granted.
 
-The {{domxref("WakeLock.request", "WakeLock.request()")}} method is wrapped in a `try...catch` statement to catch [cases when the promise might be rejected](/en-US/docs/Web/API/WakeLock/request#exceptions) rejected, such as due to low device power.
+The {{domxref("WakeLock.request", "WakeLock.request()")}} method is wrapped in a `try...catch` statement to catch [cases when the promise might be rejected](/en-US/docs/Web/API/WakeLock/request#exceptions), such as due to low device power.
 
 ```js
 try {

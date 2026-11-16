@@ -16,6 +16,11 @@ All supported `entryTypes` are available using the static property {{domxref("Pe
 
 A string. The return value depends on the subtype of the `PerformanceEntry` object. Some subtypes have more than one `entryType`.
 
+- `container`
+  - : Reports render time of groups of elements within a container.
+
+    The entry instance will be a {{domxref("PerformanceContainerTiming")}} object.
+
 - `element`
   - : Reports load time of elements.
 
@@ -30,6 +35,11 @@ A string. The return value depends on the subtype of the `PerformanceEntry` obje
   - : Reports the {{Glossary("First Input Delay")}} (FID).
 
     The entry instance will be a {{domxref("PerformanceEventTiming")}} object.
+
+- `interaction-contentful-paint`
+  - : Reports the largest paint an element triggered on screen after an interaction.
+
+    The entry instance will be an {{domxref("InteractionContentfulPaint")}} object.
 
 - `largest-contentful-paint`
   - : Reports the largest paint an element triggered on screen.
@@ -75,6 +85,11 @@ A string. The return value depends on the subtype of the `PerformanceEntry` obje
   - : Reports timing information for resources in a document.
 
     The entry instance will be a {{domxref("PerformanceResourceTiming")}} object.
+
+- `soft-navigation`
+  - : Reports the paints triggered on screen after a user interaction and a URL update triggered a {{Glossary("soft navigation")}}.
+
+    The entry instance will be a {{domxref("PerformanceSoftNavigation")}} object.
 
 - `taskattribution`
   - : Reports the type of work that contributed significantly to the long task.

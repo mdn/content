@@ -54,7 +54,7 @@ Next, create the "icons" directory inside the "buttons" directory, and save the 
 !["32 pixel icon of a lined sheet of paper"](page-32.png)
 
 > [!NOTE]
-> These icons are from the [bitsies!](https://www.iconfinder.com/iconsets/bitsies) iconset created by Recep Kütük.
+> These icons are from the "bitsies!" iconset on iconfinder.com created by Recep Kütük.
 
 We have two icons so we can use the bigger one in high-density displays. The browser will take care of selecting the best icon for the current display.
 
@@ -83,9 +83,9 @@ button/
     manifest.json
 ```
 
-Now [install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) and click the button:
+Now [install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/). In the toolbar, click the extensions button (jigsaw puzzle icon) and locate the extension. Click the extension's 3-dot menu and select **Pin to Toolbar**. Now, click the button in the toolbar:
 
-![The toolbar button added by the extension](toolbar_button.png)
+![The toolbar button added by the extension, highlighted](toolbar_button.png)
 
 ## Adding a popup
 
@@ -187,9 +187,9 @@ button/
     manifest.json
 ```
 
-Now [reload the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading-a-temporary-extension), click the button again, and try clicking on the choices in the popup:
+Now [reload the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading-a-temporary-extension), click the button to open the popup:
 
-![The toolbar button added by the extension with a popup](toolbar_button_with_popup.png)
+![The toolbar button added by the extension with its popup open, highlighted](toolbar_button_with_popup.png)
 
 ## Page actions
 

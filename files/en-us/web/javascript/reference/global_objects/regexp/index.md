@@ -277,7 +277,7 @@ The [Unicode property escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expr
 ### Extracting subdomain name from URL
 
 ```js
-const url = "http://xxx.domain.com";
+const url = "http://xxx.example.com";
 console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // 'xxx'
 ```
 
@@ -324,7 +324,7 @@ Note that due to web compatibility, `RegExp.$N` will still return an empty strin
 
 ## See also
 
-- [Polyfill of many modern `RegExp` features (`dotAll`, `sticky` flags, named capture groups, etc.) in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of many modern `RegExp` features (`dotAll`, `sticky` flags, named capture groups, etc.) in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - [Regular expressions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - {{jsxref("String.prototype.match()")}}

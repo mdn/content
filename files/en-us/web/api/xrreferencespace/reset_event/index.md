@@ -18,26 +18,21 @@ This event is not cancelable.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("reset", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onreset = (event) => { }
 ```
 
 ## Event type
 
 An {{domxref("XRReferenceSpaceEvent")}}. Inherits from {{domxref("Event")}}.
-
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("XRReferenceSpaceEvent.referenceSpace", "referenceSpace")}} {{ReadOnlyInline}}
-  - : An {{domxref("XRReferenceSpace")}} indicating the reference space that generated the event.
-- {{domxref("XRReferenceSpaceEvent.transform", "transform")}} {{ReadOnlyInline}}
-  - : An {{domxref("XRRigidTransform")}} object indicating the position and orientation of the specified `referenceSpace` object's native origin after the event, defined relative to the coordinate system before the event.
 
 ## Description
 
@@ -78,7 +73,7 @@ viewerRefSpace.addEventListener("reset", (event) => {
 });
 ```
 
-The second option is to set the `XRReferenceSpace` object's `onreset` event handler property:
+The second option is to set the `XRReferenceSpace` object's `onreset` event handler property (but note that this replaces other event listeners added using `onreset`, if any):
 
 ```js
 viewerRefSpace.onreset = (event) => {

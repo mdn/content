@@ -12,15 +12,15 @@ The **`format()`** method of {{jsxref("Intl.RelativeTimeFormat")}} instances for
 {{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.prototype.format()")}}
 
 ```js interactive-example
-const rtf1 = new Intl.RelativeTimeFormat("en", { style: "short" });
+const rtf = new Intl.RelativeTimeFormat("en", { style: "short" });
 
-console.log(rtf1.format(3, "quarter"));
+console.log(rtf.format(3, "quarter"));
 // Expected output: "in 3 qtrs."
 
-console.log(rtf1.format(-1, "day"));
+console.log(rtf.format(-1, "day"));
 // Expected output: "1 day ago"
 
-console.log(rtf1.format(10, "seconds"));
+console.log(rtf.format(10, "seconds"));
 // Expected output: "in 10 sec."
 ```
 
@@ -68,7 +68,7 @@ rtf.format(1, "day"); // "in 1 day"
 
 ### Using the auto option
 
-If `numeric:auto` option is passed, it will produce the string `yesterday`, `today`, or `tomorrow` instead of `1 day ago`, `in 0 days`, or `in 1 day`. This allows to not always have to use numeric values in the output.
+If the `numeric: "auto"` option is passed, it will produce the string `yesterday`, `today`, or `tomorrow` instead of `1 day ago`, `in 0 days`, or `in 1 day`. This allows you to avoid using numeric values in the output.
 
 ```js
 // Create a relative time formatter in your locale

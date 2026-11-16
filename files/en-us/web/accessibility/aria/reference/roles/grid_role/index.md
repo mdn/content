@@ -27,20 +27,20 @@ The `grid` role is a composite widget containing a collection of one or more row
     <tr>
       <th scope="row">Aisle 1</th>
       <td tabindex="0">
-        <button id="1a" tabindex="-1">1A</button>
+        <button id="btn-1a" tabindex="-1">1A</button>
       </td>
       <td tabindex="-1">
-        <button id="1b" tabindex="-1">1B</button>
+        <button id="btn-1b" tabindex="-1">1B</button>
       </td>
       <!-- More Columns -->
     </tr>
     <tr>
       <th scope="row">Aisle 2</th>
       <td tabindex="-1">
-        <button id="2a" tabindex="-1">2A</button>
+        <button id="btn-2a" tabindex="-1">2A</button>
       </td>
       <td tabindex="-1">
-        <button id="2b" tabindex="-1">2B</button>
+        <button id="btn-2b" tabindex="-1">2B</button>
       </td>
       <!-- More Columns -->
     </tr>
@@ -52,14 +52,16 @@ A grid widget contains one or more rows with one or more cells of thematically r
 
 Cell elements have the role [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), unless they are a row or column header, in which case, the elements are [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role) and [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role), respectively. Cell elements need to be owned by elements with a [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) role. Rows can be grouped using the [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role) role.
 
-If the grid is used as an interactive widget, [keyboard interactions](#keyboard_interactions) need to be implemented.
+The grid is an interactive widget, so [keyboard interactions](#keyboard_interactions) need to be implemented.
+
+An accessible name is strongly recommended for the `grid` role, although not required by ARIA. Use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) to reference a visible label, or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) if no visible label is present.
 
 ### Associated ARIA roles, states, and properties
 
 #### Roles
 
 - [treegrid](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) (subclass)
-  - : If a grid has columns that can expanded or collapsed, a treegrid can be used.
+  - : If a grid has rows that can be expanded or collapsed to show or hide child rows, a treegrid can be used.
 - [row](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
   - : A row inside the grid.
 - [rowgroup](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
@@ -72,7 +74,7 @@ If the grid is used as an interactive widget, [keyboard interactions](#keyboard_
 - [aria-multiselectable](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable)
   - : If `aria-multiselectable` is set to `true`, multiple items in the grid can be selected. The default value is `false`.
 - [aria-readonly](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly)
-  - : If the user can navigate the grid but not change the value or values of the grid, the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly) should be set to `true`. The default value is `false`.
+  - : If the grid provides cell content editing but editing is unavailable for all cells, the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly) can be set to `true`. The default value is `false`, but omitting the attribute does not imply that the grid contains editable content. Omit the attribute if the grid does not provide cell content editing. The value set on the grid propagates to its gridcells and can be overridden on individual gridcells.
 
 > [!NOTE]
 > For many use cases, an HTML {{HTMLElement('table')}} element is sufficient as it and the various table elements already include many ARIA roles.
@@ -211,13 +213,13 @@ tbody td {
 }
 
 tbody td {
-  border: 1px solid #000;
+  border: 1px solid black;
   text-align: right;
   color: #767676;
 }
 
 tbody td[role="gridcell"] {
-  color: #000;
+  color: black;
 }
 
 tbody td[role="gridcell"]:hover,

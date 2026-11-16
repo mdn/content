@@ -1,5 +1,5 @@
 ---
-title: Firefox 61 for developers
+title: Firefox 61 release notes for developers
 short-title: Firefox 61
 slug: Mozilla/Firefox/Releases/61
 page-type: firefox-release-notes
@@ -35,12 +35,12 @@ _No changes._
 
 - CSS parsing has been parallelized ([Firefox bug 1346988](https://bugzil.la/1346988)).
 - Support for {{cssxref("font-variation-settings")}} and {{cssxref("font-optical-sizing")}} has been enabled by default ([Firefox bug 1447163](https://bugzil.la/1447163)).
-- The `grid-gap`, `grid-row-gap`, and `grid-column-gap` properties have been renamed to {{cssxref("gap")}}, {{cssxref("row-gap")}}, and {{cssxref("column-gap")}}, as they are no longer grid-specific ([Firefox bug 1398482](https://bugzil.la/1398482)). See [Box alignment; Gaps between boxes](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment#gaps_between_boxes) for additional details. The old names have been kept as aliases for web compatibility purposes.
+- The `grid-gap`, `grid-row-gap`, and `grid-column-gap` properties have been renamed to {{cssxref("gap")}}, {{cssxref("row-gap")}}, and {{cssxref("column-gap")}}, as they are no longer grid-specific ([Firefox bug 1398482](https://bugzil.la/1398482)). See [Box alignment; Gaps between boxes](/en-US/docs/Web/CSS/Guides/Box_alignment/Overview#gaps_between_boxes) for additional details. The old names have been kept as aliases for web compatibility purposes.
 - The {{cssxref("flex-basis")}} `content` value is now supported ([Firefox bug 1105111](https://bugzil.la/1105111)).
-- Percentage values of {{cssxref("column-gap")}} are now supported in [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) ([Firefox bug 1398537](https://bugzil.la/1398537)).
+- Percentage values of {{cssxref("column-gap")}} are now supported in [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) ([Firefox bug 1398537](https://bugzil.la/1398537)).
 - The CSS {{cssxref(":host")}} pseudo-class is now supported; this selects a custom element from inside its shadow DOM ([Firefox bug 992245](https://bugzil.la/992245)).
 - {{cssxref("overflow")}} now accepts two-value syntax ([Firefox bug 1453148](https://bugzil.la/1453148)).
-- Flex items that are sized according to their content are now sized using `max-content`, not `fit-content` ([Firefox bug 1282821](https://bugzil.la/1282821)). See the [`width` value definitions](/en-US/docs/Web/CSS/width#values) for more details of these values.
+- Flex items that are sized according to their content are now sized using `max-content`, not `fit-content` ([Firefox bug 1282821](https://bugzil.la/1282821)). See the [`width` value definitions](/en-US/docs/Web/CSS/Reference/Properties/width#values) for more details of these values.
 - {{cssxref("font-weight")}}, {{cssxref("font-stretch")}} and {{cssxref("font-style")}} now support additional values as defined by [CSS Fonts level 4](https://drafts.csswg.org/css-fonts-4/) ([Firefox bug 1436048](https://bugzil.la/1436048)):
   - {{cssxref("font-weight")}} now accepts a floating-point value between 1 and 1000 inclusive.
   - {{cssxref("font-stretch")}} now accepts percentage values.
@@ -71,7 +71,7 @@ _No changes._
 - The [Fetch API](/en-US/docs/Web/API/Fetch_API)'s {{domxref("Request.credentials")}} property now defaults to `"same-origin"` per the latest revision of the specification ([Firefox bug 1394399](https://bugzil.la/1394399)).
 - The {{domxref("Request.destination")}} property has been implemented ([Firefox bug 1402892](https://bugzil.la/1402892)).
 - The {{domxref("MutationObserver")}} option dictionary, `MutationObserverInit`, no longer has `false` as the default value of all of its Boolean properties. Now, only `childList` and `subtree` have default values (of `false` still). The other properties have no default values ([Firefox bug 973638](https://bugzil.la/973638)).
-- The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) method {{domxref("PaymentRequest.show()")}} now supports using a {{jsxref("Promise")}} to let the client side code provide updated payment details prior to activating the payment interface ([Firefox bug 1441709](https://bugzil.la/1441709)).
+- The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) method {{domxref("PaymentRequest.show()")}} now supports using a {{jsxref("Promise")}} to let the client-side code provide updated payment details prior to activating the payment interface ([Firefox bug 1441709](https://bugzil.la/1441709)).
 
 #### DOM events
 

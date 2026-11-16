@@ -3,13 +3,9 @@ title: Temporal.ZonedDateTime.prototype.toString()
 short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/toString
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.toString
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`toString()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a string representing this date-time in the [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#rfc_9557_format).
 

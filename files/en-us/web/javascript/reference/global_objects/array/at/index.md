@@ -12,16 +12,16 @@ The **`at()`** method of {{jsxref("Array")}} instances takes an integer value an
 {{InteractiveExample("JavaScript Demo: Array.prototype.at()")}}
 
 ```js interactive-example
-const array1 = [5, 12, 8, 130, 44];
+const array = [5, 12, 8, 130, 44];
 
 let index = 2;
 
-console.log(`An index of ${index} returns ${array1.at(index)}`);
+console.log(`An index of ${index} returns ${array.at(index)}`);
 // Expected output: "An index of 2 returns 8"
 
 index = -2;
 
-console.log(`An index of ${index} returns ${array1.at(index)}`);
+console.log(`An index of ${index} returns ${array.at(index)}`);
 // Expected output: "An index of -2 returns 130"
 ```
 
@@ -121,7 +121,7 @@ console.log(Array.prototype.at.call(arrayLike, 2)); // undefined
 
 ## See also
 
-- [Polyfill of `Array.prototype.at` in `core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
+- [Polyfill of `Array.prototype.at` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.at`](https://www.npmjs.com/package/array.prototype.at)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

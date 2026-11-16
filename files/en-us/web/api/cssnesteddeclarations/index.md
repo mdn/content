@@ -9,7 +9,7 @@ browser-compat: api.CSSNestedDeclarations
 
 The **`CSSNestedDeclarations`** interface of the [CSS Rule API](/en-US/docs/Web/API/CSSRule) is used to group nested {{domxref("CSSRule")}}s.
 
-The interface allows the [CSS Object Model (CSSOM](/en-US/docs/Web/API/CSS_Object_Model) to mirror the structure of CSS documents with nested CSS rules, and ensure that rules are parsed and evaluated in the order that they are declared.
+The interface allows the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) to mirror the structure of CSS documents with nested CSS rules, and ensure that rules are parsed and evaluated in the order that they are declared.
 
 > [!NOTE]
 > Implementations that do not support this interface may parse nested rules in the wrong order.
@@ -54,7 +54,7 @@ This is represented by a number of JavaScript objects in the [CSS Object Model](
 - The final rule is a `CSSNestedDeclaration` object that represents the `color: black` rule in the stylesheet, and which can be returned via `document.styleSheets[0].cssRules[0].cssRules[1]`.
 
 > [!NOTE]
-> All top-level styles after the first `CSSNestedDeclaration` must also be represented as `CSSNestedDeclaration` objects in order to follow the [CSS nested declarations rule](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#nested_declarations_rule)
+> All top-level styles after the first `CSSNestedDeclaration` must also be represented as `CSSNestedDeclaration` objects in order to follow the [CSS nested declarations rule](/en-US/docs/Web/CSS/Guides/Nesting/Using#nested_declarations_rule)
 
 ### CSSOM (CSS Object Model)
 
@@ -82,4 +82,4 @@ This is represented by a number of JavaScript objects in the [CSS Object Model](
 ## See Also
 
 - {{domxref("CSSNestedDeclarations.style")}}
-- [The Nested Declarations Rule](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#nested_declarations_rule)
+- [The Nested Declarations Rule](/en-US/docs/Web/CSS/Guides/Nesting/Using#nested_declarations_rule)

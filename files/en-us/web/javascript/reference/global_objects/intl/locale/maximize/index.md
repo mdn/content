@@ -40,7 +40,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Intl.Locale")}} instance whose `baseName` property returns
+An {{jsxref("Intl.Locale")}} instance whose `baseName` property returns
 the result of the [Add Likely Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) algorithm executed against _{{jsxref("Intl/Locale/baseName", "locale.baseName")}}_.
 
 ## Description

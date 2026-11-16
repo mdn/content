@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.GamepadHapticActuator
 ---
 
-{{APIRef("Gamepad API")}}{{securecontext_header}}
+{{APIRef("Gamepad API")}}
 
 The **`GamepadHapticActuator`** interface of the [Gamepad API](/en-US/docs/Web/API/Gamepad_API) represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware.
 
@@ -20,11 +20,11 @@ This interface is accessible through the {{domxref("Gamepad.hapticActuators")}} 
 
 ## Instance methods
 
-- {{domxref("GamepadHapticActuator.playEffect()")}} {{ReadOnlyInline}}
+- {{domxref("GamepadHapticActuator.playEffect()")}}
   - : Causes the hardware to play a specific vibration effect.
-- {{domxref("GamepadHapticActuator.pulse()")}} {{ReadOnlyInline}}
+- {{domxref("GamepadHapticActuator.pulse()")}}
   - : Makes the hardware pulse at a certain intensity for a specified duration.
-- {{domxref("GamepadHapticActuator.reset()")}} {{ReadOnlyInline}}
+- {{domxref("GamepadHapticActuator.reset()")}}
   - : Stops the hardware from playing an active vibration effect.
 
 ## Examples

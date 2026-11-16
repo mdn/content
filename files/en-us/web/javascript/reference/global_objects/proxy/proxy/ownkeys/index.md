@@ -12,21 +12,21 @@ The **`handler.ownKeys()`** method is a trap for the `[[OwnPropertyKeys]]` [obje
 {{InteractiveExample("JavaScript Demo: handler.ownKeys()", "taller")}}
 
 ```js interactive-example
-const monster1 = {
+const monster = {
   _age: 111,
   [Symbol("secret")]: "I am scared!",
   eyeCount: 4,
 };
 
-const handler1 = {
+const handler = {
   ownKeys(target) {
     return Reflect.ownKeys(target);
   },
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+const proxy = new Proxy(monster, handler);
 
-for (const key of Object.keys(proxy1)) {
+for (const key of Object.keys(proxy)) {
   console.log(key);
   // Expected output: "_age"
   // Expected output: "eyeCount"

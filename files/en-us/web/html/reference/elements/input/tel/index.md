@@ -1,5 +1,6 @@
 ---
-title: <input type="tel">
+title: '`<input type="tel">` HTML attribute value'
+short-title: <input type="tel">
 slug: Web/HTML/Reference/Elements/input/tel
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_tel
@@ -37,11 +38,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-Despite the fact that inputs of type `tel` are functionally identical to standard `text` inputs, they do serve useful purposes; the most quickly apparent of these is that mobile browsers — especially on mobile phones — may opt to present a custom keypad optimized for entering phone numbers. Using a specific input type for telephone numbers also makes adding custom validation and handling of phone numbers more convenient.
-
-> [!NOTE]
-> Browsers that don't support type `tel` fall back to being a standard {{HTMLElement("input/text", "text")}} input.
 
 ## Value
 
@@ -102,6 +98,11 @@ This does _not_ set a limit on how many characters the user can enter into the f
 
 ## Using tel inputs
 
+Despite the fact that inputs of type `tel` are functionally identical to standard `text` inputs, they do serve useful purposes; the most quickly apparent of these is that mobile browsers — especially on mobile phones — may opt to present a custom keypad optimized for entering phone numbers. Using a specific input type for telephone numbers also makes adding custom validation and handling of phone numbers more convenient.
+
+> [!NOTE]
+> Browsers that don't support type `tel` fall back to being a standard {{HTMLElement("input/text", "text")}} input.
+
 Telephone numbers are a very commonly collected type of data on the web. When creating any kind of registration or e-commerce site, for example, you will likely need to ask the user for a telephone number, whether for business purposes or for emergency contact purposes. Given how commonly-entered phone numbers are, it's unfortunate that a "one size fits all" solution for validating phone numbers is not practical.
 
 Fortunately, you can consider the requirements of your own site and implement an appropriate level of validation yourself. See [Validation](#validation), below, for details.
@@ -131,7 +132,7 @@ There is nothing magical going on here. When submitted to the server, the above 
 
 Sometimes it's helpful to offer an in-context hint as to what form the input data should take. This can be especially important if the page design doesn't offer descriptive labels for each {{HTMLElement("input")}}. This is where **placeholders** come in. A placeholder is a value that demonstrates the form the `value` should take by presenting an example of a valid value, which is displayed inside the edit box when the element's `value` is `""`. Once data is entered into the box, the placeholder disappears; if the box is emptied, the placeholder reappears.
 
-Here, we have an `tel` input with the placeholder `123-4567-8901`. Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.
+Here, we have a `tel` input with the placeholder `123-4567-8901`. Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.
 
 ```html
 <input id="telNo" name="telNo" type="tel" placeholder="123-4567-8901" />
@@ -178,7 +179,7 @@ The example below creates a 20-character wide telephone number entry box, requir
 
 #### Providing a single default using the value attribute
 
-As always, you can provide a default value for an `tel` input box by setting its [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute:
+As always, you can provide a default value for a `tel` input box by setting its [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute:
 
 ```html
 <input id="telNo" name="telNo" type="tel" value="333-4444-4444" />
@@ -234,6 +235,12 @@ You can make it so that an empty input is invalid and won't be submitted to the 
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 And let's include the following CSS to highlight valid entries with a checkmark and invalid entries with a cross:
 
 ```css
@@ -254,7 +261,7 @@ input:invalid + span::after {
   position: absolute;
   content: "✖";
   padding-left: 5px;
-  color: #8b0000;
+  color: darkred;
 }
 
 input:valid + span::after {
@@ -295,6 +302,12 @@ In this example we'll use the same CSS as before, but our HTML is changed to loo
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```css hidden
 div {
   margin-bottom: 10px;
@@ -313,7 +326,7 @@ input:invalid + span::after {
   position: absolute;
   content: "✖";
   padding-left: 5px;
-  color: #8b0000;
+  color: darkred;
 }
 
 input:valid + span::after {
@@ -335,55 +348,50 @@ In this example, we present a {{htmlelement("select")}} element that lets the us
 Each input has a [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder) attribute to show a hint to sighted users about what to enter into it, a [`pattern`](/en-US/docs/Web/HTML/Reference/Elements/input#pattern) to enforce a specific number of characters for the desired section, and an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute to contain a hint to be read out to screen reader users about what to enter into it.
 
 ```html
-<form>
-  <div>
-    <label for="country">Choose your country:</label>
-    <select id="country" name="country">
-      <option>UK</option>
-      <option selected>US</option>
-      <option>Germany</option>
-    </select>
-  </div>
-  <div>
-    <p>Enter your telephone number:</p>
-    <span class="areaDiv">
-      <input
-        id="areaNo"
-        name="areaNo"
-        type="tel"
-        required
-        placeholder="Area code"
-        pattern="[0-9]{3}"
-        aria-label="Area code" />
-      <span class="validity"></span>
-    </span>
-    <span class="number1Div">
-      <input
-        id="number1"
-        name="number1"
-        type="tel"
-        required
-        placeholder="First part"
-        pattern="[0-9]{3}"
-        aria-label="First part of number" />
-      <span class="validity"></span>
-    </span>
-    <span class="number2Div">
-      <input
-        id="number2"
-        name="number2"
-        type="tel"
-        required
-        placeholder="Second part"
-        pattern="[0-9]{4}"
-        aria-label="Second part of number" />
-      <span class="validity"></span>
-    </span>
-  </div>
-  <div>
-    <button>Submit</button>
-  </div>
-</form>
+<div>
+  <label for="country">Choose your country:</label>
+  <select id="country" name="country">
+    <option>UK</option>
+    <option selected>US</option>
+    <option>Germany</option>
+  </select>
+</div>
+<div>
+  <p>Enter your telephone number:</p>
+  <span class="areaDiv">
+    <input
+      id="areaNo"
+      name="areaNo"
+      type="tel"
+      required
+      placeholder="Area code"
+      pattern="[0-9]{3}"
+      aria-label="Area code" />
+    <span class="validity"></span>
+  </span>
+  <span class="number1Div">
+    <input
+      id="number1"
+      name="number1"
+      type="tel"
+      required
+      placeholder="First part"
+      pattern="[0-9]{3}"
+      aria-label="First part of number" />
+    <span class="validity"></span>
+  </span>
+  <span class="number2Div">
+    <input
+      id="number2"
+      name="number2"
+      type="tel"
+      required
+      placeholder="Second part"
+      pattern="[0-9]{4}"
+      aria-label="Second part of number" />
+    <span class="validity"></span>
+  </span>
+</div>
 ```
 
 The JavaScript contains an {{domxref("HTMLElement.change_event", "onchange")}} event handler that, when the `<select>` value is changed, updates the `<input>` element's `pattern`, `placeholder`, and `aria-label` to suit the format of telephone numbers in that country/territory.
@@ -462,7 +470,7 @@ input:invalid + span::after {
   position: absolute;
   content: "✖";
   padding-left: 5px;
-  color: #8b0000;
+  color: darkred;
 }
 
 input:valid + span::after {
@@ -517,18 +525,12 @@ input:valid + span::after {
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
-    </tr>
-    <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td>with no <code>list</code> attribute:
-                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code></td>
-      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code></td>
+      <td>
+        with no <code>list</code> attribute:
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code><br />
+        with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code>
+      </td>
     </tr>
   </tbody>
 </table>

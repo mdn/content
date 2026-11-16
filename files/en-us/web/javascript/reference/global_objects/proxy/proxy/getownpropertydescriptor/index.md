@@ -12,11 +12,11 @@ The **`handler.getOwnPropertyDescriptor()`** method is a trap for the `[[GetOwnP
 {{InteractiveExample("JavaScript Demo: handler.getOwnPropertyDescriptor()", "taller")}}
 
 ```js interactive-example
-const monster1 = {
+const monster = {
   eyeCount: 4,
 };
 
-const handler1 = {
+const handler = {
   getOwnPropertyDescriptor(target, prop) {
     console.log(`called: ${prop}`);
     // Expected output: "called: eyeCount"
@@ -25,9 +25,9 @@ const handler1 = {
   },
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+const proxy = new Proxy(monster, handler);
 
-console.log(Object.getOwnPropertyDescriptor(proxy1, "eyeCount").value);
+console.log(Object.getOwnPropertyDescriptor(proxy, "eyeCount").value);
 // Expected output: 5
 ```
 

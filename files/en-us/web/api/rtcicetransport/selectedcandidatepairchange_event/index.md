@@ -18,11 +18,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("selectedcandidatepairchange", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onselectedcandidatepairchange = (event) => { }
 ```
 
@@ -39,18 +43,14 @@ let iceTransport = pc.getSenders()[0].transport.iceTransport;
 let localProtoElem = document.getElementById("local-protocol");
 let remoteProtoElem = document.getElementById("remote-protocol");
 
-iceTransport.addEventListener(
-  "selectedcandidatepairchange",
-  (ev) => {
-    let pair = iceTransport.getSelectedCandidatePair();
-    localProtoElem.innerText = pair.local.protocol.toUpperCase();
-    remoteProtoElem.innerText = pair.remote.protocol.toUpperCase();
-  },
-  false,
-);
+iceTransport.addEventListener("selectedcandidatepairchange", (ev) => {
+  let pair = iceTransport.getSelectedCandidatePair();
+  localProtoElem.innerText = pair.local.protocol.toUpperCase();
+  remoteProtoElem.innerText = pair.remote.protocol.toUpperCase();
+});
 ```
 
-This can also be done by setting the `onselectedcandidatepairchange` event handler property directly.
+This can also be done by setting the `onselectedcandidatepairchange` event handler property directly (but note that this replaces other event listeners added using `onselectedcandidatepairchange`, if any).
 
 ```js
 let iceTransport = pc.getSenders()[0].transport.iceTransport;

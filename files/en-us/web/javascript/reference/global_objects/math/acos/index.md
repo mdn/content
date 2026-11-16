@@ -78,3 +78,4 @@ Math.acos(2); // NaN
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.sin()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("acos()")}} function

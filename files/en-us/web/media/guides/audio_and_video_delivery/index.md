@@ -37,7 +37,7 @@ The code above will create an audio player that attempts to preload as much audi
 > [!NOTE]
 > The `preload` attribute may be ignored by some mobile browsers.
 
-For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Cross-browser_audio_basics#html_audio_in_detail)
+For further info see [Cross-browser Audio Basics (HTML Audio In Detail)](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Cross-browser_audio_basics#html_audio_in_detail)
 
 ### HTML video
 
@@ -94,7 +94,7 @@ We set the source of the audio depending on the type of audio file the browser s
 > [!NOTE]
 > Play will be ignored by most browsers unless issued by a user-initiated event.
 
-It's also possible to feed an {{ htmlelement("audio") }} element a base64 encoded WAV file, allowing to generate audio on the fly:
+It's also possible to feed an {{ htmlelement("audio") }} element a base64 encoded WAV file, allowing you to generate audio on the fly:
 
 ```html
 <audio id="player" src="data:audio/x-wav;base64,UklGRvC…"></audio>
@@ -244,7 +244,7 @@ New formats and protocols are being rolled out to facilitate adaptive streaming.
 The main formats used for adaptive streaming are [HLS](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_video#hls) and [MPEG-DASH](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_video#mpeg-dash). MSE has been designed with DASH in mind. MSE defines byte streams according to [ISOBMFF](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html) and [M2TS](https://en.wikipedia.org/wiki/M2ts) (both supported in DASH, the latter supported in HLS). Generally speaking, if you are interested in standards, are looking for flexibility, or wish to support most modern browsers, you are probably better off with DASH.
 
 > [!NOTE]
-> Currently Safari does not support DASH although dash.js will work on newer versions of Safari scheduled for release with OSX Yosemite.
+> Currently Safari does not support DASH although dash.js will work on newer versions of Safari scheduled for release with OS X Yosemite.
 
 DASH also provides a number of profiles including onDemand profiles that require no preprocessing and splitting up of media files. There are also a number of cloud based services that will convert your media to both HLS and DASH.
 
@@ -288,15 +288,11 @@ function checkKey(e) {
   }
 }
 
-myControl.addEventListener(
-  "click",
-  () => {
-    switchState();
-  },
-  false,
-);
+myControl.addEventListener("click", () => {
+  switchState();
+});
 
-window.addEventListener("keypress", checkKey, false);
+window.addEventListener("keypress", checkKey);
 ```
 
 {{EmbedLiveSample("customizing your media player", "", 200)}}
@@ -367,21 +363,21 @@ This lets you detect which sources failed to load, which may be useful. Consider
 ```html
 <video>
   <source
-    id="mp4_src"
+    id="src-mp4"
     src="video.mp4"
     type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
   <source
-    id="3gp_src"
+    id="src-3gp"
     src="video.3gp"
     type='video/3gpp; codecs="mp4v.20.8, samr"' />
   <source
-    id="ogg_src"
+    id="src-ogg"
     src="video.ogv"
     type='video/ogv; codecs="theora, vorbis"' />
 </video>
 ```
 
-Since Firefox doesn't support MP4 and 3GP on some platforms due to their patent-encumbered nature, the {{ HTMLElement("source") }} elements with the IDs "mp4_src" and "3gp_src" will receive `error` events before the Ogg resource is loaded. The sources are tried in the order in which they appear, and once one loads successfully, the remaining sources aren't tried at all.
+Since Firefox doesn't support MP4 and 3GP on some platforms due to their patent-encumbered nature, the {{ HTMLElement("source") }} elements with the IDs `src-mp4` and `src-3gp` will receive `error` events before the Ogg resource is loaded. The sources are tried in the order in which they appear, and once one loads successfully, the remaining sources aren't tried at all.
 
 ### Checking whether the browser supports the supplied formats
 
@@ -452,15 +448,11 @@ Another way to show the fallback content of a video, when none of the sources co
 const v = document.querySelector("video");
 const sources = v.querySelectorAll("source");
 const lastSource = sources[sources.length - 1];
-lastSource.addEventListener(
-  "error",
-  (ev) => {
-    const d = document.createElement("div");
-    d.innerHTML = v.innerHTML;
-    v.parentNode.replaceChild(d, v);
-  },
-  false,
-);
+lastSource.addEventListener("error", (ev) => {
+  const d = document.createElement("div");
+  d.innerHTML = v.innerHTML;
+  v.parentNode.replaceChild(d, v);
+});
 ```
 
 ## Audio/Video JavaScript libraries
@@ -470,31 +462,28 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 ### Audio only
 
 - [SoundManager](https://www.schillmania.com/projects/soundmanager2/)
-- [AmplitudeJS](https://521dimensions.com/open-source/amplitudejs)
+- [AmplitudeJS](https://serversideup.net/open-source/amplitudejs/)
 - [HowlerJS](https://howlerjs.com/)
 
 ### Video only
 
 - [flowplayer](https://flowplayer.com/): Gratis with a flowplayer logo watermark. Open source (GPL licensed.)
-- [JWPlayer](https://jwpconnatix.com/): Requires registration to download. Open Source Edition (Creative Commons License.)
 - [SublimeVideo](https://www.sublimevideo.net/): Requires registration. Form based set up with domain specific link to CDN hosted library.
-- [Video.js](https://videojs.com/): Gratis and Open Source (Apache 2 Licensed.)
+- [Video.js](https://videojs.org/): Gratis and Open Source (Apache 2 Licensed.)
 
 ### Audio and Video
 
 - [jPlayer](https://jPlayer.org/): Gratis and Open Source (MIT Licensed.)
 - [mediaelement.js](https://www.mediaelementjs.com/): Gratis and Open Source (MIT Licensed.)
 
-### Web Audio API
-
-- [AudioContext monkeypatch](https://github.com/cwilso/AudioContext-MonkeyPatch): A polyfill for older versions of the Web Audio API; Open Source (Apache 2 Licensed.)
-
 ## Guides
 
 - [Creating a cross-browser video player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)
-  - : A guide to creating a basic cross browser video player using the {{ htmlelement("video") }} element.
+  - : A guide to creating a basic cross-browser video player using the {{ htmlelement("video") }} element.
 - [Video player styling basics](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics)
   - : With the cross-browser video player put in place in the previous article, this article now looks at providing some basic, responsive styling for the player.
+- [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+  - : This article explains how to add captions and subtitles to HTML {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/en-US/docs/Web/API/WebVTT_API) and the {{ htmlelement("track") }} element.
 - [Cross-browser audio basics](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Cross-browser_audio_basics)
   - : This article provides a basic guide to creating an HTML audio player that works cross browser, with all the associated attributes, properties and events explained, and a quick guide to custom controls created using the Media API.
 - [Media buffering, seeking, and time ranges](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges)
@@ -507,7 +496,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 ### Streaming media
 
 - [Live streaming web audio and video](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_video)
-  - : Live streaming technology is often employed to relay live events such as sports, concerts and more generally TV and Radio programmes that are output live. Often shortened to just streaming, live streaming is the process of transmitting media 'live' to computers and devices. This is a fairly complex and nascent subject with a lot of variables, so in this article we'll introduce you to the subject and let you know how you can get started.
+  - : Live streaming technology is often employed to relay live events such as sports, concerts and more generally TV and Radio programs that are output live. Often shortened to just streaming, live streaming is the process of transmitting media 'live' to computers and devices. This is a fairly complex and nascent subject with a lot of variables, so in this article we'll introduce you to the subject and let you know how you can get started.
 - [Setting up adaptive streaming media sources](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources)
   - : Let's say you want to set up an adaptive streaming media source on a server, to be consumed inside an HTML media element. How would you do that? This article explains how, looking at two of the most common formats: MPEG-DASH and HLS (HTTP Live Streaming.)
 - [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming)
@@ -515,10 +504,8 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 
 ### Advanced topics
 
-- [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
-  - : This article explains how to add captions and subtitles to HTML {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/en-US/docs/Web/API/WebVTT_API) and the {{ htmlelement("track") }} element.
-- [Web Audio API cross browser support](/en-US/docs/Web/API/Web_Audio_API/Best_practices#cross_browser_legacy_support)
-  - : A guide to writing cross browser Web Audio API code.
+- [Web Audio API cross-browser support](/en-US/docs/Web/API/Web_Audio_API/Best_practices#cross_browser_legacy_support)
+  - : A guide to writing cross-browser Web Audio API code.
 - [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
   - : Explains the basics of using the MediaStream Recording API to directly record a media stream.
 
@@ -530,4 +517,4 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
 - [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
 - [getUserMedia](/en-US/docs/Web/API/MediaDevices/getUserMedia)
-- [Event reference: Media](/en-US/docs/Web/Events#media)
+- [Event index: Media](/en-US/docs/Web/API/Document_Object_Model/Events#media)

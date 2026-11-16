@@ -43,7 +43,7 @@ Below is a list of supported hour cycle types.
 
 ### Obtaining supported hour cycles
 
-If the `Locale` object doesn't have a `hourCycle` already, `getHourCycles()` lists all commonly-used hour cycle identifiers for the given `Locale`. For examples of explicitly setting a `hourCycle`, see [`hourCycle` examples](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle#examples).
+If the `Locale` object doesn't have an `hourCycle` already, `getHourCycles()` lists all commonly-used hour cycle identifiers for the given `Locale`. For examples of explicitly setting an `hourCycle`, see [`hourCycle` examples](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle#examples).
 
 ```js
 const arEG = new Intl.Locale("ar-EG");

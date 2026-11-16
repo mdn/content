@@ -67,9 +67,10 @@ Like other filter primitives, it handles color components in the `linearRGB` {{g
 
 ## Attributes
 
-- {{SVGAttr("in")}}: Values include `SourceGraphic`, `SourceAlpha`, `BackgroundImage`, `BackgroundAlpha`, `FillPaint`, `StrokePaint`, or a reference to another filter primitive.
-- {{SVGAttr("type")}}: Values include `matrix`, `saturate`, `hueRotate`, and `luminanceToAlpha`.
-- {{SVGAttr("values")}}: The value for the matrix type set in the `type` attribute.
+- {{SVGAttr("in")}}
+- {{SVGAttr("type")}}: Values include `matrix`, `saturate`, `hueRotate`, and `luminanceToAlpha`
+- {{SVGAttr("values")}}: The value for the matrix type set in the `type` attribute
+- [Filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes): {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("result")}}
 
 ## DOM Interface
 
@@ -173,7 +174,7 @@ This element implements the {{domxref("SVGFEColorMatrixElement")}} interface.
 
 ## See also
 
-- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes)
+- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes)
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}

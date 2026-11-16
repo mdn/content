@@ -44,6 +44,8 @@ new FontFace(family, source, descriptors)
       - : With an allowable value for {{cssxref("font-feature-settings")}}.
     - `lineGapOverride`
       - : With an allowable value for {{cssxref("@font-face/line-gap-override")}}.
+    - `sizeAdjust`
+      - : With an allowable value for {{cssxref("@font-face/size-adjust")}}.
     - `stretch`
       - : With an allowable value for {{cssxref("@font-face/font-stretch")}}.
     - `style`
@@ -65,7 +67,7 @@ new FontFace(family, source, descriptors)
 
 ```js
 async function loadFonts() {
-  const font = new FontFace("my-font", "url(my-font.woff)", {
+  const font = new FontFace("my-font", 'url("my-font.woff")', {
     style: "normal",
     weight: "400",
     stretch: "condensed",

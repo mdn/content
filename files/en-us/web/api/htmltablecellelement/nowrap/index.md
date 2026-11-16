@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLTableCellElement.noWrap
 ---
 
-{{APIRef("HTML DOM API")}}{{deprecated_header}}
+{{APIRef("HTML DOM API")}}
 
 The **`noWrap`** property of the {{domxref("HTMLTableCellElement")}} interface returns a Boolean value indicating if the text of the cell may be wrapped on several lines or not.
 
@@ -21,7 +21,7 @@ A Boolean value.
 
 ## Examples
 
-Use CSS `white-space` instead. An [example](/en-US/docs/Web/CSS/white-space#controlling_line_wrapping_in_tables) is available on the {{cssxref("white-space")}} page.
+Use CSS `white-space` instead. An [example](/en-US/docs/Web/CSS/Reference/Properties/white-space#controlling_line_wrapping_in_tables) is available on the {{cssxref("white-space")}} page.
 
 ## Specifications
 

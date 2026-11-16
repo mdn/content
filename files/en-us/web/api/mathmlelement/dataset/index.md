@@ -23,7 +23,7 @@ A {{domxref("DOMStringMap")}}.
   <math>
     <msup id="equation" data-value="-1" data-equation="euler">
       <mi>e</mi>
-      <mi>iπ</mi>
+      <mrow><mi>i</mi> <mi>π</mi></mrow>
     </msup>
     <mo>+</mo>
     <mn>1</mn>
@@ -42,7 +42,7 @@ console.log(el.dataset.equation); // "euler"
 
 ### Result
 
-{{EmbedLiveSample("dataset",100,100)}}
+{{EmbedLiveSample("examples",100,100)}}
 
 ## Specifications
 

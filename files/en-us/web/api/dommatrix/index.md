@@ -37,6 +37,15 @@ _This interface inherits properties from {{domxref("DOMMatrixReadOnly")}}, thoug
     | `e`  | `m41`           |
     | `f`  | `m42`           |
 
+## Static methods
+
+- {{domxref("DOMMatrix.fromFloat32Array_static", "fromFloat32Array()")}}
+  - : Creates a new `DOMMatrix` object given a {{jsxref("Float32Array")}} of 6 or 16 single-precision (32-bit) floating-point values.
+- {{domxref("DOMMatrix.fromFloat64Array_static", "fromFloat64Array()")}}
+  - : Creates a new `DOMMatrix` object given a {{jsxref("Float64Array")}} of 6 or 16 double-precision (64-bit) floating-point values.
+- {{domxref("DOMMatrix.fromMatrix_static", "fromMatrix()")}}
+  - : Creates a new `DOMMatrix` object given an existing matrix or an object which provides the values for its properties.
+
 ## Instance methods
 
 _This interface includes the following methods, as well as the methods it inherits from {{domxref("DOMMatrixReadOnly")}}._
@@ -65,17 +74,6 @@ _This interface includes the following methods, as well as the methods it inheri
   - : Modifies the matrix by applying the specified skew transformation along the X-axis. Returns itself.
 - {{domxref("DOMMatrix.skewYSelf()")}}
   - : Modifies the matrix by applying the specified skew transformation along the Y-axis. Returns itself.
-
-## Static methods
-
-_This interface inherits methods from {{domxref("DOMMatrixReadOnly")}}._
-
-- {{domxref("DOMMatrix.fromFloat32Array_static", "fromFloat32Array()")}}
-  - : Creates a new mutable `DOMMatrix` object given an array of single-precision (32-bit) floating-point values. If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a {{jsxref("TypeError")}} exception is thrown.
-- {{domxref("DOMMatrix.fromFloat64Array_static", "fromFloat64Array()")}}
-  - : Creates a new mutable `DOMMatrix` object given an array of double-precision (64-bit) floating-point values. If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a {{jsxref("TypeError")}} exception is thrown.
-- {{domxref("DOMMatrix.fromMatrix_static", "fromMatrix()")}}
-  - : Creates a new mutable `DOMMatrix` object given an existing matrix or an object which provides the values for its properties.
 
 ## Usage notes
 

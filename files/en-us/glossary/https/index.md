@@ -11,7 +11,7 @@ sidebar: glossarysidebar
 
 - [HTTPS](https://en.wikipedia.org/wiki/HTTPS) on Wikipedia
 - [Moving to HTTPS community guide](https://movingtohttps.com/)
-- [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts)
+- [Secure Contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts)
 - Related glossary terms:
   - {{glossary("HTTP")}}
   - {{glossary("TLS")}}

@@ -1,5 +1,6 @@
 ---
-title: "<details>: The Details disclosure element"
+title: "`<details>` HTML details disclosure element"
+short-title: <details>
 slug: Web/HTML/Reference/Elements/details
 page-type: html-element
 browser-compat: html.elements.details
@@ -21,7 +22,7 @@ A disclosure widget is typically presented onscreen using a small triangle that 
 
 ```css interactive-example
 details {
-  border: 1px solid #aaa;
+  border: 1px solid #aaaaaa;
   border-radius: 4px;
   padding: 0.5em 0.5em 0;
 }
@@ -37,20 +38,10 @@ details[open] {
 }
 
 details[open] summary {
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #aaaaaa;
   margin-bottom: 0.5em;
 }
 ```
-
-A `<details>` widget can be in one of two states. The default _closed_ state displays only the triangle and the label inside `<summary>` (or a {{Glossary("user agent")}}-defined default string if no `<summary>`).
-
-When the user clicks on the widget or focuses it then presses the space bar, it "twists" open, revealing its contents. The common use of a triangle which rotates or twists around to represent opening or closing the widget is why these are sometimes called "twisty".
-
-You can use CSS to style the disclosure widget, and you can programmatically open and close the widget by setting/removing its [`open`](#open) attribute. Unfortunately, at this time, there's no built-in way to animate the transition between open and closed.
-
-By default when closed, the widget is only tall enough to display the disclosure triangle and summary. When open, it expands to display the details contained within.
-
-Fully standards-compliant implementations automatically apply the CSS `{{cssxref("display")}}: list-item` to the {{HTMLElement("summary")}} element. You can use this or the {{cssxref("::marker")}} pseudo-element to [customize the disclosure widget](/en-US/docs/Web/HTML/Reference/Elements/summary#changing_the_summarys_icon).
 
 ## Attributes
 
@@ -70,7 +61,23 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     > [!NOTE]
     > `<details>` elements don't have to be adjacent to one another in the source to be part of the same group.
 
-## Events
+## Usage notes
+
+A `<details>` widget can be in one of two states. The default _closed_ state displays only the triangle and the label inside `<summary>` (or a {{Glossary("user agent")}}-defined default string if no `<summary>`).
+
+When the user clicks on the widget or focuses it then presses the space bar, it "twists" open, revealing its contents. The common use of a triangle which rotates or twists around to represent opening or closing the widget is why these are sometimes called "twisty".
+
+You can programmatically open and close the widget by setting/removing its [`open`](#open) attribute.
+
+### Styling the `<details>` element
+
+The `<details>` element can be thought of as a container of two elements: the `<summary>` element, which is visible both when expanded and collapsed; and the {{cssxref("::details-content")}} pseudo-element, whose contents are hidden when collapsed.
+
+The `<summary>` element is automatically given a {{cssxref("display")}} value of `list-item`. You can style the marker just like a list marker, using {{cssxref("list-style-type")}}, {{cssxref("list-style-position")}}, {{cssxref("::marker")}}, etc. See also [Changing the summary's icon](/en-US/docs/Web/HTML/Reference/Elements/summary#changing_the_summarys_icon).
+
+The {{cssxref("::details-content")}} pseudo-element enables you to animate the transition between open and closed. See the [`::details-content` reference page](/en-US/docs/Web/CSS/Reference/Selectors/::details-content#transition_example) for an example.
+
+### Events
 
 In addition to the usual events supported by HTML elements, the `<details>` element supports the {{domxref("HTMLElement/toggle_event", "toggle")}} event, which is dispatched to the `<details>` element whenever its state changes between open and closed. It is sent _after_ the state is changed, although if the state changes multiple times before the browser can dispatch the event, the events are coalesced so that only one is sent.
 
@@ -164,45 +171,7 @@ Try opening all the disclosure widgets. When you open one, all the others automa
 
 ### Customizing the appearance
 
-Now let's apply some CSS to customize the appearance of the disclosure box.
-
-#### CSS
-
-```css
-details {
-  font:
-    16px "Open Sans",
-    Calibri,
-    sans-serif;
-  width: 620px;
-}
-
-details > summary {
-  padding: 2px 6px;
-  width: 15em;
-  background-color: #ddd;
-  border: none;
-  box-shadow: 3px 3px 4px black;
-  cursor: pointer;
-}
-
-details > p {
-  border-radius: 0 0 10px 10px;
-  background-color: #ddd;
-  padding: 2px 6px;
-  margin: 0;
-  box-shadow: 3px 3px 4px black;
-}
-
-details:open > summary {
-  background-color: #ccf;
-}
-```
-
-This CSS creates a look similar to a tabbed interface, where clicking the tab opens it to reveal its contents.
-
-> [!NOTE]
-> In browsers that don't support the {{cssxref(":open")}} pseudo-class, you can use the attribute selector `details[open]` to style the `<details>` element when it is in the open state.
+This example uses CSS to customize the appearance of the disclosure box.
 
 #### HTML
 
@@ -216,6 +185,44 @@ This CSS creates a look similar to a tabbed interface, where clicking the tab op
   </p>
 </details>
 ```
+
+#### CSS
+
+```css
+details {
+  font:
+    16px "Open Sans",
+    "Calibri",
+    sans-serif;
+  width: 620px;
+}
+
+details > summary {
+  padding: 2px 6px;
+  width: 15em;
+  background-color: #dddddd;
+  border: none;
+  box-shadow: 3px 3px 4px black;
+  cursor: pointer;
+}
+
+details > p {
+  border-radius: 0 0 10px 10px;
+  background-color: #dddddd;
+  padding: 2px 6px;
+  margin: 0;
+  box-shadow: 3px 3px 4px black;
+}
+
+details:open > summary {
+  background-color: #ccccff;
+}
+```
+
+This CSS creates a look similar to a tabbed interface, where clicking the tab opens it to reveal its contents.
+
+> [!NOTE]
+> In browsers that don't support the {{cssxref(":open")}} pseudo-class, you can use the attribute selector `details[open]` to style the `<details>` element when it is in the open state.
 
 #### Result
 

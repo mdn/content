@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLMediaElement.progress_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`progress`** event is fired periodically as the browser loads a resource.
 
@@ -14,11 +14,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("progress", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onprogress = (event) => { }
 ```
 

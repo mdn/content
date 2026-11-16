@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors", "Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model", "Learn_web_development/Core/Styling_basics")}}
 
 Everything in CSS has a box around it, and understanding these boxes is key to being able to create more complex layouts with CSS, or to align items with other items. In this lesson, we will take a look at the CSS _Box model_. You'll get an understanding of how it works and the terminology that relates to it.
 
@@ -54,9 +54,9 @@ Some HTML elements, such as `<h1>` and `<p>`, use `block` as their outer display
 If a box has a display type of `inline`, then:
 
 - The box will not break onto a new line.
-- The {{cssxref("width")}} and {{cssxref("height")}} properties will not apply.
-- Top and bottom padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.
-- Left and right padding, margins, and borders will apply and will cause other inline boxes to move away from the box.
+- The {{cssxref("width")}}, {{cssxref("height")}}, and top and bottom margins will have no effect.
+- **Top and bottom** padding and borders will change the size of the box without affecting the position of surrounding content, which can cause overlapping.
+- **Left and right** padding, margins, and borders will affect the position of surrounding inline content.
 
 Some HTML elements, such as `<a>`, `<span>`, `<em>` and `<strong>` use `inline` as their outer display type by default.
 
@@ -387,7 +387,10 @@ p {
 
 {{EmbedLiveSample("margin-collapse", "", "280px")}}
 
-A number of rules dictate when margins do and do not collapse. For further information see the detailed page on [mastering margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing). The main thing to remember is that margin collapsing is a thing that happens if you are creating space with margins and don't get the space you expect.
+A number of rules dictate when margins do and do not collapse. For further information see the detailed page on [mastering margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing). The main thing to remember is that margin collapsing is a thing that happens if you are creating space with margins and don't get the space you expect.
+
+> [!NOTE]
+> [Learn margins via flags](https://scrimba.com/frontend-path-c0j/~01e?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> from Scrimba is an interactive lesson providing some useful practice with margins.
 
 ### Borders
 
@@ -506,7 +509,7 @@ body {
 
 All of the above fully applies to block boxes. Some of the properties can apply to inline boxes too, such as those created by a `<span>` element.
 
-In the example below, we have a `<span>` inside a paragraph. We have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width and height are ignored. The top and bottom margin, padding, and border are respected but don't change the relationship of other content to our inline box. The padding and border overlap other words in the paragraph. The left and right padding, margins, and borders move other content away from the box.
+In the example below, we have a `<span>` inside a paragraph. We have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width, height, and top and bottom margins do not affect the `<span>`. The top and bottom padding and borders alter the size of the inline box but don't affect the position of the surrounding content. Instead, the top and bottom padding and borders overlap other words in the paragraph. Only the left and right padding, margins, and borders affect the position of the text surrounding the `<span>`.
 
 ```html live-sample___inline-box-model
 <p>
@@ -524,12 +527,13 @@ p {
   width: 200px;
 }
 span {
-  margin: 20px;
-  padding: 20px;
+  margin: 20px 30px;
+  padding: 10px 20px;
   width: 80px;
   height: 150px;
   background-color: lightblue;
-  border: 2px solid blue;
+  border: solid blue;
+  border-width: 7px 1px;
 }
 ```
 
@@ -600,7 +604,7 @@ ul {
   font-family: sans-serif;
   display: flex;
   list-style: none;
-  border: 1px solid #000;
+  border: 1px solid black;
 }
 
 li {
@@ -609,27 +613,23 @@ li {
 
 .links-list a {
   background-color: rgb(179 57 81);
-  color: #fff;
+  color: white;
   text-decoration: none;
   padding: 1em 2em;
 }
 
 .links-list a:hover {
   background-color: rgb(66 28 40);
-  color: #fff;
+  color: white;
 }
 ```
 
 {{EmbedLiveSample("inline-block-nav")}}
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model).
-
 ## Summary
 
 That's most of what you need to understand about the box model. You may want to return to this lesson in the future if you ever find yourself confused about how big boxes are in your layout.
 
-In the next article, we'll take a look at how CSS handles conflicts — when multiple rules select the same element, which styles are applied?
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on the CSS box model.
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors", "Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model", "Learn_web_development/Core/Styling_basics")}}

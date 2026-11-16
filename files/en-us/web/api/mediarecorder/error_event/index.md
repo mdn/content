@@ -14,11 +14,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("error", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onerror = (event) => { }
 ```
 
@@ -27,13 +31,6 @@ onerror = (event) => { }
 A {{domxref("MediaRecorderErrorEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaRecorderErrorEvent")}}
-
-## Event properties
-
-_Inherits properties from its parent interface, {{domxref("Event")}}_.
-
-- {{domxref("MediaRecorderErrorEvent.error", "error")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMException")}} containing information about the error that occurred.
 
 ## Description
 
@@ -51,7 +48,7 @@ the value of {{domxref("DOMException.name", "MediaRecorderErrorEvent.error.name"
   - : The number of tracks on the stream being recorded has changed. You can't add or
     remove tracks while recording media.
 - `UnknownError`
-  - : An non-security related error occurred that cannot otherwise be categorized.
+  - : A non-security related error occurred that cannot otherwise be categorized.
     Recording stops, the `MediaRecorder`'s {{domxref("MediaRecorder.state", "state")}} becomes `inactive`, one last {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event is sent to the `MediaRecorder` with the remaining received data, and finally a {{domxref("MediaRecorder/stop_event", "stop")}} event is sent.
 
 ## Examples
@@ -71,7 +68,7 @@ async function record() {
 record();
 ```
 
-The same, but using the `onerror` event handler property:
+The same, but using the `onerror` event handler property (but note that this replaces other event listeners added using `onerror`, if any):
 
 ```js
 async function record() {

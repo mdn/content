@@ -167,7 +167,7 @@ To implement the score counter, follow the following steps:
      margin: 0;
      top: 35px;
      right: 5px;
-     color: #aaa;
+     color: #aaaaaa;
    }
    ```
 

@@ -1,14 +1,11 @@
 ---
-title: Temporal.Duration()
+title: Temporal.Duration() constructor
+short-title: Temporal.Duration()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/Duration
 page-type: javascript-constructor
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.Duration.Duration
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`Temporal.Duration()`** constructor creates {{jsxref("Temporal.Duration")}} objects.
 

@@ -115,8 +115,7 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
   width="120"
   height="120"
   viewBox="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg"
-  version="1.1">
+  xmlns="http://www.w3.org/2000/svg">
   <!-- animated rectangles -->
   <rect x="10" y="35" height="15" width="0">
     <animate
@@ -175,7 +174,6 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
   height="120"
   viewBox="0 0 120 120"
   xmlns="http://www.w3.org/2000/svg"
-  version="1.1"
   xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- animated rectangles -->
   <rect x="10" y="35" height="15" width="0">
@@ -235,7 +233,6 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
   height="120"
   viewBox="0 0 120 120"
   xmlns="http://www.w3.org/2000/svg"
-  version="1.1"
   xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- animated rectangle -->
   <rect x="10" y="35" height="15" width="0">
@@ -293,7 +290,6 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
   height="120"
   viewBox="0 0 120 120"
   xmlns="http://www.w3.org/2000/svg"
-  version="1.1"
   xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- animated rectangle -->
   <rect x="10" y="35" height="15" width="0">
@@ -353,7 +349,6 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
   height="120"
   viewBox="0 0 120 120"
   xmlns="http://www.w3.org/2000/svg"
-  version="1.1"
   xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- animated rectangles -->
   <rect x="10" y="35" height="15" width="0">

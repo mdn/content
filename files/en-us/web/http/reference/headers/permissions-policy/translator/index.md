@@ -13,7 +13,7 @@ sidebar: http
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `translator` directive controls access to the translation functionality of the [Translator and Language Detector APIs](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs).
 
-Specifically, where a defined policy blocks usage, any attempts to call the API's translation methods will fail with a `NotAllowedError` {{domxref("DOMException")}}.
+Specifically, where a defined policy blocks usage, the {{domxref("Translator.availability_static", "Translator.availability()")}} static method will return `unavailable`, and any attempts to call the API's other methods will fail with a `NotAllowedError` {{domxref("DOMException")}}.
 
 ## Syntax
 

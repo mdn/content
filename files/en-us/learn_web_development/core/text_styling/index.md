@@ -29,4 +29,9 @@ Before starting this module, you should be familiar with [HTML](/en-US/docs/Lear
 - [Challenge: Typesetting a community school homepage](/en-US/docs/Learn_web_development/Core/Text_styling/Typesetting_a_homepage) <sup>Challenge</sup>
   - : In this assessment we'll test your understanding of styling text by getting you to style the text for a community school's homepage.
 
+## See also
+
+- [Learn HTML and CSS](https://scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+  - : [Scrimba's](https://scrimba.com/?via=mdn) _Learn HTML and CSS_ course teaches you HTML and CSS through building and deploying five awesome projects, with fun interactive lessons and challenges taught by knowledgeable teachers.
+
 {{NextMenu("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core")}}

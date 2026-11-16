@@ -29,9 +29,9 @@ The `origin` property is set to the origin of the document the {{domxref("HTMLFo
 - `iconURL` {{optional_inline}}
   - : A string representing the URL of an icon or avatar to be associated with the credential.
 - `id`
-  - : A string representing a unique ID for the credential.
+  - : A string representing the username portion of the username/password combination.
 - `name` {{optional_inline}}
-  - : A string representing the credential username.
+  - : A string representing a human-understandable name associated with the credential, intended to help the user select this credential in a user interface.
 - `origin`
   - : A string representing the credential's origin. {{domxref("PasswordCredential")}} objects are origin-bound, which means that they will only be usable on the specified origin they were intended to be used on.
 - `password`
@@ -45,8 +45,8 @@ This example constructs an object literal to initialize a password credential.
 
 ```js
 const credInit = {
-  id: "1234",
-  name: "Serpentina",
+  id: "serpent1234", // "username" in a typical username/password pair
+  name: "Serpentina", // display name for credential
   origin: "https://example.org",
   password: "the last visible dog",
 };
@@ -59,6 +59,8 @@ makeCredential.addEventListener("click", async () => {
   });
   console.log(cred.name);
   // Serpentina
+  console.log(cred.id);
+  // serpent1234
   console.log(cred.password);
   // the last visible dog
 });
@@ -75,12 +77,16 @@ The HTML declares a {{HTMLElement("form")}} containing three submittable element
 ```html
 <form>
   <div>
-    <label for="userid">Enter your user ID: </label>
-    <input type="text" name="userid" id="userid" autocomplete="username" />
+    <label for="displayname">Enter your display name: </label>
+    <input
+      type="text"
+      name="displayname"
+      id="displayname"
+      autocomplete="name" />
   </div>
   <div>
     <label for="username">Enter your username: </label>
-    <input type="text" name="username" id="username" autocomplete="name" />
+    <input type="text" name="username" id="username" autocomplete="username" />
   </div>
   <div>
     <label for="password">Enter your password: </label>
@@ -139,7 +145,7 @@ makeCredential.addEventListener("click", async () => {
       password: formCreds,
     });
     log(
-      `New credential:\nname: ${credential.name}, password: ${credential.password}`,
+      `New credential:\ndisplay name: ${credential.name}, username: ${credential.id}, password: ${credential.password}`,
     );
   } catch (e) {
     if (e.name === "TypeError") {

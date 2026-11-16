@@ -21,7 +21,7 @@ let gettingChildren = browser.bookmarks.getChildren(
 ### Parameters
 
 - `id`
-  - : A {{jsxref("string")}} that specifies the ID of the folder whose children are to be retrieved.
+  - : A {{jsxref("String")}} that specifies the ID of the folder whose children are to be retrieved.
 
 ### Return value
 

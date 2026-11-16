@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.TypedArray.some
 sidebar: jsref
 ---
 
-The **`some()`** method of {{jsxref("TypedArray")}} instances tests whether at least one element in the typed array passes the test implemented by the provided function. It returns true if, in the typed array, it finds an element for which the provided function returns true; otherwise it returns false. It doesn't modify the typed array. This method has the same algorithm as {{jsxref("Array.prototype.some()")}}.
+The **`some()`** method of {{jsxref("TypedArray")}} instances returns `true` if it finds an element in the array that satisfies the provided testing function. Otherwise, it returns `false`. This method has the same algorithm as {{jsxref("Array.prototype.some()")}}.
 
 {{InteractiveExample("JavaScript Demo: TypedArray.prototype.some()")}}
 
@@ -78,7 +78,7 @@ new Uint8Array([12, 5, 8, 1, 4]).some(isBiggerThan10); // true
 
 ## See also
 
-- [Polyfill of `TypedArray.prototype.some` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.some` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.every()")}}

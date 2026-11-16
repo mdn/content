@@ -8,11 +8,11 @@ status:
 browser-compat: api.Document.domain
 ---
 
-{{ApiRef}} {{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 The **`domain`** property of the {{domxref("Document")}}
 interface gets/sets the domain portion of the {{glossary("origin")}} of the current
-document, as used by the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+document, as used by the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy).
 
 ## Value
 
@@ -90,7 +90,7 @@ have not done the same thing.
 #### Deprecation
 
 The `document.domain` setter is deprecated. It undermines the security
-protections provided by the [same origin policy](/en-US/docs/Web/Security/Same-origin_policy), and complicates the origin model in browsers, leading to
+protections provided by the [same origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy), and complicates the origin model in browsers, leading to
 interoperability problems and security bugs.
 
 Attempting to set `document.domain` is dangerous. It opens up full access to
@@ -130,11 +130,10 @@ As an example of this last failure case, trying to set `document.domain` to
 Additionally, as part of its deprecation, it will do nothing when combined with certain
 modern isolation features:
 
-- If used on a cross-origin isolated page, i.e., one that uses the appropriate values
+- If used on a [cross-origin isolated page](/en-US/docs/Web/API/Window/crossOriginIsolated), i.e., one that uses the appropriate values
   for the {{httpheader("Cross-Origin-Opener-Policy")}} and
   {{httpheader("Cross-Origin-Embedder-Policy")}} HTTP headers
-- If used on an origin-isolated page, i.e., one that uses the
-  {{httpheader("Origin-Agent-Cluster")}} {{experimental_inline}} HTTP header
+- If used on an [origin-keyed agent cluster page](/en-US/docs/Web/API/Window/originAgentCluster), i.e., one with the {{httpheader("Origin-Agent-Cluster")}} HTTP header set to `?1`
 
 Finally, setting `document.domain` does not change the origin used for
 origin-checks by some Web APIs, preventing sub-domain access via this mechanism.
@@ -151,7 +150,7 @@ Affected APIs include (but are not limited to):
 
 ## See also
 
-- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)
 - {{domxref("Location.hostname")}}
 - {{domxref("Location.host")}}
 - {{domxref("Window.origin")}}

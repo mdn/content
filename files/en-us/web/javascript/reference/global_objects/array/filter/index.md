@@ -93,11 +93,11 @@ console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
 ```
 
 > [!NOTE]
-> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily memoized algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
+> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily {{Glossary("Memoization", "memoized")}} algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
 
-### Filtering invalid entries from JSON
+### Filtering invalid objects from an array of objects
 
-The following example uses `filter()` to create a filtered JSON of all elements with non-zero, numeric `id`.
+The following example uses `filter()` to create a filtered array of all objects with non-zero, numeric `id`.
 
 ```js
 const arr = [
@@ -134,7 +134,7 @@ console.log("Number of Invalid Entries =", invalidEntries);
 
 ### Searching in array
 
-Following example uses `filter()` to filter array content based on search criteria.
+The following example uses `filter()` to filter array content based on search criteria.
 
 ```js
 const fruits = ["apple", "banana", "grapes", "mango", "orange"];
@@ -205,7 +205,7 @@ console.log(Array.prototype.filter.call(arrayLike, (x) => x <= "b"));
 
 ## See also
 
-- [Polyfill of `Array.prototype.filter` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.filter` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.filter`](https://www.npmjs.com/package/array.prototype.filter)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

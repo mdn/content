@@ -25,7 +25,7 @@ The associated {{DOMxref("Stylesheet")}} object, or `null` if there are none.
 …
 ```
 
-The `sheet` property of the processing instruction will return the {{domxref("StyleSheet")}} object describing `rule.css`.
+The `sheet` property of the processing instruction will return the {{domxref("CSSStyleSheet")}} object describing `rule.css`.
 
 ## Specifications
 

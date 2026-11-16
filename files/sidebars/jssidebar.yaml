@@ -6,15 +6,6 @@ sidebar:
     title: JavaScript
   - type: section
     title: Tutorials
-  - title: Beginners
-    details: closed
-    children:
-      - link: /Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
-        title: Adding_interactivity
-      - link: /Learn_web_development/Core/Scripting
-        title: Dynamic_scripting_with_JavaScript
-      - link: /Learn_web_development/Core/Frameworks_libraries
-        title: JavaScript_frameworks_and_libraries
   - link: /Web/JavaScript/Guide
     title: Guide
     details: closed
@@ -35,6 +26,9 @@ sidebar:
         title: Guide_Numbers
       - link: /Web/JavaScript/Guide/Representing_dates_times
         title: Guide_Dates
+        details: open
+        children:
+          - /Web/JavaScript/Guide/Representing_dates_times/Cookbook
       - link: /Web/JavaScript/Guide/Regular_expressions
         title: Guide_RegExp
       - link: /Web/JavaScript/Guide/Indexed_collections
@@ -51,19 +45,20 @@ sidebar:
         title: Guide_Typed_arrays
       - link: /Web/JavaScript/Guide/Iterators_and_generators
         title: Guide_Iterators_generators
+      - link: /Web/JavaScript/Guide/Resource_management
+        title: Guide_Resource_management
       - link: /Web/JavaScript/Guide/Internationalization
         title: Guide_Internationalization
       - link: /Web/JavaScript/Guide/Modules
         title: Guide_Modules
+        details: open
+        children:
+          - /Web/JavaScript/Guide/Modules/Modules_on_the_web
+          - /Web/JavaScript/Guide/Modules/Module_graph
+          - /Web/JavaScript/Guide/Modules/Modules_across_platforms
   - title: Intermediate
     details: closed
     children:
-      - link: /Learn_web_development/Extensions/Advanced_JavaScript_objects
-        title: Advanced JavaScript objects
-      - link: /Learn_web_development/Extensions/Async_JS
-        title: Asynchronous_JavaScript
-      - link: /Learn_web_development/Extensions/Client-side_APIs
-        title: Client-side_web_APIs
       - link: /Web/JavaScript/Guide/Language_overview
         title: Language_overview
       - link: /Web/JavaScript/Guide/Data_structures
@@ -83,6 +78,8 @@ sidebar:
         title: Guide_Meta
       - link: /Web/JavaScript/Guide/Memory_management
         title: Memory_management
+      - link: /Web/JavaScript/Guide/Agent_communication_and_coordination
+        title: Agent_communication_and_coordination
   - type: section
     link: /Web/JavaScript/Reference
     title: Reference
@@ -136,6 +133,8 @@ sidebar:
         title: Execution_model
       - link: /Web/JavaScript/Reference/Lexical_grammar
         title: Lexical_grammar
+      - link: /Web/JavaScript/Reference/Magic_comments
+        title: Magic_comments
       - link: /Web/JavaScript/Reference/Iteration_protocols
         title: Iteration_protocols
       - link: /Web/JavaScript/Reference/Strict_mode
@@ -167,16 +166,11 @@ l10n:
     Guide_Promises: Verwendung von Promises
     Guide_Typed_arrays: Typisierte Arrays in JavaScript
     Guide_Iterators_generators: Iteratoren und Generatoren
+    Guide_Resource_management: Resource management
     Guide_Internationalization: Internationalisierung
     Guide_Meta: Metaprogrammierung
     Guide_Modules: JavaScript-Module
-    Beginners: Tutorials für Anfänger
-    Adding_interactivity: "Ihre erste Webseite: Interaktivität hinzufügen"
-    Dynamic_scripting_with_JavaScript: Dynamisches Scripting mit JavaScript
-    JavaScript_frameworks_and_libraries: JavaScript-Frameworks und -Bibliotheken
     Intermediate: Mittelstufe
-    Asynchronous_JavaScript: Asynchrones JavaScript
-    Client-side_web_APIs: Clientseitige Web-APIs
     Language_overview: Sprachübersicht
     Data_structures: JavaScript-Datenstrukturen
     Equality: Gleichheitsvergleiche und Gleichheit
@@ -195,6 +189,7 @@ l10n:
     More: Sonstiges
     Execution_model: Execution model
     Lexical_grammar: Lexikalische Grammatik
+    Magic_comments: Magic comments
     Enumerability: Aufzählbarkeit und Eigentum von Eigenschaften
     Iteration_protocols: Iterationsprotokolle
     Template_strings: Template-Literale
@@ -220,16 +215,11 @@ l10n:
     Guide_Promises: Using promises
     Guide_Typed_arrays: JavaScript typed arrays
     Guide_Iterators_generators: Iterators and generators
+    Guide_Resource_management: Resource management
     Guide_Internationalization: Internationalization
     Guide_Meta: Meta programming
     Guide_Modules: JavaScript modules
-    Beginners: Beginner's tutorials
-    Adding_interactivity: "Your first website: Adding interactivity"
-    Dynamic_scripting_with_JavaScript: Dynamic scripting with JavaScript
-    JavaScript_frameworks_and_libraries: JavaScript frameworks and libraries
     Intermediate: Intermediate
-    Asynchronous_JavaScript: Asynchronous JavaScript
-    Client-side_web_APIs: Client-side web APIs
     Language_overview: Language overview
     Data_structures: JavaScript data structures
     Equality: Equality comparisons and sameness
@@ -238,6 +228,7 @@ l10n:
     Inheritance: Inheritance and the prototype chain
     Strict_mode: Strict mode
     Memory_management: Memory Management
+    Agent_communication_and_coordination: Agent communication and coordination
     Reference: References
     Global_Objects: Built-in objects
     Operators: Expressions & operators
@@ -248,6 +239,7 @@ l10n:
     More: Misc
     Execution_model: Execution model
     Lexical_grammar: Lexical grammar
+    Magic_comments: Magic comments
     Enumerability: Enumerability and ownership of properties
     Iteration_protocols: Iteration protocols
     Template_strings: Template literals
@@ -273,6 +265,7 @@ l10n:
     Guide_Promises: Использование промисов
     Guide_Typed_arrays: Типизированные массивы JavaScript
     Guide_Iterators_generators: Итераторы и генераторы
+    Guide_Resource_management: Resource management
     Guide_Internationalization: Internationalization
     Guide_Meta: Метапрограммирование
     Guide_Modules: Модули JavaScript
@@ -295,6 +288,7 @@ l10n:
     More: Ещё
     Execution_model: Execution model
     Lexical_grammar: Лексическая грамматика
+    Magic_comments: Magic comments
     Enumerability: Перечисляемость и принадлежность свойств
     Iteration_protocols: Протоколы перебора
     Template_strings: Шаблонные строки
@@ -302,7 +296,7 @@ l10n:
     Deprecated_features: Устаревшие возможности
   fr:
     Technology_overview: Aperçu des technologies JavaScript
-    Tutorials: Tutoriels
+    Tutorials: Tutoriels et guides
     Guide: Guide JavaScript
     Guide_Introduction: Introduction
     Guide_Grammar: Types et grammaire
@@ -310,21 +304,22 @@ l10n:
     Guide_Loops: Boucles et itération
     Guide_Functions: Fonctions
     Guide_Expressions: Expressions et opérateurs
-    Guide_Numbers: Numbers and strings
-    Guide_Dates: Representing dates & times
+    Guide_Numbers: Nombres et chaînes de caractères
+    Guide_Dates: Représentation des dates et heures
     Guide_RegExp: Expressions rationnelles
     Guide_Indexed_collections: Collections indexées
     Guide_keyed_collections: Collections avec clés
     Guide_Objects: Manipuler les objets
-    Guide_Classes: Using classes
+    Guide_Classes: Utiliser les classes
     Guide_Promises: Utiliser les promesses
     Guide_Typed_arrays: Tableaux typés en JavaScript
     Guide_Iterators_generators: Itérateurs et générateurs
-    Guide_Internationalization: Internationalization
+    Guide_Resource_management: Gestion des ressources
+    Guide_Internationalization: Internationalisation
     Guide_Meta: Métaprogrammation
     Guide_Modules: Modules JavaScript
     Intermediate: Intermédiaire
-    Language_overview: Language overview
+    Language_overview: Aperçu du langage
     Data_structures: Structures de données en JavaScript
     Equality: Différents tests d'égalité
     Closures: Fermetures (closures)
@@ -340,9 +335,10 @@ l10n:
     Classes: Classes
     Errors: Erreurs
     More: Divers
-    Execution_model: Execution model
+    Execution_model: Modèle d'exécution
     Lexical_grammar: Grammaire lexicale
-    Enumerability: Rattachement des propriétés
+    Magic_comments: Magic comments
+    Enumerability: Énumérabilité et rattachement des propriétés
     Iteration_protocols: Protocoles d'itération
     Template_strings: Gabarits de chaînes de caractères
     Trailing_commas: Virgules finales
@@ -367,6 +363,7 @@ l10n:
     Guide_Promises: 使用 Promise
     Guide_Typed_arrays: JavaScript 类型化数组
     Guide_Iterators_generators: 迭代器和生成器
+    Guide_Resource_management: 资源管理
     Guide_Internationalization: 国际化
     Guide_Meta: 元编程
     Guide_Modules: JavaScript 模块
@@ -389,6 +386,7 @@ l10n:
     More: 更多
     Execution_model: 运行模型
     Lexical_grammar: 词法文法
+    Magic_comments: 魔法注释
     Enumerability: 属性的可枚举性和所有权
     Iteration_protocols: 迭代协议
     Template_strings: 模板字符串
@@ -404,17 +402,18 @@ l10n:
     Guide_Loops: ループとイテレーター
     Guide_Functions: 関数
     Guide_Expressions: 式と演算子
-    Guide_Numbers: Numbers and strings
-    Guide_Dates: Representing dates & times
+    Guide_Numbers: 数値と文字列
+    Guide_Dates: 日付と時刻の表現
     Guide_RegExp: 正規表現
     Guide_Indexed_collections: インデックス付きコレクション
     Guide_keyed_collections: キー付きコレクション
-    Guide_Objects: オブジェクトを利用する
+    Guide_Objects: オブジェクトの利用
     Guide_Classes: クラスの使用
     Guide_Promises: プロミスの使用
     Guide_Typed_arrays: JavaScript 型付き配列
     Guide_Iterators_generators: イテレーターとジェネレーター
-    Guide_Internationalization: Internationalization
+    Guide_Resource_management: リソース管理
+    Guide_Internationalization: 国際化
     Guide_Meta: メタプログラミング
     Guide_Modules: JavaScript モジュール
     Intermediate: 中級編
@@ -434,13 +433,14 @@ l10n:
     Classes: クラス
     Errors: エラー
     More: その他
-    Execution_model: Execution model
+    Execution_model: 実行モデル
     Lexical_grammar: 字句文法
+    Magic_comments: Magic comments
     Enumerability: プロパティの列挙可能性と所有権
     Iteration_protocols: 反復処理プロトコル
     Template_strings: テンプレート文字列
     Trailing_commas: 末尾のカンマ
-    Deprecated_features: 廃止予定の機能
+    Deprecated_features: 非推奨の機能
   ko:
     Technology_overview: JavaScript 소개
     Tutorials: "자습서:"
@@ -461,6 +461,7 @@ l10n:
     Guide_Promises: promise 사용하기
     Guide_Typed_arrays: JavaScript 형식화 배열
     Guide_Iterators_generators: 반복기와 생성기
+    Guide_Resource_management: Resource management
     Guide_Internationalization: Internationalization
     Guide_Meta: 메타 프로그래밍
     Guide_Modules: JavaScript 모듈
@@ -483,6 +484,7 @@ l10n:
     More: 기타
     Execution_model: Execution model
     Lexical_grammar: Lexical 문법
+    Magic_comments: Magic comments
     Enumerability: 열거성과 속성의 소유권
     Iteration_protocols: Iteration 프로토콜
     Template_strings: 템플릿 리터럴
@@ -508,6 +510,7 @@ l10n:
     Guide_Promises: Usando "promises"
     Guide_Typed_arrays: Arranjos tipados em JavaScript
     Guide_Iterators_generators: Iteradores e geradores
+    Guide_Resource_management: Resource management
     Guide_Internationalization: Internationalization
     Guide_Meta: Metaprogramação
     Guide_Modules: JavaScript modules
@@ -530,6 +533,7 @@ l10n:
     More: Mais conteúdo
     Execution_model: Execution model
     Lexical_grammar: Gramática léxica
+    Magic_comments: Magic comments
     Enumerability: Enumerabilidade e domínio de propriedades
     Iteration_protocols: Protocolos de iteração
     Template_strings: Template literals

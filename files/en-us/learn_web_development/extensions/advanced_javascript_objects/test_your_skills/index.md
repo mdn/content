@@ -1,6 +1,6 @@
 ---
 title: "Test your skills: Advanced JavaScript objects"
-short-title: Test your skills
+short-title: "Test: OOJS tests index"
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills
 page-type: learn-module-assessment
 sidebar: learnsidebar

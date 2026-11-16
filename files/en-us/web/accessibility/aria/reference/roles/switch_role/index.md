@@ -21,7 +21,7 @@ This example creates a widget and assigns the ARIA `switch` role to it.
   id="speakerPower"
   class="switch">
   <span aria-hidden="true">off</span>
-  <span aria-hidden="true">on</span>
+  <span aria-hidden="false">on</span>
 </button>
 <label for="speakerPower" class="switch">Speaker power</label>
 ```
@@ -36,7 +36,7 @@ Since a switch is an interactive control, it must be focusable and keyboard acce
 
 ### All descendants are presentational
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `switch`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `switch` element as it is a role that does not support semantic children.
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `switch`. To deal with this limitation, browsers automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `switch` element as it is a role that does not support semantic children.
 
 For example, consider the following `switch` element, which contains a heading.
 
@@ -105,26 +105,6 @@ A switch is implemented as a {{HTMLElement("button")}} element, which is initial
 <label for="speakerPower" class="switch">Speaker power</label>
 ```
 
-#### JavaScript
-
-This JavaScript code defines and applies a function to handle click events on switch widgets. The function changes the `aria-checked` attribute from `true` to `false`, or vice versa.
-
-```js
-document.querySelectorAll(".switch").forEach((theSwitch) => {
-  theSwitch.addEventListener("click", handleClickEvent, false);
-});
-
-function handleClickEvent(evt) {
-  const el = evt.target;
-
-  if (el.getAttribute("aria-checked") === "true") {
-    el.setAttribute("aria-checked", "false");
-  } else {
-    el.setAttribute("aria-checked", "true");
-  }
-}
-```
-
 #### CSS
 
 The purpose of the CSS is to establish a look and feel for the switch that's reminiscent of the power switch paradigm.
@@ -153,13 +133,13 @@ button.switch span {
 
 [role="switch"][aria-checked="false"] :first-child,
 [role="switch"][aria-checked="true"] :last-child {
-  background: #262;
-  color: #eef;
+  background: #226622;
+  color: #eeeeff;
 }
 
 [role="switch"][aria-checked="false"] :last-child,
 [role="switch"][aria-checked="true"] :first-child {
-  color: #bbd;
+  color: #bbbbdd;
 }
 
 label.switch {
@@ -174,6 +154,26 @@ label.switch {
 ```
 
 The most interesting part is probably the use of attribute selectors and the {{cssxref(":first-child")}} and {{cssxref(":last-child")}} pseudo-classes to do all the heavy lifting of changing the appearance of the switch based on whether it's on or off.
+
+#### JavaScript
+
+This JavaScript code defines and applies a function to handle click events on switch widgets. The function changes the `aria-checked` attribute from `true` to `false`, or vice versa.
+
+```js
+document.querySelectorAll(".switch").forEach((theSwitch) => {
+  theSwitch.addEventListener("click", handleClickEvent);
+});
+
+function handleClickEvent(evt) {
+  const el = evt.target;
+
+  if (el.getAttribute("aria-checked") === "true") {
+    el.setAttribute("aria-checked", "false");
+  } else {
+    el.setAttribute("aria-checked", "true");
+  }
+}
+```
 
 #### Result
 

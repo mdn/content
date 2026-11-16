@@ -56,7 +56,7 @@ Content-Language: de-DE, en-CA
   - : Multiple language tags are separated by a comma. Each language tag is a sequence of one or more case-insensitive subtags, each separated by a hyphen character (`-`). In most cases, a language tag consists of a primary language subtag that identifies a broad family of related languages (e.g., `en` = English) and is optionally followed by a series of subtags that refine or narrow that language's range (e.g., `en-CA` = the variety of English as communicated in Canada).
 
 > [!NOTE]
-> Language tags are formally defined in [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt), which rely on the [ISO 639](https://en.wikipedia.org/wiki/ISO_639) standard (quite often the [ISO 639-1 code list](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) for [language codes](https://en.wikipedia.org/wiki/Language_code) to be used.
+> Languages are specified using {{glossary("BCP 47 language tag", "BCP 47 language tags")}}, which rely on the [ISO 639](https://en.wikipedia.org/wiki/ISO_639) standard (quite often the [ISO 639-1 code list](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) for [language codes](https://en.wikipedia.org/wiki/Language_code) to be used.
 
 ## Examples
 

@@ -23,7 +23,7 @@ new Intl.PluralRules(locales, options)
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
+  - : A string with a {{glossary("BCP 47 language tag")}} or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
   - : An object containing the following properties, in the order they are retrieved (all of them are optional):
     - `localeMatcher`
@@ -44,6 +44,7 @@ new Intl.PluralRules(locales, options)
     - `roundingPriority`
     - `roundingIncrement`
     - `roundingMode`
+    - `trailingZeroDisplay`
 
     These options are interpreted as if the `notation` option from `Intl.NumberFormat` is `"standard"` and `style` is `"decimal"`.
 
@@ -51,12 +52,14 @@ new Intl.PluralRules(locales, options)
 
 - {{jsxref("RangeError")}}
   - : Thrown if `locales` or `options` contain invalid values.
+- {{jsxref("TypeError")}}
+  - : Thrown if `roundingIncrement` is not `1` and is combined with either significant-digit rounding or a `roundingPriority` other than `"auto"`.
 
 ## Examples
 
 ### Basic usage
 
-In basic use without specifying a locale, a formatted string in the default locale and with default options is returned.
+In basic use without specifying a locale, `select()` returns a plural category for the default locale and with default options.
 This is useful to distinguish between singular and plural forms, e.g., "dog" and "dogs".
 
 ```js

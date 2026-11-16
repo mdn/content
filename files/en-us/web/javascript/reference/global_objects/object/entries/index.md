@@ -12,12 +12,12 @@ The **`Object.entries()`** static method returns an array of a given object's ow
 {{InteractiveExample("JavaScript Demo: Object.entries()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   a: "some string",
   b: 42,
 };
 
-for (const [key, value] of Object.entries(object1)) {
+for (const [key, value] of Object.entries(object)) {
   console.log(`${key}: ${value}`);
 }
 
@@ -125,7 +125,7 @@ Object.entries(obj).forEach(([key, value]) => {
 
 ## See also
 
-- [Polyfill of `Object.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.entries` in `core-js`](https://core-js.io/docs/features/ecmascript/object)
 - [es-shims polyfill of `Object.entries`](https://www.npmjs.com/package/object.entries)
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}

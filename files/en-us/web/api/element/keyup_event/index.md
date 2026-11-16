@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.keyup_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`keyup`** event is fired when a key is released.
 
@@ -16,13 +16,19 @@ The event target of a key event is the currently focused element which is proces
 
 The event target might change between different key events. For example, the `keydown` target for pressing the <kbd>Tab</kbd> key would be different from the `keyup` target, because the focus has changed.
 
+Because the event fires after the key is released, modifier-key properties ({{domxref("KeyboardEvent/ctrlKey", "ctrlKey")}}, {{domxref("KeyboardEvent/altKey", "altKey")}}, {{domxref("KeyboardEvent/shiftKey", "shiftKey")}}, and {{domxref("KeyboardEvent/metaKey", "metaKey")}}) reflect the state after release. For example, `ctrlKey` is `false` on the `keyup` event for the <kbd>Control</kbd> key itself. If another key is released while the <kbd>Control</kbd> key remains pressed, `ctrlKey` is `true` on that key's `keyup` event.
+
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("keyup", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onkeyup = (event) => { }
 ```
 
@@ -31,36 +37,6 @@ onkeyup = (event) => { }
 A {{domxref("KeyboardEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("KeyboardEvent")}}
-
-## Event properties
-
-_This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
-
-- {{domxref("KeyboardEvent.altKey")}} {{ReadOnlyInline}}
-  - : Returns a boolean value that is `true` if the <kbd>Alt</kbd> (<kbd>Option</kbd> or <kbd>⌥</kbd> on macOS) key was active when the key event was generated.
-
-- {{domxref("KeyboardEvent.code")}} {{ReadOnlyInline}}
-  - : Returns a string with the code value of the physical key represented by the event.
-
-    > [!WARNING]
-    > This ignores the user's keyboard layout, so that if the user presses the key at the "Y" position in a QWERTY keyboard layout (near the middle of the row above the home row), this will always return "KeyY", even if the user has a QWERTZ keyboard (which would mean the user expects a "Z" and all the other properties would indicate a "Z") or a Dvorak keyboard layout (where the user would expect an "F"). If you want to display the correct keystrokes to the user, you can use {{domxref("Keyboard.getLayoutMap()")}}.
-
-- {{domxref("KeyboardEvent.ctrlKey")}} {{ReadOnlyInline}}
-  - : Returns a boolean value that is `true` if the <kbd>Ctrl</kbd> key was active when the key event was generated.
-
-- {{domxref("KeyboardEvent.isComposing")}} {{ReadOnlyInline}}
-  - : Returns a boolean value that is `true` if the event is fired between after `compositionstart` and before `compositionend`.
-- {{domxref("KeyboardEvent.key")}} {{ReadOnlyInline}}
-  - : Returns a string representing the key value of the key represented by the event.
-- {{domxref("KeyboardEvent.location")}} {{ReadOnlyInline}}
-  - : Returns a number representing the location of the key on the keyboard or other input device. A list of the constants identifying the locations is shown in [Keyboard locations](/en-US/docs/Web/API/KeyboardEvent#keyboard_locations).
-- {{domxref("KeyboardEvent.metaKey")}} {{ReadOnlyInline}}
-  - : Returns a boolean value that is `true` if the <kbd>Meta</kbd> key (on Mac keyboards, the <kbd>⌘ Command</kbd> key; on Windows keyboards, the Windows key (<kbd>⊞</kbd>)) was active when the key event was generated.
-
-- {{domxref("KeyboardEvent.repeat")}} {{ReadOnlyInline}}
-  - : Returns a boolean value that is `true` if the key is being held down such that it is automatically repeating.
-- {{domxref("KeyboardEvent.shiftKey")}} {{ReadOnlyInline}}
-  - : Returns a boolean value that is `true` if the <kbd>Shift</kbd> key was active when the key event was generated.
 
 ## Examples
 

@@ -10,7 +10,7 @@ The **`bookmarks.BookmarkTreeNodeUnmodifiable`** type is used to indicate the re
 
 ## Type
 
-`bookmarks.BookmarkTreeNodeUnmodifiable` is a {{jsxref("string")}} which can currently have only one value: `"managed"`. This indicates that the bookmark node was configured by an administrator or by the custodian of a supervised user (such as a parent, in the case of parental controls).
+`bookmarks.BookmarkTreeNodeUnmodifiable` is a {{jsxref("String")}} which can currently have only one value: `"managed"`. This indicates that the bookmark node was configured by an administrator or by the custodian of a supervised user (such as a parent, in the case of parental controls).
 
 {{WebExtExamples}}
 

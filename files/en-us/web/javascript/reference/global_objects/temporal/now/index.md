@@ -2,13 +2,9 @@
 title: Temporal.Now
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Now
 page-type: javascript-namespace
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.Now
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`Temporal.Now`** namespace object contains static methods for getting the current time in various formats.
 
@@ -16,7 +12,7 @@ The **`Temporal.Now`** namespace object contains static methods for getting the 
 
 Unlike most global objects, `Temporal.Now` is not a constructor. You cannot use it with the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `Temporal.Now` object as a function. All properties and methods of `Temporal.Now` are static (just like the {{jsxref("Math")}} object).
 
-Most fundamentally, the system time is returned by the operating system as a time since the Unix epoch (usually millisecond-level precision, but might be nanosecond-level too). {{jsxref("Temporal/Now/instant", "Temporal.Now.instant()")}} returns this time as a {{jsxref("Temporal.Instant")}} object.
+Most fundamentally, the system time is returned by the operating system as a time since the Unix epoch. {{jsxref("Temporal/Now/instant", "Temporal.Now.instant()")}} returns this time as a {{jsxref("Temporal.Instant")}} object. Although this object can represent nanoseconds, the resolution of the current time depends on the system clock and browser settings.
 
 An instant can be interpreted in a time zone (which is the system time zone {{jsxref("Temporal/Now/timeZoneId", "Temporal.Now.timeZoneId()")}} by default) in the same fashion as {{jsxref("Temporal/Instant/toZonedDateTimeISO", "Temporal.Instant.prototype.toZonedDateTimeISO()")}}. To get a {{jsxref("Temporal.ZonedDateTime")}} object, you can use {{jsxref("Temporal/Now/zonedDateTimeISO", "Temporal.Now.zonedDateTimeISO()")}}. You can also get different parts of the date and time, using {{jsxref("Temporal/Now/plainDateISO", "Temporal.Now.plainDateISO()")}}, {{jsxref("Temporal/Now/plainTimeISO", "Temporal.Now.plainTimeISO()")}}, and {{jsxref("Temporal/Now/plainDateTimeISO", "Temporal.Now.plainDateTimeISO()")}}.
 
@@ -24,27 +20,11 @@ For example, if the computer is set to the time zone "America/New_York", `Tempor
 
 ### Reduced time precision
 
-To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of the `Temporal.Now` functions might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of the current time returned by the `Temporal.Now` methods may be reduced depending on browser settings.
 
-For example, with reduced time precision, the result of `Temporal.Now.instant().epochMilliseconds` will always be a multiple of 2, or a multiple of 100 (or `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`) with `privacy.resistFingerprinting` enabled.
+In Chrome, the rounding interval is 0.1 ms, or 0.005 ms in cross-origin-isolated contexts.
 
-```js
-// reduced time precision (2ms) in Firefox 60
-Temporal.Now.instant().epochMilliseconds;
-// Might be:
-// 1519211809934
-// 1519211810362
-// 1519211811670
-// …
-
-// reduced time precision with `privacy.resistFingerprinting` enabled
-Temporal.Now.instant().epochMilliseconds;
-// Might be:
-// 1519129853500
-// 1519129858900
-// 1519129864400
-// …
-```
+In Firefox, these methods obtain the current time in the same way as {{jsxref("Date.now()")}}. They inherit the precision of that clock reading without introducing additional inaccuracy. The timestamp is always an integer number of milliseconds, so its resolution is limited to 1 ms in all contexts. Accessing `epochNanoseconds` does not increase its precision.
 
 ## Static properties
 
@@ -53,17 +33,17 @@ Temporal.Now.instant().epochMilliseconds;
 
 ## Static methods
 
-- {{jsxref("Temporal/Now/instant", "Temporal.Now.instant()")}} {{experimental_inline}}
+- {{jsxref("Temporal/Now/instant", "Temporal.Now.instant()")}}
   - : Returns the current time as a {{jsxref("Temporal.Instant")}} object.
-- {{jsxref("Temporal/Now/plainDateISO", "Temporal.Now.plainDateISO()")}} {{experimental_inline}}
+- {{jsxref("Temporal/Now/plainDateISO", "Temporal.Now.plainDateISO()")}}
   - : Returns the current date as a {{jsxref("Temporal.PlainDate")}} object, in the ISO 8601 calendar and the specified time zone.
-- {{jsxref("Temporal/Now/plainDateTimeISO", "Temporal.Now.plainDateTimeISO()")}} {{experimental_inline}}
+- {{jsxref("Temporal/Now/plainDateTimeISO", "Temporal.Now.plainDateTimeISO()")}}
   - : Returns the current date and time as a {{jsxref("Temporal.PlainDateTime")}} object, in the ISO 8601 calendar and the specified time zone.
-- {{jsxref("Temporal/Now/plainTimeISO", "Temporal.Now.plainTimeISO()")}} {{experimental_inline}}
+- {{jsxref("Temporal/Now/plainTimeISO", "Temporal.Now.plainTimeISO()")}}
   - : Returns the current time as a {{jsxref("Temporal.PlainTime")}} object, in the specified time zone.
-- {{jsxref("Temporal/Now/timeZoneId", "Temporal.Now.timeZoneId()")}} {{experimental_inline}}
+- {{jsxref("Temporal/Now/timeZoneId", "Temporal.Now.timeZoneId()")}}
   - : Returns a [time zone identifier](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets) representing the system's current time zone.
-- {{jsxref("Temporal/Now/zonedDateTimeISO", "Temporal.Now.zonedDateTimeISO()")}} {{experimental_inline}}
+- {{jsxref("Temporal/Now/zonedDateTimeISO", "Temporal.Now.zonedDateTimeISO()")}}
   - : Returns the current date and time as a {{jsxref("Temporal.ZonedDateTime")}} object, in the ISO 8601 calendar and the specified time zone.
 
 ## Specifications

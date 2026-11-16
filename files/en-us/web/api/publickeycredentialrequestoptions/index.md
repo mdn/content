@@ -21,7 +21,7 @@ It is used to request a {{domxref("PublicKeyCredential")}} provided by an {{glos
     - `id`
       - : An {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} representing the ID of the public key credential to retrieve. This value is mirrored by the {{domxref("PublicKeyCredential.rawId", "rawId")}} property of the {{domxref("PublicKeyCredential")}} object returned by a successful `get()` call.
 
-    - `transports`
+    - `transports` {{optional_inline}}
       - : An array of strings providing hints as to the methods the client could use to communicate with the relevant authenticator of the public key credential to retrieve. Possible transports are: `"ble"`, `"hybrid"`, `"internal"`, `"nfc"`, and `"usb"`.
 
         > [!NOTE]
@@ -60,7 +60,7 @@ It is used to request a {{domxref("PublicKeyCredential")}} provided by an {{glos
 
 - `rpId` {{optional_inline}}
   - : A string that specifies the relying party's identifier (for example `"login.example.org"`). For security purposes:
-    - The calling web app verifies that `rpId` matches the relying party's origin.
+    - The browser verifies that `rpId` matches the relying party's origin or is a domain suffix of the relying party's origin (for example, `example.org`).
     - The authenticator verifies that `rpId` matches the `rpId` of the credential used for the authentication ceremony.
 
     This value defaults to the current origin's domain.

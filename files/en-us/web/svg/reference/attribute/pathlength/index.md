@@ -2,7 +2,7 @@
 title: pathLength
 slug: Web/SVG/Reference/Attribute/pathLength
 page-type: svg-attribute
-spec-urls: https://svgwg.org/svg2-draft/paths.html#PathLengthAttribute
+spec-urls: https://w3c.github.io/svgwg/svg2-draft/paths.html#PathLengthAttribute
 sidebar: svgref
 ---
 
@@ -20,45 +20,8 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement('polyline')}}
 - {{SVGElement('rect')}}
 
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    path {
-      fill: none;
-      stroke: black;
-      stroke-width: 2;
-      stroke-dasharray: 10;
-    }
-  </style>
-
-  <!-- No pathLength, the real length of the path is used. In that case, 100 user units -->
-  <path d="M 0,10 h100" />
-
-  <!-- compute everything like if the path length was 90 user units long -->
-  <path d="M 0,20 h100" pathLength="90" />
-
-  <!-- compute everything like if the path length was 50 user units long -->
-  <path d="M 0,30 h100" pathLength="50" />
-
-  <!-- compute everything like if the path length was 30 user units long -->
-  <path d="M 0,40 h100" pathLength="30" />
-
-  <!-- compute everything like if the path length was 10 user units long -->
-  <path d="M 0,50 h100" pathLength="10" />
-</svg>
-```
-
-{{EmbedLiveSample("Example", '100%', 200)}}
+> [!NOTE]
+> The `pathLength` attribute also has a CSS property counterpart: [`path-length`](/en-US/docs/Web/CSS/Reference/Properties/path-length). When both are specified, the CSS property takes priority.
 
 ## circle
 
@@ -235,6 +198,50 @@ For {{SVGElement('rect')}}, `pathLength` lets authors specify a total length for
   </tbody>
 </table>
 
+## Example
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    path {
+      fill: none;
+      stroke: black;
+      stroke-width: 2;
+      stroke-dasharray: 10;
+    }
+  </style>
+
+  <!-- No pathLength, the real length of the path is used. In that case, 100 user units -->
+  <path d="M 0,10 h100" />
+
+  <!-- compute everything like if the path length was 90 user units long -->
+  <path d="M 0,20 h100" pathLength="90" />
+
+  <!-- compute everything like if the path length was 50 user units long -->
+  <path d="M 0,30 h100" pathLength="50" />
+
+  <!-- compute everything like if the path length was 30 user units long -->
+  <path d="M 0,40 h100" pathLength="30" />
+
+  <!-- compute everything like if the path length was 10 user units long -->
+  <path d="M 0,50 h100" pathLength="10" />
+</svg>
+```
+
+{{EmbedLiveSample("Example", '100%', 200)}}
+
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- CSS {{cssxref("path-length")}} property

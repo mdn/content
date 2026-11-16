@@ -11,6 +11,15 @@ The **`SVGTextContentElement`** interface is implemented by elements that suppor
 
 {{InheritanceDiagram}}
 
+## Static properties
+
+- `LENGTHADJUST_UNKNOWN` (0)
+  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+- `LENGTHADJUST_SPACING` (1)
+  - : Corresponds to the value `spacing`.
+- `LENGTHADJUST_SPACINGANDGLYPHS` (2)
+  - : Corresponds to the value `spacingAndGlyphs`.
+
 ## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}}._
@@ -42,15 +51,6 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
   - : Returns a long representing the character which caused a text glyph to be rendered at a given position in the coordinate system. Because the relationship between characters and glyphs is not one-to-one, only the first character of the relevant typographic character is returned.
 - {{domxref("SVGTextContentElement.selectSubString()")}} {{deprecated_inline}}
   - : Selects text within the element.
-
-## Static properties
-
-- `LENGTHADJUST_UNKNOWN` (0)
-  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
-- `LENGTHADJUST_SPACING` (1)
-  - : Corresponds to the value `spacing`.
-- `LENGTHADJUST_SPACINGANDGLYPHS` (2)
-  - : Corresponds to the value `spacingAndGlyphs`.
 
 ## Specifications
 

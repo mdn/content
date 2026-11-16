@@ -14,7 +14,7 @@ This allows stream transforms to be applied to encoded video and audio frames as
 The transform that is to be added is defined using an {{domxref("RTCRtpScriptTransform")}} and its associated {{domxref("Worker")}}.
 If the transform is set in the peer connection [`track` event](/en-US/docs/Web/API/RTCPeerConnection/track_event) handler, the transform stream will receive the first full incoming frame for the track.
 
-### Value
+## Value
 
 A {{domxref("RTCRtpScriptTransform")}}<!-- or {{domxref("SFrameTransform")}} -->, or `null` if the receiver has no associated transform stream.
 

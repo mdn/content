@@ -41,7 +41,7 @@ A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 
 Access to the API is subject to the following constraints:
 
-- The method must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+- The method must be called in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 - Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
 - User permission is required to access a non-default device.
   The user grants permission by selecting the device associated with the ID in the prompt displayed by {{domxref("MediaDevices.selectAudioOutput()")}}.

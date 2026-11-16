@@ -21,7 +21,7 @@ When you see any of the following messages logged in the browser devtools consol
 - Ignoring "%1$S" within script-src or style-src: nonce-source or hash-source specified
 - Ignoring "%1$S" within script-src: 'strict-dynamic' specified
 - Ignoring source "%1$S" (Only supported within script-src).
-- Keyword 'strict-dynamic' within "%1$S" with no valid nonce or hash might block all scripts from loading
+- Keyword 'strict-dynamic' within "%1$S" with no valid {{Glossary("Nonce", "nonce")}} or hash might block all scripts from loading
 - The report URI (%1$S) should be an HTTP or HTTPS URI.
 - This site (%1$S) has a Report-Only policy without a report URI. CSP will not block and cannot report violations of this policy.
 - Failed to parse unrecognized source %1$S

@@ -12,7 +12,7 @@ The shadow root is attached to another node tree through a specific DOM node ref
 The hidden DOM nodes of a shadow tree are generally not affected by anything applied outside the shadow tree, and vice versa. The **shadow boundary**, where the shadow DOM ends and the regular DOM begins, can be traversed, but only very intentionally:
 
 - Scripting shadow tree nodes from outside requires the use of a special [Shadow DOM API](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) to be accessed.
-- Styling a shadow tree from outside can be achieved via [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) and [CSS shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts).
+- Styling a shadow tree from outside can be achieved via [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) and [CSS shadow parts](/en-US/docs/Web/CSS/Guides/Shadow_parts).
 
 ## See also
 
@@ -20,7 +20,7 @@ The hidden DOM nodes of a shadow tree are generally not affected by anything app
 - {{domxref("Element.shadowRoot")}} and {{domxref("Element.attachShadow()")}}
 - {{domxref("ShadowRoot")}}
 - {{HTMLElement("slot")}}
-- [CSS shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
-- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
+- [CSS shadow parts](/en-US/docs/Web/CSS/Guides/Shadow_parts) module
+- [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module
 - Related glossary terms:
   - {{Glossary("Accessibility tree")}}

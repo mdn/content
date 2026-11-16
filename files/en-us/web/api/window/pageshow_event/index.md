@@ -8,25 +8,38 @@ browser-compat: api.Window.pageshow_event
 
 {{APIRef("HTML DOM")}}
 
-The **`pageshow`** event is sent to a {{domxref("Window")}} when the browser displays the window's document due to navigation.
+The **`pageshow`** event is sent to a {{domxref("Window")}} when the browser navigates to a new document.
 
 This includes:
 
-- Initially loading the page
-- Navigating to the page from another page in the same window or tab
-- Restoring a frozen page on mobile OSes
-- Returning to the page using the browser's forward or back buttons
+- Initially loading the page.
+- Navigating to the page from another page in the same window or tab.
+- Restoring a frozen page on mobile OSes.
+- Returning to the page using the browser's forward or back buttons (including when restored from the {{Glossary("bfcache")}}).
+- Opening a page in a background tab.
+- {{Glossary("Prerender", "Prerendering")}} a page, even before it is activated.
+
+> [!WARNING]
+> Despite the name, the `pageshow` event does not fire when the page is actually _shown_ to the user. For example, it may be opened in a background tab or prerendered. If you are interested in responding to the page being shown to the user, use the following events:
+>
+> - {{domxref("window/pagereveal_event", "pagereveal")}}: Sent when a page is first rendered.
+> - {{domxref("document/visibilitychange_event", "visibilitychange")}}: Sent each time a page's visibility changes.
+> - {{domxref("document/prerenderingchange_event", "prerenderingchange")}}: Sent when a prerendered page is activated.
 
 > [!NOTE]
 > During the initial page load, the `pageshow` event fires _after_ the {{domxref("Window/load_event", "load")}} event.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("pageshow", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onpageshow = (event) => { }
 ```
 
@@ -35,11 +48,6 @@ onpageshow = (event) => { }
 A {{domxref("PageTransitionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PageTransitionEvent")}}
-
-## Event properties
-
-- {{domxref("PageTransitionEvent.persisted")}} {{ReadOnlyInline}}
-  - : Indicates if the document is loading from a cache.
 
 ## Event handler aliases
 
@@ -52,6 +60,16 @@ In addition to the `Window` interface, the event handler property `onpageshow` i
 ## Examples
 
 This example sets up event handlers for events listed in the array `events`. The handler, `eventLogger()`, logs the type of event that occurred to the console, and includes the value of the {{domxref("PageTransitionEvent.persisted", "persisted")}} flag on `pageshow` and `pagehide` events.
+
+### HTML
+
+```html
+<p>
+  Open the console and watch the output as you navigate to and from this page.
+  Try loading new pages into this tab, then navigating forward and backward
+  through history, noting the events' output to the log.
+</p>
+```
 
 ### JavaScript
 
@@ -75,17 +93,7 @@ const eventLogger = (event) => {
 events.forEach((eventName) => window.addEventListener(eventName, eventLogger));
 ```
 
-### HTML
-
-```html
-<p>
-  Open the console and watch the output as you navigate to and from this page.
-  Try loading new pages into this tab, then navigating forward and backward
-  through history, noting the events' output to the log.
-</p>
-```
-
-### Results
+### Result
 
 {{EmbedLiveSample("Examples", 640, 250)}}
 

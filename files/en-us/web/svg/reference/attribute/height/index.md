@@ -3,11 +3,11 @@ title: height
 slug: Web/SVG/Reference/Attribute/height
 page-type: svg-attribute
 spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-height
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-height
-  - https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-height
-  - https://svgwg.org/svg2-draft/geometry.html#Sizing
-  - https://svgwg.org/svg2-draft/pservers.html#PatternElementHeightAttribute
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-height
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-primitive-height
+  - https://drafts.csswg.org/css-masking-1/#element-attrdef-mask-height
+  - https://w3c.github.io/svgwg/svg2-draft/geometry.html#Sizing
+  - https://w3c.github.io/svgwg/svg2-draft/pservers.html#PatternElementHeightAttribute
 sidebar: svgref
 ---
 
@@ -40,27 +40,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement('rect')}}
 - {{SVGElement('svg')}}
 - {{SVGElement('use')}}
-
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- With a height of 0 or less, nothing will be rendered -->
-  <rect y="0" x="0" width="90" height="0" />
-  <rect y="0" x="100" width="90" height="60" />
-  <rect y="0" x="200" width="90" height="100%" />
-</svg>
-```
-
-{{EmbedLiveSample("Example", '100%', 200)}}
 
 ## feBlend
 
@@ -856,6 +835,27 @@ For {{SVGElement('use')}}, `height` defines the vertical length for the referenc
 
 > [!NOTE]
 > Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for used elements.
+
+## Example
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- With a height of 0 or less, nothing will be rendered -->
+  <rect y="0" x="0" width="90" height="0" />
+  <rect y="0" x="100" width="90" height="60" />
+  <rect y="0" x="200" width="90" height="100%" />
+</svg>
+```
+
+{{EmbedLiveSample("Example", '100%', 200)}}
 
 ## Specifications
 

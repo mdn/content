@@ -50,9 +50,9 @@ ICE candidate received from the remote peer during the signaling process.
 function handleNewIceCandidate(candidateSDP) {
   const candidateObj = new RTCIceCandidate(candidateSDP);
 
-  myPeerConnection.addIceCandidate(candidateObj).catch({
-    /* handle the error thrown by addIceCandidate() */
-  });
+  myPeerConnection
+    .addIceCandidate(candidateObj)
+    .catch({/* handle the error thrown by addIceCandidate() */});
 }
 ```
 

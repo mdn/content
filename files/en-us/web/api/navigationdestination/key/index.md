@@ -3,12 +3,10 @@ title: "NavigationDestination: key property"
 short-title: key
 slug: Web/API/NavigationDestination/key
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigationDestination.key
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`key`** read-only property of the
 {{domxref("NavigationDestination")}} interface returns the {{domxref("NavigationHistoryEntry.key", "key")}} value of the destination {{domxref("NavigationHistoryEntry")}} if the {{domxref("NavigateEvent.navigationType")}} is `traverse`, or an empty string otherwise.

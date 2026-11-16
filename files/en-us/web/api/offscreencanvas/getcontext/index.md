@@ -21,7 +21,7 @@ getContext(contextType, contextAttributes)
 - `contextType`
   - : A string containing the context identifier defining the drawing context associated to the canvas. Possible values are:
     - `2d`
-      - : Creates a {{domxref("OffscreenCanvasRenderingContext2D")}} object representing a two-dimensional rendering context.
+      - : Creates an {{domxref("OffscreenCanvasRenderingContext2D")}} object representing a two-dimensional rendering context.
     - `webgl`
       - : Creates a {{domxref("WebGLRenderingContext")}} object representing a three-dimensional rendering context. This context is only available on browsers that implement [WebGL](/en-US/docs/Web/API/WebGL_API) version 1 (OpenGL ES 2.0).
     - `webgl2`
@@ -29,7 +29,7 @@ getContext(contextType, contextAttributes)
     - `"webgpu"`
       - : Creates a {{domxref("GPUCanvasContext")}} object representing a three-dimensional rendering context for WebGPU render pipelines. This context is only available on browsers that implement [WebGPU API](/en-US/docs/Web/API/WebGPU_API).
     - `bitmaprenderer`
-      - : Creates a {{domxref("ImageBitmapRenderingContext")}} which only provides functionality to replace the content of the canvas with a given {{domxref("ImageBitmap")}}.
+      - : Creates an {{domxref("ImageBitmapRenderingContext")}} which only provides functionality to replace the content of the canvas with a given {{domxref("ImageBitmap")}}.
 
     > [!NOTE]
     > The identifiers **`"experimental-webgl"`** or **`"experimental-webgl2"`** are also used in implementations of WebGL.

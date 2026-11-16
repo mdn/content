@@ -104,8 +104,8 @@ All pseudo-classes behave like this. They target some bit of your document that 
 
 Some pseudo-classes only apply when the user interacts with the document in some way. These **user-action** pseudo-classes, sometimes referred to as **dynamic pseudo-classes**, act as if a class had been added to the element when the user interacts with it. Examples include:
 
-- [`:hover`](/en-US/docs/Web/CSS/:hover) — mentioned above; this only applies if the user moves their pointer over an element, typically a link.
-- [`:focus`](/en-US/docs/Web/CSS/:focus) — only applies if the user focuses the element by clicking or using keyboard controls.
+- {{cssxref(":hover")}} — mentioned above; this only applies if the user moves their pointer over an element, typically a link.
+- {{cssxref(":focus")}} — only applies if the user focuses the element by clicking or using keyboard controls.
 
 ```html live-sample___hover
 <p><a href="">Hover over me</a></p>
@@ -132,7 +132,7 @@ Go back to our [first pseudo-class example](#basic_pseudo-class_example) and edi
 1. Add a rule that colors the paragraph text `blue` when they are hovered over.
 2. Add a rule that selects only the last paragraph inside the article, and gives it an `orange` `background-color`.
 
-You can find information on all the other available pseudo-classes on the MDN [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) reference page.
+You can find information on all the other available pseudo-classes on the MDN [Pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) reference page.
 
 ## What is a pseudo-element?
 
@@ -143,7 +143,7 @@ Pseudo-elements start with a double colon `::`. `::before` is an example of a ps
 > [!NOTE]
 > Some early pseudo-elements used the single colon syntax, so you may sometimes see this in code or examples. Modern browsers support the early pseudo-elements with single- or double-colon syntax for backwards compatibility.
 
-For example, if you wanted to select the first line of a paragraph you could wrap it in a `<span>` element and use an element selector; however, that would fail if the number of words you had wrapped were longer or shorter than the parent element's width. As we tend not to know how many words will fit on a line — as that will change if the screen width or font-size changes — it is impossible to robustly do this by adding HTML.
+For example, if you wanted to select the first line of a paragraph, you could wrap it in a `<span>` element and use an element selector; however, that would fail if the words you had wrapped were longer or shorter than the parent element's width. As we tend not to know how many words will fit on a line — as that will change if the screen width or font-size changes — it is impossible to robustly do this by adding HTML.
 
 The `::first-line` pseudo-element selector will do this for you reliably — if the number of words increases or decreases it will still only select the first line.
 
@@ -186,7 +186,7 @@ Edit the CSS of the previous example using the MDN playground:
 - A `1px solid black` `border`.
 - A `font-size` of `2rem`.
 
-You can find information on all the other available pseudo-elements on the MDN [Pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) reference page.
+You can find information on all the other available pseudo-elements on the MDN [Pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) reference page.
 
 ## Combining pseudo-classes and pseudo-elements
 
@@ -203,7 +203,7 @@ article p:first-child::first-line {
 
 ## Generating content with ::before and ::after
 
-There are a couple of special pseudo-elements, which are used along with the [`content`](/en-US/docs/Web/CSS/content) property to insert content into your document using CSS. This technique is called **generated content**.
+There are a couple of special pseudo-elements, which are used along with the {{cssxref("content")}} property to insert content into your document using CSS. This technique is called **generated content**.
 
 You could use it to insert a string of text, such as in the example below. We've also given the generated content a `yellow` background color so it can be easily distinguished from the paragraph content.
 
@@ -280,7 +280,7 @@ In the next article, we'll learn about combinators.
 
 ## See also
 
-- [Pseudo-classes reference](/en-US/docs/Web/CSS/Pseudo-classes)
-- [Pseudo-elements reference](/en-US/docs/Web/CSS/Pseudo-elements)
+- [Pseudo-classes reference](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
+- [Pseudo-elements reference](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}

@@ -21,10 +21,6 @@ Some security testing tools will still check for the presence of a `X-Permitted-
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 
@@ -53,7 +49,7 @@ X-Permitted-Cross-Domain-Policies: <permitted-cross-domain-policy>
 ## Description
 
 Web clients such as Adobe Acrobat or Apache Flex can load web documents, which may in turn load resources from the same site or other sites.
-Access is restricted to same-site resources by default, due to the [same origin policy](/en-US/docs/Web/Security/Same-origin_policy), but cross-origin sites may choose to make some or all of their resources available to clients cross-origin using special files, referred to as a cross-domain policy files.
+Access is restricted to same-site resources by default, due to the [same origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy), but cross-origin sites may choose to make some or all of their resources available to clients cross-origin using special files, referred to as a cross-domain policy files.
 
 A "master" cross-domain policy file may be defined as `crossdomain.xml` file in the root of the domain, for example: `http://example.com/crossdomain.xml`.
 The master file defines the _meta-policy_ for the whole site using the `permitted-cross-domain-policies` attribute of the `<site-control>` tag.
@@ -95,4 +91,4 @@ Documented in the [Adobe Cross Domain Policy File Specification](https://www.ado
 - [Practical security implementation guides](/en-US/docs/Web/Security/Practical_implementation_guides)
 - [HTTP Observatory](/en-US/observatory/) header testing tool
 - [Cross Domain Configuration](https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html) on adobe.com
-- [X-Permitted-Cross-Domain-Policies](https://github.com/OWASP/www-project-secure-headers/blob/master/tab_headers.md#x-permitted-cross-domain-policies) in OWASP Secure Headers Project
+- [X-Permitted-Cross-Domain-Policies](https://secure-headers-project.owasp.org/response-headers/#x-permitted-cross-domain-policies) in OWASP Secure Headers Project

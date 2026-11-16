@@ -9,14 +9,15 @@ sidebar: mathmlref
 
 ## MathML-specific types
 
-In addition to [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types), some MathML attributes accept the following types:
+In addition to [CSS data types](/en-US/docs/Web/CSS/Reference/Values/Data_types), some MathML attributes accept the following types:
 
-- `<unsigned-integer>`: An [`<integer>`](/en-US/docs/Web/CSS/integer), whose first character is neither U+002D HYPHEN-MINUS character (-) nor U+002B PLUS SIGN (+); for example `1234`.
+- `<unsigned-integer>`: An [`<integer>`](/en-US/docs/Web/CSS/Reference/Values/integer), whose first character is neither U+002D HYPHEN-MINUS character (-) nor U+002B PLUS SIGN (+); for example `1234`.
 - `<boolean>`: A string `true` or `false` representing a boolean value.
 
 ## Legacy MathML lengths
 
-{{deprecated_header}}
+> [!WARNING]
+> These lengths are deprecated. Using them is no longer recommended.
 
 Instead of {{cssxref("length-percentage")}}, MathML used to define its own [type to describe lengths](https://www.w3.org/TR/MathML3/chapter2.html#type.length). Accepted values included non-zero unitless length values (e.g., `5` to mean `500%`), values containing numbers ending with a dot (e.g., `34.px`), or named spaces (e.g., `thinmathspace`). For compatibility reasons, it is recommended to replace non-zero unitless length values with equivalent {{cssxref("percentage")}} values, to remove unnecessary dots in numbers, and to use the following replacement for named lengths:
 

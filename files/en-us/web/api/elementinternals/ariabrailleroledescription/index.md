@@ -36,18 +36,30 @@ class CustomSlide extends HTMLElement {
 customElements.define("custom-slide", CustomSlide);
 ```
 
+```html hidden
+<custom-slide></custom-slide>
+<pre id="log"></pre>
+```
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(value) {
+  logElement.textContent += `${value}\n`;
+}
+```
+
 We can retrieve and set the value of the custom element's `aria-brailleroledescription` value:
 
 ```js
 const customEl = document.querySelector("custom-slide");
-log(customEl.ariaBrailleRoleDescription);
-customEl.ariaBrailleRoleDescription = "sd";
-log(customEl.ariaBrailleRoleDescription);
+log(customEl._internals.ariaBrailleRoleDescription);
+customEl._internals.ariaBrailleRoleDescription = "sd";
+log(customEl._internals.ariaBrailleRoleDescription);
 ```
 
 ### Result
 
-{{EmbedLiveSample("Getting and setting ariaBrailleRoleDescription")}}
+{{EmbedLiveSample("examples")}}
 
 ## Specifications
 

@@ -150,14 +150,14 @@ We'll use the following CSS to style the buffering display:
 .buffered {
   height: 20px;
   position: relative;
-  background: #555;
+  background: #555555;
   width: 300px;
 }
 
 #buffered-amount {
   display: block;
   height: 100%;
-  background-color: #777;
+  background-color: #777777;
   width: 0;
 }
 
@@ -171,7 +171,7 @@ We'll use the following CSS to style the buffering display:
 #progress-amount {
   display: block;
   height: 100%;
-  background-color: #595;
+  background-color: #559955;
   width: 0;
 }
 ```
@@ -211,7 +211,7 @@ The progress event is fired as data is downloaded, this is a good event to react
 
 The timeupdate event is fired 4 times a second as the media plays and that's where we increment our playing progress bar.
 
-This time, you should see two kinds of segments. The light grey bar represents the buffered progress and green bar shows the played progress.
+This time, you should see two kinds of segments. The light gray bar represents the buffered progress and green bar shows the played progress.
 
 {{EmbedLiveSample("buffered-progress", "", 200)}}
 

@@ -3,12 +3,10 @@ title: "Navigation: currententrychange event"
 short-title: currententrychange
 slug: Web/API/Navigation/currententrychange_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.Navigation.currententrychange_event
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`currententrychange`** event of the {{domxref("Navigation")}} interface is fired when the {{domxref("Navigation.currentEntry")}} has changed.
 
@@ -24,11 +22,15 @@ This event fires after the navigation is committed, meaning that the visible URL
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("currententrychange", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 oncurrententrychange = (event) => { }
 ```
 

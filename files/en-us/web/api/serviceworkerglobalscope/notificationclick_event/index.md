@@ -19,11 +19,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("notificationclick", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onnotificationclick = (event) => { }
 ```
 
@@ -32,15 +36,6 @@ onnotificationclick = (event) => { }
 A {{domxref("NotificationEvent")}}. Inherits from {{domxref("ExtendableEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("NotificationEvent")}}
-
-## Event properties
-
-_Inherits properties from its ancestors, {{domxref("ExtendableEvent")}} and {{domxref("Event")}}_.
-
-- {{domxref("NotificationEvent.notification")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("Notification")}} object representing the notification that was clicked to fire the event.
-- {{domxref("NotificationEvent.action")}} {{ReadOnlyInline}}
-  - : Returns the string ID of the notification button the user clicked. This value returns an empty string if the user clicked the notification somewhere other than an action button, or the notification does not have a button.
 
 ## Examples
 
@@ -60,7 +55,12 @@ self.addEventListener("notificationclick", (event) => {
       })
       .then((clientList) => {
         for (const client of clientList) {
-          if (client.url === "/" && "focus" in client) return client.focus();
+          if (
+            client.url === new URL("/", self.location.origin).href &&
+            "focus" in client
+          ) {
+            return client.focus();
+          }
         }
         if (clients.openWindow) return clients.openWindow("/");
       }),
@@ -68,7 +68,7 @@ self.addEventListener("notificationclick", (event) => {
 });
 ```
 
-Or use the `onnotificationclick` event handler property:
+Or use the `onnotificationclick` event handler property (but note that this replaces other event listeners added using `onnotificationclick`, if any):
 
 ```js
 self.onnotificationclick = (event) => {
@@ -84,7 +84,12 @@ self.onnotificationclick = (event) => {
       })
       .then((clientList) => {
         for (const client of clientList) {
-          if (client.url === "/" && "focus" in client) return client.focus();
+          if (
+            client.url === new URL("/", self.location.origin).href &&
+            "focus" in client
+          ) {
+            return client.focus();
+          }
         }
         if (clients.openWindow) return clients.openWindow("/");
       }),
@@ -112,20 +117,16 @@ Notification.requestPermission().then((result) => {
   }
 });
 
-self.addEventListener(
-  "notificationclick",
-  (event) => {
-    event.notification.close();
-    if (event.action === "archive") {
-      // User selected the Archive action.
-      archiveEmail();
-    } else {
-      // User selected (e.g., clicked in) the main body of notification.
-      clients.openWindow("/inbox");
-    }
-  },
-  false,
-);
+self.addEventListener("notificationclick", (event) => {
+  event.notification.close();
+  if (event.action === "archive") {
+    // User selected the Archive action.
+    archiveEmail();
+  } else {
+    // User selected (e.g., clicked in) the main body of notification.
+    clients.openWindow("/inbox");
+  }
+});
 ```
 
 ## Specifications

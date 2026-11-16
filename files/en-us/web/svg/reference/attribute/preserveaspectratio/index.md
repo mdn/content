@@ -3,8 +3,8 @@ title: preserveAspectRatio
 slug: Web/SVG/Reference/Attribute/preserveAspectRatio
 page-type: svg-attribute
 spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-feimage-preserveaspectratio
-  - https://svgwg.org/svg2-draft/coords.html#PreserveAspectRatioAttribute
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-feimage-preserveaspectratio
+  - https://w3c.github.io/svgwg/svg2-draft/coords.html#PreserveAspectRatioAttribute
 sidebar: svgref
 ---
 
@@ -87,6 +87,165 @@ The following two keywords determine how the SVG should be scaled relative to th
     - The {{ SVGAttr("viewBox") }} is scaled down as much as possible, while still meeting the other criteria.
 
     In this case, if the aspect ratio of the {{ SVGAttr("viewBox") }} does not match the viewport, some of the {{ SVGAttr("viewBox") }} will extend beyond the bounds of the viewport (i.e., the area into which the {{ SVGAttr("viewBox") }} will draw is larger than the viewport).
+
+## Elements
+
+You can use this attribute with the following SVG elements:
+
+- {{SVGElement("svg")}}
+- {{SVGElement("symbol")}}
+- {{SVGElement("image")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("marker")}}
+- {{SVGElement("pattern")}}
+- {{SVGElement("view")}}
+
+### feImage
+
+For {{SVGElement('feImage')}}, `preserveAspectRatio` defines how the referenced image should fit in the rectangle define by the `<feImage>` element.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>xMidYMid</code> <code>meet</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+### image
+
+For {{SVGElement('image')}}, `preserveAspectRatio` defines how the referenced image should fit in the rectangle define by the `<image>` element.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>xMidYMid</code> <code>meet</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+### marker
+
+For {{SVGElement('marker')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>xMidYMid</code> <code>meet</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+### pattern
+
+For {{SVGElement('pattern')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>xMidYMid</code> <code>meet</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+### svg
+
+For {{SVGElement('svg')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>xMidYMid</code> <code>meet</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+### symbol
+
+For {{SVGElement('symbol')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>xMidYMid</code> <code>meet</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+### view
+
+For {{SVGElement('view')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>xMidYMid</code> <code>meet</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Examples
 
@@ -460,7 +619,7 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('Using slice height width', '100%', 200)}}
+{{EmbedLiveSample('using_slice_when_height_width', '100%', 200)}}
 
 ### Using the `none` alignment value
 
@@ -525,165 +684,6 @@ rect:active {
 ```
 
 {{EmbedLiveSample('Using the none alignment value', '100%', 200)}}
-
-## Elements
-
-You can use this attribute with the following SVG elements:
-
-- {{SVGElement("svg")}}
-- {{SVGElement("symbol")}}
-- {{SVGElement("image")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("marker")}}
-- {{SVGElement("pattern")}}
-- {{SVGElement("view")}}
-
-### feImage
-
-For {{SVGElement('feImage')}}, `preserveAspectRatio` defines how the referenced image should fit in the rectangle define by the `<feImage>` element.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>xMidYMid</code> <code>meet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-### image
-
-For {{SVGElement('image')}}, `preserveAspectRatio` defines how the referenced image should fit in the rectangle define by the `<image>` element.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>xMidYMid</code> <code>meet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-### marker
-
-For {{SVGElement('marker')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>xMidYMid</code> <code>meet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-### pattern
-
-For {{SVGElement('pattern')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>xMidYMid</code> <code>meet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-### svg
-
-For {{SVGElement('svg')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>xMidYMid</code> <code>meet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-### symbol
-
-For {{SVGElement('symbol')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>xMidYMid</code> <code>meet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-### view
-
-For {{SVGElement('view')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>xMidYMid</code> <code>meet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Specifications
 

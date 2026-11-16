@@ -15,6 +15,9 @@ The event is not sent if a tab or window is created without a navigation target 
 
 If this event is fired, it will be fired before {{WebExtAPIRef("webNavigation.onBeforeNavigate")}}.
 
+> [!NOTE]
+> This event doesn't include `documentId`, `frameId`, `parentDocumentId`, or `parentFrameId` because the navigation's target document don't exist when the event fires. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
+
 ## Syntax
 
 ```js-nolint
@@ -53,8 +56,6 @@ Events have three functions:
 
 - `sourceFrameId`
   - : `integer`. ID of the frame from which the navigation is initiated. `0` indicates that the frame is the tab's top-level browsing context, not a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation is initiated from a nested iframe. Frame IDs are unique for a given tab and process.
-- `processId` {{optional_inline}} {{deprecated_inline}}
-  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process the navigation originated from.
 - `sourceTabId`
   - : `integer`. The ID of the tab from which the navigation is initiated. For example, if the user opens a link in a new tab, this will be the ID of the tab containing the link.
 - `tabId`
@@ -65,6 +66,8 @@ Events have three functions:
   - : `string`. The URL which will be loaded in the new tab.
 - `windowId`
   - : `number`. The ID of the window in which the new tab is created.
+- `processId` {{optional_inline}} {{deprecated_inline}}
+  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process the navigation originated from.
 
 ## Examples
 

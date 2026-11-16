@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Window.hashchange_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`hashchange`** event is fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the `#` symbol).
 
@@ -14,11 +14,15 @@ This event does not fire when the hash is modified using {{domxref("history.push
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("hashchange", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onhashchange = (event) => { }
 ```
 
@@ -27,13 +31,6 @@ onhashchange = (event) => { }
 A {{domxref("HashChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("HashChangeEvent")}}
-
-## Event properties
-
-- {{domxref("HashChangeEvent.newURL")}} {{ReadOnlyInline}}
-  - : A string representing the new URL the window is navigating to.
-- {{domxref("HashChangeEvent.oldURL")}} {{ReadOnlyInline}}
-  - : A string representing the previous URL from which the window was navigated.
 
 ## Event handler aliases
 
@@ -48,16 +45,12 @@ In addition to the `Window` interface, the event handler property `onhashchange`
 You can use the `hashchange` event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:
 
 ```js
-window.addEventListener(
-  "hashchange",
-  () => {
-    console.log("The hash has changed!");
-  },
-  false,
-);
+window.addEventListener("hashchange", () => {
+  console.log("The hash has changed!");
+});
 ```
 
-Or use the `onhashchange` event handler property:
+Or use the `onhashchange` event handler property (but note that this replaces other event listeners added using `onhashchange`, if any):
 
 ```js
 function locationHashChanged() {

@@ -35,8 +35,4 @@ Using the `<canvas>` element is not very difficult, but you do need a basic unde
 
 - [Canvas topic page](/en-US/docs/Web/API/Canvas_API)
 
-## A note to contributors
-
-Due to an unfortunate technical error that occurred the week of June 17, 2013, we lost the history of this tutorial, including attributions to all past contributors to its content. We apologize for this, and hope you'll forgive this unfortunate mishap.
-
 {{ Next("Web/API/Canvas_API/Tutorial/Basic_usage") }}

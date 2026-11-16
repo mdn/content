@@ -54,7 +54,7 @@ Federated identity is often provided as a service by corporations: for example, 
 
 The [Federated Credential Management API](/en-US/docs/Web/API/FedCM_API) defines a privacy-preserving mechanism for federated identity on the web. You start by calling {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} to request a federated identity credential, and this triggers a protocol exchange between the browser and the IdP.
 
-If, in the course of this exchange, the user can be authenticated with the IdP, the browser returns an {{domxref("IdentityCredential")}} object in the fulfillment of the `Promise` returned from `get()`. The website front end code can send this to the server for verification.
+If, in the course of this exchange, the user can be authenticated with the IdP, the browser returns an {{domxref("IdentityCredential")}} object in the fulfillment of the `Promise` returned from `get()`. The website front-end code can send this to the server for verification.
 
 ![Sequence diagram showing sign-in using a federated identity credential.](fed-cm-get.svg)
 
@@ -91,7 +91,7 @@ The website front end sends the public key and attestation to the server, which 
 
 ![Sequence diagram showing registration using Web Authentication.](webauth-create.svg)
 
-To sign a user into the website, the front end code first fetches a random number from the server, called a _challenge_. Then it calls {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}}, passing in the challenge and some other options. The authenticator may, again, first ask the user to authenticate themselves, and will then sign the challenge using the private key.
+To sign a user into the website, the front-end code first fetches a random number from the server, called a _challenge_. Then it calls {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}}, passing in the challenge and some other options. The authenticator may, again, first ask the user to authenticate themselves, and will then sign the challenge using the private key.
 
 The browser then returns a `PublicKeyCredential` object in the fulfillment of the `Promise` returned from `get()`, and this object contains the signed challenge, which is called an _assertion_. The website front end then sends the assertion to the server, which checks the signature using the stored public key, and decides whether to log the user in.
 

@@ -7,7 +7,7 @@ browser-compat: api.CSSTransition
 
 {{APIRef("Web Animations")}}
 
-The **`CSSTransition`** interface of the {{domxref('Web Animations API','','',' ')}} represents an {{domxref("Animation")}} object used for a [CSS Transition](/en-US/docs/Web/CSS/CSS_transitions).
+The **`CSSTransition`** interface of the {{domxref('Web Animations API','','',' ')}} represents an {{domxref("Animation")}} object used for a [CSS Transition](/en-US/docs/Web/CSS/Guides/Transitions).
 
 {{InheritanceDiagram}}
 
@@ -33,7 +33,7 @@ The transition in the following example changes the width of the box on hover. C
 ```css
 .box {
   background-color: #165baa;
-  color: #fff;
+  color: white;
   width: 100px;
   height: 100px;
   transition: width 4s;

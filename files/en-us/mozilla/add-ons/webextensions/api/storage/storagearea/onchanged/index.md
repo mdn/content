@@ -6,12 +6,13 @@ browser-compat: webextensions.api.storage.StorageArea.onChanged
 sidebar: addonsidebar
 ---
 
-Fires when one or more items in a storage area change, returning details for the keys that changed. Compared to {{WebExtAPIRef("storage.onChanged")}}, this event enables you to listen for changes in one of the storage areas: `local`, `managed`, `session`, and `sync`.
+Fires when one or more items in a storage area change. Compared to {{WebExtAPIRef("storage.onChanged")}}, this event enables you to listen for changes in one of the storage areas: `local`, `managed`, `session`, or `sync`.
 
 > [!NOTE]
-> In Firefox, the information returned includes all keys within the storage area. Also, the callback may be invoked when there is no change to the underlying data. Details of the changed items are found by examining each returned key's {{WebExtAPIRef('storage.StorageChange')}} object. See [Firefox bug 1833153](https://bugzil.la/1833153).
->
-> Firefox only loads changes to managed storage content (from the [JSON manifest (native manifest) file](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#managed_storage_manifests) or [`3rdparty` enterprise policy](https://mozilla.github.io/policy-templates/#3rdparty)), when it restarts. Therefore, this event never triggers in Firefox.
+> In Firefox, the listener receives all the keys from a storage area where {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} executes. The listener may also be invoked when there is no change to the data. To find details of the changed items, examine each key's {{WebExtAPIRef('storage.StorageChange')}} object. See [Firefox bug 1833153](https://bugzil.la/1833153).
+
+> [!NOTE]
+> Firefox does not fire this event for changes to `storage.managed` because managed storage is only read on browser startup (from the [JSON manifest (native manifest) file](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#managed_storage_manifests) or [`3rdparty` enterprise policy](https://mozilla.github.io/policy-templates/#3rdparty)).
 
 ## Syntax
 

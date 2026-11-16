@@ -25,7 +25,7 @@ let gettingContexts = await browser.runtime.getContexts(
     - `contextTypes` {{optional_inline}}
       - : An array of `string`. The types of extension views associated with contexts to return. Takes the values `"BACKGROUND"`, `"POPUP"`, `"SIDE_PANEL"`, and `"TAB"`.
     - `documentIds` {{optional_inline}}
-      - : An array of `string`. UUIDs of documents associated with the contexts to return.
+      - : An array of `string`. UUIDs of documents associated with the contexts to return. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
     - `documentOrigins` {{optional_inline}}
       - : An array of `string`. The origins of documents associated with the contexts to return.
     - `documentUrls` {{optional_inline}}
@@ -48,7 +48,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 - `contextType`
   - : `string`. The type of extension view. Returned as one of `"BACKGROUND"`, `"POPUP"`, `"SIDE_PANEL"`, or `"TAB"`.
 - `documentId`
-  - : `string`. UUID of the document associated with the context, or undefined if the context is not hosted in a document.
+  - : `string`. UUID of the document associated with the context, or undefined if the context is not hosted in a document. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 - `documentOrigin`
   - : `string`. The origin of the document associated with the context or undefined if the context is not hosted in a document.
 - `documentUrl`

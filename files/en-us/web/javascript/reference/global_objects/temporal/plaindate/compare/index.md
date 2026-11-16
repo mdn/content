@@ -3,13 +3,9 @@ title: Temporal.PlainDate.compare()
 short-title: compare()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/compare
 page-type: javascript-static-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.PlainDate.compare
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`Temporal.PlainDate.compare()`** static method returns a number (-1, 0, or 1) indicating whether the first date comes before, is the same as, or comes after the second date. Equivalent to comparing the year, month, and day fields of the underlying ISO 8601 dates.
 

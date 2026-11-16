@@ -12,7 +12,7 @@ browser-compat: api.RTCStatsReport.type_candidate-pair.packetsReceived
 
 The **`packetsReceived`** property of the {{domxref("RTCIceCandidatePairStats")}} dictionary indicates the total number of packets received on the candidate pair.
 
-### Value
+## Value
 
 An integer value indicating the total number of packets received on the pair.
 

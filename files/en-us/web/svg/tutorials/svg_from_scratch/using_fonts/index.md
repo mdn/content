@@ -20,7 +20,7 @@ Note that the CSS here is nested within an SVG {{SVGElement("style")}} element, 
   <style>
     text {
       /* Specify the system or custom font to use */
-      font-family: "Courier New", sans-serif;
+      font-family: "Courier New", monospace;
 
       /* Add other styling */
       font-size: 24px;
@@ -34,7 +34,7 @@ Note that the CSS here is nested within an SVG {{SVGElement("style")}} element, 
 
 This renders as shown below:
 
-{{EmbedLiveSample("How to apply a font", "100", "30px")}}
+{{EmbedLiveSample("apply_and_style_a_font_using_css", "100", "30px")}}
 
 ## Using web fonts with `@font-face`
 

@@ -7,8 +7,13 @@ browser-compat: http.headers.Content-Security-Policy
 sidebar: http
 ---
 
-The HTTP **`Content-Security-Policy`** response header allows website administrators to control resources the user agent is allowed to load for a given page. With a few exceptions, policies mostly involve specifying server origins and script endpoints.
+The HTTP **`Content-Security-Policy`** response header allows website administrators to control resources the user agent is allowed to load for a given page.
+With a few exceptions, policies mostly involve specifying server origins and script endpoints.
 This helps guard against {{Glossary("cross-site scripting")}} attacks.
+
+Violations may be reported using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+Reports can be observed in the page for which the policy is being enforced, using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver), and sent to server endpoints defined in a {{HTTPHeader("Reporting-Endpoints")}} HTTP response header and selected using the CSP {{CSP("report-to")}} directive.
+For more information see {{domxref("CSPViolationReport")}}.
 
 See the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) guide for details about how a CSP is delivered to the browser, what it looks like, along with use cases and deployment strategies.
 
@@ -17,10 +22,6 @@ See the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) guide f
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>no</td>
     </tr>
   </tbody>
 </table>
@@ -159,10 +160,8 @@ Reporting directives control the destination URL for CSP violation reports in `C
   - : Used to specify an allowlist of [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) policies.
     Trusted Types allows applications to lock down DOM XSS injection sinks to only accept non-spoofable, typed values in place of strings.
 - {{CSP("upgrade-insecure-requests")}}
-  - : Instructs user agents to treat all of a site's insecure URLs (those served over
-    HTTP) as though they have been replaced with secure URLs (those served over HTTPS).
-    This directive is intended for websites with large numbers of insecure legacy URLs
-    that need to be rewritten.
+  - : Instructs user agents to treat all of a site's insecure URLs (those served over HTTP) as though they have been replaced with secure URLs (those served over HTTPS).
+    This directive is intended for websites with large numbers of insecure legacy URLs that need to be rewritten.
 
 ### Deprecated directives
 
@@ -186,7 +185,7 @@ The `<host-source>` and `<scheme-source>` formats must be unquoted, and all othe
 
 ### 'nonce-\<nonce_value>'
 
-This value consists of the string `nonce-` followed by a nonce value. The nonce value may use any of the characters from [Base64](/en-US/docs/Glossary/Base64#base64_characters) or [URL-safe Base64](/en-US/docs/Glossary/Base64#url_and_filename_safe_base64).
+This value consists of the string `nonce-` followed by a {{Glossary("Nonce", "nonce")}} value. The nonce value may use any of the characters from [Base64](/en-US/docs/Glossary/Base64#base64_characters) or [URL-safe Base64](/en-US/docs/Glossary/Base64#url_and_filename_safe_base64).
 
 This string is a random value that the server generates for every HTTP response. For example:
 
@@ -272,14 +271,33 @@ Secure upgrades are allowed. For example:
 - If the document is served from `http://example.com`, then a CSP of `'self'` will also permit resources from `https://example.com`.
 - If the document is served from `ws://example.org`, then a CSP of `'self'` will also permit resources from `wss://example.org`.
 
+### 'trusted-types-eval'
+
+By default, if a CSP contains a `default-src` or a `script-src` directive, then JavaScript functions which evaluate their arguments as JavaScript are disabled.
+This includes [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), the [`code`](/en-US/docs/Web/API/Window/setTimeout#code) argument to {{domxref("Window.setTimeout()", "setTimeout()")}}, or the {{jsxref("Function/Function()", "Function()")}} constructor.
+
+The `trusted-types-eval` keyword can be used to undo this protection, but only when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are enforced and passed to these functions instead of strings.
+This allows dynamic evaluation of strings as JavaScript, but only after inputs have been passed through a transformation function before it is injected, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup.
+
+The `trusted-types-eval` must be used instead of [`'unsafe-eval'`](#unsafe-eval) when using these methods with trusted types.
+This ensures that access to the methods is blocked on browsers that don't support trusted types.
+
+> [!NOTE]
+> Developers should avoid using `trusted-types-eval` or these methods unless absolutely necessary.
+> Trusted types ensure that the input passes through a transformation function — they don't ensure that the transformation makes the input safe (and this can be very hard to get right).
+
+See [`eval()` and similar APIs](/en-US/docs/Web/HTTP/Guides/CSP#eval_and_similar_apis) in the CSP guide for more usage information.
+
 ### 'unsafe-eval'
 
-By default, if a CSP contains a `default-src` or a `script-src` directive, then JavaScript functions which evaluate their arguments as JavaScript are disabled. This includes [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), the [`code`](/en-US/docs/Web/API/Window/setTimeout#code) argument to {{domxref("Window.setTimeout()", "setTimeout()")}}, or the {{jsxref("Function/Function()", "Function()")}} constructor.
+By default, if a CSP contains a `default-src` or a `script-src` directive, then JavaScript functions which evaluate their arguments as JavaScript are disabled.
+This includes [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), the [`code`](/en-US/docs/Web/API/Window/setTimeout#code) argument to {{domxref("Window.setTimeout()", "setTimeout()")}}, or the {{jsxref("Function/Function()", "Function()")}} constructor.
 
 The `unsafe-eval` keyword can be used to undo this protection, allowing dynamic evaluation of strings as JavaScript.
 
 > [!WARNING]
 > Developers should avoid `'unsafe-eval'`, because it defeats much of the purpose of having a CSP.
+> ['trusted-types-eval'](#trusted-types-eval) provides a "potentially" safer alternative if using these methods is necessary.
 
 See [`eval()` and similar APIs](/en-US/docs/Web/HTTP/Guides/CSP#eval_and_similar_apis) in the CSP guide for more usage information.
 
@@ -355,7 +373,7 @@ See [The `strict-dynamic` keyword](/en-US/docs/Web/HTTP/Guides/CSP#the_strict-dy
 
 ### 'report-sample'
 
-If this expression is included in a directive controlling scripts or styles, and the directive causes the browser to block any inline scripts, inline styles, or event handler attributes, then the [violation report](/en-US/docs/Web/HTTP/Guides/CSP#violation_reporting) that the browser generates will contain a {{domxref("CSPViolationReportBody.sample", "sample")}} property containing the first 40 characters of the blocked resource.
+If this expression is included in a directive controlling scripts or styles, and the directive causes the browser to block any inline scripts, inline styles, or event handler attributes, then the [violation report](/en-US/docs/Web/HTTP/Guides/CSP#violation_reporting) that the browser generates will contain a {{domxref("CSPViolationReport.sample", "sample")}} property containing the first 40 characters of the blocked resource.
 
 ## CSP in workers
 
@@ -448,6 +466,10 @@ See [Content Security Policy (CSP) implementation](/en-US/docs/Web/Security/Prac
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
+- CSP {{CSP("report-to")}} directive
+- {{httpheader("Reporting-Endpoints")}}
+- {{domxref("CSPViolationReport")}}
+- [Reporting API](/en-US/docs/Web/API/Reporting_API).
 - [Learn about: Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP)
 - [Content Security in WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
 - [Adopting a strict policy](https://csp.withgoogle.com/docs/strict-csp.html)

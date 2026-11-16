@@ -1,5 +1,6 @@
 ---
-title: Invalid selector
+title: "`invalid selector` error code"
+short-title: invalid selector
 slug: Web/WebDriver/Reference/Errors/InvalidSelector
 page-type: webdriver-error
 sidebar: webdriver

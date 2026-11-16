@@ -305,7 +305,7 @@ red.values[0] = 0;
 console.log(red.values[0]); // 0
 ```
 
-There is a philosophy in object-oriented programming called "encapsulation". This means you should not access the underlying implementation of an object, but instead use well-abstracted methods to interact with it. For example, if we suddenly decided to represent colors as [HSL](/en-US/docs/Web/CSS/color_value/hsl) instead:
+There is a philosophy in object-oriented programming called "encapsulation". This means you should not access the underlying implementation of an object, but instead use well-abstracted methods to interact with it. For example, if we suddenly decided to represent colors as [HSL](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl) instead:
 
 ```js
 class Color {
@@ -314,10 +314,12 @@ class Color {
     this.values = rgbToHSL([r, g, b]);
   }
   getRed() {
-    return this.values[0];
+    return hslToRGB(this.values)[0];
   }
   setRed(value) {
-    this.values[0] = value;
+    const rgb = hslToRGB(this.values);
+    rgb[0] = value;
+    this.values = rgbToHSL(rgb);
   }
 }
 
@@ -327,7 +329,7 @@ console.log(red.values[0]); // 0; It's not 255 anymore, because the H value for 
 
 The user assumption that `values` means the RGB value suddenly collapses, and it may cause their logic to break. So, if you are an implementor of a class, you would want to hide the internal data structure of your instance from your user, both to keep the API clean and to prevent the user's code from breaking when you do some "harmless refactors". In classes, this is done through [_private fields_](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements).
 
-A private field is an identifier prefixed with `#` (the hash symbol). The hash is an integral part of the field's name, which means a private field can never have name clash with a public field or method. In order to refer to a private field anywhere in the class, you must _declare_ it in the class body (you can't create a private element on the fly). Apart from this, a private field is pretty much equivalent to a normal property.
+A private field is an identifier prefixed with `#` (the hash symbol). The hash is an integral part of the field's name, which means a private field can never clash names with a public field or method. In order to refer to a private field anywhere in the class, you must _declare_ it in the class body (you can't create a private element on the fly). Apart from this, a private field is pretty much equivalent to a normal property.
 
 ```js
 class Color {
@@ -637,7 +639,7 @@ There are a few things that have immediately come to attention. First is that in
 
 After the parent class is done with modifying `this`, the derived class can do its own logic. Here we added a private field called `#alpha`, and also provided a pair of getter/setters to interact with them.
 
-A derived class inherits all methods from its parent. For example, although `ColorWithAlpha` doesn't declare a `get red()` accessor itself, you can still access `red` because this behavior is specified by the parent class:
+A derived class inherits all methods from its parent. For example, consider the `get red()` accessor we added to the `Color` in the [Accessor fields](#accessor_fields) section—even though we haven't declared one in `ColorWithAlpha`, we can still access `red` because this behavior is specified by the parent class:
 
 ```js
 const color = new ColorWithAlpha(255, 0, 0, 0.5);
@@ -723,7 +725,7 @@ For example, one thing that makes `Date` objects infamous is that they're _mutab
 
 ```js
 function incrementDay(date) {
-  return date.setDate(date.getDate() + 1);
+  return new Date(date.setDate(date.getDate() + 1));
 }
 const date = new Date(); // 2019-06-19
 const newDay = incrementDay(date);

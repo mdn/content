@@ -49,7 +49,7 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 - {{DOMxRef("RTCStatsReport")}}
   - : Provides information detailing statistics for a connection or for an individual track on the connection; the report can be obtained by calling {{DOMxRef("RTCPeerConnection.getStats()")}}.
 - {{DOMxRef("RTCIceCandidate")}}
-  - : Represents a candidate Interactive Connectivity Establishment ({{Glossary("ICE")}}) server for establishing an {{DOMxRef("RTCPeerConnection")}}.
+  - : Represents a candidate Interactive Connectivity Establishment ({{Glossary("ICE")}}) configuration for establishing an {{DOMxRef("RTCPeerConnection")}}.
 - {{DOMxRef("RTCIceTransport")}}
   - : Represents information about an {{Glossary("ICE")}} transport.
 - {{DOMxRef("RTCPeerConnectionIceEvent")}}
@@ -234,7 +234,8 @@ These interfaces and events are used to process incoming and outgoing encoded vi
 - {{DOMxRef("MessageEvent")}}
 - {{DOMxRef("MediaStream")}}
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
+- [Web media technologies](/en-US/docs/Web/Media)
 - [Firefox multistream and renegotiation for Jitsi Videobridge](https://hacks.mozilla.org/2015/06/firefox-multistream-and-renegotiation-for-jitsi-videobridge/)
 - [Peering Through the WebRTC Fog with SocketPeer](https://hacks.mozilla.org/2015/04/peering-through-the-webrtc-fog-with-socketpeer/)
 - [Inside the Party Bus: Building a Web App with Multiple Live Video Streams + Interactive Graphics](https://hacks.mozilla.org/2014/04/inside-the-party-bus-building-a-web-app-with-multiple-live-video-streams-interactive-graphics/)
-- [Web media technologies](/en-US/docs/Web/Media)
+- [WebRTC samples](https://webrtc.github.io/samples/)

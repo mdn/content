@@ -7,24 +7,24 @@ browser-compat: javascript.builtins.Reflect.deleteProperty
 sidebar: jsref
 ---
 
-The **`Reflect.deleteProperty()`** static method is like the {{jsxref("Operators/delete", "delete")}} operator, but as a function. It deletes a property from an object.
+The **`Reflect.deleteProperty()`** static method is like the {{jsxref("delete")}} operator, but as a function. It deletes a property from an object.
 
 {{InteractiveExample("JavaScript Demo: Reflect.deleteProperty()", "taller")}}
 
 ```js interactive-example
-const object1 = {
-  property1: 42,
+const object = {
+  foo: 42,
 };
 
-Reflect.deleteProperty(object1, "property1");
+Reflect.deleteProperty(object, "foo");
 
-console.log(object1.property1);
+console.log(object.foo);
 // Expected output: undefined
 
-const array1 = [1, 2, 3, 4, 5];
-Reflect.deleteProperty(array1, "3");
+const array = [1, 2, 3, 4, 5];
+Reflect.deleteProperty(array, "3");
 
-console.log(array1);
+console.log(array);
 // Expected output: Array [1, 2, 3, <1 empty slot>, 5]
 ```
 
@@ -92,7 +92,7 @@ Reflect.deleteProperty(Object.freeze({ foo: 1 }), "foo"); // false
 
 ## See also
 
-- [Polyfill of `Reflect.deleteProperty` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.deleteProperty` in `core-js`](https://core-js.io/docs/features/ecmascript/reflect)
 - {{jsxref("Reflect")}}
 - [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
 - [`handler.deleteProperty()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty)

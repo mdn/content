@@ -21,7 +21,7 @@ deleteBuffer(buffer)
 ### Parameters
 
 - `buffer`
-  - : A {{domxref("WebGLBuffer")}} object to delete.
+  - : A {{domxref("WebGLBuffer")}} object to delete. Passing `null` does nothing.
 
 ### Return value
 

@@ -38,34 +38,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("tspan")}}
 - `<video>`
 
-## Usage notes
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <code>visible</code> | <code>hidden</code> | <code>collapse</code>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>visible</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-- `visible`
-  - : This value indicates that the element will be painted.
-- `hidden`
-  - : This value indicates that the element will not be painted. Though it is still part of the rendering tree, i.e., it may receive pointer events depending on the {{SVGAttr("pointer-events")}} attribute, may receive focus depending on the {{SVGAttr("tabindex")}} attribute, contributes to bounding box calculations and clipping paths, and does affect text layout.
-- `collapse`
-  - : This value is equal to `hidden`.
-
 ## Examples
 
 ### Example 1
@@ -87,7 +59,7 @@ svg {
     height="100"
     stroke="black"
     stroke-width="5"
-    fill="transparent" />
+    fill="none" />
   <g stroke="seagreen" stroke-width="5" fill="skyblue">
     <rect x="20" y="20" width="80" height="80" visibility="visible" />
     <rect x="120" y="20" width="80" height="80" visibility="hidden" />
@@ -155,6 +127,34 @@ button.addEventListener("click", (evt) => {
 #### Result
 
 {{EmbedLiveSample("Example 2", "100%", "80")}}
+
+## Usage notes
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code>visible</code> | <code>hidden</code> | <code>collapse</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>visible</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+- `visible`
+  - : This value indicates that the element will be painted.
+- `hidden`
+  - : This value indicates that the element will not be painted. Though it is still part of the rendering tree, i.e., it may receive pointer events depending on the {{SVGAttr("pointer-events")}} attribute, may receive focus depending on the {{SVGAttr("tabindex")}} attribute, contributes to bounding box calculations and clipping paths, and does affect text layout.
+- `collapse`
+  - : This value is equal to `hidden`.
 
 ## Specifications
 

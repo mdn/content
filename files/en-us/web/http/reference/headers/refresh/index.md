@@ -22,10 +22,6 @@ It is exactly equivalent to using [`<meta http-equiv="refresh" content="...">`](
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 
@@ -54,7 +50,7 @@ Refresh: 5
 
 ### Redirecting after a specific time
 
-This header will cause the browser to redirect to the a URL 5 seconds after the page is fully loaded:
+This header will cause the browser to redirect to a URL 5 seconds after the page is fully loaded:
 
 ```http
 Refresh: 5; url=https://example.com/

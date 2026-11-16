@@ -2,18 +2,15 @@
 title: Speculation Rules API
 slug: Web/API/Speculation_Rules_API
 page-type: web-api-overview
-status:
-  - experimental
 browser-compat:
-  - api.Document.prerendering
-  - api.Document.prerenderingchange_event
   - html.elements.script.type.speculationrules
+  - http.headers.Speculation-Rules
 spec-urls:
-  - https://wicg.github.io/nav-speculation/speculation-rules.html
+  - https://html.spec.whatwg.org/multipage/speculative-loading.html#speculative-loading
   - https://wicg.github.io/nav-speculation/prerendering.html
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Speculation Rules API")}}
+{{DefaultAPISidebar("Speculation Rules API")}}
 
 The **Speculation Rules API** is designed to improve performance for future navigations. It targets document URLs rather than specific resource files, and so makes sense for multi-page applications (MPAs) rather than single-page applications (SPAs).
 
@@ -85,10 +82,7 @@ Same-site and cross-site prefetches will work, but cross-site prefetches are lim
 > [!NOTE]
 > In the future an opt-in for cross-site prefetches will be provided via the {{httpheader("Supports-Loading-Mode")}} header, but this was not implemented at the time of writing (only cross-origin, same-site [prerendering](#using_prerendering) opt-in was available).
 
-For browsers that support it, speculation rules prefetch should be preferred over older prefetch mechanisms, namely [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prefetch) and {{domxref("Window/fetch", "fetch()")}} with a `priority: "low"` option set on it. Because we know that speculation rules prefetch is for navigations, not general resource prefetching:
-
-- It can be used for cross-site navigations, whereas `<link rel="prefetch">` cannot.
-- It doesn't get blocked by {{httpheader("Cache-Control")}} headers, whereas `<link rel="prefetch">` often does.
+For browsers that support it, speculation rules prefetch should be preferred over older prefetch mechanisms, namely [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prefetch) and {{domxref("Window/fetch", "fetch()")}} with a `priority: "low"` option set on it. Because we know that speculation rules prefetch is for navigations, not general resource prefetching, it can be used for cross-site navigations, whereas `<link rel="prefetch">` cannot.
 
 In addition, speculation rules prefetch:
 
@@ -398,7 +392,7 @@ APIs that require the containing document's {{domxref("Document.visibilityState"
 - Restricted URLs: Prerendering documents cannot host non-HTTP(S) top-level URLs. Including the following URL types will cause the prerender to be immediately discarded:
   - [`javascript:` URLs](/en-US/docs/Web/URI/Reference/Schemes/javascript)
   - [`data:` URLs](/en-US/docs/Web/URI/Reference/Schemes/data)
-  - `blob:` URLs
+  - [`blob:` URLs](/en-US/docs/Web/URI/Reference/Schemes/blob)
   - `about:` URLs, including `about:blank` and `about:srcdoc`
 - Session storage: {{domxref("Window.sessionStorage")}} can be used, but the behavior is very specific, to avoid breaking sites that expect only one page to access the tab's session storage at a time. A prerendered page therefore starts out with a clone of the tab's session storage state from when it was created. Upon activation, the prerendered page's storage clone is discarded, and the tab's main storage state is used instead. Pages that use session storage can use the {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} event to detect when this storage swap occurs.
 - {{domxref("Window.print()")}}: Any calls to this method are ignored.

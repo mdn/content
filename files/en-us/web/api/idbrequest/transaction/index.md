@@ -73,7 +73,7 @@ objectStoreTitleRequest.onsuccess = () => {
 };
 ```
 
-This example shows how a the **`transaction`** property can be
+This example shows how the **`transaction`** property can be
 used during a version upgrade to access existing object stores:
 
 ```js

@@ -13,17 +13,17 @@ as a function.
 {{InteractiveExample("JavaScript Demo: Reflect.has()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   property1: 42,
 };
 
-console.log(Reflect.has(object1, "property1"));
+console.log(Reflect.has(object, "property1"));
 // Expected output: true
 
-console.log(Reflect.has(object1, "property2"));
+console.log(Reflect.has(object, "property2"));
 // Expected output: false
 
-console.log(Reflect.has(object1, "toString"));
+console.log(Reflect.has(object, "toString"));
 // Expected output: true
 ```
 
@@ -103,7 +103,7 @@ Reflect.has(c, "foo"); // true
 
 ## See also
 
-- [Polyfill of `Reflect.has` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.has` in `core-js`](https://core-js.io/docs/features/ecmascript/reflect)
 - {{jsxref("Reflect")}}
 - [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in)
 - [`handler.has()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has)

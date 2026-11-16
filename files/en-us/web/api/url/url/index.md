@@ -54,26 +54,29 @@ Here are some examples of using the constructor.
 // Base URLs:
 let baseUrl = "https://developer.mozilla.org";
 
-let A = new URL("/", baseUrl);
+let a = new URL("/", baseUrl);
 // => 'https://developer.mozilla.org/'
 
-let B = new URL(baseUrl);
+let b = new URL(baseUrl);
 // => 'https://developer.mozilla.org/'
 
-new URL("en-US/docs", B);
+new URL("en-US/docs", b);
 // => 'https://developer.mozilla.org/en-US/docs'
 
-let D = new URL("/en-US/docs", B);
+let d = new URL("/en-US/docs", b);
 // => 'https://developer.mozilla.org/en-US/docs'
 
-new URL("/en-US/docs", D);
+new URL("/en-US/docs", d);
 // => 'https://developer.mozilla.org/en-US/docs'
 
-new URL("/en-US/docs", A);
+new URL("/en-US/docs", a);
 // => 'https://developer.mozilla.org/en-US/docs'
 
 new URL("/en-US/docs", "https://developer.mozilla.org/fr-FR/toto");
 // => 'https://developer.mozilla.org/en-US/docs'
+
+new URL("https://example.com", "https://beispiel.de");
+// => 'https://example.com/'
 ```
 
 Here are some examples of invalid URLs:
@@ -99,8 +102,8 @@ new URL("", "https://example.com/?query=1");
 new URL("/a", "https://example.com/?query=1");
 // => 'https://example.com/a' (see relative URLs)
 
-new URL("//foo.com", "https://example.com");
-// => 'https://foo.com/' (see relative URLs)
+new URL("//foo.example", "https://example.com");
+// => 'https://foo.example/' (see relative URLs)
 ```
 
 ## Specifications
@@ -114,5 +117,5 @@ new URL("//foo.com", "https://example.com");
 ## See also
 
 - {{domxref("URL.parse_static", "URL.parse()")}}, a non-throwing alternative to this constructor
-- [Polyfill of `URL` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [Polyfill of `URL` in `core-js`](https://core-js.io/docs/features/web-standards/url)
 - The interface it belongs to: {{domxref("URL")}}.

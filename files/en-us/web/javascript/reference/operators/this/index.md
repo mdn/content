@@ -178,7 +178,7 @@ console.log(boundFoo() === globalObject); // true
 
 #### Constructors
 
-When a function is used as a constructor (with the {{jsxref("Operators/new", "new")}} keyword), its `this` is bound to the new object being constructed, no matter which object the constructor function is accessed on. The value of `this` becomes the value of the `new` expression unless the constructor returns another non–primitive value.
+When a function is used as a constructor (with the {{jsxref("new")}} keyword), its `this` is bound to the new object being constructed, no matter which object the constructor function is accessed on. The value of `this` becomes the value of the `new` expression unless the constructor returns another non–primitive value.
 
 ```js
 function C() {
@@ -451,7 +451,7 @@ const elements = document.getElementsByTagName("*");
 // Add bluify as a click listener so when the
 // element is clicked on, it turns blue
 for (const element of elements) {
-  element.addEventListener("click", bluify, false);
+  element.addEventListener("click", bluify);
 }
 ```
 
@@ -528,17 +528,17 @@ Note, however, that auto-bound methods suffer from the same problem as [using ar
 
 ### this in with statements
 
-Although [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statements are deprecated and not available in strict mode, they still serve as an exception to the normal `this` binding rules. If a function is called within a `with` statement and that function is a property of the scope object, the `this` value is bound to the scope object, as if the `obj1.` prefix exists.
+Although [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statements are deprecated and not available in strict mode, they still serve as an exception to the normal `this` binding rules. If a function is called within a `with` statement and that function is a property of the scope object, the `this` value is bound to the scope object, as if the `obj.` prefix exists.
 
 ```js
-const obj1 = {
+const obj = {
   foo() {
     return this;
   },
 };
 
-with (obj1) {
-  console.log(foo() === obj1); // true
+with (obj) {
+  console.log(foo() === obj); // true
 }
 ```
 

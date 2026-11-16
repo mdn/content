@@ -26,7 +26,7 @@ This usually contains just one value: `"aes128gcm"`.
 
 ## Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : This is thrown when attempting to set a value in the returned array.
 
 ## Examples
@@ -59,7 +59,7 @@ const subscriptionObject = {
   /* other app-specific data, such as user identity */
 };
 
-// Stringify the object an post to the app server
+// Stringify the object and post to the app server
 fetch("https://example.com/push/", {
   method: "POST",
   body: JSON.stringify(pushSubscription),

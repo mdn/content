@@ -2,7 +2,7 @@
 title: 226 IM Used
 slug: Web/HTTP/Reference/Status/226
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc3229.html#section-10.4.1
+spec-urls: https://www.rfc-editor.org/info/rfc3229/#section-10.4.1
 sidebar: http
 ---
 
@@ -63,4 +63,4 @@ Delta-Base: abcd123
 - {{HTTPStatus("200")}}
 - [HTTP request methods](/en-US/docs/Web/HTTP/Reference/Methods)
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Reference/Status)
-- [Syndication feed deltas help reduce subscription bandwidth costs](https://www.ctrl.blog/entry/feed-delta-updates.html) (2017)
+- [Syndication feed deltas help reduce subscription bandwidth costs](https://www.ctrl.blog/entry/feed-delta-updates/) (2017)

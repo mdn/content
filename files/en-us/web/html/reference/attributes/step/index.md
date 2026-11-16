@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: step"
+title: "`step` HTML attribute"
 short-title: step
 slug: Web/HTML/Reference/Attributes/step
 page-type: html-attribute
@@ -11,7 +11,7 @@ The **`step`** attribute is a number that specifies the granularity that the val
 
 The `step` sets the _stepping interval_ when clicking up and down spinner buttons, moving a slider left and right on a range, and validating the different date types. If not explicitly included, `step` defaults to 1 for `number` and `range`, and 1 unit type (minute, week, month, day) for the date/time input types. The value must be a positive number - integer or float — or the special value `any`, which means no stepping is implied and any value is allowed (barring other constraints, such as [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min) and [`max`](/en-US/docs/Web/HTML/Reference/Attributes/max)).
 
-The default stepping value for `number` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer. The default stepping value for `time` is 60 seconds, with 900 being equal to 15 minutes.
+Only values which are a whole number of steps from the step base are valid. The step base is [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min) if specified, [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) otherwise, or `0` if neither is provided (except for `week`, which has a default step base of −259,200,000, representing the start of week `1970-W01`).
 
 ## Syntax
 
@@ -85,6 +85,10 @@ If `step` is omitted, any integer is valid but floats like 4.2 are not valid as 
 - either `step` would have to be set to `any`, 0.1, or 0.2,
 - or the `min` value would have to be a number ending in .2, such as 0.2, 1.2, or -5.2.
 
+## Accessibility concerns
+
+Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the `min` attribute, ensure this minimum requirement is understood by the user. Providing instructions within the {{htmlelement('label')}} may be sufficient. If providing instructions outside of labels, which allows more flexible positioning and design, consider using [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) or [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
+
 ## Examples
 
 ### `min` impact on step
@@ -113,10 +117,6 @@ Valid values include 1.2, 3.2, 5.2, 7.2, 9.2, 11.2, and so on. Only floats with 
 > When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in constraint validation and will match the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} pseudoclasses.
 
 See [Client-side validation](/en-US/docs/Web/HTML/Guides/Constraint_validation) and {{domxref("ValidityState.stepMismatch", "stepMismatch")}} for more information.
-
-## Accessibility concerns
-
-Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the `min` attribute, ensure this minimum requirement is understood by the user. Providing instructions within the {{htmlelement('label')}} may be sufficient. If providing instructions outside of labels, which allows more flexible positioning and design, consider using [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) or [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
 
 ## Specifications
 

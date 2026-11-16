@@ -72,7 +72,7 @@ Together, they add up to 16 possible combinations. To divide the reference more 
   - : Everything that's private
 
 > [!NOTE]
-> Private elements have the restriction that all private names declared in the same class must be unique. All other public properties do not have this restriction — you can have multiple public properties with the same name, and the last one overwrites the others. This is the same behavior as in [object initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#duplicate_property_names).
+> Private elements have the restriction that all private names declared in the same class must be unique, except for a getter/setter pair where both are static or both are instance. All other public properties do not have this restriction — you can have multiple public properties with the same name, and the last one overwrites the others. This is the same behavior as in [object initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#duplicate_property_names).
 
 In addition, there are two special class element syntaxes: [`constructor`](#constructor) and [static initialization blocks](#static_initialization_blocks), with their own references.
 
@@ -285,7 +285,7 @@ For how instances are created, see the {{jsxref("Classes/constructor", "construc
 
 ### Binding this with instance and static methods
 
-When a static or instance method is called without a value for {{jsxref("Operators/this", "this")}}, such as by assigning the method to a variable and then calling it, the `this` value will be `undefined` inside the method. This behavior is the same even if the [`"use strict"`](/en-US/docs/Web/JavaScript/Reference/Strict_mode) directive isn't present, because code within the `class` body is always executed in strict mode.
+When a static or instance method is called without a value for {{jsxref("this")}}, such as by assigning the method to a variable and then calling it, the `this` value will be `undefined` inside the method. This behavior is the same even if the [`"use strict"`](/en-US/docs/Web/JavaScript/Reference/Strict_mode) directive isn't present, because code within the `class` body is always executed in strict mode.
 
 ```js
 class Animal {

@@ -14,7 +14,7 @@ The read-only **`recipient`** property of the {{domxref("ContactAddress")}} inte
 
 ## Value
 
-A string giving the name of the person=, or the name of a contact person in other contexts. If no name is available, this string is empty.
+A string giving the name of the person, or the name of a contact person in other contexts. If no name is available, this string is empty.
 
 ## Specifications
 

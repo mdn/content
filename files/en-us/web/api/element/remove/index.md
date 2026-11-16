@@ -8,7 +8,7 @@ browser-compat: api.Element.remove
 
 {{APIRef("DOM")}}
 
-The **`Element.remove()`** method removes the element from the DOM.
+The **`remove()`** method of the {{domxref("Element")}} interface removes the element from its parent node. Nothing happens if {{domxref("Node.parentNode", "parentNode")}} is `null`.
 
 ## Syntax
 

@@ -3,12 +3,10 @@ title: "NavigateEvent: info property"
 short-title: info
 slug: Web/API/NavigateEvent/info
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigateEvent.info
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`info`** read-only property of the
 {{domxref("NavigateEvent")}} interface returns the `info` data value passed by the initiating navigation operation (e.g., {{domxref("Navigation.back()")}}, or {{domxref("Navigation.navigate()")}}), or `undefined` if no `info` data was passed.

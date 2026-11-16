@@ -15,31 +15,6 @@ This attribute is used with the SVG [`<path>`](#path) element.
 
 `d` is a presentation attribute, and hence can also be [used as a CSS property](#using_d_as_a_css_property).
 
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path
-    fill="none"
-    stroke="red"
-    d="M 10,30
-       A 20,20 0,0,1 50,30
-       A 20,20 0,0,1 90,30
-       Q 90,60 50,90
-       Q 10,60 10,30 z" />
-</svg>
-```
-
-{{EmbedLiveSample('Example', '100%', 200)}}
-
 ## path
 
 For {{SVGElement('path')}}, `d` is a string containing a series of path commands that define the path to be drawn.
@@ -49,7 +24,7 @@ For {{SVGElement('path')}}, `d` is a string containing a series of path commands
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong><a href="/en-US/docs/Web/CSS/string">&#x3C;string></a></strong>
+        <strong><a href="/en-US/docs/Web/CSS/Reference/Values/string">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -66,7 +41,7 @@ For {{SVGElement('path')}}, `d` is a string containing a series of path commands
 ## Using d as a CSS property
 
 `d` is a presentation attribute, and hence can be also be modified using CSS.
-The property takes either [`path()`](/en-US/docs/Web/CSS/basic-shape/path) or `none`.
+The property takes either {{cssxref("basic-shape/path")}} or `none`.
 
 The example below shows how you might apply a new path on hover over an element.
 The new path is the same as the old one, but adds a line across the heart.
@@ -78,7 +53,7 @@ svg {
   height: 100%;
 }
 
-/* This path is displayed on hover*/
+/* This path is displayed on hover */
 #svg_css_ex1:hover path {
   d: path(
     "M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30 z M5,5 L90,90"
@@ -898,15 +873,15 @@ _Elliptical arc curves_ are curves defined as a portion of an ellipse. It is som
           </li>
           <li>
             <code><var>large-arc-flag</var></code> and
-            <code><var>sweep-flag</var></code> allows to chose which arc must be
-            drawn as 4 possible arcs can be drawn out of the other parameters.
+            <code><var>sweep-flag</var></code> allow you to choose which arc to
+            draw; 4 possible arcs can be drawn using the other parameters.
             <ul>
               <li>
-                <code><var>large-arc-flag</var></code> allows to chose one of
-                the large arc (<code>1</code>) or small arc (<code>0</code>),
+                <code><var>large-arc-flag</var></code> allows you to choose between
+                large arc (<code>1</code>) or small arc (<code>0</code>),
               </li>
               <li>
-                <code><var>sweep-flag</var></code> allows to chose one of the
+                <code><var>sweep-flag</var></code> allows you to choose between
                 clockwise turning arc (<code>1</code>) or counterclockwise
                 turning arc (<code>0</code>)
               </li>
@@ -948,8 +923,8 @@ _Elliptical arc curves_ are curves defined as a portion of an ellipse. It is som
           </li>
           <li>
             <code><var>large-arc-flag</var></code> and
-            <code><var>sweep-flag</var></code> allows to chose which arc must be
-            drawn as 4 possible arcs can be drawn out of the other parameters.
+            <code><var>sweep-flag</var></code> allow you to choose which arc to
+            draw; 4 possible arcs can be drawn using the other parameters.
             <ul>
               <li>
                 <code><var>large-arc-flag</var></code> allows a choice of large
@@ -1082,6 +1057,31 @@ svg {
 ```
 
 {{EmbedLiveSample('ClosePath', '100%', 200)}}
+
+## Example
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path
+    fill="none"
+    stroke="red"
+    d="M 10,30
+       A 20,20 0,0,1 50,30
+       A 20,20 0,0,1 90,30
+       Q 90,60 50,90
+       Q 10,60 10,30 z" />
+</svg>
+```
+
+{{EmbedLiveSample('Example', '100%', 200)}}
 
 ## Specifications
 

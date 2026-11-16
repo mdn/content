@@ -13,12 +13,12 @@ beginning of an array and returns the new length of the array.
 {{InteractiveExample("JavaScript Demo: Array.prototype.unshift()")}}
 
 ```js interactive-example
-const array1 = [1, 2, 3];
+const array = [1, 2, 3];
 
-console.log(array1.unshift(4, 5));
+console.log(array.unshift(4, 5));
 // Expected output: 5
 
-console.log(array1);
+console.log(array);
 // Expected output: Array [4, 5, 1, 2, 3]
 ```
 
@@ -126,7 +126,7 @@ console.log(plainObj);
 
 ## See also
 
-- [Polyfill of `Array.prototype.unshift` in `core-js` with fixes of this method](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.unshift` in `core-js` with fixes of this method](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.unshift`](https://www.npmjs.com/package/array.prototype.unshift)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

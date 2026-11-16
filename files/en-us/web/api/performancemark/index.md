@@ -20,6 +20,9 @@ Entries of this type are typically created by calling {{domxref("Performance.mar
 
 ## Instance properties
 
+- {{domxref("PerformanceMark.detail")}} {{ReadOnlyInline}}
+  - : Contains arbitrary metadata about the measure.
+
 This interface extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
 
 - {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
@@ -31,18 +34,15 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
   - : Returns `0`. (A mark has no _duration_.)
 
-This interface also supports the following properties:
-
-- {{domxref("PerformanceMark.detail")}} {{ReadOnlyInline}}
-  - : Returns arbitrary metadata that has been included in the mark upon construction.
-
 ## Instance methods
 
 This interface has no methods.
 
-## Example
+## Examples
 
 See the example in [Using the User Timing API](/en-US/docs/Web/API/Performance_API/User_timing).
+
+Chrome DevTools uses `performance.mark()` and in particular a structured `detail` property as part of its extensibility API that surfaces these in custom tracks in performance traces. See the example in [Performance: mark() method](/en-US/docs/Web/API/Performance/mark) page and the [Chrome's extensibility API documentation](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_the_user_timings_api) for more information and examples.
 
 ## Specifications
 

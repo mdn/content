@@ -87,7 +87,7 @@ Finally, we include a {{htmlelement("video")}} element to display the captured d
 
 ## App CSS
 
-The app CSS is minimal; it is worth noting that we have given the `<video>` a {{cssxref("max-width")}} of `100%`, so that it is constrained inside the `<body>`. The `<video>` could grow dramatically when the captured display surface is embedded inside it (its size is the capture's intrisic size), which could cause overflow issues if we didn't constrain it.
+The app CSS is minimal; it is worth noting that we have given the `<video>` a {{cssxref("max-width")}} of `100%`, so that it is constrained inside the `<body>`. The `<video>` could grow dramatically when the captured display surface is embedded inside it (its size is the capture's intrinsic size), which could cause overflow issues if we didn't constrain it.
 
 ```css live-sample___surface-control-demo
 body {
@@ -142,13 +142,13 @@ startBtn.addEventListener("click", startCapture);
 stopBtn.addEventListener("click", stopCapture);
 ```
 
-The `startCapture()` function, which starts screen capture, looks like so. We first create a new `CaptureController`, and pass it into our [`MediaDisplayOptions`](/en-US/docs/Web/API/MediaDevices/getDisplayMedia#options) object, along with a [`displaysurface`](/en-US/docs/Web/API/MediaTrackConstraints/displaySurface) constraint that causes the app to recommend sharing browser tabs.
+The `startCapture()` function, which starts screen capture, looks like so. We first create a new `CaptureController`, and pass it into our [`MediaDisplayOptions`](/en-US/docs/Web/API/MediaDevices/getDisplayMedia#options) object, along with a [`displaySurface`](/en-US/docs/Web/API/MediaTrackConstraints/displaySurface) constraint that causes the app to recommend sharing browser tabs.
 
 Now it's time to capture our media; we do so using a {{domxref("MediaDevices.getDisplayMedia()")}} call, to which we pass our options, and set the resulting promise as the value of the `<video>` element's {{domxref("HTMLMediaElement.srcObject", "srcObject")}} property. When it resolves, we continue the function by calling {{domxref("CaptureController.resetZoomLevel()")}} and setting the `<output>` element's contents to `100%`. This is not strictly necessary, but it can be a bit confusing when you capture a tab to find it is already zoomed out or in. Setting the zoom level to `100%` on capture feels a bit more logical. These lines of code deal with the case where the app is refreshed without pressing "Stop Capture", then capture is started again.
 
 Our next step is to call {{domxref("CaptureController.getSupportedZoomLevels()")}} to retrieve the zoom levels the captured display surface supports, and store the resulting array in the `zoomLevels` variable.
 
-Next, we use the controller's {{domxref("CaptureController.zoomlevelchange_event", "zoomlevelchange")}} event to detect when the zoom level is changed, print the current {{domxref("CaptureController.zoomlevel", "zoomlevel")}} to the `<output>` element, and call the user-defined `updateZoomButtonState()` function. This function will query the `zoomLevels` array to check whether the user can zoom in or out any further after each zoom change. We'll explain `updateZoomButtonState()` later on.
+Next, we use the controller's {{domxref("CaptureController.zoomlevelchange_event", "zoomlevelchange")}} event to detect when the zoom level is changed, print the current {{domxref("CaptureController.zoomLevel", "zoomLevel")}} to the `<output>` element, and call the user-defined `updateZoomButtonState()` function. This function will query the `zoomLevels` array to check whether the user can zoom in or out any further after each zoom change. We'll explain `updateZoomButtonState()` later on.
 
 We next unhide our zoom controls with `display: block`, enable our stop button, and disable our start button, so that the state of the controls makes sense after capture has bene started.
 

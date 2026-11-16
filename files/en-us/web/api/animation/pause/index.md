@@ -61,8 +61,8 @@ const stopPlayingAlice = () => {
 };
 
 // When the user releases the cupcake or the bottle, pause the animations.
-cake.addEventListener("mouseup", stopPlayingAlice, false);
-bottle.addEventListener("mouseup", stopPlayingAlice, false);
+cake.addEventListener("mouseup", stopPlayingAlice);
+bottle.addEventListener("mouseup", stopPlayingAlice);
 ```
 
 ## Specifications

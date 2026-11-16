@@ -11,9 +11,9 @@ The **`hourCycle`** accessor property of {{jsxref("Intl.Locale")}} instances ret
 
 ## Description
 
-There are 2 main types of time keeping conventions (clocks) used around the world: the 12 hour clock and the 24 hour clock. The `hourCycle` property's value is set at construction time, either through the `hc` key of the locale identifier or through the `hourCycle` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; and if neither is present, the property has value `undefined`.
+There are 2 main types of time keeping conventions (clocks) used around the world: the 12 hour clock and the 24 hour clock. For a list of supported hour cycle types, see [`Intl.Locale.prototype.getHourCycles()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getHourCycles#supported_hour_cycle_types).
 
-For a list of supported hour cycle types, see [`Intl.Locale.prototype.getHourCycles()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getHourCycles#supported_hour_cycle_types).
+The `hourCycle` property's value is set at construction time, either through the `hc` key of the locale identifier or through the `hourCycle` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; and if neither is present, the property has value `undefined`.
 
 The set accessor of `hourCycle` is `undefined`. You cannot change this property directly.
 
@@ -23,7 +23,7 @@ Like other locale subtags, the hour cycle type can be added to the {{jsxref("Int
 
 ### Adding an hour cycle via the locale string
 
-In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), hour cycle types are locale key "extension subtags". These subtags add additional data about the locale, and are added to locale identifiers by using the `-u` extension. Thus, the hour cycle type can be added to the initial locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. To add the hour cycle type, first add the `-u` extension key to the string. Next, add the `-hc` extension to indicate that you are adding an hour cycle. Finally, add the hour cycle type to the string.
+In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), `hourCycle` is an "extension subtag". These subtags add additional data about the locale, and are added to locale identifiers using the `-u` extension key. To add the hour cycle type to the initial locale identifier string passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor, first add the `-u` extension key if it doesn't exist. Next, add the `-hc` extension to indicate that you are adding an hour cycle. Finally, add the hour cycle type.
 
 ```js
 const locale = new Intl.Locale("fr-FR-u-hc-h23");

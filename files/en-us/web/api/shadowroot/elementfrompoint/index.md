@@ -41,12 +41,9 @@ customElements.define(
   class extends HTMLElement {
     constructor() {
       super();
-      const templateContent = document.getElementById(
-        "my-custom-element-template",
-      ).content;
+      const template = document.getElementById("my-custom-element-template");
       const sRoot = this.attachShadow({ mode: "open" });
-      sRoot.appendChild(templateContent.cloneNode(true));
-
+      sRoot.appendChild(document.importNode(template.content, true));
       // get the topmost element in the top left corner of the viewport
       const srElement = this.shadowRoot.elementFromPoint(0, 0);
       // apply a border to that element

@@ -6,7 +6,7 @@ browser-compat: webextensions.api.permissions.onRemoved
 sidebar: addonsidebar
 ---
 
-Fired when some permissions are removed from the extension.
+Fires when permissions are removed from the extension.
 
 ## Syntax
 
@@ -21,9 +21,9 @@ Events have three functions:
 - `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
-  - : Stop listening to this event. The `listener` argument is the listener to remove.
+  - : Stops listening to this event. The `listener` argument is the listener to remove.
 - `hasListener(listener)`
-  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
+  - : Checks whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
 ## addListener syntax
 
@@ -40,6 +40,9 @@ Events have three functions:
 function handleRemoved(permissions) {
   console.log(`Removed API permissions: ${permissions.permissions}`);
   console.log(`Removed host permissions: ${permissions.origins}`);
+  console.log(
+    `Removed data collection permissions: ${permissions.data_collection}`,
+  );
 }
 
 browser.permissions.onRemoved.addListener(handleRemoved);

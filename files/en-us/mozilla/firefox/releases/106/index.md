@@ -1,5 +1,5 @@
 ---
-title: Firefox 106 for developers
+title: Firefox 106 release notes for developers
 short-title: Firefox 106
 slug: Mozilla/Firefox/Releases/106
 page-type: firefox-release-notes
@@ -21,7 +21,7 @@ This article provides information about the changes in Firefox 106 that will aff
 
 ### CSS
 
-- The [@supports](/en-US/docs/Web/CSS/@supports) at-rule now supports the `font-tech()` and `font-format()` functions.
+- The [@supports](/en-US/docs/Web/CSS/Reference/At-rules/@supports) at-rule now supports the `font-tech()` and `font-format()` functions.
   These functions can be used to test whether a browser supports a given font technology or format and CSS styles can be applied based on the result ([Firefox bug 1786493](https://bugzil.la/1786493)).
 
 ### JavaScript
@@ -53,7 +53,7 @@ No notable changes.
 
 - Added support for `wheel` input source for [Actions](https://w3c.github.io/webdriver/webdriver-spec.html#actions), which is associated with a wheel-type input device ([Firefox bug 1746601](https://bugzil.la/1746601)).
 
-- Added support for opening and closing tabs in GeckoView based applications (eg. Firefox for Android) ([Firefox bug 1506782](https://bugzil.la/1506782)).
+- Added support for opening and closing tabs in GeckoView based applications (e.g., Firefox for Android) ([Firefox bug 1506782](https://bugzil.la/1506782)).
 
 ## Changes for add-on developers
 

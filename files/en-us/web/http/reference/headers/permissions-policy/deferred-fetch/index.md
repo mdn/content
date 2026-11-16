@@ -11,11 +11,11 @@ sidebar: http
 
 {{SeeCompatTable}}
 
-The **`deferred-fetch`** {{HTTPHeader("Permissions-Policy")}} directive is part of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API).
+The **`deferred-fetch`** {{HTTPHeader("Permissions-Policy")}} directive is part of the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 
 This directive, along with {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}}, determines how the overall 640KiB quota limit is distributed between the top-level origin and its cross-origin subframes. By default, the top-level origin is granted 512KiB, and each cross-origin subframe is granted 8KiB out of the rest of the 128KiB. The `deferred-fetch` Permissions Policy can allow sub-frame origins to be granted a larger 64KiB quota out of the top-level 512KiB quota in place of the 8KiB minimal quota they would otherwise receive by default.
 
-See [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for more details and examples.
+See [`fetchLater()` quotas](/en-US/docs/Web/API/Fetch_API/Using_Deferred_Fetch#quotas) for more details and examples.
 
 ## Syntax
 
@@ -30,7 +30,7 @@ Permissions-policy: deferred-fetch=(<url-list>)
 
 A cross-origin subframe can grant `deferred-fetch` to one of its cross-origin subframe descendants, delegating its entire quota. This only works if none of the quota is currently being used.
 
-Permissions Policy checks are not discernable from quota checks. Calling `fetchLater()` will throw a `QuotaExceededError` both if the quota is actually exceeded and if the quota was restricted for that origin via a Permissions Policy.
+Permissions Policy checks are not discernible from quota checks. Calling `fetchLater()` will throw a `QuotaExceededError` both if the quota is actually exceeded and if the quota was restricted for that origin via a Permissions Policy.
 
 ## Default policy
 
@@ -38,7 +38,7 @@ The default allowlist for `deferred-fetch` is `self`.
 
 ## Examples
 
-See [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for more examples.
+See [`fetchLater()` quotas](/en-US/docs/Web/API/Fetch_API/Using_Deferred_Fetch#quotas) for more examples.
 
 ### Using up the minimal quota
 
@@ -74,7 +74,7 @@ Permissions-Policy: deferred-fetch-minimal=()
 
 ## See also
 
-- [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas)
-- [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API)
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+- {{domxref("window.fetchLater()")}}
 - {{HTTPHeader("Permissions-Policy")}} header
 - [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)

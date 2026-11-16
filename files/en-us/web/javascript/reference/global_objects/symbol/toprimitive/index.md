@@ -12,7 +12,7 @@ The **`Symbol.toPrimitive`** static data property represents the [well-known sym
 {{InteractiveExample("JavaScript Demo: Symbol.toPrimitive")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   [Symbol.toPrimitive](hint) {
     if (hint === "number") {
       return 42;
@@ -21,7 +21,7 @@ const object1 = {
   },
 };
 
-console.log(+object1);
+console.log(+object);
 // Expected output: 42
 ```
 
@@ -79,7 +79,7 @@ console.log(obj2 + ""); // "true"    — hint is "default"
 
 ## See also
 
-- [Polyfill of `Symbol.toPrimitive` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [Polyfill of `Symbol.toPrimitive` in `core-js`](https://core-js.io/docs/features/ecmascript/symbol)
 - [`Date.prototype[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive)
 - [`Symbol.prototype[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive)
 - {{jsxref("Object.prototype.toString()")}}

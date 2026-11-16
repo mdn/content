@@ -17,10 +17,6 @@ HSTS identifies a host by its domain name only.
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 
@@ -54,7 +50,7 @@ The host is identified only by its domain name. An IP address cannot be an HSTS 
 HSTS applies to all ports of the host, regardless of what port was used for the request.
 
 Before loading an `http` URL, the browser checks the domain name against its HSTS hosts list.
-If the domain name is a case insensitive match for an HSTS host or is a subdomain of one that specified `includeSubDomains`,
+If the domain name is a case-insensitive match for an HSTS host or is a subdomain of one that specified `includeSubDomains`,
 then the browser replaces the URL scheme with `https`.
 If the URL specifies port 80, the browser changes it to 443.
 Any other explicit port number remains unchanged, and the browser connects to that port using HTTPS.
@@ -65,7 +61,7 @@ the intention of strict security.
 
 > [!NOTE]
 > The host must send the `Strict-Transport-Security` header over HTTPS only, not insecure HTTP.
-> Browsers ignore the header if sent over HTTP to prevent a [manipulator-in-the-middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM)
+> Browsers ignore the header if sent over HTTP to prevent a [manipulator in the middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM)
 > from altering the header to expire prematurely or adding it for a host that doesn't support HTTPS.
 
 ### Expiration
@@ -143,7 +139,7 @@ While the service is hosted by Google, all browsers are using this preload list.
 However, it is not part of the HSTS specification and should not be treated as official.
 
 - Information regarding the HSTS preload list in Chrome: https://www.chromium.org/hsts/
-- Consultation of the Firefox HSTS preload list: [nsSTSPreloadList.inc](https://searchfox.org/mozilla-central/source/security/manager/ssl/nsSTSPreloadList.inc)
+- Consultation of the Firefox HSTS preload list: [nsSTSPreloadList.inc](https://searchfox.org/firefox-main/source/security/manager/ssl/nsSTSPreloadList.inc)
 
 ## Examples
 
@@ -156,7 +152,7 @@ This blocks access to pages or subdomains that can only be served over HTTP.
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 ```
 
-Although a `max-age` of 1 year is acceptable for a domain, two years is the recommended value as explained on https://hstspreload.org.
+A `max-age` of 1 year is the minimum value accepted for HSTS preloading. The following example uses 2 years, which is the value shown in the example header on https://hstspreload.org.
 
 In the following example, `max-age` is set to 2 years, and is suffixed with `preload`, which is necessary for inclusion in all major web browsers' HSTS preload lists, like Chromium, Edge, and Firefox.
 
@@ -174,7 +170,7 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 
 ## See also
 
-- [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
+- [Features restricted to secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)
 - [HTTP Strict Transport Security has landed!](https://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html) on blog.sidstamm.com (2010)
 - [HTTP Strict Transport Security (force HTTPS)](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/) on hacks.mozilla.org (2010)
 - [HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html) cheatsheet on owasp.org

@@ -30,23 +30,23 @@ If your add-on is discoverable only through the menu bar, you'll want to overlay
 A number of changes were made to the `<tabbrowser>` element to help support app tabs and Panoramas, as well as to make the tab bar into a standard toolbar. Other changes that may break existing extensions include:
 
 - The `TabClose`, `TabSelect`, and `TabOpen` events no longer bubble up to the `<tabbrowser>` element (`gBrowser`). Event listeners for those events should be added to `gBrowser.tabContainer` rather than to `gBrowser` directly.
-- The tab context menu is no longer an anonymous child of the `<tabbrowser>`. It can therefore be overlaid directly with [XUL overlays](/en-US/docs/XUL_Overlays). It can also be accessed more directly in JavaScript via `gBrowser.tabContextMenu`. See [this blog post](https://gavinsharp.com/blog/2010/03/31/accessingmodifying-the-firefox-tab-context-menu-from-extensions/) for more details.
+- The tab context menu is no longer an anonymous child of the `<tabbrowser>`. It can therefore be overlaid directly with [XUL overlays](https://web.archive.org/web/20160927025909/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Overlays). It can also be accessed more directly in JavaScript via `gBrowser.tabContextMenu`. See [this blog post](https://gavinsharp.com/blog/2010/03/31/accessingmodifying-the-firefox-tab-context-menu-from-extensions/) for more details.
 
 ## XPCOM changes
 
-Several changes have been made that affect add-ons and applications that include XPCOM components. See [XPCOM changes in Gecko 2](/en-US/docs/XPCOM/XPCOM_changes_in_Gecko_2.0) for details.
+Several changes have been made that affect add-ons and applications that include XPCOM components. See [XPCOM changes in Gecko 2](https://web.archive.org/web/20210514105748/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Guide/Changes_in_Gecko_2.0) for details.
 
 ## The Add-on Manager
 
 The overhauled Add-on Manager is implemented as a tab instead of in a separate window. Among the changes that affect your browser from a user experience perspective is that your add-on's icon can be 64x64 pixels now instead of 32x32. While 32x32 pixel icons still work, obviously your add-on will look better if it provides a 64x64 pixel icon instead. Fortunately, 64x64 icons are backward compatible and scale down well, so you can just switch instead of needing both sizes.
 
-In addition, the back-end of the Add-on Manager was redesigned. The `nsIExtensionManager` interface is gone, as is the old RDF-based storage it used. Add-on metadata is now stored in an SQLite database, and the Add-on Manager is now a [JavaScript code module](/en-US/docs/JavaScript_code_modules) called [AddonManager](https://firefox-source-docs.mozilla.org/toolkit/mozapps/extensions/addon-manager/AddonManager.html).
+In addition, the back-end of the Add-on Manager was redesigned. The `nsIExtensionManager` interface is gone, as is the old RDF-based storage it used. Add-on metadata is now stored in an SQLite database, and the Add-on Manager is now a [JavaScript code module](https://web.archive.org/web/20210531090101/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules) called [AddonManager](https://firefox-source-docs.mozilla.org/toolkit/mozapps/extensions/addon-manager/AddonManager.html).
 
 A key difference with the new API is that requesting add-on metadata is now asynchronous instead of synchronous; this applies to add-ons using FUEL as well, so all add-ons that request metadata about add-ons will need to be updated.
 
 ## Threading
 
-You can no longer pass JavaScript objects between threads. This renders the Thread Manager mostly useless for add-on developers, unfortunately, and there aren't at this time many alternatives. It's possible that in the future the [`ChromeWorker`](/en-US/docs/DOM/ChromeWorker) will be improved to fill the void.
+You can no longer pass JavaScript objects between threads. This renders the Thread Manager mostly useless for add-on developers, unfortunately, and there aren't at this time many alternatives. It's possible that in the future the [`ChromeWorker`](https://web.archive.org/web/20210512121129/https://developer.mozilla.org/en-US/docs/Mozilla/Gecko/Chrome/API/ChromeWorker) will be improved to fill the void.
 
 ## Network redirects
 
@@ -54,7 +54,7 @@ The API for handling network redirects has been changed to be asynchronous; any 
 
 ## XPI unpacking
 
-Firefox 4 [no longer extracts XPIs](https://bugzil.la/533038) when installing extensions. It just places the XPI file in the user profile, and then reads the chrome files and others directly out of the XPI. A jar inside the XPI still works, but is no longer necessary, so that can make your development or build easier. This was done mainly for performance reasons on slow OSes, and allows better cache invalidation, which also helps developers. However, not all kinds of files can be read from within the XPI yet, so if your extension uses one of those, you need to specify [`<em:unpack>`](/en-US/Install_Manifests#unpack) in your install.rdf to cause Firefox to still extract your XPI and use single files, otherwise your extension will fail when trying to access these files.
+Firefox 4 [no longer extracts XPIs](https://bugzil.la/533038) when installing extensions. It just places the XPI file in the user profile, and then reads the chrome files and others directly out of the XPI. A jar inside the XPI still works, but is no longer necessary, so that can make your development or build easier. This was done mainly for performance reasons on slow OSes, and allows better cache invalidation, which also helps developers. However, not all kinds of files can be read from within the XPI yet, so if your extension uses one of those, you need to specify [`<em:unpack>`](https://web.archive.org/web/20210421140209/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Install_Manifests#unpack) in your install.rdf to cause Firefox to still extract your XPI and use single files, otherwise your extension will fail when trying to access these files.
 
 If your extension only contains these types of files then you do not need to make any changes:
 
@@ -84,13 +84,13 @@ If you maintain an extension that uses native components that rely on `HWND`s th
 
 The first, and better, solution is to stop accessing `HWND`s and instead use Web features or XUL to implement your extension. There are a lot of new features in Firefox 4 that make possible a lot of things that used to require native code, so you may no longer need to do this.
 
-If you find that this doesn't work, and you still need to directly access `HWND`s, you may find that your only solution is to write an [NPAPI](/en-US/docs/NPAPI) plugin that does the work. This may be a lot of work, but it should work. Of course, this may not help you if the specific `HWND`s you were using no longer exist.
+If you find that this doesn't work, and you still need to directly access `HWND`s, you may find that your only solution is to write an NPAPI plugin that does the work. This may be a lot of work, but it should work. Of course, this may not help you if the specific `HWND`s you were using no longer exist.
 
 ## Development and testing tips
 
 ### Caching
 
-Because Firefox now caches code and other resources more aggressively, you'll want to be sure to purge the caches when you start up Firefox 4. Otherwise you may be testing obsolete pieces of your add-on. To do this, run Firefox with the `-purgecaches` command line option.
+Because Firefox now caches code and other resources more aggressively, you'll want to be sure to purge the caches when you start up Firefox 4. Otherwise you may be testing obsolete pieces of your add-on. To do this, run Firefox with the `-purgecaches` command-line option.
 
 ### The Profile Manager
 
@@ -100,7 +100,7 @@ A replacement to the profile manager is [available](https://ftp.mozilla.org/pub/
 
 ### Installing extensions globally
 
-The `-install-global-extension` and `-install-global-theme` command line options have been removed. Handling global installation has always been complicated, and discussions are in progress as to how to address the subject going forward. In the meantime, see [Installing extensions](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/) for information on ways to automatically install add-ons.
+The `-install-global-extension` and `-install-global-theme` command-line options have been removed. Handling global installation has always been complicated, and discussions are in progress as to how to address the subject going forward. In the meantime, see [Installing extensions](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/) for information on ways to automatically install add-ons.
 
 ## See also
 

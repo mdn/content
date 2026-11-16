@@ -6,11 +6,11 @@ browser-compat: mathml.global_attributes.displaystyle
 sidebar: mathmlref
 ---
 
-The **`displaystyle`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) is a boolean setting the [math-style](/en-US/docs/Web/CSS/math-style) of a MathML element.
+The **`displaystyle`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) is a boolean setting the [math-style](/en-US/docs/Web/CSS/Reference/Properties/math-style) of a MathML element.
 
 ## Example
 
-In this example, an [munder](/en-US/docs/Web/MathML/Reference/Element/munder) element is used to attach a script "A" to a base "∑". By default, the summation symbol is rendered with the [font-size](/en-US/docs/Web/CSS/font-size) inherited from its parent and the A as a scaled down subscript. With the explicit `displaystyle="true"` attribute, the summation symbol is instead drawn bigger and the "A" becomes an underscript.
+In this example, an [munder](/en-US/docs/Web/MathML/Reference/Element/munder) element is used to attach a script "A" to a base "∑". By default, the summation symbol is rendered with the [font-size](/en-US/docs/Web/CSS/Reference/Properties/font-size) inherited from its parent and the A as a scaled down subscript. With the explicit `displaystyle="true"` attribute, the summation symbol is instead drawn bigger and the "A" becomes an underscript.
 
 ```css hidden
 html,

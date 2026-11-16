@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: crossorigin"
+title: "`crossorigin` HTML attribute"
 short-title: crossorigin
 slug: Web/HTML/Reference/Attributes/crossorigin
 page-type: html-attribute
@@ -20,15 +20,13 @@ The `crossorigin` content attribute on media elements is a CORS settings attribu
 These attributes are [enumerated](/en-US/docs/Glossary/Enumerated), and have the following possible values:
 
 - `anonymous`
-  - : Request uses CORS headers and credentials flag is set to `'same-origin'`. There is no exchange of **user credentials** via cookies, client-side TLS certificates or HTTP authentication, unless destination is the same origin.
+  - : Request uses CORS headers ([`mode`](/en-US/docs/Web/API/RequestInit#mode) is set to `cors`) and [`credentials`](/en-US/docs/Web/API/RequestInit#credentials) is set to `'same-origin'`, meaning that credentials such as cookies, client-side TLS certificates, and HTTP authentication headers are only included if the destination has the same origin.
 - `use-credentials`
-  - : Request uses CORS headers, credentials flag is set to `'include'` and **user credentials** are always included.
+  - : Request uses CORS headers ([`mode`](/en-US/docs/Web/API/RequestInit#mode) is set to `cors`) and [`credentials`](/en-US/docs/Web/API/RequestInit#credentials) is set to `'include'`, so credentials are always included, even for cross-origin requests.
 - `""`
-  - : Setting the attribute name to an empty value, like `crossorigin` or `crossorigin=""`, is the same as `anonymous`.
+  - : Setting the attribute name to an empty value, like `crossorigin` or `crossorigin=""`, is the same as `anonymous`. Invalid values are also treated as the empty string.
 
-An invalid keyword and an empty string will be handled as the `anonymous` keyword.
-
-By default (that is, when the attribute is not specified), CORS is not used at all. The user agent will not ask for permission for full access to the resource and in the case of a cross-origin request, certain limitations will be applied based on the type of element concerned:
+By default (that is, when the attribute is not specified), resources are generally fetched without CORS, except [module scripts](/en-US/docs/Web/HTML/Reference/Elements/script/type#module) which always use CORS so only `crossorigin="use-credentials"` has an effect. The user agent will not ask for permission for full access to the resource and in the case of a cross-origin request, certain limitations will be applied based on the type of element concerned:
 
 <table class="no-markdown">
   <tbody>
@@ -60,7 +58,9 @@ By default (that is, when the attribute is not specified), CORS is not used at a
 > [!NOTE]
 > The `crossorigin` attribute is not supported for [`rel="icon"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#icon) in Chromium-based browsers. See the [open Chromium issue](https://crbug.com/1121645).
 
-### Example: `crossorigin` with the `<script>` element
+## Examples
+
+### `crossorigin` with the `<script>` element
 
 You can use the following {{HTMLElement("script")}} element to tell a browser to execute the `https://example.com/example-framework.js` script without sending user-credentials.
 
@@ -70,7 +70,7 @@ You can use the following {{HTMLElement("script")}} element to tell a browser to
   crossorigin="anonymous"></script>
 ```
 
-### Example: Web manifest with credentials
+### Web manifest with credentials
 
 The `use-credentials` value must be used when fetching a [manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) that requires credentials, even if the file is from the same origin.
 

@@ -15,7 +15,7 @@ Every `SpeechSynthesisVoice` has its own relative speech service including infor
 - {{domxref("SpeechSynthesisVoice.default")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the voice is the default voice for the current app language (`true`), or not (`false`.)
 - {{domxref("SpeechSynthesisVoice.lang")}} {{ReadOnlyInline}}
-  - : Returns a BCP 47 language tag indicating the language of the voice.
+  - : Returns a {{glossary("BCP 47 language tag")}} indicating the language of the voice.
 - {{domxref("SpeechSynthesisVoice.localService")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the voice is supplied by a local speech synthesizer service (`true`), or a remote speech synthesizer service (`false`.)
 - {{domxref("SpeechSynthesisVoice.name")}} {{ReadOnlyInline}}

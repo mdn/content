@@ -74,7 +74,7 @@ can be used to include the image created by the worklet:
 ```css
 @supports (background-image: paint(id)) {
   h1 {
-    background-image: paint(hollowHighlights, filled, 3px);
+    background-image: paint(hollow-highlights, filled, 3px);
   }
 }
 ```

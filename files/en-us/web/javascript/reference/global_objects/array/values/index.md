@@ -12,8 +12,8 @@ The **`values()`** method of {{jsxref("Array")}} instances returns a new _[array
 {{InteractiveExample("JavaScript Demo: Array.prototype.values()")}}
 
 ```js interactive-example
-const array1 = ["a", "b", "c"];
-const iterator = array1.values();
+const array = ["a", "b", "c"];
+const iterator = array.values();
 
 for (const value of iterator) {
   console.log(value);
@@ -98,7 +98,7 @@ for (const letter of values) {
 for (const letter of values) {
   console.log(letter);
 }
-// undefined
+// No output
 ```
 
 If you use a [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break) statement to end the iteration early, the iterator can resume from the current position when continuing to iterate it.
@@ -185,7 +185,7 @@ for (const entry of Array.prototype.values.call(arrayLike)) {
 
 ## See also
 
-- [Polyfill of `Array.prototype.values` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.values` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.values`](https://www.npmjs.com/package/array.prototype.values)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

@@ -6,7 +6,7 @@ page-type: webgl-extension-method
 browser-compat: api.EXT_disjoint_timer_query.getQueryEXT
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`EXT_disjoint_timer_query.getQueryEXT()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) returns information about a query

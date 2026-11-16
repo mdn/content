@@ -24,7 +24,7 @@ let removingBookmark = browser.bookmarks.remove(
 ### Parameters
 
 - `id`
-  - : A {{jsxref("string")}} specifying the ID of the bookmark or empty folder to remove.
+  - : A {{jsxref("String")}} specifying the ID of the bookmark or empty folder to remove.
 
 ### Return value
 

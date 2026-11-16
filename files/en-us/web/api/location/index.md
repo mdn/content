@@ -41,7 +41,7 @@ body {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
-  font-family: Georgia;
+  font-family: "Georgia";
   font-size: 200%;
   line-height: 1em;
   white-space: nowrap;

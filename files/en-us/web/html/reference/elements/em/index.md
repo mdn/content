@@ -1,5 +1,6 @@
 ---
-title: "<em>: The Emphasis element"
+title: "`<em>` HTML emphasis element"
+short-title: <em>
 slug: Web/HTML/Reference/Elements/em
 page-type: html-element
 browser-compat: html.elements.em
@@ -77,7 +78,7 @@ In this example, the `<em>` element is used to highlight an implicit or explicit
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("examples")}}
 
 ## Technical summary
 

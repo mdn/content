@@ -16,7 +16,7 @@ There are instances in which Firefox doesn't cache pages. Below are some common 
   - "Pragma: no-cache"
   - with "Expires: 0" or "Expires" with a date value in the past relative to the value of the "Date" header (unless "Cache-Control: max-age=" is also specified);
 
-- the page is not completely loaded when the user navigates away from it or has pending network requests for other reasons (e.g., `XMLHttpRequest`));
+- the page is not completely loaded when the user navigates away from it or has pending network requests for other reasons (e.g., `XMLHttpRequest`);
 - the page has running IndexedDB transactions;
 - the top-level page contains frames (e.g., {{HTMLElement("iframe")}}) that are not cacheable for any of the reasons listed here;
 - the page is in a frame and the user loads a new page within that frame (in this case, when the user navigates away from the page, the content that was last loaded into the frames is what is cached).
@@ -80,14 +80,14 @@ In this example:
 - The cursor is placed in the Name field of the form the first time the page is loaded. In Firefox 1.5, when the user navigates back to the page, the cursor remains in the field it was when the user navigated away from the page. In other browsers, the cursor moves back to the Name field.
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
     <title>Order query Firefox 1.5 Example</title>
     <style type="text/css">
       body,
       p {
-        font-family: Verdana, sans-serif;
+        font-family: "Verdana", sans-serif;
         font-size: 12px;
       }
     </style>

@@ -16,8 +16,6 @@ This interface inherits all of the properties and methods described in the {{dom
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-- {{HTMLElement("meta#charset")}}
-  - : The character encoding for a HTML document.
 - {{domxref("HTMLMetaElement.content")}}
   - : The 'value' part of the name-value pairs of the document metadata.
 - {{domxref("HTMLMetaElement.httpEquiv")}}
@@ -60,11 +58,11 @@ The `content` attribute sets the viewport size and is appended to the document `
 ```js
 const meta = document.createElement("meta");
 meta.name = "viewport";
-meta.content = "width=device-width, initial-scale=1";
+meta.content = "width=device-width";
 document.head.appendChild(meta);
 ```
 
-For more information on setting the viewport, see [Viewport basics](/en-US/docs/Web/HTML/Guides/Viewport_meta_element#viewport_basics).
+For more information on setting the viewport, see [`<meta name="viewport">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport).
 
 ## Specifications
 

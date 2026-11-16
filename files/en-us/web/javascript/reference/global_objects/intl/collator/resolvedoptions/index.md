@@ -12,14 +12,14 @@ The **`resolvedOptions()`** method of {{jsxref("Intl.Collator")}} instances retu
 {{InteractiveExample("JavaScript Demo: Intl.Collator.prototype.resolvedOptions()")}}
 
 ```js interactive-example
-const numberDe = new Intl.NumberFormat("de-DE");
-const numberAr = new Intl.NumberFormat("ar");
+const collator = new Intl.Collator("de-DE", { sensitivity: "base" });
+const options = collator.resolvedOptions();
 
-console.log(numberDe.resolvedOptions().numberingSystem);
-// Expected output: "latn"
+console.log(options.sensitivity);
+// Expected output: "base"
 
-console.log(numberAr.resolvedOptions().numberingSystem);
-// Expected output: "arab"
+console.log(options.usage);
+// Expected output: "sort"
 ```
 
 ## Syntax
@@ -37,7 +37,7 @@ None.
 A new object with properties reflecting the options computed during the initialization of this `Collator` object. The object has the following properties, in the order they are listed:
 
 - `locale`
-  - : The BCP 47 language tag for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. Only the `co`, `kn`, and `kf` Unicode extension keys, if requested and supported, may be included in the output.
+  - : The {{glossary("BCP 47 language tag")}} for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. Only the `co`, `kn`, and `kf` Unicode extension keys, if requested and supported, may be included in the output.
 - `usage`
   - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"sort"` or `"search"`. The default is `"sort"`.
 - `sensitivity`

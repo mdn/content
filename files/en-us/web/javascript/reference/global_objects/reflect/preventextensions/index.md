@@ -12,14 +12,14 @@ The **`Reflect.preventExtensions()`** static method is like {{jsxref("Object.pre
 {{InteractiveExample("JavaScript Demo: Reflect.preventExtensions()")}}
 
 ```js interactive-example
-const object1 = {};
+const object = {};
 
-console.log(Reflect.isExtensible(object1));
+console.log(Reflect.isExtensible(object));
 // Expected output: true
 
-Reflect.preventExtensions(object1);
+Reflect.preventExtensions(object);
 
-console.log(Reflect.isExtensible(object1));
+console.log(Reflect.isExtensible(object));
 // Expected output: false
 ```
 
@@ -90,7 +90,7 @@ Object.preventExtensions(1);
 
 ## See also
 
-- [Polyfill of `Reflect.preventExtensions` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.preventExtensions` in `core-js`](https://core-js.io/docs/features/ecmascript/reflect)
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.preventExtensions()")}}
 - [`handler.preventExtensions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions)

@@ -50,9 +50,9 @@ Traditionally, {{jsxref("Object", "objects", "", 1)}} have been used to map stri
 
 These three tips can help you to decide whether to use a `Map` or an `Object`:
 
-- Use maps over objects when keys are unknown until run time, and when all keys are the same type and all values are the same type.
-- Use maps if there is a need to store primitive values as keys because object treats each key as a string whether it's a number value, boolean value or any other primitive value.
-- Use objects when there is logic that operates on individual elements.
+- Use maps over objects when keys are unknown until run time, especially if the keys come from external input.
+- Maps support keys and values of any type and do not require keys to be serializable to strings or symbols.
+- Use objects when the shape is known ahead of time and all keys are expressible as strings.
 
 ### WeakMap object
 
@@ -62,12 +62,12 @@ The `WeakMap` API is essentially the same as the `Map` API. However, a `WeakMap`
 
 For more information and example code, see also "Why WeakMap?" on the {{jsxref("WeakMap")}} reference page.
 
-One use case of `WeakMap` objects is to store private data for an object, or to hide implementation details. The following example is from Nick Fitzgerald's blog post ["Hiding Implementation Details with ECMAScript 6 WeakMaps"](https://fitzgen.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html). The private data and methods belong inside the object and are stored in the `privates` object, which is a `WeakMap`. Everything exposed on the instance and prototype is public; everything else is inaccessible from the outside world because `privates` is not exported from the module.
+One use case of `WeakMap` objects is to store private data for an object, or to hide implementation details. In the following example, the private data and methods belong inside the object and are stored in the `privates` object, which is a `WeakMap`. Everything exposed on the instance and prototype is public; everything else is inaccessible from the outside world because `privates` is not exported from the module.
 
 ```js
 const privates = new WeakMap();
 
-function Public() {
+export default function Public() {
   const me = {
     // Private data goes here
   };
@@ -79,9 +79,10 @@ Public.prototype.method = function () {
   // Do stuff with private data in `me`
   // …
 };
-
-module.exports = Public;
 ```
+
+> [!NOTE]
+> This use case can now be implemented with [classes and private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements).
 
 ## Sets
 

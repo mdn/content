@@ -1,5 +1,6 @@
 ---
-title: <input type="button">
+title: '`<input type="button">` HTML attribute value'
+short-title: <input type="button">
 slug: Web/HTML/Reference/Elements/input/button
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_button
@@ -7,6 +8,9 @@ sidebar: htmlsidebar
 ---
 
 {{HTMLElement("input")}} elements of type **`button`** are rendered as push buttons, which can be programmed to control custom functionality anywhere on a webpage as required when assigned an event handler function (typically for the {{domxref("Element/click_event", "click")}} event).
+
+> [!NOTE]
+> While `<input>` elements of type `button` are still perfectly valid HTML, the {{HTMLElement("button")}} element is the favored way to create buttons. Given that a {{HTMLElement("button")}}'s label text is inserted between the opening and closing tags, you can include HTML in the label, even images.
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
 
@@ -21,15 +25,15 @@ sidebar: htmlsidebar
   padding: 0 20px;
   font-size: 1rem;
   text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
+  color: white;
+  text-shadow: 1px 1px 1px black;
   border-radius: 10px;
-  background-color: rgb(220 0 0 / 100%);
+  background-color: tomato;
   background-image: linear-gradient(
     to top left,
     rgb(0 0 0 / 20%),
     rgb(0 0 0 / 20%) 30%,
-    rgb(0 0 0 / 0%)
+    transparent
   );
   box-shadow:
     inset 2px 2px 3px rgb(255 255 255 / 60%),
@@ -37,7 +41,7 @@ sidebar: htmlsidebar
 }
 
 .styled:hover {
-  background-color: rgb(255 0 0 / 100%);
+  background-color: red;
 }
 
 .styled:active {
@@ -46,9 +50,6 @@ sidebar: htmlsidebar
     inset 2px 2px 3px rgb(0 0 0 / 60%);
 }
 ```
-
-> [!NOTE]
-> While `<input>` elements of type `button` are still perfectly valid HTML, the newer {{HTMLElement("button")}} element is now the favored way to create buttons. Given that a {{HTMLElement("button")}}'s label text is inserted between the opening and closing tags, you can include HTML in the label, even images.
 
 ## Value
 
@@ -237,13 +238,13 @@ The below example shows a very basic drawing app created using a {{htmlelement("
 
 ```css hidden
 body {
-  background: #ccc;
+  background: #cccccc;
   margin: 0;
   overflow: hidden;
 }
 
 .toolbar {
-  background: #ccc;
+  background: #cccccc;
   width: 150px;
   height: 75px;
   padding: 5px;
@@ -280,7 +281,7 @@ const sizePicker = document.querySelector('input[type="range"]');
 const output = document.querySelector(".output");
 const clearBtn = document.querySelector('input[type="button"]');
 
-// covert degrees to radians
+// convert degrees to radians
 function degToRad(degrees) {
   return (degrees * Math.PI) / 180;
 }
@@ -364,10 +365,6 @@ draw();
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>None</td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

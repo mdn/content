@@ -24,7 +24,7 @@ Summarizer.availability(options)
 - `options` {{optional_inline}}
   - : An options object specifying a possible configuration for a `Summarizer`. Possible values include:
     - `expectedInputLanguages`
-      - : An array of strings equal to [BCP 47 language tags](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)) specifying the expected languages of the input text. Defaults to `["en"]`.
+      - : An array of strings equal to {{glossary("BCP 47 language tag", "BCP 47 language tags")}} specifying the expected languages of the input text. Defaults to `["en"]`.
     - `expectedContextLanguages`
       - : An array of strings equal to BCP 47 language tags specifying the expected languages of any provided context strings (either the [`sharedContext`](/en-US/docs/Web/API/Summarizer/create_static#sharedcontext) passed to the `Summarizer`, or a `context` specified during a {{domxref("Summarizer.summarize", "summarize()")}} or {{domxref("Summarizer.summarizeStreaming", "summarizeStreaming()")}} call). Defaults to `["en"]`.
     - `format`
@@ -49,12 +49,10 @@ Possible values include:
 - `downloading`
   - : The browser supports the given configuration, but it needs to finish an ongoing download before it can proceed.
 - `unavailable`
-  - : The browser does not support the given configuration.
+  - : The browser does not support the given configuration, or the Summarizer API is blocked by a {{httpheader('Permissions-Policy/summarizer','summarizer')}} {{httpheader("Permissions-Policy")}}.
 
 ### Exceptions
 
-- `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if usage of the Summarizer API is blocked by a {{httpheader('Permissions-Policy/summarizer','summarizer')}} {{httpheader("Permissions-Policy")}}.
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the provided `context` is not in language the `Summarizer` supports.
 - `UnknownError` {{domxref("DOMException")}}

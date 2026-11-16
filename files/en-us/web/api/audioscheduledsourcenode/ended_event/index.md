@@ -10,17 +10,21 @@ browser-compat: api.AudioScheduledSourceNode.ended_event
 
 The `ended` event of the {{domxref("AudioScheduledSourceNode")}} interface is fired when the source node has stopped playing.
 
-This event occurs when a {{domxref("AudioScheduledSourceNode")}} has stopped playing, either because it's reached a predetermined stop time, the full duration of the audio has been performed, or because the entire buffer has been played.
+This event occurs when an {{domxref("AudioScheduledSourceNode")}} has stopped playing, either because it's reached a predetermined stop time, the full duration of the audio has been performed, or because the entire buffer has been played.
 
 This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("ended", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onended = (event) => { }
 ```
 
@@ -38,7 +42,7 @@ node.addEventListener("ended", () => {
 });
 ```
 
-You can also set up the event handler using the `onended` property:
+You can also set up the event handler using the `onended` property (but note that this replaces other event listeners added using `onended`, if any):
 
 ```js
 node.onended = () => {

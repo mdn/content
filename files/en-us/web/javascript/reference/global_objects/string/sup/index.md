@@ -9,8 +9,6 @@ browser-compat: javascript.builtins.String.sup
 sidebar: jsref
 ---
 
-{{Deprecated_Header}}
-
 The **`sup()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("sup")}} element (`<sup>str</sup>`), which causes this string to be displayed as superscript.
 
 > [!NOTE]
@@ -67,7 +65,7 @@ document.body.appendChild(elem);
 
 ## See also
 
-- [Polyfill of `String.prototype.sup` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.sup` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - [es-shims polyfill of `String.prototype.sup`](https://www.npmjs.com/package/es-string-html-methods)
 - [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)
 - {{HTMLElement("sup")}}

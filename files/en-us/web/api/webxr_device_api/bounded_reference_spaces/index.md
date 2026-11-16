@@ -59,7 +59,7 @@ Before creating a project that relies on bounded reference spaces, it's importan
 
 ### Safely creating a bounded-preferred space
 
-Before actually attempting to create a bounded reference space, you need to create a session that supports them. Since not all hardware supports bounded reference spaces, you should made sure to support bounded reference spaces as an option rather than as a required feature unless you have special knowledge of the environment in which your code will run. You can create a session that supports a `bounded-floor` reference space if available by using code such as the following:
+Before actually attempting to create a bounded reference space, you need to create a session that supports them. Since not all hardware supports bounded reference spaces, you should make sure to support bounded reference spaces as an option rather than as a required feature unless you have special knowledge of the environment in which your code will run. You can create a session that supports a `bounded-floor` reference space if available by using code such as the following:
 
 ```js
 async function onActivateXRButton(event) {
@@ -150,7 +150,7 @@ function onRefSpaceCreated(refSpace) {
 }
 ```
 
-In this code, executed after the reference space has been created, we create an {{domxref("XRRigidTransform")}} representing the transform that will move the viewpoint upward by 1.5 meters. This approximates human height, though it assumes we've previously transformed the coordinate system so that the value of each coordinate is no longer constrained to -1 to 1, while maintaining the definition that a value of 1 represents one meter).
+In this code, executed after the reference space has been created, we create an {{domxref("XRRigidTransform")}} representing the transform that will move the viewpoint upward by 1.5 meters. This approximates human height, though it assumes we've previously transformed the coordinate system so that the value of each coordinate is no longer constrained to -1 to 1, while maintaining the definition that a value of 1 represents one meter.
 
 The new transform is passed into `getOffsetReferenceSpace()` to obtain a reference space that maps the coordinates between the base coordinate system and that of the rendered image. The new reference space replaces the original one. Finally, drawing begins by calling the {{domxref("XRSession")}} method {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}.
 
@@ -161,4 +161,3 @@ The new transform is passed into `getOffsetReferenceSpace()` to obtain a referen
 - [Spatial tracking in WebXR](/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking)
 - [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion)
 - [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
-- [Supporting gamepads in WebXR applications](/en-US/docs/Web/API/WebXR_Device_API/Gamepads)

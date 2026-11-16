@@ -1,5 +1,5 @@
 ---
-title: The HTML DOM API
+title: HTML DOM API
 slug: Web/API/HTML_DOM_API
 page-type: web-api-overview
 browser-compat: api.HTMLElement
@@ -65,7 +65,7 @@ Each level defines a key aspect of the utility of the element. From `Node`, the 
 
 There are elements that share commonalities and thus have an additional intermediary type. For example, the {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements both present audiovisual media. The corresponding types, {{domxref("HTMLAudioElement")}} and {{domxref("HTMLVideoElement")}}, are both based upon the common type {{domxref("HTMLMediaElement")}}, which in turn is based upon {{domxref("HTMLElement")}} and so forth. `HTMLMediaElement` defines the methods and properties held in common between audio and video elements.
 
-These element-specific interfaces make up the majority of the HTML DOM API, and are the focus of this article. To learn more about the actual structure of the {{DOMxRef("Document_Object_Model", "DOM", "", "1")}}, see {{DOMxRef("Document_Object_Model/Introduction", "Introduction to the DOM", "", "1")}}.
+These element-specific interfaces make up the majority of the HTML DOM API, and are the focus of this article. The [DOM](/en-US/docs/Web/API/Document_Object_Model) article provides a general introduction to the DOM and its concepts.
 
 ## HTML DOM target audience
 
@@ -164,10 +164,6 @@ These interfaces offer access to the browser window and document that contain th
 - {{DOMxRef("BarProp")}}
 - {{DOMxRef("Navigator")}}
 - {{DOMxRef("Window")}}
-
-#### Deprecated web app and browser integration interfaces
-
-- {{DOMxRef("External")}} {{deprecated_inline}}
 
 #### Obsolete web app and browser integration interfaces
 
@@ -297,7 +293,24 @@ The {{domxref("EventSource")}} interface represents the source which sent or is 
 
 ## Examples
 
-In this example, an {{HTMLElement("input")}} element's {{domxref("Element/input_event", "input")}} event is monitored in order to update the state of a form's "submit" button based on whether or not a given field currently has a value.
+In this example, an {{HTMLElement("input")}} element's {{domxref("Element/input_event", "input")}} event is monitored in order to update the state of a "Send" button based on whether or not a given field currently has a value.
+
+### HTML
+
+The HTML looks like this:
+
+```html
+<p>Please provide the information below. Items marked with "*" are required.</p>
+<p>
+  <label for="userName" required>Your name:</label>
+  <input type="text" id="userName" /> (*)
+</p>
+<p>
+  <label for="userEmail">Email:</label>
+  <input type="email" id="userEmail" />
+</p>
+<input type="button" value="Send" id="sendButton" />
+```
 
 ### JavaScript
 
@@ -329,25 +342,6 @@ Then {{domxref("EventTarget.addEventListener", "addEventListener()")}} is called
 
 With this in place, the "Send" button is always enabled whenever the user name input field has a value, and disabled when it's empty.
 
-### HTML
-
-The HTML for the form looks like this:
-
-```html
-<p>Please provide the information below. Items marked with "*" are required.</p>
-<form action="" method="get">
-  <p>
-    <label for="userName" required>Your name:</label>
-    <input type="text" id="userName" /> (*)
-  </p>
-  <p>
-    <label for="userEmail">Email:</label>
-    <input type="email" id="userEmail" />
-  </p>
-  <input type="submit" value="Send" id="sendButton" />
-</form>
-```
-
 ### Result
 
 {{EmbedLiveSample("Examples", 640, 300)}}
@@ -362,12 +356,7 @@ The HTML for the form looks like this:
 
 ## See also
 
-### References
-
 - [HTML elements reference](/en-US/docs/Web/HTML/Reference/Elements)
 - [HTML attribute reference](/en-US/docs/Web/HTML/Reference/Attributes)
 - {{DOMxRef("Document_Object_Model", "Document Object Model (DOM)", "", "1")}} reference
-
-### Guides
-
 - [DOM scripting introduction](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting)

@@ -33,11 +33,11 @@ Express apps can use many different databases, and there are several approaches 
 
 ### What databases can I use?
 
-_Express_ apps can use any database supported by _Node_ (_Express_ itself doesn't define any specific additional behavior/requirements for database management). There are [many popular options](https://expressjs.com/en/guide/database-integration.html), including PostgreSQL, MySQL, Redis, SQLite, and MongoDB.
+_Express_ apps can use any database supported by _Node_ (_Express_ itself doesn't define any specific additional behavior/requirements for database management). There are [many popular options](https://expressjs.com/en/guide/database-integration/), including PostgreSQL, MySQL, Redis, SQLite, and MongoDB.
 
 When choosing a database, you should consider things like time-to-productivity/learning curve, performance, ease of replication/backup, cost, community support, etc. While there is no single "best" database, almost any of the popular solutions should be more than acceptable for a small-to-medium-sized site like our Local Library.
 
-For more information on the options see [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs).
+For more information on the options see [Database integration](https://expressjs.com/en/guide/database-integration/) (Express docs).
 
 ### What is the best way to interact with a database?
 
@@ -48,7 +48,7 @@ There are two common approaches for interacting with a database:
 
 The very best _performance_ can be gained by using SQL, or whatever query language is supported by the database. Object mappers are often slower because they use translation code to map between objects and the database format, which may not use the most efficient database queries (this is particularly true if the mapper supports different database backends, and must make greater compromises in terms of what database features are supported).
 
-The benefit of using an ORM/ODM is that programmers can continue to think in terms of JavaScript objects rather than database semantics — this is particularly true if you need to work with different databases (on either the same or different websites). They also provide an obvious place to perform data validation.
+The benefit of using an ORM/ODM is that programmers can continue to think in terms of JavaScript objects rather than database semantics — this is particularly true if you need to work with different databases (on either the same or different websites). They also provide an obvious place to perform data validation, and usually can derive TypeScript types from the data schema.
 
 > [!NOTE]
 > Using ODM/ORMs often results in lower costs for development and maintenance! Unless you're very familiar with the native query language or performance is paramount, you should strongly consider using an ODM.
@@ -59,15 +59,21 @@ There are many ODM/ORM solutions available on the npm package manager site (chec
 
 A few solutions that were popular at the time of writing are:
 
-- [Mongoose](https://www.npmjs.com/package/mongoose): Mongoose is a [MongoDB](https://www.mongodb.com/) object modeling tool designed to work in an asynchronous environment.
-- [Waterline](https://www.npmjs.com/package/waterline): An ORM extracted from the Express-based [Sails](https://sailsjs.com/) web framework. It provides a uniform API for accessing numerous different databases, including Redis, MySQL, LDAP, MongoDB, and Postgres.
-- [Bookshelf](https://www.npmjs.com/package/bookshelf): Features both promise-based and traditional callback interfaces, providing transaction support, eager/nested-eager relation loading, polymorphic associations, and support for one-to-one, one-to-many, and many-to-many relations. Works with PostgreSQL, MySQL, and SQLite3.
-- [Objection](https://www.npmjs.com/package/objection): Makes it as easy as possible to use the full power of SQL and the underlying database engine (supports SQLite3, Postgres, and MySQL).
-- [Sequelize](https://www.npmjs.com/package/sequelize) is a promise-based ORM for Node.js and io.js. It supports the dialects PostgreSQL, MySQL, MariaDB, SQLite, and MSSQL and features solid transaction support, relations, read replication and more.
-- [Node ORM2](https://node-orm.readthedocs.io/en/latest/) is an Object Relationship Manager for NodeJS. It supports MySQL, SQLite, and Postgres, helping to work with the database using an object-oriented approach.
-- [GraphQL](https://graphql.org/): Primarily a query language for restful APIs, GraphQL is very popular, and has features available for reading data from databases.
+- [Mongoose](https://mongoosejs.com/): Mongoose is a [MongoDB](https://www.mongodb.com/) object modeling tool designed to work in an asynchronous environment.
+- [Prisma ORM](https://www.prisma.io/orm): Defines models in a dedicated schema file and generates a database client from them. This gives you autocomplete and type checking for queries against your own models, while migration tools help keep the database structure in sync with the schema.
+- [Drizzle ORM](https://orm.drizzle.team/docs/overview): Defines schemas directly in TypeScript and provides a query API that closely follows SQL. This lets developers familiar with SQL reuse that knowledge to write joins and other queries while getting inferred TypeScript types, without generating a separate database client.
+- [TypeORM](https://typeorm.io/docs/guides/active-record-data-mapper/): Maps database records to JavaScript or TypeScript classes. You can put query methods on the model classes themselves (Active Record), or keep database access in separate repositories (Data Mapper), giving you a choice of how to organize persistence and application logic.
+- [Sequelize](https://sequelize.org/): A promise-based ORM for Node.js and TypeScript. It supports the dialects PostgreSQL, MySQL, MariaDB, SQLite, and MSSQL and features solid transaction support, relations, read replication and more.
+- [GraphQL](https://graphql.org/): A query language for APIs, often used as an alternative to REST. A GraphQL server gets its data through resolver functions, which can use a database driver or an ORM.
 
-As a general rule, you should consider both the features provided and the "community activity" (downloads, contributions, bug reports, quality of documentation, etc.) when selecting a solution. At the time of writing Mongoose is by far the most popular ODM, and is a reasonable choice if you're using MongoDB for your database.
+As a general rule, you should consider both the features provided and the "community activity" (downloads, contributions, bug reports, quality of documentation, etc.) when selecting a solution. Some other things to consider:
+
+- Does the ORM require writing a separate schema declaration file, and does it need extra compilation steps to get the JavaScript glue code?
+- Does it automatically generate strict TypeScript types?
+- Is it performant enough for the application?
+- Can it adequately describe the application's data model?
+
+At the time of writing, Mongoose is a reasonable choice when using MongoDB for your database.
 
 ### Using Mongoose and MongoDB for the LocalLibrary
 
@@ -116,7 +122,7 @@ In modern JavaScript callbacks have largely been replaced by [Promises](/en-US/d
 Promises are objects that are (immediately) returned by an asynchronous method that represent its future state.
 When the operation completes, the promise object is "settled", and resolves an object that represents the result of the operation or an error.
 
-There are two main ways you can use promises to run code when a promise is settled, and we highly recommend that you read [How to use promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises) for a high level overview of both approaches.
+There are two main ways you can use promises to run code when a promise is settled, and we highly recommend that you read [How to use promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises) for a high-level overview of both approaches.
 In this tutorial, we'll primarily be using [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) to wait on promise completion within an [`async function`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function), because this leads to more readable and understandable asynchronous code.
 
 The way this approach works is that you use the `async function` keyword to mark a function as asynchronous, and then inside that function apply `await` to any method that returns a promise.
@@ -126,27 +132,29 @@ Later when the promise settles, the `await` method inside the asynchronous funct
 The code in the asynchronous function then executes until either another `await` is encountered, at which point it will pause again, or until all the code in the function has been run.
 
 You can see how this works in the example below.
-`myFunction()` is an asynchronous function that is called within a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block.
-When `myFunction()` is run, code execution is paused at `methodThatReturnsPromise()` until the promise resolves, at which point the code continues to `aFunctionThatReturnsPromise()` and waits again.
+`myFunction()` is an asynchronous function that contains a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block around the `await` expressions.
+When `myFunction()` is run, code execution is paused at `methodThatReturnsPromise()` until the promise resolves, at which point the code continues to `functionThatReturnsPromise()` and waits again.
 The code in the `catch` block runs if an error is thrown in the asynchronous function, and this will happen if the promise returned by either of the methods is rejected.
 
 ```js
 async function myFunction() {
-  // …
-  await someObject.methodThatReturnsPromise();
-  // …
-  await aFunctionThatReturnsPromise();
-  // …
+  try {
+    // …
+    await someObject.methodThatReturnsPromise();
+    // …
+    await functionThatReturnsPromise();
+    // …
+  } catch (e) {
+    // error handling code
+  }
 }
 
-try {
-  // …
-  myFunction();
-  // …
-} catch (e) {
-  // error handling code
-}
+myFunction();
 ```
+
+An asynchronous function returns a promise that rejects if an error is not caught inside the function.
+To catch that error in the calling code, use the returned promise's [`catch()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) method, or `await` the function call inside a `try...catch` block.
+Calling the function inside a `try...catch` block without `await` does not catch the rejection because it is `await` that converts the returned rejected promise into a thrown error.
 
 The asynchronous methods above are run in sequence.
 If the methods don't depend on each other then you can run them in parallel and finish the whole operation more quickly.
@@ -157,9 +165,8 @@ It rejects when any of the input's promises rejects, with this first rejection r
 The code below shows how this works.
 First, we have two functions that return promises.
 We `await` on both of them to complete using the promise returned by `Promise.all()`.
-Once they both complete `await` returns and the results array is populated,
-the function then continues to the next `await`, and waits until the promise returned by `anotherFunctionThatReturnsPromise()` is settled.
-You would call the `myFunction()` in a `try...catch` block to catch any errors.
+Once they both complete `await` returns and the results array is populated, the function then continues to the next `await`, and waits until the promise returned by `anotherFunctionThatReturnsPromise()` is settled.
+You would attach a `catch()` handler to the promise returned by `myFunction()` to catch any errors.
 
 ```js
 async function myFunction() {
@@ -199,16 +206,10 @@ Installing _Mongoose_ adds all its dependencies, including the MongoDB database 
 ### Connecting to MongoDB
 
 _Mongoose_ requires a connection to a MongoDB database.
-You can `require()` and connect to a locally hosted database with `mongoose.connect()` as shown below (for the tutorial we'll instead connect to an internet-hosted database).
+You can import Mongoose and connect to a locally hosted database with `mongoose.connect()` as shown below (for the tutorial we'll instead connect to an internet-hosted database).
 
 ```js
-// Import the mongoose module
-const mongoose = require("mongoose");
-
-// Set `strictQuery: false` to globally opt into filtering by properties that aren't in the schema
-// Included because it removes preparatory warnings for Mongoose 7.
-// See: https://mongoosejs.com/docs/migrating_to_6.html#strictquery-is-removed-and-replaced-by-strict
-mongoose.set("strictQuery", false);
+import mongoose from "mongoose";
 
 // Define the database URL to connect to.
 const mongoDB = "mongodb://127.0.0.1/my_database";
@@ -222,11 +223,11 @@ async function main() {
 
 > [!NOTE]
 > As discussed in the [Database APIs are asynchronous](#database_apis_are_asynchronous) section, here we `await` on the promise returned by the `connect()` method within an `async` function.
-> We use the promise `catch()` handler to handle any errors when trying to connect, but we might also have called `main()` within a `try...catch` block.
+> We use the promise `catch()` handler to handle any errors when trying to connect, but we might also have used `await main()` within a `try...catch` block in another `async` function.
 
 You can get the default `Connection` object with `mongoose.connection`.
 If you need to create additional connections you can use `mongoose.createConnection()`.
-This takes the same form of database URI (with host, database, port, options, etc.) as `connect()` and returns a `Connection` object).
+This takes the same form of database URI (with host, database, port, options, etc.) as `connect()` and returns a `Connection` object.
 Note that `createConnection()` returns immediately; if you need to wait on the connection to be established you can call it with `asPromise()` to return a promise (`mongoose.createConnection(mongoDB).asPromise()`).
 
 ### Defining and creating models
@@ -240,11 +241,10 @@ Schemas are then "compiled" into models using the `mongoose.model()` method. Onc
 
 #### Defining schemas
 
-The code fragment below shows how you might define a simple schema. First you `require()` mongoose, then use the Schema constructor to create a new schema instance, defining the various fields inside it in the constructor's object parameter.
+The code fragment below shows how you might define a simple schema. First you import mongoose, then use the Schema constructor to create a new schema instance, defining the various fields inside it in the constructor's object parameter.
 
 ```js
-// Require Mongoose
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 // Define a schema
 const Schema = mongoose.Schema;
@@ -482,7 +482,7 @@ Each story can have a single author.
 The `ref` property tells the schema which model can be assigned to this field.
 
 ```js
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
@@ -508,7 +508,7 @@ const bob = new Author({ name: "Bob Smith" });
 
 await bob.save();
 
-// Bob now exists, so lets create a story
+// Bob now exists, so let's create a story
 const story = new Story({
   title: "Bob goes sledding",
   author: bob._id, // assign the _id from our author Bob. This ID is created by default!
@@ -543,14 +543,14 @@ This is almost everything you need to know about working with related items _for
 
 ### One schema/model per file
 
-While you can create schemas and models using any file structure you like, we highly recommend defining each model schema in its own module (file), then exporting the method to create the model.
+While you can create schemas and models using any file structure you like, we highly recommend defining each model schema in its own module (file), then exporting the model.
 This is shown below:
 
 ```js
 // File: ./models/some-model.js
 
-// Require Mongoose
-const mongoose = require("mongoose");
+// Import Mongoose
+import mongoose from "mongoose";
 
 // Define a schema
 const Schema = mongoose.Schema;
@@ -560,15 +560,15 @@ const SomeModelSchema = new Schema({
   a_date: Date,
 });
 
-// Export function to create "SomeModel" model class
-module.exports = mongoose.model("SomeModel", SomeModelSchema);
+// Export model
+export default mongoose.model("SomeModel", SomeModelSchema);
 ```
 
-You can then require and use the model immediately in other files. Below we show how you might use it to get all instances of the model.
+You can then import and use the model immediately in other files. Below we show how you might use it to get all instances of the model.
 
 ```js
-// Create a SomeModel model just by requiring the module
-const SomeModel = require("../models/some-model");
+// Import the SomeModel model
+import SomeModel from "../models/some-model.js";
 
 // Use the SomeModel object (model) to find all SomeModel records
 const modelInstances = await SomeModel.find().exec();
@@ -578,7 +578,7 @@ const modelInstances = await SomeModel.find().exec();
 
 Now that we understand something of what Mongoose can do and how we want to design our models, it's time to start work on the _LocalLibrary_ website. The very first thing we want to do is set up a MongoDB database that we can use to store our library data.
 
-For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database) cloud-hosted sandbox database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [ScaleGrid](https://scalegrid.io/) and [ObjectRocket](https://www.objectrocket.com/)).
+For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database) cloud-hosted sandbox database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [ScaleGrid](https://scalegrid.io/) and [Rackspace](https://www.rackspace.com/data/rackspace-dbaas)).
 
 > [!NOTE]
 > If you prefer, you can set up a MongoDB database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/try/download/community-edition/releases). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting.
@@ -628,7 +628,7 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
    ![Go to Databases after setting up Access Rules on MongoDB Atlas](mongodb_atlas_-_accessrules.jpg)
 
 6. You will return to the _Overview_ screen. Click on the _Database_ section under the _Deployment_ menu on the left. Click the **Browse Collections** button.
-   ![Setup a collection on MongoDB Atlas.](mongodb_atlas_-_createcollection.jpg)
+   ![Set up a collection on MongoDB Atlas.](mongodb_atlas_-_createcollection.jpg)
 
 7. This will open the _Collections_ section. Click the **Add My Own Data** button.
    ![Create a database on MongoDB Atlas.](mongodb_atlas_-_adddata.jpg)
@@ -674,40 +674,60 @@ npm install mongoose
 
 ## Connect to MongoDB
 
-Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `const app = express();`).
-Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e., using the information from _MongoDB Atlas_).
+Open **server.js** in the root of your project and add the Mongoose import alongside the other package imports at the top of the file:
 
 ```js
-// Set up mongoose connection
-const mongoose = require("mongoose");
-
-mongoose.set("strictQuery", false);
-const mongoDB = "insert_your_database_url_here";
-
-main().catch((err) => console.log(err));
-async function main() {
-  await mongoose.connect(mongoDB);
-}
+import mongoose from "mongoose";
 ```
 
-As discussed in the [Mongoose primer](#connecting_to_mongodb) above, this code creates the default connection to the database and reports any errors to the console.
+Then add the following code after `app.set("port", port);` and before `const server = createServer(app);`. Replace the database URL string (`"insert_your_database_url_here"`) with the URL for your database from _MongoDB Atlas_.
 
-Note that hard-coding database credentials in source code as shown above is not recommended.
-We do it here because it shows the core connection code, and because during development there is no significant risk that leaking these details will expose or corrupt sensitive information.
-We'll show you how to do this more safely when [deploying to production](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment#database_configuration)!
+```js
+const mongoDB = "insert_your_database_url_here";
 
-## Defining the LocalLibrary Schema
+mongoose.connection.on("error", (err) => {
+  console.error("MongoDB connection error:", err);
+});
+
+mongoose.connection.on("disconnected", () => {
+  console.warn("MongoDB disconnected");
+});
+
+await mongoose.connect(mongoDB);
+```
+
+As discussed in the [Mongoose primer](#connecting_to_mongodb) above, this creates the default connection and reports connection errors. Because **server.js** is an ES module, it can use [top-level `await`](/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await). Node waits for the connection before continuing to the server creation and listening code. If the initial connection fails, the module fails to load and Node exits without starting the HTTP server.
+
+> [!NOTE]
+> Keeping the database connection in **server.js** allows **app.js** to configure and export the application without connecting to a database or starting a server.
+
+> [!WARNING]
+> We are hardcoding the database credentials in the source code, which is extremely bad practice.
+> We do it here because it shows the core connection code, and because during development there is no significant risk that leaking these details will expose or corrupt sensitive information.
+> If you are committing and pushing your code to GitHub, **stop committing right now** until we finish this tutorial; if you commit the code, your database credentials will remain forever in the git history, and will be available to anyone who has access to your GitHub repository.
+> We'll show you how to do this more safely when [deploying to production](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment#database_configuration)!
+>
+> If you ever accidentally leak your database credentials in your published source code, immediately switch your database password.
+
+## Defining the LocalLibrary schema
 
 We will define a separate module for each model, as [discussed above](#one_schemamodel_per_file).
-Start by creating a folder for our models in the project root (**/models**) and then create separate files for each of the models:
+Start by creating a folder for our models in the project root (**models/**) and then create separate files for each of the models:
 
 ```plain
-/express-locallibrary-tutorial  # the project root
-  /models
-    author.js
-    book.js
-    bookinstance.js
-    genre.js
+express-locallibrary-tutorial
+├── models
+│   ├── author.js
+│   ├── book.js
+│   ├── bookinstance.js
+│   └── genre.js
+...
+```
+
+If you are using Bash or a similar shell, you can create them all with this command:
+
+```bash
+mkdir models && touch models/{author,book,bookinstance,genre}.js
 ```
 
 ### Author model
@@ -716,7 +736,7 @@ Copy the `Author` schema code shown below and paste it into your **./models/auth
 The schema defines an author as having `String` SchemaTypes for the first and family names (required, with a maximum of 100 characters), and `Date` fields for the dates of birth and death.
 
 ```js
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
@@ -746,7 +766,7 @@ AuthorSchema.virtual("url").get(function () {
 });
 
 // Export model
-module.exports = mongoose.model("Author", AuthorSchema);
+export default mongoose.model("Author", AuthorSchema);
 ```
 
 We've also declared a [virtual](#virtual_properties) for the AuthorSchema named "url" that returns the absolute URL required to get a particular instance of the model — we'll use the property in our templates whenever we need to get a link to a particular author.
@@ -764,7 +784,7 @@ Copy the `Book` schema code shown below and paste it into your **./models/book.j
 Most of this is similar to the author model — we've declared a schema with a number of string fields and a virtual for getting the URL of specific book records, and we've exported the model.
 
 ```js
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
@@ -783,7 +803,7 @@ BookSchema.virtual("url").get(function () {
 });
 
 // Export model
-module.exports = mongoose.model("Book", BookSchema);
+export default mongoose.model("Book", BookSchema);
 ```
 
 The main difference here is that we've created two references to other models:
@@ -797,7 +817,7 @@ Finally, copy the `BookInstance` schema code shown below and paste it into your 
 The `BookInstance` represents a specific copy of a book that someone might borrow and includes information about whether the copy is available, on what date it is expected back, and "imprint" (or version) details.
 
 ```js
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
@@ -820,7 +840,7 @@ BookInstanceSchema.virtual("url").get(function () {
 });
 
 // Export model
-module.exports = mongoose.model("BookInstance", BookInstanceSchema);
+export default mongoose.model("BookInstance", BookInstanceSchema);
 ```
 
 The new things we show here are the field options:
@@ -852,15 +872,13 @@ In order to test the models (and to create some example books and other items th
    > [!NOTE]
    > The code in `populatedb.js` may be useful in learning JavaScript, but understanding it is not necessary for this tutorial.
 
-2. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
+2. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `server.js` earlier):
 
    ```bash
-   node populatedb <your MongoDB url>
+   node populatedb.js "<your MongoDB URL>"
    ```
 
-   > [!NOTE]
-   > On Windows you need to wrap the database URL inside double (").
-   > On other operating systems you may need single (') quotation marks.
+   Remember to wrap the URL in double quotes.
 
 3. The script should run through to completion, displaying items as it creates them in the terminal.
 
@@ -876,7 +894,7 @@ Last of all, we tested our models by creating a number of instances (using a sta
 
 ## See also
 
-- [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs)
+- [Database integration](https://expressjs.com/en/guide/database-integration/) (Express docs)
 - [Mongoose website](https://mongoosejs.com/) (Mongoose docs)
 - [Mongoose Guide](https://mongoosejs.com/docs/guide.html) (Mongoose docs)
 - [Validation](https://mongoosejs.com/docs/validation.html) (Mongoose docs)

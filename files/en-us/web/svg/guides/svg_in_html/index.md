@@ -65,13 +65,13 @@ If the SVG can be labeled by visible text, reference that text with an [`aria-la
     <style>
       rect {
         fill: #cccccc;
-        stroke: #666;
+        stroke: #666666;
         transform-origin: top;
       }
     </style>
   </defs>
 
-  <rect width="36" height="60" x="13" y="18" ry="2" transform="skewy(24deg)" />
+  <rect width="36" height="60" x="13" y="18" ry="2" transform="skewY(24deg)" />
   <rect width="39" height="60" x="11" y="20" ry="2" transform="skewY(18deg)" />
   <rect width="42" height="90" x="8" y="22" ry="2" transform="skewY(12deg)" />
   <rect width="36" height="60" x="50" y="18" ry="2" transform="skewY(-24deg)" />

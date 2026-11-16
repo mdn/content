@@ -21,7 +21,7 @@ getCharNumAtPosition(point)
 ### Parameters
 
 - `point`
-  - : An {{domxref("DOMPoint")}} object; the coordinates (x, y) where the position of the character is to be checked in the user coordinate space.
+  - : A {{domxref("DOMPoint")}} object; the coordinates (x, y) where the position of the character is to be checked in the user coordinate space.
 
 ### Return value
 

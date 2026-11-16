@@ -18,9 +18,9 @@ This article examines how to work safely with remote data and add it to a DOM.
 
 When working with strings, there are a couple of recommended options to safely add them to a page: the standard DOM node creation methods or jQuery.
 
-### DOM node creation methods
+### DOM APIs for node creation and safe text insertion
 
-A lightweight approach to inserting strings into a page is to use the native DOM manipulation methods: [`document.createElement`](/en-US/docs/Web/API/Document/createElement), [`Element.setAttribute`](/en-US/docs/Web/API/Element/setAttribute), and [`Node.textContent`](/en-US/docs/Web/API/Node/textContent). The safe approach is to create the nodes separately and assign their content using textContent:
+For a lightweight and secure method of inserting strings, use native DOM APIs: Create elements with [`document.createElement`](/en-US/docs/Web/API/Document/createElement) and set only validated, non-executable attributes using [`Element.setAttribute`](/en-US/docs/Web/API/Element/setAttribute). To add text content, use the [`textContent`](/en-US/docs/Web/API/Node/textContent) property. A safe approach is to create the nodes separately and assign their content using `textContent`:
 
 ```js example-good
 let data = JSON.parse(responseText);
@@ -43,10 +43,10 @@ Here, the contents of `data.className` or `data.color` could contain HTML that c
 
 ### jQuery
 
-When using jQuery, functions such as `attr()` and `text()` escape content as it's added to a DOM. So, the "favorite color" example from above, implemented in jQuery, would look like this:
+When using jQuery, functions such as `attr()` and `text()` avoid treating any character as HTML syntax. So, the "favorite color" example from above, implemented in jQuery, would look like this:
 
 ```js example-good
-let node = $("</div>");
+let node = $("<div>");
 node.addClass(data.className);
 node.text(`Your favorite color is now ${data.color}`);
 ```
@@ -78,11 +78,11 @@ let cleanHTML = DOMPurify.sanitize(externalHTML);
 elem.innerHTML = cleanHTML;
 ```
 
-You can use any method to add the sanitized HTML to your DOM, for example jQuery's `.html()` function. Remember though that the `SAFE_FOR_JQUERY` flag needs to be used in this case:
+You can use any method to add the sanitized HTML to your DOM, for example jQuery's `.html()` function:
 
 ```js
 let elem = $("<div/>");
-let cleanHTML = DOMPurify.sanitize(externalHTML, { SAFE_FOR_JQUERY: true });
+let cleanHTML = DOMPurify.sanitize(externalHTML);
 elem.html(cleanHTML);
 ```
 
@@ -98,4 +98,4 @@ There are similar constructs in other templating systems that need to be approac
 
 For more information on this subject, see the following articles:
 
-- [XSS (Cross Site Scripting) Prevention Cheat Sheet](https://owasp.org/www-community/xss-filter-evasion-cheatsheet)
+- [XSS (Cross Site Scripting) Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html)

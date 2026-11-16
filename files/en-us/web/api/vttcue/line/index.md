@@ -23,11 +23,11 @@ let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, "Hildy!");
-cue1.line = "1";
-console.log(cue1.line);
+let cue = new VTTCue(0, 0.9, "Hildy!");
+cue.line = "1";
+console.log(cue.line);
 
-track.addCue(cue1);
+track.addCue(cue);
 ```
 
 ## Specifications

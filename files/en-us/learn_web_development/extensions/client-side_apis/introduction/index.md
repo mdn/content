@@ -52,7 +52,7 @@ Client-side JavaScript, in particular, has many APIs available to it — these a
 - **Browser APIs** are built into your web browser and are able to expose data from the browser and surrounding computer environment and do useful complex things with it. For example, the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) provides JavaScript constructs for manipulating audio in the browser — taking an audio track, altering its volume, applying effects to it, etc. In the background, the browser is actually using some complex lower-level code (e.g., C++ or Rust) to do the actual audio processing. But again, this complexity is abstracted away from you by the API.
 - **Third-party APIs** are not built into the browser by default, and you generally have to retrieve their code and information from somewhere on the Web. For example, the [Google Maps API](https://developers.google.com/maps/documentation/javascript) allows you to do things like display an interactive map to your office on your website. It provides a special set of constructs you can use to query the Google Maps service and return specific information.
 
-![A screenshot of the browser with the home page of firefox browser open. There are APIs built into the browser by default. Third party APIs are not built into the browser by default. Their code and information has to be retrieved from somewhere on the web to utilize them.](browser.png)
+![A screenshot of the browser with the home page of firefox browser open. There are APIs built into the browser by default. Third-party APIs are not built into the browser by default. Their code and information has to be retrieved from somewhere on the web to utilize them.](browser.png)
 
 ### Relationship between JavaScript, APIs, and other JavaScript tools
 
@@ -264,7 +264,7 @@ audioElement.addEventListener("ended", () => {
 
 ### They have additional security mechanisms where appropriate
 
-WebAPI features are subject to the same security considerations as JavaScript and other web technologies (for example [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)), but they sometimes have additional security mechanisms in place. For example, some of the more modern WebAPIs will only work on pages served over HTTPS due to them transmitting potentially sensitive data (examples include [Service Workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API)).
+WebAPI features are subject to the same security considerations as JavaScript and other web technologies (for example [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)), but they sometimes have additional security mechanisms in place. For example, some of the more modern WebAPIs will only work on pages served over HTTPS due to them transmitting potentially sensitive data (examples include [Service Workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API)).
 
 In addition, some WebAPIs request permission to be enabled from the user once calls to them are made in your code. As an example, the [Notifications API](/en-US/docs/Web/API/Notifications_API) asks for permission using a pop-up dialog box:
 

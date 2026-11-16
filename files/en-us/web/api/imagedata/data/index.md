@@ -10,8 +10,7 @@ browser-compat: api.ImageData.data
 
 The readonly **`ImageData.data`** property returns a
 {{jsxref("Uint8ClampedArray")}} or {{jsxref("Float16Array")}} that contains the {{domxref("ImageData")}} object's
-pixel data. Data is stored as a one-dimensional array in the RGBA order, with integer
-values between `0` and `255` (inclusive).
+pixel data. Data is stored as a one-dimensional array in the RGBA order.
 
 ## Value
 

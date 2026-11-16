@@ -12,14 +12,16 @@ The **`replace()`** method of {{jsxref("String")}} values returns a new string w
 {{InteractiveExample("JavaScript Demo: String.prototype.replace()")}}
 
 ```js interactive-example
-const paragraph = "I think Ruth's dog is cuter than your dog!";
+const paragraph = "This dog's name is just Dog! Yes, that is the name.";
 
-console.log(paragraph.replace("Ruth's", "my"));
-// Expected output: "I think my dog is cuter than your dog!"
+console.log(paragraph.replace("name", "nickname"));
+// Expected output: "This dog's nickname is just Dog! Yes, that is the name."
 
-const regex = /dog/i;
-console.log(paragraph.replace(regex, "ferret"));
-// Expected output: "I think Ruth's ferret is cuter than your dog!"
+console.log(paragraph.replace(/\bis\b/, "was"));
+// Expected output: "This dog's name was just Dog! Yes, that is the name."
+
+console.log(paragraph.replace(/\bis\b/g, "was"));
+// Expected output: "This dog's name was just Dog! Yes, that was the name."
 ```
 
 ## Syntax
@@ -258,7 +260,7 @@ console.log("abcd".replace(/(?<group>bc)/, addOffset)); // "abc (1) d"
 
 ## See also
 
-- [Polyfill of `String.prototype.replace` in `core-js` with fixes and implementation of modern behavior like `Symbol.replace` support](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.replace` in `core-js` with fixes and implementation of modern behavior like `Symbol.replace` support](https://core-js.io/docs/features/ecmascript/string-regexp)
 - [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("String.prototype.replaceAll()")}}
 - {{jsxref("String.prototype.match()")}}

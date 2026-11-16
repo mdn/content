@@ -20,9 +20,11 @@ On MDN Web Docs, we use [Prettier](https://prettier.io/) as a code formatter to 
 
 Prettier formats all the code and keeps the style consistent. Nevertheless, there are a few additional rules that you need to follow.
 
-### Using modern JavaScript features
+### Use modern JavaScript features when supported
 
-You can use new features once every major browser — Chrome, Edge, Firefox, and Safari — supports them.
+You can use new features once every major browser — Chrome, Edge, Firefox, and Safari — supports them (a.k.a. {{glossary("Baseline")}}).
+
+This rule does not apply to the JavaScript feature being documented on the page (which is dictated instead by the [criteria for inclusion](/en-US/docs/MDN/Writing_guidelines/Criteria_for_inclusion)). For example, you can document [non-standard or experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) features and write complete examples demonstrating their behavior, but you should refrain from using these features in the demos for other unrelated features, such as a web API.
 
 ## Arrays
 
@@ -114,7 +116,7 @@ Comments are critical to writing good code examples. They clarify the intent of 
 
 Single-line comments are marked with `//`, as opposed to block comments enclosed between `/* … */`.
 
-In general, use single-line comments to comment code. Writers must mark each line of the comment with `//`, so that it's easier to notice commented-out code visually. In addition, this convention allows to comment out sections of code using `/* … */` while debugging.
+In general, use single-line comments to comment code. Writers must mark each line of the comment with `//`, so that it's easier to notice commented-out code visually. In addition, this convention allows you to comment out sections of code using `/* … */` while debugging.
 
 - Leave a space between the slashes and the comment. Start with a capital letter, like a sentence, but don't end the comment with a period.
 
@@ -272,15 +274,15 @@ function doIt() {
   Here is the recommended way:
 
   ```js example-good
-  const array1 = [1, 2, 3, 4];
-  const sum = array1.reduce((a, b) => a + b);
+  const array = [1, 2, 3, 4];
+  const sum = array.reduce((a, b) => a + b);
   ```
 
   Instead of this:
 
   ```js example-bad
-  const array1 = [1, 2, 3, 4];
-  const sum = array1.reduce(function (a, b) {
+  const array = [1, 2, 3, 4];
+  const sum = array.reduce(function (a, b) {
     return a + b;
   });
   ```

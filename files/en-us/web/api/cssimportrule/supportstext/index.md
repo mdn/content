@@ -8,7 +8,7 @@ browser-compat: api.CSSImportRule.supportsText
 
 {{APIRef("CSSOM")}}
 
-The read-only **`supportsText`** property of the {{domxref("CSSImportRule")}} interface returns the supports condition specified by the {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
+The read-only **`supportsText`** property of the {{domxref("CSSImportRule")}} interface returns the supports condition specified by the {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 
 ## Value
 
@@ -21,9 +21,9 @@ The document's single stylesheet contains three {{cssxref("@import")}} rules. Th
 The `supportsText` property returns the import conditions associated with the at-rule.
 
 ```css
-@import url("style1.css") supports(display: flex);
-@import url("style2.css") supports(selector(p:has(a)));
-@import url("style3.css");
+@import "style1.css" supports(display: flex);
+@import "style2.css" supports(selector(p:has(a)));
+@import "style3.css";
 ```
 
 ```js
@@ -43,5 +43,5 @@ console.log(myRules[2].supportsText); // returns `null`
 
 ## See also
 
-- [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
+- [Using feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
 - {{cssxref("@import")}} and {{cssxref("@supports")}}

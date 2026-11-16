@@ -3,7 +3,7 @@ title: PATCH request method
 short-title: PATCH
 slug: Web/HTTP/Reference/Methods/PATCH
 page-type: http-method
-spec-urls: https://www.rfc-editor.org/rfc/rfc5789
+spec-urls: https://www.rfc-editor.org/info/rfc5789/
 sidebar: http
 ---
 

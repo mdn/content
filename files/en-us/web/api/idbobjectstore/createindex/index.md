@@ -58,12 +58,12 @@ An {{domxref("IDBIndex")}} object: the newly created index.
 This method may raise a {{domxref("DOMException")}} of one of the following types:
 
 - `ConstraintError` {{domxref("DOMException")}}
-  - : Thrown if an index with the same name already exists in the database. Index names are case-sensitive.
+  - : Thrown if an index with the same name already exists in the object store. Index names are case-sensitive.
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if the provided key path is a sequence, and `multiEntry` is set to `true` in the `objectParameters` object.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if:
-    - The method was not called from a `versionchange` transaction mode callback, i.e., from inside a {{domxref("IDBOpenDBRequest.upgradeneeded_event", "onupgradeneeded")}} handler.
+    - The method was not called from a `versionchange` transaction mode callback, i.e., from inside an {{domxref("IDBOpenDBRequest.upgradeneeded_event", "onupgradeneeded")}} handler.
     - The object store has been deleted.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if the provided `keyPath` is not a [valid key path](https://w3c.github.io/IndexedDB/#valid-key-path).

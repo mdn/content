@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Test_your_skills/Events", "Learn_web_development/Core/Scripting")}}
 
 We've seen that a web page is composed of _elements_ — headings, paragraphs of text, images, buttons, and so on — and that you can listen for events that happen to these elements. For example, you could add a listener to a button, and it will run when the user clicks the button.
 
@@ -154,7 +154,7 @@ We're using CSS to hide elements with the `"hidden"` class set.
 div {
   width: 100%;
   height: 100%;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 .hidden {
@@ -239,7 +239,7 @@ All we're doing here is calling `stopPropagation()` on the event object in the h
 div {
   width: 100%;
   height: 100%;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 .hidden {
@@ -303,7 +303,8 @@ By default almost all event handlers are registered in the bubbling phase, and t
 
 In the last section, we looked at a problem caused by event bubbling and how to fix it. Event bubbling isn't just annoying, though: it can be very useful. In particular, it enables **event delegation**. In this practice, when we want some code to run when the user interacts with any one of a large number of child elements, we set the event listener on their parent and have events that happen on them bubble up to their parent rather than having to set the event listener on every child individually.
 
-Let's go back to our first example, where we set the background color of the whole page when the user clicked a button. Suppose that instead, the page is divided into 16 tiles, and we want to set each tile to a random color when the user clicks that tile.
+Let's go back to our [first example](/en-US/docs/Learn_web_development/Core/Scripting/Events#an_example_handling_a_click_event),
+where we set the background color of the whole page when the user clicked a button. Suppose that instead, the page is divided into 16 tiles, and we want to set each tile to a random color when the user clicks that tile.
 
 Here's the HTML:
 
@@ -364,9 +365,6 @@ The output is as follows (try clicking around on it):
 > [!NOTE]
 > In this example, we're using `event.target` to get the element that was the target of the event (that is, the innermost element). If we wanted to access the element that handled this event (in this case the container) we could use `event.currentTarget`.
 
-> [!NOTE]
-> See [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/useful-eventtarget.html) for the full source code; also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) here.
-
 ## `target` and `currentTarget`
 
 If you look closely at the examples we've introduced in this page, you'll see that we're using two different properties of the event object to access the element that was clicked. In [Setting a listener on a parent element](#setting_a_listener_on_a_parent_element) we're using {{domxref("Event.currentTarget", "event.currentTarget")}}. However, in [Event delegation](#event_delegation), we're using {{domxref("Event.target", "event.target")}}.
@@ -408,29 +406,21 @@ Note that when we click the button, `target` is the button element every time, w
 
 {{embedlivesample("target and currentTarget")}}
 
-The `target` property is commonly used in event delegation, as in our [Event delegation](#event_delegation) example above.
-
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? To verify you've retained this information before you move on — see [Test your skills: Events](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Events).
+The `target` property is commonly used in event delegation, as seen in our [Event delegation](#event_delegation) example above.
 
 ## Summary
 
-You should now know all you need to know about web events at this early stage.
-As mentioned, events are not really part of the core JavaScript — they are defined in browser Web APIs.
+You should now know all you need to know about web events at this early stage. As mentioned, events are not really part of the core JavaScript language — they are defined in browser Web APIs.
 
-Also, it is important to understand that the different contexts in which JavaScript is used have different event models — from Web APIs to other areas such as browser WebExtensions and Node.js (server-side JavaScript).
-We are not expecting you to understand all of these areas now, but it certainly helps to understand the basics of events as you forge ahead with learning web development.
-
-Next up, you'll find a challenge that will test your understanding of the last few topics.
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained all the information we've given you on events.
 
 ## See also
 
 - [domevents.dev](https://domevents.dev/)
   - : A useful interactive playground app that enables learning about the behavior of the DOM Event system through exploration.
-- [Event reference](/en-US/docs/Web/Events)
-  - : The main MDN event reference.
+- [DOM events](/en-US/docs/Web/API/Document_Object_Model/Events)
+  - : A comprehensive guide for understanding and handling events.
 - [Event order](https://www.quirksmode.org/js/events_order.html)
   - : An excellently detailed discussion of capturing and bubbling by Peter-Paul Koch.
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Test_your_skills/Events", "Learn_web_development/Core/Scripting")}}

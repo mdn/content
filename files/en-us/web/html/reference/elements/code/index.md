@@ -1,5 +1,6 @@
 ---
-title: "<code>: The Inline Code element"
+title: "`<code>` HTML inline code element"
+short-title: <code>
 slug: Web/HTML/Reference/Elements/code
 page-type: html-element
 browser-compat: html.elements.code
@@ -19,9 +20,9 @@ The **`<code>`** [HTML](/en-US/docs/Web/HTML) element displays its contents styl
 
 ```css interactive-example
 code {
-  background-color: #eee;
+  background-color: #eeeeee;
   border-radius: 3px;
-  font-family: courier, monospace;
+  font-family: "Courier New", monospace;
   padding: 0 3px;
 }
 ```
@@ -43,7 +44,7 @@ A paragraph of text that includes `<code>`:
 
 ### Result
 
-{{EmbedLiveSample("Example", 640, 70)}}
+{{EmbedLiveSample("examples", 640, 70)}}
 
 ## Notes
 

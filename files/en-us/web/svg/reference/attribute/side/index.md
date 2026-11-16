@@ -18,6 +18,12 @@ You can use this attribute with the following SVG elements:
 
 ## Example
 
+### Basic usage
+
+The following example draws two circular text paths, displaying text on the left-hand side and the right-hand side, respectively.
+
+#### HTML
+
 ```css hidden
 html,
 body,
@@ -27,8 +33,8 @@ svg {
 
 text {
   font:
-    25px Arial,
-    Helvetica,
+    25px "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```
@@ -36,30 +42,22 @@ text {
 ```html
 <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
   <text>
-    <textPath href="#circle1" side="left">Text left from the path</textPath>
+    <textPath href="#circle1" side="left">Text on left of path</textPath>
   </text>
   <text>
-    <textPath href="#circle2" side="right">Text right from the path</textPath>
+    <textPath href="#circle2" side="right">Text on right of path</textPath>
   </text>
 
-  <circle
-    id="circle1"
-    cx="100"
-    cy="100"
-    r="70"
-    fill="transparent"
-    stroke="silver" />
-  <circle
-    id="circle2"
-    cx="320"
-    cy="100"
-    r="70"
-    fill="transparent"
-    stroke="silver" />
+  <circle id="circle1" cx="100" cy="100" r="70" fill="none" stroke="silver" />
+  <circle id="circle2" cx="320" cy="100" r="70" fill="none" stroke="silver" />
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "420", "220")}}
+#### Result
+
+Browsers that support setting the `side` attribute will display text to the left (outside) and to the right (inside) of the circular text path below.
+
+{{EmbedLiveSample("Basic usage", "420", "220")}}
 
 ## Usage notes
 
@@ -92,3 +90,7 @@ text {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("SVGTextPathElement.side")}}

@@ -16,11 +16,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("contentdelete", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 oncontentdelete = (event) => { }
 ```
 
@@ -29,13 +33,6 @@ oncontentdelete = (event) => { }
 A {{domxref("ContentIndexEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("ContentIndexEvent")}}
-
-## Event properties
-
-_In addition to the properties listed below, this interface inherits the properties of its parent interface, {{domxref("Event")}}._
-
-- {{domxref("ContentIndexEvent.id", "id")}} {{ReadOnlyInline}}
-  - : A string which identifies the deleted content index via it's `id`.
 
 ## Examples
 
@@ -55,7 +52,7 @@ self.addEventListener("contentdelete", (event) => {
 });
 ```
 
-You can also set up the event handler using the `oncontentdelete` property:
+You can also set up the event handler using the `oncontentdelete` property (but note that this replaces other event listeners added using `oncontentdelete`, if any):
 
 ```js
 self.oncontentdelete = (event) => {

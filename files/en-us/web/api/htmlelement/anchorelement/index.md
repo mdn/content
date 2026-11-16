@@ -72,4 +72,4 @@ This attribute is not currently part of the HTML specification. Read the discuss
 
 - HTML [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) attribute
 - CSS {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
+- [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module

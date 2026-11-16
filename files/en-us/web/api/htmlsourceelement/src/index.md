@@ -19,11 +19,13 @@ A string; the URL of a source resource to use in the element.
 ## Examples
 
 ```html
-<source
-  id="el"
-  src="large.webp"
-  type="video/webp"
-  media="screen and (600px <= width <= 800px)" />
+<video>
+  <source
+    id="el"
+    src="large.webp"
+    type="video/webp"
+    media="screen and (600px <= width <= 800px)" />
+</video>
 ```
 
 ```js

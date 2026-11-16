@@ -1,5 +1,6 @@
 ---
-title: <xmp>
+title: "`<xmp>` HTML plain text rendering element"
+short-title: <xmp>
 slug: Web/HTML/Reference/Elements/xmp
 page-type: html-element
 status:
@@ -7,8 +8,6 @@ status:
 browser-compat: html.elements.xmp
 sidebar: htmlsidebar
 ---
-
-{{deprecated_header}}
 
 ## Summary
 

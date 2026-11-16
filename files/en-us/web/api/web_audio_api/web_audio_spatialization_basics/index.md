@@ -11,7 +11,7 @@ The official term for this is **spatialization**, and this article will cover th
 
 ## Basics of spatialization
 
-In Web Audio, complex 3D spatializations are created using the {{domxref("PannerNode")}}, which in layman's terms is basically a whole lotta cool maths to make audio appear in 3D space.
+In Web Audio, complex 3D spatializations are created using the {{domxref("PannerNode")}}, which in layman's terms is basically a whole lotta cool math to make audio appear in 3D space.
 Think sounds flying over you, creeping up behind you, moving across in front of you.
 That sort of thing.
 
@@ -177,7 +177,7 @@ We can move it left and right, up and down, and back and forth; we can also rota
 The sound direction is coming from the boombox speaker at the front, so when we rotate it, we can alter the sound's direction — i.e., make it project to the back when the boombox is rotated 180 degrees and facing away from us.
 
 We need to set up a few things for the interface.
-First, we'll get references to the elements we want to move, then we'll store references to the values we'll change when we set up [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) to actually do the movement.
+First, we'll get references to the elements we want to move, then we'll store references to the values we'll change when we set up [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms) to actually do the movement.
 Finally, we'll set some bounds so our boombox doesn't move too far in any direction:
 
 ```js
@@ -261,7 +261,7 @@ switch (direction) {
 ```
 
 Our rotation values are a little more involved, however, as we need to move the sound _around_.
-Not only do we have to update two axis values (e.g., if you rotate an object around the x-axis, you update the y and z coordinates for that object), but we also need to do some more maths for this.
+Not only do we have to update two axis values (e.g., if you rotate an object around the x-axis, you update the y and z coordinates for that object), but we also need to do some more math for this.
 The rotation is a circle and we need [`Math.sin`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin) and [`Math.cos`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos) to help us draw that circle.
 
 Let's set up a rotation rate, which we'll convert into a radian range value for use in `Math.sin` and `Math.cos` later, when we want to figure out the new coordinates when we're rotating our boombox:
@@ -480,27 +480,19 @@ Wiring up our control buttons is comparatively simple — now we can listen for 
 // for each of our controls, move the boombox and change the position values
 moveControls.forEach((el) => {
   let moving;
-  el.addEventListener(
-    "mousedown",
-    () => {
-      const direction = this.dataset.control;
-      if (moving && moving.frameId) {
-        cancelAnimationFrame(moving.frameId);
-      }
-      moving = moveBoombox(direction);
-    },
-    false,
-  );
+  el.addEventListener("mousedown", () => {
+    const direction = this.dataset.control;
+    if (moving && moving.frameId) {
+      cancelAnimationFrame(moving.frameId);
+    }
+    moving = moveBoombox(direction);
+  });
 
-  window.addEventListener(
-    "mouseup",
-    () => {
-      if (moving && moving.frameId) {
-        cancelAnimationFrame(moving.frameId);
-      }
-    },
-    false,
-  );
+  window.addEventListener("mouseup", () => {
+    if (moving && moving.frameId) {
+      cancelAnimationFrame(moving.frameId);
+    }
+  });
 });
 ```
 
@@ -538,25 +530,21 @@ Let's create a play button, that when clicked will play or pause the audio depen
 // Select our play button
 const playButton = document.querySelector("button");
 
-playButton.addEventListener(
-  "click",
-  () => {
-    // Check if context is in suspended state (autoplay policy)
-    if (audioContext.state === "suspended") {
-      audioContext.resume();
-    }
+playButton.addEventListener("click", () => {
+  // Check if context is in suspended state (autoplay policy)
+  if (audioContext.state === "suspended") {
+    audioContext.resume();
+  }
 
-    // Play or pause track depending on state
-    if (playButton.dataset.playing === "false") {
-      audioElement.play();
-      playButton.dataset.playing = "true";
-    } else if (playButton.dataset.playing === "true") {
-      audioElement.pause();
-      playButton.dataset.playing = "false";
-    }
-  },
-  false,
-);
+  // Play or pause track depending on state
+  if (playButton.dataset.playing === "false") {
+    audioElement.play();
+    playButton.dataset.playing = "true";
+  } else if (playButton.dataset.playing === "true") {
+    audioElement.pause();
+    playButton.dataset.playing = "false";
+  }
+});
 ```
 
 For a more in depth look at playing/controlling audio and audio graphs check out [Using The Web Audio API.](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
@@ -568,7 +556,7 @@ The values can be hard to manipulate sometimes and depending on your use case it
 
 > [!NOTE]
 > There are slight differences in the way the audio spatialization sounds across different browsers.
-> The panner node does some very involved maths under the hood;
+> The panner node does some very involved math under the hood;
 > there are a [number of tests here](https://wpt.fyi/results/webaudio/the-audio-api/the-pannernode-interface?label=stable&aligned=true) so you can keep track of the status of the inner workings of this node across different platforms.
 
 Again, you can [check out the final demo here](https://mdn.github.io/webaudio-examples/spatialization/), and the [final source code is here](https://github.com/mdn/webaudio-examples/tree/main/spatialization).

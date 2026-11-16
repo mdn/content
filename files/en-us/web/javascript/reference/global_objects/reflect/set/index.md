@@ -12,16 +12,16 @@ The **`Reflect.set()`** static method is like the [property accessor](/en-US/doc
 {{InteractiveExample("JavaScript Demo: Reflect.set()")}}
 
 ```js interactive-example
-const object1 = {};
-Reflect.set(object1, "property1", 42);
+const object = {};
+Reflect.set(object, "foo", 42);
 
-console.log(object1.property1);
+console.log(object.foo);
 // Expected output: 42
 
-const array1 = ["duck", "duck", "duck"];
-Reflect.set(array1, 2, "goose");
+const array = ["duck", "duck", "duck"];
+Reflect.set(array, 2, "goose");
 
-console.log(array1[2]);
+console.log(array[2]);
 // Expected output: "goose"
 ```
 
@@ -41,7 +41,7 @@ Reflect.set(target, propertyKey, value, receiver)
 - `value`
   - : The value to set.
 - `receiver` {{optional_inline}}
-  - : The value of `this` provided for the call to the setter for `propertyKey` on `target`. If provided and `target` does not have a setter for `propertyKey`, the property will be set on `receiver` instead.
+  - : The value of `this` provided for the call to the setter for `propertyKey` on `target`. If provided and `target` does not have a setter for `propertyKey`, the property will be set on `receiver` instead. Defaults to `target`.
 
 ### Return value
 
@@ -124,7 +124,7 @@ Reflect.set(target, "a", 2, receiver); // true
 
 ## See also
 
-- [Polyfill of `Reflect.set` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.set` in `core-js`](https://core-js.io/docs/features/ecmascript/reflect)
 - {{jsxref("Reflect")}}
 - [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 - [`handler.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set)

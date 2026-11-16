@@ -42,7 +42,6 @@ While somewhat awkward compared to using an actual headset, this makes it possib
 
 Download the WebXR API Emulator for your supported browser below:
 
-- [Google Chrome](https://chromewebstore.google.com/detail/webxr-api-emulator/mjddjgeghkdijejnciaefnkjmkafnnje)
 - [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/webxr-api-emulator/)
 
 The [source code for the extension](https://github.com/MozillaReality/WebXR-emulator-extension) is also available on GitHub.
@@ -268,7 +267,7 @@ Over the course of your WebXR session, you may receive any of a number of events
 
 ### Detecting changes to session's visibility state
 
-When the state of the `XRSession`'s visibility changes—such as when the session is hidden or displayed, or when the user has focused another context—the session receives an {{domxref("XRSession.visibilitychange_event", "visibilitychange")}} event.
+When the state of the `XRSession`'s visibility changes—such as when the session is hidden or displayed, or when the user has focused another context—the session receives a {{domxref("XRSession.visibilitychange_event", "visibilitychange")}} event.
 
 ```js
 session.onvisibilitychange = (event) => {

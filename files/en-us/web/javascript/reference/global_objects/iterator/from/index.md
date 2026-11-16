@@ -12,7 +12,7 @@ The **`Iterator.from()`** static method creates a new {{jsxref("Iterator")}} obj
 ## Syntax
 
 ```js-nolint
-from(object)
+Iterator.from(object)
 ```
 
 ### Parameters
@@ -22,7 +22,7 @@ from(object)
 
 ### Return value
 
-If `object` is an iterable, its `[Symbol.iterator]()` method is called to obtain the iterator. Otherwise, `object` is assumed to be an iterator. If the iterator is already {{jsxref("Operators/instanceof", "instanceof")}} {{jsxref("Iterator")}} (which means it has `Iterator.prototype` in its prototype chain), it is returned directly. Otherwise, a new {{jsxref("Iterator")}} object is created that wraps the original iterator.
+If `object` is an iterable, its `[Symbol.iterator]()` method is called to obtain the iterator. Otherwise, `object` is assumed to be an iterator. If the iterator is already {{jsxref("instanceof")}} {{jsxref("Iterator")}} (which means it has `Iterator.prototype` in its prototype chain), it is returned directly. Otherwise, a new {{jsxref("Iterator")}} object is created that wraps the original iterator.
 
 ## Description
 
@@ -119,7 +119,7 @@ console.log(obj2.next()); // { value: 1, done: false }
 
 ## See also
 
-- [Polyfill of `Iterator.from` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [Polyfill of `Iterator.from` in `core-js`](https://core-js.io/docs/features/ecmascript/iterator)
 - [es-shims polyfill of `Iterator.from`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Array.from()")}}

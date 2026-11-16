@@ -14,11 +14,15 @@ content decryption module.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("message", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onmessage = (event) => { }
 ```
 
@@ -27,13 +31,6 @@ onmessage = (event) => { }
 A {{domxref("MediaKeyMessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaKeyMessageEvent")}}
-
-## Event properties
-
-- {{domxref("MediaKeyMessageEvent.message")}} {{ReadOnlyInline}}
-  - : Returns an {{jsxref("ArrayBuffer")}} with a message from the content decryption module. Messages vary by key system.
-- {{domxref("MediaKeyMessageEvent.messageType")}} {{ReadOnlyInline}}
-  - : Indicates the type of message. May be one of `license-request`, `license-renewal`, `license-release`, or `individualization-request`.
 
 ## Specifications
 

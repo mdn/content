@@ -36,7 +36,7 @@ postTask(callback, options)
 ### Parameters
 
 - `callback`
-  - : An callback function that implements the task.
+  - : A callback function that implements the task.
     The return value of the callback is used to resolve the promise returned by this function.
 
 - `options` {{optional_inline}}
@@ -128,7 +128,7 @@ Priorities that are set in this way cannot be changed (are [immutable](/en-US/do
 
 Below we post two groups of three tasks, each member in reverse order of priority.
 The final task has the default priority.
-When run, each task simply logs it's expected order (we're not waiting on the result because we don't need to in order to show execution order).
+When run, each task simply logs its expected order (we're not waiting on the result because we don't need to in order to show execution order).
 
 ```js
 // three tasks, in reverse order of priority

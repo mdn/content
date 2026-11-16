@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XPathResult.snapshotItem
 ---
 
-{{APIRef("DOM XPath")}}
+{{APIRef("DOM")}}
 
 The **`snapshotItem()`** method of the
 {{domxref("XPathResult")}} interface returns an item of the snapshot collection or

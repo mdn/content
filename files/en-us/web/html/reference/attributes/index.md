@@ -78,6 +78,13 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/input/color#alpha">alpha</a></code>
+      </td>
+      <td>{{ HTMLElement("input") }}</td>
+      <td>Allow the user to select a color's opacity on a <code>type="color"</code> input.</td>
+    </tr>
+    <tr>
+      <td>
         <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/alt">alt</a></code>
       </td>
       <td>
@@ -85,6 +92,17 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("img") }}, {{ HTMLElement("input") }}
       </td>
       <td>Alternative text in case an image can't be displayed.</td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes">aria-*</a></code>
+      </td>
+      <td>
+        All elements
+      </td>
+      <td>
+        Modifies an element's state or properties in the accessibility tree. Applicability depends on the specific <a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a> attribute.
+      </td>
     </tr>
     <tr>
       <td>
@@ -256,6 +274,13 @@ Elements in HTML have **attributes**; these are additional values that configure
           </p>
         </div>
       </td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/input/color#colorspace">colorspace</a></code>
+      </td>
+      <td>{{ HTMLElement("input") }}</td>
+      <td>Defines the <a href="/en-US/docs/Glossary/Color_space">color space</a> that is used by a <code>type="color"</code> input.</td>
     </tr>
     <tr>
       <td>
@@ -488,6 +513,17 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority">fetchpriority</a></code>
+      </td>
+      <td>
+        {{ HTMLElement("img") }},
+        {{ HTMLElement("link") }},
+        {{ HTMLElement("script") }}
+      </td>
+      <td>Signals that fetching a particular image early in the loading process has more or less impact on user experience than a browser can reasonably infer when assigning an internal priority.</td>
+    </tr>
+    <tr>
+      <td>
         <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/for">for</a></code>
       </td>
       <td>
@@ -504,11 +540,8 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("button") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("label") }},
-        {{ HTMLElement("meter") }},
         {{ HTMLElement("object") }},
         {{ HTMLElement("output") }},
-        {{ HTMLElement("progress") }},
         {{ HTMLElement("select") }},
         {{ HTMLElement("textarea") }}
       </td>
@@ -688,16 +721,15 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/Security/Subresource_Integrity">integrity</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/integrity">integrity</a></code>
       </td>
       <td>
         {{ HTMLElement("link") }}, {{ HTMLElement("script") }}
       </td>
       <td>
         <p>
-          Specifies a
-          <a href="/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>
-          value that allows browsers to verify what they fetch.
+          This attribute contains one or more <a href="/en-US/docs/Glossary/Hash_function">hashes</a> of the resource, and is used to ensure that the content of the resource is what the developer expects it to be, and has not been replaced with a malicious copy in a <a href="/en-US/docs/Web/Security/Attacks/Supply_chain_attacks">supply chain attack</a>.</p>
+          <p>See <a href="/en-US/docs/Web/Security/Defenses/Subresource_Integrity">Subresource Integrity</a>.
         </p>
       </td>
     </tr>
@@ -1024,7 +1056,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/referralpolicy">referrerpolicy</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/referrerpolicy">referrerpolicy</a></code>
       </td>
       <td>
         {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
@@ -1410,7 +1442,27 @@ To be clear, the values `"true"` and `"false"` are not allowed on boolean attrib
 > [!WARNING]
 > The use of event handler content attributes is discouraged. The mix of HTML and JavaScript often produces unmaintainable code, and the execution of event handler attributes may also be blocked by content security policies.
 
-In addition to the attributes listed in the table above, global [event handlers](/en-US/docs/Web/Events/Event_handlers#using_onevent_properties) — such as [`onclick`](/en-US/docs/Web/API/Element/click_event) — can also be specified as [content attributes](#content_versus_idl_attributes) on all elements.
+> [!WARNING]
+> While not visible by calling the `Function.prototype.toString()` method on the handler, event handler attributes will implicitly wrap code inside of 2 `with` statements, and may produce unexpected results. For example:
+>
+> ```html
+> <div onclick="console.log(new URL(location))">Bad Example</div>
+> ```
+>
+> Essentially becomes:
+>
+> ```js example-bad
+> function onclick(event) {
+>   with (this.ownerDocument) {
+>     with (this) {
+>       console.log(new URL(location)); // 'URL' now resolves to document.URL instead of window.URL
+>       // TypeError: URL is not a constructor
+>     }
+>   }
+> }
+> ```
+
+In addition to the attributes listed in the table above, global [event handlers](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) — such as [`onclick`](/en-US/docs/Web/API/Element/click_event) — can also be specified as [content attributes](#content_versus_idl_attributes) on all elements.
 
 All event handler attributes accept a string. The string will be used to synthesize a [JavaScript function](/en-US/docs/Web/JavaScript/Reference/Functions) like `function name(/*args*/) {body}`, where `name` is the attribute's name, and `body` is the attribute's value. The handler receives the same parameters as its JavaScript event handler counterpart — most handlers receive only one `event` parameter, while `onerror` receives five: `event`, `source`, `lineno`, `colno`, `error`. This means you can, in general, use the `event` variable within the attribute.
 

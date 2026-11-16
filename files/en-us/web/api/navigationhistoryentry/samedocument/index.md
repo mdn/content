@@ -3,12 +3,10 @@ title: "NavigationHistoryEntry: sameDocument property"
 short-title: sameDocument
 slug: Web/API/NavigationHistoryEntry/sameDocument
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigationHistoryEntry.sameDocument
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`sameDocument`** read-only property of the {{domxref("NavigationHistoryEntry")}} interface returns `true` if this history entry is for the same `document` as the current {{domxref("Document")}} value and current document is fully active, or `false` otherwise.
 

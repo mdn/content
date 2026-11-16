@@ -14,11 +14,11 @@ The first time that the callback is run there is no "return value of the previou
 {{InteractiveExample("JavaScript Demo: Array.prototype.reduce()")}}
 
 ```js interactive-example
-const array1 = [1, 2, 3, 4];
+const array = [1, 2, 3, 4];
 
 // 0 + 1 + 2 + 3 + 4
 const initialValue = 0;
-const sumWithInitial = array1.reduce(
+const sumWithInitial = array.reduce(
   (accumulator, currentValue) => accumulator + currentValue,
   initialValue,
 );
@@ -404,7 +404,7 @@ In cases where `reduce()` is the best choice, documentation and semantic variabl
 
 ## See also
 
-- [Polyfill of `Array.prototype.reduce` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.reduce` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.reduce`](https://www.npmjs.com/package/array.prototype.reduce)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

@@ -23,19 +23,18 @@ None.
 
 ### Return value
 
-A promise that resolves with an {{jsxref("Uint8Array")}}.
+A promise that resolves with a {{jsxref("Uint8Array")}}.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : The request was [aborted](/en-US/docs/Web/API/Fetch_API/Using_Fetch#canceling_a_request).
 - {{jsxref("TypeError")}}
   - : Thrown for one of the following reasons:
     - The response body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
     - There was an error decoding the body content (for example, because the {{httpheader("Content-Encoding")}} header is incorrect).
 - {{jsxref("RangeError")}}
-  - : There was a problem creating the associated `ArrayBuffer`.
-    For example, if the data size is more than [`Number.MAX_SAFE_INTEGER`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER).
+  - : Thrown if there is a problem creating the associated `ArrayBuffer` (for example, if the data size is too large).
 
 ## Examples
 
@@ -109,9 +108,9 @@ If the method is not supported it logs this information.
 ```js
 if ("bytes" in Response.prototype) {
   const selectFileElement = document.getElementById("file-select");
-  selectFileElement.addEventListener("change", (event) => {
+  selectFileElement.addEventListener("change", async (event) => {
     try {
-      checkSignature(event.target.value);
+      await checkSignature(event.target.value);
     } catch (e) {
       log(e);
     }

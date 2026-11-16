@@ -10,7 +10,8 @@ Use this function to register one or more content scripts.
 
 It accepts one parameter, which is an object with similar properties to the objects given in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) manifest key (but note that `content_scripts` is an array of objects, while the argument to `register()` is one object).
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+The extension must have the appropriate [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the patterns in `contentScriptOptions`, or the
+API call is rejected.
 
 ## Syntax
 
@@ -27,13 +28,15 @@ let registering = browser.contentScripts.register(
     - property names use {{Glossary("camel_case", "camel case")}}, rather than underscores ({{Glossary("snake_case", "snake case")}}) — for example, `excludeMatches`, not `exclude_matches`.
     - the `js` and `css` properties allow you to register strings as well as URLs, so their syntax has to distinguish these types.
 
-    The `RegisteredContentScriptOptions` object has the following properties:
+    The `RegisteredContentScriptOptions` object has these properties:
     - `allFrames` {{optional_inline}}
       - : Same as [`all_frames` in the `content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#all_frames) key.
     - `cookieStoreId` {{optional_inline}}
       - : A string or array of strings. Registers the content script in the tabs that belong to one or more cookie store IDs. This enables scripts to be registered for all default or non-contextual identity tabs, private browsing tabs (if the [extension is enabled in private browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing)), the tabs of a [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities), or a combination of these. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
     - `css` {{optional_inline}}
       - : An array of objects. Each object has either a property named `file`, which is a URL starting at the extension's manifest.json and pointing to a CSS file to register, or a property named `code`, which is some CSS code to register.
+    - `cssOrigin` {{optional_inline}}
+      - : `string`. The style origin for the injection, either `"user"`, to add the CSS as a user stylesheet, or `"author"`, to add it as an author stylesheet. Defaults to `"author"`. This property is case insensitive.
     - `excludeGlobs` {{optional_inline}}
       - : Same as [`exclude_globs` in the `content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#exclude_globs) key.
     - `excludeMatches` {{optional_inline}}

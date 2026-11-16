@@ -69,17 +69,6 @@ svg {
 
 This example presents text you can resize using an {{HTMLElement("input")}} element of type [`"range"`](/en-US/docs/Web/HTML/Reference/Elements/input/range).
 
-### CSS
-
-```css
-.controls {
-  font:
-    16px "Open Sans",
-    "Arial",
-    sans-serif;
-}
-```
-
 ### SVG
 
 Let's start with the SVG. It's pretty basic, with a 1000-by-300 pixel space mapped into a 10 centimeter by 3 centimeter box.
@@ -126,6 +115,17 @@ The HTML includes two displayed elements contained inside a grouping {{HTMLEleme
 
 The {{HTMLElement("input")}} element, of type `"range"`, is used to create the slider control the user will manipulate to change the width of the text. A {{HTMLElement("span")}} element of ID `"widthDisplay"` is provided to display the current width value.
 
+### CSS
+
+```css
+.controls {
+  font:
+    16px "Open Sans",
+    "Arial",
+    sans-serif;
+}
+```
+
 ### JavaScript
 
 Finally, let's have a look at the JavaScript code. It starts by stashing references to the elements it will need to access, using {{domxref("Document.getElementById()")}}:
@@ -138,17 +138,13 @@ const baseLength = Math.floor(textElement.textLength.baseVal.value);
 
 widthSlider.value = baseLength;
 
-widthSlider.addEventListener(
-  "input",
-  (event) => {
-    textElement.textLength.baseVal.newValueSpecifiedUnits(
-      SVGLength.SVG_LENGTHTYPE_PX,
-      widthSlider.valueAsNumber,
-    );
-    widthDisplay.innerText = widthSlider.value;
-  },
-  false,
-);
+widthSlider.addEventListener("input", (event) => {
+  textElement.textLength.baseVal.newValueSpecifiedUnits(
+    SVGLength.SVG_LENGTHTYPE_PX,
+    widthSlider.valueAsNumber,
+  );
+  widthDisplay.innerText = widthSlider.value;
+});
 
 widthSlider.dispatchEvent(new Event("input"));
 ```

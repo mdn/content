@@ -26,6 +26,8 @@ _Also inherits properties from its parent interface, {{domxref("BaseAudioContext
   - : Returns the number of seconds of processing latency incurred by the `AudioContext` passing the audio from the {{domxref("AudioDestinationNode")}} to the audio subsystem.
 - {{domxref("AudioContext.outputLatency")}} {{ReadOnlyInline}}
   - : Returns an estimation of the output latency of the current audio context.
+- {{domxref("AudioContext.playbackStats")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns an {{domxref("AudioPlaybackStats")}} object providing access to duration, underrun, and latency statistics for the `AudioContext`.
 - {{domxref("AudioContext.sinkId")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns the sink ID of the current output audio device.
 
@@ -42,7 +44,7 @@ _Also inherits methods from its parent interface, {{domxref("BaseAudioContext")}
 - {{domxref("AudioContext.createMediaStreamDestination()")}}
   - : Creates a {{domxref("MediaStreamAudioDestinationNode")}} associated with a {{domxref("MediaStream")}} representing an audio stream which may be stored in a local file or sent to another computer.
 - {{domxref("AudioContext.createMediaStreamTrackSource()")}}
-  - : Creates a {{domxref("MediaStreamTrackAudioSourceNode")}} associated with a {{domxref("MediaStream")}} representing an media stream track.
+  - : Creates a {{domxref("MediaStreamTrackAudioSourceNode")}} associated with a {{domxref("MediaStream")}} representing a media stream track.
 - {{domxref("AudioContext.getOutputTimestamp()")}}
   - : Returns a new `AudioTimestamp` object containing two audio timestamp values relating to the current audio context.
 - {{domxref("AudioContext.resume()")}}

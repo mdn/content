@@ -1,5 +1,6 @@
 ---
-title: <input type="week">
+title: '`<input type="week">` HTML attribute value'
+short-title: <input type="week">
 slug: Web/HTML/Reference/Elements/input/week
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_week
@@ -87,16 +88,14 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 ### step
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) otherwise, and an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are a whole number of steps from the step base are valid. The step base is [`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) otherwise, or −259,200,000 (the start of week `1970-W01`) if neither is provided.
 
-A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
+For `week` inputs, the value of `step` is given in weeks and is treated as a number of milliseconds equal to 604,800,000 times the `step` value (the underlying numeric value is in milliseconds). The default value is 1, indicating 1 week.
+
+A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)). In reality, it has the same effect as `1` for `week` inputs because the picker UI only allows selecting whole weeks.
 
 > [!NOTE]
 > When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
-
-For `week` inputs, the value of `step` is given in weeks, with a scaling factor of 604,800,000 (since the underlying numeric value is in milliseconds). The default value of `step` is 1, indicating 1week. The default stepping base is -259,200,000, which is the beginning of the first week of 1970 (`"1970-W01"`).
-
-_At this time, it's unclear what a value of `"any"` means for `step` when used with `week` inputs. This will be updated as soon as that information is determined._
 
 ## Using week inputs
 
@@ -109,10 +108,8 @@ We'll look at basic and more complex uses of `<input type="week">`, then offer a
 The most basic use of `<input type="week">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
 
 ```html
-<form>
-  <label for="week">What week would you like to start?</label>
-  <input id="week" type="week" name="week" />
-</form>
+<label for="week">What week would you like to start?</label>
+<input id="week" type="week" name="week" />
 ```
 
 {{EmbedLiveSample('Basic_uses_of_week', 600, 40)}}
@@ -134,11 +131,9 @@ By default, `<input type="week">` does not apply any validation to entered value
 You can use the [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) and [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max) attributes to restrict the valid weeks that can be chosen by the user. In the following example we are setting a minimum value of `Week 01, 2017` and a maximum value of `Week 52, 2017`:
 
 ```html
-<form>
-  <label for="week">What week would you like to start?</label>
-  <input id="week" type="week" name="week" min="2017-W01" max="2017-W52" />
-  <span class="validity"></span>
-</form>
+<label for="week">What week would you like to start?</label>
+<input id="week" type="week" name="week" min="2017-W01" max="2017-W52" />
+<span class="validity"></span>
 ```
 
 {{EmbedLiveSample('Setting_maximum_and_minimum_weeks', 600, 40)}}
@@ -199,6 +194,12 @@ Let's look at an example; here we've set minimum and maximum weeks, and also mad
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 If you try to submit the form with no value, the browser displays an error. Try playing with the example now:
 
 {{EmbedLiveSample('Making_week_values_required', 600, 120)}}
@@ -238,35 +239,33 @@ In this example we create two sets of UI elements for choosing weeks: a native p
 The HTML looks like so:
 
 ```html
-<form>
-  <div class="nativeWeekPicker">
-    <label for="week">What week would you like to start?</label>
-    <input
-      id="week"
-      type="week"
-      name="week"
-      min="2017-W01"
-      max="2018-W52"
-      required />
-    <span class="validity"></span>
+<div class="nativeWeekPicker">
+  <label for="week">What week would you like to start?</label>
+  <input
+    id="week"
+    type="week"
+    name="week"
+    min="2017-W01"
+    max="2018-W52"
+    required />
+  <span class="validity"></span>
+</div>
+<p class="fallbackLabel">What week would you like to start?</p>
+<div class="fallbackWeekPicker">
+  <div>
+    <span>
+      <label for="week">Week:</label>
+      <select id="fallbackWeek" name="week"></select>
+    </span>
+    <span>
+      <label for="year">Year:</label>
+      <select id="year" name="year">
+        <option value="2017" selected>2017</option>
+        <option value="2018">2018</option>
+      </select>
+    </span>
   </div>
-  <p class="fallbackLabel">What week would you like to start?</p>
-  <div class="fallbackWeekPicker">
-    <div>
-      <span>
-        <label for="week">Week:</label>
-        <select id="fallbackWeek" name="week"></select>
-      </span>
-      <span>
-        <label for="year">Year:</label>
-        <select id="year" name="year">
-          <option value="2017" selected>2017</option>
-          <option value="2018">2018</option>
-        </select>
-      </span>
-    </div>
-  </div>
-</form>
+</div>
 ```
 
 The week values are dynamically generated by the JavaScript code below.
@@ -385,14 +384,6 @@ function populateWeeks() {
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        and {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

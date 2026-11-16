@@ -41,7 +41,7 @@ Web performance — and its associated best practices—are vital for your websi
 
 As an example, consider the loading experience of CNN.com, which at the time of this writing had over 400 HTTP requests with a file size of over 22.6MB.
 
-- Imagine loading this on a desktop computer connected to a fibre optic network. This would seem relatively fast, and the file size would be largely irrelevant.
+- Imagine loading this on a desktop computer connected to a fiber optic network. This would seem relatively fast, and the file size would be largely irrelevant.
 - Imagine loading that same site using tethered mobile data on a nine-year-old iPad while commuting home on public transportation. The same site will be slow to load, possibly verging on unusable depending on cell coverage. You might give up before it finishes loading.
 - Imagine loading that same site on a low-cost device in an area with limited coverage. The site will be very slow to load—if it loads at all—with blocking scripts possibly timing out, and adverse CPU impact potentially causing browser crashes if it does load.
 

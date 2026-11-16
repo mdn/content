@@ -70,9 +70,13 @@ Color attachment objects can have the following properties:
     - `"discard"`: Discards the resulting value of the render pass for this attachment.
     - `"store"`: Stores the resulting value of the render pass for this attachment.
 - `resolveTarget` {{optional_inline}}
-  - : A {{domxref("GPUTextureView")}} object representing the texture subresource that will receive the resolved output for this color attachment if `view` is multisampled.
+  - : An object representing the texture subresource that will receive the resolved output for this color attachment if `view` is multisampled. This can be one of the following:
+    - {{domxref("GPUTextureView")}}
+    - {{domxref("GPUTexture")}}: Can be used in place of a `GPUTextureView`, provided a default view is desired. When used in this context, `GPUTexture` is equivalent to a `GPUTextureView` object created using a {{domxref("GPUTexture.createView()")}} call with no argument specified.
 - `view`
-  - : A {{domxref("GPUTextureView")}} object representing the texture subresource that will be output to for this color attachment.
+  - : An object representing the texture subresource that will be output to for this color attachment. This can be one of the following:
+    - {{domxref("GPUTextureView")}}
+    - {{domxref("GPUTexture")}}: Can be used in place of a `GPUTextureView`, provided a default view is desired. When used in this context, `GPUTexture` is equivalent to a `GPUTextureView` object created using a {{domxref("GPUTexture.createView()")}} call with no argument specified.
 
     > [!NOTE]
     > Each color or depth/stencil attachment must be a unique texture subresource, and texture subresources used as attachments cannot be used inside the render pass.
@@ -120,7 +124,9 @@ The `depthStencilAttachment` object can have the following properties:
     - `"discard"`: Discards the resulting value of the render pass for this attachment.
     - `"store"`: Stores the resulting value of the render pass for this attachment.
 - `view`
-  - : A {{domxref("GPUTextureView")}} object representing the texture subresource that will be output to and read from for this depth/stencil attachment.
+  - : An object representing the texture subresource that will be output to and read from for this depth/stencil attachment. This can be one of the following:
+    - {{domxref("GPUTextureView")}}
+    - {{domxref("GPUTexture")}}: Can be used in place of a `GPUTextureView`, provided a default view is desired. When used in this context, `GPUTexture` is equivalent to a `GPUTextureView` object created using a {{domxref("GPUTexture.createView()")}} call with no argument specified.
 
 ### Return value
 
@@ -147,6 +153,9 @@ For color attachment objects
   - The sizes of the subresources that `view` and `resolveTarget` provide a view of match.
   - `view`'s and `resolveTarget`'s formats match.
 - [Color attachments bytes per sample](https://gpuweb.github.io/gpuweb/#abstract-opdef-validating-gpurenderpassdescriptors-color-attachment-bytes-per-sample) is less than or equal to the {{domxref("GPUDevice")}}'s `maxColorAttachmentBytesPerSample` {{domxref("GPUSupportedLimits", "limit", "", "nocode")}}.
+- If the [`usage`](/en-US/docs/Web/API/GPUTexture/createView#usage) of the `GPUTexture.createView()` operation that created the associated view includes the `TRANSIENT_ATTACHMENT` bit:
+  - `loadOp` is `"clear"`.
+  - `storeOp` is `"discard"`.
 
 For depth/stencil attachment objects:
 
@@ -157,6 +166,13 @@ For depth/stencil attachment objects:
 - If `view`'s format has a depth aspect, and `depthReadOnly` is `true`, `depthLoadOp` and `depthStoreOp` are not provided.
 - If `view`'s format has a stencil aspect, and `stencilReadOnly` is `false`, `stencilLoadOp` and `stencilStoreOp` are provided.
 - If `view`'s format has a stencil aspect, and `stencilReadOnly` is `true`, `stencilLoadOp` and `stencilStoreOp` are not provided.
+- If the [`usage`](/en-US/docs/Web/API/GPUTexture/createView#usage) of the `GPUTexture.createView()` operation that created the associated view includes the `TRANSIENT_ATTACHMENT` bit:
+  - If `view`'s format has a depth aspect:
+    - `depthLoadOp` is `"clear"`.
+    - `depthStoreOp` is `"discard"`.
+  - If `view`'s format has a stencil aspect:
+    - `stencilLoadOp` is `"clear"`.
+    - `stencilStoreOp` is `"discard"`.
 
 For timestamp queries:
 

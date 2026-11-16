@@ -11,7 +11,7 @@ browser-compat: api.USBDevice.releaseInterface
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`releaseInterface()`** method of the
-{{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves when a
+{{domxref("USBDevice")}} interface returns a {{jsxref("Promise")}} that resolves when a
 claimed interface is released from exclusive access.
 
 ## Syntax
@@ -27,7 +27,7 @@ releaseInterface(interfaceNumber)
 
 ### Return value
 
-A {{jsxref("promise")}}.
+A {{jsxref("Promise")}}.
 
 ## Specifications
 

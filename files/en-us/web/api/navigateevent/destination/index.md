@@ -3,12 +3,10 @@ title: "NavigateEvent: destination property"
 short-title: destination
 slug: Web/API/NavigateEvent/destination
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigateEvent.destination
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`destination`** read-only property of the
 {{domxref("NavigateEvent")}} interface returns a {{domxref("NavigationDestination")}} object representing the destination being navigated to.

@@ -18,7 +18,7 @@ A string containing a comma-separated list of color index and color pair
 
 ### Read the overridden color
 
-This example first defines a few at-rules, among them two {{cssxref("@font-palette-values")}}. As these rules live in the last stylesheet added to the document, the palette will be the second {{domxref("CSSRule")}} returned by the last stylesheet in the document (`document.styleSheets[document.styleSheets.length-1].cssRules`).
+This example first defines a few at-rules, among them two {{cssxref("@font-palette-values")}}. The MDN [live sample](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) infrastructure combines all the CSS blocks in the example into a single inline style with the id `css-output`, so we first use {{domxref("document.getElementById()")}} to find that sheet.
 
 #### HTML
 
@@ -36,8 +36,8 @@ This example first defines a few at-rules, among them two {{cssxref("@font-palet
 @font-face {
   font-family: "Noto Color Emoji";
   font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/l/font?kit=Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabts6diywYkdG3gjD0U&skey=a373f7129eaba270&v=v24)
+  font-weight: normal;
+  src: url("https://mdn.github.io/shared-assets/fonts/noto-color-emoji/NotoColorEmoji-Regular.woff2")
     format("woff2");
 }
 
@@ -49,15 +49,15 @@ This example first defines a few at-rules, among them two {{cssxref("@font-palet
 @font-palette-values --blue {
   font-family: "Noto Color Emoji";
   override-colors:
-    3 rgb(1 28 193),
-    4 rgb(60 124 230);
+    3426 rgb(1 28 193),
+    4614 rgb(60 124 230);
 }
 
 @font-palette-values --green {
   font-family: "Noto Color Emoji";
   override-colors:
-    3 rgb(28 193 1),
-    4 rgb(34 230 1);
+    3426 rgb(28 193 1),
+    4614 rgb(34 230 1);
 }
 
 .colored-hat {
@@ -71,7 +71,7 @@ This example first defines a few at-rules, among them two {{cssxref("@font-palet
 const log = document.getElementById("log");
 const button = document.querySelector("button");
 const hat = document.querySelector(".colored-hat");
-const rules = document.styleSheets[document.styleSheets.length - 1].cssRules;
+const rules = document.getElementById("css-output").sheet.cssRules;
 const greenFontPaletteValuesRule = rules[3];
 const blueFontPaletteValuesRule = rules[2];
 log.textContent = `Overridden colors: ${blueFontPaletteValuesRule.overrideColors}`;
@@ -89,7 +89,7 @@ button.addEventListener("click", (event) => {
 
 #### Result
 
-{{EmbedLiveSample("Read the overridden colors", "100", "125")}}
+{{EmbedLiveSample("read_the_overridden_color", "100", "125")}}
 
 ## Specifications
 

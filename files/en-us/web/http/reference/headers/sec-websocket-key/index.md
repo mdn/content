@@ -41,7 +41,7 @@ Sec-WebSocket-Key: <key>
 
 - `<key>`
   - : The key for this request to upgrade.
-    This is a randomly selected 16-byte nonce that has been base64-encoded and isomorphic encoded.
+    This is a randomly selected 16-byte {{Glossary("Nonce", "nonce")}} that has been base64-encoded and isomorphic encoded.
     The user agent adds this when initiating the WebSocket connection.
 
 ## Examples

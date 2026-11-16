@@ -15,10 +15,6 @@ The HTTP **`Access-Control-Allow-Origin`** {{Glossary("response header")}} indic
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 

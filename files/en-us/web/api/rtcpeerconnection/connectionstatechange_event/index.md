@@ -15,11 +15,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("connectionstatechange", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onconnectionstatechange = (event) => { }
 ```
 
@@ -33,36 +37,32 @@ For an {{domxref("RTCPeerConnection")}} named `peerConnection`, this example use
 It calls an app-defined function called `setOnlineStatus()` to update a status display.
 
 ```js
-peerConnection.addEventListener(
-  "connectionstatechange",
-  (event) => {
-    switch (peerConnection.connectionState) {
-      case "new":
-      case "connecting":
-        setOnlineStatus("Connecting…");
-        break;
-      case "connected":
-        setOnlineStatus("Online");
-        break;
-      case "disconnected":
-        setOnlineStatus("Disconnecting…");
-        break;
-      case "closed":
-        setOnlineStatus("Offline");
-        break;
-      case "failed":
-        setOnlineStatus("Error");
-        break;
-      default:
-        setOnlineStatus("Unknown");
-        break;
-    }
-  },
-  false,
-);
+peerConnection.addEventListener("connectionstatechange", (event) => {
+  switch (peerConnection.connectionState) {
+    case "new":
+    case "connecting":
+      setOnlineStatus("Connecting…");
+      break;
+    case "connected":
+      setOnlineStatus("Online");
+      break;
+    case "disconnected":
+      setOnlineStatus("Disconnecting…");
+      break;
+    case "closed":
+      setOnlineStatus("Offline");
+      break;
+    case "failed":
+      setOnlineStatus("Error");
+      break;
+    default:
+      setOnlineStatus("Unknown");
+      break;
+  }
+});
 ```
 
-You can also create a handler for the `connectionstatechange` event using the `RTCPeerConnection.onconnectionstatechange` property:
+You can also create a handler for the `connectionstatechange` event using the `RTCPeerConnection.onconnectionstatechange` property (but note that this replaces other event listeners added using `onconnectionstatechange`, if any):
 
 ```js
 peerConnection.onconnectionstatechange = (ev) => {

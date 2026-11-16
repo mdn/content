@@ -11,10 +11,10 @@ browser-compat: api.MediaStreamTrack.applyConstraints.groupId_constraint
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`groupId`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring)
 describing the requested or mandatory constraints placed upon the value of the
-{{domxref("MediaTrackSettings.groupId", "groupId")}} constrainable property.
+[`groupId`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#groupid) constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
-the value of {{domxref("MediaTrackSupportedConstraints.groupId")}} as returned by a call
+the value of [`groupId`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#groupid) as returned by a call
 to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
 unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
@@ -61,5 +61,4 @@ See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API
 - [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
-- {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("MediaStreamTrack")}}

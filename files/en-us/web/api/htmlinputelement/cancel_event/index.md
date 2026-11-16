@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLInputElement.cancel_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`cancel`** event fires on an {{HTMLElement("input")}} element when the user cancels the file picker dialog via the <kbd>Esc</kbd> key or the cancel button and when the user re-selects the same files that were previously selected of `type="file"`.
 
@@ -14,11 +14,15 @@ This event is not cancelable but can bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("cancel", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 oncancel = (event) => { }
 ```
 
