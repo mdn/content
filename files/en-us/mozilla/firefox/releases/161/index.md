@@ -60,6 +60,11 @@ Firefox 161 is the current [Beta version of Firefox](https://www.firefox.com/en-
   Custom formats can only be read by a page that is same-origin with the page that wrote them.
   ([Firefox bug 2053725](https://bugzil.la/2053725), [Firefox bug 2086505](https://bugzil.la/2086505)).
 
+- The {{domxref("NavigationTransition.to")}} property of the [Navigation API](/en-US/docs/Web/API/Navigation_API) is now supported.
+  This returns a {{domxref("NavigationDestination")}} for the ongoing navigation, so code outside the {{domxref("Navigation/navigate_event", "navigate")}} event handler can find out where the navigation is going.
+  For example, a {{domxref("Navigation/navigateerror_event", "navigateerror")}} handler can use it to report which navigation failed.
+  ([Firefox bug 1991959](https://bugzil.la/1991959)).
+
 <!-- #### DOM -->
 
 <!-- #### Media, WebRTC, and Web Audio -->
