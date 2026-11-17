@@ -231,7 +231,6 @@ In this example, we create a re-usable module that exports a function to get all
 export function getPrimes(max) {
   const isPrime = Array.from({ length: max }, () => true);
   isPrime[0] = isPrime[1] = false;
-  isPrime[2] = true;
   for (let i = 2; i * i < max; i++) {
     if (isPrime[i]) {
       for (let j = i ** 2; j < max; j += i) {
