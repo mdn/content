@@ -42,7 +42,7 @@ null || undefined ?? "foo"; // raises a SyntaxError
 true && undefined ?? "foo"; // raises a SyntaxError
 ```
 
-Instead, provide parenthesis to explicitly indicate precedence:
+Instead, provide parentheses to explicitly indicate precedence:
 
 ```js example-good
 (null || undefined) ?? "foo"; // returns "foo"

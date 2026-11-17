@@ -84,12 +84,10 @@ console.log(B() || A());
 
 ### Operator precedence
 
-The following expressions might seem equivalent, but they are not, because the
-`&&` operator is executed before the `||` operator
-(see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
+The following expressions might seem equivalent, but they are not, because the `&&` operator groups more tightly than the `||` operator (see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
 ```js-nolint
-true || false && false; // returns true, because && is executed first
+true || false && false; // returns true; equivalent to true || (false && false)
 (true || false) && false; // returns false, because grouping has the highest precedence
 ```
 
