@@ -22,7 +22,7 @@ deleteRenderbuffer(renderbuffer)
 ### Parameters
 
 - `renderbuffer`
-  - : A {{domxref("WebGLRenderbuffer")}} object to delete.
+  - : A {{domxref("WebGLRenderbuffer")}} object to delete. Passing `null` does nothing.
 
 ### Return value
 

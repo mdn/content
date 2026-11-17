@@ -27,18 +27,6 @@ selector1 selector2 {
 
 ## Examples
 
-### CSS
-
-```css
-li {
-  list-style-type: disc;
-}
-
-li li {
-  list-style-type: circle;
-}
-```
-
 ### HTML
 
 ```html
@@ -58,6 +46,18 @@ li li {
     </ul>
   </li>
 </ul>
+```
+
+### CSS
+
+```css
+li {
+  list-style-type: disc;
+}
+
+li li {
+  list-style-type: circle;
+}
 ```
 
 ### Result

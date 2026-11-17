@@ -702,7 +702,8 @@ Second, we create two new classes enabling us to hide the unneeded element: we v
 .no-widget .select {
   /* This CSS selector basically says:
      - we either set the body class to "widget", hiding the actual <select> element
-     - or we keep the body class of "no-widget", which hides elements with a class of "select"*/
+     - or we keep the body class of "no-widget", which hides elements with a class of "select"
+  */
   position: absolute;
   left: -5000em;
   height: 0;
@@ -1638,7 +1639,7 @@ But wait a second, are we really done?
 
 ## Making it accessible
 
-We have built something that works, and though we're far from a fully-featured select box, it works nicely. But what we've done is nothing more than fiddle with the DOM. It has no real semantics, and even though it looks like a select box, assistive technologies won't recognise it as one. In short, this pretty new select box isn't accessible!
+We have built something that works, and though we're far from a fully-featured select box, it works nicely. But what we've done is nothing more than fiddle with the DOM. It has no real semantics, and even though it looks like a select box, assistive technologies won't recognize it as one. In short, this pretty new select box isn't accessible!
 
 Fortunately, there is a solution: [ARIA](/en-US/docs/Web/Accessibility/ARIA). ARIA stands for "Accessible Rich Internet Applications", and it's [a W3C specification](https://w3c.github.io/aria/) specifically designed for what we are doing here: making web applications and custom controls accessible. It's a set of attributes that extend HTML to describe roles, states, and properties, allowing us to add missing semantics. Some of these are added in HTML, while others are kept up to date with JavaScript.
 
@@ -2049,8 +2050,7 @@ select.addEventListener("keydown", (event) => {
       }
       break;
     default:
-      // Ignore all other keys
-      return;
+    // Ignore all other keys
   }
 });
 ```
@@ -2571,8 +2571,7 @@ selectList.forEach((select, selectIndex) => {
         }
         break;
       default:
-        // Ignore all other keys
-        return;
+      // Ignore all other keys
     }
   });
 });

@@ -11,6 +11,23 @@ The **`SVGFECompositeElement`** interface corresponds to the {{SVGElement("feCom
 
 {{InheritanceDiagram}}
 
+## Static properties
+
+- `SVG_FECOMPOSITE_OPERATOR_UNKNOWN` (0)
+  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+- `SVG_FECOMPOSITE_OPERATOR_OVER` (1)
+  - : Corresponds to the value `over`.
+- `SVG_FECOMPOSITE_OPERATOR_IN` (2)
+  - : Corresponds to the value `in`.
+- `SVG_FECOMPOSITE_OPERATOR_OUT` (3)
+  - : Corresponds to the value `out`.
+- `SVG_FECOMPOSITE_OPERATOR_ATOP` (4)
+  - : Corresponds to the value `atop`.
+- `SVG_FECOMPOSITE_OPERATOR_XOR` (5)
+  - : Corresponds to the value `xor`.
+- `SVG_FECOMPOSITE_OPERATOR_ARITHMETIC` (6)
+  - : Corresponds to the value `arithmetic`.
+
 ## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
@@ -43,23 +60,6 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 ## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
-
-## Static properties
-
-- `SVG_FECOMPOSITE_OPERATOR_UNKNOWN` (0)
-  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
-- `SVG_FECOMPOSITE_OPERATOR_OVER` (1)
-  - : Corresponds to the value `over`.
-- `SVG_FECOMPOSITE_OPERATOR_IN` (2)
-  - : Corresponds to the value `in`.
-- `SVG_FECOMPOSITE_OPERATOR_OUT` (3)
-  - : Corresponds to the value `out`.
-- `SVG_FECOMPOSITE_OPERATOR_ATOP` (4)
-  - : Corresponds to the value `atop`.
-- `SVG_FECOMPOSITE_OPERATOR_XOR` (5)
-  - : Corresponds to the value `xor`.
-- `SVG_FECOMPOSITE_OPERATOR_ARITHMETIC` (6)
-  - : Corresponds to the value `arithmetic`.
 
 ## Specifications
 

@@ -24,19 +24,6 @@ The `aria-describedby` property is appropriate when the associated content conta
 > [!NOTE]
 > The `aria-describedby` content should only be a text string. If there are important underlying semantics in the content, consider using [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details).
 
-## Example
-
-```html
-<button aria-describedby="trash-desc">Move to trash</button>
-…
-<p id="trash-desc">
-  Items in the trash will be permanently removed after 30 days.
-</p>
-```
-
-> [!NOTE]
-> The `aria-describedby` attribute is not designed to reference descriptions from external resources. As its value is one or more `id`s (space-separated if multiple), it must reference elements in the same DOM document.
-
 ## Values
 
 - ID reference list
@@ -54,6 +41,19 @@ The `aria-describedby` property is appropriate when the associated content conta
 ## Associated roles
 
 Used in **all** roles. Usable in all HTML elements as well.
+
+## Example
+
+```html
+<button aria-describedby="trash-desc">Move to trash</button>
+…
+<p id="trash-desc">
+  Items in the trash will be permanently removed after 30 days.
+</p>
+```
+
+> [!NOTE]
+> The `aria-describedby` attribute is not designed to reference descriptions from external resources. As its value is one or more `id`s (space-separated if multiple), it must reference elements in the same DOM document.
 
 ## Specifications
 

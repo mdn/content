@@ -47,32 +47,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("tspan")}}
 - {{SVGElement("use")}}
 
-## Usage notes
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td><code>auto</code> | <code>sRGB</code> | <code>linearRGB</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>sRGB</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>discrete</td>
-    </tr>
-  </tbody>
-</table>
-
-- `auto`
-  - : Indicates that the user agent can choose either the `sRGB` or `linearRGB` spaces for color interpolation. This option indicates that the author doesn't require that color interpolation occur in a particular color space.
-- `sRGB`
-  - : Indicates that color interpolation should occur in the sRGB color space.
-- `linearRGB`
-  - : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/en/publication/6169).
-
 ## Example
 
 This example shows four SVGs, each with a {{SVGElement("rect")}} element and a different gradient used as a fill for the `<rect>`. The first two SVGs use {{SVGElement("linearGradient")}} and the second two use {{SVGElement("radialGradient")}} elements. In unsupported browsers, the gradient looks the same.
@@ -188,6 +162,32 @@ In this fourth SVG, the `color-interpolation` attribute is included on the `<rad
 ```
 
 {{EmbedLiveSample("Example", "100%", "280")}}
+
+## Usage notes
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>auto</code> | <code>sRGB</code> | <code>linearRGB</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>sRGB</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>discrete</td>
+    </tr>
+  </tbody>
+</table>
+
+- `auto`
+  - : Indicates that the user agent can choose either the `sRGB` or `linearRGB` spaces for color interpolation. This option indicates that the author doesn't require that color interpolation occur in a particular color space.
+- `sRGB`
+  - : Indicates that color interpolation should occur in the sRGB color space.
+- `linearRGB`
+  - : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/en/publication/6169).
 
 ## Specifications
 

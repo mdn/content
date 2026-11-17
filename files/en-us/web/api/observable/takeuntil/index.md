@@ -48,14 +48,14 @@ You can technically pass a synchronous iterable as the `value`, but the converte
 
 This example displays the mouse coordinates when the pointer moves over either of two `<div>` elements. Clicking anywhere in the example completes the observable and stops coordinate reporting. Click Restart after the stream ends to try again.
 
-```html hidden live-sample___basic-takeUntil
+```html hidden live-sample___basic-takeuntil
 <div></div>
 <div></div>
 <p></p>
 <button id="restart" disabled>Restart</button>
 ```
 
-```css hidden live-sample___basic-takeUntil
+```css hidden live-sample___basic-takeuntil
 div {
   height: 120px;
   background-color: purple;
@@ -63,7 +63,7 @@ div {
 }
 ```
 
-```js live-sample___basic-takeUntil
+```js live-sample___basic-takeuntil
 const outputElem = document.querySelector("p");
 
 const restart = document.querySelector("#restart");

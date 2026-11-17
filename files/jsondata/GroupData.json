@@ -1698,7 +1698,6 @@
       "interfaces": [
         "SVGAElement",
         "SVGAngle",
-        "SVGAnimateColorElement",
         "SVGAnimatedAngle",
         "SVGAnimatedBoolean",
         "SVGAnimatedEnumeration",

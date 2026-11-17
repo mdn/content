@@ -188,7 +188,7 @@ We include a `position-try-fallbacks` list (and re-declare it with the `position
 
 This gives us the following result:
 
-{{ EmbedLiveSample("Predefined try options", "100%", "250") }}
+{{ EmbedLiveSample("basic_usage", "100%", "250") }}
 
 Try scrolling so the anchor nears the edges:
 

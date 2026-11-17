@@ -32,7 +32,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 </math>
 ```
 
-{{ EmbedLiveSample('mover_example', 700, 200, "", "") }}
+{{ EmbedLiveSample('examples', 700, 200, "", "") }}
 
 ## Technical summary
 

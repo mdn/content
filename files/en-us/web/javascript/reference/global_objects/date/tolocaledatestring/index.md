@@ -52,7 +52,7 @@ In implementations that support the [`Intl.DateTimeFormat` API](/en-US/docs/Web/
     In implementations without `Intl.DateTimeFormat` support, this parameter is ignored and the host's locale is usually used.
 
 - `options` {{optional_inline}}
-  - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) parameter of the `Intl.DateTimeFormat()` constructor. The `timeStyle` option must be undefined, or a {{jsxref("TypeError")}} would be thrown. If `weekday`, `year`, `month`, and `day` are all undefined, then `year`, `month`, and `day` will be set to `"numeric"`.
+  - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) parameter of the `Intl.DateTimeFormat()` constructor. The `timeStyle` option must be undefined, or a {{jsxref("TypeError")}} would be thrown. If `weekday`, `year`, `month`, `day`, and `dateStyle` are all undefined, then `year`, `month`, and `day` will be set to `"numeric"`.
 
     In implementations without `Intl.DateTimeFormat` support, this parameter is ignored.
 
@@ -108,7 +108,7 @@ const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // US English uses month-day-year order
 console.log(date.toLocaleDateString("en-US"));
-// "12/20/2012"
+// "12/19/2012"
 
 // British English uses day-month-year order
 console.log(date.toLocaleDateString("en-GB"));
@@ -118,7 +118,7 @@ console.log(date.toLocaleDateString("en-GB"));
 console.log(date.toLocaleDateString("ko-KR"));
 // "2012. 12. 20."
 
-// Event for Persian, It's hard to manually convert date to Solar Hijri
+// Even for Persian, it's hard to manually convert date to Solar Hijri
 console.log(date.toLocaleDateString("fa-IR"));
 // "۱۳۹۱/۹/۳۰"
 

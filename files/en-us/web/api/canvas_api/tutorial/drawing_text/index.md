@@ -85,11 +85,11 @@ The following diagram from the [HTML spec](https://html.spec.whatwg.org/multipag
 This example demonstrates the various `textBaseline` property values.
 See the [`CanvasRenderingContext2D.textBaseline`](/en-US/docs/Web/API/CanvasRenderingContext2D/textBaseline) page for more information and detailed examples.
 
-```html hidden live-sample___textBaseline
+```html hidden live-sample___textbaseline
 <canvas id="my-canvas" width="400" height="100"></canvas>
 ```
 
-```js live-sample___textBaseline
+```js live-sample___textbaseline
 function draw() {
   const ctx = document.getElementById("my-canvas").getContext("2d");
   ctx.font = "48px serif";
@@ -107,7 +107,7 @@ function draw() {
 }
 ```
 
-```js hidden live-sample___textBaseline
+```js hidden live-sample___textbaseline
 draw();
 ```
 

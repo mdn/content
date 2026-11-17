@@ -218,7 +218,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample("Adjusting", "", "200")}}
+{{EmbedLiveSample("adjusting_lightness", "", "200")}}
 
 ### Adjusting opacity
 

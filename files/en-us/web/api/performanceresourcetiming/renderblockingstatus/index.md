@@ -15,6 +15,15 @@ It is useful to determine resources that:
 - weren't render-blocking and therefore could be delayed, or
 - were render-blocking and therefore could be preloaded.
 
+## Value
+
+The `renderBlockingStatus` property can have the following values:
+
+- `"blocking"`
+  - : The resource might potentially block rendering.
+- `"non-blocking"`
+  - : The resource does not block rendering.
+
 ## Description
 
 Render-blocking resources are static files, such as fonts, CSS, and JavaScript that block or delay the browser from rendering page content to the screen. The browser determines these blocking resources automatically and doesn't render any pixel to the screen before all stylesheets and synchronous scripts are loaded and evaluated. This prevents Flash of Unstyled Contents ("FOUC").
@@ -24,15 +33,6 @@ In addition to the automatic render-blocking mechanism, `blocking="render"` can 
 ```html
 <script blocking="render" src="important.js" defer></script>
 ```
-
-## Value
-
-The `renderBlockingStatus` property can have the following values:
-
-- `"blocking"`
-  - : The resource might potentially block rendering.
-- `"non-blocking"`
-  - : The resource does not block rendering.
 
 ## Examples
 

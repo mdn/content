@@ -14,32 +14,6 @@ It is similar to the `CanvasRenderingContext2D` object, with the following diffe
 - its `canvas` attribute refers to an `OffscreenCanvas` object rather than a {{HtmlElement("canvas")}} element
 - the bitmap for the placeholder {{HtmlElement("canvas")}} element belonging to the `OffscreenCanvas` object is updated during the rendering update of the `Window` or `Worker` that owns the `OffscreenCanvas`
 
-## Example
-
-The following code snippet creates a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor.
-The `transferControlToOffscreen()` method is used to get an `OffscreenCanvas` object from the {{HtmlElement("canvas")}} element so it can be transferred to the worker:
-
-```js
-const canvas = document.getElementById("canvas");
-const offscreen = canvas.transferControlToOffscreen();
-const worker = new Worker("worker.js");
-worker.postMessage({ canvas: offscreen }, [offscreen]);
-```
-
-In the worker thread, we can use the `OffscreenCanvasRenderingContext2D` to draw to the bitmap of the `OffscreenCanvas` object:
-
-```js
-onmessage = (event) => {
-  const canvas = event.data.canvas;
-  const offCtx = canvas.getContext("2d");
-  // draw to the offscreen canvas context
-  offCtx.fillStyle = "red";
-  offCtx.fillRect(0, 0, 100, 100);
-};
-```
-
-For a full example, see our [OffscreenCanvas worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/offscreen-canvas-worker) ([run OffscreenCanvas worker](https://mdn.github.io/dom-examples/web-workers/offscreen-canvas-worker/)).
-
 ## Additional methods
 
 The following method is new to the `OffscreenCanvasRenderingContext2D` interface and does not exist in the `CanvasRenderingContext2D` interface:
@@ -279,6 +253,32 @@ The following method is **not supported** in the `OffscreenCanvasRenderingContex
 
 - {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}}
   - : If a given element is focused, this method draws a focus ring around the current path.
+
+## Example
+
+The following code snippet creates a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor.
+The `transferControlToOffscreen()` method is used to get an `OffscreenCanvas` object from the {{HtmlElement("canvas")}} element so it can be transferred to the worker:
+
+```js
+const canvas = document.getElementById("canvas");
+const offscreen = canvas.transferControlToOffscreen();
+const worker = new Worker("worker.js");
+worker.postMessage({ canvas: offscreen }, [offscreen]);
+```
+
+In the worker thread, we can use the `OffscreenCanvasRenderingContext2D` to draw to the bitmap of the `OffscreenCanvas` object:
+
+```js
+onmessage = (event) => {
+  const canvas = event.data.canvas;
+  const offCtx = canvas.getContext("2d");
+  // draw to the offscreen canvas context
+  offCtx.fillStyle = "red";
+  offCtx.fillRect(0, 0, 100, 100);
+};
+```
+
+For a full example, see our [OffscreenCanvas worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/offscreen-canvas-worker) ([run OffscreenCanvas worker](https://mdn.github.io/dom-examples/web-workers/offscreen-canvas-worker/)).
 
 ## Specifications
 

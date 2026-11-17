@@ -42,7 +42,7 @@ console.log(el.dataset.equation); // "euler"
 
 ### Result
 
-{{EmbedLiveSample("dataset",100,100)}}
+{{EmbedLiveSample("examples",100,100)}}
 
 ## Specifications
 

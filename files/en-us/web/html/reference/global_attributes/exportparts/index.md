@@ -61,6 +61,17 @@ First, let's create a card component that we will then wrap with another compone
 </card-component>
 ```
 
+#### CSS
+
+We style parts of the `<card-component>` shadow tree using the {{cssxref("::part")}} pseudo-element:
+
+```css
+::part(body) {
+  color: red;
+  font-style: italic;
+}
+```
+
 #### JavaScript
 
 We use JavaScript to define our web component defined in the HTML above:
@@ -79,17 +90,6 @@ customElements.define(
     }
   },
 );
-```
-
-#### CSS
-
-We style parts of the `<card-component>` shadow tree using the {{cssxref("::part")}} pseudo-element:
-
-```css
-::part(body) {
-  color: red;
-  font-style: italic;
-}
 ```
 
 #### Results
@@ -152,6 +152,32 @@ We include a `<card-wrapper>` custom element, and a `<card-component>` for compa
 </card-component>
 ```
 
+#### CSS
+
+The following CSS targets parts of the `<card-component>` directly and when nested within a `<card-wrapper>`:
+
+```css
+h2 {
+  background-color: #dedede;
+}
+
+card-wrapper,
+card-component {
+  border: 1px dashed blue;
+  width: fit-content;
+}
+
+::part(body) {
+  color: red;
+  font-style: italic;
+}
+
+::part(header),
+::part(footer) {
+  font-weight: bold;
+}
+```
+
 #### JavaScript
 
 ```js hidden
@@ -184,32 +210,6 @@ customElements.define(
     }
   },
 );
-```
-
-#### CSS
-
-Now, we can target parts of the `<card-component>` directly and when nested within a `<card-wrapper>` like so:
-
-```css
-h2 {
-  background-color: #dedede;
-}
-
-card-wrapper,
-card-component {
-  border: 1px dashed blue;
-  width: fit-content;
-}
-
-::part(body) {
-  color: red;
-  font-style: italic;
-}
-
-::part(header),
-::part(footer) {
-  font-weight: bold;
-}
 ```
 
 #### Results
@@ -257,6 +257,22 @@ We update the prior `<card-wrapper>` custom element with the remapping syntax (o
 </template>
 ```
 
+#### CSS
+
+In targeting the parts of the `<card-component>` from within the `<card-wrapper>`, we can only style the exported parts via their exposed part names:
+
+```css
+/* selects the exported parts name */
+::part(card__header) {
+  font-weight: bold;
+}
+/* selects nothing: these part names were not exported */
+::part(footer),
+::part(body) {
+  font-weight: bold;
+}
+```
+
 #### JavaScript
 
 ```js hidden
@@ -289,22 +305,6 @@ customElements.define(
     }
   },
 );
-```
-
-#### CSS
-
-In targeting the parts of the `<card-component>` from within the `<card-wrapper>`, we can only style the exported parts via their exposed part names:
-
-```css
-/* selects the exported parts name */
-::part(card__header) {
-  font-weight: bold;
-}
-/* selects nothing: these part names were not exported */
-::part(footer),
-::part(body) {
-  font-weight: bold;
-}
 ```
 
 #### Results

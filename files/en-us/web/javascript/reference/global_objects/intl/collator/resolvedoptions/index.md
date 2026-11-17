@@ -12,14 +12,14 @@ The **`resolvedOptions()`** method of {{jsxref("Intl.Collator")}} instances retu
 {{InteractiveExample("JavaScript Demo: Intl.Collator.prototype.resolvedOptions()")}}
 
 ```js interactive-example
-const numberDe = new Intl.NumberFormat("de-DE");
-const numberAr = new Intl.NumberFormat("ar");
+const collator = new Intl.Collator("de-DE", { sensitivity: "base" });
+const options = collator.resolvedOptions();
 
-console.log(numberDe.resolvedOptions().numberingSystem);
-// Expected output: "latn"
+console.log(options.sensitivity);
+// Expected output: "base"
 
-console.log(numberAr.resolvedOptions().numberingSystem);
-// Expected output: "arab"
+console.log(options.usage);
+// Expected output: "sort"
 ```
 
 ## Syntax

@@ -222,7 +222,7 @@ p {
 
 #### Result
 
-{{EmbedLiveSample("comparing_hue_interpolation_methods", "100%", 500)}}
+{{EmbedLiveSample("comparing_hue_interpolation_algorithms", "100%", 500)}}
 
 ## Specifications
 

@@ -23,6 +23,13 @@ The [class selector](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors) se
 
 When combining a type or universal selector with a class or id selector to create a [compound selector](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#compound_selector), the type or universal selector must precede the class or id.
 
+#### HTML
+
+```html
+<p class="myClass" id="myId">I match everything.</p>
+<p>I match the universal and type selectors only.</p>
+```
+
 #### CSS
 
 In this example, we declare four [simple selectors](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#simple_selector) and one [compound selector](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#compound_selector) using the four basic selector types, as described above.
@@ -43,13 +50,6 @@ p {
 p.myClass#myId {
   font-size: 1.5rem;
 }
-```
-
-#### HTML
-
-```html
-<p class="myClass" id="myId">I match everything.</p>
-<p>I match the universal and type selectors only.</p>
 ```
 
 #### Result
@@ -84,6 +84,24 @@ There is also a [column combinator](/en-US/docs/Web/CSS/Reference/Selectors/Colu
 
 The [namespace separator](/en-US/docs/Web/CSS/Reference/Selectors/Namespace_separator) is another combinator that is generally used in conjunction with the {{CSSXref("@namespace")}} at-rule. This combinator is denoted by a single pipe character (`|`). It enables limiting [type selectors](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors) and the [universal selector](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors) to a specific namespace. For example, by defining a namespace such as `@namespace SVG url('http://www.w3.org/2000/svg');`, you can include selectors that target elements nested in an SVG namespace only. Declaring `SVG|a` would match links within SVGs and not those in the rest of the document. Namespacing can be useful to target MathML, SVG, or other XML-based content within your HTML.
 
+#### HTML
+
+```html
+<h2 class="myClass" id="myId">
+  No selectors match. <span class="myClass">This span has an outline</span> as
+  it is both myClass and a child of #myId.
+</h2>
+<p>The first paragraph is underlined. All the paragraphs are 1.1rem.</p>
+<p>
+  The second paragraph is red. This and the following paragraphs are italic.
+</p>
+<p>The third paragraph is NOT red. It is italic and 1.1rem.</p>
+<p class="myClass">
+  Does not have an outline; this is a sibling of H2, not a child. It is italic
+  and 1.1rem.
+</p>
+```
+
 #### CSS
 
 In this example, we declare five [relative selectors](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#relative_selector) using [simple selectors](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#simple_selector) combined with combinators.
@@ -106,6 +124,14 @@ h2 + p + p {
 }
 ```
 
+#### Result
+
+{{EmbedLiveSample("Combinators", "100%", 500)}}
+
+### Creating complex selectors with CSS nesting
+
+The above complex selectors can also be defined using simple selectors, combinators, and [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting), with or without the [`&` nesting selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector).
+
 #### HTML
 
 ```html
@@ -123,14 +149,6 @@ h2 + p + p {
   and 1.1rem.
 </p>
 ```
-
-#### Result
-
-{{EmbedLiveSample("Combinators", "100%", 500)}}
-
-### Creating complex selectors with CSS nesting
-
-The above complex selectors can also be defined using simple selectors, combinators, and [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting), with or without the [`&` nesting selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector).
 
 #### CSS
 
@@ -162,24 +180,6 @@ h2 {
     font-size: 1.1rem;
   }
 }
-```
-
-#### HTML
-
-```html
-<h2 class="myClass" id="myId">
-  No selectors match. <span class="myClass">This span has an outline</span> as
-  it is both myClass and a child of #myId.
-</h2>
-<p>The first paragraph is underlined. All the paragraphs are 1.1rem.</p>
-<p>
-  The second paragraph is red. This and the following paragraphs are italic.
-</p>
-<p>The third paragraph is NOT red. It is italic and 1.1rem.</p>
-<p class="myClass">
-  Does not have an outline; this is a sibling of H2, not a child. It is italic
-  and 1.1rem.
-</p>
 ```
 
 #### Result

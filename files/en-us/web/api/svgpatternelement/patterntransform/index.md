@@ -36,7 +36,7 @@ In this example, the pattern is rotated by 20 degrees, skewed on the X-axis by 3
 </svg>
 ```
 
-{{EmbedLiveSample("Examples", '100%', 300)}}
+{{EmbedLiveSample("example", '100%', 300)}}
 
 ## Specifications
 

@@ -98,18 +98,13 @@ Listen to these events using {{domxref("EventTarget/addEventListener", "addEvent
 
 Make a textarea autogrow while typing:
 
-#### JavaScript
+#### HTML
 
-```js
-function autoGrow(field) {
-  if (field.scrollHeight > field.clientHeight) {
-    field.style.height = `${field.scrollHeight}px`;
-  }
-}
-
-document.querySelector("textarea").addEventListener("keyup", (e) => {
-  autoGrow(e.target);
-});
+```html
+<fieldset>
+  <legend>Your comments</legend>
+  <p><textarea class="no-scrollbars"></textarea></p>
+</fieldset>
 ```
 
 #### CSS
@@ -122,13 +117,18 @@ textarea.no-scrollbars {
 }
 ```
 
-#### HTML
+#### JavaScript
 
-```html
-<fieldset>
-  <legend>Your comments</legend>
-  <p><textarea class="no-scrollbars"></textarea></p>
-</fieldset>
+```js
+function autoGrow(field) {
+  if (field.scrollHeight > field.clientHeight) {
+    field.style.height = `${field.scrollHeight}px`;
+  }
+}
+
+document.querySelector("textarea").addEventListener("keyup", (e) => {
+  autoGrow(e.target);
+});
 ```
 
 {{EmbedLiveSample('Autogrowing_textarea_example', 600, 300)}}

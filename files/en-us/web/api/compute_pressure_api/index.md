@@ -11,7 +11,11 @@ browser-compat: api.PressureObserver
 
 The **Compute Pressure API** is a JavaScript API that enables you to observe the pressure of system resources such as the CPU.
 
-## Use cases
+## Concepts and usage
+
+Fast and delightful web applications should balance workloads when the system's computing resources are used at (near) full capacity. The Compute Pressure API's goal is to prevent, rather than mitigate, bad user experience in the web app itself and also for the user's device to not become too hot, too loud, or to drain the battery at an unacceptable rate. Therefore, it is advised to prefer this API over feedback mechanisms or singular performance adjustments (for example, by lowering the frequency of {{domxref("window.requestAnimationFrame")}}) where bad user experience might be mitigated, but not proactively avoided. For measuring and segmenting the performance of user sessions after the fact, the {{domxref("PerformanceLongTaskTiming")}} API is better suited to analyze tasks that occupy the UI thread for 50 milliseconds or more (see also [Performance API](/en-US/docs/Web/API/Performance_API) for additional performance measurement APIs).
+
+### Use cases
 
 In real-time applications, such as video conferencing web apps, the Compute Pressure API lets you detect which pressure the system is currently facing. The system will handle any stress as well as it can, but a collaboration between system and app is useful to handle the pressure best. This API notifies you of high-level pressure state changes, so you can adjust your workloads and still offer a pleasant user experience. The signal is proactively delivered when the system pressure trend is either rising or easing to allow timely adaptation.
 
@@ -21,10 +25,6 @@ More use cases are:
 
 - Web games, for which you could balance the quality and amount of 3D assets, change the framerate, resolution, depth of field etc., to ensure low latency and stable frame rate.
 - User interfaces, for which you could render placeholders instead of real data while the system is under pressure, and render the real content once the pressure has eased.
-
-## Concepts and usage
-
-Fast and delightful web applications should balance workloads when the system's computing resources are used at (near) full capacity. The Compute Pressure API's goal is to prevent, rather than mitigate, bad user experience in the web app itself and also for the user's device to not become too hot, too loud, or to drain the battery at an unacceptable rate. Therefore, it is advised to prefer this API over feedback mechanisms or singular performance adjustments (for example, by lowering the frequency of {{domxref("window.requestAnimationFrame")}}) where bad user experience might be mitigated, but not proactively avoided. For measuring and segmenting the performance of user sessions after the fact, the {{domxref("PerformanceLongTaskTiming")}} API is better suited to analyze tasks that occupy the UI thread for 50 milliseconds or more (see also [Performance API](/en-US/docs/Web/API/Performance_API) for additional performance measurement APIs).
 
 ### Pressure source types
 

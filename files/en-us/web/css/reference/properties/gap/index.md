@@ -309,7 +309,7 @@ body > div {
 }
 ```
 
-{{EmbedLiveSample("Explicit container size", "auto", "200px")}}
+{{EmbedLiveSample("percentage_gap_value_and_explicit_container_size", "auto", "200px")}}
 
 Now inspect the grid and flex elements using [Inspector tab in Web Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html). In order to see the actual gaps hover mouse over `<div id="grid">` and `<div id="flex">` tags in the inspector. You will notice that the gap is the same in both cases which is 25px.
 
@@ -361,7 +361,7 @@ body > div {
 }
 ```
 
-{{EmbedLiveSample("Implicit container size", "auto", "200px")}}
+{{EmbedLiveSample("percentage_gap_value_and_implicit_container_size", "auto", "200px")}}
 
 In case of the grid layout, percentage gap doesn't contribute to the actual height of the grid. The container's height is calculated using `0px` gap, so the actual height turns out to be 100px (20px x 5). Then the actual percentage gap is calculated using the content box's height, the gap turns out to be `12.5px` (100px x 12.5%). The gap is applied just before rendering. Thus the grid remains 100px high but it overflows due to the percentage gap added later just before rendering.
 

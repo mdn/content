@@ -139,7 +139,7 @@ We used the same two colors in each gradient to demonstrate the different effect
 
 #### Result
 
-{{EmbedLiveSample("hue_interpolation_in_repeating_gradients", "100%", 250)}}
+{{EmbedLiveSample("color_interpolation_in_repeating_gradients", "100%", 250)}}
 
 Comparing the first and second boxes demonstrates the difference of interpolating between two colors in differing color spaces.
 Comparing the second and third boxes shows the difference between {{cssxref("hue-interpolation-method")}}s, with the linear gradient using the shorter method (default) and the radial gradient using the longer method.

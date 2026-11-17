@@ -116,7 +116,7 @@ This order is important because link styles build on one another. For example, t
 
 Now let's add some more information to get this styled properly:
 
-```css
+```css live-sample___styling-links
 body {
   width: 300px;
   margin: 0 auto;
@@ -158,7 +158,7 @@ a:active {
 
 We'll also provide some sample HTML to apply the CSS to:
 
-```html
+```html live-sample___styling-links
 <p>
   There are several browsers available, such as <a href="#">Mozilla Firefox</a>,
   <a href="#">Google Chrome</a>, and <a href="#">Microsoft Edge</a>.
@@ -167,7 +167,7 @@ We'll also provide some sample HTML to apply the CSS to:
 
 Putting the two together gives us this result:
 
-{{ EmbedLiveSample('Styling_some_links', '100%', 200) }}
+{{ EmbedLiveSample('styling-links', '100%', 200) }}
 
 So what did we do here? This certainly looks different to the default styling, but it still provides a familiar enough experience for users to know what's going on:
 

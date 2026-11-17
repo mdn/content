@@ -12,6 +12,32 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement('clipPath')}}
 
+## clipPath
+
+For {{SVGElement('clipPath')}}, `clipPathUnits` define the coordinate system in use for the content of the element.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>userSpaceOnUse</code> | <code>objectBoundingBox</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>userSpaceOnUse</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+- userSpaceOnUse
+  - : This value indicates that all coordinates inside the {{SVGElement('clipPath')}} element refer to the user coordinate system as defined when the clipping path was created.
+- objectBoundingBox
+  - : This value indicates that all coordinates inside the {{SVGElement('clipPath')}} element are relative to the bounding box of the element the clipping path is applied to. It means that the origin of the coordinate system is the top left corner of the object bounding box and the width and height of the object bounding box are considered to have a length of 1 unit value.
+
 ## Example
 
 ```css hidden
@@ -49,32 +75,6 @@ svg {
 ```
 
 {{EmbedLiveSample("Example", '100%', 200)}}
-
-## clipPath
-
-For {{SVGElement('clipPath')}}, `clipPathUnits` define the coordinate system in use for the content of the element.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td><code>userSpaceOnUse</code> | <code>objectBoundingBox</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>userSpaceOnUse</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-- userSpaceOnUse
-  - : This value indicates that all coordinates inside the {{SVGElement('clipPath')}} element refer to the user coordinate system as defined when the clipping path was created.
-- objectBoundingBox
-  - : This value indicates that all coordinates inside the {{SVGElement('clipPath')}} element are relative to the bounding box of the element the clipping path is applied to. It means that the origin of the coordinate system is the top left corner of the object bounding box and the width and height of the object bounding box are considered to have a length of 1 unit value.
 
 ## Specifications
 

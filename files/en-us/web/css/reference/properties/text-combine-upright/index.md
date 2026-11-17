@@ -105,7 +105,7 @@ html {
 
 #### Results
 
-{{EmbedLiveSample('Example using "all"', 250, 200)}}
+{{EmbedLiveSample('using_all_with_horizontal_text', 250, 200)}}
 
 ## Specifications
 

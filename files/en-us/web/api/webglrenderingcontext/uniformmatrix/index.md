@@ -28,9 +28,7 @@ uniformMatrix4fv(location, transpose, value)
 ### Parameters
 
 - `location`
-  - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
-    attribute to modify. The location is obtained using
-    {{domxref("WebGLRenderingContext.getUniformLocation", "getUniformLocation()")}}.
+  - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform attribute to modify, or `null` to silently ignore the uniform update. The location is obtained using {{domxref("WebGLRenderingContext.getUniformLocation", "getUniformLocation()")}}.
 - `transpose`
   - : A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether to transpose the matrix. Must be
     `false`.

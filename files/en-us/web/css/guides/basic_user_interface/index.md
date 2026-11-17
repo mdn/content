@@ -17,7 +17,7 @@ Basic user interface properties can be used to improve user experience and acces
 
 To view how basic user interface properties can alter the appearance of UI features, interact with the elements in this sample. Note that some features in this sample improve usability while others harm user experience.
 
-```html hidden live-sample___basicUI
+```html hidden live-sample___basicui
 <div><span contenteditable>Edit this text </span></div>
 <fieldset>
   <legend>Play with these fake form controls</legend>
@@ -41,7 +41,7 @@ To view how basic user interface properties can alter the appearance of UI featu
 </fieldset>
 ```
 
-```css hidden live-sample___basicUI
+```css hidden live-sample___basicui
 body {
   font-family: sans-serif;
   font-size: 1.25rem;

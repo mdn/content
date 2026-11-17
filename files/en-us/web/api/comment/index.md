@@ -13,14 +13,14 @@ Comments are represented in HTML and XML as content between `<!--` and `-->`. In
 
 {{InheritanceDiagram}}
 
-## Instance properties
-
-_This interface has no specific property, but inherits those of its parent, {{domxref("CharacterData")}}, and indirectly those of {{domxref("Node")}}._
-
 ## Constructor
 
 - {{ domxref("Comment.Comment()", "Comment()") }}
   - : Returns a new `Comment` object with the parameter as its textual content. If not present, its default value is the empty string, `''`.
+
+## Instance properties
+
+_This interface has no specific property, but inherits those of its parent, {{domxref("CharacterData")}}, and indirectly those of {{domxref("Node")}}._
 
 ## Instance methods
 
