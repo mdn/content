@@ -155,7 +155,8 @@ p {
     }
   }
 }
-\```
+```
+
 #### Result
 
 {{EmbedLiveSample("Limiting consecutive hyphenated lines", "", 250)}}
