@@ -143,7 +143,19 @@ p {
   hyphenate-limit-lines: 1;
 }
 ```
-
+```css hidden
+@layer no-support {
+  @supports not (hyphenate-limit-lines: 1) {
+    body::before {
+      content: "Your browser doesn't support the hyphenate-limit-lines property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
+\```
 #### Result
 
 {{EmbedLiveSample("Limiting consecutive hyphenated lines", "", 250)}}
