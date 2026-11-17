@@ -802,6 +802,7 @@ todoapp
 togglecamera
 togglemicrophone
 togglescreenshare
+tols
 toolbar-bgalignment
 toolbar-bgimage
 toolbaritem
