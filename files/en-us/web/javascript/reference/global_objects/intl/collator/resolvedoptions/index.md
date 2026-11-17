@@ -34,22 +34,22 @@ None.
 
 ### Return value
 
-A new object with properties reflecting the options computed during the initialization of this `Collator` object. The object has the following properties, in the order they are listed:
+A new object with properties reflecting the options computed according to the arguments passed to the [`Intl.Collator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator) constructor. The object has the following properties, in the order they are listed:
 
 - `locale`
   - : The {{glossary("BCP 47 language tag")}} for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. Only the `co`, `kn`, and `kf` Unicode extension keys, if requested and supported, may be included in the output.
 - `usage`
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"sort"` or `"search"`. The default is `"sort"`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is either `"sort"` or `"search"`. The default is `"sort"`.
 - `sensitivity`
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"base"`, `"accent"`, `"case"`, or `"variant"`. The default is `"variant"` for usage `"sort"`; it's locale dependent for usage `"search"`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is either `"base"`, `"accent"`, `"case"`, or `"variant"`. The default is `"variant"` for usage `"sort"`; it's locale dependent for usage `"search"`.
 - `ignorePunctuation`
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is a boolean. The default is `true` for Thai (`th`) and `false` for all other languages.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is a boolean. The default is `true` for Thai (`th`) and `false` for all other languages.
 - `collation`
-  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"co"`, with default filled in as needed. It is a supported [collation type](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_collation_types) for this locale. The default is `"default"`.
+  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"co"`, with the default filled in as needed. It is a supported [collation type](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_collation_types) for this locale. The default is `"default"`.
 - `numeric`
-  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"kn"`, with default filled in as needed. It is a boolean. The default is `false`. If the implementation does not support this Unicode extension key, this property is omitted.
+  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"kn"`, with the default filled in as needed. It is a boolean. The default is `false`. If the implementation does not support this Unicode extension key, this property is omitted.
 - `caseFirst`
-  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"kf"`, with default filled in as needed. It is either `"upper"`, `"lower"`, or `"false"`. The default is `"false"`. If the implementation does not support this Unicode extension key, this property is omitted.
+  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"kf"`, with the default filled in as needed. It is either `"upper"`, `"lower"`, or `"false"`. The default is `"false"`. If the implementation does not support this Unicode extension key, this property is omitted.
 
 ## Examples
 
