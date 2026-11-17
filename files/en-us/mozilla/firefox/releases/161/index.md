@@ -109,3 +109,14 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The {{cssxref("margin-trim")}} property is now supported for block containers this removes the margins of child elements at the container's edges, in the block-axis. This allows margins to remain between siblings but be removed at the start and/or end of a block.
   ([Firefox bug 2051240](https://bugzil.la/2051240)).
+- **Cross-document view transitions** (Nightly): `dom.viewTransitions.cross-document.enabled`
+
+  [Cross-document view transitions](/en-US/docs/Web/API/View_Transition_API/Using#basic_mpa_view_transition) are now enabled by default in Nightly.
+  These can be used to animate the transition between same-origin pages in a multi-page app.
+  ([Firefox bug 2084340](https://bugzil.la/2084340)).
+
+- **Render blocking** (Nightly): `dom.element.blocking.enabled`
+
+  The `blocking="render"` attribute of the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} elements is now enabled by default in Nightly.
+  This lets you block rendering of the page until the marked stylesheet has loaded or script has run, so the page doesn't first appear unstyled or incomplete.
+  ([Firefox bug 2084340](https://bugzil.la/2084340)).
