@@ -65,7 +65,7 @@ void (2 === "2"); // void (2 === '2'), returns undefined
 
 ### Immediately Invoked Function Expressions
 
-When using an [immediately-invoked function expression](/en-US/docs/Glossary/IIFE), the `function` keyword cannot be at the immediate start of the [statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement), because that would be parsed as a [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function), and would generate a syntax error when the parentheses representing invocation are reached — if the function is unnamed, it would immediately be a syntax error if the function is parsed as a declaration.
+When using an [immediately-invoked function expression](/en-US/docs/Glossary/IIFE), the `function` keyword cannot be at the immediate start of the [statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement), because that would be parsed as a [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function) and would generate a syntax error when the parentheses representing invocation are reached. If the function is unnamed, parsing it as a declaration will immediately generate a syntax error.
 
 ```js-nolint example-bad
 function iife() {

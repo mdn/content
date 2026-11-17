@@ -54,7 +54,7 @@ If the underlying iterator doesn't have a `throw()` method, this causes `yield*`
 
 ### Delegating to another generator
 
-In the following code, values yielded by `g1()` are returned from `next()` calls just like those which are yielded by `g2()`.
+In the following code, `next()` calls return both `g1()`- and `g2()`-yielded values.
 
 ```js
 function* g1() {

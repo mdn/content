@@ -230,7 +230,7 @@ console.log(blue); // undefined
 
 #### Swapping variables
 
-Two variables' values can be swapped in one destructuring expression.
+You can swap the values of two variables in one destructuring expression.
 
 Without destructuring, swapping two values requires a temporary variable (or, in some low-level languages, the [XOR-swap trick](https://en.wikipedia.org/wiki/XOR_swap_algorithm)).
 
