@@ -301,6 +301,8 @@ The following functions are used as a value of properties to reference a value d
   - : Uses the attributes defined on HTML element.
 - {{cssxref("env()")}}
   - : Uses the user-agent defined as environment variable.
+- {{cssxref("ident_function", "ident()")}}
+  - : Builds an identifier from strings, integers, and other identifiers.
 - {{cssxref("if()")}}
   - : Conditionally sets a property value depending on the result of a [style query](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries), [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using), or [feature query](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries).
 - {{cssxref("url_function", "url()")}}
@@ -415,6 +417,7 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
 - {{cssxref("color_value/hwb", "hwb()")}}
 - {{cssxref("hypot")}}
+- {{cssxref("ident_function", "ident()")}}
 - {{cssxref("if")}} {{experimental_inline}}
 - {{cssxref("image/image", "image()")}}
 - {{cssxref("image/image-set", "image-set()")}}
