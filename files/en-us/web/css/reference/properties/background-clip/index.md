@@ -97,7 +97,7 @@ The `border-area` and `text` values can also be specified together, in either or
 
 ## Description
 
-The background is always drawn behind the border, so `background-clip: border-box` has a visual effect only when the border is partially opaque or has transparent or partially opaque regions. Also, the `background-clip: text` property has little to no visual effect if the text is fully or partially opaque.
+The background is always drawn behind the border, so `background-clip: border-box` has a visual effect only when the border is partially opaque or has transparent or partially opaque regions. Also, the `background-clip: text` property has little to no visual effect if the text is fully or partially opaque. Similarly, `background-clip: border-area` has little to no visual effect if the border is fully or partially opaque, because the border is drawn on top of the background.
 
 > [!NOTE]
 > Because the [root element](/en-US/docs/Web/HTML/Reference/Elements/html) has a different background painting area, the `background-clip` property has no effect when specified on it. See "[The backgrounds of special elements.](https://drafts.csswg.org/css-backgrounds-3/#special-backgrounds)"
