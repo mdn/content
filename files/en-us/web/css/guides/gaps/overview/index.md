@@ -7,19 +7,19 @@ spec-urls: https://drafts.csswg.org/css-gaps/
 sidebar: cssref
 ---
 
-The [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module defines the properties that let you control the space between rows and columns in CSS [grid](/en-US/docs/Web/CSS/Guides/Grid_layout), [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout) layouts. The module also defines properties for drawing line decorations, called _rules_, within those gaps.
+The [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module defines the properties that let you control the space between rows and columns in CSS [grid](/en-US/docs/Web/CSS/Guides/Grid_layout), [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout) layouts. The module also defines properties for drawing decorative lines, called _rules_ or _gap decorations_, within those gaps.
 
 This guide introduces gap decorations and the properties that control their appearance.
 
-## Introducing gap decorations
+## Introducing gap rules
 
-The [CSS gap properties](/en-US/docs/Web/CSS/Guides/Gaps#properties) enable drawing lines in the center of each {{glossary("gutters", "gutter")}} in multi-column, grid, and flexbox layouts. While {{cssxref("margin")}} and {{cssxref("padding")}} specify visual spacing around individual boxes, the properties in the CSS gaps module let you specify spacing between adjacent boxes within a given layout. You can show rules in every gutter, or _gap_, or in a subset of gaps, defining fully animatable rule widths, colors, and insets.
+The [CSS gap properties](/en-US/docs/Web/CSS/Guides/Gaps#properties) enable drawing lines in the center of each {{glossary("gutters", "gutter")}} (or _gap_) in multi-column, grid, and flexbox layouts. While {{cssxref("margin")}} and {{cssxref("padding")}} specify visual spacing around individual boxes, the properties in the CSS gaps module let you specify spacing between adjacent boxes within a given layout. You can add rules to every gap or to a subset of gaps and also control their widths, colors, and insets and animate those features.
 
 Originally, column gaps and their decorations were limited to [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout). You could set the width, color, and style of column rules, but all rules shared the same appearance and spanned the full block dimension.
 
 Grid layout has always supported gaps between rows and columns, but it originally didn't support decorations in those gaps. Before rules expanded to all gap-aware layouts, painting lines in the gaps between rows and columns in grid and flexbox layouts required hacks such as background images, borders on all items, and even absolutely positioned overlays.
 
-CSS gap module properties let you define column and row gaps for all gap-aware layout containers and add visible separators, called _gap decorations_, painted in the middle of gaps in both horizontal and vertical gaps. These decorations don't affect the box model.
+The CSS gaps module lets you define column and row gaps for all gap-aware layout containers and draw rules in the middle of both horizontal and vertical gaps. These rules don't affect the box model.
 
 This example demonstrates the basic gap decoration features, with lime and darkviolet rules in the gaps between grid rows and columns, respectively.
 
@@ -76,44 +76,44 @@ This example demonstrates the basic gap decoration features, with lime and darkv
 
 {{EmbedLiveSample("Basic", "", "210")}}
 
-## Properties for gap sizing
+## Defining the size of gaps
 
-The {{cssxref("gap")}} shorthand and its constituent properties let you specify the spacing between adjacent columns and rows within a given layout context for layouts with gaps.
+The {{cssxref("gap")}} shorthand and its constituent properties ({{cssxref("column-gap")}} and {{cssxref("row-gap")}}) let you specify the spacing between adjacent columns and rows within a given layout context. This spacing creates the gaps in which rules can be drawn.
 
 - {{cssxref("column-gap")}}: A {{cssxref("&lt;line-width&gt;")}} or {{cssxref("&lt;length-percentage&gt;")}}: This can be one of the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} or {{cssxref("percentage")}} value, defining the width of the gap between columns. The default is `0` in flexbox and grid, and `1em` in multi-column layout.
 - {{cssxref("row-gap")}}: The same vocabulary as `column-gap`, defining the width of the gap between rows.
 - {{cssxref("gap")}}: Taking one or two values, sets both the `row-gap` and `column-gap` values at once, in that order.
 
-While these properties may seem intuitive at first, the default size and how [percentage values for gap values](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps#specifying_gap_values_as_percentages) are handled differ by layout type and whether the container has a fixed size. See [defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps) to learn about defining gaps in grid, flexbox, and multi-column layouts, including how percentage values are resolved.
+While these properties may seem intuitive at first, the default size and how [percentage values for gap values](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps#specifying_gap_values_as_percentages) are handled differ by layout type and whether the container has a fixed size. See the [Defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps) guide to learn how to size gaps in grid, flexbox, and multi-column layouts, including how percentage values are resolved.
 
-## Rule color, style, and width
+## Defining the appearance of rules
 
-Properties control the width, color, and style of rule lines, either by column or row. The `rule-*` shorthand properties set both directions to the same value(s).
+The `column-rule-*` and `row-rule-*` properties control the width, color, and style of rules in column and row gaps, respectively. The `rule-*` shorthand properties apply the same values to both column and row rules.
 
 All the properties in this section accept a comma-separated list of values, allowing for varying gap decorations within a container. You can use the {{cssxref("repeat()")}} function within the list to repeat values a specified number of times or as many times as needed to style all the rules.
 
-Each `column-rule-*` property accepts a comma-separated list, optionally including `repeat()` values:
+The `column-rule-*` properties include:
 
-- {{cssxref("column-rule")}}: Shorthand defining the {{cssxref("line-width")}}, {{cssxref("line-style")}}, and {{cssxref("&lt;color&gt;")}} of the column decorations.
-- {{cssxref("column-rule-color")}}: A {{cssxref("&lt;color&gt;")}}: The color of the rule drawn in column gaps. The default is `currentcolor`.
-- {{cssxref("column-rule-style")}}: A {{cssxref("&lt;line-style&gt;")}}: The keyword `solid`, `dashed`, `dotted`, `double`, `groove`, `ridge`, `inset`, `outset`, `none`, or `hidden` defining the line style of the rule drawn in column gaps. The default is `none`.
-- {{cssxref("column-rule-width")}}: A {{cssxref("&lt;line-width&gt;")}}: This can be one of the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value, representing the width of the line. The default is `medium`.
+- {{cssxref("column-rule")}}: Shorthand defining the {{cssxref("line-width")}}, {{cssxref("line-style")}}, and {{cssxref("&lt;color&gt;")}} of the column rules.
+- {{cssxref("column-rule-color")}}: Defines the color of the column rules.
+- {{cssxref("column-rule-style")}}: Defines the line style of the column rules. It can be `solid`, `dashed`, `dotted`, `double`, `groove`, `ridge`, `inset`, `outset`, `none`, or `hidden`.
+- {{cssxref("column-rule-width")}}: Defines the width of the column rules. It can be `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value.
 
-The `row-rule-*` properties follow the same syntax as their `column-rule-*` counterparts, applying the list of values to the horizontal gap decorations:
+The following `row-rule-*` properties follow the same syntax as their `column-rule-*` counterparts:
 
 - {{cssxref("row-rule")}}: Shorthand defining the `<line-width>`, `<line-style>`, and `<color>` of the row decoration line.
 - {{cssxref("row-rule-color")}}: A {{cssxref("&lt;color&gt;")}}: The color of the rules drawn in row gaps. The default is `currentcolor`.
 - {{cssxref("row-rule-style")}}: The same vocabulary as `column-rule-style`, defining the line styles of the rules drawn in the row gaps.
 - {{cssxref("row-rule-width")}}: The same vocabulary as `column-rule-width`, defining the width of the rules drawn in the row gaps.
 
-The `rule-*` shorthand properties take the same values as their `column-*` property components, applying the same list of values to both axes:
+The following `rule-*` shorthand properties take the same values as their `column-*` property components, applying the same list of values to both axes:
 
-- {{cssxref("rule")}}: The same vocabulary as `column-rule`. Sets both the `column-rule` and `row-rule` to the same value.
+- {{cssxref("rule")}}: Sets `column-rule` and `row-rule` to the same value.
 - {{cssxref("rule-color")}}: The same vocabulary as `column-rule-color`. Sets both the `column-rule-color` and `row-rule-color` to the same value.
 - {{cssxref("rule-style")}}: The same vocabulary as `column-rule-style`. Sets both the `column-rule-style` and `row-rule-style` to the same value.
 - {{cssxref("rule-width")}}: The same vocabulary as `column-rule-width`. Sets both the `column-rule-width` and `row-rule-width` to the same value.
 
-See [Defining CSS gap rules](/en-US/docs/Web/CSS/Guides/Gaps/Defining_rules) to learn more about defining CSS gap rules, including using the `repeat()` function, to define rule colors, widths, and styles.
+See [Defining CSS gap rules](/en-US/docs/Web/CSS/Guides/Gaps/Defining_rules) to learn more about defining rule colors, widths, styles, and using the `repeat()` function.
 
 ## Splitting rules into segments
 
@@ -123,7 +123,7 @@ In grid and multi-column layouts, rules stretch across the container's entire bl
 - {{cssxref("row-rule-break")}}: The same vocabulary as `column-rule-break`, specifying whether the row rules break across column gaps or run continuously.
 - {{cssxref("rule-break")}}: Sets `column-rule-break` and `row-rule-break` to the same value.
 
-Expanding on the first example, we split the row rules into separate segments at column gaps while keeping the column rules continuous.
+Expanding on the first example, here we've split the row rules into separate segments at column gaps while keeping the column rules continuous:
 
 ```css live-sample___breaking
 .grid {
@@ -152,9 +152,9 @@ By default, continuous rules are drawn from one end of the container to the othe
 
 When a rule breaks into segments, the edge type depends on whether it meets other rule segments at that edge. Column rules intersect row rules at interior _junctions_. When a rule segment starts or ends at an interior junction where other rule segments are present, those edges are _junction-start_ and _junction-end_ edges, respectively.
 
-The `*-rule-inset-junction-*` properties define the endpoints at gap junctions where other segments are present. The `*-rule-inset-cap-*` properties define the segment offset for segment endpoints that are not junction endpoints, including endpoints at the container's inline and block edges and at intersections where the {{cssxref("rule-visibility-items")}} property has prevented additional segments from being painted.
+The `*-rule-inset-junction-*` properties define the endpoints at gap junctions where other segments are present. The `*-rule-inset-cap-*` properties, on the other hand, adjust endpoints where no other rule segments are present. These include endpoints at the container's inline and block edges and at intersections where the {{cssxref("rule-visibility-items")}} property prevents other segments from being painted.
 
-In this example, the column rules are continuous but shortened on at both the top and bottom, with their cap edges inset `10px` using the {{cssxref("column-rule-inset-cap")}} shorthand property. The row rules are split into segments at the column gap edges using the `row-rule-break` property. We set `row-rule-inset-cap` to `-20px` to set the cap ends to outset. The junction ends are inset with the {{cssxref("row-rule-inset-junction")}} property set to `10px`. We could also have used the {{cssxref("row-rule-inset")}} shorthand set to `-20px / 10px`, which defines the cap and junction insets in that order.
+In the following example, the column rules are continuous but shortened by `10px` at both the top and bottom using the {{cssxref("column-rule-inset-cap")}} shorthand property. The row rules are split into segments at the column gap edges using the `row-rule-break` property. We've set `row-rule-inset-cap` to `-20px` to extend their cap ends outward by `20px`. We've also set {{cssxref("row-rule-inset-junction")}} to `10px` to shorten the segments by `10px` at their junction ends. Alternatively, we could have set the {{cssxref("row-rule-inset")}} shorthand to `-20px / 10px`, which defines the cap and junction insets in that order.
 
 ```css live-sample___ends
 .grid {
@@ -195,11 +195,11 @@ In this example, the column rules are continuous but shortened on at both the to
 
 ### Column rule inset properties
 
-The `column-rule-inset-*` properties enable insetting column segment cap and junction edges, controlling the segment starts, ends, or or both.
+The `column-rule-inset-*` properties enable insetting column segment cap and junction edges, controlling the segment starts, ends, or both.
 
 #### Column rule inset cap properties
 
-The `column-rule-inset-cap-*` properties specify the space between the segment and the container edge or gap junction where no other gap decoration segments exist. Positive values make the segment smaller, while negative values make the segments longer. The properties accept `<inset-value>` values, which are either `<length-percentage>` values defining the space between the top or bottom of the column segment and the bottom or top of the row gutter or the top or bottom edge of the container, or the `overlap-join` keyword, which resolves to `0` for cap edges. If the segment ends at the container's edge, percentage values resolve to `0`. Otherwise, percentages are relative to the row gap size, plus spacing added by the {{cssxref("align-content")}} property.
+The `column-rule-inset-cap-*` properties specify the space between a segment endpoint and the container edge or a gap junction where no other gap decoration segments exist. Positive values make the segment shorter, while negative values make the segments longer. The properties accept `<inset-value>` values: either a `<length-percentage>` or the `overlap-join` keyword. A `<length-percentage>` defines the space between the top or bottom of the column segment and the adjacent row gap or container edge. The `overlap-join` keyword resolves to `0` for cap edges. If the segment ends at the container's edge, percentage values resolve to `0`. Otherwise, percentages are relative to the row gap size, plus any spacing added by the {{cssxref("align-content")}} property.
 
 - {{cssxref("column-rule-inset-cap-end")}}: Defines the space between the end, or top, of the column rule segment and, depending on whether the segment starts at the top of the container or at an interior junction, either the start edge of the container or the bottom edge of the row gutter, respectively.
 
@@ -219,7 +219,7 @@ The `column-rule-inset-junction-*` properties specify the space between the segm
 
 #### Column cap and junction shorthand properties
 
-You can use the `column-rule-inset-*` properties to set cap and junction insets to the same value, while the `column-rule-inset` shorthand can be used to set the edges to a independent values:
+You can use the `column-rule-inset-*` properties to set cap and junction insets to the same value, while the `column-rule-inset` shorthand can be used to set the edges to independent values:
 
 - {{cssxref("column-rule-inset-end")}}: The single `<inset-value>` sets both the `column-rule-inset-cap-end` and `column-rule-inset-junction-end` to the same value, defining the bottom insets of all column segments.
 
@@ -233,11 +233,11 @@ The `row-rule-inset-*` properties let you inset row segment edges. Whether the l
 
 #### Row rule inset cap properties
 
-As with the `column-rule-inset-cap-*` properties, the `row-rule-inset-cap-*` properties specify the space between the segment cap edge and the container or gap junction where no other segments exist. The `<length-percentage>` values define the space between the left or right of the segment and the right or left of the column gutter at interior junctions where no other gap decoration segment exists, or the left or right edge of the container. Percentages are relative to the size of the abutting column gap, plus any additional spacing added by {{cssxref("justify-content")}} property. If the end of the segment is the edge of the container, percentages resolve to `0`. The `overlay-join` value also resolves to `0`.
+As with the `column-rule-inset-cap-*` properties, the `row-rule-inset-cap-*` properties specify the space between the segment cap edge and the container or gap junction where no other segments exist. The `<length-percentage>` values define the space between the left or right of the segment and the right or left of the column gutter at interior junctions where no other gap decoration segment exists, or the left or right edge of the container. Percentages are relative to the size of the abutting column gap, plus any additional spacing added by {{cssxref("justify-content")}} property. If the end of the segment is the edge of the container, percentages resolve to `0`. The `overlap-join` value also resolves to `0`.
 
 - {{cssxref("row-rule-inset-cap-end")}}: Defines the space between the end of the row segment and the edge of the container or the edge of a column gap where no other gap decoration segment exists; whether this is the left or the right edge of the segment depends on the writing mode.
 
-- {{cssxref("row-rule-inset-cap-start")}}: The same as `row-rule-inset-cap-start`, but for the start edge instead of the end edge of the segment.
+- {{cssxref("row-rule-inset-cap-start")}}: The same as `row-rule-inset-cap-end`, but for the start edge instead of the end edge of the segment.
 
 - {{cssxref("row-rule-inset-cap")}} shorthand: One or two `<inset-value>` values setting the `row-rule-inset-cap-start` and the `row-rule-inset-cap-end` values. If you specify only one value, both properties are set to that value. If two values are specified, `row-rule-inset-cap-start` is set to the first value and `row-rule-inset-cap-end` is set to the second value.
 
@@ -253,7 +253,7 @@ The `row-rule-inset-junction-*` properties specify the space between the segment
 
 #### Row cap and junction shorthand properties
 
-You can use the `row-rule-inset-*` properties to set cap and junction insets to the same value, while the `row-rule-inset` shorthand can be used to set row segment edges to a independent values:
+You can use the `row-rule-inset-*` properties to set cap and junction insets to the same value, while the `row-rule-inset` shorthand can be used to set row segment edges to independent values:
 
 - {{cssxref("row-rule-inset-end")}}: The single `<inset-value>` defines the end inset of all row segments, setting both the `row-rule-inset-cap-end` and `row-rule-inset-junction-end` to the same value.
 
@@ -311,13 +311,15 @@ In this example, note how no rule segments are painted alongside the empty grid 
 
 {{EmbedLiveSample("visibility", "", "340")}}
 
-- {{cssxref("column-rule-visibility-items")}}: Specifies whether the segments of column rules that are set to break should to be painted in all column gaps, in a column gap section if at least one column area adjacent to the gap has an item, or only if both column areas adjacent to the gap have an item. Valid values include the `all`, `around`, `between`, and `normal` keywords.
+The following properties control whether rule segments are painted next to empty areas:
+
+- {{cssxref("column-rule-visibility-items")}}: Specifies where segments of column rules that are set to break should be painted: in all column gaps, only where at least one column area adjacent to the gap has an item, or only where both column areas adjacent to the gap have an item. Valid values include the `all`, `around`, `between`, and `normal` keywords.
 - {{cssxref("row-rule-visibility-items")}}: The same as `column-rule-visibility-items`, but for row rule segments.
 - {{cssxref("rule-visibility-items")}}: Sets the `column-rule-visibility-items` and `row-rule-visibility-items` properties to the same value.
 
 ## Controlling rule overlap
 
-If row and column rules don't break, they overlap at junction intersections. Broken rules with junction edges set to `overlap-join` also overlap. And, depending on the size of the gap, the size of the rule, and the value of the inset, negative insets may also cause rule segment junction edges to overlap. We can control whether row rules are painted over column rules, or vice versa, with the {{cssxref("rule-overlap")}} property.
+If row and column rules are continuous, they overlap where they cross, at the junction intersections. Rules split into segments also overlap when their junction insets are set to `overlap-join`. Negative insets may also cause rule segments to overlap, depending on the size of the gap, the size of the rule, and the value of the inset. You can control whether row rules are painted over column rules, or vice versa, using the {{cssxref("rule-overlap")}} property.
 
 Expanding on the first example on this page, we've set the column rules to be painted over the row rules when they intersect.
 
