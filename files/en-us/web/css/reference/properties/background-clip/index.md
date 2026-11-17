@@ -57,6 +57,9 @@ background-clip: content-box;
 background-clip: text;
 background-clip: border-area;
 
+/* Multiple keywords */
+background-clip: border-area text;
+
 /* Global values */
 background-clip: inherit;
 background-clip: initial;
@@ -77,6 +80,8 @@ background-clip: unset;
   - : The background is painted within (clipped to) the foreground text.
 - `border-area`
   - : The background is painted within (clipped to) the area painted by the border, taking {{Cssxref("border-width")}} and {{Cssxref("border-style")}} into account but ignoring any transparency introduced by {{Cssxref("border-color")}}.
+
+The `border-area` and `text` values can also be specified together, in either order. In this case, the background is painted within (clipped to) both the area painted by the border and the foreground text.
 
 ## Description
 
@@ -120,6 +125,9 @@ Consider using feature queries with {{cssxref("@supports")}} to test for support
 <p class="border-area">
   The background is clipped to the area painted by the border.
 </p>
+<p class="border-area-text">
+  The background is clipped to the border and the foreground text.
+</p>
 ```
 
 ### CSS
@@ -154,11 +162,17 @@ p {
   background-clip: border-area;
   border-color: transparent;
 }
+
+.border-area-text {
+  background-clip: border-area text;
+  border-color: transparent;
+  color: rgb(0 0 0 / 20%);
+}
 ```
 
 #### Result
 
-{{EmbedLiveSample('Examples', 600, 630)}}
+{{EmbedLiveSample('Examples', 600, 760)}}
 
 ## Specifications
 
