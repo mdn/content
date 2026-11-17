@@ -54,6 +54,7 @@ q {
 /* Keyword values */
 quotes: none;
 quotes: auto;
+quotes: match-parent;
 
 /* <string> values */
 quotes: "«" "»"; /* Set open-quote and close-quote to use French quotation marks */
@@ -73,6 +74,12 @@ quotes: unset;
   - : The `open-quote` and `close-quote` values of the {{cssxref("content")}} property produce no quotation marks, as if `no-open-quote` and `no-close-quote` were set, respectively.
 - `auto`
   - : Quotation marks that are typographically appropriate for the inherited language (i.e., via the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute set on the parent or other ancestor).
+- `match-parent`
+  - : A matched element uses the same quotation marks as its parent element.
+    If the parent's `quotes` value is `auto`, the element uses the quotation marks chosen for the parent's language.
+    This lets a nested quotation keep the quotation style of its parent, even if they are written in different languages.
+    For other values the element uses the parent's value, as if `inherit` were set.
+
 - {{cssxref("&lt;string&gt;")}}
   - : Defines one or more pairs of quotation mark values for opening and closing quotes. In each pair, the first of each pair of quotes are used as the values for the `open-quote` and the second of each pair is the `close-quote`.
 
@@ -271,6 +278,120 @@ li {
 #### Result
 
 {{EmbedLiveSample('Text as quotes and empty quotes', "100%", 200)}}
+
+### Nested quotes in a different language
+
+This example compares `auto` and `match-parent` for quotations nested inside other quotations that are in a different language.
+Each list item contains an English paragraph that quotes Japanese text, which quotes German text, which quotes French text.
+The text of each quotation names its language, so you can see which quotation marks it gets.
+
+#### HTML
+
+The first two list items use the default quotation marks for the outer quotation.
+The last two have a `custom` class, which sets custom quotation marks.
+
+```html
+<ul>
+  <li class="auto">
+    <code>auto</code>:
+    <p lang="en">
+      English
+      <q lang="ja"
+        >日本語 <q lang="de">Deutsch <q lang="fr">français</q></q></q
+      >
+    </p>
+  </li>
+  <li class="match-parent">
+    <code>match-parent</code>:
+    <p lang="en">
+      English
+      <q lang="ja"
+        >日本語 <q lang="de">Deutsch <q lang="fr">français</q></q></q
+      >
+    </p>
+  </li>
+  <li class="custom auto">
+    Custom quotes, <code>auto</code>:
+    <p lang="en">
+      English
+      <q lang="ja"
+        >日本語 <q lang="de">Deutsch <q lang="fr">français</q></q></q
+      >
+    </p>
+  </li>
+  <li class="custom match-parent">
+    Custom quotes, <code>match-parent</code>:
+    <p lang="en">
+      English
+      <q lang="ja"
+        >日本語 <q lang="de">Deutsch <q lang="fr">français</q></q></q
+      >
+    </p>
+  </li>
+</ul>
+```
+
+#### CSS
+
+The `custom` class sets two levels of quotation marks, which the outer quotation inherits.
+The `q q` selector matches only `<q>` elements that are inside another `<q>`, so the outer quotation isn't affected by the `auto` and `match-parent` rules.
+
+```css
+.custom {
+  quotes: "$" "&" "#" "@";
+}
+
+.auto q q {
+  quotes: auto;
+}
+
+.match-parent q q {
+  quotes: match-parent;
+}
+```
+
+```css hidden
+li {
+  padding: 0.5em 0;
+}
+
+p {
+  margin: 0.25em 0 0;
+}
+
+@supports not (quotes: match-parent) {
+  body::before {
+    content: "Your browser doesn't support the 'match-parent' value of the 'quotes' property.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+```
+
+#### Result
+
+With `auto`, a quotation's marks come from the language of its parent (the text it's in), not from the quotation's own `lang` attribute.
+A quotation inside another quotation uses that language's second-level quotation marks.
+With `match-parent`, a nested quotation uses the same marks as the quotation it's in.
+
+- **`auto`**:
+  - The Japanese quotation is inside English text, so it gets English quotation marks (`“` and `”`): `“日本語 …”`.
+  - The German quotation is inside the Japanese quotation, so it gets Japanese second-level quotation marks (`『` and `』`): `『Deutsch …』`.
+  - The French quotation is inside the German quotation, so it gets German second-level quotation marks (`‚` and `‘`): `‚français‘`.
+- **`match-parent`**:
+  - The Japanese quotation gets English quotation marks (`“` and `”`), as in the first list item: `“日本語 …”`.
+  - The German and French quotations use the same quotation marks as the outer quotation, so they get English second-level quotation marks (`‘` and `’`): `‘Deutsch …’` and `‘français’`.
+- **Custom quotes, `auto`**:
+  - The Japanese quotation uses the first pair of custom quotation marks (`$` and `&`), which it inherits from the list item: `$日本語 …&`.
+  - The `auto` value on the German and French quotations replaces the custom quotation marks with language-based ones, so they get the same quotation marks as in the first list item: `『Deutsch …』` and `‚français‘`.
+- **Custom quotes, `match-parent`**:
+  - The Japanese quotation uses the first pair of custom quotation marks (`$` and `&`): `$日本語 …&`.
+  - The German quotation uses the second pair of custom quotation marks (`#` and `@`): `#Deutsch …@`.
+  - The French quotation is nested more deeply than the number of pairs, so it reuses the last pair (`#` and `@`): `#français@`.
+
+{{EmbedLiveSample("Nested quotes in a different language", "100%", 380)}}
 
 ## Specifications
 
