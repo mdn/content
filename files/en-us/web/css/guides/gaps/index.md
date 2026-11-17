@@ -453,7 +453,7 @@ When the column rule is larger than the column gap, the decorative line appears 
 
 ## Guides
 
-- [Overview of CSS gap decoration properties](/en-US/docs/Web/CSS/Guides/Gaps/Overview)
+- [Overview of CSS gaps and gap decoration properties](/en-US/docs/Web/CSS/Guides/Gaps/Overview)
   - : Overview of the features introduced in the CSS gaps module.
 - [Defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
   - : Guide to understanding and defining gaps in grid, flexbox, and multi-column layouts, including how percentage values are resolved.
