@@ -29,6 +29,18 @@ color: transparent;
 text-shadow: none;
 ```
 
+```css interactive-example-choice
+background-clip: border-area;
+border-color: transparent;
+```
+
+```css interactive-example-choice
+background-clip: border-area text;
+border-color: transparent;
+color: transparent;
+text-shadow: none;
+```
+
 ```html interactive-example
 <section id="default-example">
   <div id="example-element">This is the content of the element.</div>
