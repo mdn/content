@@ -69,6 +69,6 @@ log(customEl._internals.ariaBrailleRoleDescription);
 
 {{Compat}}
 
-### See also
+## See also
 
 - [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)
