@@ -104,3 +104,15 @@ Firefox 161 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 161 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Cross-document view transitions** (Nightly): `dom.viewTransitions.cross-document.enabled`
+
+  [Cross-document view transitions](/en-US/docs/Web/API/View_Transition_API/Using#basic_mpa_view_transition) are now enabled by default in Nightly.
+  These can be used to animate the transition between same-origin pages in a multi-page app.
+  ([Firefox bug 2084340](https://bugzil.la/2084340)).
+
+- **Render blocking** (Nightly): `dom.element.blocking.enabled`
+
+  The `blocking="render"` attribute of the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} elements is now enabled by default in Nightly.
+  This lets you block rendering of the page until the marked stylesheet has loaded or script has run, so the page doesn't first appear unstyled or incomplete.
+  ([Firefox bug 2084340](https://bugzil.la/2084340)).
