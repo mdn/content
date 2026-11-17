@@ -119,10 +119,7 @@ The mix percentage of the minimum width is `100%` minus `--progress`, and the mi
 
 ```css
 .bar {
-  width: calc-mix(
-    8rem calc(100% - var(--progress)),
-    20rem var(--progress)
-  );
+  width: calc-mix(8rem calc(100% - var(--progress)), 20rem var(--progress));
   margin-bottom: 0.5rem;
   padding: 0.5rem;
   background-color: lightblue;
