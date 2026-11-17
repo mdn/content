@@ -36,7 +36,7 @@ The `**` operator is overloaded for two types of operands: number and [BigInt](/
 
 For both numbers and BigInts, `0` raised to a positive power returns `0`, and `0` raised to a power of `0` returns `1`. For numbers, `0` raised to a negative number returns `Infinity`, `-0` raised to a negative odd integer returns `-Infinity`, and `-0` raised to any other negative number returns `Infinity`.
 
-`NaN ** 0` (and the equivalent `Math.pow(NaN, 0)`) is the only case where {{jsxref("NaN")}} doesn't propagate through mathematical operations — it returns `1` despite the operand being `NaN`. In addition, the behavior where `base` is 1 and `exponent` is non-finite (±Infinity or `NaN`) is different from IEEE 754, which specifies that the result should be 1, whereas JavaScript returns `NaN` to preserve backward compatibility with its original behavior.
+`NaN ** 0` (and the equivalent `Math.pow(NaN, 0)`) is one of the only cases where {{jsxref("NaN")}} doesn't propagate through mathematical operations — it returns `1` despite the operand being `NaN`. In addition, the behavior where `base` is 1 and `exponent` is non-finite (±Infinity or `NaN`) is different from IEEE 754, which specifies that the result should be 1, whereas JavaScript returns `NaN` to preserve backward compatibility with its original behavior.
 
 For BigInt exponentiation, a {{jsxref("RangeError")}} is thrown if the exponent `y` is negative. This is because any negative exponent would likely result in a value between 0 and 1 (unless the base is `1`, `-1`, or `0`), which is rounded to zero, and is likely a developer mistake.
 
