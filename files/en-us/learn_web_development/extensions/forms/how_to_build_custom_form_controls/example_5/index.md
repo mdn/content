@@ -498,8 +498,7 @@ selectList.forEach((select, selectIndex) => {
         }
         break;
       default:
-        // Ignore all other keys
-        return;
+      // Ignore all other keys
     }
   });
 });

@@ -48,6 +48,7 @@ Aziz
 Balhetan
 bartaz
 Bartek
+Bekele
 Belgers
 belgin
 Benbadis
@@ -69,11 +70,13 @@ Bodmin
 Boonie
 bottosson
 Boulton
+Boxel
 Brians
 Browserleaks
 Browsershots
 Browsersync
 Bubka
+Bullrun
 Bundlesize
 Bunyakovsky
 Bushell
@@ -270,6 +273,7 @@ Hönigswald
 Ibuki
 Icecast
 idb-keyval
+Iditarod
 Igalia
 Imagify
 Iniesta
@@ -316,6 +320,7 @@ Kaspersky
 Katari
 Kazam
 Keegan
+Kenenisa
 kenji-yamasaki
 Kerckhoffs
 Kersee
@@ -571,6 +576,7 @@ Statcounter
 Stratford
 Stylo
 sunhpark42
+Supabase
 SVGOMG
 Swooop
 Symfony

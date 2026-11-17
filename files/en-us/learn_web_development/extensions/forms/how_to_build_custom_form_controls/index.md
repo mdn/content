@@ -702,7 +702,8 @@ Second, we create two new classes enabling us to hide the unneeded element: we v
 .no-widget .select {
   /* This CSS selector basically says:
      - we either set the body class to "widget", hiding the actual <select> element
-     - or we keep the body class of "no-widget", which hides elements with a class of "select"*/
+     - or we keep the body class of "no-widget", which hides elements with a class of "select"
+  */
   position: absolute;
   left: -5000em;
   height: 0;
@@ -2049,8 +2050,7 @@ select.addEventListener("keydown", (event) => {
       }
       break;
     default:
-      // Ignore all other keys
-      return;
+    // Ignore all other keys
   }
 });
 ```
@@ -2571,8 +2571,7 @@ selectList.forEach((select, selectIndex) => {
         }
         break;
       default:
-        // Ignore all other keys
-        return;
+      // Ignore all other keys
     }
   });
 });

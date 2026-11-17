@@ -375,7 +375,7 @@ The result should look like this:
 
 Matrix operations might seem complicated but [they are actually pretty simple if you take them one step at a time](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html). Generally people use a matrix library rather than writing their own. In our case we're using the popular [glMatrix library](https://glmatrix.net/).
 
-### See also
+## See also
 
 - [Matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) on WebGLFundamentals
 - [Matrices](https://mathworld.wolfram.com/Matrix.html) on Wolfram MathWorld
