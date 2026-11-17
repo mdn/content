@@ -30,7 +30,8 @@ hyphenate-limit-lines: 0;
 ```html interactive-example
 <section id="default-example">
   <p id="example-element" lang="en">
-    The word supercalifragilisticexpialidocious is a mouthful of nonsensical syllables.
+    The word supercalifragilisticexpialidocious is a mouthful of nonsensical
+    syllables.
   </p>
 </section>
 ```
@@ -99,6 +100,7 @@ If {{cssxref("overflow-wrap")}} is set to `break-word` or `anywhere`, a word tha
 This example demonstrates how the `hyphenate-limit-lines` property can be used to limit consecutive hyphenated lines.
 
 #### HTML
+
 We include two boxes with the same text, including a very long word.
 
 ```html
@@ -113,7 +115,9 @@ We include two boxes with the same text, including a very long word.
 ```
 
 #### CSS
+
 We include some basic styles, including limiting the width to `10em`, which is too narrow to contain our long word. We set each box to `hyphens: auto`, which, in the narrow container, will cause the long word to break across three lines by default. We then explicitly set `hyphenate-limit-lines` on one box to the default `no-limit` value and the other to `1`, allowing any word to be hyphenated at most once.
+
 ```css
 .container {
   display: flex;
@@ -138,6 +142,7 @@ p {
   hyphenate-limit-lines: 1;
 }
 ```
+
 #### Result
 
 {{EmbedLiveSample("Limiting consecutive hyphenated lines", "", 250)}}
