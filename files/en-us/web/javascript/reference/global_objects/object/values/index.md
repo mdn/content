@@ -39,7 +39,7 @@ An array containing the given object's own enumerable string-keyed property valu
 
 ## Description
 
-`Object.values()` returns an array whose elements are values of enumerable string-keyed properties found directly upon `object`. This is the same as iterating with a {{jsxref("Statements/for...in", "for...in")}} loop, except that a `for...in` loop enumerates properties in the prototype chain as well. The order of the array returned by `Object.values()` is the same as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop.
+`Object.values()` returns an array whose elements are values of enumerable string-keyed properties found directly upon `object`. This is similar to accessing the values inside a {{jsxref("Statements/for...in", "for...in")}} loop, except that a `for...in` loop enumerates properties in the prototype chain as well. The order of the array returned by `Object.values()` is the same as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop.
 
 If you need the property keys, use {{jsxref("Object.keys()")}} instead. If you need both the property keys and values, use {{jsxref("Object.entries()")}} instead.
 
@@ -97,7 +97,7 @@ console.log(Object.values(100)); // []
 
 ## See also
 
-- [Polyfill of `Object.values` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.values` in `core-js`](https://core-js.io/docs/features/ecmascript/object)
 - [es-shims polyfill of `Object.values`](https://www.npmjs.com/package/object.values)
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}

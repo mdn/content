@@ -105,7 +105,7 @@ If there is more than one `contentinfo` landmark role or {{HTMLElement('footer')
 
 #### Redundant descriptions
 
-Screen readers will announce the type of role the landmark is. Because of this, you do not need to describe what the landmark is in its label. For example, a declaration of `role="contentinfo"` with an of `aria-label="Footer"` may be announced redundantly as, "contentinfo footer".
+Screen readers will announce the type of role the landmark is. Because of this, you do not need to describe what the landmark is in its label. For example, a declaration of `role="contentinfo"` with an `aria-label="Footer"` may be announced redundantly as, "contentinfo footer".
 
 ## Best practices
 

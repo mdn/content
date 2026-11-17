@@ -6,11 +6,11 @@ page-type: web-api-instance-method
 browser-compat: api.HTMLInputElement.select
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
-The **`HTMLInputElement.select()`** method selects all the text
-in a {{HTMLElement("textarea")}} element or in an {{HTMLElement("input")}} element
-that includes a text field.
+The **`select()`** method of the {{domxref("HTMLInputElement")}} interface selects all the text in an {{HTMLElement("input")}} element that includes a text field.
+
+Calling `element.select()` will not necessarily focus the input, so it is often used with {{domxref("HTMLElement.focus()")}}.
 
 ## Syntax
 
@@ -28,8 +28,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-Click the button in this example to select all the text in the
-`<input>` element.
+Click the button in this example to select all the text in the `<input>` element.
 
 ### HTML
 
@@ -54,11 +53,6 @@ document.querySelector("button").addEventListener("click", selectText);
 
 {{EmbedLiveSample("Examples")}}
 
-## Notes
-
-Calling `element.select()` will not necessarily focus the input, so it is
-often used with {{domxref("HTMLElement.focus")}}.
-
 ## Specifications
 
 {{Specifications}}
@@ -69,7 +63,5 @@ often used with {{domxref("HTMLElement.focus")}}.
 
 ## See also
 
-- {{ HTMLElement("input") }}
-- {{ HTMLElement("textarea") }}
-- {{ domxref("HTMLInputElement") }}
-- {{ domxref("HTMLInputElement.setSelectionRange") }}
+- {{domxref("HTMLInputElement")}}
+- {{domxref("HTMLInputElement.setSelectionRange()")}}

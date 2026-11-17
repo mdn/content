@@ -21,11 +21,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("mute", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onmute = (event) => { }
 ```
 
@@ -50,7 +54,7 @@ musicTrack.addEventListener("unmute", (event) => {
 
 With these event handlers in place, when the track `musicTrack` enters its {{domxref("MediaStreamTrack.muted", "muted")}} state, the element with the ID `timeline-widget` gets its background color changed to `#aaaaaa`. When the track exits the muted state—detected by the arrival of an `unmute` event—the background color is restored to white.
 
-You can also use the `onmute` event handler property to set up a handler for this event; similarly, the {{domxref("MediaStreamTrack.unmute_event", "onunmute")}} event handler is available for setting up a handler for the `unmute` event. The following example shows this:
+You can also use the `onmute` event handler property to set up a handler for this event; similarly, the {{domxref("MediaStreamTrack.unmute_event", "onunmute")}} event handler is available for setting up a handler for the `unmute` event. The following example shows this (but note that this replaces other event listeners added using `onmute` and `onunmute`, if any):
 
 ```js
 musicTrack.onmute = (event) => {

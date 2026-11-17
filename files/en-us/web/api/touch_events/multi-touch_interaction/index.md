@@ -12,7 +12,7 @@ A _live_ version of this application is available on [GitHub](https://mdn.github
 
 ## Example
 
-This example demonstrates using the {{domxref("Element/touchstart_event", "touchstart")}}, {{domxref("Element/touchmove_event", "touchmove")}}, {{domxref("Element/touchcancel_event", "touchcancel")}}, and {{domxref("Element/touchend_event", "touchend")}}) touch events for the following gestures: single touch, two (simultaneous) touches, more than two simultaneous touches, 1-finger swipe, and 2-finger move/pinch/swipe.
+This example demonstrates using the {{domxref("Element/touchstart_event", "touchstart")}}, {{domxref("Element/touchmove_event", "touchmove")}}, {{domxref("Element/touchcancel_event", "touchcancel")}}, and {{domxref("Element/touchend_event", "touchend")}} touch events for the following gestures: single touch, two (simultaneous) touches, more than two simultaneous touches, 1-finger swipe, and 2-finger move/pinch/swipe.
 
 ### Define touch targets
 

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 410">
+  <title>Sharing memory between agents</title>
+  <desc>An HTML page and a worker each contain a heap with a bright green SharedArrayBuffer object. A dashed, double-headed arrow labeled Sharing connects the objects, which refer to the same underlying memory.</desc>
+  <defs>
+    <style>
+      text {
+        fill: #231f20;
+        font-family: ArialMT, Arial, sans-serif;
+        font-size: 12px;
+      }
+
+      .agent-label {
+        font-size: 14px;
+      }
+
+      .box {
+        fill: #fff;
+        stroke: #231f20;
+      }
+
+      .object {
+        fill: #3ef939;
+        stroke: #231f20;
+      }
+
+      .buffer-label {
+        font-family: Menlo-Regular, Menlo, monospace;
+        font-size: 9px;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path fill="#231f20" d="M 0 0 L 10 5 L 0 10 L 3 5 Z"/>
+    </marker>
+  </defs>
+  <text class="agent-label" x="22" y="22">HTML page</text>
+  <rect class="box" x="14" y="30" width="332" height="144"/>
+  <rect class="box" x="30" y="46" width="300" height="112"/>
+  <text x="40" y="64">Heap</text>
+  <circle class="object" cx="130" cy="110" r="17.88"/>
+  <text class="buffer-label" x="158" y="114">A SharedArrayBuffer</text>
+
+  <text class="agent-label" x="22" y="242">Worker</text>
+  <rect class="box" x="14" y="250" width="332" height="144"/>
+  <rect class="box" x="30" y="266" width="300" height="112"/>
+  <text x="40" y="284">Heap</text>
+  <circle class="object" cx="130" cy="330" r="17.88"/>
+  <text class="buffer-label" x="158" y="334">A SharedArrayBuffer</text>
+
+  <line x1="130" y1="128" x2="130" y2="312" stroke="#231f20" stroke-dasharray="5 5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text class="message-label" x="142" y="208">Sharing</text>
+</svg>

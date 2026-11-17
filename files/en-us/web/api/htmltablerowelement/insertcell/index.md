@@ -8,19 +8,9 @@ browser-compat: api.HTMLTableRowElement.insertCell
 
 {{APIRef("HTML DOM")}}
 
-The **`insertCell()`** method of the {{domxref("HTMLTableRowElement")}} interface inserts a new
-cell ({{HtmlElement("td")}}) into a table row ({{HtmlElement("tr")}}) and returns a
-reference to the cell.
+The **`insertCell()`** method of the {{domxref("HTMLTableRowElement")}} interface creates a {{HTMLElement("td")}} element, inserts it at the specified position in the given {{HTMLElement("tr")}} element, and returns it.
 
-> [!NOTE]
-> `insertCell()` inserts the cell directly into the
-> row. The cell does not need to be appended separately
-> with {{domxref("Node.appendChild()")}} as would be the case if
-> {{domxref("Document.createElement()")}} had been used to create the new
-> `<td>` element.
->
-> You can not use `insertCell()` to create a new `<th>`
-> element though.
+This method creates and inserts the element directly, without requiring separate calls to methods such as {{domxref("Document.createElement()")}}, {{domxref("Node.insertBefore()")}}, and {{domxref("Node.appendChild()")}}. However, you cannot use `insertCell()` to create a new `<th>` element.
 
 ## Syntax
 
@@ -32,22 +22,20 @@ insertCell(index)
 ### Parameters
 
 - `index` {{optional_inline}}
-  - : The cell index of the new cell. If `index` is `-1` or equal to the number of cells, the cell is appended as the last cell in the row. If `index` is omitted it defaults to `-1`.
+  - : The index of the new cell in the {{domxref("HTMLTableRowElement.cells", "cells")}} collection. If `index` is `-1` or equal to the number of cells, the cell is appended as the last cell in the row. If `index` is omitted, it defaults to `-1`.
 
 ### Return value
 
-An {{domxref("HTMLTableCellElement")}} that references the new
-cell.
+An {{domxref("HTMLTableCellElement")}} that references the new cell.
 
 ### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
-  - : Thrown if `index` is greater than the number of cells.
+  - : Thrown if `index` is greater than the number of cells or smaller than `-1`.
 
 ## Examples
 
-This example uses `HTMLTableRowElement.insertCell()` to append a new cell to a
-row.
+This example uses `HTMLTableRowElement.insertCell()` to append a new cell to a row.
 
 ### HTML
 
@@ -140,4 +128,5 @@ removeButton.addEventListener("click", () => {
 ## See also
 
 - {{domxref("HTMLTableElement.insertRow()")}}
+- {{domxref("HTMLTableRowElement.deleteCell()")}}
 - The HTML element representing cells: {{domxref("HTMLTableCellElement")}}

@@ -11,7 +11,7 @@ The **CSS borders and box decorations** module provides properties for adding bo
 
 ## Borders and box decorations in action
 
-Select a `superellipse()` value from the drop down menu to change the border shape. Use the slider to change the border radius size. Toggle the checkbox to hide and show the box shadow.
+Select a `superellipse()` value from the dropdown menu to change the border shape. Use the slider to change the border radius size. Toggle the checkbox to hide and show the box shadow.
 
 ```html hidden
 <p>
@@ -124,7 +124,7 @@ range.addEventListener("input", setCornerShape);
 setCornerShape();
 ```
 
-{{EmbedLiveSample("backgrounds", "", "350px")}}
+{{EmbedLiveSample("borders_and_box_decorations_in_action", "", "350px")}}
 
 ## Reference
 

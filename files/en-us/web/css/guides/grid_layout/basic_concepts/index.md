@@ -78,7 +78,7 @@ We make the `.wrapper` a grid container using `display: grid;`.
 }
 ```
 
-{{ EmbedLiveSample('The_Grid_container', '200', '330') }}
+{{ EmbedLiveSample('grid_container', '200', '330') }}
 
 All the direct children are now grid items. In a web browser, you won't see any difference to how these items are displayed before turning them into a grid, as grid has created a single column grid for the items. If you inspect the grid in your browsers developer tools, you may see a small icon next to the value `grid`. Click this and, in most browsers, the grid on this element will be overlaid in the browser window.
 
@@ -359,7 +359,7 @@ In this example, we set `grid-auto-rows: 200px`, ensuring the tracks created in 
 }
 ```
 
-{{ EmbedLiveSample('The_implicit_and_explicit_grid', '230', '450') }}
+{{ EmbedLiveSample('implicit_and_explicit_grids', '230', '450') }}
 
 ### Track sizing and minmax
 
@@ -577,17 +577,6 @@ A grid item can become a grid container. In the following example, we extend the
 
 If we set `box1` to `display: grid`, we can give it a track definition and it too will become a grid. The items then lay out on this new grid.
 
-```css
-.box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-```
-
 ```html
 <div class="wrapper">
   <div class="box box1">
@@ -625,7 +614,12 @@ If we set `box1` to `display: grid`, we can give it a track definition and it to
 }
 
 .box1 {
-  grid-column: 1 / 4;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .nested {

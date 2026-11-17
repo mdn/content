@@ -2,8 +2,6 @@
 title: Speculation Rules API
 slug: Web/API/Speculation_Rules_API
 page-type: web-api-overview
-status:
-  - experimental
 browser-compat:
   - html.elements.script.type.speculationrules
   - http.headers.Speculation-Rules
@@ -12,7 +10,7 @@ spec-urls:
   - https://wicg.github.io/nav-speculation/prerendering.html
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Speculation Rules API")}}
+{{DefaultAPISidebar("Speculation Rules API")}}
 
 The **Speculation Rules API** is designed to improve performance for future navigations. It targets document URLs rather than specific resource files, and so makes sense for multi-page applications (MPAs) rather than single-page applications (SPAs).
 
@@ -84,10 +82,7 @@ Same-site and cross-site prefetches will work, but cross-site prefetches are lim
 > [!NOTE]
 > In the future an opt-in for cross-site prefetches will be provided via the {{httpheader("Supports-Loading-Mode")}} header, but this was not implemented at the time of writing (only cross-origin, same-site [prerendering](#using_prerendering) opt-in was available).
 
-For browsers that support it, speculation rules prefetch should be preferred over older prefetch mechanisms, namely [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prefetch) and {{domxref("Window/fetch", "fetch()")}} with a `priority: "low"` option set on it. Because we know that speculation rules prefetch is for navigations, not general resource prefetching:
-
-- It can be used for cross-site navigations, whereas `<link rel="prefetch">` cannot.
-- It doesn't get blocked by {{httpheader("Cache-Control")}} headers, whereas `<link rel="prefetch">` often does.
+For browsers that support it, speculation rules prefetch should be preferred over older prefetch mechanisms, namely [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prefetch) and {{domxref("Window/fetch", "fetch()")}} with a `priority: "low"` option set on it. Because we know that speculation rules prefetch is for navigations, not general resource prefetching, it can be used for cross-site navigations, whereas `<link rel="prefetch">` cannot.
 
 In addition, speculation rules prefetch:
 

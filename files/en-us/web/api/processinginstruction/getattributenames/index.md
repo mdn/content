@@ -3,10 +3,12 @@ title: "ProcessingInstruction: getAttributeNames() method"
 short-title: getAttributeNames()
 slug: Web/API/ProcessingInstruction/getAttributeNames
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ProcessingInstruction.getAttributeNames
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`getAttributeNames()`** method of the
 {{domxref("ProcessingInstruction")}} interface returns the attribute names of the processing instruction as an

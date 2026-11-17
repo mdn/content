@@ -30,9 +30,9 @@ None ({{jsxref("undefined")}}).
 - {{jsxref("TypeError")}}
   - : Thrown if invalid values are provided for any of the timing properties.
 
-### Examples
+## Examples
 
-#### Side effects
+### Side effects
 
 `updateTiming()` may cause any associated {{domxref("Animation")}} to start or stop playing, if for example the effect of a running animation is shortened such that its end time is before {{domxref("Animation.currentTime")}} or the effect of a finished animation is lengthened such that its end time is after {{domxref("Animation.currentTime")}}.
 

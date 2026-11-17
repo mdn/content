@@ -3,13 +3,9 @@ title: "`corner-bottom-shape` CSS property"
 short-title: corner-bottom-shape
 slug: Web/CSS/Reference/Properties/corner-bottom-shape
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.corner-bottom-shape
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`corner-bottom-shape`** [CSS](/en-US/docs/Web/CSS) property specifies the shape of both the corners on a box's bottom edge, within their {{cssxref("border-radius")}} area.
 
@@ -17,7 +13,7 @@ For a full description of corner shape behavior and multiple examples, see the {
 
 ## Constituent properties
 
-The `corner-bottom-shape` property is a shorthand for the following physical properties:
+This property is a shorthand for the following physical properties:
 
 - {{cssxref("corner-bottom-left-shape")}}
 - {{cssxref("corner-bottom-right-shape")}}

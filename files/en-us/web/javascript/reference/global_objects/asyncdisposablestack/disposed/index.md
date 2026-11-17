@@ -34,4 +34,5 @@ console.log(disposer.disposed); // true
 
 ## See also
 
+- [Polyfill of `AsyncDisposableStack.prototype.disposed` in `core-js`](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)

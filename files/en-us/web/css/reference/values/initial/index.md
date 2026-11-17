@@ -48,7 +48,7 @@ em {
 
 #### Result
 
-{{EmbedLiveSample('Using_initial_to_reset_color_for_an_element')}}
+{{EmbedLiveSample('basic_usage')}}
 
 With the `initial` keyword in this example, the `color` and `font-size` values on the `em` element are restored to the initial values for [`color`](/en-US/docs/Web/CSS/Reference/Properties/color#formal_definition) and [`font-size`](/en-US/docs/Web/CSS/Reference/Properties/font-size#formal_definition), respectively.
 

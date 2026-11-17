@@ -60,7 +60,7 @@ devicesBtn.onclick = () => {
     .prompt()
     // Update the UI and monitor the connected state.
     .then(updateRemotePlaybackState);
-  // Otherwise, the user cancelled the selection UI or no screens were found.
+  // Otherwise, the user canceled the selection UI or no screens were found.
 };
 ```
 

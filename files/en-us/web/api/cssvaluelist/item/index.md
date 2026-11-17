@@ -9,7 +9,7 @@ status:
 browser-compat: api.CSSValueList.item
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_header}}{{non-standard_header}}
+{{APIRef("CSSOM")}}{{non-standard_header}}
 
 The **`item()`** method of the {{domxref("CSSValueList")}}
 interface is used to retrieve a {{domxref("CSSValue")}} by ordinal index.

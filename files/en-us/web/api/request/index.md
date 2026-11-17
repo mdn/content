@@ -28,7 +28,7 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
   - : Contains a value controlling whether credentials should be included with the request (e.g., `omit`, `same-origin`, `include`). The default is `same-origin`.
 - {{domxref("Request.destination")}} {{ReadOnlyInline}}
   - : A string describing the type of content being requested.
-- {{domxref("Request.duplex")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("Request.duplex")}} {{ReadOnlyInline}}
   - : The duplex mode of the request, which determines whether the browser must send the entire request before processing the response.
 - {{domxref("Request.headers")}} {{ReadOnlyInline}}
   - : Contains the associated {{domxref("Headers")}} object of the request.
@@ -73,6 +73,8 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
   - : Returns a promise that resolves with the result of parsing the request body as {{JSxRef("JSON")}}.
 - {{domxref("Request.text()")}}
   - : Returns a promise that resolves with a text representation of the request body.
+- {{domxref("Request.textStream()")}} {{experimental_inline}}
+  - : Returns a {{domxref("ReadableStream")}} that can be used to read the contents of the request body in chunks of UTF-8.
 
 > [!NOTE]
 > The request body functions can be run only once; subsequent calls will reject with TypeError showing that the body stream has already used.

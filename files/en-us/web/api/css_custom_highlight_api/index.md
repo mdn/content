@@ -144,6 +144,17 @@ The HTML code snippet below defines a search field and an article with a few par
 </article>
 ```
 
+#### CSS
+
+The `::highlight()` pseudo-element is used in CSS to style the highlights registered by the JavaScript below:
+
+```css
+::highlight(search-results) {
+  background-color: #ff0066;
+  color: white;
+}
+```
+
 #### JavaScript
 
 JavaScript is used to listen to the `input` event on the search field. When the event is fired, the code locates matches for the input text in the article text. It then creates ranges for the matches, and uses the CSS Custom Highlight API to create and register a `search-results` highlight object:
@@ -211,17 +222,6 @@ query.addEventListener("input", () => {
   // Register the Highlight object in the registry.
   CSS.highlights.set("search-results", searchResultsHighlight);
 });
-```
-
-#### CSS
-
-Finally, the `::highlight()` pseudo-element is used in CSS to style the highlights:
-
-```css
-::highlight(search-results) {
-  background-color: #ff0066;
-  color: white;
-}
 ```
 
 #### Result

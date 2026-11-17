@@ -2,7 +2,7 @@
 title: "PreferenceObject: override property"
 short-title: override
 slug: Web/API/PreferenceObject/override
-page-type: web-api-instance-method
+page-type: web-api-instance-property
 status:
   - experimental
 browser-compat: api.PreferenceObject.override
@@ -19,7 +19,7 @@ The override of the {{domxref("PreferenceObject")}} interface, if set, or `null`
 
 ## Examples
 
-## Basic usage
+### Basic usage
 
 This example demonstrates how to disambiguate between the color scheme preference set by the user agent vs a programmatic override.
 

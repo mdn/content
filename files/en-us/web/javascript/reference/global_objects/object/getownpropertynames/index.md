@@ -131,7 +131,7 @@ console.log(nonEnumOnly);
 
 ## See also
 
-- [Polyfill of `Object.getOwnPropertyNames` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.getOwnPropertyNames` in `core-js`](https://core-js.io/docs/features/ecmascript/object)
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

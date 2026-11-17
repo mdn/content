@@ -9,7 +9,7 @@ status:
 browser-compat: api.Element.DOMMouseScroll_event
 ---
 
-{{APIRef}}{{Deprecated_Header}}{{Non-standard_header}}
+{{APIRef}}{{Non-standard_header}}
 
 The DOM `DOMMouseScroll` event is fired asynchronously when mouse wheel or similar device is operated and the accumulated scroll amount is over 1 line or 1 page since last event. It's represented by the {{ domxref("MouseScrollEvent") }} interface. This event was only implemented by Firefox. You should instead use the standard {{domxref("Element.wheel_event", "wheel")}} event.
 
@@ -21,11 +21,15 @@ Use the standardized {{domxref("Element/wheel_event","wheel")}} event if availab
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("DOMMouseScroll", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onDOMMouseScroll = (event) => { }
 ```
 

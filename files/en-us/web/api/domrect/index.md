@@ -32,13 +32,13 @@ _`DOMRect` inherits properties from its parent, {{domxref("DOMRectReadOnly")}}. 
   - : The width of the `DOMRect`.
 - {{domxref("DOMRect.height")}}
   - : The height of the `DOMRect`.
-- {{domxref("DOMRectReadOnly.top")}}
+- {{domxref("DOMRectReadOnly.top")}} {{ReadOnlyInline}}
   - : Returns the top coordinate value of the `DOMRect` (has the same value as `y`, or `y + height` if `height` is negative).
-- {{domxref("DOMRectReadOnly.right")}}
+- {{domxref("DOMRectReadOnly.right")}} {{ReadOnlyInline}}
   - : Returns the right coordinate value of the `DOMRect` (has the same value as `x + width`, or `x` if `width` is negative).
-- {{domxref("DOMRectReadOnly.bottom")}}
+- {{domxref("DOMRectReadOnly.bottom")}} {{ReadOnlyInline}}
   - : Returns the bottom coordinate value of the `DOMRect` (has the same value as `y + height`, or `y` if `height` is negative).
-- {{domxref("DOMRectReadOnly.left")}}
+- {{domxref("DOMRectReadOnly.left")}} {{ReadOnlyInline}}
   - : Returns the left coordinate value of the `DOMRect` (has the same value as `x`, or `x + width` if `width` is negative).
 
 ## Static methods

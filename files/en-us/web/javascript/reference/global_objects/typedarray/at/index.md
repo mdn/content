@@ -93,7 +93,7 @@ console.log(atWay); // 11
 
 ## See also
 
-- [Polyfill of `TypedArray.prototype.at` in `core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
+- [Polyfill of `TypedArray.prototype.at` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [es-shims polyfill of `TypedArray.prototype.at`](https://www.npmjs.com/package/typedarray.prototype.at)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}

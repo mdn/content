@@ -23,7 +23,9 @@ The `::-webkit-scrollbar` CSS pseudo-element affects the style of an element's s
 The {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} standard properties may be used as alternatives for browsers that do not support this pseudo-element and the related `::-webkit-scrollbar-*` pseudo-elements (see [Browser compatibility](#browser_compatibility)).
 
 > [!NOTE]
-> If {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} are supported and have any value other than `auto` set, they will override `::-webkit-scrollbar-*` styling.
+> If an element's computed {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} values are anything other than `auto`, they will override `::-webkit-scrollbar-*` styling.
+> Because `scrollbar-color` is inherited, an element is affected when an ancestor sets it, even if the element itself doesn't.
+> Setting `scrollbar-color: auto` on the element restores its `::-webkit-scrollbar-*` styling if it was previously removed by a `scrollbar-color` setting on an ancestor.
 > See [Adding a fallback for scrollbar styles](#adding_a_fallback_for_scrollbar_styles) for more details.
 
 ## CSS Scrollbar Selectors
@@ -47,39 +49,6 @@ Authors should avoid styling scrollbars, as changing the appearance of scrollbar
 ## Examples
 
 ### Styling scrollbars using `-webkit-scrollbar`
-
-#### CSS
-
-```css
-.visible-scrollbar,
-.invisible-scrollbar,
-.mostly-customized-scrollbar {
-  display: block;
-  width: 10em;
-  overflow: auto;
-  height: 2em;
-  padding: 1em;
-  margin: 1em auto;
-  outline: 2px dashed cornflowerblue;
-}
-
-.invisible-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-/* Demonstrate a "mostly customized" scrollbar
- * (won't be visible otherwise if width/height is specified) */
-.mostly-customized-scrollbar::-webkit-scrollbar {
-  width: 5px;
-  height: 8px;
-  background-color: #aaaaaa; /* or add it to the track */
-}
-
-/* Add a thumb */
-.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
-  background: black;
-}
-```
 
 #### HTML
 
@@ -116,6 +85,39 @@ Authors should avoid styling scrollbars, as changing the appearance of scrollbar
     Who thought scrollbars could be made weird?
   </p>
 </div>
+```
+
+#### CSS
+
+```css
+.visible-scrollbar,
+.invisible-scrollbar,
+.mostly-customized-scrollbar {
+  display: block;
+  width: 10em;
+  overflow: auto;
+  height: 2em;
+  padding: 1em;
+  margin: 1em auto;
+  outline: 2px dashed cornflowerblue;
+}
+
+.invisible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Demonstrate a "mostly customized" scrollbar
+ * (won't be visible otherwise if width/height is specified) */
+.mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaaaaa; /* or add it to the track */
+}
+
+/* Add a thumb */
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+  background: black;
+}
 ```
 
 #### Result
@@ -184,7 +186,7 @@ The following example shows how to apply colors to scrollbars using {{cssxref("s
 
 In the example below, you can scroll the bordered box vertically to see the effect of styling the scrollbar.
 
-{{EmbedLiveSample("adding_a_fallback_to_standard_scrollbar_style_properties")}}
+{{EmbedLiveSample("adding_a_fallback_for_scrollbar_styles")}}
 
 ## Specifications
 

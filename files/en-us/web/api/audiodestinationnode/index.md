@@ -44,7 +44,7 @@ The `AudioDestinationNode` of a given `AudioContext` can be retrieved using the 
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-- {{domxref("AudioDestinationNode.maxChannelCount")}}
+- {{domxref("AudioDestinationNode.maxChannelCount")}} {{ReadOnlyInline}}
   - : An `unsigned long` defining the maximum number of channels that the physical device can handle.
 
 ## Instance methods

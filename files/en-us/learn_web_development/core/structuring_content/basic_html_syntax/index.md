@@ -213,7 +213,7 @@ As shorthand, it is acceptable to write the `disabled` attribute without a value
 <br />
 ```
 
-For reference, let's also provide a non-disabled `<input>` element so you can compare and contrast (note how the `disabled` inputs are somewhat greyed out in the below rendering):
+For reference, let's also provide a non-disabled `<input>` element so you can compare and contrast (note how the `disabled` inputs are somewhat grayed out in the below rendering):
 
 ```html live-sample___boolean-example
 <label for="third-input">This input isn't disabled; you can type into it</label>

@@ -55,8 +55,7 @@ For details on how the ICE process works, see [Lifetime of a WebRTC session](/en
 ## Instance methods
 
 - {{domxref("RTCIceCandidate.toJSON", "toJSON()")}}
-  - : Returns a {{Glossary("JSON")}} representation of the `RTCIceCandidate`'s current configuration.
-    The format of the representation is the same as the `candidateInfo` object that can optionally be passed to the {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}} constructor to configure a candidate.
+  - : Returns a JSON-serializable plain object representing the `RTCIceCandidate` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 

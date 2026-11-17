@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`grid-auto-columns`** [CSS](/en-US/docs/Web/CSS) property specifies the size of an implicitly-created grid column {{glossary("grid tracks", "track")}} or pattern of tracks.
 
+If a grid item is positioned into a column that is not explicitly sized by {{cssxref("grid-template-columns")}}, implicit {{glossary("grid", "grid")}} tracks are created to hold it. This can happen either by explicitly positioning into a column that is out of range, or by the auto-placement algorithm creating additional columns.
+
 {{InteractiveExample("CSS Demo: grid-auto-columns")}}
 
 ```css interactive-example-choice
@@ -63,8 +65,6 @@ grid-auto-columns: minmax(10px, auto);
   grid-column: 2;
 }
 ```
-
-If a grid item is positioned into a column that is not explicitly sized by {{cssxref("grid-template-columns")}}, implicit {{glossary("grid", "grid")}} tracks are created to hold it. This can happen either by explicitly positioning into a column that is out of range, or by the auto-placement algorithm creating additional columns.
 
 ## Syntax
 

@@ -3,6 +3,8 @@ title: "XSLTProcessor: getParameter() method"
 short-title: getParameter()
 slug: Web/API/XSLTProcessor/getParameter
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.XSLTProcessor.getParameter
 ---
 

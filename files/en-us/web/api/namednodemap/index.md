@@ -19,7 +19,7 @@ A `NamedNodeMap` object is _live_ and will thus be auto-updated if changes are m
 _This interface doesn't inherit any property._
 
 - {{domxref("NamedNodeMap.length")}} {{ReadOnlyInline}}
-  - : Returns the amount of objects in the map.
+  - : Returns the number of objects in the map.
 
 ## Instance methods
 

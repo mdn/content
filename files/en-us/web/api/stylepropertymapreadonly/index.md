@@ -57,7 +57,7 @@ p {
 }
 ```
 
-We add JavaScript to grab our paragraph and return back a definition list of all the default CSS property values using {{domxref('Element.computedStyleMap()')}}.
+We add JavaScript to grab our paragraph and return a definition list of all the default CSS property values using {{domxref('Element.computedStyleMap()')}}.
 
 ```js
 // get the element

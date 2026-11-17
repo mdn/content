@@ -9,11 +9,11 @@ status:
 browser-compat: api.CSSPrimitiveValue.getRGBColorValue
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("CSSOM")}}{{non-standard_header}}
 
 The **`getRGBColorValue()`** method of the
 {{domxref("CSSPrimitiveValue")}} interface is used to get an RGB color value. If this
-CSS value doesn't contain a RGB color value, a {{domxref("DOMException")}} is raised.
+CSS value doesn't contain an RGB color value, a {{domxref("DOMException")}} is raised.
 Modification to the corresponding style property can be achieved using the
 {{domxref("RGBColor")}} interface.
 

@@ -43,6 +43,37 @@ The selected [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role
 
 If more than one tab is selectable at a time, include `aria-multiselectable` on the `tablist`.
 
+## Values
+
+- `true`
+  - : The selectable element is selected.
+- `false`
+  - : The selectable element is not selected. Implicit default for [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role).
+- `undefined` (default)
+  - : The element is not selectable.
+
+## Associated interfaces
+
+- {{domxref("Element.ariaSelected")}}
+  - : The [`ariaSelected`](/en-US/docs/Web/API/Element/ariaSelected) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-selected` attribute.
+- {{domxref("ElementInternals.ariaSelected")}}
+  - : The [`ariaSelected`](/en-US/docs/Web/API/ElementInternals/ariaSelected) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-selected` attribute.
+
+## Associated roles
+
+Used in roles:
+
+- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
+- [`option`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
+- [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
+- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
+
+Inherited into roles:
+
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
+- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role)
+
 ## Examples
 
 In this `tablist` example, the first `tab` is selected:
@@ -89,37 +120,6 @@ In this `tablist` example, the first `tab` is selected:
 
 > [!NOTE]
 > ARIA only modifies the accessibility tree for an element and how assistive technology presents the content to users. ARIA doesn't change anything about an element's function or behavior.
-
-## Values
-
-- `true`
-  - : The selectable element is selected.
-- `false`
-  - : The selectable element is not selected. Implicit default for [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role).
-- `undefined` (default)
-  - : The element is not selectable.
-
-## Associated interfaces
-
-- {{domxref("Element.ariaSelected")}}
-  - : The [`ariaSelected`](/en-US/docs/Web/API/Element/ariaSelected) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-selected` attribute.
-- {{domxref("ElementInternals.ariaSelected")}}
-  - : The [`ariaSelected`](/en-US/docs/Web/API/ElementInternals/ariaSelected) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-selected` attribute.
-
-## Associated roles
-
-Used in roles:
-
-- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
-- [`option`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
-- [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
-- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
-
-Inherited into roles:
-
-- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
-- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role)
 
 ## Specifications
 

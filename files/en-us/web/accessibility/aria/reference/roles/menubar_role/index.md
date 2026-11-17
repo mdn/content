@@ -29,7 +29,7 @@ If a menubar receives focus as a result of a context action, such as a shortcut 
 
 Every menu item, no matter how deeply nested, is able to receive focus, even if disabled.
 
-If a `menubar` has a visible label, include [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) set to a value that refers to the labelling element. Otherwise, provide the menubar with an accessible name by including a descriptive [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label).
+If a `menubar` has a visible label, include [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) set to a value that refers to the labeling element. Otherwise, provide the menubar with an accessible name by including a descriptive [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label).
 
 A `menuitem` element in the `menubar` can contain a child submenu of menu items. Submenus can be nested several deep. Generally, the outer `menubar` is horizontal and all the submenus are vertical. If this is not the case, if your menubar is vertical, include [`aria-orientation="vertical"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation) on the `menubar` element. Otherwise, this attribute is not necessary, as the default value is horizontal.
 

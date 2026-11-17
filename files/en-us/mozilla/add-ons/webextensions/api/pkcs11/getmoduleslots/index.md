@@ -39,9 +39,9 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 - `manufacturer`
   - : `string`. Name of the token's manufacturer.
 - `HWVersion`
-  - : `string`. Hardware version, as a PKCS #11 version number (two 32-bit integers separated with a dot, like "1.0".
+  - : `string`. Hardware version, as a PKCS #11 version number (two 32-bit integers separated with a dot, like "1.0").
 - `FWVersion`
-  - : `string`. Firmware version, as a PKCS #11 version number (two 32-bit integers separated with a dot, like "1.0".
+  - : `string`. Firmware version, as a PKCS #11 version number (two 32-bit integers separated with a dot, like "1.0").
 - `serial`
   - : `string`. Serial number, whose format is defined by the token specification.
 - `isLoggedIn`

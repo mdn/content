@@ -10,7 +10,7 @@ sidebar: cssref
 The **`image()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) defines an {{cssxref("image")}} in a similar fashion to the {{CSSxRef("url_function", "url()")}} function, but with added functionality including specifying the image's directionality, displaying just a part of that image defined by a media fragment, and specifying a solid color as a fallback in case none of the specified images are able to be rendered.
 
 > [!NOTE]
-> The CSS `image()` function should not confused with {{DOMxRef("HTMLImageElement/Image", '<code>Image()</code>, the <code>HTMLImageElement</code> constructor', '', 1)}}.
+> The CSS `image()` function should not be confused with {{DOMxRef("HTMLImageElement/Image", '<code>Image()</code>, the <code>HTMLImageElement</code> constructor', '', 1)}}.
 
 ## Syntax
 
@@ -56,7 +56,7 @@ background-image: image("my-image.webp#xywh=0,20,40,60");
 
 The background image of the element will be the portion of the image _myImage.webp_ that starts at the coordinate 0px, 20px (the top left-hand corner) and is 40px wide and 60px tall.
 
-The `#xywh=#,#,#,#` media fragment syntax takes four comma separated numeric values. The first two represent the X and Y coordinates for the starting point of the box that will be created. The third value is the width of the box, and the last value is the height. By default, these are pixel values. The [spacial dimension definition in the media specification](https://www.w3.org/TR/media-frags/#naming-space) indicates that percentages will be supported as well:
+The `#xywh=#,#,#,#` media fragment syntax takes four comma separated numeric values. The first two represent the X and Y coordinates for the starting point of the box that will be created. The third value is the width of the box, and the last value is the height. By default, these are pixel values. The [spatial dimension definition in the media specification](https://www.w3.org/TR/media-frags/#naming-space) indicates that percentages will be supported as well:
 
 ```plain
 xywh=160,120,320,240        /* results in a 320x240 image at x=160 and y=120 */
@@ -87,7 +87,7 @@ Browsers do not provide any special information on background images to assistiv
 - [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
-This feature can help improve accessibility by providing a fallback color when an image fails to load. While this can and should be done by including a background-color on every background image, the CSS `image()` function allows adding allows only including background colors should an image fail to load, which means you can add a fall back color should a transparent PNG/GIF/WebP not load.
+This feature can help improve accessibility by providing a fallback color when an image fails to load. While this can and should be done by including a background-color on every background image, the CSS `image()` function allows adding allows only including background colors should an image fail to load, which means you can add a fallback color should a transparent PNG/GIF/WebP not load.
 
 ## Examples
 
@@ -118,7 +118,7 @@ In the left-to-right list items — those with `dir="ltr"` set on the element it
 
 ```css
 .box:hover {
-  cursor: image("sprite.png#xywh=32,64,16,16");
+  cursor: image("sprite.png#xywh=32,64,16,16"), auto;
 }
 ```
 
@@ -150,7 +150,7 @@ When the user hovers over the box, the cursor will change to display the 16x16 p
 </div>
 ```
 
-The above will put a semi-transparent black mask over the Firefox logo background image. Had we used the {{cssxref("background-color")}} property instead, the color would have appeared behind the logo image instead of on top of it. Additionally, the entire container would have had the same background color. Because we used `image()` along with the {{CSSxRef("background-size")}} property (and prevented the image from repeating with the {{CSSxRef("background-repeat")}} property, the color swatch will only cover a quarter of the container.
+The above will put a semi-transparent black mask over the Firefox logo background image. Had we used the {{cssxref("background-color")}} property instead, the color would have appeared behind the logo image instead of on top of it. Additionally, the entire container would have had the same background color. Because we used `image()` along with the {{CSSxRef("background-size")}} property (and prevented the image from repeating with the {{CSSxRef("background-repeat")}} property), the color swatch will only cover a quarter of the container.
 
 {{EmbedLiveSample("Putting_color_on_top_of_a_background_image", "100%", 220)}}
 

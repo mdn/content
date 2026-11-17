@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.RTCErrorEvent.error
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`error`** read-only property of the {{domxref("RTCErrorEvent")}} interface contains an {{domxref("RTCError")}} object that describes the {{Glossary("WebRTC")}}-specific details of the error.
 

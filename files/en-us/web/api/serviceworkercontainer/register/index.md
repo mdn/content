@@ -67,7 +67,7 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistratio
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : The `scriptURL` or `scope URL` is a failure.
     This can happen if the URL can't be resolved to a valid URL or uses a scheme that is not `http:` or `https`.
     It may also happen if `scriptURL` is not a {{domxref("TrustedScriptURL")}}, and this is a requirement of the site's [Trusted Types Policy](/en-US/docs/Web/API/Trusted_Types_API).

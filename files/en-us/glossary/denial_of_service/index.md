@@ -26,4 +26,4 @@ DoS attacks are more of a category than a particular kind of attack. Here is a n
 ## See also
 
 - [Denial-of-service attack](https://en.wikipedia.org/wiki/Denial-of-service_attack) on Wikipedia
-- [Denial of Service](https://owasp.org/www-community/attacks/Denial_of_Service) on OWASP
+- [Denial of Service](https://community.owasp.org/attacks/Denial_of_Service) on OWASP

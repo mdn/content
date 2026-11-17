@@ -8,13 +8,13 @@ status:
 browser-compat: api.Element.DOMActivate_event
 ---
 
-{{APIRef}}{{Deprecated_Header}}
+{{APIRef}}
 
 The **`DOMActivate`** event is fired at an element when it becomes active, such as when it is clicked on using the mouse or a keypress is used to navigate to it.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("DOMActivate", (event) => { })

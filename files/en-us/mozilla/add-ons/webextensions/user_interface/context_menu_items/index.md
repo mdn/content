@@ -7,17 +7,17 @@ sidebar: addonsidebar
 
 This user interface option adds one or more items to a browser context menu. This is the menu available when a user right-clicks on a web page. Tabs and bookmarks can also have context menus, available through the {{WebExtAPIRef("menus")}} API.
 
-![Example of content menu items added by a WebExtension, from the context-menu-demo example](context_menu_example.png)
+![Example of context menu items added by the menu-demo example](context_menu_example.png)
 
 You use this option to expose features relevant to specific browser or web page contexts. For example, you can show features to open a graphic editor when the user clicks on an image or offer a feature to save page content when part of a page is selected. You can add plain menu items, checkbox items, radio button groups, and separators to menus. Once a context menu item has been added using {{WebExtAPIRef("menus.create")}} it's displayed in all browser tabs, but you can hide it by removing it with {{WebExtAPIRef("menus.remove")}}.
 
 The full list of supported contexts is available at {{WebExtAPIRef("menus.ContextType")}} and includes contexts outside of a web page, such as bookmark items in the browser UI. For example, the "[Open bookmark in Container Tab](https://github.com/Rob--W/bookmark-container-tab)" extension adds a menu item that allows the user to open a bookmark URL in a new container tab.
 
-![A context menu with "open in new container tab" submenu highlighted. The submenu shows personal, work, banking, shopping, and Facebook contextual identities. There is an option at the top of the submenu to select no container.](extension_context_menu.png)
+![A bookmark context menu in the Firefox bookmarks sidebar with the extension's "Open in a New Container Tab" submenu highlighted. The submenu shows personal, work, banking, and shopping contextual identities, with an option at the top to select no container.](extension_context_menu.png)
 
 You can also override the context menus displayed in extension pages, such as custom sidebars and popups, to use either the tab or bookmark context menus instead of the default context menu, with {{WebExtAPIRef("menus.overrideContext")}}. This is a helpful method when your extension provides a custom presentation of tabs or bookmarks. The menu automatically includes menu items for any other extensions that have defined tab or bookmark context menu items. You can choose whether to include the default context menu items. Hiding the default items gives the extension complete control over the items displayed in the rendered native context menu, as shown in the image below for the Tree Style Tab extension.
 
-![A tab context menu displayed for a tab item in the sidebar of the Tree Style Tab extension. The menu shows custom tab actions, a menu item for the extension, and a menu item for the Simple Tab Group extension.](custom_sidebar_tab_menu.png)
+![A tab context menu displayed for a tab item in the sidebar of the Tree Style Tab extension. The menu shows tab actions, a "Tree of tabs" menu item for the extension, and a "Move tab to group" menu item for the Simple Tab Groups extension.](custom_sidebar_tab_menu.png)
 
 ## Specifying context menu items
 

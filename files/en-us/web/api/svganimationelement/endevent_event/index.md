@@ -11,17 +11,21 @@ browser-compat: api.SVGAnimationElement.endEvent_event
 The **`endEvent`** event of the {{domxref("SVGAnimationElement")}} interface is fired when at the active end of the animation is reached.
 
 > [!NOTE]
-> This event is not raised at the simple end of each animation repeat. This event may be raised both in the course of normal (i.e., scheduled or interactive) timeline play, as well as in the case that the element was ended with a DOM method.
+> This event is not raised at the simple end of each animation repeat. This event may be raised both in the course of normal (i.e., scheduled or interactive) timeline play and in the case that the element was ended with a DOM method.
 
 This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("endEvent", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onend = (event) => { }
 ```
 
@@ -95,9 +99,9 @@ btn.addEventListener("click", () => {
 
 {{EmbedLiveSample('Animated_circle', '100%', '300')}}
 
-### Event handler property equivalent
+### Using the event handler property
 
-Note that you can also create an event listener for the `end` event using the `onend` event handler property:
+You can also create an event listener for the `end` event using the `onend` event handler property (but note that this replaces other event listeners added using `onend`, if any):
 
 ```js
 animateElem.onend = () => {

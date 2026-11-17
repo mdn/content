@@ -100,4 +100,4 @@ resource: is Firefox only.
 
 - [URIs](/en-US/docs/Web/URI)
 - [What is a URL?](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
-- [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) (`resource:` is [covered here](https://www.iana.org/assignments/uri-schemes/prov/resource))
+- [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes) (`resource:` is [covered here](https://www.iana.org/assignments/uri-schemes/prov/resource))

@@ -8,7 +8,7 @@ status:
 browser-compat: api.KeyboardEvent.keyCode
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{APIRef("UI Events")}}
 
 The deprecated **`KeyboardEvent.keyCode`** read-only property represents a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
 
@@ -3266,7 +3266,7 @@ Gecko defines a lot of `keyCode` values in `KeyboardEvent` for making the mappin
 ```js
 window.addEventListener("keydown", (event) => {
   if (event.defaultPrevented) {
-    return; // Should do nothing if the default action has been cancelled
+    return; // Should do nothing if the default action has been canceled
   }
 
   let handled = false;

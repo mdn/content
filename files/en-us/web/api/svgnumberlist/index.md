@@ -11,13 +11,13 @@ The **`SVGNumberList`** interface defines a list of numbers.
 
 An `SVGNumberList` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
-An `SVGNumberList` object is indexable and can be accessed like an array.
+An `SVGNumberList` object is indexable and can be accessed like an array using [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation). Reading an index is equivalent to calling {{domxref("SVGNumberList.getItem", "getItem()")}}. Assigning to an index is equivalent to calling {{domxref("SVGNumberList.replaceItem", "replaceItem()")}}, including the exceptions it throws.
 
 ## Instance properties
 
-- {{domxref("SVGNumberList.length", "length")}}
+- {{domxref("SVGNumberList.length", "length")}} {{ReadOnlyInline}}
   - : The number of items in the list.
-- {{domxref("SVGNumberList.numberOfItems", "numberOfItems")}}
+- {{domxref("SVGNumberList.numberOfItems", "numberOfItems")}} {{ReadOnlyInline}}
   - : The number of items in the list.
 
 ## Instance methods

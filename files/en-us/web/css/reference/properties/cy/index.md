@@ -60,7 +60,7 @@ In this example, we have two identical `<circle>` and two identical `<ellipse>` 
 </svg>
 ```
 
-With CSS, we style only the first circle and first ellipse, allowing their twin shapes to use default styles (with ({{cssxref("fill")}} defaulting to black). We use the `cy` property to override the value of the SVG {{SVGAttr("cy")}} attribute and also give it a `fill` and {{cssxref("stroke")}} to differentiate the first shapes in each pair from their twin. The browser renders SVG images as `300px` wide and `150px` tall by default.
+With CSS, we style only the first circle and first ellipse, allowing their twin shapes to use default styles (with {{cssxref("fill")}} defaulting to black). We use the `cy` property to override the value of the SVG {{SVGAttr("cy")}} attribute and also give it a `fill` and {{cssxref("stroke")}} to differentiate the first shapes in each pair from their twin. The browser renders SVG images as `300px` wide and `150px` tall by default.
 
 ```css
 svg {

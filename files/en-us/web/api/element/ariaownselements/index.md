@@ -17,7 +17,7 @@ The [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-o
 
 An array of subclasses of {{domxref("HTMLElement")}}.
 
-When read, the returned array is a static and read-only.
+When read, the returned array is static and read-only.
 When written, the assigned array is copied: subsequent changes to the array do not affect the value of the property.
 
 ## Description
@@ -146,7 +146,7 @@ if ("ariaOwnsElements" in Element.prototype) {
 The result of running the code is shown below.
 The log shows that the relationship defined using the `aria-owns` attribute is reflected in the `ariaOwnsElements` property (elements in the array match the attribute element references).
 
-{{EmbedLiveSample("Get the flow-to element","100%","200px")}}
+{{EmbedLiveSample("get_the_owned_element","100%","200px")}}
 
 ## Specifications
 

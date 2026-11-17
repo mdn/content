@@ -68,6 +68,6 @@ mySet.add(o);
 
 ## See also
 
-- [Polyfill of `Set` in `core-js`](https://github.com/zloirock/core-js#set)
+- [Polyfill of `Set` in `core-js`](https://core-js.io/docs/features/ecmascript/collections#h-set)
 - [es-shims polyfill of `Set`](https://www.npmjs.com/package/es-set)
 - {{jsxref("Set")}}

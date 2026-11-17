@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Window.print
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 Opens the print dialog to print the current document.
 

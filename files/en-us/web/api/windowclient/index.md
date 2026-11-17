@@ -11,15 +11,6 @@ The `WindowClient` interface of the [ServiceWorker API](/en-US/docs/Web/API/Serv
 
 {{InheritanceDiagram}}
 
-## Instance methods
-
-_`WindowClient` inherits methods from its parent interface, {{domxref("Client")}}._
-
-- {{domxref("WindowClient.focus()")}}
-  - : Gives user input focus to the current client.
-- {{domxref("WindowClient.navigate()")}}
-  - : Loads a specified URL into a controlled client page.
-
 ## Instance properties
 
 _`WindowClient` inherits properties from its parent interface, {{domxref("Client")}}._
@@ -30,6 +21,15 @@ _`WindowClient` inherits properties from its parent interface, {{domxref("Client
   - : A boolean that indicates whether the current client has focus.
 - {{domxref("WindowClient.visibilityState")}} {{ReadOnlyInline}}
   - : Indicates the visibility of the current client. This value can be one of `"hidden"` or `"visible"`.
+
+## Instance methods
+
+_`WindowClient` inherits methods from its parent interface, {{domxref("Client")}}._
+
+- {{domxref("WindowClient.focus()")}}
+  - : Gives user input focus to the current client.
+- {{domxref("WindowClient.navigate()")}}
+  - : Loads a specified URL into a controlled client page.
 
 ## Example
 

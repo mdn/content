@@ -30,6 +30,12 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
 - {{domxref("HTMLElement.autocorrect")}}
   - : A boolean that represents whether or not text input by a user should be automatically corrected.
     This reflects the [`autocorrect`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocorrect) HTML global attribute.
+- {{domxref("HTMLElement.containerTiming")}} {{Experimental_Inline}}
+  - : A string that marks the element as a container root for observation in the {{domxref("PerformanceContainerTiming")}} API.
+    This reflects the [`containertiming`](/en-US/docs/Web/HTML/Reference/Global_attributes/containertiming) HTML global attribute.
+- {{domxref("HTMLElement.containerTimingIgnore")}} {{Experimental_Inline}}
+  - : A boolean value that excludes the element and its descendants from contributing to the timing of any ancestor container root.
+    This reflects the [`containertimingignore`](/en-US/docs/Web/HTML/Reference/Global_attributes/containertimingignore) HTML global attribute.
 - {{DOMxRef("HTMLElement.contentEditable")}}
   - : A string, where a value of `true` means the element is editable and a value of `false` means it isn't.
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
@@ -126,7 +132,7 @@ _Also, inherits events from its parent, {{DOMxRef("Element")}}._
 ### Drag & drop events
 
 - {{DOMxRef("HTMLElement/drag_event", "drag")}}
-  - : This event is fired when an element or text selection is being dragged.
+  - : This event is fired repeatedly when an element or text selection is being dragged. The firing frequency depends on the browser, operating system, and pointer movement; do not rely on a fixed interval.
 - {{DOMxRef("HTMLElement/dragend_event", "dragend")}}
   - : This event is fired when a drag operation is being ended (by releasing a mouse button or hitting the escape key).
 - {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}}
@@ -134,7 +140,7 @@ _Also, inherits events from its parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}}
   - : This event is fired when a dragged element or text selection leaves a valid drop target.
 - {{DOMxRef("HTMLElement/dragover_event", "dragover")}}
-  - : This event is fired continuously when an element or text selection is being dragged and the mouse pointer is over a valid drop target (every 50 ms WHEN mouse is not moving ELSE much faster between 5 ms (slow movement) and 1ms (fast movement) approximately. This firing pattern is different than {{domxref("Element/mouseover_event", "mouseover")}} ).
+  - : This event is fired repeatedly while an element or text selection is being dragged over a potential drop target. The firing frequency depends on the browser, operating system, and pointer movement; do not rely on a fixed interval.
 - {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}}
   - : This event is fired when the user starts dragging an element or text selection.
 - {{DOMxRef("HTMLElement/drop_event", "drop")}}

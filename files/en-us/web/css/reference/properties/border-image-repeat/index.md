@@ -57,7 +57,7 @@ border-image-repeat: round stretch;
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 border-image-repeat: stretch;
 border-image-repeat: repeat;
 border-image-repeat: round;

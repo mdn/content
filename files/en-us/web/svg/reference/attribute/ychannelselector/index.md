@@ -12,34 +12,6 @@ The **`yChannelSelector`** attribute indicates which color channel from {{SVGAtt
 
 You can use this attribute with the {{SVGElement("feDisplacementMap")}} SVG element.
 
-## Usage notes
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td><code>R</code> | <code>G</code> | <code>B</code> | <code>A</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>A</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-- `R`
-  - : This keyword specifies that the red color channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the y-axis.
-- `G`
-  - : This keyword specifies that the green color channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the y-axis.
-- `B`
-  - : This keyword specifies that the blue color channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the y-axis.
-- `A`
-  - : This keyword specifies that the alpha channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the y-axis.
-
 ## Examples
 
 ```css hidden
@@ -91,6 +63,34 @@ svg {
 ```
 
 {{EmbedLiveSample("Examples", "480", "200")}}
+
+## Usage notes
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>R</code> | <code>G</code> | <code>B</code> | <code>A</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>A</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+- `R`
+  - : This keyword specifies that the red color channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the y-axis.
+- `G`
+  - : This keyword specifies that the green color channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the y-axis.
+- `B`
+  - : This keyword specifies that the blue color channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the y-axis.
+- `A`
+  - : This keyword specifies that the alpha channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the y-axis.
 
 ## Specifications
 

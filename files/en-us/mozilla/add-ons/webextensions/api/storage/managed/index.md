@@ -16,6 +16,8 @@ For Firefox, you need to create a [JSON manifest (native manifest) file in a spe
 
 Here's an example native manifest:
 
+<!-- cSpell:ignore colour -->
+
 ```json
 {
   "name": "favourite-colour-examples@mozilla.org",

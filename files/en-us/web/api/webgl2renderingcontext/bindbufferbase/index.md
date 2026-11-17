@@ -30,8 +30,7 @@ bindBufferBase(target, index, buffer)
 - `index`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the `target`.
 - `buffer`
-  - : A {{domxref("WebGLBuffer")}} which to bind to the binding point
-    (`target`).
+  - : A {{domxref("WebGLBuffer")}} which to bind to the binding point (`target`), or `null` to clear the indexed binding and the generic binding for the specified target.
 
 ### Return value
 

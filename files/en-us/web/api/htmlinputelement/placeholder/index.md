@@ -18,7 +18,7 @@ A string.
 
 ```js
 const inputElement = document.getElementById("phone");
-console.log(input.placeholder);
+console.log(inputElement.placeholder);
 ```
 
 ## Specifications

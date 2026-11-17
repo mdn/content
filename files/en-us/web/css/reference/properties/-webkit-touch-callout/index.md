@@ -32,6 +32,8 @@ When a target is touched and held on iOS, Safari displays a callout information 
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `default`
   - : The default callout is displayed.
 - `none`

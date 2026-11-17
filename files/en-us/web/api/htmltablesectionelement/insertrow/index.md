@@ -8,15 +8,9 @@ browser-compat: api.HTMLTableSectionElement.insertRow
 
 {{APIRef("HTML DOM")}}
 
-The **`insertRow()`** method of the {{domxref("HTMLTableSectionElement")}} interface inserts a new row
-({{HtmlElement("tr")}}) in the given table sectioning element ({{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, or
-{{HTMLElement("tbody")}}), then returns a reference to this new row.
+The **`insertRow()`** method of the {{domxref("HTMLTableSectionElement")}} interface creates a {{HTMLElement("tr")}} element, inserts it at the specified position in the given table sectioning element ({{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, or {{HTMLElement("tbody")}}), and returns it.
 
-> [!NOTE]
-> `insertRow()` inserts the row directly into the
-> section. The row does not need to be appended separately as would be the case if
-> {{domxref("Document.createElement()")}} had been used to create the new
-> `<tr>` element.
+This method creates and inserts the element directly, without requiring separate calls to methods such as {{domxref("Document.createElement()")}}, {{domxref("Node.insertBefore()")}}, and {{domxref("Node.appendChild()")}}.
 
 ## Syntax
 
@@ -28,9 +22,7 @@ insertRow(index)
 ### Parameters
 
 - `index` {{optional_inline}}
-  - : The row index of the new row. If `index` is `-1` or equal to
-    the number of rows, the row is appended as the last row.
-    If `index` is omitted it defaults to `-1`.
+  - : The index of the new row in the {{domxref("HTMLTableSectionElement.rows", "rows")}} collection. If `index` is `-1` or equal to the number of rows, the row is appended as the last row. If `index` is omitted, it defaults to `-1`.
 
 ### Return value
 
@@ -39,7 +31,7 @@ An {{domxref("HTMLTableRowElement")}} that references the new row.
 ### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
-  - : Thrown if `index` is greater than the number of rows, or smaller than `-1`.
+  - : Thrown if `index` is greater than the number of rows or smaller than `-1`.
 
 ## Examples
 
@@ -137,3 +129,4 @@ removeButton.addEventListener("click", () => {
 
 - {{domxref("HTMLTableRowElement.insertCell()")}}
 - {{domxref("HTMLTableElement.insertRow()")}}
+- {{domxref("HTMLTableSectionElement.deleteRow()")}}

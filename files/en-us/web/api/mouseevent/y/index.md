@@ -8,7 +8,7 @@ browser-compat: api.MouseEvent.y
 
 {{APIRef("UI Events")}}
 
-The **`MouseEvent.y`** property is an alias for the {{domxref("MouseEvent.clientY")}} property.
+The **`y`** read-only property of the {{domxref("MouseEvent")}} interface is an alias for the {{domxref("MouseEvent.clientY")}} property.
 
 ## Specifications
 

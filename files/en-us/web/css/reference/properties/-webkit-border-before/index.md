@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{Non-standard_header}}
 
-The **`-webkit-border-before`** [CSS](/en-US/docs/Web/CSS) property is a shorthand property for setting the individual logical block start border property values in a single place in the style sheet.
+The **`-webkit-border-before`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the individual logical block start border property values in a single place in the style sheet.
 
 ## Constituent properties
 
@@ -39,7 +39,7 @@ This property is a shorthand for the following CSS properties:
 
 ### Values
 
-One or more of the following, in any order:
+This property is specified as a space-separated list of one to three of the following values:
 
 - `<'border-width'>`
   - : See {{cssxref("border-width")}}

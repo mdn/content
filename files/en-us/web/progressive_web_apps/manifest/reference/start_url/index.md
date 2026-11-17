@@ -70,7 +70,7 @@ You can also specify a deep link (e.g., `https://myapp.com/product/whatsnew`) to
 Avoid specifying a generic starting page.
 
 For security reasons, the `start_url` must be same-origin with the manifest URL.
-If a non-same-origin `start_url` is specified, browsers will fallback to using the page that links to the manifest as the default starting page.
+If a non-same-origin `start_url` is specified, browsers will fall back to using the page that links to the manifest as the default starting page.
 
 ## Privacy considerations
 

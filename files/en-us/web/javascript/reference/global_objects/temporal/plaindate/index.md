@@ -44,7 +44,7 @@ The {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}, {{jsxref
 
 ## Constructor
 
-- {{jsxref("Temporal/PlainDate/PlainDate", "Temporal.PlainDate()")}} {{experimental_inline}}
+- {{jsxref("Temporal/PlainDate/PlainDate", "Temporal.PlainDate()")}}
   - : Creates a new `Temporal.PlainDate` object by directly supplying the underlying data.
 
 ## Static methods

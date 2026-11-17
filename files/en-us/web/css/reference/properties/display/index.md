@@ -33,6 +33,10 @@ display: flex;
 display: grid;
 ```
 
+```css interactive-example-choice
+display: grid-lanes;
+```
+
 ```html interactive-example
 <p>
   Apply different <code>display</code> values on the dashed orange-bordered
@@ -106,6 +110,8 @@ display: block flex;
 display: inline flex;
 display: block grid;
 display: inline grid;
+display: block grid-lanes;
+display: inline grid-lanes;
 display: block table;
 display: inline table;
 
@@ -168,8 +174,6 @@ The keyword values can be grouped into six value categories.
       - : The element behaves like a block-level element and lays out its content according to the [grid model](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts).
     - `grid-lanes`
       - : The element behaves like a block-level element and lays out its content using grid lanes layout. Columns are defined by {{cssxref("grid-template-columns")}} and behave like a strict grid, while items are packed in the block direction to fill gaps between items of different sizes. See [Grid lanes layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) for details.
-    - `inline-grid-lanes`
-      - : The element behaves like an inline-level element and lays out its content using grid lanes layout. Rows are defined by {{cssxref("grid-template-rows")}} and behave like a strict grid, while items are packed in the inline direction to fill gaps between items of different sizes. See [Grid lanes layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) for details.
     - `ruby`
       - : The element behaves like an inline-level element and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
 
@@ -254,6 +258,11 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
       - : The element behaves like an inline-level element and lays out its content according to the grid model.
 
         It is equivalent to `inline grid`.
+
+    - `inline-grid-lanes`
+      - : The element behaves like an inline-level element and lays out its content using grid lanes layout. Rows are defined by {{cssxref("grid-template-rows")}} and behave like a strict grid, while items are packed in the inline direction to fill gaps between items of different sizes. See [Grid lanes layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) for details.
+
+        It is equivalent to `inline grid-lanes`.
 
 ### Which syntax should you use?
 
@@ -410,6 +419,8 @@ We have included {{cssxref("padding")}} and {{cssxref("background-color")}} on t
     <option>block flex</option>
     <option>grid</option>
     <option>block grid</option>
+    <option>grid-lanes</option>
+    <option>block grid-lanes</option>
     <option>list-item</option>
     <option>block flow list-item</option>
     <option>inline flow list-item</option>
@@ -425,6 +436,8 @@ We have included {{cssxref("padding")}} and {{cssxref("background-color")}} on t
     <option>inline flex</option>
     <option>inline-grid</option>
     <option>inline grid</option>
+    <option>inline-grid-lanes</option>
+    <option>inline grid-lanes</option>
   </select>
 </div>
 ```

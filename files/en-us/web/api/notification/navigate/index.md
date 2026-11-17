@@ -3,12 +3,10 @@ title: "Notification: navigate property"
 short-title: navigate
 slug: Web/API/Notification/navigate
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Notification.navigate
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}}{{SeeCompatTable}} {{AvailableInWorkers}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`navigate`** read-only property of the {{domxref("Notification")}} interface contains the URL the user agent will navigate to when the user activates the notification.
 

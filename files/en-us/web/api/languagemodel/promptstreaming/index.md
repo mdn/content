@@ -70,7 +70,7 @@ A {{domxref("ReadableStream")}} of {{jsxref("String")}} chunks. Each chunk repre
 Errors are surfaced as stream errors rather than as rejected promises. Consumers should handle errors using a stream's standard error-handling mechanisms.
 
 - `AbortError` {{domxref("DOMException")}}
-  - : Thrown if the operation was cancelled via the `signal` option.
+  - : Thrown if the operation was canceled via the `signal` option.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if usage of the method is blocked by a {{httpheader("Permissions-Policy/language-model", "language-model")}} {{httpheader("Permissions-Policy")}}.
 - `NotSupportedError` {{domxref("DOMException")}}
@@ -89,7 +89,7 @@ Errors are surfaced as stream errors rather than as rejected promises. Consumers
     - A message's `prefix` property is set to `true` and:
       - The message's `role` is not `assistant`.
       - The message is not the last item in the messages array.
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if:
     - `omitResponseConstraintInput` is `true` but `responseConstraint` is not provided.
     - A message's `role` is `system` but it was not the first message passed to the context.

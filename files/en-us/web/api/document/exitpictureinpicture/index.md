@@ -8,11 +8,9 @@ browser-compat: api.Document.exitPictureInPicture
 
 {{APIRef("Picture-in-Picture API")}}
 
-The **`exitPictureInPicture()`** method of the {{domxref("Document")}} interface
-requests that a video contained
-in this document, which is currently floating, be taken out of picture-in-picture
-mode, restoring the previous state of the screen. This usually reverses the
-effects of a previous call to {{domxref("HTMLVideoElement.requestPictureInPicture()")}}.
+The **`exitPictureInPicture()`** method of the {{domxref("Document")}} interface requests that a video contained in this document, which is currently floating, be taken out of picture-in-picture mode.
+
+This attempts to reverse the effects of a previous call to {{domxref("HTMLVideoElement.requestPictureInPicture()")}}, restoring the video back into the website flow.
 
 ## Syntax
 
@@ -26,9 +24,8 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}}, which is resolved once the {{Glossary("user agent")}} has
-finished exiting picture-in-picture mode. If an error occurs while attempting to exit
-fullscreen mode, the `catch()` handler for the promise is called.
+A {{jsxref("Promise")}}, which is resolved once the {{Glossary("user agent")}} has finished exiting picture-in-picture mode.
+If an error occurs while attempting to exit picture-in-picture mode, the `catch()` handler for the promise is called.
 
 ### Exceptions
 
@@ -37,8 +34,9 @@ fullscreen mode, the `catch()` handler for the promise is called.
 
 ## Examples
 
-This example causes the current document to exit picture-in-picture mode whenever the
-mouse button is clicked within it.
+### Basic usage
+
+This example causes the current document to exit picture-in-picture mode whenever the mouse button is clicked within it.
 
 ```js
 document.onclick = (event) => {
@@ -53,7 +51,8 @@ document.onclick = (event) => {
 };
 ```
 
-Note that if you want to track which video on your page is currently playing in picture-in-picture mode, you should listen to the `enterpictureinpicture` and `leavepictureinpicture` events on the {{DOMxRef("HTMLVideoElement")}} element(s) in question. Alternatively, you can check whether {{DOMxRef("Document.pictureInPictureElement")}} refers to the current {{DOMxRef("HTMLVideoElement")}} element.
+Note that if you want to track which video on your page is currently playing in picture-in-picture mode, you should listen to the `enterpictureinpicture` and `leavepictureinpicture` events on the {{DOMxRef("HTMLVideoElement")}} element(s) in question.
+Alternatively, you can check whether {{DOMxRef("Document.pictureInPictureElement")}} refers to the current {{DOMxRef("HTMLVideoElement")}} element.
 
 ## Specifications
 

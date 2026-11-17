@@ -52,7 +52,7 @@ copy.setTime(birthday.getTime());
 
 ### Measuring execution time
 
-Subtracting two subsequent `getTime()` calls on newly generated {{jsxref("Date")}} objects, give the time span between these two calls. This can be used to calculate the executing time of some operations. See also {{jsxref("Date.now()")}} to prevent instantiating unnecessary {{jsxref("Date")}} objects.
+Subtracting two subsequent `getTime()` calls on newly generated {{jsxref("Date")}} objects gives the time span between these two calls. This can be used to calculate the execution time of some operations. See also {{jsxref("Date.now()")}} to prevent instantiating unnecessary {{jsxref("Date")}} objects.
 
 ```js
 let end, start;

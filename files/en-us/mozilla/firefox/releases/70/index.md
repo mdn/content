@@ -55,7 +55,7 @@ This article provides information about the changes in Firefox 70 that will affe
 #### Removals
 
 - We have retired support for 3-valued \<position> (excluding background)([Firefox bug 1559276](https://bugzil.la/1559276)).
-- The `none` value is now invalid in {{cssxref("counter", "counter()")}} / {{cssxref("counters", "counters()")}} — a change which makes the Level 3 spec match CSS 2.1 [Firefox bug 1576821](https://bugzil.la/1576821)).
+- The `none` value is now invalid in {{cssxref("counter", "counter()")}} / {{cssxref("counters", "counters()")}} — a change which makes the Level 3 spec match CSS 2.1 ([Firefox bug 1576821](https://bugzil.la/1576821)).
 
 ### SVG
 
@@ -88,7 +88,7 @@ This article provides information about the changes in Firefox 70 that will affe
 
 - The {{domxref("RTCPeerConnection.restartIce()")}} method has been added. This is one of the four changes needed to implement the new "perfect negotiation" mechanism; the rest will come in future Firefox updates ([Firefox bug 1551316](https://bugzil.la/1551316)).
 - The {{domxref("RTCPeerConnection.setRemoteDescription()")}} method can now be called with no parameters. This is another "perfect negotiation" update ([Firefox bug 1568292](https://bugzil.la/1568292)).
-- {{domxref("MediaTrackSupportedConstraints.groupId")}} is now supported, and returns `true` since the {{domxref("MediaTrackConstraints.groupId")}} property is now supported ([Firefox bug 1561254](https://bugzil.la/1561254)).
+- [`MediaTrackSupportedConstraints.groupId`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#groupid) is now supported, and returns `true` since the {{domxref("MediaTrackConstraints.groupId")}} property is now supported ([Firefox bug 1561254](https://bugzil.la/1561254)).
 - Several new Web Audio API features have been implemented/updated:
   - {{domxref("AudioContext.getOutputTimestamp()")}} implemented ([Firefox bug 1324545](https://bugzil.la/1324545)).
   - {{domxref("AudioContext.baseLatency")}} and {{domxref("AudioContext.outputLatency")}} implemented ([Firefox bug 1324552](https://bugzil.la/1324552)).

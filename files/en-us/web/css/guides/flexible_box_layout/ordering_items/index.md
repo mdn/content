@@ -198,7 +198,7 @@ By tabbing around any of the live examples on this page, you can see how `order`
 
 - [Flexbox and the keyboard navigation disconnect](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/) via tink.uk (2016)
 - [HTML Source Order vs CSS Display Order](https://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html) via adrianroselli.com (2015)
-- [The Responsive Order Conflict for Keyboard Focus](https://alastairc.uk/2017/06/the-responsive-order-conflict/) via alastairc.uk (2017)
+- [The Responsive Order Conflict for Keyboard Focus](https://alastairc.uk/blog/2017/06/the-responsive-order-conflict/) via alastairc.uk (2017)
 
 ## Use cases for `order`
 

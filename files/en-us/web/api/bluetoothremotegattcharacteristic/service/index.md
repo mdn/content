@@ -15,7 +15,7 @@ property returns the {{domxref("BluetoothRemoteGATTService")}} this characterist
 
 ## Value
 
-An instance {{domxref("BluetoothRemoteGATTService")}}.
+An instance of {{domxref("BluetoothRemoteGATTService")}}.
 
 ## Specifications
 

@@ -23,7 +23,7 @@ In the final couple of articles in the series, we will solidify your tooling kno
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To solidify what we've learnt so far by working through a complete
+        To solidify what we've learned so far by working through a complete
         toolchain case study.
       </td>
     </tr>
@@ -78,7 +78,7 @@ Sign up for [GitHub](https://github.com/) by clicking the _Sign Up_ link on the 
 
 We'll install another software, git, to help with revision control.
 
-It's possible you've heard of "git" before. [Git](https://git-scm.com/) is currently the most popular source code revision control tool available to developers — revision control provides many advantages, such as a way to backup your work in a remote place, and a mechanism to work in a team on the same project without fear of overwriting each other's code.
+It's possible you've heard of "git" before. [Git](https://git-scm.com/) is currently the most popular source code revision control tool available to developers — revision control provides many advantages, such as a way to back up your work in a remote place, and a mechanism to work in a team on the same project without fear of overwriting each other's code.
 
 It might be obvious to some, but it bears repeating: Git is not the same thing as GitHub. Git is the revision control tool, whereas [GitHub](https://github.com/) is an online store for git repositories (plus a number of useful tools for working with them). Note that, although we're using GitHub in this chapter, there are several alternatives including [GitLab](https://about.gitlab.com/) and [Bitbucket](https://www.atlassian.com/software/bitbucket), and you could even host your own git repositories.
 

@@ -4,11 +4,12 @@ short-title: totalEncodedBytesTarget
 slug: Web/API/RTCOutboundRtpStreamStats/totalEncodedBytesTarget
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: api.RTCStatsReport.type_outbound-rtp.totalEncodedBytesTarget
 ---
 
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+{{APIRef("WebRTC")}}{{non-standard_header}}
 
 The **`totalEncodedBytesTarget`** property of the {{domxref("RTCOutboundRtpStreamStats")}} dictionary represents the sum of the target frame sizes for all of the frames encoded so far.
 

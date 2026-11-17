@@ -16,7 +16,7 @@ The **`view-transition-name`** [CSS](/en-US/docs/Web/CSS) property specifies the
 view-transition-name: header;
 view-transition-name: figure-caption;
 
-/* Keyword value */
+/* Keyword values */
 view-transition-name: none;
 view-transition-name: match-element;
 
@@ -460,7 +460,7 @@ Click a technology heading in the sidebar and notice the animation effect of its
 
 There is also a checkbox, which is selected by default, so `view-transition-name: match-element` is applied. Uncheck the checkbox and click a heading again to see how the view-transition works without `view-transition-name: match-element`.
 
-{{EmbedLiveSample("using_the-match-element_value", "", "400")}}
+{{EmbedLiveSample("using_the_match-element_value", "", "400")}}
 
 ## Specifications
 

@@ -22,7 +22,7 @@ deleteTexture(texture)
 ### Parameters
 
 - `texture`
-  - : A {{domxref("WebGLTexture")}} object to delete.
+  - : A {{domxref("WebGLTexture")}} object to delete. Passing `null` does nothing.
 
 ### Return value
 

@@ -46,7 +46,7 @@ None ({{jsxref("undefined")}}).
     This prevents successful login to the server.
 - `InvalidModificationError` {{domxref("DOMException")}}
   - : Thrown if the `configuration` includes changed identity information, but the connection already has identity information specified.
-    This happens if `configuration.peerIdentity` or `configuration.certificates` are set and their values differ from the current configuration.
+    This happens if `configuration.alwaysNegotiateDataChannels`, `configuration.peerIdentity`, or `configuration.certificates` are set and their values differ from the current configuration.
     This may also be thrown if there are changes to `configuration.bundlePolicy` or `configuration.rtcpMuxPolicy`, or to `configuration.iceCandidatePoolSize` when {{domxref("RTCPeerConnection.setLocalDescription()")}} has already been called.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("RTCPeerConnection")}} is closed.

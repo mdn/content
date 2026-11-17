@@ -9,8 +9,6 @@ browser-compat: html.elements.tt
 sidebar: htmlsidebar
 ---
 
-{{deprecated_header}}
-
 The **`<tt>`** [HTML](/en-US/docs/Web/HTML) element creates inline text which is presented using the {{Glossary("user agent", "user agent's")}} default monospace font face. This element was created for the purpose of rendering text as it would be displayed on a fixed-width display such as a teletype, text-only screen, or line printer.
 
 The terms **non-proportional**, **monotype**, and **monospace** are used interchangeably and have the same general meaning: they describe a typeface whose characters are all the same number of pixels wide.
@@ -23,6 +21,15 @@ This element is obsolete, however. You should use the more semantically helpful 
 ## Attributes
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes)
+
+## Usage notes
+
+The `<tt>` element is, by default, rendered using the browser's default non-proportional font. You can override this using CSS by creating a rule using the `tt` selector, as seen in the example [Overriding the default font](#overriding_the_default_font) above.
+
+> [!NOTE]
+> User-configured changes to the default monospace font setting may take precedence over your CSS.
+
+Although this element wasn't officially deprecated in HTML 4.01, its use was discouraged in favor of the semantic elements and/or CSS. The `<tt>` element is obsolete in HTML 5.
 
 ## Examples
 
@@ -45,15 +52,7 @@ This example uses `<tt>` to show text entered into, and output by, a terminal ap
 
 ### Overriding the default font
 
-You can override the browser's default font—if the browser permits you to do so, which it isn't required to do—using CSS:
-
-#### CSS
-
-```css
-tt {
-  font-family: "Lucida Console", "Menlo", "Monaco", "Courier New", monospace;
-}
-```
+You can override the browser's default font—if the browser permits you to do so, which it isn't required to do—using CSS.
 
 #### HTML
 
@@ -66,18 +65,17 @@ tt {
 </p>
 ```
 
+#### CSS
+
+```css
+tt {
+  font-family: "Lucida Console", "Menlo", "Monaco", "Courier New", monospace;
+}
+```
+
 #### Result
 
 {{EmbedLiveSample("Overriding_the_default_font", 650, 80)}}
-
-## Usage notes
-
-The `<tt>` element is, by default, rendered using the browser's default non-proportional font. You can override this using CSS by creating a rule using the `tt` selector, as seen in the example [Overriding the default font](#overriding_the_default_font) above.
-
-> [!NOTE]
-> User-configured changes to the default monospace font setting may take precedence over your CSS.
-
-Although this element wasn't officially deprecated in HTML 4.01, its use was discouraged in favor of the semantic elements and/or CSS. The `<tt>` element is obsolete in HTML 5.
 
 ## Technical summary
 

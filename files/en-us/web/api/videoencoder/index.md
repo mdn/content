@@ -25,11 +25,6 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 - {{domxref("VideoEncoder.state")}} {{ReadOnlyInline}}
   - : Represents the state of the underlying codec and whether it is configured for encoding.
 
-### Events
-
-- {{domxref("VideoEncoder.dequeue_event", "dequeue")}}
-  - : Fires to signal a decrease in {{domxref("VideoEncoder.encodeQueueSize")}}.
-
 ## Static methods
 
 - {{domxref("VideoEncoder.isConfigSupported_static", "VideoEncoder.isConfigSupported()")}}
@@ -49,6 +44,11 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
   - : Cancels all pending encodes and callbacks.
 - {{domxref("VideoEncoder.close()")}}
   - : Ends all pending work and releases system resources.
+
+## Events
+
+- {{domxref("VideoEncoder.dequeue_event", "dequeue")}}
+  - : Fires to signal a decrease in {{domxref("VideoEncoder.encodeQueueSize")}}.
 
 ## Specifications
 

@@ -54,7 +54,6 @@ sidebar: mdnsidebar
 >
 > - `\{{SeeCompatTable}}`: This macro generates an **Experimental** banner, which indicates that the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   If the technology is experimental and is hidden behind a preference in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{Deprecated_Header}}`: This macro generates a **Deprecated** banner, which indicates that the use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 > - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
 >
 > You should update or delete the following macros according to the advice below:
@@ -76,7 +75,7 @@ sidebar: mdnsidebar
 >
 > _Remember to remove this note block before publishing._
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 Begin the content on the page with an introductory paragraph, which names the property and says what it does.
 This should ideally be one or two short sentences. All other explanations, if any, should be included in the "Description" section.
@@ -90,6 +89,26 @@ See the [Interactive examples](/en-US/docs/MDN/Writing_guidelines/Page_structure
 ## Constituent properties
 
 Add this section only for shorthand properties, such as [animation](/en-US/docs/Web/CSS/Reference/Properties/animation), to list all the related longhand properties.
+
+Introduce the values with one of the following sentences as appropriate:
+
+```md
+This property is a shorthand for the following CSS properties:
+
+This property is a shorthand for the following logical properties:
+
+This property is a shorthand for the following physical properties:
+```
+
+### Reset-only sub-properties
+
+Add this section only for shorthand properties, such as [animation](/en-US/docs/Web/CSS/Reference/Properties/animation), to list all the longhand properties that are reset-only (reset by the shorthand, but not settable by it).
+
+Introduce the properties with the following intro:
+
+```md
+This property resets the following CSS properties to their initial values:
+```
 
 ## Syntax
 
@@ -132,6 +151,10 @@ If the property is part of a shorthand, include alternative ways of declaring th
 The `property-name` property, along with the \{{cssxref("sibling-property")}} property, can also be set by using the \{{cssxref("shorthand-property")}} shorthand.
 ```
 
+## Accessibility
+
+This is an optional section. Include accessibility guidelines, best practices, and potential concerns that developers should be aware of while using this property. You can also include workarounds or solutions where applicable.
+
 ## Formal definition
 
 `\{{CSSInfo}}`
@@ -143,10 +166,6 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 `\{{CSSSyntax}}`
 
 _To use this macro, remove the backticks and backslash in the markdown file._
-
-## Accessibility
-
-This is an optional section. Include accessibility guidelines, best practices, and potential concerns that developers should be aware of while using this property. You can also include workarounds or solutions where applicable.
 
 ## Examples
 

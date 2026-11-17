@@ -71,7 +71,7 @@ margin-inline-start: 5%; /* relative to the nearest block container's width */
 margin-inline-start: anchor-size(block);
 margin-inline-start: calc(anchor-size(--my-anchor width, 30px) / 4);
 
-/* Keyword values */
+/* Keyword value */
 margin-inline-start: auto;
 
 /* Global values */

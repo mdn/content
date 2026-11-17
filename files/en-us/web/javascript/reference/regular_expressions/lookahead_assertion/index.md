@@ -62,7 +62,7 @@ The matching of the pattern above happens as follows:
 Normally, assertions cannot be [quantified](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier). However, in [Unicode-unaware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), lookahead assertions can be quantified. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
 
 ```js
-/(?=a)?b/.test("b"); // true; the lookahead is matched 0 time
+/(?=a)?b/.test("b"); // true; the lookahead is matched 0 times
 ```
 
 ## Examples
@@ -103,7 +103,7 @@ The following example matches a string that's both ASCII and can be used as an i
 
 ```js
 function isASCIIIDPart(char) {
-  return /^(?=\p{ASCII}$)\p{ID_Start}$/u.test(char);
+  return /^(?=\p{ASCII}$)[$\p{ID_Continue}]$/u.test(char);
 }
 
 isASCIIIDPart("a"); // true

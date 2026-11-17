@@ -15,6 +15,48 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("feDiffuseLighting")}}
 - {{SVGElement("feSpecularLighting")}}
 
+## feDiffuseLighting
+
+For {{SVGElement("feDiffuseLighting")}}, `surfaceScale` defines the height of the surface.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>{{cssxref("number")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+## feSpecularLighting
+
+For {{SVGElement("feSpecularLighting")}}, `surfaceScale` defines the height of the surface.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>{{cssxref("number")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Example
 
 ```css hidden
@@ -49,48 +91,6 @@ svg {
 ```
 
 {{EmbedLiveSample("Example", "420", "200")}}
-
-## feSpecularLighting
-
-For {{SVGElement("feSpecularLighting")}}, `surfaceScale` defines the height of the surface.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>{{cssxref("number")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-## feDiffuseLighting
-
-For {{SVGElement("feDiffuseLighting")}}, `surfaceScale` defines the height of the surface.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>{{cssxref("number")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Specifications
 

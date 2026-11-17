@@ -9,8 +9,6 @@ browser-compat: html.elements.strike
 sidebar: htmlsidebar
 ---
 
-{{deprecated_header}}
-
 The **`<strike>`** [HTML](/en-US/docs/Web/HTML) element places a strikethrough (horizontal line) over text.
 
 > [!WARNING]
@@ -29,7 +27,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("examples")}}
 
 ## Technical summary
 

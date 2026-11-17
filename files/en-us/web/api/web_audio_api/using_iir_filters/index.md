@@ -30,9 +30,9 @@ A [biquad filter](https://www.mathworks.com/help/dsphdl/ref/biquadfilter.html) i
 
 When you are using an {{domxref("IIRFilterNode")}} instead of a {{domxref("BiquadFilterNode")}} you are creating the filter yourself, rather than just choosing a pre-programmed type. So you can create a highpass filter, or a lowpass filter, or a more bespoke one. And this is where the IIR filter node is useful — you can create your own if none of the already available settings is right for what you want. As well as this, if your audio graph needed a highpass and a bandpass filter within it, you could just use one IIR filter node in place of the two biquad filter nodes you would otherwise need for this.
 
-With the IIR filter node it's up to you to set what `feedforward` and `feedback` values the filter needs — this determines the characteristics of the filter. The downside is that this involves some complex maths.
+With the IIR filter node it's up to you to set what `feedforward` and `feedback` values the filter needs — this determines the characteristics of the filter. The downside is that this involves some complex math.
 
-If you are looking to learn more there's some [information about the maths behind IIR filters here](https://www.staff.ncl.ac.uk/oliver.hinton/eee305/Chapter5.pdf). This enters the realms of signal processing theory — don't worry if you look at it and feel like it's not for you.
+If you are looking to learn more there's some [information about the math behind IIR filters here](https://www.staff.ncl.ac.uk/oliver.hinton/eee305/Chapter5.pdf). This enters the realms of signal processing theory — don't worry if you look at it and feel like it's not for you.
 
 If you want to play with the IIR filter node and need some values to help along the way, there's [a table of already calculated values here](https://www.dspguide.com/CH20.PDF); on pages 4 & 5 of the linked PDF the `an` values refer to the `feedForward` values and the `bn` values refer to the `feedback`. [musicdsp.org](https://www.musicdsp.org/en/latest/) is also a great resource if you want to read more about different filters and how they are implemented digitally.
 

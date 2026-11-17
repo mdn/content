@@ -13,6 +13,28 @@ The **`AudioPlaybackStats`** interface of the [Web Audio API](/en-US/docs/Web/AP
 
 An audio context's `AudioPlaybackStats` object can be accessed via its {{domxref("AudioContext.playbackStats")}} property. The returned `AudioPlaybackStats` object is live — the contained property values are updated once every second.
 
+## Instance properties
+
+- {{domxref("AudioPlaybackStats.averageLatency")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : A number indicating the average latency since the audio context was initialized or since {{domxref("AudioPlaybackStats.resetLatency()")}} was last called.
+- {{domxref("AudioPlaybackStats.minimumLatency")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : A number indicating the minimum latency since the audio context was initialized or since {{domxref("AudioPlaybackStats.resetLatency()")}} was last called.
+- {{domxref("AudioPlaybackStats.maximumLatency")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : A number indicating the maximum latency since the audio context was initialized or since {{domxref("AudioPlaybackStats.resetLatency()")}} was last called.
+- {{domxref("AudioPlaybackStats.totalDuration")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : A number indicating the total duration of all audio frames since the audio context was initialized.
+- {{domxref("AudioPlaybackStats.underrunDuration")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : A number indicating the total duration of the underrun events that have occurred since the audio context was initialized.
+- {{domxref("AudioPlaybackStats.underrunEvents")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : A number indicating how many underrun events have occurred since the audio context was initialized.
+
+## Instance methods
+
+- {{domxref("AudioPlaybackStats.resetLatency()")}} {{experimental_inline}}
+  - : Resets the start of the interval during which latency statistics are measured to the current time.
+- {{domxref("AudioPlaybackStats.toJSON()")}} {{experimental_inline}}
+  - : Returns a JSON-serializable plain object representing the `AudioPlaybackStats` object. Automatically called by {{jsxref("JSON.stringify()")}}.
+
 ## Description
 
 In applications that play audio, it is beneficial to measure audio {{glossary("latency")}} and underrun because both can contribute to a poor audio experience:
@@ -47,28 +69,6 @@ The number of underrun events since the audio context initialization is reported
 The audio context's latency can be measured using the {{domxref("AudioPlaybackStats.averageLatency")}}, {{domxref("AudioPlaybackStats.minimumLatency")}}, and {{domxref("AudioPlaybackStats.maximumLatency")}} properties.
 
 It is possible to retrieve the immediate playout latency of the audio context via the {{domxref("AudioContext.outputLatency")}} property; however, this is an instantaneous value that fluctuates rapidly. `AudioPlaybackStats` provides the average, minimum, and maximum latency over time, which is more useful for identifying persistent performance issues.
-
-## Instance properties
-
-- {{domxref("AudioPlaybackStats.averageLatency")}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : A number indicating the average latency since the audio context was initialized or since {{domxref("AudioPlaybackStats.resetLatency()")}} was last called.
-- {{domxref("AudioPlaybackStats.minimumLatency")}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : A number indicating the minimum latency since the audio context was initialized or since {{domxref("AudioPlaybackStats.resetLatency()")}} was last called.
-- {{domxref("AudioPlaybackStats.maximumLatency")}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : A number indicating the maximum latency since the audio context was initialized or since {{domxref("AudioPlaybackStats.resetLatency()")}} was last called.
-- {{domxref("AudioPlaybackStats.totalDuration")}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : A number indicating the total duration of all audio frames since the audio context was initialized.
-- {{domxref("AudioPlaybackStats.underrunDuration")}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : A number indicating the total duration of the underrun events that have occurred since the audio context was initialized.
-- {{domxref("AudioPlaybackStats.underrunEvents")}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : A number indicating how many underrun events have occurred since the audio context was initialized.
-
-## Instance methods
-
-- {{domxref("AudioPlaybackStats.resetLatency()")}} {{experimental_inline}}
-  - : Resets the start of the interval during which latency statistics are measured to the current time.
-- {{domxref("AudioPlaybackStats.toJSON()")}} {{experimental_inline}}
-  - : A {{Glossary("Serialization","serializer")}} that returns a JSON representation of the `AudioPlaybackStats` object.
 
 ## Examples
 

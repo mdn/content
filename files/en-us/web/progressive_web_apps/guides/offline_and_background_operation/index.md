@@ -36,7 +36,7 @@ Normally, an entire website runs in a single thread. This includes the website's
 
 A [service worker](/en-US/docs/Web/API/Service_Worker_API) is a specific type of [web worker](/en-US/docs/Web/API/Web_Workers_API) that's used to implement PWAs. Like all web workers, a service worker runs in a separate thread to the main JavaScript code. The main code creates the worker, passing in a URL to the worker's script. The worker and the main code can't directly access each other's state, but can communicate by sending each other messages. Workers can be used to run computationally expensive tasks in the background: because they run in a separate thread, the main JavaScript code in the app, that implements the app's UI, can stay responsive to the user.
 
-So a PWA always has a high level architecture split between:
+So a PWA always has a high-level architecture split between:
 
 - The _main app_, with the HTML, CSS, and the part of the JavaScript that implements the app's UI (by handling user events, for example)
 - The _service worker_, which handles offline and background tasks

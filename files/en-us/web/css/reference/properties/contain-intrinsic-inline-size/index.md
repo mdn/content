@@ -15,7 +15,7 @@ In a horizontal [writing mode](/en-US/docs/Web/CSS/Reference/Properties/writing-
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 contain-intrinsic-inline-size: none;
 
 /* <length> values */

@@ -17,6 +17,10 @@ progress(300, 0, 1000)
 progress(50px, 0px, 100px)
 progress(50%, 30%, 80%)
 
+/* Unclamped return value */
+progress(no-clamp 300, 0, 100)
+progress(no-clamp 50px, 0px, 100px)
+
 /* With custom property */
 progress(var(--container-width), 320, 1200)
 
@@ -35,14 +39,16 @@ progress(calc(20 + 30), 0, 100)
 
 ### Parameters
 
-The `progress()` function takes three comma-separated {{cssxref("&lt;calc-sum>")}} expressions as parameters:
+The `progress()` function takes an optional keyword followed by three comma-separated {{cssxref("&lt;calc-sum>")}} expressions as parameters:
 
 ```plain
-progress(<calc-sum>, <calc-sum>, <calc-sum>)
+progress(no-clamp? <calc-sum>, <calc-sum>, <calc-sum>)
 ```
 
-Respectively, these are:
+These are:
 
+- `no-clamp` {{optional_inline}}
+  - : A keyword that stops the return value from being clamped to the range `0` to `1`. It is written before the progress value, and is not followed by a comma. See [Clamping the return value](#clamping_the_return_value).
 - Progress
   - : The value to calculate the position of relative to the other two values.
 - Progress start
@@ -58,7 +64,9 @@ A {{cssxref("&lt;number>")}} representing the position of the progress value rel
 (progress - progress start) / (progress end - progress start)
 ```
 
-If the progress value is in between the progress start and progress end values, the return value will between `0` and `1`, representing a percentage. If the progress value is smaller than the progress start value, or larger than the progress end value, the function is still valid, but the return value is clamped to `0` or `1`, respectively.
+If the progress value is in between the progress start and progress end values, the return value will be between `0` and `1`, representing a percentage.
+
+If the `no-clamp` keyword is included, then the return value can be any number. Otherwise, the return value is clamped to the range `0` to `1`.
 
 ## Description
 
@@ -71,6 +79,30 @@ opacity: progress(5, 0, 10);
 ```
 
 In this case, the computed value of {{cssxref("opacity")}} would be `0.5`, as 5 is mid-way between `0` and `10`.
+
+### Clamping the return value
+
+By default, the return value is clamped to the range `0` to `1`, so a progress value outside the progress start and end bounds returns the nearest bound:
+
+```css
+/* Computes to 1, not 1.5 */
+scale: progress(15, 0, 10);
+
+/* Computes to 0, not -0.5 */
+scale: progress(-5, 0, 10);
+```
+
+Including the `no-clamp` keyword before the progress value removes this restriction, so the function extrapolates beyond the bounds instead of stopping at them:
+
+```css
+/* Computes to 1.5 */
+scale: progress(no-clamp 15, 0, 10);
+
+/* Computes to -0.5 */
+scale: progress(no-clamp -5, 0, 10);
+```
+
+Note that `no-clamp` is a keyword rather than a separate parameter, so it is not followed by a comma.
 
 ### Permitted unit types
 
@@ -101,7 +133,7 @@ The `progress()` function outputs unitless values, therefore it can be used for 
 
 ### Combining `progress()` with other functions and custom properties
 
-Because `progress()` only ever returns a unitless value between `0` and `1`, it is common to combine it with another math function such as {{cssxref("calc()")}} to output the value and units you want. You can also use [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*) inside `progress()` functions — this makes sense, as you'll often want to set the same values in multiple places, and/or base them on custom properties set via JavaScript.
+Because `progress()` only ever returns a unitless value, it is common to combine it with another math function such as {{cssxref("calc()")}} to output the value and units you want. You can also use [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*) inside `progress()` functions — this makes sense, as you'll often want to set the same values in multiple places, and/or base them on custom properties set via JavaScript.
 
 The following example calculates what percentage the viewport width is between a minimum width of `320px` and a maximum width of `1200px`. The `calc()` function is used to multiply the `progress()` return value by `600px` to convert it into a pixel value that will half of the viewport width's progress value between `320px` and `1200px`.
 
@@ -248,33 +280,9 @@ Our HTML features an {{htmlelement("article")}} element that contains the rest o
 </article>
 ```
 
-#### JavaScript
-
-In our script, we first grab a reference to our `<article>` element. We then define a function called `setContainerWidth()`, which grabs the `<article>`'s client width via {{domxref("Element.getBoundingClientRect()")}}, and sets a custom property on it called `--container-width`, which is equal to the client width rounded down, with `px` appended to it.
-
-We then set a {{domxref("Window.resize_event", "resize")}} event listener on the `Window` object, which runs `setContainerWidth()` when the browser window is resized. We also run it once to set the `--container-width` custom property on the `<article>` element once the page loads.
-
-```js
-const articleElem = document.querySelector("article");
-
-function setContainerWidth() {
-  const clientWidth = articleElem.getBoundingClientRect().width;
-  articleElem.style.setProperty(
-    "--container-width",
-    `${Math.floor(clientWidth)}px`,
-  );
-}
-
-window.addEventListener("resize", setContainerWidth);
-
-setContainerWidth();
-```
-
-With this set up, we can now set some property values based on the `--container-width`, so that parts of our design will dynamically change as the window resizes.
-
 #### CSS
 
-The following section explains just the CSS relevant to how we've used the `progress()` function in the demo. For the full CSS, see the [CSS source](https://github.com/mdn/dom-examples/blob/main/css-progress/index.css).
+The following section explains just the CSS relevant to how we've used the `progress()` function in the demo. These styles use the `--container-width` custom property, which is set by the JavaScript shown later. For the full CSS, see the [CSS source](https://github.com/mdn/dom-examples/blob/main/css-progress/index.css).
 
 We first center the `<article>` inside the `<body>` using [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), then set some custom properties on it to represent the `min-width` and `max-width` values we will use elsewhere. We then target the `<article>` element, giving it {{cssxref("min-width")}} and {{cssxref("max-width")}} values equal to the custom properties we set earlier. We set its {{cssxref("position")}} to `relative` so we can position its content relative to it, then give it a percentage {{cssxref("width")}}, fixed {{cssxref("height")}}, and {{cssxref("border")}}.
 
@@ -380,6 +388,30 @@ We position the `content` `<section>` absolutely so it sits over the top of the 
   );
 }
 ```
+
+#### JavaScript
+
+In our script, we first grab a reference to our `<article>` element. We then define a function called `setContainerWidth()`, which grabs the `<article>`'s client width via {{domxref("Element.getBoundingClientRect()")}}, and sets a custom property on it called `--container-width`, which is equal to the client width rounded down, with `px` appended to it.
+
+We then set a {{domxref("Window.resize_event", "resize")}} event listener on the `Window` object, which runs `setContainerWidth()` when the browser window is resized. We also run it once to set the `--container-width` custom property on the `<article>` element once the page loads.
+
+```js
+const articleElem = document.querySelector("article");
+
+function setContainerWidth() {
+  const clientWidth = articleElem.getBoundingClientRect().width;
+  articleElem.style.setProperty(
+    "--container-width",
+    `${Math.floor(clientWidth)}px`,
+  );
+}
+
+window.addEventListener("resize", setContainerWidth);
+
+setContainerWidth();
+```
+
+This keeps `--container-width` up to date for the CSS calculations described above, so that parts of our design dynamically change as the window resizes.
 
 ## Specifications
 

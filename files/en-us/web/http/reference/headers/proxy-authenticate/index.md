@@ -53,7 +53,7 @@ Proxy-Authenticate: Basic realm="Dev", charset="UTF-8"
 - `<auth-scheme>`
   - : A case-insensitive token indicating the [Authentication scheme](/en-US/docs/Web/HTTP/Guides/Authentication#authentication_schemes) used.
     Some of the more common types are [`Basic`](/en-US/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` and `AWS4-HMAC-SHA256`.
-    IANA maintains a [list of authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), but there are other schemes offered by host services.
+    IANA maintains a [list of authentication schemes](https://www.iana.org/assignments/http-authschemes), but there are other schemes offered by host services.
 - `<auth-param>` {{optional_inline}}
   - : An authentication parameter whose format depends on the `<auth-scheme>`.
     `<realm>` is described below as it's a common authentication parameter among many auth schemes.

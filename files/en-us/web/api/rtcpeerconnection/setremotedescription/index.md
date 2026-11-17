@@ -74,7 +74,7 @@ The following exceptions are reported to the rejection handler for the promise r
     For example, this exception is thrown if the `type` is `rollback` and the signaling state is one of `stable`, `have-local-pranswer`, or `have-remote-pranswer` because you cannot roll back a connection that's either fully established or is in the final stage of becoming connected.
 - `OperationError` {{domxref("DOMException")}}
   - : Returned if an error does not match the ones specified here. This includes identity validation errors.
-- `RTCError` {{domxref("DOMException")}}
+- {{domxref("RTCError")}}
   - : Returned with the {{domxref("RTCError.errorDetail", "errorDetail")}} set to `sdp-syntax-error` if the {{Glossary("SDP")}} specified by {{domxref("RTCSessionDescription.sdp")}} is not valid.
     The error object's {{domxref("RTCError.sdpLineNumber", "sdpLineNumber")}} property indicates the line number within the SDP on which the syntax error was detected.
 - {{jsxref("TypeError")}}

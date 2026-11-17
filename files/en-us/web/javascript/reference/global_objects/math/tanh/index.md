@@ -72,7 +72,7 @@ Math.tanh(Infinity); // 1
 
 ## See also
 
-- [Polyfill of `Math.tanh` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.tanh` in `core-js`](https://core-js.io/docs/features/ecmascript/math)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.atanh()")}}

@@ -21,7 +21,7 @@ isRenderbuffer(renderbuffer)
 ### Parameters
 
 - `renderbuffer`
-  - : A {{domxref("WebGLRenderbuffer")}} to check.
+  - : A {{domxref("WebGLRenderbuffer")}} to check. Passing `null` returns `false`.
 
 ### Return value
 

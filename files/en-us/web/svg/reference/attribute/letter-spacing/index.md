@@ -32,7 +32,7 @@ You can use this attribute with the following SVG elements:
 </svg>
 ```
 
-{{EmbedLiveSample}}
+{{EmbedLiveSample("controlling_svg_letter_spacing")}}
 
 ## Usage notes
 

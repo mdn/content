@@ -20,7 +20,7 @@ isBuffer(buffer)
 ### Parameters
 
 - `buffer`
-  - : A {{domxref("WebGLBuffer")}} to check.
+  - : A {{domxref("WebGLBuffer")}} to check. Passing `null` returns `false`.
 
 ### Return value
 

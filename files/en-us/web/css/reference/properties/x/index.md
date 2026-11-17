@@ -98,7 +98,7 @@ rect:nth-of-type(4) {
 
 #### Results
 
-{{EmbedLiveSample("Defining the x-axis coordinate of SVG shapes", "300", "180")}}
+{{EmbedLiveSample("defining_the_x-axis_coordinates_of_svg_shapes", "300", "180")}}
 
 The left edges of the rectangles are at `10` (from the attribute), `3em`, `180px`, and `50%`, respectively. The SVG is `300px` wide, so the last rectangle's left side is at the `150px` mark.
 

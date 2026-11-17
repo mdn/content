@@ -55,11 +55,13 @@ Such a network is not limited to two computers. You can connect as many computer
 
 ![Ten computers all together](internet-schema-2.png)
 
-To solve this problem, each computer on a network is connected to a special tiny computer called a _network switch_ (or _switch_ for short). This switch has only one job: like a signaler at a railway station, it makes sure that messages sent from a given computer arrive only at their target destination computer. To send a message to computer B, computer A sends the message to the switch, which in turn forwards the message to computer B — computer B doesn't get messages intended for other computers, and none of the messages for computer B reach other computers on the local area network.
+To solve this problem, each computer on a network is connected to a special tiny computer called a _network switch_ (or _switch_ for short). This switch has only one job: like a signaler at a railway station, it forwards messages toward their intended recipients. To send a message to computer B, computer A sends the message to the switch, which in turn forwards the message to computer B.
 
 Once we add a switch to the system, our network of 10 computers only requires 10 cables: a single plug for each computer and a switch with 10 plugs.
 
 ![Ten computers with a switch](internet-schema-3.png)
+
+To tell computers apart, the switch uses _MAC addresses_, which identify network interfaces for delivery within the local network. MAC addresses are like fingerprints; they are typically assigned by the manufacturer, but software can also assign or change them (common today for privacy reasons). Each message carries the sender's and recipient's MAC addresses. The switch reads the sender's address and remembers which connection the message arrived from, so it knows where to forward future messages addressed to that sender. If it hasn't yet learned where a recipient is, it forwards the message through all its other connections. When the recipient sends a message back, the switch learns its location too.
 
 ### A network of networks
 
@@ -71,7 +73,12 @@ You may imagine that we can connect switches together infinitely, to form a netw
 
 ![Switches linked to switches](internet-schema-5.png)
 
-In reality, this leads to many engineering problems. The more switches a packet has to go through, the longer it takes to reach its destination. And you can't have just a tree of switches, because then a single switch failure may disconnect a large portion of devices. To solve this problem, we keep each local network as small as possible, and we connect these local networks using a separate device called a _router_. A router is a computer that knows how to forward messages between networks. The router is like a post office: when a packet arrives, it reads the recipient address and forwards the packet to the right recipient directly, without going through layers of relays.
+Connecting switches this way extends a single local network. Each switch has an extensive map of which connection to use for each MAC address in its local network. If you connected ten billion computers in this network, each switch would need to remember up to ten billion MAC addresses. Whenever the recipient's address is unknown (or it has been deleted due to inactivity), switches must broadcast the message to all computers on the local network. As the network grows, it becomes increasingly costly to keep track of individual devices and find unknown recipients.
+
+The key problem is that our addresses have no hierarchy and don't correspond to the network structure—it's like trying to figure out who to deliver mail to by comparing each person's fingerprint. To fix this problem, we divide computers into separate local networks and connect these networks using a device called a _router_. It uses a different kind of address, an _{{Glossary("IP address")}}_, which is a 4-number sequence like `142.250.190.78`. Unlike MAC addresses, which are "fingerprints", IP addresses are "street addresses" and are assigned when a computer connects to a network, identified in the IP address by a shared _prefix_. A router can therefore store forwarding instructions for a whole group of addresses (e.g., "forward to this router whenever the IP address starts with `142.250`") without learning the location of every individual computer in that group.
+
+> [!NOTE]
+> You may wonder why we need MAC addresses and switches, if IP addresses and routers can also do end-to-end networking. Switches have many practical benefits. One is that a switched local network lets a device keep the same IP address as it moves between connections within that network (like between two Wi-Fi access points): the switch relearns which connection your MAC address is on, so your IP address — and any connections already using it — keep working. Another is that routers need MAC addresses themselves: to pass a packet to the next router along the way, a router must still identify which device on the shared network should receive it.
 
 Such a network comes very close to what we call the Internet. We just need the physical medium (cables) to connect all these routers. Luckily, such an infrastructure already existed prior to the Internet, and that's the telephone network. To connect our network to the telephone infrastructure, we need a special piece of equipment called a _modem_. This _modem_ turns the information from our network into information manageable by the telephone infrastructure and vice versa.
 
@@ -83,11 +90,9 @@ So we are connected to the telephone infrastructure. The next step is to send th
 
 ![Full Internet stack](internet-schema-7.png)
 
-### Finding computers
+### Domain names
 
-If you want to send a message to a computer, you have to specify which one. Thus any computer linked to a network has a unique address that identifies it, called an "IP address" (where IP stands for _Internet Protocol_). It's an address made of a series of four numbers separated by dots, for example: `192.0.2.172`.
-
-That's perfectly fine for computers, but we human beings have a hard time remembering that sort of address. To make things easier, we can alias an IP address with a human-readable name called a _domain name_. For example (at the time of writing; IP addresses can change) `google.com` is the domain name used on top of the IP address `142.250.190.78`. So using the domain name is the easiest way for us to reach a computer over the Internet.
+IP addresses are perfectly fine for computers, but we human beings have a hard time remembering that sort of address. To make things easier, we can alias an IP address with a human-readable name called a _domain name_. For example (at the time of writing; IP addresses can change) `google.com` is the domain name used on top of the IP address `142.250.190.78`. So using the domain name is the easiest way for us to reach a computer over the Internet.
 
 ![Show how a domain name can alias an IP address](dns-ip.png)
 

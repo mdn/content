@@ -12,11 +12,11 @@ sidebar: accessibilitysidebar
 The `aria-checked` attribute indicates the current "checked" state of checkboxes, radio buttons, and other widgets.
 
 > [!NOTE]
-> Where possible use an HTML {{htmlelement("input")}} element with `type="checkbox"` and `type="radio"` as these have built in semantics and do not require ARIA attributes.
+> Where possible use an HTML {{htmlelement("input")}} element with `type="checkbox"` and `type="radio"` as these have built-in semantics and do not require ARIA attributes.
 
 ## Description
 
-The `aria-checked` attribute indicates whether the element is checked (`true`), unchecked (`false)`, or if the checked status is indeterminate (`mixed`), meaning it is neither checked nor unchecked. The `mixed` value is supported by the tri-state input roles of [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role) and [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role).
+The `aria-checked` attribute indicates whether the element is checked (`true`), unchecked (`false`), or if the checked status is indeterminate (`mixed`), meaning it is neither checked nor unchecked. The `mixed` value is supported by the tri-state input roles of [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role) and [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role).
 
 The `mixed` value is not supported on [`radio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role), [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role), or [`switch`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role) and elements that inherits from these. The value will be false if `mixed` is set when not supported.
 
@@ -52,17 +52,6 @@ By using the {{htmlelement("input")}} element with `type="checkbox"` instead of 
 - undefined (default)
   - : The element does not support being checked.
 
-## Associated roles
-
-Used in roles:
-
-- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
-- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
-- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
-- [`option`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
-- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
-- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
-
 ## Associated interfaces
 
 - {{domxref("Element.ariaChecked")}}
@@ -73,6 +62,17 @@ Used in roles:
 ```js
 myHTMLElement.ariaChecked = true;
 ```
+
+## Associated roles
+
+Used in roles:
+
+- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
+- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
+- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
+- [`option`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
+- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
+- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
 
 ## Specifications
 

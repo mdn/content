@@ -9,7 +9,7 @@ HTML games have a huge advantage over native in terms of publishing and distribu
 
 ## Game distribution
 
-So you've followed a [tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) or [two](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser) and created an HTML game — that's great! [Game distribution](/en-US/docs/Games/Publishing_games/Game_distribution) provides all you need to know about the ways you can distribute your newly created game into the wild — including hosting it yourself online, submitting it to open marketplaces, and submitting it to closed ones like Google Play or the iOS App Store.
+So you've followed a [tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) or [two](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser) and created an HTML game — that's great! [Game distribution](/en-US/docs/Games/Publishing_games/Game_distribution) provides all you need to know about the ways you can distribute your newly created game into the wild — including hosting it yourself online, submitting it to open marketplaces, and submitting it to closed ones like Google Play or the iOS App Store.
 
 ## Game promotion
 
