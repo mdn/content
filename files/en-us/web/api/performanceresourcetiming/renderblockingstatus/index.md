@@ -8,7 +8,7 @@ browser-compat: api.PerformanceResourceTiming.renderBlockingStatus
 
 {{APIRef("Performance API")}}{{AvailableInWorkers}}
 
-The **`renderBlockingStatus`** read-only property returns the render-blocking status of the resource.
+The **`renderBlockingStatus`** read-only property of the {{domxref("PerformanceResourceTiming")}} interface indicates whether the resource could block the page from rendering.
 
 It is useful to determine resources that:
 
@@ -17,18 +17,21 @@ It is useful to determine resources that:
 
 ## Value
 
-The `renderBlockingStatus` property can have the following values:
+A string, which can be one of the following values:
 
 - `"blocking"`
-  - : The resource might potentially block rendering.
+  - : The resource might block rendering.
 - `"non-blocking"`
   - : The resource does not block rendering.
 
 ## Description
 
-Render-blocking resources are static files, such as fonts, CSS, and JavaScript that block or delay the browser from rendering page content to the screen. The browser determines these blocking resources automatically and doesn't render any pixel to the screen before all stylesheets and synchronous scripts are loaded and evaluated. This prevents Flash of Unstyled Contents ("FOUC").
+[Render-blocking](/en-US/docs/Glossary/Render_blocking) resources are static files, such as fonts, CSS, and JavaScript, that delay the rendering of page content to the screen.
+The browser determines these blocking resources automatically and doesn't render any pixel to the screen before all stylesheets and synchronous scripts are loaded and evaluated.
+This prevents a flash of unstyled content (FOUC).
 
-In addition to the automatic render-blocking mechanism, `blocking="render"` can be provided as an attribute and value to {{HTMLElement("script")}}, {{HTMLElement("style")}} or {{HTMLElement("link")}} elements to specify explicit render-blocking. For example:
+In addition to the automatic render-blocking mechanism, you can set `blocking="render"` on {{HTMLElement("script")}}, {{HTMLElement("style")}}, and {{HTMLElement("link")}} elements to block rendering explicitly.
+For example:
 
 ```html
 <script blocking="render" src="important.js" defer></script>
@@ -72,3 +75,10 @@ resources.forEach((entry) => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLLinkElement.blocking")}}
+- {{domxref("HTMLScriptElement.blocking")}}
+- {{domxref("HTMLStyleElement.blocking")}}
+- [Resource timing](/en-US/docs/Web/API/Performance_API/Resource_timing)

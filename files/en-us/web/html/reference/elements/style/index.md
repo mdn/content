@@ -42,11 +42,16 @@ p {
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `blocking`
-  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of critical subresources and the application of the stylesheet to the document. {{cssxref("@import")}}-ed stylesheets are generally considered as critical subresources, whereas {{cssxref("background-image")}} and fonts are not. The operations that are to be blocked must be a space-separated list of blocking tokens listed below. Currently there is only one token:
+  - : This attribute explicitly indicates that certain operations should be blocked until the stylesheet's critical subresources have been fetched and the stylesheet has been applied to the document.
+    Stylesheets loaded with {{cssxref("@import")}} are generally considered critical subresources, whereas {{cssxref("background-image")}} images and fonts are not.
+    The operations that are to be blocked must be a space-separated list of blocking tokens.
+    Currently there is only one token:
     - `render`: The rendering of content on the screen is blocked.
 
     > [!NOTE]
-    > Only `style` elements in the document's `<head>` can possibly block rendering. By default, a `style` element in the `<head>` blocks rendering when the browser discovers it during parsing. If such a `style` element is added dynamically via script, you must additionally set `blocking = "render"` for it to block rendering.
+    > Only `<style>` elements in the document's `<head>` can block rendering.
+    > A `<style>` element in the HTML source blocks rendering by default.
+    > A `<style>` element added using JavaScript blocks rendering only if `blocking="render"` is set.
 
 - `media`
   - : This attribute defines which media the style should be applied to. Its value is a [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using), which defaults to `all` if the attribute is missing.

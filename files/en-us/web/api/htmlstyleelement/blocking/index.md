@@ -8,15 +8,24 @@ browser-compat: api.HTMLStyleElement.blocking
 
 {{APIRef("HTML DOM")}}
 
-The read-only **`blocking`** property of the {{domxref("HTMLStyleElement")}} returns a live {{domxref("DOMTokenList")}} object containing the operations that should be blocked on the fetching of an external resource. It reflects the {{HTMLElement("style")}} element's [`blocking`](/en-US/docs/Web/HTML/Reference/Elements/style#blocking) content attribute.
+The read-only **`blocking`** property of the {{domxref("HTMLStyleElement")}} interface returns a live {{domxref("DOMTokenList")}} object containing the operations that should be blocked, such as rendering.
+
+It reflects the {{HTMLElement("style")}} element's [`blocking`](/en-US/docs/Web/HTML/Reference/Elements/style#blocking) content attribute.
 
 ## Value
 
 A live {{domxref("DOMTokenList")}} object.
 
-Although the `blocking` property itself is read-only in the sense that you can't replace the `DOMTokenList` object, you can still assign to the `blocking` property directly, which is equivalent to assigning to its {{domxref("DOMTokenList/value", "value")}} property. You can also modify the `DOMTokenList` object using the {{domxref("DOMTokenList/add", "add()")}}, {{domxref("DOMTokenList/remove", "remove()")}}, {{domxref("DOMTokenList/replace", "replace()")}}, and {{domxref("DOMTokenList/toggle", "toggle()")}} methods.
+## Description
+
+When the list contains `render` and the element is in the document's `<head>`, rendering is blocked until the stylesheet's critical subresources, such as stylesheets loaded with {{cssxref("@import")}}, have been fetched and the stylesheet has been applied to the document.
+
+Although the `blocking` property itself is read-only in the sense that you can't replace the `DOMTokenList` object, you can still assign to the `blocking` property directly, which is equivalent to assigning to its {{domxref("DOMTokenList/value", "value")}} property.
+You can also modify the `DOMTokenList` object using the {{domxref("DOMTokenList/add", "add()")}}, {{domxref("DOMTokenList/remove", "remove()")}}, {{domxref("DOMTokenList/replace", "replace()")}}, and {{domxref("DOMTokenList/toggle", "toggle()")}} methods.
 
 ## Examples
+
+### Reading the `blocking` property
 
 ```html
 <style id="el" blocking="render">

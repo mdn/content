@@ -8,8 +8,7 @@ browser-compat: api.PageRevealEvent.PageRevealEvent
 
 {{APIRef("HTML DOM")}}
 
-The **`PageRevealEvent()`** constructor creates a new
-{{domxref("PageRevealEvent")}} object instance.
+The **`PageRevealEvent()`** constructor creates a new {{domxref("PageRevealEvent")}} object instance.
 
 ## Syntax
 
@@ -20,15 +19,22 @@ new PageRevealEvent(type, init)
 ### Parameters
 
 - `type`
-  - : A string representing the type of event. In the case of `PageRevealEvent` this is always `pagereveal`.
-- `init`
+  - : A string representing the type of event.
+    It is case-sensitive and browsers set it to `pagereveal`.
+- `init` {{optional_inline}}
   - : An object containing the following properties:
     - `viewTransition` {{optional_inline}}
-      - : A {{domxref("ViewTransition")}} object representing the active view transition for the related navigation. Defaults to `null` if there is no active view transition.
+      - : A {{domxref("ViewTransition")}} object representing the active view transition for the related navigation.
+        Defaults to `null`.
+
+### Return value
+
+A new {{domxref("PageRevealEvent")}} object.
 
 ## Examples
 
-A developer would not use this constructor manually. A new `PageRevealEvent` object is constructed when a handler is invoked as a result of the {{domxref("Window.pagereveal_event", "pagereveal")}} event firing.
+A developer would not use this constructor manually.
+The browser creates a `PageRevealEvent` object when it fires the {{domxref("Window.pagereveal_event", "pagereveal")}} event, and passes it to your event handler.
 
 ## Specifications
 

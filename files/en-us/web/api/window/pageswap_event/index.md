@@ -8,11 +8,12 @@ browser-compat: api.Window.pageswap_event
 
 {{APIRef("HTML DOM")}}
 
-The **`pageswap`** event is fired when you navigate across documents, when the previous document is about to unload.
+The **`pageswap`** event of the {{domxref("Window")}} interface is fired just before a cross-document navigation unloads the current document.
 
-This is useful in the case of cross-document (MPA) [view transitions](/en-US/docs/Web/API/View_Transition_API) for manipulating an active transition from the outbound page of a navigation. For example, you might wish to skip the transition, or customize the outbound transition animation via JavaScript.
+This is useful in multi-page apps (MPAs) for manipulating an active cross-document [view transition](/en-US/docs/Web/API/View_Transition_API) from the outbound page of a navigation.
+For example, you might wish to skip the transition or customize the outbound transition animation via JavaScript.
 
-It also provides access to the navigation type and current and destination document history entries.
+The event's {{domxref("PageSwapEvent.activation", "activation")}} property also gives you the navigation type and the history entries for the current and destination documents.
 
 ## Syntax
 
@@ -36,6 +37,12 @@ A {{domxref("PageSwapEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Examples
 
+### Customizing an outbound view transition
+
+When the user navigates between the home page and a profile page, the `pageswap` handler on the old page sets `view-transition-name` values on the elements that should animate.
+It chooses those elements based on the current URL and the destination URL, which it gets from the event's {{domxref("PageSwapEvent.activation", "activation")}} property.
+The `isProfilePage()`, `isHomePage()`, and `extractProfileNameFromUrl()` helper functions aren't shown.
+
 ```js
 window.addEventListener("pageswap", async (e) => {
   // Only run this if an active view transition exists
@@ -45,8 +52,8 @@ window.addEventListener("pageswap", async (e) => {
       : null;
     const targetUrl = new URL(e.activation.entry.url);
 
-    // Going from profile page to homepage
-    // ~> The big img and title are the ones!
+    // Going from a profile page to the home page:
+    // animate the main title and image
     if (isProfilePage(currentUrl) && isHomePage(targetUrl)) {
       // Set view-transition-name values on the elements to animate
       document.querySelector(`#detail main h1`).style.viewTransitionName =
@@ -55,7 +62,7 @@ window.addEventListener("pageswap", async (e) => {
         "avatar";
 
       // Remove view-transition-names after snapshots have been taken
-      // Stops naming conflicts resulting from the page state persisting in BFCache
+      // Stops naming conflicts resulting from the page state persisting in the bfcache
       await e.viewTransition.finished;
       document.querySelector(`#detail main h1`).style.viewTransitionName =
         "none";
@@ -63,8 +70,8 @@ window.addEventListener("pageswap", async (e) => {
         "none";
     }
 
-    // Going to profile page
-    // ~> The clicked items are the ones!
+    // Going to a profile page:
+    // animate the name and avatar in the clicked list item
     if (isProfilePage(targetUrl)) {
       const profile = extractProfileNameFromUrl(targetUrl);
 
@@ -75,7 +82,7 @@ window.addEventListener("pageswap", async (e) => {
         "avatar";
 
       // Remove view-transition-names after snapshots have been taken
-      // Stops naming conflicts resulting from the page state persisting in BFCache
+      // Stops naming conflicts resulting from the page state persisting in the bfcache
       await e.viewTransition.finished;
       document.querySelector(`#${profile} span`).style.viewTransitionName =
         "none";
@@ -99,5 +106,5 @@ window.addEventListener("pageswap", async (e) => {
 
 ## See also
 
-- [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Using)
 - {{domxref("Window.pagereveal_event", "pagereveal")}} event
+- [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Using)
