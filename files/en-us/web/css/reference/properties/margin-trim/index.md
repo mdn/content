@@ -49,6 +49,7 @@ p {
   margin: 1rem;
 }
 ```
+
 ## Syntax
 
 ```css
