@@ -107,7 +107,7 @@ A space before bracket notation is allowed.
 document ["createElement"]("pre");
 ```
 
-Passing expressions that evaluate to property name will do the same thing as directly passing the property name.
+Passing expressions that evaluate to a property name will do the same thing as directly passing the property name.
 
 ```js
 const key = "name";

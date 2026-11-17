@@ -36,7 +36,7 @@ The operator operates on the left operand's bit representation in [two's complem
 9 << 2 (base 10): 00000000000000000000000000100100 (base 2) = 36 (base 10)
 ```
 
-Bitwise a 32-bit integer `x` to the left by `y` bits yields `x * 2 ** y`. So for example, `9 << 3` is equivalent to `9 * (2 ** 3) = 9 * (8) = 72`.
+Bitwise shifting a 32-bit integer `x` to the left by `y` bits yields `x * 2 ** y`. So for example, `9 << 3` is equivalent to `9 * (2 ** 3) = 9 * (8) = 72`.
 
 If the left operand is a number with more than 32 bits, it will get the most significant bits discarded. For example, the following integer with more than 32 bits will be converted to a 32-bit integer:
 

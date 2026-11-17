@@ -65,7 +65,7 @@ void (2 === "2"); // void (2 === '2'), returns undefined
 
 ### Immediately Invoked Function Expressions
 
-When using an [immediately-invoked function expression](/en-US/docs/Glossary/IIFE), the `function` keyword cannot be at the immediate start of the [statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement), because that would be parsed as a [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function), and would generate a syntax error when the parentheses representing invocation is reached — if the function is unnamed, it would immediately be a syntax error if the function is parsed as a declaration.
+When using an [immediately-invoked function expression](/en-US/docs/Glossary/IIFE), the `function` keyword cannot be at the immediate start of the [statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement), because that would be parsed as a [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function) and would generate a syntax error when the parentheses representing invocation are reached. If the function is unnamed, parsing it as a declaration will immediately generate a syntax error.
 
 ```js-nolint example-bad
 function iife() {
@@ -105,10 +105,7 @@ void () => { console.log("iife!"); }(); // SyntaxError: Malformed arrow function
 
 ### JavaScript URIs
 
-When a browser follows a [`javascript:` URI](/en-US/docs/Web/URI/Reference/Schemes/javascript), it evaluates the code in the URI
-and then replaces the contents of the page with the returned value, unless the returned
-value is {{jsxref("undefined")}}. The `void` operator can be used to return
-`undefined`. For example:
+When a browser follows a [`javascript:` URI](/en-US/docs/Web/URI/Reference/Schemes/javascript), it evaluates the code in the URI and then replaces the contents of the page with the returned value if the returned value is a string. The `void` operator can be used to return {{jsxref("undefined")}}. For example:
 
 ```html
 <a href="javascript:void(0);">Click here to do nothing</a>
