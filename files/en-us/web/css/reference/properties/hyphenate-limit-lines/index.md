@@ -143,6 +143,7 @@ p {
   hyphenate-limit-lines: 1;
 }
 ```
+
 ```css hidden
 @layer no-support {
   @supports not (hyphenate-limit-lines: 1) {
