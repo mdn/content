@@ -55,6 +55,7 @@ hyphenate-limit-lines: no-limit;
 /* <integer> values */
 hyphenate-limit-lines: 2;
 hyphenate-limit-lines: 1;
+hyphenate-limit-lines: 0;
 
 /* Global values */
 hyphenate-limit-lines: inherit;
