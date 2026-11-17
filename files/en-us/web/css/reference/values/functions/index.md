@@ -154,6 +154,8 @@ Each of the pages below contains detailed information about a math function's sy
 
 - {{cssxref("random")}}
   - : Generates a random value between a minimum and maximum value.
+- {{cssxref("random-item")}}
+  - : Picks a random value from a list of values.
 
 ### Sign-related functions
 
@@ -445,6 +447,7 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("progress")}}
 - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
 - {{cssxref("random")}}
+- {{cssxref("random-item")}}
 - {{cssxref("ray")}}
 - {{cssxref("basic-shape/rect", "rect()")}}
 - {{cssxref("rem")}}
