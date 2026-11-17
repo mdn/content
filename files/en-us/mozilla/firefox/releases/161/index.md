@@ -34,7 +34,7 @@ Firefox 161 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### CSS
 
-- The {{cssxref("random")}} CSS function generates a random value within a specified range, optionally limiting the possible values to step size intervals between those limits. An optional `<random-key>` parameter controls which `random()` functions share a random value, for example across elements or properties. ([Firefox bug 2072252](https://bugzil.la/2072252)).
+- The {{cssxref("random")}} CSS function is now supported. It generates a random value within a specified range and can optionally limit the possible values to increments of a specified step size. An optional `<random-key>` parameter can be used to share a random base value across `random()` functions, for example on different elements or in different properties. ([Firefox bug 2072252](https://bugzil.la/2072252)).
 
 <!-- #### Removals -->
 
