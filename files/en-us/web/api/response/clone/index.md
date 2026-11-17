@@ -25,7 +25,7 @@ Therefore, `clone()` is one way to read a response twice in sequence,
 but you should not use it to read very large bodies
 in parallel at different speeds.
 
-`clone()` throws a {{jsxref("TypeError")}} if the response body has already been used.
+`clone()` throws a {{jsxref("TypeError")}} if the response body has already been used or is locked. For example, calling {{domxref("ReadableStream.getReader", "getReader()")}} on the body locks it even before any data has been read, so `clone()` throws even when `bodyUsed` is `false`.
 In fact, the main reason `clone()` exists is to allow multiple uses of body objects (when they are one-use only.)
 
 ## Syntax

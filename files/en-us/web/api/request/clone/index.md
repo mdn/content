@@ -17,7 +17,7 @@ and unread data is enqueued internally on the slower consumed `body`
 without any limit or backpressure.
 Beware when you construct a `Request` from a stream and then `clone` it.
 
-`clone()` throws a {{jsxref("TypeError")}} if the request body has already been used. In fact, the main reason `clone()` exists is to allow multiple uses of body objects (when they are one-use only.)
+`clone()` throws a {{jsxref("TypeError")}} if the request body has already been used or is locked. For example, calling {{domxref("ReadableStream.getReader", "getReader()")}} on the body locks it even before any data has been read, so `clone()` throws even when `bodyUsed` is `false`. In fact, the main reason `clone()` exists is to allow multiple uses of body objects (when they are one-use only.)
 
 If you intend to modify the request, you may prefer the {{domxref("Request")}} constructor.
 
