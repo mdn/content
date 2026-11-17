@@ -461,9 +461,9 @@ The {{cssxref("margin-trim")}} property is now supported in Nightly. For block c
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
 | Nightly           | 162           | Yes                 |
-| Developer Edition | 160           | No                  |
-| Beta              | 160           | No                  |
-| Release           | 160           | No                  |
+| Developer Edition | 161           | No                  |
+| Beta              | 161           | No                  |
+| Release           | 161           | No                  |
 
 - `layout.css.margin-trim.enabled`
   - : Set to `true` to enable.
