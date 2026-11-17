@@ -71,7 +71,7 @@ The property is specified as a single value from the following list:
 - `no-limit`
   - : There is no limit on the number of consecutive hyphenated lines. This is the default.
 - {{cssxref("integer")}}
-  - : A positive integer specifying the maximum number of consecutive lines that can end with a hyphenated word.
+  - : A non-negative integer (`0` or greater) specifying the maximum number of consecutive lines that can end with a hyphenated word.
 
 ## Description
 
@@ -116,7 +116,7 @@ We include two boxes with the same text, including a very long word.
 
 #### CSS
 
-We include some basic styles, including limiting the width to `10em`, which is too narrow to contain our long word. We set each box to `hyphens: auto`, which, in the narrow container, will cause the long word to break across three lines by default. We then explicitly set `hyphenate-limit-lines` on one box to the default `no-limit` value and the other to `1`, allowing any word to be hyphenated at most once.
+We include some basic styles, including limiting the width to `10em`, which is too narrow to contain our long word. We set each box to `hyphens: auto`, which, in the narrow container, will cause the long word to break across three lines by default. We then explicitly set `hyphenate-limit-lines` on one box to the default `no-limit` value and the other to `1`, which allows only one line in a row to end with a hyphen.
 
 ```css
 .container {
@@ -147,7 +147,7 @@ p {
 
 {{EmbedLiveSample("Limiting consecutive hyphenated lines", "", 250)}}
 
-The `no-limit` in the first box allows the long word to be hyphenated as needed to prevent it from overflowing the container. The `1` value on the second box limits hyphenation to a single occurrence per word, so the long word isn't prevented from overflowing its container.
+The `no-limit` in the first box allows the long word to be hyphenated as needed to prevent it from overflowing the container. With `1` on the second box, only one line in a row can end with a hyphen. The long word needs two consecutive hyphenated lines to fit, so after the first hyphen, the rest of the word overflows the container.
 
 ## Specifications
 
