@@ -129,7 +129,7 @@ Each object can contain the following properties:
   - : A string providing a hint to the browser as to what {{httpheader("No-Vary-Search")}} header value will be set on responses for documents that it is receiving prefetch/prerender requests for. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/prerender to finish, or start a new fetch request when the speculation rule is matched. See the [`"expects_no_vary_search"` example](#expects_no_vary_search_example) for more explanation of how this can be used.
 
 - `"form_submission"` {{experimental_inline}}
-  - : A boolean value; when set to `true`, it indicates that matching URLs should be prerendered as form submissions, so that they can be activated by real form submission navigations. Defaults to `false`, in which case the prerender can't be activated by a form submission.
+  - : A boolean value; when set to `true`, it indicates that matching URLs should be prerendered as form submissions, so that they can be activated by real form submission navigations. This defaults to `false`, in which case the prerender can't be activated by a form submission.
 
     URLs matched by rules without `"form_submission: true"` set cannot be activated by form submissions due to internal browser state and checks particular to form submission navigations. Also, limitations such as {{httpheader("Content-Security-Policy")}} disallowing `form-action` would result in wasted resources, with the browser prerendering a page that can never be activated.
 
@@ -137,7 +137,7 @@ Each object can contain the following properties:
 
     The `form_submission` field is only relevant to `"prerender"` actions. If included inside a `"prefetch"` action object, rules parsed from that object will be ignored. `"prerender"` rules will also be ignored if the [`requires`](#requires) field includes `"anonymous-client-ip-when-cross-origin"`. The `form_submission` field can also only be used to prerender {{httpmethod("GET")}} request navigations; {{httpmethod("POST")}} requests for matching URLs are not prerendered.
 
-    Form submission speculations need to be triggered by the page in some manner, for example by injecting the rule with JavaScript when the user hovers over the "Submit" button, or when the users stops typing in a search box for a period of time. This means form submission speculations are restricted to [`"list"`](#list) rules (where the URL is given) and cannot be used for [`"document"`](#document) rules, since those are limited to links and do not include buttons.
+    Form submission speculations need to be triggered by the page in some manner, for example by injecting the rule with JavaScript when the user hovers over the "Submit" button, or when the user stops typing in a search box for a period of time. This means form submission speculations are restricted to [`"list"`](#list) rules (where the URL is given) and cannot be used for [`"document"`](#document) rules, since those are limited to links and do not include buttons.
 
     Typical usage includes prerendering `GET` requests for popular search results coming from a search form (for example, `/search?q=cats`). See the [`"form_submission"` examples](#form_submission_examples) section for examples.
 
