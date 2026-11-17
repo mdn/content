@@ -380,6 +380,10 @@ Setting `overflow` on images and other {{glossary("replaced elements")}} works a
 
 See the [browser compatibility](#browser_compatibility) chart for current browser support information.
 
+## Accessibility
+
+In some browsers, scrolling content areas are not keyboard-focusable, so they cannot be scrolled by a keyboard-only user. To ensure all keyboard-only users can scroll the container, enable the element to receive focus by setting [`tabindex="0"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) on the container. To give screen reader users context when the container receives focus, set an appropriate [WAI-ARIA role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) on the container, such as `role="region"`, and an accessible name using the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute.
+
 ## Formal definition
 
 {{cssinfo}}
@@ -387,10 +391,6 @@ See the [browser compatibility](#browser_compatibility) chart for current browse
 ## Formal syntax
 
 {{csssyntax}}
-
-## Accessibility
-
-In some browsers, scrolling content areas are not keyboard-focusable, so they cannot be scrolled by a keyboard-only user. To ensure all keyboard-only users can scroll the container, enable the element to receive focus by setting [`tabindex="0"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) on the container. To give screen reader users context when the container receives focus, set an appropriate [WAI-ARIA role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) on the container, such as `role="region"`, and an accessible name using the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute.
 
 ## Examples
 
