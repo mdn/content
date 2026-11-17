@@ -1,6 +1,6 @@
 ---
-title: Overview of CSS gap and gap decoration properties
-short-title: Gap decorations
+title: CSS gaps and gap decoration property overview
+short-title: Gaps and gap decorations
 slug: Web/CSS/Guides/Gaps/Overview
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-gaps/
@@ -95,23 +95,23 @@ All the properties in this section accept a comma-separated list of values, allo
 The `column-rule-*` properties include:
 
 - {{cssxref("column-rule")}}: Shorthand defining the {{cssxref("line-width")}}, {{cssxref("line-style")}}, and {{cssxref("&lt;color&gt;")}} of the column rules.
-- {{cssxref("column-rule-color")}}: Defines the color of the column rules.
-- {{cssxref("column-rule-style")}}: Defines the line style of the column rules. It can be `solid`, `dashed`, `dotted`, `double`, `groove`, `ridge`, `inset`, `outset`, `none`, or `hidden`.
-- {{cssxref("column-rule-width")}}: Defines the width of the column rules. It can be `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value.
+- {{cssxref("column-rule-color")}}: Defines the colors of the column rules. The default is `currentcolor`.
+- {{cssxref("column-rule-style")}}: Defines the line styles of the column rules. It can be `solid`, `dashed`, `dotted`, `double`, `groove`, `ridge`, `inset`, `outset`, `none`, or `hidden`.
+- {{cssxref("column-rule-width")}}: Defines the widths of the column rules. It can be `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value.
 
 The following `row-rule-*` properties follow the same syntax as their `column-rule-*` counterparts:
 
 - {{cssxref("row-rule")}}: Shorthand defining the `<line-width>`, `<line-style>`, and `<color>` of the row decoration line.
-- {{cssxref("row-rule-color")}}: A {{cssxref("&lt;color&gt;")}}: The color of the rules drawn in row gaps. The default is `currentcolor`.
-- {{cssxref("row-rule-style")}}: The same vocabulary as `column-rule-style`, defining the line styles of the rules drawn in the row gaps.
-- {{cssxref("row-rule-width")}}: The same vocabulary as `column-rule-width`, defining the width of the rules drawn in the row gaps.
+- {{cssxref("row-rule-color")}}: The colors of the rules drawn in row gaps. The default is `currentcolor`.
+- {{cssxref("row-rule-style")}}: The line styles of the rules drawn in the row gaps.
+- {{cssxref("row-rule-width")}}: The widths of the rules drawn in the row gaps.
 
 The following `rule-*` shorthand properties take the same values as their `column-*` property components, applying the same list of values to both axes:
 
 - {{cssxref("rule")}}: Sets `column-rule` and `row-rule` to the same value.
-- {{cssxref("rule-color")}}: The same vocabulary as `column-rule-color`. Sets both the `column-rule-color` and `row-rule-color` to the same value.
-- {{cssxref("rule-style")}}: The same vocabulary as `column-rule-style`. Sets both the `column-rule-style` and `row-rule-style` to the same value.
-- {{cssxref("rule-width")}}: The same vocabulary as `column-rule-width`. Sets both the `column-rule-width` and `row-rule-width` to the same value.
+- {{cssxref("rule-color")}}: Sets both the `column-rule-color` and `row-rule-color` to the same value.
+- {{cssxref("rule-style")}}: Sets both the `column-rule-style` and `row-rule-style` to the same value.
+- {{cssxref("rule-width")}}: Sets both the `column-rule-width` and `row-rule-width` to the same value.
 
 See [Defining CSS gap rules](/en-US/docs/Web/CSS/Guides/Gaps/Defining_rules) to learn more about defining rule colors, widths, styles, and using the `repeat()` function.
 
@@ -119,8 +119,8 @@ See [Defining CSS gap rules](/en-US/docs/Web/CSS/Guides/Gaps/Defining_rules) to 
 
 In grid and multi-column layouts, rules stretch across the container's entire block and inline dimensions by default. The `*-rule-break` properties enable splitting lines that span across multiple rows or columns into multiple segments. You can set the behavior for breaking rule lines at every intersection using the following properties:
 
-- {{cssxref("column-rule-break")}}: The keywords `none`, `normal`, or `intersection` specify whether the column rules break across row gaps or run continuously.
-- {{cssxref("row-rule-break")}}: The same vocabulary as `column-rule-break`, specifying whether the row rules break across column gaps or run continuously.
+- {{cssxref("column-rule-break")}}: The keywords `none`, `normal`, or `intersection`, specifying whether the column rules break across row gaps or run continuously.
+- {{cssxref("row-rule-break")}}: The keywords `none`, `normal`, or `intersection`, specifying whether the row rules break across column gaps or run continuously.
 - {{cssxref("rule-break")}}: Sets `column-rule-break` and `row-rule-break` to the same value.
 
 Expanding on the first example, here we've split the row rules into separate segments at column gaps while keeping the column rules continuous:
@@ -146,7 +146,7 @@ By default, when the lines are set to break, internal segments end at the edge o
 
 ## Controlling the length of rule segments
 
-The `*-rule-inset-*` properties let you change rule-segment lengths by insetting or outsetting segment ends relative to where the segment would normally start or end.
+The `*-rule-inset-*` properties let you change the lengths of rule segments by shortening or lengthening them. They adjust the segment ends relative to where each segment would normally start or end.
 
 By default, continuous rules are drawn from one end of the container to the other. The rules end at the container edge where no other rule segments are present; these rules have two _cap_ segment endpoints. The start is the _cap-start_ edge, and the end is the _cap-end_ edge.
 
@@ -221,15 +221,15 @@ The `column-rule-inset-junction-*` properties specify the space between the segm
 
 You can use the `column-rule-inset-*` properties to set cap and junction insets to the same value, while the `column-rule-inset` shorthand can be used to set the edges to independent values:
 
-- {{cssxref("column-rule-inset-end")}}: The single `<inset-value>` sets both the `column-rule-inset-cap-end` and `column-rule-inset-junction-end` to the same value, defining the bottom insets of all column segments.
+- {{cssxref("column-rule-inset-end")}}: The single `<inset-value>` sets both the `column-rule-inset-cap-end` and `column-rule-inset-junction-end` to the same value.
 
-- {{cssxref("column-rule-inset-start")}}: The single `<inset-value>` sets both the `column-rule-inset-cap-start` and `column-rule-inset-junction-start` to the same value, defining the top insets of all column segments.
+- {{cssxref("column-rule-inset-start")}}: The single `<inset-value>` sets both the `column-rule-inset-cap-start` and `column-rule-inset-junction-start` to the same value.
 
 - {{cssxref("column-rule-inset")}} shorthand: Specifies the `column-rule-inset-cap-start`, `column-rule-inset-cap-end`, `column-rule-inset-junction-start`, and `column-rule-inset-junction-end` properties as one to four `<inset-value>` values. If you set the cap insets to different values from the junction insets, separate them with a slash (`/`). This property offers more control than the `column-rule-inset-end` and `column-rule-inset-start` shorthands, letting you set cap and junction edges to different values.
 
 ### Row inset properties
 
-The `row-rule-inset-*` properties let you inset row segment edges. Whether the left or right is the start edge depends on the writing mode: in left-to-right languages, like English, the start is the left edge, and the end is the right edge.
+The `row-rule-inset-*` properties let you change the lengths of row segments by shortening or lengthening them. They adjust the row segment ends relative to where each row segment would normally start or end. Whether the left or right is the start edge depends on the writing mode: in left-to-right languages, like English, the start is the left edge, and the end is the right edge.
 
 #### Row rule inset cap properties
 
@@ -255,9 +255,9 @@ The `row-rule-inset-junction-*` properties specify the space between the segment
 
 You can use the `row-rule-inset-*` properties to set cap and junction insets to the same value, while the `row-rule-inset` shorthand can be used to set row segment edges to independent values:
 
-- {{cssxref("row-rule-inset-end")}}: The single `<inset-value>` defines the end inset of all row segments, setting both the `row-rule-inset-cap-end` and `row-rule-inset-junction-end` to the same value.
+- {{cssxref("row-rule-inset-end")}}: Sets both the `row-rule-inset-cap-end` and `row-rule-inset-junction-end` to the same `<inset-value>` value.
 
-- {{cssxref("row-rule-inset-start")}}: The single `<inset-value>` defines the start inset of all row segments, setting both the `row-rule-inset-cap-start` and `row-rule-inset-junction-start` to the same value.
+- {{cssxref("row-rule-inset-start")}}: Sets both the `row-rule-inset-cap-start` and `row-rule-inset-junction-start` to the same `<inset-value>` value.
 
 - {{cssxref("row-rule-inset")}} shorthand: Specifies the `row-rule-inset-cap-start`, `row-rule-inset-cap-end`, `row-rule-inset-junction-start`, and `row-rule-inset-junction-end` properties as one to four `<inset-value>` values. If you set the cap insets to different values from the junction insets, separate them with a slash (`/`). This property offers more control than the `row-rule-inset-end` and `row-rule-inset-start` shorthands, letting you set row cap and junction start and end edges to different values.
 
