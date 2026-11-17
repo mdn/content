@@ -25,7 +25,7 @@ The `SVGAnimatedEnumeration` interface does not provide any specific methods.
 
 ## Examples
 
-## Basic usage
+### Basic usage
 
 Consider this snippet with a {{SVGElement("clipPath")}} element: Its {{SVGAttr("clipPathUnits")}} is associated with a `SVGAnimatedEnumeration` object.
 

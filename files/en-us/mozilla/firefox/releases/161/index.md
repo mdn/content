@@ -28,7 +28,11 @@ Firefox 161 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### SVG -->
+### SVG
+
+- The [`referrerpolicy`](/en-US/docs/Web/SVG/Reference/Attribute/referrerpolicy) attribute is now supported on the {{SVGElement("image")}}, {{SVGElement("script")}}, and {{SVGElement("feImage")}} elements, along with the corresponding {{domxref("SVGImageElement.referrerPolicy")}}, {{domxref("SVGScriptElement.referrerPolicy")}}, and {{domxref("SVGFEImageElement.referrerPolicy")}} properties.
+  These control how much referrer information is sent in the {{HTTPHeader("Referer")}} header when the element fetches the resource referenced by its `href` attribute. This works in the same way as the `referrerpolicy` attribute on the HTML {{HTMLElement("img")}} and {{HTMLElement("script")}} elements.
+  ([Firefox bug 2079321](https://bugzil.la/2079321)).
 
 <!-- #### Removals -->
 
@@ -67,7 +71,11 @@ Firefox 161 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### DOM -->
 
-<!-- #### Media, WebRTC, and Web Audio -->
+#### Media, WebRTC, and Web Audio
+
+- The {{domxref("RTCRtpSender.setParameters()")}} method now supports the optional [`setParameterOptions`](/en-US/docs/Web/API/RTCRtpSender/setParameters#setparameteroptions) parameter.
+  This lets you ask the encoder for an encoding to generate a key frame in the same call that you use to change the sender's encoding parameters, such as `active` or `scaleResolutionDownBy`. Receivers can then avoid requesting a key frame after the change.
+  ([Firefox bug 2057265](https://bugzil.la/2057265)).
 
 <!-- #### Removals -->
 
