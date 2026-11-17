@@ -41,7 +41,7 @@ hyphenate-limit-lines: 0;
   border: 2px dashed #aaa;
   font-size: 1.5rem;
   text-align: left;
-  width: 12rem;
+  width: 11rem;
   hyphens: auto;
 }
 ```
