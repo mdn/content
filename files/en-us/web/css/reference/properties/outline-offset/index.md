@@ -128,8 +128,7 @@ In this example, we have two buttons with the same outline. The first button use
 #### HTML
 
 ```html
-<button>Default offset</button>
-<button class="inset">Inset offset</button>
+<button>Default offset</button> <button class="inset">Inset offset</button>
 ```
 
 #### CSS
