@@ -26,7 +26,7 @@ A string, which can be one of the following values:
 
 ## Description
 
-[Render-blocking](/en-US/docs/Glossary/Render_blocking) resources are static files, such as fonts, CSS, and JavaScript, that delay the rendering of page content to the screen.
+[Render-blocking](/en-US/docs/Glossary/Render_blocking) resources are static files, such as CSS and JavaScript, that delay the rendering of page content to the screen.
 The browser determines these blocking resources automatically and doesn't render any pixel to the screen before all stylesheets and synchronous scripts are loaded and evaluated.
 This prevents a flash of unstyled content (FOUC).
 

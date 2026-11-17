@@ -53,7 +53,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
 - `blocking`
-  - : This attribute explicitly indicates that certain operations should be blocked until the script has executed. The operations that are to be blocked must be a space-separated list of blocking tokens. Currently there is only one token:
+  - : This attribute explicitly indicates that certain operations should be blocked until the script has executed.
+    The operations that are to be blocked must be a space-separated list of blocking tokens.
+    Currently there is only one token:
     - `render`: The rendering of content on the screen is blocked.
 
     > [!NOTE]

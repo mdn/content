@@ -26,7 +26,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
 - {{domxref("PageSwapEvent.activation", "activation")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NavigationActivation")}} object with the navigation type and the history entries for the current and destination documents of a same-origin navigation.
-    If the navigation has a cross-origin URL anywhere in the redirect chain, it returns `null` (unless the destination document is restored from the [bfcache](/en-US/docs/Glossary/bfcache)).
+    If the navigation has a cross-origin URL anywhere in the redirect chain, it returns `null` (unless the destination document is restored from the [back/forward cache](/en-US/docs/Glossary/bfcache)).
 - {{domxref("PageSwapEvent.viewTransition", "viewTransition")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ViewTransition")}} object representing the active outbound view transition for the cross-document navigation, or `null` if no view transition is active.
 
