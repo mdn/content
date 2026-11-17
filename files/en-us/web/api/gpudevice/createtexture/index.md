@@ -160,7 +160,7 @@ Enabling this feature allows:
 
 ### Tier2
 
-The Tier 2 set of texture formats supports storage texture formats that don't have support in "core" WebGPU, and are required for advanced usage. To use this set, enable the `texture-formats-tier2` feature (see {{domxref("GPUSupportedFeatures")}}).
+The Tier 2 set of texture formats provides `read-write` storage access to additional texture formats, which is required for advanced usage. To use this set, enable the `texture-formats-tier2` feature (see {{domxref("GPUSupportedFeatures")}}).
 
 Enabling this feature allows using the following [`formats`](#format) with the `STORAGE_BINDING` [`usage`](#usage) (with `read-write` [`access`](/en-US/docs/Web/API/GPUDevice/createBindGroupLayout#access)):
 
