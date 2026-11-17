@@ -29,7 +29,18 @@ A {{jsxref("Float32Array")}}, or `null` if the gamepad is not able to provide po
 
 ## Examples
 
-TBD
+### Reading the position
+
+```js
+window.addEventListener("gamepadconnected", (event) => {
+  const pose = event.gamepad.pose;
+  if (!pose || !pose.position) {
+    return;
+  }
+
+  console.log(pose.position); // e.g., [0, 0, 0]
+});
+```
 
 ## Specifications
 

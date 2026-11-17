@@ -18,7 +18,22 @@ A boolean value.
 
 ## Examples
 
-TBD
+### Checking orientation tracking
+
+```js
+window.addEventListener("gamepadconnected", (event) => {
+  const pose = event.gamepad.pose;
+  if (!pose) {
+    return;
+  }
+
+  if (pose.hasOrientation) {
+    // Use orientation for controls
+  } else {
+    // Use some other control mechanism, like thumbstick
+  }
+});
+```
 
 ## Specifications
 

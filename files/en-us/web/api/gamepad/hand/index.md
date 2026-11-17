@@ -22,7 +22,13 @@ A [`GamepadHand`](https://w3c.github.io/gamepad/extensions.html#gamepadhand-enum
 
 ## Examples
 
-TBC
+### Reading the controller hand
+
+```js
+window.addEventListener("gamepadconnected", (event) => {
+  console.log(event.gamepad.hand); // e.g., "left"
+});
+```
 
 ## Specifications
 
