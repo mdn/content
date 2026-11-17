@@ -1,5 +1,5 @@
 ---
-title: Overview of CSS gap decoration properties
+title: Overview of CSS gap and gap decoration properties
 short-title: Gap decorations
 slug: Web/CSS/Guides/Gaps/Overview
 page-type: guide
