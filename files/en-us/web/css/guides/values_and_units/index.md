@@ -30,6 +30,7 @@ Every CSS declaration consists of a property/value pair. The value can take vari
 - {{cssxref("atan2()")}}
 - {{cssxref("attr()")}}
 - {{cssxref("calc()")}}
+- {{cssxref("calc-mix()")}}
 - {{cssxref("calc-size()")}}
 - {{cssxref("clamp()")}}
 - {{cssxref("cos()")}}

@@ -97,6 +97,8 @@ Each of the pages below contains detailed information about a math function's sy
 
 - {{cssxref("calc()")}}
   - : Performs basic arithmetic calculations on numerical values.
+- {{cssxref("calc-mix()")}}
+  - : Calculates a weighted average of numerical values.
 - {{cssxref("calc-size()")}}
   - : Perform calculations on intrinsic size values such as `auto`, `fit-content`, and `max-content`, which are not supported by the `calc()` function.
 
@@ -389,6 +391,7 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("filter-function/blur", "blur()")}}
 - {{cssxref("filter-function/brightness", "brightness()")}}
 - {{cssxref("calc")}}
+- {{cssxref("calc-mix")}}
 - {{cssxref("calc-size")}} {{experimental_inline}}
 - {{cssxref("basic-shape/circle", "circle()")}}
 - {{cssxref("clamp")}}
