@@ -9,7 +9,7 @@ sidebar: cssref
 
 The **`background-clip`** [CSS](/en-US/docs/Web/CSS) property sets whether an element's background extends underneath its border box, padding box, or content box.
 
-{{InteractiveExample("CSS Demo: background-clip")}}
+{{InteractiveExample("CSS Demo: background-clip", "taller")}}
 
 ```css interactive-example-choice
 background-clip: border-box;
