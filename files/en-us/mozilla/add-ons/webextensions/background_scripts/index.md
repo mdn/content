@@ -310,8 +310,8 @@ browser.runtime.onMessage.addListener(async (message, sender) => {
 });
 ```
 
-The preceding example [sends an asynchronous response using a promise](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_a_promise), which is not supported in Chrome until [Chrome bug 1185241](https://crbug.com/1185241) is resolved.
-A cross-browser alternative is to [return true and use `sendResponse`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_sendresponse).
+The preceding example [sends an asynchronous response using a promise](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_a_promise), which Chrome supports starting with Chrome 148, or Chrome 152 for extensions that include a DevTools page.
+For earlier versions of Chrome, [return true and use `sendResponse`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_sendresponse).
 
 ```js
 browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
