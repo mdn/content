@@ -44,7 +44,16 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-TBD.
+### Removing a time range
+
+In the [`SourceBuffer` live example](/en-US/docs/Web/API/SourceBuffer#loading_a_video_chunk_by_chunk), add the following code after the `for await...of` loop, before `this.endOfStream()`, to remove the video data from 3 seconds onward. The stream ends after the removal finishes.
+
+```js
+await new Promise((resolve) => {
+  sourceBuffer.addEventListener("updateend", resolve, { once: true });
+  sourceBuffer.remove(3, Infinity);
+});
+```
 
 ## Specifications
 
