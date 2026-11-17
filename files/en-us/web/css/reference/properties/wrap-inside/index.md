@@ -128,6 +128,21 @@ p {
 }
 ```
 
+```css hidden
+@layer no-support {
+  @supports not (wrap-inside: avoid) {
+    body::before {
+      content: "Your browser doesn't support the wrap-inside property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+      margin-bottom: 1rem;
+    }
+  }
+}
+```
+
 #### Result
 
 {{EmbedLiveSample("Keeping a phrase together", "", 200)}}
@@ -182,6 +197,21 @@ p {
 
 .nowrap .address {
   white-space: nowrap;
+}
+```
+
+```css hidden
+@layer no-support {
+  @supports not (wrap-inside: avoid) {
+    body::before {
+      content: "Your browser doesn't support the wrap-inside property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+      margin-bottom: 1rem;
+    }
+  }
 }
 ```
 
