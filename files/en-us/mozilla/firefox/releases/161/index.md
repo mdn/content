@@ -116,3 +116,8 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   The `blocking="render"` attribute of the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} elements is now enabled by default in Nightly.
   This lets you block rendering of the page until the marked stylesheet has loaded or script has run, so the page doesn't first appear unstyled or incomplete.
   ([Firefox bug 2084340](https://bugzil.la/2084340)).
+
+- **`match-parent` value for `quotes`** (Nightly): `layout.css.quotes.match-parent.enabled`
+
+  The {{cssxref("quotes")}} CSS property now supports the {{cssxref("quotes", "match-parent", "#match-parent")}} value, which makes an element use the same quotation marks as its parent.
+  ([Firefox bug 1752382](https://bugzil.la/1752382)).
