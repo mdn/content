@@ -54,6 +54,7 @@ new Response(body, options)
     - `statusText` contains characters that are not allowed in an HTTP status message.
     - `headers` contains an invalid header name or value.
     - `body` is not `null` and `status` is `204`, `205`, or `304`, which are statuses that must not have a body. Note that an empty string is not `null`, so `new Response("", { status: 204 })` throws.
+    - `body` is a {{domxref("ReadableStream")}} that is locked, or has already been read from or canceled.
 
 ## Examples
 
