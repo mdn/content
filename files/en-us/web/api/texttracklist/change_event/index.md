@@ -12,11 +12,15 @@ The **`change`** event is fired when a text track is made active or inactive, or
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("change", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onchange = (event) => { }
 ```
 
@@ -35,7 +39,7 @@ mediaElement.textTracks.addEventListener("change", (event) => {
 });
 ```
 
-Using the `onchange` event handler property:
+Using the `onchange` event handler property (but note that this replaces other event listeners added using `onchange`, if any):
 
 ```js
 const mediaElement = document.querySelector("video, audio");

@@ -146,7 +146,7 @@ section h2 {
 
 #### Result
 
-{{EmbedLiveSample("Exclude selected elements from a rule", "100%", 470)}}
+{{EmbedLiveSample("excluding_selected_elements_from_a_rule", "100%", 470)}}
 
 The `<h2>` elements are all `green`. However, if they are nested in a {{htmlelement("section")}} element, they inherit their color from their parent, which is `blue` within {{htmlelement("main")}}. The default text color is black otherwise.
 

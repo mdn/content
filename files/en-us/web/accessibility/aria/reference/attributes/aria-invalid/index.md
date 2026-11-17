@@ -49,6 +49,36 @@ If you are creating your own form validation scripts, make sure to include `aria
 
 Any value not in this list will be treated as `true`.
 
+## Associated interfaces
+
+- {{domxref("Element.ariaInvalid")}}
+  - : The [`ariaInvalid`](/en-US/docs/Web/API/Element/ariaInvalid) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-invalid` attribute, which indicates whether the element is exposed to an accessibility API.
+- {{domxref("ElementInternals.ariaInvalid")}}
+  - : The [`ariaInvalid`](/en-US/docs/Web/API/ElementInternals/ariaInvalid) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-invalid` attribute.
+
+## Associated roles
+
+Used in roles:
+
+- [`application`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
+- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
+- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
+- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
+- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
+- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role)
+- [`slider`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
+- [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
+- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
+- [`tree`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role)
+
+Inherited into role:
+
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
+- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
+- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
+- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
+
 ## Example
 
 The following snippet shows a simplified version of two form fields with a validation function attached to the blur event. Note that since the default value for `aria-invalid` is `false`, it is not strictly necessary to add the attribute to input.
@@ -128,36 +158,6 @@ function updateAlert(msg) {
 ```
 
 Note that the alert has the ARIA role attribute set to [`alert`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role).
-
-## Associated interfaces
-
-- {{domxref("Element.ariaInvalid")}}
-  - : The [`ariaInvalid`](/en-US/docs/Web/API/Element/ariaInvalid) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-invalid` attribute, which indicates whether the element is exposed to an accessibility API.
-- {{domxref("ElementInternals.ariaInvalid")}}
-  - : The [`ariaInvalid`](/en-US/docs/Web/API/ElementInternals/ariaInvalid) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-invalid` attribute.
-
-## Associated roles
-
-Used in roles:
-
-- [`application`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
-- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
-- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
-- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
-- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
-- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role)
-- [`slider`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
-- [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
-- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
-- [`tree`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role)
-
-Inherited into role:
-
-- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
-- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
-- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
-- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
 
 ## Specifications
 

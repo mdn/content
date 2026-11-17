@@ -14,6 +14,12 @@ browser-assigned access key (if any); otherwise it returns an empty string.
 
 ## Example
 
+### HTML
+
+```html
+<button accesskey="h" title="Caption" id="btn1">Hover me</button>
+```
+
 ### JavaScript
 
 ```js
@@ -26,12 +32,6 @@ btn.onclick = () => {
   feedback.textContent = "Pressed!";
   btn.insertAdjacentElement("afterend", feedback);
 };
-```
-
-### HTML
-
-```html
-<button accesskey="h" title="Caption" id="btn1">Hover me</button>
 ```
 
 ### Result

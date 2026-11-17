@@ -75,7 +75,7 @@ For example:
 - `\{{CSSxRef("pow")}}` links to the function page at `Web/CSS/Reference/Values/pow`.
 - `\{{CSSxRef("<color>")}}` links to the data type page at `Web/CSS/Reference/Values/color_value`.
 
-Just like the `HTMLElement` macro, the `CSSxRef` macro adds the appropriate styling to the link text based on the type of the feature. So, `\{{CSSxRef("acos")}}` adds angular brackets to the resultant link text as in {{CSSxRef("acos")}}.
+Just like the `HTMLElement` macro, the `CSSxRef` macro adds the appropriate styling to the link text based on the type of the feature. So, `\{{CSSxRef("acos")}}` adds brackets to the resultant link text as in {{CSSxRef("acos")}}.
 
 A few other behaviors of the `CSSxRef` macro worth noting include:
 

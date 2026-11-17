@@ -45,7 +45,7 @@ for (const id of stats.keys()) {
   const stat = stats.get(id);
   if (stat.type !== "outbound-rtp") continue;
   Object.keys(stat).forEach((statName) => {
-    console.log(`${statName}: ${report[statName]}`);
+    console.log(`${statName}: ${stat[statName]}`);
   });
 }
 ```

@@ -20,7 +20,7 @@ isProgram(program)
 ### Parameters
 
 - `program`
-  - : A {{domxref("WebGLProgram")}} to check.
+  - : A {{domxref("WebGLProgram")}} to check. Passing `null` returns `false`.
 
 ### Return value
 

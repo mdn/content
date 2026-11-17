@@ -280,7 +280,7 @@ p::after {
 
 #### Result
 
-{{EmbedLiveSample("using_fallback", "100%", 90)}}
+{{EmbedLiveSample("using_a_fallback_value", "100%", 90)}}
 
 ### color value
 

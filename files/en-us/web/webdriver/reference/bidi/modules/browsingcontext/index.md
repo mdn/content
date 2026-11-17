@@ -41,6 +41,8 @@ Calling [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Mod
 - [`browsingContext.print`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/print)
 - [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload)
 - [`browsingContext.setViewport`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/setViewport)
+- [`browsingContext.startScreencast`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/startScreencast)
+- [`browsingContext.stopScreencast`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/stopScreencast)
 - [`browsingContext.traverseHistory`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/traverseHistory)
 
 ## Events

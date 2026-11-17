@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 690 198" role="img" aria-labelledby="title description">
+  <title id="title">Two module cycles forming one strongly connected component</title>
+  <desc id="description">Six modules form two directed cycles sharing the edge from b.js to c.js: a.js to b.js to c.js to d.js to a.js, and e.js to b.js to c.js to f.js to e.js. All six modules belong to one strongly connected component. Arrows point from module specifiers to their dependencies.</desc>
+  <style>
+    text { fill: #6b7280; font-family: Menlo, Consolas, monospace; font-size: 12px; }
+    .specifier { fill: #08827e; font-weight: bold; }
+    .outline { fill: none; stroke: #808080; stroke-width: 1; }
+    .edge { fill: none; stroke: #808080; stroke-width: 1; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#808080"/>
+    </marker>
+  </defs>
+
+  <path class="edge" d="M 145 48 H 260"/>
+  <path class="edge" d="M 562 48 H 430"/>
+  <path class="edge" d="M 350 58 V 126"/>
+  <path class="edge" d="M 322 144 H 190"/>
+  <path class="edge" d="M 385 162 H 500"/>
+  <path class="edge" d="M 110 136 V 64"/>
+  <path class="edge" d="M 590 136 V 64"/>
+
+  <path class="outline" d="M 70 30 H 190 V 64 H 20 V 30 H 28"/>
+  <text x="34" y="34">a.js</text>
+  <text x="34" y="52">import <tspan class="specifier">"./b.js"</tspan>;</text>
+
+  <path class="outline" d="M 310 30 H 430 V 64 H 260 V 30 H 268"/>
+  <text x="274" y="34">b.js</text>
+  <text x="274" y="52">import <tspan class="specifier">"./c.js"</tspan>;</text>
+
+  <path class="outline" d="M 550 30 H 670 V 64 H 500 V 30 H 508"/>
+  <text x="514" y="34">e.js</text>
+  <text x="514" y="52">import <tspan class="specifier">"./b.js"</tspan>;</text>
+
+  <path class="outline" d="M 70 126 H 190 V 178 H 20 V 126 H 28"/>
+  <text x="34" y="130">d.js</text>
+  <text x="34" y="148">import <tspan class="specifier">"./a.js"</tspan>;</text>
+
+  <path class="outline" d="M 310 126 H 430 V 178 H 260 V 126 H 268"/>
+  <text x="274" y="130">c.js</text>
+  <text x="274" y="148">import <tspan class="specifier">"./d.js"</tspan>;</text>
+  <text x="274" y="166">import <tspan class="specifier">"./f.js"</tspan>;</text>
+
+  <path class="outline" d="M 550 126 H 670 V 178 H 500 V 126 H 508"/>
+  <text x="514" y="130">f.js</text>
+  <text x="514" y="148">import <tspan class="specifier">"./e.js"</tspan>;</text>
+</svg>

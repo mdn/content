@@ -82,7 +82,7 @@ Promise.allSettled([
 You may also destructure the results to have one variable per settling outcome.
 
 ```js
-const [status1, status2] = Promise.allSettled([
+const [status1, status2] = await Promise.allSettled([
   Promise.resolve(33),
   new Promise((resolve) => setTimeout(() => resolve(66), 0)),
 ]);
@@ -103,7 +103,7 @@ If you destructure the result, you must keep the result variables in the same or
 
 ## See also
 
-- [Polyfill of `Promise.allSettled` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [Polyfill of `Promise.allSettled` in `core-js`](https://core-js.io/docs/features/ecmascript/promise)
 - [es-shims polyfill of `Promise.allSettled`](https://www.npmjs.com/package/promise.allsettled)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
 - [Graceful asynchronous programming with promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)

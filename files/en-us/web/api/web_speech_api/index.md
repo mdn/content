@@ -18,7 +18,7 @@ The Web Speech API enables web apps to handle voice data. It has two components:
 
 - Speech recognition is accessed via the {{domxref("SpeechRecognition")}} interface, which provides the ability to recognize voice context from an audio source and allows your app to respond appropriately.
   Generally, you use the interface's constructor to create a new {{domxref("SpeechRecognition")}} object. This object provides a number of event handlers to detect when speech is incoming from the device's microphone (or from an audio track).
-  You can specify whether you want the speech recognition to use a service provided by the user's platform (the default) or be performed [locally in the browser](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition).
+  By default, the browser decides whether recognition happens on a remote service or on the user's device, but you can require that it is performed [on the device](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition).
 - Speech synthesis is accessed via the {{domxref("SpeechSynthesis")}} interface, a text-to-speech component that allows programs to read out their text content (normally via the device's default speech synthesizer.) Different voice types are represented by {{domxref("SpeechSynthesisVoice")}} objects, and different parts of text that you want to be spoken are represented by {{domxref("SpeechSynthesisUtterance")}} objects.
   You can get these spoken by passing them to the {{domxref("SpeechSynthesis.speak()")}} method.
 
@@ -31,7 +31,7 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
 - {{domxref("SpeechRecognition")}}
   - : The controller interface for the recognition service; this also handles the {{domxref("SpeechRecognitionEvent")}} sent from the recognition service.
 - {{domxref("SpeechRecognitionAlternative")}}
-  - : Represents a single word that has been recognized by the speech recognition service.
+  - : Represents one possible match for what the user said, as recognized by the speech recognition service.
 - {{domxref("SpeechRecognitionErrorEvent")}}
   - : Represents error messages from the recognition service.
 - {{domxref("SpeechRecognitionEvent")}}
@@ -41,7 +41,8 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
 - {{domxref("SpeechRecognitionResult")}}
   - : Represents a single recognition match, which may contain multiple {{domxref("SpeechRecognitionAlternative")}} objects.
 - {{domxref("SpeechRecognitionResultList")}}
-  - : Represents a list of {{domxref("SpeechRecognitionResult")}} objects, or a single one if results are being captured in {{domxref("SpeechRecognition.continuous","continuous")}} mode.
+  - : Represents a collection of {{domxref("SpeechRecognitionResult")}} objects.
+    If recognition isn't in {{domxref("SpeechRecognition.continuous","continuous")}} mode, it contains only one result.
 
 ### Speech synthesis
 
@@ -58,7 +59,7 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
   - : Represents a voice that the system supports.
     Every `SpeechSynthesisVoice` has its own relative speech service including information about language, name and URI.
 - {{domxref("Window.speechSynthesis")}}
-  - : Specified out as part of a `[NoInterfaceObject]` interface called `SpeechSynthesisGetter`, and Implemented by the `Window` object, the `speechSynthesis` property provides access to the {{domxref("SpeechSynthesis")}} controller, and therefore the entry point to speech synthesis functionality.
+  - : Returns the {{domxref("SpeechSynthesis")}} object, which is the entry point to speech synthesis functionality.
 
 ### Deprecated interfaces
 

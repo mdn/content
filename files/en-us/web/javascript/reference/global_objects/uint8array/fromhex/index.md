@@ -66,7 +66,7 @@ console.log(bytes); // Uint8Array [ 202, 254, 208, 13 ]
 
 ## See also
 
-- [Polyfill of `Uint8Array.fromHex` in `core-js`](https://github.com/zloirock/core-js#uint8array-to--from-base64-and-hex)
+- [Polyfill of `Uint8Array.fromHex` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [es-shims polyfill of `Uint8Array.fromHex`](https://www.npmjs.com/package/es-arraybuffer-base64)
 - {{jsxref("Uint8Array")}}
 - {{jsxref("Uint8Array.prototype.setFromHex()")}}

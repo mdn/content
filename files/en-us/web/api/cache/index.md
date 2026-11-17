@@ -153,7 +153,7 @@ self.addEventListener("fetch", (event) => {
       } catch (error) {
         // This catch block will handle exceptions that arise from the match()
         // or fetch() operations.
-        // Note that a HTTP error response (e.g. 404) will NOT trigger
+        // Note that an HTTP error response (e.g. 404) will NOT trigger
         // an exception.
         // It will return a normal response object that has the appropriate
         // error code set.

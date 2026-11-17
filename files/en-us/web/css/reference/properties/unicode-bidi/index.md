@@ -85,6 +85,13 @@ unicode-bidi: unset;
 
 ## Examples
 
+### HTML
+
+```html
+<div class="bible-quote">A line of text</div>
+<div>Another line of text</div>
+```
+
 ### CSS
 
 ```css
@@ -92,13 +99,6 @@ unicode-bidi: unset;
   direction: rtl;
   unicode-bidi: embed;
 }
-```
-
-### HTML
-
-```html
-<div class="bible-quote">A line of text</div>
-<div>Another line of text</div>
 ```
 
 ### Result

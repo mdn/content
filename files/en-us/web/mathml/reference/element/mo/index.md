@@ -67,7 +67,7 @@ In addition to the [global MathML attributes](/en-US/docs/Web/MathML/Reference/G
 </math>
 ```
 
-{{ EmbedLiveSample('mo_example', 700, 200, "", "") }}
+{{ EmbedLiveSample('examples', 700, 200, "", "") }}
 
 ## Technical summary
 

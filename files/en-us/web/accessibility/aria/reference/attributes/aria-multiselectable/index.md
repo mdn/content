@@ -22,6 +22,33 @@ When the user does select one or more items, remember to set the selected descen
 
 If a tree, grid, tab list, or list box supports selection of more than one node, the element with role [`grid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role), [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role), [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role), or [`tree`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role) has `aria-multiselectable` set to `true`. Otherwise, `aria-multiselectable` is either set to `false` or the default value of false is implied.
 
+## Values
+
+- `true`
+  - : More than one item in the widget may be selected at a time
+- `false`
+  - : Only one item can be selected
+
+## Associated interfaces
+
+- {{domxref("Element.ariaMultiSelectable")}}
+  - : The [`ariaMultiSelectable`](/en-US/docs/Web/API/Element/ariaMultiSelectable) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-multiselectable` attribute.
+- {{domxref("ElementInternals.ariaMultiSelectable")}}
+  - : The [`ariaMultiSelectable`](/en-US/docs/Web/API/ElementInternals/ariaMultiSelectable) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-multiselectable` attribute.
+
+## Associated roles
+
+Used in roles:
+
+- [`grid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)
+- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
+- [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)
+- [`tree`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role)
+
+Inherited into roles:
+
+- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
+
 ## Example
 
 ```html
@@ -125,33 +152,6 @@ If the above isn't stylable to your liking, you can also create a list of select
 ```
 
 Instead of `aria-selected="true"`, include the [`checked`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox#checked) attribute. The browser does the rest.
-
-## Values
-
-- `true`
-  - : More than one item in the widget may be selected at a time
-- `false`
-  - : Only one item can be selected
-
-## Associated interfaces
-
-- {{domxref("Element.ariaMultiSelectable")}}
-  - : The [`ariaMultiSelectable`](/en-US/docs/Web/API/Element/ariaMultiSelectable) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-multiselectable` attribute.
-- {{domxref("ElementInternals.ariaMultiSelectable")}}
-  - : The [`ariaMultiSelectable`](/en-US/docs/Web/API/ElementInternals/ariaMultiSelectable) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-multiselectable` attribute.
-
-## Associated roles
-
-Used in roles:
-
-- [`grid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)
-- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
-- [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)
-- [`tree`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role)
-
-Inherited into roles:
-
-- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
 
 ## Specifications
 

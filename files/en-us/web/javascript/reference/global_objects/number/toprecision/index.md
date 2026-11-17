@@ -92,6 +92,7 @@ console.log(num.toPrecision(10)); // '1.234500000e-7'
 
 ## See also
 
+- [Polyfill of modern `Number.prototype.toPrecision` behavior in `core-js`](https://core-js.io/docs/features/ecmascript/number)
 - {{jsxref("Number.prototype.toFixed()")}}
 - {{jsxref("Number.prototype.toExponential()")}}
 - {{jsxref("Number.prototype.toString()")}}

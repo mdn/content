@@ -16,6 +16,10 @@ The values are normalized to the range `0.0` — `1.0`, with
 `0.0` representing a button that is not pressed, and 1.0 representing a
 button that is fully pressed.
 
+## Value
+
+A double.
+
 ## Examples
 
 ```js
@@ -25,10 +29,6 @@ if (gp.buttons[0].value > 0) {
   // respond to analog button being pressed in
 }
 ```
-
-## Value
-
-A double.
 
 ## Specifications
 

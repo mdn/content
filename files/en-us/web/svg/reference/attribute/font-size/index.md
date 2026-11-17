@@ -28,7 +28,7 @@ You can use this attribute with the following SVG elements:
 </svg>
 ```
 
-{{EmbedLiveSample}}
+{{EmbedLiveSample("controlling_svg_font_size")}}
 
 ## Usage notes
 

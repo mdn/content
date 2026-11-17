@@ -10,6 +10,18 @@ The **`rel`** attribute defines a unique space-separated list of values that def
 
 - {{SVGElement("a")}}
 
+## Example
+
+```html
+<svg viewBox="0 0 150 20" xmlns="http://www.w3.org/2000/svg">
+  <a href="https://example.com" rel="external noopener">
+    <text x="5" y="15">Website</text>
+  </a>
+</svg>
+```
+
+{{EmbedLiveSample("Example", "300", "100")}}
+
 ## Usage notes
 
 <table class="properties">
@@ -63,18 +75,6 @@ The `rel` attribute takes a space-separated list of keywords as a value. Common 
   - : Indicates that the document is a part of a series, and the linked reference links to the previous document.
 - `next`
   - : The opposite of `prev`. Indicates that the document is a part of a series, and the linked reference links to the next document.
-
-## Example
-
-```html
-<svg viewBox="0 0 150 20" xmlns="http://www.w3.org/2000/svg">
-  <a href="https://example.com" rel="external noopener">
-    <text x="5" y="15">Website</text>
-  </a>
-</svg>
-```
-
-{{EmbedLiveSample("Example", "300", "100")}}
 
 ## Specifications
 

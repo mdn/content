@@ -11,20 +11,6 @@ The **`stroke-miterlimit`** [CSS](/en-US/docs/Web/CSS) property defines a limit 
 
 This property applies to any SVG corner-generating shape or text-content element (see {{SVGAttr("stroke-miterlimit")}} for a full list), but as an inherited property, it may be applied to elements such as {{SVGElement("g")}} and still have the intended effect on descendant elements' strokes. If present, it overrides the element's {{SVGAttr("stroke-miterlimit")}} attribute.
 
-## Description
-
-When two line segments meet at a sharp angle and `miter` joins have been specified for {{ CSSxref("stroke-linejoin") }}, or if they default to that value, it is possible for the miter to extend far beyond the thickness of the line stroking the path. The `stroke-miterlimit` ratio is used to define a limit, past which the join is converted from a miter to a bevel.
-
-The ratio of miter length (the distance between the outer tip and the inner corner of the miter) to {{ CSSxref("stroke-width") }} is directly related to the angle (theta) between the segments in user space by the formula:
-
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mstyle displaystyle="true"><mi>stroke-miterlimit</mi><mo>=</mo><mfrac><mrow><mi>miterLength</mi></mrow><mrow><mi>stroke-width</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mrow><mi>sin</mi><mrow><mo>(</mo><mfrac><mrow><mo>θ</mo></mrow><mrow><mn>2</mn></mrow></mfrac><mo>)</mo></mrow></mrow></mrow></mfrac></mstyle><annotation encoding="TeX">\text{stroke-miterlimit} = \frac{\text{miterLength}}{\text{stroke-width}} = \frac{1}{\sin\left(\frac{\theta}{2}\right)}</annotation></semantics>
-</math>
-<!-- prettier-ignore-end -->
-
-For example, a miter limit of `1.414` converts miters to bevels for a theta value of less than 90 degrees, a limit of `4.0` converts them for a theta less than approximately 29 degrees, and a limit of `10.0` converts them for theta less than approximately 11.5 degrees.
-
 ## Syntax
 
 ```css
@@ -44,6 +30,20 @@ stroke-miterlimit: unset;
 
 - {{cssxref("&lt;number&gt;")}}
   - : Any real positive number equal to or greater than `1`; values below that are invalid. The initial value is `4`.
+
+## Description
+
+When two line segments meet at a sharp angle and `miter` joins have been specified for {{ CSSxref("stroke-linejoin") }}, or if they default to that value, it is possible for the miter to extend far beyond the thickness of the line stroking the path. The `stroke-miterlimit` ratio is used to define a limit, past which the join is converted from a miter to a bevel.
+
+The ratio of miter length (the distance between the outer tip and the inner corner of the miter) to {{ CSSxref("stroke-width") }} is directly related to the angle (theta) between the segments in user space by the formula:
+
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mstyle displaystyle="true"><mi>stroke-miterlimit</mi><mo>=</mo><mfrac><mrow><mi>miterLength</mi></mrow><mrow><mi>stroke-width</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mrow><mi>sin</mi><mrow><mo>(</mo><mfrac><mrow><mo>θ</mo></mrow><mrow><mn>2</mn></mrow></mfrac><mo>)</mo></mrow></mrow></mrow></mfrac></mstyle><annotation encoding="TeX">\text{stroke-miterlimit} = \frac{\text{miterLength}}{\text{stroke-width}} = \frac{1}{\sin\left(\frac{\theta}{2}\right)}</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
+
+For example, a miter limit of `1.414` converts miters to bevels for a theta value of less than 90 degrees, a limit of `4.0` converts them for a theta less than approximately 29 degrees, and a limit of `10.0` converts them for theta less than approximately 11.5 degrees.
 
 ## Formal definition
 

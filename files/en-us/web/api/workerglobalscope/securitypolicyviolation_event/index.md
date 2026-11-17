@@ -10,15 +10,19 @@ browser-compat: api.WorkerGlobalScope.securitypolicyviolation_event
 
 The **`securitypolicyviolation`** event is fired when a [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) is violated in a worker.
 
-The handler can be assigned using the `onsecuritypolicyviolation` event handler property or using {{domxref("EventTarget.addEventListener()")}}.
+The handler can be assigned using the `onsecuritypolicyviolation` event handler property (but note that this replaces other event listeners added using `onsecuritypolicyviolation`, if any) or using {{domxref("EventTarget.addEventListener()")}}.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("securitypolicyviolation", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onsecuritypolicyviolation = (event) => { }
 ```
 
@@ -30,7 +34,7 @@ A {{domxref("SecurityPolicyViolationEvent")}}. Inherits from {{domxref("Event")}
 
 ## Examples
 
-The code below shows how you might add an event handler function using the `onsecuritypolicyviolation` event handler property or call `addEventListener()` method.
+The code below shows how you might add an event handler function using the `onsecuritypolicyviolation` event handler property (but note that this replaces other event listeners added using `onsecuritypolicyviolation`, if any) or call `addEventListener()` method.
 
 ```js
 self.onsecuritypolicyviolation = (e) => {

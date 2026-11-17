@@ -8,12 +8,12 @@ sidebar: addonsidebar
 
 Set the default suggestion to appear in the address bar drop-down list when the user starts interacting with your extension.
 
-Once the user has entered your keyword and started interacting with your extension, the default suggestion will always appear first in the drop-down list. Unlike the suggestions you supply in {{WebExtAPIRef("omnibox.onInputChanged")}}, this item can't be selected. Use it to provide the user with some guidance about what to type and what they can expect to see when they do.
+After the user enters your keyword and starts interacting with your extension, the default suggestion appears first in the drop-down list. Unlike the suggestions you supply in {{WebExtAPIRef("omnibox.onInputChanged")}}, this item can't be selected. Use it to guide the user on what to type and what they can expect to see.
 
 ## Syntax
 
 ```js-nolint
-browser.omnibox.setDefaultSuggestion(
+let settingDefaultSuggestion = browser.omnibox.setDefaultSuggestion(
   suggestion            // object
 )
 ```
@@ -21,11 +21,11 @@ browser.omnibox.setDefaultSuggestion(
 ### Parameters
 
 - `suggestion`
-  - : `object`. An object containing a single string property `description`, which will be displayed as the first item in the drop-down when the user starts interacting with your extension.
+  - : `object`. An object containing a string property `description`, which displays as the first item in the drop-down when the user starts interacting with your extension.
 
 ### Return value
 
-None.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with no arguments when the default suggestion is set.
 
 ## Examples
 

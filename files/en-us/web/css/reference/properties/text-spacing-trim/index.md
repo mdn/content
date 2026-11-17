@@ -64,8 +64,8 @@ Many CJK punctuation characters include glyph-internal spacing. For example, the
 
 When pairs of punctuation characters are adjacent to one another, the space between them is collapsed according to the following rules:
 
-- Set a full-width opening punctuation character to half-width if the previous character is a fullwidth opening punctuation character, a fullwidth middle dot, an ideographic space (U+3000), a fullwidth closing punctuation character of an equivalent or larger font size, or a character belonging to [Unicode general category "Open punctuation" Ps](https://www.compart.com/en/unicode/category/Ps). Otherwise, set it to full-width.
-- Set a full-width closing punctuation character to half-width if the next character is a fullwidth closing punctuation character, a fullwidth middle dot, an ideographic space (U+3000), a fullwidth opening punctuation character with larger font size, or a character belonging to [Unicode general category "Close punctuation" (Pe)](https://www.compart.com/en/unicode/category/Pe). Otherwise, set it to full-width.
+- Set a full-width opening punctuation character to half-width if the previous character is a fullwidth opening punctuation character, a fullwidth middle dot, an ideographic space (U+3000), a fullwidth closing punctuation character of an equivalent or larger font size, or a character belonging to [Unicode general category "Open punctuation" Ps](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5B%3APs%3A%5D). Otherwise, set it to full-width.
+- Set a full-width closing punctuation character to half-width if the next character is a fullwidth closing punctuation character, a fullwidth middle dot, an ideographic space (U+3000), a fullwidth opening punctuation character with larger font size, or a character belonging to [Unicode general category "Close punctuation" (Pe)](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5B%3APe%3A%5D). Otherwise, set it to full-width.
 
 ## Formal definition
 

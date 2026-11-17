@@ -21,10 +21,12 @@ To measure the latency of this series of events, the events share the same `inte
 
 An `interactionId` is only computed for the following event types belonging to a user interaction. It is `0` otherwise.
 
-| Event types                                                                                                                                               | User interaction   |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| {{domxref("Element/pointerdown_event", "pointerdown")}}, {{domxref("Element/pointerup_event", "pointerup")}}, {{domxref("Element/click_event", "click")}} | click / tap / drag |
-| {{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keyup_event", "keyup")}}                                                              | key press          |
+| Event types                                                                                                                                               | User interaction      |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| {{domxref("Element/pointerdown_event", "pointerdown")}}, {{domxref("Element/pointerup_event", "pointerup")}}, {{domxref("Element/click_event", "click")}} | click / tap / drag    |
+| {{domxref("Element/contextmenu_event", "contextmenu")}}                                                                                                   | context menu          |
+| {{domxref("Element/input_event", "input")}}                                                                                                               | IME composition input |
+| {{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keyup_event", "keyup")}}                                                              | key press             |
 
 The `interactionId` is also needed to calculate the {{glossary("Interaction to next paint")}} metric, which helps analyze responsiveness to user interaction over the lifetime of a page.
 
@@ -32,31 +34,32 @@ The `interactionId` is also needed to calculate the {{glossary("Interaction to n
 
 ### Using interactionId
 
-The following example collects event duration for all events corresponding to an interaction.
+The following example groups the durations of observed events by interaction ID.
+By default, only events with a duration of at least 104 milliseconds are reported.
 The `eventLatencies` map can then be used to find events with maximum duration for a user interaction, for example.
 
 ```js
 // The key is the interaction ID.
-let eventLatencies = {};
+const eventLatencies = new Map();
 
 const observer = new PerformanceObserver((list) => {
   list.getEntries().forEach((entry) => {
     if (entry.interactionId > 0) {
       const interactionId = entry.interactionId;
       if (!eventLatencies.has(interactionId)) {
-        eventLatencies[interactionId] = [];
+        eventLatencies.set(interactionId, []);
       }
-      eventLatencies[interactionId].push(entry.duration);
+      eventLatencies.get(interactionId).push(entry.duration);
     }
+  });
+
+  // Log the maximum observed event duration for each interaction.
+  eventLatencies.forEach((durations, interactionId) => {
+    console.log(interactionId, Math.max(...durations));
   });
 });
 
 observer.observe({ type: "event", buffered: true });
-
-// Log events with maximum event duration for a user interaction
-Object.entries(eventLatencies).forEach(([k, v]) => {
-  console.log(Math.max(...v));
-});
 ```
 
 ## Specifications

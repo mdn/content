@@ -26,6 +26,10 @@ _No specific properties; inherits properties from its parent, {{domxref("HTMLMed
 
 _Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from {{domxref("HTMLElement")}}. It offers no methods of its own._
 
+## Events
+
+_Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from its ancestor {{domxref("HTMLElement")}}._ Listen to events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+
 ## Examples
 
 ### Basic usage
@@ -54,10 +58,6 @@ audioElement.addEventListener("loadeddata", () => {
   // The duration variable now holds the duration (in seconds) of the audio clip
 });
 ```
-
-## Events
-
-_Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from its ancestor {{domxref("HTMLElement")}}._ Listen to events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
 ## Specifications
 

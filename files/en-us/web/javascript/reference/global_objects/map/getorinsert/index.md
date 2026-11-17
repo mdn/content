@@ -92,7 +92,7 @@ document.body.dataset.theme = options.get("theme");
 
 ## See also
 
-- [Polyfill of `Map.prototype.getOrInsert` in `core-js`](https://github.com/zloirock/core-js#map-upsert)
+- [Polyfill of `Map.prototype.getOrInsert` in `core-js`](https://core-js.io/docs/features/ecmascript/collections#h-map)
 - [es-shims polyfill of `Map.prototype.getOrInsert`](https://www.npmjs.com/package/map.prototype.getorinsert)
 - {{jsxref("Map")}}
 - {{jsxref("Map.prototype.get()")}}

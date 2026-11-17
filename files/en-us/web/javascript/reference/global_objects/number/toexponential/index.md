@@ -93,7 +93,7 @@ console.log((77).toExponential()); // 7.7e+1
 
 ## See also
 
-- [Polyfill of `Number.prototype.toExponential` with many bug fixes in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [Polyfill of `Number.prototype.toExponential` with many bug fixes in `core-js`](https://core-js.io/docs/features/ecmascript/number)
 - [es-shims polyfill of `Number.prototype.toExponential`](https://www.npmjs.com/package/number.prototype.toexponential)
 - {{jsxref("Number.prototype.toFixed()")}}
 - {{jsxref("Number.prototype.toPrecision()")}}

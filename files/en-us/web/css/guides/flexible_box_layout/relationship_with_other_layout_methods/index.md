@@ -59,7 +59,7 @@ Note that you would not normally use CSS and the `writing-mode` property to chan
 
 ## Flexbox and other layout methods
 
-Some properties were designed assuming that content is laid out using the standard block layout system, and don't apply in the context of flex layout. An element set to `display: flex` behaves in most ways like any other block-level container that establishes a containing block. Floats will not intrude, and the containers' margins will not collapse.
+Some properties were designed assuming that content is laid out using the standard block layout system, and don't apply in the context of flex layout. An element set to `display: flex` behaves in most ways like any other block-level container that establishes a containing block. It establishes a new {{glossary("Flex container", "flex formatting context")}}, so floats will not intrude and the containers' margins will not collapse.
 
 With regard to flex items, if an item was floated or cleared and then becomes a flex item due to the parent having `display: flex` applied, the floating and clearing will no longer happen, and the item will not be taken out of normal flow in the way that floats are. If you have used the {{cssxref("vertical-align")}} property, as used with `inline-block` or table layout for alignment, this will no longer affect the item and you can use the alignment properties of flexbox instead.
 
@@ -223,4 +223,4 @@ As the box is removed, you cannot then use it to — for example — add a backg
 {{EmbedLiveSample("display-contents")}}
 
 > [!WARNING]
-> Some browsers incorrectly remove some elements with `display: contents` from the accessibility tree (but descendants will remain), removing those elements' semantics while maintaining their child content. This means the element itself may not be announced by screen readers. See [`display: contents`](/en-US/docs/Web/CSS/Reference/Properties/display#display_contents) and [`display: contents` considered harmful](https://ericwbailey.design/published/display-contents-considered-harmful/).
+> Some browsers incorrectly remove some elements with `display: contents` from the accessibility tree (but descendants will remain), removing those elements' semantics while maintaining their child content. This means the element itself may not be announced by screen readers. See [`display: contents`](/en-US/docs/Web/CSS/Reference/Properties/display#display_contents) and [`display: contents` considered harmful](https://ericwbailey.website/published/display-contents-considered-harmful/).

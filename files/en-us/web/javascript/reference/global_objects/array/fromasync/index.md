@@ -232,7 +232,7 @@ function* generatorWithRejectedPromises() {
 
 ## See also
 
-- [Polyfill of `Array.fromAsync` in `core-js`](https://github.com/zloirock/core-js#arrayfromasync)
+- [Polyfill of `Array.fromAsync` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array/Array", "Array()")}}
