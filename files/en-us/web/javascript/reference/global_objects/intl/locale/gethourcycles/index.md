@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-An array of strings representing all hour cycle types commonly used for the `Locale` according to its [region preferences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale#region_preferences), sorted in descending preference. If the `Locale` already has an [`hourCycle`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle), then the returned array contains that single value.
+An array of strings representing all hour cycle types commonly used for the `Locale` according to its [region preferences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale#region_preferences), sorted in descending preference. If the `Locale` already has an [`hourCycle`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle) value set, then the returned array contains that single value.
 
 Below is a list of supported hour cycle types.
 
@@ -57,7 +57,7 @@ console.log(jaJP.getHourCycles()); // ["h23"]
 
 ### Region overrides
 
-The `rg` and `sd` extension subtags change the [region preferences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale#region_preferences).
+The `rg` and `sd` extension subtags change the [region preferences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale#region_preferences), which can result in different hour cycle identifiers being returned while the base name stays the same.
 
 ```js
 const enUS = new Intl.Locale("en-US");
