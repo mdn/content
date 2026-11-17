@@ -7,8 +7,48 @@ browser-compat: css.properties.margin-trim
 sidebar: cssref
 ---
 
-The `margin-trim` property allows the container to trim the margins of its children where they adjoin the container's edges.
+The `margin-trim` property allows the container to trim the margins of its children, in the block axis, where they adjoin the container's edges.
 
+{{InteractiveExample("CSS Demo: margin-trim")}}
+
+```css interactive-example-choice
+margin-trim: none;
+```
+
+```css interactive-example-choice
+margin-trim: block;
+```
+
+```css interactive-example-choice
+margin-trim: block-start;
+```
+
+```css interactive-example-choice
+margin-trim: block-end;
+```
+
+```html interactive-example
+<div class="example-wrapper" id="example-element">
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+  <p>Paragraph 3</p>
+</div>
+```
+
+```css interactive-example
+.example-wrapper {
+  border: 2px solid tomato;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: white;
+  background-color: slategrey;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+```
 ## Syntax
 
 ```css
@@ -16,9 +56,6 @@ margin-trim: none;
 margin-trim: block;
 margin-trim: block-start;
 margin-trim: block-end;
-margin-trim: inline;
-margin-trim: inline-start;
-margin-trim: inline-end;
 
 /* Global values */
 margin-trim: inherit;
@@ -43,15 +80,6 @@ This property is specified as one of the following keyword values:
 
 - `block-end`
   - : Margin of last block child with the container's edge is trimmed to zero.
-
-- `inline`
-  - : Margins provided to the inline children where they adjoin the container's edges are trimmed to zero, without affecting the spacing at the beginning and end of the row.
-
-- `inline-start`
-  - : Margin between the container's edge and the first inline child is trimmed to zero.
-
-- `inline-end`
-  - : Margin between the container's edge and the last inline child is trimmed to zero.
 
 ## Formal definition
 
