@@ -18,9 +18,55 @@ A string representing the file system's name.
 
 ## Examples
 
-```js
-// tbd
+### Reading the file system name
+
+Drag a file onto the drop target to display its file system's name. The dropped file provides a {{domxref("FileSystemEntry")}} from which the file system is accessed.
+
+#### HTML
+
+```html
+<div id="drop-target">Drop a file here</div>
+<p id="output" role="status">Waiting for a file</p>
 ```
+
+#### CSS
+
+```css
+#drop-target {
+  padding: 2rem;
+  border: 2px dashed;
+}
+
+#output {
+  overflow-wrap: anywhere;
+}
+```
+
+#### JavaScript
+
+```js
+const dropTarget = document.getElementById("drop-target");
+const output = document.getElementById("output");
+
+dropTarget.addEventListener("dragover", (event) => {
+  event.preventDefault();
+});
+dropTarget.addEventListener("drop", (event) => {
+  event.preventDefault();
+  output.textContent = "Drop a file to read its file system";
+  const item = event.dataTransfer.items[0];
+  if (item?.kind === "file") {
+    const entry = item.webkitGetAsEntry();
+    if (entry !== null) {
+      output.textContent = `File system name: ${JSON.stringify(entry.filesystem.name)}`;
+    }
+  }
+});
+```
+
+#### Result
+
+{{EmbedLiveSample("Reading the file system name", "100%", 200)}}
 
 ## Specifications
 
