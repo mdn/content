@@ -18,33 +18,32 @@ The `params` field in the event notification is an object with the following fie
 - `intercepts` {{optional_inline}}
   - : Never included, because `isBlocked` is always `false`.
 - `isBlocked`
-  - : A boolean that indicates whether the request is blocked by an intercept.
+  - : A boolean that indicates whether the request is blocked by an [intercept](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#intercepts).
     It is always `false` for this event, because intercepts can't block a request once its response is complete.
 - `navigation`
   - : A string that contains the [UUID](/en-US/docs/Glossary/UUID) that uniquely identifies the navigation that the request is part of, or `null` if the request isn't a navigation request.
-    Requests for a document's subresources, such as stylesheets and scripts, and requests made with `fetch()` have `null`.
+    For example, the value is `null` when requesting a document's subresources, such as stylesheets and scripts, or when making a request with `fetch()`.
     If the navigation was started using the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) or [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) command, this ID matches the `navigation` value in the command's response.
-    The same ID is shared by all events related to this navigation, including navigation events in the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#events) module and other events in the `network` module.
+    The same ID is shared by all events related to this navigation, including navigation events in the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#events) module and other events in the [`network`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#events) module.
 - `redirectCount`
   - : A non-negative integer that contains the number of redirects the browser has followed for this request.
     It is `0` for the original request and increases by one with each redirect.
 - `request`
-  - : An object that describes the request.
+  - : An object that describes the [request](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#requests).
     It contains the following fields:
     - `bodySize`
       - : A non-negative integer that contains the size of the request body in bytes, or `null` if the request has no body.
     - `cookies`
       - : An array of objects, each representing a cookie sent with the request.
         The array is empty if the request has no {{HTTPHeader("Cookie")}} header.
-
-        Each object contains the following fields:
+        Each object contains the following fields and may additionally include browser-specific fields:
         - `domain`
           - : A string that contains the domain of the cookie.
         - `expiry` {{optional_inline}}
           - : A non-negative integer that contains the expiry time of the cookie, as seconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
             This field is omitted for a cookie that has no expiry time, such as a session cookie.
         - `httpOnly`
-          - : A boolean that indicates whether the cookie has the [`HttpOnly`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) attribute.
+          - : A boolean that indicates whether the cookie is hidden from page scripts by its [`HttpOnly`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) attribute (`true`) or is accessible to them (`false`).
         - `name`
           - : A string that contains the name of the cookie.
         - `path`
@@ -57,24 +56,22 @@ The `params` field in the event notification is an object with the following fie
             - `none`: The cookie has `SameSite=None`.
             - `strict`: The cookie has `SameSite=Strict`.
         - `secure`
-          - : A boolean that indicates whether the cookie has the [`Secure`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) attribute.
+          - : A boolean that indicates whether the cookie is restricted to secure connections by its [`Secure`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) attribute (`true`) or can be sent over insecure connections (`false`).
         - `size`
-          - : A non-negative integer that contains the size of the cookie in bytes.
+          - : A non-negative integer that contains the combined size of the cookie's name and value, in bytes.
         - `value`
           - : An object that contains the value of the cookie.
             It contains the following fields:
             - `type`
               - : A string that indicates how the cookie value is encoded.
                 It has one of the following values:
-                - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
-                - `string`: The value is text.
+                - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
+                - `string`: The value is text decoded from UTF-8 bytes.
             - `value`
               - : A string that contains the cookie value in the encoding specified by the [`type`](#type) field.
-
-        Browsers can also include their own, browser-specific fields in these objects.
     - `destination`
       - : A string that contains the [destination](/en-US/docs/Web/API/Request/destination) of the request, such as `document`, `script`, or `style`.
-        It is an empty string for a request made with `fetch()` or `XMLHttpRequest`.
+        The string is empty for requests made with {{domxref("Window/fetch", "fetch()")}} or {{domxref("XMLHttpRequest")}}.
     - `headers`
       - : An array of objects, each representing a header of the request, including headers added with the [`network.setExtraHeaders`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/setExtraHeaders) command.
         Each object contains the following fields:
@@ -86,13 +83,13 @@ The `params` field in the event notification is an object with the following fie
             - `type`
               - : A string that indicates how the header value is encoded.
                 It has one of the following values:
-                - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
-                - `string`: The value is text.
+                - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
+                - `string`: The value is text decoded from UTF-8 bytes.
             - `value`
               - : A string that contains the header value in the encoding specified by the [`type`](#type_2) field.
     - `headersSize`
       - : A non-negative integer that contains the size of the request headers in bytes.
-        For protocols that compress headers, such as HTTP/2, it is the compressed size.
+        For protocols that compress headers, such as HTTP/2, it represents the compressed size.
     - `initiatorType`
       - : A string that indicates what started the request, such as `fetch`, `link`, or `script`.
         For a request with no initiator type, such as the request for a page loaded into a tab, the value is `null` instead of a string.
@@ -100,40 +97,41 @@ The `params` field in the event notification is an object with the following fie
     - `method`
       - : A string that contains the [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods), such as `GET` or `POST`.
     - `request`
-      - : A string that contains the ID of the request.
-        The ID stays the same when the request is redirected.
+      - : A string that contains the ID of the [request](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#requests).
+        The ID stays the same even when the request is redirected.
     - `timings`
       - : An object that contains the times at which the stages of the request happened.
-        `timeOrigin` is a time in milliseconds since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), and the other fields are times in milliseconds relative to `timeOrigin`.
+        The [`timeOrigin`](#timeorigin) field contains a time in milliseconds since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
+        The other fields in this object contain times in milliseconds relative to `timeOrigin`.
         A field is `0` if its stage hasn't happened, for example the redirect fields for a request that wasn't redirected.
         All the fields are `0` if the request wasn't made by a document or a worker.
         It contains the following fields:
         - `connectEnd`
-          - : A number that represents the time when the browser finished establishing the connection to the server, like {{domxref("PerformanceResourceTiming.connectEnd")}}.
+          - : A number that represents the time when the browser finished establishing the connection to the server, similar to {{domxref("PerformanceResourceTiming.connectEnd")}}.
         - `connectStart`
-          - : A number that represents the time when the browser started establishing the connection to the server, like {{domxref("PerformanceResourceTiming.connectStart")}}.
+          - : A number that represents the time when the browser started establishing the connection to the server, similar to {{domxref("PerformanceResourceTiming.connectStart")}}.
         - `dnsEnd`
-          - : A number that represents the time when the browser finished the domain name lookup, like {{domxref("PerformanceResourceTiming.domainLookupEnd")}}.
+          - : A number that represents the time when the browser finished the domain name lookup, similar to {{domxref("PerformanceResourceTiming.domainLookupEnd")}}.
         - `dnsStart`
-          - : A number that represents the time when the browser started the domain name lookup, like {{domxref("PerformanceResourceTiming.domainLookupStart")}}.
+          - : A number that represents the time when the browser started the domain name lookup, similar to {{domxref("PerformanceResourceTiming.domainLookupStart")}}.
         - `fetchStart`
-          - : A number that represents the time when the browser started fetching the resource, after any redirects, like {{domxref("PerformanceResourceTiming.fetchStart")}}.
+          - : A number that represents the time when the browser started fetching the resource after any redirects, similar to {{domxref("PerformanceResourceTiming.fetchStart")}}.
         - `redirectEnd`
-          - : A number that represents the time when the browser received the last byte of the response to the last redirect, like {{domxref("PerformanceResourceTiming.redirectEnd")}}.
+          - : A number that represents the time when the browser received the last byte of the response to the last redirect, similar to {{domxref("PerformanceResourceTiming.redirectEnd")}}.
         - `redirectStart`
-          - : A number that represents the time when the request that was redirected first started, like {{domxref("PerformanceResourceTiming.redirectStart")}}.
+          - : A number that represents the time when the request that was redirected first started, similar to {{domxref("PerformanceResourceTiming.redirectStart")}}.
         - `requestStart`
-          - : A number that represents the time when the browser started sending the request, like {{domxref("PerformanceResourceTiming.requestStart")}}.
+          - : A number that represents the time when the browser started sending the request, similar to {{domxref("PerformanceResourceTiming.requestStart")}}.
         - `requestTime`
-          - : A number that represents the time when the request started, like {{domxref("PerformanceEntry.startTime")}}.
+          - : A number that represents the time when the request started, similar to {{domxref("PerformanceEntry.startTime")}}.
         - `responseEnd`
-          - : A number that represents the time when the browser received the last byte of the response, like {{domxref("PerformanceResourceTiming.responseEnd")}}.
+          - : A number that represents the time when the browser received the last byte of the response, similar to {{domxref("PerformanceResourceTiming.responseEnd")}}.
         - `responseStart`
-          - : A number that represents the time when the browser received the first byte of the response, like {{domxref("PerformanceResourceTiming.responseStart")}}.
+          - : A number that represents the time when the browser received the first byte of the response, similar to {{domxref("PerformanceResourceTiming.responseStart")}}.
         - `timeOrigin`
           - : A number that represents the [time origin](/en-US/docs/Web/API/Performance/timeOrigin) of the document or worker that made the request.
         - `tlsStart`
-          - : A number that represents the time when the browser started the TLS handshake to secure the connection, like {{domxref("PerformanceResourceTiming.secureConnectionStart")}}.
+          - : A number that represents the time when the browser started the [TLS](/en-US/docs/Glossary/TLS) handshake to secure the connection, similar to {{domxref("PerformanceResourceTiming.secureConnectionStart")}}.
     - `url`
       - : A string that contains the URL of the request.
 - `response`
@@ -173,8 +171,8 @@ The `params` field in the event notification is an object with the following fie
             - `type`
               - : A string that indicates how the header value is encoded.
                 It has one of the following values:
-                - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes, because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
-                - `string`: The value is text.
+                - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8).
+                - `string`: The value is text decoded from UTF-8 bytes.
             - `value`
               - : A string that contains the header value in the encoding specified by the [`type`](#type_3) field.
     - `headersSize`
@@ -195,16 +193,17 @@ The `params` field in the event notification is an object with the following fie
 - `timestamp`
   - : A non-negative integer that represents the time when the event was fired, as milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 - `userContext` {{optional_inline}}
-  - : A string that contains the ID of the [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) of the context in which the request was made, or `null` if the request wasn't made by a document in a context.
+  - : A string that contains the ID of the [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) in which the request was made, or `null` if the request wasn't made by a document in a context.
 
 ## Description
 
 In the [lifecycle of a request](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#requests), this is the last event for a response that the browser received successfully.
 It fires after [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent) and [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) for the same request.
-If the request fails at any point, [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError) fires, and it is the last event for the request.
+If the request fails at any point, [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError) fires as the last event for the request.
 
 When the server responds with a redirect, this event fires for the redirect response too.
-The browser then sends `network.beforeRequestSent` for the new URL, with the same request ID and a `redirectCount` that is one higher.
+The browser then sends `network.beforeRequestSent` for the new URL.
+The request ID stays the same and `redirectCount` increases by one.
 The other events for the new URL follow.
 
 The browser doesn't wait for the client after sending this event: a response can't be blocked at this point.
