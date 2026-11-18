@@ -27,7 +27,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 ## Description
 
-The `<install>` element provides a declarative browser-defined control that instructs the browser to install a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps) on the user's device.
+The `<install>` element provides a declarative browser-defined control that instructs the browser to install a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps) on the user's device. It one one of the [permission elements](/en-US/docs/Web/HTML/Guides/Permission_elements).
 
 This uses the same installation confirmation dialog as the browser's built-in install functionality, but it has some advantages. It allows the developer to create an install experience that is more consistent across supporting browsers, has greater flexibility as to where it can be implemented, and is easier to discover.
 
@@ -35,6 +35,8 @@ This uses the same installation confirmation dialog as the browser's built-in in
 > There is an equivalent DOM method, {{domxref("Navigator.install()")}}, which provides a programmatic mechanism to create such an install button.
 
 The element's DOM API interface, {{domxref("HTMLInstallElement")}}, provides features to access current validity status, manifest URL, and manifest ID. It also has events available to run code in response to changes in validity status and to report the result of the installation attempt.
+
+See our [Permission elements](/en-US/docs/Web/HTML/Guides/Permission_elements) guide for more information on features that `<install>` shares with the other permission elements, such as setting the button language, including fallback content, validation and blocking mechanism, styling restrictions, and accessibility features.
 
 ### Usage contexts
 
@@ -105,45 +107,6 @@ For an app to be installed via an `<install>` element, the following criteria mu
 - The app must meet the basic PWA [installability](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installability) criteria, namely, it must have a valid manifest and must be served over HTTPS, or from a `localhost` address.
 - The app must have a manifest ID available, either in the manifest file `id` field, or provided in the `<install>` element's `manifestId` attribute.
 - The `<install>` element must be included in a top-level browsing context. It won't function when embeded in an {{htmlelement("iframe")}}.
-
-### Setting the button language
-
-The global [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute is used by the `<install>` element to select a language for its rendered text. This means that you can set a `lang` attribute directly on the `<install>` element or on one of its ancestors to tell the browser what language to use for the button label.
-
-If no suitable `lang` attribute is set, the browser's preferred language setting is used.
-
-### Including fallback content
-
-You can include fallback content between the `<install>` element's opening and closing tags that will be displayed if it isn't supported. For example, you might include a message to point to instructions on how to install the PWA on different browsers:
-
-```html-nolint
-<install>
-  <p>
-    Install this site as an app using your browser's install button
-    (<a href="../install-instructions/">show me how</a>).
-  </p>
-</install>
-```
-
-### `<install>` blocking
-
-The `<install>` element is designed to prevent bad actors from tricking users into activating it, for example via [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking). To enable this, the browser keeps a record of so-called **blocker reasons** for each rendered element.
-
-When an `<install>` element is blocked, it is prevented from functioning, either temporarily or permanently, depending on the reason. When a `<install>` element is blocked, it is said to be invalid. You can check whether it is invalid by querying the {{domxref("HTMLInstallElement.isValid")}} property. You can also return the reason why it is invalid via the {{domxref("HTMLInstallElement.invalidReason")}} property — see that page for a full list of possible reasons.
-
-### Styling restrictions
-
-The `<install>` element has several constraints on the CSS styles that can be applied to it. Some of these constraints are designed to enforce fundamental accessibility, and will result in the button being deactivated if they are not adhered to. Some enforce certain values or value ranges for various properties.
-
-The constraints are the same as those applied to the `<geolocation>` element. See [`<geolocation>` > Styling restrictions](/en-US/docs/Web/HTML/Reference/Elements/geolocation#styling_restrictions).
-
-## Accessibility
-
-The `<install>` element has an accessible name written in the [language it is set to](#setting_the_button_language). It also has a [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) of [`button`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role) so that it is recognized as a button by screen readers.
-
-In addition, the `<install>` element has a default [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) value of `0`, so it behaves like a real `<button>` with respect to keyboard focus.
-
-Finally, refer to [`<geolocation>` > Accessibility restrictions](/en-US/docs/Web/HTML/Reference/Elements/geolocation#accessibility_restrictions) for information on styling constraints applied to the `<install>` element to enforce fundamental accessibility requirements.
 
 ## Security considerations
 

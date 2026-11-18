@@ -18,9 +18,9 @@ The **`HTMLInstallElement`** interface of the [HTML DOM API](/en-US/docs/Web/API
 _Also inherits properties from its parent interface, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLInstallElement.invalidReason", "invalidReason")}} {{readonlyinline}} {{experimental_inline}}
-  - : An enumerated value representing the reason why the `<install>` element is invalid ([blocked](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking)), if it is blocked at all.
+  - : An enumerated value representing the reason why the `<install>` element is invalid.
 - {{domxref("HTMLInstallElement.isValid", "isValid")}} {{readonlyinline}} {{experimental_inline}}
-  - : A boolean value indicating whether the `<install>` element is valid or invalid (blocked).
+  - : A boolean value indicating whether the `<install>` element is valid or invalid.
 - {{domxref("HTMLInstallElement.manifest", "manifest")}} {{experimental_inline}}
   - : A string representing the URL of the [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) defining the app to be installed. Reflects the value of the associated `<install>` element's [`manifest`](/en-US/docs/Web/HTML/Reference/Elements/install#manifest) attribute.
 - {{domxref("HTMLInstallElement.manifestId", "manifestId")}} {{experimental_inline}}
@@ -37,7 +37,7 @@ _Also inherits events from its parent interface, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLInstallElement.installresult_event", "installresult")}} {{experimental_inline}}
   - : Fired when a PWA installation attempt initiated using an {{htmlelement("install")}} element completes; it can be used to report whether the installation attempt was successful.
 - {{domxref("HTMLInstallElement.validationstatuschange_event", "validationstatuschange")}} {{experimental_inline}}
-  - : Fired whenever the {{htmlelement("install")}} element's [validation status](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking) changes. This change is reflected in a change to the {{domxref("HTMLInstallElement.invalidReason", "invalidReason")}} property and, if the element has become valid or invalid, also in a change to the {{domxref("HTMLInstallElement.isValid", "isValid")}} property.
+  - : Fired whenever the {{htmlelement("install")}} element's validation status changes. This change is reflected in a change to the {{domxref("HTMLInstallElement.invalidReason", "invalidReason")}} property and, if the element has become valid or invalid, also in a change to the {{domxref("HTMLInstallElement.isValid", "isValid")}} property.
 
 ## Description
 
@@ -45,7 +45,7 @@ The `HTMLInstallElement` interface represents the {{htmlelement("install")}} ele
 
 You can check whether an installation was successful by listening for the {{domxref("HTMLInstallElement.installresult_event", "installresult")}} event and querying the event object's {{domxref("InstallResultEvent.result", "result")}} property.
 
-When an {{htmlelement("install")}} element is [blocked](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking), it is prevented from functioning (invalid), either temporarily or permanently, depending on the reason. You can check whether it is invalid by querying the {{domxref("HTMLInstallElement.isValid")}} property. You can also return the reason why it is invalid via the {{domxref("HTMLInstallElement.invalidReason")}} property — see that page for a full list of possible reasons. You can detect when the element changes from valid to invalid or vice versa using the {{domxref("HTMLInstallElement.validationstatuschange_event", "validationstatuschange")}} event.
+When an {{htmlelement("install")}} element is invalid (see [invalidation and blocking](/en-US/docs/Web/HTML/Guides/Permission_elements#validation_and_blocking)), it is prevented from functioning, either temporarily or permanently, depending on the reason. You can check whether it is invalid by querying the {{domxref("HTMLInstallElement.isValid")}} property. You can also return the reason why it is invalid via the {{domxref("HTMLInstallElement.invalidReason")}} property.
 
 ## Examples
 
@@ -77,7 +77,7 @@ installElem.addEventListener("installresult", (e) => {
 });
 ```
 
-We can also query changes in the `<install>` element's validation status (see [`<install>` blocking](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking)) using a {{domxref("HTMLInstallElement.validationstatuschange_event", "validationstatuschange")}} event listener:
+We can also query changes in the `<install>` element's validation status using a {{domxref("HTMLInstallElement.validationstatuschange_event", "validationstatuschange")}} event listener:
 
 ```js
 installElem.addEventListener("validationstatuschange", (e) => {
