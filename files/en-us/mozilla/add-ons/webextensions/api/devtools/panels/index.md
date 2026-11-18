@@ -7,7 +7,7 @@ sidebar: addonsidebar
 ---
 
 > [!NOTE]
-> Although the APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools), there are still many features that are not yet implemented in Firefox, and therefore are not documented here. To see which features are currently missing please see [Limitations of the devtools APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#limitations_of_the_devtools_apis).
+> Although the APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools), there are several features that are not implemented in Firefox or Safari, and therefore not documented here. To see which features are not available, see [Cross-browser support for devtools APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#cross-browser_support_for_devtools_apis).
 
 The `devtools.panels` API lets a devtools extension define its user interface inside the devtools window.
 

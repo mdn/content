@@ -6,7 +6,7 @@ sidebar: addonsidebar
 ---
 
 > [!NOTE]
-> This page describes the devtools APIs in Firefox 55. Although the APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools), Firefox does not implement all those features; therefore, not all features are documented here. To see which features are missing, refer to [Limitations of the devtools APIs](#limitations_of_the_devtools_apis).
+> The devtools APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools). However, Firefox and Safari don't implement all those features. To see which features are missing, refer to [Cross-browser support for devtools APIs](#cross-browser_support_for_devtools_apis).
 
 You can use WebExtensions APIs to extend the browser's built-in developer tools. To create a devtools extension, include the "[devtools_page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)" key in your [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file:
 
@@ -119,34 +119,38 @@ If you need to exchange messages between the content scripts running in the targ
 
 ![The background page tab ID is connected to the content script on the content page by a runtime.sendMessage() object. The Port of the background page is connected to the port of the DevTools document by a port.postMessage() object.](devtools-content-scripts.png)
 
-## Limitations of the devtools APIs
+## Cross-browser support for devtools APIs
 
-These APIs are based on the Chrome devtools APIs, but many features are still missing, compared with Chrome. This section lists the features that are still not implemented, as of Firefox 54. Note that the devtools APIs are under active development and we expect to add support for most of them in future releases.
+These APIs are based on the Chrome devtools APIs, but Firefox and Safari don't support some of their features. This section lists those features. For details of support for each API, see the browser compatibility table on its reference page.
 
-### devtools.inspectedWindow
+### Not supported in Firefox or Safari
 
-The following are not supported:
+- `devtools.inspectedWindow.getResources()`
+- `devtools.inspectedWindow.onResourceAdded`
+- `devtools.inspectedWindow.onResourceContentCommitted`
+- `devtools.inspectedWindow.Resource`
+- The `contextSecurityOrigin`, `scriptExecutionContext`, and `useContentScriptContext` options of `devtools.inspectedWindow.eval()`
+- `devtools.panels.Button`
+- `devtools.panels.ExtensionPanel.createStatusBarButton()`
+- `devtools.panels.ExtensionPanel.onSearch`
+- `devtools.panels.ExtensionSidebarPane.setHeight()`
+- `devtools.panels.openResource()`
+- `devtools.panels.setOpenResourceHandler()`
+- `devtools.panels.sources`
+- `devtools.panels.SourcesPanel`
 
-- `inspectedWindow.getResources()`
-- `inspectedWindow.onResourceAdded`
-- `inspectedWindow.onResourceContentCommitted`
+### Not supported in Firefox
 
-None of the options to `inspectedWindow.eval()` are supported.
+- The `frameURL` option of `devtools.inspectedWindow.eval()`
 
-Scripts injected using `inspectedWindow.eval()` can't use all the Console's command-line helper functions, but `$0` and `inspect()` are both supported (starting from Firefox 55).
+In Firefox, scripts injected using `devtools.inspectedWindow.eval()` can't use all the Console's command-line helper functions, but `$0` and `inspect()` are both supported.
 
-### devtools.panels
+### Not supported in Safari
 
-The following are not supported:
-
-- `panels.elements`
-- `panels.sources`
-- `panels.setOpenResourceHandler()`
-- `panels.openResource()`
-- `panels.ExtensionPanel.createStatusBarButton()`
-- `panels.Button`
-- `panels.ElementsPanel`
-- `panels.SourcesPanel`
+- `devtools.network.getHAR()`
+- `devtools.network.onRequestFinished`
+- `devtools.panels.ElementsPanel`
+- `devtools.panels.ExtensionSidebarPane`
 
 ## Examples
 
