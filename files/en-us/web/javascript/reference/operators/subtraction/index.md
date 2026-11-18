@@ -34,6 +34,8 @@ x - y
 
 The `-` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt subtraction if both operands become BigInts; otherwise, it performs number subtraction. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
 
+When the mathematical result is 0, `0` is returned unless the subtraction is `-0 - 0`, in which case `-0` is returned.
+
 ## Examples
 
 ### Subtraction using numbers

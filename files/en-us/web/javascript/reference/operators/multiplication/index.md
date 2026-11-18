@@ -34,6 +34,8 @@ x * y
 
 The `*` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt multiplication if both operands become BigInts; otherwise, it performs number multiplication. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
 
+When the mathematical result is 0, `0` is returned when the two operands have the same sign, and `-0` is returned otherwise.
+
 ## Examples
 
 ### Multiplication using numbers
@@ -72,6 +74,19 @@ To do multiplication with a BigInt and a non-BigInt, convert either operand:
 ```js
 2n * BigInt(2); // 4n
 Number(2n) * 2; // 4
+```
+
+### Non-associativity
+
+Be careful with operation order. Unlike in mathematics, multiplication in JavaScript is not always associative—that is, `a * (b * c) !== (a * b) * c`—due to the rounding of intermediate results.
+
+```js
+const a = 3;
+const b = 0.1;
+const c = 10;
+
+console.log(a * b * c); // 3.0000000000000004
+console.log(a * (b * c)); // 3
 ```
 
 ## Specifications

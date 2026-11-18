@@ -38,6 +38,8 @@ The `+` operator is overloaded for two distinct operations: numeric addition and
 - If they are both [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt), BigInt addition is performed. If one side is a BigInt but the other is not, a {{jsxref("TypeError")}} is thrown.
 - Otherwise, both sides are [converted to numbers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), and numeric addition is performed.
 
+When the mathematical result is 0, `0` is returned unless both operands are `-0`, in which case `-0` is returned.
+
 String concatenation is often thought to be equivalent with [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) or [`String.prototype.concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat), but they are not. Addition coerces the expression to a _primitive_, which calls [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) in priority; on the other hand, template literals and `concat()` coerce the expression to a _string_, which calls [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) in priority. If the expression has a [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) method, string concatenation calls it with `"default"` as hint, while template literals use `"string"`. This is important for objects that have different string and primitive representations — such as {{jsxref("Temporal")}}, whose objects' `valueOf()` methods all throw.
 
 ```js
@@ -99,6 +101,25 @@ If one of the operands is a string, the other is converted to a string and they 
 5 + "foo"; // "5foo"
 "foo" + false; // "foofalse"
 "2" + 2; // "22"
+```
+
+### Non-associativity
+
+Be careful with operation order. Unlike in mathematics, addition in JavaScript is not always associative—that is, `a + (b + c) !== (a + b) + c`—due to the rounding of intermediate results.
+
+```js
+const a = 1e20;
+const b = -1e20;
+const c = 0.1;
+
+console.log(a + b + c); // 0.1
+console.log(a + (b + c)); // 0
+```
+
+{{jsxref("Math.sumPrecise()")}} can alleviate the issue here.
+
+```js
+console.log(Math.sumPrecise([a, b, c])); // 0.1
 ```
 
 ## Specifications
