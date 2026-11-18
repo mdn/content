@@ -226,6 +226,6 @@ jobs:
 
           # The checkout is the PR merge ref, whose subject reads "Merge <head> into <base>".
           echo -e "\n\nLinted: $(git log -1 --format=%s)"
-          echo "Seeing unexpected failures? Try merging the latest main into your branch."
+          echo "Seeing unexpected failures? Try merging the latest $GITHUB_BASE_REF into your branch."
 
           exit 1
