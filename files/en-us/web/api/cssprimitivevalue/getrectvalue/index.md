@@ -9,7 +9,7 @@ status:
 browser-compat: api.CSSPrimitiveValue.getRectValue
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("CSSOM")}}{{non-standard_header}}
 
 The **`getRectValue()`** method of the
 {{domxref("CSSPrimitiveValue")}} interface is used to get a rect value. If this CSS

@@ -46,7 +46,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - The initial values of {{cssxref("mask-position")}} and {{cssxref("mask-repeat")}} have been changed to `0% 0%` and `repeat`, respectively ([Firefox bug 1308963](https://bugzil.la/1308963)).
 - There have been a number of changes to CSS {{cssxref("&lt;color&gt;")}} values (see [Firefox bug 1295456](https://bugzil.la/1295456)):
   - `rgba()` and `hsla()` have now been redefined as aliases of `rgb()` and `hsl()`; both accept the same parameter syntax.
-  - `rgb(`) and `hsl()` now accept an optional alpha value, e.g., `rgb(255, 0, 0, 0.5)`.
+  - `rgb()` and `hsl()` now accept an optional alpha value, e.g., `rgb(255, 0, 0, 0.5)`.
   - Color functions now accept space-separated parameters rather than commas, e.g., `rgb(255 0 0 / 0.5)`.
   - Alpha values can now be specified as percentages as well as numbers, e.g., `rgb(255 0 0 / 50%)`.
   - The hue component in `hsl()` colors can now be specified as an angle, as well as a number, e.g., `hsl(120deg, 60%, 70%)`.

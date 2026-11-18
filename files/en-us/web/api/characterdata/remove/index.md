@@ -8,8 +8,7 @@ browser-compat: api.CharacterData.remove
 
 {{APIRef("DOM")}}
 
-The **`remove()`** method of the {{domxref("CharacterData")}} removes it from its parent node.
-If it has no parent node, calling `remove()` does nothing.
+The **`remove()`** method of the {{domxref("CharacterData")}} interface removes the `CharacterData` node from its parent node. Nothing happens if {{domxref("Node.parentNode", "parentNode")}} is `null`.
 
 ## Syntax
 

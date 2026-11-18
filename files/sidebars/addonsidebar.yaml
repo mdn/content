@@ -18,6 +18,7 @@ sidebar:
       - /Mozilla/Add-ons/WebExtensions/API
       - /Mozilla/Add-ons/WebExtensions/Content_scripts
       - /Mozilla/Add-ons/WebExtensions/Background_scripts
+      - /Mozilla/Add-ons/WebExtensions/activeTab_permission
       - /Mozilla/Add-ons/WebExtensions/Match_patterns
       - /Mozilla/Add-ons/WebExtensions/Working_with_files
       - /Mozilla/Add-ons/WebExtensions/Internationalization

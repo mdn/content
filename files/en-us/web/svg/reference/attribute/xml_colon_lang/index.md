@@ -8,8 +8,6 @@ browser-compat: svg.global_attributes.xml_lang
 sidebar: svgref
 ---
 
-{{Deprecated_Header}}
-
 The **`xml:lang`** attribute specifies the primary language used in contents and attributes containing text content of particular elements.
 
 It is a universal attribute allowed in all XML dialects to mark up the natural human language that an element contains.
@@ -19,6 +17,14 @@ There is also a {{SVGAttr("lang")}} attribute (without namespace). If both of th
 ## Elements
 
 You can use this attribute with any SVG element.
+
+## Examples
+
+```html
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <text xml:lang="en-US">This is some English text</text>
+</svg>
+```
 
 ## Usage notes
 
@@ -43,14 +49,6 @@ You can use this attribute with any SVG element.
   - : This value specifies the language used for the element as a valid {{glossary("BCP 47 language tag")}}.
 
     The most common syntax is a value formed by a lowercase two-character part for the language and an uppercase two-character part for the region or country, separated by a minus sign, e.g., `en-US` for US English or `de-AT` for Austrian German.
-
-## Examples
-
-```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-  <text xml:lang="en-US">This is some English text</text>
-</svg>
-```
 
 ## Specifications
 

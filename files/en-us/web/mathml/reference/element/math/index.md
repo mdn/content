@@ -41,7 +41,7 @@ body {
 
 For example, screen readers will represent the following quadratic formula similar to:
 
-> x equals fraction start, negative b plus or minus square root of b squared minus 4 a c, end of root, over 2 a, end of fraction, maths
+> x equals fraction start, negative b plus or minus square root of b squared minus 4 a c, end of root, over 2 a, end of fraction, math
 
 <details>
 <summary>Markup for the quadratic formula</summary>
@@ -133,7 +133,7 @@ This example contains two MathML formula. The first one is rendered in its own c
 </p>
 ```
 
-{{ EmbedLiveSample('math_example', 700, 200, "", "") }}
+{{ EmbedLiveSample('examples', 700, 200, "", "") }}
 
 ## Technical summary
 

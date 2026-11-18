@@ -9,6 +9,8 @@ sidebar: cssref
 
 The [CSS](/en-US/docs/Web/CSS) **`quotes`** property sets how the browser should render quotation marks that are automatically added to the HTML {{HTMLElement("q")}} element or added using the `open-quotes` or `close-quotes` (or omitted using the `no-open-quote` and `no-close-quote`) values of the of the CSS {{cssxref("content")}} property.
 
+Browsers insert quotation marks at the opening and closing of `<q>` elements and for the `open-quote` and `close-quote` values of the `content` property. Each opening or closing quote is replaced by one of the strings from the value of `quotes`, based on the depth of nesting, or, if `quotes` is explicitly set to or otherwise resolves to `auto`, the quotation marks used are language dependent.
+
 {{InteractiveExample("CSS Demo: quotes")}}
 
 ```css interactive-example-choice
@@ -46,12 +48,10 @@ q {
 }
 ```
 
-Browsers insert quotation marks at the opening and closing of `<q>` elements and for the `open-quote` and `close-quote` values of the `content` property. Each opening or closing quote is replaced by one of the strings from the value of `quotes`, based on the depth of nesting, or, if `quotes` is explicitly set to or otherwise resolves to `auto`, the quotation marks used are language dependent.
-
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 quotes: none;
 quotes: auto;
 
@@ -140,7 +140,7 @@ li {
 
 #### Result
 
-{{EmbedLiveSample('Overriding default quotes', "100%", 200)}}
+{{EmbedLiveSample('default_quotes_and_overrides', "100%", 200)}}
 
 By default, browser provide language specific quotation marks when the `<q>` element is used. If the `quotes` property is defined, the values provided override the browser defaults. Note the `quotes` property is inherited. The `quotes` property is set on the `<li>` with the `specialQuotes` class, but the quotes are applied the `<q>` elements.
 

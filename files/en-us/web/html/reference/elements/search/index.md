@@ -42,6 +42,12 @@ This example demonstrates the use of `<search>` as the container for a search wi
 </header>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 #### Result
 
 {{EmbedLiveSample('Header search form')}}

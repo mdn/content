@@ -21,9 +21,9 @@ An integer.
 In this example, we use the {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}} constructor, then query the length:
 
 ```js
-const values = new CSSUnparsedValue(["1em", "#445566", "-45px"]);
+const value = new CSSUnparsedValue(["1em", "#445566", "-45px"]);
 
-console.log(values.length); // 3
+console.log(value.length); // 3
 ```
 
 ## Specifications
@@ -37,9 +37,9 @@ console.log(values.length); // 3
 ## See also
 
 - {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
-- {{domxref("CSSUnparsedValue.entries")}}
-- {{domxref("CSSUnparsedValue.forEach")}}
-- {{domxref("CSSUnparsedValue.keys")}}
-- {{domxref("CSSUnparsedValue.values")}}
+- {{domxref("CSSUnparsedValue.entries()")}}
+- {{domxref("CSSUnparsedValue.forEach()")}}
+- {{domxref("CSSUnparsedValue.keys()")}}
+- {{domxref("CSSUnparsedValue.values()")}}
 - [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

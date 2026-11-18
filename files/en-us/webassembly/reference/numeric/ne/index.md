@@ -72,7 +72,7 @@ value_type.ne
 - `input2`
   - : The second input value.
 - `output`
-  - : An value indicating whether the two input values are not equal.
+  - : A value indicating whether the two input values are not equal.
 
 For a non-SIMD `ne`, the input values will be basic numeric values such as `3` or `3.5`. If the two input values are not equal, `1` will be pushed on to the stack as an output, otherwise `0` will be pushed on to the stack.
 

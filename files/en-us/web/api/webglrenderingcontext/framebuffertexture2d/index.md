@@ -79,7 +79,7 @@ framebufferTexture2D(target, attachment, textarget, texture, level)
       the cube.
 
 - `texture`
-  - : A {{domxref("WebGLTexture")}} object whose image to attach.
+  - : A {{domxref("WebGLTexture")}} object whose image to attach, or `null` to detach the image currently attached to the specified attachment point.
 - `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the mipmap level of the texture image to be
     attached. Must be 0.

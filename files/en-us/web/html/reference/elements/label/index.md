@@ -166,7 +166,7 @@ An {{HTMLElement("input")}} element with a `type="button"` declaration and a val
 <input type="text" id="username" />
 ```
 
-{{EmbedLiveSample('Using_the_for_attribute', '200', '50')}}
+{{EmbedLiveSample('defining_an_explicit_label_with_the_for_attribute', '200', '50')}}
 
 ## Technical summary
 

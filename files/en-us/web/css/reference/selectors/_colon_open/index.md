@@ -35,30 +35,6 @@ Note that the open and closed states are semantic states, and don't necessary co
 
 This example demonstrates some of the HTML elements that have an open state.
 
-#### CSS
-
-```css
-details:open > summary {
-  background-color: pink;
-}
-
-:is(select, input):open {
-  background-color: pink;
-}
-```
-
-```css hidden
-@supports not selector(:open) {
-  body::before {
-    content: "Your browser doesn't support the :open selector.";
-    background-color: wheat;
-    display: block;
-    text-align: center;
-    padding: 1rem 0;
-  }
-}
-```
-
 #### HTML
 
 ```html
@@ -81,6 +57,30 @@ details:open > summary {
 
 <label for="start">Start date:</label>
 <input type="date" id="start" />
+```
+
+#### CSS
+
+```css
+details:open > summary {
+  background-color: pink;
+}
+
+:is(select, input):open {
+  background-color: pink;
+}
+```
+
+```css hidden
+@supports not selector(:open) {
+  body::before {
+    content: "Your browser doesn't support the :open selector.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
 ```
 
 #### Result
@@ -115,7 +115,7 @@ There is nothing special about our fruit selector.
 ```
 
 > [!NOTE]
-> We are not using a multi-line `<select>` (that is, one with the [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple) attribute set) — those tend to render as a scrolling list box rather than a drop down menu, so don't have an open state.
+> We are not using a multi-line `<select>` (that is, one with the [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple) attribute set) — those tend to render as a scrolling list box rather than a dropdown menu, so don't have an open state.
 
 #### CSS
 

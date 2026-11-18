@@ -20,7 +20,7 @@ Although the `htmlFor` property itself is read-only in the sense that you can't 
 
 ```js
 const outputElem = document.getElementById("result");
-for (const id of outputElem.htmlFor.split(" ")) {
+for (const id of outputElem.htmlFor) {
   const elem = document.getElementById(id);
   elem.style.outline = "2px solid red";
 }

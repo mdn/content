@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.outerHeight
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 The **`Window.outerHeight`** read-only property returns the height in pixels of the whole browser window, including any sidebar, window chrome, and window-resizing borders/handles.
 

@@ -26,12 +26,12 @@ The alert dialog must have at least one focusable control — such as Confirm, C
 
 The `alertdialog` role is not to be used as a replacement for other dialogs, including no-confirmation-required `alert` dialogs ([`Window.alert()`](/en-US/docs/Web/API/Window/alert)) and prompts ([`Window.prompt()`](/en-US/docs/Web/API/Window/prompt)).
 
-Adding `role="alertdialog"` alone is not sufficient to make an alert dialog accessible. The following also need to be done:
+Adding `role="alertdialog"` alone is not sufficient to make an alert dialog accessible. The following are also important:
 
-- The alert dialog must be properly labeled
+- Labeling the alert dialog is strongly recommended
 - Keyboard focus must be managed correctly
 
-The `alertdialog` must have an accessible name, defined with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label). The alert dialog text must have an {{glossary("accessible description")}} using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
+An accessible name is strongly recommended for the `alertdialog` role, although not required by ARIA. Define the accessible name with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label). The alert dialog text must have an {{glossary("accessible description")}} using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
 
 ### Associated WAI-ARIA roles, states, and properties
 

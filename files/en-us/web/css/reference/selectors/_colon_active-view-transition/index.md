@@ -74,17 +74,17 @@ h2 {
 const colors = ["darkred", "darkslateblue", "darkgreen"];
 const colBlock = document.querySelector(".color");
 let count = 0;
-const updateColour = () => {
+const updateColor = () => {
   colBlock.style = `--bg: ${colors[count]}`;
   count = count !== colors.length - 1 ? ++count : 0;
 };
 const changeColor = () => {
   if (!document.startViewTransition) {
-    updateColour();
+    updateColor();
     return;
   }
   const transition = document.startViewTransition(() => {
-    updateColour();
+    updateColor();
   });
 };
 const changeColorButton = document.querySelector("#change-color");
@@ -92,7 +92,7 @@ changeColorButton.addEventListener("click", changeColor);
 changeColorButton.addEventListener("keypress", changeColor);
 ```
 
-{{EmbedLiveSample('showing_view_transition_is_running', '100%', '120')}}
+{{EmbedLiveSample('styling_an_active_view_transition', '100%', '120')}}
 
 ## Specifications
 

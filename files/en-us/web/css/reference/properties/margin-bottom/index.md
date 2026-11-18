@@ -75,7 +75,7 @@ margin-bottom: 5%; /* relative to the nearest block container's width */
 margin-bottom: anchor-size(width);
 margin-bottom: calc(anchor-size(--my-anchor self-block, 20px) / 3);
 
-/* Keyword values */
+/* Keyword value */
 margin-bottom: auto;
 
 /* Global values */

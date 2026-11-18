@@ -82,7 +82,7 @@ This example shows turning off synthesis of the oblique typeface by the browser 
 
 #### Result
 
-{{EmbedLiveSample('Disabling synthesis of bold typeface', '', '100')}}
+{{EmbedLiveSample('disabling_synthesis_of_oblique_typeface', '', '100')}}
 
 ### Comparison of font-synthesis-style values
 

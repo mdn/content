@@ -3,11 +3,15 @@ title: "`rule-style` CSS property"
 short-title: rule-style
 slug: Web/CSS/Reference/Properties/rule-style
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.rule-style
 sidebar: cssref
 ---
 
-The **`rule-style`** [CSS](/en-US/docs/Web/CSS) property defines the line style of the lines drawn between columns and rows in multi-column grid, flex, and multi-col layouts, setting the styles of the column and row rules to the same value.
+{{SeeCompatTable}}
+
+The **`rule-style`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property defines the line style of the lines drawn between columns and rows in multi-column grid, flex, and multi-col layouts, setting the styles of the column and row rules to the same value.
 
 {{InteractiveExample("CSS Demo: rule-style")}}
 
@@ -315,7 +319,7 @@ li {
 
 #### Result
 
-{{EmbedLiveSample("Basic", "", "600")}}
+{{EmbedLiveSample("Basic", "", "440")}}
 
 ### Multiple values
 
@@ -332,13 +336,15 @@ ul {
 
 #### Result
 
-{{EmbedLiveSample("Multiple", "", "600")}}
+{{EmbedLiveSample("Multiple", "", "440")}}
 
 There are more values than gutters for both the rows and columns; the last values are not used in each case.
 
 ### Repeating values
 
 This example demonstrates how, when there are fewer values in the list of styles than column and row rules, the values are repeated.
+
+#### CSS
 
 Using the same HTML and CSS as in the previous example, we include three comma-separated styles as the `rule-style` value:
 
@@ -348,11 +354,17 @@ ul {
 }
 ```
 
-{{EmbedLiveSample("Repeat", "", "600")}}
+#### Result
+
+{{EmbedLiveSample("Repeat", "", "440")}}
 
 ### Using the `repeat()` function
 
-This example demonstrates using the `repeat()` function within the `rule-style` property value. We use the same HTML and CSS as in the previous examples. We include a `repeat()` function that sets a list of two `<line-style>` values to be repeated 3 times.
+This example demonstrates using the `repeat()` function within the `rule-style` property value.
+
+#### CSS
+
+We use the same HTML and CSS as in the previous examples. We include a `repeat()` function that sets a list of two `<line-style>` values to be repeated 3 times.
 
 ```css live-sample___func
 ul {
@@ -360,13 +372,17 @@ ul {
 }
 ```
 
-{{EmbedLiveSample("func", "", "600")}}
+#### Result
+
+{{EmbedLiveSample("func", "", "440")}}
 
 The `repeat()` function repeats two style values three times, creating a list of eight style values. The styles are repeated for the columns; however, the last values in the list are discarded for the rows.
 
 ### Using `auto` within `repeat()`
 
 This example demonstrates using `auto` instead of an integer within the `repeat()` function.
+
+#### CSS
 
 Using `repeat(auto, <line-style>)`, we set all column and row rules to `groove`, except the first and last, which we set to `solid`.
 
@@ -376,7 +392,9 @@ ul {
 }
 ```
 
-{{EmbedLiveSample("auto", "", "600")}}
+#### Result
+
+{{EmbedLiveSample("auto", "", "440")}}
 
 Even though there are more column rule lines than row rule lines, the `<auto-repeat-line-color>` enables the creation of this symmetric effect.
 
@@ -406,8 +424,8 @@ Even though there are more column rule lines than row rule lines, the `<auto-rep
 
 - {{cssxref("rule-color")}}
 - {{cssxref("rule-width")}}
+- {{cssxref("column-rule-style")}}
 - {{cssxref("row-rule-style")}}
 - {{cssxref("rule")}} shorthand
-- {{cssxref("rule-style")}} shorthand
-- {{cssxref("rule")}} shorthand
+- [Defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module

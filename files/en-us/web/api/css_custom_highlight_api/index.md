@@ -97,6 +97,12 @@ The final step is to style the registered highlights. This is done by using the 
 }
 ```
 
+### Accessibility
+
+The custom highlights do not inherently provide semantic meaning in the document structure. The {{domxref("Highlight/type", "type")}} attribute exposes semantics (such as spelling or grammar errors) to assistive technologies, but support may vary across platforms and the type used.
+
+If compatibility with assistive technologies is a concern, consider using semantic HTML elements such as {{HTMLElement("mark")}} or providing additional accessible cues for highlights that communicate important information.
+
 ## Interfaces
 
 - {{domxref("Highlight")}}
@@ -136,6 +142,17 @@ The HTML code snippet below defines a search field and an article with a few par
     quibusdam id ipsa.
   </p>
 </article>
+```
+
+#### CSS
+
+The `::highlight()` pseudo-element is used in CSS to style the highlights registered by the JavaScript below:
+
+```css
+::highlight(search-results) {
+  background-color: #ff0066;
+  color: white;
+}
 ```
 
 #### JavaScript
@@ -205,17 +222,6 @@ query.addEventListener("input", () => {
   // Register the Highlight object in the registry.
   CSS.highlights.set("search-results", searchResultsHighlight);
 });
-```
-
-#### CSS
-
-Finally, the `::highlight()` pseudo-element is used in CSS to style the highlights:
-
-```css
-::highlight(search-results) {
-  background-color: #ff0066;
-  color: white;
-}
 ```
 
 #### Result

@@ -66,13 +66,12 @@ The [`capture`](/en-US/docs/Web/HTML/Reference/Attributes/capture) attribute val
 
 When the [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple) Boolean attribute is specified, the file input allows the user to select more than one file.
 
-## Non-standard attributes
-
-In addition to the attributes listed above, the following non-standard attributes are available on some browsers. You should try to avoid using them when possible, since doing so will limit the ability of your code to function in browsers that don't implement them.
-
-### `webkitdirectory`
+### webkitdirectory
 
 The Boolean `webkitdirectory` attribute, if present, indicates that only directories should be available to be selected by the user in the file picker interface. See {{domxref("HTMLInputElement.webkitdirectory")}} for additional details and examples.
+
+> [!NOTE]
+> `webkitdirectory` is defined in the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API). It's named `webkitdirectory` because of its origins as a Chrome-specific API. It is now available in all browsers.
 
 ## Unique file type specifiers
 
@@ -95,15 +94,10 @@ The `accept` attribute takes a string containing one or more of these unique fil
 ### A basic example
 
 ```html
-<form method="post" enctype="multipart/form-data">
-  <div>
-    <label for="file">Choose file to upload</label>
-    <input type="file" id="file" name="file" multiple />
-  </div>
-  <div>
-    <button>Submit</button>
-  </div>
-</form>
+<div>
+  <label for="file">Choose file to upload</label>
+  <input type="file" id="file" name="file" multiple />
+</div>
 ```
 
 ```css hidden
@@ -115,9 +109,6 @@ div {
 This produces the following output:
 
 {{EmbedLiveSample('A_basic_example', 650, 90)}}
-
-> [!NOTE]
-> You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
 
 Regardless of the user's device or operating system, the file input provides a button that opens up a file picker dialog that allows the user to choose a file.
 
@@ -156,19 +147,14 @@ Acceptable file types can be specified with the [`accept`](#accept) attribute, w
 Let's look at a more complete example:
 
 ```html
-<form method="post" enctype="multipart/form-data">
-  <div>
-    <label for="profile_pic">Choose file to upload</label>
-    <input
-      type="file"
-      id="profile_pic"
-      name="profile_pic"
-      accept=".jpg, .jpeg, .png" />
-  </div>
-  <div>
-    <button>Submit</button>
-  </div>
-</form>
+<div>
+  <label for="profile_pic">Choose file to upload</label>
+  <input
+    type="file"
+    id="profile_pic"
+    name="profile_pic"
+    accept=".jpg, .jpeg, .png" />
+</div>
 ```
 
 ```css hidden
@@ -180,9 +166,6 @@ div {
 This produces a similar-looking output to the previous example:
 
 {{EmbedLiveSample('Limiting_accepted_file_types', 650, 90)}}
-
-> [!NOTE]
-> You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-with-accept.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
 
 It may look similar, but if you try selecting a file with this input, you'll see that the file picker only lets you select the file types specified in the `accept` value (the exact interface differs across browsers and operating systems).
 
@@ -200,7 +183,7 @@ For example, the following code will log to the console if the user closes the p
 const elem = document.createElement("input");
 elem.type = "file";
 elem.addEventListener("cancel", () => {
-  console.log("Cancelled.");
+  console.log("Canceled.");
 });
 elem.addEventListener("change", () => {
   if (elem.files.length === 1) {
@@ -223,15 +206,16 @@ elem.click();
 
 ## Examples
 
+### Complete file example
+
 In this example, we'll present a slightly more advanced file chooser that takes advantage of the file information available in the `HTMLInputElement.files` property, as well as showing off a few clever tricks.
 
-> [!NOTE]
-> You can see the complete source code for this example on GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-example.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). We won't explain the CSS; the JavaScript is the main focus.
+#### HTML
 
-First of all, let's look at the HTML:
+The HTML looks like so:
 
 ```html
-<form method="post" enctype="multipart/form-data">
+<div class="file-picker">
   <div>
     <label for="image_uploads">Choose images to upload (PNG, JPG)</label>
     <input
@@ -245,9 +229,9 @@ First of all, let's look at the HTML:
     <p>No files currently selected for upload</p>
   </div>
   <div>
-    <button>Submit</button>
+    <button type="button">Submit</button>
   </div>
-</form>
+</div>
 ```
 
 ```css hidden
@@ -255,18 +239,18 @@ html {
   font-family: sans-serif;
 }
 
-form {
+.file-picker {
   background: #cccccc;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid black;
 }
 
-form ol {
+.file-picker ol {
   padding-left: 0;
 }
 
-form li,
+.file-picker li,
 div > p {
   background: #eeeeee;
   display: flex;
@@ -276,18 +260,18 @@ div > p {
   border: 1px solid black;
 }
 
-form img {
+.file-picker img {
   height: 64px;
   order: 1;
 }
 
-form p {
+.file-picker p {
   line-height: 32px;
   padding-left: 10px;
 }
 
-form label,
-form button {
+.file-picker label,
+.file-picker button {
   background-color: #7f9ccb;
   padding: 5px 10px;
   border-radius: 5px;
@@ -296,22 +280,22 @@ form button {
   height: auto;
 }
 
-form label:hover,
-form button:hover {
+.file-picker label:hover,
+.file-picker button:hover {
   background-color: #2d5ba3;
   color: white;
 }
 
-form label:active,
-form button:active {
+.file-picker label:active,
+.file-picker button:active {
   background-color: #0d3f8f;
   color: white;
 }
 ```
 
-This is similar to what we've seen before — nothing special to comment on.
+This is similar to what we've seen earlier, so we won't spend time describing it. Also, we've hidden the CSS applied to the example, as it isn't relevant to understanding the file input or the JavaScript that powers it.
 
-Next, let's walk through the JavaScript.
+#### JavaScript
 
 In the first lines of script, we get references to the form input itself, and the {{htmlelement("div")}} element with the class of `.preview`. Next, we hide the {{htmlelement("input")}} element — we do this because file inputs tend to be ugly, difficult to style, and inconsistent in their design across browsers. You can activate the `input` element by clicking its {{htmlelement("label")}}, so it is better to visually hide the `input` and style the label like a button, so the user will know to interact with it if they want to upload files.
 
@@ -422,16 +406,15 @@ function returnFileSize(number) {
 > The "KB" and "MB" units here use the [SI prefix](https://en.wikipedia.org/wiki/Binary_prefix) convention of 1KB = 1000B, similar to macOS. Different systems represent file sizes differently—for example, Ubuntu uses IEC prefixes where 1KiB = 1024B, while RAM specifications often use SI prefixes to represent powers of two (1KB = 1024B). For this reason, we used `1e3` (`1000`) and `1e6` (`100000`) instead of `1024` and `1048576`. In your application, you should communicate the unit system clearly to your users if the exact size is important.
 
 ```js hidden
-const button = document.querySelector("form button");
-button.addEventListener("click", (e) => {
-  e.preventDefault();
+const button = document.querySelector(".file-picker button");
+button.addEventListener("click", () => {
   const para = document.createElement("p");
   para.append("Image uploaded!");
   preview.replaceChildren(para);
 });
 ```
 
-The example looks like this; have a play:
+#### Result
 
 {{EmbedLiveSample('Examples', '100%', 200)}}
 

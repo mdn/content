@@ -63,8 +63,6 @@ The caveat here is that if the object changes size, the pattern itself will scal
 
 Now, because the pattern content is in the same unit system as the pattern, we don't have to offset the box so that the pattern starts in the correct place, and if the object size was changed to a larger one, the pattern would automatically scale so that it had the same number of objects and repeats inside it. This contrasts with the `"userSpaceOnUse"` system, where if the object changes the size, the pattern would stay the same and just repeat itself more times to fill the box.
 
-As a slight aside, in Gecko circles seem to have trouble drawing if their radius is set to something less than `0.075` (it is currently unknown whether this is a bug in the pattern element or not). To work around that it is probably best to avoid drawing in `"objectBoundingBox"` units unless you have to.
-
 Neither of these uses is what one would normally think of when you think of a pattern. Patterns usually have a set size and repeat themselves independently of what an object's shape is. To create something like this, both the pattern and its contents must be drawn in the current userSpace, so they don't change shape if the object does:
 
 ```xml

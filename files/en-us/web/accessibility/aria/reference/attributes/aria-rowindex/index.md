@@ -26,6 +26,31 @@ If the table with only a subset of rows has a cell that spans more than one row,
 > [!NOTE]
 > The `aria-rowindex` must be added to each row, but is optional on the cells, except for cells that span rows: the `aria-rowindex` attribute is required on all spanning cells.
 
+## Values
+
+- `<integer>`
+  - : An integer greater than or equal to 1, greater than the `aria-rowindex` of the previous row, if any, and less than or equal to the value of [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount).
+
+## Associated interfaces
+
+- {{domxref("Element.ariaRowIndex")}}
+  - : The [`ariaRowIndex`](/en-US/docs/Web/API/Element/ariaRowIndex) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowindex` attribute.
+- {{domxref("ElementInternals.ariaRowIndex")}}
+  - : The [`ariaRowIndex`](/en-US/docs/Web/API/ElementInternals/ariaRowIndex) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-rowindex` attribute.
+
+## Associated roles
+
+Used in roles:
+
+- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
+- [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
+
+Inherited into roles:
+
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
+
 ## Examples
 
 The following example shows a grid with 24 rows, of which the first row and rows 7 through 10 are displayed to the user. The last "position" cell spans column 9 and 10.
@@ -64,31 +89,6 @@ The following example shows a grid with 24 rows, of which the first row and rows
 ```
 
 Note both `aria-rowspan` and `aria-rowindex` are present on the Goalkeeper cell, which spans two rows.
-
-## Values
-
-- `<integer>`
-  - : An integer greater than or equal to 1, greater than the `aria-rowindex` of the previous row, if any, and less than or equal to the value of [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount).
-
-## Associated interfaces
-
-- {{domxref("Element.ariaRowIndex")}}
-  - : The [`ariaRowIndex`](/en-US/docs/Web/API/Element/ariaRowIndex) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowindex` attribute.
-- {{domxref("ElementInternals.ariaRowIndex")}}
-  - : The [`ariaRowIndex`](/en-US/docs/Web/API/ElementInternals/ariaRowIndex) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-rowindex` attribute.
-
-## Associated roles
-
-Used in roles:
-
-- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
-- [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
-
-Inherited into roles:
-
-- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
-- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
 
 ## Specifications
 

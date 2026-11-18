@@ -15,7 +15,7 @@ The **`interest-delay`** [CSS](/en-US/docs/Web/CSS) property specifies the delay
 
 ## Constituent properties
 
-The `interest-delay` property is a shorthand for the following properties:
+This property is a shorthand for the following properties:
 
 - {{cssxref("interest-delay-start")}}
 - {{cssxref("interest-delay-end")}}

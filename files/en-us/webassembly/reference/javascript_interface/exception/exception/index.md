@@ -31,7 +31,7 @@ new Exception(tag, payload, options)
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : The `payload` and `tag` sequences do not have the same number of elements and/or the elements are not of matching types.
 
 ## Description
@@ -68,7 +68,7 @@ For a working example, see the [`throw`](/en-US/docs/WebAssembly/Reference/Excep
 
 ### Manual usage
 
-This example shows manual creation of an `WebAssembly.Exception` instance.
+This example shows manual creation of a `WebAssembly.Exception` instance.
 
 ```js
 // Create tag and use it to create an exception

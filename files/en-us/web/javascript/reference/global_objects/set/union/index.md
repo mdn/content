@@ -37,7 +37,7 @@ In mathematical notation, _union_ is defined as:
 
 And using Venn diagram:
 
-![A Venn diagram where two circles overlap. The symmetric difference of A and B is the region contained by either or both circles.](diagram.svg)
+![A Venn diagram where two circles overlap. The union of A and B is the region contained by either or both circles.](diagram.svg)
 
 `union()` accepts [set-like](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) objects as the `other` parameter. It requires {{jsxref("this")}} to be an actual {{jsxref("Set")}} instance, because it directly retrieves the underlying data stored in `this` without invoking any user code. Then, it iterates over `other` by calling its `keys()` method, and constructs a new set with all elements in `this`, followed by all elements in `other` that are not present in `this`.
 
@@ -65,7 +65,7 @@ console.log(evens.union(squares)); // Set(6) { 2, 4, 6, 8, 1, 9 }
 
 ## See also
 
-- [Polyfill of `Set.prototype.union` in `core-js`](https://github.com/zloirock/core-js#new-set-methods)
+- [Polyfill of `Set.prototype.union` in `core-js`](https://core-js.io/docs/features/ecmascript/collections#h-set)
 - [es-shims polyfill of `Set.prototype.union`](https://www.npmjs.com/package/set.prototype.union)
 - {{jsxref("Set.prototype.difference()")}}
 - {{jsxref("Set.prototype.intersection()")}}

@@ -55,6 +55,18 @@ In the example below the first box will use the color scheme that the user has s
 
 By using the {{cssxref("@media/forced-colors", "forced-colors")}} media feature, you could add any other optimizations for forced color mode alongside the `forced-color-adjust` property.
 
+#### HTML
+
+```html
+<div class="box">
+  <p>This is a box which should use your color preferences.</p>
+</div>
+
+<div class="box forced">
+  <p>This is a box which should stay the colors set by the site.</p>
+</div>
+```
+
 #### CSS
 
 ```css
@@ -73,25 +85,13 @@ By using the {{cssxref("@media/forced-colors", "forced-colors")}} media feature,
 }
 ```
 
-#### HTML
-
-```html
-<div class="box">
-  <p>This is a box which should use your color preferences.</p>
-</div>
-
-<div class="box forced">
-  <p>This is a box which should stay the colors set by the site.</p>
-</div>
-```
-
 #### Result
 
 {{EmbedLiveSample("Preserving_colors", 640, 300)}}
 
 The following screenshot shows the image above in Windows High Contrast Mode:
 
-![The example above in high contrast mode shows the first box with a black background the second with the grey background of the CSS.](windows-high-contrast.jpg)
+![The example above in high contrast mode shows the first box with a black background the second with the gray background of the CSS.](windows-high-contrast.jpg)
 
 ## Specifications
 

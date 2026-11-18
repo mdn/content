@@ -44,7 +44,7 @@ const nommingCake = document
 // Pause the cake's animation so it doesn't play immediately.
 nommingCake.pause();
 
-// This function will play when ever a user clicks or taps
+// This function will play whenever a user clicks or taps
 const growAlice = () => {
   // Play Alice's animation.
   aliceChange.play();

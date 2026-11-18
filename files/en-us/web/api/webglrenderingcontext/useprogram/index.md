@@ -20,7 +20,7 @@ useProgram(program)
 ### Parameters
 
 - `program`
-  - : A {{domxref("WebGLProgram")}} to use.
+  - : A {{domxref("WebGLProgram")}} to use, or `null` to clear the current program.
 
 ### Return value
 

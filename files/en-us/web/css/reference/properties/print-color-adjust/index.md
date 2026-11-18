@@ -35,7 +35,7 @@ This property is specified as one of the following keyword values:
 - `exact`
   - : The element's content has been specifically and carefully crafted to use colors, images, and styles in a thoughtful and/or important way, such that being altered by the browser might actually make things worse rather than better.
     The appearance of the content should not be changed except by the user's request.
-    For example, a page might include a list of information with rows whose background colors alternate between white and a light grey.
+    For example, a page might include a list of information with rows whose background colors alternate between white and a light gray.
     Removing the background color would decrease the legibility of the content.
 
 ## Usage notes
@@ -65,6 +65,14 @@ Not only can the user override the behavior, but each user agent is allowed to d
 In this example, a box is shown which uses a {{cssxref("background-image")}} and a translucent {{cssxref("gradient/linear-gradient", "linear-gradient()")}} function atop a black background color to have a dark blue gradient behind medium red text.
 For whatever reason, this is the desired appearance in any rendering environment, including on paper, so we also use `print-color-adjust: exact` to tell the browser not to make color or style adjustments to the box when rendering it.
 
+#### HTML
+
+```html
+<div class="my-box">
+  <p>Need more contrast!</p>
+</div>
+```
+
 #### CSS
 
 ```css
@@ -83,14 +91,6 @@ For whatever reason, this is the desired appearance in any rendering environment
   justify-content: center;
   print-color-adjust: exact;
 }
-```
-
-#### HTML
-
-```html
-<div class="my-box">
-  <p>Need more contrast!</p>
-</div>
 ```
 
 #### Result

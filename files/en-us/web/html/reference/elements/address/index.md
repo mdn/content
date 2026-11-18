@@ -30,19 +30,15 @@ a[href^="tel"]::before {
 }
 ```
 
-The contact information provided by an `<address>` element's contents can take whatever form is appropriate for the context, and may include any type of contact information that is needed, such as a physical address, URL, email address, phone number, social media handle, geographic coordinates, and so forth. The `<address>` element should include the name of the person, people, or organization to which the contact information refers.
-
-`<address>` can be used in a variety of contexts, such as providing a business's contact information in the page header, or indicating the author of an article by including an `<address>` element within the {{HTMLElement("article")}}.
-
 ## Attributes
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 ## Usage notes
 
-- The `<address>` element can only be used to represent the contact information for its nearest {{HTMLElement("article")}} or {{HTMLElement("body")}} element ancestor.
-- This element should not contain more information than the contact information, like a publication date (which belongs in a {{HTMLElement("time")}} element).
-- Typically an `<address>` element can be placed inside the {{HTMLElement("footer")}} element of the current section, if any.
+The contact information provided by an `<address>` element's contents can take whatever form is appropriate for the context, and may include any type of contact information that is needed, such as a physical address, URL, email address, phone number, social media handle, geographic coordinates, and so forth. The `<address>` element should include the name of the person, people, or organization to which the contact information refers. However, this element should not contain more information than the contact information, like a publication date (which belongs in a {{HTMLElement("time")}} element).
+
+`<address>` can be used in a variety of contexts, such as providing a business's contact information in the page header, or indicating the author of an article by including an `<address>` element within the {{HTMLElement("article")}}. The `<address>` element can only be used to represent the contact information for its nearest {{HTMLElement("article")}} or {{HTMLElement("body")}} element ancestor. Typically an `<address>` element can be placed inside the {{HTMLElement("footer")}} element of the current section, if any.
 
 ## Examples
 
@@ -112,9 +108,9 @@ Although it renders text with the same default styling as the {{HTMLElement("i")
           >flow content</a
         >, but always excluding <code>&#x3C;address></code> elements (according
         to the logical principle of symmetry, if
-        <code>&#x3C;address></code> tag, as a parent, can not have nested
+        <code>&#x3C;address></code> tag, as a parent, cannot have nested
         <code>&#x3C;address></code> element, then the same
-        <code>&#x3C;address></code> content can not have
+        <code>&#x3C;address></code> content cannot have
         <code>&#x3C;address></code> tag as its parent).
       </td>
     </tr>

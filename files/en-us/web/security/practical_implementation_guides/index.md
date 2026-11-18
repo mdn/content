@@ -43,4 +43,4 @@ The guides in the table below are listed in the order that we recommend implemen
 ## See also
 
 - [Open Web Application Security Project (OWASP): Cheatsheet series](https://cheatsheetseries.owasp.org/)
-- [OWASP: Attacks](https://owasp.org/www-community/attacks/)
+- [OWASP: Attacks](https://community.owasp.org/attacks/)

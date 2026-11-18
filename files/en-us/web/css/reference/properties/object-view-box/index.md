@@ -3,13 +3,9 @@ title: "`object-view-box` CSS property"
 short-title: object-view-box
 slug: Web/CSS/Reference/Properties/object-view-box
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.object-view-box
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`object-view-box`** [CSS](/en-US/docs/Web/CSS) property defines a rectangle as a viewable area (viewbox) within a {{glossary("replaced elements", "replaced element")}}, enabling the content of the replaced element to be zoomed or panned. It works similarly to the SVG {{SVGAttr("viewBox")}} attribute.
 
@@ -67,7 +63,7 @@ object-view-box: none;
 ## Syntax
 
 ```css
-/* keywords */
+/* Keyword value */
 object-view-box: none;
 
 /* <basic-shape-rect> functions */
@@ -295,7 +291,7 @@ update();
 
 #### Result
 
-{{ EmbedLiveSample("Live zoom in using object-view-box property", "", 480) }}
+{{ EmbedLiveSample("live_zoom-in_using_object-view-box_property", "", 480) }}
 
 Move the slider to the right to increase the zoom-in effect and left to reduce it. The slider only affects the dimensions of the view box, while the x and y values, the origin point of the viewbox, remain constant. The size of the `<img>` element doesn't change either.
 

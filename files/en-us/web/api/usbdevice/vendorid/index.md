@@ -10,7 +10,7 @@ browser-compat: api.USBDevice.vendorId
 
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-The **`vendorId`** read only property of the
+The **`vendorId`** read-only property of the
 {{domxref("USBDevice")}} interface is the official usb.org-assigned vendor ID.
 
 ## Value

@@ -9,8 +9,6 @@ browser-compat: javascript.builtins.Object.lookupGetter
 sidebar: jsref
 ---
 
-{{Deprecated_Header}}
-
 > [!NOTE]
 > This feature is deprecated in favor of the {{jsxref("Object.getOwnPropertyDescriptor()")}} API. This method's behavior is only specified for web compatibility, and is not required to be implemented in any platform. It may not work everywhere.
 
@@ -101,7 +99,7 @@ console.log(findGetter(obj2, "foo")); // [Function: get foo]
 
 ## See also
 
-- [Polyfill of `Object.prototype.__lookupGetter__` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.prototype.__lookupGetter__` in `core-js`](https://core-js.io/docs/features/ecmascript/object)
 - [`Object.prototype.__lookupSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
 - {{jsxref("Functions/get", "get")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

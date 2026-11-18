@@ -92,7 +92,7 @@ None ({{jsxref("undefined")}}).
 
 To remove a previously-established action handler, call `setActionHandler()` again, specifying `null` as the `callback`.
 
-The action handler receives as input a single parameter: an object which provides both the action type (so the same function can handle multiple action types), as well as data needed in order to perform the action.
+The action handler receives as input a single parameter: an object which provides both the action type (so the same function can handle multiple action types) and data needed in order to perform the action.
 
 ## Examples
 

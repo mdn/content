@@ -72,7 +72,7 @@ An attacker may even be able to discover a user's ID, by iteratively trying to l
 
 ### Frame counting using window references
 
-In a frame counting attack, the attacker finds out the number of frames currently loaded in the target page. In turn, that leaks information about the state of the target site, which may enable to attacker to learn, for example, whether the user is currently logged into the site.
+In a frame counting attack, the attacker finds out the number of frames currently loaded in the target page. In turn, that leaks information about the state of the target site, which may enable an attacker to learn, for example, whether the user is currently logged into the site.
 
 If an attacker site gets a reference to a {{domxref("Window")}} object containing the target site, the attacker can count the number of frames in the target site by reading the {{domxref("Window.length", "window.length")}} property.
 

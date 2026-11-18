@@ -45,14 +45,14 @@ The parameters for the older form of `createAnswer()` are described below, to ai
 
 ### Exceptions
 
-- `NotReadableError`
+- `NotReadableError` {{domxref("DOMException")}}
   - : The identity provider wasn't able to provide an identity assertion.
-- `OperationError`
+- `OperationError` {{domxref("DOMException")}}
   - : Generation of the SDP failed for some reason; this is a general failure catch-all exception.
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with an object containing the same properties as an {{domxref("RTCSessionDescription")}} objects:
+A {{jsxref("Promise")}} that fulfills with an object containing the same properties as an {{domxref("RTCSessionDescription")}} object:
 
 - `type`
   - : A string whose value is `"answer"`.

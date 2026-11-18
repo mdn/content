@@ -68,10 +68,10 @@ The string can have one of the following values:
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : The `policy` has no defined properties (policy restrictions), or a property key is not valid.
 
-- `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : The CDM cannot determine the status for any or all of the policy restrictions.
 
 ## Examples

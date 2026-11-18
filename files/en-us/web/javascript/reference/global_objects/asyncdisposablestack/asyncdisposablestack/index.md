@@ -47,4 +47,5 @@ await disposer.disposeAsync();
 
 ## See also
 
+- [Polyfill of `AsyncDisposableStack` in `core-js`](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)

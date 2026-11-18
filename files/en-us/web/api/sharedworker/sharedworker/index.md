@@ -82,7 +82,7 @@ new SharedWorker(url, options)
     It should _always_ be `text/javascript` (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types#textjavascript) may be accepted).
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if `url` cannot be parsed.
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if the `url` parameter is a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
 
 ## Description

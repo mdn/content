@@ -16,7 +16,7 @@ The number of contained values should therefore be a multiple of three. See {{do
 
 ## Value
 
-A {{domxref("Uint32Array")}}.
+A {{jsxref("Uint32Array")}}.
 
 ## Examples
 

@@ -24,7 +24,7 @@ None.
 
 A number indicating the total length of the path in user units.
 
-### Examples
+## Examples
 
 ### Getting the total length of a `<path>`
 

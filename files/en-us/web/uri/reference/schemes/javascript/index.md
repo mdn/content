@@ -142,4 +142,4 @@ document.body.textContent = "Hello, world!";
 
 - [URIs](/en-US/docs/Web/URI)
 - [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP)
-- [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
+- [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes)

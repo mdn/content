@@ -44,7 +44,7 @@ To illustrate the different terms, let's take a house as an example:
 
 ## What is threat modeling?
 
-Threat modeling is a the process of creating a representative model that describes your systems's threats. It is form of risk assessment with the goal to analyze the most probable attack vectors and to identify assets most desired by an attacker. It is a structured, repeatable process for analyzing a representation of a system so you can identify relevant security and privacy concerns, understand what can go wrong, and decide how to respond. Per the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org), creating a threat model typically involves answering four key questions:
+Threat modeling is the process of creating a representative model that describes your system's threats. It is a form of risk assessment with the goal to analyze the most probable attack vectors and to identify assets most desired by an attacker. It is a structured, repeatable process for analyzing a representation of a system so you can identify relevant security and privacy concerns, understand what can go wrong, and decide how to respond. Per the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org), creating a threat model typically involves answering four key questions:
 
 1. What are we working on?
 2. What can go wrong?
@@ -136,7 +136,7 @@ We identify the mechanism by which assets move between components. They may be u
 - Contact form flow
 - Data flows to external services
 
-When data flows between a user and your application, or between your application and third party services, it moves across trusted boundaries that are controlled by different authorities. Attacks often happen between these unequally privileged components and we should make ourselves aware of these attack surfaces, identifying where validation, encryption or other security controls are necessary.
+When data flows between a user and your application, or between your application and third-party services, it moves across trusted boundaries that are controlled by different authorities. Attacks often happen between these unequally privileged components and we should make ourselves aware of these attack surfaces, identifying where validation, encryption or other security controls are necessary.
 
 To reference identified data flows, you index them with the letter F (F1, F2, F3, ...) in your threat model. Trust boundaries are usually visualized using a dashed line.
 
@@ -169,7 +169,7 @@ To reference identified stakeholders, you index them with the letter S (S1, S2, 
 
 Now that we've modeled our environment, we can start thinking about what can go wrong with it. Threats can be identified in different ways and one common way is to look at threat lists. For example, we could start by taking a look at threat maps or rely on external threat lists such as OWASP top ten or others.
 
-- [OWASP top ten](https://owasp.org/Top10/2025/)
+- [OWASP top ten](https://top10.owasp.org/2025/)
 - Security consideration sections in web platform specifications as well as on MDN Web Docs.
 
 For a web application, this might include cross-site scripting, cross-site request forgery, account takeover, or data leakage via third-party scripts.
@@ -214,7 +214,7 @@ In our threat modeling above, we focus on the four key questions as defined in t
 
 ## See also
 
-- [Threat model frameworks an resources](/en-US/docs/Web/Security/Threat_modeling/Frameworks)
+- [Threat model frameworks and resources](/en-US/docs/Web/Security/Threat_modeling/Frameworks)
 - [Example threat model](/en-US/docs/Web/Security/Threat_modeling/Example_threat_model)
 - [Security](/en-US/docs/Web/Security)
 - [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org)

@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball", "Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls")}}
 
-This is the **5th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). For proper collision detection between objects in our game, we will need to have physics; this article introduces you to what's available in Phaser, as well as demonstrating a typical simple setup.
+This is the **3rd step** out of 12 of the [creating a Breakout game using Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). For proper collision detection between objects in our game, we will need to have physics; this article introduces you to what's available in Phaser, as well as demonstrating a typical simple setup.
 
 ## Adding physics
 
@@ -60,6 +60,8 @@ This kind of functionality is just the tip of the iceberg—there are various fu
 ## Compare your code
 
 Here's what you should have so far, running live. To view its source code, click the "Play" button.
+
+Again, if you can't see the ball, try refreshing the page—the ball probably has gone off the screen.
 
 ```html hidden
 <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.90.0/phaser.js"></script>

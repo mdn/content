@@ -48,7 +48,7 @@ Similarly to what we saw in the [previous article](/en-US/docs/Web/MathML/Tutori
 
 Below is the rendering of the above example in your browser.
 
-{{ EmbedLiveSample('Subtrees_of_msub_msup_msubsup', 700, 200, "", "") }}
+{{ EmbedLiveSample('subscripts_and_superscripts', 700, 200, "", "") }}
 
 You should notice that:
 
@@ -112,9 +112,9 @@ p {
 
 ```js hidden
 document.getElementById("showSolution").addEventListener("click", () => {
-  const maths = Array.from(document.getElementsByTagName("math"));
+  const mathElems = Array.from(document.getElementsByTagName("math"));
   Array.from(document.getElementsByTagName("span")).forEach((span, index) => {
-    span.textContent = maths[index].firstElementChild.tagName;
+    span.textContent = mathElems[index].firstElementChild.tagName;
   });
 });
 ```

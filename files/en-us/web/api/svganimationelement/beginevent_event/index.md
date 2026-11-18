@@ -10,17 +10,21 @@ browser-compat: api.SVGAnimationElement.beginEvent_event
 
 The **`beginEvent`** event of the {{domxref("SVGAnimationElement")}} interface is fired when the element local timeline begins to play. It will be raised each time the element begins the active duration (i.e., when it restarts, but not when it repeats).
 
-It may be raised both in the course of normal (i.e., scheduled or interactive) timeline play, as well as in the case that the element was begun with a DOM method.
+It may be raised both in the course of normal (i.e., scheduled or interactive) timeline play and in the case that the element was begun with a DOM method.
 
 This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("beginEvent", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onbegin = (event) => { }
 ```
 
@@ -80,9 +84,9 @@ animateElem.addEventListener("repeatEvent", (e) => {
 
 {{EmbedLiveSample('Animated_circle', '100%', '270')}}
 
-### Event handler property equivalent
+### Using the event handler property
 
-Note that you can also create an event listener for the `begin` event using the `onbegin` event handler property:
+You can also create an event listener for the `begin` event using the `onbegin` event handler property (but note that this replaces other event listeners added using `onbegin`, if any):
 
 ```js
 animateElem.onbegin = () => {

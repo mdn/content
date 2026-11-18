@@ -68,7 +68,7 @@ relations.forEach((relValue) => {
 });
 ```
 
-{{EmbedLiveSample("Example","100%","200")}}
+{{EmbedLiveSample("examples","100%","200")}}
 
 ## Specifications
 

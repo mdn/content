@@ -15,10 +15,16 @@ The **thumb** refers to the moving part of the scrollbar, which usually floats o
 
 When `scrollbar-color` value is set on the document's root element, the values are applied to the viewport scrollbars.
 
+> [!NOTE]
+> Browsers ignore the non-standard {{cssxref("::-webkit-scrollbar")}} family of pseudo-elements on any element whose _computed_ `scrollbar-color` value is anything other than `auto`.
+> Because `scrollbar-color` is inherited, this includes elements that don't set it themselves but inherit a non-`auto` value from an ancestor.
+> Setting `scrollbar-color: auto` on such an element restores its `::-webkit-scrollbar-*` styling if it was previously removed by a `scrollbar-color` setting on an ancestor.
+> See [Adding a fallback for scrollbar styles](/en-US/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar#adding_a_fallback_for_scrollbar_styles).
+
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 scrollbar-color: auto;
 
 /* <color> values */
@@ -76,17 +82,6 @@ When using `scrollbar-color` property with specific color values, authors should
 
 ### Coloring overflow scrollbars
 
-#### CSS
-
-```css
-.scroller {
-  width: 300px;
-  height: 100px;
-  overflow-y: scroll;
-  scrollbar-color: #000077 #bada55;
-}
-```
-
 #### HTML
 
 ```html
@@ -97,6 +92,17 @@ When using `scrollbar-color` property with specific color values, authors should
   fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
   earthnut pea peanut soko zucchini.
 </div>
+```
+
+#### CSS
+
+```css
+.scroller {
+  width: 300px;
+  height: 100px;
+  overflow-y: scroll;
+  scrollbar-color: #000077 #bada55;
+}
 ```
 
 #### Result

@@ -8,10 +8,8 @@ browser-compat: javascript.builtins.unescape
 sidebar: jssidebar
 ---
 
-{{Deprecated_Header}}
-
 > [!NOTE]
-> `unescape()` is a non-standard function implemented by browsers and was only standardized for cross-engine compatibility. It is not required to be implemented by all JavaScript engines and may not work everywhere. Use {{jsxref("decodeURIComponent()")}} or {{jsxref("decodeURI()")}} if possible.
+> `unescape()` is a legacy function implemented by browsers and was only standardized for cross-engine compatibility. It is not required to be implemented by all JavaScript engines and may not work everywhere. Use {{jsxref("decodeURIComponent()")}} or {{jsxref("decodeURI()")}} if possible.
 
 The **`unescape()`** function computes a new string in which hexadecimal escape sequences are replaced with the characters that they represent. The escape sequences might be introduced by a function like {{jsxref("escape()")}}.
 
@@ -59,7 +57,7 @@ unescape("%u0107"); // "ć"
 
 ## See also
 
-- [Polyfill of `unescape` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `unescape` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - {{jsxref("decodeURI")}}
 - {{jsxref("decodeURIComponent")}}
 - {{jsxref("escape")}}

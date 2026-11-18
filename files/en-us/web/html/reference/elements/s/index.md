@@ -27,36 +27,6 @@ s {
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
-## Accessibility
-
-The presence of the `s` element is not announced by most screen reading technology in its default configuration. It can be made to be announced by using the CSS {{cssxref("content")}} property, along with the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements.
-
-```css
-s::before,
-s::after {
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-s::before {
-  content: " [start of stricken text] ";
-}
-
-s::after {
-  content: " [end of stricken text] ";
-}
-```
-
-Some people who use screen readers deliberately disable announcing content that creates extra verbosity. Because of this, it is important to not abuse this technique and only apply it in situations where not knowing content has been struck out would adversely affect understanding.
-
-- [Short note on making your mark (more accessible) | Vispero](https://vispero.com/resources/short-note-on-making-your-mark-more-accessible/)
-- [Tweaking Text Level Styles, Reprised | Adrian Roselli](https://adrianroselli.com/2025/04/tweaking-text-level-styles-reprised.html)
-
 ## Examples
 
 ```css

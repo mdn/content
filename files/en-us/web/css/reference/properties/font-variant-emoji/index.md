@@ -28,9 +28,9 @@ font-variant-emoji: revert-layer;
 font-variant-emoji: unset;
 ```
 
-The `font-variant-emoji` property is specified using a single keyword value from the list below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `normal`
   - : Allows a browser to choose how to display the emoji. This often follows the operating system setting.
@@ -41,14 +41,6 @@ The `font-variant-emoji` property is specified using a single keyword value from
 - `unicode`
   - : Renders the emoji in accordance with the [Emoji presentation properties](https://www.unicode.org/reports/tr51/tr51-23.html#Emoji_Presentation). If the `U+FE0E` or `U+FE0F` variation selector is present, then it will override this value setting.
 
-## Formal definition
-
-{{CSSInfo}}
-
-## Formal syntax
-
-{{CSSSyntax}}
-
 ## Accessibility
 
 While the use of emojis may seem fun, you should consider their impact on accessibility, specifically for users with visual and cognitive impairments. Consider the following factors while using emojis:
@@ -58,6 +50,14 @@ While the use of emojis may seem fun, you should consider their impact on access
 - Contrast with background: When using emojis, consider their colors and how that will work with the background color, especially if you have background colors that can change, such as light/dark modes.
 
 - Intent of use: Do not use emojis to replace words because your understanding of the emoji meaning may differ from that of the users'. Also consider that emojis might have different meanings in different cultures and geographies. Our recommendation is to preferably limit usage to commonly known emojis.
+
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Examples
 
@@ -102,6 +102,8 @@ This example shows how you can render an emoji in its `text` or `emoji` presenta
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    font-family:
+      "Noto Color Emoji", "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
   }
   .emoji > div {
     font-size: 2rem;

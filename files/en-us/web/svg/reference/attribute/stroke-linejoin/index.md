@@ -108,7 +108,7 @@ svg {
 
 {{EmbedLiveSample("Example", '100%', 400)}}
 
-## Usage context
+## Usage notes
 
 <table class="properties">
   <tbody>
@@ -175,7 +175,7 @@ svg {
 
 ### bevel
 
-The `bevel` value indicates that a bevelled corner is to be used to join path segments.
+The `bevel` value indicates that a beveled corner is to be used to join path segments.
 
 ```css hidden
 html,

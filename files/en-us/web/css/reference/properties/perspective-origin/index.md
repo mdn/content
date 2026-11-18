@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`perspective-origin`** [CSS](/en-US/docs/Web/CSS) property determines the position at which the viewer is looking. It is used as the _vanishing point_ by the {{cssxref("perspective")}} property.
 
+The **`perspective-origin`** and {{cssxref('perspective')}} properties are attached to the parent of a child transformed in 3-dimensional space, unlike the [`perspective()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/perspective) transform function which is placed on the element being transformed.
+
 {{InteractiveExample("CSS Demo: perspective-origin")}}
 
 ```css interactive-example-choice
@@ -99,8 +101,6 @@ perspective-origin: 500% 200%;
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
-
-The **`perspective-origin`** and {{cssxref('perspective')}} properties are attached to the parent of a child transformed in 3-dimensional space, unlike the [`perspective()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/perspective) transform function which is placed on the element being transformed.
 
 ## Syntax
 

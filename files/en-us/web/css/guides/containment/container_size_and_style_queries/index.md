@@ -245,36 +245,30 @@ In this case, if the value of `--accent-color` were set to `blue`, `#00f`, `#000
 In this example, we have a {{htmlelement("fieldset")}} with four radio buttons. The fourth option includes a text {{htmlelement("input")}} for entering a custom color.
 
 ```html
-<form>
-  <fieldset>
-    <legend>Change the value of <code>--theme</code></legend>
-    <ol>
-      <li>
-        <input type="radio" name="selection" value="red" id="red" />
-        <label for="red">--theme: red;</label>
-      </li>
-      <li>
-        <input type="radio" name="selection" value="green" id="green" />
-        <label for="green">--theme: green</label>
-      </li>
-      <li>
-        <input type="radio" name="selection" value="blue" id="blue" />
-        <label for="blue">--theme: blue</label>
-      </li>
-      <li>
-        <input type="radio" name="selection" value="currentColor" id="other" />
-        <label for="other">Other</label>
-        <label for="color">color:</label>
-        <input
-          text="checkbox"
-          name="selection-value"
-          value="currentColor"
-          id="color" />
-      </li>
-    </ol>
-  </fieldset>
-  <output>I change colors</output>
-</form>
+<fieldset>
+  <legend>Change the value of <code>--theme</code></legend>
+  <ol>
+    <li>
+      <input type="radio" name="selection" value="red" id="red" />
+      <label for="red">--theme: red;</label>
+    </li>
+    <li>
+      <input type="radio" name="selection" value="green" id="green" />
+      <label for="green">--theme: green</label>
+    </li>
+    <li>
+      <input type="radio" name="selection" value="blue" id="blue" />
+      <label for="blue">--theme: blue</label>
+    </li>
+    <li>
+      <input type="radio" name="selection" value="currentColor" id="other" />
+      <label for="other">Other</label>
+      <label for="color">color:</label>
+      <input name="selection-value" value="currentColor" id="color" />
+    </li>
+  </ol>
+</fieldset>
+<output>I change colors</output>
 ```
 
 JavaScript updates the value of the CSS `--theme` variable on the {{htmlelement("body")}} element, which is an ancestor of the {{htmlelement("fieldset")}} and {{htmlelement("output")}} elements, whenever a radio button is selected. When the text `<input>` is updated, the {{domxref("HTMLInputElement.value", "value")}} of the `other` radio button is updated only if the `other` radio button is checked, which in turn updates the value of `--theme`.
@@ -315,7 +309,7 @@ output {
 }
 ```
 
-The first style feature query is a custom property with no value. This query type returns true when the computed value for the custom property value is different from the `initial-value` for that property. In this case, it will be true when the value of `--theme` is any value other than any syntax equivalent value of `red` (such as `#ff0000`). When true, the {{htmlelement("output")}} will have a 5px dotted outline. The outline color is the current value of `--theme`. The default text {{cssxref("color")}} is grey.
+The first style feature query is a custom property with no value. This query type returns true when the computed value for the custom property value is different from the `initial-value` for that property. In this case, it will be true when the value of `--theme` is any value other than any syntax equivalent value of `red` (such as `#ff0000`). When true, the {{htmlelement("output")}} will have a 5px dotted outline. The outline color is the current value of `--theme`. The default text {{cssxref("color")}} is gray.
 
 ```css
 @container style(--theme) {
@@ -326,7 +320,7 @@ The first style feature query is a custom property with no value. This query typ
 }
 ```
 
-The second and third style queries include values for the custom property. These will match if the container's `--theme` value is an equivalent color to the value listed, even if that value is the same as the `initial-value`. The first query matches elements whose `--theme` value is equivalent to `red`, `blue`, or `green`. When it is, the {{cssxref("color")}} will be the color current value of `--theme` (in the case of `blue` and `green`, overriding the grey set in the first style query).
+The second and third style queries include values for the custom property. These will match if the container's `--theme` value is an equivalent color to the value listed, even if that value is the same as the `initial-value`. The first query matches elements whose `--theme` value is equivalent to `red`, `blue`, or `green`. When it is, the {{cssxref("color")}} will be the color current value of `--theme` (in the case of `blue` and `green`, overriding the gray set in the first style query).
 
 The second style query states that when `--theme` is equivalent to `red`, the `<output>`'s contents will also be bold. We did this to better demonstrate that the container query is a match.
 

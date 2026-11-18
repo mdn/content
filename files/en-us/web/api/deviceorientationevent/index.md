@@ -16,11 +16,6 @@ The **`DeviceOrientationEvent`** interface of the {{domxref("Device Orientation 
 - {{domxref("DeviceOrientationEvent.DeviceOrientationEvent","DeviceOrientationEvent.DeviceOrientationEvent()")}}
   - : Creates a new `DeviceOrientationEvent`.
 
-## Static methods
-
-- {{domxref("DeviceOrientationEvent.requestPermission_static", "DeviceOrientationEvent.requestPermission()")}}
-  - : Requests the user's permission to access device orientation data. Returns a {{jsxref("Promise")}} that resolves with a string of `"granted"` or `"denied"`.
-
 ## Instance properties
 
 - {{domxref("DeviceOrientationEvent.absolute")}} {{ReadOnlyInline}}
@@ -35,6 +30,11 @@ The **`DeviceOrientationEvent`** interface of the {{domxref("Device Orientation 
   - : A number represents the difference between the motion of the device around the z axis of the world system and the direction of the north, express in degrees with values ranging from 0 to 360.
 - `DeviceOrientationEvent.webkitCompassAccuracy` {{Non-Standard_Inline}} {{ReadOnlyInline}}
   - : The accuracy of the compass means that the deviation is positive or negative. It's usually 10.
+
+## Static methods
+
+- {{domxref("DeviceOrientationEvent.requestPermission_static", "DeviceOrientationEvent.requestPermission()")}}
+  - : Requests the user's permission to access device orientation data. Returns a {{jsxref("Promise")}} that resolves with a string of `"granted"` or `"denied"`.
 
 ## Example
 

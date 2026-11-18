@@ -122,7 +122,9 @@ console.log(sum); // 15
 
 ### Discarding reference binding
 
-The comma operator always returns the last expression as a _value_ instead of a _reference_. This causes some contextual information such as the [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) binding to be lost. For example, a property access returns a reference to the function, which also remembers the object that it's accessed on, so that calling the property works properly. If the method is returned from a comma expression, then the function is called as if it's a new function value, and `this` is `undefined`.
+The comma operator always returns the last expression as a _value_ instead of a _reference_. This causes the loss of some contextual information, such as the [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) binding. For example, a property access returns a reference to the function, which also remembers the object that it's accessed on, so that calling the property works properly. If the method is returned from a comma expression, the function is called as if it's a new function value, and `this` is `undefined` in strict mode or the global object in non-strict mode.
+
+The following example runs in non-strict mode:
 
 ```js-nolint
 const obj = {

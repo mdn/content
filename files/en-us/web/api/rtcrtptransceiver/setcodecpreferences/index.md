@@ -52,12 +52,12 @@ setCodecPreferences(codecs)
       - : A positive integer specifying the codec's clock rate in Hertz (Hz).
         The clock rate is the rate at which the codec's RTP timestamp advances.
         Most codecs have specific values or ranges of values they permit.
-        The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1), including their clock rates.
+        The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters#rtp-parameters-1), including their clock rates.
 
     - `mimeType`
       - : A string indicating the codec's MIME media type and subtype, specified as a string of the form `"type/subtype"`.
         The MIME type strings used by RTP differ from those used elsewhere.
-        IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
+        IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters#rtp-parameters-2).
         Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
 
     - `sdpFmtpLine` {{optional_inline}}
@@ -82,7 +82,7 @@ None ({{jsxref("undefined")}}).
 
 The recommended way to set codec preferences is to first get the array of codecs that are actually supported for decoding received data, then reorder the list in decreasing preference order.
 
-It is important to start with the list of codecs that are supported (and not a hard coded list of your preferred codecs), because you if you include any that aren't supported by the associated {{domxref("RTCRtpReceiver")}} the browser will throw an `InvalidAccessError` exception when you call the `setCodecPreferences()` method.
+It is important to start with the list of codecs that are supported (and not a hardcoded list of your preferred codecs), because you if you include any that aren't supported by the associated {{domxref("RTCRtpReceiver")}} the browser will throw an `InvalidAccessError` exception when you call the `setCodecPreferences()` method.
 In addition, the array has to include appropriate codecs for retransmission, redundancy, and forward error correction, and starting with the list of supported codecs ensures that these are present.
 
 You can get the codecs supported for decoding data using the {{domxref("RTCRtpReceiver.getCapabilities_static", "RTCRtpReceiver.getCapabilities()")}} static method as shown:

@@ -103,15 +103,10 @@ The `accept` attribute takes as its value a string containing one or more of the
 ### A basic example
 
 ```html
-<form method="post" enctype="multipart/form-data">
-  <div>
-    <label for="file">Choose file to upload</label>
-    <input type="file" id="file" name="file" multiple />
-  </div>
-  <div>
-    <button>Submit</button>
-  </div>
-</form>
+<div>
+  <label for="file">Choose file to upload</label>
+  <input type="file" id="file" name="file" multiple />
+</div>
 ```
 
 ```css hidden
@@ -122,10 +117,7 @@ div {
 
 This produces the following output:
 
-{{EmbedLiveSample('A_basic_example', 650, 60)}}
-
-> [!NOTE]
-> You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+{{EmbedLiveSample('A_basic_example', 650, 80)}}
 
 Regardless of the user's device or operating system, the file input provides a button that opens up a file picker dialog that allows the user to choose a file.
 
@@ -145,19 +137,14 @@ Acceptable file types can be specified with the [`accept`](/en-US/docs/Web/HTML/
 Let's look at a more complete example:
 
 ```html
-<form method="post" enctype="multipart/form-data">
-  <div>
-    <label for="profile_pic">Choose file to upload</label>
-    <input
-      type="file"
-      id="profile_pic"
-      name="profile_pic"
-      accept=".jpg, .jpeg, .png" />
-  </div>
-  <div>
-    <button>Submit</button>
-  </div>
-</form>
+<div>
+  <label for="profile_pic">Choose file to upload</label>
+  <input
+    type="file"
+    id="profile_pic"
+    name="profile_pic"
+    accept=".jpg, .jpeg, .png" />
+</div>
 ```
 
 ```css hidden
@@ -166,7 +153,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('Limiting_accepted_file_types', 650, 60)}}
+{{EmbedLiveSample('Limiting_accepted_file_types', 650, 80)}}
 
 ## Specifications
 

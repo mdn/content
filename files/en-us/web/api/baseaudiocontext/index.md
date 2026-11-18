@@ -23,6 +23,8 @@ A `BaseAudioContext` can be a target of events, therefore it implements the {{do
   - : Returns an {{domxref("AudioDestinationNode")}} representing the final destination of all audio in the context. It can be thought of as the audio-rendering device.
 - {{domxref("BaseAudioContext.listener")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("AudioListener")}} object, used for 3D spatialization.
+- {{domxref("BaseAudioContext.renderQuantumSize")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns an integer representing the render quantum size of the audio graph, which is the number of audio sample frames processed in each processing iteration.
 - {{domxref("BaseAudioContext.sampleRate")}} {{ReadOnlyInline}}
   - : Returns a float representing the sample rate (in samples per second) used by all nodes in this context. The sample-rate of an {{domxref("AudioContext")}} cannot be changed.
 - {{domxref("BaseAudioContext.state")}} {{ReadOnlyInline}}
@@ -35,7 +37,7 @@ _Also implements methods from the interface_ {{domxref("EventTarget")}}.
 - {{domxref("BaseAudioContext.createAnalyser()")}}
   - : Creates an {{domxref("AnalyserNode")}}, which can be used to expose audio time and frequency data and for example to create data visualizations.
 - {{domxref("BaseAudioContext.createBiquadFilter()")}}
-  - : Creates a {{domxref("BiquadFilterNode")}}, which represents a second order filter configurable as several different common filter types: high-pass, low-pass, band-pass, etc
+  - : Creates a {{domxref("BiquadFilterNode")}}, which represents a second order filter configurable as several different common filter types: high-pass, low-pass, band-pass, etc.
 - {{domxref("BaseAudioContext.createBuffer()")}}
   - : Creates a new, empty {{ domxref("AudioBuffer") }} object, which can then be populated by data and played via an {{ domxref("AudioBufferSourceNode") }}.
 - {{domxref("BaseAudioContext.createBufferSource()")}}

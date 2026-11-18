@@ -203,7 +203,7 @@ console.log(delete Employee.name); // returns false
 {{jsxref("Statements/var", "var")}} creates non-configurable properties that cannot be deleted with the `delete` operator:
 
 ```js
-// Since "nameOther" is added using with the
+// Since "nameOther" is added using the
 // var keyword, it is marked as non-configurable
 var nameOther = "XYZ";
 

@@ -33,7 +33,7 @@ setTimeout(func, delay, param1, param2, /* …, */ paramN)
 ### Parameters
 
 - `func`
-  - : A {{jsxref("function")}} to be executed after the timer expires.
+  - : A {{jsxref("Function")}} to be executed after the timer expires.
 - `code`
   - : A {{domxref("TrustedScript")}} or a string of arbitrary code that is compiled and executed every `delay` milliseconds.
     This can be used instead of passing a function, but is _strongly discouraged_ for the same reasons that make using {{jsxref("Global_Objects/eval", "eval()")}} a security risk.
@@ -87,7 +87,7 @@ See {{domxref("Window.setTimeout()")}} for examples.
 
 ## See also
 
-- [Polyfill of `setTimeout` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
+- [Polyfill of `setTimeout` which allows passing arguments to the callback in `core-js`](https://core-js.io/docs/features/web-standards/settimeout-setinterval)
 - {{domxref("Window.setTimeout()")}}
 - {{domxref("WorkerGlobalScope.clearTimeout()")}}
 - {{domxref("WorkerGlobalScope.setInterval()")}}

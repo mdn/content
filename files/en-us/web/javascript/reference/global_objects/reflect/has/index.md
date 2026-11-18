@@ -103,7 +103,7 @@ Reflect.has(c, "foo"); // true
 
 ## See also
 
-- [Polyfill of `Reflect.has` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.has` in `core-js`](https://core-js.io/docs/features/ecmascript/reflect)
 - {{jsxref("Reflect")}}
 - [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in)
 - [`handler.has()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has)

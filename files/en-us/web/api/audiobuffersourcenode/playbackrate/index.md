@@ -8,9 +8,7 @@ browser-compat: api.AudioBufferSourceNode.playbackRate
 
 {{ APIRef("Web Audio API") }}
 
-The **`playbackRate`** property of
-the {{ domxref("AudioBufferSourceNode") }} interface Is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} that
-defines the speed at which the audio asset will be played.
+The **`playbackRate`** read-only property of the {{domxref("AudioBufferSourceNode")}} interface is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} that defines the speed at which the audio asset will be played.
 
 A value of 1.0 indicates it should play at the same speed as its sampling rate,
 values less than 1.0 cause the sound to play more slowly, while values greater than

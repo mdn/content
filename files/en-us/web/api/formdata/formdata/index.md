@@ -50,7 +50,7 @@ You could add a key/value pair to this using {{domxref("FormData.append", "appen
 formData.append("username", "Chris");
 ```
 
-### Prepopulating from a HTML form element
+### Prepopulating from an HTML form element
 
 You can specify the optional `form` and `submitter` arguments when creating the `FormData` object, to prepopulate it with values from the specified form.
 
@@ -101,7 +101,7 @@ for (const [key, value] of formData) {
 
 For brevity, the `<form>` element is hidden from view.
 
-{{EmbedLiveSample("prepopulating_from_a_html_form_element", "", 150)}}
+{{EmbedLiveSample("prepopulating_from_an_html_form_element", "", 150)}}
 
 ## Specifications
 

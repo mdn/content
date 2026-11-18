@@ -39,7 +39,7 @@ new Promise(executor)
 ### Parameters
 
 - `executor`
-  - : A {{jsxref("function")}} to be executed by the constructor. It receives two functions as parameters: `resolveFunc` and `rejectFunc`. Any errors thrown in the `executor` will cause the promise to be rejected, and the return value will be neglected. The semantics of `executor` are detailed below.
+  - : A {{jsxref("Function")}} to be executed by the constructor. It receives two functions as parameters: `resolveFunc` and `rejectFunc`. Any errors thrown in the `executor` will cause the promise to be rejected, and the return value will be neglected. The semantics of `executor` are detailed below.
 
 ### Return value
 
@@ -239,6 +239,6 @@ const rejectedResolved2 = new Promise((resolve) => {
 
 ## See also
 
-- [Polyfill of `Promise` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [Polyfill of `Promise` in `core-js`](https://core-js.io/docs/features/ecmascript/promise)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
 - {{jsxref("Promise.withResolvers()")}}

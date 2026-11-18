@@ -186,7 +186,7 @@ Below is a list of all of the attributes available in SVG, along with links to r
 
 - {{SVGAttr("r")}}
 - {{SVGAttr("radius")}}
-- {{SVGAttr("referrerPolicy")}}
+- {{SVGAttr("referrerpolicy")}}
 - {{SVGAttr("refX")}}
 - {{SVGAttr("refY")}}
 - {{SVGAttr("rel")}}
@@ -240,6 +240,7 @@ Below is a list of all of the attributes available in SVG, along with links to r
 - {{SVGAttr("text-overflow")}}
 - {{SVGAttr("text-rendering")}}
 - {{SVGAttr("textLength")}}
+- {{SVGAttr("title")}}
 - {{SVGAttr("to")}}
 - {{SVGAttr("transform")}}
 - {{SVGAttr("transform-origin")}}
@@ -272,8 +273,8 @@ Below is a list of all of the attributes available in SVG, along with links to r
 - {{SVGAttr("xChannelSelector")}}
 - {{SVGAttr("xlink:actuate")}}
 - {{SVGAttr("xlink:arcrole")}}
-- {{SVGAttr("xlink:href")}}{{deprecated_inline}}
-- {{SVGAttr("xlink:role")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
+- `xlink:role`
 - {{SVGAttr("xlink:show")}}
 - {{SVGAttr("xlink:title")}}
 - {{SVGAttr("xlink:type")}}
@@ -321,7 +322,7 @@ The XLink attributes can reference resources.
 
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 - {{SVGAttr("xlink:type")}} {{deprecated_inline}}
-- {{SVGAttr("xlink:role")}} {{deprecated_inline}}
+- `xlink:role` {{deprecated_inline}}
 - {{SVGAttr("xlink:arcrole")}} {{deprecated_inline}}
 - {{SVGAttr("xlink:title")}} {{deprecated_inline}}
 - {{SVGAttr("xlink:show")}} {{deprecated_inline}}
@@ -459,7 +460,7 @@ All HTML and SVG elements support event handler attributes defined on the [`Glob
 
 While event handler attributes, like {{domxref("Element/blur_event", "onblur")}} and {{domxref("Element/auxclick_event", "onauxclick")}}, apply to all elements, they may not have any effect. For example, the {{domxref("HTMLTrackElement/cuechange_event", "oncuechange")}} attribute can be applied to any element, but it is only relevant to the {{htmlelement("track")}} element.
 
-Event handler attributes are discouraged, considered unsafe, and may be blocked by [content security policies (CSP)](/en-US/docs/Web/Security/Practical_implementation_guides/CSP). Use the event name withing an {{domxref("EventTarget.addEventListener", "addEventListener()")}} method instead.
+Event handler attributes are discouraged, considered unsafe, and may be blocked by [content security policies (CSP)](/en-US/docs/Web/Security/Practical_implementation_guides/CSP). Use the event name within an {{domxref("EventTarget.addEventListener", "addEventListener()")}} method instead.
 
 ## See also
 

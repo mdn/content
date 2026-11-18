@@ -64,7 +64,7 @@ function parseTitle(metastring) {
 parseTitle('title="foo"'); // 'foo'
 ```
 
-If we later decided to add `name='xxx'` as an alias for `title=`, we will need to group the disjunction in another group:
+If we later decided to add `name='xxx'` as an alias for `title=`, we would need to group the disjunction in another group:
 
 ```js example-bad
 function parseTitle(metastring) {
@@ -88,7 +88,7 @@ function parseTitle(metastring) {
 parseTitle('name="foo"'); // 'foo'
 ```
 
-[Named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) are another way to avoid refactoring hazards. It allows capturing groups to accessed by a custom name, which is unaffected when other capturing groups are added or removed.
+[Named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) are another way to avoid refactoring hazards. They allow capturing groups to be accessed by a custom name, which is unaffected when other capturing groups are added or removed.
 
 ## Specifications
 

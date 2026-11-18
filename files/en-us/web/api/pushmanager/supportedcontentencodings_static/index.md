@@ -26,7 +26,7 @@ This usually contains just one value: `"aes128gcm"`.
 
 ## Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : This is thrown when attempting to set a value in the returned array.
 
 ## Examples

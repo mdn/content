@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`:visited`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) applies once the link has been visited by the user. For privacy reasons, the styles that can be modified using this selector are very limited. The `:visited` pseudo-class applies only to {{htmlelement("a")}} and {{htmlelement("area")}} elements that have an `href` attribute.
 
+Styles defined by the `:visited` and unvisited {{cssxref(":link")}} pseudo-classes can be overridden by any subsequent user-action pseudo-classes ({{cssxref(":hover")}} or {{cssxref(":active")}}) that have at least equal specificity. To style links appropriately, put the `:visited` rule after the `:link` rule but before the `:hover` and `:active` rules, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`. The `:visited` pseudo-class and `:link` pseudo-class are mutually exclusive.
+
 {{InteractiveExample("CSS Demo: :visited", "tabbed-shorter")}}
 
 ```css interactive-example
@@ -42,8 +44,6 @@ a:visited {
   </li>
 </ul>
 ```
-
-Styles defined by the `:visited` and unvisited {{cssxref(":link")}} pseudo-classes can be overridden by any subsequent user-action pseudo-classes ({{cssxref(":hover")}} or {{cssxref(":active")}}) that have at least equal specificity. To style links appropriately, put the `:visited` rule after the `:link` rule but before the `:hover` and `:active` rules, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`. The `:visited` pseudo-class and `:link` pseudo-class are mutually exclusive.
 
 ## Privacy restrictions
 

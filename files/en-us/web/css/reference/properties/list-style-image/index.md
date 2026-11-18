@@ -78,7 +78,7 @@ hr {
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 list-style-image: none;
 
 /* <url> values */
@@ -96,6 +96,8 @@ list-style-image: unset;
 ```
 
 ### Values
+
+This property is specified as a single value from the following list:
 
 - {{cssxref("image")}}
   - : A valid image to use as the marker.

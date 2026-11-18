@@ -191,11 +191,11 @@ To specify the HTML to validate, you can provide a web address, upload an HTML f
 
 ## Validating an HTML document
 
-In this task, we'll get you to try out the HTML validator. You will validate our [sample document](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html) and see what results are returned. This example contains the same HTML that you studied with the DOM inspector earlier.
+In this task, we'll get you to try out the HTML validator. You will validate the same HTML that you studied with the DOM inspector earlier.
 
 1. First, load the [Markup Validation Service](https://validator.w3.org/) in a new browser tab, if it isn't already open.
 2. Switch to the [Validate by Direct Input](https://validator.w3.org/#validate_by_input) tab.
-3. Copy all of the sample document's code (not just the body) and paste it into the large text area shown in the Markup Validation Service.
+3. Copy the [sample document](#your_turn_studying_html_using_the_dom_inspector) and paste it into the large text area shown in the Markup Validation Service. Paste the entire document structure, not just the `<body>` contents.
 4. Press the _Check_ button.
 
 This should give you a list of errors and other information.

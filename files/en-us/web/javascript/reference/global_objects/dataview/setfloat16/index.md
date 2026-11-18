@@ -68,7 +68,7 @@ dataview.getFloat16(1); // 0
 
 ## See also
 
-- [Polyfill of `DataView.prototype.setFloat16` in `core-js`](https://github.com/zloirock/core-js#float16-methods)
+- [Polyfill of `DataView.prototype.setFloat16` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}

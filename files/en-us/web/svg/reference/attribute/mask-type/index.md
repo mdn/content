@@ -15,6 +15,32 @@ You can use this attribute with the following SVG elements:
 > [!NOTE]
 > This presentation attribute has a CSS property counterpart: {{cssxref("mask-type")}}. When both are specified, the CSS property takes priority.
 
+## mask
+
+For {{SVGElement("mask")}}, the `mask-type` defines whether the content of the mask element is treated as a luminance mask or an alpha mask.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>alpha</code> | <code>luminance</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>luminance</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Discrete</td>
+    </tr>
+  </tbody>
+</table>
+
+- `alpha`
+  - : This value indicates that the {{SVGElement('mask')}} element's alpha values should be used; the pixels of the masked object match the opaqueness of the mask areas, without regard to the luminance of the colors of the mask.
+- `luminance`
+  - : This value indicates that the {{SVGElement('mask')}} element's luminance values should be used; the opaqueness of the masked object depends on the opacity and lightness of the mask. The opacity of a `luminance` mask is determined by the `R`, `G`, `B`, and `A` channels of the mask, using the equation `((0.2125 * R) + (0.7154 * G) + (0.0721 * B)) * A`.
+
 ## Example
 
 ```css hidden
@@ -57,32 +83,6 @@ svg {
 ```
 
 {{EmbedLiveSample("Example", '100%', 200)}}
-
-## mask
-
-For {{SVGElement("mask")}}, the `mask-type` defines whether the content of the mask element is treated as a luminance mask or an alpha mask.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td><code>alpha</code> | <code>luminance</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>luminance</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Discrete</td>
-    </tr>
-  </tbody>
-</table>
-
-- `alpha`
-  - : This value indicates that the {{SVGElement('mask')}} element's alpha values should be used; the pixels of the masked object match the opaqueness of the mask areas, without regard to the luminance of the colors of the mask.
-- `luminance`
-  - : This value indicates that the {{SVGElement('mask')}} element's luminance values should be used; the opaqueness of the masked object depends on the opacity and lightness of the mask. The opacity of a `luminance` mask is determined by the `R`, `G`, `B`, and `A` channels of the mask, using the equation `((0.2125 * R) + (0.7154 * G) + (0.0721 * B)) * A`.
 
 ## Specifications
 

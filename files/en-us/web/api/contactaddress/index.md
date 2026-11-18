@@ -9,7 +9,7 @@ browser-compat: api.ContactAddress
 
 {{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
-The **`ContactAddress`** interface of the [Contact Picker API](/en-US/docs/Web/API/Contact_Picker_API) represents a physical address. Instances of this interface are retrieved from the `address` property of the objects returned by {{domxref("ContactsManager.getProperties()")}}.
+The **`ContactAddress`** interface of the [Contact Picker API](/en-US/docs/Web/API/Contact_Picker_API) represents a physical address. Instances of this interface are retrieved from the `address` property of the objects returned by {{domxref("ContactsManager.select()")}}.
 
 It may be useful to refer to the Universal Postal Union website's [Addressing S42 standard](https://www.upu.int/en/Postal-Solutions/Programmes-Services/Addressing-Solutions#addressing-s42-standard) materials, which provide information about international standards for postal addresses.
 
@@ -39,7 +39,7 @@ It may be useful to refer to the Universal Postal Union website's [Addressing S4
 ## Instance methods
 
 - {{domxref('ContactAddress.toJSON()')}} {{experimental_inline}}
-  - : A standard serializer that returns a JSON representation of the `ContactAddress` object's properties.
+  - : Returns a JSON-serializable plain object representing the `ContactAddress` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 

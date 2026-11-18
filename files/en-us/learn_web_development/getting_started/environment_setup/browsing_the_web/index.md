@@ -156,7 +156,7 @@ Before you move on, try searching for some topics of your own that you'd like to
 
 ### Using AI
 
-AI-generated search results are a very popular way of receiving information. They basically provide a superpowered search: they do a lot of searching in the background, before compiling the results into a single, easily-digestible answer. Common choices are [ChatGPT](https://chatgpt.com/), [Google Gemini](https://gemini.google.com/app), and [Microsoft Copilot](https://copilot.microsoft.com/), accessed either directly in a chat format, or via AI-powered in-app help or automation systems.
+AI-generated search results are a very popular way of receiving information. They basically provide a superpowered search: they do a lot of searching in the background, before compiling the results into a single, easily-digestible answer. Common choices are [ChatGPT](https://chatgpt.com/), [Google Gemini](https://gemini.google.com/app), and [Microsoft Copilot](https://copilot.com/), accessed either directly in a chat format, or via AI-powered in-app help or automation systems.
 
 When learning to code, AI chat prompts can be useful in a variety of ways:
 
@@ -195,6 +195,6 @@ As a result, you need to be careful to check the answers they give you, and not 
   - `intitle:cheese` will only return results that have "cheese" in the main title of the page.
 
   > [!NOTE]
-  > There are many other techniques you can use in various different search engines. Try seeing what others you can find — some useful resources are [Refine Google Searches](https://support.google.com/websearch/answer/2466433?hl=en), [How to use advanced syntax on DuckDuckGo Search](https://duckduckgo.com/duckduckgo-help-pages/results/syntax), and [Microsoft: Advanced search options](https://support.microsoft.com/en-US/bing/advanced-search-options).
+  > There are many other techniques you can use in various different search engines. Try seeing what others you can find — some useful resources are [Refine Google Searches](https://support.google.com/websearch/answer/2466433?hl=en), [How to use advanced syntax on DuckDuckGo Search](https://duckduckgo.com/duckduckgo-help-pages/results/syntax), and [Microsoft: Advanced search options](https://support.microsoft.com/en-us/bing/advanced-search-options).
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}

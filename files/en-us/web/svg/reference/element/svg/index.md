@@ -80,7 +80,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('nested_svg-elements', 300, 100)}}
+{{EmbedLiveSample('nested_svg_element', 300, 100)}}
 
 ### Using dynamic viewport units
 
@@ -142,7 +142,7 @@ In this example, the `height` and `width` attributes on the `svg` element are se
 }
 ```
 
-{{EmbedLiveSample('using_dynamic_viewport_lengths', '100%', 500)}}
+{{EmbedLiveSample('using_dynamic_viewport_units', '100%', 500)}}
 
 To change the iframe's dimensions try resizing the dotted red border from bottom right corner.
 

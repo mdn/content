@@ -143,9 +143,9 @@ const myIterator = Iterator.from({
   - : Creates a new `Iterator` object from a list of iterable objects. The new iterator yields the values from each of the input iterables in sequence.
 - {{jsxref("Iterator.from()")}}
   - : Creates a new `Iterator` object from an iterator or iterable object.
-- {{jsxref("Iterator.zip()")}} {{experimental_inline}}
+- {{jsxref("Iterator.zip()")}}
   - : Creates a new `Iterator` object that aggregates elements from multiple iterable objects by yielding arrays containing elements at the same position.
-- {{jsxref("Iterator.zipKeyed()")}} {{experimental_inline}}
+- {{jsxref("Iterator.zipKeyed()")}}
   - : Creates a new `Iterator` object that aggregates elements from multiple iterable objects by yielding objects containing elements at the same position, with keys specified by the input.
 
 ## Instance properties
@@ -157,11 +157,13 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
 - `Iterator.prototype[Symbol.toStringTag]`
   - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Iterator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
-    > [!NOTE]
-    > Unlike the `[Symbol.toStringTag]` on most built-in classes, `Iterator.prototype[Symbol.toStringTag]` is writable for web compatibility reasons.
+> [!NOTE]
+> Unlike most other built-in classes, the `constructor` and `[Symbol.toStringTag]` properties of `Iterator.prototype` are implemented as getter-setter pairs and not ordinary data properties. This is because of a [web compatibility issue](https://github.com/tc39/proposal-iterator-helpers/issues/286). The setter mimics a non-writable data property (assigning to it fails) but allows subclasses to create their own such properties via assignment.
 
 ## Instance methods
 
+- {{jsxref("Iterator.prototype.chunks()")}}
+  - : Returns a new iterator helper object that splits the elements from the original iterator into consecutive array chunks. Each time the helper is iterated, it gets the specified number of elements from the underlying iterator and yields them together.
 - {{jsxref("Iterator.prototype.drop()")}}
   - : Returns a new iterator helper object that skips the given number of elements at the start of this iterator.
 - {{jsxref("Iterator.prototype.every()")}}
@@ -174,9 +176,9 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
   - : Returns a new iterator helper object that takes each element in the original iterator, runs it through a mapping function, and yields elements returned by the mapping function (which are contained in another iterator or iterable).
 - {{jsxref("Iterator.prototype.forEach()")}}
   - : Executes a provided function once for each element produced by the iterator.
-- {{jsxref("Iterator.prototype.includes()")}} {{experimental_inline}}
+- {{jsxref("Iterator.prototype.includes()")}}
   - : Returns `true` if an element produced by the iterator is equal to the given value. Otherwise, if the iterator is exhausted without finding such an element, it returns `false`.
-- {{jsxref("Iterator.prototype.join()")}} {{experimental_inline}}
+- {{jsxref("Iterator.prototype.join()")}}
   - : Returns a string that is the concatenation of all elements produced by the iterator, separated by commas or a specified separator string.
 - {{jsxref("Iterator.prototype.map()")}}
   - : Returns a new iterator helper object that yields elements of the iterator, each transformed by a mapping function.
@@ -188,6 +190,8 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
   - : Returns a new iterator helper object that yields the given number of elements in this iterator and then terminates.
 - {{jsxref("Iterator.prototype.toArray()")}}
   - : Creates a new {{jsxref("Array")}} instance populated with the elements yielded from the iterator.
+- {{jsxref("Iterator.prototype.windows()")}}
+  - : Returns a new iterator helper object that yields a sliding window of elements. Each time the helper is iterated, it yields an array removing the first element from the previous iteration and adding the next element from the original iterator.
 - [`Iterator.prototype[Symbol.dispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.dispose)
   - : Calls the `return()` method of `this`, if it exists. This implements the _disposable protocol_ and allows it to be disposed when used with {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}}.
 - [`Iterator.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator)
@@ -217,7 +221,7 @@ for (const value of arrIterator) {
 
 ## See also
 
-- [Polyfill of `Iterator` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [Polyfill of `Iterator` in `core-js`](https://core-js.io/docs/features/ecmascript/iterator)
 - [es-shims polyfill of `Iterator` and associated helpers](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Statements/function*", "function*")}}
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

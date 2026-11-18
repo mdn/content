@@ -55,7 +55,7 @@ No notable changes.
 #### WebDriver BiDi
 
 - Added support for the commands `input.performActions` and `input.releaseActions`, which can be used to emulate user input for interacting with elements on web pages. Similar to Marionette all the available input sources of the WebDriver specification are supported, which are `key`, `pointer`, and `wheel` ([Firefox bug 1832380](https://bugzil.la/1832380)).
-- Added support for custom browser to client messages, which allows to send a `script.message` event from within a script formerly installed via `script.addPreloadScript` ([Firefox bug 1824187](https://bugzil.la/1824187)).
+- Added support for custom browser to client messages, which allows you to send a `script.message` event from within a script formerly installed via `script.addPreloadScript` ([Firefox bug 1824187](https://bugzil.la/1824187)).
 - Added support for the `serializationOptions` parameter for `script.evaluate` and `script.callFunction` to customize the `RemoteValue` serialization ([Firefox bug 1824953](https://bugzil.la/1824953)).
 - Fixed an issue where both the `script.evaluate` and `script.callFunction` commands did not include the stack trace and failed to properly build the exception details for a rejected Promise ([Firefox bug 1829630](https://bugzil.la/1829630)).
 - Fixed an issue where the `browsingContext.domContentLoaded` and `browsingContext.load` events did not report the correct `url`, when the page defined a `<base>` meta tag ([Firefox bug 1825634](https://bugzil.la/1825634)).

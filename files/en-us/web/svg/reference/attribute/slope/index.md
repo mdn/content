@@ -21,34 +21,6 @@ You can use this attribute with the following SVG component transfer function el
 > [!NOTE]
 > Originally, the `slope` attribute was used within `<font-face>` to indicate the vertical stroke angle of a font. This use case has been deprecated.
 
-## Usage notes
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></code
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-- `<number>`
-  - : This value indicates the slope of the linear component transfer functions.
-
 ## Examples
 
 In this example, a gradient box has two text elements with linear filters applied. The slopes of the filter transfer functions of each filter differ.
@@ -58,8 +30,7 @@ In this example, a gradient box has two text elements with linear filters applie
   width="8cm"
   height="4cm"
   viewBox="0 0 800 400"
-  xmlns="http://www.w3.org/2000/svg"
-  version="1.1">
+  xmlns="http://www.w3.org/2000/svg">
   <title>Examples of feComponentTransfer operations</title>
   <desc>
     Text strings showing the effects of the slope attribute of the
@@ -116,6 +87,34 @@ In this example, a gradient box has two text elements with linear filters applie
 ```
 
 {{EmbedLiveSample('Examples', 300, 200)}}
+
+## Usage notes
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
+            >&#x3C;number></a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+- `<number>`
+  - : This value indicates the slope of the linear component transfer functions.
 
 ## Specifications
 

@@ -178,7 +178,7 @@ position.addEventListener("input", update);
 update();
 ```
 
-{{ EmbedLiveSample("Panning effect", "", 450) }}
+{{ EmbedLiveSample("panning_an_image", "", 450) }}
 
 Move the slider. Note how increasing and decreasing the `x` value of the `xywh()` function creates a panning effect.
 

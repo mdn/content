@@ -19,32 +19,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("set")}}
 
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="100" height="100">
-    <animate
-      attributeType="XML"
-      attributeName="width"
-      fill="freeze"
-      from="100"
-      to="150"
-      dur="3s" />
-  </rect>
-</svg>
-```
-
-{{EmbedLiveSample("Example", "200", "200")}}
-
 ## animate, animateMotion, animateTransform
 
 For {{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, and {{SVGElement("animateTransform")}}, `to` specifies the ending value of the animation.
@@ -92,6 +66,32 @@ For the {{SVGElement("set")}} element, `to` specifies the value for the attribut
 </table>
 
 The exact value type for this attribute depend on the value of the attribute that will be animated.
+
+## Example
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="100" height="100">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      fill="freeze"
+      from="100"
+      to="150"
+      dur="3s" />
+  </rect>
+</svg>
+```
+
+{{EmbedLiveSample("Example", "200", "200")}}
 
 ## Specifications
 

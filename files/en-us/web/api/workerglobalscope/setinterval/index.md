@@ -39,7 +39,7 @@ setInterval(func, delay, param1, param3, /* …, */ paramN)
 ### Parameters
 
 - `func`
-  - : A {{jsxref("function")}} to be executed every `delay` milliseconds.
+  - : A {{jsxref("Function")}} to be executed every `delay` milliseconds.
     The first execution happens after `delay` milliseconds.
 - `code`
   - : A {{domxref("TrustedScript")}} or a string of arbitrary code that is compiled and executed every `delay` milliseconds.
@@ -79,7 +79,7 @@ See {{domxref("Window.setInterval", "setInterval()")}} for examples.
 
 ## See also
 
-- [Polyfill of `setInterval` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
+- [Polyfill of `setInterval` which allows passing arguments to the callback in `core-js`](https://core-js.io/docs/features/web-standards/settimeout-setinterval)
 - {{domxref("Window.setInterval()")}}
 - {{domxref("WorkerGlobalScope.clearInterval()")}}
 - {{domxref("WorkerGlobalScope.setTimeout()")}}

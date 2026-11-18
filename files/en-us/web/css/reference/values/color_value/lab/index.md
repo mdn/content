@@ -217,6 +217,52 @@ div {
 
 {{EmbedLiveSample("Adjusting_lightness", "", "200")}}
 
+### Adjusting opacity
+
+The following example shows the effect of varying the `A` (alpha) value of the `lab()` functional notation.
+The `red` and `red-alpha` elements overlap the `#background-div` element to demonstrate the effect of opacity.
+Giving `A` a value of `0.4` makes the color 40% opaque.
+
+#### HTML
+
+```html
+<div id="background-div">
+  <div data-color="red"></div>
+  <div data-color="red-alpha"></div>
+</div>
+```
+
+#### CSS
+
+```css hidden
+div {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  margin: 5px;
+  display: inline-block;
+  border: 1px solid black;
+}
+#background-div {
+  background-color: lightblue;
+  width: 150px;
+  height: 40px;
+}
+```
+
+```css
+[data-color="red"] {
+  background-color: lab(80 125 125);
+}
+[data-color="red-alpha"] {
+  background-color: lab(80 125 125 / 0.4);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Adjusting_opacity')}}
+
 ### Adjusting color axes
 
 This example demonstrates the effects of setting the `a` and `b` values of the `lab()` function to the ends and midpoints of the a-axis, which goes from green (-125) to red (125) and the b-axis, which goes from yellow (-125) to blue (125).
@@ -293,7 +339,7 @@ div {
 
 {{EmbedLiveSample("Adjusting_color_axes", "", "200")}}
 
-The left column is at the yellow end (-125) of the b-axis and the right column is at the blue end (125). The top row displays colors at the red end of the a-axis (-125) and the bottom row is at the green end (125). The middle column and row are at the midpoints (0) of each axis, with the middle cell being grey; it contains no red, green, yellow, or blue, with a `0` value for both axes.
+The left column is at the yellow end (-125) of the b-axis and the right column is at the blue end (125). The top row displays colors at the red end of the a-axis (-125) and the bottom row is at the green end (125). The middle column and row are at the midpoints (0) of each axis, with the middle cell being gray; it contains no red, green, yellow, or blue, with a `0` value for both axes.
 
 ### Linear gradients along the a-axis and b-axis
 
@@ -366,52 +412,6 @@ span {
 #### Result
 
 {{EmbedLiveSample("Linear gradients along the a-axis and b-axis", '', '420')}}
-
-### Adjusting opacity
-
-The following example shows the effect of varying the `A` (alpha) value of the `lab()` functional notation.
-The `red` and `red-alpha` elements overlap the `#background-div` element to demonstrate the effect of opacity.
-Giving `A` a value of `0.4` makes the color 40% opaque.
-
-#### HTML
-
-```html
-<div id="background-div">
-  <div data-color="red"></div>
-  <div data-color="red-alpha"></div>
-</div>
-```
-
-#### CSS
-
-```css hidden
-div {
-  width: 50px;
-  height: 50px;
-  padding: 5px;
-  margin: 5px;
-  display: inline-block;
-  border: 1px solid black;
-}
-#background-div {
-  background-color: lightblue;
-  width: 150px;
-  height: 40px;
-}
-```
-
-```css
-[data-color="red"] {
-  background-color: lab(80 125 125);
-}
-[data-color="red-alpha"] {
-  background-color: lab(80 125 125 / 0.4);
-}
-```
-
-#### Result
-
-{{EmbedLiveSample('Adjusting_opacity')}}
 
 ### Using relative colors with lab()
 

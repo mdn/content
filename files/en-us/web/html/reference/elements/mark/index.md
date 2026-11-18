@@ -48,36 +48,6 @@ Typical use cases for `<mark>` include:
 > [!NOTE]
 > Don't confuse `<mark>` with the {{HTMLElement("strong")}} element; `<mark>` is used to denote content which has a degree of _relevance_, while `<strong>` indicates spans of text of _importance_.
 
-## Accessibility
-
-The presence of the `mark` element is not announced by most screen reading technology in its default configuration. It can be made to be announced by using the CSS {{cssxref("content")}} property, along with the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements.
-
-```css
-mark::before,
-mark::after {
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-mark::before {
-  content: " [highlight start] ";
-}
-
-mark::after {
-  content: " [highlight end] ";
-}
-```
-
-Some people who use screen readers deliberately disable announcing content that creates extra verbosity. Because of this, it is important to not abuse this technique and only apply it in situations where not knowing content has been highlighted would adversely affect understanding.
-
-- [Tweaking Text Level Styles, Reprised](https://adrianroselli.com/2025/04/tweaking-text-level-styles-reprised.html) via Adrian Roselli (2025)
-- [Short note on making your mark (more accessible)](https://vispero.com/resources/short-note-on-making-your-mark-more-accessible/) via Vispero (2017)
-
 ## Examples
 
 ### Marking text of interest

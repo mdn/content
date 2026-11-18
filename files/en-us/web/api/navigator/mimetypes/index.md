@@ -8,7 +8,7 @@ browser-compat: api.Navigator.mimeTypes
 
 {{ ApiRef("HTML DOM") }}
 
-Returns a {{domxref("MimeTypeArray")}} object, which contains a list of {{domxref("MimeType")}} objects representing the MIME types recognized and supported by the browser.
+The **`mimeTypes`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("MimeTypeArray")}} object, which contains a list of {{domxref("MimeType")}} objects representing the MIME types recognized and supported by the browser.
 The array can be queried for information about the enabled plugin that is used to handle a file of the specified type.
 Named properties of the returned object are not enumerable (except in very old browser versions).
 

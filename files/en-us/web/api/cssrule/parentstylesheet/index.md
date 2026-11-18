@@ -8,9 +8,7 @@ browser-compat: api.CSSRule.parentStyleSheet
 
 {{ APIRef("CSSOM") }}
 
-The **`parentStyleSheet`** property of the
-{{domxref("CSSRule")}} interface returns the {{domxref("StyleSheet")}} object in which
-the current rule is defined.
+The **`parentStyleSheet`** read-only property of the {{domxref("CSSRule")}} interface returns the {{domxref("StyleSheet")}} object in which the current rule is defined.
 
 ## Value
 

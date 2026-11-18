@@ -24,7 +24,7 @@ bindTransformFeedback(target, transformFeedback)
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target (binding point). Must be
     `gl.TRANSFORM_FEEDBACK`.
 - `transformFeedback`
-  - : A {{domxref("WebGLTransformFeedback")}} object to bind.
+  - : A {{domxref("WebGLTransformFeedback")}} object to bind, or `null` to bind the default transform feedback object.
 
 ### Return value
 

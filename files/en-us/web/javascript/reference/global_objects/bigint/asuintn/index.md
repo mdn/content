@@ -35,13 +35,13 @@ BigInt.asUintN(bits, bigint)
 ### Parameters
 
 - `bits`
-  - : The amount of bits available for the returned BigInt. Should be an integer between 0 and 2<sup>53</sup> - 1, inclusive.
+  - : The number of bits available for the returned BigInt. Should be an integer between 0 and 2<sup>53</sup> - 1, inclusive.
 - `bigint`
   - : The BigInt value to truncate to fit into the supplied bits.
 
 ### Return value
 
-The value of `bigint` modulo `2 ** bits`, as an unsigned integer.
+A BigInt containing the bit representation of `bigint` truncated to `bits` bits, interpreted as an unsigned integer.
 
 ### Exceptions
 

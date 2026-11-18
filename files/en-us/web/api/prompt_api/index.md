@@ -6,7 +6,7 @@ browser-compat: api.LanguageModel
 spec-urls: https://webmachinelearning.github.io/prompt-api/
 ---
 
-{{DefaultAPISidebar("Prompt API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{DefaultAPISidebar("Prompt API")}}{{SecureContext_Header}}
 
 > [!WARNING]
 > This feature is currently opposed by two browser vendor(s). See the [Standards positions](#standards_positions) section below for details of opposition.

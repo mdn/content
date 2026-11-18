@@ -33,6 +33,37 @@ whereas the following fragment of code will not cause an evenodd clipping rule t
 </g>
 ```
 
+## Elements
+
+The following elements can use the `clip-rule` attribute, but only if they are inside a {{ SVGElement("clipPath") }} element.
+
+- [Graphics elements](/en-US/docs/Web/SVG/Reference/Element#graphics_elements)
+
+## Example
+
+```html
+<svg width="100" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define star path -->
+  <defs>
+    <path d="M50,0 21,90 98,35 2,35 79,90z" id="star" />
+  </defs>
+
+  <!-- Left: evenodd -->
+  <clipPath id="emptyStar">
+    <use href="#star" clip-rule="evenodd" />
+  </clipPath>
+  <rect clip-path="url(#emptyStar)" width="50" height="90" fill="blue" />
+
+  <!-- Right: nonzero -->
+  <clipPath id="filledStar">
+    <use href="#star" clip-rule="nonzero" />
+  </clipPath>
+  <rect clip-path="url(#filledStar)" width="50" height="90" x="50" fill="red" />
+</svg>
+```
+
+{{ EmbedLiveSample('Example', '100%', '110') }}
+
 ## Usage notes
 
 <table class="properties">
@@ -56,41 +87,6 @@ whereas the following fragment of code will not cause an evenodd clipping rule t
   - : See description of {{ SVGAttr("fill-rule") }} property.
 - evenodd
   - : See description of {{ SVGAttr("fill-rule") }} property.
-
-## Example
-
-```html
-<svg
-  width="100"
-  viewBox="0 0 100 90"
-  xmlns="http://www.w3.org/2000/svg"
-  version="1.1">
-  <!-- Define star path -->
-  <defs>
-    <path d="M50,0 21,90 98,35 2,35 79,90z" id="star" />
-  </defs>
-
-  <!-- Left: evenodd -->
-  <clipPath id="emptyStar">
-    <use href="#star" clip-rule="evenodd" />
-  </clipPath>
-  <rect clip-path="url(#emptyStar)" width="50" height="90" fill="blue" />
-
-  <!-- Right: nonzero -->
-  <clipPath id="filledStar">
-    <use href="#star" clip-rule="nonzero" />
-  </clipPath>
-  <rect clip-path="url(#filledStar)" width="50" height="90" x="50" fill="red" />
-</svg>
-```
-
-{{ EmbedLiveSample('Example', '100%', '110') }}
-
-## Elements
-
-The following elements can use the `clip-rule` attribute, but only if they are inside a {{ SVGElement("clipPath") }} element.
-
-- [Graphics elements](/en-US/docs/Web/SVG/Reference/Element#graphics_elements)
 
 ## Specifications
 

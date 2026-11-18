@@ -3,6 +3,8 @@ title: "XSLTProcessor: transformToDocument() method"
 short-title: transformToDocument()
 slug: Web/API/XSLTProcessor/transformToDocument
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.XSLTProcessor.transformToDocument
 ---
 

@@ -11,7 +11,7 @@ The **`SVGAnimatedRect`** interface represents an {{domxref("SVGRect")}} attribu
 
 ## Instance properties
 
-- {{domxref("SVGAnimatedRect.baseVal", "baseVal")}}
+- {{domxref("SVGAnimatedRect.baseVal", "baseVal")}} {{ReadOnlyInline}}
   - : The base value of the given attribute before applying any animations.
 - {{domxref("SVGAnimatedRect.animVal", "animVal")}} {{ReadOnlyInline}}
   - : The current animated value of the given attribute as a read-only {{domxref("SVGRect")}}. If the given attribute is not currently being animated, then the {{domxref("SVGRect")}} will have the same contents as `baseVal`. The object referenced by `animVal` will always be distinct from the one referenced by `baseVal`, even when the attribute is not animated.

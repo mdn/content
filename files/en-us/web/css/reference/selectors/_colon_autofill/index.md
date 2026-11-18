@@ -43,6 +43,14 @@ input:autofill {
 </form>
 ```
 
+## Syntax
+
+```css
+:autofill {
+  /* ... */
+}
+```
+
 ## Description
 
 The `:autofill` pseudo-class selects {{htmlelement("input")}} elements containing un-edited content that was auto-filled by the user-agent. Autocompletion may occur when browser settings are set to enable autocompletion or the [`autocomplete` attribute](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) is set on the element itself.
@@ -58,20 +66,12 @@ input:-internal-autofill-selected {
   appearance: menulist-button;
   background-image: none !important;
   background-color:
-    light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
+    light-dark(rgb(232 240 254), rgb(70 90 126 / 0.4)) !important;
   color: fieldtext !important;
 }
 ```
 
 This means that you cannot override the default {{cssxref('background-color')}}, {{cssxref('background-image')}}, or {{cssxref('color')}} values on selected autofilled input elements in your own rules, but you can override the {{cssxref('appearance')}}, and you can override these properties for the autofilled elements that aren't currently focused.
-
-## Syntax
-
-```css
-:autofill {
-  /* ... */
-}
-```
 
 ## Examples
 

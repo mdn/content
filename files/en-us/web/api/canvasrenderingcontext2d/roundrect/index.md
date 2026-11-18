@@ -127,7 +127,7 @@ ctx.stroke();
 The result is shown below.
 For the two rectangles on the right, note how the bottom rectangle is drawn with a negative width, and how this flips the rectangle horizontally.
 
-{{ EmbedLiveSample('Drawing_a_rectangle', 700, 300) }}
+{{ EmbedLiveSample('drawing_rectangles', 700, 300) }}
 
 ## Specifications
 

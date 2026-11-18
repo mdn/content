@@ -7,7 +7,7 @@ browser-compat: css.properties.view-timeline
 sidebar: cssref
 ---
 
-The **`view-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) defines a [named view progress timeline's](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline) name, direction, and inset values.
+The **`view-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property defines a [named view progress timeline's](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline) name, direction, and inset values.
 
 ## Constituent properties
 
@@ -51,7 +51,7 @@ view-timeline: unset;
 - `<view-timeline-axis>`
   - : See {{cssxref("view-timeline-axis")}}. The default value is `block`.
 
-### Description
+## Description
 
 The `view-timeline` shorthand property defines a _named view progress timeline_, which progresses based on changes to the visibility of an element (the _subject_) within a scrollable element (_scroller_). The `view-timeline` property is set on the subject. If the scroller element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
 

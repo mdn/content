@@ -592,21 +592,21 @@ You can also [add the `codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/c
       <th scope="row">Theora</th>
       <td></td>
       <td></td>
-      <td>Yes</td>
+      <td>Yes. Removed in version 128.</td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">VP8</th>
       <td></td>
       <td></td>
-      <td>Yes</td>
+      <td></td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">VP9</th>
       <td></td>
       <td></td>
-      <td>Yes</td>
+      <td></td>
       <td></td>
     </tr>
   </tbody>
@@ -1156,6 +1156,10 @@ This can be used to offer various versions of a video that can be selected depen
 
 In the example shown here, a video is offered to the browser in two formats: WebM and MP4.
 
+The video is offered first in WebM format (with the [`type`](/en-US/docs/Web/HTML/Reference/Elements/source#type) attribute set to `video/webm`).
+If the {{Glossary("user agent")}} can't play that, it moves on to the next option, whose `type` is specified as `video/mp4`.
+If neither of those can be played, the text "This browser does not support the HTML video element." is presented.
+
 {{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
 
 ```html interactive-example
@@ -1169,10 +1173,6 @@ In the example shown here, a video is offered to the browser in two formats: Web
   video.
 </video>
 ```
-
-The video is offered first in WebM format (with the [`type`](/en-US/docs/Web/HTML/Reference/Elements/source#type) attribute set to `video/webm`).
-If the {{Glossary("user agent")}} can't play that, it moves on to the next option, whose `type` is specified as `video/mp4`.
-If neither of those can be played, the text "This browser does not support the HTML video element." is presented.
 
 ## Specifications
 

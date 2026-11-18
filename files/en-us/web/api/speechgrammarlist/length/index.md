@@ -8,7 +8,7 @@ status:
 browser-compat: api.SpeechGrammarList.length
 ---
 
-{{APIRef("Web Speech API")}}{{deprecated_header}}
+{{APIRef("Web Speech API")}}
 
 The **`length`** read-only property of the
 {{domxref("SpeechGrammarList")}} interface returns the number of

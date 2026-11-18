@@ -77,7 +77,7 @@ new Intl.DurationFormat("fr-FR", { style: "long" }).format(duration);
 new Intl.DurationFormat("en", { style: "short" }).format(duration);
 // "1 hr, 46 min and 40 sec"
 
-// With style set to "short" and locale set to "pt"
+// With style set to "narrow" and locale set to "pt"
 new Intl.DurationFormat("pt", { style: "narrow" }).format(duration);
 // "1 h 46 min 40 s"
 
@@ -114,7 +114,7 @@ new Intl.DurationFormat("en", { style: "digital", fractionalDigits: 5 }).format(
 new Intl.DurationFormat("en", { style: "digital", fractionalDigits: 3 }).format(
   duration,
 );
-// "11:30:12.346"
+// "11:30:12.345"
 ```
 
 ## Specifications

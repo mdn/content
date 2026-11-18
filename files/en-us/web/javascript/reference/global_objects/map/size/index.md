@@ -25,7 +25,7 @@ console.log(map.size);
 ## Description
 
 The value of `size` is an integer representing how many entries the `Map` object
-has. A set accessor function for `size` is `undefined`; you can not change this
+has. A set accessor function for `size` is `undefined`; you cannot change this
 property.
 
 ## Examples

@@ -143,7 +143,7 @@ The `scrollUpdater()` function will fire on `resize` and `scroll`, while `scroll
 
 ### Hiding an overlaid box on zoom
 
-This example, taken from the [Visual Viewport README](https://github.com/WICG/visual-viewport), shows how to write a bit of code that will hide an overlaid box (which might contain an advert, say) when the user zooms in. This is a nice way to improve the user experience when zooming in on pages. A [live sample](https://wicg.github.io/visual-viewport/examples/hide-on-zoom.html) is also available.
+This example, taken from the [Visual Viewport README](https://github.com/WICG/visual-viewport), shows how to write a bit of code that will hide an overlaid box (which might contain an advert, say) when the user zooms in. This is a nice way to improve the user experience when zooming in on pages. The [full example source](https://github.com/WICG/visual-viewport/blob/gh-pages/examples/hide-on-zoom.html) is also available.
 
 ```js
 const bottomBar = document.getElementById("bottom-bar");
@@ -158,7 +158,7 @@ window.visualViewport.addEventListener("resize", resizeHandler);
 
 ### Simulating position: device-fixed
 
-This example, also taken from the [Visual Viewport README](https://github.com/WICG/visual-viewport), shows how to use this API to simulate `position: device-fixed`, which fixes elements to the visual viewport. A [live sample](https://wicg.github.io/visual-viewport/examples/fixed-to-viewport.html) is also available.
+This example, also taken from the [Visual Viewport README](https://github.com/WICG/visual-viewport), shows how to use this API to simulate `position: device-fixed`, which fixes elements to the visual viewport. The [full example source](https://github.com/WICG/visual-viewport/blob/gh-pages/examples/fixed-to-viewport.html) is also available.
 
 ```js
 const bottomBar = document.getElementById("bottom-bar");

@@ -55,7 +55,7 @@ You can use different units for each value in your expression, if you wish. You 
 
 - Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables _may_ be treated as if `auto` had been specified.
 - It is permitted to nest `max()` and other `min()` functions as expression values. The expressions are full math expressions, so you can use direct addition, subtraction, multiplication and division without using the `calc()` function itself.
-- The expression can be values combining the addition ( + ), subtraction ( - ), multiplication ( \* ) and division ( / ) operators, using standard operator precedence rules. Make sure to put a space on each side of the + and - operands. The operands in the expression may be any `<length>` syntax value.
+- The expression can be values combining the addition (`+`), subtraction (`-`), multiplication (`*`), and division (`/`) operators, using standard operator precedence rules. Make sure to put a space on each side of the `+` and `-` operands.
 - You can (and often need to) combine `min()` and `max()` values, or use `min()` within a `clamp()` or `calc()` function.
 - You can provide more than two arguments, if you have multiple constraints to apply.
 
@@ -74,7 +74,7 @@ When using `min()` to set a maximum font size, ensure that the font can still be
 
 ### Setting a maximum size for a label and input
 
-Another use case for `min()` is to set a maximum size on responsive form controls: enabling the width of labels and inputs to shrink as the width of the form shrinks.
+Another use case for `min()` is to set a maximum size on responsive form controls: enabling the width of labels and inputs to shrink as the width of their container shrinks.
 
 Let's look at some CSS:
 
@@ -88,20 +88,20 @@ label {
   background-color: pink;
 }
 
-form {
+.container {
   margin: 4px;
   border: 1px solid black;
   padding: 4px;
 }
 ```
 
-Here, the form itself, along with the margin, border, and padding, will be 100% of its parent's width. We declare the input and label to be the lesser of 40% of the form width up to the padding or 400px wide, whichever is smaller. In other words, the widest that the label and input can be is 400px. The narrowest they will be is 40% of the form's width, which on a smartwatch's screen is very small.
+Here, the container itself, along with the margin, border, and padding, will be 100% of its parent's width. We declare the input and label to be the lesser of 40% of the container width up to the padding or 400px wide, whichever is smaller. In other words, the widest that the label and input can be is 400px. The narrowest they will be is 40% of the container's width, which on a smartwatch's screen is very small.
 
 ```html
-<form>
+<div class="container">
   <label for="misc">Type something:</label>
   <input type="text" id="misc" name="misc" />
-</form>
+</div>
 ```
 
 {{EmbedLiveSample("Setting_a_maximum_size_for_a_label_and_input", "100%", "110")}}

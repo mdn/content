@@ -8,10 +8,7 @@ browser-compat: api.BaseAudioContext.destination
 
 {{ APIRef("Web Audio API") }}
 
-The `destination` property of the {{ domxref("BaseAudioContext") }}
-interface returns an {{ domxref("AudioDestinationNode") }} representing the final
-destination of all audio in the context. It often represents an actual audio-rendering
-device such as your device's speakers.
+The **`destination`** read-only property of the {{domxref("BaseAudioContext")}} interface returns an {{ domxref("AudioDestinationNode") }} representing the final destination of all audio in the context. It often represents an actual audio-rendering device such as your device's speakers.
 
 ## Value
 

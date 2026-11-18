@@ -21,7 +21,7 @@ isVertexArray(vertexArray)
 ### Parameters
 
 - `vertexArray`
-  - : A {{domxref("WebGLVertexArrayObject")}} (VAO) object to test.
+  - : A {{domxref("WebGLVertexArrayObject")}} (VAO) object to test. Passing `null` returns `false`.
 
 ### Return value
 

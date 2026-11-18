@@ -3,13 +3,9 @@ title: "`corner-block-end-shape` CSS property"
 short-title: corner-block-end-shape
 slug: Web/CSS/Reference/Properties/corner-block-end-shape
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.corner-block-end-shape
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`corner-block-end-shape`** [CSS](/en-US/docs/Web/CSS) property specifies the shape of both the corners on a box's block-end edge, within their {{cssxref("border-radius")}} area.
 
@@ -17,7 +13,7 @@ For a full description of corner shape behavior and multiple examples, see the {
 
 ## Constituent properties
 
-The `corner-block-end-shape` property is a shorthand for the following logical properties:
+This property is a shorthand for the following logical properties:
 
 - {{cssxref("corner-end-start-shape")}}
 - {{cssxref("corner-end-end-shape")}}

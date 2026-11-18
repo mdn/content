@@ -33,6 +33,8 @@ The **`-webkit-text-stroke-width`** [CSS](/en-US/docs/Web/CSS) property specifie
 
 ### Values
 
+This property is specified as the following value:
+
 - `<line-width>`
   - : The width of the stroke.
 
@@ -47,6 +49,14 @@ The **`-webkit-text-stroke-width`** [CSS](/en-US/docs/Web/CSS) property specifie
 ## Examples
 
 ### Varying stroke widths
+
+#### HTML
+
+```html
+<p id="thin">Thin stroke</p>
+<p id="medium">Medium stroke</p>
+<p id="thick">Thick stroke</p>
+```
 
 #### CSS
 
@@ -68,14 +78,6 @@ p {
 #thick {
   -webkit-text-stroke-width: 1.5mm;
 }
-```
-
-#### HTML
-
-```html
-<p id="thin">Thin stroke</p>
-<p id="medium">Medium stroke</p>
-<p id="thick">Thick stroke</p>
 ```
 
 #### Results

@@ -55,3 +55,7 @@ No changes
 
 - Fixed a bug, which caused the commands `WebDriver:AcceptAlert` and `WebDriver:DismissAlert` to hang for user prompts as opened in a popup window ([Firefox bug 1721982](https://bugzil.la/1721982)).
 - Fixed an inappropriate handling of the `webSocketUrl` capability, which would return `true` if `webSocketUrl` was not supported ([Firefox bug 1713775](https://bugzil.la/1713775)).
+
+## Changes for add-on developers
+
+- The `menus` and `contextMenus` APIs now support the same values in {{WebExtAPIRef("menus.ContextType")}}. This means that `tools_menu` is also supported in the `contextMenus` namespace ([Firefox bug 1706398](https://bugzil.la/1706398#c11)).

@@ -14,11 +14,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("selectionchange", (event) => {})
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onselectionchange = (event) => {}
 ```
 
@@ -37,6 +41,9 @@ The `Document` object `selectionchange` event is fired when:
 
 The event object itself does not contain the updated selection details. You can retrieve the current selection by calling {{domxref("Document.getSelection()", "document.getSelection()")}} within your event listener.
 
+> [!NOTE]
+> When you change the selection programmatically, for example by calling {{domxref("Selection.collapse()")}}, the selection updates immediately, but the `selectionchange` event is queued as a task. Its listeners run later, after the current script finishes executing. This contrasts with events such as `focus` and `click`, whose listeners run synchronously when triggered by {{domxref("HTMLElement.focus()", "focus()")}} and {{domxref("HTMLElement.click()", "click()")}}, respectively.
+
 This event differs significantly from the `selectionchange` event fired on {{HTMLElement("input")}} and {{HTMLElement("textarea")}} text controls:
 
 - Document selections use DOM node positions and require {{domxref("Document.getSelection()")}} for inspection. Text inputs maintain independent selections within their internal text values, using character offsets inspected via `selectionStart`, `selectionEnd`, and `selectionDirection`.
@@ -54,7 +61,8 @@ document.addEventListener("selectionchange", () => {
   console.log(document.getSelection());
 });
 
-// onselectionchange version
+// onselectionchange version (but note that this replaces other event listeners
+// added using onselectionchange, if any)
 document.onselectionchange = () => {
   console.log(document.getSelection());
 };

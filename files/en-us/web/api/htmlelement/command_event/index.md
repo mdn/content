@@ -11,11 +11,15 @@ The **`command`** event of the {{domxref("HTMLElement")}} interface fires on an 
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("command", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 oncommand = (event) => { }
 ```
 
@@ -43,8 +47,8 @@ popover.addEventListener("command", (event) => {
 
 ### Event dispatch and cancellation
 
-It is worth pointing out that `command` events fire on the element being invoked. If the button is clicked, it will first dispatch a `click` event which, if cancelled, then the `command` event will not fire and the default behavior will not be run.
-In addition to cancelling the `click` event on the button, it is also possible to cancel the `command` event.
+It is worth pointing out that `command` events fire on the element being invoked. If the button is clicked, it will first dispatch a `click` event which, if canceled, then the `command` event will not fire and the default behavior will not be run.
+In addition to canceling the `click` event on the button, it is also possible to cancel the `command` event.
 
 For example:
 
@@ -56,7 +60,7 @@ button.addEventListener("click", (event) => {
 
 ```js
 element.addEventListener("command", (event) => {
-  event.preventDefault(); // the `command` event fires but the default behavior is cancelled
+  event.preventDefault(); // the `command` event fires but the default behavior is canceled
 });
 ```
 

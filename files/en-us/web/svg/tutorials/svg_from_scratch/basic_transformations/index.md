@@ -125,7 +125,7 @@ The resulting rectangular in the above example will be 100x100px. The more intri
 In contrast to HTML, SVG allows you to embed other `svg` elements seamlessly. This way you can also create new coordinate systems by utilizing the `viewBox`, `width` and `height` of the inner `svg` element.
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100">
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
   <svg width="100" height="100" viewBox="0 0 50 50">
     <rect width="50" height="50" />
   </svg>

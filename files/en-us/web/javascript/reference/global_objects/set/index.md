@@ -142,7 +142,7 @@ interface GPUSupportedFeatures {
 
 `Set`-like objects are either read-only or read-writable (see the `readonly` keyword in the IDL above).
 
-- Read-only `Set`-like objects have the property {{jsxref("Set/size", "size")}}, and the methods: {{jsxref("Set/entries", "entries()")}}, {{jsxref("Set/forEach", "forEach()")}}, {{jsxref("Set/has", "has()")}}, {{jsxref("Set/keys", "keys()")}}, {{jsxref("Set/values", "values()")}}, and [`Symbol.iterator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator).
+- Read-only `Set`-like objects have the property {{jsxref("Set/size", "size")}}, and the methods: {{jsxref("Set/entries", "entries()")}}, {{jsxref("Set/forEach", "forEach()")}}, {{jsxref("Set/has", "has()")}}, {{jsxref("Set/keys", "keys()")}}, {{jsxref("Set/values", "values()")}}, and [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator).
 - Writeable `Set`-like objects additionally have the methods: {{jsxref("Set/clear", "clear()")}}, {{jsxref("Set/delete", "delete()")}}, and {{jsxref("Set/add", "add()")}}.
 
 The methods and properties have the same behavior as the equivalent entities in `Set`, except for the restriction on the types of the entry.
@@ -418,7 +418,7 @@ console.assert(set.size === array.length);
 
 ## See also
 
-- [Polyfill of `Set` in `core-js`](https://github.com/zloirock/core-js#set)
+- [Polyfill of `Set` in `core-js`](https://core-js.io/docs/features/ecmascript/collections#h-set)
 - [es-shims polyfill of `Set`](https://www.npmjs.com/package/es-set)
 - {{jsxref("Map")}}
 - {{jsxref("WeakMap")}}

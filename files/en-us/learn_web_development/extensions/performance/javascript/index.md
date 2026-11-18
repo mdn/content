@@ -147,7 +147,7 @@ scriptElem.addEventListener("load", () => {
 document.head.append(scriptElem);
 ```
 
-JavaScript modules can be dynamically loaded using the {{jsxref("operators/import", "import()")}} function:
+JavaScript modules can be dynamically loaded using the {{jsxref("Operators/import", "import()")}} function:
 
 ```js
 import("./modules/myModule.js").then((module) => {

@@ -107,7 +107,7 @@ The `browser_action` key is an object that may have any of the following propert
 - `default_popup` {{optional_inline}}
   - : `String`. The path to an HTML file containing the specification of the popup.
 
-    The HTML file may include CSS and JavaScript files using `<link>` and `<script>` elements, just like a normal web page. However, `<script>` elements must have an `src` attribute to load a file. Don't use `<script>` with embedded code, because you'll get a confusing Content Violation Policy error.
+    The HTML file may include CSS and JavaScript files using `<link>` and `<script>` elements, just like a normal web page. However, `<script>` elements must have an `src` attribute to load a file. Don't use `<script>` with embedded code, because you'll get a confusing Content Security Policy error.
 
     Unlike a normal web page, JavaScript running in the popup can access all the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) (subject to the extension having the appropriate [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)). This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 

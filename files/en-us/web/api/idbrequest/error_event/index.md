@@ -12,11 +12,15 @@ The `error` handler is executed when an error caused a request to fail. In the `
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("error", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onerror = (event) => { }
 ```
 
@@ -74,7 +78,7 @@ DBOpenRequest.addEventListener("success", (event) => {
 });
 ```
 
-The same example, using the `onerror` property instead of `addEventListener()`:
+The same example, using the `onerror` property instead of `addEventListener()` (but note that this replaces other event listeners added using `onerror`, `onupgradeneeded`, and `onsuccess`, if any):
 
 ```js
 // Open the database
