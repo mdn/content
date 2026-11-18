@@ -157,8 +157,8 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
 - `Iterator.prototype[Symbol.toStringTag]`
   - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Iterator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
-    > [!NOTE]
-    > Unlike the `[Symbol.toStringTag]` on most built-in classes, `Iterator.prototype[Symbol.toStringTag]` is writable for web compatibility reasons.
+> [!NOTE]
+> Unlike most other built-in classes, the `constructor` and `[Symbol.toStringTag]` properties of `Iterator.prototype` are implemented as getter-setter pairs and not ordinary data properties. This is because of a [web compatibility issue](https://github.com/tc39/proposal-iterator-helpers/issues/286). The setter mimics a non-writable data property (assigning to it fails) but allows subclasses to create their own such properties via assignment.
 
 ## Instance methods
 
