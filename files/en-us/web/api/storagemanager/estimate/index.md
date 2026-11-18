@@ -37,9 +37,7 @@ A {{jsxref('Promise')}} that resolves to an object with the following properties
 > The returned values are not exact: between compression, deduplication, and obfuscation for security reasons, they will be imprecise.
 
 > [!NOTE]
-> In Firefox, `usage` and `quota` are scoped to the origin's _group_ — the set of origins that share the same [eTLD+1](/en-US/docs/Glossary/eTLD) (a "site") — rather than to the single origin. So `usage` is the total used by every origin in the group and `quota` is the group's limit, not the calling origin's alone.
->
-> The exception is an origin that has been granted [persistent storage](/en-US/docs/Web/API/StorageManager/persist) with {{domxref("StorageManager.persist()")}}. Such an origin is exempt from the per-group limit, so Firefox reports that origin's own `usage` measured against the global, device-derived temporary-storage `quota` instead of the group's values.
+> In Firefox, `quota` is the limit shared by all origins of the same {{Glossary("site")}}, called the _group limit_, rather than a limit for the single origin. Origins that have been granted persistent storage with {{domxref("StorageManager.persist()")}} aren't subject to the group limit, so for them `quota` is the global storage limit instead. See [Storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#firefox) for how these limits are calculated.
 
 You may find that the `quota` varies from origin to origin. This variance is based on factors such as:
 
