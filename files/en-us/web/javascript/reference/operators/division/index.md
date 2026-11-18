@@ -34,9 +34,14 @@ x / y
 
 The `/` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt division if both operands become BigInts; otherwise, it performs number division. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
 
-When the mathematical result is 0, `0` is returned when the two operands have the same sign, and `-0` is returned otherwise. When both operands are `0` or `-0`, `NaN` is returned. When only the divisor is `0` or `-0`, `Infinity` is returned when the two operands have the same sign, and `-Infinity` is returned otherwise.
+When numeric division is performed, the results are generally consistent with mathematics (save for rounding errors), including interactions with `Infinity` (e.g., `Infinity` divided by any finite positive number is still `Infinity`). The result's sign is positive when both operands have the same sign, and negative otherwise (`0` and `-0` have different signs). Some edge cases:
 
-For BigInt division, the result is the quotient of the two operands truncated towards zero, and the remainder is discarded. A {{jsxref("RangeError")}} is thrown if the divisor `y` is `0n`. This is because number division by zero returns `Infinity` or `-Infinity`, but BigInt has no concept of infinity.
+- If either operand is `NaN`, the result is `NaN`
+- If both operands are ±Infinity, the result is `NaN`
+- If both operands are ±0, the result is `NaN`
+- If only `y` is ±0, the result is ±Infinity depending on the signs of `x` and `y` (0 in this context is interpreted as an infinitestimally small value)
+
+For BigInt division, the result is the quotient of the two operands truncated towards zero, and the remainder is discarded. A {{jsxref("RangeError")}} is thrown if the divisor `y` is `0n`. This is because number division by zero returns `Infinity`, `-Infinity`, or `NaN`, but BigInt has no concept of infinity.
 
 ## Examples
 
