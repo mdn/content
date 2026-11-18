@@ -13,9 +13,9 @@ The machine's processor architecture.
 Values of this type are strings. Possible values are:
 
 - `"arm"`
-  - : The platform is based on the ARM 32-bit architecture. Safari used to return this value for both 32-bit and 64-bit architecture.
+  - : The platform is based on the ARM 32-bit architecture.
 - `"arm64"`
-  - : The platform is based on the ARM 64-bit architecture. Firefox older than version 160, used to return `"aarch64"`. Old versions of Safari return `"arm"` even on 64-bit platforms.
+  - : The platform is based on the ARM 64-bit architecture. Firefox versions older than version 160 used to return `"aarch64"`. Old versions of Safari return `"arm"` even on 64-bit platforms.
 - `"mips"`
   - : The platform is based on the 32-bit MIPS instruction set architecture (ISA).
 - `"mips64"`
