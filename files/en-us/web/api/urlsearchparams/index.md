@@ -239,6 +239,6 @@ console.log(noEquals.toString()); // 'foo=&bar=baz'
 
 ## See also
 
-- [Polyfill of `URLSearchParams` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [Polyfill of `URLSearchParams` in `core-js`](https://core-js.io/docs/features/web-standards/url)
 - The {{domxref("URL")}} interface.
 - [Google Developers: Easy URL manipulation with URLSearchParams](https://developer.chrome.com/blog/urlsearchparams/)

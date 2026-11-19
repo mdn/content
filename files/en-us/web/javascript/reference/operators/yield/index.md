@@ -54,7 +54,7 @@ The `yield` keyword pauses generator function execution and the value of the exp
 
 Calling a generator function constructs a {{jsxref("Generator")}} object. Each time the generator's {{jsxref("Generator/next", "next()")}} method is called, the generator resumes execution, and runs until it reaches one of the following:
 
-- A `yield` expression. In this case, the generator pauses, and the `next()` method return an [iterator result](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) object with two properties: `value` and `done`. The `value` property is the value of the expression after the `yield` operator, and `done` is `false`, indicating that the generator function has not fully completed.
+- A `yield` expression. In this case, the generator pauses, and the `next()` method returns an [iterator result](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) object with two properties: `value` and `done`. The `value` property is the value of the expression after the `yield` operator, and `done` is `false`, indicating that the generator function has not fully completed.
 - The end of the generator function. In this case, execution of the generator ends, and the `next()` method returns an iterator result object where the `value` is {{jsxref("undefined")}} and `done` is `true`.
 - A {{jsxref("Statements/return", "return")}} statement. In this case, execution of the generator ends, and the `next()` method returns an iterator result object where the `value` is the specified return value and `done` is `true`.
 - A {{jsxref("Statements/throw", "throw")}} statement. In this case, execution of the generator halts entirely, and the `next()` method throws the specified exception.

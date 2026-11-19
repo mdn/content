@@ -65,6 +65,8 @@ Our [learn web development core modules](/en-US/docs/Learn_web_development/Core)
   - : Explanation of the widely misunderstood and underestimated prototype-based inheritance.
 - [Memory Management](/en-US/docs/Web/JavaScript/Guide/Memory_management)
   - : Memory life cycle and garbage collection in JavaScript.
+- [Agent communication and coordination](/en-US/docs/Web/JavaScript/Guide/Agent_communication_and_coordination)
+  - : Sharing memory and coordinating access with `SharedArrayBuffer`, `Atomics`, and `postMessage()`.
 
 ## Reference
 

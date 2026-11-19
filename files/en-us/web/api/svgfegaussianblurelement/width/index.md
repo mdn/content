@@ -35,7 +35,8 @@ console.log(horizontalSize.baseVal.value); // the `width` value
 ## See also
 
 - {{domxref("SVGFEGaussianBlurElement.height")}}
-- [SVG filter tutorial](/en-US/docs/Web/SVG/Guides/SVG_filters)
+- [Applying effects with SVG filters](/en-US/docs/Web/SVG/Guides/Filters)
 - CSS {{cssxref("blend-mode")}} data type
 - CSS {{cssxref("filter-function/blur", "blur()")}} function
-- [CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module- CSS {{cssxref("mix-blend-mode")}} property
+- [CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module
+- CSS {{cssxref("mix-blend-mode")}} property

@@ -198,7 +198,7 @@ console.log(Array.from.call({}, { length: 1, 0: "foo" })); // [ 'foo' ]
 
 ## See also
 
-- [Polyfill of `Array.from` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.from` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.from`](https://www.npmjs.com/package/array.from)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

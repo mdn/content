@@ -43,14 +43,6 @@ This example uses the obsolete `<big>` element to increase the size of some text
 
 This example uses the CSS {{cssxref("font-size")}} property to increase the font size by one level.
 
-#### CSS
-
-```css
-.bigger {
-  font-size: larger;
-}
-```
-
 #### HTML
 
 ```html
@@ -58,6 +50,14 @@ This example uses the CSS {{cssxref("font-size")}} property to increase the font
   This is the first sentence.
   <span class="bigger">This whole sentence is in bigger letters.</span>
 </p>
+```
+
+#### CSS
+
+```css
+.bigger {
+  font-size: larger;
+}
 ```
 
 #### Result

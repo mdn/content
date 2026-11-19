@@ -5,23 +5,25 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_author_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_BookInstance_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms")}}
+
 This subarticle shows how to define a page/form to create `Book` objects. This is a little more complicated than the equivalent `Author` or `Genre` pages because we need to get and display available `Author` and `Genre` records in our `Book` form.
 
 ## Import validation and sanitization methods
 
-Open **/controllers/bookController.js**, and add the following line at the top of the file (before the route functions):
+Open **controllers/bookController.js**, and add the following line at the top of the file (before the route functions):
 
 ```js
-const { body, validationResult } = require("express-validator");
+import { body, validationResult } from "express-validator";
 ```
 
 ## Controller—get route
 
-Find the exported `book_create_get()` controller method and replace it with the following code:
+Find the exported `bookCreateGet()` controller method and replace it with the following code:
 
 ```js
 // Display book create form on GET.
-exports.book_create_get = async (req, res, next) => {
+export const bookCreateGet = async (req, res, next) => {
   // Get all authors and genres, which we can use for adding to our book.
   const [allAuthors, allGenres] = await Promise.all([
     Author.find().sort({ family_name: 1 }).exec(),
@@ -41,11 +43,11 @@ These are then passed to the view **`book_form.pug`** as variables named `author
 
 ## Controller—post route
 
-Find the exported `book_create_post()` controller method and replace it with the following code.
+Find the exported `bookCreatePost()` controller method and replace it with the following code.
 
 ```js
 // Handle book create on POST.
-exports.book_create_post = [
+export const bookCreatePost = [
   // Convert the genre to an array.
   (req, res, next) => {
     if (!Array.isArray(req.body.genre)) {
@@ -161,7 +163,7 @@ for (const genre of allGenres) {
 
 ## View
 
-Create **/views/book_form.pug** and copy in the text below.
+Create **views/book_form.pug** and paste in the text below.
 
 ```pug
 extends layout
@@ -226,8 +228,4 @@ Run the application, open your browser to `http://localhost:3000/`, then select 
 
 ![Screenshot of empty Local library Create Book form on localhost:3000. The page is divided into two columns. The narrow left column has a vertical navigation bar with 10 links separated into two sections by a light-colored horizontal line. The top section link to already created data. The bottom links go to create new data forms. The wide right column has the create book form with a 'Create Book' heading and four input fields labeled 'Title', 'Author', 'Summary', 'ISBN' and 'Genre' followed by four genre checkboxes: fantasy, science fiction, french poetry and action. There is a 'Submit' button at the bottom of the form.](locallibary_express_book_create_empty.png)
 
-## Next steps
-
-Return to [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms).
-
-Proceed to the next subarticle of part 6: [Create BookInstance form](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_BookInstance_form).
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_author_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_BookInstance_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms")}}

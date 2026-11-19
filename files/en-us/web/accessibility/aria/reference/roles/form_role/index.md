@@ -114,7 +114,7 @@ Use an `aria-labelledby`, `aria-label` or `title` on the same element that was g
 
 #### Redundant descriptions
 
-Screen readers will announce the type of role the landmark is. Because of this, you do not need to describe what the landmark is in its label. For example, a declaration of `role="form"` with an of `aria-label="Contact form"` may be announced redundantly as, "contact form form".
+Screen readers will announce the type of role the landmark is. Because of this, you do not need to describe what the landmark is in its label. For example, a declaration of `role="form"` with an `aria-label="Contact form"` may be announced redundantly as, "contact form form".
 
 ## Best practices
 

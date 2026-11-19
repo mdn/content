@@ -73,6 +73,7 @@ class Resource {
 
 ## See also
 
+- [Polyfill of `DisposableStack.prototype.dispose` in `core-js`](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
 - {{jsxref("DisposableStack")}}
 - {{jsxref("DisposableStack.prototype.adopt()")}}

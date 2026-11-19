@@ -162,7 +162,7 @@ Here, we introduce several use cases with examples.
 
 ### Avoid polluting the global namespace in script code
 
-The top-level scope of all scripts is shared, which could include many functions and global variables from different files, so to avoid name conflicts, it's important to limit the number of globally declared names (this is greatly mitigated in [modules](/en-US/docs/Web/JavaScript/Guide/Modules#other_differences_between_modules_and_classic_scripts), but sometimes limiting the scope of temporary variables is still useful, especially when the file is very long). If we have some initialization code that we don't need to use again, we could use the IIFE pattern, which is better than using a function declaration or a function expression because it ensures that the code is only run here and once.
+The top-level scope of all scripts is shared, which could include many functions and global variables from different files, so to avoid name conflicts, it's important to limit the number of globally declared names (this is greatly mitigated in [modules](/en-US/docs/Web/JavaScript/Guide/Modules#module_philosophy), but sometimes limiting the scope of temporary variables is still useful, especially when the file is very long). If we have some initialization code that we don't need to use again, we could use the IIFE pattern, which is better than using a function declaration or a function expression because it ensures that the code is only run here and once.
 
 ```js
 // top-level of a script (not a module)
@@ -214,8 +214,7 @@ console.log(secondAccount.withdraw(20)); // 0
 ### For loop with var before ES6
 
 We could see the following use of IIFE in some old code, before the introduction of the block-scoped `let` and `const` declarations. With the statement `var`, we have only function scopes and the global scope.
-Suppose we want to create 2 buttons with the texts Button 0 and Button 1 and when we click
-them, we would like them to alert 0 and 1. The following code doesn't work:
+Suppose we want to create 2 buttons with labels "Button 0" and "Button 1", and when we click them, we want them to log 0 and 1. The following code doesn't work:
 
 ```js
 for (var i = 0; i < 2; i++) {
@@ -229,8 +228,7 @@ for (var i = 0; i < 2; i++) {
 console.log(i); // 2
 ```
 
-When clicked, both Button 0 and Button 1 alert 2 because `i` is global,
-with the last value 2. To fix this problem before ES6, we could use the IIFE pattern:
+When clicked, both buttons log `2` because `i` is global, with the last value being `2`. To fix this problem before ES6, we could use the IIFE pattern:
 
 ```js
 for (var i = 0; i < 2; i++) {
@@ -246,7 +244,7 @@ for (var i = 0; i < 2; i++) {
 console.log(i); // 2
 ```
 
-When clicked, Buttons 0 and 1 alert 0 and 1. The variable `i` is globally defined. Using the statement `let`, we could simply do:
+When clicked, Buttons 0 and 1 log `0` and `1`. The variable `i` is globally defined. Using the statement `let`, we could do this:
 
 ```js
 for (let i = 0; i < 2; i++) {
@@ -260,7 +258,7 @@ for (let i = 0; i < 2; i++) {
 console.log(i); // Uncaught ReferenceError: i is not defined.
 ```
 
-When clicked, these buttons alert 0 and 1.
+When clicked, these buttons log 0 and 1.
 
 ### Control flow statements in expression positions
 

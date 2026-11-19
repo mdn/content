@@ -138,6 +138,17 @@ grid-template: unset;
 
 ### Defining a grid template
 
+#### HTML
+
+```html
+<div id="page">
+  <header>Header</header>
+  <nav>Navigation</nav>
+  <main>Main area</main>
+  <footer>Footer</footer>
+</div>
+```
+
 #### CSS
 
 ```css
@@ -171,17 +182,6 @@ footer {
   background-color: red;
   grid-area: foot;
 }
-```
-
-#### HTML
-
-```html
-<div id="page">
-  <header>Header</header>
-  <nav>Navigation</nav>
-  <main>Main area</main>
-  <footer>Footer</footer>
-</div>
 ```
 
 #### Result

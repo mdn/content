@@ -103,31 +103,25 @@ In this section, we'll look at basic and then more complex uses of `<input type=
 The most basic use of `<input type="date">` involves one `<input>` combined with its {{htmlelement("label")}}, as seen below:
 
 ```html
-<form action="https://example.com">
-  <label>
-    Enter your birthday:
-    <input type="date" name="bday" />
-  </label>
-
-  <p><button>Submit</button></p>
-</form>
+<label>
+  Enter your birthday:
+  <input type="date" name="bday" />
+</label>
 ```
 
 {{EmbedLiveSample('Basic_uses_of_date', 600, 40)}}
 
-This HTML submits the entered date under the key `bday` to `https://example.com` — resulting in a URL like `https://example.com/?bday=1955-06-08`.
+If this input is included in a form submitted to `https://example.com` using the `GET` method, the entered date is sent under the key `bday` — resulting in a URL like `https://example.com/?bday=1955-06-08`.
 
 ### Setting maximum and minimum dates
 
 You can use the [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) and [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max) attributes to restrict the dates that can be chosen by the user. In the following example, we set a minimum date of `2017-04-01` and a maximum date of `2017-04-30`:
 
 ```html
-<form>
-  <label>
-    Choose your preferred party date:
-    <input type="date" name="party" min="2017-04-01" max="2017-04-30" />
-  </label>
-</form>
+<label>
+  Choose your preferred party date:
+  <input type="date" name="party" min="2017-04-01" max="2017-04-30" />
+</label>
 ```
 
 {{EmbedLiveSample('Setting_maximum_and_minimum_dates', 600, 40)}}
@@ -169,6 +163,12 @@ Let's look at an example of minimum and maximum dates, and also make a field req
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 If you try to submit the form with an incomplete date (or with a date outside the set bounds), the browser displays an error. Try playing with the example now:
 
 {{EmbedLiveSample('Validation', 600, 100)}}
@@ -206,13 +206,11 @@ In this example, we create a date picker using the native `<input type="date">` 
 The HTML looks like so:
 
 ```html
-<form>
-  <div class="nativeDatePicker">
-    <label for="bday">Enter your birthday:</label>
-    <input type="date" id="bday" name="bday" />
-    <span class="validity"></span>
-  </div>
-</form>
+<div class="nativeDatePicker">
+  <label for="bday">Enter your birthday:</label>
+  <input type="date" id="bday" name="bday" />
+  <span class="validity"></span>
+</div>
 ```
 
 ### CSS

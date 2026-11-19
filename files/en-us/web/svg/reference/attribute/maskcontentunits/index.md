@@ -12,6 +12,32 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement('mask')}}
 
+## mask
+
+For {{SVGElement("mask")}}, `maskContentUnits` defines the coordinate system in use for the content of the element.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>userSpaceOnUse</code> | <code>objectBoundingBox</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>userSpaceOnUse</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+- `userSpaceOnUse`
+  - : This value indicates that all coordinates inside the {{SVGElement('mask')}} element refer to the user coordinate system as defined when the mask was created.
+- `objectBoundingBox`
+  - : This value indicates that all coordinates inside the {{SVGElement('mask')}} element are relative to the bounding box of the element the mask is applied to. A bounding box could be considered the same as if the content of the {{ SVGElement("mask") }} were bound to a `"0 0 1 1"` {{ SVGAttr("viewBox") }}.
+
 ## Example
 
 ```css hidden
@@ -51,32 +77,6 @@ svg {
 ```
 
 {{EmbedLiveSample("Example", '100%', 200)}}
-
-## mask
-
-For {{SVGElement("mask")}}, `maskContentUnits` defines the coordinate system in use for the content of the element.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td><code>userSpaceOnUse</code> | <code>objectBoundingBox</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>userSpaceOnUse</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-- `userSpaceOnUse`
-  - : This value indicates that all coordinates inside the {{SVGElement('mask')}} element refer to the user coordinate system as defined when the mask was created.
-- `objectBoundingBox`
-  - : This value indicates that all coordinates inside the {{SVGElement('mask')}} element are relative to the bounding box of the element the mask is applied to. A bounding box could be considered the same as if the content of the {{ SVGElement("mask") }} were bound to a `"0 0 1 1"` {{ SVGAttr("viewBox") }}.
 
 ## Specifications
 

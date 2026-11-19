@@ -85,7 +85,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
         If you search for "You may", the match needs to be described by two rectangles:
 
-        ![This domain is established to be used for illustrative examples in documents. You may use this domain in examples without prior coordination or asking for permission.". The words "you may" are highlighted.](rects-2.png)
+        ![Text reading "This domain is established to be used for illustrative examples in documents. You may use this domain in examples without prior coordination or asking for permission." The words "you may" are highlighted.](rects-2.png)
 
         In this case, in the `RectData` that describes this match, `rectsAndTexts.rectList` and `rectsAndTexts.textList` will each have 2 items.
         - `textList[0]` will contain "You ", and `rectList[0]` will contain its bounding rectangle.

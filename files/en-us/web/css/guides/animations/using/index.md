@@ -168,7 +168,7 @@ Let's add another keyframe to the previous example's animation. Let's say we wan
 
 The full code now looks like this:
 
-```css
+```css live-sample___adding-another-keyframe-animation
 p {
   animation-duration: 3s;
   animation-name: slide-in;
@@ -206,7 +206,7 @@ p span {
 
 We've added a {{htmlelement("span")}} around "Alice":
 
-```html
+```html live-sample___adding-another-keyframe-animation
 <p>
   The Caterpillar and <span>Alice</span> looked at each other for some time in
   silence: at last the Caterpillar took the hookah out of its mouth, and
@@ -219,7 +219,7 @@ This tells the browser the name should be normal for the first and last 25% of t
 > [!NOTE]
 > Reload page to see the animation.
 
-{{EmbedLiveSample("Adding_another_keyframe","100%","250")}}
+{{EmbedLiveSample("adding-another-keyframe-animation","100%","250")}}
 
 ### Repeating the animation
 

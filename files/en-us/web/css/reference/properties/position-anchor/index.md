@@ -59,6 +59,8 @@ To cancel a previously-made association between an anchor-positioned element and
 
 To tether a positioned element to its anchor, it must be placed relative to an anchor element using an anchor positioning feature, such as the {{cssxref("anchor()")}} function (set as a value on {{glossary("inset properties")}}) or the {{cssxref("position-area")}} property.
 
+When positioning elements relative to [implicit anchors](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#implicit_anchor_association) using `anchor()`, set `position-anchor: auto` on the anchor-positioned element to opt in to the implicit association. See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more information.
+
 If the associated anchor is hidden, for example with {{cssxref("display", "display: none")}} or {{cssxref("visibility", "visibility: hidden")}}, or if it is part of the [skipped contents](/en-US/docs/Web/CSS/Guides/Containment/Using#skips_its_contents) of another element due to it having {{cssxref("content-visibility", "content-visibility: hidden")}} set on it, the anchor positioned element will not be displayed.
 
 The `position-anchor` property is supported on all elements that are positioned, including [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) like {{cssxref("::before")}} and {{cssxref("::after")}}. Pseudo elements are implicitly anchored to the same element as the pseudo-element's originating element, unless otherwise specified.
@@ -305,7 +307,7 @@ input.addEventListener("input", (event) => {
 
 The output is anchored to the thumb. Change the value and the output will remain above and to the right of the thumb, no matter where it is along the slider.
 
-{{ EmbedLiveSample("A range thumb as anchor", "100%", "225") }}
+{{ EmbedLiveSample("using_a_slider_thumb_as_an_anchor", "100%", "225") }}
 
 > [!NOTE]
 > The anchor positioning CSS for this demo currently doesn't work in Firefox. The slider's thumb can be targeted via the {{cssxref("::-moz-range-thumb")}} pseudo-element in Firefox, but it is currently not available as an anchor (see [Firefox bug 1993699](https://bugzil.la/1993699)).

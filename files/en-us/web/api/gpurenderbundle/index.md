@@ -27,9 +27,8 @@ A good example is VR rendering. Recording the rendering as a render bundle and t
 In the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer/), a lot of like operations are done on many different objects simultaneously. A render bundle is encoded using the following function:
 
 ```js
-function recordRenderPass(
-  passEncoder: GPURenderBundleEncoder | GPURenderPassEncoder
-) {
+// passEncoder is a GPURenderBundleEncoder or a GPURenderPassEncoder
+function recordRenderPass(passEncoder) {
   if (settings.dynamicOffsets) {
     passEncoder.setPipeline(dynamicPipeline);
   } else {

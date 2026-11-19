@@ -22,11 +22,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("addstream", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onaddstream = (event) => { }
 ```
 
@@ -38,7 +42,7 @@ A {{domxref("MediaStreamEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Examples
 
-This example looks to determine if the user's browser supports the {{domxref("RTCPeerConnection.track_event", "track")}} event. If it does, a `track` event listener is set up; otherwise, an `addstream` event listener is set up. `pc` is an `RTCPeerConnection`.
+This example looks to determine if the user's browser supports the {{domxref("RTCPeerConnection.track_event", "track")}} event. If it does, a `track` event listener is set up; otherwise, an `addstream` event listener is set up. `pc` is an `RTCPeerConnection`. This example uses the `ontrack` and `onaddstream` event handler properties (but note that this replaces other event listeners added using `ontrack` and `onaddstream`, if any).
 
 ```js
 if (pc.addTrack !== undefined) {

@@ -85,7 +85,7 @@ console.log(set2.isSubsetOf(set1)); // true
 
 ## See also
 
-- [Polyfill of `Set.prototype.isSubsetOf` in `core-js`](https://github.com/zloirock/core-js#new-set-methods)
+- [Polyfill of `Set.prototype.isSubsetOf` in `core-js`](https://core-js.io/docs/features/ecmascript/collections#h-set)
 - [es-shims polyfill of `Set.prototype.isSubsetOf`](https://www.npmjs.com/package/set.prototype.issubsetof)
 - {{jsxref("Set.prototype.difference()")}}
 - {{jsxref("Set.prototype.intersection()")}}

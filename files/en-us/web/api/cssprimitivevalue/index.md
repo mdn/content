@@ -70,7 +70,7 @@ _Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
 - {{DOMxRef("CSSPrimitiveValue.getFloatValue()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : This method is used to get a float value in a specified unit. If this CSS value doesn't contain a float value or can't be converted into the specified unit, a {{DOMxRef("DOMException")}} is raised.
 - {{DOMxRef("CSSPrimitiveValue.getRGBColorValue()")}} {{Deprecated_Inline}} {{non-standard_inline}}
-  - : This method is used to get the RGB color. If this CSS value doesn't contain a RGB color value, a {{DOMxRef("DOMException")}} is raised. Modification to the corresponding style property can be achieved using the {{DOMxRef("RGBColor")}} interface.
+  - : This method is used to get the RGB color. If this CSS value doesn't contain an RGB color value, a {{DOMxRef("DOMException")}} is raised. Modification to the corresponding style property can be achieved using the {{DOMxRef("RGBColor")}} interface.
 - {{DOMxRef("CSSPrimitiveValue.getRectValue()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : This method is used to get the Rect value. If this CSS value doesn't contain a rect value, a {{DOMxRef("DOMException")}} is raised. Modification to the corresponding style property can be achieved using the {{DOMxRef("Rect")}} interface.
 - {{DOMxRef("CSSPrimitiveValue.getStringValue()")}} {{Deprecated_Inline}} {{non-standard_inline}}

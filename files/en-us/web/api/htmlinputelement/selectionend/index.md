@@ -12,21 +12,13 @@ The **`selectionEnd`** property of the {{domxref("HTMLInputElement")}} interface
 
 ## Value
 
-A non-negative number.
+A non-negative number, representing the zero-based index of the character immediately following the last selected character in a text `<input>`. When nothing is selected, the value of both {{domxref("HTMLInputElement.selectionStart", "selectionStart")}} and `selectionEnd` is the position of the cursor (caret) inside the `<input>` element.
 
-## Description
-
-The `selectionEnd` property is a number representing the zero-based index of the character immediately following the last selected character in a text `<input>`. The property can be used to retrieve or set the end position.
-
-When nothing is selected, the value of both {{domxref("HTMLInputElement.selectionStart", "selectionStart")}} and `selectionEnd` is the position of the cursor (caret) inside the `<input>` element.
-
-Setting `selectionEnd` to a value less than the current value of `selectionStart` updates both properties to the new value. Values greater than the length of the input's value are treated as the end of the value.
-
-The `selectionEnd` property applies only to inputs of types `text`, `search`, `url`, `tel`, and `password`. On other input types, reading the property returns `null`, and setting it throws an `InvalidStateError` {{domxref("DOMException")}}.
+Setting `selectionEnd` to a value less than the current value of `selectionStart` updates both properties to the new value. Values greater than the length of the input's value are treated as the end of the value. Setting `selectionEnd` to a new value fires the {{domxref("HTMLInputElement.selectionchange_event", "selectionchange")}} and {{domxref("HTMLInputElement.select_event", "select")}} events.
 
 The property value can be retrieved and set without the `<input>` having focus, but the element must have focus for the {{cssxref("::selection")}} pseudo-element to match the selected text.
 
-Setting `selectionEnd` to a new value fires the {{domxref("HTMLInputElement.selectionchange_event", "selectionchange")}} and {{domxref("HTMLInputElement.select_event", "select")}} events.
+The `selectionEnd` property applies only to inputs of types `text`, `search`, `url`, `tel`, and `password`. On other input types, reading the property returns `null`, and setting it throws an `InvalidStateError` {{domxref("DOMException")}}.
 
 ## Examples
 

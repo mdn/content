@@ -105,7 +105,7 @@ In a [treegrid](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role
 - [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex)
   - : Identifies the position of an element in relation to the rest of the table-style grouping of information's rows.
 
-### Examples
+## Examples
 
 The following example creates a table-style grouping of information:
 

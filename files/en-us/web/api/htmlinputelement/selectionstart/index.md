@@ -12,21 +12,13 @@ The **`selectionStart`** property of the {{domxref("HTMLInputElement")}} interfa
 
 ## Value
 
-A non-negative number.
+A non-negative number, representing the zero-based index of the first selected character in a text `<input>`. When nothing is selected, the value of both `selectionStart` and {{domxref("HTMLInputElement.selectionEnd", "selectionEnd")}} is the position of the cursor (caret) inside the `<input>` element.
 
-## Description
-
-The `selectionStart` property is a number representing the zero-based index of the first selected character in a text `<input>`. The property can be used to retrieve or set the start position.
-
-When nothing is selected, the value of both `selectionStart` and {{domxref("HTMLInputElement.selectionEnd", "selectionEnd")}} is the position of the cursor (caret) inside the `<input>` element.
-
-Setting `selectionStart` to a value greater than the current value of `selectionEnd` updates both properties to the new value. Values greater than the length of the input's value are treated as the end of the value.
-
-The `selectionStart` property applies only to inputs of types `text`, `search`, `url`, `tel`, and `password`. On other input types, reading the property returns `null`, and setting it throws an `InvalidStateError` {{domxref("DOMException")}}.
+Setting `selectionStart` to a value greater than the current value of `selectionEnd` updates both properties to the new value. Values greater than the length of the input's value are treated as the end of the value. Setting `selectionStart` to a new value fires the {{domxref("HTMLInputElement.selectionchange_event", "selectionchange")}} and {{domxref("HTMLInputElement.select_event", "select")}} events.
 
 The property value can be retrieved and set without the `<input>` having focus, but the element must have focus for the {{cssxref("::selection")}} pseudo-element to match the selected text.
 
-Setting `selectionStart` to a new value fires the {{domxref("HTMLInputElement.selectionchange_event", "selectionchange")}} and {{domxref("HTMLInputElement.select_event", "select")}} events.
+The `selectionStart` property applies only to inputs of types `text`, `search`, `url`, `tel`, and `password`. On other input types, reading the property returns `null`, and setting it throws an `InvalidStateError` {{domxref("DOMException")}}.
 
 ## Examples
 

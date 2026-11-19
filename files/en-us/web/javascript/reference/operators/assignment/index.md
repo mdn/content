@@ -119,7 +119,7 @@ foo = "f"; // In non-strict mode, assumes you want to create a property named `f
 Object.hasOwn(globalThis, "foo"); // true
 ```
 
-In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#assigning_to_undeclared_variables), assignment to an unqualified identifier in strict mode will result in a `ReferenceError`, to avoid the accidental creation of properties on the global object.
+In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#assigning_to_undeclared_variables), assignment to an undeclared identifier will result in a `ReferenceError`, to avoid the accidental creation of properties on the global object.
 
 Note that the implication of the above is that, contrary to popular misinformation, JavaScript does not have implicit or undeclared variables. It just conflates the global object with the global scope and allows omitting the global object qualifier during property creation.
 

@@ -16,11 +16,11 @@ The solution is simple, and it involves using an audio node type that, at first 
 
 Using a `ConstantSourceNode` is an effortless way to do something that sounds like it might be hard. You need to create a {{domxref("ConstantSourceNode")}} and connect it to all of the {{domxref("AudioParam")}}s whose values should be linked to always match each other. Since `ConstantSourceNode`'s {{domxref("ConstantSourceNode.offset", "offset")}} value is sent straight through to all of its outputs, it acts as a splitter for that value, sending it to each connected parameter.
 
-The diagram below shows how this works; an input value, `N`, is set as the value of the {{domxref("ConstantSourceNode.offset")}} property. The `ConstantSourceNode` can have as many outputs as necessary; in this case, we've connected it to three nodes: two {{domxref("GainNode")}}s and a {{domxref("StereoPannerNode")}}. So `N` becomes the value of the specified parameter ({{domxref("GainNode.gain", "gain")}} for the {{domxref("GainNode")}}s and pan for the {{domxref("StereoPannerNode")}}.
+The diagram below shows how this works; an input value, `N`, is set as the value of the {{domxref("ConstantSourceNode.offset")}} property. The `ConstantSourceNode` can have as many outputs as necessary; in this case, we've connected it to three nodes: two {{domxref("GainNode")}}s and a {{domxref("StereoPannerNode")}}. So `N` becomes the value of the specified parameter ({{domxref("GainNode.gain", "gain")}} for the {{domxref("GainNode")}}s and pan for the {{domxref("StereoPannerNode")}}).
 
 ![Diagram in SVG showing how ConstantSourceNode can be used to split an input parameter to share it with multiple nodes.](customsourcenode-as-splitter.svg)
 
-As a result, every time you change `N` (the value of the input {{domxref("AudioParam")}}, the values of the two `GainNode.gain` properties and the value of the `StereoPannerNode` 's `pan` properties are all set to `N` as well.
+As a result, every time you change `N` (the value of the input {{domxref("AudioParam")}}), the values of the two `GainNode.gain` properties and the value of the `StereoPannerNode` 's `pan` properties are all set to `N` as well.
 
 ## Example
 

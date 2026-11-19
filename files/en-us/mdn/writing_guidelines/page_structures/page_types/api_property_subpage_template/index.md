@@ -93,7 +93,7 @@ _If you need more than a couple of paragraphs, this should be added in a "Descri
 
 ## Value
 
-A \{{domxref("SomeDataType" }}.
+A \{{domxref("SomeDataType")}}.
 
 _Normally just the data type, and allowed values for that data type if relevant._
 _If the property has different setter and getter behavior, these should normally be covered in separate sentences._

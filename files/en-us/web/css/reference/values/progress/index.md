@@ -280,33 +280,9 @@ Our HTML features an {{htmlelement("article")}} element that contains the rest o
 </article>
 ```
 
-#### JavaScript
-
-In our script, we first grab a reference to our `<article>` element. We then define a function called `setContainerWidth()`, which grabs the `<article>`'s client width via {{domxref("Element.getBoundingClientRect()")}}, and sets a custom property on it called `--container-width`, which is equal to the client width rounded down, with `px` appended to it.
-
-We then set a {{domxref("Window.resize_event", "resize")}} event listener on the `Window` object, which runs `setContainerWidth()` when the browser window is resized. We also run it once to set the `--container-width` custom property on the `<article>` element once the page loads.
-
-```js
-const articleElem = document.querySelector("article");
-
-function setContainerWidth() {
-  const clientWidth = articleElem.getBoundingClientRect().width;
-  articleElem.style.setProperty(
-    "--container-width",
-    `${Math.floor(clientWidth)}px`,
-  );
-}
-
-window.addEventListener("resize", setContainerWidth);
-
-setContainerWidth();
-```
-
-With this set up, we can now set some property values based on the `--container-width`, so that parts of our design will dynamically change as the window resizes.
-
 #### CSS
 
-The following section explains just the CSS relevant to how we've used the `progress()` function in the demo. For the full CSS, see the [CSS source](https://github.com/mdn/dom-examples/blob/main/css-progress/index.css).
+The following section explains just the CSS relevant to how we've used the `progress()` function in the demo. These styles use the `--container-width` custom property, which is set by the JavaScript shown later. For the full CSS, see the [CSS source](https://github.com/mdn/dom-examples/blob/main/css-progress/index.css).
 
 We first center the `<article>` inside the `<body>` using [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), then set some custom properties on it to represent the `min-width` and `max-width` values we will use elsewhere. We then target the `<article>` element, giving it {{cssxref("min-width")}} and {{cssxref("max-width")}} values equal to the custom properties we set earlier. We set its {{cssxref("position")}} to `relative` so we can position its content relative to it, then give it a percentage {{cssxref("width")}}, fixed {{cssxref("height")}}, and {{cssxref("border")}}.
 
@@ -412,6 +388,30 @@ We position the `content` `<section>` absolutely so it sits over the top of the 
   );
 }
 ```
+
+#### JavaScript
+
+In our script, we first grab a reference to our `<article>` element. We then define a function called `setContainerWidth()`, which grabs the `<article>`'s client width via {{domxref("Element.getBoundingClientRect()")}}, and sets a custom property on it called `--container-width`, which is equal to the client width rounded down, with `px` appended to it.
+
+We then set a {{domxref("Window.resize_event", "resize")}} event listener on the `Window` object, which runs `setContainerWidth()` when the browser window is resized. We also run it once to set the `--container-width` custom property on the `<article>` element once the page loads.
+
+```js
+const articleElem = document.querySelector("article");
+
+function setContainerWidth() {
+  const clientWidth = articleElem.getBoundingClientRect().width;
+  articleElem.style.setProperty(
+    "--container-width",
+    `${Math.floor(clientWidth)}px`,
+  );
+}
+
+window.addEventListener("resize", setContainerWidth);
+
+setContainerWidth();
+```
+
+This keeps `--container-width` up to date for the CSS calculations described above, so that parts of our design dynamically change as the window resizes.
 
 ## Specifications
 

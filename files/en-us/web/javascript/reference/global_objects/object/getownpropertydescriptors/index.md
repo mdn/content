@@ -113,7 +113,7 @@ subclass.prototype = Object.create(superclass.prototype, {
 
 ## See also
 
-- [Polyfill of `Object.getOwnPropertyDescriptors` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.getOwnPropertyDescriptors` in `core-js`](https://core-js.io/docs/features/ecmascript/object)
 - [es-shims polyfill of `Object.getOwnPropertyDescriptors`](https://www.npmjs.com/package/object.getownpropertydescriptors)
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Object.defineProperty()")}}

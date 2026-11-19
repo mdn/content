@@ -154,7 +154,7 @@ input {
 
 #### Result
 
-{{EmbedLiveSample("default_color", 200, 60)}}
+{{EmbedLiveSample("opaque_text", 200, 60)}}
 
 > [!NOTE]
 > Note that browsers use different default colors for placeholder text. For example, Firefox uses the input element's color with 54% opacity, and Chrome uses `darkgray` color. If you want consistent placeholder text color across the browsers, then set the `color` explicitly.

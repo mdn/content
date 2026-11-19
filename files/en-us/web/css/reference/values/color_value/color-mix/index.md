@@ -483,7 +483,7 @@ li:nth-child(6) {
 
 #### Result
 
-{{EmbedLiveSample("using_hue_interpolation_in_color_mix", "100%", 440)}}
+{{EmbedLiveSample("using_hue_interpolation_in_color-mix", "100%", 440)}}
 
 With `longer hue` the increments or decrements between colors will always be the same or larger than when using `shorter hue`. Use `increasing hue` or `decreasing hue` when the direction of the hue value change is more important than the length between values.
 

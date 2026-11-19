@@ -87,4 +87,4 @@ console.log(e5.toString()); // "hello"
 
 ## See also
 
-- [Polyfill of `Error.prototype.toString` with many bug fixes in `core-js`](https://github.com/zloirock/core-js#ecmascript-error)
+- [Polyfill of `Error.prototype.toString` with many bug fixes in `core-js`](https://core-js.io/docs/features/ecmascript/error)

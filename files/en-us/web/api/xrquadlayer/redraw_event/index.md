@@ -16,11 +16,15 @@ See also the {{domxref("XRCompositionLayer.needsRedraw")}} property which is als
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("redraw", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onredraw = (event) => { }
 ```
 
@@ -40,7 +44,7 @@ quadLayer.addEventListener("redraw", (event) => {
 });
 ```
 
-Alternatively, you can use the `onredraw` event handler property to establish a handler for the `redraw` event:
+Alternatively, you can use the `onredraw` event handler property to establish a handler for the `redraw` event (but note that this replaces other event listeners added using `onredraw`, if any):
 
 ```js
 quadLayer.onredraw = (event) => {

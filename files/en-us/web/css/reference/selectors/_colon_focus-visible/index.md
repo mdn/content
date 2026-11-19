@@ -32,19 +32,17 @@ select:focus-visible {
 ```
 
 ```html interactive-example
-<form>
-  <p>Which flavor would you like to order?</p>
-  <label>Full Name: <input name="firstName" type="text" /></label>
-  <label
-    >Flavor:
-    <select name="flavor">
-      <option>Cherry</option>
-      <option>Green Tea</option>
-      <option>Moose Tracks</option>
-      <option>Mint Chip</option>
-    </select>
-  </label>
-</form>
+<p>Which flavor would you like to order?</p>
+<label>Full Name: <input name="firstName" type="text" /></label>
+<label
+  >Flavor:
+  <select name="flavor">
+    <option>Cherry</option>
+    <option>Green Tea</option>
+    <option>Moose Tracks</option>
+    <option>Mint Chip</option>
+  </select>
+</label>
 ```
 
 ## Syntax
@@ -120,41 +118,6 @@ If you then tab through each element, you will see that in all three cases — d
 This shows how `:focus-visible` enables a designer to follow the browser's logic in determining when a focus ring should be shown.
 
 {{EmbedLiveSample("Comparing :focus and :focus-visible", "100%", 300)}}
-
-### Providing a :focus fallback
-
-If your code has to work in old browser versions that do not support `:focus-visible`, check supports of `:focus-visible` with {{cssxref("@supports")}} and repeat the same focus styling in it, but inside a `:focus` rule. Note that even if you do not specify anything at all for `:focus`, old browsers will simply display the native outline, which can be enough.
-
-```html
-<button class="button with-fallback" type="button">Button with fallback</button>
-<button class="button without-fallback" type="button">
-  Button without fallback
-</button>
-```
-
-```css
-.button {
-  margin: 10px;
-  border: 2px solid darkgray;
-  border-radius: 4px;
-}
-
-.button:focus-visible {
-  /* Draw the focus when :focus-visible is supported */
-  outline: 3px solid deepskyblue;
-  outline-offset: 3px;
-}
-
-@supports not selector(:focus-visible) {
-  .button.with-fallback:focus {
-    /* Fallback for browsers without :focus-visible support */
-    outline: 3px solid deepskyblue;
-    outline-offset: 3px;
-  }
-}
-```
-
-{{EmbedLiveSample("Selectively_showing_the_focus_indicator", "100%", 72)}}
 
 ## Specifications
 

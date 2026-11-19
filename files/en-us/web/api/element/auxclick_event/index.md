@@ -14,11 +14,15 @@ The **`auxclick`** event is fired at an {{domxref("Element")}} when a non-primar
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("auxclick", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onauxclick = (event) => { }
 ```
 
@@ -42,36 +46,6 @@ Additionally, you may need to avoid opening a system context menu after a right 
 ## Examples
 
 In this example we define functions for two event handlers — {{domxref("Element.click_event", "onclick")}} and `onauxclick`. The former changes the color of the button background, while the latter changes the button foreground (text) color. You also can see the two functions in action by trying the demo out with a multi-button mouse ([see it live on GitHub](https://mdn.github.io/dom-examples/auxclick/); also [see the source code](https://github.com/mdn/dom-examples/blob/main/auxclick/index.html)).
-
-### JavaScript
-
-```js
-let button = document.querySelector("button");
-let html = document.querySelector("html");
-
-function random(number) {
-  return Math.floor(Math.random() * number);
-}
-
-function randomColor() {
-  return `rgb(${random(255)} ${random(255)} ${random(255)})`;
-}
-
-button.onclick = () => {
-  button.style.backgroundColor = randomColor();
-};
-
-button.onauxclick = (e) => {
-  e.preventDefault();
-  button.style.color = randomColor();
-};
-
-button.oncontextmenu = (e) => {
-  e.preventDefault();
-};
-```
-
-Notice that in addition to capturing the `auxclick` event using `onauxclick`, the {{domxref("Element.contextmenu_event", "contextmenu")}} event is also captured, and {{domxref("Event.preventDefault", "preventDefault()")}} called on that event, in order to prevent the context menu from popping up after the color change is applied.
 
 ### HTML
 
@@ -103,6 +77,36 @@ button {
   letter-spacing: 0.5rem;
 }
 ```
+
+### JavaScript
+
+```js
+let button = document.querySelector("button");
+let html = document.querySelector("html");
+
+function random(number) {
+  return Math.floor(Math.random() * number);
+}
+
+function randomColor() {
+  return `rgb(${random(255)} ${random(255)} ${random(255)})`;
+}
+
+button.onclick = () => {
+  button.style.backgroundColor = randomColor();
+};
+
+button.onauxclick = (e) => {
+  e.preventDefault();
+  button.style.color = randomColor();
+};
+
+button.oncontextmenu = (e) => {
+  e.preventDefault();
+};
+```
+
+Notice that in addition to capturing the `auxclick` event using `onauxclick`, the {{domxref("Element.contextmenu_event", "contextmenu")}} event is also captured, and {{domxref("Event.preventDefault", "preventDefault()")}} called on that event, in order to prevent the context menu from popping up after the color change is applied.
 
 {{EmbedLiveSample("Examples", 640, 300)}}
 

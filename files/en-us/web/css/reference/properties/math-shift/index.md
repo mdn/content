@@ -80,7 +80,7 @@ math {
 
 Note that the second "2" has a more compact (lower) shift.
 
-{{EmbedLiveSample("math-shift-example", "100%", "150px")}}
+{{EmbedLiveSample("normal_and_compact_shift", "100%", "150px")}}
 
 ## Specifications
 

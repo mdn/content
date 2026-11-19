@@ -54,7 +54,7 @@ containing the derived bits.
 
 The promise is rejected when one of the following exceptions are encountered:
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Raised if the _length_ parameter of the `deriveBits()` call is negative, non-finite (`NaN` or `Infinity`), or greater than 4294967295 (`2^32 - 1`).
 - `OperationError` {{domxref("DOMException")}}
   - : Raised for reasons specific to the requested derivation algorithm.

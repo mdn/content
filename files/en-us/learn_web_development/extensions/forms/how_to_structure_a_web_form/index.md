@@ -50,23 +50,21 @@ Many assistive technologies will use the {{HTMLElement("legend")}} element as if
 Here's an example:
 
 ```html live-sample___fieldset-legend
-<form>
-  <fieldset>
-    <legend>Fruit juice size</legend>
-    <p>
-      <input type="radio" name="size" id="size_1" value="small" />
-      <label for="size_1">Small</label>
-    </p>
-    <p>
-      <input type="radio" name="size" id="size_2" value="medium" />
-      <label for="size_2">Medium</label>
-    </p>
-    <p>
-      <input type="radio" name="size" id="size_3" value="large" />
-      <label for="size_3">Large</label>
-    </p>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>Fruit juice size</legend>
+  <p>
+    <input type="radio" name="size" id="size_1" value="small" />
+    <label for="size_1">Small</label>
+  </p>
+  <p>
+    <input type="radio" name="size" id="size_2" value="medium" />
+    <label for="size_2">Medium</label>
+  </p>
+  <p>
+    <input type="radio" name="size" id="size_3" value="large" />
+    <label for="size_3">Large</label>
+  </p>
+</fieldset>
 ```
 
 This renders as follows:
@@ -108,16 +106,14 @@ Another advantage of properly set up labels is that you can click or tap the lab
 For example, clicking on the "I like cherry" label text in the example below will toggle the selected state of the _taste_cherry_ checkbox:
 
 ```html live-sample___checkbox-label
-<form>
-  <p>
-    <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry" />
-    <label for="taste_1">I like cherry</label>
-  </p>
-  <p>
-    <input type="checkbox" id="taste_2" name="taste_banana" value="banana" />
-    <label for="taste_2">I like banana</label>
-  </p>
-</form>
+<p>
+  <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry" />
+  <label for="taste_1">I like cherry</label>
+</p>
+<p>
+  <input type="checkbox" id="taste_2" name="taste_banana" value="banana" />
+  <label for="taste_2">I like banana</label>
+</p>
 ```
 
 Try it out:
@@ -360,6 +356,12 @@ Let's put these ideas into practice and build a slightly more involved form — 
    ```
 
 We applied some extra CSS to the finished form below. If you'd like to make changes to the appearance of your form, you can copy styles from [the example](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form/Example) or visit [Styling web forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms).
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
 
 {{EmbedLiveSample("building_a_form_structure","100%",620)}}
 

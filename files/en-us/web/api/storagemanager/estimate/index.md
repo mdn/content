@@ -36,6 +36,9 @@ A {{jsxref('Promise')}} that resolves to an object with the following properties
 > [!NOTE]
 > The returned values are not exact: between compression, deduplication, and obfuscation for security reasons, they will be imprecise.
 
+> [!NOTE]
+> In Firefox, `quota` is the limit shared by all origins of the same {{Glossary("site")}}, called the _group limit_, rather than a limit for the single origin. Origins that have been granted persistent storage with {{domxref("StorageManager.persist()")}} aren't subject to the group limit, so for them `quota` is the global storage limit instead. See [Storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#firefox) for how these limits are calculated.
+
 You may find that the `quota` varies from origin to origin. This variance is based on factors such as:
 
 - How often the user visits
@@ -44,7 +47,7 @@ You may find that the `quota` varies from origin to origin. This variance is bas
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if obtaining a local storage shelf failed. For example, if the current origin is an opaque origin or if the user has disabled storage.
 
 ## Examples

@@ -115,5 +115,5 @@ The following deprecated historical errors don't have an error name but instead 
 
 ## See also
 
-- [A polyfill of `DOMException`](https://github.com/zloirock/core-js#domexception) is available in [`core-js`](https://github.com/zloirock/core-js)
+- [A polyfill of `DOMException`](https://core-js.io/docs/features/web-standards/dom-exception) is available in [`core-js`](https://core-js.io/)
 - {{ domxref("DOMError") }}

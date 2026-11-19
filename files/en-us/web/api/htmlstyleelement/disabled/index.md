@@ -69,7 +69,7 @@ button.addEventListener("click", () => {
 The result is shown below.
 Press the button to toggle the `disabled` property value on the style used for the paragraph text.
 
-{{EmbedLiveSample("Disabling a style defined in the SVG")}}
+{{EmbedLiveSample("disabling_an_inline_style")}}
 
 ### Disabling a programmatically defined style
 

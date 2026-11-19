@@ -63,7 +63,7 @@ Compared with {{jsxref("Statements/var", "var")}}, `let` declarations have the f
 - `let` declarations can only be accessed after the place of declaration is reached (see [temporal dead zone](#temporal_dead_zone_tdz)). For this reason, `let` declarations are commonly regarded as [non-hoisted](/en-US/docs/Glossary/Hoisting).
 - `let` declarations do not create properties on {{jsxref("globalThis")}} when declared at the top level of a script.
 - `let` declarations cannot be [redeclared](#redeclarations) by any other declaration in the same scope.
-- `let` begins [_declarations_, not _statements_](/en-US/docs/Web/JavaScript/Reference/Statements#what_are_statements_declarations_and_expressions). That means you cannot use a lone `let` declaration as the body of a block (which makes sense, since there's no way to access the variable).
+- `let` begins [_declarations_, not _statements_](/en-US/docs/Web/JavaScript/Reference/Statements#what_are_statements_declarations_and_expressions). That means you cannot use a lone `let` declaration as the body of an `if` statement without a block (which makes sense, since there's no way to access the variable).
 
   ```js-nolint example-bad
   if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
@@ -208,7 +208,7 @@ function letTest() {
 }
 ```
 
-At the top level of programs and functions, `let`, unlike `var`, does not create a property on the global object. For example:
+At the top level of a script, `let`, unlike `var`, does not create a property on the global object. For example:
 
 ```js
 var x = "global";
@@ -269,7 +269,7 @@ console.log(a); // 11
 console.log(b); // 2
 ```
 
-However, this combination of `var` and `let` declarations below is a {{jsxref("SyntaxError")}} because `var` not being block-scoped, leading to them being in the same scope. This results in an implicit re-declaration of the variable.
+However, this combination of `var` and `let` declarations below is a {{jsxref("SyntaxError")}} because `var` is not block-scoped, leading to them being in the same scope. This results in an implicit re-declaration of the variable.
 
 ```js-nolint example-bad
 let x = 1;

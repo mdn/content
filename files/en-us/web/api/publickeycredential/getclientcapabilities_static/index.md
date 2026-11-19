@@ -29,9 +29,9 @@ A {{jsxref("Promise")}} that resolves to an object where the property names are 
 The WebAuthn client capability strings are:
 
 - `"conditionalCreate"`
-  - : The client is capable of creating [discoverable credentials](/en-US/docs/Web/API/Web_Authentication_API#discoverable_and_non-discoverable_credentials).
+  - : The client is capable of [conditional create](/en-US/docs/Web/API/Web_Authentication_API#conditional_create). Note that [`isConditionalMediationAvailable()`](/en-US/docs/Web/API/PublicKeyCredential/isConditionalMediationAvailable_static) does _not_ indicate whether conditional create is supported.
 - `"conditionalGet"`
-  - : The client is capable of [conditional mediation](/en-US/docs/Web/API/Web_Authentication_API#autofill_ui).
+  - : The client is capable of [conditional get](/en-US/docs/Web/API/Web_Authentication_API#autofill_ui).
     This capability is equivalent to [`isConditionalMediationAvailable()`](/en-US/docs/Web/API/PublicKeyCredential/isConditionalMediationAvailable_static) resolving to `true`.
 - `"hybridTransport"`
   - : The client supports usage of the [hybrid](/en-US/docs/Web/API/AuthenticatorAttestationResponse/getTransports#hybrid) transport.

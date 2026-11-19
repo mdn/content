@@ -11,7 +11,7 @@ browser-compat: api.MediaStreamTrack.applyConstraints.sampleRate_constraint
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`sampleRate`** property is a [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#constrainulong)
 describing the requested or mandatory constraints placed upon the value of the
-{{domxref("MediaTrackSettings.sampleRate", "sampleRate")}} constrainable property.
+[`sampleRate`](/en-US/docs/Web/API/MediaStreamTrack/getSettings#samplerate) constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
 the value of [`sampleRate`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#samplerate) as returned by a

@@ -67,7 +67,7 @@ function displayLog() {
 displayLog();
 ```
 
-{{EmbedLiveSample('Example', 100, 160)}}
+{{EmbedLiveSample('examples', 100, 160)}}
 
 ## Specifications
 

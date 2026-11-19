@@ -12,11 +12,15 @@ The **`reset`** event fires when a {{HTMLElement("form")}} is reset.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("reset", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onreset = (event) => { }
 ```
 
@@ -32,7 +36,7 @@ This example uses {{domxref("EventTarget.addEventListener()")}} to listen for fo
 
 ```html
 <form id="form">
-  <label>Test field: <input type="text" /></label>
+  <label>Test checkbox: <input type="checkbox" /></label>
   <br /><br />
   <button type="reset">Reset form</button>
 </form>

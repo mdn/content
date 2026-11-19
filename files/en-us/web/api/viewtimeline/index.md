@@ -156,7 +156,7 @@ output.textContent += `end offset: ${timeline.endOffset}.`;
 
 Scroll to see the subject element being animated.
 
-{{EmbedLiveSample("Tracking the progress of a view progress timeline", "100%", "480px")}}
+{{EmbedLiveSample("displaying_the_subject_and_offsets_of_a_view_progress_timeline", "100%", "480px")}}
 
 ## Specifications
 

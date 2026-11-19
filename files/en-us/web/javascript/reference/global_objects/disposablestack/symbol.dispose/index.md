@@ -49,6 +49,7 @@ The `Symbol.dispose` method is intended to be automatically called in a `using` 
 
 ## See also
 
+- [Polyfill of `DisposableStack.prototype[Symbol.dispose]` in `core-js`](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
 - {{jsxref("DisposableStack")}}
 - {{jsxref("DisposableStack.prototype.dispose()")}}
