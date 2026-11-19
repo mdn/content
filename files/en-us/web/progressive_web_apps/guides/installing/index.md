@@ -1,17 +1,19 @@
 ---
-title: Installing and uninstalling web apps
+title: Browser web app installation concepts
 slug: Web/Progressive_web_apps/Guides/Installing
 page-type: guide
 sidebar: pwasidebar
 ---
 
-This guide covers how users can install and uninstall PWAs on their devices. If you want to learn about making a web app installable as a PWA, see [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) instead.
+This guide looks at the concepts behind [Progressive Web Application (PWA)](/en-US/docs/Web/Progressive_web_apps) installation, including the some history, and the mechanisms browsers provide for users to install and uninstall PWAs.
+
+If you want to learn how to make a web app installable as a PWA, see [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) and [Trigger installation from your PWA](/en-US/docs/Web/Progressive_web_apps/How_to/Trigger_install_prompt).
 
 ## History of web app installation
 
 Browsers have always enabled saving shortcuts to websites, known as "bookmarking." These are just links to websites.
 
-Some operating systems (OS) have enhanced bookmarking capabilities, enabling saving bookmarks to common places, such as the home screen or taskbar, with an icon launching the site in the OS's default browser. For many websites, this is also just a link to the site. If the site is a [Progressive Web Applications (PWA)](/en-US/docs/Web/Progressive_web_apps), saving to home screen installs the PWA on the user's device, fully integrating it into the operating systems like native applications on most devices. Just like PWAs can be installed, they can also be uninstalled.
+Some operating systems (OS) have enhanced bookmarking capabilities, enabling saving bookmarks to common places, such as the home screen or taskbar, with an icon launching the site in the OS's default browser. For many websites, this is also just a link to the site. If the site is a PWA, saving to home screen installs the PWA on the user's device, fully integrating it into the operating systems like native applications on most devices. Just like PWAs can be installed, they can also be uninstalled.
 
 We'll first cover the precursors — saving links to websites.
 
@@ -27,7 +29,7 @@ Browsers enable saving, editing, moving, deleting, and otherwise managing bookma
 
 Smartphones, starting with the iPhone in 2007, added "save to home screen" functionality. For regular (non-PWA) websites, this feature is similar to bookmarks, but instead of adding the favicon and title of the page to the bookmarks menu — a browser feature — favoriting in this manner [adds an icon](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_custom_icons_to_your_site) to the OS's home screen.
 
-Adding a non-PWA site to the home screen does not install the website on the device. Rather, it adds the developer-defined icon to the home screen, that, when clicked, opens the bookmarked link in the default browser.
+Adding a non-PWA site to the home screen does not install the website on the device. Rather, it adds a developer-defined icon to the home screen that when clicked, opens the bookmarked link in the default browser.
 
 ![iPhone add to home screen, install prompt, icon, and delete functionality.](iphone_pwa.jpg)
 
@@ -35,24 +37,28 @@ If the site added to the home screen is a PWA, the PWA will be installed on the 
 
 Deleting the icon from the home screen removes the bookmark. The deletion confirmation provides information as to whether deleting the icon deletes a bookmark or entire application.
 
-## Installing and uninstalling PWAs
+## Installing PWAs
 
-While installing a PWA only takes a couple of clicks, depending on the web application features, the result of installing a PWA usually goes well beyond creating a link to a page on the Internet; installing a PWA more deeply integrates the web application on the user's device.
+While installing a PWA only takes a couple of clicks, the result of installing it may go well beyond creating a link pointing to its URL.
 
-Depending on the PWA, device, and features of the operating system and browser, installing a PWA may enable native-like features, such as giving the app its own standalone window or registering it as a file handler. This also means uninstalling a PWA, which also only requires a couple of clicks, does more than just removing the PWA's icon.
+Depending on the PWA, device, and features of the operating system and browser, installing a PWA may enable native-like features such as giving the app its own standalone window or registering it as a file handler, more deeply integrating it with the user's device.
 
-### Installing PWAs
+### The browser chrome installation UI
 
-The UI for installing a PWA from the web varies from one browser to another, and from one platform to another.
+The browser chrome user interface for installing PWAs differs by device and OS combination.
 
-The browser chrome user interface for installing PWAs differs by device and OS combination. The "Add to home screen" user interface installs the PWA on Safari on iOS. Other browsers, including Chrome for Android, include the app installation command in the browser setting menu. In Chrome and Edge on desktop, when the user navigates to the page, if the page is a PWA and the PWA is not currently installed by the browser, an installation icon will be visible in the URL bar:
+- The "Add to home screen" user interface installs a PWA on Safari on iOS.
+- Other browsers, including Chrome for Android, include the app installation command in the browser settings menu.
+- In Chrome and Edge on desktop, when the user navigates to the page, if the page is a PWA and the PWA is not currently installed by the browser, an installation icon will be visible in the URL bar:
 
-![PWA install prompt in URL bar](pwa-install.png)
+  ![PWA install prompt in URL bar](pwa-install.png)
 
 > [!NOTE]
-> Developers can also include PWA install buttons inside web interfaces using the {{domxref("Navigator.install()")}} method and the {{htmlelement("install")}} element. These features aim to provide more flexibility over the PWA install process, and more consistency across browsers and platforms.
+> You can include PWA install buttons inside web app UIs using the {{domxref("Navigator.install()")}} method and the {{htmlelement("install")}} element. These features aim to provide more flexibility over the PWA install process, and more consistency across browsers and platforms. See [Trigger installation from your PWA](/en-US/docs/Web/Progressive_web_apps/How_to/Trigger_install_prompt) for more details.
 
-When the user selects the icon, the browser displays a prompt asking if they want to install the PWA, and if they accept, the PWA is installed.
+### The install prompt
+
+When the user starts the process of installing a PWA, the browser displays a prompt asking if they want to install the PWA, and if they accept, the PWA is installed. For example, the prompt looks like this in Edge:
 
 ![PWA installation confirmation prompt](installconfirm.jpg)
 
@@ -60,39 +66,45 @@ Once installed, the PWA will behave like other applications that are installed o
 
 ![PWA icon in the doc on macOS](dock.jpg)
 
-On most desktop browsers, the install prompt is in the URL bar. On mobile, the install prompt is generally found in the menu of browser options. No matter the browser or OS, the installation needs to be confirmed.
+On most desktop browsers, the install prompt is in the URL bar. On mobile, the install prompt is generally found in the browser options menu. No matter the browser or OS, the installation needs to be confirmed.
 
 ![PWA installation on Chrome for Android, with confirmation, home screen icon, and offline experience.](android_pwa.jpg)
 
+### Post-installation
+
 Once installed, the PWA behaves just like other installed applications: clicking on the application icon opens the PWA, even when the user is offline.
 
-Installation is supported on all modern desktop and mobile devices. Whether the PWA can be installed by the browser on the operating system differs by browser/operating system combination. Most browsers support installing PWAs on all operating systems—ChromeOS, macOS, Windows, Android, Linux, etc.—directly or when an extension is installed.
+When an installed PWA is launched, it can be displayed in its own standalone window, without the full browser UI, although that depends on the way the developer configured the [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest). In any case, it still effectively runs in a browser window, even if the usual browser UI elements such as the address bar and back button aren't visible. The application will be found in the same specific folder where the OS saves other applications.
 
-Firefox requires a [PWA extension](https://addons.mozilla.org/en-US/firefox/addon/pwas-for-firefox/).
+PWAs installed by a browser remain specific to that browser. This means that the browser used to install a PWA is the one used to run that PWA. If you install the same PWA using multiple browsers, the different instances will behave like separate apps and will not share any data.
+
+The browser used to install the PWA will know the PWA is installed, but other browsers will not have access to the installed status. For example, if you install a PWA using MS Edge, Edge will prompt you to open the PWA when you visit the site while Chrome will continue to prompt you to install the application.
+
+### Browser support notes
+
+Installation is supported on all modern desktop and mobile devices, but supports differs by browser. Most browsers support installing PWAs on all operating systems—ChromeOS, macOS, Windows, Android, Linux, etc.—directly or when an extension is installed.
+
+Firefox desktop requires a [PWA extension](https://addons.mozilla.org/en-US/firefox/addon/pwas-for-firefox/).
 
 Before macOS 14 (Sonoma), PWAs could be installed on macOS from any browser **except** Safari. The opposite is true for iOS versions before 16.4, where PWAs could **only** be installed in Safari. PWAs can be installed on macOS 14.0 or later and iOS/iPadOS 16.4 or later from any supporting browser.
 
-When an installed PWA is launched, it can be displayed in its own standalone window (without the full browser UI) but it still effectively runs in a browser window, even if the usual browser UI elements, such as the address bar or back button, aren't visible. The application will be found where the OS saves other applications, within a folder specific to the browser.
+## Uninstalling
 
-PWAs installed by a browser remain specific to this browser. This means that the browser that was used to install a PWA is the one used to run that PWA. It also means that you can install the same PWA from a different browser and that the two apps will behave as two different instances and will not share any data.
+On most mobile operating systems, uninstalling a PWA is accomplished in the same way as uninstalling other applications. On some mobile operating systems, PWAs appear in the same control panel as applications installed from app stores, and can be uninstalled there.
 
-The browser used to install the PWA will know the PWA is installed, but other browsers will not have access to the installed status. For example, if you install a PWA using MS Edge, Edge will prompt you to open the PWA when you visit the site while Chrome will continue to prompt you to install the application. If you install the PWA using Chrome as well, you will have two copies of the PWA. When multiple instances of a PWA are open, data is not shared between instances installed from different browsers.
+On iOS, PWAs installed from Safari are listed and searchable from the "App Library" screen, but are not listed along with other installed applications under "Settings". Long tapping an icon surfaces the delete bookmark UI; removing the icon from the home screen deletes the PWA.
 
-When you tap the web app's icon, it opens up in the browser environment that installed the PWA, generally without the browser's UI around it, though that depends on the way the developer configured the [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest). Similarly, the method used to uninstall the PWA depends on the browser that was used to install it.
+In some desktop operating systems, uninstalling a PWA can be done directly from the opened PWA. To uninstall:
 
-### Uninstalling
+1. Open the PWA.
+2. In the top-right corner of the opened app, there will be an icon that will show more tools — click this.
+3. Depending on the browser used to install the PWA, there will either be a link to uninstall the PWA, or a settings link that opens the browser's settings page with an uninstall link. Use the available mechanism to uninstall the PWA.
 
-On most mobile operating systems, uninstalling a PWA is accomplished in the same way as uninstalling other applications. On some mobile operating systems, PWAs appear in the same control panel where applications downloaded from app stores are managed and can be uninstalled there.
-
-On iOS, PWAs installed from Safari are listed and searchable from the "App Library" screen, but are not listed along with other installed applications under "Settings". On iOS, long tapping an icon surfaces the delete bookmark UI; removing the icon from the home screen deletes the PWA.
-
-In some desktop operating systems, uninstalling a PWA can be done directly in opened PWA. To uninstall, open the PWA. In the top right corner of the opened app, there will be an icon that must be expanded to see more tools. Depending on the browser used to install the PWA, there will either be a link to uninstall the PWA, or a settings link that opens the browser's settings page with an uninstall link. Either click on the uninstall option in the drop-down menu, if there, or navigate to the app settings in a browser tab and click uninstall.
+For example, in Edge, selecting app settings from the more tools menu opens the `edge://apps` tab. This provides a list of installed applications with options for each, including `🗑️ Uninstall`.
 
 ![App settings in MS Edge with an uninstall link](remove.jpg)
 
-Selecting app setting from the opened drop-down menu in Edge, opened the MS Edge browser `edge://apps` tab. There we are provided a list of installed applications with options for each, including `🗑️ Uninstall`. Confirm the uninstall. That's it!
-
-In Edge, the installed PWAs are listed and can be managed by visiting [`edge://apps`](https://blogs.windows.com/msedgedev/2022/05/18/find-and-manage-your-installed-apps-and-sites/) in your Edge browser. In Chrome, the list of Google Apps and installed PWAs are viewable and managed by visiting `chrome://apps` in your Chrome browser.
+In Chrome, the list of Google Apps and installed PWAs is viewable by visiting `chrome://apps`.
 
 ## See also
 
