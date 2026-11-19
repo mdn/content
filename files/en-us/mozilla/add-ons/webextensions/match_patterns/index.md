@@ -78,26 +78,8 @@ The _scheme_ component may take one of two forms:
       <td>Only the given scheme, where:
         <ul>
           <li>Firefox supports "http", "https", "ws", "wss", "file", and "ftp".
-            <div class="notecard note">
-              <p><strong>Note:</strong>
-              Some APIs support any validly formatted scheme, including:</p>
-              <ul>
-                <li><code>targetUrlPatterns</code> in the {{WebExtAPIRef("menus")}} API.</li>
-                <li>the <code>urls</code> filter in {{WebExtAPIRef("tabs.onUpdated")}}. (Firefox desktop only.)</li>
-                <li><code>url</code> in {{WebExtAPIRef("tabs.query")}}.</li>
-              </ul>
-            </div>
           </li>
           <li>Chrome supports "http", "https", "ws", "wss", "file", and "ftp".
-            <div class="notecard note">
-              <p><strong>Note:</strong>
-              Some API and manifest keys accept any validly formatted scheme, including:</p>
-              <ul>
-                <li><code>documentUrlPatterns</code> and <code>targetUrlPatterns</code> in the {{WebExtAPIRef("contextMenus")}} API.</li>
-                <li><code>url</code> in {{WebExtAPIRef("tabs.query")}}.</li>
-                <li><code>matches</code> in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources"><code>web_accessible_resources</code></a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable"><code>externally_connectable</code></a> manifest keys.</li>
-              </ul>
-            </div>
           </li>
           <li>Safari supports "http" and "https".
           </li>
