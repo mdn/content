@@ -9,9 +9,9 @@ sidebar: cssref
 
 The **`<url>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) is a pointer to a resource.
 
-## Properties
+## Associated properties
 
-The `<url>` data type is a accepted as a value for the following CSS properties:
+This data type is accepted as a value for the following CSS properties:
 
 - {{cssxref("backdrop-filter")}}
 - {{cssxref("background")}}
