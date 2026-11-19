@@ -8,7 +8,7 @@ sidebar: addonsidebar
 
 Match patterns are a way to specify groups of URLs: a match pattern matches a specific set of URLs. They are used in WebExtensions APIs in a few places, most notably to specify which documents to load [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) into, and to specify which URLs to add [`webRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) listeners to.
 
-APIs that use match patterns usually accept a list of match patterns, and will perform the appropriate action if the URL matches any of the patterns. See, for example, the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key in manifest.json.
+APIs that use match patterns usually accept a list of match patterns, and perform the appropriate action if the URL matches any of the patterns. See, for example, the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key in manifest.json.
 
 ## Where match patterns are used
 
@@ -138,11 +138,11 @@ The _host_ component may take one of these forms:
       <td>Any host.</td>
     </tr>
     <tr>
-      <td><code>*.</code> followed by part of the hostname, optionally, including a port.</td>
+      <td><code>*.</code> followed by part of the hostname, optionally including a port.</td>
       <td>The given host (and port) and any of its subdomains.</td>
     </tr>
     <tr>
-      <td>A complete hostname, without wildcards, optionally, including a port.</td>
+      <td>A complete hostname, without wildcards, optionally including a port.</td>
       <td>Only the host (and port).</td>
     </tr>
   </tbody>
@@ -161,15 +161,15 @@ The _path_ component must begin with a `/`.
 
 After that, it may subsequently contain any combination of the `*` wildcard and any of the characters that are allowed in URL paths or query strings. Unlike _host_, the _path_ component may contain the `*` wildcard in the middle or at the end, and the `*` wildcard may appear more than once.
 
-The value for the _path_ matches against the string which is the URL path plus the [URL query string](https://en.wikipedia.org/wiki/Query_string). This includes the `?` between the two, if the query string is present in the URL. For example, if you want to match URLs on any domain where the URL path ends with `foo.bar`, then you need to use an array of Match Patterns like `["*://*/*foo.bar", "*://*/*foo.bar?*"]`. The `?*` is needed, rather than just `bar*`, in order to anchor the ending `*` as applying to the URL query string and not some portion of the URL path.
+The value for _path_ matches the string that is the URL path plus the [URL query string](https://en.wikipedia.org/wiki/Query_string). This includes the `?` between the two, if the query string is present in the URL. For example, if you want to match URLs on any domain where the URL path ends with `foo.bar`, then you need to use an array of Match Patterns like `["*://*/*foo.bar", "*://*/*foo.bar?*"]`. The `?*` is needed, rather than just `bar*`, to anchor the ending `*` to the URL query string and not some portion of the URL path.
 
-Neither the [URL fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) nor the `#` that precedes it are considered as part of the _path_ and are ignored during pattern matching. A match pattern containing `#` will fail to match with any URL.
+Neither the [URL fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) nor the `#` that precedes it are considered part of the _path_ and are ignored during pattern matching. A match pattern containing `#` fails to match any URL.
 
 ### \<all_urls>
 
 The special value `<all_urls>` matches all URLs with these schemes:
 
-- **Firefox** and **Chrome**: matches "http", "https", "ws", "wss", "ftp" and "file". In [APIs that accept any scheme](#apis_that_accept_any_scheme), it matches URLs with any scheme.
+- **Firefox** and **Chrome**: matches "http", "https", "ws", "wss", "ftp", and "file". In [APIs that accept any scheme](#apis_that_accept_any_scheme), it matches URLs with any scheme.
 - **Safari** only matches "http" and "https".
 
 > [!NOTE]
@@ -211,7 +211,7 @@ The special value `<all_urls>` matches all URLs with these schemes:
     <tr>
       <td>
         <p><code>*://*/*</code></p>
-        <p>Match all HTTP, HTTPS and WebSocket URLs.</p>
+        <p>Match all HTTP, HTTPS, and WebSocket URLs.</p>
       </td>
       <td>
         <p><code>http://example.org/</code></p>
@@ -228,7 +228,7 @@ The special value `<all_urls>` matches all URLs with these schemes:
       <td>
         <p><code>*://*.mozilla.org/*</code></p>
         <p>
-          Match all HTTP, HTTPS and WebSocket URLs that are hosted at
+          Match all HTTP, HTTPS, and WebSocket URLs that are hosted at
           "mozilla.org" or one of its subdomains.
         </p>
       </td>
@@ -251,7 +251,7 @@ The special value `<all_urls>` matches all URLs with these schemes:
       <td>
         <p><code>*://mozilla.org/</code></p>
         <p>
-          Match all HTTP, HTTPS and WebSocket URLs that are hosted at exactly
+          Match all HTTP, HTTPS, and WebSocket URLs that are hosted at exactly
           "mozilla.org/".
         </p>
       </td>
@@ -298,7 +298,7 @@ The special value `<all_urls>` matches all URLs with these schemes:
     <tr>
       <td>
         <p><code>https://*/path</code></p>
-        <p>Match HTTPS URLs on any host, whose path is "path".</p>
+        <p>Match HTTPS URLs on any host whose path is "path".</p>
       </td>
       <td>
         <p><code>https://mozilla.org/path</code></p>
@@ -320,7 +320,7 @@ The special value `<all_urls>` matches all URLs with these schemes:
       <td>
         <p><code>https://*/path/</code></p>
         <p>
-          Match HTTPS URLs on any host, whose path is "path/" and which has no
+          Match HTTPS URLs on any host whose path is "path/" and which has no
           URL query string.
         </p>
       </td>
@@ -376,7 +376,7 @@ The special value `<all_urls>` matches all URLs with these schemes:
         <p><code>https://mozilla.org/*/b/*/</code></p>
         <p>
           Match HTTPS URLs hosted on "mozilla.org", whose path contains a
-          component "b" somewhere in the middle. Will match URLs with query
+          component "b" somewhere in the middle. Matches URLs with query
           strings, if the string ends in a <code>/</code>.
         </p>
       </td>
