@@ -107,15 +107,6 @@ The _scheme_ component may take one of two forms:
   </tbody>
 </table>
 
-#### Accepted schemes compared with effective schemes
-
-The schemes listed above are the ones the match pattern parser accepts. Whether a scheme has any effect depends on the API consuming the pattern, as each API only ever encounters particular kinds of URL. For example, in Firefox:
-
-- Content scripts and stylesheets are injected into documents, so a match pattern can only match "http", "https", and "file". No document has a "ws", "wss", or "ftp" URL.
-- {{WebExtAPIRef("webRequest")}} only sees "http", "https", "ws", and "wss" requests.
-
-So, a scheme can be accepted in a match pattern without doing anything. For example, Firefox accepts "data" wherever match patterns are used, but it never matches. To inject a content script into a `data:`, `about:`, or `blob:` document, use [`match_origin_as_fallback`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#match_origin_as_fallback), which matches the document's origin rather than its URL.
-
 #### APIs that accept any scheme
 
 Some APIs accept match patterns with any validly formatted scheme, not only the schemes listed in the table:
