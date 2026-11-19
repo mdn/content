@@ -15,11 +15,9 @@ The `params` field in the event notification is an object with the following fie
 
 - `context`
   - : A string that contains the ID of the [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts) in which the request was made, or `null` if the request wasn't made by a document in a context, for example a request made by a worker.
-- `intercepts` {{optional_inline}}
-  - : Never included, because `isBlocked` is always `false`.
 - `isBlocked`
   - : A boolean that indicates whether the request is blocked by an [intercept](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#intercepts).
-    It is always `false` for this event, because intercepts can't block a request once its response is complete.
+    It is always `false` for this event because intercepts can't block a request after the browser has received the complete response, so the event never includes the `intercepts` field.
 - `navigation`
   - : A string that contains the [UUID](/en-US/docs/Glossary/UUID) that uniquely identifies the navigation that the request is part of, or `null` if the request isn't a navigation request.
     For example, the value is `null` when requesting a document's subresources, such as stylesheets and scripts, or when making a request with `fetch()`.
@@ -51,7 +49,7 @@ The `params` field in the event notification is an object with the following fie
         - `sameSite`
           - : A string that indicates the cookie's [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) setting.
             It has one of the following values:
-            - `default`: The cookie has no `SameSite` attribute, so the browser's default behavior applies.
+            - `default`: The cookie has no `SameSite` attribute or has an unrecognized value, so the browser's default behavior applies.
             - `lax`: The cookie has `SameSite=Lax`.
             - `none`: The cookie has `SameSite=None`.
             - `strict`: The cookie has `SameSite=Strict`.
@@ -93,7 +91,7 @@ The `params` field in the event notification is an object with the following fie
     - `initiatorType`
       - : A string that indicates what started the request, such as `fetch`, `link`, or `script`.
         For a request with no initiator type, such as the request for a page loaded into a tab, the value is `null` instead of a string.
-        The values match those of {{domxref("PerformanceResourceTiming.initiatorType")}}.
+        See {{domxref("PerformanceResourceTiming.initiatorType")}} for descriptions of common values.
     - `method`
       - : A string that contains the [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods), such as `GET` or `POST`.
     - `request`
@@ -139,15 +137,16 @@ The `params` field in the event notification is an object with the following fie
     It contains the following fields:
     - `authChallenges` {{optional_inline}}
       - : An array of objects, each representing an [authentication](/en-US/docs/Web/HTTP/Guides/Authentication) challenge from the server.
-        This field is included only when the response status is `401`, with challenges from the {{HTTPHeader("WWW-Authenticate")}} header, or `407`, with challenges from the {{HTTPHeader("Proxy-Authenticate")}} header.
-        The array is empty if the response doesn't have that header.
+        This field is included only when the response status is `401` or `407`.
+        The challenges come from the {{HTTPHeader("WWW-Authenticate")}} header for `401` responses or the {{HTTPHeader("Proxy-Authenticate")}} header for `407` responses.
+        The array is empty if the response doesn't include the corresponding header.
         Each object contains the following fields:
         - `realm`
-          - : A string that contains the realm of the challenge, or an empty string if the challenge has no realm.
+          - : A string that contains the [realm](/en-US/docs/Web/HTTP/Guides/Authentication#www-authenticate_and_proxy-authenticate_headers) of the challenge, or an empty string if the challenge has no realm.
         - `scheme`
-          - : A string that contains the authentication scheme, such as `Basic`.
+          - : A string that contains the [authentication scheme](/en-US/docs/Web/HTTP/Guides/Authentication#authentication_schemes), such as `Basic`.
     - `bodySize`
-      - : A non-negative integer that contains the size of the response body in bytes as received, before the browser decodes it (for example, before decompression), or `null` if the browser doesn't report it.
+      - : A non-negative integer that contains the size of the response body, in bytes, before the browser decodes it (for example, before decompression), or `null` if the browser doesn't report it.
     - `bytesReceived`
       - : A non-negative integer that contains the total number of bytes received for the response, including its headers.
         It is `0` for a response served from the browser's cache.
@@ -158,10 +157,11 @@ The `params` field in the event notification is an object with the following fie
           - : A non-negative integer that contains the size of the response body in bytes after the browser decodes it (for example, after decompression).
     - `fromCache`
       - : A boolean that indicates whether the browser served the response from its cache.
-        - `true`: The browser served the response from its cache, without contacting the server.
-        - `false`: The browser didn't serve the response from its cache, including when it checked with the server that a cached response is still valid.
+        - `true`: The browser served the response from its cache without contacting the server.
+        - `false`: The browser didn't serve the response from its cache.
+          This includes cases where it contacted the server to revalidate a cached response.
     - `headers`
-      - : An array of objects, each representing a header of the response.
+      - : An array of objects, each representing a [header](/en-US/docs/Web/HTTP/Reference/Headers) of the response.
         Each object contains the following fields:
         - `name`
           - : A string that contains the header name, such as `Content-Type`.
@@ -176,9 +176,10 @@ The `params` field in the event notification is an object with the following fie
             - `value`
               - : A string that contains the header value in the encoding specified by the [`type`](#type_3) field.
     - `headersSize`
-      - : A non-negative integer that contains the size of the response headers in bytes as received, or `null` if the browser doesn't report it.
+      - : A non-negative integer that contains the size of the response headers, in bytes, as received, or `null` if the browser doesn't report it.
     - `mimeType`
-      - : A string that contains the [MIME type](/en-US/docs/Glossary/MIME_type) that the browser uses for the response, without parameters, such as `text/html` or `application/json`.
+      - : A string that contains the [MIME type](/en-US/docs/Glossary/MIME_type) that the browser uses for the response, such as `text/html` or `application/json`.
+        The value doesn't include MIME type parameters.
         It can differ from the {{HTTPHeader("Content-Type")}} header, for example when the browser determines the type from the content.
         It can also be an empty string, for example for a redirect response.
     - `protocol`

@@ -18,11 +18,9 @@ The `params` field in the event notification is an object with the following fie
 - `errorText`
   - : A string that describes the error.
     The text is browser-specific, such as `NS_ERROR_UNKNOWN_HOST` or `net::ERR_NAME_NOT_RESOLVED` for a host name that can't be resolved, so don't rely on this value for assertions in tests.
-- `intercepts` {{optional_inline}}
-  - : Never included, because `isBlocked` is always `false`.
 - `isBlocked`
   - : A boolean that indicates whether the request is blocked by an [intercept](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#intercepts).
-    It is always `false` for this event, because no intercept phase applies to it.
+    It is always `false` for this event because no intercept phase applies to it, so the event never includes the `intercepts` field.
 - `navigation`
   - : A string that contains the [UUID](/en-US/docs/Glossary/UUID) that uniquely identifies the navigation that the request is part of, or `null` if the request isn't a navigation request.
     For example, the value is `null` when requesting a document's subresources, such as stylesheets and scripts, or when making a request with `fetch()`.
@@ -54,7 +52,7 @@ The `params` field in the event notification is an object with the following fie
         - `sameSite`
           - : A string that indicates the cookie's [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) setting.
             It has one of the following values:
-            - `default`: The cookie has no `SameSite` attribute, so the browser's default behavior applies.
+            - `default`: The cookie has no `SameSite` attribute or has an unrecognized value, so the browser's default behavior applies.
             - `lax`: The cookie has `SameSite=Lax`.
             - `none`: The cookie has `SameSite=None`.
             - `strict`: The cookie has `SameSite=Strict`.
@@ -96,7 +94,7 @@ The `params` field in the event notification is an object with the following fie
     - `initiatorType`
       - : A string that indicates what started the request, such as `fetch`, `link`, or `script`.
         For a request with no initiator type, such as the request for a page loaded into a tab, the value is `null` instead of a string.
-        The values match those of {{domxref("PerformanceResourceTiming.initiatorType")}}.
+        See {{domxref("PerformanceResourceTiming.initiatorType")}} for descriptions of common values.
     - `method`
       - : A string that contains the [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods), such as `GET` or `POST`.
     - `request`

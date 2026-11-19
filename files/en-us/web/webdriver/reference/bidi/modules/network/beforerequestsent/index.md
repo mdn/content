@@ -77,7 +77,7 @@ The `params` field in the event notification is an object with the following fie
         - `sameSite`
           - : A string that indicates the cookie's [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) setting.
             It has one of the following values:
-            - `default`: The cookie has no `SameSite` attribute, so the browser's default behavior applies.
+            - `default`: The cookie has no `SameSite` attribute or has an unrecognized value, so the browser's default behavior applies.
             - `lax`: The cookie has `SameSite=Lax`.
             - `none`: The cookie has `SameSite=None`.
             - `strict`: The cookie has `SameSite=Strict`.
@@ -119,7 +119,7 @@ The `params` field in the event notification is an object with the following fie
     - `initiatorType`
       - : A string that indicates what started the request, such as `fetch`, `link`, or `script`.
         For a request with no initiator type, such as the request for a page loaded into a tab, the value is `null` instead of a string.
-        The values match those of {{domxref("PerformanceResourceTiming.initiatorType")}}.
+        See {{domxref("PerformanceResourceTiming.initiatorType")}} for descriptions of common values.
     - `method`
       - : A string that contains the [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods), such as `GET` or `POST`.
     - `request`
