@@ -118,7 +118,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('examples')}}
 
 ## Technical summary
 

@@ -3,10 +3,12 @@ title: "PerformanceContainerTiming: size property"
 short-title: size
 slug: Web/API/PerformanceContainerTiming/size
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceContainerTiming.size
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`size`** read-only property of the {{domxref("PerformanceContainerTiming")}} interface returns the total area of the container's accumulated painted region, calculated since the container root was registered.
 

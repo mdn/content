@@ -8,9 +8,7 @@ browser-compat: api.VideoTrack.id
 
 {{APIRef("HTML DOM")}}
 
-The **`id`** property contains a
-string which uniquely identifies the track represented by the
-**{{domxref("VideoTrack")}}**.
+The **`id`** read-only property of the {{domxref("VideoTrack")}} interface contains a string which uniquely identifies the track represented by the **{{domxref("VideoTrack")}}**.
 
 This ID can be used with the
 {{domxref("VideoTrackList.getTrackById()")}} method to locate a specific track within

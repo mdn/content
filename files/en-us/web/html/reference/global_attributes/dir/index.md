@@ -103,9 +103,7 @@ This example explicitly sets the base direction of two paragraphs. The base dire
 
 ```html
 <p dir="ltr" lang="en">This sentence is in English and reads left to right.</p>
-<p dir="rtl" lang="ar">
-  هذه الجملة باللغة العربية وتُقرأ من اليمين إلى اليسار.
-</p>
+<p dir="rtl" lang="ar">هذه الجملة باللغة العربية وتُقرأ من اليمين إلى اليسار.</p>
 ```
 
 ### Inline bidirectional text

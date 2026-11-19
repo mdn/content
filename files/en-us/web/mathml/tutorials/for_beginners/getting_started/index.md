@@ -14,7 +14,7 @@ In this article, we will take a simple HTML document and see how to add MathML f
 
 MathML uses the same syntax as HTML to represent a tree of elements and attributes. In particular, each mathematical formula is represented by an element `<math>` which can be placed inside an HTML page. In the following document, it is inside a paragraph of text:
 
-```html live-sample___inserting_formulas_in_HTML
+```html live-sample___inserting_formulas_in_html
 <p>
   The fraction
   <math>
@@ -149,7 +149,7 @@ As an exercise, figure out how to write the following expressions using only the
 </ol>
 ```
 
-{{ EmbedLiveSample('nested_expressions', 700, 200, "", "") }}
+{{ EmbedLiveSample('nested-expressions', 700, 200, "", "") }}
 
 ## Summary
 

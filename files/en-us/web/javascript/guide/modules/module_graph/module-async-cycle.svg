@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 690 240" role="img" aria-labelledby="title description">
+  <title id="title">An asynchronous module graph with cycles</title>
+  <desc id="description">a.js imports b.js then c.js. b.js imports d.js. c.js imports d.js then e.js. d.js imports a.js. e.js has no imports. Every module contains top-level await. a.js, b.js, c.js, and d.js form one strongly connected component. Arrows point from module specifiers to their dependencies.</desc>
+  <style>
+    text { fill: #6b7280; font-family: Menlo, Consolas, monospace; font-size: 12px; }
+    .specifier { fill: #08827e; font-weight: bold; }
+    .outline { fill: none; stroke: #808080; stroke-width: 1; }
+    .edge { fill: none; stroke: #808080; stroke-width: 1; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#808080"/>
+    </marker>
+  </defs>
+
+  <path class="edge" d="M 145 58 H 260"/>
+  <path class="edge" d="M 125 86 V 168 H 260"/>
+  <path class="edge" d="M 385 58 H 500"/>
+  <path class="edge" d="M 590 50 V 14 H 110 V 40"/>
+  <path class="edge" d="M 350 160 V 125 H 580 V 92"/>
+  <path class="edge" d="M 385 186 H 500"/>
+
+  <path class="outline" d="M 70 40 H 190 V 110 H 20 V 40 H 28"/>
+  <text x="34" y="44">a.js</text>
+  <text x="34" y="62">import <tspan class="specifier">"./b.js"</tspan>;</text>
+  <text x="34" y="80">import <tspan class="specifier">"./c.js"</tspan>;</text>
+  <text x="34" y="98">await …;</text>
+
+  <path class="outline" d="M 310 40 H 430 V 92 H 260 V 40 H 268"/>
+  <text x="274" y="44">b.js</text>
+  <text x="274" y="62">import <tspan class="specifier">"./d.js"</tspan>;</text>
+  <text x="274" y="80">await …;</text>
+
+  <path class="outline" d="M 550 40 H 670 V 92 H 500 V 40 H 508"/>
+  <text x="514" y="44">d.js</text>
+  <text x="514" y="62">import <tspan class="specifier">"./a.js"</tspan>;</text>
+  <text x="514" y="80">await …;</text>
+
+  <path class="outline" d="M 310 150 H 430 V 220 H 260 V 150 H 268"/>
+  <text x="274" y="154">c.js</text>
+  <text x="274" y="172">import <tspan class="specifier">"./d.js"</tspan>;</text>
+  <text x="274" y="190">import <tspan class="specifier">"./e.js"</tspan>;</text>
+  <text x="274" y="208">await …;</text>
+
+  <path class="outline" d="M 550 172 H 670 V 206 H 500 V 172 H 508"/>
+  <text x="514" y="176">e.js</text>
+  <text x="514" y="194">await …;</text>
+</svg>

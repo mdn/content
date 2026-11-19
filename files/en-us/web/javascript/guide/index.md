@@ -86,7 +86,11 @@ Overview: [Numbers and strings](/en-US/docs/Web/JavaScript/Guide/Numbers_and_str
 
 Overview: [Representing dates & times](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times)
 
-- [`Date` object](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times#date_object)
+- [Instants](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times#instants)
+- [Zoned date-times](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times#zoned_date-times)
+- [Plain date-times, dates, and times](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times#plain_date-times_dates_and_times)
+- [Plain year-months and month-days](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times#plain_year-months_and_month-days)
+- [Cookbook](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times/Cookbook)
 
 ## Regular expressions
 
@@ -172,12 +176,17 @@ Overview: [Internationalization](/en-US/docs/Web/JavaScript/Guide/Internationali
 
 Overview: [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
 
-- [Exporting](/en-US/docs/Web/JavaScript/Guide/Modules#exporting_module_features)
-- [Importing](/en-US/docs/Web/JavaScript/Guide/Modules#importing_features_into_your_script)
-- [Default exports](/en-US/docs/Web/JavaScript/Guide/Modules#default_exports_versus_named_exports)
-- [Renaming features](/en-US/docs/Web/JavaScript/Guide/Modules#renaming_imports_and_exports)
-- [Aggregating modules](/en-US/docs/Web/JavaScript/Guide/Modules#aggregating_modules)
+- [Exporting](/en-US/docs/Web/JavaScript/Guide/Modules#named_exports)
+- [Importing](/en-US/docs/Web/JavaScript/Guide/Modules#named_imports)
+- [Default exports and imports](/en-US/docs/Web/JavaScript/Guide/Modules#default_exports_and_imports)
+- [Avoiding naming conflicts](/en-US/docs/Web/JavaScript/Guide/Modules#avoiding_naming_conflicts)
+- [Importing JSON modules](/en-US/docs/Web/JavaScript/Guide/Modules#importing_json_modules)
 - [Dynamic module loading](/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading)
+- [Top-level await](/en-US/docs/Web/JavaScript/Guide/Modules#top-level_await)
+- [Module metadata](/en-US/docs/Web/JavaScript/Guide/Modules#module_metadata)
+- [Using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web)
+- [Understanding the module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph)
+- [Modules across platforms](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms)
 
 ## Advanced topics
 

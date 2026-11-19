@@ -102,6 +102,12 @@ text-decoration-style: unset;
 
 The following creates a red wavy underline:
 
+#### HTML
+
+```html
+<p class="wavy">This text has a wavy red line beneath it.</p>
+```
+
 #### CSS
 
 ```css
@@ -110,12 +116,6 @@ The following creates a red wavy underline:
   text-decoration-style: wavy;
   text-decoration-color: red;
 }
-```
-
-#### HTML
-
-```html
-<p class="wavy">This text has a wavy red line beneath it.</p>
 ```
 
 #### Results

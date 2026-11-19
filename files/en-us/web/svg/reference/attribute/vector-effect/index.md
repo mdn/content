@@ -29,37 +29,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("tspan")}}
 - {{SVGElement("use")}}
 
-## Usage notes
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <code>none</code> | <code>non-scaling-stroke</code> |
-        <code>non-scaling-size</code> | <code>non-rotation</code> |
-        <code>fixed-position</code>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>none</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>discrete</td>
-    </tr>
-  </tbody>
-</table>
-
-- `none`
-  - : This value specifies that no vector effect shall be applied, i.e., the default rendering behavior is used which is to first fill the geometry of a shape with a specified paint, then stroke the outline with a specified paint.
-- `non-scaling-stroke`
-  - : This value modifies the way an object is stroked. Normally stroking involves calculating stroke outline of the shape's path in current user coordinate system and filling that outline with the stroke paint (color or gradient). The resulting visual effect of this value is that the stroke width is not dependent on the transformations of the element (including non-uniform scaling and shear transformations) and zoom level.
-
-> [!NOTE]
-> The spec defines three other values, `non-scaling-size`, `non-rotation`, and `fixed-position`, but these have no implementations and are considered at-risk.
-
 ## Examples
 
 ### Setting `vector-effect` as `non-scaling-stroke`
@@ -95,6 +64,37 @@ You can use this attribute with the following SVG elements:
 #### Result
 
 {{EmbedLiveSample("Setting vector-effect as non-scaling-stroke", 550, 330)}}
+
+## Usage notes
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code>none</code> | <code>non-scaling-stroke</code> |
+        <code>non-scaling-size</code> | <code>non-rotation</code> |
+        <code>fixed-position</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>none</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>discrete</td>
+    </tr>
+  </tbody>
+</table>
+
+- `none`
+  - : This value specifies that no vector effect shall be applied, i.e., the default rendering behavior is used which is to first fill the geometry of a shape with a specified paint, then stroke the outline with a specified paint.
+- `non-scaling-stroke`
+  - : This value modifies the way an object is stroked. Normally stroking involves calculating stroke outline of the shape's path in current user coordinate system and filling that outline with the stroke paint (color or gradient). The resulting visual effect of this value is that the stroke width is not dependent on the transformations of the element (including non-uniform scaling and shear transformations) and zoom level.
+
+> [!NOTE]
+> The spec defines three other values, `non-scaling-size`, `non-rotation`, and `fixed-position`, but these have no implementations and are considered at-risk.
 
 ## Specifications
 

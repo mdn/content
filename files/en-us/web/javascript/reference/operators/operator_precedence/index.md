@@ -40,7 +40,7 @@ a OP1 (b OP2 c)
 
 Which one the language decides to adopt depends on the identity of `OP1` and `OP2`.
 
-If `OP1` and `OP2` have different precedence levels (see the table below), the operator with the higher _precedence_ goes first and associativity does not matter. Observe how multiplication has higher precedence than addition and executed first, even though addition is written first in the code.
+If `OP1` and `OP2` have different precedence levels (see the table below), the operator with the higher _precedence_ goes first and associativity does not matter. Observe how multiplication has higher precedence than addition and is executed first, even though addition is written first in the code.
 
 ```js-nolint
 console.log(3 + 10 * 2); // 23
@@ -626,7 +626,7 @@ Notes:
 5. The operand must be a valid assignment target (identifier or property access). Its precedence means `new Foo++` is `(new Foo)++` (a syntax error) and not `new (Foo++)` (a TypeError: (Foo++) is not a constructor).
 6. The operand must be a valid assignment target (identifier or property access).
 7. The operand cannot be an identifier or a [private element](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) access.
-8. The left-hand side cannot have precedence 14.
+8. The left-hand side cannot have precedence 14, except for prefix increment and decrement.
 9. The operands cannot be a logical OR `||` or logical AND `&&` operator without grouping.
 10. The "left-hand side" must be a valid assignment target (identifier or property access).
 11. The associativity means the two expressions after `?` are implicitly grouped.

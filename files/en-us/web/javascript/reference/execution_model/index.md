@@ -122,7 +122,7 @@ function f() {
 }
 ```
 
-In this case, the call to `g` is a tail call. If a function call is in tail position, the engine is required to discard the current execution context and replace it with the context of the tail call, instead of pushing a new frame for the `g()` call. This means that tail recursion is not subject to the stack size limits:
+In this case, the call to `g` is a tail call. In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) only, if a function call is in tail position, the engine is required to discard the current execution context and replace it with the context of the tail call, instead of pushing a new frame for the `g()` call. This means that tail recursion is not subject to the stack size limits:
 
 ```js
 function factorial(n, acc = 1) {
@@ -171,7 +171,7 @@ promise.then(() => {
 });
 ```
 
-In this example, we create an already-resolved promise, which means any callback attached to it will be immediately scheduled as jobs. The two callbacks seem to cause a race condition, but actually, the output is fully predictable: `1` and `2` will be logged in order. This is because each job runs to completion before the next one is executed, so the overall order is always `i += 1; console.log(i); i += 1; console.log(i);` and never `i += 1; i += 1; console.log(i); console.log(i);`.
+In this example, we create an already-resolved promise, which means any callback attached to it will be immediately scheduled as a job. The two callbacks seem to cause a race condition, but actually, the output is fully predictable: `1` and `2` will be logged in order. This is because each job runs to completion before the next one is executed, so the overall order is always `i += 1; console.log(i); i += 1; console.log(i);` and never `i += 1; i += 1; console.log(i); console.log(i);`.
 
 A downside of this model is that if a job takes too long to complete, the web application is unable to process user interactions like click or scroll. The browser mitigates this with the "a script is taking too long to run" dialog. A good practice to follow is to make job processing short and, if possible, cut down one job into several jobs.
 
@@ -183,7 +183,7 @@ Of course, the guarantee of "never-blocking" requires the platform API to be inh
 
 ## Agent clusters and memory sharing
 
-Multiple agents can communicate via memory sharing, forming an **agent cluster**. Agents are within the same cluster if and only if they can share memory. There is no built-in mechanism for two agent clusters to exchange any information, so they can be regarded as completely isolated execution models.
+Multiple agents can communicate via memory sharing, forming an **agent cluster**. Agents are within the same cluster if and only if they can share memory. Agents not in the same cluster can still exchange information with other protocols, such as `postMessage()`.
 
 When creating an agent (such as by spawning a worker), there are some criteria for whether it's in the same cluster as the current agent, or a new cluster is created. For example, the following pairs of global objects are each within the same agent cluster, and thus can share memory with each other:
 
@@ -198,7 +198,7 @@ The following pairs of global objects are not within the same agent cluster, and
 - A `Window` object and a shared worker it created.
 - A worker (of any type) and a shared worker it created.
 - A `Window` object and a service worker it created.
-- A `Window` object A and the `Window` object of an `iframe` element that A created that cannot be same origin-domain with A.
+- A `Window` object A and the `Window` object of an `iframe` element that A created and is cross-origin with A when A's agent cluster is origin-keyed.
 - Any two `Window` objects with no opener or ancestor relationship. This holds even if the two `Window` objects are same origin.
 
 For the exact algorithm, check the [HTML specification](https://html.spec.whatwg.org/multipage/webappapis.html#integration-with-the-javascript-agent-cluster-formalism).

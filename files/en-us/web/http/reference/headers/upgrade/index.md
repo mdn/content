@@ -7,7 +7,7 @@ browser-compat: http.headers.Upgrade
 sidebar: http
 ---
 
-The HTTP `Upgrade` {{glossary("request header", "request")}} and {{glossary("response header")}} can be used to upgrade an already-established client/server connection to a different protocol (over the same transport protocol).
+The HTTP **`Upgrade`** {{glossary("request header", "request")}} and {{glossary("response header")}} can be used to upgrade an already-established client/server connection to a different protocol (over the same transport protocol).
 For example, it can be used by a client to upgrade a connection from HTTP/1.1 to HTTP/2, or an HTTP(S) connection to a WebSocket connection.
 
 > [!WARNING]

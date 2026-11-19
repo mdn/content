@@ -37,6 +37,17 @@ The asterisk is optional with simple selectors. For instance, `*.warning` and `.
 
 ## Examples
 
+### HTML
+
+```html
+<p class="warning">
+  <span lang="en-us">A green span</span> in a red paragraph.
+</p>
+<p id="maincontent" lang="en-gb">
+  <span class="warning">A red span</span> in a green paragraph.
+</p>
+```
+
 ### CSS
 
 ```css
@@ -60,17 +71,6 @@ The asterisk is optional with simple selectors. For instance, `*.warning` and `.
 .floating + * {
   clear: left;
 }
-```
-
-### HTML
-
-```html
-<p class="warning">
-  <span lang="en-us">A green span</span> in a red paragraph.
-</p>
-<p id="maincontent" lang="en-gb">
-  <span class="warning">A red span</span> in a green paragraph.
-</p>
 ```
 
 ### Result

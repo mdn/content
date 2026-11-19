@@ -44,6 +44,12 @@ This property is specified as one `<color>` value:
 
 ### Changing the fill color
 
+#### HTML
+
+```html
+<p>This text is green.</p>
+```
+
 #### CSS
 
 ```css
@@ -52,12 +58,6 @@ p {
   font-size: 3em;
   -webkit-text-fill-color: green;
 }
-```
-
-#### HTML
-
-```html
-<p>This text is green.</p>
 ```
 
 #### Results

@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDateTime() constructor
+short-title: Temporal.PlainDateTime()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/PlainDateTime
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Temporal.PlainDateTime.PlainDateTime

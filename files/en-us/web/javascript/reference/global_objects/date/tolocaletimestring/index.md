@@ -24,7 +24,7 @@ console.log(event.toLocaleTimeString("it-IT"));
 // Expected output: "01:15:30"
 
 console.log(event.toLocaleTimeString("ar-EG"));
-// Expected output: "١٢:١٥:٣٠ ص"
+// Expected output: "١:١٥:٣٠ ص"
 ```
 
 ## Syntax
@@ -47,7 +47,7 @@ In implementations that support the [`Intl.DateTimeFormat` API](/en-US/docs/Web/
     In implementations without `Intl.DateTimeFormat` support, this parameter is ignored and the host's locale is usually used.
 
 - `options` {{optional_inline}}
-  - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) parameter of the `Intl.DateTimeFormat()` constructor. If `dayPeriod`, `hour`, `minute`, `second`, and `fractionalSecondDigits` are all undefined, then `hour`, `minute`, `second` will be set to `"numeric"`.
+  - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) parameter of the `Intl.DateTimeFormat()` constructor. If `dayPeriod`, `hour`, `minute`, `second`, `fractionalSecondDigits`, and `timeStyle` are all undefined, then `hour`, `minute`, `second` will be set to `"numeric"`.
 
     In implementations without `Intl.DateTimeFormat` support, this parameter is ignored.
 
@@ -115,7 +115,7 @@ console.log(date.toLocaleTimeString("ko-KR"));
 
 // Arabic in most Arabic speaking countries uses real Arabic digits
 console.log(date.toLocaleTimeString("ar-EG"));
-// "٧:٠٠:٠٠ م"
+// "٥:٠٠:٠٠ ص"
 
 // when requesting a language that may not be supported, such as
 // Balinese, include a fallback language, in this case Indonesian
@@ -143,7 +143,7 @@ console.log(date.toLocaleTimeString("en-US", { hour12: false }));
 console.log(
   date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
 );
-// "20:01"
+// "19:00" (en-GB locale)
 ```
 
 ## Specifications

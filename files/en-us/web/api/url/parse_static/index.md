@@ -121,7 +121,7 @@ if ("parse" in URL) {
 
 The results of each of the checks are shown below.
 
-{{EmbedLiveSample('URL.parse()', '100%')}}
+{{EmbedLiveSample('using_url.parse', '100%')}}
 
 ## Specifications
 

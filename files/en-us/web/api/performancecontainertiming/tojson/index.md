@@ -3,10 +3,12 @@ title: "PerformanceContainerTiming: toJSON() method"
 short-title: toJSON()
 slug: Web/API/PerformanceContainerTiming/toJSON
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.PerformanceContainerTiming.toJSON
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("PerformanceContainerTiming")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PerformanceContainerTiming")}} object.
 

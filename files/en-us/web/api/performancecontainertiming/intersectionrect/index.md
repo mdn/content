@@ -3,10 +3,12 @@ title: "PerformanceContainerTiming: intersectionRect property"
 short-title: intersectionRect
 slug: Web/API/PerformanceContainerTiming/intersectionRect
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceContainerTiming.intersectionRect
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`intersectionRect`** read-only property of the {{domxref("PerformanceContainerTiming")}} interface returns the bounding rectangle of the container's accumulated painted region, calculated since the container root was registered.
 

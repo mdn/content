@@ -7,7 +7,7 @@ sidebar: addonsidebar
 
 Using the {{WebExtAPIRef("omnibox")}} API, extensions can customize the suggestions offered in the browser address bar's drop-down when the user enters a keyword.
 
-![Example showing the result of the firefox_code_search WebExtension's customization of the address bar suggestions.](omnibox_example_small.png)
+![Example showing the result of the firefox-code-search example's customization of the address bar suggestions.](omnibox_example_small.png)
 
 This enables your extension to, for example, search a library of free ebooks or, as in the example above, a repository of code examples.
 

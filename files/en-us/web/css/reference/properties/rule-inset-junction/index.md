@@ -69,6 +69,7 @@ rule-inset-junction: overlap-join 10px;
 }
 #example-element i {
   background-color: #efefef;
+  color: #333333;
   padding: 1em;
 }
 ```
@@ -270,7 +271,7 @@ inset.addEventListener("input", () => {
 
 {{EmbedLiveSample("Basic usage", "", "330")}}
 
-Change the size of the inset. Note that where the rule is a single segment that goes from one edge of the container to the opposite edge, the segment has two cap endpoints and no junction endpoints. Therefore, changing the `rule-inset-junction` value does not affect these segments.
+Change the size of the inset. Note that when a rule is a single segment spanning the entire width or height of the container, the segment has two cap endpoints and no junction endpoints, and is therefore not affected by changes to the `rule-inset-junction` value.
 
 ### With grid layout
 

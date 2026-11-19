@@ -5,10 +5,11 @@ slug: Web/API/TaskAttributionTiming/containerId
 page-type: web-api-instance-property
 status:
   - experimental
+  - non-standard
 browser-compat: api.TaskAttributionTiming.containerId
 ---
 
-{{APIRef("Performance API")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`containerId`** read-only property of the {{domxref("TaskAttributionTiming")}} interface returns the container's `id`
 attribute. A container is the iframe, embed or object etc. that is being implicated, on the whole, for a long task.

@@ -33,7 +33,7 @@ yield* expression
 
 ### Parameters
 
-- `expression` {{optional_inline}}
+- `expression`
   - : An iterable object.
 
 ### Return value
@@ -54,8 +54,7 @@ If the underlying iterator doesn't have a `throw()` method, this causes `yield*`
 
 ### Delegating to another generator
 
-In following code, values yielded by `g1()` are returned from
-`next()` calls just like those which are yielded by `g2()`.
+In the following code, `next()` calls return both `g1()`- and `g2()`-yielded values.
 
 ```js
 function* g1() {
@@ -124,7 +123,7 @@ const gen = g5();
 
 console.log(gen.next()); // {value: 1, done: false}
 console.log(gen.next()); // {value: 2, done: false}
-console.log(gen.next()); // {value: 3, done: false} done is false because g5 generator isn't finished, only g4
+console.log(gen.next()); // {value: 3, done: false}
 console.log(gen.next()); // {value: 'foo', done: true}
 ```
 
@@ -204,8 +203,8 @@ console.log(gen2.next(10));
 console.log(gen2.throw(50));
 // throw called with 50
 // { value: 'gf return value', done: true }
-console.log(gen.next(60));
-// { value: undefined, done: true }; gen is already closed
+console.log(gen2.next(60));
+// { value: undefined, done: true }; gen2 is already closed
 ```
 
 If the `return()`/`throw()` method of the underlying iterator returns `done: false`, the current generator continues executing and `yield*` continues to delegate to the underlying iterator.
@@ -241,6 +240,7 @@ console.log(gen.return(20));
 // return called with 20
 // { value: 'iterable return value', done: false }
 console.log(gen.next(30));
+// next called with 30
 // { value: 2, done: false }; gen is not closed
 ```
 

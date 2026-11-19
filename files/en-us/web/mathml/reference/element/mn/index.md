@@ -36,7 +36,7 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Refer
 </math>
 ```
 
-{{ EmbedLiveSample('mi_example', 700, 200, "", "") }}
+{{ EmbedLiveSample('examples', 700, 200, "", "") }}
 
 ## Technical summary
 

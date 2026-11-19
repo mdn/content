@@ -39,7 +39,7 @@ The `globalThis` property provides a standard way of accessing the global `this`
 
 ### HTML and the WindowProxy
 
-In many engines `globalThis` will be a reference to the actual global object, but in web browsers, due to iframe and cross-window security considerations, it references a {{jsxref("Proxy")}} around the actual global object (which you can't directly access). This distinction is rarely relevant in common usage, but important to be aware of.
+In many engines `globalThis` will be a reference to the actual global object, but in web browsers, due to iframe and cross-window security considerations, it references a {{glossary("WindowProxy")}} around the actual global object (which you can't directly access). This distinction is rarely relevant in common usage, but important to be aware of.
 
 ### Naming
 

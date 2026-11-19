@@ -427,25 +427,6 @@ a[href]:empty::after {
 A CSS counter can be especially useful for making outlined lists, because a new instance of the counter is automatically created in child elements.
 Using the {{cssxref("counters()")}} function, separating text can be inserted between different levels of nested counters.
 
-#### CSS
-
-We create a new instance of the section counter with each `<ol>` element, incrementing only the current instance of the section counter on each `<li>`. Using the {{cssxref("counters()")}} function, we combine the values of all instances of the section counter, separated by a period.
-
-```css
-ol {
-  counter-reset: section;
-  list-style-type: none;
-}
-
-li {
-  counter-increment: section;
-}
-
-li::before {
-  content: counters(section, ".") " ";
-}
-```
-
 #### HTML
 
 ```html-nolint
@@ -476,6 +457,25 @@ li::before {
   <li>item</li>          <!-- 1     -->
   <li>item</li>          <!-- 2     -->
 </ol>
+```
+
+#### CSS
+
+We create a new instance of the section counter with each `<ol>` element, incrementing only the current instance of the section counter on each `<li>`. Using the {{cssxref("counters()")}} function, we combine the values of all instances of the section counter, separated by a period.
+
+```css
+ol {
+  counter-reset: section;
+  list-style-type: none;
+}
+
+li {
+  counter-increment: section;
+}
+
+li::before {
+  content: counters(section, ".") " ";
+}
 ```
 
 #### Result

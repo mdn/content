@@ -27,14 +27,14 @@ _Inherits properties from its parent, {{domxref("EventTarget")}}._
 - {{domxref("SharedWorker.port")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("MessagePort")}} object used to communicate with and control the shared worker.
 
+## Instance methods
+
+_Inherits methods from its parent, {{domxref("EventTarget")}}._
+
 ## Events
 
 - {{domxref("SharedWorker.error_event", "error")}}
   - : Fires when an error occurs in the shared worker.
-
-## Instance methods
-
-_Inherits methods from its parent, {{domxref("EventTarget")}}._
 
 ## Example
 

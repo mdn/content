@@ -28,9 +28,9 @@ A new {{domxref("HTMLGeolocationElement")}} object instance, if used internally 
 
 Developers cannot use the `HTMLGeolocationElement()` constructor directly to create a new `HTMLGeolocationElement` instance: attempting to do so results in an "illegal constructor" error.
 
-### Examples
+## Examples
 
-#### Creating a new `HTMLGeolocationElement` instance programmatically
+### Creating a new `HTMLGeolocationElement` instance programmatically
 
 To programmatically create a new `HTMLGeolocationElement` instance, instead of trying to use the constructor directly, you would create a new {{htmlelement("geolocation")}} element instance using {{domxref("Document.createElement()")}}:
 

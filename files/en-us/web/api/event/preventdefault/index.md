@@ -47,6 +47,19 @@ None ({{jsxref("undefined")}}).
 Toggling a checkbox is the default action of clicking on a checkbox. This example
 demonstrates how to prevent that from happening:
 
+#### HTML
+
+```html
+<p>Please click on the checkbox control.</p>
+
+<form>
+  <label for="id-checkbox">Checkbox:</label>
+  <input type="checkbox" id="id-checkbox" />
+</form>
+
+<div id="output-box"></div>
+```
+
 #### JavaScript
 
 ```js
@@ -59,19 +72,6 @@ function checkboxClick(event) {
   document.getElementById("output-box").innerText += warn;
   event.preventDefault();
 }
-```
-
-#### HTML
-
-```html
-<p>Please click on the checkbox control.</p>
-
-<form>
-  <label for="id-checkbox">Checkbox:</label>
-  <input type="checkbox" id="id-checkbox" />
-</form>
-
-<div id="output-box"></div>
 ```
 
 #### Result

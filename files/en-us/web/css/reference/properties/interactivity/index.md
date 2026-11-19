@@ -38,14 +38,6 @@ This property is specified as one of the following keyword values:
 - `inert`
   - : Selected elements and their descendants are inert.
 
-## Formal definition
-
-{{cssinfo}}
-
-## Formal syntax
-
-{{csssyntax}}
-
 ## Description
 
 The `interactivity` property can be used to set whether an element and its descendants are inert. See the HTML [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute reference page for a detailed description of the inert state.
@@ -68,6 +60,14 @@ Most elements are interactive by default, but this is not always the case:
 
 - An element's ancestor may be set to an inert state, via the `interactive` property or the `inert` attribute.
 - While a modal {{htmlelement("dialog")}} is displayed, the rest of the page is set to an inert state automatically.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 

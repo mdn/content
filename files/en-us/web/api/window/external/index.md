@@ -10,7 +10,7 @@ browser-compat: api.Window.external
 
 {{APIRef("HTML DOM")}}
 
-The `external` property of the {{domxref("Window")}} API returns an instance of the `External` interface, which was intended to contain functions related to adding external search providers to the browser. However, this is now deprecated, and the contained methods are now dummy functions that do nothing as per spec.
+The **`external`** read-only property of the {{domxref("Window")}} interface returns an instance of the `External` interface, which was intended to contain functions related to adding external search providers to the browser. However, this is now deprecated, and the contained methods are now dummy functions that do nothing as per spec.
 
 ## Instance methods
 

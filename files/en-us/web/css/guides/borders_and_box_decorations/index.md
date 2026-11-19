@@ -124,7 +124,7 @@ range.addEventListener("input", setCornerShape);
 setCornerShape();
 ```
 
-{{EmbedLiveSample("backgrounds", "", "350px")}}
+{{EmbedLiveSample("borders_and_box_decorations_in_action", "", "350px")}}
 
 ## Reference
 

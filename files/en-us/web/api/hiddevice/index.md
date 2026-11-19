@@ -28,11 +28,6 @@ This interface also inherits properties from {{domxref("EventTarget")}}.
 - {{domxref("HIDDevice.collections")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an array of report formats for the HID device.
 
-### Events
-
-- {{domxref("HIDDevice.inputreport_event", "inputreport")}} {{Experimental_Inline}}
-  - : Fires when a report is sent from the device.
-
 ## Instance methods
 
 This interface also inherits methods from {{domxref("EventTarget")}}.
@@ -49,6 +44,11 @@ This interface also inherits methods from {{domxref("EventTarget")}}.
   - : Sends a feature report to this HID device, and returns a {{jsxref("Promise")}} which resolves once the report has been sent.
 - {{domxref("HIDDevice.receiveFeatureReport()")}} {{Experimental_Inline}}
   - : Receives a feature report from this HID device in the form of a {{jsxref("Promise")}} which resolves with a {{jsxref("DataView")}}. This allows typed access to the contents of this message.
+
+## Events
+
+- {{domxref("HIDDevice.inputreport_event", "inputreport")}} {{Experimental_Inline}}
+  - : Fires when a report is sent from the device.
 
 ## Examples
 

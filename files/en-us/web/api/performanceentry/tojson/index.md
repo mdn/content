@@ -8,7 +8,9 @@ browser-compat: api.PerformanceEntry.toJSON
 
 {{APIRef("Performance API")}}{{AvailableInWorkers}}
 
-The **`toJSON()`** method is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PerformanceEntry")}} object.
+The **`toJSON()`** method of the {{domxref("PerformanceEntry")}} interface returns a JSON-serializable plain object representing the `PerformanceEntry` object.
+
+The method is automatically called by {{jsxref("JSON.stringify()")}} when a `PerformanceEntry` object is encountered during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -22,13 +24,21 @@ None.
 
 ### Return value
 
-A {{jsxref("JSON")}} object that is the serialization of the {{domxref("PerformanceEntry")}} object.
+A JSON-serializable plain object containing the following properties:
+
+- {{domxref("PerformanceEntry/name", "name")}}
+- {{domxref("PerformanceEntry/entryType", "entryType")}}
+- {{domxref("PerformanceEntry/startTime", "startTime")}}
+- {{domxref("PerformanceEntry/duration", "duration")}}
+- {{domxref("PerformanceEntry/navigationId", "navigationId")}}
+
+Each property's value is copied as-is.
 
 ## Examples
 
-### Using the toJSON method
+### Calling toJSON() directly
 
-In this example, calling `entry.toJSON()` returns a JSON representation of the {{domxref("PerformanceMark")}} object.
+This example obtains a `PerformanceEntry` object. Calling `toJSON()` directly returns a plain object. Its properties have the same values as the corresponding properties of the original object.
 
 ```js
 performance.mark("debug-marker", {
@@ -37,27 +47,37 @@ performance.mark("debug-marker", {
 
 const observer = new PerformanceObserver((list) => {
   list.getEntries().forEach((entry) => {
-    console.log(entry.toJSON());
+    const json = entry.toJSON();
+    console.log(json); // A plain object
+    console.log(typeof json); // "object"
+    console.log(json.name); // Same value as entry.name
   });
 });
 
-observer.observe({ entryTypes: ["mark"] });
+observer.observe({ type: "mark", buffered: true });
 ```
 
-This would log a JSON object like so:
+### Serializing to a JSON string
+
+Within the callback from the previous example, the same object can be serialized using {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method automatically.
+
+```js
+console.log(JSON.stringify(entry));
+```
+
+This would log a JSON string like so (formatted for readability):
 
 ```json
 {
   "name": "debug-marker",
   "entryType": "mark",
-  "startTime": 158361,
-  "duration": 0
+  "startTime": 158361.5,
+  "duration": 0,
+  "navigationId": 2463
 }
 ```
 
 Note that it doesn't contain `PerformanceMark`'s {{domxref("PerformanceMark.detail", "detail")}} property.
-
-To get a JSON string, you can use [`JSON.stringify(entry)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) directly; it will call `toJSON()` automatically.
 
 ## Specifications
 

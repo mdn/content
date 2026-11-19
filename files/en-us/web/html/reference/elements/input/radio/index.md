@@ -53,7 +53,7 @@ The `value` attribute is a string containing the radio button's value. The value
 
 ### Defining a radio group
 
-A radio group is defined by giving each of radio buttons in the group the same [`name`](/en-US/docs/Web/HTML/Reference/Elements/input#name). Once a radio group is established, selecting any radio button in that group automatically deselects any currently-selected radio button in the same group.
+A radio group is defined by giving each of the radio buttons in the group the same [`name`](/en-US/docs/Web/HTML/Reference/Elements/input#name). Once a radio group is established, selecting any radio button in that group automatically deselects any currently-selected radio button in the same group.
 
 You can have as many radio groups on a page as you like, as long as each has its own unique `name`.
 
@@ -85,7 +85,7 @@ You can try out this example here:
 
 ### Data representation of a radio group
 
-When a form containing the above controls is submitted with a radio button selected, the form's data includes an entry in the form `contact=value`. For example, if the user clicks on the "Phone" radio button then submits the form, `contact=phone` will be included in the the form's submitted data.
+When a form containing the above controls is submitted with a radio button selected, the form's data includes an entry in the form `contact=value`. For example, if the user clicks on the "Phone" radio button then submits the form, `contact=phone` will be included in the form's submitted data.
 
 If you omit the `value` attribute in the HTML, the submitted form data assigns the value `on` to the group. In this scenario, if the user clicked on the "Phone" option and submitted the form, the resulting form data would be `contact=on`, which isn't helpful. So don't forget to set your `value` attributes!
 
@@ -164,7 +164,7 @@ We already covered the fundamentals of radio buttons above. Let's now look at th
 
 ### Selecting a radio button by default
 
-To make a radio button selected by default, you include `checked` attribute, as shown in this revised version of the previous example:
+To make a radio button selected by default, you include the `checked` attribute, as shown in this revised version of the previous example:
 
 ```html
 <fieldset>

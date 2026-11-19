@@ -140,6 +140,33 @@ This example adds some semantics to the `<summary>` element to indicate the labe
 
 The `<summary>` element's marker, the disclosure triangle, can be customized with CSS. The marker can be targeted using the {{cssxref("::marker")}} pseudo-element. which accepts the {{cssxref("list-style")}} shorthand property and its longhand component properties, such as {{cssxref("list-style-type")}}. This enables changing the triangle to an image (usually with {{cssxref("list-style-image")}}) or a string (including emojis). In this example, we replace the content of one disclosure widget and remove the icon from another by setting `list-style: none` before adding a custom disclosure icon via generated content.
 
+#### HTML
+
+```html-nolint
+<h1>Quotes from Helen Keller</h1>
+
+<details>
+  <summary>On women's rights</summary>
+  <p>
+    <q>We have prayed, we have coaxed, we have begged, for the vote, with the
+      hope that men, out of chivalry, would bestow equal rights upon women and
+      take them into partnership in the affairs of the state. We hoped that
+      their common sense would triumph over prejudices and stupidity. We thought
+      their boasted sense of justice would overcome the errors that so often
+      fetter the human spirit; but we have always gone away empty-handed. We
+      shall beg no more.</q>
+  </p>
+</details>
+
+<details>
+  <summary>On optimism</summary>
+  <p>
+    <q>Optimism is the faith that leads to achievement; nothing can be done
+      without hope.</q>
+  </p>
+</details>
+```
+
 #### CSS
 
 In the first disclosure widget, we style the `::marker`, changing the {{cssxref("content")}} based on the `<details>` element's `[open]` attribute. For the second widget, we remove the marker with `list-style` properties, then add styled generated content with the {{cssxref("::after")}} pseudo-element. We also include styles for `::-webkit-details-marker` to target Safari. The selector for the browser-specific pseudo-element is included in an {{cssxref(":is()")}} pseudo-class so it doesn't invalidate the selector list.
@@ -186,33 +213,6 @@ details:last-of-type summary::-webkit-details-marker {
 ```
 
 The CSS includes the `[open]` [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors), matching only when the `open` attribute is present (when the `<details>` are open). The {{cssxref(":first-of-type")}} and {{cssxref(":last-of-type")}} pseudo-classes target the first and sibling elements of the same type. We included the prefixed `-webkit-` pseudo-element within a {{cssxref(":is()")}} pseudo-class as it takes a [forgiving selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list#forgiving_selector_list), so if the prefixed pseudo-element is invalid in a browser, the whole selector block will not be invalid. We also used CSS [nesting](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector). See the [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) module.
-
-#### HTML
-
-```html-nolint
-<h1>Quotes from Helen Keller</h1>
-
-<details>
-  <summary>On women's rights</summary>
-  <p>
-    <q>We have prayed, we have coaxed, we have begged, for the vote, with the
-      hope that men, out of chivalry, would bestow equal rights upon women and
-      take them into partnership in the affairs of the state. We hoped that
-      their common sense would triumph over prejudices and stupidity. We thought
-      their boasted sense of justice would overcome the errors that so often
-      fetter the human spirit; but we have always gone away empty-handed. We
-      shall beg no more.</q>
-  </p>
-</details>
-
-<details>
-  <summary>On optimism</summary>
-  <p>
-    <q>Optimism is the faith that leads to achievement; nothing can be done
-      without hope.</q>
-  </p>
-</details>
-```
 
 #### Result
 

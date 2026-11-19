@@ -332,6 +332,7 @@ JSEP
 JSON-ifiable
 jsonifier
 jumpless
+Juneteenth
 JXON
 KACST
 Kbit
@@ -603,6 +604,7 @@ RTMPS
 RTMPT
 RTSP
 run-throughs
+RWND
 résumé
 safelisted
 Saltasaurus
@@ -675,6 +677,7 @@ spoofable
 spritesheet
 spritesheets
 SSML
+ssthresh
 STIX
 strawman
 streamable
@@ -711,6 +714,7 @@ submatch
 submatches
 subminor
 subminute
+subpackages
 subpages
 subpanels
 subpattern

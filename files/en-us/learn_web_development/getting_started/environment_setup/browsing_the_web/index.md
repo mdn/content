@@ -156,7 +156,7 @@ Before you move on, try searching for some topics of your own that you'd like to
 
 ### Using AI
 
-AI-generated search results are a very popular way of receiving information. They basically provide a superpowered search: they do a lot of searching in the background, before compiling the results into a single, easily-digestible answer. Common choices are [ChatGPT](https://chatgpt.com/), [Google Gemini](https://gemini.google.com/app), and [Microsoft Copilot](https://copilot.microsoft.com/), accessed either directly in a chat format, or via AI-powered in-app help or automation systems.
+AI-generated search results are a very popular way of receiving information. They basically provide a superpowered search: they do a lot of searching in the background, before compiling the results into a single, easily-digestible answer. Common choices are [ChatGPT](https://chatgpt.com/), [Google Gemini](https://gemini.google.com/app), and [Microsoft Copilot](https://copilot.com/), accessed either directly in a chat format, or via AI-powered in-app help or automation systems.
 
 When learning to code, AI chat prompts can be useful in a variety of ways:
 

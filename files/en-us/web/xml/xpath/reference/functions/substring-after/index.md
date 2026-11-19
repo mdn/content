@@ -24,7 +24,7 @@ substring-after( haystack, needle )
 
 A string.
 
-### Examples
+## Examples
 
 | XPath Example                  | Output         |
 | ------------------------------ | -------------- |

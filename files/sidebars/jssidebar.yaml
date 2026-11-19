@@ -26,6 +26,9 @@ sidebar:
         title: Guide_Numbers
       - link: /Web/JavaScript/Guide/Representing_dates_times
         title: Guide_Dates
+        details: open
+        children:
+          - /Web/JavaScript/Guide/Representing_dates_times/Cookbook
       - link: /Web/JavaScript/Guide/Regular_expressions
         title: Guide_RegExp
       - link: /Web/JavaScript/Guide/Indexed_collections
@@ -48,6 +51,11 @@ sidebar:
         title: Guide_Internationalization
       - link: /Web/JavaScript/Guide/Modules
         title: Guide_Modules
+        details: open
+        children:
+          - /Web/JavaScript/Guide/Modules/Modules_on_the_web
+          - /Web/JavaScript/Guide/Modules/Module_graph
+          - /Web/JavaScript/Guide/Modules/Modules_across_platforms
   - title: Intermediate
     details: closed
     children:

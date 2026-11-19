@@ -107,7 +107,7 @@ target.addEventListener("drop", (event) => {
 
 #### Result
 
-{{EmbedLiveSample('A minimal drag and drop example')}}
+{{EmbedLiveSample('a_minimal_drag-and-drop_example')}}
 
 ## Specifications
 
