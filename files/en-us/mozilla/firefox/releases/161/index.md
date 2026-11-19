@@ -85,13 +85,15 @@ Firefox 161 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### General -->
+#### WebDriver BiDi
 
-<!-- #### WebDriver BiDi -->
-
-<!-- #### Marionette -->
+- Updated the `script.callFunction` command to return an `invalid argument` error when an argument or the `this` value contains a local value with an unknown `type`, including nested values. Previously, such values were silently replaced with `undefined`. ([Firefox bug 2084105](https://bugzil.la/2084105)).
+- Updated the `script.evaluate` and `script.callFunction` commands to stop clearing a pre-existing user activation flag when called with `userActivation: false`. ([Firefox bug 2084107](https://bugzil.la/2084107)).
+- Fixed an issue where the `browsingContext.navigate` and `browsingContext.reload` commands could hang or fail with the wrong error when a navigation started while the previous document was still loading. ([Firefox bug 2088640](https://bugzil.la/2088640)).
+- Fixed a performance issue where each call to the `browsingContext.setViewport` command became slower over the lifetime of the session. ([Firefox bug 2084362](https://bugzil.la/2084362)).
+- Fixed the `network.continueRequest` command so that replacing the body of a request that already had a body also updates the `Content-Length` header. Previously, the server could receive a truncated or incomplete body. ([Firefox bug 2088814](https://bugzil.la/2088814)).
 
 ## Changes for add-on developers
 
