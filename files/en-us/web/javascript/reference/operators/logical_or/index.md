@@ -29,6 +29,17 @@ console.log(a > 0 || b > 0);
 x || y
 ```
 
+### Parameters
+
+- `x`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 3 (logical OR) or above. Parenthesize a nullish coalescing expression (`??`) used here.
+- `y`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 4 (logical AND) or above. Evaluated only if `x` is {{Glossary("falsy")}}.
+
+### Return value
+
+The value of `x` if `x` is {{Glossary("truthy")}}, or the value of `y` otherwise.
+
 ## Description
 
 If `x` can be converted to `true`, returns

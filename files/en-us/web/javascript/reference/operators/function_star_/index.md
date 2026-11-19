@@ -64,6 +64,10 @@ function* name(param0, param1, /* …, */ paramN) {
 - `statements` {{optional_inline}}
   - : The statements which comprise the body of the function.
 
+### Return value
+
+A {{jsxref("GeneratorFunction")}} object.
+
 ## Description
 
 A `function*` expression is very similar to, and has almost the same syntax as, a [`function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function*). The main difference between a `function*` expression and a `function*` declaration is the _function name_, which can be omitted in `function*` expressions to create _anonymous_ functions. A `function*` expression can be used as an [IIFE](/en-US/docs/Glossary/IIFE) (Immediately Invoked Function Expression) which runs as soon as it is defined, allowing you to create an ad-hoc [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). See also the chapter about [functions](/en-US/docs/Web/JavaScript/Reference/Functions) for more information.

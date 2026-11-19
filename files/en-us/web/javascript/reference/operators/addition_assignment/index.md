@@ -27,6 +27,17 @@ console.log((b += " world")); // Concatenation
 x += y
 ```
 
+### Parameters
+
+- `x`
+  - : A valid assignment target, such as an [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) or a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors). Its current value is coerced to a string, a BigInt, or a number.
+- `y`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 2 (assignment) or above. Its value is coerced to a string, a BigInt, or a number.
+
+### Return value
+
+The string, BigInt, or number produced by [`x + y`](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) using the original value of `x`.
+
 ## Description
 
 `x += y` is equivalent to `x = x + y`, except that the expression `x` is only evaluated once.

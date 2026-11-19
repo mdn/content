@@ -33,9 +33,9 @@ x = y
 ### Parameters
 
 - `x`
-  - : A valid assignment target, including an [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) or a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors). It can also be a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring).
+  - : A valid assignment target, such as an [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) or a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors). It can also be a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring).
 - `y`
-  - : An expression specifying the value to be assigned to `x`.
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 2 (assignment) or above specifying the value to be assigned to `x`.
 
 ### Return value
 

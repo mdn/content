@@ -32,8 +32,14 @@ expr1, expr2, expr3/* , … */
 
 ### Parameters
 
-- `expr1`, `expr2`, `expr3`, …
-  - : One or more expressions, the last of which is returned as the value of the compound expression.
+- `expr1`
+  - : An expression of any [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table), including another comma expression.
+- `expr2`, `expr3`, …
+  - : One or more expressions with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 2 (assignment) or above, evaluated from left to right.
+
+### Return value
+
+The value of the last expression.
 
 ## Description
 

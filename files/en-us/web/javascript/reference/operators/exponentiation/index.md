@@ -30,6 +30,17 @@ console.log((2 ** 3) ** 2);
 x ** y
 ```
 
+### Parameters
+
+- `x`
+  - : A prefix increment (`++x`), a prefix decrement (`--x`), or an expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 15 (postfix operators) or above. Its value is coerced to [a number or a BigInt](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion).
+- `y`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 13 (exponentiation) or above. Its value is coerced to [a number or a BigInt](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion).
+
+### Return value
+
+A number or a BigInt representing `x` raised to the power of `y`.
+
 ## Description
 
 The `**` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt exponentiation if both operands become BigInts; otherwise, it performs number exponentiation. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.

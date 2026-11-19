@@ -33,6 +33,17 @@ console.log(0 === false);
 x === y
 ```
 
+### Parameters
+
+- `x`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 8 (equality) or above.
+- `y`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 9 (relational operators) or above.
+
+### Return value
+
+`true` if `x` and `y` are equal according to [strict equality](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#strict_equality_using), and `false` otherwise.
+
 ## Description
 
 The strict equality operators (`===` and `!==`) provide the [IsStrictlyEqual](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#strict_equality_using) semantic.

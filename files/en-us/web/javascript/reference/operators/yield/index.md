@@ -37,7 +37,7 @@ yield expression
 ### Parameters
 
 - `expression` {{optional_inline}}
-  - : The value to yield from the generator function via [the iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol). If omitted, `undefined` is yielded.
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 2 (assignment) or above. Its value is yielded from the generator function via [the iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol). If omitted, `undefined` is yielded.
 
 ### Return value
 

@@ -60,6 +60,21 @@ super.propertyOnParent
 super[expression]
 ```
 
+### Parameters
+
+- `arg1`, `arg2`, …, `argN`
+  - : Each argument to the superclass constructor can be a [spread argument](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or an expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 2 (assignment) or above.
+- `propertyOnParent`
+  - : The [identifier name](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) of the property to access.
+- `expression`
+  - : An expression of any [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table). Its value is coerced to a property key (a [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) or symbol).
+
+### Return value
+
+A `super()` call returns the object that becomes `this` in the derived constructor.
+
+The property-access forms produce a reference to the specified property on the prototype chain, with the current `this` as the receiver.
+
 ## Description
 
 The `super` keyword can be used in two ways: as a "function call" (`super(...args)`), or as a "property lookup" (`super.prop` and `super[expr]`).
