@@ -11,7 +11,7 @@ The **`<url>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Refer
 
 ## Associated properties
 
-This data type is accepted as a value for the following CSS properties:
+This data type is accepted in the value definitions of the following CSS properties:
 
 - {{cssxref("backdrop-filter")}}
 - {{cssxref("background")}}
