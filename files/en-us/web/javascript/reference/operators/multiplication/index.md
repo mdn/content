@@ -81,7 +81,7 @@ Number(2n) * 2; // 4
 
 ### Non-associativity
 
-Be careful with operation order. Unlike in mathematics, multiplication in JavaScript is not always associative—that is, `a * (b * c) !== (a * b) * c`—due to the rounding of intermediate results.
+Be careful with operation order. Unlike in mathematics, multiplication in JavaScript isn't always associative due to how intermediate results are rounded. For example, `a * (b * c) !== (a * b) * c`:
 
 ```js
 const a = 3;

@@ -109,7 +109,7 @@ If one of the operands is a string, the other is converted to a string and they 
 
 ### Non-associativity
 
-Be careful with operation order. Unlike in mathematics, addition in JavaScript is not always associative—that is, `a + (b + c) !== (a + b) + c`—due to the rounding of intermediate results.
+Be careful with operation order. Unlike in mathematics, addition in JavaScript isn't always associative due to how intermediate results are rounded. For example, `a + (b + c) !== (a + b) + c`:
 
 ```js
 const a = 1e20;
@@ -120,7 +120,7 @@ console.log(a + b + c); // 0.1
 console.log(a + (b + c)); // 0
 ```
 
-{{jsxref("Math.sumPrecise()")}} can alleviate the issue here.
+{{jsxref("Math.sumPrecise()")}} can alleviate the issue here:
 
 ```js
 console.log(Math.sumPrecise([a, b, c])); // 0.1
