@@ -2,7 +2,7 @@
 title: begin
 slug: Web/SVG/Reference/Attribute/begin
 page-type: svg-attribute
-spec-urls: https://svgwg.org/specs/animations/#BeginAttribute
+spec-urls: https://w3c.github.io/svgwg/specs/animations/#BeginAttribute
 sidebar: svgref
 ---
 
@@ -97,6 +97,9 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
   - : This value defines an access key that should trigger the animation. The element animation will begin when the user presses the specified key.
 
     A valid accessKey-value consists of the function `accessKey()` with the character to be input as parameter. An optional offset value as defined in `<offset-value>` can be appended.
+
+    > [!NOTE]
+    > `accessKey()` values are not supported by any browser. Firefox removed support in Firefox 59, and WebKit and Chromium recognize the function but never connect it to keyboard input. To start an animation with a key, or from any other event, use `begin="indefinite"` and call {{domxref("SVGAnimationElement.beginElement()", "beginElement()")}} from a script.
 
 - `<wallclock-sync-value>`
   - : This value defines the animation start time as a real-world clock time.
@@ -341,50 +344,35 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
 
 {{EmbedLiveSample('Repeat_example', '100%', 130)}}
 
-### Accesskey example
+### Starting an animation from script
+
+Because `accessKey()` is not supported, set `begin="indefinite"` on the animation and start it from a script with {{domxref("SVGAnimationElement.beginElement()", "beginElement()")}}:
 
 ```html
-<svg
-  width="120"
-  height="120"
-  viewBox="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- animated rectangles -->
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
   <rect x="10" y="35" height="15" width="0">
     <animate
-      attributeType="XML"
+      id="grow"
       attributeName="width"
       from="0"
       to="100"
-      begin="accessKey(s)"
+      begin="indefinite"
       dur="8s"
       fill="freeze" />
   </rect>
-
-  <!-- trigger -->
-  <text x="60" y="80" text-anchor="middle" pointer-events="none">
-    Hit the "s" key
-  </text>
-
-  <!-- grid -->
-  <text x="10" y="20" text-anchor="middle">0s</text>
-  <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
-  <text x="35" y="20" text-anchor="middle">2s</text>
-  <line x1="35" y1="25" x2="35" y2="55" stroke="grey" stroke-width=".5" />
-  <text x="60" y="20" text-anchor="middle">4s</text>
-  <line x1="60" y1="25" x2="60" y2="55" stroke="grey" stroke-width=".5" />
-  <text x="85" y="20" text-anchor="middle">6s</text>
-  <line x1="85" y1="25" x2="85" y2="55" stroke="grey" stroke-width=".5" />
-  <text x="110" y="20" text-anchor="middle">8s</text>
-  <line x1="110" y1="25" x2="110" y2="55" stroke="grey" stroke-width=".5" />
-
-  <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
-  <line x1="10" y1="55" x2="110" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="60" y="80" text-anchor="middle">Hit the "s" key</text>
 </svg>
 ```
 
-{{EmbedLiveSample('Accesskey_example', '100%', 130)}}
+```js
+document.addEventListener("keydown", (event) => {
+  if (event.key === "s") {
+    document.getElementById("grow").beginElement();
+  }
+});
+```
+
+{{EmbedLiveSample('Starting_an_animation_from_script', '100%', 130)}}
 
 _This example is embedded in an iFrame. If you want to activate the key events, you have to click on it first._
 
