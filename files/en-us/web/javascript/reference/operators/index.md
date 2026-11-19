@@ -90,7 +90,7 @@ A unary operation is an operation with only one operand.
 - {{jsxref("Operators/Unary_plus", "+")}}
   - : The unary plus operator converts its operand to Number type.
 - {{jsxref("Operators/Unary_negation", "-")}}
-  - : The unary negation operator converts its operand to Number type and then negates it.
+  - : The unary negation operator converts its operand to a numeric value and then negates it.
 - {{jsxref("Operators/Bitwise_NOT", "~")}}
   - : Bitwise NOT operator.
 - {{jsxref("Operators/Logical_NOT", "!")}}
@@ -161,7 +161,7 @@ Operations to shift all bits of the operand.
 
 ### Binary bitwise operators
 
-Bitwise operators treat their operands as a set of 32 bits (zeros and ones) and return standard JavaScript numerical values.
+Bitwise operators treat their operands as a set of bits (zeros and ones), using 32 bits for numbers, and return a number or BigInt.
 
 - {{jsxref("Operators/Bitwise_AND", "&amp;")}}
   - : Bitwise AND.

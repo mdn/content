@@ -46,7 +46,7 @@ Object.prototype.toString.call(null); // "[object Null]"
 
 ### Built-in toStringTag symbols
 
-Most built-in objects provide their own `[Symbol.toStringTag]` property. Almost all built-in objects' `[Symbol.toStringTag]` property is not writable, not enumerable, and configurable; the exception is {{jsxref("Iterator")}}, which is writable for compatibility reasons.
+Most built-in objects provide their own `[Symbol.toStringTag]` property. Almost all built-in objects' `[Symbol.toStringTag]` property is not writable, not enumerable, and configurable; the exception is {{jsxref("Iterator")}}, which is a getter-setter pair for compatibility reasons.
 
 For constructor objects like {{jsxref("Promise")}}, the property is installed on `Constructor.prototype`, so that all instances of the constructor inherit `[Symbol.toStringTag]` and can be stringified. For non-constructor objects like {{jsxref("Math")}} and {{jsxref("JSON")}}, the property is installed as a static property, so that the namespace object itself can be stringified. Sometimes, the constructor also provides its own `toString` method (for example, {{jsxref("Intl.Locale")}}), in which case the `[Symbol.toStringTag]` property is only used when you explicitly call `Object.prototype.toString` on it.
 

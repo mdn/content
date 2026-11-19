@@ -86,7 +86,7 @@ console.log(A() && B());
 
 ### Operator precedence
 
-The AND operator has a higher precedence than the OR operator, meaning the `&&` operator is executed before the `||` operator (see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
+The AND operator has a higher precedence than the OR operator, meaning the `&&` operator groups more tightly than the `||` operator (see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
 ```js-nolint
 true || false && false; // true

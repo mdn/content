@@ -23,7 +23,7 @@ Like other locale subtags, the `numeric` value can be added to the {{jsxref("Int
 
 ### Adding a `numeric` value via the locale string
 
-In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), `numeric` is an "extension subtag". These subtags add additional data about the locale, and are added to locale identifiers using the `-u` extension key. To add the `numeric` value to the initial locale identifier string passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor, first add the `-u` extension key if it doesn't exist. Next, add the `-kn` extension to indicate that you are adding a value for `numeric`. Finally, add the `numeric` value. If you want to set `numeric` to `true`, adding the `kn` key will suffice. To set the value to `false`, you must specify it by adding `"false"` after the `kn` key.
+In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), `numeric` is an "extension subtag". These subtags provide additional data about the locale and are added to locale identifiers using the `-u` extension key. To add the `numeric` value to the initial locale identifier string passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor, first add the `-u` extension key if it doesn't exist. Next, add the `-kn` extension to indicate that you are adding a value for `numeric`. Finally, add the `numeric` value. If you want to set `numeric` to `true`, adding the `kn` key will suffice. To set the value to `false`, you must specify it by adding `"false"` after the `kn` key.
 
 ```js
 const locale = new Intl.Locale("fr-Latn-FR-u-kn-false");

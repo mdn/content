@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-An array containing a single string representing the default numbering system for the `Locale`. If the `Locale` already has a [`numberingSystem`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem), then the returned array contains that single value.
+An array containing a single string representing the default numbering system for the `Locale`. If the `Locale` already has a [`numberingSystem`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem) value set, then the returned array contains that single value.
 
 For a list of supported numbering system types, see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types).
 

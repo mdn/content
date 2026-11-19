@@ -34,7 +34,7 @@ select(number)
 ### Parameters
 
 - `number`
-  - : The number to get a plural rule for.
+  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string to get a plural rule for. Strings are parsed in the same way as in [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), except that `select()` uses the exact value that the string represents, avoiding loss of precision during implicit conversion to a number.
 
 ### Return value
 

@@ -121,7 +121,7 @@ let {
 
 In many other syntaxes where the language binds a variable for you, you can use a binding destructuring pattern. These include:
 
-- The looping variable of [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), and [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loops;
+- The looping variable of [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in), [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), and [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loops;
 - [Function](/en-US/docs/Web/JavaScript/Reference/Functions) parameters;
 - The [`catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) binding variable.
 
@@ -230,7 +230,7 @@ console.log(blue); // undefined
 
 #### Swapping variables
 
-Two variables values can be swapped in one destructuring expression.
+You can swap the values of two variables in one destructuring expression.
 
 Without destructuring, swapping two values requires a temporary variable (or, in some low-level languages, the [XOR-swap trick](https://en.wikipedia.org/wiki/XOR_swap_algorithm)).
 
@@ -309,7 +309,7 @@ const [a, b, ...[c, d, ...[e, f]]] = [1, 2, 3, 4, 5, 6];
 console.log(a, b, c, d, e, f); // 1 2 3 4 5 6
 ```
 
-On the other hand, object destructuring can only have an identifier as the rest property.
+On the other hand, object destructuring can only have an identifier (or a property access in assignment patterns) as the rest property.
 
 ```js-nolint example-bad
 const { a, ...{ b } } = { a: 1, b: 2 };
@@ -478,7 +478,7 @@ console.log(userDisplayName(user)); // "jdoe"
 ```
 
 Nested objects can also be unpacked.
-The example below shows the property `fullname.firstName` being unpacked into a variable called `name`.
+The example below shows the property `fullName.firstName` being unpacked into a variable called `name`.
 
 ```js
 function whois({ displayName, fullName: { firstName: name } }) {

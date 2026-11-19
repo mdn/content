@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-An array of strings representing all calendars commonly used for the `Locale`, sorted in descending preference. If the `Locale` already has a [`calendar`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar), then the returned array contains that single value.
+An array of strings representing all calendars commonly used for the `Locale` according to its [region preferences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale#region_preferences), sorted in descending preference. If the `Locale` already has a [`calendar`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar) value set, then the returned array contains that single value.
 
 For a list of supported calendar types, see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types).
 
@@ -42,6 +42,21 @@ console.log(arEG.getCalendars()); // ["gregory", "coptic", "islamic", "islamic-c
 ```js
 const jaJP = new Intl.Locale("ja-JP");
 console.log(jaJP.getCalendars()); // ["gregory", "japanese"]
+```
+
+### Region overrides
+
+The `rg` and `sd` extension subtags change the [region preferences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale#region_preferences), which can result in different calendar identifiers being returned while the base name stays the same.
+
+```js
+const enUS = new Intl.Locale("en-US");
+console.log(enUS.getCalendars()); // ["gregory"]
+
+const enUSInJP = new Intl.Locale("en-US-u-rg-jpzzzz");
+console.log(enUSInJP.getCalendars()); // ["gregory", "japanese"]
+
+const jaScot = new Intl.Locale("ja-u-sd-gbsct");
+console.log(jaScot.getCalendars()); // ["gregory"]
 ```
 
 ## Specifications
