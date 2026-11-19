@@ -148,7 +148,7 @@ installBtn3.addEventListener("click", () => {
 
 ## Using the `beforeinstallprompt` event
 
-This section shows how to install a PWA using the `beforeinstallprompt` event and the `prompt()` method.
+This section shows how to install a PWA using the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event and the {{domxref("BeforeInstallPromptEvent.prompt()", "prompt()")}} method.
 
 ### Provide an install button
 
@@ -162,7 +162,7 @@ We're setting the button's [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attr
 
 ### Listening for beforeinstallprompt
 
-As soon as the browser has determined that it can install the app, it fires the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event in the global {{domxref("Window")}} scope.
+As soon as the browser has determined that it can install the app, it fires the `beforeinstallprompt` event in the global {{domxref("Window")}} scope.
 
 In our main app code, we will listen for this event:
 
