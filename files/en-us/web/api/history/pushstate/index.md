@@ -51,7 +51,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the associated document is not fully active, or if the provided `url` parameter is not a valid URL, or if the method is called too frequently.
+  - : Thrown if the associated document is not fully active, or if the provided `url` parameter is not a valid URL. Browsers also limit how often this method can be called. If it's called too frequently, the call is ignored, though some browsers throw this error instead.
 - `DataCloneError` {{domxref("DOMException")}}
   - : Thrown if the provided `state` parameter is not serializable.
 
