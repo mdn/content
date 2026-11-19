@@ -16,7 +16,6 @@ This data type is accepted in the value definitions of the following CSS propert
 - {{cssxref("backdrop-filter")}}
 - {{cssxref("background")}}
 - {{cssxref("background-image")}}
-- {{cssxref("background-tbd")}}
 - {{cssxref("bookmark-label")}}
 - {{cssxref("border-image")}}
 - {{cssxref("border-image-source")}}
@@ -64,7 +63,7 @@ The value may be an absolute or relative URL or a data {{glossary("URI")}}.
 
 ## Description
 
-The `<url>` data type, written with the [`url()`](/en-US/docs/Web/CSS/Reference/Values/url_function) function, represents a `URL`, which is a pointer to an internal or external resource, or a data URI representation of the resource. The resource can be an image, a video, a CSS file, a font file, an SVG feature, etc. The URL may be absolute or relative.
+The `<url>` data type, written with the [`url()`](/en-US/docs/Web/CSS/Reference/Values/url_function) function, represents a `URL`, which is a pointer to an internal or external resource, or a data URI representation of the resource. The resource can be an image, a video, a CSS file, a font file, an SVG feature, etc. URLs may be absolute or relative.
 
 ```css
 /* Relative URL */
@@ -76,7 +75,7 @@ url("../assets/image.png")
 url("http://example.com/fonts/myFont.woff2")
 url("https://example.com/images/background.jpg")
 
-/* Data URL */
+/* Data URI */
 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10h60' stroke='%2300F' stroke-width='5'/%3E%3Cpath d='M10 20h60' stroke='%230F0' stroke-width='5'/%3E%3C/svg%3E")
 url("data:image/png;base64,iVBORw0KGgoAAA...")
 ```
@@ -101,7 +100,7 @@ This example demonstrates including a data URI to include an SVG as a background
 
 #### HTML
 
-Our HTML includes a single element that will with style with CSS:
+Our HTML includes a single {{htmlelement("p")}} element:
 
 ```html
 <p>This has a background image</p>
@@ -109,7 +108,7 @@ Our HTML includes a single element that will with style with CSS:
 
 #### CSS
 
-We provide some basic styles, then set use the `url()` function as the {{cssxref("background-image")}} property value to define an SVG as the background image.
+We provide basic styles, then include a {{cssxref("background-image")}} property with its value set to a `url()` function containing a `data:` URI. This defines an SVG as the background image.
 
 ```css
 p {
