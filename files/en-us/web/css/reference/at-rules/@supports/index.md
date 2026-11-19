@@ -143,7 +143,7 @@ The table below describes the font technologies (`<font-tech>`), including color
 
 #### `named-feature()`
 
-The `named-feature()` function checks whether a browser supports the specified named feature. The following example returns true and applies the contained CSS styles if the browser supports the [`anchor-position-follows-transforms`](#anchor-position-follows-transforms) feature:
+The `named-feature()` function checks whether a browser supports a specified feature that cannot be tested for using other `@supports` functions. The following example returns true and applies the contained CSS styles if the browser supports the [`anchor-position-follows-transforms`](#anchor-position-follows-transforms) feature:
 
 ```css
 @supports named-feature(anchor-position-follows-transforms) {
@@ -155,7 +155,7 @@ The following {{cssxref("ident")}} values can be specified as arguments for the 
 - `anchor-position-follows-transforms`
   - : Checks whether the browser's [anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) calculations are [transform](/en-US/docs/Web/CSS/Guides/Transforms)-aware. In other words, when an anchor element has transforms applied, do elements positioned relative to that anchor shift relative to the anchor's transformed size or position? Originally, anchor positioning did not account for transforms.
 
-These named features represent valuable conditions that are not possible to test using other `@supports` mechanisms.
+More named features will be added rarely and only when there is real demand for feature testing something specific that would not be covered by other testing methods.
 
 > [!NOTE]
 > The specification also defines the [`single-axis-scroll-container`](https://drafts.csswg.org/css-conditional-5/#single-axis-scroll-container) feature. However, this is not currently supported in any browser.
@@ -169,23 +169,6 @@ The following example returns true and applies the contained CSS styles if the b
 @supports selector(h2 > p) {
 }
 ```
-
-#### `named-feature()`
-
-This function takes one predefined keyword and evaluates if a browser supports the specified named feature. This is to allow for feature support that cannot be tested for using the other `@supports` functions.
-
-```css
-@supports named-feature(anchor-position-follows-transform) {
-}
-```
-
-> [!NOTE]
-> More features will be added rarely and only when there is real demand for feature testing something specific that would not be covered by more general testing methods.
-
-- `anchor-position-follows-transforms`
-  - : This `named-feature()` checks if the browser supports transform-aware [anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning).
-- `single-axis-scroll-container`
-  - : This `named-feature()` checks if the browser supports the ability to have single-axis scroll containers, where one axis is either {{cssxref("overflow", "scroll", "#scroll")}}, or {{cssxref("overflow", "auto", "#auto")}}, or {{cssxref("overflow", "hidden", "#hidden")}} and the other is {{cssxref("overflow", "clip", "#clip")}}.
 
 ### The not operator
 
