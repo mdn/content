@@ -8,7 +8,7 @@ browser-compat: api.Window.document
 
 {{APIRef("HTML DOM")}}
 
-**`window.document`** returns a reference to the [document](/en-US/docs/Web/API/Document) contained in the window.
+The **`document`** read-only property of the {{domxref("Window")}} interface returns a reference to the [document](/en-US/docs/Web/API/Document) contained in the window.
 
 ## Value
 

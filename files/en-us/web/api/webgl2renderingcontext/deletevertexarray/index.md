@@ -21,7 +21,7 @@ deleteVertexArray(vertexArray)
 ### Parameters
 
 - `vertexArray`
-  - : A {{domxref("WebGLVertexArrayObject")}} (VAO) object to delete.
+  - : A {{domxref("WebGLVertexArrayObject")}} (VAO) object to delete. Passing `null` does nothing.
 
 ### Return value
 

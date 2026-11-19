@@ -3,10 +3,12 @@ title: "BaseAudioContext: renderQuantumSize property"
 short-title: renderQuantumSize
 slug: Web/API/BaseAudioContext/renderQuantumSize
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.BaseAudioContext.renderQuantumSize
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ APIRef("Web Audio API") }}{{SeeCompatTable}}
 
 The **`renderQuantumSize`** read-only property of the {{domxref("BaseAudioContext")}} interface returns an integer representing the **render quantum size** of the audio graph, which is the number of audio sample frames processed in each processing iteration.
 

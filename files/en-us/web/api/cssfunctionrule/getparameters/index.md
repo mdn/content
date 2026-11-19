@@ -3,12 +3,10 @@ title: "CSSFunctionRule: getParameters() method"
 short-title: getParameters()
 slug: Web/API/CSSFunctionRule/getParameters
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CSSFunctionRule.getParameters
 ---
 
-{{ APIRef("CSSOM") }}{{SeeCompatTable}}
+{{ APIRef("CSSOM") }}
 
 The **`getParameters()`** method of the {{domxref("CSSFunctionRule")}} interface returns an array of objects representing the custom function's parameters.
 

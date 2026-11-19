@@ -24,7 +24,7 @@ The text must be enclosed in the `<textPath>` element and its {{SVGAttr("href")}
 - {{SVGAttr("method")}}
   - : Which method to render individual glyphs along the path.
     _Value type_: `align` | `stretch`; _Default value_: `align`; _Animatable_: **yes**
-- {{SVGAttr("path")}} {{Experimental_Inline}}
+- {{SVGAttr("path")}}
   - : The path on which the text should be rendered.
     _Value type_: [**\<path_data>**](/en-US/docs/Web/SVG/Reference/Attribute/path#path-data); _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("side")}} {{Experimental_Inline}}

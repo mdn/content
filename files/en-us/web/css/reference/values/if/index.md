@@ -3,13 +3,9 @@ title: "`if()` CSS function"
 short-title: if()
 slug: Web/CSS/Reference/Values/if
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.if
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`if()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) allows different values to be set for a property depending on the result of a conditional test. The test can be based on a [style query](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries), a [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using), or a [feature query](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries).
 

@@ -46,7 +46,7 @@ let b = -5; // (-00000000000000000000000000000101)
 b >>>= 2; // 1073741822 (00111111111111111111111111111110)
 
 let c = 5n;
-c >>>= 2n; // 1n
+c >>>= 2n; // TypeError: BigInts have no unsigned right shift, use >> instead
 ```
 
 ## Specifications

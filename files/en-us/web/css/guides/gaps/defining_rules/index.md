@@ -270,7 +270,7 @@ The `rule` shorthand sets both the `column-rule` and `row-rule` to the same valu
 
 ## See also
 
-- [Overview of CSS gap decoration properties](/en-US/docs/Web/CSS/Guides/Gaps/Overview)
+- [Overview of CSS gaps and gap decoration properties](/en-US/docs/Web/CSS/Guides/Gaps/Overview)
 - [Defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
 - [CSS borders and box decorations](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations) module

@@ -45,7 +45,7 @@ The `index.mjs` module is able to retrieve the `someURLInfo` parameter through `
 
 ```js
 // -- index.mjs --
-new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
+new URL(import.meta.url).searchParams.get("someURLInfo"); // "5"
 ```
 
 The same applies when a module imports another:
@@ -55,7 +55,7 @@ The same applies when a module imports another:
 import "./index2.mjs?someURLInfo=5";
 
 // -- index2.mjs --
-new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
+new URL(import.meta.url).searchParams.get("someURLInfo"); // "5"
 ```
 
 The ES module implementation in Node.js supports resolving module specifiers containing query parameters (or the hash), as in the latter example. However, you cannot use queries or hashes when the module is specified through the CLI command (like `node index.mjs?someURLInfo=5`), because the CLI entrypoint uses a more CommonJS-like resolution mode, treating the path as a file path rather than a URL. To pass parameters to the entrypoint module, use CLI arguments and read them through `process.argv` instead (like `node index.mjs --someURLInfo=5`).

@@ -578,7 +578,7 @@ const modelInstances = await SomeModel.find().exec();
 
 Now that we understand something of what Mongoose can do and how we want to design our models, it's time to start work on the _LocalLibrary_ website. The very first thing we want to do is set up a MongoDB database that we can use to store our library data.
 
-For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database) cloud-hosted sandbox database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [ScaleGrid](https://scalegrid.io/) and [Rackspace](https://www.rackspace.com/data/rackspace-dbaas)).
+For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database) cloud-hosted sandbox database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [Supabase](https://supabase.com/), [Firebase Firestore](https://firebase.google.com/docs/firestore), and [Cloudflare D1](https://developers.cloudflare.com/d1/)).
 
 > [!NOTE]
 > If you prefer, you can set up a MongoDB database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/try/download/community-edition/releases). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting.
@@ -696,7 +696,7 @@ mongoose.connection.on("disconnected", () => {
 await mongoose.connect(mongoDB);
 ```
 
-As discussed in the [Mongoose primer](#connecting_to_mongodb) above, this creates the default connection and reports connection errors. Because **server.js** is an ES module, it can use [top-level `await`](/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await). Node waits for the connection before continuing to the server creation and listening code. If the initial connection fails, the module fails to load and Node exits without starting the HTTP server.
+As discussed in the [Mongoose primer](#connecting_to_mongodb) above, this creates the default connection and reports connection errors. Because **server.js** is an ES module, it can use [top-level `await`](/en-US/docs/Web/JavaScript/Reference/Operators/await#top-level_await). Node waits for the connection before continuing to the server creation and listening code. If the initial connection fails, the module fails to load and Node exits without starting the HTTP server.
 
 > [!NOTE]
 > Keeping the database connection in **server.js** allows **app.js** to configure and export the application without connecting to a database or starting a server.

@@ -37,46 +37,46 @@ None.
 
 ### Return value
 
-A new object with properties reflecting the options computed during the initialization of this `NumberFormat` object. The object has the following properties, in the order they are listed:
+A new object with properties reflecting the options computed according to the arguments passed to the [`Intl.NumberFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) constructor. The object has the following properties, in the order they are listed:
 
 - `locale`
   - : The {{glossary("BCP 47 language tag")}} for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. Only the `nu` Unicode extension key, if requested, may be included in the output.
 - `numberingSystem`
-  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"nu"`, with default filled in as needed. It is a supported [numbering system](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types) for this locale. The default is locale dependent.
+  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"nu"`, with the default filled in as needed. It is a supported [numbering system](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types) for this locale. The default is locale dependent.
 - `style`
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"decimal"`, `"percent"`, `"currency"`, or `"unit"`. The default is `"decimal"`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is either `"decimal"`, `"percent"`, `"currency"`, or `"unit"`. The default is `"decimal"`.
 - `currency` {{optional_inline}}
   - : The value provided for this property in the `options` argument. It is only present if `style` is `"currency"`. It is an ISO 4217 currency code; see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_currency_identifiers). It is required if `style` is `"currency"` so there is no default.
 - `currencyDisplay` {{optional_inline}}
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is only present if `style` is `"currency"`. It is either `"code"`, `"symbol"`, `"narrowSymbol"`, or `"name"`. The default is `"symbol"`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is only present if `style` is `"currency"`. It is either `"code"`, `"symbol"`, `"narrowSymbol"`, or `"name"`. The default is `"symbol"`.
 - `currencySign` {{optional_inline}}
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is only present if `style` is `"currency"`. It is either `"standard"` or `"accounting"`. The default is `"standard"`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is only present if `style` is `"currency"`. It is either `"standard"` or `"accounting"`. The default is `"standard"`.
 - `unit` {{optional_inline}}
   - : The value provided for this property in the `options` argument. It is only present if `style` is `"unit"`. It is a [sanctioned unit identifier](https://tc39.es/ecma402/#table-sanctioned-single-unit-identifiers) from the [full CLDR list](https://github.com/unicode-org/cldr/blob/main/common/validity/unit.xml). It is required if `style` is `"unit"` so there is no default.
 - `unitDisplay` {{optional_inline}}
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is only present if `style` is `"unit"`. It is either `"short"`, `"narrow"`, or `"long"`. The default is `"short"`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is only present if `style` is `"unit"`. It is either `"short"`, `"narrow"`, or `"long"`. The default is `"short"`.
 - `minimumIntegerDigits`
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is an integer between `1` and `21`. The default is `1`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is an integer between `1` and `21`. The default is `1`.
 - `minimumFractionDigits`, `maximumFractionDigits` {{optional_inline}}
   - : The value provided for these properties in the `options` argument, with defaults filled in as needed. They are only present if necessary; see [digit options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#digit_options). It is an integer between `0` and `100`.
 - `minimumSignificantDigits`, `maximumSignificantDigits` {{optional_inline}}
   - : The value provided for these properties in the `options` argument, with defaults filled in as needed. They are only present if necessary; see [digit options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#digit_options). It is an integer between `1` and `21`.
 - `useGrouping`
-  - : The value provided for this property in the `options` argument, with default filled in as needed, and with some values normalized. It is either `"always"`, `"auto"`, `"min2"`, or the boolean `false`. The default is `"min2"` if `notation` is `"compact"`, and `"auto"` otherwise.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed, and with some values normalized. It is either `"always"`, `"auto"`, `"min2"`, or the boolean `false`. The default is `"min2"` if `notation` is `"compact"`, and `"auto"` otherwise.
 - `notation`
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"standard"`, `"scientific"`, `"engineering"`, or `"compact"`. The default is `"standard"`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is either `"standard"`, `"scientific"`, `"engineering"`, or `"compact"`. The default is `"standard"`.
 - `compactDisplay` {{optional_inline}}
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is only present if `notation` is `"compact"`. It is either `"short"` or `"long"`. The default is `"short"`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is only present if `notation` is `"compact"`. It is either `"short"` or `"long"`. The default is `"short"`.
 - `signDisplay`
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"auto"`, `"always"`, `"exceptZero"`, `"negative"`, or `"never"`. The default is `"auto"`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is either `"auto"`, `"always"`, `"exceptZero"`, `"negative"`, or `"never"`. The default is `"auto"`.
 - `roundingIncrement`
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is one of `1`, `2`, `5`, `10`, `20`, `25`, `50`, `100`, `200`, `250`, `500`, `1000`, `2000`, `2500`, and `5000`. The default is `1`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is one of `1`, `2`, `5`, `10`, `20`, `25`, `50`, `100`, `200`, `250`, `500`, `1000`, `2000`, `2500`, and `5000`. The default is `1`.
 - `roundingMode`
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is one of `"ceil"`, `"floor"`, `"expand"`, `"trunc"`, `"halfCeil"`, `"halfFloor"`, `"halfExpand"`, `"halfTrunc"`, and `"halfEven"`. The default is `"halfExpand"`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is one of `"ceil"`, `"floor"`, `"expand"`, `"trunc"`, `"halfCeil"`, `"halfFloor"`, `"halfExpand"`, `"halfTrunc"`, and `"halfEven"`. The default is `"halfExpand"`.
 - `roundingPriority`
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"auto"`, `"morePrecision"`, or `"lessPrecision"`. The default is `"auto"`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is either `"auto"`, `"morePrecision"`, or `"lessPrecision"`. The default is `"auto"`.
 - `trailingZeroDisplay`
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"auto"` or `"stripIfInteger"`. The default is `"auto"`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is either `"auto"` or `"stripIfInteger"`. The default is `"auto"`.
 
 ## Examples
 

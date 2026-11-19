@@ -32,7 +32,7 @@ This declaration can only be used in places where both {{jsxref("Operators/await
 
 An `await using` declares an async disposable resource that's tied to the lifetime of the variable's scope (block, function, module, etc.). When the scope exits, the resource is disposed of asynchronously. Its syntax may be somewhat confusing, because the `await` does not have an awaiting effect when the variable is first declared, but only when the variable goes out of scope.
 
-When a variable is first declared and its value is non-nullish, a _disposer_ is retrieved from the object. The `[Symbol.asyncDispose]` property is tried first, and falls back to `[Symbol.dispose]` if `[Symbol.asyncDispose]` is `undefined`. If neither property contains a function, a `TypeError` is thrown. Notably, the `[Symbol.dispose]()` method is wrapped into a function that looks like `async () => { object[Symbol.dispose](); }`, which means if it returns a promise, that promise is _not_ awaited. This disposer is saved to the scope.
+When a variable is first declared and its value is non-nullish, a _disposer_ is retrieved from the object. The `[Symbol.asyncDispose]` property is tried first, and falls back to `[Symbol.dispose]` if `[Symbol.asyncDispose]` is `null` or `undefined`. If neither property contains a function, a `TypeError` is thrown. Notably, the `[Symbol.dispose]()` method is wrapped into a function that looks like `async () => { object[Symbol.dispose](); }`, which means if it returns a promise, that promise is _not_ awaited. This disposer is saved to the scope.
 
 When the variable goes out of scope, the disposer is called and awaited. If the scope contains multiple {{jsxref("Statements/using", "using")}} or `await using` declarations, all disposers are run in sequence in the reverse order of declaration, regardless of the type of declaration. All disposers are guaranteed to run (much like the `finally` block in {{jsxref("Statements/try...catch", "try...catch...finally")}}). If multiple errors are thrown, including the initial error that caused the scope exit (if applicable), they are aggregated inside one {{jsxref("SuppressedError")}}, with each earlier exception as the `suppressed` property and the later exception as the `error` property. The `SuppressedError` is thrown after disposal is complete.
 
@@ -193,24 +193,25 @@ class Resource {
 }
 
 async function example(id, createOptionalResource) {
-  await using required = new Resource(`required ${id}`);
-  await using optional = createOptionalResource
-    ? new Resource("optional")
-    : null;
-  await using another = new Resource(`another ${id}`);
+  {
+    await using optional = createOptionalResource
+      ? new Resource("optional")
+      : null;
+  }
+  console.log(`Continuing ${id}`);
 }
 
 example(1, true);
 example(2, false);
+console.log("Both calls have started");
 // Output:
-// Disposing resource another 1
-// Disposing resource another 2
 // Disposing resource optional
-// Disposing resource required 1
-// Disposing resource required 2
+// Both calls have started
+// Continuing 1
+// Continuing 2
 ```
 
-As you can see, the `required 2` resource is disposed in the same tick as `required 1`. If the `optional` resource did not cause a redundant `await`, then `required 2` would have been disposed earlier, which would be simultaneous with `optional`.
+As you can see, the two `Continuing` messages are logged together. If the `optional` resource did not cause a redundant `await`, then the second call would have proceeded earlier, and `Continuing 2` would have appeared before `Both calls have started`.
 
 ## Specifications
 

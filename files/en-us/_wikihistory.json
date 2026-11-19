@@ -57760,7 +57760,7 @@
     "modified": "2020-10-15T21:40:28.946Z",
     "contributors": ["sideshowbarker", "ExE-Boss", "chrisdavidmills"]
   },
-  "Web/API/SpeechGrammarList/addFromURI": {
+  "Web/API/SpeechGrammarList/addFromUri": {
     "modified": "2020-10-15T21:40:29.759Z",
     "contributors": ["sideshowbarker", "ExE-Boss", "chrisdavidmills"]
   },

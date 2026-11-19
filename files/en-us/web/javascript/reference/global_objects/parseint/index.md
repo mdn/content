@@ -47,7 +47,7 @@ parseInt(string, radix)
 
 An integer parsed from the given `string`, or {{jsxref("NaN")}} when
 
-- the `radix` as a 32-bit integer is smaller than `2` or bigger than `36`, or
+- the `radix` as a 32-bit integer is nonzero and is smaller than `2` or bigger than `36`, or
 - the first non-whitespace character cannot be converted to a number.
 
 > [!NOTE]
@@ -69,7 +69,7 @@ The `radix` argument is [converted to a number](/en-US/docs/Web/JavaScript/Refer
 
 If the radix is `16`, `parseInt()` allows the string to be optionally prefixed by `0x` or `0X` after the optional sign character (`+`/`-`).
 
-If the radix value (coerced if necessary) is not in range \[2, 36] (inclusive) `parseInt` returns `NaN`.
+If the radix value (coerced if necessary) is nonzero and is not in range \[2, 36] (inclusive) `parseInt` returns `NaN`.
 
 For radices above `10`, letters of the English alphabet indicate numerals greater than `9`. For example, for hexadecimal numbers (base `16`), `A` through `F` are used. The letters are case-insensitive.
 
@@ -169,7 +169,7 @@ parseInt(15.99, 10); // 15
 parseInt(-15.1, 10); // -15
 ```
 
-However, it only happens to work because the string representation of these numbers uses basic fractional notation (`"15.99"`, `"-15.1"`), where `parseInt()` stops at the decimal point. Numbers greater than or equal to 1e+21 or less than or equal to 1e-7 use exponential notation (`"1.5e+22"`, `"1.51e-8"`) in their string representation, and `parseInt()` will stop at the `e` character or decimal point, which always comes after the first digit. This means for large and small numbers, `parseInt()` will return a one-digit integer:
+However, it only happens to work because the string representation of these numbers uses basic fractional notation (`"15.99"`, `"-15.1"`), where `parseInt()` stops at the decimal point. Finite, nonzero numbers with an absolute value greater than or equal to 1e+21 or less than 1e-6 use exponential notation (`"1.5e+22"`, `"1.51e-8"`) in their string representation, and `parseInt()` will stop at the `e` character or decimal point, which always comes after the first digit. This means for large and small numbers, `parseInt()` will return a one-digit integer:
 
 ```js example-bad
 parseInt(4.7 * 1e22, 10); // Very large number becomes 4

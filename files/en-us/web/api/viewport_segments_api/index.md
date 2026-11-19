@@ -19,6 +19,15 @@ It may be important to know whether a user's device screen has a fold or join, w
 
 For an explanation of how the API works, see [Using the Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API/Using).
 
+## CSS features
+
+- {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}} `@media` feature
+  - : Detects whether the device has a specified number of viewport segments laid out horizontally.
+- {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}} `@media` feature
+  - : Detects whether the device has a specified number of viewport segments laid out vertically.
+- [Viewport segment environment variables](/en-US/docs/Web/CSS/Reference/Values/env#viewport-segment-width)
+  - : These [environment variables](/en-US/docs/Web/CSS/Guides/Environment_variables/Using) provide access to the edge coordinates and dimensions of each viewport segment.
+
 ## Interfaces
 
 - {{domxref("Viewport")}}
@@ -28,15 +37,6 @@ For an explanation of how the API works, see [Using the Viewport Segments API](/
 
 - {{domxref("Window.viewport")}}
   - : Returns a `Viewport` object instance, which provides information about the current state of the device's viewport.
-
-## CSS features
-
-- {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}} `@media` feature
-  - : Detects whether the device has a specified number of viewport segments laid out horizontally.
-- {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}} `@media` feature
-  - : Detects whether the device has a specified number of viewport segments laid out vertically.
-- [Viewport segment environment variables](/en-US/docs/Web/CSS/Reference/Values/env#viewport-segment-width)
-  - : These [environment variables](/en-US/docs/Web/CSS/Guides/Environment_variables/Using) provide access to the edge coordinates and dimensions of each viewport segment.
 
 ## Examples
 

@@ -43,7 +43,7 @@ The method is automatically called by {{jsxref("JSON.stringify()")}} when a `Dat
 
 The method first attempts to convert its `this` value [to a primitive](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion) by calling its [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), {{jsxref("Object/valueOf", "valueOf()")}}, and {{jsxref("Object/toString", "toString()")}} methods, in that order. If the result is a [non-finite](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite) number, `null` is returned. (This generally corresponds to an invalid date, whose {{jsxref("Date/valueOf", "valueOf()")}} returns {{jsxref("NaN")}}.) Otherwise, if the converted primitive is not a number or is a finite number, the return value of {{jsxref("Date/toISOString", "this.toISOString()")}} is returned.
 
-Note that the method does not check whether the `this` value is a valid {{jsxref("Date")}} object. However, calling `Date.prototype.toJSON()` on non-`Date` objects fails unless the object's number primitive representation is `NaN`, or the object also has a `toISOString()` method.
+Note that the method does not check whether the `this` value is a valid {{jsxref("Date")}} object. However, calling `Date.prototype.toJSON()` on non-`Date` objects fails unless the object's number primitive representation is non-finite, or the object also has a `toISOString()` method.
 
 ## Examples
 

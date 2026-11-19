@@ -81,7 +81,7 @@ foo()
 
 `Error: failed` will be logged, because if the yielded promise rejects, the iterator result will reject as well. The `value` property of an async generator's resolved result will not be another promise.
 
-`async function*` declarations behave similar to {{jsxref("Statements/function", "function")}} declarations — they are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of their scope and can be called anywhere in their scope, and they can be redeclared only in certain contexts.
+`async function*` declarations behave similarly to {{jsxref("Statements/function", "function")}} declarations — they are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of their scope and can be called anywhere in their scope, and they can be redeclared only in certain contexts.
 
 ## Examples
 
@@ -120,17 +120,21 @@ gen
 
 ### Using an async generator function to read a series of files
 
-In this example, we read a series of files and only access its content when requested, using Node's [`fs/promises`](https://nodejs.org/dist/latest-v18.x/docs/api/fs.html) module.
+In this example, we read a series of files and only access their content when requested, using Node's [`fs/promises`](https://nodejs.org/dist/latest-v18.x/docs/api/fs.html) module.
 
 ```js
+import fs from "node:fs/promises";
+import path from "node:path";
+
 async function* readFiles(directory) {
   const files = await fs.readdir(directory);
   for (const file of files) {
-    const stats = await fs.stat(file);
+    const fullPath = path.join(directory, file);
+    const stats = await fs.stat(fullPath);
     if (stats.isFile()) {
       yield {
         name: file,
-        content: await fs.readFile(file, "utf8"),
+        content: await fs.readFile(fullPath, "utf8"),
       };
     }
   }

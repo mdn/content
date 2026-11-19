@@ -39,7 +39,7 @@ console.log(negated.value); // CSSUnitValue {value: 10, unit: "px"}
 console.log(negated.toString()); // "calc(-10px)"
 ```
 
-Note that if a plain number is passed to `arg`, the `value` is rectified to a {{domxref("CSSUnitValue")}} with unit `"number"`:
+Note that if a plain number is passed to `arg`, it's converted to a {{domxref("CSSUnitValue")}} whose unit is `"number"`:
 
 ```js
 const negatedNumber = new CSSMathNegate(4);

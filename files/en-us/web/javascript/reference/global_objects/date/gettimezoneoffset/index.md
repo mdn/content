@@ -83,8 +83,8 @@ currentLocalDate.getTimezoneOffset() ===
 In regions that use DST, the return value may change based on the time of the year `date` is in. Below is the output in a runtime in New York, where the timezone is UTC-05:00.
 
 ```js
-const nyOffsetSummer = new Date("2022-02-01").getTimezoneOffset(); // 300
-const nyOffsetWinter = new Date("2022-08-01").getTimezoneOffset(); // 240
+const nyOffsetWinter = new Date("2022-02-01").getTimezoneOffset(); // 300
+const nyOffsetSummer = new Date("2022-08-01").getTimezoneOffset(); // 240
 ```
 
 ### getTimezoneOffset() and historical data

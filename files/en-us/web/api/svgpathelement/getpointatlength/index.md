@@ -25,9 +25,9 @@ getPointAtLength(distance)
 
 A {{domxref("DOMPoint")}} indicating the point at a given distance along the path.
 
-### Examples
+## Examples
 
-#### Getting the midpoint of a `<path>`
+### Getting the midpoint of a `<path>`
 
 In this example, we determine the midpoint of a path by getting the point that is half way along the length of the path.
 

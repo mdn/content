@@ -3,11 +3,15 @@ title: "`row-rule-inset-junction-start` CSS property"
 short-title: row-rule-inset-junction-start
 slug: Web/CSS/Reference/Properties/row-rule-inset-junction-start
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.row-rule-inset-junction-start
 sidebar: cssref
 ---
 
-The **`row-rule-inset-junction-start`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the start edge of row rule segments that are [junction endpoints](#understanding_junction_start); that is, endpoints at gap junctions where rule segments intersect.
+{{SeeCompatTable}}
+
+The **`row-rule-inset-junction-start`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the start edge of row rule segments that are [junction endpoints](#understanding_junction_endpoints); that is, endpoints at gap junctions where rule segments intersect.
 
 {{InteractiveExample("CSS Demo: row-rule-inset-junction-start")}}
 
@@ -127,7 +131,7 @@ This property is specified as a single value from the following list:
 
 ## Description
 
-The `row-rule-inset-junction-start` property can be used to inset or outset [junction segment endpoints](#understanding_junction_start) occurring at the start of row rule segments. The default value is `0`. Positive values reduce the segment size, while negative values and the [`overlap-join` keyword](#the_overlap-join_value) increase it.
+The `row-rule-inset-junction-start` property can be used to inset or outset [junction segment endpoints](#understanding_junction_endpoints) occurring at the start of row rule segments. The default value is `0`. Positive values reduce the segment size, while negative values and the [`overlap-join` keyword](#the_overlap-join_value) increase it.
 
 Row rules are painted within a row gap as one or more segments, with segments occurring between:
 

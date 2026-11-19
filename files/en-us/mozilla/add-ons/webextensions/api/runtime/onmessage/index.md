@@ -79,7 +79,7 @@ Events have three functions:
         - Keep a reference to the `sendResponse()` argument and return `true` from the listener function. You then call `sendResponse()` after the listener function returns.
 
           > [!NOTE]
-          > Promise as a return value is not supported in Chrome until [Chrome bug 1185241](https://crbug.com/1185241) is resolved. As an alternative, [return true and use sendResponse](#sending_an_asynchronous_response_using_sendresponse).
+          > Chrome supports Promise as a return value starting with Chrome 148, or Chrome 152 for extensions that include a DevTools page. For earlier versions of Chrome, [return true and use sendResponse](#sending_an_asynchronous_response_using_sendresponse).
 
     The `listener` function can return either a Boolean or a {{jsxref("Promise")}}.
 
@@ -217,7 +217,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 ### Sending an asynchronous response using a Promise
 
 > [!NOTE]
-> Promise as a return value is not supported in Chrome until [Chrome bug 1185241](https://crbug.com/1185241) is resolved. As an alternative, [return true and use `sendResponse`](#sending_an_asynchronous_response_using_sendresponse).
+> Chrome supports Promise as a return value starting with Chrome 148, or Chrome 152 for extensions that include a DevTools page. For earlier versions of Chrome, [return true and use `sendResponse`](#sending_an_asynchronous_response_using_sendresponse).
 
 This content script gets the first `<a>` link on the page and sends a message asking if the link's location is bookmarked. It expects to get a Boolean response (`true` if the location is bookmarked, `false` otherwise):
 
