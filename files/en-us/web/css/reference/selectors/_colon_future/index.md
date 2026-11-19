@@ -25,14 +25,6 @@ The **`:future`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 
 ## Examples
 
-### CSS
-
-```css
-:future(p, span) {
-  display: none;
-}
-```
-
 ### HTML
 
 ```html
@@ -46,6 +38,14 @@ The **`:future`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
     src="subtitles.vtt"
     default />
 </video>
+```
+
+### CSS
+
+```css
+:future(p, span) {
+  display: none;
+}
 ```
 
 ### WebVTT

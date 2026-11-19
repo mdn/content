@@ -82,6 +82,24 @@ This property is a shorthand for the following CSS properties:
 - {{cssxref("font-weight")}}
 - {{cssxref("line-height")}}
 
+### Reset-only sub-properties
+
+This property resets the following CSS properties to their initial values:
+
+- {{cssxref("font-feature-settings")}}
+- {{cssxref("font-kerning")}}
+- {{cssxref("font-language-override")}}
+- {{cssxref("font-optical-sizing")}}
+- {{cssxref("font-size-adjust")}}
+- {{cssxref("font-variant-alternates")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-emoji")}}
+- {{cssxref("font-variant-ligatures")}}
+- {{cssxref("font-variant-numeric")}}
+- {{cssxref("font-variant-position")}}
+- {{cssxref("font-variation-settings")}}
+
 ## Syntax
 
 ```css-nolint
@@ -258,17 +276,6 @@ p {
 
 This example demonstrates using the `font` property to set a system font.
 
-#### CSS
-
-We set the paragraph's font to have the same `font-family`, `line-height`, `font-size`, etc., as the status bar of the window, then we set the `line-height` to `1.6`.
-
-```css
-p {
-  font: status-bar;
-  line-height: 1.6;
-}
-```
-
 #### HTML
 
 Our HTML includes a paragraph ({{htmlelement("p")}}) containing a link ({{htmlelement("a")}}) with a convoluted [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute value. When you hover or focus the rendered link, your browser's status bar should display the value of the `href` attribute.
@@ -282,6 +289,17 @@ family%20and%20size%20and%20the%20text%20in%20the%20example."
     the text in your status bar.</a
   >
 </p>
+```
+
+#### CSS
+
+We set the paragraph's font to have the same `font-family`, `line-height`, `font-size`, etc., as the status bar of the window, then we set the `line-height` to `1.6`.
+
+```css
+p {
+  font: status-bar;
+  line-height: 1.6;
+}
 ```
 
 #### JavaScript

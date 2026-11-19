@@ -42,7 +42,6 @@ You need to add the following macros manually:
 The following macros are automatically added to the content in order to match the statuses stored in the [browser compat data](https://github.com/mdn/browser-compat-data) repository:
 
 - `\{{SeeCompatTable}}` — generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
-- `\{{Deprecated_Header}}` — generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 - `\{{Non-standard_Header}}` — generates a **Non-Standard** banner that indicates that use of the technology is not part of a formal specification, even if it is implemented in multiple browsers.
 
 [Update the feature status in the browser-compat-data repository](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) in order to change these values.
@@ -51,7 +50,7 @@ The following macros are automatically added to the content in order to match th
 > While you can manually/update these macros in content, values that don't match the browser compatibility data will be replaced/removed.
 
 > [!NOTE]
-> Pages that have the `\{{SeeCompatTable}}`, `\{{Deprecated_Header}}`, or `\{{Non-standard_Header}}` banners will also have the corresponding `experimental`, `deprecated` and `non-standard` status values in the page metadata.
+> Pages that have the `\{{SeeCompatTable}}` or `\{{Non-standard_Header}}` banners will also have the corresponding `experimental` and `non-standard` status values in the page metadata.
 > The metadata is automatically updated at the same time as the headers.
 > The banner macros do not depend on this status metadata (but may one day be generated from it).
 

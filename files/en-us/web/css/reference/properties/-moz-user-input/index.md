@@ -33,6 +33,8 @@ The `user-input` property is currently not on a standards track.
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : The element will respond to user input if it normally takes user input, such as a {{HTMLElement("textarea")}}.
 - `none`

@@ -11,7 +11,7 @@ By default, it's not exposed to content scripts, but this behavior can be change
 
 The amount of data that an extension can store in the session storage area is limited to 10 MB, unless stated otherwise in the [browser compatibility table](#browser_compatibility).
 
-When the browser stops, all session storage is cleared. When the extension is uninstalled, its associated session storage is cleared.
+When the browser stops, all session storage is cleared. When the extension is disabled or uninstalled, its associated session storage is cleared.
 
 ## Properties
 

@@ -20,11 +20,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("icecandidate", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onicecandidate = (event) => { }
 ```
 
@@ -107,7 +111,7 @@ pc.addEventListener("icecandidate", (ev) => {
 });
 ```
 
-You can also set the `onicecandidate` event handler property directly:
+You can also set the `onicecandidate` event handler property directly (but note that this replaces other event listeners added using `onicecandidate`, if any):
 
 ```js
 pc.onicecandidate = (ev) => {

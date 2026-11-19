@@ -14,7 +14,7 @@ The `clip-rule` property only applies to SVG elements that are contained within 
 ## Syntax
 
 ```css
-/* Keywords */
+/* Keyword values */
 clip-rule: nonzero;
 clip-rule: evenodd;
 

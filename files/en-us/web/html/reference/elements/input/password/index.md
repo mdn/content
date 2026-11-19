@@ -39,14 +39,6 @@ label {
 }
 ```
 
-The precise behavior of the entry process may vary from browser to browser.
-Some browsers display the typed character for a moment before obscuring it, while others allow the user to toggle the display of plain-text on and off.
-Both approaches help a user check that they entered the intended password, which can be particularly difficult on mobile devices.
-
-> [!NOTE]
-> Any forms involving sensitive information like passwords (such as login forms) should be served over HTTPS.
-> Many browsers now implement mechanisms to warn against insecure login forms.
-
 ## Value
 
 The [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute contains a string whose value is the current contents of the text editing control being used to enter the password. If the user hasn't entered anything yet, this value is an empty string (`""`). If the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) property is specified, then the password edit box must contain a value other than an empty string to be valid.
@@ -111,6 +103,14 @@ This does _not_ set a limit on how many characters the user can enter into the f
 ## Using password inputs
 
 Password input boxes generally work just like other textual input boxes; the main difference is the obscuring of the content to prevent people near the user from reading the password.
+
+The precise behavior of the entry process may vary from browser to browser.
+Some browsers display the typed character for a moment before obscuring it, while others allow the user to toggle the display of plain-text on and off.
+Both approaches help a user check that they entered the intended password, which can be particularly difficult on mobile devices.
+
+> [!NOTE]
+> Any forms involving sensitive information like passwords (such as login forms) should be served over HTTPS.
+> Many browsers now implement mechanisms to warn against insecure login forms.
 
 ### A basic password input
 

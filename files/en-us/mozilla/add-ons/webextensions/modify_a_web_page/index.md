@@ -83,7 +83,7 @@ First, update "manifest.json" so it has the following contents:
 
 Here, we've removed the `content_scripts` key, and added two new keys:
 
-- [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): To inject scripts into pages we need permissions for the page we're modifying. The [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) is a way to get this temporarily for the currently active tab. We also need the `contextMenus` permission to be able to add context menu items.
+- [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): To inject scripts into pages, we need permissions for the page we're modifying. The [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission) lets us do this temporarily for the active tab. We also need the `contextMenus` permission to add context menu items.
 - [`background`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background): We're using this to load a persistent ["background script"](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) called `background.js`, in which we'll set up the context menu and inject the content script.
 
 Let's create this file. Create a new file called `background.js` in the `modify-page` directory, and give it the following contents:
@@ -116,7 +116,7 @@ modify-page/
 
 Now [reload the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on), open a page (any page, this time) activate the context menu, and select "Eat this page":
 
-![Option to eat a page on the context menu](eat_from_menu.png)
+![The Eat this page option, highlighted, on the context menu](eat_from_menu.png)
 
 ## Messaging
 

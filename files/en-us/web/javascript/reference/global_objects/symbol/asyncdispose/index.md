@@ -42,11 +42,11 @@ class Disposable {
 
   async [Symbol.asyncDispose]() {
     await this.#fileHandle.close();
-    this.disposed = true;
+    this.#disposed = true;
   }
 
   get isDisposed() {
-    return this.disposed;
+    return this.#disposed;
   }
 }
 
@@ -68,7 +68,7 @@ console.log(resource.isDisposed); // true
 
 ## See also
 
-- [Polyfill of `Symbol.asyncDispose` in `core-js`](https://github.com/zloirock/core-js#explicit-resource-management)
+- [Polyfill of `Symbol.asyncDispose` in `core-js`](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
 - {{jsxref("Symbol.dispose")}}
 - {{jsxref("Statements/await_using", "await using")}}

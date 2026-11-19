@@ -386,7 +386,7 @@ select {
 
 {{EmbedLiveSample("Setting the appearance of a select", 1050, 80)}}
 
-While the {{cssxref("background-color")}} and {{cssxref("border")}} styles are defined on all the `<select>` elements and their pickers, the `::picker(select)` styles only effect the picker where both the select and the picker have the `appearance` property set to `base-select`. The first and third selects look the same because `menulist-button` is a compatibility keyword.
+While the {{cssxref("background-color")}} and {{cssxref("border")}} styles are defined on all the `<select>` elements and their pickers, the `::picker(select)` styles only affect the picker where both the select and the picker have the `appearance` property set to `base-select`. The first and third selects look the same because `menulist-button` is a compatibility keyword.
 
 Notice that, by default, the inline-size of the `<select>` is generally the inline-size of the `<option>` with the most text, and that the drop-down picker appears over the top of the rendered page when opened, making it not constrained by the surrounding page and therefore fully visible. These statements are no longer true when `base-select` is set.
 

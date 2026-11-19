@@ -27,11 +27,6 @@ This interface requires a secure context.
 - {{domxref("IdleDetector.screenState")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string indicating whether the screen is locked, one of `"locked"` or `"unlocked"`. This attribute returns `null` before `start()` is called.
 
-## Events
-
-- {{domxref("IdleDetector.change_event", "change")}} {{Experimental_Inline}}
-  - : Called when the value of `userState` or `screenState` has changed.
-
 ## Static methods
 
 - {{domxref("IdleDetector/requestPermission_static", "IdleDetector.requestPermission()")}} {{Experimental_Inline}}
@@ -47,6 +42,11 @@ This interface requires a secure context.
     initial values. This method takes an optional `options` object with the `threshold` in
     milliseconds where inactivity should be reported and `signal` for an
     `AbortSignal` to abort the idle detector.
+
+## Events
+
+- {{domxref("IdleDetector.change_event", "change")}} {{Experimental_Inline}}
+  - : Called when the value of `userState` or `screenState` has changed.
 
 ## Examples
 

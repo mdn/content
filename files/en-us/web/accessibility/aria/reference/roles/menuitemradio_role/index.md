@@ -29,13 +29,13 @@ Only one `menuitemradio` in a group can be checked at the same time. When one it
 
 If your want more than one item in a group to be checked, or if you want to enable checking and unchecking an item, consider using `menuitemcheckbox`.
 
-If a `menu` or `menubar` contains more than one group of `menuitemradio` elements, or if the `menu` contains a group of `menuitemradio` elements as well as other, unrelated `menuitem` elements and/or `menuitemcheckbox` elements, contain each set of related `menuitemradio` elements in a `group` element or delimit the group the `menuitemradio` elements from the other menu items with a `separator` element (or an HTML element with an equivalent role such as a {{HTMLElement('fieldset')}} grouping or a thematic break {{HTMLElement('hr')}} separator.
+If a `menu` or `menubar` contains more than one group of `menuitemradio` elements, or if the `menu` contains a group of `menuitemradio` elements as well as other, unrelated `menuitem` elements and/or `menuitemcheckbox` elements, contain each set of related `menuitemradio` elements in a `group` element or delimit the group the `menuitemradio` elements from the other menu items with a `separator` element (or an HTML element with an equivalent role such as a {{HTMLElement('fieldset')}} grouping or a thematic break {{HTMLElement('hr')}} separator).
 
 An accessible name is required. Ideally, the accessible name should come from an associated {{htmlelement('label')}} element if using `<input type="radio">` or visible, descendant content. Realize if the label or descendant content is not sufficient and, preferably, [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) is used referencing non-descendant content or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) is used, these two ARIA properties will hide other descendant content from assistive technologies.
 
 If all elements in the set are not present in the DOM include the [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) properties. When specifying `aria-setsize` and `aria-posinset` on a `menuitemradio`, set the value with respect to the total number of items in the menu, excluding any separators.
 
-The `menuitemradio` element can have phrasing content, but can not have interactive content as descendants and no descendants with a `tabindex` attribute specified.
+The `menuitemradio` element can have phrasing content, but cannot have interactive content as descendants and no descendants with a `tabindex` attribute specified.
 
 ### All descendants are presentational
 

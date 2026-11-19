@@ -59,6 +59,12 @@ Provide an indication to users informing them the form control is required. Ensu
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ### Result
 
 {{EmbedLiveSample('Example')}}

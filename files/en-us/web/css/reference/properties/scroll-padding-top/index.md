@@ -74,7 +74,7 @@ scroll-padding-top: 2em;
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 scroll-padding-top: auto;
 
 /* <length> values */

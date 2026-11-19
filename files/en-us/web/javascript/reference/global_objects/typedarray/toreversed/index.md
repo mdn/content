@@ -48,7 +48,7 @@ console.log(uint8); // Uint8Array [1, 2, 3]
 
 ## See also
 
-- [Polyfill of `TypedArray.prototype.toReversed` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
+- [Polyfill of `TypedArray.prototype.toReversed` in `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray.prototype.reverse()")}}
 - {{jsxref("TypedArray.prototype.toSorted()")}}

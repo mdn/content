@@ -12,11 +12,15 @@ The **`languagechange`** event is fired at the global scope object when the user
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("languagechange", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onlanguagechange = (event) => { }
 ```
 
@@ -42,7 +46,7 @@ window.addEventListener("languagechange", () => {
 });
 ```
 
-Or use the `onlanguagechange` event handler property:
+Or use the `onlanguagechange` event handler property (but note that this replaces other event listeners added using `onlanguagechange`, if any):
 
 ```js
 window.onlanguagechange = (event) => {

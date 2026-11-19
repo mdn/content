@@ -29,6 +29,18 @@ defined by the World Geodetic System 1984 specification (WGS 84).
 In this simple example, we fetch the user's location and display the resulting
 coordinates once they're returned.
 
+### HTML
+
+The HTML used to present the results looks like this:
+
+```html
+<p>
+  Your location is <span id="latitude">0.00</span>° latitude by
+  <span id="longitude">0.00</span>° longitude.
+</p>
+<button id="get-location">Get My Location</button>
+```
+
 ### JavaScript
 
 The JavaScript code below creates an event listener so that when the user clicks on a
@@ -67,18 +79,6 @@ longitude using {{domxref("GeolocationCoordinates/latitude", "position.coords.la
 `position.coords.longitude` so we can update the displayed coordinates. The
 two {{HTMLElement("span")}} elements are updated to display the corresponding values
 after being converted to a value with two decimal places.
-
-### HTML
-
-The HTML used to present the results looks like this:
-
-```html
-<p>
-  Your location is <span id="latitude">0.00</span>° latitude by
-  <span id="longitude">0.00</span>° longitude.
-</p>
-<button id="get-location">Get My Location</button>
-```
 
 ### Result
 

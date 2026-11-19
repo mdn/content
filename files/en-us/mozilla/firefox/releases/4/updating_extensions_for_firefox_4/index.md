@@ -90,7 +90,7 @@ If you find that this doesn't work, and you still need to directly access `HWND`
 
 ### Caching
 
-Because Firefox now caches code and other resources more aggressively, you'll want to be sure to purge the caches when you start up Firefox 4. Otherwise you may be testing obsolete pieces of your add-on. To do this, run Firefox with the `-purgecaches` command line option.
+Because Firefox now caches code and other resources more aggressively, you'll want to be sure to purge the caches when you start up Firefox 4. Otherwise you may be testing obsolete pieces of your add-on. To do this, run Firefox with the `-purgecaches` command-line option.
 
 ### The Profile Manager
 
@@ -100,7 +100,7 @@ A replacement to the profile manager is [available](https://ftp.mozilla.org/pub/
 
 ### Installing extensions globally
 
-The `-install-global-extension` and `-install-global-theme` command line options have been removed. Handling global installation has always been complicated, and discussions are in progress as to how to address the subject going forward. In the meantime, see [Installing extensions](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/) for information on ways to automatically install add-ons.
+The `-install-global-extension` and `-install-global-theme` command-line options have been removed. Handling global installation has always been complicated, and discussions are in progress as to how to address the subject going forward. In the meantime, see [Installing extensions](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/) for information on ways to automatically install add-ons.
 
 ## See also
 

@@ -81,7 +81,7 @@ WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then(
 );
 ```
 
-You can check whether it has the same exception type we defined earlier (`myErrorTag`) using [`Exception.prototype.is()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/is), and then access the exception's payload using [`Exception.prototype.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg)).
+You can check whether it has the same exception type we defined earlier (`myErrorTag`) using [`Exception.prototype.is()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/is), and then access the exception's payload using [`Exception.prototype.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg).
 
 > [!NOTE]
 > You can't access the values of an exception with a new tag that just happens to have the same parameters; it's a different tag!

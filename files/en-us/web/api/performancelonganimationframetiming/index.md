@@ -11,15 +11,6 @@ browser-compat: api.PerformanceLongAnimationFrameTiming
 
 The **`PerformanceLongAnimationFrameTiming`** interface is specified in the Long Animation Frames API and provides metrics on long animation frames (LoAFs) that occupy rendering and block other tasks from being executed.
 
-## Description
-
-Long animation frames (LoAFs) are rendering updates that are delayed beyond 50ms. LoAFs can result in slow user interface (UI) updates, making controls appear unresponsive and causing [janky](/en-US/docs/Glossary/Jank) (non-smooth) animated effects and scrolling. This often leads to user frustration.
-
-The `PerformanceLongAnimationFrameTiming` interface provides the following granular set of information on LoAFs, allowing developers to narrow down their root causes:
-
-- A detailed set of timestamps for each LoAF.
-- Detailed information on each script that contributed to creating the LoAF, via the {{domxref("PerformanceLongAnimationFrameTiming.scripts")}} property. This returns an array of {{domxref("PerformanceScriptTiming")}} objects, one for each script.
-
 `PerformanceLongAnimationFrameTiming` inherits from {{domxref("PerformanceEntry")}}.
 
 {{InheritanceDiagram}}
@@ -32,9 +23,9 @@ This interface directly defines the following properties:
   - : Returns a {{domxref("DOMHighResTimeStamp")}} indicating the total time in milliseconds that the main thread was blocked from responding to high priority tasks, such as user input. This is calculated by taking all the [long tasks](/en-US/docs/Web/API/PerformanceLongTaskTiming#description) within the LoAF that have a `duration` of more than `50ms`, subtracting `50ms` from each, adding the rendering time to the longest task time, and summing the results.
 - {{domxref("PerformanceLongAnimationFrameTiming.firstUIEventTimestamp")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} indicating the time of the first UI event — such as a mouse or keyboard event — to be queued during the current animation frame.
-- {{domxref("PerformanceLongAnimationFrameTiming.paintTime")}} {{experimental_inline}}
+- {{domxref("PerformanceLongAnimationFrameTiming.paintTime")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the rendering phase ended and the animation frame started.
-- {{domxref("PerformanceLongAnimationFrameTiming.presentationTime")}} {{experimental_inline}}
+- {{domxref("PerformanceLongAnimationFrameTiming.presentationTime")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the UI update was actually drawn on the screen.
 - {{domxref("PerformanceLongAnimationFrameTiming.renderStart")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} indicating the start time of the rendering cycle, which includes {{domxref("Window.requestAnimationFrame()")}} callbacks, style and layout calculation, {{domxref("ResizeObserver")}} callbacks, and {{domxref("IntersectionObserver")}} callbacks.
@@ -57,7 +48,16 @@ It also extends the following {{domxref("PerformanceEntry")}} properties, qualif
 ## Instance methods
 
 - {{domxref("PerformanceLongAnimationFrameTiming.toJSON()")}} {{Experimental_Inline}}
-  - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `PerformanceLongAnimationFrameTiming` object.
+  - : Returns a JSON-serializable plain object representing the `PerformanceLongAnimationFrameTiming` object. Automatically called by {{jsxref("JSON.stringify()")}}.
+
+## Description
+
+Long animation frames (LoAFs) are rendering updates that are delayed beyond 50ms. LoAFs can result in slow user interface (UI) updates, making controls appear unresponsive and causing [janky](/en-US/docs/Glossary/Jank) (non-smooth) animated effects and scrolling. This often leads to user frustration.
+
+The `PerformanceLongAnimationFrameTiming` interface provides the following granular set of information on LoAFs, allowing developers to narrow down their root causes:
+
+- A detailed set of timestamps for each LoAF.
+- Detailed information on each script that contributed to creating the LoAF, via the {{domxref("PerformanceLongAnimationFrameTiming.scripts")}} property. This returns an array of {{domxref("PerformanceScriptTiming")}} objects, one for each script.
 
 ## Examples
 

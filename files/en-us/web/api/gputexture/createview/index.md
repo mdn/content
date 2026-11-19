@@ -167,7 +167,7 @@ const uniformBindGroup = device.createBindGroup({
   ],
 });
 
-const renderPassDescriptor: GPURenderPassDescriptor = {
+const renderPassDescriptor = {
   colorAttachments: [
     {
       view: undefined, // Assigned later

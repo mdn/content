@@ -55,7 +55,7 @@ jobs:
 
       - name: Setup Node.js environment
         if: steps.check.outputs.HAS_FILES == 'true'
-        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version-file: ".nvmrc"
           cache: npm
@@ -182,7 +182,7 @@ jobs:
 
       - name: Upload artifact
         if: always() && steps.check.outputs.HAS_FILES == 'true' && hashFiles('lint-results/*') != ''
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: lint-results
           path: lint-results
@@ -223,5 +223,9 @@ jobs:
             echo "${PRETTIER_LOG}"
             echo -e "\nYou can use Prettier playground to format the files online (configuration pre-filled): https://prettier.io/playground/#N4Igxg9gdgLgprEAuEBiABABwIYGd7owAWc6CMAlgE6kBmFANqSTSADQgSaXS7KjYqVCAHcACoIR8U2BiOwBPPhwBGVbGADWcGAGVsAWzgAZClDjIYVAK5xV6rTt04wZgOaWbdkLjgGKnrYccAAemHBUFEawsgAqEVCCFHDStLK+HLjuTACK1hDwyGkMGSAAVrghutlweQUWSMWlAI758GLCmNIgeAC05nAAJkPsIFbYjO4AwhAGBtjIPQwMo1lQbkwAgjBWFCrW7RGm5kXp3kQwBgwA6kQU8LgucLpS9xQAbvcKi2C4yiDvWwASSgw1gujAkW4m1BuhgCiYpxK3kwwl813UmEWqJSEXeFg4Zl8VBgHWwbnmSNKOCoxMW8yomkGoigo1RZhg1wog2IyAAHAAGDg0VrUOBkikLRpnDgwbAqLk8ojIABMHGsvli8tSMpAfhUQ2Gg2M2HW1nJcAAYhAqPMdu5FtgDhAQABfV1AA \n"
           fi
+
+          # The checkout is the PR merge ref, whose subject reads "Merge <head> into <base>".
+          echo -e "\n\nLinted: $(git log -1 --format=%s)"
+          echo "Seeing unexpected failures? Try merging the latest $GITHUB_BASE_REF into your branch."
 
           exit 1

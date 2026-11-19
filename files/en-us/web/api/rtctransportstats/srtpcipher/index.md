@@ -14,7 +14,7 @@ The **`srtpCipher`** property of the {{domxref("RTCTransportStats")}} dictionary
 
 A string that indicates the descriptive name of the SRTP protection profile.
 
-Values are defined in the "Profile" column of the [IANA DTLS-SRTP protection profile registry](https://www.iana.org/assignments/srtp-protection/srtp-protection.xhtml#srtp-protection-1) and {{rfc("5764","", "4.1.2")}}.
+Values are defined in the "Profile" column of the [IANA DTLS-SRTP protection profile registry](https://www.iana.org/assignments/srtp-protection#srtp-protection-1) and {{rfc("5764","", "4.1.2")}}.
 
 ## Examples
 

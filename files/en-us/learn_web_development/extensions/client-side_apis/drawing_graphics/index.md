@@ -223,7 +223,7 @@ Let's start by creating our own canvas template to create future experiments in.
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />
-       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <meta name="viewport" content="width=device-width" />
        <title>Canvas</title>
        <script src="script.js" defer></script>
        <link href="style.css" rel="stylesheet" />
@@ -904,7 +904,7 @@ const sizePicker = document.querySelector('input[type="range"]');
 const output = document.querySelector(".output");
 const clearBtn = document.querySelector("button");
 
-// covert degrees to radians
+// convert degrees to radians
 function degToRad(degrees) {
   return (degrees * Math.PI) / 180;
 }
@@ -978,13 +978,13 @@ All {{htmlelement("input")}} types are well supported. If a browser doesn't supp
 
 It's now time to leave 2D behind, and take a quick look at 3D canvas. 3D canvas content is specified using the [WebGL API](/en-US/docs/Web/API/WebGL_API), which is a completely separate API from the 2D canvas API, even though they both render onto {{htmlelement("canvas")}} elements.
 
-WebGL is based on [OpenGL](/en-US/docs/Glossary/OpenGL) (Open Graphics Library), and allows you to communicate directly with the computer's [GPU](/en-US/docs/Glossary/GPU). As such, writing raw WebGL is closer to low level languages such as C++ than regular JavaScript; it is quite complex but incredibly powerful.
+WebGL is based on [OpenGL](/en-US/docs/Glossary/OpenGL) (Open Graphics Library), and allows you to communicate directly with the computer's [GPU](/en-US/docs/Glossary/GPU). As such, writing raw WebGL is closer to low-level languages such as C++ than regular JavaScript; it is quite complex but incredibly powerful.
 
 ### Using a library
 
-Because of its complexity, most people write 3D graphics code using a third party JavaScript library such as [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), [PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas), or [Babylon.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js). Most of these work in a similar way, providing functionality to create primitive and custom shapes, position viewing cameras and lighting, covering surfaces with textures, and more. They handle the WebGL for you, letting you work on a higher level.
+Because of its complexity, most people write 3D graphics code using a third-party JavaScript library such as [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), [PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas), or [Babylon.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js). Most of these work in a similar way, providing functionality to create primitive and custom shapes, position viewing cameras and lighting, covering surfaces with textures, and more. They handle the WebGL for you, letting you work on a higher level.
 
-Yes, using one of these means learning another new API (a third party one, in this case), but they are a lot simpler than coding raw WebGL.
+Yes, using one of these means learning another new API (a third-party one, in this case), but they are a lot simpler than coding raw WebGL.
 
 ### A spinning cube
 
@@ -998,7 +998,7 @@ Let's look at an example of how to create something with a WebGL library. We'll 
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />
-       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <meta name="viewport" content="width=device-width" />
 
        <title>Three.js basic cube example</title>
 
@@ -1130,7 +1130,7 @@ The finished product should look like:
 {{EmbedLiveSample("9-webgl-cube", "100%", 500)}}
 
 > [!NOTE]
-> In our GitHub repo you can also find another interesting 3D cube example — [Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/)). This uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to take a video stream from a computer web cam and project it onto the side of the cube as a texture!
+> In our GitHub repo you can also find another interesting 3D cube example — [Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/threejs-video-cube) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/threejs-video-cube/)). This uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to take a video stream from a computer web cam and project it onto the side of the cube as a texture!
 
 ## Summary
 

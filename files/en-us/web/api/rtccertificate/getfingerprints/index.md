@@ -40,7 +40,7 @@ The {{domxref("RTCCertificate")}} instances used for a particular {{DOMxRef("RTC
 If no certificates are passed in the constructor they will be created automatically, in which case the certificates used can be fetched with {{DOMxRef("RTCPeerConnection.getConfiguration()")}}.
 
 Browsers will automatically exchange certificates and fingerprints associated with each {{DOMxRef("RTCPeerConnection")}} during the SDP offer phase, and these will be used as part of the DTLS handshake to verify that the remote party matches the certificate/endpoint send in the SDP.
-This provides a low level validation that the WebRTC communication is being set up with the remote party that initiated the offer, but does not, for example, provide any validation of the identity of the communicating users.
+This provides a low-level validation that the WebRTC communication is being set up with the remote party that initiated the offer, but does not, for example, provide any validation of the identity of the communicating users.
 
 In some cases it can be useful for the application layer to share certificate fingerprints out-of-band:
 

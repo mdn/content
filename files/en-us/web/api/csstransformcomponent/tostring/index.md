@@ -30,7 +30,15 @@ If true the string returned will be in the form of the 2-dimensional {{cssxref("
 
 ## Examples
 
-To Do
+### Serializing 2D and 3D components
+
+```js
+const translate2D = new CSSTranslate(CSS.px(10), CSS.px(20));
+console.log(translate2D.toString()); // "translate(10px, 20px)"
+
+const translate3D = new CSSTranslate(CSS.px(10), CSS.px(20), CSS.px(30));
+console.log(translate3D.toString()); // "translate3d(10px, 20px, 30px)"
+```
 
 ## Specifications
 
@@ -39,3 +47,11 @@ To Do
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("CSSTransformComponent.is2D")}}
+- {{domxref("CSSTransformComponent.toMatrix()")}}
+- {{domxref("CSSTransformValue")}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

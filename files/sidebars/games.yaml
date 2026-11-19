@@ -104,7 +104,7 @@ sidebar:
     title: Tutorials
     details: closed
     children:
-      - link: /Games/Tutorials/2D_Breakout_game_pure_JavaScript
+      - link: /Games/Tutorials/2D_breakout_game_pure_JavaScript
         title: 2D_breakout_game_using_pure_JavaScript
       - link: /Games/Tutorials/2D_breakout_game_Phaser
         title: 2D_breakout_game_using_Phaser

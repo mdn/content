@@ -1,5 +1,5 @@
 ---
-title: declarativeNetRequest.isRegexSupported
+title: declarativeNetRequest.isRegexSupported()
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/isRegexSupported
 page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.isRegexSupported

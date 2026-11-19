@@ -78,7 +78,7 @@ In this example, the `<em>` element is used to highlight an implicit or explicit
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("examples")}}
 
 ## Technical summary
 

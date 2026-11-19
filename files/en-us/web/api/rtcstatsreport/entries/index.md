@@ -39,10 +39,10 @@ The properties of statistics objects with the `type` of `outbound-rtp` are logge
 ```js
 const stats = await myPeerConnection.getStats();
 
-for (const stat of stats.entries()) {
+for (const [id, stat] of stats.entries()) {
   if (stat.type !== "outbound-rtp") continue;
   Object.keys(stat).forEach((statName) => {
-    console.log(`${statName}: ${report[statName]}`);
+    console.log(`${statName}: ${stat[statName]}`);
   });
 }
 ```

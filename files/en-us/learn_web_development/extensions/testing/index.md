@@ -18,8 +18,8 @@ Before starting this module, You should really have learned the fundamentals of 
 
 ## Tutorials
 
-- [Introduction to cross browser testing](/en-US/docs/Learn_web_development/Extensions/Testing/Introduction)
-  - : This article starts the module off by providing an overview of the topic of cross browser testing, answering questions such as "what is cross browser testing?", "what are the most common types of problems you'll encounter?", and "what are the main approaches for testing, identifying, and fixing problems?"
+- [Introduction to cross-browser testing](/en-US/docs/Learn_web_development/Extensions/Testing/Introduction)
+  - : This article starts the module off by providing an overview of the topic of cross-browser testing, answering questions such as "what is cross-browser testing?", "what are the most common types of problems you'll encounter?", and "what are the main approaches for testing, identifying, and fixing problems?"
 - [Strategies for carrying out testing](/en-US/docs/Learn_web_development/Extensions/Testing/Testing_strategies)
   - : Next, we drill down into carrying out testing, looking at identifying a target audience (e.g., what browsers, devices, and other segments should you make sure are tested), lo-fi testing strategies (get yourself a range of devices and some virtual machines and do ad hoc tests when needed), higher tech strategies (automation, using dedicated testing apps), and testing with user groups.
 - [Handling common HTML and CSS problems](/en-US/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS)

@@ -27,8 +27,6 @@ None.
 
 A new Iterator object. Each element in the Iterator is an array containing a key and a value.
 
-### Exceptions
-
 ## Specifications
 
 {{Specifications}}

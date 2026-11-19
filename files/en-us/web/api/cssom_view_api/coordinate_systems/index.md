@@ -67,28 +67,6 @@ The {{domxref("MouseEvent.screenX")}} and {{domxref("MouseEvent.screenY")}} prop
 Let's take a look at an example that logs mouse coordinates in an element.
 Whenever the mouse enters, moves around inside, or exits the inner box, the events are handled by logging the current mouse coordinates in each of the four available systems.
 
-### JavaScript
-
-For the JavaScript, the code sets up the event handlers on the inner box by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}} for each of the types {{domxref("Element/mouseenter_event", "mouseenter")}}, {{domxref("Element/mousemove_event", "mousemove")}}, and {{domxref("Element/mouseleave_event", "mouseleave")}}.
-For each of the events, we're calling the `setCoords()` function which sets the inner text of the `<p>` element with the coordinates for each system.
-
-```js
-const log = document.querySelector(".log");
-const inner = document.querySelector(".inner");
-
-function setCoords(e) {
-  log.innerText = `
-    Offset X/Y: ${e.offsetX}, ${e.offsetY}
-    Viewport X/Y: ${e.clientX}, ${e.clientY}
-    Page X/Y: ${e.pageX}, ${e.pageY}
-    Screen X/Y: ${e.screenX}, ${e.screenY}`;
-}
-
-inner.addEventListener("mousemove", setCoords);
-inner.addEventListener("mouseenter", setCoords);
-inner.addEventListener("mouseleave", setCoords);
-```
-
 ### HTML
 
 The HTML contains a `<p>` with the `"log"` class, which displays the data from the mouse events.
@@ -129,6 +107,28 @@ The `"inner"` paragraph is where mouse events are tracked and logged.
   width: 100%;
   text-align: center;
 }
+```
+
+### JavaScript
+
+For the JavaScript, the code sets up the event handlers on the inner box by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}} for each of the types {{domxref("Element/mouseenter_event", "mouseenter")}}, {{domxref("Element/mousemove_event", "mousemove")}}, and {{domxref("Element/mouseleave_event", "mouseleave")}}.
+For each of the events, we're calling the `setCoords()` function which sets the inner text of the `<p>` element with the coordinates for each system.
+
+```js
+const log = document.querySelector(".log");
+const inner = document.querySelector(".inner");
+
+function setCoords(e) {
+  log.innerText = `
+    Offset X/Y: ${e.offsetX}, ${e.offsetY}
+    Viewport X/Y: ${e.clientX}, ${e.clientY}
+    Page X/Y: ${e.pageX}, ${e.pageY}
+    Screen X/Y: ${e.screenX}, ${e.screenY}`;
+}
+
+inner.addEventListener("mousemove", setCoords);
+inner.addEventListener("mouseenter", setCoords);
+inner.addEventListener("mouseleave", setCoords);
 ```
 
 ### Result

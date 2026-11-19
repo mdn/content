@@ -1,6 +1,5 @@
 1ilsang
 a11ysupport
-Academind
 Acrosync
 Addy
 Adham
@@ -28,7 +27,6 @@ Annonay
 Ansari
 Ansyari
 Apapou
-Aptana
 Araneae
 Arjun
 Arkanoid
@@ -37,7 +35,6 @@ Arun
 Ashlyn
 Ashok
 Ashwood
-Audiocogs
 Audre
 Austerstræti
 Autonavi
@@ -51,6 +48,7 @@ Aziz
 Balhetan
 bartaz
 Bartek
+Bekele
 Belgers
 belgin
 Benbadis
@@ -58,7 +56,6 @@ Bento4
 Berners
 Bila
 Binaryen
-Birtles
 bitsies
 Bitsov
 Bitwarden
@@ -73,12 +70,13 @@ Bodmin
 Boonie
 bottosson
 Boulton
-Bramus
+Boxel
 Brians
 Browserleaks
 Browsershots
 Browsersync
 Bubka
+Bullrun
 Bundlesize
 Bunyakovsky
 Bushell
@@ -86,7 +84,6 @@ Butterick
 Buzzcocks
 Bynens
 Béziers
-caitmuenster
 Camino
 Cammy
 Camtasia
@@ -126,8 +123,6 @@ Coleoptera
 Colomb
 Comeau
 Conde
-Corber
-Cortana
 Coyier
 Cratchit
 Crockford
@@ -169,7 +164,6 @@ Dmitry
 Domenic
 dorey
 Dotclear
-Dottoro
 Downey
 Dragomir
 Drasner
@@ -178,7 +172,6 @@ Dutton
 Dwan
 Dwyane
 dynamis
-Dyno
 Dynos
 Dyslexi
 Eastcott
@@ -191,7 +184,6 @@ Eich
 Eichenwald
 Eisenberg
 Elaina
-Elchi
 Elfie
 Elliotte
 Elly
@@ -205,7 +197,6 @@ Ephesis
 Eplepsia
 Erba
 ERCIM
-ericwbailey
 Esben
 Evaristo
 Eventbrite
@@ -217,13 +208,11 @@ FDCP
 Fenwick
 Ferngate
 Firefogg
-Firesheep
 Firestore
 Firmata
 Firtman
 Flagfox
 Flavio
-Flickr
 flowplayer
 François
 Frederik
@@ -242,14 +231,13 @@ Golightly
 Googlebot
 Gordo
 Gorman
-Grahl
 Grande-Dixence
 Graywolf
-Graywolf9
 Grigsby
 Grissom
 Groff
 Grosso
+Grsync
 Gruber
 GSAP
 Guildford
@@ -266,7 +254,6 @@ Heydings
 Heydon
 Hickson
 Hidde
-Highrise
 Hildy
 Hiroshi
 Hitman
@@ -278,7 +265,6 @@ Hoenigswald
 Holborn
 Holdem
 Holzman
-Honigswald
 Hoshi
 Hoth
 Houseology
@@ -287,6 +273,7 @@ Hönigswald
 Ibuki
 Icecast
 idb-keyval
+Iditarod
 Igalia
 Imagify
 Iniesta
@@ -318,8 +305,6 @@ Josiel
 Jost
 Joyo
 jpmedley
-JSCAMP
-jswebm
 Junxia
 Juri
 Júnior
@@ -335,6 +320,7 @@ Kaspersky
 Katari
 Kazam
 Keegan
+Kenenisa
 kenji-yamasaki
 Kerckhoffs
 Kersee
@@ -343,7 +329,6 @@ Khronos
 Kimberlé
 Kinlan
 Kinnon
-kirsty
 Kirupa
 Klar
 Kleene
@@ -367,7 +352,6 @@ LeBron
 Leitura
 Lemieux
 Lempel
-Lennart
 leptos
 Lesh
 Lexi
@@ -376,7 +360,6 @@ Lianghekou
 Libera.Chat
 Libertinus
 librsvg
-Lighttpd
 LINDDUN
 Lindenberg
 Lindesay
@@ -384,7 +367,6 @@ Liskov
 Lorc
 Lorde
 Loycom
-Luxon
 Léonie
 Macknik
 Macromedia
@@ -403,7 +385,6 @@ Marijn
 Masayuki
 Mateo
 Mathoid
-Matomo
 Matroska
 Matuzovic
 Maximiliano
@@ -418,7 +399,6 @@ Megalosaurus
 Menard
 Mensah
 Mercure
-Merkle
 mfuji
 Miata
 Mielczarek
@@ -427,9 +407,7 @@ Milica
 Miloslav
 Miracast
 Miroslav
-mirunacurtean
 Mitzie
-mixedpuppy
 Moba
 Moby-Dick
 Moddable
@@ -437,7 +415,6 @@ Moderna
 Moiré
 Mojolicious
 molot
-momot
 Montulli
 Moonrocks
 Mooog
@@ -467,7 +444,6 @@ Norah
 Northbridge
 Novak
 Nurek
-Nuxt
 Nyman
 Nyquist
 Nystrom
@@ -499,13 +475,10 @@ Petrov
 Phong
 Picos
 Picryl
-Pinterest
 Pissuti
 Pixabay
-Pixi.js
 Pixlet
 Platane
-Pogany
 Poki
 Polycom
 Popescu
@@ -519,9 +492,7 @@ Prisca
 Priya
 PSVR
 Quirksmode
-Quokkas
 Quora
-rachelandrew
 Radev
 Radimir
 Rahman
@@ -549,9 +520,6 @@ Rosenburg
 Rossi
 Rossum
 Roushan
-rsvg
-Rumyra
-Ryuno
 Sagat
 Saionaro
 Sakura
@@ -579,18 +547,15 @@ Sharma
 Shilpa
 Shinoda
 Shireen
-sideshowbarker
 Silverlight
 Sintel
 Siouxsie
 Siri
 Sitepoint
-Sivonen
 Skeletor
 Skywalker
 Slaght
 Slayton
-SlimerJS
 Snackbars.jsm
 Softgames
 Sokoban
@@ -611,7 +576,7 @@ Statcounter
 Stratford
 Stylo
 sunhpark42
-sveltesociety
+Supabase
 SVGOMG
 Swooop
 Symfony
@@ -620,7 +585,6 @@ Tabliss
 Tamaran
 Tanaka
 Tanx
-Techopedia
 Tegra
 Telenor
 Termes
@@ -635,18 +599,15 @@ Titilayo
 Tokopedia
 Tomayac
 Tonisha
-Transcribear
 Transfonter
 Transformiix
 Treanor
 Trekhleb
 Trint
-Trish
 tristantheb
 Trustwave
 twgl
 Usain
-usrsctp
 Valentina
 Vallejoanderson
 Vanderheiden
@@ -660,15 +621,12 @@ Vint
 Visio
 Vispero
 Voikko
-Volkman
 Vorbis
 vulgaris
 Waarneming
 wabt
 Wakamai
-Waldron
 wanderingstan
-WASMSobel
 Weathersby
 Webhint
 Webopedia
@@ -679,7 +637,6 @@ Weyl
 Widevine
 Wikibooks
 Willee
-Willigers
 Winamp
 Winchelsea
 Winnifred
@@ -694,7 +651,6 @@ Xavi
 Xiluodu
 Xiowan
 XITS
-Yaffle
 yanaklose
 Yari
 yechoi

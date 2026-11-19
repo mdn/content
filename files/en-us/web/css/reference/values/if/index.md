@@ -3,13 +3,9 @@ title: "`if()` CSS function"
 short-title: if()
 slug: Web/CSS/Reference/Values/if
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.if
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`if()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) allows different values to be set for a property depending on the result of a conditional test. The test can be based on a [style query](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries), a [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using), or a [feature query](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries).
 
@@ -467,20 +463,7 @@ Our HTML contains an {{htmlelement("article")}} element with some content inside
 </form>
 ```
 
-### JavaScript
-
-Our JavaScript adds a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event listener to the `<select>` element. When a new value is selected, our script sets the `<article>` element's [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) attribute to equal that value.
-
-```js live-sample___color-scheme
-const articleElem = document.querySelector("article");
-const selectElem = document.querySelector("select");
-
-selectElem.addEventListener("change", () => {
-  articleElem.className = selectElem.value;
-});
-```
-
-### CSS
+#### CSS
 
 In our CSS, we give the `<body>` element a {{cssxref("max-width")}} of `700px` and center it using `auto` {{cssxref("margin")}} values. However, we use an `if()` function with a media query `<if-test>` to set the {{cssxref("margin-top")}} component inside the `margin` shorthand to `0` if the viewport's width is less than `700px`, and `20px` if it is wider. This means that on wide screens we get a bit of margin at the top of the content, but this is removed on narrow screens, where it looks a bit weird.
 
@@ -518,7 +501,7 @@ body {
 }
 ```
 
-We then set the `--scheme` custom property to match the `<article>` element's `class` name. The class will set by our JavaScript when a new value is selected in our `<select>` element. You'll see the significance of the custom element value in the next CSS block.
+We then set the `--scheme` custom property to match the `<article>` element's `class` name. The class will be set by our JavaScript when a new value is selected in our `<select>` element. You'll see the significance of the custom element value in the next CSS block.
 
 ```css live-sample___color-scheme
 .ice {
@@ -586,6 +569,19 @@ h1::before {
     else: "";
   );
 }
+```
+
+#### JavaScript
+
+Our JavaScript adds a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event listener to the `<select>` element. When a new value is selected, our script sets the `<article>` element's [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) attribute to equal that value.
+
+```js live-sample___color-scheme
+const articleElem = document.querySelector("article");
+const selectElem = document.querySelector("select");
+
+selectElem.addEventListener("change", () => {
+  articleElem.className = selectElem.value;
+});
 ```
 
 #### Result

@@ -24,7 +24,7 @@ The MIME media type which describes the format of the recorded media, as a strin
 This string _may_ include the [`codecs` parameter,](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter) giving details about the codecs and the codec configurations used by the media recorder.
 
 The media type strings are standardized by the Internet Assigned Numbers Authority (IANA).
-For their official list of defined media type strings, see the article [Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) on the IANA site.
+For their official list of defined media type strings, see the article [Media Types](https://www.iana.org/assignments/media-types) on the IANA site.
 See also [media types](/en-US/docs/Web/HTTP/Guides/MIME_types) to learn more about media types and how they're used in web content and by web browsers.
 
 ## Examples

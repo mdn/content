@@ -271,7 +271,7 @@ a:first-child {
 
 The demo renders like this:
 
-{{EmbedLiveSample('Reading flow adjustment on block containers', '', '100px')}}
+{{EmbedLiveSample('reading_order_adjustment_on_block_containers', '', '100px')}}
 
 Try tabbing through the links: the tabbing order is "Item B", "Item C", "Item D", then "Item A" — the order of the elements in the DOM is followed, but Item A has been put in a higher reading order ordinal group than the others (the default `reading-order` value is `0`), therefore it is tabbed to last.
 

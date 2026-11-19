@@ -74,7 +74,7 @@ P
 
 In this DOM tree, the node corresponding to our `<p>` element is a parent. Its children include a text node and the three nodes corresponding to our `<span>` elements. The `SPAN` nodes are also parents, with text nodes as their children. When the browser renders this DOM tree, it will look like so:
 
-{{EmbedLiveSample('Handling the HTML', '100%', 55)}}
+{{EmbedLiveSample('handling_html', '100%', 55)}}
 
 ```css hidden
 p {
@@ -122,7 +122,7 @@ The only rule available in the CSS has a `span` selector, so the browser is able
 
 The updated output is as follows:
 
-{{EmbedLiveSample('Parsing the CSS, and rendering the page', '100%', 90)}}
+{{EmbedLiveSample('parsing_css_and_rendering_the_page', '100%', 90)}}
 
 ## Handling JavaScript
 
@@ -158,7 +158,7 @@ You don't need to understand exactly how this JavaScript works, but at a high le
 
 The final output is as follows:
 
-{{EmbedLiveSample('Handling the JavaScript', '100%', 90)}}
+{{EmbedLiveSample('handling_javascript', '100%', 90)}}
 
 ## What other rendering steps are there?
 

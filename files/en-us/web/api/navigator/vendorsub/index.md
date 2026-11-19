@@ -8,8 +8,7 @@ browser-compat: api.Navigator.vendorSub
 
 {{APIRef("HTML DOM")}}
 
-The value of the **`Navigator.vendorSub`** property is always
-the empty string, in any browser.
+The **`vendorSub`** read-only property of the {{domxref("Navigator")}} interface is always the empty string, in any browser.
 
 ## Value
 

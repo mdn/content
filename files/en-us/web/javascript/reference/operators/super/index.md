@@ -87,7 +87,7 @@ When setting properties through `super`, the property is set on `this` instead.
 
 ### Using super in classes
 
-This code snippet is taken from the [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([live demo](https://googlechrome.github.io/samples/classes-es6/index.html)). Here `super()` is called to avoid duplicating the constructor parts' that are common between `Rectangle` and `Square`.
+This code snippet is taken from the [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([live demo](https://googlechrome.github.io/samples/classes-es6/index.html)). Here `super()` is called to avoid duplicating the constructor parts that are common between `Rectangle` and `Square`.
 
 ```js
 class Rectangle {
@@ -345,16 +345,14 @@ b2.setX.call(null); // TypeError: Cannot assign to read only property 'x' of obj
 However, `super.x = 1` still consults the property descriptor of the prototype object, which means you cannot rewrite non-writable properties, and setters will be invoked.
 
 ```js
-class X {
-  constructor() {
-    // Create a non-writable property
-    Object.defineProperty(this, "prop", {
-      configurable: true,
-      writable: false,
-      value: 1,
-    });
-  }
-}
+class X {}
+
+// Create a non-writable property
+Object.defineProperty(X.prototype, "prop", {
+  configurable: true,
+  writable: false,
+  value: 1,
+});
 
 class Y extends X {
   constructor() {

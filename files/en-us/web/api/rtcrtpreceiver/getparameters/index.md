@@ -40,16 +40,16 @@ An object indicating the current configuration of the receiver.
       - : A positive integer specifying the codec's clock rate in Hertz (Hz).
         The clock rate is the rate at which the codec's RTP timestamp advances.
         Most codecs have specific values or ranges of values they permit.
-        The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1), including their clock rates.
+        The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters#rtp-parameters-1), including their clock rates.
 
     - `mimeType`
       - : A string indicating the codec's MIME media type and subtype, specified as a string of the form `"type/subtype"`.
         The MIME type strings used by RTP differ from those used elsewhere.
-        IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
+        IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters#rtp-parameters-2).
         Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
 
     - `payloadType`
-      - : The [RTP payload type](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1) used to identify this codec.
+      - : The [RTP payload type](https://www.iana.org/assignments/rtp-parameters#rtp-parameters-1) used to identify this codec.
 
     - `sdpFmtpLine` {{optional_inline}}
       - : A string giving the format specific parameters field from the `a=fmtp` line in the {{Glossary("SDP")}} which corresponds to the codec {{Glossary("SDP")}} from the remote peer, if the field is present.

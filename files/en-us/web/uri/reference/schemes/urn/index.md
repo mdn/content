@@ -17,8 +17,8 @@ urn:<NID>:<NSS>
 ```
 
 - `<NID>`
-  - : A NID (Namespace Identifier) is a case insensitive identifier for the namespace (e.g., `ISBN` and `isbn` are equivalent).
-    NIDs are maintained by [registries such as IANA](https://www.iana.org/assignments/urn-namespaces/urn-namespaces.xhtml), and their resolution depends on the specific namespace.
+  - : A NID (Namespace Identifier) is a case-insensitive identifier for the namespace (e.g., `ISBN` and `isbn` are equivalent).
+    NIDs are maintained by [registries such as IANA](https://www.iana.org/assignments/urn-namespaces), and their resolution depends on the specific namespace.
     For instance, the `ISBN` NID resolution is handled by [International ISBN Agency](https://www.isbn-international.org/) systems.
 - `<NSS>`
   - : The NSS (Namespace Specific String) is a string unique within a URN namespace.
@@ -50,4 +50,4 @@ urn:ietf:rfc:7230
 
 - [URIs](/en-US/docs/Web/URI)
 - [What is a URL?](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
-- [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
+- [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes)

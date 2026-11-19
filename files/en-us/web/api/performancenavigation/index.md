@@ -37,10 +37,10 @@ _The `PerformanceNavigation` interface doesn't inherit any properties._
 
 ## Instance methods
 
-_The `Performance` interface doesn't inherit any methods._
+_The `PerformanceNavigation` interface doesn't inherit any methods._
 
 - {{domxref("PerformanceNavigation.toJSON()")}} {{deprecated_inline}}
-  - : A {{Glossary("Serialization","serializer")}} returning a JSON object representing the `PerformanceNavigation` object.
+  - : Returns a JSON-serializable plain object representing the `PerformanceNavigation` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Specifications
 

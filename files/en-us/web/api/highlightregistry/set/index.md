@@ -41,7 +41,7 @@ CSS.highlights.set("foo", fooHighlight);
 
 ### Using set() with chaining
 
-Since the `set()` method returns back the registry, you can chain the method call like below:
+Since the `set()` method returns the registry, you can chain the method call like below:
 
 ```js
 const fooHighlight = new Highlight();

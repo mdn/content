@@ -406,7 +406,7 @@ For example, the required CSP for your site might look like this:
 Content-Security-Policy: require-trusted-types-for 'script'; script-src '<your_allowlist>' 'trusted-types-eval'
 ```
 
-The behavior of the transformation function will depend on the specific use case that requires a user provided script.
+The behavior of the transformation function will depend on the specific use case that requires a user-provided script.
 If possible you should lock the allowed scripts to exactly the code that you trust to run.
 If that is not possible, you might allow or block the use of certain functions within the provided string.
 
@@ -474,7 +474,7 @@ See also the {{domxref("Window.clearTimeout", "clearTimeout()")}} example.
 
 ## See also
 
-- [Polyfill of `setTimeout` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
+- [Polyfill of `setTimeout` which allows passing arguments to the callback in `core-js`](https://core-js.io/docs/features/web-standards/settimeout-setinterval)
 - {{domxref("Window.clearTimeout()")}}
 - {{domxref("WorkerGlobalScope.setTimeout()")}}
 - {{domxref("Window.setInterval()")}}

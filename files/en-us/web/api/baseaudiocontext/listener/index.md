@@ -8,9 +8,7 @@ browser-compat: api.BaseAudioContext.listener
 
 {{ APIRef("Web Audio API") }}
 
-The `listener` property of the {{ domxref("BaseAudioContext") }} interface
-returns an {{ domxref("AudioListener") }} object that can then be used for
-implementing 3D audio spatialization.
+The **`listener`** read-only property of the {{domxref("BaseAudioContext")}} interface returns an {{ domxref("AudioListener") }} object that can then be used for implementing 3D audio spatialization.
 
 ## Value
 

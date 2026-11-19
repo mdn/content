@@ -404,7 +404,7 @@ In cases where `reduce()` is the best choice, documentation and semantic variabl
 
 ## See also
 
-- [Polyfill of `Array.prototype.reduce` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.reduce` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.reduce`](https://www.npmjs.com/package/array.prototype.reduce)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

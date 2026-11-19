@@ -9,15 +9,10 @@ sidebar: cssref
 
 The **`text-box-trim`** [CSS](/en-US/docs/Web/CSS) property specifies which of the over and under edges of text content to trim from a text element's block container.
 
-Vertical spacing differs between fonts, making consistent typesetting historically challenging on the web. The `text-box-trim` property — along with its counterpart property {{cssxref("text-box-edge")}}, which specifies how much space to trim — makes consistent vertical spacing of text easier to achieve.
-
-> [!NOTE]
-> The {{cssxref("text-box")}} shorthand property can be used to specify the `text-box-trim` and `text-box-edge` values in a single declaration.
-
 ## Syntax
 
 ```css
-/* Keywords */
+/* Keyword values */
 text-box-trim: none;
 text-box-trim: trim-both;
 text-box-trim: trim-start;
@@ -46,11 +41,17 @@ The `text-box-trim` property value may be specified as one of the following keyw
 
 ## Description
 
+The `text-box-trim` property specifies which of the over and under edges of text content to trim from a text element's block container.
+
+Vertical spacing differs between fonts, making consistent typesetting historically challenging on the web. The `text-box-trim` property — along with its counterpart property {{cssxref("text-box-edge")}}, which specifies how much space to trim — makes consistent vertical spacing of text easier to achieve.
+
 The height of text-only content is relative to the height of the font. In digital font files, the height contains all characters, including capital letters, ascenders, descenders, etc. Different fonts have different base line-heights, meaning that lines of text with the same `font-size` will produce line boxes of differing heights, affecting the appearance of spacing between lines.
 
 The `text-box-trim` property allows you to trim the over and under edge of the text's block container, making it easier to control text spacing in the block direction.
 
 The actual amount of space trimmed is specified using the {{cssxref("text-box-edge")}} property. For example, you can choose to trim the over edge in line with a font's capital letters or lower-case letters, and the under edge flush with the font's baseline.
+
+The `text-box-trim` property, along with the {{cssxref("text-box-edge")}} property, can also be set by using the {{cssxref("text-box")}} shorthand.
 
 ## Formal definition
 
@@ -115,7 +116,7 @@ p {
 
 The output is as follows. Note how we've included a top and bottom border on each paragraph, so that you can see how the space has been trimmed in each case.
 
-{{EmbedLiveSample("Basic `text-box-edge` usage","100%","360")}}
+{{EmbedLiveSample("basic_text-box-trim_usage","100%","360")}}
 
 ### Interactive `text-box-trim` and `text-box-edge` value comparison
 
@@ -271,7 +272,7 @@ trimUnderSelect.addEventListener("change", setEdgeTrim);
 
 The output is as follows:
 
-{{EmbedLiveSample("`text-box-trim` value comparison","100%","520")}}
+{{EmbedLiveSample("interactive_text-box-trim_and_text-box-edge_value_comparison","100%","520")}}
 
 `text-box-trim` is initially set to `trim-both`, meaning that the over _and_ under edges of the paragraph are trimmed. `text-box-edge` is initially set to `cap alphabetic`, meaning that the text is trimmed flush with the top of capital letters at the start edge, and flush with the baseline at the end edge.
 

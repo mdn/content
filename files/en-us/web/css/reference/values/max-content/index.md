@@ -60,7 +60,7 @@ grid-template-columns: 200px 1fr max-content;
 
 #### Result
 
-{{EmbedLiveSample("Using_max-content_for_box_sizing", "100%", 200)}}
+{{EmbedLiveSample("sizing_boxes_with_max-content", "100%", 200)}}
 
 ### Sizing grid columns with max-content
 

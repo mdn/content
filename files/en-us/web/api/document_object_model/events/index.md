@@ -719,7 +719,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
       </td>
     </tr>
     <tr>
-      <td>RTC (real time communication)</td>
+      <td>RTC (real-time communication)</td>
       <td>
         <p>
           Events related to the

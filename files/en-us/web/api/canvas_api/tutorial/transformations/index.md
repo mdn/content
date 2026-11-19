@@ -91,7 +91,7 @@ The first of the transformation methods we'll look at is `translate()`. This met
 - {{domxref("CanvasRenderingContext2D.translate", "translate(x, y)")}}
   - : Moves the canvas and its origin on the grid. `x` indicates the horizontal distance to move, and `y` indicates how far to move the grid vertically.
 
-![The canvas is pushed down and to the right, or translated, from its origin point on the grid by 'x' units horizontally and 'y' units vertically.](canvas_grid_translate.png)
+![The canvas is pushed down and to the right, or translated, from its origin point on the grid by 'x' units horizontally and 'y' units vertically.](/en-US/docs/Web/API/CanvasRenderingContext2D/translate/canvas_grid_translate.svg)
 
 It's a good idea to save the canvas state before doing any transformations. In most cases, it is just easier to call the `restore` method than having to do a reverse translation to return to the original state. Also if you're translating inside a loop and don't save and restore the canvas state, you might end up missing part of your drawing, because it was drawn outside the canvas edge.
 
@@ -99,7 +99,7 @@ It's a good idea to save the canvas state before doing any transformations. In m
 
 This example demonstrates some of the benefits of translating the canvas origin. Without the `translate()` method, all of the rectangles would be drawn at the same position (0,0). The `translate()` method also gives us the freedom to place the rectangle anywhere on the canvas without having to manually adjust coordinates in the `fillRect()` function. This makes it a little easier to understand and use.
 
-In the `draw()` function, we call the `fillRect()` function nine times using two `for` loops. In each loop, the canvas is translated, the rectangle is drawn, and the canvas is returned back to its original state. Note how the call to `fillRect()` uses the same coordinates each time, relying on `translate()` to adjust the drawing position.
+In the `draw()` function, we call the `fillRect()` function nine times using two `for` loops. In each loop, the canvas is translated, the rectangle is drawn, and the canvas is returned to its original state. Note how the call to `fillRect()` uses the same coordinates each time, relying on `translate()` to adjust the drawing position.
 
 ```js
 function draw() {
@@ -133,7 +133,7 @@ The second transformation method is `rotate()`. We use it to rotate the canvas a
 - {{domxref("CanvasRenderingContext2D.rotate", "rotate(angle)")}}
   - : Rotates the canvas clockwise around the current origin by the `angle` number of radians.
 
-![The default origin point is at the top left, 0 degrees is horizontal and to the right. The rotation point starts from the origin point and goes clockwise.](canvas_grid_rotate.png)
+![The default origin point is at the top left, 0 degrees is horizontal and to the right. The x axis starts from the origin point and rotates clockwise.](/en-US/docs/Web/API/CanvasRenderingContext2D/rotate/canvas_grid_rotate.svg)
 
 The rotation center point is always the canvas origin. To change the center point, we will need to move the canvas by using the `translate()` method.
 

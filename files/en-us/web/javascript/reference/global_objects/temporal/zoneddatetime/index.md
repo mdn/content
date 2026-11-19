@@ -172,7 +172,7 @@ Note that the `Z` offset is not equivalent to `+00:00`. The `Z` offset means "th
 
 ## Constructor
 
-- {{jsxref("Temporal/ZonedDateTime/ZonedDateTime", "Temporal.ZonedDateTime()")}} {{experimental_inline}}
+- {{jsxref("Temporal/ZonedDateTime/ZonedDateTime", "Temporal.ZonedDateTime()")}}
   - : Creates a new `Temporal.ZonedDateTime` object by directly supplying the underlying data.
 
 ## Static methods

@@ -8,9 +8,7 @@ browser-compat: api.WorkerNavigator.platform
 
 {{ APIRef("HTML DOM") }}{{AvailableInWorkers("worker")}}
 
-Returns a string representing the platform of the browser. The specification allows
-browsers to always return the empty string, so don't rely on this property to get a
-reliable answer.
+The **`platform`** read-only property of the {{domxref("WorkerNavigator")}} interface returns a string representing the platform of the browser. The specification allows browsers to always return the empty string, so don't rely on this property to get a reliable answer.
 
 ## Value
 
@@ -21,15 +19,14 @@ the platform on which the browser is executing.
 
 For example: `"MacIntel"`, `"Win32"`, `"FreeBSD i386"`, `"WebTV OS"`.
 
+> [!NOTE]
+> On Windows, modern browsers return `"Win32"` even if running on a 64-bit version of Windows.
+
 ## Examples
 
 ```js
 console.log(navigator.platform);
 ```
-
-## Usage notes
-
-On Windows, modern browsers return `"Win32"` even if running on a 64-bit version of Windows
 
 ## Specifications
 

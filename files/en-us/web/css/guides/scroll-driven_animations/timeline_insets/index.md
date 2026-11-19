@@ -388,7 +388,7 @@ article {
         calc(var(--containerHeight) * 0.6 + 0.5px),
       transparent 0 calc(var(--containerHeight) * 0.6 + 0.5px)
     );
-  background-position: local, local, fixed;
+  background-attachment: local, local, fixed;
 }
 ```
 

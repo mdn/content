@@ -10,7 +10,7 @@ browser-compat: api.USBDevice.productName
 
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-The **`productName`** read only property of the
+The **`productName`** read-only property of the
 {{domxref("USBDevice")}} interface the manufacturer-defined name that identifies a USB
 device.
 

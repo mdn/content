@@ -66,13 +66,12 @@ The [`capture`](/en-US/docs/Web/HTML/Reference/Attributes/capture) attribute val
 
 When the [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple) Boolean attribute is specified, the file input allows the user to select more than one file.
 
-## Non-standard attributes
-
-In addition to the attributes listed above, the following non-standard attributes are available on some browsers. You should try to avoid using them when possible, since doing so will limit the ability of your code to function in browsers that don't implement them.
-
-### `webkitdirectory`
+### webkitdirectory
 
 The Boolean `webkitdirectory` attribute, if present, indicates that only directories should be available to be selected by the user in the file picker interface. See {{domxref("HTMLInputElement.webkitdirectory")}} for additional details and examples.
+
+> [!NOTE]
+> `webkitdirectory` is defined in the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API). It's named `webkitdirectory` because of its origins as a Chrome-specific API. It is now available in all browsers.
 
 ## Unique file type specifiers
 
@@ -95,15 +94,10 @@ The `accept` attribute takes a string containing one or more of these unique fil
 ### A basic example
 
 ```html
-<form method="post" enctype="multipart/form-data">
-  <div>
-    <label for="file">Choose file to upload</label>
-    <input type="file" id="file" name="file" multiple />
-  </div>
-  <div>
-    <button>Submit</button>
-  </div>
-</form>
+<div>
+  <label for="file">Choose file to upload</label>
+  <input type="file" id="file" name="file" multiple />
+</div>
 ```
 
 ```css hidden
@@ -153,19 +147,14 @@ Acceptable file types can be specified with the [`accept`](#accept) attribute, w
 Let's look at a more complete example:
 
 ```html
-<form method="post" enctype="multipart/form-data">
-  <div>
-    <label for="profile_pic">Choose file to upload</label>
-    <input
-      type="file"
-      id="profile_pic"
-      name="profile_pic"
-      accept=".jpg, .jpeg, .png" />
-  </div>
-  <div>
-    <button>Submit</button>
-  </div>
-</form>
+<div>
+  <label for="profile_pic">Choose file to upload</label>
+  <input
+    type="file"
+    id="profile_pic"
+    name="profile_pic"
+    accept=".jpg, .jpeg, .png" />
+</div>
 ```
 
 ```css hidden
@@ -226,7 +215,7 @@ In this example, we'll present a slightly more advanced file chooser that takes 
 The HTML looks like so:
 
 ```html
-<form method="post" enctype="multipart/form-data">
+<div class="file-picker">
   <div>
     <label for="image_uploads">Choose images to upload (PNG, JPG)</label>
     <input
@@ -240,9 +229,9 @@ The HTML looks like so:
     <p>No files currently selected for upload</p>
   </div>
   <div>
-    <button>Submit</button>
+    <button type="button">Submit</button>
   </div>
-</form>
+</div>
 ```
 
 ```css hidden
@@ -250,18 +239,18 @@ html {
   font-family: sans-serif;
 }
 
-form {
+.file-picker {
   background: #cccccc;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid black;
 }
 
-form ol {
+.file-picker ol {
   padding-left: 0;
 }
 
-form li,
+.file-picker li,
 div > p {
   background: #eeeeee;
   display: flex;
@@ -271,18 +260,18 @@ div > p {
   border: 1px solid black;
 }
 
-form img {
+.file-picker img {
   height: 64px;
   order: 1;
 }
 
-form p {
+.file-picker p {
   line-height: 32px;
   padding-left: 10px;
 }
 
-form label,
-form button {
+.file-picker label,
+.file-picker button {
   background-color: #7f9ccb;
   padding: 5px 10px;
   border-radius: 5px;
@@ -291,14 +280,14 @@ form button {
   height: auto;
 }
 
-form label:hover,
-form button:hover {
+.file-picker label:hover,
+.file-picker button:hover {
   background-color: #2d5ba3;
   color: white;
 }
 
-form label:active,
-form button:active {
+.file-picker label:active,
+.file-picker button:active {
   background-color: #0d3f8f;
   color: white;
 }
@@ -417,9 +406,8 @@ function returnFileSize(number) {
 > The "KB" and "MB" units here use the [SI prefix](https://en.wikipedia.org/wiki/Binary_prefix) convention of 1KB = 1000B, similar to macOS. Different systems represent file sizes differently—for example, Ubuntu uses IEC prefixes where 1KiB = 1024B, while RAM specifications often use SI prefixes to represent powers of two (1KB = 1024B). For this reason, we used `1e3` (`1000`) and `1e6` (`100000`) instead of `1024` and `1048576`. In your application, you should communicate the unit system clearly to your users if the exact size is important.
 
 ```js hidden
-const button = document.querySelector("form button");
-button.addEventListener("click", (e) => {
-  e.preventDefault();
+const button = document.querySelector(".file-picker button");
+button.addEventListener("click", () => {
   const para = document.createElement("p");
   para.append("Image uploaded!");
   preview.replaceChildren(para);

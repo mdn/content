@@ -85,7 +85,7 @@ console.log(set2.isSupersetOf(set1)); // true
 
 ## See also
 
-- [Polyfill of `Set.prototype.isSupersetOf` in `core-js`](https://github.com/zloirock/core-js#new-set-methods)
+- [Polyfill of `Set.prototype.isSupersetOf` in `core-js`](https://core-js.io/docs/features/ecmascript/collections#h-set)
 - [es-shims polyfill of `Set.prototype.isSupersetOf`](https://www.npmjs.com/package/set.prototype.issupersetof)
 - {{jsxref("Set.prototype.difference()")}}
 - {{jsxref("Set.prototype.intersection()")}}

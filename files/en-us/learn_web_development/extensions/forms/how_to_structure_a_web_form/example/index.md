@@ -85,6 +85,12 @@ This the example for a basic payment form for the article [How to structure an H
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ### CSS
 
 ```css

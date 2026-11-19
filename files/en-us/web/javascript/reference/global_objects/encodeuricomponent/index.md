@@ -112,7 +112,7 @@ encodeURIComponent("\uD800\uDFFF"); // "%F0%90%8F%BF"
 // Lone high-surrogate code unit throws "URIError: malformed URI sequence"
 encodeURIComponent("\uD800");
 
-// Lone high-surrogate code unit throws "URIError: malformed URI sequence"
+// Lone low-surrogate code unit throws "URIError: malformed URI sequence"
 encodeURIComponent("\uDFFF");
 ```
 

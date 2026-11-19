@@ -13,10 +13,8 @@ The **`create()`** method of the {{domxref("CredentialsContainer")}} interface c
 This method supports three different types of credential:
 
 - A password credential, which enables a user to sign in using a password.
-- A federated credential, which enables a user to sign in using a federated identity provider.
-- A public key credential, which enables a user to sign in with an authenticator such as a biometric reader built into the platform or a removable hardware token.
-
-Note that the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) supersedes the federated credential type.
+- A federated credential, which enables a user to sign in using a federated identity provider. Note that the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) supersedes the federated credential type.
+- A public key credential, which enables a user to sign in with an authenticator such as a biometric reader built into the platform or a removable hardware token. [Passkeys](/en-US/docs/Web/Security/Authentication/Passkeys) are a type of public key credential.
 
 ## Syntax
 
@@ -29,6 +27,11 @@ create(options)
 
 - `options` {{optional_inline}}
   - : An object that contains options for the requested new `Credentials` object. It can contain the following properties:
+    - `mediation` {{optional_inline}}
+      - : A string indicating how the user is involved in creating the credential.
+
+        This option only has an effect for [public key credentials](#publickey), and the only value that has an effect is `"conditional"`. This value means that if certain conditions are met, then the browser will attempt to create the new credential without requiring any user interaction. If the conditions are not met, creation will fail. See [Conditional create](/en-US/docs/Web/API/Web_Authentication_API#conditional_create) for more details.
+
     - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `create()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an `AbortError` {{domxref("DOMException")}}.
 
@@ -59,10 +62,11 @@ If no credential object can be created, the promise resolves with `null`.
   - : In the case of a {{domxref("PasswordCredential")}} creation request, `id`, `origin`, or `password` were not provided (empty).
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Possible causes include:
-    - Usage was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
+    - Usage is blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
     - The function is called cross-origin but the iframe's [`allow`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow) attribute does not set an appropriate {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} policy.
     - The function is called cross-origin and the `<iframe>` does not have {{glossary("transient activation")}}.
-    - The function tried to create a [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_and_non-discoverable_credentials) ([`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey) is set to `required` in the `create()` call's {{domxref("PublicKeyCredentialCreationOptions")}} option), but the user does not have an authenticator that supports discoverable credentials.
+    - The function tries to create a [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_and_non-discoverable_credentials) ([`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey) is set to `required` in the `create()` call's {{domxref("PublicKeyCredentialCreationOptions")}} option), but the user does not have an authenticator that supports discoverable credentials.
+    - The `mediation` option is set to `"conditional"`, but the conditions were not met. See [Conditional create](/en-US/docs/Web/API/Web_Authentication_API#conditional_create) for more details.
 - `AbortError` {{domxref("DOMException")}}
   - : The operation was aborted.
 
@@ -168,6 +172,42 @@ Some of this data will need to be stored on the server for future authentication
 
 > [!NOTE]
 > See [Creating a key pair and registering a user](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user) for more information about how the overall flow works.
+
+### Creating a public key credential using conditional create
+
+This example uses [conditional create](/en-US/docs/Web/API/Web_Authentication_API#conditional_create), which is specified by setting the `mediation` option to `conditional`. It attempts to create a new passkey without requiring any user interaction, when the conditions defined for conditional create are met.
+
+```js
+async function conditionalCreate(account) {
+  try {
+    const capabilities = await PublicKeyCredential.getClientCapabilities();
+    // Only attempt conditional create if it is supported,
+    // and if the user doesn't already have a passkey
+    if (capabilities.conditionalCreate && !account.hasPasskey) {
+      // Abort any existing WebAuthn calls
+      webAuthnController.abort();
+
+      // Get creation options, including the challenge value from the server
+      const pkOptions = await getNewPasskeyOptions();
+      const credential = await navigator.credentials.create({
+        publicKey: pkOptions,
+        mediation: "conditional",
+      });
+      // Conditional create succeeded: send the new credential to the server
+      // for validation and storage
+      await processNewPasskey(credential);
+    }
+  } catch (e) {
+    // Ignore errors from conditional create
+  }
+}
+```
+
+Note that this example:
+
+- Only attempts conditional create if the user does not already have a passkey
+- Aborts any outstanding attempts to get or create a public key credential before attempting conditional create.
+- Catches and ignores any errors that are thrown if, for example, the conditions were not met.
 
 ## Specifications
 

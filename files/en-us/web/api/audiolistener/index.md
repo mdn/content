@@ -16,25 +16,25 @@ It is important to note that there is only one listener per context and that it 
 ## Instance properties
 
 > [!NOTE]
-> The position, forward, and up value are set and retrieved using different syntaxes. Retrieval is done by accessing, for example, `AudioListener.positionX`, while setting the same property is done with `AudioListener.positionX.value`. This is why these values are not marked read only, which is how they appear in the specification's IDL.
+> The position, forward, and up value are set and retrieved using different syntaxes. Retrieval is done by accessing, for example, `AudioListener.positionX`, while setting the same property is done with `AudioListener.positionX.value`.
 
-- {{domxref("AudioListener.positionX")}}
+- {{domxref("AudioListener.positionX")}} {{ReadOnlyInline}}
   - : Represents the horizontal position of the listener in a right-hand cartesian coordinate system. The default is 0.
-- {{domxref("AudioListener.positionY")}}
+- {{domxref("AudioListener.positionY")}} {{ReadOnlyInline}}
   - : Represents the vertical position of the listener in a right-hand cartesian coordinate system. The default is 0.
-- {{domxref("AudioListener.positionZ")}}
+- {{domxref("AudioListener.positionZ")}} {{ReadOnlyInline}}
   - : Represents the longitudinal (back and forth) position of the listener in a right-hand cartesian coordinate system. The default is 0.
-- {{domxref("AudioListener.forwardX")}}
+- {{domxref("AudioListener.forwardX")}} {{ReadOnlyInline}}
   - : Represents the horizontal position of the listener's forward direction in the same cartesian coordinate system as the position (`positionX`, `positionY`, and `positionZ`) values. The forward and up values are linearly independent of each other. The default is 0.
-- {{domxref("AudioListener.forwardY")}}
+- {{domxref("AudioListener.forwardY")}} {{ReadOnlyInline}}
   - : Represents the vertical position of the listener's forward direction in the same cartesian coordinate system as the position (`positionX`, `positionY`, and `positionZ`) values. The forward and up values are linearly independent of each other. The default is 0.
-- {{domxref("AudioListener.forwardZ")}}
+- {{domxref("AudioListener.forwardZ")}} {{ReadOnlyInline}}
   - : Represents the longitudinal (back and forth) position of the listener's forward direction in the same cartesian coordinate system as the position (`positionX`, `positionY`, and `positionZ`) values. The forward and up values are linearly independent of each other. The default is -1.
-- {{domxref("AudioListener.upX")}}
+- {{domxref("AudioListener.upX")}} {{ReadOnlyInline}}
   - : Represents the horizontal position of the top of the listener's head in the same cartesian coordinate system as the position (`positionX`, `positionY`, and `positionZ`) values. The forward and up values are linearly independent of each other. The default is 0.
-- {{domxref("AudioListener.upY")}}
+- {{domxref("AudioListener.upY")}} {{ReadOnlyInline}}
   - : Represents the vertical position of the top of the listener's head in the same cartesian coordinate system as the position (`positionX`, `positionY`, and `positionZ`) values. The forward and up values are linearly independent of each other. The default is 1.
-- {{domxref("AudioListener.upZ")}}
+- {{domxref("AudioListener.upZ")}} {{ReadOnlyInline}}
   - : Represents the longitudinal (back and forth) position of the top of the listener's head in the same cartesian coordinate system as the position (`positionX`, `positionY`, and `positionZ`) values. The forward and up values are linearly independent of each other. The default is 0.
 
 ## Instance methods

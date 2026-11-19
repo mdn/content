@@ -119,6 +119,12 @@ Here's the underlying code for this starting point:
 </form>
 ```
 
+```js hidden live-sample___aria-2
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 We've not provided finished content for this task, as it doesn't look significantly different to the starting state.
 
 <details>

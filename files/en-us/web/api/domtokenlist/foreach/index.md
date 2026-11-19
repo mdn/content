@@ -41,7 +41,7 @@ None.
 
 In the following example we retrieve the list of classes set on a
 {{htmlelement("pre")}} element as a `DOMTokenList` using
-{{domxref("Element.classList")}}. We when retrieve an iterator containing the values
+{{domxref("Element.classList")}}. We then retrieve an iterator containing the values
 using `forEach()`, writing each one to the `<pre>`'s
 {{domxref("Node.textContent")}} inside the `forEach()` inner function.
 
@@ -77,4 +77,5 @@ classes.forEach(function (value, key, listObj) {
 
 ## See also
 
+- [Polyfill of `DOMTokenList.prototype.forEach` in `core-js`](https://core-js.io/docs/features/web-standards/iterable-dom-collections)
 - {{domxref("DOMTokenList.entries()")}}, {{domxref("DOMTokenList.keys")}} and {{domxref("DOMTokenList.values")}}.

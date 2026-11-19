@@ -200,7 +200,7 @@ Indirect eval can be seen as if the code is evaluated within a separate `<script
 
 Using direct `eval()` suffers from multiple problems:
 
-- `eval()` executes the code it's passed with the privileges of the caller. If you run `eval()` with a string that could be affected by a malicious party, you may end up running malicious code on the user's machine with the permissions of your webpage / extension. More importantly, allowing third-party code to access the scope in which `eval()` was invoked (if it's a direct eval) can lead to possible attacks that reads or changes local variables. See [Security considerations](#security_considerations) for approaches that mitigate these risks.
+- `eval()` executes the code it's passed with the privileges of the caller. If you run `eval()` with a string that could be affected by a malicious party, you may end up running malicious code on the user's machine with the permissions of your webpage / extension. More importantly, allowing third-party code to access the scope in which `eval()` was invoked (if it's a direct eval) can lead to possible attacks that read or change local variables. See [Security considerations](#security_considerations) for approaches that mitigate these risks.
 - `eval()` is slower than the alternatives, since it has to invoke the JavaScript interpreter, while many other constructs are optimized by modern JS engines.
 - Modern JavaScript interpreters convert JavaScript to machine code. This means that any concept of variable naming gets obliterated. Thus, any use of `eval()` will force the browser to do long expensive variable name lookups to figure out where the variable exists in the machine code and set its value. Additionally, new things can be introduced to that variable through `eval()`, such as changing the type of that variable, forcing the browser to re-evaluate all of the generated machine code to compensate.
 - Minifiers give up on any minification if the scope is transitively depended on by `eval()`, because otherwise `eval()` cannot read the correct variable at runtime.
@@ -241,7 +241,7 @@ The two code snippets above may seem to work the same way, but they do not; the 
 
   Thus, in the `eval()` version of the code, the browser is forced to make the expensive lookup call to check to see if there are any local variables called `Map()`.
 
-- If not using strict mode, `var` declarations within the `eval()` source becomes variables in the surrounding scope. This leads to hard-to-debug issues if the string is acquired from external input, especially if there's an existing variable with the same name.
+- If not using strict mode, `var` declarations within the `eval()` source become variables in the surrounding scope. This leads to hard-to-debug issues if the string is acquired from external input, especially if there's an existing variable with the same name.
 - Direct eval can read and mutate bindings in the surrounding scope, which may lead to external input corrupting local data.
 - When using direct `eval`, especially when the eval source cannot be proven to be in strict mode, the engine — and build tools — have to disable all optimizations related to inlining, because the `eval()` source can depend on any variable name in its surrounding scope.
 
@@ -368,7 +368,7 @@ const adder = eval(untrustedCode);
 
 Websites with a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) that specifies [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) or [`default-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src) will prevent such code running by default. If you must allow the scripts to run via `eval()`, you can mitigate the risks by always assigning a {{domxref("TrustedScript")}} instance instead of a string, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive. This ensures that the input is passed through a transformation function.
 
-To allow `eval()` to run, you additionally need to specify the [`trusted-types-eval` keyword](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval) in your CSP `script-src` directive. The [`unsafe-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) keyword also allows `eval()`, but is much less safe then `trusted-types-eval` because it would allow execution even on browsers that do not support trusted types.
+To allow `eval()` to run, you additionally need to specify the [`trusted-types-eval` keyword](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval) in your CSP `script-src` directive. The [`unsafe-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) keyword also allows `eval()`, but is much less safe than `trusted-types-eval` because it would allow execution even on browsers that do not support trusted types.
 
 For example, the required CSP for your site might look like this:
 
@@ -376,7 +376,7 @@ For example, the required CSP for your site might look like this:
 Content-Security-Policy: require-trusted-types-for 'script'; script-src '<your_allowlist>' 'trusted-types-eval'
 ```
 
-The behavior of the transformation function implemented in your trusted types policy depends on the specific use case that requires a user provided script. If possible, you should lock the allowed scripts to exactly the code that you trust to run. If that is not possible, you might allow or block the use of certain functions within the provided input.
+The behavior of the transformation function implemented in your trusted types policy depends on the specific use case that requires a user-provided script. If possible, you should lock the allowed scripts to exactly the code that you trust to run. If that is not possible, you might allow or block the use of certain functions within the provided input.
 
 ## Examples
 
@@ -412,7 +412,7 @@ Then we use the `policy` object to create a `TrustedScript` object from a potent
 // The potentially malicious string
 const untrustedScript = "alert('Potentially evil code!');";
 
-// Create a TrustedScriptURL instance using the policy
+// Create a TrustedScript instance using the policy
 const trustedScript = policy.createScript(untrustedScript);
 ```
 

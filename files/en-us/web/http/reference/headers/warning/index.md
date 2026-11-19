@@ -57,7 +57,7 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 
 ## Warning codes
 
-The [HTTP Warn Codes registry at iana.org](https://www.iana.org/assignments/http-warn-codes/http-warn-codes.xhtml) defines the namespace for warning codes.
+The [HTTP Warn Codes registry at iana.org](https://www.iana.org/assignments/http-warn-codes) defines the namespace for warning codes.
 
 | Code | Text                             | Description                                                                                                                                                                                      |
 | ---- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

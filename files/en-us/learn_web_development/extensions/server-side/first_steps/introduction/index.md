@@ -148,7 +148,7 @@ Server-side programming allows sites to restrict access to authorized users and 
 Real-world examples include social-networking sites which allow users to determine who can see the content they post to the site, and whose content appears in their feed.
 
 > [!NOTE]
-> Consider other real examples where access to content is controlled. For example, what can you see if you go to the online site for your bank? Log in to your account — what additional information can you see and modify? What information can you see that only the bank can change?
+> Consider other real examples where access to content is controlled. For example, what can you see if you go to the online site for your bank? Log into your account — what additional information can you see and modify? What information can you see that only the bank can change?
 
 ### Store session/state information
 

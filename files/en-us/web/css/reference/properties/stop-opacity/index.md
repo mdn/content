@@ -9,7 +9,7 @@ sidebar: cssref
 
 The **`stop-opacity`** [CSS](/en-US/docs/Web/CSS) property defines the opacity of a given color gradient stop in the SVG {{SVGElement("stop")}} element within an SVG gradient. If present, it overrides the element's {{SVGAttr("stop-opacity")}} attribute.
 
-The property value impacts the {{cssxref("stop-color")}}'s alpha channel; it can increase the transparency of a `<stop>`'s color but can not make the color defined by the `stop-color` property more opaque.
+The property value impacts the {{cssxref("stop-color")}}'s alpha channel; it can increase the transparency of a `<stop>`'s color but cannot make the color defined by the `stop-color` property more opaque.
 
 > [!NOTE]
 > The `stop-opacity` property only applies to {{SVGElement('stop')}} elements nested in an {{SVGElement("svg")}}. It doesn't apply to other SVG, HTML, or pseudo-elements.

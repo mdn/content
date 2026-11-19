@@ -50,11 +50,11 @@ The `parseFloat` function converts its first argument to a string, parses that s
 - The characters accepted by `parseFloat()` are plus sign (`+`), minus sign (`-` U+002D HYPHEN-MINUS), decimal digits (`0` – `9`), decimal point (`.`), exponent indicator (`e` or `E`), and the `"Infinity"` literal.
 - The `+`/`-` signs can only appear strictly at the beginning of the string, or immediately following the `e`/`E` character. The decimal point can only appear once, and only before the `e`/`E` character. The `e`/`E` character can only appear once, and only if there is at least one digit before it.
 - Leading spaces in the argument are trimmed and ignored.
-- `parseFloat()` can also parse and return {{jsxref("Infinity")}} or `-Infinity` if the string starts with `"Infinity"` or `"-Infinity"` preceded by none or more white spaces.
+- `parseFloat()` can also parse and return {{jsxref("Infinity")}} or `-Infinity` if the string starts with `"Infinity"` or `"-Infinity"` preceded by zero or more whitespace characters.
 - `parseFloat()` picks the longest substring starting from the beginning that generates a valid number literal. If it encounters an invalid character, it returns the number represented up to that point, ignoring the invalid character and all characters following it.
 - If the argument's first character can't start a legal number literal per the syntax above, `parseFloat` returns {{jsxref("NaN")}}.
 
-Syntax-wise, `parseFloat()` parses a subset of the syntax that the [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) function accepts. Namely, `parseFloat()` does not support non-decimal literals with `0x`, `0b`, or `0o` prefixes but supports everything else. However, `parseFloat()` is more lenient than `Number()` because it ignores trailing invalid characters, which would cause `Number()` to return `NaN`.
+Syntax-wise, `parseFloat()` parses a subset of the syntax that the [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) function accepts. Namely, `parseFloat()` does not support non-decimal literals with `0x`, `0b`, or `0o` prefixes and returns `NaN` for empty or whitespace-only strings, which `Number()` converts to `0`. However, `parseFloat()` is more lenient than `Number()` because it ignores trailing invalid characters, which would cause `Number()` to return `NaN`.
 
 Similar to number literals and `Number()`, the number returned from `parseFloat()` may not be exactly equal to the number represented by the string, due to floating point range and inaccuracy. For numbers outside the `-1.7976931348623158e+308` – `1.7976931348623158e+308` range (see {{jsxref("Number.MAX_VALUE")}}), `-Infinity` or `Infinity` is returned.
 

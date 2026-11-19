@@ -58,7 +58,7 @@ These are specified as [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtension
 
 The optional API permissions are:
 
-- `activeTab`
+- [`activeTab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission)
 - `background`
 - `bookmarks`
 - `browserSettings`

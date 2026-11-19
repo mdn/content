@@ -112,7 +112,7 @@ Try saving the file and loading it in your browser. You should now see a gray wi
 
 ## Geometry
 
-Now the scene is properly rendering we can start adding 3D shapes to it. To speed up development PlayCanvas provides a bunch of predefined primitives that you can use to create shapes instantly in a single line of code. There are cubes, spheres, cylinders and more complicated shapes available. Drawing everything for given shape is taken care of by the engine, so we can focus on the high level coding. Let's start by defining the geometry for a cube shape — add the following new code below your previous additions:
+Now the scene is properly rendering we can start adding 3D shapes to it. To speed up development PlayCanvas provides a bunch of predefined primitives that you can use to create shapes instantly in a single line of code. There are cubes, spheres, cylinders and more complicated shapes available. Drawing everything for given shape is taken care of by the engine, so we can focus on the high-level coding. Let's start by defining the geometry for a cube shape — add the following new code below your previous additions:
 
 ```js
 const box = new pc.Entity();

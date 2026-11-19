@@ -143,7 +143,7 @@ label {
 
 Try entering and removing text in the fields below to explore the effects of `field-sizing: content` alongside other sizing properties.
 
-{{ EmbedLiveSample('Growing/shrinking text fields', '100%', '200') }}
+{{ EmbedLiveSample('growing_and_shrinking_text_fields', '100%', '200') }}
 
 ### Controlling `<select>` element display
 

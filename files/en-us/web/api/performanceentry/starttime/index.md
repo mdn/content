@@ -17,6 +17,8 @@ A {{domxref("DOMHighResTimeStamp")}} representing the first timestamp when the
 
 The meaning of this property depends on the value of this performance entry's {{domxref("PerformanceEntry.entryType","entryType")}}:
 
+- `container`
+  - : The value of this entry's {{domxref("PerformanceContainerTiming.paintTime", "paintTime")}}.
 - `element`
   - : Either the value of this entry's {{domxref("PerformanceElementTiming.renderTime", "renderTime")}} if it is not `0`, otherwise the value of this entry's {{domxref("PerformanceElementTiming.loadTime", "loadTime")}}.
 - `event`
@@ -38,7 +40,7 @@ The meaning of this property depends on the value of this performance entry's {{
 - `paint`
   - : The time when the paint occurred.
 - `resource`
-  - : The value of this entry's {{domxref("PerformanceResourceTiming.fetchStart", "fetchStart")}} property.
+  - : The time the resource fetch started, including redirects. If there are no HTTP redirects or their timing information is not exposed, this value is equivalent to {{domxref("PerformanceResourceTiming.fetchStart")}}. Otherwise, this value can be earlier than `fetchStart`.
 - `taskattribution`
   - : Always `0`.
 - `visibility-state`

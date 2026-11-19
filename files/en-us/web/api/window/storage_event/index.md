@@ -17,11 +17,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("storage", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onstorage = (event) => { }
 ```
 
@@ -51,7 +55,7 @@ window.addEventListener("storage", () => {
 });
 ```
 
-The same action can be achieved using the `onstorage` event handler property:
+The same action can be achieved using the `onstorage` event handler property (but note that this replaces other event listeners added using `onstorage`, if any):
 
 ```js
 window.onstorage = () => {

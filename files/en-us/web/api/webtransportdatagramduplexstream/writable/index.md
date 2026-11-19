@@ -15,6 +15,8 @@ The **`writable`** read-only property of the {{domxref("WebTransportDatagramDupl
 
 "Unreliably" means that transmission of data is not guaranteed, nor is arrival in a specific order. This is fine in some situations and provides very fast delivery. For example, you might want to transmit regular game state updates where each message supersedes the last one that arrives, and order is not important.
 
+{{domxref("WebTransportDatagramDuplexStream.createWritable", "createWritable()")}} should be used by preference.
+
 ## Value
 
 A {{domxref("WritableStream")}}.
@@ -25,7 +27,7 @@ See the main {{domxref("WebTransportDatagramDuplexStream")}} interface page.
 
 ## Specifications
 
-{{Specifications}}
+This feature has been removed from the specification.
 
 ## Browser compatibility
 

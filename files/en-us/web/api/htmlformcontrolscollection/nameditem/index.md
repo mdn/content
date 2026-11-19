@@ -54,8 +54,8 @@ namedItem(name)
   <label for="maybe">Maybe</label>
   <input id="maybe" name="my-radio" type="radio" />
   <br />
-  <label for="text1">Text input 1</label>
-  <input id="text1" name="my-form-control" type="text" />
+  <label for="checkbox1">Checkbox</label>
+  <input id="checkbox1" name="my-form-control" type="checkbox" />
 </form>
 
 <div id="output"></div>

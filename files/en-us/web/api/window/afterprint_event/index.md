@@ -14,11 +14,15 @@ The {{domxref("Window.beforeprint_event", "beforeprint")}} and `afterprint` even
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("afterprint", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onafterprint = (event) => { }
 ```
 
@@ -36,7 +40,7 @@ window.addEventListener("afterprint", (event) => {
 });
 ```
 
-Using the `onafterprint` event handler property:
+Using the `onafterprint` event handler property (but note that this replaces other event listeners added using `onafterprint`, if any):
 
 ```js
 window.onafterprint = (event) => {

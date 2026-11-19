@@ -234,7 +234,7 @@ window.addEventListener("pagereveal", async (e) => {
 ```
 
 > [!NOTE]
-> The `determineTransitionType()` function can return `undefined` if neither the `backwards` or `forwards` conditions are true. This can occur if the user reloads the page, in which case the current page and destination page are the same page, therefore the index values are the same.
+> The `determineTransitionType()` function can return `undefined` if neither the `backwards` nor `forwards` conditions are true. This can occur if the user reloads the page, in which case the current page and destination page are the same page, therefore the index values are the same.
 
 ### Applying custom animations in CSS
 

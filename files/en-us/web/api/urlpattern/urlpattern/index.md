@@ -258,7 +258,7 @@ console.log(pattern.test("https://example.com/2022/Feb/xc44rsz")); // true
 
 ### Inheritance from the base URL
 
-This provides a real world example of inheritance.
+This provides a real-world example of inheritance.
 The `pathname` is explicitly specified. The values that are less specific than the pathname, such as the protocol and hostname are inherited.
 The more specific values are ignored, and default to their default values (such as `"*"` for the search and hash, and `""` for the port).
 

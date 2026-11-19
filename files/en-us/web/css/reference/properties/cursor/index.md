@@ -63,7 +63,7 @@ cursor: zoom-in;
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 cursor: auto;
 cursor: pointer;
 /* … */
@@ -382,14 +382,6 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
       </tbody>
     </table>
 
-## Formal definition
-
-{{cssinfo}}
-
-## Formal syntax
-
-{{csssyntax}}
-
 ## Usage notes
 
 ### Icon size limits
@@ -412,6 +404,14 @@ iPadOS supports pointer devices like trackpads and mouses. By default, the iPad 
 ### Other notes
 
 Cursor changes that intersect toolbar areas are commonly blocked to avoid spoofing.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 

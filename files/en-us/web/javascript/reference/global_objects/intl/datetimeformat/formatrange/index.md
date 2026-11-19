@@ -76,7 +76,7 @@ const fmt1 = new Intl.DateTimeFormat("en", {
 });
 console.log(fmt1.format(date1)); // '1/10/06, 10:00 AM'
 console.log(fmt1.formatRange(date1, date2)); // '1/10/06, 10:00 – 11:00 AM'
-console.log(fmt1.formatRange(date1, date3)); // '1/10/06, 10:00 AM – 1/20/07, 10:00 AM'
+console.log(fmt1.formatRange(date1, date3)); // '1/10/06, 10:00 AM – 1/20/06, 10:00 AM'
 
 const fmt2 = new Intl.DateTimeFormat("en", {
   year: "numeric",

@@ -58,7 +58,7 @@ transform: scale(0.5) translate(-100%, -100%);
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 transform: none;
 
 /* Function values */
@@ -213,7 +213,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample("Transform_order", "400", "460")}}
+{{EmbedLiveSample("comparing_the_order_of_transform_functions", "400", "460")}}
 
 - Box 1 (first `translateX()`, then `rotate()`): The coordinate space first shifts `200px` along the X axis, then rotates `135deg` within that shifted space, so the element ends up to the right of its original position, rotated.
 - Box 2 (first `rotate()`, then `translateX()`): The coordinate space first rotates `135deg`, so the element then moves `200px` along the rotated axis, in the direction shown by the dotted lines.

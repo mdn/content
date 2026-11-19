@@ -52,6 +52,8 @@ Also, unlike {{jsxref("Promise.race()")}}, which returns the first _settled_ val
 
 Like other promise combinators, `Promise.any()` immediately marks all promises as "handled" when it is called (by calling their `.then()` methods). Subsequent rejections after the first fulfillment will be ignored, and will not trigger any `unhandledrejection` events.
 
+Fulfilling the returned promise does not cancel the remaining operations or unsubscribe the handlers attached to their promises. Repeatedly passing a long-lived pending promise to `Promise.any()` can accumulate handlers on that promise even when another input fulfills each time.
+
 ## Examples
 
 ### Using Promise.any()
@@ -134,7 +136,7 @@ Promise.any([coffee, tea])
 
 ## See also
 
-- [Polyfill of `Promise.any` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [Polyfill of `Promise.any` in `core-js`](https://core-js.io/docs/features/ecmascript/promise)
 - [es-shims polyfill of `Promise.any`](https://www.npmjs.com/package/promise.any)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.all()")}}

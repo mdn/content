@@ -248,7 +248,7 @@ This section begins with an introductory sentence explaining how the property's 
 
 > This property is specified as one of the following keyword values. The `oblique` keyword can optionally be followed by an `<angle>`:
 
-In the definition list, wrap each value type in angle brackets and link it to the MDN reference page covering that value type if a page exists for it. For an example, see the "Values" section of {{CSSxRef("list-style-image"}}.
+In the definition list, wrap each value type in angle brackets and link it to the MDN reference page covering that value type if a page exists for it. For an example, see the "Values" section of {{CSSxRef("list-style-image")}}.
 
 #### Formal syntax
 

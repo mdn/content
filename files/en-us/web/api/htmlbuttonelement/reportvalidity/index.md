@@ -8,7 +8,7 @@ browser-compat: api.HTMLButtonElement.reportValidity
 
 {{APIRef("HTML DOM")}}
 
-The **`reportValidity()`** method of the {{domxref("HTMLButtonElement")}} interface performs the same validity checking steps as the {{domxref("HTMLButtonElement.checkValidity", "checkValidity()")}} method. In addition, if the {{domxref("HTMLElement/invalid_event", "invalid")}} event is not canceled, the browser displays the problem to the user.
+The **`reportValidity()`** method of the {{domxref("HTMLButtonElement")}} interface performs the same validity checking steps as the {{domxref("HTMLButtonElement.checkValidity", "checkValidity()")}} method. In addition, if the {{domxref("HTMLElement/invalid_event", "invalid")}} event is not canceled, the browser displays the problem to the user. It always returns true if the {{HTMLElement("button")}} element is not a candidate for [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation) (its {{domxref("HTMLButtonElement/willValidate", "willValidate")}} is `false`).
 
 ## Syntax
 
@@ -22,36 +22,32 @@ None.
 
 ### Return value
 
-Returns `true` if the element's value has no validity problems; otherwise, returns `false`.
+Returns `true` if the element's value has no validity problems or if it's not a candidate for constraint validation; otherwise, returns `false`.
 
-### Examples
+## Examples
 
 This far fetched example demonstrates how a button can be made invalid.
 
-#### HTML
+### HTML
 
-We create a form that only contains a few buttons:
+We create two buttons:
 
 ```html
-<form action="#" id="form" method="post">
-  <p>
-    <input type="submit" value="Submit" />
-    <button id="example" type="submit" value="fixed">THIS BUTTON</button>
-  </p>
-  <p>
-    <button type="button" id="report">reportValidity()</button>
-  </p>
-</form>
+<p>
+  <button id="example" type="submit" value="fixed">THIS BUTTON</button>
+</p>
+<p>
+  <button type="button" id="report">reportValidity()</button>
+</p>
 
 <p id="log"></p>
 ```
 
-#### CSS
+### CSS
 
 We add a bit of CSS, including `:valid` and `:invalid` styles for our button:
 
 ```css
-input[type="submit"],
 button {
   background-color: #3333aa;
   border: none;
@@ -67,7 +63,7 @@ button:valid {
 }
 ```
 
-#### JavaScript
+### JavaScript
 
 We include a function to toggle the value, content, and validation message of the example button:
 
@@ -85,8 +81,7 @@ exampleButton.addEventListener("invalid", () => {
   console.log("Invalid event fired on exampleButton");
 });
 
-exampleButton.addEventListener("click", (e) => {
-  e.preventDefault();
+exampleButton.addEventListener("click", () => {
   if (exampleButton.value === "error") {
     breakOrFixButton("fixed");
   } else {
@@ -116,9 +111,9 @@ function toggleButton() {
 }
 ```
 
-#### Results
+### Results
 
-{{EmbedLiveSample("Custom error message", "100%", 220)}}
+{{EmbedLiveSample("examples", "100%", 220)}}
 
 The button is by default valid. Activate "THIS BUTTON" to change the value, content, and add a custom error message. Activating the "reportValidity()" button checks the validity of the button, reporting the custom error message to the user and throwing an `invalid` event if the button does not pass constraint validation due to the message.
 
