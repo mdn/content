@@ -32,10 +32,10 @@ It applies restrictions to a page's actions including preventing popups, prevent
 
 ```http
 Content-Security-Policy: sandbox;
-Content-Security-Policy: sandbox <value>;
+Content-Security-Policy: sandbox <value>…;
 ```
 
-where `<value>` can optionally be one of the following values:
+The directive value can be omitted to apply all sandbox restrictions, or can optionally be one or more space-separated tokens from the following values to lift particular restrictions:
 
 - `allow-downloads`
   - : Allows downloading files through an {{HTMLElement("a")}} or {{HTMLElement("area")}} element with the [download](/en-US/docs/Web/HTML/Reference/Elements/a#download) attribute, as well as through the navigation that leads to a download of a file.
@@ -75,8 +75,18 @@ where `<value>` can optionally be one of the following values:
 
 ## Examples
 
+### Lifting a single restriction
+
 ```http
 Content-Security-Policy: sandbox allow-scripts;
+```
+
+### Lifting multiple restrictions
+
+Multiple restrictions can be lifted by providing a space-separated list of values:
+
+```http
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-same-origin;
 ```
 
 ## Specifications
