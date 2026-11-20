@@ -57,7 +57,7 @@ If you must use the `heading` role and [`aria-level`](/en-US/docs/Web/Accessibil
 
 ## Best practices
 
-The best way to use this role is to **not use it at all**, and instead use the native heading tags {{HTMLElement("Heading_Elements", "h1")}} through {{HTMLElement("Heading_Elements", "h6")}} as shown in the example above. The `heading` role and `aria-level` attribute should only be used to retrofit accessibility on legacy code that you cannot make major changes to.
+The best way to use this role is to **not use it at all**, and instead use the native heading tags {{HTMLElement("Heading_Elements", "h1")}} through {{HTMLElement("Heading_Elements", "h6")}} as shown in the example below. The `heading` role and `aria-level` attribute should only be used to retrofit accessibility on legacy code that you cannot make major changes to.
 
 Instead of using the ARIA `heading` role, use the semantic HTML element:
 
