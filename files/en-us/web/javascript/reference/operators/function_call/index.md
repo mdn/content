@@ -38,7 +38,7 @@ fn(arg1, arg2, /* …, */ argN)
 ### Return value
 
 - If the function is a normal function, its whole body is evaluated. The call expression evaluates to its return value, or {{jsxref("undefined")}} if the end of the function body is reached without encountering a {{jsxref("Statements/return", "return")}} statement.
-- If the function is an [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function), its body is evaluated up to the first {{jsxref("Operators/await", "await")}} expression, `return`, or end of function. The call expression evaluates to a pending {{jsxref("Promise")}} if an `await` is encountered, or a resolved promise if the function exits without encountering `await` (the resolved promise may still be pending if it returns a pending promise). The pending promise becomes settled when the function exits.
+- If the function is an [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function), its body is evaluated up to the first {{jsxref("Operators/await", "await")}} expression or the function's completion. The call expression evaluates to a pending {{jsxref("Promise")}} if an `await` is encountered, or a promise [resolved](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#description) to the return value if the function exits without encountering `await`.
 - If the function is a [generator function](/en-US/docs/Web/JavaScript/Reference/Statements/function*), the call expression evaluates to a new {{jsxref("Generator")}} object. The function body starts executing on the first call to the generator's {{jsxref("Generator/next", "next()")}} method.
 - If the function is an [async generator function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*), the call expression evaluates to a new {{jsxref("AsyncGenerator")}} object. The function body starts executing on the first call to the generator's {{jsxref("AsyncGenerator/next", "next()")}} method, which returns a promise for the next iterator result.
 
@@ -46,6 +46,8 @@ fn(arg1, arg2, /* …, */ argN)
 
 - {{jsxref("TypeError")}}
   - : Thrown if `fn` is not callable, which includes cases where it isn't a function (`typeof fn !== "function"`), it's a [class](/en-US/docs/Web/JavaScript/Reference/Classes) or it throws unconditionally when called (like {{jsxref("Map/Map", "Map()")}}, which must be constructed with {{jsxref("Operators/new", "new")}} instead).
+
+The call expression also propagates uncaught errors from evaluating the function body:
 
 - If the function is a normal function, uncaught errors thrown from the function body become errors of the call expression.
 - If the function is an async function, uncaught errors cause the returned promise to reject.
