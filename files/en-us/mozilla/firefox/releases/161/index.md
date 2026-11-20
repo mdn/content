@@ -119,5 +119,5 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **`match-parent` value for `quotes`** (Nightly): `layout.css.quotes.match-parent.enabled`
 
-  The {{cssxref("quotes")}} CSS property now supports the {{cssxref("quotes", "match-parent", "#match-parent")}} value, which makes an element use the same quotation marks as its parent.
+  The {{cssxref("quotes")}} CSS property now supports the {{cssxref("quotes", "match-parent", "#match-parent")}} value, which makes an element use the quotation marks from the same set of quotation-mark pairs as its parent element.
   ([Firefox bug 1752382](https://bugzil.la/1752382)).

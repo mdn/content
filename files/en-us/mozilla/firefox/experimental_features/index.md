@@ -478,9 +478,11 @@ The {{cssxref("corner-shape")}} shorthand property and its constituent longhand 
 
 ### `match-parent` value for `quotes`
 
-The {{cssxref("quotes", "match-parent", "#match-parent")}} value of the {{cssxref("quotes")}} CSS property is now supported on Nightly.
-This value makes an element use the same quotation marks as its parent.
-The default styles for nested {{htmlelement('q')}} elements also use this value, so a quote inside another quote uses the same quotation style as the outer quote, even if the inner quote is in a different language.
+The {{cssxref("quotes", "match-parent", "#match-parent")}} value of the {{cssxref("quotes")}} CSS property is now supported in Nightly.
+This value makes an element use quotation marks from the same set of quotation-mark pairs as its parent element. If the parent's `quotes` value is an explicit list of pairs, the element uses that list. If it is `auto`, the element uses the set for the parent element's language.
+The specific pair of opening and closing quotation marks used depends on the nesting level of the quote.
+
+Firefox’s default styles for nested {{htmlelement(‘q’)}} elements use this value. As a result, a nested quote automatically uses the same quotation style as the outer quote, even when it is in a different language.
 ([Firefox bug 1752382](https://bugzil.la/1752382)).
 
 | Release channel   | Version added | Enabled by default? |
