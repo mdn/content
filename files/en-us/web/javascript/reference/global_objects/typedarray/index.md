@@ -152,6 +152,9 @@ Where `TypedArray` is a constructor for one of the concrete types.
 > [!NOTE]
 > All `TypedArray` subclasses' constructors can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call one without `new` throws a {{jsxref("TypeError")}}.
 
+> [!NOTE]
+> All `TypedArray` constructors' {{jsxref("Function/length", "length")}} property is `3`.
+
 ### Parameters
 
 - `typedArray`

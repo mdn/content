@@ -46,7 +46,7 @@ Where `TypedArray` is one of:
 
 ### Parameters
 
-- `element1`, …, `elementN`
+- `element1`, …, `elementN` {{optional_inline}}
   - : Elements used to create the typed array.
 
 ### Return value

@@ -36,6 +36,10 @@ Array(arrayLength)
     a number (see the `arrayLength` parameter below). Note that this special case only
     applies to JavaScript arrays created with the `Array` constructor, not
     array literals created with the square bracket syntax.
+
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `1`.
+
 - `arrayLength`
   - : If the only argument passed to the `Array` constructor is an integer
     between 0 and 2<sup>32</sup> - 1 (inclusive), this returns a new JavaScript array with

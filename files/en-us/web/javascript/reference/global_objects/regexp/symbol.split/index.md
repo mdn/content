@@ -40,6 +40,9 @@ regexp[Symbol.split](str, limit)
 - `limit` {{optional_inline}}
   - : Integer specifying a limit on the number of splits to be found. The `[Symbol.split]()` method still splits on every match of `this` RegExp pattern (or, in the Syntax above, `regexp`), until the number of split items match the `limit` or the string falls short of `this` pattern.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `2`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 ### Return value
 
 An {{jsxref("Array")}} containing substrings as its elements. Capturing groups are included.

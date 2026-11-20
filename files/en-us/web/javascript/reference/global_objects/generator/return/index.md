@@ -23,6 +23,9 @@ generatorInstance.return(value)
 - `value` {{optional_inline}}
   - : The value to return.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `1`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 ### Return value
 
 An {{jsxref("Object")}} with two properties:

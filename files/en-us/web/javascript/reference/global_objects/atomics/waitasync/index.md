@@ -31,6 +31,9 @@ Atomics.waitAsync(typedArray, index, value, timeout)
 - `timeout` {{optional_inline}}
   - : Time to wait in milliseconds. {{jsxref("NaN")}} (and values that get converted to `NaN`, such as `undefined`) becomes {{jsxref("Infinity")}}. Negative values become `0`.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `4`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 ### Return value
 
 An {{jsxref("Object")}} with the following properties:

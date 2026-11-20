@@ -42,6 +42,9 @@ Object.create(proto, propertiesObject)
 - `propertiesObject` {{optional_inline}}
   - : If specified and not {{jsxref("undefined")}}, an object whose [enumerable own properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) specify property descriptors to be added to the newly-created object, with the corresponding property names. These properties correspond to the second argument of {{jsxref("Object.defineProperties()")}}.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `2`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 ### Return value
 
 A new object with the specified prototype object and properties.

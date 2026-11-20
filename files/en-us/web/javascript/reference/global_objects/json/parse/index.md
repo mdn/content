@@ -44,6 +44,9 @@ JSON.parse(text, reviver)
         - `source` {{optional_inline}}
           - : The original JSON string representing this value. This property is only present when reviving primitive values, but not when `value` is an object or array.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `2`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 ### Return value
 
 The {{jsxref("Object")}}, {{jsxref("Array")}}, string, number, boolean, or `null` value corresponding to the given JSON `text`.

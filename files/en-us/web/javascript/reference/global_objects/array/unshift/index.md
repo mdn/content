@@ -36,6 +36,9 @@ unshift(element1, element2, /* …, */ elementN)
 - `element1`, …, `elementN`
   - : The elements to add to the front of the `arr`.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `1`.
+
 ### Return value
 
 The new {{jsxref("Array/length", "length")}} property of the object upon which the

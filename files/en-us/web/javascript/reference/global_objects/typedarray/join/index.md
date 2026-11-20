@@ -36,6 +36,9 @@ join(separator)
 - `separator` {{optional_inline}}
   - : A string to separate each pair of adjacent elements of the typed array. If omitted, the typed array elements are separated with a comma (",").
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `1`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 ### Return value
 
 A string with all typed array elements joined. If `array.length` is `0`, the empty string is returned.

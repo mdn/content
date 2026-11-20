@@ -35,6 +35,9 @@ toSpliced(start, skipCount, item1, item2, /* …, */ itemN)
     If `skipCount` is `0` or negative, no elements are removed.
     In this case, you should specify at least one new element (see below).
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `2`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 - `item1`, …, `itemN` {{optional_inline}}
   - : The elements to add to the array, beginning from `start`.
 

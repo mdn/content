@@ -44,6 +44,9 @@ Object.assign(target, source1, source2, /* …, */ sourceN)
 - `source1`, …, `sourceN`
   - : The source object(s) — objects containing the properties you want to apply.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `2`.
+
 ### Return value
 
 The target object.

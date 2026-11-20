@@ -21,6 +21,9 @@ toSorted(compareFn)
 - `compareFn` {{optional_inline}}
   - : A function that determines the order of the elements. If omitted, the typed array elements are sorted according to numeric value. See {{jsxref("TypedArray/sort", "sort()")}} for more information.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `1`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 ### Return value
 
 A new typed array with the elements sorted in ascending order.

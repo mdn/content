@@ -38,6 +38,9 @@ toString(radix)
 - `radix` {{optional_inline}}
   - : An integer in the range `2` through `36` specifying the base to use for representing the number value. Defaults to 10.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `1`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 ### Return value
 
 A string representing the specified number value. Scientific notation is used if radix is 10 and the number's magnitude (ignoring sign) is greater than or equal to 10<sup>21</sup> or less than 10<sup>-6</sup>.

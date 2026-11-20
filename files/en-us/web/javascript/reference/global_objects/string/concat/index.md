@@ -36,6 +36,9 @@ concat(str1, str2, /* …, */ strN)
 - `str1`, …, `strN`
   - : One or more strings to concatenate to `str`. Though technically permitted, calling `String.prototype.concat()` with no arguments is a useless operation, because it does not result in observable copying (like {{jsxref("Array.prototype.concat()")}}), since strings are immutable. It should only happen if you are [spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) an array of strings as arguments, and that array happens to be empty.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `1`.
+
 ### Return value
 
 A new string containing the combined text of the strings provided.
