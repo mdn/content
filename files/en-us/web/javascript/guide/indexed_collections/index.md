@@ -29,7 +29,7 @@ const arr3 = [element0, element1, /* …, */ elementN];
 
 `element0, element1, …, elementN` is a list of values for the array's elements. When these values are specified, the array is initialized with them as the array's elements. The array's `length` property is set to the number of arguments.
 
-The bracket syntax is called an "array literal" or "array initializer." It's shorter than other forms of array creation, and so is generally preferred. See [Array literals](/en-US/docs/Web/JavaScript/Reference/Operators/Array_initializer) for details.
+The bracket syntax is called an "array literal" or "array initializer." It's shorter than other forms of array creation, and so is generally preferred. See [Array initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Array_initializer) for details.
 
 To create an array with non-zero length, but without any items, either of the following can be used:
 

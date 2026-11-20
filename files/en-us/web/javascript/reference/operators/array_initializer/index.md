@@ -50,7 +50,7 @@ An empty array with no elements can be created like this:
 const array = [];
 ```
 
-Add elements to it, delimited by commas. You can also nest further objects, arrays, or other expressions
+Add elements to it, delimited by commas. You can also nest further objects, arrays, or other expressions:
 
 ```js
 const array = [
@@ -63,7 +63,7 @@ const array = [
 
 ### Spread elements
 
-Array literals support the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax). It iterates over an expression and adds each yielded element to the new array without copying the element itself. This can be used to create a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of another collection, or to create arrays from non-array iterables like {{jsxref("Map")}} or {{jsxref("Set")}}.
+Array literals support the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), which iterates over an expression and adds each yielded element to the new array without copying the element itself. This can be used to create a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of another collection, or to create arrays from non-array iterables like {{jsxref("Map")}} or {{jsxref("Set")}}.
 
 ```js
 const array1 = [3, 1, 4];
