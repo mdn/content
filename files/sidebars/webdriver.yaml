@@ -138,6 +138,17 @@ sidebar:
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/network/setExtraHeaders
             code: true
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/network#events
+            title: Events
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/fetchError
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/network/responseStarted
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/permissions
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/script
