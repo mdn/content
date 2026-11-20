@@ -49,6 +49,7 @@ The `result` field in the response is an empty object (`{}`).
 
 Once the simulated adapter is removed, the pages in the context and its child contexts no longer see its state or its simulated devices.
 In a page that is allowed to use Bluetooth, {{domxref("Bluetooth.getAvailability()", "navigator.bluetooth.getAvailability()")}} again reports whether the system has a Bluetooth adapter.
+
 The command succeeds whether or not the context has a simulated adapter.
 
 The simulated adapter belongs to the top-level context, not to the session.

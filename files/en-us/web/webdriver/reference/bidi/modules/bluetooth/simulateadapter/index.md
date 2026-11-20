@@ -44,13 +44,13 @@ The `params` field contains:
   - : A string that contains the ID of the [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) for which to simulate the adapter.
     Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 - `leSupported` {{optional_inline}}
-  - : A boolean that indicates whether the simulated adapter supports Bluetooth Low Energy (LE).
+  - : A boolean that indicates whether the [simulated adapter](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth#simulated_adapter) supports Bluetooth Low Energy (LE).
     You can specify it only when the command creates the adapter: LE support can't be changed for an existing adapter.
 
     - `true`: The adapter supports Bluetooth LE. This is the default.
     - `false`: The adapter doesn't support Bluetooth LE, so {{domxref("Bluetooth.getAvailability()")}} resolves with `false` in the context.
 - `state`
-  - : A string that specifies the state of the simulated adapter.
+  - : A string that specifies the state of the [simulated adapter](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth#simulated_adapter).
     It can take one of the following values:
 
     - `absent`: The system has no Bluetooth adapter, so {{domxref("Bluetooth.getAvailability()")}} resolves with `false`.

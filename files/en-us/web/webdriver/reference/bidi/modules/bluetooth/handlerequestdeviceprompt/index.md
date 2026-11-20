@@ -45,19 +45,19 @@ The `params` field contains:
 
 - `accept`
   - : A boolean that indicates whether to choose a device or to cancel the prompt.
-    - `true`: The prompt closes with the device specified in the [`device`](#device) field, and `requestDevice()` resolves with a {{domxref("BluetoothDevice")}} object that represents it.
+    - `true`: The prompt closes with the device specified in the [`device`](#device) field, and {{domxref("Bluetooth.requestDevice()", "requestDevice()")}} resolves with a {{domxref("BluetoothDevice")}} object that represents it.
     - `false`: The prompt closes without a device, and `requestDevice()` rejects with a `NotFoundError` {{domxref("DOMException")}}.
 - `context`
-  - : A string that contains the ID of the context that has the device prompt to close.
+  - : A string that contains the ID of the context that has the [device prompt](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth#the_device_prompt) to close.
     This is the `context` value of the [`bluetooth.requestDevicePromptUpdated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth/requestDevicePromptUpdated) event for the prompt.
-    It can be a child context, if the page that called `requestDevice()` is in one.
+    If the page that called {{domxref("Bluetooth.requestDevice()", "requestDevice()")}} is in a child context, this is the ID of the child context.
 - `device`
   - : A string that contains the ID of the device to choose.
     This is the `id` value of one of the devices in the `devices` array of the `bluetooth.requestDevicePromptUpdated` event.
     This field is required when the [`accept`](#accept) field is `true`.
     Don't specify it when `accept` is `false`.
 - `prompt`
-  - : A string that contains the ID of the device prompt to close.
+  - : A string that contains the ID of the [device prompt](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth#the_device_prompt) to close.
     This is the `prompt` value of the `bluetooth.requestDevicePromptUpdated` event for the prompt.
 
 ### Return value
@@ -79,12 +79,14 @@ The `result` field in the response is an empty object (`{}`).
 ## Description
 
 When a page calls `requestDevice()` in response to a user's action, the browser looks for devices that match the page's filters and opens a device prompt that lists them.
-It then sends a `bluetooth.requestDevicePromptUpdated` event to the sessions that are [subscribed](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to it.
+The browser then sends a `bluetooth.requestDevicePromptUpdated` event to the sessions that are [subscribed](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to it.
 The event's `prompt` field contains the prompt ID.
 Its `devices` array lists the devices in the prompt, each with an `id` and a `name`.
 A device's `name` is `null` if the device has none.
+
 While the prompt is open, the browser can send the event again with the same prompt ID and an updated `devices` array.
 Use the latest event.
+
 Subscribe to the event before the page calls `requestDevice()` so that you receive the IDs that this command needs.
 
 With a [simulated adapter](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth#simulated_adapter), the list includes the simulated devices that match the filters.
@@ -104,7 +106,7 @@ You then loaded the page in the tab using [`browsingContext.navigate`](/en-US/do
 You simulated a powered-on adapter for the tab using [`bluetooth.simulateAdapter`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth/simulateAdapter).
 You then added a device named `Heart Rate Monitor` with the address `09:09:09:09:09:09` and the heart rate service (`0000180d-0000-1000-8000-00805f9b34fb`) using [`bluetooth.simulatePreconnectedPeripheral`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/bluetooth/simulatePreconnectedPeripheral).
 
-The page can call `requestDevice()` only in response to a user's action, such as a click, or to a [`script.callFunction`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/callFunction) command with `userActivation` set to `true`.
+The page can call `requestDevice()` only in response to a user's action, such as a click, or to a [`script.callFunction`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/callFunction) command with [`userActivation`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/callFunction#useractivation) set to `true`.
 The page asks for a heart rate monitor:
 
 ```js
