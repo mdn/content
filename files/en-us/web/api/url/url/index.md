@@ -10,7 +10,7 @@ browser-compat: api.URL.URL
 
 The **`URL()`** constructor returns a newly created {{domxref("URL")}} object representing the URL defined by the parameters.
 
-If the given base URL or the resulting URL are not valid URLs, the JavaScript {{jsxref("TypeError")}} exception is thrown.
+If the given base URL or the resulting URL are not valid absolute URLs, the JavaScript {{jsxref("TypeError")}} exception is thrown.
 
 ## Syntax
 
@@ -26,8 +26,7 @@ new URL(url, base)
     If `url` is a relative reference, `base` is required, and is used to resolve the final URL.
     If `url` is an absolute URL, a given `base` will not be used to create the resulting URL.
 - `base` {{optional_inline}}
-  - : A string representing the base URL to use in cases where `url` is a relative reference.
-    If not specified, it defaults to `undefined`.
+  - : A string representing the base URL to use in cases where `url` is a relative reference. If it is specified, this must be an absolute URL.
 
     When a `base` is specified, the resolved URL is not simply a concatenation of `url` and `base`.
     Relative references to the parent and current directory are resolved relative to the current directory of the `base` URL, which includes path segments up until the last forward-slash, but not any after.
@@ -45,65 +44,105 @@ new URL(url, base)
 
 ## Examples
 
-Here are some examples of using the constructor.
-
 > [!NOTE]
 > [Resolving relative references to a URL](/en-US/docs/Web/API/URL_API/Resolving_relative_references) provides additional examples demonstrating how different `url` and `base` values are resolved to a final absolute URL.
 
+### Usage without a base URL
+
 ```js
-// Base URLs:
-let baseUrl = "https://developer.mozilla.org";
-
-let a = new URL("/", baseUrl);
-// => 'https://developer.mozilla.org/'
-
-let b = new URL(baseUrl);
-// => 'https://developer.mozilla.org/'
-
-new URL("en-US/docs", b);
-// => 'https://developer.mozilla.org/en-US/docs'
-
-let d = new URL("/en-US/docs", b);
-// => 'https://developer.mozilla.org/en-US/docs'
-
-new URL("/en-US/docs", d);
-// => 'https://developer.mozilla.org/en-US/docs'
-
-new URL("/en-US/docs", a);
-// => 'https://developer.mozilla.org/en-US/docs'
-
-new URL("/en-US/docs", "https://developer.mozilla.org/fr-FR/toto");
-// => 'https://developer.mozilla.org/en-US/docs'
-
-new URL("https://example.com", "https://beispiel.de");
-// => 'https://example.com/'
+new URL("https://example.org");
+// => 'https://example.org/'
 ```
 
-Here are some examples of invalid URLs:
+### Usage with base URLs
+
+If `url` is an absolute URL, then `base` is not used to construct the result:
 
 ```js
-new URL("/en-US/docs", "");
-// Raises a TypeError exception as '' is not a valid URL
+new URL("https://example.org", "https://example.com");
+// => 'https://example.org/'
 
-new URL("/en-US/docs");
-// Raises a TypeError exception as '/en-US/docs' is not a valid URL
+new URL("https://example.org", "https://example.com/base1/base2");
+// => 'https://example.org/'
+```
 
-// Other cases:
+If `url` starts with `//`, then it is resolved using the [scheme](/en-US/docs/Web/URI/Reference/Schemes) from `base`:
 
-new URL("http://www.example.com");
-// => 'http://www.example.com/'
+```js
+new URL("//example.org", "wss://example.com");
+// => 'wss://example.org/'
+```
 
-new URL("http://www.example.com", B);
-// => 'http://www.example.com/'
+If `url` starts with `/`, then it is resolved from the root directory of `base`:
 
-new URL("", "https://example.com/?query=1");
-// => 'https://example.com/?query=1' (Edge before 79 removes query arguments)
+```js
+new URL("/", "https://example.com");
+// => 'https://example.com/'
 
-new URL("/a", "https://example.com/?query=1");
-// => 'https://example.com/a' (see relative URLs)
+new URL("/url1/url2", "https://example.com/");
+// => 'https://example.com/url1/url2'
 
-new URL("//foo.example", "https://example.com");
-// => 'https://foo.example/' (see relative URLs)
+new URL("/url1/url2", "https://example.com/base1/base2");
+// => 'https://example.com/url1/url2'
+```
+
+Otherwise, `url` is resolved from the leaf directory of `base`:
+
+```js
+new URL("url1/url2", "https://example.com/base1/base2");
+// => 'https://example.com/base1/url1/url2'
+
+new URL("url1/url2", "https://example.com/base1/base2/");
+// => 'https://example.com/base1/base2/url1/url2'
+```
+
+### URL parameters
+
+If `url` includes parameters, then they are retained in the result:
+
+```js
+new URL("/url1?query1", "https://example.com/base1");
+// => 'https://example.com/url1?query1'
+```
+
+If `url` is not an empty string, then any parameters are removed from `base`:
+
+```js
+new URL("/url1", "https://example.com/base1?query=1");
+// => 'https://example.com/url1'
+
+new URL("", "https://example.com/base1?query=1");
+// => 'https://example.com/base1?query=1'
+```
+
+### Usage with `URL` objects
+
+Since `URL` objects can be stringified, they can also be passed to the constructor:
+
+```js
+const example = new URL("https://example.com/");
+
+new URL(example);
+// => "https://example.com/"
+
+new URL("/url1/url2", example);
+// => 'https://example.com/url1/url2'
+```
+
+### Error cases
+
+If `url` is relative, then `base` must be supplied:
+
+```js
+new URL("/url1/url2");
+// TypeError exception: '/url1/url2' cannot be resolved
+```
+
+If `base` is supplied, it must be an absolute URL (even if `url` is absolute):
+
+```js
+new URL("https://example.org/url1/url2", "/base1/base2");
+// TypeError exception: `base` not an absolute URL
 ```
 
 ## Specifications

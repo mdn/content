@@ -46,13 +46,13 @@ TCP's three-way handshake is often referred to as "SYN-SYN-ACK" — or more accu
 
 ### TLS negotiation
 
-For secure connections established over HTTPS, another "handshake" is required. This handshake, or rather the {{glossary('TLS')}} negotiation, determines which cipher is used to encrypt the communication, verifies the server, and establishes that a secure connection is in place before beginning data transfer. This requires five more round trips to the server before sending the content request.
+For secure connections established over HTTPS, another "handshake" is required. This handshake, or rather the {{glossary("TLS")}} negotiation, determines which cipher suite to use to encrypt communication, verify the server, and establish that a secure connection is in place before data transfer begins. A full TLS 1.3 handshake takes one round trip to the server before the browser can send the content request; a full TLS 1.2 handshake takes two.
 
 ![The DNS lookup, the TCP handshake, and 5 steps of the TLS handshake including client hello, server hello and certificate, client key and finished for both server and client.](ssl.jpg)
 
 Making the connection secure adds time to the page load, but it is worth the latency expense, as a third party cannot decrypt the data transmitted between the browser and the web server.
 
-After eight round trips to the server, the browser can finally make the request.
+Once DNS resolution is complete, a new TCP connection and a full TLS handshake take two round trips (TLS 1.3) or three (TLS 1.2) before the browser can make the request.
 
 ## Response
 

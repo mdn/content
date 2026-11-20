@@ -9,7 +9,7 @@ sidebar: jssidebar
 ---
 
 > [!NOTE]
-> `escape()` is a non-standard function implemented by browsers and was only standardized for cross-engine compatibility. It is not required to be implemented by all JavaScript engines and may not work everywhere. Use {{jsxref("encodeURIComponent()")}} or {{jsxref("encodeURI()")}} if possible.
+> `escape()` is a legacy function implemented by browsers and was only standardized for cross-engine compatibility. It is not required to be implemented by all JavaScript engines and may not work everywhere. Use {{jsxref("encodeURIComponent()")}} or {{jsxref("encodeURI()")}} if possible.
 
 The **`escape()`** function computes a new string in which certain characters have been replaced by hexadecimal escape sequences.
 

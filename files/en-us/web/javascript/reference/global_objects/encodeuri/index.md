@@ -97,7 +97,7 @@ console.log(encodeURI(set1)); // ;/?:@&=+$,#
 console.log(encodeURI(set2)); // -.!~*'()
 console.log(encodeURI(set3)); // ABC%20abc%20123 (the space gets encoded as %20)
 
-console.log(encodeURIComponent(set1)); // %3B%2C%2F%3F%3A%40%26%3D%2B%24%23
+console.log(encodeURIComponent(set1)); // %3B%2F%3F%3A%40%26%3D%2B%24%2C%23
 console.log(encodeURIComponent(set2)); // -.!~*'()
 console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (the space gets encoded as %20)
 ```

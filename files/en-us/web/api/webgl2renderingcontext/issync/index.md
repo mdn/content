@@ -20,7 +20,7 @@ isSync(sync)
 ### Parameters
 
 - `sync`
-  - : A {{domxref("WebGLSync")}} object to test.
+  - : A {{domxref("WebGLSync")}} object to test. Passing `null` returns `false`.
 
 ### Return value
 

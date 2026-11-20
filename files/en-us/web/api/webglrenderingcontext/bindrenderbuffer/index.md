@@ -28,7 +28,7 @@ bindRenderbuffer(target, renderbuffer)
         renderable internal format.
 
 - `renderbuffer`
-  - : A {{domxref("WebGLRenderbuffer")}} object to bind.
+  - : A {{domxref("WebGLRenderbuffer")}} object to bind, or `null` to unbind the object currently bound to the specified target.
 
 ### Return value
 

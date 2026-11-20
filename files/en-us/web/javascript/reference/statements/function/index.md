@@ -54,7 +54,7 @@ A `function` declaration creates a {{jsxref("Function")}} object. Each time when
 - Like `let`, function declarations at the top level of a module or within blocks in strict mode cannot be [redeclared](#redeclarations) by any other declaration.
 - Like `var`, function declarations at the top level of a script (strict or non-strict) become properties on {{jsxref("globalThis")}}. Function declarations at the top level of a script or function body (strict or non-strict) can be redeclared by another `function` or `var`.
 - Like both, function declarations can be re-assigned, but you should avoid doing so.
-- Unlike either, function declarations are [hoisted](#hoisting) together with its value and can be called anywhere in its scope.
+- Unlike either, function declarations are [hoisted](#hoisting) together with their values and can be called anywhere in their scopes.
 
 ### Block-level function declaration
 

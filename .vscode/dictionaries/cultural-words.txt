@@ -75,6 +75,7 @@ Romaji
 Saurashtra
 Sharada
 shippo
+Siki
 Sinhala
 Sora_Sompeng
 Sunuwar
@@ -86,6 +87,7 @@ Tham
 Tirhuta
 Tishrei
 Tlayolotl
+Tolong
 Totnes
 Walshs
 Wancho

@@ -20,7 +20,7 @@ isQuery(query)
 ### Parameters
 
 - `query`
-  - : A {{domxref("WebGLQuery")}} object to test.
+  - : A {{domxref("WebGLQuery")}} object to test. Passing `null` returns `false`.
 
 ### Return value
 

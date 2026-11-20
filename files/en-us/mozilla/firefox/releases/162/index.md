@@ -72,6 +72,8 @@ Firefox 162 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 ## Changes for add-on developers
 
+- {{WebExtAPIRef("omnibox.setDefaultSuggestion")}} now returns a {{jsxref("Promise")}}. Previously, it returned `undefined`. This change provides compatibility with Chrome. ([Firefox bug 2090052](https://bugzil.la/2090052))
+
 <!-- ### Removals -->
 
 <!-- ### Other -->

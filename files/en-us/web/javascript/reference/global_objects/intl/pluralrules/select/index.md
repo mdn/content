@@ -34,7 +34,7 @@ select(number)
 ### Parameters
 
 - `number`
-  - : The number to get a plural rule for.
+  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string to get a plural rule for. Strings are parsed in the same way as in [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), except that `select()` uses the exact value that the string represents, avoiding loss of precision during implicit conversion to a number.
 
 ### Return value
 
@@ -59,7 +59,7 @@ const pr = new Intl.PluralRules("ar-EG");
 ```
 
 Then call `select()` on the rules object, specifying the number for which the plural form is required.
-Note that Arabic has 5 forms for cardinal numbers, as shown.
+Note that Arabic has 6 forms for cardinal numbers, as shown.
 
 ```js
 pr.select(0); // 'zero'
@@ -67,6 +67,7 @@ pr.select(1); // 'one'
 pr.select(2); // 'two'
 pr.select(6); // 'few'
 pr.select(18); // 'many'
+pr.select(100); // 'other'
 ```
 
 ## Specifications

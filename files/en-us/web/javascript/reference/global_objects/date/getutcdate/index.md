@@ -34,13 +34,13 @@ None.
 
 ### Return value
 
-An integer, between 1 and 31, representing day of month for the given date according to universal time. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
+An integer, between 1 and 31, representing the day of the month for the given date according to universal time. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 
 ## Examples
 
 ### Using getUTCDate()
 
-The following example assigns the day of month of the current date to the variable `dayOfMonth`.
+The following example assigns the day of the month of the current date to the variable `dayOfMonth`.
 
 ```js
 const today = new Date();

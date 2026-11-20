@@ -135,9 +135,32 @@ The {{httpheader("Speculation-Rules")}} HTTP response header lists the URLs of e
 - `dom.speculation_rules.enabled`
   - : Set to `true` to enable.
 
+### Cross-document view transitions
+
+[Cross-document view transitions](/en-US/docs/Web/API/View_Transition_API/Using#basic_mpa_view_transition) can be used to animate the transition between same-origin page navigations in a multi-page application.
+Both pages must opt in to the transition using the CSS {{cssxref("@view-transition")}} at-rule.
+To customize the transition with JavaScript, use the {{domxref("Window.pageswap_event", "pageswap")}} event ({{domxref("PageSwapEvent")}}), which fires on the old page just before it is replaced. You can also use the {{domxref("Window.pagereveal_event", "pagereveal")}} event ({{domxref("PageRevealEvent")}}), which fires on the new page when it is first shown.
+The {{domxref("CSSViewTransitionRule")}} interface represents an `@view-transition` rule in the CSS Object Model.
+Note that [render blocking](#render_blocking) may be used to ensure that important parts of the new page are loaded before the transition starts.
+([Firefox bug 2084340](https://bugzil.la/2084340)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 160           | No                  |
+| Beta              | 160           | No                  |
+| Release           | 160           | No                  |
+
+- `dom.viewTransitions.cross-document.enabled`
+  - : Set to `true` to enable.
+
 ### Render blocking
 
-The `blocking="render"` attribute and value is now supported for the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} HTML elements. This allows for rendering to be blocked until the element's stylesheet has loaded or its script has run, including for elements that don't block rendering by default, such as scripts and stylesheets added with JavaScript. ([Firefox bug 1751383](https://bugzil.la/1751383)).
+The `blocking="render"` attribute of the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} elements is supported.
+This lets you block rendering of the page until the marked stylesheet has loaded or script has run, so the page doesn't first appear unstyled or incomplete.
+You can also use [`<link rel="expect">`](/en-US/docs/Web/HTML/Reference/Attributes/rel#expect) with `blocking="render"` to block rendering until a particular element in the document has been parsed.
+The {{domxref("PerformanceResourceTiming.renderBlockingStatus")}} property indicates whether a resource blocked rendering.
+([Firefox bug 1751383](https://bugzil.la/1751383), [Firefox bug 2053279](https://bugzil.la/2053279)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -436,20 +459,6 @@ The `named-feature()` function in the {{cssxref("@supports")}} at-rule lets you 
 | Release           | 156           | No                  |
 
 - `layout.css.anchor-positioning.follows-transforms.enabled`
-  - : Set to `true` to enable.
-
-### `random()` CSS function
-
-The {{cssxref("random")}} CSS function generates a random value within a specified range, optionally limiting the possible values to step size intervals between those limits. An optional `<random-key>` parameter controls which `random()` functions share a random value, for example across elements or properties. ([Firefox bug 2071165](https://bugzil.la/2071165)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 158           | Yes                 |
-| Developer Edition | 158           | No                  |
-| Beta              | 158           | No                  |
-| Release           | 158           | No                  |
-
-- `layout.css.random.enabled`
   - : Set to `true` to enable.
 
 ### `corner-shape` properties
@@ -900,21 +909,6 @@ The `ML-KEM-512`, `ML-KEM-768`, and `ML-KEM-1024` algorithm names are supported,
 | Release           | 157           | No                  |
 
 - `dom.webcrypto.encapsulation.enabled`
-  - : Set to `true` to enable.
-
-### Web custom formats in the Async Clipboard API
-
-The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) supports custom clipboard formats, allowing web apps to write and read custom MIME types prefixed with `"web "` using the {{domxref("Clipboard.write()")}} and {{domxref("Clipboard.read()")}} methods, respectively.
-This is supported on desktop from Firefox 154 and on Android from Firefox 156 ([Firefox bug 1956304](https://bugzil.la/1956304) and [Firefox bug 2048545](https://bugzil.la/2048545)).
-
-| Release channel   | Version changed | Enabled by default? |
-| ----------------- | --------------- | ------------------- |
-| Nightly           | 154             | Yes (desktop only)  |
-| Developer Edition | 154             | No                  |
-| Beta              | 154             | No                  |
-| Release           | 154             | No                  |
-
-- `dom.clipboard.customFormatSupport.enabled`
   - : Set to `true` to enable.
 
 ## Security and privacy
