@@ -45,7 +45,7 @@ fn(arg1, arg2, /* …, */ argN)
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if `fn` is not callable, which includes cases where it isn't a function (`typeof fn !== "function"`), it's a [class](/en-US/docs/Web/JavaScript/Reference/Classes) or it throws unconditionally when called (like {{jsxref("Map/Map", "Map()")}}, which must be constructed with {{jsxref("Operators/new", "new")}} instead).
+  - : Thrown if `fn` is not callable, which includes cases where it isn't a function (`typeof fn !== "function"`), it's a [class](/en-US/docs/Web/JavaScript/Reference/Classes), or it throws unconditionally when called (like {{jsxref("Map/Map", "Map()")}}, which must be constructed with {{jsxref("Operators/new", "new")}} instead).
 
 The call expression also propagates uncaught errors from evaluating the function body:
 
