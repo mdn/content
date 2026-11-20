@@ -118,7 +118,7 @@ For legacy reasons, `Boolean.prototype` is a `Boolean` object that wraps the val
 
 ```js
 console.log(Boolean.prototype.valueOf()); // false (expected to throw error)
-console.log(Boolean(Boolean.prototype)); // false (expected true for plain objects)
+console.log(Boolean(Boolean.prototype)); // true (still a truthy object)
 ```
 
 ## Constructor

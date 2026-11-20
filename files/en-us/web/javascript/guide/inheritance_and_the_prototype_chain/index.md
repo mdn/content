@@ -264,7 +264,7 @@ It may be interesting to note that due to historical reasons, some built-in cons
 Number.prototype + 1; // 1
 Array.prototype.map((x) => x + 1); // []
 String.prototype + "a"; // "a"
-Boolean(Boolean.prototype); // false
+Boolean.prototype.valueOf(); // false
 Function.prototype(); // Function.prototype is a no-op function by itself
 ```
 
