@@ -80,7 +80,6 @@ font-family: ui-sans-serif;
 font-family: ui-monospace;
 font-family: ui-rounded;
 font-family: math;
-font-family: fangsong;
 
 /* Global values */
 font-family: inherit;
@@ -155,8 +154,6 @@ font-family: "Gill Sans Extrabold", sans-serif;
     - `math`
       - : Font that addresses the particular stylistic concerns of representing mathematics: superscript and subscript, brackets that cross several lines, nesting expressions, and double struck glyphs with distinct meanings.
         UA stylesheets may set `math { font-family: math }` so that the {{MathMLElement("math")}} element uses appropriate fonts by default.
-    - `fangsong`
-      - : A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents.
 
 ## Formal definition
 
@@ -194,10 +191,6 @@ font-family: "Gill Sans Extrabold", sans-serif;
 .math {
   font-family: math;
 }
-
-.fangsong {
-  font-family: fangsong;
-}
 ```
 
 ```css hidden
@@ -216,8 +209,6 @@ div {
 <div class="cursive">This is an example of a cursive font.</div>
 
 <div class="fantasy">This is an example of a fantasy font.</div>
-
-<div class="fangsong">This is an example of a fangsong font.</div>
 
 <div class="math">This is an example of a math font: ℝ, ∫, ∑…</div>
 ```
