@@ -44,8 +44,20 @@ When a request matches an intercept, the browser blocks the request or response 
 The event for that phase has `isBlocked` set to `true` and includes the matching intercept IDs in its payload.
 The browser then waits until the client lets the request continue, for example with the [`network.continueRequest`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueRequest) command.
 
+## Changing responses
+
+Two commands change what the page receives for a blocked request:
+
+- [`network.continueResponse`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueResponse) changes the status, headers, or cookies of the response that the server sent and keeps its body.
+  It works for a request blocked in the `responseStarted` or `authRequired` phase.
+- [`network.provideResponse`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/provideResponse) provides a response of your own for a request blocked in any phase.
+  In the `beforeRequestSent` phase, the browser doesn't send the request, and the page receives the response that you specify.
+  In the later phases, the status, headers, cookies, and body that you specify replace those of the server's response.
+
 ## Commands
 
+- [`network.continueResponse`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueResponse)
+- [`network.provideResponse`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/provideResponse)
 - [`network.setCacheBehavior`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/setCacheBehavior)
 - [`network.setExtraHeaders`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/setExtraHeaders)
 
