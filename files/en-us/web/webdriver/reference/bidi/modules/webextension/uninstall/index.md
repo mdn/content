@@ -25,7 +25,7 @@ The `webExtension.uninstall` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/
 The `params` field contains:
 
 - `extension`
-  - : A string that contains the ID of the extension to uninstall.
+  - : A string that contains the [ID](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/webExtension#extension_ids) of the extension to uninstall.
     Extension IDs are returned by the [`webExtension.install`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/webExtension/install) command.
 
 ### Return value

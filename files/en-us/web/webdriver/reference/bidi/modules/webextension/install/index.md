@@ -60,7 +60,7 @@ The `params` field contains:
       - : A string that specifies the form of the extension data.
         It can take one of the following values:
         - `archivePath`: The extension is a zip archive at the path specified by [`path`](#path).
-        - `base64`: The extension is a zip archive encoded as base64, specified by [`value`](#value).
+        - `base64`: The extension is a zip archive encoded as [base64](/en-US/docs/Glossary/Base64), specified by [`value`](#value).
         - `path`: The extension is a directory of unpacked files at the path specified by [`path`](#path).
     - `value`
       - : A string that contains the extension's zip archive, encoded as [base64](/en-US/docs/Glossary/Base64).
@@ -71,7 +71,7 @@ The `params` field contains:
 The `result` object in the response contains the following field:
 
 - `extension`
-  - : A string that contains the ID of the installed extension.
+  - : A string that contains the [ID](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/webExtension#extension_ids) of the installed extension.
     Specify it in [`webExtension.uninstall`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/webExtension/uninstall) to remove the extension.
 
 ### Errors
@@ -143,7 +143,7 @@ Using the same connection and session as in the first example, assume you uninst
 The same extension's files are also packaged in a zip archive on the computer that runs your client.
 You encoded the archive as base64.
 
-Send the following message to install the extension from the encoded data:
+Send the following message to install the extension from the encoded data (for brevity, the `value` string has been shortened):
 
 ```json
 {
@@ -171,7 +171,7 @@ The browser responds with the extension's ID as follows:
 ```
 
 The extension is installed again.
-If you then load `https://example.com/` in a tab using `browsingContext.navigate`, the extension's content script runs in the page.
+If you then load `https://example.com/` in a tab using [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate), the extension's content script runs in the page.
 
 ## Specifications
 
