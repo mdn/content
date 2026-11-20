@@ -21,7 +21,10 @@ setMatrix(matrix)
 ### Parameters
 
 - `matrix`
-  - : A live {{domxref("DOMMatrix")}} object defining the new transformation matrix to apply.
+  - : An object defining the new transformation matrix to apply, such as a {{domxref("DOMMatrix")}}.
+
+    > [!NOTE]
+    > In Chromium-based browsers, `matrix` must be an `SVGMatrix` object as defined in SVG 1.1, such as one returned by {{domxref("SVGSVGElement.createSVGMatrix()")}}. Passing any other object, including a `DOMMatrix`, throws a {{jsxref("TypeError")}}.
 
 ### Return value
 
@@ -41,8 +44,8 @@ None ({{jsxref('undefined')}}).
 const svgElement = document.querySelector("svg");
 const transform = svgElement.createSVGTransform();
 
-// Create a DOMMatrix with specific values
-const matrix = new DOMMatrix();
+// Create a matrix with specific values
+const matrix = svgElement.createSVGMatrix();
 matrix.a = 1; // Scale X
 matrix.d = 1; // Scale Y
 matrix.e = 50; // Translate X
