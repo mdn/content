@@ -20,7 +20,9 @@ For an `http` or `https` URL that differs from the current one, the command can 
 - `"none"`
   - : The command returns immediately, and the new page may not have loaded yet.
 
-If the new page redirects to another `http` or `https` URL with a [`<meta http-equiv="refresh">`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv#refresh) element that has a delay of 1 second or less, the command also waits for that page, following the same page load strategy. If the page doesn't load within the session's [page load timeout](/en-US/docs/Web/WebDriver/Reference/Classic/Timeouts#pageload), the command returns a `timeout` error.
+If the new page redirects to another `http` or `https` URL with a [`<meta http-equiv="refresh">`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv#refresh) element that has a delay of 1 second or less, the command also waits for that page, following the same page load strategy.
+
+If the page doesn't load within the session's [page load timeout](/en-US/docs/Web/WebDriver/Reference/Classic/Timeouts#pageload), the command returns a `timeout` error.
 
 ## Syntax
 
@@ -52,7 +54,7 @@ The command succeeds whatever the HTTP status of the response, including error s
 - [`invalid session id`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
   - : Session does not exist.
 - [`insecure certificate`](/en-US/docs/Web/WebDriver/Reference/Errors/InsecureCertificate)
-  - : The page's TLS certificate is invalid or untrusted, and the session's [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts) capability is `false`.
+  - : The page's [TLS](/en-US/docs/Glossary/TLS) certificate is invalid or untrusted, and the session's [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts) capability is `false`.
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
   - : The `url` field is missing, is not a string, or is not an absolute URL, such as `/about` or `example.org`.
 - `no such window`
@@ -65,7 +67,7 @@ The command succeeds whatever the HTTP status of the response, including error s
     By default, the browser dismisses the prompt and returns this error, except for a `beforeunload` prompt, which it accepts without an error.
     The `unhandledPromptBehavior` [capability](/en-US/docs/Web/WebDriver/Reference/Capabilities) changes how prompts are handled.
 - [`unknown error`](/en-US/docs/Web/WebDriver/Reference/Errors/UnknownError)
-  - : The navigation failed with a network error, for example because the host name can't be resolved.
+  - : The navigation failed with a network error, for example because the browser can't resolve the host name.
 
 ## Examples
 
