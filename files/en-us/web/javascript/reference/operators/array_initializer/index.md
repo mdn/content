@@ -1,12 +1,12 @@
 ---
-title: Array initializer
+title: Array initializer (Array literal)
 slug: Web/JavaScript/Reference/Operators/Array_initializer
 page-type: javascript-language-feature
 browser-compat: javascript.operators.array_initializer
 sidebar: jssidebar
 ---
 
-An **array initializer** is a comma-delimited list of zero or more expressions that evaluate to array elements, enclosed in square brackets (`[]`). Arrays can also be initialized using the {{jsxref("Array/Array", "Array()")}} constructor.
+An **array initializer**, sometimes also called an **array literal**, is a comma-delimited list of zero or more expressions that evaluate to array elements, enclosed in square brackets (`[]`). Arrays can also be initialized using the {{jsxref("Array/Array", "Array()")}} constructor.
 
 {{InteractiveExample("JavaScript Demo: Array initializer")}}
 
