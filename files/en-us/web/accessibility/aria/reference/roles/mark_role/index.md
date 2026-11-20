@@ -18,6 +18,12 @@ Don't use `mark` for purely decorative styling such as syntax highlighting.
 
 The `mark` element should not be given an accessible name; both [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) and [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attributes are prohibited on `mark`.
 
+## Best practices
+
+### Prefer HTML
+
+Using the {{HTMLElement('mark')}} element will automatically communicate a node has a role of `mark`. If at all possible, prefer using it instead.
+
 ## Examples
 
 In the following example we have a document section that has been commented. The commented section is marked up using `<span role="mark">`.
@@ -39,12 +45,6 @@ In the following example we have a document section that has been commented. The
 The related comment is marked up using an HTML structure wrapped with a {{HTMLElement('div')}} containing [`role="comment"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/comment_role).
 
 To associate the comment with the text being commented, we need to wrap the commented text with an element containing the [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) attribute, the value of which should be the ID of the comment.
-
-## Best practices
-
-### Prefer HTML
-
-Using the {{HTMLElement('mark')}} element will automatically communicate a node has a role of `mark`. If at all possible, prefer using it instead.
 
 ## Specifications
 
