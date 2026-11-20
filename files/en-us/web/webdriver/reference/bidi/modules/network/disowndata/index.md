@@ -35,8 +35,9 @@ The `params` field contains:
     - `request`: The body of the request.
     - `response`: The body of the response.
 - `request`
-  - : A string that contains the ID of the request.
-    Request IDs are in the `request` field of the `request` object in `network` events, such as [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted).
+  - : A string that contains the ID of the [request](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#requests).
+    The ID stays the same even when the request is redirected.
+    Request IDs are in the `request` field of the `request` object in [`network` events](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#events), such as [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted).
 
 ### Return value
 

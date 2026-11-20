@@ -49,13 +49,15 @@ The `params` field contains:
     - `response`: The body of the response.
 - `disown` {{optional_inline}}
   - : A boolean that indicates whether the collector releases the data after returning it.
-    - `false`: The collector keeps the data. This is the default.
+    - `false`: The collector keeps the data.
+      This is the default.
     - `true`: The collector specified in `collector` releases the data, as with [`network.disownData`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/disownData).
       If no other collector keeps the data, the browser deletes it.
       This value requires `collector`.
 - `request`
-  - : A string that contains the ID of the request.
-    Request IDs are in the `request` field of the `request` object in `network` events, such as [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted).
+  - : A string that contains the ID of the [request](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#requests).
+    The ID stays the same even when the request is redirected.
+    Request IDs are in the `request` field of the `request` object in [`network` events](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#events), such as [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted).
 
 ### Return value
 
@@ -65,10 +67,10 @@ The `result` object in the response contains the following field:
   - : An object that contains the body.
     It contains the following fields:
     - `type`
-      - : A string that specifies how the body is encoded.
-        It can take one of the following values:
-        - `base64`: The body isn't valid [UTF-8](/en-US/docs/Glossary/UTF-8) text (a PNG image, for example), and the value is its [Base64](/en-US/docs/Glossary/Base64)-encoded bytes.
-        - `string`: The body is valid UTF-8 text, and the value is that text.
+      - : A string that indicates how the body is encoded.
+        It has one of the following values:
+        - `base64`: The value is [Base64](/en-US/docs/Glossary/Base64)-encoded bytes because the bytes are not valid [UTF-8](/en-US/docs/Glossary/UTF-8), for example for a PNG image.
+        - `string`: The value is text decoded from UTF-8 bytes.
     - `value`
       - : A string that contains the body in the encoding specified by the [`type`](#type) field.
         For a response, this is the body as the page receives it, after the browser decodes it.

@@ -65,7 +65,7 @@ The `params` field contains:
 - `maxEncodedDataSize`
   - : A positive integer that specifies the maximum size of each body to collect, in bytes.
     The collector doesn't collect a body that is larger.
-    For a response, this is the size of the body as it was sent over the network, before the browser decompresses it.
+    For a response, this is the size of the body before the browser decodes it (for example, before decompression).
     Browsers can support different encodings, so a body can fit the limit in one browser and not in another.
 
     It must not be greater than the browser's limit for all the data it collects, which depends on the browser.
@@ -114,7 +114,8 @@ A collector collects the body of a request or response only when all of the foll
 
 A collector keeps a response body only once the browser has received all of it.
 For a redirect, it keeps only the body of the final response.
-It doesn't collect the bodies of requests that completed before the collector was added.
+
+A collector doesn't collect the bodies of requests that completed before it was added.
 It might not collect the bodies of requests already in progress, so add the collector before the requests start.
 
 The collector keeps a response body as the page receives it, after the browser decompresses it.

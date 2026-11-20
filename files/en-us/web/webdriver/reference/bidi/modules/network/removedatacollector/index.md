@@ -43,7 +43,7 @@ The `result` field in the response is an empty object (`{}`).
 ## Description
 
 Once the collector is removed, it doesn't collect the bodies of new requests and releases every body that it has collected.
-A body that no other collector keeps is deleted, so [`network.getData`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/getData) returns a `no such network data` error for it.
+The browser deletes a body that no other collector keeps, so [`network.getData`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/getData) returns a `no such network data` error for it.
 A body that another collector also keeps stays available.
 
 After the removal, `network.getData` and [`network.disownData`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/disownData) return a `no such network collector` error if you specify the collector's ID in `collector`.
