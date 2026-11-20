@@ -32,7 +32,8 @@ It applies restrictions to a page's actions including preventing popups, prevent
 
 ```http
 Content-Security-Policy: sandbox;
-Content-Security-Policy: sandbox <value>…;
+Content-Security-Policy: sandbox <value>;
+Content-Security-Policy: sandbox <value> <value>;
 ```
 
 The directive value can be omitted to apply all sandbox restrictions, or can optionally be one or more space-separated tokens from the following values to lift particular restrictions:
