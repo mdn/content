@@ -143,6 +143,13 @@ sidebar:
     path: /Web/CSS/Guides/Fonts
     title: Fonts
     details: closed
+  - title: Gaps
+    details: closed
+    children:
+      - /Web/CSS/Guides/Gaps/Overview
+      - /Web/CSS/Guides/Gaps/Defining_gaps
+      - /Web/CSS/Guides/Gaps/Defining_rules
+      - /Web/CSS/Guides/Gaps/Rule_insets
   - title: Grid
     details: closed
     children:
