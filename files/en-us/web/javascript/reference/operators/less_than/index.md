@@ -31,17 +31,29 @@ console.log("aa" < "ab");
 x < y
 ```
 
+### Parameters
+
+- `x`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 9 (relational operators) or above. Its value is coerced to either a string, a BigInt, or a number.
+- `y`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 10 (bitwise shift) or above. Its value is coerced to either a string, a BigInt, or a number.
+
+### Return value
+
+`true` if `x` is less than `y`, and `false` otherwise.
+
 ## Description
 
 The operands are compared with multiple rounds of coercion, which can be summarized as follows:
 
 - First, objects are [converted to primitives](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion) by calling their [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), and [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) methods, in that order. The left operand is always coerced before the right one. Note that although `[Symbol.toPrimitive]()` is called with the `"number"` hint (meaning there's a slight preference for the object to become a number), the return value is not [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), since strings are still specially handled.
 - If both values are strings, they are compared as strings, based on the values of the UTF-16 code units (not Unicode code points) they contain.
-- Otherwise JavaScript attempts to convert non-numeric types to numeric values:
+- If one value is a BigInt and the other is a string, the string is parsed as a BigInt. If parsing fails, the comparison returns `false`.
+- Otherwise JavaScript attempts to coerce non-numeric types to numbers:
   - Boolean values `true` and `false` are converted to 1 and 0 respectively.
   - `null` is converted to 0.
   - `undefined` is converted to `NaN`.
-  - Strings are converted based on the values they contain, and are converted as `NaN` if they do not contain numeric values.
+  - Strings are [coerced to numbers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion). A string that cannot be parsed as a number becomes `NaN`.
 - If either value is [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN), the operator returns `false`.
 - Otherwise the values are compared as numeric values. BigInt and number values can be compared together.
 

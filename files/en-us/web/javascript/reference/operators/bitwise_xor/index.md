@@ -24,6 +24,17 @@ console.log(a ^ b); // 00000000000000000000000000000110
 x ^ y
 ```
 
+### Parameters
+
+- `x`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 6 (bitwise XOR) or above. Its value is coerced to a [signed 32-bit integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion) or a [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion).
+- `y`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 7 (bitwise AND) or above. Its value is coerced to a [signed 32-bit integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion) or a [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion).
+
+### Return value
+
+A signed 32-bit integer or a BigInt with a `1` in each bit position where exactly one operand has a `1`, and a `0` elsewhere.
+
 ## Description
 
 The `^` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). For numbers, the operator returns a 32-bit integer. For BigInts, the operator returns a BigInt. It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt XOR if both operands become BigInts; otherwise, it converts both operands to [32-bit integers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion) and performs number bitwise XOR. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.

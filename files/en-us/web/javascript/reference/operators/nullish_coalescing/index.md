@@ -26,8 +26,19 @@ console.log(baz);
 ## Syntax
 
 ```js-nolint
-leftExpr ?? rightExpr
+x ?? y
 ```
+
+### Parameters
+
+- `x`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 5 (bitwise OR) or above, or another nullish coalescing expression.
+- `y`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 5 (bitwise OR) or above. Evaluated only if `x` is `null` or `undefined`.
+
+### Return value
+
+The value of `y` if `x` is `null` or `undefined`, or the value of `x` otherwise.
 
 ## Description
 

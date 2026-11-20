@@ -34,11 +34,11 @@ yield* expression
 ### Parameters
 
 - `expression`
-  - : An iterable object.
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 2 (assignment) or above that evaluates to an [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). In an async generator, it can also evaluate to an [async iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols).
 
 ### Return value
 
-Returns the value returned by that iterator when it's closed (when `done` is `true`).
+The `value` property of the iterator's final result (the one whose `done` property is {{Glossary("truthy")}}).
 
 ## Description
 
