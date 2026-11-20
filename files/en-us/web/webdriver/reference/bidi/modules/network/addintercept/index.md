@@ -101,8 +101,8 @@ The `params` field contains:
 The `result` object in the response contains the following field:
 
 - `intercept`
-  - : A string that contains the ID of the intercept.
-    Network events list this ID in their `intercepts` field when the intercept blocks a request.
+  - : A string that contains the ID of the [intercept](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#intercepts).
+    [Network events](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#events) list this ID in their `intercepts` field when the intercept blocks a request.
     [`network.removeIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/removeIntercept) takes this ID to remove the intercept.
 
 ### Errors

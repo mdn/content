@@ -110,8 +110,8 @@ The `params` field contains:
   - : A string that contains the [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods) to use instead of the request's method, such as `POST`.
     It must be a valid HTTP method name.
 - `request`
-  - : A string that contains the ID of the blocked request.
-    Request IDs are in the `request` field of the `request` object in `network` events, such as `network.beforeRequestSent`.
+  - : A string that contains the ID of the blocked [request](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#requests).
+    Request IDs are in the `request` field of the `request` object in [`network`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#events) events, such as `network.beforeRequestSent`.
 - `url` {{optional_inline}}
   - : A string that contains the absolute URL to request instead of the request's URL.
 

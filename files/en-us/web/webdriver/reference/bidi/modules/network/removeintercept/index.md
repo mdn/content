@@ -25,7 +25,7 @@ The `network.removeIntercept` [command](/en-US/docs/Web/WebDriver/Reference/BiDi
 The `params` field contains:
 
 - `intercept`
-  - : A string that contains the ID of the intercept to remove.
+  - : A string that contains the ID of the [intercept](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#intercepts) to remove.
     Intercept IDs are returned by the [`network.addIntercept`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/addIntercept) command.
 
 ### Return value
@@ -129,7 +129,7 @@ The browser responds with an empty `result` object:
 ```
 
 The browser then sends the request.
-When the response headers arrive, the [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) event has `isBlocked` set to `false`, because the removed intercept no longer blocks the request in that phase (only some of the fields are shown):
+When the response headers arrive, the [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) event has `isBlocked` set to `false` because the removed intercept no longer blocks the request in that phase (only some of the fields are shown):
 
 ```json
 {

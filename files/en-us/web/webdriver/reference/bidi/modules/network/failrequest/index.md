@@ -25,8 +25,8 @@ The `network.failRequest` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Mod
 The `params` field contains:
 
 - `request`
-  - : A string that contains the ID of the blocked request.
-    Request IDs are in the `request` field of the `request` object in `network` events, such as [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent).
+  - : A string that contains the ID of the blocked [request](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#requests).
+    Request IDs are in the `request` field of the `request` object in [`network`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#events) events, such as [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent).
 
 ### Return value
 
@@ -49,9 +49,10 @@ To go on without providing credentials, use [`network.continueWithAuth`](/en-US/
 
 The browser treats the request as failed with a network error.
 Whatever made the request gets a network error: for example, a {{domxref("Window/fetch", "fetch()")}} call rejects with a {{jsxref("TypeError")}}.
-If you're subscribed to [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError), you also receive the event for the request.
 A request failed in the `beforeRequestSent` phase never reaches the server.
 In the `responseStarted` phase, the server has already responded, and the browser discards the response.
+
+If you're subscribed to [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError), you also receive the event for the request.
 
 ## Examples
 
@@ -109,7 +110,7 @@ The browser responds with an empty `result` object:
 ```
 
 The browser doesn't send the request.
-It sends a `network.fetchError` event for it, which can arrive before or after the response to the `network.failRequest` command (only some of the fields are shown):
+It sends a `network.fetchError` event for the request, which can arrive before or after the response to the `network.failRequest` command (only some of the fields are shown):
 
 ```json
 {
