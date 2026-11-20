@@ -59,8 +59,8 @@ The `params` field contains:
     - `username`
       - : A string that contains the username.
 - `request`
-  - : A string that contains the ID of the blocked request.
-    Request IDs are in the `request` field of the `request` object in `network` events, such as [`network.authRequired`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/authRequired).
+  - : A string that contains the ID of the blocked [request](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#requests).
+    Request IDs are in the `request` field of the `request` object in [`network`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#events) events, such as [`network.authRequired`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/authRequired).
 
 ### Return value
 
@@ -84,7 +84,7 @@ The `result` field in the response is an empty object (`{}`).
 
 Use `network.continueWithAuth` for a request blocked in the `authRequired` phase, which is when its `network.authRequired` event has `isBlocked` set to `true`.
 For a request blocked in another phase, the command returns an `invalid argument` error.
-If the command returns an `invalid argument` error, the request stays blocked and unchanged.
+With this or any other `invalid argument` error, the request stays blocked and unchanged.
 
 In the `authRequired` phase, you can also provide credentials with [`network.continueResponse`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueResponse).
 For the other commands that resume a request in this phase, see [Authentication](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#authentication).
