@@ -17,11 +17,11 @@ Values of this type are objects. They contain the following properties:
 - `types` {{optional_inline}}
   - : `array` of {{WebExtAPIRef('webRequest.ResourceType')}}. A list of resource types (for example, stylesheets, images, scripts). The listener will only be called for requests for resources which are one of the given types.
 - `tabId` {{optional_inline}}
-  - : `integer`. The listener will only be called for requests from the {{WebExtAPIRef("tabs.Tab", "tab")}} identified by this ID.
+  - : `integer`. The listener will only be called for requests from the {{WebExtAPIRef("tabs.Tab", "tab")}} identified by this ID. If omitted, requests from any tab can match; the currently focused tab is not selected automatically.
 - `windowId` {{optional_inline}}
-  - : `integer`. The listener will only be called for requests from the {{WebExtAPIRef("windows.Window", "window")}} identified by this ID.
+  - : `integer`. The listener will only be called for requests from the {{WebExtAPIRef("windows.Window", "window")}} identified by this ID. If omitted, requests from any window can match.
 - `incognito` {{optional_inline}}
-  - : `boolean`. If provided, requests that do not match the incognito state (`true` or `false`) will be filtered out.
+  - : `boolean`. If provided, requests that do not match the incognito state (`true` or `false`) will be filtered out. If omitted, this filter does not restrict requests by incognito state; browser incognito-access settings still apply.
 
 {{WebExtExamples}}
 
