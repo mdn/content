@@ -258,13 +258,13 @@ For example, "array methods" like [`map()`](/en-US/docs/Web/JavaScript/Reference
 >
 > The **only** good reason for extending a built-in prototype is to backport the features of newer JavaScript engines, like `Array.prototype.forEach`.
 
-It may be interesting to note that due to historical reasons, some built-in constructors' `prototype` property are instances themselves. For example, `Number.prototype` is a number 0, `Array.prototype` is an empty array, and `RegExp.prototype` is `/(?:)/`.
+It may be interesting to note that due to historical reasons, some built-in constructors' `prototype` property are instances themselves. For example, `Number.prototype` is a `Number` object that wraps the number 0 and `Array.prototype` is an empty array.
 
 ```js
 Number.prototype + 1; // 1
 Array.prototype.map((x) => x + 1); // []
 String.prototype + "a"; // "a"
-RegExp.prototype.source; // "(?:)"
+Boolean(Boolean.prototype); // false
 Function.prototype(); // Function.prototype is a no-op function by itself
 ```
 

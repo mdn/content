@@ -112,6 +112,15 @@ if ([] == false) {
 
 Truthy values are even more unlikely to be loosely equal to `true`. All values are either truthy or falsy, but most values are loosely equal to neither `true` nor `false`.
 
+### The Boolean.prototype object
+
+For legacy reasons, `Boolean.prototype` is a `Boolean` object that wraps the value `false`.
+
+```js
+console.log(Boolean.prototype.valueOf()); // false (expected to throw error)
+console.log(Boolean(Boolean.prototype)); // false (expected true for plain objects)
+```
+
 ## Constructor
 
 - {{jsxref("Boolean/Boolean", "Boolean()")}}

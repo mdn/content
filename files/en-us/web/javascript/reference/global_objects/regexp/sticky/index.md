@@ -33,6 +33,8 @@ console.log(regex.test(str));
 
 The set accessor of `sticky` is `undefined`. You cannot change this property directly.
 
+For legacy reasons, `RegExp.prototype.sticky === undefined` although `RegExp.prototype` is not a `RegExp` instance. (Usually, the getter throws a `TypeError` if the `this` value is not a `RegExp` instance.)
+
 For both sticky regexes and [global](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global) regexes:
 
 - They start matching at `lastIndex`.
