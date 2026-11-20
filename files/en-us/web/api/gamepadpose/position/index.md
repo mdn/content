@@ -4,11 +4,12 @@ short-title: position
 slug: Web/API/GamepadPose/position
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: api.GamepadPose.position
 ---
 
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{APIRef("WebVR API")}}{{non-standard_header}}
 
 The **`position`** read-only property of the {{domxref("GamepadPose")}} interface returns the position of the {{domxref("Gamepad")}} as a 3D vector.
 

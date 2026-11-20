@@ -4,11 +4,12 @@ short-title: hand
 slug: Web/API/Gamepad/hand
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: api.Gamepad.hand
 ---
 
-{{APIRef("Gamepad")}}{{SeeCompatTable}}
+{{APIRef("Gamepad")}}{{non-standard_header}}
 
 The **`hand`** read-only property of the {{domxref("Gamepad")}} interface returns an enum defining what hand the controller is being held in, or is most likely to be held in.
 

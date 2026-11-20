@@ -71,7 +71,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     > [!NOTE]
     > Specifying multiple URLs means that multiple attribution sources can be registered on the same feature. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.
 
-- `controls`
+- `controls` {{experimental_inline}}
   - : A boolean attribute that enables user-agent-defined control widgets on the image (e.g., a button for viewing in fullscreen). User-interaction events are suppressed when interacting with user agent controls. What forms of control are provided is implementation-defined. For example, supporting user agents may provide built-in user interfaces for interacting with spatial and panorama images.
 
 - [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
