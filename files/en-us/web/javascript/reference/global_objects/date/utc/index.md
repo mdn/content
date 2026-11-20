@@ -51,6 +51,9 @@ Date.UTC(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 - `milliseconds` {{optional_inline}}
   - : Integer value representing the millisecond segment of a time. Defaults to `0`.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `7`, so all parameters are defined as formal parameters by the function, but you still get sensible behavior when omitting most of them.
+
 ### Return value
 
 A number representing the [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) of the given date. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).

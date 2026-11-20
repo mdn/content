@@ -43,6 +43,9 @@ split(separator, limit)
     - The array may contain fewer entries than `limit` if the end of the string is reached before the limit is reached.
     - If `limit` is `0`, `[]` is returned.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `2`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 ### Return value
 
 If `separator` is a string, an {{jsxref("Array")}} of strings is returned, split at each point where the `separator` occurs in the given string.

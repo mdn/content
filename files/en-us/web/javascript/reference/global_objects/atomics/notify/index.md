@@ -28,6 +28,9 @@ Atomics.notify(typedArray, index, count)
 - `count` {{optional_inline}}
   - : The number of sleeping agents to notify. Defaults to {{jsxref("Infinity")}}.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `3`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 ### Return value
 
 Returns the number of woken up agents, or `0` if `typedArray` is a view on a non-shared {{jsxref("ArrayBuffer")}}.

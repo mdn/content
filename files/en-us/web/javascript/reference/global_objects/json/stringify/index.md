@@ -50,6 +50,9 @@ JSON.stringify(value, replacer, space)
 
     If `space` is anything other than a string or number (can be either a primitive or a wrapper object) — for example, is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or not provided — no white space is used.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `3`, so all parameters are defined as formal parameters by the function, but you still get sensible behavior when omitting most of them.
+
 ### Return value
 
 A JSON string representing the given value, or undefined.

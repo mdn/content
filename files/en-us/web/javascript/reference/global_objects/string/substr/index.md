@@ -40,6 +40,9 @@ substr(start, length)
 - `length` {{optional_inline}}
   - : The number of characters to extract.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `2`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 ### Return value
 
 A new string containing the specified part of the given string.

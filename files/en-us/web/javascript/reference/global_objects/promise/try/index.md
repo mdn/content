@@ -22,7 +22,7 @@ Promise.try(func, arg1, arg2, /* …, */ argN)
 
 - `func`
   - : A function that is called synchronously with the arguments provided (`arg1`, `arg2`, …, `argN`). It can do anything—either return a value, throw an error, or return a promise.
-- `arg1`, `arg2`, …, `argN`
+- `arg1`, `arg2`, …, `argN` {{optional_inline}}
   - : Arguments to pass to `func`.
 
 ### Return value

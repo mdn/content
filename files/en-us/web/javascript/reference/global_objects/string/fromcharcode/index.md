@@ -30,6 +30,9 @@ String.fromCharCode(num1, num2, /* …, */ numN)
 - `num1`, …, `numN`
   - : A number between `0` and `65535` (`0xFFFF`) representing a UTF-16 code unit. Numbers greater than `0xFFFF` are truncated to the last 16 bits. No validity checks are performed.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `1`.
+
 ### Return value
 
 A string of length `N` consisting of the `N` specified UTF-16 code units.

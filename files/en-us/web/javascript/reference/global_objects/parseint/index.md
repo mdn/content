@@ -43,6 +43,9 @@ parseInt(string, radix)
 - `radix` {{optional_inline}}
   - : An integer between `2` and `36` that represents the _radix_ (the base in mathematical numeral systems) of the `string`. It is converted to a [32-bit integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion); if it's nonzero and outside the range of \[2, 36] after conversion, the function will always return `NaN`. If `0` or not provided, the radix will be inferred based on `string`'s value. Be careful — this does _not_ always default to `10`! The [description below](#description) explains in more detail what happens when `radix` is not provided.
 
+    > [!NOTE]
+    > This parameter is technically optional, but you are recommended to always provide it to avoid gotchas (see also ESLint's [`radix`](https://eslint.org/docs/latest/rules/radix) rule). The function's {{jsxref("Function/length", "length")}} property is `2`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 ### Return value
 
 An integer parsed from the given `string`, or {{jsxref("NaN")}} when

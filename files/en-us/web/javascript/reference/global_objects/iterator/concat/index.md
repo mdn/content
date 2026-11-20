@@ -12,6 +12,7 @@ The **`Iterator.concat()`** static method creates a new {{jsxref("Iterator")}} o
 ## Syntax
 
 ```js-nolint
+Iterator.concat()
 Iterator.concat(it)
 Iterator.concat(it1, it2)
 Iterator.concat(it1, it2, /* …, */ itN)
@@ -19,7 +20,7 @@ Iterator.concat(it1, it2, /* …, */ itN)
 
 ### Parameters
 
-- `it1`, `it2`, …, `itN`
+- `it1`, `it2`, …, `itN` {{optional_inline}}
   - : An object that implements the [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) protocol. [Iterators](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) which are not also iterable cannot be passed directly to this method; they must first be wrapped using {{jsxref("Iterator.from()")}}.
 
 ### Return value

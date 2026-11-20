@@ -40,6 +40,9 @@ push(element1, element2, /* …, */ elementN)
 - `element1`, …, `elementN`
   - : The element(s) to add to the end of the array.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `1`.
+
 ### Return value
 
 The new {{jsxref("Array/length", "length")}} property of the object upon which the method was called.

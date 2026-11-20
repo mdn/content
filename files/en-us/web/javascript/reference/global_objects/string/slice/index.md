@@ -42,6 +42,9 @@ slice(indexStart, indexEnd)
 - `indexEnd` {{optional_inline}}
   - : The index of the first character to exclude from the returned substring.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `2`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 ### Return value
 
 A new string containing the extracted section of the string.

@@ -45,7 +45,10 @@ Date()
 
 ### Parameters
 
-There are five basic forms for the `Date()` constructor:
+There are five basic forms for the `Date()` constructor.
+
+> [!NOTE]
+> The function's {{jsxref("Function/length", "length")}} property is `7`.
 
 #### No parameters
 

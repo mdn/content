@@ -45,6 +45,9 @@ then(onFulfilled, onRejected)
 
     If it is not a function, it is internally replaced with a _thrower_ function (`(x) => { throw x; }`) which throws the rejection reason it received.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `2`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 ### Return value
 
 Returns a new {{jsxref("Promise")}} immediately. This returned promise is always pending when returned, regardless of the current promise's status.

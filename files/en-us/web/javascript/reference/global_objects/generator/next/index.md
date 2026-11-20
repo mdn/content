@@ -29,6 +29,9 @@ next(value)
     passed to the `.next()` function will be assigned to
     `variable`.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `1`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 ### Return value
 
 An {{jsxref("Object")}} with two properties:

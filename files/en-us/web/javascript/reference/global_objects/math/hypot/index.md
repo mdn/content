@@ -45,6 +45,9 @@ Math.hypot(value1, value2, /* …, */ valueN)
 - `value1`, …, `valueN`
   - : Numbers.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `2`. To get meaningful output, you probably want to pass at least 2 values.
+
 ### Return value
 
 The square root of the sum of squares of the given arguments. Returns {{jsxref("Infinity")}} if any of the arguments is ±Infinity. Otherwise, if at least one of the arguments is or is converted to {{jsxref("NaN")}}, returns {{jsxref("NaN")}}. Returns `0` if no arguments are given or all arguments are ±0.

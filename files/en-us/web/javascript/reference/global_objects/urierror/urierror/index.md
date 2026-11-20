@@ -32,6 +32,10 @@ URIError(message, fileName, lineNumber)
 
 - `message` {{optional_inline}}
   - : Human-readable description of the error.
+
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `1`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 - `options` {{optional_inline}}
   - : An object that has the following properties:
     - `cause` {{optional_inline}}

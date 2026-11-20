@@ -33,6 +33,9 @@ toJSON()
 
 None.
 
+> [!NOTE]
+> The function's {{jsxref("Function/length", "length")}} property is `1`, because `toJSON()` methods (see {{jsxref("JSON.stringify()")}}) technically take a `key` parameter. `Date.prototype.toJSON()` doesn't use it, though.
+
 ### Return value
 
 A string representing the given date in the [date time string format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) according to universal time, or `null` when the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date). For valid dates, the return value is the same as that of {{jsxref("Date/toISOString", "toISOString()")}}.

@@ -37,10 +37,17 @@ subarray(begin, end)
 - `begin` {{optional_inline}}
   - : Element to begin at. The offset is inclusive. The whole array will be included in
     the new view if this value is not specified.
+
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `2`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 - `end` {{optional_inline}}
   - : Element to end at. The offset is exclusive. If not specified, all elements from the
     one specified by `begin` to the end of the array are included in
     the new view.
+
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `2`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
 
 ### Return value
 

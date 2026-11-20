@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Number.parseInt
 sidebar: jsref
 ---
 
-The **`Number.parseInt()`** static method parses a string argument and
-returns an integer of the specified radix or base.
+The **`Number.parseInt()`** static method parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems).
 
 {{InteractiveExample("JavaScript Demo: Number.parseInt()", "taller")}}
 
@@ -38,21 +37,19 @@ Number.parseInt(string, radix)
 ### Parameters
 
 - `string`
-  - : The value to parse, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Leading whitespace in this argument is ignored.
+  - : A string starting with an integer. Leading {{Glossary("whitespace")}} in this argument is ignored.
 - `radix` {{optional_inline}}
-  - : An integer between `2` and `36` that represents the
-    _radix_ (the base in mathematical numeral systems) of the
-    `string`.
+  - : An integer between `2` and `36` that represents the _radix_ (the base in mathematical numeral systems) of the `string`. If `radix` is undefined or `0`, it is assumed to be `10` except when the number begins with the code unit pairs `0x` or `0X`, in which case a radix of `16` is assumed.
 
-    If `radix` is undefined or `0`, it is assumed to be `10` except when the number begins with the code unit pairs `0x` or `0X`, in which case a radix of `16` is assumed.
+    > [!NOTE]
+    > Omitting this parameter still works, but you are recommended to always provide it to avoid gotchas (see also ESLint's [`radix`](https://eslint.org/docs/latest/rules/radix) rule). The function's {{jsxref("Function/length", "length")}} property is `2`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
 
 ### Return value
 
-An integer parsed from the given `string`.
+An integer parsed from the given `string`, or {{jsxref("NaN")}} when
 
-If the `radix` is smaller than `2` or bigger than
-`36`, or the first non-whitespace character cannot be converted to a number,
-{{jsxref("NaN")}} is returned.
+- the `radix` as a 32-bit integer is nonzero and is smaller than `2` or bigger than `36`, or
+- the first non-whitespace character cannot be converted to a number.
 
 ## Examples
 
@@ -64,8 +61,7 @@ This method has the same functionality as the global {{jsxref("parseInt()")}} fu
 Number.parseInt === parseInt; // true
 ```
 
-Its purpose is modularization of globals. Please see
-{{jsxref("parseInt()")}} for more detail and examples.
+Its purpose is modularization of globals. Please see {{jsxref("parseInt()")}} for more detail and examples.
 
 ## Specifications
 

@@ -32,7 +32,7 @@ Array.of(element1, element2, /* …, */ elementN)
 
 ### Parameters
 
-- `element1`, …, `elementN`
+- `element1`, …, `elementN` {{optional_inline}}
   - : Elements used to create the array.
 
 ### Return value
