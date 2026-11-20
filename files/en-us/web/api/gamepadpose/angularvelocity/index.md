@@ -4,11 +4,12 @@ short-title: angularVelocity
 slug: Web/API/GamepadPose/angularVelocity
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: api.GamepadPose.angularVelocity
 ---
 
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{APIRef("WebVR API")}}{{non-standard_header}}
 
 The **`angularVelocity`** read-only property of the {{domxref("GamepadPose")}} interface returns an array representing the angular velocity vector of the {{domxref("Gamepad")}}, in radians per second.
 

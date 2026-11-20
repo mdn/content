@@ -4,11 +4,12 @@ short-title: orientation
 slug: Web/API/GamepadPose/orientation
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: api.GamepadPose.orientation
 ---
 
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{APIRef("WebVR API")}}{{non-standard_header}}
 
 The **`orientation`** read-only property of the {{domxref("GamepadPose")}} interface returns the orientation of the {{domxref("Gamepad")}}, as a quaternion value.
 

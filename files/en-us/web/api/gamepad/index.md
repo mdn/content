@@ -24,9 +24,9 @@ A Gamepad object can be returned in one of two ways: via the `gamepad` property 
   - : A boolean indicating whether the gamepad is still connected to the system.
 - {{domxref("Gamepad.displayId")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns the {{domxref("VRDisplay.displayId")}} of an associated {{domxref("VRDisplay")}} (if relevant) — the `VRDisplay` that the gamepad is controlling the displayed scene of.
-- {{domxref("Gamepad.hand")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Gamepad.hand")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : An enum defining what hand the controller is being held in, or is most likely to be held in.
-- {{domxref("Gamepad.hapticActuators")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Gamepad.hapticActuators")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : An array containing {{domxref("GamepadHapticActuator")}} objects, each of which represents haptic feedback hardware available on the controller.
 - {{domxref("Gamepad.vibrationActuator")}} {{ReadOnlyInline}}
   - : A {{domxref("GamepadHapticActuator")}} object, which represents haptic feedback hardware available on the controller.
@@ -36,7 +36,7 @@ A Gamepad object can be returned in one of two ways: via the `gamepad` property 
   - : An integer that is auto-incremented to be unique for each device currently connected to the system.
 - {{domxref("Gamepad.mapping")}} {{ReadOnlyInline}}
   - : A string indicating whether the browser has remapped the controls on the device to a known layout.
-- {{domxref("Gamepad.pose")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Gamepad.pose")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : A {{domxref("GamepadPose")}} object representing the pose information associated with a WebVR controller (e.g., its position and orientation in 3D space).
 - {{domxref("Gamepad.timestamp")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the last time the data for this gamepad was updated.
