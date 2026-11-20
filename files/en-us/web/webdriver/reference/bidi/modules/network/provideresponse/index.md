@@ -79,7 +79,7 @@ The `params` field contains:
     - `expiry` {{optional_inline}}
       - : A string that contains the value of the cookie's [`Expires`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#expiresdate) attribute, such as `Wed, 21 Oct 2026 07:28:00 GMT`.
     - `httpOnly` {{optional_inline}}
-      - : A boolean that indicates whether the cookie has the [`HttpOnly`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) attribute.
+      - : A boolean that indicates whether the cookie is hidden from page scripts by an [`HttpOnly`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) attribute in the header (`true`) or is accessible to them (`false`).
     - `maxAge` {{optional_inline}}
       - : An integer that contains the value of the cookie's [`Max-Age`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#max-agenumber) attribute, in seconds.
     - `name`
@@ -89,7 +89,7 @@ The `params` field contains:
     - `sameSite` {{optional_inline}}
       - : A string that contains the value of the cookie's [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute: `default`, `lax`, `none`, or `strict`.
     - `secure` {{optional_inline}}
-      - : A boolean that indicates whether the cookie has the [`Secure`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) attribute.
+      - : A boolean that indicates whether the cookie is restricted to secure connections by a [`Secure`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) attribute in the header (`true`) or can be sent over insecure connections (`false`).
     - `value`
       - : An object that specifies the value of the cookie.
         It contains the following fields:
@@ -101,7 +101,7 @@ The `params` field contains:
         - `value`
           - : A string that contains the cookie value in the encoding specified by the [`type`](#type_2) field.
 - `headers` {{optional_inline}}
-  - : An array of objects, each specifying a header of the response.
+  - : An array of objects, each specifying a [header](/en-US/docs/Web/HTTP/Reference/Headers) of the response.
     If the server has already sent a response, the array replaces its headers.
 
     Each object contains the following fields:
@@ -122,8 +122,8 @@ The `params` field contains:
 - `reasonPhrase` {{optional_inline}}
   - : A string that contains the status message of the response, such as `OK`.
 - `request`
-  - : A string that contains the ID of the blocked request.
-    Request IDs are in the `request` field of the `request` object in `network` events, such as `network.beforeRequestSent`.
+  - : A string that contains the ID of the blocked [request](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#requests).
+    Request IDs are in the `request` field of the `request` object in [`network` events](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#events), such as [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent).
 - `statusCode` {{optional_inline}}
   - : A non-negative integer that contains the [HTTP status code](/en-US/docs/Web/HTTP/Reference/Status) of the response, such as `200`.
 
@@ -158,12 +158,13 @@ For a request blocked in the `beforeRequestSent` phase, the browser doesn't send
 The page receives the response that you provide.
 Each `network.provideResponse` command starts from a new response.
 The fields that you don't specify keep their defaults: the status `200`, an empty status message, no headers, and an empty body.
+
 In the other phases, the status, headers, cookies, and body that you specify replace those of the response that the server sent.
 For how this compares with `network.continueResponse`, see [Changing responses](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#changing_responses).
 
-The request goes on through its lifecycle, so you still receive the later events for it that you're subscribed to.
+The request goes on through its [lifecycle](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#request_lifecycle), so you still receive the later events for it that you're subscribed to.
 These events have the status and headers that you provided.
-They include [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted), and [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) if the request was blocked before the response started.
+The later events include [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted), and [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) if the request was blocked before the response started.
 
 ## Examples
 

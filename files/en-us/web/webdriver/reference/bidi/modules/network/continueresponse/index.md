@@ -71,7 +71,7 @@ The `params` field contains:
     - `expiry` {{optional_inline}}
       - : A string that contains the value of the cookie's [`Expires`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#expiresdate) attribute, such as `Wed, 21 Oct 2026 07:28:00 GMT`.
     - `httpOnly` {{optional_inline}}
-      - : A boolean that indicates whether the cookie has the [`HttpOnly`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) attribute.
+      - : A boolean that indicates whether the cookie is hidden from page scripts by an [`HttpOnly`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) attribute in the header (`true`) or is accessible to them (`false`).
     - `maxAge` {{optional_inline}}
       - : An integer that contains the value of the cookie's [`Max-Age`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#max-agenumber) attribute, in seconds.
     - `name`
@@ -81,7 +81,7 @@ The `params` field contains:
     - `sameSite` {{optional_inline}}
       - : A string that contains the value of the cookie's [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute: `default`, `lax`, `none`, or `strict`.
     - `secure` {{optional_inline}}
-      - : A boolean that indicates whether the cookie has the [`Secure`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) attribute.
+      - : A boolean that indicates whether the cookie is restricted to secure connections by a [`Secure`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) attribute in the header (`true`) or can be sent over insecure connections (`false`).
     - `value`
       - : An object that specifies the value of the cookie.
         It contains the following fields:
@@ -93,7 +93,7 @@ The `params` field contains:
         - `value`
           - : A string that contains the cookie value in the encoding specified by the [`type`](#type) field.
 - `credentials` {{optional_inline}}
-  - : An object that specifies the credentials with which the browser answers the server's authentication challenge, for a request blocked in the `authRequired` phase.
+  - : An object that specifies the credentials with which the browser answers the server's [authentication](/en-US/docs/Web/HTTP/Guides/Authentication) challenge, for a request blocked in the `authRequired` phase.
     It contains the following fields:
     - `password`
       - : A string that contains the password.
@@ -103,7 +103,7 @@ The `params` field contains:
     - `username`
       - : A string that contains the username.
 - `headers` {{optional_inline}}
-  - : An array of objects, each specifying a header of the response.
+  - : An array of objects, each specifying a [header](/en-US/docs/Web/HTTP/Reference/Headers) of the response.
     The array replaces the response's headers.
     To add or change a header, send the headers from the `headers` array in the `response` object of the [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) or [`network.authRequired`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/authRequired) event, with your changes.
 
@@ -125,8 +125,8 @@ The `params` field contains:
 - `reasonPhrase` {{optional_inline}}
   - : A string that contains the status message to use instead of the response's, such as `Service Unavailable`.
 - `request`
-  - : A string that contains the ID of the blocked request.
-    Request IDs are in the `request` field of the `request` object in `network` events, such as `network.responseStarted`.
+  - : A string that contains the ID of the blocked [request](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#requests).
+    Request IDs are in the `request` field of the `request` object in [`network` events](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#events), such as [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted).
 - `statusCode` {{optional_inline}}
   - : A non-negative integer that contains the [HTTP status code](/en-US/docs/Web/HTTP/Reference/Status) to use instead of the response's, such as `503`.
 
@@ -154,7 +154,7 @@ The `result` field in the response is an empty object (`{}`).
 ### Which responses can continue
 
 Use `network.continueResponse` for a request blocked in the `responseStarted` or `authRequired` phase.
-A request is blocked in one of these phases when its `network.responseStarted` or [`network.authRequired`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/authRequired) event has `isBlocked` set to `true`.
+A request is blocked in one of these phases when its [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) or [`network.authRequired`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/authRequired) event has `isBlocked` set to `true`.
 For a request blocked in the `beforeRequestSent` phase, there is no response to continue yet: the command returns an `invalid argument` error, and the request stays blocked.
 
 If the command returns an error other than `no such request`, the request stays blocked.
@@ -167,7 +167,7 @@ The browser applies the changes before the page receives the response and keeps 
 To replace the body as well, use [`network.provideResponse`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/provideResponse) instead (see [Changing responses](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#changing_responses)).
 The `response` field of the request's later events, such as [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted), has the new status and headers.
 
-In the `authRequired` phase, `credentials` answers the server's authentication challenge: the browser sends the request again with the credentials, as with the `provideCredentials` action of [`network.continueWithAuth`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueWithAuth).
+In the `authRequired` phase, `credentials` answers the server's authentication challenge: the browser sends the request again with the credentials, as with [`network.continueWithAuth`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueWithAuth) sent with [`action`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/continueWithAuth#action) set to `provideCredentials`.
 
 ## Examples
 
