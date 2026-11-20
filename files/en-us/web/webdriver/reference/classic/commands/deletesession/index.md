@@ -11,7 +11,7 @@ The _Delete Session_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Comma
 
 The command ends the session even if a user prompt, such as [`window.alert`](/en-US/docs/Web/API/Window/alert), is open.
 
-When the last session ends, the browser can close all its windows, or close completely. If it closes its windows, it doesn't ask to confirm leaving their pages, so a page's {{domxref("Window/beforeunload_event", "beforeunload")}} handler can't stop it.
+When the last session ends, the browser can close all its windows, or close completely. If the browser closes its windows, it doesn't ask to confirm leaving their pages, so a page's {{domxref("Window/beforeunload_event", "beforeunload")}} handler can't stop the windows from closing.
 
 ## Syntax
 

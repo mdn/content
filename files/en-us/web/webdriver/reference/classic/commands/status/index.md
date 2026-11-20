@@ -19,7 +19,7 @@ Unlike most commands, it doesn't take a session ID. You can send it before you c
 
 ### Return value
 
-An object with the following fields:
+An object that contains the following fields and may also include other fields with details about the server, such as its version:
 
 - `message`
   - : A string that explains the value of `ready`.
@@ -28,8 +28,6 @@ An object with the following fields:
   - : A boolean that indicates whether the server can create a new session.
     It is `false` if the server knows that a [New Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/NewSession) command sent now would fail, for example because the server can run only one session at a time and a session is already running.
     The value `true` doesn't guarantee that a New Session command succeeds.
-
-The object can include other fields with details about the server, such as its version.
 
 ## Examples
 
@@ -58,7 +56,7 @@ Using the same server as in the first example, assume you then created a session
 curl -i http://localhost:4444/status
 ```
 
-The server responds that it can't create another session, because it runs only one session at a time:
+The server responds that it can't create another session because it runs only one session at a time:
 
 ```http
 HTTP/1.1 200 OK
