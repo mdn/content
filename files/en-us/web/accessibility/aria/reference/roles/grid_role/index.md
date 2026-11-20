@@ -108,6 +108,10 @@ If cells, rows, or columns can be selected, the following key combination are co
 | <kbd>shift</kbd> + <kbd>↓</kbd>     | Extends selection one cell down.                                                                                                                                                                    |
 | <kbd>shift</kbd> + <kbd>↑</kbd>     | Extends selection one cell up.                                                                                                                                                                      |
 
+## Accessibility concerns
+
+Even if the keyboard use is properly implemented, some users might not be aware that they have to use the arrow keys. Make sure that the functionality and interaction needed can be best achieved using the grid role.
+
 ## Examples
 
 ### Calendar example
@@ -363,10 +367,6 @@ document.querySelector("table").addEventListener("keydown", (event) => {
 - [Data Grid Examples](https://www.w3.org/WAI/ARIA/apg/example-index/grid/dataGrids.html)
 - [Layout Grids Examples](https://www.w3.org/WAI/ARIA/apg/example-index/grid/LayoutGrids.html)
 - [W3C/WAI Tutorial: Tables](https://www.w3.org/WAI/tutorials/tables/)
-
-## Accessibility concerns
-
-Even if the keyboard use is properly implemented, some users might not be aware that they have to use the arrow keys. Make sure that the functionality and interaction needed can be best achieved using the grid role.
 
 ## Specifications
 

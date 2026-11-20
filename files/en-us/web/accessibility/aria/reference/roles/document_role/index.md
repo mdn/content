@@ -44,10 +44,6 @@ The element needs to be focusable so that assistive technologies can switch to r
 
 None.
 
-## Examples
-
-An example is Gmail and the single conversation view. GMail is a web application. When in GMail, most user agent interactions are usurped by the application. However, when the Keyboard focus is set on the starting heading on a single conversation that contains the subject of the conversation, the screen reader user can use the reading mode commands to read through the messages, expand or collapse them, and manipulate them. Once focus returns to the message list either by activating the Back button or pressing an associated keystroke, direct application interaction mode is invoked again, and the user can move to a different conversation in the list with the <kbd>arrow</kbd> keys.
-
 ## Best practices
 
 Always make sure an element with the `document` role is focusable. Setting `tabindex="0"` is the most common way to do this, but it also adds the element to the tab order, which might not match how users navigate the rest of the widget. If the containing widget manages focus with arrow keys, for example with a [roving `tabindex`](/en-US/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets#technique_1_roving_tabindex), make sure users can discover how to reach the document content and how to return to the widget afterward.
@@ -55,6 +51,10 @@ Always make sure an element with the `document` role is focusable. Setting `tabi
 ### Added benefits
 
 The document role is an easy way to indirectly control assistive technology behavior by unambiguously stating that this is content the user should read with standard screen reader commands.
+
+## Examples
+
+An example is Gmail and the single conversation view. GMail is a web application. When in GMail, most user agent interactions are usurped by the application. However, when the Keyboard focus is set on the starting heading on a single conversation that contains the subject of the conversation, the screen reader user can use the reading mode commands to read through the messages, expand or collapse them, and manipulate them. Once focus returns to the message list either by activating the Back button or pressing an associated keystroke, direct application interaction mode is invoked again, and the user can move to a different conversation in the list with the <kbd>arrow</kbd> keys.
 
 ## Specifications
 
