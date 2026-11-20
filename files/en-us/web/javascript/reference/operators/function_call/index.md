@@ -45,7 +45,7 @@ fn(arg1, arg2, /* …, */ argN)
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if `fn` is not callable, including if it's not a function (`typeof fn !== "function"`), it's a [class](/en-US/docs/Web/JavaScript/Reference/Classes), or other cases where it throws unconditionally when called (like {{jsxref("Map/Map", "Map()")}} which must be constructed with {{jsxref("Operators/new", "new")}} instead)
+  - : Thrown if `fn` is not callable, which includes cases where it isn't a function (`typeof fn !== "function"`), it's a [class](/en-US/docs/Web/JavaScript/Reference/Classes) or it throws unconditionally when called (like {{jsxref("Map/Map", "Map()")}}, which must be constructed with {{jsxref("Operators/new", "new")}} instead).
 
 - If the function is a normal function, uncaught errors thrown from the function body become errors of the call expression.
 - If the function is an async function, uncaught errors cause the returned promise to reject.
@@ -54,7 +54,7 @@ fn(arg1, arg2, /* …, */ argN)
 
 ## Description
 
-When evaluating a function call, the `fn` expression is evaluated first, and then each argument expression in order, expanding spread arguments as they are encountered. Only when all expressions are evaluated then does it check whether `fn` is callable. For example:
+When evaluating a function call, the `fn` expression is evaluated first, and then each argument expression in order, expanding spread arguments as they are encountered. Only when all expressions are evaluated does it check whether `fn` is callable. For example:
 
 ```js
 1(console.log("Hi")); // Logs "Hi"
@@ -69,7 +69,7 @@ This contrasts with [optional chaining](/en-US/docs/Web/JavaScript/Reference/Ope
 null?.(console.log("Hi")); // Nothing logged
 ```
 
-The arguments list may not match the [parameters](/en-US/docs/Web/JavaScript/Reference/Functions#function_parameters) the function has declared to accept. If fewer arguments are provided than what the function expects, those parameters get the value `undefined`. If more arguments are provided, those arguments are still evaluated and are accessible inside the function via the {{jsxref("Functions/arguments", "arguments")}} object.
+The arguments list may not match the [parameters](/en-US/docs/Web/JavaScript/Reference/Functions#function_parameters) the function has declared to accept. If fewer arguments are provided than the function expects, those parameters get the value `undefined`. If more arguments are provided, they are still evaluated and are accessible inside the function via the {{jsxref("Functions/arguments", "arguments")}} object.
 
 Arguments are always [_passed by value_](https://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_value) and never [_passed by reference_](https://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_reference). This means that if a function reassigns a parameter, the value won't change outside the function. More precisely, object arguments are [_passed by sharing_](https://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_sharing), which means if the object's properties are mutated, the change will impact the outside of the function. See the [functions guide](/en-US/docs/Web/JavaScript/Reference/Functions#passing_arguments) for more information.
 
@@ -79,7 +79,7 @@ The call expression supplies the {{jsxref("Operators/this", "this")}} context to
 
 ### Calling a normal function
 
-Normal functions return JavaScript values (which may be `undefined`) directly.
+Normal functions return JavaScript values directly (which may be `undefined`).
 
 ```js
 function completes(a, b) {
