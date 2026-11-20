@@ -16,16 +16,20 @@ The `params` field in the event notification is an object with the following fie
 - `context`
   - : A string that contains the ID of the [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts) in which the request was made, or `null` if the request wasn't made by a document in a context, for example a request made by a worker.
 - `errorText`
-  - : A string that describes the error.
-    The text is browser-specific, such as `NS_ERROR_UNKNOWN_HOST` or `net::ERR_NAME_NOT_RESOLVED` for a host name that can't be resolved, so don't rely on this value for assertions in tests.
+  - : A string that describes the error, such as `NS_ERROR_UNKNOWN_HOST` or `net::ERR_NAME_NOT_RESOLVED` for a host name that can't be resolved.
+    The text is browser-specific, so don't rely on this value for assertions in tests.
 - `isBlocked`
   - : A boolean that indicates whether the request is blocked by an [intercept](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#intercepts).
     It is always `false` for this event because no intercept phase applies to it, so the event never includes the `intercepts` field.
 - `navigation`
   - : A string that contains the [UUID](/en-US/docs/Glossary/UUID) that uniquely identifies the navigation that the request is part of, or `null` if the request isn't a navigation request.
     For example, the value is `null` when requesting a document's subresources, such as stylesheets and scripts, or when making a request with `fetch()`.
-    When a navigation fails, the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) command returns an error instead of a navigation ID, but the [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted) event for the navigation has the same ID.
-    The same ID is shared by all events related to this navigation, including navigation events in the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#events) module and other events in the [`network`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#events) module.
+
+    For a failed navigation, this field contains the navigation ID reported by the [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted) event.
+
+    If the navigation was started with [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate), the command can return an error instead of a navigation ID.
+
+    Other events related to this navigation share the same navigation ID, including events in the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#events) and [`network`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#events) modules.
 - `redirectCount`
   - : A non-negative integer that contains the number of redirects the browser has followed for this request.
     It is `0` for the original request and increases by one with each redirect.
@@ -142,16 +146,16 @@ The `params` field in the event notification is an object with the following fie
 
 ## Description
 
-In the [lifecycle of a request](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#requests), this event ends a request that fails.
+In the [lifecycle of a request](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#request_lifecycle), this is the last event for a request that fails.
 It can fire at any point after [`network.beforeRequestSent`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/beforeRequestSent), for example:
 
-- Before a response arrives, when the host name can't be resolved or the server refuses the connection
-- After [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted), when the page aborts the request while the body is arriving, for example with an {{domxref("AbortSignal")}}
+- Before a response arrives, when the browser can't resolve the host name or the server refuses the connection
+- After [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted), when the page aborts the request while the browser is still receiving the response body, for example with an {{domxref("AbortSignal")}}
 
-If you're also subscribed to `network.beforeRequestSent`, you always receive it for the request first, even when the request fails before it is sent.
-This event has no `response` field, even if `network.responseStarted` fired for the request.
+If the client is subscribed to both events, it receives `network.beforeRequestSent` before `network.fetchError`, even for a request that fails before it is sent.
+This event has no `response` field even if `network.responseStarted` fired for the request.
 
-When a navigation fails, this event has the navigation's `navigation` ID, so you can match it with the [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted) event.
+When a navigation fails, you can use this event's navigation ID to match the event with the corresponding [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted) event.
 
 ## Examples
 
@@ -218,6 +222,7 @@ In the page, the `fetch()` call rejects with a {{jsxref("TypeError")}}.
 ### Receiving an event when a navigation fails
 
 Using the same connection, session, and subscription as in the first example, assume you also have a subscription to [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted).
+
 Suppose you use [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) to load `https://example.com:59999/`, a port where no server is listening.
 
 The browser sends a `browsingContext.navigationStarted` event with the navigation ID:

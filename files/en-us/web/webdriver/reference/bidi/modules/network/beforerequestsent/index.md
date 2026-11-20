@@ -50,7 +50,7 @@ The `params` field in the event notification is an object with the following fie
   - : A string that contains the [UUID](/en-US/docs/Glossary/UUID) that uniquely identifies the navigation that the request is part of, or `null` if the request isn't a navigation request.
     For example, the value is `null` when requesting a document's subresources, such as stylesheets and scripts, or when making a request with `fetch()`.
     If the navigation was started using the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) or [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) command, this ID matches the `navigation` value in the command's response.
-    The same ID is shared by all events related to this navigation, including navigation events in the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#events) module and other events in the [`network`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#events) module.
+    Other events related to this navigation share the same navigation ID, including events in the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#events) and [`network`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#events) modules.
 - `redirectCount`
   - : A non-negative integer that contains the number of redirects the browser has followed for this request.
     It is `0` for the original request and increases by one with each redirect.
@@ -167,7 +167,7 @@ The `params` field in the event notification is an object with the following fie
 
 ## Description
 
-In the [lifecycle of a request](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#requests), this is the first event.
+In the [lifecycle of a request](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network#request_lifecycle), this is the first event.
 It is followed by the [`network.responseStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseStarted) event when the browser receives the response headers.
 The [`network.responseCompleted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/responseCompleted) event fires after the browser receives the whole response.
 If the request fails at any point, [`network.fetchError`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network/fetchError) fires as the last event for the request.
