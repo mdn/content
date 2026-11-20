@@ -476,6 +476,29 @@ The {{cssxref("corner-shape")}} shorthand property and its constituent longhand 
 - `layout.css.corner-shape.enabled`
   - : Set to `true` to enable.
 
+### `match-parent` value for `quotes`
+
+The {{cssxref("quotes", "match-parent", "#match-parent")}} value of the {{cssxref("quotes")}} CSS property is now supported in Nightly.
+
+This value makes an element use the same set of quotation-mark pairs as its parent element.
+If the parent's `quotes` value is an explicit list of pairs, the element uses quotation marks from that list.
+If it is `auto`, the element uses the set for the parent element's language.
+The specific pair of opening and closing quotation marks used depends on the nesting level of the quote.
+
+Firefox's default styles for nested {{htmlelement("q")}} elements use this value.
+As a result, a nested quote automatically uses the same quotation style as the outer quote, even when the nested quote is in a different language.
+([Firefox bug 1752382](https://bugzil.la/1752382)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 161           | No                  |
+| Beta              | 161           | No                  |
+| Release           | 161           | No                  |
+
+- `layout.css.quotes.match-parent.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
