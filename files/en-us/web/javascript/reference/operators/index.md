@@ -49,6 +49,8 @@ Left values are the destination of an assignment.
   - : Member operators provide access to a property or method of an object (`object.property` and `object["property"]`).
 - {{jsxref("Operators/Optional_chaining", "?.")}}
   - : The optional chaining operator returns `undefined` instead of causing an error if a reference is [nullish](/en-US/docs/Glossary/Nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+- [Function call](/en-US/docs/Web/JavaScript/Reference/Operators/Function_call)
+  - : Evaluates a function's body using the given arguments and returns the result.
 - {{jsxref("new")}}
   - : The `new` operator creates an instance of a constructor.
 - {{jsxref("Operators/new.target", "new.target")}}
