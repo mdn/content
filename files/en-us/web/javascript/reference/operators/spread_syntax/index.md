@@ -44,7 +44,7 @@ Spread syntax can be used when all elements from an object or array need to be i
 
 Although the syntax looks the same, they come with slightly different semantics.
 
-Only [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) values, like {{jsxref("Array")}} and {{jsxref("String")}}, can be spread in [array literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals) and argument lists. Many objects are not iterable, including all [plain objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) that lack a [`Symbol.iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method:
+Only [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) values, like {{jsxref("Array")}} and {{jsxref("String")}}, can be spread in [array initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Array_initializer) and argument lists. Many objects are not iterable, including all [plain objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) that lack a [`Symbol.iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method:
 
 ```js example-bad
 const obj = { key1: "value1" };
