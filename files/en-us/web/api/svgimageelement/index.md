@@ -25,6 +25,8 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
   - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("image")}} element.
 - {{domxref("SVGImageElement.preserveAspectRatio")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedPreserveAspectRatio")}} corresponding to the {{SVGAttr("preserveAspectRatio")}} attribute of the given {{SVGElement("image")}} element.
+- {{domxref("SVGImageElement.referrerPolicy")}}
+  - : A string reflecting the {{SVGAttr("referrerpolicy")}} attribute of the given {{SVGElement("image")}} element, which sets the referrer policy used when fetching the image.
 - {{domxref("SVGImageElement.width")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given {{SVGElement("image")}} element.
 - {{domxref("SVGImageElement.x")}} {{ReadOnlyInline}}

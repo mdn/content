@@ -42,7 +42,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGAElement.protocol")}} {{experimental_inline}}
   - : A string representing the protocol component, including trailing colon (`:`), of the referenced URL.
 - {{domxref("SVGAElement.referrerPolicy")}}
-  - : A string specifying which [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referer) to send when fetching the [URL](/en-US/docs/Glossary/URL).
+  - : A string reflecting the {{SVGAttr("referrerpolicy")}} attribute of the given {{SVGElement("a")}} element, which sets the referrer policy used when following the link.
 - {{domxref("SVGAElement.rel")}}
   - : A string reflecting the `rel` SVG attribute, specifying the relationship of the link's target.
 - {{domxref("SVGAElement.relList")}}
