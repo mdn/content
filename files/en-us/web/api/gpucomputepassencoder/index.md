@@ -36,6 +36,8 @@ A `GPUComputePassEncoder` object instance is created via the {{domxref("GPUComma
   - : Begins a debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a {{domxref("GPUComputePassEncoder.popDebugGroup", "popDebugGroup()")}} method is invoked.
 - {{domxref("GPUComputePassEncoder.setBindGroup", "setBindGroup()")}}
   - : Sets the {{domxref("GPUBindGroup")}} to use for subsequent compute commands, for a given index.
+- {{domxref("GPUComputePassEncoder.setImmediates", "setImmediates()")}}
+  - : Sets immediate data for subsequent compute commands.
 - {{domxref("GPUComputePassEncoder.setPipeline", "setPipeline()")}}
   - : Sets the {{domxref("GPUComputePipeline")}} to use for this compute pass.
 

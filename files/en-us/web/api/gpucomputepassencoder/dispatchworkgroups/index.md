@@ -40,6 +40,7 @@ None ({{jsxref("undefined")}}).
 The following criteria must be met when calling **`dispatchWorkgroups()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPUComputePassEncoder")}} becomes invalid:
 
 - `workgroupCountX`, `workgroupCountY`, and `workgroupCountZ` are all less than or equal to the {{domxref("GPUDevice")}}'s `maxComputeWorkgroupsPerDimension` {{domxref("GPUSupportedLimits", "limit", "", "nocode")}}.
+- When using immediates, every 4-byte slot of immediate data the pipeline statically uses has been set using {{domxref("GPUComputePassEncoder.setImmediates()")}}.
 
 ## Examples
 

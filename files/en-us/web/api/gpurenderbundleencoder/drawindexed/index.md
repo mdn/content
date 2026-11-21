@@ -41,6 +41,12 @@ drawIndexed(indexCount, instanceCount, firstIndex, baseVertex, firstInstance)
 
 None ({{jsxref("undefined")}}).
 
+### Validation
+
+The following criteria must be met when calling **`drawIndexed()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPURenderBundleEncoder")}} becomes invalid:
+
+- When using immediates, every 4-byte slot of immediate data the pipeline statically uses has been set using {{domxref("GPURenderBundleEncoder.setImmediates()")}}.
+
 ## Examples
 
 ```js

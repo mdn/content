@@ -20,6 +20,9 @@ The `WGSLLanguageFeatures` object is accessed via the {{domxref("GPU.wgslLanguag
 
 The following WGSL language extensions are defined at [WGSL language extensions](https://gpuweb.github.io/gpuweb/wgsl/#language-extension) in the WGSL specification. Bear in mind that the exact set of features available will vary across implementations and physical devices, and may change over time.
 
+- `immediate_address_space`
+  - : Allows immediates to be used in your WebGPU/WGSL programs — immediate data for subsequent commands that can be sent straight to a program's shader without any need to create additional buffers or manage bind groups. In WGSL, this allows variables to be declared with `var<immediate>` and bound to immediate data. See {{domxref("GPURenderPassEncoder.setImmediates()")}} for more details.
+
 - `linear_indexing`
   - : Provides the following built-in values to facilitate manual index calculation from 3D coordinates, improving WGSL code readability and eliminating common repetitive calculations in the process.
     - `global_invocation_index`: The current invocation's linear position within the total compute shader grid. A `u32` input value calculated based on the `global_invocation_id`, `workgroup_size`, and `num_workgroups`.
