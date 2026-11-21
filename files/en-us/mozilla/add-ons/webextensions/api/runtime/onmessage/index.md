@@ -64,11 +64,11 @@ Events have three functions:
 - `listener`
   - : The function called when this event occurs. The function is passed these arguments:
     - `message`
-      - : `object`. The message. This is a serializable object (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
+      - : `object`. The message. This is a serializable object (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm) and the [`message_serialization`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/message_serialization) manifest key).
     - `sender`
       - : A {{WebExtAPIRef('runtime.MessageSender')}} object representing the sender of the message.
     - `sendResponse`
-      - : A function to call, at most once, to send a response to the `message`. The function takes one argument: any serializable object (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)). This argument is passed back to the message sender.
+      - : A function to call, at most once, to send a response to the `message`. The function takes one argument: any serializable object (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm) and the [`message_serialization`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/message_serialization) manifest key). This argument is passed back to the message sender.
 
         If you have more than one `onMessage()` listener in the same document, then only one can send a response.
 

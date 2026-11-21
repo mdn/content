@@ -30,7 +30,7 @@ const sending = browser.tabs.sendMessage(
 - `tabId`
   - : `integer`. ID of the tab whose content scripts we want to send a message to.
 - `message`
-  - : `any`. An object that can be serialized (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
+  - : `any`. An object that can be serialized (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm) and the [`message_serialization`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/message_serialization) manifest key).
 - `options` {{optional_inline}}
   - : `object`.
     - `documentId` {{optional_inline}}
