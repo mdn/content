@@ -10,62 +10,15 @@ browser-compat: api.HTMLGeolocationElement.invalidReason
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-The **`invalidReason`** read-only property of the {{domxref("HTMLGeolocationElement")}} interface returns an enumerated value representing the reason why the associated {{htmlelement("geolocation")}} element is invalid (blocked), if that is the case.
+The **`invalidReason`** read-only property of the {{domxref("HTMLGeolocationElement")}} interface returns an enumerated value representing the reason why the associated {{htmlelement("geolocation")}} element is invalid, if that is the case.
 
-When a [blocker](/en-US/docs/Web/HTML/Reference/Elements/geolocation#geolocation_blocking) is active on a `<geolocation>` element, it is invalid: This means that it is prevented from functioning, either temporarily or permanently, depending on the reason.
+When a `<geolocation>` element is invalid (see [invalidation and blocking](/en-US/docs/Web/HTML/Guides/Permission_elements#validation_and_blocking)), it is prevented from functioning, either temporarily or permanently, depending on the reason.
 
-You can query the {{domxref("HTMLGeolocationElement.isValid")}} property to check whether the `<geolocation>` element is valid or not.
+You can query the {{domxref("HTMLGeolocationElement.isValid")}} property to check whether the `<geolocation>` element is valid or not, and detect when `invalidReason` or `isValid` change using the {{domxref("HTMLGeolocationElement.validationstatuschange_event", "validationstatuschange")}} event.
 
 ## Value
 
-The empty string (`""`) if the element does not have an active blocker, or one of the following values (in priority order):
-
-- `illegal_subframe`
-  - : The `<geolocation>` element is nested inside a {{htmlelement("fencedframe")}} element.
-
-    Permanent blocker.
-
-- `unsuccessful_registration`
-  - : More than three `<geolocation>` elements have been inserted into the same document.
-
-    Temporary blocker.
-
-- `recently_attached`
-  - : The `<geolocation>` element has only recently been attached to the DOM.
-
-    Expiring blocker.
-
-- `intersection_changed`
-  - : The `<geolocation>` element is being moved.
-
-    Expiring blocker.
-
-- `intersection_out_of_viewport_or_clipped`
-  - : The `<geolocation>` element is rendered outside or partially inside the viewport.
-
-    Temporary blocker.
-
-- `intersection_occluded_or_distorted`
-  - : The `<geolocation>` element is rendered completely inside the viewport, but it is obscured in some way, for example rendered behind other content.
-
-    Temporary blocker.
-
-- `style_invalid`
-  - : The `<geolocation>` element has some restricted styles applied to it (see [Styling restrictions](/en-US/docs/Web/HTML/Reference/Elements/geolocation#styling_restrictions)).
-
-    Temporary blocker.
-
-These invalid reasons are listed in priority order, from highest to lowest.
-If multiple blockers are active, the `invalidReason` value returned will be the value representing the highest-priority active blocker.
-
-Also note that the descriptions above include a "blocker type" for each invalid reason, which is one of the following:
-
-- Permanent
-  - : The `<geolocation>` element is permanently invalid until the developer updates the code to stop the blocker occurring.
-- Temporary
-  - : The `<geolocation>` element is invalid until the blocking condition no longer occurs. After that, the temporary blocker will turn into an expiring blocker.
-- Expiring
-  - : The `<geolocation>` element is invalid for a short period of time, after which it becomes valid again.
+An enumerated value representing an [invalid reason](/en-US/docs/Web/HTML/Guides/Permission_elements#invalid_reasons), or the empty string (`""`) if the element is valid.
 
 ## Examples
 
@@ -78,7 +31,7 @@ Also note that the descriptions above include a "blocker type" for each invalid 
 ```js
 const geo = document.querySelector("geolocation");
 console.log(geo.invalidReason);
-// "", provided the `<geolocation>` element is not blocked in some way
+// "", provided the `<geolocation>` element is valid
 ```
 
 ### Exploring invalid reasons

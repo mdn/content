@@ -34,9 +34,9 @@ _Also inherits properties from its parent interface, {{domxref("HTMLElement")}}.
 - {{domxref("HTMLGeolocationElement.initialPermissionStatus", "initialPermissionStatus")}} {{readonlyinline}} {{experimental_inline}} {{deprecated_inline}}
   - : An enumerated value representing the permission status for the `geolocation` feature when the page first loads.
 - {{domxref("HTMLGeolocationElement.invalidReason", "invalidReason")}} {{readonlyinline}} {{experimental_inline}}
-  - : An enumerated value representing the reason why the `<geolocation>` element is invalid ([blocked](/en-US/docs/Web/HTML/Reference/Elements/geolocation#geolocation_blocking)), if that is the case.
+  - : An enumerated value representing the reason why the `<install>` element is invalid.
 - {{domxref("HTMLGeolocationElement.isValid", "isValid")}} {{readonlyinline}} {{experimental_inline}}
-  - : A boolean value indicating whether the `<geolocation>` element is valid or invalid (blocked).
+  - : A boolean value indicating whether the `<geolocation>` element is valid or invalid.
 - {{domxref("HTMLGeolocationElement.permissionStatus", "permissionStatus")}} {{readonlyinline}} {{experimental_inline}}
   - : A string representing the current permission status for the `geolocation` feature.
 - {{domxref("HTMLGeolocationElement.position", "position")}} {{readonlyinline}} {{experimental_inline}}
@@ -59,7 +59,7 @@ _Also inherits events from its parent interface, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLGeolocationElement.promptdismiss_event", "promptdismiss")}} {{experimental_inline}}
   - : Fired whenever the user activates the `<geolocation>` element and dismisses the resulting dialog, by pressing the "close" button or the <kbd>Esc</kbd> key.
 - {{domxref("HTMLGeolocationElement.validationstatuschange_event", "validationstatuschange")}} {{experimental_inline}}
-  - : Fired whenever the `<geolocation>` element's {{domxref("HTMLGeolocationElement.isValid", "isValid")}} value changes.
+  - : Fired whenever the {{htmlelement("geolocation")}} element's validation status changes. This change is reflected in a change to the {{domxref("HTMLGeolocationElement.invalidReason", "invalidReason")}} property and, if the element has become valid or invalid, also in a change to the {{domxref("HTMLGeolocationElement.isValid", "isValid")}} property.
 
 ## Description
 
@@ -76,7 +76,7 @@ When the data request returns, the {{domxref("HTMLGeolocationElement.location_ev
 
 The {{domxref("HTMLGeolocationElement.promptaction_event", "promptaction")}} and {{domxref("HTMLGeolocationElement.promptdismiss_event", "promptdismiss")}} events allow you to respond to the user's interactions with the `<geolocation>` dialog box, for example to ask them to make a different choice if they denied permission to access the data.
 
-When a [blocker](/en-US/docs/Web/HTML/Reference/Elements/geolocation#geolocation_blocking) is active on a {{htmlelement("geolocation")}} element, it is prevented from functioning (invalid), either temporarily or permanently, depending on the reason. You can check whether it is invalid by querying the {{domxref("HTMLGeolocationElement.isValid")}} property. You can also return the reason why it is invalid via the {{domxref("HTMLGeolocationElement.invalidReason")}} property — see that page for a full list of possible reasons.
+When a {{htmlelement("geolocation")}} element is invalid (see [invalidation and blocking](/en-US/docs/Web/HTML/Guides/Permission_elements#validation_and_blocking)), it is prevented from functioning, either temporarily or permanently, depending on the reason. You can check whether it is invalid by querying the {{domxref("HTMLGeolocationElement.isValid")}} property. You can also return the reason why it is invalid via the {{domxref("HTMLGeolocationElement.invalidReason")}} property.
 
 ## Examples
 
