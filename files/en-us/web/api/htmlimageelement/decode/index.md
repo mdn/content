@@ -34,6 +34,9 @@ A {{jsxref('Promise')}} that fulfills with `undefined` once the image data is re
     - The image request changed after calling `decode()` (for example, by changing its `src`)
     - The image's data is corrupted
 
+> [!NOTE]
+> Calling `decode()` on an image with {{domxref("HTMLImageElement.loading", "loading")}} set to `"lazy"` before the image has loaded may reject with an `EncodingError` in some browsers (such as Firefox). To avoid this, wait until the image has loaded (for example, in a {{domxref("HTMLElement/load_event", "load")}} event handler) before calling `decode()`.
+
 ## Examples
 
 ### Basic usage
