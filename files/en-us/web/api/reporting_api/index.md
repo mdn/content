@@ -91,6 +91,10 @@ The mechanisms to specify server endpoints for each report type are listed below
 
 - `report-to` parameter on {{HTTPHeader("Cross-Origin-Embedder-Policy")}} or {{HTTPHeader("Cross-Origin-Embedder-Policy-Report-Only")}}
 
+`coop`
+
+- `report-to` parameter on {{HTTPHeader("Cross-Origin-Opener-Policy")}} or {{HTTPHeader("Cross-Origin-Opener-Policy-Report-Only")}}
+
 `csp-violation`
 
 - {{CSP("report-to")}} directive on {{HTTPHeader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
