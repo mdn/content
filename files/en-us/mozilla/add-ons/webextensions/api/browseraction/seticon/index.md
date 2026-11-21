@@ -27,7 +27,7 @@ let settingIcon = browser.browserAction.setIcon(
 ### Parameters
 
 - `details`
-  - : `object`. An object containing the `imageData` or `path` property and, optionally, either or both of the `tabId` and `windowId` properties.
+  - : `object`. An object containing the `imageData`, `path`, or `variants` property and, optionally, either or both of the `tabId` and `windowId` properties.
     - `imageData` {{optional_inline}}
       - : {{WebExtAPIRef('browserAction.ImageDataType')}} or `object`. This is either a single `ImageData` object or a dictionary object.
 
@@ -42,7 +42,7 @@ let settingIcon = browser.browserAction.setIcon(
         });
         ```
 
-        The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
+        The browser will choose the image to use depending on the display's pixel density. See [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons) for more information on this.
 
     - `path` {{optional_inline}}
       - : `string` or `object`. This is either a relative path to an icon file or it is a dictionary object.
@@ -58,7 +58,26 @@ let settingIcon = browser.browserAction.setIcon(
         });
         ```
 
-        The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
+        The browser will choose the image to use depending on the display's pixel density. See [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons) for more information on this.
+
+    - `variants` {{optional_inline}}
+      - : `Array` of {{WebExtAPIRef("extensionTypes.IconVariant")}}. Each icon group can have matching criteria, such as `colorSchemes`. The browser uses the first icon group whose criteria match, for example its active color scheme, then picks the icon that best fits the required size. The active color scheme can differ from the device's color scheme, for example when the browser toolbar is dark. If `variants` is present, the browser ignores `path` and `imageData`.
+
+        ```js
+        let settingIcon = browser.browserAction.setIcon({
+          variants: [
+            {
+              16: "icons/dark-16.png",
+              32: "icons/dark-32.png",
+              colorSchemes: ["dark"],
+            },
+            {
+              16: "icons/light-16.png",
+              32: "icons/light-32.png",
+            },
+          ],
+        });
+        ```
 
     - `tabId` {{optional_inline}}
       - : `integer`. Sets the icon only for the given tab. The icon is reset when the user navigates this tab to a new page.
@@ -70,7 +89,7 @@ let settingIcon = browser.browserAction.setIcon(
 - If `windowId` and `tabId` are both supplied, the function fails and the icon is not set.
 - If `windowId` and `tabId` are both omitted, the global icon is set.
 
-If each one of `imageData` and `path` is one of `undefined`, `null` or empty object:
+If each one of `imageData`, `path` and `variants` is one of `undefined`, `null` or empty:
 
 - If `tabId` is specified, and the tab has a tab-specific icon set, then the tab will inherit the icon from the window to which it belongs.
 - If `windowId` is specified, and the window has a window-specific icon set, then the window will inherit the global icon.

@@ -114,6 +114,8 @@ The `browser_action` key is an object that may have any of the following propert
 - `default_title` {{optional_inline}}
   - : `String`. Tooltip for the button, displayed when the user moves their mouse over it. If the button is added to the browser's menu panel, this is also shown under the app icon. This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
+- `icon_variants` {{optional_inline}}
+  - : `Array`. A list of icon groups for the button, each with optional matching criteria such as `color_schemes`. It has the same format as the top-level [`icon_variants`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icon_variants) key and takes precedence over `default_icon`.
 - `theme_icons` {{optional_inline}}
   - : `Array`. This property enables you to specify different icons for themes depending on whether Firefox detects that the theme uses dark or light text. If present, it's an array containing at least one `ThemeIcons` object. A ThemeIcons object contains three mandatory properties:
     - `"dark"`

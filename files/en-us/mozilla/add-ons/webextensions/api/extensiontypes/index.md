@@ -10,6 +10,8 @@ Some common types used in other WebExtension APIs.
 
 ## Types
 
+- {{WebExtAPIRef("extensionTypes.IconVariant")}}
+  - : A set of icons for one or more color schemes.
 - {{WebExtAPIRef("extensionTypes.ImageDetails")}}
   - : Details about the format and quality of an image.
 - {{WebExtAPIRef("extensionTypes.ImageFormat")}}
