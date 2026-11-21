@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.cancel_event
 
 {{APIRef("HTML DOM")}}
 
-The **`cancel`** event fires on an {{HTMLElement("input")}} element when the user cancels the file picker dialog via the <kbd>Esc</kbd> key or the cancel button and when the user re-selects the same files that were previously selected of `type="file"`.
+The **`cancel`** event fires on an {{HTMLElement("input")}} element of `type="file"` when the user cancels the file picker dialog via the <kbd>Esc</kbd> key or the cancel button.
 
 This event is not cancelable but can bubble.
 
@@ -71,7 +71,7 @@ elem.addEventListener("change", () => {
 
 {{ EmbedLiveSample('Canceling an input element', '100%', '100px') }}
 
-Open the file selector, then close the selection dialog with the escape key or the cancel button. Both of these will cause the cancel event to be fired. Also, try selecting a local file on your machine; then reopen the file selection window and reselect the same file. This too causes the cancel event to be fired.
+Open the file selector, then close the selection dialog with the escape key or the cancel button. Both of these will cause the cancel event to be fired.
 
 ## Specifications
 

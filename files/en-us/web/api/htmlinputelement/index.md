@@ -226,7 +226,7 @@ _Also inherits events from its parent interface, {{domxref("HTMLElement")}}._
 Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface:
 
 - {{domxref("HTMLInputElement/cancel_event", "cancel")}} event
-  - : Fired when the user cancels the file picker dialog via the <kbd>Esc</kbd> key or the cancel button and when the user re-selects the same files that were previously selected.
+  - : Fired when the user cancels the file picker dialog via the <kbd>Esc</kbd> key or the cancel button.
 - {{domxref("HTMLInputElement/invalid_event", "invalid")}} event
   - : Fired when an element does not satisfy its constraints during constraint validation.
 - {{domxref("HTMLInputElement/search_event", "search")}} event {{Non-standard_Inline}}
