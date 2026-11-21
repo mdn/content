@@ -8,7 +8,33 @@ sidebar: addonsidebar
 
 Match patterns are a way to specify groups of URLs: a match pattern matches a specific set of URLs. They are used in WebExtensions APIs in a few places, most notably to specify which documents to load [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) into, and to specify which URLs to add [`webRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) listeners to.
 
-APIs that use match patterns usually accept a list of match patterns, and will perform the appropriate action if the URL matches any of the patterns. See, for example, the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key in manifest.json.
+APIs that use match patterns usually accept a list of match patterns, and perform the appropriate action if the URL matches any of the patterns. See, for example, the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key in manifest.json.
+
+## Where match patterns are used
+
+Match patterns are used in several places across the manifest.json keys and JavaScript APIs:
+
+- Manifest keys:
+  - [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) and [`optional_host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions), to request access to hosts.
+  - [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions), which can include host permissions alongside named API permissions (Manifest V2).
+    > [!NOTE]
+    > Specifying match patterns in `optional_permissions` is supported [but deprecated](https://bugzil.la/1897580) in Manifest V3 in Firefox only.
+  - The `matches` and `exclude_matches` fields of [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) entries.
+  - The `matches` field of [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources#manifest_v3_syntax) entries (Manifest V3 only).
+  - The `show_matches` and `hide_matches` fields of [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action).
+  - The `matches` field of [`externally_connectable`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable).
+- JavaScript APIs:
+  - The `origins` property of the {{WebExtAPIRef("permissions.Permissions")}} object passed to {{WebExtAPIRef("permissions.request()")}} and returned by other {{WebExtAPIRef("permissions")}} methods.
+  - The `matches` and `excludeMatches` properties of the {{WebExtAPIRef("scripting.RegisteredContentScript")}} object passed to {{WebExtAPIRef("scripting.registerContentScripts()")}} and {{WebExtAPIRef("scripting.updateContentScripts()")}}, and returned by {{WebExtAPIRef("scripting.getRegisteredContentScripts()")}}.
+  - The `matches` and `excludeMatches` properties of the {{WebExtAPIRef("userScripts.RegisteredUserScript")}} object passed to {{WebExtAPIRef("userScripts.register()")}} and {{WebExtAPIRef("userScripts.update()")}}, and returned by {{WebExtAPIRef("userScripts.getScripts()")}}.
+  - The `matches` and `excludeMatches` properties passed to {{WebExtAPIRef("contentScripts.register()")}}.
+  - The `documentUrlPatterns` and `targetUrlPatterns` properties passed to {{WebExtAPIRef("menus.create()")}} and {{WebExtAPIRef("menus.update()")}}.
+  - The `urls` property of the {{WebExtAPIRef("webRequest.RequestFilter")}} object, used to filter `webRequest` events and also reused by {{WebExtAPIRef("proxy.onRequest")}}.
+  - The `urls` property of the filter object passed to {{WebExtAPIRef("tabs.onUpdated")}}.
+  - The `url` property of the object passed to {{WebExtAPIRef("tabs.query()")}}.
+
+> [!NOTE]
+> The [`events.UrlFilter`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/events/UrlFilter) object, used for example to filter `webNavigation` events, looks similar. However, it uses a different mechanism. It matches against URL components using properties such as `hostContains` and `urlMatches` (a regular expression), rather than match pattern syntax.
 
 ## Match pattern structure
 
@@ -21,6 +47,8 @@ All match patterns are specified as strings. Apart from the special [`<all_urls>
 ```plain
 <scheme>://<host><path>
 ```
+
+URLs that don't start with `<scheme>://` are matched by patterns of the form `<scheme>:<path>`. For example, `data:*` matches all data URLs, but `data://*` does not. Such patterns are mainly useful in [APIs that accept any scheme](#apis_that_accept_any_scheme).
 
 ### scheme
 
@@ -37,20 +65,43 @@ The _scheme_ component may take one of two forms:
     <tr>
       <td><code>*</code></td>
       <td>
-        Only "http" and "https" and in some browsers also
-        <a href="/en-US/docs/Web/API/WebSockets_API">"ws" and "wss"</a>.
+        All browsers match "http" and "https".<br>
+        Firefox also matches <a href="/en-US/docs/Web/API/WebSockets_API">"ws" and "wss"</a>.
       </td>
     </tr>
     <tr>
       <td>
         One of <code>http</code>, <code>https</code>, <code>ws</code>,
-        <code>wss</code>, <code>ftp</code>, <code>data</code>,
-        <code>file</code>, or <code>(chrome-)extension</code>.
+   <code>wss</code>, <code>ftp</code>, <code>data</code>, or
+   <code>file</code>.
       </td>
-      <td>Only the given scheme.</td>
+      <td>Only the given scheme, where:
+        <ul>
+          <li>Firefox supports "http", "https", "ws", "wss", "file", and "ftp".
+          </li>
+          <li>Chrome supports "http", "https", "ws", "wss", "file", and "ftp".
+          </li>
+          <li>Safari supports "http" and "https".
+          </li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
+
+#### APIs that accept any scheme
+
+Some APIs accept match patterns with any validly formatted scheme, not only the schemes listed in the table:
+
+- `url` in {{WebExtAPIRef("tabs.query()")}}.
+- `targetUrlPatterns` in {{WebExtAPIRef("menus.create()")}} and {{WebExtAPIRef("menus.update()")}}.
+- `documentUrlPatterns` in {{WebExtAPIRef("menus.create()")}} and {{WebExtAPIRef("menus.update()")}} (Chrome only).
+- The `urls` filter in {{WebExtAPIRef("tabs.onUpdated")}} (Firefox desktop only).
+- `matches` in the [`externally_connectable`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable) and [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) manifest keys (Chrome only).
+
+For example, you can use these APIs to find tabs with `about:` or `blob:` URLs, or to show a context menu item for `magnet:` links.
+
+Content scripts can't match `about:`, `data:`, or `blob:` documents by their URL. To run a content script in these documents, use [`match_origin_as_fallback`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#match_origin_as_fallback) (or [`matchOriginAsFallback`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting/RegisteredContentScript#matchoriginasfallback) in the `scripting` API), which matches the document's origin instead.
 
 ### host
 
@@ -69,11 +120,11 @@ The _host_ component may take one of these forms:
       <td>Any host.</td>
     </tr>
     <tr>
-      <td><code>*.</code> followed by part of the hostname, optionally, including a port.</td>
+      <td><code>*.</code> followed by part of the hostname, optionally including a port.</td>
       <td>The given host (and port) and any of its subdomains.</td>
     </tr>
     <tr>
-      <td>A complete hostname, without wildcards, optionally, including a port.</td>
+      <td>A complete hostname, without wildcards, optionally including a port.</td>
       <td>Only the host (and port).</td>
     </tr>
   </tbody>
@@ -92,13 +143,22 @@ The _path_ component must begin with a `/`.
 
 After that, it may subsequently contain any combination of the `*` wildcard and any of the characters that are allowed in URL paths or query strings. Unlike _host_, the _path_ component may contain the `*` wildcard in the middle or at the end, and the `*` wildcard may appear more than once.
 
-The value for the _path_ matches against the string which is the URL path plus the [URL query string](https://en.wikipedia.org/wiki/Query_string). This includes the `?` between the two, if the query string is present in the URL. For example, if you want to match URLs on any domain where the URL path ends with `foo.bar`, then you need to use an array of Match Patterns like `["*://*/*foo.bar", "*://*/*foo.bar?*"]`. The `?*` is needed, rather than just `bar*`, in order to anchor the ending `*` as applying to the URL query string and not some portion of the URL path.
+The value for _path_ matches the string that is the URL path plus the [URL query string](https://en.wikipedia.org/wiki/Query_string). This includes the `?` between the two, if the query string is present in the URL. For example, if you want to match URLs on any domain where the URL path ends with `foo.bar`, then you need to use an array of Match Patterns like `["*://*/*foo.bar", "*://*/*foo.bar?*"]`. The `?*` is needed, rather than just `bar*`, to anchor the ending `*` to the URL query string and not some portion of the URL path.
 
-Neither the [URL fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) nor the `#` that precedes it are considered as part of the _path_ and are ignored during pattern matching. A match pattern containing `#` will fail to match with any URL.
+Neither the [URL fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) nor the `#` that precedes it are considered part of the _path_ and are ignored during pattern matching. A match pattern containing `#` fails to match any URL.
 
 ### \<all_urls>
 
-The special value `<all_urls>` matches all URLs under any of the supported schemes: that is "http", "https", "ws", "wss", "ftp", "data", and "file".
+The special value `<all_urls>` matches all URLs with these schemes:
+
+- **Firefox** and **Chrome**: matches "http", "https", "ws", "wss", "ftp", and "file". In [APIs that accept any scheme](#apis_that_accept_any_scheme), it matches URLs with any scheme.
+- **Safari** only matches "http" and "https".
+
+> [!NOTE]
+> Access to `file://` URLs requires a user permission grant beyond declaring `<all_urls>` or a `file://` match pattern:
+>
+> - In Chrome, the user must enable "Allow access to file URLs" for the extension on the `chrome://extensions` page.
+> - In Firefox 153 and later, the user must enable "Access local files on your computer". See {{WebExtAPIRef("extension.isAllowedFileSchemeAccess")}} for more information.
 
 ## Examples
 
@@ -133,7 +193,7 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
     <tr>
       <td>
         <p><code>*://*/*</code></p>
-        <p>Match all HTTP, HTTPS and WebSocket URLs.</p>
+        <p>Match all HTTP, HTTPS, and WebSocket URLs.</p>
       </td>
       <td>
         <p><code>http://example.org/</code></p>
@@ -150,7 +210,7 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
       <td>
         <p><code>*://*.mozilla.org/*</code></p>
         <p>
-          Match all HTTP, HTTPS and WebSocket URLs that are hosted at
+          Match all HTTP, HTTPS, and WebSocket URLs that are hosted at
           "mozilla.org" or one of its subdomains.
         </p>
       </td>
@@ -173,7 +233,7 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
       <td>
         <p><code>*://mozilla.org/</code></p>
         <p>
-          Match all HTTP, HTTPS and WebSocket URLs that are hosted at exactly
+          Match all HTTP, HTTPS, and WebSocket URLs that are hosted at exactly
           "mozilla.org/".
         </p>
       </td>
@@ -220,7 +280,7 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
     <tr>
       <td>
         <p><code>https://*/path</code></p>
-        <p>Match HTTPS URLs on any host, whose path is "path".</p>
+        <p>Match HTTPS URLs on any host whose path is "path".</p>
       </td>
       <td>
         <p><code>https://mozilla.org/path</code></p>
@@ -242,7 +302,7 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
       <td>
         <p><code>https://*/path/</code></p>
         <p>
-          Match HTTPS URLs on any host, whose path is "path/" and which has no
+          Match HTTPS URLs on any host whose path is "path/" and which has no
           URL query string.
         </p>
       </td>
@@ -298,7 +358,7 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
         <p><code>https://mozilla.org/*/b/*/</code></p>
         <p>
           Match HTTPS URLs hosted on "mozilla.org", whose path contains a
-          component "b" somewhere in the middle. Will match URLs with query
+          component "b" somewhere in the middle. Matches URLs with query
           strings, if the string ends in a <code>/</code>.
         </p>
       </td>

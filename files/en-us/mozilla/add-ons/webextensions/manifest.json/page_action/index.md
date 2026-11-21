@@ -135,7 +135,7 @@ The `page_action` key is an object that may have any of three properties, all op
     This shows the page action by default for all HTTPS URLs under the `"mozilla.org"` domain, except for pages under `"developer.mozilla.org"`.
 
 - `show_matches` {{optional_inline}}
-  - : `Array` of `MatchPattern`. Show the page action by default for pages whose URLs match any of the given patterns. See also `hide_matches`.
+  - : `Array` of `string`. Show the page action by default for pages whose URLs match any of the given [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). See also `hide_matches`.
 
 - `pinned` {{optional_inline}} {{deprecated_inline}}
   - : `Boolean`. Optional. Defaults to `true`. Controls whether or not the page action should appear in the location bar by default when the user installs the extension. This property is no longer supported since Firefox 89.
