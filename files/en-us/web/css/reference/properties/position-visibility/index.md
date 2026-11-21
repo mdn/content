@@ -14,8 +14,8 @@ The **`position-visibility`** [CSS](/en-US/docs/Web/CSS) property enables condit
 ```css
 /* Single values */
 position-visibility: always;
-position-visibility: anchors-valid;
-position-visibility: anchors-visible;
+position-visibility: anchor-valid;
+position-visibility: anchor-visible;
 position-visibility: no-overflow;
 
 /* Global values */
@@ -32,9 +32,9 @@ This property is specified as one of the following keyword values:
 
 - `always`
   - : The positioned element is always displayed.
-- `anchors-valid`
+- `anchor-valid`
   - : If the positioned element's {{cssxref("position-anchor")}} value doesn't point to a valid anchor element, the positioned element will be strongly hidden.
-- `anchors-visible`
+- `anchor-visible`
   - : If the anchor is completely hidden, either by overflowing its containing element (or the viewport) or being covered by other elements, the positioned element will be strongly hidden.
 - `no-overflow`
   - : If the positioned element starts to overflow its containing element or the viewport, it will be strongly hidden.
@@ -45,8 +45,8 @@ In some situations, you might not want to display an anchor-positioned element. 
 
 The `position-visibility` property can be used to `always` show the anchor-positioned element, or conditionally hide it in certain situations:
 
-- `anchors-visible`: The associated anchor element is completely hidden.
-- `anchors-valid`: The anchor-positioned element's `position-anchor` property doesn't reference a valid {{cssxref("anchor-name")}} set on an anchor element in the same document.
+- `anchor-visible`: The associated anchor element is completely hidden.
+- `anchor-valid`: The anchor-positioned element's `position-anchor` property doesn't reference a valid {{cssxref("anchor-name")}} set on an anchor element in the same document.
 - `no-overflow`: The anchor-positioned element is partially or completely hidden.
 
 When an element is hidden due to `position-visibility`, it is referred to as **strongly hidden**. This means that it will act as though it and its descendant elements have a {{cssxref("visibility")}} value of `hidden` set, regardless of what their actual visibility value is.
@@ -129,12 +129,12 @@ We specify two {{htmlelement("div")}} elements: an anchor element with a class o
         checked />
     </div>
     <div>
-      <label for="radio-anchors-visible">anchors-visible</label>
+      <label for="radio-anchor-visible">anchor-visible</label>
       <input
         type="radio"
-        id="radio-anchors-visible"
+        id="radio-anchor-visible"
         name="position-visibility"
-        value="anchors-visible" />
+        value="anchor-visible" />
     </div>
     <div>
       <label for="radio-no-overflow">no-overflow</label>
@@ -221,7 +221,7 @@ function setPositionVisibility(e) {
 
 #### Result
 
-Select different `position-visibility` values and then scroll the page up and down to see their effects. With `position-visibility: always` set, the positioned element will not be hidden. With `position-visibility: anchors-visible` set, the positioned element will only be visible when the anchor is partially or fully on-screen. With `position-visibility: no-overflow` set, the positioned element will be hidden as soon as it starts to overflow the viewport.
+Select different `position-visibility` values and then scroll the page up and down to see their effects. With `position-visibility: always` set, the positioned element will not be hidden. With `position-visibility: anchor-visible` set, the positioned element will only be visible when the anchor is partially or fully on-screen. With `position-visibility: no-overflow` set, the positioned element will be hidden as soon as it starts to overflow the viewport.
 
 {{ EmbedLiveSample("Basic usage", "100%", "180") }}
 
