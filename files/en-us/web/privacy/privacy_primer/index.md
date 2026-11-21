@@ -46,8 +46,8 @@ Websites should collect only personal data that the user wishes to provide, and 
 
 When requesting data, websites should:
 
-- Clearly explain what they are asking for and how it will be used.
-- Design user interfaces that honestly attempt to discover the user's true intent. This means that user interfaces should not attempt to manipulate users into sharing more data than they really intend to, for example by making it easier to share data than not to share it, or by asking users to agree to terms that they could not be expected to understand.
+- [Be transparent](https://w3ctag.github.io/privacy-principles/#transparency): that is, clearly explain what they are asking for and how it will be used.
+- [Gain consent](https://w3ctag.github.io/privacy-principles/#consent-principles): that is, design user interfaces that honestly attempt to discover the user's true intent. This means that user interfaces should not attempt to manipulate users into sharing more data than they really intend to, for example by making it easier to share data than not to share it, or by asking users to agree to terms that they could not be expected to understand.
 
 ### Using personal data
 
@@ -122,6 +122,8 @@ Websites typically implement cross-context tracking using [third-party cookies](
 Most web browsers implement some form of tracking prevention. Although the details are not always the same, tracking prevention policies broadly follow the principles outlined above. That is, browsers try to prevent unsanctioned tracking as much as possible, and all cross-context tracking, except in specific legitimate cases.
 
 This means that, by following the principles listed above, sites can ensure that they work in as many browsers as possible.
+
+See [Tracking](/en-US/docs/Web/Privacy/Tracking) for an extended discussion of tracking techniques and browser defenses against them.
 
 ## See also
 
