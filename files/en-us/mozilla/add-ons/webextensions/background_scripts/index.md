@@ -269,6 +269,12 @@ In your extension's `manifest.json` file, change the persistent property of [`"b
 }
 ```
 
+In order to access functions from `browser.storage.session`, you will also need to add the permission "storage":
+
+```json
+"permissions": […, "storage"]
+```
+
 ### Move event listeners
 
 Listeners must be at the top-level to activate the background script if an event is triggered. Registered listeners may need to be restructured to the synchronous pattern and moved to the top-level.
