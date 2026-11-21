@@ -28,10 +28,12 @@ In addition to the basic MathML global attributes, the following global attribut
   - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicating the directionality of the MathML element. It can have the following values:
     - `ltr`, which means _left to right_ and is used to render mathematical expressions from the left to the right (e.g., English or Moroccan style);
     - `rtl`, which means _right to left_ and is used to render mathematical expressions from the right to the left (e.g., Maghreb or Machrek style);
-- [`displaystyle`](/en-US/docs/Web/MathML/Reference/Global_attributes/displaystyle):
+- [`displaystyle`](/en-US/docs/Web/MathML/Reference/Global_attributes/displaystyle)
   - : A boolean setting the [math-style](/en-US/docs/Web/CSS/Reference/Properties/math-style) for the element.
     - `true`, which means `normal`.
     - `false`, which means `compact`.
+- [`drawable`](/en-US/docs/Web/MathML/Reference/Global_attributes/drawable) {{experimental_inline}}
+  - : Marks a MathML element as a **paint root**, meaning that it can be rendered independently on a parent {{htmlelement("canvas")}} element with its [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute set to `drawable`, using the [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API).
 - [`id`](/en-US/docs/Web/MathML/Reference/Global_attributes/id)
   - : Defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).
 - [`mathbackground`](/en-US/docs/Web/MathML/Reference/Global_attributes/mathbackground)

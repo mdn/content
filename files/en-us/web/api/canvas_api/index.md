@@ -9,7 +9,7 @@ browser-compat: html.elements.canvas
 
 The **Canvas API** provides a means for drawing graphics via [JavaScript](/en-US/docs/Web/JavaScript) and the [HTML](/en-US/docs/Web/HTML) {{HtmlElement("canvas")}} element. Among other things, it can be used for animation, game graphics, data visualization, photo manipulation, and real-time video processing.
 
-The Canvas API largely focuses on 2D graphics. The [WebGL API](/en-US/docs/Web/API/WebGL_API), which also uses the `<canvas>` element, draws hardware-accelerated 2D and 3D graphics.
+The Canvas API largely focuses on 2D graphics. The [WebGL](/en-US/docs/Web/API/WebGL_API) and [WebGPU](/en-US/docs/Web/API/WebGPU_API) APIs, which also use the `<canvas>` element, draw hardware-accelerated 2D and 3D graphics.
 
 ## Accessibility concerns
 
@@ -107,4 +107,6 @@ The Canvas API is extremely powerful, but not always simple to use. The librarie
 
 ## See also
 
-- [WebGL](/en-US/docs/Web/API/WebGL_API)
+- [WebGL API](/en-US/docs/Web/API/WebGL_API)
+- [WebGPU API](/en-US/docs/Web/API/WebGPU_API)
+- [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API)

@@ -44,6 +44,8 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
   - : A string, reflecting the `dir` global attribute, representing the directionality of the element. Possible values are `"ltr"`, `"rtl"`, and `"auto"`.
 - {{DOMxRef("HTMLElement.draggable")}}
   - : A boolean value indicating if the element can be dragged.
+- {{DOMxRef("HTMLElement.drawable")}}
+  - : Marks an element as a **paint root**, meaning that it can be rendered independently on a parent {{htmlelement("canvas")}} element with its [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute set to `drawable`, using the [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API).
 - {{DOMxRef("HTMLElement.editContext")}} {{experimental_inline}}
   - : Returns the {{DOMxRef("EditContext")}} associated with the element, or `null` if there isn't one.
 - {{DOMxRef("HTMLElement.enterKeyHint")}}
