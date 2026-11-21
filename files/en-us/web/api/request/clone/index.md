@@ -10,16 +10,14 @@ browser-compat: api.Request.clone
 
 The **`clone()`** method of the {{domxref("Request")}} interface creates a copy of the current `Request` object.
 
+The main reason `clone()` exists is to allow multiple uses of body objects (when they are one-use only). If you intend to modify the request, you may prefer the {{domxref("Request")}} constructor.
+
 Like the underlying {{domxref("ReadableStream.tee")}} api,
 the {{domxref("Request.body", "body")}} of a cloned `Request`
 will signal backpressure at the rate of the _faster_ consumer of the two bodies,
 and unread data is enqueued internally on the slower consumed `body`
 without any limit or backpressure.
 Beware when you construct a `Request` from a stream and then `clone` it.
-
-`clone()` throws a {{jsxref("TypeError")}} if the request body has already been used. In fact, the main reason `clone()` exists is to allow multiple uses of body objects (when they are one-use only.)
-
-If you intend to modify the request, you may prefer the {{domxref("Request")}} constructor.
 
 ## Syntax
 
@@ -34,6 +32,11 @@ None.
 ### Return value
 
 A {{domxref("Request")}} object, which is an exact copy of the `Request` that `clone()` was called on.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the request body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
 
 ## Examples
 
