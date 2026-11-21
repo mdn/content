@@ -179,7 +179,7 @@ In this snippet, the video track referenced by `videoTrack` is updated so that i
 
 ## Retrieving current constraints and settings
 
-It's important to remember the difference between **constraints** and **settings**. Constraints are a way to specify what values you need, want, and are willing to accept for the various constrainable properties (as described in the documentation for {{domxref("MediaTrackConstraints")}}), while settings are the actual values of each constrainable property at the current time.
+It's important to remember the difference between **constraints** and **settings**. Constraints are a way to specify what values you need, want, and are willing to accept for the various constrainable properties (as described in the documentation for {{domxref("MediaStreamTrack.getConstraints()")}}), while settings are the actual values of each constrainable property at the current time.
 
 ### Getting the constraints in effect
 
@@ -193,7 +193,7 @@ function switchCameras(track, camera) {
 }
 ```
 
-This function accepts a {{domxref("MediaStreamTrack")}} and a string indicating the camera facing mode to use, fetches the current constraints, sets the value of the {{domxref("MediaTrackConstraints.facingMode")}} to the specified value, then applies the updated constraint set.
+This function accepts a {{domxref("MediaStreamTrack")}} and a string indicating the camera facing mode to use, fetches the current constraints, sets the value of the [`facingMode`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#facingmode) to the specified value, then applies the updated constraint set.
 
 ### Getting the current settings for a track
 
@@ -331,7 +331,7 @@ const audioDefaultConstraintString =
 
 These defaults ask for a pretty common camera configuration, but don't insist on any property being of special importance. The browser should do its best to match these settings but will settle for anything it considers a close match.
 
-Then we initialize the variables which will hold the {{domxref("MediaTrackConstraints")}} objects for the video and audio tracks, as well as the variables which will hold references to the video and audio tracks themselves, to `null`.
+Then we initialize the variables which will hold the constraints objects for the video and audio tracks, as well as the variables which will hold references to the video and audio tracks themselves, to `null`.
 
 ```js
 let videoConstraints = null;
@@ -397,7 +397,7 @@ This gets called after the stream first starts up, as well as any time we've app
 
 ### Building the track constraint set objects
 
-The `buildConstraints()` function builds the {{domxref("MediaTrackConstraints")}} objects for the audio and video tracks using the code in the two tracks' constraint set edit boxes.
+The `buildConstraints()` function builds the constraints objects for the audio and video tracks using the code in the two tracks' constraint set edit boxes.
 
 ```js
 function buildConstraints() {
@@ -454,7 +454,7 @@ function startVideo() {
 
 There are several steps here:
 
-1. It calls `buildConstraints()` to create the {{domxref("MediaTrackConstraints")}} objects for the two tracks from the code in the edit boxes.
+1. It calls `buildConstraints()` to create the constraints objects for the two tracks from the code in the edit boxes.
 2. It calls {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}}, passing in the constraints objects for the video and audio tracks. This returns a {{domxref("MediaStream")}} with the audio and video from a source matching the inputs (typically a webcam, although if you provide the right constraints you can get media from other sources).
 3. When the stream is obtained, it's attached to the {{HTMLElement("video")}} element so that it's visible on screen, and we grab the audio track and video track into the variables `audioTrack` and `videoTrack`.
 4. Then we set up a promise which resolves when the {{domxref("HTMLMediaElement/loadedmetadata_event", "loadedmetadata")}} event occurs on the video element.
@@ -473,7 +473,7 @@ document.getElementById("startButton").addEventListener("click", () => {
 
 Next, we set up an event listener for the "Apply Constraints" button. If it's clicked and there's not already media in use, we call `startVideo()`, and let that function handle starting the stream with the specified settings in place. Otherwise, we follow these steps to apply the updated constraints to the already-active stream:
 
-1. `buildConstraints()` is called to construct updated {{domxref("MediaTrackConstraints")}} objects for the audio track (`audioConstraints`) and the video track (`videoConstraints`).
+1. `buildConstraints()` is called to construct updated constraints objects for the audio track (`audioConstraints`) and the video track (`videoConstraints`).
 2. {{domxref("MediaStreamTrack.applyConstraints()")}} is called on the video track (if there is one) to apply the new `videoConstraints`. If this succeeds, the contents of the video track's current settings box are updated based on the result of calling its {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} method.
 3. Once that's done, `applyConstraints()` is called on the audio track (if there is one) to apply the new audio constraints. If this succeeds, the contents of the audio track's current settings box are updated based on the result of calling its {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} method.
 4. If an error occurs applying either set of constraints, `handleError()` is used to output a message into the log.
@@ -605,7 +605,6 @@ Here you can see the complete example in action.
 ## See also
 
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
-- {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaStreamTrack.applyConstraints()")}}
 - {{domxref("MediaStreamTrack.getSettings()")}}

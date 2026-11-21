@@ -39,7 +39,7 @@ getUserMedia(constraints)
       If one cannot be included for any reason, the returned promise will reject.
     - If `false` is specified for a media type, the resulting stream _must not_ have that type of track, or the returned promise will reject.
       Because both `video` and `audio` default to `false`, if the `constraints` object contains neither property or if it's not present at all, the returned promise will always reject.
-    - If an object is specified for a media type, the object is read as a {{domxref("MediaTrackConstraints")}} dictionary.
+    - If an object is specified for a media type, the object is read as a [`MediaTrackConstraints`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#return_value) dictionary.
 
 ### Return value
 
@@ -214,7 +214,7 @@ getUserMedia({
 
 The browser will try to honor the constraints, and will return a matching track if supported by the underlying hardware.
 If not supported, the browser may attempt to crop and downscale a higher resolution stream from the underlying hardware in order to match the constraint (and might also reduce the frame rate if that was constrained).
-This behavior can be forced by setting the [`resizeMode`](/en-US/docs/Web/API/MediaTrackConstraints#resizemode) constraint to `crop-and-scale` (or disabled by setting it to `none`):
+This behavior can be forced by setting the [`resizeMode`](/en-US/docs/Web/API/MediaStreamTrack/getConstraints#resizemode) constraint to `crop-and-scale` (or disabled by setting it to `none`):
 
 ```js
 getUserMedia({
