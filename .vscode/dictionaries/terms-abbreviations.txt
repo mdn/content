@@ -148,6 +148,7 @@ datestamped
 DBFS
 DCDM
 debiased
+decapsulation
 decodability
 Deinonychus
 demi
