@@ -8,13 +8,20 @@ sidebar: addonsidebar
 
 Add items to the browser's menu system.
 
-This API is modeled on Chrome's ["contextMenus"](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) API, which enables Chrome extensions to add items to the browser's context menu. The `browser.menus` API adds a few features to Chrome's API.
+This API is modeled on Chrome's [`contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) API, which enables extensions to add items to the browser's context menu. The `menus` API also provides additional functionality.
 
-Before Firefox 55 this API was also originally named `contextMenus`, and that name has been retained as an alias, so you can use `contextMenus` to write code that works in Firefox and also in other browsers.
+## Namespace compatibility
 
-To use this API you need to have the `menus` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). You may also use the `contextMenus` alias instead of `menus`, but if you do, the APIs must be accessed as `browser.contextMenus` instead.
+This API is available through the `menus` and `contextMenus` namespaces. The namespaces expose the same API unless otherwise stated, but their availability and required permissions vary by browser.
 
-Except for [`menus.getTargetElement()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement), this API cannot be used from content scripts.
+- The `menus` namespace, used with the `menus` permission, is supported in Firefox and Safari.
+- The `contextMenus` namespace, used with the `contextMenus` permission, is supported across browsers, including Firefox.
+
+In Firefox, `contextMenus` is an alias for `menus`. Most methods, events, and types documented on this page are available through either namespace. Exceptions are documented on the relevant reference pages.
+
+The `menus.getTargetElement()` method is available in content scripts when the extension has the `menus` permission. The `contextMenus` namespace is not available in content scripts.
+
+The methods, events, and types documented on this page apply to both namespaces unless otherwise stated. For details about browser support and namespace-specific behavior, see the relevant reference page.
 
 ## Creating menu items
 
