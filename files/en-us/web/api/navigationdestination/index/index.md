@@ -8,8 +8,7 @@ browser-compat: api.NavigationDestination.index
 
 {{APIRef("Navigation API")}}
 
-The **`index`** read-only property of the
-{{domxref("NavigationDestination")}} interface returns the {{domxref("NavigationHistoryEntry.index", "index")}} value of the destination {{domxref("NavigationHistoryEntry")}} if the {{domxref("NavigateEvent.navigationType")}} is `traverse`, or `-1` otherwise.
+The **`index`** read-only property of the {{domxref("NavigationDestination")}} interface returns the {{domxref("NavigationHistoryEntry.index", "index")}} value of the destination {{domxref("NavigationHistoryEntry")}} if the navigation is a `traverse` navigation, or `-1` otherwise.
 
 ## Value
 
