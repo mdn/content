@@ -7,7 +7,7 @@ browser-compat: html.elements.input.type_month
 sidebar: htmlsidebar
 ---
 
-{{HTMLElement("input")}} elements of type **`month`** create input fields that let the user enter a month and year allowing a month and year to be easily entered.
+{{HTMLElement("input")}} elements of type **`month`** create input fields that let the user enter a month and year.
 The value is a string whose value is in the format `YYYY-MM`, where `YYYY` is the four-digit year and `MM` is the month number.
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;month&quot;&gt;", "tabbed-shorter")}}
@@ -34,27 +34,31 @@ label {
 
 ## Value
 
-A string representing the value of the month and year entered into the input, in the form YYYY-MM (four or more digit year, then a hyphen (`-`), followed by the two-digit month).
-The format of the month string used by this input type is described in [Month strings](/en-US/docs/Web/HTML/Guides/Date_and_time_formats#month_strings).
+A string representing the month and year entered in the input, in the form `YYYY-MM` (a four-digit year, then a hyphen (`-`), followed by the two-digit [month](/en-US/docs/Web/HTML/Guides/Date_and_time_formats#month_strings)).
 
 ### Setting a default value
 
-You can set a default value for the input control by including a month and year inside the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute, like so:
+Setting the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute value in the `YYYY-MM` format sets a default value for the `<input>`. When the user interacts with the control, the calendar opens to the value set. The `pattern` attribute has been added for non-supporting browsers:
 
 ```html
 <label for="bday-month">What month were you born in?</label>
-<input id="bday-month" type="month" name="bday-month" value="2001-06" />
+<input
+  id="bday-month"
+  type="month"
+  name="bday-month"
+  value="2001-06"
+  pattern="[0-1]\d-\d{4}" />
 ```
 
 {{EmbedLiveSample('Setting_a_default_value', 600, 60)}}
 
-One thing to note is that the displayed date format differs from the actual `value`; most {{Glossary("user agent", "user agents")}} display the month and year in a locale-appropriate form, based on the set locale of the user's operating system, whereas the date `value` is always formatted `yyyy-MM`.
+The value will appear as `bday-month=1978-06` when submitted to the server.
 
-When the above value is submitted to the server, for example, it will look like `bday-month=1978-06`.
+Most {{Glossary("user agent", "user agents")}} display the month and year in a locale-appropriate format, based on the user's operating system locale. While the displayed date format may differ by locale, the actual `value` is always in the format `YYYY-MM`.
 
 ### Setting the value using JavaScript
 
-You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement.value")}} property, for example:
+The date value can be set with JavaScript using the {{domxref("HTMLInputElement.value")}} property:
 
 ```html
 <label for="bday-month">What month were you born in?</label>
@@ -74,42 +78,42 @@ In addition to the attributes common to {{HTMLElement("input")}} elements, month
 
 ### list
 
-The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document.
-The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input.
-Any values in the list that are not compatible with the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) are not included in the suggested options.
-The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
+The value of the `list` attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document.
+The `<datalist>` provides a list of predefined values to suggest to the user for this input.
+List values that are not compatible with the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) are omitted from the suggested options.
+The values provided are suggestions, not requirements: users can select from the predefined list or enter a different value.
 
 ### max
 
-The latest year and month, in the string format discussed in the [Value](#value) section above, to accept.
+The `max` attribute value is the latest year and month, in `YYYY-MM` format, that the element accepts as valid.
 If the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation).
-If the value of the `max` attribute isn't a valid string in `yyyy-MM` format, then the element has no maximum value.
+If the value of the `max` attribute isn't a valid string in `YYYY-MM` format, then the element has no maximum value.
 
-This value must specify a year-month pairing later than or equal to the one specified by the `min` attribute.
+The `max` value must specify a year-month pairing later than or equal to the one specified by the `min` attribute.
 
 ### min
 
-The earliest year and month to accept, in the same `yyyy-MM` format described above.
-If the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation).
-If a value is specified for `min` that isn't a valid year and month string, the input has no minimum value.
+The `min` attribute value is the earliest year and month, in `YYYY-MM` format, that the element accepts as valid.
+If the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) entered is less than this, the element fails [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation).
+If the value specified for `min` isn't a valid year-month value in the `YYYY-MM` format, the input has no minimum value.
 
 This value must be a year-month pairing which is earlier than or equal to the one specified by the `max` attribute.
 
 ### readonly
 
-A Boolean attribute which, if present, means this field cannot be edited by the user.
-Its `value` can, however, still be changed from JavaScript code that directly sets the value of the {{domxref("HTMLInputElement.value")}} property.
+The `readonly` {{glossary("boolean")}} attribute, if present, means this field cannot be edited by the user.
+Its `value` can, however, still be changed using JavaScript code that directly sets the value of the {{domxref("HTMLInputElement.value")}} property.
 
 > [!NOTE]
-> Because a read-only field cannot have a value, `required` does not have any effect on inputs with the `readonly` attribute also specified.
+> Because a read-only field cannot be changed by the user, the `required` attribute does not have any effect on inputs with the `readonly` attribute also specified.
 
 ### step
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are a whole number of steps from the step base are valid. The step base is [`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) otherwise, or `0` (the Unix epoch, `1970-01`) if neither is provided.
+The `step` attribute specifies the granularity that the value must adhere to. The value is either an integer, or the keyword `any`. Only values which are a whole number of steps from the step base are valid. The _step base_ is the [`min`](#min) value, if specified, the value of the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute, if set, otherwise `1970-01`, the Unix epoch, is used if neither is provided.
 
-For `month` inputs, the value of `step` is given in months. The default value of `step` is 1, indicating 1 month.
+For `month` inputs, `step` is given in months. The default value of `step` is 1, indicating 1 month.
 
-A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)). In reality, it has the same effect as `1` for `month` inputs because the picker UI only allows selecting whole months.
+A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)). In reality, it has the same effect as `1` for `month` inputs because only whole months are valid.
 
 > [!NOTE]
 > When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
@@ -117,7 +121,7 @@ A string value of `any` means that no stepping is implied, and any value is allo
 ## Using month inputs
 
 Date-related inputs (including `month`) sound convenient at first glance; they promise an easy UI for choosing dates, and they normalize the data format sent to the server, regardless of the user's locale.
-However, there are issues with `<input type="month">` because at this time, many major browsers don't yet support it.
+However, there are issues with `<input type="month">`, including browsers that don't support it.
 
 We'll look at basic and more complex uses of `<input type="month">`, then offer advice on mitigating the browser support issue in the section [Handling browser support](#handling_browser_support).
 
