@@ -19,11 +19,20 @@ Only certain CSS properties can be used with `::highlight()`:
 
 - {{CSSxRef("color")}}
 - {{CSSxRef("background-color")}}
-- {{CSSxRef("text-decoration")}} and its associated properties
+- {{CSSxRef("text-decoration")}} and its associated properties, including {{CSSxRef("text-underline-position")}} and {{CSSxRef("text-underline-offset")}} (note: [the spec's list is deliberately non-exhaustive](https://github.com/w3c/csswg-drafts/issues/7101#issuecomment-1124007042). This includes all constituent properties, but may include other properties that control line decorations.)
 - {{CSSxRef("text-shadow")}}
-- {{CSSxRef("-webkit-text-stroke-color")}}, {{CSSxRef("-webkit-text-fill-color")}} and {{CSSxRef("-webkit-text-stroke-width")}}
+- {{CSSxRef("stroke-color")}}, {{CSSxRef("fill-color")}}, and {{CSSxRef("stroke-width")}}
+- Custom properties ({{cssxref("--*")}})
 
-In particular, {{CSSxRef("background-image")}} is ignored.
+In particular, {{CSSxRef("background-image")}} and vendor-prefixed properties are ignored. Chrome and Edge version 135 and Safari 27 beta removed support for {{CSSxRef("-webkit-text-stroke-color")}}, {{CSSxRef("-webkit-text-fill-color")}}, and {{CSSxRef("-webkit-text-stroke-width")}} in `::highlight()`.
+
+The above is the specified behavior. In practice, support for properties varies among browsers, even when the property is generally recognized in normal CSS declarations. There are two tiers of support: whether the property's value affects the pseudo-element's computed styles, and whether it actually creates a visible effect.
+
+- Chrome and Edge accept `stroke-width`, {{CSSxRef("fill")}}, and {{CSSxRef("stroke")}} without effect. They ignore `text-underline-position`.
+- Firefox accepts `stroke-width` without effect.
+- Safari accepts `text-underline-position` and {{CSSxRef("text-decoration-skip-ink")}} without effect. The visible effects of `stroke-width`, `text-shadow`, and `text-underline-offset` were only available by Technology Preview 251.
+
+Chrome and Edge additionally accept {{CSSxRef("text-emphasis-color")}}.
 
 ## Syntax
 
