@@ -53,11 +53,16 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
 - `blocking`
-  - : This attribute explicitly indicates that certain operations should be blocked until the script has executed. The operations that are to be blocked must be a space-separated list of blocking tokens. Currently there is only one token:
+  - : This attribute explicitly indicates that certain operations should be blocked until the script has executed.
+    The operations that are to be blocked must be a space-separated list of blocking tokens.
+    Currently there is only one token:
     - `render`: The rendering of content on the screen is blocked.
 
     > [!NOTE]
-    > Only `script` elements in the document's `<head>` can possibly block rendering. Scripts are not render-blocking by default; if a `script` element does not include `type="module"`, `async`, or `defer`, then it blocks _parsing_, not _rendering_. If such a `script` element is added dynamically via script, you must set `blocking = "render"` for it to block rendering.
+    > Only `<script>` elements in the document's `<head>` can block rendering.
+    > A classic script with a `src` attribute and no `async` or `defer` attribute blocks both parsing and rendering by default.
+    > Module scripts, scripts with `async` or `defer`, and external scripts added using JavaScript block rendering only if `blocking="render"` is set.
+    > Inline classic scripts (without a `src` attribute) never block rendering.
 
 - [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
   - : Normal `script` elements pass minimal information to the {{domxref('Window.error_event', 'window.onerror')}} for scripts which do not pass the standard {{Glossary("CORS")}} checks. To allow error logging for sites which use a separate domain for static media, use this attribute. See [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) for a more descriptive explanation of its valid arguments.
@@ -278,11 +283,11 @@ You can also use the `<script>` element to embed data in HTML with server-side r
 </script>
 ```
 
-### Blocking rendering till a script is fetched and executed
+### Blocking rendering until a script is fetched and executed
 
-You can include `render` token inside a `blocking` attribute;
-the rendering of the page will be blocked till the script is fetched and executed. In the example below, we block rendering on an async script,
-so that the script doesn't block parsing but is guaranteed to be evaluated before rendering starts.
+You can include the `render` token in a `blocking` attribute to block rendering of the page until the script is fetched and executed.
+In the following example, we block rendering on an async script, so that the script doesn't block parsing but is evaluated before rendering starts.
+If the script takes too long to load, the browser may start rendering automatically after a timeout.
 
 ```html
 <script blocking="render" async src="async-script.js"></script>

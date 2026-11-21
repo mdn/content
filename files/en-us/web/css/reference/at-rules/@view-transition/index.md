@@ -7,16 +7,17 @@ browser-compat: css.at-rules.view-transition
 sidebar: cssref
 ---
 
-The **`@view-transition`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) is used to opt in the current and destination documents to undergo a [view transition](/en-US/docs/Web/API/View_Transition_API), in the case of a cross-document navigation.
+The **`@view-transition`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) opts the current and destination documents in to a [view transition](/en-US/docs/Web/API/View_Transition_API) during a cross-document navigation.
+It can also set the [types](/en-US/docs/Web/API/View_Transition_API/Using_types) of the view transition.
 
 For a cross-document view transition to work, the current and destination documents of the navigation need to be on the same origin.
 
 ## Syntax
 
-```css
+```css-nolint
 @view-transition {
   navigation: auto | none;
-  types: none | <custom-ident>#;
+  types: none | <custom-ident>+;
 }
 ```
 
@@ -25,16 +26,23 @@ For a cross-document view transition to work, the current and destination docume
 - `navigation`
   - : A keyword specifying the effect this at-rule will have on the document's view transition behavior. Possible values are:
     - `auto`
-      - : The document will undergo a view transition when taking part in a navigation, provided the navigation is [same-origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy), without cross-origin redirects, and its {{domxref("NavigateEvent.navigationType", "navigationType")}} is `traverse`, `push`, or `replace`. In the case of `push` or `replace`, the navigation must be initiated by a user interacting with the page content, not by a browser UI feature.
+      - : The document will undergo a view transition when taking part in a navigation, provided the navigation is [same-origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy), without cross-origin redirects, and its {{domxref("NavigateEvent.navigationType", "navigationType")}} is `traverse`, `push`, or `replace`.
+        A `push` or `replace` navigation must be started from the page, for example when the user clicks a link or submits a form, or when a script navigates to a new URL.
+        It can't be started from the browser UI, for example by typing in the address bar or selecting a bookmark.
     - `none`
       - : The document will not undergo a view transition.
+        This is the default value.
 
 - `types`
-  - : Specifies the view transition [types](/en-US/docs/Web/API/View_Transition_API/Using_types) to set on the active view transition for the current and destination documents. Possible values are:
+  - : Specifies the view transition [types](/en-US/docs/Web/API/View_Transition_API/Using_types) to set on the active view transition for the document that contains the rule.
+    To use the same types on both sides of the navigation, declare them in both the current and destination documents.
+    Possible values are:
     - `<custom-ident>+`
       - : One or more space-separated {{cssxref("&lt;custom-ident>")}} values representing the types to set.
+        In addition to the [usual restrictions](/en-US/docs/Web/CSS/Reference/Values/custom-ident#forbidden_values), the `<custom-ident>` values can't be `none` or start with `-ua-` (a prefix reserved for the browser).
     - `none`
       - : No types are set.
+        This is the default value.
 
 ## Formal syntax
 
@@ -45,10 +53,10 @@ For a cross-document view transition to work, the current and destination docume
 ### Transitioning page view
 
 The following code snippets show key concepts used in a page transition demo.
-The demo uses cross-document view-transitions; a half second transition that occurs when navigating between two pages of a site.
+The demo uses a cross-document view transition: a 0.4-second animation that runs when you navigate between two pages of a site.
 For the full demo, see the [View transitions multi-page app demo](https://mdn.github.io/dom-examples/view-transitions/mpa/).
 
-The `@view-transition` at-rule is specified in the CSS for both your current and destination documents of a navigation to opt them both in to the view transition:
+To opt both documents in to the view transition, include the `@view-transition` at-rule in the CSS of the current and destination documents:
 
 ```css
 @view-transition {
@@ -56,7 +64,8 @@ The `@view-transition` at-rule is specified in the CSS for both your current and
 }
 ```
 
-In addition to the `@view-transition` at-rule, we use the {{cssxref("@keyframes")}} at-rule to define two keyframe animations and use the {{cssxref("animation")}} shorthand property to apply those keyframe animations to the elements in the outbound ({{cssxref("::view-transition-old()")}}) and inbound ({{cssxref("::view-transition-new()")}}) pages that we want to animate.
+We also use the {{cssxref("@keyframes")}} at-rule to define two animations.
+The {{cssxref("animation")}} shorthand property applies them to the snapshots of the outbound page ({{cssxref("::view-transition-old()")}}) and the inbound page ({{cssxref("::view-transition-new()")}}).
 
 ```css
 /* Create a custom animation */
@@ -90,11 +99,9 @@ In addition to the `@view-transition` at-rule, we use the {{cssxref("@keyframes"
 }
 ```
 
-See this [transitions multi-page app](https://mdn.github.io/dom-examples/view-transitions/mpa/) demo live.
-
 ### Using view transition types
 
-Our [MPA transition types example](https://mdn.github.io/dom-examples/view-transitions/mpa-chapter-nav-transition-types/) ([source code](https://github.com/mdn/dom-examples/tree/main/view-transitions/mpa-chapter-nav-transition-types)) demonstrates how to use `types` via `@view-transition`:
+Our [multi-page app (MPA) transition types example](https://mdn.github.io/dom-examples/view-transitions/mpa-chapter-nav-transition-types/) ([source code](https://github.com/mdn/dom-examples/tree/main/view-transitions/mpa-chapter-nav-transition-types)) demonstrates how to use `types` via `@view-transition`:
 
 ```css
 @view-transition {
@@ -115,12 +122,15 @@ See [Using types with cross-document view transitions via `@view-transition`](/e
 
 ## See also
 
-- {{cssxref("::view-transition", "::view-transition")}}
+- {{cssxref("::view-transition")}}
 - {{cssxref("::view-transition-new()")}}
 - {{cssxref("::view-transition-old()")}}
 - {{cssxref("::view-transition-group()")}}
 - {{cssxref("::view-transition-image-pair()")}}
+- {{domxref("CSSViewTransitionRule")}}
+- {{domxref("Window.pageswap_event", "pageswap")}} event
+- {{domxref("Window.pagereveal_event", "pagereveal")}} event
+- [CSS at-rule functions](/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions)
 - [View Transition API](/en-US/docs/Web/API/View_Transition_API)
 - [Using view transition types](/en-US/docs/Web/API/View_Transition_API/Using_types)
-- [CSS at-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)
-- [CSS at-rule functions](/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions)
+- [At-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)

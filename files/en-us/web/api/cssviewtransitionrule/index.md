@@ -5,9 +5,10 @@ page-type: web-api-interface
 browser-compat: api.CSSViewTransitionRule
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("View Transition API")}}
 
-The **`CSSViewTransitionRule`** interface represents a CSS {{cssxref("@view-transition")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
+The **`CSSViewTransitionRule`** interface of the [View Transition API](/en-US/docs/Web/API/View_Transition_API) represents a CSS {{cssxref("@view-transition")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
+It lets you read the rule's `navigation` and `types` descriptor values from JavaScript.
 
 {{InheritanceDiagram}}
 
@@ -26,7 +27,7 @@ _Inherits methods from its ancestor, {{domxref("CSSRule")}}._
 
 ## Examples
 
-### Basic usage
+### Reading the descriptors of a `@view-transition` rule
 
 A stylesheet includes a {{cssxref("@view-transition")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules), with `navigation` and `types` descriptors set:
 
@@ -37,13 +38,14 @@ A stylesheet includes a {{cssxref("@view-transition")}} [at-rule](/en-US/docs/We
 }
 ```
 
-In script, we grab a reference to the `@view-transition` at-rule using `document.styleSheets[0].cssRules`, then log the corresponding `CSSViewTransitionRule` object and its `navigation` and `types` properties to the console. The `types` property returns an array containing the values set for the `types` descriptor.
+In script, we get a reference to the `@view-transition` at-rule using `document.styleSheets[0].cssRules[0]`, then log the corresponding `CSSViewTransitionRule` object and its `navigation` and `types` properties to the console.
+The `types` property returns an array containing the values set for the `types` descriptor.
 
 ```js
-let myRule = document.styleSheets[0].cssRules;
-console.log(myRule[0]); // a CSSViewTransitionRule representing the @view-transition at-rule
-console.log(myRule[0].navigation); // "auto"
-console.log(myRule[0].types); // ["slide", "rotate"]
+const myRule = document.styleSheets[0].cssRules[0];
+console.log(myRule); // a CSSViewTransitionRule representing the @view-transition at-rule
+console.log(myRule.navigation); // "auto"
+console.log(myRule.types); // ["slide", "rotate"]
 ```
 
 ## Specifications

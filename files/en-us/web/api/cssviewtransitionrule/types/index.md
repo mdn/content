@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CSSViewTransitionRule.types
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("View Transition API")}}
 
 The **`types`** read-only property of the {{domxref("CSSViewTransitionRule")}} interface returns an array containing the associated {{cssxref("@view-transition")}} at-rule's `types` descriptor values.
 

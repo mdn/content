@@ -196,11 +196,18 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     </table>
 
 - `blocking`
-  - : This attribute explicitly indicates that certain operations should be blocked until specific conditions are met. It must only be used when the `rel` attribute contains the `expect` or `stylesheet` keywords. With [`rel="expect"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#expect), it indicates that operations should be blocked until a specific DOM node has been parsed. With [`rel="stylesheet"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#stylesheet), it indicates that operations should be blocked until an external stylesheet and its critical subresources have been fetched and applied to the document. The operations that are to be blocked must be a space-separated list of blocking tokens listed below. Currently there is only one token:
+  - : This attribute explicitly indicates that certain operations should be blocked until specific conditions are met.
+    It must only be used when the `rel` attribute contains the `expect` or `stylesheet` keyword.
+    With [`rel="expect"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#expect), it indicates that operations should be blocked until the element identified by the `href` fragment has been parsed.
+    With [`rel="stylesheet"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#stylesheet), it indicates that operations should be blocked until an external stylesheet and its critical subresources have been fetched and applied to the document.
+    The operations that are to be blocked must be a space-separated list of blocking tokens.
+    Currently there is only one token:
     - `render`: The rendering of content on the screen is blocked.
 
     > [!NOTE]
-    > Only `link` elements in the document's `<head>` can possibly block rendering. By default, a `link` element with `rel="stylesheet"` in the `<head>` blocks rendering when the browser discovers it during parsing. If such a `link` element is added dynamically via script, you must additionally set `blocking = "render"` for it to block rendering.
+    > Only `<link>` elements in the document's `<head>` can block rendering.
+    > A `rel="stylesheet"` link in the HTML source blocks rendering by default.
+    > A stylesheet link added using JavaScript, or a `rel="expect"` link, blocks rendering only if `blocking="render"` is set.
 
 - [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether {{Glossary("CORS")}} must be used when fetching the resource.
@@ -405,13 +412,13 @@ stylesheet.onerror = () => {
 
 You can find a number of `<link rel="preload">` examples in [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload).
 
-### Blocking rendering till a resource is fetched
+### Blocking rendering until an element is parsed
 
-You can include `render` token inside a `blocking` attribute;
-the rendering of the page will be blocked till the resource and its critical subresources are fetched and applied to the document. For example:
+You can include the `render` token in a `blocking` attribute to block rendering of the page until a condition is met.
+In the following example, a `rel="expect"` link blocks rendering until the element with the ID `lead-content` has been parsed, so that the first rendered frame includes it.
 
 ```html
-<link blocking="render" rel="stylesheet" href="example.css" crossorigin />
+<link rel="expect" href="#lead-content" blocking="render" />
 ```
 
 ## Technical summary

@@ -8,9 +8,10 @@ browser-compat: api.Window.pagereveal_event
 
 {{APIRef("HTML DOM")}}
 
-The **`pagereveal`** event is fired when a document is first rendered, either when loading a fresh document from the network or activating a document (either from [back/forward cache](/en-US/docs/Glossary/bfcache) (bfcache) or [prerender](/en-US/docs/Glossary/Prerender)).
+The **`pagereveal`** event of the {{domxref("Window")}} interface is fired when a document is first rendered, either after a new document loads or after a document is activated from the [back/forward cache](/en-US/docs/Glossary/bfcache) (bfcache) or a [prerender](/en-US/docs/Glossary/Prerender).
 
-This is useful in the case of cross-document (MPA) [view transitions](/en-US/docs/Web/API/View_Transition_API) for manipulating an active transition from the inbound page of a navigation. For example, you might wish to skip the transition, or customize the inbound transition animation via JavaScript.
+This is useful in multi-page apps (MPAs) for manipulating an active cross-document [view transition](/en-US/docs/Web/API/View_Transition_API) from the inbound page of a navigation.
+For example, you might wish to skip the transition or customize the inbound transition animation via JavaScript.
 
 ## Syntax
 
@@ -34,6 +35,12 @@ A {{domxref("PageRevealEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Examples
 
+### Customizing an inbound view transition
+
+When the user navigates between the home page and a profile page, the `pagereveal` handler on the new page sets `view-transition-name` values on the elements that should animate.
+It chooses those elements based on the URL navigated from and the URL navigated to, which it gets from the {{domxref("Navigation.activation")}} property of the global {{domxref("Window.navigation", "navigation")}} object.
+The `isProfilePage()`, `isHomePage()`, and `extractProfileNameFromUrl()` helper functions aren't shown.
+
 ```js
 window.addEventListener("pagereveal", async (e) => {
   // If the "from" history entry does not exist, return
@@ -44,8 +51,8 @@ window.addEventListener("pagereveal", async (e) => {
     const fromUrl = new URL(navigation.activation.from.url);
     const currentUrl = new URL(navigation.activation.entry.url);
 
-    // Went from profile page to homepage
-    // ~> Set VT names on the relevant list item
+    // Went from a profile page to the home page:
+    // animate the name and avatar in the relevant list item
     if (isProfilePage(fromUrl) && isHomePage(currentUrl)) {
       const profile = extractProfileNameFromUrl(fromUrl);
 
@@ -64,8 +71,8 @@ window.addEventListener("pagereveal", async (e) => {
         "none";
     }
 
-    // Went to profile page
-    // ~> Set VT names on the main title and image
+    // Went to a profile page:
+    // animate the main title and image
     if (isProfilePage(currentUrl)) {
       // Set view-transition-name values on the elements to animate
       document.querySelector(`#detail main h1`).style.viewTransitionName =
@@ -98,5 +105,5 @@ window.addEventListener("pagereveal", async (e) => {
 
 ## See also
 
-- [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Using)
 - {{domxref("Window.pageswap_event", "pageswap")}} event
+- [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Using)
