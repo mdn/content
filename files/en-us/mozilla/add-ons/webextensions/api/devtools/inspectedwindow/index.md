@@ -7,16 +7,11 @@ sidebar: addonsidebar
 ---
 
 > [!NOTE]
-> This page describes the WebExtensions devtools APIs as they exist in Firefox 54. Although the APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools), there are still many features that are not yet implemented in Firefox, and therefore are not documented here. To see which features are currently missing please see [Limitations of the devtools APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#limitations_of_the_devtools_apis).
+> The devtools APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools). However, Firefox and Safari don't implement all of those features, and this reference documents only the features that Firefox or Safari support. To see which features are missing, refer to [Cross-browser support for devtools APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#cross-browser_support_for_devtools_apis).
 
 The `devtools.inspectedWindow` API lets a devtools extension interact with the window that the developer tools are attached to.
 
 Like all the `devtools` APIs, this API is only available to code running in the document defined in the [devtools_page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) manifest.json key, or in other devtools documents created by the extension (such as the document hosted by a panel the extension created). See [Extending the developer tools](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools) for more.
-
-## Types
-
-- [`devtools.inspectedWindow.Resource`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/Resource)
-  - : A resource within an inspected page, such as a document, script, or image.
 
 ## Properties
 
@@ -27,17 +22,8 @@ Like all the `devtools` APIs, this API is only available to code running in the 
 
 - [`devtools.inspectedWindow.eval()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval)
   - : Evaluate some JavaScript in the target window.
-- [`devtools.inspectedWindow.getResources()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/getResources)
-  - : Retrieves the list of resources from the inspected page.
 - [`devtools.inspectedWindow.reload()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/reload)
   - : Reload the target window's document.
-
-## Events
-
-- [`devtools.onResourceAdded`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/onResourceAdded)
-  - : Fired when a resource is added to the inspected page.
-- [`devtools.onResourceContentCommitted`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/onResourceContentCommitted)
-  - : Fired when a revision of the resource is committed (e.g., the user saves an edited version of the resource in the Developer Tools).
 
 {{WebExtExamples("h2")}}
 
