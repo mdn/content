@@ -217,6 +217,7 @@ In the example below, the browser may break the text at the location of the {{HT
 - The CSS {{cssxref("overflow-wrap")}} property
 - The CSS {{cssxref("white-space")}} property
 - The CSS {{cssxref("text-wrap")}} property
+- The CSS {{cssxref("wrap-inside")}} property
 - The CSS {{cssxref("hyphens")}} property
 - The CSS {{cssxref("hyphenate-character")}} property
 - The CSS {{cssxref("hyphenate-limit-chars")}} property
