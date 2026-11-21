@@ -124,6 +124,19 @@ Each object can contain the following properties:
 - `"expects_no_vary_search"` {{experimental_inline}}
   - : A string providing a hint to the browser as to what {{httpheader("No-Vary-Search")}} header value will be set on responses for documents that it is receiving prefetch/prerender requests for. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/prerender to finish, or start a new fetch request when the speculation rule is matched. See the [`"expects_no_vary_search"` example](#expects_no_vary_search_example) for more explanation of how this can be used.
 
+- `"form_submission"` {{experimental_inline}}
+  - : A boolean value; when set to `true`, it indicates that matching URLs should be prerendered as form submissions, so that they can be activated by real form submission navigations. This defaults to `false`, in which case the prerender can't be activated by a form submission.
+
+    URLs matched by rules without `"form_submission: true"` set cannot be activated by form submissions due to internal browser state and checks particular to form submission navigations. Also, limitations such as {{httpheader("Content-Security-Policy")}} disallowing `form-action` would result in wasted resources, with the browser prerendering a page that can never be activated.
+
+    Setting `"form_submission"` to `true` tells the browser to prepare the prerender as a form submission, which takes a special path around the aforementioned state and checks.
+
+    The `form_submission` field is only relevant to `"prerender"` actions. If included inside a `"prefetch"` action object, rules parsed from that object will be ignored. `"prerender"` rules will also be ignored if the [`requires`](#requires) field includes `"anonymous-client-ip-when-cross-origin"`. The `form_submission` field can also only be used to prerender {{httpmethod("GET")}} request navigations; {{httpmethod("POST")}} requests for matching URLs are not prerendered.
+
+    Form submission speculations need to be triggered by the page in some manner, for example by injecting the rule with JavaScript when the user hovers over the "Submit" button, or when the user stops typing in a search box for a period of time. This means form submission speculations are restricted to [`"list"`](#list) rules (where the URL is given) and cannot be used for [`"document"`](#document) rules, since those are limited to links and do not include buttons.
+
+    Typical usage includes prerendering `GET` requests for popular search results coming from a search form (for example, `/search?q=cats`). See the [`"form_submission"` examples](#form_submission_examples) section for examples.
+
 - `"referrer_policy"`
   - : A string representing a specific referrer policy string to use when requesting the URLs specified in the rule — see [`Referrer-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy) for possible values. The purpose of this is to allow the referring page to set a stricter policy specifically for the speculative request than the policy the page already has set (either by default, or by using `Referrer-Policy`).
 
@@ -543,6 +556,74 @@ Or to identify individual rules:
 ```
 
 See {{HTTPHeader("Sec-Speculation-Tags")}} for more examples.
+
+### `"form_submission"` examples
+
+Consider a typical search form:
+
+```html
+<form action="/search.html" method="get">
+  <label for="site-search">Search the site:</label>
+  <input type="search" id="site-search" name="q" />
+  <button>Search</button>
+</form>
+```
+
+You can prerender submissions of this form for popular search terms by setting `form_submission` to `true` and listing a separate URL with each term specified in the query string, like this:
+
+```html
+<script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "urls": [
+          "/search.html?q=cats",
+          "/search.html?q=dogs",
+          "/search.html?q=badgers"
+        ],
+        "form_submission": true
+      }
+    ]
+  }
+</script>
+```
+
+With this in place, if the user types for example "cats" and submits the form, the navigation matches the prerendered `/search.html?q=cats`, so it activates almost instantly instead of loading from scratch.
+
+Listing every popular search term can get repetitive, so a common pattern is to use an `input` event handler to inject a speculation rule. The following code waits 500ms after the user stops typing, then replaces the previous rule with one for the current search term:
+
+```js
+const input = document.getElementById("site-search");
+let timer;
+let rulesScript;
+
+input.addEventListener("input", () => {
+  clearTimeout(timer);
+  timer = setTimeout(() => {
+    // Remove the previous rule, including when the input has been emptied
+    rulesScript?.remove();
+    rulesScript = undefined;
+
+    // Use the raw value, as the form submits it untrimmed
+    const term = input.value;
+    if (!term.trim()) return;
+
+    const rules = {
+      prerender: [
+        {
+          urls: [`/search.html?${new URLSearchParams({ q: term })}`],
+          form_submission: true,
+        },
+      ],
+    };
+
+    rulesScript = document.createElement("script");
+    rulesScript.type = "speculationrules";
+    rulesScript.textContent = JSON.stringify(rules);
+    document.head.append(rulesScript);
+  }, 500);
+});
+```
 
 ### `target_hint` example
 
