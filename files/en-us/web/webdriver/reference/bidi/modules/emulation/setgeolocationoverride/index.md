@@ -142,8 +142,8 @@ The `coordinates` parameter supplies a simulated position, while `error` simulat
 You cannot use these fields together, but you must specify one of them.
 Setting an individual coordinate field, such as `altitude`, to `null` simulates unavailable data for that field.
 
-An override you set for specific contexts takes precedence over an override you set for their user contexts.
-An override you set for a user context takes precedence over an override you set for the entire session.
+An override set for a specific context takes precedence over an override set for its user context.
+An override set for a user context takes precedence over an override set for the entire session.
 
 To remove an override, set `coordinates` to `null` for the affected contexts or user contexts.
 For example, if you set Paris for a user context and London for a tab within it, removing the tab's override makes the tab report Paris.
