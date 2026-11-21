@@ -45,6 +45,7 @@ Every CSS declaration consists of a property/value pair. The value can take vari
 - {{cssxref("pow()")}}
 - {{cssxref("progress()")}}
 - {{cssxref("random()")}}
+- {{cssxref("random-item()")}}
 - {{cssxref("rem()")}}
 - {{cssxref("round()")}}
 - {{cssxref("sibling-count()")}}
