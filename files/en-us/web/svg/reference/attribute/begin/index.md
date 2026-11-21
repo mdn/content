@@ -98,6 +98,9 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
 
     A valid accessKey-value consists of the function `accessKey()` with the character to be input as parameter. An optional offset value as defined in `<offset-value>` can be appended.
 
+    > [!NOTE]
+    > No browser supports `<accessKey-value>`: an animation that uses it never starts on a key press. To start an animation from the keyboard, set `begin` to `indefinite` and call {{domxref("SVGAnimationElement.beginElement()", "beginElement()")}} from a {{domxref("Element/keydown_event", "keydown")}} event listener, as shown in the [keyboard example](#keyboard_example) below.
+
 - `<wallclock-sync-value>`
   - : This value defines the animation start time as a real-world clock time.
 
@@ -341,7 +344,9 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
 
 {{EmbedLiveSample('Repeat_example', '100%', 130)}}
 
-### Accesskey example
+### Keyboard example
+
+Because no browser supports `<accessKey-value>`, this example sets `begin` to `indefinite` and starts the animation with {{domxref("SVGAnimationElement.beginElement()", "beginElement()")}} when the user presses the <kbd>s</kbd> key.
 
 ```html
 <svg
@@ -353,11 +358,12 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
   <!-- animated rectangles -->
   <rect x="10" y="35" height="15" width="0">
     <animate
+      id="grow"
       attributeType="XML"
       attributeName="width"
       from="0"
       to="100"
-      begin="accessKey(s)"
+      begin="indefinite"
       dur="8s"
       fill="freeze" />
   </rect>
@@ -384,7 +390,15 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
 </svg>
 ```
 
-{{EmbedLiveSample('Accesskey_example', '100%', 130)}}
+```js
+document.addEventListener("keydown", (event) => {
+  if (event.key === "s") {
+    document.getElementById("grow").beginElement();
+  }
+});
+```
+
+{{EmbedLiveSample('Keyboard_example', '100%', 130)}}
 
 _This example is embedded in an iFrame. If you want to activate the key events, you have to click on it first._
 
