@@ -32,8 +32,12 @@ A {{jsxref("Promise")}} that resolves to the `PushPermissionStatus`.
 
 ## Examples
 
+### Checking push permission
+
 ```js
-// TBD
+const registration = await navigator.serviceWorker.ready;
+const status = await registration.pushManager.hasPermission();
+console.log(status); // e.g., "granted"
 ```
 
 ## Specifications

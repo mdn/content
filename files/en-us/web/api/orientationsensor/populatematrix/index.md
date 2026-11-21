@@ -42,8 +42,21 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
+### Reading a rotation matrix
+
 ```js
-// TBD
+const sensor = new AbsoluteOrientationSensor({ frequency: 30 });
+const matrix = new Float32Array(16);
+
+sensor.addEventListener("reading", () => {
+  sensor.populateMatrix(matrix);
+  console.log(matrix);
+  // e.g., [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+});
+sensor.addEventListener("error", (event) => {
+  console.error(event.error);
+});
+sensor.start();
 ```
 
 ## Specifications

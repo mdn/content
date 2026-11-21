@@ -23,8 +23,18 @@ representing the device orientation.
 
 ## Examples
 
+### Reading an orientation quaternion
+
 ```js
-// TBD
+const sensor = new AbsoluteOrientationSensor({ frequency: 30 });
+
+sensor.addEventListener("reading", () => {
+  console.log(sensor.quaternion); // e.g., [0, 0, 0, 1]
+});
+sensor.addEventListener("error", (event) => {
+  console.error(event.error);
+});
+sensor.start();
 ```
 
 ## Specifications

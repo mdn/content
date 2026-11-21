@@ -18,8 +18,15 @@ A string containing a credential's federated identity provider.
 
 ## Examples
 
+### Reading the provider
+
 ```js
-// TBD
+const credential = new FederatedCredential({
+  id: "alex@example.com",
+  provider: "https://accounts.example.com",
+});
+
+console.log(credential.provider); // "https://accounts.example.com"
 ```
 
 ## Specifications
