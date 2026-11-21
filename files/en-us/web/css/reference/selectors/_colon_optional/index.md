@@ -59,11 +59,6 @@ fieldset {
 </label>
 ```
 
-This pseudo-class is useful for styling fields that are not required to submit a form.
-
-> [!NOTE]
-> The {{cssxref(":required")}} pseudo-class selects _required_ form fields.
-
 ## Syntax
 
 ```css
@@ -71,6 +66,12 @@ This pseudo-class is useful for styling fields that are not required to submit a
   /* ... */
 }
 ```
+
+## Description
+
+The `:optional` [input pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes#input_pseudo-classes) represents user-editable {{HTMLElement("input")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}} elements that do not have the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute set. This pseudo-class is useful for styling fields that are not required to submit a form.
+
+To select _required_ form fields, see the {{cssxref(":required")}} pseudo-class.
 
 ## Accessibility
 
