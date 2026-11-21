@@ -20,7 +20,20 @@ A {{jsxref("Float32Array")}}, or `null` if the gamepad is not able to provide li
 
 ## Examples
 
-TBD
+### Reading the linear acceleration
+
+Run this code before connecting a WebVR controller, then connect the controller and press a button to make it available to the page. The event supplies the {{domxref("Gamepad")}}. The output depends on the controller and its current pose.
+
+```js
+window.addEventListener("gamepadconnected", (event) => {
+  const pose = event.gamepad.pose;
+  if (!pose || !pose.linearAcceleration) {
+    return;
+  }
+
+  console.log(pose.linearAcceleration); // e.g., [0, 0, 0]
+});
+```
 
 ## Specifications
 

@@ -27,7 +27,18 @@ A {{jsxref("Float32Array")}}, or `null` if the VR sensor is not able to provide 
 
 ## Examples
 
-TBD
+### Reading the orientation
+
+```js
+window.addEventListener("gamepadconnected", (event) => {
+  const pose = event.gamepad.pose;
+  if (!pose || !pose.orientation) {
+    return;
+  }
+
+  console.log(pose.orientation); // e.g., [0, 0, 0, 1]
+});
+```
 
 > [!NOTE]
 > An orientation of `{ x: 0, y: 0, z: 0, w: 1 }` is considered to be "forward".

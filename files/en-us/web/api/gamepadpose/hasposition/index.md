@@ -18,7 +18,22 @@ A boolean value.
 
 ## Examples
 
-TBD
+### Checking position tracking
+
+```js
+window.addEventListener("gamepadconnected", (event) => {
+  const pose = event.gamepad.pose;
+  if (!pose) {
+    return;
+  }
+
+  if (pose.hasPosition) {
+    // Use position for controls
+  } else {
+    // Use some other control mechanism, like thumbstick
+  }
+});
+```
 
 ## Specifications
 
