@@ -68,14 +68,21 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
 The following example loads a video chunk by chunk as fast as possible, playing it as soon as it can.
 
-You can see the complete code at <https://github.com/mdn/dom-examples/tree/main/sourcebuffer> and try the demo live at <https://mdn.github.io/dom-examples/sourcebuffer/>.
+#### HTML
+
+```html
+<video controls muted width="400"></video>
+<p><button id="load">Load video</button></p>
+```
+
+#### JavaScript
 
 ```js
 const video = document.querySelector("video");
 
-const assetURL = "frag_bunny.mp4";
+const assetURL = "/shared-assets/videos/flower-fragmented.mp4";
 // Need to be specific for Blink regarding codecs
-const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+const mimeCodec = 'video/mp4; codecs="avc1.64001F, mp4a.40.2"';
 
 function loadVideo() {
   if (MediaSource.isTypeSupported(mimeCodec)) {
@@ -92,18 +99,27 @@ async function sourceOpen() {
   console.log(this.readyState); // open
   const sourceBuffer = this.addSourceBuffer(mimeCodec);
   const response = await fetch(assetURL);
-  const buffer = await response.arrayBuffer();
-  sourceBuffer.addEventListener("updateend", () => {
-    this.endOfStream();
-    video.play();
-    console.log(this.readyState); // ended
-  });
-  sourceBuffer.appendBuffer(buffer);
+  video.play();
+
+  for await (const chunk of response.body) {
+    // Wait for this chunk to finish appending before reading the next one.
+    await new Promise((resolve) => {
+      sourceBuffer.addEventListener("updateend", resolve, { once: true });
+      sourceBuffer.appendBuffer(chunk);
+    });
+  }
+
+  this.endOfStream();
+  console.log(this.readyState); // ended
 }
 
 const load = document.querySelector("#load");
 load.addEventListener("click", loadVideo);
 ```
+
+#### Result
+
+{{EmbedLiveSample("Loading a video chunk by chunk", "100%", 300)}}
 
 ## Specifications
 

@@ -44,8 +44,23 @@ The **`MediaKeySession`** interface of the [Encrypted Media Extensions API](/en-
 
 ## Examples
 
+### Creating a session
+
+To create a `MediaKeySession`, first obtain key system access via {{domxref("navigator.requestMediaKeySystemAccess()")}}. Once granted, you can create keys and sessions using {{domxref("MediaKeySystemAccess.createMediaKeys()")}} and {{domxref("MediaKeys.createSession()")}}, respectively.
+
 ```js
-// TBD
+const access = await navigator.requestMediaKeySystemAccess("org.w3.clearkey", [
+  {
+    initDataTypes: ["webm"],
+    videoCapabilities: [{ contentType: 'video/webm; codecs="vp8"' }],
+  },
+]);
+const mediaKeys = await access.createMediaKeys();
+const session = mediaKeys.createSession();
+
+console.log(session.sessionId); // ""
+console.log(session.keyStatuses.size); // 0
+console.log(session.expiration); // NaN
 ```
 
 ## Specifications

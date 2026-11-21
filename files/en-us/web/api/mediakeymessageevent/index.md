@@ -31,8 +31,16 @@ Inherits methods from its parent, {{domxref("Event")}}.
 
 ## Examples
 
+### Creating a message event
+
 ```js
-// TBD
+const event = new MediaKeyMessageEvent("message", {
+  messageType: "license-request",
+  message: new Uint8Array([1, 2, 3]).buffer,
+});
+
+console.log(event.messageType); // "license-request"
+console.log(event.message.byteLength); // 3
 ```
 
 ## Specifications

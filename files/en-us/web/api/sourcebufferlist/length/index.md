@@ -18,7 +18,13 @@ An unsigned long number.
 
 ## Examples
 
-TBD
+### Counting source buffers
+
+In the [`SourceBuffer` live example](/en-US/docs/Web/API/SourceBuffer#loading_a_video_chunk_by_chunk), add the following code immediately after `sourceBuffer` is created to count the source buffers attached to the media source.
+
+```js
+console.log(this.sourceBuffers.length); // 1
+```
 
 ## Specifications
 

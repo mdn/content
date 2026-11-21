@@ -33,7 +33,20 @@ The following exception may be thrown when setting a new value for this property
 
 ## Examples
 
-TBD
+### Setting a timestamp offset
+
+In the [`SourceBuffer` live example](/en-US/docs/Web/API/SourceBuffer#loading_a_video_chunk_by_chunk), add the following code immediately after `sourceBuffer` is created to shift the timestamps of the appended media forward by 10 seconds.
+
+```js
+sourceBuffer.timestampOffset = 10;
+console.log(sourceBuffer.timestampOffset); // 10
+```
+
+Also add the following code after the `for await...of` loop, before `this.endOfStream()`, to start playback at the beginning of the buffered range.
+
+```js
+video.currentTime = sourceBuffer.buffered.start(0);
+```
 
 ## Specifications
 

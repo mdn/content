@@ -37,7 +37,20 @@ The following exceptions may be thrown when setting a new value for this propert
 
 ## Examples
 
-TBD
+### Setting the append window start
+
+In the [`SourceBuffer` live example](/en-US/docs/Web/API/SourceBuffer#loading_a_video_chunk_by_chunk), add the following code immediately after `sourceBuffer` is created to filter out frames before 1 second.
+
+```js
+sourceBuffer.appendWindowStart = 1;
+console.log(sourceBuffer.appendWindowStart); // 1
+```
+
+Also add the following code after the `for await...of` loop, before `this.endOfStream()`, to start playback at the beginning of the buffered range.
+
+```js
+video.currentTime = sourceBuffer.buffered.start(0);
+```
 
 ## Specifications
 

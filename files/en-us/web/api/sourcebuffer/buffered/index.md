@@ -19,7 +19,18 @@ A {{domxref("TimeRanges")}} object.
 
 ## Examples
 
-TBD
+### Reading the buffered ranges
+
+In the [`SourceBuffer` live example](/en-US/docs/Web/API/SourceBuffer#loading_a_video_chunk_by_chunk), add the following code after the `for await...of` loop, before `this.endOfStream()`, to display each buffered time range in seconds.
+
+```js
+for (let i = 0; i < sourceBuffer.buffered.length; i++) {
+  console.log(
+    sourceBuffer.buffered.start(i).toFixed(2),
+    sourceBuffer.buffered.end(i).toFixed(2),
+  ); // e.g., "0.00" "5.12"
+}
+```
 
 ## Specifications
 
