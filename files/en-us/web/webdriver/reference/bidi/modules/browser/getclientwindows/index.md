@@ -36,23 +36,20 @@ The following field in the `result` object of the response describes the client 
     - `clientWindow`
       - : A string that uniquely identifies the client window.
     - `height`
-      - : A number that indicates the height of the window in {{glossary("CSS pixel", "CSS pixels")}}.
+      - : A non-negative integer that indicates the height of the window in {{glossary("CSS pixel", "CSS pixels")}}.
     - `state`
       - : A string that indicates the current state of the window.
-        - `"fullscreen"`
-          - : Indicates that the window is in fullscreen mode.
-        - `"maximized"`
-          - : Indicates that the window is maximized to fill the screen area.
-        - `"minimized"`
-          - : Indicates that the window is minimized (hidden from view).
-        - `"normal"`
-          - : Indicates that the window is in its normal (restored) state.
+        It can take one of the following values:
+        - `fullscreen`: Indicates that the window is in fullscreen mode.
+        - `maximized`: Indicates that the window is maximized to fill the screen area.
+        - `minimized`: Indicates that the window is minimized (hidden from view).
+        - `normal`: Indicates that the window is in its normal (restored) state.
     - `width`
-      - : A number that indicates the width of the window in {{glossary("CSS pixel", "CSS pixels")}}.
+      - : A non-negative integer that indicates the width of the window in {{glossary("CSS pixel", "CSS pixels")}}.
     - `x`
-      - : A number that indicates the x-coordinate of the window in {{glossary("CSS pixel", "CSS pixels")}}, measured from the left edge of the screen area.
+      - : An integer that indicates the x-coordinate of the window in {{glossary("CSS pixel", "CSS pixels")}}, measured from the left edge of the screen area.
     - `y`
-      - : A number that indicates the y-coordinate of the window in {{glossary("CSS pixel", "CSS pixels")}}, measured from the top edge of the screen area.
+      - : An integer that indicates the y-coordinate of the window in {{glossary("CSS pixel", "CSS pixels")}}, measured from the top edge of the screen area.
 
 ## Examples
 
