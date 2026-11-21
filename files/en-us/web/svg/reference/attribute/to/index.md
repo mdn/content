@@ -2,6 +2,10 @@
 title: to
 slug: Web/SVG/Reference/Attribute/to
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.animate.to
+  - svg.elements.animateTransform.to
+  - svg.elements.set.to
 spec-urls:
   - https://svgwg.org/specs/animations/#SetElementToAttribute
   - https://svgwg.org/specs/animations/#ToAttribute
@@ -96,3 +100,7 @@ svg {
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
