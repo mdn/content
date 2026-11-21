@@ -10,6 +10,8 @@ browser-compat: api.ClipboardItem.getType
 
 The **`getType()`** method of the {{domxref("ClipboardItem")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} of the requested {{Glossary("MIME type")}} or an error if the MIME type is not found.
 
+The types for which data is available in the item are listed in its {{domxref("ClipboardItem.types", "types")}} property.
+
 ## Syntax
 
 ```js-nolint
@@ -19,7 +21,7 @@ getType(type)
 ### Parameters
 
 - `type`
-  - : A valid {{Glossary("MIME type")}}.
+  - : A valid {{Glossary("MIME type")}}, or a [custom format](/en-US/docs/Web/API/Clipboard_API#custom_clipboard_formats) such as `"web text/x-my-format"`.
 
 ### Return value
 

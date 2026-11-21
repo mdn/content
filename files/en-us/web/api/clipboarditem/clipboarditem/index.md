@@ -29,10 +29,13 @@ new ClipboardItem(data, options)
   - : An {{jsxref("Object")}} with one or more properties, each representing a different format of the same clipboard entry.
     The key of each property is a {{Glossary("MIME type")}}, such as `"text/plain"` or `"text/html"`, and its value is the data for that format.
 
+    A key can also be a [custom format](/en-US/docs/Web/API/Clipboard_API#custom_clipboard_formats): a MIME type prefixed with `"web "` (the word "web" followed by a space), such as `"web text/x-my-format"`.
+
     Each value can be represented as one of the following:
     - a {{domxref("Blob")}}
     - a string
     - a {{jsxref("Promise")}} that resolves to either a `Blob` or string.
+
 - `options` {{optional_inline}}
   - : An object with the following properties:
     - `presentationStyle` {{optional_inline}}

@@ -13,6 +13,7 @@ The read-only **`types`** property of the {{domxref("ClipboardItem")}} interface
 ## Value
 
 An {{jsxref("Array")}} of available {{Glossary("MIME type", 'MIME types')}}.
+[Custom formats](/en-US/docs/Web/API/Clipboard_API#custom_clipboard_formats) are included with their `"web "` prefix, for example `"web text/x-my-format"`.
 
 ## Examples
 
