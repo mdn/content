@@ -8,7 +8,7 @@ browser-compat: api.Document.parseHTML_static
 
 {{APIRef("DOM")}}
 
-The **`parseHTML()`** static method of the {{domxref("Document")}} object provides an XSS-safe method to parse and sanitize a string of HTML in order to create a new {{domxref("Document")}} instance.
+The **`parseHTML()`** static method of the {{domxref("Document")}} object [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML in order to create a new {{domxref("Document")}} instance.
 
 ## Syntax
 
@@ -45,14 +45,8 @@ A {{domxref("Document")}}.
 
 ## Description
 
-The **`parseHTML()`** method parses and sanitize a string of HTML in order to create a new {{domxref("Document")}} instance that is XSS-safe.
+The **`parseHTML()`** method parses and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) in order to create a new {{domxref("Document")}} instance that is XSS-safe.
 The resulting `Document` will have a [content type](/en-US/docs/Web/API/Document/contentType) of "text/html", a [character set](/en-US/docs/Web/API/Document/characterSet) of UTF-8, and a URL of "about:blank".
-
-If no sanitizer is specified in the `options.sanitizer` parameter, `parseHTML()` is used with the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
-This configuration is suitable for the majority of use cases as it prevents XSS attacks, as well as other attacks like clickjacking or spoofing.
-
-A custom `Sanitizer` or `SanitizerConfig` can be specified to choose which elements, attributes, and comments are allowed or removed.
-Note that even if unsafe options are allowed by the sanitizer, they will still be removed when using this method (it removes the same elements as a sanitizer on which {{domxref('Sanitizer.removeUnsafe()')}} has been called).
 
 The input HTML may include [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom).
 If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as {{htmlelement("template")}} elements within that shadow root.
@@ -61,6 +55,8 @@ If the string of HTML defines more than one [declarative shadow root](/en-US/doc
 If the HTML to be parsed doesn't need to contain unsafe HTML entities, then you should use `Document.parseHTML()`.
 
 Note that since this method always sanitizes input strings of XSS-unsafe entities, it is not secured or validated using the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
+
+Even after sanitizing HTML input with with this method, it is still not safe to serialize the HTML and re-parse it using methods like `innerHTML`. See the [Re-parsing and mutated XSS](/en-US/docs/Web/API/Element/setHTML#re-parsing_and_mutated_xss_mxss) section of {{domxref("Element.setHTML()")}}.
 
 ## Specifications
 
