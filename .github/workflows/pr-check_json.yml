@@ -1,20 +1,13 @@
 name: JSON lint
 
 on:
-  pull_request:
-    paths:
-      - .github/workflows/pr-check_json.yml
-      - .nvmrc
-      - "*.json"
-      - "*.jsonc"
-      - "**/*.json"
-      - "**/*.jsonc"
+  workflow_call:
 
 # No GITHUB_TOKEN permissions, as we only use it to increase API limit.
 permissions: {}
 
 jobs:
-  lint-json:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
