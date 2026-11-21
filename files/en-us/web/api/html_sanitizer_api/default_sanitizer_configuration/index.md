@@ -14,6 +14,7 @@ This configuration removes the following sorts of items:
 1. Those that are known to be XSS-unsafe:
    - {{htmlelement("base")}}, {{htmlelement("embed")}}, {{htmlelement("frame")}}, {{htmlelement("iframe")}}, {{htmlelement("object")}}, {{htmlelement("script")}}, and {{SVGElement("use")}}.
    - All event handler content attributes, such as `onafterprint`, `onbeforeinput`, and so on.
+   - Attributes that contain [`javascript:` URLs](/en-US/docs/Web/URI/Reference/Schemes/javascript), such as `<a href="javascript:…">`. See {{domxref("Sanitizer.setJavascriptURLs()")}} for the attributes this covers.
 2. Items that might be used in clickjacking, spoofing, or other attacks.
 3. Deprecated items.
 4. Comments and `data-*` attributes.
