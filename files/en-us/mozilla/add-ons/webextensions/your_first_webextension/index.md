@@ -77,7 +77,7 @@ The example's manifest.json tells Firefox that an icon is at "icons/border-48.pn
 
 Create the "icons" directory under the "borderify" directory. Save an icon there named "border-48.png". You could use [the one from the example](https://raw.githubusercontent.com/mdn/webextensions-examples/main/borderify/icons/border-48.png), which is taken from the Google Material Design icon set and used under the terms of the [Creative Commons Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/3.0/) license.
 
-If you choose to supply an icon, it should be 48x48 pixels. You could also supply a 96x96 pixel icon, for high-resolution displays, and if you do this, specify it as the `96` property of the `icons` object in manifest.json, like this:
+If you choose to supply an icon, a 48x48 pixel icon is a good choice. For high-density displays, also supply a 96x96 pixel icon, and specify it as the `96` property of the `icons` object in manifest.json, like this:
 
 ```json
 "icons": {
@@ -88,7 +88,7 @@ If you choose to supply an icon, it should be 48x48 pixels. You could also suppl
 
 Alternatively, you can supply an SVG file, which Firefox automatically scales as needed. (Tip: If you're using SVG and your icon includes text, use your SVG editor's "convert to path" tool to flatten the text, so that it scales with a consistent size and position.)
 
-[Learn more about specifying icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)
+[Learn more about specifying icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons)
 
 ### borderify.js
 

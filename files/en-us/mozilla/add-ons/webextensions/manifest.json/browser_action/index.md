@@ -149,37 +149,7 @@ The `browser_action` key is an object that may have any of the following propert
 
 ## Choosing icon sizes
 
-The browser action's icon may need to be displayed in different sizes in different contexts:
-
-- The icon is displayed in the browser toolbar. Older versions of Firefox supported the option of placing the icon in the browser's menu panel (the panel that opens when the user clicks the "hamburger" icon). In those versions of Firefox the icon in the menu panel was larger than the icon in the toolbar.
-- On a high-density display like a Retina screen, icons needs to be twice as big.
-
-If the browser can't find an icon of the right size in a given situation, it will pick the best match and scale it. Scaling may make the icon appear blurry, so it's important to choose icon sizes carefully.
-
-There are two main approaches to this. You can supply a single icon as an SVG file, and it will be scaled correctly:
-
-```json
-"default_icon": "path/to/geo.svg"
-```
-
-Alternatively, you can supply several icons in different sizes, and the browser will pick the best match.
-
-In Firefox:
-
-- The default height and width for icons in the toolbar is 16 \* [`window.devicePixelRatio`](/en-US/docs/Web/API/Window/devicePixelRatio).
-- The default height and width for icons in the menu panel is 32 \* [`window.devicePixelRatio`](/en-US/docs/Web/API/Window/devicePixelRatio).
-
-So you can specify icons that match exactly, on both normal and Retina displays, by supplying three icon files, and specifying them like this:
-
-```json
-"default_icon": {
-  "16": "path/to/geo-16.png",
-  "32": "path/to/geo-32.png",
-  "64": "path/to/geo-64.png"
-}
-```
-
-If Firefox can't find an exact match for the size it wants, then it will pick the smallest icon specified that's bigger than the ideal size. If all icons are smaller than the ideal size, it will pick the biggest icon specified.
+The browser picks the browser action icon from the icons you provide, and browsers display the icon at different sizes. For the formats and sizes to provide for each browser, see [Specify icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/Specify_icons).
 
 ## Example
 
