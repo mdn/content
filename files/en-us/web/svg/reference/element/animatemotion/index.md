@@ -17,6 +17,14 @@ The **`<animateMotion>`** [SVG](/en-US/docs/Web/SVG) element provides a way to d
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - {{SVGAttr("keyPoints")}}
   - : This attribute indicates, in the range \[0,1], how far the object is along the path for each associated value in {{SVGAttr("keyTimes")}}.
     _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number)\*; _Default value_: none; _Animatable_: **no**

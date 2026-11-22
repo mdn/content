@@ -22,6 +22,14 @@ Like other filter primitives, it handles color components in the `linearRGB` {{g
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - {{SVGAttr("in")}}
 - {{SVGAttr("in2")}}
 - {{SVGAttr("scale")}}

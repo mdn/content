@@ -297,16 +297,26 @@ Below is a list of all of the attributes available in SVG, along with links to r
 
 ### Core attributes
 
-The core attributes are global attributes.
+The following attributes can be used on all SVG elements:
 
-- {{SVGAttr("autofocus")}}
 - {{SVGAttr("id")}}
+- {{SVGAttr("tabindex")}}
+- {{SVGAttr("autofocus")}}
+- {{SVGAttr("lang")}}
+- {{SVGAttr("xml:space")}}
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
-- {{SVGAttr("lang")}}
-- {{SVGAttr("tabindex")}}
-- {{SVGAttr("xml:lang")}}
-- {{SVGAttr("xml:space")}}
+- {{SVGAttr("data-*")}}
+
+The {{SVGAttr("xml:lang")}} attribute can also be used on SVG elements in XML documents. If both `lang` and `xml:lang` are set on an element, their values must match (ignoring ASCII letter case).
+
+### ARIA attributes
+
+SVG elements can use [ARIA attributes](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) to provide information about their roles, states, and properties to assistive technologies. Not every ARIA attribute applies to every SVG element.
+
+The `role` attribute can be specified on renderable SVG elements. It is ignored on non-rendered elements, and its value must be a role allowed for that element.
+
+See the [ARIA roles reference](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) for more information.
 
 ### Conditional processing attributes
 

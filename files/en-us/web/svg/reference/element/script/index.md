@@ -17,6 +17,14 @@ The **`<script>`** [SVG](/en-US/docs/Web/SVG) element allows you to add scripts 
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - `async` {{experimental_inline}}
   - : If the `async` attribute is present, then the external script will be fetched in parallel to parsing and evaluated as soon as it is available. Equivalent to the [`async`](/en-US/docs/Web/HTML/Reference/Elements/script#async) attribute on the HTML {{HTMLElement('script')}} element.
     _Value type_: **boolean**; _Default value_: _none_; _Animatable_: **no**

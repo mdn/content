@@ -16,6 +16,12 @@ Transformations applied to the `<g>` element are performed on its child elements
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
 This element only includes global attributes.
 
 Most of the [presentation attributes](/en-US/docs/Web/SVG/Reference/Attribute#presentation_attributes) applied to the element are inherited by its children.

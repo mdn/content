@@ -14,6 +14,14 @@ The **`<linearGradient>`** [SVG](/en-US/docs/Web/SVG) element lets authors defin
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - {{SVGAttr("gradientUnits")}}
   - : This attribute defines the coordinate system for attributes `x1`, `x2`, `y1`, `y2`
     _Value type_: `userSpaceOnUse` | `objectBoundingBox`; _Default value_: `objectBoundingBox`; _Animatable_: **yes**

@@ -19,6 +19,14 @@ Other direct children will be bypassed and therefore not rendered. If a child el
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - {{SVGAttr("requiredExtensions")}}
   - : A space-separated list of URL values referencing the language extensions the user agent must support for the element to be rendered.
 

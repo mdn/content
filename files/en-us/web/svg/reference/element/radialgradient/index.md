@@ -17,6 +17,14 @@ The **`<radialGradient>`** [SVG](/en-US/docs/Web/SVG) element lets authors defin
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - {{SVGAttr("cx")}}
   - : This attribute defines the x coordinate of the end circle of the radial gradient.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: `50%`; _Animatable_: **yes**

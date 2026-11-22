@@ -19,6 +19,14 @@ This element is for creating _new_ SVG documents. If you have an existing SVG do
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - {{SVGAttr("baseProfile")}} {{deprecated_inline}}
   - : The minimum SVG language profile that the document requires.
     _Value type_: **\<string>**; _Default value_: none; _Animatable_: **no**

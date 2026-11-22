@@ -17,6 +17,14 @@ The **`<tspan>`** [SVG](/en-US/docs/Web/SVG) element defines a subtext within a 
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - {{SVGAttr("x")}}
   - : The x coordinate of the starting point of the text baseline, or the x coordinate of each individual glyph if a list of values is provided.
     _Value type_: List of ([**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage)); _Default value_: `0`; _Animatable_: **yes**

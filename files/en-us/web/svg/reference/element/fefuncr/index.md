@@ -12,6 +12,14 @@ The **`<feFuncR>`** [SVG](/en-US/docs/Web/SVG) filter primitive defines the tran
 
 {{svginfo}}
 
+## Attributes
+
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
 ## DOM Interface
 
 This element implements the {{domxref("SVGFEFuncRElement")}} interface.
