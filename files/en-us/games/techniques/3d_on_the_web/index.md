@@ -54,7 +54,7 @@ Babylon.js is one of the most popular 3D game engines used by developers. As wit
 
 ### Building up a basic demo with PlayCanvas
 
-PlayCanvas is a popular 3D WebGL game engine open-sourced on GitHub, with an editor available online and good documentation. See the [Building up a basic demo with PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) subpage for higher-level details, and further articles showing how to create demos using the PlayCanvas library, and the online editor.
+PlayCanvas is a popular 3D game engine for WebGL and WebGPU, open-sourced on GitHub, with an editor available online and good documentation. See the [Building up a basic demo with PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) subpage for higher-level details, and further articles showing how to create demos using the PlayCanvas library, and the online editor.
 
 ### Building up a basic demo with Three.js
 

@@ -168,6 +168,7 @@ daala
 dangi
 dataidx
 deviceproximity
+DEVICETYPE
 devtools.aboutdebugging
 devtools.errorconsole
 DfltDwnld
@@ -627,6 +628,7 @@ PINGOTHER
 pjpeg
 PlatformNaclArch
 platformversion
+playcanvas
 pmatrix
 pmax
 pmin
