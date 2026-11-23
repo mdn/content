@@ -154,11 +154,10 @@ The following {{cssxref("ident")}} values can be specified as arguments for the 
 
 - `anchor-position-follows-transforms`
   - : Checks whether the browser's [anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) calculations are [transform](/en-US/docs/Web/CSS/Guides/Transforms)-aware. In other words, when an anchor element has transforms applied, do elements positioned relative to that anchor shift relative to the anchor's transformed size or position? Originally, anchor positioning did not account for transforms.
+- `single-axis-scroll-container`
+  - : Checks whether the browser supports the ability to have single-axis scroll containers, where one axis is either {{cssxref("overflow", "scroll", "#scroll")}}, {{cssxref("overflow", "auto", "#auto")}}, or {{cssxref("overflow", "hidden", "#hidden")}} and the other is {{cssxref("overflow", "clip", "#clip")}}.
 
-More named features will be added rarely and only when there is real demand for feature testing something specific that would not be covered by other testing methods.
-
-> [!NOTE]
-> The specification also defines the [`single-axis-scroll-container`](https://drafts.csswg.org/css-conditional-5/#single-axis-scroll-container) feature. However, this is not currently supported in any browser.
+Named features are added rarely and only when there is real demand for feature testing something specific that is not covered by other testing methods.
 
 #### `selector()`
 
