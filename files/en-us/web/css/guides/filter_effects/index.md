@@ -244,38 +244,72 @@ function sepia() {
 ### Properties
 
 - {{cssxref("backdrop-filter")}}
+- {{cssxref("color-interpolation-filters")}}
 - {{cssxref("filter")}}
+- {{cssxref("flood-color")}}
+- {{cssxref("flood-opacity")}}
+- {{cssxref("lighting-color")}}
 
 ### Functions
 
-- {{cssxref("filter-function/blur", "blur()")}}
-- {{cssxref("filter-function/brightness", "brightness()")}}
-- {{cssxref("filter-function/contrast", "contrast()")}}
-- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- {{cssxref("filter-function/grayscale", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-- {{cssxref("filter-function/invert", "invert()")}}
-- {{cssxref("filter-function/opacity", "opacity()")}}
-- {{cssxref("filter-function/saturate", "saturate()")}}
-- {{cssxref("filter-function/sepia", "sepia()")}}
+- {{cssxref("filter()")}}
+- {{cssxref("filter-function")}} functions
+  - {{cssxref("filter-function/blur", "blur()")}}
+  - {{cssxref("filter-function/brightness", "brightness()")}}
+  - {{cssxref("filter-function/contrast", "contrast()")}}
+  - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+  - {{cssxref("filter-function/grayscale", "grayscale()")}}
+  - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+  - {{cssxref("filter-function/invert", "invert()")}}
+  - {{cssxref("filter-function/opacity", "opacity()")}}
+  - {{cssxref("filter-function/saturate", "saturate()")}}
+  - {{cssxref("filter-function/sepia", "sepia()")}}
+
+### Data types
+
+- {{cssxref("filter-function")}} data type
+
+### SVG elements
+
+- {{SVGElement("filter")}} 
+- SVG filter primitives:
+  - {{SVGElement("feSpotLight")}}
+  - {{SVGElement("feBlend")}}
+  - {{SVGElement("feColorMatrix")}}
+  - {{SVGElement("feComponentTransfer")}}
+  - {{SVGElement("feComposite")}}
+  - {{SVGElement("feConvolveMatrix")}}
+  - {{SVGElement("feDiffuseLighting")}}
+  - {{SVGElement("feDisplacementMap")}}
+  - {{SVGElement("feDropShadow")}}
+  - {{SVGElement("feFlood")}}
+  - {{SVGElement("feGaussianBlur")}}
+  - {{SVGElement("feImage")}}
+  - {{SVGElement("feMerge")}}
+  - {{SVGElement("feMorphology")}}
+  - {{SVGElement("feOffset")}}
+  - {{SVGElement("feSpecularLighting")}}
+  - {{SVGElement("feTile")}}
+  - {{SVGElement("feTurbulence")}}
 
 ## Guides
 
 - [Using CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects/Using)
   - : Overview of the concepts surrounding CSS filter effects, including properties, filter functions, and SVG filters, with an explanation of filter values, source order, and value interactions.
+- [Applying effects with SVG filters](/en-US/docs/Web/SVG/Guides/Filters)
+  - : Filters blur, offset, recolor, and combine the pixels an element paints, in SVG and in HTML content.
 
 ## Related concepts
 
 - {{cssxref("image")}} data type
-- {{cssxref("filter-function")}} data type
-
-- {{cssxref("background-image")}} CSS property
-- {{cssxref("background-blend-mode")}} CSS property
-- {{cssxref("mix-blend-mode")}} CSS property
-
 - {{glossary("interpolation")}} glossary term
 
-- [`color-interpolation-filters`](/en-US/docs/Web/SVG/Reference/Attribute/color-interpolation-filters) SVG property
+[CSS compositing and blending](/en-US/docs/Web/CSS/Guides/Compositing_and_blending) module
+
+- {{cssxref("background-image")}}
+- {{cssxref("background-blend-mode")}}
+- {{cssxref("isolation")}}
+- {{cssxref("mix-blend-mode")}}
 
 ## Specifications
 
@@ -283,5 +317,9 @@ function sepia() {
 
 ## See also
 
-- Properties in the [CSS compositing and blending](/en-US/docs/Web/CSS/Guides/Compositing_and_blending) module enable blending an element's background layers together and blending an element with its container
-- The SVG {{SVGElement("filter")}} element and the SVG filter primitives: {{SVGElement("feSpotLight")}}, {{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feFlood")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feTurbulence")}}
+- {{cssxref("box-shadow")}}
+- {{cssxref("opacity")}}
+- [Using relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) guide
+- [CSS compositing and blending](/en-US/docs/Web/CSS/Guides/Compositing_and_blending) module
+- {{svgattr("color-interpolation-filters")}} SVG property
+- [Scalable Vector Graphics (SVG)](/en-US/docs/Web/SVG/Guides)
