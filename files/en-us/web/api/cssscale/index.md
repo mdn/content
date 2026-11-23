@@ -118,7 +118,7 @@ First, we define the box and the button that grows it.
 
 The following CSS styles the box.
 The margin leaves room for the box to grow without covering the button.
-The box starts with `scale(125%)`, a quarter bigger than its normal size, so the JavaScript has an initial scale factor to read.
+The box starts with `scale(125%)`, a quarter bigger than its normal size (so the JavaScript has an initial scale factor to read).
 The `transition` property animates each change to the scale.
 
 ```css
