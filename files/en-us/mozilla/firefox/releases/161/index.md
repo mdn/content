@@ -48,7 +48,9 @@ Firefox 161 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### HTTP -->
+### HTTP
+
+- [Compression Dictionary Transport](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport) is now supported. A server can mark a response as a dictionary using the {{httpheader("Use-As-Dictionary")}} header. The browser then lists the stored dictionary in the {{httpheader("Available-Dictionary")}} header of matching requests, and the server can reply with a response compressed against it, using the `dcb` (Brotli) or `dcz` (Zstandard) {{httpheader("Content-Encoding")}} values. This can greatly reduce the size of resources that change little between versions, such as JavaScript bundles. ([Firefox bug 2039320](https://bugzil.la/2039320)).
 
 <!-- #### Removals -->
 
