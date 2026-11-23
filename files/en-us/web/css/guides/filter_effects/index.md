@@ -271,7 +271,7 @@ function sepia() {
 
 ### SVG elements
 
-- {{SVGElement("filter")}} 
+- {{SVGElement("filter")}}
 - SVG filter primitives:
   - {{SVGElement("feSpotLight")}}
   - {{SVGElement("feBlend")}}
