@@ -483,7 +483,7 @@ The {{cssxref("margin-trim")}} property is now supported in Nightly. For block c
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 162           | Yes                 |
+| Nightly           | 161           | Yes                 |
 | Developer Edition | 161           | No                  |
 | Beta              | 161           | No                  |
 | Release           | 161           | No                  |
