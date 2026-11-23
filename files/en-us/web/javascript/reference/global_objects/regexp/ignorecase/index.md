@@ -37,7 +37,7 @@ Unicode-aware case folding generally folds to lower case, while Unicode-unaware 
 
 The set accessor of `ignoreCase` is `undefined`. You cannot change this property directly.
 
-For legacy reasons, `RegExp.prototype.ignoreCase === undefined` although `RegExp.prototype` is not a `RegExp` instance. (Usually, the getter throws a `TypeError` if the `this` value is not a `RegExp` instance.)
+For legacy reasons, `RegExp.prototype.ignoreCase === undefined` although `RegExp.prototype` is not a `RegExp` instance. (You'd expect the getter to throw a `TypeError` if the `this` value is not a `RegExp` instance.)
 
 ## Examples
 

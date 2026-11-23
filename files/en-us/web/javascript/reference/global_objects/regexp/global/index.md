@@ -31,7 +31,7 @@ Some methods, such as [`String.prototype.matchAll()`](/en-US/docs/Web/JavaScript
 
 The set accessor of `global` is `undefined`. You cannot change this property directly.
 
-For legacy reasons, `RegExp.prototype.global === undefined` although `RegExp.prototype` is not a `RegExp` instance. (Usually, the getter throws a `TypeError` if the `this` value is not a `RegExp` instance.)
+For legacy reasons, `RegExp.prototype.global === undefined` although `RegExp.prototype` is not a `RegExp` instance. (You'd expect the getter to throw a `TypeError` if the `this` value is not a `RegExp` instance.)
 
 ## Examples
 
