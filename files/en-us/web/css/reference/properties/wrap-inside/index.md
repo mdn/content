@@ -85,10 +85,11 @@ If boxes with `wrap-inside: avoid` are nested and the browser has to break insid
 
 ### Keeping a phrase together
 
-In this example, we have two boxes containing the same text. The date in each box is wrapped in a {{htmlelement("span")}} element. The first box uses the default value of `auto`, while the second box sets `wrap-inside: avoid` on the date.
+This example demonstrates the basic use of the `wrap-inside` property to keep a phrase on one line and `avoid` breaking.
 
 #### HTML
 
+We include two boxes containing the same text. The date in each box is wrapped in a {{htmlelement("span")}} element. We set different classes on each box on which we'll apply different `wrap-inside` values.
 ```html
 <div class="container">
   <p class="auto">
