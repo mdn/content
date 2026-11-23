@@ -71,7 +71,7 @@ Firefox 161 is the current [Beta version of Firefox](https://www.firefox.com/en-
   For example, a {{domxref("Navigation/navigateerror_event", "navigateerror")}} handler can use it to report which navigation failed.
   ([Firefox bug 1991959](https://bugzil.la/1991959)).
 - The [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) is now supported.
-  This lets scripts read and write CSS values as typed JavaScript objects instead of strings.
+  This lets scripts read and write CSS values as typed JavaScript objects instead of strings, for example through {{domxref("Element.computedStyleMap()")}} and {{domxref("HTMLElement.attributeStyleMap")}}.
   The color value interfaces, such as `CSSColorValue` and `CSSRGB`, are not supported in Firefox or any other browser.
   ([Firefox bug 2089681](https://bugzil.la/2089681)).
 
