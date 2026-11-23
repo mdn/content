@@ -476,6 +476,21 @@ The {{cssxref("corner-shape")}} shorthand property and its constituent longhand 
 - `layout.css.corner-shape.enabled`
   - : Set to `true` to enable.
 
+### `margin-trim` property
+
+The {{cssxref("margin-trim")}} property is now supported in Nightly for block containers. It removes the block-axis margins of child elements at the container's start edge, end edge, or both, while keeping the margins between siblings.
+([Firefox bug 2051240](https://bugzil.la/2051240)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 161           | No                  |
+| Beta              | 161           | No                  |
+| Release           | 161           | No                  |
+
+- `layout.css.margin-trim.enabled`
+  - : Set to `true` to enable.
+
 ### `match-parent` value for `quotes`
 
 The {{cssxref("quotes", "match-parent", "#match-parent")}} value of the {{cssxref("quotes")}} CSS property is now supported in Nightly.
