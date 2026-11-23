@@ -67,7 +67,9 @@ wrap-inside: unset;
 
 The `wrap-inside` property lets you keep the content of an inline box, such as a {{htmlelement("span")}}, together on one line where possible. This is useful for short phrases that read better when they aren't split across lines, such as names, dates, addresses, or product names.
 
-When an inline box has `wrap-inside: avoid` set, the browser prefers to break the line before or after the box instead of inside it. If the box fits on the next line, the whole box moves to that line. If the box is too long to fit on any line, the browser still breaks inside it, so the content doesn't overflow.
+The `wrap-inside` property only applies to inline boxes, and isn't inherited. Setting it on a block-level element, such as a {{htmlelement("p")}}, has no effect on the text inside it.
+
+When an inline box has `wrap-inside: avoid` set, the browser prefers to break the line before or after the box instead of inside it. If the box fits on the next line, the whole box moves to that line. If the box is too long to fit on any line, the browser still breaks inside it, at the same places it would with `auto`.
 
 This is different from setting {{cssxref("white-space", "white-space: nowrap")}} (or {{cssxref("text-wrap-mode", "text-wrap-mode: nowrap")}}) on the box, which prevents line breaks inside the box entirely, even if the content then overflows its container.
 
@@ -83,13 +85,14 @@ If boxes with `wrap-inside: avoid` are nested and the browser has to break insid
 
 ## Examples
 
-### Keeping a phrase together
+### Basic usage
 
-This example demonstrates the basic use of the `wrap-inside` property to keep a phrase on one line and `avoid` breaking.
+This example demonstrates how to use the `wrap-inside` property to keep a phrase on one line by avoiding line breaks inside it.
 
 #### HTML
 
-We include two boxes containing the same text. The date in each box is wrapped in a {{htmlelement("span")}} element. We set different classes on each box on which we'll apply different `wrap-inside` values.
+We include two boxes containing the same text. The date in each box is wrapped in a {{htmlelement("span")}} element. Each box has a different class, which we use to apply different `wrap-inside` values.
+
 ```html
 <div class="container">
   <p class="auto">
@@ -105,19 +108,11 @@ We include two boxes containing the same text. The date in each box is wrapped i
 
 #### CSS
 
-```css
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
+We set the paragraphs to be `20ch` wide, and give the dates a {{cssxref("background-color")}}. The first box uses the default value of `auto`, and the second box sets `wrap-inside: avoid` on the date. The other styles are hidden for brevity.
 
+```css
 p {
-  margin: 0;
-  width: 200px;
-  padding: 0.5rem;
-  border: 2px dashed #999999;
-  font-size: 1.25rem;
+  width: 20ch;
 }
 
 .date {
@@ -126,6 +121,21 @@ p {
 
 .avoid .date {
   wrap-inside: avoid;
+}
+```
+
+```css hidden
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+p {
+  margin: 0;
+  padding: 0.5rem;
+  border: 2px dashed #999999;
+  font-size: 1.25rem;
 }
 ```
 
@@ -154,39 +164,36 @@ In the second box, the browser avoids breaking inside the date. Instead, it brea
 
 ### Comparing with `white-space: nowrap`
 
-This example demonstrates the effects of `wrap-inside: auto` and `wrap-inside: avoid` while comparing these to `white-space: nowrap`.
+This example compares the effects of `wrap-inside: auto` and `wrap-inside: avoid` with the effect of `white-space: nowrap`.
 
 #### HTML
 
-We include three paragraphs with identical content, including a phrase that is too long to fit on one line. The only difference between the paragraphs is their classnames.
+We include three paragraphs with identical content, including a phrase that is too long to fit on one line. The only difference between the paragraphs is their class names.
+
 ```html
 <div class="container">
+  <p class="default">
+    Our address is
+    <span class="address">123 Long Street, Springfield, Anytown</span>.
+  </p>
   <p class="avoid">
     Our address is
-    <span class="address">1234 Long Street, Springfield, Anytown</span>.
+    <span class="address">123 Long Street, Springfield, Anytown</span>.
   </p>
   <p class="nowrap">
     Our address is
-    <span class="address">1234 Long Street, Springfield, Anytown</span>.
+    <span class="address">123 Long Street, Springfield, Anytown</span>.
   </p>
 </div>
 ```
 
 #### CSS
 
-```css
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
+We set the paragraphs to be `20ch` wide, and give the address a {{cssxref("background-color")}}. The first box uses the default value of `auto`. The second box sets `wrap-inside: avoid` on the address, and the last box sets `white-space: nowrap` on the address. The other styles are hidden for brevity.
 
+```css
 p {
-  margin: 0;
-  width: 150px;
-  padding: 0.5rem;
-  border: 2px dashed #999999;
-  font-size: 1.25rem;
+  width: 20ch;
 }
 
 .address {
@@ -199,6 +206,21 @@ p {
 
 .nowrap .address {
   white-space: nowrap;
+}
+```
+
+```css hidden
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+p {
+  margin: 0;
+  padding: 0.5rem;
+  border: 2px dashed #999999;
+  font-size: 1.25rem;
 }
 ```
 
@@ -219,11 +241,13 @@ p {
 
 #### Result
 
-{{EmbedLiveSample("Comparing with white-space: nowrap", "", 200)}}
+{{EmbedLiveSample("Comparing with white-space: nowrap", "", 300)}}
 
-In the first box, the address can't fit on any line, so `wrap-inside: avoid` can't keep it together. The browser starts the address on a new line and breaks inside it only where it has to.
+In the first box, which uses the default value of `auto`, the browser breaks lines between words wherever needed, so the address starts on the first line.
 
-In the second box, `white-space: nowrap` prevents any line break inside the address, so it overflows the box.
+In the second box, the address can't fit on any line, so `wrap-inside: avoid` can't keep it together. Instead, the browser starts the address on a new line, and only breaks inside it where it has to, so that it doesn't overflow the box.
+
+In the last box, `white-space: nowrap` prevents any line break inside the address, so it overflows the box.
 
 ## Specifications
 
