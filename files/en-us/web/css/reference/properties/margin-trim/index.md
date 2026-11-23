@@ -7,7 +7,7 @@ browser-compat: css.properties.margin-trim
 sidebar: cssref
 ---
 
-The `margin-trim` property allows the container to trim the margins of its children, in the block axis, where they adjoin the container's edges.
+The **`margin-trim`** [CSS](/en-US/docs/Web/CSS) property allows a container to trim the block-axis margins of its children where they adjoin the container's edges.
 
 {{InteractiveExample("CSS Demo: margin-trim")}}
 
