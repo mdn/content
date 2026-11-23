@@ -213,7 +213,9 @@ sliceSlider.addEventListener("input", () => {
 
 ### Sizing SVG border images
 
-This example compares three SVG border images with identical artwork. The first SVG has neither natural size nor {{SVGAttr("viewBox")}}; the second has no natural size but has `viewBox`; the third has both. All three elements use the same slice offsets and border widths.
+This example demonstrates SVG border images, and the effects of the {{SVGAttr("viewBox")}} attribute on border image sizing by comparing three SVG border images with identical artwork but with and without the `viewBox` attribute and declared dimensions.
+
+We will apply three versions of the following SVG as the {{cssxref("border-image-source")}}, with the first having neither a natural size nor {{SVGAttr("viewBox")}}; the second no natural size but with `viewBox`; the third has both a natural size and `viewBox` set. 
 
 ```html live-sample___svg-artwork
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -240,6 +242,8 @@ svg {
 
 #### HTML
 
+We include three paragraphs and controls to change the value type of the `border-image-slice` property:
+
 ```html live-sample___svg-border-comparison
 <label for="slice">border-image-slice:</label>
 <select id="slice">
@@ -253,7 +257,11 @@ svg {
 
 #### CSS
 
-The SVGs are embedded as data URLs. The slices initially use numeric offsets of `10`; selecting `10%` instead selects the outer tenth of each source image. The resulting slices are stretched to form a `20px` border.
+We apply the same styling to all three paragraphs. The slices are initially set to use numeric offsets of `10`, with the resulting slices stretching to the `20px` border width.
+
+We've set the paragraphs to initially be 200px by 100px, making them resizable with the {{cssxref("resize")}} property. We've included a thin {{cssxref("outline")}} so the paragraph's size is apparent.
+
+We will use JavaScript set the {{cssxref("border-image-source")}}, to embed the SVGs as data URLs.
 
 ```css live-sample___svg-border-comparison
 p {
@@ -261,6 +269,7 @@ p {
   width: 200px;
   height: 100px;
   padding: 0;
+  outline: 1px solid black;
   border: 20px solid;
   border-image-slice: 10;
   border-image-width: 1;
@@ -309,7 +318,7 @@ sliceSelect.addEventListener("change", () => {
 
 #### Result
 
-Switch between numeric and percentage slices, and drag the bottom-right corner of each element to resize it.
+Switch between numeric and percentage slices, and drag the bottom-right corner of each element to resize it. The slices initially use numeric offsets of `10`; selecting `10%` instead selects the outer tenth of each source image.
 
 {{EmbedLiveSample('svg-border-comparison', '100%', 540)}}
 
