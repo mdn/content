@@ -23,7 +23,7 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
       - : A string representing the URL of the document that is attempting to load the resource.
     - `destination`
       - : A string indicating the [`Request.destination`](/en-US/docs/Web/API/Request/destination) of the resource that was blocked.
-        This can be `"script"` or `"style"`.
+        This can currently only be `"script"`.
     - `reportOnly`
       - : A boolean: `false` if the policy was enforced, and `true` if the violation was only reported.
         The values indicate that the policy was set with {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}}, respectively.
@@ -175,8 +175,8 @@ Just to differ from the previous example, here we send the request in `no-cors` 
   integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"></script>
 ```
 
-The violation report will then be sent to the indicated endpoint as a JSON array in a `POST` request with `Content-Type: application/reports+json`.
-As you can see from the example below, the `type` is `"integrity-violation"` and the `body` property is a serialization of the `IntegrityViolationReportBody` dictionary:
+A violation report will then be sent to each of the endpoints, as a JSON array in a `POST` request with `Content-Type: application/reports+json`.
+The report is a serialization of the `IntegrityViolationReport` object, with added `age` and `user_agent` fields, and its `type` is `"integrity-violation"`:
 
 ```json
 [
