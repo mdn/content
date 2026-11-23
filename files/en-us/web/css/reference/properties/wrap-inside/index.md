@@ -120,7 +120,7 @@ p {
 }
 
 .date {
-  background-color: #ffe4a1;
+  background-color: wheat;
 }
 
 .avoid .date {
