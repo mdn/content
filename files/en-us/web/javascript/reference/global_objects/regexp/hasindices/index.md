@@ -31,6 +31,8 @@ This flag primarily affects the return value of [`exec()`](/en-US/docs/Web/JavaS
 
 The set accessor of `hasIndices` is `undefined`. You cannot change this property directly.
 
+For legacy reasons, `RegExp.prototype.hasIndices === undefined` although `RegExp.prototype` is not a `RegExp` instance. (You'd expect the getter to throw a `TypeError` if the `this` value is not a `RegExp` instance.)
+
 ## Examples
 
 There's a more detailed usage example at [Groups and backreferences > Using groups and match indices](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#using_groups_and_match_indices).

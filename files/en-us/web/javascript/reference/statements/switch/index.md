@@ -77,7 +77,7 @@ switch (foo) {
   case -1:
     console.log("negative 1");
     break;
-  case 0: // Value of foo matches this criteria; execution starts from here
+  case 0: // Value of foo matches this criterion; execution starts from here
     console.log(0);
   // Forgotten break! Execution falls through
   case 1: // no break statement in 'case 0:' so this case will run as well

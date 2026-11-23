@@ -1,8 +1,8 @@
 ---
-title: Firefox 160 release notes for developers (Stable)
-short-title: Firefox 160 (Stable)
+title: Firefox 160 release notes for developers
+short-title: Firefox 160
 slug: Mozilla/Firefox/Releases/160
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
@@ -57,11 +57,11 @@ No notable changes.
 - Fixed the `context` field in the `script.message` event to return a correct browsing context id when sending the event from a preload script triggered by `window.open`. ([Firefox bug 2079905](https://bugzil.la/2079905)).
 - Fixed the handling of `Set-Cookie` response headers so that `\n` separated values now show up as individual entries instead of a single merged value. Also applies to other "newline-merged" headers: `proxy-authenticate` and `www-authenticate`. ([Firefox bug 1940389](https://bugzil.la/1940389)).
 - Updated network events monitoring to stop computing unused security details, which could have visible impacts on the performance, e.g., during a page load. ([Firefox bug 2075175](https://bugzil.la/2075175)).
-- Updated the `script.evaluate` and `script.callFunction` commands to stop clearing a pre-existing user activation flag when called with `userActivation: false`. ([Firefox bug 2084107](https://bugzil.la/2084107)).
 
 ## Changes for add-on developers
 
 - {{WebExtAPIRef("runtime.PlatformInfo")}} now returns `arch` as `arm64` for ARM64 platforms. Previously, it returned `aarch64`. This aligns the value returned by Firefox for ARM64 platforms with Chrome. ([Firefox bug 2080310](https://bugzil.la/2080310)).
+- Adds the `windowId` property to {{WebExtAPIRef("runtime.MessageSender")}}, which contains the ID of the window that contains the sender. Unlike `tab.windowId`, it is also set for senders not in a tab, such as a popup or sidebar. ([Firefox bug 2072133](https://bugzil.la/2072133)).
 
 ## Experimental web features
 

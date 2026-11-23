@@ -183,7 +183,7 @@ Suppose the following `<script>` element is included in the page at `https://exa
 }
 ```
 
-Here, we use a relative URL as the value, which is resolved relative to the document's base URL, so it's equivalent to writing `https://example.com/welcome/shapes/square.js`. Had this `<script>` element been contained in the page `https://example.com/welcome/`, the value would be equivalent to `https://example.com/welcome/shapes/square.js` instead.
+Here, we use a relative URL as the value, which is resolved relative to the document's base URL, so it's equivalent to writing `https://example.com/shapes/square.js`. Had this `<script>` element been contained in the page `https://example.com/welcome/`, the value would be equivalent to `https://example.com/welcome/shapes/square.js` instead.
 
 Now when the specifier resolver encounters a specifier like the following:
 
@@ -248,7 +248,7 @@ The module specifier `shapes/square/index.js` will still match the more-specific
 
 #### Mixing literal matching and prefix matching
 
-In Node, you can import either a package itself, which imports the [`main`](https://docs.npmjs.com/cli/configuring-npm/package-json#main) file, or a file inside the package (assuming the package.json has no [`exports`](https://docs.npmjs.com/cli/configuring-npm/package-json#exports) field):
+In Node, you can import either a package itself, which imports the [`main`](https://docs.npmjs.com/cli/configuring-npm/package-json/#main) file, or a file inside the package (assuming the package.json has no [`exports`](https://docs.npmjs.com/cli/configuring-npm/package-json/#exports) field):
 
 ```js
 import _ from "lodash";

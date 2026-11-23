@@ -22,7 +22,7 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
     - `documentURL`
       - : A string representing the URL of the document that is attempting to load the resource.
     - `destination`
-      - : A string indicating the [`Request.destination`](/en-US/docs/Web/API/Request/destination#script) of the resource that was blocked.
+      - : A string indicating the [`Request.destination`](/en-US/docs/Web/API/Request/destination) of the resource that was blocked.
         This can currently only be `"script"`.
     - `reportOnly`
       - : A boolean: `false` if the policy was enforced, and `true` if the violation was only reported.
@@ -61,25 +61,27 @@ We can also see that the report was due to loading a script, and that it was tri
 }
 ```
 
-Violation reports may also be sent as a JSON object in a {{httpmethod("POST")}} request to one or more configured [reporting server endpoints](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
+Violation reports may also be sent as a JSON array of report objects in a {{httpmethod("POST")}} request to one or more configured [reporting server endpoints](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
 Reporting server endpoint names are specified in the [`endpoints` list](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) when setting {{httpheader("Integrity-Policy")}} or {{httpheader("Integrity-Policy-Report-Only")}}.
 Valid endpoint names and their mapping to a particular URL are defined using the {{httpheader("Reporting-Endpoints")}} header.
 
-The structure of the server report is almost exactly the same as `IntegrityViolationReport`, except that it additionally includes `age` and `user_agent` fields.
+The structure of each server report object is almost exactly the same as `IntegrityViolationReport`, except that it additionally includes `age` and `user_agent` fields.
 
 ```json
-{
-  "age": "176279",
-  "body": {
-    "documentURL": "https://localhost:8443/",
-    "blockedURL": "https://url-of-blocked-resource.js",
-    "destination": "script",
-    "reportOnly": false
-  },
-  "type": "integrity-violation",
-  "url": "https://url-of-page-attempting-to-load-resource-in-violation",
-  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
-}
+[
+  {
+    "age": 176279,
+    "body": {
+      "documentURL": "https://localhost:8443/",
+      "blockedURL": "https://url-of-blocked-resource.js",
+      "destination": "script",
+      "reportOnly": false
+    },
+    "type": "integrity-violation",
+    "url": "https://url-of-page-attempting-to-load-resource-in-violation",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
+  }
+]
 ```
 
 ## Examples
@@ -98,7 +100,7 @@ Integrity-Policy: blocked-destinations=(script)
 
 Next, we'll assume that our page includes the following element to load a script.
 Because we want to trigger a violation, it omits the `integrity` attribute used to check the script matches our expected version.
-We could also omit the `cross-origin` attribute so the request is sent in `no-cors` mode.
+We could also omit the `crossorigin` attribute so the request is sent in `no-cors` mode.
 
 ```html
 <script
@@ -160,8 +162,8 @@ The main difference is that we need to specify one or more reporting endpoints w
 You can see this below, where we first define two endpoints — `integrity-endpoint` and `backup-integrity-endpoint` — and then reference them in our policy:
 
 ```http
-Reporting-Endpoints: integrity-endpoint=https://example.com/integrity, backup-integrity-endpoint=https://report-provider.example/integrity
-Integrity-Policy: blocked-destinations=(script), endpoints=(integrity-endpoint, backup-integrity-endpoint)
+Reporting-Endpoints: integrity-endpoint="https://example.com/integrity", backup-integrity-endpoint="https://report-provider.example/integrity"
+Integrity-Policy: blocked-destinations=(script), endpoints=(integrity-endpoint backup-integrity-endpoint)
 ```
 
 We can trigger a violation by loading an external script from the page that does not meet the subresource integrity guidelines.
@@ -173,22 +175,24 @@ Just to differ from the previous example, here we send the request in `no-cors` 
   integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"></script>
 ```
 
-The violation report will then be sent to the indicated endpoint as a JSON file.
-As you can see from the example below, the `type` is `"integrity-violation"` and the `body` property is a serialization of this `IntegrityViolationReport` object:
-
-The report in this case would look the same as our JSON report in the previous example.
+A violation report will then be sent to each of the endpoints, as a JSON array in a `POST` request with `Content-Type: application/reports+json`.
+The report is a serialization of the `IntegrityViolationReport` object, with added `age` and `user_agent` fields, and its `type` is `"integrity-violation"`:
 
 ```json
-{
-  "type": "integrity-violation",
-  "url": "https://example.com",
-  "body": {
-    "documentURL": "https://example.com",
-    "blockedURL": "https://example.com/example-framework.js",
-    "destination": "script",
-    "reportOnly": false
+[
+  {
+    "age": 176279,
+    "type": "integrity-violation",
+    "url": "https://example.com",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "body": {
+      "documentURL": "https://example.com",
+      "blockedURL": "https://example.com/example-framework.js",
+      "destination": "script",
+      "reportOnly": false
+    }
   }
-}
+]
 ```
 
 ## Specifications

@@ -72,21 +72,21 @@ If the toolbar is vertical, ensure `aria-orientation="vertical"` is set, and the
 
 Implement focus management so the keyboard tab sequence includes one stop for the toolbar and arrow keys move focus among the controls in the toolbar. When tabbing into the toolbar, focus returns to the control that last had focus.
 
-While the toolbar element itself does not receive focus, focus on movement into, out of, and within the toolbar has to be managed. On load, the first element in the tabbing sequence within the toolbar has `tabindex="0"` with `tabindex="-1"` set on all other focusable elements within the toolbar. Depending on the [keyboard interaction], the element receiving focus gets set to `tabindex="0"` and the element that just lost focus gets switched back to `tabindex="-1"`. Set focus, `element.focus()`, on the element that has `tabindex="0"`. This is called "roving tabindex". A benefit of using roving tabindex to manage focus is that the browser will scroll the newly focused element into view.
+While the toolbar element itself does not receive focus, movement into, out of, and within the toolbar has to be managed. On load, the first focusable element in the toolbar tabbing sequence has `tabindex="0"` set, and all others have `tabindex="-1"`. Depending on the keyboard interaction, the focused element has `tabindex="0"` set, and the element that just lost focus gets `tabindex="-1"`. Set focus on the `tabindex="0"` element using `element.focus()`. This is called **roving tabindex**. A benefit of using roving tabindex to manage focus is that the browser will scroll the newly focused element into view.
 
 If the design calls for a specific element to be focused the next time the user moves focus into the toolbar with <kbd>Tab</kbd> or <kbd>Shift + Tab</kbd>, check if that target element has `tabindex="0"` when toolbar loses focus.
 
 When the toolbar has focus within it, provide visual cues. When an element within the toolbar has focus, a visual cue must be included on both the toolbar itself - to help the toolbar supports directional navigation with the arrow keys - and the control that has focus. The CSS pseudoclasses of `:focus` and `:focus-within` can be used to target both elements.
-
-## Examples
-
-[Toolbar example from ARIA Authoring Practices Guide (APG)](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/)
 
 ## Accessibility concerns
 
 Avoid including controls whose operation requires arrow keys used for toolbar navigation (right and left arrows, or top and bottom for vertical toolbars). If you must include such a control, make it the last control in the toolbar. For example, in a horizontal toolbar, a textbox could be included as the last element.
 
 If any of the otherwise interactive elements within the toolbar are disabled, consider letting them remain focusable so screen reader users can be made aware of their presence.
+
+## Examples
+
+[Toolbar example from ARIA Authoring Practices Guide (APG)](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/)
 
 ## Specifications
 

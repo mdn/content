@@ -112,6 +112,15 @@ new Uint8Array([257, -257]); // Uint8Array(2) [ 1, 255 ]
 //      = 255 (as unsigned integer)
 ```
 
+### The Number.prototype object
+
+For legacy reasons, `Number.prototype` is a `Number` object that wraps the value `0`.
+
+```js
+console.log(Number.prototype.valueOf()); // 0 (expected to throw error)
+console.log(Number(Number.prototype)); // 0 (expected NaN for plain objects)
+```
+
 ## Constructor
 
 - {{jsxref("Number/Number", "Number()")}}

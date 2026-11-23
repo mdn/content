@@ -8,7 +8,7 @@ browser-compat: api.SpeechRecognition.start_event
 
 {{APIRef("Web Speech API")}}
 
-The **`start`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) {{domxref("SpeechRecognition")}} object is fired when the speech recognition service has begun listening to incoming audio with intent to recognize grammars associated with the current `SpeechRecognition`.
+The **`start`** event of the {{domxref("SpeechRecognition")}} interface is fired when the speech recognition service has begun listening to incoming audio with the intention of recognizing speech.
 
 ## Syntax
 

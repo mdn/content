@@ -60,6 +60,8 @@ new Intl.Locale(tag, options)
       - : The [numbering system](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem). Any syntactically valid string following the `type` grammar is accepted, but the implementation only recognizes certain kinds, which are listed in [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types).
     - `caseFirst`
       - : The [case-first sort option](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst). Possible values are `"upper"`, `"lower"`, or `"false"`.
+    - `firstDayOfWeek`
+      - : The [first day of the week](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/firstDayOfWeek). Possible values are `"mon"`, `"tue"`, `"wed"`, `"thu"`, `"fri"`, `"sat"`, or `"sun"`, or their numeric equivalents: `"1"`, `"2"`, `"3"`, `"4"`, `"5"`, `"6"`, and `"0"` or `"7"` for Sunday.
     - `hourCycle`
       - : The [hour cycle](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle). Possible values are `"h23"`, `"h12"`, `"h11"`, or the practically unused `"h24"`, which are explained in [`Intl.Locale.prototype.getHourCycles`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getHourCycles#supported_hour_cycle_types)
     - `numeric`

@@ -51,7 +51,7 @@ export { default as name1 } from "module-name";
 
 ## Description
 
-Every module can have two different types of export, _named export_ and _default export_. You can have multiple named exports per module but only one default export. Each type corresponds to one of the above syntax.
+Every module can have two different types of export, _named export_ and _default export_. You can have multiple named exports per module but only one default export. Each type corresponds to one of the above syntaxes.
 
 Named exports:
 
@@ -91,9 +91,9 @@ const x = 1;
 Default exports:
 
 ```js
-// export feature declared elsewhere as default
+// export a binding declared elsewhere as default
 export { myFunction as default };
-// This is equivalent to:
+// export the current value of myFunction as default
 export default myFunction;
 
 // export individual features as default

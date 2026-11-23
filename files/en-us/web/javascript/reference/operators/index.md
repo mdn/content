@@ -20,7 +20,7 @@ Basic keywords and general expressions in JavaScript. These expressions have the
   - : The `this` keyword refers to a special property of an execution context.
 - [Literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
   - : Basic `null`, boolean, number, and string literals.
-- {{jsxref("Array", "[]")}}
+- {{jsxref("Operators/Array_initializer", "[]")}}
   - : Array initializer/literal syntax.
 - {{jsxref("Operators/Object_initializer", "{}")}}
   - : Object initializer/literal syntax.
@@ -49,6 +49,8 @@ Left values are the destination of an assignment.
   - : Member operators provide access to a property or method of an object (`object.property` and `object["property"]`).
 - {{jsxref("Operators/Optional_chaining", "?.")}}
   - : The optional chaining operator returns `undefined` instead of causing an error if a reference is [nullish](/en-US/docs/Glossary/Nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+- [Function call](/en-US/docs/Web/JavaScript/Reference/Operators/Function_call)
+  - : Evaluates a function's body using the given arguments and returns the result.
 - {{jsxref("new")}}
   - : The `new` operator creates an instance of a constructor.
 - {{jsxref("Operators/new.target", "new.target")}}
@@ -90,7 +92,7 @@ A unary operation is an operation with only one operand.
 - {{jsxref("Operators/Unary_plus", "+")}}
   - : The unary plus operator converts its operand to Number type.
 - {{jsxref("Operators/Unary_negation", "-")}}
-  - : The unary negation operator converts its operand to Number type and then negates it.
+  - : The unary negation operator converts its operand to a numeric value and then negates it.
 - {{jsxref("Operators/Bitwise_NOT", "~")}}
   - : Bitwise NOT operator.
 - {{jsxref("Operators/Logical_NOT", "!")}}
@@ -161,7 +163,7 @@ Operations to shift all bits of the operand.
 
 ### Binary bitwise operators
 
-Bitwise operators treat their operands as a set of 32 bits (zeros and ones) and return standard JavaScript numerical values.
+Bitwise operators treat their operands as a set of bits (zeros and ones), using 32 bits for numbers, and return a number or BigInt.
 
 - {{jsxref("Operators/Bitwise_AND", "&amp;")}}
   - : Bitwise AND.

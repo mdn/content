@@ -26,6 +26,9 @@ sidebar:
         title: Guide_Numbers
       - link: /Web/JavaScript/Guide/Representing_dates_times
         title: Guide_Dates
+        details: open
+        children:
+          - /Web/JavaScript/Guide/Representing_dates_times/Cookbook
       - link: /Web/JavaScript/Guide/Regular_expressions
         title: Guide_RegExp
       - link: /Web/JavaScript/Guide/Indexed_collections

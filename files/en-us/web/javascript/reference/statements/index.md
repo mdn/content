@@ -62,11 +62,11 @@ For an alphabetical listing see the sidebar on the left.
 - {{jsxref("Statements/for", "for")}}
   - : Creates a loop that consists of three optional expressions, enclosed in parentheses and separated by semicolons, followed by a statement executed in the loop.
 - {{jsxref("Statements/for...in", "for...in")}}
-  - : Iterates over the enumerable properties of an object, in arbitrary order. For each distinct property, statements can be executed.
+  - : Iterates over the enumerable properties of an object. For each distinct property, statements can be executed.
 - {{jsxref("Statements/for...of", "for...of")}}
-  - : Iterates over iterable objects (including {{jsxref("Array", "arrays", "", 1)}}, array-like objects, [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
+  - : Iterates over iterable objects (including {{jsxref("Array", "arrays", "", 1)}}, [iterators](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator), and [generators](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator)), invoking a custom iteration hook with statements to be executed for each yielded value.
 - {{jsxref("Statements/for-await...of", "for await...of")}}
-  - : Iterates over async iterable objects, array-like objects, [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
+  - : Iterates over async or sync iterable objects, invoking a custom iteration hook with statements to be executed for each yielded value.
 - {{jsxref("Statements/while", "while")}}
   - : Creates a loop that executes a specified statement as long as the test condition evaluates to true. The condition is evaluated before executing the statement.
 

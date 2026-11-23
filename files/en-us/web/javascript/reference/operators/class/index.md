@@ -41,6 +41,17 @@ class name {
 > [!NOTE]
 > An [expression statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement) cannot begin with the keyword `class` to avoid ambiguity with a [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class). The `class` keyword only begins an expression when it appears in a context that cannot accept statements.
 
+### Parameters
+
+- `name` {{optional_inline}}
+  - : The class name, which can be used within the class body to refer to the class.
+- `class body`
+  - : The [class elements](/en-US/docs/Web/JavaScript/Reference/Classes#class_body) enclosed in braces.
+
+### Return value
+
+The constructor function for the class.
+
 ## Description
 
 A `class` expression is very similar to, and has almost the same syntax as, a [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class). As with `class` declarations, the body of a `class` expression is executed in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). The main difference between a `class` expression and a `class` declaration is the _class name_, which can be omitted in `class` expressions to create _anonymous_ classes. Class expressions allow you to redefine classes, while redeclaring a class using `class` declarations throws a {{jsxref("SyntaxError")}}. See also the chapter about [classes](/en-US/docs/Web/JavaScript/Reference/Classes) for more information.

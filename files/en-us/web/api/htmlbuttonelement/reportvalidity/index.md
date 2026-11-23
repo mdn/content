@@ -24,11 +24,11 @@ None.
 
 Returns `true` if the element's value has no validity problems or if it's not a candidate for constraint validation; otherwise, returns `false`.
 
-### Examples
+## Examples
 
 This far fetched example demonstrates how a button can be made invalid.
 
-#### HTML
+### HTML
 
 We create two buttons:
 
@@ -43,7 +43,7 @@ We create two buttons:
 <p id="log"></p>
 ```
 
-#### CSS
+### CSS
 
 We add a bit of CSS, including `:valid` and `:invalid` styles for our button:
 
@@ -63,7 +63,7 @@ button:valid {
 }
 ```
 
-#### JavaScript
+### JavaScript
 
 We include a function to toggle the value, content, and validation message of the example button:
 
@@ -111,7 +111,7 @@ function toggleButton() {
 }
 ```
 
-#### Results
+### Results
 
 {{EmbedLiveSample("examples", "100%", 220)}}
 

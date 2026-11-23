@@ -32,26 +32,7 @@ This property is specified as one of the following keyword values:
 
 ## Formal definition
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td><code>auto</code> | <code>sRGB</code> | <code>linearRGB</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Applies to</th>
-      <td>{{SVGElement("linearGradient")}} and {{SVGElement("radialGradient")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>auto</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>discrete</td>
-    </tr>
-  </tbody>
-</table>
+{{CSSInfo}}
 
 ## Formal syntax
 

@@ -10,7 +10,8 @@ browser-compat: api.SpeechRecognition
 The **`SpeechRecognition`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is the controller interface for the recognition service; this also handles the {{domxref("SpeechRecognitionEvent")}} sent from the recognition service.
 
 > [!NOTE]
-> On some browsers, like Chrome, using Speech Recognition on a web page involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.
+> On some browsers, speech recognition uses a server-based recognition engine by default.
+> Your audio is sent to a web service for recognition processing, so recognition won't work offline unless you require [on-device recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) using {{domxref("SpeechRecognition.processLocally", "processLocally")}}.
 
 {{InheritanceDiagram}}
 
@@ -43,7 +44,7 @@ _`SpeechRecognition` also inherits properties from its parent interface, {{domxr
 The concept of grammar has been removed from the Web Speech API. Related features remain in the specification and are still recognized by supporting browsers for backwards compatibility, but they have no effect on speech recognition services.
 
 - {{domxref("SpeechRecognition.grammars")}}
-  - : Returns and sets a collection of {{domxref("SpeechGrammar")}} objects that represent the grammars understood by the current `SpeechRecognition`.
+  - : Represents a collection of {{domxref("SpeechGrammar")}} objects.
 
 ## Static methods
 
@@ -59,9 +60,10 @@ _`SpeechRecognition` also inherits methods from its parent interface, {{domxref(
 - {{domxref("SpeechRecognition.abort()")}}
   - : Stops the speech recognition service from listening to incoming audio, and doesn't attempt to return a {{domxref("SpeechRecognitionResult")}}.
 - {{domxref("SpeechRecognition.start()")}}
-  - : Starts the speech recognition service to listen for incoming audio (from a microphone or an audio track) and returns the results of that recognition.
+  - : Starts the speech recognition service listening for incoming audio (from a microphone or an audio track).
+    Results are delivered through the {{domxref("SpeechRecognition.result_event", "result")}} event.
 - {{domxref("SpeechRecognition.stop()")}}
-  - : Stops the speech recognition service from listening for incoming audio and attempts to return a {{domxref("SpeechRecognitionResult")}} based on the results captured so far.
+  - : Stops the speech recognition service from listening for incoming audio, and attempts to return a result based on the audio captured so far.
 
 ## Events
 
@@ -78,7 +80,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - [`nomatch`](/en-US/docs/Web/API/SpeechRecognition/nomatch_event)
   - : Fired when the speech recognition service returns a final result with no significant recognition. This may involve some degree of recognition, which doesn't meet or exceed the {{domxref("SpeechRecognitionAlternative.confidence","confidence")}} threshold.
 - [`result`](/en-US/docs/Web/API/SpeechRecognition/result_event)
-  - : Fired when the speech recognition service returns a result — a word or phrase has been positively recognized and this has been communicated back to the app.
+  - : Fired when the speech recognition service returns a result, which can be final or interim (if {{domxref("SpeechRecognition.interimResults", "interimResults")}} is `true`).
 - [`soundstart`](/en-US/docs/Web/API/SpeechRecognition/soundstart_event)
   - : Fired when any sound — recognizable speech or not — has been detected.
 - [`soundend`](/en-US/docs/Web/API/SpeechRecognition/soundend_event)

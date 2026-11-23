@@ -21,7 +21,7 @@ isFramebuffer(framebuffer)
 ### Parameters
 
 - `framebuffer`
-  - : A {{domxref("WebGLFramebuffer")}} to check.
+  - : A {{domxref("WebGLFramebuffer")}} to check. Passing `null` returns `false`.
 
 ### Return value
 

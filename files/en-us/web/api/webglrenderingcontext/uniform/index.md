@@ -47,8 +47,7 @@ uniform4iv(location, value)
 ### Parameters
 
 - `location`
-  - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
-    attribute to modify.
+  - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform attribute to modify, or `null` to silently ignore the uniform update.
 - `value`, `v0`, `v1`, `v2`, `v3`
   - : A new value to be used for the uniform variable. Possible types:
     - A floating point {{jsxref("Number")}} for floating point values (methods with
