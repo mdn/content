@@ -94,7 +94,7 @@ This property is specified as one of the following keyword values:
 
 ### Basic usage
 
-In this example {{cssxref("margin")}}s are set so that there is spacing between the paragraphs. The `margin-trim` property is used to remove the margin at the start of the `<section>` so that it feels more connected to the `<h2>` and the first paragraph using the `block-start` value.
+In this example, each paragraph has a {{cssxref("margin")}} to space it from its siblings. Setting `margin-trim: block-start` on the `<section>` trims the top margin of the first paragraph, while the margins between the paragraphs remain.
 
 This simplifies the syntax, meaning that the first paragraph does not need to be targeted with the {{cssxref(":first-child")}} pseudo-class.
 
