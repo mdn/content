@@ -48,7 +48,7 @@ None (`undefined`).
 
 **`setHTML()`** provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the DOM as a subtree of the element.
 
-Like all [similar HTML setters](#related_html_setter_apis), it removes all elements from the input string that are invalid in the context of the node's parent element (or the shadow host, if the parent is a shadow root), such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
+Like all [similar HTML setters](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods), it removes all elements from the input string that are invalid in the context of the node's parent element (or the shadow host, if the parent is a shadow root), such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
 
 For {{HTMLElement("template")}} elements, the HTML is inserted into the template contents (the template `DocumentFragment`), rather than as direct children.
 
@@ -82,21 +82,6 @@ otherDiv.setHTML(serializedHTML); // Safe — re-sanitized by setHTML()
 
 There is a class of attacks that take advantage of this flaw, referred to as [mutation XSS](https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#sanitizer-security-mxss).
 The simple rule to avoid this problem is to only ever inject HTML strings using safe methods such as `setHTML()`.
-
-### Related HTML setter APIs
-
-This is part of a series of APIs to set HTML in {{domxref("Element")}}:
-
-| Action                                         | API                                                       | Unsafe API                                                            |
-| ---------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------- |
-| Set the HTML contents of the element           | {{domxref("Element.setHTML", "setHTML")}}                 | {{domxref("Element.setHTMLUnsafe", "setHTMLUnsafe")}}                 |
-| Replace the entire element with this HTML      | {{domxref("Element.replaceWithHTML", "replaceWithHTML")}} | {{domxref("Element.replaceWithHTMLUnsafe", "replaceWithHTMLUnsafe")}} |
-| Add the HTML before the element                | {{domxref("Element.beforeHTML", "beforeHTML")}}           | {{domxref("Element.beforeHTMLUnsafe", "beforeHTMLUnsafe")}}           |
-| Add the HTML as the first child of the element | {{domxref("Element.prependHTML", "prependHTML")}}         | {{domxref("Element.prependHTMLUnsafe", "prependHTMLUnsafe")}}         |
-| Add the HTML as the last child of the element  | {{domxref("Element.appendHTML", "appendHTML")}}           | {{domxref("Element.appendHTMLUnsafe", "appendHTMLUnsafe")}}           |
-| Add the HTML after the element                 | {{domxref("Element.afterHTML", "afterHTML")}}             | {{domxref("Element.afterHTMLUnsafe", "afterHTMLUnsafe")}}             |
-
-Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allows scripts to be run using the `runScripts` options.
 
 ## Examples
 

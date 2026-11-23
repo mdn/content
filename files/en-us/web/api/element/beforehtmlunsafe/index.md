@@ -77,21 +77,6 @@ If the string of HTML defines more than one [declarative shadow root](/en-US/doc
 
 `beforeHTMLUnsafe()` doesn't perform any sanitization by default, though also does not run scripts by default. If no sanitizer is passed as a parameter, all HTML entities in the input will be injected. It is therefore potentially even less safe than {{domxref("Element.innerHTML")}}, which does not allow {{htmlelement("script")}} execution when parsing.
 
-### Related HTML setter APIs
-
-This is part of a series of APIs to set HTML in {{domxref("Element")}}:
-
-| Action                                         | API                                                       | Unsafe API                                                            |
-| ---------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------- |
-| Set the HTML contents of the element           | {{domxref("Element.setHTML", "setHTML")}}                 | {{domxref("Element.setHTMLUnsafe", "setHTMLUnsafe")}}                 |
-| Replace the entire element with this HTML      | {{domxref("Element.replaceWithHTML", "replaceWithHTML")}} | {{domxref("Element.replaceWithHTMLUnsafe", "replaceWithHTMLUnsafe")}} |
-| Add the HTML before the element                | {{domxref("Element.beforeHTML", "beforeHTML")}}           | {{domxref("Element.beforeHTMLUnsafe", "beforeHTMLUnsafe")}}           |
-| Add the HTML as the first child of the element | {{domxref("Element.prependHTML", "prependHTML")}}         | {{domxref("Element.prependHTMLUnsafe", "prependHTMLUnsafe")}}         |
-| Add the HTML as the last child of the element  | {{domxref("Element.appendHTML", "appendHTML")}}           | {{domxref("Element.appendHTMLUnsafe", "appendHTMLUnsafe")}}           |
-| Add the HTML after the element                 | {{domxref("Element.afterHTML", "afterHTML")}}             | {{domxref("Element.afterHTMLUnsafe", "afterHTMLUnsafe")}}             |
-
-Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allows scripts to be run using the `runScripts` options.
-
 ### Security considerations
 
 The suffix "Unsafe" in the method name indicates that it does not enforce removal of all XSS-unsafe HTML entities (unlike {{domxref("Element.beforeHTML()")}}).

@@ -56,18 +56,6 @@ Note that since this method always sanitizes input strings of XSS-unsafe entitie
 
 Even after sanitizing HTML input with with this method, it is still not safe to serialize the HTML and re-parse it using methods like `innerHTML`. See the [Re-parsing and mutated XSS](/en-US/docs/Web/API/Element/setHTML#re-parsing_and_mutated_xss_mxss) section of {{domxref("Element.setHTML()")}}.
 
-### Related HTML setter APIs
-
-This is part of a series of APIs to set HTML in {{domxref("ShadowRoot")}}:
-
-| Action                                             | API                                                  | Unsafe API                                                       |
-| -------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------- |
-| Set the HTML contents of the shadow root           | {{domxref("ShadowRoot.setHTML", "setHTML")}}         | {{domxref("ShadowRoot.setHTMLUnsafe", "setHTMLUnsafe")}}.        |
-| Add the HTML as the first child of the shadow root | {{domxref("ShadowRoot.prependHTML", "prependHTML")}} | {{domxref("ShadowRoot.prependHTMLUnsafe", "prependHTMLUnsafe")}} |
-| Add the HTML as the last child of the shadow root  | {{domxref("ShadowRoot.appendHTML", "appendHTML")}}   | {{domxref("ShadowRoot.appendHTMLUnsafe", "appendHTMLUnsafe")}}   |
-
-Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allows scripts to be run using the `runScripts` options.
-
 ## Examples
 
 These examples shows some of the ways you can use `setHTML()` to sanitize and inject a string of HTML.

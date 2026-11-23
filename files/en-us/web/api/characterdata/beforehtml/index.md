@@ -51,7 +51,7 @@ None (`undefined`).
 
 **`beforeHTML()`** provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the `CharacterData`'s parent, just before the `CharacterData`.
 
-Like all [similar HTML setters](#related_html_setter_apis), it removes all elements from the input string that are invalid in the context of the node's parent element (or the shadow host, if the parent is a shadow root), such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
+Like all [similar HTML setters](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods), it removes all elements from the input string that are invalid in the context of the node's parent element (or the shadow host, if the parent is a shadow root), such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
 
 Nothing happens if the node has no parent or the parent is a {{HTMLElement("script")}} element (and similar for SVG {{SVGElement("script")}} elements).
 
@@ -60,20 +60,6 @@ It should be used instead of {{domxref("CharacterData.beforeHTMLUnsafe()")}}, un
 Note that since this method always sanitizes input strings of XSS-unsafe entities, it is not secured or validated using the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
 
 Even after sanitizing HTML input with with this method, it is still not safe to serialize the HTML and re-parse it using methods like `innerHTML`. See the [Re-parsing and mutated XSS](/en-US/docs/Web/API/Element/setHTML#re-parsing_and_mutated_xss_mxss) section of {{domxref("Element.setHTML()")}}.
-
-### Related HTML setter APIs
-
-This is part of a series of APIs to set HTML in {{domxref("CharacterData")}}:
-
-| Action                                 | API                                                             | Unsafe API                                                                  |
-| -------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| Replace the entire node with this HTML | {{domxref("CharacterData.replaceWithHTML", "replaceWithHTML")}} | {{domxref("CharacterData.replaceWithHTMLUnsafe", "replaceWithHTMLUnsafe")}} |
-| Add the HTML before the element        | {{domxref("CharacterData.beforeHTML", "beforeHTML")}}           | {{domxref("CharacterData.beforeHTMLUnsafe", "beforeHTMLUnsafe")}}           |
-| Add the HTML after the element         | {{domxref("CharacterData.afterHTML", "afterHTML")}}             | {{domxref("CharacterData.afterHTMLUnsafe", "afterHTMLUnsafe")}}             |
-
-Each API type takes the same arguments but allows for ease of inserting the required HTML in the appropriate place and with or without the default sanitizer applied. The unsafe variants allows scripts to be run using the `runScripts` options.
-
-Similar methods, and more, exist on {{domxref("Element")}} (for example {{domxref("Element.beforeHTML")}})
 
 ## Examples
 
