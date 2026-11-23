@@ -133,7 +133,10 @@ Each object can contain the following properties:
 
     The `form_submission` field is only relevant to `"prerender"` actions. If included inside a `"prefetch"` action object, rules parsed from that object will be ignored. `"prerender"` rules will also be ignored if the [`requires`](#requires) field includes `"anonymous-client-ip-when-cross-origin"`. The `form_submission` field can also only be used to prerender {{httpmethod("GET")}} request navigations; {{httpmethod("POST")}} requests for matching URLs are not prerendered.
 
-    Form submission speculations need to be triggered by the page in some manner, for example by injecting the rule with JavaScript when the user hovers over the "Submit" button, or when the user stops typing in a search box for a period of time. This means form submission speculations are restricted to [`"list"`](#list) rules (where the URL is given) and cannot be used for [`"document"`](#document) rules, since those are limited to links and do not include buttons.
+    [`"document"`](#document) rules only match links, and a form's submission URL isn't known until the user fills in the form, so form submission speculations normally use [`"list"`](#list) rules, which give each URL explicitly.
+    You can include the rule in the page's HTML for predictable values, such as popular search terms.
+    You can also add it with JavaScript when a submission looks likely, for example, when the user pauses typing in a search box or hovers over the submit button.
+    The browser has no built-in way to tell when a form is about to be submitted, so the page decides when to apply the rule.
 
     Typical usage includes prerendering `GET` requests for popular search results coming from a search form (for example, `/search?q=cats`). See the [`"form_submission"` examples](#form_submission_examples) section for examples.
 
