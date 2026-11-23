@@ -304,7 +304,7 @@ A few identifiers have a special meaning in some contexts without being reserved
 ## Literals
 
 > [!NOTE]
-> This section discusses literals that are atomic tokens. [Object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) and [array literals](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array#array_literal_notation) are [expressions](/en-US/docs/Web/JavaScript/Reference/Operators) that consist of a series of tokens.
+> This section discusses literals that are atomic tokens. [Object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) and [array literals](/en-US/docs/Web/JavaScript/Reference/Operators/Array_initializer) are [expressions](/en-US/docs/Web/JavaScript/Reference/Operators) that consist of a series of tokens.
 
 ### Null literal
 
