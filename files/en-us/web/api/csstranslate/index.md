@@ -39,11 +39,12 @@ A {{domxref("CSSTransformValue")}} represents the whole value of the `transform`
 It contains a `CSSTranslate` for each translation function in the value, along with objects for any other {{cssxref("transform-function")}}s.
 
 A translation moves an element by a vector, which is made up of the distances along each axis.
-The `x` and `y` properties are the distances along the x-axis and y-axis.
-They can be any {{cssxref("length-percentage")}} value: a length, a percentage, or a combination of the two, such as `CSS.px(10).add(CSS.percent(5))`.
-A percentage is relative to the width (for `x`) or height (for `y`) of the element's reference box, which is set by the {{cssxref("transform-box")}} property.
-The `z` property is the distance along the z-axis and must be a length.
+The `x`, `y`, and `z` properties are the distances along the x-axis, y-axis, and z-axis.
 A positive `z` value moves the element closer to the viewer, and a negative value moves it farther away.
+
+The `x` and `y` values can be any {{cssxref("length-percentage")}} value: a length, a percentage, or a combination of the two, such as `CSS.px(10).add(CSS.percent(5))`.
+A percentage is relative to the width (for `x`) or height (for `y`) of the element's reference box, which is set by the {{cssxref("transform-box")}} property.
+The `z` value must be a {{cssxref("length")}}.
 The {{domxref("CSSTranslate.CSSTranslate", "CSSTranslate()")}} constructor throws a {{jsxref("TypeError")}} if a value doesn't meet these requirements.
 
 The inherited {{domxref("CSSTransformComponent.is2D", "is2D")}} property indicates whether the object represents a 2D or a 3D translation.
