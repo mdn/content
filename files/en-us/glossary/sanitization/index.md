@@ -1,5 +1,5 @@
 ---
-title: sanitization
+title: Sanitization
 slug: Glossary/Sanitization
 page-type: glossary-definition
 sidebar: glossarysidebar

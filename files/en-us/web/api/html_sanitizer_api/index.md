@@ -227,14 +227,14 @@ The XSS-safe baseline configuration removes the items that are most commonly use
 
 - Unsafe HTML elements: {{htmlelement("base")}}, {{htmlelement("embed")}}, {{htmlelement("frame")}}, {{htmlelement("iframe")}}, {{htmlelement("object")}}, and {{htmlelement("script")}}.
 - Unsafe SVG elements: {{SVGElement("script")}} and SVG {{SVGElement("use")}}.
-- All event handler attributes, such as `onafterprint`, `onbeforeinput.
+- All event handler attributes, such as `onafterprint` or `onbeforeinput`.
 - [`javascript:` URLs](/en-US/docs/Web/URI/Reference/Schemes/javascript).
 
 The XSS-safe baseline configuration is automatically applied to the [safe sanitization methods](#safe_methods). This baseline cannot be removed from the safe sanitization methods and any additional sanitizer (whether default or custom) is applied on top of this baseline configuration.
 
 The XSS-safe baseline configuration is not used in [unsafe sanitization methods](#unsafe_methods).
 
-You can also call {{domxref("Sanitizer/removeUnsafe","removeUnsafe")}} on a {{domxref("Sanitizer")}} instance to apply the XSS-safe baseline configuration and make it XSS-safe.
+You can also call {{domxref("Sanitizer/removeUnsafe","removeUnsafe()")}} on a {{domxref("Sanitizer")}} instance to apply the XSS-safe baseline configuration and make it XSS-safe.
 
 #### Default sanitizer configuration
 
