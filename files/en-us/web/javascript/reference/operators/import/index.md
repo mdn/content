@@ -24,9 +24,9 @@ The `import()` call is a syntax that closely resembles a function call, but `imp
 ### Parameters
 
 - `moduleName`
-  - : The module to import from. The resolution of the specifier is host-specified, but always follows the same algorithm as static [import declarations](/en-US/docs/Web/JavaScript/Reference/Statements/import).
-- `options`
-  - : An object containing import options. The following key is recognized:
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 2 (assignment) or above. Its value is coerced to a [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) specifying the module to import. The resolution of the specifier is host-specified, but always follows the same algorithm as static [import declarations](/en-US/docs/Web/JavaScript/Reference/Statements/import).
+- `options` {{optional_inline}}
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 2 (assignment) or above. It evaluates to `undefined` or an object containing import options. The following key is recognized:
     - `with`
       - : The [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with).
 

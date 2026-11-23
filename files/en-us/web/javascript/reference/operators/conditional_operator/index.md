@@ -36,16 +36,15 @@ condition ? exprIfTrue : exprIfFalse
 ### Parameters
 
 - `condition`
-  - : An expression whose value is used as a condition.
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 3 (logical OR or nullish coalescing) or above whose value is used as the condition. Besides `false`, possible falsy values are: `null`, `NaN`, `0`, `0n`, the empty string (`""`), and `undefined`.
 - `exprIfTrue`
-  - : An expression which is executed if the `condition` evaluates to a {{Glossary("truthy")}} value (one which equals or can be converted to `true`).
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 2 (assignment) or above, evaluated only if `condition` is {{Glossary("truthy")}}.
 - `exprIfFalse`
-  - : An expression which is executed if the `condition` is {{Glossary("falsy")}} (that is, has a value which can be converted to `false`).
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 2 (assignment) or above, evaluated only if `condition` is {{Glossary("falsy")}}.
 
-## Description
+### Return value
 
-Besides `false`, possible falsy expressions are: `null`, `NaN`, `0`, the empty string (`""`), and `undefined`.
-If `condition` is any of these, the result of the conditional expression will be the result of executing the expression `exprIfFalse`.
+The value of `exprIfTrue` if `condition` is truthy, or the value of `exprIfFalse` otherwise.
 
 ## Examples
 

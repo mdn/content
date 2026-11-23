@@ -28,19 +28,13 @@ console.log(employee.firstName);
 ## Syntax
 
 ```js-nolint
-delete object.property
-delete object[property]
+delete expression
 ```
-
-> [!NOTE]
-> The syntax allows a wider range of expressions following the `delete` operator, but only the above forms lead to meaningful behaviors.
 
 ### Parameters
 
-- `object`
-  - : The name of an object, or an expression evaluating to an object.
-- `property`
-  - : The property to delete.
+- `expression`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 14 (prefix operators) or above, subject to the [restrictions below](#description). Generally, only [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) lead to meaningful behaviors.
 
 ### Return value
 

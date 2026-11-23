@@ -36,9 +36,13 @@ new constructor(arg1, arg2, /* …, */ argN)
 ### Parameters
 
 - `constructor`
-  - : A class or function that specifies the type of the object instance. The expression can be anything with sufficient [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table), including an identifier, a [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors), or another `new` expression, but [optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) is not allowed.
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 17 (access and call) or above. When the argument list is omitted, precedence 16 (`new` without arguments) is also allowed. The result must be a constructor. Usually an identifier, a [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors), or a function/class literal expression (the {{glossary("IIFE")}} pattern). [Optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) and function calls are not allowed: `new x?.y()` is a syntax error while `new x()()` is seen as `(new x())()`; you can explicitly parenthesize them as `new (x?.y)()` and `new (x())()` to work around the issue.
 - `arg1`, `arg2`, …, `argN`
-  - : A list of values that the `constructor` will be called with. `new Foo` is equivalent to `new Foo()`, i.e., if no argument list is specified, `Foo` is called without arguments.
+  - : Each argument can be a [spread argument](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or an expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 2 (assignment) or above. `new Foo` is equivalent to `new Foo()`, i.e., if no argument list is specified, `Foo` is called without arguments.
+
+### Return value
+
+The object returned by `constructor`, or the newly constructed instance if `constructor` does not return an object.
 
 ## Description
 

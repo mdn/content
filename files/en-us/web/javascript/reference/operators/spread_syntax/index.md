@@ -34,6 +34,17 @@ myFunction(a, ...iterableObj, b)
 { ...obj, key: 'value' }
 ```
 
+### Parameters
+
+- `iterableObj`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 2 (assignment) or above that evaluates to an [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol).
+- `obj`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 2 (assignment) or above whose own enumerable properties are copied into the object literal.
+
+### Return value
+
+Spread syntax has no return value of its own. In a call or array literal, each value from `iterableObj` becomes a separate argument or array element. In an object literal, spreading copies property keys and their values from `obj`.
+
 ## Description
 
 Spread syntax can be used when all elements from an object or array need to be included in a new array or object, or should be applied one-by-one in a function call's arguments list. There are three distinct places that accept the spread syntax:
