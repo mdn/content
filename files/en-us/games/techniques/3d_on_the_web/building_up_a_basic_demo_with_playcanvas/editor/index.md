@@ -15,7 +15,7 @@ Once you're logged in, go to your projects dashboard at `https://playcanvas.com/
 
 ## Creating a new project
 
-Start a brand new project by clicking on the _New project_ button in the sidebar:
+Start a brand new project by clicking on the _New project_ button in the sidebar of the main dashboard. If signing up drops you into a sample project, click the PlayCanvas logo at the top left of the editor and choose _All Projects_ to open the dashboard.
 
 ![PlayCanvas Editor - Panel](playcanvas-editor-panel.png)
 
@@ -95,7 +95,7 @@ Now follow the same steps as we did before when coloring the cube:
 
 ![PlayCanvas Editor - Cylinder material](playcanvas-editor-cylindermaterial.png)
 
-Follow the same approach again to add a cone to the scene, giving it a grayish color (we used `#EAEFF2`). The new cone appears in the same place as the cylinder, which makes it hard to click in the scene, so select _Cone_ in the _Hierarchy_ panel instead and give it an X position value of 2 in the _Inspector_. You should now have three shapes on your scene, something like the below screenshot.
+Follow the same approach again to add a cone to the scene, giving it a grayish color (we used `#EAEFF2`) and an X position value of 2. The cone appears in the same place as the cylinder, which makes it hard to click in the scene, so select _Cone_ in the _Hierarchy_ panel instead to show its properties in the _Inspector_. You should now have three shapes on your scene, something like this:
 
 ![PlayCanvas Editor - Cone](playcanvas-editor-cone.png)
 
