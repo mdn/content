@@ -1,12 +1,11 @@
 ---
-title: "filter() CSS function"
-short-title: "filter()"
+title: filter() CSS function
+short-title: filter()
 slug: Web/CSS/Reference/Values/filter
 page-type: css-function
 browser-compat: css.types.image.filter
+spec-urls: https://drafts.csswg.org/filter-effects-1/#FilterCSSImageValue
 sidebar: cssref
-spec-urls:
-  - https://drafts.csswg.org/filter-effects-1/#FilterCSSImageValue
 ---
 
 The **`filter()`** CSS function applies graphical filter effects to an image and returns the modified image. It can be used anywhere a CSS `<image>` value is accepted, such as the `background-image` property.
