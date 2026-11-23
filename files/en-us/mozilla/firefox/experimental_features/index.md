@@ -647,25 +647,10 @@ Note that Firefox does not support providing {{domxref("CrashReportContext")}} i
 - `dom.reporting.crash.enabled`
   - : Set to `true` to enable (enabled by default in Nightly).
 
-### CSS Typed Object Model Level 1
+### CSS numeric factory functions exposed in workers and worklets
 
-The [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) is implemented in Nightly.
-This simplifies CSS property manipulation by exposing CSS values as typed JavaScript objects rather than strings.
-([Firefox bug 1278697](https://bugzil.la/1278697)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 154           | Yes                 |
-| Developer Edition | 149           | No                  |
-| Beta              | 149           | No                  |
-| Release           | 149           | No                  |
-
-- `layout.css.typed-om.enabled`
-  - : Set to `true` to enable.
-
-#### CSS numeric factory functions exposed in workers and worklets
-
-The [numeric factory functions](/en-US/docs/Web/API/CSS/factory_functions_static) of the {{domxref("CSS")}} namespace, such as `CSS.px()`, are now exposed in workers and paint worklets, not only on `Window`. They're part of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), so outside Nightly they also need the `layout.css.typed-om.enabled` preference set to `true`. ([Firefox bug 2079188](https://bugzil.la/2079188)).
+The [numeric factory functions](/en-US/docs/Web/API/CSS/factory_functions_static) of the {{domxref("CSS")}} namespace, such as `CSS.px()`, are now exposed in workers and paint worklets, not only on `Window`.
+([Firefox bug 2079188](https://bugzil.la/2079188)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -676,8 +661,6 @@ The [numeric factory functions](/en-US/docs/Web/API/CSS/factory_functions_static
 
 - `layout.css.namespace.exposed-in-workers-and-worklets`
   - : Set to `true` to enable.
-- `layout.css.typed-om.enabled`
-  - : Set to `true` to enable (enabled by default in Nightly).
 
 ### Streaming request bodies
 
