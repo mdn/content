@@ -129,7 +129,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   The {{cssxref("quotes")}} CSS property now supports the {{cssxref("quotes", "match-parent", "#match-parent")}} value, which makes an element use the quotation marks from the same set of quotation-mark pairs as its parent element.
   ([Firefox bug 1752382](https://bugzil.la/1752382)).
 
-- **`text-autospace-size`** (Nightly): `layout.css.text-autospace-size.enabled`
+- **`text-autospace-size` property**: `layout.css.text-autospace-size.enabled`
 
-  The {{cssxref("text-autospace-size")}} property is now supported in Nightly. It allows to to specific the size of the space between CJK & Non-CJK characters when using the {{cssxref("text-autospace")}} property.
+  The {{cssxref("text-autospace-size")}} property is now supported, and is enabled by default in Nightly. It sets the amount of space that {{cssxref("text-autospace")}} adds between Chinese/Japanese/Korean (CJK) and non-CJK characters.
   ([Firefox bug 2086765](https://bugzil.la/2086765)).

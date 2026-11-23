@@ -516,7 +516,7 @@ As a result, a nested quote automatically uses the same quotation style as the o
 
 ### `text-autospace-size` property
 
-The {{cssxref("text-autospace-size")}} property is now supported in Nightly. It allows to to specific the size of the space between CJK & Non-CJK characters when using the {{cssxref("text-autospace")}} property.
+The {{cssxref("text-autospace-size")}} property is now supported in Nightly. It sets the amount of space that {{cssxref("text-autospace")}} adds between Chinese/Japanese/Korean (CJK) and non-CJK characters.
 ([Firefox bug 2086765](https://bugzil.la/2086765)).
 
 | Release channel   | Version added | Enabled by default? |
