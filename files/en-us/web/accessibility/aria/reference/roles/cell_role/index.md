@@ -81,50 +81,6 @@ None.
 
 The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML [`<td>`](/en-US/docs/Web/HTML/Reference/Elements/td) element instead of the ARIA role of `cell` whenever possible.
 
-## Examples
-
-```html
-<div
-  role="table"
-  aria-label="Semantic Elements"
-  aria-describedby="semantic_elements_table_desc"
-  aria-rowcount="81">
-  <div id="semantic_elements_table_desc">
-    Semantic Elements to use instead of ARIA's roles
-  </div>
-  <div role="rowgroup">
-    <div role="row">
-      <span role="columnheader" aria-sort="none" aria-rowindex="1"
-        >ARIA Role</span
-      >
-      <span role="columnheader" aria-sort="none" aria-rowindex="1"
-        >Semantic Element</span
-      >
-    </div>
-  </div>
-  <div role="rowgroup">
-    <div role="row">
-      <span role="cell" aria-rowindex="11">header</span>
-      <span role="cell" aria-rowindex="11">h1</span>
-    </div>
-    <div role="row">
-      <span role="cell" aria-rowindex="16">header</span>
-      <span role="cell" aria-rowindex="16">h6</span>
-    </div>
-    <div role="row">
-      <span role="cell" aria-rowindex="18">rowgroup</span>
-      <span role="cell" aria-rowindex="18">thead</span>
-    </div>
-    <div role="row">
-      <span role="cell" aria-rowindex="24">term</span>
-      <span role="cell" aria-rowindex="24">dt</span>
-    </div>
-  </div>
-</div>
-```
-
-The above is a non-semantic ARIA table with five of 81 rows present in the DOM: one within a table header and four rows within the table body. Because not all the rows are in the DOM, we've included the `aria-rowindex` property on every cell. If no cells spanned more than one row or column, the `aria-rowindex` could have been placed on the row rather than the row's individual cells.
-
 ## Best practices
 
 Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, etc., for data table structure. You can add ARIA roles to ensure accessibility should the native semantics of the table be removed, such as with CSS. A relevant use case for the ARIA table role is when the native semantics of a table are overridden by [CSS's display property, such as by display: grid](/en-US/docs/Web/CSS/Reference/Properties/display#accessibility). In this case, you can use the ARIA table roles to add the semantics back in.
@@ -172,6 +128,50 @@ Above is the semantic way of writing a table. The ARIA roles are not necessary i
 ### Added benefits
 
 When applied to a {{HTMLElement('td')}}, it returns cell semantics to the element in case the semantics were removed, such as with `display: grid;`.
+
+## Examples
+
+```html
+<div
+  role="table"
+  aria-label="Semantic Elements"
+  aria-describedby="semantic_elements_table_desc"
+  aria-rowcount="81">
+  <div id="semantic_elements_table_desc">
+    Semantic Elements to use instead of ARIA's roles
+  </div>
+  <div role="rowgroup">
+    <div role="row">
+      <span role="columnheader" aria-sort="none" aria-rowindex="1"
+        >ARIA Role</span
+      >
+      <span role="columnheader" aria-sort="none" aria-rowindex="1"
+        >Semantic Element</span
+      >
+    </div>
+  </div>
+  <div role="rowgroup">
+    <div role="row">
+      <span role="cell" aria-rowindex="11">header</span>
+      <span role="cell" aria-rowindex="11">h1</span>
+    </div>
+    <div role="row">
+      <span role="cell" aria-rowindex="16">header</span>
+      <span role="cell" aria-rowindex="16">h6</span>
+    </div>
+    <div role="row">
+      <span role="cell" aria-rowindex="18">rowgroup</span>
+      <span role="cell" aria-rowindex="18">thead</span>
+    </div>
+    <div role="row">
+      <span role="cell" aria-rowindex="24">term</span>
+      <span role="cell" aria-rowindex="24">dt</span>
+    </div>
+  </div>
+</div>
+```
+
+The above is a non-semantic ARIA table with five of 81 rows present in the DOM: one within a table header and four rows within the table body. Because not all the rows are in the DOM, we've included the `aria-rowindex` property on every cell. If no cells spanned more than one row or column, the `aria-rowindex` could have been placed on the row rather than the row's individual cells.
 
 ## Specifications
 

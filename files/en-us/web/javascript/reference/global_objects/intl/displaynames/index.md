@@ -85,7 +85,7 @@ languageNames.of("de"); // "German"
 languageNames.of("fr-CA"); // "Canadian French"
 languageNames.of("zh-Hant"); // "Traditional Chinese"
 languageNames.of("en-US"); // "American English"
-languageNames.of("zh-TW"); // "Chinese (Taiwan)"]
+languageNames.of("zh-TW"); // "Chinese (Taiwan)"
 
 // Get display names of language in Traditional Chinese
 languageNames = new Intl.DisplayNames(["zh-Hant"], { type: "language" });

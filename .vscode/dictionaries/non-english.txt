@@ -20,6 +20,7 @@ Deutsch
 deutsches
 Dezember
 dezembro
+Dienstag
 Donnerstag
 dulce
 démonstration
@@ -61,7 +62,6 @@ Menü
 minuto
 minutos
 Moin
-Montag
 Muertos
 Musée
 napisem

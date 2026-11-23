@@ -175,7 +175,7 @@ li {
 
 #### Result
 
-{{EmbedLiveSample("Basic", "", "380")}}
+{{EmbedLiveSample("basic_example", "", "380")}}
 
 ## Specifications
 

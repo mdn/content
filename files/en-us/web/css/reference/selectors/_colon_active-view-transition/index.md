@@ -92,7 +92,7 @@ changeColorButton.addEventListener("click", changeColor);
 changeColorButton.addEventListener("keypress", changeColor);
 ```
 
-{{EmbedLiveSample('showing_view_transition_is_running', '100%', '120')}}
+{{EmbedLiveSample('styling_an_active_view_transition', '100%', '120')}}
 
 ## Specifications
 

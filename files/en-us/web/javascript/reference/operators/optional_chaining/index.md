@@ -34,6 +34,23 @@ obj?.[expr]
 func?.(args)
 ```
 
+### Parameters
+
+- `obj`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 17 (access and call) or above.
+- `prop`
+  - : The [identifier name](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) of the property to access.
+- `expr`
+  - : An expression of any [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table), evaluated only if `obj` is neither `null` nor `undefined`. Its value is coerced to a property key (a [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) or symbol).
+- `func`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 17 (access and call) or above that evaluates to a function, `null`, or `undefined`.
+- `args`
+  - : The arguments to pass to `func`, evaluated only if `func` is neither `null` nor `undefined`. Each argument can be a [spread argument](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or an expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 2 (assignment) or above.
+
+### Return value
+
+`undefined` if `obj` or `func` is `null` or `undefined`. Otherwise, the result of the property access or function call.
+
 ## Description
 
 The `?.` operator is like the `.` chaining operator, except that instead of causing an error if a reference is [nullish](/en-US/docs/Glossary/Nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}), the expression short-circuits with a return value of `undefined`. When used with function calls, it returns `undefined` if the given function does not exist.

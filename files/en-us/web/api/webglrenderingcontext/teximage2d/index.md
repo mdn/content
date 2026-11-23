@@ -138,7 +138,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, o
 The texture source can be provided in one of three ways: from an {{jsxref("ArrayBuffer")}} (possibly shared) using `srcData` and `srcOffset`; from a DOM pixel `source`; or, in WebGL 2, from `gl.PIXEL_UNPACK_BUFFER` using `offset`.
 
 - `srcData`
-  - : A {{jsxref("TypedArray")}} or {{jsxref("DataView")}} containing the compressed texture data. Its type must match the `type` parameter:
+  - : A {{jsxref("TypedArray")}} or {{jsxref("DataView")}} containing the image pixel data, or `null` to allocate texture storage without uploading pixels (the allocated texture will be initialized to zeros). If not `null`, its type must match the `type` parameter:
 
     | `srcData` type                                            | `type` value                                                                                                                   |
     | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |

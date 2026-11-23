@@ -72,7 +72,7 @@ circle:first-of-type {
 }
 ```
 
-{{EmbedLiveSample("Defining a circle's radius", "300", "180")}}
+{{EmbedLiveSample("defining_the_radius_of_a_circle", "300", "180")}}
 
 ### ViewBox versus viewport pixels
 

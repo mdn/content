@@ -205,7 +205,7 @@ Note that although the content of the element is hidden, the element still has a
 
 To run the example again, click "Reset".
 
-{{EmbedLiveSample("Using until-found", "", 400)}}
+{{EmbedLiveSample("using_the_until-found_value", "", 400)}}
 
 ## Specifications
 

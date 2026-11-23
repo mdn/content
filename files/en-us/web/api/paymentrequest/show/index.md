@@ -96,17 +96,15 @@ The promise is resolved when the user accepts the payment request (such as by cl
 
 ### Exceptions
 
-Exceptions are not thrown but returned when the {{jsxref("Promise")}} rejects.
+The following exceptions can be returned when the {{jsxref("Promise")}} rejects.
 
 - `AbortError` {{domxref("DOMException")}}
-  - : Returned if the
-    {{Glossary("user agent")}} is already showing a payment panel. Only one payment
-    panel may be visible at a time _across all documents loaded by the user
-    agent_.
+  - : Returned if:
 
-    The promise is also rejected with `AbortError` if the user cancels the
-    payment request.
-
+    - The user cancels the payment request.
+    - The {{Glossary("user agent")}} is already showing a payment panel. Only one payment
+      panel may be visible at a time _across all documents loaded by the user
+      agent_.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Returned if the same payment has
     already been shown for this request (its state is `interactive` because it
@@ -115,6 +113,8 @@ Exceptions are not thrown but returned when the {{jsxref("Promise")}} rejects.
   - : Returned if the user agent does not
     support the payment methods specified when the
     {{domxref("PaymentRequest.PaymentRequest","PaymentRequest")}} constructor was called.
+- `OperationError` {{domxref("DOMException")}}
+  - : Returned to indicate an internal error in the underlying app that is handling the payment.
 - `SecurityError` {{domxref("DOMException")}}
   - : Returned if the call to
     `show()` was not in response to a user action, such as a {{domxref("Element/click_event", "click")}}

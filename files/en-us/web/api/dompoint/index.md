@@ -31,16 +31,16 @@ _`DOMPoint` may also inherit properties from its parent, {{domxref("DOMPointRead
 - {{domxref("DOMPoint.w")}}
   - : The perspective value of the `DOMPoint`.
 
-## Instance methods
-
-_`DOMPoint` inherits instance methods from its parent, {{domxref("DOMPointReadOnly")}}._
-
 ## Static methods
 
 _`DOMPoint` may also inherit static methods from its parent, {{domxref("DOMPointReadOnly")}}._
 
 - {{domxref("DOMPoint/fromPoint_static", "DOMPoint.fromPoint()")}}
   - : Creates a new mutable `DOMPoint` object given an existing point (or an object containing matching properties), which provides the values for its properties.
+
+## Instance methods
+
+_`DOMPoint` inherits instance methods from its parent, {{domxref("DOMPointReadOnly")}}._
 
 ## Examples
 

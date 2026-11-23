@@ -8,7 +8,7 @@ browser-compat: api.Document.readyState
 
 {{APIRef("DOM")}}
 
-The **`Document.readyState`** property describes the loading state of the {{domxref("document")}}.
+The **`readyState`** read-only property of the {{domxref("Document")}} interface describes the loading state of the {{domxref("document")}}.
 When the value of this property changes, a {{domxref("Document/readystatechange_event", "readystatechange")}} event fires on the {{domxref("document")}} object.
 
 ## Value

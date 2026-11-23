@@ -26,6 +26,10 @@ Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Docume
 onfetch = (event) => { }
 ```
 
+## Event type
+
+A {{domxref("FetchEvent")}}.
+
 ## Description
 
 The `fetch` event is fired in the service worker's global scope when the main app thread makes a network request. This includes not only explicit {{domxref("WorkerGlobalScope/fetch", "fetch()")}} calls from the main thread, but also implicit network requests to load pages and subresources (such as JavaScript, CSS, and images) made by the browser following page navigation.
@@ -71,10 +75,6 @@ self.addEventListener("fetch", (event) => {
 
 If `respondWith()` is not called in the handler, then the user agent automatically makes the original network request.
 For example, in the code above, all requests that do not match `pattern1` or `pattern2` are made as if the service worker did not exist.
-
-## Event type
-
-A {{domxref("FetchEvent")}}.
 
 ## Examples
 

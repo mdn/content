@@ -18,6 +18,19 @@ Every `SVGAngle` object operates in one of two modes:
 1. **_Reflect the base value_** of a reflected animatable attribute (being exposed through the {{domxref("SVGAnimatedAngle.baseVal", "baseVal")}} member of an {{domxref("SVGAnimatedAngle")}}),
 2. **_Be detached_,** which is the case for `SVGAngle` objects created with {{domxref("SVGSVGElement.createSVGAngle()")}}.
 
+## Static properties
+
+- `SVG_ANGLETYPE_UNKNOWN` (0)
+  - : Some unknown type of value.
+- `SVG_ANGLETYPE_UNSPECIFIED` (1)
+  - : A unitless {{cssxref("&lt;number&gt;")}} interpreted as a value in degrees.
+- `SVG_ANGLETYPE_DEG` (2)
+  - : An {{cssxref("&lt;angle&gt;")}} with a `deg` unit.
+- `SVG_ANGLETYPE_RAD` (3)
+  - : An {{cssxref("&lt;angle&gt;")}} with a `rad` unit.
+- `SVG_ANGLETYPE_GRAD` (4)
+  - : An {{cssxref("&lt;angle&gt;")}} with a `grad` unit.
+
 ## Instance properties
 
 - {{domxref("SVGAngle.unitType")}} {{ReadOnlyInline}}
@@ -35,19 +48,6 @@ Every `SVGAngle` object operates in one of two modes:
   - : Preserve the same underlying stored value, but reset the stored unit identifier to the given `unitType`. Object attributes `unitType`, `valueInSpecifiedUnits`, and `valueAsString` might be modified as a result of this method.
 - {{domxref("SVGAngle.newValueSpecifiedUnits()")}}
   - : Reset the value as a number with an associated unitType, thereby replacing the values for all of the attributes on the object.
-
-## Static properties
-
-- `SVG_ANGLETYPE_UNKNOWN` (0)
-  - : Some unknown type of value.
-- `SVG_ANGLETYPE_UNSPECIFIED` (1)
-  - : A unitless {{cssxref("&lt;number&gt;")}} interpreted as a value in degrees.
-- `SVG_ANGLETYPE_DEG` (2)
-  - : An {{cssxref("&lt;angle&gt;")}} with a `deg` unit.
-- `SVG_ANGLETYPE_RAD` (3)
-  - : An {{cssxref("&lt;angle&gt;")}} with a `rad` unit.
-- `SVG_ANGLETYPE_GRAD` (4)
-  - : An {{cssxref("&lt;angle&gt;")}} with a `grad` unit.
 
 ## Specifications
 

@@ -140,7 +140,7 @@ li {
 
 #### Result
 
-{{EmbedLiveSample('Overriding default quotes', "100%", 200)}}
+{{EmbedLiveSample('default_quotes_and_overrides', "100%", 200)}}
 
 By default, browser provide language specific quotation marks when the `<q>` element is used. If the `quotes` property is defined, the values provided override the browser defaults. Note the `quotes` property is inherited. The `quotes` property is set on the `<li>` with the `specialQuotes` class, but the quotes are applied the `<q>` elements.
 

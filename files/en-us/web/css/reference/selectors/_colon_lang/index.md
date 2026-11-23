@@ -100,6 +100,17 @@ p {
 }
 ```
 
+#### HTML
+
+```html
+<p lang="nl">Dit is een Nederlandse paragraaf.</p>
+<p lang="de">Dies ist ein deutscher Satz.</p>
+<p lang="en">This is an English sentence.</p>
+<p lang="en-GB">Matching the language range of English.</p>
+<p lang="fr">Ceci est un paragraphe français.</p>
+<p lang="fr-Latn-FR">Ceci est un paragraphe français en latin.</p>
+```
+
 #### CSS
 
 ```css
@@ -117,17 +128,6 @@ p {
 :lang("*-Latn") {
   color: red;
 }
-```
-
-#### HTML
-
-```html
-<p lang="nl">Dit is een Nederlandse paragraaf.</p>
-<p lang="de">Dies ist ein deutscher Satz.</p>
-<p lang="en">This is an English sentence.</p>
-<p lang="en-GB">Matching the language range of English.</p>
-<p lang="fr">Ceci est un paragraphe français.</p>
-<p lang="fr-Latn-FR">Ceci est un paragraphe français en latin.</p>
 ```
 
 #### Result

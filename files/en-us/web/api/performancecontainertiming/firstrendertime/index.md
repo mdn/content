@@ -3,10 +3,12 @@ title: "PerformanceContainerTiming: firstRenderTime property"
 short-title: firstRenderTime
 slug: Web/API/PerformanceContainerTiming/firstRenderTime
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceContainerTiming.firstRenderTime
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`firstRenderTime`** read-only property of the {{domxref("PerformanceContainerTiming")}} interface returns the time at which the rendering update ended for the first paint that contributed content to this container.
 
@@ -15,7 +17,7 @@ This differs from {{domxref("PerformanceContainerTiming.paintTime", "paintTime")
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp")}} measured relative to the {{domxref("Performance.timeOrigin", "time origin")}}.
+A {{domxref("DOMHighResTimeStamp")}} measured relative to the [time origin](/en-US/docs/Web/API/Performance/timeOrigin).
 
 ## Examples
 

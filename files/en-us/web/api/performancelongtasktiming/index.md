@@ -4,10 +4,11 @@ slug: Web/API/PerformanceLongTaskTiming
 page-type: web-api-interface
 status:
   - experimental
+  - non-standard
 browser-compat: api.PerformanceLongTaskTiming
 ---
 
-{{SeeCompatTable}}{{APIRef("Performance API")}}
+{{SeeCompatTable}}{{APIRef("Performance API")}}{{non-standard_header}}
 
 The **`PerformanceLongTaskTiming`** interface provides information about tasks that occupy the UI thread for 50 milliseconds or more.
 
@@ -39,12 +40,12 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 
 This interface also supports the following properties:
 
-- {{domxref("PerformanceLongTaskTiming.attribution")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("PerformanceLongTaskTiming.attribution")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{non-standard_inline}}
   - : Returns a sequence of {{domxref('TaskAttributionTiming')}} instances.
 
 ## Instance methods
 
-- {{domxref("PerformanceLongTaskTiming.toJSON()")}} {{Experimental_Inline}}
+- {{domxref("PerformanceLongTaskTiming.toJSON()")}} {{Experimental_Inline}} {{non-standard_inline}}
   - : Returns a JSON-serializable plain object representing the `PerformanceLongTaskTiming` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Description

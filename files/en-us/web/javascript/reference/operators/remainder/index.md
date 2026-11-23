@@ -30,6 +30,17 @@ console.log(-4 % 2);
 x % y
 ```
 
+### Parameters
+
+- `x`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 12 (multiplication) or above. Its value is coerced to [a number or a BigInt](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion).
+- `y`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 13 (exponentiation) or above. Its value is coerced to [a number or a BigInt](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion).
+
+### Return value
+
+A number or a BigInt representing the remainder of `x` divided by `y`.
+
 ## Description
 
 The `%` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt remainder if both operands become BigInts; otherwise, it performs number remainder. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
@@ -40,7 +51,7 @@ When both operands are non-zero and finite, the remainder `r` is calculated as `
 
 Note that while in most languages, '%' is a remainder operator, in some (e.g., [Python, Perl](https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages)) it is a modulo operator. Modulo is defined as `k := n - d * q` where `q` is the integer such that `k` has the same sign as the divisor `d` while being as close to 0 as possible. For two values of the same sign, the two are equivalent, but when the operands are of different signs, the modulo result always has the same sign as the _divisor_, while the remainder has the same sign as the _dividend_, which can make them differ by one unit of `d`. To obtain a modulo in JavaScript, in place of `n % d`, use `((n % d) + d) % d`. In JavaScript, the modulo operation (which doesn't have a dedicated operator) is used to normalize the second operand of bitwise shift operators ([`<<`](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift), [`>>`](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift), etc.), making the offset always a positive value.
 
-For BigInt division, a {{jsxref("RangeError")}} is thrown if the divisor `y` is `0n`. This is because number remainder by zero returns `NaN`, but BigInt has no concept of `NaN`.
+For BigInt remainder, a {{jsxref("RangeError")}} is thrown if the divisor `y` is `0n`. This is because number remainder by zero returns `NaN`, but BigInt has no concept of `NaN`.
 
 ## Examples
 

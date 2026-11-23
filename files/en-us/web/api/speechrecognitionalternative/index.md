@@ -7,12 +7,13 @@ browser-compat: api.SpeechRecognitionAlternative
 
 {{APIRef("Web Speech API")}}
 
-The **`SpeechRecognitionAlternative`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a single word that has been recognized by the speech recognition service.
+The **`SpeechRecognitionAlternative`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents one possible match for what the user said, as recognized by the speech recognition service.
+A {{domxref("SpeechRecognitionResult")}} contains one or more alternatives, ordered from most to least confident.
 
 ## Instance properties
 
 - {{domxref("SpeechRecognitionAlternative.transcript")}} {{ReadOnlyInline}}
-  - : Returns a string containing the transcript of the recognized word.
+  - : Returns a string containing the transcript of the recognized speech.
 - {{domxref("SpeechRecognitionAlternative.confidence")}} {{ReadOnlyInline}}
   - : Returns a numeric estimate between 0 and 1 of how confident the speech recognition system is that the recognition is correct.
 

@@ -93,7 +93,7 @@ source.addEventListener("dragend", (event) => {
 
 #### Result
 
-{{EmbedLiveSample('Resetting opacity on drag end')}}
+{{EmbedLiveSample('resetting_opacity_on_dragend')}}
 
 ## Specifications
 

@@ -13,7 +13,7 @@ The **`numberingSystem`** accessor property of {{jsxref("Intl.Locale")}} instanc
 
 A numeral system is a system for expressing numbers. For a list of supported numbering system types, see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types).
 
-The `numberingSystem` property's value is set at construction time, either through the `nu` key of the locale identifier or through the `numberingSystem` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; and if neither is present, the property has value `undefined`.
+The `numberingSystem` property's value is set at construction time, either through the `nu` key of the locale identifier or through the `numberingSystem` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; if neither is present, the property has the value `undefined`.
 
 The set accessor of `numberingSystem` is `undefined`. You cannot change this property directly.
 
@@ -23,7 +23,7 @@ Like other locale subtags, the numbering system type can be added to the {{jsxre
 
 ### Adding a numbering system via the locale string
 
-In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), `numberingSystem` is an "extension subtag". These subtags add additional data about the locale, and are added to locale identifiers using the `-u` extension key. To add the numbering system type to the initial locale identifier string passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor, first add the `-u` extension key if it doesn't exist. Next, add the `-nu` extension to indicate that you are adding a numbering system. Finally, add the numbering system type.
+In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), `numberingSystem` is an "extension subtag". These subtags provide additional data about the locale and are added to locale identifiers using the `-u` extension key. To add the numbering system type to the initial locale identifier string passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor, first add the `-u` extension key if it doesn't exist. Next, add the `-nu` extension to indicate that you are adding a numbering system. Finally, add the numbering system type.
 
 ```js
 const locale = new Intl.Locale("fr-Latn-FR-u-nu-mong");

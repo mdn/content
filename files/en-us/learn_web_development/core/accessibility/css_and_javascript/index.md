@@ -160,9 +160,9 @@ a:active {
 
 The standard link conventions are underlined and a different color (default: blue) in their standard state, another color variation when the link has previously been visited (default: purple), and yet another color when the link is activated (default: red). In addition, the mouse pointer changes to a pointer icon when links are moused over, and the link receives a highlight when focused (e.g., via tabbing) or activated. The following image shows the highlight in both Firefox (a dotted outline) and Chrome (a blue outline):
 
-![Screenshot of a list of links in Firefox browser. The list contains 4 items. The second list item is highlighted using a blue dotted outline when it is focussed via tabbing.](focus-highlight-firefox.png)
+![Screenshot of a list of links in Firefox browser. The list contains 4 items. The second list item is highlighted using a blue dotted outline when it is focused via tabbing.](focus-highlight-firefox.png)
 
-![Screenshot of a list of links in Chrome browser. The list contains 4 items. The third list item is highlighted using a blue outline when it is focussed via tabbing.](focus-highlight-chrome.png)
+![Screenshot of a list of links in Chrome browser. The list contains 4 items. The third list item is highlighted using a blue outline when it is focused via tabbing.](focus-highlight-chrome.png)
 
 You can be creative with link styles, as long as you keep giving users feedback when they interact with the links. Something should definitely happen when states change, and you shouldn't get rid of the pointer cursor or the outline — both are very important accessibility aids for those using keyboard controls.
 

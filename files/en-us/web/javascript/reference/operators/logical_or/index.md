@@ -29,6 +29,17 @@ console.log(a > 0 || b > 0);
 x || y
 ```
 
+### Parameters
+
+- `x`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 3 (logical OR) or above. Parenthesize a nullish coalescing expression (`??`) used here.
+- `y`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 4 (logical AND) or above. Evaluated only if `x` is {{Glossary("falsy")}}.
+
+### Return value
+
+The value of `x` if `x` is {{Glossary("truthy")}}, or the value of `y` otherwise.
+
 ## Description
 
 If `x` can be converted to `true`, returns
@@ -84,12 +95,10 @@ console.log(B() || A());
 
 ### Operator precedence
 
-The following expressions might seem equivalent, but they are not, because the
-`&&` operator is executed before the `||` operator
-(see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
+The following expressions might seem equivalent, but they are not, because the `&&` operator groups more tightly than the `||` operator (see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
 ```js-nolint
-true || false && false; // returns true, because && is executed first
+true || false && false; // returns true; equivalent to true || (false && false)
 (true || false) && false; // returns false, because grouping has the highest precedence
 ```
 

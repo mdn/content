@@ -158,7 +158,7 @@ img {
 }
 ```
 
-{{EmbedLiveSample("PWA iconography", 600, 250)}}
+{{EmbedLiveSample("app_iconography", 600, 250)}}
 
 ### Example solution
 

@@ -29,7 +29,7 @@ None.
 
 `true` if the rendering context was lost; `false` otherwise.
 
-### Examples
+## Examples
 
 ```js
 const ctx = canvas.getContext("2d");

@@ -61,7 +61,7 @@ Some browsers may also support the following attributes:
 </math>
 ```
 
-{{EmbedLiveSample('Alignment with row number')}}
+{{EmbedLiveSample('matrix_using_mtable_mrow_mtr_and_mtd')}}
 
 ## Technical summary
 

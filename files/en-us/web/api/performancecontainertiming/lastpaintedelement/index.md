@@ -3,10 +3,12 @@ title: "PerformanceContainerTiming: lastPaintedElement property"
 short-title: lastPaintedElement
 slug: Web/API/PerformanceContainerTiming/lastPaintedElement
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceContainerTiming.lastPaintedElement
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`lastPaintedElement`** read-only property of the {{domxref("PerformanceContainerTiming")}} interface returns the element that contributed the largest newly painted area in the frame that generated this entry.
 

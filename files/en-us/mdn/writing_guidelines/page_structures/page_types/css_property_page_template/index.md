@@ -151,6 +151,10 @@ If the property is part of a shorthand, include alternative ways of declaring th
 The `property-name` property, along with the \{{cssxref("sibling-property")}} property, can also be set by using the \{{cssxref("shorthand-property")}} shorthand.
 ```
 
+## Accessibility
+
+This is an optional section. Include accessibility guidelines, best practices, and potential concerns that developers should be aware of while using this property. You can also include workarounds or solutions where applicable.
+
 ## Formal definition
 
 `\{{CSSInfo}}`
@@ -162,10 +166,6 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 `\{{CSSSyntax}}`
 
 _To use this macro, remove the backticks and backslash in the markdown file._
-
-## Accessibility
-
-This is an optional section. Include accessibility guidelines, best practices, and potential concerns that developers should be aware of while using this property. You can also include workarounds or solutions where applicable.
 
 ## Examples
 

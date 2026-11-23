@@ -35,6 +35,21 @@ object[expression]
 object.#privateProperty
 ```
 
+### Parameters
+
+- `object`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 17 (access and call) or above whose property is accessed.
+- `propertyName`
+  - : The [identifier name](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) of the property to access.
+- `expression`
+  - : An expression of any [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table). Its value is coerced to a property key (a [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) or symbol).
+- `#privateProperty`
+  - : A [private element identifier](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) declared in an enclosing class.
+
+### Return value
+
+A reference to the specified property or private element. Reading the reference gives its value.
+
 ## Description
 
 One can think of an object as an _associative array_ (a.k.a. _map_, _dictionary_, _hash_, _lookup table_). The _keys_ in this array are the names of the object's [properties](/en-US/docs/Glossary/Property/JavaScript).
@@ -107,7 +122,7 @@ A space before bracket notation is allowed.
 document ["createElement"]("pre");
 ```
 
-Passing expressions that evaluate to property name will do the same thing as directly passing the property name.
+Passing expressions that evaluate to a property name will do the same thing as directly passing the property name.
 
 ```js
 const key = "name";

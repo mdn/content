@@ -26,7 +26,7 @@ None ({{jsxref("undefined")}}).
 
 ## Specifications
 
-Not part of any current specifications.
+{{Specifications}}
 
 ## Browser compatibility
 

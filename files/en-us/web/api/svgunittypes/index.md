@@ -11,14 +11,6 @@ The **`SVGUnitTypes`** interface defines a commonly used set of constants used f
 
 {{InheritanceDiagram}}
 
-## Instance properties
-
-_This interface doesn't implement any specific properties._
-
-## Instance methods
-
-_This interface doesn't implement any specific methods._
-
 ## Static properties
 
 - `SVG_UNIT_TYPE_UNKNOWN` (0)
@@ -27,6 +19,14 @@ _This interface doesn't implement any specific methods._
   - : Corresponds to the value `userSpaceOnUse`.
 - `SVG_UNIT_TYPE_OBJECTBOUNDINGBOX` (2)
   - : Corresponds to the value `objectBoundingBox`.
+
+## Instance properties
+
+_This interface doesn't implement any specific properties._
+
+## Instance methods
+
+_This interface doesn't implement any specific methods._
 
 ## Specifications
 

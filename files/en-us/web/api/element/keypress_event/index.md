@@ -41,7 +41,7 @@ A {{domxref("KeyboardEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxr
 
 ### addEventListener keypress example
 
-This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press a key after focussing the {{htmlelement("input")}} element.
+This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press a key after focusing the {{htmlelement("input")}} element.
 
 To see which keys cause a `keypress` event to fire, and which keys don't, try pressing the following:
 

@@ -21,7 +21,7 @@ deleteSampler(sampler)
 ### Parameters
 
 - `sampler`
-  - : A {{domxref("WebGLSampler")}} object to delete.
+  - : A {{domxref("WebGLSampler")}} object to delete. Passing `null` does nothing.
 
 ### Return value
 

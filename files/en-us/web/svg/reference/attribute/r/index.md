@@ -17,43 +17,6 @@ You can use this attribute with the following SVG elements:
 
 Percentages refer to the normalized diagonal of the current SVG viewport, which is calculated as <math><mfrac><msqrt><mrow><msup><mi>&lt;width&gt;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&lt;height&gt;</mi><mn>2</mn></msup></mrow></msqrt><msqrt><mn>2</mn></msqrt></mfrac></math>.
 
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-  <radialGradient r="0" id="myGradient000">
-    <stop offset="0" stop-color="white" />
-    <stop offset="100%" stop-color="black" />
-  </radialGradient>
-  <radialGradient r="50%" id="myGradient050">
-    <stop offset="0" stop-color="white" />
-    <stop offset="100%" stop-color="black" />
-  </radialGradient>
-  <radialGradient r="100%" id="myGradient100">
-    <stop offset="0" stop-color="white" />
-    <stop offset="100%" stop-color="black" />
-  </radialGradient>
-
-  <circle cx="50" cy="50" r="0" />
-  <circle cx="150" cy="50" r="25" />
-  <circle cx="250" cy="50" r="50" />
-
-  <rect x="20" y="120" width="60" height="60" fill="url(#myGradient000)" />
-  <rect x="120" y="120" width="60" height="60" fill="url(#myGradient050)" />
-  <rect x="220" y="120" width="60" height="60" fill="url(#myGradient100)" />
-</svg>
-```
-
-{{EmbedLiveSample("Example", '100%', 200)}}
-
 ## circle
 
 For {{SVGElement('circle')}}, `r` defines the radius of the circle and therefore its size. With a value lower or equal to zero the circle won't be drawn at all.
@@ -118,6 +81,43 @@ The gradient will be drawn such that the **100%** gradient stop is mapped to the
     </tr>
   </tbody>
 </table>
+
+## Example
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <radialGradient r="0" id="myGradient000">
+    <stop offset="0" stop-color="white" />
+    <stop offset="100%" stop-color="black" />
+  </radialGradient>
+  <radialGradient r="50%" id="myGradient050">
+    <stop offset="0" stop-color="white" />
+    <stop offset="100%" stop-color="black" />
+  </radialGradient>
+  <radialGradient r="100%" id="myGradient100">
+    <stop offset="0" stop-color="white" />
+    <stop offset="100%" stop-color="black" />
+  </radialGradient>
+
+  <circle cx="50" cy="50" r="0" />
+  <circle cx="150" cy="50" r="25" />
+  <circle cx="250" cy="50" r="50" />
+
+  <rect x="20" y="120" width="60" height="60" fill="url(#myGradient000)" />
+  <rect x="120" y="120" width="60" height="60" fill="url(#myGradient050)" />
+  <rect x="220" y="120" width="60" height="60" fill="url(#myGradient100)" />
+</svg>
+```
+
+{{EmbedLiveSample("Example", '100%', 200)}}
 
 ## Specifications
 

@@ -21,7 +21,7 @@ bindVertexArray(vertexArray)
 ### Parameters
 
 - `vertexArray`
-  - : A {{domxref("WebGLVertexArrayObject")}} (VAO) object to bind.
+  - : A {{domxref("WebGLVertexArrayObject")}} (VAO) object to bind, or `null` to bind the default vertex array object.
 
 ### Return value
 

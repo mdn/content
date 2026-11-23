@@ -43,9 +43,22 @@ The syntax for the rectangle is similar to the [`rect()`](/en-US/docs/Web/CSS/Re
 
 This example loads an image and uses it in four segments to draw the Firefox logo in four {{HTMLElement("div")}} blocks. Clicking on their container causes the four segments to rotate around by swapping the {{CSSxRef("background-image")}} property values among the four {{HTMLElement("div")}} blocks.
 
+### HTML
+
+We include a container with four boxes:
+
+```html
+<div id="container">
+  <div id="box1">Top left</div>
+  <div id="box2">Top right</div>
+  <div id="box3">Bottom left</div>
+  <div id="box4">Bottom right</div>
+</div>
+```
+
 ### CSS
 
-The CSS defines one container style, then the styles for the four boxes that comprise the complete image.
+The CSS defines one container style, then the styles for the four boxes that comprise the complete image. This places the four segments of our image in a two-by-two box grid. These four segments are all contained within a larger {{HTMLElement("div")}} block whose primary purpose is to receive click events and dispatch them to our JavaScript code.
 
 The container looks like this:
 
@@ -110,21 +123,6 @@ The other corners follow a similar pattern:
   position: absolute;
 }
 ```
-
-### HTML
-
-We include a container with four boxes:
-
-```html
-<div id="container">
-  <div id="box1">Top left</div>
-  <div id="box2">Top right</div>
-  <div id="box3">Bottom left</div>
-  <div id="box4">Bottom right</div>
-</div>
-```
-
-This places the four segments of our image in a two-by-two box grid. These four segments are all contained within a larger {{HTMLElement("div")}} block whose primary purpose is to receive click events and dispatch them to our JavaScript code.
 
 ### JavaScript
 

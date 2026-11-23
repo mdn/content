@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainTime() constructor
+short-title: Temporal.PlainTime()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime/PlainTime
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Temporal.PlainTime.PlainTime

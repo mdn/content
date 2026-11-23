@@ -42,7 +42,7 @@ framebufferTextureLayer(target, attachment, texture, level, layer)
     - `gl.DEPTH_STENCIL_ATTACHMENT`: depth and stencil buffer.
 
 - `texture`
-  - : A {{domxref("WebGLTexture")}} object whose image to attach.
+  - : A {{domxref("WebGLTexture")}} object whose image to attach, or `null` to detach the image currently attached to the specified attachment point.
 - `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the mipmap level of the texture image to attach.
 - `layer`

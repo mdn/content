@@ -27,14 +27,6 @@ The **`:-moz-last-node`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/
 
 ## Examples
 
-### CSS
-
-```css
-span:-moz-last-node {
-  background-color: lime;
-}
-```
-
 ### HTML
 
 ```html
@@ -47,6 +39,14 @@ span:-moz-last-node {
   <span>This doesn't match because it's followed by text.</span>
   Blahblah.
 </p>
+```
+
+### CSS
+
+```css
+span:-moz-last-node {
+  background-color: lime;
+}
 ```
 
 ### Result
