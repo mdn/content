@@ -114,7 +114,7 @@ First, we define the box and the button that moves it.
 #### CSS
 
 The following CSS styles the box.
-The box starts with `translate(20px)`, 20 pixels to the right of its normal position, so the JavaScript has an initial translation to read.
+The box starts with `translate(20px)`, 20 pixels to the right of its normal position (so the JavaScript has an initial translation to read).
 The `transition` property animates each change to the translation.
 
 ```css
