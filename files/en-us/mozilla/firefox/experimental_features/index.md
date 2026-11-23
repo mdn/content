@@ -695,17 +695,17 @@ Note that Firefox does not support providing {{domxref("CrashReportContext")}} i
 ### CSS numeric factory functions exposed in workers and worklets
 
 The [numeric factory functions](/en-US/docs/Web/API/CSS/factory_functions_static) of the {{domxref("CSS")}} namespace, such as `CSS.px()`, are now exposed in workers and paint worklets, not only on `Window`.
-([Firefox bug 2079188](https://bugzil.la/2079188)).
+([Firefox bug 2079188](https://bugzil.la/2079188), [Firefox bug 2079583](https://bugzil.la/2079583)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 159           | No                  |
+| Nightly           | 161           | Yes                 |
 | Developer Edition | 159           | No                  |
 | Beta              | 159           | No                  |
 | Release           | 159           | No                  |
 
 - `layout.css.namespace.exposed-in-workers-and-worklets`
-  - : Set to `true` to enable.
+  - : Set to `true` to enable (enabled by default in Nightly).
 
 ### Streaming request bodies
 
