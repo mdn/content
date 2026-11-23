@@ -215,7 +215,7 @@ sliceSlider.addEventListener("input", () => {
 
 This example demonstrates SVG border images, and the effects of the {{SVGAttr("viewBox")}} attribute on border image sizing by comparing three SVG border images with identical artwork but with and without the `viewBox` attribute and declared dimensions.
 
-We will apply three versions of the following SVG as the {{cssxref("border-image-source")}}, with the first having neither a natural size nor {{SVGAttr("viewBox")}}; the second no natural size but with `viewBox`; the third has both a natural size and `viewBox` set. 
+We will apply three versions of the following SVG as the {{cssxref("border-image-source")}}, with the first having neither a natural size nor {{SVGAttr("viewBox")}}; the second no natural size but with `viewBox`; the third has both a natural size and `viewBox` set.
 
 ```html live-sample___svg-artwork
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
