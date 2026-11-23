@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.emulation.setLocaleOverride
 sidebar: webdriver
 ---
 
-The `emulation.setLocaleOverride` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`emulation`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/emulation) module overrides the locale for the specified [top-level contexts](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) or [user contexts](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts).
+The `emulation.setLocaleOverride` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`emulation`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/emulation) module overrides the {{glossary("locale")}} for the specified [top-level contexts](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) or [user contexts](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts).
 
 ## Syntax
 
@@ -74,10 +74,10 @@ The `result` field in the response is an empty object (`{}`).
 
 The `emulation.setLocaleOverride` command allows you to simulate a locale for the selected top-level contexts or user contexts.
 
-The command changes the default locale used by internationalization APIs such as [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat).
-It also changes the language preferences exposed through [`navigator.language`](/en-US/docs/Web/API/Navigator/language) and [`navigator.languages`](/en-US/docs/Web/API/Navigator/languages).
+The command changes the default locale used by internationalization APIs such as {{jsxref("Intl.DateTimeFormat")}}.
+It also changes the language preferences exposed through {{domxref("Navigator.language", "navigator.language")}} and {{domxref("Navigator.languages", "navigator.languages")}}.
 
-The command also sets the [`Accept-Language`](/en-US/docs/Web/HTTP/Reference/Headers/Accept-Language) request header to the overridden locale when the request does not already specify that header.
+The command also sets the {{HTTPHeader("Accept-Language")}} request header to the overridden locale when the request does not already specify that header.
 
 To remove an override, set `locale` to `null` for the affected contexts or user contexts.
 If you remove an override for a top-level context, an override configured for its user context still applies.
@@ -91,7 +91,7 @@ Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/C
 Suppose you have a web page that formats dates using the browser's default locale, and you want to verify that it displays dates in French when the locale is `fr-FR`.
 
 First, open a tab using [`browsingContext.create`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/create), which returns its context ID.
-Then load the page you're testing.
+Then load the page you're testing using [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate).
 
 Send the following message to set the tab's locale to French:
 
@@ -110,8 +110,8 @@ The browser responds with an empty `result` object:
 
 ```json
 {
-  "type": "success",
   "id": 1,
+  "type": "success",
   "result": {}
 }
 ```
@@ -132,9 +132,10 @@ To remove the override, send the same command with `locale` set to `null` and th
 
 ## See also
 
+- [`emulation.setTimezoneOverride`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/emulation/setTimezoneOverride) command
 - [`browser.getUserContexts`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/getUserContexts) command
 - [`browsingContext.create`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/create) command
 - [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree) command
-- [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
-- [`Navigator.language`](/en-US/docs/Web/API/Navigator/language)
-- [`Navigator.languages`](/en-US/docs/Web/API/Navigator/languages)
+- {{jsxref("Intl.DateTimeFormat")}}
+- {{domxref("Navigator.language")}}
+- {{domxref("Navigator.languages")}}

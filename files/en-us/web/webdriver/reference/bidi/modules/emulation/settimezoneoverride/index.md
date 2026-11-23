@@ -44,7 +44,7 @@ The `params` field contains:
     Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
     This field cannot be used if [`userContexts`](#usercontexts) is also specified, but it is required if `userContexts` is not specified.
 - `timezone`
-  - : A string that specifies an available [named time zone identifier or time zone offset string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets), such as `"Asia/Tokyo"` or `"+09:00"`.
+  - : A string that specifies an available [named time zone identifier or time zone offset string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets), such as `Asia/Tokyo` or `+09:00`.
     It can be `null` to remove the time zone override at the specified scope.
 - `userContexts` {{optional_inline}}
   - : An array of one or more strings that contains the IDs of the [user contexts](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) to affect.
@@ -64,7 +64,7 @@ The `result` field in the response is an empty object (`{}`).
     - Neither `contexts` nor `userContexts` is specified.
     - `contexts` or `userContexts` is an empty array.
     - A context specified in `contexts` is not a top-level context.
-    - `timezone` is neither `null` nor a valid time zone offset string nor an available named time zone identifier.
+    - `timezone` is not `null` and is neither a valid time zone offset string nor an available named time zone identifier.
 - `no such frame`
   - : No context with an ID specified in `contexts` is found.
 - `no such user context`
@@ -74,8 +74,8 @@ The `result` field in the response is an empty object (`{}`).
 
 The `emulation.setTimezoneOverride` command allows you to simulate a time zone for the selected top-level contexts or user contexts.
 
-The command changes the default time zone used by date and time APIs such as [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat).
-It also changes the local time zone used by [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) methods such as [`getHours()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours) and [`getTimezoneOffset()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset).
+The command changes the default time zone used by date and time APIs such as {{jsxref("Intl.DateTimeFormat")}}.
+It also changes the local time zone used by {{jsxref("Date")}} methods such as {{jsxref("Date.prototype.getHours()", "getHours()")}} and {{jsxref("Date.prototype.getTimezoneOffset()", "getTimezoneOffset()")}}.
 
 To remove an override, set `timezone` to `null` for the affected contexts or user contexts.
 If you remove an override for a top-level context, an override configured for its user context still applies.
@@ -89,7 +89,7 @@ Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/C
 Suppose you have a web page that displays event times in the browser's default time zone, and you want to verify that it displays them in Tokyo's time zone when the override is `Asia/Tokyo`.
 
 First, open a tab using [`browsingContext.create`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/create), which returns its context ID.
-Then load the page you're testing.
+Then load the page you're testing using [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate).
 
 Send the following message to set the tab's time zone to `Asia/Tokyo`:
 
@@ -108,8 +108,8 @@ The browser responds with an empty `result` object:
 
 ```json
 {
-  "type": "success",
   "id": 1,
+  "type": "success",
   "result": {}
 }
 ```
@@ -130,9 +130,10 @@ To remove the override, send the same command with `timezone` set to `null` and 
 
 ## See also
 
+- [`emulation.setLocaleOverride`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/emulation/setLocaleOverride) command
 - [`browser.getUserContexts`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/getUserContexts) command
 - [`browsingContext.create`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/create) command
 - [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree) command
-- [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
-- [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+- {{jsxref("Intl.DateTimeFormat")}}
+- {{jsxref("Date")}}
 - [Time zones and offsets](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets)

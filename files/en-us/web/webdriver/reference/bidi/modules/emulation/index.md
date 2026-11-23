@@ -1,5 +1,5 @@
 ---
-title: emulation module
+title: "`emulation` module"
 short-title: emulation
 slug: Web/WebDriver/Reference/BiDi/Modules/emulation
 page-type: listing-page
