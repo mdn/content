@@ -35,6 +35,8 @@ There are other changes to the parsing behavior that prevent possible syntax mis
 
 The set accessor of `unicode` is `undefined`. You cannot change this property directly.
 
+For legacy reasons, `RegExp.prototype.unicode === undefined` although `RegExp.prototype` is not a `RegExp` instance. (You'd expect the getter to throw a `TypeError` if the `this` value is not a `RegExp` instance.)
+
 ### Unicode-aware mode
 
 When we refer to _Unicode-aware mode_, we mean the regex has either the `u` or the [`v`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) flag, in which case the regex enables Unicode-related features (such as [Unicode character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)) and has much stricter syntax rules. Because `u` and `v` interpret the same regex in incompatible ways, using both flags results in a {{jsxref("SyntaxError")}}.

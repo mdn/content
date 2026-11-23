@@ -29,6 +29,8 @@ All built-in functions read the `flags` property instead of reading individual f
 
 The set accessor of `flags` is `undefined`. You cannot change this property directly.
 
+For legacy reasons, `RegExp.prototype.flags === ""` (because the individual flag accessors each return `undefined`) although `RegExp.prototype` is not a `RegExp` instance.
+
 ## Examples
 
 ### Using flags
