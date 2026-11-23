@@ -514,6 +514,21 @@ As a result, a nested quote automatically uses the same quotation style as the o
 - `layout.css.quotes.match-parent.enabled`
   - : Set to `true` to enable.
 
+### `text-autospace-size` property
+
+The {{cssxref("text-autospace-size")}} property is now supported in Nightly. It sets the amount of space that {{cssxref("text-autospace")}} adds between Chinese/Japanese/Korean (CJK) and non-CJK characters.
+([Firefox bug 2086765](https://bugzil.la/2086765)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 161           | No                  |
+| Beta              | 161           | No                  |
+| Release           | 161           | No                  |
+
+- `layout.css.text-autospace-size.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
