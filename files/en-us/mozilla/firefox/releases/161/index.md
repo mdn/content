@@ -1,32 +1,19 @@
 ---
-title: Firefox 161 release notes for developers (Beta)
-short-title: Firefox 161 (Beta)
+title: Firefox 161 release notes for developers (Stable)
+short-title: Firefox 161 (Stable)
 slug: Mozilla/Firefox/Releases/161
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 161 that affect developers.
-Firefox 161 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [November 24, 2026](https://whattrainisitnow.com/release/?version=161).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 161 was released on [November 24, 2026](https://whattrainisitnow.com/release/?version=161).
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
+### HTML
 
-<!-- ### HTML -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### SVG
 
@@ -34,30 +21,18 @@ Firefox 161 is the current [Beta version of Firefox](https://www.firefox.com/en-
   These control how much referrer information is sent in the {{HTTPHeader("Referer")}} header when the element fetches the resource referenced by its `href` attribute. This works in the same way as the `referrerpolicy` attribute on the HTML {{HTMLElement("img")}} and {{HTMLElement("script")}} elements.
   ([Firefox bug 2079321](https://bugzil.la/2079321)).
 
-<!-- #### Removals -->
-
 ### CSS
 
 - The {{cssxref("random")}} CSS function is now supported. It generates a random value within a specified range and can optionally limit the possible values to increments of a specified step size. An optional `<random-key>` parameter can be used to share a random base value across `random()` functions, for example on different elements or in different properties. ([Firefox bug 2072252](https://bugzil.la/2072252)).
 - The {{cssxref("var")}}, {{cssxref("attr")}}, and {{cssxref("env")}} CSS functions now accept nested functions in their first parameter. For example, `var(attr(data-theme-prop type(<custom-ident>)))` and `env(var(--safe-area-block-start))` are now supported. ([Firefox bug 2080511](https://bugzil.la/2080511)).
 
-<!-- #### Removals -->
+### JavaScript
 
-<!-- ### JavaScript -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### HTTP
 
 - [Compression Dictionary Transport](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport) is now supported. A server can mark a response as a dictionary using the {{httpheader("Use-As-Dictionary")}} header. The browser then lists the stored dictionary in the {{httpheader("Available-Dictionary")}} header of matching requests, and the server can reply with a response compressed against it, using the `dcb` (Brotli) or `dcz` (Zstandard) {{httpheader("Content-Encoding")}} values. This can greatly reduce the size of resources that change little between versions, such as JavaScript bundles. ([Firefox bug 2039320](https://bugzil.la/2039320)).
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
 
 ### APIs
 
@@ -78,19 +53,11 @@ Firefox 161 is the current [Beta version of Firefox](https://www.firefox.com/en-
   The color value interfaces, such as `CSSColorValue` and `CSSRGB`, are not supported in Firefox or any other browser.
   ([Firefox bug 2089681](https://bugzil.la/2089681)).
 
-<!-- #### DOM -->
-
 #### Media, WebRTC, and Web Audio
 
 - The {{domxref("RTCRtpSender.setParameters()")}} method now supports the optional [`setParameterOptions`](/en-US/docs/Web/API/RTCRtpSender/setParameters#setparameteroptions) parameter.
   This lets you ask the encoder for an encoding to generate a key frame in the same call that you use to change the sender's encoding parameters, such as `active` or `scaleResolutionDownBy`. Receivers can then avoid requesting a key frame after the change.
   ([Firefox bug 2057265](https://bugzil.la/2057265)).
-
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -103,10 +70,6 @@ Firefox 161 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - Fixed the `network.continueRequest` command so that replacing the body of a request that already had a body also updates the `Content-Length` header. Previously, the server could receive a truncated or incomplete body. ([Firefox bug 2088814](https://bugzil.la/2088814)).
 
 ## Changes for add-on developers
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
 
 ## Experimental web features
 
