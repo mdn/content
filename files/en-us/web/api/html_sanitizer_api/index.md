@@ -38,18 +38,6 @@ The methods are context aware, and will additionally drop any elements that the 
 - {{domxref('Element.beforeHTML()')}} and {{domxref('CharacterData.beforeHTML()')}}
 - {{domxref('Element.replaceWithHTML()')}} and {{domxref('CharacterData.replaceWithHTML()')}}
 
-#### Unsafe methods
-
-- {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}.
-- {{domxref('Element.setHTMLUnsafe()')}}, {{domxref('ShadowRoot.setHTMLUnsafe()')}}
-- {{domxref('Element.appendHTMLUnsafe()')}} and {{domxref('ShadowRoot.appendHTML()')}}
-- {{domxref('Element.prependHTMLUnsafe()')}} and {{domxref('ShadowRoot.prependHTML()')}}
-- {{domxref('Element.afterHTMLUnsafe()')}} and {{domxref('CharacterData.afterHTMLUnsafe()')}}
-- {{domxref('Element.beforeHTMLUnsafe()')}} and {{domxref('CharacterData.beforeHTMLUnsafe()')}}
-- {{domxref('Element.replaceWithHTMLUnsafe()')}} and {{domxref('CharacterData.replaceWithHTMLUnsafe()')}}
-
-#### Explanation of the safe methods
-
 The safe methods always remove XSS-unsafe elements and attributes by applying the [XSS-safe baseline configuration](#xss-safe-baseline-configuration) which removes XSS-unsafe elements and attributes.
 
 If no sanitizer is passed as a parameter they will use the [default sanitizer configuration](#default_sanitizer_configuration), which, on top of the XSS-safe baseline configuration, removes other elements and attributes that might be used in other kinds of attacks if provided as user input.
@@ -60,7 +48,15 @@ The safe methods should be used instead of {{domxref("Element.innerHTML")}}, {{d
 
 The same methods can also be used for injecting trusted HTML strings that do not need to contain any XSS-unsafe elements.
 
-#### Explanation of the unsafe methods
+#### Unsafe methods
+
+- {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}.
+- {{domxref('Element.setHTMLUnsafe()')}}, {{domxref('ShadowRoot.setHTMLUnsafe()')}}
+- {{domxref('Element.appendHTMLUnsafe()')}} and {{domxref('ShadowRoot.appendHTML()')}}
+- {{domxref('Element.prependHTMLUnsafe()')}} and {{domxref('ShadowRoot.prependHTML()')}}
+- {{domxref('Element.afterHTMLUnsafe()')}} and {{domxref('CharacterData.afterHTMLUnsafe()')}}
+- {{domxref('Element.beforeHTMLUnsafe()')}} and {{domxref('CharacterData.beforeHTMLUnsafe()')}}
+- {{domxref('Element.replaceWithHTMLUnsafe()')}} and {{domxref('CharacterData.replaceWithHTMLUnsafe()')}}
 
 The unsafe methods will use whatever sanitizer configuration is passed as an argument.
 If no sanitizer is passed, then all HTML elements and attributes allowed by the context will be injected.

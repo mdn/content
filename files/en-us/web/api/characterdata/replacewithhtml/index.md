@@ -10,7 +10,7 @@ browser-compat: api.CharacterData.replaceWithHTML
 
 {{APIRef("DOM")}}
 
-The **`replaceWithHTML()`** method of the {{domxref("CharacterData")}} interface provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#explanation_of_the_safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and use it to replace the existing `CharacterData`.
+The **`replaceWithHTML()`** method of the {{domxref("CharacterData")}} interface provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and use it to replace the existing `CharacterData`.
 
 ## Syntax
 
@@ -49,7 +49,7 @@ None (`undefined`).
 
 ## Description
 
-**`replaceWithHTML()`** provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#explanation_of_the_safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and use it to replace the existing `CharacterData`.
+**`replaceWithHTML()`** provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and use it to replace the existing `CharacterData`.
 
 Like all [similar HTML setters](#related_html_setter_apis), it removes all elements from the input string that are invalid in the context of the node's parent element (or the shadow host, if the parent is a shadow root), such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
 
