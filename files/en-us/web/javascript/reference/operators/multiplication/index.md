@@ -37,7 +37,7 @@ The `*` operator is overloaded for two types of operands: number and [BigInt](/e
 When numeric multiplication is performed, the results are generally consistent with mathematics (save for rounding errors), including interactions with `Infinity` (e.g., `Infinity` times any finite positive number is still `Infinity`). The result's sign is positive when both operands have the same sign, and negative otherwise (`0` and `-0` have different signs). Some edge cases:
 
 - If either operand is `NaN`, the result is `NaN`
-- If one operand is ±Infinity and the other is ±0, the result is `NaN` (0 in this context is interpreted as an infinitestimally small value)
+- If one operand is ±Infinity and the other is ±0, the result is `NaN` (0 in this context is interpreted as an infinitesimally small value)
 
 ## Examples
 

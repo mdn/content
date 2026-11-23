@@ -39,7 +39,7 @@ When numeric division is performed, the results are generally consistent with ma
 - If either operand is `NaN`, the result is `NaN`
 - If both operands are ±Infinity, the result is `NaN`
 - If both operands are ±0, the result is `NaN`
-- If only `y` is ±0, the result is ±Infinity depending on the signs of `x` and `y` (0 in this context is interpreted as an infinitestimally small value)
+- If only `y` is ±0, the result is ±Infinity depending on the signs of `x` and `y` (0 in this context is interpreted as an infinitesimally small value)
 
 For BigInt division, the result is the quotient of the two operands truncated towards zero, and the remainder is discarded. A {{jsxref("RangeError")}} is thrown if the divisor `y` is `0n`. This is because number division by zero returns `Infinity`, `-Infinity`, or `NaN`, but BigInt has no concept of infinity.
 
