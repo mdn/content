@@ -10,7 +10,7 @@ browser-compat: api.ClipboardItem.getType
 
 The **`getType()`** method of the {{domxref("ClipboardItem")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} of the requested {{Glossary("MIME type")}} or an error if the MIME type is not found.
 
-The types for which data is available in the item are listed in its {{domxref("ClipboardItem.types", "types")}} property.
+The item's {{domxref("ClipboardItem.types", "types")}} property lists the types for which data is available.
 
 ## Syntax
 
