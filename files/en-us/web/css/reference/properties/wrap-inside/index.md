@@ -145,7 +145,7 @@ p {
 
 #### Result
 
-{{EmbedLiveSample("Keeping a phrase together", "", 200)}}
+{{EmbedLiveSample("Basic usage", "", 200)}}
 
 In the first box, the browser breaks lines wherever they fit, so the date may be split across two lines.
 
