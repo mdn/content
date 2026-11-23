@@ -198,7 +198,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 
 - {{jsxref("this")}}
 - [Literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
-- {{jsxref("Array", "[]")}}
+- {{jsxref("Operators/Array_initializer", "[]")}}
 - {{jsxref("Operators/Object_initializer", "{}")}}
 - {{jsxref("Operators/function", "function")}}
 - {{jsxref("Operators/class", "class")}}
