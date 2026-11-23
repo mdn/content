@@ -10,7 +10,7 @@ browser-compat: api.ShadowRoot.prependHTML
 
 {{APIRef("DOM")}}
 
-The **`prependHTML()`** method of the {{domxref("ShadowRoot")}} interface provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the `ShadowRoot` before the first child of the `ShadowRoot`.
+The **`prependHTML()`** method of the {{domxref("ShadowRoot")}} interface is an [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) method to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the `ShadowRoot` before the first child of the `ShadowRoot`.
 
 ## Syntax
 
@@ -46,15 +46,9 @@ None (`undefined`).
 
 ## Description
 
-**`prependHTML()`** provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the `ShadowRoot` before the first child of the `ShadowRoot`.
-
-Like all [similar HTML setters](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods), it removes all elements from the input string that are invalid in the context of the node's parent element (or the shadow host, if the parent is a shadow root), such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
+**`prependHTML()`** is an [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) method to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the `ShadowRoot` before the first child of the `ShadowRoot`.
 
 It also be used instead of {{domxref("ShadowRoot.prependHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
-
-Note that since this method always sanitizes input strings of XSS-unsafe entities, it is not secured or validated using the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
-
-Even after sanitizing HTML input with with this method, it is still not safe to serialize the HTML and re-parse it using methods like `innerHTML`. See the [Re-parsing and mutated XSS](/en-US/docs/Web/API/Element/setHTML#re-parsing_and_mutated_xss_mxss) section of {{domxref("Element.setHTML()")}}.
 
 ## Examples
 

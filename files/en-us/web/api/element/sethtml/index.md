@@ -8,7 +8,7 @@ browser-compat: api.Element.setHTML
 
 {{APIRef("HTML Sanitizer API")}}
 
-The **`setHTML()`** method of the {{domxref("Element")}} interface provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the DOM as a subtree of the element.
+The **`setHTML()`** method of the {{domxref("Element")}} interface is an [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) method to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the DOM as a subtree of the element.
 
 It is recommended (if supported) as a drop-in replacement for {{domxref("Element.innerHTML")}} when setting a user-provided string of HTML.
 
@@ -46,42 +46,12 @@ None (`undefined`).
 
 ## Description
 
-**`setHTML()`** provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the DOM as a subtree of the element.
-
-Like all [similar HTML setters](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods), it removes all elements from the input string that are invalid in the context of the node's parent element (or the shadow host, if the parent is a shadow root), such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
+**`setHTML()`** is an [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) method to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the DOM as a subtree of the element.
 
 For {{HTMLElement("template")}} elements, the HTML is inserted into the template contents (the template `DocumentFragment`), rather than as direct children.
 
 `setHTML()` should be used instead of {{domxref("Element.innerHTML")}} for inserting untrusted strings of HTML into an element.
 It should also be used instead of {{domxref("Element.setHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
-
-Note that since this method always sanitizes input strings of XSS-unsafe entities, it is not secured or validated using the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
-
-### Re-parsing and mutated XSS (mXSS)
-
-Even after sanitizing HTML input with `setHTML()`, it is still not safe to serialize the HTML and re-parse it using `innerHTML`.
-For example, the following code is unsafe.
-
-```js example-bad
-div.setHTML(unsafeString); // Safe
-const serializedHTML = div.innerHTML; // No longer sanitized!
-otherElement.innerHTML = serializedHTML;
-```
-
-The reason for this is that sanitization is context-aware.
-When you call `setHTML()` on a particular element, the unsafe elements and attributes for that context are removed.
-If you serialize the HTML and use it directly in another element, it may still contain elements that are unsafe in that element.
-
-This would be safe (if pointless):
-
-```js example-good
-div.setHTML(unsafeString); // Safe
-const serializedHTML = div.innerHTML; // Serialized as a plain string
-otherDiv.setHTML(serializedHTML); // Safe — re-sanitized by setHTML()
-```
-
-There is a class of attacks that take advantage of this flaw, referred to as [mutation XSS](https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#sanitizer-security-mxss).
-The simple rule to avoid this problem is to only ever inject HTML strings using safe methods such as `setHTML()`.
 
 ## Examples
 

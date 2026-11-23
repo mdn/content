@@ -10,7 +10,7 @@ browser-compat: api.CharacterData.afterHTML
 
 {{APIRef("DOM")}}
 
-The **`afterHTML()`** method of the {{domxref("CharacterData")}} interface provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the `CharacterData`'s parent, just after the `CharacterData`.
+The **`afterHTML()`** method of the {{domxref("CharacterData")}} interface is an [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) method to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the `CharacterData`'s parent, just after the `CharacterData`.
 
 The method removes any elements and attributes in the [XSS-safe baseline configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe-baseline-configuration) which removes unsafe elements (for example {{htmlelement("script")}}), event handlers, and JavaScript URLs. Additional elements and attributes, processing instructions and comments can be removed on top of these by passing a [sanitizer](#sanitizer) option of by using the default sanitizer if no `sanitizer` option is passed. For more information see the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API).
 
@@ -53,17 +53,11 @@ None (`undefined`).
 
 ## Description
 
-**`afterHTML()`** provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the `CharacterData`'s parent, just after the `CharacterData`.
-
-Like all [similar HTML setters](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods), it removes all elements from the input string that are invalid in the context of the node's parent element (or the shadow host, if the parent is a shadow root), such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
+**`afterHTML()`** is an [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) method to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the `CharacterData`'s parent, just after the `CharacterData`.
 
 Nothing happens if the node has no parent or the parent is a {{HTMLElement("script")}} element (and similar for SVG {{SVGElement("script")}} elements).
 
 It should be used instead of {{domxref("CharacterData.afterHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
-
-Note that since this method always sanitizes input strings of XSS-unsafe entities, it is not secured or validated using the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
-
-Even after sanitizing HTML input with with this method, it is still not safe to serialize the HTML and re-parse it using methods like `innerHTML`. See the [Re-parsing and mutated XSS](/en-US/docs/Web/API/Element/setHTML#re-parsing_and_mutated_xss_mxss) section of {{domxref("Element.setHTML()")}}.
 
 ## Examples
 

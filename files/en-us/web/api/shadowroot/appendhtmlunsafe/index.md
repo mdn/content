@@ -20,9 +20,7 @@ browser-compat: api.ShadowRoot.appendHTMLUnsafe
 > [!NOTE]
 > {{domxref("ShadowRoot.appendHTML()")}} should almost always be used instead of this method — on browsers where it is supported — as it always removes XSS-unsafe HTML entities.
 
-The **`appendHTMLUnsafe()`** method of the {{domxref("ShadowRoot")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and then inserting it into the DOM as the last child of a shadow root.
-
-Note that the safe variant of this method ( {{domxref("ShadowRoot.appendHTML")}}) always use the XSS-safe sanitizer, as well as any provided sanitizer parameter, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
+The **`appendHTMLUnsafe()`** method of the {{domxref("ShadowRoot")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) to filtering out unwanted elements and attributes, and then inserting it into the DOM as the last child of a shadow root.
 
 ## Syntax
 
@@ -70,11 +68,11 @@ The `DocumentFragment` is then used to insert it into the DOM as the last child 
 Unlike with {{domxref("ShadowRoot.innerHTML")}}, [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in the input will be parsed into the DOM.
 If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as `<template>` elements within that shadow root.
 
-`appendHTMLUnsafe()` doesn't perform any sanitization by default, though also does not run scripts by default. If no sanitizer is passed as a parameter, all HTML entities in the input will be injected. It is therefore potentially even less safe than {{domxref("ShadowRoot.innerHTML")}}, which does not allow {{htmlelement("script")}} execution when parsing.
+`appendHTMLUnsafe()` doesn't perform any sanitization by default (though also does not run scripts by default). If no sanitizer is passed as a parameter, all HTML entities in the input will be injected.
 
 ### Security considerations
 
-This has extra security considerations as detailed in the `setHTMLUnsafe` ["Security considerations" section](/en-US/docs/Web/API/Element/setHTMLUnsafe#security_considerations) and ["When should `setHTMLUnsafe()` be used?" section](/en-US/docs/Web/API/Element/setHTMLUnsafe#when_should_sethtmlunsafe_be_used).
+The suffix "Unsafe" in the method name indicates that it does not enforce removal of all XSS-unsafe HTML entities. This has extra security considerations as detailed in the sanitizer API ["Security considerations of the unsafe methods" section](/en-US/docs/Web/API/HTML_Sanitizer_API/#security_considerations_of_the_unsafe_methods) and ["When should the unsafe methods be used?" section](/en-US/docs/Web/API/HTML_Sanitizer_API#when_should_the_unsafe_methods_be_used).
 
 ## Examples
 

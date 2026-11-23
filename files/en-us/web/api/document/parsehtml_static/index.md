@@ -54,10 +54,6 @@ If the string of HTML defines more than one [declarative shadow root](/en-US/doc
 `parseHTML()` should be used instead of {{domxref("Document.parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
 If the HTML to be parsed doesn't need to contain unsafe HTML entities, then you should use `Document.parseHTML()`.
 
-Note that since this method always sanitizes input strings of XSS-unsafe entities, it is not secured or validated using the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
-
-Even after sanitizing HTML input with with this method, it is still not safe to serialize the HTML and re-parse it using methods like `innerHTML`. See the [Re-parsing and mutated XSS](/en-US/docs/Web/API/Element/setHTML#re-parsing_and_mutated_xss_mxss) section of {{domxref("Element.setHTML()")}}.
-
 ## Specifications
 
 {{Specifications}}

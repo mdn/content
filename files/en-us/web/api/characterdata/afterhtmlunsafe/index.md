@@ -18,11 +18,9 @@ browser-compat: api.CharacterData.afterHTMLUnsafe
 > See [Security considerations](#security_considerations) for more information.
 
 > [!NOTE]
-> {{domxref("Element.afterHTML()")}} should almost always be used instead of this method — on browsers where it is supported — as it always removes XSS-unsafe HTML entities.
+> {{domxref("CharacterData.afterHTML()")}} should almost always be used instead of this method — on browsers where it is supported — as it always removes XSS-unsafe HTML entities.
 
-The **`afterHTMLUnsafe()`** method of the {{domxref("CharacterData")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and is then inserted into the DOM immediately after the node
-
-Note that the safe variant of this method ( {{domxref("CharacterData.afterHTML")}}) always use the XSS-safe sanitizer, as well as any provided sanitizer parameter, whereas with `Unsafe` methods any provided sanitizer is the only sanitizer used.
+The **`afterHTMLUnsafe()`** method of the {{domxref("CharacterData")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) to filtering out unwanted elements and attributes, and is then inserted into the DOM immediately after the node.
 
 ## Syntax
 
@@ -75,12 +73,11 @@ The method does nothing if the node has no parent.
 Unlike with {{domxref("Element.innerHTML")}}, [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in the input will be parsed into the DOM.
 If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as `<template>` elements within that shadow root.
 
-`afterHTMLUnsafe()` doesn't perform any sanitization by default, though also does not run scripts by default. If no sanitizer is passed as a parameter, all HTML entities in the input will be injected. It is therefore potentially even less safe than {{domxref("Element.innerHTML")}}, which does not allow {{htmlelement("script")}} execution when parsing.
+`afterHTMLUnsafe()` doesn't perform any sanitization by default (though also does not run scripts by default). If no sanitizer is passed as a parameter, all HTML entities in the input will be injected.
 
 ### Security considerations
 
-The suffix "Unsafe" in the method name indicates that it does not enforce removal of all XSS-unsafe HTML entities (unlike {{domxref("Element.afterHTML()")}}).
-This has extra security considerations as detailed in the [`setHTMLUnsafe` Security considerations section](/en-US/docs/Web/API/Element/setHTMLUnsafe#security_considerations)
+The suffix "Unsafe" in the method name indicates that it does not enforce removal of all XSS-unsafe HTML entities. This has extra security considerations as detailed in the sanitizer API ["Security considerations of the unsafe methods" section](/en-US/docs/Web/API/HTML_Sanitizer_API/#security_considerations_of_the_unsafe_methods) and ["When should the unsafe methods be used?" section](/en-US/docs/Web/API/HTML_Sanitizer_API#when_should_the_unsafe_methods_be_used).
 
 ## Examples
 
