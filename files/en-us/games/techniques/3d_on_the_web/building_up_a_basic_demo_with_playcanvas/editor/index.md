@@ -15,7 +15,7 @@ Once you're logged in, go to your projects dashboard at `https://playcanvas.com/
 
 ## Creating a new project
 
-Start a brand new project by clicking on the _New project_ button in the sidebar of the main dashboard. If signing up drops you into a sample project, click the PlayCanvas logo at the top left of the editor and choose _All Projects_ to open the dashboard.
+Start a brand new project by clicking on the _New project_ button in the sidebar of the main dashboard.
 
 ![PlayCanvas Editor - Panel](playcanvas-editor-panel.png)
 
