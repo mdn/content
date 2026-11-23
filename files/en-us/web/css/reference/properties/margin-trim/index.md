@@ -136,3 +136,6 @@ p {
 ## See also
 
 - {{CSSxRef("margin")}}
+- {{cssxref("margin-block-start")}} and {{cssxref("margin-block-end")}} properties
+- [Mastering margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
+- [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module
