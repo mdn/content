@@ -137,3 +137,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The {{cssxref("text-autospace-size")}} property is now supported, and is enabled by default in Nightly. It sets the amount of space that {{cssxref("text-autospace")}} adds between Chinese/Japanese/Korean (CJK) and non-CJK characters.
   ([Firefox bug 2086765](https://bugzil.la/2086765)).
+
+- **`prefers-color-scheme` reflects `<meta name="color-scheme">`**: `layout.css.prefers-color-scheme.meta-tag.enabled`
+
+  The {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} media feature now reflects the color scheme declared by a [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/color-scheme) element, when the element specifies a single scheme. This allows better selection of images and videos by color scheme. It also makes theme switchers easier to implement. The preference is enabled by default in Nightly. ([Firefox bug 2085572](https://bugzil.la/2085572)).

@@ -529,6 +529,21 @@ The {{cssxref("text-autospace-size")}} property is now supported in Nightly. It 
 - `layout.css.text-autospace-size.enabled`
   - : Set to `true` to enable.
 
+### `prefers-color-scheme` reflects `<meta name="color-scheme">`
+
+The {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} media feature reflects the color scheme declared by a [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/color-scheme) element, when the element specifies a single scheme. This allows better selection of images and videos by color scheme. It also makes theme switchers easier to implement.
+([Firefox bug 2085572](https://bugzil.la/2085572)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 161           | No                  |
+| Beta              | 161           | No                  |
+| Release           | 161           | No                  |
+
+- `layout.css.prefers-color-scheme.meta-tag.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
