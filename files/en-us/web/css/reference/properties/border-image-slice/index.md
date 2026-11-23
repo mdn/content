@@ -271,7 +271,7 @@ p {
   box-sizing: content-box;
   width: 200px;
   height: 100px;
-  padding: 0;
+  margin: 1em;
   outline: 1px solid black;
   border: 20px solid;
   border-image-slice: 10;
