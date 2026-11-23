@@ -123,9 +123,9 @@ p {
 }
 ```
 
-{{EmbedLiveSample('basic_usage','100%',270)}}
-
 In browsers that support `margin-trim`, the first paragraph sits against the top border of the section, while the margin below the last paragraph remains.
+
+{{EmbedLiveSample('basic_usage','100%',270)}}
 
 ## Specifications
 
