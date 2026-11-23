@@ -107,7 +107,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **`margin-trim` property**: `layout.css.margin-trim.enabled`
 
-  The {{cssxref("margin-trim")}} property is now supported for block containers this removes the margins of child elements at the container's edges, in the block-axis. This allows margins to remain between siblings but be removed at the start and/or end of a block.
+  The {{cssxref("margin-trim")}} property is now supported for block containers, and is enabled by default in Nightly. It removes the block-axis margins of child elements at the container's start edge, end edge, or both, while keeping the margins between siblings.
   ([Firefox bug 2051240](https://bugzil.la/2051240)).
 
 - **Cross-document view transitions** (Nightly): `dom.viewTransitions.cross-document.enabled`
