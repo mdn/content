@@ -189,7 +189,7 @@ p {
 }
 
 .address {
-  background-color: #ffe4a1;
+  background-color: wheat;
 }
 
 .avoid .address {
