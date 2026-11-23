@@ -281,7 +281,7 @@ p {
 
 #### JavaScript
 
-We use the same artwork for all three images, changing only the root SVG attributes.
+We use the same artwork for all three images, changing only the attributes on the root `<svg>` element. We include an event handler that changes the value of the `border-Image-slice` property.
 
 ```js live-sample___svg-border-comparison
 const artwork = `
