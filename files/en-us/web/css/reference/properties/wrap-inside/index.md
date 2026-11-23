@@ -162,7 +162,7 @@ In the second box, the browser avoids breaking inside the date. Instead, it brea
 
 ### Comparing with `white-space: nowrap`
 
-This example compares the effects of `wrap-inside: auto` and `wrap-inside: avoid` with the effect of `white-space: nowrap`.
+This example demonstrates the effects of `wrap-inside: auto` and `wrap-inside: avoid` while comparing these to `white-space: nowrap`.
 
 #### HTML
 
