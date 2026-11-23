@@ -90,9 +90,10 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 
 ### Specific attributes
 
-- Include bulleted
-- list of all the
-- SVG attributes it can take
+- Include a bulleted list of the element's own SVG attributes.
+- Where applicable, link to [Presentation attributes](/en-US/docs/Web/SVG/Reference/Attribute#presentation_attributes).
+- Where applicable, link to [Conditional processing attributes](/en-US/docs/Web/SVG/Reference/Attribute#conditional_processing_attributes).
+- If the element has no attributes of its own, write: "This element only includes the following global attributes:" before listing the global attributes.
 
 ## DOM Interface
 
