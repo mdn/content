@@ -174,6 +174,7 @@ If an error occurs, the returned promise is rejected with the appropriate except
       You cannot change the number of encoding options after the sender has been created.
     - The order of the specified `encodings` has changed from the current list's order.
     - An attempt has been made to alter a property that cannot be changed after the sender is first created.
+    - The `parameters` object's `transactionId` doesn't match the one returned by the sender's most recent `getParameters()` call.
     - The `setParameterOptions` object's `encodingOptions` array is not empty and does not have the same number of items as the `parameters` object's `encodings` array.
       The browser skips this check if the sender sends audio.
 - `InvalidStateError` {{domxref("DOMException")}}
@@ -216,7 +217,7 @@ The browser then requests the key frames while it applies the change.
 One use case for `setParameters()` is to try to reduce network bandwidth used in constrained environments by altering the resolution and/or bit rate of the media being transmitted by the {{domxref("RTCRtpSender")}}.
 
 Currently, some browsers have limitations on their implementations that may cause issues.
-For that reason, the first two examples cover this use case.
+For that reason, the first two examples show two versions of the same code.
 The first shows how to use `setParameters()` when all browsers fully support the parameters being used, while the second example demonstrates workarounds to help solve limitations in browsers with incomplete support for the [`maxBitrate`](#maxbitrate) and [`scaleResolutionDownBy`](#scaleresolutiondownby) parameters.
 
 ### By the specification
@@ -313,6 +314,6 @@ async function deactivateEncoding(sender, deactivateIndex) {
 
 - {{domxref("RTCRtpScriptTransformer.generateKeyFrame()")}}
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms)
+- [Triggering a key frame](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms#triggering_a_key_frame) in Using WebRTC Encoded Transforms
 - [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs)
 - [Web media technologies](/en-US/docs/Web/Media)
