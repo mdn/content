@@ -30,9 +30,26 @@ console.log(5 - true);
 x - y
 ```
 
+### Parameters
+
+- `x`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 11 (addition) or above. Its value is coerced to [a number or a BigInt](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion).
+- `y`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 12 (multiplication) or above. Its value is coerced to [a number or a BigInt](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion).
+
+### Return value
+
+A number or a BigInt representing the difference between `x` and `y`.
+
 ## Description
 
 The `-` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt subtraction if both operands become BigInts; otherwise, it performs number subtraction. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
+
+When numeric subtraction is performed, `x - y` is specified to be equivalent to `x + -y`, so the rules of [addition](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) apply:
+
+- If either operand is `NaN`, the result is `NaN`
+- `Infinity - Infinity` is `NaN`
+- When the mathematical result is 0, `0` is returned unless the subtraction is `-0 - 0`, in which case `-0` is returned.
 
 ## Examples
 

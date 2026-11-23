@@ -27,7 +27,7 @@ None.
 An object representing text typesetting information associated with the Locale data specified in [UTS 35's Layouts Elements](https://www.unicode.org/reports/tr35/tr35-general.html#Layout_Elements). It has the following properties:
 
 - `direction`
-  - : A string indicating the direction of text for the locale. Can be either `"ltr"` (left-to-right) or `"rtl"` (right-to-left).
+  - : A string indicating the direction of text for the locale, determined from its script (using the [likely subtag](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize) if not explicitly specified). Can be either `"ltr"` (left-to-right), `"rtl"` (right-to-left), or `undefined` if the information cannot be determined.
 
 ## Examples
 

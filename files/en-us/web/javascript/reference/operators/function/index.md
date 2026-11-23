@@ -57,6 +57,10 @@ function name(param0, param1, /* …, */ paramN) {
 - `statements` {{optional_inline}}
   - : The statements which comprise the body of the function.
 
+### Return value
+
+A {{jsxref("Function")}} object.
+
 ## Description
 
 A `function` expression is very similar to, and has almost the same syntax as, a [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function). The main difference between a `function` expression and a `function` declaration is the _function name_, which can be omitted in `function` expressions to create _anonymous_ functions. A `function` expression can be used as an [IIFE](/en-US/docs/Glossary/IIFE) (Immediately Invoked Function Expression) which runs as soon as it is defined. See also the chapter about [functions](/en-US/docs/Web/JavaScript/Reference/Functions) for more information.
@@ -214,8 +218,7 @@ console.log(secondAccount.withdraw(20)); // 0
 ### For loop with var before ES6
 
 We could see the following use of IIFE in some old code, before the introduction of the block-scoped `let` and `const` declarations. With the statement `var`, we have only function scopes and the global scope.
-Suppose we want to create 2 buttons with the texts Button 0 and Button 1 and when we click
-them, we would like them to alert 0 and 1. The following code doesn't work:
+Suppose we want to create 2 buttons with labels "Button 0" and "Button 1", and when we click them, we want them to log 0 and 1. The following code doesn't work:
 
 ```js
 for (var i = 0; i < 2; i++) {
@@ -229,8 +232,7 @@ for (var i = 0; i < 2; i++) {
 console.log(i); // 2
 ```
 
-When clicked, both Button 0 and Button 1 alert 2 because `i` is global,
-with the last value 2. To fix this problem before ES6, we could use the IIFE pattern:
+When clicked, both buttons log `2` because `i` is global, with the last value being `2`. To fix this problem before ES6, we could use the IIFE pattern:
 
 ```js
 for (var i = 0; i < 2; i++) {
@@ -246,7 +248,7 @@ for (var i = 0; i < 2; i++) {
 console.log(i); // 2
 ```
 
-When clicked, Buttons 0 and 1 alert 0 and 1. The variable `i` is globally defined. Using the statement `let`, we could simply do:
+When clicked, Buttons 0 and 1 log `0` and `1`. The variable `i` is globally defined. Using the statement `let`, we could do this:
 
 ```js
 for (let i = 0; i < 2; i++) {
@@ -260,7 +262,7 @@ for (let i = 0; i < 2; i++) {
 console.log(i); // Uncaught ReferenceError: i is not defined.
 ```
 
-When clicked, these buttons alert 0 and 1.
+When clicked, these buttons log 0 and 1.
 
 ### Control flow statements in expression positions
 

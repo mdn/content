@@ -33,6 +33,17 @@ console.log(0 != false);
 x != y
 ```
 
+### Parameters
+
+- `x`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 8 (equality) or above.
+- `y`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 9 (relational operators) or above.
+
+### Return value
+
+`true` if `x` and `y` are unequal according to [loose equality](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#loose_equality_using), and `false` otherwise.
+
 ## Description
 
 The inequality operator checks whether its operands are not equal. It is the negation

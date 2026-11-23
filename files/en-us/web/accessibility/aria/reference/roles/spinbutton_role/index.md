@@ -92,6 +92,14 @@ There are some types of user interface components that, when represented in a pl
 
 For the optional <kbd>Page Up</kbd> and <kbd>Page Down</kbd> keys, the change in spinbutton value should preferably be by an amount larger than the step changes made by Up and Down arrow keys.
 
+## Best practices
+
+HTML's `<input type="number">` implicitly has the `role` of `spinbutton`. HTML's `<input type="date">` has 3 nested spin buttons, one each for month, day, and year. When using semantic HTML form elements for their intended purposes, do not use `aria-valuemax` or `aria-valuemin` attributes; use `min` and `max` instead. Otherwise, any global `aria-*` attributes and any other `aria-*` attributes are applicable to the `spinbutton` role.
+
+### Prefer semantic HTML
+
+It is recommended to use the native {{HTMLElement("input")}} element of type `number`, [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number), rather than the `spinbutton` role.
+
 ## Examples
 
 In the example below, a `spinbutton` role has been defined to allow users to select a day of the month.
@@ -132,14 +140,6 @@ This could have also been written using semantic HTML, removing the need for any
 {{EmbedLiveSample("With_semantic_HTML", 50, 50)}}
 
 In this case, the only JavaScript needed would be to update the `aria-valuetext` when the input value changes, which really is an optional feature in this case.
-
-## Best practices
-
-HTML's `<input type="number">` implicitly has the `role` of `spinbutton`. HTML's `<input type="date">` has 3 nested spin buttons, one each for month, day, and year. When using semantic HTML form elements for their intended purposes, do not use `aria-valuemax` or `aria-valuemin` attributes; use `min` and `max` instead. Otherwise, any global `aria-*` attributes and any other `aria-*` attributes are applicable to the `spinbutton` role.
-
-### Prefer semantic HTML
-
-It is recommended to use the native {{HTMLElement("input")}} element of type `number`, [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number), rather than the `spinbutton` role.
 
 ## Specifications
 

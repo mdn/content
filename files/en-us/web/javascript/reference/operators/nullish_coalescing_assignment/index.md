@@ -28,6 +28,17 @@ console.log(a.duration);
 x ??= y
 ```
 
+### Parameters
+
+- `x`
+  - : A valid assignment target, such as an [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) or a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors).
+- `y`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 2 (assignment) or above. Evaluated and assigned to `x` only if the original value of `x` is `null` or `undefined`.
+
+### Return value
+
+The value of `y` if the original value of `x` is `null` or `undefined`, or the original value of `x` otherwise.
+
 ## Description
 
 Nullish coalescing assignment [_short-circuits_](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#short-circuiting), meaning that `x ??= y` is equivalent to `x ?? (x = y)`, except that the expression `x` is only evaluated once.

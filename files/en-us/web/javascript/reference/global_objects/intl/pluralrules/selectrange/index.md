@@ -18,9 +18,9 @@ selectRange(startRange, endRange)
 ### Parameters
 
 - `startRange`
-  - : A number representing the start of the range.
+  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string representing the start of the range. Strings are parsed in the same way as in [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), except that `selectRange()` will use the exact value that the string represents, avoiding loss of precision during implicit conversion to a number.
 - `endRange`
-  - : A number representing the end of the range.
+  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string representing the end of the range.
 
 ### Return value
 
