@@ -131,8 +131,6 @@ While navigation keys, such as arrow keys, are moving focus from cell to cell, t
 
 <!--
 ### Required JavaScript features
-
-## Examples
 -->
 
 ## Accessibility concerns
@@ -143,6 +141,8 @@ It is important for all cells to be able to receive or contain keyboard focus be
 ## Best Practices
 
 ### Prefer HTML
+
+## Examples
 -->
 
 ## Specifications

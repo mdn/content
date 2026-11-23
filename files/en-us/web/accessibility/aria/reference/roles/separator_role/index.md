@@ -106,13 +106,14 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ### Required JavaScript features
 
-## Examples
-
 ## Accessibility concerns
 
 ## Best Practices
 
-### Prefer HTML -->
+### Prefer HTML
+
+## Examples
+-->
 
 ## Specifications
 
