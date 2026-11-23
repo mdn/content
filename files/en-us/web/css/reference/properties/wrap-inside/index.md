@@ -67,8 +67,6 @@ wrap-inside: unset;
 
 The `wrap-inside` property lets you keep the content of an inline box, such as a {{htmlelement("span")}}, together on one line where possible. This is useful for short phrases that read better when they aren't split across lines, such as names, dates, addresses, or product names.
 
-The `wrap-inside` property only applies to inline boxes, and isn't inherited. Setting it on a block-level element, such as a {{htmlelement("p")}}, has no effect on the text inside it.
-
 When an inline box has `wrap-inside: avoid` set, the browser prefers to break the line before or after the box instead of inside it. If the box fits on the next line, the whole box moves to that line. If the box is too long to fit on any line, the browser still breaks inside it, at the same places it would with `auto`.
 
 This is different from setting {{cssxref("white-space", "white-space: nowrap")}} (or {{cssxref("text-wrap-mode", "text-wrap-mode: nowrap")}}) on the box, which prevents line breaks inside the box entirely, even if the content then overflows its container.
