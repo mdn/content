@@ -58,6 +58,9 @@ margin-trim: block;
 margin-trim: block-start;
 margin-trim: block-end;
 
+/* Multiple values */
+margin-trim: block-start block-end;
+
 /* Global values */
 margin-trim: inherit;
 margin-trim: initial;
@@ -68,7 +71,7 @@ margin-trim: unset;
 
 ### Values
 
-This property is specified as one of the following keyword values:
+This property is specified as either the keyword `none` or `block`, or one or both of the keywords `block-start` and `block-end`:
 
 - `none`
   - : Margins are not trimmed by the container.
@@ -81,6 +84,10 @@ This property is specified as one of the following keyword values:
 
 - `block-end`
   - : Margin of last block child with the container's edge is trimmed to zero.
+
+## Description
+
+Margins are often wanted between sibling elements but not between the first or last child and the edges of its container, where the spacing can be set with {{cssxref("padding")}} instead. Without `margin-trim`, removing those margins takes extra rules, such as one that targets the first child with the {{cssxref(":first-child")}} pseudo-class. With `margin-trim`, the container trims them itself, according to whichever value has been used.
 
 ## Formal definition
 
