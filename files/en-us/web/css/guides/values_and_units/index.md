@@ -30,6 +30,7 @@ Every CSS declaration consists of a property/value pair. The value can take vari
 - {{cssxref("atan2()")}}
 - {{cssxref("attr()")}}
 - {{cssxref("calc()")}}
+- {{cssxref("calc-mix()")}}
 - {{cssxref("calc-size()")}}
 - {{cssxref("clamp()")}}
 - {{cssxref("cos()")}}
@@ -38,6 +39,7 @@ Every CSS declaration consists of a property/value pair. The value can take vari
 - {{cssxref("ident()")}}
 - {{cssxref("if()")}}
 - {{cssxref("inherit()")}}
+- {{cssxref("integrity()")}}
 - {{cssxref("log()")}}
 - {{cssxref("max()")}}
 - {{cssxref("min()")}}
@@ -45,6 +47,7 @@ Every CSS declaration consists of a property/value pair. The value can take vari
 - {{cssxref("pow()")}}
 - {{cssxref("progress()")}}
 - {{cssxref("random()")}}
+- {{cssxref("random-item()")}}
 - {{cssxref("rem()")}}
 - {{cssxref("round()")}}
 - {{cssxref("sibling-count()")}}
