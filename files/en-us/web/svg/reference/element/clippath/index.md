@@ -19,7 +19,6 @@ A clipping path restricts the region to which paint can be applied. Conceptually
 ### Global attributes
 
 - [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
-- [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
 - [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
 
 ### Specific attributes

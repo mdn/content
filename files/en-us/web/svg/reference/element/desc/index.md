@@ -18,13 +18,10 @@ The hidden text of a `<desc>` element can also be concatenated with the visible 
 
 ## Attributes
 
-### Global attributes
+This element only includes the following global attributes:
 
 - [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
-- [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
 - [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
-
-This element only includes global attributes.
 
 ## DOM Interface
 

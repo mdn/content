@@ -19,7 +19,6 @@ The `<pattern>` is referenced by the {{SVGAttr("fill")}} and/or {{SVGAttr("strok
 ### Global attributes
 
 - [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
-- [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
 - [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
 
 ### Specific attributes

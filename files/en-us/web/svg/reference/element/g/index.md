@@ -22,7 +22,9 @@ Transformations applied to the `<g>` element are performed on its child elements
 - [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
 - [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
 
-This element only includes global attributes.
+### Specific attributes
+
+- [Presentation attributes](/en-US/docs/Web/SVG/Reference/Attribute#presentation_attributes)
 
 Most of the [presentation attributes](/en-US/docs/Web/SVG/Reference/Attribute#presentation_attributes) applied to the element are inherited by its children.
 However, [geometry properties](/en-US/docs/Web/SVG/Reference/Attribute#geometry_properties) are only valid as presentation attributes on their designated elements — they have no effect on a `<g>` element and are not passed to its children.

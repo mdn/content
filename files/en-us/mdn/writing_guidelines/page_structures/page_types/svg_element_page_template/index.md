@@ -85,8 +85,11 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 ### Global attributes
 
 - [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
-- [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
 - [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### ARIA attributes
+
+- Add a link to [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes) only for the following elements: `a`, `circle`, `ellipse`, `foreignObject`, `g`, `image`, `line`, `path`, `polygon`, `polyline`, `rect`, `svg`, `switch`, `symbol`, `text`, `textPath`, `tspan`, `use`, and `view`.
 
 ### Specific attributes
 
