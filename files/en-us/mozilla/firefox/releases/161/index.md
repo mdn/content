@@ -132,4 +132,4 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`text-autospace-size`** (Nightly): `layout.css.text-autospace-size.enabled`
 
   The {{cssxref("text-autospace-size")}} property is now supported in Nightly. It allows to to specific the size of the space between CJK & Non-CJK characters when using the {{cssxref("text-autospace")}} property.
-([Firefox bug 2086765](https://bugzil.la/2086765)).
+  ([Firefox bug 2086765](https://bugzil.la/2086765)).
