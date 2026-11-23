@@ -157,6 +157,7 @@ This example demonstrates the effects of `wrap-inside: auto` and `wrap-inside: a
 
 #### HTML
 
+We include three paragraphs with identical content, including a phrase that is too long to fit on one line. The only difference between the paragraphs is their classnames.
 ```html
 <div class="container">
   <p class="avoid">
