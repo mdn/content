@@ -28,6 +28,17 @@ console.log(c >>> b); //  00111111111111111111111111111110
 x >>> y
 ```
 
+### Parameters
+
+- `x`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 10 (bitwise shift) or above. Its value is coerced to an [unsigned 32-bit integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion).
+- `y`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 11 (addition) or above. Its value is coerced to an [unsigned 32-bit integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion). The lowest five bits give the shift count.
+
+### Return value
+
+An unsigned 32-bit integer representing `x` shifted right by the shift count, with zeros shifted in from the left.
+
 ## Description
 
 Unlike other arithmetic and bitwise operators, the unsigned right shift operator does not accept [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) values. This is because it fills the leftmost bits with zeroes, but conceptually, BigInts have an infinite number of leading sign bits, so there's no "leftmost bit" to fill with zeroes.

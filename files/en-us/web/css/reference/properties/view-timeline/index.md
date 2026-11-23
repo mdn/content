@@ -51,7 +51,7 @@ view-timeline: unset;
 - `<view-timeline-axis>`
   - : See {{cssxref("view-timeline-axis")}}. The default value is `block`.
 
-### Description
+## Description
 
 The `view-timeline` shorthand property defines a _named view progress timeline_, which progresses based on changes to the visibility of an element (the _subject_) within a scrollable element (_scroller_). The `view-timeline` property is set on the subject. If the scroller element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
 

@@ -24,6 +24,17 @@ console.log(a << b); // 00000000000000000000000000010100
 x << y
 ```
 
+### Parameters
+
+- `x`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 10 (bitwise shift) or above. Its value is coerced to a [signed 32-bit integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion) or a [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion).
+- `y`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 11 (addition) or above. Its value is coerced to an [unsigned 32-bit integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion) or a [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion). For numbers, the lowest five bits give the shift count. For BigInts, a negative count reverses the shift direction.
+
+### Return value
+
+A signed 32-bit integer or a BigInt representing `x` shifted left by the shift count.
+
 ## Description
 
 The `<<` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). For numbers, the operator returns a 32-bit integer. For BigInts, the operator returns a BigInt. It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt left shift if both operands become BigInts; otherwise, it converts both operands to [32-bit integers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion) and performs number left shift. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
@@ -36,7 +47,7 @@ The operator operates on the left operand's bit representation in [two's complem
 9 << 2 (base 10): 00000000000000000000000000100100 (base 2) = 36 (base 10)
 ```
 
-Bitwise a 32-bit integer `x` to the left by `y` bits yields `x * 2 ** y`. So for example, `9 << 3` is equivalent to `9 * (2 ** 3) = 9 * (8) = 72`.
+Bitwise shifting a 32-bit integer `x` to the left by `y` bits yields `x * 2 ** y`. So for example, `9 << 3` is equivalent to `9 * (2 ** 3) = 9 * (8) = 72`.
 
 If the left operand is a number with more than 32 bits, it will get the most significant bits discarded. For example, the following integer with more than 32 bits will be converted to a 32-bit integer:
 

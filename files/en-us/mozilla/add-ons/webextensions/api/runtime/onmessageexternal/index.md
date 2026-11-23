@@ -60,7 +60,7 @@ Events have three functions:
         - Keep a reference to the `sendResponse()` argument and return `true` from the listener function. You then call `sendResponse()` after the listener function returns.
 
           > [!NOTE]
-          > Promise as a return value is not supported in Chrome until [Chrome bug 1185241](https://crbug.com/1185241) is resolved. As an alternative, return `true` and use `sendResponse` [as described for `runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_sendresponse).
+          > Chrome supports Promise as a return value starting with Chrome 148, or Chrome 152 for extensions that include a DevTools page. For earlier versions of Chrome, return `true` and use `sendResponse` [as described for `runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_sendresponse).
 
 ## Examples
 

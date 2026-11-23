@@ -85,8 +85,9 @@ Our superuser is already authenticated and has all permissions, so we'll need to
 > user.save()
 > ```
 >
-> Note however that it is highly recommended to set up a _custom user model_ when starting a project, as you'll be able to easily customize it in the future if the need arises.
-> If using a custom user model the code to create the same user would look like this:
+> For your own projects, consider whether you should set up a [custom user model](https://docs.djangoproject.com/en/6.1/topics/auth/customizing/#substituting-a-custom-user-model).
+> These allow more customization and are easier to set up before you run your first migration, but are not suitable in all cases.
+> When using a custom user model, the code to create the same user would look like this:
 >
 > ```python
 > # Get current user model from settings

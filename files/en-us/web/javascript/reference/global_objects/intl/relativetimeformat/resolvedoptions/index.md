@@ -37,16 +37,16 @@ None.
 
 ### Return value
 
-A new object with properties reflecting the options computed during the initialization of this `RelativeTimeFormat` object. The object has the following properties, in the order they are listed:
+A new object with properties reflecting the options computed according to the arguments passed to the [`Intl.RelativeTimeFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat) constructor. The object has the following properties, in the order they are listed:
 
 - `locale`
   - : The {{glossary("BCP 47 language tag")}} for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. Only the `nu` Unicode extension key, if requested, may be included in the output.
 - `style`
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"long"`, `"short"`, or `"narrow"`. The default is `"long"`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is either `"long"`, `"short"`, or `"narrow"`. The default is `"long"`.
 - `numeric`
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"always"` or `"auto"`. The default is `"always"`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is either `"always"` or `"auto"`. The default is `"always"`.
 - `numberingSystem`
-  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"nu"`, with default filled in as needed. It is a supported [numbering system](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types) for this locale. The default is locale dependent.
+  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"nu"`, with the default filled in as needed. It is a supported [numbering system](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types) for this locale. The default is locale dependent.
 
 ## Examples
 

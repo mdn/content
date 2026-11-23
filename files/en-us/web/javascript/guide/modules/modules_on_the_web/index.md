@@ -248,7 +248,7 @@ The module specifier `shapes/square/index.js` will still match the more-specific
 
 #### Mixing literal matching and prefix matching
 
-In Node, you can import either a package itself, which imports the [`main`](https://docs.npmjs.com/cli/configuring-npm/package-json#main) file, or a file inside the package (assuming the package.json has no [`exports`](https://docs.npmjs.com/cli/configuring-npm/package-json#exports) field):
+In Node, you can import either a package itself, which imports the [`main`](https://docs.npmjs.com/cli/configuring-npm/package-json/#main) file, or a file inside the package (assuming the package.json has no [`exports`](https://docs.npmjs.com/cli/configuring-npm/package-json/#exports) field):
 
 ```js
 import _ from "lodash";

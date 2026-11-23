@@ -55,6 +55,16 @@ The tooltip should appear on focus or when the element is hovered on, without ad
 
 - The tooltip is only hidden via JavaScript and CSS selectors. If JavaScript is not available the tooltip is shown.
 
+## Accessibility concerns
+
+If the information is important enough for a tooltip, isn't it important enough to always be visible?
+
+The tooltip must stay open when hovered, even if that technically means the mouse moves out of the owning element. As content which appears on hover can be difficult or impossible to perceive if a user is required to keep their mouse pointer over the trigger, [WCAG 1.4.13](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) states that content made visible should be persistent, meaning it should not disappear without user action.
+
+## Best practices
+
+Instead of using tooltips and hiding important information, consider writing clear, succinct, always visible descriptions. If you have space, don't use tooltips or toggletips. Just provide clear labels and sufficient body text.
+
 ## Examples
 
 ### Using a tooltip
@@ -173,16 +183,6 @@ The tooltip is positioned below the icon. Padding above the text bubble bridges 
 The tooltip stays visible while the button has focus or the pointer is over the button or tooltip. It is hidden when neither condition applies.
 
 {{EmbedLiveSample("using_a_more_information_icon", "", 200)}}
-
-## Accessibility concerns
-
-If the information is important enough for a tooltip, isn't it important enough to always be visible?
-
-The tooltip must stay open when hovered, even if that technically means the mouse moves out of the owning element. As content which appears on hover can be difficult or impossible to perceive if a user is required to keep their mouse pointer over the trigger, [WCAG 1.4.13](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) states that content made visible should be persistent, meaning it should not disappear without user action.
-
-## Best practices
-
-Instead of using tooltips and hiding important information, consider writing clear, succinct, always visible descriptions. If you have space, don't use tooltips or toggletips. Just provide clear labels and sufficient body text.
 
 ## Specifications
 

@@ -226,7 +226,7 @@ The [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesames
   Set-Cookie: widget_session=7yjgj57e4n3d; SameSite=None; Secure; HttpOnly
   ```
 
-If no `SameSite` attribute is set, the cookie is treated as `Lax` by default.
+If no `SameSite` attribute is set, some browsers treat the cookie as `Lax` by default.
 
 ### Cookie prefixes
 
@@ -256,7 +256,7 @@ Third-party cookies can be set by third-party content embedded in sites via {{ht
 
 However, third-party cookies can also be used to create creepy, invasive user experiences. A third-party server can create a profile of a user's browsing history and habits based on cookies sent to it by the same browser when accessing multiple sites. The classic example is when you search for product information on one site and are then chased around the web by adverts for similar products wherever you go.
 
-Browser vendors know that users don't like this behavior, and as a result have all started to block third-party cookies by default, or at least made plans to go in that direction. Third-party cookies (or just tracking cookies) may also be blocked by other browser settings or extensions.
+Some browsers block third-party cookies by default. Third-party cookies (or just tracking cookies) may also be blocked by other browser settings or extensions.
 
 > [!NOTE]
 > Cookie blocking can cause some third-party components (such as social media widgets) not to function as intended. As browsers impose further restrictions on third-party cookies, developers should start to look at ways to reduce their reliance on them.
