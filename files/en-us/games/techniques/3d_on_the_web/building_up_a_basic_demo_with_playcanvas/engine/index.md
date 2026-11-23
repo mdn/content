@@ -80,7 +80,7 @@ If you're building your project locally in an IDE, here's the HTML structure to 
 </html>
 ```
 
-It contains information like the document {{htmlelement("title")}}, and some CSS to set the width and height of the {{htmlelement("canvas")}} element (that PlayCanvas will use) to 100%, so that it will fill the entire available viewport space.
+It contains information like the document {{htmlelement("title")}}, and some CSS to set the width and height of the {{htmlelement("canvas")}} element that PlayCanvas will render in to 100%, so that it will fill the entire available viewport space.
 The [import map](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) tells the browser where to load the `playcanvas` module from, so that we can import it by name; if you installed PlayCanvas using npm and are using Vite, you can remove the import map.
 We will write our example code in the module script, which imports everything the engine exports into a `pc` object.
 There is one variable already included, which will store a reference to the {{htmlelement("canvas")}} element.
@@ -99,7 +99,7 @@ app.start();
 The `pc` object contains all the classes, functions, and constants available in the engine.
 
 Next, we'll set the canvas to fill the window, and automatically change its resolution to be the same as the canvas size.
-PlayCanvas doesn't listen for the window being resized, so we also need to call `resizeCanvas()` whenever that happens.
+PlayCanvas doesn't listen for the window being resized, so we need to call `resizeCanvas()` whenever that happens.
 Again, add the following lines at the bottom of your script:
 
 ```js
@@ -126,7 +126,7 @@ The rest of this tutorial works the same way with either graphics API.
 
 ## Camera
 
-Now that the setup code is in place, we need to think about implementing the standard scene components: camera, lights and objects. Let's start with the camera — add these lines to your code, below the previous ones.
+Now that the setup code is in place, we need to think about implementing the standard scene components: camera, lights, and objects. Let's start with the camera — add these lines to your code below the previous ones.
 
 ```js
 const camera = new pc.Entity();
@@ -139,10 +139,10 @@ camera.setPosition(0, 0, 7);
 ```
 
 The code above will create a new `Entity`.
-An Entity is any object used in the scene — it can be an object like a box, cylinder or cone, but it can also be a camera, light or sound source.
+An Entity is any object used in the scene — it can be an object like a box, cylinder, or cone, but it can also be a camera, light, or sound source.
 What an entity does depends on the components that are added to it.
 
-Then it adds a `camera` component to it with the light gray `clearColor` — the color will be visible as the background. Next, the `camera` object is added to the root of our application and positioned to be 7 units away from the center of the scene on the `z` axis. This allows us to make some space to visualize the objects that we will create later on.
+Next, we add a `camera` component with a light gray `clearColor` — the color will be visible as the background. Next, the `camera` object is added to the root of our application and positioned 7 units away from the center of the scene on the `z` axis. This allows us to make some space to visualize the objects that we will create later on.
 
 The distance values (e.g., for the camera z position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
 
@@ -182,7 +182,7 @@ It will create a light `Entity` and add it to the scene; a `light` component is 
 app.scene.ambientLight = new pc.Color(0.2, 0.2, 0.2);
 ```
 
-The code above assigns a dark gray ambient light for the whole scene. The box looks better now, but it could get some colors to look even better - for that we need to create a material for it.
+The code above assigns a dark gray ambient light for the whole scene. The box looks better now, but giving it some color would make it look better still. For that, we need to create a material for the color.
 
 ## Material
 
@@ -196,10 +196,10 @@ boxMaterial.update();
 box.render.material = boxMaterial;
 ```
 
-By diffusing the light on the object, we can give it its own color — we'll choose a nice familiar blue.
-In PlayCanvas, the color channel values are provided as floats in the range `0-1`, instead of integers of `0-255` as you might be used to using on the Web.
+By diffusing the light on the object, we've given it its own color — a nice, familiar blue.
+In PlayCanvas, the color channel values are provided as floats in the range `0-1`, instead of integers of `0-255` as you might be used to on the Web.
 
-After the material is created and its color is set, it has to be updated so that our changes are applied. Then all we need to do is set the `material` of the `box`'s render component to the newly created `boxMaterial`.
+After the material is created and its color is set, we've updated it so that our changes are applied. Finally, we set the `material` of the `box`'s render component to the newly created `boxMaterial`.
 
 ## PlayCanvas shape example
 
@@ -313,7 +313,7 @@ This is good progress, but we can make it more exciting! In a game something is 
 
 ## Animation
 
-We already used `translate` or `rotate` to adjust the position of the shapes; we could also change their positions directly with `setPosition`, or scale them. To show actual animation, we need to make changes to these values inside the rendering loop, so they are updated on every frame. There's a special `update` event that we can use for that — add the following code just below the previous additions:
+We already used `translate` and `rotate` to adjust the position of the shapes; we could also change their positions directly with `setPosition()`, or scale them. To show actual animation, we need to make changes to these values inside the rendering loop, so they are updated on every frame. There's a special `update` event that we can use for that — add the following code just below the previous additions:
 
 ```js
 let timer = 0;
@@ -323,7 +323,7 @@ app.on("update", (deltaTime) => {
 });
 ```
 
-The callback takes the `deltaTime` as the parameter, so we have the relative time (in seconds) that has passed since the previous invocation of this update. For time-based animations we'll use a `timer` variable that will store the time that has passed since the start of the app by adding the `deltaTime` to it on every update.
+The callback takes `deltaTime` as a parameter, which is the relative time (in seconds) that has passed since the previous invocation of this update. For time-based animations, we'll use a `timer` variable that will store the time that has passed since the app started running by adding the `deltaTime` to it on every update.
 
 ### Rotation
 
@@ -337,15 +337,13 @@ It will rotate the `box` by `deltaTime*10` degrees on the `x` axis, `deltaTime*2
 
 ### Scaling
 
-We can also scale a given object — there's a function for that called `setLocalScale`. Add the following, again into the callback:
+We can also scale a given object — there's a function for that called `setLocalScale()`. Add the following, again into the callback:
 
 ```js
 cylinder.setLocalScale(1, Math.abs(Math.sin(timer)), 1);
 ```
 
-Here we are using `Math.sin` to scale the cylinder in a cycle, bigger and smaller again. We're wrapping the `y` scale value in `Math.abs` to pass the absolute values (greater or equal to 0); `sin` varies between -1 and 1, and for negative values the cylinder scaling can render unexpectedly (in this case it looks black half the time).
-
-Now onto the movement part.
+Here we are using `Math.sin()` to scale the cylinder in a cycle, bigger and smaller again. We're wrapping the `y` scale value in `Math.abs()` to pass the absolute values — greater than or equal to 0. We need to do this because `sin` varies between -1 and 1, and for negative values, the cylinder scaling can render unexpectedly (in this case, it looks black half the time).
 
 ### Moving
 
@@ -452,6 +450,6 @@ canvas {
 
 ## Summary
 
-Now you know the basics of PlayCanvas engine; happy experimentation!
-To see what else the engine can do, browse the [PlayCanvas engine examples](https://playcanvas.com/examples), each of which includes its source code.
-You can continue reading the [PlayCanvas editor](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/editor) article, go back to the [Building up a basic demo with PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) page, or go back a level higher to the main [3D Games on the Web](/en-US/docs/Games/Techniques/3D_on_the_web) page.
+Now you know the basics of the PlayCanvas engine; happy experimentation!
+To see what else the engine can do, browse the [PlayCanvas engine examples](https://playcanvas.com/examples), each of which includes the source code.
+You can continue by reading the [PlayCanvas editor](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/editor) article, go back to the [Building up a basic demo with PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) page, or go back a level higher to the main [3D Games on the Web](/en-US/docs/Games/Techniques/3D_on_the_web) page.

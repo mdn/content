@@ -5,13 +5,13 @@ page-type: guide
 sidebar: games
 ---
 
-Instead of coding everything from scratch you can also use the online **PlayCanvas editor**. This can be a more pleasant working environment if you are not someone who likes to code.
+Instead of coding everything from scratch you can use the online **PlayCanvas editor**. This can be a more pleasant working environment if you are not someone who likes to code.
 
 ## Creating an account
 
 The PlayCanvas Editor is free to use for public projects — all you have to do to begin with is [sign up](https://login.playcanvas.com/signup) for an account and log in.
 
-Once you're logged in, you'll see your projects dashboard at `https://playcanvas.com/editor`. This is where you can create projects and manage them, change their settings, etc.
+Once you're logged in, go to your projects dashboard at `https://playcanvas.com/editor`. This is where you can create projects and manage them, change their settings, etc. If you're taken straight into a sample project after signing up, click the PlayCanvas logo at the top left of the editor and choose _All Projects_ to open the dashboard.
 
 ## Creating a new project
 
@@ -27,7 +27,7 @@ The resulting dialog box will show a few different options. There are starter ki
 
 ![PlayCanvas Editor - New project](playcanvas-editor-newproject.png)
 
-Once the project is ready, click _Open project_ in the confirmation that appears. Your new project opens in the online PlayCanvas editor in a new browser tab, which is where we'll create our scene with the shapes.
+Once the project is ready, click _Open project_ in the confirmation that appears. Your new project opens in the online PlayCanvas editor in a new browser tab, which is where we'll create our scene.
 
 ## Creating the scene
 
@@ -36,21 +36,21 @@ Here's how the scene looks initially in the editor:
 ![PlayCanvas Editor - Scene](playcanvas-editor-scene.png)
 
 Even though it's a blank new project we don't have to start entirely from scratch — the camera and directional light are prepared already, so you don't have to worry about them.
-The scene also contains a box and a ground plane. We'll create our own shapes, so select the _Box_ and _Plane_ entities in the _Hierarchy_ panel (hold <kbd>Ctrl</kbd> to select both) and press <kbd>Delete</kbd> to remove them.
+The scene also contains a box and a ground plane. We'll create our own shapes, so select the _Box_ and _Plane_ entities in the _Hierarchy_ panel (hold <kbd>Ctrl</kbd> (<kbd>Cmd</kbd> on macOS) to select both) and press <kbd>Delete</kbd> to remove them.
 
-Now onto the creative part. To add an entity to the scene you have to click on the plus button located at the top of the _Hierarchy_ panel. When hovering over that button with your mouse the label will say 'Add Entity' — that's exactly what we want to do. An Entity is any object used in the scene — it can be an object like a box, cylinder or cone, but it can also be a camera, light or sound source. After clicking the button you'll see a menu containing a lot of various entities to choose from. Go ahead and select _3D_ > _Box_ — it will be added to the scene.
+Now onto the creative part. To add an entity to the scene you have to click on the plus button located at the top of the _Hierarchy_ panel. When hovering over that button with your mouse the label will say "Add Entity" — that's exactly what we want to do. An Entity is any object used in the scene — it can be an object like a box, cylinder, or cone, but it can also be a camera, light, or sound source. After clicking the button you'll see a menu containing several entities to choose from. Go ahead and select _3D_ > _Box_ — it will be added to the scene.
 
 ![PlayCanvas Editor - New box](playcanvas-editor-newbox.png)
 
-The box is created with the default values — width, height and depth are set to 1, and it is placed in the middle of the scene. You can drag it around or apply new values in the _Inspector_ panel on the right.
+The box is created with default values — width, height and depth are set to 1, and it is placed in the middle of the scene. You can drag it around or apply new values in the _Inspector_ panel on the right.
 
 ![PlayCanvas Editor - Box](playcanvas-editor-box.png)
 
-To add some colors to the scene we need a new material that will be used on the newly created box. Click on the plus button in the _Assets_ panel, and click on the _Material_ option in the menu that appears to create a new material.
+To add some colors to the scene we need a new material that will be used on our box. Click on the plus button in the _Assets_ panel, and click on the _Material_ option in the menu that appears to create a new material.
 
 ![PlayCanvas Editor - New material](playcanvas-editor-newmaterial.png)
 
-Click on your new material in the _Assets_ panel and its properties will appear in the _Inspector_ panel on the right-hand side of the display. Now edit the _Name_ text field to give it a unique name (we've chosen _boxMaterial_). A unique name will help us remember what this material is for — we will add more later!
+Your new material's properties should have appeared in the _Inspector_ panel on the right-hand side of the display (if not, click on your material in the _Assets_ panel). Now edit the _Name_ text field to give it a unique name (we've chosen _boxMaterial_). A unique name will help us remember what this material is for — we will add more later!
 
 ![PlayCanvas Editor - Box material](playcanvas-editor-boxmaterial.png)
 
@@ -95,7 +95,7 @@ Now follow the same steps as we did before when coloring the cube:
 
 ![PlayCanvas Editor - Cylinder material](playcanvas-editor-cylindermaterial.png)
 
-Follow the same approach again to add a cone to the scene, giving it a grayish color (we used `#EAEFF2`) and an X position value of 2. You should now have three shapes on your scene, something like the below screenshot.
+Follow the same approach again to add a cone to the scene, giving it a grayish color (we used `#EAEFF2`). The new cone appears in the same place as the cylinder, which makes it hard to click in the scene, so select _Cone_ in the _Hierarchy_ panel instead and give it an X position value of 2 in the _Inspector_. You should now have three shapes on your scene, something like the below screenshot.
 
 ![PlayCanvas Editor - Cone](playcanvas-editor-cone.png)
 
@@ -105,42 +105,17 @@ Animating 3D models might be considered an [advanced](https://developer.playcanv
 
 ![PlayCanvas Editor - Box animation](playcanvas-editor-boxanimation.png)
 
-If you double click on it, you'll be moved to a code editor. As you can see, the file contains some boilerplate code already:
+If you double click on it, you'll be moved to a code editor. The file already contains some boilerplate code: a `BoxAnimation` class that extends the engine's `Script` class, with a `scriptName` that the editor uses to identify it, and empty `initialize()` and `update()` methods. The most interesting part is the `update()` method, which is where we can put any code that we want repeated on every frame. Add the following line inside this method, to rotate the cube on every frame:
 
 ```js
-import { Script } from "playcanvas";
-
-/**
- * The {@link https://api.playcanvas.com/classes/Engine.Script.html | Script} class is
- * the base class for all PlayCanvas scripts. Learn more about writing scripts in the
- * {@link https://developer.playcanvas.com/user-manual/scripting/ | scripting guide}.
- */
-export class BoxAnimation extends Script {
-  static scriptName = "boxAnimation";
-
-  /**
-   * Called when the script is about to run for the first time.
-   */
-  initialize() {}
-
-  /**
-   * Called for enabled (running state) scripts on each tick.
-   *
-   * @param {number} dt - The delta time in seconds since the last frame.
-   */
-  update(dt) {}
+update(dt) {
+  this.entity.rotate(dt * 10, dt * 20, dt * 30);
 }
 ```
 
-The script is a class that extends the engine's `Script` class, and its `scriptName` is the name that the editor uses to identify it. The most interesting part is the `update()` method, which is where we can put any code that we want repeated on every frame. Add the following line inside this method, to rotate the cube on every frame:
+`this.entity` refers to the object the script will be attached to (the box); using the `dt` variable, which contains the delta time passed since the previous frame, we can rotate the box by a different amount around all three axes.
 
-```js
-this.entity.rotate(dt * 10, dt * 20, dt * 30);
-```
-
-In the line above `this.entity` refers to the object to which the script will be attached (the box); using the `dt` variable, which contains the delta time passed since the previous frame, we can rotate the box by a different amount around all three axes.
-
-Save the changes using the _Save File_ option in the code editor's _File_ menu (or by pressing <kbd>Ctrl</kbd> + <kbd>S</kbd>), then return to the main editor tab. Here, follow these steps:
+Save the changes using the _Save File_ option in the code editor's _File_ menu (or by pressing <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>S</kbd>), then return to the main editor tab. Here, follow these steps:
 
 1. Be sure you have the box selected on the scene.
 2. Click on _Add Component_, then _Script_ in the _Inspector_.
@@ -156,7 +131,7 @@ Now we'll do the same steps for cylinder. First:
 2. Name it `cylinderAnimation.mjs`.
 3. Double click the script icon to launch the code editor.
 
-This time instead of rotating the object we will try to scale it. For that we'll need a timer to store the total amount of time passed since the start of the animation. Add this code to the `initialize()` method:
+This time, instead of rotating the object, we will scale it. For that, we'll need a timer to store the total amount of time passed since the start of the animation. Add this code to the `initialize()` method:
 
 ```js
 this.timer = 0;
@@ -169,7 +144,7 @@ this.timer += dt;
 this.entity.setLocalScale(1, Math.abs(Math.sin(this.timer)), 1);
 ```
 
-The `setLocalScale()` method applies the given values to the X, Y and Z axes of the object. In our case we're modifying the scale of the cylinder on the Y axis, giving it as a value the `Math.sin()` of the timer, with `Math.abs()` applied to the result of that to have the values always above zero (0-1; sin values are normally between -1 and 1). This gives us a nice scaling effect as a result.
+The `setLocalScale()` method applies the given values to the X, Y, and Z axes of the object. In our case we're modifying the scale of the cylinder on the Y axis, giving it the `Math.sin()` value of the timer, with `Math.abs()` applied to the result to make sure the value is always above zero (0-1; sin values are normally between -1 and 1). This gives us a nice scaling effect as a result.
 
 Remember to add the `cylinderAnimation` script to the Cylinder object to apply the given animations.
 
@@ -183,7 +158,7 @@ Next, add the following line to the `initialize()` method:
 this.timer = 0;
 ```
 
-To move the cone up and down we will use the `setPosition()` method — add the code below to the `update()` method:
+Let's move the cone up and down; to do this we will use the `setPosition()` method — add the code below to the `update()` method:
 
 ```js
 this.timer += dt;
