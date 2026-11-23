@@ -153,7 +153,7 @@ In the second box, the browser avoids breaking inside the date. Instead, it brea
 
 ### Comparing with `white-space: nowrap`
 
-In this example, the highlighted phrase is too long to fit on one line. The first box sets `wrap-inside: avoid` on the phrase, while the second box sets `white-space: nowrap`.
+This example demonstrates the effects of `wrap-inside: auto` and `wrap-inside: avoid` while comparing these to `white-space: nowrap`.
 
 #### HTML
 
