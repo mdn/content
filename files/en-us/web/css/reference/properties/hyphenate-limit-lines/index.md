@@ -80,7 +80,7 @@ The `hyphenate-limit-lines` property lets you limit how many lines in a row can 
 
 The `<integer>` value specifies the maximum number of consecutive lines that can be hyphenated. For example, a value of `2` allows at most two consecutive lines to be hyphenated. A value of `0` prevents any line from ending with a hyphenated word, which effectively disables hyphenation. Negative values are invalid.
 
-Once the specified number of consecutive lines has been hyphenated, the browser won't hyphenate the next line. Instead, it breaks that line at a regular line-break opportunity, such as a space between words. If none comes before the end of the line, the text may overflow. After a line that isn't hyphenated, the count starts again.
+Once the specified number of consecutive lines has been hyphenated, the browser won't hyphenate the next line. Instead, it breaks that line at a regular line-break opportunity, such as a space between words. If the line fills up before it can break, the text may overflow. After a line that isn't hyphenated, the count starts again.
 
 The property only has an effect when hyphenation is enabled, for example, by setting {{cssxref("hyphens", "hyphens: auto")}} or by including soft hyphens (`&shy;`) in the text with `hyphens: manual`.
 
