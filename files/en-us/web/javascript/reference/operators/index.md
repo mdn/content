@@ -20,7 +20,7 @@ Basic keywords and general expressions in JavaScript. These expressions have the
   - : The `this` keyword refers to a special property of an execution context.
 - [Literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
   - : Basic `null`, boolean, number, and string literals.
-- {{jsxref("Array", "[]")}}
+- {{jsxref("Operators/Array_initializer", "[]")}}
   - : Array initializer/literal syntax.
 - {{jsxref("Operators/Object_initializer", "{}")}}
   - : Object initializer/literal syntax.

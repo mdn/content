@@ -107,6 +107,11 @@ These features are shipping in Firefox 161 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
+- **`margin-trim` property**: `layout.css.margin-trim.enabled`
+
+  The {{cssxref("margin-trim")}} property is now supported for block containers, and is enabled by default in Nightly. It removes the block-axis margins of child elements at the container's start edge, end edge, or both, while keeping the margins between siblings.
+  ([Firefox bug 2051240](https://bugzil.la/2051240)).
+
 - **Cross-document view transitions** (Nightly): `dom.viewTransitions.cross-document.enabled`
 
   [Cross-document view transitions](/en-US/docs/Web/API/View_Transition_API/Using#basic_mpa_view_transition) are now enabled by default in Nightly.
