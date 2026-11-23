@@ -100,6 +100,12 @@ If the `menuitemcheckbox` is in a submenu in a `menubar` or a menu opened with a
 - `onKeyDown`
   - : Handle the case where the user presses the <kbd>Space</kbd> key to change the state of the checkbox by changing the value of the `aria-checked` attribute and the appearance of the checkbox so it appears checked or unchecked to the sighted user. Also handles all keys listed in the keyboard navigation section above.
 
+## Best practices
+
+### Prefer HTML
+
+The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use the native [HTML checkbox](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) form control instead of recreating a checkbox's functionality with JavaScript and ARIA.
+
 ## Examples
 
 ```html
@@ -126,10 +132,6 @@ The visual appearance of the selected state is a checked checkbox which we can c
   content: "X";
 }
 ```
-
-### Prefer HTML
-
-The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use the native [HTML checkbox](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) form control instead of recreating a checkbox's functionality with JavaScript and ARIA.
 
 ## Specifications
 

@@ -37,14 +37,18 @@ None.
 
 ### Return value
 
-A new object with properties reflecting the options computed during the initialization of this `PluralRules` object. The object has the following properties, in the order they are listed:
+A new object with properties reflecting the options computed according to the arguments passed to the [`Intl.PluralRules()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules) constructor. The object has the following properties, in the order they are listed:
 
 - `locale`
   - : The {{glossary("BCP 47 language tag")}} for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. No Unicode extension key will be included in the output.
 - `type`
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"cardinal"` or `"ordinal"`. The default is `"cardinal"`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is either `"cardinal"` or `"ordinal"`. The default is `"cardinal"`.
+- `notation`
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is one of `"standard"`, `"scientific"`, `"engineering"`, and `"compact"`. The default is `"standard"`.
+- `compactDisplay` {{optional_inline}}
+  - : Only present if `notation` is `"compact"`. The value provided for this property in the `options` argument, with the default filled in as needed. It is either `"short"` or `"long"`. The default is `"short"`.
 - `minimumIntegerDigits`
-  - : The value provided for this property in the `options` argument, with default filled in as needed.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed.
 - `minimumFractionDigits`, `maximumFractionDigits` {{optional_inline}}
   - : The value provided for these properties in the `options` argument, with defaults filled in as needed. They are only present if necessary; see [digit options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#digit_options).
 - `minimumSignificantDigits`, `maximumSignificantDigits` {{optional_inline}}
@@ -52,13 +56,13 @@ A new object with properties reflecting the options computed during the initiali
 - `pluralCategories`
   - : An {{jsxref("Array")}} of plural categories used by the given locale, selected from the list `"zero"`, `"one"`, `"two"`, `"few"`, `"many"` and `"other"`.
 - `roundingIncrement`
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is one of `1`, `2`, `5`, `10`, `20`, `25`, `50`, `100`, `200`, `250`, `500`, `1000`, `2000`, `2500`, and `5000`. The default is `1`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is one of `1`, `2`, `5`, `10`, `20`, `25`, `50`, `100`, `200`, `250`, `500`, `1000`, `2000`, `2500`, and `5000`. The default is `1`.
 - `roundingMode`
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is one of `"ceil"`, `"floor"`, `"expand"`, `"trunc"`, `"halfCeil"`, `"halfFloor"`, `"halfExpand"`, `"halfTrunc"`, and `"halfEven"`. The default is `"halfExpand"`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is one of `"ceil"`, `"floor"`, `"expand"`, `"trunc"`, `"halfCeil"`, `"halfFloor"`, `"halfExpand"`, `"halfTrunc"`, and `"halfEven"`. The default is `"halfExpand"`.
 - `roundingPriority`
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"auto"`, `"morePrecision"`, or `"lessPrecision"`. The default is `"auto"`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is either `"auto"`, `"morePrecision"`, or `"lessPrecision"`. The default is `"auto"`.
 - `trailingZeroDisplay`
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"auto"` or `"stripIfInteger"`. The default is `"auto"`.
+  - : The value provided for this property in the `options` argument, with the default filled in as needed. It is either `"auto"` or `"stripIfInteger"`. The default is `"auto"`.
 
 ## Examples
 
@@ -78,6 +82,8 @@ const usedOptions = de.resolvedOptions();
 console.log(usedOptions.locale); // "de-DE"
 console.log(usedOptions.pluralCategories); // Array ["one", "other"]
 console.log(usedOptions.type); // "cardinal"
+console.log(usedOptions.notation); // "standard"
+console.log(usedOptions.compactDisplay); // undefined (notation is not "compact")
 console.log(usedOptions.minimumIntegerDigits); // 1
 console.log(usedOptions.minimumFractionDigits); // undefined (maximumSignificantDigits is set)
 console.log(usedOptions.maximumFractionDigits); // undefined (maximumSignificantDigits is set)

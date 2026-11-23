@@ -89,7 +89,7 @@ An empty object with no properties can be created like this:
 const object = {};
 ```
 
-However, the advantage of the _literal_ or _initializer_ notation is, that you are able to quickly create objects with properties inside the curly braces. You notate a list of `key: value` pairs delimited by commas.
+However, the advantage of the _literal_ or _initializer_ notation is that you are able to quickly create objects with properties inside the curly braces. You notate a list of `key: value` pairs delimited by commas.
 
 The following code creates an object with three properties and the keys are `"foo"`, `"age"` and `"baz"`. The values of these keys are a string `"bar"`, the number `42`, and another object.
 

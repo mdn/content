@@ -19,7 +19,7 @@ A locale's collation rules are used to determine how strings are ordered in that
 | `lower` | Lower case to be sorted before upper case. |
 | `false` | No special case ordering.                  |
 
-The `caseFirst` property's value is set at construction time, either through the `kf` key of the locale identifier or through the `caseFirst` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; and if neither is present, the property has value `undefined`.
+The `caseFirst` property's value is set at construction time, either through the `kf` key of the locale identifier or through the `caseFirst` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; if neither is present, the property has the value `undefined`.
 
 The set accessor of `caseFirst` is `undefined`. You cannot change this property directly.
 
@@ -29,7 +29,7 @@ Like other locale subtags, the `caseFirst` value can be added to the {{jsxref("I
 
 ### Adding a caseFirst value via the locale string
 
-In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), `caseFirst` is an "extension subtag". These subtags add additional data about the locale, and are added to locale identifiers using the `-u` extension key. To add the `caseFirst` value to the initial locale identifier string passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor, first add the `-u` extension key if it doesn't exist. Next, add the `-kf` extension to indicate that you are adding a value for `caseFirst`. Finally, add the `caseFirst` value.
+In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), `caseFirst` is an "extension subtag". These subtags provide additional data about the locale and are added to locale identifiers using the `-u` extension key. To add the `caseFirst` value to the initial locale identifier string passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor, first add the `-u` extension key if it doesn't exist. Next, add the `-kf` extension to indicate that you are adding a value for `caseFirst`. Finally, add the `caseFirst` value.
 
 ```js
 const locale = new Intl.Locale("fr-Latn-FR-u-kf-upper");

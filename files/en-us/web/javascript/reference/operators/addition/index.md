@@ -30,6 +30,17 @@ console.log(2001 + ": A Space Odyssey");
 x + y
 ```
 
+### Parameters
+
+- `x`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 11 (addition) or above. Its value is coerced to either a string, a BigInt, or a number.
+- `y`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 12 (multiplication) or above. Its value is coerced to either a string, a BigInt, or a number.
+
+### Return value
+
+A string, a BigInt, or a number, representing either the string concatenation or numeric sum of `x` and `y`.
+
 ## Description
 
 The `+` operator is overloaded for two distinct operations: numeric addition and string concatenation. When evaluating, it first [coerces both operands to primitives](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion). Then, the two operands' types are tested:
@@ -37,6 +48,12 @@ The `+` operator is overloaded for two distinct operations: numeric addition and
 - If one side is a string, the other operand is also [converted to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) and they are concatenated.
 - If they are both [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt), BigInt addition is performed. If one side is a BigInt but the other is not, a {{jsxref("TypeError")}} is thrown.
 - Otherwise, both sides are [converted to numbers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), and numeric addition is performed.
+
+When numeric addition is performed, the results are generally consistent with mathematics (save for rounding errors), including interactions with `Infinity` (e.g., `Infinity` plus any finite number is still `Infinity`). Some edge cases:
+
+- If either operand is `NaN`, the result is `NaN`
+- `Infinity + -Infinity` is `NaN`
+- When the mathematical result is 0, `0` is returned unless both operands are `-0`, in which case `-0` is returned.
 
 String concatenation is often thought to be equivalent with [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) or [`String.prototype.concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat), but they are not. Addition coerces the expression to a _primitive_, which calls [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) in priority; on the other hand, template literals and `concat()` coerce the expression to a _string_, which calls [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) in priority. If the expression has a [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) method, string concatenation calls it with `"default"` as hint, while template literals use `"string"`. This is important for objects that have different string and primitive representations — such as {{jsxref("Temporal")}}, whose objects' `valueOf()` methods all throw.
 
@@ -99,6 +116,25 @@ If one of the operands is a string, the other is converted to a string and they 
 5 + "foo"; // "5foo"
 "foo" + false; // "foofalse"
 "2" + 2; // "22"
+```
+
+### Non-associativity
+
+Be careful with operation order. Unlike in mathematics, addition in JavaScript isn't always associative due to how intermediate results are rounded. For example, `a + (b + c) !== (a + b) + c`:
+
+```js
+const a = 1e20;
+const b = -1e20;
+const c = 0.1;
+
+console.log(a + b + c); // 0.1
+console.log(a + (b + c)); // 0
+```
+
+{{jsxref("Math.sumPrecise()")}} can alleviate the issue here:
+
+```js
+console.log(Math.sumPrecise([a, b, c])); // 0.1
 ```
 
 ## Specifications

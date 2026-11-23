@@ -27,6 +27,15 @@ console.log(!(a > 0 || b > 0));
 !x
 ```
 
+### Parameters
+
+- `x`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 14 (prefix operators) or above.
+
+### Return value
+
+`true` if `x` is {{Glossary("falsy")}}, or `false` if `x` is {{Glossary("truthy")}}.
+
 ## Description
 
 Returns `false` if its single operand can be converted to `true`;

@@ -42,11 +42,36 @@ Traditionally, the Intl API used strings to represent locales, just as Unicode d
 | {{jsxref("Intl/Locale/calendar", "calendar")}}               | `ca` (extension)                   |
 | {{jsxref("Intl/Locale/caseFirst", "caseFirst")}}             | `kf` (extension)                   |
 | {{jsxref("Intl/Locale/collation", "collation")}}             | `co` (extension)                   |
+| {{jsxref("Intl/Locale/firstDayOfWeek", "firstDayOfWeek")}}   | `fw` (extension)                   |
 | {{jsxref("Intl/Locale/hourCycle", "hourCycle")}}             | `hc` (extension)                   |
 | {{jsxref("Intl/Locale/numberingSystem", "numberingSystem")}} | `nu` (extension)                   |
 | {{jsxref("Intl/Locale/numeric", "numeric")}}                 | `kn` (extension)                   |
 
 The information above is exactly provided as-is when the `Locale` object is constructed, without consulting any external database. The `Intl.Locale` object additionally provides some methods that return information about the locale's real-world information, such as available calendars, collations, and numbering systems.
+
+### Region preferences
+
+The {{jsxref("Intl/Locale/getCalendars", "getCalendars()")}}, {{jsxref("Intl/Locale/getHourCycles", "getHourCycles()")}}, and {{jsxref("Intl/Locale/getWeekInfo", "getWeekInfo()")}} methods return date/time conventions, which depend on the locale's region (and sometimes language; for example, English Canada `en-CA` and French Canada `fr-CA` may have different conventions). The region is decided as follows:
+
+- A valid `rg` extension subtag, if present, is consulted first. The value is a region code followed by 1–4 alphanumeric characters. The `Intl` parser doesn't care about the suffix characters, but per Unicode, it should be `"zzzz"` to designate an entire region, or a [subdivision ID](https://github.com/unicode-org/cldr/blob/main/common/validity/subdivision.xml). For example, the tags `"en-US-u-rg-gbzzzz"` or `"en-US-u-rg-gbsct"` (`gbsct` designates the Scotland subdivision) cause most localization methods to select American English and US conventions, but the three date/time convention methods consult UK conventions instead.
+- If `rg` is not present, is invalid, or its specified region doesn't provide conventions data, the region subtag is used if present. This should be the most common case, like `en-US` for the US, `zh-CN` for China, etc.
+- If the region subtag is not present, the `sd` extension subtag is used if present and valid. It follows the same grammar as the `rg` extension subtag. Per Unicode, it should be a subdivision ID that is consistent with the region subtag if present. For `Intl` purposes, however, you generally wouldn't need `sd` if you already have a region, because the region takes priority anyway. For example, the tag `"en-u-sd-gbsct"` causes most localization methods to select American English and US conventions (`en` is usually treated as `en-US`), but the three date/time convention methods consult UK conventions instead.
+- If the `sd` extension is not present or is invalid, the [most likely region](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize) of the locale is used, falling back to the world region (`"001"`).
+
+Compare the following examples:
+
+```js
+new Intl.Locale("en").getHourCycles(); // ["h12"]; US convention
+
+new Intl.Locale("en-GB").getHourCycles(); // ["h23"]; UK convention
+new Intl.Locale("en-u-rg-gbzzzz").getHourCycles(); // ["h23"]
+new Intl.Locale("en-u-sd-gbsct").getHourCycles(); // ["h23"]
+
+new Intl.Locale("en-US-u-rg-gbzzzz").getHourCycles(); // ["h23"]
+new Intl.Locale("en-US-u-sd-gbsct").getHourCycles(); // ["h12"]
+```
+
+Neither `rg` nor `sd` is surfaced by any `Intl.Locale` property and cannot be customized by a constructor option. The values returned by these methods may also be affected by other extension subtags, as documented in their respective pages.
 
 ## Constructor
 
@@ -67,6 +92,8 @@ These properties are defined on `Intl.Locale.prototype` and shared by all `Intl.
   - : Returns the collation type for the `Locale`, which is used to order strings according to the locale's rules.
 - {{jsxref("Object/constructor", "Intl.Locale.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Intl.Locale` instances, the initial value is the {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constructor.
+- {{jsxref("Intl/Locale/firstDayOfWeek", "Intl.Locale.prototype.firstDayOfWeek")}}
+  - : Returns the first day of the week specified for the locale.
 - {{jsxref("Intl/Locale/hourCycle", "Intl.Locale.prototype.hourCycle")}}
   - : Returns the time keeping format convention used by the locale.
 - {{jsxref("Intl/Locale/language", "Intl.Locale.prototype.language")}}
