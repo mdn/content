@@ -28,13 +28,40 @@ This data type is accepted as a parameter in the following CSS functions:
 
 ## Syntax
 
+```css
+/* <number> values */
+0
+0.125
+0.5
+1
+
+/* <percentage> values */
+0%
+12.5%
+50%
+100%
+```
+
+### Values
+
+This data type is specified as one of the following values:
+
+- {{cssxref("number")}}
+  - : A positive value between `0` to `1`, inclusive
+- {{cssxref("percentage")}}
+  - : A `<percentage>` between `0%` to `100%`, inclusive.
+
+Values outside the ranges, though valid, are clamped to the nearest limit in the range.
+
+## Description
+
 The value of an `<alpha-value>` is given as either a {{cssxref("number")}} or a {{cssxref("percentage")}}.
 
-If given as a number, the useful range is 0 (fully transparent) to 1.0 (fully opaque), with decimal values in between; that is, 0.5 indicates that half of the foreground color is used and half of the background color is used. Values outside the range of 0 to 1 are permitted, but are [clamped](<https://en.wikipedia.org/wiki/Clamping_(graphics)>) to lie within the range 0 to 1.
+If given as a number, the useful range is `0` (fully transparent) to `1.0` (fully opaque), with decimal values in between. For example, `0.`5 indicates that half of the foreground color is used and half of the background color is used. Values outside the range of `0` to `1` are permitted, but are clamped to the range of `0` to `1`.
 
-If the alpha value is given as a percentage, 0% corresponds to fully transparent while 100% indicates fully opaque.
+If the alpha value is given as a percentage, `0%` corresponds to fully transparent while `100%` indicates fully opaque.
 
-## Interpolation
+### Interpolation
 
 When animated, values of the `<alpha-value>` CSS data type are {{Glossary("interpolation", "interpolated")}} as real, floating-point numbers. The speed of the interpolation is determined by the [easing function](/en-US/docs/Web/CSS/Reference/Values/easing-function) associated with the animation.
 
@@ -46,22 +73,11 @@ When animated, values of the `<alpha-value>` CSS data type are {{Glossary("inter
 
 ### Setting text color opacity
 
-The [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) function accepts a fourth optional value to specify an alpha value.
-The following example shows how to apply a color with 60% opacity using the alpha value:
+The example demonstrates applying a color with `60%` opacity using the `<alpha-value>` as a parameter within a {{cssxref("rgb()")}} function, which accepts an optional fourth parameter specifying an alpha value:
 
 ```css
 /* <rgb()> */
 color: rgb(34 12 64 / 60%);
-```
-
-### Setting shape image threshold
-
-Here an alpha value is used to determine which parts of an image are considered part of a shape:
-
-```css
-/* shape-image-threshold */
-shape-image-threshold: 70%;
-shape-image-threshold: 0.7;
 ```
 
 ## Specifications
