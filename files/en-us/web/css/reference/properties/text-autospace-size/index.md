@@ -75,6 +75,7 @@ p {
   text-autospace-size: 0.25;
 }
 ```
+
 ```css hidden
 @supports not (text-autospace-size: 0.25) {
   body::before {
