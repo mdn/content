@@ -13,7 +13,7 @@ The font size keywords are mapped to the deprecated HTML `size` attribute. See t
 
 ## Associated properties
 
-This data type is accepted in the value definitions of the following CSS properties:
+This data type is accepted in values for the following CSS properties:
 
 - {{cssxref("font-size")}}
 - {{cssxref("font")}} shorthand
