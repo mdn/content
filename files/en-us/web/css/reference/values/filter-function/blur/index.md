@@ -35,10 +35,13 @@ filter: blur(1.5rem);
 
 ## Associated properties and functions
 
-This CSS function is accepted in the values and as parameters of the following CSS properties and functions:
+This function is accepted in the values of the following CSS properties:
 
 - {{cssxref("filter")}}
 - {{cssxref("backdrop-filter")}}
+
+This function is also accepted as a parameter of the following CSS functions:
+
 - {{cssxref("filter()")}} function
 
 ## Syntax
