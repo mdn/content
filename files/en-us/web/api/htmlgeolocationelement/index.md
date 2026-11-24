@@ -76,7 +76,7 @@ When the data request returns, the {{domxref("HTMLGeolocationElement.location_ev
 
 The {{domxref("HTMLGeolocationElement.promptaction_event", "promptaction")}} and {{domxref("HTMLGeolocationElement.promptdismiss_event", "promptdismiss")}} events allow you to respond to the user's interactions with the `<geolocation>` dialog box, for example to ask them to make a different choice if they denied permission to access the data.
 
-When a {{htmlelement("geolocation")}} element is invalid (see [invalidation and blocking](/en-US/docs/Web/HTML/Guides/Permission_elements#validation_and_blocking)), it is prevented from functioning, either temporarily or permanently, depending on the reason. You can check whether it is invalid by querying the {{domxref("HTMLGeolocationElement.isValid")}} property. You can also return the reason why it is invalid via the {{domxref("HTMLGeolocationElement.invalidReason")}} property.
+When a {{htmlelement("geolocation")}} element is invalid (see [invalidation and blocking](/en-US/docs/Web/HTML/Guides/Permission_elements#validation_and_blocking)), it is prevented from functioning. You can check whether it is invalid by querying the {{domxref("HTMLGeolocationElement.isValid")}} property. You can also return the reason why it is invalid via the {{domxref("HTMLGeolocationElement.invalidReason")}} property.
 
 ## Examples
 

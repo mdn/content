@@ -10,9 +10,7 @@ browser-compat: api.HTMLGeolocationElement.invalidReason
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-The **`invalidReason`** read-only property of the {{domxref("HTMLGeolocationElement")}} interface returns an enumerated value representing the reason why the associated {{htmlelement("geolocation")}} element is invalid, if that is the case.
-
-When a `<geolocation>` element is invalid (see [invalidation and blocking](/en-US/docs/Web/HTML/Guides/Permission_elements#validation_and_blocking)), it is prevented from functioning, either temporarily or permanently, depending on the reason.
+The **`invalidReason`** read-only property of the {{domxref("HTMLGeolocationElement")}} interface returns an enumerated value representing the reason why the associated {{htmlelement("geolocation")}} element is invalid, if that is the case. When a `<geolocation>` element is invalid (see [invalidation and blocking](/en-US/docs/Web/HTML/Guides/Permission_elements#validation_and_blocking)), it is prevented from functioning.
 
 You can query the {{domxref("HTMLGeolocationElement.isValid")}} property to check whether the `<geolocation>` element is valid or not, and detect when `invalidReason` or `isValid` change using the {{domxref("HTMLGeolocationElement.validationstatuschange_event", "validationstatuschange")}} event.
 

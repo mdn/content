@@ -45,7 +45,7 @@ The `HTMLInstallElement` interface represents the {{htmlelement("install")}} ele
 
 You can check whether an installation was successful by listening for the {{domxref("HTMLInstallElement.installresult_event", "installresult")}} event and querying the event object's {{domxref("InstallResultEvent.result", "result")}} property.
 
-When an {{htmlelement("install")}} element is invalid (see [invalidation and blocking](/en-US/docs/Web/HTML/Guides/Permission_elements#validation_and_blocking)), it is prevented from functioning, either temporarily or permanently, depending on the reason. You can check whether it is invalid by querying the {{domxref("HTMLInstallElement.isValid")}} property. You can also return the reason why it is invalid via the {{domxref("HTMLInstallElement.invalidReason")}} property.
+When an {{htmlelement("install")}} element is invalid (see [invalidation and blocking](/en-US/docs/Web/HTML/Guides/Permission_elements#validation_and_blocking)), it is prevented from functioning. You can check whether it is invalid by querying the {{domxref("HTMLInstallElement.isValid")}} property. You can also return the reason why it is invalid via the {{domxref("HTMLInstallElement.invalidReason")}} property.
 
 ## Examples
 

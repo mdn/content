@@ -10,9 +10,7 @@ browser-compat: api.HTMLInstallElement.isValid
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-The **`isValid`** read-only property of the {{domxref("HTMLInstallElement")}} interface is a boolean value indicating whether the associated {{htmlelement("install")}} element is valid or invalid (see [invalidation and blocking](/en-US/docs/Web/HTML/Guides/Permission_elements#validation_and_blocking)).
-
-When an `<install>` element is invalid, it is prevented from functioning, either temporarily or permanently, depending on the reason.
+The **`isValid`** read-only property of the {{domxref("HTMLInstallElement")}} interface is a boolean value indicating whether the associated {{htmlelement("install")}} element is valid or invalid (see [invalidation and blocking](/en-US/docs/Web/HTML/Guides/Permission_elements#validation_and_blocking)). When an `<install>` element is invalid, it is prevented from functioning.
 
 To find out why it is invalid, check the {{domxref("HTMLInstallElement.invalidReason")}} property. You can also detect when `invalidReason` or `isValid` change using the {{domxref("HTMLInstallElement.validationstatuschange_event", "validationstatuschange")}} event.
 

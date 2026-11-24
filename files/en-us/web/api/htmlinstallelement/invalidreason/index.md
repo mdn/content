@@ -11,7 +11,7 @@ browser-compat: api.HTMLInstallElement.invalidReason
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`invalidReason`** read-only property of the {{domxref("HTMLInstallElement")}} interface is an enumerated value representing the reason why the associated {{htmlelement("install")}} element is invalid (see [invalidation and blocking](/en-US/docs/Web/HTML/Guides/Permission_elements#validation_and_blocking)).
-When an element is invalid, it is prevented from functioning, either temporarily or permanently, depending on the reason.
+When an element is invalid, it is prevented from functioning.
 
 You can query the {{domxref("HTMLInstallElement.isValid")}} property to check whether the `<install>` element is valid or not, and detect when `invalidReason` or `isValid` change using the {{domxref("HTMLInstallElement.validationstatuschange_event", "validationstatuschange")}} event.
 
