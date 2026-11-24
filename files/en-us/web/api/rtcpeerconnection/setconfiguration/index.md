@@ -9,20 +9,7 @@ browser-compat: api.RTCPeerConnection.setConfiguration
 {{APIRef("WebRTC")}}
 
 The **`setConfiguration()`** method of the {{domxref("RTCPeerConnection")}} interface sets the current configuration of the connection based on the values included in the specified object.
-This lets you change the ICE servers used by the connection and which transport policies to use.
-
-The most common use case for this method (and even then, probably not a very common use case) is to replace the set of ICE servers to be used. Two potential scenarios in which this might be done:
-
-- The {{domxref("RTCPeerConnection")}} was instantiated without specifying any ICE servers.
-  If, for example, the {{domxref("RTCPeerConnection.RTCPeerConnection()", "RTCPeerConnection()")}} constructor was called with no parameters, you would have to then call `setConfiguration()` to add ICE servers before ICE negotiation could begin.
-- Renegotiation of the connection is needed, and a different set of ICE servers needs to be used for some reason.
-  Perhaps the user has moved into a new region, so using new regional ICE servers is necessary, for example.
-  In this situation, one might call `setConfiguration()` to switch to new regional ICE servers, then initiate an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart).
-
-> [!NOTE]
-> Some options can't be changed after the connection is created.
-> Any option that is left out of the configuration takes its default value, so leaving out one of these options can throw an `InvalidModificationError`.
-> To update some options and keep the rest, get the current configuration with {{domxref("RTCPeerConnection.getConfiguration()", "getConfiguration()")}}, change the options you need, and then pass it to `setConfiguration()`.
+This is most often used to change the ICE servers that the connection uses.
 
 ## Syntax
 
@@ -44,8 +31,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Thrown if one or more of the URLs specified in `configuration.iceServers` is a {{Glossary("TURN")}} server, but complete login information is not provided (that is, either the `username` or `credential` is missing, or if `credentialType` is `"password"` and `credential` is not a string).
-    This prevents successful login to the server.
+  - : Thrown if an entry in `configuration.iceServers` has a {{Glossary("TURN")}} URL but no `username` or `credential`.
 - `InvalidModificationError` {{domxref("DOMException")}}
   - : Thrown if `configuration` tries to change an option that can no longer be changed.
     This happens if any of the following differ from the current configuration (an option that is left out is compared using its default value):
@@ -54,15 +40,30 @@ None ({{jsxref("undefined")}}).
     - `iceCandidatePoolSize`, if {{domxref("RTCPeerConnection.setLocalDescription()")}} has already been called
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("RTCPeerConnection")}} is closed.
-- `SyntaxError` {{domxref("DOMException")}}
-  - : Thrown if an entry in `configuration.iceServers` has an empty `urls` array or if one of its URLs isn't a valid STUN or TURN URL.
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if one of the URLs in `configuration.iceServers` uses a STUN or TURN scheme (such as `turns:`) that the browser doesn't support.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if an entry in `configuration.iceServers` has an empty `urls` array or if one of its URLs isn't a valid STUN or TURN URL.
 - {{jsxref("TypeError")}}
   - : Thrown if `configuration.iceCandidatePoolSize` isn't a finite number in the range 0 to 255.
     Also thrown if `configuration.bundlePolicy`, `configuration.iceTransportPolicy`, or `configuration.rtcpMuxPolicy` isn't one of the allowed values, or if an entry in `configuration.iceServers` has no `urls` property.
 
-## Example
+## Description
+
+You might need to replace the ICE servers that a connection uses when:
+
+- The {{domxref("RTCPeerConnection")}} was created without any ICE servers.
+  In this case, you have to call `setConfiguration()` to add ICE servers before ICE negotiation can begin.
+- The connection needs to use a different set of ICE servers, for example because the user has moved to a new region.
+  In this case, call `setConfiguration()` with the new servers, and then [restart ICE](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) so that the connection is renegotiated using them.
+
+Some options can't be changed after the connection is created.
+Any option that is left out of the configuration takes its default value, so leaving out one of these options can throw an `InvalidModificationError`.
+To update some options and keep the rest, get the current configuration with {{domxref("RTCPeerConnection.getConfiguration()", "getConfiguration()")}}, change the options you need, and then pass it to `setConfiguration()`.
+
+## Examples
+
+### Switching to a different ICE server
 
 In this example, it has already been determined that ICE restart is needed, and that negotiation needs to be done using a different ICE server.
 
