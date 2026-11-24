@@ -3,25 +3,46 @@ title: "`<color-interpolation-method>` CSS type"
 short-title: <color-interpolation-method>
 slug: Web/CSS/Reference/Values/color-interpolation-method
 page-type: css-type
-browser-compat:
-  - css.types.color.color-mix
-  - css.types.color.color.display-p3-linear
-spec-urls: https://drafts.csswg.org/css-color/#interpolation-space
+browser-compat: css.types.color.color-interpolation-method
+spec-urls: https://drafts.csswg.org/css-color-5/#color-interpolation-method
 sidebar: cssref
 ---
 
-The **`<color-interpolation-method>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents the [color space](/en-US/docs/Glossary/Color_space) used for interpolation between {{CSSXref("&lt;color&gt;")}} values. It can be used to override the default interpolation color space for color-related functional notations such as {{CSSXref("color_value/color-mix", "color-mix()")}} and {{CSSXref("gradient/linear-gradient", "linear-gradient()")}}.
+The **`<color-interpolation-method>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents the [color space](/en-US/docs/Glossary/Color_space) used for interpolation between {{CSSXref("&lt;color&gt;")}} values.
 
-When interpolating `<color>` values, the interpolation color space defaults to Oklab.
+## Associated properties and functions
+
+This data type is accepted in the value of the following CSS property:
+
+- {{cssxref("color-interpolation")}}
+
+This data type is also accepted as a parameter of the following CSS functions:
+
+- {{cssxref("color-mix()")}}
+- {{cssxref("conic-gradient()")}}
+- {{cssxref("linear-gradient()")}}
+- {{cssxref("font-palette/palette-mix","palette-mix()")}}
+- {{cssxref("radial-gradient()")}}
+- {{cssxref("repeating-conic-gradient()")}}
+- {{cssxref("repeating-linear-gradient()")}}
+- {{cssxref("repeating-radial-gradient()")}}
 
 ## Syntax
 
 The `<color-interpolation-method>` specifies whether interpolation should use a rectangular color space or a polar color space with an optional hue interpolation method:
 
 ```plain
-in <rectangular-color-space>
-// or
-in <polar-color-space>[ <hue-interpolation method>]
+/* <rectangular-color-space> */
+in srgb
+in oklab
+
+/* <polar-color-space> */
+in hsl
+in oklch
+
+/* <polar-color-space> with <hue-interpolation-method> */
+in lch shorter hue
+in oklch increasing hue
 ```
 
 ### Values
@@ -37,6 +58,20 @@ in <polar-color-space>[ <hue-interpolation method>]
 
 - `<custom-color-space>`
   - : A [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident#using_with_color-profile) referring to a custom [@color profile](/en-US/docs/Web/CSS/Reference/At-rules/@color-profile).
+
+## Description
+
+The `<color-interpolation-method>` data type defines the [color space](/en-US/docs/Glossary/Color_space) used for interpolation between {{CSSXref("&lt;color&gt;")}} values, specifying whether interpolation should use a rectangular color space or a polar color space with an optional {{cssxref("hue-interpolation-method")}}:
+
+```plain
+in <rectangular-color-space>
+// or
+in <polar-color-space>[ <hue-interpolation-method>]
+```
+
+It can be used to override the default interpolation color space for color-related functional notations such as {{CSSXref("color_value/color-mix", "color-mix()")}} and {{CSSXref("gradient/linear-gradient", "linear-gradient()")}}.
+
+When interpolating `<color>` values, the interpolation color space defaults to `Oklab`.
 
 ## Formal syntax
 
@@ -101,10 +136,12 @@ The second and third boxes use OkLCh and additionally provide a {{cssxref("hue-i
 We used the same two colors in each gradient to demonstrate the different effects of {{cssxref("hue-interpolation-method")}} and {{glossary("color space")}} on color interpolation in gradients.
 
 ```css hidden
+body {
+  display: flex;
+}
 .gradient {
   height: 200px;
-  width: 200px;
-  display: inline-block;
+  width: 100%;
   font-family: monospace;
   margin: 10px;
   font-size: 16px;
