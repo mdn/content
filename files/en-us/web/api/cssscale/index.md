@@ -35,8 +35,8 @@ _Also inherits methods from its parent interface, {{domxref("CSSTransformCompone
 ## Description
 
 A `CSSScale` can represent any of the scaling functions: {{cssxref("transform-function/scale", "scale()")}}, {{cssxref("transform-function/scaleX", "scaleX()")}}, {{cssxref("transform-function/scaleY", "scaleY()")}}, {{cssxref("transform-function/scaleZ", "scaleZ()")}}, or {{cssxref("transform-function/scale3d", "scale3d()")}}.
-A {{domxref("CSSTransformValue")}} represents the whole value of the `transform` property.
-It contains a `CSSScale` for each scaling function in the value, along with objects for any other {{cssxref("transform-function")}}s.
+These are some of the {{cssxref("transform-function")}}s that can make up the value of the `transform` property.
+A {{domxref("CSSTransformValue")}} represents the whole value, and contains a `CSSScale` for each scaling function, along with objects for any other transform functions.
 
 A scale resizes an element by a scale factor along each axis.
 The `x`, `y`, and `z` properties are the scale factors along the x-axis, y-axis, and z-axis.
