@@ -71,7 +71,17 @@ p {
   text-autospace-size: 0.25;
 }
 ```
-
+```css hidden
+@supports not (text-autospace-size: 0.25) {
+  body::before {
+    content: "Your browser does not support the text-autospace-size property.";
+    font-family: sans-serif;
+    background-color: wheat;
+    padding: 1rem 0;
+    text-align: center;
+  }
+}
+\```
 {{EmbedLiveSample("increasing_the_spacing", "100%", 120)}}
 
 In browsers that support `text-autospace-size`, the space between "HTML" and the Chinese characters is twice as wide in the second paragraph.
