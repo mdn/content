@@ -454,11 +454,11 @@ You can use the following shorthands to set two of the previously discussed shor
 
 There are three shorthand properties that inset all endpoints for column segments, row segments, or both. These properties offer more control than the end, start, cap, or junction shorthands, letting you set four endpoint types to different values.
 
-The {{cssxref("row-rule-inset")}} shorthand property specifies the `row-rule-inset-cap-start`, `row-rule-inset-cap-end`, `row-rule-inset-junction-start`, and `row-rule-inset-junction-end` properties as one to four `<inset-value>` values. If you set the cap insets to different values from the junction insets, separate them with a slash (`/`).
+- {{cssxref("row-rule-inset")}}: Specifies the `row-rule-inset-cap-start`, `row-rule-inset-cap-end`, `row-rule-inset-junction-start`, and `row-rule-inset-junction-end` properties as one to four `<inset-value>` values. If you set the cap insets to different values from the junction insets, separate them with a slash (`/`).
 
-The {{cssxref("column-rule-inset")}} shorthand specifies the `column-rule-inset-cap-start`, `column-rule-inset-cap-end`, `column-rule-inset-junction-start`, and `column-rule-inset-junction-end` properties as one to four `<inset-value>` values. If you set the cap insets to different values from the junction insets, separate them with a slash (`/`).
+- {{cssxref("column-rule-inset")}}: Specifies the `column-rule-inset-cap-start`, `column-rule-inset-cap-end`, `column-rule-inset-junction-start`, and `column-rule-inset-junction-end` properties as one to four `<inset-value>` values. If you set the cap insets to different values from the junction insets, separate them with a slash (`/`).
 
-The final inset property is {{cssxref("rule-inset")}}, which sets the `column-rule-inset` and `row-rule-inset` to the same values. Specifies the `rule-inset-cap-start`, `rule-inset-cap-end`, `rule-inset-junction-start`, and `rule-inset-junction-end` properties as one to four `<inset-value>` values. If you set the cap insets to different values from the junction insets, separate them with a slash (`/`).
+- {{cssxref("rule-inset")}}: Sets the `column-rule-inset` and `row-rule-inset` properties to the same values. Specifies the `rule-inset-cap-start`, `rule-inset-cap-end`, `rule-inset-junction-start`, and `rule-inset-junction-end` properties as one to four `<inset-value>` values. If you set the cap insets to different values from the junction insets, separate them with a slash (`/`).
 
 Considering there are 23 values, it is surprising that there is no shorthand to set eight different values.
 
