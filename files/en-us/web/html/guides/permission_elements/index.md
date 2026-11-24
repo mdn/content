@@ -66,7 +66,7 @@ In the case of an `<install>` element, you might include a message to point to i
 One key idea behind the design of permission elements is that they should reflect a user's conscious choice to use the related feature and prevent bad actors from tricking users into activating them, for example, via [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking). Because of this, the browser keeps a record of so-called **blocker** reasons for each rendered element.
 
 - When a permission element has no active blocker, it is **valid** and will function as expected.
-- When a permission element has an active blocker, it is **invalid** and therefore prevented from functioning, either temporarily or permanently, depending on the reason.
+When a permission element has an active blocker, it is **invalid** and therefore prevented from functioning.
 
 You can query whether a permission element is valid or invalid by checking its DOM objects's `isValid` property. If it is invalid, you find its active blocker in the DOM object's `invalidReason` property; see [invalid reasons](#invalid_reasons).
 
