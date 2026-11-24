@@ -198,7 +198,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 
 - {{jsxref("this")}}
 - [Literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
-- {{jsxref("Array", "[]")}}
+- {{jsxref("Operators/Array_initializer", "[]")}}
 - {{jsxref("Operators/Object_initializer", "{}")}}
 - {{jsxref("Operators/function", "function")}}
 - {{jsxref("Operators/class", "class")}}
@@ -213,6 +213,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 
 - {{jsxref("Operators/Property_accessors", "Property accessors", "", 1)}}
 - {{jsxref("Operators/Optional_chaining", "?.")}}
+- [Function call](/en-US/docs/Web/JavaScript/Reference/Operators/Function_call)
 - {{jsxref("new")}}
 - {{jsxref("Operators/new.target", "new.target")}}
 - {{jsxref("Operators/import.meta", "import.meta")}}

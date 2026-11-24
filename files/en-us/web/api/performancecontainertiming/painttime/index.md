@@ -3,10 +3,12 @@ title: "PerformanceContainerTiming: paintTime property"
 short-title: paintTime
 slug: Web/API/PerformanceContainerTiming/paintTime
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceContainerTiming.paintTime
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`paintTime`** read-only property of the {{domxref("PerformanceContainerTiming")}} interface returns a timestamp that represents when the rendering phase ended and the paint phase started.
 

@@ -426,7 +426,7 @@ btn.addEventListener("click", () => {
 }
 ```
 
-{{EmbedLiveSample("Cubic-Bezier_examples", 600, 250)}}
+{{EmbedLiveSample("cubic-bézier_examples", 600, 250)}}
 
 The following image shows graphs of all the cubic bézier function values used in this example. The input progress (time) ranges from 0 to 1 and the output progress ranges from 0 to 1.
 

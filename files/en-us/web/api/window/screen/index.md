@@ -8,10 +8,7 @@ browser-compat: api.Window.screen
 
 {{APIRef("CSSOM")}}
 
-The {{DOMxRef("Window")}} property **`screen`** returns a
-reference to the screen object associated with the window. The `screen`
-object, implementing the {{DOMxRef("Screen")}} interface, is a special object for
-inspecting properties of the screen on which the current window is being rendered.
+The **`screen`** read-only property of the {{domxref("Window")}} interface returns a reference to the screen object associated with the window. The `screen` object, implementing the {{DOMxRef("Screen")}} interface, is a special object for inspecting properties of the screen on which the current window is being rendered.
 
 ## Value
 

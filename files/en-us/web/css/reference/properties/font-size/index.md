@@ -209,6 +209,15 @@ See the W3C Editor's Draft for a more detailed description of [font-relative len
 
 ### Setting font sizes
 
+#### HTML
+
+```html
+<h1 class="small">Small H1</h1>
+<h1 class="larger">Larger H1</h1>
+<h1 class="point">24 point H1</h1>
+<h1 class="percent">200% H1</h1>
+```
+
 #### CSS
 
 ```css
@@ -224,15 +233,6 @@ See the W3C Editor's Draft for a more detailed description of [font-relative len
 .percent {
   font-size: 200%;
 }
-```
-
-#### HTML
-
-```html
-<h1 class="small">Small H1</h1>
-<h1 class="larger">Larger H1</h1>
-<h1 class="point">24 point H1</h1>
-<h1 class="percent">200% H1</h1>
 ```
 
 #### Result

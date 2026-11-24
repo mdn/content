@@ -96,7 +96,7 @@ q::after {
 
 #### Result
 
-{{EmbedLiveSample('Adding_quotation_marks', '500', '50')}}
+{{EmbedLiveSample('quotation_marks', '500', '50')}}
 
 ### Decorative example
 
@@ -230,7 +230,7 @@ li[aria-current="step"]::before {
 
 #### Result
 
-{{EmbedLiveSample('Special_characters', 400, 200)}}
+{{EmbedLiveSample('unicode_escape_sequences', 400, 200)}}
 
 ### `::before::marker` nested pseudo-elements
 

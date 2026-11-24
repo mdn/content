@@ -406,7 +406,7 @@ reader.closed
 The logging from the underlying push source (left) and consumer (right) are shown below.
 Not the period in the middle where data is enqueued rather than transferred as a zero-copy operation.
 
-{{EmbedLiveSample("Underlying push source with default reader","100%","500px")}}
+{{EmbedLiveSample("underlying_push_source_with_byte_reader","100%","500px")}}
 
 ### Underlying pull source with byte reader
 
@@ -675,7 +675,7 @@ Of particular note are that the:
 - the buffer passed to the reader is large enough to encompass the whole "file".
   The underlying data source supplies the data in random-sized chunks.
 
-{{EmbedLiveSample("Underlying pull source","100%","500px")}}
+{{EmbedLiveSample("underlying_pull_source_with_byte_reader","100%","500px")}}
 
 ### Underlying pull source with default reader
 

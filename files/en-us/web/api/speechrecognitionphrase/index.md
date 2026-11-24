@@ -2,20 +2,18 @@
 title: SpeechRecognitionPhrase
 slug: Web/API/SpeechRecognitionPhrase
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.SpeechRecognitionPhrase
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`SpeechRecognitionPhrase`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a phrase that can be passed to the speech recognition engine for [contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#contextual_biasing_in_speech_recognition).
 
 ## Instance properties
 
-- {{domxref("SpeechRecognitionPhrase.boost")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("SpeechRecognitionPhrase.boost")}} {{ReadOnlyInline}}
   - : A floating point number representing the amount of boost you want to apply to the corresponding `phrase`.
-- {{domxref("SpeechRecognitionPhrase.phrase")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("SpeechRecognitionPhrase.phrase")}} {{ReadOnlyInline}}
   - : A string containing the word or phrase you want boosted in the recognition engine's bias.
 
 ## Examples

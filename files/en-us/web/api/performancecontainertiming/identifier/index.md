@@ -3,10 +3,12 @@ title: "PerformanceContainerTiming: identifier property"
 short-title: identifier
 slug: Web/API/PerformanceContainerTiming/identifier
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceContainerTiming.identifier
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`identifier`** read-only property of the {{domxref("PerformanceContainerTiming")}} interface returns the value of the [`containertiming`](/en-US/docs/Web/HTML/Reference/Global_attributes/containertiming) attribute on the container's root element.
 

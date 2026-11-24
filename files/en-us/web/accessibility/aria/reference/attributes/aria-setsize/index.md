@@ -29,22 +29,6 @@ In a tree view, if the complete set of available nodes is not present in the DOM
 
 In a menu, `aria-setsize` is set on all [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role), or [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role) roles, with the value being the total number of items in the menu, excluding any separators.
 
-## Example
-
-The following example shows items 5 through 8 in a set of 16.
-
-```html
-<h2 id="label_fruit">Available Fruit</h2>
-<ul role="listbox" aria-labelledby="label_fruit">
-  <li role="option" aria-setsize="16" aria-posinset="5">apples</li>
-  <li role="option" aria-setsize="16" aria-posinset="6">bananas</li>
-  <li role="option" aria-setsize="16" aria-posinset="7">cantaloupes</li>
-  <li role="option" aria-setsize="16" aria-posinset="8">dates</li>
-</ul>
-```
-
-To orient the user, assistive technologies would list the bananas above as "item 6 out of 16."
-
 ## Values
 
 - `<integer>`
@@ -78,6 +62,22 @@ Inherits into roles:
 - [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
 - [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
 - [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role)
+
+## Example
+
+The following example shows items 5 through 8 in a set of 16.
+
+```html
+<h2 id="label_fruit">Available Fruit</h2>
+<ul role="listbox" aria-labelledby="label_fruit">
+  <li role="option" aria-setsize="16" aria-posinset="5">apples</li>
+  <li role="option" aria-setsize="16" aria-posinset="6">bananas</li>
+  <li role="option" aria-setsize="16" aria-posinset="7">cantaloupes</li>
+  <li role="option" aria-setsize="16" aria-posinset="8">dates</li>
+</ul>
+```
+
+To orient the user, assistive technologies would list the bananas above as "item 6 out of 16."
 
 ## Specifications
 

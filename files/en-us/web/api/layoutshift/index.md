@@ -11,16 +11,6 @@ browser-compat: api.LayoutShift
 
 The `LayoutShift` interface of the [Performance API](/en-US/docs/Web/API/Performance_API) provides insights into the layout stability of web pages based on movements of the elements on the page.
 
-## Description
-
-A layout shift happens when any element that is visible in the viewport changes its position between two frames. These elements are described as being **unstable**, indicating a lack of visual stability.
-
-The Layout Instability API provides a way to measure and report on these layout shifts. All tools for debugging layout shifts, including those in the browser's developer tools, use this API. The API can also be used to observe and debug layout shifts by logging the information to the console, to send the data to a server endpoint, or to web page analytics.
-
-Performance tools can use this API to calculate a {{glossary("CLS")}} score.
-
-{{InheritanceDiagram}}
-
 ## Instance properties
 
 This interface extends the following {{domxref("PerformanceEntry")}} properties by qualifying them as follows:
@@ -30,7 +20,7 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 - {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Always returns `"layout-shift"`.
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Always returns `"layout-shift"`.
+  - : Always returns an empty string.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time when the layout shift started.
 
@@ -49,6 +39,16 @@ This interface also supports the following properties:
 
 - {{domxref("LayoutShift.toJSON()")}} {{Experimental_Inline}}
   - : Returns a JSON-serializable plain object representing the `LayoutShift` object. Automatically called by {{jsxref("JSON.stringify()")}}.
+
+## Description
+
+A layout shift happens when any element that is visible in the viewport changes its position between two frames. These elements are described as being **unstable**, indicating a lack of visual stability.
+
+The Layout Instability API provides a way to measure and report on these layout shifts. All tools for debugging layout shifts, including those in the browser's developer tools, use this API. The API can also be used to observe and debug layout shifts by logging the information to the console, to send the data to a server endpoint, or to web page analytics.
+
+Performance tools can use this API to calculate a {{glossary("CLS")}} score.
+
+{{InheritanceDiagram}}
 
 ## Examples
 

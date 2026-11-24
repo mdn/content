@@ -45,12 +45,12 @@ If `mapper` throws an exception or its return value cannot be converted to an ob
 
 This example displays mouse coordinates while dragging from a `<div>` element. Each mouse press starts an inner stream of mouse movements that ends when the mouse button is released. `flatMap()` forwards those movements and waits for the current inner stream to complete before processing another mouse press.
 
-```html hidden live-sample___basic-flatMap
+```html hidden live-sample___basic-flatmap
 <div>Press here and drag.</div>
 <p>Waiting for a drag</p>
 ```
 
-```css hidden live-sample___basic-flatMap
+```css hidden live-sample___basic-flatmap
 div {
   height: 120px;
   background-color: lavender;
@@ -58,7 +58,7 @@ div {
 }
 ```
 
-```js live-sample___basic-flatMap
+```js live-sample___basic-flatmap
 const target = document.querySelector("div");
 const output = document.querySelector("p");
 

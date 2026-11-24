@@ -119,7 +119,7 @@ The logging code itself isn't part of the demonstration, so it's hidden here.
 
 #### HTML
 
-First we define an {{htmlelement("div")}} with id `demoBox` to which we'll add styles.
+First we define a {{htmlelement("div")}} with id `demoBox` to which we'll add styles.
 
 ```html
 <div id="demoBox">Text</div>

@@ -35,13 +35,6 @@ a time before its timeline's earliest time.
 The length of the media in seconds can be determined using the
 {{domxref("HTMLMediaElement.duration", "duration")}} property.
 
-## Examples
-
-```js
-const video = document.createElement("video");
-console.log(video.currentTime);
-```
-
 ## Usage notes
 
 ### Time precision
@@ -61,6 +54,13 @@ video.currentTime;
 // 23.404
 // 23.452
 // …
+```
+
+## Examples
+
+```js
+const video = document.createElement("video");
+console.log(video.currentTime);
 ```
 
 ## Specifications

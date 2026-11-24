@@ -89,7 +89,7 @@ button.addEventListener("click", (event) => {
 
 #### Result
 
-{{EmbedLiveSample("Read the overridden colors", "100", "125")}}
+{{EmbedLiveSample("read_the_overridden_color", "100", "125")}}
 
 ## Specifications
 

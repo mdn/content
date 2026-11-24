@@ -153,7 +153,7 @@ We initially position the anchor-positioned element above its anchor, and then g
 
 #### Result
 
-{{ EmbedLiveSample("Basic `position-try-order` usage", "100%", "310") }}
+{{ EmbedLiveSample("basic_usage", "100%", "310") }}
 
 Initially, the anchor-positioned element is positioned above its anchor, which is the default position we've given it.
 

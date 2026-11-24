@@ -71,7 +71,7 @@ _No change._
 
 - The {{domxref("Request.Request", "Request()")}} constructor can now accept a referrer option in its init object ([Firefox bug 1251448](https://bugzil.la/1251448)).
 - The {{domxref("Request.referrerPolicy")}} property is now supported ([Firefox bug 1251872](https://bugzil.la/1251872)).
-- [Service workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API) have been disabled in the [Firefox 45 Extended Support Release](https://www.firefox.com/en-US/browsers/enterprise/) (ESR) ([Firefox bug 1232029](https://bugzil.la/1232029)).
+- [Service workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API) have been disabled in the [Firefox 45 Extended Support Release](https://www.firefox.com/en-US/enterprise/) (ESR) ([Firefox bug 1232029](https://bugzil.la/1232029)).
 
 #### WebRTC
 

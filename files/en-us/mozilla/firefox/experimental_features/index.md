@@ -109,7 +109,7 @@ Initial support included [`prefetch`](/en-US/docs/Web/HTML/Reference/Elements/sc
 
 #### Moderate eagerness
 
-Firefox 158 added support for [`moderate`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#moderate) eagerness: a matching prefetch starts once the user hovers over a link for a short time (200 milliseconds by default). ([Firefox bug 2061013](https://bugzil.la/2061013)).
+With [`moderate`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#moderate) eagerness, a matching prefetch starts once the user hovers over a link for a short time (200 milliseconds by default). ([Firefox bug 2061013](https://bugzil.la/2061013)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -119,6 +119,71 @@ Firefox 158 added support for [`moderate`](/en-US/docs/Web/HTML/Reference/Elemen
 | Release           | 158           | No                  |
 
 - `dom.speculation_rules.enabled`
+  - : Set to `true` to enable.
+
+#### Speculation-Rules header
+
+The {{httpheader("Speculation-Rules")}} HTTP response header lists the URLs of external files containing speculation rules, as an alternative to an inline `<script type="speculationrules">` element. The header applies to top-level documents only, and each file must be served with the `application/speculationrules+json` MIME type. ([Firefox bug 2020709](https://bugzil.la/2020709)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 160           | Yes                 |
+| Developer Edition | 160           | No                  |
+| Beta              | 160           | No                  |
+| Release           | 160           | No                  |
+
+- `dom.speculation_rules.enabled`
+  - : Set to `true` to enable.
+
+### Cross-document view transitions
+
+[Cross-document view transitions](/en-US/docs/Web/API/View_Transition_API/Using#basic_mpa_view_transition) can be used to animate the transition between same-origin page navigations in a multi-page application.
+Both pages must opt in to the transition using the CSS {{cssxref("@view-transition")}} at-rule.
+To customize the transition with JavaScript, use the {{domxref("Window.pageswap_event", "pageswap")}} event ({{domxref("PageSwapEvent")}}), which fires on the old page just before it is replaced. You can also use the {{domxref("Window.pagereveal_event", "pagereveal")}} event ({{domxref("PageRevealEvent")}}), which fires on the new page when it is first shown.
+The {{domxref("CSSViewTransitionRule")}} interface represents an `@view-transition` rule in the CSS Object Model.
+Note that [render blocking](#render_blocking) may be used to ensure that important parts of the new page are loaded before the transition starts.
+([Firefox bug 2084340](https://bugzil.la/2084340)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 160           | No                  |
+| Beta              | 160           | No                  |
+| Release           | 160           | No                  |
+
+- `dom.viewTransitions.cross-document.enabled`
+  - : Set to `true` to enable.
+
+### Render blocking
+
+The `blocking="render"` attribute of the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} elements is supported.
+This lets you block rendering of the page until the marked stylesheet has loaded or script has run, so the page doesn't first appear unstyled or incomplete.
+You can also use [`<link rel="expect">`](/en-US/docs/Web/HTML/Reference/Attributes/rel#expect) with `blocking="render"` to block rendering until a particular element in the document has been parsed.
+The {{domxref("PerformanceResourceTiming.renderBlockingStatus")}} property indicates whether a resource blocked rendering.
+([Firefox bug 1751383](https://bugzil.la/1751383), [Firefox bug 2053279](https://bugzil.la/2053279)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 160           | No                  |
+| Beta              | 160           | No                  |
+| Release           | 160           | No                  |
+
+- `dom.element.blocking.enabled`
+  - : Set to `true` to enable.
+
+### Lazy loading for video and audio
+
+The `loading` attribute of the {{HTMLElement("video", "", "#loading")}} and {{HTMLElement("audio", "", "#loading")}} elements, and the {{domxref("HTMLMediaElement.loading")}} property that reflects it, are now supported. With `loading="lazy"`, the browser defers loading the media, loading the video's poster image, and starting `autoplay` playback until the element is near the viewport. ([Firefox bug 2005072](https://bugzil.la/2005072)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 160           | No                  |
+| Developer Edition | 160           | No                  |
+| Beta              | 160           | No                  |
+| Release           | 160           | No                  |
+
+- `media.lazy_loading.enabled`
   - : Set to `true` to enable.
 
 ## CSS
@@ -396,20 +461,6 @@ The `named-feature()` function in the {{cssxref("@supports")}} at-rule lets you 
 - `layout.css.anchor-positioning.follows-transforms.enabled`
   - : Set to `true` to enable.
 
-### `random()` CSS function
-
-The {{cssxref("random")}} CSS function generates a random value within a specified range, optionally limiting the possible values to step size intervals between those limits. An optional `<random-key>` parameter controls which `random()` functions share a random value, for example across elements or properties. ([Firefox bug 2071165](https://bugzil.la/2071165)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 158           | Yes                 |
-| Developer Edition | 158           | No                  |
-| Beta              | 158           | No                  |
-| Release           | 158           | No                  |
-
-- `layout.css.random.enabled`
-  - : Set to `true` to enable.
-
 ### `corner-shape` properties
 
 The {{cssxref("corner-shape")}} shorthand property and its constituent longhand properties are now supported in Nightly. These properties let you customize corner shapes using one of the {{cssxref("corner-shape-value")}} keyword values or the {{cssxref("superellipse")}} function.
@@ -423,6 +474,74 @@ The {{cssxref("corner-shape")}} shorthand property and its constituent longhand 
 | Release           | 157           | No                  |
 
 - `layout.css.corner-shape.enabled`
+  - : Set to `true` to enable.
+
+### `margin-trim` property
+
+The {{cssxref("margin-trim")}} property is now supported in Nightly for block containers. It removes the block-axis margins of child elements at the container's start edge, end edge, or both, while keeping the margins between siblings.
+([Firefox bug 2051240](https://bugzil.la/2051240)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 161           | No                  |
+| Beta              | 161           | No                  |
+| Release           | 161           | No                  |
+
+- `layout.css.margin-trim.enabled`
+  - : Set to `true` to enable.
+
+### `match-parent` value for `quotes`
+
+The {{cssxref("quotes", "match-parent", "#match-parent")}} value of the {{cssxref("quotes")}} CSS property is now supported in Nightly.
+
+This value makes an element use the same set of quotation-mark pairs as its parent element.
+If the parent's `quotes` value is an explicit list of pairs, the element uses quotation marks from that list.
+If it is `auto`, the element uses the set for the parent element's language.
+The specific pair of opening and closing quotation marks used depends on the nesting level of the quote.
+
+Firefox's default styles for nested {{htmlelement("q")}} elements use this value.
+As a result, a nested quote automatically uses the same quotation style as the outer quote, even when the nested quote is in a different language.
+([Firefox bug 1752382](https://bugzil.la/1752382)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 161           | No                  |
+| Beta              | 161           | No                  |
+| Release           | 161           | No                  |
+
+- `layout.css.quotes.match-parent.enabled`
+  - : Set to `true` to enable.
+
+### `text-autospace-size` property
+
+The {{cssxref("text-autospace-size")}} property is now supported in Nightly. It sets the amount of space that {{cssxref("text-autospace")}} adds between Chinese/Japanese/Korean (CJK) and non-CJK characters.
+([Firefox bug 2086765](https://bugzil.la/2086765)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 161           | No                  |
+| Beta              | 161           | No                  |
+| Release           | 161           | No                  |
+
+- `layout.css.text-autospace-size.enabled`
+  - : Set to `true` to enable.
+
+### `prefers-color-scheme` reflects `<meta name="color-scheme">`
+
+The {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} media feature reflects the color scheme declared by a [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/color-scheme) element, when the element specifies a single scheme. This allows better selection of images and videos by color scheme. It also makes theme switchers easier to implement.
+([Firefox bug 2085572](https://bugzil.la/2085572)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 161           | No                  |
+| Beta              | 161           | No                  |
+| Release           | 161           | No                  |
+
+- `layout.css.prefers-color-scheme.meta-tag.enabled`
   - : Set to `true` to enable.
 
 ## SVG
@@ -573,52 +692,20 @@ Note that Firefox does not support providing {{domxref("CrashReportContext")}} i
 - `dom.reporting.crash.enabled`
   - : Set to `true` to enable (enabled by default in Nightly).
 
-### CSS Typed Object Model Level 1
+### CSS numeric factory functions exposed in workers and worklets
 
-The [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) is implemented in Nightly.
-This simplifies CSS property manipulation by exposing CSS values as typed JavaScript objects rather than strings.
-([Firefox bug 1278697](https://bugzil.la/1278697)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 154           | Yes                 |
-| Developer Edition | 149           | No                  |
-| Beta              | 149           | No                  |
-| Release           | 149           | No                  |
-
-- `layout.css.typed-om.enabled`
-  - : Set to `true` to enable.
-
-#### CSS numeric factory functions exposed in workers and worklets
-
-The [numeric factory functions](/en-US/docs/Web/API/CSS/factory_functions_static) of the {{domxref("CSS")}} namespace, such as `CSS.px()`, are now exposed in workers and paint worklets, not only on `Window`. They're part of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), so outside Nightly they also need the `layout.css.typed-om.enabled` preference set to `true`. ([Firefox bug 2079188](https://bugzil.la/2079188)).
+The [numeric factory functions](/en-US/docs/Web/API/CSS/factory_functions_static) of the {{domxref("CSS")}} namespace, such as `CSS.px()`, are now exposed in workers and paint worklets, not only on `Window`.
+([Firefox bug 2079188](https://bugzil.la/2079188), [Firefox bug 2079583](https://bugzil.la/2079583)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 159           | No                  |
+| Nightly           | 161           | Yes                 |
 | Developer Edition | 159           | No                  |
 | Beta              | 159           | No                  |
 | Release           | 159           | No                  |
 
 - `layout.css.namespace.exposed-in-workers-and-worklets`
-  - : Set to `true` to enable.
-- `layout.css.typed-om.enabled`
   - : Set to `true` to enable (enabled by default in Nightly).
-
-### On-device speech recognition
-
-[On-device speech recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) is now supported in Nightly, on desktop only. This allows you to perform speech recognition via the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) directly in the browser, rather than relying on a cloud service.
-([Firefox bug 2069803](https://bugzil.la/2069803)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 158           | Yes                 |
-| Developer Edition | 158           | No                  |
-| Beta              | 158           | No                  |
-| Release           | 158           | No                  |
-
-- `media.webspeech.recognition.enable`
-  - : Set to `true` to enable.
 
 ### Streaming request bodies
 
@@ -636,6 +723,20 @@ You can now set a {{domxref("ReadableStream")}} as a request body (for example, 
   - : Set to `true` to enable.
 
 ### Graphics: Canvas, WebGL, and WebGPU
+
+#### Canvas 2D color space
+
+The [`colorSpace`](/en-US/docs/Web/API/HTMLCanvasElement/getContext#colorspace) option of {{domxref("HTMLCanvasElement.getContext()")}} and {{domxref("OffscreenCanvas.getContext()")}} is supported for `2d` contexts. {{domxref("CanvasRenderingContext2D.getContextAttributes()")}} returns the selected color space. Image data also has a color space: the {{domxref("ImageData.colorSpace")}} property returns it. The `colorSpace` setting of the {{domxref("ImageData.ImageData", "ImageData()")}} constructor and the {{domxref("CanvasRenderingContext2D.createImageData()", "createImageData()")}} and {{domxref("CanvasRenderingContext2D.getImageData()", "getImageData()")}} methods sets it. The supported values are `"srgb"` and `"display-p3"`. Pixel data isn't converted between color spaces yet. ([Firefox bug 1841326](https://bugzil.la/1841326)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 160           | No                  |
+| Developer Edition | 160           | No                  |
+| Beta              | 160           | No                  |
+| Release           | 160           | No                  |
+
+- `gfx.canvas.colorspace.enabled`
+  - : Set to `true` to enable.
 
 #### WebGL: Draft extensions
 
@@ -859,21 +960,6 @@ The `ML-KEM-512`, `ML-KEM-768`, and `ML-KEM-1024` algorithm names are supported,
 | Release           | 157           | No                  |
 
 - `dom.webcrypto.encapsulation.enabled`
-  - : Set to `true` to enable.
-
-### Web custom formats in the Async Clipboard API
-
-The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) supports custom clipboard formats, allowing web apps to write and read custom MIME types prefixed with `"web "` using the {{domxref("Clipboard.write()")}} and {{domxref("Clipboard.read()")}} methods, respectively.
-This is supported on desktop from Firefox 154 and on Android from Firefox 156 ([Firefox bug 1956304](https://bugzil.la/1956304) and [Firefox bug 2048545](https://bugzil.la/2048545)).
-
-| Release channel   | Version changed | Enabled by default? |
-| ----------------- | --------------- | ------------------- |
-| Nightly           | 154             | Yes (desktop only)  |
-| Developer Edition | 154             | No                  |
-| Beta              | 154             | No                  |
-| Release           | 154             | No                  |
-
-- `dom.clipboard.customFormatSupport.enabled`
   - : Set to `true` to enable.
 
 ## Security and privacy

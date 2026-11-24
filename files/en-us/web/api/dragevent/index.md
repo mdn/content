@@ -13,17 +13,17 @@ This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref(
 
 {{InheritanceDiagram}}
 
-## Instance properties
-
-- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
-  - : The data that is transferred during a drag and drop interaction.
-
 ## Constructors
 
 Although this interface has a constructor, it is not possible to create a useful DataTransfer object from script, since {{domxref("DataTransfer")}} objects have a processing and security model that is coordinated by the browser during drag-and-drops.
 
 - {{domxref("DragEvent.DragEvent", "DragEvent()")}}
   - : Creates a synthetic and untrusted DragEvent.
+
+## Instance properties
+
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+  - : The data that is transferred during a drag and drop interaction.
 
 ## Event types
 

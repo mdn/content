@@ -8,15 +8,12 @@ browser-compat: api.HTMLInputElement.labels
 
 {{APIRef("DOM")}}
 
-The **`HTMLInputElement.labels`** read-only property returns a
-{{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with the
-{{HTMLElement("input")}} element, if the element is not hidden. If the element has the
-type `hidden`, the property returns `null`.
+The **`HTMLInputElement.labels`** read-only property returns a {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with the {{HTMLElement("input")}} element.
+If the element has the type `hidden`, the property returns `null`.
 
 ## Value
 
-A {{domxref("NodeList")}} containing the `<label>` elements associated
-with the `<input>` element.
+A {{domxref("NodeList")}}, or `null` if the element's type is `hidden`.
 
 ## Examples
 

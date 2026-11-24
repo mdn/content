@@ -70,16 +70,20 @@ Integrity-Policy: blocked-destinations=(script), endpoints=(integrity-endpoint b
 The [report payload](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) might look like this.
 
 ```json
-{
-  "type": "integrity-violation",
-  "url": "https://example.com",
-  "body": {
-    "documentURL": "https://example.com",
-    "blockedURL": "https://example.com/main.js",
-    "destination": "script",
-    "reportOnly": false
+[
+  {
+    "age": 176279,
+    "type": "integrity-violation",
+    "url": "https://example.com",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "body": {
+      "documentURL": "https://example.com",
+      "blockedURL": "https://example.com/main.js",
+      "destination": "script",
+      "reportOnly": false
+    }
   }
-}
+]
 ```
 
 ## Specifications

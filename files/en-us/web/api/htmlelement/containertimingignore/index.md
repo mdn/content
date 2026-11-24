@@ -3,10 +3,12 @@ title: "HTMLElement: containerTimingIgnore property"
 short-title: containerTimingIgnore
 slug: Web/API/HTMLElement/containerTimingIgnore
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.HTMLElement.containerTimingIgnore
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`containerTimingIgnore`** property of the {{domxref("HTMLElement")}} interface excludes the element and its descendants from contributing to the timing of any ancestor container root in the [Container Timing API](/en-US/docs/Web/API/PerformanceContainerTiming).
 

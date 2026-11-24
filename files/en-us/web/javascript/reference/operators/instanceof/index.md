@@ -34,9 +34,13 @@ object instanceof constructor
 ### Parameters
 
 - `object`
-  - : The object to test.
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 9 (relational operators) or above whose value is tested.
 - `constructor`
-  - : Constructor to test against.
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 10 (bitwise shift) or above that evaluates to the constructor to test against or an object with a [`[Symbol.hasInstance]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) method.
+
+### Return value
+
+A boolean indicating whether `constructor` considers `object` to be an instance. For an ordinary constructor with the default behavior, this checks whether `constructor.prototype` appears in the prototype chain of `object`.
 
 ### Exceptions
 

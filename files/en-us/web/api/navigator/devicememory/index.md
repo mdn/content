@@ -3,10 +3,12 @@ title: "Navigator: deviceMemory property"
 short-title: deviceMemory
 slug: Web/API/Navigator/deviceMemory
 page-type: web-api-instance-property
+status:
+  - non-standard
 browser-compat: api.Navigator.deviceMemory
 ---
 
-{{APIRef("Device Memory API")}}{{securecontext_header}}
+{{APIRef("Device Memory API")}}{{securecontext_header}}{{non-standard_header}}
 
 The **`deviceMemory`** read-only property of the {{domxref("Navigator")}} interface returns the approximate amount of device memory in gigabytes.
 

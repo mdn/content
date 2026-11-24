@@ -110,7 +110,7 @@ In this example, the {{cssxref("offset-path")}} property is used to define the p
 
 #### Result
 
-{{EmbedLiveSample('Setting_initial_offset_position_for_an_offset-path', '100%', 200)}}
+{{EmbedLiveSample('setting_initial_offset-position_for_an_offset-path', '100%', 200)}}
 
 ### Comparing various offset starting positions
 

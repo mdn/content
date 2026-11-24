@@ -53,14 +53,6 @@ This property is specified as one or two keyword values from the following list.
   - : Establishes a query container for container size queries in both the [inline and block](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#block_and_inline_dimensions) dimensions.
     Applies [style](/en-US/docs/Web/CSS/Reference/Properties/contain#style) and [size](/en-US/docs/Web/CSS/Reference/Properties/contain#size) containment to the element. Size containment is applied to the element in both the inline and block directions. The size of the element can be computed in isolation, ignoring the child elements.
 
-## Formal definition
-
-{{CSSInfo}}
-
-## Formal syntax
-
-{{CSSSyntax}}
-
 ## Description
 
 Container queries allow you to selectively apply styles inside a container based on conditional queries performed on the container. The {{cssxref("@container")}} at-rule is used to specify the tests performed on a container, and the rules that will apply to the container's contents if the query returns `true`.
@@ -109,6 +101,14 @@ For example, you might have an anchor-positioned tooltip element that is positio
   container-type: anchored;
 }
 ```
+
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Examples
 

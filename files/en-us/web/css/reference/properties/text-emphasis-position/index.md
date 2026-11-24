@@ -269,7 +269,7 @@ position.addEventListener("change", updateClass);
 
 Use the "Emphasis position" dropdown to choose the location of the emphasis marks. The `preferred` option in the dropdown uses the preferred positions, as explained in the [Description](#description) section.
 
-{{EmbedLiveSample("Emphasis_mark_positions", 450, 250)}}
+{{EmbedLiveSample("adding_emphasis_mark_positions", 450, 250)}}
 
 ### Preferring ruby over emphasis marks
 

@@ -124,18 +124,18 @@ text-emphasis: unset;
 
 This example draws a heading with triangles used to emphasize each character.
 
+#### HTML
+
+```html
+<h2>This is important!</h2>
+```
+
 #### CSS
 
 ```css
 h2 {
   text-emphasis: triangle #dd5555;
 }
-```
-
-#### HTML
-
-```html
-<h2>This is important!</h2>
 ```
 
 #### Result

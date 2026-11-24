@@ -7,7 +7,7 @@ browser-compat: css.types.filter-function.contrast
 sidebar: cssref
 ---
 
-The **`contrast()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) adjusts the contrast of the input image. Its result is a {{cssxref("filter-function")}}.
+The **`contrast()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) adjusts the contrast of the input image. It is used as a value for the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
 
 {{InteractiveExample("CSS Demo: contrast()")}}
 
@@ -40,30 +40,31 @@ filter: contrast(0);
 ## Syntax
 
 ```css
-contrast(amount)
-```
+/* Completely gray */
+contrast(0)
 
-### Values
-
-- `amount` {{Optional_Inline}}
-  - : The contrast of the result, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value under `100%` decreases the contrast, while a value over `100%` increases it. A value of `0` or `0%` will create an image that is completely gray, while a value of `1` or `100%` leaves the input unchanged. Negative values are not allowed. The initial value for {{Glossary("interpolation")}} is `1`. The default value is `1`.
-
-The following are pairs of equivalent values:
-
-```css
-contrast(0)    /* Completely gray */
-contrast(0%)
-
-contrast(0.65) /* 65% contrast */
-contrast(65%)
-
-contrast()     /* No effect */
+/* No change */
+contrast()
 contrast(1)
 contrast(100%)
 
-contrast(2)    /* Double contrast */
+/* 60% contrast */
+contrast(.6)
+contrast(60%)
+
+/* Double contrast */
+contrast(2)
 contrast(200%)
 ```
+
+### Parameters
+
+- {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} {{Optional_Inline}}
+  - : Specifies the amount of the conversion. A value under `100%` decreases the contrast, while a value over `100%` increases it. A value of `0` or `0%` will create an image that is completely gray, while a value of `1` or `100%` leaves the input unchanged. Negative values are not allowed. The initial value for {{Glossary("interpolation")}} is `1`. The default value is `1`.
+
+### Return value
+
+A {{cssxref("filter-function")}} value.
 
 ## Formal syntax
 
@@ -73,17 +74,14 @@ contrast(200%)
 
 ### With the backdrop-filter property
 
-This example applies a `contrast()` filter via the {{cssxref("backdrop-filter")}} CSS property to the paragraph and monospaced text, color shifting to the area behind the `<p>` and `<code>`.
+This example applies a `contrast()` filter via the {{cssxref("backdrop-filter")}} CSS property to the paragraph, shifting the color of the area behind the `<p>`.
 
 ```css
 .container {
   background: url("unity_for_the_people.jpg") no-repeat center / contain #333399;
 }
 p {
-  backdrop-filter: contrast(0.5);
-}
-code {
-  backdrop-filter: contrast(0.15);
+  backdrop-filter: contrast(0.2);
 }
 ```
 
@@ -150,20 +148,17 @@ p {
 
 {{EmbedLiveSample('With_the_filter_property','100%','320')}}
 
-### With url() and the SVG contrast filter
+### Using the SVG filter
 
-The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id). The `<filter>`'s {{SVGElement("feComponentTransfer")}} primitive enables pixel-level color remapping. Given the following:
+This example shows three images for comparison: an image with a `contrast()` filter function applied, an image with the equivalent SVG filter applied, and the original image.
 
-```html live-sample___svg_filter
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  id="svg"
-  viewBox="0 0 240 151"
-  height="0"
-  width="0"
-  overflow="visible"
-  color-interpolation-filters="sRGB">
-  <filter id="contrast">
+#### SVG
+
+The SVG {{SVGElement("feComponentTransfer")}} filter element can also be used to adjust the contrast of content by creating equivalent contrast adjustments on nested {{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, and {{SVGElement("feFuncB")}} linear elements. We set the same `slope` and `intercept` for the red, green, and blue filter primitives, then we can reference the SVG effect by the ID of the {{SVGElement("filter")}}:
+
+```html live-sample___svg-filter
+<svg height="0" role="none">
+  <filter id="contrast200" color-interpolation-filters="sRGB">
     <feComponentTransfer>
       <feFuncR type="linear" slope="2" intercept="-0.5" />
       <feFuncG type="linear" slope="2" intercept="-0.5" />
@@ -173,22 +168,42 @@ The SVG {{SVGElement("filter")}} element is used to define custom filter effects
 </svg>
 ```
 
-These values produce the same results:
+The following declarations produce the same effect:
 
 ```css
+filter: contrast(2);
 filter: contrast(200%);
-filter: url("#contrast"); /* with embedded SVG */
-filter: url("folder/fileName.svg#contrast"); /* external svg filter definition */
+filter: url("#contrast200"); /* with embedded SVG */
+filter: url("fileName.svg#contrast200"); /* external SVG */
 ```
 
-This example shows three images: the image with a `contrast()` filter function applied, the image with an equivalent `url()` filter applied, and the original images for comparison:
+#### CSS
 
-```html hidden live-sample___svg_filter
+We include CSS that will adjust the contrast of elements based on their `css-filter` or `svg-filter` class:
+
+```css live-sample___svg-filter
+.css-filter {
+  filter: contrast(2);
+}
+
+.svg-filter {
+  filter: url("#contrast200");
+}
+```
+
+```css hidden live-sample___svg-filter
+th,
+td {
+  padding: 5px;
+}
+```
+
+```html hidden live-sample___svg-filter
 <table>
   <thead>
     <tr>
-      <th><code>contrast()</code></th>
-      <th><code>url()</code></th>
+      <th><code>contrast()</code> filter</th>
+      <th>SVG filter equivalent</th>
       <th>Original image</th>
     </tr>
   </thead>
@@ -216,24 +231,7 @@ This example shows three images: the image with a `contrast()` filter function a
 </table>
 ```
 
-```css hidden live-sample___svg_filter
-.css-filter {
-  filter: contrast(200%);
-}
-.svg-filter {
-  filter: url("#contrast");
-}
-
-th,
-td {
-  padding: 5px;
-}
-svg:not(:root) {
-  display: none;
-}
-```
-
-{{EmbedLiveSample('svg_filter','100%','280')}}
+{{EmbedLiveSample('svg-filter','100%','280')}}
 
 ## Specifications
 

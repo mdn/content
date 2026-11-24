@@ -185,7 +185,7 @@ To add hyphens when words are broken, use the CSS {{cssxref("hyphens")}} propert
 
 You can also use the {{cssxref("hyphenate-character")}} property to use the string of your choice instead of the default hyphenation character at the end of the line (before the hyphenation line break) for the language. The `auto` value selects the correct value to mark a mid-word line break according to the typographic conventions of the current content language.
 
-CSS provides additional hyphenation control: the {{cssxref("hyphenate-limit-chars")}} property can be used to set the minimum word length that allows for hyphenation as well as the minimum number of characters before and after the hyphen.
+CSS provides additional hyphenation control: the {{cssxref("hyphenate-limit-chars")}} property can be used to set the minimum word length that allows for hyphenation as well as the minimum number of characters before and after the hyphen, and the {{cssxref("hyphenate-limit-lines")}} property can be used to limit the number of consecutive hyphenated lines.
 
 ## The `<wbr>` element
 
@@ -220,4 +220,5 @@ In the example below, the browser may break the text at the location of the {{HT
 - The CSS {{cssxref("hyphens")}} property
 - The CSS {{cssxref("hyphenate-character")}} property
 - The CSS {{cssxref("hyphenate-limit-chars")}} property
+- The CSS {{cssxref("hyphenate-limit-lines")}} property
 - [Overflow and Data Loss in CSS](https://www.smashingmagazine.com/2019/09/overflow-data-loss-css/)

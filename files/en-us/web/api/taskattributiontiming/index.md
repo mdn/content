@@ -4,10 +4,11 @@ slug: Web/API/TaskAttributionTiming
 page-type: web-api-interface
 status:
   - experimental
+  - non-standard
 browser-compat: api.TaskAttributionTiming
 ---
 
-{{SeeCompatTable}}{{APIRef("Performance API")}}
+{{SeeCompatTable}}{{APIRef("Performance API")}}{{non-standard_header}}
 
 The **`TaskAttributionTiming`** interface returns information about the work involved in a long task and its associate frame context. The frame context, also called the container, is the iframe, embed or object that is being implicated, on the whole, for a long task.
 
@@ -32,18 +33,18 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 
 This interface also supports the following properties:
 
-- {{domxref('TaskAttributionTiming.containerType')}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref('TaskAttributionTiming.containerType')}} {{ReadOnlyInline}} {{Experimental_Inline}} {{non-standard_inline}}
   - : Returns the type of frame container, one of `iframe`, `embed`, or `object`.
-- {{domxref('TaskAttributionTiming.containerSrc')}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref('TaskAttributionTiming.containerSrc')}} {{ReadOnlyInline}} {{Experimental_Inline}} {{non-standard_inline}}
   - : Returns the container's `src` attribute.
-- {{domxref('TaskAttributionTiming.containerId')}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref('TaskAttributionTiming.containerId')}} {{ReadOnlyInline}} {{Experimental_Inline}} {{non-standard_inline}}
   - : Returns the container's `id` attribute.
-- {{domxref('TaskAttributionTiming.containerName')}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref('TaskAttributionTiming.containerName')}} {{ReadOnlyInline}} {{Experimental_Inline}} {{non-standard_inline}}
   - : Returns the container's `name` attribute.
 
 ## Instance methods
 
-- {{domxref("TaskAttributionTiming.toJSON()")}} {{Experimental_Inline}}
+- {{domxref("TaskAttributionTiming.toJSON()")}} {{Experimental_Inline}} {{non-standard_inline}}
   - : Returns a JSON-serializable plain object representing the `TaskAttributionTiming` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Specifications

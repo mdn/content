@@ -69,7 +69,7 @@ Sample rendering:
 
 Rendering in your browser:
 
-{{ EmbedLiveSample('menclose_example', 700, 200, "", "") }}
+{{ EmbedLiveSample('examples', 700, 200, "", "") }}
 
 ## Technical summary
 

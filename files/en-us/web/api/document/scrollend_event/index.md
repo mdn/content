@@ -145,7 +145,7 @@ document.onscrollend = (event) => {
 };
 ```
 
-{{EmbedLiveSample("Using_scrollend_with_an_event_handler_property", "100%", 200)}}
+{{EmbedLiveSample("using_onscrollend_event_handler_property", "100%", 200)}}
 
 ## Specifications
 

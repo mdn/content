@@ -105,7 +105,7 @@ console.log(
 // [ { "type": "element", "value": "Motorcycle" },
 //   { "type": "literal", "value": ", " },
 //   { "type": "element", "value": "Bus" },
-//   { "type": "literal", "value": ", and " },
+//   { "type": "literal", "value": " and " },
 //   { "type": "element", "value": "Car" } ];
 ```
 

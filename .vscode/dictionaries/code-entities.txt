@@ -131,6 +131,8 @@ colorMaskiOES
 com.apple.quicktime.mdta
 com.apple.quicktime.udta
 connectionavailable
+containertiming
+containertimingignore
 contentaccessible
 contentdelete
 contentoccluded
@@ -166,6 +168,7 @@ daala
 dangi
 dataidx
 deviceproximity
+DEVICETYPE
 devtools.aboutdebugging
 devtools.errorconsole
 DfltDwnld
@@ -259,6 +262,8 @@ fwid
 gapi
 gara
 gattserverdisconnected
+gbsct
+gbzzzz
 geometrychange
 geor
 gesturechange
@@ -335,6 +340,7 @@ IXML
 jpan
 jpanfin
 jpanyear
+jpzzzz
 jsapi.h
 jscript
 jsdouble
@@ -622,6 +628,7 @@ PINGOTHER
 pjpeg
 PlatformNaclArch
 platformversion
+playcanvas
 pmatrix
 pmax
 pmin
@@ -673,6 +680,7 @@ replacewithcommas
 replacewithspaces
 RGBX
 richlistbox
+riscv64
 rmvirtualenv
 rohg
 roletype
@@ -799,6 +807,7 @@ todoapp
 togglecamera
 togglemicrophone
 togglescreenshare
+tols
 toolbar-bgalignment
 toolbar-bgimage
 toolbaritem

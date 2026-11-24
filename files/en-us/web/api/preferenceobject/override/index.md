@@ -19,7 +19,7 @@ The override of the {{domxref("PreferenceObject")}} interface, if set, or `null`
 
 ## Examples
 
-## Basic usage
+### Basic usage
 
 This example demonstrates how to disambiguate between the color scheme preference set by the user agent vs a programmatic override.
 

@@ -19,7 +19,7 @@ function div(x) {
 }
 
 console.log(div(0));
-// Expected output: "Number is Infinity!""
+// Expected output: "Number is Infinity!"
 
 console.log(div(1));
 // Expected output: "Number is NOT Infinity."

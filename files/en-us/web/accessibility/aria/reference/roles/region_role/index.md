@@ -33,17 +33,6 @@ Using the {{HTMLElement('section')}} element will automatically communicate a se
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
   - : Use this attribute to label the region. Often, the value of the `aria-labelledby` attribute will be the id of the element used to title the section. If no visible appropriate header is present, `aria-label` should be used.
 
-## Examples
-
-```html
-<div role="region" aria-labelledby="region-heading">
-  <h2 id="region-heading">
-    This heading's `id` attribute helps this region have an accessible name
-  </h2>
-  <!-- region content -->
-</div>
-```
-
 ## Accessibility concerns
 
 Use sparingly! [Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles) are intended to be used sparingly, to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
@@ -83,6 +72,17 @@ A scrollable area may need `tabindex="0"` to let keyboard-only users focus and s
 ### SVG
 
 `role="region"` can be declared on areas of {{SVGElement('svg')}} along with an `aria-label` to allow individual sections of the SVG to be described.
+
+## Examples
+
+```html
+<div role="region" aria-labelledby="region-heading">
+  <h2 id="region-heading">
+    This heading's `id` attribute helps this region have an accessible name
+  </h2>
+  <!-- region content -->
+</div>
+```
 
 ## Specifications
 

@@ -166,7 +166,7 @@ input {
 
 The rendered result looks like so:
 
-{{EmbedLiveSample('caret-aniamtion-custom', 'auto', 260)}}
+{{EmbedLiveSample('caret-animation-custom', 'auto', 260)}}
 
 Try focusing the first two elements to see what the custom caret animation looks like. To compare it with the default blinking caret, you can focus the third element.
 

@@ -14,6 +14,8 @@ sidebar: cssref
 
 The **`-moz-force-broken-image-icon`** extended CSS property can be used to force the broken image icon to be shown even when a broken image has an `alt` attribute.
 
+The use of this property is not recommended. A proper `alt` attribute should be used instead.
+
 ## Syntax
 
 ```css
@@ -70,11 +72,6 @@ img {
 
 > [!NOTE]
 > The alt text may not be visible if `-moz-force-broken-image-icon` is set to `1` and the image has no (or too small) `height` or `width` set.
-
-## Notes
-
-- This property will only work in Gecko-based browsers.
-- The use of this property is not recommended. A proper `alt` attribute should be used instead.
 
 ## Specifications
 

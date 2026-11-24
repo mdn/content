@@ -26,6 +26,17 @@ console.log(a > 0 && b > 0);
 x && y
 ```
 
+### Parameters
+
+- `x`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 4 (logical AND) or above.
+- `y`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 5 (bitwise OR) or above. Evaluated only if `x` is {{Glossary("truthy")}}.
+
+### Return value
+
+The value of `x` if `x` is {{Glossary("falsy")}}, or the value of `y` otherwise.
+
 ## Description
 
 Logical AND (`&&`) evaluates operands from left to right, returning immediately with the value of the first {{Glossary("falsy")}} operand it encounters; if all values are {{Glossary("truthy")}}, the value of the last operand is returned.
@@ -86,7 +97,7 @@ console.log(A() && B());
 
 ### Operator precedence
 
-The AND operator has a higher precedence than the OR operator, meaning the `&&` operator is executed before the `||` operator (see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
+The AND operator has a higher precedence than the OR operator, meaning the `&&` operator groups more tightly than the `||` operator (see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
 ```js-nolint
 true || false && false; // true

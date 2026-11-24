@@ -82,6 +82,14 @@ This property is specified as one `<color>` value:
 
 ### Emphasis with a color and custom character
 
+#### HTML
+
+```html
+<p>Here's an example:</p>
+
+<em>This has emphasis marks!</em>
+```
+
 #### CSS
 
 ```css
@@ -89,14 +97,6 @@ em {
   text-emphasis-color: green;
   text-emphasis-style: "*";
 }
-```
-
-#### HTML
-
-```html
-<p>Here's an example:</p>
-
-<em>This has emphasis marks!</em>
 ```
 
 #### Result

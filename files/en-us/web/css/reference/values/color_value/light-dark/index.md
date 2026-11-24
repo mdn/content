@@ -158,7 +158,7 @@ section {
 
 #### Result
 
-{{EmbedLiveSample("setting_colors_based_on_color_scheme", "100%", 500)}}
+{{EmbedLiveSample("setting_colors_based_on_a_color_scheme", "100%", 500)}}
 
 ### Setting gradient background based on a color scheme
 

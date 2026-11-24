@@ -5,6 +5,8 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_BookInstance_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Update_Book_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms")}}
+
 This subarticle shows how to define a page to delete `Author` objects.
 
 As discussed in the [form design](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms#form_design) section, our strategy will be to only allow deletion of objects that are not referenced by other objects (in this case that means we won't allow an `Author` to be deleted if it is referenced by a `Book`).
@@ -13,11 +15,11 @@ If there are associated books, it should display them, and state that they must 
 
 ## Controller—get route
 
-Open **/controllers/authorController.js**. Find the exported `author_delete_get()` controller method and replace it with the following code.
+Open **controllers/authorController.js**. Find the exported `authorDeleteGet()` controller method and replace it with the following code.
 
 ```js
 // Display Author delete form on GET.
-exports.author_delete_get = async (req, res, next) => {
+export const authorDeleteGet = async (req, res, next) => {
   // Get details of author and all their books (in parallel)
   const [author, allBooksByAuthor] = await Promise.all([
     Author.findById(req.params.id).exec(),
@@ -56,11 +58,11 @@ When both operations have completed it renders the **author_delete.pug** view, p
 
 ## Controller—post route
 
-Find the exported `author_delete_post()` controller method, and replace it with the following code.
+Find the exported `authorDeletePost()` controller method, and replace it with the following code.
 
 ```js
 // Handle Author delete on POST.
-exports.author_delete_post = async (req, res, next) => {
+export const authorDeletePost = async (req, res, next) => {
   // Get details of author and all their books (in parallel)
   const [author, allBooksByAuthor] = await Promise.all([
     Author.findById(req.params.id).exec(),
@@ -77,13 +79,12 @@ exports.author_delete_post = async (req, res, next) => {
     return;
   }
   // Author has no books. Delete object and redirect to the list of authors.
-  await Author.findByIdAndDelete(req.body.authorid);
+  await Author.findByIdAndDelete(req.params.id);
   res.redirect("/catalog/authors");
 };
 ```
 
-First we validate that an id has been provided (this is sent via the form body parameters, rather than using the version in the URL).
-Then we get the author and their associated books in the same way as for the `GET` route.
+First we get the author and their associated books in the same way as for the `GET` route, using the id from the URL.
 If there are no books then we delete the author object and redirect to the list of all authors.
 If there are still books then we just re-render the form, passing in the author and list of books to be deleted.
 
@@ -93,7 +94,7 @@ If there are still books then we just re-render the form, passing in the author 
 
 ## View
 
-Create **/views/author_delete.pug** and copy in the text below.
+Create **views/author_delete.pug** and paste in the text below.
 
 ```pug
 extends layout
@@ -118,9 +119,6 @@ block content
     p Do you really want to delete this Author?
 
     form(method='POST')
-      div.form-group
-        input#authorid.form-control(type='hidden', name='authorid', value=author._id )
-
       button.btn.btn-primary(type='submit') Delete
 ```
 
@@ -129,7 +127,7 @@ It then includes a conditional statement based on the number of **`author_books`
 
 - If there _are_ books associated with the author then the page lists the books and states that these must be deleted before this `Author` may be deleted.
 - If there _are no_ books then the page displays a confirmation prompt.
-- If the **Delete** button is clicked then the author id is sent to the server in a `POST` request and that author's record will be deleted.
+- If the **Delete** button is clicked then the form sends a `POST` request to the same URL, which includes the author id, and that author's record will be deleted.
 
 ## Add a delete control
 
@@ -139,17 +137,17 @@ Next we will add a **Delete** control to the _Author detail_ view (the detail pa
 > In a full implementation the control would be made visible only to authorized users.
 > However at this point we haven't got an authorization system in place!
 
-Open the **author_detail.pug** view and add the following lines at the bottom.
+Open the **author_detail.pug** view and add the following lines at the end of `block content` (they're indented two spaces to match the rest of the block).
 
 ```pug
-hr
-p
-  a(href=author.url+'/delete') Delete author
+  hr
+  p
+    a(href=author.url+'/delete') Delete author
 ```
 
 The control should now appear as a link, as shown below on the _Author detail_ page.
 
-![The Author details section of the Local library application. The left column has a vertical navigation bar. The right section contains the author details with a heading that has the Author's name followed by the life dates of the author and lists the books written by the author below it. There is a button labeled 'Delete Author' at the bottom.](locallibary_express_author_detail_delete.png)
+![The Author details section of the Local library application. The left column has a vertical navigation bar. The right section contains the author details with a heading that has the Author's name followed by the life dates of the author and lists the books written by the author below it. There is a link labeled 'Delete author' at the bottom.](locallibary_express_author_detail_delete.png)
 
 ## What does it look like?
 
@@ -170,7 +168,4 @@ You can then delete the books from their detail pages (once that code is impleme
 > The other pages for deleting objects can be implemented in much the same way.
 > We've left that as a challenge.
 
-## Next steps
-
-- Return to [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms).
-- Proceed to the final subarticle of part 6: [Update Book form](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Update_Book_form).
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_BookInstance_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Update_Book_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms")}}

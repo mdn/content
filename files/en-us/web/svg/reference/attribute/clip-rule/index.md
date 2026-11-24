@@ -33,29 +33,11 @@ whereas the following fragment of code will not cause an evenodd clipping rule t
 </g>
 ```
 
-## Usage notes
+## Elements
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>nonzero | evenodd | inherit</td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td>nonzero</td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
+The following elements can use the `clip-rule` attribute, but only if they are inside a {{ SVGElement("clipPath") }} element.
 
-- nonzero
-  - : See description of {{ SVGAttr("fill-rule") }} property.
-- evenodd
-  - : See description of {{ SVGAttr("fill-rule") }} property.
+- [Graphics elements](/en-US/docs/Web/SVG/Reference/Element#graphics_elements)
 
 ## Example
 
@@ -82,11 +64,29 @@ whereas the following fragment of code will not cause an evenodd clipping rule t
 
 {{ EmbedLiveSample('Example', '100%', '110') }}
 
-## Elements
+## Usage notes
 
-The following elements can use the `clip-rule` attribute, but only if they are inside a {{ SVGElement("clipPath") }} element.
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>nonzero | evenodd | inherit</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td>nonzero</td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-- [Graphics elements](/en-US/docs/Web/SVG/Reference/Element#graphics_elements)
+- nonzero
+  - : See description of {{ SVGAttr("fill-rule") }} property.
+- evenodd
+  - : See description of {{ SVGAttr("fill-rule") }} property.
 
 ## Specifications
 

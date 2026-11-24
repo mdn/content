@@ -33,16 +33,17 @@ This method should not return a promise, as promises returned by `[Symbol.dispos
 
 ```js
 class Disposable {
+  #disposed;
   constructor() {
-    this.disposed = false;
+    this.#disposed = false;
   }
 
   [Symbol.dispose]() {
-    this.disposed = true;
+    this.#disposed = true;
   }
 
   get isDisposed() {
-    return this.disposed;
+    return this.#disposed;
   }
 }
 

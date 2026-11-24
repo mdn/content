@@ -12,6 +12,36 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement('pattern')}}
 
+## Elements
+
+You can use this attribute with the SVG elements described in the sections below.
+
+### `<pattern>`
+
+For {{SVGElement('pattern')}}, `patternUnits` defines the coordinate system in use for the geometry properties ({{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }} and {{ SVGAttr("height") }}) of the element.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>userSpaceOnUse</code> | <code>objectBoundingBox</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>objectBoundingBox</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+- `userSpaceOnUse`
+  - : This value indicates that all coordinates for the geometry properties refer to the user coordinate system as defined when the pattern was applied.
+- `objectBoundingBox`
+  - : This value indicates that all coordinates for the geometry properties represent fractions or percentages of the bounding box of the element to which the pattern is applied. A bounding box could be considered the same as if the content of the {{ SVGElement("pattern") }} were bound to a `"0 0 1 1"` {{ SVGAttr("viewBox") }}.
+
 ## Examples
 
 ```css hidden
@@ -55,36 +85,6 @@ svg {
 ```
 
 {{EmbedLiveSample("Examples", '100%', 200)}}
-
-## Elements
-
-You can use this attribute with the SVG elements described in the sections below.
-
-### `<pattern>`
-
-For {{SVGElement('pattern')}}, `patternUnits` defines the coordinate system in use for the geometry properties ({{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }} and {{ SVGAttr("height") }}) of the element.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td><code>userSpaceOnUse</code> | <code>objectBoundingBox</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>objectBoundingBox</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-- `userSpaceOnUse`
-  - : This value indicates that all coordinates for the geometry properties refer to the user coordinate system as defined when the pattern was applied.
-- `objectBoundingBox`
-  - : This value indicates that all coordinates for the geometry properties represent fractions or percentages of the bounding box of the element to which the pattern is applied. A bounding box could be considered the same as if the content of the {{ SVGElement("pattern") }} were bound to a `"0 0 1 1"` {{ SVGAttr("viewBox") }}.
 
 ## Specifications
 

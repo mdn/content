@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 440" role="img" aria-labelledby="title description">
+  <title id="title">ES modules declare their dependencies</title>
+  <desc id="description">An HTML page loads external-script-2.js and contains an inline module. Both modules import the dollar-sign function from the same external-script.js module. Arrows start beside src values or import specifiers and point to the corresponding code.</desc>
+  <style>
+    text { fill: #6b7280; font-family: Menlo, Consolas, monospace; font-size: 12px; }
+    .identifier { fill: #08827e; font-weight: bold; }
+    .outline { fill: none; stroke: #808080; stroke-width: 1; }
+    .edge { fill: none; stroke: #808080; stroke-width: 1; marker-end: url(#arrow); }
+    .scope { fill: none; stroke: #808080; stroke-width: 1; stroke-dasharray: 6 5; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#808080"/>
+    </marker>
+  </defs>
+  <path class="outline" d="M 71 30 H 440 V 246 H 20 V 30 H 28"/>
+  <text x="34" y="34" xml:space="preserve">HTML</text>
+  <text x="34" y="52" xml:space="preserve">&lt;head&gt;</text>
+  <text x="34" y="70" xml:space="preserve">  &lt;script type=&quot;module&quot;</text>
+  <text x="34" y="88" xml:space="preserve">    src=&quot;external-script-2.js&quot;</text>
+  <text x="34" y="106" xml:space="preserve">  &gt;&lt;/script&gt;</text>
+  <text x="34" y="124" xml:space="preserve">  &lt;script type=&quot;module&quot;&gt;</text>
+  <text x="34" y="142" xml:space="preserve">    // inline module</text>
+  <text x="34" y="160" xml:space="preserve">  &lt;/script&gt;</text>
+  <text x="34" y="178" xml:space="preserve">&lt;/head&gt;</text>
+  <text x="34" y="196" xml:space="preserve">&lt;body&gt;</text>
+  <text x="34" y="214" xml:space="preserve">  &lt;!-- page content --&gt;</text>
+  <text x="34" y="232" xml:space="preserve">&lt;/body&gt;</text>
+  <path class="outline" d="M 647 30 H 830 V 124 H 480 V 30 H 488"/>
+  <text x="494" y="34" xml:space="preserve">external-script-2.js</text>
+  <text x="494" y="52" xml:space="preserve">import { <tspan class="identifier">$</tspan> } from &quot;./external-script.js&quot;;</text>
+  <text x="494" y="88" xml:space="preserve"><tspan class="identifier">$</tspan>.ajax(/* ... */);</text>
+  <text x="494" y="106" xml:space="preserve">// ...</text>
+  <path class="outline" d="M 136 280 H 440 V 422 H 20 V 280 H 28"/>
+  <text x="34" y="284" xml:space="preserve">Inline module</text>
+  <text x="34" y="302" xml:space="preserve">import { <tspan class="identifier">$</tspan> } from &quot;./external-script.js&quot;;</text>
+  <text x="34" y="338" xml:space="preserve">var hiddenBox = <tspan class="identifier">$</tspan>(&quot;#banner-message&quot;);</text>
+  <text x="34" y="356" xml:space="preserve"><tspan class="identifier">$</tspan>(&quot;#button-container button&quot;)</text>
+  <text x="34" y="374" xml:space="preserve">  .on(&quot;click&quot;, function (event) {</text>
+  <text x="34" y="392" xml:space="preserve">    hiddenBox.show();</text>
+  <text x="34" y="410" xml:space="preserve">  });</text>
+  <path class="outline" d="M 632 185 H 830 V 315 H 480 V 185 H 488"/>
+  <text x="494" y="189" xml:space="preserve">external-script.js</text>
+  <text x="494" y="207" xml:space="preserve">function <tspan class="identifier">$</tspan>() {</text>
+  <text x="494" y="225" xml:space="preserve">  // ...</text>
+  <text x="494" y="243" xml:space="preserve">}</text>
+  <text x="494" y="279" xml:space="preserve">// ...</text>
+  <text x="494" y="297" xml:space="preserve">export { <tspan class="identifier">$</tspan> };</text>
+  <path class="edge" d="M 253 84 H 480"/>
+  <path class="edge" d="M 190 146 L 220 280"/>
+  <path class="edge" d="M 710 58 V 185"/>
+  <path class="edge" d="M 340 298 H 480"/>
+</svg>

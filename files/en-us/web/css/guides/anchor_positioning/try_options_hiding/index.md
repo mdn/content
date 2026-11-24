@@ -105,7 +105,7 @@ The anchor-positioned element is given fixed positioning and tethered to the anc
 
 Try scrolling the demo so that the anchor starts to get near the edges:
 
-{{ EmbedLiveSample("Using predefined fallback options", "100%", "250") }}
+{{ EmbedLiveSample("predefined_fallback_options", "100%", "250") }}
 
 - Move the anchor to the top of the viewport. The positioned element flips to the bottom-left of the anchor to avoid overflowing.
 - Move the anchor to the left of the viewport. The positioned element flips to the top-right of the anchor to avoid overflowing.
@@ -509,7 +509,7 @@ body {
 
 Scroll down the page and note how the positioned element is hidden once it reaches the top of the viewport:
 
-{{ EmbedLiveSample("Conditional hiding using `position-visibility`", "100%", "250") }}
+{{ EmbedLiveSample("conditionally_hiding_anchor-positioned_elements", "100%", "250") }}
 
 ## See also
 

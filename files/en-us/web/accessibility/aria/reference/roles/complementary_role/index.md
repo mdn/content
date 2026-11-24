@@ -27,25 +27,6 @@ The `complementary` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Guid
 > [!NOTE]
 > The {{HTMLElement('aside')}} element has an implicit role of `complementary`, unless it has no {{glossary("accessible name")}} and is nested in [sectioning content](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content). Developers should always prefer using the correct semantic HTML element over using ARIA.
 
-## Examples
-
-```html
-<div role="complementary">
-  <h2>Trending articles</h2>
-  <ul>
-    <li><a href="#">18 tweets that will make you feel all the feels</a></li>
-    <li>
-      <a href="#">Stop searching! I've found the perfect lunch containers.</a>
-    </li>
-    <li>
-      <a href="#">The time has come to decide how to call these foods</a>
-    </li>
-    <li><a href="#">17 really good posts we saw on Tumblr this week</a></li>
-    <li><a href="#">10 parent hacks we know work because we tried them</a></li>
-  </ul>
-</div>
-```
-
 ## Accessibility concerns
 
 [Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles) are intended to be used sparingly, to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
@@ -83,6 +64,25 @@ Screen readers will announce the type of role the landmark is. Because of this, 
 Certain technologies such as browser extensions can generate lists of all landmark roles present on a page, allowing non-screen reader users to also quickly identify and navigate to large sections of the document.
 
 - [Landmarks browser extension](https://matatk.agrip.org.uk/landmarks/)
+
+## Examples
+
+```html
+<div role="complementary">
+  <h2>Trending articles</h2>
+  <ul>
+    <li><a href="#">18 tweets that will make you feel all the feels</a></li>
+    <li>
+      <a href="#">Stop searching! I've found the perfect lunch containers.</a>
+    </li>
+    <li>
+      <a href="#">The time has come to decide how to call these foods</a>
+    </li>
+    <li><a href="#">17 really good posts we saw on Tumblr this week</a></li>
+    <li><a href="#">10 parent hacks we know work because we tried them</a></li>
+  </ul>
+</div>
+```
 
 ## Specifications
 

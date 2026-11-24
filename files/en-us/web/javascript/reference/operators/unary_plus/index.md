@@ -40,6 +40,15 @@ console.log(+"hello");
 +x
 ```
 
+### Parameters
+
+- `x`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 14 (prefix operators) or above.
+
+### Return value
+
+The value of `x` [coerced to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion).
+
 ## Description
 
 Although unary negation (`-`) also can convert non-numbers, unary plus is the fastest and preferred way of converting something into a number, because it does not perform any other operations on the number.
