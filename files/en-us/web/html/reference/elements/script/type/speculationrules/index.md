@@ -567,7 +567,9 @@ See {{HTTPHeader("Sec-Speculation-Tags")}} for more examples.
 
 ### Prerendering search form submissions
 
-Consider a typical search form:
+This example shows how you can pre-render a search form results page for popular search terms, potentially reducing the time that they have to wait for results.
+
+We start with a typical search form:
 
 ```html
 <form action="/search.html" method="get">
