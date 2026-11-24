@@ -160,7 +160,7 @@ const controls = document.querySelectorAll("input");
 const output = document.querySelector("output");
 
 for (control of controls) {
-  control.addEventListener("change", () => {
+  control.addEventListener("input", () => {
     /* do function */
     changeCSS();
   });
