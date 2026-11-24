@@ -9,7 +9,7 @@ sidebar: htmlsidebar
 
 The **`speculationrules`** value of the [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute of the [`<script>` element](/en-US/docs/Web/HTML/Reference/Elements/script) indicates that the body of the element contains speculation rules.
 
-Speculation rules take the form of a JSON structure that determine what resources should be prefetched or prerendered by the browser. This is part of the {{domxref("Speculation Rules API", "", "", "nocode")}}.
+Speculation rules take the form of a JSON structure that determines what resources should be prefetched or prerendered by the browser. This is part of the {{domxref("Speculation Rules API", "", "", "nocode")}}.
 
 > [!NOTE]
 > Speculation rules can be defined inside external text files referenced by the {{httpheader("Speculation-Rules")}} HTTP header, using the same [JSON representation provided below](#speculation_rules_json_representation). Specifying an HTTP header is useful in cases where developers are not able to directly modify the document itself.
@@ -63,12 +63,12 @@ A `<script type="speculationrules">` element must contain a valid JSON structure
 
 ### Speculation rules JSON representation
 
-The JSON structure contains one or more fields at the top level, each one representing an action to define speculation rules for. At present the supported actions are:
+The JSON structure contains one or more fields at the top level, each one representing an action to define speculation rules for. At present, the supported actions are:
 
 - `"prefetch"` {{optional_inline}}
   - : Rules for potential future navigations that should have their associated document response body downloaded, leading to significant performance improvements when those documents are navigated to. Note that none of the subresources referenced by the page are downloaded.
 - `"prerender"` {{optional_inline}} {{experimental_inline}}
-  - : Rules for potential future navigations that should have their associated documents fully downloaded, rendered, and loaded into an invisible tab. This includes loading all subresources, running all JavaScript, and even loading subresources and performing data fetches started by JavaScript. When those documents are navigated to, navigations will be instant, leading to major performance improvements.
+  - : Rules for potential future navigations that should have their associated documents fully downloaded, rendered, and loaded into an invisible tab. This includes loading all subresources, running all JavaScript, and even loading subresources and performing data fetches started by JavaScript. When those documents are navigated to, navigation will be instant, leading to major performance improvements.
 
 > [!NOTE]
 > Consult the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) main page for full details on how to use prefetch and prerender effectively.
@@ -109,7 +109,7 @@ Each object can contain the following properties:
     `"where"` conditions can be nested multiple levels deep to create complex conditions, or you can choose to split them into separate rules to keep them simple. See [where examples](#where_syntax_examples) for more explanation, and multiple examples of use.
 
 - `"eagerness"`
-  - : A string providing a hint to the browser as to how eagerly it should prefetch/prerender link targets in order to balance performance advantages against resource overheads. Possible values are:
+  - : A string providing a hint to the browser as to how eagerly it should prefetch/prerender link targets to balance performance advantages against resource overheads. Possible values are:
     - `"immediate"`
       - : The author thinks the link is very likely to be followed, and/or the document may take significant time to fetch. Prefetch/prerender should start as soon as possible, subject only to considerations such as user preferences and resource limits.
     - `"eager"`
@@ -130,7 +130,7 @@ Each object can contain the following properties:
     Defaults to `false`, in which case a form submission can't activate the prerender.
     Note that an ordinary navigation to the same URL, such as a link click, won't display the prerendered page.
 
-    A typical use is prerendering results pages for popular searches from a `GET` search form, such as `/search.html?q=cats`. See [Prerendering search form submissions](#prerendering_search_form_submissions) for examples.
+    A typical use is prerendering results pages for searches from a `GET` search form, such as `/search.html?q=cats`. See [Prerendering search form submissions](#prerendering_search_form_submissions) for examples.
 
     Preparing the prerender as a form submission means the browser's form submission checks also apply to it.
     For example, if the page's CSP [`form-action`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/form-action) directive blocks the form's target URL, the browser doesn't waste resources prerendering a page the form can never navigate to.
@@ -157,9 +157,9 @@ Each object can contain the following properties:
 - `"relative_to"`
   - : A string specifying where you want links matched by URL to be matched relative to. The value can be one of:
     - `document`
-      - : URLs should be matched relative to the document the speculation rules are being set on.
+      - : URLs should be matched relative to the document on which speculation rules are being set.
     - `ruleset`
-      - : URLs should be matched relative to the file the rules are specified in. This is the default value.
+      - : URLs should be matched relative to the file in which the rules are specified. This is the default value.
 
     This key setting is only relevant for rules defined in an external file (set using the {{httpheader("Speculation-Rules")}} header). When rules are specified inside the same document they are being set for (i.e., in an inline `<script>` element), it makes no difference.
 
@@ -172,9 +172,9 @@ Each object can contain the following properties:
     Possible values are:
     - `"anonymous-client-ip-when-cross-origin"`
       - : (prefetch-only) Specifies that the rule matches only if the user agent can prevent the client IP address from being visible to the origin server if a cross-origin prefetch request is issued. Exactly how this works is dependent on browser implementation specifics. For example:
-        - Chrome's implementation hides the IP address using a Google-owned proxy, therefore by default it only works for Google-controlled referrers (since in that case, sending the URLs of the destination to Google is not an additional privacy leak). When used on a non-Google-owned site, rules that include this will only match for users that turn on "Enhanced preloading" in `chrome://settings/preloading`.
+        - Chrome's implementation hides the IP address using a Google-owned proxy; therefore, by default, it only works for Google-controlled referrers (since in that case, sending the URLs of the destination to Google is not an additional privacy leak). When used on a non-Google-owned site, rules that include this will only match for users who turn on "Enhanced preloading" in `chrome://settings/preloading`.
         - Other Chromium-based browsers will have to provide their own solutions. Thorough testing in all target browsers is advised.
-        - A future Safari implementation may possibly use something along the lines of [iCloud Private Relay](https://support.apple.com/en-us/102602).
+        - A future Safari implementation may use something along the lines of [iCloud Private Relay](https://support.apple.com/en-us/102602).
         - A future Firefox implementation might use something based on the [Mozilla VPN](https://www.mozilla.org/en-US/products/vpn/) product.
 
 - `"tag"`
@@ -182,7 +182,7 @@ Each object can contain the following properties:
 
 - `"target_hint"` {{experimental_inline}}
   - : A string indicating where the page expects the prerendered content to be activated.
-    The directive not supported for prefetch speculations.
+    The directive is not supported for prefetch speculations.
     Allowed values are:
     - `"target_hint": "_blank"`
       - : Open rerendered content in a new page.
@@ -269,7 +269,7 @@ And multiple rules in a single result set:
 
 ### Dynamic rule insertion
 
-Below is an example that feature detects speculation rules and, if supported, dynamically adds a prerender speculation rule via JavaScript:
+Below is an example that detects speculation rule support; if they are supported, it dynamically adds a prerender speculation rule via JavaScript:
 
 ```js
 if (
@@ -293,7 +293,7 @@ if (
 
 ### `where` syntax examples
 
-A document-sourced rule contains a `"where"` property, which is an object containing criteria that define which links in the document are matched. Effectively, the `"where"` object represents a test that is performed on every link on the page to see whether the speculation rule is applied to it.
+A document-sourced rule contains a `"where"` property, which is an object containing criteria that define which links in the document are matched. Effectively, `"where"` represents a test that is performed on every link on the page to see whether the speculation rule is applied to it.
 
 The most basic version will match a single URL pattern or CSS selector:
 
@@ -337,7 +337,7 @@ Any condition can be negated by placing it inside a `"not"` condition — this m
 
 Multiple conditions can be combined inside `"and"` or `"or"` conditions — these take the value of arrays containing multiple conditions, all or any of which (respectively) have to match for the speculation rules to apply to a link. Using `"and"` or `"or"`, conditions can be nested multiple levels deep — there is no specified limit on allowed nesting levels.
 
-It is useful to think of the `"where"` object as being equivalent to an `if` statement. So
+It is useful to think of the `"where"` object as equivalent to an `if` statement. So
 
 ```plain
 { and: [A, B, { or: [C, { not: D }] }] }
@@ -347,7 +347,7 @@ is equivalent to
 
 ```plain
 if (A && B && (C || !D)) {
-  apply speculation rule
+  apply a speculation rule
 }
 ```
 
@@ -400,7 +400,7 @@ For document rules, `"relative_to"` can be paired directly with `"href_matches"`
 
 In the above example, only the first `"href_matches"` will be matched relative to the document's base URL.
 
-`relative_to` is mainly relevant if the speculation rules JSON file is on a different origin to the document you wish to apply them to:
+`relative_to` is mainly relevant if the speculation rule JSON file is on a different origin than the document to which you wish to apply it:
 
 1. If the document is located at `https://example.com/some/subpage.html` and the rules are at `https://example.com/resources/rules.json`, then `/home` always equates to `https://example.com/home` regardless of whether `relative_to` is set to `document` or `ruleset`.
 
@@ -526,11 +526,11 @@ Here we are hinting that:
 - Any product links (in this case, those with a `class` of `.product-link`) in the document should be eagerly prerendered (i.e., if the user makes any kind of move towards navigating to them).
 
 > [!NOTE]
-> The effects of eagerness settings are less useful for list rules. By default, list rule URLs are prefetched/prerendered immediately as soon as the rules are parsed, which is what you'd expect — they are intended for explicit listing of high-priority URLs that you want to make available as soon as possible. For this reason, `eager` has the same effect as `immediate` in current implementations. Lower eagerness settings are for prefetching/prerendering when links are interacted with, and for these you are more likely to use document rules to find them on the page.
+> The effects of eagerness settings are less useful for list rules. By default, list rule URLs are prefetched/prerendered immediately as soon as the rules are parsed, which is what you'd expect — they are intended for explicit listing of high-priority URLs that you want to make available as soon as possible. For this reason, `eager` has the same effect as `immediate` in current implementations. Lower eagerness settings are for prefetching/prerendering when links are interacted with, and in such cases, you are more likely to use document rules to find them on the page.
 
 ### `tag` example
 
-A `tag` can be included at the top level, to identify the overall ruleset:
+A `tag` can be included at the top level to identify the overall ruleset:
 
 ```html
 <script type="speculationrules">
@@ -599,6 +599,8 @@ To prerender the results pages for popular search terms, list one URL per term a
 ```
 
 If the user searches for "cats", the browser activates the prerendered `/search.html?q=cats` page, which appears almost instantly.
+
+#### Dynamic form submission rules
 
 A static list only helps with terms you predict in advance. Instead, you can use an `input` event handler to add a rule for whatever the user is typing:
 
