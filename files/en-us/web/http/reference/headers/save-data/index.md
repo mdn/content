@@ -3,8 +3,6 @@ title: Save-Data header
 short-title: Save-Data
 slug: Web/HTTP/Reference/Headers/Save-Data
 page-type: http-header
-status:
-  - experimental
 browser-compat: http.headers.Save-Data
 sidebar: http
 ---
