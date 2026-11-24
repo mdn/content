@@ -16,7 +16,11 @@ sidebar: htmlsidebar
 
 ## Background
 
-Traditionally, user permissions for features like geolocation were problematic because of user context and intention — the permission flow was triggered by a page's JavaScript with the browser having no reliable signal that the user actually wanted to use the feature. This led to confusing UX with out-of-context, easily-missable permission prompts popping up and hard-to-recover-from states if a user accidentally denied permission because they were not sure what was being asked of them. Any user interfaces to control such features were either developer-created and therefore inconsistent with no guarantee of accessibility, or in the browser chrome, which hampers discoverability.
+Some of the features that the web platform exposes to websites are considered _powerful features_: they are important for certain use cases but can potentially be abused by websites. To help mitigate against this, browsers only allow websites to use such features after the user has granted permission for the site to use them. Typically, the website triggers a permission request from JavaScript in response to a user action such as a button press, and the user is shown a browser-generated dialog box with options such as "Accept" and "Deny".
+
+This can be problematic because all the browser knows is that the website has asked to use the feature in response to some user action: it has no reliable signal that the user actually wanted to use the feature. This leads to confusing UX with out-of-context, easily-missable permission prompts popping up and hard-to-recover-from states if a user accidentally denied permission because they were not sure what was being asked of them.
+
+Any user interfaces to control such features were either implemented in the website and therefore inconsistent with no guarantee of accessibility, or implemented in the browser's built-in user interface, which hampers discoverability.
 
 Permission elements solve these problems by creating in-page buttons that the user can click to start a request. Because the browser controls the element's content and restricts how it can be styled, the click is a clear signal of intent, and the element can be consistent and accessible across sites. Activating it leads to a browser-owned confirmation UI, and because the browser knows the user deliberately engaged with the control, it can offer a straightforward way to recover from a previous denial.
 
