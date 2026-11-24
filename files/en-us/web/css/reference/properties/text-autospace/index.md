@@ -11,6 +11,8 @@ The **`text-autospace`** [CSS](/en-US/docs/Web/CSS) property allows you to speci
 
 Many CJK typographic conventions require a small amount of space between CJK characters and Western letters or numbers (see W3C's descriptions for [Chinese](https://www.w3.org/International/clreq/#mixed_text_composition_in_horizontal_writing_mode) and [Japanese](https://www.w3.org/International/jlreq/#japanese_and_western_mixed_text_composition) text layout conventions). Some authors would manually insert a space character for this purpose, but `text-autospace` adds this spacing at the layout engine level, without requiring extra characters in the textual content.
 
+The size of the space can be set with the {{cssxref("text-autospace-size")}} property.
+
 {{InteractiveExample("CSS Demo: text-autospace")}}
 
 ```css interactive-example-choice
