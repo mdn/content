@@ -215,6 +215,16 @@ You must be careful which level of characters you are iterating on. For example,
 // All flag emojis are formed by joining two region indicator letters
 ```
 
+### The String.prototype object
+
+For legacy reasons, `String.prototype` is a `String` object that wraps the value `""`. It has a {{jsxref("String/length", "length")}} property of value `0`.
+
+```js
+console.log(String.prototype.valueOf()); // "" (expected to throw error)
+console.log(String(String.prototype)); // "" (expected [object Object] for plain objects)
+console.log(String.prototype.length); // 0
+```
+
 ## Constructor
 
 - {{jsxref("String/String", "String()")}}

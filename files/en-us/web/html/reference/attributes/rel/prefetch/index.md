@@ -25,7 +25,7 @@ The {{HTTPHeader("Accept")}} header in the request will match the value used for
 
 ### Basic prefetch
 
-```js
+```html
 <link rel="prefetch" href="main.js" />
 ```
 

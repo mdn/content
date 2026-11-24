@@ -62,7 +62,7 @@ This example shows a document that reports to a server endpoint when any {{htmle
 Note that the `integrity-endpoint` used in `Integrity-Policy-Report-Only` is defined in the {{httpheader("Reporting-Endpoints")}} header.
 
 ```http
-Reporting-Endpoints: integrity-endpoint=https://example.com/integrity, backup-integrity-endpoint=https://report-provider.example/integrity
+Reporting-Endpoints: integrity-endpoint="https://example.com/integrity", backup-integrity-endpoint="https://report-provider.example/integrity"
 Integrity-Policy-Report-Only: blocked-destinations=(script), endpoints=(integrity-endpoint backup-integrity-endpoint)
 ```
 
@@ -70,18 +70,20 @@ The [report payload](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoint
 Note that the `body.reportOnly` property is `true`, because this report was triggered by a violation of `Integrity-Policy-Report-Only`.
 
 ```json
-{
-  "age": "176279",
-  "type": "integrity-violation",
-  "url": "https://example.com",
-  "body": {
-    "documentURL": "https://example.com",
-    "blockedURL": "https://example.com/main.js",
-    "destination": "script",
-    "reportOnly": "true"
-  },
-  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
-}
+[
+  {
+    "age": 176279,
+    "type": "integrity-violation",
+    "url": "https://example.com",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "body": {
+      "documentURL": "https://example.com",
+      "blockedURL": "https://example.com/main.js",
+      "destination": "script",
+      "reportOnly": true
+    }
+  }
+]
 ```
 
 ## Specifications

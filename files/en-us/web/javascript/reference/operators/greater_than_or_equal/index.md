@@ -33,6 +33,17 @@ console.log("ab" >= "aa");
 x >= y
 ```
 
+### Parameters
+
+- `x`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 9 (relational operators) or above. Its value is coerced to either a string, a BigInt, or a number.
+- `y`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 10 (bitwise shift) or above. Its value is coerced to either a string, a BigInt, or a number.
+
+### Return value
+
+`true` if `x` is greater than or equal to `y`, and `false` otherwise.
+
 ## Description
 
 The operands are compared using the same algorithm as the [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) operator, with the result negated. `x >= y` is generally equivalent to `!(x < y)`, except for two cases where `x >= y` and `x < y` are both `false`:

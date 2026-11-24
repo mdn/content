@@ -78,15 +78,15 @@ If the design calls for a specific element to be focused the next time the user 
 
 When the toolbar has focus within it, provide visual cues. When an element within the toolbar has focus, a visual cue must be included on both the toolbar itself - to help the toolbar supports directional navigation with the arrow keys - and the control that has focus. The CSS pseudoclasses of `:focus` and `:focus-within` can be used to target both elements.
 
-## Examples
-
-[Toolbar example from ARIA Authoring Practices Guide (APG)](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/)
-
 ## Accessibility concerns
 
 Avoid including controls whose operation requires arrow keys used for toolbar navigation (right and left arrows, or top and bottom for vertical toolbars). If you must include such a control, make it the last control in the toolbar. For example, in a horizontal toolbar, a textbox could be included as the last element.
 
 If any of the otherwise interactive elements within the toolbar are disabled, consider letting them remain focusable so screen reader users can be made aware of their presence.
+
+## Examples
+
+[Toolbar example from ARIA Authoring Practices Guide (APG)](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/)
 
 ## Specifications
 

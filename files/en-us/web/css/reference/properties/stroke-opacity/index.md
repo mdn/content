@@ -35,7 +35,7 @@ stroke-opacity: unset;
   - : Any real number from 0 to 1, inclusive. A value of `0` makes the stroke completely transparent, and a value of `1` makes it completely opaque. Values outside the range 0 – 1 are clipped to the nearest end of that range; thus, negative values are clipped to `0`.
 
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The same as `<number>` (see above), except the allowed range is 0% to 100% and clipping is done with regard to that range.
+  - : The same as [`<number>`](#number), except the allowed range is 0% to 100% and clipping is done with regard to that range.
 
 ## Formal definition
 

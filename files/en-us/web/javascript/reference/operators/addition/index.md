@@ -30,6 +30,17 @@ console.log(2001 + ": A Space Odyssey");
 x + y
 ```
 
+### Parameters
+
+- `x`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 11 (addition) or above. Its value is coerced to either a string, a BigInt, or a number.
+- `y`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 12 (multiplication) or above. Its value is coerced to either a string, a BigInt, or a number.
+
+### Return value
+
+A string, a BigInt, or a number, representing either the string concatenation or numeric sum of `x` and `y`.
+
 ## Description
 
 The `+` operator is overloaded for two distinct operations: numeric addition and string concatenation. When evaluating, it first [coerces both operands to primitives](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion). Then, the two operands' types are tested:

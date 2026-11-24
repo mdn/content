@@ -22,6 +22,12 @@ The `graphics-object` role identifies a distinct part of a larger graphic, such 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
   - : An accessible name is optional and can also be derived from the element's contents. Use `aria-labelledby` to reference a label or `aria-label` to provide one directly.
 
+## Best practices
+
+When dealing with container elements that represent a collection of disconnected objects, use [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) or [`list`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/list_role) roles instead.
+
+Avoid assigning this role to grouping elements used purely for styling or layout purposes. In such cases, omit the role or use `none` or `presentation` instead.
+
 ## Examples
 
 In this simplified map, each continent is a distinct object containing a shape and a text label. The `graphics-object` role identifies each {{SVGElement("g")}} as a meaningful part of the map while preserving its child content. A group used only to position or style elements would not need this role. The outer {{SVGElement("svg")}} provides the graphical document semantics.
@@ -57,12 +63,6 @@ In this simplified map, each continent is a distinct object containing a shape a
 ```
 
 {{EmbedLiveSample('Examples', 600, 360)}}
-
-## Best practices
-
-When dealing with container elements that represent a collection of disconnected objects, use [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) or [`list`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/list_role) roles instead.
-
-Avoid assigning this role to grouping elements used purely for styling or layout purposes. In such cases, omit the role or use `none` or `presentation` instead.
 
 ## Specifications
 

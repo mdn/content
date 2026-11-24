@@ -282,7 +282,7 @@ Several general notes about the table:
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Guide/Functions">Function call</a><br><code>x(y)</code>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Function_call">Function call</a><br><code>x(y)</code>
       </td>
     </tr>
     <tr>
