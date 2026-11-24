@@ -85,7 +85,7 @@ p {
     text-align: center;
   }
 }
-\```
+```
 
 #### Result
 
