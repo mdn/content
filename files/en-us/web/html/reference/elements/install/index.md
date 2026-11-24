@@ -27,7 +27,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 ## Description
 
-The `<install>` element provides a declarative browser-defined control that instructs the browser to install a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps) on the user's device. It one one of the [permission elements](/en-US/docs/Web/HTML/Guides/Permission_elements).
+The `<install>` element provides a declarative browser-defined control that instructs the browser to install a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps) on the user's device. It is a [permission element](/en-US/docs/Web/HTML/Guides/Permission_elements).
 
 This uses the same installation confirmation dialog as the browser's built-in install functionality, but it has some advantages. It allows the developer to create an install experience that is more consistent across supporting browsers, has greater flexibility as to where it can be implemented, and is easier to discover.
 
