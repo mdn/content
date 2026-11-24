@@ -126,8 +126,9 @@ Each object can contain the following properties:
 
 - `"form_submission"` {{experimental_inline}}
   - : A boolean value.
-    When `true`, matching URLs are prerendered for a form submission navigation, and only a matching form submission can activate (display) the prerendered page; an ordinary navigation to the same URL, such as a link click, won't use it.
+    When `true`, matching URLs are prerendered for a form submission navigation.
     Defaults to `false`, in which case a form submission can't activate the prerender.
+    Note that an ordinary navigation to the same URL, such as a link click, won't display the prerendered page.
 
     A typical use is prerendering results pages for popular searches from a `GET` search form, such as `/search.html?q=cats`. See [Prerendering search form submissions](#prerendering_search_form_submissions) for examples.
 
