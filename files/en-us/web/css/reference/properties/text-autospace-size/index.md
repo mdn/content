@@ -30,7 +30,7 @@ text-autospace: unset;
 This property is specified as one value:
 
 - {{cssxref("&lt;number&gt;")}}
-  - : The size of space, as a proportion of the width of a CJK ideograph, represented by the [`ic`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#local_font-relative_lengths) unit. The initial value is `0.125`, which adds `0.125ic`, one-eighth of an ideograph. `0` adds no space. Negative values are invalid.
+  - : Specifies the size of space, as a proportion of the width of a CJK ideograph, represented by the [`ic`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#local_font-relative_lengths) unit. The initial value is `0.125`. Negative values are invalid.
 
 ## Description
 
