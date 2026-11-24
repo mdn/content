@@ -9,6 +9,23 @@ sidebar: cssref
 
 The **`<alpha-value>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents a value that can be either a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}, specifying the **{{Glossary("alpha", "alpha channel")}}** or **transparency** of a color.
 
+## Associated functions
+
+This data type is accepted as a parameter in the following CSS functions:
+
+- {{cssxref("alpha()")}}
+- {{cssxref("color()")}}
+- {{cssxref("device-cmyk()")}}
+- {{cssxref("hsl()")}}
+- {{cssxref("hsl()", "hsla()")}}
+- {{cssxref("hwb()")}}
+- {{cssxref("lab()")}}
+- {{cssxref("lch()")}}
+- {{cssxref("oklab()")}}
+- {{cssxref("oklch()")}}
+- {{cssxref("rgb()")}}
+- {{cssxref("rgb()", "rgba()")}}
+
 ## Syntax
 
 The value of an `<alpha-value>` is given as either a {{cssxref("number")}} or a {{cssxref("percentage")}}.
