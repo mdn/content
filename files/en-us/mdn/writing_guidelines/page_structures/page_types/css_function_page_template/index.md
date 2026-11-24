@@ -85,12 +85,12 @@ See the [Interactive examples](/en-US/docs/MDN/Writing_guidelines/Page_structure
 
 ## Associated properties
 
-Include either the list of CSS properties that accept the function within the value definition.
+Include either the list of CSS properties (and functions) that accept the function within their value definitions (or as a parameter).
 
 For example:
 
 ```md
-This CSS function is accepted in the value definitions of the following CSS properties:
+This CSS function is accepted in the values for the following CSS properties:
 
 - {{cssxref("filter")}}
 - {{cssxref("background-filter")}}
