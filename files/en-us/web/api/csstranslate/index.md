@@ -35,8 +35,8 @@ _Also inherits methods from its parent interface, {{domxref("CSSTransformCompone
 ## Description
 
 A `CSSTranslate` can represent any of the translation functions: {{cssxref("transform-function/translate", "translate()")}}, {{cssxref("transform-function/translateX", "translateX()")}}, {{cssxref("transform-function/translateY", "translateY()")}}, {{cssxref("transform-function/translateZ", "translateZ()")}}, or {{cssxref("transform-function/translate3d", "translate3d()")}}.
-A {{domxref("CSSTransformValue")}} represents the whole value of the `transform` property.
-It contains a `CSSTranslate` for each translation function in the value, along with objects for any other {{cssxref("transform-function")}}s.
+These are some of the {{cssxref("transform-function")}}s that can make up the value of the `transform` property.
+A {{domxref("CSSTransformValue")}} represents the whole value, and contains a `CSSTranslate` for each translation function, along with objects for any other transform functions.
 
 A translation moves an element by a vector, which is made up of the distances along each axis.
 The `x`, `y`, and `z` properties are the distances along the x-axis, y-axis, and z-axis.
