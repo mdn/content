@@ -16,7 +16,7 @@ Each scroll container `overflow` value controls when scroll bars are shown:
 A scroll container always:
 
 - Establishes a new block formatting context, so it contains floats and its margins don't collapse with its children's margins.
-- Scts as the reference box for descendants with {{cssxref("position")}} set to `sticky`.
+- Acts as the reference box for descendants with {{cssxref("position")}} set to `sticky`.
 - Has an automatic minimum size of 0 when it is a flex or grid item, so it can shrink smaller than its content.
 
 ## Scrollport
