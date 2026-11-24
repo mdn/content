@@ -64,6 +64,8 @@ Chromium-based browsers, including Google Chrome, Samsung Internet, and Microsof
 - [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display) and/or [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override)
 - [`prefer_related_applications`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/prefer_related_applications) must be `false` or not present
 
+Though not required, it is recommended that app manifests specify an [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field. This is best practice: see [Always include an `id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id#always_include_an_id).
+
 For a full description of every member, see the [Web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) reference documentation.
 
 ### HTTPS, localhost, or loopback are required

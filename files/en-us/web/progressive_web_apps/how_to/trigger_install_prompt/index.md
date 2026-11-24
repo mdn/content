@@ -28,7 +28,7 @@ This section shows the code required to install a PWA using the {{htmlelement("i
 - [Install the current app with `<install>`](https://mdn.github.io/pwa-examples/install-demos/install-element-app/) ([source code](https://github.com/mdn/pwa-examples/tree/main/install-demos/install-element-app))
 - [Install multiple apps from a catalog page with `<install>`](https://mdn.github.io/pwa-examples/install-demos/install-element-catalog/) ([source code](https://github.com/mdn/pwa-examples/tree/main/install-demos/install-element-catalog))
 
-Installing an app requires a manifest ID. The examples in this section assume that the app manifests specify an [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field, in which case `manifestId` attributes are not required in the `<install>` elements. This is best practice; finding the browser-generated manifest ID for your app to include in the `manifestId` attribute (for example via devtools) is inconvenient.
+Installing an app requires a manifest ID, which represents the app's identity. The examples in this section assume that the app manifests specify an [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field. This is best practice: see [Always include an `id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id#always_include_an_id).
 
 ### Install the current app
 
@@ -75,7 +75,7 @@ This section shows the code required to install a PWA using the {{domxref("Navig
 - [Install the current app with `install()`](https://mdn.github.io/pwa-examples/install-demos/install-method-app/) ([source code](https://github.com/mdn/pwa-examples/tree/main/install-demos/install-method-app))
 - [Install multiple apps from a catalog page with `install()`](https://mdn.github.io/pwa-examples/install-demos/install-method-catalog/) ([source code](https://github.com/mdn/pwa-examples/tree/main/install-demos/install-method-catalog))
 
-Installing an app requires a manifest ID. The examples in this section assume that the app manifests specify an [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field, in which case `manifestId` arguments are not required in the `install()` calls. This is best practice; finding the browser-generated manifest ID for your app to include in the `manifestId` argument (for example via devtools) is inconvenient.
+Installing an app requires a manifest ID, which represents the app's identity. The examples in this section assume that the app manifests specify an [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field. This is best practice: see [Always include an `id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id#always_include_an_id).
 
 ### Provide an install button
 

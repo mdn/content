@@ -121,9 +121,9 @@ When the `install()` call includes a `manifest`, the permission flow is differen
 
 ### Including a `manifestId`
 
-The snippets in the previous section don't include `manifestId` properties in the `install()` option objects. They assume that the referenced manifests specify an [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field, in which case `manifestId`s are not required.
+Installing an app requires a manifest ID, which represents the app's identity. Previous examples assume that the app manifests specify an [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field. This is best practice: see [Always include an `id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id#always_include_an_id). The browser can find the ID in the manifest, therefore `manifestId` properties are not required in your `install()` calls.
 
-If your manifest doesn't include an `id` field, the browser will use a computed `id` value to identify the app, which you must specify in the `install()` method's `manifestId` option. This supplies an explicit expected ID; if this does not match the ID of the app, installation will fail with a `DataError`.
+If your manifest doesn't include an `id` field, the browser will use the manifest's [`start_url`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/start_url) as the ID, and you must include it in the `install()` method's `manifestId` attribute. If this does not match the ID of the app, installation will fail with a `DataError`.
 
 For example:
 
@@ -135,8 +135,6 @@ installBtn.addEventListener("click", () => {
   });
 });
 ```
-
-The `manifestId` can be found in your browser developer tools. For example, open the Chrome/Edge developer tools _Application_ panel, select the _Manifest_ option, and scan the page for the _Computed App ID_ field.
 
 ## Security considerations
 
