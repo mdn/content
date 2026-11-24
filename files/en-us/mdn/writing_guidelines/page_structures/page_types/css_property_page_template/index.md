@@ -124,6 +124,8 @@ Include the common use cases as a code block and describe the component subvalue
 Include a sentence, like one of the following, to convey how the property's value is constructed:
 
 ```md
+This property is specified as one value:
+
 This property is specified as one of the following keyword values:
 
 This property is specified as a single value from the following list:
