@@ -85,7 +85,7 @@ See the [Interactive examples](/en-US/docs/MDN/Writing_guidelines/Page_structure
 
 ## Associated properties
 
-Include either the list of CSS properties that accept the function within the value definition. 
+Include either the list of CSS properties that accept the function within the value definition.
 
 For example:
 
