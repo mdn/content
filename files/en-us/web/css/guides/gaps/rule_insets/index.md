@@ -128,7 +128,7 @@ option {
 
 Try changing the `column-rule-break` and `row-rule-break` properties. The boxes in the demo are laid out using CSS Grid. In this case, the default `normal` keyword behaves as `none`, which causes the gap rules to overlap. Setting `intersection` breaks the lines into segments.
 
-The `normal` keyword also behaves as `none` when applied to gaps in flex containers. However, it behaves as `intersection` in multi-column layouts. 
+The `normal` keyword also behaves as `none` when applied to gaps in flex containers. However, it behaves as `intersection` in multi-column layouts.
 
 The ends of each rule or rule segment can be inset or outset. The rest of this guide describes the different end edges and how to control them.
 
@@ -418,11 +418,11 @@ In addition to the eight longhand properties, there are 15 shorthand properties.
 
 There are shorthand properties that accept a single `<inset-value>`, setting both the cap and junction insets of either the starts or ends of column or row segments to the same value:
 
-- {{cssxref("column-rule-inset-end")}}: Sets both the `column-rule-inset-cap-end` and `column-rule-inset-junction-end` to the same value, defining the bottom insets of all column segments.
+- {{cssxref("column-rule-inset-end")}}: Insets both the `column-rule-inset-cap-end` and `column-rule-inset-junction-end` to the same value, defining the bottom insets of all column segments.
 
-- {{cssxref("column-rule-inset-start")}}: Sets both the `column-rule-inset-cap-start` and `column-rule-inset-junction-start` to the same value, defining the top insets of all column segments.
+- {{cssxref("column-rule-inset-start")}}: Insets both the `column-rule-inset-cap-start` and `column-rule-inset-junction-start` to the same value, defining the top insets of all column segments.
 
-- {{cssxref("row-rule-inset-end")}}: Sets the end inset of all row segments, setting both the `row-rule-inset-cap-end` and `row-rule-inset-junction-end` to the same value.
+- {{cssxref("row-rule-inset-end")}}: Insets the end inset of all row segments, setting both the `row-rule-inset-cap-end` and `row-rule-inset-junction-end` to the same value.
 
 - {{cssxref("row-rule-inset-start")}}: Insets the starts of all row segments, setting both the `row-rule-inset-cap-start` and `row-rule-inset-junction-start` to the same value.
 
@@ -430,13 +430,13 @@ There are shorthand properties that accept a single `<inset-value>`, setting bot
 
 You can use the following shorthands to inset the start and end endpoints of a particular type, in a row or column. The start and end endpoints can be set to the same value or two different values:
 
-- {{cssxref("column-rule-inset-cap")}} shorthand: Specifies both the `column-rule-inset-cap-start` and `column-rule-inset-cap-end` properties. If you specify only one value, both properties are set to that value. If you specify two values, the first sets `column-rule-inset-cap-start` and the second sets `column-rule-inset-cap-end`.
+- {{cssxref("column-rule-inset-cap")}}: Specifies both the `column-rule-inset-cap-start` and `column-rule-inset-cap-end` properties. If you specify only one value, both properties are set to that value. If you specify two values, the first sets `column-rule-inset-cap-start` and the second sets `column-rule-inset-cap-end`.
 
-- {{cssxref("column-rule-inset-junction")}} shorthand: Specifies both the `column-rule-inset-junction-start` and `column-rule-inset-junction-end` properties. If you specify only one value, both properties are set to that value. If you specify two values, the first sets `column-rule-inset-junction-start` and the second sets `column-rule-inset-junction-end`.
+- {{cssxref("column-rule-inset-junction")}}: Specifies both the `column-rule-inset-junction-start` and `column-rule-inset-junction-end` properties. If you specify only one value, both properties are set to that value. If you specify two values, the first sets `column-rule-inset-junction-start` and the second sets `column-rule-inset-junction-end`.
 
-- {{cssxref("row-rule-inset-cap")}} shorthand: Specifies both the `row-rule-inset-cap-start` and `row-rule-inset-cap-end` values. If you specify only one value, both properties are set to that value. If you specify two values, `row-rule-inset-cap-start` is set to the first value and `row-rule-inset-cap-end` to the second.
+- {{cssxref("row-rule-inset-cap")}}: Specifies both the `row-rule-inset-cap-start` and `row-rule-inset-cap-end` values. If you specify only one value, both properties are set to that value. If you specify two values, `row-rule-inset-cap-start` is set to the first value and `row-rule-inset-cap-end` to the second.
 
-- {{cssxref("row-rule-inset-junction")}} shorthand: Specifies both the `row-rule-inset-junction-start` and `row-rule-inset-junction-end` values. If you specify only one value, both properties are set to that value. If you specify two values, the first specifies `row-rule-inset-junction-start` and the second specifies `row-rule-inset-junction-end`.
+- {{cssxref("row-rule-inset-junction")}}: Specifies both the `row-rule-inset-junction-start` and `row-rule-inset-junction-end` values. If you specify only one value, both properties are set to that value. If you specify two values, the first specifies `row-rule-inset-junction-start` and the second specifies `row-rule-inset-junction-end`.
 
 ### Column and row shorthands
 
