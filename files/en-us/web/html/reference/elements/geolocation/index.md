@@ -33,7 +33,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 ## Description
 
-The `<geolocation>` element provides a declarative browser-defined control for sharing location data. In Chrome, for example, the button features a "map pin" icon and intuitive text ("Use location" in English content). It one one of the [permission elements](/en-US/docs/Web/HTML/Guides/Permission_elements).
+The `<geolocation>` element provides a declarative browser-defined control for sharing location data. In Chrome, for example, the button features a "map pin" icon and intuitive text ("Use location" in English content). It is a [permission element](/en-US/docs/Web/HTML/Guides/Permission_elements).
 
 It also allows for intuitive management of user permissions.
 For example, in Chrome, if the user previously denied permission to access location data, or dismissed the permission dialog without making a choice, they are free to press the button again to update their choice.
