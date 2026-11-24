@@ -42,6 +42,14 @@ Sec-Fetch-User: ?1
 
 The value will always be `?1`. When a request is triggered by something other than a user activation, the spec requires browsers to omit the header completely.
 
+## Navigations through a service worker
+
+When a service worker handles a navigation with `event.respondWith(fetch(event.request))`, the request that reaches the server doesn't include `Sec-Fetch-User`, even if the user started the navigation.
+The `Sec-Fetch-Dest` header changes too, as described in [Navigations through a service worker](/en-US/docs/Web/HTTP/Reference/Headers/Sec-Fetch-Dest#navigations_through_a_service_worker).
+
+Navigations that the service worker leaves to the browser keep the header.
+[Opting out of iframe navigations](/en-US/docs/Web/API/FetchEvent#opting_out_of_iframe_navigations) shows how a service worker does this for iframes.
+
 ## Examples
 
 ### Using Sec-Fetch-User

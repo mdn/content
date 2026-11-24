@@ -75,7 +75,8 @@ Servers should ignore this header if it contains any other value.
 - `audioworklet`
   - : The destination is data being fetched for use by an audio worklet. This might originate from a call to {{domxref("Worklet.addModule()", "audioWorklet.addModule()")}}.
 - `document`
-  - : The destination is a document (HTML or XML), and the request is the result of a user-initiated top-level navigation (e.g., resulting from a user clicking a link).
+  - : The destination is a document (HTML or XML), and the request is the result of a top-level navigation.
+    See [Navigations through a service worker](#navigations_through_a_service_worker) for an exception.
 - `embed`
   - : The destination is embedded content. This might originate from an HTML {{HTMLElement("embed")}} tag.
 - `empty`
@@ -120,6 +121,21 @@ Servers should ignore this header if it contains any other value.
   - : The destination is a {{domxref("Worker")}}.
 - `xslt`
   - : The destination is an XSLT transform.
+
+## Navigations through a service worker
+
+When a service worker handles a navigation with `event.respondWith(fetch(event.request))`, the request that reaches the server is a copy made by the {{domxref("Request.Request", "Request()")}} constructor.
+This copy doesn't keep the original destination, so it's sent with `Sec-Fetch-Dest: empty`, for top-level and iframe navigations alike.
+{{HTTPHeader("Sec-Fetch-Mode")}} is still `navigate`.
+
+This means that a server can't rely on `Sec-Fetch-Dest: document` alone to detect top-level navigations when a service worker is involved.
+To keep the two kinds of navigation apart, the service worker should handle only top-level navigations and leave iframe navigations to the browser, as shown in [Opting out of iframe navigations](/en-US/docs/Web/API/FetchEvent#opting_out_of_iframe_navigations).
+The server can then identify navigations like this:
+
+- `Sec-Fetch-Mode: navigate` with `Sec-Fetch-Dest: document` or `empty`
+  - : A top-level navigation.
+- `Sec-Fetch-Mode: navigate` with `Sec-Fetch-Dest: iframe`
+  - : An iframe navigation.
 
 ## Examples
 
