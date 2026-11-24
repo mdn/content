@@ -1,8 +1,8 @@
 ---
-title: Firefox 160 release notes for developers (Stable)
-short-title: Firefox 160 (Stable)
+title: Firefox 160 release notes for developers
+short-title: Firefox 160
 slug: Mozilla/Firefox/Releases/160
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
