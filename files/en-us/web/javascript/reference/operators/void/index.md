@@ -41,6 +41,15 @@ try {
 void expression
 ```
 
+### Parameters
+
+- `expression`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 14 (prefix operators) or above.
+
+### Return value
+
+{{jsxref("undefined")}}.
+
 ## Description
 
 This operator allows evaluating expressions that produce a value into places where an

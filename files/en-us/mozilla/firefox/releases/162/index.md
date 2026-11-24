@@ -1,13 +1,13 @@
 ---
-title: Firefox 162 release notes for developers (Nightly)
-short-title: Firefox 162 (Nightly)
+title: Firefox 162 release notes for developers (Beta)
+short-title: Firefox 162 (Beta)
 slug: Mozilla/Firefox/Releases/162
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 162 that affect developers.
-Firefox 162 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [December 8, 2026](https://whattrainisitnow.com/release/?version=162).
+Firefox 162 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [December 8, 2026](https://whattrainisitnow.com/release/?version=162).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.

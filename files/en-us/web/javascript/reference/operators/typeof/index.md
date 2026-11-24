@@ -33,11 +33,11 @@ typeof operand
 ### Parameters
 
 - `operand`
-  - : An expression representing the object or [primitive](/en-US/docs/Glossary/Primitive) whose type is to be returned.
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 14 (prefix operators) or above representing the object or [primitive](/en-US/docs/Glossary/Primitive) whose type is to be returned.
 
-## Description
+### Return value
 
-The following table summarizes the possible return values of `typeof`. For more information about types and primitives, see also the [JavaScript data structure](/en-US/docs/Web/JavaScript/Guide/Data_structures) page.
+A string indicating the type of `operand`.
 
 | Type                                                                                                                                                                                                     | Result                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
@@ -52,6 +52,8 @@ The following table summarizes the possible return values of `typeof`. For more 
 | Any other object                                                                                                                                                                                         | `"object"`                          |
 
 This list of values is exhaustive. No spec-compliant engines are reported to produce (or had historically produced) values other than those listed.
+
+For more information about types and primitives, see also the [JavaScript data structure](/en-US/docs/Web/JavaScript/Guide/Data_structures) page.
 
 ## Examples
 

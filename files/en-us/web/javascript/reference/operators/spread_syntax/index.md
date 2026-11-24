@@ -34,6 +34,17 @@ myFunction(a, ...iterableObj, b)
 { ...obj, key: 'value' }
 ```
 
+### Parameters
+
+- `iterableObj`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 2 (assignment) or above that evaluates to an [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol).
+- `obj`
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 2 (assignment) or above whose own enumerable properties are copied into the object literal.
+
+### Return value
+
+Spread syntax has no return value of its own. In a call or array literal, each value from `iterableObj` becomes a separate argument or array element. In an object literal, spreading copies property keys and their values from `obj`.
+
 ## Description
 
 Spread syntax can be used when all elements from an object or array need to be included in a new array or object, or should be applied one-by-one in a function call's arguments list. There are three distinct places that accept the spread syntax:
@@ -44,7 +55,7 @@ Spread syntax can be used when all elements from an object or array need to be i
 
 Although the syntax looks the same, they come with slightly different semantics.
 
-Only [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) values, like {{jsxref("Array")}} and {{jsxref("String")}}, can be spread in [array literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals) and argument lists. Many objects are not iterable, including all [plain objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) that lack a [`Symbol.iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method:
+Only [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) values, like {{jsxref("Array")}} and {{jsxref("String")}}, can be spread in [array initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Array_initializer) and argument lists. Many objects are not iterable, including all [plain objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) that lack a [`Symbol.iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method:
 
 ```js example-bad
 const obj = { key1: "value1" };

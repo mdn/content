@@ -37,9 +37,15 @@ prop in object
 ### Parameters
 
 - `prop`
-  - : A string or symbol representing a property name (non-symbols will be [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)). Can also be a [private element identifier](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements).
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 9 (relational operators) or above. Its value is coerced to a property key (a [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) or symbol).
+- `#prop`
+  - : A [private element identifier](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) declared in an enclosing class.
 - `object`
-  - : Object to check if it (or its prototype chain) contains the property with specified name (`prop`).
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 10 (bitwise shift) or above that evaluates to the object to check.
+
+### Return value
+
+A boolean indicating whether `object` has the specified property, either directly or through its prototype chain. The `#prop in object` form checks whether `object` itself has the specified private element.
 
 ### Exceptions
 

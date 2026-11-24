@@ -476,6 +476,74 @@ The {{cssxref("corner-shape")}} shorthand property and its constituent longhand 
 - `layout.css.corner-shape.enabled`
   - : Set to `true` to enable.
 
+### `margin-trim` property
+
+The {{cssxref("margin-trim")}} property is now supported in Nightly for block containers. It removes the block-axis margins of child elements at the container's start edge, end edge, or both, while keeping the margins between siblings.
+([Firefox bug 2051240](https://bugzil.la/2051240)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 161           | No                  |
+| Beta              | 161           | No                  |
+| Release           | 161           | No                  |
+
+- `layout.css.margin-trim.enabled`
+  - : Set to `true` to enable.
+
+### `match-parent` value for `quotes`
+
+The {{cssxref("quotes", "match-parent", "#match-parent")}} value of the {{cssxref("quotes")}} CSS property is now supported in Nightly.
+
+This value makes an element use the same set of quotation-mark pairs as its parent element.
+If the parent's `quotes` value is an explicit list of pairs, the element uses quotation marks from that list.
+If it is `auto`, the element uses the set for the parent element's language.
+The specific pair of opening and closing quotation marks used depends on the nesting level of the quote.
+
+Firefox's default styles for nested {{htmlelement("q")}} elements use this value.
+As a result, a nested quote automatically uses the same quotation style as the outer quote, even when the nested quote is in a different language.
+([Firefox bug 1752382](https://bugzil.la/1752382)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 161           | No                  |
+| Beta              | 161           | No                  |
+| Release           | 161           | No                  |
+
+- `layout.css.quotes.match-parent.enabled`
+  - : Set to `true` to enable.
+
+### `text-autospace-size` property
+
+The {{cssxref("text-autospace-size")}} property is now supported in Nightly. It sets the amount of space that {{cssxref("text-autospace")}} adds between Chinese/Japanese/Korean (CJK) and non-CJK characters.
+([Firefox bug 2086765](https://bugzil.la/2086765)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 161           | No                  |
+| Beta              | 161           | No                  |
+| Release           | 161           | No                  |
+
+- `layout.css.text-autospace-size.enabled`
+  - : Set to `true` to enable.
+
+### `prefers-color-scheme` reflects `<meta name="color-scheme">`
+
+The {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} media feature reflects the color scheme declared by a [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/color-scheme) element, when the element specifies a single scheme. This allows better selection of images and videos by color scheme. It also makes theme switchers easier to implement.
+([Firefox bug 2085572](https://bugzil.la/2085572)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 161           | No                  |
+| Beta              | 161           | No                  |
+| Release           | 161           | No                  |
+
+- `layout.css.prefers-color-scheme.meta-tag.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
@@ -624,36 +692,19 @@ Note that Firefox does not support providing {{domxref("CrashReportContext")}} i
 - `dom.reporting.crash.enabled`
   - : Set to `true` to enable (enabled by default in Nightly).
 
-### CSS Typed Object Model Level 1
+### CSS numeric factory functions exposed in workers and worklets
 
-The [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) is implemented in Nightly.
-This simplifies CSS property manipulation by exposing CSS values as typed JavaScript objects rather than strings.
-([Firefox bug 1278697](https://bugzil.la/1278697)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 154           | Yes                 |
-| Developer Edition | 149           | No                  |
-| Beta              | 149           | No                  |
-| Release           | 149           | No                  |
-
-- `layout.css.typed-om.enabled`
-  - : Set to `true` to enable.
-
-#### CSS numeric factory functions exposed in workers and worklets
-
-The [numeric factory functions](/en-US/docs/Web/API/CSS/factory_functions_static) of the {{domxref("CSS")}} namespace, such as `CSS.px()`, are now exposed in workers and paint worklets, not only on `Window`. They're part of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), so outside Nightly they also need the `layout.css.typed-om.enabled` preference set to `true`. ([Firefox bug 2079188](https://bugzil.la/2079188)).
+The [numeric factory functions](/en-US/docs/Web/API/CSS/factory_functions_static) of the {{domxref("CSS")}} namespace, such as `CSS.px()`, are now exposed in workers and paint worklets, not only on `Window`.
+([Firefox bug 2079188](https://bugzil.la/2079188), [Firefox bug 2079583](https://bugzil.la/2079583)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 159           | No                  |
+| Nightly           | 161           | Yes                 |
 | Developer Edition | 159           | No                  |
 | Beta              | 159           | No                  |
 | Release           | 159           | No                  |
 
 - `layout.css.namespace.exposed-in-workers-and-worklets`
-  - : Set to `true` to enable.
-- `layout.css.typed-om.enabled`
   - : Set to `true` to enable (enabled by default in Nightly).
 
 ### Streaming request bodies
