@@ -82,6 +82,9 @@ p {
   }
 }
 \```
+
+#### Result
+
 {{EmbedLiveSample("increasing_the_spacing", "100%", 120)}}
 
 In browsers that support `text-autospace-size`, the space between "HTML" and the Chinese characters is twice as wide in the second paragraph.
