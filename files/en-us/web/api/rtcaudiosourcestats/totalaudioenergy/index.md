@@ -33,7 +33,7 @@ In the following equation, `sample_level` is the value of the sample, `max_level
 </math>
 <!-- prettier-ignore-end -->
 
-If the audio has more than one channel, as stereo audio does, the energy of a sample is the highest energy of any of its channels.
+If the audio has more than one channel, the energy of a sample is the highest energy of any of its channels.
 
 Because the value is a running total, you can find the energy over a particular period by subtracting the values returned by two different `getStats()` calls.
 You can also use it with {{domxref("RTCAudioSourceStats.totalSamplesDuration", "totalSamplesDuration")}} to calculate the average audio level over the lifetime of the stats object, or between two `getStats()` calls.
