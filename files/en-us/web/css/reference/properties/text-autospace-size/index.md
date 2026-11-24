@@ -57,6 +57,10 @@ This example compares the default size of space with a larger one. Both paragrap
 <p lang="zh" class="wide">HTML超文本标记语言</p>
 ```
 
+#### CSS
+
+We include basic styles for all paragraphs. We set `text-autospace-size` to `0.25`, twice the default value of `0.125` on the `wide` paragraph.
+
 ```css
 p {
   margin: 0;
