@@ -24,7 +24,7 @@ Any user interfaces to control such features were either implemented in the webs
 
 Permission elements solve these problems by creating in-page buttons whose content is specific to a particular powerful feature, that the user can click to start a request. Because the browser controls the element's content and restricts how it can be styled, the click is a clear signal of intent, and the element can be consistent and accessible across sites. Activating it leads to a browser-owned confirmation UI, and because the browser knows the user deliberately engaged with the control, it can offer a straightforward way to recover from a previous denial.
 
-Permission elements also have a [validation](#validation_and_blocking) system that, along with the styling restrictions, safeguards users against abuses such as [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking). For example, the elements cannot be used inside embedded frames, and they are invalidated and therefore inactive if they are obscured by other elements, positioned outside the viewport, or styled in ways that make them hard to understand, such as low-contrast text.
+Permission elements also have a [validation](#validation_and_blocking) system that, along with the styling restrictions, safeguards users against abuses such as [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking). For example, the elements are invalidated and therefore inactive if they are obscured by other elements, positioned outside the viewport, or styled in ways that make them hard to understand, such as low-contrast text.
 
 ## Setting the button language
 
@@ -65,132 +65,96 @@ In the case of an `<install>` element, you might include a message to point to i
 
 One key idea behind the design of permission elements is that they should reflect a user's conscious choice to use the related feature and prevent bad actors from tricking users into activating them, for example, via [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking). Because of this, the browser keeps a record of so-called **blocker** reasons for each rendered element.
 
-- When a permission element has no active blocker, it is **valid** and will function as expected.
-When a permission element has an active blocker, it is **invalid** and therefore prevented from functioning.
+- When a permission element has no blocker, it is **valid** and will function as expected.
+- When a permission element has a blocker, it is **invalid** and therefore prevented from functioning.
 
-You can query whether a permission element is valid or invalid by checking its DOM objects's `isValid` property. If it is invalid, you find its active blocker in the DOM object's `invalidReason` property; see [invalid reasons](#invalid_reasons).
+You can query whether a permission element is valid or invalid by checking its DOM objects's `isValid` property. If it is invalid, you can find its blocker in the DOM object's `invalidReason` property; see [invalid reasons](#invalid_reasons).
 
 The DOM object also has a `validationstatuschange` event, which is fired whenever the permission element's validation status changes. This change is reflected in a change to the `invalidReason` property and, if the element has become valid or invalid, also in a change to the `isValid` property.
 
 ### Invalid reasons
 
-This section details the possible active blocker reasons that can invalidate a permission element. Each description includes a "blocker type" for each invalid reason, which is one of the following:
+This section details the possible reasons that an element may have for being invalid. Each reason has a "blocker lifetime", which is one of the following:
 
-- Permanent
+- **Permanent**
   - : The element is permanently invalid until the developer updates the code to stop the blocker occurring.
-- Temporary
+- **Temporary**
   - : The element is invalid until the blocking condition no longer occurs. After that, the temporary blocker will turn into an expiring blocker.
-- Expiring
+- **Expiring**
   - : The element is invalid for a short period of time, after which it becomes valid again.
 
-#### Reasons applicable to all permission elements
+The invalid reasons are as follows:
 
-- `illegal_subframe`
-  - : The element is nested inside an {{htmlelement("iframe")}} or {{htmlelement("fencedframe")}} element.
-
-    Permanent blocker.
-
-- `unsuccessful_registration`
-  - : Too many elements have been inserted into the same document. The allowed number varies by element and implementation. For example, in Chromium it is 24 for `<install>` elements and 3 for `<geolocation>` elements.
-
-    Temporary blocker.
-
-- `recently_attached`
-  - : The element has only recently been attached to the DOM.
-
-    Expiring blocker.
-
-- `intersection_changed`
-  - : The element is being moved.
-
-    Expiring blocker.
-
-- `intersection_out_of_viewport_or_clipped`
-  - : The element is rendered outside or partially inside the viewport.
-
-    Temporary blocker.
-
-- `intersection_occluded_or_distorted`
-  - : The element is rendered completely inside the viewport, but it is obscured in some way, for example rendered behind other content.
-
-    Temporary blocker.
-
-- `style_invalid`
-  - : The element has some restricted styles applied to it (see [Styling restrictions](#styling_restrictions)).
-
-    Temporary blocker.
-
-#### `<install>`-only reasons
-
-- `illegal_sandbox`
-  - : The `<install>` element's document has active sandbox restrictions, most likely those imposed by the {{httpheader("Content-Security-Policy")}} `sandbox` directive given that `<install>` elements cannot be used inside `<iframe>` elements. Currently, any remaining sandbox restriction prevents installation, regardless of which capability it restricts.
-
-    Permanent blocker.
+| Reason                                  | Description                                                                                                                                                                                                                                                                                                                                                                       | Lifetime  |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| illegal_subframe                        | (`<install>` only) The element is nested inside an {{htmlelement("iframe")}} or {{htmlelement("fencedframe")}} element.                                                                                                                                                                                                                                                           | Permanent |
+| illegal_sandbox                         | (`<install>` only) The `<install>` element's document has active sandbox restrictions, most likely those imposed by the {{httpheader("Content-Security-Policy")}} `sandbox` directive given that `<install>` elements cannot be used inside `<iframe>` elements. Currently, any remaining sandbox restriction prevents installation, regardless of which capability it restricts. | Permanent |
+| intersection_changed                    | The element is being moved.                                                                                                                                                                                                                                                                                                                                                       | Expiring  |
+| intersection_occluded_or_distorted      | The element is rendered completely inside the viewport, but it is obscured in some way, for example rendered behind other content.                                                                                                                                                                                                                                                | Temporary |
+| intersection_out_of_viewport_or_clipped | The element is rendered outside or partially inside the viewport.                                                                                                                                                                                                                                                                                                                 | Temporary |
+| recently_attached                       | The element has only recently been attached to the DOM.                                                                                                                                                                                                                                                                                                                           | Expiring  |
+| style_invalid                           | The element has some restricted styles applied to it (see [Styling restrictions](#styling_restrictions)).                                                                                                                                                                                                                                                                         | Temporary |
+| unsuccessful_registration               | Too many elements have been inserted into the same document. The allowed number varies by element and implementation. For example, in Chromium it is 24 for `<install>` elements and 3 for `<geolocation>` elements.                                                                                                                                                              | Temporary |
 
 ## Styling restrictions
 
-Permission elements have several constraints on the CSS styles that can be applied to them. Some of these constraints are designed to enforce fundamental accessibility, and will result in the button being invalidated if they are not adhered to. Some enforce certain values or value ranges for various properties.
+Permission elements have several constraints on the CSS styles that can be applied to them, which fall into the following categories:
 
-Any properties that are not listed in the following sub-sections, or logically equivalent to a physical property listed in the following sub-sections, are ignored when set on permission elements.
+- [**Styles that invalidate the element**](#styles_that_invalidate_the_element)
+  - : The element is invalidated with the reason `style_invalid` when these constraints are not adhered to, to enforce fundamental accessibility.
+- [**Styles constrained to a specific value or range**](#styles_constrained_to_a_specific_value_or_range)
+  - : These constraints are applied automatically for certain properties, to aid with accessibility and enforce a certain look and feel.
+- [**Styles that can be freely applied**](#styles_that_can_be_freely_applied)
+  - : No constraints are applied to the properties listed in this section.
+- **Styles that are ignored**
+  - : Any properties not listed in the following sub-sections, or logically equivalent to a physical property listed in the following sub-sections, are ignored when set on permission elements.
 
-### Accessibility restrictions
+### Styles that invalidate the element
 
-A rendered permission element button is invalidated if the following constraints are not adhered to:
+A rendered permission element button is invalidated if the following constraints are not adhered to, for accessibility reasons:
 
 - The [color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast) ratio between {{cssxref("color")}} and {{cssxref("background-color")}} must be at least 3:1.
-- The {{cssxref("font-size")}} must not be smaller than the `small` value (in the case of keyword values), or its computed value (in the case of other value types).
+- If {{cssxref("font-size")}} is expressed as a [relative size keyword](/en-US/docs/Web/CSS/Reference/Properties/font-size#larger), it must resolve to a value between `small` and `xx-large`. Otherwise, its computed value must be larger than or equal to the computed value for `small` and less than or equal to the computed value for `xx-large`.
 
-### Value constraints
+### Styles constrained to a specific value or range
 
 The following CSS property value constraints are applied to permission elements. If an attempt is made to set these properties to values outside the listed constraints, the value is adjusted to equal the constraint (in the case of an exact value constraint) or to equal to nearest computed value upper or lower bound (in the case of a range constraint).
 
-- {{cssxref("opacity")}}
-  - : `1.0`
-- {{cssxref("line-height")}}
-  - : `normal`
-- {{cssxref("white-space")}}
-  - : `nowrap`
-- {{cssxref("user-select")}}
-  - : `none`
-- {{cssxref("appearance")}}
-  - : `auto`
-- {{cssxref("box-sizing")}}
-  - : `content-box`
-- {{cssxref("vertical-align")}}
-  - : `middle`
-- {{cssxref("text-emphasis")}}
-  - : `initial`
-- {{cssxref("text-shadow")}}
-  - : `initial`
-- {{cssxref("outline-offset")}}
-  - : `0` or greater.
-- {{cssxref("font-weight")}}
-  - : `200` or greater.
-- {{cssxref("word-spacing")}}
-  - : Between `0` and `0.5em`, inclusive.
-- {{cssxref("letter-spacing")}}
-  - : Between `-0.05em` and `0.2em`, inclusive.
-- {{cssxref("letter-spacing")}}
-  - : Between `-0.05em` and `0.2em`, inclusive.
-- {{cssxref("min-height")}}
-  - : `1em` or greater.
-- {{cssxref("max-height")}}
-  - : `3em` or less. `none` is an accepted value.
-- {{cssxref("min-width")}}
-  - : The computed value of `fit-content` or less.
-- {{cssxref("border-width")}}
-  - : `1em` or less.
+| Property                      | Constraint                                   |
+| ----------------------------- | -------------------------------------------- |
+| {{cssxref("appearance")}}     | `auto !important`                            |
+| {{cssxref("border-width")}}   | `1em` or less.                               |
+| {{cssxref("box-sizing")}}     | `content-box !important`                     |
+| {{cssxref("cursor")}}         | `not-allowed` is treated as `pointer`        |
+| {{cssxref("display")}}        | `none` is treated as `inline-block`          |
+| {{cssxref("font-style")}}     | `italic` is treated as `normal`              |
+| {{cssxref("font-weight")}}    | `200` or greater.                            |
+| {{cssxref("letter-spacing")}} | Between `-0.05em` and `0.2em`, inclusive.    |
+| {{cssxref("line-height")}}    | `normal !important`                          |
+| {{cssxref("max-height")}}     | `3em` or less.                               |
+| {{cssxref("min-height")}}     | `1em` or greater.                            |
+| {{cssxref("min-width")}}      | The computed value of `fit-content` or less. |
+| {{cssxref("opacity")}}        | `1.0`                                        |
+| {{cssxref("outline-offset")}} | `0` or greater.                              |
+| {{cssxref("text-emphasis")}}  | `initial !important`                         |
+| {{cssxref("text-shadow")}}    | `initial !important`                         |
+| {{cssxref("user-select")}}    | `none !important`                            |
+| {{cssxref("vertical-align")}} | `middle !important`                          |
+| {{cssxref("white-space")}}    | `nowrap !important`                          |
+| {{cssxref("word-spacing")}}   | Between `0` and `0.5em`, inclusive.          |
 
-### Complex constraints
+#### Complex constraints
 
-The following value constraints are also applied to permission elements; these are more complex than the basic [value constraints](#value_constraints):
+The following complex value constraints are also applied to permission elements:
 
-- Block direction padding
+- **Block direction padding**
   - : If the {{cssxref("block-size")}} is set to `auto`, the {{cssxref("padding-block-start")}} and {{cssxref("padding-block-end")}} (and equivalent physical properties for the current [writing mode](/en-US/docs/Web/CSS/Reference/Properties/writing-mode)) are constrained to a maximum of `1em` and must be equal.
-- Inline direction padding
+- **Inline direction padding**
   - : If the {{cssxref("inline-size")}} is set to `auto`, the {{cssxref("padding-inline-start")}} and {{cssxref("padding-inline-end")}} (and equivalent physical properties for the current [writing mode](/en-US/docs/Web/CSS/Reference/Properties/writing-mode)) are constrained to a maximum of `5em` and must be equal.
+- **Maximum width constraint**
+  - : If the element does not have a `border-width` of at least `1`, a color contrast ratio between `color` and `background-color` of at least 3:1, and an alpha channel value of `1`, constrain its `max-width` to three times its content width or less.
 
-### Properties that can be set normally
+### Styles that can be freely applied
 
 The following CSS properties can be used normally:
 
@@ -249,4 +213,4 @@ Permission elements have an accessible name written in the [language they are se
 
 In addition, permission elements have a default [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) value of `0`, so they behave like real `<button>` elements with respect to keyboard focus.
 
-Finally, refer back to the [Accessibility restrictions](#accessibility_restrictions) section for information on styling constraints applied to permission elements to enforce fundamental accessibility requirements.
+Finally, certain CSS styling constraints invalidate permission elements when not adhered to, to enforce fundamental accessibility requirements. See [styles that invalidate the element](#styles_that_invalidate_the_element).
