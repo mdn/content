@@ -51,6 +51,7 @@ The value is a non-negative `<number>` specifying the the size of the space adde
 ### Increasing the spacing
 
 This example compares the default size of space with a larger one. Both paragraphs set {{cssxref("text-autospace")}} to `normal` to add spacing between the Chinese and Latin characters, and the second one doubles it with `text-autospace-size`.
+
 #### HTML
 
 We include two paragraphs containing the same text with both ideographic and non-ideographic characters.
