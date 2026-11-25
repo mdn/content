@@ -21,29 +21,37 @@ The {{HTMLElement("details")}} element along with its [`name`](/en-US/docs/Web/H
 <article class="accordion">
   <!-- First item -->
   <details class="accordion-item" name="myAccordion" open>
-    <summary class="accordion-header">
-      Accordion Item #1
-    </summary>
+    <summary class="accordion-header">Accordion Item #1</summary>
     <div class="accordion-body">
-      <p><strong>This is the first accordion item.</strong> It is visible by default because the <code>open</code> attribute is present. The native <code>&lt;details&gt;</code> element handles all the visibility logic.</p>
+      <p>
+        <strong>This is the first accordion item.</strong> It is visible by
+        default because the <code>open</code> attribute is present. The native
+        <code>&lt;details&gt;</code> element handles all the visibility logic.
+      </p>
     </div>
   </details>
   <!-- Second item -->
   <details class="accordion-item" name="myAccordion">
-    <summary class="accordion-header">
-      Accordion Item #2
-    </summary>
+    <summary class="accordion-header">Accordion Item #2</summary>
     <div class="accordion-body">
-      <p><strong>This is the second accordion item.</strong> The <code>name</code> attribute groups this with other accordion items. It also ensures that all other accordion items remain closed whenever this item is open.</p>
+      <p>
+        <strong>This is the second accordion item.</strong> The
+        <code>name</code> attribute groups this with other accordion items. It
+        also ensures that all other accordion items remain closed whenever this
+        item is open.
+      </p>
     </div>
   </details>
   <!-- Third item -->
   <details class="accordion-item" name="myAccordion">
-    <summary class="accordion-header">
-      Accordion Item #3
-    </summary>
+    <summary class="accordion-header">Accordion Item #3</summary>
     <div class="accordion-body">
-      <p><strong>This is the third accordion item.</strong> Such unique behavior is achievable using only HTML and CSS! Just keep grouping the <code>&lt;details&gt;</code> element and <code>name</code> attribute together until you get what you want!</p>
+      <p>
+        <strong>This is the third accordion item.</strong> Such unique behavior
+        is achievable using only HTML and CSS! Just keep grouping the
+        <code>&lt;details&gt;</code> element and <code>name</code> attribute
+        together until you get what you want!
+      </p>
     </div>
   </details>
 </article>
