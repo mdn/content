@@ -47,7 +47,7 @@ Use the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute
   type="month"
   name="bday-month"
   value="2001-06"
-  pattern="[0-1]\d-\d{4}" />
+  pattern="[0-9]{4}-[0-9]{2}" />
 ```
 
 {{EmbedLiveSample('Setting_a_default_value', 600, 60)}}
