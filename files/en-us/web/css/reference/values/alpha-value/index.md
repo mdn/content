@@ -47,17 +47,17 @@ This data type is accepted as a parameter in the following CSS functions:
 This data type is specified as one of the following values:
 
 - {{cssxref("number")}}
-  - : A positive value between `0` to `1`, inclusive
+  - : A positive value between `0` and `1`, inclusive
 - {{cssxref("percentage")}}
-  - : A `<percentage>` between `0%` to `100%`, inclusive.
+  - : A `<percentage>` between `0%` and `100%`, inclusive.
 
 Values outside the ranges, though valid, are clamped to the nearest limit in the range.
 
 ## Description
 
-The value of an `<alpha-value>` is given as either a {{cssxref("number")}} or a {{cssxref("percentage")}}.
+An `<alpha-value>` is given as either a {{cssxref("number")}} or a {{cssxref("percentage")}}.
 
-If given as a number, the useful range is `0` (fully transparent) to `1.0` (fully opaque), with decimal values in between. For example, `0.`5 indicates that half of the foreground color is used and half of the background color is used. Values outside the range of `0` to `1` are permitted, but are clamped to the range of `0` to `1`.
+If given as a number, the useful range is `0` (fully transparent) to `1.0` (fully opaque), with decimal values in between. For example, `0.5` indicates that half of the foreground color is used and half of the background color is used. Values outside the range of `0` to `1` are permitted, but are clamped to the range of `0` to `1`.
 
 If the alpha value is given as a percentage, `0%` corresponds to fully transparent while `100%` indicates fully opaque.
 
@@ -73,7 +73,7 @@ When animated, values of the `<alpha-value>` CSS data type are {{Glossary("inter
 
 ### Setting text color opacity
 
-The example demonstrates applying a color with `60%` opacity using the `<alpha-value>` as a parameter within a {{cssxref("rgb()")}} function, which accepts an optional fourth parameter specifying an alpha value:
+The example demonstrates applying a color with `60%` opacity using the `<alpha-value>` as a parameter within an {{cssxref("rgb()")}} function, which accepts an optional fourth parameter specifying an alpha value:
 
 ```css
 /* <rgb()> */
