@@ -34,7 +34,7 @@ label {
 
 ## Value
 
-A string representing the month and year entered in the input, in the form `YYYY-MM` (a four-digit year, then a hyphen (`-`), followed by the two-digit [month](/en-US/docs/Web/HTML/Guides/Date_and_time_formats#month_strings)).
+A string representing the month and year entered in the input, in the form `YYYY-MM` (a four-digit year, then a hyphen (`-`), followed by the two-digit month. See [month strings](/en-US/docs/Web/HTML/Guides/Date_and_time_formats#month_strings)).
 
 ### Setting a default value
 
