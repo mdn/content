@@ -38,7 +38,7 @@ A string representing the month and year entered in the input, in the form `YYYY
 
 ### Setting a default value
 
-Setting the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute value in the `YYYY-MM` format sets a default value for the `<input>`. When the user interacts with the control, the calendar opens to the value set. The `pattern` attribute has been added for non-supporting browsers:
+Use the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute to set a default value, as in the following example. When the user interacts with the control, the calendar opens to the value set. The `pattern` attribute has also been included for [non-supporting browsers](#handling_browser_support).
 
 ```html
 <label for="bday-month">What month were you born in?</label>
