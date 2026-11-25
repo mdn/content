@@ -52,9 +52,37 @@ void main() {
 
 ### Varyings
 
-**Varyings** are variables that are declared by the vertex shader and used to pass data from the vertex shader to the fragment shader. This is commonly used to share a vertex's [normal vector](<https://en.wikipedia.org/wiki/Normal_(geometry)>) after it has been computed by the vertex shader.
+**Varyings** are variables that are used to pass data from the vertex shader to the fragment shader. This is commonly used to share a vertex's [normal vector](<https://en.wikipedia.org/wiki/Normal_(geometry)>) after it has been computed by the vertex shader.
 
-<\<how to use>>
+A varying is declared in both shaders with the same name and type; otherwise, the program fails to link. The vertex shader writes a value to it for each vertex. The fragment shader can only read it, and the value it gets for each fragment is interpolated between the vertices of the primitive being drawn.
+
+In the following example, the vertex shader copies the color of each vertex from the `aVertexColor` [attribute](#attributes) into the `vColor` varying:
+
+```glsl
+// Vertex shader
+attribute vec2 aVertexPosition;
+attribute vec4 aVertexColor;
+
+varying vec4 vColor;
+
+void main() {
+  gl_Position = vec4(aVertexPosition, 0.0, 1.0);
+  vColor = aVertexColor;
+}
+```
+
+```glsl
+// Fragment shader
+precision mediump float;
+
+varying vec4 vColor;
+
+void main() {
+  gl_FragColor = vColor;
+}
+```
+
+Because the colors are interpolated, a triangle with a red, a green, and a blue vertex is drawn with smooth color gradients between its corners.
 
 ### Uniforms
 
