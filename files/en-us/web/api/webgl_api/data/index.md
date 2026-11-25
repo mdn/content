@@ -64,7 +64,36 @@ void main() {
 
 ## Buffers
 
-<\<add information>>
+A {{domxref("WebGLBuffer")}} is a block of memory on the GPU. JavaScript usually fills it once with a typed array such as {{jsxref("Float32Array")}}. When drawing, the GPU reads directly from the buffer, without JavaScript having to send the data again for each draw call. Buffers typically hold per-vertex values such as positions, colors, normals, and texture coordinates.
+
+To use a buffer, create it with {{domxref("WebGLRenderingContext.createBuffer()", "createBuffer()")}}, bind it to a target such as `gl.ARRAY_BUFFER`
+with {{domxref("WebGLRenderingContext.bindBuffer()", "bindBuffer()")}}, and fill it with {{domxref("WebGLRenderingContext.bufferData()", "bufferData()")}}.
+
+```js
+// prettier-ignore
+// x and y positions of the 3 vertices
+const positions = new Float32Array([
+  0.0, 0.8,   // top
+  -0.8, -0.8, // bottom left
+  0.8, -0.8,  // bottom right
+]);
+
+// create the buffer and store the position data
+const positionBuffer = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+gl.bufferData(gl.ARRAY_BUFFER, positions, gl.STATIC_DRAW);
+
+const positionLocation = gl.getAttribLocation(program, "aVertexPosition");
+// reads 2 values from the buffer currently bound to ARRAY_BUFFER
+gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
+gl.enableVertexAttribArray(positionLocation);
+
+gl.drawArrays(gl.TRIANGLES, 0, 3);
+```
+
+{{domxref("WebGLRenderingContext.vertexAttribPointer()", "vertexAttribPointer()")}} connects the attribute to the buffer that is currently bound to `gl.ARRAY_BUFFER`. The second argument sets how many values the attribute reads per vertex: two here, for x and y. After that call, you can bind a different buffer without affecting the attribute. The [attributes](#attributes) example above uses the same pattern with its own color buffer.
+
+The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) shows more ways to use buffers, for example to store texture coordinates or vertex indices.
 
 ## Textures
 
