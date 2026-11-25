@@ -58,9 +58,31 @@ void main() {
 
 ### Uniforms
 
-**Uniforms** are set by the JavaScript code and are available to both the vertex and fragment shaders. They're used to provide values that will be the same for everything drawn in the frame, such as lighting positions and magnitudes, global transformation and perspective details, and so forth.
+**Uniforms** are set by the JavaScript code and are available to both the vertex and fragment shaders. Shaders can only read them. They're used to provide values that are the same for all vertices and fragments in a single draw call, such as lighting positions and magnitudes, transformation matrices, and so forth.
 
-<\<add details>>
+The following fragment shader extends the one from the [varyings](#varyings) example with a `uBrightness` uniform that darkens every color by the same factor:
+
+```glsl
+// Fragment shader
+precision mediump float;
+
+uniform float uBrightness;
+
+varying vec4 vColor;
+
+void main() {
+  gl_FragColor = vec4(vColor.rgb * uBrightness, vColor.a);
+}
+```
+
+```js
+gl.useProgram(program);
+
+const brightnessLocation = gl.getUniformLocation(program, "uBrightness");
+gl.uniform1f(brightnessLocation, 0.5);
+```
+
+Uniform values belong to a shader program, and {{domxref("WebGLRenderingContext.uniform()", "uniform1f()")}} sets the value in the program that is currently in use. That's why the example calls {{domxref("WebGLRenderingContext.useProgram()", "useProgram()")}} first. A uniform keeps its value until you change it, so you can update it between two draw calls, for example to draw several objects with different transformations. The sampler that reads a [texture](#textures) is also a uniform.
 
 ## Buffers
 
