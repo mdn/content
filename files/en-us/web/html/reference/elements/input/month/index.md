@@ -111,7 +111,7 @@ Date-related inputs (including `month`) normalize the data format sent to the se
 The most basic use of `<input type="month">` involves a basic {{HTMLElement("input")}} and {{htmlelement("label")}} element combination, as seen below:
 
 ```html
-<label for="bday-month">What month were you born in?</label>
+<label for="bday-month">What month were you born?</label>
 <input id="bday-month" type="month" name="bday-month" />
 ```
 
@@ -239,10 +239,10 @@ For example, try viewing the following demo in a browser that doesn't support `m
       id="month"
       type="month"
       name="month"
-      min="2022-06"
-      max="2022-09"
+      min="2029-06"
+      max="2029-09"
       required
-      pattern="20[2-9]{2}-[0-9]{2}"
+      pattern="2029-0[6-9]"
       placeholder="YYYY-MM" />
     <span class="validity"></span>
   </div>
@@ -260,7 +260,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
 
 {{ EmbedLiveSample('Handling_browser_support', 600, 100) }}
 
-If you try submitting it, the browser displays an error message (and highlights the input as invalid) if your entry doesn't match the pattern `20nn-nn`, where `n` is a number from `0` to `9`. This doesn't prevent people from entering invalid values that follow the pattern, such as `2099-42`.
+If you try submitting it, the browser displays an error message (and highlights the input as invalid) if your entry doesn't match the pattern `2029-0n`, where `n` is a number from `6` to `9`. This doesn't prevent people from entering invalid values that follow the pattern, such as `2099-42`, but the value won't validate, and the user has no way of knowing the strict limits placed on the values allowed.
 
 ```css hidden
 div {
@@ -371,7 +371,7 @@ input:valid + span::after {
 The JavaScript code that handles selecting which approach to use and to set up the list of years to include in the non-native year `<select>` follows.
 
 The part of the example that may be of most interest is the feature detection code.
-To detect whether the browser supports `<input type="month">`, we create a new {{htmlelement("input")}} element, set its `type` to `month`, then immediately check what its type is.
+To detect whether the browser supports `<input type="month">`, we create a new {{htmlelement("input")}} element, set its `type` to `month`, then immediately check its type.
 Browsers that don't support type `month` will return `text`, since that's what month falls back to when not supported.
 If `<input type="month">` is not supported, we hide the native picker and show the fallback picker UI instead.
 
@@ -410,10 +410,10 @@ function populateYears() {
   const date = new Date();
   const year = date.getFullYear();
 
-  // Make this year, and the 100 years before it available in the year <select>
+  // Make this year, and the 100 years after it available in the year <select>
   for (let i = 0; i <= 100; i++) {
     const option = document.createElement("option");
-    option.textContent = year - i;
+    option.textContent = year + i;
     yearSelect.appendChild(option);
   }
 }
