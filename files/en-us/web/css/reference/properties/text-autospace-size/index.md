@@ -34,7 +34,7 @@ This property is specified as one value:
 
 ## Description
 
-The `text-autospace-size` property defines the size of space added between Chinese/Japanese/Korean (CJK) characters and non-CJK letters and numbers by the {{cssxref("text-autospace")}} property It only has an effect when the browser adds spacing between ideographs and non-ideographic letters or numbers, which occurs as long as `text-autospace` is not set to `no-autospace`. The value doesn't affecgt the spacing added around punctuation.
+The `text-autospace-size` property defines the size of space added between Chinese/Japanese/Korean (CJK) characters and non-CJK letters and numbers by the {{cssxref("text-autospace")}} property. It only has an effect when the browser adds spacing between ideographs and non-ideographic letters or numbers, which occurs as long as `text-autospace` is not set to `no-autospace`. The value doesn't affecgt the spacing added around punctuation.
 
 The value is a non-negative `<number>` specifying the the size of the space added relative to the size of an ideograph. For example, the initial value is `0.125`, which adds `0.125ic`, one-eighth of an ideograph between the ideograph and non-ideographic letters or numbers. Negative values are invalid and `0` adds no space.
 
