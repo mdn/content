@@ -52,7 +52,7 @@ Use the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute
 
 {{EmbedLiveSample('Setting_a_default_value', 600, 60)}}
 
-The value will appear as `bday-month=1978-06` when submitted to the server.
+The value will appear as `bday-month=2001-06` when submitted to the server.
 
 Most {{Glossary("user agent", "user agents")}} display the month and year in a locale-appropriate format, based on the user's operating system locale. While the displayed date format may differ by locale, the actual `value` is always in the format `YYYY-MM`.
 
