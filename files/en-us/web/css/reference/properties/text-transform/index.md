@@ -225,7 +225,7 @@ strong {
 }
 ```
 
-This demonstrates how initial punctuations of a word are ignored. The keyword target the first letter, that is the first Unicode character part of the Letter or Number general category.
+This demonstrates how initial punctuation marks of a word are ignored. The keyword targets the first letter, that is the first Unicode character part of the Letter or Number general category.
 
 {{ EmbedLiveSample('Example using "capitalize" (punctuation)', '100%', '100px') }}
 
