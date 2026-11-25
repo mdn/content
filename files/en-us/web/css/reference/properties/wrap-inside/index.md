@@ -156,7 +156,7 @@ p {
 
 {{EmbedLiveSample("Basic usage", "", 200)}}
 
-In the first box, the browser breaks lines wherever they fit, so the date may be split across two lines.
+In the first box, the browser breaks lines when needed, so the date may be split across two lines.
 
 In the second box, the browser avoids breaking inside the date. Instead, it breaks the line before the date, so the whole date appears on one line.
 
