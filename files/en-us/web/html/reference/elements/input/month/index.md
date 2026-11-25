@@ -225,7 +225,7 @@ input:valid + span::after {
 
 ## Handling browser support
 
-The control's UI varies by browser and is generally presented as either a calendar-like grid or two wheel pickers. If a browser doesn't support the `month` input, the control degrades gracefully to [`<input type="text">`](/en-US/docs/Web/HTML/Reference/Elements/input/text), but without the automatic validation of the `yyyy-mm` format that is expected. For this reason, you can include the [`pattern`](/en-US/docs/Web/HTML/Reference/Elements/input#pattern) attribute to limit the values the text input will accept. 
+The control's UI varies by browser and is generally presented as either a calendar-like grid or two wheel pickers. If a browser doesn't support the `month` input, the control degrades gracefully to [`<input type="text">`](/en-US/docs/Web/HTML/Reference/Elements/input/text), but without the automatic validation of the `yyyy-mm` format that is expected. For this reason, you can include the [`pattern`](/en-US/docs/Web/HTML/Reference/Elements/input#pattern) attribute to limit the values the text input will accept.
 When supported, the `month` input doesn't use the `pattern` attribute, but if the browser falls back to a `text` input, it uses `pattern`, hinting to the user the date format expected via the `placeholder` attribute.
 For example, try viewing the following demo in a browser that doesn't support `month` inputs:
 
@@ -297,7 +297,7 @@ In this example, we create two sets of UI elements, each designed to let the use
 
 ### HTML
 
-The form that requests the month and year. 
+The form that requests the month and year.
 The first is a native `month` input, and the other is a pair of {{HTMLElement("select")}} elements that let users choose a month and year independently, for compatibility with browsers that don't yet support `<input type="month">`.
 
 ```html
@@ -308,27 +308,27 @@ The first is a native `month` input, and the other is a pair of {{HTMLElement("s
     <span class="validity"></span>
   </div>
   <fieldset class="fallbackDatePicker">
-   <legend>What month would you like to visit us?</legend>
+    <legend>What month would you like to visit us?</legend>
     <p>
-        <label for="month">Month:</label>
-        <select id="month" name="month">
-          <option selected value="01">January</option>
-          <option value="02">February</option>
-          <option value="03">March</option>
-          <option value="04">April</option>
-          <option value="05">May</option>
-          <option value="06">June</option>
-          <option value="07">July</option>
-          <option value="08">August</option>
-          <option value="09">September</option>
-          <option value="10">October</option>
-          <option value="11">November</option>
-          <option value="12">December</option>
-        </select>
+      <label for="month">Month:</label>
+      <select id="month" name="month">
+        <option selected value="01">January</option>
+        <option value="02">February</option>
+        <option value="03">March</option>
+        <option value="04">April</option>
+        <option value="05">May</option>
+        <option value="06">June</option>
+        <option value="07">July</option>
+        <option value="08">August</option>
+        <option value="09">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+      </select>
+    </p>
     <p>
-    <p>
-        <label for="year">Year:</label>
-        <select id="year" name="year"></select>
+      <label for="year">Year:</label>
+      <select id="year" name="year"></select>
     </p>
   </fieldset>
 </form>
