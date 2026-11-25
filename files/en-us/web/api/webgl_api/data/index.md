@@ -18,21 +18,20 @@ There are three kinds of "variable" or data storage available in GLSL, each of w
 
 ### Attributes
 
-**Attributes** are GLSL variables which are only available to the vertex shader (as variables) and the JavaScript code. Attributes are typically used to store color information, texture coordinates, and any other data calculated or retrieved that needs to be shared between the JavaScript code and the vertex shader.
+**Attributes** are GLSL variables that pass data to the vertex shader on a per-vertex basis: each vertex gets its own value. Only the vertex shader can declare attributes, and it can only read them. Attributes are typically used for vertex positions, colors, normals, and texture coordinates.
+
+The JavaScript code usually supplies an attribute's values in a [buffer](#buffers). In the following example, the color of each vertex is stored in a buffer and connected to the `aVertexColor` attribute:
 
 ```js
-// init colors
+// one RGBA color per vertex
 // prettier-ignore
 const colors = new Float32Array([
   1.0, 0.0, 0.0, 1.0, // red
   0.0, 1.0, 0.0, 1.0, // green
   0.0, 0.0, 1.0, 1.0, // blue
 ]);
-```
 
-```js
-// continued
-// create buffer to store colors and reference it to "aVertexColor" which is in GLSL
+// store the colors in a buffer and connect it to the aVertexColor attribute
 const colorBuffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
 gl.bufferData(gl.ARRAY_BUFFER, colors, gl.STATIC_DRAW);
@@ -41,7 +40,10 @@ gl.vertexAttribPointer(colorLocation, 4, gl.FLOAT, false, 0, 0);
 gl.enableVertexAttribArray(colorLocation);
 ```
 
+The vertex shader declares the attribute and reads its value. Here, it passes the color on to the fragment shader through the `vColor` [varying](#varyings):
+
 ```glsl
+// Vertex shader
 attribute vec4 aVertexColor;
 varying vec4 vColor;
 
