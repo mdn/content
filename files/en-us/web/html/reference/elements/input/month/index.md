@@ -172,8 +172,8 @@ This example includes minimum and maximum dates and makes the field required:
       id="month"
       type="month"
       name="month"
-      min="2022-06"
-      max="2022-09"
+      min="2029-06"
+      max="2029-09"
       required />
     <span class="validity"></span>
   </div>
@@ -260,7 +260,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
 
 {{ EmbedLiveSample('Handling_browser_support', 600, 100) }}
 
-If you try submitting it, the browser displays an error message (and highlights the input as invalid) if your entry doesn't match the pattern `2029-0n`, where `n` is a number from `6` to `9`. This doesn't prevent people from entering invalid values that follow the pattern, such as `2099-42`, but the value won't validate, and the user has no way of knowing the strict limits placed on the values allowed.
+If you try submitting it, the browser displays an error message (and highlights the input as invalid) if your entry doesn't match the pattern `2029-0n`, where `n` is a number from `6` to `9`. This doesn't prevent people from entering invalid values that follow the pattern, such as `2099-42`, but the value won't validate, and the user has no way of knowing the strict limits on allowed values.
 
 ```css hidden
 div {
