@@ -57,18 +57,16 @@ This data type is specified as the name of a hue interpolation algorithm followe
 The `<hue-interpolation-method>` data type specifies the algorithm used for interpolation between {{cssxref("hue")}} values. The interpolation method specifies how to find a midpoint between two hue values based on a color wheel.
 It is used as a component of the {{CSSXref("&lt;color-interpolation-method&gt;")}} data type.
 
-When interpolating `<hue>` values, the hue interpolation algorithm defaults to [`shorter`](#shorter).
-
-A `<hue-interpolation-method>` value consists of the name of a hue interpolation algorithm, either `longer`, `shorter`, `increase` or `decrease` followed by a literal token `hue`:
-
-Any pair of hue angles correspond to two radii on the {{Glossary("color wheel")}}, which cut the circumference into two possible arcs for interpolation. Both arcs start at the first radius and end at the second radius, but one goes clockwise and the other goes counterclockwise.
-
-> [!NOTE]
-> The following descriptions and illustrations are based on color wheels in which hue angles increase in a clockwise direction. Be aware that there are color wheels where an increase in angles will be a counterclockwise operation.
+A `<hue-interpolation-method>` value consists of the name of a hue interpolation algorithm, either `longer`, `shorter`, `increase` or `decrease` followed by a literal token `hue`. When interpolating `<hue>` values, the hue interpolation algorithm defaults to [`shorter`](#shorter).
 
 ### Hue algorithms
 
+Any pair of hue angles correspond to two radii on the {{Glossary("color wheel")}}, which cut the circumference into two possible arcs for interpolation. Both arcs start at the first radius and end at the second radius, but one goes clockwise and the other goes counterclockwise.
+
 For a pair of hue angles `θ1` and `θ2` normalized to the range `[0deg, 360deg)`, there are four algorithms to determine which arc is used when interpolating from `θ1` to `θ2`.
+
+> [!NOTE]
+> The following descriptions and illustrations are based on color wheels in which hue angles increase in a clockwise direction. Be aware that there are color wheels where an increase in angles will be a counterclockwise operation.
 
 #### Shorter hue
 

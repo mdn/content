@@ -32,17 +32,20 @@ This data type is also accepted as a parameter of the following CSS functions:
 The `<color-interpolation-method>` specifies whether interpolation should use a rectangular color space or a polar color space with an optional hue interpolation method:
 
 ```plain
-/* <rectangular-color-space> */
+/* in <rectangular-color-space> */
 in srgb
 in oklab
 
-/* <polar-color-space> */
+/* in <polar-color-space> */
 in hsl
 in oklch
 
-/* <polar-color-space> with <hue-interpolation-method> */
+/* in <polar-color-space> (with <hue-interpolation-method>) */
 in lch shorter hue
 in oklch increasing hue
+
+/* in <custom-color-space> */
+in --myColorSpace
 ```
 
 ### Values
@@ -61,12 +64,16 @@ in oklch increasing hue
 
 ## Description
 
-The `<color-interpolation-method>` data type defines the [color space](/en-US/docs/Glossary/Color_space) used for interpolation between {{CSSXref("&lt;color&gt;")}} values, specifying whether interpolation should use a rectangular color space or a polar color space with an optional {{cssxref("hue-interpolation-method")}}:
+The `<color-interpolation-method>` data type defines the [color space](/en-US/docs/Glossary/Color_space) used for interpolation between {{CSSXref("&lt;color&gt;")}} values, specifying whether interpolation should use a rectangular color space or a polar color space with an optional {{cssxref("hue-interpolation-method")}}. Using the data type within the {{cssxref("color-mix()")}} function as an example:
 
 ```plain
-in <rectangular-color-space>
-// or
-in <polar-color-space>[ <hue-interpolation-method>]
+/* in <rectangular-color-space> */
+color-mix(in srgb, plum, #123456)
+color-mix(in lab, plum 60%, #123456 50%)
+
+/* in <polar-color-space>[ <hue-interpolation-method>] */
+color-mix(in hsl, hsl(200 50 80), coral)
+color-mix(in hsl longer hue, hsl(200 50 80) 20%, coral 80%)
 ```
 
 It can be used to override the default interpolation color space for color-related functional notations such as {{CSSXref("color_value/color-mix", "color-mix()")}} and {{CSSXref("gradient/linear-gradient", "linear-gradient()")}}.
