@@ -388,7 +388,7 @@ You can apply drop shadows to your text using the {{cssxref("text-shadow")}} pro
 text-shadow: 4px 4px 5px red;
 ```
 
-The four properties are as follows:
+The four values are as follows:
 
 1. The horizontal offset of the shadow from the original text — this can take most available CSS [length and size units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths), but you'll most commonly use `px`; positive values move the shadow right, and negative values left. This value has to be included.
 2. The vertical offset of the shadow from the original text. This behaves similarly to the horizontal offset, except that it moves the shadow up/down, not left/right. This value has to be included.
