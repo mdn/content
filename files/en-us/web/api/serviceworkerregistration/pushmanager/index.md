@@ -32,7 +32,6 @@ navigator.serviceWorker
   .then((serviceWorkerRegistration) => {
     serviceWorkerRegistration.pushManager.subscribe().then(
       (pushSubscription) => {
-        console.log(pushSubscription.subscriptionId);
         console.log(pushSubscription.endpoint);
         // The push subscription details needed by the application
         // server are now available, and can be sent to it using,
