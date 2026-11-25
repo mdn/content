@@ -8,7 +8,7 @@ sidebar: learnsidebar
 
 {{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}
 
-In this article we'll start you on your journey towards mastering text styling with {{glossary("CSS")}}. Here we'll go through all the basic fundamentals of text/font styling in detail, including setting font weight, family and style, font shorthand, text alignment and other effects, and line and letter spacing.
+In this article, we'll start you on a journey towards mastering text styling with {{glossary("CSS")}}. We'll go through the fundamentals of text/font styling in detail, including setting font weight, family, and style, font shorthand, text alignment and other effects, and line and letter spacing.
 
 <table>
   <tbody>
@@ -53,7 +53,7 @@ The CSS properties used to style text generally fall into two categories, which 
 
 ## Fonts
 
-Let's move straight on to look at properties for styling fonts. In this example, we'll apply some CSS properties to the following HTML sample:
+Let's look at font styling properties. In this example, we'll apply some CSS properties to the following HTML sample:
 
 ```html live-sample___0unstyled live-sample___1color live-sample___2fonts live-sample___3font-style live-sample___4shadows live-sample___5text-align live-sample___6line-height live-sample___7letter-word-spacing
 <h1>Tommy the cat</h1>
@@ -104,7 +104,7 @@ This would make all paragraphs on a page adopt the Arial font, which is found on
 
 Speaking of font availability, there are only a certain number of fonts that are generally available across all systems and can therefore be used without much worry. These are the so-called **web safe fonts**.
 
-Most of the time, as web developers we want to have more specific control over the fonts used to display our text content. The problem is to find a way to know which font is available on the computer used to see our web pages. There is no way to know this in every case, but the web safe fonts are known to be available on nearly all instances of the most used operating systems (Windows, macOS, the most common Linux distributions, Android, and iOS).
+Most of the time, as web developers, we want to have more specific control over the fonts used to display our text content. The problem is to find a way to know which font is available on the computer used to see our web pages. There is no way to know this in every case, but the web safe fonts are known to be available on nearly all instances of the most used operating systems (Windows, macOS, the most common Linux distributions, Android, and iOS).
 
 The list of actual web safe fonts will change as operating systems evolve, but it's reasonable to consider the following fonts web safe, at least for now (many of them have been popularized thanks to the Microsoft _[Core fonts for the Web](https://en.wikipedia.org/wiki/Core_fonts_for_the_Web)_ initiative in the late 90s and early 2000s):
 
@@ -176,7 +176,7 @@ The list of actual web safe fonts will change as operating systems evolve, but i
 
 #### Default fonts
 
-CSS defines five generic names for fonts: `serif`, `sans-serif`, `monospace`, `cursive`, and `fantasy`. These are very generic and the exact font face used from these generic names can vary between each browser and each operating system that they are displayed on. It represents a _worst case scenario_ where the browser will try its best to provide a font that looks appropriate. `serif`, `sans-serif`, and `monospace` are quite predictable and should provide something reasonable. On the other hand, `cursive` and `fantasy` are less predictable and we recommend using them very carefully, testing as you go.
+CSS defines five generic names for fonts: `serif`, `sans-serif`, `monospace`, `cursive`, and `fantasy`. These are very generic, and the exact font face used from these generic names can vary between each browser and each operating system that they are displayed on. It represents a _worst-case scenario_ where the browser will try its best to provide a font that looks appropriate. `serif`, `sans-serif`, and `monospace` are quite predictable and should provide something reasonable. On the other hand, `cursive` and `fantasy` are less predictable and we recommend using them very carefully, testing as you go.
 
 The five names are defined as follows:
 
@@ -284,7 +284,7 @@ It is a good idea to provide a suitable generic font name at the end of the stac
 > While you can use font family names that contain a space, such as `Trebuchet MS`, without quoting the name, to avoid mistakes in escaping, it is recommended to quote font family names that contain white space, digits, or punctuation characters other than hyphens.
 
 > [!WARNING]
-> Any font family name which could be misinterpreted as a generic family name or a CSS-wide keyword must be quoted. While the font-family names can be included as a {{cssxref("custom-ident")}} or a {{cssxref("string")}}, font family names that happen to be the same as a CSS-wide property value, like `initial`, or `inherit`, or CSS have the same name as one to the generic font family names, like `sans-serif` or `fantasy`, must be included as a quoted string. Otherwise, the font family name will be interpreted as being the equivalent CSS keyword or generic family name. When used as keywords, the generic font family names —`serif`, `sans-serif`, `monospace`, `cursive`, and `fantasy` — and the global CSS keywords MUST NOT be quoted, as strings are not interpreted as CSS keywords.
+> Any font family name that could be misinterpreted as a generic family name or a CSS-wide keyword must be quoted. While the font-family names can be included as a {{cssxref("custom-ident")}} or a {{cssxref("string")}}, font family names that happen to be the same as a CSS-wide property value, like `initial` or `inherit`, or have the same name as one of the generic font family names, like `sans-serif` or `fantasy`, must be included as a quoted string. Otherwise, the font family name will be interpreted as being the equivalent CSS keyword or generic family name. When used as keywords, the generic font family names —`serif`, `sans-serif`, `monospace`, `cursive`, and `fantasy` — and the global CSS keywords MUST NOT be quoted, as strings are not interpreted as CSS keywords.
 
 #### A font-family example
 
@@ -311,7 +311,7 @@ In our previous module's [CSS values and units](/en-US/docs/Learn_web_developmen
 
 The `font-size` of an element is inherited from that element's parent element. This all starts with the root element of the entire document — {{htmlelement("html")}} — the standard `font-size` of which is set to `16px` across browsers. Any paragraph (or another element that doesn't have a different size set by the browser) inside the root element will have a final size of `16px`. Other elements may have different default sizes. For example, an {{htmlelement("Heading_Elements", "h1")}} element has a size of `2em` set by default, so it will have a final size of `32px`.
 
-Things become more tricky when you start altering the font size of nested elements. For example, if you had an {{htmlelement("article")}} element in your page, and set its `font-size` to 1.5 `em` (which would compute to 24 `px` final size), and then wanted the paragraphs inside the `<article>` elements to have a computed font size of 20 `px`, what `em` value would you use?
+Things become trickier when you start altering the font size of nested elements. For example, if you had an {{htmlelement("article")}} element on your page, and set its `font-size` to `1.5em` (which would compute to `24px` final size), and then wanted the paragraphs inside the `<article>` element to have a computed font size of 20 `px`, what `em` value would you use?
 
 ```html
 <!-- document base font-size is 16px -->
@@ -336,7 +336,7 @@ CSS provides four common properties to alter the visual weight/emphasis of text:
 - {{cssxref("font-weight")}}: Sets how bold the text is. This has many values available in case you have many font variants available (such as _-light_, _-normal_, _-bold_, _-extrabold_, _-black_, etc.), but realistically you'll rarely use any of them except for `normal` and `bold`:
   - `normal`, `bold`: Normal and bold font weight.
   - `lighter`, `bolder`: Sets the current element's boldness to be one step lighter or heavier than its parent element's boldness.
-  - `100` – `900`: Numeric boldness values that provide finer grained control than the above keywords, if needed.
+  - `100` – `900`: Numeric boldness values that provide finer-grained control than the above keywords, if needed.
 
 - {{cssxref("text-transform")}}: Allows you to set your font to be transformed. Values include:
   - `none`: Prevents any transformation.
@@ -439,7 +439,7 @@ h1 {
 
 ### Line height
 
-The {{cssxref("line-height")}} property sets the height of each line of text. This property can not only take most [length and size units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths), but can also take a unitless value, which acts as a multiplier and is generally considered the best option. With a unitless value, the {{cssxref("font-size")}} gets multiplied and results in the `line-height`. Body text generally looks nicer and is easier to read when the lines are spaced apart. The recommended line height is around 1.5 – 2 (double spaced). To set our lines of text to 1.6 times the height of the font, we'd use:
+The {{cssxref("line-height")}} property sets the height of each line of text. This property can not only take most [length and size units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths), but can also take a unitless value, which acts as a multiplier and is generally considered the best option. With a unitless value, the {{cssxref("font-size")}} gets multiplied and results in the `line-height`. Body text generally looks nicer and is easier to read when the lines are spaced apart. The recommended line height is around 1.5–2 (double–spaced). To set our lines of text to 1.6 times the height of the font, we'd use:
 
 ```css live-sample___6line-height live-sample___7letter-word-spacing
 p {
@@ -453,7 +453,7 @@ Applying this to the {{htmlelement("p")}} elements in our example would give us 
 
 ### Letter and word spacing
 
-The {{cssxref("letter-spacing")}} and {{cssxref("word-spacing")}} properties allow you to set the spacing between letters and words in your text. You won't use these very often, but might find a use for them to obtain a specific look, or to improve the legibility of a particularly dense font. They can take most [length units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths).
+The {{cssxref("letter-spacing")}} and {{cssxref("word-spacing")}} properties allow you to set the spacing between letters and words in your text. You won't use these very often, but might find a use for them to obtain a specific look or improve the legibility of a particularly dense font. They can take most [length units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths).
 
 To illustrate, we could apply some word- and letter-spacing to the first line of each {{htmlelement("p")}} element in our HTML sample with:
 
@@ -494,12 +494,12 @@ Text layout styles:
 - {{cssxref("text-overflow")}}: Define how overflowed content that is not displayed is signaled to users.
 - {{cssxref("white-space")}}: Define how whitespace and associated line breaks inside the element are handled.
 - {{cssxref("word-break")}}: Specify whether to break lines within words.
-- {{cssxref("direction")}}: Define the text direction. (This depends on the language and usually it's better to let HTML handle that part as it is tied to the text content.)
+- {{cssxref("direction")}}: Define the text direction. (This depends on the language, and usually it's better to let HTML handle that part, as it is tied to the text content.)
 - {{cssxref("hyphens")}}: Switch on and off hyphenation for supported languages.
 - {{cssxref("line-break")}}: Relax or strengthen line breaking for Asian languages.
 - {{cssxref("text-align-last")}}: Define how the last line of a block or a line, right before a forced line break, is aligned.
 - {{cssxref("text-orientation")}}: Define the orientation of the text in a line.
-- {{cssxref("overflow-wrap")}}: Specify whether or not the browser may break lines within words in order to prevent overflow.
+- {{cssxref("overflow-wrap")}}: Specify whether or not the browser may break lines within words to prevent overflow.
 - {{cssxref("writing-mode")}}: Define whether lines of text are laid out horizontally or vertically and the direction in which subsequent lines flow.
 
 ## Font shorthand
@@ -508,7 +508,7 @@ Many font properties can also be set through the shorthand property {{cssxref("f
 
 Among all those properties, only `font-size` and `font-family` are required when using the `font` shorthand property.
 
-A forward slash has to be put in between the {{cssxref("font-size")}} and {{cssxref("line-height")}} properties.
+A forward slash has to be put between the {{cssxref("font-size")}} and {{cssxref("line-height")}} properties.
 
 A full example would look like this:
 
