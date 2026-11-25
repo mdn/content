@@ -16,6 +16,9 @@ See [Data Types](<https://wikis.khronos.org/opengl/Data_Type_(GLSL)>) in the GLS
 
 There are three kinds of "variable" or data storage available in GLSL, each of which with its own purpose and use cases: **[attributes](#attributes)**, **[varyings](#varyings)**, and **[uniforms](#uniforms)**.
 
+> [!NOTE]
+> The GLSL examples on this page use the GLSL ES 1.00 syntax of {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}}, which also works in {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts. In GLSL ES 3.00 shaders, which start with `#version 300 es`, `attribute` is replaced by `in`, and `varying` is replaced by `out` in the vertex shader and `in` in the fragment shader. For all changes, see the [GLSL ES 3.00 specification](https://registry.khronos.org/OpenGL/specs/es/3.0/GLSL_ES_Specification_3.00.pdf).
+
 ### Attributes
 
 **Attributes** are GLSL variables that pass data to the vertex shader on a per-vertex basis: each vertex gets its own value. Only the vertex shader can declare attributes, and it can only read them. Attributes are typically used for vertex positions, colors, normals, and texture coordinates.
