@@ -72,9 +72,9 @@ For a pair of hue angles `θ1` and `θ2` normalized to the range `[0deg, 360deg)
 
 #### Shorter hue
 
-When `shorter hue` is specified or defaulted, the shorter arc is used. In this case, when the two radii coincide, the arc degenerates to a single point. When both arcs have the same lengths:
+When `shorter hue` is specified or defaulted, the shorter arc is used. In this case, when the two radii coincide, the arc degenerates to a single point. When both arcs have the same length:
 
-If `θ1 < θ2`, use the clockwise arc;
+- If `θ1 < θ2`, use the clockwise arc.
 
 - If `θ1 > θ2`, use the counterclockwise arc.
 
@@ -88,9 +88,9 @@ When `longer hue` is specified, the longer arc is used. In this case, when the t
 
 - If `θ1 > θ2`, the arc becomes the full circumference with a counterclockwise orientation.
 
-When both arcs have the same lengths:
+When both arcs have the same length:
 
-- If `θ1 < θ2`, use the clockwise arc;
+- If `θ1 < θ2`, use the clockwise arc.
 - If `θ1 > θ2`, use the counterclockwise arc.
 
 | `θ1 = 45deg`, `θ2 = 135deg`                                      | `θ1 = 135deg`, `θ2 = 45deg`                                      |
