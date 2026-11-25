@@ -121,8 +121,7 @@ Uniform values belong to a shader program, and {{domxref("WebGLRenderingContext.
 
 A buffer is a block of memory on the GPU. In JavaScript, it is represented by a {{domxref("WebGLBuffer")}} object. JavaScript usually fills it once with a typed array such as {{jsxref("Float32Array")}}. When drawing, the GPU reads directly from the buffer, without JavaScript having to send the data again for each draw call. Buffers typically hold per-vertex values such as positions, colors, normals, and texture coordinates.
 
-To use a buffer, create it with {{domxref("WebGLRenderingContext.createBuffer()", "createBuffer()")}}, bind it to a target such as `gl.ARRAY_BUFFER`
-with {{domxref("WebGLRenderingContext.bindBuffer()", "bindBuffer()")}}, and fill it with {{domxref("WebGLRenderingContext.bufferData()", "bufferData()")}}.
+To use a buffer, create it with {{domxref("WebGLRenderingContext.createBuffer()", "createBuffer()")}}, bind it to a target such as `gl.ARRAY_BUFFER` with {{domxref("WebGLRenderingContext.bindBuffer()", "bindBuffer()")}}, and fill it with {{domxref("WebGLRenderingContext.bufferData()", "bufferData()")}}.
 
 ```js
 // prettier-ignore
