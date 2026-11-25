@@ -602,6 +602,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("will-change")}}
 - {{CSSxRef("word-break")}}
 - {{CSSxRef("word-spacing")}}
+- {{CSSxRef("wrap-inside")}}
 - {{CSSxRef("writing-mode")}}
 - {{CSSxRef("x")}}
 - {{CSSxRef("y")}}
