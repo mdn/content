@@ -256,6 +256,20 @@ function f() {
 f("a", "b"); // 'a+b'
 ```
 
+### The Array.prototype object
+
+For legacy reasons, `Array.prototype` is an `Array` object that's initially empty. You can pass it to {{jsxref("Array.isArray()")}}, assign to its indices, read its {{jsxref("Array/length", "length")}}, and call methods like `Array.prototype.push(1)`.
+
+```js
+console.log(Array.prototype.length); // 0
+console.log(Array.isArray(Array.prototype)); // true
+Array.prototype.push(67);
+console.log(Array.prototype.length); // 1
+console.log(Array.prototype[0]); // 67
+Array.prototype[1] = 69;
+console.log(Array.prototype.map((x) => x * 10)); // [670, 690]
+```
+
 ## Constructor
 
 - {{jsxref("Array/Array", "Array()")}}

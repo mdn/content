@@ -30,7 +30,7 @@ None.
 
 ### Return value
 
-A {{domxref("InteractionContentfulPaint")}} object representing the largest `InteractionContentfulPaint` for this soft navigation.
+An {{domxref("InteractionContentfulPaint")}} object representing the largest `InteractionContentfulPaint` for this soft navigation.
 
 ## Examples
 

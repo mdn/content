@@ -24,34 +24,6 @@ When something is selected rather than current, such as a [`tab`](/en-US/docs/We
 > [!NOTE]
 > Don't use `aria-current` as a substitute for [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) in [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), [`option`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) or [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role).
 
-## Example
-
-The breadcrumb for the "current page" should have `aria-current="page"` set on it.
-
-```html
-<nav aria-label="Breadcrumb" class="breadcrumb">
-  <ol>
-    <li>
-      <a href="../../../../../">Web technology for developers</a>
-    </li>
-    <li>
-      <a href="../../../../">Accessibility</a>
-    </li>
-    <li>
-      <a href="../../../">ARIA</a>
-    </li>
-    <li>
-      <a href="../../">ARIA States and Properties</a>
-    </li>
-    <li>
-      <a href="./" aria-current="page">ARIA: `aria-current` attribute</a>
-    </li>
-  </ol>
-</nav>
-```
-
-If the element representing the current page in the breadcrumb was not a link, the `aria-current` is optional.
-
 ## Values
 
 - `page`
@@ -79,6 +51,34 @@ If the element representing the current page in the breadcrumb was not a link, t
 ## Associated roles
 
 Usable in all roles; except for elements with the role of [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), [`option`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) and [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) where [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) should be used
+
+## Example
+
+The breadcrumb for the "current page" should have `aria-current="page"` set on it.
+
+```html
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <ol>
+    <li>
+      <a href="../../../../../">Web technology for developers</a>
+    </li>
+    <li>
+      <a href="../../../../">Accessibility</a>
+    </li>
+    <li>
+      <a href="../../../">ARIA</a>
+    </li>
+    <li>
+      <a href="../../">ARIA States and Properties</a>
+    </li>
+    <li>
+      <a href="./" aria-current="page">ARIA: `aria-current` attribute</a>
+    </li>
+  </ol>
+</nav>
+```
+
+If the element representing the current page in the breadcrumb was not a link, the `aria-current` is optional.
 
 ## Specifications
 

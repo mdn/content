@@ -23,11 +23,15 @@ To avoid running a script before the DOM it manipulates has been fully construct
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("load", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onload = (event) => { }
 ```
 
@@ -45,7 +49,7 @@ window.addEventListener("load", (event) => {
 });
 ```
 
-The same, but using the `onload` event handler property:
+The same, but using the `onload` event handler property (but note that this replaces other event listeners added using `onload`, if any):
 
 ```js
 window.onload = (event) => {

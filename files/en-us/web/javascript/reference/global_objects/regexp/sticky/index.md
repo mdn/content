@@ -33,6 +33,8 @@ console.log(regex.test(str));
 
 The set accessor of `sticky` is `undefined`. You cannot change this property directly.
 
+For legacy reasons, `RegExp.prototype.sticky === undefined` although `RegExp.prototype` is not a `RegExp` instance. (You'd expect the getter to throw a `TypeError` if the `this` value is not a `RegExp` instance.)
+
 For both sticky regexes and [global](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global) regexes:
 
 - They start matching at `lastIndex`.
@@ -108,7 +110,7 @@ regex2.test(".\nfoo"); // true - index 2 is the beginning of a line
 
 ## See also
 
-- [Polyfill of the `sticky` flag in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of the `sticky` flag in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - {{jsxref("RegExp.prototype.lastIndex")}}
 - {{jsxref("RegExp.prototype.dotAll")}}
 - {{jsxref("RegExp.prototype.global")}}

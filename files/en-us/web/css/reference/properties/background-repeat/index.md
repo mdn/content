@@ -82,18 +82,7 @@ background-repeat: revert-layer;
 background-repeat: unset;
 ```
 
-## Description
-
-The property accepts a comma-separated list of two [`<repeat-style>`](#values) keyterms, or one keyterm as a shorthand for the two values. When two values are provided, the first value defines the horizontal repetition behavior and the second value defines the vertical behavior.
-Property values can be used to repeat only horizontally, vertically, or not at all.
-
-The default value is `repeat repeat`. With this value, the background image maintains its intrinsic {{glossary("aspect ratio")}}, repeating both horizontally and vertically to cover the entire background paint area, with edge images being clipped to the size of the element. Which edges clipped depends on the value of the corresponding {{cssxref("background-position")}} value. How many times they are repeated and how much the images on the edges are clipped depends on the size of the background painting area and the corresponding {{cssxref("background-size")}} value.
-
-The repeating images can be evenly spaced apart, ensuring the repeated image maintains its aspect ratio without being clipped. With the `space` value, if the background paint area has a different aspect ratio than the image or does not otherwise have a size that is a multiple of the background size in either direction, there will be areas not covered by the background image.
-
-Alternatively, the repeated background image can be stretched to cover the entire area without clipping. With `round`, the repeated image is stretched to fill all the available space until there is room to add an additional repeated image if the aspect ratio of the background image is not the same as the paint area's aspect ratio. For example, given a background image that is 100px x 100px and a background paint area of 1099px x 750px, the image will be repeated 10 times in the horizontal direction and 7 times vertically, for a total of 70 repetitions, with each image stretched in both directions to be 109.9px x 105px, altering the image's aspect ratio and potentially distorting it. If the width of the paint area increases by 1px, becoming 1100px wide, an 11th image will fit horizontally for a total of 77 image repetitions, with each image being painted at 100px wide and 105px tall, stretched only in the vertical direction.
-
-## Values
+### Values
 
 The property accepts a comma-separated list of two `<repeat-style>` keyterms or one keyterm as a shorthand for the two values. The first value is the horizontal repetition. The second value is the vertical behavior. If only a single value is set to a value other than `repeat-x` or `repeat-y`, that value is applied the both vertices. The values include:
 
@@ -125,6 +114,17 @@ When one `<repeat-style>` keyterm is provided, the value is shorthand for the fo
 | `space`      | `space space`         |
 | `round`      | `round round`         |
 | `no-repeat`  | `no-repeat no-repeat` |
+
+## Description
+
+The property accepts a comma-separated list of two [`<repeat-style>`](#values) keyterms, or one keyterm as a shorthand for the two values. When two values are provided, the first value defines the horizontal repetition behavior and the second value defines the vertical behavior.
+Property values can be used to repeat only horizontally, vertically, or not at all.
+
+The default value is `repeat repeat`. With this value, the background image maintains its intrinsic {{glossary("aspect ratio")}}, repeating both horizontally and vertically to cover the entire background paint area, with edge images being clipped to the size of the element. Which edges clipped depends on the value of the corresponding {{cssxref("background-position")}} value. How many times they are repeated and how much the images on the edges are clipped depends on the size of the background painting area and the corresponding {{cssxref("background-size")}} value.
+
+The repeating images can be evenly spaced apart, ensuring the repeated image maintains its aspect ratio without being clipped. With the `space` value, if the background paint area has a different aspect ratio than the image or does not otherwise have a size that is a multiple of the background size in either direction, there will be areas not covered by the background image.
+
+Alternatively, the repeated background image can be stretched to cover the entire area without clipping. With `round`, the repeated image is stretched to fill all the available space until there is room to add an additional repeated image if the aspect ratio of the background image is not the same as the paint area's aspect ratio. For example, given a background image that is 100px x 100px and a background paint area of 1099px x 750px, the image will be repeated 10 times in the horizontal direction and 7 times vertically, for a total of 70 repetitions, with each image stretched in both directions to be 109.9px x 105px, altering the image's aspect ratio and potentially distorting it. If the width of the paint area increases by 1px, becoming 1100px wide, an 11th image will fit horizontally for a total of 77 image repetitions, with each image being painted at 100px wide and 105px tall, stretched only in the vertical direction.
 
 ## Formal definition
 

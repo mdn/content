@@ -60,6 +60,21 @@ super.propertyOnParent
 super[expression]
 ```
 
+### Parameters
+
+- `arg1`, `arg2`, …, `argN`
+  - : Each argument to the superclass constructor can be a [spread argument](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or an expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 2 (assignment) or above.
+- `propertyOnParent`
+  - : The [identifier name](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) of the property to access.
+- `expression`
+  - : An expression of any [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table). Its value is coerced to a property key (a [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) or symbol).
+
+### Return value
+
+A `super()` call returns the object that becomes `this` in the derived constructor.
+
+The property-access forms produce a reference to the specified property on the prototype chain, with the current `this` as the receiver.
+
 ## Description
 
 The `super` keyword can be used in two ways: as a "function call" (`super(...args)`), or as a "property lookup" (`super.prop` and `super[expr]`).
@@ -87,7 +102,7 @@ When setting properties through `super`, the property is set on `this` instead.
 
 ### Using super in classes
 
-This code snippet is taken from the [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([live demo](https://googlechrome.github.io/samples/classes-es6/index.html)). Here `super()` is called to avoid duplicating the constructor parts' that are common between `Rectangle` and `Square`.
+This code snippet is taken from the [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([live demo](https://googlechrome.github.io/samples/classes-es6/index.html)). Here `super()` is called to avoid duplicating the constructor parts that are common between `Rectangle` and `Square`.
 
 ```js
 class Rectangle {
@@ -345,16 +360,14 @@ b2.setX.call(null); // TypeError: Cannot assign to read only property 'x' of obj
 However, `super.x = 1` still consults the property descriptor of the prototype object, which means you cannot rewrite non-writable properties, and setters will be invoked.
 
 ```js
-class X {
-  constructor() {
-    // Create a non-writable property
-    Object.defineProperty(this, "prop", {
-      configurable: true,
-      writable: false,
-      value: 1,
-    });
-  }
-}
+class X {}
+
+// Create a non-writable property
+Object.defineProperty(X.prototype, "prop", {
+  configurable: true,
+  writable: false,
+  value: 1,
+});
 
 class Y extends X {
   constructor() {

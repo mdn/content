@@ -6,6 +6,7 @@ Akuru
 al-Qura
 Alem
 Amete
+Atherton
 Azeri
 Badeshi
 Bhaiksuki
@@ -23,6 +24,7 @@ furigana
 Gannen
 Garay
 geng-zi
+Gordonvale
 Gunjala
 Gurung
 Halloumi
@@ -50,6 +52,7 @@ Masaram
 Mayek
 Meetei
 Mihret
+Millaa
 Minguo
 Minh
 Miramichi
@@ -72,6 +75,7 @@ Romaji
 Saurashtra
 Sharada
 shippo
+Siki
 Sinhala
 Sora_Sompeng
 Sunuwar
@@ -83,9 +87,12 @@ Tham
 Tirhuta
 Tishrei
 Tlayolotl
+Tolong
 Totnes
+Walshs
 Wancho
 Warang
+Wooroonooran
 Zenkaku
 zhuyin
 Śaka

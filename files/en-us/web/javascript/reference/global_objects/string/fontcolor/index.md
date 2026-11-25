@@ -70,7 +70,7 @@ document.getElementById("yourElemId").style.color = "red";
 
 ## See also
 
-- [Polyfill of `String.prototype.fontcolor` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.fontcolor` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - [es-shims polyfill of `String.prototype.fontcolor`](https://www.npmjs.com/package/es-string-html-methods)
 - [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)
 - {{HTMLElement("font")}}

@@ -79,7 +79,7 @@ console.log(obj2 + ""); // "true"    — hint is "default"
 
 ## See also
 
-- [Polyfill of `Symbol.toPrimitive` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [Polyfill of `Symbol.toPrimitive` in `core-js`](https://core-js.io/docs/features/ecmascript/symbol)
 - [`Date.prototype[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive)
 - [`Symbol.prototype[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive)
 - {{jsxref("Object.prototype.toString()")}}

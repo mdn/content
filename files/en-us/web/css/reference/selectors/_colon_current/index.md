@@ -133,19 +133,11 @@ Finally, we style the currently-focused search result via `::search-text:current
 
 The example renders as follows:
 
-{{EmbedLiveSample("live-sample___custom-search-results", "100%", 300)}}
+{{EmbedLiveSample("custom-search-results", "100%", 300)}}
 
 Try using the browser's find in page interface to find a word that appears multiple times in the example text, such as "aliquam", "amet", or "tortor". Move between the previous and next results to check out the `:current` styling.
 
 ### Styling currently-shown WebVTT subtitles
-
-#### CSS
-
-```css
-:current(p, span) {
-  background-color: yellow;
-}
-```
 
 #### HTML
 
@@ -160,6 +152,14 @@ Try using the browser's find in page interface to find a word that appears multi
     src="subtitles.vtt"
     default />
 </video>
+```
+
+#### CSS
+
+```css
+:current(p, span) {
+  background-color: yellow;
+}
 ```
 
 #### WebVTT

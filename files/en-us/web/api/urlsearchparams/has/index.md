@@ -90,4 +90,4 @@ If your browser does not support the `value` option the method will match on the
 
 ## See also
 
-- [Polyfill of `URLSearchParams` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [Polyfill of `URLSearchParams` in `core-js`](https://core-js.io/docs/features/web-standards/url)

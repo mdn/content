@@ -91,6 +91,101 @@ The [`headingoffset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingof
 - `dom.headingoffset.enabled`
   - : Set to `true` to enable.
 
+### `<script type="speculationrules">`
+
+The [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) provides a mechanism to improve performance for future navigations by specifying which resources should be prefetched or prerendered based on factors such as user behavior towards links.
+
+Initial support included [`prefetch`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#prefetch) only, with resources identified by a [`urls`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#urls) list and [`immediate`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#immediate) eagerness. This also includes support for the {{domxref("PerformanceResourceTiming.deliveryType")}} property's `navigational-prefetch` value. ([Firefox bug 2041381](https://bugzil.la/2041381)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 155           | Yes                 |
+| Developer Edition | 155           | No                  |
+| Beta              | 155           | No                  |
+| Release           | 155           | No                  |
+
+- `dom.speculation_rules.enabled`
+  - : Set to `true` to enable.
+
+#### Moderate eagerness
+
+With [`moderate`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#moderate) eagerness, a matching prefetch starts once the user hovers over a link for a short time (200 milliseconds by default). ([Firefox bug 2061013](https://bugzil.la/2061013)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 158           | Yes                 |
+| Developer Edition | 158           | No                  |
+| Beta              | 158           | No                  |
+| Release           | 158           | No                  |
+
+- `dom.speculation_rules.enabled`
+  - : Set to `true` to enable.
+
+#### Speculation-Rules header
+
+The {{httpheader("Speculation-Rules")}} HTTP response header lists the URLs of external files containing speculation rules, as an alternative to an inline `<script type="speculationrules">` element. The header applies to top-level documents only, and each file must be served with the `application/speculationrules+json` MIME type. ([Firefox bug 2020709](https://bugzil.la/2020709)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 160           | Yes                 |
+| Developer Edition | 160           | No                  |
+| Beta              | 160           | No                  |
+| Release           | 160           | No                  |
+
+- `dom.speculation_rules.enabled`
+  - : Set to `true` to enable.
+
+### Cross-document view transitions
+
+[Cross-document view transitions](/en-US/docs/Web/API/View_Transition_API/Using#basic_mpa_view_transition) can be used to animate the transition between same-origin page navigations in a multi-page application.
+Both pages must opt in to the transition using the CSS {{cssxref("@view-transition")}} at-rule.
+To customize the transition with JavaScript, use the {{domxref("Window.pageswap_event", "pageswap")}} event ({{domxref("PageSwapEvent")}}), which fires on the old page just before it is replaced. You can also use the {{domxref("Window.pagereveal_event", "pagereveal")}} event ({{domxref("PageRevealEvent")}}), which fires on the new page when it is first shown.
+The {{domxref("CSSViewTransitionRule")}} interface represents an `@view-transition` rule in the CSS Object Model.
+Note that [render blocking](#render_blocking) may be used to ensure that important parts of the new page are loaded before the transition starts.
+([Firefox bug 2084340](https://bugzil.la/2084340)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 160           | No                  |
+| Beta              | 160           | No                  |
+| Release           | 160           | No                  |
+
+- `dom.viewTransitions.cross-document.enabled`
+  - : Set to `true` to enable.
+
+### Render blocking
+
+The `blocking="render"` attribute of the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} elements is supported.
+This lets you block rendering of the page until the marked stylesheet has loaded or script has run, so the page doesn't first appear unstyled or incomplete.
+You can also use [`<link rel="expect">`](/en-US/docs/Web/HTML/Reference/Attributes/rel#expect) with `blocking="render"` to block rendering until a particular element in the document has been parsed.
+The {{domxref("PerformanceResourceTiming.renderBlockingStatus")}} property indicates whether a resource blocked rendering.
+([Firefox bug 1751383](https://bugzil.la/1751383), [Firefox bug 2053279](https://bugzil.la/2053279)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 160           | No                  |
+| Beta              | 160           | No                  |
+| Release           | 160           | No                  |
+
+- `dom.element.blocking.enabled`
+  - : Set to `true` to enable.
+
+### Lazy loading for video and audio
+
+The `loading` attribute of the {{HTMLElement("video", "", "#loading")}} and {{HTMLElement("audio", "", "#loading")}} elements, and the {{domxref("HTMLMediaElement.loading")}} property that reflects it, are now supported. With `loading="lazy"`, the browser defers loading the media, loading the video's poster image, and starting `autoplay` playback until the element is near the viewport. ([Firefox bug 2005072](https://bugzil.la/2005072)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 160           | No                  |
+| Developer Edition | 160           | No                  |
+| Beta              | 160           | No                  |
+| Release           | 160           | No                  |
+
+- `media.lazy_loading.enabled`
+  - : Set to `true` to enable.
+
 ## CSS
 
 ### `circle()` and `ellipse()` allow `farthest-corner` and `closest-corner` keywords
@@ -150,30 +245,6 @@ The [`fit-content()`](/en-US/docs/Web/CSS/Reference/Values/fit-content_function)
 - `layout.css.fit-content-function.enabled`
   - : Set to `true` to enable.
 
-### Scroll-driven animations
-
-Previously called "scroll-linked animations", a [scroll-driven animation](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) depends on the scroll position of a scrollbar instead of time or some other dimension.
-The {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties (and the {{cssxref('scroll-timeline')}} shorthand property) allow you to specify that a particular scrollbar in a particular named container can be used as the source for a scroll-driven animation.
-The scroll timeline can then be associated with an [animation](/en-US/docs/Web/CSS/Guides/Animations) by setting the {{cssxref('animation-timeline')}} property to the name value defined using `scroll-timeline-name`.
-
-When using the {{cssxref('scroll-timeline')}} shorthand property, the order of the property values must be {{cssxref('scroll-timeline-name')}} followed by {{cssxref('scroll-timeline-axis')}}.
-The longhand and shorthand properties are both available behind the preference.
-You can alternatively use the {{cssxref("animation-timeline/scroll")}} functional notation with {{cssxref('animation-timeline')}} to indicate that a scrollbar axis in an ancestor element will be used for the timeline.
-
-For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Firefox bug 1804573](https://bugzil.la/1804573), [Firefox bug 1809005](https://bugzil.la/1809005), [Firefox bug 1676791](https://bugzil.la/1676791), [Firefox bug 1754897](https://bugzil.la/1754897), [Firefox bug 1817303](https://bugzil.la/1817303), and [Firefox bug 1737918](https://bugzil.la/1737918).
-
-The {{cssxref('animation-range-start')}} and {{cssxref('animation-range-end')}} properties (and the {{cssxref('animation-range')}} shorthand property) are not yet supported. For more information, see [Firefox bug 1676779](https://bugzil.la/1676779).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 136           | Yes                 |
-| Developer Edition | 110           | No                  |
-| Beta              | 110           | No                  |
-| Release           | 110           | No                  |
-
-- `layout.css.scroll-driven-animations.enabled`
-  - : Set to `true` to enable.
-
 ### prefers-reduced-transparency media feature
 
 The CSS {{cssxref("@media/prefers-reduced-transparency")}} media feature lets you detect if a user has enabled the setting to minimize the amount of transparent or translucent layer effects on their device.
@@ -202,38 +273,6 @@ See ([Firefox bug 1794628](https://bugzil.la/1794628)) for more details.
 | Release           | 114           | No                  |
 
 - `layout.css.inverted-colors.enabled`
-  - : Set to `true` to enable.
-
-### Named view progress timelines property
-
-The CSS {{cssxref("view-timeline-name")}} property lets you give a name to particular element, identifying that its ancestor scroller element is the source of a view progress timeline.
-The name can then be assigned to the `animation-timeline`, which then animates the associated element as it moves through the visible area of its ancestor scroller.
-See ([Firefox bug 1737920](https://bugzil.la/1737920)) for more details.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 136           | Yes                 |
-| Developer Edition | 114           | No                  |
-| Beta              | 114           | No                  |
-| Release           | 114           | No                  |
-
-- `layout.css.scroll-driven-animations.enabled`
-  - : Set to `true` to enable.
-
-### Anonymous view progress timelines function
-
-The CSS {{cssxref("animation-timeline/view")}} function lets you specify that the `animation-timeline` for an element is a view progress timeline, which will animate the element as it moves through the visible area of its ancestor scroller.
-The function defines the axis of the parent element that supplies the timeline, along with the inset within the visible area at which the animation starts and begins.
-See ([Firefox bug 1808410](https://bugzil.la/1808410)) for more details.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 136           | Yes                 |
-| Developer Edition | 114           | No                  |
-| Beta              | 114           | No                  |
-| Release           | 114           | No                  |
-
-- `layout.css.scroll-driven-animations.enabled`
   - : Set to `true` to enable.
 
 ### Vendor-prefixed transform properties
@@ -365,34 +404,6 @@ The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rul
 - `layout.css.attr.enabled`
   - : Set to `true` to enable.
 
-### `<timeline-range-name>` values
-
-The {{cssxref("animation-range-start")}}, {{cssxref("animation-range-end")}} CSS properties and {{cssxref("animation-range")}} shorthand property now support [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) values. These [`<timeline-range-name>`](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names) values allow you to precisely state which segment that a scroll driven animation will take place within. ([Firefox bug 1804775](https://bugzil.la/1804775)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 151           | Yes                 |
-| Developer Edition | 151           | No                  |
-| Beta              | 151           | No                  |
-| Release           | 151           | No                  |
-
-- `layout.css.scroll-driven-animations.enabled`
-  - : Set to `true` to enable.
-
-### `<timeline-range-name>` values in `@keyframes` selectors
-
-The {{cssxref("@keyframes")}} at-rule now supports [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) values. These [values](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names) let you specify the segment within which a scroll-driven animation takes place. ([Firefox bug 1824875](https://bugzil.la/1824875)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 152           | Yes                 |
-| Developer Edition | 152           | No                  |
-| Beta              | 152           | No                  |
-| Release           | 152           | No                  |
-
-- `layout.css.scroll-driven-animations.enabled`
-  - : Set to `true` to enable.
-
 ### Updating attributes of external resources
 
 The {{cssxref("link-parameters")}} CSS property and {{cssxref("param")}} CSS function are now supported. This allows the user to update attributes of external resources, such as SVGs, that have their attributes set with the {{cssxref("env")}} CSS function. This means that a single external resource can be used rather than creating multiple variations that only have different colors or other values. ([Firefox bug 2046153](https://bugzil.la/2046153)).
@@ -435,34 +446,6 @@ The {{cssxref("text-decoration-inset")}} CSS property now supports percentages a
 - `layout.css.text-decoration-inset-percentage.enabled`
   - : Set to `true` to enable.
 
-### `view-timeline` includes `view-timeline-inset`
-
-The {{cssxref("view-timeline")}} shorthand property now supports the {{cssxref("view-timeline-inset")}} property. The shorthand lets you specify start and/or end inset (or outset) values to adjust the position of the view progress timeline. ([Firefox bug 2046602](https://bugzil.la/2046602)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 155           | Yes                 |
-| Developer Edition | 155           | No                  |
-| Beta              | 155           | No                  |
-| Release           | 155           | No                  |
-
-- `layout.css.scroll-driven-animations.enabled`
-  - : Set to `true` to enable.
-
-### `timeline-scope` names are now global by default
-
-The default behavior of named timeline scoping has been updated to be global. This can be scoped to elements, and their subtree, using the {{cssxref("timeline-scope")}} CSS property and the value of either the {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}} ([Firefox bug 2024012](https://bugzil.la/2024012)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 155           | Yes                 |
-| Developer Edition | 155           | No                  |
-| Beta              | 155           | No                  |
-| Release           | 155           | No                  |
-
-- `layout.css.scroll-driven-animations.enabled`
-  - : Set to `true` to enable.
-
 ### `named-feature()` support queries
 
 The `named-feature()` function in the {{cssxref("@supports")}} at-rule lets you test whether the browser supports a feature that has no other detectable syntax, for example `@supports named-feature(anchor-position-follows-transforms)`.
@@ -476,6 +459,89 @@ The `named-feature()` function in the {{cssxref("@supports")}} at-rule lets you 
 | Release           | 156           | No                  |
 
 - `layout.css.anchor-positioning.follows-transforms.enabled`
+  - : Set to `true` to enable.
+
+### `corner-shape` properties
+
+The {{cssxref("corner-shape")}} shorthand property and its constituent longhand properties are now supported in Nightly. These properties let you customize corner shapes using one of the {{cssxref("corner-shape-value")}} keyword values or the {{cssxref("superellipse")}} function.
+([Firefox bug 2070927](https://bugzil.la/2070927)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 158           | Yes                 |
+| Developer Edition | 157           | No                  |
+| Beta              | 157           | No                  |
+| Release           | 157           | No                  |
+
+- `layout.css.corner-shape.enabled`
+  - : Set to `true` to enable.
+
+### `margin-trim` property
+
+The {{cssxref("margin-trim")}} property is now supported in Nightly for block containers. It removes the block-axis margins of child elements at the container's start edge, end edge, or both, while keeping the margins between siblings.
+([Firefox bug 2051240](https://bugzil.la/2051240)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 161           | No                  |
+| Beta              | 161           | No                  |
+| Release           | 161           | No                  |
+
+- `layout.css.margin-trim.enabled`
+  - : Set to `true` to enable.
+
+### `match-parent` value for `quotes`
+
+The {{cssxref("quotes", "match-parent", "#match-parent")}} value of the {{cssxref("quotes")}} CSS property is now supported in Nightly.
+
+This value makes an element use the same set of quotation-mark pairs as its parent element.
+If the parent's `quotes` value is an explicit list of pairs, the element uses quotation marks from that list.
+If it is `auto`, the element uses the set for the parent element's language.
+The specific pair of opening and closing quotation marks used depends on the nesting level of the quote.
+
+Firefox's default styles for nested {{htmlelement("q")}} elements use this value.
+As a result, a nested quote automatically uses the same quotation style as the outer quote, even when the nested quote is in a different language.
+([Firefox bug 1752382](https://bugzil.la/1752382)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 161           | No                  |
+| Beta              | 161           | No                  |
+| Release           | 161           | No                  |
+
+- `layout.css.quotes.match-parent.enabled`
+  - : Set to `true` to enable.
+
+### `text-autospace-size` property
+
+The {{cssxref("text-autospace-size")}} property is now supported in Nightly. It sets the amount of space that {{cssxref("text-autospace")}} adds between Chinese/Japanese/Korean (CJK) and non-CJK characters.
+([Firefox bug 2086765](https://bugzil.la/2086765)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 161           | No                  |
+| Beta              | 161           | No                  |
+| Release           | 161           | No                  |
+
+- `layout.css.text-autospace-size.enabled`
+  - : Set to `true` to enable.
+
+### `prefers-color-scheme` reflects `<meta name="color-scheme">`
+
+The {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} media feature reflects the color scheme declared by a [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/color-scheme) element, when the element specifies a single scheme. This allows better selection of images and videos by color scheme. It also makes theme switchers easier to implement.
+([Firefox bug 2085572](https://bugzil.la/2085572)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 161           | No                  |
+| Beta              | 161           | No                  |
+| Release           | 161           | No                  |
+
+- `layout.css.prefers-color-scheme.meta-tag.enabled`
   - : Set to `true` to enable.
 
 ## SVG
@@ -512,18 +578,16 @@ When enabled, the MathML [`<a>`](/en-US/docs/Web/MathML/Reference/Element/a) ele
 - `mathml.a.element.enabled`
   - : Set to `true` to enable.
 
-### MathML `<a>` elements
+### New `MathMLAnchorElement` properties
 
-The MathML `<a>` element creates a hyperlink from MathML content, exposing the `MathMLAnchorElement` interface with the same URL component properties as HTML {{HTMLElement("a")}} elements.
-
-This release adds support for the `rel` and `relList` IDL attributes. ([Firefox bug 2063819](https://bugzil.la/2063819)).
+The {{domxref("MathMLAnchorElement")}} interface now supports the {{domxref("MathMLAnchorElement.download", "download")}}, {{domxref("MathMLAnchorElement.ping", "ping")}}, {{domxref("MathMLAnchorElement.rel", "rel")}}, {{domxref("MathMLAnchorElement.relList", "relList")}}, and {{domxref("MathMLAnchorElement.referrerPolicy", "referrerPolicy")}} properties. ([Firefox bug 2064612](https://bugzil.la/2064612)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 156           | Yes                 |
-| Developer Edition | 156           | No                  |
-| Beta              | 156           | No                  |
-| Release           | 156           | No                  |
+| Nightly           | 159           | Yes                 |
+| Developer Edition | 159           | No                  |
+| Beta              | 159           | No                  |
+| Release           | 159           | No                  |
 
 - `mathml.a.element.enabled`
   - : Set to `true` to enable.
@@ -596,6 +660,20 @@ Note that this proposal is at a very early stage and subject to change.
 - `javascript.options.experimental.export_star_default`
   - : Set to `true` to enable.
 
+### TC39 deferred module evaluation proposal
+
+The [TC39 deferred module evaluation proposal](https://github.com/tc39/proposal-defer-import-eval) adds the [`import defer`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer) declaration and the [`import.defer()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/defer) syntax. A module imported this way is loaded up front along with its dependencies, but its code runs only when one of its exports is first accessed, so modules that aren't needed right away don't slow down startup. Modules that use top-level `await` still run right away. ([Firefox bug 1952263](https://bugzil.la/1952263)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 158           | No                  |
+| Developer Edition | —             | —                   |
+| Beta              | —             | —                   |
+| Release           | —             | —                   |
+
+- `javascript.options.experimental.defer_import_eval`
+  - : Set to `true` to enable on Nightly.
+
 ## APIs
 
 ### Crash Reporting
@@ -614,48 +692,51 @@ Note that Firefox does not support providing {{domxref("CrashReportContext")}} i
 - `dom.reporting.crash.enabled`
   - : Set to `true` to enable (enabled by default in Nightly).
 
-### Scoped custom element registries
+### CSS numeric factory functions exposed in workers and worklets
 
-Support for [scoped custom element registries](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) is being implemented.
-Scoped registries allow a shadow tree to create an independent {{domxref("CustomElementRegistry")}} whose definitions only apply to that specific DOM subtree.
-This can be used to avoid collisions where multiple web components declare elements with the same name.
-
-The implementation includes:
-
-- `customElementRegistry` property on {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("ShadowRoot")}}.
-  The [`CustomElementRegistry()` constructor](/en-US/docs/Web/API/CustomElementRegistry/CustomElementRegistry) creates a new `CustomElementRegistry` object for scoped usage. ([Firefox bug 2018900](https://bugzil.la/2018900))
-
-From version 156:
-
-- [Scoped custom element registries](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) are now supported, so that a shadow root can define custom elements that do not clash with those defined in the global registry. ([Firefox bug 2064333](https://bugzil.la/2064333)).
+The [numeric factory functions](/en-US/docs/Web/API/CSS/factory_functions_static) of the {{domxref("CSS")}} namespace, such as `CSS.px()`, are now exposed in workers and paint worklets, not only on `Window`.
+([Firefox bug 2079188](https://bugzil.la/2079188), [Firefox bug 2079583](https://bugzil.la/2079583)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 156           | Yes                 |
-| Developer Edition | 150           | No                  |
-| Beta              | 150           | No                  |
-| Release           | 150           | No                  |
+| Nightly           | 161           | Yes                 |
+| Developer Edition | 159           | No                  |
+| Beta              | 159           | No                  |
+| Release           | 159           | No                  |
 
-- `dom.scoped-custom-element-registries.enabled`
-  - : Set to `true` to enable.
+- `layout.css.namespace.exposed-in-workers-and-worklets`
+  - : Set to `true` to enable (enabled by default in Nightly).
 
-### CSS Typed Object Model Level 1
+### Streaming request bodies
 
-The [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) is implemented in Nightly.
-This simplifies CSS property manipulation by exposing CSS values as typed JavaScript objects rather than strings.
-([Firefox bug 1278697](https://bugzil.la/1278697)).
+You can now set a {{domxref("ReadableStream")}} as a request body (for example, via the {{domxref("Request.Request", "Request()")}} constructor or the {{domxref("Window.fetch()")}} method). This allows you to stream uploads incrementally rather than having to wait for the whole body to be available.
+([Firefox bug 1594633](https://bugzil.la/1594633)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 154           | Yes                 |
-| Developer Edition | 149           | No                  |
-| Beta              | 149           | No                  |
-| Release           | 149           | No                  |
+| Nightly           | 158           | Yes                 |
+| Developer Edition | 158           | No                  |
+| Beta              | 158           | No                  |
+| Release           | 158           | No                  |
 
-- `layout.css.typed-om.enabled`
+- `dom.fetch.streaming_upload`
   - : Set to `true` to enable.
 
 ### Graphics: Canvas, WebGL, and WebGPU
+
+#### Canvas 2D color space
+
+The [`colorSpace`](/en-US/docs/Web/API/HTMLCanvasElement/getContext#colorspace) option of {{domxref("HTMLCanvasElement.getContext()")}} and {{domxref("OffscreenCanvas.getContext()")}} is supported for `2d` contexts. {{domxref("CanvasRenderingContext2D.getContextAttributes()")}} returns the selected color space. Image data also has a color space: the {{domxref("ImageData.colorSpace")}} property returns it. The `colorSpace` setting of the {{domxref("ImageData.ImageData", "ImageData()")}} constructor and the {{domxref("CanvasRenderingContext2D.createImageData()", "createImageData()")}} and {{domxref("CanvasRenderingContext2D.getImageData()", "getImageData()")}} methods sets it. The supported values are `"srgb"` and `"display-p3"`. Pixel data isn't converted between color spaces yet. ([Firefox bug 1841326](https://bugzil.la/1841326)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 160           | No                  |
+| Developer Edition | 160           | No                  |
+| Beta              | 160           | No                  |
+| Release           | 160           | No                  |
+
+- `gfx.canvas.colorspace.enabled`
+  - : Set to `true` to enable.
 
 #### WebGL: Draft extensions
 
@@ -744,23 +825,6 @@ This allows Firefox users to display images that render on some other browsers, 
     - `0`: Permissive. Accept images with specification violations in both recommendations ("should" language) and requirements ("shall" language), provided they can be safely or unambiguously interpreted.
     - `1` **(default)**: Mixed. Reject violations of requirements ("shall"), but allow violations of recommendations ("should").
     - `2`: Strict. Reject any violations of specified requirements or recommendations.
-
-#### JPEG XL support
-
-Firefox supports the [JPEG XL](https://jpeg.org/jpegxl/) image format, a modern successor to JPEG that offers improved compression and image quality, along with new capabilities such as transparency, animation, and HDR support.
-See [Firefox bug 1539075](https://bugzil.la/1539075) and [Firefox bug 2016688](https://bugzil.la/2016688) for more details.
-
-In Firefox 149, the previous C++ [JPEG XL](https://jpeg.org/jpegxl/) image decoder was replaced with a new Rust-based implementation that uses the `jxl-rs` library ([Firefox bug 1986393](https://bugzil.la/1986393)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 153           | Yes                 |
-| Developer Edition | 152           | No                  |
-| Beta              | 152           | No                  |
-| Release           | 152           | No                  |
-
-- `image.jxl.enabled`
-  - : Set to `true` to enable.
 
 ### WebVR API (Disabled)
 
@@ -867,23 +931,9 @@ The `navigate` option of the {{domxref("Notification.Notification", "Notificatio
 - `dom.webnotifications.navigate.enabled`
   - : Set to `true` to enable.
 
-### Sanitizing HTML while parsing
-
-Methods that sanitize HTML with the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API), such as {{domxref("Element.setHTML()")}}, now drop unwanted elements and attributes as the markup is parsed, instead of parsing all of it first and then cleaning up afterwards. The result is the same, except that neighboring text now lands in a single text node instead of being split across several. ([Firefox bug 2062652](https://bugzil.la/2062652)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 157           | No                  |
-| Developer Edition | 157           | No                  |
-| Beta              | 157           | No                  |
-| Release           | 157           | No                  |
-
-- `dom.security.sanitizer.while-parsing`
-  - : Set to `true` to enable.
-
 ### Container Timing API
 
-The Container Timing API reports when the contents of a container element are painted, letting you measure the render time of a region of the page rather than of the whole viewport.
+The [Container Timing API](/en-US/docs/Web/API/PerformanceContainerTiming) reports when the contents of a container element are painted, letting you measure the render time of a region of the page rather than of the whole viewport.
 ([Firefox bug 1940240](https://bugzil.la/1940240)).
 
 | Release channel   | Version changed | Enabled by default? |
@@ -900,7 +950,7 @@ The Container Timing API reports when the contents of a container element are pa
 
 The [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) supports ML-KEM, an algorithm that lets two parties agree on a shared secret key, and that is designed to stay secure against attacks by quantum computers. One party passes the other party's public key to the {{domxref("SubtleCrypto")}} methods `encapsulateKey()` or `encapsulateBits()`, which return the shared key along with a ciphertext to send to the other party. The other party passes that ciphertext and their own private key to `decapsulateKey()` or `decapsulateBits()` to arrive at the same shared key.
 
-The `ML-KEM-512`, `ML-KEM-768`, and `ML-KEM-1024` algorithm names are supported, along with the matching {{domxref("CryptoKey.usages", "key usages")}} and the new `raw-public` and `raw-seed` key formats for {{domxref("SubtleCrypto.importKey()")}} and {{domxref("SubtleCrypto.exportKey()")}}. ([Firefox bug 1943614](https://bugzil.la/1943614)).
+The `ML-KEM-512`, `ML-KEM-768`, and `ML-KEM-1024` algorithm names are supported, along with the matching {{domxref("CryptoKey.usages", "usages")}} and the new `raw-public` and `raw-seed` key formats for {{domxref("SubtleCrypto.importKey()")}} and {{domxref("SubtleCrypto.exportKey()")}}. ([Firefox bug 1943614](https://bugzil.la/1943614)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -1027,20 +1077,6 @@ This simplifies the client-side code required to work with servers that support 
 | Release           | 135           | No                  |
 
 - `network.http.idempotencyKey.enabled`
-  - : Set to `true` to enable.
-
-### Accept header with MIME type image/jxl
-
-The HTTP [`Accept`](/en-US/docs/Web/HTTP/Reference/Headers/Accept) header in [default requests and image requests](/en-US/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values) can be configured via a preference to indicate support for the `image/jxl` MIME type.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 128           | No                  |
-| Developer Edition | 128           | No                  |
-| Beta              | 128           | No                  |
-| Release           | 128           | No                  |
-
-- `image.jxl.enabled`
   - : Set to `true` to enable.
 
 ### SameSite=Lax by default

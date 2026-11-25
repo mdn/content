@@ -11,7 +11,7 @@ The `ReadableStreamBYOBReader` interface of the [Streams API](/en-US/docs/Web/AP
 It is used for efficient copying from underlying sources where the data is delivered as an "anonymous" sequence of bytes, such as files.
 
 An instance of this reader type should usually be obtained by calling {{domxref("ReadableStream.getReader()")}} on the stream, specifying `mode: "byob"` in the options parameter.
-The readable stream must have an _underlying byte source_. In other words, it must have been [constructed](/en-US/docs/Web/API/ReadableStream/ReadableStream) specifying an underlying source with [`type: "bytes"`](/en-US/docs/Web/API/ReadableStream/ReadableStream#type)).
+The readable stream must have an _underlying byte source_. In other words, it must have been [constructed](/en-US/docs/Web/API/ReadableStream/ReadableStream) specifying an underlying source with [`type: "bytes"`](/en-US/docs/Web/API/ReadableStream/ReadableStream#type).
 
 Using this kind of reader, a [`read()`](/en-US/docs/Web/API/ReadableStreamBYOBReader/read) request when the readable stream's internal queues are empty will result in a zero copy transfer from the underlying source (bypassing the stream's internal queues).
 If the internal queues are not empty, a `read()` will satisfy the request from the buffered data.

@@ -6,25 +6,19 @@ page-type: webgl-extension
 browser-compat: api.WEBGL_compressed_texture_astc
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WEBGL_compressed_texture_astc`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes [Adaptive Scalable Texture Compression](https://en.wikipedia.org/wiki/Adaptive_Scalable_Texture_Compression) (ASTC) compressed texture formats to WebGL.
 
 For more information, see the article [Using ASTC Texture Compression for Game Assets](https://developer.nvidia.com/astc-texture-compression-for-game-assets) by NVIDIA.
 
-WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method.
+For more information, see [Using WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions).
 
 > [!NOTE]
 > ASTC compression is typically available on Mali ARM GPUs, Intel GPUs, and NVIDIA Tegra chips.
 >
 > This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
-
-## Instance methods
-
-This extension exposes one new methods.
-
-- {{domxref("WEBGL_compressed_texture_astc.getSupportedProfiles", "ext.getSupportedProfiles()")}}
-  - : Returns an array of strings containing the names of the ASTC profiles supported by the implementation.
 
 ## Constants
 
@@ -225,6 +219,13 @@ The compressed texture formats are exposed by 28 constants and can be used in tw
     </tr>
   </tbody>
 </table>
+
+## Instance methods
+
+This extension exposes one new method.
+
+- {{domxref("WEBGL_compressed_texture_astc.getSupportedProfiles", "ext.getSupportedProfiles()")}}
+  - : Returns an array of strings containing the names of the ASTC profiles supported by the implementation.
 
 ## Examples
 

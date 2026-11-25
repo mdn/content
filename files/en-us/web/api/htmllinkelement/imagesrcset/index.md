@@ -22,7 +22,7 @@ If the `imageSrcset` property includes width descriptors, the {{domxref("HTMLLin
 
 ## Value
 
-A string composed of a comma-separated list of one or more image candidate strings, or the empty string `""` if unspecified..
+A string composed of a comma-separated list of one or more image candidate strings, or the empty string `""` if unspecified.
 
 ## Examples
 

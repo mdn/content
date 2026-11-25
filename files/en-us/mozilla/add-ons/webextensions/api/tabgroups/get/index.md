@@ -1,5 +1,5 @@
 ---
-title: tabGroups.get
+title: tabGroups.get()
 slug: Mozilla/Add-ons/WebExtensions/API/tabGroups/get
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabGroups.get

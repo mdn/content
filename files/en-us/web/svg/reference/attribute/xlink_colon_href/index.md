@@ -31,26 +31,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("textPath")}}
 - {{SVGElement("use")}}
 
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg">
-  <a xlink:href="https://developer.mozilla.org/">
-    <text x="10" y="25">MDN Web Docs</text>
-  </a>
-</svg>
-```
-
-{{EmbedLiveSample("Example", "320", "100")}}
-
 ## a
 
 For {{SVGElement("a")}}, `xlink:href` defines the location of the referenced object.
@@ -358,6 +338,26 @@ For {{SVGElement("use")}}, `xlink:href` defines the location of the referenced o
     </tr>
   </tbody>
 </table>
+
+## Example
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg">
+  <a xlink:href="https://developer.mozilla.org/">
+    <text x="10" y="25">MDN Web Docs</text>
+  </a>
+</svg>
+```
+
+{{EmbedLiveSample("Example", "320", "100")}}
 
 ## Specifications
 

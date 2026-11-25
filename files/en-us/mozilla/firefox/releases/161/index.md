@@ -1,0 +1,109 @@
+---
+title: Firefox 161 release notes for developers (Stable)
+short-title: Firefox 161 (Stable)
+slug: Mozilla/Firefox/Releases/161
+page-type: firefox-release-notes-active
+sidebar: firefox
+---
+
+This article provides information about the changes in Firefox 161 that affect developers.
+Firefox 161 was released on [November 24, 2026](https://whattrainisitnow.com/release/?version=161).
+
+## Changes for web developers
+
+### HTML
+
+No notable changes.
+
+### SVG
+
+- The [`referrerpolicy`](/en-US/docs/Web/SVG/Reference/Attribute/referrerpolicy) attribute is now supported on the {{SVGElement("image")}}, {{SVGElement("script")}}, and {{SVGElement("feImage")}} elements, along with the corresponding {{domxref("SVGImageElement.referrerPolicy")}}, {{domxref("SVGScriptElement.referrerPolicy")}}, and {{domxref("SVGFEImageElement.referrerPolicy")}} properties.
+  These control how much referrer information is sent in the {{HTTPHeader("Referer")}} header when the element fetches the resource referenced by its `href` attribute. This works in the same way as the `referrerpolicy` attribute on the HTML {{HTMLElement("img")}} and {{HTMLElement("script")}} elements.
+  ([Firefox bug 2079321](https://bugzil.la/2079321)).
+
+### CSS
+
+- The {{cssxref("random")}} CSS function is now supported. It generates a random value within a specified range and can optionally limit the possible values to increments of a specified step size. An optional `<random-key>` parameter can be used to share a random base value across `random()` functions, for example on different elements or in different properties. ([Firefox bug 2072252](https://bugzil.la/2072252)).
+- The {{cssxref("var")}}, {{cssxref("attr")}}, and {{cssxref("env")}} CSS functions now accept nested functions in their first parameter. For example, `var(attr(data-theme-prop type(<custom-ident>)))` and `env(var(--safe-area-block-start))` are now supported. ([Firefox bug 2080511](https://bugzil.la/2080511)).
+
+### JavaScript
+
+No notable changes.
+
+### HTTP
+
+- [Compression Dictionary Transport](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport) is now supported. A server can mark a response as a dictionary using the {{httpheader("Use-As-Dictionary")}} header. The browser then lists the stored dictionary in the {{httpheader("Available-Dictionary")}} header of matching requests, and the server can reply with a response compressed against it, using the `dcb` (Brotli) or `dcz` (Zstandard) {{httpheader("Content-Encoding")}} values. This can greatly reduce the size of resources that change little between versions, such as JavaScript bundles. ([Firefox bug 2039320](https://bugzil.la/2039320)).
+
+### APIs
+
+- The {{domxref("WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams", "anticipatedConcurrentIncomingUnidirectionalStreams")}} and {{domxref("WebTransport.anticipatedConcurrentIncomingBidirectionalStreams","anticipatedConcurrentIncomingBidirectionalStreams")}} properties of the `WebTransport` interface are now supported, along with the corresponding `options` properties that can be used to set them in the {{domxref("WebTransport/WebTransport", "WebTransport()")}} constructor.
+  These properties represent the maximum number of incoming unidirectional and bidirectional streams, respectively, that the application expects the server to have open at the same time.
+  ([Firefox bug 2007825](https://bugzil.la/2007825)).
+- The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) now supports [custom clipboard formats](/en-US/docs/Web/API/Clipboard_API#custom_clipboard_formats), which allow web apps to write and read their own data formats using {{domxref("Clipboard.write()")}} and {{domxref("Clipboard.read()")}}.
+  A custom format is a MIME type prefixed with `"web "`, such as `"web text/x-my-format"`.
+  Custom formats can only be read by a page that is same-origin with the page that wrote them.
+  ([Firefox bug 2053725](https://bugzil.la/2053725), [Firefox bug 2086505](https://bugzil.la/2086505)).
+
+- The {{domxref("NavigationTransition.to")}} property of the [Navigation API](/en-US/docs/Web/API/Navigation_API) is now supported.
+  This returns a {{domxref("NavigationDestination")}} for the ongoing navigation, so code outside the {{domxref("Navigation/navigate_event", "navigate")}} event handler can find out where the navigation is going.
+  For example, a {{domxref("Navigation/navigateerror_event", "navigateerror")}} handler can use it to report which navigation failed.
+  ([Firefox bug 1991959](https://bugzil.la/1991959)).
+- The [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) is now supported.
+  This lets scripts read and write CSS values as typed JavaScript objects instead of strings, for example through {{domxref("Element.computedStyleMap()")}} and {{domxref("HTMLElement.attributeStyleMap")}}.
+  The color value interfaces, such as `CSSColorValue` and `CSSRGB`, are not supported in Firefox or any other browser.
+  ([Firefox bug 2089681](https://bugzil.la/2089681)).
+
+#### Media, WebRTC, and Web Audio
+
+- The {{domxref("RTCRtpSender.setParameters()")}} method now supports the optional [`setParameterOptions`](/en-US/docs/Web/API/RTCRtpSender/setParameters#setparameteroptions) parameter.
+  This lets you ask the encoder for an encoding to generate a key frame in the same call that you use to change the sender's encoding parameters, such as `active` or `scaleResolutionDownBy`. Receivers can then avoid requesting a key frame after the change.
+  ([Firefox bug 2057265](https://bugzil.la/2057265)).
+
+### WebDriver conformance (WebDriver BiDi, Marionette)
+
+#### WebDriver BiDi
+
+- Updated the `script.callFunction` command to return an `invalid argument` error when an argument or the `this` value contains a local value with an unknown `type`, including nested values. Previously, such values were silently replaced with `undefined`. ([Firefox bug 2084105](https://bugzil.la/2084105)).
+- Updated the `script.evaluate` and `script.callFunction` commands to stop clearing a pre-existing user activation flag when called with `userActivation: false`. ([Firefox bug 2084107](https://bugzil.la/2084107)).
+- Fixed an issue where the `browsingContext.navigate` and `browsingContext.reload` commands could hang or fail with the wrong error when a navigation started while the previous document was still loading. ([Firefox bug 2088640](https://bugzil.la/2088640)).
+- Fixed a performance issue where each call to the `browsingContext.setViewport` command became slower over the lifetime of the session. ([Firefox bug 2084362](https://bugzil.la/2084362)).
+- Fixed the `network.continueRequest` command so that replacing the body of a request that already had a body also updates the `Content-Length` header. Previously, the server could receive a truncated or incomplete body. ([Firefox bug 2088814](https://bugzil.la/2088814)).
+
+## Changes for add-on developers
+
+## Experimental web features
+
+These features are shipping in Firefox 161 but are disabled by default.
+To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
+You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **`margin-trim` property**: `layout.css.margin-trim.enabled`
+
+  The {{cssxref("margin-trim")}} property is now supported for block containers, and is enabled by default in Nightly. It removes the block-axis margins of child elements at the container's start edge, end edge, or both, while keeping the margins between siblings.
+  ([Firefox bug 2051240](https://bugzil.la/2051240)).
+
+- **Cross-document view transitions** (Nightly): `dom.viewTransitions.cross-document.enabled`
+
+  [Cross-document view transitions](/en-US/docs/Web/API/View_Transition_API/Using#basic_mpa_view_transition) are now enabled by default in Nightly.
+  These can be used to animate the transition between same-origin pages in a multi-page app.
+  ([Firefox bug 2084340](https://bugzil.la/2084340)).
+
+- **Render blocking** (Nightly): `dom.element.blocking.enabled`
+
+  The `blocking="render"` attribute of the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} elements is now enabled by default in Nightly.
+  This lets you block rendering of the page until the marked stylesheet has loaded or script has run, so the page doesn't first appear unstyled or incomplete.
+  ([Firefox bug 2084340](https://bugzil.la/2084340)).
+
+- **`match-parent` value for `quotes`** (Nightly): `layout.css.quotes.match-parent.enabled`
+
+  The {{cssxref("quotes")}} CSS property now supports the {{cssxref("quotes", "match-parent", "#match-parent")}} value, which makes an element use the quotation marks from the same set of quotation-mark pairs as its parent element.
+  ([Firefox bug 1752382](https://bugzil.la/1752382)).
+
+- **`text-autospace-size` property**: `layout.css.text-autospace-size.enabled`
+
+  The {{cssxref("text-autospace-size")}} property is now supported, and is enabled by default in Nightly. It sets the amount of space that {{cssxref("text-autospace")}} adds between Chinese/Japanese/Korean (CJK) and non-CJK characters.
+  ([Firefox bug 2086765](https://bugzil.la/2086765)).
+
+- **`prefers-color-scheme` reflects `<meta name="color-scheme">`**: `layout.css.prefers-color-scheme.meta-tag.enabled`
+
+  The {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} media feature now reflects the color scheme declared by a [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/color-scheme) element, when the element specifies a single scheme. This allows better selection of images and videos by color scheme. It also makes theme switchers easier to implement. The preference is enabled by default in Nightly. ([Firefox bug 2085572](https://bugzil.la/2085572)).

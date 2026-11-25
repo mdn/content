@@ -97,7 +97,7 @@ console.log(Object.values(100)); // []
 
 ## See also
 
-- [Polyfill of `Object.values` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.values` in `core-js`](https://core-js.io/docs/features/ecmascript/object)
 - [es-shims polyfill of `Object.values`](https://www.npmjs.com/package/object.values)
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}

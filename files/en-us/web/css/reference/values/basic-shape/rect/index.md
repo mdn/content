@@ -98,7 +98,7 @@ In this example, the {{cssxref("offset-path")}} property uses the `rect()` funct
 
 #### Result
 
-{{EmbedLiveSample("Creating an offset-path using rect", "100%", 400)}}
+{{EmbedLiveSample("creating_offset-path_using_rect", "100%", 400)}}
 
 - The path 1 rectangle specifies the distances of the four edges (top, right, bottom, and left) from the containing block. The top and bottom values are distances from the top edge of the containing block. The right and left values are distances from the left edge of the containing block. In addition, the corner of the rectangle is rounded at `20%`, making the red box element follow the rounded corners as it moves along this path. Notice how the arrow inside the box follows curve at the rectangular path corners.
 - The path 2 rectangle is similar to the path 1 rectangle, except that the right value is `auto`, which is equal to the value `100%`. This causes the right edge of the rectangle to match the right edge of the containing block, creating a wider rectangle than path 1.

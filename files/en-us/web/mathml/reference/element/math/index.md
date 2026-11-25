@@ -133,7 +133,7 @@ This example contains two MathML formula. The first one is rendered in its own c
 </p>
 ```
 
-{{ EmbedLiveSample('math_example', 700, 200, "", "") }}
+{{ EmbedLiveSample('examples', 700, 200, "", "") }}
 
 ## Technical summary
 

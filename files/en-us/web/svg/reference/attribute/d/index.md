@@ -15,31 +15,6 @@ This attribute is used with the SVG [`<path>`](#path) element.
 
 `d` is a presentation attribute, and hence can also be [used as a CSS property](#using_d_as_a_css_property).
 
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path
-    fill="none"
-    stroke="red"
-    d="M 10,30
-       A 20,20 0,0,1 50,30
-       A 20,20 0,0,1 90,30
-       Q 90,60 50,90
-       Q 10,60 10,30 z" />
-</svg>
-```
-
-{{EmbedLiveSample('Example', '100%', 200)}}
-
 ## path
 
 For {{SVGElement('path')}}, `d` is a string containing a series of path commands that define the path to be drawn.
@@ -1082,6 +1057,31 @@ svg {
 ```
 
 {{EmbedLiveSample('ClosePath', '100%', 200)}}
+
+## Example
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path
+    fill="none"
+    stroke="red"
+    d="M 10,30
+       A 20,20 0,0,1 50,30
+       A 20,20 0,0,1 90,30
+       Q 90,60 50,90
+       Q 10,60 10,30 z" />
+</svg>
+```
+
+{{EmbedLiveSample('Example', '100%', 200)}}
 
 ## Specifications
 

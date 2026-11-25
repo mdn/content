@@ -29,7 +29,7 @@ Only one `menuitemradio` in a group can be checked at the same time. When one it
 
 If your want more than one item in a group to be checked, or if you want to enable checking and unchecking an item, consider using `menuitemcheckbox`.
 
-If a `menu` or `menubar` contains more than one group of `menuitemradio` elements, or if the `menu` contains a group of `menuitemradio` elements as well as other, unrelated `menuitem` elements and/or `menuitemcheckbox` elements, contain each set of related `menuitemradio` elements in a `group` element or delimit the group the `menuitemradio` elements from the other menu items with a `separator` element (or an HTML element with an equivalent role such as a {{HTMLElement('fieldset')}} grouping or a thematic break {{HTMLElement('hr')}} separator.
+If a `menu` or `menubar` contains more than one group of `menuitemradio` elements, or if the `menu` contains a group of `menuitemradio` elements as well as other, unrelated `menuitem` elements and/or `menuitemcheckbox` elements, contain each set of related `menuitemradio` elements in a `group` element or delimit the group the `menuitemradio` elements from the other menu items with a `separator` element (or an HTML element with an equivalent role such as a {{HTMLElement('fieldset')}} grouping or a thematic break {{HTMLElement('hr')}} separator).
 
 An accessible name is required. Ideally, the accessible name should come from an associated {{htmlelement('label')}} element if using `<input type="radio">` or visible, descendant content. Realize if the label or descendant content is not sufficient and, preferably, [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) is used referencing non-descendant content or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) is used, these two ARIA properties will hide other descendant content from assistive technologies.
 
@@ -108,6 +108,12 @@ If the `menuitemradio` is in a submenu in a `menubar` or a menu opened with a me
 - `onKeyDown`
   - : Handle the case where the user presses the <kbd>Space</kbd> key to change the state of the radio button by changing the value of the `aria-checked` attribute and the appearance of the radio button so it appears checked or unchecked to the sighted user. Also handles all keys listed in the keyboard navigation section above.
 
+## Best practices
+
+### Prefer HTML
+
+The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use the native [HTML radio button](/en-US/docs/Web/HTML/Reference/Elements/input/radio) form control instead of recreating a radio button's functionality with JavaScript and ARIA.
+
 ## Examples
 
 ```html
@@ -137,10 +143,6 @@ The visual appearance of the selected state is a checked radio button which we c
 ```
 
 Don't use the {{cssxref("background")}} shorthand property, as that will override the {{cssxref("background-clip")}} property we used to create the radio button effect.
-
-### Prefer HTML
-
-The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use the native [HTML radio button](/en-US/docs/Web/HTML/Reference/Elements/input/radio) form control instead of recreating a radio button's functionality with JavaScript and ARIA.
 
 ## Specifications
 

@@ -4,11 +4,12 @@ short-title: vibrate
 slug: Web/API/Notification/vibrate
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: api.Notification.vibrate
 ---
 
-{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}} {{AvailableInWorkers}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}} {{AvailableInWorkers}}{{non-standard_header}}
 
 The **`vibrate`** read-only property of the {{domxref("Notification")}}
 interface specifies a [vibration pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns)

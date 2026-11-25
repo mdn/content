@@ -73,7 +73,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 #### Selection API
 
-- The [Selection API](/en-US/docs/Web/API/Selection) has been updated so that it has parity with other browsers in terms of how editing hosts are given focus when the selection moves inside them ([Firefox bug 1318312](https://bugzil.la/1318312)). See [Behavior of Selection API in terms of editing host focus changes](/en-US/docs/Web/API/Selection#behavior_of_selection_api_in_terms_of_editing_host_focus_changes) for more details.
+- The [Selection API](/en-US/docs/Web/API/Selection) has been updated so that it has parity with other browsers in terms of how editing hosts are given focus when the selection moves inside them ([Firefox bug 1318312](https://bugzil.la/1318312)). See [Behavior of Selection API in terms of editing host focus changes](/en-US/docs/Web/API/Selection_API#behavior_of_selection_api_in_terms_of_editing_host_focus_changes) for more details.
 - The {{domxref("Selection")}} API has been updated to match some recent spec changes ([Firefox bug 1359371](https://bugzil.la/1359371)):
   - The {{domxref("Selection.collapse", "collapse()")}} and {{domxref("Selection.extend", "extend()")}} methods' `offset` parameter is now optional.
   - The {{domxref("Selection.collapse", "collapse()")}} method's `node` parameter is now nullable.
@@ -90,7 +90,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 #### Service Workers/Push
 
-- Messages sent to service worker contexts (e.g., as the event object of {{domxref("ServiceWorkerGlobalScope.message_event","onmessage")}} are now represented by {{domxref("MessageEvent")}} objects, for consistency with other web messaging features.
+- Messages sent to service worker contexts (e.g., as the event object of {{domxref("ServiceWorkerGlobalScope.message_event","onmessage")}}) are now represented by {{domxref("MessageEvent")}} objects, for consistency with other web messaging features.
 - The {{domxref("PushManager.subscribe()")}} method now accepts {{jsxref("ArrayBuffer")}}s and Base64-encoded strings as `applicationServerKey` values ([Firefox bug 1337348](https://bugzil.la/1337348)).
 
 #### Web Audio API
@@ -111,7 +111,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 #### Encrypted Media Extensions API
 
 - Firefox currently allows Encrypted Media Extensions to be used in insecure contexts, despite this not being allowed in the specification. This will be changed in the near future, and starting in Firefox 55, deprecation warnings are output to the [web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) when this is done. ([Firefox bug 1361000](https://bugzil.la/1361000)).
-- Firefox currently doesn't require that at least one `MediaKeySystemCapabilities` object be included in the `suggestedConfigurations` parameter passed into {{domxref("Navigator.requestMediaKeySystemAccess()")}}, which the specification does mandate. Starting in Firefox 55, a warning is output to the web console when any audio or video configuration is specified without specifying supported codecs. Soon, failure to include a valid configuration for one or more of audio and video will throw an exception [Firefox bug 1368683](https://bugzil.la/1368683)).
+- Firefox currently doesn't require that at least one `MediaKeySystemCapabilities` object be included in the `suggestedConfigurations` parameter passed into {{domxref("Navigator.requestMediaKeySystemAccess()")}}, which the specification does mandate. Starting in Firefox 55, a warning is output to the web console when any audio or video configuration is specified without specifying supported codecs. Soon, failure to include a valid configuration for one or more of audio and video will throw an exception ([Firefox bug 1368683](https://bugzil.la/1368683)).
 
 #### WebGL
 

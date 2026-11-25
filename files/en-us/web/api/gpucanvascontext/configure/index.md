@@ -60,7 +60,7 @@ None (`undefined`).
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if `usage` includes the `TRANSIENT_ATTACHMENT` bit.
 
 ## Examples

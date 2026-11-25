@@ -14,11 +14,15 @@ The **`dblclick`** event fires when a pointing device button (such as a mouse's 
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("dblclick", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 ondblclick = (event) => { }
 ```
 
@@ -31,16 +35,6 @@ A {{domxref("MouseEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref(
 ## Examples
 
 This example toggles the size of a card when you double click on it.
-
-### JavaScript
-
-```js
-const card = document.querySelector("aside");
-
-card.addEventListener("dblclick", (e) => {
-  card.classList.toggle("large");
-});
-```
 
 ### HTML
 
@@ -68,6 +62,16 @@ aside {
 .large {
   transform: scale(1.3);
 }
+```
+
+### JavaScript
+
+```js
+const card = document.querySelector("aside");
+
+card.addEventListener("dblclick", (e) => {
+  card.classList.toggle("large");
+});
 ```
 
 ### Result

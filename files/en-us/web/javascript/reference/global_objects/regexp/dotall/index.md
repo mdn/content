@@ -57,6 +57,8 @@ Using both the `s` and `u` flags in conjunction allows the dot to match any Unic
 
 The set accessor of `dotAll` is `undefined`. You cannot change this property directly.
 
+For legacy reasons, `RegExp.prototype.dotAll === undefined` although `RegExp.prototype` is not a `RegExp` instance. (You'd expect the getter to throw a `TypeError` if the `this` value is not a `RegExp` instance.)
+
 ## Examples
 
 ### Using dotAll
@@ -91,7 +93,7 @@ console.log(str2.replace(regex2, ""));
 
 ## See also
 
-- [Polyfill of the `dotAll` flag in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of the `dotAll` flag in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - {{jsxref("RegExp.prototype.lastIndex")}}
 - {{jsxref("RegExp.prototype.global")}}
 - {{jsxref("RegExp.prototype.hasIndices")}}

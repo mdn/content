@@ -108,7 +108,7 @@ svg {
 
 {{EmbedLiveSample("Example", '100%', 400)}}
 
-## Usage context
+## Usage notes
 
 <table class="properties">
   <tbody>

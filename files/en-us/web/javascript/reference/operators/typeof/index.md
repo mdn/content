@@ -33,11 +33,11 @@ typeof operand
 ### Parameters
 
 - `operand`
-  - : An expression representing the object or [primitive](/en-US/docs/Glossary/Primitive) whose type is to be returned.
+  - : An expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 14 (prefix operators) or above representing the object or [primitive](/en-US/docs/Glossary/Primitive) whose type is to be returned.
 
-## Description
+### Return value
 
-The following table summarizes the possible return values of `typeof`. For more information about types and primitives, see also the [JavaScript data structure](/en-US/docs/Web/JavaScript/Guide/Data_structures) page.
+A string indicating the type of `operand`.
 
 | Type                                                                                                                                                                                                     | Result                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
@@ -52,6 +52,8 @@ The following table summarizes the possible return values of `typeof`. For more 
 | Any other object                                                                                                                                                                                         | `"object"`                          |
 
 This list of values is exhaustive. No spec-compliant engines are reported to produce (or had historically produced) values other than those listed.
+
+For more information about types and primitives, see also the [JavaScript data structure](/en-US/docs/Web/JavaScript/Guide/Data_structures) page.
 
 ## Examples
 
@@ -162,7 +164,7 @@ typeof (someData + " foo"); // "string"
 typeof undeclaredVariable; // "undefined"
 ```
 
-However, using `typeof` on lexical declarations ({{jsxref("Statements/let", "let")}} {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/using", "using")}} {{jsxref("Statements/await_using", "await using")}}, and [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class)) in the same block before the place of declaration will throw a {{jsxref("ReferenceError")}}. Block scoped variables are in a _[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)_ from the start of the block until the initialization is processed, during which it will throw an error if accessed.
+However, using `typeof` on lexical declarations ({{jsxref("Statements/let", "let")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/using", "using")}}, {{jsxref("Statements/await_using", "await using")}}, and [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class)) in the same block before the place of declaration will throw a {{jsxref("ReferenceError")}}. Block-scoped variables are in a _[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)_ from the start of the block until the initialization is processed, during which time they will throw an error if accessed.
 
 ```js example-bad
 typeof newLetVariable; // ReferenceError
@@ -220,7 +222,7 @@ function type(value) {
 
   // The name of the constructor; for example `Array`, `GeneratorFunction`,
   // `Number`, `String`, `Boolean` or `MyCustomClass`
-  const className = value.constructor.name;
+  const className = value.constructor?.name;
   if (typeof className === "string" && className !== "") {
     return className;
   }

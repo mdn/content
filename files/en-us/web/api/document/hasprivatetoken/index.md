@@ -35,7 +35,7 @@ A {{jsxref("Promise")}} that resolves with a boolean value indicating whether th
   - : Thrown if:
     - The current {{domxref("Document")}} is not loaded in a [secure context](/en-US/docs/Glossary/Secure_Context).
     - The maximum number of issuers per top level [origin](/en-US/docs/Glossary/Origin) (two) has been exceeded.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if `issuer` is not a valid URL.
 
 ## Examples

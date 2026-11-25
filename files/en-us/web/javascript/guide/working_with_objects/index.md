@@ -56,7 +56,7 @@ const myHonda = {
 };
 ```
 
-Objects created with initializers are called _plain objects_, because they are instances of {{jsxref("Object")}}, but not any other object type. Some object types have special initializer syntaxes — for example, [array initializers](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals) and [regex literals](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#creating_a_regular_expression).
+Objects created with initializers are called _plain objects_, because they are instances of {{jsxref("Object")}}, but not any other object type. Some object types have special initializer syntaxes — for example, [array initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Array_initializer) and [regex literals](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#creating_a_regular_expression).
 
 ### Using a constructor function
 

@@ -57,16 +57,6 @@ hwb(from #123456 h calc(w + 30) b)
 hwb(from lch(40% 70 240deg) h w calc(b - 30))
 ```
 
-## Description
-
-This color function in the [`sRGB` color space](/en-US/docs/Glossary/Color_space#srgb) is defined by a {{cssxref("hue")}} angle value, a whiteness value, a blackness value, and, optionally, an alpha value representing the color's transparency.
-
-The angles corresponding to particular hues differ across the sRGB (used by {{CSSXref("color_value/hsl", "hsl()")}} and `hwb()`), CIELAB (used by {{CSSXref("color_value/lch", "lch()")}}), and Oklab (used by {{CSSXref("color_value/oklch", "oklch()")}}) color spaces. `hwb()` is in the same color space as `hsl()`, and therefore has the same hue color angles. See the {{cssxref("hue")}} reference page for more detail and examples, or try changing the hues on the [color picker](/en-US/docs/Web/CSS/Guides/Colors#colors_in_action) to see it in action.
-
-An `hwb()` color is fully saturated when its whiteness (`W`) and blackness (`B`) values are both `0`. For any hue value `H`, `hwb(H 0% 0%)` is the same color as `hsl(H 100% 50%)`. Increasing the whiteness value lightens the color. Increasing the blackness darkens the color.
-
-When both the blackness and whiteness are greater than 0, the color gets muted, tending towards gray. When the amount of whiteness and blackness added in are equal to or greater than 100% — in other words, if `W + B >= 100%`, the color function defines a shade of gray. When the sum of both values is greater than 100% (`W + B > 100%`), the whiteness and blackness values of the gray color are effectively normalized as `W / (W + B)` and `B / (W + B)`, respectively.
-
 ## Values
 
 Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors).
@@ -188,6 +178,16 @@ hwb(from hsl(0 100% 50%) calc(h + 120) calc(w + 25) calc(b + 10) / calc(alpha - 
 
 > [!NOTE]
 > Because the origin color channel values are resolved to `<number>` values, you have to add numbers to them when using them in calculations, even in cases where a channel would normally accept `<percentage>`, `<angle>`, or other value types. Adding a `<percentage>` to a `<number>`, for example, doesn't work.
+
+## Description
+
+This color function in the [`sRGB` color space](/en-US/docs/Glossary/Color_space#srgb) is defined by a {{cssxref("hue")}} angle value, a whiteness value, a blackness value, and, optionally, an alpha value representing the color's transparency.
+
+The angles corresponding to particular hues differ across the sRGB (used by {{CSSXref("color_value/hsl", "hsl()")}} and `hwb()`), CIELAB (used by {{CSSXref("color_value/lch", "lch()")}}), and Oklab (used by {{CSSXref("color_value/oklch", "oklch()")}}) color spaces. `hwb()` is in the same color space as `hsl()`, and therefore has the same hue color angles. See the {{cssxref("hue")}} reference page for more detail and examples, or try changing the hues on the [color picker](/en-US/docs/Web/CSS/Guides/Colors#colors_in_action) to see it in action.
+
+An `hwb()` color is fully saturated when its whiteness (`W`) and blackness (`B`) values are both `0`. For any hue value `H`, `hwb(H 0% 0%)` is the same color as `hsl(H 100% 50%)`. Increasing the whiteness value lightens the color. Increasing the blackness darkens the color.
+
+When both the blackness and whiteness are greater than 0, the color gets muted, tending towards gray. When the amount of whiteness and blackness added in are equal to or greater than 100% — in other words, if `W + B >= 100%`, the color function defines a shade of gray. When the sum of both values is greater than 100% (`W + B > 100%`), the whiteness and blackness values of the gray color are effectively normalized as `W / (W + B)` and `B / (W + B)`, respectively.
 
 ## Formal syntax
 

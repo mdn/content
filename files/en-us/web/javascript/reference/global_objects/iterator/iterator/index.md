@@ -141,7 +141,7 @@ The subclassing pattern is useful if you want to create many custom iterators. I
 
 ## See also
 
-- [Polyfill of `Iterator` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [Polyfill of `Iterator` in `core-js`](https://core-js.io/docs/features/ecmascript/iterator)
 - [es-shims polyfill of `Iterator` and associated helpers](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.from()")}}

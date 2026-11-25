@@ -29,6 +29,8 @@ All built-in functions read the `flags` property instead of reading individual f
 
 The set accessor of `flags` is `undefined`. You cannot change this property directly.
 
+For legacy reasons, `RegExp.prototype.flags === ""` (because the individual flag accessors each return `undefined`) although `RegExp.prototype` is not a `RegExp` instance.
+
 ## Examples
 
 ### Using flags
@@ -48,7 +50,7 @@ The set accessor of `flags` is `undefined`. You cannot change this property dire
 
 ## See also
 
-- [Polyfill of `RegExp.prototype.flags` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `RegExp.prototype.flags` in `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
 - [es-shims polyfill of `RegExp.prototype.flags`](https://www.npmjs.com/package/regexp.prototype.flags)
 - [Advanced searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) in the Regular expressions guide
 - {{jsxref("RegExp.prototype.source")}}

@@ -14,11 +14,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("connect", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onconnect = (event) => { }
 ```
 
@@ -33,6 +37,8 @@ A {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
 This example shows a shared worker file — when a connection to the worker occurs from a main thread via a {{domxref("MessagePort")}}, the `onconnect` event handler fires. The event object is a {{domxref("MessageEvent")}}.
 
 The connecting port can be referenced through the event object's `ports` parameter; this reference can have an `onmessage` handler attached to it to handle messages coming in through the port, and its `postMessage()` method can be used to send messages back to the main thread using the worker.
+
+Using the `onconnect` event handler property (but note that this replaces other event listeners added using `onconnect`, if any):
 
 ```js
 self.onconnect = (e) => {
@@ -49,7 +55,7 @@ self.onconnect = (e) => {
 
 For a complete running example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)
 
-### addEventListener equivalent
+### Using addEventListener()
 
 You could also set up an event handler using the {{domxref("EventTarget/addEventListener", "addEventListener()")}} method:
 

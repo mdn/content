@@ -22,7 +22,7 @@ deleteFramebuffer(framebuffer)
 ### Parameters
 
 - `framebuffer`
-  - : A {{domxref("WebGLFramebuffer")}} object to delete.
+  - : A {{domxref("WebGLFramebuffer")}} object to delete. Passing `null` does nothing.
 
 ### Return value
 

@@ -11,7 +11,14 @@ The `cursor` attribute specifies the mouse cursor displayed when the mouse point
 > [!NOTE]
 > As a presentation attribute, `cursor` also has a CSS property counterpart: {{cssxref("cursor")}}. When both are specified, the CSS property takes priority.
 
-## Usage context
+## Elements
+
+The following elements can use the `cursor` attribute:
+
+- [Container elements](/en-US/docs/Web/SVG/Reference/Element#container_elements)
+- [Graphics elements](/en-US/docs/Web/SVG/Reference/Element#graphics_elements)
+
+## Usage notes
 
 <table class="properties">
   <tbody>
@@ -34,13 +41,6 @@ The `cursor` attribute specifies the mouse cursor displayed when the mouse point
     </tr>
   </tbody>
 </table>
-
-## Elements
-
-The following elements can use the `cursor` attribute
-
-- [Container elements](/en-US/docs/Web/SVG/Reference/Element#container_elements)
-- [Graphics elements](/en-US/docs/Web/SVG/Reference/Element#graphics_elements)
 
 ## Specifications
 

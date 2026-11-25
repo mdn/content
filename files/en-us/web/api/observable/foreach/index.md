@@ -54,13 +54,13 @@ If `callback` throws an exception, the operation unsubscribes from the source.
 
 This example displays the coordinates of each of the first three button clicks, then adds a completion message. Click Restart after the stream ends to try again.
 
-```html hidden live-sample___basic-forEach
+```html hidden live-sample___basic-foreach
 <button>Click me</button>
 <p>Waiting for clicks</p>
 <button id="restart" disabled>Restart</button>
 ```
 
-```js live-sample___basic-forEach
+```js live-sample___basic-foreach
 const btn = document.querySelector("button");
 const output = document.querySelector("p");
 

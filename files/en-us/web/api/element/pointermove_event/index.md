@@ -22,11 +22,15 @@ For most use cases, you should prefer `pointermove` to avoid performance issues.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("pointermove", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onpointermove = (event) => { }
 ```
 
@@ -52,7 +56,7 @@ para.addEventListener("pointermove", (event) => {
 });
 ```
 
-You can also use the `onpointermove` event handler property:
+You can also use the `onpointermove` event handler property (but note that this replaces other event listeners added using `onpointermove`, if any):
 
 ```js
 const para = document.querySelector("p");

@@ -102,7 +102,7 @@ The Clipboard API methods {{domxref("Clipboard.read", "navigator.clipboard.read(
 The methods are available from a secure context but only function after the extension's user performs {{Glossary("Transient Activation","transient activation")}} and clicks a paste prompt in an ephemeral context menu. However, with the [`"clipboardRead"` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#clipboardread), your extension can read from the clipboard without user confirmation or transient activation.
 
 > [!NOTE]
-> In Firefox and Chrome, the `"clipboardRead"` permission enables writing to the clipboard from all extension contexts and content scripts. Safari doesn't support the `"clipboardRead"` permission.
+> In Firefox and Chrome, the `"clipboardRead"` permission enables reading from the clipboard from all extension contexts (except service workers) and content scripts. Safari doesn't support the `"clipboardRead"` permission.
 
 This snippet of code fetches the text from the clipboard and replaces the contents of the element with the ID `"outbox"` with that text.
 
@@ -141,7 +141,7 @@ document.querySelector("#paste").addEventListener("click", paste);
 
 In Chrome:
 
-- Chrome doesn't expose `navigator.clipboard` to extension service workers, and offscreen documents can't access `navigator.clipboard` due to the API's document focus requirements. As a result, Chrome extensions have to use the deprecated `document.execCommand()` APIs in an offscreen document or use `navigator.clipboard` in a different context, such as a content script or extension page.
+- Starting in Chrome 157, extension service workers with the `"clipboardWrite"` permission can write to the clipboard using `navigator.clipboard`, while reading from the clipboard in a service worker is not supported. Prior to Chrome 157, or when reading from the clipboard in the background, Chrome extensions have to use the deprecated `document.execCommand()` APIs in an offscreen document or use `navigator.clipboard` in a different context, such as a content script or extension page.
   For page scripts to write to the clipboard without user interaction, the `"clipboard-write"` permission needs to be requested using the Web API {{domxref("Permissions", "navigator.permissions")}}. Your extension can check for that permission using {{domxref("Permissions.query", "navigator.permissions.query()")}}:
 
   ```js

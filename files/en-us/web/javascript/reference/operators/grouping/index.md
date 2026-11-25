@@ -33,7 +33,11 @@ console.log(1 * 3 + 2 * 3); // 3 + 6
 ### Parameters
 
 - `expression`
-  - : Any [expression](/en-US/docs/Web/JavaScript/Reference/Operators) to be evaluated, including [comma-joined](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator) expressions.
+  - : An expression of any [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table), including [comma-joined](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator) expressions.
+
+### Return value
+
+The result of `expression`. Grouping preserves references, so `(obj.method)()` calls the method with `obj` as its `this` value.
 
 ## Description
 

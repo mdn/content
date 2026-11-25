@@ -17,7 +17,7 @@ Polyfills are important to web developers but are also a risk: buggy polyfills c
 
 The [JavaScript reference documentation](/en-US/docs/Web/JavaScript) can link to polyfills from two sources:
 
-- The [core-js](https://github.com/zloirock/core-js/tree/master) library.
+- The [core-js](https://core-js.io/) library.
 - The [es-shims](https://github.com/es-shims) organization.
 
 Sources are selected by the MDN maintainers based on the following criteria:

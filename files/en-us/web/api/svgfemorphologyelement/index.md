@@ -11,6 +11,15 @@ The **`SVGFEMorphologyElement`** interface corresponds to the {{SVGElement("feMo
 
 {{InheritanceDiagram}}
 
+## Static properties
+
+- `SVG_MORPHOLOGY_OPERATOR_UNKNOWN` (0)
+  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+- `SVG_MORPHOLOGY_OPERATOR_ERODE` (1)
+  - : Corresponds to the value `erode`.
+- `SVG_MORPHOLOGY_OPERATOR_DILATE` (2)
+  - : Corresponds to the value `dilate`.
+
 ## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
@@ -37,15 +46,6 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 ## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
-
-## Static properties
-
-- `SVG_MORPHOLOGY_OPERATOR_UNKNOWN` (0)
-  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
-- `SVG_MORPHOLOGY_OPERATOR_ERODE` (1)
-  - : Corresponds to the value `erode`.
-- `SVG_MORPHOLOGY_OPERATOR_DILATE` (2)
-  - : Corresponds to the value `dilate`.
 
 ## Specifications
 

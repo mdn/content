@@ -20,6 +20,27 @@ In HTML, {{HTMLElement('th')}} and {{HTMLElement('td')}} elements have the [`col
 
 The value of `aria-colspan` should be a positive integer. The default or assumed value of a cell span is 1. Make sure that the included value does cause the cell or gridcell to overlap the next cell or gridcell in the same row and does not cause the cell to span outside of the containing table, grid, or treegrid.
 
+## Values
+
+- `<integer>`
+  - : An integer greater than or equal to the default value of 1 defining the number of columns spanned by the cell. The value must be less than what would cause a cell to overlap the next cell in the same row.
+
+## Associated interfaces
+
+- {{domxref("Element.ariaColSpan")}}
+  - : The [`ariaColSpan`](/en-US/docs/Web/API/Element/ariaColSpan) property, part of each element's interface, reflects the value of the `aria-colspan` attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
+
+## Associated roles
+
+Used in roles:
+
+- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
+
+Inherits into roles:
+
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+
 ## Example
 
 The following is an example of part of a bowling tournament league scoring spreadsheet. Each game spans 10 frames, and each frame spans a 3 scores: two balls and the current total. The 10th (and last) frame in each game spans 4 columns in case someone is scoring all strikes.
@@ -136,27 +157,6 @@ The following is an example of part of a bowling tournament league scoring sprea
 ```
 
 If we had used a {{HTMLElement('table')}} and semantic table elements our markup would have been less verbose and accessible by default.
-
-## Values
-
-- `<integer>`
-  - : An integer greater than or equal to the default value of 1 defining the number of columns spanned by the cell. The value must be less than what would cause a cell to overlap the next cell in the same row.
-
-## Associated interfaces
-
-- {{domxref("Element.ariaColSpan")}}
-  - : The [`ariaColSpan`](/en-US/docs/Web/API/Element/ariaColSpan) property, part of each element's interface, reflects the value of the `aria-colspan` attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
-
-## Associated roles
-
-Used in roles:
-
-- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
-
-Inherits into roles:
-
-- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
 
 ## Specifications
 

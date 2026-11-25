@@ -123,6 +123,9 @@ This property is specified as a comma-separated list of `<animation>` values, wi
 
 The `animation` property is specified as one or more single animations, separated by commas. Each `animation` within the comma-separated list of animations sets the {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}}, and {{cssxref("animation-timeline")}}. If any of the components are not included in an `animation` declaration, the component value is set to the component's initial value.
 
+> [!NOTE]
+> The `animation` shorthand property resets the {{cssxref("animation-range-start")}}, {{cssxref("animation-range-end")}} and {{cssxref("animation-trigger")}} properties to their initial values; `normal`, `normal` and `none`, respectively. These reset-only sub-properties cannot be set in the `animation` shorthand, and including them invalidates the entire declaration. Because the `animation` declaration sets each of these properties to their initial values, they must either be declared after any `animation` shorthand declarations or with greater [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity).
+
 ### animation-name
 
 The `<animation-name>` component of each animation is the name for the animation, which may be `none`, a {{cssxref("&lt;custom-ident&gt;")}}, or a {{cssxref("&lt;string&gt;")}}. The initial value of `animation-name` is `none`, meaning if no `animation-name` value is declared in the `animation` shorthand property, no animation is applied to any of the properties.
@@ -155,7 +158,7 @@ In the case of the `animation-fill-mode` [forwards](/en-US/docs/Web/CSS/Referenc
 
 ## Accessibility
 
-Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for vestibular disorders, epilepsy, and migraine and scotopic sensitivity.
+Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for vestibular disorders, epilepsy, migraine, and scotopic sensitivity.
 
 Consider providing a mechanism for pausing or disabling animation as well as using the [reduced motion `@media` query](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) to create a complementary experience for users who have expressed a preference for reduced animated experiences.
 

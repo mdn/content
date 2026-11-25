@@ -23,7 +23,7 @@ deleteShader(shader)
 ### Parameters
 
 - `shader`
-  - : A {{domxref("WebGLShader")}} object to delete.
+  - : A {{domxref("WebGLShader")}} object to delete. Passing `null` does nothing.
 
 ### Return value
 

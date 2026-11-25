@@ -87,7 +87,7 @@ A user agent might allow the capture of the entire content of an obscured window
 
 The options object passed into {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is used to set options for the resulting stream.
 
-The `video` and `audio` objects passed into the options object can also hold additional constraints particular to those media tracks. See [Properties of shared screen tracks](/en-US/docs/Web/API/MediaTrackConstraints#instance_properties_of_shared_screen_tracks) for details about additional constraints for configuring a screen-capture stream that are added to {{domxref("MediaTrackConstraints")}}, supported constraints returned by {{domxref("MediaDevices.getSupportedConstraints()")}}, and {{domxref("MediaTrackSettings")}}).
+The `video` and `audio` objects passed into the options object can also hold additional constraints particular to those media tracks. See [Properties of shared screen tracks](/en-US/docs/Web/API/MediaTrackConstraints#instance_properties_of_shared_screen_tracks) for details about additional constraints for configuring a screen-capture stream that are added to {{domxref("MediaTrackConstraints")}}, supported constraints returned by {{domxref("MediaDevices.getSupportedConstraints()")}}, and current settings returned by {{domxref("MediaStreamTrack.getSettings()")}}.
 
 None of the constraints are applied in any way until after the content to capture has been selected. The constraints alter what you see in the resulting stream. For example, if you specify a {{domxref("MediaTrackConstraints.width", "width")}} constraint for the video, it's applied by scaling the video after the user selects the area to share. It doesn't establish a restriction on the size of the source itself.
 
@@ -164,6 +164,57 @@ Before streaming of captured screen contents can begin, the {{Glossary("user age
 ### Streaming screen capture
 
 In this example, the contents of the captured screen area are streamed into a {{HTMLElement("video")}} element on the same page.
+
+#### HTML
+
+The HTML starts with an introductory paragraph, then gets into the meat of things.
+
+```html
+<p>
+  This example shows you the contents of the selected part of your display.
+  Click the Start Capture button to begin.
+</p>
+
+<p>
+  <button id="start">Start Capture</button>&nbsp;<button id="stop">
+    Stop Capture
+  </button>
+</p>
+
+<video id="video" autoplay></video>
+<br />
+
+<strong>Log:</strong>
+<br />
+<pre id="log"></pre>
+```
+
+The key parts of the HTML are:
+
+1. A {{HTMLElement("button")}} labeled "Start Capture" which, when clicked, calls the `startCapture()` function to request access to, and begin capturing, screen contents.
+2. A second button, "Stop Capture", which upon being clicked calls `stopCapture()` to terminate capture of screen contents.
+3. A {{HTMLElement("video")}} into which the captured screen contents are streamed.
+4. A {{HTMLElement("pre")}} block into which logged text is placed by the intercepted {{domxref("console")}} method.
+
+#### CSS
+
+The CSS is entirely cosmetic in this example. The video is given a border, and its width is set to occupy nearly the entire available horizontal space (`width: 98%`). {{cssxref("max-width")}} is set to `860px` to set an absolute upper limit on the video's size,
+
+```css
+#video {
+  border: 1px solid #999999;
+  width: 98%;
+  max-width: 860px;
+}
+
+#log {
+  width: 25rem;
+  height: 15rem;
+  border: 1px solid black;
+  padding: 0.5rem;
+  overflow: scroll;
+}
+```
 
 #### JavaScript
 
@@ -269,57 +320,6 @@ function dumpOptionsInfo() {
 ```
 
 The track list is obtained by calling {{domxref("MediaStream.getVideoTracks", "getVideoTracks()")}} on the captured screen's {{domxref("MediaStream")}}. The settings currently in effect are obtained using {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} and the established constraints are gotten with {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}
-
-#### HTML
-
-The HTML starts with an introductory paragraph, then gets into the meat of things.
-
-```html
-<p>
-  This example shows you the contents of the selected part of your display.
-  Click the Start Capture button to begin.
-</p>
-
-<p>
-  <button id="start">Start Capture</button>&nbsp;<button id="stop">
-    Stop Capture
-  </button>
-</p>
-
-<video id="video" autoplay></video>
-<br />
-
-<strong>Log:</strong>
-<br />
-<pre id="log"></pre>
-```
-
-The key parts of the HTML are:
-
-1. A {{HTMLElement("button")}} labeled "Start Capture" which, when clicked, calls the `startCapture()` function to request access to, and begin capturing, screen contents.
-2. A second button, "Stop Capture", which upon being clicked calls `stopCapture()` to terminate capture of screen contents.
-3. A {{HTMLElement("video")}} into which the captured screen contents are streamed.
-4. A {{HTMLElement("pre")}} block into which logged text is placed by the intercepted {{domxref("console")}} method.
-
-#### CSS
-
-The CSS is entirely cosmetic in this example. The video is given a border, and its width is set to occupy nearly the entire available horizontal space (`width: 98%`). {{cssxref("max-width")}} is set to `860px` to set an absolute upper limit on the video's size,
-
-```css
-#video {
-  border: 1px solid #999999;
-  width: 98%;
-  max-width: 860px;
-}
-
-#log {
-  width: 25rem;
-  height: 15rem;
-  border: 1px solid black;
-  padding: 0.5rem;
-  overflow: scroll;
-}
-```
 
 #### Result
 

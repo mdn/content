@@ -34,7 +34,7 @@ The multiple-column layout specification provides you with a method for laying c
 Let's explore how to use multiple-column layout — often referred to as _multicol_ — by building up an example step by step. To follow along, create a new HTML on your local system and add the following content into it:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

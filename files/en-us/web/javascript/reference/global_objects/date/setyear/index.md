@@ -44,7 +44,7 @@ If `yearValue` is a number between 0 and 99 (inclusive), then the year for
 
 ### Using setYear()
 
-The first two lines set the year to 1996. The third sets the year to 2000.
+The first two `setYear()` calls set the year to 1996. The third sets the year to 2000.
 
 ```js
 const theBigDay = new Date();
@@ -64,7 +64,7 @@ theBigDay.setYear(2000);
 
 ## See also
 
-- [Polyfill of `Date.prototype.setYear` in `core-js`](https://github.com/zloirock/core-js#ecmascript-date)
+- [Polyfill of `Date.prototype.setYear` in `core-js`](https://core-js.io/docs/features/ecmascript/date)
 - {{jsxref("Date.prototype.getFullYear()")}}
 - {{jsxref("Date.prototype.getUTCFullYear()")}}
 - {{jsxref("Date.prototype.setFullYear()")}}

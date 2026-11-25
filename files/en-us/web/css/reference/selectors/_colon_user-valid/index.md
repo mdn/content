@@ -37,16 +37,9 @@ In the following example, the green border and ✅ only display once the user ha
 Try changing the email address to another valid email to see it in action.
 
 ```html
-<form>
-  <label for="email">Email *: </label>
-  <input
-    id="email"
-    name="email"
-    type="email"
-    value="test@example.com"
-    required />
-  <span></span>
-</form>
+<label for="email">Email *: </label>
+<input id="email" name="email" type="email" value="test@example.com" required />
+<span></span>
 ```
 
 ```css

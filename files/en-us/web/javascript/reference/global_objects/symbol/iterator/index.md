@@ -102,7 +102,7 @@ nonWellFormedIterable[Symbol.iterator] = () => 1;
 
 ## See also
 
-- [Polyfill of `Symbol.iterator` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [Polyfill of `Symbol.iterator` in `core-js`](https://core-js.io/docs/features/ecmascript/symbol)
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - [`Array.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
 - [`TypedArray.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)

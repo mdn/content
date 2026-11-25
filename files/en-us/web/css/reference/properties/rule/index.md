@@ -332,11 +332,13 @@ li {
 
 #### Result
 
-{{EmbedLiveSample("Basic", "", "600")}}
+{{EmbedLiveSample("Basic", "", "440")}}
 
 ### Multiple gap-rules and default values
 
 This example demonstrates using multiple, comma-separated values. It also demonstrates the default values for the width, color, and style of `medium`, `currentcolor` and `none`, respectively.
+
+#### CSS
 
 Using the same HTML and CSS as in the previous example, we include four comma-separated `<gap-rule>` values as the `rule` value, omitting the `<line-width>` in the first `<gap-rule>`, the `<color>` in the second, and the `<line-style>` from the third, with the fourth including all three components:
 
@@ -350,13 +352,19 @@ ul {
 }
 ```
 
-{{EmbedLiveSample("Repeat", "", "600")}}
+#### Result
+
+{{EmbedLiveSample("Repeat", "", "440")}}
 
 The red line is `3px` wide, the dotted line is the same color as the text, and there is no `5px`-wide blue line, as the style of the third `<gap-rule>` defaults to `none`, so no line is painted. As there are fewer rule styles than gutters, the list of rules is repeated until all rule lines are styled.
 
 ### Using the `repeat()` function
 
-This example demonstrates using the `repeat()` function within the `rule` property value. We use the same HTML and CSS as in the previous examples, overriding the `rule` value with a comma-separated list of three components: two `<gap-rule>` values and a `<gap-repeat-rule>` that sets a list of two `<gap-rule>` values to repeat 3 times.
+This example demonstrates using the `repeat()` function within the `rule` property value.
+
+#### CSS
+
+We use the same HTML and CSS as in the previous examples, overriding the `rule` value with a comma-separated list of three components: two `<gap-rule>` values and a `<gap-repeat-rule>` that sets a list of two `<gap-rule>` values to repeat 3 times.
 
 ```css live-sample___func live-sample___auto
 ul {
@@ -367,13 +375,17 @@ ul {
 }
 ```
 
-{{EmbedLiveSample("func", "", "600")}}
+#### Result
+
+{{EmbedLiveSample("func", "", "440")}}
 
 The grid has ten columns and eight rows, so nine column gutters and seven row gutters. The `repeat()` function repeats two style values three times, creating a list of eight style values. As there are fewer row gutters than values, the last value is not used in the row direction. As there are more column gutters than values, the list repeats in the column direction.
 
 ### Using `auto` within `repeat()`
 
 This example demonstrates using the `auto` argument instead of an integer in the `repeat()` function.
+
+#### CSS
 
 Using `repeat(auto, <gap-rule>)`, we set all row and column rules to `1px dotted` (with the color defaulting to the current color), except the first and last rules, which we set to `3px solid red`.
 
@@ -386,7 +398,9 @@ ul {
 }
 ```
 
-{{EmbedLiveSample("auto", "", "600")}}
+#### Result
+
+{{EmbedLiveSample("auto", "", "440")}}
 
 ```css hidden live-sample___basic live-sample___repeat live-sample___func live-sample___auto
 @layer no-support {

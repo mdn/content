@@ -63,7 +63,7 @@ document.getElementById("focusButton").addEventListener("click", () => {
 
 ### Result
 
-{{EmbedLiveSample("focus",100,100)}}
+{{EmbedLiveSample("focusing_a_mathml_element",100,100)}}
 
 ## Specifications
 

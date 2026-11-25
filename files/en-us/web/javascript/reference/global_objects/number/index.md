@@ -112,6 +112,15 @@ new Uint8Array([257, -257]); // Uint8Array(2) [ 1, 255 ]
 //      = 255 (as unsigned integer)
 ```
 
+### The Number.prototype object
+
+For legacy reasons, `Number.prototype` is a `Number` object that wraps the value `0`.
+
+```js
+console.log(Number.prototype.valueOf()); // 0 (expected to throw error)
+console.log(Number(Number.prototype)); // 0 (expected NaN for plain objects)
+```
+
 ## Constructor
 
 - {{jsxref("Number/Number", "Number()")}}
@@ -241,7 +250,7 @@ Number("-Infinity"); // -Infinity
 
 ## See also
 
-- [Polyfill of modern `Number` behavior (with support binary and octal literals) in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [Polyfill of modern `Number` behavior (with support binary and octal literals) in `core-js`](https://core-js.io/docs/features/ecmascript/number)
 - {{jsxref("NaN")}}
 - [Arithmetic operators](/en-US/docs/Web/JavaScript/Reference/Operators#arithmetic_operators)
 - {{jsxref("Math")}}

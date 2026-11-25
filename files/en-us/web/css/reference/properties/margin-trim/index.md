@@ -3,15 +3,52 @@ title: "`margin-trim` CSS property"
 short-title: margin-trim
 slug: Web/CSS/Reference/Properties/margin-trim
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.margin-trim
 sidebar: cssref
 ---
 
-{{SeeCompatTable}}
+The **`margin-trim`** [CSS](/en-US/docs/Web/CSS) property allows a container to trim the block-axis margins of its children where they adjoin the container's edges.
 
-The `margin-trim` property allows the container to trim the margins of its children where they adjoin the container's edges.
+{{InteractiveExample("CSS Demo: margin-trim")}}
+
+```css interactive-example-choice
+margin-trim: none;
+```
+
+```css interactive-example-choice
+margin-trim: block;
+```
+
+```css interactive-example-choice
+margin-trim: block-start;
+```
+
+```css interactive-example-choice
+margin-trim: block-end;
+```
+
+```html interactive-example
+<div class="example-wrapper" id="example-element">
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+  <p>Paragraph 3</p>
+</div>
+```
+
+```css interactive-example
+.example-wrapper {
+  border: 2px solid tomato;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: white;
+  background-color: slategrey;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+```
 
 ## Syntax
 
@@ -20,9 +57,9 @@ margin-trim: none;
 margin-trim: block;
 margin-trim: block-start;
 margin-trim: block-end;
-margin-trim: inline;
-margin-trim: inline-start;
-margin-trim: inline-end;
+
+/* Multiple values */
+margin-trim: block-start block-end;
 
 /* Global values */
 margin-trim: inherit;
@@ -34,7 +71,7 @@ margin-trim: unset;
 
 ### Values
 
-This property is specified as one of the following keyword values:
+This property is specified as either the keyword `none` or `block`, or one or both of the keywords `block-start` and `block-end`:
 
 - `none`
   - : Margins are not trimmed by the container.
@@ -48,14 +85,9 @@ This property is specified as one of the following keyword values:
 - `block-end`
   - : Margin of last block child with the container's edge is trimmed to zero.
 
-- `inline`
-  - : Margins provided to the inline children where they adjoin the container's edges are trimmed to zero, without affecting the spacing at the beginning and end of the row.
+## Description
 
-- `inline-start`
-  - : Margin between the container's edge and the first inline child is trimmed to zero.
-
-- `inline-end`
-  - : Margin between the container's edge and the last inline child is trimmed to zero.
+Margins are often wanted between sibling elements but not between the first or last child and the edges of its container, where the spacing can be set with {{cssxref("padding")}} instead. Without `margin-trim`, removing those margins takes extra rules, such as one that targets the first child with the {{cssxref(":first-child")}} pseudo-class. With `margin-trim`, the container trims them itself, according to whichever value has been used.
 
 ## Formal definition
 
@@ -69,54 +101,38 @@ This property is specified as one of the following keyword values:
 
 ### Basic usage
 
-Once support is implemented for this property, it will probably work like so:
+In this example, each paragraph has a {{cssxref("margin")}} to space it from its siblings. Setting `margin-trim: block-start` on the `<section>` trims the top margin of the first paragraph, while the margins between the paragraphs remain.
 
-When you've got a container with some inline children and you want to put a margin between each child but not have it interfere with the spacing at the end of the row, you might do something like this:
+This simplifies the syntax, meaning that the first paragraph does not need to be targeted with the {{cssxref(":first-child")}} pseudo-class.
+
+```html
+<h2>Section Heading</h2>
+<section>
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+  <p>Paragraph 3</p>
+</section>
+```
+
+The `border` around the `<section>` and `background-color` of the `<p>` are only there to help visualize the removal of the margin.
 
 ```css
-article {
-  background-color: red;
-  margin: 20px;
-  padding: 20px;
-  display: inline-block;
+section {
+  border: 2px solid tomato;
+  margin: 0;
+  padding: 0;
+  margin-trim: block-start;
 }
-
-article > span {
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  margin-right: 20px;
-  margin-left: 30px;
+p {
+  background-color: aliceblue;
+  padding: 0.5rem;
+  margin: 1rem;
 }
 ```
 
-The problem here is that you'd end up with 20px too much spacing at the right of the row, so you'd maybe do this to fix it:
+In browsers that support `margin-trim`, the first paragraph sits against the top border of the section, while the margin below the last paragraph remains.
 
-```css
-span:last-child {
-  margin-right: 0;
-  margin-left: 0;
-}
-```
-
-It is a pain having to write another rule to achieve this, and it is also not very flexible. Instead, `margin-trim` could fix it:
-
-```css
-article {
-  margin-trim: inline-end;
-  /* … */
-}
-```
-
-Similarly, to remove left margin with the container's edge:
-
-```css
-article {
-  margin-trim: inline-start;
-  /* … */
-}
-```
+{{EmbedLiveSample('basic_usage','100%',270)}}
 
 ## Specifications
 
@@ -129,3 +145,6 @@ article {
 ## See also
 
 - {{CSSxRef("margin")}}
+- {{cssxref("margin-block-start")}} and {{cssxref("margin-block-end")}} properties
+- [Mastering margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
+- [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module

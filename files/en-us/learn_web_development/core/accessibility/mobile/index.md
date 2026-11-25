@@ -446,31 +446,29 @@ Because the screen is so much narrower on mobile devices, it is very common to u
 
 When implementing such a menu, you need to make sure that the control to reveal it is accessible by appropriate control mechanisms (normally touch for mobile), as discussed in [Control mechanisms](#control_mechanisms) above, and that the rest of the page is moved out of the way or hidden in some way while the menu is being accessed, to avoid confusion with navigating it.
 
-Click here for a [good hamburger menu example](https://fritz-weisshart.de/meg_men/).
+For an example of an accessible, responsive navigation menu, see the [W3C Design System navigation component](https://design-system.w3.org/components/navigation.html) and its [working header navigation example](https://design-system.w3.org/code/header-nav.html).
 
 ## User input
 
 On mobile devices, inputting data tends to be more annoying for users than the equivalent experience on desktop computers. It is more convenient to type text into form inputs using a desktop or laptop keyboard than a touchscreen virtual keyboard or a tiny mobile physical keyboard.
 
-For this reason, it is worth trying to minimize the amount of typing needed. As an example, instead of getting users to fill out their job title each time using a regular text input, you could instead offer a {{htmlelement("select")}} menu containing the most common options (which also helps with consistency in data entry) and offer an "Other" option that displays a text field to type any outliers into. You can see a simple example of this idea in action in the following example:
+For this reason, it is worth trying to minimize the amount of typing needed. As an example, instead of getting users to fill out their job title each time using a regular text input, you could instead offer a {{htmlelement("select")}} menu containing the most common options (which also helps with consistency in data entry) and offer an "Other" option that displays a text field to type any outliers into. You can see an example of this idea in action in the following example:
 
 ```html hidden live-sample___select-text-combo
-<form>
-  <div>
-    <label for="job">Job type:</label>
-    <select id="job" name="job">
-      <option value="">-- select job --</option>
-      <option value="butcher">Butcher</option>
-      <option value="baker">Baker</option>
-      <option value="candle">Candlestick maker</option>
-      <option value="other">Other</option>
-    </select>
-  </div>
-  <div>
-    <label for="other-job">Other job:</label>
-    <input type="text" name="other-job" id="other-job" />
-  </div>
-</form>
+<div>
+  <label for="job">Job type:</label>
+  <select id="job" name="job">
+    <option value="">-- select job --</option>
+    <option value="butcher">Butcher</option>
+    <option value="baker">Baker</option>
+    <option value="candle">Candlestick maker</option>
+    <option value="other">Other</option>
+  </select>
+</div>
+<div>
+  <label for="other-job">Other job:</label>
+  <input type="text" name="other-job" id="other-job" />
+</div>
 ```
 
 ```css hidden live-sample___select-text-combo

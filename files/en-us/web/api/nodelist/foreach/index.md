@@ -79,6 +79,6 @@ The above code results in the following:
 
 ## See also
 
-- [Polyfill of `NodeList.prototype.forEach` in `core-js`](https://github.com/zloirock/core-js#iterable-dom-collections)
+- [Polyfill of `NodeList.prototype.forEach` in `core-js`](https://core-js.io/docs/features/web-standards/iterable-dom-collections)
 - {{domxref("Node")}}
 - {{domxref("NodeList")}}

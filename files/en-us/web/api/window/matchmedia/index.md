@@ -55,16 +55,6 @@ value of the resulting `MediaQueryList`'s `matches` property in a
 {{HTMLElement("span")}}; as a result, the output will say "true" if the viewport is less
 than or equal to 600 pixels wide, and will say "false" if the window is wider than that.
 
-### JavaScript
-
-```js
-let mql = window.matchMedia("(width <= 600px)");
-
-document.querySelector(".mq-value").innerText = mql.matches;
-```
-
-The JavaScript code passes the media query to match into `matchMedia()` to compile it, then sets the `<span>`'s {{domxref("HTMLElement.innerText", "innerText")}} to the value of the results' {{domxref("MediaQueryList.matches", "matches")}} property, so that it indicates whether or not the document matches the media query at the moment the page was loaded.
-
 ### HTML
 
 ```html
@@ -84,6 +74,16 @@ A simple `<span>` to receive the output.
   border: 1px solid #ddddee;
 }
 ```
+
+### JavaScript
+
+```js
+let mql = window.matchMedia("(width <= 600px)");
+
+document.querySelector(".mq-value").innerText = mql.matches;
+```
+
+The JavaScript code passes the media query to match into `matchMedia()` to compile it, then sets the `<span>`'s {{domxref("HTMLElement.innerText", "innerText")}} to the value of the results' {{domxref("MediaQueryList.matches", "matches")}} property, so that it indicates whether or not the document matches the media query at the moment the page was loaded.
 
 ### Result
 

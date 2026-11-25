@@ -253,7 +253,7 @@ Range requests are useful for applications like media players that support rando
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}} (COOP)
   - : Prevents other domains from opening/controlling a window.
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}} (CORP)
-  - : Prevents other domains from reading the response of the resources to which this header is applied. See also [CORP explainer article](/en-US/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy).
+  - : Prevents other domains from reading the response of the resources to which this header is applied. See also [CORP explainer article](/en-US/docs/Web/Security/Practical_implementation_guides/CORP).
 - {{HTTPHeader("Content-Security-Policy")}} ({{Glossary("CSP")}})
   - : Controls resources the user agent is allowed to load for a given page.
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}

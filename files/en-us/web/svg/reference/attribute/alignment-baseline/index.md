@@ -17,6 +17,49 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
 
+## Example
+
+```html
+<svg
+  width="300"
+  height="120"
+  viewBox="0 0 300 120"
+  xmlns="http://www.w3.org/2000/svg">
+  <!-- Materialization of anchors -->
+  <path
+    d="M60,10 L60,110
+              M30,10 L300,10
+              M30,65 L300,65
+              M30,110 L300,110
+              "
+    stroke="grey" />
+
+  <!-- Anchors in action -->
+  <text alignment-baseline="hanging" x="60" y="10">A hanging</text>
+
+  <text alignment-baseline="middle" x="60" y="65">A middle</text>
+
+  <text alignment-baseline="baseline" x="60" y="110">A baseline</text>
+
+  <!-- Materialization of anchors -->
+  <circle cx="60" cy="10" r="3" fill="red" />
+  <circle cx="60" cy="65" r="3" fill="red" />
+  <circle cx="60" cy="110" r="3" fill="red" />
+
+  <style>
+    <![CDATA[
+      text {
+        font: bold 36px Verdana, Helvetica, Arial, sans-serif;
+      }
+    ]]>
+  </style>
+</svg>
+```
+
+{{EmbedLiveSample("Example")}}
+
+For object alignment in other elements (such as {{SVGElement("text")}}), see {{SVGAttr("dominant-baseline")}}.
+
 ## Usage notes
 
 <table class="properties">
@@ -88,49 +131,6 @@ You can use this attribute with the following SVG elements:
   - : Aligns the bottom of the aligned subtree with the bottom of the line box.
 
 SVG 2 introduces some changes to the definition of this property. In particular: the values `auto`, `before-edge`, and `after-edge` have been removed. For backwards compatibility, `text-before-edge` may be mapped to `text-top` and `text-after-edge` to `text-bottom`. Neither `text-before-edge` nor `text-after-edge` should be used with the {{cssxref("vertical-align")}} property.
-
-## Example
-
-```html
-<svg
-  width="300"
-  height="120"
-  viewBox="0 0 300 120"
-  xmlns="http://www.w3.org/2000/svg">
-  <!-- Materialization of anchors -->
-  <path
-    d="M60,10 L60,110
-              M30,10 L300,10
-              M30,65 L300,65
-              M30,110 L300,110
-              "
-    stroke="grey" />
-
-  <!-- Anchors in action -->
-  <text alignment-baseline="hanging" x="60" y="10">A hanging</text>
-
-  <text alignment-baseline="middle" x="60" y="65">A middle</text>
-
-  <text alignment-baseline="baseline" x="60" y="110">A baseline</text>
-
-  <!-- Materialization of anchors -->
-  <circle cx="60" cy="10" r="3" fill="red" />
-  <circle cx="60" cy="65" r="3" fill="red" />
-  <circle cx="60" cy="110" r="3" fill="red" />
-
-  <style>
-    <![CDATA[
-      text {
-        font: bold 36px Verdana, Helvetica, Arial, sans-serif;
-      }
-    ]]>
-  </style>
-</svg>
-```
-
-{{EmbedLiveSample("Example")}}
-
-For object alignment in other elements (such as {{SVGElement("text")}}), see {{SVGAttr("dominant-baseline")}}.
 
 ## Specifications
 

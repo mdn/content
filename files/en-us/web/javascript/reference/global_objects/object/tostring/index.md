@@ -155,7 +155,7 @@ Object.prototype.toString.call(new Date()); // [object prototype polluted]
 
 ## See also
 
-- [Polyfill of `Object.prototype.toString` with `Symbol.toStringTag` support in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.prototype.toString` with `Symbol.toStringTag` support in `core-js`](https://core-js.io/docs/features/ecmascript/object)
 - {{jsxref("Object.prototype.valueOf()")}}
 - {{jsxref("Number.prototype.toString()")}}
 - {{jsxref("Symbol.toPrimitive")}}

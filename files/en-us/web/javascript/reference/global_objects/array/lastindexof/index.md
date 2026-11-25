@@ -136,7 +136,7 @@ console.log(Array.prototype.lastIndexOf.call(arrayLike, 5));
 
 ## See also
 
-- [Polyfill of `Array.prototype.lastIndexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.lastIndexOf` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.lastIndexOf`](https://www.npmjs.com/package/array.prototype.lastindexof)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

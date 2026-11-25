@@ -417,7 +417,6 @@ AddType video/webm webmv
 Your files may have been encoded incorrectly — try encoding using one of the following tools, which are proven to be pretty reliable:
 
 - [Audacity](https://sourceforge.net/projects/audacity/) — Free Audio Editor and Recorder
-- [Miro](https://www.getmiro.com/) — Free, open-source music and video player
 - [Handbrake](https://handbrake.fr/) — Open Source Video Transcoder
 - [Firefogg](https://www.firefogg.org/) — Video and Audio encoding for Firefox
 - [FFmpeg2](https://www.ffmpeg.org/) — Comprehensive command line encoder
@@ -475,10 +474,6 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 
 - [jPlayer](https://jPlayer.org/): Gratis and Open Source (MIT Licensed.)
 - [mediaelement.js](https://www.mediaelementjs.com/): Gratis and Open Source (MIT Licensed.)
-
-### Web Audio API
-
-- [AudioContext monkeypatch](https://github.com/cwilso/AudioContext-MonkeyPatch): A polyfill for older versions of the Web Audio API; Open Source (Apache 2 Licensed.)
 
 ## Guides
 

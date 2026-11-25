@@ -162,7 +162,7 @@ body {
 
 #### Result
 
-{{EmbedLiveSample("Reversing the animation direction","100%","250")}}
+{{EmbedLiveSample("understanding_the_animation-composition_values","100%","250")}}
 
 The underlying value for the `transform` property in all cases is `translateX(30px) rotate(45deg)`. The different `animation-composition` values' effects are as follows:
 

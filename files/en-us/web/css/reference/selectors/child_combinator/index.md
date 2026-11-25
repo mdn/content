@@ -26,18 +26,6 @@ selector1 > selector2 { /* style properties */ }
 
 ## Examples
 
-### CSS
-
-```css
-span {
-  background-color: aqua;
-}
-
-div > span {
-  background-color: yellow;
-}
-```
-
 ### HTML
 
 ```html
@@ -48,6 +36,18 @@ div > span {
   </span>
 </div>
 <span>Span #3, not in the div at all.</span>
+```
+
+### CSS
+
+```css
+span {
+  background-color: aqua;
+}
+
+div > span {
+  background-color: yellow;
+}
 ```
 
 ### Result

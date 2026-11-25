@@ -5,10 +5,11 @@ slug: Web/API/PerformanceLongTaskTiming/attribution
 page-type: web-api-instance-property
 status:
   - experimental
+  - non-standard
 browser-compat: api.PerformanceLongTaskTiming.attribution
 ---
 
-{{SeeCompatTable}}{{APIRef("Performance API")}}
+{{SeeCompatTable}}{{APIRef("Performance API")}}{{non-standard_header}}
 
 The **`attribution`** read-only property of the {{domxref("PerformanceLongTaskTiming")}} interface returns an array of {{domxref('TaskAttributionTiming')}} objects.
 

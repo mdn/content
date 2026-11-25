@@ -111,10 +111,8 @@ Date-related inputs (including `month`) normalize the data format sent to the se
 The most basic use of `<input type="month">` involves a basic {{HTMLElement("input")}} and {{htmlelement("label")}} element combination, as seen below:
 
 ```html
-<form>
-  <label for="bday-month">What month were you born in?</label>
-  <input id="bday-month" type="month" name="bday-month" />
-</form>
+<label for="bday-month">What month were you born in?</label>
+<input id="bday-month" type="month" name="bday-month" />
 ```
 
 {{EmbedLiveSample('Basic_uses_of_month', 600, 40)}}
@@ -252,6 +250,12 @@ For example, try viewing the following demo in a browser that doesn't support `m
     <input type="submit" value="Submit form" />
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 {{ EmbedLiveSample('Handling_browser_support', 600, 100) }}

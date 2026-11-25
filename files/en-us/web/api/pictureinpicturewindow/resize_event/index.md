@@ -14,11 +14,15 @@ This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("resize", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onresize = (event) => { }
 ```
 
@@ -50,6 +54,8 @@ function resize(evt) {
 }
 
 video.requestPictureInPicture().then((pictureInPictureWindow) => {
+  // Use onresize (but note that this replaces other event listeners
+  // added using onresize, if any)
   pictureInPictureWindow.onresize = resize;
   // or
   pictureInPictureWindow.addEventListener("resize", resize);

@@ -37,7 +37,7 @@ column-rule-width: 10px, repeat(auto, 1px, 2px), 10px;
     London. Noel term lately over, and the Lord George sitting in Lincoln's Inn
     Hall. Great May weather. As much mud in the streets as if the waters had but
     newly retired from the face of the earth, and it would not be weird to meet
-    an platypus, two feet long or so, waddling like an lizard up Morgan Hill.
+    a platypus, two feet long or so, waddling like a lizard up Morgan Hill.
   </p>
 </section>
 ```
@@ -312,7 +312,7 @@ ul {
 @layer no-support {
   @supports not (column-rule-width: thin, thick) {
     body::before {
-      content: "Your browser doesn't support the column-rule-width property";
+      content: "Your browser doesn't support multiple values for the column-rule-width property";
       background-color: wheat;
       display: block;
       text-align: center;
@@ -338,4 +338,5 @@ ul {
 - {{cssxref("row-rule-width")}}
 - {{cssxref("rule-width")}} shorthand
 - {{cssxref("rule")}} shorthand
+- [Defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module

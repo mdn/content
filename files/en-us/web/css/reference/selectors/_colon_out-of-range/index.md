@@ -23,22 +23,20 @@ input:out-of-range {
 ```
 
 ```html interactive-example
-<form>
-  <label for="amount">How many tickets? (You can buy 2-6 tickets)</label>
-  <input id="amount" name="amount" type="number" min="2" max="6" value="4" />
+<label for="amount">How many tickets? (You can buy 2-6 tickets)</label>
+<input id="amount" name="amount" type="number" min="2" max="6" value="4" />
 
-  <label for="dep">Departure Date: (Whole year 2022 is acceptable)</label>
-  <input
-    id="dep"
-    name="dep"
-    type="date"
-    min="2022-01-01"
-    max="2022-12-31"
-    value="2025-05-05" />
+<label for="dep">Departure Date: (Whole year 2022 is acceptable)</label>
+<input
+  id="dep"
+  name="dep"
+  type="date"
+  min="2022-01-01"
+  max="2022-12-31"
+  value="2025-05-05" />
 
-  <label for="ret">Return Date: (Whole year 2022 is acceptable)</label>
-  <input id="ret" name="ret" type="date" min="2022-01-01" max="2022-12-31" />
-</form>
+<label for="ret">Return Date: (Whole year 2022 is acceptable)</label>
+<input id="ret" name="ret" type="date" min="2022-01-01" max="2022-12-31" />
 ```
 
 This pseudo-class is useful for giving the user a visual indication that a field's current value is outside the permitted limits.
@@ -59,22 +57,20 @@ This pseudo-class is useful for giving the user a visual indication that a field
 ### HTML
 
 ```html
-<form action="" id="form1">
-  <p>Values between 1 and 10 are valid.</p>
-  <ul>
-    <li>
-      <input
-        id="value1"
-        name="value1"
-        type="number"
-        placeholder="1 to 10"
-        min="1"
-        max="10"
-        value="12" />
-      <label for="value1">Your value is </label>
-    </li>
-  </ul>
-</form>
+<p>Values between 1 and 10 are valid.</p>
+<ul>
+  <li>
+    <input
+      id="value1"
+      name="value1"
+      type="number"
+      placeholder="1 to 10"
+      min="1"
+      max="10"
+      value="12" />
+    <label for="value1">Your value is </label>
+  </li>
+</ul>
 ```
 
 ### CSS

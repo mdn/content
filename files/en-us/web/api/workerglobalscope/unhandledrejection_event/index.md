@@ -14,11 +14,15 @@ This is useful for debugging and for providing fallback error handling for unexp
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("unhandledrejection", (event) => { })
+```
 
+Alternatively, assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
+
+```js-nolint
 onunhandledrejection = (event) => { }
 ```
 
@@ -40,7 +44,7 @@ self.addEventListener("unhandledrejection", (event) => {
 });
 ```
 
-You can also use the `onunhandledrejection` event handler property to set up the event listener:
+You can also use the `onunhandledrejection` event handler property to set up the event listener (but note that this replaces other event listeners added using `onunhandledrejection`, if any):
 
 ```js
 self.onunhandledrejection = (event) => {

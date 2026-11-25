@@ -95,7 +95,7 @@ console.log(Array.of.call({}, 1)); // [ 1 ]
 
 ## See also
 
-- [Polyfill of `Array.of` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.of` in `core-js`](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.of`](https://www.npmjs.com/package/array.of)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

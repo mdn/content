@@ -107,6 +107,6 @@ try {
 
 ## See also
 
-- [Polyfill of `Error.isError` in `core-js`](https://github.com/zloirock/core-js#erroriserror)
+- [Polyfill of `Error.isError` in `core-js`](https://core-js.io/docs/features/ecmascript/error)
 - [es-shims polyfill of `Error.isError`](https://www.npmjs.com/package/error.iserror)
 - {{jsxref("Error")}}

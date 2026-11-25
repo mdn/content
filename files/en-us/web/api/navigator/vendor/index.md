@@ -8,7 +8,7 @@ browser-compat: api.Navigator.vendor
 
 {{APIRef("HTML DOM")}}
 
-The value of the {{DomXref("Navigator")}} **`vendor`** property is always either `"Google Inc."`, `"Apple Computer, Inc."`, or (in Firefox) the empty string.
+The **`vendor`** read-only property of the {{domxref("Navigator")}} interface is always either `"Google Inc."`, `"Apple Computer, Inc."`, or (in Firefox) the empty string.
 
 ## Value
 

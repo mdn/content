@@ -57,10 +57,6 @@ trackProcessor.readable
   .pipeTo(trackGenerator.writable);
 ```
 
-## See also
-
-- {{domxref("VideoTrackGenerator")}}
-
 ## Specifications
 
 {{Specifications}}
@@ -68,3 +64,7 @@ trackProcessor.readable
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("VideoTrackGenerator")}}

@@ -11,7 +11,10 @@ browser-compat: api.WebTransportDatagramDuplexStream.outgoingHighWaterMark
 
 {{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}{{non-standard_header}}
 
-The **`outgoingHighWaterMark`** property of the {{domxref("WebTransportDatagramDuplexStream")}} interface gets or sets the high water mark for outgoing chunks of data — this is the maximum size, in chunks, that the outgoing {{domxref("WritableStream")}}'s internal queue can reach before it is considered full. See [Internal queues and queuing strategies](/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies) for more information.
+The **`outgoingHighWaterMark`** property of the {{domxref("WebTransportDatagramDuplexStream")}} interface represents the maximum number of outgoing datagrams that can be queued for sending before [backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure) is applied.
+Queued datagrams are not dropped because the queue is full, though they can still expire if {{domxref("WebTransportDatagramDuplexStream.outgoingMaxAge", "outgoingMaxAge")}} is set.
+
+This property has been replaced in the specification by {{domxref("WebTransportDatagramDuplexStream.outgoingMaxBufferedDatagrams", "outgoingMaxBufferedDatagrams")}}, which should be used instead if supported (see its [browser compatibility](/en-US/docs/Web/API/WebTransportDatagramDuplexStream/outgoingMaxBufferedDatagrams#browser_compatibility) table).
 
 ## Value
 

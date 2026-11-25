@@ -20,7 +20,7 @@ deleteSync(sync)
 ### Parameters
 
 - `sync`
-  - : A {{domxref("WebGLSync")}} object to delete.
+  - : A {{domxref("WebGLSync")}} object to delete. Passing `null` does nothing.
 
 ### Return value
 
