@@ -20,8 +20,8 @@ Firefox 162 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### HTML
 
-- The [`sectionheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/sectionheader_role) and [`sectionfooter`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/sectionfooter_role) ARIA roles are now supported. They identify the header and footer of a section, distinct from the page-level landmark roles [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) and [`contentinfo`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role). ([Firefox bug 1893684](https://bugzil.la/1893684))
-- The [`heading-offset`](/en-US/docs/Web/HTML/Reference/Global_attributes/heading-offset) attribute is now enabled by default, allowing you to shift the computed heading level of headings within a subtree by a specified amount. ([Firefox bug 2044348](https://bugzil.la/2044348))
+- The `sectionheader` and `sectionfooter` ARIA roles are now supported. They identify the header and footer of a section, distinct from the page-level landmark roles [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) and [`contentinfo`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role). ([Firefox bug 1893684](https://bugzil.la/1893684))
+- The [`headingoffset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingoffset) attribute is now enabled by default, allowing you to shift the computed heading level of headings within a subtree by a specified amount. ([Firefox bug 2044348](https://bugzil.la/2044348))
 
 <!-- #### Removals -->
 
@@ -35,7 +35,7 @@ Firefox 162 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### CSS
 
-- The [CSS Typed Object Model (CSS Typed OM)](/en-US/docs/Web/API/CSS_Typed_OM_API) API is now enabled by default on all channels. It exposes CSS property values as typed JavaScript objects, accessible through {{domxref("HTMLElement.attributeStyleMap")}} and {{domxref("Element.computedStyleMap()")}}, and provides CSS factory functions such as {{domxref("CSS/px_static", "CSS.px()")}} and {{domxref("CSS/em_static", "CSS.em()")}}. ([Firefox bug 2089681](https://bugzil.la/2089681))
+- The [CSS Typed Object Model (CSS Typed OM)](/en-US/docs/Web/API/CSS_Typed_OM_API) API is now enabled by default on all channels. It exposes CSS property values as typed JavaScript objects, accessible through {{domxref("HTMLElement.attributeStyleMap")}} and {{domxref("Element.computedStyleMap()")}}, and provides [CSS numeric factory functions](/en-US/docs/Web/API/CSS/factory_functions_static) such as `CSS.px()` and `CSS.em()`. ([Firefox bug 2089681](https://bugzil.la/2089681))
 - The `border-area` value for the {{cssxref("background-clip")}} property is now supported. It clips the background to the area inside the element's border, including beneath any transparent border areas. ([Firefox bug 2093287](https://bugzil.la/2093287))
 
 <!-- #### Removals -->
@@ -61,7 +61,7 @@ Firefox 162 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### DOM
 
-- The {{domxref("Document.parsed")}}, {{domxref("Document.contentLoaded")}}, and {{domxref("Document.loaded")}} properties are now supported. Each returns a {{jsxref("Promise")}} that resolves when the document has finished parsing, when `DOMContentLoaded` has fired, or when `load` has fired, respectively. ([Firefox bug 2091511](https://bugzil.la/2091511))
+- The `document.parsed`, `document.contentLoaded`, and `document.loaded` properties are now supported. Each returns a {{jsxref("Promise")}} that resolves when the document has finished parsing, when `DOMContentLoaded` has fired, or when `load` has fired, respectively. ([Firefox bug 2091511](https://bugzil.la/2091511))
 - Cross-document [view transitions](/en-US/docs/Web/API/View_Transition_API) are now enabled by default on all channels. When two pages opt in by declaring {{cssxref("@view-transition")}} `{ navigation: auto; }` in their CSS, navigating between them plays a view transition animation. ([Firefox bug 2088945](https://bugzil.la/2088945))
 - [Declarative Web Push](/en-US/docs/Web/API/Push_API) is now supported, allowing pages to subscribe to push notifications using an HTML `<link rel="push">` element, without requiring a service worker registration step in JavaScript. ([Firefox bug 1935325](https://bugzil.la/1935325))
 - Mouse buttons 4 and 5 (the browser back and forward buttons found on many mice) now correctly fire {{domxref("Element/mousedown_event", "mousedown")}}, {{domxref("Element/mouseup_event", "mouseup")}}, and {{domxref("Element/click_event", "click")}} events on web pages. They are reported as {{domxref("MouseEvent.button", "button")}} values `3` and `4` in mouse event objects. ([Firefox bug 2073171](https://bugzil.la/2073171))
