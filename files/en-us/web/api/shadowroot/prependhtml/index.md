@@ -10,7 +10,7 @@ browser-compat: api.ShadowRoot.prependHTML
 
 {{APIRef("DOM")}}
 
-The **`prependHTML()`** method of the {{domxref("ShadowRoot")}} interface is an [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) method to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the `ShadowRoot` before the first child of the `ShadowRoot`.
+The **`prependHTML()`** method of the {{domxref("ShadowRoot")}} interface is an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the `ShadowRoot` before the first child of the `ShadowRoot`.
 
 ## Syntax
 
@@ -46,7 +46,9 @@ None (`undefined`).
 
 ## Description
 
-**`prependHTML()`** is an [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) method to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the `ShadowRoot` before the first child of the `ShadowRoot`.
+**`prependHTML()`** is an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the `ShadowRoot` before the first child of the `ShadowRoot`.
+
+It implements the same sanitization logic as all the other [XSS-safe HTML setters](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods).
 
 It also be used instead of {{domxref("ShadowRoot.prependHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
 

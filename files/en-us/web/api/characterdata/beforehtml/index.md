@@ -10,7 +10,7 @@ browser-compat: api.CharacterData.beforeHTML
 
 {{APIRef("DOM")}}
 
-The **`beforeHTML()`** method of the {{domxref("CharacterData")}} interface is an [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) method to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the `CharacterData`'s parent, just before the `CharacterData`.
+The **`beforeHTML()`** method of the {{domxref("CharacterData")}} interface is an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the `CharacterData`'s parent, just before the `CharacterData`.
 
 ## Syntax
 
@@ -49,7 +49,9 @@ None (`undefined`).
 
 ## Description
 
-**`beforeHTML()`** is an [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) method to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the `CharacterData`'s parent, just before the `CharacterData`.
+**`beforeHTML()`** is an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the `CharacterData`'s parent, just before the `CharacterData`.
+
+It implements the same sanitization logic as all the other [XSS-safe HTML setters](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods).
 
 Nothing happens if the node has no parent or the parent is a {{HTMLElement("script")}} element (and similar for SVG {{SVGElement("script")}} elements).
 

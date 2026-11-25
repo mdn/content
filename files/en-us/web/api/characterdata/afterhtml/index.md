@@ -10,7 +10,7 @@ browser-compat: api.CharacterData.afterHTML
 
 {{APIRef("DOM")}}
 
-The **`afterHTML()`** method of the {{domxref("CharacterData")}} interface is an [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) method to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the `CharacterData`'s parent, just after the `CharacterData`.
+The **`afterHTML()`** method of the {{domxref("CharacterData")}} interface is an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the `CharacterData`'s parent, just after the `CharacterData`.
 
 The method removes any elements and attributes in the [XSS-safe baseline configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe-baseline-configuration) which removes unsafe elements (for example {{htmlelement("script")}}), event handlers, and JavaScript URLs. Additional elements and attributes, processing instructions and comments can be removed on top of these by passing a [sanitizer](#sanitizer) option of by using the default sanitizer if no `sanitizer` option is passed. For more information see the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API).
 
@@ -53,7 +53,9 @@ None (`undefined`).
 
 ## Description
 
-**`afterHTML()`** is an [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) method to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the `CharacterData`'s parent, just after the `CharacterData`.
+**`afterHTML()`** is an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the `CharacterData`'s parent, just after the `CharacterData`.
+
+It implements the same sanitization logic as all the other [XSS-safe HTML setters](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods).
 
 Nothing happens if the node has no parent or the parent is a {{HTMLElement("script")}} element (and similar for SVG {{SVGElement("script")}} elements).
 

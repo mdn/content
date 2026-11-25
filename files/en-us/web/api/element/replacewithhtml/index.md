@@ -10,7 +10,7 @@ browser-compat: api.Element.replaceWithHTML
 
 {{APIRef("DOM")}}
 
-The **`replaceWithHTML()`** method of the {{domxref("Element")}} interface is an [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) method to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the DOM as a replacement of the `Element`.
+The **`replaceWithHTML()`** method of the {{domxref("Element")}} interface is an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the DOM as a replacement of the `Element`.
 
 ## Syntax
 
@@ -49,7 +49,9 @@ None (`undefined`).
 
 ## Description
 
-**`replaceWithHTML()`** is an [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) method to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the DOM as a replacement of the `Element`.
+**`replaceWithHTML()`** is an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the DOM as a replacement of the `Element`.
+
+It implements the same sanitization logic as all the other [XSS-safe HTML setters](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods).
 
 It should be used instead of {{domxref("Element.replaceWithHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
 

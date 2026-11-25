@@ -32,6 +32,8 @@ Even after sanitizing HTML input with with these methods, it is still not safe t
 
 #### Safe methods
 
+The HTML Sanitizer API defines the following _safe methods_:
+
 - {{domxref('Document/parseHTML_static','Document.parseHTML()')}}
 - {{domxref('Element.setHTML()')}} and {{domxref('ShadowRoot.setHTML()')}}
 - {{domxref('Element.appendHTML()')}} and {{domxref('ShadowRoot.appendHTML()')}}
@@ -53,6 +55,8 @@ The same methods can also be used for injecting trusted HTML strings that do not
 Note that since these methods sanitize input strings of XSS-unsafe entities, it is not secured or validated using the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
 
 #### Unsafe methods
+
+The HTML Sanitizer API defines the following _unsafe methods_:
 
 - {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}.
 - {{domxref('Element.setHTMLUnsafe()')}}, {{domxref('ShadowRoot.setHTMLUnsafe()')}}
@@ -80,7 +84,7 @@ If for any reason you can't use `TrustedHTML` (or even better, one of the safe m
 
 ##### When should the unsafe methods be used?
 
-The unsafe methods should almost never be used if the safe methods is available, because there are very few (if any) cases where user-provided HTML input should need to include XSS-unsafe elements. Not only are the safe methods safe (as per their name!), but it avoids having to consider trusted types.
+The unsafe methods should almost never be used if the equivalent safe method is available, because there are very few (if any) cases where user-provided HTML input should need to include XSS-unsafe elements. Not only are the safe methods safe (as per their name!), but they avoid having to consider trusted types.
 
 Using the unsafe methods might be appropriate if you have an edge case where you have to allow HTML input that includes a known set of unsafe HTML entities.
 
@@ -291,7 +295,7 @@ The XSS-safe baseline configuration removes the items that are most commonly use
 
 The XSS-safe baseline configuration is automatically applied to the [safe sanitization methods](#safe_methods). This baseline cannot be removed from the safe sanitization methods and any additional sanitizer (whether default or custom) is applied on top of this baseline configuration.
 
-The XSS-safe baseline configuration is not used in [unsafe sanitization methods](#unsafe_methods).
+The XSS-safe baseline configuration is not automatically used in [unsafe sanitization methods](#unsafe_methods).
 
 You can also call {{domxref("Sanitizer/removeUnsafe","removeUnsafe()")}} on a {{domxref("Sanitizer")}} instance to apply the XSS-safe baseline configuration and make it XSS-safe.
 
