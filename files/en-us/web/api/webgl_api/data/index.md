@@ -17,7 +17,7 @@ See [Data Types](<https://wikis.khronos.org/opengl/Data_Type_(GLSL)>) in the GLS
 There are three kinds of "variable" or data storage available in GLSL, each of which with its own purpose and use cases: **[attributes](#attributes)**, **[varyings](#varyings)**, and **[uniforms](#uniforms)**.
 
 > [!NOTE]
-> The GLSL examples on this page use the GLSL ES 1.00 syntax of {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}}, which also works in {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts. In GLSL ES 3.00 shaders, which start with `#version 300 es`, `attribute` is replaced by `in`, and `varying` is replaced by `out` in the vertex shader and `in` in the fragment shader. For all changes, see the [GLSL ES 3.00 specification](https://registry.khronos.org/OpenGL/specs/es/3.0/GLSL_ES_Specification_3.00.pdf).
+> The GLSL examples on this page use the GLSL ES 1.00 syntax of {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}}, which also works in {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts. In GLSL ES 3.00 shaders, which start with `#version 300 es`, `attribute` is replaced by `in`, and `varying` is replaced by `out` in the vertex shader and `in` in the fragment shader. Instead of writing to `gl_FragColor`, the fragment shader declares its own `out` variable, and `texture2D()` is replaced by `texture()`. For details, see the [GLSL ES 3.00 specification](https://registry.khronos.org/OpenGL/specs/es/3.0/GLSL_ES_Specification_3.00.pdf).
 
 ### Attributes
 
@@ -26,15 +26,15 @@ There are three kinds of "variable" or data storage available in GLSL, each of w
 The JavaScript code usually supplies an attribute's values in a [buffer](#buffers). In the following example, the color of each vertex is stored in a buffer and connected to the `aVertexColor` attribute:
 
 ```js
-// one RGBA color per vertex
+// One RGBA color per vertex
 // prettier-ignore
 const colors = new Float32Array([
-  1.0, 0.0, 0.0, 1.0, // red
-  0.0, 1.0, 0.0, 1.0, // green
-  0.0, 0.0, 1.0, 1.0, // blue
+  1.0, 0.0, 0.0, 1.0, // Red
+  0.0, 1.0, 0.0, 1.0, // Green
+  0.0, 0.0, 1.0, 1.0, // Blue
 ]);
 
-// store the colors in a buffer and connect it to the aVertexColor attribute
+// Store the colors in a buffer and connect it to the aVertexColor attribute
 const colorBuffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
 gl.bufferData(gl.ARRAY_BUFFER, colors, gl.STATIC_DRAW);
@@ -59,7 +59,7 @@ void main() {
 
 **Varyings** are variables that are used to pass data from the vertex shader to the fragment shader. This is commonly used to share a vertex's [normal vector](<https://en.wikipedia.org/wiki/Normal_(geometry)>) after it has been computed by the vertex shader.
 
-A varying is declared in both shaders with the same name and type; otherwise, the program fails to link. The vertex shader writes a value to it for each vertex. The fragment shader can only read it, and the value it gets for each fragment is interpolated between the vertices of the primitive being drawn.
+A varying is declared in both shaders with the same name and type. The vertex shader writes a value to it for each vertex. The fragment shader can only read it, and the value it gets for each fragment is interpolated between the vertices of the primitive being drawn. If the types don't match, or if the fragment shader reads a varying that the vertex shader doesn't declare, the program fails to link.
 
 In the following example, the vertex shader copies the color of each vertex from the `aVertexColor` [attribute](#attributes) into the `vColor` varying:
 
@@ -124,28 +124,29 @@ A buffer is a block of memory on the GPU. In JavaScript, it is represented by a 
 To use a buffer, create it with {{domxref("WebGLRenderingContext.createBuffer()", "createBuffer()")}}, bind it to a target such as `gl.ARRAY_BUFFER` with {{domxref("WebGLRenderingContext.bindBuffer()", "bindBuffer()")}}, and fill it with {{domxref("WebGLRenderingContext.bufferData()", "bufferData()")}}.
 
 ```js
+// The x and y positions of the 3 vertices
 // prettier-ignore
-// x and y positions of the 3 vertices
 const positions = new Float32Array([
-  0.0, 0.8,   // top
-  -0.8, -0.8, // bottom left
-  0.8, -0.8,  // bottom right
+  0.0, 0.8,   // Top
+  -0.8, -0.8, // Bottom left
+  0.8, -0.8,  // Bottom right
 ]);
 
-// create the buffer and store the position data
+// Create the buffer and store the position data
 const positionBuffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
 gl.bufferData(gl.ARRAY_BUFFER, positions, gl.STATIC_DRAW);
 
 const positionLocation = gl.getAttribLocation(program, "aVertexPosition");
-// reads 2 values from the buffer currently bound to ARRAY_BUFFER
+
+// Reads 2 values from the buffer currently bound to ARRAY_BUFFER
 gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
 gl.enableVertexAttribArray(positionLocation);
 
 gl.drawArrays(gl.TRIANGLES, 0, 3);
 ```
 
-{{domxref("WebGLRenderingContext.vertexAttribPointer()", "vertexAttribPointer()")}} connects the attribute to the buffer that is currently bound to `gl.ARRAY_BUFFER`. The second argument sets how many values the attribute reads per vertex: two here, for x and y. After that call, you can bind a different buffer without affecting the attribute. The [attributes](#attributes) example above uses the same pattern with its own color buffer.
+{{domxref("WebGLRenderingContext.vertexAttribPointer()", "vertexAttribPointer()")}} connects the attribute to the buffer that is currently bound to `gl.ARRAY_BUFFER`. The second parameter, `size`, sets how many values the attribute reads per vertex: two here, for x and y. After that call, you can bind a different buffer without affecting the attribute. The example in the [Attributes](#attributes) section uses the same pattern with its own color buffer.
 
 The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) shows more ways to use buffers, for example to store texture coordinates or vertex indices.
 
@@ -169,11 +170,13 @@ void main() {
 ```
 
 ```js
-// select texture unit 0 and bind the texture to it
+gl.useProgram(program);
+
+// Select texture unit 0 and bind the texture to it
 gl.activeTexture(gl.TEXTURE0);
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
-// tell the sampler uniform to read from texture unit 0
+// Tell the sampler uniform to read from texture unit 0
 const samplerLocation = gl.getUniformLocation(program, "uSampler");
 gl.uniform1i(samplerLocation, 0);
 ```
