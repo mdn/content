@@ -43,7 +43,7 @@ Firefox 162 is the current [Beta version of Firefox](https://www.firefox.com/en-
 ### JavaScript
 
 - Regular expression buffer boundary assertions (`\A` and `\z`) are now supported. `\A` matches only at the start of the input string and `\z` only at the end, regardless of the `m` (multiline) flag — unlike `^` and `$`, which are affected by `m`. ([Firefox bug 2059792](https://bugzil.la/2059792))
-- Multiple [`<script type="importmap">`](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) elements are now supported by default on all channels. [Import maps](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) are merged in document order, with later entries overriding earlier ones for the same specifier. ([Firefox bug 2093267](https://bugzil.la/2093267))
+- Multiple [`<script type="importmap">`](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) elements are now supported by default on all channels. Import maps are merged in document order, with later entries overriding earlier ones for the same specifier. ([Firefox bug 2093267](https://bugzil.la/2093267))
 
 <!-- #### Removals -->
 
