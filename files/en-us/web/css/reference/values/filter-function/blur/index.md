@@ -7,7 +7,7 @@ browser-compat: css.types.filter-function.blur
 sidebar: cssref
 ---
 
-The **`blur()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) applies a [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) to the input image. It is used as a value for the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
+The **`blur()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is a {{cssxref("filter-function")}} that applies a [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) to the input image.
 
 {{InteractiveExample("CSS Demo: blur()")}}
 
@@ -32,6 +32,17 @@ filter: blur(1.5rem);
     width="200" />
 </section>
 ```
+
+## Associated properties and functions
+
+This function is accepted in the values of the following CSS properties:
+
+- {{cssxref("filter")}}
+- {{cssxref("backdrop-filter")}}
+
+This function is also accepted as a parameter of the following CSS functions:
+
+- {{cssxref("filter()")}} function
 
 ## Syntax
 
@@ -153,7 +164,7 @@ td {
 ## See also
 
 - [CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module
-- The other {{cssxref("filter-function")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
+- The other {{cssxref("filter-function")}} functions include:
   - {{cssxref("filter-function/brightness", "brightness()")}}
   - {{cssxref("filter-function/contrast", "contrast()")}}
   - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}

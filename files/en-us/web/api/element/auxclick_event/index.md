@@ -81,8 +81,7 @@ button {
 ### JavaScript
 
 ```js
-let button = document.querySelector("button");
-let html = document.querySelector("html");
+const button = document.querySelector("button");
 
 function random(number) {
   return Math.floor(Math.random() * number);
