@@ -97,4 +97,33 @@ The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) shows more ways to 
 
 ## Textures
 
-<\<add information>>
+A texture holds image data on the GPU. In JavaScript, it is represented by a {{domxref("WebGLTexture")}} object. To use a texture, create it with {{domxref("WebGLRenderingContext.createTexture()", "createTexture()")}}, bind it to a target such as `gl.TEXTURE_2D` with {{domxref("WebGLRenderingContext.bindTexture()", "bindTexture()")}}, and fill it with {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}}, for example from an image, a canvas, a video, or a typed array.
+
+Textures use all three kinds of GLSL variables. The texture itself is accessed through a [uniform](#uniforms) of type `sampler2D`, because it is the same for every fragment. The texture coordinates are an [attribute](#attributes) with one value per vertex. The vertex shader passes them on as a [varying](#varyings), so each fragment gets an interpolated coordinate. The fragment shader then reads the color at that coordinate with `texture2D()`:
+
+```glsl
+// Fragment shader
+precision mediump float;
+
+uniform sampler2D uSampler;
+
+varying vec2 vTextureCoord;
+
+void main() {
+  gl_FragColor = texture2D(uSampler, vTextureCoord);
+}
+```
+
+```js
+// select texture unit 0 and bind the texture to it
+gl.activeTexture(gl.TEXTURE0);
+gl.bindTexture(gl.TEXTURE_2D, texture);
+
+// tell the sampler uniform to read from texture unit 0
+const samplerLocation = gl.getUniformLocation(program, "uSampler");
+gl.uniform1i(samplerLocation, 0);
+```
+
+A sampler uniform doesn't hold the texture itself, but the number of a texture unit. {{domxref("WebGLRenderingContext.activeTexture()", "activeTexture()")}} selects the unit that the next `bindTexture()` call binds the texture to, and {{domxref("WebGLRenderingContext.uniform()", "uniform1i()")}} sets the sampler to the same unit number.
+
+For loading textures from images, filtering, and wrapping, see [Using textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
