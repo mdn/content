@@ -44,7 +44,7 @@ Other features include:
 
 - The {{domxref("HTMLCanvasElement.getElementImageDefaultSize()")}} method, which returns the element's default rendered size. This is useful if you want to re-render the element at a size relative to its default size, or preallocate texture storage, for example.
 - The {{domxref("HTMLCanvasElement.requestPaint()")}} method, which schedules a single `paint` event even if no repaints occurred, useful for example if you want to move an element around the canvas when its state hasn't changed.
-- The {{domxref("HTMLCanvasElement.updateElementGeometry()")}} method, which updates the size, shape, and position of a rendered element's underlying DOM presence, for example so you can still click a rendered {{htmlelement("button")}} after the canvas rendering has moved.
+- The {{domxref("HTMLCanvasElement.updateElementGeometry()")}} method, which can be used for example to update the size, shape, and position of a rendered element's underlying DOM presence, for example so you can still click a rendered {{htmlelement("button")}} after the canvas rendering has moved.
 
 For more information, read our guides, starting with [Using the HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API/Using).
 
@@ -103,7 +103,7 @@ canvas.addEventListener("paint", () => {
 - {{domxref("HTMLCanvasElement.captureElementImage()")}}
   - : Captures a snapshot of a `drawable` element's current rendered state, which can be rendered later on.
 - {{domxref("HTMLCanvasElement.updateElementGeometry()")}}
-  - : Supplies a {{domxref("DOMMatrix")}} that updates the size, shape, and position of a `drawable` element (or {{domxref("ElementImage")}})'s underlying DOM presence so that it can be kept in sync with the canvas rendering as it updates for hit testing purposes.
+  - : Updates the geometry information of a `drawable` element (or {{domxref("ElementImage")}})'s underlying DOM presence.
 - {{domxref("HTMLCanvasElement.clearElementGeometry()")}}
   - : Clears any previous `DOMMatrix` applied to a `drawable` element (or {{domxref("ElementImage")}})'s underlying DOM presence, returning it to its original size, shape, and position.
 - {{domxref("HTMLCanvasElement.getElementImageDefaultSize()")}}

@@ -474,7 +474,7 @@ function main() {
       args.push({ preserveElementGeometry: "true" });
     }
 
-    let textOutput = "drawElementImage(";
+    let textOutput = "drawElementImage(divElem, ";
     args.forEach((element, index, array) => {
       if (typeof element === "object") {
         let objString = JSON.stringify(element);
