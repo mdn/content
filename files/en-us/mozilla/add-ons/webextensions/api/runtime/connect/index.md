@@ -17,7 +17,7 @@ Note that you can't use this function to connect an extension to its content scr
 
 By default, this connection enables the extension to exchange messages with itself or any other extension (if `extensionId` is specified). However, the [`externally_connectable`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable) manifest key can be used to limit communication to specific extensions and enable communication with websites. Connections within the extension trigger the {{WebExtAPIRef('runtime.onConnect')}} event, connections from other extensions or web pages trigger the {{WebExtAPIRef('runtime.onConnectExternal')}} event.
 
-Messages sent over the connection are serialized as set by the [`message_serialization`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/message_serialization) manifest key.
+Messages sent over the connection are serialized. Firefox serializes messages with the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). Chrome and Safari use JSON serialization by default but can be set to use the structured clone algorithm with the [`message_serialization`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/message_serialization) manifest key.
 
 ## Syntax
 

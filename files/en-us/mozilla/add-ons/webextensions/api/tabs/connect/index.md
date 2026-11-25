@@ -12,7 +12,7 @@ When this is called, the {{WebExtAPIRef('runtime.onConnect')}} event will be fir
 
 For more details, see [connection-based messaging](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging). You can message without creating a connection, for advice on choosing between the options, see [Choosing between one-off messages and connection-based messaging](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#choosing_between_one-off_messages_and_connection-based_messaging).
 
-Messages sent over the connection are serialized as set by the [`message_serialization`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/message_serialization) manifest key.
+Messages sent over the connection are serialized. Firefox serializes messages with the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). Chrome and Safari use JSON serialization by default but can be set to use the structured clone algorithm with the [`message_serialization`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/message_serialization) manifest key.
 
 ## Syntax
 
