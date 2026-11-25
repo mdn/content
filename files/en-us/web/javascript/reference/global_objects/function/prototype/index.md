@@ -65,7 +65,7 @@ A [bound function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/
 const boundFunction = function () {}.bind(null);
 ```
 
-A function's `prototype` property, by default, is a plain object with one property: [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor), which is a reference to the function itself. The `constructor` property is writable, non-enumerable, and configurable.
+A function's `prototype` property, by default, is a plain object with one property: [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor), which is a reference to the function itself. The `constructor` property is writable, non-enumerable, and configurable. If the function is created as a class with [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends), then the `prototype` object's prototype is `ParentClass.prototype` instead of `Object.prototype`.
 
 If the `prototype` of a function is reassigned with something other than an {{jsxref("Object")}}, when the function is called with `new`, the returned object's prototype would be `Object.prototype` instead. (In other words, `new` ignores the `prototype` property and constructs a plain object.)
 
@@ -74,6 +74,21 @@ function Ctor() {}
 Ctor.prototype = 3;
 console.log(Object.getPrototypeOf(new Ctor()) === Object.prototype); // true
 ```
+
+Two JavaScript constructors have `prototype` properties with slightly more complicated semantics:
+
+- {{jsxref("Object", "Object.prototype")}} serves as the root of the prototype chain for most objects. Its prototype is `null` and it does not allow resetting its prototype.
+- {{jsxref("Proxy")}} is the only built-in class without a `prototype` property. `Proxy` instances have no shared prototype chain or properties given by the `Proxy` class (they each define their own behaviors).
+
+For legacy reasons, five other JavaScript constructors have `prototype` properties that are also instances of their classes. Other than `instanceof` returning `false` (because `instanceof` checks the prototype chain), they possess all the private slots and instance properties of actual instances.
+
+- {{jsxref("Array", "Array.prototype")}} is an `Array` object that's initially empty. You can pass it to {{jsxref("Array.isArray()")}}, assign to its indices, read its {{jsxref("Array/length", "length")}}, and call methods like `Array.prototype.push(1)`.
+- {{jsxref("Function", "Function.prototype")}} is a `Function` object that returns `undefined` when called with any arguments. It has a {{jsxref("Function/length", "length")}} property of value `0` and a {{jsxref("Function/name", "name")}} property of value `""`. It cannot be constructed and has no `prototype` property.
+- {{jsxref("Number", "Number.prototype")}} is a `Number` object that wraps the value `0`.
+- {{jsxref("Boolean", "Boolean.prototype")}} is a `Boolean` object that wraps the value `false`.
+- {{jsxref("String", "String.prototype")}} is a `String` object that wraps the value `""`. It has a {{jsxref("String/length", "length")}} property of value `0`.
+
+{{jsxref("RegExp", "RegExp.prototype")}} used to be a `RegExp` object, but it's now a plain object special-cased by the {{jsxref("RegExp/source", "source")}} and different flag accessors like {{jsxref("RegExp/global", "global")}}.
 
 ## Examples
 
@@ -117,6 +132,23 @@ class Dog {
 }
 
 console.log(new Dog("Jack").species); // "dog"
+```
+
+### The Function.prototype object
+
+For legacy reasons, `Function.prototype` is also a `Function` object that returns `undefined` when called with any arguments. It has a {{jsxref("Function/length", "length")}} property of value `0` and a {{jsxref("Function/name", "name")}} property of value `""`. It cannot be constructed and has no `prototype` property.
+
+```js
+console.log(Function.prototype()); // undefined
+console.log(Function.prototype.toString()); // function () { [native code] }
+```
+
+Other subclasses do not share this behavior—for example, `GeneratorFunction.prototype` is just a plain object that inherits from `Function.prototype` and is not callable. It still inherits `name` and `length` from `Function.prototype`, though.
+
+```js
+const GeneratorFunction = function* () {}.constructor;
+GeneratorFunction.prototype(); // TypeError: GeneratorFunction.prototype is not a function
+GeneratorFunction.prototype.toString(); // TypeError: Function.prototype.toString requires that 'this' be a Function
 ```
 
 ## Specifications

@@ -19,6 +19,7 @@ The **CSS text** module defines how to perform text manipulation, like line brea
 - {{cssxref("hanging-punctuation")}}
 - {{cssxref("hyphenate-character")}}
 - {{cssxref("hyphenate-limit-chars")}}
+- {{cssxref("hyphenate-limit-lines")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("letter-spacing")}}
 - {{cssxref("line-break")}}
@@ -39,6 +40,7 @@ The **CSS text** module defines how to perform text manipulation, like line brea
 - {{cssxref("white-space-collapse")}}
 - {{cssxref("word-break")}}
 - {{cssxref("word-spacing")}}
+- {{cssxref("wrap-inside")}}
 
 The specification also defines the `hyphenate-limit-last`, `hyphenate-limit-zone`, `line-padding`, `text-align-all`, `text-group-align`, `text-spacing`, `word-space-transform`, `wrap-after` and `wrap-before` properties, which are not yet supported by any browser.
 

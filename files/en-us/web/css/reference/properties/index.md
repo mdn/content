@@ -312,6 +312,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("height")}}
 - {{CSSxRef("hyphenate-character")}}
 - {{CSSxRef("hyphenate-limit-chars")}}
+- {{CSSxRef("hyphenate-limit-lines")}}
 - {{CSSxRef("hyphens")}}
 - {{CSSxRef("image-orientation")}}
 - {{CSSxRef("image-rendering")}}
@@ -601,6 +602,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("will-change")}}
 - {{CSSxRef("word-break")}}
 - {{CSSxRef("word-spacing")}}
+- {{CSSxRef("wrap-inside")}}
 - {{CSSxRef("writing-mode")}}
 - {{CSSxRef("x")}}
 - {{CSSxRef("y")}}

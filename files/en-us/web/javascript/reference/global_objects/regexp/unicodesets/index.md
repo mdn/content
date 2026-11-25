@@ -37,6 +37,8 @@ Some valid `u`-mode regexes become invalid in `v`-mode. Specifically, the charac
 
 The set accessor of `unicodeSets` is `undefined`. You cannot change this property directly.
 
+For legacy reasons, `RegExp.prototype.unicodeSets === undefined` although `RegExp.prototype` is not a `RegExp` instance. (You'd expect the getter to throw a `TypeError` if the `this` value is not a `RegExp` instance.)
+
 ## Examples
 
 ### Using the unicodeSets property

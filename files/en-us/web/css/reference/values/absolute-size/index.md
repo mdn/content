@@ -11,6 +11,13 @@ The **`<absolute-size>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web
 
 The font size keywords are mapped to the deprecated HTML `size` attribute. See the [HTML size attribute](#html_size_attribute) section below.
 
+## Associated properties
+
+This data type is accepted in values for the following CSS properties:
+
+- {{cssxref("font-size")}}
+- {{cssxref("font")}} shorthand
+
 ## Syntax
 
 ```plain
