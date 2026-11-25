@@ -22,36 +22,31 @@ There are three kinds of "variable" or data storage available in GLSL, each of w
 
 ```js
 // init colors
-const vertexColors = [
-  vec4(0.0, 0.0, 0.0, 1.0), // black
-  vec4(1.0, 0.0, 0.0, 1.0), // red
-  vec4(1.0, 1.0, 0.0, 1.0), // yellow
-  vec4(0.0, 1.0, 0.0, 1.0), // green
-  vec4(0.0, 0.0, 0.0, 1.0), // black
-  vec4(1.0, 0.0, 0.0, 1.0), // red
-  vec4(1.0, 1.0, 0.0, 1.0), // yellow
-  vec4(0.0, 1.0, 0.0, 1.0), // green
-];
-const cBuffer = gl.createBuffer();
+// prettier-ignore
+const colors = new Float32Array([
+  1.0, 0.0, 0.0, 1.0, // red
+  0.0, 1.0, 0.0, 1.0, // green
+  0.0, 0.0, 1.0, 1.0, // blue
+]);
 ```
 
 ```js
 // continued
-// create buffer to store colors and reference it to "vColor" which is in GLSL
-gl.bindBuffer(gl.ARRAY_BUFFER, cBuffer);
-gl.bufferData(gl.ARRAY_BUFFER, flatten(vertexColors), gl.STATIC_DRAW);
-
-const vColor = gl.getAttribLocation(program, "vColor");
-gl.vertexAttribPointer(vColor, 4, gl.FLOAT, false, 0, 0);
-gl.enableVertexAttribArray(vColor);
+// create buffer to store colors and reference it to "aVertexColor" which is in GLSL
+const colorBuffer = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
+gl.bufferData(gl.ARRAY_BUFFER, colors, gl.STATIC_DRAW);
+const colorLocation = gl.getAttribLocation(program, "aVertexColor");
+gl.vertexAttribPointer(colorLocation, 4, gl.FLOAT, false, 0, 0);
+gl.enableVertexAttribArray(colorLocation);
 ```
 
 ```glsl
-attribute  vec4 vColor;
+attribute vec4 aVertexColor;
+varying vec4 vColor;
 
-void main()
-{
-  fColor = vColor;
+void main() {
+  vColor = aVertexColor;
 }
 ```
 
