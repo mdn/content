@@ -18,7 +18,7 @@ sidebar: addonsidebar
     </tr>
     <tr>
       <th scope="row">Manifest version</th>
-      <td>3 or higher</td>
+      <td>2 or higher (3 or higher in Chrome)</td>
     </tr>
     <tr>
       <th scope="row">Example</th>
