@@ -161,45 +161,11 @@ The `property-index-scoped` keyword is useful in shorthands, where each position
       dotted,
       dashed,
       solid,
-      double,
-      groove,
-      ridge,
-      inset,
-      outset
+      double
     )
-    random-item(
-      property-index-scoped,
-      dotted,
-      dashed,
-      solid,
-      double,
-      groove,
-      ridge,
-      inset,
-      outset
-    )
-    random-item(
-      property-index-scoped,
-      dotted,
-      dashed,
-      solid,
-      double,
-      groove,
-      ridge,
-      inset,
-      outset
-    )
-    random-item(
-      property-index-scoped,
-      dotted,
-      dashed,
-      solid,
-      double,
-      groove,
-      ridge,
-      inset,
-      outset
-    );
+    random-item(property-index-scoped, dotted, dashed, solid, double)
+    random-item(property-index-scoped, dotted, dashed, solid, double)
+    random-item(property-index-scoped, dotted, dashed, solid, double);
   border-color: random-item(
       property-index-scoped,
       red,
