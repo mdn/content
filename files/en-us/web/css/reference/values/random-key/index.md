@@ -40,17 +40,22 @@ fixed 0.123
 This data type is specified as one of the following values:
 
 - `auto`
-  - : Specifies an independent random value should be generated. This is the default value, and is equivalent to specifying `element-scoped property-index-scoped`.
+- : Specifies an independent random value should be generated. This is the default value, and is equivalent to specifying `element-scoped property-index-scoped`.
+
 - `element-scoped`
-  - : Specifies an element-specific identifier to be added to the random cache name.
+- : Specifies an element-specific identifier to be added to the random cache name.
+
 - `property-scoped`
-  - Specifies a property-specific identifier to be added to the random cache name.
+- Specifies a property-specific identifier to be added to the random cache name.
+
 - `property-index-scoped`
-  - : Specifies the property name and index of the containing function to be added to the random cache name.
+- : Specifies the property name and index of the containing function to be added to the random cache name.
+
 - {{cssxref("dashed-ident")}}
-  - : Specifies a custom name for the random cache key shared across all elements and properties using the same identifier. When combined with a `*-scoped` keyword, the sharing behavior is determined by the keyword.
+- : Specifies a custom name for the random cache key shared across all elements and properties using the same identifier. When combined with a `*-scoped` keyword, the sharing behavior is determined by the keyword.
+
 - `fixed <number>`
-  - : Specifies the seed's value, as a number between `0` and `1`, inclusive of `0`, exclusive of `1`.
+- : Specifies the seed's value, as a number between `0` and `1`, inclusive of `0`, exclusive of `1`.
 
 ## Description
 
