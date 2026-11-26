@@ -72,8 +72,8 @@ When the `<random-key>` is set to `auto`, or omitted and defaults to `auto`, the
 .c {
   width: random(auto, 10px, 200px);
   height: random(auto, 10px, 200px);
-  border-color: random-item(auto, red, pink, lightpink, maroon, magenta);
-  color: random-item(auto, red, pink, lightpink, maroon, magenta);
+  border-color: random-item(auto, red, pink, coral, maroon, magenta);
+  color: random-item(auto, red, pink, coral, maroon, magenta);
 }
 ```
 
@@ -99,15 +99,8 @@ The `element-scoped` keyword gives each element its own base value, per property
 .c {
   width: random(element-scoped, 10px, 200px);
   height: random(element-scoped, 10px, 200px);
-  border-color: random-item(
-    element-scoped,
-    red,
-    pink,
-    lightpink,
-    maroon,
-    magenta
-  );
-  color: random-item(element-scoped, red, pink, lightpink, maroon, magenta);
+  border-color: random-item(element-scoped, red, pink, coral, maroon, magenta);
+  color: random-item(element-scoped, red, pink, coral, maroon, magenta);
 }
 ```
 
@@ -126,15 +119,8 @@ The `property-scoped` keyword adds the property name to the random cache name, s
   border: solid 10px;
   width: random(property-scoped, 10px, 200px);
   height: random(property-scoped, 10px, 200px);
-  border-color: random-item(
-    property-scoped,
-    red,
-    pink,
-    lightpink,
-    maroon,
-    magenta
-  );
-  color: random-item(property-scoped, red, pink, lightpink, maroon, magenta);
+  border-color: random-item(property-scoped, red, pink, coral, maroon, magenta);
+  color: random-item(property-scoped, red, pink, coral, maroon, magenta);
 }
 ```
 
@@ -170,13 +156,13 @@ The `property-index-scoped` keyword is useful in shorthands, where each position
       property-index-scoped,
       red,
       pink,
-      lightpink,
+      coral,
       maroon,
       magenta
     )
-    random-item(property-index-scoped, red, pink, lightpink, maroon, magenta)
-    random-item(property-index-scoped, red, pink, lightpink, maroon, magenta)
-    random-item(property-index-scoped, red, pink, lightpink, maroon, magenta);
+    random-item(property-index-scoped, red, pink, coral, maroon, magenta)
+    random-item(property-index-scoped, red, pink, coral, maroon, magenta)
+    random-item(property-index-scoped, red, pink, coral, maroon, magenta);
 }
 ```
 
@@ -226,15 +212,8 @@ Used alone, the `<dashed-ident>` shares its base value globally: any usage in a 
   height: random(--custom-name, 50px, 200px);
   border-width: calc(random(--custom-name, 50px, 200px) / 10);
   padding: calc(random(--custom-name, 50px, 200px) / 10);
-  border-color: random-item(
-    --custom-name,
-    red,
-    pink,
-    lightpink,
-    maroon,
-    magenta
-  );
-  color: random-item(--custom-name, red, pink, lightpink, maroon, magenta);
+  border-color: random-item(--custom-name, red, pink, coral, maroon, magenta);
+  color: random-item(--custom-name, red, pink, coral, maroon, magenta);
 }
 ```
 
