@@ -47,7 +47,7 @@ Other features include:
 - The {{domxref("HTMLCanvasElement.updateElementGeometry()")}} method, which can be used for example to update the size and position of a rendered element's underlying DOM presence so it remains interactive in cases where the geometry is not updated automatically.
 - Offscreencanvas rendering — {{domxref("ElementImage")}} objects can be transferred to a [web worker](/en-US/docs/Web/API/Web_Workers_API) and rendered using an {{domxref("OffscreenCanvas")}} to improve performance on render-heavy apps. See our [Offscreencanvas](#offscreencanvas) reference pages for more information and examples.
 
-For more information, read our guides, starting with [Using the HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API/Using).
+For guides, see the [HTML-in-Canvas](https://developer.chrome.com/docs/web-platform/html-in-canvas) series on `developer.chrome.com`.
 
 ### Accessibility
 

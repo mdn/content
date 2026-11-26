@@ -954,7 +954,7 @@
     },
     "HTML-in-Canvas API": {
       "overview": ["HTML-in-Canvas API"],
-      "guides": ["/docs/Web/API/HTML-in-Canvas_API/Using"],
+      "guides": [],
       "interfaces": [
         "CanvasPaintEvent",
         "ElementGeometryUpdateEvent",
