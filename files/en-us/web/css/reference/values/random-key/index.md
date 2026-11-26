@@ -14,7 +14,7 @@ The **`<random-key>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CS
 This data type is accepted as a parameter in the following CSS functions:
 
 - {{cssxref("random()")}}
-- {{cssxref("random-key()")}}
+- {{cssxref("random-item()")}}
 
 ## Syntax
 
@@ -237,6 +237,6 @@ This makes `.a`, `.b`, and `.c` identical squares, since every `width` and `heig
 ## See also
 
 - {{cssxref("random()")}}
-- {{cssxref("random-key()")}}
+- {{cssxref("random-item()")}}
 - [CSS units and values](/en-US/docs/Web/CSS/Guides/Values_and_units) module
 - {{jsxref("Math.random()")}}
