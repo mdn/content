@@ -28,7 +28,7 @@ updateElementGeometry(element, options)
     - `canvasClip` {{optional_inline}}
       - : A {{domxref("DOMRect")}} that sets the area of the `element` that can receive pointer events. This is useful when you only render a portion of an element on the canvas and want to limit hit testing to the rendered portion. Defaults to `undefined`. The rect is in the element's own coordinate space.
     - `canvasTransform` {{optional_inline}}
-      - : A {{domxref("DOMMatrix")}} that updates the size, shape, and position of the `element`'s underlying DOM presence so that it can be kept in sync with its canvas rendering position so that its hit area stays in sync with its position on the canvas. Defaults to `undefined`. The matrix units are specified in CSS pixels.
+      - : A {{domxref("DOMMatrix")}} that updates the size, shape, and position of the `element`'s underlying DOM presence so that it can be kept in sync with its canvas rendering position in terms of hit-testing area. Defaults to `undefined`. The matrix units are specified in CSS pixels.
 
 ### Return value
 

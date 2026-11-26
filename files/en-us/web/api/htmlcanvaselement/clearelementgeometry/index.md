@@ -29,7 +29,7 @@ None ({{jsxref("undefined")}}).
 
 The `clearElementGeometry()` method clears geometry applied to a `drawable` element or `ElementImage`. This includes both geometry applied automatically by {{domxref("CanvasRenderingContext2D.drawElementImage","drawElementImage()")}} calls, and geometry applied manually by {{domxref("HTMLCanvasElement.updateElementGeometry","updateElementGeometry()")}} calls.
 
-Calling `clearElementGeometry()` on a `drawable` element causes it to be un-drawn, removing its interactivity and marking it as offscreen in the accessibility tree, without actually removing it from the DOM. You could re-draw it again with a subsequent `updateElementGeometry()` call.
+Calling `clearElementGeometry()` causes the referenced element to be un-drawn, removing its interactivity and marking it as offscreen in the accessibility tree, without actually removing it from the DOM. You could re-draw it again with a subsequent `updateElementGeometry()` call.
 
 It doesn't un-render the element from a {{htmlelement("canvas")}} context; to do this, you'd have to redraw the canvas scene without rendering the element.
 

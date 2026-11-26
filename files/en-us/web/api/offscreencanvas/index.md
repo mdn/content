@@ -38,6 +38,15 @@ Rendering operations can also be run inside a [worker](/en-US/docs/Web/API/Web_W
 - {{domxref("OffscreenCanvas.transferToImageBitmap()")}}
   - : Creates an {{domxref("ImageBitmap")}} object from the most recently rendered image of the `OffscreenCanvas`. See its reference for important notes on managing this {{domxref("ImageBitmap")}}.
 
+### HTML-in-Canvas instance methods
+
+- {{domxref("OffscreenCanvas.updateElementGeometry()")}}
+  - : Updates the geometry applied to an {{domxref("ElementImage")}}'s underlying DOM presence.
+- {{domxref("OffscreenCanvas.clearElementGeometry()")}}
+  - : Clears any previous geometry applied to an {{domxref("ElementImage")}}'s underlying DOM presence.
+- {{domxref("OffscreenCanvas.getElementImageDefaultSize()")}}
+  - : Returns an object containing the default size, in canvas units, of an {{domxref("ElementImage")}}.
+
 ## Events
 
 _Inherits events from its parent, {{domxref("EventTarget")}}._

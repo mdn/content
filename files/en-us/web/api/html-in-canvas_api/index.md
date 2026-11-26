@@ -144,11 +144,11 @@ canvas.addEventListener("paint", () => {
 ### `OffscreenCanvas`
 
 - {{domxref("OffscreenCanvas.updateElementGeometry()")}}
-  - : Supplies a {{domxref("DOMMatrix")}} that updates the size, shape, and position of an {{domxref("ElementImage")}}'s underlying DOM presence. Run on element images that have been transferred to an offscreen canvas.
+  - : Updates the geometry applied to an {{domxref("ElementImage")}}'s underlying DOM presence.
 - {{domxref("OffscreenCanvas.clearElementGeometry()")}}
-  - : Clears any previous `DOMMatrix` applied to an {{domxref("ElementImage")}}'s underlying DOM presence. Run on element images that have been transferred to an offscreen canvas.
+  - : Clears any previous geometry applied to an {{domxref("ElementImage")}}'s underlying DOM presence.
 - {{domxref("OffscreenCanvas.getElementImageDefaultSize()")}}
-  - : Returns an object containing the default size, in canvas units, of an {{domxref("ElementImage")}}. Run on element images that have been transferred to an offscreen canvas.
+  - : Returns an object containing the default size, in canvas units, of an {{domxref("ElementImage")}}.
 - {{domxref("OffscreenCanvasRenderingContext2D.drawElementImage()")}}
   - : Draws an {{domxref("ElementImage")}} captured during the current rendering update to an offscreen 2D canvas context.
 
