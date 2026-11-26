@@ -79,7 +79,7 @@ When the `<random-key>` is set to `auto`, or omitted and defaults to `auto`, the
 
 In this example, the `auto` keyword makes `.a`, `.b`, and `.c` independent rectangles, since every element gets the independent values for each property, and the properties are independent of each other as well.
 
-{{EmbedLiveSample("Auto", "100%", 250)}}
+{{EmbedLiveSample("Auto", "100%", 300)}}
 
 ### The `element-scoped` keyword
 
@@ -106,7 +106,7 @@ The `element-scoped` keyword gives each element its own base value, per property
 
 In this example, the `element-scoped` keyword makes `.a`, `.b`, and `.c` independent squares, since every element gets the same `width` and `height` values, but the values are independent of for each element. The border will also be the same color as the text in each case, but the colors of one box are independent from the others.
 
-{{EmbedLiveSample("Element", "100%", 250)}}
+{{EmbedLiveSample("Element", "100%", 300)}}
 
 ### The `property-scoped` keyword
 
@@ -126,7 +126,7 @@ The `property-scoped` keyword adds the property name to the random cache name, s
 
 In this example, the `property-scoped` keyword makes `.a`, `.b`, and `.c` identical rectangles, since every element gets the same `width` , `height`, `border-color`, and `color` values, but the dimensions and color values are independent of each other.
 
-{{EmbedLiveSample("Property", "100%", 250)}}
+{{EmbedLiveSample("Property", "100%", 300)}}
 
 ### The `property-index-scoped` keyword
 
@@ -195,7 +195,7 @@ div div {
 
 All three elements get the same top border, the same right border, and so on, but the four borders differ from each other.
 
-{{EmbedLiveSample("both", "100%", 200)}}
+{{EmbedLiveSample("both", "100%", 300)}}
 
 ### Custom identifiers
 
@@ -219,22 +219,11 @@ Used alone, the `<dashed-ident>` shares its base value globally: any usage in a 
 
 This makes `.a`, `.b`, and `.c` identical squares, since every `width` and `height` resolves to the same value, with the padding and border being 10% of that value, which the {{cssxref("color")}} will be the same as the {{cssxref("border")}}.
 
-{{EmbedLiveSample("Custom", "100%", 250)}}
+{{EmbedLiveSample("Custom", "100%", 300)}}
 
 ## Formal syntax
 
 {{csssyntax}}
-
-## Examples
-
-### Setting text color opacity
-
-The example demonstrates applying a color with `60%` opacity using the `<random-key>` as a parameter within an {{cssxref("rgb()")}} function, which accepts an optional fourth parameter specifying an alpha value:
-
-```css
-/* <rgb()> */
-color: rgb(34 12 64 / 60%);
-```
 
 ## Specifications
 
