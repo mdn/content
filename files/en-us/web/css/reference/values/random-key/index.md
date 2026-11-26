@@ -29,7 +29,7 @@ property-index-scoped
 --my-random-key
 fixed 0.123
 
-/* Scoped with <dashed-ident> */
+/* Scoped keywords with <dashed-ident> */
 --random-key element-scoped
 --some-random-key property-scoped
 --another-random-key property-index-scoped
@@ -40,7 +40,7 @@ fixed 0.123
 This data type is specified as one of the following values:
 
 - `auto`
-  - : Specifies an independent random value should be generated. This is the default value, and the equivalent to specifying `element-scoped property-index-scoped`.
+  - : Specifies an independent random value should be generated. This is the default value, and is equivalent to specifying `element-scoped property-index-scoped`.
 - `element-scoped`
   - : Specifies an element-specific identifier to be added to the random cache name.
 - `property-scoped`
@@ -50,7 +50,7 @@ This data type is specified as one of the following values:
 - {{cssxref("dashed-ident")}}
   - : Specifies a custom name for the random cache key shared across all elements and properties using the same identifier. When combined with a `*-scoped` keyword, the sharing behavior is determined by the keyword.
 - `fixed <number>`
-  - : Specifies the seed's value, as a number between `0` and `1`, inclusive of 0, exclusive of 1.
+  - : Specifies the seed's value, as a number between `0` and `1`, inclusive of `0`, exclusive of `1`.
 
 ## Description
 
@@ -104,13 +104,13 @@ The `element-scoped` keyword gives each element its own base value, per property
 }
 ```
 
-In this example, the `element-scoped` keyword makes `.a`, `.b`, and `.c` independent squares, since every element gets the same `width` and `height` values, but the values are independent of for each element. The border will also be the same color as the text in each case, but the colors of one box are independent of the others.
+In this example, the `element-scoped` keyword makes `.a`, `.b`, and `.c` independent squares: each element gets the same `width` and `height` values, but they are independent for each element. The border will also be the same color as the text in each case, but the colors of one box are independent of the others.
 
 {{EmbedLiveSample("Element", "100%", 300)}}
 
 ### The `property-scoped` keyword
 
-The `property-scoped` keyword adds the property name to the random cache name, so if applied over multiple properties (e.g., `width` and `height`) both properties get a different random value, but each element (e.g., `<div>`) uses the same random values.
+The `property-scoped` keyword adds the property name to the random cache name, so if applied over multiple properties (e.g., `width` and `height`), each property gets a different random value, but each element (e.g., `<div>`) uses the same random values.
 
 ```css live-sample___property
 .a,
@@ -193,7 +193,7 @@ div div {
 }
 ```
 
-All three elements get the same top border, the same right border, and so on, but the four borders differ.
+All three elements get the same top border, the same right border, and so on, but each of the four borders is independent of the others.
 
 {{EmbedLiveSample("both", "100%", 300)}}
 
@@ -201,7 +201,7 @@ All three elements get the same top border, the same right border, and so on, bu
 
 The seed can also be a {{cssxref("dashed-ident")}}. This specifies a custom name for the random cache key (e.g., `--my-random-key`). When used alone, the same random base value is shared across all elements and properties that use the same identifier. When combined with a `*-scoped` keyword, the sharing behavior is determined by the keyword.
 
-Used alone, the `<dashed-ident>` shares its base value globally: any usage in a random function call anywhere in the document with the same identifier will get the same result. For example, if you use identical `random()` functions —using the same `--custom-name` with the same minimum and maximum values — on different properties, all the functions will return the same values. Similarly, if you use the same `<dashed-ident>` in a `random-item()` function with the same list of options, all functions will return the same item.
+Used alone, the `<dashed-ident>` shares its base value globally: any usage in a random function call anywhere in the document with the same identifier will get the same result. For example, if you use identical `random()` functions — using the same `--custom-name` with the same minimum and maximum values — on different properties, all the functions will return the same values. Similarly, if you use the same `<dashed-ident>` in a `random-item()` function with the same list of options, all functions will return the same item.
 
 ```css live-sample___custom
 .a,
@@ -217,7 +217,7 @@ Used alone, the `<dashed-ident>` shares its base value globally: any usage in a 
 }
 ```
 
-This makes `.a`, `.b`, and `.c` identical squares, since every `width` and `height` resolves to the same value, with the padding and border being 10% of that value, and the {{cssxref("color")}} will be the same as the {{cssxref("border")}}.
+This makes `.a`, `.b`, and `.c` identical squares, since every `width` and `height` resolves to the same value, with the padding and border being `10%` of that value, and the {{cssxref("color")}} will be the same as the {{cssxref("border-color")}}.
 
 {{EmbedLiveSample("Custom", "100%", 300)}}
 
