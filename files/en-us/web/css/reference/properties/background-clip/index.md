@@ -57,6 +57,17 @@ text-shadow: none;
   font-size: 2em;
   font-weight: bold;
 }
+
+@supports not (background-clip: border-area) {
+  body::before {
+    content: "Your browser doesn't support the border-area value.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+  }
+}
 ```
 
 ## Syntax
@@ -112,6 +123,21 @@ When using `background-clip: text`, check that the contrast ratio between the ba
 If the background image does not load, this could also lead to the text becoming unreadable. Add a fallback {{cssxref("background-color")}} to prevent this from happening, and test without the image.
 
 Consider using feature queries with {{cssxref("@supports")}} to test for support of `background-clip: text` and provide an accessible alternative where it is not supported.
+
+When you make text transparent so that the background shows through it, only set the transparent color inside an `@supports` feature query. Otherwise, in browsers that don't support the `background-clip` value you're using, the `background-clip` declaration is ignored, but the text is still transparent and can't be read. This is especially important for `border-area`, which isn't supported in all browsers:
+
+```css
+.clipped {
+  background-clip: border-area text;
+  border-color: transparent;
+}
+
+@supports (background-clip: border-area text) {
+  .clipped {
+    color: transparent;
+  }
+}
+```
 
 ## Formal definition
 
@@ -178,7 +204,12 @@ p {
 .border-area-text {
   background-clip: border-area text;
   border-color: transparent;
-  color: rgb(0 0 0 / 20%);
+}
+
+@supports (background-clip: border-area text) {
+  .border-area-text {
+    color: rgb(0 0 0 / 20%);
+  }
 }
 ```
 
