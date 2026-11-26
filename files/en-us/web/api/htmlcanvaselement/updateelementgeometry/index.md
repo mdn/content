@@ -113,7 +113,7 @@ This is useful when you want to re-render a background element after a foregroun
 This example shows how to render an element on a 2D canvas and then manually update its position.
 
 > [!NOTE]
-> For examples of `updateElementGeometry()` being used to update the geometry of elements rendered on 3D canvases, see our [WebGL example](https://mdn.github.io/dom-examples/html-in-canvas/webgl-example/) and [WebGPU example](https://mdn.github.io/dom-examples/html-in-canvas/webgpu-example/).
+> For examples of `updateElementGeometry()` being used to update the geometry of elements rendered on 3D canvases, see our [WebGL example](https://mdn.github.io/dom-examples/html-in-canvas/webgl-example/) ([source code](https://github.com/mdn/dom-examples/tree/main/html-in-canvas/webgl-example)) and [WebGPU example](https://mdn.github.io/dom-examples/html-in-canvas/webgpu-example/) ([source code](https://github.com/mdn/dom-examples/tree/main/html-in-canvas/webgpu-example)).
 
 #### HTML
 
@@ -331,7 +331,7 @@ Focus the form and try filling in some values. Now open the example in the MDN P
 
 ### Preserve hit test order to keep a background element in the background
 
-This example shows how to render a foreground and background element on a canvas and keep the background element in the background even as it changes and is re-rendered.
+This example shows how to render a foreground and background element on a canvas and keep the background element in the background for hit testing purposes even as it changes and is re-rendered.
 
 #### HTML
 
@@ -577,4 +577,5 @@ Focus the form and try filling in some values. If you open the example in the MD
 
 ## See also
 
+- {{domxref("HTMLCanvasElement.clearElementGeometry()")}}
 - [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API)

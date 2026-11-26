@@ -105,7 +105,7 @@ canvas.addEventListener("paint", () => {
 - {{domxref("HTMLCanvasElement.updateElementGeometry()")}}
   - : Updates the geometry information of a `drawable` element (or {{domxref("ElementImage")}})'s underlying DOM presence.
 - {{domxref("HTMLCanvasElement.clearElementGeometry()")}}
-  - : Clears any previous `DOMMatrix` applied to a `drawable` element (or {{domxref("ElementImage")}})'s underlying DOM presence, returning it to its original size, shape, and position.
+  - : Clears any previous geometry applied to a `drawable` element (or {{domxref("ElementImage")}})'s underlying DOM presence, removing its interactivity and marking it as offscreen in the accessibility tree.
 - {{domxref("HTMLCanvasElement.getElementImageDefaultSize()")}}
   - : Returns an object containing the default size, in canvas units, of an element (or {{domxref("ElementImage")}}) when drawn with {{domxref("CanvasRenderingContext2D.drawElementImage", "drawElementImage()")}} (specifying no destination size).
 - {{domxref("HTMLCanvasElement.getElementTransform()")}}
