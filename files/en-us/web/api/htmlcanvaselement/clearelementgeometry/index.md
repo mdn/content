@@ -23,7 +23,7 @@ clearElementGeometry(element)
 
 ### Return value
 
-None ({{jsxref("undefined")}})
+None ({{jsxref("undefined")}}).
 
 ## Description
 
@@ -41,10 +41,10 @@ In the following snippet, we add a {{domxref("HTMLCanvasElement.paint_event", "p
 
 ```js
 canvas.addEventListener("paint", () => {
-  ctx.drawElementImage(element, x, y, { preserveElementGeometry: true });
+  ctx.drawElementImage(element, 100, 100, { preserveElementGeometry: true });
   const currentTransform = new DOMMatrix();
-  currentTransform.e = x;
-  currentTransform.f = y;
+  currentTransform.e = 100;
+  currentTransform.f = 100;
   canvas.updateElementGeometry(element, { canvasTransform: currentTransform });
   canvas.clearElementGeometry(element);
 });
