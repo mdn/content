@@ -101,7 +101,7 @@ There are many free software tools and online services that will probably be goo
 
 In terms of commercial offerings, [Adobe Photoshop](https://www.adobe.com/products/photoshop.html) has long been the industry standard especially for photo editing, while programs like [Sketch](https://www.sketch.com/) are better suited to icon and UI work. There are also popular newcomers such as [Figma](https://www.figma.com/), [The Affinity Suite](https://www.affinity.studio/), and [Canva](https://www.canva.com/).
 
-Most of the above apps have trials or free modes there are worth exploring. There are also some well-regarded free apps available such as [GIMP](https://www.gimp.org/), [Adobe Express](https://www.adobe.com/express/), and [Paint.NET](https://paint.net/).
+Most of the above apps have trials or free modes that are worth exploring. There are also some well-regarded free apps available such as [GIMP](https://www.gimp.org/), [Adobe Express](https://www.adobe.com/express/), and [Paint.NET](https://paint.net/).
 
 ## Version control tools
 
