@@ -41,7 +41,7 @@ These are the `manifest.json` keys; these keys are available in Manifest V2 and 
 - [host_permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) (Manifest V3 and above)
 - [icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)
 - [incognito](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito)
-- [message_serialization](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/message_serialization)
+- [message_serialization](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/message_serialization) (Not supported in Firefox)
 - [manifest_version](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)
 - [name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)
 - [omnibox](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox)
