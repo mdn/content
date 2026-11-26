@@ -16,10 +16,10 @@ It is similar to the `CanvasRenderingContext2D` object, with the following diffe
 
 ## Additional methods
 
-The following method is new to the `OffscreenCanvasRenderingContext2D` interface and does not exist in the `CanvasRenderingContext2D` interface:
-
 - {{domxref("OffscreenCanvasRenderingContext2D.commit()", "commit()")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Pushes the rendered image to the context's `OffscreenCanvas` object's placeholder {{HtmlElement("canvas")}} element.
+  - : Pushes the rendered image to the context's `OffscreenCanvas` object's placeholder {{HtmlElement("canvas")}} element. This method does not exist on the `CanvasRenderingContext2D` interface.
+- {{domxref("OffscreenCanvasRenderingContext2D.drawElementImage()")}}
+  - : Draws an {{domxref("ElementImage")}} captured during the current rendering update to an offscreen 2D canvas context. Part of the [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API).
 
 ## Unsupported features
 

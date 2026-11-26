@@ -7,7 +7,7 @@ browser-compat: api.ElementImage
 
 {{APIRef("HTML-in-Canvas API")}}
 
-The **`ElementImage`** interface represents a snapshot of a `drawable` element's rendered state, captured using {{domxref("HTMLCanvasElement.captureElementImage()")}}, which can be rerendered later on.
+The **`ElementImage`** interface represents a snapshot of a `drawable` element's rendered state, captured using {{domxref("HTMLCanvasElement.captureElementImage()")}}, which can be rerendered later on, including via an {{domxref("OffscreenCanvas")}}.
 
 An `ElementImage` can be rendered:
 
@@ -15,7 +15,7 @@ An `ElementImage` can be rendered:
 - In a WebGL texture using {{domxref("WebGLRenderingContext.texElementSubImage2D()")}}.
 - In a WebGPU texture using {{domxref("GPUQueue.drawElementImageToTexture()")}}.
 
-An `ElementImage` can also be transferred to a [web worker](/en-US/docs/Web/API/Web_Workers_API) and drawn to an {{domxref("OffscreenCanvas")}}.
+An `ElementImage` can also be transferred to a [web worker](/en-US/docs/Web/API/Web_Workers_API) and drawn to an {{domxref("OffscreenCanvas")}} using {{domxref("OffscreenCanvasRenderingContext2D.drawElementImage()")}}.
 
 {{InheritanceDiagram}}
 

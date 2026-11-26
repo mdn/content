@@ -44,7 +44,8 @@ Other features include:
 
 - The {{domxref("HTMLCanvasElement.getElementImageDefaultSize()")}} method, which returns the element's default rendered size. This is useful if you want to re-render the element at a size relative to its default size, or preallocate texture storage, for example.
 - The {{domxref("HTMLCanvasElement.requestPaint()")}} method, which schedules a single `paint` event even if no repaints occurred, useful for example if you want to move an element around the canvas when its state hasn't changed.
-- The {{domxref("HTMLCanvasElement.updateElementGeometry()")}} method, which can be used for example to update the size, shape, and position of a rendered element's underlying DOM presence, for example so you can still click a rendered {{htmlelement("button")}} after the canvas rendering has moved.
+- The {{domxref("HTMLCanvasElement.updateElementGeometry()")}} method, which can be used for example to update the size and position of a rendered element's underlying DOM presence so it remains interactive in cases where the geometry is not updated automatically.
+- Offscreencanvas rendering — {{domxref("ElementImage")}} objects can be transferred to a [web worker](/en-US/docs/Web/API/Web_Workers_API) and rendered using an {{domxref("OffscreenCanvas")}} to improve performance on render-heavy apps. See our [Offscreencanvas](#offscreencanvas) reference pages for more information and examples.
 
 For more information, read our guides, starting with [Using the HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API/Using).
 
@@ -92,7 +93,7 @@ canvas.addEventListener("paint", () => {
 - {{domxref("ElementGeometryUpdateEvent")}}
   - : Event object for the {{domxref("HTMLCanvasElement.elementgeometryupdate_event", "elementgeometryupdate")}} event, which fires when `drawable` element geometry has been updated via an {{domxref("OffscreenCanvas")}}.
 - {{domxref("ElementImage")}}
-  - : Represents a snapshot of a `drawable` element's rendered state (captured using {{domxref("HTMLCanvasElement.captureElementImage()")}}), which can be rerendered later on.
+  - : Represents a snapshot of a `drawable` element's rendered state (captured using {{domxref("HTMLCanvasElement.captureElementImage()")}}), which can be rerendered later on, including via an {{domxref("OffscreenCanvas")}}.
 
 ## Extensions to other interfaces
 
@@ -125,21 +126,10 @@ canvas.addEventListener("paint", () => {
 - {{DOMxRef("HTMLElement.drawable")}}, {{DOMxRef("SVGElement.drawable")}}, {{DOMxRef("MathMLElement.drawable")}}
   - : Marks an element as a **paint root**, meaning that it can be rendered independently on a parent {{htmlelement("canvas")}} element with its [`content`](/en-US/docs/Web/HTML/Reference/Elements/canvas#content) attribute set to `drawable`, using the [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API). Reflects the value of the HTML [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) attribute.
 
-### `OffscreenCanvas`
-
-- {{domxref("OffscreenCanvas.updateElementGeometry()")}}
-  - : Supplies a {{domxref("DOMMatrix")}} that updates the size, shape, and position of a `drawable` element (or {{domxref("ElementImage")}})'s underlying DOM presence, once it has been transferred to an offscreen canvas.
-- {{domxref("OffscreenCanvas.clearElementGeometry()")}}
-  - : Clears any previous `DOMMatrix` applied to a `drawable` element (or {{domxref("ElementImage")}})'s underlying DOM presence, once it has been transferred to an offscreen canvas.
-- {{domxref("OffscreenCanvas.getElementImageDefaultSize()")}}
-  - : Returns an object containing the default size, in canvas units, of an element (or {{domxref("ElementImage")}}), once it has been drawn to an offscreen canvas.
-
 ### 2D canvas context
 
 - {{domxref("CanvasRenderingContext2D.drawElementImage()")}}
   - : Draws a `drawable` element's state recorded during the current rendering update (or an {{domxref("ElementImage")}}) to a 2D canvas context.
-- {{domxref("OffscreenCanvasRenderingContext2D.drawElementImage()")}}
-  - : Draws a `drawable` element's state recorded during the current rendering update (or an {{domxref("ElementImage")}}) to an offscreen 2D canvas context.
 
 ### WebGL context
 
@@ -150,6 +140,17 @@ canvas.addEventListener("paint", () => {
 
 - {{domxref("GPUQueue.drawElementImageToTexture()")}}
   - : Draws a `drawable` element's state recorded during the current rendering update (or an {{domxref("ElementImage")}}) into a texture that can be used in a WebGPU canvas context.
+
+### `OffscreenCanvas`
+
+- {{domxref("OffscreenCanvas.updateElementGeometry()")}}
+  - : Supplies a {{domxref("DOMMatrix")}} that updates the size, shape, and position of an {{domxref("ElementImage")}}'s underlying DOM presence. Run on element images that have been transferred to an offscreen canvas.
+- {{domxref("OffscreenCanvas.clearElementGeometry()")}}
+  - : Clears any previous `DOMMatrix` applied to an {{domxref("ElementImage")}}'s underlying DOM presence. Run on element images that have been transferred to an offscreen canvas.
+- {{domxref("OffscreenCanvas.getElementImageDefaultSize()")}}
+  - : Returns an object containing the default size, in canvas units, of an {{domxref("ElementImage")}}. Run on element images that have been transferred to an offscreen canvas.
+- {{domxref("OffscreenCanvasRenderingContext2D.drawElementImage()")}}
+  - : Draws an {{domxref("ElementImage")}} captured during the current rendering update to an offscreen 2D canvas context.
 
 ## Markup additions
 
