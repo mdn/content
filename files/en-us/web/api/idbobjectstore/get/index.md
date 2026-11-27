@@ -51,12 +51,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 
 ## Examples
 
-In the following code snippet, we open a read/write transaction on our database and get
-one specific record from object store using `get()` — a sample record with
-the key "Walk dog". Once this data object is retrieved, you could then update it using
-normal JavaScript, then put it back into the database using a
-{{domxref("IDBObjectStore.put", "put()")}} operation. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app
-([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+In the following code snippet, we open a read/write transaction on our database and get one specific record from object store using `get()` — a sample record with the key "Walk dog". Once this data object is retrieved, you could then update it using normal JavaScript, then put it back into the database using a {{domxref("IDBObjectStore.put", "put()")}} operation. For a complete working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // Let us open our database
@@ -121,4 +116,3 @@ function getData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

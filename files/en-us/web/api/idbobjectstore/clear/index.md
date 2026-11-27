@@ -45,10 +45,7 @@ If the operation is successful, the value of the request's {{domxref("IDBRequest
 
 ## Examples
 
-In the following code snippet, we open a read/write transaction on our database and
-clear all the current data out of the object store using `clear()`. For a
-full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app
-([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+In the following code snippet, we open a read/write transaction on our database and clear all the current data out of the object store using `clear()`. For a complete working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // Let us open our database
@@ -111,4 +108,3 @@ function clearData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
