@@ -109,6 +109,17 @@ CSS can fetch resources referenced from stylesheets. These resources follow a re
 - External CSS stylesheets use the default policy (`strict-origin-when-cross-origin`), unless it's overwritten by a `Referrer-Policy` HTTP header on the CSS stylesheet's response.
 - For {{HTMLElement("style")}} elements or [`style` attributes](/en-US/docs/Web/API/HTMLElement/style), the owner document's referrer policy is used.
 
+## Integration with SVG
+
+You can also set referrer policies inside SVG.
+You can specify the {{SVGAttr("referrerpolicy")}} attribute on {{SVGElement("a")}}, {{SVGElement("image")}}, {{SVGElement("script")}}, or {{SVGElement("feImage")}} {{non-standard_inline}} elements to set referrer policies for individual requests:
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg">
+  <image href="https://example.com/logo.png" referrerpolicy="no-referrer" />
+</svg>
+```
+
 ## Examples
 
 ### `no-referrer`
