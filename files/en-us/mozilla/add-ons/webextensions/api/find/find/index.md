@@ -69,6 +69,8 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
       - : The ordinal position of the start of the match within its text node.
     - `startTextNodePos`
       - : The ordinal position of the text node in which the match started.
+    - `text`
+      - : The complete text of the match, "You may" in the example below.
 
 - `rectData` {{optional_inline}}
   - : `array`. If `includeRectData` was given in the `options` parameter, then this property will be included. It is an array of `RectData` objects. It contains client rectangles for all the text matched in the search, relative to the top-left of the viewport. Extensions can use this to provide custom highlighting of the results.
@@ -92,7 +94,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
         - `textList[1]` will contain "may", and `rectList[1]` will contain _its_ bounding rectangle.
 
     - `text`
-      - : The complete text of the match, "You may" in the example above.
+      - : The complete text of the match, "You may" in the example below.
 
 ## Examples
 
