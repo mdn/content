@@ -10,6 +10,9 @@ browser-compat: api.Window.beforeinstallprompt_event
 
 The **`beforeinstallprompt`** event fires when the browser has detected that a website can be [installed as a Progressive Web App](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable).
 
+> [!NOTE]
+> You are advised to use the {{htmlelement("install")}} element or {{domxref("Navigator.install()")}} method to create an in-app install UI, instead of `beforeinstallprompt`. Both are most intuitive and easier to use. The `beforeinstallprompt` event should only be used as a fallback for non-supporting browsers. See [Trigger installation from your app UI](/en-US/docs/Web/Progressive_web_apps/How_to/Trigger_install_prompt) for more guidance.
+
 There's no guaranteed time this event is fired, but it usually happens on page load.
 
 The typical use for this event is when a web app wants to provide its own in-app UI inviting the user to install the app, rather than the generic one provided by the browser. This enables the app to provide more context about the app, explaining to the user why they might want to install it.
@@ -100,3 +103,5 @@ installButton.addEventListener("click", async () => {
 
 - {{domxref("BeforeInstallPromptEvent.prompt")}}
 - {{domxref("BeforeInstallPromptEvent")}}
+- {{domxref("Navigator.install()")}}
+- {{htmlelement("install")}} element

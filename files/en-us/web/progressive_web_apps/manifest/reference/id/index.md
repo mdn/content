@@ -39,7 +39,17 @@ The `id` manifest member serves as a unique identifier for your web app. It allo
 > [!NOTE]
 > While the `id` is processed like a URL, it does not point to a resource that can be accessed, so it is not required to be within the app's [scope](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/scope).
 
-The `id` can also be used by services that collect lists of web apps to uniquely identify applications.
+The `id` can also be used by services that collect lists of web apps to uniquely identify applications, and when installing apps as PWAs via the {{htmlelement("install")}} element or {{domxref("Navigator.install()")}} method.
+
+### Always include an `id`
+
+It is best practice to always include an `id` in your manifest:
+
+- The browser can find the ID in the manifest, therefore `manifestId` attributes are not required when installing your app via `<install>` or `install()`.
+- It keeps the app's identity stable if its `start_url` changes. If the manifest does not include an `id`, the browser uses the app's `start_url` as the `id`.
+
+> [!NOTE]
+> As a debugging aid, you can find an app's ID in your browser developer tools: Chrome/Edge and Firefox all expose an app's ID in _Application_ > _Manifest_.
 
 ### Usage notes
 

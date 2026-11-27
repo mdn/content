@@ -10,9 +10,7 @@ browser-compat: api.HTMLGeolocationElement.validationstatuschange_event
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-The **`validationstatuschange`** event of the {{domxref("HTMLGeolocationElement")}} interface is fired whenever the {{htmlelement("geolocation")}} element's {{domxref("HTMLGeolocationElement.isValid", "isValid")}} value changes.
-
-This occurs as a result of a [blocker](/en-US/docs/Web/HTML/Reference/Elements/geolocation#geolocation_blocking) being added to or removed from a `<geolocation>` element.
+The **`validationstatuschange`** event of the {{domxref("HTMLGeolocationElement")}} interface is fired whenever the {{htmlelement("geolocation")}} element's validation status changes. This change is reflected in a change to the {{domxref("HTMLGeolocationElement.invalidReason", "invalidReason")}} property and, if the element has become valid or invalid (see [invalidation and blocking](/en-US/docs/Web/HTML/Guides/Permission_elements#validation_and_blocking)), also in a change to the {{domxref("HTMLGeolocationElement.isValid", "isValid")}} property.
 
 ## Syntax
 

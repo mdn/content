@@ -10,11 +10,9 @@ browser-compat: api.HTMLGeolocationElement.isValid
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-The **`isValid`** read-only property of the {{domxref("HTMLGeolocationElement")}} interface returns a boolean value indicating whether the associated {{htmlelement("geolocation")}} element is valid or invalid (blocked).
+The **`isValid`** read-only property of the {{domxref("HTMLGeolocationElement")}} interface returns a boolean value indicating whether the associated {{htmlelement("geolocation")}} element is valid or invalid. When a `<geolocation>` element is invalid (see [invalidation and blocking](/en-US/docs/Web/HTML/Guides/Permission_elements#validation_and_blocking)), it is prevented from functioning.
 
-When a [blocker](/en-US/docs/Web/HTML/Reference/Elements/geolocation#geolocation_blocking) is active on a `<geolocation>` element, it is prevented from functioning (invalid), either temporarily or permanently, depending on the reason.
-
-You can return the reason why it is invalid via the {{domxref("HTMLGeolocationElement.invalidReason")}} property — see that page for a full list of possible reasons.
+You can return the reason why it is invalid via the {{domxref("HTMLGeolocationElement.invalidReason")}} property.
 
 ## Value
 
@@ -36,7 +34,7 @@ Defaults to `false`.
 ```js
 const geo = document.querySelector("geolocation");
 console.log(geo.isValid);
-// true, provided the `<geolocation>` element is not blocked in some way
+// true, provided the `<geolocation>` element is valid
 ```
 
 See the {{domxref("HTMLGeolocationElement.invalidReason")}} page for a more complete example involving `isValid`.
