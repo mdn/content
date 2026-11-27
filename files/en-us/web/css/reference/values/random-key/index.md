@@ -67,7 +67,7 @@ The `<random-key>` data type is used as a parameter in random functions to contr
 
 ### The `auto` keyword
 
-The `auto` value is the default and is applied if `<random-key>` is excluded in a function that accepts this data type as an optional parameter. Random cache names, and thus results, will vary across every `random()` instance in a multi-component value, across different properties, and across different elements. This is equivalent to specifying `element-scoped property-index-scoped`.
+The `auto` value is the default, which causes random cache names and results to vary across every `random()` instance in a multi-component value, across different properties, and across different elements. This is equivalent to specifying `element-scoped property-index-scoped`.
 
 When `<random-key>` is set to `auto`, or omitted (defaulting to `auto`), the user agent auto-generates a seed name, or _generated value sharing identifier_, following consistent rules based on property name and order. This can cause random base value sharing. Multiple random functions can end up with the same seed name and, therefore, the same random base value.
 
@@ -82,7 +82,7 @@ When `<random-key>` is set to `auto`, or omitted (defaulting to `auto`), the use
 }
 ```
 
-In this example, the `auto` keyword makes `.a`, `.b`, and `.c` independent rectangles, since each element gets independent values for each property, and the properties are independent of each other.
+In this example, the elements `.a`, `.b`, and `.c` each get independent values for each property, and the properties are independent of each other.
 
 {{EmbedLiveSample("Auto", "100%", 300)}}
 
@@ -109,7 +109,7 @@ The `element-scoped` keyword gives each element its own base value, per property
 }
 ```
 
-In this example, the `element-scoped` keyword makes `.a`, `.b`, and `.c` independent squares: each element gets the same `width` and `height` values, but they are independent for each element. The border will also be the same color as the text in each case, but the colors of one box are independent of the others.
+In this example, each of the elements`.a`, `.b`, and `.c` gets the same value for `width` and `height`, but they are different for each element. The border will also be the same color as the text in each case, but each box's colors are different.
 
 {{EmbedLiveSample("Element", "100%", 300)}}
 

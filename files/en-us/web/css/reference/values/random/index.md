@@ -64,7 +64,7 @@ The `random(seed, min, max, step)` function accepts two to four comma-separated 
   - : Controls which `random()` functions in the document will share a random base value, or _seed_, and which will get distinct values.
 
 - `<calc-sum>, <calc-sum>`
-  - : Specified as `<number>`, `<dimension>`, or `<percentage>` values, or calculations resolving to one of these types, defining the minimum and maximum values, respectively. Both values must be resolvable to the same [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types). If the maximum is less than the minimum, the function will return the first `<calc-sum>` value.
+  - : Defines the minimum and maximum values, respectively, specified as `<number>`, `<dimension>`, or `<percentage>` values, or calculations resolving to one of these types. Both values must be resolvable to the same [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types). If the maximum is less than the minimum, the function will return the first `<calc-sum>` value.
 
 - `<calc-sum>` {{optional_inline}}
   - : Specifies the step interval. If present and of the same data type as the minimum and maximum `<calc-sum>` values, it defines the return value to be the minimum value or at increments of the step value from the minimum value, up to the maximum value.
@@ -86,11 +86,11 @@ The random base value works like a [seed for randomness](/en-US/docs/Glossary/RN
 The optional first `<random-key>` parameter controls how the random base value is shared. It can be `auto`, a scope keyword (`element-scoped`, `property-scoped`, or `property-index-scoped`), a custom {{cssxref("dashed-ident")}}, `fixed <number>`, or a `<dashed-ident>` paired with a scope keyword.
 
 - `auto`
-  - : The `auto` value is the default and is what is applied if the `<random-key>` is excluded. This random function generates independent random values. The random cache name, and thus the result, varies across every `random()` instance in a multi-component value, across different properties, and across different elements. This is equivalent to specifying `element-scoped property-index-scoped`.
+  - : The default value. Causes the random function to generate independent random values. The random cache name, and thus the result, varies across every `random()` instance in a multi-component value, across different properties, and across different elements. This is equivalent to specifying `element-scoped property-index-scoped`.
 - `element-scoped`
   - : Adds an element-specific identifier to the random cache name, so if applied over multiple properties (e.g., `width` and `height`) both properties use the same value, but each element (e.g., `<div>`) gets a different random values.
 - `property-scoped`
-  - : Adds the property name to the random cache name, so if applied over multiple properties (e.g., `width` and `height`) both properties gets a different random value, but each element (e.g., `<div>`) uses the same random values.
+  - : Adds the property name to the random cache name, so if applied over multiple properties (e.g., `width` and `height`), both properties get a different random value, but each element (e.g., `<div>`) uses the same random values.
 - `property-index-scoped`
   - : Adds the property name and the index of the `random()` function among all random functions used in the same property value to the random cache name, so multiple instances in the same declaration each get different random values.
 - {{cssxref("dashed-ident")}}
