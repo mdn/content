@@ -152,6 +152,8 @@ The effect of this is that:
 - images must be either same-origin with the document, or loaded from `example.com`
 - all other resources must be same-origin with the document.
 
+Some source expressions enable reporting rather than allowing resources. For example, the `'report-sha256'`, `'report-sha384'`, and `'report-sha512'` keywords enable [hash reporting](#hash_reporting) for external scripts.
+
 In the next few sections we'll describe some of the ways you can use source expressions to control resource loads. Note that although we're describing them separately, these expressions can in general be combined: for example, a single fetch directive may include nonces as well as hostnames.
 
 #### Blocking resources
@@ -627,6 +629,55 @@ A typical object might look like this:
 
 You need to set up a server to receive reports with the given JSON format and content type.
 The server handling these requests can then store or process the incoming reports in a way that best suits your needs.
+
+### Hash reporting
+
+CSP can also help you maintain an inventory of the external scripts that a document loads. The `'report-sha256'`, `'report-sha384'`, and `'report-sha512'` keywords enable reports containing script URLs and hashes, even when the scripts do not violate the policy. This lets you monitor the scripts used by your site and detect changes to their contents.
+
+To enable hash reporting, add one of these keywords to the directive controlling external scripts: {{CSP("script-src-elem")}}, {{CSP("script-src")}} as its fallback, or {{CSP("default-src")}} as the fallback for both. The keywords select the hash algorithm to use. If you include more than one in the same directive, the browser uses only the strongest requested algorithm: SHA-512, then SHA-384, then SHA-256.
+
+Hash reporting is limited to requests with [script-like destinations](https://fetch.spec.whatwg.org/#request-destination-script-like). Adding a hash-reporting keyword to `default-src` does not generate reports for images, stylesheets, fonts, or other non-script resources.
+
+As with violation reporting, define an endpoint using {{HTTPHeader("Reporting-Endpoints")}} and select it using the {{CSP("report-to")}} directive. For example:
+
+```http
+Reporting-Endpoints: hashes-endpoint="https://example.com/reports"
+Content-Security-Policy: script-src 'self' 'report-sha256'; report-to hashes-endpoint
+```
+
+This policy allows same-origin scripts and enables SHA-256 hash reporting for external scripts. The reporting keyword does not itself allow scripts to load or execute. Scripts do not need an [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attribute for hash reporting to work.
+
+If a document at `https://example.com/` loads a script at `https://example.com/main.js`, the browser queues a report with a type of `"csp-hash"`. It sends reports to `https://example.com/reports` in an HTTP {{HTTPMethod("POST")}} request with a {{HTTPHeader("Content-Type")}} of `application/reports+json`. The request body is a JSON array and can contain multiple reports, for example:
+
+```json
+[
+  {
+    "age": 12,
+    "type": "csp-hash",
+    "url": "https://example.com/",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
+    "body": {
+      "subresourceURL": "https://example.com/main.js",
+      "hash": "sha256-1XF/E08XndkoxwN6eIa5J89hYn3OVZ/UyB8BrU5jgzk=",
+      "type": "subresource",
+      "destination": "script"
+    }
+  }
+]
+```
+
+The report's `url` identifies the document that loaded the script. Its `body` contains:
+
+- `subresourceURL`: The script's URL.
+- `hash`: The algorithm identifier followed by `-` and the Base64-encoded hash of the script contents.
+- `type`: `"subresource"` for an external resource.
+- `destination`: The request's [destination](/en-US/docs/Web/API/Request/destination), which is `"script"` in this example.
+
+The hash is included for same-origin scripts and cross-origin scripts fetched with [CORS](/en-US/docs/Web/HTTP/Guides/CORS). For a cross-origin script loaded without CORS, a report is still generated, but `hash` is an empty string. To receive hashes for cross-origin scripts, use the script element's [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/script#crossorigin) attribute and configure the script server to allow the CORS request.
+
+Inline scripts and event handlers do not generate hash reports. Hash reports are not available through {{domxref("ReportingObserver")}}, and cannot be sent using {{CSP("report-uri")}}.
+
+You can also use these keywords in a {{HTTPHeader("Content-Security-Policy-Report-Only")}} policy to collect a script inventory without enforcing the policy.
 
 ## See also
 
