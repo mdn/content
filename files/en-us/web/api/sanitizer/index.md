@@ -7,7 +7,7 @@ browser-compat: api.Sanitizer
 
 {{APIRef("HTML Sanitizer API")}}
 
-The **`Sanitizer`** interface of the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) defines a configuration object that specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into an {{domxref("Element")}} or {{domxref("ShadowRoot")}}, or when parsing an HTML string into a {{domxref("Document")}}.
+The **`Sanitizer`** interface of the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) defines a configuration object that specifies what elements, attributes, comments, and processing instructions are allowed or should be removed when inserting strings of HTML into an {{domxref("Element")}} or {{domxref("ShadowRoot")}}, or when parsing an HTML string into a {{domxref("Document")}}.
 
 ## Constructors
 
@@ -37,7 +37,7 @@ The **`Sanitizer`** interface of the [HTML Sanitizer API](/en-US/docs/Web/API/HT
 
 ## Description
 
-A `Sanitizer` is a reusable configuration object that specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into an {{domxref("Element")}} or {{domxref("ShadowRoot")}}, or when parsing an HTML string into a {{domxref("Document")}}.
+A `Sanitizer` is a reusable configuration object that specifies what elements, attributes, comments, and processing instructions are allowed or should be removed when inserting strings of HTML into an {{domxref("Element")}} or {{domxref("ShadowRoot")}}, or when parsing an HTML string into a {{domxref("Document")}}.
 It can be used with the following [sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods):
 
 - Safe methods: {{domxref("Element.setHTML()")}}, {{domxref("ShadowRoot.setHTML()")}}, and [`Document.parseHTML()`](/en-US/docs/Web/API/Document/parseHTML_static).

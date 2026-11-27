@@ -30,7 +30,7 @@ The other XSS-safe methods, for example {{domxref('ShadowRoot.setHTML()')}} and 
 
 ## Using a sanitizer configuration
 
-All of the sanitization methods can be passed a {{domxref('Sanitizer')}} or {{domxref('SanitizerConfig')}}, which defines what elements, attributes and comments are either allowed, or should be removed, when inserting strings of HTML.
+All of the sanitization methods can be passed a {{domxref('Sanitizer')}} or {{domxref('SanitizerConfig')}}, which defines what elements, attributes, comments, and processing instructions are either allowed, or should be removed, when inserting strings of HTML.
 
 The {{domxref('Sanitizer')}} is essentially a wrapper around a {{domxref('SanitizerConfig')}}, performing some optimizations and normalizations that make it easier and safer to use, share and modify,
 

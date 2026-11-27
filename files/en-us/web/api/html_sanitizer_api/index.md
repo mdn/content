@@ -7,7 +7,7 @@ browser-compat: api.Sanitizer
 
 {{DefaultAPISidebar("HTML Sanitizer API")}}
 
-The **HTML Sanitizer API** allows developers to take strings of HTML and filter out unwanted elements, attributes, and other HTML entities when they are inserted into the DOM or a shadow DOM.
+The **HTML Sanitizer API** allows developers to take strings of HTML and filter out unwanted elements, attributes, comments, and processing instructions they are inserted into the DOM or a shadow DOM.
 
 ## Concepts and usage
 
@@ -17,18 +17,18 @@ Injecting untrusted HTML can make a site vulnerable to various [types of attacks
 In particular, [cross-site scripting (XSS) attacks](/en-US/docs/Web/Security/Attacks/XSS) work by injecting untrusted HTML into the DOM that then executes JavaScript in the context of the current origin — allowing malicious code to run as though it was served from the site's origin.
 These attacks can be mitigated by removing unsafe HTML elements and attributes before they are injected into the DOM.
 
-The HTML Sanitizer API provides a number of methods for removing unwanted HTML entities from HTML input before it is injected into the DOM.
-These come in XSS-safe versions (for example, {{domxref("Element.setHTML()")}}) that enforce removal of all unsafe elements and attributes, and potentially unsafe versions (for example, {{domxref("Element.setHTMLUnsafe()")}}) that give developers full control over the HTML entities that are allowed.
+The HTML Sanitizer API provides a number of methods for removing unwanted HTML elements or attributes from HTML input before it is injected into the DOM.
+These come in XSS-safe versions (for example, {{domxref("Element.setHTML()")}}) that enforce removal of all unsafe elements and attributes, and potentially unsafe versions (for example, {{domxref("Element.setHTMLUnsafe()")}}) that give developers full control over the HTML elements or attributes that are allowed.
 
 ### Sanitization methods
 
 The HTML Sanitizer API provides XSS-safe and XSS-unsafe methods for injecting HTML strings into an {{domxref('Element')}}, a {{domxref('ShadowRoot')}} or {{domxref('CharacterData')}}, and for parsing HTML into a {{domxref('Document')}}.
 
-All the methods take the HTML to be injected and an optional {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} as arguments. The sanitizer object defines the HTML entities that will be filtered out of the input before it is injected.
+All the methods take the HTML to be injected and an optional {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} as arguments. The sanitizer object defines the HTML elements, attributes, comments, and processing instructions that will be filtered out of the input before it is injected.
 
-The methods are context aware, and will additionally drop any elements that the HTML specification does not allow in the target element.
+The methods use context-aware HTML parsing, which may discard or rearrange elements depending on the parsing context (for example, a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}).
 
-Even after sanitizing HTML input with with these methods, it is still not safe to serialize the HTML and re-parse it using methods like `innerHTML`. See the [Re-parsing and mutated XSS (mXSS)](#re-parsing_and_mutated_xss_mxss) section later in this document.
+Even after sanitizing HTML input with these methods, it is still not safe to serialize the HTML and re-parse it using methods like `innerHTML`. See the [Re-parsing and mutated XSS (mXSS)](#re-parsing_and_mutated_xss_mxss) section later in this document.
 
 #### Safe methods
 
@@ -42,7 +42,7 @@ The HTML Sanitizer API defines the following _safe methods_:
 - {{domxref('Element.beforeHTML()')}} and {{domxref('CharacterData.beforeHTML()')}}
 - {{domxref('Element.replaceWithHTML()')}} and {{domxref('CharacterData.replaceWithHTML()')}}
 
-The safe methods always remove XSS-unsafe elements and attributes by applying the [XSS-safe baseline configuration](#xss-safe_baseline_configuration) which removes XSS-unsafe elements and attributes.
+The safe methods always remove XSS-unsafe elements and attributes by applying the [XSS-safe baseline configuration](#xss-safe_baseline_configuration).
 
 If no sanitizer is passed as a parameter they will use the [default sanitizer configuration](#default_sanitizer_configuration), which, on top of the XSS-safe baseline configuration, removes other elements and attributes that might be used in other kinds of attacks if provided as user input.
 
@@ -52,7 +52,7 @@ The safe methods should be used instead of {{domxref("Element.innerHTML")}}, {{d
 
 The same methods can also be used for injecting trusted HTML strings that do not need to contain any XSS-unsafe elements.
 
-Note that since these methods sanitize input strings of XSS-unsafe entities, it is not secured or validated using the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
+Note that since these methods sanitize input strings of XSS-unsafe elements and attributes, they are not secured or validated using the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
 
 #### Unsafe methods
 
@@ -86,13 +86,13 @@ If for any reason you can't use `TrustedHTML` (or even better, one of the safe m
 
 The unsafe methods should almost never be used if the equivalent safe method is available, because there are very few (if any) cases where user-provided HTML input should need to include XSS-unsafe elements. Not only are the safe methods safe (as per their name!), but they avoid having to consider trusted types.
 
-Using the unsafe methods might be appropriate if you have an edge case where you have to allow HTML input that includes a known set of unsafe HTML entities.
+Using the unsafe methods might be appropriate if you have an edge case where you have to allow HTML input that includes a known set of unsafe HTML elements or attributes.
 
-You can't use `setHTML()` in this case, because it strips all unsafe entities. You could use `setHTMLUnsafe()` without a sanitizer or `innerHTML`, but that would allow all unsafe entities.
+You can't use `setHTML()` in this case, because it strips all unsafe elements and attributes. You could use `setHTMLUnsafe()` without a sanitizer or `innerHTML`, but that would allow all unsafe elements and attributes.
 
 A better option here is to call `setHTMLUnsafe()` with a sanitizer that allows just those dangerous elements and attributes we actually need. While this is still unsafe, it is safer than allowing all of them. The best way of doing this is to use the [default sanitizer configuration](#default_sanitizer_configuration) with a modification to allow the dangerous elements and attributes.
 
-Consider a situation where your code relies on being able to use unsafe `onclick` handlers.
+Consider a situation where your code relies on being able to use unsafe `onclick` and `onerror` handlers (which should only be used from trusted sources).
 The following code shows the effect of the different methods and sanitizers for this case.
 
 ```js
@@ -100,20 +100,20 @@ const target = document.querySelector("#target");
 
 const input = "<img src=x onclick=alert('onclick') onerror=alert('onerror')>";
 
-// Safe - removes all XSS-unsafe entities (including the `onclick` handler).
+// Safe - removes all XSS-unsafe elements and attributes (including the `onclick` and `onerror` handlers).
 target.setHTML(input);
 
 // Removes no event handler attributes so provides no protection.
 target.setHTMLUnsafe(input);
 target.innerHTML = input;
 
-// Safe - removes all XSS-unsafe entities (including the `onclick` handler).
+// Safe - removes all XSS-unsafe elements and attributes (including the `onclick` and `onerror` handlers).
 const configSafe = new Sanitizer();
 target.setHTMLUnsafe(input, { sanitizer: configSafe });
 
-// Removes all XSS-unsafe entities except `onclick`
+// Removes all XSS-unsafe elements and attributes except `onclick` and `onerror`
 const configLessSafe = new Sanitizer();
-configLessSafe.allowAttribute("onclick");
+configLessSafe.allowAttribute("onclick", "onerror");
 target.setHTMLUnsafe(input, { sanitizer: configLessSafe });
 ```
 
@@ -145,7 +145,7 @@ The simple rule to avoid this problem is to only ever inject HTML strings using 
 
 ### Sanitizer configurations
 
-A sanitizer configuration defines what HTML entities will be allowed, replaced, or removed when the sanitizer is used, including elements, attributes, `data-*` attributes, [processing instructions](/en-US/docs/Web/API/ProcessingInstruction) and comments.
+A sanitizer configuration defines what HTML will be allowed, replaced, or removed when the sanitizer is used, including elements, attributes, `data-*` attributes, [processing instructions](/en-US/docs/Web/API/ProcessingInstruction) and comments.
 
 There are two mechanisms for defining a sanitizer configuration, either of which can be passed to all the sanitization methods:
 
@@ -198,7 +198,7 @@ If you specify an empty configuration object then an empty allow configuration i
 
 With "allow configurations" you specify the elements and attributes you wish to _allow_ (or replace with child elements) — all other elements/attributes in the input will be dropped.
 This makes it easy to understand what elements will be allowed in the DOM when the HTML is parsed.
-They are useful when you know exactly what HTML entities you want to be able to inject in a particular context.
+They are useful when you know exactly what HTML elements and attributes you want to be able to inject in a particular context.
 
 Allow configurations are created by defining a `Sanitizer` that wraps a {{domxref("SanitizerConfig")}} that includes the [`elements`](/en-US/docs/Web/API/SanitizerConfig#elements) and/or [`attributes`](/en-US/docs/Web/API/SanitizerConfig#attributes) arrays (and not the `removeElements` or `removeAttributes` arrays).
 
@@ -322,7 +322,7 @@ The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) provides mechanis
 This transformation function is most commonly used to sanitize the input but it doesn't have to: the purpose of the API is primarily to make it easy for developers to audit sanitization code, not to define how or if sanitization is done.
 
 The safe HTML sanitization methods don't use trusted types.
-Because they always filter all XSS-unsafe entities before input HTML is injected, there is no need to sanitize the input string, or audit the methods.
+Because they always filter all XSS-unsafe elements and attributes before input HTML is injected, there is no need to sanitize the input string, or audit the methods.
 
 However the unsafe HTML sanitization methods may inject untrusted HTML, depending on the sanitizer, and so will work with trusted types.
 The methods can take either a string or a `TrustedType` as input.
@@ -368,7 +368,7 @@ console.log(target.innerHTML); // abc def
 
 The `{{htmlelement("script")}}` element is not allowed by the default sanitizer, or by the `setHTML()` method, so the `alert()` is removed.
 
-Note that using `Element.setHTMLUnsafe()` with the default sanitizer will sanitize the same HTML entities.
+Note that using `Element.setHTMLUnsafe()` with the default sanitizer will sanitize the same HTML elements, attributes, comments and processing instructions.
 The main difference is that if you use this method with Trusted Types it may still be audited:
 
 ```js

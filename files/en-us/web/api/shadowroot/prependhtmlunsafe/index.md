@@ -66,7 +66,7 @@ The **`prependHTMLUnsafe()`** method is used to parse an HTML input into a {{dom
 
 It will always discard elements that the HTML specification doesn't allow in the target element (for example, a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}).
 
-Like all [_unsafe_ HTML setters](/en-US/docs/Web/API/HTML_Sanitizer_API#unsafe_methods), it will not remove items from its input, unless it is passed a sanitizer that removes them. However, it does not run scripts by default unless `runScripts: true` is provided as an option.
+Like all [_unsafe_ HTML setters](/en-US/docs/Web/API/HTML_Sanitizer_API#unsafe_methods), it will not remove additional items from its input, unless it is passed a sanitizer that removes them. However, it does not run scripts by default unless `runScripts: true` is provided as an option.
 
 Unlike with {{domxref("ShadowRoot.innerHTML")}}, [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in the input will be parsed into the DOM.
 If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as `<template>` elements within that shadow root.
@@ -152,7 +152,7 @@ target.prependHTMLUnsafe(untrustedString, {
 This example demonstrates the case when we allow scripts to run using the `runScripts` option. This should be used with care.
 
 ```js
-// The potentially malicious string
+// HTML from a trusted source
 const htmlString = "<script src='example.js'></script><p>Other content</p>";
 
 // Get the target Element with id "target"

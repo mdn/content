@@ -284,7 +284,7 @@ With this approach you can create safe HTML, but you aren't forced to.
 This example demonstrates the case when we allow scripts to run using the `runScripts` option. This should be used with care.
 
 ```js
-// The potentially malicious string
+// HTML from a trusted source
 const htmlString = "<script src='example.js'></script><p>Other content</p>";
 
 // Get the shadow root element
