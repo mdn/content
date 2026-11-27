@@ -3,15 +3,11 @@ title: "Permissions-Policy: clipboard-write directive"
 short-title: clipboard-write
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/clipboard-write
 page-type: http-permissions-policy-directive
-status:
-  - non-standard
 browser-compat: http.headers.Permissions-Policy.clipboard-write
 sidebar: http
 ---
 
-{{non-standard_header}}
-
-The HTTP {{HTTPHeader('Permissions-Policy')}} header `clipboard-write` directive controls whether the current document is allowed to write data to the system clipboard using the {{domxref("Clipboard.write", "write()")}} and {{domxref("Clipboard.writeText", "writeText()")}} methods of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API), without further user permission.
+The HTTP {{HTTPHeader('Permissions-Policy')}} header `clipboard-write` directive controls whether the current document is allowed to write data to the system clipboard using the {{domxref("Clipboard.write", "write()")}} and {{domxref("Clipboard.writeText", "writeText()")}} methods of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API).
 
 Specifically, where a defined policy blocks usage of this feature, `write()` and `writeText()` calls will reject with a `NotAllowedError` {{domxref("DOMException")}}.
 
@@ -40,7 +36,7 @@ It can do so by delivering the following HTTP response header to define a Permis
 Permissions-Policy: clipboard-write=(self "https://example.com")
 ```
 
-This enables `clipboard-write` in the top-level document, and also by default in same-origin iframes (because if the `allow` attribute is not specified on and `<iframe>` the default allowlist of `self` controls delegation).
+This enables `clipboard-write` in the top-level document, and also by default in same-origin iframes (because if the `allow` attribute is not specified on an `<iframe>` the default allowlist of `self` controls delegation).
 The header also allows delegation to `https://example.com`, but that origin needs to be granted the feature explicitly, because it isn't present in default allowlist.
 
 SecureCorp Inc. must therefore include an {{HTMLElement('iframe','allow','#Attributes')}} attribute for that origin on each `<iframe>` element where `clipboard-write` is to be allowed:
@@ -56,10 +52,7 @@ SecureCorp Inc. must therefore include an {{HTMLElement('iframe','allow','#Attri
 ### Using the default policy
 
 If no `Permissions-Policy` header sets an allowlist for `clipboard-write`, the default allowlist `self` applies.
-This enables the feature in the top-level document and in same-origin iframes, but not in cross-origin iframes.
-Because no header restricts delegation, an `allow` attribute can enable the feature in any cross-origin iframe.
-
-To allow `clipboard-write` in a cross-origin iframe, include it in the iframe's {{HTMLElement('iframe','allow','#Attributes')}} attribute on the `<iframe>` element:
+This enables the feature in the top-level document and in same-origin iframes. The feature can also be used in cross-origin iframes if they have the `allow` set:
 
 ```html
 <iframe src="https://other.com/share-widget" allow="clipboard-write"></iframe>
