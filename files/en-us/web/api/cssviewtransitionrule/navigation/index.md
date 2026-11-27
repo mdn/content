@@ -6,13 +6,14 @@ page-type: web-api-instance-property
 browser-compat: api.CSSViewTransitionRule.navigation
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("View Transition API")}}
 
 The **`navigation`** read-only property of the {{domxref("CSSViewTransitionRule")}} interface returns the associated {{cssxref("@view-transition")}} at-rule's `navigation` descriptor value.
 
 ## Value
 
 A string.
+This can have the values: [`"auto"`](/en-US/docs/Web/CSS/Reference/At-rules/@view-transition#auto) or [`"none"`](/en-US/docs/Web/CSS/Reference/At-rules/@view-transition#none).
 
 If no `navigation` descriptor is set on the `@view-transition` at-rule, the `navigation` property is equal to an empty string.
 
