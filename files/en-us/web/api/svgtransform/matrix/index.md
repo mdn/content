@@ -26,6 +26,9 @@ In case the `matrix` object is changed directly (i.e., without using the methods
 
 A live {{domxref("DOMMatrix")}} object.
 
+> [!NOTE]
+> Browsers currently return an `SVGMatrix` object defined in SVG 1.1, which has the same `a`, `b`, `c`, `d`, `e`, and `f` properties, but isn't a `DOMMatrix` instance. It only has some of the `DOMMatrix` methods, such as `multiply()`, `inverse()`, and `translate()`, and doesn't have members such as `m11` or `multiplySelf()`.
+
 ## Examples
 
 ### Accessing and Modifying the Matrix
