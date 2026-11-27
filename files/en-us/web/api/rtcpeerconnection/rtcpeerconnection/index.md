@@ -45,13 +45,24 @@ new RTCPeerConnection(configuration)
       - : An {{jsxref("Array")}} of objects of type {{domxref("RTCCertificate")}} which are used by the connection for authentication. If this property isn't specified, a set of certificates is generated automatically for each {{domxref("RTCPeerConnection")}} instance. Although only one certificate is used by a given connection, providing certificates for multiple algorithms may improve the odds of successfully connecting in some circumstances. See [Using certificates](#using_certificates) for further information.
 
         > [!NOTE]
-        > This configuration option cannot be changed after it is first specified; once the certificates have been set, this property is ignored in future calls to {{domxref("RTCPeerConnection.setConfiguration()")}}.
+        > This option can't be changed after the connection is created.
+        > If a later call to {{domxref("RTCPeerConnection.setConfiguration()")}} passes different certificates or leaves out certificates that were passed to the constructor, it throws an `InvalidModificationError`.
 
     - `iceCandidatePoolSize` {{optional_inline}}
-      - : An unsigned 16-bit integer value which specifies the size of the prefetched ICE candidate pool. The default value is 0 (meaning no candidate prefetching will occur). You may find in some cases that connections can be established more quickly by allowing the ICE agent to start fetching ICE candidates before you start trying to connect, so that they're already available for inspection when {{domxref("RTCPeerConnection.setLocalDescription()")}} is called.
+      - : An integer from 0 to 255 that specifies how many sets of ICE candidates to gather in advance, before {{domxref("RTCPeerConnection.setLocalDescription()")}} is called.
+        The default value is `0`, which means no candidates are gathered in advance.
+
+        Normally, the ICE agent starts gathering candidates when the local description is set, because that's when it first knows how many sets it needs.
+        It needs one set for each ICE component, which is a separate network flow that the connection uses.
+        Gathering candidates in advance means that at least some of them are ready as soon as `setLocalDescription()` is called, so the connection can be set up faster.
+        For example, an app that expects an incoming call can gather candidates while it waits, and then respond as soon as the call arrives.
+        Candidates gathered in advance are used only for the first offer/answer exchange, and any left over are then discarded.
+
+        If the value is changed with {{domxref("RTCPeerConnection.setConfiguration()")}} before `setLocalDescription()` is called, candidates are gathered or discarded straight away to match the new size.
+        Once `setLocalDescription()` has been called, the value can't be changed.
 
         > [!NOTE]
-        > Changing the size of the ICE candidate pool may trigger the beginning of ICE gathering.
+        > Candidates gathered in advance use resources on the STUN and TURN servers for as long as they are held.
 
     - `iceServers` {{optional_inline}}
       - : An array of objects, each describing one server which may be used by the ICE agent; these are typically STUN and/or TURN servers. If this isn't specified, the connection attempt will be made with no STUN or TURN server available, which limits the connection to local peers. Each object may have the following properties:
@@ -86,11 +97,27 @@ new RTCPeerConnection(configuration)
 
 A newly-created {{domxref("RTCPeerConnection")}} object, configured as described by `configuration`, if specified; otherwise, configured to appropriate basic defaults.
 
-## Using certificates
+### Exceptions
+
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Thrown if a certificate in `configuration.certificates` has expired or was created by a page with a different origin.
+    Also thrown if an entry in `configuration.iceServers` has a {{Glossary("TURN")}} URL but no `username` or `credential`.
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if one of the URLs in `configuration.iceServers` uses a STUN or TURN scheme (such as `turns:`) that the browser doesn't support.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if an entry in `configuration.iceServers` has an empty `urls` array or if one of its URLs isn't a valid STUN or TURN URL.
+- {{jsxref("TypeError")}}
+  - : Thrown if `configuration.iceCandidatePoolSize` isn't a finite number in the range 0 to 255.
+    Also thrown if `configuration.bundlePolicy`, `configuration.iceTransportPolicy`, or `configuration.rtcpMuxPolicy` isn't one of the allowed values, or if an entry in `configuration.iceServers` has no `urls` property.
+
+## Description
+
+### Using certificates
 
 When you wish to provide your own certificates for use by an {{domxref("RTCPeerConnection")}} instead of having the `RTCPeerConnection` generate them automatically, you do so by calling the static {{domxref("RTCPeerConnection.generateCertificate_static", "RTCPeerConnection.generateCertificate()")}} function.
 
-The `certificates` property's value cannot be changed once it's first specified. If it's included in the configuration passed into a call to a connection's {{domxref("RTCPeerConnection.setConfiguration", "setConfiguration()")}}, it is ignored.
+The `certificates` option can't be changed after the connection is created.
+If a later call to {{domxref("RTCPeerConnection.setConfiguration", "setConfiguration()")}} passes different certificates, it throws an `InvalidModificationError`.
 
 This attribute supports providing multiple certificates because even though a given DTLS connection uses only one certificate, providing multiple certificates allows support for multiple encryption algorithms. The implementation of `RTCPeerConnection` will choose which certificate to use based on the algorithms it and the remote peer support, as determined during DTLS handshake.
 
