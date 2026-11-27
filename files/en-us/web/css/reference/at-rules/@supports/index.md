@@ -80,7 +80,7 @@ The functions supported in the function syntax are described in the following se
 
 #### `at-rule()`
 
-This function checks if a browser supports the specified [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
+The `at-rule()` function checks whether a browser supports the specified [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 The following example returns true and applies the contained CSS styles if the browser supports the {{cssxref("@keyframes")}} at-rule:
 
 ```css
@@ -88,19 +88,31 @@ The following example returns true and applies the contained CSS styles if the b
 }
 ```
 
-#### `selector()`
+#### `font-format()`
 
-This function evaluates if a browser supports the specified selector syntax.
-The following example returns true and applies the contained CSS styles if the browser supports the [child combinator](/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator):
+The `font-format()` function checks whether a browser supports the specified font format for layout and rendering.
+For example, the following returns true and applies the contained CSS styles if the browser supports the `opentype` font format:
 
 ```css
-@supports selector(h2 > p) {
+@supports font-format(opentype) {
 }
 ```
 
+The following table describes the available formats (`<font-format>` values) that can be queried with this function:
+
+| Format              | Description                     | File extensions |
+| :------------------ | :------------------------------ | :-------------- |
+| `collection`        | OpenType Collection             | `.otc`, `.ttc`  |
+| `embedded-opentype` | Embedded OpenType               | `.eot`          |
+| `opentype`          | OpenType                        | `.ttf`, `.otf`  |
+| `svg`               | SVG Font (deprecated)           | `.svg`, `.svgz` |
+| `truetype`          | TrueType                        | `.ttf`          |
+| `woff`              | WOFF 1.0 (Web Open Font Format) | `.woff`         |
+| `woff2`             | WOFF 2.0 (Web Open Font Format) | `.woff2`        |
+
 #### `font-tech()`
 
-This function checks if a browser supports the specified font technology for layout and rendering.
+The `font-tech()` function checks whether a browser supports the specified font technology for layout and rendering.
 The following example returns true and applies the contained CSS styles if the browser supports the `COLRv1` font technology:
 
 ```css
@@ -129,44 +141,33 @@ The table below describes the font technologies (`<font-tech>`), including color
 | `variations`                   | Font variations in TrueType and OpenType fonts to control the font axis, weight, glyphs, etc. |
 | `palettes`                     | Font palettes by means of `font-palette` to select one of many color palettes in the font     |
 
-#### `font-format()`
-
-This function checks if a browser supports the specified font format for layout and rendering.
-The following example returns true and applies the contained CSS styles if the browser supports the `opentype` font format:
-
-```css
-@supports font-format(opentype) {
-}
-```
-
-The following table describes the available formats (`<font-format>` values) that can be queried with this function:
-
-| Format              | Description                     | File extensions |
-| :------------------ | :------------------------------ | :-------------- |
-| `collection`        | OpenType Collection             | `.otc`, `.ttc`  |
-| `embedded-opentype` | Embedded OpenType               | `.eot`          |
-| `opentype`          | OpenType                        | `.ttf`, `.otf`  |
-| `svg`               | SVG Font (deprecated)           | `.svg`, `.svgz` |
-| `truetype`          | TrueType                        | `.ttf`          |
-| `woff`              | WOFF 1.0 (Web Open Font Format) | `.woff`         |
-| `woff2`             | WOFF 2.0 (Web Open Font Format) | `.woff2`        |
-
 #### `named-feature()`
 
-This function takes one predefined keyword and evaluates if a browser supports the specified named feature. This is to allow for feature support that cannot be tested for using the other `@supports` functions.
+The `named-feature()` function checks whether a browser supports a specified feature that cannot be tested for using other `@supports` functions. The following example returns true and applies the contained CSS styles if the browser supports the [`anchor-position-follows-transforms`](#anchor-position-follows-transforms) feature:
 
 ```css
-@supports named-feature(anchor-position-follows-transform) {
+@supports named-feature(anchor-position-follows-transforms) {
 }
 ```
 
-> [!NOTE]
-> More features will be added rarely and only when there is real demand for feature testing something specific that would not be covered by more general testing methods.
+The following {{cssxref("ident")}} values can be specified as arguments for the `named-feature()` function:
 
 - `anchor-position-follows-transforms`
-  - : This `named-feature()` checks if the browser supports transform-aware [anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning).
+  - : Checks whether the browser's [anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) calculations are [transform](/en-US/docs/Web/CSS/Guides/Transforms)-aware. In other words, when an anchor element has transforms applied, do elements positioned relative to that anchor shift relative to the anchor's transformed size or position? Originally, anchor positioning did not account for transforms.
 - `single-axis-scroll-container`
-  - : This `named-feature()` checks if the browser supports the ability to have single-axis scroll containers, where one axis is either {{cssxref("overflow", "scroll", "#scroll")}}, or {{cssxref("overflow", "auto", "#auto")}}, or {{cssxref("overflow", "hidden", "#hidden")}} and the other is {{cssxref("overflow", "clip", "#clip")}}.
+  - : Checks whether the browser supports the ability to have single-axis scroll containers, where one axis is either {{cssxref("overflow", "scroll", "#scroll")}}, {{cssxref("overflow", "auto", "#auto")}}, or {{cssxref("overflow", "hidden", "#hidden")}} and the other is {{cssxref("overflow", "clip", "#clip")}}.
+
+Named features are added rarely and only when there is real demand for feature testing something specific that is not covered by other testing methods.
+
+#### `selector()`
+
+The `selector()` function checks whether a browser supports the specified selector syntax.
+The following example returns true and applies the contained CSS styles if the browser supports the [child combinator](/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator):
+
+```css
+@supports selector(h2 > p) {
+}
+```
 
 ### The not operator
 
@@ -394,6 +395,86 @@ The following example applies a set of scoped color scheme styles if the browser
   }
 }
 ```
+
+### Testing for the support of a named feature
+
+This example uses the `named-feature()` function with the [`anchor-position-follows-transforms`](#anchor-position-follows-transforms) feature to adjust [anchor-positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) when transforms are applied to anchor elements in browsers that don't automatically handle anchor-element transformations.
+
+#### HTML
+
+We include an anchor element and a positioned element. We include the [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute on the anchor to enable keyboard focus.
+
+```html live-sample___named-feature-usage
+<div class="anchor" tabindex="0">Anchor</div>
+
+<div class="positionedElem">Positioned</div>
+```
+
+#### CSS
+
+We store the size of our anchor element in a [CSS custom property](/en-US/docs/Web/CSS/Reference/Properties/--*), and use that to define the size of the first `<div>` element, which we designate as an anchor by giving it an {{cssxref("anchor-name")}}:
+
+```css live-sample___named-feature-usage
+:root {
+  --anchor-length: 100px;
+}
+
+.anchor {
+  anchor-name: --myAnchor;
+  width: var(--anchor-length);
+  height: var(--anchor-length);
+}
+```
+
+```css hidden live-sample___named-feature-usage
+.anchor,
+.positionedElem {
+  border: 1px solid gray;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+We position our second `<div>` relative to the anchor `<div>` by setting its {{cssxref("position")}} to `absolute`, setting its {{cssxref("position-anchor")}} equal to the anchor `<div>`'s `anchor-name` identifier, and setting its {{cssxref("left")}} and {{cssxref("top")}} properties to {{cssxref("anchor()")}} functions. The `anchor(right)` function positions the positioned element's left edge next to the anchor's right edge, while `top: anchor(top);` aligns the two elements' top edges. Finally, we set a {{cssxref("margin-left")}} of `20px` to create some horizontal space between the two elements:
+
+```css live-sample___named-feature-usage
+.positionedElem {
+  position: absolute;
+  position-anchor: --myAnchor;
+  left: anchor(right);
+  top: anchor(top);
+  margin-left: 20px;
+}
+```
+
+We set the anchor to {{cssxref("scale")}} by a factor of `1.5` when the anchor is hovered over or receives focus. We specify that the anchor should grow down and to the right by setting the {{cssxref("transform-origin")}} property to `top left`.
+
+```css live-sample___named-feature-usage
+.anchor:hover,
+.anchor:focus {
+  transform-origin: top left;
+  scale: 1.5;
+}
+```
+
+We use `@supports not named-feature(anchor-position-follows-transforms)` to detect browsers that don't automatically adjust anchor-positioned elements when their anchors are transformed. In such cases, we manually correct the positioned element's position by setting the `left` value to `anchor(right)` plus half the `--anchor-length` custom property value when the anchor element is hovered or focused:
+
+```css live-sample___named-feature-usage
+@supports not named-feature(anchor-position-follows-transforms) {
+  .anchor:hover + .positionedElem,
+  .anchor:focus + .positionedElem {
+    left: calc(anchor(right) + (var(--anchor-length) * 0.5));
+  }
+}
+```
+
+#### Result
+
+{{embedlivesample("named-feature-usage", "100%", 200)}}
+
+Hover over or give focus to the anchor element to transform it. The positioned element stays the same distance from the anchor's right edge, whether or not the browser supports transform-aware anchor positioning.
 
 ## Specifications
 
