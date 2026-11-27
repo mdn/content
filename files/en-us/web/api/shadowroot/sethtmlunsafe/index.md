@@ -142,7 +142,7 @@ const sanitizer1 = new Sanitizer({
 shadow.setHTMLUnsafe(untrustedString, { sanitizer: sanitizer1 });
 
 // Define custom SanitizerConfig within setHTMLUnsafe()
-// Removes the <script> element but allows other potentially unsafe entities.
+// Removes the <script> element but allows other potentially unsafe elements and attributes.
 shadow.setHTMLUnsafe(untrustedString, {
   sanitizer: { removeElements: ["script"] },
 });

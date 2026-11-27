@@ -69,7 +69,7 @@ The **`afterHTMLUnsafe()`** method is used to parse an HTML input into a {{domxr
 
 The method does nothing if the node has no parent.
 
-It will always discard elements that the HTML specification doesn't allow in the target element (for example, a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}).
+The method uses context-aware HTML parsing, which may discard or rearrange elements depending on the parsing context (for example, a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}).
 
 Like all [_unsafe_ HTML setters](/en-US/docs/Web/API/HTML_Sanitizer_API#unsafe_methods), it will not remove additional items from its input, unless it is passed a sanitizer that removes them. However, it does not run scripts by default unless `runScripts: true` is provided as an option.
 
@@ -146,7 +146,7 @@ const sanitizer1 = new Sanitizer({
 target.afterHTMLUnsafe(untrustedString, { sanitizer: sanitizer1 });
 
 // Define custom SanitizerConfig within afterHTMLUnsafe()
-// Removes the <script> element but allows other potentially unsafe entities.
+// Removes the <script> element but allows other potentially unsafe elements and attributes.
 target.afterHTMLUnsafe(untrustedString, {
   sanitizer: { removeElements: ["script"] },
 });

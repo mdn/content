@@ -64,7 +64,7 @@ None (`undefined`).
 
 The **`appendHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes. The `DocumentFragment` is then used to insert it into the DOM as the last child of the given shadow root.
 
-It will always discard elements that the HTML specification doesn't allow in the target element (for example, a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}).
+The method uses context-aware HTML parsing, which may discard or rearrange elements depending on the parsing context (for example, a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}).
 
 Like all [_unsafe_ HTML setters](/en-US/docs/Web/API/HTML_Sanitizer_API#unsafe_methods), it will not remove additional items from its input, unless it is passed a sanitizer that removes them. However, it does not run scripts by default unless `runScripts: true` is provided as an option.
 
@@ -141,7 +141,7 @@ const sanitizer1 = new Sanitizer({
 target.appendHTMLUnsafe(untrustedString, { sanitizer: sanitizer1 });
 
 // Define custom SanitizerConfig within appendHTMLUnsafe()
-// Removes the <script> element but allows other potentially unsafe entities.
+// Removes the <script> element but allows other potentially unsafe elements and attributes.
 target.appendHTMLUnsafe(untrustedString, {
   sanitizer: { removeElements: ["script"] },
 });

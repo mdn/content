@@ -7,7 +7,7 @@ browser-compat: api.Sanitizer
 
 {{DefaultAPISidebar("HTML Sanitizer API")}}
 
-The **HTML Sanitizer API** allows developers to take strings of HTML and filter out unwanted elements, attributes, comments, and processing instructions they are inserted into the DOM or a shadow DOM.
+The **HTML Sanitizer API** allows developers to take strings of HTML and filter out unwanted elements, attributes, comments, and processing instructions before they are inserted into the DOM or a shadow DOM.
 
 ## Concepts and usage
 
@@ -72,7 +72,7 @@ The unsafe methods will use whatever sanitizer configuration is passed as an arg
 
 The suffix "Unsafe" in the method names indicates that they do not enforce removal of all XSS-unsafe HTML elements and attributes (unlike the "safe" methods like {{domxref("Element.setHTML()")}}).
 
-While it can do so if used with an appropriate sanitizer, it doesn't have to use an effective sanitizer, or any sanitizer at all! The method is therefore a possible vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, where potentially unsafe strings provided by a user are injected into the DOM without first being sanitized.
+While the methods can do so if used with an appropriate sanitizer, they don't have to use an effective sanitizer, or any sanitizer at all! The methods are therefore a possible vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, where potentially unsafe strings provided by a user are injected into the DOM without first being sanitized.
 
 You should mitigate this risk by always passing {{domxref("TrustedHTML")}} objects instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
 This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup (such as {{htmlelement("script")}} elements and event handler attributes), before it is injected.
@@ -80,7 +80,7 @@ This ensures that the input is passed through a transformation function, which h
 Using `TrustedHTML` makes it possible to audit and check that sanitization code is effective in just a few places, rather than scattered across all your injection sinks.
 You should not have to pass a sanitizer to the method when using `TrustedHTML`.
 
-If for any reason you can't use `TrustedHTML` (or even better, one of the safe methods) then the next safest option is to use the unsafe options with the [default sanitizer configuration](#default_sanitizer_configuration), with limited overrides to allow the necessary elements and attributes preventing you from using the safe methods.
+If for any reason you can't use `TrustedHTML` (or even better, one of the safe methods) then the next safest option is to use the unsafe methods with the [default sanitizer configuration](#default_sanitizer_configuration), with limited overrides to allow the necessary elements and attributes preventing you from using the safe methods.
 
 ##### When should the unsafe methods be used?
 
@@ -113,7 +113,8 @@ target.setHTMLUnsafe(input, { sanitizer: configSafe });
 
 // Removes all XSS-unsafe elements and attributes except `onclick` and `onerror`
 const configLessSafe = new Sanitizer();
-configLessSafe.allowAttribute("onclick", "onerror");
+configLessSafe.allowAttribute("onclick");
+configLessSafe.allowAttribute("onerror");
 target.setHTMLUnsafe(input, { sanitizer: configLessSafe });
 ```
 
@@ -188,7 +189,7 @@ The following table shows the permitted combinations.
 | -                             | -                                 | ✔️     |
 
 An allow configuration can optionally specify whether per-element attributes should be allowed and/or removed in its `elements` array.
-The allowed configuration for these local attributes depends on whether or not global `attributes` or `removedAttributes` is defined.
+The allowed configuration for these local attributes depends on whether or not global `attributes` or `removeAttributes` is defined.
 The [valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration) section outlines the restrictions.
 
 In general an "allow configuration" is safer for both the elements and attributes, because you list the elements and/or attributes that you want and know are safe, rather than all the items that are dangerous or might potentially be considered dangerous in future.
@@ -234,7 +235,7 @@ In "remove configurations" you specify the HTML elements and attributes that you
 
 Remove configurations are created using a {{domxref("SanitizerConfig")}} that includes the [`removeElements`](/en-US/docs/Web/API/SanitizerConfig#removeelements) and/or [`removeAttributes`](/en-US/docs/Web/API/SanitizerConfig#removeattributes) arrays (and not the `elements` or `attributes` arrays).
 
-For example, the following `Sanitizer` configuration would remove the same elements that were allowed in the previous code:
+For example, the following `Sanitizer` configuration would remove the same elements and attributes that were allowed in the previous code:
 
 ```js
 const sanitizer = new Sanitizer({
@@ -303,9 +304,9 @@ You can also call {{domxref("Sanitizer/removeUnsafe","removeUnsafe()")}} on a {{
 
 The default sanitizer configuration is more restrictive than the XSS-safe baseline. It defines the sanitizer that is used if you call one of the [safe sanitization methods](#safe_methods) without passing a sanitizer object.
 
-It is also the configuration that is returned by the [`Sanitizer()` constructor](/en-US/docs/Web/API/Sanitizer/Sanitizer) when no configuration is set.
+It is also the configuration that is used by the [`Sanitizer()` constructor](/en-US/docs/Web/API/Sanitizer/Sanitizer) when no configuration is set.
 
-The default configuration is applied on top of the [XSS-safe baseline configuration](#xss-safe_baseline_configuration) and additionally removes the following items:
+The default configuration is more restrictive than the XSS-safe baseline configuration and additionally removes the following items:
 
 1. Elements that might be used in clickjacking, spoofing, or other attacks.
 2. Attributes that might be used in clickjacking, spoofing, or other attacks.
@@ -325,7 +326,7 @@ The safe HTML sanitization methods don't use trusted types.
 Because they always filter all XSS-unsafe elements and attributes before input HTML is injected, there is no need to sanitize the input string, or audit the methods.
 
 However the unsafe HTML sanitization methods may inject untrusted HTML, depending on the sanitizer, and so will work with trusted types.
-The methods can take either a string or a `TrustedType` as input.
+The methods can take either a string or a `TrustedHTML` as input.
 If a sanitizer is also supplied, the transformation function will be run first, and then the sanitizer.
 
 Note that the behavior of the transformation function in this case will depend on the website policy (which might be to reject all use of the unsafe methods).
