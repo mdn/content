@@ -23,7 +23,7 @@ Rules between flex items in multi-line flex containers don't span the entire con
 The `*-rule-break` properties enable splitting lines that span across multiple rows or columns into multiple segments. You can set the behavior for breaking rule lines at every intersection using the following properties:
 
 - {{cssxref("column-rule-break")}}: The keywords `none`, `normal`, or `intersection` specify whether the column rules break across row gaps or run continuously.
-- Specifies whether the row rules break across column gaps or run continuously; accepts the same values as `column-rule-break`.
+- {{cssxref("row-rule-break")}}: Specifies whether the row rules break across column gaps or run continuously; accepts the same values as `column-rule-break`.
 - {{cssxref("rule-break")}}: Sets `column-rule-break` and `row-rule-break` to the same value.
 
 In this demonstration, you can split the row or column rules (or both) into separate segments at column and row gap intersections, or keep the rules continuous.
