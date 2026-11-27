@@ -218,6 +218,8 @@ Additional blocking reasons that may be used by some browsers are also specified
   - : The Document was created from an HTTP response whose status was not an ok status.
 - `"rtc"`
   - : While unloading, a [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection) or [`RTCDataChannel`](/en-US/docs/Web/API/RTCDataChannel) was shut down, so the page was not in a state that could be stored in the back/forward cache.
+- `"rtc-used-with-cache-control-no-store"`
+  - : The Document was created from an HTTP response whose {{httpheader("Cache-Control")}} header included the "no-store" token, and it created a [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection) or [`RTCDataChannel`](/en-US/docs/Web/API/RTCDataChannel) that might be used to receive sensitive information, so the page was not in a state that could be stored in the back/forward cache.
 - `"sensors"`
   - : The Document requested sensor access.
 - `"serviceworker-added"`
@@ -232,6 +234,13 @@ Additional blocking reasons that may be used by some browsers are also specified
   - : The Document's service worker client's active [service worker](/en-US/docs/Web/API/Service_Worker_API)'s service worker registration was unregistered while the page was in back/forward cache.
 - `"sharedworker"`
   - : This Document was in the owner set of a [`SharedWorkerGlobalScope`](/en-US/docs/Web/API/SharedWorkerGlobalScope).
+
+    Browsers that allow pages using shared workers to enter the back/forward cache can report the more specific `"sharedworker-message"` or `"sharedworker-with-no-active-client"` reasons instead.
+
+- `"sharedworker-message"`
+  - : While the page was stored in back/forward cache, a message was received from a [`SharedWorkerGlobalScope`](/en-US/docs/Web/API/SharedWorkerGlobalScope) whose owner set contains this Document.
+- `"sharedworker-with-no-active-client"`
+  - : This Document was in the owner set of a [`SharedWorkerGlobalScope`](/en-US/docs/Web/API/SharedWorkerGlobalScope) that is not actively needed, for example because no other open page is using the shared worker.
 - `"smartcardconnection"`
   - : The Document had an active `SmartCardConnection` while unloading.
 - `"speechrecognition"`
@@ -246,8 +255,12 @@ Additional blocking reasons that may be used by some browsers are also specified
   - : The Document called the [WebHID API](/en-US/docs/Web/API/WebHID_API)'s [`requestDevice()`](/en-US/docs/Web/API/HID/requestDevice) method.
 - `"webshare"`
   - : The Document used the [Web Share API](/en-US/docs/Web/API/Web_Share_API)'s [`navigator.share()`](/en-US/docs/Web/API/Navigator/share) method.
+- `"websocket-used-with-cache-control-no-store"`
+  - : The Document was created from an HTTP response whose {{httpheader("Cache-Control")}} header included the "no-store" token, and it created a [`WebSocket`](/en-US/docs/Web/API/WebSocket) connection that might be used to receive sensitive information, so the page was not in a state that could be stored in the back/forward cache.
 - `"webtransport"`
   - : While unloading, an open [`WebTransport`](/en-US/docs/Web/API/WebTransport) connection was shut down, so the page was not in a state that could be stored in the back/forward cache.
+- `"webtransport-used-with-cache-control-no-store"`
+  - : The Document was created from an HTTP response whose {{httpheader("Cache-Control")}} header included the "no-store" token, and it created a [`WebTransport`](/en-US/docs/Web/API/WebTransport) connection that might be used to receive sensitive information, so the page was not in a state that could be stored in the back/forward cache.
 - `"webxrdevice"`
   - : The Document created an [XRSystem](/en-US/docs/Web/API/XRSystem).
 

@@ -36,7 +36,9 @@ The initial values listed in the specification are:
 - `"websocket"` {{experimental_inline}}
   - : While unloading, an open [WebSocket](/en-US/docs/Web/API/WebSockets_API) connect was shut down, so the page was not in a stable state that could be stored in the bfcache.
 
-Additional blocking reasons may be used by some browsers, for example:
+The specification also lists user agent-specific blocking reasons that browsers can report instead of `"masked"`. See [User-agent specific blocking reasons](/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons#user-agent_specific_blocking_reasons) for the full list, which includes values such as `"sharedworker-message"` and `"sharedworker-with-no-active-client"`.
+
+Some examples of additional blocking reasons used by browsers are:
 
 - `"unload-listener"` {{experimental_inline}}
   - : The page registers an [`unload`](/en-US/docs/Web/API/Window/unload_event) handler, which prevents bfcache usage. This serves as a useful warning, as `unload` is deprecated. See [usage notes](/en-US/docs/Web/API/Window/unload_event#usage_notes) for more information.
