@@ -30,9 +30,20 @@ The order of the returned `RTCRtpReceiver` instances is not defined by the speci
 
 The array does not include receivers associated with transceivers that have been [stopped](/en-US/docs/Web/API/RTCRtpTransceiver/currentDirection) (following offer/answer).
 
-## Example
+## Examples
 
-tbd
+### Listing received track kinds
+
+```js
+const peerConnection = new RTCPeerConnection();
+peerConnection.addTransceiver("audio");
+
+for (const receiver of peerConnection.getReceivers()) {
+  console.log(receiver.track.kind); // "audio"
+}
+
+peerConnection.close();
+```
 
 ## Specifications
 

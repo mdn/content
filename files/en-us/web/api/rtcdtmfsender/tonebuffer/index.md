@@ -58,9 +58,18 @@ messages.
 Setting the tone buffer to an empty string (`""`) cancels any pending DTMF
 codes.
 
-## Example
+## Examples
 
-tbd
+### Reading an empty tone buffer
+
+```js
+const peerConnection = new RTCPeerConnection();
+const { sender } = peerConnection.addTransceiver("audio");
+
+console.log(sender.dtmf.toneBuffer); // ""
+
+peerConnection.close();
+```
 
 ## Specifications
 

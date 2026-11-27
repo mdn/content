@@ -35,7 +35,14 @@ The following exceptions may be thrown when setting a new value for this propert
 
 ## Examples
 
-TBD
+### Setting the append window end
+
+In the [`SourceBuffer` live example](/en-US/docs/Web/API/SourceBuffer#loading_a_video_chunk_by_chunk), add the following code immediately after `sourceBuffer` is created to filter out frames at or after 3 seconds.
+
+```js
+sourceBuffer.appendWindowEnd = 3;
+console.log(sourceBuffer.appendWindowEnd); // 3
+```
 
 ## Specifications
 

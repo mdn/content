@@ -39,9 +39,32 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-```js
-// TBD
+### Using setLiveSeekableRange()
+
+This example sets a live seekable range from 10 to 40 seconds without loading any media.
+
+```html
+<video></video>
 ```
+
+```js
+const video = document.querySelector("video");
+const mediaSource = new MediaSource();
+const objectURL = URL.createObjectURL(mediaSource);
+
+mediaSource.addEventListener(
+  "sourceopen",
+  () => {
+    mediaSource.duration = Infinity;
+    mediaSource.setLiveSeekableRange(10, 40);
+  },
+  { once: true },
+);
+
+video.src = objectURL;
+```
+
+In a real app, you probably want to control the seekable range depending on what data is available locally.
 
 ## Specifications
 

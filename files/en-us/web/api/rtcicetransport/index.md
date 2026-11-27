@@ -56,7 +56,23 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 
 ## Examples
 
-tbd
+### Basic ICE transport data
+
+```js
+const local = new RTCPeerConnection();
+const remote = new RTCPeerConnection();
+local.createDataChannel("example");
+
+await local.setLocalDescription(await local.createOffer());
+await remote.setRemoteDescription(local.localDescription);
+await remote.setLocalDescription(await remote.createAnswer());
+await local.setRemoteDescription(remote.localDescription);
+
+console.log(local.sctp.transport.iceTransport.state); // e.g., "new"
+
+local.close();
+remote.close();
+```
 
 ## Specifications
 
