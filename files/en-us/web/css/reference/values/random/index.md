@@ -67,7 +67,7 @@ The `random(seed, min, max, step)` function accepts two to four comma-separated 
   - : Defines the minimum and maximum values, respectively, specified as `<number>`, `<dimension>`, or `<percentage>` values, or calculations resolving to one of these types. Both values must be resolvable to the same [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types). If the maximum is less than the minimum, the function will return the first `<calc-sum>` value.
 
 - `<calc-sum>` {{optional_inline}}
-  - : Specifies the step interval. If present and of the same data type as the minimum and maximum `<calc-sum>` values, it defines the return value to be the minimum value or at increments of the step value from the minimum value, up to the maximum value.
+  - : Specifies a step interval. If specified, the returned value will be the minimum value or the minimum plus a multiple of the step, up to (but not exceeding) the maximum. Must be the same data type as the minimum and maximum values.
 
 ### Return value
 
