@@ -3,7 +3,7 @@ title: "`page-orientation` CSS at-rule descriptor"
 short-title: page-orientation
 slug: Web/CSS/Reference/At-rules/@page/page-orientation
 page-type: css-at-rule-descriptor
-browser-compat: css.at-rules.page.page-orientation
+browser-compat: css.at-rules.page.descriptor_page-orientation
 sidebar: cssref
 ---
 

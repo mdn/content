@@ -3,7 +3,7 @@ title: "`size` CSS at-rule descriptor"
 short-title: size
 slug: Web/CSS/Reference/At-rules/@page/size
 page-type: css-at-rule-descriptor
-browser-compat: css.at-rules.page.size
+browser-compat: css.at-rules.page.descriptor_size
 sidebar: cssref
 ---
 
