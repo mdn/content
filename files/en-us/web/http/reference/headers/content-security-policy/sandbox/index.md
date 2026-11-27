@@ -35,7 +35,7 @@ Content-Security-Policy: sandbox;
 Content-Security-Policy: sandbox <value>;
 ```
 
-where `<value>` can optionally be one of the following values:
+The optional `<value>` is a space-separated list of one or more of the following values:
 
 - `allow-downloads`
   - : Allows downloading files through an {{HTMLElement("a")}} or {{HTMLElement("area")}} element with the [download](/en-US/docs/Web/HTML/Reference/Elements/a#download) attribute, as well as through the navigation that leads to a download of a file.
@@ -76,7 +76,7 @@ where `<value>` can optionally be one of the following values:
 ## Examples
 
 ```http
-Content-Security-Policy: sandbox allow-scripts;
+Content-Security-Policy: sandbox allow-scripts allow-forms;
 ```
 
 ## Specifications
