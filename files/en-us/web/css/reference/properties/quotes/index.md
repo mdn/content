@@ -9,8 +9,6 @@ sidebar: cssref
 
 The [CSS](/en-US/docs/Web/CSS) **`quotes`** property sets how the browser should render quotation marks that are automatically added to the HTML {{HTMLElement("q")}} element or added using the `open-quote` or `close-quote` (or omitted using the `no-open-quote` and `no-close-quote`) values of the CSS {{cssxref("content")}} property.
 
-Browsers insert quotation marks at the opening and closing of `<q>` elements and for the `open-quote` and `close-quote` values of the `content` property. Each opening or closing quote is replaced by one of the strings from the value of `quotes`, based on the depth of nesting, or, if `quotes` is explicitly set to or otherwise resolves to `auto`, the quotation marks used are language dependent.
-
 {{InteractiveExample("CSS Demo: quotes")}}
 
 ```css interactive-example-choice
@@ -76,7 +74,6 @@ quotes: unset;
   - : Quotation marks that are typographically appropriate for the inherited language (i.e., via the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute set on the parent or other ancestor).
 - `match-parent`
   - : A matched element uses quotation marks from the same set of quotation-mark pairs as its parent element. If the parent's `quotes` value is `auto`, the set is the one for the parent element's language (set by its `lang` attribute or inherited from an ancestor). Quotations nested inside the matched element inherit the same set, even if they are written in a different language. The specific pair of opening and closing quotation marks used depends on the nesting level of the quote.
-
 - {{cssxref("&lt;string&gt;")}}
   - : Defines one or more pairs of quotation marks, as a space-separated list of strings, such as `"«" "»" "‹" "›"`. Each quotation mark is a string wrapped in double (`"`) or single (`'`) quotes, and can be empty (`""`). In each pair, the first string is used as the `open-quote` value and the second as the `close-quote` value. The list must contain an even number of strings and can't include keywords; otherwise, the declaration is invalid.
 
@@ -84,12 +81,7 @@ quotes: unset;
 
     Which pair of quotes is used depends on the depth, or nesting level, of quotes: the number of occurrences of `<q>` quotes or `open-quote` (or `no-open-quote`) in all generated text before the current occurrence, minus the number of occurrences of closing quotes, either as `</q>`, `close-quote`, or `no-close-quote`. If the depth is 0, the first pair is used; if the depth is 1, the second pair is used, and so on.
 
-> [!NOTE]
-> The CSS `content` property value `no-open-quote` increments and `no-close-quote` decrements the quoting level, but they do not insert quotation marks.
-
 ## Description
-
-The `quotes` property sets the characters that the browser inserts as quotation marks around {{HTMLElement("q")}} elements and for the `open-quote` and `close-quote` values of the {{cssxref("content")}} property.
 
 The quotation marks typically used for quotations depend on the language. Each language has a set of pairs of quotation marks: the first pair is used around a quotation, the next pair around a quotation nested inside it, and so on. Quotations nested more deeply than the number of pairs use the last pair.
 
@@ -103,7 +95,7 @@ Each nested quotation also gets quotation marks for its parent's language, using
 
 ### Using one set of quotation marks for nested quotations
 
-The `match-parent` value makes a quotation and every quotation nested inside it use the same set of quotation marks, whatever their languages. If the parent's `quotes` value is `auto`, the quotation gets the set for the parent's language, and the quotations nested inside it inherit that set. For example, if a Japanese quotation in an English paragraph is set to `match-parent`, a German quotation inside it gets the English second-level quotation marks (`‘` and `’`). If the parent's value is a list of strings, the quotation uses that list.
+The `match-parent` value makes a quotation and every quotation nested inside it use the same set of quotation marks, whatever their languages. If the parent's `quotes` value is `auto`, the quotation gets the set for the parent's language, and the quotations nested inside it inherit that set. For example, if a Japanese quotation in an English paragraph is set to `match-parent`, a German quotation inside it gets the English second-level quotation marks (`‘` and `’`). If the parent has custom quotation marks, the quotation uses the same set.
 
 Each element has its own `quotes` value, so you can set a different value on a more deeply nested quotation to change the quotation marks from that level down. For example, `q q q { quotes: auto; }` switches the third and deeper levels back to language-based quotation marks.
 
@@ -111,17 +103,17 @@ Each element has its own `quotes` value, so you can set a different value on a m
 
 The `<string>` value defines your own set of quotation marks, with as many pairs as you like. You might do this to use one style of quotation marks across a site in several languages, to define different marks for more levels of nesting, or to insert text that isn't a quotation mark (see [Text as quotes and empty quotes](#text_as_quotes_and_empty_quotes)).
 
-No keyword value chooses quotation marks for a quotation's own language. If you want that, combine a list of strings with the {{cssxref(":lang()")}} pseudo-class:
+If you want a quotation to use the quotation marks of its own language, set them as custom quotation marks, using the {{cssxref(":lang()")}} pseudo-class to select quotations in that language:
 
 ```css
 q:lang(fr) {
-  quotes: "«" "»" "‹" "›";
+  quotes: "«" "»";
 }
 ```
 
 ### Removing quotation marks
 
-The `none` value stops the browser from inserting quotation marks, which is useful if the quotation marks are already in the text, or if quotations are shown in another way, such as in italics. A quotation with `quotes: none` still counts as a nesting level, so a quotation inside it that has quotation marks gets the second-level pair.
+The `none` value stops the browser from inserting quotation marks, which is useful if the quotation marks are already in the text, or if quotations are shown in another way, such as in italics. It makes `open-quote` and `close-quote` behave like `no-open-quote` and `no-close-quote`, which don't insert quotation marks but still change the nesting level. So a quotation with `quotes: none` still counts as a nesting level, and a quotation inside it that has quotation marks gets the second-level pair.
 
 ## Formal definition
 
@@ -137,7 +129,7 @@ The `none` value stops the browser from inserting quotation marks, which is usef
 
 This example compares the default quotes provided by the semantic HTML `<q>` element to those we define using the CSS `quotes` property.
 
-The default value of `quotes` is [`auto`](#auto). In this example, the first list item has `quotes: auto` set, so it gets the default quotes for the language specified; the same as if no `quotes` property was set. The second list item defines which quotation marks to use for quotes and nested quotes; these quotation marks will be used for descendants of an element with `specialQuotes` class regardless of the language (like any [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute values set).
+The initial value of `quotes` is [`auto`](#auto). In this example, the first list item has `quotes: auto` set, so it gets the default quotes for the language specified; the same as if no `quotes` property was set. The second list item defines which quotation marks to use for quotes and nested quotes; these quotation marks will be used for descendants of an element with `specialQuotes` class regardless of the language (like any [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute values set).
 
 #### HTML
 
@@ -188,7 +180,7 @@ Note that each open-quote and close-quote is replaced by one of the strings from
 
 ### Auto quotes
 
-The default value of `quotes` is `auto`. This example works without it being explicitly set.
+The initial value of `quotes` is `auto`. This example works without it being explicitly set.
 
 #### HTML
 
@@ -268,7 +260,7 @@ In this example, instead of using the `<q>` element, we are adding quotation mar
 
 ### Text as quotes and empty quotes
 
-This example demonstrates using something other than quotation marks as the `<string>` values. The open-quote indicates the speaker and, as there is no opening quotation mark, the close-quote is empty. (Mixing a `<string>` with an enumerated keyword to create a pair is not supported.) We set `auto` for the nested quotes. These nested quotes will be book-ended by whatever the language dictates is normal for nested quotes.
+This example demonstrates using something other than quotation marks as the `<string>` values. The open-quote indicates the speaker and, as there is no opening quotation mark, the close-quote is empty. We set `auto` for the nested quotes. These nested quotes will be book-ended by whatever the language dictates is normal for nested quotes.
 
 #### HTML
 
@@ -401,7 +393,7 @@ p {
 
 #### Result
 
-With `auto`, a quotation's marks are chosen for the language of its parent element, not for the quotation's own `lang` attribute. A quotation inside another quotation uses that language's second-level quotation marks. With `match-parent`, the outer quotation gets the set of quotation marks for its parent's language, and the quotations nested inside it use the same set.
+With `auto`, each quotation gets quotation marks for its parent's language. With `match-parent`, the nested quotations use the same set as the outer quotation:
 
 - **`auto`**:
   - The Japanese quotation is inside a paragraph with `lang="en"` (English), so it gets English quotation marks (`“` and `”`): `“日本語 …”`.
