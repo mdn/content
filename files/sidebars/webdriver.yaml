@@ -158,7 +158,14 @@ sidebar:
           - link: /Web/WebDriver/Reference/BiDi/Modules/network/responseStarted
             code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/permissions
+        details: closed
         code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/permissions#commands
+            title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/permissions/setPermission
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/script
         details: closed
         code: true
