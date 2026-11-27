@@ -2,6 +2,11 @@
 title: dy
 slug: Web/SVG/Reference/Attribute/dy
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.feDropShadow.dy
+  - svg.elements.feOffset.dy
+  - svg.elements.text.dy
+  - svg.elements.tspan.dy
 spec-urls:
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fedropshadow-dy
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-feoffset-dy
@@ -218,3 +223,7 @@ line {
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
