@@ -36,7 +36,7 @@ Every CSS declaration consists of a property/value pair. The value can take vari
 - {{cssxref("cos()")}}
 - {{cssxref("exp()")}}
 - {{cssxref("hypot()")}}
-- {{cssxref("ident()")}}
+- {{cssxref("ident_function", "ident()")}}
 - {{cssxref("if()")}}
 - {{cssxref("inherit()")}}
 - {{cssxref("integrity()")}}

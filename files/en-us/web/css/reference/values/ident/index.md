@@ -73,3 +73,4 @@ _As this type is not a real type but a convenience type used to simplify the def
 
 - [&lt;custom-ident&gt;](/en-US/docs/Web/CSS/Reference/Values/custom-ident)
 - [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/Reference/Values/dashed-ident)
+- {{cssxref("ident_function", "ident()")}}
