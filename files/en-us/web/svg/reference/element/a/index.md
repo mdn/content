@@ -16,11 +16,14 @@ SVG's `<a>` element is a container, which means you can create a link around tex
 
 ## Attributes
 
-### Global attributes
+  ### Global attributes
 
-- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
-- [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
-- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+  - [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+  - [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+  ### ARIA attributes
+
+  - [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
 
 ### Specific attributes
 
