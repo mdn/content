@@ -48,7 +48,7 @@ reduce(callbackFn, initialValue)
       - : The array `reduce()` was called upon.
 - `initialValue` {{optional_inline}}
   - : A value to which `accumulator` is initialized the first time the callback is called.
-    If `initialValue` is specified, `callbackFn` starts executing with the first value in the array as `currentValue`.
+    If `initialValue` is specified, `callbackFn` starts executing with the first value in the array as `currentValue`. The value as well as the result of `reduce()` assumes the type of `initialValue`
     If `initialValue` is _not_ specified, `accumulator` is initialized to the first value in the array, and `callbackFn` starts executing with the second value in the array as `currentValue`. In this case, if the array is empty (so that there's no first value to return as `accumulator`), an error is thrown.
 
 ### Return value
