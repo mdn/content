@@ -217,8 +217,16 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
 
 - {{DOMxRef("Element.after()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just after the `Element`.
+- {{DOMxRef("Element.afterHTML()")}} {{Experimental_Inline}}
+  - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML into a document fragment, which then inserts it in the children list of the `Element`'s parent, just after the `Element`.
+- {{DOMxRef("Element.afterHTMLUnsafe()")}} {{Experimental_Inline}}
+  - : Parses a string of HTML into a document fragment, without sanitization, which then inserts it in the children list of the `Element`'s parent, just after the `Element`. The HTML string may include declarative shadow roots, which would be parsed as template elements if the HTML was set using [`Element.innerHTML`](/en-US/docs/Web/API/Element/innerHTML).
 - {{DOMxRef("Element.animate()")}}
   - : A shortcut method to create and run an animation on an element. Returns the created Animation object instance.
+- {{DOMxRef("Element.appendHTML()")}} {{Experimental_Inline}}
+  - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML into a document fragment, which then inserts it into the element after the last child of the element.
+- {{DOMxRef("Element.appendHTMLUnsafe()")}} {{Experimental_Inline}}
+  - : Parses a string of HTML into a document fragment, without sanitization, which then inserts it into the element after the last child of the element. The HTML string may include declarative shadow roots, which would be parsed as template elements if the HTML was set using [`Element.innerHTML`](/en-US/docs/Web/API/Element/innerHTML).
 - {{DOMxRef("Element.ariaNotify()")}}
   - : Specifies that a given string of text should be announced by a screen reader.
 - {{DOMxRef("Element.append()")}}
@@ -227,6 +235,11 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Attaches a shadow DOM tree to the specified element and returns a reference to its {{DOMxRef("ShadowRoot")}}.
 - {{DOMxRef("Element.before()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just before the `Element`.
+- {{DOMxRef("Element.beforeHTML()")}} {{Experimental_Inline}}
+  - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML into a document fragment, which then inserts it in the children list of the `Element`'s parent, just before the `Element`.
+- {{DOMxRef("Element.beforeHTMLUnsafe()")}} {{Experimental_Inline}}
+  - : Parses a string of HTML into a document fragment, without sanitization, which then inserts it in the children list of the `Element`'s parent, just before the `Element`. The HTML string may include declarative shadow roots, which would be parsed as template elements if the HTML was set using [`Element.innerHTML`](/en-US/docs/Web/API/Element/innerHTML).
+- {{DOMxRef("Element.animate()")}}
 - {{DOMxRef("Element.checkVisibility()")}}
   - : Returns whether an element is expected to be visible or not based on configurable checks.
 - {{DOMxRef("Element.closest()")}}
@@ -279,6 +292,10 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Moves a given {{domxref("Node")}} inside the invoking node as a direct child, before a given reference node, without removing and then inserting the node.
 - {{DOMxRef("Element.prepend()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings before the first child of the element.
+- {{DOMxRef("Element.prependHTML()")}} {{Experimental_Inline}}
+  - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML into a document fragment, which then inserts it into the element before the first child of the element.
+- {{DOMxRef("Element.prependHTMLUnsafe()")}} {{Experimental_Inline}}
+  - : Parses a string of HTML into a document fragment, without sanitization, which then inserts it into the element before the first child of the element. The HTML string may include declarative shadow roots, which would be parsed as template elements if the HTML was set using [`Element.innerHTML`](/en-US/docs/Web/API/Element/innerHTML).
 - {{DOMxRef("Element.pseudo()")}} {{experimental_inline}}
   - : Returns a {{domxref("CSSPseudoElement")}} object representing the [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) of the specified type associated with the element.
 - {{DOMxRef("Element.querySelector()")}}
@@ -299,6 +316,10 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Replaces the existing children of a {{domxref("Node")}} with a specified new set of children.
 - {{DOMxRef("Element.replaceWith()")}}
   - : Replaces the element in the children list of its parent with a set of {{domxref("Node")}} objects or strings.
+- {{DOMxRef("Element.replaceWithHTML()")}} {{Experimental_Inline}}
+  - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML into a document fragment, which then replaces the element in the DOM.
+- {{DOMxRef("Element.replaceWithHTMLUnsafe()")}} {{Experimental_Inline}}
+  - : Parses a string of HTML into a document fragment, without sanitization, which then replaces the element in the DOM. The HTML string may include declarative shadow roots, which would be parsed as template elements if the HTML was set using [`Element.innerHTML`](/en-US/docs/Web/API/Element/innerHTML).
 - {{DOMxRef("Element.requestFullscreen()")}}
   - : Asynchronously asks the browser to make the element fullscreen.
 - {{DOMxRef("Element.requestPointerLock()")}}
@@ -323,7 +344,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Sets the value of the attribute with the specified name and namespace, from the current node.
 - {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Sets up mouse event capture, redirecting all mouse events to this element.
-- {{DOMxRef("Element.setHTML()")}} {{SecureContext_Inline}}
+- {{DOMxRef("Element.setHTML()")}}
   - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML into a document fragment, which then replaces the element's original subtree in the DOM.
 - {{DOMxRef("Element.setHTMLUnsafe()")}}
   - : Parses a string of HTML into a document fragment, without sanitization, which then replaces the element's original subtree in the DOM. The HTML string may include declarative shadow roots, which would be parsed as template elements if the HTML was set using [`Element.innerHTML`](/en-US/docs/Web/API/Element/innerHTML).
