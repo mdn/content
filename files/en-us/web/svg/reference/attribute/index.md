@@ -299,22 +299,24 @@ Below is a list of all of the attributes available in SVG, along with links to r
 
 Core attributes are global attributes, meaning they can be used on any SVG element:
 
-- {{SVGAttr("id")}}
-- {{SVGAttr("tabindex")}}
 - {{SVGAttr("autofocus")}}
-- {{SVGAttr("lang")}}
-- {{SVGAttr("xml:space")}}
 - {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
 - {{SVGAttr("data-*")}}
+- {{SVGAttr("id")}}
+- {{SVGAttr("lang")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("tabindex")}}
+- {{SVGAttr("xml:space")}}
 
 The {{SVGAttr("xml:lang")}} attribute can also be used on SVG elements in XML documents. If both `lang` and `xml:lang` are set on an element, their values must match (ignoring ASCII letter case).
 
 ### ARIA attributes
 
-The following SVG elements include ARIA attributes in their specifications: `a`, `circle`, `ellipse`, `foreignObject`, `g`, `image`, `line`, `path`, `polygon`, `polyline`, `rect`, `svg`, `switch`, `symbol`, `text`, `textPath`, `tspan`, `use`, and `view`.
+ARIA attributes are the `role` attribute and the `aria-*` states and properties defined in WAI-ARIA.
 
-The `switch` and `view` elements support `aria-*` attributes but do not support the `role` attribute.
+The following SVG elements accept ARIA attributes: `a`, `circle`, `ellipse`, `foreignObject`, `g`, `image`, `line`, `path`, `polygon`, `polyline`, `rect`, `svg`, `switch`, `symbol`, `text`, `textPath`, `tspan`, `use`, and `view`.
+
+The `switch` and `view` elements accept `aria-*` attributes, but the `role` attribute can't be used on them.
 
 The `role` attribute can be specified on renderable SVG elements when allowed by the element's specification, and its value must be a role allowed for that element.
 
