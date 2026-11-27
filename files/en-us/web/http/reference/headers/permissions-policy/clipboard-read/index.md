@@ -52,10 +52,7 @@ SecureCorp Inc. must therefore include an {{HTMLElement('iframe','allow','#Attri
 ### Using the default policy
 
 If no `Permissions-Policy` header sets an allowlist for `clipboard-read`, the default allowlist `self` applies.
-This enables the feature in the top-level document and in same-origin iframes, but not in cross-origin iframes.
-Because no header restricts delegation, an `allow` attribute can enable the feature in any cross-origin iframe.
-
-To allow `clipboard-read` in a cross-origin iframe, include it in the iframe's {{HTMLElement('iframe','allow','#Attributes')}} attribute on the `<iframe>` element:
+This enables the feature in the top-level document and in same-origin iframes. The feature can also be used in cross-origin iframes if they have the `allow` set:
 
 ```html
 <iframe src="https://other.com/paste-tool" allow="clipboard-read"></iframe>
