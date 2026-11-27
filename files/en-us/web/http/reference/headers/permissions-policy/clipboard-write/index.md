@@ -55,7 +55,7 @@ See [Default allowlists](/en-US/docs/Web/HTTP/Guides/Permissions_Policy#default_
 ### Using the default policy
 
 If no `Permissions-Policy` header sets an allowlist for `clipboard-write`, the default allowlist `self` applies.
-This enables the feature in the top-level document and in same-origin iframes. The feature can also be used in cross-origin iframes if they have the `allow` set:
+This enables the feature in the top-level document and in same-origin iframes. The feature can also be used in cross-origin iframes if they have the `allow` attribute set:
 
 ```html
 <iframe src="https://other.com/share-widget" allow="clipboard-write"></iframe>
