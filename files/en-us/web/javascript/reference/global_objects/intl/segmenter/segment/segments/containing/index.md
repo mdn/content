@@ -30,7 +30,7 @@ containing(codeUnitIndex)
 
 ### Parameters
 
-- `codeUnitIndex` {{optional_inline}}
+- `codeUnitIndex`
   - : A number specifying the index of the code unit in the original input string. If the value is omitted, it defaults to `0`.
 
 ### Return value

@@ -41,6 +41,9 @@ setMinutes(minutesValue, secondsValue, msValue)
 - `msValue` {{optional_inline}}
   - : An integer between 0 and 999 representing the milliseconds. If you specify `msValue`, you must also specify `minutesValue` and `secondsValue`.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `3`, so all parameters are defined as formal parameters by the function, but you still get sensible behavior when omitting most of them.
+
 ### Return value
 
 Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date). If a parameter is `NaN` (or other values that get [coerced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) to `NaN`, such as `undefined`), the date is set to [Invalid Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) and `NaN` is returned.

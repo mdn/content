@@ -30,6 +30,9 @@ String.fromCodePoint(num1, num2, /* …, */ numN)
 - `num1`, …, `numN`
   - : An integer between `0` and `0x10FFFF` (inclusive) representing a Unicode code point.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `1`.
+
 ### Return value
 
 A string created by using the specified sequence of code points.

@@ -38,6 +38,9 @@ concat(value1, value2, /* …, */ valueN)
     [shallow copy](/en-US/docs/Glossary/Shallow_copy) of the existing array on which it is called. See the description below
     for more details.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `1`.
+
 ### Return value
 
 A new {{jsxref("Array")}} instance.

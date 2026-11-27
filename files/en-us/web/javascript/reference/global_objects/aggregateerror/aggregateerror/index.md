@@ -30,6 +30,10 @@ AggregateError(errors, message, options)
   - : An iterable of errors, may not actually be {{jsxref("Error")}} instances.
 - `message` {{optional_inline}}
   - : An optional human-readable description of the aggregate error.
+
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `2`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 - `options` {{optional_inline}}
   - : An object that has the following properties:
     - `cause` {{optional_inline}}

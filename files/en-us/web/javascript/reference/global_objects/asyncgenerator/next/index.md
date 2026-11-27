@@ -21,6 +21,9 @@ next(value)
 - `value` {{optional_inline}}
   - : An optional value used to modify the internal state of the generator. A value passed to the `next()` method will be received by `yield`
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `1`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 ### Return value
 
 A {{jsxref("Promise")}} which when resolved returns an {{jsxref("Object")}} with two properties:

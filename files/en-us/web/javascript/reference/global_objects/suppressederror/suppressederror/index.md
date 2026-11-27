@@ -31,6 +31,9 @@ SuppressedError(error, suppressed, message)
 - `message` {{optional_inline}}
   - : An optional human-readable description of the aggregate error.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `3`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 > [!NOTE]
 > `SuppressedError()` does not accept `options` like {{jsxref("Error/Error", "Error()")}} and other subclasses do, because the semantics of {{jsxref("Error/cause", "cause")}} overlaps with `suppressed`.
 

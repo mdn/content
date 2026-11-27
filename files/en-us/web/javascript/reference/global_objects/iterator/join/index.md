@@ -21,6 +21,9 @@ join(separator)
 - `separator` {{optional_inline}}
   - : A string to separate each pair of adjacent elements of the iterator. If omitted, the elements are separated with a comma (",").
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `1`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 ### Return value
 
 A string joining all yielded elements. The elements are [converted to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). If an element is `undefined` or `null`, it is converted to an empty string instead of the string `"null"` or `"undefined"`. If the iterator is empty, the empty string is returned.

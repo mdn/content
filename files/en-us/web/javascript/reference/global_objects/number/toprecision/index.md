@@ -38,6 +38,9 @@ toPrecision(precision)
 - `precision` {{optional_inline}}
   - : An integer specifying the number of significant digits.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `1`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 ### Return value
 
 A string representing the given number, using the given number of significant digits. Scientific notation is used if the exponent is greater than or equal to `precision` or less than -6. Has the same behavior as {{jsxref("Number.prototype.toString()")}} if the `precision` argument is omitted.

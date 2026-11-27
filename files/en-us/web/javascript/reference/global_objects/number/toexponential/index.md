@@ -40,6 +40,9 @@ toExponential(fractionDigits)
   - : Optional. An integer specifying the number of digits after the decimal point.
     Defaults to as many digits as necessary to specify the number.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `1`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 ### Return value
 
 A string representing the given {{jsxref("Number")}} object in exponential notation

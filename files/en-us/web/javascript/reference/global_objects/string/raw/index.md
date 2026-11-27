@@ -35,7 +35,7 @@ String.raw`templateString`
 
 - `strings`
   - : Well-formed template literal array object, like `{ raw: ['foo', 'bar', 'baz'] }`. Should be an object with a `raw` property whose value is an array-like object of strings.
-- `sub1`, …, `subN`
+- `sub1`, …, `subN` {{optional_inline}}
   - : Contains substitution values.
 - `templateString`
   - : A [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals), optionally with substitutions (`${...}`).

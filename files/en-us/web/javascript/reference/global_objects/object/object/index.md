@@ -27,6 +27,9 @@ Object(value)
 - `value` {{optional_inline}}
   - : Any value.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `1`, so this parameter is defined as a formal parameter by the function, but you still get sensible behavior when omitting this parameter.
+
 ### Return value
 
 When the `Object()` constructor itself is called or constructed, its return value is an object:

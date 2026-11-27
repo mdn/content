@@ -38,6 +38,9 @@ Math.max(value1, value2, /* …, */ valueN)
 - `value1`, …, `valueN`
   - : Zero or more numbers among which the largest value will be selected and returned.
 
+    > [!NOTE]
+    > The function's {{jsxref("Function/length", "length")}} property is `2`. To get meaningful output, you probably want to pass at least 2 values.
+
 ### Return value
 
 The largest of the given numbers. Returns {{jsxref("NaN")}} if any of the parameters is or is converted into `NaN`. Returns -{{jsxref("Infinity")}} if no parameters are provided.
