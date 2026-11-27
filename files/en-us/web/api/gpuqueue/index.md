@@ -22,6 +22,8 @@ A device's primary queue is accessed via the {{domxref("GPUDevice.queue")}} prop
 
 - {{domxref("GPUQueue.copyExternalImageToTexture", "copyExternalImageToTexture()")}}
   - : Copies a snapshot taken from a source image, video, or canvas into a given {{domxref("GPUTexture")}}.
+- {{domxref("GPUQueue.drawElementImageToTexture()")}}
+  - : Draws a [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) element's state recorded during the current rendering update (or an {{domxref("ElementImage")}}) into a texture. Part of the [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API).
 - {{domxref("GPUQueue.onSubmittedWorkDone", "onSubmittedWorkDone()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when all the work submitted to the GPU via this `GPUQueue` at the point the method is called has been processed.
 - {{domxref("GPUQueue.submit", "submit()")}}

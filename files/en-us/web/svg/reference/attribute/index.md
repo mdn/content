@@ -58,6 +58,7 @@ Below is a list of all of the attributes available in SVG, along with links to r
 - {{SVGAttr("display")}}
 - {{SVGAttr("divisor")}}
 - {{SVGAttr("dominant-baseline")}}
+- {{SVGAttr("drawable")}}
 - {{SVGAttr("dur")}}
 - {{SVGAttr("dx")}}
 - {{SVGAttr("dy")}}

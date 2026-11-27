@@ -188,6 +188,8 @@ The following properties and methods provide general information and functionali
   - : Returns information about the texture.
 - {{domxref("WebGLRenderingContext.isTexture()")}}
   - : Returns a Boolean indicating if the passed `WebGLTexture` is valid.
+- {{domxref("WebGLRenderingContext.texElementSubImage2D()")}}
+  - : Uploads a [`drawable`](/en-US/docs/Web/HTML/Reference/Global_attributes/drawable) element's state recorded during the current rendering update (or an {{domxref("ElementImage")}}) into a texture. Part of the [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API).
 - {{domxref("WebGLRenderingContext.texImage2D()")}}
   - : Specifies a 2D texture image.
 - {{domxref("WebGLRenderingContext.texSubImage2D()")}}

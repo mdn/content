@@ -633,6 +633,9 @@ The whole API is available only in a [secure context](/en-US/docs/Web/Security/D
 
 ## See also
 
+- [Canvas API](/en-US/docs/Web/API/Canvas_API)
+- [WebGL API](/en-US/docs/Web/API/WebGL_API)
+- [HTML-in-Canvas API](/en-US/docs/Web/API/HTML-in-Canvas_API)
 - [WebGPU best practices](https://toji.dev/webgpu-best-practices/)
 - [WebGPU explainer](https://gpuweb.github.io/gpuweb/explainer/)
 - [WebGPU — All of the cores, none of the canvas](https://surma.dev/things/webgpu/)
