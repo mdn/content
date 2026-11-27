@@ -8,7 +8,7 @@ browser-compat: api.Document.parseHTML_static
 
 {{APIRef("DOM")}}
 
-The **`parseHTML()`** static method of the {{domxref("Document")}} object [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML in order to create a new {{domxref("Document")}} instance.
+The **`parseHTML()`** is a static method of the {{domxref("Document")}} object [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML in order to create a new {{domxref("Document")}} instance.
 
 ## Syntax
 
@@ -45,7 +45,7 @@ A {{domxref("Document")}}.
 
 ## Description
 
-The **`parseHTML()`** method parses and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) in order to create a new {{domxref("Document")}} instance that is XSS-safe.
+The **`parseHTML()`** method parses and sanitizes a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) in order to create a new {{domxref("Document")}} instance that is XSS-safe.
 The resulting `Document` will have a [content type](/en-US/docs/Web/API/Document/contentType) of "text/html", a [character set](/en-US/docs/Web/API/Document/characterSet) of UTF-8, and a URL of "about:blank".
 
 The input HTML may include [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom).

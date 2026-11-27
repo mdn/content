@@ -61,6 +61,14 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
   - : Returns the topmost element at the specified coordinates.
 - {{domxref("ShadowRoot.elementsFromPoint()")}} {{Non-standard_Inline}}
   - : Returns an array of all elements at the specified coordinates.
+- {{DOMxRef("ShadowRoot.appendHTML()")}} {{Experimental_Inline}}
+  - : [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML into a {{domxref("DocumentFragment")}}, which then places it tin the existing tree in the shadow DOM after the last child of the `ShadowRoot`.
+- {{DOMxRef("ShadowRoot.appendHTMLUnsafe()")}} {{Experimental_Inline}}
+  - : Parses a string of HTML into a document fragment, without sanitization, which then places it tin the existing tree in the shadow DOM after the last child of the `ShadowRoot`.. The HTML string may include declarative shadow roots, which would be parsed as template elements the HTML was set using [`ShadowRoot.innerHTML`](/en-US/docs/Web/API/ShadowRoot/innerHTML).
+- {{DOMxRef("ShadowRoot.prependHTML()")}} {{Experimental_Inline}}
+  - : [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML into a {{domxref("DocumentFragment")}}, which then places it tin the existing tree in the shadow DOM before the first child of the `ShadowRoot`.
+- {{DOMxRef("ShadowRoot.prependHTMLUnsafe()")}} {{Experimental_Inline}}
+  - : Parses a string of HTML into a document fragment, without sanitization, which then places it tin the existing tree in the shadow DOM before the first child of the `ShadowRoot`. The HTML string may include declarative shadow roots, which would be parsed as template elements the HTML was set using [`ShadowRoot.innerHTML`](/en-US/docs/Web/API/ShadowRoot/innerHTML).
 - {{DOMxRef("ShadowRoot.setHTML()")}}
   - : [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML into a {{domxref("DocumentFragment")}}, which then replaces the existing tree in the shadow DOM.
 - {{DOMxRef("ShadowRoot.setHTMLUnsafe()")}}

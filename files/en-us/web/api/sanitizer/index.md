@@ -18,6 +18,8 @@ The **`Sanitizer`** interface of the [HTML Sanitizer API](/en-US/docs/Web/API/HT
 
 - {{domxref('Sanitizer.allowElement()')}}
   - : Sets an element as allowed by the sanitizer, optionally with an array of attributes that are allowed or disallowed.
+- {{domxref('Sanitizer.allowProcessingInstructions()')}}
+  - : Sets whether specific processing instructions will be allowed or removed by the sanitizer.
 - {{domxref('Sanitizer.get()')}}
   - : Returns the current `Sanitizer` configuration as a {{domxref('SanitizerConfig')}} dictionary instance.
 - {{domxref('Sanitizer.removeElement()')}}
@@ -40,8 +42,23 @@ The **`Sanitizer`** interface of the [HTML Sanitizer API](/en-US/docs/Web/API/HT
 A `Sanitizer` is a reusable configuration object that specifies what elements, attributes, comments, and processing instructions are allowed or should be removed when inserting strings of HTML into an {{domxref("Element")}} or {{domxref("ShadowRoot")}}, or when parsing an HTML string into a {{domxref("Document")}}.
 It can be used with the following [sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods):
 
-- Safe methods: {{domxref("Element.setHTML()")}}, {{domxref("ShadowRoot.setHTML()")}}, and [`Document.parseHTML()`](/en-US/docs/Web/API/Document/parseHTML_static).
-- Unsafe methods: {{domxref("Element.setHTMLUnsafe()")}}, {{domxref("ShadowRoot.setHTMLUnsafe()")}}, and [`Document.parseHTMLUnsafe()`](/en-US/docs/Web/API/Document/parseHTMLUnsafe_static).
+- [Safe methods](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods):
+  - {{domxref('Document/parseHTML_static','Document.parseHTML()')}}
+  - {{domxref('Element.setHTML()')}} and {{domxref('ShadowRoot.setHTML()')}}
+  - {{domxref('Element.appendHTML()')}} and {{domxref('ShadowRoot.appendHTML()')}}
+  - {{domxref('Element.prependHTML()')}} and {{domxref('ShadowRoot.prependHTML()')}}
+  - {{domxref('Element.afterHTML()')}} and {{domxref('CharacterData.afterHTML()')}}
+  - {{domxref('Element.beforeHTML()')}} and {{domxref('CharacterData.beforeHTML()')}}
+  - {{domxref('Element.replaceWithHTML()')}} and {{domxref('CharacterData.replaceWithHTML()')}}
+
+- [Unsafe methods](/en-US/docs/Web/API/HTML_Sanitizer_API#unsafe_methods):
+  - {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}
+  - {{domxref('Element.setHTMLUnsafe()')}} and {{domxref('ShadowRoot.setHTMLUnsafe()')}}
+  - {{domxref('Element.appendHTMLUnsafe()')}} and {{domxref('ShadowRoot.appendHTMLUnsafe()')}}
+  - {{domxref('Element.prependHTMLUnsafe()')}} and {{domxref('ShadowRoot.prependHTMLUnsafe()')}}
+  - {{domxref('Element.afterHTMLUnsafe()')}} and {{domxref('CharacterData.afterHTMLUnsafe()')}}
+  - {{domxref('Element.beforeHTMLUnsafe()')}} and {{domxref('CharacterData.beforeHTMLUnsafe()')}}
+  - {{domxref('Element.replaceWithHTMLUnsafe()')}} and {{domxref('CharacterData.replaceWithHTMLUnsafe()')}}
 
 A `Sanitizer` instance can be constructed from a {{domxref("SanitizerConfig")}}, and is effectively a wrapper around that object. A `Sanitizer` and a `SanitizerConfig` can be used with the same methods, but if you're using the same configuration multiple times, it's expected to be more efficient to use a `Sanitizer` and modify it when you need to.
 If no `SanitizerConfig` is passed to the constructor, the sanitizer is created with the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration), which removes XSS-unsafe elements and attributes, along with other elements and attributes that can potentially be used in other attacks, such as clickjacking and spoofing.
@@ -106,6 +123,7 @@ sanitizer.allowElement("span");
 sanitizer.allowAttribute("id");
 sanitizer.replaceElementWithChildren("b");
 sanitizer.setComments(true);
+sanitizer.allowProcessingInstructions("marker");
 ```
 
 ### Creating a "remove" sanitizer

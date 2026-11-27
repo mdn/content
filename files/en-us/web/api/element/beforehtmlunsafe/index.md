@@ -20,7 +20,7 @@ browser-compat: api.Element.beforeHTMLUnsafe
 > [!NOTE]
 > {{domxref("Element.beforeHTML()")}} should almost always be used (where supported) instead of this method as it is always [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods).
 
-The **`beforeHTMLUnsafe()`** method of the {{domxref("Element")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) to remove unwanted elements and attributes, and then using it to insert the element in the DOM before the HTML element.
+The **`beforeHTMLUnsafe()`** method of the {{domxref("Element")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) to remove unwanted elements and attributes, and insert it in the children list of the `Element`'s parent, just before the `Element`.
 
 ## Syntax
 
@@ -42,7 +42,7 @@ beforeHTMLUnsafe(input, options)
 
         Note that if you're using the same configuration multiple times, it's expected to be more efficient to use a `Sanitizer` and modify it when you need to.
     - `runScripts` {{optional_inline}} {{experimental_inline}}
-      - : A boolean value indicating whether any scripts included in the newly inserted HTML should run before inserting. The default is `false`.
+      - : A boolean value indicating whether any scripts included in the newly inserted HTML should run after inserting. The default is `false`.
 
 ### Return value
 
@@ -65,7 +65,7 @@ None (`undefined`).
 
 ## Description
 
-The **`beforeHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes. The `DocumentFragment` is then used to insert the element into the DOM.
+The **`beforeHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes. The `DocumentFragment` is then inserted into the children list of the `Element`'s parent, just before the `Element`.
 
 The method does nothing if the node has no parent.
 

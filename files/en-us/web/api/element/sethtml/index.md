@@ -68,7 +68,7 @@ const unsanitizedString = "<p><i>abc</i><script>alert(1)<" + "/script> def</p>";
 const target = document.getElementById("target");
 
 target.setHTML(unsanitizedString);
-// Result is that the element is set to the current contents:
+// Result is that the element is set to the sanitized string:
 // <p><i>abc</i> def</p>
 ```
 
@@ -84,7 +84,7 @@ const mySanitizer = new Sanitizer({
   elements: ["div", "p", "button", "script"],
 });
 target.setHTML(unsanitizedString, { sanitizer: mySanitizer });
-// Result is that the element is set to the current contents:
+// Result is that the element is set to the sanitized string:
 // <p> def</p>
 ```
 
@@ -99,7 +99,7 @@ const target = document.getElementById("target");
 target.setHTML(unsanitizedString, {
   sanitizer: { removeElements: ["i"] },
 });
-// Result is that the element is set to the current contents:
+// Result is that the element is set to sanitized string:
 // <p> def</p>
 ```
 

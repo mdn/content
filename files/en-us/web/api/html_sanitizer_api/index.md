@@ -58,8 +58,8 @@ Note that since these methods sanitize input strings of XSS-unsafe elements and 
 
 The HTML Sanitizer API defines the following _unsafe methods_:
 
-- {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}.
-- {{domxref('Element.setHTMLUnsafe()')}}, {{domxref('ShadowRoot.setHTMLUnsafe()')}}
+- {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}
+- {{domxref('Element.setHTMLUnsafe()')}} and {{domxref('ShadowRoot.setHTMLUnsafe()')}}
 - {{domxref('Element.appendHTMLUnsafe()')}} and {{domxref('ShadowRoot.appendHTMLUnsafe()')}}
 - {{domxref('Element.prependHTMLUnsafe()')}} and {{domxref('ShadowRoot.prependHTMLUnsafe()')}}
 - {{domxref('Element.afterHTMLUnsafe()')}} and {{domxref('CharacterData.afterHTMLUnsafe()')}}
@@ -107,7 +107,7 @@ target.setHTML(input);
 target.setHTMLUnsafe(input);
 target.innerHTML = input;
 
-// Safe - removes all XSS-unsafe elements and attributes (including the `onclick` and `onerror` handlers).
+// Safe - removes all XSS-unsafe elements and attributes (including the `onclick` and `onerror` handlers) as uses the unaltered default sanitizer.
 const configSafe = new Sanitizer();
 target.setHTMLUnsafe(input, { sanitizer: configSafe });
 
@@ -150,7 +150,7 @@ A sanitizer configuration defines what HTML will be allowed, replaced, or remove
 
 There are two mechanisms for defining a sanitizer configuration, either of which can be passed to all the sanitization methods:
 
-- {{domxref('SanitizerConfig')}} is a dictionary object that defines arrays for the allowed/disallowed elements and attributes and boolean properties that indicate whether comments and data attributes will be allowed or omitted, and so on.
+- {{domxref('SanitizerConfig')}} is a dictionary object that defines arrays for the allowed/disallowed elements and attributes and boolean properties that indicate whether comments, process instructions and data attributes will be allowed or omitted, and so on.
 
   Only a subset of possible configuration options may be specified in a particular configuration in order to reduce redundancy and ambiguity.
   The allowed subset is summarized in the [Allow and remove configurations](#allow_and_remove_configurations) section below, and described in detail in [Valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration).

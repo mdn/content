@@ -81,6 +81,9 @@ Note that normally {{domxref("Sanitizer")}} instances are used instead of `Sanit
     - `namespace` {{optional_inline}}
       - : A string containing the namespace of the attribute, which defaults to `null`.
 
+- `processingInstructions`
+  - : An array indicating the processing instructions to allow when sanitizing HTML.
+
 - `comments`
   - : `true` if comments are allowed, and `false` if they are to be removed.
 - `dataAttributes`
@@ -148,6 +151,7 @@ const sanitizer = new Sanitizer({
   elements: ["div", "p", "script"],
   attributes: ["id"],
   replaceWithChildrenElements: ["b"],
+  processingInstructions: ["start", "end", "marker"],
   comments: true,
   dataAttributes: false,
 });

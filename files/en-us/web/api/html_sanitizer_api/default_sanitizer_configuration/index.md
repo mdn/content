@@ -16,7 +16,7 @@ This configuration removes the following items in addition to the XSS-safe basel
 
 1. Elements that might be used in clickjacking, spoofing, or other attacks by only allowing an allow list of elements.
 2. Attributes that might be used in clickjacking, spoofing, or other attacks by only allowing an allow list of global, and element-specific attributes.
-3. Processing Instructions and Comments
+3. Processing instructions and comments
 4. `data-*` attributes.
 
 It therefore provides a sanitizer with a minimal attack surface, which is still suitable for the majority of sanitization use cases.

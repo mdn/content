@@ -10,7 +10,7 @@ browser-compat: api.ShadowRoot.appendHTML
 
 {{APIRef("DOM")}}
 
-The **`appendHTML()`** method of the {{domxref("ShadowRoot")}} interface provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#explanation_of_the_safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the `ShadowRoot` after the last child of the `ShadowRoot`.
+The **`appendHTML()`** method of the {{domxref("ShadowRoot")}} interface provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the `ShadowRoot` after the last child of the `ShadowRoot`.
 
 ## Syntax
 
@@ -46,9 +46,9 @@ None (`undefined`).
 
 ## Description
 
-**`appendHTML()`** provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#explanation_of_the_safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the `ShadowRoot` after the last child of the `ShadowRoot`.
+**`appendHTML()`** provides an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it into the `ShadowRoot` after the last child of the `ShadowRoot`.
 
-It also be used instead of {{domxref("ShadowRoot.appendHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
+It should be used instead of {{domxref("ShadowRoot.appendHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
 
 ## Examples
 

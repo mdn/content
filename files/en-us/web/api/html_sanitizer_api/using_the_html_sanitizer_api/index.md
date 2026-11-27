@@ -36,7 +36,7 @@ The {{domxref('Sanitizer')}} is essentially a wrapper around a {{domxref('Saniti
 
 ### Using safe methods with a sanitizer
 
-The safe methods always remove any XSS-unsafe HTML elements or attributes (as discussed in [XSS-safe baseline configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration) above).
+The safe methods always remove any XSS-unsafe HTML elements or attributes (as discussed in [XSS-safe baseline configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe_baseline_configuration)).
 
 You can pass a sanitizer as the second argument to the safe methods to allow the same or fewer entities than the default configuration. This configuration (whether passed as an argument or using the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) if not supplied) is applied on top of the baseline configuration.
 
@@ -118,7 +118,7 @@ const sanitizer = new Sanitizer({
 ```
 
 You can also add the elements to a `Sanitizer` using {{domxref("Sanitizer.allowElement()")}}.
-Here we add the same elements to [the default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration):
+Here we add the same elements to an empty sanitizer configuration:
 
 ```js
 const sanitizer = new Sanitizer({});
@@ -301,9 +301,9 @@ sanitizer.removeAttribute("onclick");
 sanitizer.removeAttribute("lang");
 ```
 
-## Comments and data attributes
+## Processing instructions, comments and data attributes
 
-The {{domxref("SanitizerConfig")}} can also be used to specify whether comments will be filtered from injected content, using the [`comments`](/en-US/docs/Web/API/SanitizerConfig#comments) property, and whether `data-` attributes are allowed without having to add them to the `attributes` array using the [`dataAttributes`](/en-US/docs/Web/API/SanitizerConfig#dataattributes) boolean property.
+The {{domxref("SanitizerConfig")}} can also be used to specify whether processing instructions and comments will be filtered from injected content, using the [`processingInstructions`](/en-US/docs/Web/API/SanitizerConfig#processingInstructions) and [`comments`](/en-US/docs/Web/API/SanitizerConfig#comments) property, and whether `data-` attributes are allowed without having to add them to the `attributes` array using the [`dataAttributes`](/en-US/docs/Web/API/SanitizerConfig#dataattributes) boolean property.
 
 To allow comments and all `data-*` attributes you might use a configuration like this:
 

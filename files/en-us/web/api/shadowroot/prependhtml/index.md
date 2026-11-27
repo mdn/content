@@ -50,7 +50,7 @@ None (`undefined`).
 
 It implements the same sanitization logic as all the other [XSS-safe HTML setters](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods).
 
-It also be used instead of {{domxref("ShadowRoot.prependHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
+It should be used instead of {{domxref("ShadowRoot.prependHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
 
 ## Examples
 

@@ -183,5 +183,4 @@ target.prependHTMLUnsafe(htmlString, {
 - {{domxref("ShadowRoot.prependHTML()")}} and {{domxref("ShadowRoot.prependHTMLUnsafe()")}}
 - {{domxref("Element.setHTMLUnsafe()")}}
 - {{domxref("Element.innerHTML")}}
-- {{domxref("Document.parseHTML_static", "Document.parseHTML()")}} and {{domxref("Document.parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")
-  }}
+- {{domxref("Document.parseHTML_static", "Document.parseHTML()")}} and {{domxref("Document.parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}

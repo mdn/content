@@ -10,7 +10,7 @@ browser-compat: api.Element.beforeHTML
 
 {{APIRef("DOM")}}
 
-The **`beforeHTML()`** method of the {{domxref("Element")}} interface is an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the element's parent, just before the element.
+The **`beforeHTML()`** method of the {{domxref("Element")}} interface is an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the `Element`'s parent, just before the element.
 
 ## Syntax
 
@@ -49,7 +49,7 @@ None (`undefined`).
 
 ## Description
 
-**`beforeHTML()`** is an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the element's parent, just before the element.
+**`beforeHTML()`** is an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the `Element`'s parent, just before the element.
 
 It implements the same sanitization logic as all the other [XSS-safe HTML setters](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods).
 
@@ -73,7 +73,7 @@ const unsanitizedString = "<p><i>abc</i><script>alert(1)<" + "/script> def</p>";
 const target = document.getElementById("target");
 
 target.beforeHTML(unsanitizedString);
-// Result is that the following is added before after the current element:
+// Result is that the following is added before the current element:
 // <p><i>abc</i> def</p>
 ```
 
@@ -89,7 +89,7 @@ const mySanitizer = new Sanitizer({
   elements: ["div", "p", "button", "script"],
 });
 target.beforeHTML(unsanitizedString, { sanitizer: mySanitizer });
-// Result is that the following is added before after the current element:
+// Result is that the following is added before the current element:
 // <p> def</p>
 ```
 
@@ -104,7 +104,7 @@ const target = document.getElementById("target");
 target.beforeHTML(unsanitizedString, {
   sanitizer: { removeElements: ["i"] },
 });
-// Result is that the following is added before after the current element:
+// Result is that the following is added before the current element:
 // <p> def</p>
 // Since the <i> is removed, and the <script> is removed by default.
 ```

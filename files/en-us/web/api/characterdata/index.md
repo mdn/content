@@ -31,11 +31,19 @@ _This interface also inherits methods from its parents, {{domxref("Node")}} and 
 - {{domxref("CharacterData.after()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the
     `CharacterData`'s parent, just after the `CharacterData` object.
+- {{DOMxRef("CharacterData.afterHTML()")}} {{Experimental_Inline}}
+  - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML into a document fragment, which then inserts it in the children list of the `CharacterData`'s parent, just after the `CharacterData`.
+- {{DOMxRef("CharacterData.afterHTMLUnsafe()")}} {{Experimental_Inline}}
+  - : Parses a string of HTML into a document fragment, without sanitization, which then inserts it in the children list of the `CharacterData`'s parent, just after the `CharacterData`.
 - {{domxref("CharacterData.appendData()")}}
   - : Appends the given string to the `CharacterData.data` string; when this method returns, `data` contains the concatenated string.
 - {{domxref("CharacterData.before()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the
     `CharacterData`'s parent, just before the `CharacterData` object.
+- {{DOMxRef("CharacterData.beforeHTML()")}} {{Experimental_Inline}}
+  - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML into a document fragment, which then inserts it in the children list of the `CharacterData`'s parent, just before the `CharacterData`.
+- {{DOMxRef("CharacterData.beforeHTMLUnsafe()")}} {{Experimental_Inline}}
+  - : Parses a string of HTML into a document fragment, without sanitization, which then inserts it in the children list of the `CharacterData`'s parent, just before the `CharacterData`.
 - {{domxref("CharacterData.deleteData()")}}
   - : Removes the specified number of characters, starting at the specified offset, from the `CharacterData.data` string; when this method returns, `data` contains the shortened string.
 - {{domxref("CharacterData.insertData()")}}
@@ -46,6 +54,10 @@ _This interface also inherits methods from its parents, {{domxref("Node")}} and 
   - : Replaces the specified number of characters, starting at the specified offset, with the specified string; when this method returns, `data` contains the modified string.
 - {{DOMxRef("CharacterData.replaceWith()")}}
   - : Replaces the characters in the children list of its parent with a set of {{domxref("Node")}} objects or strings.
+- {{DOMxRef("CharacterData.replaceWithHTML()")}} {{Experimental_Inline}}
+  - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML into a document fragment, which then replaces the `CharacterData` in the DOM.
+- {{DOMxRef("CharacterData.replaceWithHTMLUnsafe()")}} {{Experimental_Inline}}
+  - : Parses a string of HTML into a document fragment, without sanitization, which then replaces the `CharacterData` in the DOM.
 - {{domxref("CharacterData.substringData()")}}
   - : Returns a string containing the part of `CharacterData.data` of the specified length and starting at the specified offset.
 
