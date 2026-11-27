@@ -32,6 +32,8 @@ sidebar:
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browser/removeUserContext
             code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browser/setClientWindowState
+            code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browser/setDownloadBehavior
             code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext
