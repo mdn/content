@@ -14,6 +14,13 @@ The **`<feTile>`** [SVG](/en-US/docs/Web/SVG) filter primitive allows you to fil
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - {{SVGAttr("in")}}
 - [Filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes): {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("result")}}
 

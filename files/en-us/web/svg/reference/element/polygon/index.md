@@ -16,6 +16,14 @@ For open shapes, see the {{SVGElement("polyline")}} element.
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - {{SVGAttr('points')}}
   - : This attribute defines the list of points (pairs of `x,y` absolute coordinates) required to draw the polygon.
     _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number)+; _Default value_: `""`; _Animatable_: **yes**

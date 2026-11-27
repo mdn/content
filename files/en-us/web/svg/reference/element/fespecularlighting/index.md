@@ -18,6 +18,13 @@ Like other filter primitives, it handles color components in the `linearRGB` {{g
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - {{SVGAttr("in")}}
 - {{SVGAttr("surfaceScale")}}
 - {{SVGAttr("specularConstant")}}

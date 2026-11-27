@@ -15,6 +15,14 @@ The text must be enclosed in the `<textPath>` element and its {{SVGAttr("href")}
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - {{SVGAttr("href")}}
   - : The URL to the path or basic shape on which to render the text. If the `path` attribute is set, `href` has no effect.
     _Value type_: [**\<URL>**](/en-US/docs/Web/SVG/Guides/Content_type#url); _Default value_: none; _Animatable_: **yes**

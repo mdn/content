@@ -16,7 +16,14 @@ Graphical objects can be referenced from anywhere, however, defining these objec
 
 ## Attributes
 
-This element only includes global attributes.
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
+- [Presentation attributes](/en-US/docs/Web/SVG/Reference/Attribute#presentation_attributes)
 
 ## DOM Interface
 

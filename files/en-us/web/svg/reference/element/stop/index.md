@@ -14,6 +14,13 @@ The **`<stop>`** [SVG](/en-US/docs/Web/SVG) element defines a color and its posi
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - {{SVGAttr("offset")}}
   - : This attribute defines where the gradient stop is placed along the gradient vector.
     _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _Default value_: `0`; _Animatable_: **yes**

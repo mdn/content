@@ -19,6 +19,14 @@ The use of `<symbol>` elements for graphics that are used multiple times in the 
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - {{SVGAttr("height")}}
   - : This attribute determines the height of the symbol.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _Default value_: `auto`; _Animatable_: **yes**

@@ -17,6 +17,14 @@ The **`<ellipse>`** [SVG](/en-US/docs/Web/SVG) element is an SVG basic shape, us
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - {{SVGAttr("cx")}}
   - : The x position of the center of the ellipse.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _Default value_: `0`; _Animatable_: **yes**

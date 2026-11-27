@@ -19,6 +19,13 @@ Like other filter primitives, it handles color components in the `linearRGB` {{g
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - {{SVGAttr("dx")}}: This attribute defines the x offset of the drop shadow.
   _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `2`; _Animatable_: **yes**
 - {{SVGAttr("dy")}}: This attribute defines the y offset of the drop shadow.

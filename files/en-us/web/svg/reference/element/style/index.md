@@ -17,6 +17,13 @@ The **`<style>`** [SVG](/en-US/docs/Web/SVG) element allows style sheets to be e
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - {{SVGAttr("type")}}
   - : This attribute defines type of the style sheet language to use as a media type string.
     _Value type_: [**`<media-type>`**](/en-US/docs/Glossary/MIME_type); _Default value_: `text/css`; _Animatable_: **no**

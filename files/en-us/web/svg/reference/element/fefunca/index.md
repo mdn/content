@@ -12,6 +12,23 @@ The **`<feFuncA>`** [SVG](/en-US/docs/Web/SVG) filter primitive defines the tran
 
 {{svginfo}}
 
+## Attributes
+
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
+- {{SVGAttr("type")}}
+- {{SVGAttr("tableValues")}}
+- {{SVGAttr("slope")}}
+- {{SVGAttr("intercept")}}
+- {{SVGAttr("amplitude")}}
+- {{SVGAttr("exponent")}}
+- {{SVGAttr("offset")}}
+
 ## DOM Interface
 
 This element implements the {{domxref("SVGFEFuncAElement")}} interface.

@@ -14,6 +14,13 @@ The **`<mask>`** [SVG](/en-US/docs/Web/SVG) element defines a mask for compositi
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - {{SVGAttr("height")}}
   - : This attribute defines the height of the masking area.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: `120%`; _Animatable_: **yes**

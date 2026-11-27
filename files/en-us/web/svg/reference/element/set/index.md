@@ -19,6 +19,13 @@ It supports all attribute types, including those that cannot reasonably be inter
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - {{SVGAttr("to")}}
   - : This attribute defines the value to be applied to the target attribute for the duration of the animation. The value must match the requirements of the target attribute.
     _Value type_: [**\<anything>**](/en-US/docs/Web/SVG/Guides/Content_type#anything); _Default value_: none; _Animatable_: **no**

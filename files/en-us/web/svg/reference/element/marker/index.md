@@ -16,6 +16,13 @@ Markers can be attached to shapes using the {{SVGAttr("marker-start")}}, {{SVGAt
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - {{SVGAttr("markerHeight")}}
   - : This attribute defines the height of the marker viewport.
     _Value type_: **[\<length>](/en-US/docs/Web/SVG/Guides/Content_type#length)**; _Default value_: `3`; _Animatable_: **yes**

@@ -21,6 +21,14 @@ SVG files displayed with `<image>` are [treated as an image](/en-US/docs/Web/SVG
 
 ## Attributes
 
+### Global attributes
+
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [ARIA attributes](/en-US/docs/Web/SVG/Reference/Attribute#aria_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
 - {{SVGAttr("x")}}
   - : Positions the image horizontally from the origin.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _Default value_: `0`; _Animatable_: **yes**
