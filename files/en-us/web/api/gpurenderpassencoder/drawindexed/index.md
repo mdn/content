@@ -38,6 +38,12 @@ drawIndexed(indexCount, instanceCount, firstIndex, baseVertex, firstInstance)
 
 None ({{jsxref("undefined")}}).
 
+### Validation
+
+The following criteria must be met when calling **`drawIndexed()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPURenderPassEncoder")}} becomes invalid:
+
+- When using immediates, every 4-byte slot of immediate data the pipeline statically uses has been set using {{domxref("GPURenderPassEncoder.setImmediates()")}}.
+
 ## Examples
 
 In the WebGPU Samples [Shadow Mapping](https://webgpu.github.io/webgpu-samples/samples/shadowMapping/) example, `drawIndexed()` is used in two separate render passes in each animation frame, one to populate the shadow buffer and one to draw the primary view of the scene. Study the example code listing for the full context.
