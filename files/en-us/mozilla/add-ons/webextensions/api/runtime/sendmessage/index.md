@@ -37,7 +37,7 @@ let sending = browser.runtime.sendMessage(
     If `extensionId` is omitted, the message is sent to your extension.
 
 - `message`
-  - : `any`. An object that can be structured clone serialized (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
+  - : `any`. An object that can be structured clone serialized (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm) and the [`message_serialization`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/message_serialization) manifest key).
 - `options` {{optional_inline}}
   - : `object`.
     - `includeTlsChannelId` {{optional_inline}}

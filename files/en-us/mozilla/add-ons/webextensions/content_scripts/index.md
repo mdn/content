@@ -249,6 +249,8 @@ There are two basic patterns for communicating between the background scripts an
 - You can send **one-off messages** (with an optional response).
 - You can set up a **longer-lived connection between the two sides**, and use that connection to exchange messages.
 
+Firefox serializes messages with the structured clone algorithm, while Chrome and Safari use JSON serialization by default. In Chrome and Safari, an extension can choose the format with the [`message_serialization`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/message_serialization) manifest key. See [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm) for more information.
+
 ### One-off messages
 
 To send one-off messages, with an optional response, you can use the following APIs:

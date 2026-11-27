@@ -182,4 +182,5 @@ li {
 - {{cssxref("column-rule-visibility-items")}}
 - {{cssxref("row-rule")}} shorthand
 - {{cssxref("rule")}} shorthand
+- [Defining rule insets](/en-US/docs/Web/CSS/Guides/Gaps/Rule_insets) guide
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
