@@ -4,11 +4,12 @@ short-title: hapticActuators
 slug: Web/API/Gamepad/hapticActuators
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: api.Gamepad.hapticActuators
 ---
 
-{{APIRef("Gamepad")}}{{SeeCompatTable}}
+{{APIRef("Gamepad")}}{{non-standard_header}}
 
 The **`hapticActuators`** read-only property of the {{domxref("Gamepad")}} interface returns an array containing {{domxref("GamepadHapticActuator")}} objects, each of which represents haptic feedback hardware available on the controller.
 
