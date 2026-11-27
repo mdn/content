@@ -44,6 +44,8 @@ _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 
 ## Examples
 
+### Serving GET requests from a cache
+
 This fetch event uses the browser default for non-GET requests.
 For GET requests it tries to return a match in the cache, and falls back to the network. If it finds a match in the cache, it asynchronously updates the cache for next time.
 
@@ -71,6 +73,27 @@ self.addEventListener("fetch", (event) => {
       return fetch(event.request);
     })(),
   );
+});
+```
+
+### Opting out of iframe navigations
+
+Many service workers only want to serve and cache top-level page loads.
+However, an iframe that loads a URL within the service worker's scope triggers the `fetch` event too.
+
+To leave such requests to the browser, the handler can check the request's {{domxref("Request.destination", "destination")}} and return without calling `respondWith()`.
+Top-level navigations have the destination `document`, while iframe navigations have the destination `iframe`.
+The browser then fetches the iframe as if the service worker weren't there, so the request also keeps its `Sec-Fetch-Dest: iframe` header.
+See [Navigations through a service worker](/en-US/docs/Web/HTTP/Reference/Headers/Sec-Fetch-Dest#navigations_through_a_service_worker) to learn why this matters for servers.
+
+```js
+self.addEventListener("fetch", (event) => {
+  const { mode, destination } = event.request;
+  // Opt out of iframe navigations: the browser fetches them itself.
+  if (mode === "navigate" && destination !== "document") return;
+
+  // Serve top-level navigations and other requests, for example from a cache.
+  event.respondWith(fetch(event.request));
 });
 ```
 
