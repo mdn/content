@@ -39,6 +39,7 @@ The **CSS text** module defines how to perform text manipulation, like line brea
 - {{cssxref("text-wrap-style")}}
 - {{cssxref("white-space")}}
 - {{cssxref("white-space-collapse")}}
+- {{cssxref("white-space-trim")}}
 - {{cssxref("word-break")}}
 - {{cssxref("word-spacing")}}
 - {{cssxref("wrap-inside")}}
