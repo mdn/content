@@ -18,12 +18,14 @@ The **`Sanitizer`** interface of the [HTML Sanitizer API](/en-US/docs/Web/API/HT
 
 - {{domxref('Sanitizer.allowElement()')}}
   - : Sets an element as allowed by the sanitizer, optionally with an array of attributes that are allowed or disallowed.
-- {{domxref('Sanitizer.allowProcessingInstructions()')}}
-  - : Sets whether specific processing instructions will be allowed or removed by the sanitizer.
+- {{domxref('Sanitizer.allowProcessingInstruction()')}}
+  - : Sets a processing instruction that will be allowed by the sanitizer.
 - {{domxref('Sanitizer.get()')}}
   - : Returns the current `Sanitizer` configuration as a {{domxref('SanitizerConfig')}} dictionary instance.
 - {{domxref('Sanitizer.removeElement()')}}
   - : Sets an element to be removed by the sanitizer.
+- {{domxref('Sanitizer.removeProcessingInstruction()')}}
+  - : Removes a processing instruction that so it is no longer allowed by the sanitizer.
 - {{domxref('Sanitizer.removeUnsafe()')}}
   - : Updates the sanitizer configuration so that it will remove any XSS-unsafe HTML.
 - {{domxref('Sanitizer.replaceElementWithChildren()')}}
