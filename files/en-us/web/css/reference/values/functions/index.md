@@ -303,6 +303,8 @@ The following functions are used as a value of properties to reference a value d
   - : Uses the user-agent defined as environment variable.
 - {{cssxref("if()")}}
   - : Conditionally sets a property value depending on the result of a [style query](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries), [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using), or [feature query](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries).
+- {{cssxref("inherit_function", "inherit()")}}
+  - : Uses the value of a custom property on the parent element.
 - {{cssxref("url_function", "url()")}}
   - : Uses a file from the specified URL.
 - {{cssxref("var()")}}
@@ -418,6 +420,7 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("if")}} {{experimental_inline}}
 - {{cssxref("image/image", "image()")}}
 - {{cssxref("image/image-set", "image-set()")}}
+- {{cssxref("inherit_function", "inherit()")}}
 - {{cssxref("basic-shape/inset", "inset()")}}
 - {{cssxref("filter-function/invert", "invert()")}}
 - {{cssxref("color_value/lab", "lab()")}}
