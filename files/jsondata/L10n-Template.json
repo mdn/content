@@ -25,6 +25,22 @@
     "zh-TW": "實驗性質"
   },
 
+  "baseline_low_title": {
+    "en-US": "Newly available across major browsers. Older versions may lack support."
+  },
+
+  "baseline_low_abbreviation": {
+    "en-US": "Newly available"
+  },
+
+  "baseline_limited_title": {
+    "en-US": "Limited availability. Some major browsers lack support."
+  },
+
+  "baseline_limited_abbreviation": {
+    "en-US": "Limited availability"
+  },
+
   "baseline_discouraged_title": {
     "de": "Veraltet. Nicht empfohlen für neue Webseiten.",
     "en-US": "Deprecated. Not for use in new websites.",
