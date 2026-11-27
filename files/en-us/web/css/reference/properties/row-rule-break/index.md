@@ -549,4 +549,5 @@ Make the column gaps wider and note how the breaks between row segments grow. Br
 - {{cssxref("rule-overlap")}}
 - {{cssxref("rule-visibility-items")}}
 - {{cssxref("rule")}} shorthand
+- [Defining rule insets](/en-US/docs/Web/CSS/Guides/Gaps/Rule_insets) guide
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
