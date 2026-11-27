@@ -56,7 +56,7 @@ It should also be used instead of {{domxref("ShadowRoot.setHTMLUnsafe()")}}, unl
 
 ## Examples
 
-These examples shows some of the ways you can use `setHTML()` to sanitize and inject a string of HTML.
+These examples show some of the ways you can use `setHTML()` to sanitize and inject a string of HTML.
 
 ### Basic usage
 

@@ -15,10 +15,10 @@ browser-compat: api.Element.prependHTMLUnsafe
 > APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
 >
 > You can mitigate this risk by always passing `TrustedHTML` objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
-> See [Security considerations of the unsafe methods](#/en-US/docs/Web/API/HTML_Sanitizer_API#security_considerations_of_the_unsafe_methods) for more information.
+> See [Security considerations of the unsafe methods](/en-US/docs/Web/API/HTML_Sanitizer_API#security_considerations_of_the_unsafe_methods) for more information.
 
 > [!NOTE]
-> {{domxref("Element.prependHTML()")}} should almost always be used (where supported) instead of this method as it always [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods).
+> {{domxref("Element.prependHTML()")}} should almost always be used (where supported) instead of this method as it is always [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods).
 
 The **`prependHTMLUnsafe()`** method of the {{domxref("Element")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) to remove unwanted elements and attributes, and then inserting it into the DOM as the first child of an element.
 
@@ -78,14 +78,14 @@ If the string of HTML defines more than one [declarative shadow root](/en-US/doc
 
 ### Security considerations
 
-The suffix "Unsafe" in the method name indicates that it does not enforce removal of all XSS-unsafe HTML entities. This has extra security considerations as detailed in the sanitizer API ["Security considerations of the unsafe methods" section](/en-US/docs/Web/API/HTML_Sanitizer_API#security_considerations_of_the_unsafe_methods) and ["When should the unsafe methods be used?" section](/en-US/docs/Web/API/HTML_Sanitizer_API#when_should_the_unsafe_methods_be_used).
+The suffix "Unsafe" in the method name indicates that it does not enforce removal of all XSS-unsafe HTML elements and attributes. This has extra security considerations as detailed in the sanitizer API ["Security considerations of the unsafe methods" section](/en-US/docs/Web/API/HTML_Sanitizer_API#security_considerations_of_the_unsafe_methods) and ["When should the unsafe methods be used?" section](/en-US/docs/Web/API/HTML_Sanitizer_API#when_should_the_unsafe_methods_be_used).
 
 ## Examples
 
 > [!NOTE]
-> The [`setHTMLUnsafe()`](/docs/Web/API/Element/setHTMLUnsafe#examples) page includes additional examples, including a live example, which are similar to how `prependHTMLUnsafe()` can be used.
+> The [`setHTMLUnsafe()`](/en-US/docs/Web/API/Element/setHTMLUnsafe#examples) page includes additional examples, including a live example, which are similar to how `prependHTMLUnsafe()` can be used.
 
-### prependHTMLUnsafe() with Trusted Types
+### `prependHTMLUnsafe()` with Trusted Types
 
 To mitigate the risk of XSS, we'll first create a `TrustedHTML` object from the string containing the HTML, and then pass that object to `prependHTMLUnsafe()`.
 Since trusted types are not yet supported on all browsers, we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill).
@@ -125,7 +125,7 @@ const target = document.getElementById("target");
 target.prependHTMLUnsafe(trustedHTML);
 ```
 
-### Using prependHTMLUnsafe() without Trusted Types
+### Using `prependHTMLUnsafe()` without Trusted Types
 
 This example demonstrates the case where we aren't using trusted types, so we'll be passing sanitizer arguments.
 
@@ -152,20 +152,19 @@ target.prependHTMLUnsafe(untrustedString, {
 });
 ```
 
-### Using prependHTMLUnsafe() with `runScripts`
+### Using `prependHTMLUnsafe()` with `runScripts`
 
-This example demonstrates the case when we allow scripts to run using the `runScripts` option.
+This example demonstrates the case when we allow scripts to run using the `runScripts` option. This should be used with care.
 
 ```js
 // The potentially malicious string
-const untrustedString =
-  "<script src='example.js'></script><p>Other content</p>";
+const htmlString = "<script src='example.js'></script><p>Other content</p>";
 
 // Get the target Element with id "target"
 const target = document.getElementById("target");
 
 // No sanitizer is passed, so the <script> element is kept and also executes it after insertion.
-target.prependHTMLUnsafe(untrustedString, {
+target.prependHTMLUnsafe(htmlString, {
   runScripts: true,
 });
 ```

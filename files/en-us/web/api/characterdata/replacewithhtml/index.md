@@ -60,9 +60,9 @@ It should be used instead of {{domxref("CharacterData.replaceWithHTMLUnsafe()")}
 ## Examples
 
 > [!NOTE]
-> The [`setHTML()`](/docs/Web/API/Element/setHTML#examples) page includes additional examples, including a live example, which are similar to how `replaceWithHTML()` can be used.
+> The [`setHTML()`](/en-US/docs/Web/API/Element/setHTML#examples) page includes additional examples, including a live example, which are similar to how `replaceWithHTML()` can be used.
 
-These examples shows some of the ways you can use `replaceWithHTML()` to sanitize and inject a string of HTML.
+These examples show some of the ways you can use `replaceWithHTML()` to sanitize and inject a string of HTML.
 
 ### Basic usage with default sanitizer
 

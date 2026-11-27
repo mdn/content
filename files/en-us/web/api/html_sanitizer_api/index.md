@@ -42,7 +42,7 @@ The HTML Sanitizer API defines the following _safe methods_:
 - {{domxref('Element.beforeHTML()')}} and {{domxref('CharacterData.beforeHTML()')}}
 - {{domxref('Element.replaceWithHTML()')}} and {{domxref('CharacterData.replaceWithHTML()')}}
 
-The safe methods always remove XSS-unsafe elements and attributes by applying the [XSS-safe baseline configuration](#xss-safe-baseline-configuration) which removes XSS-unsafe elements and attributes.
+The safe methods always remove XSS-unsafe elements and attributes by applying the [XSS-safe baseline configuration](#xss-safe_baseline_configuration) which removes XSS-unsafe elements and attributes.
 
 If no sanitizer is passed as a parameter they will use the [default sanitizer configuration](#default_sanitizer_configuration), which, on top of the XSS-safe baseline configuration, removes other elements and attributes that might be used in other kinds of attacks if provided as user input.
 
@@ -60,8 +60,8 @@ The HTML Sanitizer API defines the following _unsafe methods_:
 
 - {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}.
 - {{domxref('Element.setHTMLUnsafe()')}}, {{domxref('ShadowRoot.setHTMLUnsafe()')}}
-- {{domxref('Element.appendHTMLUnsafe()')}} and {{domxref('ShadowRoot.appendHTML()')}}
-- {{domxref('Element.prependHTMLUnsafe()')}} and {{domxref('ShadowRoot.prependHTML()')}}
+- {{domxref('Element.appendHTMLUnsafe()')}} and {{domxref('ShadowRoot.appendHTMLUnsafe()')}}
+- {{domxref('Element.prependHTMLUnsafe()')}} and {{domxref('ShadowRoot.prependHTMLUnsafe()')}}
 - {{domxref('Element.afterHTMLUnsafe()')}} and {{domxref('CharacterData.afterHTMLUnsafe()')}}
 - {{domxref('Element.beforeHTMLUnsafe()')}} and {{domxref('CharacterData.beforeHTMLUnsafe()')}}
 - {{domxref('Element.replaceWithHTMLUnsafe()')}} and {{domxref('CharacterData.replaceWithHTMLUnsafe()')}}
@@ -70,7 +70,7 @@ The unsafe methods will use whatever sanitizer configuration is passed as an arg
 
 ##### Security considerations of the unsafe methods
 
-The suffix "Unsafe" in the method names indicates that they do not enforce removal of all XSS-unsafe HTML entities (unlike the "safe" methods like {{domxref("Element.setHTML()")}}).
+The suffix "Unsafe" in the method names indicates that they do not enforce removal of all XSS-unsafe HTML elements and attributes (unlike the "safe" methods like {{domxref("Element.setHTML()")}}).
 
 While it can do so if used with an appropriate sanitizer, it doesn't have to use an effective sanitizer, or any sanitizer at all! The method is therefore a possible vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, where potentially unsafe strings provided by a user are injected into the DOM without first being sanitized.
 
@@ -80,7 +80,7 @@ This ensures that the input is passed through a transformation function, which h
 Using `TrustedHTML` makes it possible to audit and check that sanitization code is effective in just a few places, rather than scattered across all your injection sinks.
 You should not have to pass a sanitizer to the method when using `TrustedHTML`.
 
-If for any reason you can't use `TrustedHTML` (or even better, one of the safe methods) then the next safest option is to use the unsafe options with the [default sanitizer configuration](#Default_sanitizer_configuration), with limited overrides to allow the necessary elements and attributes preventing you from using the safe methods.
+If for any reason you can't use `TrustedHTML` (or even better, one of the safe methods) then the next safest option is to use the unsafe options with the [default sanitizer configuration](#default_sanitizer_configuration), with limited overrides to allow the necessary elements and attributes preventing you from using the safe methods.
 
 ##### When should the unsafe methods be used?
 
@@ -305,7 +305,7 @@ The default sanitizer configuration is more restrictive than the XSS-safe baseli
 
 It is also the configuration that is returned by the [`Sanitizer()` constructor](/en-US/docs/Web/API/Sanitizer/Sanitizer) when no configuration is set.
 
-The default configuration is applied on top of the [XSS-safe baseline configuration](#xss-safe-baseline-configuration) and additionally removes the following items:
+The default configuration is applied on top of the [XSS-safe baseline configuration](#xss-safe_baseline_configuration) and additionally removes the following items:
 
 1. Elements that might be used in clickjacking, spoofing, or other attacks.
 2. Attributes that might be used in clickjacking, spoofing, or other attacks.

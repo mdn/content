@@ -62,9 +62,9 @@ It should be used instead of {{domxref("Element.prependHTMLUnsafe()")}}, unless 
 ## Examples
 
 > [!NOTE]
-> The [`setHTML()`](/docs/Web/API/Element/setHTML#examples) page includes additional examples, including a live example, which are similar to how `prependHTML()` can be used.
+> The [`setHTML()`](/en-US/docs/Web/API/Element/setHTML#examples) page includes additional examples, including a live example, which are similar to how `prependHTML()` can be used.
 
-These examples shows some of the ways you can use `prependHTML()` to sanitize and inject a string of HTML.
+These examples show some of the ways you can use `prependHTML()` to sanitize and inject a string of HTML.
 
 ### Basic usage with default sanitizer
 

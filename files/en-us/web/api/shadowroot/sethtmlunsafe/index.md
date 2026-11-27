@@ -13,10 +13,10 @@ browser-compat: api.ShadowRoot.setHTMLUnsafe
 > APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
 >
 > You can mitigate this risk by always passing `TrustedHTML` objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
-> See [Security considerations of the unsafe methods](#/en-US/docs/Web/API/HTML_Sanitizer_API#security_considerations_of_the_unsafe_methods) for more information.
+> See [Security considerations of the unsafe methods](/en-US/docs/Web/API/HTML_Sanitizer_API#security_considerations_of_the_unsafe_methods) for more information.
 
 > [!NOTE]
-> {{domxref("ShadowRoot.setHTML()")}} should almost always be used (where supported) instead of this method as it always [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods).
+> {{domxref("ShadowRoot.setHTML()")}} should almost always be used (where supported) instead of this method as it is always [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods).
 
 The **`setHTMLUnsafe()`** method of the {{domxref("ShadowRoot")}} interface can be used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and then use it to replace the existing tree in the Shadow DOM.
 
@@ -67,11 +67,11 @@ If the string of HTML defines more than one [declarative shadow root](/en-US/doc
 
 ### Security considerations
 
-The suffix "Unsafe" in the method name indicates that it does not enforce removal of all XSS-unsafe HTML entities. This has extra security considerations as detailed in the sanitizer API ["Security considerations of the unsafe methods" section](/en-US/docs/Web/API/HTML_Sanitizer_API#security_considerations_of_the_unsafe_methods) and ["When should the unsafe methods be used?" section](/en-US/docs/Web/API/HTML_Sanitizer_API#when_should_the_unsafe_methods_be_used).
+The suffix "Unsafe" in the method name indicates that it does not enforce removal of all XSS-unsafe HTML elements and attributes. This has extra security considerations as detailed in the sanitizer API ["Security considerations of the unsafe methods" section](/en-US/docs/Web/API/HTML_Sanitizer_API#security_considerations_of_the_unsafe_methods) and ["When should the unsafe methods be used?" section](/en-US/docs/Web/API/HTML_Sanitizer_API#when_should_the_unsafe_methods_be_used).
 
 ## Examples
 
-### setHTMLUnsafe() with Trusted Types
+### `setHTMLUnsafe()` with Trusted Types
 
 To mitigate the risk of XSS, we'll first create a `TrustedHTML` object from the string containing the HTML, and then pass that object to `setHTMLUnsafe()`.
 Since trusted types are not yet supported on all browsers, we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill).
@@ -121,7 +121,7 @@ const shadow = document.querySelector("#host").shadowRoot;
 shadow.setHTMLUnsafe(trustedHTML);
 ```
 
-### Using setHTMLUnsafe() without Trusted Types
+### Using `setHTMLUnsafe()` without Trusted Types
 
 This example demonstrates the case where we aren't using trusted types, so we'll be passing sanitizer arguments.
 
@@ -279,21 +279,20 @@ With this approach you can create safe HTML, but you aren't forced to.
 
 {{EmbedLiveSample("setHTMLUnsafe() live example","100","450px")}}
 
-### Using setHTMLUnsafe() with `runScripts`
+### Using `setHTMLUnsafe()` with `runScripts`
 
-This example demonstrates the case when we allow scripts to run using the `runScripts` option.
+This example demonstrates the case when we allow scripts to run using the `runScripts` option. This should be used with care.
 
 ```js
 // The potentially malicious string
-const untrustedString =
-  "<script src='example.js'></script><p>Other content</p>";
+const htmlString = "<script src='example.js'></script><p>Other content</p>";
 
 // Get the shadow root element
 const shadow = document.querySelector("#host").shadowRoot;
 
 // No sanitizer is passed, so the <script> element is kept
 // and also executes the script after insertion.
-shadow.setHTMLUnsafe(untrustedString, {
+shadow.setHTMLUnsafe(htmlString, {
   runScripts: true,
 });
 ```
