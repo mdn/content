@@ -9,7 +9,7 @@ sidebar: cssref
 
 The **`background-clip`** [CSS](/en-US/docs/Web/CSS) property sets whether an element's background extends underneath its border box, padding box, or content box.
 
-{{InteractiveExample("CSS Demo: background-clip")}}
+{{InteractiveExample("CSS Demo: background-clip", "taller")}}
 
 ```css interactive-example-choice
 background-clip: border-box;
@@ -25,6 +25,18 @@ background-clip: content-box;
 
 ```css interactive-example-choice
 background-clip: text;
+color: transparent;
+text-shadow: none;
+```
+
+```css interactive-example-choice
+background-clip: border-area;
+border-color: transparent;
+```
+
+```css interactive-example-choice
+background-clip: border-area text;
+border-color: transparent;
 color: transparent;
 text-shadow: none;
 ```
@@ -45,6 +57,17 @@ text-shadow: none;
   font-size: 2em;
   font-weight: bold;
 }
+
+@supports not (background-clip: border-area) {
+  body::before {
+    content: "Your browser doesn't support the border-area value.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+  }
+}
 ```
 
 ## Syntax
@@ -56,6 +79,9 @@ background-clip: padding-box;
 background-clip: content-box;
 background-clip: text;
 background-clip: border-area;
+
+/* Multiple keywords */
+background-clip: border-area text;
 
 /* Global values */
 background-clip: inherit;
@@ -78,9 +104,11 @@ background-clip: unset;
 - `border-area`
   - : The background is painted within (clipped to) the area painted by the border, taking {{Cssxref("border-width")}} and {{Cssxref("border-style")}} into account but ignoring any transparency introduced by {{Cssxref("border-color")}}.
 
+The `border-area` and `text` values can also be specified together, in either order. In this case, the background is painted within (clipped to) both the area painted by the border and the foreground text.
+
 ## Description
 
-The background is always drawn behind the border, so `background-clip: border-box` has a visual effect only when the border is partially opaque or has transparent or partially opaque regions. Also, the `background-clip: text` property has little to no visual effect if the text is fully or partially opaque.
+The background is always drawn behind the border, so `background-clip: border-box` has a visual effect only when the border is partially opaque or has transparent or partially opaque regions. Also, the `background-clip: text` property has little to no visual effect if the text is fully or partially opaque. Similarly, `background-clip: border-area` has little to no visual effect if the border is fully or partially opaque, because the border is drawn on top of the background.
 
 > [!NOTE]
 > Because the [root element](/en-US/docs/Web/HTML/Reference/Elements/html) has a different background painting area, the `background-clip` property has no effect when specified on it. See "[The backgrounds of special elements.](https://drafts.csswg.org/css-backgrounds-3/#special-backgrounds)"
@@ -95,6 +123,21 @@ When using `background-clip: text`, check that the contrast ratio between the ba
 If the background image does not load, this could also lead to the text becoming unreadable. Add a fallback {{cssxref("background-color")}} to prevent this from happening, and test without the image.
 
 Consider using feature queries with {{cssxref("@supports")}} to test for support of `background-clip: text` and provide an accessible alternative where it is not supported.
+
+When you make text transparent so that the background shows through it, only set the transparent color inside an `@supports` feature query. Otherwise, in browsers that don't support the `background-clip` value you're using, the `background-clip` declaration is ignored, but the text is still transparent and can't be read. This is especially important for `border-area`, which isn't supported in all browsers:
+
+```css
+.clipped {
+  background-clip: border-area text;
+  border-color: transparent;
+}
+
+@supports (background-clip: border-area text) {
+  .clipped {
+    color: transparent;
+  }
+}
+```
 
 ## Formal definition
 
@@ -119,6 +162,9 @@ Consider using feature queries with {{cssxref("@supports")}} to test for support
 <p class="text">The background is clipped to the foreground text.</p>
 <p class="border-area">
   The background is clipped to the area painted by the border.
+</p>
+<p class="border-area-text">
+  The background is clipped to the border and the foreground text.
 </p>
 ```
 
@@ -154,11 +200,22 @@ p {
   background-clip: border-area;
   border-color: transparent;
 }
+
+.border-area-text {
+  background-clip: border-area text;
+  border-color: transparent;
+}
+
+@supports (background-clip: border-area text) {
+  .border-area-text {
+    color: rgb(0 0 0 / 20%);
+  }
+}
 ```
 
 #### Result
 
-{{EmbedLiveSample('Examples', 600, 630)}}
+{{EmbedLiveSample('Examples', 600, 760)}}
 
 ## Specifications
 
