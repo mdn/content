@@ -45,7 +45,16 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("FormData")}} object.
 
 ## Examples
 
-TBD.
+### Using formData()
+
+```js
+const response = new Response("name=Alex&city=London", {
+  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+});
+
+const formData = await response.formData();
+console.log(formData.get("name")); // "Alex"
+```
 
 ## Specifications
 

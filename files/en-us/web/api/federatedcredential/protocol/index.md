@@ -23,8 +23,15 @@ A string containing a credential's federated identity protocol (e.g.
 
 ## Examples
 
+### Reading the protocol
+
 ```js
-// TBD
+const credential = new FederatedCredential({
+  id: "alex@example.com",
+  provider: "https://accounts.example.com",
+});
+
+console.log(credential.protocol); // ""
 ```
 
 ## Specifications
