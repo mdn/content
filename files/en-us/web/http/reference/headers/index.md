@@ -252,6 +252,8 @@ Range requests are useful for applications like media players that support rando
   - : Allows a server to declare an embedder policy for a given document.
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}} (COOP)
   - : Prevents other domains from opening/controlling a window.
+- {{HTTPHeader("Cross-Origin-Opener-Policy-Report-Only")}}
+  - : Allows website administrators to test and monitor {{HTTPHeader("Cross-Origin-Opener-Policy")}} configurations using the [Reporting API](/en-US/docs/Web/API/Reporting_API) without enforcing browsing context group isolation.
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}} (CORP)
   - : Prevents other domains from reading the response of the resources to which this header is applied. See also [CORP explainer article](/en-US/docs/Web/Security/Practical_implementation_guides/CORP).
 - {{HTTPHeader("Content-Security-Policy")}} ({{Glossary("CSP")}})

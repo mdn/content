@@ -79,6 +79,7 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
 
 Generally you should set your policies such that only same-origin and trusted cross-origin resources that need to be able to script each other should be allowed to be opened in the same browser context group.
 Other resources should be cross-origin isolated in their own group.
+Before enforcing restrictions with `Cross-Origin-Opener-Policy`, you can test your configuration safely with {{HTTPHeader("Cross-Origin-Opener-Policy-Report-Only")}}.
 
 The following sections show whether documents will be opened in the same BCG or a new BCG following a navigation or opening a window programmatically.
 
@@ -191,4 +192,5 @@ The site would also need to do the following:
 
 ## See also
 
+- {{HTTPHeader("Cross-Origin-Opener-Policy-Report-Only")}}
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}}
