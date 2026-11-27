@@ -48,7 +48,7 @@ navigator.serviceWorker.ready.then((serviceWorkerRegistration) => {
         return;
       }
 
-      // Keep your server in sync with the latest subscriptionId
+      // Keep your server in sync with the latest subscription
       sendSubscriptionToServer(subscription);
 
       showCurlCommand(subscription);
