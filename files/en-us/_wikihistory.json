@@ -52264,10 +52264,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/PushSubscription/subscriptionId": {
-    "modified": "2020-10-15T21:34:32.460Z",
-    "contributors": ["fscholz", "chrisdavidmills", "Sebastianz", "jpmedley"]
-  },
   "Web/API/PushSubscription/toJSON": {
     "modified": "2020-10-15T21:39:54.251Z",
     "contributors": [

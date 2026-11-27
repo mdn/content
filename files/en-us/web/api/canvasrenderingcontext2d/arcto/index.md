@@ -644,7 +644,7 @@ class TextInput {
 
   constructor(
     idText, // id of element in document
-    idControl, // id of control in element, if any (radius ony)
+    idControl, // id of control in element, if any (radius only)
     valueMax, // allowed values from 0 to maxValue, inclusive
     getStateValue, // function to get value from state object
     setStateValue,
