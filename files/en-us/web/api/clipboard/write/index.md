@@ -35,7 +35,8 @@ The promise is rejected if the clipboard is unable to write to the clipboard.
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if writing to the clipboard is not allowed.
+  - : Thrown if writing to the clipboard isn't allowed, or if a representation in `data` has a type that isn't supported.
+    This includes a [custom format](/en-US/docs/Web/API/Clipboard_API#custom_clipboard_formats) where the text after the `"web "` prefix isn't a [correctly structured media (MIME) type](/en-US/docs/Web/HTTP/Guides/MIME_types#structure_of_a_mime_type), such as `"web my-format"`, which has no subtype.
 
 ## Description
 
@@ -368,7 +369,7 @@ function buildTable(headers, rows) {
 const reload = document.querySelector("#reload_custom");
 
 reload.addEventListener("click", () => {
-  window.location.reload(true);
+  window.location.reload();
 });
 ```
 
