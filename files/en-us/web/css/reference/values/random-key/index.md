@@ -3,7 +3,7 @@ title: "`<random-key>` CSS type"
 short-title: <random-key>
 slug: Web/CSS/Reference/Values/random-key
 page-type: css-type
-spec-urls: https://drafts.csswg.org/css-color/#typedef-color-random-key
+spec-urls: https://drafts.csswg.org/css-values-5/#typedef-random-key
 sidebar: cssref
 ---
 

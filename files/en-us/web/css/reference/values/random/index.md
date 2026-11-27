@@ -348,6 +348,8 @@ body {
 
 ## See also
 
+- {{cssxref("random-item()")}}
+- {{cssxref("random-key")}}
 - {{cssxref("calc()")}}
 - [CSS units and values](/en-US/docs/Web/CSS/Guides/Values_and_units) module
 - {{jsxref("Math.random()")}}
