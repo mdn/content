@@ -34,7 +34,7 @@ sidebar: addonsidebar
   </tbody>
 </table>
 
-Use the `optional_host_permissions` key to enable runtime requests for access (access granted by the user after your extension has been installed) for the APIs in your extension that read or modify host data, such as {{WebExtAPIRef("cookies")}}, {{WebExtAPIRef("webRequest")}}, and {{WebExtAPIRef("tabs")}}. This key is an array of strings.
+Use the `optional_host_permissions` key to enable runtime requests for access (access granted by the user after your extension has been installed) for the APIs in your extension that read or modify host data, such as {{WebExtAPIRef("cookies")}}, {{WebExtAPIRef("webRequest")}}, and {{WebExtAPIRef("tabs")}}. This key is an array of [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
 
 See [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) for more information on defining hosts.
 
