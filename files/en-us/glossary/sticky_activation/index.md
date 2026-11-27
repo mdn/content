@@ -15,6 +15,11 @@ The state is enabled following any user interaction, when the window has focus, 
 - A `touchend` event.
 - A `keydown` event, other than for the escape or browser shortcut keys.
 
+Sticky activation carries across some navigations.
+When a document is navigated to a new document on the same origin (via push, replace, reload, or history traversal, including restoration from the back/forward cache), the new document starts with sticky activation if the previous document had it.
+This does not apply when a cross-origin document initiates the navigation or redirects to the destination document, and the state is not propagated to or from ancestor or descendant frames.
+Support for this behavior is rolling out in browsers (it ships in Chrome 142; see the [HTML Standard](https://html.spec.whatwg.org/multipage/interaction.html#sticky-activation) for details).
+
 The window is not user-activated by events that aren't necessarily caused by intentional interaction with the window, such as mouse move events or `wheel` events.
 
 Sticky activation is used to control access to certain features, blocking them if the user hasn't interacted with the page.

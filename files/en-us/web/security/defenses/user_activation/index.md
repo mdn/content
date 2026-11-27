@@ -32,6 +32,10 @@ The difference between transient and sticky activation is that transient activat
 Gating features on transient activation ensures that they are only available if directly triggered by a user.
 Sticky activation, by contrast, is primarily used to restrict features that should not automatically trigger on page load, such as popups.
 
+Sticky activation also carries across some navigations: when a document navigates to a new document on the same origin (including reloads and back/forward traversal), the new document retains sticky activation from its predecessor.
+The carry-over does not happen if a cross-origin document initiated or redirected the navigation, and it is not propagated between ancestor and descendant frames.
+This behavior ships in Chrome 142 and is specified in the [HTML Standard](https://html.spec.whatwg.org/multipage/interaction.html#sticky-activation).
+
 ## Transient activation
 
 {{Glossary("Transient activation")}} is a window state that indicates a user has recently pressed a button or performed some other user interaction.
