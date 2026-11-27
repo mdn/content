@@ -38,16 +38,6 @@ transform: rotateY(3.142rad);
 </section>
 ```
 
-The axis of rotation passes through an origin, defined by the {{ cssxref("transform-origin") }} CSS property.
-
-> [!NOTE]
-> `rotateY(a)` is equivalent to
-> `rotate3d(0, 1, 0, a)`.
-
-> [!NOTE]
-> Unlike rotations in the 2D plane, the composition of 3D rotations is usually
-> not commutative. In other words, the order in which the rotations are applied impacts the result.
-
 ## Syntax
 
 ```css
@@ -87,6 +77,19 @@ rotateY(a)
     </tr>
   </tbody>
 </table>
+
+## Description
+
+The `rotateY()` function defines a transformation that rotates an element around the y-axis. The axis of rotation passes through an origin, defined by the {{ cssxref("transform-origin") }} CSS property. Its result is a {{cssxref("transform-function")}} data type.
+
+The following two functions are equivalent:
+
+```css-nolint
+rotateY(a)
+rotate3d(0, 1, 0, a)
+```
+
+Unlike rotations in the 2D plane, the composition of 3D rotations is usually not commutative. In other words, the order in which the rotations are applied impacts the result.
 
 ## Formal syntax
 

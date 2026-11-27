@@ -40,9 +40,6 @@ select:focus {
 </label>
 ```
 
-> [!NOTE]
-> This pseudo-class applies only to the focused element itself. Use {{CSSxRef(":focus-within")}} if you want to select an element that _contains_ a focused element.
-
 ## Syntax
 
 ```css
@@ -50,6 +47,12 @@ select:focus {
   /* ... */
 }
 ```
+
+## Description
+
+The `:focus` pseudo-class represents an element, such as a form control, that currently has focus. It is generally triggered when the user clicks or taps on an element or selects it with the keyboard's <kbd>Tab</kbd> key.
+
+The `:focus` pseudo-class only selects the focused element itself. Use the {{CSSxRef(":focus-within")}} pseudo-class to select elements that _contain_ a focused element.
 
 ## Accessibility
 
