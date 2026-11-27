@@ -227,7 +227,7 @@ console.log(myObj);
 console.log(myObj.myString); // 'This key is in variable str'
 ```
 
-In the above code, the key `anotherObj` is an object, which is neither a string nor a symbol. When it is added to the `myObj`, JavaScript calls the {{jsxref("Object/toString", "toString()")}} method of `anotherObj`, and use the resulting string as the new key.
+In the above code, the key `anotherObj` is an object, which is neither a string nor a symbol. When it is added to the `myObj`, JavaScript calls the {{jsxref("Object/toString", "toString()")}} method of `anotherObj`, and uses the resulting string as the new key.
 
 You can also access properties with a string value stored in a variable. The variable must be passed in bracket notation. In the example above, the variable `str` held `"myString"` and it is `"myString"` that is the property name. Therefore, `myObj.str` will return as undefined.
 
