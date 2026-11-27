@@ -8,7 +8,7 @@ browser-compat: api.Notification.error_event
 
 {{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
-The **`error`** event of the {{domxref("Notification")}} interface fires when something goes wrong with a {{domxref("Notification")}} (in many cases an error preventing the notification from being displayed.)
+The **`error`** event of the {{domxref("Notification")}} interface fires when something goes wrong with a [non-persistent notification](/en-US/docs/Web/API/Notifications_API#non-persistent_notifications) (in many cases an error preventing the notification from being displayed.)
 
 ## Syntax
 
