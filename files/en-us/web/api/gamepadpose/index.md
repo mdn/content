@@ -34,7 +34,19 @@ This interface is accessible through the {{domxref("Gamepad.pose")}} property.
 
 ## Examples
 
-TBD.
+### Reading controller pose data
+
+```js
+window.addEventListener("gamepadconnected", (event) => {
+  const pose = event.gamepad.pose;
+  if (!pose) {
+    return;
+  }
+
+  console.log("Position:", pose.position); // e.g., [0, 0, 0]
+  console.log("Orientation:", pose.orientation); // e.g., [0, 0, 0, 1]
+});
+```
 
 ## Specifications
 

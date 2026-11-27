@@ -20,7 +20,18 @@ A {{jsxref("Float32Array")}}, or `null` if the gamepad is not able to provide an
 
 ## Examples
 
-TBD
+### Reading the angular velocity
+
+```js
+window.addEventListener("gamepadconnected", (event) => {
+  const pose = event.gamepad.pose;
+  if (!pose || !pose.angularVelocity) {
+    return;
+  }
+
+  console.log(pose.angularVelocity); // e.g., [0, 0, 0]
+});
+```
 
 ## Specifications
 
