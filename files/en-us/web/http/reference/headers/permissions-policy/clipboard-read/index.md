@@ -36,18 +36,21 @@ It can do so by delivering the following HTTP response header to define a Permis
 Permissions-Policy: clipboard-read=(self "https://example.com")
 ```
 
-This enables `clipboard-read` in the top-level document, and also by default in same-origin iframes (because if the `allow` attribute is not specified on an `<iframe>` the default allowlist of `self` controls delegation).
-The header also allows delegation to `https://example.com`, but that origin needs to be granted the feature explicitly, because it isn't present in default allowlist.
-
-SecureCorp Inc. must therefore include an {{HTMLElement('iframe','allow','#Attributes')}} attribute for that origin on each `<iframe>` element where `clipboard-read` is to be allowed:
+SecureCorp Inc. must also include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on each `<iframe>` element hosting content from `https://example.com` that needs to read the clipboard:
 
 ```html
 <iframe src="https://example.com/notes-app" allow="clipboard-read"></iframe>
 ```
 
-> [!NOTE]
-> When the header specifies an allowlist, that allowlist is the maximum set of origins the feature can be delegated to.
-> An `allow` attribute cannot grant the feature to an origin outside it.
+With this header and `allow` attribute:
+
+- The top-level document and same-origin iframes can read the clipboard.
+  Same-origin iframes don't need the `allow` attribute.
+- iframes hosting content from `https://example.com` can read the clipboard.
+  Without the `allow` attribute they couldn't, because `https://example.com` isn't in the default allowlist (`self`).
+- iframes hosting content from any other origin can't read the clipboard, even if they set `allow="clipboard-read"`, because the header's allowlist doesn't include their origin.
+
+See [Default allowlists](/en-US/docs/Web/HTTP/Guides/Permissions_Policy#default_allowlists) and [Inheritance of policies for embedded content](/en-US/docs/Web/HTTP/Guides/Permissions_Policy#inheritance_of_policies_for_embedded_content) in the Permissions Policy guide for more information.
 
 ### Using the default policy
 
