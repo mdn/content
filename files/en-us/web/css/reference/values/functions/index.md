@@ -249,6 +249,8 @@ The {{cssxref("image")}} CSS [data type](/en-US/docs/Web/CSS/Reference/Values/Da
   - : Blends two or more images at a defined transparency.
 - {{cssxref("element()")}}
   - : Defines an {{cssxref("image")}} value generated from an arbitrary HTML element.
+- {{CSSxRef("image/filter", "filter()")}}
+  - : Applies filter effects, such as a blur or a color change, to an {{cssxref("image")}}.
 - {{CSSxRef("image/paint", "paint()")}}
   - : Defines an {{cssxref("image")}} value generated with a PaintWorklet.
 
@@ -409,6 +411,7 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("basic-shape/ellipse", "ellipse()")}}
 - {{cssxref("env")}}
 - {{cssxref("exp")}}
+- {{cssxref("image/filter", "filter()")}}
 - {{cssxref("fit-content()")}}
 - {{cssxref("filter-function/grayscale", "grayscale()")}}
 - {{cssxref("color_value/hsl", "hsl()")}}
