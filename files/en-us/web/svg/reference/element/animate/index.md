@@ -14,10 +14,14 @@ The **`<animate>`** [SVG](/en-US/docs/Web/SVG) element provides a way to animate
 
 ## Attributes
 
-This element only includes the following global attributes:
+### Global attributes
 
 - [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
 - [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+
+### Specific attributes
+
+- [Animation attributes](/en-US/docs/Web/SVG/Reference/Attribute#animation_attributes)
 
 ## DOM Interface
 

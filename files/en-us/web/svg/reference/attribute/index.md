@@ -315,14 +315,9 @@ The {{SVGAttr("xml:lang")}} attribute can also be used on SVG elements in XML do
 ARIA attributes are the `role` attribute and the `aria-*` states and properties defined in WAI-ARIA.
 
 The following SVG elements accept ARIA attributes: `a`, `circle`, `ellipse`, `foreignObject`, `g`, `image`, `line`, `path`, `polygon`, `polyline`, `rect`, `svg`, `switch`, `symbol`, `text`, `textPath`, `tspan`, `use`, and `view`.
-
 The `switch` and `view` elements accept `aria-*` attributes, but the `role` attribute can't be used on them.
 
-The `role` attribute can be specified on renderable SVG elements when allowed by the element's specification, and its value must be a role allowed for that element.
-
-The `role` attribute is ignored on non-rendered elements.
-
-ARIA attributes have no effect on other SVG elements because those elements are never drawn and are not included in the accessibility tree.
+ARIA attributes have no effect on other SVG elements, because those elements are never drawn and so are not included in the accessibility tree.
 
 See the [ARIA attributes reference](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) and [ARIA roles reference](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) for more information.
 
