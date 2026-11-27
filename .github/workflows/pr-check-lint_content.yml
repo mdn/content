@@ -1,19 +1,10 @@
 name: Lint content
 
 on:
-  pull_request:
-    paths:
-      - .github/workflows/pr-check-lint_content.yml
-      - .nvmrc
-      - "*.md"
-      - "files/**/*.md"
+  workflow_call:
 
 permissions:
   contents: read
-
-concurrency:
-  group: ci-${{ github.workflow }}-${{ github.event_name }}-${{ github.event.pull_request.number }}
-  cancel-in-progress: true
 
 jobs:
   lint:
