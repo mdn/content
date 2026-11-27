@@ -22,6 +22,10 @@ Firefox 162 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The `sectionheader` and `sectionfooter` ARIA roles are now supported. They identify the header and footer of a section, distinct from the page-level landmark roles [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) and [`contentinfo`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role). ([Firefox bug 1893684](https://bugzil.la/1893684))
 - The [`headingoffset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingoffset) attribute is now enabled by default, allowing you to shift the computed heading level of headings within a subtree by a specified amount. ([Firefox bug 2044348](https://bugzil.la/2044348))
+- The `blocking="render"` attribute of the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} elements is now supported.
+  This lets you block rendering of the page until the marked stylesheet has loaded or script has run, so the page doesn't first appear unstyled or incomplete.
+  You can also use [`<link rel="expect">`](/en-US/docs/Web/HTML/Reference/Attributes/rel#expect) with `blocking="render"` to block rendering until a particular element in the document has been parsed.
+  ([Firefox bug 2088945](https://bugzil.la/2088945)).
 
 <!-- #### Removals -->
 
@@ -62,7 +66,11 @@ Firefox 162 is the current [Beta version of Firefox](https://www.firefox.com/en-
 #### DOM
 
 - The `document.parsed`, `document.contentLoaded`, and `document.loaded` properties are now supported. Each returns a {{jsxref("Promise")}} that resolves when the document has finished parsing, when `DOMContentLoaded` has fired, or when `load` has fired, respectively. ([Firefox bug 2091511](https://bugzil.la/2091511))
-- Cross-document [view transitions](/en-US/docs/Web/API/View_Transition_API) are now enabled by default on all channels. When two pages opt in by declaring {{cssxref("@view-transition")}} `{ navigation: auto; }` in their CSS, navigating between them plays a view transition animation. ([Firefox bug 2088945](https://bugzil.la/2088945))
+- Cross-document view transitions are now supported, using the {{cssxref("@view-transition")}} at-rule.
+  These animate the change between two same-origin pages when the user navigates from one to the other in a multi-page application.
+  The at-rule's `types` descriptor can set [view transition types](/en-US/docs/Web/API/View_Transition_API/Using_types#using_types_with_cross-document_view_transitions_via_view-transition), so you can apply different animations to different kinds of navigation.
+  The transition can be customized with JavaScript using the {{domxref("Window.pageswap_event", "pageswap")}} and {{domxref("Window.pagereveal_event", "pagereveal")}} events, and the at-rule can be inspected using the {{domxref("CSSViewTransitionRule")}} interface.
+  ([Firefox bug 2088945](https://bugzil.la/2088945)).
 - [Declarative Web Push](/en-US/docs/Web/API/Push_API) is now supported, allowing pages to subscribe to push notifications using an HTML `<link rel="push">` element, without requiring a service worker registration step in JavaScript. ([Firefox bug 1935325](https://bugzil.la/1935325))
 - Mouse buttons 4 and 5 (the browser back and forward buttons found on many mice) now correctly fire {{domxref("Element/mousedown_event", "mousedown")}}, {{domxref("Element/mouseup_event", "mouseup")}}, and {{domxref("Element/click_event", "click")}} events on web pages. They are reported as {{domxref("MouseEvent.button", "button")}} values `3` and `4` in mouse event objects. ([Firefox bug 2073171](https://bugzil.la/2073171))
 - The `raw-secret` and `raw-public` key format aliases are now supported in the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API). These can be used as the `format` argument to {{domxref("SubtleCrypto.importKey()")}} and {{domxref("SubtleCrypto.exportKey()")}}. ([Firefox bug 2086697](https://bugzil.la/2086697))
