@@ -450,7 +450,21 @@ or:
 /usr/lib64/mozilla/pkcs11-modules/<name>.json
 ```
 
-For per-user visibility, store the manifest in:
+For per-user visibility, Firefox checks first:
+
+```plain
+~/.config/mozilla/native-messaging-hosts/<name>.json
+```
+
+```plain
+~/.config/mozilla/managed-storage/<name>.json
+```
+
+```plain
+~/.config/mozilla/pkcs11-modules/<name>.json
+```
+
+if no valid manifest is found there:
 
 ```plain
 ~/.mozilla/native-messaging-hosts/<name>.json
