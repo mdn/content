@@ -47,36 +47,38 @@ body {
 ## Syntax
 
 ```css
-/* A different random choice for every use */
+/* Basic usage */
 random-item(auto, red, green, blue)
-
-/* The same random choice everywhere --my-key is used */
-random-item(--my-key, red, green, blue)
-
-/* The same random choice for every property of an element,
-   but a different choice for each element */
-random-item(--my-key element-scoped, red, green, blue)
-
-/* Items made of several values */
+random-item(auto, 1px, 5px, 10px)
 random-item(auto, 1px solid black, 3px dashed red)
+
+/* With a custom <random-key> */
+random-item(--my-key, red, green, blue)
+random-item(fixed 0.5, red, green, blue)
+
+/* With scoping */
+random-item(element-scoped, red, green, blue)
+random-item(property-scoped, red, green, blue)
+random-item(property-index-scoped, red, green, blue)
+random-item(--my-key element-scoped, red, green, blue)
 ```
 
 ### Parameters
 
-The `random-item()` function accepts a `<random-key>`, followed by one or more comma-separated items.
+The `random-item(<random-key>, <items>)` function accepts the following parameters:
 
-- `<random-key>`
-  - : Controls which random functions in the document share a random base value, and so make the same random choice, and which make independent choices. Unlike in {{cssxref("random()")}}, this parameter is required. It accepts the same values as the `<random-key>` parameter of `random()`: `auto`, a {{cssxref("dashed-ident")}}, one of the scope keywords `element-scoped`, `property-scoped`, or `property-index-scoped`, a `<dashed-ident>` combined with scope keywords, or `fixed <number>`. See [Random base value](/en-US/docs/Web/CSS/Reference/Values/random#random_base_value) for details.
-- Items
-  - : The values to choose from, separated by commas. Each item can be any sequence of CSS values, such as a color, a length, or several values separated by spaces. An item can also be empty.
+- {{cssxref("random-key")}}
+  - : Controls which functions in the document should share a random base value. Specified as `auto`, a {{cssxref("dashed-ident")}}, one of the scope keywords `element-scoped`, `property-scoped`, or `property-index-scoped`, optionally combined with a `<dashed-ident>`, or `fixed <number>`. Unlike in {{cssxref("random()")}}, this parameter is required.
+- `<items>`
+  - : A comma-separated list of values to choose from. An item can be any CSS value, including a space-separated list of values or a {{cssxref("var()")}} function, or it can be empty.
 
 ### Return value
 
-One of the items, chosen at random. Each item has the same chance of being chosen.
+One item, randomly chosen from the list of items. Each item has the same chance of being chosen.
 
 ## Description
 
-The `random-item()` function lets you add variety to a page without JavaScript, for example by giving each card in a list a random accent color, or by choosing a random animation for each element.
+The `random-item()` function lets you add variety to a page without JavaScript, allowing you to provide a list of valid values from which the browser selects one at random. For example, by providing a list of color values, you can apply a randomly chosen accent color to each card in a group of cards. Similarly, by providing a list of animation names, each card can have a randomly selected animation applied.
 
 ### Substitution
 
@@ -90,7 +92,7 @@ The `random-item()` function works like {{cssxref("var()")}}: it is substituted 
 
 Like {{cssxref("random()")}}, `random-item()` uses a random base value, which is a number between `0` and `1`. The item at the corresponding position in the list is chosen: for a list of `N` items, the browser multiplies the random base value by `N` and rounds down to get the index of the chosen item.
 
-The `<random-key>` determines which random functions share a random base value. When two `random-item()` functions share a random base value and have the same number of items, they always choose the item at the same position. This lets you make several random choices that match each other, as shown in the [Matching random choices across properties](#matching_random_choices_across_properties) example.
+The {{cssxref("random-key")}} determines which random functions share a random base value. When two `random-item()` functions share a random base value and have the same number of items, they always choose the item at the same position. This lets you make several random choices that match each other, as shown in the [Matching random choices across properties](#matching_random_choices_across_properties) example.
 
 A `random-item()` function and a `random()` function with the same `<random-key>` also share a random base value.
 
@@ -236,5 +238,6 @@ Each card has a random theme, but the border color always matches the background
 ## See also
 
 - {{cssxref("random()")}}
+- {{cssxref("random-key")}}
 - {{cssxref("var()")}}
 - [CSS values and units](/en-US/docs/Web/CSS/Guides/Values_and_units) module
