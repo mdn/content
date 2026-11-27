@@ -10,6 +10,8 @@ browser-compat: api.Response.clone
 
 The **`clone()`** method of the {{domxref("Response")}} interface creates a clone of a response object, identical in every way, but stored in a different variable.
 
+The main reason `clone()` exists is to allow multiple uses of body objects (when they are one-use only).
+
 Like the underlying {{domxref("ReadableStream.tee")}} api,
 the {{domxref("Response.body", "body")}} of a cloned `Response`
 will signal backpressure at the rate of the _faster_ consumer of the two bodies,
@@ -25,9 +27,6 @@ Therefore, `clone()` is one way to read a response twice in sequence,
 but you should not use it to read very large bodies
 in parallel at different speeds.
 
-`clone()` throws a {{jsxref("TypeError")}} if the response body has already been used.
-In fact, the main reason `clone()` exists is to allow multiple uses of body objects (when they are one-use only.)
-
 ## Syntax
 
 ```js-nolint
@@ -41,6 +40,11 @@ None.
 ### Return value
 
 A {{domxref("Response")}} object.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the response body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
 
 ## Examples
 
