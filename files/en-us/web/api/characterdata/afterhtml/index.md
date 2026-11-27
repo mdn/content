@@ -12,10 +12,6 @@ browser-compat: api.CharacterData.afterHTML
 
 The **`afterHTML()`** method of the {{domxref("CharacterData")}} interface is an [XSS-safe method](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods) to parse and sanitize a string of HTML using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and insert it in the children list of the `CharacterData`'s parent, just after the `CharacterData`.
 
-The method removes any elements and attributes in the [XSS-safe baseline configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#xss-safe-baseline-configuration) which removes unsafe elements (for example {{htmlelement("script")}}), event handlers, and JavaScript URLs. Additional elements and attributes, processing instructions and comments can be removed on top of these by passing a [sanitizer](#sanitizer) option of by using the default sanitizer if no `sanitizer` option is passed. For more information see the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API).
-
-In addition nit
-
 ## Syntax
 
 ```js-nolint
@@ -99,17 +95,18 @@ myText.afterHTML(unsanitizedString, { sanitizer: mySanitizer });
 
 ### Using a custom sanitizer with `removeElements`
 
-Using a custom `SanitizerConfig`, that removes only the {{htmlelement("div")}}, {{htmlelement("p")}}, {{htmlelement("button")}}, and {{htmlelement("script")}} elements, as well as other XSS-unsafe elements and attributes that are always removed by this method.
+Using a custom `SanitizerConfig`, that removes only the {{htmlelement("i")}}, as well as other XSS-unsafe elements and attributes that are always removed by this method.
 
 ```js
 const unsanitizedString = "<p><i>abc</i><script>alert(1)<" + "/script> def</p>";
 const myText = document.getElementById("myText").firstChild;
 
 myText.afterHTML(unsanitizedString, {
-  sanitizer: { removeElements: ["i", "script"] },
+  sanitizer: { removeElements: ["i"] },
 });
-// Result is that the following is added after the current text:
+// Result is that the following is added after the current text
 // <p> def</p>
+// Since the <i> is removed, and the <script> is removed by default.
 ```
 
 ## Specifications

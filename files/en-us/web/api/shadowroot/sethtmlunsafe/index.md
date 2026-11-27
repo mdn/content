@@ -13,10 +13,10 @@ browser-compat: api.ShadowRoot.setHTMLUnsafe
 > APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
 >
 > You can mitigate this risk by always passing `TrustedHTML` objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
-> See [Security considerations](#security_considerations) for more information.
+> See [Security considerations of the unsafe methods](#/en-US/docs/Web/API/HTML_Sanitizer_API#security_considerations_of_the_unsafe_methods) for more information.
 
 > [!NOTE]
-> {{domxref("ShadowRoot.setHTML()")}} should almost always be used instead of this method — on browsers where it is supported — as it always removes XSS-unsafe HTML entities.
+> {{domxref("ShadowRoot.setHTML()")}} should almost always be used (where supported) instead of this method as it always [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods).
 
 The **`setHTMLUnsafe()`** method of the {{domxref("ShadowRoot")}} interface can be used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and then use it to replace the existing tree in the Shadow DOM.
 
@@ -34,7 +34,7 @@ setHTMLUnsafe(input, options)
 - `options` {{optional_inline}}
   - : An options object with the following optional parameters:
     - `sanitizer` {{optional_inline}}
-      - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object that defines what elements of the input will be allowed or removed.
+      - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object that defines which elements of the input will be allowed or removed.
         This can also be a string with the value `"default"`, which applies a `Sanitizer` with the (XSS-safe) [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
         If not specified, no sanitizer is used.
 
@@ -64,8 +64,6 @@ The **`setHTMLUnsafe()`** method can be used to parse a string of HTML, optional
 
 Unlike with {{domxref("ShadowRoot.innerHTML")}}, [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in the input will be parsed into the DOM.
 If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as `<template>` elements within that shadow root.
-
-`setHTMLUnsafe()` doesn't perform any sanitization by default (though also does not run scripts by default). If no sanitizer is passed as a parameter, all HTML entities in the input will be injected.
 
 ### Security considerations
 

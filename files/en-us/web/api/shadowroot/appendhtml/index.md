@@ -88,17 +88,18 @@ target.appendHTML(unsanitizedString, { sanitizer: mySanitizer });
 
 ### Using a custom sanitizer with `removeElements`
 
-Using a custom `SanitizerConfig`, that removes only the {{htmlelement("div")}}, {{htmlelement("p")}}, {{htmlelement("button")}}, and {{htmlelement("script")}} elements, as well as other XSS-unsafe elements and attributes that are always removed by this method.
+Using a custom `SanitizerConfig`, that removes only the {{htmlelement("i")}}, as well as other XSS-unsafe elements and attributes that are always removed by this method.
 
 ```js
 const unsanitizedString = "<p><i>abc</i><script>alert(1)<" + "/script> def</p>";
 const target = document.getElementById("target");
 
 target.appendHTML(unsanitizedString, {
-  sanitizer: { removeElements: ["i", "script"] },
+  sanitizer: { removeElements: ["i"] },
 });
 // Result is that the following is appended to the current shadowroot:
 // <p> def</p>
+// Since the <i> is removed, and the <script> is removed by default.
 ```
 
 ## Specifications

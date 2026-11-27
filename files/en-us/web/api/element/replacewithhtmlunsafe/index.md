@@ -15,12 +15,12 @@ browser-compat: api.Element.replaceWithHTMLUnsafe
 > APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
 >
 > You can mitigate this risk by always passing `TrustedHTML` objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
-> See [Security considerations](#security_considerations) for more information.
+> See [Security considerations of the unsafe methods](#/en-US/docs/Web/API/HTML_Sanitizer_API#security_considerations_of_the_unsafe_methods) for more information.
 
 > [!NOTE]
-> {{domxref("Element.replaceWithHTML()")}} should almost always be used instead of this method — on browsers where it is supported — as it always removes XSS-unsafe HTML entities.
+> {{domxref("Element.replaceWithHTML()")}} should almost always be used (where supported) instead of this method as it always [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods).
 
-The **`replaceWithHTMLUnsafe()`** method of the {{domxref("Element")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) to filtering out unwanted elements and attributes, and then using it to replace the element in the DOM.
+The **`replaceWithHTMLUnsafe()`** method of the {{domxref("Element")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally using the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) to remove unwanted elements and attributes, and then using it to replace the element in the DOM.
 
 ## Syntax
 
@@ -36,7 +36,7 @@ replaceWithHTMLUnsafe(input, options)
 - `options` {{optional_inline}} {{experimental_inline}}
   - : An options object with the following optional parameters:
     - `sanitizer` {{optional_inline}} {{experimental_inline}}
-      - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object that defines what elements of the input will be allowed or removed.
+      - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object that defines which elements of the input will be allowed or removed.
         This can also be a string with the value `"default"`, which applies a `Sanitizer` with the (XSS-safe) [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
         If not specified, no sanitizer is used.
 
@@ -65,15 +65,16 @@ None (`undefined`).
 
 ## Description
 
-The **`replaceWithHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes, and discarding elements that the HTML specification doesn't allow in the target element ({{htmlelement("col")}} element outside of a {{htmlelement("table")}}).
-The `DocumentFragment` is then used to replace the element in the DOM.
+The **`replaceWithHTMLUnsafe()`** method is used to parse an HTML input into a {{domxref("DocumentFragment")}}, optionally sanitizing it of unwanted elements and attributes. The `DocumentFragment` is then used to replace the element in the DOM.
 
 The method does nothing if the node has no parent.
 
+It will always discard elements that the HTML specification doesn't allow in the target element (for example, a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}).
+
+Like all [_unsafe_ HTML setters](/en-US/docs/Web/API/HTML_Sanitizer_API#unsafe_methods), it will not remove items from its input, unless it is passed a sanitizer that removes them. However, it does not run scripts by default unless `runScripts: true` is provided as an option.
+
 Unlike with {{domxref("Element.innerHTML")}}, [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in the input will be parsed into the DOM.
 If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as `<template>` elements within that shadow root.
-
-`replaceWithHTMLUnsafe()` doesn't perform any sanitization by default (though also does not run scripts by default). If no sanitizer is passed as a parameter, all HTML entities in the input will be injected.
 
 ### Security considerations
 

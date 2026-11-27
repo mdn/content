@@ -16,7 +16,7 @@ browser-compat: api.Document.parseHTMLUnsafe_static
 > See [Security considerations](#security_considerations) for more information.
 
 > [!NOTE]
-> {{domxref("Document/parseHTML_static", "Document.parseHTML()")}} should almost always be used instead of this method — on browsers where it is supported — as it always removes XSS-unsafe HTML entities.
+> {{domxref("Document/parseHTML_static", "Document.parseHTML()")}} should almost always be used (where supported) instead of this method as it always [XSS-safe](/en-US/docs/Web/API/HTML_Sanitizer_API#safe_methods).
 
 The **`parseHTMLUnsafe()`** static method of the {{domxref("Document")}} object is used to parse HTML input, optionally filtering unwanted HTML elements and attributes, in order to create a new {{domxref("Document")}} instance.
 

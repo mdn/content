@@ -341,7 +341,7 @@ They may be useful with the unsafe HTML methods and trusted types, depending on 
 ## Interfaces
 
 - {{domxref('Sanitizer')}}
-  - : A reusable sanitizer configuration object that defines what elements and attributes should be allowed/removed when sanitizing untrusted strings of HTML.
+  - : A reusable sanitizer configuration object that defines which elements and attributes should be allowed/removed when sanitizing untrusted strings of HTML.
     This is used in the methods that insert strings of HTML into the DOM or Document.
 - {{domxref('SanitizerConfig')}}
   - : A dictionary that defines a sanitizer configuration.
