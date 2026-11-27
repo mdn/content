@@ -80,7 +80,7 @@ This ensures that the input is passed through a transformation function, which h
 Using `TrustedHTML` makes it possible to audit and check that sanitization code is effective in just a few places, rather than scattered across all your injection sinks.
 You should not have to pass a sanitizer to the method when using `TrustedHTML`.
 
-If for any reason you can't use `TrustedHTML` (or even better, one of the safe methods) then the next safest option is to use the unsafe methods with the [default sanitizer configuration](#default_sanitizer_configuration), with limited overrides to allow the necessary elements and attributes preventing you from using the safe methods.
+If for any reason you can't use `TrustedHTML` (or even better, one of the safe methods) then the next safest option is to use the unsafe methods with the [default sanitizer configuration](#default_sanitizer_configuration), with limited overrides to allow the necessary elements and attributes preventing you from using the safe methods, though this is still unsafe when used with untrusted HTML.
 
 ##### When should the unsafe methods be used?
 

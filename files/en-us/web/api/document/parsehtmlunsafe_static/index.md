@@ -51,7 +51,7 @@ A {{domxref("Document")}}.
     - `html` is passed a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
     - `options.sanitizer` is passed a:
       - {{domxref("SanitizerConfig")}} that isn't [valid](/en-US/docs/Web/API/SanitizerConfig#valid_configuration).
-        For example, a configuration that includes both "allowed" and "removed" configuration settings.
+        For example, a configuration that includes both `elements` and `removeElements` configuration settings.
       - string that does not have the value `"default"`.
       - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.
 

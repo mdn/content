@@ -34,7 +34,7 @@ setHTMLUnsafe(input, options)
 - `options` {{optional_inline}}
   - : An options object with the following optional parameters:
     - `sanitizer` {{optional_inline}}
-      - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object that defines which elements of the input will be allowed or removed.
+      - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object that defines which elements, attributes, comments, and processing instructions of the input will be allowed or removed.
         This can also be a string with the value `"default"`, which applies a `Sanitizer` with the (XSS-safe) [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
         If not specified, no sanitizer is used.
 
@@ -53,7 +53,7 @@ None (`undefined`).
     - `input` is passed a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
     - `options.sanitizer` is passed a:
       - {{domxref("SanitizerConfig")}} that isn't [valid](/en-US/docs/Web/API/SanitizerConfig#valid_configuration).
-        For example, a configuration that includes both "allowed" and "removed" configuration settings.
+        For example, a configuration that includes both `elements` and `removeElements` configuration settings.
       - string that does not have the value `"default"`.
       - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.
     - `options.runScripts` is `true` or `options.sanitizer` is specified when Trusted Types are enforced and no default policy defines `createParserOptions` — even if input is a `TrustedHTML`. (Passing a `TrustedHTMLParserOptions` as options avoids this.)
